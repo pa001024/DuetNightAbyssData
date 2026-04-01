@@ -104,6 +104,7 @@ function M:Close()
 end
 
 function M:InitUIInfo(Name, bInUIMode, EventList, ...)
+  self.bInDungeonSettlement = true
   M.Super.InitUIInfo(self, Name, bInUIMode, EventList, ...)
   self.Com_Input:SetText("")
   local AllChannelInfo = {}
@@ -276,6 +277,7 @@ function M:ResetUI()
   self.CurrSelectPlayer = nil
   self.Group_NewMessage:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Group_ChatEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WS_Dialoglist:SetActiveWidgetIndex(0)
@@ -284,7 +286,7 @@ function M:ResetUI()
   if self.bOpenTeamList then
     self:BtnTeamInfoOnClicked()
   end
-  self.Btn_Sent:SetText(GText("UI_Chat_Send"))
+  self.Btn_Sent:SetText("")
 end
 
 function M:_SetUpChatMsgListTimerCallback(MsgList)
@@ -402,6 +404,9 @@ function M:OnHandleChangeChannel(TabWidget, ItemInfo)
   end
   Switch[self.CurrChannel](self, TabWidget, ItemInfo)
   self:OnHandleChangeChannelWithOperate(TabWidget, ItemInfo)
+  if not ChatController:IsSendCDTimerExist(self.CurrChannel) then
+    self.Btn_Sent.WS:SetActiveWidgetIndex(0)
+  end
 end
 
 function M:OnHandleChangeChannelWithOperate(TabWidget, ItemInfo)

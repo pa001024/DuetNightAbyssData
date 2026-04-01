@@ -2518,7 +2518,6 @@ return ReadOnly("SystemUI", {
     ConfigName = "StackAndUIMode",
     GlobalGameUITag = "Shop",
     IsHideBattleUnit = 11,
-    IsStopGame = 2,
     MobileBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Mobile/WBP_Shop_Main_M.WBP_Shop_Main_M'",
     PCBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/PC/WBP_Shop_Main_P.WBP_Shop_Main_P'",
     Popup = true,

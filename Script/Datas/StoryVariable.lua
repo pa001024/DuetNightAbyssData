@@ -366,7 +366,6 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "FirstXiangge_12020125"
   },
-  Fish200317 = {QuestChainId = 200317, VarName = "Fish200317"},
   FollowEnlike100206 = {
     IsGlobal = true,
     VarName = "FollowEnlike100206"

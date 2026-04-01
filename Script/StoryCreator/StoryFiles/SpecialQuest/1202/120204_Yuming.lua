@@ -196,6 +196,12 @@ return {
             startPort = "Out",
             endQuest = "17746777211451283480",
             endPort = "In"
+          },
+          {
+            startQuest = "17733008049981701563",
+            startPort = "Out",
+            endQuest = "1774950985008854293",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -306,7 +312,7 @@ return {
             key = "177313190777819968417",
             type = "ChangeStaticCreatorNode",
             name = "生成空气墙",
-            pos = {x = 1584.258064516129, y = 130.1290322580645},
+            pos = {x = 1611.154616240267, y = 145.64627363737486},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -438,14 +444,14 @@ return {
             key = "17733008049981701563",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 1271.2307692307693, y = 128.00000000000003},
+            pos = {x = 1060.1962864721486, y = 105.24137931034485},
             propsData = {QuestRoleId = 24010102, IsPlayFX = false}
           },
           ["17738406468951613"] = {
             key = "17738406468951613",
             type = "SetPhantomStatusNode",
             name = "刻舟魅影Buff",
-            pos = {x = 1890.391338924234, y = -77.76106934001669},
+            pos = {x = 1872.8051320276825, y = -148.10589692622358},
             propsData = {
               PhantomRoleId = 213,
               BuffList = {
@@ -461,7 +467,7 @@ return {
             key = "17738406568401775",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 1512.2899958228907, y = -70.61821219715948},
+            pos = {x = 1573.3244785815114, y = -158.5492466799181},
             propsData = {
               IsCreate = true,
               IsClearOtherPhantom = false,
@@ -504,7 +510,7 @@ return {
             key = "17746776799071282954",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1107.3712294285756, y = 32.393442618517525},
+            pos = {x = 970.8195052906445, y = -56.57207462286179},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "YuMingBoss_Start",
@@ -532,6 +538,13 @@ return {
               MessageContent = "YuMingBoss_Finish",
               UnitId = -1
             }
+          },
+          ["1774950985008854293"] = {
+            key = "1774950985008854293",
+            type = "UnEquipEffectPropNode",
+            name = "卸载当前装备的探索道具",
+            pos = {x = 1323.4927878884403, y = 93.43977086964333},
+            propsData = {}
           }
         },
         commentData = {}

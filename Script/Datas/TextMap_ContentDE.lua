@@ -49813,7 +49813,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
   },
   {
     MinKey = "UI_Accessory_Name_10009",
-    MaxKey = "UI_Accessory_Unlock_Exchange",
+    MaxKey = "UI_Accessory_Unlock_Forge",
     Loader = function()
       return {
         UI_Accessory_Name_10009 = {
@@ -50384,10 +50384,6 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
           ContentDE = "Widerschuppen von Zhuyin – Violett",
           TextMapId = "UI_Accessory_Name_40012"
         },
-        UI_Accessory_Name_40013 = {
-          ContentDE = "Rückenteil „Su Yi-Outfit“",
-          TextMapId = "UI_Accessory_Name_40013"
-        },
         UI_Accessory_Name_40014 = {
           ContentDE = "Rückenteil „Lichtgetragene Feder“",
           TextMapId = "UI_Accessory_Name_40014"
@@ -50615,19 +50611,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Accessory_Unlock_Exchange = {
           ContentDE = "Über Prismatausch erhältlich",
           TextMapId = "UI_Accessory_Unlock_Exchange"
+        },
+        UI_Accessory_Unlock_Forge = {
+          ContentDE = "Durch Schmieden erhältlich",
+          TextMapId = "UI_Accessory_Unlock_Forge"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Unlock_Forge",
-    MaxKey = "UI_Achievement_Des_5014",
+    MinKey = "UI_Accessory_Unlock_Gacha",
+    MaxKey = "UI_Achievement_Des_5015",
     Loader = function()
       return {
-        UI_Accessory_Unlock_Forge = {
-          ContentDE = "Durch Schmieden erhältlich",
-          TextMapId = "UI_Accessory_Unlock_Forge"
-        },
         UI_Accessory_Unlock_Gacha = {
           ContentDE = "Über Myriade erhältlich",
           TextMapId = "UI_Accessory_Unlock_Gacha"
@@ -51423,19 +51419,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Des_5014 = {
           ContentDE = "Sichere in [Nocturne-Echos: Die Wächterin des Infernos] auf höchster Schwierigkeit einen Sieg <highlight>ohne Kampfbegleiter zu beschwören</>.",
           TextMapId = "UI_Achievement_Des_5014"
+        },
+        UI_Achievement_Des_5015 = {
+          ContentDE = "Sichere in [Nocturne-Echos: Bestie aus dem Schneeland] auf höchster Schwierigkeit einen Sieg <highlight>ohne Kampfbegleiter zu beschwören</>.",
+          TextMapId = "UI_Achievement_Des_5015"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_5015",
-    MaxKey = "UI_Achievement_Fishing_Des_3007",
+    MinKey = "UI_Achievement_Des_5021",
+    MaxKey = "UI_Achievement_Fishing_Des_3008",
     Loader = function()
       return {
-        UI_Achievement_Des_5015 = {
-          ContentDE = "Sichere in [Nocturne-Echos: Bestie aus dem Schneeland] auf höchster Schwierigkeit einen Sieg <highlight>ohne Kampfbegleiter zu beschwören</>.",
-          TextMapId = "UI_Achievement_Des_5015"
-        },
         UI_Achievement_Des_5021 = {
           ContentDE = "Sichere im Solo-Modus [Mission: Fahndung] auf höchster Schwierigkeit einen Sieg <highlight>ohne Kampfgefährten zu beschwören</>.",
           TextMapId = "UI_Achievement_Des_5021"
@@ -52231,19 +52227,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Fishing_Des_3007 = {
           ContentDE = "Schalte alle endemischen Fischarten der Halle der Vergänglichkeit in Atlasipedia frei",
           TextMapId = "UI_Achievement_Fishing_Des_3007"
+        },
+        UI_Achievement_Fishing_Des_3008 = {
+          ContentDE = "Schalte alle endemischen Fischarten der Gezeitenlied-Höhle in Atlasipedia frei",
+          TextMapId = "UI_Achievement_Fishing_Des_3008"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Fishing_Des_3008",
-    MaxKey = "UI_Achievement_Name_201807",
+    MinKey = "UI_Achievement_GetAllReward",
+    MaxKey = "UI_Achievement_Name_201808",
     Loader = function()
       return {
-        UI_Achievement_Fishing_Des_3008 = {
-          ContentDE = "Schalte alle endemischen Fischarten der Gezeitenlied-Höhle in Atlasipedia frei",
-          TextMapId = "UI_Achievement_Fishing_Des_3008"
-        },
         UI_Achievement_GetAllReward = {
           ContentDE = "Alle einsammeln",
           TextMapId = "UI_Achievement_GetAllReward"
@@ -53039,19 +53035,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Name_201807 = {
           ContentDE = "Makelloser Sieg: Rache",
           TextMapId = "UI_Achievement_Name_201807"
+        },
+        UI_Achievement_Name_201808 = {
+          ContentDE = "Makelloser Sieg: Eishölle",
+          TextMapId = "UI_Achievement_Name_201808"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_201808",
-    MaxKey = "UI_Achievement_Name_506403",
+    MinKey = "UI_Achievement_Name_201809",
+    MaxKey = "UI_Achievement_Name_506501",
     Loader = function()
       return {
-        UI_Achievement_Name_201808 = {
-          ContentDE = "Makelloser Sieg: Eishölle",
-          TextMapId = "UI_Achievement_Name_201808"
-        },
         UI_Achievement_Name_201809 = {
           ContentDE = "Makelloser Sieg: Opfer",
           TextMapId = "UI_Achievement_Name_201809"
@@ -53847,19 +53843,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Achievement_Name_506403 = {
           ContentDE = "Schnelle Rettung – Speedrun Ⅲ",
           TextMapId = "UI_Achievement_Name_506403"
+        },
+        UI_Achievement_Name_506501 = {
+          ContentDE = "Unaufhaltsamer Phoxjäger – Speedrun Ⅰ",
+          TextMapId = "UI_Achievement_Name_506501"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_506501",
-    MaxKey = "UI_ActionPoint_Consume",
+    MinKey = "UI_Achievement_Name_506502",
+    MaxKey = "UI_ActionPoint_CurrentActionPoint",
     Loader = function()
       return {
-        UI_Achievement_Name_506501 = {
-          ContentDE = "Unaufhaltsamer Phoxjäger – Speedrun Ⅰ",
-          TextMapId = "UI_Achievement_Name_506501"
-        },
         UI_Achievement_Name_506502 = {
           ContentDE = "Unaufhaltsamer Phoxjäger – Speedrun Ⅱ",
           TextMapId = "UI_Achievement_Name_506502"
@@ -54655,19 +54651,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_ActionPoint_Consume = {
           ContentDE = "Sanergie-Kosten",
           TextMapId = "UI_ActionPoint_Consume"
+        },
+        UI_ActionPoint_CurrentActionPoint = {
+          ContentDE = "Aktuelle Sanergie",
+          TextMapId = "UI_ActionPoint_CurrentActionPoint"
         }
       }
     end
   },
   {
-    MinKey = "UI_ActionPoint_CurrentActionPoint",
-    MaxKey = "UI_Bag_RemainOne",
+    MinKey = "UI_ActionPoint_FullyRecover",
+    MaxKey = "UI_Bag_Sell_Amount",
     Loader = function()
       return {
-        UI_ActionPoint_CurrentActionPoint = {
-          ContentDE = "Aktuelle Sanergie",
-          TextMapId = "UI_ActionPoint_CurrentActionPoint"
-        },
         UI_ActionPoint_FullyRecover = {
           ContentDE = "Vollständige Erholung",
           TextMapId = "UI_ActionPoint_FullyRecover"
@@ -55457,19 +55453,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Bag_RemainOne = {
           ContentDE = "Behalte eins",
           TextMapId = "UI_Bag_RemainOne"
+        },
+        UI_Bag_Sell_Amount = {
+          ContentDE = "Menge",
+          TextMapId = "UI_Bag_Sell_Amount"
         }
       }
     end
   },
   {
-    MinKey = "UI_Bag_Sell_Amount",
-    MaxKey = "UI_CHAR_DATA_TEXT_15010402",
+    MinKey = "UI_Bag_Sell_Batch",
+    MaxKey = "UI_CHAR_DATA_TEXT_15010403",
     Loader = function()
       return {
-        UI_Bag_Sell_Amount = {
-          ContentDE = "Menge",
-          TextMapId = "UI_Bag_Sell_Amount"
-        },
         UI_Bag_Sell_Batch = {
           ContentDE = "Mehrfachauswahl",
           TextMapId = "UI_Bag_Sell_Batch"
@@ -56262,19 +56258,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CHAR_DATA_TEXT_15010402 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010402"
+        },
+        UI_CHAR_DATA_TEXT_15010403 = {
+          ContentDE = "Demnächst",
+          TextMapId = "UI_CHAR_DATA_TEXT_15010403"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_15010403",
-    MaxKey = "UI_CHAR_DATA_TEXT_32020402",
+    MinKey = "UI_CHAR_DATA_TEXT_15010404",
+    MaxKey = "UI_CHAR_DATA_TEXT_32020403",
     Loader = function()
       return {
-        UI_CHAR_DATA_TEXT_15010403 = {
-          ContentDE = "Demnächst",
-          TextMapId = "UI_CHAR_DATA_TEXT_15010403"
-        },
         UI_CHAR_DATA_TEXT_15010404 = {
           ContentDE = "Demnächst",
           TextMapId = "UI_CHAR_DATA_TEXT_15010404"
@@ -57070,19 +57066,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CHAR_DATA_TEXT_32020402 = {
           ContentDE = "Camilla erinnert sich noch bis heute an den Abend, als der erste Brief kam – und den Moment, in dem sie ihn vom Kurier abholte. Sie war damals ein junger Teenager. Sie drückte ihn an ihre Brust und rannte, so schnell sie konnte, nach Hause. Und sie konnte nicht aufhören, darüber nachzudenken, was darin stand: Dass ihr Vater ihre Mutter schmerzlich vermisste und erst jetzt erfuhr, dass er eine Tochter hatte. Er hätte nicht glücklicher sein können. Ihr Herz schlug so schnell, dass es fast aus ihrer Brust herausspringen würde. Also war die „Heimat“ wirklich real – nicht nur etwas, das die Mutter in ihrer Verzweiflung erfunden hatte.\nNach Berthas Erzählungen war diese „Heimat“ ein Ort voller rivalisierender Fraktionen, für immer versunken in Chaos und Kampf – ein rechtloses Land, in dem Gewalt und Verbrechen Wurzeln geschlagen hatten. Im Vergleich zu Hyperborea klang es wie eine andere Art Fluch. Und doch war Bertha aus irgendeinem Grund besessen davon. Vielleicht, weil sie von Camillas Vater vertrieben worden war. Verzweifelt zog sie umher, bis sie Icelake erreichte – und dort, erfüllt von Erniedrigung und Bitterkeit, gebar sie Camilla.\nDer Brief des Mannes erzählte eine andere Geschichte. Er hatte keine andere Wahl gehabt. Familie, Fehden, Regeln ... Camilla konnte die Worte lesen, aber sie verstand nicht, welches Gewicht sie trugen. Trotzdem spürte sie, wie sie sich in ihre Mutter schnitten und Wunden hinterließen, die sich nicht schließen wollten. Doch jetzt schien alles vorbei zu sein.\nJene Nacht trank Bertha nichts. Doch ihre Hände zitterten, als sie den Brief auffaltete – stärker als je zuvor, wenn sie eine Flasche hielt. Sie weinte, lachte dann, und weinte wieder – verloren und hilflos wie ein Kind. Die ganze Nacht schrieb sie zurück. Und bei Tagesanbruch, im Nebel, steckte sie einen hoffnungsvollen Umschlag in den Briefkasten.\nDoch es kam nichts zurück.\nSie sagte sich, der Briefträger müsse ihn irgendwo auf dem Weg verloren haben – also schrieb sie immer wieder neu. Jedes Mal, wenn Camilla fragte, strich ihre Mutter ihr über die Wange und flüsterte dieselbe beruhigende Versicherung: Ihr Vater sei ein wichtiger Mann mit zu viel um die Ohren. Sobald er seine familiären Angelegenheiten erledigt hätte, würde er zu ihnen kommen.\nEine Zeit lang hörte sie sogar mit dem Trinken auf. Sie arbeitete als Dienstmädchen in einem reichen Haushalt. Und wann immer sie einen freien Moment hatte, schlenderte sie zu den Toren der Stadt und blickte hinunter auf die Straße jenseits der Mauern – sie war überzeugt, dass eines Tages eine vertraute Gestalt aus Wind und Schnee auftauchen würde.\nAlles wurde besser. Doch dann kam der zweite Brief – am Tag vor Camillas Volljährigkeit.",
           TextMapId = "UI_CHAR_DATA_TEXT_32020402"
+        },
+        UI_CHAR_DATA_TEXT_32020403 = {
+          ContentDE = "Am Tag vor Camillas achtzehntem Geburtstag erhielten sie und ihre Mutter endlich einen weiteren Brief aus dem Ort, den sie „Heimat“ nannten. Er war von ihrem Vater – dem Mann, den die Mutter schmerzlich vermisst hatte. Sie platzte fast vor Freude. Sie schwang den Brief über dem Kopf, eilte den schlammigen Weg entlang, breitete die Arme aus und drehte sich im Gehen – benommen vor Glück.\nCamilla rief ihr nach, sie solle langsamer gehen. Aber die Mutter hörte nicht zu. Sie redete einfach weiter – von dem, was war, und mehr noch von dem, was sein würde. Sie würden alles haben. Geld im Überfluss und Liebe, in der sie ertrinken konnten. Unter den schwachen Straßenlampen streckte sich ihr Schatten lang über den Boden – wie ein tanzendes Mädchen. Camilla lächelte und atmete leise aus. Für einen Moment schienen die Rollen vertauscht: Sie als die Erwachsene, ihre Mutter als das vernarrte junge Mädchen.\nAls sie endlich nach Hause kamen, zündete die Mutter eine Kerze an, öffnete dann mit vorsichtigen Händen den Umschlag und faltete den Brief auf.\nIhre Stimme brach mitten im Satz ab. Die Kerzenflamme zuckte ein wenig und warf hartes Licht auf ihre Augen. Ihr Mund klappte auf. Das Lächeln erstarrte. Camilla konnte den Brief nicht sehen, aber sie wusste sofort: Dies war kein Brief aus Liebe.\nEinen Herzschlag lang herrschte Stille. Dann stieß ihre Mutter einen Laut hervor, den Camilla nie zuvor gehört hatte – heiser und roh, wie das Heulen eines verwundeten Tieres.\nEin Stuhl kippte um, als die Frau ihn wegtrat. Dann eine Schüssel Suppe. Immer ein Geschirr nach dem anderen zerschellte und spritzte, hinterließ Flecken, die an der Wand haften blieben. Camilla seufzte und begann zu reinigen. Das tat sie schon, seit sie klein war. Als der Besen den Brief auf dem Boden streifte, blickte sie hinunter.\nEs war die vertraute Handschrift, dieselbe wie im ersten Brief. Doch diesmal war davon keine Wärme mehr zu spüren. Die Zeilen waren kalt, voller Gemeinheiten und Schimpfwörter. Er befahl ihnen, sich in Hyperborea selbst zu überlassen und ihm nie wieder zu schreiben. Ihre Briefe seien ihm nur lästig, und er habe mit ihnen abgeschlossen. Zu Hause habe er bereits eine Frau und einen Sohn. Selbst als seine Frau starb, wollte er nichts mit ihnen zu tun haben. Der erste Brief, so schrieb er, sei nur ein betrunkenes Geschwafel gewesen. Kein Wort davon habe er ernst gemeint. Bertha sei ein Makel auf dem Familiennamen, und er werde diesen Makel nie wieder ans Licht ziehen.\nJa. Ihre bloße Existenz war die Schmach.\nCamilla sah ihre Mutter, wie sie erschöpft über dem Tisch zusammenbrach und schluchzte. Sie ging ohne ein Wort zurück in ihr Zimmer. Sie hatte nie eine warme Umarmung von ihrer Mutter erwartet. Sie wünschte sich nur, dass ihre Mutter sie nicht schlug, wenn der Schmerz zur Wut wurde.\nAm nächsten Morgen war es zu still im Haus. Camilla ging wie üblich, um ihre Mutter zu wecken. Sie berührte ihre Schulter – nur um festzustellen, dass sie kalt war wie der Schnee, der über Icelake fiel. Leere Flaschen lagen verstreut auf dem Boden um ihr Bett.\nCamilla war nicht überrascht. Sie hatte diesen Moment seit Jahren in ihren Albträumen durchlebt. Sie biss sich auf die Unterlippe, aber keine Träne kam. Nach langer Zeit setzte sie sich neben ihre Mutter und hielt sie sanft.\n Als sie sich schließlich aufrappelte und darüber nachzudenken begann, was als Nächstes zu tun war, fiel ihr Blick auf den Tisch, den sie am Vorabend sauber geschrubbt hatte. Dort stand still ein Geburtstagskuchen – etwas, wonach sie sich immer gesehnt, das sie nie einmal probiert hatte.\n So wurde Camilla Scarlet erwachsen.",
+          TextMapId = "UI_CHAR_DATA_TEXT_32020403"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_32020403",
-    MaxKey = "UI_CHAR_FORCE_1503",
+    MinKey = "UI_CHAR_DATA_TEXT_32020404",
+    MaxKey = "UI_CHAR_FORCE_1801",
     Loader = function()
       return {
-        UI_CHAR_DATA_TEXT_32020403 = {
-          ContentDE = "Am Tag vor Camillas achtzehntem Geburtstag erhielten sie und ihre Mutter endlich einen weiteren Brief aus dem Ort, den sie „Heimat“ nannten. Er war von ihrem Vater – dem Mann, den die Mutter schmerzlich vermisst hatte. Sie platzte fast vor Freude. Sie schwang den Brief über dem Kopf, eilte den schlammigen Weg entlang, breitete die Arme aus und drehte sich im Gehen – benommen vor Glück.\nCamilla rief ihr nach, sie solle langsamer gehen. Aber die Mutter hörte nicht zu. Sie redete einfach weiter – von dem, was war, und mehr noch von dem, was sein würde. Sie würden alles haben. Geld im Überfluss und Liebe, in der sie ertrinken konnten. Unter den schwachen Straßenlampen streckte sich ihr Schatten lang über den Boden – wie ein tanzendes Mädchen. Camilla lächelte und atmete leise aus. Für einen Moment schienen die Rollen vertauscht: Sie als die Erwachsene, ihre Mutter als das vernarrte junge Mädchen.\nAls sie endlich nach Hause kamen, zündete die Mutter eine Kerze an, öffnete dann mit vorsichtigen Händen den Umschlag und faltete den Brief auf.\nIhre Stimme brach mitten im Satz ab. Die Kerzenflamme zuckte ein wenig und warf hartes Licht auf ihre Augen. Ihr Mund klappte auf. Das Lächeln erstarrte. Camilla konnte den Brief nicht sehen, aber sie wusste sofort: Dies war kein Brief aus Liebe.\nEinen Herzschlag lang herrschte Stille. Dann stieß ihre Mutter einen Laut hervor, den Camilla nie zuvor gehört hatte – heiser und roh, wie das Heulen eines verwundeten Tieres.\nEin Stuhl kippte um, als die Frau ihn wegtrat. Dann eine Schüssel Suppe. Immer ein Geschirr nach dem anderen zerschellte und spritzte, hinterließ Flecken, die an der Wand haften blieben. Camilla seufzte und begann zu reinigen. Das tat sie schon, seit sie klein war. Als der Besen den Brief auf dem Boden streifte, blickte sie hinunter.\nEs war die vertraute Handschrift, dieselbe wie im ersten Brief. Doch diesmal war davon keine Wärme mehr zu spüren. Die Zeilen waren kalt, voller Gemeinheiten und Schimpfwörter. Er befahl ihnen, sich in Hyperborea selbst zu überlassen und ihm nie wieder zu schreiben. Ihre Briefe seien ihm nur lästig, und er habe mit ihnen abgeschlossen. Zu Hause habe er bereits eine Frau und einen Sohn. Selbst als seine Frau starb, wollte er nichts mit ihnen zu tun haben. Der erste Brief, so schrieb er, sei nur ein betrunkenes Geschwafel gewesen. Kein Wort davon habe er ernst gemeint. Bertha sei ein Makel auf dem Familiennamen, und er werde diesen Makel nie wieder ans Licht ziehen.\nJa. Ihre bloße Existenz war die Schmach.\nCamilla sah ihre Mutter, wie sie erschöpft über dem Tisch zusammenbrach und schluchzte. Sie ging ohne ein Wort zurück in ihr Zimmer. Sie hatte nie eine warme Umarmung von ihrer Mutter erwartet. Sie wünschte sich nur, dass ihre Mutter sie nicht schlug, wenn der Schmerz zur Wut wurde.\nAm nächsten Morgen war es zu still im Haus. Camilla ging wie üblich, um ihre Mutter zu wecken. Sie berührte ihre Schulter – nur um festzustellen, dass sie kalt war wie der Schnee, der über Icelake fiel. Leere Flaschen lagen verstreut auf dem Boden um ihr Bett.\nCamilla war nicht überrascht. Sie hatte diesen Moment seit Jahren in ihren Albträumen durchlebt. Sie biss sich auf die Unterlippe, aber keine Träne kam. Nach langer Zeit setzte sie sich neben ihre Mutter und hielt sie sanft.\n Als sie sich schließlich aufrappelte und darüber nachzudenken begann, was als Nächstes zu tun war, fiel ihr Blick auf den Tisch, den sie am Vorabend sauber geschrubbt hatte. Dort stand still ein Geburtstagskuchen – etwas, wonach sie sich immer gesehnt, das sie nie einmal probiert hatte.\n So wurde Camilla Scarlet erwachsen.",
-          TextMapId = "UI_CHAR_DATA_TEXT_32020403"
-        },
         UI_CHAR_DATA_TEXT_32020404 = {
           ContentDE = "In Icelake waren die langen Nächte so bitterkalt, dass jeder unweigerlich zittern musste. Der Wind biss in Camillas kleine Ohren, bis sie glühend rot wurden. Ihre Lippen waren so steif, dass sie kaum Worte formen konnte, und jeder Atemzug füllte ihre Lungen mit so kalter Luft, dass ihr schwindelig wurde. Sie war kurz davor, zusammenzubrechen.\nWenn ihre Mutter weniger trinken würde, hätten sie vielleicht einen anständigen Mantel für sie beide. Vielleicht würde sie Camilla dann auch nicht so oft schlagen.\nAber würde es reichen, auf das Trinken zu verzichten? Camilla gelang nur ein bitteres Lächeln. Alkohol war nur ein Teil ihres Elends. Das wahre Gewicht war der unlösbare Schmerz ihrer Mutter. In dieser Nacht war es jedoch ein wortwörtliches Gewicht: der erschlaffte Körper, den Camilla halb tragen musste, um nach Hause zu gelangen – ihre Mutter, tottrunken in ihren Armen. Der Wind wurde nur schärfer. Ihre Finger wurden taub an dem Arm ihrer Mutter. Der Riemen der halbleeren Flasche schnitt bei jedem Schritt in ihr Handgelenk und riss alte Wunden wieder auf, die ihre Mutter ihr vor Jahren zugefügt hatte. Und ihre Mutter, halb schlafend, sackte müde gegen sie, als hätte all das nichts mit ihr zu tun.\nCamilla konnte nicht länger so leben.\nSie lenkte ihre Mutter zum See hin. An manchen Stellen war das Eis dünner geworden – dünn genug, um zwei knochige Frauen zu verschlingen.\nSie merkte, wie sie sich schnell bewegte, fast begierig, als wäre das, was vor ihnen lauerte, kein Abgrund, sondern Erlösung.\nAm Ufer rührte sich ihre Mutter, kurz erwacht.\n„... Ist dir kalt?“ Ihre Augen waren halb geschlossen, als sie nach ihrem Mantel tastete und ihn schwankend über Camillas Kopf hüllte. „Gehen wir nach Hause. Ich mache ein Feuer“, murmelte sie und fiel wieder in den Schlaf.\nSie hatte recht. Der See wäre in einer solchen Nacht zu kalt.\nVielleicht sollten sie nach Hause gehen. Ein Feuer machen. Zuerst ihre tauben Finger wärmen. Dann konnte sie wieder nachdenken.\n Der Wind legte sich. Der Schnee wurde sanfter und hüllte sie ein, als führte er sie zurück nach Hause.",
           TextMapId = "UI_CHAR_DATA_TEXT_32020404"
@@ -57878,19 +57874,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CHAR_FORCE_1503 = {
           ContentDE = "Außenberge – Wanderer",
           TextMapId = "UI_CHAR_FORCE_1503"
+        },
+        UI_CHAR_FORCE_1801 = {
+          ContentDE = "Unabhängig",
+          TextMapId = "UI_CHAR_FORCE_1801"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_FORCE_1801",
-    MaxKey = "UI_CMNpc_Name_MeanStudent",
+    MinKey = "UI_CHAR_FORCE_2101",
+    MaxKey = "UI_CMNpc_Name_Miya",
     Loader = function()
       return {
-        UI_CHAR_FORCE_1801 = {
-          ContentDE = "Unabhängig",
-          TextMapId = "UI_CHAR_FORCE_1801"
-        },
         UI_CHAR_FORCE_2101 = {
           ContentDE = "Unabhängig",
           TextMapId = "UI_CHAR_FORCE_2101"
@@ -58686,19 +58682,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_CMNpc_Name_MeanStudent = {
           ContentDE = "Mittelmäßiger Schüler",
           TextMapId = "UI_CMNpc_Name_MeanStudent"
+        },
+        UI_CMNpc_Name_Miya = {
+          ContentDE = "Mia",
+          TextMapId = "UI_CMNpc_Name_Miya"
         }
       }
     end
   },
   {
-    MinKey = "UI_CMNpc_Name_Miya",
-    MaxKey = "UI_COMMONPOP_TEXT_100278",
+    MinKey = "UI_CMNpc_Name_MolingXZ",
+    MaxKey = "UI_COMMONPOP_TIPS_100275",
     Loader = function()
       return {
-        UI_CMNpc_Name_Miya = {
-          ContentDE = "Mia",
-          TextMapId = "UI_CMNpc_Name_Miya"
-        },
         UI_CMNpc_Name_MolingXZ = {
           ContentDE = "Geniemon-Gelehrter",
           TextMapId = "UI_CMNpc_Name_MolingXZ"
@@ -59494,19 +59490,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_COMMONPOP_TEXT_100278 = {
           ContentDE = "Bist du sicher, dass du dieses Kapitel <H>vollständig spielen</> möchtest?",
           TextMapId = "UI_COMMONPOP_TEXT_100278"
+        },
+        UI_COMMONPOP_TIPS_100275 = {
+          ContentDE = "Diese Aktion kann nicht rückgängig gemacht werden. Du wirst automatisch zum Anmeldebildschirm zurückgebracht.",
+          TextMapId = "UI_COMMONPOP_TIPS_100275"
         }
       }
     end
   },
   {
-    MinKey = "UI_COMMONPOP_TIPS_100275",
-    MaxKey = "UI_ChapterName_02",
+    MinKey = "UI_COMMONPOP_TIPS_100277",
+    MaxKey = "UI_ChapterName_E0",
     Loader = function()
       return {
-        UI_COMMONPOP_TIPS_100275 = {
-          ContentDE = "Diese Aktion kann nicht rückgängig gemacht werden. Du wirst automatisch zum Anmeldebildschirm zurückgebracht.",
-          TextMapId = "UI_COMMONPOP_TIPS_100275"
-        },
         UI_COMMONPOP_TIPS_100277 = {
           ContentDE = "Diese Aktion kann nicht rückgängig gemacht werden.",
           TextMapId = "UI_COMMONPOP_TIPS_100277"
@@ -60299,19 +60295,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_ChapterName_02 = {
           ContentDE = "Kapitel Dämmerung",
           TextMapId = "UI_ChapterName_02"
+        },
+        UI_ChapterName_E0 = {
+          ContentDE = "Reise durch die Lande",
+          TextMapId = "UI_ChapterName_E0"
         }
       }
     end
   },
   {
-    MinKey = "UI_ChapterName_E0",
-    MaxKey = "UI_Consumable_Get_Confirm",
+    MinKey = "UI_ChapterNumber_00",
+    MaxKey = "UI_Consumable_Goto_Bag",
     Loader = function()
       return {
-        UI_ChapterName_E0 = {
-          ContentDE = "Reise durch die Lande",
-          TextMapId = "UI_ChapterName_E0"
-        },
         UI_ChapterNumber_00 = {
           ContentDE = "Prolog",
           TextMapId = "UI_ChapterNumber_00"
@@ -61107,19 +61103,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Consumable_Get_Confirm = {
           ContentDE = "Bestätigen",
           TextMapId = "UI_Consumable_Get_Confirm"
+        },
+        UI_Consumable_Goto_Bag = {
+          ContentDE = "Jetzt zum Inventar gehen, um zu verwenden?",
+          TextMapId = "UI_Consumable_Goto_Bag"
         }
       }
     end
   },
   {
-    MinKey = "UI_Consumable_Goto_Bag",
-    MaxKey = "UI_DUNGEON_TYPE_TRAINING",
+    MinKey = "UI_Consumable_Goto_Bag_Title",
+    MaxKey = "UI_DUNGEON_WARDEN",
     Loader = function()
       return {
-        UI_Consumable_Goto_Bag = {
-          ContentDE = "Jetzt zum Inventar gehen, um zu verwenden?",
-          TextMapId = "UI_Consumable_Goto_Bag"
-        },
         UI_Consumable_Goto_Bag_Title = {
           ContentDE = "Erinnerung: Verbrauchsgegenstand",
           TextMapId = "UI_Consumable_Goto_Bag_Title"
@@ -61912,19 +61908,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_DUNGEON_TYPE_TRAINING = {
           ContentDE = "Sandreich-Meditation",
           TextMapId = "UI_DUNGEON_TYPE_TRAINING"
+        },
+        UI_DUNGEON_WARDEN = {
+          ContentDE = "Patrouille",
+          TextMapId = "UI_DUNGEON_WARDEN"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_WARDEN",
-    MaxKey = "UI_Dungeon_Reward_Detail",
+    MinKey = "UI_DYNQUEST",
+    MaxKey = "UI_Dungeon_SpecialMonster",
     Loader = function()
       return {
-        UI_DUNGEON_WARDEN = {
-          ContentDE = "Patrouille",
-          TextMapId = "UI_DUNGEON_WARDEN"
-        },
         UI_DYNQUEST = {
           ContentDE = "Neuer dynamischer Auftrag",
           TextMapId = "UI_DYNQUEST"
@@ -62720,19 +62716,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Dungeon_Reward_Detail = {
           ContentDE = "Belohnungen",
           TextMapId = "UI_Dungeon_Reward_Detail"
+        },
+        UI_Dungeon_SpecialMonster = {
+          ContentDE = "Primarch",
+          TextMapId = "UI_Dungeon_SpecialMonster"
         }
       }
     end
   },
   {
-    MinKey = "UI_Dungeon_SpecialMonster",
-    MaxKey = "UI_FORGING_NOCONDITION",
+    MinKey = "UI_Dungeon_TabName",
+    MaxKey = "UI_FORGING_NODRAFT",
     Loader = function()
       return {
-        UI_Dungeon_SpecialMonster = {
-          ContentDE = "Primarch",
-          TextMapId = "UI_Dungeon_SpecialMonster"
-        },
         UI_Dungeon_TabName = {
           ContentDE = "Mission",
           TextMapId = "UI_Dungeon_TabName"
@@ -63528,19 +63524,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_FORGING_NOCONDITION = {
           ContentDE = "Schmiedevoraussetzungen nicht erfüllt",
           TextMapId = "UI_FORGING_NOCONDITION"
+        },
+        UI_FORGING_NODRAFT = {
+          ContentDE = "Unzureichende Baupläne",
+          TextMapId = "UI_FORGING_NODRAFT"
         }
       }
     end
   },
   {
-    MinKey = "UI_FORGING_NODRAFT",
-    MaxKey = "UI_HardBoss_Difficulty_Des_1022",
+    MinKey = "UI_FORGING_PATH",
+    MaxKey = "UI_HardBoss_Difficulty_Des_1023",
     Loader = function()
       return {
-        UI_FORGING_NODRAFT = {
-          ContentDE = "Unzureichende Baupläne",
-          TextMapId = "UI_FORGING_NODRAFT"
-        },
         UI_FORGING_PATH = {
           ContentDE = "Schmiedepfad",
           TextMapId = "UI_FORGING_PATH"
@@ -64333,19 +64329,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_HardBoss_Difficulty_Des_1022 = {
           ContentDE = "Der Samen im gefrorenen Boden, der die Gelegenheit zu einem sanften Abstieg in die Nacht verspielt hat.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1022"
+        },
+        UI_HardBoss_Difficulty_Des_1023 = {
+          ContentDE = "Der Samen im gefrorenen Boden, der die Gelegenheit zu einem sanften Abstieg in die Nacht verspielt hat.",
+          TextMapId = "UI_HardBoss_Difficulty_Des_1023"
         }
       }
     end
   },
   {
-    MinKey = "UI_HardBoss_Difficulty_Des_1023",
-    MaxKey = "UI_Lack_of_Resources",
+    MinKey = "UI_HardBoss_Difficulty_Des_1024",
+    MaxKey = "UI_Language_Switch_Success",
     Loader = function()
       return {
-        UI_HardBoss_Difficulty_Des_1023 = {
-          ContentDE = "Der Samen im gefrorenen Boden, der die Gelegenheit zu einem sanften Abstieg in die Nacht verspielt hat.",
-          TextMapId = "UI_HardBoss_Difficulty_Des_1023"
-        },
         UI_HardBoss_Difficulty_Des_1024 = {
           ContentDE = "Der Samen im gefrorenen Boden, der die Gelegenheit zu einem sanften Abstieg in die Nacht verspielt hat.",
           TextMapId = "UI_HardBoss_Difficulty_Des_1024"
@@ -65138,19 +65134,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Lack_of_Resources = {
           ContentDE = "Unzureichende Seelenabdrücke",
           TextMapId = "UI_Lack_of_Resources"
+        },
+        UI_Language_Switch_Success = {
+          ContentDE = "Sprachwechsel erfolgreich",
+          TextMapId = "UI_Language_Switch_Success"
         }
       }
     end
   },
   {
-    MinKey = "UI_Language_Switch_Success",
-    MaxKey = "UI_MECHANISM_928",
+    MinKey = "UI_Language_Switch_Text",
+    MaxKey = "UI_MECHANISM_98",
     Loader = function()
       return {
-        UI_Language_Switch_Success = {
-          ContentDE = "Sprachwechsel erfolgreich",
-          TextMapId = "UI_Language_Switch_Success"
-        },
         UI_Language_Switch_Text = {
           ContentDE = "Text",
           TextMapId = "UI_Language_Switch_Text"
@@ -65949,19 +65945,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_MECHANISM_928 = {
           ContentDE = "Gelähmt",
           TextMapId = "UI_MECHANISM_928"
+        },
+        UI_MECHANISM_98 = {
+          ContentDE = "Wurfanker",
+          TextMapId = "UI_MECHANISM_98"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_98",
-    MaxKey = "UI_NONE",
+    MinKey = "UI_MECHANISM_ALT_ENTER",
+    MaxKey = "UI_NPC_Name_Afu_Sce",
     Loader = function()
       return {
-        UI_MECHANISM_98 = {
-          ContentDE = "Wurfanker",
-          TextMapId = "UI_MECHANISM_98"
-        },
         UI_MECHANISM_ALT_ENTER = {
           ContentDE = "Betritt den Zhuyin-Altar",
           TextMapId = "UI_MECHANISM_ALT_ENTER"
@@ -66754,19 +66750,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_NONE = {
           ContentDE = "Keine Belohnungen",
           TextMapId = "UI_NONE"
+        },
+        UI_NPC_Name_Afu_Sce = {
+          ContentDE = "Fu",
+          TextMapId = "UI_NPC_Name_Afu_Sce"
         }
       }
     end
   },
   {
-    MinKey = "UI_NPC_Name_Afu_Sce",
-    MaxKey = "UI_Name_Walnut_2051",
+    MinKey = "UI_NPC_Name_Agui_Sce",
+    MaxKey = "UI_Name_Walnut_2052",
     Loader = function()
       return {
-        UI_NPC_Name_Afu_Sce = {
-          ContentDE = "Fu",
-          TextMapId = "UI_NPC_Name_Afu_Sce"
-        },
         UI_NPC_Name_Agui_Sce = {
           ContentDE = "Gui",
           TextMapId = "UI_NPC_Name_Agui_Sce"
@@ -67562,19 +67558,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Name_Walnut_2051 = {
           ContentDE = "Geheimbrief: Strahlende Erlösung",
           TextMapId = "UI_Name_Walnut_2051"
+        },
+        UI_Name_Walnut_2052 = {
+          ContentDE = "Geheimbrief: Azurnes Reich",
+          TextMapId = "UI_Name_Walnut_2052"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_2052",
-    MaxKey = "UI_Npc_Name_ObMech_3",
+    MinKey = "UI_Name_Walnut_2053",
+    MaxKey = "UI_Npc_Name_ObMech_4",
     Loader = function()
       return {
-        UI_Name_Walnut_2052 = {
-          ContentDE = "Geheimbrief: Azurnes Reich",
-          TextMapId = "UI_Name_Walnut_2052"
-        },
         UI_Name_Walnut_2053 = {
           ContentDE = "Geheimbrief: Friedenstaube",
           TextMapId = "UI_Name_Walnut_2053"
@@ -68367,19 +68363,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Npc_Name_ObMech_3 = {
           ContentDE = "Gerät 3",
           TextMapId = "UI_Npc_Name_ObMech_3"
+        },
+        UI_Npc_Name_ObMech_4 = {
+          ContentDE = "Noch zu entwickeln",
+          TextMapId = "UI_Npc_Name_ObMech_4"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_ObMech_4",
-    MaxKey = "UI_OPTION_HideBackWeapons",
+    MinKey = "UI_Npc_Name_ObMech_6",
+    MaxKey = "UI_OPTION_HidePlayer",
     Loader = function()
       return {
-        UI_Npc_Name_ObMech_4 = {
-          ContentDE = "Noch zu entwickeln",
-          TextMapId = "UI_Npc_Name_ObMech_4"
-        },
         UI_Npc_Name_ObMech_6 = {
           ContentDE = "Das Gerät betreten",
           TextMapId = "UI_Npc_Name_ObMech_6"
@@ -69175,19 +69171,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_OPTION_HideBackWeapons = {
           ContentDE = "Rückenwaffe ausblenden",
           TextMapId = "UI_OPTION_HideBackWeapons"
+        },
+        UI_OPTION_HidePlayer = {
+          ContentDE = "Nicht-Party-Spieler automatisch ausblenden",
+          TextMapId = "UI_OPTION_HidePlayer"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_HidePlayer",
-    MaxKey = "UI_PATCH_OPTIONALPATCH",
+    MinKey = "UI_OPTION_HorizontalSensitivity",
+    MaxKey = "UI_PATCH_PERSISTENTFAILED",
     Loader = function()
       return {
-        UI_OPTION_HidePlayer = {
-          ContentDE = "Nicht-Party-Spieler automatisch ausblenden",
-          TextMapId = "UI_OPTION_HidePlayer"
-        },
         UI_OPTION_HorizontalSensitivity = {
           ContentDE = "Horizontale Kameraempfindlichkeit",
           TextMapId = "UI_OPTION_HorizontalSensitivity"
@@ -69983,19 +69979,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_PATCH_OPTIONALPATCH = {
           ContentDE = "%s optionale Ressourcen können aktualisiert werden. Möchtest du die Aktualisierung wirklich durchführen?",
           TextMapId = "UI_PATCH_OPTIONALPATCH"
+        },
+        UI_PATCH_PERSISTENTFAILED = {
+          ContentDE = "Speicherung der Ressource fehlgeschlagen, möglicherweise nicht genügend Speicherplatz. Jetzt erneut versuchen?",
+          TextMapId = "UI_PATCH_PERSISTENTFAILED"
         }
       }
     end
   },
   {
-    MinKey = "UI_PATCH_PERSISTENTFAILED",
-    MaxKey = "UI_PlayerHead_Name_30030",
+    MinKey = "UI_PATCH_VERTIFYASSETS",
+    MaxKey = "UI_PlayerHead_Name_30031",
     Loader = function()
       return {
-        UI_PATCH_PERSISTENTFAILED = {
-          ContentDE = "Speicherung der Ressource fehlgeschlagen, möglicherweise nicht genügend Speicherplatz. Jetzt erneut versuchen?",
-          TextMapId = "UI_PATCH_PERSISTENTFAILED"
-        },
         UI_PATCH_VERTIFYASSETS = {
           ContentDE = "Ressourcen werden überprüft",
           TextMapId = "UI_PATCH_VERTIFYASSETS"
@@ -70788,19 +70784,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_PlayerHead_Name_30030 = {
           ContentDE = "Avatar – Leidenschaftliches Lumi",
           TextMapId = "UI_PlayerHead_Name_30030"
+        },
+        UI_PlayerHead_Name_30031 = {
+          ContentDE = "Avatar – Glänzender Flauschblitz",
+          TextMapId = "UI_PlayerHead_Name_30031"
         }
       }
     end
   },
   {
-    MinKey = "UI_PlayerHead_Name_30031",
-    MaxKey = "UI_RangedArchive_MainProgress",
+    MinKey = "UI_PlayerHead_Name_30032",
+    MaxKey = "UI_Read_Click",
     Loader = function()
       return {
-        UI_PlayerHead_Name_30031 = {
-          ContentDE = "Avatar – Glänzender Flauschblitz",
-          TextMapId = "UI_PlayerHead_Name_30031"
-        },
         UI_PlayerHead_Name_30032 = {
           ContentDE = "Avatar – Wunderbarer Flauschblitz",
           TextMapId = "UI_PlayerHead_Name_30032"
@@ -71578,19 +71574,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_RangedArchive_MainProgress = {
           ContentDE = "Fernkampfwaffen freigeschaltet:",
           TextMapId = "UI_RangedArchive_MainProgress"
+        },
+        UI_Read_Click = {
+          ContentDE = "Jetzt lesen",
+          TextMapId = "UI_Read_Click"
         }
       }
     end
   },
   {
-    MinKey = "UI_Read_Click",
-    MaxKey = "UI_SHOP_PURCHASE",
+    MinKey = "UI_Recommend_Server",
+    MaxKey = "UI_SHOP_REFRESH_TIME",
     Loader = function()
       return {
-        UI_Read_Click = {
-          ContentDE = "Jetzt lesen",
-          TextMapId = "UI_Read_Click"
-        },
         UI_Recommend_Server = {
           ContentDE = "Empfohlener Server",
           TextMapId = "UI_Recommend_Server"
@@ -72386,19 +72382,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_SHOP_PURCHASE = {
           ContentDE = "Kaufen",
           TextMapId = "UI_SHOP_PURCHASE"
+        },
+        UI_SHOP_REFRESH_TIME = {
+          ContentDE = "Aktualisiert in: %s",
+          TextMapId = "UI_SHOP_REFRESH_TIME"
         }
       }
     end
   },
   {
-    MinKey = "UI_SHOP_REFRESH_TIME",
-    MaxKey = "UI_Setup_Panel_Exp",
+    MinKey = "UI_SHOP_REMAINTIME",
+    MaxKey = "UI_Shadow_Carrying",
     Loader = function()
       return {
-        UI_SHOP_REFRESH_TIME = {
-          ContentDE = "Aktualisiert in: %s",
-          TextMapId = "UI_SHOP_REFRESH_TIME"
-        },
         UI_SHOP_REMAINTIME = {
           ContentDE = "%s",
           TextMapId = "UI_SHOP_REMAINTIME"
@@ -73188,19 +73184,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Setup_Panel_Exp = {
           ContentDE = "EP",
           TextMapId = "UI_Setup_Panel_Exp"
+        },
+        UI_Shadow_Carrying = {
+          ContentDE = "Ausgerüstet mit",
+          TextMapId = "UI_Shadow_Carrying"
         }
       }
     end
   },
   {
-    MinKey = "UI_Shadow_Carrying",
-    MaxKey = "UI_SubTitle_CharArchive",
+    MinKey = "UI_Shadow_Name",
+    MaxKey = "UI_SubTitle_EnemyArchive",
     Loader = function()
       return {
-        UI_Shadow_Carrying = {
-          ContentDE = "Ausgerüstet mit",
-          TextMapId = "UI_Shadow_Carrying"
-        },
         UI_Shadow_Name = {
           ContentDE = "Kampfbegleiter",
           TextMapId = "UI_Shadow_Name"
@@ -73995,19 +73991,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_SubTitle_CharArchive = {
           ContentDE = "Figuren",
           TextMapId = "UI_SubTitle_CharArchive"
+        },
+        UI_SubTitle_EnemyArchive = {
+          ContentDE = "Gegner",
+          TextMapId = "UI_SubTitle_EnemyArchive"
         }
       }
     end
   },
   {
-    MinKey = "UI_SubTitle_EnemyArchive",
-    MaxKey = "UI_TOAST_FORGING_WARNING",
+    MinKey = "UI_SubTitle_ItemArchive",
+    MaxKey = "UI_TRAINING_FAIL_GUIDWAR",
     Loader = function()
       return {
-        UI_SubTitle_EnemyArchive = {
-          ContentDE = "Gegner",
-          TextMapId = "UI_SubTitle_EnemyArchive"
-        },
         UI_SubTitle_ItemArchive = {
           ContentDE = "Gegenstand",
           TextMapId = "UI_SubTitle_ItemArchive"
@@ -74803,19 +74799,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_TOAST_FORGING_WARNING = {
           ContentDE = "Besuche die Luno-Schmiedin in der Raststätte, um zu schmieden.",
           TextMapId = "UI_TOAST_FORGING_WARNING"
+        },
+        UI_TRAINING_FAIL_GUIDWAR = {
+          ContentDE = "Herausforderung kann im Team nicht gestartet werden",
+          TextMapId = "UI_TRAINING_FAIL_GUIDWAR"
         }
       }
     end
   },
   {
-    MinKey = "UI_TRAINING_FAIL_GUIDWAR",
-    MaxKey = "UI_WEAPON_DESC_10104",
+    MinKey = "UI_TRAINING_FAIL_INTEAM",
+    MaxKey = "UI_WEAPON_DESC_10105",
     Loader = function()
       return {
-        UI_TRAINING_FAIL_GUIDWAR = {
-          ContentDE = "Herausforderung kann im Team nicht gestartet werden",
-          TextMapId = "UI_TRAINING_FAIL_GUIDWAR"
-        },
         UI_TRAINING_FAIL_INTEAM = {
           ContentDE = "Zugang zur Sandreich-Meditation ist im Team nicht verfügbar",
           TextMapId = "UI_TRAINING_FAIL_INTEAM"
@@ -75608,19 +75604,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_WEAPON_DESC_10104 = {
           ContentDE = "Die beste Verteidigung ist ein starker Angriff – aber vergiss nicht die Bedeutung von ausreichender Erholung.",
           TextMapId = "UI_WEAPON_DESC_10104"
+        },
+        UI_WEAPON_DESC_10105 = {
+          ContentDE = "Ich werde eine Reise jenseits des Sandes antreten, genau wie du.",
+          TextMapId = "UI_WEAPON_DESC_10105"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_DESC_10105",
-    MaxKey = "UI_Walnut_Selecting",
+    MinKey = "UI_WEAPON_DESC_10198",
+    MaxKey = "UI_Walnut_Type_Des_1",
     Loader = function()
       return {
-        UI_WEAPON_DESC_10105 = {
-          ContentDE = "Ich werde eine Reise jenseits des Sandes antreten, genau wie du.",
-          TextMapId = "UI_WEAPON_DESC_10105"
-        },
         UI_WEAPON_DESC_10198 = {
           ContentDE = "Ein Schwert, veredelt mit den neuesten Technologien zur Oberflächenbehandlung – beliebt bei Rittern, die für ihre Loyalität und Disziplin bekannt sind.",
           TextMapId = "UI_WEAPON_DESC_10198"
@@ -76416,19 +76412,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_Walnut_Selecting = {
           ContentDE = "Auswahl läuft",
           TextMapId = "UI_Walnut_Selecting"
+        },
+        UI_Walnut_Type_Des_1 = {
+          ContentDE = "Geheimbrief: Figur",
+          TextMapId = "UI_Walnut_Type_Des_1"
         }
       }
     end
   },
   {
-    MinKey = "UI_Walnut_Type_Des_1",
-    MaxKey = "VoiceDes039",
+    MinKey = "UI_Walnut_Type_Des_2",
+    MaxKey = "VoiceDes040",
     Loader = function()
       return {
-        UI_Walnut_Type_Des_1 = {
-          ContentDE = "Geheimbrief: Figur",
-          TextMapId = "UI_Walnut_Type_Des_1"
-        },
         UI_Walnut_Type_Des_2 = {
           ContentDE = "Geheimbrief: Waffe",
           TextMapId = "UI_Walnut_Type_Des_2"
@@ -77221,19 +77217,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         VoiceDes039 = {
           ContentDE = "(Ⅸ)",
           TextMapId = "VoiceDes039"
+        },
+        VoiceDes040 = {
+          ContentDE = "(Ⅹ)",
+          TextMapId = "VoiceDes040"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes040",
-    MaxKey = "WikiText_20102801",
+    MinKey = "VoiceDes041",
+    MaxKey = "WikiText_20300101",
     Loader = function()
       return {
-        VoiceDes040 = {
-          ContentDE = "(Ⅹ)",
-          TextMapId = "VoiceDes040"
-        },
         VoiceDes041 = {
           ContentDE = "Zufällige Begegnung (Ⅰ)",
           TextMapId = "VoiceDes041"
@@ -78029,19 +78025,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         WikiText_20102801 = {
           ContentDE = "Ein junger Mann aus der Innenstadt, Fina’s Halbbruder.\n Nachdem er beide Eltern verloren hatte, litt er unter Mobbing in der Schule. Er glaubte, seine einzige Freundin Cassandra hätte ihn verlassen, und floh allein aus Icelake, nur um von Banditen entführt zu werden. Er wurde sicher von Fina und {nickname} gerettet, was zu seiner Wiedervereinigung mit Fina führte. Ermutigt von {nickname}, fand er den Mut, das Leben neu zu begegnen.",
           TextMapId = "WikiText_20102801"
+        },
+        WikiText_20300101 = {
+          ContentDE = "Eine mysteriöse Händlerin aus Huaxu, die trotz ihrer Herkunft als Charon eine hohe Stellung innehat. Sie begegnete {nickname} erstmals, als sie am Galea-Theater eingriff und Hilfe leistete.",
+          TextMapId = "WikiText_20300101"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_20300101",
-    MaxKey = "voice_ch_char_Baiheng_vo_battleidle",
+    MinKey = "WikiText_20300102",
+    MaxKey = "voice_ch_char_Baiheng_vo_battlestart",
     Loader = function()
       return {
-        WikiText_20300101 = {
-          ContentDE = "Eine mysteriöse Händlerin aus Huaxu, die trotz ihrer Herkunft als Charon eine hohe Stellung innehat. Sie begegnete {nickname} erstmals, als sie am Galea-Theater eingriff und Hilfe leistete.",
-          TextMapId = "WikiText_20300101"
-        },
         WikiText_20300102 = {
           ContentDE = "Während einer Legion-Operation, die darauf abzielte, {nickname} anzulocken, griff Zhiliu erneut ein, rettete {nickname} und eskortierte {nickname} nach Huaxu.",
           TextMapId = "WikiText_20300102"
@@ -78836,19 +78832,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Baiheng_vo_battleidle = {
           ContentDE = "Wie kann ich die Hilferufe in der Ferne ignorieren!",
           TextMapId = "voice_ch_char_Baiheng_vo_battleidle"
+        },
+        voice_ch_char_Baiheng_vo_battlestart = {
+          ContentDE = "Ich darf nicht zulassen, dass der Tod die Oberhand behält.",
+          TextMapId = "voice_ch_char_Baiheng_vo_battlestart"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Baiheng_vo_battlestart",
-    MaxKey = "voice_ch_char_Heitao_vo_battlestart",
+    MinKey = "voice_ch_char_Baiheng_vo_be_hit_heavy_r01",
+    MaxKey = "voice_ch_char_Heitao_vo_birthday",
     Loader = function()
       return {
-        voice_ch_char_Baiheng_vo_battlestart = {
-          ContentDE = "Ich darf nicht zulassen, dass der Tod die Oberhand behält.",
-          TextMapId = "voice_ch_char_Baiheng_vo_battlestart"
-        },
         voice_ch_char_Baiheng_vo_be_hit_heavy_r01 = {
           ContentDE = "Üble Unreinheiten ...",
           TextMapId = "voice_ch_char_Baiheng_vo_be_hit_heavy_r01"
@@ -79644,19 +79640,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Heitao_vo_battlestart = {
           ContentDE = "Ich gehe zuerst.",
           TextMapId = "voice_ch_char_Heitao_vo_battlestart"
+        },
+        voice_ch_char_Heitao_vo_birthday = {
+          ContentDE = "Du hast mir einmal gesagt, du möchtest auch so eine Geburtstagsfeier wie andere haben. Also habe ich dir einen Kuchen gemacht – ich habe gehört, ein Geburtstag ohne Kuchen ist gar kein richtiger Geburtstag. Möge dich in den kommenden Jahren Freude erfüllen, jedes Mal, wenn du das Wort „Geburtstag“ hörst.",
+          TextMapId = "voice_ch_char_Heitao_vo_birthday"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Heitao_vo_birthday",
-    MaxKey = "voice_ch_char_Maer_vo_gain_2",
+    MinKey = "voice_ch_char_Heitao_vo_companio_01",
+    MaxKey = "voice_ch_char_Maer_vo_idle",
     Loader = function()
       return {
-        voice_ch_char_Heitao_vo_birthday = {
-          ContentDE = "Du hast mir einmal gesagt, du möchtest auch so eine Geburtstagsfeier wie andere haben. Also habe ich dir einen Kuchen gemacht – ich habe gehört, ein Geburtstag ohne Kuchen ist gar kein richtiger Geburtstag. Möge dich in den kommenden Jahren Freude erfüllen, jedes Mal, wenn du das Wort „Geburtstag“ hörst.",
-          TextMapId = "voice_ch_char_Heitao_vo_birthday"
-        },
         voice_ch_char_Heitao_vo_companio_01 = {
           ContentDE = "All die Jahre habe ich gut auf {性别:ihn|sie} und auf mich selbst aufgepasst, so wie ich es dir versprochen habe ... Könntest du mir über den Kopf streichen und sagen, dass ich es gut gemacht habe – so wie damals, als ich klein war? Und dieses Mal, bitte ... verlass uns nicht wieder.",
           TextMapId = "voice_ch_char_Heitao_vo_companio_01"
@@ -80452,19 +80448,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Maer_vo_gain_2 = {
           ContentDE = "Was?! Du hast schon von meinem Titel „Prinzessin Mülleimer“ gehört?! Uaaah ... Bitte mach da bloß nicht mit! Nenn mich einfach Margie, okay? Ich bin keine Prinzessin, nur eine kleine Schrottsammlerin in Icelake.",
           TextMapId = "voice_ch_char_Maer_vo_gain_2"
+        },
+        voice_ch_char_Maer_vo_idle = {
+          ContentDE = "Mmh ... schönes Wetter. Es ist perfekt, um ein paar Blumen zu pflücken und gut zu duften! {nickname}, willst du mitkommen?",
+          TextMapId = "voice_ch_char_Maer_vo_idle"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Maer_vo_idle",
-    MaxKey = "voice_ch_char_Songlu_vo_be_hit_heavy_r01",
+    MinKey = "voice_ch_char_Maer_vo_lvup",
+    MaxKey = "voice_ch_char_Songlu_vo_be_hit_r01",
     Loader = function()
       return {
-        voice_ch_char_Maer_vo_idle = {
-          ContentDE = "Mmh ... schönes Wetter. Es ist perfekt, um ein paar Blumen zu pflücken und gut zu duften! {nickname}, willst du mitkommen?",
-          TextMapId = "voice_ch_char_Maer_vo_idle"
-        },
         voice_ch_char_Maer_vo_lvup = {
           ContentDE = "Wow! Der Sack zum Sammeln ist ja viel größer geworden!",
           TextMapId = "voice_ch_char_Maer_vo_lvup"
@@ -81260,19 +81256,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Songlu_vo_be_hit_heavy_r01 = {
           ContentDE = "Das ist unfair ...",
           TextMapId = "voice_ch_char_Songlu_vo_be_hit_heavy_r01"
+        },
+        voice_ch_char_Songlu_vo_be_hit_r01 = {
+          ContentDE = "Aua ...",
+          TextMapId = "voice_ch_char_Songlu_vo_be_hit_r01"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Songlu_vo_be_hit_r01",
-    MaxKey = "voice_ch_char_Yeer_vo_topic_02_2",
+    MinKey = "voice_ch_char_Songlu_vo_birthday",
+    MaxKey = "voice_ch_char_Yeer_vo_topic_02_3",
     Loader = function()
       return {
-        voice_ch_char_Songlu_vo_be_hit_r01 = {
-          ContentDE = "Aua ...",
-          TextMapId = "voice_ch_char_Songlu_vo_be_hit_r01"
-        },
         voice_ch_char_Songlu_vo_birthday = {
           ContentDE = "Alles Gute zum Geburtstag! Ich habe dir eine Torte voller Nüsse, Sahne und Marmelade gebacken. Aber der Duft hat viele Leute angelockt. Also … ähm … habe ich sie mit ihnen geteilt.\n Aber keine Sorge! Ich habe ein Stück für dich aufgehoben! Schau mal, extra mit viel Marmelade und Borealbeeren obendrauf!\n Komm, probier es. Es schmeckt bestimmt viel besser als die normale Armeeverpflegung!",
           TextMapId = "voice_ch_char_Songlu_vo_birthday"
@@ -82070,19 +82066,19 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Yeer_vo_topic_02_2 = {
           ContentDE = "Yale: Das sind die beliebtesten Artikel in unserem Spielzeugladen „Snap 'n' Spark“... Sie brauchen viel Zeit zur Herstellung.",
           TextMapId = "voice_ch_char_Yeer_vo_topic_02_2"
+        },
+        voice_ch_char_Yeer_vo_topic_02_3 = {
+          ContentDE = "Yale: Aber das liegt nicht daran, dass ich so geschickt bin ... Das verdanken wir alles Olivers Fachwissen.",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_02_3"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Yeer_vo_topic_02_3",
+    MinKey = "voice_ch_char_Yeer_vo_topic_03_1",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
-        voice_ch_char_Yeer_vo_topic_02_3 = {
-          ContentDE = "Yale: Aber das liegt nicht daran, dass ich so geschickt bin ... Das verdanken wir alles Olivers Fachwissen.",
-          TextMapId = "voice_ch_char_Yeer_vo_topic_02_3"
-        },
         voice_ch_char_Yeer_vo_topic_03_1 = {
           ContentDE = "Yale: Ach, entschuldige! A... Aber wenn ich zu schnell spreche, dann ... äh ... verheddert sich meine Zunge.",
           TextMapId = "voice_ch_char_Yeer_vo_topic_03_1"

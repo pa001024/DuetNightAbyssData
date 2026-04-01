@@ -648,7 +648,11 @@ end
 function WBP_Bag_Detail_View_C:SetConsumableItemButtonReddot(ReddotTreeNode)
   DebugPrint("Yihan@ SetConsumableItemButtonReddot", self.StuffId)
   local BagConsumeNodeDetails = ReddotManager.GetLeafNodeCacheDetail(ReddotTreeNode)
-  self.Btn01:SetReddot(false, BagConsumeNodeDetails[self.StuffId].ShowReddot)
+  local bShowReddot = false
+  if BagConsumeNodeDetails and BagConsumeNodeDetails[self.StuffId] then
+    bShowReddot = BagConsumeNodeDetails[self.StuffId].ShowReddot
+  end
+  self.Btn01:SetReddot(false, bShowReddot)
 end
 
 function WBP_Bag_Detail_View_C:AddSingleBtnReddotListener(ReddotTreeNode)

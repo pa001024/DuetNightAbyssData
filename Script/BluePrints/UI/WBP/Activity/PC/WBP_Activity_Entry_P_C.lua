@@ -88,6 +88,9 @@ function M:ReceiveEnterState(StackAction)
   if nil ~= CurrentActivePage and type(CurrentActivePage.ReceiveEnterStateSelf) == "function" then
     CurrentActivePage:ReceiveEnterStateSelf(StackAction)
   end
+  if nil ~= self.CurrentActiveBg and self.CurrentActiveBg.ReceiveEnterStateSelf and "function" == type(self.CurrentActiveBg.ReceiveEnterStateSelf) then
+    self.CurrentActiveBg:ReceiveEnterStateSelf(StackAction)
+  end
 end
 
 function M:Close()

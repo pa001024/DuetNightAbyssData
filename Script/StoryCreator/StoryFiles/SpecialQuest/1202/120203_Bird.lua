@@ -148,6 +148,12 @@ return {
             startPort = "Out",
             endQuest = "17737310266178367951",
             endPort = "In"
+          },
+          {
+            startQuest = "1770122989401379",
+            startPort = "Out",
+            endQuest = "17749452460605138027",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -283,6 +289,13 @@ return {
               GuideTalkStyle = "Normal",
               OverrideFailBlend = false
             }
+          },
+          ["17749452460605138027"] = {
+            key = "17749452460605138027",
+            type = "UnEquipEffectPropNode",
+            name = "卸载当前装备的探索道具",
+            pos = {x = 1451.189431306119, y = 9.001141761052192},
+            propsData = {}
           }
         },
         commentData = {}

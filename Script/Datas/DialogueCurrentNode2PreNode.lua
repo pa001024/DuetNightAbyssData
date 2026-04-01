@@ -575,7 +575,7 @@ return ReadOnly("DialogueCurrentNode2PreNode", {
     [12042912] = T.RT_1,
     [12042913] = T.RT_1
   },
-  [12043701] = {
+  [12043710] = {
     [12043711] = T.RT_1,
     [12043712] = T.RT_1
   },

@@ -133,11 +133,11 @@ function M:IsPartyTopicShowRedDot(CharacterId, PartyTopicLevel, PartyTopicId)
     UStoryLogUtils:PrintToFeiShu(GWorld.GameInstance, "邀约系统错误", "获取角色信息失败，avatar 为空。")
     return false
   end
-  local PartyTopic = Avatar:GetPartyTopic(CharacterId, PartyTopicLevel)
+  local PartyTopic = Avatar:GetPartyTopicLockState(CharacterId, PartyTopicLevel)
   if PartyTopic and PartyTopic:IsLocked() == false and PartyTopic:IsCompleted() == true then
     return false
   end
-  local LastPartyTopic = Avatar:GetPartyTopic(CharacterId, PartyTopicLevel - 1)
+  local LastPartyTopic = Avatar:GetPartyTopicLockState(CharacterId, PartyTopicLevel - 1)
   if LastPartyTopic and false == LastPartyTopic:IsCompleted() then
     return false
   end

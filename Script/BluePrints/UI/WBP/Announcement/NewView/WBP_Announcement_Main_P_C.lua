@@ -121,11 +121,30 @@ function M:UpdateWebOnInputTypeChange(CurInputType, CurGamepadName)
 end
 
 function M:OnWebContentLoadDone()
-  if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
-    local CurInputType = self.GameInputModeSubsystem:GetCurrentInputType()
-    local CurGamepadName = self.GameInputModeSubsystem:GetCurrentGamepadName()
-    self:UpdateWebOnInputTypeChange(CurInputType, CurGamepadName)
+  M.Super.OnWebContentLoadDone(self)
+  local CurInputType = self.GameInputModeSubsystem:GetCurrentInputType()
+  local CurGamepadName = self.GameInputModeSubsystem:GetCurrentGamepadName()
+  self:UpdateWebOnInputTypeChange(CurInputType, CurGamepadName)
+end
+
+function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
+  local HandleRes = M.Super.OnPreviewKeyDown(self, MyGeo, InKeyEvent)
+  local InKey = UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local bHandled = false
+  if InKeyName == UIConst.GamePadKey.DPadUp then
+    self.WebContent:ExecuteJavascript("announceSelect(\"up\")")
+    self.WebContent:ExecuteJavascript("announceConfirm()")
+    bHandled = true
+  elseif InKeyName == UIConst.GamePadKey.DPadDown then
+    self.WebContent:ExecuteJavascript("announceSelect(\"down\")")
+    self.WebContent:ExecuteJavascript("announceConfirm()")
+    bHandled = true
   end
+  if bHandled then
+    return UIUtils.Handled
+  end
+  return HandleRes
 end
 
 function M:OnKeyUp(MyGeo, InKeyEvent)
@@ -133,14 +152,16 @@ function M:OnKeyUp(MyGeo, InKeyEvent)
   local InKey = UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UFormulaFunctionLibrary.Key_GetFName(InKey)
   local bHandled = false
+  local bWebFocus = self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants()
   if self.Tab_Announcement:Handle_KeyEventOnPC(InKeyName) then
     bHandled = true
   elseif self.Tab_Announcement:Handle_KeyEventOnGamePad(InKeyName) then
     bHandled = true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonRight then
-    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+    if bWebFocus then
       if self.CurContent and self.CurContent.Widget then
         self.CurContent.Widget:SetFocus()
+        self.WebContent:ExecuteJavascript("syncIndicator(\"done\")")
       end
       bHandled = true
     else
@@ -148,29 +169,13 @@ function M:OnKeyUp(MyGeo, InKeyEvent)
       bHandled = true
     end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonTop then
-    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
-      self.WebContent:ExecuteJavascript("scrollToEdge(\"top\")")
-      bHandled = true
-    end
+    self.WebContent:ExecuteJavascript("scrollToEdge(\"top\")")
+    bHandled = true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
-    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
-      self.WebContent:ExecuteJavascript("scrollToEdge(\"bottom\")")
-      bHandled = true
-    end
-  elseif InKeyName == UIConst.GamePadKey.DPadUp then
-    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
-      self.WebContent:ExecuteJavascript("announceSelect(\"up\")")
-      self.WebContent:ExecuteJavascript("announceConfirm()")
-      bHandled = true
-    end
-  elseif InKeyName == UIConst.GamePadKey.DPadDown then
-    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
-      self.WebContent:ExecuteJavascript("announceSelect(\"down\")")
-      self.WebContent:ExecuteJavascript("announceConfirm()")
-      bHandled = true
-    end
+    self.WebContent:ExecuteJavascript("scrollToEdge(\"bottom\")")
+    bHandled = true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom then
-    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+    if bWebFocus then
       if self.CurContent.Conf.HasLinkImage then
         UKismetSystemLibrary.LaunchURL(self.CurContent.Conf.ImageUrl)
       elseif self.CurContent.Conf.UIStyle == AnnounceCommon.ContentUIStyle.Default then
@@ -192,24 +197,35 @@ end
 function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if InKeyName == UIConst.GamePadKey.RightAnalogY then
-    if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
-      local a = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * -self.ScrollSpeed
-      self.WebContent:ExecuteJavascript(string.format("handleAnalogScroll(%s)", a))
-    end
-  elseif InKeyName == UIConst.GamePadKey.LeftAnalogX then
+  local bWebFocus = self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants()
+  if InKeyName == UIConst.GamePadKey.LeftAnalogX then
     local a = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent)
     if a > 0.4 then
-      if self.WebContent:HasAnyUserFocus() or self.WebContent:HasFocusedDescendants() then
+      if bWebFocus then
         self.WebContent:ExecuteJavascript("syncIndicator(\"active\")")
         DebugPrint("Execute syncIndicator(\"active\")")
       end
-    elseif a < -0.4 then
+    elseif a < -0.4 and not bWebFocus then
       self.WebContent:ExecuteJavascript("syncIndicator(\"done\")")
       DebugPrint("Execute syncIndicator(\"done\")")
     end
+  elseif InKeyName == UIConst.GamePadKey.LeftAnalogY then
+    if bWebFocus then
+      self:_ScrollWebContent(InAnalogInputEvent)
+    end
+  elseif InKeyName == UIConst.GamePadKey.RightAnalogY and not bWebFocus then
+    self:_ScrollWebContent(InAnalogInputEvent)
   end
   return UWidgetBlueprintLibrary.Unhandled()
+end
+
+function M:_ScrollWebContent(InAnalogInputEvent)
+  if self.bSelectionExpand ~= self.bLastSelectionExp then
+    self.WebContent:ExecuteJavascript("syncIndicator(\"active\")")
+    self.bLastSelectionExp = self.bSelectionExpand
+  end
+  local a = UKismetInputLibrary.GetAnalogValue(InAnalogInputEvent) * -self.ScrollSpeed
+  self.WebContent:ExecuteJavascript(string.format("handleAnalogScroll(%s)", a))
 end
 
 function M:Destruct()

@@ -5,7 +5,10 @@ local WBP_SoloTreasure_CountDown_C = Class({
 
 function WBP_SoloTreasure_CountDown_C:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
-  self.Main:SetRenderOpacity(0)
+  self.IsFromLanguageChange = (...)
+  if not self.IsFromLanguageChange then
+    self.Main:SetRenderOpacity(0)
+  end
   local UIBattleMain = UIManager(self):GetUI("BattleMain")
   if UIBattleMain then
     UIBattleMain.Btn_Task:SetVisibility(ESlateVisibility.Collapsed)
@@ -49,7 +52,9 @@ function WBP_SoloTreasure_CountDown_C:PlayInAnimation()
       self:InitCountDown()
     end)
   else
-    self:InitTaskStartTip()
+    if not self.IsFromLanguageChange then
+      self:InitTaskStartTip()
+    end
     self:InitCountDown()
   end
 end
@@ -103,6 +108,9 @@ function WBP_SoloTreasure_CountDown_C:InitWarningTimeTip()
 end
 
 function WBP_SoloTreasure_CountDown_C:InitCountDown()
+  if self.IsRed then
+    return
+  end
   self.Switch_TimeType:SetActiveWidgetIndex(0)
   self.IsRed = false
 end

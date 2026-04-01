@@ -165,50 +165,50 @@
   },
   {
     "id": 10027,
-    "name": "争锋",
-    "desc": "群英争锋，气贯长虹。",
+    "name": "Rivalité",
+    "desc": "Quand les héros s’affrontent, leur ardeur perce les cieux.",
     "icon": "T_Head_Frame31",
     "access": "Disponible via les événements"
   },
   {
     "id": 10028,
-    "name": "祥云",
-    "desc": "身伴流云，心游太虚。",
+    "name": "Nuées propices",
+    "desc": "Parmi les nuées flottantes, l’esprit s’égare au-delà du monde.",
     "icon": "T_Head_Frame30",
     "access": "Disponible dans la boutique"
   },
   {
     "id": 10029,
     "name": "Flammes fanées",
-    "desc": "灰白中倒映着烈火最后的辉煌。",
+    "desc": "Dans la cendre blafarde se reflète l’ultime éclat des flammes.",
     "icon": "T_Head_Frame25",
     "access": "Disponible dans la boutique"
   },
   {
     "id": 10030,
-    "name": "烈酒与蔷薇",
-    "desc": "微醺的夜晚，盛开着带刺的浪漫。",
+    "name": "Vin et roses",
+    "desc": "Dans l’ivresse d’une nuit, une romance épineuse s’épanouit.",
     "icon": "T_Head_Frame26",
     "access": "Disponible via le Pass mensuel"
   },
   {
     "id": 10031,
-    "name": "乙鸟",
-    "desc": "永不停歇的飞鸟。",
+    "name": "Oiseau Yi",
+    "desc": "Un oiseau en vol perpétuel.",
     "icon": "T_Head_Frame27",
     "access": "Disponible via le Pass mensuel"
   },
   {
     "id": 10032,
-    "name": "子不语·黛蓝",
-    "desc": "月影憧憧，一框幽梦。",
+    "name": "Murmures indicibles – Bleu indigo",
+    "desc": "Sous le voile tremblant de la lune, un rêve s’esquisse.",
     "icon": "T_Head_Frame29",
     "access": "Disponible dans la boutique"
   },
   {
     "id": 10033,
-    "name": "子不语·晴蓝",
-    "desc": "月影憧憧，一框幽梦。",
+    "name": "Murmures indicibles – Bleu céleste",
+    "desc": "Sous le voile tremblant de la lune, un rêve s’esquisse.",
     "icon": "T_Head_Frame28",
     "access": "Disponible dans la boutique"
   }

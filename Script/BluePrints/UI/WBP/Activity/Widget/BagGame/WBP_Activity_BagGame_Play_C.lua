@@ -760,7 +760,7 @@ function M:RefreshPlacedItemDoubleState(TriggerWidget)
 end
 
 function M:RotatePlacedItem(PlacedItem)
-  if not PlacedItem or not self.PlacedItems then
+  if not PlacedItem then
     return
   end
   local GridRows = BagGameModel.GRID_ROWS or 0
@@ -769,11 +769,23 @@ function M:RotatePlacedItem(PlacedItem)
     return
   end
   local PlacedRecord
-  for _, Record in ipairs(self.PlacedItems) do
-    if Record.Widget == PlacedItem then
-      PlacedRecord = Record
-      break
+  local bIsTempPlacement = false
+  if self.PlacedItems then
+    for _, Record in ipairs(self.PlacedItems) do
+      if Record.Widget == PlacedItem then
+        PlacedRecord = Record
+        break
+      end
     end
+  end
+  if not PlacedRecord and PlacedItem.IsTempPlacement and PlacedItem.PlacedCells and #PlacedItem.PlacedCells > 0 then
+    PlacedRecord = {
+      Widget = PlacedItem,
+      Cells = PlacedItem.PlacedCells,
+      TemplateId = PlacedItem.TemplateId,
+      DisPlayItemId = PlacedItem.DisPlayItemId
+    }
+    bIsTempPlacement = true
   end
   if not (PlacedRecord and PlacedRecord.Cells) or 0 == #PlacedRecord.Cells then
     return
@@ -812,8 +824,10 @@ function M:RotatePlacedItem(PlacedItem)
     })
   end
   local OldCells = PlacedRecord.Cells
-  for _, Cell in ipairs(OldCells) do
-    self:ClearCellOccupied(Cell.Row, Cell.Col)
+  if not bIsTempPlacement then
+    for _, Cell in ipairs(OldCells) do
+      self:ClearCellOccupied(Cell.Row, Cell.Col)
+    end
   end
   local bValid = true
   for _, Cell in ipairs(NewCells) do
@@ -835,8 +849,10 @@ function M:RotatePlacedItem(PlacedItem)
   PlacedItem:RemoveFromParent()
   local NewTopLeftCell = self:GetContainItemAt(NewTopRow, NewTopCol)
   if not NewTopLeftCell then
-    for _, Cell in ipairs(OldCells) do
-      self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
+    if not bIsTempPlacement then
+      for _, Cell in ipairs(OldCells) do
+        self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
+      end
     end
     PlacedItem.RotationCount = OldRotCount
     PlacedItem.ShapeOffsets = PlacedItem:CalculateRotatedOffsets(OldRotCount)
@@ -848,12 +864,50 @@ function M:RotatePlacedItem(PlacedItem)
   if PlacedItem.SetItemSize then
     PlacedItem:SetItemSize()
   end
-  for _, Cell in ipairs(NewCells) do
-    self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
+  if bIsTempPlacement then
+    if bValid then
+      for _, Cell in ipairs(NewCells) do
+        self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
+      end
+      local ItemContent = BagGameModel:BuildItemContent(PlacedItem.TemplateId)
+      local SyncData = PlacedItem.GetDragSyncData and PlacedItem:GetDragSyncData() or nil
+      PlacedRecord.ItemType = SyncData and SyncData.ItemType or PlacedItem.ItemType or ItemContent and ItemContent.ItemType
+      PlacedRecord.BasicPoint = PlacedItem.BasicPoint or ItemContent and ItemContent.BasicPoint or 0
+      PlacedRecord.CurrentAmmo = SyncData and SyncData.CurrentAmmo or ItemContent and ItemContent.CurrentAmmo or 0
+      PlacedRecord.MaxAmmo = SyncData and SyncData.MaxAmmo or ItemContent and ItemContent.MaxAmmo or 0
+      PlacedRecord.CurrentStack = SyncData and SyncData.CurrentStack or ItemContent and ItemContent.CurrentStack or 1
+      PlacedRecord.MaxStack = SyncData and SyncData.MaxStack or ItemContent and ItemContent.MaxStack or 0
+      PlacedRecord.ConsumedItems = PlacedItem.ConsumedItems
+      PlacedRecord.OriginalAmmo = PlacedItem.OriginalAmmo
+      PlacedRecord.OriginalStack = PlacedItem.OriginalStack
+      PlacedRecord.IsTempPlacement = nil
+      PlacedRecord.ConflictRecord = nil
+      PlacedRecord.Cells = NewCells
+      PlacedRecord.BaseRow = NewTopRow
+      PlacedRecord.BaseCol = NewTopCol
+      self.PlacedItems = self.PlacedItems or {}
+      table.insert(self.PlacedItems, PlacedRecord)
+      BagGameModel:AddPlacedItem(PlacedRecord)
+      PlacedItem.IsTempPlacement = false
+      PlacedItem.ConflictRecord = nil
+      PlacedItem.PlacedCells = NewCells
+    else
+      local ConflictRecord = BagGameModel:FindOverlappingPlacedItem(NewCells)
+      PlacedRecord.Cells = NewCells
+      PlacedRecord.BaseRow = NewTopRow
+      PlacedRecord.BaseCol = NewTopCol
+      PlacedRecord.ConflictRecord = ConflictRecord
+      PlacedItem.PlacedCells = NewCells
+      PlacedItem.ConflictRecord = ConflictRecord
+    end
+  else
+    for _, Cell in ipairs(NewCells) do
+      self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
+    end
+    PlacedRecord.Cells = NewCells
+    PlacedRecord.BaseRow = NewTopRow
+    PlacedRecord.BaseCol = NewTopCol
   end
-  PlacedRecord.Cells = NewCells
-  PlacedRecord.BaseRow = NewTopRow
-  PlacedRecord.BaseCol = NewTopCol
   local NewCellSet = {}
   for _, C in ipairs(NewCells) do
     local Key = C.Row * 100 + C.Col
@@ -877,7 +931,7 @@ function M:RotatePlacedItem(PlacedItem)
     end
   end
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_cell_click_replace", nil, nil)
-  DebugPrint(string.format("RotatePlacedItem: 旋转到 %d°, 新锚点(%d,%d), 合法=%s", NewRotCount * 90, NewTopRow, NewTopCol, tostring(bValid)))
+  DebugPrint(string.format("RotatePlacedItem: 旋转到 %d°, 新锚点(%d,%d), 合法=%s, 临时=%s", NewRotCount * 90, NewTopRow, NewTopCol, tostring(bValid), tostring(bIsTempPlacement)))
 end
 
 function M:ShowCannotDragToast()

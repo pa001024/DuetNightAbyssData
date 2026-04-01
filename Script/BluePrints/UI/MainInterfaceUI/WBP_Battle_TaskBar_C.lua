@@ -10,6 +10,7 @@ local DisplayDungeonProgress = {
   Excavation = true,
   Defence = true
 }
+local DisplayCustomProgress = {SynthesisII = true}
 
 function M:Initialize(Initializer)
   self.CurTaskInfo = {}
@@ -175,7 +176,7 @@ function M:SetTaskIconAndName(TaskIconPath, TextTitle, TaskContent, TaskWave)
   else
     self:PlayAnimation(self.Main_Task_In)
   end
-  if TaskWave then
+  if DisplayCustomProgress[GameState.GameModeType] then
     self.Panel_Wave:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Text_Wave:SetText(GText(TaskWave))
     self.Num_Wave:SetVisibility(ESlateVisibility.Collapsed)

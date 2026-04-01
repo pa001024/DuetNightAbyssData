@@ -156,6 +156,9 @@ function ReddotTreeNode_BagGame:_Judge(EventId)
   if self:_IsActivityEnded() then
     self:ClearBagGameReddotWhenActivityEnd()
     return false
+  else
+    local Avatar = GWorld:GetAvatar()
+    Avatar:_TryRefreshBagGameNewReddot()
   end
   if self.Name == "BagGameAward" then
     local LevelsInfo = DataMgr.BackpackPuzzleLevel

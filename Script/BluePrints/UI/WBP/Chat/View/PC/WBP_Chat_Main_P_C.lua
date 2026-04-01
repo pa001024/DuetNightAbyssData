@@ -132,6 +132,7 @@ function M:Construct()
   self.Btn_DontDisturb:PlayAnimation(self.Btn_DontDisturb.Normal)
   self.Btn_DontDisturb.Key_Text:CreateGamepadKey("View")
   self.Btn_DontDisturb.Button_Area.OnClicked:Add(self, self.OpenDisturbWindows)
+  self.Btn_Min.Key_Text:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
 function M:Destruct()
@@ -264,6 +265,9 @@ function M:OnTabSelected(TabWidget, TabItemInfo)
   end
   self.CurSelectTabWidget = TabWidget
   TabWidget:ShowText(true)
+  if not ChatController:IsSendCDTimerExist(self.CurrChannel) then
+    self.Btn_Sent.WS:SetActiveWidgetIndex(0)
+  end
 end
 
 function M:_AddReddotListenInner(ChannelName, ChannelType)
@@ -303,7 +307,7 @@ function M:ResetUI()
   self.WS_Dialoglist:SetActiveWidgetIndex(0)
   self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.List_Dialog:ClearListItems()
-  self.Btn_Sent:SetText(GText("UI_Chat_Send"))
+  self.Btn_Sent:SetText("")
 end
 
 function M:RefreshTeamMemberListInPC()

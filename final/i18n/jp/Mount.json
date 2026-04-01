@@ -56,8 +56,8 @@
   },
   {
     "id": 1004,
-    "name": "太虚游·铅灰",
-    "des": "御剑乘风来。",
+    "name": "太虚の飛剣・チタニウムホワイト",
+    "des": "剣を御し風に乗り来たる。",
     "icon": "Mounts_0005",
     "resourceIcon": "Icon_Mounts_0005",
     "rarity": 5,
@@ -70,8 +70,8 @@
   },
   {
     "id": 1005,
-    "name": "太虚游·碧绿",
-    "des": "御剑乘风来。",
+    "name": "太虚の飛剣・エメラルドグリーン",
+    "des": "剣を御し風に乗り来たる。",
     "icon": "Mounts_0008",
     "resourceIcon": "Icon_Mounts_0008",
     "rarity": 5,
@@ -84,8 +84,8 @@
   },
   {
     "id": 1006,
-    "name": "太虚游·焦糖",
-    "des": "御剑乘风来。",
+    "name": "太虚の飛剣・キャラメル",
+    "des": "剣を御し風に乗り来たる。",
     "icon": "Mounts_0007",
     "resourceIcon": "Icon_Mounts_0007",
     "rarity": 5,
@@ -98,8 +98,8 @@
   },
   {
     "id": 1007,
-    "name": "太虚游·本色",
-    "des": "御剑乘风来。",
+    "name": "太虚の飛剣・ナチュラル",
+    "des": "剣を御し風に乗り来たる。",
     "icon": "Mounts_0006",
     "resourceIcon": "Icon_Mounts_0006",
     "rarity": 5,

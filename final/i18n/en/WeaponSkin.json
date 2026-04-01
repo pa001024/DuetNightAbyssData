@@ -17,8 +17,8 @@
   },
   {
     "id": 3010103,
-    "name": "Qingluan Type Ⅱ",
-    "desc": "有些荣耀，唯有通过彻底的撕裂方能获得；而有些真相，唯有在链锯的轰鸣中才得以言说。",
+    "name": "Gloreaver",
+    "desc": "Some glories are only born from what you tear apart, and some truths will only speak when the chain blades roar.",
     "icon": "T_Head_Claymore_Rongyao",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -65,7 +65,7 @@
   },
   {
     "id": 3010109,
-    "name": "Portrait: The Merchant",
+    "name": "Verdant Finale – Greatsword",
     "desc": "",
     "icon": "T_Head_Claymore_Bixiao",
     "rarity": 5,
@@ -113,7 +113,7 @@
   },
   {
     "id": 3010206,
-    "name": "Verdant Finale – Greatsword",
+    "name": "Verdant Finale – Sword",
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Sword_Bixiao",
     "rarity": 5,
@@ -145,7 +145,7 @@
   },
   {
     "id": 3010304,
-    "name": "Verdant Finale – Sword",
+    "name": "Verdant Finale – Longbow",
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
@@ -153,7 +153,7 @@
   },
   {
     "id": 3010305,
-    "name": "Verdant Finale – Longbow",
+    "name": "Verdant Finale – Shortbow",
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
@@ -273,7 +273,7 @@
   },
   {
     "id": 3010609,
-    "name": "Verdant Finale – Shortbow",
+    "name": "Verdant Finale – Dual Blades",
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Dualblade_Bixiao",
     "rarity": 5,
@@ -313,7 +313,7 @@
   },
   {
     "id": 3010709,
-    "name": "Verdant Finale – Dual Blades",
+    "name": "Verdant Finale – Katana",
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Katana_Bixiao",
     "rarity": 5,
@@ -385,7 +385,7 @@
   },
   {
     "id": 3011002,
-    "name": "Verdant Finale – Grenade Launcher",
+    "name": "Blazing Zenith",
     "desc": "A whisper of intent, and steel answers; a flicker of ease, and armies burn to silence.",
     "icon": "T_Head_Shotgun_Huoli",
     "rarity": 5,
@@ -393,7 +393,7 @@
   },
   {
     "id": 3011003,
-    "name": "Blazing Zenith",
+    "name": "Verdant Finale – Shotgun",
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Shotgun_Bixiao",
     "rarity": 5,

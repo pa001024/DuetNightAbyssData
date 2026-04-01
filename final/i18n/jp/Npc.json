@@ -11508,31 +11508,31 @@
   },
   {
     "id": 240003,
-    "name": "药师",
+    "name": "薬師",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240004,
-    "name": "路人",
+    "name": "通行人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240005,
-    "name": "路人",
+    "name": "通行人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240006,
-    "name": "路人",
+    "name": "通行人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240007,
-    "name": "排队的女子",
+    "name": "並ぶ女性",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11544,25 +11544,25 @@
   },
   {
     "id": 240009,
-    "name": "工匠",
+    "name": "職人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240010,
-    "name": "兴奋的路人",
+    "name": "興奮した通行人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240011,
-    "name": "炫耀的路人",
+    "name": "自慢げな通行人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240012,
-    "name": "文绉绉的路人",
+    "name": "文人気取りの通行人",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11580,31 +11580,31 @@
   },
   {
     "id": 240015,
-    "name": "门卫",
+    "name": "門番",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240016,
-    "name": "接待员",
+    "name": "受付係",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240017,
-    "name": "守卫",
+    "name": "護衛",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240018,
-    "name": "守卫",
+    "name": "護衛",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240019,
-    "name": "守卫",
+    "name": "護衛",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11652,7 +11652,7 @@
   },
   {
     "id": 240027,
-    "name": "参商港管事",
+    "name": "参商港の責任者",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11682,7 +11682,7 @@
   },
   {
     "id": 240032,
-    "name": "云翎鸥",
+    "name": "クモハネカモメ",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11700,91 +11700,91 @@
   },
   {
     "id": 240035,
-    "name": "飘零人",
+    "name": "流れ者",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240036,
-    "name": "飘零人",
+    "name": "流れ者",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240037,
-    "name": "玩耍的孩童",
+    "name": "遊んでいる子ども",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240038,
-    "name": "农妇",
+    "name": "農婦",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240039,
-    "name": "村长",
+    "name": "村長",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240040,
-    "name": "静渊",
+    "name": "静淵居士",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240041,
-    "name": "被攻击的民众",
+    "name": "襲われた市民",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240042,
-    "name": "祈祷的老翁",
+    "name": "祈る老人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240043,
-    "name": "害怕的小女孩",
+    "name": "怯える少女",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240044,
-    "name": "中年妇女",
+    "name": "中年女性",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240045,
-    "name": "混乱的狴犴",
+    "name": "混乱した狴犴",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240046,
-    "name": "胆怯的书生",
+    "name": "臆病な書生",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240047,
-    "name": "声音洪亮的男子",
+    "name": "大声の男性",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240048,
-    "name": "泽生阁学徒",
+    "name": "澤生閣の見習い",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240049,
-    "name": "泽生阁学徒",
+    "name": "澤生閣の見習い",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11808,13 +11808,13 @@
   },
   {
     "id": 240053,
-    "name": "混乱的狴犴",
+    "name": "混乱した狴犴",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240054,
-    "name": "混乱的狴犴",
+    "name": "混乱した狴犴",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11879,31 +11879,31 @@
   },
   {
     "id": 240066,
-    "name": "固执的中年男子",
+    "name": "頑固な中年男性",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240067,
-    "name": "害怕的男子",
+    "name": "怯える男性",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240068,
-    "name": "瑟瑟发抖的女子",
+    "name": "震える女性",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240069,
-    "name": "失落的声音",
+    "name": "落胆の声",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240070,
-    "name": "无由生",
+    "name": "ムユウセイ",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -11915,13 +11915,13 @@
   },
   {
     "id": 240072,
-    "name": "倨傲的先人",
+    "name": "尊大な先人",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240073,
-    "name": "骄横的先人",
+    "name": "横柄な先人",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -12084,7 +12084,7 @@
   },
   {
     "id": 240104,
-    "name": "路人少女",
+    "name": "通りすがりの少女",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -12210,13 +12210,13 @@
   },
   {
     "id": 240115,
-    "name": "守卫",
+    "name": "護衛",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 240116,
-    "name": "守卫",
+    "name": "護衛",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -12472,13 +12472,13 @@
   },
   {
     "id": 250026,
-    "name": "望春",
+    "name": "ボウシュン",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 250027,
-    "name": "看守",
+    "name": "見張り",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -28767,7 +28767,7 @@
   },
   {
     "id": 701113,
-    "name": "汀兰",
+    "name": "テイラン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -28930,7 +28930,7 @@
   },
   {
     "id": 701114,
-    "name": "诸葛陶",
+    "name": "ショカツトウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29031,7 +29031,7 @@
   },
   {
     "id": 701115,
-    "name": "西门鹤",
+    "name": "セイモンカク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29174,7 +29174,7 @@
   },
   {
     "id": 701116,
-    "name": "澹台烟",
+    "name": "ダイエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29223,13 +29223,13 @@
   },
   {
     "id": 701117,
-    "name": "许星垂",
+    "name": "セイスイ",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701118,
-    "name": "月痕",
+    "name": "ゲッコン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29419,7 +29419,7 @@
   },
   {
     "id": 701119,
-    "name": "离砚",
+    "name": "リケン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29462,13 +29462,13 @@
   },
   {
     "id": 701120,
-    "name": "雨霖",
+    "name": "ウリン",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701121,
-    "name": "沈禾",
+    "name": "シンカ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29588,7 +29588,7 @@
   },
   {
     "id": 701122,
-    "name": "韩菱",
+    "name": "カンリョウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29664,7 +29664,7 @@
   },
   {
     "id": 701123,
-    "name": "璎珞",
+    "name": "ヨウラク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29846,7 +29846,7 @@
   },
   {
     "id": 701124,
-    "name": "琳琅",
+    "name": "リンロウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -29864,7 +29864,7 @@
       },
       {
         "id": 51157002,
-        "content": "これにはちゃーんと由来があってね。<Default note=\"text:しょちゅう\">黍中</>は知ってるかい？昔、用事で<Default note=\"text:しょちゅう\">黍中</>に行ってしばらく滞在したとき、地元の人たちが振る舞ってくれた料理なんだ。",
+        "content": "これにはちゃーんと由来があってね。<Default note=\"text:きんうんたに\">錦雲谷</>は知ってるかい？昔、用事で<Default note=\"text:きんうんたに\">錦雲谷</>に行ってしばらく滞在したとき、地元の人たちが振る舞ってくれた料理なんだ。",
         "npc": 701124,
         "next": 51157003
       },
@@ -29892,12 +29892,12 @@
       },
       {
         "id": 51157005,
-        "content": "<Default note=\"text:しょちゅう\">黍中</>じゃこう呼ばれてる―― <Default note=\"text:センセン\">串串</>さ！どうだい、試してみるかい？",
+        "content": "<Default note=\"text:きんうんたに\">錦雲谷</>じゃこう呼ばれてる―― <Default note=\"text:センセン\">串串</>さ！どうだい、試してみるかい？",
         "npc": 701124
       },
       {
         "id": 51157007,
-        "content": "当たり前さ！不味かったら、あたしが<Default note=\"text:しょちゅう\">黍中</>に居座ってまで覚えてくるもんかい！",
+        "content": "当たり前さ！不味かったら、あたしが<Default note=\"text:きんうんたに\">錦雲谷</>に居座ってまで覚えてくるもんかい！",
         "npc": 701124,
         "next": 51157008
       },
@@ -29933,7 +29933,7 @@
   },
   {
     "id": 701125,
-    "name": "桂棹",
+    "name": "ケイトウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30090,7 +30090,7 @@
   },
   {
     "id": 701126,
-    "name": "方朔",
+    "name": "ホウサク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30282,7 +30282,7 @@
   },
   {
     "id": 701127,
-    "name": "云裳",
+    "name": "ウンショウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30356,7 +30356,7 @@
   },
   {
     "id": 701128,
-    "name": "同福饭馆店小二",
+    "name": "同福飯店の給仕",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30388,7 +30388,7 @@
   },
   {
     "id": 701129,
-    "name": "禾穗",
+    "name": "カスイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30466,7 +30466,7 @@
   },
   {
     "id": 701130,
-    "name": "魏蒲",
+    "name": "ギホ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30670,7 +30670,7 @@
   },
   {
     "id": 701131,
-    "name": "孙枕石",
+    "name": "チンセキ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30739,7 +30739,7 @@
   },
   {
     "id": 701132,
-    "name": "涧泉",
+    "name": "カンセン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30788,13 +30788,13 @@
   },
   {
     "id": 701133,
-    "name": "秋浦",
+    "name": "シュウホ",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701134,
-    "name": "方晴川",
+    "name": "セイセン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30894,7 +30894,7 @@
   },
   {
     "id": 701135,
-    "name": "陆瑶光",
+    "name": "ヨウコウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -30973,7 +30973,7 @@
   },
   {
     "id": 701136,
-    "name": "刘福",
+    "name": "リュウフク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31080,7 +31080,7 @@
   },
   {
     "id": 701137,
-    "name": "何道微",
+    "name": "カドウビ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31161,7 +31161,7 @@
   },
   {
     "id": 701138,
-    "name": "褚家",
+    "name": "チョカ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31232,7 +31232,7 @@
   },
   {
     "id": 701139,
-    "name": "周伯远",
+    "name": "ハクユエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31371,13 +31371,13 @@
   },
   {
     "id": 701140,
-    "name": "梁达博",
+    "name": "タツハク",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701141,
-    "name": "长庚",
+    "name": "チョウコウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31525,7 +31525,7 @@
   },
   {
     "id": 701142,
-    "name": "周砚秋",
+    "name": "ケンシュウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31711,7 +31711,7 @@
   },
   {
     "id": 701143,
-    "name": "张老丈",
+    "name": "チョウ老人",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31844,13 +31844,13 @@
   },
   {
     "id": 701144,
-    "name": "严公",
+    "name": "ゲン公",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701145,
-    "name": "刘婆婆",
+    "name": "リュウばあさん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -31958,7 +31958,7 @@
   },
   {
     "id": 701146,
-    "name": "渡风",
+    "name": "トフウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32047,7 +32047,7 @@
   },
   {
     "id": 701147,
-    "name": "林德昌",
+    "name": "リントクショウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32125,7 +32125,7 @@
   },
   {
     "id": 701148,
-    "name": "阿菀",
+    "name": "アエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32267,7 +32267,7 @@
   },
   {
     "id": 701149,
-    "name": "寻鹤",
+    "name": "ジンカク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32318,7 +32318,7 @@
   },
   {
     "id": 701150,
-    "name": "建业",
+    "name": "ケンギョウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32373,7 +32373,7 @@
   },
   {
     "id": 701151,
-    "name": "小棠",
+    "name": "トウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32516,7 +32516,7 @@
   },
   {
     "id": 701152,
-    "name": "时风",
+    "name": "ジフウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32703,7 +32703,7 @@
   },
   {
     "id": 701153,
-    "name": "秦执",
+    "name": "シンシツ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32740,7 +32740,7 @@
   },
   {
     "id": 701154,
-    "name": "王伯公",
+    "name": "オウおじさん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32811,7 +32811,7 @@
   },
   {
     "id": 701155,
-    "name": "李某某",
+    "name": "リーさん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -32985,7 +32985,7 @@
   },
   {
     "id": 701156,
-    "name": "马老丈",
+    "name": "バ老人",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33064,7 +33064,7 @@
   },
   {
     "id": 701157,
-    "name": "孙兰芝",
+    "name": "ランシ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33120,7 +33120,7 @@
   },
   {
     "id": 701158,
-    "name": "孟巧娘",
+    "name": "モウコウジョウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33340,13 +33340,13 @@
   },
   {
     "id": 701159,
-    "name": "景小年",
+    "name": "ケイショウネン",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701160,
-    "name": "景小年",
+    "name": "ケイショウネン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33419,13 +33419,13 @@
   },
   {
     "id": 701161,
-    "name": "棠豆",
+    "name": "トウズ",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701162,
-    "name": "文博",
+    "name": "ブンハク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33560,7 +33560,7 @@
   },
   {
     "id": 701163,
-    "name": "吴章知",
+    "name": "ショウチ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33647,7 +33647,7 @@
   },
   {
     "id": 701164,
-    "name": "晚月",
+    "name": "バンゲツ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33693,7 +33693,7 @@
   },
   {
     "id": 701165,
-    "name": "安永",
+    "name": "アンエイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33795,7 +33795,7 @@
   },
   {
     "id": 701166,
-    "name": "卢静薇",
+    "name": "ロセイビ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33836,7 +33836,7 @@
   },
   {
     "id": 701167,
-    "name": "文彬",
+    "name": "ブンヒン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33948,7 +33948,7 @@
   },
   {
     "id": 701168,
-    "name": "景和",
+    "name": "ケイヘイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -33983,7 +33983,7 @@
   },
   {
     "id": 701169,
-    "name": "裴德厚",
+    "name": "トクコウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34067,7 +34067,7 @@
   },
   {
     "id": 701170,
-    "name": "温玉笙",
+    "name": "ギョクショウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34130,7 +34130,7 @@
   },
   {
     "id": 701171,
-    "name": "清鸢",
+    "name": "セイエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34187,7 +34187,7 @@
   },
   {
     "id": 701172,
-    "name": "灵月",
+    "name": "レイゲツ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34327,7 +34327,7 @@
   },
   {
     "id": 701173,
-    "name": "元祯",
+    "name": "ゲンテイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34402,7 +34402,7 @@
   },
   {
     "id": 701174,
-    "name": "白灵汐",
+    "name": "レイセキ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34538,7 +34538,7 @@
   },
   {
     "id": 701175,
-    "name": "朱鹤龄",
+    "name": "シュカクレイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34731,7 +34731,7 @@
   },
   {
     "id": 701176,
-    "name": "魏青娥",
+    "name": "ギセイガ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -34905,7 +34905,7 @@
   },
   {
     "id": 701177,
-    "name": "任清欢",
+    "name": "セイカン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35047,7 +35047,7 @@
   },
   {
     "id": 701178,
-    "name": "明玥",
+    "name": "メイゲツ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35105,7 +35105,7 @@
   },
   {
     "id": 701179,
-    "name": "彭春桃",
+    "name": "モモ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35155,7 +35155,7 @@
   },
   {
     "id": 701180,
-    "name": "时茂",
+    "name": "ジモ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35254,7 +35254,7 @@
   },
   {
     "id": 701181,
-    "name": "何子瑜",
+    "name": "カシ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35393,7 +35393,7 @@
   },
   {
     "id": 701182,
-    "name": "邵临起",
+    "name": "リンキ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35434,7 +35434,7 @@
   },
   {
     "id": 701183,
-    "name": "陈川",
+    "name": "チンセン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35689,7 +35689,7 @@
   },
   {
     "id": 701184,
-    "name": "阿舟",
+    "name": "シュウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -35927,7 +35927,7 @@
   },
   {
     "id": 701185,
-    "name": "郭老叟",
+    "name": "カクじいさん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36029,7 +36029,7 @@
   },
   {
     "id": 701186,
-    "name": "梁思远",
+    "name": "シエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36091,7 +36091,7 @@
   },
   {
     "id": 701187,
-    "name": "同叔",
+    "name": "ドウおじさん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36221,7 +36221,7 @@
   },
   {
     "id": 701189,
-    "name": "刘禄",
+    "name": "リュウロク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36317,7 +36317,7 @@
   },
   {
     "id": 701190,
-    "name": "维尔",
+    "name": "ヴィル",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36506,7 +36506,7 @@
   },
   {
     "id": 701191,
-    "name": "玉芬",
+    "name": "ギョクフン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36568,7 +36568,7 @@
   },
   {
     "id": 701192,
-    "name": "大将军",
+    "name": "大将軍",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36651,7 +36651,7 @@
   },
   {
     "id": 701193,
-    "name": "马景岐",
+    "name": "バケイキ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36734,7 +36734,7 @@
   },
   {
     "id": 701194,
-    "name": "禹臣",
+    "name": "ウー",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36846,7 +36846,7 @@
   },
   {
     "id": 701195,
-    "name": "守拙",
+    "name": "シュセツ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -36917,7 +36917,7 @@
   },
   {
     "id": 701196,
-    "name": "雨桐",
+    "name": "ウトウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37046,13 +37046,13 @@
   },
   {
     "id": 701197,
-    "name": "可儿",
+    "name": "カニちゃん",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701198,
-    "name": "小川",
+    "name": "カワちゃん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37167,7 +37167,7 @@
   },
   {
     "id": 701199,
-    "name": "洛奇",
+    "name": "ロキ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37283,7 +37283,7 @@
   },
   {
     "id": 701200,
-    "name": "韩老爹",
+    "name": "カン親父",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37499,7 +37499,7 @@
   },
   {
     "id": 701201,
-    "name": "韩安世",
+    "name": "カンアンセ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37684,7 +37684,7 @@
   },
   {
     "id": 701202,
-    "name": "郭文昭",
+    "name": "ブンショウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37762,7 +37762,7 @@
   },
   {
     "id": 701203,
-    "name": "砚北",
+    "name": "ケンホク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -37891,7 +37891,7 @@
   },
   {
     "id": 701204,
-    "name": "韩忠",
+    "name": "カンチュウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38069,7 +38069,7 @@
   },
   {
     "id": 701205,
-    "name": "周远",
+    "name": "シュウエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38152,7 +38152,7 @@
   },
   {
     "id": 701206,
-    "name": "孟守诚",
+    "name": "モウシュ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38227,7 +38227,7 @@
   },
   {
     "id": 701207,
-    "name": "李礼一",
+    "name": "リレイイチ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38353,7 +38353,7 @@
   },
   {
     "id": 701208,
-    "name": "慕远",
+    "name": "ボエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38421,7 +38421,7 @@
   },
   {
     "id": 701209,
-    "name": "思晴",
+    "name": "シセイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38465,7 +38465,7 @@
   },
   {
     "id": 701210,
-    "name": "沐阳",
+    "name": "モクヨウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38511,7 +38511,7 @@
   },
   {
     "id": 701211,
-    "name": "承泽",
+    "name": "ショウタク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38601,7 +38601,7 @@
   },
   {
     "id": 701212,
-    "name": "章景行",
+    "name": "ケイコウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38727,7 +38727,7 @@
   },
   {
     "id": 701213,
-    "name": "柳明正",
+    "name": "メイセイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38913,7 +38913,7 @@
   },
   {
     "id": 701214,
-    "name": "郑景",
+    "name": "テイケイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -38968,7 +38968,7 @@
   },
   {
     "id": 701215,
-    "name": "裴云",
+    "name": "ハイウン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39147,7 +39147,7 @@
   },
   {
     "id": 701216,
-    "name": "卫德舆",
+    "name": "エイトクヨ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39236,7 +39236,7 @@
   },
   {
     "id": 701217,
-    "name": "沈惠兰",
+    "name": "ケイラン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39288,7 +39288,7 @@
   },
   {
     "id": 701218,
-    "name": "书瑶",
+    "name": "ショヨウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39366,7 +39366,7 @@
   },
   {
     "id": 701219,
-    "name": "时川",
+    "name": "ジセン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39534,7 +39534,7 @@
   },
   {
     "id": 701220,
-    "name": "时川",
+    "name": "ジセン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39677,7 +39677,7 @@
   },
   {
     "id": 701221,
-    "name": "方寻",
+    "name": "ホウジン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39750,7 +39750,7 @@
   },
   {
     "id": 701222,
-    "name": "噌噌皎皎",
+    "name": "トールーナ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39907,7 +39907,7 @@
   },
   {
     "id": 701223,
-    "name": "章景曜",
+    "name": "ケイヨウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -39948,7 +39948,7 @@
   },
   {
     "id": 701224,
-    "name": "清岚",
+    "name": "セイラン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40096,7 +40096,7 @@
   },
   {
     "id": 701225,
-    "name": "林甫",
+    "name": "リンホ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40226,7 +40226,7 @@
   },
   {
     "id": 701226,
-    "name": "明哲",
+    "name": "メイテツ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40322,7 +40322,7 @@
   },
   {
     "id": 701227,
-    "name": "周晓棠",
+    "name": "ギョウトウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40445,7 +40445,7 @@
   },
   {
     "id": 701228,
-    "name": "陈岐",
+    "name": "チンキ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40491,7 +40491,7 @@
   },
   {
     "id": 701229,
-    "name": "伯渊",
+    "name": "ハクエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40548,7 +40548,7 @@
   },
   {
     "id": 701230,
-    "name": "芷柔",
+    "name": "シジュウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40615,7 +40615,7 @@
   },
   {
     "id": 701231,
-    "name": "宋卿卿",
+    "name": "ケイケイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40639,7 +40639,7 @@
   },
   {
     "id": 701232,
-    "name": "张敬之",
+    "name": "ケイジ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40790,7 +40790,7 @@
   },
   {
     "id": 701233,
-    "name": "景铄",
+    "name": "ケイシャク",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -40944,7 +40944,7 @@
   },
   {
     "id": 701234,
-    "name": "小瑜",
+    "name": "ユちゃん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41022,7 +41022,7 @@
   },
   {
     "id": 701235,
-    "name": "章老翁",
+    "name": "ショウじいさん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41036,7 +41036,7 @@
   },
   {
     "id": 701236,
-    "name": "浮生",
+    "name": "フセイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41154,7 +41154,7 @@
   },
   {
     "id": 701237,
-    "name": "离生",
+    "name": "リセイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41273,13 +41273,13 @@
   },
   {
     "id": 701238,
-    "name": "小婉",
+    "name": "エン",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701239,
-    "name": "张大婶",
+    "name": "チョウおばさん",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41327,7 +41327,7 @@
   },
   {
     "id": 701240,
-    "name": "无愈",
+    "name": "ムユ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41378,7 +41378,7 @@
   },
   {
     "id": 701241,
-    "name": "长歌",
+    "name": "チョウカ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41425,7 +41425,7 @@
   },
   {
     "id": 701242,
-    "name": "张远",
+    "name": "チョウエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41591,7 +41591,7 @@
   },
   {
     "id": 701243,
-    "name": "阿乔",
+    "name": "キョウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41643,7 +41643,7 @@
   },
   {
     "id": 701244,
-    "name": "方慕声",
+    "name": "ホウボセイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41727,7 +41727,7 @@
   },
   {
     "id": 701245,
-    "name": "冬雪",
+    "name": "トウセツ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41779,7 +41779,7 @@
   },
   {
     "id": 701246,
-    "name": "大庄",
+    "name": "タイショウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41905,7 +41905,7 @@
   },
   {
     "id": 701247,
-    "name": "汪洋",
+    "name": "オウヨウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -41965,13 +41965,13 @@
   },
   {
     "id": 701248,
-    "name": "梁平",
+    "name": "リョウヘイ",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701249,
-    "name": "婉婉",
+    "name": "エンエン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42031,7 +42031,7 @@
   },
   {
     "id": 701250,
-    "name": "史基",
+    "name": "シキ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42068,13 +42068,13 @@
   },
   {
     "id": 701251,
-    "name": "史奉春",
+    "name": "ホウシュン",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701252,
-    "name": "桂北发",
+    "name": "ホクハツ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42156,7 +42156,7 @@
   },
   {
     "id": 701253,
-    "name": "竞天",
+    "name": "テン",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42223,13 +42223,13 @@
   },
   {
     "id": 701254,
-    "name": "小槐",
+    "name": "エンジュ",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701255,
-    "name": "棠生",
+    "name": "トウセイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42330,7 +42330,7 @@
   },
   {
     "id": 701256,
-    "name": "饶生",
+    "name": "ユデセイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42467,7 +42467,7 @@
   },
   {
     "id": 701257,
-    "name": "相生",
+    "name": "ソウセイ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42575,7 +42575,7 @@
   },
   {
     "id": 701258,
-    "name": "星遥",
+    "name": "セイヨウ",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -42660,37 +42660,37 @@
   },
   {
     "id": 701259,
-    "name": "温景川",
+    "name": "ケイセン",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701260,
-    "name": "凉苍",
+    "name": "リョウソウ",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701261,
-    "name": "董烨",
+    "name": "ドウユウ",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701262,
-    "name": "阿胜",
+    "name": "ショウ",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701263,
-    "name": "弓连春",
+    "name": "レンシュン",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 701264,
-    "name": "任良",
+    "name": "ジンリョウ",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -42702,7 +42702,7 @@
   },
   {
     "id": 701266,
-    "name": "魏蒲",
+    "name": "ギホ",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -43987,37 +43987,37 @@
   },
   {
     "id": 840001,
-    "name": "严谨的机枢派弟子",
+    "name": "厳格な機枢派の弟子",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840002,
-    "name": "傲气的机枢派师傅",
+    "name": "気位の高い機枢派の師匠",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840003,
-    "name": "头疼的店员",
+    "name": "頭を抱える店員",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840004,
-    "name": "神叨叨的女子",
+    "name": "うさんくさい女",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840005,
-    "name": "馋嘴的孩子",
+    "name": "食いしん坊の子ども",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 840006,
-    "name": "热情的妇人",
+    "name": "情熱的な婦人",
     "camp": "NPC",
     "type": "Normal"
   },

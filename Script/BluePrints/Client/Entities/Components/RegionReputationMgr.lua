@@ -266,6 +266,9 @@ function Component:ManualRefreshEntrustQuest(ReputationId, Cb)
   
   local function Callback(Ret, ReputationId)
     self.logger.debug("ManualRefreshEntrustQuest Callback", Ret, ReputationId)
+    if Ret == ErrorCode.RET_SUCCESS then
+      self:UpdateEntrustFameTaskReddot()
+    end
     Cb(Ret, ReputationId)
   end
   

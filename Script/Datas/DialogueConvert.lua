@@ -209724,7 +209724,7 @@ local Data = {
   },
   {
     MinKey = 70017502,
-    MaxKey = 72100402,
+    MaxKey = 72100503,
     Loader = function()
       return {
         [70017502] = {
@@ -212961,12 +212961,6 @@ local Data = {
         [72100101] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -212975,7 +212969,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -212986,26 +212980,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100102] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72100103] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213017,12 +212994,6 @@ local Data = {
         [72100104] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213034,12 +213005,6 @@ local Data = {
         [72100201] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213048,7 +213013,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213059,26 +213024,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100202] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72100203] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213090,12 +213038,6 @@ local Data = {
         [72100204] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213107,12 +213049,6 @@ local Data = {
         [72100301] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213121,7 +213057,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213132,26 +213068,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100302] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72100303] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213163,12 +213082,6 @@ local Data = {
         [72100304] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213180,12 +213093,6 @@ local Data = {
         [72100401] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213194,7 +213101,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213205,34 +213112,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100402] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72100403,
-    MaxKey = 80020401,
-    Loader = function()
-      return {
         [72100403] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213244,12 +213126,6 @@ local Data = {
         [72100404] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213261,12 +213137,6 @@ local Data = {
         [72100501] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213275,7 +213145,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213286,26 +213156,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100502] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72100503] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213313,16 +213166,18 @@ local Data = {
             }
           },
           bAllowClick = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72100504,
+    MaxKey = 80030202,
+    Loader = function()
+      return {
         [72100504] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213334,12 +213189,6 @@ local Data = {
         [72100601] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213348,7 +213197,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213359,26 +213208,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100602] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72100603] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213390,12 +213222,6 @@ local Data = {
         [72100604] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213407,12 +213233,6 @@ local Data = {
         [72100701] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213421,7 +213241,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213432,26 +213252,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100702] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72100703] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213463,12 +213266,6 @@ local Data = {
         [72100704] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213480,12 +213277,6 @@ local Data = {
         [72100801] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213494,7 +213285,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213505,26 +213296,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100802] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72100803] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213536,12 +213310,6 @@ local Data = {
         [72100804] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213553,12 +213321,6 @@ local Data = {
         [72100901] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213567,7 +213329,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213578,26 +213340,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72100902] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72100903] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213609,12 +213354,6 @@ local Data = {
         [72100904] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213626,12 +213365,6 @@ local Data = {
         [72101001] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213640,7 +213373,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213651,26 +213384,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72101002] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72101003] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213682,12 +213398,6 @@ local Data = {
         [72101004] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213699,12 +213409,6 @@ local Data = {
         [72101101] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213713,7 +213417,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213724,26 +213428,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72101102] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72101103] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213755,12 +213442,6 @@ local Data = {
         [72101104] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213772,12 +213453,6 @@ local Data = {
         [72101201] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213786,7 +213461,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -213797,26 +213472,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72101202] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72101203] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -213828,12 +213486,6 @@ local Data = {
         [72101204] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -213845,12 +213497,6 @@ local Data = {
         [72101301] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213859,7 +213505,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213870,26 +213516,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72101302] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72101303] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213901,12 +213530,6 @@ local Data = {
         [72101304] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213918,12 +213541,6 @@ local Data = {
         [72101401] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -213932,7 +213549,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -213943,26 +213560,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72101402] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72101403] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -213974,12 +213574,6 @@ local Data = {
         [72101404] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -213991,12 +213585,6 @@ local Data = {
         [72101501] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214005,7 +213593,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -214016,26 +213604,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72101502] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72101503] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -214047,12 +213618,6 @@ local Data = {
         [72101504] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -214064,12 +213629,6 @@ local Data = {
         [72101601] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214078,7 +213637,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -214089,26 +213648,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72101602] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72101603] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -214120,12 +213662,6 @@ local Data = {
         [72101604] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -214137,12 +213673,6 @@ local Data = {
         [72101701] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214151,7 +213681,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -214162,26 +213692,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72101702] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72101703] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -214193,12 +213706,6 @@ local Data = {
         [72101704] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -214210,12 +213717,6 @@ local Data = {
         [72200101] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214224,7 +213725,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -214238,12 +213739,6 @@ local Data = {
         [72200102] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -214255,12 +213750,6 @@ local Data = {
         [72200103] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -214269,26 +213758,9 @@ local Data = {
           },
           bAllowClick = false
         },
-        [72200104] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200201] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214297,7 +213769,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -214311,12 +213783,6 @@ local Data = {
         [72200202] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -214328,12 +213794,6 @@ local Data = {
         [72200203] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -214342,26 +213802,9 @@ local Data = {
           },
           bAllowClick = false
         },
-        [72200204] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200301] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214370,7 +213813,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -214384,12 +213827,6 @@ local Data = {
         [72200302] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -214401,12 +213838,6 @@ local Data = {
         [72200303] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -214415,26 +213846,9 @@ local Data = {
           },
           bAllowClick = false
         },
-        [72200304] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200401] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214443,7 +213857,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -214457,12 +213871,6 @@ local Data = {
         [72200402] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -214474,12 +213882,6 @@ local Data = {
         [72200403] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -214488,26 +213890,9 @@ local Data = {
           },
           bAllowClick = false
         },
-        [72200404] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200501] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214516,7 +213901,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -214527,26 +213912,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72200502] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200503] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -214558,12 +213926,6 @@ local Data = {
         [72200504] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -214575,12 +213937,6 @@ local Data = {
         [72200601] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214589,7 +213945,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -214600,26 +213956,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72200602] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200603] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -214631,12 +213970,6 @@ local Data = {
         [72200604] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -214648,12 +213981,6 @@ local Data = {
         [72200701] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214662,7 +213989,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Born",
@@ -214673,26 +214000,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72200702] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200703] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Agree"
@@ -214704,12 +214014,6 @@ local Data = {
         [72200704] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 830001,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 830001,
                 AnimationId = "Wuyou_Disappear"
@@ -214721,12 +214025,6 @@ local Data = {
         [72200801] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214735,7 +214033,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -214746,26 +214044,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72200802] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200803] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -214777,12 +214058,6 @@ local Data = {
         [72200804] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -214794,12 +214069,6 @@ local Data = {
         [72200901] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214808,7 +214077,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -214819,26 +214088,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72200902] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72200903] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -214850,12 +214102,6 @@ local Data = {
         [72200904] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -214867,12 +214113,6 @@ local Data = {
         [72201001] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214881,7 +214121,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -214892,37 +214132,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201002] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
-        [72201003] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201004] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -214934,12 +214146,6 @@ local Data = {
         [72201005] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -214951,12 +214157,6 @@ local Data = {
         [72201101] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -214965,7 +214165,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -214976,26 +214176,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201102] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201103] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215007,12 +214190,6 @@ local Data = {
         [72201104] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215024,12 +214201,6 @@ local Data = {
         [72201201] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215038,7 +214209,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215049,26 +214220,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201202] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201203] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215080,12 +214234,6 @@ local Data = {
         [72201204] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215097,12 +214245,6 @@ local Data = {
         [72201301] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215111,7 +214253,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215122,26 +214264,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201302] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201303] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215153,12 +214278,6 @@ local Data = {
         [72201304] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215170,12 +214289,6 @@ local Data = {
         [72201401] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215184,7 +214297,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215195,26 +214308,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201402] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201403] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215226,12 +214322,6 @@ local Data = {
         [72201404] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215243,12 +214333,6 @@ local Data = {
         [72201501] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215257,7 +214341,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215268,26 +214352,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201502] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201503] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215299,12 +214366,6 @@ local Data = {
         [72201504] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215316,12 +214377,6 @@ local Data = {
         [72201601] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215330,7 +214385,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215341,26 +214396,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201602] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201603] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215372,12 +214410,6 @@ local Data = {
         [72201604] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215389,12 +214421,6 @@ local Data = {
         [72201701] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215403,7 +214429,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215414,26 +214440,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201702] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201703] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215445,12 +214454,6 @@ local Data = {
         [72201704] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215462,12 +214465,6 @@ local Data = {
         [72201801] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215476,7 +214473,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215487,26 +214484,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201802] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201803] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215518,12 +214498,6 @@ local Data = {
         [72201804] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215535,12 +214509,6 @@ local Data = {
         [72201901] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215549,7 +214517,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215560,26 +214528,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72201902] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72201903] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215591,12 +214542,6 @@ local Data = {
         [72201904] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215608,12 +214553,6 @@ local Data = {
         [72202001] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215622,7 +214561,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215633,26 +214572,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72202002] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72202003] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215664,12 +214586,6 @@ local Data = {
         [72202004] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215681,12 +214597,6 @@ local Data = {
         [72202101] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215695,7 +214605,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215706,26 +214616,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72202102] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72202103] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215737,12 +214630,6 @@ local Data = {
         [72202104] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215754,12 +214641,6 @@ local Data = {
         [72202201] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215768,7 +214649,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215779,26 +214660,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72202202] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72202203] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215810,12 +214674,6 @@ local Data = {
         [72202204] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -215827,12 +214685,6 @@ local Data = {
         [72202301] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               SEQ = {
                 [1] = {
                   CameraMoveTo = {
@@ -215841,7 +214693,7 @@ local Data = {
                 }
               }
             },
-            [3] = {
+            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Born",
@@ -215852,26 +214704,9 @@ local Data = {
           },
           bAllowClick = true
         },
-        [72202302] = {
-          Operations = {
-            [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            }
-          },
-          bAllowClick = true
-        },
         [72202303] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Agree"
@@ -215883,12 +214718,6 @@ local Data = {
         [72202304] = {
           Operations = {
             [1] = {
-              PlayFacial = {
-                ActorId = 240110,
-                FacialId = "PetPan_Common"
-              }
-            },
-            [2] = {
               PlayAnimation = {
                 ActorId = 240110,
                 AnimationId = "Wuyou_Disappear"
@@ -217537,15 +216366,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80020403,
-    MaxKey = 80050107,
-    Loader = function()
-      return {
+        },
         [80020403] = {
           Operations = {
             [1] = {
@@ -218074,7 +216895,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80030207,
+    MaxKey = 80050228,
+    Loader = function()
+      return {
         [80030207] = {
           Operations = {
             [1] = {
@@ -222553,15 +221382,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80050108,
-    MaxKey = 80060406,
-    Loader = function()
-      return {
+        },
         [80050108] = {
           Operations = {
             [1] = {
@@ -223320,7 +222141,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80050229,
+    MaxKey = 80070112,
+    Loader = function()
+      return {
         [80050229] = {
           Operations = {
             [1] = {
@@ -225565,15 +224394,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80060408,
-    MaxKey = 80080219,
-    Loader = function()
-      return {
+        },
         [80060408] = {
           Operations = {
             [1] = {
@@ -226103,7 +224924,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80070113,
+    MaxKey = 80080312,
+    Loader = function()
+      return {
         [80070113] = {
           Operations = {
             [1] = {
@@ -229627,15 +228456,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80080220,
-    MaxKey = 80100334,
-    Loader = function()
-      return {
+        },
         [80080220] = {
           Operations = {
             [1] = {
@@ -230541,7 +229362,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80080313,
+    MaxKey = 80110118,
+    Loader = function()
+      return {
         [80080313] = {
           Operations = {
             [1] = {
@@ -232885,15 +231714,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80100336,
-    MaxKey = 80120327,
-    Loader = function()
-      return {
+        },
         [80100336] = {
           Operations = {
             [1] = {
@@ -233404,7 +232225,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80110119,
+    MaxKey = 80120423,
+    Loader = function()
+      return {
         [80110119] = {
           Operations = {
             [1] = {
@@ -236492,15 +235321,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80120328,
-    MaxKey = 80130436,
-    Loader = function()
-      return {
+        },
         [80120328] = {
           Operations = {
             [1] = {
@@ -237047,7 +235868,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80120424,
+    MaxKey = 80140143,
+    Loader = function()
+      return {
         [80120424] = {
           Operations = {
             [1] = {
@@ -239578,15 +238407,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80130437,
-    MaxKey = 80150117,
-    Loader = function()
-      return {
+        },
         [80130437] = {
           Operations = {
             [1] = {
@@ -240618,7 +239439,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80140144,
+    MaxKey = 80150224,
+    Loader = function()
+      return {
         [80140144] = {
           Operations = {
             [1] = {
@@ -244270,15 +243099,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80150118,
-    MaxKey = 80170312,
-    Loader = function()
-      return {
+        },
         [80150118] = {
           Operations = {
             [1] = {
@@ -245420,7 +244241,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80150225,
+    MaxKey = 80180116,
+    Loader = function()
+      return {
         [80150225] = {
           Operations = {
             [1] = {
@@ -248119,15 +246948,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80170313,
-    MaxKey = 80190409,
-    Loader = function()
-      return {
+        },
         [80170313] = {
           Operations = {
             [1] = {
@@ -248736,7 +247557,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80180118,
+    MaxKey = 80200045,
+    Loader = function()
+      return {
         [80180118] = {
           Operations = {
             [1] = {
@@ -251924,15 +250753,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80190411,
-    MaxKey = 80210119,
-    Loader = function()
-      return {
+        },
         [80190411] = {
           Operations = {
             [1] = {
@@ -253032,7 +251853,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80200046,
+    MaxKey = 80210234,
+    Loader = function()
+      return {
         [80200046] = {
           Operations = {
             [1] = {
@@ -257972,15 +256801,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80210120,
-    MaxKey = 90080001,
-    Loader = function()
-      return {
+        },
         [80210120] = {
           Operations = {
             [1] = {
@@ -258859,7 +257680,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80210235,
+    MaxKey = 90110104,
+    Loader = function()
+      return {
         [80210235] = {
           Operations = {
             [1] = {
@@ -261716,15 +260545,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90080101,
-    MaxKey = 90230201,
-    Loader = function()
-      return {
+        },
         [90080101] = {
           Operations = {
             [1] = {
@@ -262281,7 +261102,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90110105,
+    MaxKey = 90260401,
+    Loader = function()
+      return {
         [90110105] = {
           Operations = {
             [1] = {
@@ -264270,15 +263099,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90230301,
-    MaxKey = 741147001,
-    Loader = function()
-      return {
+        },
         [90230301] = {
           Operations = {
             [1] = {
@@ -264827,7 +263648,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90260402,
+    MaxKey = 741147042,
+    Loader = function()
+      return {
         [90260402] = {
           Operations = {
             [1] = {
@@ -266749,15 +265578,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147002,
-    MaxKey = 741147201,
-    Loader = function()
-      return {
+        },
         [741147002] = {
           Operations = {
             [1] = {
@@ -267559,7 +266380,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147043,
+    MaxKey = 741147242,
+    Loader = function()
+      return {
         [741147043] = {
           Operations = {
             [1] = {
@@ -270628,15 +269457,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147202,
-    MaxKey = 741147431,
-    Loader = function()
-      return {
+        },
         [741147202] = {
           Operations = {
             [1] = {
@@ -271456,7 +270277,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147243,
+    MaxKey = 741147526,
+    Loader = function()
+      return {
         [741147243] = {
           Operations = {
             [1] = {
@@ -274585,15 +273414,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147432,
-    MaxKey = 741148122,
-    Loader = function()
-      return {
+        },
         [741147432] = {
           Operations = {
             [1] = {
@@ -275374,7 +274195,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147527,
+    MaxKey = 741148309,
+    Loader = function()
+      return {
         [741147527] = {
           Operations = {
             [1] = {
@@ -278451,15 +277280,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148123,
-    MaxKey = 741148907,
-    Loader = function()
-      return {
+        },
         [741148123] = {
           Operations = {
             [1] = {
@@ -279261,7 +278082,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148310,
+    MaxKey = 741149021,
+    Loader = function()
+      return {
         [741148310] = {
           Operations = {
             [1] = {
@@ -282291,15 +281120,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148908,
-    MaxKey = 741149618,
-    Loader = function()
-      return {
+        },
         [741148908] = {
           Operations = {
             [1] = {
@@ -283083,7 +281904,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149022,
+    MaxKey = 750000202,
+    Loader = function()
+      return {
         [741149022] = {
           Operations = {
             [1] = {
@@ -286161,15 +284990,7 @@ local Data = {
             }
           },
           bAllowClick = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741149619,
-    MaxKey = 1101930901,
-    Loader = function()
-      return {
+        },
         [741149619] = {
           Operations = {
             [1] = {
@@ -286946,7 +285767,15 @@ local Data = {
             }
           },
           bAllowClick = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 750000203,
+    MaxKey = 1101930901,
+    Loader = function()
+      return {
         [750000203] = {
           Operations = {
             [1] = {

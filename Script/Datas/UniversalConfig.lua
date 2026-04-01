@@ -1782,7 +1782,7 @@ return ReadOnly("UniversalConfig", {
     IfWaitDead = 1,
     RegionDataType = T.RT_3,
     SetPlayerTransform = "12020101StartBP_NewTargetPoint",
-    StartBlackScreen = {0.5, 0},
+    StartBlackScreen = T.RT_4,
     SuccessBlackScreen = T.RT_4,
     UniversalConfigId = 12020101
   },
@@ -1899,6 +1899,7 @@ return ReadOnly("UniversalConfig", {
     IfWaitDead = 1,
     RegionDataType = T.RT_7,
     StartBlackScreen = T.RT_4,
+    SuccessBlackScreen = T.RT_4,
     UniversalConfigId = 12020212
   },
   [12020305] = {

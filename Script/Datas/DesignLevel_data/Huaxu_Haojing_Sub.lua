@@ -568,15 +568,6 @@ return {
         RarelyId = 7073004
       }
     },
-    ["7073008"] = {
-      AutoReset = 0,
-      ["2430077"] = {
-        CreatorId = 2430077,
-        UnitType = "Mechanism",
-        UnitId = 70116,
-        RarelyId = 7073008
-      }
-    },
     ["7073009"] = {
       AutoReset = 0,
       ["2430078"] = {

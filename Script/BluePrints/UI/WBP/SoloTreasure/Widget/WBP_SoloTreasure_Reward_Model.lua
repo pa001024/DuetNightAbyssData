@@ -1,5 +1,6 @@
 local SoloTreasure = {}
 local EastSeasonQuestUtils = require("BluePrints.UI.WBP.Activity.Widget.EastSeason.EastSeasonQuestUtils")
+local SoloTreasureDataModel = require("BluePrints.UI.WBP.Activity.Widget.SoloTreasure.SoloTreasureDataModel")
 SoloTreasure.ReddotRewardKey = "SoloTreasureReward"
 SoloTreasure.ReddotRewardLimitKey = "SoloTreasureRewardLimit"
 
@@ -496,27 +497,30 @@ function SoloTreasure:RefreshReddotInfoInternal(ReddotKey, ClearCache)
           if Config.QuestPhaseId == QuestPhaseId then
             if ReddotKey == self.ReddotRewardLimitKey then
               if not LimitTaskIdMap[PhaseConfig.QuestPhaseId] then
-                goto lbl_101
-              end
-            elseif LimitTaskIdMap[PhaseConfig.QuestPhaseId] then
-              goto lbl_101
-            end
-            local QuestData = CommonQuestActivity[QuestId]
-            if not (QuestData and QuestData.Progress) or not QuestData.Target then
-            else
-              local CanReceive = QuestData.Progress >= QuestData.Target
-              if CanReceive and not QuestData.RewardsGot then
-                if not CacheDetail[QuestPhaseId] then
-                  CacheDetail[QuestPhaseId] = {}
+              else
+                if SoloTreasureDataModel:IsEventPermanent(CommonConst.SoloTreasureEventId) then
+                  goto lbl_109
                 end
-                if not CacheDetail[QuestPhaseId][QuestId] then
-                  ReddotManager.IncreaseLeafNodeCount(ReddotKey)
-                  CacheDetail[QuestPhaseId][QuestId] = 1
+                elseif LimitTaskIdMap[PhaseConfig.QuestPhaseId] then
+                  goto lbl_109
+                end
+                local QuestData = CommonQuestActivity[QuestId]
+                if not (QuestData and QuestData.Progress) or not QuestData.Target then
+                else
+                  local CanReceive = QuestData.Progress >= QuestData.Target
+                  if CanReceive and not QuestData.RewardsGot then
+                    if not CacheDetail[QuestPhaseId] then
+                      CacheDetail[QuestPhaseId] = {}
+                    end
+                    if not CacheDetail[QuestPhaseId][QuestId] then
+                      ReddotManager.IncreaseLeafNodeCount(ReddotKey)
+                      CacheDetail[QuestPhaseId][QuestId] = 1
+                    end
+                  end
                 end
               end
-            end
           end
-          ::lbl_101::
+          ::lbl_109::
         end
       end
     end

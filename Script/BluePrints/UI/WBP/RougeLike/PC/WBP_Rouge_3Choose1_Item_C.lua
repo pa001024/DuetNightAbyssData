@@ -8,6 +8,7 @@ function M:Construct()
     "Purple",
     "Yellow"
   }
+  self.bSkipDefinitionAutoInit = true
   UIUtils.InitDefinitionTextWidget(self, self.Text_Desc, "ExplanationId")
 end
 
@@ -45,6 +46,9 @@ function M:OnLoaded(...)
     self.ExplanationId = AwardData[self.AwardId].ExplanationId
   end
   self.Text_Desc:SetText(AwardDesc)
+  if self.ExplanationId ~= nil and #self.ExplanationId > 0 then
+    UIUtils.SetDefinitionText(self.Text_Desc, self.ExplanationId)
+  end
   self.Button_Select.OnHovered:Add(self, self.OnBtnHover)
   self.Button_Select.OnClicked:Add(self, self.OnBtn_SelectClicked)
   self.Btn_Desc.OnClicked:Add(self, self.OnBtn_DescClicked)

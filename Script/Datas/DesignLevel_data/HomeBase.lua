@@ -5,10 +5,10 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
-    ["1210030"] = {
-      CreatorId = 1210030,
-      UnitType = "Npc",
-      UnitId = 200048
+    ["1210121"] = {
+      CreatorId = 1210121,
+      UnitType = "Mechanism",
+      UnitId = 1
     },
     ["1210050"] = {
       CreatorId = 1210050,
@@ -35,6 +35,36 @@ return {
       UnitType = "Mechanism",
       UnitId = 100
     },
+    ["1210104"] = {
+      CreatorId = 1210104,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["1210105"] = {
+      CreatorId = 1210105,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["1210122"] = {
+      CreatorId = 1210122,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["1210124"] = {
+      CreatorId = 1210124,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
+    ["1210129"] = {
+      CreatorId = 1210129,
+      UnitType = "Npc",
+      UnitId = 700384
+    },
+    ["1210130"] = {
+      CreatorId = 1210130,
+      UnitType = "Drop",
+      UnitId = 11227
+    },
     ["1220010101"] = {
       CreatorId = 1220010101,
       UnitType = "Npc",
@@ -49,6 +79,51 @@ return {
       CreatorId = 1210052,
       UnitType = "Npc",
       UnitId = 200002
+    },
+    ["1210093"] = {
+      CreatorId = 1210093,
+      UnitType = "Npc",
+      UnitId = 200002
+    },
+    ["1210094"] = {
+      CreatorId = 1210094,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["1210097"] = {
+      CreatorId = 1210097,
+      UnitType = "Npc",
+      UnitId = 230002
+    },
+    ["1210095"] = {
+      CreatorId = 1210095,
+      UnitType = "Npc",
+      UnitId = 230001
+    },
+    ["1210096"] = {
+      CreatorId = 1210096,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["1210102"] = {
+      CreatorId = 1210102,
+      UnitType = "Npc",
+      UnitId = 230002
+    },
+    ["1210101"] = {
+      CreatorId = 1210101,
+      UnitType = "Npc",
+      UnitId = 230001
+    },
+    ["1210103"] = {
+      CreatorId = 1210103,
+      UnitType = "Npc",
+      UnitId = 100001
+    },
+    ["1210123"] = {
+      CreatorId = 1210123,
+      UnitType = "Npc",
+      UnitId = 230004
     }
   },
   ManualItem = {

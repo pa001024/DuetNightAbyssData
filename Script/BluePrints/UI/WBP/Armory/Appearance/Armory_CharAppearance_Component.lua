@@ -1361,6 +1361,20 @@ function M:UpdateSkinLevelInfo(SkinId)
   self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]:PlaySelectedAnimation()
 end
 
+function M:OnSkinUpgradeResourceChanged(ResourceId)
+  if not self.SkinUpgradeCurrency then
+    self.SkinUpgradeCurrency = {}
+    for SKinId, UpgradeDatas in pairs(DataMgr.SkinUpgrade) do
+      for _, Data in pairs(UpgradeDatas) do
+        self.SkinUpgradeCurrency[Data.UnlockCurrency] = true
+      end
+    end
+  end
+  if self.SkinUpgradeCurrency[ResourceId] then
+    self:RefreshLevelUpReddot()
+  end
+end
+
 function M:GetOwnedSkinData(SkinId)
   local Avatar = GWorld:GetAvatar()
   if not Avatar or not Avatar.CommonChars then
@@ -1384,17 +1398,19 @@ function M:IsEquipedSelectedSkin()
   return AppearanceSuit.SkinId == self.SelectedSkinId
 end
 
-function M:OnLevelUpWidgetClicked(Level)
-  if Level == self.SelectedSkinLevel then
+function M:OnLevelUpWidgetClicked(Level, Skip)
+  if Level == self.SelectedSkinLevel and not Skip then
     return
   end
-  if self.SelectedSkinLevel then
+  if self.SelectedSkinLevel and not Skip then
     local LastLevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
     if LastLevelUpWidget then
       LastLevelUpWidget:PlayNormalAnimation()
     end
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
+  if not Skip then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
+  end
   self.SelectedSkinLevel = Level
   self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -1547,6 +1563,9 @@ function M:RefreshLevelUpReddot()
   if self.NoReddot then
     return
   end
+  if self.IsPreviewMode then
+    return
+  end
   if self.Type ~= CommonConst.DataType.Char then
     return
   end
@@ -1589,11 +1608,7 @@ function M:RefreshLevelUpReddot()
         self["WBP_Armory_Skin_LevelUp_" .. CurLevel]:SetReddotState(false)
       end
       if NewLevel == self.SelectedSkinLevel then
-        if IsShowReddot then
-          self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-        else
-          self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
-        end
+        self:OnLevelUpWidgetClicked(NewLevel, true)
       else
         self.Btn_Function.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
       end

@@ -4435,7 +4435,12 @@ return ReadOnly("Buff", {
     ForbidenJumpState = T.RT_141,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    NotEnterCharacterTagType = {"Hit", "Seating"},
+    NotEnterCharacterTagType = {
+      "Hit",
+      "Seating",
+      "Crouch",
+      "Slide"
+    },
     UseSummonWeapon = 1,
     VisualEffects = T.RT_177
   },
@@ -4465,7 +4470,7 @@ return ReadOnly("Buff", {
         AttrName = "DamageRate",
         RateZone = "Almighty",
         Stackable = 1,
-        Value = 0.04
+        Value = 0.045
       }
     },
     AllowSkillSustainModify = true,
@@ -4504,6 +4509,7 @@ return ReadOnly("Buff", {
     DotDatas = T.RT_180,
     ExecSkillEffectWhenRemoved = T.RT_177,
     ForbidCatch = true,
+    ForbidenJumpState = T.RT_125,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterCharacterTagType = {

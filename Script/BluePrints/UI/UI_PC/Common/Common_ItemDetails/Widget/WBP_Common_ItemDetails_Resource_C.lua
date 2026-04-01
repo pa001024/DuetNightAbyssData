@@ -103,7 +103,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   if DataMgr[ItemType][ItemId] and 7 == DataMgr[ItemType][ItemId].MaterialClassify then
     local OptInfo = DataMgr[ItemType][ItemId]
     local UseEffectType = DataMgr[ItemType][ItemId].UseEffectType
-    if UseEffectType ~= CommonConst.ResUseEffectType.SelectWeapon and UseEffectType ~= CommonConst.ResUseEffectType.SelectCharacter and UseEffectType ~= CommonConst.ResUseEffectType.SelectSkin and UseEffectType ~= CommonConst.ResUseEffectType.SelectPet then
+    if UseEffectType ~= CommonConst.ResUseEffectType.SelectWeapon and UseEffectType ~= CommonConst.ResUseEffectType.SelectCharacter and UseEffectType ~= CommonConst.ResUseEffectType.SelectSkin and UseEffectType ~= CommonConst.ResUseEffectType.SelectPet and UseEffectType ~= CommonConst.ResUseEffectType.SelectResource and UseEffectType ~= CommonConst.ResUseEffectType.ResourcePack then
       self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
       local CallBack = {
         ButtonClickCallBack = function()

@@ -1444,13 +1444,13 @@ return ReadOnly("EffectCreature", {
   [50002] = {
     EffectCreatureId = 50002,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_01.BP_EffectCreature_Dead_01",
-    EffectCreatureTag = T.RT_6
+    EffectCreatureTag = T.RT_6,
+    SoundId = 3502
   },
   [50003] = {
     EffectCreatureId = 50003,
     EffectCreaturePath = "/Game/BluePrints/Combat/EffectCreature/DeadFx/BP_EffectCreature_Dead_02.BP_EffectCreature_Dead_02",
-    EffectCreatureTag = T.RT_6,
-    SoundId = 3502
+    EffectCreatureTag = T.RT_6
   },
   [50004] = {
     EffectCreatureId = 50004,

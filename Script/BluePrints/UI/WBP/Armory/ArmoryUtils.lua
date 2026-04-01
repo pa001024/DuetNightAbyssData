@@ -866,6 +866,7 @@ local function CreateOneCharAppearanceReddotInfos(CharId)
       end
     end
   end
+  M:CreateSkinLevelUpReddot()
 end
 
 function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
@@ -2243,11 +2244,17 @@ function M._CreateDummyAvatarCustom(DummyAvatar, _Params)
         end
       end
       if Hair and type(AppearanceSuit.HairColors) == "table" then
-        for PlanIdx, PlanColors in pairs(AppearanceSuit.HairColors) do
-          if Hair.Colors[PlanIdx] and type(PlanColors) == "table" then
-            for PartIdx, ColorId in pairs(PlanColors) do
-              Hair.Colors[PlanIdx][PartIdx] = ColorId
+        if type(AppearanceSuit.HairColors[1]) == "table" then
+          for PlanIdx, PlanColors in pairs(AppearanceSuit.HairColors) do
+            if Hair.Colors[PlanIdx] and type(PlanColors) == "table" then
+              for PartIdx, ColorId in pairs(PlanColors) do
+                Hair.Colors[PlanIdx][PartIdx] = ColorId
+              end
             end
+          end
+        elseif Hair.Colors[1] then
+          for Index, Color in pairs(AppearanceSuit.HairColors) do
+            Hair.Colors[1][Index] = Color
           end
         end
       end
@@ -2676,32 +2683,27 @@ function M:IsSkinSupportAccessory(SkinId, AccessoryId)
   return false
 end
 
-function M:InitSkinLevelUpReddot(CharId, Obj, Callback)
+function M:CreateSkinLevelUpReddot()
   if self.IsPreviewMode then
     return
   end
-  if not CharId then
-    return
-  end
-  local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
-  if not ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddNodeEx(NodeName)
-  end
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-  if not CacheDetail then
-    return
-  end
-  if not next(CacheDetail) then
-    local SkinData = DataMgr.Skin[CharId]
-    for SkinId, Data in pairs(DataMgr.Skin) do
-      if Data.CharId == CharId then
-        local SkinData = self:GetOwnedSkinData(SkinId)
-        CacheDetail[SkinId] = SkinData and SkinData.Level or 1
+  for SkinId, _ in pairs(DataMgr.SkinUpgrade) do
+    local CharId = DataMgr.Skin[SkinId] and DataMgr.Skin[SkinId].CharId
+    local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
+    if ReddotManager.GetTreeNode(NodeName) then
+    else
+      ReddotManager.AddNodeEx(NodeName)
+      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+      if not CacheDetail or next(CacheDetail) then
+      else
+        for SkinId, Data in pairs(DataMgr.Skin) do
+          if Data.CharId == CharId then
+            local SkinData = self:GetOwnedSkinData(SkinId)
+            CacheDetail[SkinId] = SkinData and SkinData.Level or 1
+          end
+        end
       end
     end
-  end
-  if Obj and Callback then
-    ReddotManager.AddListener(NodeName, Obj, Callback)
   end
 end
 

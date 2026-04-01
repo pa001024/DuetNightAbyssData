@@ -172,6 +172,12 @@ return {
             startPort = "Out",
             endQuest = "17742800687082538984",
             endPort = "In"
+          },
+          {
+            startQuest = "1773300783630851789",
+            startPort = "Out",
+            endQuest = "1774950949517988",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -413,6 +419,13 @@ return {
             name = "延迟等待",
             pos = {x = 1640.5206497410695, y = 125.37409053570371},
             propsData = {WaitTime = 1}
+          },
+          ["1774950949517988"] = {
+            key = "1774950949517988",
+            type = "UnEquipEffectPropNode",
+            name = "卸载当前装备的探索道具",
+            pos = {x = 1232.4887556221888, y = -138.7263624597959},
+            propsData = {}
           }
         },
         commentData = {}

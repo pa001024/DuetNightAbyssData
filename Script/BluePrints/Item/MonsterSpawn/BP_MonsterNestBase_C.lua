@@ -115,6 +115,7 @@ end
 
 function M:ShowSpawnedMonsterGuide()
   DebugPrint("BP_MonsterNestBase_C ShowSpawnedMonsterGuide", self:GetName())
+  self:UpdateExistMonsters()
   for _, Eid in pairs(self.ExistMonsters) do
     local GameState = UE4.UGameplayStatics.GetGameState(self)
     GameState:AddGuideEid(Eid)
@@ -123,6 +124,7 @@ end
 
 function M:HideSpawnedMonsterGuide()
   DebugPrint("BP_MonsterNestBase_C HideSpawnedMonsterGuide", self:GetName())
+  self:UpdateExistMonsters()
   for _, Eid in pairs(self.ExistMonsters) do
     local GameState = UE4.UGameplayStatics.GetGameState(self)
     GameState:RemoveGuideEid(Eid)
@@ -135,10 +137,7 @@ function M:TriggerCountRestMonsters()
   self:AddTimer(1, self.CheckRestMonsters, true, 0, "CheckRestMonsters")
 end
 
-function M:CheckRestMonsters()
-  if not self.IsCountRest then
-    return
-  end
+function M:UpdateExistMonsters()
   local NewExistMonsters = {}
   for _, LastExistEid in pairs(self.ExistMonsters) do
     local MonsterEntity = Battle(self):GetEntity(LastExistEid)
@@ -147,6 +146,13 @@ function M:CheckRestMonsters()
     end
   end
   self.ExistMonsters = NewExistMonsters
+end
+
+function M:CheckRestMonsters()
+  if not self.IsCountRest then
+    return
+  end
+  self:UpdateExistMonsters()
   DebugPrint("BP_MonsterNestBase_C ManaualItemId", self.ManualItemId, " 还剩", #self.ExistMonsters, "个怪物没清除")
   if 0 == #self.ExistMonsters then
     self.IsCountRest = false

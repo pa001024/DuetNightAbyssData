@@ -817,32 +817,7 @@ function Component:_HandleMovingInput(InKeyName)
   end
   if InKeyName == Const.RightThumb then
     if bItemPlaced then
-      if self._GamepadPlacedItem.OnRotationBtnClicked then
-        self._GamepadPlacedItem:OnRotationBtnClicked()
-        local PlacedRecord = self:_GetPlacedRecord(self._GamepadPlacedItem)
-        if PlacedRecord then
-          self._GamepadMoveRow = PlacedRecord.BaseRow
-          self._GamepadMoveCol = PlacedRecord.BaseCol
-          self._GamepadMoveValid = true
-          local OldVisualCells = self._GamepadVisualCells
-          if OldVisualCells then
-            local NewCellSet = {}
-            for _, C in ipairs(PlacedRecord.Cells) do
-              NewCellSet[C.Row * 100 + C.Col] = true
-            end
-            for _, C in ipairs(OldVisualCells) do
-              if not NewCellSet[C.Row * 100 + C.Col] then
-                local ContainItem = self:GetContainItemAt(C.Row, C.Col)
-                if ContainItem and ContainItem.DeactivateHighlight then
-                  ContainItem:DeactivateHighlight()
-                end
-              end
-            end
-          end
-          self._GamepadVisualCells = PlacedRecord.Cells
-          self._GamepadLastDoubleReward = PlacedRecord.IsDoubleReward
-        end
-      end
+      self:_RotateGamepadPlacedItem()
     elseif self._GamepadDragUI and self._GamepadDragUI.RotateShape90CW then
       self._GamepadDragUI.RotationCount = ((self._GamepadDragUI.RotationCount or 0) + 1) % 4
       self._GamepadDragUI:RotateShape90CW()
@@ -851,6 +826,143 @@ function Component:_HandleMovingInput(InKeyName)
     return true
   end
   return false
+end
+
+function Component:_RotateGamepadPlacedItem()
+  local PlacedItem = self._GamepadPlacedItem
+  if not PlacedItem then
+    return false
+  end
+  if not PlacedItem.ShapeOffsets or 0 == #PlacedItem.ShapeOffsets then
+    return false
+  end
+  local PlacedRecord = self:_GetPlacedRecord(PlacedItem)
+  if not PlacedRecord or not PlacedRecord.Cells then
+    return false
+  end
+  local bWasTempPlacement = PlacedRecord.IsTempPlacement == true or PlacedItem.IsTempPlacement == true
+  local OldRotCount = PlacedItem.RotationCount or 0
+  local OldShapeOffsets = PlacedItem.ShapeOffsets
+  local OldCells = PlacedRecord.Cells
+  PlacedItem.RotationCount = ((PlacedItem.RotationCount or 0) + 1) % 4
+  PlacedItem:RotateShape90CW()
+  local NewCells = PlacedItem:GetShapeCells(self._GamepadMoveRow, self._GamepadMoveCol)
+  for _, Cell in ipairs(NewCells) do
+    if Cell.Row < 1 or Cell.Row > GRID_ROWS or Cell.Col < 1 or Cell.Col > GRID_COLS then
+      PlacedItem.RotationCount = OldRotCount
+      PlacedItem.ShapeOffsets = OldShapeOffsets
+      PlacedItem:UpdateVisualRotation()
+      if PlacedItem.SetItemSize then
+        PlacedItem:SetItemSize()
+      end
+      return false
+    end
+  end
+  local TLRow, TLCol = NewCells[1].Row, NewCells[1].Col
+  for _, C in ipairs(NewCells) do
+    if TLRow > C.Row then
+      TLRow = C.Row
+    end
+    if TLCol > C.Col then
+      TLCol = C.Col
+    end
+  end
+  local TopLeftCell = self:GetContainItemAt(TLRow, TLCol)
+  if not TopLeftCell then
+    PlacedItem.RotationCount = OldRotCount
+    PlacedItem.ShapeOffsets = OldShapeOffsets
+    PlacedItem:UpdateVisualRotation()
+    if PlacedItem.SetItemSize then
+      PlacedItem:SetItemSize()
+    end
+    return false
+  end
+  if not bWasTempPlacement then
+    for _, Cell in ipairs(OldCells) do
+      BagGameModel:ClearCellOccupied(Cell.Row, Cell.Col)
+      local ContainItem = self:GetContainItemAt(Cell.Row, Cell.Col)
+      if ContainItem then
+        ContainItem.bIsOccupied = false
+        ContainItem.OccupiedBy = nil
+      end
+    end
+  end
+  if self:_TryAutoTrigger(PlacedItem, PlacedRecord, NewCells) then
+    return true
+  end
+  local ConflictRecord = BagGameModel:FindOverlappingPlacedItem(NewCells)
+  local bValid = self:CanPlaceShapeAt(self._GamepadMoveRow, self._GamepadMoveCol, NewCells)
+  if bValid then
+    for _, Cell in ipairs(NewCells) do
+      local Value = BagGameModel:GetGridValue(Cell.Row, Cell.Col)
+      if Value == BagGameModel.VALUE_UNCLICKABLE then
+        bValid = false
+        break
+      end
+    end
+  end
+  PlacedItem:RemoveFromParent()
+  self:MountItemToCell(PlacedItem, TopLeftCell, false)
+  self:_PromoteItemToCanvasPanel(PlacedItem, TopLeftCell, 300)
+  if PlacedItem.SetItemSize then
+    PlacedItem:SetItemSize()
+  end
+  local NewCellSet = {}
+  for _, C in ipairs(NewCells) do
+    NewCellSet[C.Row * 100 + C.Col] = true
+  end
+  if self._GamepadVisualCells then
+    for _, C in ipairs(self._GamepadVisualCells) do
+      if not NewCellSet[C.Row * 100 + C.Col] then
+        local ContainItem = self:GetContainItemAt(C.Row, C.Col)
+        if ContainItem and ContainItem.DeactivateHighlight then
+          ContainItem:DeactivateHighlight()
+        end
+      end
+    end
+  end
+  if bValid then
+    for _, Cell in ipairs(NewCells) do
+      self:MarkCellOccupied(Cell.Row, Cell.Col, PlacedItem)
+    end
+    if bWasTempPlacement then
+      PlacedRecord = self:_PromoteTempPlacedRecord(PlacedItem, PlacedRecord, NewCells, self._GamepadMoveRow, self._GamepadMoveCol)
+    else
+      PlacedRecord.Cells = NewCells
+      PlacedRecord.BaseRow = self._GamepadMoveRow
+      PlacedRecord.BaseCol = self._GamepadMoveCol
+    end
+    PlacedItem.PlacedCells = NewCells
+    self._GamepadMoveValid = true
+  elseif bWasTempPlacement then
+    PlacedRecord.Cells = NewCells
+    PlacedRecord.BaseRow = self._GamepadMoveRow
+    PlacedRecord.BaseCol = self._GamepadMoveCol
+    PlacedRecord.ConflictRecord = ConflictRecord
+    PlacedItem.IsTempPlacement = true
+    PlacedItem.ConflictRecord = ConflictRecord
+    PlacedItem.PlacedCells = NewCells
+    self._GamepadMoveValid = false
+  else
+    PlacedRecord.Cells = NewCells
+    PlacedRecord.BaseRow = self._GamepadMoveRow
+    PlacedRecord.BaseCol = self._GamepadMoveCol
+    PlacedItem.PlacedCells = NewCells
+    self._GamepadMoveValid = false
+  end
+  self._GamepadScanRowRange, self._GamepadScanColRange = self:_BuildGamepadScanRange(PlacedItem.ShapeOffsets)
+  self:RefreshPlacedItemDoubleState()
+  self:UpdateScoreDisplay()
+  self._GamepadVisualCells = NewCells
+  for _, Cell in ipairs(NewCells) do
+    local ContainItem = self:GetContainItemAt(Cell.Row, Cell.Col)
+    if ContainItem then
+      ContainItem:ActivateHighlight(bValid)
+    end
+  end
+  self._GamepadLastDoubleReward = PlacedRecord.IsDoubleReward
+  AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_cell_click_replace", nil, nil)
+  return true
 end
 
 function Component:_MovePlacedItemByDelta(dRow, dCol)

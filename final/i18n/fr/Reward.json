@@ -12749,13 +12749,13 @@
         "id": 20044,
         "t": "CharAccessory",
         "c": 1,
-        "n": "青羽护目·薄荷"
+        "n": "Visière d’émeraude – Menthe"
       },
       {
         "id": 40013,
         "t": "CharAccessory",
         "c": 1,
-        "n": "Accessoire dorsal de Su Yi"
+        "n": "Ailes d’émeraude – Menthe"
       },
       {
         "id": 80046,
@@ -35184,7 +35184,7 @@
         "id": 30129,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "定格的往事"
+        "n": "Souvenirs figés"
       },
       {
         "id": 100,
@@ -57409,7 +57409,7 @@
         "id": 10027,
         "t": "HeadFrame",
         "c": 1,
-        "n": "争锋"
+        "n": "Rivalité"
       }
     ]
   },
@@ -57421,7 +57421,7 @@
         "id": 10028,
         "t": "HeadFrame",
         "c": 1,
-        "n": "祥云"
+        "n": "Nuées propices"
       }
     ]
   },
@@ -57445,7 +57445,7 @@
         "id": 10030,
         "t": "HeadFrame",
         "c": 1,
-        "n": "烈酒与蔷薇"
+        "n": "Vin et roses"
       }
     ]
   },
@@ -57457,7 +57457,7 @@
         "id": 10031,
         "t": "HeadFrame",
         "c": 1,
-        "n": "乙鸟"
+        "n": "Oiseau Yi"
       }
     ]
   },
@@ -57469,7 +57469,7 @@
         "id": 10032,
         "t": "HeadFrame",
         "c": 1,
-        "n": "子不语·黛蓝"
+        "n": "Murmures indicibles – Bleu indigo"
       }
     ]
   },
@@ -57481,7 +57481,7 @@
         "id": 10033,
         "t": "HeadFrame",
         "c": 1,
-        "n": "子不语·晴蓝"
+        "n": "Murmures indicibles – Bleu céleste"
       }
     ]
   },
@@ -57751,7 +57751,7 @@
         "id": 30039,
         "t": "CharAccessory",
         "c": 1,
-        "n": "均天玉律"
+        "n": "Jade de l’Équilibre"
       }
     ]
   },
@@ -62151,7 +62151,7 @@
         "t": "HeadSculpture",
         "c": 1,
         "p": 1,
-        "n": "星耀巡游"
+        "n": "Croisière étoilée"
       },
       {
         "id": 10090,
@@ -62165,7 +62165,7 @@
         "t": "CharAccessory",
         "c": 1,
         "p": 1,
-        "n": "一线铃铛"
+        "n": "Grelot suspendu"
       },
       {
         "id": 30038,
@@ -76591,7 +76591,7 @@
         "id": 10021,
         "t": "TitleFrame",
         "c": 1,
-        "n": "SSS级狩月人·3"
+        "n": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SSS – III"
       },
       {
         "id": 220,
@@ -76621,7 +76621,7 @@
         "id": 10022,
         "t": "TitleFrame",
         "c": 1,
-        "n": "SS级狩月人·3"
+        "n": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} SS – III"
       },
       {
         "id": 220,
@@ -76651,7 +76651,7 @@
         "id": 10023,
         "t": "TitleFrame",
         "c": 1,
-        "n": "S级狩月人·3"
+        "n": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} S – III"
       },
       {
         "id": 220,
@@ -76681,7 +76681,7 @@
         "id": 10024,
         "t": "TitleFrame",
         "c": 1,
-        "n": "A级狩月人·3"
+        "n": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} A – III"
       },
       {
         "id": 220,
@@ -76711,7 +76711,7 @@
         "id": 10025,
         "t": "TitleFrame",
         "c": 1,
-        "n": "B级狩月人·3"
+        "n": "{性别:Chasseur de Phoxène|Chasseuse de Phoxène} B – III"
       },
       {
         "id": 220,
@@ -83145,7 +83145,7 @@
         "id": 30117,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "奉香群英试"
+        "n": "Tournoi de l’Encens"
       }
     ]
   },
@@ -83187,7 +83187,7 @@
         "id": 10027,
         "t": "HeadFrame",
         "c": 1,
-        "n": "争锋"
+        "n": "Rivalité"
       }
     ]
   },
@@ -83727,7 +83727,7 @@
         "id": 30118,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "星耀巡游"
+        "n": "Croisière étoilée"
       }
     ]
   },
@@ -87321,7 +87321,7 @@
         "id": 30122,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "喵喵游戏"
+        "n": "Jeux félins"
       },
       {
         "id": 100,
@@ -87339,7 +87339,7 @@
         "id": 30123,
         "t": "HeadSculpture",
         "c": 1,
-        "n": "不眠之夜"
+        "n": "Nuit sans sommeil"
       },
       {
         "id": 100,

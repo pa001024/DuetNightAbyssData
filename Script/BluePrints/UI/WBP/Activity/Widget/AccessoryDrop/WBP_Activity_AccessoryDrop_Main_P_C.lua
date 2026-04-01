@@ -279,4 +279,10 @@ function M:OnInputMethodChanged(NewGameInputType, NewGamepadName)
   end
 end
 
+function M:ReceiveEnterStateSelf(StackAction)
+  local Avatar = GWorld:GetAvatar()
+  local AccessoryDrop = Avatar.AccessoryDrops[self.EventId]
+  self.Coin:InitView(self.AccessDropConfig, AccessoryDrop, true)
+end
+
 return M

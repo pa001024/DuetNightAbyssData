@@ -754,6 +754,20 @@ function CommonTalkTask:TravelViewTarget(ViewTarget, bIsFullLoad, OnFinished)
     return
   end
   local BlackHandle = UIManager(self.TalkContext):ShowCommonBlackScreen({})
+  if self.TalkTaskData.TalkNodeId == "176251735161126752346" then
+    self.TalkTimerManager:AddTimer(self, 2, nil, nil, self, function()
+      WorldCompositionSubSystem:SetViewTargetWithWC(ViewTarget, {
+        self.TalkContext,
+        function()
+          UIManager(self.TalkContext):HideCommonBlackScreen(BlackHandle)
+          if OnFinished then
+            OnFinished()
+          end
+        end
+      }, bIsFullLoad, false)
+    end)
+    return
+  end
   WorldCompositionSubSystem:SetViewTargetWithWC(ViewTarget, {
     self.TalkContext,
     function()

@@ -809,16 +809,16 @@ return ReadOnly("ShopBannerTab", {
   [304] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_S_0008.T_Shop_Recommend_S_0008'",
     Bp = "WBP_Shop_Recommend_Common",
-    DisplayId = 1005,
+    DisplayId = 1004,
     DisplayType = "Mount",
     EndTime = LocalTimeProxy(1777946400),
     Id = 304,
-    ItemIds = {1208004},
+    ItemIds = {1208003},
     MarkText = "UI_Banner_Tab_NewMount",
     ShortTabSequence = 1,
     ShowRemainTime = true,
     StartTime = LocalTimeProxy(1775440800),
-    Text1 = "RESOURCE_NAME_49994",
+    Text1 = "RESOURCE_NAME_49995",
     Text1Sub = "UI_Mount"
   },
   [305] = {

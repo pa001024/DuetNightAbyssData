@@ -161,7 +161,7 @@
       "HeadSculpture": [
         {
           "id": 10031,
-          "name": "机枢少女的肖像",
+          "name": "Portrait : Demoiselle Jishu",
           "num": 1
         }
       ],
@@ -422,7 +422,7 @@
       "HeadSculpture": [
         {
           "id": 10023,
-          "name": "Portrait : Camilla",
+          "name": "Portrait : La marchande",
           "num": 1
         }
       ],
@@ -713,7 +713,7 @@
   {
     "id": 150401,
     "name": "Sentinelle d’émeraude",
-    "desc": "青羽铸就云中客，一念乘风。",
+    "desc": "Plumes d’azur, portées par le vent.",
     "icon": "T_Head_Suyi01",
     "rarity": 5,
     "charId": 1504,
@@ -730,7 +730,7 @@
       "HeadSculpture": [
         {
           "id": 20006,
-          "name": "机枢少女的肖像·晴空",
+          "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
           "num": 1
         }
       ]

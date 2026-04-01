@@ -27,6 +27,26 @@ function Component:GetPartyTopic(CharId, Level)
   return PartyTopic
 end
 
+function Component:GetPartyTopicLockState(CharId, Level)
+  local PartyTopic = self:GetPartyTopic(CharId, Level)
+  if PartyTopic then
+    return PartyTopic
+  end
+  DebugPrint(string.format("GetPartyTopicLockState CharId %d Level %d not found", CharId or -1, Level or -1))
+  local PartyTopicClass = require("BluePrints.Client.CustomTypes.PartyTopic").PartyTopic
+  local PartyNpcData = DataMgr.PartyNpc[CharId]
+  if not PartyNpcData then
+    return
+  end
+  local PartyTopicData = PartyNpcData.PartyTopicList[Level]
+  if not PartyTopicData then
+    return
+  end
+  PartyTopic = PartyTopicClass(PartyTopicData)
+  PartyTopic.State = 0
+  return PartyTopic
+end
+
 function Component:TriggerPartyTopicUnLock(CharId, Level, HandleCallback)
   CharId = tonumber(CharId)
   Level = tonumber(Level)

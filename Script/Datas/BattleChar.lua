@@ -1167,7 +1167,7 @@ return ReadOnly("BattleChar", {
     CharGradeParameter = {
       [1] = "$#Buff[150421].MaxLayer$",
       [2] = "$#TargetFilter[#SkillEffects[150476].TargetFilter].LuaFilterParaments.Radius/100$$GText(\"SKILL_DESC_Meter\")$",
-      [3] = "$#Buff[150404].AddAttrs[1].Value*100$%",
+      [3] = "$#Buff[150404].AddAttrs[2].Value*100$%",
       [4] = "$#PassiveEffect[150401].Vars.Grade6DamagePer*100$%"
     },
     CharName = "UI_CHAR_NAME_1504",

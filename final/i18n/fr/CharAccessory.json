@@ -793,8 +793,8 @@
   },
   {
     "id": 11006,
-    "name": "俏皮律动",
-    "desc": "摇摇晃晃，共舞一节俏皮的旋律。",
+    "name": "Rythme espiègle",
+    "desc": "Oscillant au rythme, vous dansez au gré d’une mélodie espiègle.",
     "icon": "T_Fashion_Fx16",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -1497,7 +1497,7 @@
   },
   {
     "id": 20044,
-    "name": "青羽护目·薄荷",
+    "name": "Visière d’émeraude – Menthe",
     "desc": "Scanner. Analyser. Calculer.",
     "icon": "T_Fashion_Face23_03",
     "rarity": 5,
@@ -1553,7 +1553,7 @@
   },
   {
     "id": 20052,
-    "name": "青羽护目·鎏金",
+    "name": "Visière d’émeraude – Doré",
     "desc": "Scanner. Analyser. Calculer.",
     "icon": "T_Fashion_Face23_02",
     "rarity": 5,
@@ -1561,7 +1561,7 @@
   },
   {
     "id": 20053,
-    "name": "青羽护目·锈红",
+    "name": "Visière d’émeraude – Rouille",
     "desc": "Scanner. Analyser. Calculer.",
     "icon": "T_Fashion_Face23_01",
     "rarity": 5,
@@ -1793,7 +1793,7 @@
   },
   {
     "id": 21005,
-    "name": "俏皮轨迹",
+    "name": "Trace espiègle",
     "desc": "Des chats viennent de passer, non ?",
     "icon": "T_Fashion_Fx15",
     "rarity": 5,
@@ -2057,7 +2057,7 @@
   },
   {
     "id": 30037,
-    "name": "一线铃铛",
+    "name": "Grelot suspendu",
     "desc": "Chasser le mal, repousser l’ombre, briser les mauvais sorts, dissiper les calamités.",
     "icon": "T_Fashion_Waist18",
     "rarity": 3,
@@ -2073,7 +2073,7 @@
   },
   {
     "id": 30039,
-    "name": "均天玉律",
+    "name": "Jade de l’Équilibre",
     "desc": "Réparer les fissures du monde et restaurer l’harmonie ancestrale.",
     "icon": "T_Fashion_Waist21",
     "rarity": 5,
@@ -2105,7 +2105,7 @@
   },
   {
     "id": 31004,
-    "name": "胜利动作·机枢幻想",
+    "name": "Animation de victoire : Fantaisie Jishu ",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_03",
     "rarity": 5,
@@ -2185,7 +2185,7 @@
   },
   {
     "id": 40013,
-    "name": "Accessoire dorsal de Su Yi",
+    "name": "Ailes d’émeraude – Menthe",
     "desc": "激活，运转，推进。",
     "icon": "T_Fashion_Back41_04",
     "rarity": 5,
@@ -2289,7 +2289,7 @@
   },
   {
     "id": 40026,
-    "name": "青羽鞘翅·锈红",
+    "name": "Ailes d’émeraude – Rouille",
     "desc": "激活，运转，推进。",
     "icon": "T_Fashion_Back41_02",
     "rarity": 5,
@@ -2297,7 +2297,7 @@
   },
   {
     "id": 40027,
-    "name": "青羽鞘翅·鎏金",
+    "name": "Ailes d’émeraude – Doré",
     "desc": "激活，运转，推进。",
     "icon": "T_Fashion_Back41_03",
     "rarity": 5,
@@ -2305,7 +2305,7 @@
   },
   {
     "id": 40028,
-    "name": "青羽鞘翅·涅白",
+    "name": "Ailes d’émeraude – Blanc ivoire",
     "desc": "激活，运转，推进。",
     "icon": "T_Fashion_Back41_01",
     "rarity": 5,
@@ -2353,7 +2353,7 @@
   },
   {
     "id": 40034,
-    "name": "诡道陈兵·涅白",
+    "name": "Stratagème déployé – Blanc ivoire",
     "desc": "Les paroles sacrées chassent les ombres, nourrissent l’âme et élèvent les esprits.",
     "icon": "T_Fashion_Back39_01",
     "rarity": 5,
@@ -2361,7 +2361,7 @@
   },
   {
     "id": 40035,
-    "name": "诡道陈兵·锈红",
+    "name": "Stratagème déployé – Rouille",
     "desc": "Les paroles sacrées chassent les ombres, nourrissent l’âme et élèvent les esprits.",
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,
@@ -2713,7 +2713,7 @@
   },
   {
     "id": 70034,
-    "name": "喵喵足迹·薄荷",
+    "name": "Empreintes félines – Menthe",
     "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_04",
     "rarity": 5,
@@ -2721,7 +2721,7 @@
   },
   {
     "id": 70035,
-    "name": "喵喵足迹·黛蓝",
+    "name": "Empreintes félines – Bleu indigo",
     "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_03",
     "rarity": 5,
@@ -2729,7 +2729,7 @@
   },
   {
     "id": 70036,
-    "name": "喵喵足迹·白樱",
+    "name": "Empreintes félines – Blanc sakura",
     "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_01",
     "rarity": 5,
@@ -2737,7 +2737,7 @@
   },
   {
     "id": 70037,
-    "name": "喵喵足迹·锈红",
+    "name": "Empreintes félines – Rouille",
     "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_02",
     "rarity": 5,

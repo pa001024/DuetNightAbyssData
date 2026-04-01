@@ -286,6 +286,12 @@ return {
             startPort = "QuestStart",
             endQuest = "17735663302012536706",
             endPort = "In"
+          },
+          {
+            startQuest = "1770024193932823",
+            startPort = "Out",
+            endQuest = "17749537778331814",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -718,6 +724,21 @@ return {
               IsPlayStartSound = false,
               GuideTalkStyle = "Normal",
               OverrideFailBlend = false
+            }
+          },
+          ["17749537778331814"] = {
+            key = "17749537778331814",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 1450.8363636363638, y = -493.29999999999984},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "qianxingStart",
+              FadeIn = false,
+              FadeOut = true,
+              bResetCamera = true,
+              bForceAsyncLoading = false,
+              IsWhite = false
             }
           }
         },

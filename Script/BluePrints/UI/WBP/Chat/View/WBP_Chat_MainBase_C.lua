@@ -21,7 +21,7 @@ function M:Construct()
   self.Btn_NewMessage.OnClicked:Add(self, self.BtnNewMsgOnClicked)
   self.Btn_QuickReply:BindEventOnPressed(self, self.BtnQuickReplyOnPressed)
   self.Btn_QuickReply:BindEventOnReleased(self, self.BtnQuickReplyOnReleased)
-  self.Btn_Sent:SetText(GText("UI_Chat_Send"))
+  self.Btn_Sent:SetText("")
   self.List_Dialog:DisableScroll(true)
   self.List_Dialog.BP_OnEntryGenerated:Add(self, function(self, Widget)
     if not self._DialogItemCounter then
@@ -595,9 +595,9 @@ function M:HandleEnterChatChannel(ErrCode, ChannelType)
 end
 
 function M:HandleSendCDTimerUpdate(RemainTime)
-  if RemainTime < 1 then
-    self.Btn_Sent:SetText(GText("UI_Chat_Send"))
-    if self.Com_Input:GetText() ~= "" then
+  if RemainTime <= 0 then
+    self.Btn_Sent:SetText("")
+    if "" ~= self.Com_Input:GetText() then
       self.Btn_Sent:SetNormal()
     end
   else

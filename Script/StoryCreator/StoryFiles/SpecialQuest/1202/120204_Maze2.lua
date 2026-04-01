@@ -588,15 +588,15 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1769501506890322",
-            startPort = "Out",
-            endQuest = "17748657456633190",
-            endPort = "In"
-          },
-          {
             startQuest = "17748657456633190",
             startPort = "Out",
             endQuest = "17748657772303404",
+            endPort = "In"
+          },
+          {
+            startQuest = "1769501506891324",
+            startPort = "Out",
+            endQuest = "17748657456633190",
             endPort = "In"
           }
         },
@@ -660,7 +660,7 @@ return {
             key = "1769501506891325",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 2188.6622302342817, y = -560.4600313696598},
+            pos = {x = 2309.5713211433726, y = -540.4600313696598},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -1631,9 +1631,9 @@ return {
             key = "17748657456633190",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1726.0965151139403, y = -792.0701828441255},
+            pos = {x = 2230.641969659395, y = -734.7974555713982},
             propsData = {
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               StaticCreatorId = 242310321,
               GuideType = "M",
               GuidePointName = "_uiguidebox_242310321"
@@ -1643,7 +1643,7 @@ return {
             key = "17748657772303404",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 2124.5082798198227, y = -784.1494667315934},
+            pos = {x = 2559.9628252743682, y = -810.5131030952298},
             propsData = {GuideId = 121}
           }
         },

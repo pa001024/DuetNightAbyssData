@@ -233,7 +233,6 @@ function M:AddPhotoIntoList(Photos, RefreshTimes)
   local PhotosCnt = CommonUtils.Size(Photos)
   if self.bIniting then
     self.List_FoolOtherDetail:ClearListItems()
-    self.WS_List:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     if PhotosCnt > 0 then
       self.WS_List:SetActiveWidgetIndex(0)
       self:AddTimer(0.01, function()
@@ -244,12 +243,14 @@ function M:AddPhotoIntoList(Photos, RefreshTimes)
         end
         self.List_FoolOtherDetail:RegenerateAllEntries()
         self.List_FoolOtherDetail:ScrollToTop()
+        self.WS_List:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+        self.List_FoolOtherDetail:RequestPlayEntriesAnim()
       end, false, 0, "DelayRefresh", true)
     else
+      self.WS_List:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.WS_List:SetActiveWidgetIndex(1)
     end
     self.bIniting = false
-    self.List_FoolOtherDetail:RequestPlayEntriesAnim()
   end
   self:RemoveEmptyItems()
   local NewPhotos = {}

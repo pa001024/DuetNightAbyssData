@@ -706,8 +706,13 @@ return ReadOnly("WeaponAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx20.T_Fashion_Fx20'",
     Name = "UI_WeaponAccessory_Name_20001",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
+    SortPriority = 24,
+    Sound = "SOUND_ITEM_CUTE",
     StanceFXTag = "1030301",
     StanceFXType = "RunAttack",
+    UnlockOption = "UI_Accessory_Unlock_Exchange",
     Video = "FileMediaSource'/Game/Asset/UIVideo/Weapon/Claymore_Baolie.Claymore_Baolie'",
     VideoCover = "Texture2D'/Game/UI/Texture/Dynamic/Image/SkinVideo/T_SkinVideo_Fx20.T_SkinVideo_Fx20'",
     WeaponAccessoryId = 20001

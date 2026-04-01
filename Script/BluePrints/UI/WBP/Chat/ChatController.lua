@@ -134,8 +134,12 @@ end
 
 function M:SendRequestLeaveChatChannel(ChannelType)
   self:GetModel().EnteredChannels[ChannelType] = nil
-  if nil == ChannelType then
+  if nil == ChannelType or ChannelType == ChatModel:GetCurrentChannel() then
     ChannelType = ChatModel:GetCurrentChannel()
+    for ChannelType, _ in pairs(self:GetModel().EnteredChannels) do
+      ChatModel:SetCurrentChannel(ChannelType)
+      break
+    end
   end
   if not ChatCommon.WorldChannels[ChannelType] then
     return

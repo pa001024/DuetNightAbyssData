@@ -770,7 +770,7 @@ return ReadOnly("QuestChain", {
     QuestChainReward = {50538},
     QuestChainType = 1,
     QuestReward = {
-      [12020103] = 4000022
+      [12020105] = 4000022
     },
     ShowCondition = 120106,
     StoryPath = "MainStory/1202/120201.story",
@@ -1854,37 +1854,6 @@ return ReadOnly("QuestChain", {
     ShowCondition = 120106,
     StoryPath = "SpecialSideStory/2003/200315_Yanjinduzuidaweiji.story",
     UnlockCondition = 120106
-  },
-  [200317] = {
-    ChapterName = "UI_ChapterName_E0",
-    Episode = "Name_200317",
-    EpisodeName = "Name_200317",
-    IfAutoStart = true,
-    MainStoryUnlockMessage = "Textmap_UnlockTitle",
-    QuestChainId = 200317,
-    QuestChainName = "Name_200317",
-    QuestChainReward = {50629},
-    QuestChainType = 3,
-    QuestDescription = "Description_20031701_01",
-    QuestDetail = "Content_20031701_01",
-    ShowCondition = 120206,
-    StoryPath = "SpecialSideStory/2003/200317_QinSheng.story",
-    UnlockCondition = 120206
-  },
-  [200318] = {
-    ChapterName = "UI_ChapterName_E0",
-    Episode = "Name_200318",
-    EpisodeName = "Name_200318",
-    IfAutoStart = true,
-    IsShowWindow = true,
-    MainStoryUnlockMessage = "Textmap_UnlockTitle",
-    QuestChainId = 200318,
-    QuestChainName = "Name_200318",
-    QuestChainReward = {50630},
-    QuestChainType = 3,
-    ShowCondition = 120206,
-    StoryPath = "SpecialSideStory/2003/200318_FushuEcho.story",
-    UnlockCondition = 120206
   },
   [400101] = {
     ActivelyAccept = true,

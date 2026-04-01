@@ -211,13 +211,15 @@ function M:AddFriendReddotNode(Uid, bAppendParent)
     ReddotManager.IncreaseLeafNodeCount(Key, Chat:GetUnreadCount())
   end
   local ParentNodeName = ChatCommon.ReddotNamePre .. ChatCommon.ChannelNames[ChatCommon.ChannelDef.Friend]
-  if bAppendParent and not ReddotManager.GetTreeNode(ParentNodeName) then
+  if bAppendParent then
+    if ReddotManager.GetTreeNode(ParentNodeName) then
+      ReddotManager.AddNodeEx(ChatCommon.ReddotName, {
+        [ParentNodeName] = {}
+      })
+    end
     ReddotManager.AddNodeEx(ParentNodeName, {
       [Key] = {}
     }, 1)
-    ReddotManager.AddNodeEx(ChatCommon.ReddotName, {
-      [ParentNodeName] = {}
-    })
   end
   return Node
 end

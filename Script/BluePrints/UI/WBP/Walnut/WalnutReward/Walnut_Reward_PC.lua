@@ -742,6 +742,9 @@ end
 function M:CheckIsAutoMode()
   local Avatar = GWorld:GetAvatar()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not IsStandAlone(self) then
+    return
+  end
   if not Avatar then
     return
   end

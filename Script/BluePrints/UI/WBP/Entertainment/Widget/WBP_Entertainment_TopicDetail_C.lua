@@ -279,11 +279,11 @@ end
 
 local function CreatePartyTopicData(CharacterId, PartyTopicLevel, PartyTopicId)
   local Avatar = GWorld:GetAvatar()
-  local PartyTopic = Avatar:GetPartyTopic(CharacterId, PartyTopicLevel)
+  local PartyTopic = Avatar:GetPartyTopicLockState(CharacterId, PartyTopicLevel)
   assert(PartyTopic, string.format("Character: %d PartyTopicLevel: %d 的 PartyTopic 不存在。", CharacterId, PartyTopicLevel))
   local NativePartyTopicData = DataMgr.PartyTopic[PartyTopicId]
   assert(NativePartyTopicData, string.format("PartyTopic: %d 不存在。", PartyTopicId))
-  local LastPartyTopic = Avatar:GetPartyTopic(CharacterId, PartyTopicLevel - 1)
+  local LastPartyTopic = Avatar:GetPartyTopicLockState(CharacterId, PartyTopicLevel - 1)
   local ConditionData = CreateConditionData(NativePartyTopicData.ConditionId)
   local ConsumeData = CreateConsumeData(NativePartyTopicData.PartyTopicConsume)
   local State = GetPartyTopicState(PartyTopic, LastPartyTopic, ConditionData, ConsumeData)

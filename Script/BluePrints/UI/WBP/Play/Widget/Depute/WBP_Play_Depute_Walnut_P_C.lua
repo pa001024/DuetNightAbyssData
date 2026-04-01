@@ -28,6 +28,10 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if IsUseKeyAndMouse then
     return
   else
+    local WalnutRewardDialog = UIManager(self):GetUI("WalnutRewardDialog")
+    if WalnutRewardDialog then
+      return
+    end
     local CommonDialog = UIManager(self):GetUI("CommonDialog")
     if CommonDialog then
       CommonDialog:SetFocus()

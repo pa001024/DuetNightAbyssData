@@ -86,6 +86,8 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
       break
     end
   end
+  self.ParentWidget.Line:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.ParentWidget.Line.Bg02:SetColorAndOpacity(self.ParentWidget.Line.White)
   self.ParentWidget.Line.Text_RequiredTime:SetText(string.format(GText("UI_SHOP_REMAINTIME_MINUTE"), DraftInfo.Time))
 end
 

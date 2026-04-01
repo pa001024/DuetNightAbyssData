@@ -354,6 +354,10 @@ function M:GetTargetRegionAllCanClaimRecurringTasks(RegionId)
 end
 
 function M:GetTargetRegionEntrustTaskCanSubmit(RegionId)
+  local RegionState = self:GetRegionState(RegionId, false)
+  if RegionState == CommonConst.RegionFameState.MaxLevel or RegionState == CommonConst.RegionFameState.WeeklyFameLimit then
+    return false
+  end
   local EntrustTasks = self:GetEntrustTasks(RegionId)
   if not EntrustTasks then
     return false

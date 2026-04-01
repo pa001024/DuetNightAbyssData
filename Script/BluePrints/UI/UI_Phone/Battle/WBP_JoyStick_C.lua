@@ -18,7 +18,12 @@ function WBP_JoyStick_C:Construct()
   self:AddTimer(0.3, function()
     self:UpdateMobileLayoutInfo()
     if not self.IsHide then
-      UIManager(self):ActivateVirtualJoystick()
+      local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+      local UIManager = GameInstance:GetGameUIManager()
+      if IsValid(UIManager) then
+        UIManager:InActivateVirtualJoystick()
+        UIManager:ActivateVirtualJoystick()
+      end
     end
   end)
 end

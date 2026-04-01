@@ -1,7 +1,3 @@
-local T = {}
-T.RT_1 = {
-  [150499] = "event:/sfx/player/Suyi01/locate"
-}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -1212,13 +1208,14 @@ return ReadOnly("SoundEffect", {
   },
   [150418] = {
     NumLimit = 5,
-    ReplaceSoundID = T.RT_1,
+    ReplaceSoundID = {
+      [150499] = "event:/sfx/player/Suyi01/locate"
+    },
     SoundId = 150418,
     SoundPath = "event:/sfx/player/Suyi/locate"
   },
   [150419] = {
     NumLimit = 5,
-    ReplaceSoundID = T.RT_1,
     SoundId = 150419,
     SoundPath = "event:/sfx/common/player/hit/magic/windHit_normal_feina"
   },

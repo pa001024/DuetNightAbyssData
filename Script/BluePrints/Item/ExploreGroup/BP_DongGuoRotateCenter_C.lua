@@ -18,6 +18,9 @@ function M:OnBreakCountDown(SourceEid)
   if self.bInRotate or not self.IsActive then
     return
   end
+  if self.DisableBreakState and self.StateId == self.DisableBreakState then
+    return
+  end
   local RotateSucc = self:TryRotate()
   if RotateSucc then
     self.bInRotate = true

@@ -276,7 +276,9 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     self.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
     self.Text_Tip:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   elseif CurInputDevice == ECommonInputType.Gamepad then
-    self:SetDefaultFocus()
+    if self:HasAnyFocus() then
+      self:SetDefaultFocus()
+    end
     if not self.IsShowDetails then
       self.Panel_Key:SetVisibility(ESlateVisibility.Visible)
     else

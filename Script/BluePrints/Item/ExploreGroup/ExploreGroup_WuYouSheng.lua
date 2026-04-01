@@ -4,12 +4,13 @@ function M:SetTeleportGateTarget(StaticCreatorComp, InTransform)
   if 0 == StaticCreatorComp.ChildEids:Length() then
     return
   end
-  local Mechanism = Battle(self):GetEntity(StaticCreatorComp.ChildEids[1])
-  if not Mechanism or not Mechanism.SetTeleportDestLocation then
-    return
+  for _, Eid in ipairs(StaticCreatorComp.ChildEids:ToTable()) do
+    local Mechanism = Battle(self):GetEntity(Eid)
+    if Mechanism and Mechanism.SetTeleportDestLocation then
+      Mechanism:SetTeleportDestLocation(InTransform.Translation)
+      Mechanism:SetTeleportDestRotation(InTransform.Rotation:ToRotator())
+    end
   end
-  Mechanism:SetTeleportDestLocation(InTransform.Translation)
-  Mechanism:SetTeleportDestRotation(InTransform.Rotation:ToRotator())
 end
 
 return M

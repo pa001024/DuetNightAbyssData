@@ -536,6 +536,8 @@ function M:OnRefreshClickedCallBack()
       if Ret == ErrorCode.RET_SUCCESS then
         self:RefreshEntrustTask()
         
+        self:UpdateEntrustTaskReddot()
+        self:UpdateRegionTabReddot()
         return
       end
       local Error = DataMgr.ErrorCode[Ret]

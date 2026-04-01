@@ -208,6 +208,13 @@ function M:InitializePreviewActor(ItemData)
   end
   self.ActorController:OnOpened()
   self.ActorController.bPlayRoleChangedSound = false
+  if self.ActorController then
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+    local ArmoryPlayer = self.ActorController:GetPlayerActor()
+    if PlayerController and ArmoryPlayer and ArmoryPlayer.AudioListener then
+      PlayerController:SetAudioListenerOverride(ArmoryPlayer.AudioListener, Const.ZeroVector, Const.ZeroRotator)
+    end
+  end
   if "Background" == itemType then
     self:SetupInitialBackgroundPreview()
   elseif "Char" == itemType then
@@ -260,6 +267,9 @@ function M:UpdateExistingPreviewActor(ItemData)
 end
 
 function M:CleanupPreviousPreviewEffects()
+  if not self.Params or self.Params.AccessoryType ~= CommonConst.CharAccessoryTypes.MVP then
+    self.ActorController:TryDestroySequenceActorController()
+  end
   self.ActorController:StopPlayerFX()
   self.ActorController:DestroyCreature(CommonConst.CharAccessoryTypes.FX_Dead)
   self.ActorController:DestroyCreature(CommonConst.CharAccessoryTypes.FX_Body)
@@ -267,7 +277,6 @@ function M:CleanupPreviousPreviewEffects()
   self.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
   self.ActorController:HidePlayerOnMount(false)
   self.ActorController:DestroyMount()
-  self.ActorController:StopSequence()
   self.ActorController:ViewTarget()
   local Player = self.ActorController:GetPlayerActor()
   if Player then
@@ -379,6 +388,8 @@ function M:ApplyAccessoryPreview(itemType)
     self.ActorController:StopPlayerMontage()
     self:ClearCharAccessory()
     if self.Params.AccessoryType == CommonConst.CharAccessoryTypes.MVP then
+      self.ActorController:ResetActorRotation()
+      self.ActorController:TryCreateSequenceActorController()
       self.EnableDrag = false
       self.EnableMouseWheel = false
     end
@@ -829,12 +840,17 @@ end
 
 function M:CloseMVPSequence()
   if self.ActorController then
-    self.ActorController:StopSequence()
+    self.ActorController:TryDestroySequenceActorController()
   end
 end
 
 function M:DestroyPreviewActor()
   if self.ActorController then
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
+    local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+    if PlayerController and Player and Player.AudioListener then
+      PlayerController:SetAudioListenerOverride(Player.AudioListener, Const.ZeroVector, Const.ZeroRotator)
+    end
     self.ActorController:DestroyMount()
     self.ActorController:OnDestruct()
     self.ActorController = nil

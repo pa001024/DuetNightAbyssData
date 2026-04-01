@@ -40220,11 +40220,11 @@ local Data = {
           TextMapId = "RESOURCE_DESC_5022020"
         },
         RESOURCE_DESC_5022030 = {
-          TextMapContent = "被记载于古书中的神秘生物，传说中会在人畜经过时，从口中喷出毒沙攻击他们的影子，致人生病。",
+          TextMapContent = "一种攻击性很强的鱼类，然而肉质十分鲜美，在华胥的餐桌上很受欢迎，虽然外貌丑陋，头顶悬挂的发光器官还是给它带来了一丝浪漫气息。",
           TextMapId = "RESOURCE_DESC_5022030"
         },
         RESOURCE_DESC_5022040 = {
-          TextMapContent = "一种攻击性很强的鱼类，然而肉质十分鲜美，在华胥的餐桌上很受欢迎，虽然外貌丑陋，头顶悬挂的发光器官还是给它带来了一丝浪漫气息。",
+          TextMapContent = "被记载于古书中的神秘生物，传说中会在人畜经过时，从口中喷出毒沙攻击他们的影子，致人生病。",
           TextMapId = "RESOURCE_DESC_5022040"
         },
         RESOURCE_DESC_5022050 = {
@@ -45272,11 +45272,11 @@ local Data = {
           TextMapId = "RESOURCE_TEXT_5022020"
         },
         RESOURCE_TEXT_5022030 = {
-          TextMapContent = "此鱼固擅喷砂，然与旧典所载异兽“蜮”仍有出入，所喷之砂实无毒。\n以“蜮”为名，或为张冠李戴，或为先人谬误，实不存也。\n\n——华胥生物学家 林草草",
+          TextMapContent = "古代渔民普遍认为悬珠鱼的发光器官即为传说中的夜明珠，可惜一旦鱼的本体死亡，“明珠”便会黯淡无光，据说是华胥俗语“明珠黯投”的语源。\n\n——游记作者 罗维塔，《罗维塔在华胥》",
           TextMapId = "RESOURCE_TEXT_5022030"
         },
         RESOURCE_TEXT_5022040 = {
-          TextMapContent = "古代渔民普遍认为悬珠鱼的发光器官即为传说中的夜明珠，可惜一旦鱼的本体死亡，“明珠”便会黯淡无光，据说是华胥俗语“明珠黯投”的语源。\n\n——游记作者 罗维塔，《罗维塔在华胥》",
+          TextMapContent = "此鱼固擅喷砂，然与旧典所载异兽“蜮”仍有出入，所喷之砂实无毒。\n以“蜮”为名，或为张冠李戴，或为先人谬误，实不存也。\n\n——华胥生物学家 林草草",
           TextMapId = "RESOURCE_TEXT_5022040"
         },
         RESOURCE_TEXT_5022050 = {
@@ -57759,7 +57759,7 @@ local Data = {
           TextMapId = "UIGuide_MiShi_1"
         },
         UIGuide_MiShi_2 = {
-          TextMapContent = "<Highlight>机枢密室</>可使用对应编号的<Highlight>机枢密钥</>开启，其中不仅有高价值宝物容器，还有概率开出藏匿毒烟的容器，请小心躲避毒烟。\n开启密室所用的机枢密钥可于赛内搜索特定容器获得，每枚秘钥仅可使用一次；参与赛中守护任务将大幅提升获取秘钥概率。如将密钥带出赛场，则折算为100文筹（文筹折算不受熏香效果影响）。",
+          TextMapContent = "<Highlight>机枢密室</>可使用对应编号的<Highlight>机枢密钥</>开启，其中不仅有高价值宝物容器，还有概率开出藏匿毒烟的容器，请小心躲避毒烟。\n开启密室所用的机枢密钥可于赛内搜索特定容器获得，每枚密钥仅可使用一次；参与赛中守护任务将大幅提升获取密钥概率。如将密钥带出赛场，则折算为100文筹（文筹折算不受熏香效果影响）。",
           TextMapId = "UIGuide_MiShi_2"
         },
         UIGuide_MirrorPuzzle_1 = {

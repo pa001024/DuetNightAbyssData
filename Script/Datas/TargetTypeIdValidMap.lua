@@ -868,6 +868,7 @@ return ReadOnly("TargetTypeIdValidMap", {
   ["10511_1501"] = true,
   ["10511_1502"] = true,
   ["10511_1503"] = true,
+  ["10511_1504"] = true,
   ["10511_1601"] = true,
   ["10511_160101"] = true,
   ["10511_1801"] = true,

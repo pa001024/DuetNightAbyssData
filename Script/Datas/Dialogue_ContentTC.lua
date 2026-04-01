@@ -123365,6 +123365,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 12047903,
           GUID = "1E292116",
           NextDialogue = 12047904,
+          SnapShot = "ECHO",
           SpeakNpcName = "UI_Npc_Name_JuYang",
           VoiceName = "voice/$Locale$/story/1204/120479/1E292116"
         },
@@ -123374,6 +123375,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           DialogueId = 12047904,
           GUID = "1E292140",
           NextDialogue = 12047905,
+          SnapShot = "ECHO",
           SpeakNpcName = "UI_Npc_Name_JuYang",
           VoiceName = "voice/$Locale$/story/1204/120479/1E292140"
         },
@@ -123433,6 +123435,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           ContentTC = "二位，將手遞與我罷。",
           DialogueId = 12047910,
           GUID = "1E29223C",
+          SnapShot = "ECHO",
           SpeakNpcName = "UI_Npc_Name_JuYang",
           VoiceName = "voice/$Locale$/story/1204/120479/1E29223C"
         },
@@ -123789,7 +123792,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
           VoiceName = "voice/$Locale$/story/1204/120483/1E296388"
         },
         [12048309] = {
-          Content = "机枢派的那半壁均天玉律，你又是从何处寻得？",
+          Content = "但只有这一点还不够。机枢派的那半壁均天玉律，你又是从何处寻得？",
           ContentTC = "但只有這一點還不夠。機樞派的那半壁均天玉律，你又是從何處尋得？",
           DialogueId = 12048309,
           GUID = "1E2963B2",
@@ -132361,7 +132364,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
   },
   {
     MinKey = 12062342,
-    MaxKey = 12063006,
+    MaxKey = 12063005,
     Loader = function()
       return {
         [12062342] = {
@@ -133401,6 +133404,12 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120626/1E32945A"
         },
+        [12062650] = {
+          Content = "我是不会放着你不管的。你也知道这一点。",
+          DialogueId = 12062650,
+          GUID = "1E32949C",
+          SpeakNpcId = 100001
+        },
         [12062701] = {
           Content = "{nickname}，苏乙姑娘，别来无恙。",
           ContentTC = "{nickname}，蘇乙姑娘，別來無恙。",
@@ -134237,7 +134246,15 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12063006,
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120630/1E32CEC2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 12063006,
+    MaxKey = 20000610,
+    Loader = function()
+      return {
         [12063006] = {
           Content = "她最终还是走到了这一步吗！{nickname}他们，还有更多人恐怕会遇到危险！！",
           ContentTC = "她最終還是走到了這一步嗎！{nickname}他們，還有更多人恐怕會遇到危險！！",
@@ -134246,15 +134263,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           NextDialogue = 12063007,
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120630/1E32CEEC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 12063007,
-    MaxKey = 20000611,
-    Loader = function()
-      return {
+        },
         [12063007] = {
           Content = "谢谢你的消息，小安，我这就赶过去。",
           ContentTC = "謝謝你的消息，小安，我這就趕過去。",
@@ -135412,7 +135421,6 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentTC = "準備好了嗎？",
           DialogueId = 12063534,
           GUID = "1E33258C",
-          NextDialogue = 12063535,
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120635/1E33258C"
         },
@@ -135421,7 +135429,6 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentTC = "嗯。",
           DialogueId = 12063535,
           GUID = "1E3325B6",
-          NextDialogue = 12063536,
           Scripts = "PlayOrStopBGM{PlayType{\"Stop\"},SoundType{\"SOUND_BGM\"},EventPath{\"event:/bgm/1_3/0154_story_suyi_heart\"}}",
           SpeakNpcId = 250003,
           VoiceName = "voice/$Locale$/story/1206/120635/1E3325B6"
@@ -135431,7 +135438,6 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentTC = "昊天蒼蒼，玄水泱泱。",
           DialogueId = 12063536,
           GUID = "1E3325E0",
-          NextDialogue = 12063537,
           VoiceName = "voice/$Locale$/story/1206/120635/1E3325E0"
         },
         [12063537] = {
@@ -135439,7 +135445,6 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentTC = "華胥承祀，爰奉馨香。",
           DialogueId = 12063537,
           GUID = "1E33260A",
-          NextDialogue = 12063538,
           VoiceName = "voice/$Locale$/story/1206/120635/1E33260A"
         },
         [12063538] = {
@@ -135447,7 +135452,6 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentTC = "潤其五穀，澤彼田桑。",
           DialogueId = 12063538,
           GUID = "1E332634",
-          NextDialogue = 12063539,
           VoiceName = "voice/$Locale$/story/1206/120635/1E332634"
         },
         [12063539] = {
@@ -135455,7 +135459,6 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           ContentTC = "禔福兆民，惠汲四方。",
           DialogueId = 12063539,
           GUID = "1E33265E",
-          NextDialogue = 12063540,
           VoiceName = "voice/$Locale$/story/1206/120635/1E33265E"
         },
         [12063540] = {
@@ -136384,7 +136387,15 @@ CameraMoveTo{_delay{4.7},TargetPosition{"-287.599518,-128.604248,69.15966,0.0000
           SpeakNpcId = 200002,
           ToFinalCameraBlendTime = 3,
           VoiceName = "voice/$Locale$/story/2001/200006/3211C614"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20000611,
+    MaxKey = 20005407,
+    Loader = function()
+      return {
         [20000611] = {
           Camera = "121.44281,0.996094,87.475624,0.000284,-1.203274,162.815094,40.0,255.986099,false,Manual,4.671523",
           Content = "的确。老朽活了这么大岁数，也是第一次看到长角的皎皎之民。这模样，和<H>卡戎之民</>颇有些相似……",
@@ -136399,15 +136410,7 @@ CameraMoveTo{_delay{4.7},TargetPosition{"-287.599518,-128.604248,69.15966,0.0000
           SpeakNpcName = "UI_Npc_Name_Duanzao",
           ToFinalCameraBlendTime = 4,
           VoiceName = "voice/$Locale$/story/2001/200006/3211C63E"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20000612,
-    MaxKey = 20005408,
-    Loader = function()
-      return {
+        },
         [20000612] = {
           Camera = "-400.428558,-346.687256,65.11969,0.000289,0.592908,43.232693,30.0,150.0,false,Disable,2.8",
           Content = "所以说嘛，白是独一无二的魔王皎皎！说不定呀，白就是为了带领皎皎们征服世界而诞生的！",
@@ -139355,7 +139358,15 @@ CameraMoveTo{_delay{2},TargetPosition{"47.464844,349.339844,137.703125,0.000065,
           SpeakNpcId = 200074,
           SpeakNpcName = "UI_Npc_Name_Wenhao",
           VoiceName = "voice/$Locale$/story/2001/200054/3214D916"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20005408,
+    MaxKey = 20007013,
+    Loader = function()
+      return {
         [20005408] = {
           Camera = "-472.675781,-861.3125,125.09082,-3.000003,-4.399693,67.000412,50.0,1228.478149,false,DoNotOverride,1.847697",
           Content = "你们好，我是松露，从很远很远的地方过来，这是我的好朋友和可靠的伙伴榛子，谢谢你们一起救下了魔灵，赶跑了那些魔灵猎人！",
@@ -139378,15 +139389,7 @@ LookAt{_delay{5.5},LookAtDescription{"200074:n(200086)"}}
             [1] = "100001:p(40)"
           },
           VoiceName = "voice/$Locale$/story/2001/200054/3214D940"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20005409,
-    MaxKey = 20007014,
-    Loader = function()
-      return {
+        },
         [20005409] = {
           Camera = "54.744141,331.777344,101.875977,0.00008,-2.599884,-115.999306,50.0,544.522034,false,Manual,3.944573",
           Content = "魔灵……猎人？",
@@ -142278,7 +142281,15 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           NextDialogue = 20007014,
           SpeakNpcId = 200074,
           VoiceName = "voice/$Locale$/story/2001/200070/3215E092"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 20007014,
+    MaxKey = 50107050,
+    Loader = function()
+      return {
         [20007014] = {
           Content = "到那时候，也请你和小白，还有卡米拉女士，一起到南方。吃粉嘟嘟的红蕈、吹烫烫的海风、看这里看不到的星星，和我在这里一样开心！等着你哦！",
           ContentTC = "到那時候，也請你和小白，還有卡蜜拉女士，一起到南方。吃粉嘟嘟的紅蕈、吹燙燙的海風、看這裡看不到的星星，和我在這裡一樣開心！等著你喔！",
@@ -142287,15 +142298,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           NextDialogue = 20007015,
           SpeakNpcId = 200074,
           VoiceName = "voice/$Locale$/story/2001/200070/3215E0BC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 20007015,
-    MaxKey = 50107051,
-    Loader = function()
-      return {
+        },
         [20007015] = {
           Content = "嗯，我会尽量做到。",
           ContentTC = "嗯，我會盡量做到。",
@@ -143995,22 +143998,22 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           DialogueId = 50107050,
           GUID = "7D700FE4",
           VoiceName = "voice/$Locale$/env/Ver0102/7D7030B4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 50107051,
+    MaxKey = 50107292,
+    Loader = function()
+      return {
         [50107051] = {
           Content = "最近的日子，真是难得的清闲啊~",
           ContentTC = "最近的日子，真是難得的清閒啊~",
           DialogueId = 50107051,
           GUID = "7D70100E",
           VoiceName = "voice/$Locale$/env/Ver0102/7D7030DE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 50107052,
-    MaxKey = 50107293,
-    Loader = function()
-      return {
+        },
         [50107052] = {
           Content = "下次遇到这种事情记得早些来泉通司，硬拖只会让事态恶化。",
           ContentTC = "下次遇到這種事情記得早些來泉通閣，硬拖只會讓事態惡化。",
@@ -145498,7 +145501,15 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           GUID = "7D703798",
           SpeakNpcId = 701204,
           VoiceName = "voice/$Locale$/env/Ver0102/7D703798"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 50107293,
+    MaxKey = 51000902,
+    Loader = function()
+      return {
         [50107293] = {
           Content = "吵死了……",
           ContentTC = "吵死了……",
@@ -145506,15 +145517,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
           GUID = "7D7037C2",
           SpeakNpcId = 701205,
           VoiceName = "voice/$Locale$/env/Ver0102/7D7037C2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 50107294,
-    MaxKey = 51000903,
-    Loader = function()
-      return {
+        },
         [50107294] = {
           Content = "所谓理一……",
           ContentTC = "所謂理一……",
@@ -147220,7 +147223,15 @@ MoveTo{ActorId{700006},TargetPoint{"Point_510005_Aier"},MoveSpeed{150},Visibilit
           GUID = "7FACE77C",
           NextDialogue = 51000903,
           SpeakNpcId = 700022
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51000903,
+    MaxKey = 51001910,
+    Loader = function()
+      return {
         [51000903] = {
           Content = "随意挑选，相信马丁的品味！您见过的没见过的都能在这里找到，偶尔给自己的生活带来点小惊喜！",
           ContentTC = "隨意挑選，相信馬丁的品味！您見過的沒見過的都能在這裡找到，偶爾給自己的生活帶來點小驚喜！",
@@ -147235,15 +147246,7 @@ MoveTo{ActorId{700006},TargetPoint{"Point_510005_Aier"},MoveSpeed{150},Visibilit
             [2] = 510009032,
             [3] = 510009033
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51000904,
-    MaxKey = 51001911,
-    Loader = function()
-      return {
+        },
         [51000904] = {
           Content = "你可真没礼貌~会估价可不等于你是个有品味的人，甜心。",
           ContentTC = "你可真沒禮貌~會估價可不等於你是個有品味的人，甜心。",
@@ -149294,22 +149297,22 @@ MoveTo{ActorId{700085},MoveSpeed{150},TargetPoint{"Point_Sangni_nearby_YNM01"},V
           TalkActionId = {
             [1] = "200015:Explain02_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51001911,
+    MaxKey = 51003012,
+    Loader = function()
+      return {
         [51001911] = {
           Content = "（老者看着不断点头的威尔斯气更是不打一处来，环顾四周，最后把视线落到了刚进水仙平原的你身上。）",
           ContentTC = "（老者看著不斷點頭的威爾斯氣更是不打一處來，環顧四周，最後把視線落到了剛進水仙平原的你身上。）",
           DialogueId = 51001911,
           GUID = "7FAD8D06",
           NextDialogue = 51001912
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51001912,
-    MaxKey = 51003013,
-    Loader = function()
-      return {
+        },
         [51001912] = {
           Content = "还有你，狩月人是吧，你们这种卡戎我见多了，幻想着靠狩月人扬名立万，当上桂冠卡戎？",
           ContentTC = "還有你，狩月人是吧，你們這種卡戎我見多了，幻想著靠狩月人揚名立萬，當上桂冠卡戎？",
@@ -151292,7 +151295,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           },
           SpeakNpcId = 200003,
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51003013,
+    MaxKey = 51004134,
+    Loader = function()
+      return {
         [51003013] = {
           Content = "哦！回应我呼唤的勇士出现了，这说不定是一段崭新冒险的序幕！",
           ContentTC = "哦！回應我呼喚的勇士出現了，這說不定是一段嶄新冒險的序幕！",
@@ -151306,15 +151317,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           TurnTo = {
             [1] = "700015:n(0)"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51003014,
-    MaxKey = 51004135,
-    Loader = function()
-      return {
+        },
         [51003014] = {
           Content = "我对你们接下来碰到的事情抱以十足的兴趣，当你们归来，请为我讲述你们的故事吧！",
           ContentTC = "我對你們接下來碰到的事情抱以十足的興趣，當你們歸來，請為我講述你們的故事吧！",
@@ -153385,22 +153388,22 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           GUID = "7FAEF9BC",
           NextDialogue = 51004135,
           SpeakNpcId = 700105
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51004135,
+    MaxKey = 51005114,
+    Loader = function()
+      return {
         [51004135] = {
           Content = "（女孩不由分说地踮起脚尖，试图把你按到一个她能够得到的位置。看来，她已经精神多了。）",
           ContentTC = "（女孩不由分說地踮起腳尖，試圖把你按到一個她能夠得到的位置。看來，她已經精神多了。）",
           DialogueId = 51004135,
           GUID = "7FAEF9E6",
           NextDialogue = 51004136
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51004136,
-    MaxKey = 51005115,
-    Loader = function()
-      return {
+        },
         [51004136] = {
           Content = "来，稍微蹲下一些……",
           ContentTC = "來，稍微蹲下一些……",
@@ -155261,7 +155264,15 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           TalkActionId = {
             [1] = "700115:Agree"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51005115,
+    MaxKey = 51006114,
+    Loader = function()
+      return {
         [51005115] = {
           Content = "（盛情难却。你翻找着玛尔洁的“货物摊”，试图从中找出有价值的东西。）",
           ContentTC = "（盛情難卻。你翻找著瑪爾潔的「貨物攤」，試圖從中找出有價值的東西。）",
@@ -155274,15 +155285,7 @@ PlayAnimation{ActorId{100001},AnimationId{"Explain02_Start"},Duration{2}}
           },
           RestartTag = 51005115,
           bForbidSkipOptions = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51005116,
-    MaxKey = 51006115,
-    Loader = function()
-      return {
+        },
         [51005116] = {
           Content = "实在没有喜欢的就算啦！等下次进货了再来看看吧。",
           ContentTC = "實在沒有喜歡的就算啦！等下次進貨了再來看看吧。",
@@ -157561,7 +157564,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           TurnTo = {
             [1] = "700146:n(100001)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51006115,
+    MaxKey = 51007169,
+    Loader = function()
+      return {
         [51006115] = {
           Camera = "61.417114,-123.797852,85.32666,0.0,0.0,86.990524,28.0,100000.0,false,DoNotOverride,2.8",
           Content = "但狩月人这么多，并且在他们执行委托时跟在后面也很危险，所以我就找了一个帮手——一位年长的，令人尊敬的，但是长得和你有些像的铁匠。",
@@ -157572,15 +157583,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           NextDialogue = 51006116,
           Scripts = "SEQ{TurnTo{_delay{4},TurnToDescription{\"700146:n(700144)\"}},CameraMoveTo{_delay{1},TargetPosition{\"54.903625,146.320801,86.79541,0.000006,0.0,-72.008141,28.0,100000.0,false,DoNotOverride,2.8\"},duration{0}},CameraMoveTo{TargetPosition{\"59.0,148.0,86.79541,0.000006,0.0,-72.008102,28.0,100000.0,false,DoNotOverride,2.8\"},duration{3}}}",
           SpeakNpcId = 700146
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51006116,
-    MaxKey = 51007170,
-    Loader = function()
-      return {
+        },
         [51006116] = {
           Camera = "123.392273,2.931152,85.919922,0.000078,0.0,-60.200184,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "难道你说的是铁匠皎皎前辈？我们认识她呀！",
@@ -159820,7 +159823,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB0EBAA",
           NextDialogue = 51007170,
           SpeakNpcName = "UI_CMNpc_Name_Jiexi"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007170,
+    MaxKey = 51007637,
+    Loader = function()
+      return {
         [51007170] = {
           Content = "唉，憾事，憾事！",
           ContentTC = "唉，憾事，憾事！",
@@ -159831,15 +159842,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           TalkActionId = {
             [1] = "700148:Disagree"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007171,
-    MaxKey = 51007638,
-    Loader = function()
-      return {
+        },
         [51007171] = {
           Content = "…………",
           ContentTC = "…………",
@@ -161586,7 +161589,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           TalkActionId = {
             [1] = "700204:Disagree"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51007638,
+    MaxKey = 51008004,
+    Loader = function()
+      return {
         [51007638] = {
           Content = "几天前，我亲眼看见老鼠战士被一个乞丐大叔抓走做成了烤肉串……呜呜……",
           ContentTC = "幾天前，我親眼看見老鼠戰士被一個乞丐大叔抓走做成了烤肉串……嗚嗚……",
@@ -161594,15 +161605,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB1389C",
           NextDialogue = 51007639,
           SpeakNpcId = 700204
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51007639,
-    MaxKey = 51008005,
-    Loader = function()
-      return {
+        },
         [51007639] = {
           Content = "唉……虽然很难过，但研究出现意外也是常有的事。我现在想看看那些它曾经关照过的小老鼠过得怎么样。",
           ContentTC = "唉……雖然很難過，但研究出現意外也是常有的事。我現在想看看那些它曾經關照過的小老鼠過得怎麼樣。",
@@ -163290,7 +163293,15 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB174A8",
           ImprPlusId = 1004,
           NextDialogue = 51008009
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51008005,
+    MaxKey = 51009359,
+    Loader = function()
+      return {
         [51008005] = {
           Content = "帝国肯定不会允许你干这种事，不想惹麻烦的话就快走吧。",
           ContentTC = "帝國肯定不會允許你幹這種事，不想惹麻煩的話就快走吧。",
@@ -163298,15 +163309,7 @@ LookAt{_delay{2},LookAtDescription{"700126:n(700126)"}}
           GUID = "7FB174D2",
           ImprPlusId = 1002,
           NextDialogue = 51008006
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51008006,
-    MaxKey = 51009360,
-    Loader = function()
-      return {
+        },
         [51008006] = {
           Content = "您高抬贵手，把我当个屁放了吧，我只要把这批月石卖掉就立马离开冰湖城，绝不回来。",
           ContentTC = "您高擡貴手，把我當個屁放了吧，我只要把這批月石賣掉就立馬離開冰湖城，絕不回來。",
@@ -165430,7 +165433,15 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           GUID = "7FB252F6",
           NextDialogue = 51009362,
           SpeakNpcId = 700247
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009360,
+    MaxKey = 51009669,
+    Loader = function()
+      return {
         [51009360] = {
           Content = "成年这个时间点……难道说，他是出现了秽蚀的征兆？",
           ContentTC = "成年這個時間點……難道說，他是出現了穢蝕的徵兆？",
@@ -165438,15 +165449,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
           GUID = "7FB25320",
           ImprPlusId = 1003,
           NextDialogue = 51009361
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009361,
-    MaxKey = 51009670,
-    Loader = function()
-      return {
+        },
         [51009361] = {
           Content = "嗯，我也这么想。毕竟他离开的时候，刚好是快满十八岁。",
           ContentTC = "嗯，我也這麼想。畢竟他離開的時候，剛好是快滿十八歲。",
@@ -167740,7 +167743,15 @@ TurnTo{TurnToDescription{"700306:n(700300)"}}
           TalkActionId = {
             [1] = "700303:Confident_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009670,
+    MaxKey = 51009880,
+    Loader = function()
+      return {
         [51009670] = {
           Content = "你忘了吗？有个冬天特别特别冷，我只能去工厂排废气的管道那里蹲着，这样就能暖和一些。大叔你也冻得打哆嗦，却把唯一一件厚棉衣给了我。",
           ContentTC = "你忘了嗎？有個冬天特別特別冷，我只能去工廠排廢氣的管道那裡蹲著，這樣就能暖和一些。大叔你也凍得打哆嗦，卻把唯一一件厚棉衣給了我。",
@@ -167748,15 +167759,7 @@ TurnTo{TurnToDescription{"700306:n(700300)"}}
           GUID = "7FB285FC",
           NextDialogue = 51009671,
           SpeakNpcId = 700303
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009671,
-    MaxKey = 51009881,
-    Loader = function()
-      return {
+        },
         [51009671] = {
           Content = "整条街都知道大叔是多好的人！为什么你总是把“报应”这种难听话挂在嘴边呢？",
           ContentTC = "整條街都知道大叔是多好的人！為什麼你總是把「報應」這種難聽話掛在嘴邊呢？",
@@ -169867,7 +169870,15 @@ TurnTo{TurnToDescription{"100001:n(700313)"}}
             [1] = "700300:Talk01_End",
             [2] = "700302:Think_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51009881,
+    MaxKey = 51010080,
+    Loader = function()
+      return {
         [51009881] = {
           Camera = "-294.663086,168.334961,176.219727,1.000005,-6.799897,-27.606359,56.0,100000.0,false,DoNotOverride,2.8",
           Content = "我还以为你要问什么呢……这种事不是很简单吗？",
@@ -169883,15 +169894,7 @@ TurnTo{TurnToDescription{"100001:n(700313)"}}
             [1] = "700300:Sigh_Start",
             [2] = "700302:Think_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51009882,
-    MaxKey = 51010081,
-    Loader = function()
-      return {
+        },
         [51009882] = {
           Content = "我可是那个法布瑞斯的女儿，既然你曾经在父亲的手下工作过，就应该知道触碰他逆鳞的后果。",
           ContentTC = "我可是那個法布瑞斯的女兒，既然你曾經在父親的手下工作過，就應該知道觸碰他逆鱗的後果。",
@@ -172026,22 +172029,22 @@ PlayAnimation{ActorId{100001},AnimationId{"Nvzhu_Story_StretchHand_Start"},Durat
           DialogueId = 51010080,
           GUID = "7FB2C940",
           NextDialogue = 51010081
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51010081,
+    MaxKey = 51010809,
+    Loader = function()
+      return {
         [51010081] = {
           Content = "控制住对精彩桥段的赞美并非易事，你害怕自己无意识的感叹扰了他人雅兴。",
           ContentTC = "控製住對精彩橋段的讚美並非易事，你害怕自己無意識的感歎擾了他人雅興。",
           DialogueId = 51010081,
           GUID = "7FB2C96A",
           NextDialogue = 51010082
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51010082,
-    MaxKey = 51010810,
-    Loader = function()
-      return {
+        },
         [51010082] = {
           Content = "不过这种担忧是多余的——",
           ContentTC = "不過這種擔憂是多餘的——",
@@ -173940,7 +173943,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FB340DA",
           NextDialogue = 51010810,
           SpeakNpcId = 700203
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51010810,
+    MaxKey = 51012400,
+    Loader = function()
+      return {
         [51010810] = {
           Content = "“{性别：他|她}和冰湖城的大多数人不一样，{性别：他|她}还有着我们早就丢失了的东西——对正义和自由的渴望。”",
           ContentTC = "「{性别:他|她}和冰湖城的大多數人不一樣，{性别:他|她}還有著我們早就丟失了的東西——對正義和自由的渴望。」",
@@ -173948,15 +173959,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FB34104",
           NextDialogue = 51010811,
           SpeakNpcId = 700203
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51010811,
-    MaxKey = 51012500,
-    Loader = function()
-      return {
+        },
         [51010811] = {
           Content = "“从{性别：他|她}身上，我看到了另一种不一样的生活。”",
           ContentTC = "「從{性别:他|她}身上，我看到了另一種不一樣的生活。」",
@@ -175502,22 +175505,22 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           DialogueId = 51012400,
           GUID = "7FB445E0",
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51012500,
+    MaxKey = 51101002,
+    Loader = function()
+      return {
         [51012500] = {
           Content = "嗯？年轻人，找我有事吗？",
           DialogueId = 51012500,
           GUID = "7FB45648",
           NextDialogue = 51012501,
           SpeakNpcId = 230002
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51012501,
-    MaxKey = 51101003,
-    Loader = function()
-      return {
+        },
         [51012501] = {
           Content = "你好，前辈。我想给这本“影像笔记”做一些装饰。如果你有多余的材料，可不可以分一些给我？",
           DialogueId = 51012501,
@@ -177302,7 +177305,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           DialogueId = 51101002,
           GUID = "7FED0E24",
           SpeakNpcId = 900003
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51101003,
+    MaxKey = 51103028,
+    Loader = function()
+      return {
         [51101003] = {
           Content = "来，这里是您的借贷契书，确认无误就在这里签字画押吧。",
           ContentTC = "來，這裡是您的借貸契書，確認無誤就在這裡簽字畫押吧。",
@@ -177310,15 +177321,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           GUID = "7FED0E4E",
           NextDialogue = 51101004,
           SpeakNpcId = 700320
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51101004,
-    MaxKey = 51103029,
-    Loader = function()
-      return {
+        },
         [51101004] = {
           Content = "这次借的也不是一笔小数目啊。怎么，又想上哪里去看看了？",
           ContentTC = "這次借的也不是一筆小數目啊。怎麼，又想上哪裡去看看了？",
@@ -179304,7 +179307,15 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           Duration = 12,
           GUID = "7FEE59E0",
           SpeakNpcId = 700323
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51103029,
+    MaxKey = 51105043,
+    Loader = function()
+      return {
         [51103029] = {
           Content = "不错，一点就通。",
           ContentTC = "不錯，一點就通。",
@@ -179312,15 +179323,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
           Duration = 5,
           GUID = "7FEE5A0A",
           SpeakNpcId = 700323
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51103030,
-    MaxKey = 51105044,
-    Loader = function()
-      return {
+        },
         [51103030] = {
           Content = "这个机枢考验的是你的记忆力，记住那些金色组件的位置，然后用牵机方枢把它们拉出来就行，也不难对吧。",
           ContentTC = "這個機樞考驗的是你的記憶力，記住那些紅色組件的位置，然後用牽機方樞把它們拉出來就行，也不難對吧。",
@@ -181553,7 +181556,15 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           },
           GUID = "7FEF2C34",
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105044,
+    MaxKey = 51105613,
+    Loader = function()
+      return {
         [51105044] = {
           Camera = "-74.585938,-129.239258,143.611328,0.000002,-2.000057,58.197319,35.0,143.663574,false,Manual,2.8",
           Content = "在虞渊时，是扶疏设法让我看见无由生。",
@@ -181562,15 +181573,7 @@ MoveTo{_delay{3},ActorId{700324},TargetPoint{"P51104118White"},MoveSpeed{80},Vis
           GUID = "7FEF2C5E",
           NextDialogue = 51105045,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105045,
-    MaxKey = 51105614,
-    Loader = function()
-      return {
+        },
         [51105045] = {
           Camera = "-74.585938,-129.239258,143.611328,0.000002,-2.000057,58.197319,35.0,143.663574,false,Manual,2.8",
           Content = "如果能让灵灵亲眼再见一眼奶奶所化的无由生，灵灵就不会再害怕，无由生也能了却执念，安然离去了。",
@@ -183882,7 +183885,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "700352:Sigh_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51105614,
+    MaxKey = 51107038,
+    Loader = function()
+      return {
         [51105614] = {
           Camera = "-228.207031,-9.803711,149.039062,0.000034,-4.999445,4.798473,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那你可就白担心啦，快去盖雷亚剧院吧，我刚刚就听说你的几个朋友在到处找你，但是却不知道你跑到哪里去了。",
@@ -183894,15 +183905,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "700358:Explain01_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51105615,
-    MaxKey = 51108000,
-    Loader = function()
-      return {
+        },
         [51105615] = {
           Camera = "221.630859,16.369629,149.368164,0.000039,-18.199278,-167.801788,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯？盖雷亚剧院，好的，我这就去！",
@@ -185635,7 +185638,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           ContentTC = "（如果存在來世，但願這位陌生人能夠在新的人生中品嘗到屬於自己的糖果。）",
           DialogueId = 51107038,
           GUID = "7FF0EC6C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51108000,
+    MaxKey = 51114022,
+    Loader = function()
+      return {
         [51108000] = {
           Content = "看你的样子是外国人吧，你好，我叫拉蒙。",
           ContentTC = "看你的樣子是外國人吧，你好，我叫拉蒙。",
@@ -185649,15 +185660,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "701008:Talk01_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51108001,
-    MaxKey = 51114023,
-    Loader = function()
-      return {
+        },
         [51108001] = {
           Content = "（一个格外热情的男子正这样打着招呼，在环视四周之后，你最终确定了他口中的“外国人”就是你自己。）",
           ContentTC = "（一個格外熱情的男子正這樣打著招呼，在環視四周之後，你最終確定了他口中的「外國人」就是你自己。）",
@@ -187578,7 +187581,15 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
           TalkActionId = {
             [1] = "701017:Talk02_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51114023,
+    MaxKey = 51118044,
+    Loader = function()
+      return {
         [51114023] = {
           Content = "（两个孩子眼巴巴地看向你，似乎很希望你能结束这场推让。）",
           ContentTC = "（兩個孩子眼巴巴地看向你，似乎很希望你能結束這場推讓。）",
@@ -187599,15 +187610,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
             [1] = "701016:Explain02_Start",
             [2] = "701018:Think_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51114024,
-    MaxKey = 51118045,
-    Loader = function()
-      return {
+        },
         [51114024] = {
           Content = "要不我再去买两个一样大的？",
           ContentTC = "要不我再去買兩個一樣大的？",
@@ -189617,7 +189620,15 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           GUID = "7FF7FA18",
           IsBlack = 1,
           NextDialogue = 51118045
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51118045,
+    MaxKey = 51124022,
+    Loader = function()
+      return {
         [51118045] = {
           Content = "{性别：大哥哥|大姐姐}，怎么啦？咦，你手上那是——是哥哥来了吗？他在哪里？",
           ContentTC = "{性别：大哥哥|大姐姐}，怎麼啦？咦，你手上那是——是哥哥來了嗎？他在哪裡？",
@@ -189628,15 +189639,7 @@ MoveTo{ActorId{701023},TargetPoint{"YuXian_Leave_Target"},MoveSpeed{100},Visibil
           TalkActionId = {
             [1] = "701024:Talk01_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51118046,
-    MaxKey = 51124023,
-    Loader = function()
-      return {
+        },
         [51118046] = {
           Content = "他已经走了。",
           ContentTC = "他已經走了。",
@@ -191547,7 +191550,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "701033:Explain01_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51124023,
+    MaxKey = 51125714,
+    Loader = function()
+      return {
         [51124023] = {
           Content = "真的？那你不会把我和别的皎皎弄混淆吧？",
           ContentTC = "真的？那你不會把我和別的皎皎弄混淆吧？",
@@ -191558,15 +191569,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "701033:Shy03_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51124024,
-    MaxKey = 51125715,
-    Loader = function()
-      return {
+        },
         [51124024] = {
           Content = "我想不会。",
           ContentTC = "我想不會。",
@@ -193278,7 +193281,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFCE474",
           NextDialogue = 51125715,
           SpeakNpcId = 701041
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51125715,
+    MaxKey = 51126535,
+    Loader = function()
+      return {
         [51125715] = {
           Content = "都不是，老柳头啊也不卖关子了，现在织星者们出海时用的引路的工具不是叫千星板吗？矩也是一样，只是啊，他手里用的那个，就是第一个。",
           ContentTC = "錯啦！沒那麼玄乎！其實矩當年啊，使用的就是第一代千星板，雖然現在這玩意已經十分常見，但那時卻是聞所未聞。\n都不是，老柳頭啊也不賣關子了，現在織星者們出海時用的引路的工具不是叫千星板嗎？矩也是一樣，只是啊，他手裡用的那個，就是第一個。",
@@ -193286,15 +193297,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFCE49E",
           NextDialogue = 51125716,
           SpeakNpcId = 701041
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51125716,
-    MaxKey = 51126536,
-    Loader = function()
-      return {
+        },
         [51125716] = {
           Content = "他用几块木板测绘星辰，记录航向，这才能在茫茫大海上自由来去，不受羁绊。",
           ContentTC = "他用幾塊木板測繪星辰，記錄航向，這才能在茫茫大海上自由來去，不受羈絆。",
@@ -194872,7 +194875,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           DialogueId = 51126535,
           GUID = "7FFD6B26",
           NextDialogue = 51126536
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51126536,
+    MaxKey = 51127514,
+    Loader = function()
+      return {
         [51126536] = {
           Content = "你看看人家，异国人悟性都比你高呢！",
           ContentTC = "你看看人家，異國人悟性都比你高呢！",
@@ -194880,15 +194891,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFD6B50",
           NextDialogue = 51126537,
           SpeakNpcId = 701053
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51126537,
-    MaxKey = 51127515,
-    Loader = function()
-      return {
+        },
         [51126537] = {
           Content = "诶……我就是书读不明白才来干这行的，怎么还要记这些呢，巧凤，你说我的品行你还不晓得吗？咱俩可是从小一条裤衩长大的！",
           ContentTC = "誒……我就是書讀不明白才來幹這行的，怎麼還要記這些呢，巧鳳，你說我的品行你還不曉得嗎？咱倆可是從小一條褲衩長大的！",
@@ -196497,7 +196500,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFE0BC4",
           NextDialogue = 51127515,
           SpeakNpcId = 701066
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51127515,
+    MaxKey = 51140005,
+    Loader = function()
+      return {
         [51127515] = {
           Content = "你知道我的身份？那你还故意激我。",
           ContentTC = "你知道我的身份？那你還故意激我。",
@@ -196505,15 +196516,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           GUID = "7FFE0BEE",
           NextDialogue = 51127516,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51127516,
-    MaxKey = 51140006,
-    Loader = function()
-      return {
+        },
         [51127516] = {
           Content = "有趣啊！就像我说的，微茫市来来去去的人里，能看到你这样面孔的机会可不多，小鬼，想不想知道我说的蛟人故事是什么，给我买壶酒我就告诉你。",
           ContentTC = "有趣啊！就像我說的，微茫市來來去去的人里，能看到你這樣面孔的機會可不多，小鬼，想不想知道我說的蛟人故事是什麼，給我買壺酒我就告訴你。",
@@ -198130,7 +198133,15 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "100001:Talk03_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51140006,
+    MaxKey = 51151094,
+    Loader = function()
+      return {
         [51140006] = {
           Camera = "763.383301,600.294922,831.858032,0.000046,-32.495926,-142.840744,35.000008,100000.0,false,DoNotOverride,7.0",
           Content = "竟然听得到我说话？太好了！惊扰二位非尾生有意之举，在此向二位致歉，还望海涵。",
@@ -198141,15 +198152,7 @@ MoveTo{ActorId{701086},TargetPoint{"quandoutong_show6"},MoveSpeed{100},Visibilit
           TalkActionId = {
             [1] = "200002:Afraid_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51140007,
-    MaxKey = 51151095,
-    Loader = function()
-      return {
+        },
         [51140007] = {
           Camera = "-205.567871,-119.201172,110.475708,0.000172,0.0,5.771363,35.000015,187.02475,false,Manual,7.0",
           Content = "什么嘛，原来是无由生，你怎么突然冒出来，吓了我好一大跳……看在你道歉态度诚恳的份上，魔王大人就原谅你了。",
@@ -200700,7 +200703,15 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           GUID = "800D285C",
           NextDialogue = 51151095,
           SpeakNpcId = 700375
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51151095,
+    MaxKey = 51153087,
+    Loader = function()
+      return {
         [51151095] = {
           Content = "莫非……这两位是比灵神大人还要强大的存在？是我哈生有眼不识泰山了？",
           ContentTC = "莫非……這兩位是比靈神大人還要強大的存在？是我哈生有眼不識泰山了？",
@@ -200708,15 +200719,7 @@ PlayNormalSound{EventPath{"event:/sfx/common/story/east/vo_hello"},PlayAs2D{true
           GUID = "800D2886",
           NextDialogue = 51151096,
           SpeakNpcId = 700376
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51151096,
-    MaxKey = 51153088,
-    Loader = function()
-      return {
+        },
         [51151096] = {
           Camera = "-595.896667,244.201172,274.973206,0.000002,-17.388731,-24.245804,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 51151096,
@@ -202960,7 +202963,15 @@ SEQ{
 TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},AnimationId{"RaiseHand_Start"}}
 }]],
           SpeakNpcId = 701091
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51153088,
+    MaxKey = 51156524,
+    Loader = function()
+      return {
         [51153088] = {
           Camera = "18.898438,5.989258,151.822266,0.000043,-13.742524,-94.34774,30.0,192.427872,false,Manual,2.8",
           Content = "你要去哪里？",
@@ -202975,15 +202986,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           TalkActionId = {
             [1] = "100001:RaiseHand_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51153089,
-    MaxKey = 51156525,
-    Loader = function()
-      return {
+        },
         [51153089] = {
           Camera = "-104.441406,157.805664,256.822266,0.000024,-24.942291,-76.543663,50.0,400.0,false,Manual,2.8",
           Content = "已经过去的不可再追回，现在的一切尚在手中。",
@@ -204606,7 +204609,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51156524,
           GUID = "8010A338",
           NextDialogue = 51156525
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51156525,
+    MaxKey = 51158303,
+    Loader = function()
+      return {
         [51156525] = {
           Content = "好啊，客人来华胥一趟，必定要游个尽兴再归家呢。华胥不像外面，日日提心吊胆，担心秽兽袭击，咱们得白龙神君庇佑，幸享万年和平。",
           ContentTC = "好啊，客人來華胥一趟，必定要遊個盡興再歸家呢。華胥不像外面，日日提心弔膽，擔心穢獸襲擊，咱們得白龍神君庇佑，幸享萬年和平。",
@@ -204616,15 +204627,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [1] = 51156526
           },
           SpeakNpcId = 701118
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51156526,
-    MaxKey = 51158304,
-    Loader = function()
-      return {
+        },
         [51156526] = {
           Content = "不聊了，再见。",
           ContentTC = "不聊了，再見。",
@@ -206234,22 +206237,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "8011C716",
           NextDialogue = 51158323,
           SpeakNpcId = 701128
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51158304,
+    MaxKey = 51159503,
+    Loader = function()
+      return {
         [51158304] = {
           Content = "甜的吧。",
           ContentTC = "甜的吧。",
           DialogueId = 51158304,
           GUID = "8011C740",
           NextDialogue = 51158305
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51158305,
-    MaxKey = 51159504,
-    Loader = function()
-      return {
+        },
         [51158305] = {
           Content = "这就不得不为客人推荐我们的玉桂甜瓜卷了！",
           ContentTC = "這就不得不為客人推薦我們的玉桂甜瓜卷了！",
@@ -207854,22 +207857,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [1] = 51159504
           },
           SpeakNpcId = 701143
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51159504,
+    MaxKey = 51160802,
+    Loader = function()
+      return {
         [51159504] = {
           Content = "只是路过的外乡客。",
           ContentTC = "只是路過的外鄉客。",
           DialogueId = 51159504,
           GUID = "80128C20",
           NextDialogue = 51159505
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51159505,
-    MaxKey = 51160803,
-    Loader = function()
-      return {
+        },
         [51159505] = {
           Content = "外乡客？哟，那我可要来给你说道说道了。",
           ContentTC = "外鄉客？喲，那我可要來給你說道說道了。",
@@ -209470,22 +209473,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [2] = 51160804
           },
           SpeakNpcId = 701156
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51160803,
+    MaxKey = 51162302,
+    Loader = function()
+      return {
         [51160803] = {
           Content = "懂一点，但不多。",
           ContentTC = "懂一點，但不多。",
           DialogueId = 51160803,
           GUID = "8013613E",
           NextDialogue = 51160805
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51160804,
-    MaxKey = 51162303,
-    Loader = function()
-      return {
+        },
         [51160804] = {
           Content = "完全不懂。",
           ContentTC = "完全不懂。",
@@ -211063,22 +211066,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [2] = 51162304
           },
           SpeakNpcId = 701172
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51162303,
+    MaxKey = 51165110,
+    Loader = function()
+      return {
         [51162303] = {
           Content = "鸟类是指？",
           ContentTC = "鳥類是指？",
           DialogueId = 51162303,
           GUID = "80145756",
           NextDialogue = 51162305
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51162304,
-    MaxKey = 51165111,
-    Loader = function()
-      return {
+        },
         [51162304] = {
           Content = "什么跑出去了？",
           ContentTC = "什麼跑出去了？",
@@ -212609,21 +212612,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51165110,
           GUID = "801623DC",
           SpeakNpcId = 100001
-        },
-        [51165111] = {
-          Content = "检查是否有其他值得注意的点。",
-          ContentTC = "檢查是否有其他值得注意的點。",
-          DialogueId = 51165111,
-          GUID = "80162406"
         }
       }
     end
   },
   {
-    MinKey = 51165112,
-    MaxKey = 51166007,
+    MinKey = 51165111,
+    MaxKey = 51166006,
     Loader = function()
       return {
+        [51165111] = {
+          Content = "检查是否有其他值得注意的点。",
+          ContentTC = "檢查是否有其他值得注意的點。",
+          DialogueId = 51165111,
+          GUID = "80162406"
+        },
         [51165112] = {
           Content = "他的右手掌部分的骨骼完全不见了。",
           ContentTC = "他的右手掌部分的骨骼完全不見了。",
@@ -214001,22 +214004,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51166006,
           GUID = "8016B6DC",
           SpeakNpcId = 700387
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51166007,
+    MaxKey = 51167801,
+    Loader = function()
+      return {
         [51166007] = {
           Content = "我拿起琴，第一次，没有想你，没有想师父，没有想那琴谱，就这样随意演奏了一曲，却奏出了我这一生最满意的曲子。",
           ContentTC = "我拿起琴，第一次，沒有想你，沒有想師父，沒有想那琴譜，就這樣隨意演奏了一曲，卻奏出了我這一生最滿意的曲子。",
           DialogueId = 51166007,
           GUID = "8016B706",
           SpeakNpcId = 700387
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51166008,
-    MaxKey = 51167802,
-    Loader = function()
-      return {
+        },
         [51166008] = {
           Content = "也就是在那一瞬间，我才终于知晓，所谓琴谱不过一场浮云，我所追求的琴艺，出自我自己，只有我用本心滋养，才可找到正确的道路。",
           ContentTC = "也就是在那一瞬間，我才終於知曉，所謂琴譜不過一場浮雲，我所追求的琴藝，出自我自己，只有我用本心滋養，才可找到正確的道路。",
@@ -215579,22 +215582,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
             [1] = 51167802
           },
           SpeakNpcId = 701187
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51167802,
+    MaxKey = 51169512,
+    Loader = function()
+      return {
         [51167802] = {
           Content = "你是港口的工作人员？",
           ContentTC = "你是港口的工作人員？",
           DialogueId = 51167802,
           GUID = "8017DD84",
           NextDialogue = 51167803
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51167803,
-    MaxKey = 51169513,
-    Loader = function()
-      return {
+        },
         [51167803] = {
           Content = "正是，鄙人任职船舶司已有三载，日常工作即为核算参商港内船只进出量，货物量，以及税收统计等。",
           ContentTC = "正是，鄙人任職船舶司已有三載，日常工作即為核算參商港內船隻進出量，貨物量，以及稅收統計等。",
@@ -217162,7 +217165,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "8018F610",
           NextDialogue = 51169513,
           SpeakNpcId = 701198
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51169513,
+    MaxKey = 51170514,
+    Loader = function()
+      return {
         [51169513] = {
           Content = "嘿嘿，所以怎么样，客人要不要也来赞助一下我的糖葫芦生意？",
           ContentTC = "嘿嘿，所以怎麼樣，客人要不要也來贊助一下我的糖葫蘆生意？",
@@ -217170,15 +217181,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "8018F63A",
           NextDialogue = 51169514,
           SpeakNpcId = 701198
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51169514,
-    MaxKey = 51170515,
-    Loader = function()
-      return {
+        },
         [51169514] = {
           Content = "（要买他的朝报吗？）",
           ContentTC = "（要買他的朝報嗎？）",
@@ -218763,7 +218766,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "80199A74",
           NextDialogue = 51170515,
           SpeakNpcId = 701207
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51170515,
+    MaxKey = 51171710,
+    Loader = function()
+      return {
         [51170515] = {
           Content = "但将孩子们框死在一个框架里，那才是限制了理的方向，理应该是教孩子们判断什么是对的，什么是错的，什么是好的，什么是坏的。",
           ContentTC = "但將孩子們框死在一個框架裡，那才是限制了理的方向，理應該是教孩子們判斷什麼是對的，什麼是錯的，什麼是好的，什麼是壞的。",
@@ -218771,15 +218782,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "80199A9E",
           NextDialogue = 51170516,
           SpeakNpcId = 701207
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51170516,
-    MaxKey = 51171711,
-    Loader = function()
-      return {
+        },
         [51170516] = {
           Content = "为人子则孝亲敬长，事龙君则鞠躬尽瘁，为偶则忠贞不渝，为友则肝胆相照。",
           ContentTC = "為人子則孝親敬長，事龍君則鞠躬盡瘁，為偶則忠貞不渝，為友則肝膽相照。",
@@ -220367,7 +220370,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 51171710,
           GUID = "801A5EAC",
           NextDialogue = 51171711
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51171711,
+    MaxKey = 51172918,
+    Loader = function()
+      return {
         [51171711] = {
           Content = "绝无此意，龙君会欢迎每个心存善根之人前来奉香。",
           ContentTC = "絕無此意，龍君會歡迎每個心存善根之人前來奉香。",
@@ -220375,15 +220386,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801A5ED6",
           NextDialogue = 51171712,
           SpeakNpcId = 701220
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51171712,
-    MaxKey = 51172919,
-    Loader = function()
-      return {
+        },
         [51171712] = {
           Content = "一般来祀烟阁进行日奉的多半都是皓京本地居民，他们都会在泉通阁登记名籍之时，由香官施术，从而沾染上特殊的香气。",
           ContentTC = "一般來祀煙閣進行日奉的多半都是皓京本地居民，他們都會在泉通閣登記名籍之時，由香官施術，從而沾染上特殊的香氣。",
@@ -221983,7 +221986,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801B24DC",
           NextDialogue = 51172919,
           SpeakNpcId = 701237
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51172919,
+    MaxKey = 51174410,
+    Loader = function()
+      return {
         [51172919] = {
           Content = "只希望你，不要违背自己的本心才好。",
           ContentTC = "只希望你，不要違背自己的本心才好。",
@@ -221991,15 +222002,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801B2506",
           NextDialogue = 51172920,
           SpeakNpcId = 701237
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51172920,
-    MaxKey = 51174411,
-    Loader = function()
-      return {
+        },
         [51172920] = {
           Content = "（无由生似乎话中有话，但作为一个不了解它生平的人，理解这些话还是有些太困难了。）",
           ContentTC = "（無由生似乎話中有話，但作為一個不了解它生平的人，理解這些話還是有些太困難了。）",
@@ -223567,7 +223570,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801C19A4",
           NextDialogue = 51174411,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51174411,
+    MaxKey = 51175414,
+    Loader = function()
+      return {
         [51174411] = {
           Content = "因为她很厉害！就是，她可以一下子就从一个地方冒出来，然后所有人都会被她吸引。",
           ContentTC = "因為她很厲害！就是，她可以一下子就從一個地方冒出來，然後所有人都會被她吸引。",
@@ -223575,15 +223586,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801C19CE",
           NextDialogue = 51174412,
           SpeakNpcId = 701256
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51174412,
-    MaxKey = 51175415,
-    Loader = function()
-      return {
+        },
         [51174412] = {
           Content = "你不觉得这种能力很厉害吗？拥有瞬间吸引所有人视线的能力，不像我，我只能附身在一块大石头上面，动一动就没力气了。",
           ContentTC = "你不覺得這種能力很厲害嗎？擁有瞬間吸引所有人視線的能力，不像我，我只能附身在一塊大石頭上面，動一動就沒力氣了。",
@@ -225183,7 +225186,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801CBE5C",
           NextDialogue = 51175415,
           SpeakNpcName = "UI_CMNpc_Name_NianyouFuFeng"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 51175415,
+    MaxKey = 51175825,
+    Loader = function()
+      return {
         [51175415] = {
           Content = "小疏，你觉得这样对吗？",
           ContentTC = "小疏，你覺得這樣對嗎？",
@@ -225192,15 +225203,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "801CBE86",
           NextDialogue = 51175416,
           SpeakNpcName = "UI_CMNpc_Name_NianyouFuFeng"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 51175416,
-    MaxKey = 51175826,
-    Loader = function()
-      return {
+        },
         [51175416] = {
           Content = "但，以枯荣之术渡人苦厄，直至寂灭，这是祝由的使命……",
           ContentTC = "但，以枯榮之術渡人苦厄，直至寂滅，這是祝由的使命……",
@@ -226535,21 +226538,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentTC = "所以這是個怎麼樣的故事？",
           DialogueId = 51175825,
           GUID = "801D01CA"
-        },
-        [51175826] = {
-          Content = "怎么样的故事……唔……我想想怎么快速给你介绍一下。",
-          ContentTC = "怎麼樣的故事……唔……我想想怎麼快速給你介紹一下。",
-          DialogueId = 51175826,
-          GUID = "801D01F4"
         }
       }
     end
   },
   {
-    MinKey = 51175827,
-    MaxKey = 51178048,
+    MinKey = 51175826,
+    MaxKey = 51178047,
     Loader = function()
       return {
+        [51175826] = {
+          Content = "怎么样的故事……唔……我想想怎么快速给你介绍一下。",
+          ContentTC = "怎麼樣的故事……唔……我想想怎麼快速給你介紹一下。",
+          DialogueId = 51175826,
+          GUID = "801D01F4"
+        },
         [51175827] = {
           Content = "大概就是一个，男主角全家从小被玄色狴犴屠杀，自己因为外出探亲躲过一劫，后来刻苦修炼，并得到女主角乐泱相助，最终成为应天尉的故事。",
           ContentTC = "大概就是一個，男主角全家從小被玄色狴犴屠殺，自己因為外出探親躲過一劫，後來刻苦修煉，並得到女主角樂泱相助，最終成為應天尉的故事。",
@@ -227743,21 +227746,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentTC = "我小時候生活的村子，孩子們常常在玩耍的時候爭執，有時候甚至會鬧到要打起來的地步。",
           DialogueId = 51178047,
           GUID = "801E6E56"
-        },
-        [51178048] = {
-          Content = "孩子们鼻青脸肿地回家后，关心他们的父母看到伤痕就红了眼。",
-          ContentTC = "孩子們鼻青臉腫地回家後，關心他們的父母看到傷痕就紅了眼。",
-          DialogueId = 51178048,
-          GUID = "801E6E80"
         }
       }
     end
   },
   {
-    MinKey = 51178049,
-    MaxKey = 51178525,
+    MinKey = 51178048,
+    MaxKey = 51178524,
     Loader = function()
       return {
+        [51178048] = {
+          Content = "孩子们鼻青脸肿地回家后，关心他们的父母看到伤痕就红了眼。",
+          ContentTC = "孩子們鼻青臉腫地回家後，關心他們的父母看到傷痕就紅了眼。",
+          DialogueId = 51178048,
+          GUID = "801E6E80"
+        },
         [51178049] = {
           Content = "他们直接粗暴地找到其他孩子家里去，甚至不预先询问究竟是因为什么原因打架——比如，是不是他们的孩子先欺负了其他孩子。",
           ContentTC = "他們直接粗暴地找到其他孩子家裡去，甚至不預先詢問究竟是因為什麼原因打架——比如，是不是他們的孩子先欺負了其他孩子。",
@@ -228951,21 +228954,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           ContentTC = "少爺沒多久就離開了蕭府，我不曉得他去哪裡了，因我根本沒那個閒心去管，那些孩子逐漸長大，我拉扯他們也不容易……",
           DialogueId = 51178524,
           GUID = "801EBC98"
-        },
-        [51178525] = {
-          Content = "一直到那一日……那些孩子里最大的那位，十岁生日的时候……再过几年就可以出去做工的年纪。",
-          ContentTC = "一直到那一日……那些孩子裡最大的那位，十歲生日的時候……再過幾年就可以出去做工的年紀。",
-          DialogueId = 51178525,
-          GUID = "801EBCC2"
         }
       }
     end
   },
   {
-    MinKey = 51178526,
-    MaxKey = 60030302,
+    MinKey = 51178525,
+    MaxKey = 60030301,
     Loader = function()
       return {
+        [51178525] = {
+          Content = "一直到那一日……那些孩子里最大的那位，十岁生日的时候……再过几年就可以出去做工的年纪。",
+          ContentTC = "一直到那一日……那些孩子裡最大的那位，十歲生日的時候……再過幾年就可以出去做工的年紀。",
+          DialogueId = 51178525,
+          GUID = "801EBCC2"
+        },
         [51178526] = {
           Content = "我们都围在最后卖剩下的那间主屋里，我去买了米面和蛋，做了长寿面，少爷也赶了回来，他看起来十分憔悴，虽说我们也好不到哪去。",
           ContentTC = "我們都圍在最後賣剩下的那間主屋裡，我去買了米麵和蛋，做了長壽麵，少爺也趕了回來，他看起來十分憔悴，雖說我們也好不到哪去。",
@@ -230153,7 +230156,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/0/600303/96478104",
           bTurnOffVoice = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 60030302,
+    MaxKey = 60800104,
+    Loader = function()
+      return {
         [60030302] = {
           Content = "啊，血清回收完记得去取哦！要是血清耗尽的话，我们就只能终止委托了！",
           ContentTC = "啊，血清回收完記得去取哦！要是血清耗盡的話，我們就只能終止委託了！",
@@ -230164,15 +230175,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/0/600303/96479142",
           bTurnOffVoice = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 60030303,
-    MaxKey = 60800105,
-    Loader = function()
-      return {
+        },
         [60030303] = {
           Content = "上面还说了一堆难懂的话，但大概意思应该是说，在药剂台周围战斗，还能让我们变得很厉害很厉害，白真聪明！",
           ContentTC = "上面還說了一堆難懂的話，但大概意思應該是說，在藥劑台周圍戰鬥，還能讓我們變得很厲害很厲害，白真聰明！",
@@ -232055,21 +232058,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 60800104,
           GUID = "9834E910",
           SpeakNpcId = 0
-        },
-        [60800105] = {
-          Content = "【待包装】似乎能在附近找到钥匙E",
-          DialogueId = 60800105,
-          GUID = "9834E93A",
-          SpeakNpcId = 0
         }
       }
     end
   },
   {
-    MinKey = 60800106,
-    MaxKey = 71001506,
+    MinKey = 60800105,
+    MaxKey = 71001505,
     Loader = function()
       return {
+        [60800105] = {
+          Content = "【待包装】似乎能在附近找到钥匙E",
+          DialogueId = 60800105,
+          GUID = "9834E93A",
+          SpeakNpcId = 0
+        },
         [60800106] = {
           Content = "【待包装】似乎能在附近找到钥匙F",
           DialogueId = 60800106,
@@ -233680,7 +233683,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71001505,
           GUID = "B1BEAC6A",
           SpeakNpcId = 818006
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71001506,
+    MaxKey = 71004907,
+    Loader = function()
+      return {
         [71001506] = {
           Content = "这也行？",
           ContentTC = "這也行？",
@@ -233688,15 +233699,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Duration = 2,
           GUID = "B1BEAC94",
           SpeakNpcId = 818006
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71001507,
-    MaxKey = 71005001,
-    Loader = function()
-      return {
+        },
         [71001507] = {
           Content = "呃……真的拍两下就能好吗？",
           ContentTC = "呃……真的拍兩下就能好嗎？",
@@ -235180,22 +235183,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71004907,
           GUID = "B1C0DA8E",
           SpeakNpcId = 818040
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71005001,
+    MaxKey = 71006709,
+    Loader = function()
+      return {
         [71005001] = {
           Content = "喂，那边的朋友，能帮我拍张照吗？",
           ContentTC = "喂，那邊的朋友，能幫我拍張照嗎？",
           DialogueId = 71005001,
           GUID = "B1C0E9FA",
           SpeakNpcId = 818041
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71005002,
-    MaxKey = 71006711,
-    Loader = function()
-      return {
+        },
         [71005002] = {
           Content = "这位朋友，你能帮我拍几张照片吗？难得来一趟冰湖城，不留点合影就太可惜了。",
           ContentTC = "這位朋友，你能幫我拍幾張照片嗎？難得來一趟冰湖城，不留點合照就太可惜了。",
@@ -236767,22 +236770,22 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           },
           SpeakNpcId = 818063,
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71006711,
+    MaxKey = 72001304,
+    Loader = function()
+      return {
         [71006711] = {
           Content = "不……我想出去玩啊……",
           ContentTC = "不……我想出去玩啊……",
           DialogueId = 71006711,
           GUID = "B1C20286",
           SpeakNpcId = 818063
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71006712,
-    MaxKey = 72001401,
-    Loader = function()
-      return {
+        },
         [71006712] = {
           Content = "真是帮了大忙了！谢谢你谢谢你！",
           ContentTC = "真是幫了大忙了！謝謝你謝謝你！",
@@ -238478,7 +238481,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B43F69F0",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72001401,
+    MaxKey = 72200101,
+    Loader = function()
+      return {
         [72001401] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72001401,
@@ -238490,15 +238501,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           NextDialogue = 72001402,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{820000},AnimationId{\"Wuyou_Born\"}}",
           bAllowClickSkipScript = false
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72001402,
-    MaxKey = 72200102,
-    Loader = function()
-      return {
+        },
         [72001402] = {
           Content = "此路不通，嗯……",
           ContentTC = "此路不通，嗯……",
@@ -240555,7 +240558,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B4BED112",
           NextDialogue = 72200102,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72200102,
+    MaxKey = 80004109,
+    Loader = function()
+      return {
         [72200102] = {
           Content = "无趣无趣，贪愚痴妄，转首空空，不如逍遥～东西还你，有缘再会！",
           ContentTC = "無趣無趣，貪愚痴妄，轉首空空，不如逍遙～東西還你，有緣再會！",
@@ -240565,15 +240576,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
           SpeakNpcId = 240110,
           bAllowClickSkipScript = false
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72200103,
-    MaxKey = 80004110,
-    Loader = function()
-      return {
+        },
         [72200103] = {
           DialogueId = 72200103,
           DialoguePanelType = "AllHide",
@@ -242521,7 +242524,15 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           HeadIconType = "Npc",
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120114/C8482A22"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80004110,
+    MaxKey = 80020406,
+    Loader = function()
+      return {
         [80004110] = {
           Camera = "-4.021118,-147.850586,140.854248,0.000064,-3.469995,89.231857,35.0,160.025635,false,Manual,12.0",
           Content = "（好像还没有把小夜莺的羽毛收集全……要再回去找找看吗？）",
@@ -242543,15 +242554,7 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
 }
 }]],
           SpeakNpcId = 211001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80004201,
-    MaxKey = 80020407,
-    Loader = function()
-      return {
+        },
         [80004201] = {
           Content = "前面的雾气好像更浓了……",
           ContentTC = "前面的霧氣好像更濃了……",
@@ -244237,7 +244240,15 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
             [1] = "93102:Sit_Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Xier/004/C8529BDC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80020407,
+    MaxKey = 80040126,
+    Loader = function()
+      return {
         [80020407] = {
           Content = "当我还在做密探的时候，听说过一些同僚有更加病态的压力抒发方式。",
           ContentTC = "當我還在做密探的時候，聽說過一些同僚有更加病態的壓力抒發方式。",
@@ -244252,15 +244263,7 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
             [1] = "93102:Sit_Talk02R_End"
           },
           VoiceName = "voice/$Locale$/inv/Xier/004/C8529C06"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80020408,
-    MaxKey = 80040127,
-    Loader = function()
-      return {
+        },
         [80020408] = {
           Content = "完成一次耗时一秒的刺杀，可能要花上一个月制定计划，一周提前准备，一天的漫长等待。而失败了，可能就要面对一辈子的漫长刑期。",
           ContentTC = "完成一次耗時一秒的刺殺，可能要花上一個月制定計劃，一週提前準備，一天的漫長等待。而失敗了，可能就要面對一輩子的漫長刑期。",
@@ -246620,7 +246623,15 @@ CameraMoveTo{TargetPosition{"-178.94751,-87.67041,150.519897,-0.000519,-4.804505
           Scripts = "PARA{SEQ{PlayAnimation{ActorId{790008},AnimationId{\"Agree\"},Duration{1}},PlayAnimation{_delay{3},ActorId{790008},AnimationId{\"Confident_Start\"},Duration{3}}},SEQ{CameraMoveTo{_delay{3},TargetPosition{\"-451.446045,109.144287,58.609131,0.000133,5.802526,-23.556147,40.0,62.233727,false,Manual,22.0\"},duration{0}},CameraMoveTo{_delay{0},TargetPosition{\"-448.734375,115.36499,58.609131,0.000134,5.802526,-23.555901,40.0,62.233727,false,Manual,22.0\"},duration{15}}}}",
           SpeakNpcId = 790008,
           VoiceName = "voice/$Locale$/inv/Heitao/001/C85F3F2C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80040127,
+    MaxKey = 80050315,
+    Loader = function()
+      return {
         [80040127] = {
           Camera = "-7.822998,17.936523,129.39856,0.000159,0.802219,-147.953476,40.0,127.794029,false,Manual,5.845709",
           Content = "真的吗？你不是故意这么说的吧？",
@@ -246641,15 +246652,7 @@ CameraMoveTo{TargetPosition{"-178.94751,-87.67041,150.519897,-0.000519,-4.804505
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/inv/Heitao/001/C85F3F56"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80040128,
-    MaxKey = 80050316,
-    Loader = function()
-      return {
+        },
         [80040128] = {
           Camera = "-119.140625,17.986816,144.082153,0.000186,-5.597982,-15.525949,40.000011,174.773438,false,Manual,5.845709",
           Content = "当然没有，我哪和你说过谎？",
@@ -249434,22 +249437,22 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           },
           SpeakNpcId = 790017,
           VoiceName = "voice/$Locale$/inv/Feina/003/C865C6CE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80050316,
+    MaxKey = 80060335,
+    Loader = function()
+      return {
         [80050316] = {
           Content = "怎么了？你不认识的话，我来告诉你吧。",
           ContentTC = "怎麽了？你不認識的話，我來告訴你吧。",
           DialogueId = 80050316,
           GUID = "C865C6F8",
           NextDialogue = 80050317
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80050317,
-    MaxKey = 80060336,
-    Loader = function()
-      return {
+        },
         [80050317] = {
           Camera = "-65.606445,-263.350464,109.867432,0.000101,0.000478,109.002274,35.000011,100000.0,false,DoNotOverride,2.8",
           Content = "……我是知道的。",
@@ -251792,22 +251795,22 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [1] = "95101:Sit_Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Songlu/003/C86C32B6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80060336,
+    MaxKey = 80080135,
+    Loader = function()
+      return {
         [80060336] = {
           Content = "嗯，我记得。是“粮秣特别专员”。",
           ContentTC = "嗯，我記得。是「糧秣特別專員」。",
           DialogueId = 80060336,
           GUID = "C86C32E0",
           NextDialogue = 80060337
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80060337,
-    MaxKey = 80080136,
-    Loader = function()
-      return {
+        },
         [80060337] = {
           Content = "对！松露和榛子一起，赶跑饥饿——",
           ContentTC = "對！松露和榛子一起，趕跑饑餓——",
@@ -254433,7 +254436,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           SpeakNpcId = 790004,
           ToFinalCameraBlendTime = 15,
           VoiceName = "voice/$Locale$/inv/Saiqi/001/C878E326"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80080136,
+    MaxKey = 80090327,
+    Loader = function()
+      return {
         [80080136] = {
           Camera = "-115.056641,157.29718,104.279297,0.000006,2.600007,-78.7966,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "……也许这样，等那天到来的时候，就可以少一点点遗憾吧。",
@@ -254447,15 +254458,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [1] = "790004:Explain02_Start"
           },
           VoiceName = "voice/$Locale$/inv/Saiqi/001/C878E350"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80080137,
-    MaxKey = 80090328,
-    Loader = function()
-      return {
+        },
         [80080137] = {
           Camera = "-182.740234,418.929565,109.427734,0.000006,0.00002,-72.598679,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "但我确实没想到，说这些会让艾丽莎难过。对不起，以后我不会那么多话了。",
@@ -256917,7 +256920,15 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           NextDialogue = 80090328,
           SpeakNpcId = 92301,
           VoiceName = "voice/$Locale$/inv/Zhangyu/003/C87F6B46"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80090328,
+    MaxKey = 80110113,
+    Loader = function()
+      return {
         [80090328] = {
           Content = "追着我打的小贩们，好像也只是追几步就算了……当然了，也是因为本大盗逃得够快！",
           ContentTC = "追著我打的小販們，好像也只是追幾步就算了……當然了，也是因為本大盜逃得夠快！",
@@ -256926,15 +256937,7 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           NextDialogue = 80090329,
           SpeakNpcId = 92301,
           VoiceName = "voice/$Locale$/inv/Zhangyu/003/C87F6B70"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80090329,
-    MaxKey = 80110114,
-    Loader = function()
-      return {
+        },
         [80090329] = {
           Content = "有些摊主还会主动把没卖完的食物留给我，但我只当他们怕了我，那些食物统统是上贡给本大盗的保护费！",
           ContentTC = "有些攤主還會主動把沒賣完的食物留給我，但我只當他們怕了我，那些食物通通是上貢給本大盜的保護費！",
@@ -259365,7 +259368,15 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
             [1] = "93101:Sit_AgreeHead"
           },
           VoiceName = "voice/$Locale$/inv/Linen/001/C88C196A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80110114,
+    MaxKey = 80120338,
+    Loader = function()
+      return {
         [80110114] = {
           Content = "毕竟之前也有胆大包天的狩月人看我以前也干过这行，就跑来套近乎，跟我打听军团的秘密。",
           ContentTC = "畢竟之前也有膽大包天的狩月人看我以前也幹過這行，就跑來套近乎，跟我打聽軍團的秘密。",
@@ -259383,15 +259394,7 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
             [1] = "93101:Sit_Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Linen/001/C88C1994"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80110115,
-    MaxKey = 80120339,
-    Loader = function()
-      return {
+        },
         [80110115] = {
           Content = "是啊，挺多年前的事了。不对，这话可以说吗？",
           ContentTC = "是啊，挺多年前的事了。不對，這話可以說嗎？",
@@ -262246,7 +262249,15 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "93301:Sit_Think_Start"
           },
           VoiceName = "voice/$Locale$/inv/Maer/003/C892A6F4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80120339,
+    MaxKey = 80130420,
+    Loader = function()
+      return {
         [80120339] = {
           Content = "（玛尔洁愤怒地敲了敲自己盖在头顶的东西，发出了咚咚的响声。）",
           ContentTC = "（瑪爾潔憤怒地敲了敲自己蓋在頭頂的東西，發出了咚咚的響聲。）",
@@ -262257,15 +262268,7 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "93301:Sit_Think_End"
           },
           VoiceName = "voice/$Locale$/inv/Maer/003/C892A71E"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80120340,
-    MaxKey = 80130421,
-    Loader = function()
-      return {
+        },
         [80120340] = {
           Content = "就是这个！他还在行李箱里留了一张字条……",
           ContentTC = "就是這個！他還在行李箱裡留了一張字條……",
@@ -265042,7 +265045,15 @@ PlayAnimation{ActorId{790023},AnimationId{"Think_End"},Duration{1},_click{false}
 }]],
           SpeakNpcId = 790023,
           VoiceName = "voice/$Locale$/inv/Yeer/004/C8991D08"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80130421,
+    MaxKey = 80140345,
+    Loader = function()
+      return {
         [80130421] = {
           Camera = "138.503418,-201.674438,112.0,0.000002,-2.799927,155.996429,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "还提到一个叫做丹流城的地方，城外的河水看起来是红色的，当落日的时候，会非常漂亮。",
@@ -265058,15 +265069,7 @@ PlayAnimation{ActorId{790023},AnimationId{"Think_End"},Duration{1},_click{false}
             [1] = "790023:Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Yeer/004/C8991D32"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80130422,
-    MaxKey = 80140346,
-    Loader = function()
-      return {
+        },
         [80130422] = {
           Camera = "138.503418,-201.674438,112.0,0.000002,-2.799927,155.996429,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那时候我见过的红色的事物只有血，所以觉得很奇怪，红色……怎么会漂亮呢？",
@@ -267699,7 +267702,15 @@ PlayAnimation{_delay{2},ActorId{790041},AnimationId{"Think_End"},Duration{1},_cl
           NextDialogue = 80140346,
           SpeakNpcId = 790036,
           VoiceName = "voice/$Locale$/inv/Tuosi/003/C89F795A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80140346,
+    MaxKey = 80160125,
+    Loader = function()
+      return {
         [80140346] = {
           Content = "哈哈……也不知道大家现在过得怎么样。没了我这个“骗子”，他们应该能正常举办演出了吧。",
           ContentTC = "哈哈……也不知道大家現在過得怎麼樣。沒了我這個「騙子」，他們應該能正常舉辦演出了吧。",
@@ -267708,15 +267719,7 @@ PlayAnimation{_delay{2},ActorId{790041},AnimationId{"Think_End"},Duration{1},_cl
           NextDialogue = 80140347,
           SpeakNpcId = 790036,
           VoiceName = "voice/$Locale$/inv/Tuosi/003/C89F7984"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80140347,
-    MaxKey = 80160126,
-    Loader = function()
-      return {
+        },
         [80140347] = {
           Content = "……",
           ContentTC = "……",
@@ -270632,7 +270635,15 @@ CameraMoveTo{TargetPosition{"-46.92395,-890.245117,476.808594,0.000113,-11.39855
             [1] = "790055:DisagreeHead"
           },
           VoiceName = "voice/$Locale$/inv/Haier/001/C8AC2682"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80160126,
+    MaxKey = 80170201,
+    Loader = function()
+      return {
         [80160126] = {
           Camera = "279.85791,105.764648,170.447266,0.000227,-3.998898,-152.592499,68.94529,451.476898,false,DoNotOverride,10.496961",
           Content = "这里是你的“水仙平原”，不是法庭，也不是皇家监狱，没有人会把吐真剂扎进你的脖子，逼你坦白从宽。",
@@ -270643,15 +270654,7 @@ CameraMoveTo{TargetPosition{"-46.92395,-890.245117,476.808594,0.000113,-11.39855
           NextDialogue = 80160127,
           SpeakNpcId = 790055,
           VoiceName = "voice/$Locale$/inv/Haier/001/C8AC26AC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80160127,
-    MaxKey = 80170202,
-    Loader = function()
-      return {
+        },
         [80160127] = {
           Content = "我到冰湖城有自己的目的，而你也有自己的生存方式，我们没有在这张“火腿秘方”上消耗太多时间的必要。",
           ContentTC = "我到冰湖城有自己的目的，而你也有自己的生存方式，我們沒有在這張「火腿秘方」上消耗太多時間的必要。",
@@ -272785,7 +272788,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
             [1] = "91502:Sit_Talk03_Start"
           },
           VoiceName = "voice/$Locale$/inv/Nifu/002/C8B29B9A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80170202,
+    MaxKey = 80180227,
+    Loader = function()
+      return {
         [80170202] = {
           Content = "自从离开家乡以后，我经历过很多事，其中很多充满遗憾。有时我会觉得很无力，似乎很多努力都是徒劳。",
           ContentTC = "自從離開家鄉以後，我經歷過很多事，其中許多充滿遺憾。有時我會覺得很無力，似乎很多努力都是徒勞。",
@@ -272794,15 +272805,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           NextDialogue = 80170203,
           SpeakNpcId = 790008,
           VoiceName = "voice/$Locale$/inv/Nifu/002/C8B29BC4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80170203,
-    MaxKey = 80180228,
-    Loader = function()
-      return {
+        },
         [80170203] = {
           Content = "妮弗尔夫人作为长辈，有什么建议吗？",
           ContentTC = "妮弗爾夫人身為長輩，有什麼建議嗎？",
@@ -275038,7 +275041,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
             [1] = "790045:Talk02_Start"
           },
           VoiceName = "voice/$Locale$/inv/Dafu/002/C8B9087E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80180228,
+    MaxKey = 80200018,
+    Loader = function()
+      return {
         [80180228] = {
           Camera = "543.975098,-643.192871,207.191406,0.000092,-8.199464,137.000534,30.000002,861.833862,false,Manual,1.2",
           Content = "您看到的只是艾米莉亚之死的报告书，但您不知道的是……她临死之前，满地都是血……血还在从她的身体往外流……但她没有对她的同僚说“救救我”……",
@@ -275053,15 +275064,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/inv/Dafu/002/C8B908A8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80180229,
-    MaxKey = 80200019,
-    Loader = function()
-      return {
+        },
         [80180229] = {
           Camera = "54.456055,-318.109375,151.507812,0.000091,-5.799561,105.601219,30.000002,319.662201,false,Manual,1.2",
           Content = "而是……不停地……对那个还在咒骂她的实验体说……“对不起”。",
@@ -277438,7 +277441,15 @@ TurnTo{_delay{3},TurnToDescription{"790053:p(90)"}}
           },
           ToFinalCameraBlendTime = 15,
           VoiceName = "voice/$Locale$/inv/Fushu/001/C8C5B774"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80200019,
+    MaxKey = 80210115,
+    Loader = function()
+      return {
         [80200019] = {
           Content = "上次凭笔记中寻来的方子治好了那位被玄色狴犴所伤的姑娘，使我对药理生出几分兴趣。",
           ContentTC = "上次憑筆記中尋來的方子治好了那位被玄色狴犴所傷的姑娘，使我對藥理生出幾分興趣。",
@@ -277450,15 +277461,7 @@ TurnTo{_delay{3},TurnToDescription{"790053:p(90)"}}
             [1] = "790008:Talk02_End"
           },
           VoiceName = "voice/$Locale$/inv/Fushu/001/C8C5B79E"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80200020,
-    MaxKey = 80210116,
-    Loader = function()
-      return {
+        },
         [80200020] = {
           Camera = "13.768398,198.582336,146.612305,0.000078,-0.599117,-112.591949,35.0,194.999741,false,Manual,7.870067",
           Content = "扶氏世代以枯荣之术救人，药理则是近百年才出现的学问。家姐生前精于此道，我所知却是微末。",
@@ -280530,7 +280533,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           },
           ToFinalCameraBlendTime = 8,
           VoiceName = "voice/$Locale$/inv/Kezhou/001/C8CC2FFE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80210116,
+    MaxKey = 80220106,
+    Loader = function()
+      return {
         [80210116] = {
           Camera = "274.847656,276.966309,232.944336,0.00018,-20.000671,-141.973434,30.0,445.724579,false,Manual,4.0",
           Content = "这都不知道，我们这是在模仿飘零人对话呀。",
@@ -280552,15 +280563,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [2] = "790066:n(790067)"
           },
           VoiceName = "voice/$Locale$/inv/Kezhou/001/C8CC3028"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80210117,
-    MaxKey = 80220107,
-    Loader = function()
-      return {
+        },
         [80210117] = {
           Content = "这场对话是之前最流行的飘零人小说里，最有名的一段台词了，每当读到这里的时候，我都恨不得钻进书里去。",
           ContentTC = "這場對話是之前最流行的飄零人小說里，最有名的一段台詞了，每當讀到這裡的時候，我都恨不得鑽進書裡去。",
@@ -283003,7 +283006,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220107,
           SpeakNpcId = 790073,
           VoiceName = "voice/$Locale$/inv/Yuming/001/C8D29724"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80220107,
+    MaxKey = 80220447,
+    Loader = function()
+      return {
         [80220107] = {
           Content = "我和刻舟师兄在山外山外面发现了这只小狐狸，它被野兽咬伤了。",
           ContentTC = "我和刻舟師兄在山外山外面發現了這隻小狐狸，它被野獸咬傷了。",
@@ -283012,15 +283023,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220108,
           SpeakNpcId = 790073,
           VoiceName = "voice/$Locale$/inv/Yuming/001/C8D2974E"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80220108,
-    MaxKey = 80220448,
-    Loader = function()
-      return {
+        },
         [80220108] = {
           Content = "刻舟师兄粗枝大叶，完全不知道怎么处理它身上的伤，就只能来找师兄你了。放着不管的话，它很快便会死掉的。",
           ContentTC = "刻舟師兄粗枝大葉，完全不知道怎麼處理它身上的傷，就只能來找師兄你了。放著不管的話，它很快便會死掉的。",
@@ -284799,7 +284802,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220448,
           SpeakNpcId = 790072,
           VoiceName = "voice/$Locale$/inv/Yuming/004/C8D2CF16"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80220448,
+    MaxKey = 80240121,
+    Loader = function()
+      return {
         [80220448] = {
           Content = "去吧，他们在等你。",
           ContentTC = "去吧，他們在等你。",
@@ -284807,15 +284818,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "C8D2CF40",
           SpeakNpcId = 790008,
           VoiceName = "voice/$Locale$/inv/Yuming/004/C8D2CF40"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80230101,
-    MaxKey = 80240122,
-    Loader = function()
-      return {
+        },
         [80230101] = {
           Content = "龙渊上卿拔擢仪式即刻开始——诸位受太皓青睐者，请依序入觐——",
           ContentTC = "龍淵上卿拔擢儀式即刻開始——諸位受太皓青睞者，請依序入覲——",
@@ -286572,7 +286575,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80240122,
           SpeakNpcId = 790082,
           VoiceName = "voice/$Locale$/inv/Suyi/001/C8DF6ADA"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80240122,
+    MaxKey = 80250229,
+    Loader = function()
+      return {
         [80240122] = {
           Content = "不是身体上的问题，就是心里的问题喽？",
           ContentTC = "不是身體上的問題，就是心裡的問題嘍？",
@@ -286581,15 +286592,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80240123,
           SpeakNpcId = 790083,
           VoiceName = "voice/$Locale$/inv/Suyi/001/C8DF6B04"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80240123,
-    MaxKey = 80250230,
-    Loader = function()
-      return {
+        },
         [80240123] = {
           Content = "都说了我没……",
           ContentTC = "都說了我沒……",
@@ -288375,7 +288378,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80250230,
           SpeakNpcId = 790014,
           VoiceName = "voice/$Locale$/inv/Kami/002/14171F22"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80250230,
+    MaxKey = 90060101,
+    Loader = function()
+      return {
         [80250230] = {
           Content = "你们两个，就是中选的幸运儿！这样的机会可不常有，好好珍惜吧！",
           ContentTC = "你們兩個，就是中選的幸運兒！這樣的機會可不常有，好好珍惜吧！",
@@ -288384,15 +288395,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80250231,
           SpeakNpcId = 790014,
           VoiceName = "voice/$Locale$/inv/Kami/002/14171F4C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80250231,
-    MaxKey = 90060102,
-    Loader = function()
-      return {
+        },
         [80250231] = {
           Content = "……",
           ContentTC = "……",
@@ -290356,7 +290359,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "83201:Talk03_Start"
           },
           VoiceName = "voice/$Locale$/char/Haier/vo_topic_01_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90060102,
+    MaxKey = 90150205,
+    Loader = function()
+      return {
         [90060102] = {
           Content = "而我，作为她的后代，继承了她的名号，同样会用炼火将一切罪行烧成炉灰。",
           ContentTC = "而我，作為她的後代，繼承了她的名號，同樣會用煉火將一切罪行燒成爐灰。",
@@ -290368,15 +290379,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "83201:Talk03_End"
           },
           VoiceName = "voice/$Locale$/char/Haier/vo_topic_01_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90060103,
-    MaxKey = 90150206,
-    Loader = function()
-      return {
+        },
         [90060103] = {
           Content = "那……你滚烫的皮肤会不会让你生活不太方便？",
           ContentTC = "那……你滾燙的皮膚會不會讓你生活不太方便？",
@@ -292723,7 +292726,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 90150206,
           SpeakNpcId = 81801,
           VoiceName = "voice/$Locale$/char/Feina/vo_topic_02_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90150206,
+    MaxKey = 90210402,
+    Loader = function()
+      return {
         [90150206] = {
           Content = "如果我迷路了，菲娜会来救我吗？",
           ContentTC = "如果我迷路了，菲娜會來救我嗎？",
@@ -292731,15 +292742,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E1AE7C2C",
           NextDialogue = 90150207,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90150207,
-    MaxKey = 90210403,
-    Loader = function()
-      return {
+        },
         [90150207] = {
           Content = "让我想想……如果你迷路了，菲娜就把面包掰成一小块一小块，连成一条路……这样，你只要沿着面包屑向前走，就能找到出口啦！",
           ContentTC = "讓我想想……如果你迷路了，菲娜就把麵包掰成一小塊一小塊，連成一條路……這樣，你只要沿著麵包屑向前走，就能找到出口啦！",
@@ -294987,7 +294990,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E1D51014",
           NextDialogue = 90210403,
           SpeakNpcId = 100001
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90210403,
+    MaxKey = 90270405,
+    Loader = function()
+      return {
         [90210403] = {
           Content = "不，我并非对我们一族的外表自轻自贱。我只是觉得，如果它能长得更规则、更对称一些，也许会看起来舒服很多。啊，不是，我也没有在说你的角……",
           ContentTC = "不，我並非對我們一族的外表自輕自賤。我只是覺得，如果它能長得更規則、更對稱一些，也許會看起來舒服很多。啊，不是，我也沒有在說你的角……",
@@ -295000,15 +295011,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           SpeakNpcId = 84101,
           VoiceName = "voice/$Locale$/char/Lise/vo_topic_04_2",
           bForbidSkipOptions = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90210501,
-    MaxKey = 90270406,
-    Loader = function()
-      return {
+        },
         [90210501] = {
           Content = "还在，只是它现在变得好沉重，太沉重了……我不知道自己是否还有力气再次握起它，吹奏下去。",
           ContentTC = "還在，只是它現在變得好沉重，太沉重了……我不知道自己是否還有力氣再次握起它，吹奏下去。",
@@ -297129,7 +297132,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 90270406,
           SpeakNpcId = 83202,
           VoiceName = "voice/$Locale$/char/Kami/vo_topic_04_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90270406,
+    MaxKey = 120131211,
+    Loader = function()
+      return {
         [90270406] = {
           Content = "他说，他希望从你那里得到的，是一个“答案”。",
           ContentTC = "他說，他希望從你那裡得到的，是一個「答案」。",
@@ -297142,15 +297153,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           SpeakNpcId = 83202,
           VoiceName = "voice/$Locale$/char/Kami/vo_topic_04_5",
           bForbidSkipOptions = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90270601,
-    MaxKey = 120131212,
-    Loader = function()
-      return {
+        },
         [90270601] = {
           Content = "每个人的天赋不同，有些人生来就拥有治愈人心的能力，就像你，好孩子。",
           ContentTC = "每個人的天賦不同，有些人生來就擁有治癒人心的能力，就像你，好孩子。",
@@ -298671,22 +298674,22 @@ SetLocation{ActorId{110022},TargetPoint{"nanzhu_hugset"},Visibility{"Show"}}
           DialogueId = 120131211,
           GUID = "120131211.0",
           NextDialogue = 12013125
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 120131212,
+    MaxKey = 510030052,
+    Loader = function()
+      return {
         [120131212] = {
           Content = "我是骁勇的独目勇者，冷酷的冰湖之主，第一代下水道公爵。",
           ContentTC = "我是驍勇的獨目勇者，冷酷的冰湖之主，第一代下水道公爵。",
           DialogueId = 120131212,
           GUID = "120131212.0",
           NextDialogue = 12013122
-        }
-      }
-    end
-  },
-  {
-    MinKey = 120134311,
-    MaxKey = 510030071,
-    Loader = function()
-      return {
+        },
         [120134311] = {
           Content = "呜呼哀哉……",
           ContentTC = "嗚呼哀哉……",
@@ -300296,7 +300299,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510030052.0",
           ImprPlusId = 1005,
           NextDialogue = 51003006
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 510030071,
+    MaxKey = 510092382,
+    Loader = function()
+      return {
         [510030071] = {
           Content = "巴克先生在睡着的时候注意到了一些反常的动静。",
           ContentTC = "巴克先生在睡著的時候註意到了一些反常的動靜。",
@@ -300304,15 +300315,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510030071.0",
           ImprPlusId = 1004,
           NextDialogue = 51003008
-        }
-      }
-    end
-  },
-  {
-    MinKey = 510030072,
-    MaxKey = 510093271,
-    Loader = function()
-      return {
+        },
         [510030072] = {
           Content = "不排除睡傻了的可能性，也不排除有人跟他过不去的可能性。",
           ContentTC = "不排除睡傻了的可能性，也不排除有人跟他過不去的可能性。",
@@ -301859,22 +301862,22 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 510092382,
           GUID = "510092382.0",
           NextDialogue = 51009241
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 510093271,
+    MaxKey = 710072091,
+    Loader = function()
+      return {
         [510093271] = {
           Content = "有印象",
           ContentTC = "有印象",
           DialogueId = 510093271,
           GUID = "510093271.0",
           NextDialogue = 51009418
-        }
-      }
-    end
-  },
-  {
-    MinKey = 510093272,
-    MaxKey = 710072092,
-    Loader = function()
-      return {
+        },
         [510093272] = {
           Content = "没印象",
           ContentTC = "沒印象",
@@ -303303,7 +303306,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "710072091.0",
           NextDialogue = 71007210,
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 710072092,
+    MaxKey = 741147165,
+    Loader = function()
+      return {
         [710072092] = {
           Content = "黑市商人价格便宜，买他的更实惠。",
           ContentTC = "黑市商人價格便宜，買他的更實惠。",
@@ -303311,15 +303322,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "710072092.0",
           NextDialogue = 71007210,
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 710075031,
-    MaxKey = 741147166,
-    Loader = function()
-      return {
+        },
         [710075031] = {
           Content = "（接受。）",
           ContentTC = "（接受。）",
@@ -305199,7 +305202,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114707:p(-90)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147166,
+    MaxKey = 741147392,
+    Loader = function()
+      return {
         [741147166] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "R180",
@@ -305209,15 +305220,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114707:p(-180)"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147167,
-    MaxKey = 741147393,
-    Loader = function()
-      return {
+        },
         [741147167] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Agree",
@@ -307195,7 +307198,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114737:p(-90)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147393,
+    MaxKey = 741148013,
+    Loader = function()
+      return {
         [741147393] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "R180",
@@ -307205,15 +307216,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114737:p(-180)"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147394,
-    MaxKey = 741148014,
-    Loader = function()
-      return {
+        },
         [741147394] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Agree",
@@ -309196,7 +309199,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114751:Explain02_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148014,
+    MaxKey = 741148721,
+    Loader = function()
+      return {
         [741148014] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Explain02_End",
@@ -309206,15 +309217,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114751:Explain02_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148015,
-    MaxKey = 741148722,
-    Loader = function()
-      return {
+        },
         [741148015] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Give",
@@ -311181,7 +311184,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114765:Talk01_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148722,
+    MaxKey = 741149505,
+    Loader = function()
+      return {
         [741148722] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Talk02_Start",
@@ -311191,15 +311202,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114765:Talk02_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148723,
-    MaxKey = 741149506,
-    Loader = function()
-      return {
+        },
         [741148723] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Talk02_End",
@@ -313181,7 +313184,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114781:Agree"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149506,
+    MaxKey = 800305082,
+    Loader = function()
+      return {
         [741149506] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Angry01_Start",
@@ -313191,15 +313202,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114781:Angry01_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741149507,
-    MaxKey = 800305091,
-    Loader = function()
-      return {
+        },
         [741149507] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Angry01_End",
@@ -314992,22 +314995,22 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TriggerCondition = {
             IsGirl = {}
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 800305091,
+    MaxKey = 801604261,
+    Loader = function()
+      return {
         [800305091] = {
           Content = "你自己怎么不扮？",
           ContentTC = "你自己怎麼不扮？",
           DialogueId = 800305091,
           GUID = "800305091.0",
           NextDialogue = 80030510
-        }
-      }
-    end
-  },
-  {
-    MinKey = 800305092,
-    MaxKey = 801701051,
-    Loader = function()
-      return {
+        },
         [800305092] = {
           Content = "？",
           ContentTC = "？",
@@ -316398,22 +316401,22 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 801604261,
           GUID = "801604261.0",
           NextDialogue = 80160427
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 801701051,
+    MaxKey = 7411482302,
+    Loader = function()
+      return {
         [801701051] = {
           Content = "不可思议。",
           ContentTC = "不可思議。",
           DialogueId = 801701051,
           GUID = "801701051.0",
           NextDialogue = 80170108
-        }
-      }
-    end
-  },
-  {
-    MinKey = 801701052,
-    MaxKey = 7411482302,
-    Loader = function()
-      return {
+        },
         [801701052] = {
           Content = "怎么做到的，教教我。",
           ContentTC = "怎麼做到的，教教我。",

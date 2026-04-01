@@ -200,7 +200,7 @@ return {
             key = "1770278557956386838",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1265.3223684210527, y = 387.07236842105266},
+            pos = {x = 1185.3223684210527, y = 401.07236842105266},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -658,12 +658,18 @@ return {
           {
             startQuest = "17726780281113640598",
             startPort = "Fail",
-            endQuest = "1770278590773387501",
-            endPort = "Fail"
+            endQuest = "17749670518103846090",
+            endPort = "In"
           },
           {
             startQuest = "17726780281113640598",
             startPort = "PassiveFail",
+            endQuest = "17749670518103846090",
+            endPort = "In"
+          },
+          {
+            startQuest = "17749670518103846090",
+            startPort = "Out",
             endQuest = "1770278590773387501",
             endPort = "Fail"
           }
@@ -680,14 +686,14 @@ return {
             key = "1770278590773387498",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1530.0483391737264, y = 1760.1438905521723},
+            pos = {x = 1659.6911963165835, y = 1762.2867476950294},
             propsData = {ModeType = 0}
           },
           ["1770278590773387501"] = {
             key = "1770278590773387501",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1526.3526179702656, y = 2014.0536522301227},
+            pos = {x = 1674.2097608274084, y = 1952.982223658694},
             propsData = {}
           },
           ["1770278685719387942"] = {
@@ -1180,6 +1186,21 @@ return {
               MessageContent = "JuezhanLightEnd",
               UnitId = -1
             }
+          },
+          ["17749670518103846090"] = {
+            key = "17749670518103846090",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 1359.223405470108, y = 1933.9406447133429},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "StartPoint_200318fushuBack",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = true,
+              bForceAsyncLoading = true,
+              IsWhite = false
+            }
           }
         },
         commentData = {
@@ -1331,16 +1352,22 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17737297226706683643",
+            startQuest = "1770281440102396712",
             startPort = "Out",
-            endQuest = "1770281427083396372",
+            endQuest = "17749649288452828",
             endPort = "In"
           },
           {
-            startQuest = "1770281440102396712",
+            startQuest = "17749649288452828",
             startPort = "Out",
             endQuest = "1770279360195395041",
             endPort = "Success"
+          },
+          {
+            startQuest = "17748664896837243856",
+            startPort = "Out",
+            endQuest = "1770281427083396372",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1355,7 +1382,7 @@ return {
             key = "1770279360195395041",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1998.9473684210527, y = 344.9473684210526},
+            pos = {x = 2300.311004784689, y = 351.76555023923447},
             propsData = {ModeType = 0}
           },
           ["1770279360195395044"] = {
@@ -1369,7 +1396,7 @@ return {
             key = "1770281427083396372",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1037.5, y = 336.5},
+            pos = {x = 1075.6818181818182, y = 356.95454545454544},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1580,6 +1607,17 @@ return {
               ClientRelatedRegionId = {104501, 104503},
               bStoreToServer = false
             }
+          },
+          ["17749649288452828"] = {
+            key = "17749649288452828",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1998.0426470588238, y = 351.7727272727273},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}
@@ -1762,10 +1800,10 @@ return {
             key = "17744381996842125567",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = -306.9766801825629, y = 1551.0801551389786},
+            pos = {x = -306.9766801825629, y = 1553.0801551389786},
             propsData = {
               UnitId = 0,
-              NewTargetPointName = "StartPoint_200318fushu1",
+              NewTargetPointName = "StartPoint_200318fushuBack",
               FadeIn = false,
               FadeOut = false,
               bResetCamera = true,
@@ -2092,12 +2130,18 @@ return {
           {
             startQuest = "1773060070761451259",
             startPort = "Fail",
-            endQuest = "1770282194593398364",
-            endPort = "Fail"
+            endQuest = "17749672032326404799",
+            endPort = "In"
           },
           {
             startQuest = "1773060070761451259",
             startPort = "PassiveFail",
+            endQuest = "17749672032326404799",
+            endPort = "In"
+          },
+          {
+            startQuest = "17749672032326404799",
+            startPort = "Out",
             endQuest = "1770282194593398364",
             endPort = "Fail"
           }
@@ -2114,14 +2158,14 @@ return {
             key = "1770282194593398363",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 216.86352450439233, y = 328.52766995646226},
+            pos = {x = 255.26352450439234, y = 328.52766995646226},
             propsData = {ModeType = 0}
           },
           ["1770282194593398364"] = {
             key = "1770282194593398364",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 215.50547223674192, y = 543.0717341482048},
+            pos = {x = 436.30547223674193, y = 504.6717341482048},
             propsData = {}
           },
           ["1773059612624446660"] = {
@@ -2164,8 +2208,23 @@ return {
             key = "1773060070761451259",
             type = "WaitingSpecialQuestStartAndFinishNode",
             name = "等待特殊任务开始并完成",
-            pos = {x = -162.8305194805193, y = 337.8766233766235},
+            pos = {x = -171.23051948051932, y = 335.47662337662354},
             propsData = {SpecialConfigId = 20031808, BlackScreenImmediately = true}
+          },
+          ["17749672032326404799"] = {
+            key = "17749672032326404799",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 97.24533758071252, y = 499.8979153816079},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "StartPoint_200318fushuBack",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = true,
+              bForceAsyncLoading = true,
+              IsWhite = false
+            }
           }
         },
         commentData = {}

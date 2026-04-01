@@ -457,31 +457,53 @@ T.RT_198 = {
   LocationOffset = T.RT_197
 }
 T.RT_199 = {
-  Arm_L = "hand_left01_b",
-  Arm_L1 = "hand_left01_c",
-  Arm_L2 = "lowerarm_l",
-  Arm_R = "hand_right01_b",
-  Arm_R1 = "hand_right01_c",
-  Arm_R2 = "lowerarm_r",
-  FootL = "foot_left01_b",
-  FootL1 = "foot_left01_c",
-  FootR = "foot_right01_b",
-  FootR1 = "foot_right01_c",
-  Foot_L3 = "calf_l",
-  Foot_R3 = "calf_r",
-  Middle = "spine01",
-  Tail = "tail_f"
-}
-T.RT_200 = {
   70,
   100,
   0
 }
-T.RT_201 = {
+T.RT_200 = {
   CondemnSocket = "Root",
-  LocationOffset = T.RT_200
+  LocationOffset = T.RT_199
 }
-T.RT_202 = {CondemnSocket = "Jaw02"}
+T.RT_201 = {CondemnSocket = "Jaw02"}
+T.RT_202 = {
+  FootL = "Finger_L_02_a",
+  FootL1 = "Hand_l",
+  FootL2 = "Finger_L_01_a",
+  FootL4 = "Finger_L_03_c",
+  FootR = "Hand_r",
+  FootR1 = "Finger_R_01_b",
+  FootR2 = "Finger_R_02_b",
+  FootR3 = "Finger_R_03_b",
+  FootR4 = "Finger_R_01_c",
+  FootR5 = "Finger_R_02_c",
+  FootR6 = "Finger_R_03_c",
+  Foot_L3 = "Finger_L_03_a",
+  Foot_L5 = "Finger_L_02_c",
+  Foot_L6 = "Finger_L_01_c",
+  Head = "Head",
+  Neck01 = "Neck_01",
+  Neck02 = "Neck_02",
+  Neck03 = "Neck_03",
+  Spine01 = "Spine_01",
+  Spine02 = "Spine_02",
+  Spine03 = "Spine_03",
+  Spine04 = "Spine_04",
+  Spine05 = "Spine_05",
+  Tail01 = "Tail_01",
+  Tail02 = "Tail_02",
+  Tail03 = "Tail_03",
+  Tail04 = "Tail_04",
+  Tail05 = "Tail_05",
+  Tail06 = "Tail_06",
+  Tail07 = "Tail_07",
+  Tail08 = "Tail_08",
+  Tail09 = "Tail_09",
+  Tail10 = "Tail_10",
+  Tail11 = "Tail_11",
+  Tail13 = "Tail_13",
+  Tail15 = "Tail_15"
+}
 T.RT_203 = {
   60,
   -80,
@@ -4679,6 +4701,7 @@ return ReadOnly("Model", {
       Socket = "Root",
       Visible = 0
     },
+    AdditionalFXID = {150490},
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Player/Suyi/ABP_Suyi.ABP_Suyi_C'",
     AssistSockets = T.RT_1,
     AudioPrefix = "Suyi01_",
@@ -5823,7 +5846,22 @@ return ReadOnly("Model", {
         -100
       }
     },
-    HitCapsules = T.RT_199,
+    HitCapsules = {
+      Arm_L = "hand_left01_b",
+      Arm_L1 = "hand_left01_c",
+      Arm_L2 = "lowerarm_l",
+      Arm_R = "hand_right01_b",
+      Arm_R1 = "hand_right01_c",
+      Arm_R2 = "lowerarm_r",
+      FootL = "foot_left01_b",
+      FootL1 = "foot_left01_c",
+      FootR = "foot_right01_b",
+      FootR1 = "foot_right01_c",
+      Foot_L3 = "calf_l",
+      Foot_R3 = "calf_r",
+      Middle = "spine01",
+      Tail = "tail_f"
+    },
     HitMontageRule = "BossShijingzhe",
     ModelId = 850301,
     MontageFolder = "/Game/Asset/Char/Monster/Boss03_Shijingzhe/Animation/Montage/",
@@ -5930,7 +5968,7 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Tuosi_",
     AvatarExpressionPrefix = "Tuosi02_",
-    CondemnBoneName = T.RT_201,
+    CondemnBoneName = T.RT_200,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossTuosi",
     ModelId = 850901,
@@ -5945,7 +5983,7 @@ return ReadOnly("Model", {
     AssistSockets = T.RT_4,
     AudioPrefix = "Boss_Tuosi_",
     AvatarExpressionPrefix = "Tuosi02_",
-    CondemnBoneName = T.RT_201,
+    CondemnBoneName = T.RT_200,
     DamageFXSockets = T.RT_4,
     HitMontageRule = "BossTuosi",
     ModelId = 850902,
@@ -5959,8 +5997,8 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_10_Heilong/ABP_Boss_Heilong.ABP_Boss_Heilong_C'",
     AssistSockets = T.RT_3,
     AudioPrefix = "Boss_Heilong_",
-    CondemnBoneName = T.RT_202,
-    HitCapsules = T.RT_199,
+    CondemnBoneName = T.RT_201,
+    HitCapsules = T.RT_202,
     HitMontageRule = "BossShijingzhe",
     ModelId = 851001,
     ModelScale = 1,
@@ -5980,8 +6018,8 @@ return ReadOnly("Model", {
     AnimInstancePath = "AnimBlueprint'/Game/AssetDesign/Char/Monster/Boss_10_Heilong/ABP_Boss_Heilong.ABP_Boss_Heilong_C'",
     AssistSockets = T.RT_3,
     AudioPrefix = "Boss_Heilong_",
-    CondemnBoneName = T.RT_202,
-    HitCapsules = T.RT_199,
+    CondemnBoneName = T.RT_201,
+    HitCapsules = T.RT_202,
     HitMontageRule = "BossShijingzhe",
     ModelId = 851101,
     ModelScale = 1,

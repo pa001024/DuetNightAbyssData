@@ -4018,7 +4018,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
     GuideInfo = T.RT_61,
-    GuideType = 0,
+    GuideType = 1,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 950,
@@ -7797,6 +7797,17 @@ return ReadOnly("Mechanism", {
     StateIdList = {1210600, 1210601},
     UnitBPPath = "/Game/AssetDesign/Item/East_02/BP_YYG_Cel.BP_YYG_Cel",
     UnitId = 121060,
+    UnitRealType = "Mechanism"
+  },
+  [121061] = {
+    FirstStateId = 1210610,
+    StateIdList = {
+      1210610,
+      1210611,
+      1210612
+    },
+    UnitBPPath = "/Game/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_RebsignPawn.BP_RebsignPawn",
+    UnitId = 121061,
     UnitRealType = "Mechanism"
   },
   [122011] = {

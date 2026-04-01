@@ -172,7 +172,7 @@ function TouchComponent:MouseOrTouchButtonDown(InGeometry, InGestureEvent)
     local ParentWidgetNode = self.AllParentWidget[k]
     local WidgetLocalScale = ParentWidgetNode and ParentWidgetNode.RenderTransform.Scale.X or 1.0
     local ParentSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(ParentWidgetNode)
-    local ParentAlignment = ParentSlot:GetAlignment()
+    local ParentAlignment = ParentSlot and ParentSlot:GetAlignment() or FVector2D(1, 0)
     local StartCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * (ParentAlignment.X - 1)
     local EndCamparePosX = WidgetWorldPos.X + WidgetWorldSize.X * WidgetLocalScale * ParentAlignment.X
     if StartCamparePosX <= ScreenSpacePosition.X and EndCamparePosX >= ScreenSpacePosition.X and ScreenSpacePosition.Y >= WidgetWorldPos.Y and ScreenSpacePosition.Y <= WidgetWorldPos.Y + WidgetWorldSize.Y * WidgetLocalScale then

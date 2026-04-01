@@ -3,6 +3,7 @@ local TimeUtils = require("Utils.TimeUtils")
 local ItemPath = "/Game/UI/WBP/Armory/Widget/Record/WBP_Armory_FileItem.WBP_Armory_FileItem"
 local FileListPath = "/Game/UI/WBP/Armory/Widget/Record/WBP_Armory_FileList.WBP_Armory_FileList"
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local RecordTag = ArmoryUtils.FilesTabType[2]
 local VoiceTag = ArmoryUtils.FilesTabType[1]
 local CharModel = require("BluePrints.Common.MVC.Model.CharModel")
@@ -695,8 +696,8 @@ function M:OnCharVoiceSubTabSelected(TabWidget)
         Obj.Details = WildcardSubsystem:ReplaceWildcard(GText(Data.VoiceText and Data.VoiceText[1]))
         Obj.VoiceRes = Data.VoiceRes and Data.VoiceRes[1]
         if Data.Dialogue then
-          local Dialogue = DataMgr.Dialogue[Data.Dialogue]
-          Obj.CharDetails = GText(Dialogue.Content)
+          local Dialogue = TalkUtils:DialogueIdToContent(Data.Dialogue)
+          Obj.CharDetails = GText(Dialogue)
         end
       end
       Obj.OnBtnClicked = self.OnPlayVoiceBtnClicked

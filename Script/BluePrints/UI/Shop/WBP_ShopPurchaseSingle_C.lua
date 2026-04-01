@@ -1087,12 +1087,14 @@ function M:OnGamePadDown(InKeyName)
     end
     self:UpdateUIByCurrentState()
   elseif InKeyName == UIConst.GamePadKey.SpecialRight then
-    local WalnutDataTable = DataMgr.Walnut[self.ShopItemData.TypeId]
-    if WalnutDataTable.MainRewardType == "Char" or WalnutDataTable.MainRewardType == "Weapon" then
-      self.Btn_Suit:OnViewInfoHover()
-    elseif WalnutDataTable.MainRewardType == "Mod" then
-      self.FocusOnSubItem = true
-      self:OnWalnutModDetailsClick()
+    if self.ShopItemData.ItemType == "Walnut" then
+      local WalnutDataTable = DataMgr.Walnut[self.ShopItemData.TypeId]
+      if WalnutDataTable and (WalnutDataTable.MainRewardType == "Char" or WalnutDataTable.MainRewardType == "Weapon") then
+        self.Btn_Suit:OnViewInfoHover()
+      elseif WalnutDataTable and WalnutDataTable.MainRewardType == "Mod" then
+        self.FocusOnSubItem = true
+        self:OnWalnutModDetailsClick()
+      end
     end
     self:UpdateUIByCurrentState()
   elseif InKeyName == UIConst.GamePadKey.FaceButtonRight and self.FocusOnSubItem then
@@ -1108,9 +1110,9 @@ end
 
 function M:OnGamePadUp(InKeyName)
   local IsEventHandled = self.Com_Slider:Handle_KeyUpEventOnGamePad(InKeyName)
-  if InKeyName == UIConst.GamePadKey.SpecialRight then
+  if InKeyName == UIConst.GamePadKey.SpecialRight and self.ShopItemData.ItemType == "Walnut" then
     local WalnutDataTable = DataMgr.Walnut[self.ShopItemData.TypeId]
-    if WalnutDataTable.MainRewardType == "Char" or WalnutDataTable.MainRewardType == "Weapon" then
+    if WalnutDataTable and (WalnutDataTable.MainRewardType == "Char" or WalnutDataTable.MainRewardType == "Weapon") then
       self.Btn_Suit:OnViewInfoUnHover()
     end
   end
@@ -1150,7 +1152,9 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     self:UpdateUIByCurrentState()
   else
     if not self.bTipsOpen then
-      self.Owner:SetFocus()
+      if self.Owner and (self.Owner:HasFocusedDescendants() or self.Owner:HasAnyUserFocus()) then
+        self.Owner:SetFocus()
+      end
       self.FocusOnSubItem = false
     end
     self:UpdateUIByCurrentState()

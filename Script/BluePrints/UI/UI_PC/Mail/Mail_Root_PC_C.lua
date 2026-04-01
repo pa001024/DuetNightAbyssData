@@ -614,7 +614,8 @@ function M:GetMailInfo(Content)
   if -1 == Content.MailId then
     MailInfo.MailTitle = Mail.MailTitle[self.CurrentSystemLanguage] or Mail.MailTitle.CN
     MailInfo.MailTimeLimit = CommonConst.GMMailTimeLimit
-    MailInfo.MailContent = GText(Mail.MailContent[self.CurrentSystemLanguage] or Mail.MailContent.CN)
+    local MailTextKey = string.trim(Mail.MailContent[self.CurrentSystemLanguage] or Mail.MailContent.CN)
+    MailInfo.MailContent = GText(MailTextKey)
   else
     local MailData = DataMgr.Mail[Content.MailId]
     MailInfo.MailSenderId = MailData.MailSenderId

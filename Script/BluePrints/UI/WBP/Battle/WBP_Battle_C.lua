@@ -228,6 +228,10 @@ function WBP_Battle_C:OnGameLanguageChanged()
       TaskBar:UpdateTaskInfo(STLTaskInfo, "Add")
     end
   end
+  local CurDungeonType = WorldTravelSubsystem():GetCurrentDungeonType()
+  if CurDungeonType == CommonConst.DungeonType.SoloTreasure then
+    UIManager(self):LoadUINew("SoloTreasureCountDownTip", true)
+  end
 end
 
 function WBP_Battle_C:GetOrAddWidget(WidgetName, NodeToAdd)
@@ -1720,6 +1724,10 @@ function WBP_Battle_C:PlayInAnim()
 end
 
 function WBP_Battle_C:_RefreshEscReddot()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar:IsInBigWorld() then
+    return
+  end
   local Node = ReddotManager.GetTreeNode("BattleMainMenu")
   if Node then
     Node:TryFireOnCountChange(Node.Count, true)

@@ -465,6 +465,12 @@ function M:Close()
   M.Super.Close(self)
 end
 
+function M:Destruct()
+  if IsValid(self.GameInputModeSubsystem) then
+    self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+  end
+end
+
 function M:InitListenEvent()
 end
 
@@ -484,7 +490,7 @@ function M:RefreshBaseInfo()
         Owner = self
       }
     },
-    GamePadInfoLst = {
+    GamePadInfoList = {
       {
         Type = "Img",
         ImgShortPath = "Y",
@@ -699,15 +705,15 @@ function M:OnGamePadDown(InKeyName)
 end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
+  local IsFirstUpdate = self.CurInputDeviceType == nil
   self.CurInputDeviceType = CurInputType
   if PersonInfoController.CurPage == PersonInfoController.PageEnum.EditPage and IsValid(PersonInfoController.EditPage) then
     PersonInfoController.EditPage:SetFocus()
     PersonInfoController.EditPage:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
   elseif PersonInfoController.CurPage == PersonInfoController.PageEnum.MainPage and IsValid(PersonInfoController.MainPage) then
-    if not self:HasAnyFocus() then
+    if not IsFirstUpdate and not self:HasAnyFocus() then
       return
     end
-    self.PersonInfoMainPage.CurInputDeviceType = CurInputType
     if CurInputType == ECommonInputType.Gamepad then
       if self.PersonInfoMainPage then
         if not UIManager(self):GetUIObj("CommonDialog") then

@@ -585,6 +585,9 @@ function M:PCToGamepad()
   if not self.Panel_Key_GamePad then
     return
   end
+  if not self:HasFocusedDescendants() and not self:HasAnyUserFocus() then
+    return
+  end
   self.Panel_Key_GamePad:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   if self.DetailWidget and self.DetailWidget.WalnutChoice == true then
     self.DetailWidget.State = 0
@@ -841,7 +844,7 @@ end
 function M:CheckIsAutoMode()
   local Avatar = GWorld:GetAvatar()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
-  if not IsStandAlone(GameState) then
+  if not IsStandAlone(self) then
     return
   end
   if not Avatar then

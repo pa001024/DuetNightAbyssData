@@ -208,7 +208,7 @@ T.RT_62 = {
 }
 T.RT_63 = {
   BoxHeight = 200,
-  BoxLength = 50,
+  BoxLength = 300,
   BoxWidth = 1250,
   ShapeType = "Box"
 }
@@ -2795,6 +2795,7 @@ return ReadOnly("SkillCreature", {
     RefreshTargetRule = 1,
     ShapeInfo = T.RT_136,
     Speed = 0,
+    TickCollision = true,
     TimeLife = -1,
     WindInfo = T.RT_40
   },

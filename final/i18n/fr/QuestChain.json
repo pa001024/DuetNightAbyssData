@@ -3099,7 +3099,7 @@
   },
   {
     "id": 120201,
-    "name": "皓京来客",
+    "name": "Un visiteur à Haojing",
     "chapterName": "Chroniques du Monde",
     "chapterNumber": "Huaxu",
     "episode": "Là où se lève le vent, interroger l’Azur",
@@ -3109,7 +3109,7 @@
       50538
     ],
     "questReward": {
-      "12020103": 4000022
+      "12020105": 4000022
     },
     "quests": [
       {
@@ -3225,7 +3225,7 @@
   },
   {
     "id": 120202,
-    "name": "叩请问天",
+    "name": "Implorer les cieux",
     "chapterName": "Chroniques du Monde",
     "chapterNumber": "Huaxu",
     "episode": "Là où se lève le vent, interroger l’Azur",
@@ -3327,7 +3327,7 @@
   },
   {
     "id": 120203,
-    "name": "山外有山",
+    "name": "Au-delà des montagnes",
     "chapterName": "Chroniques du Monde",
     "chapterNumber": "Huaxu",
     "episode": "Là où se lève le vent, interroger l’Azur",
@@ -3499,7 +3499,7 @@
   },
   {
     "id": 120204,
-    "name": "钧天之危",
+    "name": "La crise de Juntian",
     "chapterName": "Chroniques du Monde",
     "chapterNumber": "Huaxu",
     "episode": "Là où se lève le vent, interroger l’Azur",
@@ -3604,7 +3604,7 @@
   },
   {
     "id": 120205,
-    "name": "山雨欲来",
+    "name": "L’orage approche",
     "chapterName": "Chroniques du Monde",
     "chapterNumber": "Huaxu",
     "episode": "Là où se lève le vent, interroger l’Azur",
@@ -3713,7 +3713,7 @@
   },
   {
     "id": 120206,
-    "name": "重铸黑白",
+    "name": "Reforger la dualité",
     "chapterName": "Chroniques du Monde",
     "chapterNumber": "Huaxu",
     "episode": "Là où se lève le vent, interroger l’Azur",
@@ -6604,144 +6604,6 @@
     ]
   },
   {
-    "id": 200317,
-    "name": "若言琴上有琴声",
-    "chapterName": "Chroniques du Monde",
-    "episode": "若言琴上有琴声",
-    "desc": "与逍遥生对话",
-    "detail": "在皓京周边与白闲逛之时，竟在路边看到了一位熟悉的无由生，如果没有记错的话，它的名字应该叫逍遥生，多少也算是有“过命”交情的“熟人”，你们决定上前搭话。",
-    "type": 3,
-    "reward": [
-      50629
-    ],
-    "quests": [
-      {
-        "id": 20031700,
-        "sr": 104504,
-        "next": {
-          "Success": 20031701
-        }
-      },
-      {
-        "id": 20031701,
-        "sr": 104504,
-        "next": {
-          "Success": 20031702
-        }
-      },
-      {
-        "id": 20031702,
-        "sr": 104504,
-        "next": {
-          "Success": 20031703
-        }
-      },
-      {
-        "id": 20031703,
-        "sr": 104504,
-        "next": {
-          "Success": 20031704
-        }
-      },
-      {
-        "id": 20031704,
-        "sr": 104504,
-        "next": {
-          "Success": 20031705
-        }
-      },
-      {
-        "id": 20031705,
-        "sr": 104504,
-        "next": {
-          "Success": 20031706
-        }
-      },
-      {
-        "id": 20031706,
-        "sr": 104504,
-        "next": {
-          "Success": 20031707
-        }
-      },
-      {
-        "id": 20031707,
-        "sr": 104504,
-        "next": {
-          "Success": 20031708
-        }
-      },
-      {
-        "id": 20031708,
-        "sr": 104504,
-        "next": {
-          "Success": 20031710
-        }
-      },
-      {
-        "id": 20031710,
-        "sr": 104504,
-        "next": {
-          "Success": 20031711
-        }
-      },
-      {
-        "id": 20031711,
-        "sr": 104504
-      }
-    ]
-  },
-  {
-    "id": 200318,
-    "name": "忘川回响",
-    "chapterName": "Chroniques du Monde",
-    "episode": "忘川回响",
-    "type": 3,
-    "reward": [
-      50630
-    ],
-    "quests": [
-      {
-        "id": 20031801,
-        "sr": 104501,
-        "next": {
-          "Success": 20031803
-        }
-      },
-      {
-        "id": 20031803,
-        "sr": 104501,
-        "next": {
-          "Success": 20031805
-        }
-      },
-      {
-        "id": 20031805,
-        "sr": 104501,
-        "next": {
-          "Success": 20031806
-        }
-      },
-      {
-        "id": 20031806,
-        "sr": 104501,
-        "next": {
-          "Success": 20031807
-        }
-      },
-      {
-        "id": 20031807,
-        "next": {
-          "Success": 20031808
-        }
-      },
-      {
-        "id": 20031808,
-        "sr": 104501
-      }
-    ]
-  },
-  {
     "id": 400101,
     "name": "Mission de chasse (I)",
     "chapterName": "Chroniques du Monde",
@@ -6944,9 +6806,9 @@
   },
   {
     "id": 400121,
-    "name": "定格的往事·旧日残光",
+    "name": "Souvenirs figés : Lueurs du passé",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·旧日残光",
+    "episode": "Souvenirs figés : Lueurs du passé",
     "type": 5,
     "reward": [
       50614
@@ -6969,9 +6831,9 @@
   },
   {
     "id": 400122,
-    "name": "定格的往事·第一缕风",
+    "name": "Souvenirs figés : Premier souffle",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·第一缕风",
+    "episode": "Souvenirs figés : Premier souffle",
     "type": 5,
     "reward": [
       50615
@@ -6987,9 +6849,9 @@
   },
   {
     "id": 400123,
-    "name": "定格的往事·坚冰中绽放",
+    "name": "Souvenirs figés : Éclosion dans la glace",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·坚冰中绽放",
+    "episode": "Souvenirs figés : Éclosion dans la glace",
     "type": 5,
     "reward": [
       50616
@@ -7005,9 +6867,9 @@
   },
   {
     "id": 400124,
-    "name": "定格的往事·无光的舞台",
+    "name": "Souvenirs figés : Scène sans lumière",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·无光的舞台",
+    "episode": "Souvenirs figés : Scène sans lumière",
     "type": 5,
     "reward": [
       50617
@@ -7023,9 +6885,9 @@
   },
   {
     "id": 400125,
-    "name": "定格的往事·璀璨终曲",
+    "name": "Souvenirs figés : Final éclatant",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·璀璨终曲",
+    "episode": "Souvenirs figés : Final éclatant",
     "type": 5,
     "reward": [
       50618
@@ -7041,9 +6903,9 @@
   },
   {
     "id": 400126,
-    "name": "定格的往事·织星撷香",
+    "name": "Souvenirs figés : Tisser les étoiles, cueillir leurs parfums",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·织星撷香",
+    "episode": "Souvenirs figés : Tisser les étoiles, cueillir leurs parfums",
     "type": 5,
     "reward": [
       50619
@@ -7059,9 +6921,9 @@
   },
   {
     "id": 400127,
-    "name": "定格的往事·神阙弈天",
+    "name": "Souvenirs figés : Stratégie céleste",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·神阙弈天",
+    "episode": "Souvenirs figés : Stratégie céleste",
     "type": 5,
     "reward": [
       50620
@@ -7077,9 +6939,9 @@
   },
   {
     "id": 400128,
-    "name": "定格的往事·序章",
+    "name": "Souvenirs figés : Prologue",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·序章",
+    "episode": "Souvenirs figés : Prologue",
     "type": 5,
     "reward": [
       50612
@@ -7109,9 +6971,9 @@
   },
   {
     "id": 400129,
-    "name": "定格的往事·后日谈",
+    "name": "Souvenirs figés : Épilogue",
     "chapterName": "Chapitre du Vagabond de la Nuit",
-    "episode": "定格的往事·后日谈",
+    "episode": "Souvenirs figés : Épilogue",
     "type": 5,
     "reward": [
       50613

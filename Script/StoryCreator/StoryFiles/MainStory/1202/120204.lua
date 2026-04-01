@@ -1261,7 +1261,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",

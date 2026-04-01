@@ -1649,6 +1649,24 @@ return {
             startPort = "Out",
             endQuest = "177443502176018519",
             endPort = "In"
+          },
+          {
+            startQuest = "1742891256129713537",
+            startPort = "QuestStart",
+            endQuest = "177495346748012315",
+            endPort = "In"
+          },
+          {
+            startQuest = "177495346748012315",
+            startPort = "Out",
+            endQuest = "17507740040452322389",
+            endPort = "In"
+          },
+          {
+            startQuest = "17619016888788210319",
+            startPort = "Out",
+            endQuest = "177495346748012315",
+            endPort = "Stop"
           }
         },
         nodeData = {
@@ -1812,7 +1830,7 @@ return {
             key = "17619016888788210319",
             type = "GoToNode",
             name = "去楼梯",
-            pos = {x = 1820.8892970839904, y = 859.9199636680453},
+            pos = {x = 1796.444852639546, y = 849.9199636680453},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2350037,
@@ -1866,6 +1884,18 @@ return {
             name = "延迟等待",
             pos = {x = 1545.6883116883116, y = 595.1753246753244},
             propsData = {WaitTime = 1}
+          },
+          ["177495346748012315"] = {
+            key = "177495346748012315",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 1763.7777777777778, y = 1124.2222222222222},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 242350051,
+              GuideType = "N",
+              GuidePointName = ""
+            }
           }
         },
         commentData = {
@@ -3193,7 +3223,7 @@ return {
       propsData = {
         QuestId = 12020212,
         QuestDescriptionComment = "",
-        QuestDescription = "Description_120202_12",
+        QuestDescription = "East02_Time_EscapePC",
         QuestDeatil = "Content_120202_12",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -3203,7 +3233,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -3241,12 +3271,6 @@ return {
             startQuest = "176587522571614766511",
             startPort = "true",
             endQuest = "176587547356717927754",
-            endPort = "In"
-          },
-          {
-            startQuest = "17726334403016145194",
-            startPort = "Out",
-            endQuest = "17509396694982305116",
             endPort = "In"
           },
           {
@@ -3319,6 +3343,18 @@ return {
             startQuest = "177358157512311377",
             startPort = "Out",
             endQuest = "177358157512311374",
+            endPort = "In"
+          },
+          {
+            startQuest = "17726334403016145194",
+            startPort = "Out",
+            endQuest = "17749400069349264",
+            endPort = "In"
+          },
+          {
+            startQuest = "17749400069349264",
+            startPort = "Out",
+            endQuest = "17509396694982305116",
             endPort = "In"
           }
         },
@@ -3762,6 +3798,17 @@ return {
               RelatedRegionId = {},
               ClientRelatedRegionId = {104503},
               bStoreToServer = false
+            }
+          },
+          ["17749400069349264"] = {
+            key = "17749400069349264",
+            type = "UpdateTaskBarAndTaskMainNode",
+            name = "更新任务目标节点",
+            pos = {x = 2919.35, y = 859.875},
+            propsData = {
+              NewDescription = "Description_120202_12",
+              NewDetail = "",
+              SubTaskTargetIndex = 0
             }
           }
         },

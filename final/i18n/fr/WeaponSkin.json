@@ -17,7 +17,7 @@
   },
   {
     "id": 3010103,
-    "name": "荣耀撕裂者",
+    "name": "Déchireuse de gloire",
     "desc": "有些荣耀，唯有通过彻底的撕裂方能获得；而有些真相，唯有在链锯的轰鸣中才得以言说。",
     "icon": "T_Head_Claymore_Rongyao",
     "rarity": 5,
@@ -65,7 +65,7 @@
   },
   {
     "id": 3010109,
-    "name": "碧霄吟·重剑",
+    "name": "Chant du Firmament – Espadon",
     "desc": "",
     "icon": "T_Head_Claymore_Bixiao",
     "rarity": 5,
@@ -113,7 +113,7 @@
   },
   {
     "id": 3010206,
-    "name": "碧霄吟·单手剑",
+    "name": "Chant du Firmament – Épée",
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Sword_Bixiao",
     "rarity": 5,
@@ -145,7 +145,7 @@
   },
   {
     "id": 3010304,
-    "name": "碧霄吟·弓（长弓）",
+    "name": "Chant du Firmament – Arc long",
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
@@ -153,7 +153,7 @@
   },
   {
     "id": 3010305,
-    "name": "碧霄吟·弓（短弓）",
+    "name": "Chant du Firmament – Arc court",
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
@@ -273,7 +273,7 @@
   },
   {
     "id": 3010609,
-    "name": "碧霄吟·双刀",
+    "name": "Chant du Firmament – Doubles lames",
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Dualblade_Bixiao",
     "rarity": 5,
@@ -313,7 +313,7 @@
   },
   {
     "id": 3010709,
-    "name": "碧霄吟·太刀",
+    "name": "Chant du Firmament – Katana",
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Katana_Bixiao",
     "rarity": 5,
@@ -393,7 +393,7 @@
   },
   {
     "id": 3011003,
-    "name": "碧霄吟·霰弹枪",
+    "name": "Chant du Firmament – Fusil à pompe ",
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Shotgun_Bixiao",
     "rarity": 5,

@@ -566,12 +566,6 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "17649178318683135693",
-            startPort = "Out",
-            endQuest = "17633720063122026718",
-            endPort = "In"
-          },
-          {
             startQuest = "1763371608095677863",
             startPort = "QuestStart",
             endQuest = "17649178318683135693",
@@ -648,6 +642,12 @@ return {
             startPort = "Out",
             endQuest = "17745059280611273907",
             endPort = "In"
+          },
+          {
+            startQuest = "17707107244231158576",
+            startPort = "Out",
+            endQuest = "17633720063122026718",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -662,7 +662,7 @@ return {
             key = "1763371608095677866",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1801.4171122994653, y = 298.2352941176471},
+            pos = {x = 2092.4171122994653, y = 308.7352941176471},
             propsData = {ModeType = 0}
           },
           ["1763371608095677869"] = {
@@ -676,7 +676,7 @@ return {
             key = "17633720063122026718",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1403.0880202958379, y = 272.82120407971803},
+            pos = {x = 1757.0880202958379, y = 274.32120407971803},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -724,7 +724,7 @@ return {
             key = "17649178318683135693",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1087.622009569378, y = 266.4222488038278},
+            pos = {x = 1083.122009569378, y = 272.4222488038278},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 132010081,
@@ -823,7 +823,7 @@ return {
             key = "17685473107871108266",
             type = "ShowOrHideTaskIndicatorNode",
             name = "显示/隐藏任务指引点节点",
-            pos = {x = 1401.971479500891, y = 469.7196969696966},
+            pos = {x = 1398.971479500891, y = 448.7196969696966},
             propsData = {
               IsShow = false,
               bOpenRangeEffect = false,
@@ -895,7 +895,7 @@ return {
             key = "17707107244231158576",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1409.7899491812534, y = 659.6861983924005},
+            pos = {x = 1406.7899491812534, y = 298.18619839240046},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -953,7 +953,7 @@ return {
             key = "17745059280611273907",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1403.684210526316, y = 806.842105263158},
+            pos = {x = 1403.684210526316, y = 608.842105263158},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,

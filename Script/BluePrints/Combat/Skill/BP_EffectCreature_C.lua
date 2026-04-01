@@ -113,8 +113,8 @@ function BP_EffectCreature_C:InitEffectCreatureMeshInfo(EffectCreatureMesh, Mode
     ModelOffset = FVector(ModelOffset[1], ModelOffset[2], ModelOffset[3])
     self.SkeletalMesh:K2_AddLocalOffset(ModelOffset, false, nil, false)
   end
-  self:LoadEffectCreatureAnim()
   self:UpdateTickableWhenPaused()
+  self:LoadEffectCreatureAnim()
   self.IsLoadedMesh = true
   local Owner = self:GetOwner()
   if self.IsFireBattlePet and Owner and Owner:GetBattlePet() then

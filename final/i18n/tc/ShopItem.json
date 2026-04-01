@@ -13250,7 +13250,7 @@
                 "subTabId": 1401,
                 "sequence": 10005,
                 "startTime": 1775440800,
-                "cond": "获得机枢幻想·涅白",
+                "cond": "獲得機樞幻想·涅白",
                 "isSpPopup": 1
               },
               {
@@ -13266,7 +13266,7 @@
                 "subTabId": 1401,
                 "sequence": 10004,
                 "startTime": 1775440800,
-                "cond": "获得机枢幻想·锈红",
+                "cond": "獲得機樞幻想·銹紅",
                 "isSpPopup": 1
               },
               {
@@ -13282,7 +13282,7 @@
                 "subTabId": 1401,
                 "sequence": 10003,
                 "startTime": 1775440800,
-                "cond": "获得机枢幻想·墨玉",
+                "cond": "獲得機樞幻想·墨玉",
                 "isSpPopup": 1
               },
               {
@@ -13331,7 +13331,7 @@
                 "sequence": 1345,
                 "startTime": 1775440800,
                 "endTime": 1780866000,
-                "cond": "获得任意机枢幻想展示动作",
+                "cond": "獲得任意機樞幻想展示動作",
                 "isSpPopup": 1
               },
               {
@@ -15288,7 +15288,7 @@
                 "id": 120152,
                 "itemType": "Resource",
                 "typeId": 110017,
-                "typeName": "自选形象礼箱·不羁",
+                "typeName": "自選形象禮箱·不羈",
                 "price": 1280,
                 "priceType": 99,
                 "priceName": "月石晶胚",
@@ -15304,7 +15304,7 @@
                 "id": 120153,
                 "itemType": "Resource",
                 "typeId": 110017,
-                "typeName": "自选形象礼箱·不羁",
+                "typeName": "自選形象禮箱·不羈",
                 "price": 1280,
                 "priceType": 99,
                 "priceName": "月石晶胚",
@@ -15321,7 +15321,7 @@
                 "id": 120154,
                 "itemType": "Resource",
                 "typeId": 110017,
-                "typeName": "自选形象礼箱·不羁",
+                "typeName": "自選形象禮箱·不羈",
                 "price": 1280,
                 "priceType": 99,
                 "priceName": "月石晶胚",
@@ -15512,7 +15512,7 @@
                 "sequence": 105,
                 "startTime": 1775440800,
                 "endTime": 1780304400,
-                "cond": "获得太虚游·本色载具",
+                "cond": "獲得太虛遊·本色載具",
                 "isSpPopup": 1
               }
             ]

@@ -173,7 +173,7 @@
   {
     "id": 103014,
     "name": "The Incense Proving",
-    "desc": "At the Incense Proving — held to reassure the people of Huaxu and to determine the future of the realm — there stands a familiar figure clad in jade-green...\n\nTeam up with Su Yi, take on the challenge, and earn generous rewards.",
+    "desc": "At the Incense Proving — held to reassure the people of Huaxu and to determine the future of the realm — there stands a familiar figure clad in jade-green...\nTeam up with Su Yi, take on the challenge, and earn generous rewards.",
     "startTime": 1776909600,
     "endTime": null
   },
@@ -238,11 +238,11 @@
   },
   {
     "id": 103021,
-    "name": "Night Talks on the River of Forgetting",
+    "name": "Fading Echoes Adrift",
     "desc": "During the event, you can obtain skins from the [Whispers Unspoken] series and other skin rewards.",
     "startTime": 1777946400,
     "endTime": 1780304400,
-    "rule": "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n3、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n4、各奖励的初始获取概率如下\n角色形象：0.08%\n螺旋飞跃特效：0.92%\n背部装饰·上：1%\n头部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n5、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30\n"
+    "rule": "1. This event features 2 rounds, each containing 8 rewards. One of these rewards is the featured skin. Once you obtain the featured skin in a round, you will immediately receive all remaining rewards from that round.\n2. Before making your first weave in a round, you can freely adjust the featured skin and the selected rewards for that round. Once you have made a weave in that round, you will no longer be able to change the featured skin or selected rewards.\n3. Rewards within the same round will not be obtained more than once. As the number of remaining rewards decreases, the probability of obtaining each remaining reward increases proportionally. After completing a round, the reward probabilities reset to their initial values.\n4. The initial probabilities for each reward are as follows:\n[Character Skin]: 0.08%\n[Helix Leap Effect]: 0.92%\n[Upper-Backpiece]: 1%\n[Headpiece]: 2%\n[Avatar Frame]: 13%\n[Avatar]: 13%\n[Iridescent Dye ×3]: 35%\n[Commission Manual: Volume Ⅲ ×6]: 35%\n5. The number of Starweave Threads consumed per weave increases with the number of weaves made. After completing a round, the consumption amount resets to its initial value.\nStarweave Threads required per weave:\n1st weave: Starweave Thread ×1\n2nd weave: Starweave Thread ×3\n3rd weave: Starweave Thread ×6\n4th weave: Starweave Thread ×10\n5th weave: Starweave Thread ×15\n6th weave: Starweave Thread ×20\n7th weave: Starweave Thread ×25\n8th weave: Starweave Thread ×30"
   },
   {
     "id": 105001,

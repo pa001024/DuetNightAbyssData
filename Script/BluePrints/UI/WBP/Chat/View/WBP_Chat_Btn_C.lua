@@ -32,8 +32,10 @@ function M:HandleSendChatMessageCd(CDRemainTime)
     return
   end
   if CDRemainTime > 0 then
-    self.WS:SetActiveWidgetIndex(1)
-  else
+    if 1 ~= self.WS:GetActiveWidgetIndex() then
+      self.WS:SetActiveWidgetIndex(1)
+    end
+  elseif 0 ~= self.WS:GetActiveWidgetIndex() then
     self.WS:SetActiveWidgetIndex(0)
   end
 end

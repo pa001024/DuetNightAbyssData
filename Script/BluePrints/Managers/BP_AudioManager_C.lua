@@ -150,7 +150,7 @@ end
 function BP_AudioManager_C:PlayItemSound(Context, ItemId, Behavior, TableName)
   local Data = TableName and DataMgr[TableName]
   if Data and Data[ItemId] then
-    local Sound = Data[ItemId].Sound
+    local Sound = Data[ItemId].Sound or "SOUND_ITEM_NORMAL"
     local ItemSoundData = DataMgr.ItemSound[Sound]
     local SoundPath = ItemSoundData and ItemSoundData[(Behavior or "") .. "Sound"]
     if SoundPath then

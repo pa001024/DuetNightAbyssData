@@ -150,7 +150,9 @@ function M:PCToGamepad()
   if ModController:IsMobile() then
     return
   end
-  self:SetFocus()
+  if UIUtils.HasAnyFocus(self) then
+    self:SetFocus()
+  end
   self.Panel_Key_GamePad:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Key_Access:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self:UpdateCommonKeys("LS", GText("UI_Controller_CheckReward"), "B", GText("UI_Controller_Close"))

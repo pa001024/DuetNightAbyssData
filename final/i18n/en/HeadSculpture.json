@@ -121,13 +121,13 @@
   },
   {
     "id": 10022,
-    "name": "Portrait : Flora",
+    "name": "Portrait: Flora",
     "desc": "Unlocks Flora as your avatar icon.",
     "icon": "T_Head_Fuluo"
   },
   {
     "id": 10023,
-    "name": "生意人的肖像",
+    "name": "Portrait: The Merchant",
     "desc": "Unlocks Camilla as your avatar icon.",
     "icon": "T_Head_Kami"
   },

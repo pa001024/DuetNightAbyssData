@@ -358,6 +358,12 @@ return {
             startPort = "Out",
             endQuest = "1774864188259861984",
             endPort = "In"
+          },
+          {
+            startQuest = "1772436394469775",
+            startPort = "Out",
+            endQuest = "17746901952548513706",
+            endPort = "Stop"
           }
         },
         nodeData = {
@@ -400,7 +406,7 @@ return {
             key = "1772436357415555",
             type = "TalkNode",
             name = "【East02_FixSimple_25】玩家刻舟逃走落地进门",
-            pos = {x = 1997.529949883918, y = 1138.3695526223432},
+            pos = {x = 2000.6878446207602, y = 1139.9484999907643},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -451,7 +457,7 @@ return {
             key = "1772436394469775",
             type = "GoToNode",
             name = "主动成功",
-            pos = {x = 1757.1772600572003, y = 1140.4165157500815},
+            pos = {x = 1671.9141021624635, y = 1107.2586210132395},
             propsData = {
               GuideUIEnable = false,
               StaticCreatorId = 2010045,

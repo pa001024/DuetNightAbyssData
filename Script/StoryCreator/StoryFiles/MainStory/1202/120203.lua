@@ -917,7 +917,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1058,7 +1058,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1556,12 +1556,6 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "17696955641374186",
-            startPort = "Out",
-            endQuest = "17724387263815975090",
-            endPort = "In"
-          },
-          {
             startQuest = "17724387263815975090",
             startPort = "Success",
             endQuest = "17726919773388594714",
@@ -1598,12 +1592,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17724388359457166774",
-            startPort = "Out",
-            endQuest = "17724387263815975090",
-            endPort = "In"
-          },
-          {
             startQuest = "1742891256134715262",
             startPort = "QuestStart",
             endQuest = "17743673920089776567",
@@ -1619,6 +1607,12 @@ return {
             startQuest = "1742891256134715262",
             startPort = "QuestStart",
             endQuest = "17722026555293573",
+            endPort = "In"
+          },
+          {
+            startQuest = "176612901134723239086",
+            startPort = "Out",
+            endQuest = "17724387263815975090",
             endPort = "In"
           }
         },
@@ -1680,7 +1674,7 @@ return {
             key = "176612901134723239086",
             type = "SendMessageNode",
             name = "玩法开始",
-            pos = {x = 2741.8342957034906, y = 678.7235584669289},
+            pos = {x = 2672.6035264727216, y = 639.4927892361596},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "FindArrow_Start",
@@ -1691,7 +1685,7 @@ return {
             key = "17696955641374186",
             type = "TalkNode",
             name = "sub区域介绍",
-            pos = {x = 2565.7419663910437, y = 469.4196673908981},
+            pos = {x = 2445.7419663910437, y = 480.95812892935965},
             propsData = {
               IsNpcNode = false,
               TalkType = "LevelSequence",

@@ -3631,31 +3631,31 @@
   },
   {
     "id": 49992,
-    "name": "太虚游·焦糖",
+    "name": "Pérégrin de Taixu – Caramel",
     "icon": "T_Mounts_Gesture_0506",
     "rarity": 5,
-    "desc": "御剑乘风来。"
+    "desc": "À dos de lame, je chevauche le vent."
   },
   {
     "id": 49993,
-    "name": "太虚游·碧绿",
+    "name": "Pérégrin de Taixu – Émeraude",
     "icon": "T_Mounts_Gesture_0505",
     "rarity": 5,
-    "desc": "御剑乘风来。"
+    "desc": "À dos de lame, je chevauche le vent."
   },
   {
     "id": 49994,
-    "name": "太虚游·本色",
+    "name": "Pérégrin de Taixu",
     "icon": "T_Mounts_Gesture_0503",
     "rarity": 5,
-    "desc": "御剑乘风来。"
+    "desc": "À dos de lame, je chevauche le vent."
   },
   {
     "id": 49995,
-    "name": "太虚游·铅灰",
+    "name": "Pérégrin de Taixu – Gris plomb",
     "icon": "T_Mounts_Gesture_0501",
     "rarity": 5,
-    "desc": "御剑乘风来。"
+    "desc": "À dos de lame, je chevauche le vent."
   },
   {
     "id": 49996,
@@ -3883,13 +3883,13 @@
   },
   {
     "id": 110040,
-    "name": "子不语·黛蓝",
+    "name": "Murmures indicibles – Bleu indigo",
     "icon": "T_Head_Frame29",
     "rarity": 1
   },
   {
     "id": 110041,
-    "name": "子不语·晴蓝",
+    "name": "Murmures indicibles – Bleu céleste",
     "icon": "T_Head_Frame28",
     "rarity": 1
   },
@@ -7905,7 +7905,7 @@
   },
   {
     "id": 31012001,
-    "name": "《重铸黑白》",
+    "name": "Reforger la dualité",
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",

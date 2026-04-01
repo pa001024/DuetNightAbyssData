@@ -315,29 +315,25 @@ function M:HandleImageClicked(AbsolutePosition)
   if self.FindState ~= EFindState.Playing then
     return
   end
-  local MinAbsolutePosition = UE4.FVector2D(AbsolutePosition.X - self.ClickHalfWidth, AbsolutePosition.Y - self.ClickHalfWidth)
-  local MaxAbsolutePosition = UE4.FVector2D(AbsolutePosition.X + self.ClickHalfWidth, AbsolutePosition.Y + self.ClickHalfWidth)
-  local RectMinPoint = self:AbsolutePositionToImagePixelPosition(self.Image, MinAbsolutePosition)
-  local RectMaxPoint = self:AbsolutePositionToImagePixelPosition(self.Image, MaxAbsolutePosition)
-  UE4.UTextureLibrary.ReadTexturePixels_Color(self.TextureAlpha, RectMinPoint, RectMaxPoint, {
+  UE4.UTextureLibrary.ReadTexturePixels_Color(self.TextureAlpha, UE4.FVector2D(0, 0), UE4.FVector2D(0, 0), {
     self,
     function(_, TextureSize, Pixels)
-      self:HandlePixelsRead(AbsolutePosition, TextureSize, Pixels)
+      if self.FindState ~= EFindState.Playing then
+        return
+      end
+      self.ClickCount = self.ClickCount + 1
+      local MinAbsolutePosition = UE4.FVector2D(AbsolutePosition.X - self.ClickHalfWidth, AbsolutePosition.Y - self.ClickHalfWidth)
+      local MaxAbsolutePosition = UE4.FVector2D(AbsolutePosition.X + self.ClickHalfWidth, AbsolutePosition.Y + self.ClickHalfWidth)
+      local RectMinPoint = self:AbsolutePositionToImagePixelPosition(self.Image, MinAbsolutePosition)
+      local RectMaxPoint = self:AbsolutePositionToImagePixelPosition(self.Image, MaxAbsolutePosition)
+      local bHasPlayerCharacter = self:CheckPixelsHasPlayerCharacter(Pixels, TextureSize, RectMinPoint, RectMaxPoint)
+      if bHasPlayerCharacter then
+        self:EndGame(EFindResult.Victory)
+      else
+        self:ShowNo(AbsolutePosition)
+      end
     end
   })
-end
-
-function M:HandlePixelsRead(ClickAbsolutePosition, TextureSize, Pixels)
-  if self.FindState ~= EFindState.Playing then
-    return
-  end
-  self.ClickCount = self.ClickCount + 1
-  local bHasPlayerCharacter = self:PixelsHasPlayerCharacter(Pixels)
-  if bHasPlayerCharacter then
-    self:EndGame(EFindResult.Victory)
-  else
-    self:ShowNo(ClickAbsolutePosition)
-  end
 end
 
 function M:ShowYes(MinAbsolutePosition, MaxAbsolutePosition, OnShowCompleted)
@@ -401,16 +397,6 @@ function M:CalculateGamepadCursorAbsoluteLimitPosition()
   return MinAbsolutePosition, MaxAbsolutePosition
 end
 
-function M:PixelsHasPlayerCharacter(Pixels)
-  for i = 1, Pixels:Length() do
-    local Color = Pixels:GetRef(i)
-    if 0 == Color.R and 0 == Color.G and 0 == Color.B then
-      return true
-    end
-  end
-  return false
-end
-
 function M:ImagePixelPositionToAbsolutePosition(Image, PixelPosition)
   if not IsValid(Image) then
     return FVector2D(0, 0)
@@ -431,6 +417,23 @@ function M:AbsolutePositionToImagePixelPosition(Image, AbsolutePosition)
   local LocalSize = UE4.USlateBlueprintLibrary.GetLocalSize(Geometry)
   local PixelPosition = UE4.FVector2D(Image.Brush.ImageSize.X * LocalPosition.X / LocalSize.X, Image.Brush.ImageSize.Y * LocalPosition.Y / LocalSize.Y)
   return PixelPosition
+end
+
+function M:CheckPixelsHasPlayerCharacter(Pixels, TextureSize, MinRect, MaxRect)
+  MinRect.X = math.floor(math.clamp(MinRect.X, 0, TextureSize.X))
+  MinRect.Y = math.floor(math.clamp(MinRect.Y, 0, TextureSize.Y))
+  MaxRect.X = math.floor(math.clamp(MaxRect.X, 0, TextureSize.X - 1))
+  MaxRect.Y = math.floor(math.clamp(MaxRect.Y, 0, TextureSize.Y - 1))
+  for X = MinRect.X, MaxRect.X do
+    for Y = MinRect.Y, MaxRect.Y do
+      local Index = Y * TextureSize.X + X + 1
+      local Color = Pixels:GetRef(Index)
+      if 0 == Color.R and 0 == Color.G and 0 == Color.B then
+        return true
+      end
+    end
+  end
+  return false
 end
 
 return M

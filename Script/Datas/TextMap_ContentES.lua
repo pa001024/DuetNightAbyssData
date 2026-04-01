@@ -31918,15 +31918,15 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
           TextMapId = "READ_DESC_2000045"
         },
         READ_DESC_2000046 = {
-          ContentES = "Un registro detallado mantenido por el equipo detrás del escenario, que documenta la gestión de accesorios en el Teatro Galea durante las últimas dos semanas.",
+          ContentES = "Un registro detallado mantenido por varios miembros del equipo del escenario, que registra minuciosamente la entrada y salida de todos los objetos del Teatro Galea durante casi dos semanas.",
           TextMapId = "READ_DESC_2000046"
         },
         READ_DESC_2000047 = {
-          ContentES = "Una medalla forjada íntegramente en oro puro. Según la carta de reconocimiento adjunta, este honor está reservado para soldados cuyas contribuciones al Imperio se consideran excepcionales.",
+          ContentES = "Una medalla hecha de oro puro, según lo indica la carta de reconocimiento, este tipo de medalla solo se otorga a los soldados que han hecho contribuciones sobresalientes al Imperio.",
           TextMapId = "READ_DESC_2000047"
         },
         READ_DESC_2000048 = {
-          ContentES = "Amarillento por el tiempo y enterrado bajo un montón de trastos viejos, este periódico relata una tragedia que tuvo lugar en Lago Glacial hace años.",
+          ContentES = "   \nUn periódico antiguo, cubierto bajo un montón de cachivaches, que documenta un accidente trágico ocurrido hace mucho tiempo.",
           TextMapId = "READ_DESC_2000048"
         },
         READ_DESC_2000049 = {
@@ -32762,19 +32762,19 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
           TextMapId = "READ_TEXT_2000045"
         },
         READ_TEXT_2000046 = {
-          ContentES = "8 de octubre\nOrganizados: Disfraces y sacos de dormir.\nRegistrado por: Mondry\n(Nota: Se están agotando los suministros de comida. <H>Tendremos que traer otro lote pronto para prepararnos para los ensayos intensivos de un mes.</>)\n...\n12 de noviembre\nReemplazados: Tres micrófonos nuevos.\nRegistrado por: Grinde\n(Nota: Un micrófono produce un sonido inusualmente fuerte, pero el director Putsch insistió en que se dejara como estaba.)\n14 de noviembre\nActualizado: Cortina roja instalada; cortina dorada devuelta al almacén.\nRegistrado por: Bell\n...\n24 de noviembre\nRecuperados: Cinco pelucas faltantes.\nRegistrado por: Bell\n(Nota: Los rincones del camerino están desordenados y parecen esconder todo tipo de cosas. Los limpiaré hoy.)\n25 de noviembre\nOrganizados: Quince coronas de flores; nueve pares de botas de montar.\nRegistrado por: Mondry",
+          ContentES = "8 de octubre\nPreparados: Disfraces y sacos de dormir.\nConfirmado por: Mondry\n(Nota: Se están agotando los suministros de comida. <H>Para los próximos ensayos intensivos de un mes, se debe encargar más comida</>).\n...\n12 de noviembre\nReemplazados: Tres micrófonos nuevos.\nConfirmado por: Grinde\n(Nota: Uno de los micrófonos tiene un volumen excesivo, la directora Putsch, dijo que está bien así, que no se reemplazará).\n14 de noviembre\nActualizado: La cortina roja instalada; la cortina dorada ha sido devuelta al almacén.\nConfirmado por: Bell\n...\n24 de noviembre\nRecuperados: Cinco pelucas perdidas.\nConfirmado por: Bell\n(Nota: Los rincones del camerino suelen ser lugares donde se esconden muchas cosas, hoy me encargué de vaciarlos).\n25 de noviembre\nPreparados: Quince coronas de flores; nueve pares de botas para cabalgar.\nConfirmado por: Mondry",
           TextMapId = "READ_TEXT_2000046"
         },
         READ_TEXT_2000047 = {
-          ContentES = "Destinataria: <H>Rhythm Fischer</>, Escolta de Lago Glacial, La 6.ª Legión, Región de Cocytus\n\nPor su liderazgo decisivo, valentía ejemplar y excepcional eficiencia operativa en múltiples campañas de <H>limpieza de Filthoid</> a lo largo de los años.\nPor su papel irremplazable en el mantenimiento del orden público y la protección del pueblo de Lago Glacial.\n\nTras la evaluación de la Legión y por decreto de Su Majestad Julius, Rhythm Fischer recibe el Anillo de Sello del Emperador y es ascendida formalmente al rango de Suboficial. Que sirva de inspiración a todos los soldados, animándolos a esforzarse cada vez más por la gloria del Imperio.\n\nToda la gloria a nuestro Emperador.",
+          ContentES = "Destinataria: <H>Rhythm Fischer</> de la 6.ª Legión, Unidad de La Escolta, Lago Glacial, provincia de Cocytus.\n\nPor su liderazgo decisivo, valentía ejemplar y excepcional eficiencia operativa en múltiples campañas de <H>limpieza de Filthoid</> a lo largo de los años.\nPor su papel irremplazable en el mantenimiento del orden público y la protección del pueblo de Lago Glacial.\n\nTras la evaluación realizada por la Legión, y en nombre de Su Majestad, Julius, se le otorga el Anillo de Sello del Emperador  junto con el rango de Suboficial, con la esperanza de que todos los militares sigan su ejemplo, y se esfuercen por el Imperio.\n\nToda la gloria a nuestro Emperador.",
           TextMapId = "READ_TEXT_2000047"
         },
         READ_TEXT_2000048 = {
-          ContentES = "<H>Los Deterioradores son excepcionalmente peligrosos: ¡No se dejen engañar por su Apariencia!</>\nEl 24 de septiembre, un atroz caso de Deterioro ocurrió en Lago Glacial, con consecuencias devastadoras. Tras una exhaustiva investigación realizada por la Unidad de Escolta de la 6.ª Legión, se han confirmado los detalles de la tragedia:\nEl 13 de septiembre, los residentes locales, el Sr. y la Sra. Fischer, encontraron a un joven gravemente herido, Robie Brown, desplomado junto a la carretera cerca del Lago de los Lamentos. Movidos por la compasión, lo llevaron a su casa y lo cuidaron.\nSin embargo, Robie Brown era un Deteriorador: alguien que había evadido los controles rutinarios del Imperio y huido a las afueras de la ciudad. Mientras recibía ayuda de los Fischer, Brown ocultó deliberadamente su condición. Diez días después, sucumbió a la transformación, convirtiéndose en un Filthoid. La masacre resultante en el distrito sur de Lago Glacial se cobró la vida de docenas de personas, incluyendo al Sr. y la Sra. Fischer. La escolta de la 6.ª Legión respondió con rapidez y logró sofocar la amenaza, pero no antes de que el daño ya estuviera hecho.\n\nEl incidente causó 18 muertos (incluidos 3 ciudadanos Solarianos) y 34 heridos. Se recuerda a la ciudadanía: bajo ninguna circunstancia deben brindar refugio a individuos Charons no identificados. Si sospechan que alguien es un Deteriorador, denúncienlo inmediatamente a la Oficina de Seguridad. Los Deterioradores son, y seguirán siendo, enemigos de la humanidad. Sin excepciones. Albergar a Deterioradores u ocultar su condición es un delito capital según el Artículo 54 del Código Penal Hiperbóreo, castigado con la muerte.",
+          ContentES = "<H>¡Los Deterioradores son extremadamente peligrosos! ¡No se dejen engañar por las apariencias!</>\nEl 24 de septiembre, un atroz caso de Deterioro ocurrió en Lago Glacial, con consecuencias devastadoras. Tras una exhaustiva investigación realizada por la Unidad de Escolta de la 6.ª Legión, se han confirmado los detalles de la tragedia:\nEl 13 de septiembre, los residentes locales, el Sr. y la Sra. Fischer, encontraron a un joven gravemente herido, Robie Brown, desplomado junto a la carretera cerca del Lago Lamentosos. Movidos por la compasión, lo llevaron a su casa y lo cuidaron.\nSin embargo, Robie Brown era un Deteriorador: alguien que había evadido los controles rutinarios del Imperio y huido a las afueras de la ciudad. Mientras recibía ayuda de los Fischer, Brown ocultó deliberadamente su condición. Diez días después, sucumbió a la transformación, convirtiéndose en un Filthoid. La masacre resultante en el distrito sur de Lago Glacial se cobró la vida de docenas de personas, incluyendo al Sr. y la Sra. Fischer. La escolta de la 6.ª Legión respondió con rapidez y logró sofocar la amenaza, pero no antes de que el daño ya estuviera hecho.\n\nEl incidente causó 18 muertos (incluidos 3 ciudadanos Solarianos) y 34 heridos. Se recuerda a la ciudadanía: bajo ninguna circunstancia deben brindar refugio a individuos Charons no identificados. Si sospechan que alguien es un Deteriorador, denúncienlo inmediatamente a la Oficina de Seguridad. Los Deterioradores son, y seguirán siendo, enemigos de la humanidad. Sin excepciones. Albergar a Deterioradores u ocultar su condición es un delito capital según el Artículo 54 del Código Penal Hiperbóreo, castigado con la muerte.",
           TextMapId = "READ_TEXT_2000048"
         },
         READ_TEXT_2000049 = {
-          ContentES = "Una pelea en el Teatro Galea\n\nFecha: 9 de octubre, 20:30\n\nArchivado por: Letizia Putsch, Directora de la Compañía de la Flauta Mágica\n\nPartes implicadas: Parsifal Snowfield (Artista principal), Susanna Rossie (Artista principal), Mathew Bernard (Público), Feeley Francisco (Público)\n...\n\nResumen del incidente: Se informó de un altercado físico entre miembros de la compañía y dos espectadores de primera fila. Presunta agresión a los artistas por parte de dichos espectadores. (Varias páginas del informe del incidente parecen haber sido arrancadas).\n\nConclusión: Pruebas insuficientes. Caso desestimado.\n\nObservaciones: Las funciones de Niños del campo de nieve se han suspendido hasta nuevo aviso. No se ha anunciado una fecha de reanudación.\nEsperaba ver esta función junto con Blues, para finalmente compensar la función que nos perdimos hace tantos años. Pero supongo que... eso no sucederá pronto.",
+          ContentES = "Una pelea en el Teatro Galea\n\nFecha: 9 de octubre, a las 20:30\n\nArchivado por: Letizia Putsch, Directora de la Compañía de la Flauta Mágica\n\nPartes implicadas: Parsifal Snowfield (Actor principal), Susanna Rossie (Actor principal), Mathew Bernard (Espectador), Feeley Francisco (Espectador)\n...\n\nResumen del incidente: Se informó de un altercado físico entre miembros de la compañía y dos espectadores de primera fila. Presunta agresión a los actores por parte de dichos espectadores. (Varias páginas del informe del incidente parecen haber sido arrancadas).\n\nConclusión: Pruebas insuficientes. Caso desestimado.\n\nNotas: La presentación “Los Niños del Campo de Nieve” queda temporalmente suspendida y la fecha de reanudación es indefinida.\nMe hubiera gustado compensar a Blues por no ver la función en su momento, pero parece que eso no será pronto.",
           TextMapId = "READ_TEXT_2000049"
         },
         READ_TEXT_2000050 = {
@@ -32994,7 +32994,7 @@ Cuando sus miradas se encuentran, ella parece dispuesta a hablar.]],
           TextMapId = "READ_TEXT_20604"
         },
         READ_TEXT_20605 = {
-          ContentES = "El tiempo más preciado se escapa en un abrir y cerrar de ojos.\nTodo sigue igual, pero la gente ha cambiado, por eso es imposible no sentirse melancólico.\nEn un pasado ya distante, guardado en la memoria,\nEn aquel confín de montañas esmeralda y ríos cristalinos,\nCuando al fin se revelaron las incontables ilusiones del mundo.\nFui guiado por la luz de los dioses,\nAl final del camino me espera la verdad.\nLos árboles se secan, las flores se marchitan\nen esta tierra desprovista de vida y de esperanza.\nUn nuevo ciclo se gesta silenciosamente.",
+          ContentES = "El mensaje antes oculto, ahora aparece ante ti.\nTesoro que encuentres, tesoro que te pertenece.\nEstá bien resguardado, en un lugar seguro.\nOculto para que más nadie lo encuentre.\nBajo hechizos tan poderosos que no hace falta candados.\nLas respuestas se encuentran en los inicios.\nRaíces de todas las civilizaciones que conocemos.\nDel mundo en el que hoy podemos transitar.\nÁrbol de la vida y alma de todo ser vivo en este planeta.",
           TextMapId = "READ_TEXT_20605"
         },
         READ_TEXT_20608 = {
@@ -53025,7 +53025,7 @@ Emparejamiento cancelado.]],
   },
   {
     MinKey = "UI_Accessory_Name_10078",
-    MaxKey = "UI_Accessory_Name_70031",
+    MaxKey = "UI_Accessory_Name_70032",
     Loader = function()
       return {
         UI_Accessory_Name_10078 = {
@@ -53149,35 +53149,35 @@ Emparejamiento cancelado.]],
           TextMapId = "UI_Accessory_Name_13008"
         },
         UI_Accessory_Name_13009 = {
-          ContentES = "Cola de Gatito chasqueador: Blanco opaco",
+          ContentES = "Cola de Gatito corto: Blanco opaco",
           TextMapId = "UI_Accessory_Name_13009"
         },
         UI_Accessory_Name_13010 = {
-          ContentES = "Cola de Gatito chasqueador: Jade oscuro",
+          ContentES = "Cola de Gatito corto: Jade oscuro",
           TextMapId = "UI_Accessory_Name_13010"
         },
         UI_Accessory_Name_13011 = {
-          ContentES = "Cola de Gatito chasqueador: Sakura blanca",
+          ContentES = "Cola de Gatito corto: Sakura blanca",
           TextMapId = "UI_Accessory_Name_13011"
         },
         UI_Accessory_Name_13012 = {
-          ContentES = "Cola de Gatito chasqueador: Gris plomo",
+          ContentES = "Cola de Gatito corto: Gris plomo",
           TextMapId = "UI_Accessory_Name_13012"
         },
         UI_Accessory_Name_13013 = {
-          ContentES = "Cola de Gatito bamboleante: Blanco opaco",
+          ContentES = "Cola de Gatito largo: Blanco opaco",
           TextMapId = "UI_Accessory_Name_13013"
         },
         UI_Accessory_Name_13014 = {
-          ContentES = "Cola de Gatito bamboleante: Jade oscuro",
+          ContentES = "Cola de Gatito largo: Jade oscuro",
           TextMapId = "UI_Accessory_Name_13014"
         },
         UI_Accessory_Name_13015 = {
-          ContentES = "Cola de Gatito bamboleante: Sakura blanca",
+          ContentES = "Cola de Gatito largo: Sakura blanca",
           TextMapId = "UI_Accessory_Name_13015"
         },
         UI_Accessory_Name_13016 = {
-          ContentES = "Cola de Gatito bamboleante: Gris plomo",
+          ContentES = "Cola de Gatito largo: Gris plomo",
           TextMapId = "UI_Accessory_Name_13016"
         },
         UI_Accessory_Name_13017 = {
@@ -53636,10 +53636,6 @@ Emparejamiento cancelado.]],
           ContentES = "Escama Inversa de Zhuyin: Violeta",
           TextMapId = "UI_Accessory_Name_40012"
         },
-        UI_Accessory_Name_40013 = {
-          ContentES = "Accesorio dorsal de Su Yi",
-          TextMapId = "UI_Accessory_Name_40013"
-        },
         UI_Accessory_Name_40014 = {
           ContentES = "Accesorio dorsal de Pluma Porta-Luz",
           TextMapId = "UI_Accessory_Name_40014"
@@ -53827,19 +53823,19 @@ Emparejamiento cancelado.]],
         UI_Accessory_Name_70031 = {
           ContentES = "Flor de llamarada: Rojo óxido",
           TextMapId = "UI_Accessory_Name_70031"
+        },
+        UI_Accessory_Name_70032 = {
+          ContentES = "Flor de llamarada: Blanco opaco",
+          TextMapId = "UI_Accessory_Name_70032"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_70032",
-    MaxKey = "UI_Achievement_Des_20030106",
+    MinKey = "UI_Accessory_Name_70033",
+    MaxKey = "UI_Achievement_Des_20030107",
     Loader = function()
       return {
-        UI_Accessory_Name_70032 = {
-          ContentES = "Flor de llamarada: Blanco opaco",
-          TextMapId = "UI_Accessory_Name_70032"
-        },
         UI_Accessory_Name_70033 = {
           ContentES = "Flor de llamarada: Azul azur",
           TextMapId = "UI_Accessory_Name_70033"
@@ -54635,19 +54631,19 @@ Emparejamiento cancelado.]],
         UI_Achievement_Des_20030106 = {
           ContentES = "Alcanza <highlight>100</> en la Impresión de Caos del Imperio Hiperbóreo",
           TextMapId = "UI_Achievement_Des_20030106"
+        },
+        UI_Achievement_Des_20030107 = {
+          ContentES = "Alcanza <highlight>100</> en cualquier Impresión del Imperio Hiperbóreo",
+          TextMapId = "UI_Achievement_Des_20030107"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_20030107",
-    MaxKey = "UI_Achievement_Des_52501",
+    MinKey = "UI_Achievement_Des_2004",
+    MaxKey = "UI_Achievement_Des_52601",
     Loader = function()
       return {
-        UI_Achievement_Des_20030107 = {
-          ContentES = "Alcanza <highlight>100</> en cualquier Impresión del Imperio Hiperbóreo",
-          TextMapId = "UI_Achievement_Des_20030107"
-        },
         UI_Achievement_Des_2004 = {
           ContentES = "Derrota a <highlight>#1</> Comandantes",
           TextMapId = "UI_Achievement_Des_2004"
@@ -55443,19 +55439,19 @@ Emparejamiento cancelado.]],
         UI_Achievement_Des_52501 = {
           ContentES = "Completa cualquier [Encargo: Mediación] sin derrotar a ningún Jefe de Los Abandonados",
           TextMapId = "UI_Achievement_Des_52501"
+        },
+        UI_Achievement_Des_52601 = {
+          ContentES = "Completa cualquier [Encargo: Mediación] tras derrotar a todos los Jefes de Los Abandonados",
+          TextMapId = "UI_Achievement_Des_52601"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Des_52601",
-    MaxKey = "UI_Achievement_Name_1035202",
+    MinKey = "UI_Achievement_Des_52701",
+    MaxKey = "UI_Achievement_Name_1035203",
     Loader = function()
       return {
-        UI_Achievement_Des_52601 = {
-          ContentES = "Completa cualquier [Encargo: Mediación] tras derrotar a todos los Jefes de Los Abandonados",
-          TextMapId = "UI_Achievement_Des_52601"
-        },
         UI_Achievement_Des_52701 = {
           ContentES = "Completa cualquier Encargo sin derrotar a ningún enemigo",
           TextMapId = "UI_Achievement_Des_52701"
@@ -56251,19 +56247,19 @@ Emparejamiento cancelado.]],
         UI_Achievement_Name_1035202 = {
           ContentES = "Ciudad melódica II",
           TextMapId = "UI_Achievement_Name_1035202"
+        },
+        UI_Achievement_Name_1035203 = {
+          ContentES = "Ciudad melódica III",
+          TextMapId = "UI_Achievement_Name_1035203"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_1035203",
-    MaxKey = "UI_Achievement_Name_3010101",
+    MinKey = "UI_Achievement_Name_107030501",
+    MaxKey = "UI_Achievement_Name_3010102",
     Loader = function()
       return {
-        UI_Achievement_Name_1035203 = {
-          ContentES = "Ciudad melódica III",
-          TextMapId = "UI_Achievement_Name_1035203"
-        },
         UI_Achievement_Name_107030501 = {
           ContentES = "Peregrinaciones - Lago Glacial",
           TextMapId = "UI_Achievement_Name_107030501"
@@ -57059,19 +57055,19 @@ Emparejamiento cancelado.]],
         UI_Achievement_Name_3010101 = {
           ContentES = "El secreto del poder Ⅰ",
           TextMapId = "UI_Achievement_Name_3010101"
+        },
+        UI_Achievement_Name_3010102 = {
+          ContentES = "El secreto del poder Ⅱ",
+          TextMapId = "UI_Achievement_Name_3010102"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_3010102",
-    MaxKey = "UI_Achievement_Name_52000101",
+    MinKey = "UI_Achievement_Name_3010103",
+    MaxKey = "UI_Achievement_Name_52000201",
     Loader = function()
       return {
-        UI_Achievement_Name_3010102 = {
-          ContentES = "El secreto del poder Ⅱ",
-          TextMapId = "UI_Achievement_Name_3010102"
-        },
         UI_Achievement_Name_3010103 = {
           ContentES = "El secreto del poder Ⅲ",
           TextMapId = "UI_Achievement_Name_3010103"
@@ -57867,19 +57863,19 @@ Emparejamiento cancelado.]],
         UI_Achievement_Name_52000101 = {
           ContentES = "Aves errantes: Isla del Purgatorio",
           TextMapId = "UI_Achievement_Name_52000101"
+        },
+        UI_Achievement_Name_52000201 = {
+          ContentES = "Aves errantes: Distrito Este, Lago Glacial",
+          TextMapId = "UI_Achievement_Name_52000201"
         }
       }
     end
   },
   {
-    MinKey = "UI_Achievement_Name_52000201",
-    MaxKey = "UI_Archive_CollectionClaimAll",
+    MinKey = "UI_Achievement_Name_52000301",
+    MaxKey = "UI_Archive_CollectionInProgress",
     Loader = function()
       return {
-        UI_Achievement_Name_52000201 = {
-          ContentES = "Aves errantes: Distrito Este, Lago Glacial",
-          TextMapId = "UI_Achievement_Name_52000201"
-        },
         UI_Achievement_Name_52000301 = {
           ContentES = "Aves errantes: Alcantarillas del Lago Glacial",
           TextMapId = "UI_Achievement_Name_52000301"
@@ -58672,19 +58668,19 @@ Emparejamiento cancelado.]],
         UI_Archive_CollectionClaimAll = {
           ContentES = "Reclamar todo",
           TextMapId = "UI_Archive_CollectionClaimAll"
+        },
+        UI_Archive_CollectionInProgress = {
+          ContentES = "En curso",
+          TextMapId = "UI_Archive_CollectionInProgress"
         }
       }
     end
   },
   {
-    MinKey = "UI_Archive_CollectionInProgress",
-    MaxKey = "UI_AutoChess_WinReward",
+    MinKey = "UI_Archive_CollectionProgress",
+    MaxKey = "UI_Auto_Round",
     Loader = function()
       return {
-        UI_Archive_CollectionInProgress = {
-          ContentES = "En curso",
-          TextMapId = "UI_Archive_CollectionInProgress"
-        },
         UI_Archive_CollectionProgress = {
           ContentES = "Progreso de colección: <H>%s/</>%s",
           TextMapId = "UI_Archive_CollectionProgress"
@@ -59480,19 +59476,19 @@ Emparejamiento cancelado.]],
         UI_AutoChess_WinReward = {
           ContentES = "Recompensas de partida",
           TextMapId = "UI_AutoChess_WinReward"
+        },
+        UI_Auto_Round = {
+          ContentES = "Ronda",
+          TextMapId = "UI_Auto_Round"
         }
       }
     end
   },
   {
-    MinKey = "UI_Auto_Round",
-    MaxKey = "UI_CHAR_BIRTH_3301",
+    MinKey = "UI_Auto_Round_DungeonTips_1",
+    MaxKey = "UI_CHAR_BIRTH_4101",
     Loader = function()
       return {
-        UI_Auto_Round = {
-          ContentES = "Ronda",
-          TextMapId = "UI_Auto_Round"
-        },
         UI_Auto_Round_DungeonTips_1 = {
           ContentES = "Ronda automática (%d/%d). Continuará automáticamente al terminar la cuenta regresiva.",
           TextMapId = "UI_Auto_Round_DungeonTips_1"
@@ -60285,19 +60281,19 @@ Emparejamiento cancelado.]],
         UI_CHAR_BIRTH_3301 = {
           ContentES = "Imperio Hiperbóreo",
           TextMapId = "UI_CHAR_BIRTH_3301"
+        },
+        UI_CHAR_BIRTH_4101 = {
+          ContentES = "Imperio Hiperbóreo",
+          TextMapId = "UI_CHAR_BIRTH_4101"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_BIRTH_4101",
-    MaxKey = "UI_CHAR_DATA_TEXT_31020101",
+    MinKey = "UI_CHAR_BIRTH_4102",
+    MaxKey = "UI_CHAR_DATA_TEXT_31020102",
     Loader = function()
       return {
-        UI_CHAR_BIRTH_4101 = {
-          ContentES = "Imperio Hiperbóreo",
-          TextMapId = "UI_CHAR_BIRTH_4101"
-        },
         UI_CHAR_BIRTH_4102 = {
           ContentES = "Huaxu",
           TextMapId = "UI_CHAR_BIRTH_4102"
@@ -61093,19 +61089,19 @@ Emparejamiento cancelado.]],
         UI_CHAR_DATA_TEXT_31020101 = {
           ContentES = "Hilda una vez usó sus habilidades discretas para comprar artículos en la misma tienda durante cinco días consecutivos y logró obtener descuentos para nuevos clientes cada vez.",
           TextMapId = "UI_CHAR_DATA_TEXT_31020101"
+        },
+        UI_CHAR_DATA_TEXT_31020102 = {
+          ContentES = "Incluso entre otras excelentes criadas, Hilda sigue destacando. Es una persona versátil y se destaca en la limpieza, sin importar qué o quién la necesite. Su herramienta favorita para limpiar son las armas de fuego. Siempre que las usa durante el trabajo, tiene una leve sonrisa en el rostro, como si estuviera a punto de pasárselo en grande.",
+          TextMapId = "UI_CHAR_DATA_TEXT_31020102"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_31020102",
-    MaxKey = "UI_CHAR_DATA_TEXT_51020201",
+    MinKey = "UI_CHAR_DATA_TEXT_31020103",
+    MaxKey = "UI_CHAR_DATA_TEXT_51020202",
     Loader = function()
       return {
-        UI_CHAR_DATA_TEXT_31020102 = {
-          ContentES = "Incluso entre otras excelentes criadas, Hilda sigue destacando. Es una persona versátil y se destaca en la limpieza, sin importar qué o quién la necesite. Su herramienta favorita para limpiar son las armas de fuego. Siempre que las usa durante el trabajo, tiene una leve sonrisa en el rostro, como si estuviera a punto de pasárselo en grande.",
-          TextMapId = "UI_CHAR_DATA_TEXT_31020102"
-        },
         UI_CHAR_DATA_TEXT_31020103 = {
           ContentES = "Hilda y Flora comparten una relación que va más allá de una simple relación de ama-sirvienta. En privado, también son amigas, eligen ropa juntas y experimentan con diversos estilos de maquillaje. Es difícil comparar a Hilda en estos momentos con quien, en medio de la batalla, desata una lluvia de balas sin dudarlo. Es como una bailarina que baila al ritmo de las balas que se cargan y zumban por el aire.",
           TextMapId = "UI_CHAR_DATA_TEXT_31020103"
@@ -61901,19 +61897,19 @@ Emparejamiento cancelado.]],
         UI_CHAR_DATA_TEXT_51020201 = {
           ContentES = "Palabras cortantes, miradas frías, cicatrices expuestas: tener una de estas características ya podría hacer que algunas personas mantengan distancia, pero Outsider las tiene las tres, así que la primera reacción de la gente al ver a Outsider suele ser mantenerse alejados. Pero dicen que Outsider en realidad es una buena persona muy sociable que sabe animar el ambiente. Por supuesto, hay muy pocas personas que pueden atestiguar esto, y si compartieran esta información nadie les creería, pensando que son noticias falsas que fueron forzados a difundir por amenazas de Outsider.",
           TextMapId = "UI_CHAR_DATA_TEXT_51020201"
+        },
+        UI_CHAR_DATA_TEXT_51020202 = {
+          ContentES = "Los colegas que conocen bien a Outsider lo llaman el Phoxcazador más hábil de Lago Glacial en los últimos años. Incluso Camilla, siempre tan severa, tiene una buena opinión de las habilidades de Outsider, pero él no quiere que la gente hable mucho de él en público, como si estuviera evitando deliberadamente que el mundo exterior supiera su nombre.",
+          TextMapId = "UI_CHAR_DATA_TEXT_51020202"
         }
       }
     end
   },
   {
-    MinKey = "UI_CHAR_DATA_TEXT_51020202",
-    MaxKey = "UI_CMNpc_Name_Bandit",
+    MinKey = "UI_CHAR_DATA_TEXT_51020203",
+    MaxKey = "UI_CMNpc_Name_Baoluo",
     Loader = function()
       return {
-        UI_CHAR_DATA_TEXT_51020202 = {
-          ContentES = "Los colegas que conocen bien a Outsider lo llaman el Phoxcazador más hábil de Lago Glacial en los últimos años. Incluso Camilla, siempre tan severa, tiene una buena opinión de las habilidades de Outsider, pero él no quiere que la gente hable mucho de él en público, como si estuviera evitando deliberadamente que el mundo exterior supiera su nombre.",
-          TextMapId = "UI_CHAR_DATA_TEXT_51020202"
-        },
         UI_CHAR_DATA_TEXT_51020203 = {
           ContentES = "Outsider, sin importar dónde esté, compra un periódico cada vez que ve a un vendedor de periódicos. Aunque para él los medios no son más que herramientas del poder, a través de esas palabras engañosas ocasionalmente puede extraer algunas señales peligrosas.",
           TextMapId = "UI_CHAR_DATA_TEXT_51020203"
@@ -62709,19 +62705,19 @@ Emparejamiento cancelado.]],
         UI_CMNpc_Name_Bandit = {
           ContentES = "Bandido",
           TextMapId = "UI_CMNpc_Name_Bandit"
+        },
+        UI_CMNpc_Name_Baoluo = {
+          ContentES = "Paul",
+          TextMapId = "UI_CMNpc_Name_Baoluo"
         }
       }
     end
   },
   {
-    MinKey = "UI_CMNpc_Name_Baoluo",
-    MaxKey = "UI_COMMONPOP_TEXT_100013",
+    MinKey = "UI_CMNpc_Name_Beierde",
+    MaxKey = "UI_COMMONPOP_TEXT_100014",
     Loader = function()
       return {
-        UI_CMNpc_Name_Baoluo = {
-          ContentES = "Paul",
-          TextMapId = "UI_CMNpc_Name_Baoluo"
-        },
         UI_CMNpc_Name_Beierde = {
           ContentES = "Baird",
           TextMapId = "UI_CMNpc_Name_Beierde"
@@ -63517,19 +63513,19 @@ Emparejamiento cancelado.]],
         UI_COMMONPOP_TEXT_100013 = {
           ContentES = "Lee y acepta los términos primero.",
           TextMapId = "UI_COMMONPOP_TEXT_100013"
+        },
+        UI_COMMONPOP_TEXT_100014 = {
+          ContentES = "¿Seguro que quieres forjar <highlight>%s×%d</>?",
+          TextMapId = "UI_COMMONPOP_TEXT_100014"
         }
       }
     end
   },
   {
-    MinKey = "UI_COMMONPOP_TEXT_100014",
-    MaxKey = "UI_CTL_ExplainSet",
+    MinKey = "UI_COMMONPOP_TEXT_100015",
+    MaxKey = "UI_CTL_Fish_Collect",
     Loader = function()
       return {
-        UI_COMMONPOP_TEXT_100014 = {
-          ContentES = "¿Seguro que quieres forjar <highlight>%s×%d</>?",
-          TextMapId = "UI_COMMONPOP_TEXT_100014"
-        },
         UI_COMMONPOP_TEXT_100015 = {
           ContentES = "Los objetos anteriores serán devueltos en breve",
           TextMapId = "UI_COMMONPOP_TEXT_100015"
@@ -64322,19 +64318,19 @@ Emparejamiento cancelado.]],
         UI_CTL_ExplainSet = {
           ContentES = "Detalles del conjunto",
           TextMapId = "UI_CTL_ExplainSet"
+        },
+        UI_CTL_Fish_Collect = {
+          ContentES = "Recoger",
+          TextMapId = "UI_CTL_Fish_Collect"
         }
       }
     end
   },
   {
-    MinKey = "UI_CTL_Fish_Collect",
-    MaxKey = "UI_Chat_Imagine29",
+    MinKey = "UI_CTL_Fish_Lift",
+    MaxKey = "UI_Chat_Imagine3",
     Loader = function()
       return {
-        UI_CTL_Fish_Collect = {
-          ContentES = "Recoger",
-          TextMapId = "UI_CTL_Fish_Collect"
-        },
         UI_CTL_Fish_Lift = {
           ContentES = "Enganchar",
           TextMapId = "UI_CTL_Fish_Lift"
@@ -65127,19 +65123,19 @@ Emparejamiento cancelado.]],
         UI_Chat_Imagine29 = {
           ContentES = "Pan comido",
           TextMapId = "UI_Chat_Imagine29"
+        },
+        UI_Chat_Imagine3 = {
+          ContentES = "¡Los escucho!",
+          TextMapId = "UI_Chat_Imagine3"
         }
       }
     end
   },
   {
-    MinKey = "UI_Chat_Imagine3",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_112",
+    MinKey = "UI_Chat_Imagine30",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_113",
     Loader = function()
       return {
-        UI_Chat_Imagine3 = {
-          ContentES = "¡Los escucho!",
-          TextMapId = "UI_Chat_Imagine3"
-        },
         UI_Chat_Imagine30 = {
           ContentES = "¿Eh?",
           TextMapId = "UI_Chat_Imagine30"
@@ -65929,19 +65925,19 @@ Emparejamiento cancelado.]],
         UI_DUNGEON_AUTOCHESS_112 = {
           ContentES = "Partida sin fin 092",
           TextMapId = "UI_DUNGEON_AUTOCHESS_112"
+        },
+        UI_DUNGEON_AUTOCHESS_113 = {
+          ContentES = "Partida sin fin 093",
+          TextMapId = "UI_DUNGEON_AUTOCHESS_113"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_AUTOCHESS_113",
-    MaxKey = "UI_DUNGEON_DES_TRAINING_21",
+    MinKey = "UI_DUNGEON_AUTOCHESS_114",
+    MaxKey = "UI_DUNGEON_DES_TRAINING_22",
     Loader = function()
       return {
-        UI_DUNGEON_AUTOCHESS_113 = {
-          ContentES = "Partida sin fin 093",
-          TextMapId = "UI_DUNGEON_AUTOCHESS_113"
-        },
         UI_DUNGEON_AUTOCHESS_114 = {
           ContentES = "Partida sin fin 094",
           TextMapId = "UI_DUNGEON_AUTOCHESS_114"
@@ -66737,19 +66733,19 @@ Emparejamiento cancelado.]],
         UI_DUNGEON_DES_TRAINING_21 = {
           ContentES = "Iglesia Elysiana",
           TextMapId = "UI_DUNGEON_DES_TRAINING_21"
+        },
+        UI_DUNGEON_DES_TRAINING_22 = {
+          ContentES = "Los Abandonados",
+          TextMapId = "UI_DUNGEON_DES_TRAINING_22"
         }
       }
     end
   },
   {
-    MinKey = "UI_DUNGEON_DES_TRAINING_22",
-    MaxKey = "UI_Dispatch_PackDetail",
+    MinKey = "UI_DUNGEON_DES_TRAINING_23",
+    MaxKey = "UI_Dispatch_PhantomConfirm_Text",
     Loader = function()
       return {
-        UI_DUNGEON_DES_TRAINING_22 = {
-          ContentES = "Los Abandonados",
-          TextMapId = "UI_DUNGEON_DES_TRAINING_22"
-        },
         UI_DUNGEON_DES_TRAINING_23 = {
           ContentES = "Otros",
           TextMapId = "UI_DUNGEON_DES_TRAINING_23"
@@ -67545,19 +67541,19 @@ Emparejamiento cancelado.]],
         UI_Dispatch_PackDetail = {
           ContentES = "Contenidos del paquete",
           TextMapId = "UI_Dispatch_PackDetail"
+        },
+        UI_Dispatch_PhantomConfirm_Text = {
+          ContentES = "El personaje está actualmente en el equipo como Compañero de combate. Enviar a este personaje hará que abandone el equipo. ¿Continuar?",
+          TextMapId = "UI_Dispatch_PhantomConfirm_Text"
         }
       }
     end
   },
   {
-    MinKey = "UI_Dispatch_PhantomConfirm_Text",
-    MaxKey = "UI_Esc_Continue",
+    MinKey = "UI_Dispatch_PhantomConfirm_Title",
+    MaxKey = "UI_Esc_Exit",
     Loader = function()
       return {
-        UI_Dispatch_PhantomConfirm_Text = {
-          ContentES = "El personaje está actualmente en el equipo como Compañero de combate. Enviar a este personaje hará que abandone el equipo. ¿Continuar?",
-          TextMapId = "UI_Dispatch_PhantomConfirm_Text"
-        },
         UI_Dispatch_PhantomConfirm_Title = {
           ContentES = "Confirmar expedición",
           TextMapId = "UI_Dispatch_PhantomConfirm_Title"
@@ -68353,19 +68349,19 @@ Emparejamiento cancelado.]],
         UI_Esc_Continue = {
           ContentES = "Continuar",
           TextMapId = "UI_Esc_Continue"
+        },
+        UI_Esc_Exit = {
+          ContentES = "Abandonar",
+          TextMapId = "UI_Esc_Exit"
         }
       }
     end
   },
   {
-    MinKey = "UI_Esc_Exit",
-    MaxKey = "UI_Friend_DelBlackList",
+    MinKey = "UI_Esc_ExitDungeon",
+    MaxKey = "UI_Friend_FriendCount",
     Loader = function()
       return {
-        UI_Esc_Exit = {
-          ContentES = "Abandonar",
-          TextMapId = "UI_Esc_Exit"
-        },
         UI_Esc_ExitDungeon = {
           ContentES = "Salir",
           TextMapId = "UI_Esc_ExitDungeon"
@@ -69158,19 +69154,19 @@ Emparejamiento cancelado.]],
         UI_Friend_DelBlackList = {
           ContentES = "Desbloquear",
           TextMapId = "UI_Friend_DelBlackList"
+        },
+        UI_Friend_FriendCount = {
+          ContentES = "Número de amigos",
+          TextMapId = "UI_Friend_FriendCount"
         }
       }
     end
   },
   {
-    MinKey = "UI_Friend_FriendCount",
-    MaxKey = "UI_HeadFrame_Name_10008",
+    MinKey = "UI_Friend_FriendRequest",
+    MaxKey = "UI_HeadFrame_Name_10009",
     Loader = function()
       return {
-        UI_Friend_FriendCount = {
-          ContentES = "Número de amigos",
-          TextMapId = "UI_Friend_FriendCount"
-        },
         UI_Friend_FriendRequest = {
           ContentES = "Solicitudes de amistad",
           TextMapId = "UI_Friend_FriendRequest"
@@ -69966,19 +69962,19 @@ Emparejamiento cancelado.]],
         UI_HeadFrame_Name_10008 = {
           ContentES = "Impresión pública: Moralidad",
           TextMapId = "UI_HeadFrame_Name_10008"
+        },
+        UI_HeadFrame_Name_10009 = {
+          ContentES = "Impresión pública: Beneficio",
+          TextMapId = "UI_HeadFrame_Name_10009"
         }
       }
     end
   },
   {
-    MinKey = "UI_HeadFrame_Name_10009",
-    MaxKey = "UI_Locked_Des_Match",
+    MinKey = "UI_HeadFrame_Name_10010",
+    MaxKey = "UI_Locked_Des_MiniGame",
     Loader = function()
       return {
-        UI_HeadFrame_Name_10009 = {
-          ContentES = "Impresión pública: Beneficio",
-          TextMapId = "UI_HeadFrame_Name_10009"
-        },
         UI_HeadFrame_Name_10010 = {
           ContentES = "Impresión pública: Empatía",
           TextMapId = "UI_HeadFrame_Name_10010"
@@ -70774,19 +70770,19 @@ Emparejamiento cancelado.]],
         UI_Locked_Des_Match = {
           ContentES = "Coop no desbloqueado",
           TextMapId = "UI_Locked_Des_Match"
+        },
+        UI_Locked_Des_MiniGame = {
+          ContentES = "Próximamente",
+          TextMapId = "UI_Locked_Des_MiniGame"
         }
       }
     end
   },
   {
-    MinKey = "UI_Locked_Des_MiniGame",
-    MaxKey = "UI_Mail_Unstar_Confirm",
+    MinKey = "UI_Locked_Des_Mod",
+    MaxKey = "UI_MainTitle_Archive",
     Loader = function()
       return {
-        UI_Locked_Des_MiniGame = {
-          ContentES = "Próximamente",
-          TextMapId = "UI_Locked_Des_MiniGame"
-        },
         UI_Locked_Des_Mod = {
           ContentES = "Sistema de Cuñas Demoníacas no desbloqueado",
           TextMapId = "UI_Locked_Des_Mod"
@@ -71582,19 +71578,19 @@ Emparejamiento cancelado.]],
         UI_Mail_Unstar_Confirm = {
           ContentES = "¿Eliminar este correo de los destacados? (Se eliminará en la actualización diaria)",
           TextMapId = "UI_Mail_Unstar_Confirm"
+        },
+        UI_MainTitle_Archive = {
+          ContentES = "Archivo",
+          TextMapId = "UI_MainTitle_Archive"
         }
       }
     end
   },
   {
-    MinKey = "UI_MainTitle_Archive",
-    MaxKey = "UI_Name_Walnut_1012",
+    MinKey = "UI_MapNpc_Name_DDBai",
+    MaxKey = "UI_Name_Walnut_1013",
     Loader = function()
       return {
-        UI_MainTitle_Archive = {
-          ContentES = "Archivo",
-          TextMapId = "UI_MainTitle_Archive"
-        },
         UI_MapNpc_Name_DDBai = {
           ContentES = "Lunoeggy",
           TextMapId = "UI_MapNpc_Name_DDBai"
@@ -72384,19 +72380,19 @@ Emparejamiento cancelado.]],
         UI_Name_Walnut_1012 = {
           ContentES = "Carta secreta: Hellfire",
           TextMapId = "UI_Name_Walnut_1012"
+        },
+        UI_Name_Walnut_1013 = {
+          ContentES = "Carta secreta: Camilla",
+          TextMapId = "UI_Name_Walnut_1013"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_1013",
-    MaxKey = "UI_Npc_Name_250005",
+    MinKey = "UI_Name_Walnut_1014",
+    MaxKey = "UI_Npc_Name_250006",
     Loader = function()
       return {
-        UI_Name_Walnut_1013 = {
-          ContentES = "Carta secreta: Camilla",
-          TextMapId = "UI_Name_Walnut_1013"
-        },
         UI_Name_Walnut_1014 = {
           ContentES = "Carta secreta: Margie",
           TextMapId = "UI_Name_Walnut_1014"
@@ -73189,19 +73185,19 @@ Emparejamiento cancelado.]],
         UI_Npc_Name_250005 = {
           ContentES = "Yuming",
           TextMapId = "UI_Npc_Name_250005"
+        },
+        UI_Npc_Name_250006 = {
+          ContentES = "Tabethe",
+          TextMapId = "UI_Npc_Name_250006"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_250006",
-    MaxKey = "UI_Npc_Name_SadGuy",
+    MinKey = "UI_Npc_Name_250007",
+    MaxKey = "UI_Npc_Name_Saiqi",
     Loader = function()
       return {
-        UI_Npc_Name_250006 = {
-          ContentES = "Tabethe",
-          TextMapId = "UI_Npc_Name_250006"
-        },
         UI_Npc_Name_250007 = {
           ContentES = "Narrador de historias",
           TextMapId = "UI_Npc_Name_250007"
@@ -73997,19 +73993,19 @@ Emparejamiento cancelado.]],
         UI_Npc_Name_SadGuy = {
           ContentES = "Vendedor desanimado",
           TextMapId = "UI_Npc_Name_SadGuy"
+        },
+        UI_Npc_Name_Saiqi = {
+          ContentES = "Psyche",
+          TextMapId = "UI_Npc_Name_Saiqi"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_Saiqi",
-    MaxKey = "UI_OPTION_Language_Downloaded",
+    MinKey = "UI_Npc_Name_SaiqiBoss",
+    MaxKey = "UI_OPTION_Language_Downloading",
     Loader = function()
       return {
-        UI_Npc_Name_Saiqi = {
-          ContentES = "Psyche",
-          TextMapId = "UI_Npc_Name_Saiqi"
-        },
         UI_Npc_Name_SaiqiBoss = {
           ContentES = "¿¿¿???",
           TextMapId = "UI_Npc_Name_SaiqiBoss"
@@ -74805,19 +74801,19 @@ Emparejamiento cancelado.]],
         UI_OPTION_Language_Downloaded = {
           ContentES = "Descargado",
           TextMapId = "UI_OPTION_Language_Downloaded"
+        },
+        UI_OPTION_Language_Downloading = {
+          ContentES = "Descargando",
+          TextMapId = "UI_OPTION_Language_Downloading"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_Language_Downloading",
-    MaxKey = "UI_Party_Maze_StageStart",
+    MinKey = "UI_OPTION_Language_Manage",
+    MaxKey = "UI_Party_MiniQuest_CoinTriple",
     Loader = function()
       return {
-        UI_OPTION_Language_Downloading = {
-          ContentES = "Descargando",
-          TextMapId = "UI_OPTION_Language_Downloading"
-        },
         UI_OPTION_Language_Manage = {
           ContentES = "Gestión de los recursos vocales",
           TextMapId = "UI_OPTION_Language_Manage"
@@ -75613,19 +75609,19 @@ Emparejamiento cancelado.]],
         UI_Party_Maze_StageStart = {
           ContentES = "Modo de exploración iniciado. ¡Comienza la cuenta regresiva!",
           TextMapId = "UI_Party_Maze_StageStart"
+        },
+        UI_Party_MiniQuest_CoinTriple = {
+          ContentES = "El jugador que lo recoja obtiene ×3 monedas durante 20 s. (temporal)",
+          TextMapId = "UI_Party_MiniQuest_CoinTriple"
         }
       }
     end
   },
   {
-    MinKey = "UI_Party_MiniQuest_CoinTriple",
-    MaxKey = "UI_PlayerHead_Name_30044",
+    MinKey = "UI_Party_MiniQuest_ExtraCoin",
+    MaxKey = "UI_PlayerHead_Name_30045",
     Loader = function()
       return {
-        UI_Party_MiniQuest_CoinTriple = {
-          ContentES = "El jugador que lo recoja obtiene ×3 monedas durante 20 s. (temporal)",
-          TextMapId = "UI_Party_MiniQuest_CoinTriple"
-        },
         UI_Party_MiniQuest_ExtraCoin = {
           ContentES = "¡Se ha lanzado una explosión de monedas de bonificación!",
           TextMapId = "UI_Party_MiniQuest_ExtraCoin"
@@ -76421,19 +76417,19 @@ Emparejamiento cancelado.]],
         UI_PlayerHead_Name_30044 = {
           ContentES = "Ser de los sueños: Apoyo",
           TextMapId = "UI_PlayerHead_Name_30044"
+        },
+        UI_PlayerHead_Name_30045 = {
+          ContentES = "Outsider: Caído",
+          TextMapId = "UI_PlayerHead_Name_30045"
         }
       }
     end
   },
   {
-    MinKey = "UI_PlayerHead_Name_30045",
-    MaxKey = "UI_RegionMap_GotoPosition",
+    MinKey = "UI_PlayerHead_Name_30046",
+    MaxKey = "UI_RegionMap_ImpressionTitle",
     Loader = function()
       return {
-        UI_PlayerHead_Name_30045 = {
-          ContentES = "Outsider: Caído",
-          TextMapId = "UI_PlayerHead_Name_30045"
-        },
         UI_PlayerHead_Name_30046 = {
           ContentES = "Outsider: Apoyo",
           TextMapId = "UI_PlayerHead_Name_30046"
@@ -77208,19 +77204,19 @@ Emparejamiento cancelado.]],
         UI_RegionMap_GotoPosition = {
           ContentES = "Ir a la misión / ubicación actual",
           TextMapId = "UI_RegionMap_GotoPosition"
+        },
+        UI_RegionMap_ImpressionTitle = {
+          ContentES = "Mis impresiones",
+          TextMapId = "UI_RegionMap_ImpressionTitle"
         }
       }
     end
   },
   {
-    MinKey = "UI_RegionMap_ImpressionTitle",
-    MaxKey = "UI_SHOP_ROGUE_ITEM",
+    MinKey = "UI_RegionMap_Mark",
+    MaxKey = "UI_SHOP_SHOPITEMLIMIT",
     Loader = function()
       return {
-        UI_RegionMap_ImpressionTitle = {
-          ContentES = "Mis impresiones",
-          TextMapId = "UI_RegionMap_ImpressionTitle"
-        },
         UI_RegionMap_Mark = {
           ContentES = "Marcar",
           TextMapId = "UI_RegionMap_Mark"
@@ -78013,19 +78009,19 @@ Emparejamiento cancelado.]],
         UI_SHOP_ROGUE_ITEM = {
           ContentES = "Don del destino",
           TextMapId = "UI_SHOP_ROGUE_ITEM"
+        },
+        UI_SHOP_SHOPITEMLIMIT = {
+          ContentES = "Compra limitada{空格}",
+          TextMapId = "UI_SHOP_SHOPITEMLIMIT"
         }
       }
     end
   },
   {
-    MinKey = "UI_SHOP_SHOPITEMLIMIT",
-    MaxKey = "UI_Shadow_Name",
+    MinKey = "UI_SHOP_SOLDOUT",
+    MaxKey = "UI_Shop_Bonus",
     Loader = function()
       return {
-        UI_SHOP_SHOPITEMLIMIT = {
-          ContentES = "Compra limitada{空格}",
-          TextMapId = "UI_SHOP_SHOPITEMLIMIT"
-        },
         UI_SHOP_SOLDOUT = {
           ContentES = "Agotado",
           TextMapId = "UI_SHOP_SOLDOUT"
@@ -78818,19 +78814,19 @@ Emparejamiento cancelado.]],
         UI_Shadow_Name = {
           ContentES = "Compañero de combate",
           TextMapId = "UI_Shadow_Name"
+        },
+        UI_Shop_Bonus = {
+          ContentES = "Doble",
+          TextMapId = "UI_Shop_Bonus"
         }
       }
     end
   },
   {
-    MinKey = "UI_Shop_Bonus",
-    MaxKey = "UI_Squad_SigilMiss_Toast",
+    MinKey = "UI_Shop_Contain",
+    MaxKey = "UI_Squad_SwitchChar_Toast",
     Loader = function()
       return {
-        UI_Shop_Bonus = {
-          ContentES = "Doble",
-          TextMapId = "UI_Shop_Bonus"
-        },
         UI_Shop_Contain = {
           ContentES = "Contenido",
           TextMapId = "UI_Shop_Contain"
@@ -79623,19 +79619,19 @@ Emparejamiento cancelado.]],
         UI_Squad_SigilMiss_Toast = {
           ContentES = "Selecciona un Compañero de combate primero",
           TextMapId = "UI_Squad_SigilMiss_Toast"
+        },
+        UI_Squad_SwitchChar_Toast = {
+          ContentES = "%s ha sido asignado a una casilla de personaje principal",
+          TextMapId = "UI_Squad_SwitchChar_Toast"
         }
       }
     end
   },
   {
-    MinKey = "UI_Squad_SwitchChar_Toast",
-    MaxKey = "UI_TEMPLE_LIMIT_LIFE",
+    MinKey = "UI_Squad_SwitchSigil_Toast",
+    MaxKey = "UI_TEMPLE_LIMIT_TIME",
     Loader = function()
       return {
-        UI_Squad_SwitchChar_Toast = {
-          ContentES = "%s ha sido asignado a una casilla de personaje principal",
-          TextMapId = "UI_Squad_SwitchChar_Toast"
-        },
         UI_Squad_SwitchSigil_Toast = {
           ContentES = "%s ha sido asignado a%s",
           TextMapId = "UI_Squad_SwitchSigil_Toast"
@@ -80431,19 +80427,19 @@ Emparejamiento cancelado.]],
         UI_TEMPLE_LIMIT_LIFE = {
           ContentES = "Intentos de revivir restantes:",
           TextMapId = "UI_TEMPLE_LIMIT_LIFE"
+        },
+        UI_TEMPLE_LIMIT_TIME = {
+          ContentES = "Tiempo restante:",
+          TextMapId = "UI_TEMPLE_LIMIT_TIME"
         }
       }
     end
   },
   {
-    MinKey = "UI_TEMPLE_LIMIT_TIME",
-    MaxKey = "UI_UID",
+    MinKey = "UI_TEMPLE_LIMIT_TIME_Reverse",
+    MaxKey = "UI_UIGUIDE_CLOSE",
     Loader = function()
       return {
-        UI_TEMPLE_LIMIT_TIME = {
-          ContentES = "Tiempo restante:",
-          TextMapId = "UI_TEMPLE_LIMIT_TIME"
-        },
         UI_TEMPLE_LIMIT_TIME_Reverse = {
           ContentES = "Tiempo transcurrido:",
           TextMapId = "UI_TEMPLE_LIMIT_TIME_Reverse"
@@ -81236,19 +81232,19 @@ Emparejamiento cancelado.]],
           ContentES = "No hay tutoriales desbloqueados en esta categoría.",
           TextMapId = "UI_Tutorial_Not_Unlocked"
         },
-        UI_UID = {ContentES = "UID", TextMapId = "UI_UID"}
+        UI_UID = {ContentES = "UID", TextMapId = "UI_UID"},
+        UI_UIGUIDE_CLOSE = {
+          ContentES = "Desactivar",
+          TextMapId = "UI_UIGUIDE_CLOSE"
+        }
       }
     end
   },
   {
-    MinKey = "UI_UIGUIDE_CLOSE",
-    MaxKey = "UI_WEAPON_NAME_20698",
+    MinKey = "UI_UIGUIDE_NEXT",
+    MaxKey = "UI_WEAPON_NAME_20699",
     Loader = function()
       return {
-        UI_UIGUIDE_CLOSE = {
-          ContentES = "Desactivar",
-          TextMapId = "UI_UIGUIDE_CLOSE"
-        },
         UI_UIGUIDE_NEXT = {
           ContentES = "Siguiente",
           TextMapId = "UI_UIGUIDE_NEXT"
@@ -82044,19 +82040,19 @@ Emparejamiento cancelado.]],
         UI_WEAPON_NAME_20698 = {
           ContentES = "Arco Largo del Centinela",
           TextMapId = "UI_WEAPON_NAME_20698"
+        },
+        UI_WEAPON_NAME_20699 = {
+          ContentES = "Arco Largo Metálico",
+          TextMapId = "UI_WEAPON_NAME_20699"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_NAME_20699",
-    MaxKey = "UI_WeaponSkin_Name_3011201",
+    MinKey = "UI_WEAPON_NAME_310101",
+    MaxKey = "UI_WeaponSkin_Preview",
     Loader = function()
       return {
-        UI_WEAPON_NAME_20699 = {
-          ContentES = "Arco Largo Metálico",
-          TextMapId = "UI_WEAPON_NAME_20699"
-        },
         UI_WEAPON_NAME_310101 = {
           ContentES = "Hansel y Gretel",
           TextMapId = "UI_WEAPON_NAME_310101"
@@ -82852,19 +82848,19 @@ Emparejamiento cancelado.]],
         UI_WeaponSkin_Name_3011201 = {
           ContentES = "Pan de gato N°2",
           TextMapId = "UI_WeaponSkin_Name_3011201"
+        },
+        UI_WeaponSkin_Preview = {
+          ContentES = "Vista previa del aspecto de arma",
+          TextMapId = "UI_WeaponSkin_Preview"
         }
       }
     end
   },
   {
-    MinKey = "UI_WeaponSkin_Preview",
-    MaxKey = "VoiceDes119",
+    MinKey = "UI_WeaponStrength_After",
+    MaxKey = "VoiceDes120",
     Loader = function()
       return {
-        UI_WeaponSkin_Preview = {
-          ContentES = "Vista previa del aspecto de arma",
-          TextMapId = "UI_WeaponSkin_Preview"
-        },
         UI_WeaponStrength_After = {
           ContentES = "Efectos pasivos después de la fusión",
           TextMapId = "UI_WeaponStrength_After"
@@ -83657,19 +83653,19 @@ Emparejamiento cancelado.]],
         VoiceDes119 = {
           ContentES = "Sobre su armónica Ⅰ",
           TextMapId = "VoiceDes119"
+        },
+        VoiceDes120 = {
+          ContentES = "Sobre su armónica Ⅱ",
+          TextMapId = "VoiceDes120"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes120",
-    MaxKey = "WikiText_40300501",
+    MinKey = "VoiceDes121",
+    MaxKey = "WikiText_40300502",
     Loader = function()
       return {
-        VoiceDes120 = {
-          ContentES = "Sobre su armónica Ⅱ",
-          TextMapId = "VoiceDes120"
-        },
         VoiceDes121 = {
           ContentES = "Sobre la Legión Ⅰ",
           TextMapId = "VoiceDes121"
@@ -84465,19 +84461,19 @@ Emparejamiento cancelado.]],
         WikiText_40300501 = {
           ContentES = "Sustancia ampliamente utilizada en todo Huaxu, preparada con ingredientes específicos y mediante un proceso meticuloso. Los quemadores de incienso permanecen encendidos por todo el territorio, asegurando que su fragancia perdure en el aire. Las personas también suelen llevar bolsitas de incienso personales. Es una característica definitoria de la región de Huaxu.",
           TextMapId = "WikiText_40300501"
+        },
+        WikiText_40300502 = {
+          ContentES = "Cuando se bendice, el incienso puede proteger al portador o ahuyentar temporalmente a los enemigos. Una vez que su poder se agota, el portador debe visitar un Templo del Dragón Argento para recibir una bendición renovada, un proceso llamado “Reposición”.",
+          TextMapId = "WikiText_40300502"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_40300502",
-    MaxKey = "voice_ch_char_Baonu_vo_topic_01_4",
+    MinKey = "WikiText_40300503",
+    MaxKey = "voice_ch_char_Baonu_vo_topic_02_1",
     Loader = function()
       return {
-        WikiText_40300502 = {
-          ContentES = "Cuando se bendice, el incienso puede proteger al portador o ahuyentar temporalmente a los enemigos. Una vez que su poder se agota, el portador debe visitar un Templo del Dragón Argento para recibir una bendición renovada, un proceso llamado “Reposición”.",
-          TextMapId = "WikiText_40300502"
-        },
         WikiText_40300503 = {
           ContentES = "El incienso es el medio vital que sostiene a los Nueve Capítulos de Dafeng. La influencia de la ley se extiende solo donde su fragancia penetra.\nDentro de Huaxu, dos métodos garantizan su continuidad: ofrendas diarias hechas voluntariamente por el pueblo y ceremonias a gran escala organizadas por el Estado. Los quemadores y incensarios omnipresentes son mantenidos por la Secta Xuanheng, asegurando que el humo fragante nunca desaparezca.",
           TextMapId = "WikiText_40300503"
@@ -85270,19 +85266,19 @@ Emparejamiento cancelado.]],
         voice_ch_char_Baonu_vo_topic_01_4 = {
           ContentES = "¿¡Eh!? ¿¡No le gusta el helado!? Entonces... ¿qué tal puré de papas? ¿¡O aderezo para ensaladas!?",
           TextMapId = "voice_ch_char_Baonu_vo_topic_01_4"
+        },
+        voice_ch_char_Baonu_vo_topic_02_1 = {
+          ContentES = "¡Uf! ¡Cállate! ¡No quiero hablar de esos viejos aguafiestas! Uf, me has arruinado el día... No, no, no puedo enfadarme. Cálmate, Lisbell...",
+          TextMapId = "voice_ch_char_Baonu_vo_topic_02_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Baonu_vo_topic_02_1",
-    MaxKey = "voice_ch_char_Kami_vo_topic_02_2",
+    MinKey = "voice_ch_char_Baonu_vo_topic_02_2",
+    MaxKey = "voice_ch_char_Kami_vo_topic_03_1",
     Loader = function()
       return {
-        voice_ch_char_Baonu_vo_topic_02_1 = {
-          ContentES = "¡Uf! ¡Cállate! ¡No quiero hablar de esos viejos aguafiestas! Uf, me has arruinado el día... No, no, no puedo enfadarme. Cálmate, Lisbell...",
-          TextMapId = "voice_ch_char_Baonu_vo_topic_02_1"
-        },
         voice_ch_char_Baonu_vo_topic_02_2 = {
           ContentES = "¡Ejem! ¡Para nada! Son absolutamente maravillosos. Tan amables y comprensivos. Cuando te equivocas en un himno, solo tienes que copiarlo treinta veces. Y si te pillan dándole crema a Samael, solo son dos días encerrado para reflexión en solitario. Realmente, son lo mejor. Absolutamente encantadores...",
           TextMapId = "voice_ch_char_Baonu_vo_topic_02_2"
@@ -86078,19 +86074,19 @@ Emparejamiento cancelado.]],
         voice_ch_char_Kami_vo_topic_02_2 = {
           ContentES = "Y en cuanto a por qué todos acaban reunidos en mi humilde taberna... Es muy sencillo, mi buen licor, mi trato justo y claro, esos pequeños favores que ofrezco de vez en cuando para sacar a alguien de apuros.",
           TextMapId = "voice_ch_char_Kami_vo_topic_02_2"
+        },
+        voice_ch_char_Kami_vo_topic_03_1 = {
+          ContentES = "En lugar de preguntármelo a mí, ¿no sería más apropiado que te lo preguntaras a ti {性别:mismo|misma}? Aún recuerdo la situación tan desesperada en la que estabas cuando llegaste por primera vez a Lago Helado, sin tener adónde ir. Deberías saberlo bien... el dinero es la base para poder mantenerse en este mundo.",
+          TextMapId = "voice_ch_char_Kami_vo_topic_03_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Kami_vo_topic_03_1",
-    MaxKey = "voice_ch_char_Maer_vo_topic_05_1",
+    MinKey = "voice_ch_char_Kami_vo_topic_03_2",
+    MaxKey = "voice_ch_char_Maer_vo_topic_05_2",
     Loader = function()
       return {
-        voice_ch_char_Kami_vo_topic_03_1 = {
-          ContentES = "En lugar de preguntármelo a mí, ¿no sería más apropiado que te lo preguntaras a ti {性别:mismo|misma}? Aún recuerdo la situación tan desesperada en la que estabas cuando llegaste por primera vez a Lago Helado, sin tener adónde ir. Deberías saberlo bien... el dinero es la base para poder mantenerse en este mundo.",
-          TextMapId = "voice_ch_char_Kami_vo_topic_03_1"
-        },
         voice_ch_char_Kami_vo_topic_03_2 = {
           ContentES = "Si bien el dinero no puede cambiar quién eres, sí te ayuda a obtener medios para enfrentarte a la vida. Si a tu alrededor solo hay tormentas, puedes comprarte una buena botella de vino para entrar en calor, y si eres inteligente compartirás un sorbo con alguien y así podrás hacerte amigos, quienes querrán devolverte el favor.",
           TextMapId = "voice_ch_char_Kami_vo_topic_03_2"
@@ -86886,19 +86882,19 @@ Emparejamiento cancelado.]],
         voice_ch_char_Maer_vo_topic_05_1 = {
           ContentES = "¡No! ¡Eso no soy yo! ¡Soy demasiado mayor para un título tan infantil! ¡Por favor, te ruego que no me vuelvas a llamar así!",
           TextMapId = "voice_ch_char_Maer_vo_topic_05_1"
+        },
+        voice_ch_char_Maer_vo_topic_05_2 = {
+          ContentES = "Claro que es... ejem, ejem, Señorita Margie, ¡la Detective Taciturna que recorre los rincones más recónditos de la ciudad! ¡Hoy te revelaré los secretos del Lago Helado, como siempre!",
+          TextMapId = "voice_ch_char_Maer_vo_topic_05_2"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Maer_vo_topic_05_2",
-    MaxKey = "voice_ch_char_Songlu_vo_topic_02_1",
+    MinKey = "voice_ch_char_Maer_vo_topic_05_3",
+    MaxKey = "voice_ch_char_Songlu_vo_topic_02_2",
     Loader = function()
       return {
-        voice_ch_char_Maer_vo_topic_05_2 = {
-          ContentES = "Claro que es... ejem, ejem, Señorita Margie, ¡la Detective Taciturna que recorre los rincones más recónditos de la ciudad! ¡Hoy te revelaré los secretos del Lago Helado, como siempre!",
-          TextMapId = "voice_ch_char_Maer_vo_topic_05_2"
-        },
         voice_ch_char_Maer_vo_topic_05_3 = {
           ContentES = "Jeje, ¡ese sí que es un título apropiado para mí!",
           TextMapId = "voice_ch_char_Maer_vo_topic_05_3"
@@ -87694,19 +87690,19 @@ Emparejamiento cancelado.]],
         voice_ch_char_Songlu_vo_topic_02_1 = {
           ContentES = "¿Eh? Hmm, quizás sí... Nunca lo había pensado, ¡pero Filbert solo tumba a esos malandrines, gritones y peleones! ¡Se lo merecen!",
           TextMapId = "voice_ch_char_Songlu_vo_topic_02_1"
+        },
+        voice_ch_char_Songlu_vo_topic_02_2 = {
+          ContentES = "Esos tipos siempre terminan con hambre después de sus peleas. Les iría mejor arando campos que blandiendo armas. Así habría menos gente que se vaya a la cama con hambre.",
+          TextMapId = "voice_ch_char_Songlu_vo_topic_02_2"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Songlu_vo_topic_02_2",
-    MaxKey = "voice_ch_char_Yeer_vo_appear",
+    MinKey = "voice_ch_char_Songlu_vo_topic_02_3",
+    MaxKey = "voice_ch_char_Yeer_vo_battleidle",
     Loader = function()
       return {
-        voice_ch_char_Songlu_vo_topic_02_2 = {
-          ContentES = "Esos tipos siempre terminan con hambre después de sus peleas. Les iría mejor arando campos que blandiendo armas. Así habría menos gente que se vaya a la cama con hambre.",
-          TextMapId = "voice_ch_char_Songlu_vo_topic_02_2"
-        },
         voice_ch_char_Songlu_vo_topic_02_3 = {
           ContentES = "¡Absolutamente! Las guerras solo traen hambre, ¡son terribles! He oído que en tiempos de guerra, la gente muere de inanición... ¡es lo peor! Espero no tener que verlo jamás.",
           TextMapId = "voice_ch_char_Songlu_vo_topic_02_3"
@@ -88502,19 +88498,19 @@ Emparejamiento cancelado.]],
         voice_ch_char_Yeer_vo_appear = {
           ContentES = "Yale: Oliver debería ser m-mucho m-mejor para l-luchar que yo...",
           TextMapId = "voice_ch_char_Yeer_vo_appear"
+        },
+        voice_ch_char_Yeer_vo_battleidle = {
+          ContentES = "Oliver: ¡Oye, no te quedes ahí parado, b-busca algo para hacer volar por los aires!\nYale: ¡Shh! Tenemos que seguir el plan.",
+          TextMapId = "voice_ch_char_Yeer_vo_battleidle"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Yeer_vo_battleidle",
+    MinKey = "voice_ch_char_Yeer_vo_battlestart_r01",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
-        voice_ch_char_Yeer_vo_battleidle = {
-          ContentES = "Oliver: ¡Oye, no te quedes ahí parado, b-busca algo para hacer volar por los aires!\nYale: ¡Shh! Tenemos que seguir el plan.",
-          TextMapId = "voice_ch_char_Yeer_vo_battleidle"
-        },
         voice_ch_char_Yeer_vo_battlestart_r01 = {
           ContentES = "Oliver: ¡Ah... Qué fresco es el aire!",
           TextMapId = "voice_ch_char_Yeer_vo_battlestart_r01"

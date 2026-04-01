@@ -22,16 +22,21 @@ function M:OnAddedToFocusPath(InFocusEvent)
   if AnnounceController:IsGamepad() then
     self.Btn_Area:SetCheckedNoNotify(true)
     self:OnClick()
-    self.Parent.WebContent:ExecuteJavascript("setCtrlType(\"\")")
+    if self.Content.Conf.UIStyle == AnnounceCommon.ContentUIStyle.Default and self.Content.bWebFocusable then
+      local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
+      GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+    end
+    if self.Content.Conf.UIStyle == AnnounceCommon.ContentUIStyle.ImageOnly and self.Content.Conf.HasLinkImage then
+      local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
+      GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
+    end
   end
 end
 
 function M:OnRemovedFromFocusPath(InFocusEvent)
-  if AnnounceController:IsGamepad() and self.Content == self.Parent.CurContent then
-    local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
-    local InputType = GameInputModeSubsystem:GetCurrentInputType()
-    local GamePadName = GameInputModeSubsystem:GetCurrentGamepadName()
-    self.Parent:UpdateWebOnInputTypeChange(InputType, GamePadName)
+  if AnnounceController:IsGamepad() and self.Content == self.Parent.CurContent and self.Content.Conf.UIStyle == AnnounceCommon.ContentUIStyle.Default and self.Content.bWebFocusable then
+    local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
+    GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
   end
 end
 
@@ -63,7 +68,9 @@ end
 function M:OnMouseButtonUp(MyGeo, InMouseEvent)
   if not self.Btn_Area:IsVisible() then
     if self.Content.OnSelectedItenClick then
-      self.Content.OnSelectedItenClick(self.Parent):SetFocus()
+      local WebContent = self.Content.OnSelectedItenClick(self.Parent)
+      WebContent:SetFocus()
+      WebContent:ExecuteJavascript("syncIndicator(\"active\")")
     end
     return UIUtils.Handled
   end

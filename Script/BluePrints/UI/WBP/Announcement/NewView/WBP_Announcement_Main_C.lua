@@ -72,6 +72,7 @@ function M:ClickRetry()
 end
 
 function M:OnWebContentLoadDone()
+  self.WebContent:ExecuteJavascript(string.format("queryPlatform(\"%s\")", CommonUtils.GetDeviceTypeByPlatformName(self)))
 end
 
 function M:SetLoadingVisible(bVisible)
@@ -99,6 +100,7 @@ function M:Destruct()
   for i, NodeName in ipairs(ReddotNames) do
     self:RemoveReddotListener(NodeName)
   end
+  self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   M.Super.Destruct(self)
   EMCache:SaveCommon()
   AnnounceController:ClearAnnounceMainUI()
@@ -248,6 +250,8 @@ function M:RefreshAllAnnouncement()
 end
 
 function M:ChangeMainContent(Content, bForce)
+  self.bSelectionExpand = nil
+  self.bWebFocusable = nil
   local bChanged = false
   if self.CurContent and self.CurContent.Conf.NoticeID ~= Content.Conf.NoticeID then
     if self.CurContent.Widget then
@@ -309,11 +313,14 @@ function M:NotifyLaunchUrl(Url)
 end
 
 function M:NotifySelectionExpand(bExpand)
+  self.bLastSelectionExp = self.bSelectionExpand
   self.bSelectionExpand = bExpand
 end
 
-function M:QueryPlatform()
-  return CommonUtils.GetDeviceTypeByPlatformName(self)
+function M:NotifyWebFocusable(bWebFocusable)
+  if self.CurContent then
+    self.CurContent.bWebFocusable = bWebFocusable
+  end
 end
 
 return M

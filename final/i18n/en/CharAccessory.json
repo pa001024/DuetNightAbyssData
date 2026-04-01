@@ -1497,7 +1497,7 @@
   },
   {
     "id": 20044,
-    "name": "Fengshi Goggles: Opaque White",
+    "name": "Volant Visor: Mint",
     "desc": "扫描，分析，演算。",
     "icon": "T_Fashion_Face23_03",
     "rarity": 5,
@@ -1553,7 +1553,7 @@
   },
   {
     "id": 20052,
-    "name": "Qingyu Goggles: Rust Red",
+    "name": "Volant Visor: Gilt",
     "desc": "扫描，分析，演算。",
     "icon": "T_Fashion_Face23_02",
     "rarity": 5,
@@ -1561,7 +1561,7 @@
   },
   {
     "id": 20053,
-    "name": "Qingyu Goggles: Mint",
+    "name": "Volant Visor: Rust Red",
     "desc": "扫描，分析，演算。",
     "icon": "T_Fashion_Face23_01",
     "rarity": 5,
@@ -1569,7 +1569,7 @@
   },
   {
     "id": 20054,
-    "name": "青羽护目·涅白",
+    "name": "Volant Visor: Opaque White",
     "desc": "扫描，分析，演算。",
     "icon": "T_Fashion_Face23",
     "rarity": 5,
@@ -1577,7 +1577,7 @@
   },
   {
     "id": 20055,
-    "name": "Qingyu Goggles: Gilt",
+    "name": "Fengshi Visor: Mint",
     "desc": "Target locked.",
     "icon": "T_Fashion_Face24__03",
     "rarity": 5,
@@ -1585,7 +1585,7 @@
   },
   {
     "id": 20056,
-    "name": "Fengshi Goggles: Mint",
+    "name": "Fengshi Visor: Dark Jade",
     "desc": "Target locked.",
     "icon": "T_Fashion_Face24__02",
     "rarity": 5,
@@ -1593,7 +1593,7 @@
   },
   {
     "id": 20057,
-    "name": "Fengshi Goggles: Dark Jade",
+    "name": "Fengshi Visor: White Sakura",
     "desc": "Target locked.",
     "icon": "T_Fashion_Face24",
     "rarity": 5,
@@ -1601,7 +1601,7 @@
   },
   {
     "id": 20058,
-    "name": "Qingyu Goggles: Opaque White",
+    "name": "Fengshi Visor: Azure",
     "desc": "Target locked.",
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
@@ -2105,7 +2105,7 @@
   },
   {
     "id": 31004,
-    "name": "Array of Designs: Rust Red",
+    "name": "Victory Posture: Jishu Phantasia",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_03",
     "rarity": 5,
@@ -2185,7 +2185,7 @@
   },
   {
     "id": 40013,
-    "name": "Su Yi Skin Backpiece",
+    "name": "Volant Elytra: Mint",
     "desc": "Activate. Engage. Advance.",
     "icon": "T_Fashion_Back41_04",
     "rarity": 5,
@@ -2289,7 +2289,7 @@
   },
   {
     "id": 40026,
-    "name": "Fengshi Goggles: Azure",
+    "name": "Volant Elytra: Rust Red",
     "desc": "Activate. Engage. Advance.",
     "icon": "T_Fashion_Back41_02",
     "rarity": 5,
@@ -2297,7 +2297,7 @@
   },
   {
     "id": 40027,
-    "name": "Volant Elytra: Rust Red",
+    "name": "Volant Elytra: Gilt",
     "desc": "Activate. Engage. Advance.",
     "icon": "T_Fashion_Back41_03",
     "rarity": 5,
@@ -2305,7 +2305,7 @@
   },
   {
     "id": 40028,
-    "name": "Volant Elytra: Gilt",
+    "name": "Volant Elytra: Opaque White",
     "desc": "Activate. Engage. Advance.",
     "icon": "T_Fashion_Back41_01",
     "rarity": 5,
@@ -2353,7 +2353,7 @@
   },
   {
     "id": 40034,
-    "name": "Volant Elytra: Opaque White",
+    "name": "Array of Designs: Opaque White",
     "desc": "By sacred words, evil is banished, the soul is nourished, and the spirits are sustained.",
     "icon": "T_Fashion_Back39_01",
     "rarity": 5,
@@ -2361,7 +2361,7 @@
   },
   {
     "id": 40035,
-    "name": "Array of Designs: Opaque White",
+    "name": "Array of Designs: Rust Red",
     "desc": "By sacred words, evil is banished, the soul is nourished, and the spirits are sustained.",
     "icon": "T_Fashion_Back39_02",
     "rarity": 5,

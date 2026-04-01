@@ -1198,7 +1198,7 @@ return ReadOnly("ImpressionCheck", {
     EmpathyCheck = 0,
     ImprCheckId = 1136,
     MoralityCheck = 0,
-    RegionId = 1045,
+    RegionId = 1041,
     WisdomCheck = 60
   }
 })

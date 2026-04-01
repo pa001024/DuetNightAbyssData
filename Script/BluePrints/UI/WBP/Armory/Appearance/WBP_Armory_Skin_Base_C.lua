@@ -25,7 +25,6 @@ function M:ReceiveEnterState(StackAction)
     self.ActorController:ClearLastSequenceInfo()
   end
   if self.Target then
-    ArmoryUtils:InitSkinLevelUpReddot(self.Target.CharId)
     self:RefreshLevelUpReddot()
   end
 end
@@ -385,7 +384,6 @@ function M:Init(Params)
       Idx = self.HairTabIdx
     })
   else
-    ArmoryUtils:InitSkinLevelUpReddot(self.Target.CharId)
     self.JumpToSkinId = Params.SkinId
     self.Tab_Skin:SelectTab(self.SkinTabIdx)
     self:OnTopTabSelected({
@@ -1214,9 +1212,7 @@ function M:UpdateBtnStateByResourceChanged(ResourceId)
       self:UpdateAccessoryDetails(SelectContent)
     end
   end
-  if 100 == ResourceId or 99 == ResourceId then
-    self:RefreshLevelUpReddot()
-  end
+  self:OnSkinUpgradeResourceChanged(ResourceId)
 end
 
 function M:OnHideUIKeyDown()

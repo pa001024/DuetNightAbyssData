@@ -173,6 +173,54 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Content_20031803",
     WildcardClassification = "Story"
   },
+  Content_400121_1 = {
+    TextMapId = "Content_400121_1",
+    WildcardClassification = "Story"
+  },
+  Content_400121_2 = {
+    TextMapId = "Content_400121_2",
+    WildcardClassification = "Story"
+  },
+  Content_400122_1 = {
+    TextMapId = "Content_400122_1",
+    WildcardClassification = "Story"
+  },
+  Content_400122_2 = {
+    TextMapId = "Content_400122_2",
+    WildcardClassification = "Story"
+  },
+  Content_400123_1 = {
+    TextMapId = "Content_400123_1",
+    WildcardClassification = "Story"
+  },
+  Content_400123_2 = {
+    TextMapId = "Content_400123_2",
+    WildcardClassification = "Story"
+  },
+  Content_400125_1 = {
+    TextMapId = "Content_400125_1",
+    WildcardClassification = "Story"
+  },
+  Content_400125_2 = {
+    TextMapId = "Content_400125_2",
+    WildcardClassification = "Story"
+  },
+  Content_400126_1 = {
+    TextMapId = "Content_400126_1",
+    WildcardClassification = "Story"
+  },
+  Content_400126_2 = {
+    TextMapId = "Content_400126_2",
+    WildcardClassification = "Story"
+  },
+  Content_400127_1 = {
+    TextMapId = "Content_400127_1",
+    WildcardClassification = "Story"
+  },
+  Content_400127_2 = {
+    TextMapId = "Content_400127_2",
+    WildcardClassification = "Story"
+  },
   Content_Nai02_01_01 = {
     TextMapId = "Content_Nai02_01_01",
     WildcardClassification = "Story"
@@ -691,6 +739,26 @@ return ReadOnly("TextMapWildcard", {
   },
   TitleFrame_10017 = {
     TextMapId = "TitleFrame_10017",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10021 = {
+    TextMapId = "TitleFrame_10021",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10022 = {
+    TextMapId = "TitleFrame_10022",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10023 = {
+    TextMapId = "TitleFrame_10023",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10024 = {
+    TextMapId = "TitleFrame_10024",
+    WildcardClassification = "Story"
+  },
+  TitleFrame_10025 = {
+    TextMapId = "TitleFrame_10025",
     WildcardClassification = "Story"
   },
   Title_10001 = {

@@ -19,17 +19,17 @@ function M:InitShowValue(Content)
     self:InitDispatchTag(Content)
   else
     self.WidgetSwitcher_Content:SetActiveWidgetIndex(0)
-    local NumNowSlot = UWidgetLayoutLibrary.SlotAsHorizontalBoxSlot(self.Num_Now)
+    local HBNowSlot = UWidgetLayoutLibrary.SlotAsHorizontalBoxSlot(self.HB_Now)
     if not Content.CmpValue or Content.Value == Content.CmpValue then
       self.Num_Preview:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Icon_Up:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Icon_Arrow:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      NumNowSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Right)
+      HBNowSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Right)
     else
       self.Num_Preview:SetVisibility(UIConst.VisibilityOp.Visible)
       self.Icon_Up:SetVisibility(UIConst.VisibilityOp.Visible)
       self.Icon_Arrow:SetVisibility(UIConst.VisibilityOp.Visibie)
-      NumNowSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Left)
+      HBNowSlot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Left)
     end
     self.Text_Atrr:SetText(Content.Name)
     self.Num_Now:SetText(Content.Value)

@@ -120,7 +120,7 @@ return {
             propsData = {
               IsNpcNode = false,
               IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = false,
+              IsNPCTurnToPlayer = true,
               FirstDialogueId = 51173701,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
