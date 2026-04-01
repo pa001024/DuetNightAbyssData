@@ -27,24 +27,15 @@ class FishProcessor(BaseProcessor):
         fish_type = fish_data.get("FishType")
         fish_length = fish_data.get("FishLength", [0, 0])
 
-        # 通过ResourceId获取鱼类名称
         resource_id = fish_data.get("ResourceId")
         fish_name = ""
-        fish_desc = ""
-        fish_desc2 = ""
         rarity =0
         if resource_id in self.resource_map:
             resource_info = self.resource_map[resource_id]
             resource_name_key = resource_info.get("ResourceName")
-            resource_desc_key = resource_info.get("DetailDes")
-            resource_desc2_key = resource_info.get("IpDes")
             rarity = resource_info.get("Rarity", 0)
             if resource_name_key:
                 fish_name = self.get_translated_text(resource_name_key, language)
-            if resource_desc_key:
-                fish_desc = self.get_translated_text(resource_desc_key, language)
-            if resource_desc2_key:
-                fish_desc2 = self.get_translated_text(resource_desc2_key, language)
 
         # 提取图标路径中的T_Fish_后面的部分
         icon_path = fish_data.get("IconPath", "")
@@ -64,8 +55,7 @@ class FishProcessor(BaseProcessor):
         processed_fish = {
             "id": fish_id,
             "name": fish_name,
-            "desc": fish_desc,
-            "desc2": fish_desc2,
+            "rid": resource_id,
             "level": fish_level,
             "type": fish_type,
             "rarity": rarity,
