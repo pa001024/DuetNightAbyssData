@@ -7,3 +7,4 @@ copy.tran.bat
 copy_resource_icons.py
 bin/
 .serena/
+final/i18n/*/translation.json
