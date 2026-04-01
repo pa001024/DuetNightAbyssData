@@ -1,0 +1,261 @@
+[
+  {
+    "id": 10122,
+    "name": "すみっコの頭",
+    "desc": "今、本物のすみっコはどっち？",
+    "icon": "T_Fashion_Head48",
+    "rarity": 4
+  },
+  {
+    "id": 10123,
+    "name": "魔王様の頭",
+    "desc": "今、本物の光の魔王様はどっち？",
+    "icon": "T_Fashion_Head49",
+    "rarity": 4
+  },
+  {
+    "id": 10124,
+    "name": "不思議な紙袋・オリジナル",
+    "desc": "紙袋をかぶると、天から不思議な力が降りたみたいに、抑えていた本性がするりとほどけてしまう。",
+    "icon": "T_Fashion_Head50",
+    "rarity": 4
+  },
+  {
+    "id": 10125,
+    "name": "不思議な紙袋・アイボリー",
+    "desc": "紙袋をかぶると、天から不思議な力が降りたみたいに、抑えていた本性がするりとほどけてしまう。",
+    "icon": "T_Fashion_Head51",
+    "rarity": 4
+  },
+  {
+    "id": 10126,
+    "name": "不思議な紙袋・キャラメル",
+    "desc": "紙袋をかぶると、天から不思議な力が降りたみたいに、抑えていた本性がするりとほどけてしまう。",
+    "icon": "T_Fashion_Head47",
+    "rarity": 4
+  },
+  {
+    "id": 10127,
+    "name": "瞬速ヘルメット・チェリーホワイト",
+    "desc": "道は千万あれど、安全第一。",
+    "icon": "T_Fashion_Hat09_03",
+    "rarity": 4
+  },
+  {
+    "id": 10128,
+    "name": "瞬速ヘルメット・エメラルドグリーン",
+    "desc": "道は千万あれど、安全第一。",
+    "icon": "T_Fashion_Hat09_01",
+    "rarity": 4
+  },
+  {
+    "id": 10129,
+    "name": "瞬速ヘルメット・アイボリー",
+    "desc": "道は千万あれど、安全第一。",
+    "icon": "T_Fashion_Hat09_02",
+    "rarity": 4
+  },
+  {
+    "id": 10130,
+    "name": "瞬速ヘルメット・マリーゴールド",
+    "desc": "道は千万あれど、安全第一。",
+    "icon": "T_Fashion_Hat09_04",
+    "rarity": 4
+  },
+  {
+    "id": 150492,
+    "name": "天を巡る青羽",
+    "icon": "T_Fashion_Suyi_01",
+    "rarity": 5,
+    "charId": 1504
+  },
+  {
+    "id": 240192,
+    "name": "心濯ぐ白波",
+    "icon": "T_Fashion_Baiheng_01",
+    "rarity": 5,
+    "charId": 2401
+  },
+  {
+    "id": 410292,
+    "name": "宴夜の駆引",
+    "icon": "T_Fashion_Zhiliu_01",
+    "rarity": 5,
+    "charId": 4102
+  },
+  {
+    "id": 530192,
+    "name": "夢の舞踏会",
+    "icon": "T_Fashion_Saiqi_01",
+    "rarity": 5,
+    "charId": 5301
+  },
+  {
+    "id": 11010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1101
+  },
+  {
+    "id": 11030121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1103
+  },
+  {
+    "id": 15010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1501
+  },
+  {
+    "id": 15020121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1502
+  },
+  {
+    "id": 15030121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1503
+  },
+  {
+    "id": 16010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1601
+  },
+  {
+    "id": 16010221,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 160101
+  },
+  {
+    "id": 18010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1801
+  },
+  {
+    "id": 21010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 2101
+  },
+  {
+    "id": 23010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 2301
+  },
+  {
+    "id": 24010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 2401
+  },
+  {
+    "id": 31010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 3101
+  },
+  {
+    "id": 31030121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 3103
+  },
+  {
+    "id": 32010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 3201
+  },
+  {
+    "id": 33010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 3301
+  },
+  {
+    "id": 41010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4101
+  },
+  {
+    "id": 41020121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4102
+  },
+  {
+    "id": 42010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4201
+  },
+  {
+    "id": 42020121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4202
+  },
+  {
+    "id": 43010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4301
+  },
+  {
+    "id": 51010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 5101
+  },
+  {
+    "id": 51020121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 5102
+  },
+  {
+    "id": 53010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 5301
+  },
+  {
+    "id": 54010121,
+    "name": "冬日の幻想",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 5401
+  }
+]

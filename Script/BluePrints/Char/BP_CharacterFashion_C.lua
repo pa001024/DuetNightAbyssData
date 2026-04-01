@@ -901,8 +901,6 @@ function BP_CharacterFashion_C:ChangeAccessory(AccessoryId, AccessoryType, Trans
   if Transform then
     Transform = Offsets[1] * Transform
     Owner:SetAccessoryTransform(AccessoryId, AccessoryType, Transform)
-  else
-    Owner:SetAccessoryTransform(AccessoryId, AccessoryType, FTransform())
   end
   if self.UpdateFxAccessory then
     self.UpdateFxAccessory(self, AccessoryType)

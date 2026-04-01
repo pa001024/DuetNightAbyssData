@@ -1,0 +1,261 @@
+[
+  {
+    "id": 10122,
+    "name": "Cinder Hatpiece",
+    "desc": "Now, who's the real Cinder?",
+    "icon": "T_Fashion_Head48",
+    "rarity": 4
+  },
+  {
+    "id": 10123,
+    "name": "Demon King Hatpiece",
+    "desc": "Now, who's the real Demon King of Light?",
+    "icon": "T_Fashion_Head49",
+    "rarity": 4
+  },
+  {
+    "id": 10124,
+    "name": "The Liberator",
+    "desc": "Put it on, and feel a strange magic take hold — as if it's finally okay to let your true self out to play.",
+    "icon": "T_Fashion_Head50",
+    "rarity": 4
+  },
+  {
+    "id": 10125,
+    "name": "The Liberator: Opaque White",
+    "desc": "Put it on, and feel a strange magic take hold — as if it's finally okay to let your true self out to play.",
+    "icon": "T_Fashion_Head51",
+    "rarity": 4
+  },
+  {
+    "id": 10126,
+    "name": "The Liberator: Caramel",
+    "desc": "Put it on, and feel a strange magic take hold — as if it's finally okay to let your true self out to play.",
+    "icon": "T_Fashion_Head47",
+    "rarity": 4
+  },
+  {
+    "id": 10127,
+    "name": "Speedster Helmet: White Sakura",
+    "desc": "Look sharp, ride safe.",
+    "icon": "T_Fashion_Hat09_03",
+    "rarity": 4
+  },
+  {
+    "id": 10128,
+    "name": "Speedster Helmet: Dark Jade",
+    "desc": "Look sharp, ride safe.",
+    "icon": "T_Fashion_Hat09_01",
+    "rarity": 4
+  },
+  {
+    "id": 10129,
+    "name": "Speedster Helmet: Opaque White",
+    "desc": "Look sharp, ride safe.",
+    "icon": "T_Fashion_Hat09_02",
+    "rarity": 4
+  },
+  {
+    "id": 10130,
+    "name": "Speedster Helmet: Gilt",
+    "desc": "Look sharp, ride safe.",
+    "icon": "T_Fashion_Hat09_04",
+    "rarity": 4
+  },
+  {
+    "id": 150492,
+    "name": "Volant Viridity",
+    "icon": "T_Fashion_Suyi_01",
+    "rarity": 5,
+    "charId": 1504
+  },
+  {
+    "id": 240192,
+    "name": "Tidal Repose",
+    "icon": "T_Fashion_Baiheng_01",
+    "rarity": 5,
+    "charId": 2401
+  },
+  {
+    "id": 410292,
+    "name": "Epulary Elegance",
+    "icon": "T_Fashion_Zhiliu_01",
+    "rarity": 5,
+    "charId": 4102
+  },
+  {
+    "id": 530192,
+    "name": "Minuet Reverie",
+    "icon": "T_Fashion_Saiqi_01",
+    "rarity": 5,
+    "charId": 5301
+  },
+  {
+    "id": 11010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1101
+  },
+  {
+    "id": 11030121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1103
+  },
+  {
+    "id": 15010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1501
+  },
+  {
+    "id": 15020121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1502
+  },
+  {
+    "id": 15030121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1503
+  },
+  {
+    "id": 16010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1601
+  },
+  {
+    "id": 16010221,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 160101
+  },
+  {
+    "id": 18010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1801
+  },
+  {
+    "id": 21010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 2101
+  },
+  {
+    "id": 23010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 2301
+  },
+  {
+    "id": 24010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 2401
+  },
+  {
+    "id": 31010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 3101
+  },
+  {
+    "id": 31030121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 3103
+  },
+  {
+    "id": 32010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 3201
+  },
+  {
+    "id": 33010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 3301
+  },
+  {
+    "id": 41010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4101
+  },
+  {
+    "id": 41020121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4102
+  },
+  {
+    "id": 42010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4201
+  },
+  {
+    "id": 42020121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4202
+  },
+  {
+    "id": 43010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 4301
+  },
+  {
+    "id": 51010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 5101
+  },
+  {
+    "id": 51020121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 5102
+  },
+  {
+    "id": 53010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 5301
+  },
+  {
+    "id": 54010121,
+    "name": "Frosty Fantasy",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 5401
+  }
+]

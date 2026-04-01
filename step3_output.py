@@ -43,6 +43,7 @@ from processor.weapon_accessory_processor import WeaponAccessoryProcessor
 from processor.weapon_skin_processor import WeaponSkinProcessor
 from processor.head_sculpture_processor import HeadSculptureProcessor
 from processor.head_frame_processor import HeadFrameProcessor
+from processor.hair_processor import HairProcessor
 from processor.impression_shop_processor import ImpressionShopProcessor
 from processor.event_processor import EventProcessor
 from processor.monster_strong_affixes_processor import MonsterStrongAffixesProcessor
@@ -316,6 +317,7 @@ class FinalProcessor:
             "Skin": SkinProcessor,
             "HeadSculpture": HeadSculptureProcessor,
             "HeadFrame": HeadFrameProcessor,
+            "Hair": HairProcessor,
             "ImpressionShop": ImpressionShopProcessor,
             "Event": EventProcessor,
             "MonsterStrongAffixes": MonsterStrongAffixesProcessor,
@@ -470,6 +472,7 @@ if __name__ == "__main__":
         "Skin",
         "HeadSculpture",
         "HeadFrame",
+        "Hair",
         "ImpressionShop",
         "Event",
         "MonsterStrongAffixes",

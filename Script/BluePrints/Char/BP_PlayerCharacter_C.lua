@@ -74,6 +74,20 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   end
 end
 
+function BP_PlayerCharacter_C:TempSuyiReset()
+  for i, a in pairs(self.EMObjects) do
+    print(_G.LogTag, "0----", i, a)
+  end
+  local FeatureClass = UE4.UNormalJumpFeature:StaticClass()
+  local NormalJumpFeature = self.EMObjects:Find(FeatureClass)
+  if not NormalJumpFeature then
+    return
+  end
+  print(_G.LogTag, "TempSuyiReset")
+  local T = {JustJumpState = false}
+  NormalJumpFeature:SetActionInfo(T)
+end
+
 function BP_PlayerCharacter_C:OnTagChange(Eid, OldTag, NewTag)
   if "GrabHit" == NewTag and not self.GrabHitCheckTimer then
     self.GrabHitCheckTimer = self:AddTimer(1, function()
@@ -3073,6 +3087,7 @@ function BP_PlayerCharacter_C:AfterLoading(Eid)
     self:AddDisableInputTag("DeliverMontage")
     self:PlayTeleportAction(AllCallback, false, true, false)
     self.Mesh:GetAnimInstance():Montage_JumpToSection("End")
+    self:SetCharacterTag("Interactive")
     
     local function RemoveDeliverTag()
       if self.DisableInputTags:Find("DeliverMontage") then
