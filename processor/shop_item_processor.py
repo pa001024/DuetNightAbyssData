@@ -32,6 +32,8 @@ class ShopItemProcessor(BaseProcessor):
         self.shop_data = data_loader.load_json("Shop.json")
         self.shop_tab_main_data = data_loader.load_json("ShopTabMain.json")
         self.shop_tab_sub_data = data_loader.load_json("ShopTabSub.json")
+        self.shop_item_to_pay_goods = data_loader.load_json("ShopItem2PayGoods.json")
+        self.pay_goods_data = data_loader.load_json("PayGoods.json")
 
         # 为 Resource 表创建 ResourceId 到资源信息的映射
         self.resource_map = {}
@@ -201,6 +203,29 @@ class ShopItemProcessor(BaseProcessor):
                 if price_name_key:
                     price_name = self.get_translated_text(price_name_key, language)
 
+        pay_data = None
+        pay_goods_id = (
+            self.shop_item_to_pay_goods.get(item_id)
+            or self.shop_item_to_pay_goods.get(str(item_id))
+        )
+        if pay_goods_id:
+            pay_good = self.pay_goods_data.get(pay_goods_id)
+            if pay_good:
+                pay_data = {}
+                for field in [
+                    "PriceCNY",
+                    "PriceEUR",
+                    "PriceGBP",
+                    "PriceHKD",
+                    "PriceJPY",
+                    "PriceKRW",
+                    "PriceRUB",
+                    "PriceTWD",
+                    "PriceUSD",
+                ]:
+                    if field in pay_good:
+                        pay_data[field.replace("Price", "")] = pay_good.get(field)
+
         item_condition_text = self._get_item_condition_text(
             shop_item_data.get("ItemCondition"), language
         )
@@ -217,6 +242,8 @@ class ShopItemProcessor(BaseProcessor):
             "limit": shop_item_data.get("PurchaseLimit"),
             "subTabId": shop_item_data.get("SubTabId"),
         }
+        if pay_data:
+            processed_shop_item["pay"] = pay_data
         sequence = shop_item_data.get("Sequence")
         if sequence is not None:
             processed_shop_item["sequence"] = sequence
