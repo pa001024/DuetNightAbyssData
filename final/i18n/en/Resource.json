@@ -68,17 +68,6 @@
     "name": "Sanergy",
     "icon": "T_Coin_Other_Jingli",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            2814.3945,
-            6266.1465
-          ]
-        ]
-      }
-    ],
     "desc": "Taking on Commissions consumes Sanergy.",
     "desc2": "\"While focused dedication is admirable, it's all about balance and moderation. Overexertion leading to frailty and weariness is a folly to be avoided.\"\n\n— Fushu, Huaxu Apothecary"
   },
@@ -93,17 +82,6 @@
     "name": "Luno Coin – CBT2",
     "icon": "T_Resource_CoinCBT2",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            0,
-            -660
-          ]
-        ]
-      }
-    ],
     "desc": "A rare currency that can be exchanged for various rewards. Only usable during the Second Closed Beta Test.",
     "desc2": "A priceless gift for participants of the Second Closed Beta Test."
   },
@@ -112,17 +90,6 @@
     "name": "Lucent Prism",
     "icon": "T_Gacha_Coin01",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            7992,
-            -7996
-          ]
-        ]
-      }
-    ],
     "desc": "The kaleidoscope, casting a prismatic profusion of light — a sliver, caught by eyes in the darkness, unfolds countless worlds in motion.",
     "desc2": "\"This is the 'Rainbow.' It's right there in your palm, hidden inside this small, glittering tube. Turn it, and you can see forests, constellations, snow stretching like an endless desert... Berry, {nickname}, even if we have to stay hidden in these ruins for now, I still want you both to see a world far more vast and wondrous.\"\n\n— ???"
   },
@@ -131,77 +98,6 @@
     "name": "Iridescent Prism",
     "icon": "T_Gacha_Coin02",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -8170,
-            -1380
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            12.300335,
-            305.59637
-          ],
-          [
-            215.50781,
-            161.81956
-          ],
-          [
-            -49334.47,
-            32720.027
-          ],
-          [
-            -14654.068,
-            -6688.1562
-          ],
-          [
-            92.004974,
-            142.35172
-          ]
-        ]
-      },
-      {
-        "srId": 100102,
-        "pos": [
-          [
-            16781,
-            -3622
-          ],
-          [
-            22409.998,
-            15735
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            22558,
-            19391
-          ]
-        ]
-      },
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            2462,
-            2864
-          ],
-          [
-            1681,
-            11518
-          ]
-        ]
-      }
-    ],
     "desc": "The kaleidoscope, casting a prismatic profusion of light — a sliver, caught by eyes in the darkness, unfolds countless worlds in motion.",
     "desc2": "\"This is the 'Rainbow.' It's right there in your palm, hidden inside this small, glittering tube. Turn it, and you can see forests, constellations, snow stretching like an endless desert... Berry, {nickname}, even if we have to stay hidden in these ruins for now, I still want you both to see a world far more vast and wondrous.\"\n\n— ???"
   },
@@ -246,46 +142,6 @@
     "name": "Track-Shift Module",
     "icon": "T_Resource_PolarityStyle",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            18685,
-            -40590
-          ],
-          [
-            17990,
-            -38810
-          ],
-          [
-            16320,
-            -39015
-          ],
-          [
-            27380,
-            -38830
-          ],
-          [
-            27479.227,
-            -38918.33
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -16225,
-            -1675
-          ],
-          [
-            80,
-            7530
-          ]
-        ]
-      }
-    ],
     "desc": "Produced from the Hyperborean Empire, a precision instrument very similar to a toolbox. When its gears start to move, the Demon Wedge placed inside will be modified to better suit the user's state. Because it acts directly on the user, this style has higher precision, and after use, it can further enhance the user's abilities.",
     "desc2": "\"Mastering the art of using tools on the right occasions isn't laziness. In fact, it's a vital tactic for wrapping up battles efficiently. As for the time saved, it's naturally meant for relaxing one's weary body and mind with a well-deserved sleep...\"\n\n— Randy, Hyperborean Officer"
   },
@@ -294,30 +150,6 @@
     "name": "Weapon Track-Shift Module",
     "icon": "T_Resource_PolarityAura",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -920,
-            12060
-          ]
-        ]
-      },
-      {
-        "srId": 102103,
-        "pos": [
-          [
-            35475,
-            -9985
-          ],
-          [
-            40606.36,
-            -14625.161
-          ]
-        ]
-      }
-    ],
     "desc": "Produced from the Hyperborean Empire, a precision instrument very similar to a toolbox. When its gears start to move, the Demon Wedge placed inside will be modified to better suit the user's state. This style has good detection capabilities for various types of weapons, and its use can further increase the weapon's abilities.",
     "desc2": "\"Of course, weapons have their own temperaments! If she's upset, it throws me off in combat... It's only natural to feel this way, as we are the closest comrades and partners! Am I right, Samael?\"\n\n— Lisbell, candidate for \"Patience\" of the Seven Virtues of Elysium"
   },
@@ -326,17 +158,6 @@
     "name": "Embers",
     "icon": "T_Rouge_Token_02",
     "rarity": 1,
-    "source": [
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            18531,
-            29645
-          ]
-        ]
-      }
-    ],
     "desc": "Everything is destined to burn, to be devoured and reduced to ashes, ultimately sinking into the abyss.",
     "desc2": "\"I beg of you... please don't take my final gleam of light...\"\n\n—A twisted figure in the abyss"
   },
@@ -345,17 +166,6 @@
     "name": "Sanergy Tonic",
     "icon": "T_Resource_ActionPoint_ActionPointRecoveryM",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 103201,
-        "pos": [
-          [
-            3705.7363,
-            -4454.0186
-          ]
-        ]
-      }
-    ],
     "desc": "A tonic developed by the Alchemy Academy to enhance stamina. Commonly issued as part of standard military supplies.",
     "desc2": "\"Like tea and coffee, it's just another way to squeeze out more energy and keep going. But honestly, the only real cure for exhaustion is proper rest, so if you're tired, go get some sleep... zZZ...\"\n\n— Lunotress"
   },
@@ -364,17 +174,6 @@
     "name": "Glazeystal",
     "icon": "T_Rouge_TalentToken_01",
     "rarity": 1,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20740,
-            135.50696
-          ]
-        ]
-      }
-    ],
     "desc": "A shard of a sacred relic recovered from the Abyss across countless cycles of revival. It appears to bear a blessing beyond mortal ken.",
     "desc2": "\"I can no longer move, so please, take my lantern. Carry me, carry us all, and spread the divine light... into every corner of the abyss...\"\n\n—Last words of a Pioneer Knight"
   },
@@ -391,17 +190,6 @@
     "name": "Commission Manual: Volume Ⅱ",
     "icon": "T_Resource_Ticket02",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20510,
-            285.50696
-          ]
-        ]
-      }
-    ],
     "desc": "Increases commission rewards by 200%.\nAs your team, The Noctoyagers, rise to prominence among the Phoxhunters, more and more commissions come your way. While this entails heavier responsibilities, it also leads to greater rewards.",
     "desc2": "\"Let's see, today's commissions include... finding a lost wallet, saving a stray cat on the roof, and mending a broken heart?? Handling all these trivial jobs one by one is a real hassle. I'll just bundle them together and finish them in one go.\"\n\n— Outsider, a Phoxhunter"
   },
@@ -426,26 +214,6 @@
     "name": "Angler's Token",
     "icon": "T_Coin_Other_Fishing",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 104103,
-        "pos": [
-          [
-            -4230,
-            30620
-          ]
-        ]
-      },
-      {
-        "srId": 104108,
-        "pos": [
-          [
-            52476.473,
-            37017.613
-          ]
-        ]
-      }
-    ],
     "desc": "A coin stamped with the emblem of a fish — treasured by anglers far and wide. The more you collect, the higher you climb in the fishing ranks. Trade them in for better gear and prove yourself the slickest fish hunter out there.",
     "desc2": "Take it. Consider it your graduation gift. Don't underestimate this little coin — I've spent a lifetime chasing fish that couldn't stand the sight of me. This coin... is all I have left to give.\n\n— A veteran angler clutching a coin, reluctant to let go"
   },
@@ -1465,17 +1233,6 @@
     "name": "Pristine Hourglass",
     "icon": "T_Resource_GachaTicket_01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101110,
-        "pos": [
-          [
-            5025.26,
-            1311.8019
-          ]
-        ]
-      }
-    ],
     "desc": "An hourglass captures not just sand, but the passage of time and cherished memories. It bears witness to a multitude of splendors and countless stories.",
     "desc2": "\"O The Spindle of fate!\nThat which thou weaveth \nIs grains of sand, a cord entwined in silicate— \nAlone it knows neither beginning nor end!\"\n\n—Excerpt from The Spindle of the Goddess of Fate, by an anonymous poet"
   },
@@ -1492,15 +1249,6 @@
           [
             39604.457,
             11191.478
-          ]
-        ]
-      },
-      {
-        "srId": 101110,
-        "pos": [
-          [
-            5149.465,
-            1020.7086
           ]
         ]
       },
@@ -1571,33 +1319,6 @@
     "name": "Prismatic Hourglass (Limited-Time)",
     "icon": "T_Resource_GachaTicket_03",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            -7253.9033,
-            4486.6577
-          ],
-          [
-            -7425.891,
-            4092.4116
-          ],
-          [
-            -6615.8613,
-            3527.8232
-          ],
-          [
-            -6719.2856,
-            4269.51
-          ],
-          [
-            -7192.2593,
-            3212.8672
-          ]
-        ]
-      }
-    ],
     "desc": "An hourglass captures not just sand, but the passage of time and cherished memories. It bears witness to a multitude of splendors and countless stories.",
     "desc2": "\"O The Spindle of fate!\nThat which thou weaveth \nIs grains of sand, a cord entwined in silicate— \nAlone it knows neither beginning nor end!\"\n\n—Excerpt from The Spindle of the Goddess of Fate, by an anonymous poet"
   },
@@ -1621,66 +1342,6 @@
     "name": "Reforge Salvager Ⅱ",
     "icon": "T_Icon_ModRandomBlue",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101303,
-        "pos": [
-          [
-            825.62964,
-            26802.53
-          ],
-          [
-            1810.3848,
-            25943.06
-          ],
-          [
-            2093.4614,
-            26116.33
-          ]
-        ]
-      },
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            22244.918,
-            34134.53
-          ],
-          [
-            22367.54,
-            33980.58
-          ],
-          [
-            22530.162,
-            34172.812
-          ],
-          [
-            24267.172,
-            35177.312
-          ],
-          [
-            24015.398,
-            35177.312
-          ],
-          [
-            24015.398,
-            35351.723
-          ],
-          [
-            23387.633,
-            35825.215
-          ],
-          [
-            23498.215,
-            35960.707
-          ],
-          [
-            23250.172,
-            35996.46
-          ]
-        ]
-      }
-    ],
     "desc": "Used to reforge Demon Wedges"
   },
   {
@@ -1696,41 +1357,6 @@
     "name": "Gliscent Needle",
     "icon": "T_Resource_ActivityIcon_02",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -19077.75,
-            25544.674
-          ],
-          [
-            -17868.172,
-            25222.422
-          ],
-          [
-            -18501.246,
-            25988.18
-          ],
-          [
-            -22428.875,
-            11815.03
-          ],
-          [
-            -22697.283,
-            9936.444
-          ],
-          [
-            -20316.742,
-            9467.155
-          ],
-          [
-            -18470,
-            23730
-          ]
-        ]
-      }
-    ],
     "desc": "The needle's tip draws trails of light, stitching new raiment from the weave of thread and fate. It can be used to upgrade certain character cosmetics.",
     "desc2": "\"With every stitch, the transformation draws closer. I see a new work of art slowly coming to life — born from the tender dance between thread and fingertip.\"\n\n— Amiette, an Artist "
   },
@@ -3777,17 +3403,6 @@
     "name": "Withered Bough",
     "icon": "T_BreakRes_Wind02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            2380,
-            2660
-          ]
-        ]
-      }
-    ],
     "desc": "A weathered old bough, snapped by fierce winds, bearing the scars of erosion that seem to have sapped it of all life.",
     "desc2": "\"'A withered bough feels the gale, the ocean implies the chill.'\nHearken and behold, the path ahead whispers its secrets through every leaf and twig — all creation is a bearer of tidings.\"\n\n— Yaoguang, Pioneer of the Huaxu Jishu Sect"
   },
@@ -3796,17 +3411,6 @@
     "name": "Galeweaver",
     "icon": "T_BreakRes_Wind03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1350.7812,
-            11593.679
-          ]
-        ]
-      }
-    ],
     "desc": "Originating from the Hyperborean Empire, powered by Phoxichor, this apparatus generates tremendous gusts. On grand occasions, these artificial winds elevate petals, banners, and the very grandeur of the empire.",
     "desc2": "\"Humanity's relentless pursuit to grasp power has led to innumerable tragedies and yet, it has carved their place in history. Over the aeons, they've lit bonfires in wildlands, extracted ice from glaciers, sowed fields with crops, and corralled air currents in the winds. Thus, nature's elements gradually became tools at their disposal, easing their existence and embellishing their chronicles.\"\n\n— Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library, in \"Betwixt Leaves and Branches—History of Atlasia\""
   },
@@ -3815,17 +3419,6 @@
     "name": "Oceanifly",
     "icon": "T_BreakRes_Wind04",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1304.041,
-            11575.55
-          ]
-        ]
-      }
-    ],
     "desc": "A butterfly navigating the ocean through air currents. Even in still weather, it can glide across the ocean via the currents generated from flapping its delicate wings — a small marvel with the ability to command the winds.",
     "desc2": "\"With delicate flutters, an Oceanifly can reach Luca's shores. The gentle air currents underneath the wings lift nothing heavier, but as they start to roam, what then? They might vanish, or perhaps grow stronger, traversing oceans and lands, evolving into a sweeping sandstorm across the realm of Khemet.\"\n\n— Miller, Aethyrie scholar"
   },
@@ -3834,17 +3427,6 @@
     "name": "Tempest Piercer",
     "icon": "T_BreakRes_Wind05",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            10784.852,
-            -3759.9648
-          ]
-        ]
-      }
-    ],
     "desc": "Originating from Huaxu, this colossal and weighty arrow defies even the fiercest storms. One can scarcely conceive who might wield such a bolt, yet its meteor-like trail across the heavens shall be indelibly etched in the memory of any witnesses.",
     "desc2": "In Huaxu's nascent years, ill portents befell the heavens. Venus shone by day; stars plummeted into the boundless deep. Across the wilds, Filthoids ran rampant as the Defilement spread.\n\nYang, traversing the realm his great hunt to make, smote the beast Chisel-Tooth within the Cursed Waters and did capture the Great Swine amidst the Mulberry Groves. Unto his vassals he bestowed arrows, commanding his lords to hunt nineteen great beasts, subduing all beneath heaven. Thus did all yield, proclaiming Yang their sovereign.\n\n— Ban Ye, the Grand Historiographer, in \"The Annals of Huaxu\""
   },
@@ -3853,17 +3435,6 @@
     "name": "Flame Lizard Scale",
     "icon": "T_BreakRes_Fire02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1380.0635,
-            11634.813
-          ]
-        ]
-      }
-    ],
     "desc": "Scales from a desert lizard, specially structured to endure scorching heat without harm. This trait adds credence to the fabled kinship between lizards and dragons, though the latter, a creature of beauty, dwells only in the realms of myth and fantasy.",
     "desc2": "\"Its radiance is unmistakable, even a hundred meters away. This cloak, meticulously crafted from myriad Flame Lizard scales, stands as an undeniable work of art. Forged in Khemet's golden age, its fiery red hue, shimmering like living flames under the sun, captures the essence of this passionate land.\nYears later, Queen Lamia donned it on the battlefield, unwavering amidst ceaseless gunfire and sorcery. The enduring standoff lasted days and nights, with no turning back nor retreat, leaving the fires to burn on to this day.\"\n\n— \"Refraction\", designed by Fiama"
   },
@@ -3872,17 +3443,6 @@
     "name": "Everbright Flame",
     "icon": "T_BreakRes_Fire03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            7670,
-            -7810
-          ]
-        ]
-      }
-    ],
     "desc": "The eternal flame of sanctity, a beacon signifying that Khemet endures as long as this fire burns. To the desert folk, offering fire is a gesture of everlasting friendship.",
     "desc2": "\"In Khemet, the newborn are bathed in the glow of flames; upon death, they're liberated from corporeal chains by fire. Life may fade with time, but the soul lives on within the fire for eternity.\"\n\n— Seth, King of Khemet, in \"A Proclamation to the People of Khemet\""
   },
@@ -3947,17 +3507,6 @@
     "name": "Stormfall Jade",
     "icon": "T_BreakRes_Thunder03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101105,
-        "pos": [
-          [
-            -53.375004,
-            20810.188
-          ]
-        ]
-      }
-    ],
     "desc": "A special mineral that fell to the ground on a stormy night, with mirror-like facets and subtle purple currents flickering within.",
     "desc2": "\"In Huaxu's history, meteors were never symbols of luck or wish fulfilment. Instead, they called them 'Broom Stars', regarding them as omens of disaster and peril. Yet ironically, Huaxu became the earliest recorded nation to use meteorite products. It seems that when faced with practicality, the people of Huaxu were not opposed to overturning a few beliefs.\"\n\n— Tacitus, Elysian Historian, in \"Chronicles\""
   },
@@ -3966,17 +3515,6 @@
     "name": "Golden Wool",
     "icon": "T_BreakRes_Thunder04",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101105,
-        "pos": [
-          [
-            -83.375,
-            20840.191
-          ]
-        ]
-      }
-    ],
     "desc": "Wool of golden hue, reminiscent of mythical treasures. It's true that golden sheep are real, and for those with ample means, their wool can be woven into sweaters. Yet, this golden fleece is susceptible to static, making the wearer spark with movement.",
     "desc2": "\"O spindle of destiny,\nWith what does the merciless goddess weave thee?\nIs it with the delicate threads of spiders from the abyss?\nThe golden fleece upon high peaks?\nOr the subtle original sin coursing through our veins?!\"\n\n— Anonymous Poet, Excerpt from \"The Spindle of the Goddess of Fate\""
   },
@@ -3985,17 +3523,6 @@
     "name": "Bottled Lightning",
     "icon": "T_BreakRes_Thunder05",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -41437.668,
-            26181.232
-          ]
-        ]
-      }
-    ],
     "desc": "Lightning ensnared by the people of Huaxu, continuing its restless dance within the bottle. This craft traces back two centuries to the priest who braved the Thunder Plains alone, anointing himself as the hunter.",
     "desc2": "\"No child could spurn a vial of captured lightning — its sparks that dance at your fingertips, like your very own genie in a bottle. In war-torn times, for many a child who has lost their family and friends, solace is found solely in this tiny bottle.\"\n\n— Dylan the Walking Encyclopedia, in \"Into the Unseen Corners\""
   },
@@ -4004,17 +3531,6 @@
     "name": "Lense of Enlightenment",
     "icon": "T_BreakRes_Light02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1339.5823,
-            11585.088
-          ]
-        ]
-      }
-    ],
     "desc": "A monocle that comes with various exquisite chains, favoured by Aethyrie's scholarly elite, hence dubbed \"Lense of Enlightenment\".",
     "desc2": "\"Not anyone could pull off these glasses — you either need to have deep-set eyes or strong eye muscles, I mean REALLY strong! From what I've seen, professors of the latter type usually have a short fuse — always either scowling like they're trying to squash a fly between their eyebrows or glaring at you with a squint. Trust me, no good can come from taking their classes.\"\n\n— An Aethyrie Senior Who Prefers Anonymity"
   },
@@ -4023,17 +3539,6 @@
     "name": "Golden Floriated Diadem",
     "icon": "T_BreakRes_Light03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101106,
-        "pos": [
-          [
-            20194,
-            510
-          ]
-        ]
-      }
-    ],
     "desc": "Bestowed by the Elysian Church, adorned only by those of esteemed reverence, its interlaced flowers and foliage represent devotion and allegiance, embodying a faith as pure as gold.",
     "desc2": "\"Ugh, this thing's so heavy! Can't even lift my head properly!\"\n\n— Lisbell, candidate for \"Patience\" of the Seven Virtues of Elysium"
   },
@@ -4058,17 +3563,6 @@
     "name": "Rust-Etched Dagger",
     "icon": "T_BreakRes_Dark02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            25445.238,
-            -38144.035
-          ]
-        ]
-      }
-    ],
     "desc": "A dagger mottled with rust, its elegant engravings a testament to its owner's nobility; perhaps a personal possession of a soul fallen on ancient battlefields.",
     "desc2": "\"The Empire's coming for a fight? Well, they'll get one! Not all Charons are willing to be their poodles! Ha, I'll chop them down, grab their fancy weapons, and make a mountain out of their corpses — right where we always do!\"\n\n— An Askard Tribesperson"
   },
@@ -4077,17 +3571,6 @@
     "name": "Obsidian Key",
     "icon": "T_BreakRes_Dark03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            6910,
-            1510
-          ]
-        ]
-      }
-    ],
     "desc": "In Aethyrie, obsidian symbolizes the inspiration of the night. Each Charon scholar from Aethyrie receives this key upon graduation. The significance known only to its bearer.",
     "desc2": "\"The realm of knowledge shows no favouritism, opening its doors equally to Solas and Charons. Just shed the heavy shackles and roam freely in pursuit of enlightenment. Bear in mind, even in the darkest of nights, our thoughts glow with undimmed light.\"\n\n— Professor Montpelier, Arcadia Academy of Aethyrie"
   },
@@ -4248,178 +3731,6 @@
     "name": "Basic Weapon Component: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 101305,
-        "pos": [
-          [
-            1999.2393,
-            14200.169
-          ],
-          [
-            590.5093,
-            -199.08887
-          ],
-          [
-            342.03442,
-            481.6172
-          ],
-          [
-            -368.46423,
-            500.7881
-          ],
-          [
-            -590.391,
-            -183.44238
-          ],
-          [
-            0,
-            -618.4053
-          ],
-          [
-            0,
-            -478.1797
-          ],
-          [
-            -396.23694,
-            233.8584
-          ],
-          [
-            415.18872,
-            241.75781
-          ]
-        ]
-      },
-      {
-        "srId": 101303,
-        "pos": [
-          [
-            3381.131,
-            25994.094
-          ]
-        ]
-      },
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            19056.16,
-            29442.52
-          ],
-          [
-            18753.627,
-            31252.29
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -39480.105,
-            4588.9897
-          ],
-          [
-            -32410,
-            34010
-          ],
-          [
-            -8800,
-            42600
-          ]
-        ]
-      },
-      {
-        "srId": 101701,
-        "pos": [
-          [
-            -24698.273,
-            -486.51306
-          ]
-        ]
-      },
-      {
-        "srId": 101703,
-        "pos": [
-          [
-            -6594.703,
-            -14219.948
-          ]
-        ]
-      },
-      {
-        "srId": 101402,
-        "pos": [
-          [
-            0,
-            50000
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            2140,
-            19040
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            111,
-            811
-          ]
-        ]
-      },
-      {
-        "srId": 105401,
-        "pos": [
-          [
-            -1616.17,
-            -163.37
-          ]
-        ]
-      },
-      {
-        "srId": 105701,
-        "pos": [
-          [
-            22984,
-            -84799
-          ]
-        ]
-      },
-      {
-        "srId": 104701,
-        "pos": [
-          [
-            -35790.164,
-            -54839.754
-          ]
-        ]
-      },
-      {
-        "srId": 104102,
-        "pos": [
-          [
-            -60455.715,
-            5767.8833
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            31738.906,
-            32011.352
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of a basic weapon component. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
@@ -4428,100 +3739,6 @@
     "name": "Intermediate Weapon Component: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20549.932,
-            -2176.5784
-          ],
-          [
-            20510,
-            -2169
-          ]
-        ]
-      },
-      {
-        "srId": 103201,
-        "pos": [
-          [
-            5867.137,
-            -6868.6543
-          ]
-        ]
-      },
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -12174,
-            756.00244
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -30250.61,
-            8967.531
-          ],
-          [
-            -32579.617,
-            8709.96
-          ],
-          [
-            -27398,
-            10018.001
-          ]
-        ]
-      },
-      {
-        "srId": 101702,
-        "pos": [
-          [
-            840,
-            80
-          ]
-        ]
-      },
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            33550,
-            -32950
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            1640,
-            21440
-          ],
-          [
-            0,
-            13200
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            24870.812,
-            22764
-          ],
-          [
-            22660.938,
-            18243.555
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an intermediate weapon component. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
@@ -4530,133 +3747,6 @@
     "name": "Advanced Weapon Component: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            22850.652,
-            3416.8345
-          ],
-          [
-            20490.447,
-            5615.4106
-          ],
-          [
-            18129.87,
-            3416.8345
-          ]
-        ]
-      },
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            11562.369,
-            30542.213
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -19973.203,
-            10650
-          ],
-          [
-            -20406.363,
-            15950.222
-          ],
-          [
-            -29387.746,
-            4443.475
-          ],
-          [
-            -30304.898,
-            2603.4534
-          ],
-          [
-            -30730.33,
-            5113.133
-          ],
-          [
-            -34178,
-            5335.633
-          ],
-          [
-            -34178,
-            3648.659
-          ],
-          [
-            -31680.463,
-            3365.3362
-          ],
-          [
-            -28995.326,
-            1749.005
-          ],
-          [
-            -27409.547,
-            2942.4092
-          ],
-          [
-            -27141.941,
-            1254.5349
-          ],
-          [
-            -28247.062,
-            990.01
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -2180,
-            19010
-          ]
-        ]
-      },
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            -1905.6965,
-            -2081.9407
-          ],
-          [
-            -22.753582,
-            -1218.6176
-          ],
-          [
-            1491.7654,
-            -397.20438
-          ],
-          [
-            2198.4329,
-            1105.1051
-          ],
-          [
-            3409.608,
-            235.63153
-          ],
-          [
-            3284.2507,
-            2842.2454
-          ],
-          [
-            2353.893,
-            2775.9214
-          ],
-          [
-            2310.774,
-            2249.7056
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an advanced weapon component. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
@@ -4665,26 +3755,6 @@
     "name": "Basic Weapon Component: Blade",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -1220,
-            21980
-          ]
-        ]
-      },
-      {
-        "srId": 102103,
-        "pos": [
-          [
-            41159.297,
-            -14300.713
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of a basic weapon component. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
     "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
@@ -4693,35 +3763,6 @@
     "name": "Intermediate Weapon Component: Blade",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            18753.627,
-            31252.29
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -8800,
-            42600
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            31738.906,
-            32011.352
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an intermediate weapon component. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
     "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
@@ -4730,26 +3771,6 @@
     "name": "Advanced Weapon Component: Blade",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            1151.0438,
-            -38537
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            111,
-            811
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an advanced weapon component. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
     "desc2": "\"The essence of swordsmanship lies in the unity of the wielder's spirit. With utmost focus, one can cleave through the mightiest foes, be they ocean waves or leviathans.\"\n\n— Excerpt from The Art of the Sword, by a nameless swordsman from Huaxu"
   },
@@ -4766,51 +3787,6 @@
     "name": "Intermediate Weapon Component: Decoration",
     "icon": "T_Melee_Weapon_Part03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20490,
-            4130
-          ]
-        ]
-      },
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -7984.5117,
-            645.43085
-          ],
-          [
-            -7595.211,
-            -945.3517
-          ],
-          [
-            -9600,
-            -4700
-          ],
-          [
-            -10200,
-            -4100
-          ],
-          [
-            -9017.089,
-            -4100
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -12860,
-            -11955
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an intermediate weapon component. It embodies the wielder's will — only the strong are entitled to showcase their unique individuality on the battlefield.",
     "desc2": "\"What's so bad about being different? People are always bending over backwards trying to prove how unique they are. Me? Ha, I was born an outcast, a natural oddity shunned by Father Ask, the most bizarre ornament in the tribe!\"\n\n— \"The Raven\" Chaos, from The Forsakens"
   },
@@ -4819,44 +3795,6 @@
     "name": "Advanced Weapon Component: Decoration",
     "icon": "T_Melee_Weapon_Part03",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -1573.1154,
-            5753.105
-          ]
-        ]
-      },
-      {
-        "srId": 101701,
-        "pos": [
-          [
-            -39135,
-            -720
-          ]
-        ]
-      },
-      {
-        "srId": 101702,
-        "pos": [
-          [
-            -30730,
-            -12340
-          ]
-        ]
-      },
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            6450,
-            -33475
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an advanced weapon component. It embodies the wielder's will — only the strong are entitled to showcase their unique individuality on the battlefield.",
     "desc2": "\"What's so bad about being different? People are always bending over backwards trying to prove how unique they are. Me? Ha, I was born an outcast, a natural oddity shunned by Father Ask, the most bizarre ornament in the tribe!\"\n\n— \"The Raven\" Chaos, from The Forsakens"
   },
@@ -4865,17 +3803,6 @@
     "name": "Basic Weapon Component: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20502.557,
-            2250.4736
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of a basic weapon component. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
@@ -4884,17 +3811,6 @@
     "name": "Intermediate Weapon Component: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101701,
-        "pos": [
-          [
-            -6573.7983,
-            4183.828
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an intermediate weapon component. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
@@ -4903,17 +3819,6 @@
     "name": "Advanced Weapon Component: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101106,
-        "pos": [
-          [
-            22444.496,
-            -32.379997
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an advanced weapon component. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
@@ -4922,17 +3827,6 @@
     "name": "Basic Weapon Component: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 101106,
-        "pos": [
-          [
-            19851.03,
-            1238.7537
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of a basic weapon component. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
@@ -4941,17 +3835,6 @@
     "name": "Intermediate Weapon Component: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101106,
-        "pos": [
-          [
-            19824.686,
-            1137.4208
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an intermediate weapon component. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
@@ -4960,17 +3843,6 @@
     "name": "Advanced Weapon Component: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -20711.523,
-            10237.078
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an advanced weapon component. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"The trigger is the most crucial part of any mechanical device. Even from a developer's perspective, I can tell you — no matter how intricate the internal workings are, it's just a piece of scrap if the trigger doesn't function properly. Trust me, I speak from experience — if my trigger had jammed back then, I wouldn't be here today.\"\n\n— An unnamed veteran traveller"
   },
@@ -4979,17 +3851,6 @@
     "name": "Basic Weapon Component: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -19215,
-            10620
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of a basic weapon component. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
@@ -4998,17 +3859,6 @@
     "name": "Intermediate Weapon Component: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -18915,
-            11870
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an intermediate weapon component. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
@@ -5017,17 +3867,6 @@
     "name": "Advanced Weapon Component: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -19810,
-            10960
-          ]
-        ]
-      }
-    ],
     "desc": "Crafted with precision from the blueprint of an advanced weapon component. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"Sure, the legion gives us some freedom to customise our weapons, but painting my gun pink? That's where I draw the line! I don't care if you're my sister, that's still a no. And take that teddy bear charm off!\"\n\n— Lynn, an officer of the Hyperborean Legion"
   },
@@ -6616,10 +5455,6 @@
         "srId": 100101,
         "pos": [
           [
-            -1198,
-            51
-          ],
-          [
             9098,
             9019
           ]
@@ -6644,10 +5479,6 @@
       {
         "srId": 100101,
         "pos": [
-          [
-            50,
-            -80
-          ],
           [
             5451,
             6828
@@ -6713,10 +5544,6 @@
         "srId": 100102,
         "pos": [
           [
-            -3099.1875,
-            -1306.1221
-          ],
-          [
             27885,
             5905
           ]
@@ -6735,10 +5562,6 @@
       {
         "srId": 100103,
         "pos": [
-          [
-            -3521,
-            674
-          ],
           [
             21480,
             24980
@@ -6759,10 +5582,6 @@
         "srId": 100101,
         "pos": [
           [
-            -3525,
-            9915
-          ],
-          [
             8260,
             -3620
           ]
@@ -6781,10 +5600,6 @@
       {
         "srId": 100103,
         "pos": [
-          [
-            -135,
-            -191
-          ],
           [
             38879,
             19823
@@ -6805,10 +5620,6 @@
         "srId": 101101,
         "pos": [
           [
-            -1,
-            38
-          ],
-          [
             -2050,
             4170
           ]
@@ -6827,10 +5638,6 @@
       {
         "srId": 101101,
         "pos": [
-          [
-            -155.99997,
-            101.00003
-          ],
           [
             -1700.7699,
             -7420.7163
@@ -6851,10 +5658,6 @@
         "srId": 101101,
         "pos": [
           [
-            -585,
-            296
-          ],
-          [
             -9393,
             7504
           ]
@@ -6873,10 +5676,6 @@
       {
         "srId": 101301,
         "pos": [
-          [
-            -718.21533,
-            3934.8008
-          ],
           [
             6308,
             2379
@@ -6897,10 +5696,6 @@
         "srId": 101103,
         "pos": [
           [
-            1508.2344,
-            4569.042
-          ],
-          [
             -39461,
             -3328
           ]
@@ -6919,10 +5714,6 @@
       {
         "srId": 101103,
         "pos": [
-          [
-            2924.7324,
-            1436.1116
-          ],
           [
             -28580,
             -5200
@@ -6943,10 +5734,6 @@
         "srId": 101103,
         "pos": [
           [
-            -5404.076,
-            3901.4297
-          ],
-          [
             -25917,
             5325
           ]
@@ -6965,10 +5752,6 @@
       {
         "srId": 101103,
         "pos": [
-          [
-            -2639.332,
-            983.77734
-          ],
           [
             -38101.484,
             30920.523
@@ -6989,10 +5772,6 @@
         "srId": 101702,
         "pos": [
           [
-            0,
-            0
-          ],
-          [
             -32562,
             -16124
           ]
@@ -7011,10 +5790,6 @@
       {
         "srId": 101701,
         "pos": [
-          [
-            0,
-            26.611816
-          ],
           [
             -14120,
             -7175
@@ -7035,10 +5810,6 @@
         "srId": 102101,
         "pos": [
           [
-            0,
-            0
-          ],
-          [
             30081,
             -31233
           ]
@@ -7057,10 +5828,6 @@
       {
         "srId": 102101,
         "pos": [
-          [
-            0,
-            0
-          ],
           [
             19415,
             -37668
@@ -7081,10 +5848,6 @@
         "srId": 102102,
         "pos": [
           [
-            9218.941,
-            -20395.379
-          ],
-          [
             -10037,
             -1317
           ]
@@ -7104,10 +5867,6 @@
         "srId": 104108,
         "pos": [
           [
-            -486.25,
-            -5053.3477
-          ],
-          [
             41170,
             67884
           ]
@@ -7126,10 +5885,6 @@
       {
         "srId": 104110,
         "pos": [
-          [
-            148.5332,
-            165.83447
-          ],
           [
             31508,
             -3480
@@ -7169,10 +5924,6 @@
         "srId": 104109,
         "pos": [
           [
-            93.015625,
-            -205.73828
-          ],
-          [
             -19023,
             5230
           ]
@@ -7191,10 +5942,6 @@
       {
         "srId": 104105,
         "pos": [
-          [
-            -1118.1562,
-            -321.44336
-          ],
           [
             -18718,
             -31299
@@ -7234,10 +5981,6 @@
         "srId": 104505,
         "pos": [
           [
-            -2077.42,
-            -1227.76
-          ],
-          [
             61191.07,
             -76997.71
           ]
@@ -7257,10 +6000,6 @@
         "srId": 104502,
         "pos": [
           [
-            -77.9,
-            1.54
-          ],
-          [
             18391.01,
             -38555.32
           ]
@@ -7275,67 +6014,6 @@
     "name": "Advensphere: Purgatorio Island",
     "icon": "T_ExploreBadge_Beibao_Prologue",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 100102,
-        "pos": [
-          [
-            20476,
-            3013
-          ],
-          [
-            28805,
-            5325
-          ],
-          [
-            16167,
-            10019
-          ],
-          [
-            26424,
-            -5052
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            38077,
-            21235
-          ],
-          [
-            17713.771,
-            25303.838
-          ],
-          [
-            26367,
-            31693
-          ]
-        ]
-      },
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1932,
-            6055
-          ],
-          [
-            10207,
-            9225
-          ],
-          [
-            2866,
-            8321
-          ],
-          [
-            11031,
-            -4025
-          ]
-        ]
-      }
-    ],
     "desc": "Tokens said to lie scattered across Purgatorio Island. They stand as proof of courage, wisdom, and patience — virtues forged through the trials of adventure. Gather enough and present them to the Lunoxplorer in Icelake's town square to earn valuable rewards.",
     "desc2": "An island beyond divine gaze and imperial reach.\nHere, seabirds wheel above crumbled colonnades, and memories sleep beneath moss and the slow tides of time.\nVenture forth — to witness, to listen, to explore Purgatorio Island, where secrets linger and echoes of the past still stir."
   },
@@ -7352,82 +6030,6 @@
     "name": "Advensphere: Lonza Fortress",
     "icon": "T_ExploreBadge_Beibao_EXChapter01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            28845,
-            -30388
-          ],
-          [
-            19634.982,
-            -37598.49
-          ],
-          [
-            14578,
-            -40410.695
-          ],
-          [
-            11103,
-            -42750
-          ],
-          [
-            10346,
-            -52125
-          ],
-          [
-            -2401,
-            -43895
-          ],
-          [
-            -4850,
-            -35427
-          ],
-          [
-            2095,
-            -48445
-          ],
-          [
-            26521,
-            -34186
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -3369,
-            7178
-          ],
-          [
-            -14956,
-            -16122
-          ],
-          [
-            -5471,
-            -10849
-          ],
-          [
-            -20741,
-            3772
-          ],
-          [
-            -8963,
-            -1668
-          ],
-          [
-            7525,
-            2008
-          ],
-          [
-            -13161,
-            -6477
-          ]
-        ]
-      }
-    ],
     "desc": "Tokens said to lie scattered across Lonza Fortress. They stand as proof of courage, wisdom, and patience — virtues forged through the trials of adventure. Gather enough and present them to the Lunoxplorer in Icelake's town square to earn valuable rewards.",
     "desc2": "A fortress untouched by rivers of iron or storms of steel. Now, only laments drift across its ramparts.\nYet no wall is truly unbreachable. The strongest bastions fall not to force, but to what stirs unseen in the heart.\nGo deeper — to witness, to listen — into the Fortress, where smoke still hangs and memory refuses to fade."
   },
@@ -7436,125 +6038,6 @@
     "name": "Advensphere: Mistwharf",
     "icon": "T_ExploreBadge_Beibao_East",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 104102,
-        "pos": [
-          [
-            -58290.58,
-            8788.479
-          ]
-        ]
-      },
-      {
-        "srId": 104103,
-        "pos": [
-          [
-            -9051.801,
-            29591.572
-          ],
-          [
-            4726.0054,
-            21080.736
-          ]
-        ]
-      },
-      {
-        "srId": 104104,
-        "pos": [
-          [
-            276.96103,
-            -4393.95
-          ]
-        ]
-      },
-      {
-        "srId": 104105,
-        "pos": [
-          [
-            -16592,
-            -22543
-          ],
-          [
-            -21821.621,
-            -16443.652
-          ]
-        ]
-      },
-      {
-        "srId": 104106,
-        "pos": [
-          [
-            31193.074,
-            -12471.755
-          ],
-          [
-            17836.21,
-            -30562.25
-          ]
-        ]
-      },
-      {
-        "srId": 104107,
-        "pos": [
-          [
-            15887.112,
-            44439.59
-          ]
-        ]
-      },
-      {
-        "srId": 104108,
-        "pos": [
-          [
-            -0.00097,
-            -1.507478
-          ],
-          [
-            34647.566,
-            68348.04
-          ],
-          [
-            53682.418,
-            19630.78
-          ],
-          [
-            0,
-            -1.507812
-          ]
-        ]
-      },
-      {
-        "srId": 104109,
-        "pos": [
-          [
-            -37046,
-            4908
-          ],
-          [
-            -209.45898,
-            -2679.3955
-          ],
-          [
-            -21116.129,
-            6846.1333
-          ]
-        ]
-      },
-      {
-        "srId": 104110,
-        "pos": [
-          [
-            30041.688,
-            -10205.6875
-          ],
-          [
-            35943.785,
-            -906.7367
-          ]
-        ]
-      }
-    ],
     "desc": "Tokens said to lie scattered across Mistwharf — proof of courage, wisdom, and patience, each forged through trials of adventure. Gather enough, and present them to the Lunoxplorer in Haze Market to earn valuable rewards.",
     "desc2": "Where land and sea fall away — the first breath and final hush of every trade route.\nThe incense-laced air hums with legend; beneath the eaves, whispers still drift. When the smoke lifts and dust settles... what will tomorrow hold?\nGo forth — to see, to listen — and explore Mistwharf, a realm ready to leave its yesterdays behind."
   },
@@ -9279,135 +7762,6 @@
     "name": "Advensphere: Haojing",
     "icon": "T_ExploreBadge_Beibao_East01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 104501,
-        "pos": [
-          [
-            44358.21,
-            -31707.14
-          ],
-          [
-            56555.51,
-            -23044.83
-          ],
-          [
-            51115.87,
-            -33008.29
-          ]
-        ]
-      },
-      {
-        "srId": 104503,
-        "pos": [
-          [
-            24247.61,
-            -58967.94
-          ],
-          [
-            31504.1,
-            -85772.77
-          ],
-          [
-            31596.35,
-            -42735.73
-          ]
-        ]
-      },
-      {
-        "srId": 104504,
-        "pos": [
-          [
-            -30670,
-            -56940
-          ],
-          [
-            3970.79,
-            -84988.92
-          ],
-          [
-            -28227.2,
-            -40623.55
-          ],
-          [
-            -4420,
-            -61380
-          ]
-        ]
-      },
-      {
-        "srId": 104505,
-        "pos": [
-          [
-            54010.48,
-            -74958.27
-          ],
-          [
-            66010.89,
-            -80913.62
-          ],
-          [
-            52188.24,
-            -48706.47
-          ]
-        ]
-      },
-      {
-        "srId": 104502,
-        "pos": [
-          [
-            19941.07,
-            -4392.78
-          ],
-          [
-            -10819.38,
-            -26378.15
-          ],
-          [
-            7958.5,
-            -20820.75
-          ],
-          [
-            5281.37,
-            -11974.64
-          ]
-        ]
-      },
-      {
-        "srId": 105201,
-        "pos": [
-          [
-            15806.12,
-            -1651.36
-          ],
-          [
-            -1425.55,
-            -8427.81
-          ],
-          [
-            40.46,
-            1259.08
-          ],
-          [
-            9290.49,
-            6697.09
-          ]
-        ]
-      },
-      {
-        "srId": 105501,
-        "pos": [
-          [
-            18959.86,
-            1408.9
-          ],
-          [
-            19206.56,
-            4509.94
-          ]
-        ]
-      }
-    ],
     "desc": "Tokens said to lie scattered across Haojing — proof of courage, wisdom, and patience, each forged through trials of adventure. Gather enough, and present them to the Lunoxplorer in Haojing to earn valuable rewards.",
     "desc2": "In the Far East stands a great city, where pavilions and waterside halls raised by ancient hands have endured unchanged for a thousand years, as though they might stand until sea and stone are worn away.\n\nYet even songs passed down through the ages will one day find a new verse, and familiar tales will welcome new faces. Beneath the vault of heaven, the winds are rising and the tides beginning to turn.\n\nGo forth to explore, to witness, and to listen in Haojing, a city soon to be made anew."
   },
@@ -9594,15 +7948,6 @@
             6877
           ]
         ]
-      },
-      {
-        "srId": 105801,
-        "pos": [
-          [
-            -1082.6963,
-            -1260.2673
-          ]
-        ]
       }
     ],
     "desc": "A vial of Sal Volatile, an essential in any first aid kit. In moments of faintness from illness or pain, it can grant a brief lucidity.",
@@ -9641,17 +7986,6 @@
     "name": "Sal Volatile Ⅱ",
     "icon": "T_Hp_Full",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 105801,
-        "pos": [
-          [
-            296.3175,
-            -1253.5164
-          ]
-        ]
-      }
-    ],
     "desc": "A vial of Sal Volatile, an essential in any first aid kit. In moments of faintness from illness or pain, it can grant a brief lucidity.",
     "desc2": "\"There were times, after I inadvertently had poisonous berries, tumbled down slopes, or fought fierce beasts, I thought I'd slip into sleep and never wake again. What woke me wasn't strong will, dreams, or even anyone's voice — it was merely instinct and a small vial of smelling salts.\"\n\n— Outsider the Phoxhunter"
   },
@@ -9660,17 +7994,6 @@
     "name": "Cognizing Sal Volatile Ⅱ",
     "icon": "T_Drop_Mp",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 105801,
-        "pos": [
-          [
-            235.07858,
-            846.4904
-          ]
-        ]
-      }
-    ],
     "desc": "A vial of Sal Volatile, an essential in any first aid kit. In moments of faintness from illness or pain, it can grant a brief lucidity.",
     "desc2": "\"There were times, after I inadvertently had poisonous berries, tumbled down slopes, or fought fierce beasts, I thought I'd slip into sleep and never wake again. What woke me wasn't strong will, dreams, or even anyone's voice — it was merely instinct and a small vial of smelling salts.\"\n\n— Outsider the Phoxhunter"
   },
@@ -10181,17 +8504,6 @@
     "name": "Beginner Weapon Selection (Ⅰ)",
     "icon": "T_OptPack_Weapon01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -1680,
-            21440
-          ]
-        ]
-      }
-    ],
     "desc": "Grants a weapon of your choice."
   },
   {
@@ -10199,26 +8511,6 @@
     "name": "Beginner Weapon Selection (Ⅰ)",
     "icon": "T_OptPack_Weapon01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            1049.2266,
-            22121.672
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            1050,
-            21950
-          ]
-        ]
-      }
-    ],
     "desc": "Grants a weapon of your choice."
   },
   {
@@ -10226,17 +8518,6 @@
     "name": "Beginner Character Skin Selection - Starlit",
     "icon": "T_Pack_Christmas",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            1513.5479,
-            -34538.008
-          ]
-        ]
-      }
-    ],
     "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Fina, Rebecca, Tabethe, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne."
   },
   {
@@ -10244,30 +8525,6 @@
     "name": "Serenity Character Skin Selection – Dark Jade",
     "icon": "T_Pack_Common02",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            125.964355,
-            -255.80469
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -19055,
-            -6340
-          ],
-          [
-            -15115.941,
-            -4482.8613
-          ]
-        ]
-      }
-    ],
     "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne."
   },
   {
@@ -10275,17 +8532,6 @@
     "name": "Nocturnal Echoes Material Selection Pack",
     "icon": "T_Rouge_Drop_Interim4",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            29175.725,
-            -38586.2
-          ]
-        ]
-      }
-    ],
     "desc": "Grants materials of your choice."
   },
   {
@@ -10293,17 +8539,6 @@
     "name": "Weapon Ascension Chest",
     "icon": "T_Pack_WeaponUserChoose",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            79.5508,
-            96.808586
-          ]
-        ]
-      }
-    ],
     "desc": "Grants materials of your choice."
   },
   {
@@ -10311,37 +8546,6 @@
     "name": "Glimmer Character Skin Selection – Fleeting Traces",
     "icon": "T_Pack_JKSkin",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -15380,
-            -2910
-          ],
-          [
-            -87,
-            -111
-          ],
-          [
-            -17700,
-            -1070
-          ],
-          [
-            -162.72229,
-            -747.7488
-          ],
-          [
-            -100,
-            -30
-          ],
-          [
-            1259.2856,
-            7142.2256
-          ]
-        ]
-      }
-    ],
     "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne."
   },
   {
@@ -10349,33 +8553,6 @@
     "name": "Glimmer Character Skin Selection – Frosty",
     "icon": "T_Pack_SnowmanSkin",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            480,
-            6680
-          ],
-          [
-            -15300,
-            -3150
-          ],
-          [
-            -10741.015,
-            -21556.836
-          ],
-          [
-            -17578.848,
-            -1320.3737
-          ],
-          [
-            133,
-            -15
-          ]
-        ]
-      }
-    ],
     "desc": "Grants a character skin from: Berenica, Phantasio, Lisbell, Lady Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale and Oliver, Hellfire, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle and Filbert, Outsider, Psyche, or Daphne."
   },
   {
@@ -10383,25 +8560,6 @@
     "name": "Character Skin Selection – Untamed",
     "icon": "T_Pack_Common03",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -10917.311,
-            -21735.018
-          ],
-          [
-            -17560,
-            -1180
-          ],
-          [
-            1176.5366,
-            7406.0205
-          ]
-        ]
-      }
-    ],
     "desc": "Grants a character skin from: Berenica, Lisbell, Lady Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle and Filbert, Psyche, and Daphne."
   },
   {
@@ -10409,497 +8567,73 @@
     "name": "Silkrain Surprise Item Chest",
     "icon": "T_Pack_RandomMod_Daily",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            -45.04492,
-            -35.59668
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            417.96875,
-            96.02246
-          ]
-        ]
-      }
-    ],
     "desc": "The specific probabilities and quantities are as follows (values rounded to four decimal places):\n Phoxene Plumule ×10: 29.4010%\n Phoxene Plumule ×16: 44.1014%\n Phoxene Plumule ×18: 22.0507%\n Phoxene Plumule ×40: 3.6751%\n Phoxene Plumule ×100: 0.7350%\n Phoxene Plumule ×888: 0.0368%"
   },
   {
     "id": 110019,
     "name": "Blue Melee Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_01",
-    "rarity": 3,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            30364.227,
-            -37358.33
-          ]
-        ]
-      }
-    ]
+    "rarity": 3
   },
   {
     "id": 110020,
     "name": "Purple Melee Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_01",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            -228.75153,
-            -39760.92
-          ],
-          [
-            -4975,
-            -30525
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            490,
-            6530
-          ],
-          [
-            66,
-            -123
-          ],
-          [
-            -16475,
-            -1540
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110021,
     "name": "Blue Phoenix Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_02",
-    "rarity": 3,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            12080.169,
-            13189.565
-          ],
-          [
-            -12174.999,
-            -11095
-          ],
-          [
-            -12184.999,
-            -10660
-          ],
-          [
-            290.0027,
-            117.000565
-          ],
-          [
-            11870.001,
-            13140
-          ],
-          [
-            11870.001,
-            13280
-          ]
-        ]
-      },
-      {
-        "srId": 105901,
-        "pos": [
-          [
-            -40,
-            -10
-          ]
-        ]
-      },
-      {
-        "srId": 104801,
-        "pos": [
-          [
-            -16769.44,
-            54600.41
-          ],
-          [
-            36030,
-            -33360
-          ],
-          [
-            -20707.81,
-            60156.55
-          ],
-          [
-            -20234.95,
-            51486.12
-          ],
-          [
-            -11294.78,
-            50547.96
-          ],
-          [
-            -11288.02,
-            60430.22
-          ],
-          [
-            -16242.86,
-            55493.15
-          ]
-        ]
-      }
-    ]
+    "rarity": 3
   },
   {
     "id": 110022,
     "name": "Purple Phoenix Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_02",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            117.353516,
-            291.73535
-          ]
-        ]
-      },
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            40,
-            -210
-          ],
-          [
-            29200,
-            -36150
-          ],
-          [
-            30180,
-            -37420
-          ],
-          [
-            29220,
-            -36420
-          ],
-          [
-            29230,
-            -36250
-          ],
-          [
-            29120,
-            -38590
-          ],
-          [
-            10118.091,
-            -42255.37
-          ],
-          [
-            113.2043,
-            -40009.504
-          ],
-          [
-            135.06055,
-            -254.80469
-          ],
-          [
-            -22.468748,
-            28.906252
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            93.03192,
-            19543.637
-          ],
-          [
-            -284.24255,
-            627.3389
-          ],
-          [
-            1007.2474,
-            21867.23
-          ],
-          [
-            47,
-            14038
-          ],
-          [
-            -44.955322,
-            267.72217
-          ],
-          [
-            -11036.842,
-            -20996.516
-          ],
-          [
-            -17320,
-            -920
-          ],
-          [
-            -49.685013,
-            122.89551
-          ],
-          [
-            3.000023,
-            111
-          ],
-          [
-            970,
-            4985
-          ],
-          [
-            595.96436,
-            2634.1953
-          ],
-          [
-            -25.10875,
-            18099.395
-          ],
-          [
-            -11101.823,
-            -20617.344
-          ],
-          [
-            967.50397,
-            7155.8525
-          ],
-          [
-            146.38715,
-            97.3268
-          ],
-          [
-            10,
-            180
-          ]
-        ]
-      },
-      {
-        "srId": 102103,
-        "pos": [
-          [
-            48510,
-            -10030
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -12951.478,
-            -12021.869
-          ],
-          [
-            10.000019,
-            19.99999
-          ],
-          [
-            11688.003,
-            13979.448
-          ],
-          [
-            245.84766,
-            58.21582
-          ],
-          [
-            -40,
-            100
-          ],
-          [
-            378.63867,
-            241.4541
-          ],
-          [
-            -10005,
-            -8225
-          ]
-        ]
-      },
-      {
-        "srId": 105901,
-        "pos": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      {
-        "srId": 100104,
-        "pos": [
-          [
-            -10,
-            90
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110023,
     "name": "Blue Ranged Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_03",
-    "rarity": 3,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            123.03192,
-            19373.637
-          ]
-        ]
-      }
-    ]
+    "rarity": 3
   },
   {
     "id": 110024,
     "name": "Purple Ranged Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_03",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            -10425,
-            -22515
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            991,
-            -1120
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110025,
     "name": "Purple Griffin Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_04",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            -93,
-            -73
-          ],
-          [
-            28631.186,
-            -38637.17
-          ],
-          [
-            -10870,
-            -22760
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            905,
-            -1334
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110026,
     "name": "Purple Anemo Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_05",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            28485,
-            -36290
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110027,
     "name": "Purple Pyro Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_06",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            27755,
-            -37005
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110028,
     "name": "Purple Electro Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_07",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            29725,
-            -36220
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110029,
     "name": "Purple Hydro Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_08",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            83,
-            -5
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110030,
@@ -10911,213 +8645,31 @@
     "id": 110031,
     "name": "Purple Umbro Typhon Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_10",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 104503,
-        "pos": [
-          [
-            31502.54,
-            -95720
-          ]
-        ]
-      },
-      {
-        "srId": 104506,
-        "pos": [
-          [
-            31502.54,
-            -95720
-          ]
-        ]
-      },
-      {
-        "srId": 105201,
-        "pos": [
-          [
-            12339.9,
-            -3048.87
-          ],
-          [
-            10674.17,
-            -3028.48
-          ],
-          [
-            9727.95,
-            -1009.69
-          ],
-          [
-            7709.17,
-            -63.48
-          ],
-          [
-            5690.38,
-            -1009.69
-          ],
-          [
-            4744.17,
-            -3028.48
-          ],
-          [
-            5690.38,
-            -5047.27
-          ],
-          [
-            7709.17,
-            -5993.48
-          ],
-          [
-            9727.95,
-            -5047.27
-          ]
-        ]
-      },
-      {
-        "srId": 104801,
-        "pos": [
-          [
-            36025,
-            -28510
-          ],
-          [
-            36025,
-            -27605
-          ],
-          [
-            35570,
-            -28055
-          ],
-          [
-            36480,
-            -28055
-          ],
-          [
-            36084,
-            -49480.98
-          ],
-          [
-            36828,
-            -49055.98
-          ],
-          [
-            37036,
-            -48836.98
-          ],
-          [
-            37563,
-            -46005.98
-          ],
-          [
-            34543,
-            -46005.98
-          ],
-          [
-            35318,
-            -48735.98
-          ],
-          [
-            35984,
-            -40819.98
-          ],
-          [
-            35984,
-            -47451.98
-          ],
-          [
-            -11722.19,
-            50065.31
-          ],
-          [
-            -16798,
-            46679
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110032,
     "name": "Purple Anemo Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_11",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -10010,
-            -7225
-          ],
-          [
-            12164.702,
-            13175.133
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110033,
     "name": "Purple Pyro Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_16",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            12360.001,
-            13080
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110034,
     "name": "Purple Electro Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_12",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -10690.671,
-            -21698.992
-          ],
-          [
-            -17620,
-            -1140
-          ],
-          [
-            -11051.823,
-            -20717.344
-          ],
-          [
-            1085.9076,
-            7273.486
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110035,
     "name": "Purple Hydro Covenanter Demon Wedge Chest",
     "icon": "T_Pack_RandomMod_13",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -9995,
-            -7000
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110036,
@@ -11135,94 +8687,31 @@
     "id": 110038,
     "name": "Portrait: Miss Nightingale – Dappled Shade",
     "icon": "T_Head_Other0014",
-    "rarity": 1,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -10498.537,
-            -20201.934
-          ]
-        ]
-      }
-    ]
+    "rarity": 1
   },
   {
     "id": 110039,
     "name": "Portrait: The Light Chaser – Distant Gaze",
     "icon": "T_Head_Other0016",
-    "rarity": 1,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            11695,
-            13617.61
-          ],
-          [
-            11695,
-            13572.716
-          ]
-        ]
-      }
-    ]
+    "rarity": 1
   },
   {
     "id": 110040,
     "name": "Whispers Unspoken: Azure",
     "icon": "T_Head_Frame29",
-    "rarity": 1,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            11688.003,
-            14025.305
-          ]
-        ]
-      }
-    ]
+    "rarity": 1
   },
   {
     "id": 110041,
     "name": "Whispers Unspoken: Celeste",
     "icon": "T_Head_Frame28",
-    "rarity": 1,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            11699.226,
-            13571.77
-          ],
-          [
-            11695,
-            13571.999
-          ]
-        ]
-      }
-    ]
+    "rarity": 1
   },
   {
     "id": 120001,
     "name": "Tough Love Coupon",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -34408,
-            9464
-          ]
-        ]
-      }
-    ],
     "desc": "Spend Phoxene Plumule ×680 to save Phoxene Plumule ×300"
   },
   {
@@ -12061,10 +9550,6 @@
         "srId": 101701,
         "pos": [
           [
-            0,
-            0
-          ],
-          [
             -21486,
             4826
           ]
@@ -12083,10 +9568,6 @@
       {
         "srId": 101701,
         "pos": [
-          [
-            0,
-            0
-          ],
           [
             -18821,
             -5456
@@ -12169,15 +9650,6 @@
             -39989
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            27959.646,
-            -870.9898
-          ]
-        ]
       }
     ],
     "desc": "A rejected application, dated a year and a half ago.",
@@ -12216,15 +9688,6 @@
             5082
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            23047.492,
-            -4143.497
-          ]
-        ]
       }
     ],
     "desc": "The content of this journal suggests a certain laxity in the discipline within The Forsakens.",
@@ -12242,15 +9705,6 @@
           [
             -9964,
             -4448
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            19284.201,
-            554.59314
           ]
         ]
       }
@@ -12272,15 +9726,6 @@
             11712.227
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            31167.697,
-            -10603.355
-          ]
-        ]
       }
     ],
     "desc": "The only holiday the soldiers stationed at the fortress are allowed to celebrate.",
@@ -12298,15 +9743,6 @@
           [
             2857,
             -47273
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            20792.168,
-            -2438.4666
           ]
         ]
       }
@@ -12328,15 +9764,6 @@
             2654.366
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            13783.619,
-            -22100.55
-          ]
-        ]
       }
     ],
     "desc": "Combat logs from the simulation console at Lonza Fortress. They meticulously detail the Imperial soldiers' performances in simulated battles, with candid assessments and suggestions for each squad.\nThe narrative shifts abruptly in the last entries, suggesting they were authored by someone from The Forsakens rather than the Legion.",
@@ -12356,15 +9783,6 @@
             4184
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -4684.4785,
-            -16874.746
-          ]
-        ]
       }
     ],
     "desc": "An informal register of military dogs maintained by an Imperial dog handler, carefully hidden deep inside a chariot's storage compartment.\nWater damage has blurred the last few entries.",
@@ -12382,15 +9800,6 @@
           [
             27940,
             -36892
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            30922.787,
-            11481.362
           ]
         ]
       }
@@ -12431,15 +9840,6 @@
             -10189.273
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            6395.7803,
-            4276.196
-          ]
-        ]
       }
     ],
     "desc": "A lost journal that belongs to someone from The Forsakens. According to the entries, the owner might be a healer.",
@@ -12457,15 +9857,6 @@
           [
             21354,
             1087
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            13167.812,
-            -13996.818
           ]
         ]
       }
@@ -12487,15 +9878,6 @@
             1067.2869
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            2279.643,
-            -23413.84
-          ]
-        ]
       }
     ],
     "desc": "A disordered heap of overdue notices scattered across the desk, all urging Henrik to settle his debts. It's evident that Hypnos' House has been under financial strain for some time.",
@@ -12513,15 +9895,6 @@
           [
             22434,
             -185
-          ]
-        ]
-      },
-      {
-        "srId": 101110,
-        "pos": [
-          [
-            4129.419,
-            1034.0286
           ]
         ]
       }
@@ -12581,15 +9954,6 @@
             3057
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            14814.203,
-            -2586.4421
-          ]
-        ]
       }
     ],
     "desc": "A folder unearthed from the file cabinets. It bears Elisa's photo and details her time at the Hypnos' House.",
@@ -12607,15 +9971,6 @@
           [
             22654,
             2608
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            17082.926,
-            -614.755
           ]
         ]
       }
@@ -12690,17 +10045,6 @@
     "name": "A Brawl at the Galea Theatre",
     "icon": "T_Read_01",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -982.0625,
-            1706.2601
-          ]
-        ]
-      }
-    ],
     "desc": "A handwritten record transcribed by Rhythm, describing a brawl that broke out mid-performance at the Galea Theatre two years ago.",
     "desc2": "Brawl at Galea Theatre\n\nDate: October 9th, 8:30 PM\n\nFiled by: Letizia Putsch, Director of the Magic Flute Troupe\n\nInvolved Parties: Parsifal Snowfield (Lead Performer), Susanna Rossie (Lead Performer), Mathew Bernard (Audience), Feeley Francisco (Audience)\n...\n\nIncident Summary: A physical altercation reportedly broke out between troupe members and two front-row audience members. Alleged assault of performers by said audience members. (Several pages of the incident report appear to have been torn out.)\n\nConclusion: Evidence found to be insufficient. Case dismissed.\n\nRemarks: Performances of Children From the Snowfield have been suspended until further notice. No resumption date announced.\nI'd hoped to watch this one with Blues — to finally make up for the show we missed all those years ago. But I guess... that won't be happening any time soon."
   },
@@ -12718,15 +10062,6 @@
             11103
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            18714.94,
-            6895.6416
-          ]
-        ]
       }
     ],
     "desc": "Judging by the tone, this journal likely belonged to Blues Fischer. Page after page is filled with memories from his everyday life with his sister — not a single corner left unused.",
@@ -12739,29 +10074,11 @@
     "rarity": 3,
     "source": [
       {
-        "srId": 101101,
-        "pos": [
-          [
-            -1770,
-            8810
-          ]
-        ]
-      },
-      {
         "srId": 101702,
         "pos": [
           [
             -32150,
             -8373
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            25387.535,
-            6872.8286
           ]
         ]
       }
@@ -12776,29 +10093,11 @@
     "rarity": 3,
     "source": [
       {
-        "srId": 101101,
-        "pos": [
-          [
-            -1203.4828,
-            490.69458
-          ]
-        ]
-      },
-      {
         "srId": 101703,
         "pos": [
           [
             -10039,
             -6633
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            20956.191,
-            1076.707
           ]
         ]
       }
@@ -12818,15 +10117,6 @@
           [
             17063,
             -978
-          ]
-        ]
-      },
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -5640,
-            -4760
           ]
         ]
       }
@@ -12886,15 +10176,6 @@
             -482
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            27679.371,
-            -8756.173
-          ]
-        ]
       }
     ],
     "desc": "(These loose pages were found scattered in the theatre's corners, penned in Parsifal's hand. From the wear on the pages, it appears to be a script he studied often — perhaps hoping to one day take the stage himself.)\n\nOn the north-western cape beyond the reach of the Elysian Church, there once stood a duchy called Yashnia, a slender strip of land facing the Hyperborean Empire across the sea. A crossroads of trade and diplomacy, Yashnia balanced precariously between the Church and the Empire — until the Church annexed it more than three centuries ago.\nThough small in size, the duchy endured for generations. Its dukes clung to power through a history steeped in blood: palace intrigue, aulic murders, and political assassinations. In the centuries since, wandering bards have mined Yashnia's crimson legacy for their dramas and ballads. Even the Empire — despite its official ban on the dramatisation of royal assassinations — permits such plays to be performed, viewing them as a fitting indictment of the Church's bloody past. Among these works, Momiji: A Chronicle of Rebellion remains one of the most beloved, praised for its sweeping music, elaborate choreography, and stirring depictions of battle.",
@@ -12912,15 +10193,6 @@
           [
             -2963.712,
             -5225.015
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            6049.673,
-            -9149.705
           ]
         ]
       }
@@ -12942,15 +10214,6 @@
             -1793.3302
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            12641.521,
-            -9775.1455
-          ]
-        ]
       }
     ],
     "desc": "A hymn sung at the Silvercandle Carnival, recounting its legendary origin: Soranus, younger brother to Dis Ⅰ, first emperor of Hyperborea, was struck down by the Charon. Yet after conquest was won, Dis Ⅰ chose not vengeance but peace, and held a great feast.\n From that feast is said to descend the Silvercandle Carnival as it is known today.",
@@ -12968,15 +10231,6 @@
           [
             -30936.494,
             -21903.68
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            3570.8293,
-            -519.6372
           ]
         ]
       }
@@ -13010,29 +10264,11 @@
     "rarity": 3,
     "source": [
       {
-        "srId": 101107,
-        "pos": [
-          [
-            1091.8047,
-            -10195.223
-          ]
-        ]
-      },
-      {
         "srId": 101702,
         "pos": [
           [
             -30188.734,
             -14194.25
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -12666.293,
-            -672.33014
           ]
         ]
       }
@@ -13046,15 +10282,6 @@
     "icon": "T_Read_02",
     "rarity": 3,
     "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            330.78516,
-            -156.96094
-          ]
-        ]
-      },
       {
         "srId": 101701,
         "pos": [
@@ -13082,15 +10309,6 @@
             -6015.564
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -15106.124,
-            -7893.6997
-          ]
-        ]
       }
     ],
     "desc": "A hymn sung at the Silvercandle Carnival, recounting its legendary origin: Soranus, younger brother to Dis Ⅰ, first emperor of Hyperborea, was struck down by the Charon. Yet after conquest was won, Dis Ⅰ chose not vengeance but peace, and held a great feast.\n From that feast is said to descend the Silvercandle Carnival as it is known today.",
@@ -13108,15 +10326,6 @@
           [
             202.36655,
             -39.692352
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            8405.716,
-            14497.939
           ]
         ]
       }
@@ -13157,15 +10366,6 @@
             -11068.557
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -18118.607,
-            2421.1306
-          ]
-        ]
       }
     ],
     "desc": "A hymn sung at the Silvercandle Carnival, recounting its legendary origin: Soranus, younger brother to Dis Ⅰ, first emperor of Hyperborea, was struck down by the Charon. Yet after conquest was won, Dis Ⅰ chose not vengeance but peace, and held a great feast.\n From that feast is said to descend the Silvercandle Carnival as it is known today.",
@@ -13183,15 +10383,6 @@
           [
             -6034.2466,
             -11101.004
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -24752.213,
-            -16774.154
           ]
         ]
       }
@@ -13213,15 +10404,6 @@
             -10379
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -9256.435,
-            8644.835
-          ]
-        ]
       }
     ],
     "desc": "The Asphodel's drinks menu — every glass, full-bodied and fragrant. One sip, and you'll be back for more.",
@@ -13239,15 +10421,6 @@
           [
             -6193.3267,
             -9151.44
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -24812.906,
-            12053.465
           ]
         ]
       }
@@ -13286,15 +10459,6 @@
           [
             641,
             14394
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -2214.1953,
-            2772.4082
           ]
         ]
       }
@@ -13354,15 +10518,6 @@
             18384.238
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -21349.34,
-            5111.6807
-          ]
-        ]
       }
     ],
     "desc": "Seems to be a chant praising Jishu Sect, though the lyrics are a jumble and hardly make sense. You can almost hear someone bellowing it wildly off-key in your head.",
@@ -13382,15 +10537,6 @@
             52317.598
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -21628.33,
-            3755.3853
-          ]
-        ]
       }
     ],
     "desc": "A lazily titled serial novel. It follows a youth named Zhao Hao, who is chosen as the High Chancellor of Loongyuan. Wildly popular among Huaxu's young readers.",
@@ -13408,15 +10554,6 @@
           [
             -23496.182,
             5765.7466
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -19920.113,
-            5445.4272
           ]
         ]
       }
@@ -13457,15 +10594,6 @@
             -60397.133
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -19083.453,
-            7972.3457
-          ]
-        ]
       }
     ],
     "desc": "A notebook left by an unknown hand near Zhuyin Altar, its ink already blurred in places. It records in detail the ordeal its author faced here. None can know in what despair he set down these final words.",
@@ -13483,15 +10611,6 @@
           [
             27339.277,
             67612.02
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -611.4199,
-            5364.2944
           ]
         ]
       }
@@ -13532,15 +10651,6 @@
             -31610.771
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            28393.057,
-            -14891.501
-          ]
-        ]
       }
     ],
     "desc": "A cultural study by a foreign scholar examining Huaxu's distinctive understanding of life and death.",
@@ -13560,15 +10670,6 @@
             -17735.266
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            24437.219,
-            -805.9579
-          ]
-        ]
       }
     ],
     "desc": "An unofficial overview of characters commonly used in Huaxu baby names in recent years, along with brief notes on their meanings. The sources are murky and the accuracy debatable — best approached as light reading, or simply for amusement.",
@@ -13584,21 +10685,8 @@
         "srId": 104109,
         "pos": [
           [
-            54.078125,
-            29.636719
-          ],
-          [
             -13013.81,
             11761.229
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            26291.133,
-            -4082.5894
           ]
         ]
       }
@@ -13639,15 +10727,6 @@
             21471.773
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            37.660156,
-            -244.92737
-          ]
-        ]
       }
     ],
     "desc": "One volume from Luoxiang's Case Notes. As a community mediator, Luoxiang applies her understanding of the Nine Chapters of Dafeng to everyday disputes, collecting her experiences into this series. Down-to-earth and practical, it has unexpectedly become a popular household read.",
@@ -13684,15 +10763,6 @@
           [
             37761.016,
             -7207.0557
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            22499.15,
-            4578.1636
           ]
         ]
       }
@@ -13733,15 +10803,6 @@
             -5553.6577
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            14007.204,
-            -4413.8623
-          ]
-        ]
       }
     ],
     "desc": "A pocket notebook Lunocarp keeps close at all times — now in its seventh volume. Inside are bursts of inspiration, scribbled down whenever they strike, whether in a sudden spark or after long deliberation. And in these newest pages, the influence of her latest muse is unmistakable: Snow the \"Demon King\", a traveller from far-off Hyperborea.",
@@ -13761,15 +10822,6 @@
             -10377.243
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            482.72266,
-            586.44727
-          ]
-        ]
       }
     ],
     "desc": "A brief formal directive issued by EverSpring.",
@@ -13787,15 +10839,6 @@
           [
             33721.277,
             -6030.5483
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            10120,
-            -2020
           ]
         ]
       }
@@ -13989,15 +11032,6 @@
             -10462.75
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            3445.8545,
-            -4935.1055
-          ]
-        ]
       }
     ],
     "desc": "A tale of Yin Qing, a poet of ancient Huaxu, drawn from Bygone Fragments, an essay collection by the later author Cang Xian. In it, a young traveller known only as Feng — his family name now lost to history — drifts into Haojing and discovers a green leaf inscribed with a poem drifting along a waterway beside the Yin residence — a small happenstance that binds their fates.\n\npreserves a number of literary anecdotes from roughly five centuries past, steeped in the flavour of legend. Its reliability as a historical source remains open to question, yet its value as literature is widely acknowledged.",
@@ -14036,15 +11070,6 @@
             -41303.12
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -112.31101,
-            -873.3165
-          ]
-        ]
       }
     ],
     "desc": "Huaxu Trends tracks what's trending across Huaxu: new places to eat and drink, clothing and everyday essentials, and lifestyles arriving from overseas and taking hold at home.\nEach year, the Haojing Special drops a month before the Grand Incense Rite, spotlighting the capital's latest go-to spots for food, leisure, and nightlife.",
@@ -14062,15 +11087,6 @@
           [
             47481.09,
             -21364.85
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -175.0001,
-            865.0002
           ]
         ]
       }
@@ -14092,15 +11108,6 @@
             -31789.43
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            1953.8607,
-            2931.5173
-          ]
-        ]
       }
     ],
     "desc": "A celebrated Huaxu classic, reputedly written by a master of Xuanheng Sect. The work runs to seventeen volumes, with additions made by later generations. The excerpt below is drawn from the book's preface.",
@@ -14120,15 +11127,6 @@
             -43959.31
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            1193.5199,
-            3923.5854
-          ]
-        ]
       }
     ],
     "desc": "A folk opera script popular among Huaxu's commoners. It follows a young couple from first meeting to marriage, only for petty quarrels and everyday slights to sour things afterwards. Said to be adapted from a real case in Haojing, though this cannot be verified. Excerpt follows.",
@@ -14146,15 +11144,6 @@
           [
             26720.64,
             -56596.8
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -16691.004,
-            9911.527
           ]
         ]
       }
@@ -14195,15 +11184,6 @@
             -35550
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -36551.207,
-            -415
-          ]
-        ]
       }
     ],
     "desc": "A record of Master Zhuxi's sayings, written down by his students. His views shifted with age, yet his words were preserved throughout his life, from his earliest years to his last. Excerpt follows.",
@@ -14218,10 +11198,6 @@
       {
         "srId": 105201,
         "pos": [
-          [
-            -19.21,
-            30.43
-          ],
           [
             15713.31,
             2236.39
@@ -14239,29 +11215,11 @@
     "rarity": 3,
     "source": [
       {
-        "srId": 101107,
-        "pos": [
-          [
-            1136.6428,
-            -10244.687
-          ]
-        ]
-      },
-      {
         "srId": 105201,
         "pos": [
           [
             3159.28,
             7586.51
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            15664.557,
-            20.032108
           ]
         ]
       }
@@ -14283,15 +11241,6 @@
             -3197.19
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            26481.54,
-            -2877.1423
-          ]
-        ]
       }
     ],
     "desc": "An anonymous miscellany from Huaxu, offering a detailed account of the rules and procedures of the Incense Trial.",
@@ -14306,10 +11255,6 @@
       {
         "srId": 104502,
         "pos": [
-          [
-            0,
-            20
-          ],
           [
             19290,
             -2900
@@ -14353,15 +11298,6 @@
             -114142.16
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            31972.281,
-            -3290.4539
-          ]
-        ]
       }
     ],
     "desc": "A daily paper printed by the Hall of Craft and sold on the streets of Haojing. Mostly local happenings and the occasional public notice. Truth be told, it has never had many readers.",
@@ -14379,15 +11315,6 @@
           [
             10867.55,
             -10032.23
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            34400.34,
-            -3485.9336
           ]
         ]
       }

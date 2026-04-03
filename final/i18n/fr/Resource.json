@@ -68,17 +68,6 @@
     "name": "Énergie",
     "icon": "T_Coin_Other_Jingli",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            2814.3945,
-            6266.1465
-          ]
-        ]
-      }
-    ],
     "desc": "Énergie nécessaire à l’accomplissement de toute mission.",
     "desc2": "« Se consacrer pleinement à ce que l’on entreprend est certes admirable, mais toute chose requiert mesure. Si l’on s’épuise au point d’affaiblir son corps et son esprit, l’effort devient une perte plutôt qu’un gain. »\n\n— Fushu, apothicaire de Huaxu"
   },
@@ -93,17 +82,6 @@
     "name": "Pièce Luno – CBT2",
     "icon": "T_Resource_CoinCBT2",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            0,
-            -660
-          ]
-        ]
-      }
-    ],
     "desc": "Une monnaie précieuse, échangeable contre diverses récompenses. Utilisable uniquement durant la CBT2.",
     "desc2": "Offert aux Chasseurs de Phoxène ayant participé à la CBT2. Un présent précieux, symbole de leur engagement."
   },
@@ -112,17 +90,6 @@
     "name": "Prisme azuré",
     "icon": "T_Gacha_Coin01",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            7992,
-            -7996
-          ]
-        ]
-      }
-    ],
     "desc": "Un prisme reflétant les mille éclats de la Myriade.\nUn rayon capturé par des yeux dans la nuit, et le kaléidoscope nommé « monde » se met à tournoyer.",
     "desc2": "Voici « l’Arc-en-ciel ».\nOui, il tient dans ta paume — dissimulé dans ce petit tube brillant.\nFais-le tourner, et tu verras la forêt, les constellations, la neige qui s’étend comme un désert sans fin...\n\nBerry, {nickname}, même si nous devons encore rester cachés dans ces ruines, j’aimerais que vous puissiez, un jour, contempler un monde plus vaste, plus éclatant.\n\n— ???"
   },
@@ -131,77 +98,6 @@
     "name": "Prisme iridescent",
     "icon": "T_Gacha_Coin02",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -8170,
-            -1380
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            12.300335,
-            305.59637
-          ],
-          [
-            215.50781,
-            161.81956
-          ],
-          [
-            -49334.47,
-            32720.027
-          ],
-          [
-            -14654.068,
-            -6688.1562
-          ],
-          [
-            92.004974,
-            142.35172
-          ]
-        ]
-      },
-      {
-        "srId": 100102,
-        "pos": [
-          [
-            16781,
-            -3622
-          ],
-          [
-            22409.998,
-            15735
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            22558,
-            19391
-          ]
-        ]
-      },
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            2462,
-            2864
-          ],
-          [
-            1681,
-            11518
-          ]
-        ]
-      }
-    ],
     "desc": "Un prisme reflétant les mille éclats de la Myriade.\nUn rayon capturé par des yeux dans la nuit, et le kaléidoscope nommé « monde » se met à tournoyer.",
     "desc2": "Voici « l’Arc-en-ciel ».\nOui, il tient dans ta paume — dissimulé dans ce petit tube brillant.\nFais-le tourner, et tu verras la forêt, les constellations, la neige qui s’étend comme un désert sans fin...\n\nBerry, {nickname}, même si nous devons encore rester cachés dans ces ruines, j’aimerais que vous puissiez, un jour, contempler un monde plus vaste, plus éclatant.\n\n— ???"
   },
@@ -246,46 +142,6 @@
     "name": "Module de transfert d’affinité",
     "icon": "T_Resource_PolarityStyle",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            18685,
-            -40590
-          ],
-          [
-            17990,
-            -38810
-          ],
-          [
-            16320,
-            -39015
-          ],
-          [
-            27380,
-            -38830
-          ],
-          [
-            27479.227,
-            -38918.33
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -16225,
-            -1675
-          ],
-          [
-            80,
-            7530
-          ]
-        ]
-      }
-    ],
     "desc": "Dispositif de précision conçu dans l’Empire Hyperboréen, ressemblant à une boîte à outils. Lorsqu’il s’active, il ajuste un Sceau démoniaque pour mieux correspondre à son porteur. Agissant directement sur lui, il permet d’optimiser ses capacités.",
     "desc2": "« Savoir employer les bons outils au bon moment n’a rien d’une paresse. C’est même une compétence essentielle pour conclure un combat efficacement. Quant au temps ainsi gagné... il est évidemment destiné à reposer ce corps fatigué et à s’accorder une bonne sieste. »\n\n— Randy, officier hyperboréen"
   },
@@ -294,30 +150,6 @@
     "name": "Module de transfert d’affinité d’arme",
     "icon": "T_Resource_PolarityAura",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -920,
-            12060
-          ]
-        ]
-      },
-      {
-        "srId": 102103,
-        "pos": [
-          [
-            35475,
-            -9985
-          ],
-          [
-            40606.36,
-            -14625.161
-          ]
-        ]
-      }
-    ],
     "desc": "Appareil de précision conçu dans l’Empire Hyperboréen, ressemblant à une boîte à outils. Lorsque ses engrenages s’activent, le Sceau démoniaque qu’il contient est ajusté pour mieux s’adapter à l’utilisateur. Doté d’excellentes capacités d’analyse pour tous types d’armes, il permet d’en améliorer davantage les performances.",
     "desc2": "« Bien sûr que les armes ont leur caractère ! Si elle boude, je ne peux pas me battre l’esprit tranquille... C’est naturel de s’en soucier : nous sommes les plus proches partenaires, les plus fidèles compagnons ! N’est-ce pas, Samaël ? »\n\n— Lisbell, candidate de la Résilience parmi les Sept Vertus d’Élysium"
   },
@@ -326,17 +158,6 @@
     "name": "Braise",
     "icon": "T_Rouge_Token_02",
     "rarity": 1,
-    "source": [
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            18531,
-            29645
-          ]
-        ]
-      }
-    ],
     "desc": "Tout sera consumé, tout sera dévoré — réduit en cendres avant de sombrer dans l’abysse.",
     "desc2": "« Je vous en prie... ne m’arrachez pas ma dernière lueur... »\n\n— Silhouette déformée dans l’abysse"
   },
@@ -345,17 +166,6 @@
     "name": "Tonique d’énergie",
     "icon": "T_Resource_ActionPoint_ActionPointRecoveryM",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 103201,
-        "pos": [
-          [
-            3705.7363,
-            -4454.0186
-          ]
-        ]
-      }
-    ],
     "desc": "Un remède mis au point par l’Académie d’Alchimie. Il renforce l’endurance et figure parmi les fournitures militaires les plus courantes.",
     "desc2": "« Comme le thé ou le café, elle permet de puiser plus longtemps dans ses forces. Pourtant, un seul remède apaise vraiment la fatigue : le repos.\nAlors, si vous êtes épuisé... allez dormir un peu. zZZ... »\n\n— Luno, la servante"
   },
@@ -364,17 +174,6 @@
     "name": "Lumistella",
     "icon": "T_Rouge_TalentToken_01",
     "rarity": 1,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20740,
-            135.50696
-          ]
-        ]
-      }
-    ],
     "desc": "Fragment d’un artéfact sacré recueilli dans l’Abysse au fil d’innombrables cycles. Il semble renfermer une bénédiction d’une puissance incommensurable.",
     "desc2": "« Je ne peux plus bouger... alors, s’il te plaît, prends ma lanterne.\nEmporte-la, emporte-nous tous — et répands la lumière divine\njusqu’au plus sombre recoin de l’abysse... »\n\n— Dernières paroles d’un chevalier pionnier"
   },
@@ -391,17 +190,6 @@
     "name": "Carnet de mission — Tome II",
     "icon": "T_Resource_Ticket02",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20510,
-            285.50696
-          ]
-        ]
-      }
-    ],
     "desc": "Augmente les récompenses de mission de 200 %.\nLes Vagabonds de la Nuit gagnent en prestige parmi les Chasseurs de Phoxène, et les requêtes se multiplient.\nPlus la charge s’accroît, plus la récompense en vaut la peine.",
     "desc2": "« Voyons un peu... Les missions du jour : retrouver un portefeuille perdu, secourir un chat perché sur un toit... et réparer un cœur brisé ?\nCes broutilles, une à une, c’est interminable. Autant les regrouper et tout régler d’un coup. »\n\n— L’Étranger, Chasseur de Phoxène"
   },
@@ -426,26 +214,6 @@
     "name": "Jeton de Grande Pêche",
     "icon": "T_Coin_Other_Fishing",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 104103,
-        "pos": [
-          [
-            -4230,
-            30620
-          ]
-        ]
-      },
-      {
-        "srId": 104108,
-        "pos": [
-          [
-            52476.473,
-            37017.613
-          ]
-        ]
-      }
-    ],
     "desc": "Une pièce frappée de l’emblème d’un poisson — un trésor aux yeux de tout pêcheur. Plus vous en possédez, plus votre prestige grandit parmi les chasseurs de poissons. Elles peuvent être échangées contre du matériel spécialisé... et peut-être, un jour, faire de vous le pêcheur le plus respecté du continent.",
     "desc2": "« Tiens. C’est ton cadeau d’initiation. Ne sous-estime pas cette pièce : j’ai passé ma vie à braver les flots, sous le regard méprisant de tous les poissons. Cette petite monnaie... c’est tout ce qu’il me reste à offrir. »\n\n— Un pêcheur chevronné, serrant la pièce sans vouloir la lâcher"
   },
@@ -1465,17 +1233,6 @@
     "name": "Sablier immaculé",
     "icon": "T_Resource_GachaTicket_01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101110,
-        "pos": [
-          [
-            5025.26,
-            1311.8019
-          ]
-        ]
-      }
-    ],
     "desc": "Un sablier renfermant le temps et les souvenirs. Mille éclats y scintillent, témoins des splendeurs et des âges révolus.",
     "desc2": "« Ô fuseau du destin !\nCe que tu files n’est que sable, corde de verre et de poussière —\nSeule elle connaît ni commencement ni fin. »\n\n— Extrait du <I>Fuseau de la Déesse du Destin</>, poème d’un auteur anonyme"
   },
@@ -1492,15 +1249,6 @@
           [
             39604.457,
             11191.478
-          ]
-        ]
-      },
-      {
-        "srId": 101110,
-        "pos": [
-          [
-            5149.465,
-            1020.7086
           ]
         ]
       },
@@ -1571,33 +1319,6 @@
     "name": "Sablier prismatique (temporaire)",
     "icon": "T_Resource_GachaTicket_03",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            -7253.9033,
-            4486.6577
-          ],
-          [
-            -7425.891,
-            4092.4116
-          ],
-          [
-            -6615.8613,
-            3527.8232
-          ],
-          [
-            -6719.2856,
-            4269.51
-          ],
-          [
-            -7192.2593,
-            3212.8672
-          ]
-        ]
-      }
-    ],
     "desc": "Un sablier renfermant le temps et les souvenirs. Mille éclats y scintillent, témoins des splendeurs et des âges révolus.",
     "desc2": "« Ô fuseau du destin !\nCe que tu files n’est que sable, corde de verre et de poussière —\nSeule elle connaît ni commencement ni fin. »\n— Extrait du <I>Fuseau de la Déesse du Destin</>, poème d’un auteur anonyme"
   },
@@ -1621,66 +1342,6 @@
     "name": "Recycleur de Reforge II",
     "icon": "T_Icon_ModRandomBlue",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101303,
-        "pos": [
-          [
-            825.62964,
-            26802.53
-          ],
-          [
-            1810.3848,
-            25943.06
-          ],
-          [
-            2093.4614,
-            26116.33
-          ]
-        ]
-      },
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            22244.918,
-            34134.53
-          ],
-          [
-            22367.54,
-            33980.58
-          ],
-          [
-            22530.162,
-            34172.812
-          ],
-          [
-            24267.172,
-            35177.312
-          ],
-          [
-            24015.398,
-            35177.312
-          ],
-          [
-            24015.398,
-            35351.723
-          ],
-          [
-            23387.633,
-            35825.215
-          ],
-          [
-            23498.215,
-            35960.707
-          ],
-          [
-            23250.172,
-            35996.46
-          ]
-        ]
-      }
-    ],
     "desc": "Utilisé pour la reforge des Sceaux démoniaques"
   },
   {
@@ -1696,41 +1357,6 @@
     "name": "流光织针",
     "icon": "T_Resource_ActivityIcon_02",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -19077.75,
-            25544.674
-          ],
-          [
-            -17868.172,
-            25222.422
-          ],
-          [
-            -18501.246,
-            25988.18
-          ],
-          [
-            -22428.875,
-            11815.03
-          ],
-          [
-            -22697.283,
-            9936.444
-          ],
-          [
-            -20316.742,
-            9467.155
-          ],
-          [
-            -18470,
-            23730
-          ]
-        ]
-      }
-    ],
     "desc": "针尖牵引着光的轨迹，在一横一竖的交叠间织就崭新的衣装。可用于部分角色形象的进阶。",
     "desc2": "“每一针落下，都在积累着蜕变的进程。我看到了一件崭新的艺术品，正在丝线与指尖的厮磨间缓缓降生。”\n\n——艺术家 阿米埃特"
   },
@@ -3777,17 +3403,6 @@
     "name": "Branche desséchée",
     "icon": "T_BreakRes_Wind02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            2380,
-            2660
-          ]
-        ]
-      }
-    ],
     "desc": "Une vieille branche arrachée par des vents violents. Ses marques d’érosion semblent lui avoir volé toute trace de vie.",
     "desc2": "« La branche desséchée sent la tempête, l’océan pressent le froid.\nÉcoute, observe : le chemin à venir s’est déjà insinué dans chaque feuille, chaque brindille — car tout ce qui existe est messager du monde. »\n\n— Yaoguang, pionnier de la Secte Jishu de Huaxu"
   },
@@ -3796,17 +3411,6 @@
     "name": "Turbine convergente",
     "icon": "T_BreakRes_Wind03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1350.7812,
-            11593.679
-          ]
-        ]
-      }
-    ],
     "desc": "Appareil issu de l’Empire Hyperboréen, alimenté par du Phoxichor, capable de générer de puissantes rafales. Lors des grandes cérémonies, ces vents artificiels soulèvent les pétales, les étendards, et l’éclat même de l’Empire.",
     "desc2": "« L’humanité n’a cessé de chercher à s’approprier la puissance — une soif qui a engendré d’innombrables tragédies, mais aussi bâti sa place dans l’histoire. À travers les âges, elle a allumé des feux dans les terres sauvages, extrait la glace des glaciers, semé les champs, dompté les vents. Ainsi, les éléments de la nature sont devenus, peu à peu, des outils au service de son existence, facilitant son quotidien et façonnant sa mémoire. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
   },
@@ -3815,17 +3419,6 @@
     "name": "Océalis",
     "icon": "T_BreakRes_Wind04",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1304.041,
-            11575.55
-          ]
-        ]
-      }
-    ],
     "desc": "Un papillon capable de traverser les océans porté par les courants d’air. Même par temps calme, il glisse au-dessus des flots en battant délicatement des ailes — un petit miracle capable de commander aux vents.",
     "desc2": "« Par le simple battement de ses ailes, un Océalis atteint les rivages de Luca. Les légères turbulences qu’il crée ne soulèvent rien de plus lourd que lui-même, mais si ces courants se mettent à voyager, que se passe-t-il ? Peut-être se dissipent-ils... ou peut-être gagnent-ils en force, traversant océans et continents, pour devenir une tempête de sable balayant les terres de Khemet. »\n\n— Miller, érudit d’Aethyrie"
   },
@@ -3834,17 +3427,6 @@
     "name": "Perceur de tempête",
     "icon": "T_BreakRes_Wind05",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            10784.852,
-            -3759.9648
-          ]
-        ]
-      }
-    ],
     "desc": "Une flèche colossale et lourde provenant de Huaxu, dont la pointe perce même les tempêtes les plus déchaînées. Difficile d’imaginer qui pourrait l’avoir tirée, mais sa trajectoire, semblable à une étoile filante, resterait gravée dans la mémoire de quiconque l’aperçoit.",
     "desc2": "« Aux premiers jours de Huaxu, le ciel présagea le malheur : Vénus brilla en plein jour, et les étoiles s’écrasèrent dans l’océan sans rivage. À travers les terres sauvages, les Souillés proliféraient, et la Dégradation se répandait.\n\nAlors Yang parcourut le monde pour sa grande chasse : il abattit la Bête aux Dents-Taillées dans les Eaux Maudites, captura le Grand Sanglier dans les Bois de Mûriers. Il remit des flèches à ses vassaux et leur ordonna d’abattre dix-neuf bêtes géantes. Ainsi, nul ne résista : tous se soumirent et reconnurent Yang comme souverain. »\n\n— Ban Ye, <I>Grand Historiographe, Annales de Huaxu</>"
   },
@@ -3853,17 +3435,6 @@
     "name": "Écaille de lézard flamboyant",
     "icon": "T_BreakRes_Fire02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1380.0635,
-            11634.813
-          ]
-        ]
-      }
-    ],
     "desc": "Une écaille de lézard des sables, dont la structure particulière lui permet de résister à une chaleur extrême. Cette caractéristique conforte l’idée que lézards et dragons sont parents — bien que ces derniers, êtres de beauté, n’existent que dans les contes.",
     "desc2": "« Même à cent mètres de distance, son éclat ne saurait passer inaperçu. Cette cape, patiemment cousue à partir de milliers d’écailles de lézard de feu, est sans conteste une œuvre d’art. Conçue à l’âge d’or de Khemet, son rouge incandescent, miroitant au soleil tel un brasier vivant, incarne l’âme même de cette terre ardente.\n\nDes années plus tard, la reine Lamia la revêtit sur le champ de bataille, immobile au milieu des déflagrations magiques et du fracas des canons. La longue guerre d’usure dura des jours et des nuits : nul ne se retourna, nul ne recula. Et, aujourd’hui encore, le feu ne s’est jamais éteint. »\n\n— <I>Réfractions</>, par Fiama"
   },
@@ -3872,17 +3443,6 @@
     "name": "Flamme éternelle",
     "icon": "T_BreakRes_Fire03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            7670,
-            -7810
-          ]
-        ]
-      }
-    ],
     "desc": "Une flamme sacrée éternelle : tant qu’elle brûle, Khemet ne s’éteindra pas. Chez les peuples du désert, offrir le feu est un gage d’amitié éternelle.",
     "desc2": "« Lorsqu’un enfant de Khemet voit le jour, il est accueilli par le baptême des flammes, et lorsqu’il quitte ce monde, c’est le feu qui libère son âme de ses chaînes charnelles. La vie se flétrit avec le temps, mais l’âme, elle, demeure éternellement unie au feu. »\n\n— Seth, Roi de Khemet, <I>Proclamation au peuple de Khemet</>"
   },
@@ -3947,17 +3507,6 @@
     "name": "Jade tempétueux",
     "icon": "T_BreakRes_Thunder03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101105,
-        "pos": [
-          [
-            -53.375004,
-            20810.188
-          ]
-        ]
-      }
-    ],
     "desc": "Un minerai rare tombé du ciel lors d’une nuit d’orage. Ses facettes polies comme des miroirs laissent entrevoir de fugaces éclairs violets parcourant son cœur.",
     "desc2": "« Dans l’histoire de Huaxu, les météores n’ont jamais été synonymes de chance ni de vœux exaucés. On les appelait des \"comètes funestes\", présages de désastre et de péril. Pourtant — ironie du sort — Huaxu fut le premier pays connu à exploiter des objets fabriqués à partir de météorites. Il faut croire que, face à la nécessité, même les plus solides croyances peuvent être renversées. »\n\n— Tachitus, historien d’Élysium, <I>Chroniques</>"
   },
@@ -3966,17 +3515,6 @@
     "name": "Laine d’or",
     "icon": "T_BreakRes_Thunder04",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101105,
-        "pos": [
-          [
-            -83.375,
-            20840.191
-          ]
-        ]
-      }
-    ],
     "desc": "Une laine dorée qui évoque les trésors mythiques. Les moutons dorés existent bel et bien, et leurs toisons peuvent, pour qui en a les moyens, être tissées en vêtements. Cependant, cette fibre a tendance à produire de l’électricité statique, émettant des étincelles à chaque mouvement.",
     "desc2": "« Ô fuseau du destin,\nDe quels fils la déesse impitoyable tisse-t-elle ta trame ?\nDe la soie ténue que l’araignée suspend aux profondeurs ?\nDe la toison dorée qui orne les plus hauts sommets ?\nOu de ce péché originel, si subtil, qui coule dans nos veines ? »\n\n— Poète anonyme, <I>Le Fuseau de la Déesse du Destin</> (extrait)"
   },
@@ -3985,17 +3523,6 @@
     "name": "Éclair en bouteille",
     "icon": "T_BreakRes_Thunder05",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -41437.668,
-            26181.232
-          ]
-        ]
-      }
-    ],
     "desc": "De la foudre capturée par les habitants de Huaxu, toujours dansante dans sa bouteille. Cette technique remonte à deux siècles, à un prêtre chasseur qui osa affronter seul les Plaines Foudroyantes.",
     "desc2": "« Aucun enfant ne saurait résister à l’envie d’un petit flacon de foudre — ses éclairs qui dansent au bout des doigts, comme un génie minuscule enfermé dans le verre. En des temps ravagés par la guerre, lorsque famille, amis et animaux de compagnie ont disparu, beaucoup d’enfants n’avaient plus que ce petit flacon pour confident. »\n\n— Dylan, surnommé Monsieur-Je-Sais-Tout, dans <I>Territoires inexplorés</>"
   },
@@ -4004,17 +3531,6 @@
     "name": "Lentille de l’illumination",
     "icon": "T_BreakRes_Light02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1339.5823,
-            11585.088
-          ]
-        ]
-      }
-    ],
     "desc": "Un monocle orné de chaînes raffinées, prisé par l’élite savante d’Aethyrie, au point d’être surnommé « Lentille de l’illumination ».",
     "desc2": "« Porter ce genre de monocle, c’est tout un art : soit vous avez des orbites suffisamment profondes, soit des muscles oculaires particulièrement puissants — vraiment puissants ! D’après mon expérience, les professeurs du second type ont souvent un sale caractère : soit ils froncent les sourcils comme s’ils voulaient écraser une mouche entre leurs arcades, soit ils vous fixent en plissant les yeux d’un air menaçant. Choisir leur cours n’est jamais une bonne idée. »\n\n— Un étudiant d’Aethyrie souhaitant garder l’anonymat"
   },
@@ -4023,17 +3539,6 @@
     "name": "Diadème floral doré",
     "icon": "T_BreakRes_Light03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101106,
-        "pos": [
-          [
-            20194,
-            510
-          ]
-        ]
-      }
-    ],
     "desc": "Une parure remise par l’Église Élyséenne, réservée à quelques figures d’une profonde révérence. Les motifs floraux entrelacés symbolisent la dévotion et l’obéissance, incarnant une foi pure comme l’or.",
     "desc2": "« Pfff... c’est lourd ! Je n’arrive même plus à relever la tête ! »\n\n— Lisbell, candidate de la Résilience parmi les Sept Vertus d’Élysium"
   },
@@ -4058,17 +3563,6 @@
     "name": "Dague rouillée",
     "icon": "T_BreakRes_Dark02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            25445.238,
-            -38144.035
-          ]
-        ]
-      }
-    ],
     "desc": "Une dague couverte de rouille dont les gravures raffinées témoignent de la noblesse de son propriétaire. Elle appartenait peut-être à une âme tombée sur un ancien champ de bataille.",
     "desc2": "« L’Empire veut nous attaquer ? Alors qu’il vienne, on l’attend de pied ferme ! Tous les Charons ne sont pas des chiens dociles ! Ha ! Je vais les tailler en pièces, m’emparer de leurs armes, et empiler leurs cadavres — toujours au même endroit, jusqu’à ce qu’ils forment une montagne ! »\n\n— Un membre de la tribu d’Askard"
   },
@@ -4077,17 +3571,6 @@
     "name": "Clé d’obsidienne",
     "icon": "T_BreakRes_Dark03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            6910,
-            1510
-          ]
-        ]
-      }
-    ],
     "desc": "En Aethyrie, l’obsidienne incarne l’inspiration née de la nuit. Chaque érudit Charon reçoit cette clé à la fin de ses études, et seul son détenteur en comprend la signification.",
     "desc2": "« La porte de la connaissance n’a pas de préférés — elle s’ouvre aussi bien aux Solariens qu’aux Charons. Débarrasse-toi de tes lourdes chaînes, et marche librement sur le chemin du savoir. N’oublie jamais : même plongée dans la nuit la plus sombre, notre pensée continue de briller. »\n\n— Professeur Montpelier, Académie d’Arcadia, Aethyrie"
   },
@@ -4248,178 +3731,6 @@
     "name": "Composant d’arme basique : Poignée",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 101305,
-        "pos": [
-          [
-            1999.2393,
-            14200.169
-          ],
-          [
-            590.5093,
-            -199.08887
-          ],
-          [
-            342.03442,
-            481.6172
-          ],
-          [
-            -368.46423,
-            500.7881
-          ],
-          [
-            -590.391,
-            -183.44238
-          ],
-          [
-            0,
-            -618.4053
-          ],
-          [
-            0,
-            -478.1797
-          ],
-          [
-            -396.23694,
-            233.8584
-          ],
-          [
-            415.18872,
-            241.75781
-          ]
-        ]
-      },
-      {
-        "srId": 101303,
-        "pos": [
-          [
-            3381.131,
-            25994.094
-          ]
-        ]
-      },
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            19056.16,
-            29442.52
-          ],
-          [
-            18753.627,
-            31252.29
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -39480.105,
-            4588.9897
-          ],
-          [
-            -32410,
-            34010
-          ],
-          [
-            -8800,
-            42600
-          ]
-        ]
-      },
-      {
-        "srId": 101701,
-        "pos": [
-          [
-            -24698.273,
-            -486.51306
-          ]
-        ]
-      },
-      {
-        "srId": 101703,
-        "pos": [
-          [
-            -6594.703,
-            -14219.948
-          ]
-        ]
-      },
-      {
-        "srId": 101402,
-        "pos": [
-          [
-            0,
-            50000
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            2140,
-            19040
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            111,
-            811
-          ]
-        ]
-      },
-      {
-        "srId": 105401,
-        "pos": [
-          [
-            -1616.17,
-            -163.37
-          ]
-        ]
-      },
-      {
-        "srId": 105701,
-        "pos": [
-          [
-            22984,
-            -84799
-          ]
-        ]
-      },
-      {
-        "srId": 104701,
-        "pos": [
-          [
-            -35790.164,
-            -54839.754
-          ]
-        ]
-      },
-      {
-        "srId": 104102,
-        "pos": [
-          [
-            -60455.715,
-            5767.8833
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            31738.906,
-            32011.352
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme basique.\nPartie la plus proche de son porteur, son unique dessein est d’assurer une prise en main parfaite.",
     "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
   },
@@ -4428,100 +3739,6 @@
     "name": "Composant d’arme intermédiaire : Poignée",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20549.932,
-            -2176.5784
-          ],
-          [
-            20510,
-            -2169
-          ]
-        ]
-      },
-      {
-        "srId": 103201,
-        "pos": [
-          [
-            5867.137,
-            -6868.6543
-          ]
-        ]
-      },
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -12174,
-            756.00244
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -30250.61,
-            8967.531
-          ],
-          [
-            -32579.617,
-            8709.96
-          ],
-          [
-            -27398,
-            10018.001
-          ]
-        ]
-      },
-      {
-        "srId": 101702,
-        "pos": [
-          [
-            840,
-            80
-          ]
-        ]
-      },
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            33550,
-            -32950
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            1640,
-            21440
-          ],
-          [
-            0,
-            13200
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            24870.812,
-            22764
-          ],
-          [
-            22660.938,
-            18243.555
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme intermédiaire.\nPartie la plus proche de son porteur, son unique dessein est d’assurer une prise en main parfaite.",
     "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
   },
@@ -4530,133 +3747,6 @@
     "name": "Composant d’arme avancé : Poignée",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            22850.652,
-            3416.8345
-          ],
-          [
-            20490.447,
-            5615.4106
-          ],
-          [
-            18129.87,
-            3416.8345
-          ]
-        ]
-      },
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            11562.369,
-            30542.213
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -19973.203,
-            10650
-          ],
-          [
-            -20406.363,
-            15950.222
-          ],
-          [
-            -29387.746,
-            4443.475
-          ],
-          [
-            -30304.898,
-            2603.4534
-          ],
-          [
-            -30730.33,
-            5113.133
-          ],
-          [
-            -34178,
-            5335.633
-          ],
-          [
-            -34178,
-            3648.659
-          ],
-          [
-            -31680.463,
-            3365.3362
-          ],
-          [
-            -28995.326,
-            1749.005
-          ],
-          [
-            -27409.547,
-            2942.4092
-          ],
-          [
-            -27141.941,
-            1254.5349
-          ],
-          [
-            -28247.062,
-            990.01
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -2180,
-            19010
-          ]
-        ]
-      },
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            -1905.6965,
-            -2081.9407
-          ],
-          [
-            -22.753582,
-            -1218.6176
-          ],
-          [
-            1491.7654,
-            -397.20438
-          ],
-          [
-            2198.4329,
-            1105.1051
-          ],
-          [
-            3409.608,
-            235.63153
-          ],
-          [
-            3284.2507,
-            2842.2454
-          ],
-          [
-            2353.893,
-            2775.9214
-          ],
-          [
-            2310.774,
-            2249.7056
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme avancé.\nPartie la plus proche de son porteur, son unique dessein est d’assurer une prise en main parfaite.",
     "desc2": "« Il avance,\nIl avance !\nJ’entends gronder ses pas,\nJ’entends l’Épée du Torrent racler le sol !\nIl vient réclamer la vie des injustes,\nNul ici n’échappera à la tempête !\nCe soir, nul ne résistera à la mort descendue des cieux,\nPas plus qu’on ne saurait lui arracher l’épée des mains ! »\n\n— Extrait de <I>Sous le Courroux des Flots</>, par Alexandre Dumas, dramaturge de la faction du Deuil"
   },
@@ -4665,26 +3755,6 @@
     "name": "Composant d’arme basique : Lame",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -1220,
-            21980
-          ]
-        ]
-      },
-      {
-        "srId": 102103,
-        "pos": [
-          [
-            41159.297,
-            -14300.713
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme basique.\nQu’elle soit courbe ou droite, légère ou lourde, sa lame n’a qu’une raison d’être : le combat.",
     "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, Par-delà la Lame"
   },
@@ -4693,35 +3763,6 @@
     "name": "Composant d’arme intermédiaire : Lame",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101304,
-        "pos": [
-          [
-            18753.627,
-            31252.29
-          ]
-        ]
-      },
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -8800,
-            42600
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            31738.906,
-            32011.352
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme intermédiaire.\nQu’elle soit courbe ou droite, légère ou lourde, sa lame n’a qu’une raison d’être : le combat.",
     "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
   },
@@ -4730,26 +3771,6 @@
     "name": "Composant d’arme avancé : Lame",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            1151.0438,
-            -38537
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            111,
-            811
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme avancé.\nQu’elle soit courbe ou droite, légère ou lourde, sa lame n’a qu’une raison d’être : le combat.",
     "desc2": "« Le sabre, c’est l’union du corps et de l’esprit.\nQuand l’âme s’y consacre tout entière, le fil d’acier peut trancher la foudre, fendre les flots, et abattre les monstres des mers. »\n\n— Un bretteur anonyme de Huaxu, <I>Par-delà la Lame</>"
   },
@@ -4766,51 +3787,6 @@
     "name": "Composant d’arme intermédiaire : Ornement",
     "icon": "T_Melee_Weapon_Part03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20490,
-            4130
-          ]
-        ]
-      },
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -7984.5117,
-            645.43085
-          ],
-          [
-            -7595.211,
-            -945.3517
-          ],
-          [
-            -9600,
-            -4700
-          ],
-          [
-            -10200,
-            -4100
-          ],
-          [
-            -9017.089,
-            -4100
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -12860,
-            -11955
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme intermédiaire.\nIl incarne la volonté de son porteur : seuls les puissants méritent d’affirmer leur singularité sur le champ de bataille.",
     "desc2": "« Qu’y a-t-il de mal à être différent ? Les autres s’échinent à prouver qu’ils sont uniques — moi, je le suis par nature. Né paria, rejeté de Père Ask, je suis devenu le plus étrange ornement de mon clan ! »\n\n— « Les Corvins » Chaos, des Déchus"
   },
@@ -4819,44 +3795,6 @@
     "name": "Composant d’arme avancé : Ornement",
     "icon": "T_Melee_Weapon_Part03",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -1573.1154,
-            5753.105
-          ]
-        ]
-      },
-      {
-        "srId": 101701,
-        "pos": [
-          [
-            -39135,
-            -720
-          ]
-        ]
-      },
-      {
-        "srId": 101702,
-        "pos": [
-          [
-            -30730,
-            -12340
-          ]
-        ]
-      },
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            6450,
-            -33475
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme avancé.\nIl incarne la volonté de son porteur : seuls les puissants méritent d’affirmer leur singularité sur le champ de bataille.",
     "desc2": "« Qu’y a-t-il de mal à être différent ? Les autres s’échinent à prouver qu’ils sont uniques — moi, je le suis par nature. Né paria, rejeté de Père Ask, je suis devenu le plus étrange ornement de mon clan ! »\n\n— « Les Corvins » Chaos, des Déchus"
   },
@@ -4865,17 +3803,6 @@
     "name": "Composant d’arme basique : Canon",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            20502.557,
-            2250.4736
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme basique.\nLes balles s’y déversent comme un torrent, le canon, brûlant, bat au même rythme que le cœur du soldat.",
     "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
   },
@@ -4884,17 +3811,6 @@
     "name": "Composant d’arme intermédiaire : Canon",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101701,
-        "pos": [
-          [
-            -6573.7983,
-            4183.828
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme intermédiaire.\nLes balles s’y déversent comme un torrent, le canon, brûlant, bat au même rythme que le cœur du soldat.",
     "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
   },
@@ -4903,17 +3819,6 @@
     "name": "Composant d’arme avancé : Canon",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101106,
-        "pos": [
-          [
-            22444.496,
-            -32.379997
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme avancé.\nLes balles s’y déversent comme un torrent, le canon, brûlant, bat au même rythme que le cœur du soldat.",
     "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
   },
@@ -4922,17 +3827,6 @@
     "name": "Composant d’arme basique : Verrou",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 101106,
-        "pos": [
-          [
-            19851.03,
-            1238.7537
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme basique.\nUne fois la gâchette pressée, nul retour en arrière — tout comme l’instant où l’on scelle sa détermination.",
     "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
   },
@@ -4941,17 +3835,6 @@
     "name": "Composant d’arme intermédiaire : Verrou",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101106,
-        "pos": [
-          [
-            19824.686,
-            1137.4208
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme intermédiaire.\nUne fois la gâchette pressée, nul retour en arrière — tout comme l’instant où l’on scelle sa détermination.",
     "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
   },
@@ -4960,17 +3843,6 @@
     "name": "Composant d’arme avancé : Verrou",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -20711.523,
-            10237.078
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme avancé.\nUne fois la gâchette pressée, nul retour en arrière — tout comme l’instant où l’on scelle sa détermination.",
     "desc2": "« Le dispositif de mise à feu — pour l’utilisateur, c’est la pièce la plus essentielle de toute arme mécanique. Peu importe la finesse du mécanisme interne : s’il ne fonctionne pas, ce n’est qu’un tas de ferraille.\nMême en tant que concepteur, je dois l’admettre... Ne me demandez pas comment je le sais, mais si ce jour-là le feu ne s’était pas déclenché, je ne serais plus là pour en parler. »\n\n— Un voyageur chevronné demeuré anonyme"
   },
@@ -4979,17 +3851,6 @@
     "name": "Composant d’arme basique : Armature",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 2,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -19215,
-            10620
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme basique.\nForgé d’acier, il est d’une solidité à toute épreuve, une fois les munitions épuisées, il fait un excellent outil contondant — ou un projectile improvisé.",
     "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
   },
@@ -4998,17 +3859,6 @@
     "name": "Composant d’arme intermédiaire : Armature",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -18915,
-            11870
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme intermédiaire.\nForgé d’acier, il est d’une solidité à toute épreuve, une fois les munitions épuisées, il fait un excellent outil contondant — ou un projectile improvisé.",
     "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
   },
@@ -5017,17 +3867,6 @@
     "name": "Composant d’arme avancé : Armature",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -19810,
-            10960
-          ]
-        ]
-      }
-    ],
     "desc": "Conçu avec précision selon les plans d’un composant d’arme avancé.\nForgé d’acier, il est d’une solidité à toute épreuve, une fois les munitions épuisées, il fait un excellent outil contondant — ou un projectile improvisé.",
     "desc2": "« D’accord, la Légion nous autorise à modifier nos armes dans certaines limites, mais repeindre mes armes en rose ? Là, faut pas pousser !\nQue tu sois ma sœur n’y change rien — c’est non.\nEt le petit pendentif ourson ? Lui non plus, il dégage ! »\n\n— Lynn, officière de la Légion Hyperboréenne"
   },
@@ -6616,10 +5455,6 @@
         "srId": 100101,
         "pos": [
           [
-            -1198,
-            51
-          ],
-          [
             9098,
             9019
           ]
@@ -6644,10 +5479,6 @@
       {
         "srId": 100101,
         "pos": [
-          [
-            50,
-            -80
-          ],
           [
             5451,
             6828
@@ -6713,10 +5544,6 @@
         "srId": 100102,
         "pos": [
           [
-            -3099.1875,
-            -1306.1221
-          ],
-          [
             27885,
             5905
           ]
@@ -6735,10 +5562,6 @@
       {
         "srId": 100103,
         "pos": [
-          [
-            -3521,
-            674
-          ],
           [
             21480,
             24980
@@ -6759,10 +5582,6 @@
         "srId": 100101,
         "pos": [
           [
-            -3525,
-            9915
-          ],
-          [
             8260,
             -3620
           ]
@@ -6781,10 +5600,6 @@
       {
         "srId": 100103,
         "pos": [
-          [
-            -135,
-            -191
-          ],
           [
             38879,
             19823
@@ -6805,10 +5620,6 @@
         "srId": 101101,
         "pos": [
           [
-            -1,
-            38
-          ],
-          [
             -2050,
             4170
           ]
@@ -6827,10 +5638,6 @@
       {
         "srId": 101101,
         "pos": [
-          [
-            -155.99997,
-            101.00003
-          ],
           [
             -1700.7699,
             -7420.7163
@@ -6851,10 +5658,6 @@
         "srId": 101101,
         "pos": [
           [
-            -585,
-            296
-          ],
-          [
             -9393,
             7504
           ]
@@ -6873,10 +5676,6 @@
       {
         "srId": 101301,
         "pos": [
-          [
-            -718.21533,
-            3934.8008
-          ],
           [
             6308,
             2379
@@ -6897,10 +5696,6 @@
         "srId": 101103,
         "pos": [
           [
-            1508.2344,
-            4569.042
-          ],
-          [
             -39461,
             -3328
           ]
@@ -6919,10 +5714,6 @@
       {
         "srId": 101103,
         "pos": [
-          [
-            2924.7324,
-            1436.1116
-          ],
           [
             -28580,
             -5200
@@ -6943,10 +5734,6 @@
         "srId": 101103,
         "pos": [
           [
-            -5404.076,
-            3901.4297
-          ],
-          [
             -25917,
             5325
           ]
@@ -6965,10 +5752,6 @@
       {
         "srId": 101103,
         "pos": [
-          [
-            -2639.332,
-            983.77734
-          ],
           [
             -38101.484,
             30920.523
@@ -6989,10 +5772,6 @@
         "srId": 101702,
         "pos": [
           [
-            0,
-            0
-          ],
-          [
             -32562,
             -16124
           ]
@@ -7011,10 +5790,6 @@
       {
         "srId": 101701,
         "pos": [
-          [
-            0,
-            26.611816
-          ],
           [
             -14120,
             -7175
@@ -7035,10 +5810,6 @@
         "srId": 102101,
         "pos": [
           [
-            0,
-            0
-          ],
-          [
             30081,
             -31233
           ]
@@ -7057,10 +5828,6 @@
       {
         "srId": 102101,
         "pos": [
-          [
-            0,
-            0
-          ],
           [
             19415,
             -37668
@@ -7081,10 +5848,6 @@
         "srId": 102102,
         "pos": [
           [
-            9218.941,
-            -20395.379
-          ],
-          [
             -10037,
             -1317
           ]
@@ -7104,10 +5867,6 @@
         "srId": 104108,
         "pos": [
           [
-            -486.25,
-            -5053.3477
-          ],
-          [
             41170,
             67884
           ]
@@ -7126,10 +5885,6 @@
       {
         "srId": 104110,
         "pos": [
-          [
-            148.5332,
-            165.83447
-          ],
           [
             31508,
             -3480
@@ -7169,10 +5924,6 @@
         "srId": 104109,
         "pos": [
           [
-            93.015625,
-            -205.73828
-          ],
-          [
             -19023,
             5230
           ]
@@ -7191,10 +5942,6 @@
       {
         "srId": 104105,
         "pos": [
-          [
-            -1118.1562,
-            -321.44336
-          ],
           [
             -18718,
             -31299
@@ -7234,10 +5981,6 @@
         "srId": 104505,
         "pos": [
           [
-            -2077.42,
-            -1227.76
-          ],
-          [
             61191.07,
             -76997.71
           ]
@@ -7257,10 +6000,6 @@
         "srId": 104502,
         "pos": [
           [
-            -77.9,
-            1.54
-          ],
-          [
             18391.01,
             -38555.32
           ]
@@ -7275,67 +6014,6 @@
     "name": "Sphère d’exploration — Île du Purgatoire",
     "icon": "T_ExploreBadge_Beibao_Prologue",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 100102,
-        "pos": [
-          [
-            20476,
-            3013
-          ],
-          [
-            28805,
-            5325
-          ],
-          [
-            16167,
-            10019
-          ],
-          [
-            26424,
-            -5052
-          ]
-        ]
-      },
-      {
-        "srId": 100103,
-        "pos": [
-          [
-            38077,
-            21235
-          ],
-          [
-            17713.771,
-            25303.838
-          ],
-          [
-            26367,
-            31693
-          ]
-        ]
-      },
-      {
-        "srId": 100101,
-        "pos": [
-          [
-            1932,
-            6055
-          ],
-          [
-            10207,
-            9225
-          ],
-          [
-            2866,
-            8321
-          ],
-          [
-            11031,
-            -4025
-          ]
-        ]
-      }
-    ],
     "desc": "Sphères d’exploration recueillies aux quatre coins de l’Île du Purgatoire. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses.",
     "desc2": "« Là où le regard des dieux ne se pose plus, où la poigne de fer de l’Empire n’a jamais atteint — se dresse une île oubliée.\nLes oiseaux y tournoient entre mille colonnes brisées, survolant des ruines qu’ont englouties la mousse et les marées du temps.\nPartez explorer, voir, écouter — l’Île du Purgatoire, gardienne de souvenirs et de secrets. »"
   },
@@ -7352,82 +6030,6 @@
     "name": "Sphère d’exploration — Forteresse de Lonza",
     "icon": "T_ExploreBadge_Beibao_EXChapter01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            28845,
-            -30388
-          ],
-          [
-            19634.982,
-            -37598.49
-          ],
-          [
-            14578,
-            -40410.695
-          ],
-          [
-            11103,
-            -42750
-          ],
-          [
-            10346,
-            -52125
-          ],
-          [
-            -2401,
-            -43895
-          ],
-          [
-            -4850,
-            -35427
-          ],
-          [
-            2095,
-            -48445
-          ],
-          [
-            26521,
-            -34186
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -3369,
-            7178
-          ],
-          [
-            -14956,
-            -16122
-          ],
-          [
-            -5471,
-            -10849
-          ],
-          [
-            -20741,
-            3772
-          ],
-          [
-            -8963,
-            -1668
-          ],
-          [
-            7525,
-            2008
-          ],
-          [
-            -13161,
-            -6477
-          ]
-        ]
-      }
-    ],
     "desc": "Sphères d’exploration recueillies aux abords de la Forteresse de Lonza. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses.",
     "desc2": "« Nulle rivière d’acier ni pluie de poudre n’a su ébranler cette forteresse.\nSur ses remparts ne flottent plus que des soupirs.\nMais sachez-le : plus le mur est solide, plus le cœur humain saura s’y frayer un passage.\nPartez explorer, voir, écouter — la Forteresse de Lonza, que la fumée et la mémoire refusent d’abandonner. »"
   },
@@ -7436,125 +6038,6 @@
     "name": "Sphère d’exploration — Port-des-Brumes",
     "icon": "T_ExploreBadge_Beibao_East",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 104102,
-        "pos": [
-          [
-            -58290.58,
-            8788.479
-          ]
-        ]
-      },
-      {
-        "srId": 104103,
-        "pos": [
-          [
-            -9051.801,
-            29591.572
-          ],
-          [
-            4726.0054,
-            21080.736
-          ]
-        ]
-      },
-      {
-        "srId": 104104,
-        "pos": [
-          [
-            276.96103,
-            -4393.95
-          ]
-        ]
-      },
-      {
-        "srId": 104105,
-        "pos": [
-          [
-            -16592,
-            -22543
-          ],
-          [
-            -21821.621,
-            -16443.652
-          ]
-        ]
-      },
-      {
-        "srId": 104106,
-        "pos": [
-          [
-            31193.074,
-            -12471.755
-          ],
-          [
-            17836.21,
-            -30562.25
-          ]
-        ]
-      },
-      {
-        "srId": 104107,
-        "pos": [
-          [
-            15887.112,
-            44439.59
-          ]
-        ]
-      },
-      {
-        "srId": 104108,
-        "pos": [
-          [
-            -0.00097,
-            -1.507478
-          ],
-          [
-            34647.566,
-            68348.04
-          ],
-          [
-            53682.418,
-            19630.78
-          ],
-          [
-            0,
-            -1.507812
-          ]
-        ]
-      },
-      {
-        "srId": 104109,
-        "pos": [
-          [
-            -37046,
-            4908
-          ],
-          [
-            -209.45898,
-            -2679.3955
-          ],
-          [
-            -21116.129,
-            6846.1333
-          ]
-        ]
-      },
-      {
-        "srId": 104110,
-        "pos": [
-          [
-            30041.688,
-            -10205.6875
-          ],
-          [
-            35943.785,
-            -906.7367
-          ]
-        ]
-      }
-    ],
     "desc": "Sphères d’exploration recueillies dans tout Huaxu. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, au Marché Voilé.\nElles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve au cours de vos aventures, et peuvent être échangées contre diverses récompenses.",
     "desc2": "« Là où s’achèvent la terre et la mer — le premier souffle et le dernier murmure de chaque route marchande. Dans l’air parfumé flotte la rime des légendes ; sous les avant-toits errent encore les échos des récits perdus.\nLorsque la fumée retombe et que la poussière se calme... que nous réserve demain ?\n\nPartez — voyez, écoutez — explorez Port-des-Brumes, un royaume prêt à dire adieu à ses anciens jours ! »"
   },
@@ -9279,135 +7762,6 @@
     "name": "Sphère d’exploration — Haojing",
     "icon": "T_ExploreBadge_Beibao_East01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 104501,
-        "pos": [
-          [
-            44358.21,
-            -31707.14
-          ],
-          [
-            56555.51,
-            -23044.83
-          ],
-          [
-            51115.87,
-            -33008.29
-          ]
-        ]
-      },
-      {
-        "srId": 104503,
-        "pos": [
-          [
-            24247.61,
-            -58967.94
-          ],
-          [
-            31504.1,
-            -85772.77
-          ],
-          [
-            31596.35,
-            -42735.73
-          ]
-        ]
-      },
-      {
-        "srId": 104504,
-        "pos": [
-          [
-            -30670,
-            -56940
-          ],
-          [
-            3970.79,
-            -84988.92
-          ],
-          [
-            -28227.2,
-            -40623.55
-          ],
-          [
-            -4420,
-            -61380
-          ]
-        ]
-      },
-      {
-        "srId": 104505,
-        "pos": [
-          [
-            54010.48,
-            -74958.27
-          ],
-          [
-            66010.89,
-            -80913.62
-          ],
-          [
-            52188.24,
-            -48706.47
-          ]
-        ]
-      },
-      {
-        "srId": 104502,
-        "pos": [
-          [
-            19941.07,
-            -4392.78
-          ],
-          [
-            -10819.38,
-            -26378.15
-          ],
-          [
-            7958.5,
-            -20820.75
-          ],
-          [
-            5281.37,
-            -11974.64
-          ]
-        ]
-      },
-      {
-        "srId": 105201,
-        "pos": [
-          [
-            15806.12,
-            -1651.36
-          ],
-          [
-            -1425.55,
-            -8427.81
-          ],
-          [
-            40.46,
-            1259.08
-          ],
-          [
-            9290.49,
-            6697.09
-          ]
-        ]
-      },
-      {
-        "srId": 105501,
-        "pos": [
-          [
-            18959.86,
-            1408.9
-          ],
-          [
-            19206.56,
-            4509.94
-          ]
-        ]
-      }
-    ],
     "desc": "Sphères d’exploration recueillies aux quatre coins de Haojing. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, dans Haojing. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve au cours de vos explorations, et peuvent être échangées contre diverses récompenses.",
     "desc2": "C’est une cité florissante dressée aux confins de l’Est. Les pavillons et jardins d’eau édifiés par les anciens s’y tiennent depuis des millénaires, comme immuables, défiant l’érosion du temps. Mais les chants transmis jour après jour finissent toujours par écrire de nouveaux vers, et aux récits familiers viennent se mêler des visages inconnus. Sous les cieux, les vents se lèvent et les flots s’élèvent. Allez explorer, allez voir, allez écouter... et rendez-vous à Haojing, la cité bientôt métamorphosée.\n \n"
   },
@@ -9594,15 +7948,6 @@
             6877
           ]
         ]
-      },
-      {
-        "srId": 105801,
-        "pos": [
-          [
-            -1082.6963,
-            -1260.2673
-          ]
-        ]
       }
     ],
     "desc": "Flacon de sel volatil, un indispensable de toute trousse de premiers secours. En cas de perte de conscience due à une maladie ou à une blessure, il procure une brève lucidité.",
@@ -9641,17 +7986,6 @@
     "name": "Sel volatil II",
     "icon": "T_Hp_Full",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 105801,
-        "pos": [
-          [
-            296.3175,
-            -1253.5164
-          ]
-        ]
-      }
-    ],
     "desc": "Flacon de sel volatil, un indispensable de toute trousse de premiers secours. En cas de perte de conscience due à une maladie ou à une blessure, il procure une brève lucidité.",
     "desc2": "« Il y a eu tant de fois où, après avoir avalé par erreur des baies empoisonnées, dévalé les pentes, ou combattu des bêtes féroces, j’ai cru que j’allais m’endormir pour ne plus jamais me réveiller. Ce qui m’a ramené, ce n’est ni la volonté, ni les rêves, ni même la voix de quelqu’un... seulement l’instinct, et une petite fiole de sel volatil. »\n\n— L’Étranger, Chasseur de Phoxène"
   },
@@ -9660,17 +7994,6 @@
     "name": "Sel volatil concentré II",
     "icon": "T_Drop_Mp",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 105801,
-        "pos": [
-          [
-            235.07858,
-            846.4904
-          ]
-        ]
-      }
-    ],
     "desc": "Flacon de sel volatil, un indispensable de toute trousse de premiers secours. En cas de perte de conscience due à une maladie ou à une blessure, il procure une brève lucidité.",
     "desc2": "« Il y a eu tant de fois où, après avoir avalé par erreur des baies empoisonnées, dévalé les pentes, ou combattu des bêtes féroces, j’ai cru que j’allais m’endormir pour ne plus jamais me réveiller. Ce qui m’a ramené, ce n’est ni la volonté, ni les rêves, ni même la voix de quelqu’un... seulement l’instinct, et une petite fiole de sel volatil. »\n\n— L’Étranger, Chasseur de Phoxène"
   },
@@ -10181,17 +8504,6 @@
     "name": "Sélecteur d’arme de départ (I)",
     "icon": "T_OptPack_Weapon01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -1680,
-            21440
-          ]
-        ]
-      }
-    ],
     "desc": "À utiliser pour choisir une arme dans la liste."
   },
   {
@@ -10199,26 +8511,6 @@
     "name": "Sélecteur d’arme de départ (I)",
     "icon": "T_OptPack_Weapon01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            1049.2266,
-            22121.672
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            1050,
-            21950
-          ]
-        ]
-      }
-    ],
     "desc": "À utiliser pour choisir une arme dans la liste."
   },
   {
@@ -10226,17 +8518,6 @@
     "name": "Coffret de sélection d’apparence – Lueur astrale",
     "icon": "T_Pack_Christmas",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            1513.5479,
-            -34538.008
-          ]
-        ]
-      }
-    ],
     "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Fina, Rebecca, Tabethe, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche, ou Daphne."
   },
   {
@@ -10244,30 +8525,6 @@
     "name": "Coffret de sélection d’apparence Sérénité – Jade noir",
     "icon": "T_Pack_Common02",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            125.964355,
-            -255.80469
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -19055,
-            -6340
-          ],
-          [
-            -15115.941,
-            -4482.8613
-          ]
-        ]
-      }
-    ],
     "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne."
   },
   {
@@ -10275,17 +8532,6 @@
     "name": "Coffret de sélection de matériaux d’Échos nocturnes",
     "icon": "T_Rouge_Drop_Interim4",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            29175.725,
-            -38586.2
-          ]
-        ]
-      }
-    ],
     "desc": "Après utilisation, permet de choisir un matériau dans la liste."
   },
   {
@@ -10293,17 +8539,6 @@
     "name": "Coffret de sélection d’ascension d’arme",
     "icon": "T_Pack_WeaponUserChoose",
     "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            79.5508,
-            96.808586
-          ]
-        ]
-      }
-    ],
     "desc": "Après utilisation, permet de choisir un matériau dans la liste."
   },
   {
@@ -10311,37 +8546,6 @@
     "name": "Coffret d’apparence (Sélection) – En fuite",
     "icon": "T_Pack_JKSkin",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -15380,
-            -2910
-          ],
-          [
-            -87,
-            -111
-          ],
-          [
-            -17700,
-            -1070
-          ],
-          [
-            -162.72229,
-            -747.7488
-          ],
-          [
-            -100,
-            -30
-          ],
-          [
-            1259.2856,
-            7142.2256
-          ]
-        ]
-      }
-    ],
     "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne."
   },
   {
@@ -10349,33 +8553,6 @@
     "name": "Coffret d’apparence (Sélection) – Hivernal",
     "icon": "T_Pack_SnowmanSkin",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            480,
-            6680
-          ],
-          [
-            -15300,
-            -3150
-          ],
-          [
-            -10741.015,
-            -21556.836
-          ],
-          [
-            -17578.848,
-            -1320.3737
-          ],
-          [
-            133,
-            -15
-          ]
-        ]
-      }
-    ],
     "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Phantasio, Lisbell, Dame Nifle, Kezhou, Fina, Rebecca, Tabethe, Fushu, Lynn, Yale et Oliver, Vulcera, Margie, Rhythm, Zhiliu, Yuming, Randy, Sibylle, Truffle et Filbert, l’Étranger, Psyche ou Daphne."
   },
   {
@@ -10383,25 +8560,6 @@
     "name": "自选形象礼箱·不羁",
     "icon": "T_Pack_Common03",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -10917.311,
-            -21735.018
-          ],
-          [
-            -17560,
-            -1180
-          ],
-          [
-            1176.5366,
-            7406.0205
-          ]
-        ]
-      }
-    ],
     "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Lisbell, Dame Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle et Filbert, Psyche ou Daphne."
   },
   {
@@ -10409,497 +8567,73 @@
     "name": "千丝雨惊喜道具箱",
     "icon": "T_Pack_RandomMod_Daily",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            -45.04492,
-            -35.59668
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            417.96875,
-            96.02246
-          ]
-        ]
-      }
-    ],
     "desc": "具体概率与数量如下，概率四舍五入至小数点后4位：\n月石晶胚*10：29.4010%\n月石晶胚*16：44.1014%\n月石晶胚*18：22.0507%\n月石晶胚*40：3.6751%\n月石晶胚*100：0.7350%\n月石晶胚*888：0.0368%"
   },
   {
     "id": 110019,
     "name": "蓝色近战魔之楔道具箱",
     "icon": "T_Pack_RandomMod_01",
-    "rarity": 3,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            30364.227,
-            -37358.33
-          ]
-        ]
-      }
-    ]
+    "rarity": 3
   },
   {
     "id": 110020,
     "name": "紫色近战魔之楔道具箱",
     "icon": "T_Pack_RandomMod_01",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            -228.75153,
-            -39760.92
-          ],
-          [
-            -4975,
-            -30525
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            490,
-            6530
-          ],
-          [
-            66,
-            -123
-          ],
-          [
-            -16475,
-            -1540
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110021,
     "name": "蓝色不死鸟魔之楔道具箱",
     "icon": "T_Pack_RandomMod_02",
-    "rarity": 3,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            12080.169,
-            13189.565
-          ],
-          [
-            -12174.999,
-            -11095
-          ],
-          [
-            -12184.999,
-            -10660
-          ],
-          [
-            290.0027,
-            117.000565
-          ],
-          [
-            11870.001,
-            13140
-          ],
-          [
-            11870.001,
-            13280
-          ]
-        ]
-      },
-      {
-        "srId": 105901,
-        "pos": [
-          [
-            -40,
-            -10
-          ]
-        ]
-      },
-      {
-        "srId": 104801,
-        "pos": [
-          [
-            -16769.44,
-            54600.41
-          ],
-          [
-            36030,
-            -33360
-          ],
-          [
-            -20707.81,
-            60156.55
-          ],
-          [
-            -20234.95,
-            51486.12
-          ],
-          [
-            -11294.78,
-            50547.96
-          ],
-          [
-            -11288.02,
-            60430.22
-          ],
-          [
-            -16242.86,
-            55493.15
-          ]
-        ]
-      }
-    ]
+    "rarity": 3
   },
   {
     "id": 110022,
     "name": "紫色不死鸟魔之楔道具箱",
     "icon": "T_Pack_RandomMod_02",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 101901,
-        "pos": [
-          [
-            117.353516,
-            291.73535
-          ]
-        ]
-      },
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            40,
-            -210
-          ],
-          [
-            29200,
-            -36150
-          ],
-          [
-            30180,
-            -37420
-          ],
-          [
-            29220,
-            -36420
-          ],
-          [
-            29230,
-            -36250
-          ],
-          [
-            29120,
-            -38590
-          ],
-          [
-            10118.091,
-            -42255.37
-          ],
-          [
-            113.2043,
-            -40009.504
-          ],
-          [
-            135.06055,
-            -254.80469
-          ],
-          [
-            -22.468748,
-            28.906252
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            93.03192,
-            19543.637
-          ],
-          [
-            -284.24255,
-            627.3389
-          ],
-          [
-            1007.2474,
-            21867.23
-          ],
-          [
-            47,
-            14038
-          ],
-          [
-            -44.955322,
-            267.72217
-          ],
-          [
-            -11036.842,
-            -20996.516
-          ],
-          [
-            -17320,
-            -920
-          ],
-          [
-            -49.685013,
-            122.89551
-          ],
-          [
-            3.000023,
-            111
-          ],
-          [
-            970,
-            4985
-          ],
-          [
-            595.96436,
-            2634.1953
-          ],
-          [
-            -25.10875,
-            18099.395
-          ],
-          [
-            -11101.823,
-            -20617.344
-          ],
-          [
-            967.50397,
-            7155.8525
-          ],
-          [
-            146.38715,
-            97.3268
-          ],
-          [
-            10,
-            180
-          ]
-        ]
-      },
-      {
-        "srId": 102103,
-        "pos": [
-          [
-            48510,
-            -10030
-          ]
-        ]
-      },
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -12951.478,
-            -12021.869
-          ],
-          [
-            10.000019,
-            19.99999
-          ],
-          [
-            11688.003,
-            13979.448
-          ],
-          [
-            245.84766,
-            58.21582
-          ],
-          [
-            -40,
-            100
-          ],
-          [
-            378.63867,
-            241.4541
-          ],
-          [
-            -10005,
-            -8225
-          ]
-        ]
-      },
-      {
-        "srId": 105901,
-        "pos": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      {
-        "srId": 100104,
-        "pos": [
-          [
-            -10,
-            90
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110023,
     "name": "蓝色远程魔之楔道具箱",
     "icon": "T_Pack_RandomMod_03",
-    "rarity": 3,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            123.03192,
-            19373.637
-          ]
-        ]
-      }
-    ]
+    "rarity": 3
   },
   {
     "id": 110024,
     "name": "紫色远程魔之楔道具箱",
     "icon": "T_Pack_RandomMod_03",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            -10425,
-            -22515
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            991,
-            -1120
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110025,
     "name": "紫色狮鹫魔之楔道具箱",
     "icon": "T_Pack_RandomMod_04",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            -93,
-            -73
-          ],
-          [
-            28631.186,
-            -38637.17
-          ],
-          [
-            -10870,
-            -22760
-          ]
-        ]
-      },
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            905,
-            -1334
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110026,
     "name": "紫色风属性百首魔之楔道具箱",
     "icon": "T_Pack_RandomMod_05",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            28485,
-            -36290
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110027,
     "name": "紫色火属性百首魔之楔道具箱",
     "icon": "T_Pack_RandomMod_06",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            27755,
-            -37005
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110028,
     "name": "紫色雷属性百首魔之楔道具箱",
     "icon": "T_Pack_RandomMod_07",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            29725,
-            -36220
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110029,
     "name": "紫色水属性百首魔之楔道具箱",
     "icon": "T_Pack_RandomMod_08",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102101,
-        "pos": [
-          [
-            83,
-            -5
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110030,
@@ -10911,213 +8645,31 @@
     "id": 110031,
     "name": "紫色暗属性百首魔之楔道具箱",
     "icon": "T_Pack_RandomMod_10",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 104503,
-        "pos": [
-          [
-            31502.54,
-            -95720
-          ]
-        ]
-      },
-      {
-        "srId": 104506,
-        "pos": [
-          [
-            31502.54,
-            -95720
-          ]
-        ]
-      },
-      {
-        "srId": 105201,
-        "pos": [
-          [
-            12339.9,
-            -3048.87
-          ],
-          [
-            10674.17,
-            -3028.48
-          ],
-          [
-            9727.95,
-            -1009.69
-          ],
-          [
-            7709.17,
-            -63.48
-          ],
-          [
-            5690.38,
-            -1009.69
-          ],
-          [
-            4744.17,
-            -3028.48
-          ],
-          [
-            5690.38,
-            -5047.27
-          ],
-          [
-            7709.17,
-            -5993.48
-          ],
-          [
-            9727.95,
-            -5047.27
-          ]
-        ]
-      },
-      {
-        "srId": 104801,
-        "pos": [
-          [
-            36025,
-            -28510
-          ],
-          [
-            36025,
-            -27605
-          ],
-          [
-            35570,
-            -28055
-          ],
-          [
-            36480,
-            -28055
-          ],
-          [
-            36084,
-            -49480.98
-          ],
-          [
-            36828,
-            -49055.98
-          ],
-          [
-            37036,
-            -48836.98
-          ],
-          [
-            37563,
-            -46005.98
-          ],
-          [
-            34543,
-            -46005.98
-          ],
-          [
-            35318,
-            -48735.98
-          ],
-          [
-            35984,
-            -40819.98
-          ],
-          [
-            35984,
-            -47451.98
-          ],
-          [
-            -11722.19,
-            50065.31
-          ],
-          [
-            -16798,
-            46679
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110032,
     "name": "紫色风属性契约者魔之楔道具箱",
     "icon": "T_Pack_RandomMod_11",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -10010,
-            -7225
-          ],
-          [
-            12164.702,
-            13175.133
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110033,
     "name": "紫色火属性契约者魔之楔道具箱",
     "icon": "T_Pack_RandomMod_16",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            12360.001,
-            13080
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110034,
     "name": "紫色雷属性契约者魔之楔道具箱",
     "icon": "T_Pack_RandomMod_12",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -10690.671,
-            -21698.992
-          ],
-          [
-            -17620,
-            -1140
-          ],
-          [
-            -11051.823,
-            -20717.344
-          ],
-          [
-            1085.9076,
-            7273.486
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110035,
     "name": "紫色水属性契约者魔之楔道具箱",
     "icon": "T_Pack_RandomMod_13",
-    "rarity": 4,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            -9995,
-            -7000
-          ]
-        ]
-      }
-    ]
+    "rarity": 4
   },
   {
     "id": 110036,
@@ -11135,94 +8687,31 @@
     "id": 110038,
     "name": "Portrait : Mademoiselle Rossignol – Ombre feuillue",
     "icon": "T_Head_Other0014",
-    "rarity": 1,
-    "source": [
-      {
-        "srId": 102102,
-        "pos": [
-          [
-            -10498.537,
-            -20201.934
-          ]
-        ]
-      }
-    ]
+    "rarity": 1
   },
   {
     "id": 110039,
     "name": "Portrait : Chasseuse de lumière – Regard lointain",
     "icon": "T_Head_Other0016",
-    "rarity": 1,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            11695,
-            13617.61
-          ],
-          [
-            11695,
-            13572.716
-          ]
-        ]
-      }
-    ]
+    "rarity": 1
   },
   {
     "id": 110040,
     "name": "Murmures indicibles – Bleu indigo",
     "icon": "T_Head_Frame29",
-    "rarity": 1,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            11688.003,
-            14025.305
-          ]
-        ]
-      }
-    ]
+    "rarity": 1
   },
   {
     "id": 110041,
     "name": "Murmures indicibles – Bleu céleste",
     "icon": "T_Head_Frame28",
-    "rarity": 1,
-    "source": [
-      {
-        "srId": 102104,
-        "pos": [
-          [
-            11699.226,
-            13571.77
-          ],
-          [
-            11695,
-            13571.999
-          ]
-        ]
-      }
-    ]
+    "rarity": 1
   },
   {
     "id": 120001,
     "name": "Bon d’Héritage paternel",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
-    "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            -34408,
-            9464
-          ]
-        ]
-      }
-    ],
     "desc": "商品满680月石晶胚减300月石晶胚"
   },
   {
@@ -12061,10 +9550,6 @@
         "srId": 101701,
         "pos": [
           [
-            0,
-            0
-          ],
-          [
             -21486,
             4826
           ]
@@ -12083,10 +9568,6 @@
       {
         "srId": 101701,
         "pos": [
-          [
-            0,
-            0
-          ],
           [
             -18821,
             -5456
@@ -12169,15 +9650,6 @@
             -39989
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            27959.646,
-            -870.9898
-          ]
-        ]
       }
     ],
     "desc": "Une demande d’admission refusée, rédigée il y a environ un an et demi.",
@@ -12216,15 +9688,6 @@
             5082
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            23047.492,
-            -4143.497
-          ]
-        ]
       }
     ],
     "desc": "Le contenu de ce journal laisse entrevoir une certaine négligence dans la discipline des Déchus.",
@@ -12242,15 +9705,6 @@
           [
             -9964,
             -4448
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            19284.201,
-            554.59314
           ]
         ]
       }
@@ -12272,15 +9726,6 @@
             11712.227
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            31167.697,
-            -10603.355
-          ]
-        ]
       }
     ],
     "desc": "La seule fête que les soldats de la forteresse aient jamais été autorisés à célébrer.",
@@ -12298,15 +9743,6 @@
           [
             2857,
             -47273
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            20792.168,
-            -2438.4666
           ]
         ]
       }
@@ -12328,15 +9764,6 @@
             2654.366
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            13783.619,
-            -22100.55
-          ]
-        ]
       }
     ],
     "desc": "Registres de combat extraits de la console de simulation de la Forteresse de Lonza. Les rapports décrivent méthodiquement les performances des soldats impériaux, assortis d’observations et de recommandations précises.\nToutefois, le ton change brusquement dans les dernières lignes : l’écriture n’a plus rien de militaire, mais semble plutôt l’œuvre d’un membre des Déchus.",
@@ -12356,15 +9783,6 @@
             4184
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -4684.4785,
-            -16874.746
-          ]
-        ]
       }
     ],
     "desc": "Un registre officieux répertoriant les chiens de guerre, rédigé par un soldat impérial chargé de leur dressage. Il était dissimulé avec soin dans le coffre d’un chariot. Les dernières pages, tâchées d’eau, sont devenues presque illisibles.",
@@ -12382,15 +9800,6 @@
           [
             27940,
             -36892
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            30922.787,
-            11481.362
           ]
         ]
       }
@@ -12431,15 +9840,6 @@
             -10189.273
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            6395.7803,
-            4276.196
-          ]
-        ]
       }
     ],
     "desc": "Un journal abandonné appartenant à un membre des Déchus.\nSon contenu laisse penser que son auteur était guérisseur.",
@@ -12457,15 +9857,6 @@
           [
             21354,
             1087
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            13167.812,
-            -13996.818
           ]
         ]
       }
@@ -12487,15 +9878,6 @@
             1067.2869
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            2279.643,
-            -23413.84
-          ]
-        ]
       }
     ],
     "desc": "Un amas de lettres de relance éparpillées couvre le bureau.\nChacune presse Henrik de rembourser ses dettes — à l’évidence, la Maison d’Hypnos croule depuis longtemps sous les difficultés financières.",
@@ -12513,15 +9895,6 @@
           [
             22434,
             -185
-          ]
-        ]
-      },
-      {
-        "srId": 101110,
-        "pos": [
-          [
-            4129.419,
-            1034.0286
           ]
         ]
       }
@@ -12581,15 +9954,6 @@
             3057
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            14814.203,
-            -2586.4421
-          ]
-        ]
       }
     ],
     "desc": "Un dossier retrouvé parmi les archives, portant la photo d’Elisa.\nChaque page relate en détail sa vie quotidienne à la Maison d’Hypnos.",
@@ -12607,15 +9971,6 @@
           [
             22654,
             2608
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            17082.926,
-            -614.755
           ]
         ]
       }
@@ -12690,17 +10045,6 @@
     "name": "Bagarre au Théâtre Galea",
     "icon": "T_Read_01",
     "rarity": 3,
-    "source": [
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -982.0625,
-            1706.2601
-          ]
-        ]
-      }
-    ],
     "desc": "Une transcription manuscrite réalisée par Rhythm, décrivant une rixe survenue en pleine représentation au Théâtre Galea, il y a deux ans.",
     "desc2": "Affaire : Bagarre au Théâtre Galea\nDate : 9 octobre, 20 h 30\n\nDépositaire de plainte : Letizia Putsch, directrice de la troupe de la Flûte Enchantée\n\nParties impliquées :\nParsifal Snowfield (comédien principal)\nSusanna Rossi (comédienne principale)\nMathew Bernard (spectateur)\nFeeley Francisco (spectateur)\n...\nRésumé de l’incident : Une altercation aurait éclaté entre des membres de la troupe et des spectateurs du premier rang. Témoignages évoquant des coups portés aux comédiens par les spectateurs. (Certaines pages du rapport officiel ont été arrachées.)\n\nConclusion : Preuves insuffisantes. Aucune suite judiciaire.\n\nRemarques : Les représentations de <I>Né du blizzard</> sont suspendues jusqu’à nouvel ordre, sans date de reprise annoncée.\nJ’aurais tant voulu voir cette pièce avec Blues, pour effacer le regret de ne pas l’avoir vue autrefois. Mais il semble que ce ne soit pas pour bientôt...\""
   },
@@ -12718,15 +10062,6 @@
             11103
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            18714.94,
-            6895.6416
-          ]
-        ]
       }
     ],
     "desc": "Un journal intime dont le ton laisse penser qu’il fut rédigé par Blues Fischer. Page après page, il y consigne minutieusement son quotidien avec Rhythm — jusqu’à remplir le verso et exploiter chaque recoin du carnet.",
@@ -12739,29 +10074,11 @@
     "rarity": 3,
     "source": [
       {
-        "srId": 101101,
-        "pos": [
-          [
-            -1770,
-            8810
-          ]
-        ]
-      },
-      {
         "srId": 101702,
         "pos": [
           [
             -32150,
             -8373
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            25387.535,
-            6872.8286
           ]
         ]
       }
@@ -12776,29 +10093,11 @@
     "rarity": 3,
     "source": [
       {
-        "srId": 101101,
-        "pos": [
-          [
-            -1203.4828,
-            490.69458
-          ]
-        ]
-      },
-      {
         "srId": 101703,
         "pos": [
           [
             -10039,
             -6633
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            20956.191,
-            1076.707
           ]
         ]
       }
@@ -12818,15 +10117,6 @@
           [
             17063,
             -978
-          ]
-        ]
-      },
-      {
-        "srId": 101101,
-        "pos": [
-          [
-            -5640,
-            -4760
           ]
         ]
       }
@@ -12886,15 +10176,6 @@
             -482
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            27679.371,
-            -8756.173
-          ]
-        ]
       }
     ],
     "desc": "(Des feuillets épars, retrouvés dans un coin de la troupe. Ils portent l’écriture de Parsifal : visiblement un script qu’il relisait sans cesse, espérant peut-être monter un jour sur scène.)\n\nAux confins nord-ouest de la sphère d’influence de l’Église Élyséenne, s’élevait autrefois un petit duché nommé Yashnia, qui faisait face, par-delà les flots, à l’Empire Hyperboréen.\nProspère grâce au commerce, il naviguait entre l’Église et l’Empire, jusqu’à ce que la première l’annexe il y a plus de trois siècles.\n\nBien que modeste, le duché survécut durant des générations. Ses ducs maintinrent leur pouvoir au prix d’intrigues sanglantes : crimes de palais, assassinats politiques, complots étouffés.\nNombre de ménestrels s’inspirèrent de cette saga pour composer pièces et ballades. Et parce que son territoire fut entièrement annexé par l’Église, même l’Empire — qui interdit d’ordinaire toute représentation d’assassinats royaux — considère ces œuvres comme un juste témoignage de la noirceur du passé de l’Église Élyséenne, et en autorise donc les représentations.\n\nParmi ces pièces, <I>Momiji : Récits du soulèvement</> demeure la plus célèbre, renommée pour ses chœurs grandioses, ses chorégraphies foisonnantes et ses combats savamment orchestrés.",
@@ -12912,15 +10193,6 @@
           [
             -2963.712,
             -5225.015
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            6049.673,
-            -9149.705
           ]
         ]
       }
@@ -12942,15 +10214,6 @@
             -1793.3302
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            12641.521,
-            -9775.1455
-          ]
-        ]
       }
     ],
     "desc": "Une hymne entonnée lors de la Fête de la Chandelle d’Argent, qui raconte sa légende fondatrice : Soranus, frère cadet de Dis Ier, premier empereur de l’Empire Hyperboréen, fut tué par les Charons.\nPourtant, après avoir remporté la victoire, Dis Ier renonça à la vengeance et choisit la paix, offrant un grand banquet.\nOn dit que cette célébration est à l’origine de la Fête de la Chandelle d’Argent telle qu’on la connaît aujourd’hui.",
@@ -12968,15 +10231,6 @@
           [
             -30936.494,
             -21903.68
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            3570.8293,
-            -519.6372
           ]
         ]
       }
@@ -13010,29 +10264,11 @@
     "rarity": 3,
     "source": [
       {
-        "srId": 101107,
-        "pos": [
-          [
-            1091.8047,
-            -10195.223
-          ]
-        ]
-      },
-      {
         "srId": 101702,
         "pos": [
           [
             -30188.734,
             -14194.25
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -12666.293,
-            -672.33014
           ]
         ]
       }
@@ -13046,15 +10282,6 @@
     "icon": "T_Read_02",
     "rarity": 3,
     "source": [
-      {
-        "srId": 101103,
-        "pos": [
-          [
-            330.78516,
-            -156.96094
-          ]
-        ]
-      },
       {
         "srId": 101701,
         "pos": [
@@ -13082,15 +10309,6 @@
             -6015.564
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -15106.124,
-            -7893.6997
-          ]
-        ]
       }
     ],
     "desc": "Une hymne entonnée lors de la Fête de la Chandelle d’Argent, qui raconte sa légende fondatrice : Soranus, frère cadet de Dis Ier, premier empereur de l’Empire Hyperboréen, fut tué par les Charons.\nPourtant, après avoir remporté la victoire, Dis Ier renonça à la vengeance et choisit la paix, offrant un grand banquet.\nOn dit que cette célébration est à l’origine de la Fête de la Chandelle d’Argent telle qu’on la connaît aujourd’hui.",
@@ -13108,15 +10326,6 @@
           [
             202.36655,
             -39.692352
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            8405.716,
-            14497.939
           ]
         ]
       }
@@ -13157,15 +10366,6 @@
             -11068.557
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -18118.607,
-            2421.1306
-          ]
-        ]
       }
     ],
     "desc": "Une hymne entonnée lors de la Fête de la Chandelle d’Argent, qui raconte sa légende fondatrice : Soranus, frère cadet de Dis Ier, premier empereur de l’Empire Hyperboréen, fut tué par les Charons.\nPourtant, après avoir remporté la victoire, Dis Ier renonça à la vengeance et choisit la paix, offrant un grand banquet.\nOn dit que cette célébration est à l’origine de la Fête de la Chandelle d’Argent telle qu’on la connaît aujourd’hui.",
@@ -13183,15 +10383,6 @@
           [
             -6034.2466,
             -11101.004
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -24752.213,
-            -16774.154
           ]
         ]
       }
@@ -13213,15 +10404,6 @@
             -10379
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -9256.435,
-            8644.835
-          ]
-        ]
       }
     ],
     "desc": "La carte des boissons des Asphodèles : chaque verre est rond en bouche et parfumé. Une gorgée, et vous en redemanderez.",
@@ -13239,15 +10421,6 @@
           [
             -6193.3267,
             -9151.44
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -24812.906,
-            12053.465
           ]
         ]
       }
@@ -13286,15 +10459,6 @@
           [
             641,
             14394
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -2214.1953,
-            2772.4082
           ]
         ]
       }
@@ -13354,15 +10518,6 @@
             18384.238
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -21349.34,
-            5111.6807
-          ]
-        ]
       }
     ],
     "desc": "Une chanson censée faire l’éloge de la Secte Jishu. Les paroles sont confuses et incompréhensibles ; rien qu’en les lisant, on imagine déjà quelqu’un la braillant faux.",
@@ -13382,15 +10537,6 @@
             52317.598
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -21628.33,
-            3755.3853
-          ]
-        ]
       }
     ],
     "desc": "Un roman-feuilleton au titre expédié. Il raconte l’histoire d’un jeune homme nommé Zhao Hao, choisi comme Haut Chancelier de Longyuan. Très populaire auprès de la jeunesse de Huaxu.",
@@ -13408,15 +10554,6 @@
           [
             -23496.182,
             5765.7466
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -19920.113,
-            5445.4272
           ]
         ]
       }
@@ -13457,15 +10594,6 @@
             -60397.133
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -19083.453,
-            7972.3457
-          ]
-        ]
       }
     ],
     "desc": "Un carnet rédigé par un auteur inconnu et abandonné à proximité de l’Autel de Zhuyin. Certaines écritures y sont déjà devenues floues. Le texte relate avec précision les épreuves vécues par son auteur en ces lieux ; nul ne peut savoir dans quel abîme de désespoir ces lignes ont été consignées par ceux qui cherchaient la vérité.",
@@ -13483,15 +10611,6 @@
           [
             27339.277,
             67612.02
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -611.4199,
-            5364.2944
           ]
         ]
       }
@@ -13532,15 +10651,6 @@
             -31610.771
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            28393.057,
-            -14891.501
-          ]
-        ]
       }
     ],
     "desc": "Un compte rendu d’observation rédigé par un érudit étranger, décrivant la conception singulière que les habitants de Huaxu entretiennent à l’égard de la vie et de la mort.",
@@ -13560,15 +10670,6 @@
             -17735.266
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            24437.219,
-            -805.9579
-          ]
-        ]
       }
     ],
     "desc": "Un classement établi par des auteurs populaires anonymes, recensant les caractères les plus prisés pour les prénoms de nouveau-nés à Huaxu ces dernières années, accompagné d’analyses de leur signification. Les sources et la fiabilité des données restent discutables ; à parcourir avant tout pour le divertissement.",
@@ -13584,21 +10685,8 @@
         "srId": 104109,
         "pos": [
           [
-            54.078125,
-            29.636719
-          ],
-          [
             -13013.81,
             11761.229
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            26291.133,
-            -4082.5894
           ]
         ]
       }
@@ -13639,15 +10727,6 @@
             21471.773
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            37.660156,
-            -244.92737
-          ]
-        ]
       }
     ],
     "desc": "Un volume extrait des <I>Registres de jurisprudence de Luoxiang</>. Médiatrice populaire, Luoxiang y applique sa lecture personnelle des Neuf Chapitres de Dafeng à des affaires du quotidien. Grâce à un langage accessible et à un contenu proche de la vie courante, la série est devenue, de manière inattendue, une lecture domestique très en vogue.",
@@ -13684,15 +10763,6 @@
           [
             37761.016,
             -7207.0557
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            22499.15,
-            4578.1636
           ]
         ]
       }
@@ -13733,15 +10803,6 @@
             -5553.6577
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            14007.204,
-            -4413.8623
-          ]
-        ]
       }
     ],
     "desc": "Le carnet personnel que Luno, la carpe garde toujours sur elle. Il rassemble, sur sept volumes à ce jour, ses réflexions commerciales notées tantôt sur un coup d’inspiration, tantôt après de longues cogitations. Les pages les plus récentes témoignent d’une influence marquée du « Roi Démon » Snow, venu des contrées lointaines d’Hyperborea.",
@@ -13761,15 +10822,6 @@
             -10377.243
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            482.72266,
-            586.44727
-          ]
-        ]
       }
     ],
     "desc": "Un bref document administratif publié par Éternel Printemps.",
@@ -13787,15 +10839,6 @@
           [
             33721.277,
             -6030.5483
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            10120,
-            -2020
           ]
         ]
       }
@@ -13989,15 +11032,6 @@
             -10462.75
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            3445.8545,
-            -4935.1055
-          ]
-        ]
       }
     ],
     "desc": "Un récit consacré à Yin Qing, poète de l’antique Huaxu, tiré du recueil d’essais <I>Fragments de Cangxi</>, rédigé par le lettré postérieur Cang Xian. L’histoire raconte comment un jeune voyageur nommé Feng — dont le nom de famille s’est perdu avec le temps — arriva par hasard à Haojing. Près de la demeure de la famille Yin, il trouva dans un canal une feuille verte portant un poème, découverte fortuite qui scella sa rencontre avec Yin Qing.\n\n<I>Fragments de Cangxi</> rassemble de nombreuses anecdotes littéraires remontant à environ cinq siècles. Si l’authenticité historique de l’ouvrage reste sujette à débat, sa valeur en tant qu’œuvre littéraire est largement reconnue.",
@@ -14036,15 +11070,6 @@
             -41303.12
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -112.31101,
-            -873.3165
-          ]
-        ]
       }
     ],
     "desc": "<I>Tendances de Huaxu</> recense les lieux et modes de vie les plus en vogue à Huaxu : restaurants et tavernes populaires, vêtements et marchandises diverses, ainsi que les nouvelles tendances venues de contrées étrangères.\nLe numéro spécial Haojing paraît chaque année un mois avant la Cérémonie de l’Encens et présente les derniers endroits à la mode de la capitale pour manger, se divertir et profiter de la vie nocturne.",
@@ -14062,15 +11087,6 @@
           [
             47481.09,
             -21364.85
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -175.0001,
-            865.0002
           ]
         ]
       }
@@ -14092,15 +11108,6 @@
             -31789.43
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            1953.8607,
-            2931.5173
-          ]
-        ]
       }
     ],
     "desc": "Un ouvrage célèbre à Huaxu, que l’on dit rédigé par un maître éminent de la Secte Xuanheng. L’œuvre compte au total dix-sept volumes et a été enrichie de nombreux ajouts par les générations suivantes.\nLe passage ci-dessous est tiré de la préface de l’ouvrage original.",
@@ -14120,15 +11127,6 @@
             -43959.31
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            1193.5199,
-            3923.5854
-          ]
-        ]
       }
     ],
     "desc": "Un livret d’opéra populaire circulant parmi le peuple de Huaxu. Il raconte l’histoire d’un jeune couple, depuis leur rencontre jusqu’à leur mariage, avant que leur union ne se dégrade peu à peu à cause de multiples querelles et contrariétés du quotidien.\nL’œuvre serait inspirée d’un fait réel survenu à Haojing, bien que son authenticité n’ait jamais été confirmée. Extrait.",
@@ -14146,15 +11144,6 @@
           [
             26720.64,
             -56596.8
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -16691.004,
-            9911.527
           ]
         ]
       }
@@ -14195,15 +11184,6 @@
             -35550
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            -36551.207,
-            -415
-          ]
-        ]
       }
     ],
     "desc": "Un recueil rassemblant les paroles de Maître Zhuxi, consignées par ses disciples.\nAu fil de sa vie, nombre de ses idées évoluèrent avec l’âge. Pourtant, qu’elles datent de sa jeunesse ou de ses dernières années, toutes ses réflexions furent soigneusement mises par écrit par ses élèves. Le passage suivant en est un court extrait.",
@@ -14218,10 +11198,6 @@
       {
         "srId": 105201,
         "pos": [
-          [
-            -19.21,
-            30.43
-          ],
           [
             15713.31,
             2236.39
@@ -14239,29 +11215,11 @@
     "rarity": 3,
     "source": [
       {
-        "srId": 101107,
-        "pos": [
-          [
-            1136.6428,
-            -10244.687
-          ]
-        ]
-      },
-      {
         "srId": 105201,
         "pos": [
           [
             3159.28,
             7586.51
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            15664.557,
-            20.032108
           ]
         ]
       }
@@ -14283,15 +11241,6 @@
             -3197.19
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            26481.54,
-            -2877.1423
-          ]
-        ]
       }
     ],
     "desc": "Un texte anonyme provenant de Huaxu, qui décrit en détail les règles et le déroulement du Tournoi de l’Encens.",
@@ -14306,10 +11255,6 @@
       {
         "srId": 104502,
         "pos": [
-          [
-            0,
-            20
-          ],
           [
             19290,
             -2900
@@ -14353,15 +11298,6 @@
             -114142.16
           ]
         ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            31972.281,
-            -3290.4539
-          ]
-        ]
       }
     ],
     "desc": "Un journal publié quotidiennement à Haojing, imprimé et vendu par le Pavillon des Artisans. On y trouve principalement des anecdotes et nouvelles locales, ainsi que quelques avis destinés aux habitants. En vérité, le journal ne compte guère de lecteurs.",
@@ -14379,15 +11315,6 @@
           [
             10867.55,
             -10032.23
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
-        "pos": [
-          [
-            34400.34,
-            -3485.9336
           ]
         ]
       }

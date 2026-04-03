@@ -15,6 +15,7 @@ class ResourceProcessor(BaseProcessor):
         super().__init__(data_loader)
         self.file_type = "Resource"
         self.resource_data = data_loader.load_json("Resource.json")
+        self.drop_data = data_loader.load_json("Drop.json")
         self.reward_data = data_loader.load_json("Reward.json")
         self.mechanism_data = data_loader.load_json("Mechanism.json")
         self.draft_data = data_loader.load_json("Draft.json")
@@ -27,8 +28,10 @@ class ResourceProcessor(BaseProcessor):
         for resource_id, resource_info in self.resource_data.items():
             self.resource_map[resource_info.get("ResourceId")] = resource_info
 
-        self.reward_to_resource_ids = self._build_reward_to_resource_ids()
+        self.rarely_to_drop_ids = self._build_rarely_to_drop_ids()
+        self.drop_to_resource_ids = self._build_drop_to_resource_ids()
         self.mechanism_to_reward_ids = self._build_mechanism_to_reward_ids()
+        self.reward_to_resource_ids = self._build_reward_to_resource_ids()
         self.mechanism_to_resource_ids = self._build_mechanism_to_resource_ids()
         self.draft_resource_ids = self.get_draft_resource_ids()
         self.exports_root = self._resolve_exports_root()
@@ -315,26 +318,54 @@ class ResourceProcessor(BaseProcessor):
             resource_ids.append((resource_id, None))
 
         unit_id = self._to_int(props.get("UnitId"))
-        if unit_id is not None and unit_id in self.resource_map and not has_resource_id(unit_id):
-            resource_ids.append((unit_id, None))
-
         static_creator_id = self._to_int(props.get("StaticCreatorId"))
-        if (
-            static_creator_id is not None
-            and static_creator_id in self.resource_map
-            and not has_resource_id(static_creator_id)
-        ):
-            resource_ids.append((static_creator_id, None))
-
-        for mechanism_id in (unit_id, static_creator_id):
-            if mechanism_id is None:
-                continue
-            for reward_id in self.mechanism_to_reward_ids.get(mechanism_id, []):
-                for resource_id in self.reward_to_resource_ids.get(reward_id, []):
+        rarely_id = self._to_int(props.get("RarelyId"))
+        if (unit_id is not None or static_creator_id is not None) and rarely_id is not None:
+            for drop_id in self.rarely_to_drop_ids.get(rarely_id, []):
+                for resource_id in self.drop_to_resource_ids.get(drop_id, []):
                     if resource_id in self.resource_map and not has_resource_id(resource_id):
-                        resource_ids.append((resource_id, reward_id))
+                        resource_ids.append((resource_id, None))
+
+        mechanism_id = unit_id if unit_id is not None else static_creator_id
+        if mechanism_id is not None:
+            for resource_id, reward_id in self.mechanism_to_resource_ids.get(mechanism_id, []):
+                if resource_id in self.resource_map and not has_resource_id(resource_id):
+                    resource_ids.append((resource_id, reward_id))
 
         return resource_ids
+
+    def _build_rarely_to_drop_ids(self) -> Dict[int, List[int]]:
+        """构建 RarelyId -> DropId 映射。"""
+        mapping: Dict[int, List[int]] = {}
+        for drop in self.drop_data.values():
+            if not isinstance(drop, dict):
+                continue
+            rarely_id = self._to_int(drop.get("RarelyId"))
+            drop_id = self._to_int(drop.get("DropId"))
+            if rarely_id is None or drop_id is None:
+                continue
+            mapping.setdefault(rarely_id, [])
+            if drop_id not in mapping[rarely_id]:
+                mapping[rarely_id].append(drop_id)
+        return mapping
+
+    def _build_drop_to_resource_ids(self) -> Dict[int, List[int]]:
+        """构建 DropId -> ResourceId 列表映射。"""
+        mapping: Dict[int, List[int]] = {}
+        for drop in self.drop_data.values():
+            if not isinstance(drop, dict):
+                continue
+            if drop.get("UseEffectType") != "GetResource":
+                continue
+
+            drop_id = self._to_int(drop.get("DropId"))
+            resource_id = self._to_int(drop.get("UseParam"))
+            if drop_id is None or resource_id is None:
+                continue
+            mapping.setdefault(drop_id, [])
+            if resource_id not in mapping[drop_id]:
+                mapping[drop_id].append(resource_id)
+        return mapping
 
     def _build_mechanism_to_reward_ids(self) -> Dict[int, List[int]]:
         """构建 Mechanism(UnitId) -> RewardId 列表映射。"""
@@ -346,7 +377,8 @@ class ResourceProcessor(BaseProcessor):
             reward_id = self._to_int(mechanism.get("RewardId"))
             if unit_id is None or reward_id is None:
                 continue
-            if reward_id not in mapping.setdefault(unit_id, []):
+            mapping.setdefault(unit_id, [])
+            if reward_id not in mapping[unit_id]:
                 mapping[unit_id].append(reward_id)
         return mapping
 
@@ -359,6 +391,7 @@ class ResourceProcessor(BaseProcessor):
             reward_id = self._to_int(reward.get("RewardId"))
             if reward_id is None:
                 continue
+
             reward_ids = self._normalize_list_field(reward.get("Id", []))
             reward_types = self._normalize_list_field(reward.get("Type", []))
             for index, reward_type in enumerate(reward_types):
@@ -367,17 +400,21 @@ class ResourceProcessor(BaseProcessor):
                 resource_id = self._to_int(reward_ids[index])
                 if resource_id is None:
                     continue
-                mapping.setdefault(reward_id, []).append(resource_id)
+                mapping.setdefault(reward_id, [])
+                if resource_id not in mapping[reward_id]:
+                    mapping[reward_id].append(resource_id)
         return mapping
 
-    def _build_mechanism_to_resource_ids(self) -> Dict[int, List[int]]:
-        """构建 Mechanism(UnitId) -> ResourceId 列表映射。"""
-        mapping: Dict[int, List[int]] = {}
+    def _build_mechanism_to_resource_ids(self) -> Dict[int, List[Tuple[int, int]]]:
+        """构建 Mechanism(UnitId) -> ResourceId/RewardId 列表映射。"""
+        mapping: Dict[int, List[Tuple[int, int]]] = {}
         for unit_id, reward_ids in self.mechanism_to_reward_ids.items():
             for reward_id in reward_ids:
                 for resource_id in self.reward_to_resource_ids.get(reward_id, []):
-                    if resource_id not in mapping.setdefault(unit_id, []):
-                        mapping[unit_id].append(resource_id)
+                    mapping.setdefault(unit_id, [])
+                    pair = (resource_id, reward_id)
+                    if pair not in mapping[unit_id]:
+                        mapping[unit_id].append(pair)
         return mapping
 
     @staticmethod
