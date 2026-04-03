@@ -5787,12 +5787,12 @@
       }
     ],
     "熔炼": [
-      "暴击伤害+62.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高35.0%。",
-      "暴击伤害+75.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高42.0%。",
-      "暴击伤害+87.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高49.0%。",
-      "暴击伤害+100.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高56.0%。",
-      "暴击伤害+112.5%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高63.0%。",
-      "暴击伤害+125.0%。此武器造成伤害时，如果角色当前武器为近战武器，造成的伤害提高70.0%。"
+      "DGT CRIT +62.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 35.0%.",
+      "DGT CRIT +75.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 42.0%.",
+      "DGT CRIT +87.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 49.0%.",
+      "DGT CRIT +100.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 56.0%.",
+      "DGT CRIT +112.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 63.0%.",
+      "DGT CRIT +125.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 70.0%."
     ],
     "技能": [
       {
@@ -6813,12 +6813,12 @@
       }
     ],
     "熔炼": [
-      "多重射击+37.5%。火属性角色造成技能伤害后，获得1层技能威力提高2.5%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+45.0%。火属性角色造成技能伤害后，获得1层技能威力提高3.0%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+52.5%。火属性角色造成技能伤害后，获得1层技能威力提高3.5%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+60.0%。火属性角色造成技能伤害后，获得1层技能威力提高4.0%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+67.5%。火属性角色造成技能伤害后，获得1层技能威力提高4.5%，持续10.0秒，最多叠加30.0层。",
-      "多重射击+75.0%。火属性角色造成技能伤害后，获得1层技能威力提高5.0%，持续10.0秒，最多叠加30.0层。"
+      "Tir multiple +37.5%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 2.5% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
+      "Tir multiple +45.0%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 3.0% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
+      "Tir multiple +52.5%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 3.5% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
+      "Tir multiple +60.0%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 4.0% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
+      "Tir multiple +67.5%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 4.5% pendant 10.0 s, cumulable jusqu’à 30.0 fois.",
+      "Tir multiple +75.0%. Lorsqu’un personnage Pyro inflige des Dégâts de compétence, il gagne 1 cumul augmentant la Puissance de compétence de 5.0% pendant 10.0 s, cumulable jusqu’à 30.0 fois."
     ],
     "技能": [
       {

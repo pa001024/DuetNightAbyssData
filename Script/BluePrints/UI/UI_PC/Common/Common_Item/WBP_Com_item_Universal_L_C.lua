@@ -75,6 +75,7 @@ function M:InitCompView()
   else
     self:SetPetPremium(false)
   end
+  self:SetWeaponMiniPhantomIcon(self.WeaponMiniPhantomIconCharId)
   if self.ItemType == "Weapon" then
     self:SetWeaponPhantomIcon(self.Uuid)
   end
@@ -101,7 +102,6 @@ function M:InitCompView()
   self:SetInGear(self.bInGear)
   self:SetTimeTag(self.Content.TimeTagList)
   self:SetCustomTag(self.Content.bAllowCustom)
-  self:SetWeaponMiniPhantomIcon(self.WeaponMiniPhantomIconCharId)
   self:SetNewGlow(self.bNewGlow)
   self:SetRedDot(self.RedDotType)
 end

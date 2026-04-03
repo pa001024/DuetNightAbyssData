@@ -104,7 +104,6 @@ function M:Close()
 end
 
 function M:InitUIInfo(Name, bInUIMode, EventList, ...)
-  self.bInDungeonSettlement = true
   M.Super.InitUIInfo(self, Name, bInUIMode, EventList, ...)
   self.Com_Input:SetText("")
   local AllChannelInfo = {}

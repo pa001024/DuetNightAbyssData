@@ -18,7 +18,7 @@
   {
     "id": 3010103,
     "name": "Déchireuse de gloire",
-    "desc": "有些荣耀，唯有通过彻底的撕裂方能获得；而有些真相，唯有在链锯的轰鸣中才得以言说。",
+    "desc": "Certaines gloires ne s’obtiennent qu’au prix d’une destruction totale ; certaines vérités ne se révèlent que dans le rugissement des lames-tronçonneuses.",
     "icon": "T_Head_Claymore_Rongyao",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"
@@ -386,7 +386,7 @@
   {
     "id": 3011002,
     "name": "Feu déchaîné",
-    "desc": "疾书凝玄甲，谈笑烬千军。",
+    "desc": "Un trait fait naître l’armure ; un sourire réduit mille armées en cendres.",
     "icon": "T_Head_Shotgun_Huoli",
     "rarity": 5,
     "unlock": "Disponible dans la boutique"

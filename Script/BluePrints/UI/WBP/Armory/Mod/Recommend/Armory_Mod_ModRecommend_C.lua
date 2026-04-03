@@ -43,10 +43,6 @@ function WBP_Armory_ModRecommend_C:Construct()
   end)
 end
 
-function WBP_Armory_ModRecommend_C:ClearData()
-  self.CurTargetUuid = nil
-end
-
 function WBP_Armory_ModRecommend_C:SetData(Params)
   self.Params = Params
   local Target = ModModel:GetTarget()

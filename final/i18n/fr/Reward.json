@@ -13781,7 +13781,7 @@
         "id": 110018,
         "t": "Resource",
         "c": 1,
-        "n": "千丝雨惊喜道具箱"
+        "n": "Coffre surprise d’objets – Pluie de mille fils"
       }
     ]
   },
@@ -14088,7 +14088,7 @@
         "id": 110017,
         "t": "Resource",
         "c": 1,
-        "n": "自选形象礼箱·不羁"
+        "n": "Coffret de sélection d’apparence – Indomptable"
       },
       {
         "id": 10096,
@@ -28798,7 +28798,7 @@
         "id": 222,
         "t": "Resource",
         "c": 1,
-        "n": "剧目特典"
+        "n": "Souvenir de spectacle"
       },
       {
         "id": 214,
@@ -28858,7 +28858,7 @@
         "id": 222,
         "t": "Resource",
         "c": 1,
-        "n": "剧目特典"
+        "n": "Souvenir de spectacle"
       },
       {
         "id": 214,
@@ -35064,7 +35064,7 @@
         "id": 30040,
         "t": "CharAccessory",
         "c": 1,
-        "n": "Lanterne nocturne – Caramel"
+        "n": "Lanterne nocturne – Jade noir"
       }
     ]
   },
@@ -35130,7 +35130,7 @@
         "id": 30040,
         "t": "CharAccessory",
         "c": 1,
-        "n": "Lanterne nocturne – Caramel"
+        "n": "Lanterne nocturne – Jade noir"
       },
       {
         "id": 100,
@@ -56317,7 +56317,7 @@
         "id": 10116,
         "t": "Title",
         "c": 1,
-        "n": "成龙的"
+        "n": "draconique"
       }
     ]
   },
@@ -56335,7 +56335,7 @@
         "id": 20098,
         "t": "Title",
         "c": 1,
-        "n": "姑奶奶"
+        "n": "Grande-tante"
       }
     ]
   },
@@ -56353,7 +56353,7 @@
         "id": 10117,
         "t": "Title",
         "c": 1,
-        "n": "直视神明的"
+        "n": "face aux dieux"
       }
     ]
   },
@@ -57727,7 +57727,7 @@
         "id": 110017,
         "t": "Resource",
         "c": 1,
-        "n": "自选形象礼箱·不羁"
+        "n": "Coffret de sélection d’apparence – Indomptable"
       },
       {
         "id": 208,

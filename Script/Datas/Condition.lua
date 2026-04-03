@@ -10842,7 +10842,7 @@ return ReadOnly("Condition", {
         },
         {
           "Mount",
-          1005,
+          1007,
           1
         },
         {
@@ -10908,7 +10908,7 @@ return ReadOnly("Condition", {
       HaveItem = {
         {
           "Mount",
-          1007,
+          1005,
           1
         }
       }

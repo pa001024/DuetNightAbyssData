@@ -1801,12 +1801,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17707051167221552449",
-            startPort = "Out",
-            endQuest = "176908644778811106396",
-            endPort = "In"
-          },
-          {
             startQuest = "17690863120349626009",
             startPort = "Out",
             endQuest = "17731290841772638",
@@ -1861,12 +1855,6 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "17741838695042009",
-            startPort = "Out",
-            endQuest = "176908656509912586698",
-            endPort = "In"
-          },
-          {
             startQuest = "176950237843934983758",
             startPort = "Out",
             endQuest = "17742600580821513",
@@ -1875,7 +1863,19 @@ return {
           {
             startQuest = "17742600580821513",
             startPort = "Out",
+            endQuest = "176908656509912586698",
+            endPort = "In"
+          },
+          {
+            startQuest = "17707051167221552449",
+            startPort = "Out",
             endQuest = "17741838695042009",
+            endPort = "In"
+          },
+          {
+            startQuest = "17741838695042009",
+            startPort = "Out",
+            endQuest = "176908644778811106396",
             endPort = "In"
           }
         },
@@ -1976,7 +1976,7 @@ return {
             key = "176908656509912586698",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2319.653346395755, y = 674.8932889445053},
+            pos = {x = 2335.2089019513105, y = 708.2266222778387},
             propsData = {}
           },
           ["176950237843934983758"] = {
@@ -2064,7 +2064,7 @@ return {
             key = "17707051167221552449",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 1154.3990646866032, y = 670.0522672631806},
+            pos = {x = 1115.5101757977143, y = 675.6078228187362},
             propsData = {
               SendMessage = "",
               FinishCondition = "YYG_Juque_Seqover"
@@ -2124,7 +2124,7 @@ return {
             key = "177323883880213796810",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = 2042.0850349594787, y = 707.2698832035594},
+            pos = {x = 2523.1961460705897, y = 996.1587720924483},
             propsData = {GuideId = 129}
           },
           ["177349950876110129514"] = {
@@ -2187,7 +2187,7 @@ return {
             key = "17741838695042009",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 2042.8218491557307, y = 859.9992854799171},
+            pos = {x = 1218.3774047112863, y = 824.4437299243616},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,
@@ -2198,7 +2198,7 @@ return {
             key = "17742600580821513",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 2052.948930296756, y = 550.1218081435471},
+            pos = {x = 2058.5044858523115, y = 713.4551414768805},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "YYG_KillQianji",

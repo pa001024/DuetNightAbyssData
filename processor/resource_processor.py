@@ -267,6 +267,7 @@ class ResourceProcessor(BaseProcessor):
         by_path: Optional[Dict[str, dict]] = None,
     ) -> None:
         """从设计层数据提取资源来源。"""
+        unit_based_resource_ids = set()
         for node in self._iter_design_level_nodes(level_data):
             if not isinstance(node, dict):
                 continue
@@ -275,6 +276,30 @@ class ResourceProcessor(BaseProcessor):
                 continue
             resource_ids = self._extract_resource_ids_from_node(node, props)
             if not resource_ids:
+                continue
+            unit_id = self._to_int(props.get("UnitId"))
+            static_creator_id = self._to_int(props.get("StaticCreatorId"))
+            if unit_id is not None or static_creator_id is not None:
+                for resource_id, _ in resource_ids:
+                    unit_based_resource_ids.add(resource_id)
+
+        for node in self._iter_design_level_nodes(level_data):
+            if not isinstance(node, dict):
+                continue
+            props = node.get("Properties", {})
+            if not isinstance(props, dict):
+                continue
+            resource_ids = self._extract_resource_ids_from_node(node, props)
+            if not resource_ids:
+                continue
+            unit_id = self._to_int(props.get("UnitId"))
+            static_creator_id = self._to_int(props.get("StaticCreatorId"))
+            if (
+                unit_id is None
+                and static_creator_id is None
+                and len(resource_ids) == 1
+                and resource_ids[0][0] in unit_based_resource_ids
+            ):
                 continue
             pos = self._extract_design_level_pos(node, by_outer_name, by_name, by_path)
             if pos is None:
@@ -320,6 +345,12 @@ class ResourceProcessor(BaseProcessor):
         unit_id = self._to_int(props.get("UnitId"))
         static_creator_id = self._to_int(props.get("StaticCreatorId"))
         rarely_id = self._to_int(props.get("RarelyId"))
+
+        if unit_id is not None:
+            for resource_id in self.drop_to_resource_ids.get(unit_id, []):
+                if resource_id in self.resource_map and not has_resource_id(resource_id):
+                    resource_ids.append((resource_id, None))
+
         if (unit_id is not None or static_creator_id is not None) and rarely_id is not None:
             for drop_id in self.rarely_to_drop_ids.get(rarely_id, []):
                 for resource_id in self.drop_to_resource_ids.get(drop_id, []):

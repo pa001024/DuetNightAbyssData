@@ -12,6 +12,18 @@ T.RT_2 = {
   [1] = T.RT_1
 }
 T.RT_3 = {
+  CompleteUIGuideId = 127,
+  FinishQuest = 12020306,
+  GuideId = 127,
+  GuideNoteId = 144,
+  GuideNoteTab = 3,
+  MechanismTag = "SubRebsign",
+  RewardId = 7000
+}
+T.RT_4 = {
+  [1] = T.RT_3
+}
+T.RT_5 = {
   FinishQuest = 12010309,
   GuideId = 96,
   GuideNoteId = 121,
@@ -19,7 +31,7 @@ T.RT_3 = {
   MechanismTag = "Petal",
   RewardId = 7000
 }
-T.RT_4 = {
+T.RT_6 = {
   CompleteUIGuideId = 95,
   FinishQuest = 12010309,
   GuideId = 95,
@@ -28,7 +40,7 @@ T.RT_4 = {
   MechanismTag = "MoInteractive",
   RewardId = 7000
 }
-T.RT_5 = {
+T.RT_7 = {
   CompleteUIGuideId = 94,
   FinishQuest = 12010309,
   GuideId = 94,
@@ -280,9 +292,9 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteTab = 3,
         RewardId = 7000
       },
-      [5] = T.RT_5,
-      [6] = T.RT_4,
-      [7] = T.RT_3
+      [5] = T.RT_7,
+      [6] = T.RT_6,
+      [7] = T.RT_5
     },
     [12010310] = {
       [1] = {
@@ -332,6 +344,7 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    [12020306] = T.RT_4,
     [12020406] = {
       [1] = {
         CompleteUIGuideId = 129,
@@ -673,7 +686,7 @@ return ReadOnly("GuideBookConditionOne", {
       }
     },
     GravityBall = {
-      [1] = T.RT_5
+      [1] = T.RT_7
     },
     GuardMech = {
       [1] = {
@@ -745,7 +758,7 @@ return ReadOnly("GuideBookConditionOne", {
       }
     },
     MoInteractive = {
-      [1] = T.RT_4
+      [1] = T.RT_6
     },
     Niudan = {
       [1] = {
@@ -758,7 +771,7 @@ return ReadOnly("GuideBookConditionOne", {
       }
     },
     Petal = {
-      [1] = T.RT_3
+      [1] = T.RT_5
     },
     PoisonMech = {
       [1] = {
@@ -770,16 +783,7 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
-    SubRebsign = {
-      [1] = {
-        CompleteUIGuideId = 127,
-        GuideId = 127,
-        GuideNoteId = 144,
-        GuideNoteTab = 3,
-        MechanismTag = "SubRebsign",
-        RewardId = 7000
-      }
-    },
+    SubRebsign = T.RT_4,
     TRLMTerra = {
       [1] = {
         CompleteUIGuideId = 125,
@@ -1310,6 +1314,16 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteTab = 5,
         RewardId = 7000,
         SysGuideId = 2095
+      }
+    },
+    [2098] = {
+      [1] = {
+        CompleteUIGuideId = 134,
+        GuideId = 134,
+        GuideNoteId = 151,
+        GuideNoteTab = 3,
+        RewardId = 7000,
+        SysGuideId = 2098
       }
     }
   }

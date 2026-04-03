@@ -7,12 +7,12 @@ return {
     },
     ["242310318"] = {
       CreatorId = 242310318,
-      UnitType = "",
+      UnitType = "Npc",
       UnitId = 240108
     },
     ["242310319"] = {
       CreatorId = 242310319,
-      UnitType = "",
+      UnitType = "Npc",
       UnitId = 240109
     },
     ["242310321"] = {
@@ -389,6 +389,11 @@ return {
       CreatorId = 242310290,
       UnitType = "Npc",
       UnitId = 240026
+    },
+    ["2310322"] = {
+      CreatorId = 2310322,
+      UnitType = "Mechanism",
+      UnitId = 110031
     }
   },
   ManualItem = {},

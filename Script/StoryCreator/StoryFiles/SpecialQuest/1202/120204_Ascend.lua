@@ -452,19 +452,7 @@ return {
           {
             startQuest = "1770196325225385065",
             startPort = "Out",
-            endQuest = "177375144129514212981",
-            endPort = "In"
-          },
-          {
-            startQuest = "1770196325225385065",
-            startPort = "Out",
             endQuest = "177375144129514212979",
-            endPort = "In"
-          },
-          {
-            startQuest = "1770194740182383849",
-            startPort = "Out",
-            endQuest = "1770194740182383848",
             endPort = "In"
           },
           {
@@ -514,6 +502,24 @@ return {
             startPort = "Out",
             endQuest = "17743544586182976331",
             endPort = "Input"
+          },
+          {
+            startQuest = "17741847941274765",
+            startPort = "Out",
+            endQuest = "177375144129514212981",
+            endPort = "In"
+          },
+          {
+            startQuest = "1770194740182383849",
+            startPort = "Out",
+            endQuest = "17750545519561718005",
+            endPort = "In"
+          },
+          {
+            startQuest = "17750545519561718005",
+            startPort = "Out",
+            endQuest = "1770194740182383848",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -521,7 +527,7 @@ return {
             key = "17678537949071014275",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 441.66666666666663, y = 298.3333333333333},
             propsData = {ModeType = 0}
           },
           ["17678537949071014276"] = {
@@ -593,7 +599,7 @@ return {
             key = "1770194740182383849",
             type = "ChangeRoleNode",
             name = "切换止流",
-            pos = {x = 1113.3936864488153, y = 284.5045233872414},
+            pos = {x = 755.0603531154819, y = 282.83785672057473},
             propsData = {QuestRoleId = 41020101, IsPlayFX = false}
           },
           ["1770194740182383850"] = {
@@ -892,7 +898,7 @@ return {
             key = "17728071841401497",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 801.9480519480519, y = 102.13636363636354},
+            pos = {x = 443.6147186147185, y = 100.46969696969687},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 1,
@@ -1314,7 +1320,7 @@ return {
             key = "17741847941274765",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 3524.7010519768783, y = -119.06650908054257},
+            pos = {x = 3254.7010519768783, y = 397.2492803931417},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,
@@ -1331,6 +1337,23 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = true
+            }
+          },
+          ["17750545519561718005"] = {
+            key = "17750545519561718005",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1135.363202133224, y = 314.20532525127595},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_3/0141_story_zhiliu_climp.0141_story_zhiliu_climp'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
             }
           }
         },

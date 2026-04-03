@@ -82,11 +82,25 @@ end
 
 function M:OnDragCancelled(PointerEvent, Operation)
   if self.PlayScreen then
-    if self.PlayScreen._CancelPendingHighlight then
-      self.PlayScreen:_CancelPendingHighlight()
+    if self.PlayScreen.TryHandleSameFrameDragRelease and self.PlayScreen:TryHandleSameFrameDragRelease(Operation, Operation and Operation.DefaultDragVisual) then
+      return
     end
-    if self.PlayScreen.DeactivateShapeArea then
-      self.PlayScreen:DeactivateShapeArea()
+    if self.PlayScreen.HandleCancelledDragReturnToList then
+      self.PlayScreen:HandleCancelledDragReturnToList(Operation, Operation and Operation.DefaultDragVisual)
+      return
+    end
+    if self.PlayScreen.ForceExitDragState then
+      self.PlayScreen:ForceExitDragState()
+    else
+      if self.PlayScreen._CancelPendingHighlight then
+        self.PlayScreen:_CancelPendingHighlight()
+      end
+      if self.PlayScreen.DeactivateShapeArea then
+        self.PlayScreen:DeactivateShapeArea()
+      end
+      if self.PlayScreen.OnDragStateChanged then
+        self.PlayScreen:OnDragStateChanged(false)
+      end
     end
   end
 end
@@ -97,6 +111,9 @@ function M:OnDrop(MyGeometry, PointerEvent, Operation)
   end
   local bSuccess = false
   local DragUI = Operation.DefaultDragVisual
+  if self.PlayScreen and self.PlayScreen.TryHandleSameFrameDragRelease and self.PlayScreen:TryHandleSameFrameDragRelease(Operation, DragUI) then
+    return true
+  end
   if self.PlayScreen and self.PlayScreen.FinalizeDropHighlight then
     self.PlayScreen:FinalizeDropHighlight(self.Row, self.Col, DragUI)
   elseif self.PlayScreen and self.PlayScreen._FlushPendingHighlight then

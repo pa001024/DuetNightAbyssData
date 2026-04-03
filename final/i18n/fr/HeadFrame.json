@@ -180,7 +180,7 @@
   {
     "id": 10029,
     "name": "Flammes fanées",
-    "desc": "Dans la cendre blafarde se reflète l’ultime éclat des flammes.",
+    "desc": "La cendre est l’ultime éclat des flammes.",
     "icon": "T_Head_Frame25",
     "access": "Disponible dans la boutique"
   },
@@ -201,14 +201,14 @@
   {
     "id": 10032,
     "name": "Murmures indicibles – Bleu indigo",
-    "desc": "Sous le voile tremblant de la lune, un rêve s’esquisse.",
+    "desc": "Sous les ombres vacillantes de la lune, un rêve s’attarde à la fenêtre.",
     "icon": "T_Head_Frame29",
     "access": "Disponible dans la boutique"
   },
   {
     "id": 10033,
     "name": "Murmures indicibles – Bleu céleste",
-    "desc": "Sous le voile tremblant de la lune, un rêve s’esquisse.",
+    "desc": "Sous les ombres vacillantes de la lune, un rêve s’attarde à la fenêtre.",
     "icon": "T_Head_Frame28",
     "access": "Disponible dans la boutique"
   }

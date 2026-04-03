@@ -282,6 +282,7 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   ChatController:OnMainOpen(self.bBattle)
   AudioManager(self):PauseObjectAllEvent(self, false)
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_msg_panel_open", "ChatMainPC", nil)
+  self:_SetUpBtnSentState()
 end
 
 function M:_SendChatMsg(MsgText)
@@ -353,9 +354,10 @@ function M:OnExtraPanelClose()
 end
 
 function M:OnTabSelected_TeamUp(TabWidget, TabItemInfo)
-  self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.TeamUp)
-  self:_SetUpBtnSentState()
-  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.TeamUp) then
+    self:_SetUpBtnSentState()
+    self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:OnTabSelected_Friend(TabWidget, TabItemInfo)
@@ -374,30 +376,33 @@ function M:OnTabSelected_Friend(TabWidget, TabItemInfo)
 end
 
 function M:OnTabSelected_Public(TabWidget, TabItemInfo)
-  self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Public)
-  self:_SetUpBtnSentState()
-  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
-  self:UpdateText_ChatChannel()
-  self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  ChatController:SendQueryChatChannelBusyInfo()
-end
-
-function M:OnTabSelected_Region(TabWidget, TabItemInfo)
-  self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Region)
-  self:_SetUpBtnSentState()
-  self:UpdateText_ChatChannel()
-  if ChatModel:IsInRegionOnline() then
+  if self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Public) then
+    self:_SetUpBtnSentState()
     self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
+    self:UpdateText_ChatChannel()
     self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
     ChatController:SendQueryChatChannelBusyInfo()
   end
 end
 
+function M:OnTabSelected_Region(TabWidget, TabItemInfo)
+  if self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Region) then
+    self:_SetUpBtnSentState()
+    self:UpdateText_ChatChannel()
+    if ChatModel:IsInRegionOnline() then
+      self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
+      self.WS_ChannelSign:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      ChatController:SendQueryChatChannelBusyInfo()
+    end
+  end
+end
+
 function M:OnTabSelected_SettlementOnline(TabWidget, TabItemInfo)
-  self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.SettlementOnline)
-  self:_SetUpBtnSentState()
-  self:_SetUpChatMsgList()
-  self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.SettlementOnline) then
+    self:_SetUpBtnSentState()
+    self:_SetUpChatMsgList()
+    self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:OnTabSelected_League(TabWidget, TabItemInfo)
@@ -456,6 +461,11 @@ function M:_SetUpBtnSentState()
   if ChatController:IsSendCDTimerExist(self.CurrChannel) then
     self.Btn_Sent:SetForbidden()
     self:HandleSendCDTimerUpdate(ChatModel:GetChannelCDReaminTime(self.CurrChannel))
+  end
+  if self.Com_Input:GetText() ~= "" then
+    self.Btn_Sent:SetNormal()
+  else
+    self.Btn_Sent:SetForbidden()
   end
 end
 
@@ -533,7 +543,7 @@ function M:OnPlayerListUISelected(Content)
       self.Com_Input:FocusInputField()
     end
   end
-  if self.IsOpenHead then
+  if self.IsOpenHead or self.CurrChannel == ChatCommon.ChannelDef.Friend then
     self:UpdateUIStyleInPlatform()
   end
 end
@@ -576,31 +586,46 @@ function M:_ReduceOverflowMessage()
 end
 
 function M:HandleEnterChatChannel(ErrCode, ChannelType)
+  if not ChatModel.EnteredChannels[ChannelType] then
+    ErrCode = ErrorCode.RET_CHAT_NOT_JOIN_CHANNEL
+  end
   if ChannelType ~= self.CurrChannel then
     return
   end
   if ErrCode == ErrorCode.RET_SUCCESS then
     FriendController:SendRequest(FriendCommon.EventId.RefreshFriend)
-  elseif self.CurrChannel == ChatCommon.ChannelDef.TeamUp then
-    self:_SetUpFullEmpty(GText("UI_Chat_InTeamEmpty"))
-  elseif self.CurrChannel == ChatCommon.ChannelDef.Public and not UIManager(self):GetUIObj("CommonDialog") then
-    self:_SetUpFullEmpty(GText("UI_Chat_PublicEmpty"))
-  elseif self.CurrChannel == ChatCommon.ChannelDef.InTeam then
-    self:_SetUpFullEmpty(GText("UI_Chat_InTeamEmpty"))
-  elseif self.CurrChannel == ChatCommon.ChannelDef.Region and not UIManager(self):GetUIObj("CommonDialog") then
-    self:_SetUpFullEmpty(GText("UI_Chat_RegionEmpty"))
-  elseif self.CurrChannel == ChatCommon.ChannelDef.SettlementOnline then
-    self:_SetUpFullEmpty(GText("UI_Chat_SettlementOnlineEmpty"))
+    return true
+  else
+    if self.CurrChannel == ChatCommon.ChannelDef.TeamUp then
+      self:_SetUpFullEmpty(GText("UI_Chat_InTeamEmpty"))
+    elseif self.CurrChannel == ChatCommon.ChannelDef.Public and not UIManager(self):GetUIObj("CommonDialog") then
+      self:_SetUpFullEmpty(GText("UI_Chat_PublicEmpty"))
+    elseif self.CurrChannel == ChatCommon.ChannelDef.InTeam then
+      self:_SetUpFullEmpty(GText("UI_Chat_InTeamEmpty"))
+    elseif self.CurrChannel == ChatCommon.ChannelDef.Region and not UIManager(self):GetUIObj("CommonDialog") then
+      self:_SetUpFullEmpty(GText("UI_Chat_NotInOnlineRegion"))
+    elseif self.CurrChannel == ChatCommon.ChannelDef.SettlementOnline then
+      self:_SetUpFullEmpty(GText("UI_Chat_SettlementOnlineEmpty"))
+    end
+    return false
   end
 end
 
 function M:HandleSendCDTimerUpdate(RemainTime)
   if RemainTime <= 0 then
     self.Btn_Sent:SetText("")
+    if 0 ~= self.Btn_Sent.WS:GetActiveWidgetIndex() then
+      self.Btn_Sent.WS:SetActiveWidgetIndex(0)
+      self.Btn_Sent:StopAllAnimations()
+      self.Btn_Sent:PlayAnimation(self.Btn_Sent.Forbidden)
+    end
     if "" ~= self.Com_Input:GetText() then
       self.Btn_Sent:SetNormal()
     end
   else
+    if 1 ~= self.Btn_Sent.WS:GetActiveWidgetIndex() then
+      self.Btn_Sent.WS:SetActiveWidgetIndex(1)
+    end
     self.Btn_Sent:SetText(string.format(GText("UI_SHOP_REMAINTIME_SECOND"), RemainTime))
   end
 end

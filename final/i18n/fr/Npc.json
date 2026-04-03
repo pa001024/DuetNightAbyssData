@@ -8800,13 +8800,13 @@
       },
       {
         "id": 51001902,
-        "content": "Tu as encore le culot de montrer ta tête ! J’ai été si stupide... j’aurais dû faire plus que te chasser !",
+        "content": "Tu as encore le culot de montrer ta tête ! J’ai été si stupide... j’aurais dû faire plus que te chasser !",
         "npc": 700047,
         "next": 51001903
       },
       {
         "id": 51001903,
-        "content": "Tu parades avec notre nom depuis des années... et mes lettres de mise en garde ? Tu les as brûlées ?",
+        "content": "Tu parades avec notre nom depuis des années... et mes lettres de mise en garde ? Tu les as brûlées ?",
         "npc": 700047,
         "next": 51001904
       },
@@ -8823,7 +8823,7 @@
       },
       {
         "id": 51001906,
-        "content": "Ferme-la ! Tu n’as aucun talent et tu prétends être un Chasseur de Phoxène ? L’argent et la renommée ? Tu ne les mérites pas ! Tu cours partout comme un chien... maintenant toute la cité intérieure prend les Wells pour une blague !",
+        "content": "Ferme-la ! Tu n’as aucun talent et tu prétends être un Chasseur de Phoxène ? L’argent et la renommée ? Tu ne les mérites pas ! Tu cours partout comme un chien... maintenant toute la cité intérieure prend les Wells pour une blague !",
         "npc": 700047,
         "next": 51001907
       },
@@ -8835,13 +8835,13 @@
       },
       {
         "id": 51001908,
-        "content": "Comment oses-tu prononcer son nom ! Oublie-la ! Toi et ma fille, il n’y aura jamais de retour possible ! Jamais !",
+        "content": "Comment oses-tu prononcer son nom ! Oublie-la ! Toi et ma fille, il n’y aura jamais de retour possible ! Jamais !",
         "npc": 700047,
         "next": 51001909
       },
       {
         "id": 51001909,
-        "content": "Et ne dis pas que je ne t’ai pas prévenu : si tu poses un pied dans la cité intérieure, je te brise les jambes.",
+        "content": "Et ne dis pas que je ne t’ai pas prévenu : si tu poses un pied dans la cité intérieure, je te brise les jambes.",
         "npc": 700047,
         "next": 51001910
       },
@@ -8858,7 +8858,7 @@
       },
       {
         "id": 51001912,
-        "content": "Et toi, Charon ? J’en ai vu des comme toi, rêvant de gloire en tant que Chasseur de Phoxène, pour ensuite espérer devenir un Charon Couronné...",
+        "content": "Et toi, Charon ? J’en ai vu des comme toi, rêvant de gloire en tant que Chasseur de Phoxène, pour ensuite espérer devenir un Charon Couronné...",
         "npc": 700047,
         "next": 51001990
       },
@@ -8931,7 +8931,7 @@
       },
       {
         "id": 51001921,
-        "content": "Pas grave. Si quelques insultes pouvaient nous abattre, nous ne serions pas ici. On m’a dit que vous aviez été blessé pendant une mission. Ça va ?",
+        "content": "Pas grave. Si quelques insultes pouvaient nous abattre, nous ne serions pas ici. On m’a dit que vous aviez été blessé pendant une mission. Ça va ?",
         "npc": 100001,
         "next": 51001922
       },
@@ -8987,7 +8987,7 @@
       },
       {
         "id": 51001927,
-        "content": "Pourquoi ne pas essayer de la réparer ?",
+        "content": "Pourquoi ne pas essayer de la réparer ?",
         "npc": 100001,
         "next": 51001928
       },
@@ -9017,7 +9017,7 @@
       },
       {
         "id": 51001932,
-        "content": "Allez, ce soir c’est moi qui régale. Tu ouvres ces fûts là-bas, je m’occupe de ceux-ci !",
+        "content": "Allez, ce soir c’est moi qui régale. Tu ouvres ces fûts là-bas, je m’occupe de ceux-ci !",
         "npc": 200015,
         "next": 51001934
       },
@@ -9028,7 +9028,7 @@
       },
       {
         "id": 51001933,
-        "content": "Allez, bois ! À la tienne !",
+        "content": "Allez, bois ! À la tienne !",
         "npc": 200015
       }
     ]
@@ -9386,13 +9386,13 @@
       },
       {
         "id": 51001902,
-        "content": "Tu as encore le culot de montrer ta tête ! J’ai été si stupide... j’aurais dû faire plus que te chasser !",
+        "content": "Tu as encore le culot de montrer ta tête ! J’ai été si stupide... j’aurais dû faire plus que te chasser !",
         "npc": 700047,
         "next": 51001903
       },
       {
         "id": 51001903,
-        "content": "Tu parades avec notre nom depuis des années... et mes lettres de mise en garde ? Tu les as brûlées ?",
+        "content": "Tu parades avec notre nom depuis des années... et mes lettres de mise en garde ? Tu les as brûlées ?",
         "npc": 700047,
         "next": 51001904
       },
@@ -9409,7 +9409,7 @@
       },
       {
         "id": 51001906,
-        "content": "Ferme-la ! Tu n’as aucun talent et tu prétends être un Chasseur de Phoxène ? L’argent et la renommée ? Tu ne les mérites pas ! Tu cours partout comme un chien... maintenant toute la cité intérieure prend les Wells pour une blague !",
+        "content": "Ferme-la ! Tu n’as aucun talent et tu prétends être un Chasseur de Phoxène ? L’argent et la renommée ? Tu ne les mérites pas ! Tu cours partout comme un chien... maintenant toute la cité intérieure prend les Wells pour une blague !",
         "npc": 700047,
         "next": 51001907
       },
@@ -9421,13 +9421,13 @@
       },
       {
         "id": 51001908,
-        "content": "Comment oses-tu prononcer son nom ! Oublie-la ! Toi et ma fille, il n’y aura jamais de retour possible ! Jamais !",
+        "content": "Comment oses-tu prononcer son nom ! Oublie-la ! Toi et ma fille, il n’y aura jamais de retour possible ! Jamais !",
         "npc": 700047,
         "next": 51001909
       },
       {
         "id": 51001909,
-        "content": "Et ne dis pas que je ne t’ai pas prévenu : si tu poses un pied dans la cité intérieure, je te brise les jambes.",
+        "content": "Et ne dis pas que je ne t’ai pas prévenu : si tu poses un pied dans la cité intérieure, je te brise les jambes.",
         "npc": 700047,
         "next": 51001910
       },
@@ -9444,7 +9444,7 @@
       },
       {
         "id": 51001912,
-        "content": "Et toi, Charon ? J’en ai vu des comme toi, rêvant de gloire en tant que Chasseur de Phoxène, pour ensuite espérer devenir un Charon Couronné...",
+        "content": "Et toi, Charon ? J’en ai vu des comme toi, rêvant de gloire en tant que Chasseur de Phoxène, pour ensuite espérer devenir un Charon Couronné...",
         "npc": 700047,
         "next": 51001990
       },
@@ -9517,7 +9517,7 @@
       },
       {
         "id": 51001921,
-        "content": "Pas grave. Si quelques insultes pouvaient nous abattre, nous ne serions pas ici. On m’a dit que vous aviez été blessé pendant une mission. Ça va ?",
+        "content": "Pas grave. Si quelques insultes pouvaient nous abattre, nous ne serions pas ici. On m’a dit que vous aviez été blessé pendant une mission. Ça va ?",
         "npc": 100001,
         "next": 51001922
       },
@@ -9573,7 +9573,7 @@
       },
       {
         "id": 51001927,
-        "content": "Pourquoi ne pas essayer de la réparer ?",
+        "content": "Pourquoi ne pas essayer de la réparer ?",
         "npc": 100001,
         "next": 51001928
       },
@@ -9603,7 +9603,7 @@
       },
       {
         "id": 51001932,
-        "content": "Allez, ce soir c’est moi qui régale. Tu ouvres ces fûts là-bas, je m’occupe de ceux-ci !",
+        "content": "Allez, ce soir c’est moi qui régale. Tu ouvres ces fûts là-bas, je m’occupe de ceux-ci !",
         "npc": 200015,
         "next": 51001934
       },
@@ -9614,7 +9614,7 @@
       },
       {
         "id": 51001933,
-        "content": "Allez, bois ! À la tienne !",
+        "content": "Allez, bois ! À la tienne !",
         "npc": 200015
       }
     ]
@@ -12108,19 +12108,19 @@
     "talks": [
       {
         "id": 12048809,
-        "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
+        "content": "Pas de problème, laisse-moi faire ! Je t’ai regardé essayer, ça me démangeait déjà~",
         "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
-        "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
+        "content": "Mais sérieusement, {nickname}, une fois rentré, tu vas devoir reprendre les bases de la mécanique Jishu. Voyons... par où commencer... peut-être par...",
         "npc": 240026,
         "next": 12048811
       },
       {
         "id": 12048811,
-        "content": "哇啊啊，小仆从，苏乙身上又散发出那种不近人情的老师气场了！好吓人！",
+        "content": "Ouaah ! Petit larbin, Su Yi recommence avec son aura de prof sans pitié ! C’est terrifiant !",
         "npc": 200002,
         "next": 12048812
       }
@@ -12134,19 +12134,19 @@
     "talks": [
       {
         "id": 12048809,
-        "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
+        "content": "Pas de problème, laisse-moi faire ! Je t’ai regardé essayer, ça me démangeait déjà~",
         "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
-        "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
+        "content": "Mais sérieusement, {nickname}, une fois rentré, tu vas devoir reprendre les bases de la mécanique Jishu. Voyons... par où commencer... peut-être par...",
         "npc": 240026,
         "next": 12048811
       },
       {
         "id": 12048811,
-        "content": "哇啊啊，小仆从，苏乙身上又散发出那种不近人情的老师气场了！好吓人！",
+        "content": "Ouaah ! Petit larbin, Su Yi recommence avec son aura de prof sans pitié ! C’est terrifiant !",
         "npc": 200002,
         "next": 12048812
       }
@@ -12160,19 +12160,19 @@
     "talks": [
       {
         "id": 12048809,
-        "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
+        "content": "Pas de problème, laisse-moi faire ! Je t’ai regardé essayer, ça me démangeait déjà~",
         "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
-        "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
+        "content": "Mais sérieusement, {nickname}, une fois rentré, tu vas devoir reprendre les bases de la mécanique Jishu. Voyons... par où commencer... peut-être par...",
         "npc": 240026,
         "next": 12048811
       },
       {
         "id": 12048811,
-        "content": "哇啊啊，小仆从，苏乙身上又散发出那种不近人情的老师气场了！好吓人！",
+        "content": "Ouaah ! Petit larbin, Su Yi recommence avec son aura de prof sans pitié ! C’est terrifiant !",
         "npc": 200002,
         "next": 12048812
       }
@@ -12681,7 +12681,7 @@
     "talks": [
       {
         "id": 51000812,
-        "content": "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
+        "content": "Dès que je serai rétablie, je reprendrai la route... pour une nouvelle aventure.",
         "npc": 700032
       }
     ]
@@ -12773,7 +12773,7 @@
       },
       {
         "id": 51011009,
-        "content": "Et si vous profitiez un peu de la vie ? Acheter un nouveau vêtement serait un bon début. Vous désignez une {robe|tenue} aux couleurs éclatantes.",
+        "content": "Et si vous profitiez un peu de la vie ? Acheter un nouveau vêtement serait un bon début. Vous désignez une {性别:robe|tenue} aux couleurs éclatantes.",
         "next": 51011010
       },
       {
@@ -13511,17 +13511,17 @@
         "options": [
           {
             "id": 510013041,
-            "content": "<I>Je préfère considérer Camilla comme une alliée forte et fiable. Elle nous a aidés à de nombreuses reprises. Pas seulement nous, d’ailleurs : au moins la moitié de Givrelac lui doit quelque chose.</>",
+            "content": "<I>Non, Camilla est une amie digne de confiance. Elle m’a déjà aidé.</>",
             "next": 51001306
           },
           {
             "id": 510013042,
-            "content": "<I>Ce n’est pas une raison pour déblatérer ici. Je crois en l’intégrité de Camilla, et ce n’est pas avec tes accusations ridicules que tu la saliras.</>",
+            "content": "<I>Laisse tomber, je fais confiance à mon jugement. Je sais qui est vraiment Camilla.</>",
             "next": 51001306
           },
           {
             "id": 510013043,
-            "content": "<I>J’ai vu de mes yeux le discernement de Camilla : qu’il s’agisse des gens ou des boissons, rien ne lui échappe. Celui qui ne reconnaît rien, ici, c’est toi.</>",
+            "content": "<I>En fait, tu voulais juste lui fourguer ta piquette et elle t’a rembarré. Voilà pourquoi tu rages.</>",
             "next": 51001306
           }
         ]
@@ -13556,12 +13556,12 @@
         "options": [
           {
             "id": 510013091,
-            "content": "<I>D’accord, je prends une pinte.</>",
+            "content": "D’accord, je prends une pinte.",
             "next": 51001310
           },
           {
             "id": 510013092,
-            "content": "<I>On en a pour son argent.</>",
+            "content": "<I>Un alcool trop bon marché, c’est jamais bon signe. Je passe mon tour.</>",
             "next": 51001313
           }
         ]
@@ -13700,7 +13700,7 @@
         "options": [
           {
             "id": 510013281,
-            "content": "<I>Sa camelote fait vraiment des ravages...</>",
+            "content": "<I>Ces faux produits finissent toujours par faire du mal...</>",
             "next": 51001329
           }
         ]
@@ -13953,7 +13953,7 @@
         "options": [
           {
             "id": 510035051,
-            "content": "Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.",
+            "content": "<I>Rêvasser comme ça, c’est prendre le risque qu’elle te note dans son carnet.</>",
             "next": 510035054,
             "impr": [
               1011,
@@ -16772,7 +16772,7 @@
         "options": [
           {
             "id": 51010502,
-            "content": "<I>Fondre en larmes et expliquer, la voix tremblante, que vous êtes {性别:un citoyen respectueux|une citoyenne respectueuse} des règles... qui a simplement encore oublié son permis.</>",
+            "content": "<I>Fondre en larmes et expliquer, la voix tremblante, que vous êtes {性别:<I>un citoyen respectueux|une citoyenne respectueuse} des règles... qui a simplement encore oublié son permis.</>",
             "next": 51010503,
             "impr": [
               1011,
@@ -17344,7 +17344,7 @@
         "options": [
           {
             "id": 510073411,
-            "content": "<I>J’espérais rester </>{性别:<I>discret</>|<I>discrète</>}...",
+            "content": "<I>J’espérais rester {性别:discret|discrète}...</>",
             "next": 51007344,
             "impr": [
               1011,
@@ -17815,7 +17815,7 @@
     "talks": [
       {
         "id": 51000812,
-        "content": "Dès que je serai rétablie, je reprendrai la route pour une nouvelle aventure.",
+        "content": "Dès que je serai rétablie, je reprendrai la route... pour une nouvelle aventure.",
         "npc": 700032
       },
       {
@@ -18296,7 +18296,7 @@
           },
           {
             "id": 51009371,
-            "content": "<I>Il les recevra, j’en suis{性别:certain|certaine}.</>",
+            "content": "<I>Il les recevra, j’en suis {性别:certain|certaine}.</>",
             "next": 51009372
           }
         ]
@@ -29180,7 +29180,7 @@
     "talks": [
       {
         "id": 51156307,
-        "content": "我早跟你说了这街上有贼，之前有人看到了，一个小女孩，皮肤黑黢黢的！",
+        "content": "Je vous l’avais bien dit : il y a des voleurs dans cette rue. Quelqu’un en a aperçu une — une petite fille, la peau toute noircie !",
         "npc": 701116,
         "next": 51156301
       },
@@ -34372,7 +34372,7 @@
           },
           {
             "id": 51162410,
-            "content": "加油找吧！",
+            "content": "<I>Bon courage pour les recherches.</>",
             "next": 51162411
           }
         ]
@@ -34573,7 +34573,7 @@
       },
       {
         "id": 51162605,
-        "content": "因为供丝不足，所以绣娘们也没法给外地供货，此趟入京，即是为了与城中成衣店商议取消订单。",
+        "content": "Sans matière première, les brodeuses ne peuvent plus honorer les commandes extérieures. Je suis donc venu négocier l’annulation des commandes avec les ateliers de la ville.",
         "npc": 701175
       },
       {

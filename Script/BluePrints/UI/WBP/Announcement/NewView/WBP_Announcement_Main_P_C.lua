@@ -211,16 +211,16 @@ function M:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
     end
   elseif InKeyName == UIConst.GamePadKey.LeftAnalogY then
     if bWebFocus then
-      self:_ScrollWebContent(InAnalogInputEvent)
+      self:_ScrollWebContent(InAnalogInputEvent, bWebFocus)
     end
   elseif InKeyName == UIConst.GamePadKey.RightAnalogY and not bWebFocus then
-    self:_ScrollWebContent(InAnalogInputEvent)
+    self:_ScrollWebContent(InAnalogInputEvent, bWebFocus)
   end
   return UWidgetBlueprintLibrary.Unhandled()
 end
 
-function M:_ScrollWebContent(InAnalogInputEvent)
-  if self.bSelectionExpand ~= self.bLastSelectionExp then
+function M:_ScrollWebContent(InAnalogInputEvent, bWebFocus)
+  if self.bSelectionExpand ~= self.bLastSelectionExp and bWebFocus then
     self.WebContent:ExecuteJavascript("syncIndicator(\"active\")")
     self.bLastSelectionExp = self.bSelectionExpand
   end

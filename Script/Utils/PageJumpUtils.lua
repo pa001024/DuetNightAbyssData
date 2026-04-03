@@ -1610,6 +1610,9 @@ function PageJumpUtils:JumpToAbyssLevelInfoPage(AbyssId, AbyssLevelId, AbyssDung
 end
 
 function PageJumpUtils:JumpToTryOut(CurTabIndex, ActivityId, CurSelectIndex)
+  if not ActivityUtils.CheckEventIsOpen(ActivityId, nil, false) then
+    return
+  end
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
   GameFlowUtils:AddFlow("OpenSystemUI", {

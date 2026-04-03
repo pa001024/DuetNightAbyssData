@@ -901,6 +901,7 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2108
   },
   [2109] = {
+    FinishQuest = 12020306,
     FirstSeenTag = "SubRebsign",
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,

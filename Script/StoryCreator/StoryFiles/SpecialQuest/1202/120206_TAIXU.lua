@@ -478,6 +478,18 @@ return {
             startPort = "Out",
             endQuest = "17743554101033828492",
             endPort = "Input"
+          },
+          {
+            startQuest = "17678537949091014659",
+            startPort = "QuestStart",
+            endQuest = "17750472541033424328",
+            endPort = "In"
+          },
+          {
+            startQuest = "17750472541033424328",
+            startPort = "Out",
+            endQuest = "17750472624823424541",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1152,6 +1164,40 @@ return {
               FadeOutSeconds = 0,
               DurationSeconds = 1,
               IsStandAlone = false
+            }
+          },
+          ["17750472541033424328"] = {
+            key = "17750472541033424328",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 1132.6538461538462, y = 89.61538461538467},
+            propsData = {
+              IsNpcNode = false,
+              FirstDialogueId = 12049140,
+              FlowAssetPath = "",
+              TalkType = "Guide",
+              bIsStandalone = false,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
+              OverrideFailBlend = false
+            }
+          },
+          ["17750472624823424541"] = {
+            key = "17750472624823424541",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 1446.8846153846152, y = 86.15384615384622},
+            propsData = {
+              IsNpcNode = false,
+              FirstDialogueId = 12049141,
+              FlowAssetPath = "",
+              TalkType = "Guide",
+              bIsStandalone = true,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
+              OverrideFailBlend = false
             }
           }
         },

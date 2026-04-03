@@ -830,6 +830,7 @@ return ReadOnly("GuideBook", {
   },
   [144] = {
     CompleteUIGuideId = 127,
+    FinishQuest = 12020306,
     GuideId = 127,
     GuideNoteId = 144,
     GuideNoteTab = 3,
@@ -889,7 +890,8 @@ return ReadOnly("GuideBook", {
     GuideId = 134,
     GuideNoteId = 151,
     GuideNoteTab = 3,
-    RewardId = 7000
+    RewardId = 7000,
+    SysGuideId = 2098
   },
   [152] = {
     CompleteUIGuideId = 135,

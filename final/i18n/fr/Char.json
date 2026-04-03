@@ -570,7 +570,7 @@
         "id": 110001,
         "名称": "Dévore-cœur",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Électro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Électro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -1223,7 +1223,7 @@
         "id": 110003,
         "名称": "Jugement de la Balance",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Électro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Électro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -1857,7 +1857,7 @@
         "id": 150001,
         "名称": "Dispersion cramoisie",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Lumino.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Lumino.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -2341,7 +2341,7 @@
         "id": 150003,
         "名称": "Quand le ciel se teinta d’or",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Lumino.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Lumino.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -2950,7 +2950,7 @@
         "id": 150003,
         "名称": "Quand le ciel se teinta d’or",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Lumino.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Lumino.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -3191,14 +3191,14 @@
         "id": 150402,
         "名称": "Mode annihilation stellaire",
         "类型": "Bonus",
-        "描述": "Contrôle le Fengshi n° 3 et consomme toute la Lucidité pour entrer en état [Mode annihilation stellaire].\nChaque tranche de 40 de Lucidité consommée confère 1 cumul d’[Errance céleste], jusqu’à 10 cumuls.\nEn fonction de la capacité maximale de munitions de votre arme à distance, vous obtenez de la [Poudre d’artifice], jusqu’à un maximum de 300 charges.\nPendant l’état [Mode annihilation stellaire], les armes ne peuvent pas être utilisées et les dégâts subis n’interrompent pas vos actions. Réutiliser cette compétence met fin à l’état [Mode annihilation stellaire].\nLes attaques de mêlée sont remplacées par [Lame irisée], et les attaques à distance par [Pluie d’étoiles].",
+        "描述": "Contrôle le Fengshi n° 3 et consomme toute la Lucidité pour entrer en état [Mode annihilation stellaire].\nChaque tranche de 30 de Lucidité consommée confère 1 cumul d’[Errance céleste], jusqu’à 10 cumuls.\nEn fonction de la capacité maximale de munitions de votre arme à distance, vous obtenez de la [Poudre d’artifice], jusqu’à un maximum de 300 charges.\nPendant l’état [Mode annihilation stellaire], les armes ne peuvent pas être utilisées et les dégâts subis n’interrompent pas vos actions. Réutiliser cette compétence met fin à l’état [Mode annihilation stellaire].\nLes attaques de mêlée sont remplacées par [Lame irisée], et les attaques à distance par [Pluie d’étoiles].",
         "icon": "Suyi02_On",
         "cd": 2,
         "字段": [
           {
-            "名称": "Taux de conversion de [Poudre d’artifice]",
+            "名称": "Quantité obtenue de [Poudre d’artifice]",
             "值": 0.5,
-            "格式": "远程武器最大弹药量*{%}"
+            "格式": "Munitions max des armes à distance*{%}"
           },
           {
             "名称": "Dégâts de [Lame irisée]",
@@ -3471,14 +3471,14 @@
           }
         ],
         "术语解释": {
-          "蓄势": "Chaque cumul retiré restaure de la Lucidité et augmente le multiplicateur de dégâts de la méchapoupée Fengshi pour cette activation."
+          "Accumulation": "Chaque cumul retiré restaure de la Lucidité et augmente le multiplicateur de dégâts de la méchapoupée Fengshi pour cette activation."
         },
         "子技能": [
           {
             "id": 150405,
             "类型": "",
             "icon": "",
-            "名称": "蓄势"
+            "名称": "Accumulation"
           }
         ]
       },
@@ -3490,7 +3490,7 @@
         "icon": "ExtraPassive",
         "字段": [
           {
-            "名称": "转化比例",
+            "名称": "Taux de conversion",
             "值": 5
           }
         ]
@@ -3499,7 +3499,7 @@
         "id": 150003,
         "名称": "Quand le ciel se teinta d’or",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Lumino.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Lumino.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -3909,7 +3909,7 @@
         "id": 100005,
         "名称": "Lame vive",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les Dégâts d’arme de soi-même et des alliés.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les Dégâts d’arme du personnage et des alliés.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -4388,7 +4388,7 @@
         "id": 180191,
         "名称": "« En avant, soldats-cartes ! »",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les dégâts d’arme de soi-même et des alliés dont l’arme de prédilection est l’Épée ou le Fusil d’assaut.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les DGT d’arme du personnage et des alliés dont l’arme de prédilection est l’Épée ou le Fusil d’assaut.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -4812,7 +4812,7 @@
         "id": 210003,
         "名称": "Déluge des Sept Jours",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Hydro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Hydro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -5259,7 +5259,7 @@
         "id": 100003,
         "名称": "Astuce",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les Dégâts de compétence de soi-même et des alliés.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les Dégâts de compétence du personnage et des alliés.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -5757,7 +5757,7 @@
         "id": 240191,
         "名称": "Harmonie des méridiens",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les Dégâts de compétence de soi-même et des alliés lorsqu’au moins deux personnages partagent le même attribut élémentaire.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les Dégâts de compétence du personnage et des alliés lorsqu’au moins deux personnages partagent le même attribut élémentaire.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -6188,7 +6188,7 @@
         "id": 310003,
         "名称": "Forge infernale",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Pyro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Pyro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -6660,7 +6660,7 @@
         "id": 310003,
         "名称": "Forge infernale",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Pyro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Pyro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -7189,7 +7189,7 @@
         "id": 310001,
         "名称": "Flamme éthérée",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Pyro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Pyro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -7642,7 +7642,7 @@
         "id": 310001,
         "名称": "Flamme éthérée",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Pyro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Pyro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -8016,7 +8016,7 @@
               0.84,
               0.9
             ],
-            "格式": "{%}*远程武器多重射击",
+            "格式": "{%}*Tir multiple des armes à distance",
             "削韧": 25
           }
         ],
@@ -8096,7 +8096,7 @@
         "id": 320291,
         "名称": "Ourlet écarlate",
         "类型": "Support",
-        "描述": "[仅在作为协战同伴登场时生效]\n自身和火属性队友昂扬提高。",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente la Vigueur du personnage et des alliés Pyro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -8559,7 +8559,7 @@
         "id": 100001,
         "名称": "Assaut",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -9025,7 +9025,7 @@
         "id": 410001,
         "名称": "Foudre déchirant la nuit",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Électro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Électro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -9636,7 +9636,7 @@
         "id": 410003,
         "名称": "Châtiment divin",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Électro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Électro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -10121,7 +10121,7 @@
         "id": 420191,
         "名称": "Galop en cascade",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente la Vigueur de soi-même et des alliés Électro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente la Vigueur du personnage et des alliés Électro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -10614,7 +10614,7 @@
         "id": 100007,
         "名称": "Inébranlable",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente la DÉF de soi-même et des alliés.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente la DÉF du personnage et des alliés.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -11157,7 +11157,7 @@
         "id": 410003,
         "名称": "Châtiment divin",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Électro.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Électro.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -11814,7 +11814,7 @@
         "id": 510191,
         "名称": "Picorer et trouver",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente la Ténacité de soi-même et des alliés si deux membres de l’équipe ou plus partagent le même attribut élémentaire.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente la Ténacité du personnage et des alliés si deux membres de l’équipe ou plus partagent le même attribut élémentaire.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -12244,7 +12244,7 @@
         "id": 510001,
         "名称": "Domination céleste",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Anémo.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Anémo.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -12768,7 +12768,7 @@
         "id": 510003,
         "名称": "Échos de la Fête du Vent",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ de soi-même et des alliés Anémo.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Anémo.",
         "icon": "PhantomPassive",
         "字段": [
           {
@@ -13229,7 +13229,7 @@
         "id": 100009,
         "名称": "Impulsion ardente",
         "类型": "Support",
-        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente le Taux CRIT de soi-même et des alliés.",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente le Taux CRIT du personnage et des alliés.",
         "icon": "PhantomPassive",
         "字段": [
           {

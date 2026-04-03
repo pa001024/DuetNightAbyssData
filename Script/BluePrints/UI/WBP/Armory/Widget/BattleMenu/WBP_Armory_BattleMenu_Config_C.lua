@@ -679,6 +679,7 @@ function M:UpdateAllPhantomAndWeaponIcon()
       local WeaponContent = WeaponUuidBefore and self.WeaponContentMap[WeaponUuidBefore]
       if WeaponContent and WeaponContent.SelfWidget then
         WeaponContent.SelfWidget:Init(WeaponContent)
+        WeaponContent.SelfWidget:SetWeaponPhantomIcon(WeaponContent.Uuid)
       end
     end
     local WeaponUuid = resource and resource.WeaponUuid
@@ -686,6 +687,7 @@ function M:UpdateAllPhantomAndWeaponIcon()
     local WeaponContent = WeaponUuid and self.WeaponContentMap[WeaponUuid]
     if WeaponContent and WeaponContent.SelfWidget then
       WeaponContent.SelfWidget:Init(WeaponContent)
+      WeaponContent.SelfWidget:SetWeaponPhantomIcon(WeaponContent.Uuid)
     end
   end
   ArmoryUtils:SetItemSelectTag(self.CurWeaponContent, true)

@@ -176,7 +176,9 @@ function M:UpdateKeySetting()
           self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnGamePadAccessoryCustomKeyDown)
         end
         if self.CurrentTopTabIdx == self.WeaponStanceFXTabIdx then
-          self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnModBtnClicked)
+          self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, function()
+            self.WBP_Armory_SkinMod:OnBtnModClicked()
+          end)
           self:AddKeyDownEvent(UIConst.GamePadKey.LeftThumb, self.OnGamePadFocusToModDetailsKeyDown)
         end
       end

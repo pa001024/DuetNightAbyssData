@@ -6036,112 +6036,112 @@
   {
     "id": 10921,
     "charId": 3202,
-    "name": "Discussion关于水仙平原的生意I",
+    "name": "DiscussionÀ propos des affaires aux AsphodèlesI",
     "res": "char_Kami_vo_topic_01_1",
     "text": "Des tonneaux ? À conserver du bon alcool, évidemment. Contes de Givrelac, frais et léger. Sang-de-Loup de la Légion, puissant et corsé. L’Ivresse du Dragon Azur, importée de Huaxu, clair et persistant. Et la Rhapsodie du Bal masqué... un mélange de dix saveurs. Chaque personne y goûte quelque chose de différent."
   },
   {
     "id": 10922,
     "charId": 3202,
-    "name": "Discussion关于水仙平原的生意II",
+    "name": "DiscussionÀ propos des affaires aux AsphodèlesII",
     "res": "char_Kami_vo_topic_01_2",
     "text": "Alors ? Tu en veux un verre ?"
   },
   {
     "id": 10923,
     "charId": 3202,
-    "name": "Discussion关于水仙平原的生意III",
+    "name": "DiscussionÀ propos des affaires aux AsphodèlesIII",
     "res": "char_Kami_vo_topic_01_3",
     "text": "Héhé. Tu es {性别:devenu bien plus perspicace. Rien à voir avec l’ignorant|devenue bien plus perspicace. Rien à voir avec l’ignorante} qui débarquait à Givrelac à ses débuts."
   },
   {
     "id": 10924,
     "charId": 3202,
-    "name": "Discussion关于水仙平原的生意IV",
+    "name": "DiscussionÀ propos des affaires aux AsphodèlesIV",
     "res": "char_Kami_vo_topic_01_4",
     "text": "À un peu plus de cent kilomètres au nord de Givrelac, en franchissant les Monts Vidofnir, on atteint les Fjords d’Askard. La véritable patrie des Charons, dit-on."
   },
   {
     "id": 10925,
     "charId": 3202,
-    "name": "Discussion关于水仙平原的生意V",
+    "name": "DiscussionÀ propos des affaires aux AsphodèlesV",
     "res": "char_Kami_vo_topic_01_5",
     "text": "Pour beaucoup de Charons de Givrelac... cent kilomètres et une montagne ne sont peut-être pas un obstacle insurmontable. La terre promise n’est peut-être pas si inaccessible... tu ne crois pas ?"
   },
   {
     "id": 10926,
     "charId": 3202,
-    "name": "Discussion关于水仙平原的生意VI",
+    "name": "DiscussionÀ propos des affaires aux AsphodèlesVI",
     "res": "char_Kami_vo_topic_01_6",
     "text": "Chut. Je n’ai jamais rien dit de tel."
   },
   {
     "id": 10927,
     "charId": 3202,
-    "name": "Discussion关于“水仙平原”I",
+    "name": "DiscussionÀ propos des AsphodèlesI",
     "res": "char_Kami_vo_topic_02_1",
     "text": "Tu me flattes. Les Chasseurs de Phoxène existaient bien avant mon établissement. Ils ont simplement besoin d’un endroit pour discuter, fanfaronner et échanger leurs « affaires ». S’il n’y avait pas eu les Asphodèles, ça aurait été le Muguet... ou la Tulipe."
   },
   {
     "id": 10928,
     "charId": 3202,
-    "name": "Discussion关于“水仙平原”II",
+    "name": "DiscussionÀ propos des AsphodèlesII",
     "res": "char_Kami_vo_topic_02_2",
     "text": "Quant à savoir pourquoi ils ont fini par se réunir ici... rien de mystérieux. Un bon alcool. Un intermédiaire qui traite ses affaires équitablement. Et quelques petits coups de main quand quelqu’un traverse une mauvaise passe."
   },
   {
     "id": 10929,
     "charId": 3202,
-    "name": "Discussion关于金钱的重要性I",
+    "name": "DiscussionÀ propos de l’importance de l’argentI",
     "res": "char_Kami_vo_topic_03_1",
     "text": "Plutôt que de me poser la question, tu devrais te la poser à toi-même. Je me souviens très bien de ton arrivée à Givrelac. Tu n’avais nulle part où aller. Tu sais donc parfaitement que l’argent est la base pour survivre dans ce monde."
   },
   {
     "id": 10930,
     "charId": 3202,
-    "name": "Discussion关于金钱的重要性II",
+    "name": "DiscussionÀ propos de l’importance de l’argentII",
     "res": "char_Kami_vo_topic_03_2",
     "text": "Accumule assez de richesse... et même si tu ne peux pas changer d’origine, tu trouveras le courage d’affronter ton destin. Quand le vent et la pluie s’abattent sur toi, tu peux au moins t’offrir un verre pour te réchauffer... ou en partager une gorgée avec quelqu’un. Et gagner ainsi une faveur."
   },
   {
     "id": 10931,
     "charId": 3202,
-    "name": "Discussion关于金钱的重要性III",
+    "name": "DiscussionÀ propos de l’importance de l’argentIII",
     "res": "char_Kami_vo_topic_03_3",
     "text": "Alors dis-moi... l’argent n’est-il pas important ?"
   },
   {
     "id": 10932,
     "charId": 3202,
-    "name": "Discussion关于神秘人I",
+    "name": "DiscussionÀ propos de la figure mystérieuseI",
     "res": "char_Kami_vo_topic_04_1",
     "text": "Pas grand-chose, malheureusement. Je vis à Givrelac depuis des années, et c’est la première fois que je voyais cette personne. Elle était entièrement enveloppée dans une cape, et utilisait un dispositif modifiant la voix. D’où elle venait... si c’était un homme ou une femme... son âge... Je n’en sais rien."
   },
   {
     "id": 10933,
     "charId": 3202,
-    "name": "Discussion关于神秘人II",
+    "name": "DiscussionÀ propos de la figure mystérieuseII",
     "res": "char_Kami_vo_topic_04_2",
     "text": "La seule chose dont je sois certaine... c’est que sa puissance était insondable. Nous avons échangé quelques coups. Cela m’a suffi pour comprendre que je n’avais aucune chance de gagner."
   },
   {
     "id": 10934,
     "charId": 3202,
-    "name": "Discussion关于神秘人III",
+    "name": "DiscussionÀ propos de la figure mystérieuseIII",
     "res": "char_Kami_vo_topic_04_3",
     "text": "Héhé. Pour un marchand, la chose la plus importante est de savoir quelles cartes chacun tient en main. Bluffer n’a d’intérêt que lorsque les mises sont équivalentes. Je sais parfaitement évaluer ce genre de choses."
   },
   {
     "id": 10935,
     "charId": 3202,
-    "name": "Discussion关于神秘人IV",
+    "name": "DiscussionÀ propos de la figure mystérieuseIV",
     "res": "char_Kami_vo_topic_04_4",
     "text": "Ah... j’y pense. Avant de partir, cette personne a dit une chose."
   },
   {
     "id": 10936,
     "charId": 3202,
-    "name": "Discussion关于神秘人V",
+    "name": "DiscussionÀ propos de la figure mystérieuseV",
     "res": "char_Kami_vo_topic_04_5",
     "text": "Elle espère obtenir de toi... une réponse."
   },
@@ -6330,161 +6330,161 @@
   {
     "id": 10963,
     "charId": 1504,
-    "name": "Discussion关于爱好I",
+    "name": "DiscussionÀ propos des loisirsI",
     "res": "char_Suyi_vo_topic_01_1",
     "text": "Assembler des mécanismes, polir des engrenages, chercher de nouveaux matériaux... et bricoler jusqu’à obtenir une version encore meilleure."
   },
   {
     "id": 10964,
     "charId": 1504,
-    "name": "Discussion关于爱好II",
+    "name": "DiscussionÀ propos des loisirsII",
     "res": "char_Suyi_vo_topic_01_2",
     "text": "Tu te souviens quand Oncle Tang s’est cassé la jambe ? Comme j’avais un peu de temps, j’ai commencé à travailler sur une monture capable de décoller plus doucement. Les disciples de la Secte Jishu veulent toujours des résultats, quitte à y laisser leur peau... Je ne vais pas laisser cette mentalité continuer."
   },
   {
     "id": 10965,
     "charId": 1504,
-    "name": "Discussion关于爱好III",
+    "name": "DiscussionÀ propos des loisirsIII",
     "res": "char_Suyi_vo_topic_01_3",
     "text": "Me fatiguer ? Qu’est-ce qui pourrait être plus intéressant que ça ? Il suffit de démonter un mécanisme en composants dans sa tête... puis de le reconstruire dans la réalité. Le moment où tout s’assemble et fonctionne enfin... c’est le meilleur sentiment du monde !"
   },
   {
     "id": 10966,
     "charId": 1504,
-    "name": "Discussion关于爱好IV",
+    "name": "DiscussionÀ propos des loisirsIV",
     "res": "char_Suyi_vo_topic_01_4",
     "text": "Tu veux essayer aussi ? Le meilleur artisan de tous les Pics Extérieurs est justement libre pour t’apprendre."
   },
   {
     "id": 10967,
     "charId": 1504,
-    "name": "Discussion关于辈分I",
+    "name": "DiscussionÀ propos du rangI",
     "res": "char_Suyi_vo_topic_02_1",
     "text": "Dans la Secte Jishu, comme chez les vagabonds, la lignée compte énormément. Par exemple, si un maître de quatre-vingt-dix ans prend un enfant de dix ans comme dernier disciple... la moitié de la secte devra ensuite appeler cet enfant « oncle »."
   },
   {
     "id": 10968,
     "charId": 1504,
-    "name": "Discussion关于辈分II",
+    "name": "DiscussionÀ propos du rangII",
     "res": "char_Suyi_vo_topic_02_2",
     "text": "Moi, j’ai eu de la chance. Mon maître — enfin, ma tante — a un rang très élevé. Donc par extension, le mien l’est aussi."
   },
   {
     "id": 10969,
     "charId": 1504,
-    "name": "Discussion关于辈分III",
+    "name": "DiscussionÀ propos du rangIII",
     "res": "char_Suyi_vo_topic_02_3",
     "text": "Kezhou, lui, a moins de chance. Son maître Yan Shanting est plus bas dans la hiérarchie... Donc selon les règles, il doit m’appeler grande-tante~"
   },
   {
     "id": 10970,
     "charId": 1504,
-    "name": "Discussion关于辈分IV",
+    "name": "DiscussionÀ propos du rangIV",
     "res": "char_Suyi_vo_topic_02_4",
     "text": "Maître Gongshang a aussi un rang très élevé... Attends que je calcule... Oh ! On est de la même génération !"
   },
   {
     "id": 10971,
     "charId": 1504,
-    "name": "Discussion关于辈分V",
+    "name": "DiscussionÀ propos du rangV",
     "res": "char_Suyi_vo_topic_02_5",
     "text": "Héhé. Si Kezhou te manque de respect, tu peux exiger qu’il t’appelle {性别:grand-père|grand-mère}."
   },
   {
     "id": 10972,
     "charId": 1504,
-    "name": "Discussion关于辈分VI",
+    "name": "DiscussionÀ propos du rangVI",
     "res": "char_Suyi_vo_topic_02_6",
     "text": "Attends... Je me souviens que Snow t’appelle son petit larbin... Ça veut dire qu’elle est ton maître ? ... Attends une seconde. Ne me dis pas que la personne la plus haut placée parmi nous est en réalité une toute petite Luno ?!"
   },
   {
     "id": 10973,
     "charId": 1504,
-    "name": "Discussion关于宠物I",
+    "name": "DiscussionÀ propos des animaux de compagnieI",
     "res": "char_Suyi_vo_topic_03_1",
     "text": "Oh, ça ? C’est Qingluan Type III, mon nouveau compagnon !"
   },
   {
     "id": 10974,
     "charId": 1504,
-    "name": "Discussion关于宠物II",
+    "name": "DiscussionÀ propos des animaux de compagnieII",
     "res": "char_Suyi_vo_topic_03_2",
     "text": "Regarde, on dirait presque une vraie mouette nuageuse, non ? J’ai simplifié la procédure d’activation. Il suffit d’appuyer sur le dessus de la tête pour activer le mode de vol mimétique. En parlant de vol—"
   },
   {
     "id": 10975,
     "charId": 1504,
-    "name": "Discussion关于宠物III",
+    "name": "DiscussionÀ propos des animaux de compagnieIII",
     "res": "char_Suyi_vo_topic_03_3",
     "text": "Et ces plumes aussi, c’est tout un travail ! Je récupère les plumes naturellement tombées des mouettes nuageuses, puis je les scelle avec une technique hydrofuge améliorée. Ça n’ajoute presque aucun poids."
   },
   {
     "id": 10976,
     "charId": 1504,
-    "name": "Discussion关于宠物IV",
+    "name": "DiscussionÀ propos des animaux de compagnieIV",
     "res": "char_Suyi_vo_topic_03_4",
     "text": "Les couleurs ne s’altèrent pas, il reste toujours tout doux... et au moins elle ne te lacère pas le bras comme un vrai oiseau. Tout le charme, sans les griffures. Le compagnon parfait."
   },
   {
     "id": 10977,
     "charId": 1504,
-    "name": "Discussion关于宠物V",
+    "name": "DiscussionÀ propos des animaux de compagnieV",
     "res": "char_Suyi_vo_topic_03_5",
     "text": "Les mouettes nuageuses appartiennent au ciel. Si on en élève une, il faut la garder dans une cage. Et si je capturais un animal juste pour le regarder... En quoi serais-je différente de l’ancienne Secte Xuanheng ?"
   },
   {
     "id": 10978,
     "charId": 1504,
-    "name": "Discussion关于宠物VI",
+    "name": "DiscussionÀ propos des animaux de compagnieVI",
     "res": "char_Suyi_vo_topic_03_6",
     "text": "Certains animaux peuvent vivre aux côtés des humains. Mais les mouettes nuageuses n’en font clairement pas partie. Leur bec acéré, leur longue queue, leurs ailes faites pour fendre le vent... tout montre une chose. Elles appartiennent au ciel. Pas à la paume de quelqu’un."
   },
   {
     "id": 10979,
     "charId": 1504,
-    "name": "Discussion关于家I",
+    "name": "DiscussionÀ propos de la familleI",
     "res": "char_Suyi_vo_topic_04_1",
     "text": "Hmm... bonne question."
   },
   {
     "id": 10980,
     "charId": 1504,
-    "name": "Discussion关于家II",
+    "name": "DiscussionÀ propos de la familleII",
     "res": "char_Suyi_vo_topic_04_2",
     "text": "On s’est rassemblés parce qu’on partageait les mêmes difficultés. Et maintenant on lutte pour le même objectif. On se comprend. On se fait confiance. Au combat, on se couvre mutuellement... et quand on est fatigués, on avance ensemble. C’est... vraiment un endroit formidable."
   },
   {
     "id": 10981,
     "charId": 1504,
-    "name": "Discussion关于家III",
+    "name": "DiscussionÀ propos de la familleIII",
     "res": "char_Suyi_vo_topic_04_3",
     "text": "Pour beaucoup ici, les Pics Extérieurs sont comme une maison."
   },
   {
     "id": 10982,
     "charId": 1504,
-    "name": "Discussion关于家IV",
+    "name": "DiscussionÀ propos de la familleIV",
     "res": "char_Suyi_vo_topic_04_4",
     "text": "Moi ? Euh... bien sûr que c’est chez moi !"
   },
   {
     "id": 10983,
     "charId": 1504,
-    "name": "Discussion关于家V",
+    "name": "DiscussionÀ propos de la familleV",
     "res": "char_Suyi_vo_topic_04_5",
     "text": "Tu es vraiment perspicace. C’est l’instinct d’un Chasseur de Phoxène ? Et ça ne sert pas seulement au combat... tu arrives aussi à comprendre les gens. Si seulement mon système de navigation mécanique était aussi précis que toi..."
   },
   {
     "id": 10984,
     "charId": 1504,
-    "name": "Discussion关于家VI",
+    "name": "DiscussionÀ propos de la familleVI",
     "res": "char_Suyi_vo_topic_04_6",
     "text": "Je suis juste... un peu perdue. À quoi ressemble vraiment un foyer ?"
   },
   {
     "id": 10985,
     "charId": 1504,
-    "name": "Discussion关于家VII",
+    "name": "DiscussionÀ propos de la familleVII",
     "res": "char_Suyi_vo_topic_04_7",
     "text": "Alors... si on ne peut plus y retourner... est-ce que ça reste un foyer ? ... Désolée. Oublie ce que je viens de dire."
   },

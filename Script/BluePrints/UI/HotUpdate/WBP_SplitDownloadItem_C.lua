@@ -224,6 +224,7 @@ function M:CheckNecessaryState(Contents, HotUpdateSubsystem)
   local bNecessaryDownloading = false
   for _, Content in ipairs(Contents) do
     if Content and Content.bNecessary and Content.PatchID then
+      local NecessaryState = Content.DownloadedAssetState or EOptionalPatchAssetState.None
       if NecessaryState ~= EOptionalPatchAssetState.Downloaded then
         bHasNecessary = true
       end

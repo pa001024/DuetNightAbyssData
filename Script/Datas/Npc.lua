@@ -3527,6 +3527,7 @@ return ReadOnly("Npc", {
     CollisionLevel = 999,
     DefaultAction = T.RT_21,
     DefaultExpression = T.RT_22,
+    GuideHeadId = "Yuming_Idle",
     ModelId = 10091,
     MouthProfile = "LipSync_10025",
     NpcType = "Normal",

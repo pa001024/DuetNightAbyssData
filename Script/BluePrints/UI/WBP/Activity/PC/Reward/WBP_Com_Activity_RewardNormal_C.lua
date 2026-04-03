@@ -49,7 +49,9 @@ function M:OnLoaded(...)
             Type = "Text",
             Text = "SpaceBar",
             Owner = self,
-            ClickCallback = self.RewardContent_OneClick.Btn_OneClick.OnBtnClicked
+            ClickCallback = function(...)
+              return self.RewardContent_OneClick.Btn_OneClick:OnBtnClicked(...)
+            end
           }
         },
         Desc = GText("UI_Achievement_GetAllReward"),
@@ -261,7 +263,9 @@ function M:UpdateBottomKey(ShowGetAllButton)
             Type = "Text",
             Text = "SpaceBar",
             Owner = self,
-            ClickCallback = self.RewardContent_OneClick.Btn_OneClick.OnBtnClicked
+            ClickCallback = function(...)
+              return self.RewardContent_OneClick.Btn_OneClick:OnBtnClicked(...)
+            end
           }
         },
         Desc = GText("UI_Achievement_GetAllReward"),

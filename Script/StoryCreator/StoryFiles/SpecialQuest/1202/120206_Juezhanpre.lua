@@ -108,12 +108,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1774335012883845665",
-            startPort = "Out",
-            endQuest = "1774335012883845666",
-            endPort = "Input_1"
-          },
-          {
             startQuest = "1774335012883845662",
             startPort = "Out",
             endQuest = "1774335012883845667",
@@ -202,6 +196,48 @@ return {
             startPort = "Out",
             endQuest = "1774335012883845666",
             endPort = "Input_2"
+          },
+          {
+            startQuest = "1774335012883845665",
+            startPort = "Out",
+            endQuest = "17750421357921097",
+            endPort = "In"
+          },
+          {
+            startQuest = "177433482535248",
+            startPort = "QuestStart",
+            endQuest = "1775051497979857",
+            endPort = "In"
+          },
+          {
+            startQuest = "17750421357921097",
+            startPort = "Out",
+            endQuest = "17750515101641259",
+            endPort = "In"
+          },
+          {
+            startQuest = "17750515101641259",
+            startPort = "Out",
+            endQuest = "17750515105731279",
+            endPort = "In"
+          },
+          {
+            startQuest = "17750515105731279",
+            startPort = "Out",
+            endQuest = "1774335012883845666",
+            endPort = "Input_1"
+          },
+          {
+            startQuest = "1774335012883845662",
+            startPort = "Out",
+            endQuest = "1775051494223692",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774335012883845663",
+            startPort = "Out",
+            endQuest = "1775042052648546",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -209,14 +245,14 @@ return {
             key = "177433482535248",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 144.28571428571422, y = 424.2857142857143},
             propsData = {ModeType = 0}
           },
           ["177433482535256"] = {
             key = "177433482535256",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2800, y = 300},
+            pos = {x = 3333.478260869565, y = 174.78260869565216},
             propsData = {ModeType = 0}
           },
           ["177433482535264"] = {
@@ -283,7 +319,7 @@ return {
             key = "1774335012883845664",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 2212.146778949852, y = 547.9766472949136},
+            pos = {x = 2364.4544712575444, y = 573.361262679529},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "JuezhanLightEnd",
@@ -294,7 +330,7 @@ return {
             key = "1774335012883845665",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 2228.6050479671917, y = 382.9945532021001},
+            pos = {x = 2330.6050479671917, y = 384.4945532021001},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "LigntningEnd",
@@ -305,14 +341,14 @@ return {
             key = "1774335012883845666",
             type = "WaitQuestFinishedNode",
             name = "等待任务完成",
-            pos = {x = 2641.6431912332214, y = 555.2877890517077},
+            pos = {x = 3483.27362601583, y = 555.0921368777946},
             propsData = {ListenCount = 2, NeedFinishCount = 2}
           },
           ["1774335012883845667"] = {
             key = "1774335012883845667",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1771.6840947300473, y = 260.0233527050864},
+            pos = {x = 1752.398380444333, y = 232.16620984794352},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12048748,
@@ -329,7 +365,7 @@ return {
             key = "1774335023080845961",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2973.3496240601507, y = 614.5112781954886},
+            pos = {x = 3758.5017979731942, y = 657.3591042824451},
             propsData = {}
           },
           ["1774335029389846126"] = {
@@ -394,9 +430,9 @@ return {
             key = "17748604317126398890",
             type = "SetGlobalSoundParamNode",
             name = "设置全局音效参数",
-            pos = {x = 1195, y = -203.66666666666663},
+            pos = {x = 771.4705882352941, y = -746.5424836601308},
             propsData = {
-              ParamName = "parameter:/story/story_1_3_final_disaste",
+              ParamName = "story_1_3_final_disaste",
               ParamValue = 1
             }
           },
@@ -414,10 +450,76 @@ return {
             key = "17748604452186399387",
             type = "SetGlobalSoundParamNode",
             name = "设置全局音效参数",
-            pos = {x = 2372.6993417210806, y = 743.1392206826991},
+            pos = {x = 2616.6993417210806, y = 629.1392206826991},
             propsData = {
-              ParamName = "parameter:/story/story_1_3_final_disaste",
+              ParamName = "story_1_3_final_disaste",
               ParamValue = 0
+            }
+          },
+          ["1775042052648546"] = {
+            key = "1775042052648546",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 2003.2896026831781, y = 263.65278392058576},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "120206_PCMon_Start3",
+              UnitId = -1
+            }
+          },
+          ["17750421357921097"] = {
+            key = "17750421357921097",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 2693.312906553222, y = 413.37856562680224},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "120206_PCMon_Over1",
+              UnitId = -1
+            }
+          },
+          ["1775051494223692"] = {
+            key = "1775051494223692",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1730.3483236544046, y = 51.73667136919266},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "120206_PCMon_Start2",
+              UnitId = -1
+            }
+          },
+          ["1775051497979857"] = {
+            key = "1775051497979857",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 900.9523152510437, y = -505.65392151763945},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "120206_PCMon_Start1",
+              UnitId = -1
+            }
+          },
+          ["17750515101641259"] = {
+            key = "17750515101641259",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 3009.9587027030493, y = 427.1521514056008},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "120206_PCMon_Over3",
+              UnitId = -1
+            }
+          },
+          ["17750515105731279"] = {
+            key = "17750515105731279",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 3277.350007050876, y = 425.9782383621226},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "120206_PCMon_Over2",
+              UnitId = -1
             }
           }
         },

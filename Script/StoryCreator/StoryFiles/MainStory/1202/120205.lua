@@ -168,18 +168,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "176726160543357906834",
-            startPort = "Out",
-            endQuest = "176250556185919890525",
-            endPort = "In"
-          },
-          {
-            startQuest = "176250556185919890525",
-            startPort = "Out",
-            endQuest = "17702832017661162362",
-            endPort = "In"
-          },
-          {
             startQuest = "17702832017661162362",
             startPort = "Out",
             endQuest = "17623983205531314314",
@@ -190,6 +178,30 @@ return {
             startPort = "Out",
             endQuest = "17739963965926312847",
             endPort = "Input"
+          },
+          {
+            startQuest = "176726160543357906834",
+            startPort = "Out",
+            endQuest = "177505462545917917681",
+            endPort = "In"
+          },
+          {
+            startQuest = "177505462545917917681",
+            startPort = "Out",
+            endQuest = "176250556185919890525",
+            endPort = "In"
+          },
+          {
+            startQuest = "176250556185919890525",
+            startPort = "Out",
+            endQuest = "177505472446317918381",
+            endPort = "In"
+          },
+          {
+            startQuest = "177505472446317918381",
+            startPort = "Out",
+            endQuest = "17702832017661162362",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -269,7 +281,7 @@ return {
             key = "176726160543357906834",
             type = "GoToRegionNode",
             name = "进入区域",
-            pos = {x = 1228.290414878297, y = 364.1939383730094},
+            pos = {x = 1120.729439268541, y = 369.3158895925216},
             propsData = {
               RegionType = 1,
               IsEnter = "Enter",
@@ -303,6 +315,34 @@ return {
               TargetTime = 20,
               NeedLerp = false,
               LerpTime = 0
+            }
+          },
+          ["177505462545917917681"] = {
+            key = "177505462545917917681",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1355.8668224572498, y = 426.01225586638793},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {105201},
+              bStoreToServer = true
+            }
+          },
+          ["177505472446317918381"] = {
+            key = "177505472446317918381",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1910.7045278059352, y = 442.9616479047942},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },
@@ -2415,7 +2455,7 @@ return {
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {},
-              ClientRelatedRegionId = {},
+              ClientRelatedRegionId = {104504},
               bStoreToServer = false
             }
           },
@@ -3147,7 +3187,7 @@ return {
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
-              HideNpcs = false,
+              HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
               HideMechanismsFX = true,
@@ -3268,12 +3308,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "176250576444320868101",
-            startPort = "Out",
-            endQuest = "1774361808209854149",
-            endPort = "Branch_1"
-          },
-          {
             startQuest = "17730706361969904321",
             startPort = "Out",
             endQuest = "1774361806572854098",
@@ -3292,25 +3326,37 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1774361795699853865",
-            startPort = "Out",
-            endQuest = "1774361808209854149",
-            endPort = "Branch_2"
-          },
-          {
             startQuest = "17730706361969904321",
             startPort = "Out",
             endQuest = "17727017384957395663",
             endPort = "Input"
           },
           {
-            startQuest = "1774361808209854149",
+            startQuest = "176250576444320868101",
             startPort = "Out",
             endQuest = "17743622072643399778",
             endPort = "In"
           },
           {
             startQuest = "17743622072643399778",
+            startPort = "Out",
+            endQuest = "1774361808209854149",
+            endPort = "Branch_1"
+          },
+          {
+            startQuest = "1774361795699853865",
+            startPort = "Out",
+            endQuest = "17750313405332596948",
+            endPort = "In"
+          },
+          {
+            startQuest = "17750313405332596948",
+            startPort = "Out",
+            endQuest = "1774361808209854149",
+            endPort = "Branch_2"
+          },
+          {
+            startQuest = "1774361808209854149",
             startPort = "Out",
             endQuest = "17623983409931315017",
             endPort = "Success"
@@ -3328,7 +3374,7 @@ return {
             key = "17623983409931315017",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2486, y = 312.8571428571429},
+            pos = {x = 2790.090909090909, y = 348.31168831168833},
             propsData = {ModeType = 0}
           },
           ["17623983409931315018"] = {
@@ -3366,7 +3412,7 @@ return {
             key = "176250576444320868101",
             type = "TalkNode",
             name = "【East02_FixSimple_56】找刻舟谈心，看一眼天上的月亮",
-            pos = {x = 1618.7079436395866, y = 253.401943704311},
+            pos = {x = 1566.1042570036418, y = 210.54480084716815},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -3590,7 +3636,7 @@ return {
             key = "1774361808209854149",
             type = "CheckBranchQuestFinishedNode",
             name = "子任务结束节点",
-            pos = {x = 1941.787248413269, y = 297.3304876930828},
+            pos = {x = 2387.1059297319503, y = 203.93488329747836},
             propsData = {
               InputBranchQuestNumber = 2,
               BranchQuestFinishOptions = {
@@ -3603,14 +3649,32 @@ return {
             key = "17743622072643399778",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 2231.4852096612462, y = 427.1365246900123},
+            pos = {x = 1907.3953479100942, y = 177.35541869922886},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = true,
               EnableFadeIn = false,
               EnableFadeOut = true,
               NewTargetPointName = "",
-              StaticCreatorIdList = {242360097, 242360101}
+              StaticCreatorIdList = {
+                242360097,
+                242360101,
+                242360063
+              }
+            }
+          },
+          ["17750313405332596948"] = {
+            key = "17750313405332596948",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 1937.588196175402, y = 435.3930042512677},
+            propsData = {
+              ActiveEnable = false,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = false,
+              EnableFadeOut = true,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {242360101}
             }
           }
         },

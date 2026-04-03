@@ -6,6 +6,21 @@ local M = Class({
   "BluePrints.UI.WBP.Activity.Widget.BagGame.Activity_BagGame_DragComponent"
 })
 
+local function GetFrameCount()
+  return UKismetSystemLibrary.GetFrameCount() or 0
+end
+
+local function IsTempPlacementRedragBlocked(ItemWidget)
+  if not ItemWidget or not ItemWidget.IsTempPlacement then
+    return false
+  end
+  local EnableFrame = ItemWidget.TempPlacementDragEnableFrame
+  if not EnableFrame then
+    return false
+  end
+  return EnableFrame > GetFrameCount()
+end
+
 function M:Construct()
   self.Image_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Overlay_Double:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -212,6 +227,9 @@ end
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   local MouseButton = UE4.UKismetInputLibrary.PointerEvent_GetEffectingButton(MouseEvent)
   if MouseButton.KeyName == "LeftMouseButton" then
+    if IsTempPlacementRedragBlocked(self) then
+      return UE4.UWidgetBlueprintLibrary.Unhandled()
+    end
     local Reply = UE4.UWidgetBlueprintLibrary.DetectDragIfPressed(MouseEvent, self, UE.EKeys.LeftMouseButton)
     return Reply
   end
@@ -219,6 +237,10 @@ function M:OnMouseButtonDown(MyGeometry, MouseEvent)
 end
 
 function M:OnDragDetected(MyGeometry, PointerEvent)
+  if IsTempPlacementRedragBlocked(self) then
+    self._bDragDetected = false
+    return
+  end
   self._bDragDetected = true
   local SavedDisPlayItemId = self.DisPlayItemId
   local SavedShapeOffsets = self.ShapeOffsets
@@ -232,18 +254,42 @@ function M:OnDragDetected(MyGeometry, PointerEvent)
     end
   end
   local SavedPlayScreen = self.PlayScreen
-  self:SetCallbacks({
-    OnDragCancelCallback = function(self, PointerEvent, Operation)
-      if SavedPlayScreen then
-        if SavedDisPlayItemId then
-          SavedPlayScreen:SetDisPlayItemSwitchIndex(SavedDisPlayItemId, 0)
-        end
-        SavedPlayScreen:DeactivateShapeArea()
-        SavedPlayScreen:OnDragStateChanged(false)
-      end
-    end
-  })
   local DragDropOperation = self:OnDragDetectedComponent(MyGeometry, PointerEvent, SavedDisPlayItemId, SavedShapeOffsets)
+  if not DragDropOperation then
+    return
+  end
+  local DragStartFrame = GetFrameCount()
+  DragDropOperation.DragStartFrame = DragStartFrame
+  local NewDragUI = DragDropOperation.DefaultDragVisual
+  if NewDragUI then
+    NewDragUI.DragStartFrame = DragStartFrame
+    NewDragUI._DragSourceScreen = SavedPlayScreen
+    NewDragUI._DragSourceItemId = SavedDisPlayItemId
+    NewDragUI._DragDropOperation = DragDropOperation
+  end
+  DragDropOperation.SourcePlacedItemRestoreSnapshot = self._SameFrameReleaseSnapshot
+  if NewDragUI and NewDragUI.SetCallbacks then
+    NewDragUI:SetCallbacks({
+      OnDragCancelCallback = function(_, PointerEvent, Operation)
+        if SavedPlayScreen then
+          if SavedPlayScreen.TryHandleSameFrameDragRelease and SavedPlayScreen:TryHandleSameFrameDragRelease(Operation, NewDragUI) then
+            return
+          end
+          if SavedPlayScreen.HandleCancelledDragReturnToList then
+            SavedPlayScreen:HandleCancelledDragReturnToList(Operation, NewDragUI, SavedDisPlayItemId)
+          elseif SavedDisPlayItemId then
+            SavedPlayScreen:SetDisPlayItemSwitchIndex(SavedDisPlayItemId, 0)
+            if SavedPlayScreen.ForceExitDragState then
+              SavedPlayScreen:ForceExitDragState()
+            else
+              SavedPlayScreen:DeactivateShapeArea()
+              SavedPlayScreen:OnDragStateChanged(false)
+            end
+          end
+        end
+      end
+    })
+  end
   self:RemoveFromParent()
   return DragDropOperation
 end
@@ -319,6 +365,14 @@ function M:GetShapeCells(BaseRow, BaseCol)
 end
 
 function M:Destruct()
+  if self.bIsRuntimeDragVisual and not self._BagGameDragHandled then
+    local FallbackScreen = self._DragSourceScreen or self.PlayScreen
+    if FallbackScreen and FallbackScreen.HandleCancelledDragReturnToList then
+      local FallbackOperation = self._DragDropOperation
+      local FallbackItemId = self._DragSourceItemId or self.DisPlayItemId
+      FallbackScreen:HandleCancelledDragReturnToList(FallbackOperation, self, FallbackItemId)
+    end
+  end
   self.Btn_Stop.OnClicked:Remove(self, self.OnStopBtnClicked)
   self.Btn_Rotation.OnClicked:Remove(self, self.OnRotationBtnClicked)
   self.Btn_Check.OnClicked:Remove(self, self.OnCheckBtnClicked)

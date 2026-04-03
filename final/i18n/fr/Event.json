@@ -217,10 +217,10 @@
   {
     "id": 103020,
     "name": "Souvenirs étoilés",
-    "desc": "活动期间完成委托领取赠礼",
+    "desc": "Terminez des missions pendant l’événement pour obtenir des récompenses",
     "startTime": 1777514400,
     "endTime": 1779051599,
-    "rule": "1) Pendant l’événement, vous recevrez 3 cadeaux stellaires par jour, utilisables avec des Pièces stellaires.\n2) Les missions permettent d’obtenir des Pièces stellaires, échangeables contre des cadeaux ou dans la boutique stellaire.\n3) Jusqu’à 21 cadeaux stellaires peuvent être conservés ; au-delà, aucun nouveau cadeau ne sera ajouté.",
+    "rule": "1) Pendant l’événement, vous recevrez 2 cadeaux stellaires par jour, utilisables avec des Pièces stellaires.\n2) Les missions permettent d’obtenir des Pièces stellaires, échangeables contre des cadeaux ou dans la boutique stellaire.\n3) Jusqu’à 21 cadeaux stellaires peuvent être conservés ; au-delà, aucun nouveau cadeau ne sera ajouté.",
     "boxDrop": {
       "boxCoinId": 221,
       "boxMaximum": 21,
@@ -242,7 +242,7 @@
     "desc": "Pendant l’événement, vous pouvez obtenir des apparences de la série « Murmures indicibles » ainsi que d’autres récompenses cosmétiques",
     "startTime": 1777946400,
     "endTime": 1780304400,
-    "rule": "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n3、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n4、各奖励的初始获取概率如下\n角色形象：0.08%\n螺旋飞跃特效：0.92%\n背部装饰·上：1%\n头部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n5、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30\n"
+    "rule": "1) Cet événement comprend 2 manches, chacune comportant 8 récompenses. L’une d’elles est une apparence souhaitée. Une fois cette apparence obtenue dans une manche, vous recevez immédiatement toutes les récompenses restantes de cette manche. \n2) Avant le premier tissage d’une manche, vous pouvez librement modifier l’apparence souhaitée et les récompenses sélectionnées. Après un premier tissage, ces choix ne peuvent plus être modifiés pour la manche en cours. \n3) Les récompenses d’une même manche ne peuvent être obtenues qu’une seule fois. À mesure que le nombre de récompenses restantes diminue, leur probabilité d’obtention augmente proportionnellement. Une fois la manche terminée, les probabilités sont réinitialisées. \n\n Probabilités initiales d’obtention :\n Apparence de personnage : 0,08 %\n Effet de Bond Cyclonique : 0,92 %\n Accessoire dorsal – Haut : 1 %\n Accessoire de tête : 2 %\n Cadre d’avatar : 13 %\n Avatar : 13 %\n Teinture iridescente ×3 : 35 %\n Carnet de mission — Tome III ×6 : 35 % \n\n Le nombre de Fils stellaires requis augmente avec le nombre de tissages effectués. Une fois la manche terminée, le coût est réinitialisé. \n\nNombre de Fils stellaires requis par tissage :\n1er tissage : Fil stellaire ×1\n2e tissage : Fil stellaire ×3\n3e tissage : Fil stellaire ×6\n4e tissage : Fil stellaire ×10\n5e tissage : Fil stellaire ×15\n6e tissage : Fil stellaire ×20\n7e tissage : Fil stellaire ×25\n8e tissage : Fil stellaire ×30"
   },
   {
     "id": 105001,

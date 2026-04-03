@@ -217,7 +217,7 @@
   {
     "id": 103020,
     "name": "Starry Gleanings",
-    "desc": "活动期间完成委托领取赠礼",
+    "desc": "Complete commissions during the event to claim rewards",
     "startTime": 1777514400,
     "endTime": 1779051599,
     "rule": "1. During the event, you will receive 2 Starglow Gifts each day. Use Starglow Coins to open them.\n\n2. Complete Commissions to earn Starglow Coins. They can be used to open Starglow Gifts or exchanged for various rewards in the Starglow Shop.\n\n3. You can hold up to 21 Starglow Gifts at once. Once you reach this limit, you will no longer receive new Starglow Gifts each day.",

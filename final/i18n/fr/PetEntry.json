@@ -376,7 +376,7 @@
     "name": "Brutal",
     "r": 3,
     "upid": 10192,
-    "desc": "技能威力+3.2%"
+    "desc": "Puissance de compétence +3.2%"
   },
   {
     "id": 10192,
@@ -385,7 +385,7 @@
     "name": "Brutal",
     "r": 4,
     "upid": 10193,
-    "desc": "技能威力+6.4%"
+    "desc": "Puissance de compétence +6.4%"
   },
   {
     "id": 10193,
@@ -393,7 +393,7 @@
     "icon": "Battle_Gold",
     "name": "Brutal",
     "r": 5,
-    "desc": "技能威力+9.6%"
+    "desc": "Puissance de compétence +9.6%"
   },
   {
     "id": 10201,
@@ -402,7 +402,7 @@
     "name": "Cupide",
     "r": 3,
     "upid": 10202,
-    "desc": "技能范围+4.8%"
+    "desc": "Portée de compétence +4.8%"
   },
   {
     "id": 10202,
@@ -411,7 +411,7 @@
     "name": "Cupide",
     "r": 4,
     "upid": 10203,
-    "desc": "技能范围+9.6%"
+    "desc": "Portée de compétence +9.6%"
   },
   {
     "id": 10203,
@@ -419,7 +419,7 @@
     "icon": "Battle_Gold",
     "name": "Cupide",
     "r": 5,
-    "desc": "技能范围+14.4%"
+    "desc": "Portée de compétence +14.4%"
   },
   {
     "id": 10211,
@@ -428,7 +428,7 @@
     "name": "Endurant",
     "r": 3,
     "upid": 10212,
-    "desc": "技能耐久+2.4%"
+    "desc": "Durée de compétence +2.4%"
   },
   {
     "id": 10212,
@@ -437,7 +437,7 @@
     "name": "Endurant",
     "r": 4,
     "upid": 10213,
-    "desc": "技能耐久+4.8%"
+    "desc": "Durée de compétence +4.8%"
   },
   {
     "id": 10213,
@@ -445,7 +445,7 @@
     "icon": "Battle_Gold",
     "name": "Endurant",
     "r": 5,
-    "desc": "技能耐久+7.2%"
+    "desc": "Durée de compétence +7.2%"
   },
   {
     "id": 10221,
@@ -454,7 +454,7 @@
     "name": "Efficace",
     "r": 3,
     "upid": 10222,
-    "desc": "技能效益+2%"
+    "desc": "Efficacité de compétence +2%"
   },
   {
     "id": 10222,
@@ -463,7 +463,7 @@
     "name": "Efficace",
     "r": 4,
     "upid": 10223,
-    "desc": "技能效益+4%"
+    "desc": "Efficacité de compétence +4%"
   },
   {
     "id": 10223,
@@ -471,7 +471,7 @@
     "icon": "Battle_Gold",
     "name": "Efficace",
     "r": 5,
-    "desc": "技能效益+6%"
+    "desc": "Efficacité de compétence +6%"
   },
   {
     "id": 10231,
@@ -480,7 +480,7 @@
     "name": "Exalté",
     "r": 3,
     "upid": 10232,
-    "desc": "昂扬+2.4%"
+    "desc": "Vigueur +2.4%"
   },
   {
     "id": 10232,
@@ -489,7 +489,7 @@
     "name": "Exalté",
     "r": 4,
     "upid": 10233,
-    "desc": "昂扬+4.8%"
+    "desc": "Vigueur +4.8%"
   },
   {
     "id": 10233,
@@ -497,7 +497,7 @@
     "icon": "Battle_Gold",
     "name": "Exalté",
     "r": 5,
-    "desc": "昂扬+7.2%"
+    "desc": "Vigueur +7.2%"
   },
   {
     "id": 10241,
@@ -506,7 +506,7 @@
     "name": "Obstiné",
     "r": 3,
     "upid": 10242,
-    "desc": "背水+0.8%"
+    "desc": "Ténacité +0.8%"
   },
   {
     "id": 10242,
@@ -515,7 +515,7 @@
     "name": "Obstiné",
     "r": 4,
     "upid": 10243,
-    "desc": "背水+1.6%"
+    "desc": "Ténacité +1.6%"
   },
   {
     "id": 10243,
@@ -523,7 +523,7 @@
     "icon": "Battle_Gold",
     "name": "Obstiné",
     "r": 5,
-    "desc": "背水+2.4%"
+    "desc": "Ténacité +2.4%"
   },
   {
     "id": 10251,
@@ -532,7 +532,7 @@
     "name": "Téméraire",
     "r": 3,
     "upid": 10252,
-    "desc": "暴击率+8%"
+    "desc": "Taux CRIT +8%"
   },
   {
     "id": 10252,
@@ -541,7 +541,7 @@
     "name": "Téméraire",
     "r": 4,
     "upid": 10253,
-    "desc": "暴击率+16%"
+    "desc": "Taux CRIT +16%"
   },
   {
     "id": 10253,
@@ -549,7 +549,7 @@
     "icon": "Battle_Gold",
     "name": "Téméraire",
     "r": 5,
-    "desc": "暴击率+24%"
+    "desc": "Taux CRIT +24%"
   },
   {
     "id": 10261,
@@ -558,7 +558,7 @@
     "name": "Revigoré",
     "r": 3,
     "upid": 10262,
-    "desc": "暴击伤害+10%"
+    "desc": "DGT CRIT +10%"
   },
   {
     "id": 10262,
@@ -567,7 +567,7 @@
     "name": "Revigoré",
     "r": 4,
     "upid": 10263,
-    "desc": "暴击伤害+20%"
+    "desc": "DGT CRIT +20%"
   },
   {
     "id": 10263,
@@ -575,7 +575,7 @@
     "icon": "Battle_Gold",
     "name": "Revigoré",
     "r": 5,
-    "desc": "暴击伤害+30%"
+    "desc": "DGT CRIT +30%"
   },
   {
     "id": 10271,
@@ -584,7 +584,7 @@
     "name": "Fantomatique",
     "r": 3,
     "upid": 10272,
-    "desc": "多重射击+6%"
+    "desc": "Tir multiple +6%"
   },
   {
     "id": 10272,
@@ -593,7 +593,7 @@
     "name": "Fantomatique",
     "r": 4,
     "upid": 10273,
-    "desc": "多重射击+12%"
+    "desc": "Tir multiple +12%"
   },
   {
     "id": 10273,
@@ -601,7 +601,7 @@
     "icon": "Battle_Gold",
     "name": "Fantomatique",
     "r": 5,
-    "desc": "多重射击+18%"
+    "desc": "Tir multiple +18%"
   },
   {
     "id": 10281,

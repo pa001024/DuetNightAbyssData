@@ -26,6 +26,91 @@ local GUIDE_RESTORE_FOCUS_TIMER = "BagGameGuideRestoreFocus"
 local GUIDE_RESTORE_FOCUS_DELAY = 0.1
 local OWNER_RESTORE_FOCUS_TIMER = "BagGameMainRestoreFocusAfterPlayClose"
 local OWNER_RESTORE_FOCUS_DELAY = 0.25
+local SAME_FRAME_RELEASE_ROLLBACK_FRAMES = 2
+local TEMP_PICKUP_REENTRY_COOLDOWN_FRAMES = 8
+
+local function GetFrameCount()
+  return UKismetSystemLibrary.GetFrameCount() or 0
+end
+
+local function CopyCells(Cells)
+  if not Cells then
+    return nil
+  end
+  local NewCells = {}
+  for _, Cell in ipairs(Cells) do
+    if Cell and Cell.Row and Cell.Col then
+      table.insert(NewCells, {
+        Row = Cell.Row,
+        Col = Cell.Col
+      })
+    end
+  end
+  return NewCells
+end
+
+local function GetTopLeftCellPos(Cells)
+  if not Cells or 0 == #Cells then
+    return nil, nil
+  end
+  local TopRow = Cells[1].Row
+  local TopCol = Cells[1].Col
+  for _, Cell in ipairs(Cells) do
+    if TopRow > Cell.Row then
+      TopRow = Cell.Row
+    end
+    if TopCol > Cell.Col then
+      TopCol = Cell.Col
+    end
+  end
+  return TopRow, TopCol
+end
+
+local function BuildSameFrameReleaseSnapshot(PlacedItem, PlacedRecord)
+  if not PlacedItem then
+    return nil
+  end
+  local Cells = CopyCells(PlacedRecord and PlacedRecord.Cells or PlacedItem.PlacedCells)
+  if not Cells or 0 == #Cells then
+    return nil
+  end
+  local BaseRow = PlacedRecord and PlacedRecord.BaseRow or nil
+  local BaseCol = PlacedRecord and PlacedRecord.BaseCol or nil
+  if not BaseRow or not BaseCol then
+    BaseRow, BaseCol = GetTopLeftCellPos(Cells)
+  end
+  return {
+    WasConfirmed = PlacedItem.bIsConfirmed == true,
+    IsTempPlacement = true == (PlacedRecord and PlacedRecord.IsTempPlacement) or true == PlacedItem.IsTempPlacement,
+    BaseRow = BaseRow,
+    BaseCol = BaseCol,
+    Cells = Cells,
+    ConflictRecord = PlacedRecord and PlacedRecord.ConflictRecord or PlacedItem.ConflictRecord
+  }
+end
+
+local function RefreshTempPlacementDragEnableFrame(PlacedItem)
+  if not PlacedItem then
+    return
+  end
+  PlacedItem.TempPlacementDragEnableFrame = GetFrameCount() + TEMP_PICKUP_REENTRY_COOLDOWN_FRAMES
+end
+
+local function IsTempPickupReentryBlocked(PlayScreen, PlacedItem, CurFrame)
+  if not (PlayScreen and PlacedItem) or not PlacedItem.IsTempPlacement then
+    return false
+  end
+  local NowFrame = CurFrame or GetFrameCount()
+  local EnableFrame = PlacedItem.TempPlacementDragEnableFrame
+  if EnableFrame and NowFrame < EnableFrame then
+    return true
+  end
+  local IsSameTarget = PlayScreen._LastPickupPlacedItem == PlacedItem
+  if PlacedItem.DisPlayItemId ~= nil then
+    IsSameTarget = IsSameTarget or false
+  end
+  return IsSameTarget and nil ~= PlayScreen._LastPickupFrame and NowFrame - PlayScreen._LastPickupFrame < TEMP_PICKUP_REENTRY_COOLDOWN_FRAMES
+end
 
 function M:Construct()
   M.Super.Construct(self)
@@ -637,6 +722,10 @@ function M:PickUpPlacedItem(PlacedItem)
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_GameEvent_BagGame_Toast_PutDownItem")
     return false
   end
+  local CurFrame = GetFrameCount()
+  if IsTempPickupReentryBlocked(self, PlacedItem, CurFrame) then
+    return false
+  end
   local PlacedRecord, RecordIndex
   if self.PlacedItems then
     for i, Record in ipairs(self.PlacedItems) do
@@ -660,6 +749,12 @@ function M:PickUpPlacedItem(PlacedItem)
   elseif not PlacedRecord then
     DebugPrint("PickUpPlacedItem: 未找到放置记录")
     return false
+  end
+  PlacedItem._SameFrameReleaseSnapshot = BuildSameFrameReleaseSnapshot(PlacedItem, PlacedRecord)
+  if PlacedItem.IsTempPlacement then
+    self._LastPickupPlacedItem = PlacedItem
+    self._LastPickupDisPlayItemId = PlacedItem.DisPlayItemId
+    self._LastPickupFrame = CurFrame
   end
   if PlacedItem and PlacedItem.bIsConfirmed then
     PlacedItem.bIsConfirmed = false
@@ -891,6 +986,7 @@ function M:RotatePlacedItem(PlacedItem)
       PlacedItem.IsTempPlacement = false
       PlacedItem.ConflictRecord = nil
       PlacedItem.PlacedCells = NewCells
+      PlacedItem.TempPlacementDragEnableFrame = nil
     else
       local ConflictRecord = BagGameModel:FindOverlappingPlacedItem(NewCells)
       PlacedRecord.Cells = NewCells
@@ -899,6 +995,7 @@ function M:RotatePlacedItem(PlacedItem)
       PlacedRecord.ConflictRecord = ConflictRecord
       PlacedItem.PlacedCells = NewCells
       PlacedItem.ConflictRecord = ConflictRecord
+      RefreshTempPlacementDragEnableFrame(PlacedItem)
     end
   else
     for _, Cell in ipairs(NewCells) do
@@ -962,17 +1059,100 @@ function M:OnDragStateChanged(bIsDragging)
   end
 end
 
+function M:ForceExitDragState()
+  self:_CancelPendingHighlight()
+  self:DeactivateShapeArea()
+  local bNeedExit = self.bIsDraggingItem == true
+  if not bNeedExit and self.Recycle_In and self.IsAnimationPlaying then
+    bNeedExit = self:IsAnimationPlaying(self.Recycle_In)
+  end
+  if bNeedExit then
+    self:OnDragStateChanged(false)
+  else
+    self:SetConfirmedItemsHitTestEnabled(true)
+  end
+end
+
+function M:MarkDragOperationHandled(Operation, DragUI)
+  local ActiveDragUI = DragUI or Operation and Operation.DefaultDragVisual or nil
+  if Operation then
+    Operation._BagGameDragHandled = true
+  end
+  if ActiveDragUI then
+    ActiveDragUI._BagGameDragHandled = true
+  end
+end
+
+function M:HandleCancelledDragReturnToList(Operation, DragUI, DisPlayItemId)
+  local ActiveDragUI = DragUI or Operation and Operation.DefaultDragVisual or nil
+  if Operation and Operation._BagGameCancelHandled or ActiveDragUI and ActiveDragUI._BagGameCancelHandled then
+    return
+  end
+  if Operation then
+    Operation._BagGameCancelHandled = true
+  end
+  if ActiveDragUI then
+    ActiveDragUI._BagGameCancelHandled = true
+  end
+  self:MarkDragOperationHandled(Operation, ActiveDragUI)
+  local ItemId = DisPlayItemId or ActiveDragUI and (ActiveDragUI._DragSourceItemId or ActiveDragUI.DisPlayItemId) or Operation and Operation.SourceDisPlayItem and Operation.SourceDisPlayItem.DisPlayItemId
+  if ItemId then
+    self:SetDisPlayItemSwitchIndex(ItemId, 0)
+    self:RefreshVisibleEntryWidget(ItemId)
+  end
+  self:ForceExitDragState()
+end
+
+function M:ShouldTreatAsSameFrameDragRelease(Operation, DragUI)
+  if not Operation or Operation.Tag ~= "BagGameDisPlayItem" then
+    return false
+  end
+  local CurFrame = GetFrameCount()
+  local StartFrame = DragUI and DragUI.DragStartFrame or Operation.DragStartFrame
+  if not StartFrame and Operation.DefaultDragVisual then
+    StartFrame = Operation.DefaultDragVisual.DragStartFrame
+  end
+  return nil ~= StartFrame and CurFrame >= StartFrame and CurFrame - StartFrame < SAME_FRAME_RELEASE_ROLLBACK_FRAMES
+end
+
+function M:TryHandleSameFrameDragRelease(Operation, DragUI)
+  if not self:ShouldTreatAsSameFrameDragRelease(Operation, DragUI) then
+    return false
+  end
+  if Operation._SameFrameReleaseHandled then
+    return true
+  end
+  local SourcePlacedItem = Operation.SourceDisPlayItem
+  local Snapshot = Operation.SourcePlacedItemRestoreSnapshot or SourcePlacedItem and SourcePlacedItem._SameFrameReleaseSnapshot
+  local ActiveDragUI = DragUI or Operation.DefaultDragVisual
+  if not Snapshot or Snapshot.WasConfirmed or not ActiveDragUI then
+    return false
+  end
+  local bRestored = self:PlaceItemNormal(Snapshot.BaseRow, Snapshot.BaseCol, ActiveDragUI, Operation, Snapshot.Cells, Snapshot.IsTempPlacement and Snapshot.ConflictRecord or nil)
+  if not bRestored then
+    return false
+  end
+  Operation._SameFrameReleaseHandled = true
+  Operation.SourcePlacedItemRestoreSnapshot = nil
+  if ActiveDragUI then
+    ActiveDragUI._SameFrameReleaseHandled = true
+  end
+  if SourcePlacedItem then
+    SourcePlacedItem._SameFrameReleaseSnapshot = nil
+  end
+  self:MarkDragOperationHandled(Operation, ActiveDragUI)
+  return true
+end
+
 function M:OnDrop(MyGeometry, PointerEvent, Operation)
   if not Operation or Operation.Tag ~= "BagGameDisPlayItem" then
     return false
   end
   local DragUI = Operation.DefaultDragVisual
-  if DragUI and DragUI.DisPlayItemId then
-    self:SetDisPlayItemSwitchIndex(DragUI.DisPlayItemId, 0)
+  if self:TryHandleSameFrameDragRelease(Operation, DragUI) then
+    return true
   end
-  self:_CancelPendingHighlight()
-  self:DeactivateShapeArea()
-  self:OnDragStateChanged(false)
+  self:HandleCancelledDragReturnToList(Operation, DragUI)
   return true
 end
 
@@ -1717,6 +1897,7 @@ function M:HandleAmmoLoad(DragUI, Operation)
   self:DeactivateShapeArea()
   self:UpdateScoreDisplay()
   self:UpdateFinishButtonState()
+  self:MarkDragOperationHandled(Operation, DragUI)
   self:OnDragStateChanged(false)
   return true
 end
@@ -1776,6 +1957,7 @@ function M:HandleOtherStack(DragUI, Operation)
   self:DeactivateShapeArea()
   self:UpdateScoreDisplay()
   self:UpdateFinishButtonState()
+  self:MarkDragOperationHandled(Operation, DragUI)
   self:OnDragStateChanged(false)
   return true
 end
@@ -1945,6 +2127,7 @@ function M:PlaceItemNormal(BaseRow, BaseCol, DragUI, Operation, ShapeCells, Conf
     PlacedItem.IsTempPlacement = true
     PlacedItem.ConflictRecord = ConflictRecord
     PlacedItem.PlacedCells = ShapeCells
+    RefreshTempPlacementDragEnableFrame(PlacedItem)
     DebugPrint("PlaceItemNormal: 创建临时放置，与物品重叠")
   end
   local FinalRecord = IsTempPlacement and PlacedRecord or self.PlacedItems[#self.PlacedItems]
@@ -1965,6 +2148,7 @@ function M:PlaceItemNormal(BaseRow, BaseCol, DragUI, Operation, ShapeCells, Conf
   PlacedItem.bIsConfirmed = false
   self:UpdateFinishButtonState()
   self:UpdateRefreshButtonState()
+  self:MarkDragOperationHandled(Operation, DragUI)
   self:OnDragStateChanged(false)
   DebugPrint("PlaceItemNormal: 放置成功，左上角(" .. TopLeftRow .. "," .. TopLeftCol .. "), 大小(" .. ShapeRows .. "x" .. ShapeCols .. ")")
   return true
@@ -2218,6 +2402,7 @@ function M:RecycleItem(PlacedItem)
       self:UpdateScoreDisplay()
       self:UpdateFinishButtonState()
       self:UpdateRefreshButtonState()
+      self:ForceExitDragState()
       DebugPrint("RecycleItem: 回收临时放置物品，DisPlayItemId=" .. tostring(PlacedItem.DisPlayItemId))
       return true
     end
@@ -2283,6 +2468,7 @@ function M:RecycleItem(PlacedItem)
   self:UpdateScoreDisplay()
   self:UpdateFinishButtonState()
   self:UpdateRefreshButtonState()
+  self:ForceExitDragState()
   DebugPrint("RecycleItem: 回收成功，DisPlayItemId=" .. tostring(PlacedRecord.DisPlayItemId))
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/auto_chess_cell_click_remove", nil, nil)
   return true

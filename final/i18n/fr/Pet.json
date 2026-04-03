@@ -198,7 +198,7 @@
     "经验": 150,
     "主动": {
       "id": 417,
-      "描述": "向自身周围投掷3颗飞弹，对范围内的敌人造成主角色攻击{%}的伤害。",
+      "描述": "Projette 3 projectiles autour de vous, infligeant aux ennemis à portée des dégâts équivalant à {%} de l’ATQ du personnage principal.",
       "值": [
         [
           5.85,
@@ -211,7 +211,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "自身及协战同伴攻击+{%}，最大生命+{%}。",
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ +{%} ; PV max +{%}",
       "值": [
         [
           0.024,
@@ -3076,7 +3076,7 @@
     "经验": 150,
     "主动": {
       "id": 417,
-      "描述": "向自身周围投掷3颗飞弹，对范围内的敌人造成主角色攻击{%}的伤害。",
+      "描述": "Projette 3 projectiles autour de vous, infligeant aux ennemis à portée des dégâts équivalant à {%} de l’ATQ du personnage principal.",
       "值": [
         [
           5.85,
@@ -3089,7 +3089,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "自身及协战同伴攻击+{%}，最大生命+{%}。",
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ +{%} ; PV max +{%}",
       "值": [
         [
           0.024,
@@ -3122,7 +3122,7 @@
     "经验": 150,
     "主动": {
       "id": 417,
-      "描述": "向自身周围投掷3颗飞弹，对范围内的敌人造成主角色攻击{%}的伤害。",
+      "描述": "Projette 3 projectiles autour de vous, infligeant aux ennemis à portée des dégâts équivalant à {%} de l’ATQ du personnage principal.",
       "值": [
         [
           5.85,
@@ -3135,7 +3135,7 @@
       "cd": 25
     },
     "被动": {
-      "描述": "自身及协战同伴攻击+{%}，最大生命+{%}。",
+      "描述": "Le personnage principal et les Partenaires de combat gagnent : ATQ +{%} ; PV max +{%}",
       "值": [
         [
           0.024,
@@ -3691,7 +3691,7 @@
   {
     "id": 4944,
     "uid": 4941,
-    "名称": "灿烂摇摇冻·老道",
+    "名称": "Gélidou éclatant — Vétéran",
     "描述": "Ce Géniemon fouisseur se glisse entre les failles du sol. Il se nourrit de décomposition et, ce faisant, enrichit la terre — rendant à la nature ce qu’elle lui a accordé.",
     "icon": "YYD04",
     "品质": 2,

@@ -9297,7 +9297,19 @@ return ReadOnly("MechanismState", {
     },
     StateId = 1210342
   },
-  [1210343] = {StateId = 1210343},
+  [1210343] = {
+    StateEvent = {
+      [1] = {
+        NextStateId = 1210344,
+        TypeNextState = T.RT_4
+      }
+    },
+    StateId = 1210343
+  },
+  [1210344] = {
+    EventsCurrentState = T.RT_153,
+    StateId = 1210344
+  },
   [1210350] = {
     StateEvent = {
       [1] = {
@@ -10357,6 +10369,35 @@ return ReadOnly("MechanismState", {
       }
     },
     StateId = 1310216
+  },
+  [1310217] = {
+    StateEvent = {
+      [1] = {
+        NextStateId = 1310211,
+        TypeNextState = T.RT_4
+      },
+      [2] = {
+        NextStateId = 1310212,
+        TypeNextState = T.RT_4
+      },
+      [3] = {
+        NextStateId = 1310213,
+        TypeNextState = T.RT_4
+      },
+      [4] = {
+        NextStateId = 1310214,
+        TypeNextState = T.RT_4
+      },
+      [5] = {
+        NextStateId = 1310215,
+        TypeNextState = T.RT_4
+      },
+      [6] = {
+        NextStateId = 1310216,
+        TypeNextState = T.RT_4
+      }
+    },
+    StateId = 1310217
   },
   [1310220] = {
     StateEvent = {

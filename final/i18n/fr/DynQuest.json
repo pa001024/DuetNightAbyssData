@@ -499,7 +499,7 @@
         "dialogues": [
           {
             "id": 71000210,
-            "content": "Excusez-moi, vous auriez de la nourriture pour chat ?  ",
+            "content": "Excusez-moi, vous auriez de la nourriture pour chat ? ",
             "npc": 100001,
             "next": 710002101
           },
@@ -662,7 +662,7 @@
         "dialogues": [
           {
             "id": 71000210,
-            "content": "Excusez-moi, vous auriez de la nourriture pour chat ?  ",
+            "content": "Excusez-moi, vous auriez de la nourriture pour chat ? ",
             "npc": 100001,
             "next": 710002101
           },
@@ -825,7 +825,7 @@
         "dialogues": [
           {
             "id": 71000210,
-            "content": "Excusez-moi, vous auriez de la nourriture pour chat ?  ",
+            "content": "Excusez-moi, vous auriez de la nourriture pour chat ? ",
             "npc": 100001,
             "next": 710002101
           },
@@ -988,7 +988,7 @@
         "dialogues": [
           {
             "id": 71000210,
-            "content": "Excusez-moi, vous auriez de la nourriture pour chat ?  ",
+            "content": "Excusez-moi, vous auriez de la nourriture pour chat ? ",
             "npc": 100001,
             "next": 710002101
           },
@@ -1151,7 +1151,7 @@
         "dialogues": [
           {
             "id": 71000210,
-            "content": "Excusez-moi, vous auriez de la nourriture pour chat ?  ",
+            "content": "Excusez-moi, vous auriez de la nourriture pour chat ? ",
             "npc": 100001,
             "next": 710002101
           },
@@ -1881,19 +1881,19 @@
         "dialogues": [
           {
             "id": 71000504,
-            "content": "Je vais vérifier si d’autres ennemis rôdent dans le coin. Sois prudent.  ",
+            "content": "Je vais vérifier si d’autres ennemis rôdent dans le coin. Sois prudent. ",
             "npc": 818014,
             "next": 71000505
           },
           {
             "id": 71000505,
-            "content": "Reçu, reçu ! Je ferai attention !  ",
+            "content": "Reçu, reçu ! Je ferai attention ! ",
             "npc": 818015,
             "next": 71000506
           },
           {
             "id": 71000506,
-            "content": "Oh, toi aussi tu es venu... <I>Snif...</> Je ne pensais pas qu’autant de monde viendrait m’aider... Voici un petit présent pour vous remercier. Comptez sur moi à l’avenir !  ",
+            "content": "Oh, toi aussi tu es venu... <I>Snif...</> Je ne pensais pas qu’autant de monde viendrait m’aider... Voici un petit présent pour vous remercier. Comptez sur moi à l’avenir ! ",
             "npc": 818015
           }
         ]
@@ -4544,7 +4544,7 @@
           },
           {
             "id": 71004203,
-            "content": "Je fais des recherches sur les Souillés. Tu veux m’aider à collecter quelques échantillons de spécimens ?",
+            "content": "Je fais des recherches sur les Souillés. Tu veux m’aider à collecter quelques échantillons de spécimens ?",
             "npc": 818038,
             "options": [
               {
@@ -4573,7 +4573,7 @@
         "dialogues": [
           {
             "id": 71004205,
-            "content": "Aaaah ! Il y a encore des Souillés vivants ! Ne vous approchez pas, je suis là pour vous étudier, pas le contraire ! Oust !",
+            "content": "Aaaah ! Il y a encore des Souillés vivants ! Ne vous approchez pas, je suis là pour vous étudier, pas le contraire ! Oust !",
             "npc": 818038,
             "next": 71004206
           }
@@ -4638,7 +4638,7 @@
           },
           {
             "id": 71004203,
-            "content": "Je fais des recherches sur les Souillés. Tu veux m’aider à collecter quelques échantillons de spécimens ?",
+            "content": "Je fais des recherches sur les Souillés. Tu veux m’aider à collecter quelques échantillons de spécimens ?",
             "npc": 818038,
             "options": [
               {
@@ -4667,7 +4667,7 @@
         "dialogues": [
           {
             "id": 71004205,
-            "content": "Aaaah ! Il y a encore des Souillés vivants ! Ne vous approchez pas, je suis là pour vous étudier, pas le contraire ! Oust !",
+            "content": "Aaaah ! Il y a encore des Souillés vivants ! Ne vous approchez pas, je suis là pour vous étudier, pas le contraire ! Oust !",
             "npc": 818038,
             "next": 71004206
           }
@@ -5714,7 +5714,7 @@
           },
           {
             "id": 71004203,
-            "content": "Je fais des recherches sur les Souillés. Tu veux m’aider à collecter quelques échantillons de spécimens ?",
+            "content": "Je fais des recherches sur les Souillés. Tu veux m’aider à collecter quelques échantillons de spécimens ?",
             "npc": 818038,
             "options": [
               {
@@ -5743,7 +5743,7 @@
         "dialogues": [
           {
             "id": 71004205,
-            "content": "Aaaah ! Il y a encore des Souillés vivants ! Ne vous approchez pas, je suis là pour vous étudier, pas le contraire ! Oust !",
+            "content": "Aaaah ! Il y a encore des Souillés vivants ! Ne vous approchez pas, je suis là pour vous étudier, pas le contraire ! Oust !",
             "npc": 818038,
             "next": 71004206
           }
@@ -13610,7 +13610,7 @@
         "dialogues": [
           {
             "id": 71005501,
-            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
+            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
             "npc": 818049,
             "next": 71005502
           }
@@ -13746,7 +13746,7 @@
         "dialogues": [
           {
             "id": 71005501,
-            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
+            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
             "npc": 818049,
             "next": 71005502
           }
@@ -13882,7 +13882,7 @@
         "dialogues": [
           {
             "id": 71005501,
-            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
+            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
             "npc": 818049,
             "next": 71005502
           }
@@ -14018,7 +14018,7 @@
         "dialogues": [
           {
             "id": 71005501,
-            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
+            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
             "npc": 818049,
             "next": 71005502
           }
@@ -14154,7 +14154,7 @@
         "dialogues": [
           {
             "id": 71005501,
-            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
+            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
             "npc": 818049,
             "next": 71005502
           }
@@ -14290,7 +14290,7 @@
         "dialogues": [
           {
             "id": 71005501,
-            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
+            "content": "Toi là-bas ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène}, aide-moi s’il te plaît !",
             "npc": 818049,
             "next": 71005502
           }
@@ -14426,7 +14426,7 @@
         "dialogues": [
           {
             "id": 71005601,
-            "content": "Argh... c’est coincé ! Je n’arrive pas à remonter ma ligne...",
+            "content": "Argh... c’est coincé ! Je n’arrive pas à remonter ma ligne...",
             "npc": 818050,
             "next": 71005602
           }
@@ -14445,7 +14445,7 @@
           },
           {
             "id": 71005603,
-            "content": "Ah ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Ma ligne est emmêlée autour de quelques détritus là-dessous. Tu pourrais m’aider à la démêler ?",
+            "content": "Ah ! {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Ma ligne est emmêlée autour de quelques détritus là-dessous. Tu pourrais m’aider à la démêler ?",
             "npc": 818050,
             "options": [
               {
@@ -14461,7 +14461,7 @@
           },
           {
             "id": 71005604,
-            "content": "Parfait ! Je tiens la ligne, tu t’occupes du reste.",
+            "content": "Parfait ! Je tiens la ligne, tu t’occupes du reste.",
             "npc": 818050,
             "next": 71005605
           }
@@ -14517,7 +14517,7 @@
         "dialogues": [
           {
             "id": 71005702,
-            "content": "Merci... euh, pourrais-tu me rendre un petit service ? En fuyant, j’ai laissé ma canne plus loin, mais il y a encore quelques Souillés...",
+            "content": "Merci... euh, pourrais-tu me rendre un petit service ? En fuyant, j’ai laissé ma canne plus loin, mais il y a encore quelques Souillés...",
             "npc": 818051,
             "options": [
               {
@@ -14533,7 +14533,7 @@
           },
           {
             "id": 71005703,
-            "content": "Merci mille fois ! Je t’attends ici. Bonne chance !",
+            "content": "Merci mille fois ! Je t’attends ici. Bonne chance !",
             "npc": 818051,
             "next": 71005704
           }
@@ -14546,7 +14546,7 @@
         "dialogues": [
           {
             "id": 71005704,
-            "content": "C’est ma canne ! Merci infiniment, tu m’as sauvé la mise !",
+            "content": "C’est ma canne ! Merci infiniment, tu m’as sauvé la mise !",
             "npc": 818051
           }
         ]
@@ -14576,7 +14576,7 @@
         "dialogues": [
           {
             "id": 71005801,
-            "content": "Hé, {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Tu arrives juste à temps, j’ai une occasion en or que tu ne voudras pas rater.",
+            "content": "Hé, {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Tu arrives juste à temps, j’ai une occasion en or que tu ne voudras pas rater.",
             "npc": 818052,
             "next": 71005802
           }
@@ -14637,7 +14637,7 @@
         "dialogues": [
           {
             "id": 71005806,
-            "content": "Il y en a encore plus loin, tu veux continuer ?",
+            "content": "Il y en a encore plus loin, tu veux continuer ?",
             "npc": 818052,
             "options": [
               {
@@ -14665,7 +14665,7 @@
           },
           {
             "id": 71005814,
-            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
+            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
             "npc": 818052
           }
         ]
@@ -14693,7 +14693,7 @@
         "dialogues": [
           {
             "id": 71005809,
-            "content": "Il y en a encore plus loin, tu veux continuer ?",
+            "content": "Il y en a encore plus loin, tu veux continuer ?",
             "npc": 818052,
             "options": [
               {
@@ -14721,7 +14721,7 @@
           },
           {
             "id": 71005814,
-            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
+            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
             "npc": 818052
           }
         ]
@@ -14733,7 +14733,7 @@
         "dialogues": [
           {
             "id": 71005811,
-            "content": "Maintenant ! À l’attaque !",
+            "content": "Maintenant ! À l’attaque !",
             "npc": 818052,
             "next": 71005812
           },
@@ -14782,7 +14782,7 @@
         "dialogues": [
           {
             "id": 71005801,
-            "content": "Hé, {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Tu arrives juste à temps, j’ai une occasion en or que tu ne voudras pas rater.",
+            "content": "Hé, {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Tu arrives juste à temps, j’ai une occasion en or que tu ne voudras pas rater.",
             "npc": 818052,
             "next": 71005802
           }
@@ -14843,7 +14843,7 @@
         "dialogues": [
           {
             "id": 71005806,
-            "content": "Il y en a encore plus loin, tu veux continuer ?",
+            "content": "Il y en a encore plus loin, tu veux continuer ?",
             "npc": 818052,
             "options": [
               {
@@ -14871,7 +14871,7 @@
           },
           {
             "id": 71005814,
-            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
+            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
             "npc": 818052
           }
         ]
@@ -14899,7 +14899,7 @@
         "dialogues": [
           {
             "id": 71005809,
-            "content": "Il y en a encore plus loin, tu veux continuer ?",
+            "content": "Il y en a encore plus loin, tu veux continuer ?",
             "npc": 818052,
             "options": [
               {
@@ -14927,7 +14927,7 @@
           },
           {
             "id": 71005814,
-            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
+            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
             "npc": 818052
           }
         ]
@@ -14939,7 +14939,7 @@
         "dialogues": [
           {
             "id": 71005811,
-            "content": "Maintenant ! À l’attaque !",
+            "content": "Maintenant ! À l’attaque !",
             "npc": 818052,
             "next": 71005812
           },
@@ -14988,7 +14988,7 @@
         "dialogues": [
           {
             "id": 71005801,
-            "content": "Hé, {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Tu arrives juste à temps, j’ai une occasion en or que tu ne voudras pas rater.",
+            "content": "Hé, {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Tu arrives juste à temps, j’ai une occasion en or que tu ne voudras pas rater.",
             "npc": 818052,
             "next": 71005802
           }
@@ -15049,7 +15049,7 @@
         "dialogues": [
           {
             "id": 71005806,
-            "content": "Il y en a encore plus loin, tu veux continuer ?",
+            "content": "Il y en a encore plus loin, tu veux continuer ?",
             "npc": 818052,
             "options": [
               {
@@ -15077,7 +15077,7 @@
           },
           {
             "id": 71005814,
-            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
+            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
             "npc": 818052
           }
         ]
@@ -15105,7 +15105,7 @@
         "dialogues": [
           {
             "id": 71005809,
-            "content": "Il y en a encore plus loin, tu veux continuer ?",
+            "content": "Il y en a encore plus loin, tu veux continuer ?",
             "npc": 818052,
             "options": [
               {
@@ -15133,7 +15133,7 @@
           },
           {
             "id": 71005814,
-            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
+            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
             "npc": 818052
           }
         ]
@@ -15145,7 +15145,7 @@
         "dialogues": [
           {
             "id": 71005811,
-            "content": "Maintenant ! À l’attaque !",
+            "content": "Maintenant ! À l’attaque !",
             "npc": 818052,
             "next": 71005812
           },
@@ -15194,7 +15194,7 @@
         "dialogues": [
           {
             "id": 71005801,
-            "content": "Hé, {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Tu arrives juste à temps, j’ai une occasion en or que tu ne voudras pas rater.",
+            "content": "Hé, {性别:Chasseur de Phoxène|Chasseuse de Phoxène} ! Tu arrives juste à temps, j’ai une occasion en or que tu ne voudras pas rater.",
             "npc": 818052,
             "next": 71005802
           }
@@ -15255,7 +15255,7 @@
         "dialogues": [
           {
             "id": 71005806,
-            "content": "Il y en a encore plus loin, tu veux continuer ?",
+            "content": "Il y en a encore plus loin, tu veux continuer ?",
             "npc": 818052,
             "options": [
               {
@@ -15283,7 +15283,7 @@
           },
           {
             "id": 71005814,
-            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
+            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
             "npc": 818052
           }
         ]
@@ -15311,7 +15311,7 @@
         "dialogues": [
           {
             "id": 71005809,
-            "content": "Il y en a encore plus loin, tu veux continuer ?",
+            "content": "Il y en a encore plus loin, tu veux continuer ?",
             "npc": 818052,
             "options": [
               {
@@ -15339,7 +15339,7 @@
           },
           {
             "id": 71005814,
-            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
+            "content": "Tss, si près du but... Euh, je veux dire... dommage pour toi. Bon, je ne te dérange pas plus, salut !",
             "npc": 818052
           }
         ]
@@ -15351,7 +15351,7 @@
         "dialogues": [
           {
             "id": 71005811,
-            "content": "Maintenant ! À l’attaque !",
+            "content": "Maintenant ! À l’attaque !",
             "npc": 818052,
             "next": 71005812
           },
@@ -19497,7 +19497,7 @@
           },
           {
             "id": 71007511,
-            "content": "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
+            "content": "Ouf... Vendre des pommes de terre sur les quais, c’est bien plus dangereux que je ne l’imaginais. Merci... vraiment merci.",
             "npc": 818078
           }
         ]
@@ -19625,7 +19625,7 @@
           },
           {
             "id": 71007511,
-            "content": "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
+            "content": "Ouf... Vendre des pommes de terre sur les quais, c’est bien plus dangereux que je ne l’imaginais. Merci... vraiment merci.",
             "npc": 818078
           }
         ]
@@ -19655,7 +19655,7 @@
         "dialogues": [
           {
             "id": 71007601,
-            "content": "今天怎么回事，这么久了一条鱼都没上钩。",
+            "content": "Quelle journée étrange... Voilà des heures que j’attends et pas une seule touche.",
             "npc": 818079,
             "next": 71007602
           }
@@ -19733,7 +19733,7 @@
         "dialogues": [
           {
             "id": 71007601,
-            "content": "今天怎么回事，这么久了一条鱼都没上钩。",
+            "content": "Quelle journée étrange... Voilà des heures que j’attends et pas une seule touche.",
             "npc": 818079,
             "next": 71007602
           }
@@ -24288,7 +24288,7 @@
           },
           {
             "id": 71002303,
-            "content": "Oh... juste {性别:un Chasseur de Phoxène|une Chasseuse de Phoxène} de passage. Euh... dis, tu veux pas me filer un coup de main ? Il faut juste tester ce truc, c’est super facile ! Je te donnerai une récompense.",
+            "content": "Oh... juste {性别:un Chasseur de Phoxène|une Chasseuse de Phoxène} de passage. Euh... dis, tu veux pas me filer un coup de main ? Il faut juste tester ce truc, c’est super facile ! Je te donnerai une récompense.",
             "npc": 818020
           }
         ]
@@ -24303,7 +24303,7 @@
         "dialogues": [
           {
             "id": 71002304,
-            "content": "Tiens bon 15 secondes, et c’est fini ! Allez, courage !",
+            "content": "Tiens bon 15 secondes, et c’est fini ! Allez, courage !",
             "npc": 818020,
             "next": 71002305
           }
@@ -24316,7 +24316,7 @@
         "dialogues": [
           {
             "id": 71002305,
-            "content": "Tous les tirs ont raté... Ils disaient que c’était un bijou militaire d’Élysium ? Franchement, ça ressemble plus à un tas de ferraille... Ah, oublie ce que je viens de dire. Tiens, voilà ta paye. Et, euh... gardons ça entre nous, hein ?",
+            "content": "Tous les tirs ont raté... Ils disaient que c’était un bijou militaire d’Élysium ? Franchement, ça ressemble plus à un tas de ferraille... Ah, oublie ce que je viens de dire. Tiens, voilà ta paye. Et, euh... gardons ça entre nous, hein ?",
             "npc": 818020
           }
         ]
@@ -24328,7 +24328,7 @@
         "dialogues": [
           {
             "id": 71002306,
-            "content": "Tous les tirs ont touché, et tu es toujours debout !? Mais c’était censé être un bijou militaire d’Élysium ! Bon... sûrement juste un truc hors de prix... Ah, oublie ce que je viens de dire. Tiens, voilà ta paye. Et, euh... gardons ça entre nous, hein ?",
+            "content": "Tous les tirs ont touché, et tu es toujours debout !? Mais c’était censé être un bijou militaire d’Élysium ! Bon... sûrement juste un truc hors de prix... Ah, oublie ce que je viens de dire. Tiens, voilà ta paye. Et, euh... gardons ça entre nous, hein ?",
             "npc": 818020
           }
         ]
@@ -25563,7 +25563,7 @@
           },
           {
             "id": 71003705,
-            "content": "Pff... ouais, je sais bien, c’est juste pour râler un peu. Bon, puisque tu es là, viens avec moi. Ça me tiendra compagnie, et la route paraîtra moins longue... Allez, assez traîné,  au boulot !",
+            "content": "Pff... ouais, je sais bien, c’est juste pour râler un peu. Bon, puisque tu es là, viens avec moi. Ça me tiendra compagnie, et la route paraîtra moins longue... Allez, assez traîné, au boulot !",
             "npc": 818019,
             "next": 71003706
           }
@@ -25773,7 +25773,7 @@
         "dialogues": [
           {
             "id": 71004403,
-            "content": "La zone est sécurisée pour le moment. Profite-en pour attraper le Géniemon !",
+            "content": "La zone est sécurisée pour le moment. Profite-en pour attraper le Géniemon !",
             "npc": 800006
           }
         ]
@@ -27148,7 +27148,7 @@
         "dialogues": [
           {
             "id": 71004403,
-            "content": "La zone est sécurisée pour le moment. Profite-en pour attraper le Géniemon !",
+            "content": "La zone est sécurisée pour le moment. Profite-en pour attraper le Géniemon !",
             "npc": 800006
           }
         ]
@@ -27260,7 +27260,7 @@
         "dialogues": [
           {
             "id": 71006003,
-            "content": "La zone est sécurisée pour le moment. Profite-en pour attraper le Géniemon !",
+            "content": "La zone est sécurisée pour le moment. Profite-en pour attraper le Géniemon !",
             "npc": 800006
           }
         ]
@@ -27316,7 +27316,7 @@
         "dialogues": [
           {
             "id": 71006003,
-            "content": "La zone est sécurisée pour le moment. Profite-en pour attraper le Géniemon !",
+            "content": "La zone est sécurisée pour le moment. Profite-en pour attraper le Géniemon !",
             "npc": 800006
           }
         ]

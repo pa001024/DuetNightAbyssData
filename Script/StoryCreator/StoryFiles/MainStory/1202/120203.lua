@@ -605,7 +605,7 @@ return {
             key = "176873620675761881485",
             type = "PickUpNode",
             name = "拾取物品",
-            pos = {x = 2818.3588130449575, y = 489.5956024168572},
+            pos = {x = 2819.3588130449575, y = 490.5956024168572},
             propsData = {
               bActiveEnable = true,
               StaticCreatorIdList = {},
@@ -2928,7 +2928,7 @@ return {
             key = "176873601268459669041",
             type = "PickUpNode",
             name = "拾取物品",
-            pos = {x = 2711.567525176751, y = 489.48440979933247},
+            pos = {x = 2710.7341918434176, y = 489.48440979933247},
             propsData = {
               bActiveEnable = true,
               StaticCreatorIdList = {},
@@ -4179,7 +4179,7 @@ return {
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
-              HideMechanismsFX = true,
+              HideMechanismsFX = false,
               ShowSkipButton = true,
               ShowAutoPlayButton = true,
               ShowReviewButton = true,
@@ -4493,12 +4493,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "176250411736814028490",
-            startPort = "Out",
-            endQuest = "17621773182665168575",
-            endPort = "Success"
-          },
-          {
             startQuest = "17621773182665168574",
             startPort = "QuestStart",
             endQuest = "17726316889603685420",
@@ -4509,6 +4503,18 @@ return {
             startPort = "Out",
             endQuest = "176250411736814028490",
             endPort = "In"
+          },
+          {
+            startQuest = "176250411736814028490",
+            startPort = "Out",
+            endQuest = "17750349871645652",
+            endPort = "In"
+          },
+          {
+            startQuest = "17750349871645652",
+            startPort = "Out",
+            endQuest = "17621773182665168575",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -4523,7 +4529,7 @@ return {
             key = "17621773182665168575",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2800, y = 300},
+            pos = {x = 2407.6923076923076, y = 440.7692307692308},
             propsData = {ModeType = 0}
           },
           ["17621773182665168576"] = {
@@ -4599,6 +4605,17 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {242360056}
+            }
+          },
+          ["17750349871645652"] = {
+            key = "17750349871645652",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2013.2462691656315, y = 437.48805418693894},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

@@ -34,7 +34,7 @@ return ReadOnly("WeeklySelectDungeon", {
     },
     GuidanceTitle = 200001,
     Path = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Play_Weekly02.T_Play_Weekly02",
-    RewardViewId = 90012,
+    RewardViewId = 90013,
     Sequence = 10
   }
 })

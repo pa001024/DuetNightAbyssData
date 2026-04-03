@@ -28,6 +28,7 @@ function M:Construct()
   self.WS_State:SetActiveWidgetIndex(0)
   self.WebContent:BindUObject("widget", self, true)
   self.WebContent.OnLoadCompleted:Add(self, function()
+    DebugPrint("看看公告Ios的URL:: OnLoadCompleted")
     if self.bWebFailed then
       return
     end
@@ -36,6 +37,7 @@ function M:Construct()
     if self.WebContent:GetUrl() == "about:blank" then
       return
     end
+    DebugPrint("看看公告Ios的URL:: OnLoadCompleted  not return")
     self:SetWebContentVisible(true)
     self:OnWebContentLoadDone()
     self.bWebFailed = false
@@ -47,6 +49,7 @@ function M:Construct()
     self.bWebFailed = true
   end)
   self.WebContent.OnLoadStarted:Add(self, function()
+    DebugPrint("看看公告Ios的URL:: onLoadStarted")
     if self.bWebFailed then
       return
     end
@@ -117,7 +120,10 @@ function M:SetWebContentVisible(bVisible)
     else
       self.WebContent:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     end
-  else
+    if self.WebContent:GetVisibility() == UIConst.VisibilityOp.Visible then
+      DebugPrint("看看公告Ios的URL  公告页面时可见的 透明度 ，", self.WebContent:GetRenderOpacity())
+    else
+    end
   end
 end
 
@@ -263,9 +269,13 @@ function M:ChangeMainContent(Content, bForce)
     bChanged = true
   end
   if not self.CurContent or self.CurContent.Conf.NoticeID ~= Content.Conf.NoticeID or bForce then
-    self.WebContent:LoadURL("about:blank")
-    self.CurrUrl = nil
-    DebugPrint("M:ChangeMainContent   LoadUrl about:blank")
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "PC" then
+      self.WebContent:LoadURL("about:blank")
+      self.CurrUrl = nil
+      DebugPrint("M:ChangeMainContent   LoadUrl about:blank")
+    elseif CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+      self.WebContent:SetVisibility(UIConst.VisibilityOp.Visible)
+    end
     if self:IsExistTimer(self.GetHtmlHandle) and IsValid(self) then
       self:RemoveTimer(self.GetHtmlHandle)
     end

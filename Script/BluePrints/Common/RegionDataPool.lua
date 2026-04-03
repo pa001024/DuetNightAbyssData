@@ -92,7 +92,9 @@ function M:FillRegionData(Index, Info, RegionDataMgrSubsystem)
   if DataTable.QuestChainId and DataTable.QuestChainId > 0 then
     self:AddQuestChainData(DataTable)
   end
-  self.RegionDataMgr:OnRegionDataFill_Log(DataTable.WorldRegionEid, DataTable.Eid, DataTable.LevelName)
+  if self.RegionDataMgr then
+    self.RegionDataMgr:OnRegionDataFill_Log(DataTable.WorldRegionEid, DataTable.Eid, DataTable.LevelName)
+  end
   DataTable.Creator = nil
   if self:CheckUnitDataNeedStorage(DataTable.RegionDataType) then
     local Avatar = GWorld:GetAvatar()
@@ -283,7 +285,9 @@ function M:UpdateState(DataTableIndex, DataName, DataValue)
     Info.State = Info.State or {}
     SomethingDiff = Info.State[DataName] ~= DataValue
     Info.State[DataName] = DataValue
-    self.RegionDataMgr:ExeRegionDataUpdateCallback(Info)
+    if self.RegionDataMgr then
+      self.RegionDataMgr:ExeRegionDataUpdateCallback(Info)
+    end
   end
   return SomethingDiff, Info
 end
@@ -302,7 +306,7 @@ function M:UpdateStateByTable(DataTableIndex, NewState)
   else
     GWorld.logger.error("M:UpdateStateByTable SomethingDiff : Info Error " .. DataTableIndex)
   end
-  if SomethingDiff then
+  if SomethingDiff and self.RegionDataMgr then
     self.RegionDataMgr:ExeRegionDataUpdateCallback(Info)
   end
   return SomethingDiff
@@ -373,7 +377,9 @@ function M:FillStaticCreatorDataNew(Index, Info)
   elseif Info.Creator.ExtraRegionInfo.SpecialQuestId > 0 then
     self:AddSpecialQuestData(DataTable, Info.Creator.ExtraRegionInfo.SpecialQuestId)
   end
-  self.RegionDataMgr:OnRegionDataFill_Log(DataTable.WorldRegionEid, DataTable.Eid, DataTable.LevelName)
+  if self.RegionDataMgr then
+    self.RegionDataMgr:OnRegionDataFill_Log(DataTable.WorldRegionEid, DataTable.Eid, DataTable.LevelName)
+  end
   return DataTable.SubRegionId, DataTable.WorldRegionEid
 end
 
@@ -436,7 +442,9 @@ function M:FillRandomCreatorDataNew(Index, Info)
   DataTable.QuestChainId = -1
   DataTable.State = Info:GetLuaTable("State")
   DataTable.Type = 2
-  self.RegionDataMgr:OnRegionDataFill_Log(DataTable.WorldRegionEid, DataTable.Eid, DataTable.LevelName)
+  if self.RegionDataMgr then
+    self.RegionDataMgr:OnRegionDataFill_Log(DataTable.WorldRegionEid, DataTable.Eid, DataTable.LevelName)
+  end
   return DataTable.SubRegionId, DataTable.WorldRegionEid
 end
 
@@ -494,7 +502,9 @@ function M:FillCommonDataNew(Index, Info)
   DataTable.Type = 3
   DataTable.QuestChainId = Info.IntParams:Find("QuestChainId")
   DataTable.IsUnlimited = Info.BoolParams:Find("IsFullRegionStore")
-  self.RegionDataMgr:OnRegionDataFill_Log(DataTable.WorldRegionEid, DataTable.Eid, DataTable.LevelName)
+  if self.RegionDataMgr then
+    self.RegionDataMgr:OnRegionDataFill_Log(DataTable.WorldRegionEid, DataTable.Eid, DataTable.LevelName)
+  end
   return DataTable.SubRegionId, DataTable.WorldRegionEid
 end
 

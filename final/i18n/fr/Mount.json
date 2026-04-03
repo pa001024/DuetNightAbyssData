@@ -70,6 +70,20 @@
   },
   {
     "id": 1005,
+    "name": "Pérégrin de Taixu",
+    "des": "À dos de lame, je chevauche le vent.",
+    "icon": "Mounts_0006",
+    "resourceIcon": "Icon_Mounts_0006",
+    "rarity": 5,
+    "sort": 101,
+    "resourceId": 49994,
+    "fly": 1,
+    "access": [
+      "Source : Événements à durée limitée"
+    ]
+  },
+  {
+    "id": 1006,
     "name": "Pérégrin de Taixu – Émeraude",
     "des": "À dos de lame, je chevauche le vent.",
     "icon": "Mounts_0008",
@@ -83,7 +97,7 @@
     ]
   },
   {
-    "id": 1006,
+    "id": 1007,
     "name": "Pérégrin de Taixu – Caramel",
     "des": "À dos de lame, je chevauche le vent.",
     "icon": "Mounts_0007",
@@ -94,20 +108,6 @@
     "fly": 1,
     "access": [
       "Boutique"
-    ]
-  },
-  {
-    "id": 1007,
-    "name": "Pérégrin de Taixu",
-    "des": "À dos de lame, je chevauche le vent.",
-    "icon": "Mounts_0006",
-    "resourceIcon": "Icon_Mounts_0006",
-    "rarity": 5,
-    "sort": 101,
-    "resourceId": 49994,
-    "fly": 1,
-    "access": [
-      "Source : Événements à durée limitée"
     ]
   }
 ]

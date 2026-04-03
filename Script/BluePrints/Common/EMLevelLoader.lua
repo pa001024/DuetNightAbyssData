@@ -547,7 +547,7 @@ function EMLevelLoader:LoadPreviewLevel(Name, Path, Callback, Position, Rotation
     self.PreviewLevelRefCount[Name] = self.PreviewLevelRefCount[Name] + 1
   end
   if self[Name] then
-    local WCSubsystem = UGameplayStatics.GetGameMode(self):GetWCSubSystem()
+    local WCSubsystem = USubsystemBlueprintLibrary.GetWorldSubsystem(self, UWorldCompositionSubSystem.StaticClass())
     if WCSubsystem then
       WCSubsystem:FreezeWorldComposition()
       WCSubsystem:FreezeDistanceBasedRegion()

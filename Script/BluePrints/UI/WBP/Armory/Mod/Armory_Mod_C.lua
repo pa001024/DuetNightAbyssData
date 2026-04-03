@@ -757,9 +757,6 @@ end
 
 function M:OnTargetTabSelected(TabContent)
   ModModel:ClearRecommendData()
-  if self.RecommendView then
-    self.RecommendView:ClearData()
-  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_01", nil, nil)
   if TabContent == self.CurTargetTabContent then
     return

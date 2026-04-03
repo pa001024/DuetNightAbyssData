@@ -57955,7 +57955,7 @@ local Data = {
           TextMapId = "UIGuide_QueXie_2_PC"
         },
         UIGuide_QueXie_2_Phone = {
-          TextMapContent = "召唤牵机方枢后，按按钮可以发射激光，与特定的机关产生交互。",
+          TextMapContent = "召唤牵机方枢·却邪后，按按钮可以发射激光，与特定的机关产生交互。",
           TextMapId = "UIGuide_QueXie_2_Phone"
         },
         UIGuide_Reading = {
@@ -80149,7 +80149,7 @@ local Data = {
           TextMapId = "UI_LimitedPrizePool_SelecteTitle"
         },
         UI_LimitedPrizePool_Use99 = {
-          TextMapContent = "持有的月石数量不足，是否消耗%d个月石晶胚购买%d个星辉丝线？",
+          TextMapContent = "持有的月石数量不足，是否消耗%d个月石晶胚购买%d个月石？",
           TextMapId = "UI_LimitedPrizePool_Use99"
         },
         UI_LimitedPrizePool_ViewDetails = {

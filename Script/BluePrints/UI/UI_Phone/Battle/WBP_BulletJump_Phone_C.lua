@@ -132,7 +132,7 @@ function M:ButtonBulletJumpUp(Index, WidgetLocalPos, LastWidgetTouchPos, EndTouc
     if self.HasAutoBulletJump then
       self:StopAutoRetryTimer()
       self.IsBtnDown = false
-      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
     else
       if ScreenSpacePos and USlateBlueprintLibrary.IsUnderLocation(self.CancelBtn:GetCachedGeometry(), ScreenSpacePos) then
         EMUIAnimationSubsystem:EMStopAnimation(self.CancelBtn, self.CancelBtn.Loop)
@@ -155,7 +155,7 @@ function M:ButtonBulletJumpUp(Index, WidgetLocalPos, LastWidgetTouchPos, EndTouc
     self:StopAutoRetryTimer()
     self.IsBtnDown = false
     EventManager:FireEvent(EventID.OnQuitBulletJumpAim)
-    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
   else
     self.OwnerPanel:TryToStopTargetCommand("BulletJump")
   end

@@ -115284,7 +115284,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12042931] = {
           Content = "我也不知道你们会出现在那儿，抱歉啦，反正结果皆大欢喜不是？你们要是还生气，改天我拿我师父宝贝了几十年的佳酿赔罪。",
-          ContentTC = "我也不知道你們會出現在那兒，抱歉啦，反正結果皆大歡喜不是？你們要還是生氣，改天我拿我師父寶貝了幾十年的佳釀賠罪。",
+          ContentTC = "我也不知道你們會出現在那兒，抱歉啦，反正結果皆大歡喜不是？你們要是還生氣，改天我拿我師父寶貝了幾十年的佳釀賠罪。",
           DialogueId = 12042931,
           GUID = "1E25F15E",
           NextDialogue = 12042932,
@@ -115506,7 +115506,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043103] = {
           Content = "这可就说来话长了，得从今天早上，我和小仆从帮止流姐姐去各个地方跑腿取东西讲起……",
-          ContentTC = "這說來可就話長了，得從今天早上，我和小僕從幫止流姐姐去各個地方跑腿取東西講起……",
+          ContentTC = "這可就說來話長了，得從今天早上，我和小僕從幫止流姐姐去各個地方跑腿取東西講起……",
           DialogueId = 12043103,
           GUID = "1E260D96",
           NextDialogue = 12043104,
@@ -115554,7 +115554,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043108] = {
           Content = "接下来，<W>忘记我，忘记我们说过的一切</>，好吗？",
-          ContentTC = "接下來，<W>忘記我，忘記剛才這裡發生的一切對話</>，好嗎？",
+          ContentTC = "接下來，<W>忘記我，忘記我們說過的一切</>，好嗎？",
           DialogueId = 12043108,
           GUID = "1E260E68",
           NextDialogue = 12043109,
@@ -115863,7 +115863,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043311] = {
           Content = "……原来是这样，难怪从早上开始小仆从就感觉不对劲！",
-          ContentTC = "……原來是這樣，難怪早上開始小僕從就感覺不對勁！",
+          ContentTC = "……原來是這樣，難怪從早上開始小僕從就感覺不對勁！",
           DialogueId = 12043311,
           GUID = "1E262FB6",
           NextDialogue = 12043312,
@@ -116004,7 +116004,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043326] = {
           Content = "要叮嘱的差不多就这些，我且去了！我们在山外山见！",
-          ContentTC = "要叮囑的差不多就是這些，我且去了！我們在山外山見！",
+          ContentTC = "要叮囑的差不多就這些，我且去了！我們在山外山見！",
           DialogueId = 12043326,
           GUID = "1E26322C",
           NextDialogue = 12043327,
@@ -116323,7 +116323,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043521] = {
           Content = "接下来这段路，有非常多的岔路口。通往基地的路线每天按照周天大衍之数轮换，若是走错一步，便要迷失在荒郊野岭中了。",
-          ContentTC = "接下來這段路，有非常多的岔路口。通往基地的路線每日按周天大衍之數輪換，若是走錯一步，便要迷失在荒郊野嶺中了。",
+          ContentTC = "接下來這段路，有非常多的岔路口。通往基地的路線每天按照周天大衍之數輪換，若是走錯一步，便要迷失在荒郊野嶺中了。",
           DialogueId = 12043521,
           GUID = "1E26522A",
           NextDialogue = 12043522,
@@ -116486,7 +116486,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043707] = {
           Content = "嘿嘿，我这不是全须全尾地回来山外山了么。咱们有<H>天罗拒风仪</>在，能切断大风九章的感应，那些蠢狼寻不过来的。",
-          ContentTC = "嘿嘿，我這不是全須全尾地回來山外山了麼。有咱們<H>天羅拒風儀</>在，能切斷大風九章的感應，那些蠢狼尋不過來的。",
+          ContentTC = "嘿嘿，我這不是全須全尾地回來山外山了麼。咱們有<H>天羅拒風儀</>在，能切斷大風九章的感應，那些蠢狼尋不過來的。",
           DialogueId = 12043707,
           GUID = "1E2670AE",
           NextDialogue = 12043708,
@@ -116845,7 +116845,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043746] = {
           Content = "咳咳，有一件事姑奶奶可能不知。这两位和我可是拜过把子的交情。很乐意替我代劳，一起为基地建设添砖加瓦。",
-          ContentTC = "咳咳，有一件事姑奶奶可能不知。這裡的兩位和我可是拜過把子的交情。很樂意替我代勞，一起為基地建設添磚加瓦。",
+          ContentTC = "咳咳，有一件事姑奶奶可能不知。這兩位和我可是拜過把子的交情。很樂意替我代勞，一起為基地建設添磚加瓦。",
           DialogueId = 12043746,
           GUID = "1E267714",
           NextDialogue = 12043747,
@@ -117075,7 +117075,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043815] = {
           Content = "唉，你们啊……算了，正巧{nickname}来了，就让{性别：他|她}来给你们露一手吧。",
-          ContentTC = "唉，你們啊……算了，正巧{nickname}來了，就讓{性别：他|她}給你們露一手吧。",
+          ContentTC = "唉，你們啊……算了，正巧{nickname}來了，就讓{性别：他|她}來給你們露一手吧。",
           DialogueId = 12043815,
           GUID = "1E268266",
           NextDialogue = 12043816,
@@ -117317,7 +117317,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044002] = {
           Content = "把药草捣碎了和上姜黄粉，再敷上几回，伤基本就好了，你就也能自由走动了。",
-          ContentTC = "把藥草搗碎了和上薑黃粉，再敷上幾回，傷就基本好了，你就也能自由走動了。",
+          ContentTC = "把藥草搗碎了和上薑黃粉，再敷上幾回，傷基本就好了，你就也能自由走動了。",
           DialogueId = 12044002,
           GUID = "1E26A114",
           NextDialogue = 12044003,
@@ -117326,7 +117326,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044003] = {
           Content = "呵呵……小苏还是这么记挂着我的伤，真是大家的贴心小棉袄。那我可得赶紧把伤养好，不能让小苏天天操心喽。",
-          ContentTC = "呵呵……小蘇還這麼記掛著我的傷，真是大家的貼心小棉襖。那我可得趕緊把傷養好，不能讓小蘇天天操心嘍。",
+          ContentTC = "呵呵……小蘇還是這麼記掛著我的傷，真是大家的貼心小棉襖。那我可得趕緊把傷養好，不能讓小蘇天天操心嘍。",
           DialogueId = 12044003,
           GUID = "1E26A13E",
           NextDialogue = 12044004,
@@ -117437,7 +117437,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044015] = {
           Content = "算了算了，你们年轻人做事就是这么风风火火。你们赶紧去调校天罗拒风仪吧，之后得空再来找唐叔，给你们细细上一上课。",
-          ContentTC = "算了算了，你們年輕人做事就是這麼風風火火。你們趕緊去調校天羅拒風儀吧，之後得空了再來找唐叔，給你們細細上一上課。",
+          ContentTC = "算了算了，你們年輕人做事就是這麼風風火火。你們趕緊去調校天羅拒風儀吧，之後得空再來找唐叔，給你們細細上一上課。",
           DialogueId = 12044015,
           GUID = "1E26A336",
           NextDialogue = 12044016,
@@ -117910,7 +117910,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044316] = {
           Content = "朱朴，我懂你的感受……姑姑死之后的一段时间，我也和你有一样的想法。这里的每个人都经历过这样夜不能寐的时刻。",
-          ContentTC = "朱朴，我懂你的感受……姑姑死之後的一段時間，我也和你有一樣的想法。這裡每個人都經歷過這樣夜不能寐的時刻。",
+          ContentTC = "朱朴，我懂你的感受……姑姑死之後的一段時間，我也和你有一樣的想法。這裡的每個人都經歷過這樣夜不能寐的時刻。",
           DialogueId = 12044316,
           GUID = "1E26D498",
           NextDialogue = 12044317,
@@ -117955,7 +117955,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044321] = {
           Content = "放心吧，菡姐只希望你们每一个都平平安安长大，她不会把你的话放在心上的。",
-          ContentTC = "放心吧，菡姐只希望你們每一個都平平安安長大，她不會把你的話記在心上的。",
+          ContentTC = "放心吧，菡姐只希望你們每一個都平平安安長大，她不會把你的話放在心上的。",
           DialogueId = 12044321,
           GUID = "1E26D56A",
           NextDialogue = 12044322,
@@ -118107,7 +118107,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044413] = {
           Content = "现在站在这里的，都是你曾经的同伴、师长、后辈。我们是否有罪，我相信你比任何人都清楚。",
-          ContentTC = "現在站在這裡的，都是你曾經的同伴、師長、後輩。我們是否有罪，我相信你比任何人都更清楚。",
+          ContentTC = "現在站在這裡的，都是你曾經的同伴、師長、後輩。我們是否有罪，我相信你比任何人都清楚。",
           DialogueId = 12044413,
           GUID = "1E26E482",
           NextDialogue = 12044414,
@@ -119731,7 +119731,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12045532] = {
           Content = "我……我对刚刚他们吵架时提到的那些悬衡啊机枢啊黍离之战什么的很好奇，不行吗！我的好学之心正在熊熊燃烧！",
-          ContentTC = "我……我對剛剛他們吵架時提到的那些懸衡啊機樞啊黍離之戰什麼的很好奇，不行嗎！我的好學之心現在正在熊熊燃燒！",
+          ContentTC = "我……我對剛剛他們吵架時提到的那些懸衡啊機樞啊黍離之戰什麼的很好奇，不行嗎！我的好學之心正在熊熊燃燒！",
           DialogueId = 12045532,
           GUID = "1E279C18",
           NextDialogue = 12045533,
@@ -120576,7 +120576,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12045728] = {
           Content = "从那之后，师兄几乎再也没有笑过，人也变得寡言少语。后来，一个满月的晚上，师兄独自离开了。再见面时，他已经变成了应天尉。",
-          ContentTC = "從那之後，師兄幾乎再也沒有笑過，人也變得更加寡言少語。後來，一個滿月的夜晚，師兄獨自離開了。再見面時，他已經變成了應天尉。",
+          ContentTC = "從那之後，師兄幾乎再也沒有笑過，人也變得寡言少語。後來，一個滿月的晚上，師兄獨自離開了。再見面時，他已經變成了應天尉。",
           DialogueId = 12045728,
           GUID = "1E27BC40",
           NextDialogue = 12045729,
@@ -120585,7 +120585,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12045729] = {
           Content = "我不知道他和白龙达成了什么交易，我只知道，那个小时候带着我偷溜出去买桂花糕，会手把手指导我剑术的师兄再也回不来了。",
-          ContentTC = "我不知道他和白龍達成了什麼交易，我只知道，那個小時候帶著我偷溜出去買桂花糕，會手把手指導我劍術的師兄再也不會回來了。",
+          ContentTC = "我不知道他和白龍達成了什麼交易，我只知道，那個小時候帶著我偷溜出去買桂花糕，會手把手指導我劍術的師兄再也回不來了。",
           DialogueId = 12045729,
           GUID = "1E27BC6A",
           NextDialogue = 12045730,
@@ -121762,7 +121762,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12046506] = {
           Content = "止流，吾辈从来对你寄予厚望。龙渊上卿的殊荣和力量，可不是随便授于你身的！",
-          ContentTC = "止流，吾輩從來對你寄予重望。龍淵上卿的殊榮和力量，可不是隨便授於你身的！",
+          ContentTC = "止流，吾輩從來對你寄予厚望。龍淵上卿的殊榮和力量，可不是隨便授於你身的！",
           DialogueId = 12046506,
           GUID = "1E283BE4",
           NextDialogue = 12046507,
@@ -121911,12 +121911,14 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12046615] = {
           Content = "为大风九章奔走，于我而言，是一件将功折罪的幸事。",
+          ContentTC = "為大風九章奔走，於我而言，是一件將功折罪的幸事。",
           DialogueId = 12046615,
           GUID = "12046615.0",
           VoiceName = "voice/$Locale$/story/1204/120466/12046615"
         },
         [12046616] = {
           Content = "万万不可啊，止流大当家——",
+          ContentTC = "萬萬不可啊，止流大當家——",
           DialogueId = 12046616,
           GUID = "12046616.0",
           VoiceName = "voice/$Locale$/story/1201/120229/1E191CD6"
@@ -122238,7 +122240,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12046913] = {
           Content = "既是人为，在创立之初，便设置了规则和约定。狴犴，应天尉，乃至于太皓、烛阴，都是遵循着这规则而运转的。",
-          ContentTC = "既是人為，在創立之初，便設置了規則和約定。狴犴，應天尉，乃至於太皓、燭陰，都是遵從著這規則而運轉的。",
+          ContentTC = "既是人為，在創立之初，便設置了規則和約定。狴犴，應天尉，乃至於太皓、燭陰，都是遵循著這規則而運轉的。",
           DialogueId = 12046913,
           GUID = "1E287EAA",
           NextDialogue = 12046914,
@@ -124423,6 +124425,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12048751] = {
           Content = "异样感似乎还在隐隐跳动，先走吧……",
+          ContentTC = "異樣感似乎還在隱隱跳動，先走吧……",
           DialogueId = 12048751,
           Duration = 7,
           GUID = "12048751.0",
@@ -124439,6 +124442,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         [12048803] = {DialogueId = 12048803},
         [12048804] = {
           Content = "小仆从，等等，苏乙好像有什么话想和我们说……",
+          ContentTC = "小僕從，等等，蘇乙好像有什麼話想和我們說……",
           DialogueId = 12048804,
           GUID = "12048804.0",
           SpeakNpcId = 200002
@@ -124446,6 +124450,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         [12048805] = {DialogueId = 12048805, GUID = "12048805.0"},
         [12048806] = {
           Content = "有意思……我已经完全掌握这个机关的结构了。要不要让我来试试看？",
+          ContentTC = "有意思……我已經完全掌握這個機關的結構了。要不要讓我來試試看？",
           DialogueId = 12048806,
           GUID = "12048806.0",
           SpeakNpcId = 240026
@@ -124453,12 +124458,14 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         [12048807] = {DialogueId = 12048807, GUID = "12048807.0"},
         [12048808] = {
           Content = "苏乙，我好像不太明白这道机关该怎么解……",
+          ContentTC = "蘇乙，我好像不太明白這道機關該怎麼解……",
           DialogueId = 12048808,
           GUID = "12048808.0",
           SpeakNpcId = 100001
         },
         [12048809] = {
           Content = "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
+          ContentTC = "沒問題，包在我身上！本姑娘剛剛看你嘗試，早就手癢了~",
           DialogueId = 12048809,
           GUID = "12048809.0",
           NextDialogue = 12048810,
@@ -124466,6 +124473,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12048810] = {
           Content = "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
+          ContentTC = "不過話說回來，{nickname}，你回去後可得好好從頭補起機樞知識呢。讓我想想，從哪裡開始呢，不如就從……",
           DialogueId = 12048810,
           GUID = "12048810.0",
           NextDialogue = 12048811,
@@ -124473,6 +124481,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12048811] = {
           Content = "哇啊啊，小仆从，苏乙身上又散发出那种不近人情的老师气场了！好吓人！",
+          ContentTC = "哇啊啊，小僕從，蘇乙身上又散發出那種不近人情的老師氣場了！好嚇人！",
           DialogueId = 12048811,
           GUID = "12048811.0",
           NextDialogue = 12048812,
@@ -124481,6 +124490,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         [12048812] = {DialogueId = 12048812, GUID = "12048812.0"},
         [12048813] = {
           Content = "哦？{nickname}，你想自己试试看吗？那要是遇到不会的部分，再来问我吧~",
+          ContentTC = "哦？{nickname}，你想自己試試看嗎？那要是遇到不會的部分，再來問我吧~",
           DialogueId = 12048813,
           GUID = "12048813.0",
           SpeakNpcId = 240026
@@ -124914,7 +124924,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12049049] = {
           Content = "{nickname}，注意安全，我来护你左右。",
-          ContentTC = "是穢獸……{nickname}，注意安全，我來護你左右。",
+          ContentTC = "{nickname}，注意安全，我來護你左右。",
           DialogueId = 12049049,
           GUID = "1E29DD1A",
           SpeakNpcId = 240002,
@@ -128956,6 +128966,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DisableMouth = 1,
           GUID = "1E31881C",
           NextDialogue = 12061015,
+          SnapShot = "HEART",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120610/1E31881C"
         },
@@ -132014,7 +132025,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12062303] = {
           Content = "……我并非以应天尉之身前来。只是有要事需要告知苏乙和{nickname}，说完事了就走，绝不多叨扰。",
-          ContentTC = "……我並非以應天尉之身前來。只是有要事需要告知蘇乙和{nickname}兩位，說完事了就走，絕不多叨擾。",
+          ContentTC = "……我並非以應天尉之身前來。只是有要事需要告知蘇乙和{nickname}，說完事了就走，絕不多叨擾。",
           DialogueId = 12062303,
           GUID = "1E325B96",
           NextDialogue = 12062304,
@@ -133407,7 +133418,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         [12062650] = {
           Content = "我是不会放着你不管的。你也知道这一点。",
           DialogueId = 12062650,
-          GUID = "1E32949C",
+          GUID = "1E3292B6",
           SpeakNpcId = 100001
         },
         [12062701] = {
@@ -146016,6 +146027,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
         },
         [50107401] = {
           Content = "父亲向来放不下娘亲，想必在天上也是不愿看见娘亲落泪的。",
+          ContentTC = "父親向來放不下娘親，想必在天上也是不願看見娘親落淚的。",
           DialogueId = 50107401,
           GUID = "7D70497A",
           SpeakNpcId = 701148
@@ -148089,7 +148101,7 @@ PlayAnimation{_delay{6.7},ActorId{200003},AnimationId{"Talk03_Start"},Duration{1
         },
         [51001317] = {
           Content = "最近总有人冒用我的名字到处贩卖劣质的假货，说什么“这是水仙平原推出的新品”啦，“在水仙平原的吧台上被一抢而光，想喝都喝不到”啦……",
-          ContentTC = "最近總有人冒用我的名字到處販賣劣質的假貨，說什麽「這是水仙平原推出的新品」啦，「在水仙平原的吧臺上被一搶而光，想喝都喝不到」啦……",
+          ContentTC = "最近總有人冒用我的名字到處販賣劣質的假貨，說什麽「這是水仙平原推出的新品」啦，「在水仙平原的吧台上被一搶而光，想喝都喝不到」啦……",
           DialogueId = 51001317,
           GUID = "7FAD2B92",
           NextDialogue = 51001318,
@@ -173872,7 +173884,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010801] = {
           Content = "您好，这朵花与您今天的装扮很相称……如果那孩子还在的话，一定也会这么说吧。",
-          ContentTC = "您好，這朵花與您今天的裝扮很相稱……如果那孩子還在的話，一定也會這麽說吧。",
+          ContentTC = "您好，這朵花與您今天的裝扮很相稱……如果那孩子還在的話，一定也會這麼說吧。",
           DialogueId = 51010801,
           GUID = "7FB33F8A",
           NextOptions = {
@@ -175270,12 +175282,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012300] = {
           Content = "“咔嚓——”",
+          ContentTC = "「咔嚓——」",
           DialogueId = 51012300,
           GUID = "7FB43578",
           NextDialogue = 51012301
         },
         [51012301] = {
           Content = "咦？",
+          ContentTC = "咦？",
           DialogueId = 51012301,
           GUID = "7FB435A2",
           NextDialogue = 51012302,
@@ -175283,6 +175297,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012302] = {
           Content = "啊，真抱歉，不小心把你拍进去了……",
+          ContentTC = "啊，真抱歉，不小心把你拍進去了……",
           DialogueId = 51012302,
           GUID = "7FB435CC",
           NextDialogue = 51012304,
@@ -175290,12 +175305,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012303] = {
           Content = "我不是故意的，之后我会把这张照片销毁。",
+          ContentTC = "我不是故意的，之後我會把這張照片銷毀。",
           DialogueId = 51012303,
           GUID = "7FB435F6",
           SpeakNpcId = 700383
         },
         [51012304] = {
           Content = "你为什么要拍这座房子？",
+          ContentTC = "你為什麼要拍這座房子？",
           DialogueId = 51012304,
           GUID = "7FB43620",
           NextDialogue = 51012305,
@@ -175303,6 +175320,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012305] = {
           Content = "噢，在解释之前，请允许我做个自我介绍——我叫帕蒂，是一个旅行摄影师！",
+          ContentTC = "噢，在解釋之前，請允許我做個自我介紹——我叫帕蒂，是一個旅行攝影師！",
           DialogueId = 51012305,
           GUID = "7FB4364A",
           NextDialogue = 51012306,
@@ -175310,6 +175328,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012306] = {
           Content = "我今天刚到冰湖城，正在寻找此地值得记录的风景。",
+          ContentTC = "我今天剛到冰湖城，正在尋找此地值得記錄的風景。",
           DialogueId = 51012306,
           GUID = "7FB43674",
           NextDialogue = 51012307,
@@ -175317,6 +175336,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012307] = {
           Content = "这座房子实在是漂亮极了，我看得入迷，情不自禁地举起了相机……所以才没注意到你路过，抱歉啦。",
+          ContentTC = "這座房子實在是漂亮極了，我看得入迷，情不自禁地舉起了相機……所以才沒注意到你路過，抱歉啦。",
           DialogueId = 51012307,
           GUID = "7FB4369E",
           NextDialogue = 51012308,
@@ -175324,6 +175344,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012308] = {
           Content = "“摄影师”……就是专门拍照的人？原来世界上还有这种职业啊。你拍过很多照片吗？",
+          ContentTC = "「攝影師」……就是專門拍照的人？原來世界上還有這種職業啊。你拍過很多照片嗎？",
           DialogueId = 51012308,
           GUID = "7FB436C8",
           NextDialogue = 51012309,
@@ -175331,6 +175352,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012309] = {
           Content = "当然啦，你看——",
+          ContentTC = "當然啦，你看——",
           DialogueId = 51012309,
           GUID = "7FB436F2",
           NextDialogue = 51012310,
@@ -175338,12 +175360,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012310] = {
           Content = "（少女从包里掏出一本厚厚的笔记，打开向你展示。里面贴着很多照片，文字反而很少。）",
+          ContentTC = "（少女從包里掏出一本厚厚的筆記，打開向你展示。裡面貼著很多照片，文字反而很少。）",
           DialogueId = 51012310,
           GUID = "7FB4371C",
           NextDialogue = 51012311
         },
         [51012311] = {
           Content = "原来照片还能做成这样特别的笔记，真有意思……我拍的照片都被我随手放在柜子里了。",
+          ContentTC = "原來照片還能做成這樣特別的筆記，真有意思……我拍的照片都被我隨手放在柜子裡了。",
           DialogueId = 51012311,
           GUID = "7FB43746",
           NextDialogue = 51012312,
@@ -175351,6 +175375,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012312] = {
           Content = "嘿嘿，我把它叫做“影像笔记”哦。你感兴趣的话，也做一本试试怎么样？",
+          ContentTC = "嘿嘿，我把它叫做「影像筆記」哦。你感興趣的話，也做一本試試怎麼樣？",
           DialogueId = 51012312,
           GUID = "7FB43770",
           NextDialogue = 51012313,
@@ -175358,6 +175383,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012313] = {
           Content = "好像有点难。",
+          ContentTC = "好像有點難。",
           DialogueId = 51012313,
           GUID = "7FB4379A",
           NextDialogue = 51012314,
@@ -175365,6 +175391,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012314] = {
           Content = "一点也不难的，你试试就知道啦！",
+          ContentTC = "一點也不難的，你試試就知道啦！",
           DialogueId = 51012314,
           GUID = "7FB437C4",
           NextDialogue = 51012315,
@@ -175372,6 +175399,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012315] = {
           Content = "可是……就算说要做，我不知道该放些什么照片，写些什么文字。你是怎么做的？",
+          ContentTC = "可是……就算說要做，我不知道該放些什麼照片，寫些什麼文字。你是怎麼做的？",
           DialogueId = 51012315,
           GUID = "7FB437EE",
           NextDialogue = 51012316,
@@ -175379,6 +175407,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012316] = {
           Content = "其实我一开始也是随便做做的。不过，做了这么多年，我也算积累了一些经验。既然你是从头做起，那先定一下属于你的影像笔记的“主题”，怎么样？",
+          ContentTC = "其實我一開始也是隨便做做的。不過，做了這麼多年，我也算積累了一些經驗。既然你是從頭做起，那先定一下屬於你的影像筆記的「主題」，怎麼樣？",
           DialogueId = 51012316,
           GUID = "7FB43818",
           NextDialogue = 51012317,
@@ -175386,6 +175415,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012317] = {
           Content = "主题？",
+          ContentTC = "主題？",
           DialogueId = 51012317,
           GUID = "7FB43842",
           NextDialogue = 51012318,
@@ -175393,6 +175423,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012318] = {
           Content = "嗯，简单来说就是你制作笔记的目的——就比如说我吧，我制作这些笔记，是为了回到故乡时拿给我的姐姐看。",
+          ContentTC = "嗯，簡單來說就是你製作筆記的目的——就比如說我吧，我製作這些筆記，是為了回到故鄉時拿給我的姐姐看。",
           DialogueId = 51012318,
           GUID = "7FB4386C",
           NextDialogue = 51012319,
@@ -175400,6 +175431,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012319] = {
           Content = "我姐姐曾经很喜欢旅行，可后来她生了重病，身体变得很弱，没法再出远门，一直郁郁寡欢。",
+          ContentTC = "我姐姐曾經很喜歡旅行，可後來她生了重病，身體變得很弱，沒法再出遠門，一直鬱鬱寡歡。",
           DialogueId = 51012319,
           GUID = "7FB43896",
           NextDialogue = 51012320,
@@ -175407,6 +175439,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012320] = {
           Content = "可有一天，当我无意中把我外出时拍到的照片展示给姐姐看的时候，她的脸上竟然破天荒地出现了笑容……",
+          ContentTC = "可有一天，當我無意中把我外出時拍到的照片展示給姐姐看的時候，她的臉上竟然破天荒地出現了笑容……",
           DialogueId = 51012320,
           GUID = "7FB438C0",
           NextDialogue = 51012321,
@@ -175414,6 +175447,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012321] = {
           Content = "这就是我开始旅行并制作影像笔记的契机。我想要走到更远的地方，拍下更多的风景，让姐姐在家也能看到广阔的世界。",
+          ContentTC = "這就是我開始旅行並製作影像筆記的契機。我想要走到更遠的地方，拍下更多的風景，讓姐姐在家也能看到廣闊的世界。",
           DialogueId = 51012321,
           GUID = "7FB438EA",
           NextDialogue = 51012322,
@@ -175421,6 +175455,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012322] = {
           Content = "所以，我的影像笔记的主题就是“记录广阔的世界”。从这个主题出发，我要做的就是找到新的风景并记录下来。你呢，你有什么特别想记录的东西吗？",
+          ContentTC = "所以，我的影像筆記的主題就是「記錄廣闊的世界」。從這個主題出發，我要做的就是找到新的風景並記錄下來。你呢，你有什麼特別想記錄的東西嗎？",
           DialogueId = 51012322,
           GUID = "7FB43914",
           NextDialogue = 51012325,
@@ -175428,18 +175463,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012323] = {
           Content = "……",
+          ContentTC = "……",
           DialogueId = 51012323,
           GUID = "7FB4393E",
           SpeakNpcId = 100001
         },
         [51012324] = {
           Content = "用你的眼睛，替我继续看看这个世界吧。",
+          ContentTC = "用你的眼睛，替我繼續看看這個世界吧。",
           DialogueId = 51012324,
           GUID = "7FB43968",
           SpeakNpcName = "UI_Npc_Name_Saiqi"
         },
         [51012325] = {
           Content = "送给我照相机的那个人曾经说过，希望我能代替她继续看看这个世界。",
+          ContentTC = "送給我照相機的那個人曾經說過，希望我能代替她繼續看看這個世界。",
           DialogueId = 51012325,
           GUID = "7FB43992",
           NextDialogue = 51012326,
@@ -175447,6 +175485,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012326] = {
           Content = "我想把旅程中拍摄过的照片制作成影像笔记，作为好好看过这个世界的证明。这可以作为“主题”吗？",
+          ContentTC = "我想把旅程中拍攝過的照片製作成影像筆記，作為好好看過這個世界的證明。這可以作為「主題」嗎？",
           DialogueId = 51012326,
           GUID = "7FB439BC",
           NextDialogue = 51012327,
@@ -175454,6 +175493,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012327] = {
           Content = "当然了，我觉得这个主题很棒！",
+          ContentTC = "當然了，我覺得這個主題很棒！",
           DialogueId = 51012327,
           GUID = "7FB439E6",
           NextDialogue = 51012328,
@@ -175461,6 +175501,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012328] = {
           Content = "既然你已经有方向了，不如现在就开始行动起来！我刚好带了一本空白的笔记，就送给你吧。",
+          ContentTC = "既然你已經有方向了，不如現在就開始行動起來！我剛好帶了一本空白的筆記，就送給你吧。",
           DialogueId = 51012328,
           GUID = "7FB43A10",
           NextDialogue = 51012329,
@@ -175468,6 +175509,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012329] = {
           Content = "没关系，我可以自己去买。",
+          ContentTC = "沒關係，我可以自己去買。",
           DialogueId = 51012329,
           GUID = "7FB43A3A",
           NextDialogue = 51012330,
@@ -175475,6 +175517,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012330] = {
           Content = "不不，我这本可不是商店那种普通笔记本。你看，它的内页里已经做好了放置照片和书写文字的区域，对新手来说很方便哦。",
+          ContentTC = "不不，我這本可不是商店那種普通筆記本。你看，它的內頁里已經做好了放置照片和書寫文字的區域，對新手來說很方便哦。",
           DialogueId = 51012330,
           GUID = "7FB43A64",
           NextDialogue = 51012331,
@@ -175482,6 +175525,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012331] = {
           Content = "它的封面还是空白的，你可以自己给它加上装饰，让它变得独一无二。这样，记录的过程也会变得更有成就感！",
+          ContentTC = "它的封面還是空白的，你可以自己給它加上裝飾，讓它變得獨一無二。這樣，記錄的過程也會變得更有成就感！",
           DialogueId = 51012331,
           GUID = "7FB43A8E",
           NextDialogue = 51012332,
@@ -175489,6 +175533,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012332] = {
           Content = "原来如此……那我就收下了，谢谢你。",
+          ContentTC = "原來如此……那我就收下了，謝謝你。",
           DialogueId = 51012332,
           GUID = "7FB43AB8",
           NextDialogue = 51012333,
@@ -175496,12 +175541,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012333] = {
           Content = "嗯，加油呀，新人摄影师！等你做出了属于自己的影像笔记，欢迎来找我分享~",
+          ContentTC = "嗯，加油呀，新人攝影師！等你做出了屬於自己的影像筆記，歡迎來找我分享~",
           DialogueId = 51012333,
           GUID = "7FB43AE2",
           SpeakNpcId = 700383
         },
         [51012400] = {
           Content = "（该怎么装饰呢……？对了，也许铁匠前辈那里会有材料。）",
+          ContentTC = "（該怎麼裝飾呢……？對了，也許鐵匠前輩那裡會有材料。）",
           DialogueId = 51012400,
           GUID = "7FB445E0",
           SpeakNpcId = 100001
@@ -175516,6 +175563,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
       return {
         [51012500] = {
           Content = "嗯？年轻人，找我有事吗？",
+          ContentTC = "嗯？年輕人，找我有事嗎？",
           DialogueId = 51012500,
           GUID = "7FB45648",
           NextDialogue = 51012501,
@@ -175523,6 +175571,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012501] = {
           Content = "你好，前辈。我想给这本“影像笔记”做一些装饰。如果你有多余的材料，可不可以分一些给我？",
+          ContentTC = "你好，前輩。我想給這本「影像筆記」做一些裝飾。如果你有多餘的材料，可不可以分一些給我？",
           DialogueId = 51012501,
           GUID = "7FB45672",
           NextDialogue = 51012502,
@@ -175533,6 +175582,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012502] = {
           Content = "有，当然有！平时你这么照顾老朽的生意，这点小忙不在话下。来，你自己挑，想要的尽管拿走。",
+          ContentTC = "有，當然有！平時你這麼照顧老朽的生意，這點小忙不在話下。來，你自己挑，想要的儘管拿走。",
           DialogueId = 51012502,
           GUID = "7FB4569C",
           NextDialogue = 51012503,
@@ -175543,6 +175593,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012503] = {
           Content = "哈哈，真教人怀念啊，老朽小的时候，也很喜欢做手工……",
+          ContentTC = "哈哈，真教人懷念啊，老朽小的時候，也很喜歡做手工……",
           DialogueId = 51012503,
           GUID = "7FB456C6",
           NextDialogue = 51012504,
@@ -175550,6 +175601,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012504] = {
           Content = "在铁匠前辈的帮助下对影像笔记进行了装饰……",
+          ContentTC = "在鐵匠前輩的幫助下對影像筆記進行了裝飾……",
           DialogueId = 51012504,
           GUID = "7FB456F0",
           IsBlack = 1,
@@ -175557,6 +175609,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012505] = {
           Content = "嗯，这样就差不多了。接下来，想一想要放怎样的照片进去吧。",
+          ContentTC = "嗯，這樣就差不多了。接下來，想一想要放怎樣的照片進去吧。",
           DialogueId = 51012505,
           DialoguePanelType = "{type:showpic;dir:Texture2D'/Game/UI/Texture/Dynamic/Image/Guide/T_Guide_ChapterItem_0021.T_Guide_ChapterItem_0021'}",
           GUID = "7FB4571A",
@@ -175564,6 +175617,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012600] = {
           Content = "第一张照片，应该是旅途的起点。那么，就只能是那个地方了——",
+          ContentTC = "第一張照片，應該是旅途的起點。那麼，就只能是那個地方了——",
           DialogueId = 51012600,
           GUID = "7FB466B0",
           NextDialogue = 51012601,
@@ -175571,6 +175625,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012601] = {
           Content = "净界岛，我和贝蕾妮卡一起生活的故乡。",
+          ContentTC = "淨界島，我和貝蕾妮卡一起生活的故鄉。",
           DialogueId = 51012601,
           GUID = "7FB466DA",
           NextDialogue = 51012602,
@@ -175578,6 +175633,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012602] = {
           Content = "如果以后能回到净界岛，我想给<H>家</>拍一张照片，作为笔记的第一页。",
+          ContentTC = "如果以後能回到淨界島，我想給<H>家</>拍一張照片，作為筆記的第一頁。",
           DialogueId = 51012602,
           GUID = "7FB46704",
           NextDialogue = 51012603,
@@ -175585,12 +175641,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012603] = {
           Content = "等找到了贝蕾妮卡，再和她一起拍一张照片吧。",
+          ContentTC = "等找到了貝蕾妮卡，再和她一起拍一張照片吧。",
           DialogueId = 51012603,
           GUID = "7FB47718",
           SpeakNpcId = 100001
         },
         [51012800] = {
           Content = "离开净界岛之后，我来到了冰湖城。",
+          ContentTC = "離開淨界島之後，我來到了冰湖城。",
           DialogueId = 51012800,
           GUID = "7FB48780",
           NextDialogue = 51012801,
@@ -175598,6 +175656,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012801] = {
           Content = "在这座冷冰冰的城市，有一个女孩温柔地接纳了我、帮助了我……",
+          ContentTC = "在這座冷冰冰的城市，有一個女孩溫柔地接納了我、幫助了我……",
           DialogueId = 51012801,
           GUID = "7FB487AA",
           NextDialogue = 51012802,
@@ -175605,6 +175664,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012802] = {
           Content = "第二页的照片，就选<H>和她第一次见面的地方</>吧。",
+          ContentTC = "第二頁的照片，就選<H>和她第一次見面的地方</>吧。",
           DialogueId = 51012802,
           GUID = "7FB487D4",
           NextDialogue = 51012803,
@@ -175612,6 +175672,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012803] = {
           Content = "我不会忘记，在净界岛之外的世界，是谁给了我第一份温暖的回忆。",
+          ContentTC = "我不會忘記，在淨界島之外的世界，是誰給了我第一份溫暖的回憶。",
           DialogueId = 51012803,
           GUID = "7FB497E8",
           NextDialogue = 51012804,
@@ -175619,12 +175680,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51012804] = {
           Content = "我会记住你的，赛琪。",
+          ContentTC = "我會記住你的，賽琪。",
           DialogueId = 51012804,
           GUID = "7FB49812",
           SpeakNpcId = 100001
         },
         [51013000] = {
           Content = "这一页……我想留下<H>和赛琪分别的地方</>。",
+          ContentTC = "這一頁……我想留下<H>和賽琪分別的地方</>。",
           DialogueId = 51013000,
           GUID = "7FB4A850",
           NextDialogue = 51013001,
@@ -175632,6 +175695,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013001] = {
           Content = "虽然非常不想回忆那个悲伤的时刻……但，赛琪一定会希望我全部记住。",
+          ContentTC = "雖然非常不想回憶那個悲傷的時刻……但，賽琪一定會希望我全部記住。",
           DialogueId = 51013001,
           GUID = "7FB4A87A",
           NextDialogue = 51013002,
@@ -175639,6 +175703,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013002] = {
           Content = "赛琪，我没有忘记约定。",
+          ContentTC = "賽琪，我沒有忘記約定。",
           DialogueId = 51013002,
           GUID = "7FB4B8B8",
           NextDialogue = 51013003,
@@ -175646,12 +175711,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013003] = {
           Content = "将来有一天，等我回到了南方，我一定会在房子周围种满花。",
+          ContentTC = "將來有一天，等我回到了南方，我一定會在房子周圍種滿花。",
           DialogueId = 51013003,
           GUID = "7FB4B8E2",
           SpeakNpcId = 100001
         },
         [51013200] = {
           Content = "在那之后的下一个大事件……就是“卡戎狩猎”的案子，是幻景和布鲁斯的故事。",
+          ContentTC = "在那之後的下一個大事件……就是「卡戎狩獵」的案子，是幻景和布魯斯的故事。",
           DialogueId = 51013200,
           GUID = "7FB4C920",
           NextDialogue = 51013201,
@@ -175659,6 +175726,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013201] = {
           Content = "我还记得他们<H>在下水道里为自己搭建的那座舞台</>，那也是我们第一次见到扮演布鲁斯的幻景。",
+          ContentTC = "我還記得他們<H>在下水道里為自己搭建的那座舞台</>，那也是我們第一次見到扮演布魯斯的幻景。",
           DialogueId = 51013201,
           GUID = "7FB4C94A",
           NextDialogue = 51013202,
@@ -175666,6 +175734,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013202] = {
           Content = "这一页的相片，我会选择那沉没在淤泥之中，却依然闪闪发光的“梦想”。",
+          ContentTC = "這一頁的相片，我會選擇那沉沒在淤泥之中，卻依然閃閃發光的「夢想」。",
           DialogueId = 51013202,
           GUID = "7FB4C974",
           NextDialogue = 51013203,
@@ -175673,6 +175742,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013203] = {
           Content = "回想起来，这就是他最后那场演出的“开幕”……",
+          ContentTC = "回想起來，這就是他最後那場演出的「開幕」……",
           DialogueId = 51013203,
           GUID = "7FB4D988",
           NextDialogue = 51013204,
@@ -175680,12 +175750,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013204] = {
           Content = "可惜那时候，我们还什么都不知道。",
+          ContentTC = "可惜那時候，我們還什麼都不知道。",
           DialogueId = 51013204,
           GUID = "7FB4D9B2",
           SpeakNpcId = 100001
         },
         [51013400] = {
           Content = "这一页，该记下“卡戎狩猎”的结局了。",
+          ContentTC = "這一頁，該記下「卡戎狩獵」的結局了。",
           DialogueId = 51013400,
           GUID = "7FB4E9F0",
           NextDialogue = 51013401,
@@ -175693,6 +175765,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013401] = {
           Content = "盖雷亚剧院的舞台，幻景以自己的身份和我们第一次、也是最后一次对话的地方。我在<H>那座舞台</>见证了他故事的终幕。",
+          ContentTC = "蓋雷亞劇院的舞台，幻景以自己的身份和我們第一次、也是最後一次對話的地方。我在<H>那座舞台</>見證了他故事的終幕。",
           DialogueId = 51013401,
           GUID = "7FB4EA1A",
           NextDialogue = 51013402,
@@ -175700,6 +175773,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013402] = {
           Content = "虽然观众只有我们寥寥几人，但我们，以及他自己，都不会忘记……",
+          ContentTC = "雖然觀眾只有我們寥寥幾人，但我們，以及他自己，都不會忘記……",
           DialogueId = 51013402,
           GUID = "7FB4EA44",
           NextDialogue = 51013403,
@@ -175707,12 +175781,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013403] = {
           Content = "他在这里完成了一场最好的演出。",
+          ContentTC = "他在這裡完成了一場最好的演出。",
           DialogueId = 51013403,
           GUID = "7FB4FA58",
           SpeakNpcId = 100001
         },
         [51013600] = {
           Content = "后来，我们因为一场意外，跟着止流去往了华胥。",
+          ContentTC = "後來，我們因為一場意外，跟著止流去往了華胥。",
           DialogueId = 51013600,
           GUID = "7FB50AC0",
           NextDialogue = 51013601,
@@ -175720,6 +175796,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013601] = {
           Content = "如果要说最初对华胥的印象，脑海里首先浮现的，是烟津渡那座气派的商会“<H>百年春</>”。",
+          ContentTC = "如果要說最初對華胥的印象，腦海里首先浮現的，是煙津渡那座氣派的商會「<H>百年春</>」。",
           DialogueId = 51013601,
           GUID = "7FB50AEA",
           NextDialogue = 51013602,
@@ -175727,6 +175804,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013602] = {
           Content = "这一页就它吧，还记得百年春门口的那条白龙雕像很威风凛凛呢。",
+          ContentTC = "這一頁就它吧，還記得百年春門口的那條白龍雕像很威風凜凜呢。",
           DialogueId = 51013602,
           GUID = "7FB50B14",
           NextDialogue = 51013603,
@@ -175734,6 +175812,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013603] = {
           Content = "第一次踏上华胥的土地时，真是完全没想到竟会被卷入这样重大的事件……",
+          ContentTC = "第一次踏上華胥的土地時，真是完全沒想到竟會被捲入這樣重大的事件……",
           DialogueId = 51013603,
           GUID = "7FB51B28",
           NextDialogue = 51013604,
@@ -175741,12 +175820,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013604] = {
           Content = "命运还真是奇妙。不过，这大概本来就在止流的计划之中吧。",
+          ContentTC = "命運還真是奇妙。不過，這大概本來就在止流的計劃之中吧。",
           DialogueId = 51013604,
           GUID = "7FB51B52",
           SpeakNpcId = 100001
         },
         [51013800] = {
           Content = "华胥的这段旅程中，最惊心动魄的一幕，还是听闻止流踏入太虚陵的时候吧。",
+          ContentTC = "華胥的這段旅程中，最驚心動魄的一幕，還是聽聞止流踏入太虛陵的時候吧。",
           DialogueId = 51013800,
           GUID = "7FB52B90",
           NextDialogue = 51013801,
@@ -175754,6 +175835,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013801] = {
           Content = "那片土地上所有人的命运，都被悬在她抛出的钱币之上……好在，最终人们还是共同选择了正确的未来。",
+          ContentTC = "那片土地上所有人的命運，都被懸在她拋出的錢幣之上……好在，最終人們還是共同選擇了正確的未來。",
           DialogueId = 51013801,
           GUID = "7FB52BBA",
           NextDialogue = 51013802,
@@ -175761,6 +175843,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013802] = {
           Content = "这一页的相片，就放<H>执律阁上方的天空</>吧。",
+          ContentTC = "這一頁的相片，就放<H>執律閣上方的天空</>吧。",
           DialogueId = 51013802,
           GUID = "7FB52BE4",
           NextDialogue = 51013803,
@@ -175768,6 +175851,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013803] = {
           Content = "现在回想那时的事还是有点后怕，好在最后一切都顺利收场了。",
+          ContentTC = "現在回想那時的事還是有點後怕，好在最後一切都順利收場了。",
           DialogueId = 51013803,
           GUID = "7FB53BF8",
           NextDialogue = 51013804,
@@ -175775,24 +175859,28 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51013804] = {
           Content = "不过，经历了华胥的故事，我也对未来多了一分信心——所谓的命运，一定是可以改变的。",
+          ContentTC = "不過，經歷了華胥的故事，我也對未來多了一分信心——所謂的命運，一定是可以改變的。",
           DialogueId = 51013804,
           GUID = "7FB53C22",
           SpeakNpcId = 100001
         },
         [51014000] = {
           Content = "目前我想到的足以代表这一路经历的照片就是这些了……不知道这样算是完成了我的“主题”吗？",
+          ContentTC = "目前我想到的足以代表這一路經歷的照片就是這些了……不知道這樣算是完成了我的「主題」嗎？",
           DialogueId = 51014000,
           GUID = "7FB54C60",
           SpeakNpcId = 100001
         },
         [51014100] = {
           Content = "“咔嚓——”",
+          ContentTC = "「咔嚓——」",
           DialogueId = 51014100,
           GUID = "7FB55CC8",
           NextDialogue = 51014101
         },
         [51014101] = {
           Content = "啊，真抱歉——咦？！",
+          ContentTC = "啊，真抱歉——咦？！",
           DialogueId = 51014101,
           GUID = "7FB55CF2",
           NextDialogue = 51014102,
@@ -175800,6 +175888,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014102] = {
           Content = "你怎么从这栋房子里走出来了，该不会这里其实是你家吧？",
+          ContentTC = "你怎麼從這棟房子裡走出來了，該不會這裡其實是你家吧？",
           DialogueId = 51014102,
           GUID = "7FB55D1C",
           NextDialogue = 51014103,
@@ -175807,6 +175896,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014103] = {
           Content = "确实。",
+          ContentTC = "確實。",
           DialogueId = 51014103,
           GUID = "7FB55D46",
           NextDialogue = 51014104,
@@ -175814,6 +175904,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014104] = {
           Content = "什么！我只是随口一问，没想到这真是{性别：他|她}家……早知道就不急着订旅馆了，{性别：他|她}这么好说话，说不定会同意我在这里借宿的……呜……",
+          ContentTC = "什麼！我只是隨口一問，沒想到這真是{性别：他|她}家……早知道就不急著訂旅館了，{性别：他|她}這麼好說話，說不定會同意我在這裡借宿的……嗚……",
           DialogueId = 51014104,
           GUID = "7FB55D70",
           NextDialogue = 51014105,
@@ -175821,6 +175912,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014105] = {
           Content = "咳咳……言归正传。看来你已经开始制作自己的影像笔记了，感觉怎么样？",
+          ContentTC = "咳咳……言歸正傳。看來你已經開始製作自己的影像筆記了，感覺怎麼樣？",
           DialogueId = 51014105,
           GUID = "7FB55D9A",
           NextDialogue = 51014106,
@@ -175828,6 +175920,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014106] = {
           Content = "我试着做了几页，感觉……很奇妙。",
+          ContentTC = "我試著做了幾頁，感覺……很奇妙。",
           DialogueId = 51014106,
           GUID = "7FB55DC4",
           NextDialogue = 51014107,
@@ -175835,6 +175928,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014107] = {
           Content = "尽管照片只是定格的画面，但当我把它贴在纸上，写下文字记录的时候，曾经经历过的一幕幕故事和当时的感受又清晰地浮现出来。",
+          ContentTC = "儘管照片只是定格的畫面，但當我把它貼在紙上，寫下文字記錄的時候，曾經經歷過的一幕幕故事和當時的感受又清晰地浮現出來。",
           DialogueId = 51014107,
           GUID = "7FB55DEE",
           NextDialogue = 51014108,
@@ -175842,6 +175936,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014108] = {
           Content = "所以说，影像笔记唤醒了你重要的回忆与情感——而这些正是你“好好看过世界的证明”！看来你完成了自己的主题呀。",
+          ContentTC = "所以說，影像筆記喚醒了你重要的回憶與情感——而這些正是你「好好看過世界的證明」！看來你完成了自己的主題呀。",
           DialogueId = 51014108,
           GUID = "7FB55E18",
           NextDialogue = 51014109,
@@ -175849,6 +175944,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014109] = {
           Content = "嗯，你说得对。谢谢你向我介绍了这种特别的笔记，我会好好珍藏它。",
+          ContentTC = "嗯，你說得對。謝謝你向我介紹了這種特別的筆記，我會好好珍藏它。",
           DialogueId = 51014109,
           GUID = "7FB55E42",
           NextDialogue = 51014110,
@@ -175856,6 +175952,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014110] = {
           Content = "不客气！能遇到像我一样认真记录影像的人，我也很开心。",
+          ContentTC = "不客氣！能遇到像我一樣認真記錄影像的人，我也很開心。",
           DialogueId = 51014110,
           GUID = "7FB55E6C",
           NextDialogue = 51014111,
@@ -175863,6 +175960,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014111] = {
           Content = "过几天我就要离开冰湖城了，或许在旅途的前方，我们还会再次相遇。到时候，再给我分享你的新笔记吧！",
+          ContentTC = "過幾天我就要離開冰湖城了，或許在旅途的前方，我們還會再次相遇。到時候，再給我分享你的新筆記吧！",
           DialogueId = 51014111,
           GUID = "7FB55E96",
           NextDialogue = 51014112,
@@ -175870,6 +175968,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014112] = {
           Content = "好啊，那就后会有期。",
+          ContentTC = "好啊，那就後會有期。",
           DialogueId = 51014112,
           GUID = "7FB55EC0",
           NextDialogue = 51014113,
@@ -175877,6 +175976,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51014113] = {
           Content = "嗯，后会有期！",
+          ContentTC = "嗯，後會有期！",
           DialogueId = 51014113,
           GUID = "7FB55F02",
           SpeakNpcId = 700383
@@ -204395,6 +204495,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51156307] = {
           Content = "我早跟你说了这街上有贼，之前有人看到了，一个小女孩，皮肤黑黢黢的！",
+          ContentTC = "我早跟你說了這街上有賊，之前有人看到了，一個小女孩，皮膚黑黢黢的！",
           DialogueId = 51156307,
           GUID = "80107EA1",
           NextDialogue = 51156301,
@@ -205192,7 +205293,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51157002] = {
           Content = "这东西可有特色了，你知道锦云谷吗？这道小吃就是我当年因差前往锦云谷，在那待了一段时间后，当地居民拿来招呼我的。",
-          ContentTC = "這東西可有特色了，你知道黍中嗎？這道小吃就是我當年因差前往黍中，在那待了一段時間後，當地居民拿來招呼我的。",
+          ContentTC = "這東西可有特色了，你知道錦雲谷嗎？這道小吃就是我當年因差前往錦雲谷，在那待了一段時間後，當地居民拿來招呼我的。",
           DialogueId = 51157002,
           GUID = "8010F1A4",
           NextDialogue = 51157003,
@@ -205219,7 +205320,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51157005] = {
           Content = "据锦云谷人说，此物名为——串串签！怎么样，要不要尝尝？",
-          ContentTC = "據黍中人說，此物名為——串串簽！怎麼樣，要不要嘗嘗？",
+          ContentTC = "據錦雲谷人說，此物名為——串串簽！怎麼樣，要不要嘗嘗？",
           DialogueId = 51157005,
           GUID = "8010F222",
           SpeakNpcId = 701124
@@ -205233,7 +205334,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51157007] = {
           Content = "好吃啊！要是不好吃，我为何要在锦云谷滞留直到学会这道菜再回来？",
-          ContentTC = "好吃啊！要是不好吃，我為何要在黍中滯留直到學會這道菜再回來？",
+          ContentTC = "好吃啊！要是不好吃，我為何要在錦雲谷滯留直到學會這道菜再回來？",
           DialogueId = 51157007,
           GUID = "8010F276",
           NextDialogue = 51157008,
@@ -211314,6 +211415,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51162410] = {
           Content = "加油找吧！",
+          ContentTC = "加油找吧！",
           DialogueId = 51162410,
           GUID = "801468E4",
           NextDialogue = 51162411
@@ -211549,6 +211651,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51162605] = {
           Content = "因为供丝不足，所以绣娘们也没法给外地供货，此趟入京，即是为了与城中成衣店商议取消订单。",
+          ContentTC = "因為供絲不足，所以繡娘們也沒法給外地供貨，此趟入京，即是為了與城中成衣店商議取消訂單。",
           DialogueId = 51162605,
           GUID = "801488E2",
           SpeakNpcId = 701175
@@ -212493,7 +212596,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165018] = {
           Content = "诚心寻宝物，信物通妙境啊，这弥足珍贵之物总不能乖乖跳到你怀里是不是？你定然是需要付出一些小小的努力，才能寻到你想要的东西呀。",
-          ContentTC = "誠心尋寶物，信物通妙境啊，這彌足珍貴之物難不成總不能乖乖跳到你懷裡是不是？你定然是需要付出一些小小的努力，才能尋到你想要的東西呀。",
+          ContentTC = "誠心尋寶物，信物通妙境啊，這彌足珍貴之物總不能乖乖跳到你懷裡是不是？你定然是需要付出一些小小的努力，才能尋到你想要的東西呀。",
           DialogueId = 51165018,
           GUID = "801614C4",
           SpeakNpcId = 700385
@@ -212521,7 +212624,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165022] = {
           Content = "虽然我平日里爱插科打诨，但此事我倒是真没骗你们，只可惜我已是无由生的身份，不然此等美物，我定是不能放手的呀。",
-          ContentTC = "雖然我品日裡愛插科打諢，但此事我倒是真沒騙你們，只可惜我已是無由生的身份，不然此等美物，我定是不能放手的呀。",
+          ContentTC = "雖然我平日裡愛插科打諢，但此事我倒是真沒騙你們，只可惜我已是無由生的身份，不然此等美物，我定是不能放手的呀。",
           DialogueId = 51165022,
           GUID = "8016156C",
           SpeakNpcId = 700385
@@ -213273,6 +213376,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165534] = {
           Content = "可为何……我只是让他离开，但师徒一场，我从未有过害他之心！",
+          ContentTC = "可為何……我只是讓他離開，但師徒一場，我從未有過害他之心！",
           DialogueId = 51165534,
           GUID = "8016696C",
           SpeakNpcId = 700386
@@ -214099,6 +214203,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51166202] = {
           Content = "在湖里？那不是早就被水泡发了吗？算了算了，小仆从，我们用<H>钓鱼</>的方式试试看能不能把琴谱捞上来吧！",
+          ContentTC = "在湖裡？那不是早就被水泡發了嗎？算了算了，小僕從，我們用<H>釣魚</>的方式試試看能不能把琴譜撈上來吧！",
           DialogueId = 51166202,
           GUID = "8016D704"
         },
@@ -220503,7 +220608,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51171802] = {
           Content = "咳……唔……惟愿神君庇佑，助家父早日康复，脱离苦海，我愿以命抵命……以……咳咳！",
-          ContentTC = "咳……唔……惟願神君庇佑，助家父早日康復，脫離苦海，小子願以命抵命……以……咳咳！",
+          ContentTC = "咳……唔……惟願神君庇佑，助家父早日康復，脫離苦海，我願以命抵命……以……咳咳！",
           DialogueId = 51171802,
           GUID = "801A6DC4",
           NextOptions = {
@@ -237400,6 +237505,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007511] = {
           Content = "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
+          ContentTC = "呼……在碼頭賣土豆真是太危險了。謝謝，謝謝啊……",
           DialogueId = 71007511,
           GUID = "B1C2855A",
           SpeakNpcId = 818078
@@ -240360,6 +240466,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72101202] = {
           Content = "无趣无趣，贪愚痴妄，转首空空，不如逍遥～东西还你，有缘再会！",
+          ContentTC = "無趣無趣，貪愚痴妄，轉首空空，不如逍遙～東西還你，有緣再會！",
           DialogueId = 72101202,
           GUID = "B47F6F74",
           NextDialogue = 72101204,
@@ -240367,6 +240474,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [72101203] = {
           Content = "绫罗绸缎，金樽玉盏，好不逍遥～我取你宝物一件，若要寻回，追上我再说罢！",
+          ContentTC = "綾羅綢緞，金樽玉盞，好不逍遙～我取你寶物一件，若要尋回，追上我再說罷！",
           DialogueId = 72101203,
           GUID = "B47F6F9E",
           Scripts = "PlayAnimation{ActorId{240110},AnimationId{\"Wuyou_Agree\"}}",
@@ -289143,6 +289251,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000101] = {
           Content = "唔……实验数据还不够，要是有其他人能帮忙测验一下就好了……",
+          ContentTC = "唔……實驗數據還不夠，要是有其他人能幫忙測驗一下就好了……",
           DialogueId = 84000101,
           Duration = 3,
           GUID = "D2491292",
@@ -289151,6 +289260,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000102] = {
           Content = "这位路过的朋友，如若空闲，能否来帮我测试一下这台机关？",
+          ContentTC = "這位路過的朋友，如若空閒，能否來幫我測試一下這台機關？",
           DialogueId = 84000102,
           Duration = 3,
           GUID = "D24912BC",
@@ -289158,12 +289268,14 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000103] = {
           Content = "哦哦！又收集到了新的数据，可以投入下一批实验了。",
+          ContentTC = "哦哦！又收集到了新的數據，可以投入下一批實驗了。",
           DialogueId = 84000103,
           GUID = "D24912E6",
           SpeakNpcId = 840001
         },
         [84000201] = {
           Content = "一直在这边转悠，莫非是想拜入我门下？那得先破解了我造的机关才行。",
+          ContentTC = "一直在這邊轉悠，莫非是想拜入我門下？那得先破解了我造的機關才行。",
           DialogueId = 84000201,
           Duration = 3,
           GUID = "D24922FA",
@@ -289171,12 +289283,14 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000203] = {
           Content = "有两下子，允准你拜师了。",
+          ContentTC = "有兩下子，允准你拜師了。",
           DialogueId = 84000203,
           GUID = "D249234E",
           SpeakNpcId = 840002
         },
         [84000301] = {
           Content = "有点意思……实在有趣……我看这机枢术也没那么难嘛！",
+          ContentTC = "有點意思……實在有趣……我看這機樞術也沒那麼難嘛！",
           DialogueId = 84000301,
           Duration = 3,
           GUID = "D2493362",
@@ -289185,6 +289299,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000302] = {
           Content = "你你你，你来一下，这是我从匠矩阁的老师傅那里偷学来的一手机枢术，我照葫芦画瓢也造了个机关，你要不要来试试看难度如何？",
+          ContentTC = "你你你，你來一下，這是我從匠矩閣的老師傅那裡偷學來的一手機樞術，我照葫蘆畫瓢也造了個機關，你要不要來試試看難度如何？",
           DialogueId = 84000302,
           Duration = 3,
           GUID = "D249338C",
@@ -289192,12 +289307,14 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000303] = {
           Content = "好家伙！怎么一下子就解开了，不成不成，还是不够难，得在老板回来之前抓紧修改一下。",
+          ContentTC = "好傢伙！怎麼一下子就解開了，不成不成，還是不夠難，得在老闆回來之前抓緊修改一下。",
           DialogueId = 84000303,
           GUID = "D24933B6",
           SpeakNpcId = 840003
         },
         [84000401] = {
           Content = "我见你眉间带煞，只有破解此处的机关，方能逢凶化吉！",
+          ContentTC = "我見你眉間帶煞，只有破解此處的機關，方能逢凶化吉！",
           DialogueId = 84000401,
           Duration = 3,
           GUID = "D24943CA",
@@ -289206,6 +289323,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000402] = {
           Content = "你可别不信，我说的是真的，这机关就像是命理里的穴位，解开了才能让运势流转，信我的，准没错！",
+          ContentTC = "你可別不信，我說的是真的，這機關就像是命理裡的穴位，解開了才能讓運勢流轉，信我的，准沒錯！",
           DialogueId = 84000402,
           Duration = 3,
           GUID = "D24943F4",
@@ -289213,12 +289331,14 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000403] = {
           Content = "啧啧啧，我说什么来着？你这刚一解开，立即神气内敛，目璨金光，定是马上就要天降横财啊！好了，快去寻找你的好运吧~",
+          ContentTC = "嘖嘖嘖，我說什麼來著？你這剛一解開，立即神氣內斂，目璨金光，定是馬上就要天降橫財啊！好了，快去尋找你的好運吧~",
           DialogueId = 84000403,
           GUID = "D249441E",
           SpeakNpcId = 840004
         },
         [84000501] = {
           Content = "爹爹说了，要是解开这个机关就带我去东市买饴糖，可我总是搞错……坏爹爹！",
+          ContentTC = "爹爹說了，要是解開這個機關就帶我去東市買飴糖，可我總是搞錯……壞爹爹！",
           DialogueId = 84000501,
           Duration = 3,
           GUID = "D2495432",
@@ -289227,6 +289347,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000502] = {
           Content = "那个……你好？你……你可不可以帮我把这个解开呀，拜托了，我真的真的很想吃糖！",
+          ContentTC = "那個……你好？你……你可不可以幫我把這個解開呀，拜託了，我真的真的很想吃糖！",
           DialogueId = 84000502,
           Duration = 3,
           GUID = "D249545C",
@@ -289234,12 +289355,14 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000503] = {
           Content = "已经解开了？太好了！今天又有饴糖吃咯！",
+          ContentTC = "已經解開了？太好了！今天又有飴糖吃咯！",
           DialogueId = 84000503,
           GUID = "D2495486",
           SpeakNpcId = 840005
         },
         [84000601] = {
           Content = "可是讲真的？解开这个机关就能以折扣价买洒扫机傀？",
+          ContentTC = "可是講真的？解開這個機關就能以折扣價買灑掃機傀？",
           DialogueId = 84000601,
           Duration = 3,
           GUID = "D249649A",
@@ -289248,6 +289371,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000602] = {
           Content = "不是我本人解开行不行，我这老胳膊老腿的，跳来跳去别出事了，这样吧——这位，是我的……远方亲戚，{性别:他|她}来帮我解开机关可以吧！",
+          ContentTC = "不是我本人解開行不行，我這老胳膊老腿的，跳來跳去別出事了，這樣吧——這位，是我的……遠方親戚，{性别:他|她}來幫我解開機關可以吧！",
           DialogueId = 84000602,
           Duration = 3,
           GUID = "D24964C4",
@@ -289255,6 +289379,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [84000603] = {
           Content = "小年轻还是不一般，身手不凡！这么快就解开了，后浪推前浪啊！我去买洒扫机傀了，再见！",
+          ContentTC = "小年輕還是不一般，身手不凡！這麼快就解開了，後浪推前浪啊！我去買灑掃機傀了，再見！",
           DialogueId = 84000603,
           GUID = "D24964EE",
           SpeakNpcId = 840006
@@ -297016,7 +297141,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [90270201] = {
           Content = "承蒙缪赞。狩月人的历史比我这间酒馆古老得多，他们需要一个地方谈谈天，吹吹牛，交换一下彼此手里的“生意”，就算没有“水仙平原”，也会有“铃兰平原”，“郁金香平原”。",
-          ContentTC = "承蒙繆贊。狩月人的歷史比我這間酒館古老得多，他們需要一個地方談談天，吹吹牛，交換一下彼此手裡的「生意」，就算沒有「水仙平原」，也會有「鈴蘭平原」，「鬱金香平原」。",
+          ContentTC = "承蒙謬讚。狩月人的歷史比我這間酒館古老得多，他們需要一個地方談談天，吹吹牛，交換一下彼此手裡的「生意」，就算沒有「水仙平原」，也會有「鈴蘭平原」，「鬱金香平原」。",
           DialogueId = 90270201,
           GUID = "E1FB62DA",
           NextDialogue = 90270202,

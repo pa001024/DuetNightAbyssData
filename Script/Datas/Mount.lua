@@ -117,40 +117,6 @@ return ReadOnly("Mount", {
     SortPriority = 101
   },
   [1005] = {
-    AccessKey = T.RT_1,
-    AnimPath = "/Game/Asset/Char/Mount/Mnt005_Taixu/Animation/Montage/Interactive/Mnt005_Taixu_System_Idle_Montage.Mnt005_Taixu_System_Idle_Montage",
-    BattleMountId = 1006,
-    CameraName = "Char_Mount_Taixu",
-    FlyLicense = 1,
-    MountDes = "RESOURCE_DESC_49995",
-    MountDisplayScale = 0.5,
-    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0008.T_Mounts_0008",
-    MountId = 1005,
-    MountLocOffset = T.RT_2,
-    MountName = "RESOURCE_NAME_49994",
-    MountRarity = 5,
-    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0008.T_Icon_Mounts_0008",
-    ResourceId = 49993,
-    SortPriority = 101
-  },
-  [1006] = {
-    AccessKey = T.RT_1,
-    AnimPath = "/Game/Asset/Char/Mount/Mnt005_Taixu/Animation/Montage/Interactive/Mnt005_Taixu_System_Idle_Montage.Mnt005_Taixu_System_Idle_Montage",
-    BattleMountId = 1007,
-    CameraName = "Char_Mount_Taixu",
-    FlyLicense = 1,
-    MountDes = "RESOURCE_DESC_49995",
-    MountDisplayScale = 0.5,
-    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0007.T_Mounts_0007",
-    MountId = 1006,
-    MountLocOffset = T.RT_2,
-    MountName = "RESOURCE_NAME_49993",
-    MountRarity = 5,
-    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0007.T_Icon_Mounts_0007",
-    ResourceId = 49992,
-    SortPriority = 101
-  },
-  [1007] = {
     AccessKey = {
       "Text_MountEvent"
     },
@@ -161,12 +127,46 @@ return ReadOnly("Mount", {
     MountDes = "RESOURCE_DESC_49995",
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0006.T_Mounts_0006",
-    MountId = 1007,
+    MountId = 1005,
     MountLocOffset = T.RT_2,
     MountName = "RESOURCE_NAME_49992",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0006.T_Icon_Mounts_0006",
     ResourceId = 49994,
+    SortPriority = 101
+  },
+  [1006] = {
+    AccessKey = T.RT_1,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt005_Taixu/Animation/Montage/Interactive/Mnt005_Taixu_System_Idle_Montage.Mnt005_Taixu_System_Idle_Montage",
+    BattleMountId = 1006,
+    CameraName = "Char_Mount_Taixu",
+    FlyLicense = 1,
+    MountDes = "RESOURCE_DESC_49995",
+    MountDisplayScale = 0.5,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0008.T_Mounts_0008",
+    MountId = 1006,
+    MountLocOffset = T.RT_2,
+    MountName = "RESOURCE_NAME_49994",
+    MountRarity = 5,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0008.T_Icon_Mounts_0008",
+    ResourceId = 49993,
+    SortPriority = 101
+  },
+  [1007] = {
+    AccessKey = T.RT_1,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt005_Taixu/Animation/Montage/Interactive/Mnt005_Taixu_System_Idle_Montage.Mnt005_Taixu_System_Idle_Montage",
+    BattleMountId = 1007,
+    CameraName = "Char_Mount_Taixu",
+    FlyLicense = 1,
+    MountDes = "RESOURCE_DESC_49995",
+    MountDisplayScale = 0.5,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0007.T_Mounts_0007",
+    MountId = 1007,
+    MountLocOffset = T.RT_2,
+    MountName = "RESOURCE_NAME_49993",
+    MountRarity = 5,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0007.T_Icon_Mounts_0007",
+    ResourceId = 49992,
     SortPriority = 101
   }
 })

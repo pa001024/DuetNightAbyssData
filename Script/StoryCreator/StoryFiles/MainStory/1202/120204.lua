@@ -304,7 +304,7 @@ return {
       key = "17623978934852955",
       type = "StoryNode",
       name = "山外山防守战",
-      pos = {x = 3901.0525767248473, y = 1062.662234042553},
+      pos = {x = 3893.3106412409766, y = 1066.5332017844885},
       propsData = {
         QuestId = 12020402,
         QuestDescriptionComment = "",
@@ -341,12 +341,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17633715028426060967",
-            startPort = "Out",
-            endQuest = "17633715073036061081",
-            endPort = "In"
-          },
-          {
             startQuest = "17633715073036061081",
             startPort = "Fail",
             endQuest = "17633715206166061475",
@@ -374,6 +368,18 @@ return {
             startQuest = "17633715028426060967",
             startPort = "Out",
             endQuest = "177374011447315054514",
+            endPort = "In"
+          },
+          {
+            startQuest = "17633715028426060967",
+            startPort = "Out",
+            endQuest = "177505383225812783754",
+            endPort = "In"
+          },
+          {
+            startQuest = "177505383225812783754",
+            startPort = "Out",
+            endQuest = "17633715073036061081",
             endPort = "In"
           }
         },
@@ -403,7 +409,7 @@ return {
             key = "17633715028426060967",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 1236.3862068965516, y = 345.6},
+            pos = {x = 1173.6589341692788, y = 345.6},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2360046,
@@ -443,6 +449,23 @@ return {
               AtmosphereTagList = {
                 "Story_Main_120203"
               }
+            }
+          },
+          ["177505383225812783754"] = {
+            key = "177505383225812783754",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1570.176757066463, y = 169.80582974816704},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_1/0107_story_zhuyinzhizai_full.0107_story_zhuyinzhizai_full'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {105201},
+              ClientRelatedRegionId = {},
+              bStoreToServer = false
             }
           }
         },
@@ -657,12 +680,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17634527557216065126",
-            startPort = "Out",
-            endQuest = "17634527607946065256",
-            endPort = "In"
-          },
-          {
             startQuest = "17623979425273446",
             startPort = "QuestStart",
             endQuest = "17634527557216065126",
@@ -715,6 +732,12 @@ return {
             startPort = "Out",
             endQuest = "17623979425273447",
             endPort = "Success"
+          },
+          {
+            startQuest = "177418302136811379965",
+            startPort = "Out",
+            endQuest = "17634527607946065256",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1848,12 +1871,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "176725099569125732523",
-            startPort = "Out",
-            endQuest = "176345741941310122765",
-            endPort = "In"
-          },
-          {
             startQuest = "176345741941310122765",
             startPort = "Fail",
             endQuest = "176725103818225733561",
@@ -1872,16 +1889,28 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "176345741941310122765",
-            startPort = "Success",
-            endQuest = "17623980925425964",
-            endPort = "Success"
-          },
-          {
             startQuest = "17623980925425963",
             startPort = "QuestStart",
             endQuest = "177374020144716307651",
             endPort = "In"
+          },
+          {
+            startQuest = "176725099569125732523",
+            startPort = "Out",
+            endQuest = "177505423970316632112",
+            endPort = "In"
+          },
+          {
+            startQuest = "177505423970316632112",
+            startPort = "Out",
+            endQuest = "176345741941310122765",
+            endPort = "In"
+          },
+          {
+            startQuest = "176345741941310122765",
+            startPort = "Success",
+            endQuest = "17623980925425964",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -1950,6 +1979,23 @@ return {
               AtmosphereTagList = {
                 "Story_Main_120203"
               }
+            }
+          },
+          ["177505423970316632112"] = {
+            key = "177505423970316632112",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1458.542857142857, y = 151.95357142857145},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_1/0129_boss_yuming.0129_boss_yuming'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {},
+              bStoreToServer = true
             }
           }
         },

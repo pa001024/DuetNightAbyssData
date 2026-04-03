@@ -38,7 +38,7 @@ function Component:PressSkill3()
   if self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill3) then
     return
   end
-  if self.BuffManager and self.BuffManager:CheckDisableSkillBuff(ESkillType.Skill3) then
+  if self:IsDisableSkillType(ESkillType.Skill3) then
     UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
   end
   self:SupportSkill()
@@ -141,7 +141,7 @@ function Component:PressSkill1()
     self:RemoveInputCache("Skill1")
     return
   end
-  if self.BuffManager and self.BuffManager:CheckDisableSkillBuff(ESkillType.Skill1) then
+  if self:IsDisableSkillType(ESkillType.Skill1) then
     UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
   end
   if not self:CheckCanSkillCancel(NormalSKill) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill1) then
@@ -165,7 +165,7 @@ function Component:PressSkill2()
     self:RemoveInputCache("Skill2")
     return
   end
-  if self.BuffManager and self.BuffManager:CheckDisableSkillBuff(ESkillType.Skill2) then
+  if self:IsDisableSkillType(ESkillType.Skill2) then
     UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_SKILL_FORBIDDEN"))
   end
   if not self:CheckCanSkillCancel(UltraSKill) and self:CheckForbidInput() or self:CheckSkillInActive(ESkillName.Skill2) then

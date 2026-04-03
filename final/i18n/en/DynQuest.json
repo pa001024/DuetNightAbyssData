@@ -19473,7 +19473,7 @@
         "dialogues": [
           {
             "id": 71007508,
-            "content": "没想到你出手如此果断，在下佩服佩服。",
+            "content": "I didn't expect you to act so decisively. My deepest respects.",
             "npc": 818078,
             "next": 71007509
           },
@@ -19491,13 +19491,13 @@
         "dialogues": [
           {
             "id": 71007510,
-            "content": "还好你把它们赶走了，希望能消停一段时间。",
+            "content": "Good thing you chased them off. Hopefully things will stay quiet for a while.",
             "npc": 818078,
             "next": 71007511
           },
           {
             "id": 71007511,
-            "content": "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
+            "content": "Whew... selling potatoes on the docks is far more dangerous than I thought. Thank you so much...",
             "npc": 818078
           }
         ]
@@ -19601,7 +19601,7 @@
         "dialogues": [
           {
             "id": 71007508,
-            "content": "没想到你出手如此果断，在下佩服佩服。",
+            "content": "I didn't expect you to act so decisively. My deepest respects.",
             "npc": 818078,
             "next": 71007509
           },
@@ -19619,13 +19619,13 @@
         "dialogues": [
           {
             "id": 71007510,
-            "content": "还好你把它们赶走了，希望能消停一段时间。",
+            "content": "Good thing you chased them off. Hopefully things will stay quiet for a while.",
             "npc": 818078,
             "next": 71007511
           },
           {
             "id": 71007511,
-            "content": "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
+            "content": "Whew... selling potatoes on the docks is far more dangerous than I thought. Thank you so much...",
             "npc": 818078
           }
         ]
@@ -19655,7 +19655,7 @@
         "dialogues": [
           {
             "id": 71007601,
-            "content": "今天怎么回事，这么久了一条鱼都没上钩。",
+            "content": "What's going on today? Been here ages and haven't caught a single fish.",
             "npc": 818079,
             "next": 71007602
           }
@@ -19668,7 +19668,7 @@
         "dialogues": [
           {
             "id": 71007602,
-            "content": "这位路过的朋友，我怀疑这地方今天根本没有鱼，你能不能帮我试试？",
+            "content": "Hey, stranger, I'm starting to think there aren't any fish here at all. Mind giving it a try for me?",
             "npc": 818079,
             "options": [
               {
@@ -19697,13 +19697,13 @@
         "dialogues": [
           {
             "id": 71007604,
-            "content": "太厉害了，一下就钓上来了。看来不是水域的问题。",
+            "content": "Wow, that's incredible. You got one on your first try. Guess it's not the spot after all.",
             "npc": 818079,
             "next": 71007605
           },
           {
             "id": 71007605,
-            "content": "谢谢你帮我验证了一下哈，我自己再试试看。今天绝对不能再提着空桶回去了！",
+            "content": "Thanks for helping me check. I'll give it another shot myself. I'm not going home with an empty bucket today, no way!",
             "npc": 818079
           }
         ]
@@ -19733,7 +19733,7 @@
         "dialogues": [
           {
             "id": 71007601,
-            "content": "今天怎么回事，这么久了一条鱼都没上钩。",
+            "content": "What's going on today? Been here ages and haven't caught a single fish.",
             "npc": 818079,
             "next": 71007602
           }
@@ -19746,7 +19746,7 @@
         "dialogues": [
           {
             "id": 71007602,
-            "content": "这位路过的朋友，我怀疑这地方今天根本没有鱼，你能不能帮我试试？",
+            "content": "Hey, stranger, I'm starting to think there aren't any fish here at all. Mind giving it a try for me?",
             "npc": 818079,
             "options": [
               {
@@ -19775,13 +19775,13 @@
         "dialogues": [
           {
             "id": 71007604,
-            "content": "太厉害了，一下就钓上来了。看来不是水域的问题。",
+            "content": "Wow, that's incredible. You got one on your first try. Guess it's not the spot after all.",
             "npc": 818079,
             "next": 71007605
           },
           {
             "id": 71007605,
-            "content": "谢谢你帮我验证了一下哈，我自己再试试看。今天绝对不能再提着空桶回去了！",
+            "content": "Thanks for helping me check. I'll give it another shot myself. I'm not going home with an empty bucket today, no way!",
             "npc": 818079
           }
         ]
@@ -19811,7 +19811,7 @@
         "dialogues": [
           {
             "id": 71007701,
-            "content": "奇怪，到底掉到哪里去了……",
+            "content": "Where did it fall...",
             "npc": 818080,
             "next": 71007702
           }
@@ -19828,7 +19828,7 @@
         "dialogues": [
           {
             "id": 71007702,
-            "content": "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+            "content": "Excuse me, have you seen a chest I dropped around here? Just a plain chest. I've been looking forever.",
             "npc": 818080,
             "options": [
               {
@@ -19844,7 +19844,7 @@
           },
           {
             "id": 71007703,
-            "content": "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+            "content": "Thanks. I'll search around up here. Could you try looking down below?",
             "npc": 818080,
             "next": 71007712
           }
@@ -19861,7 +19861,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -19877,7 +19877,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -19892,7 +19892,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006,
             "next": 71007705
           }
@@ -19905,7 +19905,7 @@
         "dialogues": [
           {
             "id": 71007704,
-            "content": "咦，看你在找什么东西的样子，是这些箱子吗？",
+            "content": "Huh, looks like you're looking for something. Is it one of these chests?",
             "npc": 818081,
             "next": 71007705
           }
@@ -19922,12 +19922,12 @@
         "dialogues": [
           {
             "id": 71007705,
-            "content": "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+            "content": "I picked these up while surveying the river. See if yours is among them?",
             "npc": 818081,
             "options": [
               {
                 "id": 710077051,
-                "content": "Basic Chest",
+                "content": "I'm looking for this plain chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -19937,7 +19937,7 @@
               },
               {
                 "id": 710077052,
-                "content": "Standard Chest",
+                "content": "I'm looking for this slightly fancier chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -19947,7 +19947,7 @@
               },
               {
                 "id": 710077053,
-                "content": "Premium Chest",
+                "content": "I'm looking for this most ornate one.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -19957,7 +19957,7 @@
               },
               {
                 "id": 710077054,
-                "content": "I'll take all of them",
+                "content": "These are all mine.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -19969,7 +19969,7 @@
           },
           {
             "id": 71007706,
-            "content": "Thanks — yes, this one's mine.",
+            "content": "Alright, then take it.",
             "npc": 818081,
             "next": 71007707
           }
@@ -19982,7 +19982,7 @@
         "dialogues": [
           {
             "id": 71007707,
-            "content": "Here's your reward.",
+            "content": "Yes, this is it! Thank you so much.",
             "npc": 818080
           }
         ]
@@ -19994,7 +19994,7 @@
         "dialogues": [
           {
             "id": 71007708,
-            "content": "This chest is far too fancy — clearly not mine.",
+            "content": "This chest is clearly not mine, but thanks anyway.",
             "npc": 818080
           }
         ]
@@ -20006,7 +20006,7 @@
         "dialogues": [
           {
             "id": 71007710,
-            "content": "Whoa — you actually found this many chests?",
+            "content": "Whoa — you actually found this many chests? I'll just take my own one, then. Thank you!",
             "npc": 818080
           }
         ]
@@ -20036,7 +20036,7 @@
         "dialogues": [
           {
             "id": 71007701,
-            "content": "奇怪，到底掉到哪里去了……",
+            "content": "Where did it fall...",
             "npc": 818080,
             "next": 71007702
           }
@@ -20053,7 +20053,7 @@
         "dialogues": [
           {
             "id": 71007702,
-            "content": "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+            "content": "Excuse me, have you seen a chest I dropped around here? Just a plain chest. I've been looking forever.",
             "npc": 818080,
             "options": [
               {
@@ -20069,7 +20069,7 @@
           },
           {
             "id": 71007703,
-            "content": "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+            "content": "Thanks. I'll search around up here. Could you try looking down below?",
             "npc": 818080,
             "next": 71007712
           }
@@ -20086,7 +20086,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -20102,7 +20102,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -20117,7 +20117,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006,
             "next": 71007705
           }
@@ -20130,7 +20130,7 @@
         "dialogues": [
           {
             "id": 71007704,
-            "content": "咦，看你在找什么东西的样子，是这些箱子吗？",
+            "content": "Huh, looks like you're looking for something. Is it one of these chests?",
             "npc": 818081,
             "next": 71007705
           }
@@ -20147,12 +20147,12 @@
         "dialogues": [
           {
             "id": 71007705,
-            "content": "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+            "content": "I picked these up while surveying the river. See if yours is among them?",
             "npc": 818081,
             "options": [
               {
                 "id": 710077051,
-                "content": "Basic Chest",
+                "content": "I'm looking for this plain chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20162,7 +20162,7 @@
               },
               {
                 "id": 710077052,
-                "content": "Standard Chest",
+                "content": "I'm looking for this slightly fancier chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20172,7 +20172,7 @@
               },
               {
                 "id": 710077053,
-                "content": "Premium Chest",
+                "content": "I'm looking for this most ornate one.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20182,7 +20182,7 @@
               },
               {
                 "id": 710077054,
-                "content": "I'll take all of them",
+                "content": "These are all mine.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20194,7 +20194,7 @@
           },
           {
             "id": 71007706,
-            "content": "Thanks — yes, this one's mine.",
+            "content": "Alright, then take it.",
             "npc": 818081,
             "next": 71007707
           }
@@ -20207,7 +20207,7 @@
         "dialogues": [
           {
             "id": 71007707,
-            "content": "Here's your reward.",
+            "content": "Yes, this is it! Thank you so much.",
             "npc": 818080
           }
         ]
@@ -20219,7 +20219,7 @@
         "dialogues": [
           {
             "id": 71007708,
-            "content": "This chest is far too fancy — clearly not mine.",
+            "content": "This chest is clearly not mine, but thanks anyway.",
             "npc": 818080
           }
         ]
@@ -20231,7 +20231,7 @@
         "dialogues": [
           {
             "id": 71007710,
-            "content": "Whoa — you actually found this many chests?",
+            "content": "Whoa — you actually found this many chests? I'll just take my own one, then. Thank you!",
             "npc": 818080
           }
         ]
@@ -20261,7 +20261,7 @@
         "dialogues": [
           {
             "id": 71007701,
-            "content": "奇怪，到底掉到哪里去了……",
+            "content": "Where did it fall...",
             "npc": 818080,
             "next": 71007702
           }
@@ -20278,7 +20278,7 @@
         "dialogues": [
           {
             "id": 71007702,
-            "content": "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+            "content": "Excuse me, have you seen a chest I dropped around here? Just a plain chest. I've been looking forever.",
             "npc": 818080,
             "options": [
               {
@@ -20294,7 +20294,7 @@
           },
           {
             "id": 71007703,
-            "content": "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+            "content": "Thanks. I'll search around up here. Could you try looking down below?",
             "npc": 818080,
             "next": 71007712
           }
@@ -20311,7 +20311,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -20327,7 +20327,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -20342,7 +20342,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006,
             "next": 71007705
           }
@@ -20355,7 +20355,7 @@
         "dialogues": [
           {
             "id": 71007704,
-            "content": "咦，看你在找什么东西的样子，是这些箱子吗？",
+            "content": "Huh, looks like you're looking for something. Is it one of these chests?",
             "npc": 818081,
             "next": 71007705
           }
@@ -20372,12 +20372,12 @@
         "dialogues": [
           {
             "id": 71007705,
-            "content": "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+            "content": "I picked these up while surveying the river. See if yours is among them?",
             "npc": 818081,
             "options": [
               {
                 "id": 710077051,
-                "content": "Basic Chest",
+                "content": "I'm looking for this plain chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20387,7 +20387,7 @@
               },
               {
                 "id": 710077052,
-                "content": "Standard Chest",
+                "content": "I'm looking for this slightly fancier chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20397,7 +20397,7 @@
               },
               {
                 "id": 710077053,
-                "content": "Premium Chest",
+                "content": "I'm looking for this most ornate one.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20407,7 +20407,7 @@
               },
               {
                 "id": 710077054,
-                "content": "I'll take all of them",
+                "content": "These are all mine.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20419,7 +20419,7 @@
           },
           {
             "id": 71007706,
-            "content": "Thanks — yes, this one's mine.",
+            "content": "Alright, then take it.",
             "npc": 818081,
             "next": 71007707
           }
@@ -20432,7 +20432,7 @@
         "dialogues": [
           {
             "id": 71007707,
-            "content": "Here's your reward.",
+            "content": "Yes, this is it! Thank you so much.",
             "npc": 818080
           }
         ]
@@ -20444,7 +20444,7 @@
         "dialogues": [
           {
             "id": 71007708,
-            "content": "This chest is far too fancy — clearly not mine.",
+            "content": "This chest is clearly not mine, but thanks anyway.",
             "npc": 818080
           }
         ]
@@ -20456,7 +20456,7 @@
         "dialogues": [
           {
             "id": 71007710,
-            "content": "Whoa — you actually found this many chests?",
+            "content": "Whoa — you actually found this many chests? I'll just take my own one, then. Thank you!",
             "npc": 818080
           }
         ]
@@ -20486,7 +20486,7 @@
         "dialogues": [
           {
             "id": 71007701,
-            "content": "奇怪，到底掉到哪里去了……",
+            "content": "Where did it fall...",
             "npc": 818080,
             "next": 71007702
           }
@@ -20503,7 +20503,7 @@
         "dialogues": [
           {
             "id": 71007702,
-            "content": "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+            "content": "Excuse me, have you seen a chest I dropped around here? Just a plain chest. I've been looking forever.",
             "npc": 818080,
             "options": [
               {
@@ -20519,7 +20519,7 @@
           },
           {
             "id": 71007703,
-            "content": "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+            "content": "Thanks. I'll search around up here. Could you try looking down below?",
             "npc": 818080,
             "next": 71007712
           }
@@ -20536,7 +20536,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -20552,7 +20552,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -20567,7 +20567,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006,
             "next": 71007705
           }
@@ -20580,7 +20580,7 @@
         "dialogues": [
           {
             "id": 71007704,
-            "content": "咦，看你在找什么东西的样子，是这些箱子吗？",
+            "content": "Huh, looks like you're looking for something. Is it one of these chests?",
             "npc": 818081,
             "next": 71007705
           }
@@ -20597,12 +20597,12 @@
         "dialogues": [
           {
             "id": 71007705,
-            "content": "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+            "content": "I picked these up while surveying the river. See if yours is among them?",
             "npc": 818081,
             "options": [
               {
                 "id": 710077051,
-                "content": "Basic Chest",
+                "content": "I'm looking for this plain chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20612,7 +20612,7 @@
               },
               {
                 "id": 710077052,
-                "content": "Standard Chest",
+                "content": "I'm looking for this slightly fancier chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20622,7 +20622,7 @@
               },
               {
                 "id": 710077053,
-                "content": "Premium Chest",
+                "content": "I'm looking for this most ornate one.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20632,7 +20632,7 @@
               },
               {
                 "id": 710077054,
-                "content": "I'll take all of them",
+                "content": "These are all mine.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20644,7 +20644,7 @@
           },
           {
             "id": 71007706,
-            "content": "Thanks — yes, this one's mine.",
+            "content": "Alright, then take it.",
             "npc": 818081,
             "next": 71007707
           }
@@ -20657,7 +20657,7 @@
         "dialogues": [
           {
             "id": 71007707,
-            "content": "Here's your reward.",
+            "content": "Yes, this is it! Thank you so much.",
             "npc": 818080
           }
         ]
@@ -20669,7 +20669,7 @@
         "dialogues": [
           {
             "id": 71007708,
-            "content": "This chest is far too fancy — clearly not mine.",
+            "content": "This chest is clearly not mine, but thanks anyway.",
             "npc": 818080
           }
         ]
@@ -20681,7 +20681,7 @@
         "dialogues": [
           {
             "id": 71007710,
-            "content": "Whoa — you actually found this many chests?",
+            "content": "Whoa — you actually found this many chests? I'll just take my own one, then. Thank you!",
             "npc": 818080
           }
         ]
@@ -20711,7 +20711,7 @@
         "dialogues": [
           {
             "id": 71007701,
-            "content": "奇怪，到底掉到哪里去了……",
+            "content": "Where did it fall...",
             "npc": 818080,
             "next": 71007702
           }
@@ -20728,7 +20728,7 @@
         "dialogues": [
           {
             "id": 71007702,
-            "content": "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+            "content": "Excuse me, have you seen a chest I dropped around here? Just a plain chest. I've been looking forever.",
             "npc": 818080,
             "options": [
               {
@@ -20744,7 +20744,7 @@
           },
           {
             "id": 71007703,
-            "content": "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+            "content": "Thanks. I'll search around up here. Could you try looking down below?",
             "npc": 818080,
             "next": 71007712
           }
@@ -20761,7 +20761,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -20777,7 +20777,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -20792,7 +20792,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006,
             "next": 71007705
           }
@@ -20805,7 +20805,7 @@
         "dialogues": [
           {
             "id": 71007704,
-            "content": "咦，看你在找什么东西的样子，是这些箱子吗？",
+            "content": "Huh, looks like you're looking for something. Is it one of these chests?",
             "npc": 818081,
             "next": 71007705
           }
@@ -20822,12 +20822,12 @@
         "dialogues": [
           {
             "id": 71007705,
-            "content": "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+            "content": "I picked these up while surveying the river. See if yours is among them?",
             "npc": 818081,
             "options": [
               {
                 "id": 710077051,
-                "content": "Basic Chest",
+                "content": "I'm looking for this plain chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20837,7 +20837,7 @@
               },
               {
                 "id": 710077052,
-                "content": "Standard Chest",
+                "content": "I'm looking for this slightly fancier chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20847,7 +20847,7 @@
               },
               {
                 "id": 710077053,
-                "content": "Premium Chest",
+                "content": "I'm looking for this most ornate one.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20857,7 +20857,7 @@
               },
               {
                 "id": 710077054,
-                "content": "I'll take all of them",
+                "content": "These are all mine.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -20869,7 +20869,7 @@
           },
           {
             "id": 71007706,
-            "content": "Thanks — yes, this one's mine.",
+            "content": "Alright, then take it.",
             "npc": 818081,
             "next": 71007707
           }
@@ -20882,7 +20882,7 @@
         "dialogues": [
           {
             "id": 71007707,
-            "content": "Here's your reward.",
+            "content": "Yes, this is it! Thank you so much.",
             "npc": 818080
           }
         ]
@@ -20894,7 +20894,7 @@
         "dialogues": [
           {
             "id": 71007708,
-            "content": "This chest is far too fancy — clearly not mine.",
+            "content": "This chest is clearly not mine, but thanks anyway.",
             "npc": 818080
           }
         ]
@@ -20906,7 +20906,7 @@
         "dialogues": [
           {
             "id": 71007710,
-            "content": "Whoa — you actually found this many chests?",
+            "content": "Whoa — you actually found this many chests? I'll just take my own one, then. Thank you!",
             "npc": 818080
           }
         ]
@@ -20936,7 +20936,7 @@
         "dialogues": [
           {
             "id": 71007701,
-            "content": "奇怪，到底掉到哪里去了……",
+            "content": "Where did it fall...",
             "npc": 818080,
             "next": 71007702
           }
@@ -20953,7 +20953,7 @@
         "dialogues": [
           {
             "id": 71007702,
-            "content": "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+            "content": "Excuse me, have you seen a chest I dropped around here? Just a plain chest. I've been looking forever.",
             "npc": 818080,
             "options": [
               {
@@ -20969,7 +20969,7 @@
           },
           {
             "id": 71007703,
-            "content": "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+            "content": "Thanks. I'll search around up here. Could you try looking down below?",
             "npc": 818080,
             "next": 71007712
           }
@@ -20986,7 +20986,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -21002,7 +21002,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006
           }
         ]
@@ -21017,7 +21017,7 @@
         "dialogues": [
           {
             "id": 71007712,
-            "content": "（附近没看到什么箱子，再去其他地方找找。）",
+            "content": "(No chest in sight. Might as well look somewhere else.)",
             "npc": 800006,
             "next": 71007705
           }
@@ -21030,7 +21030,7 @@
         "dialogues": [
           {
             "id": 71007704,
-            "content": "咦，看你在找什么东西的样子，是这些箱子吗？",
+            "content": "Huh, looks like you're looking for something. Is it one of these chests?",
             "npc": 818081,
             "next": 71007705
           }
@@ -21047,12 +21047,12 @@
         "dialogues": [
           {
             "id": 71007705,
-            "content": "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+            "content": "I picked these up while surveying the river. See if yours is among them?",
             "npc": 818081,
             "options": [
               {
                 "id": 710077051,
-                "content": "Basic Chest",
+                "content": "I'm looking for this plain chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -21062,7 +21062,7 @@
               },
               {
                 "id": 710077052,
-                "content": "Standard Chest",
+                "content": "I'm looking for this slightly fancier chest.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -21072,7 +21072,7 @@
               },
               {
                 "id": 710077053,
-                "content": "Premium Chest",
+                "content": "I'm looking for this most ornate one.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -21082,7 +21082,7 @@
               },
               {
                 "id": 710077054,
-                "content": "I'll take all of them",
+                "content": "These are all mine.",
                 "next": 71007706,
                 "impr": [
                   1041,
@@ -21094,7 +21094,7 @@
           },
           {
             "id": 71007706,
-            "content": "Thanks — yes, this one's mine.",
+            "content": "Alright, then take it.",
             "npc": 818081,
             "next": 71007707
           }
@@ -21107,7 +21107,7 @@
         "dialogues": [
           {
             "id": 71007707,
-            "content": "Here's your reward.",
+            "content": "Yes, this is it! Thank you so much.",
             "npc": 818080
           }
         ]
@@ -21119,7 +21119,7 @@
         "dialogues": [
           {
             "id": 71007708,
-            "content": "This chest is far too fancy — clearly not mine.",
+            "content": "This chest is clearly not mine, but thanks anyway.",
             "npc": 818080
           }
         ]
@@ -21131,7 +21131,7 @@
         "dialogues": [
           {
             "id": 71007710,
-            "content": "Whoa — you actually found this many chests?",
+            "content": "Whoa — you actually found this many chests? I'll just take my own one, then. Thank you!",
             "npc": 818080
           }
         ]

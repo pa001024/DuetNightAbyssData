@@ -268,9 +268,12 @@ function M:RefreshViewAfterPageDataSet(ActivityConfigData, PageConfigData)
       elseif nil ~= NewBgWidget.In then
         NewBgWidget:PlayAnimationForward(NewBgWidget.In)
       end
-      if nil ~= NewBgWidget.Spine_Char then
-        NewBgWidget.Spine_Char:SetAnimation(0, "In", false)
-        NewBgWidget.Spine_Char:AddAnimation(0, "Loop", true, 0)
+      if nil ~= NewBgWidget.Spine_Char and NewBgWidget.Spine_Char and IsValid(NewBgWidget.Spine_Char) then
+        local bIsActivityInActiveTime = ActivityUtils.CheckEventIsInActiveTime(ActivityConfigData.EventId, ActivityConfigData)
+        if bIsActivityInActiveTime then
+          NewBgWidget.Spine_Char:SetAnimation(0, "In", false)
+          NewBgWidget.Spine_Char:AddAnimation(0, "Loop", true, 0)
+        end
       end
       if nil ~= NewBgWidget.PlaySplineAnimation then
         NewBgWidget:PlaySplineAnimation()

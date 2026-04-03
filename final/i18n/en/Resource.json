@@ -34,6 +34,68 @@
             4715
           ]
         ]
+      },
+      {
+        "srId": 101101,
+        "pos": [
+          [
+            -6570.579,
+            -6355.17
+          ],
+          [
+            -8750.369,
+            -4494.1797
+          ],
+          [
+            -8610.721,
+            -6764.1235
+          ],
+          [
+            -8619.172,
+            -7284.187
+          ],
+          [
+            -6037.225,
+            -6345.2295
+          ],
+          [
+            -5432.427,
+            -4068.045
+          ],
+          [
+            -5463.2227,
+            -3281.4912
+          ],
+          [
+            -2186.42,
+            5162.1797
+          ]
+        ]
+      },
+      {
+        "srId": 100101,
+        "pos": [
+          [
+            -7253.9033,
+            4486.6577
+          ],
+          [
+            -7425.891,
+            4092.4116
+          ],
+          [
+            -6615.8613,
+            3527.8232
+          ],
+          [
+            -6719.2856,
+            4269.51
+          ],
+          [
+            -7192.2593,
+            3212.8672
+          ]
+        ]
       }
     ],
     "desc": "A standard coin used across all of the Atlasia Continent.\nLow in value but essential for daily transactions.",
@@ -234,6 +296,39 @@
           [
             2283,
             4715
+          ]
+        ]
+      },
+      {
+        "srId": 101103,
+        "pos": [
+          [
+            -19077.75,
+            25544.674
+          ],
+          [
+            -17868.172,
+            25222.422
+          ],
+          [
+            -18501.246,
+            25988.18
+          ],
+          [
+            -22428.875,
+            11815.03
+          ],
+          [
+            -22697.283,
+            9936.444
+          ],
+          [
+            -20316.742,
+            9467.155
+          ],
+          [
+            -18470,
+            23730
           ]
         ]
       },
@@ -2881,6 +2976,29 @@
     "name": "Weapon Manual Ⅰ",
     "icon": "T_Resource_Weapon_Exp02",
     "rarity": 2,
+    "source": [
+      {
+        "srId": 101103,
+        "pos": [
+          [
+            43.00293,
+            40.996094
+          ],
+          [
+            -28.99707,
+            120.99609
+          ],
+          [
+            -28.99707,
+            -45.003906
+          ],
+          [
+            -86.99707,
+            40.996094
+          ]
+        ]
+      }
+    ],
     "desc": "A book about the use of weapons, it looks very thick, and this accumulation will turn into your strength.",
     "desc2": "\"Fiery sparks lash against your cheeks, while the clang of steel tears through your ears.\nShould your heart tremble for it, should your blood surge for it,\nThen step forth, and wield your blade,\nEmbrace the fate of battle, until there is no turning back.\"\n\n— Anonymous, on the title page of \"The Art of Combat\""
   },
@@ -2963,6 +3081,23 @@
           [
             92.004974,
             142.35172
+          ]
+        ]
+      },
+      {
+        "srId": 101702,
+        "pos": [
+          [
+            50,
+            90
+          ],
+          [
+            -20,
+            40
+          ],
+          [
+            -2.644531,
+            -35.70117
           ]
         ]
       },
@@ -5259,6 +5394,66 @@
     "name": "Creeping Tendrils",
     "icon": "T_Resource_Forge_Low01",
     "rarity": 2,
+    "source": [
+      {
+        "srId": 102101,
+        "pos": [
+          [
+            -11301.085,
+            -40645.89
+          ],
+          [
+            -10841.823,
+            -40411.652
+          ],
+          [
+            -11433.078,
+            -40115.49
+          ],
+          [
+            -10880.469,
+            -40993.72
+          ],
+          [
+            -11334.04,
+            -40908.934
+          ],
+          [
+            -11767.572,
+            -40714.156
+          ]
+        ]
+      },
+      {
+        "srId": 102102,
+        "pos": [
+          [
+            -20237.025,
+            5395.3677
+          ],
+          [
+            -20203.799,
+            5327.419
+          ],
+          [
+            -20242.22,
+            5347.765
+          ],
+          [
+            -19815.361,
+            4867.2163
+          ],
+          [
+            -21123.414,
+            4664.7
+          ],
+          [
+            -20293.473,
+            4474.7944
+          ]
+        ]
+      }
+    ],
     "desc": "A creeping plant commonly found in shaded areas, highly flexible with intertwined fibers. After processing, they are used in various applications, and they are durable and resistant to wear. \nSaid to be the inspiration for cable design.",
     "desc2": "\"Also known as the Ashless Wood, dark in colour, with leaves white as bone; resembling rotten timber, yet flame shuns its touch.\nIts bark is edible, with an astringent and cold taste, non-toxic.\nCan soothe swollen throats and quell inner heat, taken twice daily in a brew.\"\n\n— Fufeng, Huaxu Apothecary, in \"Essentials of Medicinal Herbs\""
   },
@@ -5267,6 +5462,34 @@
     "name": "Filthoid Clot",
     "icon": "T_Resource_Forge_Low02",
     "rarity": 2,
+    "source": [
+      {
+        "srId": 101103,
+        "pos": [
+          [
+            765,
+            20323
+          ]
+        ]
+      },
+      {
+        "srId": 100103,
+        "pos": [
+          [
+            33.085938,
+            20.152344
+          ],
+          [
+            -44,
+            -11
+          ],
+          [
+            -15,
+            -85
+          ]
+        ]
+      }
+    ],
     "desc": "A thick grease extracted from Filthoids. Its viscosity often correlates with the Filthoid's strength.",
     "desc2": "\"How come the villains in stories never cry? Is it because their tears are too thick, like jelly? Or is it because their hearts are so cold that their tears are frozen for eternity?\"\n\n— Fina, Citizen of Icelake"
   },
@@ -5455,8 +5678,8 @@
         "srId": 100101,
         "pos": [
           [
-            9098,
-            9019
+            -1198,
+            51
           ]
         ]
       }
@@ -5480,8 +5703,8 @@
         "srId": 100101,
         "pos": [
           [
-            5451,
-            6828
+            50,
+            -80
           ]
         ]
       }
@@ -5544,8 +5767,8 @@
         "srId": 100102,
         "pos": [
           [
-            27885,
-            5905
+            -3099.1875,
+            -1306.1221
           ]
         ]
       }
@@ -5563,8 +5786,8 @@
         "srId": 100103,
         "pos": [
           [
-            21480,
-            24980
+            -3521,
+            674
           ]
         ]
       }
@@ -5582,8 +5805,8 @@
         "srId": 100101,
         "pos": [
           [
-            8260,
-            -3620
+            -3525,
+            9915
           ]
         ]
       }
@@ -5601,8 +5824,8 @@
         "srId": 100103,
         "pos": [
           [
-            38879,
-            19823
+            -135,
+            -191
           ]
         ]
       }
@@ -5620,8 +5843,8 @@
         "srId": 101101,
         "pos": [
           [
-            -2050,
-            4170
+            -1,
+            38
           ]
         ]
       }
@@ -5639,8 +5862,8 @@
         "srId": 101101,
         "pos": [
           [
-            -1700.7699,
-            -7420.7163
+            -155.99997,
+            101.00003
           ]
         ]
       }
@@ -5658,8 +5881,8 @@
         "srId": 101101,
         "pos": [
           [
-            -9393,
-            7504
+            -585,
+            296
           ]
         ]
       }
@@ -5677,8 +5900,8 @@
         "srId": 101301,
         "pos": [
           [
-            6308,
-            2379
+            -718.21533,
+            3934.8008
           ]
         ]
       }
@@ -5696,8 +5919,8 @@
         "srId": 101103,
         "pos": [
           [
-            -39461,
-            -3328
+            1508.2344,
+            4569.042
           ]
         ]
       }
@@ -5715,8 +5938,8 @@
         "srId": 101103,
         "pos": [
           [
-            -28580,
-            -5200
+            2924.7324,
+            1436.1116
           ]
         ]
       }
@@ -5734,8 +5957,8 @@
         "srId": 101103,
         "pos": [
           [
-            -25917,
-            5325
+            -5404.076,
+            3901.4297
           ]
         ]
       }
@@ -5753,8 +5976,8 @@
         "srId": 101103,
         "pos": [
           [
-            -38101.484,
-            30920.523
+            -2639.332,
+            983.77734
           ]
         ]
       }
@@ -5772,8 +5995,8 @@
         "srId": 101702,
         "pos": [
           [
-            -32562,
-            -16124
+            0,
+            0
           ]
         ]
       }
@@ -5791,8 +6014,8 @@
         "srId": 101701,
         "pos": [
           [
-            -14120,
-            -7175
+            0,
+            26.611816
           ]
         ]
       }
@@ -5810,8 +6033,8 @@
         "srId": 102101,
         "pos": [
           [
-            30081,
-            -31233
+            0,
+            0
           ]
         ]
       }
@@ -5829,8 +6052,8 @@
         "srId": 102101,
         "pos": [
           [
-            19415,
-            -37668
+            0,
+            0
           ]
         ]
       }
@@ -5848,8 +6071,8 @@
         "srId": 102102,
         "pos": [
           [
-            -10037,
-            -1317
+            9218.941,
+            -20395.379
           ]
         ]
       }
@@ -5867,8 +6090,8 @@
         "srId": 104108,
         "pos": [
           [
-            41170,
-            67884
+            -486.25,
+            -5053.3477
           ]
         ]
       }
@@ -5886,8 +6109,8 @@
         "srId": 104110,
         "pos": [
           [
-            31508,
-            -3480
+            148.5332,
+            165.83447
           ]
         ]
       }
@@ -5924,8 +6147,8 @@
         "srId": 104109,
         "pos": [
           [
-            -19023,
-            5230
+            93.015625,
+            -205.73828
           ]
         ]
       }
@@ -5943,8 +6166,8 @@
         "srId": 104105,
         "pos": [
           [
-            -18718,
-            -31299
+            -1118.1562,
+            -321.44336
           ]
         ]
       }
@@ -5981,8 +6204,8 @@
         "srId": 104505,
         "pos": [
           [
-            61191.07,
-            -76997.71
+            -2077.42,
+            -1227.76
           ]
         ]
       }
@@ -6000,8 +6223,8 @@
         "srId": 104502,
         "pos": [
           [
-            18391.01,
-            -38555.32
+            -77.9,
+            1.54
           ]
         ]
       }
@@ -6014,6 +6237,67 @@
     "name": "Advensphere: Purgatorio Island",
     "icon": "T_ExploreBadge_Beibao_Prologue",
     "rarity": 5,
+    "source": [
+      {
+        "srId": 100102,
+        "pos": [
+          [
+            20476,
+            3013
+          ],
+          [
+            28805,
+            5325
+          ],
+          [
+            16167,
+            10019
+          ],
+          [
+            26424,
+            -5052
+          ]
+        ]
+      },
+      {
+        "srId": 100103,
+        "pos": [
+          [
+            38077,
+            21235
+          ],
+          [
+            17713.771,
+            25303.838
+          ],
+          [
+            26367,
+            31693
+          ]
+        ]
+      },
+      {
+        "srId": 100101,
+        "pos": [
+          [
+            1932,
+            6055
+          ],
+          [
+            10207,
+            9225
+          ],
+          [
+            2866,
+            8321
+          ],
+          [
+            11031,
+            -4025
+          ]
+        ]
+      }
+    ],
     "desc": "Tokens said to lie scattered across Purgatorio Island. They stand as proof of courage, wisdom, and patience — virtues forged through the trials of adventure. Gather enough and present them to the Lunoxplorer in Icelake's town square to earn valuable rewards.",
     "desc2": "An island beyond divine gaze and imperial reach.\nHere, seabirds wheel above crumbled colonnades, and memories sleep beneath moss and the slow tides of time.\nVenture forth — to witness, to listen, to explore Purgatorio Island, where secrets linger and echoes of the past still stir."
   },
@@ -6030,6 +6314,82 @@
     "name": "Advensphere: Lonza Fortress",
     "icon": "T_ExploreBadge_Beibao_EXChapter01",
     "rarity": 5,
+    "source": [
+      {
+        "srId": 102101,
+        "pos": [
+          [
+            28845,
+            -30388
+          ],
+          [
+            19634.982,
+            -37598.49
+          ],
+          [
+            14578,
+            -40410.695
+          ],
+          [
+            11103,
+            -42750
+          ],
+          [
+            10346,
+            -52125
+          ],
+          [
+            -2401,
+            -43895
+          ],
+          [
+            -4850,
+            -35427
+          ],
+          [
+            2095,
+            -48445
+          ],
+          [
+            26521,
+            -34186
+          ]
+        ]
+      },
+      {
+        "srId": 102102,
+        "pos": [
+          [
+            -3369,
+            7178
+          ],
+          [
+            -14956,
+            -16122
+          ],
+          [
+            -5471,
+            -10849
+          ],
+          [
+            -20741,
+            3772
+          ],
+          [
+            -8963,
+            -1668
+          ],
+          [
+            7525,
+            2008
+          ],
+          [
+            -13161,
+            -6477
+          ]
+        ]
+      }
+    ],
     "desc": "Tokens said to lie scattered across Lonza Fortress. They stand as proof of courage, wisdom, and patience — virtues forged through the trials of adventure. Gather enough and present them to the Lunoxplorer in Icelake's town square to earn valuable rewards.",
     "desc2": "A fortress untouched by rivers of iron or storms of steel. Now, only laments drift across its ramparts.\nYet no wall is truly unbreachable. The strongest bastions fall not to force, but to what stirs unseen in the heart.\nGo deeper — to witness, to listen — into the Fortress, where smoke still hangs and memory refuses to fade."
   },
@@ -6038,6 +6398,125 @@
     "name": "Advensphere: Mistwharf",
     "icon": "T_ExploreBadge_Beibao_East",
     "rarity": 5,
+    "source": [
+      {
+        "srId": 104102,
+        "pos": [
+          [
+            -58290.58,
+            8788.479
+          ]
+        ]
+      },
+      {
+        "srId": 104103,
+        "pos": [
+          [
+            -9051.801,
+            29591.572
+          ],
+          [
+            4726.0054,
+            21080.736
+          ]
+        ]
+      },
+      {
+        "srId": 104104,
+        "pos": [
+          [
+            276.96103,
+            -4393.95
+          ]
+        ]
+      },
+      {
+        "srId": 104105,
+        "pos": [
+          [
+            -16592,
+            -22543
+          ],
+          [
+            -21821.621,
+            -16443.652
+          ]
+        ]
+      },
+      {
+        "srId": 104106,
+        "pos": [
+          [
+            31193.074,
+            -12471.755
+          ],
+          [
+            17836.21,
+            -30562.25
+          ]
+        ]
+      },
+      {
+        "srId": 104107,
+        "pos": [
+          [
+            15887.112,
+            44439.59
+          ]
+        ]
+      },
+      {
+        "srId": 104108,
+        "pos": [
+          [
+            -0.00097,
+            -1.507478
+          ],
+          [
+            34647.566,
+            68348.04
+          ],
+          [
+            53682.418,
+            19630.78
+          ],
+          [
+            0,
+            -1.507812
+          ]
+        ]
+      },
+      {
+        "srId": 104109,
+        "pos": [
+          [
+            -37046,
+            4908
+          ],
+          [
+            -209.45898,
+            -2679.3955
+          ],
+          [
+            -21116.129,
+            6846.1333
+          ]
+        ]
+      },
+      {
+        "srId": 104110,
+        "pos": [
+          [
+            30041.688,
+            -10205.6875
+          ],
+          [
+            35943.785,
+            -906.7367
+          ]
+        ]
+      }
+    ],
     "desc": "Tokens said to lie scattered across Mistwharf — proof of courage, wisdom, and patience, each forged through trials of adventure. Gather enough, and present them to the Lunoxplorer in Haze Market to earn valuable rewards.",
     "desc2": "Where land and sea fall away — the first breath and final hush of every trade route.\nThe incense-laced air hums with legend; beneath the eaves, whispers still drift. When the smoke lifts and dust settles... what will tomorrow hold?\nGo forth — to see, to listen — and explore Mistwharf, a realm ready to leave its yesterdays behind."
   },
@@ -7762,6 +8241,135 @@
     "name": "Advensphere: Haojing",
     "icon": "T_ExploreBadge_Beibao_East01",
     "rarity": 5,
+    "source": [
+      {
+        "srId": 104501,
+        "pos": [
+          [
+            44358.21,
+            -31707.14
+          ],
+          [
+            56555.51,
+            -23044.83
+          ],
+          [
+            51115.87,
+            -33008.29
+          ]
+        ]
+      },
+      {
+        "srId": 104503,
+        "pos": [
+          [
+            24247.61,
+            -58967.94
+          ],
+          [
+            31504.1,
+            -85772.77
+          ],
+          [
+            31596.35,
+            -42735.73
+          ]
+        ]
+      },
+      {
+        "srId": 104504,
+        "pos": [
+          [
+            -30670,
+            -56940
+          ],
+          [
+            3970.79,
+            -84988.92
+          ],
+          [
+            -28227.2,
+            -40623.55
+          ],
+          [
+            -4420,
+            -61380
+          ]
+        ]
+      },
+      {
+        "srId": 104505,
+        "pos": [
+          [
+            54010.48,
+            -74958.27
+          ],
+          [
+            66010.89,
+            -80913.62
+          ],
+          [
+            52188.24,
+            -48706.47
+          ]
+        ]
+      },
+      {
+        "srId": 104502,
+        "pos": [
+          [
+            19941.07,
+            -4392.78
+          ],
+          [
+            -10819.38,
+            -26378.15
+          ],
+          [
+            7958.5,
+            -20820.75
+          ],
+          [
+            5281.37,
+            -11974.64
+          ]
+        ]
+      },
+      {
+        "srId": 105201,
+        "pos": [
+          [
+            15806.12,
+            -1651.36
+          ],
+          [
+            -1425.55,
+            -8427.81
+          ],
+          [
+            40.46,
+            1259.08
+          ],
+          [
+            9290.49,
+            6697.09
+          ]
+        ]
+      },
+      {
+        "srId": 105501,
+        "pos": [
+          [
+            18959.86,
+            1408.9
+          ],
+          [
+            19206.56,
+            4509.94
+          ]
+        ]
+      }
+    ],
     "desc": "Tokens said to lie scattered across Haojing — proof of courage, wisdom, and patience, each forged through trials of adventure. Gather enough, and present them to the Lunoxplorer in Haojing to earn valuable rewards.",
     "desc2": "In the Far East stands a great city, where pavilions and waterside halls raised by ancient hands have endured unchanged for a thousand years, as though they might stand until sea and stone are worn away.\n\nYet even songs passed down through the ages will one day find a new verse, and familiar tales will welcome new faces. Beneath the vault of heaven, the winds are rising and the tides beginning to turn.\n\nGo forth to explore, to witness, and to listen in Haojing, a city soon to be made anew."
   },
@@ -9550,8 +10158,8 @@
         "srId": 101701,
         "pos": [
           [
-            -21486,
-            4826
+            0,
+            0
           ]
         ]
       }
@@ -9569,8 +10177,8 @@
         "srId": 101701,
         "pos": [
           [
-            -18821,
-            -5456
+            0,
+            0
           ]
         ]
       }
@@ -9897,6 +10505,15 @@
             -185
           ]
         ]
+      },
+      {
+        "srId": 101110,
+        "pos": [
+          [
+            4129.419,
+            1034.0286
+          ]
+        ]
       }
     ],
     "desc": "A stack of torn-off medicine labels, each marked \"Sedative.\" On the back of one, a message has been furiously scrawled.",
@@ -10074,6 +10691,15 @@
     "rarity": 3,
     "source": [
       {
+        "srId": 101101,
+        "pos": [
+          [
+            -1770,
+            8810
+          ]
+        ]
+      },
+      {
         "srId": 101702,
         "pos": [
           [
@@ -10092,6 +10718,15 @@
     "icon": "T_Read_01",
     "rarity": 3,
     "source": [
+      {
+        "srId": 101101,
+        "pos": [
+          [
+            -1203.4828,
+            490.69458
+          ]
+        ]
+      },
       {
         "srId": 101703,
         "pos": [
@@ -10117,6 +10752,15 @@
           [
             17063,
             -978
+          ]
+        ]
+      },
+      {
+        "srId": 101101,
+        "pos": [
+          [
+            -5640,
+            -4760
           ]
         ]
       }
@@ -10264,6 +10908,15 @@
     "rarity": 3,
     "source": [
       {
+        "srId": 101107,
+        "pos": [
+          [
+            1091.8047,
+            -10195.223
+          ]
+        ]
+      },
+      {
         "srId": 101702,
         "pos": [
           [
@@ -10282,6 +10935,15 @@
     "icon": "T_Read_02",
     "rarity": 3,
     "source": [
+      {
+        "srId": 101103,
+        "pos": [
+          [
+            330.78516,
+            -156.96094
+          ]
+        ]
+      },
       {
         "srId": 101701,
         "pos": [
@@ -10685,8 +11347,8 @@
         "srId": 104109,
         "pos": [
           [
-            -13013.81,
-            11761.229
+            54.078125,
+            29.636719
           ]
         ]
       }
@@ -11199,8 +11861,8 @@
         "srId": 105201,
         "pos": [
           [
-            15713.31,
-            2236.39
+            -19.21,
+            30.43
           ]
         ]
       }
@@ -11214,6 +11876,15 @@
     "icon": "T_Read_East01",
     "rarity": 3,
     "source": [
+      {
+        "srId": 101107,
+        "pos": [
+          [
+            1136.6428,
+            -10244.687
+          ]
+        ]
+      },
       {
         "srId": 105201,
         "pos": [
@@ -11256,8 +11927,8 @@
         "srId": 104502,
         "pos": [
           [
-            19290,
-            -2900
+            0,
+            20
           ]
         ]
       }
@@ -11374,6 +12045,17 @@
     "name": "Avar's Photograph",
     "icon": "T_Photo_Group01",
     "rarity": 4,
+    "source": [
+      {
+        "srId": 102102,
+        "pos": [
+          [
+            6910,
+            1510
+          ]
+        ]
+      }
+    ],
     "desc": "A cherished keepsake Avar always carries, showing him with his daughter Daphne as a child. Though yellowed with age, their bright smiles remain unmistakable."
   },
   {
@@ -11902,6 +12584,15 @@
     "rarity": 2,
     "source": [
       {
+        "srId": 101305,
+        "pos": [
+          [
+            1987.2096,
+            13554.852
+          ]
+        ]
+      },
+      {
         "srId": 101303,
         "rewardId": 4020003,
         "pos": [
@@ -12298,32 +12989,32 @@
     "name": "Pearllure",
     "icon": "T_Fish_Sea_East_4",
     "rarity": 4,
-    "desc": "A mysterious aquatic lifeform recorded in ancient texts, said to spit venomous sand at the shadows of passers-by, afflicting them with strange illnesses.",
-    "desc2": "Though this species does eject sand in short bursts, it bears little resemblance to the mythical creature \"Yuu\" described in early Huaxu writings. \nThe expelled sand is demonstrably non-toxic, and the naming may well be a case of ancestral misattribution — or simple mythological conflation. Most likely, the original \"Yuu\" never existed at all.\n\n— Lin Caocao, biologist from Huaxu"
+    "desc": "A fiercely aggressive species prized for its tender, flavourful meat — a familiar sight on dining tables across Huaxu. Despite its hideous appearance, the bioluminescent lure atop its head lends it a strangely delicate beauty.",
+    "desc2": "In ancient times, fishermen believed that the Pearllure's glowing lure was none other than the fabled Night Pearl itself. But once the creature perished, its radiance faded swiftly — and thus arose the old Huaxu proverb: \"The bright pearl dims when cast astray.\"\n\n— Rovetta, travel writer, Rovetta in Huaxu"
   },
   {
     "id": 5022031,
     "name": "Pearllure Variant",
     "icon": "T_Fish_Sea_East_4_1",
     "rarity": 4,
-    "desc": "A mysterious aquatic lifeform recorded in ancient texts, said to spit venomous sand at the shadows of passers-by, afflicting them with strange illnesses.",
-    "desc2": "Though this species does eject sand in short bursts, it bears little resemblance to the mythical creature \"Yuu\" described in early Huaxu writings. \nThe expelled sand is demonstrably non-toxic, and the naming may well be a case of ancestral misattribution — or simple mythological conflation. Most likely, the original \"Yuu\" never existed at all.\n\n— Lin Caocao, biologist from Huaxu"
+    "desc": "A fiercely aggressive species prized for its tender, flavourful meat — a familiar sight on dining tables across Huaxu. Despite its hideous appearance, the bioluminescent lure atop its head lends it a strangely delicate beauty.",
+    "desc2": "In ancient times, fishermen believed that the Pearllure's glowing lure was none other than the fabled Night Pearl itself. But once the creature perished, its radiance faded swiftly — and thus arose the old Huaxu proverb: \"The bright pearl dims when cast astray.\"\n\n— Rovetta, travel writer, Rovetta in Huaxu"
   },
   {
     "id": 5022040,
     "name": "Yuu",
     "icon": "T_Fish_Sea_East_3",
     "rarity": 3,
-    "desc": "A fiercely aggressive species prized for its tender, flavourful meat — a familiar sight on dining tables across Huaxu. Despite its hideous appearance, the bioluminescent lure atop its head lends it a strangely delicate beauty.",
-    "desc2": "In ancient times, fishermen believed that the Pearllure's glowing lure was none other than the fabled Night Pearl itself. But once the creature perished, its radiance faded swiftly — and thus arose the old Huaxu proverb: \"The bright pearl dims when cast astray.\"\n\n— Rovetta, travel writer, Rovetta in Huaxu"
+    "desc": "A mysterious aquatic lifeform recorded in ancient texts, said to spit venomous sand at the shadows of passers-by, afflicting them with strange illnesses.",
+    "desc2": "Though this species does eject sand in short bursts, it bears little resemblance to the mythical creature \"Yuu\" described in early Huaxu writings. \nThe expelled sand is demonstrably non-toxic, and the naming may well be a case of ancestral misattribution — or simple mythological conflation. Most likely, the original \"Yuu\" never existed at all.\n\n— Lin Caocao, biologist from Huaxu"
   },
   {
     "id": 5022041,
     "name": "Yuu Variant",
     "icon": "T_Fish_Sea_East_3_1",
     "rarity": 3,
-    "desc": "A fiercely aggressive species prized for its tender, flavourful meat — a familiar sight on dining tables across Huaxu. Despite its hideous appearance, the bioluminescent lure atop its head lends it a strangely delicate beauty.",
-    "desc2": "In ancient times, fishermen believed that the Pearllure's glowing lure was none other than the fabled Night Pearl itself. But once the creature perished, its radiance faded swiftly — and thus arose the old Huaxu proverb: \"The bright pearl dims when cast astray.\"\n\n— Rovetta, travel writer, Rovetta in Huaxu"
+    "desc": "A mysterious aquatic lifeform recorded in ancient texts, said to spit venomous sand at the shadows of passers-by, afflicting them with strange illnesses.",
+    "desc2": "Though this species does eject sand in short bursts, it bears little resemblance to the mythical creature \"Yuu\" described in early Huaxu writings. \nThe expelled sand is demonstrably non-toxic, and the naming may well be a case of ancestral misattribution — or simple mythological conflation. Most likely, the original \"Yuu\" never existed at all.\n\n— Lin Caocao, biologist from Huaxu"
   },
   {
     "id": 5022050,
@@ -13579,6 +14270,15 @@
     "rarity": 2,
     "source": [
       {
+        "srId": 101304,
+        "pos": [
+          [
+            18965.57,
+            31181.377
+          ]
+        ]
+      },
+      {
         "srId": 100103,
         "pos": [
           [
@@ -13614,6 +14314,15 @@
     "rarity": 2,
     "source": [
       {
+        "srId": 101103,
+        "pos": [
+          [
+            -8800,
+            42600
+          ]
+        ]
+      },
+      {
         "srId": 100102,
         "pos": [
           [
@@ -13640,6 +14349,15 @@
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "source": [
+      {
+        "srId": 102104,
+        "pos": [
+          [
+            -139,
+            461
+          ]
+        ]
+      },
       {
         "srId": 100103,
         "pos": [
@@ -13683,6 +14401,15 @@
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "source": [
+      {
+        "srId": 101901,
+        "pos": [
+          [
+            20490,
+            4130
+          ]
+        ]
+      },
       {
         "srId": 101101,
         "pos": [

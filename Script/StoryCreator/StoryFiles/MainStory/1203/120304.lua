@@ -672,16 +672,16 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17654406995785335",
-            startPort = "Out",
-            endQuest = "17745062216935092057",
-            endPort = "In"
-          },
-          {
-            startQuest = "17745062216935092057",
+            startQuest = "17751148858911287436",
             startPort = "Out",
             endQuest = "17637294815294115820",
             endPort = "Success"
+          },
+          {
+            startQuest = "17654406995785335",
+            startPort = "Out",
+            endQuest = "17751148858911287436",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -696,7 +696,7 @@ return {
             key = "17637294815294115820",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2603.917710047565, y = 293.40214182872984},
+            pos = {x = 2606.6941806358, y = 292.508024181671},
             propsData = {
               ModeType = 1,
               Id = 105201,
@@ -943,7 +943,7 @@ return {
             key = "17737173219802602734",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 2334.5372474747473, y = 489.13446969696986},
+            pos = {x = 2323.94901218063, y = 482.95799910873455},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
@@ -968,15 +968,21 @@ return {
               bStoreToServer = true
             }
           },
-          ["17745062216935092057"] = {
-            key = "17745062216935092057",
+          ["17751148858911287436"] = {
+            key = "17751148858911287436",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 2320.5086996337, y = 284.95979853479867},
+            pos = {x = 2320.8920350749, y = 294.26386554621854},
             propsData = {
-              SoundStateType = 3,
+              SoundStateType = 0,
               SoundPriority = 0,
-              SoundType = 0
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {},
+              bStoreToServer = false
             }
           }
         },

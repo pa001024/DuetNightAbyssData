@@ -480,7 +480,7 @@ return {
             key = "1722527552047487765",
             type = "TalkNode",
             name = "看到自己的一生",
-            pos = {x = 1614.9460340428666, y = -49.328036437247135},
+            pos = {x = 1616.7107399252195, y = -51.09274231960008},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 10112101,
@@ -507,7 +507,7 @@ return {
               DoNotReceiveCharacterShadow = false,
               PauseTimeElapse = false,
               BeginNewTargetPointName = "",
-              EndNewTargetPointName = "",
+              EndNewTargetPointName = "QuestPoint_SaiqiDreamBoss1OnGround",
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,

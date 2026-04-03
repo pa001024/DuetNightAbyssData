@@ -9,6 +9,9 @@ end
 function Component:InitAsDragUI(DisPlayItemId, ShapeOffsets, SyncData)
   self.LinkWidgets = {}
   self.ActiveLinkWidgets = {}
+  self.bIsRuntimeDragVisual = true
+  self._BagGameDragHandled = false
+  self._BagGameCancelHandled = false
   self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.DisPlayItemId = DisPlayItemId
   self.TemplateId = SyncData and SyncData.TemplateId or DisPlayItemId
@@ -38,6 +41,11 @@ function Component:OnDragDetectedComponent(MyGeometry, PointerEvent, DisPlayItem
     SyncData = self:GetDragSyncData()
   end
   local DragUI = self:CreateDragUI(DisPlayItemId, ShapeOffsets, SyncData)
+  if DragUI then
+    DragUI._DragSourceWidget = self
+    DragUI._DragSourceItemId = DisPlayItemId
+    DragUI._DragSourceScreen = self.PlayScreen or self.Content and self.Content.PlayScreen or nil
+  end
   if DragUI and DragUI.SetItemSize then
     DragUI:SetItemSize()
   end
@@ -46,6 +54,9 @@ function Component:OnDragDetectedComponent(MyGeometry, PointerEvent, DisPlayItem
   DragDropOperation.InSlotUIData = self.SlotUIData
   DragDropOperation.Tag = "BagGameDisPlayItem"
   DragDropOperation.SourceDisPlayItem = self
+  if DragUI then
+    DragUI._DragDropOperation = DragDropOperation
+  end
   if self.OnDragDetectedCallback then
     self.OnDragDetectedCallback(self, PointerEvent, DragDropOperation)
   end
@@ -82,6 +93,12 @@ end
 function Component:OnDrop(MyGeometry, PointerEvent, Operation)
   if Operation.Tag ~= "BagGameDisPlayItem" then
     return
+  end
+  if self.PlayScreen and self.PlayScreen.TryHandleSameFrameDragRelease then
+    local DragUI = Operation.DefaultDragVisual
+    if self.PlayScreen:TryHandleSameFrameDragRelease(Operation, DragUI) then
+      return true
+    end
   end
   if self.bIsConfirmed and self.PlayScreen and self.PlayScreen.PlaceItemAtCell then
     local DragUI = Operation.DefaultDragVisual

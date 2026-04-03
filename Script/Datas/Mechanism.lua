@@ -209,7 +209,8 @@ T.RT_54 = {
   1210340,
   1210341,
   1210342,
-  1210343
+  1210343,
+  1210344
 }
 T.RT_55 = {
   "Prop42001Ray"
@@ -262,7 +263,8 @@ T.RT_67 = {
   1310211,
   1310212,
   1310213,
-  1310214
+  1310214,
+  1310217
 }
 T.RT_68 = {
   RotateAxis = "Z",
@@ -276,7 +278,11 @@ T.RT_70 = {
   RotateAxis = "Y",
   Tag = T.RT_55
 }
-T.RT_71 = {1310215, 1310216}
+T.RT_71 = {
+  1310215,
+  1310216,
+  1310217
+}
 T.RT_72 = {1310220}
 T.RT_73 = {1310220, 1310221}
 T.RT_74 = {
@@ -1713,7 +1719,7 @@ return ReadOnly("Mechanism", {
     UnitRealType = "Delivery"
   },
   [1822] = {
-    FirstStateId = 26,
+    FirstStateId = 2521,
     InteractiveId = 105,
     StateIdList = {
       2521,
@@ -4018,7 +4024,7 @@ return ReadOnly("Mechanism", {
     GuideIconBPPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Chest.T_Gp_Chest",
     GuideInactive = true,
     GuideInfo = T.RT_61,
-    GuideType = 1,
+    GuideType = 0,
     GuideVisibility = true,
     InteractiveId = 70000,
     ModelId = 950,

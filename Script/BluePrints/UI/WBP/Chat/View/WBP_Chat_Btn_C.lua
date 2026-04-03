@@ -17,27 +17,8 @@ function M:Construct()
   self.Button_Area.OnClicked:Add(self, self.BtnAreaOnClicked)
   self.Button_Forbid.OnClicked:Add(self, self.BtnAreaOnClicked)
   self.bForbidden = false
-  ChatController:RegisterEvent(self, function(self, EventId, ...)
-    if EventId == ChatCommon.EventID.SendCDTimerUpdate then
-      local RemainTime = (...)
-      self:HandleSendChatMessageCd(RemainTime)
-    end
-  end)
   ChatController:UnRegisterEvent(self.Key_Text)
   self.Key_Text:SetForbidKey(false)
-end
-
-function M:HandleSendChatMessageCd(CDRemainTime)
-  if not self.WS then
-    return
-  end
-  if CDRemainTime > 0 then
-    if 1 ~= self.WS:GetActiveWidgetIndex() then
-      self.WS:SetActiveWidgetIndex(1)
-    end
-  elseif 0 ~= self.WS:GetActiveWidgetIndex() then
-    self.WS:SetActiveWidgetIndex(0)
-  end
 end
 
 function M:BtnAreaOnClicked()
@@ -84,7 +65,6 @@ function M:Destruct()
   self.bForbidden = nil
   self.Button_Area.OnClicked:Remove(self, self.BtnAreaOnClicked)
   self.Button_Forbid.OnClicked:Remove(self, self.BtnAreaOnClicked)
-  ChatController:UnRegisterEvent(self)
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(self)
     if IsValid(GameInputModeSubsystem) then
@@ -167,7 +147,8 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     self:BtnAreaOnClicked()
     local Handled = UWidgetBlueprintLibrary.Handled()
     local Owner = self.Owner and self.Owner.Owner
-    if Owner then
+    local CommonDialogWindow = UIManager(self):GetUIObj("CommonDialog")
+    if Owner and not CommonDialogWindow then
       return UWidgetBlueprintLibrary.SetUserFocus(Handled, Owner)
     end
     return Handled

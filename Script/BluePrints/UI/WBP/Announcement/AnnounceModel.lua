@@ -529,12 +529,12 @@ end
 function M:_ParseContentV2(Conf, Info)
   Conf.NoticeTitle = ""
   local bNeedDefaultEnglish = true
-  for _, Text in pairs(Info.ClientOnly.pageContents or {}) do
+  for i, Text in pairs(Info.ClientOnly.pageContents or {}) do
     if self:_TestContentLangPass(Text) then
       Conf.Language = Text.language
       Conf.SubTitleInfos = Text.subTitleInfos
       Conf.NoticeContent = Text.htmlCode
-      Conf.NoticeTitle = Info.Title
+      Conf.NoticeTitle = Info.Content[i].title
       if Conf.UIStyle == AnnounceCommon.ContentUIStyle.ImageOnly then
         Conf.ImageUrl = Info.Content[1].noticeImageURL
       end

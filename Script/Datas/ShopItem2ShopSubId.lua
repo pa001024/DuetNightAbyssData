@@ -1537,6 +1537,9 @@ return ReadOnly("ShopItem2ShopSubId", {
       },
       [31532] = {
         [1] = {ShopItemId = 701003, SubTabId = 7010}
+      },
+      [103003] = {
+        [1] = {ShopItemId = 705005, SubTabId = 7050}
       }
     },
     FishingShop = {
@@ -1744,9 +1747,6 @@ return ReadOnly("ShopItem2ShopSubId", {
       [103001] = {
         [1] = {ShopItemId = 10002108, SubTabId = 100021}
       },
-      [103003] = {
-        [1] = {ShopItemId = 10002115, SubTabId = 100021}
-      },
       [104002] = {
         [1] = {ShopItemId = 10002107, SubTabId = 100021}
       },
@@ -1787,13 +1787,13 @@ return ReadOnly("ShopItem2ShopSubId", {
         [1] = {ShopItemId = 1208003, SubTabId = 1209}
       },
       [1005] = {
-        [1] = {ShopItemId = 1208004, SubTabId = 1209}
+        [1] = {ShopItemId = 1208006, SubTabId = 1209}
       },
       [1006] = {
-        [1] = {ShopItemId = 1208005, SubTabId = 1209}
+        [1] = {ShopItemId = 1208004, SubTabId = 1209}
       },
       [1007] = {
-        [1] = {ShopItemId = 1208006, SubTabId = 1209}
+        [1] = {ShopItemId = 1208005, SubTabId = 1209}
       }
     },
     SoloTreasureShop = T.RT_1,

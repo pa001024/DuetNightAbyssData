@@ -23,7 +23,11 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
-  if CurInputDevice == ECommonInputType.Gamepad then
+  self:UpdateGamePadKey()
+end
+
+function M:UpdateGamePadKey()
+  if self.CurInputDeviceType == ECommonInputType.Gamepad and self.Button_Mod:IsVisible() then
     self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else
     self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -75,6 +79,7 @@ function M:Init(Params)
   else
     self.Button_Mod:SetVisibility(UIConst.VisibilityOp.Visible)
   end
+  self:UpdateGamePadKey()
   local Data = DataMgr.Mod[Params.ModId]
   if not Data then
     return
@@ -123,7 +128,7 @@ end
 
 function M:OnBtnModClicked()
   if self.Params and self.Params.OnModBtnClicked then
-    if self.Params.IsPreviewMode then
+    if self.Params.IsPreviewMode or not self.Button_Mod:IsVisible() then
       return
     end
     self.Params.OnModBtnClicked(self.Params.Owner)

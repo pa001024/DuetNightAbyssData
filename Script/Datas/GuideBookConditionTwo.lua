@@ -483,6 +483,7 @@ return ReadOnly("GuideBookConditionTwo", {
     [127] = {
       [1] = {
         CompleteUIGuideId = 127,
+        FinishQuest = 12020306,
         GuideId = 127,
         GuideNoteId = 144,
         GuideNoteTab = 3,
@@ -546,7 +547,8 @@ return ReadOnly("GuideBookConditionTwo", {
         GuideId = 134,
         GuideNoteId = 151,
         GuideNoteTab = 3,
-        RewardId = 7000
+        RewardId = 7000,
+        SysGuideId = 2098
       }
     },
     [135] = {

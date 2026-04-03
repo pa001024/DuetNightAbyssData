@@ -36334,7 +36334,7 @@
             "dialogues": [
               {
                 "id": 12048751,
-                "content": "异样感似乎还在隐隐跳动，先走吧……",
+                "content": "I still feel something unfamiliar, but it's time to go.",
                 "npc": 100001
               }
             ]
@@ -37397,7 +37397,7 @@
               },
               {
                 "id": 12041714,
-                "content": "Off you go then, young ones. These old bones'll stay out of the fuss.",
+                "content": "Off you go then, young ones. These old bones'll stay out of it.",
                 "voice": "story/1204/120417/1E2529B4",
                 "npc": 240009,
                 "next": 12041715
@@ -39570,7 +39570,7 @@
               },
               {
                 "id": 12043505,
-                "content": "Allow me to introduce myself: Su Yi, quartermaster of the Outer Peaks and 17th-generation heir to the Jishu Sect. I'm peer to Kezhou's Shīfu's Shīfu, so by tradition, he's obliged to call me \"Great-Aunt.\" Now then — I'll be guiding you from here.",
+                "content": "Allow me to introduce myself: Su Yi, quartermaster of the Outer Peaks and 17th-generation heir to the Jishu Sect. I'm peer to Kezhou's Shifu's Shifu, so by tradition, he's obliged to call me \"Great-Aunt.\" Now then — I'll be guiding you from here.",
                 "voice": "story/1204/120435/1E264F8A",
                 "npc": 240026,
                 "next": 12043506
@@ -44522,12 +44522,12 @@
               },
               {
                 "id": 12046616,
-                "content": "万万不可啊，止流大当家——",
+                "content": "Please, Miss Zhiliu — this is wrong!",
                 "voice": "story/1201/120229/1E191CD6"
               },
               {
                 "id": 12046615,
-                "content": "为大风九章奔走，于我而言，是一件将功折罪的幸事。",
+                "content": "To serve the Nine Chapters now... it is my chance to atone.",
                 "voice": "story/1204/120466/12046615"
               }
             ]
@@ -45601,7 +45601,63 @@
         "id": 12020614,
         "name": "Make it to the end of the Taixu Mausoleum",
         "desc": "Taihao and Zhuyin's clash is coming to a head. In the depths of the Taixu Mausoleum, you find Zhiliu at her breaking point.\nDesperate to die, she asks you to plunge your blade into her chest and complete the final sacrifice.",
-        "nodes": []
+        "nodes": [
+          {
+            "id": "177496944840919541",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 12047504,
+                "content": "{nickname}, go on ahead — don't waste time here.",
+                "voice": "story/1204/120475/1E28DFA0",
+                "npc": 240013,
+                "next": 12047505
+              },
+              {
+                "id": 12047505,
+                "content": "All right.",
+                "voice": "story/1204/120475/1E28DFCA",
+                "npc": 100001,
+                "next": 12047506
+              },
+              {
+                "id": 12047506,
+                "content": "Draw your blade, shixiong. Holding you here is my duty too!",
+                "voice": "story/1204/120475/1E28DFF4",
+                "npc": 240013,
+                "next": 12047507
+              },
+              {
+                "id": 12047507,
+                "content": "I wavered before... but not anymore!",
+                "voice": "story/1204/120475/1E28E01E",
+                "npc": 240013,
+                "next": 12047508
+              },
+              {
+                "id": 12047508,
+                "content": "That question you asked me — now I have my answer! Who says you must choose between tearing things down and holding things together? I'll do both!",
+                "voice": "story/1204/120475/1E28E048",
+                "npc": 240013,
+                "next": 12047509
+              },
+              {
+                "id": 12047509,
+                "content": "And who says a man must fight only for others? If everyone took up arms in self-defence and stood as one, forget Deterioration — nothing could withstand us! I'll prove such a future can be made real!",
+                "voice": "story/1204/120475/1E28E072",
+                "npc": 240013,
+                "next": 12047510
+              },
+              {
+                "id": 12047510,
+                "content": "...",
+                "voice": "story/1204/120475/1E28E09C",
+                "npc": 210007
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 12020615,
@@ -46413,7 +46469,7 @@
               },
               {
                 "id": 12060318,
-                "content": "(Nagging and worrying... are you sure you're not talking about yourself?) (smirks)",
+                "content": "(Nagging and worrying... are you sure you're not talking about yourself?)",
                 "voice": "story/1206/120603/1E3115EC",
                 "npc": 100001,
                 "next": 12060319
@@ -46759,7 +46815,7 @@
               },
               {
                 "id": 12060514,
-                "content": "Tch... Don't get me wrong. Demon Tabethe only steals from bad people. I don't pick on good folk. (voice turns cold)",
+                "content": "Tch... Don't get me wrong. Demon Tabethe only steals from bad people. I don't pick on good folk.",
                 "voice": "story/1206/120605/1E313614",
                 "npc": 250006,
                 "next": 12060515
@@ -49918,7 +49974,7 @@
               },
               {
                 "id": 12062313,
-                "content": "Yuming — weren't we meeting at the arena tomorrow morning? Why are you here at this hour? What happened? (rushes into the frame)",
+                "content": "Yuming — weren't we meeting at the arena tomorrow morning? Why are you here at this hour? What happened?",
                 "voice": "story/1206/120623/1E325D3A",
                 "npc": 100001,
                 "next": 12062314
@@ -50584,7 +50640,7 @@
               },
               {
                 "id": 12062634,
-                "content": "... (She turns away from {nickname} and starts to walk off)",
+                "content": "...",
                 "voice": "story/1206/120626/1E3291E4",
                 "npc": 250003,
                 "next": 12062635
@@ -50649,7 +50705,7 @@
               },
               {
                 "id": 12062644,
-                "content": "I kept telling myself my aunt did the right thing... but I never really faced what that accident did to people, even if she never meant it.",
+                "content": "I kept telling myself my aunt did the right thing... but I never really faced what the accident did to people, even if she never meant it.",
                 "voice": "story/1206/120626/1E329388",
                 "npc": 250003,
                 "next": 12062645
@@ -50830,7 +50886,7 @@
               },
               {
                 "id": 12062719,
-                "content": "... (closes her eyes)",
+                "content": "...",
                 "voice": "story/1206/120627/1E329FD6",
                 "npc": 250003,
                 "next": 12062720
@@ -78787,25 +78843,25 @@
             "dialogues": [
               {
                 "id": 51012600,
-                "content": "第一张照片，应该是旅途的起点。那么，就只能是那个地方了——",
+                "content": "The first photo... should be where it all began. There was only ever one place it could be.",
                 "npc": 100001,
                 "next": 51012601
               },
               {
                 "id": 51012601,
-                "content": "净界岛，我和贝蕾妮卡一起生活的故乡。",
+                "content": "Purgatorio Island — the home Berenica and I grew up in together.",
                 "npc": 100001,
                 "next": 51012602
               },
               {
                 "id": 51012602,
-                "content": "如果以后能回到净界岛，我想给<H>家</>拍一张照片，作为笔记的第一页。",
+                "content": "If I ever make it back there... I want to take a photo of <H>our home</> and put it on the first page of my Image Note.",
                 "npc": 100001,
                 "next": 51012603
               },
               {
                 "id": 51012603,
-                "content": "等找到了贝蕾妮卡，再和她一起拍一张照片吧。",
+                "content": "When I find Berry... I want us to take another photo together.",
                 "npc": 100001
               }
             ]
@@ -78829,31 +78885,31 @@
             "dialogues": [
               {
                 "id": 51012800,
-                "content": "离开净界岛之后，我来到了冰湖城。",
+                "content": "After leaving Purgatorio Island, I ended up in Icelake.",
                 "npc": 100001,
                 "next": 51012801
               },
               {
                 "id": 51012801,
-                "content": "在这座冷冰冰的城市，有一个女孩温柔地接纳了我、帮助了我……",
+                "content": "In that cold, unfamiliar city... a girl reached out to me, took me in, and showed me a kindness I'll never forget.",
                 "npc": 100001,
                 "next": 51012802
               },
               {
                 "id": 51012802,
-                "content": "第二页的照片，就选<H>和她第一次见面的地方</>吧。",
+                "content": "For the second page, I'll choose <H>the place where we first met</>.",
                 "npc": 100001,
                 "next": 51012803
               },
               {
                 "id": 51012803,
-                "content": "我不会忘记，在净界岛之外的世界，是谁给了我第一份温暖的回忆。",
+                "content": "I won't forget the girl who was the first warmth I found after I left home.",
                 "npc": 100001,
                 "next": 51012804
               },
               {
                 "id": 51012804,
-                "content": "我会记住你的，赛琪。",
+                "content": "I'll always remember you, Psyche.",
                 "npc": 100001
               }
             ]
@@ -78877,25 +78933,25 @@
             "dialogues": [
               {
                 "id": 51013000,
-                "content": "这一页……我想留下<H>和赛琪分别的地方</>。",
+                "content": "For this page... I want it to be <H>the place where I lost Psyche</>.",
                 "npc": 100001,
                 "next": 51013001
               },
               {
                 "id": 51013001,
-                "content": "虽然非常不想回忆那个悲伤的时刻……但，赛琪一定会希望我全部记住。",
+                "content": "As much as it hurts to recall that moment... I know Psyche would want me to remember it all.",
                 "npc": 100001,
                 "next": 51013002
               },
               {
                 "id": 51013002,
-                "content": "赛琪，我没有忘记约定。",
+                "content": "Psyche... I didn't forget our promise.",
                 "npc": 100001,
                 "next": 51013003
               },
               {
                 "id": 51013003,
-                "content": "将来有一天，等我回到了南方，我一定会在房子周围种满花。",
+                "content": "One day, when I make it back to the South, I'll plant flowers around my home.",
                 "npc": 100001
               }
             ]
@@ -78919,31 +78975,31 @@
             "dialogues": [
               {
                 "id": 51013200,
-                "content": "在那之后的下一个大事件……就是“卡戎狩猎”的案子，是幻景和布鲁斯的故事。",
+                "content": "After that... the next thing I think of is the Charon Hunt. In the end, it was really Phantasio and Blues's story.",
                 "npc": 100001,
                 "next": 51013201
               },
               {
                 "id": 51013201,
-                "content": "我还记得他们<H>在下水道里为自己搭建的那座舞台</>，那也是我们第一次见到扮演布鲁斯的幻景。",
+                "content": "I still remember <H>the stage they built for themselves in the sewers</>. That was where we first met Phantasio, back when he was still posing as Blues.",
                 "npc": 100001,
                 "next": 51013202
               },
               {
                 "id": 51013202,
-                "content": "这一页的相片，我会选择那沉没在淤泥之中，却依然闪闪发光的“梦想”。",
+                "content": "For this page... I want to remember that dream of theirs — dragged down into the gutter, and still reaching for the stars.",
                 "npc": 100001,
                 "next": 51013203
               },
               {
                 "id": 51013203,
-                "content": "回想起来，这就是他最后那场演出的“开幕”……",
+                "content": "Looking back now... that was where his final act began.",
                 "npc": 100001,
                 "next": 51013204
               },
               {
                 "id": 51013204,
-                "content": "可惜那时候，我们还什么都不知道。",
+                "content": "But we had no idea...",
                 "npc": 100001
               }
             ]
@@ -78967,25 +79023,25 @@
             "dialogues": [
               {
                 "id": 51013400,
-                "content": "这一页，该记下“卡戎狩猎”的结局了。",
+                "content": "This page should mark the end of the Charon Hunt.",
                 "npc": 100001,
                 "next": 51013401
               },
               {
                 "id": 51013401,
-                "content": "盖雷亚剧院的舞台，幻景以自己的身份和我们第一次、也是最后一次对话的地方。我在<H>那座舞台</>见证了他故事的终幕。",
+                "content": "The stage at the Galea Theatre — where Phantasio spoke to us as himself for the first and last time. It was on <H>that stage</> that I saw his story come to an end.",
                 "npc": 100001,
                 "next": 51013402
               },
               {
                 "id": 51013402,
-                "content": "虽然观众只有我们寥寥几人，但我们，以及他自己，都不会忘记……",
+                "content": "There were only a handful of us in the audience... but it was a performance none of us — not even him — could ever forget.",
                 "npc": 100001,
                 "next": 51013403
               },
               {
                 "id": 51013403,
-                "content": "他在这里完成了一场最好的演出。",
+                "content": "It was where he gave the last and finest performance of his life.",
                 "npc": 100001
               }
             ]
@@ -79009,31 +79065,31 @@
             "dialogues": [
               {
                 "id": 51013600,
-                "content": "后来，我们因为一场意外，跟着止流去往了华胥。",
+                "content": "Later, an unexpected turn of events led us to Huaxu with Zhiliu.",
                 "npc": 100001,
                 "next": 51013601
               },
               {
                 "id": 51013601,
-                "content": "如果要说最初对华胥的印象，脑海里首先浮现的，是烟津渡那座气派的商会“<H>百年春</>”。",
+                "content": "When I think back to my first impression of Huaxu... the first thing that comes to mind is that grand trading house in Mistwharf — <H>EverSpring</>.",
                 "npc": 100001,
                 "next": 51013602
               },
               {
                 "id": 51013602,
-                "content": "这一页就它吧，还记得百年春门口的那条白龙雕像很威风凛凛呢。",
+                "content": "This should be the one for this page. I still remember the white loong statue at EverSpring's entrance — it looked so proud and imposing.",
                 "npc": 100001,
                 "next": 51013603
               },
               {
                 "id": 51013603,
-                "content": "第一次踏上华胥的土地时，真是完全没想到竟会被卷入这样重大的事件……",
+                "content": "When I first set foot in Huaxu, I never imagined I'd get caught up in something this big.",
                 "npc": 100001,
                 "next": 51013604
               },
               {
                 "id": 51013604,
-                "content": "命运还真是奇妙。不过，这大概本来就在止流的计划之中吧。",
+                "content": "Fate really does work in strange ways. But I suppose... this was all part of Zhiliu's design.",
                 "npc": 100001
               }
             ]
@@ -79057,31 +79113,31 @@
             "dialogues": [
               {
                 "id": 51013800,
-                "content": "华胥的这段旅程中，最惊心动魄的一幕，还是听闻止流踏入太虚陵的时候吧。",
+                "content": "Of everything that happened in Huaxu, the most nerve-racking moment was hearing that Zhiliu had gone into the Taixu Mausoleum.",
                 "npc": 100001,
                 "next": 51013801
               },
               {
                 "id": 51013801,
-                "content": "那片土地上所有人的命运，都被悬在她抛出的钱币之上……好在，最终人们还是共同选择了正确的未来。",
+                "content": "The fate of everyone in Huaxu hung on the coin she tossed... but in the end, they all made the right choice.",
                 "npc": 100001,
                 "next": 51013802
               },
               {
                 "id": 51013802,
-                "content": "这一页的相片，就放<H>执律阁上方的天空</>吧。",
+                "content": "For this page, I'll go with <H>the sky above the Hall of Adjudication</>.",
                 "npc": 100001,
                 "next": 51013803
               },
               {
                 "id": 51013803,
-                "content": "现在回想那时的事还是有点后怕，好在最后一切都顺利收场了。",
+                "content": "Even now, when I think back on it, I still feel a chill down my spine... but in the end, we made it through.",
                 "npc": 100001,
                 "next": 51013804
               },
               {
                 "id": 51013804,
-                "content": "不过，经历了华胥的故事，我也对未来多了一分信心——所谓的命运，一定是可以改变的。",
+                "content": "After everything that happened in Huaxu, I feel a little more hopeful about the future — because I know now that fate can be changed.",
                 "npc": 100001
               }
             ]
@@ -79112,185 +79168,185 @@
             "dialogues": [
               {
                 "id": 51012300,
-                "content": "“咔嚓——”",
+                "content": "Click.",
                 "next": 51012301
               },
               {
                 "id": 51012301,
-                "content": "咦？",
+                "content": "Huh?",
                 "npc": 100001,
                 "next": 51012302
               },
               {
                 "id": 51012302,
-                "content": "啊，真抱歉，不小心把你拍进去了……",
+                "content": "Oops! Sorry, I didn't mean to catch you in the shot...",
                 "npc": 700383,
                 "next": 51012304
               },
               {
                 "id": 51012304,
-                "content": "你为什么要拍这座房子？",
+                "content": "Why were you taking a picture of this house?",
                 "npc": 100001,
                 "next": 51012305
               },
               {
                 "id": 51012305,
-                "content": "噢，在解释之前，请允许我做个自我介绍——我叫帕蒂，是一个旅行摄影师！",
+                "content": "Oh, but first — I should introduce myself. I'm Patty, a travelling photographer!",
                 "npc": 700383,
                 "next": 51012306
               },
               {
                 "id": 51012306,
-                "content": "我今天刚到冰湖城，正在寻找此地值得记录的风景。",
+                "content": "I just arrived in Icelake, and I've been looking for places here worth photographing.",
                 "npc": 700383,
                 "next": 51012307
               },
               {
                 "id": 51012307,
-                "content": "这座房子实在是漂亮极了，我看得入迷，情不自禁地举起了相机……所以才没注意到你路过，抱歉啦。",
+                "content": "This house was so beautiful I just lifted my camera without even thinking... I didn't notice you walking past at all. Sorry about that!",
                 "npc": 700383,
                 "next": 51012308
               },
               {
                 "id": 51012308,
-                "content": "“摄影师”……就是专门拍照的人？原来世界上还有这种职业啊。你拍过很多照片吗？",
+                "content": "A photographer...? So you take pictures for a living? I didn't even know that was a real profession. Have you taken lots of photos?",
                 "npc": 100001,
                 "next": 51012309
               },
               {
                 "id": 51012309,
-                "content": "当然啦，你看——",
+                "content": "Of course! Here, have a look—",
                 "npc": 700383,
                 "next": 51012310
               },
               {
                 "id": 51012310,
-                "content": "（少女从包里掏出一本厚厚的笔记，打开向你展示。里面贴着很多照片，文字反而很少。）",
+                "content": "(She pulls a thick notebook out of her bag and flips it open. It's full of photographs, with only the occasional note beside them.)",
                 "next": 51012311
               },
               {
                 "id": 51012311,
-                "content": "原来照片还能做成这样特别的笔记，真有意思……我拍的照片都被我随手放在柜子里了。",
+                "content": "So you can turn photos into something like this... that's really interesting. Mine are all just stuffed in a drawer.",
                 "npc": 100001,
                 "next": 51012312
               },
               {
                 "id": 51012312,
-                "content": "嘿嘿，我把它叫做“影像笔记”哦。你感兴趣的话，也做一本试试怎么样？",
+                "content": "Hehe, I call it my \"Image Note\". If you like it, you should try making one yourself!",
                 "npc": 700383,
                 "next": 51012313
               },
               {
                 "id": 51012313,
-                "content": "好像有点难。",
+                "content": "Sounds a bit tricky.",
                 "npc": 100001,
                 "next": 51012314
               },
               {
                 "id": 51012314,
-                "content": "一点也不难的，你试试就知道啦！",
+                "content": "Not at all — once you start, it'll come naturally.",
                 "npc": 700383,
                 "next": 51012315
               },
               {
                 "id": 51012315,
-                "content": "可是……就算说要做，我不知道该放些什么照片，写些什么文字。你是怎么做的？",
+                "content": "But... even if I did, I wouldn't know what to put in it. Or what to write. How do you decide?",
                 "npc": 100001,
                 "next": 51012316
               },
               {
                 "id": 51012316,
-                "content": "其实我一开始也是随便做做的。不过，做了这么多年，我也算积累了一些经验。既然你是从头做起，那先定一下属于你的影像笔记的“主题”，怎么样？",
+                "content": "To be honest, at first I was just throwing things together. But after doing it for years, I've learned a thing or two. If you're starting from scratch, the first thing you should do is pick a \"theme\".",
                 "npc": 700383,
                 "next": 51012317
               },
               {
                 "id": 51012317,
-                "content": "主题？",
+                "content": "A theme?",
                 "npc": 100001,
                 "next": 51012318
               },
               {
                 "id": 51012318,
-                "content": "嗯，简单来说就是你制作笔记的目的——就比如说我吧，我制作这些笔记，是为了回到故乡时拿给我的姐姐看。",
+                "content": "Mm-hm. Basically, it's your reason for making it. For me, it's so I can show these to my sister when I go home.",
                 "npc": 700383,
                 "next": 51012319
               },
               {
                 "id": 51012319,
-                "content": "我姐姐曾经很喜欢旅行，可后来她生了重病，身体变得很弱，没法再出远门，一直郁郁寡欢。",
+                "content": "She used to love travelling... but she fell seriously ill, and now she's too weak to go out. She's been really down because of it.",
                 "npc": 700383,
                 "next": 51012320
               },
               {
                 "id": 51012320,
-                "content": "可有一天，当我无意中把我外出时拍到的照片展示给姐姐看的时候，她的脸上竟然破天荒地出现了笑容……",
+                "content": "But one day, I happened to show her some of the photos I'd taken on my travels... and she smiled. For the first time in ages.",
                 "npc": 700383,
                 "next": 51012321
               },
               {
                 "id": 51012321,
-                "content": "这就是我开始旅行并制作影像笔记的契机。我想要走到更远的地方，拍下更多的风景，让姐姐在家也能看到广阔的世界。",
+                "content": "That was what inspired me to start travelling and putting this journal together. I want to go farther and see more of the world, then bring it back to my sister through these photos, so she can still see how vast it is even from home.",
                 "npc": 700383,
                 "next": 51012322
               },
               {
                 "id": 51012322,
-                "content": "所以，我的影像笔记的主题就是“记录广阔的世界”。从这个主题出发，我要做的就是找到新的风景并记录下来。你呢，你有什么特别想记录的东西吗？",
+                "content": "So the theme of my Image Note is \"capturing the wider world\". Once I had that, all I had to do was keep looking for new things to see and record. What about you? Is there anything you especially want to capture?",
                 "npc": 700383,
                 "next": 51012325
               },
               {
                 "id": 51012325,
-                "content": "送给我照相机的那个人曾经说过，希望我能代替她继续看看这个世界。",
+                "content": "The person who gave me this camera once said... she hoped I could see the world for her.",
                 "npc": 100001,
                 "next": 51012326
               },
               {
                 "id": 51012326,
-                "content": "我想把旅程中拍摄过的照片制作成影像笔记，作为好好看过这个世界的证明。这可以作为“主题”吗？",
+                "content": "I want to turn the photos from my journey into an Image Note. Something that proves I really saw this world. Could that be a theme?",
                 "npc": 100001,
                 "next": 51012327
               },
               {
                 "id": 51012327,
-                "content": "当然了，我觉得这个主题很棒！",
+                "content": "Of course! That's a really good one!",
                 "npc": 700383,
                 "next": 51012328
               },
               {
                 "id": 51012328,
-                "content": "既然你已经有方向了，不如现在就开始行动起来！我刚好带了一本空白的笔记，就送给你吧。",
+                "content": "Now that you know what you want to do, why not get started straight away? I just so happen to have a spare notebook — here, you can have it.",
                 "npc": 700383,
                 "next": 51012329
               },
               {
                 "id": 51012329,
-                "content": "没关系，我可以自己去买。",
+                "content": "That's very kind of you. But it's all right, I can buy one myself.",
                 "npc": 100001,
                 "next": 51012330
               },
               {
                 "id": 51012330,
-                "content": "不不，我这本可不是商店那种普通笔记本。你看，它的内页里已经做好了放置照片和书写文字的区域，对新手来说很方便哦。",
+                "content": "No, no, this isn't like the ordinary notebooks you'd find at any stationer's. Look — the pages already have space set aside for photos and notes, so it's really handy if you're just starting out.",
                 "npc": 700383,
                 "next": 51012331
               },
               {
                 "id": 51012331,
-                "content": "它的封面还是空白的，你可以自己给它加上装饰，让它变得独一无二。这样，记录的过程也会变得更有成就感！",
+                "content": "And the cover's blank too, so you can decorate it however you like and make it one of a kind. Trust me, it makes the whole thing feel much more special.",
                 "npc": 700383,
                 "next": 51012332
               },
               {
                 "id": 51012332,
-                "content": "原来如此……那我就收下了，谢谢你。",
+                "content": "I see... then I'll take it. Thank you.",
                 "npc": 100001,
                 "next": 51012333
               },
               {
                 "id": 51012333,
-                "content": "嗯，加油呀，新人摄影师！等你做出了属于自己的影像笔记，欢迎来找我分享~",
+                "content": "Mm-hm~ Good luck, rookie photographer! Once you've made your own Image Note, come and show me, all right~?",
                 "npc": 700383
               }
             ]
@@ -79302,7 +79358,7 @@
             "dialogues": [
               {
                 "id": 51012400,
-                "content": "（该怎么装饰呢……？对了，也许铁匠前辈那里会有材料。）",
+                "content": "(How should I decorate it...? Hm, Lunosmith might have something I can use.)",
                 "npc": 100001
               }
             ]
@@ -79320,36 +79376,36 @@
             "dialogues": [
               {
                 "id": 51012500,
-                "content": "嗯？年轻人，找我有事吗？",
+                "content": "Hm? Need something, kiddo?",
                 "npc": 230002,
                 "next": 51012501
               },
               {
                 "id": 51012501,
-                "content": "你好，前辈。我想给这本“影像笔记”做一些装饰。如果你有多余的材料，可不可以分一些给我？",
+                "content": "Hello, Lunosmith. I want to decorate this Image Note. Do you have any spare materials I could use?",
                 "npc": 100001,
                 "next": 51012502
               },
               {
                 "id": 51012502,
-                "content": "有，当然有！平时你这么照顾老朽的生意，这点小忙不在话下。来，你自己挑，想要的尽管拿走。",
+                "content": "Sure! You've been such a good customer. It's the least I can do. Go on, have a look. Help yourself to whatever catches your eye.",
                 "npc": 230002,
                 "next": 51012503
               },
               {
                 "id": 51012503,
-                "content": "哈哈，真教人怀念啊，老朽小的时候，也很喜欢做手工……",
+                "content": "Ha... this takes me back. I used to love making little things by hand when I was a kid...",
                 "npc": 230002,
                 "next": 51012504
               },
               {
                 "id": 51012504,
-                "content": "在铁匠前辈的帮助下对影像笔记进行了装饰……",
+                "content": "With Lunosmith's help, you finish decorating your Image Note.",
                 "next": 51012505
               },
               {
                 "id": 51012505,
-                "content": "嗯，这样就差不多了。接下来，想一想要放怎样的照片进去吧。",
+                "content": "That should do it. Now... what photos should I put in it?",
                 "npc": 100001
               }
             ]
@@ -79372,7 +79428,7 @@
             "dialogues": [
               {
                 "id": 51014000,
-                "content": "目前我想到的足以代表这一路经历的照片就是这些了……不知道这样算是完成了我的“主题”吗？",
+                "content": "I think these photos capture this journey better than anything else I could have chosen... Does that mean I've done what I set out to do with this \"theme\"?",
                 "npc": 100001
               }
             ]
@@ -79384,84 +79440,84 @@
             "dialogues": [
               {
                 "id": 51014100,
-                "content": "“咔嚓——”",
+                "content": "Click.",
                 "next": 51014101
               },
               {
                 "id": 51014101,
-                "content": "啊，真抱歉——咦？！",
+                "content": "Ah, I'm so sorry... wait, what!?",
                 "npc": 700383,
                 "next": 51014102
               },
               {
                 "id": 51014102,
-                "content": "你怎么从这栋房子里走出来了，该不会这里其实是你家吧？",
+                "content": "Did you just come out of this house? Don't tell me you actually live here...?",
                 "npc": 700383,
                 "next": 51014103
               },
               {
                 "id": 51014103,
-                "content": "确实。",
+                "content": "I do.",
                 "npc": 100001,
                 "next": 51014104
               },
               {
                 "id": 51014104,
-                "content": "什么！我只是随口一问，没想到这真是{性别：他|她}家……早知道就不急着订旅馆了，{性别：他|她}这么好说话，说不定会同意我在这里借宿的……呜……",
+                "content": "What!? I was only making conversation... If I'd known {性别：he|she} actually lived here, I wouldn't have booked an inn so fast. {性别：He|She} seems nice... maybe I could've stayed here for free. What a waste...",
                 "npc": 700383,
                 "next": 51014105
               },
               {
                 "id": 51014105,
-                "content": "咳咳……言归正传。看来你已经开始制作自己的影像笔记了，感觉怎么样？",
+                "content": "Ahem... anyway. Looks like you've started putting together your own Image Note. So, how was it? Did you enjoy it?",
                 "npc": 700383,
                 "next": 51014106
               },
               {
                 "id": 51014106,
-                "content": "我试着做了几页，感觉……很奇妙。",
+                "content": "I've put together a few pages so far. It's... amazing, really.",
                 "npc": 100001,
                 "next": 51014107
               },
               {
                 "id": 51014107,
-                "content": "尽管照片只是定格的画面，但当我把它贴在纸上，写下文字记录的时候，曾经经历过的一幕幕故事和当时的感受又清晰地浮现出来。",
+                "content": "They're just images. But once I place them on the page and start writing beside them, everything comes rushing back — the moments, the way I felt. It all becomes so vivid, like it only just happened.",
                 "npc": 100001,
                 "next": 51014108
               },
               {
                 "id": 51014108,
-                "content": "所以说，影像笔记唤醒了你重要的回忆与情感——而这些正是你“好好看过世界的证明”！看来你完成了自己的主题呀。",
+                "content": "Exactly. An Image Note lets those precious memories and feelings come alive again — and that's proof that you really did see the world for yourself. Looks like you've done what you set out to do with your theme.",
                 "npc": 700383,
                 "next": 51014109
               },
               {
                 "id": 51014109,
-                "content": "嗯，你说得对。谢谢你向我介绍了这种特别的笔记，我会好好珍藏它。",
+                "content": "Yeah, you're right. Thank you for introducing me to this. I'll treasure this note.",
                 "npc": 100001,
                 "next": 51014110
               },
               {
                 "id": 51014110,
-                "content": "不客气！能遇到像我一样认真记录影像的人，我也很开心。",
+                "content": "You're welcome! I'm really happy I got to meet someone else who cares this much about capturing the world in pictures.",
                 "npc": 700383,
                 "next": 51014111
               },
               {
                 "id": 51014111,
-                "content": "过几天我就要离开冰湖城了，或许在旅途的前方，我们还会再次相遇。到时候，再给我分享你的新笔记吧！",
+                "content": "I'll be leaving Icelake in a few days. Maybe we'll run into each other again somewhere else. And when we do, you might have even more photos to show me.",
                 "npc": 700383,
                 "next": 51014112
               },
               {
                 "id": 51014112,
-                "content": "好啊，那就后会有期。",
+                "content": "No problem. Until next time.",
                 "npc": 100001,
                 "next": 51014113
               },
               {
                 "id": 51014113,
-                "content": "嗯，后会有期！",
+                "content": "Until next time!",
                 "npc": 700383
               }
             ]

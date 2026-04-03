@@ -1213,6 +1213,31 @@
     ]
   },
   {
+    "id": 90013,
+    "child": [
+      {
+        "id": 216,
+        "t": "Resource",
+        "n": "Phoxhunter's Canto"
+      },
+      {
+        "id": 101,
+        "t": "Resource",
+        "n": "Coin"
+      },
+      {
+        "id": 102,
+        "t": "Resource",
+        "n": "Carmine Globule"
+      },
+      {
+        "id": 20013,
+        "t": "Resource",
+        "n": "Luno Memento"
+      }
+    ]
+  },
+  {
     "id": 90102,
     "child": [
       {

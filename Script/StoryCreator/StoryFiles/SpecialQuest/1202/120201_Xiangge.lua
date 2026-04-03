@@ -276,24 +276,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1767861592330512",
-            startPort = "Out",
-            endQuest = "17698626844581520587",
-            endPort = "In"
-          },
-          {
-            startQuest = "1767861592330513",
-            startPort = "Out",
-            endQuest = "17698626844581520587",
-            endPort = "In"
-          },
-          {
-            startQuest = "1767861592330514",
-            startPort = "Out",
-            endQuest = "17698626844581520587",
-            endPort = "In"
-          },
-          {
             startQuest = "17678616180721359",
             startPort = "Out",
             endQuest = "176476054967072",
@@ -366,15 +348,27 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17698626844581520587",
+            startQuest = "17698654889467602192",
+            startPort = "Out",
+            endQuest = "17698646600894561132",
+            endPort = "In"
+          },
+          {
+            startQuest = "1767861592330512",
             startPort = "Out",
             endQuest = "17698654889467602192",
             endPort = "In"
           },
           {
-            startQuest = "17698654889467602192",
+            startQuest = "1767861592330513",
             startPort = "Out",
-            endQuest = "17698646600894561132",
+            endQuest = "17698654889467602192",
+            endPort = "In"
+          },
+          {
+            startQuest = "1767861592330514",
+            startPort = "Out",
+            endQuest = "17698654889467602192",
             endPort = "In"
           }
         },
@@ -900,7 +894,7 @@ return {
             key = "17698626844581520587",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3604.9730235146253, y = 860.5870315659744},
+            pos = {x = 3693.2587378003395, y = 487.7298887088315},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12049303,

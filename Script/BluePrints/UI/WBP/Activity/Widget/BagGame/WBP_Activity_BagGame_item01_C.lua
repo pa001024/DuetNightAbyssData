@@ -135,6 +135,7 @@ function M:UpdateFinishState(FinishCount)
 end
 
 function M:ShowPlaceholder()
+  self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.bIsPlaceholder = true
   self.bIsSelected = false
   self.Switch_Change:SetVisibility(UIConst.VisibilityOp.Collapsed)

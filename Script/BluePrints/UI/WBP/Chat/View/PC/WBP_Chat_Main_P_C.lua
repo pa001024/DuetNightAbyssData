@@ -777,7 +777,7 @@ function M:UpdateUIStyleInPlatform()
           bLongPress = false
         })
       end
-      if self.MaxScrollOffset > 0 then
+      if SelectItem and self.MaxScrollOffset > 0 then
         table.insert(BottomKeyInfo, {
           KeyInfoList = {
             {

@@ -34,6 +34,68 @@
             4715
           ]
         ]
+      },
+      {
+        "srId": 101101,
+        "pos": [
+          [
+            -6570.579,
+            -6355.17
+          ],
+          [
+            -8750.369,
+            -4494.1797
+          ],
+          [
+            -8610.721,
+            -6764.1235
+          ],
+          [
+            -8619.172,
+            -7284.187
+          ],
+          [
+            -6037.225,
+            -6345.2295
+          ],
+          [
+            -5432.427,
+            -4068.045
+          ],
+          [
+            -5463.2227,
+            -3281.4912
+          ],
+          [
+            -2186.42,
+            5162.1797
+          ]
+        ]
+      },
+      {
+        "srId": 100101,
+        "pos": [
+          [
+            -7253.9033,
+            4486.6577
+          ],
+          [
+            -7425.891,
+            4092.4116
+          ],
+          [
+            -6615.8613,
+            3527.8232
+          ],
+          [
+            -6719.2856,
+            4269.51
+          ],
+          [
+            -7192.2593,
+            3212.8672
+          ]
+        ]
       }
     ],
     "desc": "Monnaie courante circulant dans tous le continent d’Atlasia. De faible valeur, elle reste indispensable aux transactions quotidiennes.",
@@ -234,6 +296,39 @@
           [
             2283,
             4715
+          ]
+        ]
+      },
+      {
+        "srId": 101103,
+        "pos": [
+          [
+            -19077.75,
+            25544.674
+          ],
+          [
+            -17868.172,
+            25222.422
+          ],
+          [
+            -18501.246,
+            25988.18
+          ],
+          [
+            -22428.875,
+            11815.03
+          ],
+          [
+            -22697.283,
+            9936.444
+          ],
+          [
+            -20316.742,
+            9467.155
+          ],
+          [
+            -18470,
+            23730
           ]
         ]
       },
@@ -1207,10 +1302,10 @@
   },
   {
     "id": 222,
-    "name": "剧目特典",
+    "name": "Souvenir de spectacle",
     "icon": "T_Resource_Abyss_LimitTime_Icon01",
     "rarity": 5,
-    "desc": "于剧院获得的纪念特典，书写着舞台上的每一次传说与触动。可换取特殊奖励。"
+    "desc": "Un souvenir commémoratif obtenu au théâtre, consignant les légendes et émotions de la scène. Peut être échangé contre des récompenses spéciales."
   },
   {
     "id": 301,
@@ -1350,15 +1445,15 @@
     "icon": "T_Resource_GachaTicket_04",
     "rarity": 5,
     "desc": "Un fil éclatant, baigné d’une lueur stellaire. Permet d’obtenir des apparences lors de certains événements.",
-    "desc2": "“织物的艺术与绘画、雕塑一样，播撒着美学的福音。而持有这梭纺线，就相当于握紧了美学殿堂的入场券，你会是这些‘艺术品’正在等待的有缘人吗？”\n\n——艺术家 阿米埃特"
+    "desc2": "« L’art du tissage, comme la peinture ou la sculpture, diffuse l’essence même de l’esthétique. Tenir ce fil entre ses mains, c’est déjà tenir le billet d’entrée du temple de la beauté. Seras-tu celui ou celle que ces œuvres attendent ? »\n\n— Amiette, artiste"
   },
   {
     "id": 1010,
-    "name": "流光织针",
+    "name": "Aiguille de lumière",
     "icon": "T_Resource_ActivityIcon_02",
     "rarity": 5,
-    "desc": "针尖牵引着光的轨迹，在一横一竖的交叠间织就崭新的衣装。可用于部分角色形象的进阶。",
-    "desc2": "“每一针落下，都在积累着蜕变的进程。我看到了一件崭新的艺术品，正在丝线与指尖的厮磨间缓缓降生。”\n\n——艺术家 阿米埃特"
+    "desc": "La pointe de l’aiguille trace des sillons de lumière, tissant de nouveaux atours à chaque croisement. Permet d’améliorer certaines apparences de personnage.",
+    "desc2": "« Chaque point posé rapproche un peu plus de la métamorphose. Sous mes yeux, une œuvre nouvelle prend lentement vie, née du dialogue entre le fil et le bout des doigts. »\n\n— Amiette, artiste"
   },
   {
     "id": 2000,
@@ -2881,6 +2976,29 @@
     "name": "Manuel d’arme I",
     "icon": "T_Resource_Weapon_Exp02",
     "rarity": 2,
+    "source": [
+      {
+        "srId": 101103,
+        "pos": [
+          [
+            43.00293,
+            40.996094
+          ],
+          [
+            -28.99707,
+            120.99609
+          ],
+          [
+            -28.99707,
+            -45.003906
+          ],
+          [
+            -86.99707,
+            40.996094
+          ]
+        ]
+      }
+    ],
     "desc": "Ouvrage épais détaillant les techniques d’utilisation des armes. Chaque page est une pierre ajoutée à l’édifice de votre puissance.",
     "desc2": "« Des étincelles brûlantes embrasent tes joues, le fracas de l’acier résonne jusque dans tes os.\nSi ton cœur bat la chamade, si ton sang s’embrase à cet appel,\nalors franchis ce seuil, saisis ton arme\net embrasse le destin du combat, jusqu’au point de non-retour. »\n\n— Auteur inconnu, page de garde de <I>L’Art du combat</>"
   },
@@ -2963,6 +3081,23 @@
           [
             92.004974,
             142.35172
+          ]
+        ]
+      },
+      {
+        "srId": 101702,
+        "pos": [
+          [
+            50,
+            90
+          ],
+          [
+            -20,
+            40
+          ],
+          [
+            -2.644531,
+            -35.70117
           ]
         ]
       },
@@ -5259,6 +5394,66 @@
     "name": "Vrille rampante",
     "icon": "T_Resource_Forge_Low01",
     "rarity": 2,
+    "source": [
+      {
+        "srId": 102101,
+        "pos": [
+          [
+            -11301.085,
+            -40645.89
+          ],
+          [
+            -10841.823,
+            -40411.652
+          ],
+          [
+            -11433.078,
+            -40115.49
+          ],
+          [
+            -10880.469,
+            -40993.72
+          ],
+          [
+            -11334.04,
+            -40908.934
+          ],
+          [
+            -11767.572,
+            -40714.156
+          ]
+        ]
+      },
+      {
+        "srId": 102102,
+        "pos": [
+          [
+            -20237.025,
+            5395.3677
+          ],
+          [
+            -20203.799,
+            5327.419
+          ],
+          [
+            -20242.22,
+            5347.765
+          ],
+          [
+            -19815.361,
+            4867.2163
+          ],
+          [
+            -21123.414,
+            4664.7
+          ],
+          [
+            -20293.473,
+            4474.7944
+          ]
+        ]
+      }
+    ],
     "desc": "Plante grimpante que l’on trouve principalement dans les zones ombragées, dotée d’une grande souplesse et d’un réseau interne de fibres étroitement entremêlées. Une fois traitée, elle devient un matériau solide, durable et résistant à l’usure, utilisé dans de nombreux domaines.\nOn dit qu’elle aurait même inspiré la conception des premiers câbles.",
     "desc2": "« Aussi appelé Bois Sans-Cendre, noir de teinte, feuilles blanches comme l’os, il ressemble à du bois pourri, mais le feu le refuse. Son écorce, comestible, a un goût âpre, froid et non toxique. En décoction, deux fois par jour, il apaise les gorges enflammées et dissipe les chaleurs internes. »\n\n— Fufeng, apothicaire de Huaxu, <I>Guide des plantes médicinales</>"
   },
@@ -5267,6 +5462,34 @@
     "name": "Grumeau de Souillé",
     "icon": "T_Resource_Forge_Low02",
     "rarity": 2,
+    "source": [
+      {
+        "srId": 101103,
+        "pos": [
+          [
+            765,
+            20323
+          ]
+        ]
+      },
+      {
+        "srId": 100103,
+        "pos": [
+          [
+            33.085938,
+            20.152344
+          ],
+          [
+            -44,
+            -11
+          ],
+          [
+            -15,
+            -85
+          ]
+        ]
+      }
+    ],
     "desc": "Substance épaisse extraite des Souillés. Sa viscosité varie souvent en fonction de la puissance de la créature dont elle provient.",
     "desc2": "« Pourquoi les grands méchants des histoires ne pleurent-ils jamais ? Parce que leurs larmes sont trop épaisses, comme de la gelée ? Ou parce que leur cœur est si froid que leurs larmes gèlent à jamais ? »\n\n— Fina, habitante de Givrelac"
   },
@@ -5455,8 +5678,8 @@
         "srId": 100101,
         "pos": [
           [
-            9098,
-            9019
+            -1198,
+            51
           ]
         ]
       }
@@ -5480,8 +5703,8 @@
         "srId": 100101,
         "pos": [
           [
-            5451,
-            6828
+            50,
+            -80
           ]
         ]
       }
@@ -5544,8 +5767,8 @@
         "srId": 100102,
         "pos": [
           [
-            27885,
-            5905
+            -3099.1875,
+            -1306.1221
           ]
         ]
       }
@@ -5563,8 +5786,8 @@
         "srId": 100103,
         "pos": [
           [
-            21480,
-            24980
+            -3521,
+            674
           ]
         ]
       }
@@ -5582,8 +5805,8 @@
         "srId": 100101,
         "pos": [
           [
-            8260,
-            -3620
+            -3525,
+            9915
           ]
         ]
       }
@@ -5601,8 +5824,8 @@
         "srId": 100103,
         "pos": [
           [
-            38879,
-            19823
+            -135,
+            -191
           ]
         ]
       }
@@ -5620,8 +5843,8 @@
         "srId": 101101,
         "pos": [
           [
-            -2050,
-            4170
+            -1,
+            38
           ]
         ]
       }
@@ -5639,8 +5862,8 @@
         "srId": 101101,
         "pos": [
           [
-            -1700.7699,
-            -7420.7163
+            -155.99997,
+            101.00003
           ]
         ]
       }
@@ -5658,8 +5881,8 @@
         "srId": 101101,
         "pos": [
           [
-            -9393,
-            7504
+            -585,
+            296
           ]
         ]
       }
@@ -5677,8 +5900,8 @@
         "srId": 101301,
         "pos": [
           [
-            6308,
-            2379
+            -718.21533,
+            3934.8008
           ]
         ]
       }
@@ -5696,8 +5919,8 @@
         "srId": 101103,
         "pos": [
           [
-            -39461,
-            -3328
+            1508.2344,
+            4569.042
           ]
         ]
       }
@@ -5715,8 +5938,8 @@
         "srId": 101103,
         "pos": [
           [
-            -28580,
-            -5200
+            2924.7324,
+            1436.1116
           ]
         ]
       }
@@ -5734,8 +5957,8 @@
         "srId": 101103,
         "pos": [
           [
-            -25917,
-            5325
+            -5404.076,
+            3901.4297
           ]
         ]
       }
@@ -5753,8 +5976,8 @@
         "srId": 101103,
         "pos": [
           [
-            -38101.484,
-            30920.523
+            -2639.332,
+            983.77734
           ]
         ]
       }
@@ -5772,8 +5995,8 @@
         "srId": 101702,
         "pos": [
           [
-            -32562,
-            -16124
+            0,
+            0
           ]
         ]
       }
@@ -5791,8 +6014,8 @@
         "srId": 101701,
         "pos": [
           [
-            -14120,
-            -7175
+            0,
+            26.611816
           ]
         ]
       }
@@ -5810,8 +6033,8 @@
         "srId": 102101,
         "pos": [
           [
-            30081,
-            -31233
+            0,
+            0
           ]
         ]
       }
@@ -5829,8 +6052,8 @@
         "srId": 102101,
         "pos": [
           [
-            19415,
-            -37668
+            0,
+            0
           ]
         ]
       }
@@ -5848,8 +6071,8 @@
         "srId": 102102,
         "pos": [
           [
-            -10037,
-            -1317
+            9218.941,
+            -20395.379
           ]
         ]
       }
@@ -5867,8 +6090,8 @@
         "srId": 104108,
         "pos": [
           [
-            41170,
-            67884
+            -486.25,
+            -5053.3477
           ]
         ]
       }
@@ -5886,8 +6109,8 @@
         "srId": 104110,
         "pos": [
           [
-            31508,
-            -3480
+            148.5332,
+            165.83447
           ]
         ]
       }
@@ -5924,8 +6147,8 @@
         "srId": 104109,
         "pos": [
           [
-            -19023,
-            5230
+            93.015625,
+            -205.73828
           ]
         ]
       }
@@ -5943,8 +6166,8 @@
         "srId": 104105,
         "pos": [
           [
-            -18718,
-            -31299
+            -1118.1562,
+            -321.44336
           ]
         ]
       }
@@ -5981,8 +6204,8 @@
         "srId": 104505,
         "pos": [
           [
-            61191.07,
-            -76997.71
+            -2077.42,
+            -1227.76
           ]
         ]
       }
@@ -6000,8 +6223,8 @@
         "srId": 104502,
         "pos": [
           [
-            18391.01,
-            -38555.32
+            -77.9,
+            1.54
           ]
         ]
       }
@@ -6014,6 +6237,67 @@
     "name": "Sphère d’exploration — Île du Purgatoire",
     "icon": "T_ExploreBadge_Beibao_Prologue",
     "rarity": 5,
+    "source": [
+      {
+        "srId": 100102,
+        "pos": [
+          [
+            20476,
+            3013
+          ],
+          [
+            28805,
+            5325
+          ],
+          [
+            16167,
+            10019
+          ],
+          [
+            26424,
+            -5052
+          ]
+        ]
+      },
+      {
+        "srId": 100103,
+        "pos": [
+          [
+            38077,
+            21235
+          ],
+          [
+            17713.771,
+            25303.838
+          ],
+          [
+            26367,
+            31693
+          ]
+        ]
+      },
+      {
+        "srId": 100101,
+        "pos": [
+          [
+            1932,
+            6055
+          ],
+          [
+            10207,
+            9225
+          ],
+          [
+            2866,
+            8321
+          ],
+          [
+            11031,
+            -4025
+          ]
+        ]
+      }
+    ],
     "desc": "Sphères d’exploration recueillies aux quatre coins de l’Île du Purgatoire. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses.",
     "desc2": "« Là où le regard des dieux ne se pose plus, où la poigne de fer de l’Empire n’a jamais atteint — se dresse une île oubliée.\nLes oiseaux y tournoient entre mille colonnes brisées, survolant des ruines qu’ont englouties la mousse et les marées du temps.\nPartez explorer, voir, écouter — l’Île du Purgatoire, gardienne de souvenirs et de secrets. »"
   },
@@ -6030,6 +6314,82 @@
     "name": "Sphère d’exploration — Forteresse de Lonza",
     "icon": "T_ExploreBadge_Beibao_EXChapter01",
     "rarity": 5,
+    "source": [
+      {
+        "srId": 102101,
+        "pos": [
+          [
+            28845,
+            -30388
+          ],
+          [
+            19634.982,
+            -37598.49
+          ],
+          [
+            14578,
+            -40410.695
+          ],
+          [
+            11103,
+            -42750
+          ],
+          [
+            10346,
+            -52125
+          ],
+          [
+            -2401,
+            -43895
+          ],
+          [
+            -4850,
+            -35427
+          ],
+          [
+            2095,
+            -48445
+          ],
+          [
+            26521,
+            -34186
+          ]
+        ]
+      },
+      {
+        "srId": 102102,
+        "pos": [
+          [
+            -3369,
+            7178
+          ],
+          [
+            -14956,
+            -16122
+          ],
+          [
+            -5471,
+            -10849
+          ],
+          [
+            -20741,
+            3772
+          ],
+          [
+            -8963,
+            -1668
+          ],
+          [
+            7525,
+            2008
+          ],
+          [
+            -13161,
+            -6477
+          ]
+        ]
+      }
+    ],
     "desc": "Sphères d’exploration recueillies aux abords de la Forteresse de Lonza. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses.",
     "desc2": "« Nulle rivière d’acier ni pluie de poudre n’a su ébranler cette forteresse.\nSur ses remparts ne flottent plus que des soupirs.\nMais sachez-le : plus le mur est solide, plus le cœur humain saura s’y frayer un passage.\nPartez explorer, voir, écouter — la Forteresse de Lonza, que la fumée et la mémoire refusent d’abandonner. »"
   },
@@ -6038,6 +6398,125 @@
     "name": "Sphère d’exploration — Port-des-Brumes",
     "icon": "T_ExploreBadge_Beibao_East",
     "rarity": 5,
+    "source": [
+      {
+        "srId": 104102,
+        "pos": [
+          [
+            -58290.58,
+            8788.479
+          ]
+        ]
+      },
+      {
+        "srId": 104103,
+        "pos": [
+          [
+            -9051.801,
+            29591.572
+          ],
+          [
+            4726.0054,
+            21080.736
+          ]
+        ]
+      },
+      {
+        "srId": 104104,
+        "pos": [
+          [
+            276.96103,
+            -4393.95
+          ]
+        ]
+      },
+      {
+        "srId": 104105,
+        "pos": [
+          [
+            -16592,
+            -22543
+          ],
+          [
+            -21821.621,
+            -16443.652
+          ]
+        ]
+      },
+      {
+        "srId": 104106,
+        "pos": [
+          [
+            31193.074,
+            -12471.755
+          ],
+          [
+            17836.21,
+            -30562.25
+          ]
+        ]
+      },
+      {
+        "srId": 104107,
+        "pos": [
+          [
+            15887.112,
+            44439.59
+          ]
+        ]
+      },
+      {
+        "srId": 104108,
+        "pos": [
+          [
+            -0.00097,
+            -1.507478
+          ],
+          [
+            34647.566,
+            68348.04
+          ],
+          [
+            53682.418,
+            19630.78
+          ],
+          [
+            0,
+            -1.507812
+          ]
+        ]
+      },
+      {
+        "srId": 104109,
+        "pos": [
+          [
+            -37046,
+            4908
+          ],
+          [
+            -209.45898,
+            -2679.3955
+          ],
+          [
+            -21116.129,
+            6846.1333
+          ]
+        ]
+      },
+      {
+        "srId": 104110,
+        "pos": [
+          [
+            30041.688,
+            -10205.6875
+          ],
+          [
+            35943.785,
+            -906.7367
+          ]
+        ]
+      }
+    ],
     "desc": "Sphères d’exploration recueillies dans tout Huaxu. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, au Marché Voilé.\nElles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve au cours de vos aventures, et peuvent être échangées contre diverses récompenses.",
     "desc2": "« Là où s’achèvent la terre et la mer — le premier souffle et le dernier murmure de chaque route marchande. Dans l’air parfumé flotte la rime des légendes ; sous les avant-toits errent encore les échos des récits perdus.\nLorsque la fumée retombe et que la poussière se calme... que nous réserve demain ?\n\nPartez — voyez, écoutez — explorez Port-des-Brumes, un royaume prêt à dire adieu à ses anciens jours ! »"
   },
@@ -7762,6 +8241,135 @@
     "name": "Sphère d’exploration — Haojing",
     "icon": "T_ExploreBadge_Beibao_East01",
     "rarity": 5,
+    "source": [
+      {
+        "srId": 104501,
+        "pos": [
+          [
+            44358.21,
+            -31707.14
+          ],
+          [
+            56555.51,
+            -23044.83
+          ],
+          [
+            51115.87,
+            -33008.29
+          ]
+        ]
+      },
+      {
+        "srId": 104503,
+        "pos": [
+          [
+            24247.61,
+            -58967.94
+          ],
+          [
+            31504.1,
+            -85772.77
+          ],
+          [
+            31596.35,
+            -42735.73
+          ]
+        ]
+      },
+      {
+        "srId": 104504,
+        "pos": [
+          [
+            -30670,
+            -56940
+          ],
+          [
+            3970.79,
+            -84988.92
+          ],
+          [
+            -28227.2,
+            -40623.55
+          ],
+          [
+            -4420,
+            -61380
+          ]
+        ]
+      },
+      {
+        "srId": 104505,
+        "pos": [
+          [
+            54010.48,
+            -74958.27
+          ],
+          [
+            66010.89,
+            -80913.62
+          ],
+          [
+            52188.24,
+            -48706.47
+          ]
+        ]
+      },
+      {
+        "srId": 104502,
+        "pos": [
+          [
+            19941.07,
+            -4392.78
+          ],
+          [
+            -10819.38,
+            -26378.15
+          ],
+          [
+            7958.5,
+            -20820.75
+          ],
+          [
+            5281.37,
+            -11974.64
+          ]
+        ]
+      },
+      {
+        "srId": 105201,
+        "pos": [
+          [
+            15806.12,
+            -1651.36
+          ],
+          [
+            -1425.55,
+            -8427.81
+          ],
+          [
+            40.46,
+            1259.08
+          ],
+          [
+            9290.49,
+            6697.09
+          ]
+        ]
+      },
+      {
+        "srId": 105501,
+        "pos": [
+          [
+            18959.86,
+            1408.9
+          ],
+          [
+            19206.56,
+            4509.94
+          ]
+        ]
+      }
+    ],
     "desc": "Sphères d’exploration recueillies aux quatre coins de Haojing. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, dans Haojing. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve au cours de vos explorations, et peuvent être échangées contre diverses récompenses.",
     "desc2": "C’est une cité florissante dressée aux confins de l’Est. Les pavillons et jardins d’eau édifiés par les anciens s’y tiennent depuis des millénaires, comme immuables, défiant l’érosion du temps. Mais les chants transmis jour après jour finissent toujours par écrire de nouveaux vers, et aux récits familiers viennent se mêler des visages inconnus. Sous les cieux, les vents se lèvent et les flots s’élèvent. Allez explorer, allez voir, allez écouter... et rendez-vous à Haojing, la cité bientôt métamorphosée.\n \n"
   },
@@ -8007,18 +8615,18 @@
   },
   {
     "id": 40014,
-    "name": "芳香嗅盐",
+    "name": "Sel volatil parfumé",
     "icon": "T_Hp_Full",
     "rarity": 5,
-    "desc": "一瓶嗅盐，是急救箱中的必备物品。华胥合香师改良了这种药物，使其在保留原有功效的基础上更具芳香。",
+    "desc": "Une fiole de sels volatils, indispensable dans toute trousse de secours. Les maîtres d’encens de Huaxu ont sublimé cette préparation, lui insufflant une fragrance délicate sans en altérer les effets d’origine.",
     "desc2": "« Il y a eu tant de fois où, après avoir avalé par erreur des baies empoisonnées, dévalé les pentes, ou combattu des bêtes féroces, j’ai cru que j’allais m’endormir pour ne plus jamais me réveiller. Ce qui m’a ramené, ce n’est ni la volonté, ni les rêves, ni même la voix de quelqu’un... seulement l’instinct, et une petite fiole de sel volatil. »\n\n— L’Étranger, Chasseur de Phoxène"
   },
   {
     "id": 40015,
-    "name": "芳香凝神嗅盐",
+    "name": "Sel volatil concentré parfumé",
     "icon": "T_Drop_Mp",
     "rarity": 5,
-    "desc": "一瓶嗅盐，是急救箱中的必备物品。华胥合香师改良了这种药物，使其在保留原有功效的基础上更具芳香。",
+    "desc": "Une fiole de sels volatils, indispensable dans toute trousse de secours. Les maîtres d’encens de Huaxu ont sublimé cette préparation, lui insufflant une fragrance délicate sans en altérer les effets d’origine.",
     "desc2": "« Il y a eu tant de fois où, après avoir avalé par erreur des baies empoisonnées, dévalé les pentes, ou combattu des bêtes féroces, j’ai cru que j’allais m’endormir pour ne plus jamais me réveiller. Ce qui m’a ramené, ce n’est ni la volonté, ni les rêves, ni même la voix de quelqu’un... seulement l’instinct, et une petite fiole de sel volatil. »\n\n— L’Étranger, Chasseur de Phoxène"
   },
   {
@@ -8557,129 +9165,129 @@
   },
   {
     "id": 110017,
-    "name": "自选形象礼箱·不羁",
+    "name": "Coffret de sélection d’apparence – Indomptable",
     "icon": "T_Pack_Common03",
     "rarity": 5,
     "desc": "Permet de choisir une apparence parmi les personnages suivants : Berenica, Lisbell, Dame Nifle, Kezhou, Su Yi, Fina, Rebecca, Fushu, Lynn, Camilla, Rhythm, Zhiliu, Yuming, Sibylle, Truffle et Filbert, Psyche ou Daphne."
   },
   {
     "id": 110018,
-    "name": "千丝雨惊喜道具箱",
+    "name": "Coffre surprise d’objets – Pluie de mille fils",
     "icon": "T_Pack_RandomMod_Daily",
     "rarity": 5,
-    "desc": "具体概率与数量如下，概率四舍五入至小数点后4位：\n月石晶胚*10：29.4010%\n月石晶胚*16：44.1014%\n月石晶胚*18：22.0507%\n月石晶胚*40：3.6751%\n月石晶胚*100：0.7350%\n月石晶胚*888：0.0368%"
+    "desc": "Les probabilités et quantités sont les suivantes (arrondies à 4 décimales) :\nGemme de Phoxène ×10 : 29,4010 %\nGemme de Phoxène ×16 : 44,1014 %\nGemme de Phoxène ×18 : 22,0507 %\nGemme de Phoxène ×40 : 3,6751 %\nGemme de Phoxène ×100 : 0,7350 %\nGemme de Phoxène ×888 : 0,0368 %"
   },
   {
     "id": 110019,
-    "name": "蓝色近战魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque rare — mêlée",
     "icon": "T_Pack_RandomMod_01",
     "rarity": 3
   },
   {
     "id": 110020,
-    "name": "紫色近战魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — mêlée",
     "icon": "T_Pack_RandomMod_01",
     "rarity": 4
   },
   {
     "id": 110021,
-    "name": "蓝色不死鸟魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque rare — Phénix",
     "icon": "T_Pack_RandomMod_02",
     "rarity": 3
   },
   {
     "id": 110022,
-    "name": "紫色不死鸟魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Phénix",
     "icon": "T_Pack_RandomMod_02",
     "rarity": 4
   },
   {
     "id": 110023,
-    "name": "蓝色远程魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque rare — distance",
     "icon": "T_Pack_RandomMod_03",
     "rarity": 3
   },
   {
     "id": 110024,
-    "name": "紫色远程魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — distance",
     "icon": "T_Pack_RandomMod_03",
     "rarity": 4
   },
   {
     "id": 110025,
-    "name": "紫色狮鹫魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Griffon",
     "icon": "T_Pack_RandomMod_04",
     "rarity": 4
   },
   {
     "id": 110026,
-    "name": "紫色风属性百首魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Typhon Anémo",
     "icon": "T_Pack_RandomMod_05",
     "rarity": 4
   },
   {
     "id": 110027,
-    "name": "紫色火属性百首魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Typhon Pyro",
     "icon": "T_Pack_RandomMod_06",
     "rarity": 4
   },
   {
     "id": 110028,
-    "name": "紫色雷属性百首魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Typhon Électro",
     "icon": "T_Pack_RandomMod_07",
     "rarity": 4
   },
   {
     "id": 110029,
-    "name": "紫色水属性百首魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Typhon Hydro",
     "icon": "T_Pack_RandomMod_08",
     "rarity": 4
   },
   {
     "id": 110030,
-    "name": "紫色光属性百首魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Typhon Lumino",
     "icon": "T_Pack_RandomMod_09",
     "rarity": 4
   },
   {
     "id": 110031,
-    "name": "紫色暗属性百首魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Typhon Umbro",
     "icon": "T_Pack_RandomMod_10",
     "rarity": 4
   },
   {
     "id": 110032,
-    "name": "紫色风属性契约者魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Pactisant Anémo",
     "icon": "T_Pack_RandomMod_11",
     "rarity": 4
   },
   {
     "id": 110033,
-    "name": "紫色火属性契约者魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Pactisant Pyro",
     "icon": "T_Pack_RandomMod_16",
     "rarity": 4
   },
   {
     "id": 110034,
-    "name": "紫色雷属性契约者魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Pactisant Électro",
     "icon": "T_Pack_RandomMod_12",
     "rarity": 4
   },
   {
     "id": 110035,
-    "name": "紫色水属性契约者魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Pactisant Hydro",
     "icon": "T_Pack_RandomMod_13",
     "rarity": 4
   },
   {
     "id": 110036,
-    "name": "紫色光属性契约者魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Pactisant Lumino",
     "icon": "T_Pack_RandomMod_14",
     "rarity": 4
   },
   {
     "id": 110037,
-    "name": "紫色暗属性契约者魔之楔道具箱",
+    "name": "Coffre de Sceau démoniaque épique — Pactisant Umbro",
     "icon": "T_Pack_RandomMod_15",
     "rarity": 4
   },
@@ -8712,14 +9320,14 @@
     "name": "Bon d’Héritage paternel",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
-    "desc": "商品满680月石晶胚减300月石晶胚"
+    "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 680 Gemmes de Phoxène"
   },
   {
     "id": 120002,
     "name": "Bon d’accessoires Souffle du vent",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
-    "desc": "商品满480月石晶胚减300月石晶胚"
+    "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
   },
   {
     "id": 1001101,
@@ -9171,19 +9779,19 @@
   },
   {
     "id": 1022101,
-    "name": "凝合思绪·丽蓓卡",
+    "name": "Pensée condensée — Rebecca",
     "icon": "T_CharPiece_Shuimu01",
     "rarity": 5,
-    "desc": "由记忆的流沙中撷取的完整思绪，承载着过去或未来的，关于某个人的记忆。",
-    "desc2": "“你有三次生命。\n第一次生命是呼吸与心跳。你以血肉之躯丈量大地，感知世界。\n第二次生命是连接与牵绊。你的灵魂在亲人的哺育、恋人的吻和朋友的抱拥中栖居。\n第三次生命是思想与记忆。当一位读者在书页上看到你的名字，当一位旅人在吟游诗人的歌谣中听到你的名字，当一个孩子从你的故事里得到智慧与勇气，你的生命便再度在尘世回响。\n每个人都会回归雾海，但不是每个人都会死去。”\n\n——雾海引渡人 妮弗尔夫人"
+    "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
   },
   {
     "id": 1023201,
-    "name": "凝合思绪·海尔法",
+    "name": "Pensée condensée — Vulcera",
     "icon": "T_CharPiece_Haier01",
     "rarity": 5,
-    "desc": "由记忆的流沙中撷取的完整思绪，承载着过去或未来的，关于某个人的记忆。",
-    "desc2": "“你有三次生命。\n第一次生命是呼吸与心跳。你以血肉之躯丈量大地，感知世界。\n第二次生命是连接与牵绊。你的灵魂在亲人的哺育、恋人的吻和朋友的抱拥中栖居。\n第三次生命是思想与记忆。当一位读者在书页上看到你的名字，当一位旅人在吟游诗人的歌谣中听到你的名字，当一个孩子从你的故事里得到智慧与勇气，你的生命便再度在尘世回响。\n每个人都会回归雾海，但不是每个人都会死去。”\n\n——雾海引渡人 妮弗尔夫人"
+    "desc": "Pensée intacte extraite des sables mouvants de la mémoire. Elle renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
   },
   {
     "id": 1110000,
@@ -9550,8 +10158,8 @@
         "srId": 101701,
         "pos": [
           [
-            -21486,
-            4826
+            0,
+            0
           ]
         ]
       }
@@ -9569,8 +10177,8 @@
         "srId": 101701,
         "pos": [
           [
-            -18821,
-            -5456
+            0,
+            0
           ]
         ]
       }
@@ -9897,6 +10505,15 @@
             -185
           ]
         ]
+      },
+      {
+        "srId": 101110,
+        "pos": [
+          [
+            4129.419,
+            1034.0286
+          ]
+        ]
       }
     ],
     "desc": "Une pile d’étiquettes arrachées à des flacons de médicaments, toutes portant la mention « Sédatif ».\nAu revers de l’une d’elles, une phrase a été griffonnée avec une rage visible.",
@@ -10074,6 +10691,15 @@
     "rarity": 3,
     "source": [
       {
+        "srId": 101101,
+        "pos": [
+          [
+            -1770,
+            8810
+          ]
+        ]
+      },
+      {
         "srId": 101702,
         "pos": [
           [
@@ -10092,6 +10718,15 @@
     "icon": "T_Read_01",
     "rarity": 3,
     "source": [
+      {
+        "srId": 101101,
+        "pos": [
+          [
+            -1203.4828,
+            490.69458
+          ]
+        ]
+      },
       {
         "srId": 101703,
         "pos": [
@@ -10117,6 +10752,15 @@
           [
             17063,
             -978
+          ]
+        ]
+      },
+      {
+        "srId": 101101,
+        "pos": [
+          [
+            -5640,
+            -4760
           ]
         ]
       }
@@ -10264,6 +10908,15 @@
     "rarity": 3,
     "source": [
       {
+        "srId": 101107,
+        "pos": [
+          [
+            1091.8047,
+            -10195.223
+          ]
+        ]
+      },
+      {
         "srId": 101702,
         "pos": [
           [
@@ -10282,6 +10935,15 @@
     "icon": "T_Read_02",
     "rarity": 3,
     "source": [
+      {
+        "srId": 101103,
+        "pos": [
+          [
+            330.78516,
+            -156.96094
+          ]
+        ]
+      },
       {
         "srId": 101701,
         "pos": [
@@ -10685,8 +11347,8 @@
         "srId": 104109,
         "pos": [
           [
-            -13013.81,
-            11761.229
+            54.078125,
+            29.636719
           ]
         ]
       }
@@ -11199,8 +11861,8 @@
         "srId": 105201,
         "pos": [
           [
-            15713.31,
-            2236.39
+            -19.21,
+            30.43
           ]
         ]
       }
@@ -11214,6 +11876,15 @@
     "icon": "T_Read_East01",
     "rarity": 3,
     "source": [
+      {
+        "srId": 101107,
+        "pos": [
+          [
+            1136.6428,
+            -10244.687
+          ]
+        ]
+      },
       {
         "srId": 105201,
         "pos": [
@@ -11256,8 +11927,8 @@
         "srId": 104502,
         "pos": [
           [
-            19290,
-            -2900
+            0,
+            20
           ]
         ]
       }
@@ -11374,6 +12045,17 @@
     "name": "Photographie d’Avar",
     "icon": "T_Photo_Group01",
     "rarity": 4,
+    "source": [
+      {
+        "srId": 102102,
+        "pos": [
+          [
+            6910,
+            1510
+          ]
+        ]
+      }
+    ],
     "desc": "Une photo qu’Avar gardait toujours sur lui, le montrant avec Daphne enfant. Le papier jauni par le temps ne parvient pas à ternir leurs sourires éclatants."
   },
   {
@@ -11902,6 +12584,15 @@
     "rarity": 2,
     "source": [
       {
+        "srId": 101305,
+        "pos": [
+          [
+            1987.2096,
+            13554.852
+          ]
+        ]
+      },
+      {
         "srId": 101303,
         "rewardId": 4020003,
         "pos": [
@@ -12298,32 +12989,32 @@
     "name": "Pendiperle",
     "icon": "T_Fish_Sea_East_4",
     "rarity": 4,
-    "desc": "Mentionnée dans les anciens écrits, cette créature mystérieuse était autrefois accusée de projeter du sable toxique sur l’ombre des passants pour les rendre malades. La légende, heureusement, dépasse de loin la réalité.",
-    "desc2": "Bien qu’il projette effectivement du sable, ce poisson diffère nettement du « Yuu » décrit dans les textes anciens.\nLe sable expulsé est inoffensif, et l’attribution du nom semble être une confusion héritée... peut-être même que le véritable « Yuu » n’a jamais existé.\n\n— Lin Caocao, biologiste de Huaxu"
+    "desc": "Violent mais étonnamment savoureux, ce poisson occupe une place de choix dans la cuisine de Huaxu. Sa silhouette disgracieuse est adoucie par la petite lanterne lumineuse qu’il porte sur la tête — une touche de grâce inattendue pour un prédateur si féroce.",
+    "desc2": "Les anciens croyaient que la petite lanterne du Pendiperle n’était autre que la mythique Perle Nocturne. Mais sitôt la créature morte, sa lueur s’éteignait. De là vient, dit-on, le proverbe : « La perle jetée perd son éclat. »\n\n— Rovetta, autrice de voyage, <I>Rovetta à Huaxu</>"
   },
   {
     "id": 5022031,
     "name": "Pendiperle variant",
     "icon": "T_Fish_Sea_East_4_1",
     "rarity": 4,
-    "desc": "Mentionnée dans les anciens écrits, cette créature mystérieuse était autrefois accusée de projeter du sable toxique sur l’ombre des passants pour les rendre malades. La légende, heureusement, dépasse de loin la réalité.",
-    "desc2": "Bien qu’il projette effectivement du sable, ce poisson diffère nettement du « Yuu » décrit dans les textes anciens.\nLe sable expulsé est inoffensif, et l’attribution du nom semble être une confusion héritée... peut-être même que le véritable « Yuu » n’a jamais existé.\n\n— Lin Caocao, biologiste de Huaxu"
+    "desc": "Violent mais étonnamment savoureux, ce poisson occupe une place de choix dans la cuisine de Huaxu. Sa silhouette disgracieuse est adoucie par la petite lanterne lumineuse qu’il porte sur la tête — une touche de grâce inattendue pour un prédateur si féroce.",
+    "desc2": "Les anciens croyaient que la petite lanterne du Pendiperle n’était autre que la mythique Perle Nocturne. Mais sitôt la créature morte, sa lueur s’éteignait. De là vient, dit-on, le proverbe : « La perle jetée perd son éclat. »\n\n— Rovetta, autrice de voyage, <I>Rovetta à Huaxu</>"
   },
   {
     "id": 5022040,
     "name": "Yuu",
     "icon": "T_Fish_Sea_East_3",
     "rarity": 3,
-    "desc": "Violent mais étonnamment savoureux, ce poisson occupe une place de choix dans la cuisine de Huaxu. Sa silhouette disgracieuse est adoucie par la petite lanterne lumineuse qu’il porte sur la tête — une touche de grâce inattendue pour un prédateur si féroce.",
-    "desc2": "Les anciens croyaient que la petite lanterne du Pendiperle n’était autre que la mythique Perle Nocturne. Mais sitôt la créature morte, sa lueur s’éteignait. De là vient, dit-on, le proverbe : « La perle jetée perd son éclat. »\n\n— Rovetta, autrice de voyage, <I>Rovetta à Huaxu</>"
+    "desc": "Mentionnée dans les anciens écrits, cette créature mystérieuse était autrefois accusée de projeter du sable toxique sur l’ombre des passants pour les rendre malades. La légende, heureusement, dépasse de loin la réalité.",
+    "desc2": "Bien qu’il projette effectivement du sable, ce poisson diffère nettement du « Yuu » décrit dans les textes anciens.\nLe sable expulsé est inoffensif, et l’attribution du nom semble être une confusion héritée... peut-être même que le véritable « Yuu » n’a jamais existé.\n\n— Lin Caocao, biologiste de Huaxu"
   },
   {
     "id": 5022041,
     "name": "Yuu variant",
     "icon": "T_Fish_Sea_East_3_1",
     "rarity": 3,
-    "desc": "Violent mais étonnamment savoureux, ce poisson occupe une place de choix dans la cuisine de Huaxu. Sa silhouette disgracieuse est adoucie par la petite lanterne lumineuse qu’il porte sur la tête — une touche de grâce inattendue pour un prédateur si féroce.",
-    "desc2": "Les anciens croyaient que la petite lanterne du Pendiperle n’était autre que la mythique Perle Nocturne. Mais sitôt la créature morte, sa lueur s’éteignait. De là vient, dit-on, le proverbe : « La perle jetée perd son éclat. »\n\n— Rovetta, autrice de voyage, <I>Rovetta à Huaxu</>"
+    "desc": "Mentionnée dans les anciens écrits, cette créature mystérieuse était autrefois accusée de projeter du sable toxique sur l’ombre des passants pour les rendre malades. La légende, heureusement, dépasse de loin la réalité.",
+    "desc2": "Bien qu’il projette effectivement du sable, ce poisson diffère nettement du « Yuu » décrit dans les textes anciens.\nLe sable expulsé est inoffensif, et l’attribution du nom semble être une confusion héritée... peut-être même que le véritable « Yuu » n’a jamais existé.\n\n— Lin Caocao, biologiste de Huaxu"
   },
   {
     "id": 5022050,
@@ -13579,6 +14270,15 @@
     "rarity": 2,
     "source": [
       {
+        "srId": 101304,
+        "pos": [
+          [
+            18965.57,
+            31181.377
+          ]
+        ]
+      },
+      {
         "srId": 100103,
         "pos": [
           [
@@ -13614,6 +14314,15 @@
     "rarity": 2,
     "source": [
       {
+        "srId": 101103,
+        "pos": [
+          [
+            -8800,
+            42600
+          ]
+        ]
+      },
+      {
         "srId": 100102,
         "pos": [
           [
@@ -13640,6 +14349,15 @@
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "source": [
+      {
+        "srId": 102104,
+        "pos": [
+          [
+            -139,
+            461
+          ]
+        ]
+      },
       {
         "srId": 100103,
         "pos": [
@@ -13683,6 +14401,15 @@
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "source": [
+      {
+        "srId": 101901,
+        "pos": [
+          [
+            20490,
+            4130
+          ]
+        ]
+      },
       {
         "srId": 101101,
         "pos": [
@@ -14373,7 +15100,7 @@
   },
   {
     "id": 31010014,
-    "name": "Crépuscule sur l’Abîme de Yu",
+    "name": "Crépuscule sur l’Abysse de Yu",
     "icon": "T_Piano_Shop2",
     "rarity": 2,
     "source": [

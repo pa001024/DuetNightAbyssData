@@ -2963,7 +2963,10 @@ function BP_PlayerCharacter_C:ForbidActiveSkills(bForbid)
   self:ForbidSkills(bForbid, Skills)
 end
 
+local bDungeonForbidSkillsByBuff = {}
+
 function BP_PlayerCharacter_C:ForbidAllSkillsByBuff(bForbid)
+  DebugPrint("lgc@ ForbidAllSkillsByBuff", bForbid)
   local DisableSkillsBuffId = 311
   local BuffData = DataMgr.Buff[DisableSkillsBuffId]
   if not BuffData then
@@ -2974,25 +2977,39 @@ function BP_PlayerCharacter_C:ForbidAllSkillsByBuff(bForbid)
   for i, Skill in pairs(DisableSkills) do
     Skills[i] = ESkillName[Skill]
   end
-  if bForbid then
-    Battle(self):AddBuffToTarget(self, self, DisableSkillsBuffId, -1, nil, nil)
-  else
-    Battle(self):RemoveBuffFromTarget(self, self, DisableSkillsBuffId, false, -1)
-  end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local UIManger = GameInstance:GetGameUIManager()
-  local Widget = UIManger:GetUIObj("BattleMain")
-  if not Widget then
+  if UIManger then
+    local Widget = UIManger:GetUIObj("BattleMain")
+    if Widget then
+      local SkillWidget = Widget.Char_Skill
+      local StateName = bForbid and "Ban" or "UnBan"
+      if SkillWidget then
+        for _, Skill in pairs(Skills) do
+          SkillWidget:ChangeSkillButtonState(Skill, StateName)
+        end
+      end
+    end
+  end
+  if not IsAuthority(self) then
+    DebugPrint("lgc@ not IsAuthority")
     return
+  else
+    DebugPrint("lgc@ IsAuthority")
   end
-  local SkillWidget = Widget.Char_Skill
-  local StateName = bForbid and "Ban" or "UnBan"
-  if not SkillWidget then
-    return
+  if bForbid then
+    DebugPrint("lgc@ AddBuffToTarget", DisableSkillsBuffId, self:GetName())
+    Battle(self):AddBuffToTarget(self, self, DisableSkillsBuffId, -1, nil, nil)
+    bDungeonForbidSkillsByBuff[self.Eid] = true
+  else
+    DebugPrint("lgc@ RemoveBuffFromTarget", DisableSkillsBuffId, self:GetName())
+    Battle(self):RemoveBuffFromTarget(self, self, DisableSkillsBuffId, false, -1)
+    bDungeonForbidSkillsByBuff[self.Eid] = false
   end
-  for _, Skill in pairs(Skills) do
-    SkillWidget:ChangeSkillButtonState(Skill, StateName)
-  end
+end
+
+function BP_PlayerCharacter_C:IsDungeonForbidSkillsByBuff()
+  return bDungeonForbidSkillsByBuff[self.Eid]
 end
 
 function BP_PlayerCharacter_C:ForbidAllSkills(bForbid)

@@ -762,7 +762,7 @@ return {
       key = "17638032568433322",
       type = "StoryNode",
       name = "调查",
-      pos = {x = 1079.0201950887576, y = 526.8282230814114},
+      pos = {x = 1077.5916236601863, y = 526.8282230814114},
       propsData = {
         QuestId = 12030504,
         QuestDescriptionComment = "",
@@ -817,13 +817,7 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17638032568433330",
-            startPort = "Out",
-            endQuest = "17745063687378908520",
-            endPort = "In"
-          },
-          {
-            startQuest = "17745063687378908520",
+            startQuest = "17726234552518574799",
             startPort = "Out",
             endQuest = "17638032568433328",
             endPort = "Success"
@@ -841,7 +835,7 @@ return {
             key = "17638032568433328",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2046.2832314744082, y = 289.6408517952636},
+            pos = {x = 2040.4462195898582, y = 289.979561472683},
             propsData = {ModeType = 0}
           },
           ["17638032568433329"] = {
@@ -929,7 +923,7 @@ return {
             key = "17726234552518574799",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1729.6301054018443, y = 111.54743083003962},
+            pos = {x = 1759.6301054018443, y = 288.5474308300396},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -937,17 +931,6 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {132360086}
-            }
-          },
-          ["17745063687378908520"] = {
-            key = "17745063687378908520",
-            type = "PlayOrStopBGMNode",
-            name = "BGM节点",
-            pos = {x = 1763.2862838915469, y = 288.41387559808607},
-            propsData = {
-              SoundStateType = 3,
-              SoundPriority = 0,
-              SoundType = 0
             }
           }
         },

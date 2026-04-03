@@ -34,6 +34,7 @@ function M:InitData(Content)
   self.Text_Num:SetText(GText(Rate .. "%"))
   self.Com_List:BindEventOnClicked(self, self.OnCellClick)
   self.Com_List:SetCanCancelSelection(true)
+  self.Com_List:StopAllAnimations()
   if Content.IsSelect then
     self.Com_List:SetSelectState()
   else

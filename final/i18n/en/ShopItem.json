@@ -1712,6 +1712,21 @@
                 "sequence": 149,
                 "startTime": 1672545600,
                 "lv": 25
+              },
+              {
+                "id": 705005,
+                "itemType": "Mod",
+                "typeId": 103003,
+                "typeName": "Fenrir's Savage Cleave",
+                "price": 1,
+                "priceType": 29006,
+                "priceName": "Advensphere: Haojing",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 7050,
+                "sequence": 146,
+                "startTime": 1672545600,
+                "lv": 25
               }
             ]
           }
@@ -4416,7 +4431,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 105,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 150000
               },
@@ -4432,7 +4447,7 @@
                 "limit": 2,
                 "subTabId": 100041,
                 "sequence": 104,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 100000
               },
@@ -4448,7 +4463,7 @@
                 "limit": 2,
                 "subTabId": 100041,
                 "sequence": 103,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 50000
               },
@@ -4464,7 +4479,7 @@
                 "limit": 2,
                 "subTabId": 100041,
                 "sequence": 102,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 50000
               },
@@ -4480,7 +4495,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 101,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4495,7 +4510,7 @@
                 "limit": 2,
                 "subTabId": 100041,
                 "sequence": 94,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4510,7 +4525,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 93,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4525,7 +4540,7 @@
                 "limit": 3,
                 "subTabId": 100041,
                 "sequence": 92,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4540,7 +4555,7 @@
                 "limit": 3,
                 "subTabId": 100041,
                 "sequence": 91,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4555,7 +4570,7 @@
                 "limit": 20,
                 "subTabId": 100041,
                 "sequence": 83,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4570,7 +4585,7 @@
                 "limit": 20,
                 "subTabId": 100041,
                 "sequence": 87,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4585,7 +4600,7 @@
                 "limit": 20,
                 "subTabId": 100041,
                 "sequence": 86,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4600,7 +4615,7 @@
                 "limit": 20,
                 "subTabId": 100041,
                 "sequence": 85,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4615,7 +4630,7 @@
                 "limit": 20,
                 "subTabId": 100041,
                 "sequence": 88,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4630,7 +4645,7 @@
                 "limit": 20,
                 "subTabId": 100041,
                 "sequence": 84,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4645,7 +4660,7 @@
                 "limit": 10,
                 "subTabId": 100041,
                 "sequence": 90,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4660,7 +4675,7 @@
                 "limit": 10,
                 "subTabId": 100041,
                 "sequence": 89,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800
               },
               {
@@ -4674,7 +4689,7 @@
                 "num": 20000,
                 "subTabId": 100041,
                 "sequence": 79,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "require": 10004166
               },
@@ -4689,7 +4704,7 @@
                 "num": 600,
                 "subTabId": 100041,
                 "sequence": 82,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "require": 10004167
               },
@@ -4704,7 +4719,7 @@
                 "num": 2,
                 "subTabId": 100041,
                 "sequence": 81,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "require": 10004168
               },
@@ -4719,7 +4734,7 @@
                 "num": 2,
                 "subTabId": 100041,
                 "sequence": 80,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "require": 10004169
               },
@@ -4735,7 +4750,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 95,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 10000
               },
@@ -4751,7 +4766,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 96,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 75000
               },
@@ -4767,7 +4782,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 97,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 600000
               },
@@ -4783,7 +4798,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 98,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 200000
               },
@@ -4799,7 +4814,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 99,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 800000
               },
@@ -4815,7 +4830,7 @@
                 "limit": 1,
                 "subTabId": 100041,
                 "sequence": 100,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 1200000
               },
@@ -4830,7 +4845,7 @@
                 "num": 10,
                 "subTabId": 100041,
                 "sequence": 67,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 1
               },
@@ -4846,7 +4861,7 @@
                 "limit": 5,
                 "subTabId": 100041,
                 "sequence": 68,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 40000
               },
@@ -4862,7 +4877,7 @@
                 "limit": 5,
                 "subTabId": 100041,
                 "sequence": 69,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 160000
               },
@@ -4878,7 +4893,7 @@
                 "limit": 5,
                 "subTabId": 100041,
                 "sequence": 70,
-                "startTime": 1672545600,
+                "startTime": 1779156000,
                 "endTime": 1780606800,
                 "unlockRaidPoint": 400000
               }
@@ -5104,21 +5119,6 @@
                 "sequence": 104,
                 "startTime": 1672545600,
                 "lv": 55
-              },
-              {
-                "id": 10002115,
-                "itemType": "Mod",
-                "typeId": 103003,
-                "typeName": "Fenrir's Savage Cleave",
-                "price": 2000,
-                "priceType": 215,
-                "priceName": "Thread of Time",
-                "num": 1,
-                "limit": 1,
-                "subTabId": 100021,
-                "sequence": 105,
-                "startTime": 1672545600,
-                "lv": 45
               }
             ]
           },
@@ -15452,7 +15452,7 @@
               {
                 "id": 1208004,
                 "itemType": "Mount",
-                "typeId": 1005,
+                "typeId": 1006,
                 "typeName": "Taixu Rover: Emerald Green",
                 "price": 1680,
                 "priceType": 99,
@@ -15468,7 +15468,7 @@
               {
                 "id": 1208005,
                 "itemType": "Mount",
-                "typeId": 1006,
+                "typeId": 1007,
                 "typeName": "Taixu Rover: Caramel",
                 "price": 1680,
                 "priceType": 99,
@@ -15484,7 +15484,7 @@
               {
                 "id": 1208006,
                 "itemType": "Mount",
-                "typeId": 1007,
+                "typeId": 1005,
                 "typeName": "Taixu Rover",
                 "price": 1680,
                 "priceType": 99,

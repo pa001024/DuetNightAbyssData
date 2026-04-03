@@ -200,18 +200,6 @@ return {
           {
             startQuest = "17722844204142769770",
             startPort = "Out",
-            endQuest = "17728870699992465804",
-            endPort = "In"
-          },
-          {
-            startQuest = "17728870699992465804",
-            startPort = "Out",
-            endQuest = "17678537949081014564",
-            endPort = "Success"
-          },
-          {
-            startQuest = "17722844204142769770",
-            startPort = "Out",
             endQuest = "17728872084552468079",
             endPort = "In"
           },
@@ -252,12 +240,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17678537949081014563",
-            startPort = "QuestStart",
-            endQuest = "17704573631821848",
-            endPort = "In"
-          },
-          {
             startQuest = "17704573631821848",
             startPort = "Out",
             endQuest = "177311361088214059618",
@@ -280,6 +262,30 @@ return {
             startPort = "Out",
             endQuest = "17678537949091014565",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17722844032522769478",
+            startPort = "Out",
+            endQuest = "17728870699992465804",
+            endPort = "In"
+          },
+          {
+            startQuest = "17728870699992465804",
+            startPort = "Out",
+            endQuest = "17678537949081014564",
+            endPort = "Success"
+          },
+          {
+            startQuest = "17678537949081014563",
+            startPort = "QuestStart",
+            endQuest = "177505557280120485899",
+            endPort = "In"
+          },
+          {
+            startQuest = "177505557280120485899",
+            startPort = "Out",
+            endQuest = "17704573631821848",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -287,14 +293,14 @@ return {
             key = "17678537949081014563",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 368.1900452488691, y = 333.9366515837104},
+            pos = {x = 119.30115635998021, y = 333.9366515837104},
             propsData = {ModeType = 0}
           },
           ["17678537949081014564"] = {
             key = "17678537949081014564",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2159.8041474654374, y = 660.5529953917052},
+            pos = {x = 4990.3041474654365, y = 627.5529953917052},
             propsData = {ModeType = 0}
           },
           ["17678537949091014565"] = {
@@ -560,7 +566,7 @@ return {
             key = "17703694336926934357",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 4221.992200411397, y = 311.5155190724632},
+            pos = {x = 5337.992200411397, y = -86.4844809275368},
             propsData = {VarName = "East02TR", VarValue = 1}
           },
           ["17704573631821848"] = {
@@ -600,7 +606,7 @@ return {
             key = "17722844032522769478",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 2742.392595218986, y = 679.6789047567866},
+            pos = {x = 3634.392595218986, y = 99.67890475678655},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "12020515_Special_Terra2",
@@ -611,7 +617,7 @@ return {
             key = "17722844204142769770",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 3226.3787753432093, y = 302.9733146946744},
+            pos = {x = 4662.735918200353, y = 185.4733146946744},
             propsData = {
               SendMessage = "",
               FinishCondition = "12020515_Special_Terra2_Yingbidestroyed"
@@ -631,7 +637,7 @@ return {
             key = "17728870699992465804",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 3848.8629489852156, y = 306.8873910759177},
+            pos = {x = 4123.623818550433, y = 460.53956498896116},
             propsData = {
               SendMessage = "",
               FinishCondition = "12020515_Special_Terra2_End"
@@ -641,7 +647,7 @@ return {
             key = "17728871192312466245",
             type = "ShowGuideNode",
             name = "三连E",
-            pos = {x = 3430.059575878983, y = 495.8227622573638},
+            pos = {x = 4322.059575878983, y = -84.17723774263618},
             propsData = {
               MessageId = 200032,
               SkillNameList = {"Skill1"},
@@ -666,7 +672,7 @@ return {
             key = "17728871192312466246",
             type = "ShowGuideNode",
             name = "显示引导（支持执行操作后自动关闭/强制引导）",
-            pos = {x = 3442.908203307887, y = 738.6361068282777},
+            pos = {x = 4334.908203307887, y = 158.63610682827766},
             propsData = {
               MessageId = 200032,
               SkillNameList = {"Skill1"},
@@ -691,21 +697,21 @@ return {
             key = "17728871192312466247",
             type = "PlatformJudgmentNode",
             name = "PC/手机平台判断",
-            pos = {x = 3038.6128951439973, y = 655.4164714270842},
+            pos = {x = 3930.6128951439973, y = 75.41647142708416},
             propsData = {}
           },
           ["17728871192312466248"] = {
             key = "17728871192312466248",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
-            pos = {x = 3442.430316861273, y = 619.8055601190824},
+            pos = {x = 4334.430316861273, y = 39.80556011908243},
             propsData = {ShowEnable = true, SkillType = "Skill1"}
           },
           ["17728872084552468079"] = {
             key = "17728872084552468079",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 3597.4654308441845, y = 234.92787960557433},
+            pos = {x = 5074.661083018098, y = 262.77570569253083},
             propsData = {
               NewDescription = "",
               NewDetail = "",
@@ -716,7 +722,7 @@ return {
             key = "17728872200722468416",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 3872.017402170348, y = 495.0712487812017},
+            pos = {x = 4608.713054344261, y = 952.2451618246798},
             propsData = {
               NewDescription = "",
               NewDetail = "",
@@ -745,7 +751,7 @@ return {
             key = "17728916592427396863",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
-            pos = {x = 3658.61038114934, y = 91.25800158636505},
+            pos = {x = 5145.110381149339, y = 86.75800158636505},
             propsData = {ShowEnable = false, SkillType = "Skill1"}
           },
           ["17728930271667398033"] = {
@@ -790,6 +796,30 @@ return {
               MessageType = "GameMode",
               MessageContent = "12020515_Special_Zhiliu_QuestFail",
               UnitId = -1
+            }
+          },
+          ["177504269406610254016"] = {
+            key = "177504269406610254016",
+            type = "HighlightButtonNode",
+            name = "HighlightButton显示/隐藏信息",
+            pos = {x = 4899.577866876695, y = 448.3378443788155},
+            propsData = {ShowEnable = false, SkillType = "Skill1"}
+          },
+          ["177505557280120485899"] = {
+            key = "177505557280120485899",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 425.5955988455987, y = 330.7150072150071},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_1/0125_story_zhiliu_betray.0125_story_zhiliu_betray'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {105301},
+              bStoreToServer = false
             }
           }
         },
@@ -951,6 +981,12 @@ return {
             startPort = "Out",
             endQuest = "17703468449331539991",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17703468449331539985",
+            startPort = "QuestStart",
+            endQuest = "177504271954510254761",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1205,6 +1241,13 @@ return {
               MessageContent = "12020515_Special_Zhiliu_QuestFail",
               UnitId = -1
             }
+          },
+          ["177504271954510254761"] = {
+            key = "177504271954510254761",
+            type = "HighlightButtonNode",
+            name = "HighlightButton显示/隐藏信息",
+            pos = {x = 1294.3636363636365, y = 47.488636363636374},
+            propsData = {ShowEnable = false, SkillType = "Skill1"}
           }
         },
         commentData = {}
@@ -1324,12 +1367,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17703468460931540074",
-            startPort = "QuestStart",
-            endQuest = "17735723255943025",
-            endPort = "In"
-          },
-          {
             startQuest = "17703478490224620893",
             startPort = "Out",
             endQuest = "17736644095867615255",
@@ -1345,12 +1382,6 @@ return {
             startQuest = "17703478490224620894",
             startPort = "Out",
             endQuest = "1774273986787849789",
-            endPort = "In"
-          },
-          {
-            startQuest = "1774273986787849789",
-            startPort = "Out",
-            endQuest = "17703468652371540735",
             endPort = "In"
           },
           {
@@ -1375,12 +1406,6 @@ return {
             startQuest = "17703478490224620892",
             startPort = "Out",
             endQuest = "177357210379023639123",
-            endPort = "In"
-          },
-          {
-            startQuest = "17703478490224620892",
-            startPort = "Out",
-            endQuest = "17745942024941904",
             endPort = "In"
           },
           {
@@ -1640,6 +1665,42 @@ return {
             startPort = "Out",
             endQuest = "17748570459827251691",
             endPort = "In"
+          },
+          {
+            startQuest = "17703478490224620893",
+            startPort = "Out",
+            endQuest = "17735723255943025",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774769621520852990",
+            startPort = "Out",
+            endQuest = "17745942024941904",
+            endPort = "In"
+          },
+          {
+            startQuest = "17703478490224620893",
+            startPort = "Out",
+            endQuest = "17745942024941904",
+            endPort = "In"
+          },
+          {
+            startQuest = "17703468460931540074",
+            startPort = "QuestStart",
+            endQuest = "177504272440210254937",
+            endPort = "In"
+          },
+          {
+            startQuest = "1774273986787849789",
+            startPort = "Out",
+            endQuest = "177505579678020488095",
+            endPort = "In"
+          },
+          {
+            startQuest = "177505579678020488095",
+            startPort = "Out",
+            endQuest = "17703468652371540735",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1668,7 +1729,7 @@ return {
             key = "17703468652371540735",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3367.9784119389387, y = 322.00535924792206},
+            pos = {x = 3729.743117821292, y = 362.5935945420397},
             propsData = {}
           },
           ["17703468710131540908"] = {
@@ -1769,7 +1830,7 @@ return {
             key = "17703478490224620893",
             type = "SendMessageNode",
             name = "止流登上大片兵马俑平台",
-            pos = {x = 2350.0915088625015, y = 338.4643122131679},
+            pos = {x = 2275.743682775545, y = 419.3338774305592},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "12020515_Special_Zhiliu_SplineEnd",
@@ -1927,7 +1988,7 @@ return {
             key = "17735723255943025",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 1662.224886429622, y = 923.3514916506575},
+            pos = {x = 2679.5625487672846, y = 597.5073358065016},
             propsData = {
               SendMessage = "",
               FinishCondition = "12020515_Special_Zhiliu_StartBreak"
@@ -1937,7 +1998,7 @@ return {
             key = "17735723255943026",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 2333.569368324013, y = 1096.7060526220514},
+            pos = {x = 2919.819368324013, y = 989.622719288718},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 12048742,
@@ -2000,7 +2061,7 @@ return {
             key = "17745942024941904",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 2406.418137976574, y = -57.88520199233839},
+            pos = {x = 2409.275280833717, y = -74.55186865900507},
             propsData = {
               PlayerId = 0,
               bActiveEnable = false,
@@ -2262,7 +2323,7 @@ return {
             key = "17747043252861775",
             type = "PlayNormalSoundNode",
             name = "播放普通音效",
-            pos = {x = 2119.6122134659286, y = 135.55317200858963},
+            pos = {x = 2077.873083031146, y = -14.446827991410371},
             propsData = {
               EventPath = "event:/sfx/common/story/east02/zhiliudenggao_wind",
               TargetPointName = "",
@@ -2274,14 +2335,14 @@ return {
             key = "1774769621520852990",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 1756.0022977707151, y = 633.1480393253613},
+            pos = {x = 1590.395101368916, y = 594.4673796551963},
             propsData = {QuestRoleId = 4102, IsPlayFX = true}
           },
           ["1774769630649853108"] = {
             key = "1774769630649853108",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 2392.0737263421433, y = 638.5051821825041},
+            pos = {x = 2276.8563350377954, y = 671.6107722446159},
             propsData = {QuestRoleId = 41020101, IsPlayFX = true}
           },
           ["17748570459827251683"] = {
@@ -2384,7 +2445,7 @@ return {
             key = "17748570459827251691",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 2593.742008111072, y = 893.2656836457452},
+            pos = {x = 2906.6586747777387, y = 1149.5156836457452},
             propsData = {
               PlayerId = 0,
               bActiveEnable = true,
@@ -2407,7 +2468,7 @@ return {
             key = "17748570459827251692",
             type = "ForbidWeaponByWeaponTagNode",
             name = "禁用/启用武器节点",
-            pos = {x = 2935.242008111072, y = 899.7545340106947},
+            pos = {x = 2883.5753414444057, y = 1297.6712006773614},
             propsData = {
               WeaponTags = {"Melee", "Ranged"},
               bForbid = false,
@@ -2421,6 +2482,24 @@ return {
             name = "等待任务完成",
             pos = {x = 2995.7838345864648, y = 2201.288418238108},
             propsData = {ListenCount = 8, NeedFinishCount = 8}
+          },
+          ["177504272440210254937"] = {
+            key = "177504272440210254937",
+            type = "HighlightButtonNode",
+            name = "HighlightButton显示/隐藏信息",
+            pos = {x = 1246, y = 144},
+            propsData = {ShowEnable = false, SkillType = "Skill1"}
+          },
+          ["177505579678020488095"] = {
+            key = "177505579678020488095",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3372.7926236373974, y = 356.8509925984146},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}

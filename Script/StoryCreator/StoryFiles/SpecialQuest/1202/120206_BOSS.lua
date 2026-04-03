@@ -130,6 +130,12 @@ return {
             startPort = "Out",
             endQuest = "17725503431604024950",
             endPort = "In"
+          },
+          {
+            startQuest = "1774360413369513",
+            startPort = "Out",
+            endQuest = "17750471556272568585",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -210,7 +216,7 @@ return {
             key = "17725503637254025359",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1336.8170680143498, y = 167.49934294649717},
+            pos = {x = 1370.150401347683, y = 178.3326762798305},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "BossBattle",
@@ -305,6 +311,23 @@ return {
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
+              OverrideFailBlend = false
+            }
+          },
+          ["17750471556272568585"] = {
+            key = "17750471556272568585",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 1495.2884199134198, y = -62.383116883116884},
+            propsData = {
+              IsNpcNode = false,
+              FirstDialogueId = 12049138,
+              FlowAssetPath = "",
+              TalkType = "Guide",
+              bIsStandalone = true,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
               OverrideFailBlend = false
             }
           }

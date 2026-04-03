@@ -1838,7 +1838,7 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1202/12040501.12040501'",
-              TalkType = "FixSimple",
+              TalkType = "QuestImpression",
               TalkStageName = "East02_12020103",
               BlendInTime = 1,
               BlendOutTime = 0,
@@ -5638,12 +5638,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17651989408191063064",
-            startPort = "Success",
-            endQuest = "17651988979821061939",
-            endPort = "Success"
-          },
-          {
             startQuest = "17651989859921063992",
             startPort = "Out",
             endQuest = "17651988979821061940",
@@ -5666,6 +5660,18 @@ return {
             startPort = "Out",
             endQuest = "17746030502352555893",
             endPort = "In"
+          },
+          {
+            startQuest = "17651989408191063064",
+            startPort = "Success",
+            endQuest = "17750410303116410660",
+            endPort = "In"
+          },
+          {
+            startQuest = "17750410303116410660",
+            startPort = "Out",
+            endQuest = "17651988979821061939",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -5680,7 +5686,7 @@ return {
             key = "17651988979821061939",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3014.7257008065862, y = 980.2275124831243},
+            pos = {x = 3251.5114150923005, y = 924.5132267688386},
             propsData = {ModeType = 0}
           },
           ["17651988979821061940"] = {
@@ -6092,6 +6098,23 @@ return {
               NewDescription = "Description_120201_25",
               NewDetail = "Content_120201_25",
               SubTaskTargetIndex = 0
+            }
+          },
+          ["17750410303116410660"] = {
+            key = "17750410303116410660",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 2860.8634453781515, y = 939.0749299719887},
+            propsData = {
+              IsNpcNode = false,
+              FirstDialogueId = 12049303,
+              FlowAssetPath = "",
+              TalkType = "Guide",
+              bIsStandalone = true,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
+              OverrideFailBlend = false
             }
           }
         },

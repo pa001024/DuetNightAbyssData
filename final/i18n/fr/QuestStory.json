@@ -36029,7 +36029,7 @@
             "dialogues": [
               {
                 "id": 12048751,
-                "content": "异样感似乎还在隐隐跳动，先走吧……",
+                "content": "Cette sensation étrange est toujours là... mieux vaut avancer.",
                 "npc": 100001
               }
             ]
@@ -38025,7 +38025,7 @@
       },
       {
         "id": 12020212,
-        "name": "摆脱追兵",
+        "name": "Échapper aux poursuivants",
         "desc": "À cause de vos actions, la ville entière est désormais en état d’alerte. Des Bi’an et des Magistrats de Yingtian patrouillent partout.\nAlors que toute issue semble vous être fermée, Xiaoyao apparaît soudain devant vous et promet de vous aider à fuir.",
         "nodes": [
           {
@@ -44217,12 +44217,12 @@
               },
               {
                 "id": 12046616,
-                "content": "万万不可啊，止流大当家——",
+                "content": "Ce n’est pas possible, Patronne Zhiliu — !",
                 "voice": "story/1201/120229/1E191CD6"
               },
               {
                 "id": 12046615,
-                "content": "为大风九章奔走，于我而言，是一件将功折罪的幸事。",
+                "content": "Servir aujourd’hui les Neuf Chapitres... est pour moi une façon d’expier.",
                 "voice": "story/1204/120466/12046615"
               }
             ]
@@ -45296,7 +45296,63 @@
         "id": 12020614,
         "name": "Atteindre l’extrémité du Mausolée de Taixu",
         "desc": "L’affrontement entre Taihao et Zhuyin atteint son paroxysme. Au plus profond du Mausolée de Taixu, vous découvrez Zhiliu au bord de l’effondrement.\nDéterminée à mourir, elle vous supplie de transpercer sa poitrine avec votre épée afin d’achever le sacrifice final.",
-        "nodes": []
+        "nodes": [
+          {
+            "id": "177496944840919541",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 12047504,
+                "content": "{nickname}, continue sans moi. Ne perds pas de temps ici.",
+                "voice": "story/1204/120475/1E28DFA0",
+                "npc": 240013,
+                "next": 12047505
+              },
+              {
+                "id": 12047505,
+                "content": "Très bien.",
+                "voice": "story/1204/120475/1E28DFCA",
+                "npc": 100001,
+                "next": 12047506
+              },
+              {
+                "id": 12047506,
+                "content": "Yuming... dégaine. Te retenir ici, c’est aussi mon devoir.",
+                "voice": "story/1204/120475/1E28DFF4",
+                "npc": 240013,
+                "next": 12047507
+              },
+              {
+                "id": 12047507,
+                "content": "Peut-être ai-je hésité autrefois. Mais plus maintenant.",
+                "voice": "story/1204/120475/1E28E01E",
+                "npc": 240013,
+                "next": 12047508
+              },
+              {
+                "id": 12047508,
+                "content": "La question que tu m’as posée... j’ai trouvé ma réponse. Qui a décrété qu’on ne pouvait pas tout vouloir ? Moi, Kezhou, je refuse de choisir !",
+                "voice": "story/1204/120475/1E28E048",
+                "npc": 240013,
+                "next": 12047509
+              },
+              {
+                "id": 12047509,
+                "content": "Qui a dit qu’on devait toujours combattre pour les autres ? Si chacun prenait les armes et se dressait ensemble, la Dégradation elle-même ne pourrait rien contre nous ! Ce futur-là... je te le prouverai !",
+                "voice": "story/1204/120475/1E28E072",
+                "npc": 240013,
+                "next": 12047510
+              },
+              {
+                "id": 12047510,
+                "content": "...",
+                "voice": "story/1204/120475/1E28E09C",
+                "npc": 210007
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 12020615,
@@ -55731,7 +55787,7 @@
             "dialogues": [
               {
                 "id": 51001801,
-                "content": "Eh, j’ai entendu dire que tu t’étais bien débrouillé à la Fosse de Glevum. Avec un tel talent, ça te dirait qu’on fasse un boulot ensemble ? Tu prends 80 %, je prends 20. Qu’en dis-tu ?",
+                "content": "Eh, j’ai entendu dire que tu t’étais bien débrouillé à la Fosse de Glevum. Avec un tel talent, ça te dirait qu’on fasse un boulot ensemble ? Tu prends 80 %, je prends 20. Qu’en dis-tu ?",
                 "npc": 200015,
                 "options": [
                   {
@@ -57351,7 +57407,7 @@
               },
               {
                 "id": 51004908,
-                "content": "Ah... O-Oh, je... euh...",
+                "content": "Ah... ouuh...",
                 "npc": 700010,
                 "next": 51004909
               },
@@ -58981,7 +59037,7 @@
               },
               {
                 "id": 51005120,
-                "content": "Leur valeur réside dans... leurs histoires et secrets ! C’est justement pour ça que tu les as pris, non ? Je savais que tu avais l’œil !",
+                "content": "Leur valeur réside dans... leurs histoires et secrets ! C’est justement pour ça que tu les as pris, non ? Je savais que tu avais l’œil !",
                 "npc": 700115,
                 "next": 51005121
               },
@@ -58993,13 +59049,13 @@
               },
               {
                 "id": 51005122,
-                "content": "Ne sous-estime jamais les poubelles. C’est là que se cachent la vérité et les mystères de la cité ! Moi, j’ai appris à la connaître petit à petit, en fouillant dans ses poubelles. ",
+                "content": "Ne sous-estime jamais les poubelles. C’est là que se cachent la vérité et les mystères de la cité ! Moi, j’ai appris à la connaître petit à petit, en fouillant dans ses poubelles. ",
                 "npc": 700115,
                 "next": 51005123
               },
               {
                 "id": 51005123,
-                "content": "{性别:Curieux|Curieuse}, hein ? Tu veux en savoir plus sur cette cité ? Alors paie, et tu pourras repartir avec ces petites merveilles pour fouiller un peu !",
+                "content": "{性别:Curieux|Curieuse}, hein ? Tu veux en savoir plus sur cette cité ? Alors paie, et tu pourras repartir avec ces petites merveilles pour fouiller un peu !",
                 "npc": 700115,
                 "next": 51005124
               },
@@ -59141,7 +59197,7 @@
                   },
                   {
                     "id": 510052023,
-                    "content": "La clé ouvre un coffre. Nous y avons trouvé un testament. Madame Lina est devenue ma nouvelle propriétaire et m’a dispensée de loyer.",
+                    "content": "<I>La clé ouvre un coffre. Nous y avons trouvé un testament. Madame Lina est devenue ma nouvelle propriétaire et m’a dispensée de loyer.</>",
                     "next": 51005205
                   }
                 ]
@@ -61758,7 +61814,7 @@
             "dialogues": [
               {
                 "id": 51007915,
-                "content": "Très bien, je vais te montrer comment ça se fait. Mais promets-moi de faire un peu de pub quand tu retourneras à Brumelac, d’accord ?",
+                "content": "Très bien, je vais te montrer comment ça se fait. Mais promets-moi de faire un peu de pub quand tu retourneras à Brumelac, d’accord ?",
                 "npc": 700191,
                 "next": 51007916
               },
@@ -78482,25 +78538,25 @@
             "dialogues": [
               {
                 "id": 51012600,
-                "content": "第一张照片，应该是旅途的起点。那么，就只能是那个地方了——",
+                "content": "La première photo... doit être le point de départ du voyage. Alors, il n’y a qu’un seul endroit possible—",
                 "npc": 100001,
                 "next": 51012601
               },
               {
                 "id": 51012601,
-                "content": "净界岛，我和贝蕾妮卡一起生活的故乡。",
+                "content": "L’Île du Purgatoire, mon foyer... celui que je partageais avec Berenica.",
                 "npc": 100001,
                 "next": 51012602
               },
               {
                 "id": 51012602,
-                "content": "如果以后能回到净界岛，我想给<H>家</>拍一张照片，作为笔记的第一页。",
+                "content": "Si je peux y retourner un jour, je prendrai une photo de <H>la maison</>. Elle sera la première page de ce carnet.",
                 "npc": 100001,
                 "next": 51012603
               },
               {
                 "id": 51012603,
-                "content": "等找到了贝蕾妮卡，再和她一起拍一张照片吧。",
+                "content": "Quand j’aurai retrouvé Berenica... nous prendrons une photo ensemble.",
                 "npc": 100001
               }
             ]
@@ -78524,31 +78580,31 @@
             "dialogues": [
               {
                 "id": 51012800,
-                "content": "离开净界岛之后，我来到了冰湖城。",
+                "content": "Après avoir quitté l’Île du Purgatoire, je suis arrivé à Givrelac.",
                 "npc": 100001,
                 "next": 51012801
               },
               {
                 "id": 51012801,
-                "content": "在这座冷冰冰的城市，有一个女孩温柔地接纳了我、帮助了我……",
+                "content": "Dans cette ville glaciale, une jeune fille m’a accueilli avec douceur...",
                 "npc": 100001,
                 "next": 51012802
               },
               {
                 "id": 51012802,
-                "content": "第二页的照片，就选<H>和她第一次见面的地方</>吧。",
+                "content": "Pour la deuxième page, je choisirai <H>l’endroit où je l’ai rencontrée pour la première fois</>.",
                 "npc": 100001,
                 "next": 51012803
               },
               {
                 "id": 51012803,
-                "content": "我不会忘记，在净界岛之外的世界，是谁给了我第一份温暖的回忆。",
+                "content": "Je n’oublierai jamais... qui m’a offert mon premier souvenir chaleureux, loin de mon foyer.",
                 "npc": 100001,
                 "next": 51012804
               },
               {
                 "id": 51012804,
-                "content": "我会记住你的，赛琪。",
+                "content": "Je me souviendrai de toi, Psyche.",
                 "npc": 100001
               }
             ]
@@ -78572,25 +78628,25 @@
             "dialogues": [
               {
                 "id": 51013000,
-                "content": "这一页……我想留下<H>和赛琪分别的地方</>。",
+                "content": "Cette page... je veux y garder <H>le lieu où Psyche et moi nous sommes séparés</>.",
                 "npc": 100001,
                 "next": 51013001
               },
               {
                 "id": 51013001,
-                "content": "虽然非常不想回忆那个悲伤的时刻……但，赛琪一定会希望我全部记住。",
+                "content": "Même si je préférerais oublier ce moment douloureux... Psyche voudrait sûrement que je m’en souvienne.",
                 "npc": 100001,
                 "next": 51013002
               },
               {
                 "id": 51013002,
-                "content": "赛琪，我没有忘记约定。",
+                "content": "Psyche... je n’ai pas oublié notre promesse.",
                 "npc": 100001,
                 "next": 51013003
               },
               {
                 "id": 51013003,
-                "content": "将来有一天，等我回到了南方，我一定会在房子周围种满花。",
+                "content": "Un jour, lorsque je reviendrai au sud... je planterai des fleurs tout autour de la maison.",
                 "npc": 100001
               }
             ]
@@ -78614,31 +78670,31 @@
             "dialogues": [
               {
                 "id": 51013200,
-                "content": "在那之后的下一个大事件……就是“卡戎狩猎”的案子，是幻景和布鲁斯的故事。",
+                "content": "Ensuite... il y a eu l’affaire de la Traque aux Charons. L’histoire de Phantasio et de Blues.",
                 "npc": 100001,
                 "next": 51013201
               },
               {
                 "id": 51013201,
-                "content": "我还记得他们<H>在下水道里为自己搭建的那座舞台</>，那也是我们第一次见到扮演布鲁斯的幻景。",
+                "content": "Je me souviens encore de <H>la scène qu’ils avaient construite dans les égouts</>. C’est là que nous avons vu Phantasio, incarnant Blues, pour la première fois.",
                 "npc": 100001,
                 "next": 51013202
               },
               {
                 "id": 51013202,
-                "content": "这一页的相片，我会选择那沉没在淤泥之中，却依然闪闪发光的“梦想”。",
+                "content": "Pour cette page... je choisirai ce « rêve » englouti dans la boue, mais qui brillait encore.",
                 "npc": 100001,
                 "next": 51013203
               },
               {
                 "id": 51013203,
-                "content": "回想起来，这就是他最后那场演出的“开幕”……",
+                "content": "En y repensant... c’était le lever de rideau de sa dernière représentation...",
                 "npc": 100001,
                 "next": 51013204
               },
               {
                 "id": 51013204,
-                "content": "可惜那时候，我们还什么都不知道。",
+                "content": "À ce moment-là... nous ignorions encore tout.",
                 "npc": 100001
               }
             ]
@@ -78662,25 +78718,25 @@
             "dialogues": [
               {
                 "id": 51013400,
-                "content": "这一页，该记下“卡戎狩猎”的结局了。",
+                "content": "Cette page doit consigner la fin de la Traque aux Charons.",
                 "npc": 100001,
                 "next": 51013401
               },
               {
                 "id": 51013401,
-                "content": "盖雷亚剧院的舞台，幻景以自己的身份和我们第一次、也是最后一次对话的地方。我在<H>那座舞台</>见证了他故事的终幕。",
+                "content": "La scène du Théâtre Galea... là où Phantasio nous a parlé pour la première — et la dernière — fois, en son nom. Sur <H>cette scène</>, j’ai assisté au dénouement de son histoire.",
                 "npc": 100001,
                 "next": 51013402
               },
               {
                 "id": 51013402,
-                "content": "虽然观众只有我们寥寥几人，但我们，以及他自己，都不会忘记……",
+                "content": "Le public était peu nombreux... mais nous nous en souviendrons. Lui aussi.",
                 "npc": 100001,
                 "next": 51013403
               },
               {
                 "id": 51013403,
-                "content": "他在这里完成了一场最好的演出。",
+                "content": "Ici... il a livré la plus belle des performances.",
                 "npc": 100001
               }
             ]
@@ -78704,31 +78760,31 @@
             "dialogues": [
               {
                 "id": 51013600,
-                "content": "后来，我们因为一场意外，跟着止流去往了华胥。",
+                "content": "Plus tard, suite à un incident, nous avons suivi Zhiliu jusqu’à Huaxu.",
                 "npc": 100001,
                 "next": 51013601
               },
               {
                 "id": 51013601,
-                "content": "如果要说最初对华胥的印象，脑海里首先浮现的，是烟津渡那座气派的商会“<H>百年春</>”。",
+                "content": "Quand je pense à Huaxu... la première image qui me vient à l’esprit, c’est la majestueuse guilde marchande : <H>Éternel Printemps</>, à Port-des-Brumes.",
                 "npc": 100001,
                 "next": 51013602
               },
               {
                 "id": 51013602,
-                "content": "这一页就它吧，还记得百年春门口的那条白龙雕像很威风凛凛呢。",
+                "content": "Cette page lui sera dédiée. Je me souviens encore de la statue du Dragon d’Argent à l’entrée... imposante et majestueuse.",
                 "npc": 100001,
                 "next": 51013603
               },
               {
                 "id": 51013603,
-                "content": "第一次踏上华胥的土地时，真是完全没想到竟会被卷入这样重大的事件……",
+                "content": "Je n’aurais jamais imaginé être entraîné dans un événement d’une telle ampleur...",
                 "npc": 100001,
                 "next": 51013604
               },
               {
                 "id": 51013604,
-                "content": "命运还真是奇妙。不过，这大概本来就在止流的计划之中吧。",
+                "content": "Le destin est vraiment étrange... Mais au fond, tout cela faisait sans doute déjà partie du plan de Zhiliu.",
                 "npc": 100001
               }
             ]
@@ -78752,31 +78808,31 @@
             "dialogues": [
               {
                 "id": 51013800,
-                "content": "华胥的这段旅程中，最惊心动魄的一幕，还是听闻止流踏入太虚陵的时候吧。",
+                "content": "Le moment le plus saisissant de ce voyage à Huaxu... c’était lorsque Zhiliu a pénétré dans le Mausolée de Taixu.",
                 "npc": 100001,
                 "next": 51013801
               },
               {
                 "id": 51013801,
-                "content": "那片土地上所有人的命运，都被悬在她抛出的钱币之上……好在，最终人们还是共同选择了正确的未来。",
+                "content": "Le destin de tous reposait sur une pièce lancée dans les airs... Heureusement, chacun a fini par choisir le bon avenir.",
                 "npc": 100001,
                 "next": 51013802
               },
               {
                 "id": 51013802,
-                "content": "这一页的相片，就放<H>执律阁上方的天空</>吧。",
+                "content": "Pour cette page... je choisirai <H>le ciel au-dessus du Pavillon de l’Arbitrage</>.",
                 "npc": 100001,
                 "next": 51013803
               },
               {
                 "id": 51013803,
-                "content": "现在回想那时的事还是有点后怕，好在最后一切都顺利收场了。",
+                "content": "Même aujourd’hui, j’en ai encore des frissons... Mais tout s’est finalement bien terminé.",
                 "npc": 100001,
                 "next": 51013804
               },
               {
                 "id": 51013804,
-                "content": "不过，经历了华胥的故事，我也对未来多了一分信心——所谓的命运，一定是可以改变的。",
+                "content": "Après tout cela... j’ai gagné une nouvelle conviction : le destin... peut être changé.",
                 "npc": 100001
               }
             ]
@@ -78807,185 +78863,185 @@
             "dialogues": [
               {
                 "id": 51012300,
-                "content": "“咔嚓——”",
+                "content": "« <I>Clic—</> »",
                 "next": 51012301
               },
               {
                 "id": 51012301,
-                "content": "咦？",
+                "content": "Hein ?",
                 "npc": 100001,
                 "next": 51012302
               },
               {
                 "id": 51012302,
-                "content": "啊，真抱歉，不小心把你拍进去了……",
+                "content": "Ah, pardon... Je vous ai pris en photo sans faire attention...",
                 "npc": 700383,
                 "next": 51012304
               },
               {
                 "id": 51012304,
-                "content": "你为什么要拍这座房子？",
+                "content": "Pourquoi photographier cette maison ?",
                 "npc": 100001,
                 "next": 51012305
               },
               {
                 "id": 51012305,
-                "content": "噢，在解释之前，请允许我做个自我介绍——我叫帕蒂，是一个旅行摄影师！",
+                "content": "Oh, avant de répondre, permettez-moi de me présenter — je m’appelle Patty, je suis photographe itinérante !",
                 "npc": 700383,
                 "next": 51012306
               },
               {
                 "id": 51012306,
-                "content": "我今天刚到冰湖城，正在寻找此地值得记录的风景。",
+                "content": "Je viens tout juste d’arriver à Givrelac, et je cherche des paysages dignes d’être immortalisés.",
                 "npc": 700383,
                 "next": 51012307
               },
               {
                 "id": 51012307,
-                "content": "这座房子实在是漂亮极了，我看得入迷，情不自禁地举起了相机……所以才没注意到你路过，抱歉啦。",
+                "content": "Cette maison est tellement magnifique que je me suis laissée emporter... j’ai levé mon appareil sans réfléchir. Je n’ai même pas remarqué votre passage, désolée !",
                 "npc": 700383,
                 "next": 51012308
               },
               {
                 "id": 51012308,
-                "content": "“摄影师”……就是专门拍照的人？原来世界上还有这种职业啊。你拍过很多照片吗？",
+                "content": "« Photographe »... quelqu’un dont le métier est de prendre des photos ? Je ne savais même pas que ça existait. Vous en avez pris beaucoup ?",
                 "npc": 100001,
                 "next": 51012309
               },
               {
                 "id": 51012309,
-                "content": "当然啦，你看——",
+                "content": "Bien sûr, regardez—",
                 "npc": 700383,
                 "next": 51012310
               },
               {
                 "id": 51012310,
-                "content": "（少女从包里掏出一本厚厚的笔记，打开向你展示。里面贴着很多照片，文字反而很少。）",
+                "content": "La jeune fille sort un carnet épais de son sac et vous le montre. Il est rempli de photographies, avec très peu de texte.",
                 "next": 51012311
               },
               {
                 "id": 51012311,
-                "content": "原来照片还能做成这样特别的笔记，真有意思……我拍的照片都被我随手放在柜子里了。",
+                "content": "On peut donc faire ce genre de carnet avec des photos... c’est fascinant. Les miennes, je les laisse simplement traîner dans un tiroir...",
                 "npc": 100001,
                 "next": 51012312
               },
               {
                 "id": 51012312,
-                "content": "嘿嘿，我把它叫做“影像笔记”哦。你感兴趣的话，也做一本试试怎么样？",
+                "content": "Héhé, j’appelle ça un « Carnet d’images » ! Si ça vous intéresse, pourquoi ne pas essayer d’en créer un ?",
                 "npc": 700383,
                 "next": 51012313
               },
               {
                 "id": 51012313,
-                "content": "好像有点难。",
+                "content": "Ça a l’air compliqué...",
                 "npc": 100001,
                 "next": 51012314
               },
               {
                 "id": 51012314,
-                "content": "一点也不难的，你试试就知道啦！",
+                "content": "Pas du tout, vous verrez en essayant !",
                 "npc": 700383,
                 "next": 51012315
               },
               {
                 "id": 51012315,
-                "content": "可是……就算说要做，我不知道该放些什么照片，写些什么文字。你是怎么做的？",
+                "content": "Mais... même si je voulais, je ne saurais pas quelles photos y mettre, ni quoi écrire. Comment faites-vous ?",
                 "npc": 100001,
                 "next": 51012316
               },
               {
                 "id": 51012316,
-                "content": "其实我一开始也是随便做做的。不过，做了这么多年，我也算积累了一些经验。既然你是从头做起，那先定一下属于你的影像笔记的“主题”，怎么样？",
+                "content": "Au début, je faisais un peu n’importe quoi moi aussi. Mais avec les années, j’ai accumulé un peu d’expérience. Puisque vous commencez de zéro, pourquoi ne pas définir d’abord un thème pour votre carnet ?",
                 "npc": 700383,
                 "next": 51012317
               },
               {
                 "id": 51012317,
-                "content": "主题？",
+                "content": "Un thème ?",
                 "npc": 100001,
                 "next": 51012318
               },
               {
                 "id": 51012318,
-                "content": "嗯，简单来说就是你制作笔记的目的——就比如说我吧，我制作这些笔记，是为了回到故乡时拿给我的姐姐看。",
+                "content": "Oui, en quelque sorte le but de votre carnet. Par exemple, moi... je les fais pour les montrer à ma sœur, lorsque je rentrerai chez nous.",
                 "npc": 700383,
                 "next": 51012319
               },
               {
                 "id": 51012319,
-                "content": "我姐姐曾经很喜欢旅行，可后来她生了重病，身体变得很弱，没法再出远门，一直郁郁寡欢。",
+                "content": "Elle adorait voyager autrefois... mais elle est tombée gravement malade. Son corps s’est affaibli, et elle ne peut plus quitter la maison. Depuis, elle est toujours mélancolique...",
                 "npc": 700383,
                 "next": 51012320
               },
               {
                 "id": 51012320,
-                "content": "可有一天，当我无意中把我外出时拍到的照片展示给姐姐看的时候，她的脸上竟然破天荒地出现了笑容……",
+                "content": "Mais un jour, je lui ai montré des photos prises pendant mes voyages... Et, pour la première fois depuis longtemps, elle a souri...",
                 "npc": 700383,
                 "next": 51012321
               },
               {
                 "id": 51012321,
-                "content": "这就是我开始旅行并制作影像笔记的契机。我想要走到更远的地方，拍下更多的风景，让姐姐在家也能看到广阔的世界。",
+                "content": "C’est à ce moment-là que j’ai décidé de voyager et de créer ces carnets. Je veux aller toujours plus loin, capturer davantage de paysages... pour qu’elle puisse voir le monde, même sans quitter son foyer.",
                 "npc": 700383,
                 "next": 51012322
               },
               {
                 "id": 51012322,
-                "content": "所以，我的影像笔记的主题就是“记录广阔的世界”。从这个主题出发，我要做的就是找到新的风景并记录下来。你呢，你有什么特别想记录的东西吗？",
+                "content": "Alors, le thème de mon carnet, c’est : « Immortaliser l’immensité du monde ». Et vous ? Y a-t-il quelque chose que vous souhaitez particulièrement préserver ?",
                 "npc": 700383,
                 "next": 51012325
               },
               {
                 "id": 51012325,
-                "content": "送给我照相机的那个人曾经说过，希望我能代替她继续看看这个世界。",
+                "content": "La personne qui m’a offert cet appareil... m’a dit la même chose. Elle espérait que je continuerais à contempler ce monde pour elle.",
                 "npc": 100001,
                 "next": 51012326
               },
               {
                 "id": 51012326,
-                "content": "我想把旅程中拍摄过的照片制作成影像笔记，作为好好看过这个世界的证明。这可以作为“主题”吗？",
+                "content": "Je veux rassembler les photos de mon voyage dans un carnet... Comme preuve que j’ai vraiment vu ce monde de mes propres yeux. Est-ce que ça peut être un thème ?",
                 "npc": 100001,
                 "next": 51012327
               },
               {
                 "id": 51012327,
-                "content": "当然了，我觉得这个主题很棒！",
+                "content": "Bien sûr ! Je le trouve magnifique !",
                 "npc": 700383,
                 "next": 51012328
               },
               {
                 "id": 51012328,
-                "content": "既然你已经有方向了，不如现在就开始行动起来！我刚好带了一本空白的笔记，就送给你吧。",
+                "content": "Puisque vous avez déjà une direction, pourquoi ne pas commencer tout de suite ? J’ai justement un carnet vierge sur moi — je vous l’offre.",
                 "npc": 700383,
                 "next": 51012329
               },
               {
                 "id": 51012329,
-                "content": "没关系，我可以自己去买。",
+                "content": "Ce n’est pas nécessaire, je peux en acheter un.",
                 "npc": 100001,
                 "next": 51012330
               },
               {
                 "id": 51012330,
-                "content": "不不，我这本可不是商店那种普通笔记本。你看，它的内页里已经做好了放置照片和书写文字的区域，对新手来说很方便哦。",
+                "content": "Oh non, celui-ci n’a rien d’un carnet ordinaire ! Regardez : les pages sont déjà aménagées pour accueillir photos et textes. C’est parfait pour débuter !",
                 "npc": 700383,
                 "next": 51012331
               },
               {
                 "id": 51012331,
-                "content": "它的封面还是空白的，你可以自己给它加上装饰，让它变得独一无二。这样，记录的过程也会变得更有成就感！",
+                "content": "Et la couverture est vierge — vous pouvez la décorer à votre guise et en faire un objet unique. Le processus n’en sera que plus gratifiant !",
                 "npc": 700383,
                 "next": 51012332
               },
               {
                 "id": 51012332,
-                "content": "原来如此……那我就收下了，谢谢你。",
+                "content": "Je vois... Dans ce cas, je l’accepte. Merci beaucoup.",
                 "npc": 100001,
                 "next": 51012333
               },
               {
                 "id": 51012333,
-                "content": "嗯，加油呀，新人摄影师！等你做出了属于自己的影像笔记，欢迎来找我分享~",
+                "content": "Bon courage, jeune photographe ! Quand votre carnet sera prêt, venez me le montrer~",
                 "npc": 700383
               }
             ]
@@ -78997,7 +79053,7 @@
             "dialogues": [
               {
                 "id": 51012400,
-                "content": "（该怎么装饰呢……？对了，也许铁匠前辈那里会有材料。）",
+                "content": "<I>Comment vais-je le décorer... ? Peut-être que la forgeronne aura des matériaux.</>",
                 "npc": 100001
               }
             ]
@@ -79015,36 +79071,36 @@
             "dialogues": [
               {
                 "id": 51012500,
-                "content": "嗯？年轻人，找我有事吗？",
+                "content": "Hmm ? T’as besoin de quelque chose, {性别:gamin|gamine} ?",
                 "npc": 230002,
                 "next": 51012501
               },
               {
                 "id": 51012501,
-                "content": "你好，前辈。我想给这本“影像笔记”做一些装饰。如果你有多余的材料，可不可以分一些给我？",
+                "content": "Bonjour, je voudrais décorer ce Carnet d’images. Tu aurais des matériaux à me céder ?",
                 "npc": 100001,
                 "next": 51012502
               },
               {
                 "id": 51012502,
-                "content": "有，当然有！平时你这么照顾老朽的生意，这点小忙不在话下。来，你自己挑，想要的尽管拿走。",
+                "content": "Mais bien sûr ! Tu fais vivre ma boutique depuis un moment, je vais pas chipoter pour si peu. Vas-y, sers-toi, prends ce qu’il te faut.",
                 "npc": 230002,
                 "next": 51012503
               },
               {
                 "id": 51012503,
-                "content": "哈哈，真教人怀念啊，老朽小的时候，也很喜欢做手工……",
+                "content": "Ah... que de souvenirs. Moi aussi, j’adorais bricoler quand j’étais plus jeune...",
                 "npc": 230002,
                 "next": 51012504
               },
               {
                 "id": 51012504,
-                "content": "在铁匠前辈的帮助下对影像笔记进行了装饰……",
+                "content": "Grâce à l’aide de la forgeronne, vous avez décoré votre Carnet d’images...",
                 "next": 51012505
               },
               {
                 "id": 51012505,
-                "content": "嗯，这样就差不多了。接下来，想一想要放怎样的照片进去吧。",
+                "content": "Voilà... c’est à peu près terminé. Il ne reste plus qu’à choisir quelles photos y ajouter.",
                 "npc": 100001
               }
             ]
@@ -79067,7 +79123,7 @@
             "dialogues": [
               {
                 "id": 51014000,
-                "content": "目前我想到的足以代表这一路经历的照片就是这些了……不知道这样算是完成了我的“主题”吗？",
+                "content": "Voilà toutes les photos qui, selon moi, représentent ce voyage... Ai-je vraiment accompli mon « thème » ?",
                 "npc": 100001
               }
             ]
@@ -79079,84 +79135,84 @@
             "dialogues": [
               {
                 "id": 51014100,
-                "content": "“咔嚓——”",
+                "content": "« <I>Clic—</> »",
                 "next": 51014101
               },
               {
                 "id": 51014101,
-                "content": "啊，真抱歉——咦？！",
+                "content": "Oh, pardon— Hein ?!",
                 "npc": 700383,
                 "next": 51014102
               },
               {
                 "id": 51014102,
-                "content": "你怎么从这栋房子里走出来了，该不会这里其实是你家吧？",
+                "content": "Vous sortez de cette maison... ne me dites pas que c’est chez vous ?",
                 "npc": 700383,
                 "next": 51014103
               },
               {
                 "id": 51014103,
-                "content": "确实。",
+                "content": "En effet.",
                 "npc": 100001,
                 "next": 51014104
               },
               {
                 "id": 51014104,
-                "content": "什么！我只是随口一问，没想到这真是{性别：他|她}家……早知道就不急着订旅馆了，{性别：他|她}这么好说话，说不定会同意我在这里借宿的……呜……",
+                "content": "Quoi ?! Je disais ça au hasard... et c’est vraiment chez {性别:lui... Si j’avais su, je n’aurais pas réservé d’auberge... Vu comme il est gentil, il|elle... Si j’avais su, je n’aurais pas réservé d’auberge... Vu comme elle est gentille, elle} m’aurait peut-être laissé dormir ici...",
                 "npc": 700383,
                 "next": 51014105
               },
               {
                 "id": 51014105,
-                "content": "咳咳……言归正传。看来你已经开始制作自己的影像笔记了，感觉怎么样？",
+                "content": "Hum... enfin bref. Alors, vous avez commencé votre Carnet d’images. Qu’en pensez-vous ?",
                 "npc": 700383,
                 "next": 51014106
               },
               {
                 "id": 51014106,
-                "content": "我试着做了几页，感觉……很奇妙。",
+                "content": "J’ai fait quelques pages... C’est une sensation étrange.",
                 "npc": 100001,
                 "next": 51014107
               },
               {
                 "id": 51014107,
-                "content": "尽管照片只是定格的画面，但当我把它贴在纸上，写下文字记录的时候，曾经经历过的一幕幕故事和当时的感受又清晰地浮现出来。",
+                "content": "Même si les photos ne sont que des instants figés... les coller sur le papier, y ajouter des mots... fait ressurgir chaque souvenir, chaque émotion avec une clarté inattendue.",
                 "npc": 100001,
                 "next": 51014108
               },
               {
                 "id": 51014108,
-                "content": "所以说，影像笔记唤醒了你重要的回忆与情感——而这些正是你“好好看过世界的证明”！看来你完成了自己的主题呀。",
+                "content": "C’est ça. Votre Carnet d’images réveille ce qui compte vraiment pour vous — la preuve que vous avez réellement contemplé ce monde. On dirait bien que vous avez donné vie à votre thème.",
                 "npc": 700383,
                 "next": 51014109
               },
               {
                 "id": 51014109,
-                "content": "嗯，你说得对。谢谢你向我介绍了这种特别的笔记，我会好好珍藏它。",
+                "content": "Oui... vous avez raison. Merci de m’avoir fait découvrir ce type de carnet. Je le garderai précieusement.",
                 "npc": 100001,
                 "next": 51014110
               },
               {
                 "id": 51014110,
-                "content": "不客气！能遇到像我一样认真记录影像的人，我也很开心。",
+                "content": "Avec plaisir ! Rencontrer quelqu’un qui partage cette passion... ça me fait très plaisir.",
                 "npc": 700383,
                 "next": 51014111
               },
               {
                 "id": 51014111,
-                "content": "过几天我就要离开冰湖城了，或许在旅途的前方，我们还会再次相遇。到时候，再给我分享你的新笔记吧！",
+                "content": "Je quitterai bientôt Givrelac... Mais peut-être que nos routes se croiseront à nouveau. À ce moment-là... montrez-moi votre prochain carnet.",
                 "npc": 700383,
                 "next": 51014112
               },
               {
                 "id": 51014112,
-                "content": "好啊，那就后会有期。",
+                "content": "Avec plaisir. À la prochaine.",
                 "npc": 100001,
                 "next": 51014113
               },
               {
                 "id": 51014113,
-                "content": "嗯，后会有期！",
+                "content": "À la prochaine !",
                 "npc": 700383
               }
             ]

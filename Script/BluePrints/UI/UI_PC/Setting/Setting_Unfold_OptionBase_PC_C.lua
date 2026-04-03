@@ -337,7 +337,7 @@ function S:RestoreDefaultSystemLanguage()
   self:SaveSystemLanguageOptionSetting()
 end
 
-local DONT_REBOOT_ONLANG_CHANGED = false
+local DONT_REBOOT_ONLANG_CHANGED = true
 
 function S:SaveSystemLanguageOptionSetting()
   if self:CheckSettingIsChange() then

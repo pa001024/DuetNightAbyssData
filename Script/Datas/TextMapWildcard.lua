@@ -1525,6 +1525,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_RL_LevelLimit",
     WildcardClassification = "Story"
   },
+  UI_RandomBox_Num = {
+    TextMapId = "UI_RandomBox_Num",
+    WildcardClassification = "Story"
+  },
   UI_Rou_RoomCurrent = {
     TextMapId = "UI_Rou_RoomCurrent",
     WildcardClassification = "Story"

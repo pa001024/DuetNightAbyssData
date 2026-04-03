@@ -121,7 +121,7 @@ return {
   [306] = {
     area = "China",
     hostnum = 306,
-    ip = "10.18.18.91",
+    ip = "10.18.18.4",
     name = "QA服",
     port = 8000
   },
@@ -275,7 +275,7 @@ return {
   [1109] = {
     area = "China",
     hostnum = 1109,
-    ip = "10.18.200.71",
+    ip = "10.18.200.171",
     name = "分支2服",
     port = 8000
   },

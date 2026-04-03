@@ -12108,19 +12108,19 @@
     "talks": [
       {
         "id": 12048809,
-        "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
+        "content": "No problem, leave it to me! I've been itching to try~",
         "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
-        "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
+        "content": "But you know, {nickname}, you need to catch up on your Jishu knowledge when you get back. Hmm, where to start... maybe from—",
         "npc": 240026,
         "next": 12048811
       },
       {
         "id": 12048811,
-        "content": "哇啊啊，小仆从，苏乙身上又散发出那种不近人情的老师气场了！好吓人！",
+        "content": "Whoa! Little minion, she's giving off that scary teacher vibe again! So intimidating!",
         "npc": 200002,
         "next": 12048812
       }
@@ -12134,19 +12134,19 @@
     "talks": [
       {
         "id": 12048809,
-        "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
+        "content": "No problem, leave it to me! I've been itching to try~",
         "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
-        "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
+        "content": "But you know, {nickname}, you need to catch up on your Jishu knowledge when you get back. Hmm, where to start... maybe from—",
         "npc": 240026,
         "next": 12048811
       },
       {
         "id": 12048811,
-        "content": "哇啊啊，小仆从，苏乙身上又散发出那种不近人情的老师气场了！好吓人！",
+        "content": "Whoa! Little minion, she's giving off that scary teacher vibe again! So intimidating!",
         "npc": 200002,
         "next": 12048812
       }
@@ -12160,19 +12160,19 @@
     "talks": [
       {
         "id": 12048809,
-        "content": "没问题，包在我身上！本姑娘刚刚看你尝试，早就手痒了~",
+        "content": "No problem, leave it to me! I've been itching to try~",
         "npc": 240026,
         "next": 12048810
       },
       {
         "id": 12048810,
-        "content": "不过话说回来，{nickname}，你回去后可得好好从头补起机枢知识呢。让我想想，从哪里开始呢，不如就从……",
+        "content": "But you know, {nickname}, you need to catch up on your Jishu knowledge when you get back. Hmm, where to start... maybe from—",
         "npc": 240026,
         "next": 12048811
       },
       {
         "id": 12048811,
-        "content": "哇啊啊，小仆从，苏乙身上又散发出那种不近人情的老师气场了！好吓人！",
+        "content": "Whoa! Little minion, she's giving off that scary teacher vibe again! So intimidating!",
         "npc": 200002,
         "next": 12048812
       }
@@ -12773,7 +12773,7 @@
       },
       {
         "id": 51011009,
-        "content": "(Time to treat yourself. And a new {dress|outfit} feels like the perfect place to start. You point to a vibrant piece.)",
+        "content": "(Time to treat yourself. And a new outfit feels like the perfect place to start. You point to a vibrant piece.)",
         "next": 51011010
       },
       {
@@ -16767,7 +16767,7 @@
       },
       {
         "id": 51010501,
-        "content": "Travel permit check — oi, I'm talking to you! Got your travel permit on you?",
+        "content": "Travel permit check — oi, you there! Got your travel permit?",
         "npc": 700111,
         "options": [
           {
@@ -17495,7 +17495,7 @@
     "talks": [
       {
         "id": 51010801,
-        "content": "Good day, you look great with this flower... That kid would have said so, if she were still here.",
+        "content": "Oh, hello dear. That flower looks so lovely on you... My little girl would have said the same, if... well, if she were still with us.",
         "npc": 700203,
         "options": [
           {
@@ -29180,7 +29180,7 @@
     "talks": [
       {
         "id": 51156307,
-        "content": "我早跟你说了这街上有贼，之前有人看到了，一个小女孩，皮肤黑黢黢的！",
+        "content": "Told you — there are pickpockets about on this street. Someone saw a little girl earlier — face all smeared with grime.",
         "npc": 701116,
         "next": 51156301
       },
@@ -34372,7 +34372,7 @@
           },
           {
             "id": 51162410,
-            "content": "加油找吧！",
+            "content": "Well, good luck with the search!",
             "next": 51162411
           }
         ]
@@ -34573,7 +34573,7 @@
       },
       {
         "id": 51162605,
-        "content": "因为供丝不足，所以绣娘们也没法给外地供货，此趟入京，即是为了与城中成衣店商议取消订单。",
+        "content": "With no raw silk, the seamstresses can't supply the outside world. So here I am, cap in hand, trying to negotiate my way out of contracts with the city's tailors.",
         "npc": 701175
       },
       {

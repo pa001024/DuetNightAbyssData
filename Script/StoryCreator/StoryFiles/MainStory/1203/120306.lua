@@ -130,6 +130,12 @@ return {
             startPort = "Out",
             endQuest = "17638126691093436566",
             endPort = "Success"
+          },
+          {
+            startQuest = "17638126691093436568",
+            startPort = "Out",
+            endQuest = "17751159495548990348",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -280,6 +286,17 @@ return {
               bForceAsyncLoading = false,
               IsWhite = false
             }
+          },
+          ["17751159495548990348"] = {
+            key = "17751159495548990348",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1447.3785714285714, y = 127.2},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}
@@ -320,12 +337,6 @@ return {
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "17638126691113436594",
-            startPort = "Out",
-            endQuest = "17638126691113436591",
-            endPort = "Success"
-          },
           {
             startQuest = "17679440649279811468",
             startPort = "Out",
@@ -385,6 +396,12 @@ return {
             startPort = "Success",
             endQuest = "17737510830688243301",
             endPort = "In"
+          },
+          {
+            startQuest = "17638126691113436594",
+            startPort = "Out",
+            endQuest = "17638126691113436591",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -399,7 +416,7 @@ return {
             key = "17638126691113436591",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1805.987295825771, y = 286.51179673321235},
+            pos = {x = 1875.2143489658674, y = 297.45986436606256},
             propsData = {ModeType = 0}
           },
           ["17638126691113436592"] = {
@@ -420,7 +437,7 @@ return {
             key = "17638126691113436594",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1521.4923213251898, y = 288.88859612394197},
+            pos = {x = 1521.4923213251898, y = 290.1929439500289},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,

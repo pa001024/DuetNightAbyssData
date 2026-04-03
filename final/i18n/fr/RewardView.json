@@ -1213,6 +1213,31 @@
     ]
   },
   {
+    "id": 90013,
+    "child": [
+      {
+        "id": 216,
+        "t": "Resource",
+        "n": "Chant des Chasseurs de Phoxène"
+      },
+      {
+        "id": 101,
+        "t": "Resource",
+        "n": "Pièce"
+      },
+      {
+        "id": 102,
+        "t": "Resource",
+        "n": "Globule cramoisi"
+      },
+      {
+        "id": 20013,
+        "t": "Resource",
+        "n": "Souvenir des Lunariens"
+      }
+    ]
+  },
+  {
     "id": 90102,
     "child": [
       {
@@ -17812,7 +17837,7 @@
       {
         "id": 110017,
         "t": "Resource",
-        "n": "自选形象礼箱·不羁"
+        "n": "Coffret de sélection d’apparence – Indomptable"
       },
       {
         "id": 208,
@@ -17908,7 +17933,7 @@
       {
         "id": 30040,
         "t": "CharAccessory",
-        "n": "Lanterne nocturne – Caramel"
+        "n": "Lanterne nocturne – Jade noir"
       },
       {
         "id": 120002,
@@ -24068,7 +24093,7 @@
       {
         "id": 10091,
         "t": "CharAccessory",
-        "n": "Brûle-encens rituel – Doré"
+        "n": "Brûle-encens rituel – Gris plomb"
       }
     ]
   },

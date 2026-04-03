@@ -21,6 +21,8 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:PlayAnimation(self.Change_Normal)
   self:AddDispatcher(EventID.OnPlayShowDamageEffect, self, self.PlayHitAnim)
   self:AddDispatcher(EventID.OnSoloTreasureGetTicket, self, self.OnGetTicket)
+  self.New:SetVisibility(ESlateVisibility.HitTestInvisible)
+  self.Old:SetVisibility(ESlateVisibility.HitTestInvisible)
   AudioManager(self):PlayUISound(self, "event:/ui/activity/sdc_fengxiang_replace_exist_in", nil, nil)
   EventManager:FireEvent(EventID.ShowCountDownTips)
 end

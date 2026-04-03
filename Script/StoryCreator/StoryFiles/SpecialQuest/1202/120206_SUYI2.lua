@@ -218,7 +218,7 @@ return {
             key = "1772421530896793262",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3014.703388372893, y = 541.872236294837},
+            pos = {x = 3144.2488429183477, y = 541.872236294837},
             propsData = {}
           },
           ["1772421538696793360"] = {
@@ -402,7 +402,7 @@ return {
             name = "设置全局音效参数",
             pos = {x = 1158.2560939060938, y = -229.3034465534467},
             propsData = {
-              ParamName = "parameter:/story/story_1_3_final_disaste",
+              ParamName = "story_1_3_final_disaste",
               ParamValue = 1
             }
           },
@@ -420,10 +420,10 @@ return {
             key = "17748600401684234",
             type = "SetGlobalSoundParamNode",
             name = "设置全局音效参数",
-            pos = {x = 2814.330316793629, y = 527.1185825010898},
+            pos = {x = 2815.6939531572657, y = 527.1185825010898},
             propsData = {
-              ParamName = "parameter:/story/story_1_3_final_disaste",
-              ParamValue = 1
+              ParamName = "story_1_3_final_disaste",
+              ParamValue = 0
             }
           }
         },

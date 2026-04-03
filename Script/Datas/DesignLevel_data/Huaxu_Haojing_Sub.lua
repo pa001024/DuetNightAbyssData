@@ -536,11 +536,54 @@ return {
       ManualItemId = 243024,
       UnitType = "Mechanism",
       UnitId = 94001
+    },
+    ["243001"] = {
+      ManualItemId = 243001,
+      UnitType = "Mechanism",
+      UnitId = 11105
+    },
+    ["243002"] = {
+      ManualItemId = 243002,
+      UnitType = "Mechanism",
+      UnitId = 11105
+    },
+    ["243003"] = {
+      ManualItemId = 243003,
+      UnitType = "Mechanism",
+      UnitId = 11105
+    },
+    ["243004"] = {
+      ManualItemId = 243004,
+      UnitType = "Mechanism",
+      UnitId = 11105
+    },
+    ["243005"] = {
+      ManualItemId = 243005,
+      UnitType = "Mechanism",
+      UnitId = 11105
+    },
+    ["243006"] = {
+      ManualItemId = 243006,
+      UnitType = "Mechanism",
+      UnitId = 11105
+    },
+    ["243007"] = {
+      ManualItemId = 243007,
+      UnitType = "Mechanism",
+      UnitId = 11105
+    },
+    ["243008"] = {
+      ManualItemId = 243008,
+      UnitType = "Mechanism",
+      UnitId = 11105
+    },
+    ["243009"] = {
+      ManualItemId = 243009,
+      UnitType = "Mechanism",
+      UnitId = 11105
     }
   },
   Explore = {
-    ["7073026"] = {},
-    ["7073001"] = {},
     ["7073005"] = {
       AutoReset = 0,
       ["2430074"] = {
@@ -888,7 +931,9 @@ return {
         UnitId = 705066,
         RarelyId = 7073028
       }
-    }
+    },
+    ["7073001"] = {},
+    ["7073026"] = {}
   },
   RandomRule = {
     ["9050401"] = {RandomRuleId = 9050401},

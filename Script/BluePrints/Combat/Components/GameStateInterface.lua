@@ -599,7 +599,7 @@ function Component:InitFbdRule()
   end
   if Player then
     if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill then
-      Player:ForbidAllSkillsByBuff(true)
+      Player:ForbidAllSkills(true)
     end
     if FbdRule.NoMelee and 0 ~= FbdRule.NoMelee then
       Player:ForbidMeleeSkills(true)
@@ -626,7 +626,7 @@ function Component:ResetFbdRule()
   end
   if Player then
     if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill then
-      Player:ForbidAllSkillsByBuff(false)
+      Player:ForbidAllSkills(false)
     end
     if FbdRule.NoMelee and 0 ~= FbdRule.NoMelee then
       Player:ForbidMeleeSkills(false)

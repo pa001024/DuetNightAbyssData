@@ -673,7 +673,7 @@
   },
   {
     "id": 10091,
-    "name": "Brûle-encens rituel – Doré",
+    "name": "Brûle-encens rituel – Gris plomb",
     "desc": "Rendons-nous hommage aux cieux... ou aux mortels ?",
     "icon": "T_Fashion_Head54",
     "rarity": 3,
@@ -993,7 +993,7 @@
   },
   {
     "id": 13009,
-    "name": "Queue miaou courte  – Blanc ivoire",
+    "name": "Queue miaou courte – Blanc ivoire",
     "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
     "icon": "T_Fashion_Waist11",
     "rarity": 4,
@@ -1001,7 +1001,7 @@
   },
   {
     "id": 13010,
-    "name": "Queue miaou courte  – Jade noir",
+    "name": "Queue miaou courte – Jade noir",
     "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
     "icon": "T_Fashion_Waist11_02",
     "rarity": 4,
@@ -1009,7 +1009,7 @@
   },
   {
     "id": 13011,
-    "name": "Queue miaou courte  – Blanc sakura",
+    "name": "Queue miaou courte – Blanc sakura",
     "desc": "Vif, adorable, espiègle, splendide... Tous les mots du monde pâlissent face à l’irrésistible magie de cette queue féline.",
     "icon": "T_Fashion_Waist11_01",
     "rarity": 4,
@@ -1569,7 +1569,7 @@
   },
   {
     "id": 20054,
-    "name": "青羽护目·涅白",
+    "name": "Visière d’émeraude – Blanc ivoire",
     "desc": "Scanner. Analyser. Calculer.",
     "icon": "T_Fashion_Face23",
     "rarity": 5,
@@ -2081,7 +2081,7 @@
   },
   {
     "id": 30040,
-    "name": "Lanterne nocturne – Caramel",
+    "name": "Lanterne nocturne – Jade noir",
     "desc": "La longue nuit a toujours une fin. Puissent-elles éclairer votre chemin vers la maison.",
     "icon": "T_Fashion_Waist22_01",
     "rarity": 3,

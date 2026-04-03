@@ -102,6 +102,7 @@ function M:UpdateTopTabReddot()
   if not CommonChar then
     return
   end
+  self:RefreshLevelUpReddot()
   local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. self.Target.CharId
   local SkinLevelUpNode = ReddotManager.GetTreeNode(LeafNodeName)
   local SkinLevelUpCount = SkinLevelUpNode and SkinLevelUpNode.Count or 0
@@ -1569,9 +1570,6 @@ function M:RefreshLevelUpReddot()
   if self.Type ~= CommonConst.DataType.Char then
     return
   end
-  if not self.SkinMap then
-    return
-  end
   local CharId = self.Target.CharId
   local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
@@ -1598,14 +1596,28 @@ function M:RefreshLevelUpReddot()
       if IsShowReddot then
         IsShowTabReddot = true
       end
-      local CurContent = self.SkinMap[SkinId]
+      local CurContent = self.SkinMap and self.SkinMap[SkinId]
       if CurContent and CurContent.Widget then
-        rawset(CurContent, "Upgradeable", not IsShowReddot)
-        CurContent.Widget:SetReddot(IsShowReddot and UIConst.RedDotType.CommonRedDot)
+        local IsReddotVisible = CurContent.Widget.Reddot:IsVisible()
+        if IsShowReddot then
+          if not IsReddotVisible then
+            rawset(CurContent, "Upgradeable", false)
+            CurContent.Widget:SetReddot(UIConst.RedDotType.CommonRedDot)
+          end
+        elseif IsReddotVisible then
+          rawset(CurContent, "Upgradeable", true)
+          CurContent.Widget:SetReddot()
+        end
       end
-      self["WBP_Armory_Skin_LevelUp_" .. NewLevel]:SetReddotState(IsShowReddot)
+      local NewLevelWidget = self["WBP_Armory_Skin_LevelUp_" .. NewLevel]
+      if NewLevelWidget then
+        NewLevelWidget:SetReddotState(IsShowReddot)
+      end
       if CurLevel ~= NewLevel then
-        self["WBP_Armory_Skin_LevelUp_" .. CurLevel]:SetReddotState(false)
+        local CurLevelWidget = self["WBP_Armory_Skin_LevelUp_" .. CurLevel]
+        if CurLevelWidget then
+          CurLevelWidget:SetReddotState(false)
+        end
       end
       if NewLevel == self.SelectedSkinLevel then
         self:OnLevelUpWidgetClicked(NewLevel, true)
@@ -1615,9 +1627,9 @@ function M:RefreshLevelUpReddot()
       CacheDetail[SkinId] = SkinData.Level
     end
   end
-  local SkinLevelUpNode = ReddotManager.GetTreeNode(NodeName)
-  local SkinLevelUpCount = SkinLevelUpNode and SkinLevelUpNode.Count or 0
   if IsShowTabReddot then
+    local SkinLevelUpNode = ReddotManager.GetTreeNode(NodeName)
+    local SkinLevelUpCount = SkinLevelUpNode and SkinLevelUpNode.Count or 0
     if 0 == SkinLevelUpCount then
       ReddotManager.IncreaseLeafNodeCount(NodeName)
     end

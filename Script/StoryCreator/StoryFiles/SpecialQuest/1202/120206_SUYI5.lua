@@ -482,7 +482,7 @@ return {
             name = "设置全局音效参数",
             pos = {x = 808.7447014734269, y = -332.93000100249725},
             propsData = {
-              ParamName = "parameter:/story/story_1_3_final_disaste",
+              ParamName = "story_1_3_final_disaste",
               ParamValue = 1
             }
           },
@@ -500,9 +500,9 @@ return {
             key = "17748603231303842799",
             type = "SetGlobalSoundParamNode",
             name = "设置全局音效参数",
-            pos = {x = 2282.9773579473886, y = 287.53767697170247},
+            pos = {x = 2352.522812492843, y = 167.53767697170247},
             propsData = {
-              ParamName = "parameter:/story/story_1_3_final_disaste",
+              ParamName = "story_1_3_final_disaste",
               ParamValue = 0
             }
           }

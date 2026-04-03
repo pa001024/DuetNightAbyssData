@@ -45765,6 +45765,16 @@ return ReadOnly("SkillEffects", {
     },
     TaskId = 8522033
   },
+  [8522034] = {
+    TargetFilter = "Target",
+    TaskEffects = {
+      [1] = T.RT_1119,
+      [2] = T.RT_1314,
+      [3] = {BuffId = 852201, Function = "RemoveBuff"},
+      [4] = T.RT_1310
+    },
+    TaskId = 8522034
+  },
   [8523001] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossJishi_Attack01",

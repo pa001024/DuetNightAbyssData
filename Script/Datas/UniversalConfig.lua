@@ -1822,7 +1822,6 @@ return ReadOnly("UniversalConfig", {
     DisableBattleWheel = false,
     FailBlackScreen = T.RT_2,
     FailBlackScreenText = "UI_Quest_QuestFail",
-    HideBattlePet = true,
     HideBattleWheel = false,
     IfChangeESC = 1,
     IfCloseRegionOnline = true,
@@ -2018,7 +2017,6 @@ return ReadOnly("UniversalConfig", {
   [12020406] = {
     FailBlackScreen = T.RT_2,
     FailBlackScreenText = "UI_Quest_QuestFail",
-    HideBattlePet = true,
     IfChangeESC = 1,
     IfCloseRegionOnline = true,
     IfDestoryPhantom = 1,
@@ -2270,6 +2268,7 @@ return ReadOnly("UniversalConfig", {
     IfStartStoryMode = 1,
     IfWaitDead = 1,
     RegionDataType = T.RT_3,
+    SuccessBlackScreen = T.RT_4,
     UniversalConfigId = 12020615
   },
   [12020620] = {

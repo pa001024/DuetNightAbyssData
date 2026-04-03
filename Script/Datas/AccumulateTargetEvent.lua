@@ -1,11 +1,3 @@
-local T = {}
-T.RT_1 = {
-  60,
-  60,
-  60,
-  120,
-  180
-}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -18,7 +10,13 @@ return ReadOnly("AccumulateTargetEvent", {
     JumpUIId = 70,
     JumpUnlockCondition = 112001,
     JumpUnlockTips = "Event_JumpUnlock_112001",
-    MaxProgressNum = T.RT_1,
+    MaxProgressNum = {
+      60,
+      60,
+      60,
+      120,
+      180
+    },
     MaxProgressType = "Day",
     QuestPhaseId = 1201,
     TargetDes = "Event_TargetDes_112001"
@@ -28,7 +26,16 @@ return ReadOnly("AccumulateTargetEvent", {
     JumpUIId = 70,
     JumpUnlockCondition = 112001,
     JumpUnlockTips = "Event_JumpUnlock_112001",
-    MaxProgressNum = T.RT_1,
+    MaxProgressNum = {
+      30,
+      30,
+      30,
+      30,
+      30,
+      60,
+      120,
+      180
+    },
     MaxProgressType = "Day",
     QuestPhaseId = 1202,
     TargetDes = "Event_TargetDes_112001"

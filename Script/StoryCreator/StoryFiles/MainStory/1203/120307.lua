@@ -2038,6 +2038,24 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "17722608748192006",
+            startPort = "Out",
+            endQuest = "177450704597419089309",
+            endPort = "In"
+          },
+          {
+            startQuest = "177450704597419089309",
+            startPort = "Out",
+            endQuest = "17747667051021744",
+            endPort = "In"
+          },
+          {
+            startQuest = "17747667051021744",
+            startPort = "Out",
+            endQuest = "177259342625113271551",
+            endPort = "In"
+          },
+          {
             startQuest = "17722608748192001",
             startPort = "QuestStart",
             endQuest = "177450700037119088189",
@@ -2047,24 +2065,6 @@ return {
             startQuest = "17722608748192011",
             startPort = "Out",
             endQuest = "177450703157419088850",
-            endPort = "In"
-          },
-          {
-            startQuest = "177450704597419089309",
-            startPort = "Out",
-            endQuest = "177259342625113271551",
-            endPort = "In"
-          },
-          {
-            startQuest = "17722608748192006",
-            startPort = "Out",
-            endQuest = "17747667051021744",
-            endPort = "In"
-          },
-          {
-            startQuest = "17747667051021744",
-            startPort = "Out",
-            endQuest = "177450704597419089309",
             endPort = "In"
           }
         },
@@ -2080,7 +2080,7 @@ return {
             key = "17722608748192002",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2502.8913886369846, y = 300.13120596175463},
+            pos = {x = 2287.1221578677537, y = 273.5927444232931},
             propsData = {ModeType = 0}
           },
           ["17722608748192003"] = {
@@ -2094,7 +2094,7 @@ return {
             key = "17722608748192006",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1237.6244670362316, y = 246.31070082308463},
+            pos = {x = 1237.6244670362316, y = 243.5834280958119},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -2156,7 +2156,7 @@ return {
             key = "17722608748192011",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 959.9202319419709, y = 248.34492138296483},
+            pos = {x = 961.2838683056073, y = 244.25401229205573},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -2212,14 +2212,14 @@ return {
             key = "177259342625113271551",
             type = "OpenChapterUINode",
             name = "打开章节开始UI",
-            pos = {x = 2032.5567512466891, y = 288.0795585219733},
+            pos = {x = 2014.0952127851506, y = 275.3872508296656},
             propsData = {ChapterUIId = 120300, UIType = "End"}
           },
           ["177450700037119088189"] = {
             key = "177450700037119088189",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 958.5749835819491, y = 441.33600171758053},
+            pos = {x = 951.0225360295016, y = 424.6576800392588},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -2236,7 +2236,7 @@ return {
             key = "177450703157419088850",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1241.5703013077018, y = 440.716132456407},
+            pos = {x = 1234.1227488601494, y = 425.611237351512},
             propsData = {
               SoundStateType = 0,
               SoundPriority = 0,
@@ -2253,7 +2253,7 @@ return {
             key = "177450704597419089309",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1769.5567266470682, y = 287.8654537233752},
+            pos = {x = 1492.6336497239913, y = 259.01929987722133},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,
@@ -2264,7 +2264,7 @@ return {
             key = "17747667051021744",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1505.1764705882351, y = 255.17647058823525},
+            pos = {x = 1740.5610859728506, y = 256.3303167420814},
             propsData = {WaitTime = 1}
           }
         },

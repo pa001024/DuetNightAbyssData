@@ -1602,7 +1602,7 @@ function WBP_Battle_C:DealWithServerDataForManualAdditionNode(PlayerAvatar, bIsI
     for _, ParentName in ipairs(AllManualAddWidget) do
       if nil ~= WidgetPlanData[ParentName] then
         if not WidgetPlanData[ParentName].bHasAddInHUDSetting then
-          WidgetPlanData[ParentName].bHasAddInHUDSetting = true
+          WidgetPlanData[ParentName].bHasAddInHUDSetting = bShow
           IsDataNeedSendToServer = true
         end
       else
@@ -1614,7 +1614,7 @@ function WBP_Battle_C:DealWithServerDataForManualAdditionNode(PlayerAvatar, bIsI
             PosY = DesignManualNodeConfigData.DefaultDesignPosition.Y,
             ScaleX = DesignManualNodeConfigData.DefaultDesignScale,
             ScaleY = DesignManualNodeConfigData.DefaultDesignScale,
-            bHasAddInHUDSetting = true
+            bHasAddInHUDSetting = bShow
           }
           IsDataNeedSendToServer = true
         end

@@ -22,21 +22,21 @@ function M:OnAddedToFocusPath(InFocusEvent)
   if AnnounceController:IsGamepad() then
     self.Btn_Area:SetCheckedNoNotify(true)
     self:OnClick()
-    if self.Content.Conf.UIStyle == AnnounceCommon.ContentUIStyle.Default and self.Content.bWebFocusable then
-      local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
-      GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
-    end
-    if self.Content.Conf.UIStyle == AnnounceCommon.ContentUIStyle.ImageOnly and self.Content.Conf.HasLinkImage then
-      local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
-      GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
-    end
+    local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
+    GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   end
 end
 
 function M:OnRemovedFromFocusPath(InFocusEvent)
-  if AnnounceController:IsGamepad() and self.Content == self.Parent.CurContent and self.Content.Conf.UIStyle == AnnounceCommon.ContentUIStyle.Default and self.Content.bWebFocusable then
-    local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
-    GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+  if AnnounceController:IsGamepad() and self.Content == self.Parent.CurContent then
+    if self.Content.Conf.UIStyle == AnnounceCommon.ContentUIStyle.Default then
+      local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
+      GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+    end
+    if self.Content.Conf.UIStyle == AnnounceCommon.ContentUIStyle.ImageOnly and not self.Content.Conf.HasLinkImage then
+      local GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem(self)
+      GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+    end
   end
 end
 

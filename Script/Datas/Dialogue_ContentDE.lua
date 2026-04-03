@@ -122609,6 +122609,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
           DisableMouth = 1,
           GUID = "1E31881C",
           NextDialogue = 12061015,
+          SnapShot = "HEART",
           SpeakNpcId = 100001,
           VoiceName = "voice/$Locale$/story/1206/120610/1E31881C"
         },
@@ -126596,7 +126597,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         [12062650] = {
           Content = "我是不会放着你不管的。你也知道这一点。",
           DialogueId = 12062650,
-          GUID = "1E32949C",
+          GUID = "1E3292B6",
           SpeakNpcId = 100001
         },
         [12062701] = {
@@ -138633,6 +138634,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
         },
         [50107401] = {
           Content = "父亲向来放不下娘亲，想必在天上也是不愿看见娘亲落泪的。",
+          ContentDE = "Ma ... Pa hat dich so sehr geliebt. Wo immer er jetzt auch ist, er würde dich nicht weinend sehen wollen.",
           DialogueId = 50107401,
           GUID = "7D70497A",
           SpeakNpcId = 701148
@@ -155932,6 +155934,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009301] = {
           Content = "这次就选粉红色的花吧！",
+          ContentDE = "Diesmal nehmen wir die pinken Blumen!",
           DialogueId = 51009301,
           GUID = "7FB24972",
           NextDialogue = 51009302,
@@ -155939,12 +155942,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009302] = {
           Content = "（女子面带微笑地拿起她精心挑选的粉色花朵。抬起头来时，她注意到了你。）",
+          ContentDE = "(Die Frau lächelt und nimmt die sorgfältig ausgesuchten pinken Blumen. Als sie aufblickt, bemerkt sie dich.)",
           DialogueId = 51009302,
           GUID = "7FB2499C",
           NextDialogue = 51009303
         },
         [51009303] = {
           Content = "你好呀，你也是来买花的吗？",
+          ContentDE = "Hallo! Bist du auch hier, um Blumen zu kaufen?",
           DialogueId = 51009303,
           GUID = "7FB249C6",
           NextDialogue = 51009304,
@@ -155952,6 +155957,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009304] = {
           Content = "要不要看看这一种，粉红色的花可不多见喔。",
+          ContentDE = "Willst du die hier sehen? Pinke Blumen sind ziemlich selten.",
           DialogueId = 51009304,
           GUID = "7FB249F0",
           NextOptions = {
@@ -155963,6 +155969,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009305] = {
           Content = "可以送我吗？",
+          ContentDE = "Kannst du sie mir schenken?",
           DialogueId = 51009305,
           GUID = "7FB24A1A",
           ImprPlusId = 1001,
@@ -155970,6 +155977,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009306] = {
           Content = "呵呵，当然可以！",
+          ContentDE = "Hehe, natürlich!",
           DialogueId = 51009306,
           GUID = "7FB24A44",
           NextDialogue = 51009307,
@@ -155977,12 +155985,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009307] = {
           Content = "（女子伸出手，轻巧地从货架上多取了几支花，一并结账后递给了你。）",
+          ContentDE = "(Sie greift locker noch ein paar Blumen vom Regal, bezahlt alles zusammen und drückt sie dir in die Hand.)",
           DialogueId = 51009307,
           GUID = "7FB24A6E",
           NextDialogue = 51009308
         },
         [51009308] = {
           Content = "来，收好了。",
+          ContentDE = "Hier, gut festhalten.",
           DialogueId = 51009308,
           GUID = "7FB24A98",
           NextDialogue = 51009309,
@@ -155990,6 +156000,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009309] = {
           Content = "不用谢我，你就当作是沾了他的光吧。",
+          ContentDE = "Du musst mir nicht danken. Sieh es einfach so, dass du an seinem Glück teilhast.",
           DialogueId = 51009309,
           GUID = "7FB24AC2",
           NextDialogue = 51009317,
@@ -155997,6 +156008,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009310] = {
           Content = "谢谢你，我也觉得很好看。",
+          ContentDE = "Danke. Ich finde sie auch wunderschön.",
           DialogueId = 51009310,
           GUID = "7FB24AEC",
           ImprPlusId = 1004,
@@ -156004,18 +156016,21 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009311] = {
           Content = "如果你喜欢的话，我也可以送给你哦。",
+          ContentDE = "Wenn du willst, kann ich dir auch welche schenken.",
           DialogueId = 51009311,
           GUID = "7FB24B16",
           NextDialogue = 51009312
         },
         [51009312] = {
           Content = "他一定也会很乐意的。",
+          ContentDE = "Er würde sich bestimmt auch freuen.",
           DialogueId = 51009312,
           GUID = "7FB24B40",
           NextDialogue = 51009317
         },
         [51009313] = {
           Content = "哦不，我讨厌粉红色！",
+          ContentDE = "Oh nein, ich hasse Pink!",
           DialogueId = 51009313,
           GUID = "7FB24B6A",
           ImprPlusId = 1005,
@@ -156023,6 +156038,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009314] = {
           Content = "哎呀，那真是抱歉了。",
+          ContentDE = "Oh je, das tut mir leid.",
           DialogueId = 51009314,
           GUID = "7FB24B94",
           NextDialogue = 51009315,
@@ -156030,6 +156046,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009315] = {
           Content = "也对，不是每个人都会喜欢粉红色的吧……",
+          ContentDE = "Stimmt schon, nicht jeder mag Pink ...",
           DialogueId = 51009315,
           GUID = "7FB24BBE",
           NextDialogue = 51009316,
@@ -156037,6 +156054,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009316] = {
           Content = "这么说来，或许他也不喜欢……不过没关系啦！就当做他喜欢好了。",
+          ContentDE = "Wenn ich so drüber nachdenke ... vielleicht mag er’s auch nicht ... Aber egal, dann tun wir einfach so, als würde er’s mögen.",
           DialogueId = 51009316,
           GUID = "7FB24BE8",
           NextDialogue = 51009317,
@@ -156044,6 +156062,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009317] = {
           Content = "这花是用来送人的吗？",
+          ContentDE = "Sind die Blumen für jemanden?",
           DialogueId = 51009317,
           GUID = "7FB24C12",
           NextDialogue = 51009318,
@@ -156051,6 +156070,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009318] = {
           Content = "是呀。我有一位和你一样头上长着角的精灵朋友，这花就是要送给他的。",
+          ContentDE = "Ja. Ich habe einen Elfenfreund, genau wie du mit Hörnern auf dem Kopf. Die sind für ihn.",
           DialogueId = 51009318,
           GUID = "7FB24C3C",
           NextOptions = {
@@ -156061,12 +156081,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009319] = {
           Content = "“精灵？”",
+          ContentDE = "Elf?",
           DialogueId = 51009319,
           GUID = "7FB24C66",
           NextDialogue = 51009320
         },
         [51009320] = {
           Content = "呵呵，那是他的说法。",
+          ContentDE = "Hehe, so nennt er sich selbst.",
           DialogueId = 51009320,
           GUID = "7FB24C90",
           NextDialogue = 51009323,
@@ -156074,12 +156096,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009321] = {
           Content = "我是卡戎。",
+          ContentDE = "Ich bin ein Charon.",
           DialogueId = 51009321,
           GUID = "7FB24CBA",
           NextDialogue = 51009322
         },
         [51009322] = {
           Content = "嗯，“精灵”是他的说法。",
+          ContentDE = "Ja ... „Elf“ ist sein Wort dafür.",
           DialogueId = 51009322,
           GUID = "7FB24CE4",
           NextDialogue = 51009323,
@@ -156087,6 +156111,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009323] = {
           Content = "说起来，外面起风了吗？",
+          ContentDE = "Sag mal, weht draußen Wind?",
           DialogueId = 51009323,
           GUID = "7FB24D0E",
           NextOptions = {
@@ -156098,12 +156123,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009324] = {
           Content = "我没注意。",
+          ContentDE = "Keine Ahnung.",
           DialogueId = 51009324,
           GUID = "7FB24D38",
           NextDialogue = 51009325
         },
         [51009325] = {
           Content = "这样啊……没关系，我等会儿自己出去确认一下。",
+          ContentDE = "Ach so ... macht nichts. Ich geh gleich selbst raus und schau nach.",
           DialogueId = 51009325,
           GUID = "7FB24D62",
           NextDialogue = 51009330,
@@ -156111,12 +156138,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009326] = {
           Content = "正在刮大风。",
+          ContentDE = "Es stürmt richtig.",
           DialogueId = 51009326,
           GUID = "7FB24D8C",
           NextDialogue = 51009327
         },
         [51009327] = {
           Content = "那就太好了。",
+          ContentDE = "Dann ist das perfekt.",
           DialogueId = 51009327,
           GUID = "7FB24DB6",
           NextDialogue = 51009330,
@@ -156124,12 +156153,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009328] = {
           Content = "没有风我也可以制造风。",
+          ContentDE = "Wenn kein Wind weht, kann ich auch selbst Wind machen.",
           DialogueId = 51009328,
           GUID = "7FB24DE0",
           NextDialogue = 51009329
         },
         [51009329] = {
           Content = "是吗，原来你这么厉害呀！谢谢你的好意。",
+          ContentDE = "Ach ja? Du bist ja richtig beeindruckend! Danke dir.",
           DialogueId = 51009329,
           GUID = "7FB24E0A",
           NextDialogue = 51009330,
@@ -156137,6 +156168,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009330] = {
           Content = "我得等到起风的时候，才能把花送给他呢。",
+          ContentDE = "Ich muss warten, bis Wind aufkommt. Erst dann kann ich ihm die Blumen bringen.",
           DialogueId = 51009330,
           GUID = "7FB24E34",
           NextOptions = {
@@ -156148,12 +156180,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009331] = {
           Content = "为什么一定要等起风？",
+          ContentDE = "Warum musst du unbedingt auf Wind warten?",
           DialogueId = 51009331,
           GUID = "7FB24E5E",
           NextDialogue = 51009332
         },
         [51009332] = {
           Content = "因为起风的时候，花才会往空中飘呀。",
+          ContentDE = "Weil die Blumen nur bei Wind in den Himmel steigen.",
           DialogueId = 51009332,
           GUID = "7FB24E88",
           NextDialogue = 51009337,
@@ -156161,12 +156195,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009333] = {
           Content = "莫非你的朋友是风精灵吗？",
+          ContentDE = "Ist dein Freund etwa ein Windelf?",
           DialogueId = 51009333,
           GUID = "7FB24EB2",
           NextDialogue = 51009334
         },
         [51009334] = {
           Content = "呵呵，很有意思的想法！说不定真的是喔。",
+          ContentDE = "Hehe, ein interessanter Gedanke! Vielleicht ist das sogar wahr.",
           DialogueId = 51009334,
           GUID = "7FB24EDC",
           NextDialogue = 51009337,
@@ -156174,12 +156210,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009335] = {
           Content = "这是某种特殊的仪式吗？",
+          ContentDE = "Ist das so eine Art Ritual?",
           DialogueId = 51009335,
           GUID = "7FB24F06",
           NextDialogue = 51009336
         },
         [51009336] = {
           Content = "嗯……是传递思念的仪式。",
+          ContentDE = "Mmh ... ein Ritual, um Sehnsucht zu überbringen.",
           DialogueId = 51009336,
           GUID = "7FB24F30",
           NextDialogue = 51009337,
@@ -156187,6 +156225,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009337] = {
           Content = "我的那位朋友，在几年前就去天上啦。",
+          ContentDE = "Mein Freund ist vor ein paar Jahren schon in den Himmel gegangen.",
           DialogueId = 51009337,
           GUID = "7FB24F5A",
           NextDialogue = 51009338,
@@ -156194,6 +156233,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009338] = {
           Content = "今天是每年一次的纪念日。",
+          ContentDE = "Heute ist sein jährlicher Gedenktag.",
           DialogueId = 51009338,
           GUID = "7FB24F84",
           NextOptions = {
@@ -156204,6 +156244,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009339] = {
           Content = "（提醒她卡戎人的习俗。）",
+          ContentDE = "(Erinnere sie an die Bräuche der Charons.)",
           DialogueId = 51009339,
           FailDialogue = 51009340,
           GUID = "7FB24FAE",
@@ -156212,11 +156253,13 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009340] = {
           Content = "（你一时记不起习俗的细节。）",
+          ContentDE = "(Du erinnerst dich einen Moment lang nicht an die Details der Bräuche.)",
           DialogueId = 51009340,
           GUID = "7FB24FD8"
         },
         [51009341] = {
           Content = "在卡戎人的观念中，雾海才是灵魂的归去之地。如果要纪念他，将花送往水中更加合理。",
+          ContentDE = "Dem Glauben der Charons zufolge ist das Nebelmeer der Ort, an den die Seelen zurückkehren. Wenn man ihn also ehren will, wäre es naheliegender, die Blumen dem Wasser zu übergeben.",
           DialogueId = 51009341,
           GUID = "7FB25002",
           NextDialogue = 51009342,
@@ -156224,6 +156267,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009342] = {
           Content = "嗯……我知道。但是，他不一样。",
+          ContentDE = "Hm ... das weiß ich. Aber er war anders.",
           DialogueId = 51009342,
           GUID = "7FB2502C",
           NextDialogue = 51009343,
@@ -156231,12 +156275,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009343] = {
           Content = "（女子沉默了片刻，看向窗外，眼神中流露着温柔的怀念。）",
+          ContentDE = "(Die Frau schweigt einen Moment und blickt aus dem Fenster. In ihren Augen liegt eine sanfte, warme Erinnerung.)",
           DialogueId = 51009343,
           GUID = "7FB25056",
           NextDialogue = 51009344
         },
         [51009344] = {
           Content = "我第一次遇见他是在城外。我们年纪相仿，性格也很像，所以很快就成了好朋友。",
+          ContentDE = "Zum ersten Mal begegnet bin ich ihm in der Außenstadt. Wir waren etwa im gleichen Alter und vom Wesen her ähnlich, deshalb wurden wir sehr schnell Freunde.",
           DialogueId = 51009344,
           GUID = "7FB25080",
           NextDialogue = 51009345,
@@ -156244,6 +156290,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009345] = {
           Content = "他对我说自己从是天上来的“精灵”……呵呵，其实我早知道他是卡戎人，但每次看到他那么努力地圆谎，实在是舍不得戳穿。",
+          ContentDE = "Er sagte mir, er sei ein Elf vom Himmel ... hehe. Eigentlich wusste ich längst, dass er ein Charon war, aber jedes Mal, wenn ich sah, wie sehr er sich abmühte, seine Lüge zusammenzuhalten, konnte ich es einfach nicht übers Herz bringen, ihn aufzufliegen zu lassen.",
           DialogueId = 51009345,
           GUID = "7FB250AA",
           NextDialogue = 51009346,
@@ -156251,6 +156298,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009346] = {
           Content = "而且，他确实就像故事里的精灵一样，知道许多我不知道的事，永远有讲不完的新奇见闻。",
+          ContentDE = "Und ehrlich, er war wirklich wie ein Elf aus den Geschichten. Er wusste so vieles, was ich nicht wusste, und er hatte immer neue, unglaubliche Dinge zu erzählen.",
           DialogueId = 51009346,
           GUID = "7FB250D4",
           NextOptions = {
@@ -156261,12 +156309,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009347] = {
           Content = "听起来是个很棒的朋友。",
+          ContentDE = "Klingt nach einem großartigen Freund.",
           DialogueId = 51009347,
           GUID = "7FB250FE",
           NextDialogue = 51009348
         },
         [51009348] = {
           Content = "嗯！他是最棒的朋友。",
+          ContentDE = "Genau! Er war der beste Freund überhaupt.",
           DialogueId = 51009348,
           GUID = "7FB25128",
           NextDialogue = 51009351,
@@ -156274,12 +156324,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009349] = {
           Content = "所以他从小到大一直在扮演精灵吗？",
+          ContentDE = "Also hat er von klein auf die ganze Zeit Elf gespielt?",
           DialogueId = 51009349,
           GUID = "7FB25152",
           NextDialogue = 51009350
         },
         [51009350] = {
           Content = "呵呵，听起来有点幼稚，对吧？",
+          ContentDE = "Hehe ... klingt ein bisschen kindisch, oder?",
           DialogueId = 51009350,
           GUID = "7FB2517C",
           NextDialogue = 51009351,
@@ -156287,6 +156339,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009351] = {
           Content = "我心里一直都有些苦恼——等到我们都长大，过了能理所当然地相信童话的年纪以后，要怎么开口说破这件事？",
+          ContentDE = "Ich hab mir oft den Kopf zerbrochen: Wenn wir erst mal groß sind und in dem Alter, in dem man Märchen nicht mehr ganz selbstverständlich glaubt, wie spricht man so etwas dann an?",
           DialogueId = 51009351,
           GUID = "7FB251A6",
           NextDialogue = 51009352,
@@ -156294,6 +156347,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009352] = {
           Content = "无论是我先开口还是他先开口，想象一下都很尴尬呀……",
+          ContentDE = "Egal ob ich es zuerst gesagt hätte oder er ... allein die Vorstellung ist schon peinlich ...",
           DialogueId = 51009352,
           GUID = "7FB251D0",
           NextDialogue = 51009353,
@@ -156301,6 +156355,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009353] = {
           Content = "但最后我们并没有走到那个时间点。他在成年之前便离开了。",
+          ContentDE = "Aber am Ende sind wir nie bis zu diesem Punkt gekommen. Er ist gegangen, bevor er erwachsen wurde.",
           DialogueId = 51009353,
           GUID = "7FB251FA",
           NextDialogue = 51009354,
@@ -156308,6 +156363,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009354] = {
           Content = "你说，他会不会是想到了这一点，才故意选在那个时候离开的？呵呵，真是个温柔的人啊……",
+          ContentDE = "Meinst du, er hat genau daran gedacht ... und ist deshalb absichtlich zu diesem Zeitpunkt gegangen? Hehe, was für ein sanftmutiger Mensch ...",
           DialogueId = 51009354,
           GUID = "7FB25224",
           NextDialogue = 51009355,
@@ -156315,6 +156371,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009355] = {
           Content = "（女子抚摸着柔软的花瓣，轻轻垂下了眼眸。你分辨不出她脸上的情绪。）",
+          ContentDE = "(Die Frau streicht über die weichen Blütenblätter und senkt leicht den Blick. Du kannst ihren Gesichtsausdruck nicht genau lesen.)",
           DialogueId = 51009355,
           GUID = "7FB2524E",
           NextOptions = {
@@ -156325,6 +156382,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009356] = {
           Content = "抱歉，请节哀……",
+          ContentDE = "Mein Beileid.",
           DialogueId = 51009356,
           GUID = "7FB25278",
           ImprPlusId = 1002,
@@ -156332,6 +156390,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009357] = {
           Content = "没关系，已经过去很多年啦。",
+          ContentDE = "Schon gut. Es ist viele Jahre her.",
           DialogueId = 51009357,
           GUID = "7FB252A2",
           NextDialogue = 51009362,
@@ -156339,6 +156398,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009358] = {
           Content = "你们都是非常温柔的人。",
+          ContentDE = "Ihr wart beide sehr sanftmütige Menschen.",
           DialogueId = 51009358,
           GUID = "7FB252CC",
           ImprPlusId = 1004,
@@ -156346,6 +156406,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009359] = {
           Content = "呵呵，谢谢你。",
+          ContentDE = "Ah ... danke dir.",
           DialogueId = 51009359,
           GUID = "7FB252F6",
           NextDialogue = 51009362,
@@ -156361,6 +156422,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
       return {
         [51009360] = {
           Content = "成年这个时间点……难道说，他是出现了秽蚀的征兆？",
+          ContentDE = "Kurz vor dem Erwachsenwerden ... meinst du, er hatte schon Anzeichen der Verderbnis gezeigt?",
           DialogueId = 51009360,
           GUID = "7FB25320",
           ImprPlusId = 1003,
@@ -156368,6 +156430,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009361] = {
           Content = "嗯，我也这么想。毕竟他离开的时候，刚好是快满十八岁。",
+          ContentDE = "Ja, das denke ich auch. Als er ging, war er fast achtzehn.",
           DialogueId = 51009361,
           GUID = "7FB2534A",
           NextDialogue = 51009362,
@@ -156375,6 +156438,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009362] = {
           Content = "他早就预料到了自己的结局……最后见面的那次，他对我说，自己将要回到天上的故乡，从今往后不能再来找我。",
+          ContentDE = "Er hat sein Ende wohl längst kommen sehen ... Beim letzten Treffen sagte er, er müsse in seine Heimat am Himmel zurückkehren und könne mich von nun an nicht mehr besuchen.",
           DialogueId = 51009362,
           GUID = "7FB25374",
           NextDialogue = 51009363,
@@ -156382,6 +156446,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009363] = {
           Content = "那是他撒谎撒得最拙劣的一次……明明眼泪已经在眼眶里打转了，还拼命挤出一副微笑的表情，用愉快的语调对我说——",
+          ContentDE = "Das war seine schlechteste Lüge überhaupt ... Die Tränen standen ihm schon in den Augen, und trotzdem hat er sich zu einem Lächeln gezwungen und mit viel zu fröhlicher Stimme gesagt ...",
           DialogueId = 51009363,
           GUID = "7FB2539E",
           NextDialogue = 51009364,
@@ -156389,6 +156454,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009364] = {
           Content = "“请你不要感到难过。虽然我不能再来见你，但我会在云端之上一直、一直注视着你……”",
+          ContentDE = "„Sei nicht traurig. Auch wenn ich dich nicht mehr besuchen kann, werde ich dich von hoch oben in den Wolken immer, immer im Blick behalten ...",
           DialogueId = 51009364,
           GUID = "7FB253C8",
           NextDialogue = 51009365,
@@ -156396,6 +156462,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009365] = {
           Content = "“无论何时，只要你抬头望向天空，你的思念就能够随风抵达我的身边。”",
+          ContentDE = "Wann immer du zum Himmel aufblickst, wird deine Sehnsucht mit dem Wind bis zu mir gelangen.“",
           DialogueId = 51009365,
           GUID = "7FB253F2",
           NextDialogue = 51009366,
@@ -156403,12 +156470,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009366] = {
           Content = "（说到这里，女子露出了微笑。不知是否是错觉，她的眼中隐约闪过了一丝光亮——那究竟是泪光，还是从玻璃窗中洒下的阳光呢？）",
+          ContentDE = "(Als sie das sagt, lächelt die Frau. Vielleicht täuschst du dich, aber in ihren Augen blitzt etwas auf – ist es Tränenlicht, oder Sonnenlicht, das durch das Fensterglas fällt?)",
           DialogueId = 51009366,
           GUID = "7FB2541C",
           NextDialogue = 51009367
         },
         [51009367] = {
           Content = "所以，你才会把花撒向天空……？",
+          ContentDE = "Deshalb streust du die Blumen in den Himmel?",
           DialogueId = 51009367,
           GUID = "7FB25446",
           NextDialogue = 51009368,
@@ -156416,6 +156485,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009368] = {
           Content = "嗯。既然那是他想要告诉我的故事，那么我也愿意相信，他的归处不是雾海，而是辽阔的蓝天。",
+          ContentDE = "Ja. Wenn das die Geschichte ist, die er mir erzählen wollte, dann will ich auch daran glauben: Dass sein Ziel nicht das Nebelmeer ist, sondern der weite, blaue Himmel.",
           DialogueId = 51009368,
           GUID = "7FB25470",
           NextDialogue = 51009369,
@@ -156423,6 +156493,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009369] = {
           Content = "只要将花瓣撒向天空，他就能感受到我的思念。",
+          ContentDE = "Wenn ich die Blütenblätter in den Himmel streue, kann er meine Sehnsucht spüren.",
           DialogueId = 51009369,
           GUID = "7FB2549A",
           NextOptions = {
@@ -156433,18 +156504,21 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009370] = {
           Content = "如果他能收到你的花就好了。",
+          ContentDE = "Ich hoffe, er bekommt deine Blumen.",
           DialogueId = 51009370,
           GUID = "7FB254C4",
           NextDialogue = 51009372
         },
         [51009371] = {
           Content = "他一定会收到你的花的。",
+          ContentDE = "Er wird sie bekommen.",
           DialogueId = 51009371,
           GUID = "7FB254EE",
           NextDialogue = 51009372
         },
         [51009372] = {
           Content = "嗯，谢谢你！",
+          ContentDE = "Hm, danke dir.",
           DialogueId = 51009372,
           GUID = "7FB25518",
           NextDialogue = 51009373,
@@ -156452,6 +156526,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009373] = {
           Content = "现在回想起来，他大概也早就知道我已经看穿了他的谎话吧。",
+          ContentDE = "Wenn ich jetzt zurückdenke, wusste er wahrscheinlich längst, dass ich seine Lüge durchschaut hatte.",
           DialogueId = 51009373,
           GUID = "7FB25542",
           NextDialogue = 51009374,
@@ -156459,6 +156534,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009374] = {
           Content = "一个由谎言编织的故事，最后有了一个用谎言写就的结局……不也算是恰如其分吗？",
+          ContentDE = "Eine Geschichte, aus Lügen gewebt, und am Ende ein Schluss, der ebenfalls aus einer Lüge besteht ... ist das nicht irgendwie passend?",
           DialogueId = 51009374,
           GUID = "7FB2556C",
           NextDialogue = 51009375,
@@ -156466,6 +156542,7 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009375] = {
           Content = "好啦，我要趁天还没黑，去城外完成和他的约定。",
+          ContentDE = "Gut. Ich muss los, bevor es dunkel wird. Ich will unser Versprechen draußen vor der Stadt einlösen.",
           DialogueId = 51009375,
           GUID = "7FB25596",
           NextDialogue = 51009376,
@@ -156473,12 +156550,14 @@ PlayAnimation{ActorId{230003},AnimationId{"Think_End"},Duration{2}}
         },
         [51009376] = {
           Content = "再见了，可爱的小精灵。祝愿你的故事有一个真实而美满的结局。",
+          ContentDE = "Leb wohl, du süßer kleiner Elf. Ich wünsche dir, dass deine Geschichte ein echtes, glückliches Ende findet.",
           DialogueId = 51009376,
           GUID = "7FB255C0",
           SpeakNpcId = 700247
         },
         [51009377] = {
           Content = "哎呀，小精灵，又见面了。今天的天色很美吧？",
+          ContentDE = "Ach, kleiner Elf, wir sehen uns wieder. Schöner Himmel heute, oder?",
           DialogueId = 51009377,
           GUID = "7FB255EA",
           SpeakNpcId = 700247
@@ -164377,6 +164456,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010502] = {
           Content = "（声泪俱下地哭诉你是一个遵纪守法的人，只是碰巧又忘带通行证了。）",
+          ContentDE = "(Du klagst unter Tränen, dass du ein gesetzestreuer Mensch bist und den Reisepass nur zufällig schon wieder vergessen hast.)",
           DialogueId = 51010502,
           GUID = "7FB30E7C",
           ImprPlusId = 1004,
@@ -164384,6 +164464,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010503] = {
           Content = "算了吧，你这话听得我耳朵都快起茧子了。去去，快过去，别搞得那么显眼。",
+          ContentDE = "Schon gut. Den Spruch hab ich so oft gehört, mir wachsen schon Schwielen an den Ohren. Los, geh durch. Und mach nicht so ein Theater, sonst fällst du noch auf.",
           DialogueId = 51010503,
           GUID = "7FB30EA6",
           NextDialogue = 51010508,
@@ -164391,6 +164472,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010504] = {
           Content = "（掏出卡米拉帮忙伪造的通行证。）",
+          ContentDE = "(Du holst den Reisepass hervor, den Camilla dir gefälscht hat.)",
           DialogueId = 51010504,
           GUID = "7FB30ED0",
           ImprPlusId = 1003,
@@ -164398,6 +164480,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010505] = {
           Content = "通行证核验无误，准许放行。",
+          ContentDE = "Reisepassprüfung ohne Befund. Durchgang genehmigt.",
           DialogueId = 51010505,
           GUID = "7FB30EFA",
           NextDialogue = 51010508,
@@ -164405,6 +164488,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010506] = {
           Content = "凯文先生，你也不想你在泪湖边上那件事被上级知……",
+          ContentDE = "Herr Kevin, du willst doch nicht, dass deine Vorgesetzten von dem Vorfall am Klagenden See erfahren, oder ...?",
           DialogueId = 51010506,
           GUID = "7FB30F24",
           ImprPlusId = 1005,
@@ -164412,6 +164496,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010507] = {
           Content = "别念了！！！让你过还不行吗！！",
+          ContentDE = "Schon gut, schon gut! Na schön – hau ab, verschwinde einfach!",
           DialogueId = 51010507,
           GUID = "7FB30F4E",
           NextDialogue = 51010508,
@@ -164419,6 +164504,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010508] = {
           Content = "难得今天没出什么事……",
+          ContentDE = "Schon selten genug, dass heute mal nichts passiert ...",
           DialogueId = 51010508,
           GUID = "7FB30F78",
           NextOptions = {
@@ -164429,6 +164515,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010509] = {
           Content = "（按理说只要有人说出这种话，就会有意外发生。）",
+          ContentDE = "(Normalerweise gilt: Sobald jemand so was sagt, passiert garantiert irgendwas.)",
           DialogueId = 51010509,
           FailDialogue = 51010510,
           GUID = "7FB30FA2",
@@ -164437,17 +164524,20 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010510] = {
           Content = "（预期的突发情况并未发生，与凯文简单寒暄几句后，大家就各自回到了工作岗位。）",
+          ContentDE = "(Doch die erwartete Katastrophe bleibt aus. Nach ein paar Worten Smalltalk mit Kevin geht jeder wieder an seine Arbeit.)",
           DialogueId = 51010510,
           GUID = "7FB30FCC"
         },
         [51010511] = {
           Content = "（大门旁突然响起急促的电话铃声，凯文如同受惊的兔子一般跳起，急匆匆地接起电话。）",
+          ContentDE = "(Plötzlich klingelt neben dem Tor ein Telefon. Kevin zuckt zusammen wie ein aufgescheuchtes Kaninchen und nimmt ab.)",
           DialogueId = 51010511,
           GUID = "7FB30FF6",
           NextDialogue = 51010512
         },
         [51010512] = {
           Content = "好，好……是！我明白了！",
+          ContentDE = "Ja, ja ... jawohl! Verstanden!",
           DialogueId = 51010512,
           GUID = "7FB31020",
           NextDialogue = 51010513,
@@ -164455,12 +164545,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010513] = {
           Content = "（简短的交谈过后，凯文放下电话，对大门方向比了个通过的手势。）",
+          ContentDE = "(Nach einem kurzen Gespräch legt Kevin auf und macht eine Geste in Richtung Tor, um dich durchzuwinken.)",
           DialogueId = 51010513,
           GUID = "7FB3104A",
           NextDialogue = 51010514
         },
         [51010514] = {
           Content = "没事的话就赶紧回去吧，我今天又没法安稳下班了。",
+          ContentDE = "Wenn nichts Weiteres ist, dann verschwinde. Ich kann heute sowieso nicht mehr in Ruhe Feierabend machen.",
           DialogueId = 51010514,
           GUID = "7FB31074",
           NextDialogue = 51010515,
@@ -164468,18 +164560,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010515] = {
           Content = "唉……怎么一遇到你就出意外……",
+          ContentDE = "*seufz* Immer wenn du auftauchst, passiert irgendwas ...",
           DialogueId = 51010515,
           GUID = "7FB3109E",
           SpeakNpcId = 700111
         },
         [51010516] = {
           Content = "喂！通行证……啊，是你啊，过去吧过去吧。",
+          ContentDE = "Hey! Reisepass ... ach, du bist’s. Geh nur durch.",
           DialogueId = 51010516,
           GUID = "7FB310C8",
           SpeakNpcId = 700111
         },
         [51010601] = {
           Content = "好心人，求你帮帮我……给多少都可以……救救身无分文的老人家吧……",
+          ContentDE = "Gutherziger Mensch, bitte hilf mir ... ich zahl, egal wie viel ... rette einen alten Mann, der keinen Heller mehr hat ...",
           DialogueId = 51010601,
           GUID = "7FB31EBA",
           NextDialogue = 51010602,
@@ -164487,6 +164582,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010602] = {
           Content = "（面前的老人白发苍苍，满面风霜。他呆滞的目光扫过冰湖城来来往往的行人，用嘶哑的声音请求怜悯。）",
+          ContentDE = "(Der alte Mann hat schneeweißes Haar und ein wettergegerbtes Gesicht. Mit leerem Blick streift er die Passanten in Icelake und fleht mit heiserer Stimme um Mitleid.)",
           DialogueId = 51010602,
           GUID = "7FB31EE4",
           NextOptions = {
@@ -164497,6 +164593,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010603] = {
           Content = "（这个老人真可怜，给他一些钱。）",
+          ContentDE = "(Der alte Mann tut dir leid. Gib ihm etwas Geld.)",
           DialogueId = 51010603,
           GUID = "7FB31F0E",
           ImprPlusId = 1004,
@@ -164504,6 +164601,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010604] = {
           Content = "唉，谢谢你，年轻人。",
+          ContentDE = "Ach, danke, junger Mensch.",
           DialogueId = 51010604,
           GUID = "7FB31F38",
           NextDialogue = 51010605,
@@ -164511,12 +164609,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010605] = {
           Content = "也不知道我这老头子今天睡着明天还能不能醒过来，但至少，今天能吃顿饱饭了。",
+          ContentDE = "Wer weiß, ob ein alter Knochen wie ich morgen überhaupt noch aufwacht. Aber wenigstens kann ich heute einmal satt werden.",
           DialogueId = 51010605,
           GUID = "7FB31F62",
           SpeakNpcId = 700338
         },
         [51010606] = {
           Content = "（从老人的破碗里拿走几枚硬币。）",
+          ContentDE = "(Du nimmst ein paar Münzen aus der zerbrochenen Schüssel des alten Mannes.)",
           DialogueId = 51010606,
           GUID = "7FB31F8C",
           ImprPlusId = 1005,
@@ -164524,6 +164624,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010607] = {
           Content = "你……唉。",
+          ContentDE = "Du ... *seufz*",
           DialogueId = 51010607,
           GUID = "7FB31FB6",
           NextDialogue = 51010608,
@@ -164531,6 +164632,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010608] = {
           Content = "{性别：小伙子|小姑娘}你这眼睛，莫非也是让他们打的？",
+          ContentDE = "{性别:Junge|Mädchen}, deine Augen. Haben sie dich etwa auch verprügelt?",
           DialogueId = 51010608,
           GUID = "7FB31FE0",
           NextDialogue = 51010609,
@@ -164538,12 +164640,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010609] = {
           Content = "算了，拿去吧，拿去吧，你可能比我更需要这些钱。",
+          ContentDE = "Schon gut. Nimm’s ruhig. Du hast das Geld wahrscheinlich nötiger als ich.",
           DialogueId = 51010609,
           GUID = "7FB3200A",
           SpeakNpcId = 700338
         },
         [51010610] = {
           Content = "身体健全的你应该去工作。",
+          ContentDE = "Du bist gesund und kräftig – du solltest arbeiten gehen.",
           DialogueId = 51010610,
           GUID = "7FB32034",
           ImprPlusId = 1001,
@@ -164551,6 +164655,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010611] = {
           Content = "工作……哈。谁还没有过一份体面的工作……",
+          ContentDE = "Arbeit ... Ha, wer hatte nicht schon mal einen anständigen Job ...",
           DialogueId = 51010611,
           GUID = "7FB3205E",
           NextDialogue = 51010612,
@@ -164558,6 +164663,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010612] = {
           Content = "可那又有什么用？有时候啊，他们夺走你的工作，就和夺走这破碗中的硬币一样简单。",
+          ContentDE = "Aber was bringt’s? Manchmal nehmen sie dir die Arbeit weg ... so leicht, wie sie dir die Münzen aus dieser kaputten Schüssel nehmen.",
           DialogueId = 51010612,
           GUID = "7FB32088",
           NextDialogue = 51010613,
@@ -164565,18 +164671,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010613] = {
           Content = "在漂亮屋子里乞讨，在大街上乞讨，都一样的。",
+          ContentDE = "Ob du in einem hübschen Haus bettelst oder draußen auf der Straße, ist am Ende dasselbe.",
           DialogueId = 51010613,
           GUID = "7FB320B2",
           SpeakNpcId = 700338
         },
         [51010614] = {
           Content = "好好活着吧……唉，这世道，越是好人越难立足啊。",
+          ContentDE = "Leb schön weiter ... *seufz* In dieser Welt haben es die Guten am schwersten, Fuß zu fassen.",
           DialogueId = 51010614,
           GUID = "7FB320DC",
           SpeakNpcId = 700338
         },
         [51010701] = {
           Content = "末日将至啊……末日将至……",
+          ContentDE = "Das Ende kommt ... das Ende kommt ...",
           DialogueId = 51010701,
           GUID = "7FB32F22",
           NextDialogue = 51010702,
@@ -164584,6 +164693,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010702] = {
           Content = "（眼前的皎皎摇头晃脑地趴在桌子上，昏昏欲睡。）",
+          ContentDE = "(Vor dir liegt eine Luno mit wackelndem Kopf auf dem Tisch und döst.)",
           DialogueId = 51010702,
           GUID = "7FB32F4C",
           NextOptions = {
@@ -164593,24 +164703,28 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010703] = {
           Content = "把她叫醒。",
+          ContentDE = "Weck sie auf.",
           DialogueId = 51010703,
           GUID = "7FB32F76",
           NextDialogue = 51010705
         },
         [51010704] = {
           Content = "让她继续睡。",
+          ContentDE = "Lass sie weiterschlafen.",
           DialogueId = 51010704,
           GUID = "7FB32FA0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [51010705] = {
           Content = "（悲观皎皎猛地抬起头，眼神闪闪发光，声音如洪水一般宣泄出来。）",
+          ContentDE = "(Die Dünster-Luno reißt den Kopf hoch. Ihre Augen funkeln, und die Worte brechen wie eine Flut aus ihr heraus.)",
           DialogueId = 51010705,
           GUID = "7FB32FCA",
           NextDialogue = 51010706
         },
         [51010706] = {
           Content = "末日……末日要来了，没人能够逃掉。",
+          ContentDE = "Das Ende ... das Ende ist nah. Niemand kann entkommen.",
           DialogueId = 51010706,
           GUID = "7FB32FF4",
           NextDialogue = 51010707,
@@ -164618,6 +164732,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010707] = {
           Content = "花店里的花朵不再鲜艳，褪色成纯白的石楠……",
+          ContentDE = "Die Blumen im Blumenladen sind nicht mehr bunt. Sie verblassen zu reinweißer Heide ...",
           DialogueId = 51010707,
           GUID = "7FB3301E",
           NextDialogue = 51010708,
@@ -164625,6 +164740,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010708] = {
           Content = "广场上的猫猫不再毛绒绒，而是像石膏雕像一样又硬又滑……",
+          ContentDE = "Die Kätzchen auf dem Platz sind nicht mehr flauschig, sondern hart und glatt wie Gipsstatuen ...",
           DialogueId = 51010708,
           GUID = "7FB33048",
           NextDialogue = 51010709,
@@ -164632,6 +164748,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010709] = {
           Content = "面包房再也做不出蓬松的面包，无论怎么烘焙都会变成黑漆漆的烂泥……",
+          ContentDE = "Die Bäckerei kann kein luftiges Brot mehr backen – egal wie lange, es wird immer zu schwarzem, schlammigem Matsch ...",
           DialogueId = 51010709,
           GUID = "7FB33072",
           NextDialogue = 51010710,
@@ -164639,6 +164756,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010710] = {
           Content = "我最爱吃的冰棍也不再冰冰凉凉，放到嘴里只会黏糊糊粘住嗓子……",
+          ContentDE = "Mein liebstes Eis am Stiel ist nicht mehr kalt. Im Mund ist es nur noch klebrig und bleibt mir im Hals hängen ...",
           DialogueId = 51010710,
           GUID = "7FB3309C",
           NextDialogue = 51010711,
@@ -164646,6 +164764,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010711] = {
           Content = "大家也开始慢慢变得和皎皎一样高，和皎皎一样白……",
+          ContentDE = "Und alle werden nach und nach so groß wie Luno ... Und so weiß wie Luno ...",
           DialogueId = 51010711,
           GUID = "7FB330C6",
           NextDialogue = 51010712,
@@ -164653,6 +164772,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010712] = {
           Content = "到最后……",
+          ContentDE = "Und am Ende ...",
           DialogueId = 51010712,
           GUID = "7FB330F0",
           NextDialogue = 51010713,
@@ -164660,6 +164780,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010713] = {
           Content = "花店的阿姨，面包房的大婶，卖冰棍的爷爷……大家都会变成皎皎！",
+          ContentDE = "Die Floristin, die Bäckerin, der Opa vom Eisstand ... am Ende werden alle zu Lunos!",
           DialogueId = 51010713,
           GUID = "7FB3311A",
           NextOptions = {
@@ -164670,6 +164791,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010714] = {
           Content = "皎皎好，我也想变成皎皎。",
+          ContentDE = "Lunos sind toll. Ich will auch zu einer Luno werden.",
           DialogueId = 51010714,
           GUID = "7FB33144",
           ImprPlusId = 1005,
@@ -164677,6 +164799,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010715] = {
           Content = "好可怕的末日……",
+          ContentDE = "So ein furchtbares Ende der Welt ...",
           DialogueId = 51010715,
           GUID = "7FB3316E",
           ImprPlusId = 1004,
@@ -164684,6 +164807,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010716] = {
           Content = "你……你的头发、你的衣服、你的身高……你已经开始变成皎皎了吗！",
+          ContentDE = "D... Deine Haare, deine Kleidung, deine Körpergröße ... du wirst etwa schon zu Luno?!",
           DialogueId = 51010716,
           GUID = "7FB33198",
           NextDialogue = 51010717,
@@ -164691,6 +164815,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010717] = {
           Content = "末日……末日果然来了，一切都完了。",
+          ContentDE = "Das Ende ... Das Ende ist wirklich da. Alles ist vorbei.",
           DialogueId = 51010717,
           GUID = "7FB331C2",
           NextDialogue = 51010718,
@@ -164698,23 +164823,27 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010718] = {
           Content = "（悲观皎皎无力地垂下双手，看向你的视线透过你的身躯，透过层叠的建筑，失神地望向昏暗的天空。仿佛她口中的末日马上就要变为现实。）",
+          ContentDE = "(Die Dünster-Luno lässt kraftlos die Arme sinken. Ihr Blick geht durch dich hindurch, durch die Gebäude, ins Leere – hinauf in den düsteren Himmel. Als würde das Weltende, von dem sie spricht, gleich Wirklichkeit werden.)",
           DialogueId = 51010718,
           GUID = "7FB331EC",
           NextDialogue = 51010719
         },
         [51010719] = {
           Content = "（几分钟过去，理所当然的什么都未发生，悲观皎皎的视线再也没有落到你的身上，不断呢喃着末日将至。）",
+          ContentDE = "(Ein paar Minuten vergehen. Natürlich passiert nichts. Lunos Blick fällt nicht mehr auf dich, sie murmelt nur noch unaufhörlich vom nahenden Ende.)",
           DialogueId = 51010719,
           GUID = "7FB33216",
           NextDialogue = 51010720
         },
         [51010720] = {
           Content = "（你有些好奇变成皎皎会是怎么样的感觉，但现在你能做的，也只有转身离开了。）",
+          ContentDE = "(Du bist ein bisschen neugierig, wie es sich wohl anfühlen würde, zu Luno zu werden. Aber es bleibt dir nichts anderes übrig, als dich umzudrehen und zu gehen.)",
           DialogueId = 51010720,
           GUID = "7FB33240"
         },
         [51010721] = {
           Content = "末日，末日已经开始了……",
+          ContentDE = "Das Ende ... Das Ende hat schon begonnen ...",
           DialogueId = 51010721,
           GUID = "7FB3326A",
           SpeakNpcId = 700337
@@ -164732,18 +164861,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010802] = {
           Content = "你认识我？",
+          ContentDE = "Du kennst mich?",
           DialogueId = 51010802,
           GUID = "7FB33FB4",
           NextDialogue = 51010804
         },
         [51010803] = {
           Content = "“那孩子”难道指的是……",
+          ContentDE = "Mit „dem Kind“ meinst du etwa ...?",
           DialogueId = 51010803,
           GUID = "7FB33FDE",
           NextDialogue = 51010804
         },
         [51010804] = {
           Content = "我的女儿。她的名字是赛琪。",
+          ContentDE = "Meine Tochter. Sie hieß Psyche.",
           DialogueId = 51010804,
           GUID = "7FB34008",
           NextDialogue = 51010805,
@@ -164751,6 +164883,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010805] = {
           Content = "她曾在给我的信里提到过“一个新交的朋友”。您的模样与那封书信中的描述很相似……如果我认错了人，还请您谅解。",
+          ContentDE = "In einem ihrer Briefe hat sie {性别:einen neuen Freund|eine neue Freundin} erwähnt. Dein Aussehen passt sehr gut zu der Beschreibung in ihren Briefen ... Falls ich mich irre, verzeih mir bitte.",
           DialogueId = 51010805,
           GUID = "7FB34032",
           NextOptions = {
@@ -164762,24 +164895,28 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010806] = {
           Content = "……她是怎么说我的？",
+          ContentDE = "... Wie hat sie über mich geschrieben?",
           DialogueId = 51010806,
           GUID = "7FB3405C",
           NextDialogue = 51010809
         },
         [51010807] = {
           Content = "……是的，你认错人了。（离开）",
+          ContentDE = "... Ja. Du hast mich verwechselt.",
           DialogueId = 51010807,
           GUID = "7FB34086",
           NextDialogue = 51010808
         },
         [51010808] = {
           Content = "（你像逃跑一样转身离开。那是你们心中共同的隐痛，你不愿再触及它。）",
+          ContentDE = "(Du drehst dich um und gehst, fast als würdest du fliehen. Es ist ein tiefer Schmerz, den ihr teilt – du willst ihn nicht noch einmal spüren.)",
           DialogueId = 51010808,
           GUID = "7FB340B0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [51010809] = {
           Content = "你很聪明，又很勇敢。听说你到冰湖城的第一天就深入格雷姆废矿，在她见过的所有同龄人里，你是最强大的一个。更重要的是……",
+          ContentDE = "Du bist klug. Und mutig. Sie hat gesagt, du seist schon am ersten Tag in Icelake tief in die Glevum-Grube hinabgestiegen. Von allen Gleichaltrigen, die sie kannte, warst du der Stärkste. Und noch wichtiger ...",
           DialogueId = 51010809,
           GUID = "7FB340DA",
           NextDialogue = 51010810,
@@ -164795,6 +164932,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
       return {
         [51010810] = {
           Content = "“{性别：他|她}和冰湖城的大多数人不一样，{性别：他|她}还有着我们早就丢失了的东西——对正义和自由的渴望。”",
+          ContentDE = "„{性别:Er|Sie} ist nicht wie die meisten in Icelake. {性别:Er|Sie} hat etwas, das wir längst verloren haben: Hunger nach Gerechtigkeit und Freiheit.",
           DialogueId = 51010810,
           GUID = "7FB34104",
           NextDialogue = 51010811,
@@ -164802,6 +164940,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010811] = {
           Content = "“从{性别：他|她}身上，我看到了另一种不一样的生活。”",
+          ContentDE = "In {性别:ihm|ihr} habe ich ein anderes Leben gesehen.“",
           DialogueId = 51010811,
           GUID = "7FB3412E",
           NextDialogue = 51010812,
@@ -164809,6 +164948,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010812] = {
           Content = "这是她信里写的。",
+          ContentDE = "So stand es in ihrem Brief.",
           DialogueId = 51010812,
           GUID = "7FB34158",
           NextDialogue = 51010813,
@@ -164816,12 +164956,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010813] = {
           Content = "（女人熟练地复述着——显然，那封信她不知看了多少遍。）",
+          ContentDE = "(Die Frau zitiert die Worte flüssig – offensichtlich hat sie den Brief unzählige Male gelesen.)",
           DialogueId = 51010813,
           GUID = "7FB34182",
           NextDialogue = 51010814
         },
         [51010814] = {
           Content = "对不起，我没能……",
+          ContentDE = "Es tut mir leid, ich konnte nicht ...",
           DialogueId = 51010814,
           GUID = "7FB341AC",
           NextDialogue = 51010815,
@@ -164829,6 +164971,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010815] = {
           Content = "不要说抱歉，孩子。我看得到，有你最后的陪伴，她是快乐的。这就够了。是我们应该感谢你。",
+          ContentDE = "Sag nicht Entschuldigung, Kind. Ich sehe es. Mit dir an ihrer Seite war sie glücklich ... bis zum Schluss. Das reicht. Wir sollten dir danken.",
           DialogueId = 51010815,
           GUID = "7FB341D6",
           NextDialogue = 51010816,
@@ -164836,12 +164979,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010816] = {
           Content = "请带上这束花吧，我们的祝福与你同在。",
+          ContentDE = "Nimm diesen Strauß. Du hast unseren Segen.",
           DialogueId = 51010816,
           GUID = "7FB34200",
           SpeakNpcId = 700203
         },
         [51010817] = {
           Content = "一路顺利，我们的祝福与你同在。",
+          ContentDE = "Gute Reise. Du hast unseren Segen.",
           DialogueId = 51010817,
           GUID = "7FB3422A",
           SpeakNpcId = 700203
@@ -164856,6 +165001,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010902] = {
           Content = "您来点果子吗？一等一的肥料加上好种子，自家温室培养出来的，个个营养丰富口感好！",
+          ContentDE = "Wie wär’s mit ein paar? Feinste Samen, erstklassiger Dünger – alles aus dem Gewächshaus, direkt von hier. Voller Geschmack und randvoll mit Nährstoffen!",
           DialogueId = 51010902,
           GUID = "7FB3501C",
           NextOptions = {
@@ -164866,6 +165012,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010903] = {
           Content = "温室培育的果子应该很贵吧。",
+          ContentDE = "Gewächshausfrüchte sind bestimmt teuer.",
           DialogueId = 51010903,
           GUID = "7FB35046",
           ImprPlusId = 1001,
@@ -164873,6 +165020,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010904] = {
           Content = "果子不同价格也不同，能吃到好果子本身就很难了，我之前在战场上根本吃不到。",
+          ContentDE = "Je nach Sorte kostet es unterschiedlich. Gute Früchte zu bekommen, ist an sich schon nicht leicht – an der Front hab ich früher gar keine gekriegt.",
           DialogueId = 51010904,
           GUID = "7FB35070",
           NextOptions = {
@@ -164882,6 +165030,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010905] = {
           Content = "掌握温室培育的技术应该很难。",
+          ContentDE = "Gewächshaustechnik ist bestimmt schwierig.",
           DialogueId = 51010905,
           GUID = "7FB3509A",
           ImprPlusId = 1003,
@@ -164889,6 +165038,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010906] = {
           Content = "技术是我爷爷传下来的，我一开始还不想继承，后来退伍了才接受。",
+          ContentDE = "Die Technik hab ich von meinem Opa. Erst wollte ich sie gar nicht übernehmen, aber nach meiner Entlassung aus der Armee hab ich es dann doch gemacht.",
           DialogueId = 51010906,
           GUID = "7FB350C4",
           NextOptions = {
@@ -164898,12 +165048,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010907] = {
           Content = "您当过兵？",
+          ContentDE = "Du warst Soldat?",
           DialogueId = 51010907,
           GUID = "7FB350EE",
           NextDialogue = 51010908
         },
         [51010908] = {
           Content = "是啊，我当初可是优秀士兵，一个顶三个！",
+          ContentDE = "Ja. Und was für einer – ich konnte es mit drei gleichzeitig aufnehmen!",
           DialogueId = 51010908,
           GUID = "7FB35118",
           NextDialogue = 51010909,
@@ -164911,6 +165063,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010909] = {
           Content = "后来受伤了，越来越力不从心，就提前退伍了。",
+          ContentDE = "Dann wurde ich verletzt und wurde immer schwächer, also bin ich früh raus.",
           DialogueId = 51010909,
           GUID = "7FB35142",
           NextDialogue = 51010910,
@@ -164918,6 +165071,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010910] = {
           Content = "现在才明白平平淡淡才是真，踏踏实实培育果子，再遇到个好姑娘，一辈子挺好的了。",
+          ContentDE = "Heute weiß ich: Das einfache Leben ist das beste. In Ruhe Obst ziehen, irgendwann ein nettes Mädchen finden – das ist das wahre Leben.",
           DialogueId = 51010910,
           GUID = "7FB3516C",
           NextOptions = {
@@ -164928,6 +165082,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010911] = {
           Content = "有心仪的人选吗？",
+          ContentDE = "Hast du schon jemanden im Auge?",
           DialogueId = 51010911,
           FailDialogue = 51010912,
           GUID = "7FB35196",
@@ -164936,24 +165091,28 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010912] = {
           Content = "（男人一时语塞，尴尬地张了张嘴，艰难地挤出一句话。）",
+          ContentDE = "(Der Mann stockt, öffnet verlegen den Mund und quetscht mühsam einen Satz heraus.)",
           DialogueId = 51010912,
           GUID = "7FB351C0",
           NextDialogue = 51010913
         },
         [51010913] = {
           Content = "您，您别问了，您还是多看看果子，我帮您挑挑。",
+          ContentDE = "B... Bitte frag nicht ... Schau lieber nach den Früchten, ich such dir etwas Schönes aus.",
           DialogueId = 51010913,
           GUID = "7FB351EA",
           SpeakNpcId = 700009
         },
         [51010914] = {
           Content = "（男人的眼睛闪过一丝亮光，不自觉地微笑了起来，但瞬间又陷入了困惑。）",
+          ContentDE = "(In seinen Augen blitzt kurz etwas auf. Er lächelt unwillkürlich, wirkt im nächsten Moment aber wieder unsicher.)",
           DialogueId = 51010914,
           GUID = "7FB35214",
           NextDialogue = 51010915
         },
         [51010915] = {
           Content = "……虽然有，但我只见过她的背影。",
+          ContentDE = "... Ja, schon. Aber ich hab nur ihren Rücken gesehen.",
           DialogueId = 51010915,
           GUID = "7FB3523E",
           NextDialogue = 51010916,
@@ -164961,6 +165120,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010916] = {
           Content = "这么久了，我还没和她说过话呢，唉。",
+          ContentDE = "So lange ist es schon her und ich hab noch kein Wort mit ihr gewechselt … *seufz*",
           DialogueId = 51010916,
           GUID = "7FB35268",
           NextDialogue = 51010917,
@@ -164968,6 +165128,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010917] = {
           Content = "贸然搭话又怕吓到心爱的姑娘，我只好先让空空皎皎帮我传下话。唉，可我真是太倒霉了，每次空空皎皎去传话的时候，都赶上她不在家。",
+          ContentDE = "Wenn ich sie einfach so anquatsche, erschreckt sie sich am Ende. Also hab ich erst mal Faul-Luno gebeten, ihr etwas auszurichten. Aber ich hab echt Pech: Jedes Mal, wenn Faul-Luno hingeht, ist sie nicht daheim.",
           DialogueId = 51010917,
           GUID = "7FB35292",
           NextOptions = {
@@ -164977,6 +165138,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010918] = {
           Content = "你看上去不拘小节，却很懂得尊重对方。",
+          ContentDE = "Du wirkst zwar locker, aber du weißt trotzdem, wie man Mädchen respektiert.",
           DialogueId = 51010918,
           GUID = "7FB352BC",
           ImprPlusId = 1002,
@@ -164984,6 +165146,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010919] = {
           Content = "您夸得我都不好意思了，哈哈。",
+          ContentDE = "Jetzt machst du mich ganz verlegen, haha.",
           DialogueId = 51010919,
           GUID = "7FB352E6",
           NextDialogue = 51010920,
@@ -164991,6 +165154,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010920] = {
           Content = "对了，我看您像是个文化人，可不可以帮我这个粗人润色一下句子，我怎么写怎么别扭。",
+          ContentDE = "Sag mal, du siehst aus wie ein gebildeter Mensch. Kannst du so einem Grobian wie mir helfen und ein paar Sätze schöner formulieren? Egal was ich schreibe, es klingt schräg.",
           DialogueId = 51010920,
           GUID = "7FB35310",
           NextOptions = {
@@ -165000,12 +165164,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010921] = {
           Content = "我现在正好有时间，你读来听听？",
+          ContentDE = "Ich hab gerade Zeit. Lies mal vor.",
           DialogueId = 51010921,
           GUID = "7FB3533A",
           NextDialogue = 51010922
         },
         [51010922] = {
           Content = "咳咳。",
+          ContentDE = "Äh ...",
           DialogueId = 51010922,
           GUID = "7FB35364",
           NextDialogue = 51010923,
@@ -165013,6 +165179,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010923] = {
           Content = "“我对你的感情，一直升温，比冬天的温室，还要温暖。”",
+          ContentDE = "„Meine Gefühle für dich werden immer wärmer ... wärmer als ein Gewächshaus im Winter.“",
           DialogueId = 51010923,
           GUID = "7FB3538E",
           NextOptions = {
@@ -165022,12 +165189,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010924] = {
           Content = "……",
+          ContentDE = "...",
           DialogueId = 51010924,
           GUID = "7FB353B8",
           NextDialogue = 51010925
         },
         [51010925] = {
           Content = "“你什么时候能发现，我的心像果子，就等着你来采摘。”",
+          ContentDE = "„Wann merkst du endlich, dass mein Herz wie eine Frucht ist. Es wartet nur darauf, von dir gepflückt zu werden.“",
           DialogueId = 51010925,
           GUID = "7FB353E2",
           NextDialogue = 51010926,
@@ -165035,6 +165204,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010926] = {
           Content = "“接受我吧，我的姑娘！不要让我的爱像烂果子一样，烂在地里。”",
+          ContentDE = "„Sei mit mir zusammen, mein Mädchen! Lass meine Liebe nicht wie faules Obst verderben und im Dreck verrotten.“",
           DialogueId = 51010926,
           GUID = "7FB3540C",
           NextDialogue = 51010927,
@@ -165042,6 +165212,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010927] = {
           Content = "……怎么样，有可以润色的地方吗？",
+          ContentDE = "... Na, kann man das irgendwo schöner machen?",
           DialogueId = 51010927,
           GUID = "7FB35436",
           NextOptions = {
@@ -165051,12 +165222,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010928] = {
           Content = "……很有个人特色，也很真挚，我觉得保持现状就好。",
+          ContentDE = "... Hat auf jeden Fall Charakter. Und es ist ehrlich. Ich würde es so lassen.",
           DialogueId = 51010928,
           GUID = "7FB35460",
           NextDialogue = 51010929
         },
         [51010929] = {
           Content = "真的吗？那太好了，借您吉言。",
+          ContentDE = "Wirklich? Das ist ja super. Dann nehme ich das als gutes Omen.",
           DialogueId = 51010929,
           GUID = "7FB3548A",
           NextDialogue = 51010930,
@@ -165064,18 +165237,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51010930] = {
           Content = "如果这份感情有结果了，您来买果子我给您最大优惠，哈哈。",
+          ContentDE = "Wenn das etwas wird, kriegst du bei mir einen riesigen Rabatt, haha.",
           DialogueId = 51010930,
           GUID = "7FB354B4",
           SpeakNpcId = 700009
         },
         [51010931] = {
           Content = "我的爱对方还没回应，唉，最大优惠您要等等了。",
+          ContentDE = "Meine Liebe hat noch nicht geantwortet ... *seufz* Auf den riesigen Rabatt musst du wohl noch warten.",
           DialogueId = 51010931,
           GUID = "7FB354DE",
           SpeakNpcId = 700009
         },
         [51011001] = {
           Content = "请留步，很抱歉突然叫住您。",
+          ContentDE = "Verzeihung, dass ich Sie so plötzlich anhalte.",
           DialogueId = 51011001,
           GUID = "7FB3605A",
           NextDialogue = 51011002,
@@ -165083,6 +165259,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011002] = {
           Content = "但若是我家衣服能拥有自己的思想，一定很盼望能够被像您一样俊美的人穿在身上。",
+          ContentDE = "Aber hätten die Kleider meines Hauses einen eigenen Willen, würden sie sich nichts sehnlicher wünschen, als von jemandem getragen zu werden, der so gut aussieht wie Sie.",
           DialogueId = 51011002,
           GUID = "7FB36084",
           NextDialogue = 51011003,
@@ -165090,6 +165267,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011003] = {
           Content = "如果就这么错过了您，它们一定会伤心的。",
+          ContentDE = "Wenn ich Sie einfach so vorbeigehen lasse, wären sie bestimmt untröstlich.",
           DialogueId = 51011003,
           GUID = "7FB360AE",
           NextDialogue = 51011004,
@@ -165097,6 +165275,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011004] = {
           Content = "（眼前的男人有着贵族的气质，举手投足之间尽显优雅，身躯瘦弱却又挺拔，富有亲和力的笑眼让人如沐春风。）",
+          ContentDE = "(Der Mann vor dir hat eine adlige Ausstrahlung. Jede Bewegung wirkt elegant. Schlank, aber aufrecht. Sein freundliches Lächeln wirkt wie ein warmer Frühlingswind.)",
           DialogueId = 51011004,
           GUID = "7FB360D8",
           NextOptions = {
@@ -165106,6 +165285,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011005] = {
           Content = "你这里的衣服是我能买得起的吗？",
+          ContentDE = "Kann ich mir die Sachen hier überhaupt leisten?",
           DialogueId = 51011005,
           GUID = "7FB36102",
           ImprPlusId = 1001,
@@ -165113,6 +165293,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011006] = {
           Content = "我穿麻袋都好看。",
+          ContentDE = "Ich seh sogar im Kartoffelsack gut aus.",
           DialogueId = 51011006,
           GUID = "7FB3612C",
           ImprPlusId = 1005,
@@ -165120,6 +165301,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011007] = {
           Content = "那是当然，您可以先看看我们的款式图册，如果看中了哪件可以试穿。",
+          ContentDE = "Aber selbstverständlich. Sie können zuerst in unserem Katalog stöbern – wenn Ihnen etwas gefällt, können Sie es gern anprobieren.",
           DialogueId = 51011007,
           GUID = "7FB36156",
           NextDialogue = 51011008,
@@ -165127,18 +165309,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011008] = {
           Content = "（你接过了那本册子，上面的款式令人目不暇接。）",
+          ContentDE = "(Du nimmst den Katalog entgegen, den er dir anbietet. Er ist gefüllt mit einer schillernden Vielfalt an Designs.)",
           DialogueId = 51011008,
           GUID = "7FB36180",
           NextDialogue = 51011009
         },
         [51011009] = {
           Content = "（是时候享受生活了，就从买一件新衣服开始如何？这么想着的你指了指了一件色彩艳丽的{性别：衣服|裙子}。）",
+          ContentDE = "(Es ist Zeit, das Leben zu genießen. Wie wär’s, wenn du mit einem neuen Outfit anfängst? Mit dem Gedanken deutest du auf ein knallbuntes {性别:Kleid|Oberteil}.)",
           DialogueId = 51011009,
           GUID = "7FB361AA",
           NextDialogue = 51011010
         },
         [51011010] = {
           Content = "{性别：不好意思，这件是女装。而且是按照我的身材缝制的，暂时没有适合您的尺码……|真不巧，这件是按照我的身材缝制的，暂时没有适合您的尺码……}",
+          ContentDE = "{性别:Entschuldigung, das ist Damenstück. Außerdem wurde das Stück auf meine Maße geschneidert, im Moment habe ich leider keine passende Größe für Sie ...|Wie schade, dieses Stück wurde auf meine Maße geschneidert, im Moment habe ich leider keine passende Größe für Sie ...}",
           DialogueId = 51011010,
           GUID = "7FB361D4",
           NextOptions = {
@@ -165149,6 +165334,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011011] = {
           Content = "我就想要这件，要不你先穿上让我参考一下。",
+          ContentDE = "Ich will nur das hier. Dann ziehen Sie es doch kurz an, damit ich es mir besser vorstellen kann.",
           DialogueId = 51011011,
           FailDialogue = 51011012,
           GUID = "7FB361FE",
@@ -165157,12 +165343,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011012] = {
           Content = "呵呵，还是请您不要取笑我了。",
+          ContentDE = "Äh? Bitte machen Sie sich nicht über mich lustig.",
           DialogueId = 51011012,
           GUID = "7FB36228",
           SpeakNpcId = 700008
         },
         [51011013] = {
           Content = "如果您一定要看的话倒也没什么，只是现在换上的话可能会带来一些不必要的困扰。",
+          ContentDE = "Wenn Sie es unbedingt sehen möchten, hätte ich zwar nichts dagegen, aber es jetzt anzuziehen, könnte unnötige Probleme mit sich bringen.",
           DialogueId = 51011013,
           GUID = "7FB36252",
           NextDialogue = 51011014,
@@ -165170,6 +165358,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011014] = {
           Content = "会被认成女性吗？",
+          ContentDE = "Man würde Sie für eine Frau halten?",
           DialogueId = 51011014,
           GUID = "7FB3627C",
           NextDialogue = 51011015,
@@ -165177,6 +165366,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011015] = {
           Content = "确实如此，但又不完全是这样……重点不在于有谁“把我认成女士”，而是“把我认成女士后会发生什么”。",
+          ContentDE = "So ist es – und doch nicht ganz ... Es geht weniger darum, ob mich jemand für eine Dame hält, sondern darum, was passiert, nachdem man mich für eine Dame hält.",
           DialogueId = 51011015,
           GUID = "7FB362A6",
           NextDialogue = 51011016,
@@ -165184,6 +165374,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011016] = {
           Content = "或许这样和您表述很难理解……",
+          ContentDE = "So erklärt, klingt das vermutlich etwas schwer verständlich ...",
           DialogueId = 51011016,
           GUID = "7FB362D0",
           NextDialogue = 51011017,
@@ -165191,6 +165382,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011017] = {
           Content = "难道……有人把你当成了女人，然后对你心生爱意？！",
+          ContentDE = "Warte, hat dich jemand für eine Frau gehalten und sich dann in dich verliebt?!",
           DialogueId = 51011017,
           GUID = "7FB362FA",
           NextDialogue = 51011018,
@@ -165198,6 +165390,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011018] = {
           Content = "哦，幸好您是这般聪慧，省去了不少解释的时间。",
+          ContentDE = "Ah, schön, dass Sie so klug sind. Das spart mir einiges an Erklärungen.",
           DialogueId = 51011018,
           GUID = "7FB36324",
           NextDialogue = 51011019,
@@ -165205,6 +165398,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011019] = {
           Content = "不过那位专情的先生似乎是认定了另一种现实，在他的想象中我有一个美丽的妹妹。",
+          ContentDE = "Allerdings scheint sich dieser ergebene Herr eine Realität ausgedacht zu haben, in der ich eine wunderschöne jüngere Schwester habe.",
           DialogueId = 51011019,
           GUID = "7FB3634E",
           NextDialogue = 51011020,
@@ -165212,6 +165406,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011020] = {
           Content = "直到一位可爱的皎皎小姐突然找到我的店里，对我声情并茂地朗诵对方的情书，我才知道自己的行为引起了误会。",
+          ContentDE = "Erst als eine reizende Luno plötzlich in meinen Laden kam und mir mit großem Pathos seine Liebesbriefe vortrug, merkte ich, dass mein Verhalten ein Missverständnis ausgelöst hatte.",
           DialogueId = 51011020,
           GUID = "7FB36378",
           NextDialogue = 51011021,
@@ -165219,6 +165414,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011021] = {
           Content = "我不得不在那位皎皎小姐代其传达爱意的时候谎称我的妹妹有事出门，才一次次地搪塞过去。",
+          ContentDE = "Und jedes Mal, wenn diese Luno seine Gefühle übermitteln wollte, musste ich lügen und behaupten, meine Schwester sei gerade außer Haus – so habe ich mich immer wieder herausgewunden.",
           DialogueId = 51011021,
           GUID = "7FB363A2",
           NextDialogue = 51011022,
@@ -165226,6 +165422,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011022] = {
           Content = "那你为什么不直接和他说清楚呢？",
+          ContentDE = "Warum haben Sie es ihm nicht einfach direkt gesagt?",
           DialogueId = 51011022,
           GUID = "7FB363CC",
           NextDialogue = 51011023,
@@ -165233,6 +165430,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011023] = {
           Content = "为什么……因为很有趣？",
+          ContentDE = "Warum? Weil es Spaß macht, oder?",
           DialogueId = 51011023,
           GUID = "7FB363F6",
           NextDialogue = 51011024,
@@ -165240,6 +165438,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011024] = {
           Content = "“你漂亮的头巾，和我家的北风莓一样鲜甜诱人。”",
+          ContentDE = "„Dein schönes Kopftuch ist so süß und verführerisch wie die Borealbeeren aus meinem Garten.“",
           DialogueId = 51011024,
           GUID = "7FB36420",
           NextDialogue = 51011025,
@@ -165247,6 +165446,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011025] = {
           Content = "“你火红的裙子，像火焰根那样炽烈，让我紧张的冒汗。”",
+          ContentDE = "„Dein feuerrotes Kleid ist so glühend wie Flammenwurzeln – ich werde so nervös, dass ich schwitze.“",
           DialogueId = 51011025,
           GUID = "7FB3644A",
           NextDialogue = 51011026,
@@ -165254,6 +165454,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011026] = {
           Content = "不管我换成什么样的装扮，他都会在两天后对每一套衣装给出类似风格的评价。",
+          ContentDE = "Egal, was ich trage, liefert er zwei Tage später zu jedem Outfit eine Bewertung im gleichen Stil.",
           DialogueId = 51011026,
           GUID = "7FB36474",
           NextDialogue = 51011027,
@@ -165261,6 +165462,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011027] = {
           Content = "尽管措辞稍微有些……质朴，但对于我而言也是相当直观的参考。",
+          ContentDE = "Die Wortwahl ist zwar ein wenig ... rustikal, aber für mich ist das ein äußerst anschauliches Feedback.",
           DialogueId = 51011027,
           GUID = "7FB3649E",
           NextDialogue = 51011028,
@@ -165268,6 +165470,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011028] = {
           Content = "这个风格总觉得有些熟悉……",
+          ContentDE = "Der Stil kommt mir irgendwie bekannt vor ...",
           DialogueId = 51011028,
           GUID = "7FB364C8",
           NextDialogue = 51011029,
@@ -165275,6 +165478,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011029] = {
           Content = "您认识那位为情所困的先生？既然如此，还请您代为保守这个秘密。",
+          ContentDE = "Kennen Sie den Herrn, der sich so sehr an die Liebe klammert? Wenn dem so ist, bitte ich Sie: Bewahren Sie dieses Geheimnis.",
           DialogueId = 51011029,
           GUID = "7FB364F2",
           NextDialogue = 51011030,
@@ -165282,6 +165486,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011030] = {
           Content = "你只是想找一个工具人帮你评论你新设计的衣服吧……",
+          ContentDE = "Du suchst einfach einen nützlichen Trottel, der deine neuen Designs kommentiert, oder?",
           DialogueId = 51011030,
           GUID = "7FB3651C",
           NextDialogue = 51011031,
@@ -165289,6 +165494,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011031] = {
           Content = "“这位情感真挚的先生明天会用什么样新奇的比喻来描述我的衣服”，如果是您遇到这样的事，也会有这样的好奇心吧？",
+          ContentDE = "„Welche neue, ausgefallene Metapher wird der aufrichtige Herr morgen für meine Kleidung finden?“ Wenn Sie so etwas erleben würden, wären Sie doch auch neugierig, oder?",
           DialogueId = 51011031,
           GUID = "7FB36546",
           NextDialogue = 51011032,
@@ -165296,6 +165502,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011032] = {
           Content = "不过最近这位先生的言辞不像往常那样直白，就像对一个捉摸不透的梦产生了犹豫……",
+          ContentDE = "Aber in letzter Zeit sind seine Worte nicht mehr so direkt wie sonst ... als würde er bei einem unfassbaren Traum plötzlich zögern ...",
           DialogueId = 51011032,
           GUID = "7FB36570",
           NextDialogue = 51011033,
@@ -165303,6 +165510,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011033] = {
           Content = "也许我可以在适当的时机做出一些适当的回应，才能在保持距离的同时让他不要放弃？",
+          ContentDE = "Vielleicht sollte ich zur richtigen Zeit eine passende Reaktion zeigen, damit er nicht aufgibt, aber gleichzeitig Abstand halten?",
           DialogueId = 51011033,
           GUID = "7FB3659A",
           NextDialogue = 51011034,
@@ -165310,18 +165518,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011034] = {
           Content = "你这完全是乐在其中了啊……",
+          ContentDE = "Du hast da ja richtig Spaß dran ...",
           DialogueId = 51011034,
           GUID = "7FB365C4",
           SpeakNpcId = 100001
         },
         [51011035] = {
           Content = "是您啊，还请您帮忙保守秘密。作为回报，本店对您永久打折。",
+          ContentDE = "Sie sind es. Bitte bewahren Sie mein Geheimnis. Als Gegenleistung bekommen Sie bei uns dauerhaft Rabatt.",
           DialogueId = 51011035,
           GUID = "7FB365EE",
           SpeakNpcId = 700008
         },
         [51011101] = {
           Content = "哇，商户们工作得好认真！",
+          ContentDE = "Wow, die Händler arbeiten ja wirklich hart!",
           DialogueId = 51011101,
           GUID = "7FB370C2",
           NextDialogue = 51011102,
@@ -165329,6 +165540,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011102] = {
           Content = "不像我，只会睡觉和晒太阳……",
+          ContentDE = "Im Gegensatz zu mir ... Ich döse einfach nur in der Sonne.",
           DialogueId = 51011102,
           GUID = "7FB370EC",
           NextOptions = {
@@ -165340,6 +165552,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011103] = {
           Content = "每个人都有适合自己的生活方式。",
+          ContentDE = "Jeder hat seine eigene Art zu leben.",
           DialogueId = 51011103,
           GUID = "7FB37116",
           ImprPlusId = 1002,
@@ -165347,6 +165560,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011104] = {
           Content = "晒太阳和睡觉才是人生啊！",
+          ContentDE = "In der Sonne liegen und schlafen – das ist doch das wahre Leben!",
           DialogueId = 51011104,
           GUID = "7FB37140",
           ImprPlusId = 1004,
@@ -165354,6 +165568,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011105] = {
           Content = "晒太阳和睡觉对身体有好处，是对健康的长期投资。",
+          ContentDE = "In der Sonne liegen und schlafen, ist gut für den Körper. Eine langfristige Investition in die Gesundheit.",
           DialogueId = 51011105,
           GUID = "7FB3716A",
           ImprPlusId = 1003,
@@ -165361,6 +165576,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011106] = {
           Content = "哇，你很懂嘛。",
+          ContentDE = "Haha, du verstehst es wirklich.",
           DialogueId = 51011106,
           GUID = "7FB37194",
           NextDialogue = 51011107,
@@ -165368,6 +165584,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011107] = {
           Content = "但不劳动就总是有愧疚感，看到他们这么辛苦地赚钱，而我无所事事的却还这么富有，总觉得过意不去……",
+          ContentDE = "Aber wenn ich nicht arbeite, hab ich immer ein schlechtes Gewissen. Die rackern sich ab, um Geld zu verdienen. Und ich tu nichts aber bin trotzdem so reich ... Da fühlt man sich irgendwie mies ...",
           DialogueId = 51011107,
           GUID = "7FB371BE",
           NextDialogue = 51011108,
@@ -165375,6 +165592,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011108] = {
           Content = "但是对皎皎来说，如果不帮人干点啥就会浑身难受，不踏实，唉……",
+          ContentDE = "Aber für Lunos ist das so: Wenn ich niemandem helfe oder nichts tue, fühlt sich alles komisch an und ich werde unruhig. *seufz*",
           DialogueId = 51011108,
           GUID = "7FB371E8",
           NextOptions = {
@@ -165385,6 +165603,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011109] = {
           Content = "（询问空空皎皎致富秘诀。）",
+          ContentDE = "(Frage Faul-Luno nach ihrem Geheimnis zum Reichtum.)",
           DialogueId = 51011109,
           FailDialogue = 51011110,
           GUID = "7FB37212",
@@ -165393,12 +165612,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011110] = {
           Content = "……什么？哈（呵欠），你刚才说了什么吗……",
+          ContentDE = "... Hä? *gähn* ... Hast du gerade etwas gesagt?",
           DialogueId = 51011110,
           GUID = "7FB3723C",
           SpeakNpcId = 700336
         },
         [51011111] = {
           Content = "致富秘诀？就是我有次不小心从山崖掉了下去，碰巧捡了块价值连城的石头，一下子就变有钱了。这么多钱根本花不完……",
+          ContentDE = "Geheimnis zum Reichtum? Einmal bin ich aus Versehen von einer Klippe gefallen und hab zufällig einen Stein aufgehoben, der ein Vermögen wert war. Plötzlich hatte ich mehr Geld, als ich je ausgeben könnte.",
           DialogueId = 51011111,
           GUID = "7FB37266",
           NextDialogue = 51011112,
@@ -165406,6 +165627,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011112] = {
           Content = "要不你也从山崖上跳下去试试？",
+          ContentDE = "Willst du es auch mal versuchen? Spring einfach von einer Klippe.",
           DialogueId = 51011112,
           GUID = "7FB37290",
           NextOptions = {
@@ -165416,18 +165638,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011113] = {
           Content = "谢谢，已经试过了……",
+          ContentDE = "Danke, aber ich habe es schon probiert.",
           DialogueId = 51011113,
           GUID = "7FB372BA",
           NextDialogue = 51011115
         },
         [51011114] = {
           Content = "可恶，为什么同样是从山崖上掉下去，我就没摊上这种好事！",
+          ContentDE = "Verdammt! Warum hab ich beim Runterfallen nicht so ein Glück gehabt?!",
           DialogueId = 51011114,
           GUID = "7FB372E4",
           NextDialogue = 51011115
         },
         [51011115] = {
           Content = "唔……那我只能帮你到这里了。",
+          ContentDE = "Mmmh ... mehr kann ich dir da nicht helfen.",
           DialogueId = 51011115,
           GUID = "7FB3730E",
           NextDialogue = 51011116,
@@ -165435,12 +165660,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011116] = {
           Content = "哦！我想起来了，那个卖果子的瓦伦大叔又要我帮他传话呢！太好了，有事做了……",
+          ContentDE = "Oh! Ich hab’s wieder! Valen, der Obstverkäufer, will, dass ich eine Nachricht überbringe. Super, endlich mal was zu tun!",
           DialogueId = 51011116,
           GUID = "7FB37338",
           SpeakNpcId = 700336
         },
         [51011201] = {
           Content = "……",
+          ContentDE = "...",
           DialogueId = 51011201,
           GUID = "7FB3812A",
           NextDialogue = 51011202,
@@ -165448,12 +165675,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011202] = {
           Content = "（少女盯着窗外一言不发，聚焦在远处的目光似乎在浩瀚的苍穹中寻找着什么。）",
+          ContentDE = "(Das Mädchen starrt schweigend aus dem Fenster. Ihr Blick ist in die Ferne fixiert, als würde sie am endlosen Himmel nach etwas suchen.)",
           DialogueId = 51011202,
           GUID = "7FB38154",
           NextDialogue = 51011203
         },
         [51011203] = {
           Content = "（从她的身上，你感受到了一种不该属于她这个年纪的气息——凝滞、衰朽的气息。）",
+          ContentDE = "(Von ihr geht etwas aus, das nicht zu ihrem Alter passt – eine erstarrte, verfallene Aura.)",
           DialogueId = 51011203,
           GUID = "7FB3817E",
           NextOptions = {
@@ -165463,18 +165692,21 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011204] = {
           Content = "向她搭话",
+          ContentDE = "Sprich sie an",
           DialogueId = 51011204,
           GUID = "7FB381A8",
           NextDialogue = 51011205
         },
         [51011205] = {
           Content = "（或许是担心下一刻她就会做出什么不可挽回的事情，又或者是对她在寻找的事物产生了好奇，你决定向她搭话。）",
+          ContentDE = "(Vielleicht hast du Angst, dass sie im nächsten Moment etwas Unwiderrufliches tut. Oder du bist neugierig, wonach sie sucht. Du beschließt, sie anzusprechen.)",
           DialogueId = 51011205,
           GUID = "7FB381D2",
           NextDialogue = 51011206
         },
         [51011206] = {
           Content = "你好？",
+          ContentDE = "Hallo?",
           DialogueId = 51011206,
           GUID = "7FB381FC",
           NextDialogue = 51011207,
@@ -165482,6 +165714,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011207] = {
           Content = "……",
+          ContentDE = "...",
           DialogueId = 51011207,
           GUID = "7FB38226",
           NextDialogue = 51011208,
@@ -165489,6 +165722,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011208] = {
           Content = "……",
+          ContentDE = "...",
           DialogueId = 51011208,
           GUID = "7FB38250",
           NextDialogue = 51011209,
@@ -165496,6 +165730,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011209] = {
           Content = "有什么事直接说就好。",
+          ContentDE = "Sag einfach, was du willst.",
           DialogueId = 51011209,
           GUID = "7FB3827A",
           NextDialogue = 51011210,
@@ -165503,6 +165738,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011210] = {
           Content = "没什么，只是你好像一直在看很远的地方，是在找什么吗？",
+          ContentDE = "Ach nichts ... Mir ist nur aufgefallen, dass du die ganze Zeit in die Ferne starrst. Suchst du etwas?",
           DialogueId = 51011210,
           GUID = "7FB382A4",
           NextDialogue = 51011211,
@@ -165510,6 +165746,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011211] = {
           Content = "是吗……说不定，我没有在看向任何地方呢？",
+          ContentDE = "Wirklich ...? Vielleicht starre ich ja gar nicht irgendwohin.",
           DialogueId = 51011211,
           GUID = "7FB382CE",
           NextDialogue = 51011212,
@@ -165517,6 +165754,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011212] = {
           Content = "就只是……无意义地消磨时间而已。",
+          ContentDE = "Ich ... vertreibe mir nur sinnlos die Zeit.",
           DialogueId = 51011212,
           GUID = "7FB382F8",
           NextOptions = {
@@ -165527,6 +165765,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011213] = {
           Content = "我有时也会像这样发呆，感觉心情会变得平静。",
+          ContentDE = "Manchmal starre ich auch einfach so vor mich hin. Irgendwie wird man dabei ruhiger.",
           DialogueId = 51011213,
           GUID = "7FB38322",
           ImprPlusId = 1004,
@@ -165534,6 +165773,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011214] = {
           Content = "“有时”吗……看来你和我是不一样的人……",
+          ContentDE = "„Manchmal“ also ... Dann bist du wohl nicht so jemand wie ich.",
           DialogueId = 51011214,
           GUID = "7FB3834C",
           NextDialogue = 51011217,
@@ -165541,6 +165781,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011215] = {
           Content = "要不要聊聊别的话题，比如——晚饭吃什么？",
+          ContentDE = "Wollen wir über was anderes reden? Zum Beispiel: Was gibt’s heute Abend zu essen?",
           DialogueId = 51011215,
           GUID = "7FB38376",
           ImprPlusId = 1001,
@@ -165548,6 +165789,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011216] = {
           Content = "随便——我知道这算不上回答，但我的确没什么想吃的东西。",
+          ContentDE = "Egal ... Ich weiß, das ist keine richtige Antwort, aber ich hab wirklich auf nichts Lust.",
           DialogueId = 51011216,
           GUID = "7FB383A0",
           NextDialogue = 51011217,
@@ -165555,35 +165797,41 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011217] = {
           Content = "（少女垂下头去，不再多言。）",
+          ContentDE = "(Das Mädchen senkt den Kopf und sagt nichts mehr.)",
           DialogueId = 51011217,
           GUID = "7FB383CA",
           NextDialogue = 51011218
         },
         [51011218] = {
           Content = "（每个人都会有旁人无法得知的困境，并且终有一日将要独自面对。）",
+          ContentDE = "(Jeder schleppt Dinge mit sich herum, die niemand sonst kennt – und irgendwann muss man ihnen allein begegnen.)",
           DialogueId = 51011218,
           GUID = "7FB383F4",
           NextDialogue = 51011219
         },
         [51011219] = {
           Content = "（也许此刻的她还没有鼓起勇气，那就让她自己先静一静吧——你这样想着。）",
+          ContentDE = "(Vielleicht fehlt ihr gerade noch der Mut. Also lässt du ihr lieber erst mal ihren Freiraum, denkst du.)",
           DialogueId = 51011219,
           GUID = "7FB3841E"
         },
         [51011220] = {
           Content = "无视她",
+          ContentDE = "Ignoriere sie",
           DialogueId = 51011220,
           GUID = "7FB38448",
           NextDialogue = 51011221
         },
         [51011221] = {
           Content = "（或许是她过于阴郁的表情在周围凝结出了一片生人勿近的气场，你决定还是不要多管闲事了。）",
+          ContentDE = "(Ihr düsterer Ausdruck scheint wie eine Wolke um sie zu hängen. Du entscheidest, dass es besser ist, dich nicht einzumischen.)",
           DialogueId = 51011221,
           GUID = "7FB38472",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [51011301] = {
           Content = "离我远一点……我什么都不知道！！",
+          ContentDE = "Geh weg von mir. Ich weiß gar nichts ...",
           DialogueId = 51011301,
           GUID = "7FB39192",
           NextDialogue = 51011302,
@@ -165591,6 +165839,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011302] = {
           Content = "我只是想看看那只怀表，或许能修好也说不定。",
+          ContentDE = "Ich wollte nur die Taschenuhr ansehen ... vielleicht kann man sie ja reparieren.",
           DialogueId = 51011302,
           GUID = "7FB391BC",
           NextDialogue = 51011303,
@@ -165598,6 +165847,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011303] = {
           Content = "……",
+          ContentDE = "...",
           DialogueId = 51011303,
           GUID = "7FB391E6",
           NextDialogue = 51011304,
@@ -165605,6 +165855,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011304] = {
           Content = "那是很重要的东西吧？",
+          ContentDE = "Sie ist dir wichtig, oder?",
           DialogueId = 51011304,
           GUID = "7FB39210",
           NextDialogue = 51011305,
@@ -165612,6 +165863,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011305] = {
           Content = "真的……能修好吗？",
+          ContentDE = "Kannst du sie wirklich reparieren?",
           DialogueId = 51011305,
           GUID = "7FB3923A",
           NextOptions = {
@@ -165622,6 +165874,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011306] = {
           Content = "你愿意让我试试吗？",
+          ContentDE = "Willst du, dass ich es versuche?",
           DialogueId = 51011306,
           GUID = "7FB39264",
           ImprPlusId = 1004,
@@ -165629,6 +165882,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011307] = {
           Content = "我……我不知道……",
+          ContentDE = "Ich ... Ich weiß nicht ...",
           DialogueId = 51011307,
           GUID = "7FB3928E",
           NextDialogue = 51011308,
@@ -165636,6 +165890,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011308] = {
           Content = "亨特……我该怎么做？",
+          ContentDE = "Hunt ... was soll ich tun?",
           DialogueId = 51011308,
           GUID = "7FB392B8",
           NextDialogue = 51011309,
@@ -165643,6 +165898,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011309] = {
           Content = "所以，亨特他到底发生了什么？",
+          ContentDE = "Also, was ist mit Hunt passiert?",
           DialogueId = 51011309,
           GUID = "7FB392E2",
           NextDialogue = 51011310,
@@ -165650,6 +165906,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011310] = {
           Content = "他……",
+          ContentDE = "Er ...",
           DialogueId = 51011310,
           GUID = "7FB3930C",
           NextDialogue = 51011311,
@@ -165657,6 +165914,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011311] = {
           Content = "不，我不能说。请你离开这里吧，不要再来了。",
+          ContentDE = "Nein. Ich darf’s nicht sagen. Bitte geh. Komm nicht wieder.",
           DialogueId = 51011311,
           GUID = "7FB39336",
           NextDialogue = 51011317,
@@ -165664,6 +165922,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011312] = {
           Content = "城里应该有钟表匠吧，我们可以找他们帮忙。",
+          ContentDE = "In der Stadt gibt’s doch bestimmt Uhrmacher. Wir könnten sie um Hilfe bitten.",
           DialogueId = 51011312,
           GUID = "7FB39360",
           ImprPlusId = 1003,
@@ -165671,6 +165930,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011313] = {
           Content = "那请你……",
+          ContentDE = "Dann bitte ...",
           DialogueId = 51011313,
           GUID = "7FB3938A",
           NextDialogue = 51011314,
@@ -165678,6 +165938,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011314] = {
           Content = "不……不可以相信外面的人。",
+          ContentDE = "Nein ... man darf Außenstehenden nicht trauen.",
           DialogueId = 51011314,
           GUID = "7FB393B4",
           NextDialogue = 51011315,
@@ -165685,6 +165946,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011315] = {
           Content = "当我什么都没说过吧。",
+          ContentDE = "Vergiss einfach, was ich gesagt habe.",
           DialogueId = 51011315,
           GUID = "7FB393DE",
           NextDialogue = 51011316,
@@ -165692,6 +165954,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011316] = {
           Content = "请你离开这里，不要再来了。",
+          ContentDE = "Bitte geh. Komm nicht wieder.",
           DialogueId = 51011316,
           GUID = "7FB39408",
           NextDialogue = 51011317,
@@ -165699,17 +165962,20 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011317] = {
           Content = "（少女的情绪转变让你一时间不知道该如何应对，只能试图从她的眼神中得到更多信息。）",
+          ContentDE = "(Ihr Stimmungswechsel überfordert dich kurz. Du versuchst, aus ihren Augen mehr herauszulesen.)",
           DialogueId = 51011317,
           GUID = "7FB39432",
           NextDialogue = 51011318
         },
         [51011318] = {
           Content = "（那是双充满迷茫与悲伤的眼睛，却又夹杂着一丝不易察觉的信念。你并不知道那信念从何而来，又意味着什么。但你明白这就是她守口如瓶的原因。）",
+          ContentDE = "(Ihre Augen sind voller Verlorenheit und Trauer, und doch liegt darin ein winziger Funken Entschlossenheit. Du weißt nicht, woher er kommt oder was er bedeutet. Aber du verstehst: Das ist der Grund, warum sie so eisern schweigt.)",
           DialogueId = 51011318,
           GUID = "7FB3945C"
         },
         [51011401] = {
           Content = "桌子……擦过了。地板……也擦过了。还剩……扶手，对，还有扶手。",
+          ContentDE = "Der Tisch ... gewischt ... der Boden auch. Übrig bleibt ... das Geländer. Ja, genau, das Geländer.",
           DialogueId = 51011401,
           GUID = "7FB3A1FA",
           NextDialogue = 51011402,
@@ -165717,12 +165983,14 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011402] = {
           Content = "（少年絮絮自言自语着什么，面露急色，双手无所适从地比划着。）",
+          ContentDE = "(Der Junge murmelt vor sich hin, wirkt hektisch und fuchtelt mit den Händen, als wüsste er nicht, wohin mit ihnen.)",
           DialogueId = 51011402,
           GUID = "7FB3A224",
           NextDialogue = 51011403
         },
         [51011403] = {
           Content = "……你让一让。",
+          ContentDE = "... Bitte zur Seite.",
           DialogueId = 51011403,
           GUID = "7FB3A24E",
           NextDialogue = 51011404,
@@ -165730,6 +165998,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011404] = {
           Content = "嗯？",
+          ContentDE = "Hm?",
           DialogueId = 51011404,
           GUID = "7FB3A278",
           NextDialogue = 51011405,
@@ -165737,6 +166006,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011405] = {
           Content = "扶手，还没有擦。不要挡路。",
+          ContentDE = "Das Geländer ist noch nicht gewischt. Steh nicht im Weg.",
           DialogueId = 51011405,
           GUID = "7FB3A2A2",
           NextDialogue = 51011406,
@@ -165744,6 +166014,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011406] = {
           Content = "（顺着少年急切不安的视线，你看到了他凝视着的东西——楼梯扶手。但在你看来，那个扶手不算新，却光洁锃亮，一尘不染。）",
+          ContentDE = "(Seinem nervösen Blick folgend siehst du, worauf er starrt: das Treppengeländer. Für dich wirkt es nicht neu, aber blitzblank – kein Staubkorn.)",
           DialogueId = 51011406,
           GUID = "7FB3A2CC",
           NextOptions = {
@@ -165753,6 +166024,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011407] = {
           Content = "不用擦了。我瞧着那个扶手还挺干净的。",
+          ContentDE = "Musst du nicht wischen. Sieht doch sauber aus.",
           DialogueId = 51011407,
           GUID = "7FB3A2F6",
           ImprPlusId = 1001,
@@ -165760,6 +166032,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011408] = {
           Content = "不干净！那里我今天还没擦过，不能算干净……",
+          ContentDE = "Nein, da hab ich heute noch nicht drübergewischt, also ist es nicht sauber ...",
           DialogueId = 51011408,
           GUID = "7FB3A320",
           NextDialogue = 51011409,
@@ -165767,6 +166040,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011409] = {
           Content = "还有二楼的画框、书橱、落地灯……还有……",
+          ContentDE = "Und oben im zweiten Stock, die Bilderrahmen, Regale, Stehlampen ... und noch ...",
           DialogueId = 51011409,
           GUID = "7FB3A34A",
           NextDialogue = 51011410,
@@ -165774,6 +166048,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011410] = {
           Content = "不要管我，拜托你……你就没有自己的事要忙吗？",
+          ContentDE = "Lass mich einfach. Bitte ... hast du nichts Eigenes zu tun?",
           DialogueId = 51011410,
           GUID = "7FB3A374",
           NextDialogue = 51011412,
@@ -165781,6 +166056,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011411] = {
           Content = "（让出道路。）",
+          ContentDE = "(Gib den Weg frei.)",
           DialogueId = 51011411,
           GUID = "7FB3A39E",
           ImprPlusId = 1004,
@@ -165788,41 +166064,48 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51011412] = {
           Content = "（你识趣地耸耸肩，侧身让出一条道路，任由他徒劳奔忙。）",
+          ContentDE = "(Du zuckst verständig mit den Schultern, trittst zur Seite und lässt ihn in seinem sinnlosen Eifer weiterhetzen.)",
           DialogueId = 51011412,
           GUID = "7FB3A3C8"
         },
         [51011501] = {
           Content = "好心人，求你帮帮我……给多少都可以……救救身无分文的老人家吧……",
+          ContentDE = "Gutherziger Mensch, bitte hilf mir ... ich zahl, egal wie viel ... rette einen alten Mann, der keinen Heller mehr hat ...",
           DialogueId = 51011501,
           GUID = "7FB3B262",
           SpeakNpcId = 700338
         },
         [51011601] = {
           Content = "末日将至啊……末日将至……",
+          ContentDE = "Das Ende kommt ... Das Ende kommt ...",
           DialogueId = 51011601,
           GUID = "7FB3C2CA",
           SpeakNpcId = 700337
         },
         [51011701] = {
           Content = "哇，商户们工作得好认真！",
+          ContentDE = "Wow, die Händler arbeiten ja wirklich hart!",
           DialogueId = 51011701,
           GUID = "7FB3D332",
           SpeakNpcId = 700336
         },
         [51011801] = {
           Content = "……",
+          ContentDE = "...",
           DialogueId = 51011801,
           GUID = "7FB3E39A",
           SpeakNpcId = 700339
         },
         [51011901] = {
           Content = "离我远一点……我什么都不知道！！",
+          ContentDE = "Geh weg von mir. Ich weiß gar nichts ...",
           DialogueId = 51011901,
           GUID = "7FB3F402",
           SpeakNpcId = 700341
         },
         [51012001] = {
           Content = "……先别说话。这些台阶，还没擦干净。",
+          ContentDE = "... Nicht reden jetzt. Die Stufen sind noch nicht richtig sauber.",
           DialogueId = 51012001,
           GUID = "7FB4046A",
           SpeakNpcId = 700340
@@ -172534,24 +172817,28 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         },
         [51105201] = {
           Content = "一年一度的银烛狂欢节结束了，一切似乎都回复平静。水仙平原也理应恢复到一如既往的喧嚣气氛。",
+          ContentDE = "Der jährliche Silberkerzen-Karneval ist vorbei, und alles scheint wieder ruhig zu werden. Auch die Asphodel müsste eigentlich zu ihrer gewohnten, geschäftigen Stimmung zurückfinden.",
           DialogueId = 51105201,
           GUID = "7FEFBF0A",
           NextDialogue = 51105202
         },
         [51105202] = {
           Content = "但事实却并非如此……一连串的意外给本该人人尽兴的狂欢蒙上阴影。",
+          ContentDE = "Doch in Wahrheit ist es anders ... Eine Reihe von Zwischenfällen hat einen Schatten auf die Feier gelegt, die eigentlich alle hätte begeistern sollen.",
           DialogueId = 51105202,
           GUID = "7FEFBF34",
           NextDialogue = 51105203
         },
         [51105203] = {
           Content = "于是，一件略带喧闹的小事在狂欢结束后的某天，悄然发生。",
+          ContentDE = "Und so fand an einem Tag nach dem Fest ganz leise eine kleine aber ziemlich turbulente Begebenheit statt.",
           DialogueId = 51105203,
           GUID = "7FEFBF5E"
         },
         [51105204] = {
           Camera = "122.45166,-377.09082,180.578125,0.000048,-8.599699,81.995476,35.0,219.013687,false,Manual,2.8",
           Content = "……唉，没什么动力啊，总感觉没玩够。",
+          ContentDE = "... *seufz* Irgendwie fehlt mir die Motivation. Als hätte ich noch nicht genug gespielt.",
           DialogueId = 51105204,
           GUID = "7FEFBF88",
           NextDialogue = 51105205,
@@ -172563,6 +172850,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105205] = {
           Camera = "391.339111,-304.583008,188.128906,0.00004,-11.199583,155.19725,35.0,305.677551,false,Manual,2.8",
           Content = "银烛狂欢就这么收场，真没意思，我一点灵感都没有了。",
+          ContentDE = "So endet der Silberkerzen-Karneval? Wie langweilig. Ich hab null Inspiration.",
           DialogueId = 51105205,
           GUID = "7FEFBFB2",
           LookAt = {
@@ -172579,6 +172867,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105206] = {
           Camera = "240.266602,24.936523,161.671875,0.000056,-2.399227,52.196819,35.0,204.573959,false,Manual,2.8",
           Content = "……",
+          ContentDE = "...",
           DialogueId = 51105206,
           FacialId = {
             [1] = "200003:Syouganai01"
@@ -172590,6 +172879,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105207] = {
           Camera = "-408.350037,74.383789,220.105469,0.00001,-11.599511,-24.20009,35.0,717.932434,false,Manual,2.8",
           Content = "怎么回事，大家都一副无精打采的样子。按照以往来说，卡米拉应该开始让大家别瘫在座位上影响生意了。",
+          ContentDE = "Was ist los? Alle wirken total schlapp. Normalerweise würde Camilla längst alle anschnauzen, sie sollen nicht faul auf den Stühlen herumlümmeln und das Geschäft verderben.",
           DialogueId = 51105207,
           FacialId = {
             [1] = "700352:Doubt01"
@@ -172609,6 +172899,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105208] = {
           Camera = "-408.350037,74.383789,220.105469,0.00001,-11.599511,-24.20009,35.0,717.932434,false,Manual,2.8",
           Content = "结果就连卡米拉也懒得说话。",
+          ContentDE = "Aber selbst Camilla ist zu träge zum Plaudern.",
           DialogueId = 51105208,
           GUID = "7FEFC030",
           NextDialogue = 51105209,
@@ -172617,6 +172908,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105209] = {
           Camera = "65.352905,-133.640625,128.195312,0.000014,-13.199456,-33.401524,35.0,191.233246,false,Manual,2.8",
           Content = "啊！我知道了，一定是银烛狂欢大家玩得太累了，所以需要休息一段时间。",
+          ContentDE = "Ah! Ich weiß! Bestimmt haben alle beim Silberkerzen-Karneval einfach zu viel gefeiert und müssen sich erst mal ausruhen.",
           DialogueId = 51105209,
           FacialId = {
             [1] = "700352:Confident01"
@@ -172634,6 +172926,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105210] = {
           Camera = "122.45166,-377.09082,180.578125,0.000048,-8.599699,81.995476,35.0,219.013687,false,Manual,2.8",
           Content = "不是的，并且恰恰相反，是因为今年的银烛狂欢由于剧院发生的意外，没有最后的收尾就匆忙结束了。",
+          ContentDE = "Nein – genau andersrum. Dieses Jahr wurde der Silberkerzen-Karneval wegen des Theaterunfalls überstürzt beendet, ohne ein richtiges Finale.",
           DialogueId = 51105210,
           GUID = "7FEFC084",
           LookAt = {
@@ -172648,6 +172941,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105211] = {
           Camera = "122.45166,-377.09082,180.578125,0.000048,-8.599699,81.995476,35.0,219.013687,false,Manual,2.8",
           Content = "就总觉得……提不起劲啊，狂欢的氛围开始没多久，就戛然而止了。这比一开始没有开始狂欢还要难受。",
+          ContentDE = "Irgendwie kommt man einfach nicht in Schwung. Die Feier war kaum im Gange und dann war plötzlich Schluss. Das ist schlimmer, als wenn man gar nicht erst gefeiert hätte.",
           DialogueId = 51105211,
           GUID = "7FEFC0AE",
           NextDialogue = 51105212,
@@ -172656,6 +172950,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105212] = {
           Camera = "65.352905,-133.640625,128.195312,0.000014,-13.199456,-33.401524,35.0,191.233246,false,Manual,2.8",
           Content = "原来如此，也不是不能理解，就像很多时候我想要帮助别人，帮到一半才发现事情已经解决了一样，就是会很泄气！",
+          ContentDE = "Verstehe. Das kann ich sogar nachvollziehen. So wie wenn ich jemandem helfen will und mitten drin merke ich, dass sich das Problem schon erledigt hat – das zieht einen komplett runter!",
           DialogueId = 51105212,
           FacialId = {
             [1] = "700352:Think02"
@@ -172667,6 +172962,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105213] = {
           Camera = "353.20105,-320.401367,139.5,0.000096,-2.398947,159.395554,35.0,253.984177,false,Manual,2.8",
           Content = "没错！就好像是最终消失了的梦中灵感、打到一半但是没有打出来的喷嚏……甚至我都想不出第三个合适的比喻来形容。",
+          ContentDE = "Ganz genau! Es ist, als hätte man im Traum eine geniale Idee – und in dem Moment, in dem man aufwacht, ist sie weg. Oder wie ein Niesen, das einfach nicht herauskommt! Ich weiß nicht einmal, wie ich es beschreiben soll.",
           DialogueId = 51105213,
           GUID = "7FEFC102",
           LookAt = {
@@ -172678,6 +172974,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105214] = {
           Camera = "353.20105,-320.401367,139.5,0.000096,-2.398947,159.395554,35.0,253.984177,false,Manual,2.8",
           Content = "总之就是，没有生机！",
+          ContentDE = "Kurz gesagt, alles wirkt einfach leblos!",
           DialogueId = 51105214,
           GUID = "7FEFC12C",
           NextDialogue = 51105215,
@@ -172689,6 +172986,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105215] = {
           Camera = "65.352905,-133.640625,128.195312,0.000014,-13.199456,-33.401524,35.0,191.233246,false,Manual,2.8",
           Content = "听起来有些严重……",
+          ContentDE = "Klingt ziemlich ernst ...",
           DialogueId = 51105215,
           FacialId = {
             [1] = "700352:Sad01"
@@ -172706,6 +173004,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105216] = {
           Camera = "65.352905,-133.640625,128.195312,0.000014,-13.199456,-33.401524,35.0,191.233246,false,Manual,2.8",
           Content = "不行，我得想想办法，找人一起来帮帮忙，否则大家变不回之前正常的样子啦。",
+          ContentDE = "Nein, ich muss mir etwas einfallen lassen. Ich brauche Leute, die mitanpacken – sonst kehren alle nie wieder in ihren normalen Zustand zurück!",
           DialogueId = 51105216,
           GUID = "7FEFC180",
           LookAt = {
@@ -172720,6 +173019,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105217] = {
           Camera = "65.352905,-133.640625,128.195312,0.000014,-13.199456,-33.401524,35.0,191.233246,false,Manual,2.8",
           Content = "该找谁呢……哦！她们，找她们准没错。毕竟她们一直以来都情绪稳定，不会受任何外界影响。",
+          ContentDE = "Wen soll ich dazuholen ... oh! Die da. Die sind perfekt. Die lassen sich nämlich nie hängen und lassen sich von nichts aus der Ruhe bringen.",
           DialogueId = 51105217,
           FacialId = {
             [1] = "700352:None"
@@ -172734,6 +173034,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105218] = {
           Camera = "-310.544434,-605.483398,200.802734,0.000083,-9.19898,40.997597,35.0,588.773376,false,Manual,2.8",
           Content = "我只要问问她们是怎样不受外界影响，保持工作热情的，就一定能借助她们的心得，让整个冰湖城重新打起精神来。",
+          ContentDE = "Wenn ich sie frage, wie sie sich nicht von äußeren Dingen beeinflussen lassen und ihre Arbeitsleidenschaft behalten, kann ich ihre Erfahrungen nutzen, um ganz Icelake wieder aufzurütteln!",
           DialogueId = 51105218,
           GUID = "7FEFC1D4",
           SpeakNpcId = 700352
@@ -172741,6 +173042,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105301] = {
           Camera = "457.37326,-586.730225,248.960373,0.000032,-15.000139,121.598587,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "三位前辈，如何让冰湖城焕发生机，就拜托你们了！",
+          ContentDE = "Drei verehrte Meisterinnen, bitte helft mir, Icelake wieder neues Leben einzuhauchen!",
           DialogueId = 51105301,
           GUID = "7FEFCF72",
           NextDialogue = 51105302,
@@ -172750,6 +173052,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105302] = {
           Camera = "272.063049,-136.137207,110.183517,0.000049,-7.200071,139.397171,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "喔，虽然老朽只懂如何锻造，但是看到白这么热情，确实不好推辞啊。",
+          ContentDE = "Oh, auch wenn ich nur das Schmieden verstehe, bei so viel Begeisterung von Snow kann ich schlecht nein sagen.",
           DialogueId = 51105302,
           FacialId = {
             [1] = "700353:Happy02"
@@ -172761,6 +173064,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105303] = {
           Camera = "272.063049,-136.137207,110.183517,0.000049,-7.200071,139.397171,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "虽然我一直为大家在休息时提供饮品和补给，但如果所有人一直都在休息的话，那也是不对的。",
+          ContentDE = "Ich versorge zwar alle in ihren Pausen mit Getränken und Nachschub, aber wenn alle die ganze Zeit Pause machen, ist das auch nicht richtig.",
           DialogueId = 51105303,
           GUID = "7FEFCFC6",
           NextDialogue = 51105304,
@@ -172769,6 +173073,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105304] = {
           Camera = "272.063049,-136.137207,110.183517,0.000049,-7.200071,139.397171,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯嗯，白这份心意很好，冰湖城在我的记录里一直是北方的都市，要是大家都一直提不起劲，我就要把记录变成北方的睡城啦。",
+          ContentDE = "Mh, mh. Snows Absichten sind gut. In meinen Aufzeichnungen war Icelake schon immer die nördliche Metropole. Wenn alle ständig schlapp sind, muss ich sie wohl in nördliche Schlafstadt umschreiben.",
           DialogueId = 51105304,
           GUID = "7FEFCFF0",
           NextDialogue = 51105305,
@@ -172777,6 +173082,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105305] = {
           Camera = "31.725586,31.275146,96.110329,0.000056,-5.000033,-13.205209,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "对吧，我也觉得，所以呀，让我们一起来想想办法，让大家都振作起来吧。",
+          ContentDE = "Genau! Find ich auch. Also, lasst uns zusammen überlegen, wie wir alle wieder in Schwung bringen!",
           DialogueId = 51105305,
           GUID = "7FEFD01A",
           NextDialogue = 51105306,
@@ -172788,6 +173094,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105306] = {
           Camera = "135.03241,-10.31543,93.88092,0.000073,-4.399932,146.59407,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "依老朽之见啊，方法很简单——",
+          ContentDE = "Nach meiner Meinung ist es ganz einfach ...",
           DialogueId = 51105306,
           FacialId = {
             [1] = "700353:Happy01"
@@ -172799,6 +173106,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105307] = {
           Camera = "130.178741,-15.803711,93.827461,0.000077,-0.999905,121.994286,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "没有其他的方法了，那就是——",
+          ContentDE = "Einen anderen Weg gibt’s nicht, nämlich ...",
           DialogueId = 51105307,
           GUID = "7FEFD06E",
           NextDialogue = 51105308,
@@ -172810,6 +173118,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105308] = {
           Camera = "132.125397,17.031494,91.702133,0.000075,-2.599946,-177.40564,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "是啊，我一下子就想到了——",
+          ContentDE = "Ja, daran hab ich sofort gedacht ...",
           DialogueId = 51105308,
           GUID = "7FEFD098",
           NextDialogue = 51105309,
@@ -172821,6 +173130,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105309] = {
           Camera = "31.725586,31.275146,96.110329,0.000056,-5.000033,-13.205209,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "是什么呢！",
+          ContentDE = "Und was?!",
           DialogueId = 51105309,
           GUID = "7FEFD0C2",
           NextDialogue = 51105310,
@@ -172832,6 +173142,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105310] = {
           Camera = "618.50708,-678.68042,180.93396,0.000092,-5.799923,127.191681,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "锻造！\n经商！\n冒险！",
+          ContentDE = "Schmieden! Handel! Abenteuer!",
           DialogueId = 51105310,
           FacialId = {
             [1] = "700353:Smile02"
@@ -172843,6 +173154,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105311] = {
           Camera = "31.725586,31.275146,96.110329,0.000056,-5.000033,-13.205209,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "这不是完全不一样嘛！！！",
+          ContentDE = "Das ist ja komplett unterschiedlich!!!",
           DialogueId = 51105311,
           FacialId = {
             [1] = "700352:Unhappy01"
@@ -172857,6 +173169,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105312] = {
           Camera = "429.908936,-169.867676,216.608871,0.000088,-20.19973,151.389633,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "并且与其说是方法，不如说是三位前辈各自擅长的事情！",
+          ContentDE = "Und ehrlich gesagt, das sind weniger „Methoden“ als die Dinge, in denen ihr drei gut seid!",
           DialogueId = 51105312,
           GUID = "7FEFD140",
           NextDialogue = 51105313,
@@ -172868,6 +173181,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105313] = {
           Camera = "214.145203,-52.911133,124.187378,0.000093,-10.999684,148.988251,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "哦？这确实是出乎我的意料之外。",
+          ContentDE = "Oh? Ihr habt mich wirklich überrascht.",
           DialogueId = 51105313,
           FacialId = {
             [1] = "700353:Shock01"
@@ -172879,6 +173193,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105314] = {
           Camera = "214.145203,-52.911133,124.187378,0.000093,-10.999684,148.988251,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "我还以为你们俩和我想的完全一样。",
+          ContentDE = "Ich dachte, ihr zwei würdet genau dasselbe sagen wie ich.",
           DialogueId = 51105314,
           GUID = "7FEFD194",
           LookAt = {
@@ -172890,6 +173205,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105315] = {
           Camera = "214.145203,-52.911133,124.187378,0.000093,-10.999684,148.988251,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "……嗯，原来你们不来卖东西是因为真的觉得经商不是最重要的，有点失望。",
+          ContentDE = "... Hm. Also verkauft ihr nichts, weil ihr wirklich findet, dass Handel nicht das Wichtigste ist. Irgendwie enttäuschend.",
           DialogueId = 51105315,
           GUID = "7FEFD1BE",
           LookAt = {
@@ -172901,6 +173217,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105316] = {
           Camera = "31.725586,31.275146,96.110329,0.000056,-5.000033,-13.205209,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "停，停一下三位前辈。这样吧，既然你们各自都觉得自己在干的事情能够让人振奋精神，那，那我来挨个试一遍好了。",
+          ContentDE = "Stopp, stopp, ihr drei Meisterinnen. Also gut, wenn ihr alle meint, dass das, was ihr macht, die Leute wieder aufmuntert ... dann probiere ich es eben nacheinander aus.",
           DialogueId = 51105316,
           GUID = "7FEFD1E8",
           LookAt = {
@@ -172916,6 +173233,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105317] = {
           Camera = "-202.37793,93.230225,130.826981,0.000078,-8.999676,-11.213411,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "好，那么就从我这里开始吧，和老朽一起挥动铁锤，一定会打起精神的。",
+          ContentDE = "Gut, dann fangen wir bei mir an. Wenn du mit mir den Hammer schwingst, kommt die Energie von ganz allein zurück.",
           DialogueId = 51105317,
           FacialId = {
             [1] = "700353:Confident02"
@@ -172927,6 +173245,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105318] = {
           Camera = "-202.37793,93.230225,130.826981,0.000078,-8.999676,-11.213411,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "好，铁匠前辈，我之前没有干过这种活，你教一教我。",
+          ContentDE = "Richtig! Aber ich habe das noch nie gemacht. Kannst du mir zeigen, wie es geht?",
           DialogueId = 51105318,
           FacialId = {
             [1] = "700353:CM_Idle"
@@ -172941,6 +173260,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105319] = {
           Camera = "-202.37793,93.230225,130.826981,0.000078,-8.999676,-11.213411,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "简单的简单的，拿起铁锤，深吸一口气，砸——",
+          ContentDE = "Ganz einfach: Hammer nehmen, tief durchatmen, und dann – zack!",
           DialogueId = 51105319,
           FacialId = {
             [1] = "700353:Smile02"
@@ -172952,6 +173272,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105320] = {
           Camera = "-202.37793,93.230225,130.826981,0.000078,-8.999676,-11.213411,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "一边砸，一遍想着别人看到你锻造出的东西满意地露出笑容，就会产生动力。",
+          ContentDE = "Und während du schlägst, stellst du dir vor, wie andere dein Werk sehen und zufrieden lächeln. Das gibt Antrieb.",
           DialogueId = 51105320,
           GUID = "7FEFD290",
           NextDialogue = 51105321,
@@ -172960,6 +173281,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105321] = {
           Camera = "-202.37793,93.230225,130.826981,0.000078,-8.999676,-11.213411,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "并且呀，有节奏地敲击铁锤，看着火花迸出，每锤一次都会涌现出成就感。",
+          ContentDE = "Und obendrein vermittelt es dir bei jedem rhythmischen Schlag, wenn die Funken sprühen, ein echtes Erfolgserlebnis.",
           DialogueId = 51105321,
           GUID = "7FEFD2BA",
           NextDialogue = 51105322,
@@ -172968,6 +173290,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105322] = {
           Camera = "-5.819641,123.071289,115.489243,0.000093,-10.599607,-37.011742,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯……好的，我明白了，总的来说就是，挥舞铁锤会让人感到振奋。",
+          ContentDE = "Hm ... okay, verstanden. Hammer schwingen macht wach und bringt Schwung rein.",
           DialogueId = 51105322,
           FacialId = {
             [1] = "700352:Happy02"
@@ -172982,6 +173305,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105323] = {
           Camera = "-5.819641,123.071289,115.489243,0.000093,-10.599607,-37.011742,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那么让白来试一试……呜哇，好重……",
+          ContentDE = "Dann probiert Snow das mal ... Ach, ist das schwer ...",
           DialogueId = 51105323,
           FacialId = {
             [1] = "700352:Shock02"
@@ -172996,6 +173320,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         },
         [51105324] = {
           Content = "白举起铁锤，用力挥舞了起来。",
+          ContentDE = "Snow hebt den Hammer und schwingt ihn mit voller Kraft.",
           DialogueId = 51105324,
           GUID = "7FEFD338",
           IsBlack = 1,
@@ -173004,6 +173329,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105325] = {
           Camera = "31.725586,31.275146,96.110329,0.000056,-5.000033,-13.205209,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯，确实抡起大锤来会让人感觉力量从身体里涌出……",
+          ContentDE = "Hm, stimmt schon ... wenn man so einen Vorschlaghammer schwingt, fühlt’s sich an, als würde die Kraft direkt aus dem Körper hochschießen ...",
           DialogueId = 51105325,
           FacialId = {
             [1] = "700352:Confident02"
@@ -173018,6 +173344,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105326] = {
           Camera = "31.725586,31.275146,96.110329,0.000056,-5.000033,-13.205209,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "要不就号召大家一起来打铁锻造吧，一定能感到快乐的！",
+          ContentDE = "Vielleicht sollten wir alle dazu aufrufen, gemeinsam zu schmieden! Das macht bestimmt Spaß!",
           DialogueId = 51105326,
           GUID = "7FEFD38C",
           NextDialogue = 51105327,
@@ -173025,6 +173352,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         },
         [51105327] = {
           Content = "随着白挥舞锤子的时间越来越长，她的速度也逐渐变慢……",
+          ContentDE = "Doch je länger Snow schwingt, desto langsamer werden ihre Bewegungen ...",
           DialogueId = 51105327,
           GUID = "7FEFD3B6",
           IsBlack = 1,
@@ -173036,6 +173364,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105328] = {
           Camera = "31.725586,31.275146,96.110329,0.000056,-5.000033,-13.205209,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "好累……我挥不动了……",
+          ContentDE = "So müde ... ich kann nicht mehr ...",
           DialogueId = 51105328,
           FacialId = {
             [1] = "700352:Sad03"
@@ -173050,6 +173379,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105329] = {
           Camera = "-1.381409,25.406982,97.682739,0.000088,-5.599846,-10.014951,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "不行，我累坏了，我必须立刻睡觉……晚安……",
+          ContentDE = "Nein ... ich bin völlig fertig. Ich brauche Schlaf ... Gute Nacht ...",
           DialogueId = 51105329,
           GUID = "7FEFD40A",
           NextDialogue = 51105330,
@@ -173058,6 +173388,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105330] = {
           Camera = "-1.381409,25.406982,97.682739,0.000088,-5.599846,-10.014951,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "并且我得出一个结论，这种方法不太适合……让大家振奋精神。",
+          ContentDE = "Und ich bin zu einem Schluss gekommen. Diese Methode eignet sich wohl eher nicht dazu ... alle wieder in Schwung zu bringen.",
           DialogueId = 51105330,
           FacialId = {
             [1] = "700352:Syouganai01"
@@ -173069,6 +173400,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105331] = {
           Camera = "203.842834,-65.611328,97.294655,0.000084,-5.799711,133.783813,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "所以啊，这样是不行的，过度地劳动只会让大家变得更加疲惫。",
+          ContentDE = "Also so klappt das nicht. Zu viel Schufterei macht alle nur noch fertiger.",
           DialogueId = 51105331,
           GUID = "7FEFD45E",
           NextDialogue = 51105332,
@@ -173077,6 +173409,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105332] = {
           Camera = "203.842834,-65.611328,97.294655,0.000084,-5.799711,133.783813,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "本来狂欢节就是为了让大家休息才设立的，敲敲打打的声音只适合作为狂欢节的背景音乐。",
+          ContentDE = "Das Fest sollte den Leuten eigentlich Entspannung bringen, nicht zu einem Workout werden. Das Klirren der Hämmer hätte nur Hintergrundgeräusch sein sollen, nicht das Hauptereignis.",
           DialogueId = 51105332,
           GUID = "7FEFD488",
           NextDialogue = 51105333,
@@ -173085,6 +173418,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105333] = {
           Camera = "390.128845,-909.648804,240.500732,0.000087,-4.799129,103.981491,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "是这样吗？哎呀，能做背景音乐也很好啦，那么接下来该你啦。让我们见识见识什么叫做经商能够带来活力。",
+          ContentDE = "Ist das so? Ach komm, als Hintergrundgeräusch ist es doch auch was! Und jetzt bist du dran. Zeig uns mal, wie Handel Energie bringt.",
           DialogueId = 51105333,
           FacialId = {
             [1] = "700353:Happy01"
@@ -173096,6 +173430,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105334] = {
           Camera = "390.128845,-909.648804,240.500732,0.000087,-4.799129,103.981491,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "哼哼，我看你是一直待在屋内打铁，根本不知道外面发生过什么。",
+          ContentDE = "Hmph. Du hockst wohl die ganze Zeit drinnen am Amboss und kriegst gar nicht mit, was draußen abgeht.",
           DialogueId = 51105334,
           GUID = "7FEFD4DC",
           NextDialogue = 51105335,
@@ -173104,6 +173439,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105335] = {
           Camera = "390.128845,-909.648804,240.500732,0.000087,-4.799129,103.981491,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "跟我来吧，顺便把睡着的白给一起抬出去。",
+          ContentDE = "Folge mir. Und vergiss nicht, den Schlafmützen auch mitzunehmen.",
           DialogueId = 51105335,
           GUID = "7FEFD506",
           SpeakNpcId = 700354
@@ -173111,6 +173447,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105401] = {
           Camera = "-1078.888672,-652.357727,332.403564,0.000018,-12.600039,32.600487,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "咦？我怎么在广场上啦？难道是因为我挥舞锤子的力气太大，把自己甩飞出去啦？",
+          ContentDE = "Hä? Wieso bin ich auf einmal auf dem Platz? Hab ich mich etwa mit dem Hammer so hart geschwungen, dass ich mich selbst weggeschleudert hab?!",
           DialogueId = 51105401,
           FacialId = {
             [1] = "700352:Shock02"
@@ -173128,6 +173465,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105402] = {
           Camera = "-1078.888672,-652.357727,332.403564,0.000018,-12.600039,32.600487,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那你们没事吧？有没有受伤？",
+          ContentDE = "Und ihr? Alles okay? Verletzt?",
           DialogueId = 51105402,
           GUID = "7FEFE004",
           LookAt = {
@@ -173139,6 +173477,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105403] = {
           Camera = "-158.35083,-438.890656,112.984375,0.000041,-9.199888,76.798775,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "不是啦，只是刚刚你太用力，累坏了而已。",
+          ContentDE = "Nein, du hast nur viel zu sehr reingehauen und dich komplett verausgabt.",
           DialogueId = 51105403,
           GUID = "7FEFE02E",
           LookAt = {
@@ -173153,6 +173492,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105404] = {
           Camera = "-255.641846,4.335266,87.516602,0.000049,-5.799889,-10.203091,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "原来是这样……不过我刚刚要干什么来着。",
+          ContentDE = "Ach so, stimmt ... aber was wollten wir gerade nochmal?",
           DialogueId = 51105404,
           FacialId = {
             [1] = "700352:CM_Idle"
@@ -173167,6 +173507,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105405] = {
           Camera = "19.978271,-270.103577,92.347168,0.000058,-6.999878,105.596878,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "是打算用经商来让冰湖城重新焕发生机哦。",
+          ContentDE = "Wir wollten mit Handel Icelake wieder auf Trab bringen.",
           DialogueId = 51105405,
           GUID = "7FEFE082",
           NextDialogue = 51105406,
@@ -173175,6 +173516,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105406] = {
           Camera = "-255.641846,4.335266,87.516602,0.000049,-5.799889,-10.203091,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "哦对，想起来了，那么到底要怎么做，侍者前辈，请教教我！",
+          ContentDE = "Oh! Stimmt, jetzt weiß ich’s wieder. Also wie macht man das genau? Bring’s mir bei!",
           DialogueId = 51105406,
           GUID = "7FEFE0AC",
           NextDialogue = 51105407,
@@ -173186,6 +173528,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105407] = {
           Camera = "19.978271,-270.103577,92.347168,0.000058,-6.999878,105.596878,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "唔，说起来其实也简单，就是制造商机，制造悬念，制造潮流，只要吊足大家的胃口，就能够唤出大家的热情。",
+          ContentDE = "Hm, eigentlich ganz simpel: Chancen schaffen, Spannung aufbauen, Trends entfachen. Wenn du den Leuten nur richtig den Mund wässrig machst, kommt die Begeisterung von selbst.",
           DialogueId = 51105407,
           GUID = "7FEFE0D6",
           NextDialogue = 51105408,
@@ -173194,6 +173537,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105408] = {
           Camera = "19.978271,-270.103577,92.347168,0.000058,-6.999878,105.596878,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "而一旦想要拥有，想购买的情绪充斥着心胸，那么人们就会为此好好工作。这样就能让人们焕发活力。",
+          ContentDE = "Sobald die Leute diesen Kaufrausch spüren, werden sie hart dafür arbeiten. So bekommst du die Energie zurück.",
           DialogueId = 51105408,
           GUID = "7FEFE100",
           NextDialogue = 51105409,
@@ -173205,6 +173549,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105409] = {
           Camera = "-698.29834,-1511.247803,548.52002,0.000096,-3.199643,-79.40123,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "话不多说，比如我这里就有准备好的银烛狂欢终场限定饮品，每购买一杯就能获得一个印章，",
+          ContentDE = "Weniger reden, mehr tun. Zum Beispiel habe ich ein exklusives Getränk speziell für den Silberkerzen-Karneval vorbereitet. Und jeder Kauf bringt einen Stempel.",
           DialogueId = 51105409,
           GUID = "7FEFE12A",
           NextDialogue = 51105410,
@@ -173213,6 +173558,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105410] = {
           Camera = "-60.891846,1.497742,78.666992,0.0,-1.200105,-41.399494,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "集齐五枚印章后可以获得限定款银色烛台一个，烛台总共有五种颜色款式还有斑斓之黑隐藏款。",
+          ContentDE = "Mit fünf Stempeln bekommst du einen limitierten silbernen Kerzenhalter. Es gibt fünf Farben, und dazu die geheime „Buntes Schwarz“-Variante.",
           DialogueId = 51105410,
           FacialId = {
             [1] = "700352:Shock02"
@@ -173224,6 +173570,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105411] = {
           Camera = "-211.238281,484.548462,133.915771,0.000002,-6.80019,-72.198151,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "来吧，白，吆喝起来！只要来买的人足够多，那么冰湖城就一定会重新焕发活力的！",
+          ContentDE = "Los, Snow! Wir müssen das anpreisen! Wenn genug Leute meine Produkte kaufen, kommt Icelake garantiert wieder in Schwung!",
           DialogueId = 51105411,
           GUID = "7FEFE17E",
           NextDialogue = 51105412,
@@ -173232,6 +173579,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105412] = {
           Camera = "-165.009277,12.943481,86.168457,0.000005,-5.000094,-19.198158,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "噢！好耶！只要能够让冰湖城重新焕发生机我什么都会做的！",
+          ContentDE = "Oh! Juhu! Wenn’s Icelake wieder Lebenskraft verleiht, mach ich alles!",
           DialogueId = 51105412,
           FacialId = {
             [1] = "700352:Happy02"
@@ -173243,6 +173591,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105413] = {
           Camera = "-377.683594,-687.164856,156.533447,0.000002,-4.600002,62.002022,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "银烛狂欢终场限定饮品！购入获得限定款银色烛台！还有隐藏款！",
+          ContentDE = "Limitierte Abschluss-Drinks zum Silberkerzen-Karneval! Bei Kauf bekommst du den limitierten silbernen Kerzenhalter! Mit Geheimvariante!",
           DialogueId = 51105413,
           GUID = "7FEFE1D2",
           LookAt = {
@@ -173257,6 +173606,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105414] = {
           Camera = "-377.683594,-687.164856,156.533447,0.000002,-4.600002,62.002022,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "只卖一天，今天卖完等到明年，快来看呀！",
+          ContentDE = "Nur heute! Wer’s verpasst, muss bis nächstes Jahr warten. Kommt schon!",
           DialogueId = 51105414,
           GUID = "7FEFE1FC",
           LookAt = {
@@ -173268,6 +173618,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105415] = {
           Camera = "-32.104248,371.151123,518.605469,0.000011,-3.999909,-83.395515,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "侍者皎皎与白的吆喝在广场上交织，不少人驻足观看，但随即摇摇头离去。",
+          ContentDE = "Die Rufe von Luno-Dienerin und Snow mischen sich über den Platz. Einige bleiben stehen, schauen ... und schütteln dann den Kopf und gehen weiter.",
           DialogueId = 51105415,
           GUID = "7FEFE226",
           NextDialogue = 51105416
@@ -173275,6 +173626,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105416] = {
           Camera = "-107.829102,-165.86377,117.956055,0.000013,-16.999786,49.203773,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "唔……会不会是吆喝的声音不够大……",
+          ContentDE = "Hm ... vielleicht waren wir nicht laut genug ...?",
           DialogueId = 51105416,
           FacialId = {
             [1] = "700352:Sad03"
@@ -173289,6 +173641,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105417] = {
           Camera = "-107.829102,-165.86377,117.956055,0.000013,-16.999786,49.203773,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "不是的……只是听了感觉有一些内心疲惫。",
+          ContentDE = "Na ja, es ist nicht so ... es ist nur ... nicht wirklich aufregend.",
           DialogueId = 51105417,
           FacialId = {
             [1] = "700352:CM_Idle"
@@ -173303,6 +173656,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105418] = {
           Camera = "-154.719238,-781.528137,203.725098,0.000044,-10.999541,77.402351,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "咦？为什么？我们准备的饮料也很可口，烛台也很精致，为什么会疲惫呢？",
+          ContentDE = "Hä? Warum das? Die Drinks sind doch lecker, und die Kerzenhalter sind super schön. Warum sollte man davon müde werden?",
           DialogueId = 51105418,
           FacialId = {
             [1] = "700352:Shock01"
@@ -173320,6 +173674,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105419] = {
           Camera = "-59.487549,298.752197,127.998779,0.000024,-5.399681,-87.594635,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "因为我家里已经有七八个烛台啦、还有十几个银烛狂欢纪念牌、二十多个银烛狂欢纪念徽章。",
+          ContentDE = "Weil ich zu Hause schon sieben oder acht Kerzenhalter habe. Und über zehn Silberkerzen-Karneval-Denkmäler. Und mehr als zwanzig Erinnerungsabzeichen.",
           DialogueId = 51105419,
           GUID = "7FEFE2CE",
           NextDialogue = 51105420,
@@ -173331,6 +173686,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105420] = {
           Camera = "-59.487549,298.752197,127.998779,0.000024,-5.399681,-87.594635,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "银烛狂欢期间，城里的商家就和约好了一样，每一家都在推出什么银烛狂欢特制纪念品，偏偏每一家都做得很好。",
+          ContentDE = "Während des Silberkerzen-Karnevals haben die Händler der Stadt wie abgesprochen alle „Silberkerzen-Sondersouvenirs“ rausgehauen. Und blöderweise war jedes einzelne richtig gut.",
           DialogueId = 51105420,
           FacialId = {
             [1] = "700352:CM_Idle"
@@ -173345,6 +173701,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105421] = {
           Camera = "-59.487549,298.752197,127.998779,0.000024,-5.399681,-87.594635,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "大家一不留神，就买了好多……所以现在都是钱包空空，后悔花了很多钱的状态。",
+          ContentDE = "Und ehe man sich versieht, kauft man viel zu viel ... Jetzt sind alle pleite und bereuen, so viel Geld ausgegeben zu haben.",
           DialogueId = 51105421,
           GUID = "7FEFE322",
           NextDialogue = 51105422,
@@ -173353,6 +173710,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105422] = {
           Camera = "-98.028564,-609.098694,176.426514,0.000047,-11.999569,80.00383,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "所以在银烛狂欢结束的时候看到你们还在这样叫卖，反而让我感到后悔和痛苦……",
+          ContentDE = "Und wenn man dann zum Karnevalsende wieder so einen Verkaufsgesang hört, kommt eher Reue und Schmerz in einem auf ...",
           DialogueId = 51105422,
           GUID = "7FEFE34C",
           NextDialogue = 51105423,
@@ -173364,6 +173722,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105423] = {
           Camera = "-98.028564,-609.098694,176.426514,0.000047,-11.999569,80.00383,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "对不起，我……我不是故意的。",
+          ContentDE = "Tut mir leid ... ich wollte wirklich nicht.",
           DialogueId = 51105423,
           GUID = "7FEFE376",
           NextDialogue = 51105424,
@@ -173372,6 +173731,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105424] = {
           Camera = "-32.595215,-176.400818,129.296143,0.000064,-0.199523,-85.395256,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "没有责怪你的意思啦，相反，我很感激你们能为了大家重新打起精神来能尝试各种方法。",
+          ContentDE = "Ich geb dir nicht die Schuld. Im Gegenteil, ich find es toll, dass ihr so viele Dinge ausprobiert, damit alle wieder in Stimmung kommen.",
           DialogueId = 51105424,
           FacialId = {
             [1] = "700360:Smile01"
@@ -173386,6 +173746,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105425] = {
           Camera = "-32.595215,-176.400818,129.296143,0.000064,-0.199523,-85.395256,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "请继续加油，我相信你们一定可以的！",
+          ContentDE = "Macht weiter so. Ich glaub an euch!",
           DialogueId = 51105425,
           GUID = "7FEFE3CA",
           NextDialogue = 51105426,
@@ -173398,6 +173759,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105426] = {
           Camera = "-234.385498,-112.179077,73.116211,0.000055,-1.799529,18.207968,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "好的！那么探险家前辈，最后的希望，靠你了！",
+          ContentDE = "Okay! Dann ... unsere letzte Hoffnung: Luno-Abenteurerin!",
           DialogueId = 51105426,
           GUID = "7FEFE3F4",
           NextDialogue = 51105427,
@@ -173409,6 +173771,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105427] = {
           Camera = "18.141846,-75.220642,83.042236,0.000054,-7.999667,171.60376,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯，确实也该是我出场的时候了。",
+          ContentDE = "Hm. Dann ist wohl mein Auftritt.",
           DialogueId = 51105427,
           GUID = "7FEFE41E",
           LookAt = {
@@ -173423,6 +173786,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105428] = {
           Camera = "18.141846,-75.220642,83.042236,0.000054,-7.999667,171.60376,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那么我的答案是冒险——",
+          ContentDE = "Meine Antwort ist: Abenteuer.",
           DialogueId = 51105428,
           GUID = "7FEFE448",
           NextDialogue = 51105429,
@@ -173431,6 +173795,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105429] = {
           Camera = "122.499512,-108.44696,348.161377,0.000066,2.39976,-124.394104,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "银烛狂欢，大家都在冰湖城内狂欢，那么我有充分的理由认为大家是在城里憋坏了，是城墙让大家的心情压抑。",
+          ContentDE = "Alle feiern in Icelake – also sind sie vermutlich einfach „stadtmüde“. Die Mauern drücken die Stimmung runter.",
           DialogueId = 51105429,
           GUID = "7FEFE472",
           NextDialogue = 51105430,
@@ -173442,6 +173807,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105430] = {
           Camera = "-5.647949,-37.965942,63.306885,0.000058,-1.398379,-172.39415,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "所以，如果大家都能去冰湖城外，与自然亲近，呼吸新鲜空气，心情就一定会变好的！",
+          ContentDE = "Wenn alle mal raus aus Icelake kommen, näher an die Natur, frische Luft, freier Blick – dann geht’s ihnen automatisch besser!",
           DialogueId = 51105430,
           GUID = "7FEFE49C",
           NextDialogue = 51105431,
@@ -173450,6 +173816,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105431] = {
           Camera = "-234.385498,-112.179077,73.116211,0.000055,-1.799529,18.207968,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "哦！听起来很有道理。那么，是不是找到泪湖边上风景最好的地方，让大家去那里欣赏风景就可以了！",
+          ContentDE = "Oh! Klingt logisch. Dann suchen wir einfach den schönsten Platz am Klagenden See, damit alle die Aussicht genießen können!",
           DialogueId = 51105431,
           GUID = "7FEFE4C6",
           NextDialogue = 51105432,
@@ -173461,6 +173828,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105432] = {
           Camera = "-87.131836,-425.705322,92.41748,0.000067,-8.799558,88.407211,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "不错，白很聪明嘛，已经完全知道我想要做什么了。",
+          ContentDE = "Genau. Snow ist ganz schön clever. Du hast schon komplett verstanden, worauf ich hinauswill.",
           DialogueId = 51105432,
           GUID = "7FEFE4F0",
           NextDialogue = 51105433,
@@ -173473,6 +173841,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105433] = {
           Camera = "-123.174316,-60.997009,67.639648,0.000072,4.20047,5.206679,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "好，那我们出发！",
+          ContentDE = "Gut. Dann los!",
           DialogueId = 51105433,
           FacialId = {
             [1] = "700352:Happy02"
@@ -173486,6 +173855,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105501] = {
           Camera = "913.757812,-865.021484,276.827148,0.00001,-4.399905,137.398376,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯，就是这里了，视野开阔没有拘束，适合让大家来放松身心。",
+          ContentDE = "Hm, hier ist es. Weit, offen, nichts, was einen einengt – perfekt zum Runterkommen.",
           DialogueId = 51105501,
           GUID = "7FEFF042",
           NextDialogue = 51105502,
@@ -173498,6 +173868,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105502] = {
           Camera = "913.757812,-865.021484,276.827148,0.00001,-4.399905,137.398376,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "没错，每当我来到这里，都觉得内心被治愈了一样，所以我相信其他人也一定能重新打起精神来的。",
+          ContentDE = "Genau. Jedes Mal, wenn ich hier bin, fühlt’s sich an, als würde mein Herz wieder verheilen. Also werden auch die anderen wieder neue Energie kriegen.",
           DialogueId = 51105502,
           GUID = "7FEFF06C",
           NextDialogue = 51105503,
@@ -173506,6 +173877,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105503] = {
           Camera = "-157.613281,-2017.939453,386.613281,0.000007,-21.999744,146.197006,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "救命啊，救命——",
+          ContentDE = "Hilfe! Hilfe!",
           DialogueId = 51105503,
           GUID = "7FEFF096",
           NextDialogue = 51105504,
@@ -173514,6 +173886,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105504] = {
           Camera = "-292.320312,132.621094,98.302734,0.000022,-9.399808,-35.402294,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "好像是有人在呼救，我们过去看看。",
+          ContentDE = "Da ruft jemand um Hilfe. Kommen wir näher.",
           DialogueId = 51105504,
           GUID = "7FEFF0C0",
           SpeakNpcId = 700355,
@@ -173524,6 +173897,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105505] = {
           Camera = "468.472656,-386.455078,184.522461,0.000007,-11.999959,151.198257,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "谢谢，谢谢救了我们。",
+          ContentDE = "Danke, dass ihr uns gerettet habt.",
           DialogueId = 51105505,
           FacialId = {
             [1] = "700356:Sad01",
@@ -173542,6 +173916,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105506] = {
           Camera = "145.941406,-168.082031,122.435547,0.000021,-0.999502,157.595932,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "如果不是你们的话，我们恐怕就回不去冰湖城了……呜呜呜。",
+          ContentDE = "Ohne euch wären wir nie wieder nach Icelake zurückgekommen ... Wäääh ...",
           DialogueId = 51105506,
           GUID = "7FEFF114",
           NextDialogue = 51105507,
@@ -173553,6 +173928,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105507] = {
           Camera = "-72.996094,-151.029297,122.46875,0.000014,-5.599703,-1.403595,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "没事了，你们已经安全啦！不过，为什么你们会在这里？",
+          ContentDE = "Alles gut, ihr seid jetzt in Sicherheit! Aber warum wart ihr überhaupt hier draußen?",
           DialogueId = 51105507,
           GUID = "7FEFF13E",
           NextDialogue = 51105508,
@@ -173564,6 +173940,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105508] = {
           Camera = "328.121094,-260.578125,135.602539,0.00002,-5.399599,159.79628,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "唉，都怪我。我和妹妹本来一直在雾区生活，爸爸妈妈管得很严，没有让我们出过城。",
+          ContentDE = "*seufz* Das ist meine Schuld. Meine Schwester und ich leben in Mist Aken. Mama und Papa waren so streng und haben uns nie aus der Stadt gelassen.",
           DialogueId = 51105508,
           GUID = "7FEFF168",
           NextDialogue = 51105509,
@@ -173572,6 +173949,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105509] = {
           Camera = "328.121094,-260.578125,135.602539,0.00002,-5.399599,159.79628,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "所以我们就想着趁着银烛狂欢期间，卫兵们也都放松去参加狂欢了，到城外看一看。",
+          ContentDE = "Also dachten wir: Während des Silberkerzen-Karnevals sind die Wachen bestimmt auch entspannter und feiern mit. wir schleichen kurz raus und schauen uns die Welt da draußen an.",
           DialogueId = 51105509,
           GUID = "7FEFF192",
           NextDialogue = 51105510,
@@ -173580,6 +173958,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105510] = {
           Camera = "328.121094,-260.578125,135.602539,0.00002,-5.399599,159.79628,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "结果一过了桥就遇见了秽兽，我们为了避免被发现，只能躲着它们，越躲越远……",
+          ContentDE = "Aber kaum waren wir über die Brücke, sind wir Filthoiden begegnet. Damit uns niemand entdeckt, mussten wir uns vor ihnen verstecken. und je mehr wir ausgewichen sind, desto weiter waren wir ...",
           DialogueId = 51105510,
           GUID = "7FEFF1BC",
           NextDialogue = 51105511,
@@ -173591,6 +173970,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105511] = {
           Camera = "328.121094,-260.578125,135.602539,0.00002,-5.399599,159.79628,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "最后还是被它们围住了，如果不是你们的话……",
+          ContentDE = "Am Ende haben sie uns eingekreist. Wenn ihr nicht gekommen wärt ...",
           DialogueId = 51105511,
           GUID = "7FEFF1E6",
           NextDialogue = 51105512,
@@ -173602,6 +173982,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105512] = {
           Camera = "328.121094,-260.578125,135.602539,0.00002,-5.399599,159.79628,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "哥哥，是我不好，我不应该闹着要出城，我们回去吧。我再也不要离开冰湖城了……",
+          ContentDE = "Bruder, es tut mir leid. Ich hätte nicht darauf bestehen sollen, aus der Stadt zu schleichen. Lass uns zurück. Ich will nie wieder aus Icelake weg ...",
           DialogueId = 51105512,
           GUID = "7FEFF210",
           LookAt = {
@@ -173616,6 +173997,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105513] = {
           Camera = "-72.996094,-151.029297,122.46875,0.000014,-5.599703,-1.403595,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "是哦，对于大部分人来说，城墙之外的世界还是太危险了……",
+          ContentDE = "Stimmt. Für die meisten ist die Welt jenseits der Mauern einfach noch zu gefährlich ...",
           DialogueId = 51105513,
           GUID = "7FEFF23A",
           LookAt = {
@@ -173631,6 +174013,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105514] = {
           Camera = "-51.9375,-57.070312,124.332031,0.000017,-6.39975,-57.802399,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "是我欠考虑了，对远方的渴望虽然能够唤起热情，但并不适合每一个人。走吧，我们回去。",
+          ContentDE = "Ich hab das nicht gründlich durchdacht. Die Sehnsucht nach der Ferne kann zwar Begeisterung wecken, aber sie passt eben nicht zu jedem. Komm, wir gehen zurück.",
           DialogueId = 51105514,
           GUID = "7FEFF264",
           SpeakNpcId = 700355,
@@ -173641,6 +174024,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         },
         [51105515] = {
           Content = "（一阵有一些激烈但不那么激烈的打斗声）",
+          ContentDE = "(Aus der Ferne hört man Kampfgeräusche – etwas heftig, aber auch nicht zu heftig.)",
           DialogueId = 51105515,
           GUID = "7FEFF28E",
           Scripts = "PlayNormalSound{EventPath{\"event:/sfx/common/story/jiaojiao/fight\"},PlayAs2D{true}}"
@@ -173648,6 +174032,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105601] = {
           Camera = "164.716797,101.845215,126.411133,0.000016,-13.399744,-142.802551,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "所以，连探险家前辈的方法也没有成功……",
+          ContentDE = "Also hat selbst die Methode der Luno-Abenteurerin nicht funktioniert ...",
           DialogueId = 51105601,
           GUID = "7FF000AA",
           LookAt = {
@@ -173665,6 +174050,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105602] = {
           Camera = "164.716797,101.845215,126.411133,0.000016,-13.399744,-142.802551,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "到底应该怎么做呢？",
+          ContentDE = "Was sollen wir denn dann machen?",
           DialogueId = 51105602,
           GUID = "7FF000D4",
           NextDialogue = 51105603,
@@ -173673,6 +174059,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105603] = {
           Camera = "93.466797,-74.861328,96.041504,0.000017,-5.799609,141.39859,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "别丧气，至少我们的尝试确实帮助了别人。",
+          ContentDE = "Kopf hoch. Wenigstens haben unsere Versuche wirklich jemandem geholfen.",
           DialogueId = 51105603,
           GUID = "7FF000FE",
           NextDialogue = 51105604,
@@ -173684,6 +174071,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105604] = {
           Camera = "93.466797,-74.861328,96.041504,0.000017,-5.799609,141.39859,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯，你说得对，无论如何都不算是白忙一场。",
+          ContentDE = "Ja, du hast recht. Es war auf jeden Fall nicht umsonst.",
           DialogueId = 51105604,
           GUID = "7FF00128",
           NextDialogue = 51105605,
@@ -173695,6 +174083,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105605] = {
           Camera = "-192.395508,-2.036133,165.440918,0.000029,-7.999804,5.19757,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "唉，你们两个都去哪里了？我和你们的父亲都快急疯了。",
+          ContentDE = "Hey! Wo wart ihr zwei nur?! Euer Vater und ich sind fast durchgedreht vor Sorge!",
           DialogueId = 51105605,
           FacialId = {
             [1] = "700358:Sad02"
@@ -173717,6 +174106,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105606] = {
           Camera = "181.737305,9.148438,135.123047,0.000029,-7.799679,159.398849,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "我们去了城外，遇到了秽兽，多亏了他们，救了我们。",
+          ContentDE = "Wir waren in der Außenstadt, da waren Filthoiden ... Zum Glück haben sie uns gerettet.",
           DialogueId = 51105606,
           GUID = "7FF0017C",
           LookAt = {
@@ -173732,6 +174122,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105607] = {
           Camera = "-279.733398,363.849609,151.888672,0.000033,-5.399538,-40.201584,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "城外？！门口的那群卫兵到底在干什么……算了，没事就好，没事就好。",
+          ContentDE = "In der Außenstadt?! Was treiben diese Wachen am Tor eigentlich ... Egal. Hauptsache, euch geht’s gut.",
           DialogueId = 51105607,
           FacialId = {
             [1] = "700358:Shock02"
@@ -173746,6 +174137,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105608] = {
           Camera = "-228.207031,-9.803711,149.039062,0.000034,-4.999445,4.798473,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "也谢谢你们二位。",
+          ContentDE = "Und danke euch beiden auch.",
           DialogueId = 51105608,
           FacialId = {
             [1] = "700358:None"
@@ -173763,6 +174155,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105609] = {
           Camera = "-228.207031,-9.803711,149.039062,0.000034,-4.999445,4.798473,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "咦，等等，这不是白嘛？",
+          ContentDE = "Hä, Moment mal ... bist du nicht Snow?",
           DialogueId = 51105609,
           GUID = "7FF001FA",
           NextDialogue = 51105610,
@@ -173774,6 +174167,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105610] = {
           Camera = "221.630859,16.369629,149.368164,0.000039,-18.199278,-167.801788,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯？你认识我吗？",
+          ContentDE = "Hmm? Du kennst mich?",
           DialogueId = 51105610,
           GUID = "7FF00224",
           NextDialogue = 51105611,
@@ -173786,6 +174180,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105611] = {
           Camera = "50.040039,30.647461,131.996094,0.000035,3.20023,0.399084,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "之前不认识，但是这几天听说有一位皎皎之民在努力让冰湖城的居民振奋精神，听他们来看描述就应该是你了。",
+          ContentDE = "Vorher nicht. Aber die letzten Tage höre ich überall, dass jemand aus den Lunarian versucht, die Leute in Icelake wieder aufzurütteln. Und nach der Beschreibung musst du das sein.",
           DialogueId = 51105611,
           GUID = "7FF0024E",
           NextDialogue = 51105612,
@@ -173797,6 +174192,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105612] = {
           Camera = "221.630859,16.369629,149.368164,0.000039,-18.199278,-167.801788,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "哼哼，没错，就是我！",
+          ContentDE = "Hehe, genau. Ich bin’s!",
           DialogueId = 51105612,
           GUID = "7FF00278",
           NextDialogue = 51105613,
@@ -173808,6 +174204,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105613] = {
           Camera = "56.023438,-549.053711,122.467773,0.00005,-3.199588,88.599136,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "不过……我也没有找到什么很好的让大家振作起来的办法。唉，这样一来连我都要没什么精神啦。",
+          ContentDE = "Aber ... ich hab auch keine wirklich gute Lösung gefunden, wie alle wieder auf die Beine kommen. *seufz* Wenn das so weitergeht, hab ich auch bald keine Energie mehr.",
           DialogueId = 51105613,
           GUID = "7FF002A2",
           NextDialogue = 51105614,
@@ -173827,6 +174224,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105614] = {
           Camera = "-228.207031,-9.803711,149.039062,0.000034,-4.999445,4.798473,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那你可就白担心啦，快去盖雷亚剧院吧，我刚刚就听说你的几个朋友在到处找你，但是却不知道你跑到哪里去了。",
+          ContentDE = "Dann hast du dir völlig umsonst Sorgen gemacht. Geh schnell ins Galea-Theater. Ich hab gerade gehört, ein paar deiner Freunde suchen dich überall – wissen aber nicht über deinen Verbleib.",
           DialogueId = 51105614,
           GUID = "7FF002CC",
           NextDialogue = 51105615,
@@ -173838,6 +174236,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105615] = {
           Camera = "221.630859,16.369629,149.368164,0.000039,-18.199278,-167.801788,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "嗯？盖雷亚剧院，好的，我这就去！",
+          ContentDE = "Hmm? Galea-Theater ... Alles klar, ich gehe sofort!",
           DialogueId = 51105615,
           GUID = "7FF002F6",
           SpeakNpcId = 700352,
@@ -173848,6 +174247,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105701] = {
           Camera = "23.855469,1780.534668,845.710938,0.000039,-0.800191,-90.801872,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "只见盖雷亚剧院的舞台上，一个纸质的画板竖立了起来，按轮廓来看，是皎皎的身形。",
+          ContentDE = "Auf der Bühne des Galea-Theaters steht ein Pappaufsteller mit der Silhouette einer Luno.",
           DialogueId = 51105701,
           FinalCamera = "17.328125,1336.186768,839.191406,0.000039,-1.000206,-90.801872,35.0,100000.0,false,DoNotOverride,2.8",
           GUID = "7FF01112",
@@ -173857,6 +174257,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105702] = {
           Camera = "410.433594,758.865479,107.394531,0.000057,-1.200132,-118.800987,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "哟，白，你回来啦。",
+          ContentDE = "Snow! du bist wieder da!",
           DialogueId = 51105702,
           GUID = "7FF0113C",
           LookAt = {
@@ -173871,6 +174272,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105703] = {
           Camera = "22.292969,279.418884,100.0625,0.000061,4.399789,-95.400414,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那凯旋的身影在灯光的照射下，如同巨人一般伟岸！",
+          ContentDE = "Diese heimkehrende Silhouette wirkt im Scheinwerferlicht triumphal und gewaltig wie ein Riese!",
           DialogueId = 51105703,
           GUID = "7FF01166",
           NextDialogue = 51105704,
@@ -173882,6 +174284,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105704] = {
           Camera = "71.03125,17.270752,111.34375,0.000066,-7.600156,112.99839,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "威尔斯大叔，巴克？还有这么多人，你们为什么在这里？",
+          ContentDE = "Wells, Buck? Und so viele Leute sind hier. Was macht ihr alle hier?",
           DialogueId = 51105704,
           GUID = "7FF01190",
           LookAt = {
@@ -173897,6 +174300,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105705] = {
           Camera = "-8.945312,81.085327,158.34375,0.000068,-1.800137,-122.402336,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "说来怪不好意思的，一开始听说你想办法让我们振作起来，就只是觉得你是又无聊啦，没事找事。",
+          ContentDE = "Ist uns fast ein bisschen peinlich. Am Anfang, als wir gehört haben, dass du uns wieder motivieren willst, dachten wir nur, dass du wohl Langeweile hast und dir wieder Arbeit suchst.",
           DialogueId = 51105705,
           GUID = "7FF011BA",
           NextDialogue = 51105706,
@@ -173908,6 +174312,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105706] = {
           Camera = "-8.945312,81.085327,158.34375,0.000068,-1.800137,-122.402336,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "结果没想到你真的去尝试了各种方式，虽然听说也没什么好的结果，但我们水仙平原的常客听说了，都有点被打动吧。",
+          ContentDE = "Aber dann hast du wirklich alles Mögliche ausprobiert. Auch wenn es nicht so große Ergebnisse hervorgebracht hat, hat es uns Stammgäste auf der Asphodel trotzdem irgendwie berührt.",
           DialogueId = 51105706,
           GUID = "7FF011E4",
           NextDialogue = 51105707,
@@ -173919,6 +174324,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105707] = {
           Camera = "-117.642578,-246.383423,180.195312,0.00005,-13.000267,74.194115,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "呃，“没什么好的结果”可以不用说的！",
+          ContentDE = "Äh, den Teil mit „nicht so großen Ergebnissen“ hättest du auch weglassen können!",
           DialogueId = 51105707,
           FacialId = {
             [1] = "700352:Sad03"
@@ -173933,6 +174339,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105708] = {
           Camera = "378.371094,743.933472,140.042969,0.000055,-4.200552,-119.40416,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "唔，确实不是重点，重点是，我们觉得不能光看你一个人这样东奔西走！",
+          ContentDE = "Mmh, aber es ist nicht der Punkt. Der Punkt ist: Wir fanden, wir können nicht einfach zuschauen, wie du alleine überall rumrennst!",
           DialogueId = 51105708,
           GUID = "7FF01238",
           NextDialogue = 51105709,
@@ -173944,6 +174351,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105709] = {
           Camera = "378.371094,743.933472,140.042969,0.000055,-4.200552,-119.40416,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "于是我们觉得得要做点什么，不能让你白忙活。",
+          ContentDE = "Also haben wir gedacht, dass wir etwas unternehmen müssen. Wir dürfen dich nicht umsonst schuften lassen.",
           DialogueId = 51105709,
           GUID = "7FF01262",
           NextDialogue = 51105710,
@@ -173955,6 +174363,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105710] = {
           Camera = "45.978516,411.828857,121.648438,0.000068,-1.000397,-97.205254,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "然后，思想之间迸发出火花，火花引爆了更多的思绪。",
+          ContentDE = "Und dann sind Gedanken aneinandergeraten, Funken geflogen und die Funken haben noch mehr Ideen entzündet.",
           DialogueId = 51105710,
           FacialId = {
             [1] = "700352:None"
@@ -173969,6 +174378,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105711] = {
           Camera = "-8.945312,81.085327,158.34375,0.000068,-1.800137,-122.402336,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "巴克说的话呢，可能不是那么好懂，意思是我们俩商量了一会儿，没什么好法子，又找到了其他人，最后找到了普奇团长。",
+          ContentDE = "Bucks Worte sind manchmal schwer zu kapieren. Heißt: Wir haben kurz zu zweit überlegt, hatten keine besonders tolle Idee, dann noch mehr Leute geholt und am Ende Direktor Putsch gefunden.",
           DialogueId = 51105711,
           GUID = "7FF012B6",
           NextDialogue = 51105712,
@@ -173980,6 +174390,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105712] = {
           Camera = "-8.945312,81.085327,158.34375,0.000068,-1.800137,-122.402336,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "大家对于怎么向你表示感谢都各自有想法，但又都觉得不是最好的。",
+          ContentDE = "Jeder wollte dir irgendwie Danke sagen, aber niemand fand seine Idee wirklich perfekt.",
           DialogueId = 51105712,
           GUID = "7FF012E0",
           NextDialogue = 51105713,
@@ -173988,6 +174399,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105713] = {
           Camera = "85.224609,834.157471,143.992188,0.000093,-3.799914,-95.203133,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "于是大家聚在一起想啊想，想地抓耳挠腮，争地面红耳赤。就在这个过程中，突然就感觉热情又重新回来了。",
+          ContentDE = "Also haben sich alle zusammengesetzt und gegrübelt, bis sie sich fast die Haare ausgerissen haben ... Und dann noch gestritten, bis die Gesichter knallrot waren. Genau dabei haben wir plötzlich gemerkt: Die Begeisterung kommt zurück.",
           DialogueId = 51105713,
           GUID = "7FF0130A",
           NextDialogue = 51105714,
@@ -173996,6 +174408,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105714] = {
           Camera = "85.224609,834.157471,143.992188,0.000093,-3.799914,-95.203133,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "于是我们意识到了，为了一个明确的目标去行动，可以让所有人重新燃起热情。",
+          ContentDE = "Da wurde uns klar: Wenn man ein klares Ziel vor Augen hat, kann das bei allen wieder das Feuer entfachen.",
           DialogueId = 51105714,
           GUID = "7FF01334",
           NextDialogue = 51105715,
@@ -174007,6 +174420,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105715] = {
           Camera = "242.505859,2691.037598,777.695312,0.000124,0.999209,-92.40229,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "最终呢，我们决定在这里搭建一个皎皎们的舞台，在这里举办一个小的舞会，以宣告银烛狂欢的正式结束。",
+          ContentDE = "Am Ende haben wir beschlossen, hier eine Bühne für die Lunos aufzubauen und einen kleinen Ball zu veranstalten – als offizielles Finale des Silberkerzen-Karnevals.",
           DialogueId = 51105715,
           GUID = "7FF0135E",
           LookAt = {
@@ -174021,6 +174435,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105716] = {
           Camera = "48.492188,150.261108,106.398438,0.000098,6.400003,-77.597488,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "更重要的是，向你，以及为了人类奔走的每一位皎皎表示感谢。",
+          ContentDE = "Und noch wichtiger: um dir zu danken – und jeder einzelnen Luno, die für die Menschen unermüdlich unterwegs ist.",
           DialogueId = 51105716,
           FacialId = {
             [1] = "700359:Smile01"
@@ -174032,6 +174447,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105717] = {
           Camera = "47.298828,36.943848,122.441406,0.000113,-10.600057,107.802986,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "只不过因为准备仓促，这个布景还没有做好，但是我相信会有热心的冰湖城市民伸出援手的！",
+          ContentDE = "Nur ... weil alles so kurzfristig war, ist das Bühnenbild noch nicht fertig. Aber ich bin sicher, dass hilfsbereite Bürger aus Icelake anpacken werden!",
           DialogueId = 51105717,
           GUID = "7FF013B2",
           NextDialogue = 51105718,
@@ -174043,6 +174459,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105718] = {
           Camera = "47.298828,36.943848,122.441406,0.000113,-10.600057,107.802986,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "咦？为什么是皎皎们……我们其实，也没做什么啦，只是都做了一些平时在做的事情。",
+          ContentDE = "Hä? Warum extra für die Lunos? Wir haben doch eigentlich gar nichts Besonderes gemacht. Wir haben nur das getan, was wir immer tun.",
           DialogueId = 51105718,
           GUID = "7FF013DC",
           NextDialogue = 51105719,
@@ -174054,6 +174471,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105719] = {
           Camera = "-8.619141,416.381531,105.339844,0.000135,-0.200131,-79.794884,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "正是因为你们平时一直都在帮助其他人，所以在大家都无精打采的时候，看到皎皎们还是和往常一样。",
+          ContentDE = "Genau das ist ja der Punkt. Weil ihr sonst auch immer anderen helft – als alle schlapp waren, habt ihr Lunos trotzdem weitergemacht wie immer.",
           DialogueId = 51105719,
           GUID = "7FF01406",
           NextDialogue = 51105720,
@@ -174065,6 +174483,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105720] = {
           Camera = "-8.619141,416.381531,105.339844,0.000135,-0.200131,-79.794884,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "和往常一样锻造，冒险，经商，并且又帮助感染了其他人，所以才会让大家想着为你们做点什么吧。",
+          ContentDE = "Wie immer schmieden, wie immer auf Abenteuer, wie immer handeln ... Und dabei noch andere mitgezogen. Deshalb wollten die Leute eben auch mal etwas für euch tun.",
           DialogueId = 51105720,
           GUID = "7FF01430",
           NextDialogue = 51105721,
@@ -174076,6 +174495,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105721] = {
           Camera = "210.134766,-175.124634,161.980469,0.000142,-12.600367,121.406113,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "……即便和平常一样，也能让大家打起精神吗。",
+          ContentDE = "Selbst „wie immer“ kann also allen wieder Energie geben?",
           DialogueId = 51105721,
           GUID = "7FF0145A",
           NextDialogue = 51105722,
@@ -174087,6 +174507,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105722] = {
           Camera = "13.275391,55.729736,111.578125,0.000138,-6.800259,96.806892,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "我明白了，哼哼。看来平时本魔王大人和小仆从在冰湖城里跑来跑去，已经积攒了很多人望。",
+          ContentDE = "Verstanden. Hehe. Sieht so aus, als hätte ich, die Dämonenkönigin, und {性别:mein kleiner Diener|meine kleine Dienerin}, die ständig durch Icelake rennen, uns längst ordentlich Ansehen angesammelt.",
           DialogueId = 51105722,
           GUID = "7FF01484",
           LookAt = {
@@ -174101,6 +174522,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105723] = {
           Camera = "-8.945312,81.085327,158.34375,0.000068,-1.800137,-122.402336,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "是，是，你是最受大家畏惧，最受大家尊敬，也最热爱自己子民的魔王大人，只要你一声令下，大家都会充满力量。",
+          ContentDE = "Ja, ja. Du bist die Dämonenkönigin, die alle am meisten fürchten, am meisten respektieren und der ihr Volk am meisten liebt. Wenn du dein Wort erteilst, haben alle wieder Kraft.",
           DialogueId = 51105723,
           FacialId = {
             [1] = "700349:Smile01"
@@ -174116,6 +174538,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105724] = {
           Camera = "0.195312,-69.396484,112.128906,0.000143,-7.20016,90.206581,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "没错，那么我命令你们所有人！听从魔王大人的命令，恢复精神，开始银烛狂欢最后的舞会！",
+          ContentDE = "Genau. Dann befehle ich euch allen! Im Namen der Dämonenkönigin, Kopf hoch, Energie zurück – und los geht’s mit dem letzten Ball des Silberkerzen-Karnevals!",
           DialogueId = 51105724,
           FacialId = {
             [1] = "700352:Smile02"
@@ -174130,6 +174553,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105725] = {
           Camera = "320.064453,1972.346924,419.992188,0.000141,-7.200317,-99.594925,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "好！",
+          ContentDE = "Jawohl!",
           DialogueId = 51105725,
           GUID = "7FF01502",
           NextDialogue = 51105726,
@@ -174138,6 +174562,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105726] = {
           Camera = "-22.078125,-800.788818,638.539062,0.000137,3.599831,-91.394226,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "于是，今年本蒙上一层阴翳的银烛狂欢，在一位自称魔王的皎皎的努力下，成功地重新燃起欢乐氛围。",
+          ContentDE = "Und so wurde der Silberkerzen-Karneval des Jahres, der eigentlich von einem Schatten überschattet war, dank der Mühe einer Luno, die sich selbst „Dämonenkönigin“ nannte, doch noch einmal richtig lebendig – und die Freude kehrte zurück.",
           DialogueId = 51105726,
           FinalCamera = "61.220703,-802.816284,638.539062,0.000137,3.599831,-91.394226,35.0,100000.0,false,DoNotOverride,2.8",
           GUID = "7FF0152C",
@@ -174145,202 +174570,242 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         },
         [51105801] = {
           Content = "释放魔灵“紫纱黑云”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Äquinex ein und nimm am Fest teil.",
           DialogueId = 51105801,
           GUID = "7FF0217A"
         },
         [51105802] = {
           Content = "释放魔灵“紫纱黑云”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Äquinex ein und nimm am Fest teil.",
           DialogueId = 51105802,
           GUID = "7FF021A4"
         },
         [51105803] = {
           Content = "释放魔灵“雨衣水滴”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Tröpfchen ein und nimm am Fest teil.",
           DialogueId = 51105803,
           GUID = "7FF021CE"
         },
         [51105804] = {
           Content = "释放魔灵“雨衣水滴”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Tröpfchen ein und nimm am Fest teil.",
           DialogueId = 51105804,
           GUID = "7FF021F8"
         },
         [51105805] = {
           Content = "释放魔灵“打火鸡”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Zippyro ein und nimm am Fest teil.",
           DialogueId = 51105805,
           GUID = "7FF02222"
         },
         [51105806] = {
           Content = "释放魔灵“打火鸡”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Zippyro ein und nimm am Fest teil.",
           DialogueId = 51105806,
           GUID = "7FF0224C"
         },
         [51105807] = {
           Content = "释放魔灵“炸毛球”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Flauschblitz ein und nimm am Fest teil.",
           DialogueId = 51105807,
           GUID = "7FF02276"
         },
         [51105808] = {
           Content = "释放魔灵“炸毛球”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Flauschblitz ein und nimm am Fest teil.",
           DialogueId = 51105808,
           GUID = "7FF022A0"
         },
         [51105809] = {
           Content = "释放魔灵“摇曳菇”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Wankelpilz ein und nimm am Fest teil.",
           DialogueId = 51105809,
           GUID = "7FF022CA"
         },
         [51105810] = {
           Content = "释放魔灵“摇曳菇”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Wankelpilz ein und nimm am Fest teil.",
           DialogueId = 51105810,
           GUID = "7FF022F4"
         },
         [51105811] = {
           Content = "释放魔灵“闪灵铃”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Lumi ein und nimm am Fest teil.",
           DialogueId = 51105811,
           GUID = "7FF0231E"
         },
         [51105812] = {
           Content = "释放魔灵“闪灵铃”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Lumi ein und nimm am Fest teil.",
           DialogueId = 51105812,
           GUID = "7FF02348"
         },
         [51105813] = {
           Content = "释放魔灵“你好箱”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Brobox ein und nimm am Fest teil.",
           DialogueId = 51105813,
           GUID = "7FF02372"
         },
         [51105814] = {
           Content = "释放魔灵“你好箱”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Brobox ein und nimm am Fest teil.",
           DialogueId = 51105814,
           GUID = "7FF0239C"
         },
         [51105815] = {
           Content = "释放魔灵“珍珠兔”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Perlhäschen ein und nimm am Fest teil.",
           DialogueId = 51105815,
           GUID = "7FF023C6"
         },
         [51105816] = {
           Content = "释放魔灵“珍珠兔”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Perlhäschen ein und nimm am Fest teil.",
           DialogueId = 51105816,
           GUID = "7FF023F0"
         },
         [51105817] = {
           Content = "释放魔灵“好梦先生”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Herr Gutenacht ein und nimm am Fest teil.",
           DialogueId = 51105817,
           GUID = "7FF0241A"
         },
         [51105818] = {
           Content = "释放魔灵“好梦先生”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Herr Gutenacht ein und nimm am Fest teil.",
           DialogueId = 51105818,
           GUID = "7FF02444"
         },
         [51105819] = {
           Content = "释放魔灵“浮鱿灯”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Schwebetinten ein und nimm am Fest teil.",
           DialogueId = 51105819,
           GUID = "7FF0246E"
         },
         [51105820] = {
           Content = "释放魔灵“浮鱿灯”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Schwebetinten ein und nimm am Fest teil.",
           DialogueId = 51105820,
           GUID = "7FF02498"
         },
         [51105821] = {
           Content = "释放魔灵“糖霜白兔”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Zuckerschneehase ein und nimm am Fest teil.",
           DialogueId = 51105821,
           GUID = "7FF024C2"
         },
         [51105822] = {
           Content = "释放魔灵“糖霜白兔”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Zuckerschneehase ein und nimm am Fest teil.",
           DialogueId = 51105822,
           GUID = "7FF024EC"
         },
         [51105823] = {
           Content = "释放魔灵“摇摇火尾”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Flackerflamme ein und nimm am Fest teil.",
           DialogueId = 51105823,
           GUID = "7FF02516"
         },
         [51105824] = {
           Content = "释放魔灵“摇摇火尾”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Flackerflamme ein und nimm am Fest teil.",
           DialogueId = 51105824,
           GUID = "7FF02540"
         },
         [51105825] = {
           Content = "释放魔灵“噼啪猫车”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Katzizzi ein und nimm am Fest teil.",
           DialogueId = 51105825,
           GUID = "7FF0256A"
         },
         [51105826] = {
           Content = "释放魔灵“噼啪猫车”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Katzizzi ein und nimm am Fest teil.",
           DialogueId = 51105826,
           GUID = "7FF02594"
         },
         [51105827] = {
           Content = "释放魔灵“绵绵草”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Fluffgras ein und nimm am Fest teil.",
           DialogueId = 51105827,
           GUID = "7FF025BE"
         },
         [51105828] = {
           Content = "释放魔灵“绵绵草”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Fluffgras ein und nimm am Fest teil.",
           DialogueId = 51105828,
           GUID = "7FF025E8"
         },
         [51105829] = {
           Content = "释放魔灵“球球蜂”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Kugelbiene ein und nimm am Fest teil.",
           DialogueId = 51105829,
           GUID = "7FF02612"
         },
         [51105830] = {
           Content = "释放魔灵“球球蜂”的技能，参加庆典",
+          ContentDE = "Setze die Fähigkeit des Geniemons Kugelbiene ein und nimm am Fest teil.",
           DialogueId = 51105830,
           GUID = "7FF0263C"
         },
         [51105831] = {
           Content = "使用动作“滋滋烤肉”，参加庆典",
+          ContentDE = "Verwende das Emote „Grillmeister“ und nimm am Fest teil.",
           DialogueId = 51105831,
           GUID = "7FF02666"
         },
         [51105832] = {
           Content = "使用动作“箱中之猫·本色”，参加庆典",
+          ContentDE = "Verwende das Emote „Katze in der Box“ und nimm am Fest teil.",
           DialogueId = 51105832,
           GUID = "7FF02690"
         },
         [51105833] = {
           Content = "使用动作“魔法学徒”，参加庆典",
+          ContentDE = "Verwende das Emote „Zauberlehrling“ und nimm am Fest teil.",
           DialogueId = 51105833,
           GUID = "7FF026BA"
         },
         [51105834] = {
           Content = "使用动作“隐蔽之所”，参加庆典",
+          ContentDE = "Verwende das Emote „Geheimes Versteck“ und nimm am Fest teil.",
           DialogueId = 51105834,
           GUID = "7FF026E4"
         },
         [51105835] = {
           Content = "使用动作“箱中之猫·铅灰”，参加庆典",
+          ContentDE = "Verwende das Emote „Katze in der Box: Blei­grau“ und nimm am Fest teil.",
           DialogueId = 51105835,
           GUID = "7FF0270E"
         },
         [51105836] = {
           Content = "使用动作“箱中之猫·白樱”，参加庆典",
+          ContentDE = "Verwende das Emote „Katze in der Box: Weißer Sakura“ und nimm am Fest teil.",
           DialogueId = 51105836,
           GUID = "7FF02738"
         },
         [51105837] = {
           Content = "使用动作“床的束缚”，参加庆典",
+          ContentDE = "Verwende das Emote „Im Bett gefangen“ und nimm am Fest teil.",
           DialogueId = 51105837,
           GUID = "7FF02762"
         },
         [51105838] = {
           Content = "使用动作“绝不空军”，参加庆典",
+          ContentDE = "Verwende das Emote „Nie leer ausgegangen“ und nimm am Fest teil.",
           DialogueId = 51105838,
           GUID = "7FF0278C"
         },
         [51105839] = {
           Content = "特别活动即将开始，各位做好准备了没有呀！",
+          ContentDE = "Ein besonderes Event startet gleich – seid ihr alle bereit?!",
           DialogueId = 51105839,
           Duration = 28,
           GUID = "7FF027B6"
         },
         [51105840] = {
           Content = "成功成功，感谢各位的到来！",
+          ContentDE = "Wunderbar – vielen Dank, dass ihr alle gekommen seid!",
           DialogueId = 51105840,
           Duration = 5,
           GUID = "7FF027E0"
@@ -190208,6 +190673,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151401] = {
           Content = "…………（蛋皎在板子上写下了“喜欢您来”。）",
+          ContentDE = "... (Lunoeggy schreibt auf ein Schild: „Freut mich, dass du da bist.“)",
           DialogueId = 51151401,
           GUID = "800D5ABA",
           NextOptions = {
@@ -190218,18 +190684,21 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151402] = {
           Content = "总觉得你有点眼熟……",
+          ContentDE = "Irgendwie kommst du mir bekannt vor ...",
           DialogueId = 51151402,
           GUID = "800D5AE4",
           NextDialogue = 51151404
         },
         [51151403] = {
           Content = "我们是不是在一个叫冰湖城的地方见过。",
+          ContentDE = "Sind wir uns nicht schon mal an einem Ort namens Icelake begegnet?",
           DialogueId = 51151403,
           GUID = "800D5B0E",
           NextDialogue = 51151404
         },
         [51151404] = {
           Content = "…………（没错！就是我！我有好多好多分身。不信的话，等你去了下一个城市，我会再变出来一个分身。）",
+          ContentDE = "... (Ganz genau! Ich bin’s! Von mir gibt es Unmengen an Kopien. Wenn du mir nicht glaubst, warte nur, bis du die nächste Stadt erreichst – dort wirst du noch ein weiteres Ich von mir sehen.)",
           DialogueId = 51151404,
           GUID = "800D5B38",
           NextOptions = {
@@ -190240,6 +190709,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151405] = {
           Content = "相信。",
+          ContentDE = "Ich glaube dir.",
           DialogueId = 51151405,
           GUID = "800D5B62",
           ImprPlusId = 1207,
@@ -190247,6 +190717,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151406] = {
           Content = "会分身的蛋皎吗……真是不可思议的神奇生物啊。",
+          ContentDE = "Lunoeggy, die sich teilen kann ... was für ein unglaublich faszinierendes Wesen.",
           DialogueId = 51151406,
           GUID = "800D5B8C",
           NextOptions = {
@@ -190256,6 +190727,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151407] = {
           Content = "不相信。",
+          ContentDE = "Ich glaube dir nicht.",
           DialogueId = 51151407,
           GUID = "800D5BB6",
           ImprPlusId = 1208,
@@ -190263,6 +190735,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151408] = {
           Content = "你们就是钻进了蛋壳的不同皎皎吧，只是不知为何选了同样的蛋壳。",
+          ContentDE = "Ihr seid nur verschiedene Lunos, die in Eierschalen geschlüpft sind – nur weiß keiner, warum ihr alle dieselbe Schale gewählt habt.",
           DialogueId = 51151408,
           GUID = "800D5BE0",
           NextDialogue = 51151409,
@@ -190270,6 +190743,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151409] = {
           Content = "…………（哼哼，当然是因为，最高明的躲藏方式，就是藏在一群蛋皎之中！）",
+          ContentDE = "... (Hehe. Natürlich weil das genialste Versteck mitten unter einer ganzen Gruppe Lunoeggys ist!)",
           DialogueId = 51151409,
           GUID = "800D5C0A",
           NextDialogue = 51151410,
@@ -190277,6 +190751,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151410] = {
           Content = "…………（这样当一只蛋皎在玩骰子时赢了你，你想赢回来的时候，就找不到当时赢你的到底是哪只蛋皎了。）",
+          ContentDE = "... (So weißt du nie, welcher von uns es war, wenn dich einer von mir beim Würfeln schlägt und du versuchst, dein Geld zurückzugewinnen!)",
           DialogueId = 51151410,
           GUID = "800D5C34",
           NextDialogue = 51151411,
@@ -190284,6 +190759,7 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151411] = {
           Content = "好像挺有道理的。",
+          ContentDE = "Klingt irgendwie plausibel.",
           DialogueId = 51151411,
           GUID = "800D5C5E",
           NextOptions = {
@@ -190293,12 +190769,14 @@ LookAt{_delay{1},LookAtDescription{"900012:n(100001)"}}
         },
         [51151412] = {
           Content = "那么，能打开蛋壳给我看看吗？",
+          ContentDE = "Dann ... kannst du die Schale für mich öffnen, damit ich mal hineinschauen kann?",
           DialogueId = 51151412,
           GUID = "800D5C88",
           NextDialogue = 51151413
         },
         [51151413] = {
           Content = "…………！（不可以！蛋壳之下就是蛋壳，蛋壳之下还是蛋壳，绝对不是皎皎，绝对！）",
+          ContentDE = "..! (Nein! Unter der Schale ist noch eine Schale, und darunter wieder eine Schale! Ganz bestimmt keine Luno. Ganz bestimmt nicht!)",
           DialogueId = 51151413,
           GUID = "800D5CB2",
           SpeakNpcId = 900011
@@ -218151,6 +218629,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000000] = {
           Content = "喵……",
+          ContentDE = "Miau ...",
           DialogueId = 71000000,
           Duration = 3,
           GUID = "B1BDB580",
@@ -218158,12 +218637,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000100] = {
           Content = "（野猫寂寞地叫着，似乎在渴求某位好心人的注意。）",
+          ContentDE = "(Eine wilde Katze miaut einsam, als würde sie um die Aufmerksamkeit eines gutherzigen Menschen buhlen.)",
           DialogueId = 71000100,
           GUID = "B1BDC5E8",
           SpeakNpcId = 800006
         },
         [71000200] = {
           Content = "请问这里有猫粮卖吗？",
+          ContentDE = "Entschuldigung, verkauft ihr hier Katzenfutter?",
           DialogueId = 71000200,
           GUID = "B1BDD650",
           NextDialogue = 710002001,
@@ -218171,6 +218652,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000210] = {
           Content = "请问这里有猫粮卖吗？",
+          ContentDE = "Entschuldigung, verkauft ihr hier Katzenfutter?",
           DialogueId = 71000210,
           GUID = "B1BDD7F4",
           NextDialogue = 710002101,
@@ -218178,6 +218660,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000220] = {
           Content = "（摆下猫粮）",
+          ContentDE = "(Katzenfutter hinstellen)",
           DialogueId = 71000220,
           GUID = "B1BDD998",
           NextDialogue = 710002201,
@@ -218185,6 +218668,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000300] = {
           Content = "（野猫蹦跳着跑开几步以后驻足看向了你，似乎想让你跟上它的步伐。）",
+          ContentDE = "(Die Katze hüpft ein Stück weg, bleibt stehen und schaut zu dir zurück, als wollte sie, dass du ihr folgst.)",
           DialogueId = 71000300,
           Duration = 3,
           GUID = "B1BDE6B8",
@@ -218192,6 +218676,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000310] = {
           Content = "（野猫蹦跳着跑开几步以后驻足看向了你，似乎想让你跟上它的步伐。）",
+          ContentDE = "(Die Katze hüpft ein Stück weg, bleibt stehen und schaut zu dir zurück, als wollte sie, dass du ihr folgst.)",
           DialogueId = 71000310,
           Duration = 3,
           GUID = "B1BDE85C",
@@ -218199,6 +218684,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000320] = {
           Content = "（野猫蹦跳着跑开几步以后驻足看向了你，似乎想让你跟上它的步伐。）",
+          ContentDE = "(Die Katze hüpft ein Stück weg, bleibt stehen und schaut zu dir zurück, als wollte sie, dass du ihr folgst.)",
           DialogueId = 71000320,
           Duration = 3,
           GUID = "B1BDEA00",
@@ -218206,12 +218692,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000330] = {
           Content = "（野猫围着你的脚边开心地转了两圈。看着它满足的表情，你的内心也得到了极大的治愈。）",
+          ContentDE = "(Die Katze streicht um deine Beine, offenbar ist sie glücklich und zufrieden. Das fühlt sich irgendwie gut an.)",
           DialogueId = 71000330,
           GUID = "B1BDEBA4",
           SpeakNpcId = 800006
         },
         [71000501] = {
           Content = "别打啦，再打我就要使出绝活了……好，我要用了哦……救命啊啊啊啊啊！！！\n",
+          ContentDE = "Hey, hör auf! Wenn du weitermachst, muss ich meinen Trumpf ausspielen ... okay, ich mach’s wirklich ... Hiiiiilfe!!!",
           DialogueId = 71000501,
           Duration = 3,
           GUID = "B1BE07B2",
@@ -218219,6 +218707,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000502] = {
           Content = "呜哇哇哇……",
+          ContentDE = "Wääääh ...",
           DialogueId = 71000502,
           Duration = 3,
           GUID = "B1BE07DC",
@@ -218226,12 +218715,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000503] = {
           Content = "最后一个，搞定。",
+          ContentDE = "Ein letzter noch. Erledigt.",
           DialogueId = 71000503,
           GUID = "B1BE0806",
           SpeakNpcId = 818014
         },
         [71000504] = {
           Content = "我去看看附近还有没有敌人，你自己小心。",
+          ContentDE = "Ich werde schauen, ob noch Feinde in der Nähe sind. Pass auf dich auf.",
           DialogueId = 71000504,
           GUID = "B1BE0830",
           NextDialogue = 71000505,
@@ -218239,6 +218730,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000505] = {
           Content = "收到收到，我会注意的！",
+          ContentDE = "Alles klar, alles klar! Ich bleib vorsichtig!",
           DialogueId = 71000505,
           GUID = "B1BE085A",
           NextDialogue = 71000506,
@@ -218246,6 +218738,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000506] = {
           Content = "诶，你也来啦。呜呜……原来有这么多人愿意帮助我……这是给大家准备的谢礼，以后也请多多关照了。",
+          ContentDE = "Ach, du bist auch hier … *schnief* … Ich kann gar nicht glauben, dass so viele Menschen bereit sind, mir zu helfen. Hier, eine kleine Aufmerksamkeit für eure Mühe. Danke euch allen! Ihr seid einfach die Besten!",
           DialogueId = 71000506,
           GUID = "B1BE0884",
           Scripts = "TurnTo{TurnToDescription{\"818015:n(0)\"}}",
@@ -218254,6 +218747,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [71000511] = {
           Camera = "182.995117,-239.510742,101.057129,0.000077,-2.797147,129.385254,35.000008,100000.0,false,DoNotOverride,2.8",
           Content = "谢谢，探险家大危机解除！继续冒险喽。",
+          ContentDE = "Danke, ich bin jetzt in Sicherheit! Auf zu neuen Abenteuern!",
           DialogueId = 71000511,
           GUID = "B1BE0956",
           SpeakNpcId = 800005,
@@ -218264,6 +218758,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [71000512] = {
           Camera = "125.800781,-57.036377,76.0,0.000008,0.0,155.202805,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "谢谢，探险家大危机解除！继续冒险喽。",
+          ContentDE = "Danke, ich bin jetzt in Sicherheit! Auf zu neuen Abenteuern!",
           DialogueId = 71000512,
           GUID = "B1BE0980",
           SpeakNpcId = 800005,
@@ -218273,6 +218768,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000601] = {
           Content = "（被海浪冲上岸的木桶堆积在沙滩上，找找看的话，也许能发现一些有用的东西。）",
+          ContentDE = "(Angespülte Holzfässer säumen den Strand. Vielleicht enthalten sie etwas Brauchbares.)",
           DialogueId = 71000601,
           Duration = 3,
           GUID = "B1BE181A",
@@ -218280,21 +218776,25 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000612] = {
           Content = "（木桶底部破了个大洞，不管它曾装过什么金银财宝，现在都是件无用的垃圾。去看看其他木桶吧。）",
+          ContentDE = "(Im Fassboden klafft ein riesiges Loch. Welcher Schatz auch immer drin war, ist längst weg. Schau lieber bei den anderen Fässern nach.)",
           DialogueId = 71000612,
           GUID = "B1BE19E8"
         },
         [71000613] = {
           Content = "（木桶里除了腐烂的鱼虾以外什么也没有，去看看其他木桶吧。）",
+          ContentDE = "(Im Fass ist nichts außer verrottetem Fisch und Garnelen. Schau lieber bei den anderen Fässern nach.)",
           DialogueId = 71000613,
           GUID = "B1BE1A12"
         },
         [71000615] = {
           Content = "（功夫不负有心人，仔细翻找之后，你终于在木桶的夹层里找到了一些能用的物资。）",
+          ContentDE = "(Geduld zahlt sich aus: Nach gründlichem Durchwühlen findest du schließlich im doppelten Boden ein paar brauchbare Vorräte.)",
           DialogueId = 71000615,
           GUID = "B1BE1A66"
         },
         [71000701] = {
           Content = "真是头疼啊，就剩几条管道了。",
+          ContentDE = "Was für ein Stress! Es sind nur noch ein paar Rohrleitungen übrig, und jetzt das.",
           DialogueId = 71000701,
           Duration = 3,
           GUID = "B1BE2882",
@@ -218302,6 +218802,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000710] = {
           Content = "发生什么了？",
+          ContentDE = "Was ist passiert?",
           DialogueId = 71000710,
           GUID = "B1BE29FC",
           NextDialogue = 71000711,
@@ -218309,6 +218810,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000711] = {
           Content = "哎呀，我得检查一下城里这些月髓管有没有坏。",
+          ContentDE = "Ach, ich habe überprüft, ob die Phoxichor-Rohrleitungen in der Stadt beschädigt sind.",
           DialogueId = 71000711,
           Duration = 3,
           GUID = "B1BE2A26",
@@ -218317,6 +218819,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000721] = {
           Content = "但我的作业绳在上条管子那里弄断了，你能帮我上去看一看剩下的几条管子吗？",
+          ContentDE = "Ich hatte nur noch ein paar vor mir, aber mein Sicherungsseil ist gerade gerissen. Kannst du für mich nach den restlichen Rohrleitungen sehen?",
           DialogueId = 71000721,
           Duration = 3,
           GUID = "B1BE2BCA",
@@ -218328,6 +218831,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000741] = {
           Content = "剩下的几条管道我帮你标出来了，真是麻烦你了！",
+          ContentDE = "Ich hab die übrigen Rohrleitungen für dich markiert. Ich zähle auf dich!",
           DialogueId = 71000741,
           Duration = 3,
           GUID = "B1BE2F12",
@@ -218335,6 +218839,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000751] = {
           Content = "（这条管道没有破损，去看看下一条管道吧。）",
+          ContentDE = "(An dieser Rohrleitung ist kein Schaden. Schau dir die nächste an.)",
           DialogueId = 71000751,
           Duration = 2,
           GUID = "B1BE30B6",
@@ -218342,36 +218847,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000761] = {
           Content = "（最后一条管道也没有破损，去告诉那名工人吧。）",
+          ContentDE = "(Auch die letzte Rohrleitung ist unbeschädigt. Geh zurück und sag dem Installateur Bescheid.)",
           DialogueId = 71000761,
           GUID = "B1BE325A",
           SpeakNpcId = 800006
         },
         [71000771] = {
           Content = "都没问题？太好了！万分感谢！",
+          ContentDE = "Alles in Ordnung? Perfekt! Tausend Dank!",
           DialogueId = 71000771,
           GUID = "B1BE33FE",
           SpeakNpcId = 800007
         },
         [71000780] = {
           Content = "（这条管道出现了轻微破损，去告诉那名工人吧。）",
+          ContentDE = "(An dieser Rohrleitung gibt es einen leichten Schaden. Sag lieber dem Installateur Bescheid.)",
           DialogueId = 71000780,
           GUID = "B1BE3578",
           SpeakNpcId = 800006
         },
         [71000781] = {
           Content = "唉……看来又得上工了，我回去拿点工具，你拿上我的钥匙，先去帮我关一下月髓管的总阀吧。",
+          ContentDE = "*seufz* ... Sieht wieder nach Überstunden aus. Ich hole Werkzeug. Nimm meinen Schlüssel und dreh schon mal das Hauptventil der Phoxichor-Rohrleitungen zu, ja?",
           DialogueId = 71000781,
           GUID = "B1BE35A2",
           SpeakNpcId = 800007
         },
         [71000782] = {
           Content = "谢谢，剩下的就交给我吧。",
+          ContentDE = "Danke, ab hier übernehme ich.",
           DialogueId = 71000782,
           GUID = "B1BE35CC",
           SpeakNpcId = 800007
         },
         [71000801] = {
           Content = "{nickname}，{nickname}，快来，我找到新的研究课题了。",
+          ContentDE = "{nickname}, {nickname}, komm schnell! Ich hab ein neues Forschungsthema gefunden!",
           DialogueId = 71000801,
           Duration = 3,
           GUID = "B1BE38EA",
@@ -218379,6 +218890,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000802] = {
           Content = "这次的研究素材在湖对面，你能帮帮我吗？",
+          ContentDE = "Das Material dafür ist drüben auf der anderen Seite des Sees. Kannst du mir helfen?",
           DialogueId = 71000802,
           Duration = 3,
           GUID = "B1BE3914",
@@ -218390,6 +218902,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000803] = {
           Content = "这就是西奥要研究的东西了，拿点回去给他吧。",
+          ContentDE = "Das will Theo also untersuchen. Nimm etwas mit und bring es ihm.",
           DialogueId = 71000803,
           Duration = 2,
           GUID = "B1BE393E",
@@ -218397,6 +218910,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000804] = {
           Content = "谢谢你！想要成为伟大的炼金术师，要学习的东西真的好多好多呢……",
+          ContentDE = "Danke! Wenn man großer Alchemist werden will, muss man wirklich sooo viel lernen ...",
           DialogueId = 71000804,
           Duration = 2,
           GUID = "B1BE3968",
@@ -218404,12 +218918,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000805] = {
           Content = "……好吧，我明白了，你的意思是，成为伟大的炼金术师的第一步，就是靠自己的力量寻找研究素材！",
+          ContentDE = "... Schon gut, ich versteh schon. Du meinst, der erste Schritt zum großen Alchemisten ist es, das Forschungsmaterial aus eigener Kraft zu besorgen!",
           DialogueId = 71000805,
           GUID = "B1BE3992",
           SpeakNpcId = 800011
         },
         [71000901] = {
           Content = "捉迷藏，捉迷藏，一起来玩捉迷藏！",
+          ContentDE = "Verstecken spielen! Komm, lass uns Verstecken spielen!",
           DialogueId = 71000901,
           Duration = 3,
           GUID = "B1BE4952",
@@ -218417,6 +218933,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000902] = {
           Content = "捉迷藏，捉迷藏，一起来玩捉迷藏！",
+          ContentDE = "Verstecken spielen! Komm, lass uns Verstecken spielen!",
           DialogueId = 71000902,
           GUID = "B1BE497C",
           NextDialogue = 71000903,
@@ -218429,6 +218946,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000903] = {
           Content = "好呀好呀！但是我不想找人，我想藏。",
+          ContentDE = "Ich bin dabei! Aber ich will nicht suchen, ich will mich verstecken.",
           DialogueId = 71000903,
           Duration = 3,
           GUID = "B1BE49A6",
@@ -218440,6 +218958,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000904] = {
           Content = "我也是，我发现一个超级隐蔽的地方，躲在那一定能赢！",
+          ContentDE = "Ich auch! Ich hab ein supergeheimes Versteck gefunden. Dieses Mal gewinne ich garantiert!",
           DialogueId = 71000904,
           Duration = 3,
           GUID = "B1BE49D0",
@@ -218451,6 +218970,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000905] = {
           Content = "那怎么办？还有人愿意和我们一起捉迷藏吗……",
+          ContentDE = "Aber wir brauchen jemanden, der sucht. Spielt noch jemand mit uns Verstecken?",
           DialogueId = 71000905,
           Duration = 3,
           GUID = "B1BE49FA",
@@ -218459,6 +218979,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000906] = {
           Content = "（孩子们注意到了路过的你，满眼期待地等待着你的回应。）",
+          ContentDE = "(Die Kinder bemerken dich, als du vorbeigehst, und schauen dich erwartungsvoll an.)",
           DialogueId = 71000906,
           Duration = 3,
           GUID = "B1BE4A24",
@@ -218466,17 +218987,20 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000907] = {
           Content = "（孩子们兴奋地跳了起来，一眨眼就消失在了街角。现在该好好想想去哪里寻找这些孩子了。）",
+          ContentDE = "(Die Kinder hüpfen begeistert auf und sind im nächsten Moment um die Straßenecke verschwunden. Jetzt solltest du dir überlegen, wo du sie am besten suchen kannst.)",
           DialogueId = 71000907,
           GUID = "B1BE4A4E"
         },
         [71000908] = {
           Content = "哇，这么快就被你找到了。",
+          ContentDE = "Wow, du hast mich schnell gefunden!",
           DialogueId = 71000908,
           GUID = "B1BE4A78",
           SpeakNpcId = 800008
         },
         [71000909] = {
           Content = "你好厉害呀。",
+          ContentDE = "Du bist richtig gut!",
           DialogueId = 71000909,
           Duration = 2,
           GUID = "B1BE4AA2",
@@ -218484,6 +219008,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000910] = {
           Content = "可恶，我居然输了……",
+          ContentDE = "Mist, ich kann kaum glauben, dass ich verloren habe ...",
           DialogueId = 71000910,
           Duration = 2,
           GUID = "B1BE4ACC",
@@ -218491,6 +219016,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000911] = {
           Content = "好吧好吧，愿赌服输，这是给你的谢礼，下次还要和我们一起玩哦！",
+          ContentDE = "Na schön, du hast gewonnen. Hier, das ist deine Belohnung. Und nächstes Mal spielst du wieder mit uns!",
           DialogueId = 71000911,
           Duration = 2,
           GUID = "B1BE4AF6",
@@ -218498,6 +219024,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001001] = {
           Content = "（一台崭新的车辆，这或许是一个……发财的机会？）",
+          ContentDE = "(Ein nagelneues Fahrzeug steht unbeaufsichtigt da. Könnte das etwa ... eine goldene Gelegenheit sein?)",
           DialogueId = 71001001,
           Duration = 3,
           GUID = "B1BE59BA",
@@ -218505,12 +219032,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001002] = {
           Content = "（车里的月髓能源装置装得满满当当，果然是一个发财的机会！）",
+          ContentDE = "(Der Phoxichor-Behälter des Autos ist randvoll – Jackpot!)",
           DialogueId = 71001002,
           GUID = "B1BE59E4",
           SpeakNpcId = 800006
         },
         [71001003] = {
           Content = "你在干什么！快来人啊！",
+          ContentDE = "Was machst du da?! Leute, ich brauche Unterstützung!",
           DialogueId = 71001003,
           Duration = 2,
           GUID = "B1BE5A0E",
@@ -218518,6 +219047,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001004] = {
           Content = "（现在不会再有人来阻拦你的脚步了。撬开车锁，带走装满月髓液的能源装置，卖个好价钱。一切都在按你的计划进行，又是令人心情愉悦的一天。）",
+          ContentDE = "(Jetzt kann dich niemand mehr aufhalten. Du hebelst die Tür auf, schnappst dir den Phoxichor-Behälter und verhökerst ihn für ein kleines Vermögen. Alles läuft nach Plan. Was für ein Glückstag.)",
           DialogueId = 71001004,
           Duration = 4,
           GUID = "B1BE5A38",
@@ -218525,6 +219055,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001005] = {
           Content = "（良知最终战胜了诱惑，你决定向城门守卫汇报车辆安保的疏漏。）",
+          ContentDE = "(Am Ende siegt dein Gewissen. Du entscheidest dich, die Sicherheitslücke der Wache am Stadttor zu melden.)",
           DialogueId = 71001005,
           Duration = 3,
           GUID = "B1BE5A62",
@@ -218532,12 +219063,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001006] = {
           Content = "感谢您的通知，我这就派人加强巡逻，这是一点谢礼，还望不要嫌弃。",
+          ContentDE = "Danke für den Hinweis. Ich schicke sofort Leute los und verstärke die Patrouillen. Dieses kleine Geschenk ist eine Geste des Dankes – bitte nimm es an.",
           DialogueId = 71001006,
           GUID = "B1BE5A8C",
           SpeakNpcId = 818010
         },
         [71001101] = {
           Content = "（秽兽来袭，击退它们！）",
+          ContentDE = "(Filthoiden greifen an! Treibe sie zurück!)",
           DialogueId = 71001101,
           Duration = 3,
           GUID = "B1BE6A22",
@@ -218545,6 +219078,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001201] = {
           Content = "（杂草淹没了你与贝蕾曾经留在此处的痕迹，也许应该清理一下神像附近的杂草了。）",
+          ContentDE = "(Dichtes Unkraut hat die Spuren verborgen, die du und Berenica damals hier hinterlassen habt. Vielleicht solltest du das Unkraut um die Statue herum entfernen.)",
           DialogueId = 71001201,
           Duration = 2,
           GUID = "B1BE7A8A",
@@ -218552,12 +219086,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001202] = {
           Content = "（在你的努力下，神像附近恢复了整洁，一如你回忆中的景色。）",
+          ContentDE = "(Durch deine Mühe ist es um die Statue wieder ordentlich – wie aus deiner Erinnerung.)",
           DialogueId = 71001202,
           GUID = "B1BE7AB4",
           SpeakNpcId = 800006
         },
         [71001301] = {
           Content = "依贝蕾所说，这里就是我们曾经的家，可我却一点印象都没有……",
+          ContentDE = "Berry meinte, hier hätten wir früher gelebt, aber ich kann mich an absolut nichts erinnern ...",
           DialogueId = 71001301,
           GUID = "B1BE8AF2",
           NextDialogue = 71001302,
@@ -218565,28 +219101,33 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001302] = {
           Content = "也许我该在这附近转转，兴许能想起些什么。",
+          ContentDE = "Ich sollte mich hier in der Nähe umsehen. Vielleicht hilft irgendwas meinem Gedächtnis nach.",
           DialogueId = 71001302,
           GUID = "B1BE8B1C",
           SpeakNpcId = 100001
         },
         [71001303] = {
           Content = "家具的制作十分粗糙，不少钉子都被深深砸进了木头里，就像我们在村里的房门把手一样。贝蕾原来从小就有这么大力气呢。",
+          ContentDE = "Die Möbel sind ziemlich grob zusammengezimmert. Viele Nägel sind tief ins Holz gehauen, fast wie damals an den Türgriffen im Dorf. Berry war also schon als Kind so bärenstark.",
           DialogueId = 71001303,
           GUID = "B1BE8B46"
         },
         [71001304] = {
           Content = "这是……一本炼金故事书？原来贝蕾小时候给我讲的那些奇奇怪怪的睡前故事，都是从这本书上来的。",
+          ContentDE = "Warte mal, ist das ... ein alchemistisches Märchenbuch? Also kamen die ganzen seltsamen Gute-Nacht-Geschichten, die Berry mir früher erzählt hat, aus genau diesem Buch.",
           DialogueId = 71001304,
           GUID = "B1BE8B70",
           NextDialogue = 71001305
         },
         [71001305] = {
           Content = "但是书上这些批注比贝蕾的字迹工整好多，会是谁写的呢？",
+          ContentDE = "Aber die Randnotizen sind viel ordentlicher als Berrys Handschrift ... Wer hat die wohl geschrieben?",
           DialogueId = 71001305,
           GUID = "B1BE8B9A"
         },
         [71001306] = {
           Content = "想起了不少贝蕾的事呢。至于这里，还是什么都想不起来……",
+          ContentDE = "An vieles von Berry erinnere ich mich, nur an diesen Ort ... erinnere ich mich nicht.",
           DialogueId = 71001306,
           GUID = "B1BE8BC4",
           NextDialogue = 71001307,
@@ -218594,12 +219135,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001307] = {
           Content = "算了，也许等到以后，自然就想起来了。",
+          ContentDE = "Macht nichts. Vielleicht kommt es irgendwann zurück.",
           DialogueId = 71001307,
           GUID = "B1BE8BEE",
           SpeakNpcId = 100001
         },
         [71001401] = {
           Content = "（你远远的便闻到了北风莓的香味，去摘一些的话，应该能卖个好价钱。）",
+          ContentDE = "(Schon von Weitem steigt dir der Duft der Borealbeeren in die Nase. Wenn du ein paar pflückst, bekommst du bestimmt einen guten Preis.)",
           DialogueId = 71001401,
           Duration = 4,
           GUID = "B1BE9B5A",
@@ -218607,6 +219150,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001402] = {
           Content = "（这一批北风莓色泽艳丽、果肉饱满，任谁都能看得出，这样的特产根本不愁卖不出去。）",
+          ContentDE = "(Diese Borealbeeren haben eine kräftige Farbe und pralles Fruchtfleisch. Das sieht jeder: Diese Saison-Spezialitäten werden überall einen guten Preis erzielen.)",
           DialogueId = 71001402,
           Duration = 4,
           GUID = "B1BE9B84",
@@ -218614,6 +219158,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001403] = {
           Content = "（远处有两名商人都在收购北风莓，与他们聊聊看再决定卖给谁吧。）",
+          ContentDE = "(Du bemerkst, dass zwei Händler In der Nähe Borealbeeren kaufen. Vielleicht solltest du mit ihnen sprechen, bevor du entscheidest, an wen du sie verkaufst.)",
           DialogueId = 71001403,
           Duration = 4,
           GUID = "B1BE9BAE",
@@ -218621,6 +219166,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001404] = {
           Content = "我这小摊在冰湖城开了好几年了，虽然利润不高，但来做买卖的都是熟人。你这批北风莓我全收了就当交个朋友吧，大伙都在冰湖城，以后还能互相照顾照顾。",
+          ContentDE = "Ich stehe mit meinem kleinen Stand seit Jahren in Icelake. Große Gewinne sind’s nicht, er bringt mehr Freunde als Geld. Aber in dieser Stadt kann man sich gegenseitig unter die Arme greifen, stimmt's?.",
           DialogueId = 71001404,
           GUID = "B1BE9BD8",
           NextOptions = {
@@ -218631,6 +219177,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001405] = {
           Content = "嘿，我看到你怀里那些北风莓了。我出的钱可比冰湖城那些穷商人多了去了。怎么样，咱两一起赚笔大的如何？",
+          ContentDE = "Hey, ich sehe, dass du ein paar Borealbeeren hast. Ich zahle deutlich besser als die erbsenzählenden Händler aus Icelake. Na, wie wär’s – machen wir beide zusammen richtig Kohle?",
           DialogueId = 71001405,
           GUID = "B1BE9C02",
           NextOptions = {
@@ -218641,6 +219188,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001406] = {
           Content = "（虽然利润较低，但为了长久而稳定的人脉，你最终还是与本地商人完成了交易。）",
+          ContentDE = "(Die Gewinnspanne ist zwar kleiner, aber für langfristige, stabile Kontakte entscheidest du dich am Ende doch für den Verkauf an den örtlichen Händler.)",
           DialogueId = 71001406,
           Duration = 3,
           GUID = "B1BE9C2C",
@@ -218648,6 +219196,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001407] = {
           Content = "（未来的承诺远没有当下的利益来得靠谱，你最终还是与外地商人完成了交易，并收获了一大笔丰厚的报酬。）",
+          ContentDE = "(Versprechen für die Zukunft sind weniger wert als der Profit im Hier und Jetzt. Am Ende machst du das Geschäft mit dem auswärtigen Händler – und kassierst eine ordentliche Summe.)",
           DialogueId = 71001407,
           Duration = 4,
           GUID = "B1BE9C56",
@@ -218655,6 +219204,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001501] = {
           Content = "唉……这破玩意怎么又坏了……",
+          ContentDE = "Oh, nein ... nicht schon wieder ...",
           DialogueId = 71001501,
           Duration = 3,
           GUID = "B1BEABC2",
@@ -218662,6 +219212,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001502] = {
           Content = "发生什么了？",
+          ContentDE = "Was ist passiert?",
           DialogueId = 71001502,
           GUID = "B1BEABEC",
           NextDialogue = 71001503,
@@ -218669,12 +219220,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001503] = {
           Content = "这台机器我老用不好，要不你也来试试，看看是机器的问题还是我的问题。",
+          ContentDE = "Ich kriege diese Maschine einfach nicht richtig zum Laufen. Warum probierst du es nicht mal? Dann sehen wir, ob es an der Maschine liegt oder nur an mir.",
           DialogueId = 71001503,
           GUID = "B1BEAC16",
           SpeakNpcId = 818006
         },
         [71001504] = {
           Content = "谢了啊。",
+          ContentDE = "Danke dir!",
           DialogueId = 71001504,
           Duration = 2,
           GUID = "B1BEAC40",
@@ -218682,6 +219235,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001505] = {
           Content = "有两下子！唉，看来还是我的操作方式不对……",
+          ContentDE = "Nicht schlecht! Tja, dann liegt’s wohl an mir ...",
           DialogueId = 71001505,
           GUID = "B1BEAC6A",
           SpeakNpcId = 818006
@@ -218696,6 +219250,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
       return {
         [71001506] = {
           Content = "这也行？",
+          ContentDE = "Es hat tatsächlich funktioniert?",
           DialogueId = 71001506,
           Duration = 2,
           GUID = "B1BEAC94",
@@ -218703,6 +219258,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001507] = {
           Content = "呃……真的拍两下就能好吗？",
+          ContentDE = "Äh ... ernsthaft, zwei Schläge und es geht wieder?",
           DialogueId = 71001507,
           Duration = 2,
           GUID = "B1BEACBE",
@@ -218710,6 +219266,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001508] = {
           Content = "喂喂，刚刚是不是有零件飞出去了。",
+          ContentDE = "Warte mal, ist da nicht gerade ein Teil rausgeflogen?",
           DialogueId = 71001508,
           Duration = 2,
           GUID = "B1BEACE8",
@@ -218717,12 +219274,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001509] = {
           Content = "厉害啊，居然真有用！",
+          ContentDE = "Nicht schlecht, du hast ein Händchen dafür!",
           DialogueId = 71001509,
           GUID = "B1BEAD12",
           SpeakNpcId = 818006
         },
         [71001601] = {
           Content = "好多秽兽啊……这可怎么办……",
+          ContentDE = "So viele Filthoiden ... Was mache ich denn jetzt?",
           DialogueId = 71001601,
           Duration = 3,
           GUID = "B1BEBC2A",
@@ -218730,6 +219289,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001602] = {
           Content = "发生什么了？",
+          ContentDE = "Was ist los?",
           DialogueId = 71001602,
           GUID = "B1BEBC54",
           NextDialogue = 71001603,
@@ -218737,6 +219297,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001603] = {
           Content = "哇，看你的打扮，是位很厉害的狩月人吧！那个……我其实也是狩月人，只是我太弱了……",
+          ContentDE = "Wow, bei deiner Ausrüstung bist du bestimmt {性别:ein richtig starker Phoxjäger|eine richtig starke Phoxjägerin}, oder? Also ... ich bin auch Phoxjägerin, aber ich bin nicht besonders stark ...",
           DialogueId = 71001603,
           GUID = "B1BEBC7E",
           NextDialogue = 71001604,
@@ -218744,6 +219305,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001604] = {
           Content = "你能帮我把落在那群秽兽里的武器拿回来吗，不然我连下个委托都做不了了……",
+          ContentDE = "Kannst du mir helfen, meine Waffe von diesen Filthoiden zurückholen? Wenn ich sie nicht zurückbekomme, kann ich den nächsten Auftrag nicht mehr annehmen ...",
           DialogueId = 71001604,
           GUID = "B1BEBCA8",
           NextDialogue = 71001605,
@@ -218751,6 +219313,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001605] = {
           Content = "……我来帮忙吧。",
+          ContentDE = "Na klar, ich helfe dir.",
           DialogueId = 71001605,
           GUID = "B1BEBCD2",
           NextDialogue = 71001606,
@@ -218758,12 +219321,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001606] = {
           Content = "谢谢谢谢！",
+          ContentDE = "Danke, danke!",
           DialogueId = 71001606,
           GUID = "B1BEBCFC",
           SpeakNpcId = 818004
         },
         [71001607] = {
           Content = "秽兽就在前面，大师，你也小心些哦。",
+          ContentDE = "Die Filthoiden sind gleich da vorne. Sei vorsichtig!",
           DialogueId = 71001607,
           Duration = 3,
           GUID = "B1BEBD26",
@@ -218771,6 +219336,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001608] = {
           Content = "呜呜呜……要是接不了委托可怎么办呀，好几天没吃饭了……",
+          ContentDE = "Wäääh ... wenn ich die Waffe nicht zurückbekomme, wie soll ich dann Geld verdienen? Ich hab seit Tagen nichts gegessen ...",
           DialogueId = 71001608,
           GUID = "B1BEBD50",
           NextOptions = {
@@ -218781,12 +219347,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001609] = {
           Content = "谢谢！那我这就去做委托了，大师，我们以后再见！",
+          ContentDE = "Danke! Dann mache ich mich auf den Weg zu meinem nächsten Auftrag. Mach’s gut!",
           DialogueId = 71001609,
           GUID = "B1BEBD7A",
           SpeakNpcId = 818004
         },
         [71001610] = {
           Content = "事情我都知道了，把武器还给一名弱者真的好吗？说不定哪次就死在委托里了，与其这样，不如把她的武器都卖给我吧。这样对大家都好。",
+          ContentDE = "Ich weiß schon, was hier läuft. Ist es wirklich so klug, ihr die Waffe zurückzugeben? Am Ende verreckt sie noch bei ihrem nächsten Auftrag. Warum verkaufst du nicht mir die Waffe? Ist für alle das Beste.",
           DialogueId = 71001610,
           GUID = "B1BEBDA4",
           NextOptions = {
@@ -218797,18 +219365,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001611] = {
           Content = "合作愉快，以后还请继续找我。",
+          ContentDE = "Besten Dank! Ich freue mich auf unser nächstes Geschäft.",
           DialogueId = 71001611,
           GUID = "B1BEBDCE",
           SpeakNpcId = 818005
         },
         [71001701] = {
           Content = "诶，那不是{nickname}吗，快来快来。",
+          ContentDE = "Hey, ist das nicht {nickname}? Komm her!",
           DialogueId = 71001701,
           GUID = "B1BECC92",
           SpeakNpcId = 818012
         },
         [71001702] = {
           Content = "哼嗯，我得好好研究一下这里，你可要保护好我哦。",
+          ContentDE = "Ich muss hier ein paar ernsthafte Forschungen betreiben. Kannst du auf mich aufpassen, während ich arbeite?",
           DialogueId = 71001702,
           GUID = "B1BECCBC",
           NextOptions = {
@@ -218819,36 +219390,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001703] = {
           Content = "怎么每次我一研究就有坏家伙跑出来打扰呀，交给你啦！我正研究到关键的地方呢。",
+          ContentDE = "Warum tauchen immer genau dann Fieslinge auf, wenn ich am Forschen bin?! Kümmere dich um sie! Ich bin gerade an der entscheidenden Stelle.",
           DialogueId = 71001703,
           GUID = "B1BECCE6",
           SpeakNpcId = 818012
         },
         [71001704] = {
           Content = "这里这样，再这样……嗯……快了快了，再等等哈。",
+          ContentDE = "So ... und dann so ... Mmh ... fast, fast – noch einen Moment, ja?",
           DialogueId = 71001704,
           GUID = "B1BECD10",
           SpeakNpcId = 818012
         },
         [71001705] = {
           Content = "没错，就是这样！好耶，研究完成！",
+          ContentDE = "Genau so! Das ist es! Juhu, Forschung abgeschlossen!",
           DialogueId = 71001705,
           GUID = "B1BECD3A",
           SpeakNpcId = 818012
         },
         [71001706] = {
           Content = "还好有你在，本次考察圆满结束喽！这是一点小心意，下次也拜托你啦~",
+          ContentDE = "Gut, dass du da warst. Diese Untersuchung war ein voller Erfolg! Hier, eine kleine Aufmerksamkeit. Beim nächsten Mal zähle ich wieder auf dich!",
           DialogueId = 71001706,
           GUID = "B1BECD64",
           SpeakNpcId = 818012
         },
         [71001707] = {
           Content = "唔……你不陪我的话，那我就还是早点离开吧，这里给人的感觉阴森森的……",
+          ContentDE = "Hm ... wenn du mich nicht begleitest, geh ich lieber gleich wieder. Hier ist’s irgendwie unheimlich ...",
           DialogueId = 71001707,
           GUID = "B1BECD8E",
           SpeakNpcId = 818012
         },
         [71001801] = {
           Content = "老长官，我们都说了没事的，你想太多啦。",
+          ContentDE = "Sir, wir haben doch gesagt, alles ist gut. Du machst dir viel zu viele Gedanken.",
           DialogueId = 71001801,
           GUID = "B1BEDCFA",
           NextDialogue = 71001802,
@@ -218856,12 +219433,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001802] = {
           Content = "你们完全没发现潜藏在暗地里的危险！冰湖城交到你们这一代人手中真是完了！",
+          ContentDE = "Ihr seht die Gefahr nicht, die im Schatten lauert! Wenn Icelake in den Händen eurer Generation liegt, sind wir verloren!",
           DialogueId = 71001802,
           GUID = "B1BEDD24",
           SpeakNpcId = 818009
         },
         [71001803] = {
           Content = "老先生，你先消消气，有什么我能帮忙的吗？",
+          ContentDE = "Beruhige dich erstmal. Kann ich irgendwie helfen?",
           DialogueId = 71001803,
           GUID = "B1BEDD4E",
           NextDialogue = 71001804,
@@ -218869,6 +219448,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001804] = {
           Content = "眼看着冰湖城潜藏的不法之徒越来越多了，唉，真是一代不如一代！",
+          ContentDE = "Ihr seht doch, wie die Ganoven in Icelake immer dreister werden! Tja, jede Generation schlimmer als die letzte!",
           DialogueId = 71001804,
           GUID = "B1BEDD78",
           NextDialogue = 71001805,
@@ -218876,30 +219456,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001805] = {
           Content = "治安署那群懒惰的小年轻不管，我就自己来管！{性别：小伙子|小姑娘}，你这么热心，就来搭把手吧！",
+          ContentDE = "Die Faulpelze von der Sicherheitsbehörde tun nichts, also mach ich’s eben selbst! {性别:Junger Mann|Junges Fräulein}, wenn du so hilfsbereit bist, dann pack mit an!",
           DialogueId = 71001805,
           GUID = "B1BEDDA2",
           SpeakNpcId = 818009
         },
         [71001806] = {
           Content = "哼……",
+          ContentDE = "Hmpf ...",
           DialogueId = 71001806,
           GUID = "B1BEDDCC",
           SpeakNpcId = 818009
         },
         [71001807] = {
           Content = "啧……………………",
+          ContentDE = "Tss ...",
           DialogueId = 71001807,
           GUID = "B1BEDDF6",
           SpeakNpcId = 818009
         },
         [71001808] = {
           Content = "啧，这回藏得还挺深啊，不过我是不会放弃的！你们这群渣滓，都给我等着吧……",
+          ContentDE = "Tss, diesmal habt ihr euch echt gut versteckt. Aber ich gebe nicht auf! Ihr Abschaum, wartet nur ab.",
           DialogueId = 71001808,
           GUID = "B1BEDE20",
           SpeakNpcId = 818009
         },
         [71001809] = {
           Content = "动手！",
+          ContentDE = "Los, pack zu!",
           DialogueId = 71001809,
           GUID = "B1BEDE4A",
           NextDialogue = 71001810,
@@ -218907,6 +219492,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001810] = {
           Content = "看吧！渣滓出现了，冰湖城根本不像表面那样安全，老夫这就来制裁你们！",
+          ContentDE = "Siehst du?! Der Abschaum zeigt sein wahres Gesicht! Icelake ist längst nicht so sicher, wie es den Anschein hat. Ich gewähre euch das letzte Urteil!",
           DialogueId = 71001810,
           GUID = "B1BEDE74",
           NextDialogue = 71001813,
@@ -218914,42 +219500,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001811] = {
           Content = "辛苦你了，年轻人，冰湖城的治安，以后只能靠你和我了啊。",
+          ContentDE = "Gut gemacht. Die Sicherheit von Icelake ruht auf Schultern wie den unseren.",
           DialogueId = 71001811,
           GUID = "B1BEDE9E",
           SpeakNpcId = 818009
         },
         [71001812] = {
           Content = "哼，本来也不指望别人！你走吧。",
+          ContentDE = "Hmpf. Auf niemanden ist mehr Verlass! Geh nur.",
           DialogueId = 71001812,
           GUID = "B1BEDEC8",
           SpeakNpcId = 818009
         },
         [71001813] = {
           Content = "（老人二话不说便冲了上去，为了不闹出人命，现在该由你来制止这场混乱的私斗了。）",
+          ContentDE = "(Der Alte stürzt ohne zu zögern los. Damit hier niemand zu Schaden kommt, musst du dieser chaotischen Prügelei Einhalt gebieten.)",
           DialogueId = 71001813,
           GUID = "B1BEDE75",
           SpeakNpcId = 800006
         },
         [71001901] = {
           Content = "调整前后到底有没有区别呢……",
+          ContentDE = "Ob das jetzt wirklich was gebracht hat ...?",
           DialogueId = 71001901,
           GUID = "B1BEED62",
           SpeakNpcId = 818016
         },
         [71001902] = {
           Content = "哦？你来得正好，我刚调整了一下这部升降机，你能帮我乘坐一下试试有没有变快吗？我来来回回坐得太多了实在感觉不出来。",
+          ContentDE = "Oh? Gut, dass du da bist. Ich hab den Aufzug eben neu justiert – kannst du einmal mitfahren und testen, ob er schneller geworden ist? Ich bin schon so oft rauf und runter, ich merk’s einfach nicht mehr.",
           DialogueId = 71001902,
           GUID = "B1BEED8C",
           SpeakNpcId = 818016
         },
         [71001903] = {
           Content = "这么快？难道有什么我没发现的问题，看来得再整体检查一遍了，谢谢你提供的数据，这是我的一点心意。",
+          ContentDE = "So schnell? Dann muss da irgendwo ein Problem sein, das ich übersehen hab. Ich check besser das ganze System noch mal. Danke für die Daten. Hier, ein kleines Dankeschön.",
           DialogueId = 71001903,
           GUID = "B1BEEDB6",
           SpeakNpcId = 818016
         },
         [71001904] = {
           Content = "感觉没什么变化。",
+          ContentDE = "Fühlt sich kaum anders an.",
           DialogueId = 71001904,
           GUID = "B1BEEDE0",
           NextDialogue = 71001905,
@@ -218957,30 +219550,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001905] = {
           Content = "这样啊，果然调优来调优去都只是图一个自己的心理安慰。行吧，谢谢你提供的数据，这是我的一点心意。",
+          ContentDE = "Tja, wie gedacht. Diese Optimierung ist am Ende oft nur fürs eigene Gewissen. Danke für die Daten. Hier, ein kleines Dankeschön.",
           DialogueId = 71001905,
           GUID = "B1BEEE0A",
           SpeakNpcId = 818016
         },
         [71002001] = {
           Content = "杰瑞，你又跑去哪了啊，呜呜呜……",
+          ContentDE = "Jerry ... wo bist du schon wieder hin ... Wäääh ...",
           DialogueId = 71002001,
           GUID = "B1BEFDCA",
           SpeakNpcId = 818017
         },
         [71002002] = {
           Content = "能拜托你找找我跑丢的<H>猫</>吗，它应该就在这附近才对……",
+          ContentDE = "Kannst du meine weggelaufene <H>Katze</> suchen? Sie müsste irgendwo hier in der Nähe sein ...",
           DialogueId = 71002002,
           GUID = "B1BEFDF4",
           SpeakNpcId = 818017
         },
         [71002003] = {
           Content = "（“杰瑞”瑟缩在地上不愿离开，似乎非常惧怕与人类接触。）",
+          ContentDE = "(Jerry kauert am Boden und will nicht weg. Er scheint große Angst vor Menschen zu haben.)",
           DialogueId = 71002003,
           GUID = "B1BEFE1E",
           SpeakNpcId = 800006
         },
         [71002004] = {
           Content = "太好了，杰瑞你回来了！谢谢，谢谢。",
+          ContentDE = "Oh, Jerry, du bist wieder da! Danke, danke!",
           DialogueId = 71002004,
           GUID = "B1BEFE48",
           NextDialogue = 71002005,
@@ -218988,36 +219586,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002005] = {
           Content = "（少女抱起“杰瑞”又亲又抱，你假装看不到猫咪在少女怀中挣扎的模样，收下报酬便离开了。）",
+          ContentDE = "(Das Mädchen knuddelt Jerry. Du tust so, als würdest du nicht sehen, wie die Katze sich in ihren Armen windet, nimmst die Belohnung und gehst.)",
           DialogueId = 71002005,
           GUID = "B1BEFE72",
           SpeakNpcId = 800006
         },
         [71002006] = {
           Content = "你也找不到它吗……算了，到处乱跑的小猫不是我的杰瑞，我要让妈妈再给我买一只听话的好猫！",
+          ContentDE = "Du findest ihn auch nicht? Na gut. Eine Katze, die dauernd abhaut, ist eben nicht mein Jerry. Dann soll Mama mir eine neue kaufen – eine brave Katze, die auf mich hört!",
           DialogueId = 71002006,
           GUID = "B1BEFE9C",
           SpeakNpcId = 818018
         },
         [71002007] = {
           Content = "谢谢你！杰瑞，我的杰瑞……",
+          ContentDE = "Danke! Jerry, mein Jerry ...",
           DialogueId = 71002007,
           GUID = "B1BEFEC6",
           SpeakNpcId = 818017
         },
         [71002101] = {
           Content = "啊，{nickname}！！你可真是我的救星，快来帮帮我。",
+          ContentDE = "Ah, {nickname}! Du bist meine Rettung, hilf mir schnell!",
           DialogueId = 71002101,
           GUID = "B1BF0E32",
           SpeakNpcId = 818007
         },
         [71002102] = {
           Content = "我要把这箱物资送给泪湖那边的同僚，但突然肚子好痛，你能不能帮我送一下！拜托拜托！",
+          ContentDE = "Ich muss diese Kiste mit Vorräten zu meinen Kollegen am Klagenden See bringen, aber plötzlich tut mein Bauch höllisch weh. Kannst du das für mich übernehmen? Bitte, bitte!",
           DialogueId = 71002102,
           GUID = "B1BF0E5C",
           SpeakNpcId = 818007
         },
         [71002103] = {
           Content = "你好，这些是凯文托我转交的物资。",
+          ContentDE = "Hallo, das hier sind die Vorräte, die Kevin mir gegeben hat.",
           DialogueId = 71002103,
           GUID = "B1BF0E86",
           NextDialogue = 71002104,
@@ -219025,18 +219629,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002104] = {
           Content = "嗯……不对啊，怎么少了2条弹匣和1把步枪，说，是不是你偷偷拿走了！",
+          ContentDE = "Hm ... Moment mal. Da stimmt was nicht. Es fehlen zwei Magazine und ein Sturmgewehr. Spuck’s aus, hast du sie heimlich eingesteckt?!",
           DialogueId = 71002104,
           GUID = "B1BF0EB0",
           SpeakNpcId = 818008
         },
         [71002105] = {
           Content = "侵吞帝国财产，跟我走一趟！",
+          ContentDE = "Die Veruntreuung von königlichem Eigentum ist ein schweres Vergehen. Du kommst jetzt mit!",
           DialogueId = 71002105,
           GUID = "B1BF0EDA",
           SpeakNpcId = 818008
         },
         [71002106] = {
           Content = "啊？？我上个厕所的工夫，大伙怎么打起来了！",
+          ContentDE = "Hä?! Ich geh nur kurz aufs Klo und schon prügeln sich hier alle!",
           DialogueId = 71002106,
           GUID = "B1BF0F04",
           NextDialogue = 71002107,
@@ -219044,6 +219651,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002107] = {
           Content = "他们先动手的。",
+          ContentDE = "Die haben angefangen.",
           DialogueId = 71002107,
           GUID = "B1BF0F2E",
           NextDialogue = 71002108,
@@ -219051,6 +219659,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002108] = {
           Content = "你这家伙找的什么人啊，连军团的物资都敢偷。",
+          ContentDE = "Was für Leute schleppst du da denn an? Die trauen sich ja sogar, Legionsvorräte zu klauen.",
           DialogueId = 71002108,
           GUID = "B1BF0F58",
           NextDialogue = 71002109,
@@ -219058,6 +219667,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002109] = {
           Content = "啊？哦！2条弹匣和1把步枪是吧，在我这儿呢，我把自己那份直接拿走了。",
+          ContentDE = "Was? Oh! Zwei Magazine und ein Sturmgewehr, ja? Hab ich hier. Ich hab meinen Anteil direkt mitgenommen.",
           DialogueId = 71002109,
           GUID = "B1BF0F82",
           NextDialogue = 71002110,
@@ -219065,6 +219675,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002110] = {
           Content = "你也太不谨慎了——军团的物资随手丢给路人？万一是同盟的家伙怎么交差？",
+          ContentDE = "Du bist unglaublich! Legionsvorräte irgendeinem Fremden in die Hand drücken? Was, wenn das einer von den Verlassenen ist?",
           DialogueId = 71002110,
           GUID = "B1BF0FAC",
           NextDialogue = 71002111,
@@ -219072,6 +219683,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002111] = {
           Content = "啊哈，抱歉抱歉，下次注意，下次注意。",
+          ContentDE = "Ah, sorry, mein Fehler! Wieder was gelernt – passiert nicht wieder!",
           DialogueId = 71002111,
           GUID = "B1BF0FD6",
           NextDialogue = 71002112,
@@ -219079,6 +219691,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002112] = {
           Content = "{nickname}，这点东西你收下当赔礼吧，连累了你，怪不好意思的。",
+          ContentDE = "Hier, {nickname}, nimm das hier als Entschädigung, ja? Tut mir leid, dass ich dich in die Sache hineingezogen habe.",
           DialogueId = 71002112,
           GUID = "B1BF1000",
           Scripts = "TurnTo{TurnToDescription{\"818007:n(0)\"}}",
@@ -219086,12 +219699,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002113] = {
           Content = "拖延时间想溜？兄弟们，给我看着这{性别：小子|丫头}，看紧点。",
+          ContentDE = "Willst du Zeit schinden und abhauen? Jungs, behaltet {性别:den Kerl|die Göre} im Auge. Und zwar ganz genau.",
           DialogueId = 71002113,
           GUID = "B1BF102A",
           SpeakNpcId = 818008
         },
         [71002114] = {
           Content = "来了来了——",
+          ContentDE = "Ich bin zurück!",
           DialogueId = 71002114,
           GUID = "B1BF1054",
           NextDialogue = 71002115,
@@ -219099,6 +219714,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002115] = {
           Content = "啊？物资少了？哦！2条弹匣和1把步枪是吧。在我这儿呢，刚刚我把自己那份直接拿走了。",
+          ContentDE = "Was? Vorräte fehlen? Oh! Zwei Magazine und ein Sturmgewehr, ja? Hab ich hier. Ich hab meinen Anteil direkt mitgenommen.",
           DialogueId = 71002115,
           GUID = "B1BF107E",
           NextDialogue = 71002116,
@@ -219106,6 +219722,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002116] = {
           Content = "你也太不谨慎了——军团的物资随手丢给路人？万一是同盟的家伙怎么交差？",
+          ContentDE = "Du bist unglaublich! Legionsvorräte irgendeinem Fremden in die Hand drücken? Was, wenn das einer von den Verlassenen ist?",
           DialogueId = 71002116,
           GUID = "B1BF10A8",
           NextDialogue = 71002117,
@@ -219113,6 +219730,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002117] = {
           Content = "啊哈，抱歉抱歉，下次注意，下次注意。",
+          ContentDE = "Ah, sorry, mein Fehler! Wieder was gelernt – passiert nicht wieder!",
           DialogueId = 71002117,
           GUID = "B1BF10D2",
           NextDialogue = 71002118,
@@ -219120,6 +219738,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002118] = {
           Content = "{nickname}，这点东西你收下当赔礼吧，连累了你，怪不好意思的。",
+          ContentDE = "Hier, {nickname}, nimm das hier als Entschädigung, ja? Tut mir leid, dass ich dich in die Sache hineingezogen habe.",
           DialogueId = 71002118,
           GUID = "B1BF10FC",
           Scripts = "TurnTo{TurnToDescription{\"818007:n(0)\"}}",
@@ -219127,12 +219746,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002201] = {
           Content = "咱不想……不想……不想上工啊……",
+          ContentDE = "Ich will nicht ... nicht zur Schicht ...",
           DialogueId = 71002201,
           GUID = "B1BF1E9A",
           SpeakNpcId = 818019
         },
         [71002202] = {
           Content = "唉，老板非要搞什么什么——“让银色和平饭店的饭菜走进千家万户”，但他完全没考虑过咱们这些跑腿的苦哇！",
+          ContentDE = "Schon wieder der Boss mit seinen „brillanten“ Ideen. „Den Geschmack von Silberfrieden in jeden Haushalt bringen“, sagt er. Hat er eigentlich jemals an uns arme Lieferknechte gedacht?!",
           DialogueId = 71002202,
           GUID = "B1BF1EC4",
           NextDialogue = 71002203,
@@ -219140,6 +219761,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002203] = {
           Content = "需要帮忙吗？",
+          ContentDE = "Brauchst du Hilfe?",
           DialogueId = 71002203,
           GUID = "B1BF1EEE",
           NextDialogue = 71002204,
@@ -219147,6 +219769,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002204] = {
           Content = "需要，我非常需要一个人替我上工，不花钱的那种！唉……可惜根本没有这种好事！",
+          ContentDE = "Ja. Ich brauche dringend jemanden, der für mich zur Arbeit geht. Gratis, versteht sich! *seufz* ... Tja, so ein Glück gibt’s leider nicht!",
           DialogueId = 71002204,
           GUID = "B1BF1F18",
           NextDialogue = 71002205,
@@ -219154,12 +219777,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002205] = {
           Content = "你如果非要帮我拎点东西的话，那我除了谢谢，最多只能请你去泪湖边喝水喝到饱了。",
+          ContentDE = "Wenn du mir unbedingt beim Tragen helfen willst, kann ich dir nicht mehr als ein Danke anbieten – höchstens lade ich dich auf Wasser am Klagenden See ein, bis du platzt.",
           DialogueId = 71002205,
           GUID = "B1BF1F42",
           SpeakNpcId = 818019
         },
         [71002206] = {
           Content = "这皎皎身上带了不少吃的？哥几个今天看来有口福了呀。",
+          ContentDE = "Hey, die Luno hat ja ordentlich was zu futtern dabei? Na, Jungs, heute haben wir wohl Glück!",
           DialogueId = 71002206,
           GUID = "B1BF1F6C",
           NextDialogue = 71002207,
@@ -219167,6 +219792,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002207] = {
           Content = "不能给你们！这些菜送不到客人那的话我工钱就要被扣光了……",
+          ContentDE = "Ihr kriegt das nicht! Wenn das Essen nicht beim Kunden ankommt, wird mir der ganze Lohn gestrichen!",
           DialogueId = 71002207,
           GUID = "B1BF1F96",
           NextDialogue = 71002208,
@@ -219174,6 +219800,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002208] = {
           Content = "关我们啥事，拿来吧你！",
+          ContentDE = "Was geht uns das an? Her damit!",
           DialogueId = 71002208,
           GUID = "B1BF1F97",
           NextDialogue = 71002209,
@@ -219181,24 +219808,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002209] = {
           Content = "住手！",
+          ContentDE = "Halt!",
           DialogueId = 71002209,
           GUID = "B1BF1F98",
           SpeakNpcId = 100001
         },
         [71002210] = {
           Content = "呼……还好汤没洒，我们快送过去吧……",
+          ContentDE = "Puh, zum Glück ist die Suppe nicht verschüttet. Komm, schnell weiterliefern ...",
           DialogueId = 71002210,
           GUID = "B1BF1FC0",
           SpeakNpcId = 818019
         },
         [71002211] = {
           Content = "搞定搞定，还差最后一份！真是的，老板能不能少点奇思妙想哇……",
+          ContentDE = "Erledigt, erledigt! Nur noch die letzte Lieferung! Echt jetzt ... kann der Boss nicht weniger verrückte Ideen haben ...",
           DialogueId = 71002211,
           GUID = "B1BF20BC",
           SpeakNpcId = 818019
         },
         [71002212] = {
           Content = "这种杂物是怎么堆到大路上的啊……可恶！怎么今天所有东西都在跟我作对！",
+          ContentDE = "Aaaaah! Was ist das alles?! Wer lässt so ein Chaos mitten auf der Straße liegen?!",
           DialogueId = 71002212,
           GUID = "B1BF1FEA",
           NextDialogue = 71002218,
@@ -219206,18 +219837,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002213] = {
           Content = "你把吃的拿好，我来清理这些东西吧。",
+          ContentDE = "Du nimmst das Essen, ich räum den Kram hier weg.",
           DialogueId = 71002213,
           GUID = "B1BF2014",
           SpeakNpcId = 100001
         },
         [71002214] = {
           Content = "居然都清完了！那这时间还来得及！冲冲冲冲冲！",
+          ContentDE = "Du hast wirklich alles weggeräumt! Dann reicht die Zeit noch! Los los los los los!",
           DialogueId = 71002214,
           GUID = "B1BF2015",
           SpeakNpcId = 818019
         },
         [71002215] = {
           Content = "总算都送到了……要不是有你，我一点工钱都拿不到了。呼……休息好了，咱也该回去继续干活了。",
+          ContentDE = "Endlich alles abgeliefert ... ohne dich hätte ich keinen Cent gesehen. Puh, ausgeruht. Dann zurück, weiter mit der Arbeit.",
           DialogueId = 71002215,
           GUID = "B1BF203E",
           NextDialogue = 71002216,
@@ -219225,6 +219859,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002216] = {
           Content = "说好的辞职呢？",
+          ContentDE = "Und was ist mit der Kündigung?",
           DialogueId = 71002216,
           GUID = "B1BF2068",
           NextDialogue = 71002217,
@@ -219232,12 +219867,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002217] = {
           Content = "（外送皎皎拍了拍身上的灰尘便转身离开了。回答你问题的答案，也被藏在了她转身时的那一声叹息之中。）",
+          ContentDE = "(Die Luno klopft sich den Staub von der Kleidung und geht schnurstracks los. Die Antwort auf deine Frage steckt irgendwo im Seufzer, den sie beim Umdrehen von sich gibt.)",
           DialogueId = 71002217,
           GUID = "B1BF2092",
           SpeakNpcId = 800006
         },
         [71002218] = {
           Content = "不干了不干了！我要和老板说，这破活我不干啦！",
+          ContentDE = "Ich hab die Schnauze voll! Ich geh zum Boss und sag ihm, dass ich den Mistjob nicht mehr mitmache!",
           DialogueId = 71002218,
           GUID = "B1BF1FEB",
           NextDialogue = 71002213,
@@ -219245,12 +219882,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002301] = {
           Content = "嘶……刚刚那下没摔坏吧……",
+          ContentDE = "Zisch ... Sag bitte, dass ich das nicht gerade geschrottet habe ...",
           DialogueId = 71002301,
           GUID = "B1BF2F02",
           SpeakNpcId = 818020
         },
         [71002302] = {
           Content = "谁？！",
+          ContentDE = "Wer da?!",
           DialogueId = 71002302,
           GUID = "B1BF2F2C",
           NextDialogue = 71002303,
@@ -219258,42 +219897,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002303] = {
           Content = "嗯……咳，只是路过的狩月人啊。诶，我说，要不要来帮我个忙？就测下这玩意儿好不好用，很容易的！我会付你报酬。",
+          ContentDE = "Äh ... *hust* Nur {性别:ein vorbeigehender Phoxjäger|eine vorbeigehende Phoxjägerin}. Sag mal, hast du Lust, mir kurz auszuhelfen? Du musst nur testen, ob das Ding was taugt. Ganz leicht! Ich bezahle dich auch.",
           DialogueId = 71002303,
           GUID = "B1BF2F56",
           SpeakNpcId = 818020
         },
         [71002304] = {
           Content = "坚持15秒就差不多了，加油！",
+          ContentDE = "15 Sekunden durchhalten und fertig! Los, du schaffst das!",
           DialogueId = 71002304,
           GUID = "B1BF2F80",
           SpeakNpcId = 818020
         },
         [71002305] = {
           Content = "居然全都躲过去了……不是说这是从艾利西安缴获的宝贝吗，我看跟破铜烂铁也没啥区别——啊没没，没什么，这些钱给你，别到处乱说啊。",
+          ContentDE = "Du bist ja wirklich allem ausgewichen ... Und das soll ein Schatz aus Elysium sein? Sieht für mich eher nach Schrott aus ... Äh, nix! Hier ist dein Geld. Und erzähl das bloß keinem weiter, ja?",
           DialogueId = 71002305,
           GUID = "B1BF2FAA",
           SpeakNpcId = 818020
         },
         [71002306] = {
           Content = "这人被打到怎么还活蹦乱跳的……不是说这是艾利西安缴获的宝贝吗，到底行不行啊——啊没没，没什么，这些钱给你，别到处乱说啊。",
+          ContentDE = "Moment mal ... das Ding hat jeden Schuss getroffen, und du stehst immer noch?! Dabei haben sie mir hoch und heilig geschworen, das sei erstklassige elysische Militärware! Tss. Wahrscheinlich nur überteuerter Schrott ... Ah, vergiss, was ich gerade gesagt habe. Hier ist deine Bezahlung. Und, äh ... lassen wir das unter uns, ja?",
           DialogueId = 71002306,
           GUID = "B1BF2FD4",
           SpeakNpcId = 818020
         },
         [71002401] = {
           Content = "怎么勘探器还没干活就坏了，我的修理工具呢……",
+          ContentDE = "Wieso geht der Exkavator kaputt, noch bevor es überhaupt gearbeitet hat ... Wo ist mein Reparaturwerkzeug ...",
           DialogueId = 71002401,
           GUID = "B1BF3F6A",
           SpeakNpcId = 818015
         },
         [71002402] = {
           Content = "我们在这种地方都能遇到，太有缘了吧！既然你来了，那要不要帮忙照看下我的宝贝勘探器？",
+          ContentDE = "Dass wir uns ausgerechnet an so einem Ort über den Weg laufen – das ist doch Schicksal! Wenn du schon da bist, kannst du dann kurz auf meinen geliebten Exkavator aufpassen?",
           DialogueId = 71002402,
           GUID = "B1BF3F94",
           SpeakNpcId = 818015
         },
         [71002403] = {
           Content = "好耶，你就在它边上不要走动哦，我找到工具了就回来！",
+          ContentDE = "Juhu! Bleib einfach direkt daneben stehen und rühr dich nicht vom Fleck, ja? Sobald ich das Werkzeug gefunden habe, bin ich wieder da!",
           DialogueId = 71002403,
           GUID = "B1BF3FBE",
           NextDialogue = 71002404,
@@ -219301,36 +219947,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002404] = {
           Content = "看起来是有几个零件卡住了，把它们弄开的话应该会更好修一些。",
+          ContentDE = "Sieht so aus, als hätten sich ein paar Teile verklemmt. Wenn ich sie lockere, lässt sich der Exkavator bestimmt leichter reparieren.",
           DialogueId = 71002404,
           GUID = "B1BF3FE8",
           SpeakNpcId = 100001
         },
         [71002405] = {
           Content = "（勘探器的响动将周围的秽兽吸引了过来，击退它们吧。）",
+          ContentDE = "(Das Rattern des Exkavators hat die Filthoiden in der Nähe angelockt. Vertreibe sie!)",
           DialogueId = 71002405,
           GUID = "B1BF4012",
           SpeakNpcId = 800006
         },
         [71002406] = {
           Content = "诶，你还帮我把卡住的零件掰开了吗，好感动！",
+          ContentDE = "Hä, du hast sogar die verklemmten Teile aufgebogen? Ich bin echt gerührt!",
           DialogueId = 71002406,
           GUID = "B1BF403C",
           SpeakNpcId = 818015
         },
         [71002407] = {
           Content = "久等啦！我就知道交给你照看肯定没问题！",
+          ContentDE = "Danke für die Geduld! Ich wusste, wenn du auf ihn aufpasst, kann nichts schiefgehen!",
           DialogueId = 71002407,
           GUID = "B1BF4066",
           SpeakNpcId = 818015
         },
         [71002501] = {
           Content = "唉……这破下水道怎么又堵了……",
+          ContentDE = "*seufz* ... Warum ist diese Kanalisation schon wieder verstopft ...",
           DialogueId = 71002501,
           GUID = "B1BF4FD2",
           SpeakNpcId = 818021
         },
         [71002502] = {
           Content = "发生什么了？",
+          ContentDE = "Was ist passiert?",
           DialogueId = 71002502,
           GUID = "B1BF4FFC",
           NextDialogue = 71002503,
@@ -219338,6 +219990,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002503] = {
           Content = "这片下水道堵住了，长官给了我个说明书，但我根本看不懂啊……你能帮帮我吗？",
+          ContentDE = "Die Kanalisation ist dicht. Mein Vorgesetzter hat mir zwar eine Anleitung gegeben, aber ich verstehe kein Wort ... kannst du mir helfen?",
           DialogueId = 71002503,
           GUID = "B1BF5026",
           NextOptions = {
@@ -219348,6 +220001,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002505] = {
           Content = "说明书上说，遇到下水道堵塞只要开启三道闸门放水强冲即可。",
+          ContentDE = "In der Anleitung steht: Bei einer Verstopfung müssen drei Schleusentore geöffnet werden, damit das Wasser mit voller Wucht durchgespült wird.",
           DialogueId = 71002505,
           GUID = "B1BF507A",
           NextDialogue = 71002511,
@@ -219355,42 +220009,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002507] = {
           Content = "好嘞，接下来第二个在那边。",
+          ContentDE = "Alles klar, das zweite ist da drüben.",
           DialogueId = 71002507,
           GUID = "B1BF50CE",
           SpeakNpcId = 818021
         },
         [71002508] = {
           Content = "第三个我看看啊……找到了，就在那！",
+          ContentDE = "Und das dritte, mal sehen ... gefunden, da ist es!",
           DialogueId = 71002508,
           GUID = "B1BF50F8",
           SpeakNpcId = 818021
         },
         [71002509] = {
           Content = "好，我已经完全掌握了！这是我的一点心意，辛苦你啦！",
+          ContentDE = "Okay, ich hab’s komplett drauf! Das ist ein kleines Dankeschön. Danke dir für die Mühe!",
           DialogueId = 71002509,
           GUID = "B1BF5122",
           SpeakNpcId = 818021
         },
         [71002510] = {
           Content = "嘿，你这法子也不赖嘛，来来，这是给你的报酬。",
+          ContentDE = "He, dein Trick ist gar nicht schlecht. Komm her – hier ist deine Belohnung.",
           DialogueId = 71002510,
           GUID = "B1BF514C",
           SpeakNpcId = 818021
         },
         [71002511] = {
           Content = "原来是这样啊，那你能示范一下怎么操作吗，我看着学一下。",
+          ContentDE = "Ach so läuft das! Kannst du mir einmal zeigen, wie man das Tor bedient? Dann kann ich’s mir merken.",
           DialogueId = 71002511,
           GUID = "B1BF507B",
           SpeakNpcId = 818021
         },
         [71002601] = {
           Content = "可恶，这镐子也太不耐用了，剩下这些石头咋办呢，总不能让我用手挖吧……",
+          ContentDE = "Verdammt, diese Spitzhacke hält ja gar nichts aus ... und was ist mit den restlichen Brocken? Soll ich die etwa mit bloßen Händen ausgraben?",
           DialogueId = 71002601,
           GUID = "B1BF603A",
           SpeakNpcId = 818023
         },
         [71002602] = {
           Content = "看你的打扮，也是狩月人吧。我接的这个挖石头委托一个人做不完了，你要不要跟我一起？报酬直接分你一半。",
+          ContentDE = "So wie du aussiehst, bist du auch {性别:ein Phoxjäger|eine Phoxjägerin}, oder? Meine Mission hier – Steine kloppen – schaffe ich allein nicht. Machst du mit? Die Belohnung teilen wir halbe-halbe.",
           DialogueId = 71002602,
           GUID = "B1BF6064",
           NextOptions = {
@@ -219402,12 +220063,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002603] = {
           Content = "好，剩下的这些就交给你了，我来整理下之前挖好的。",
+          ContentDE = "Alles klar, der Rest ist dann deine Aufgabe. Ich sortiere in der Zeit das, was ich schon abgebaut habe.",
           DialogueId = 71002603,
           GUID = "B1BF608E",
           SpeakNpcId = 818023
         },
         [71002604] = {
           Content = "原来还有这种办法，太厉害了！",
+          ContentDE = "Dass es so auch geht – richtig stark!",
           DialogueId = 71002604,
           GUID = "B1BF60B8",
           NextDialogue = 71002605,
@@ -219415,150 +220078,175 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002605] = {
           Content = "辛苦你了，这是说好的报酬。",
+          ContentDE = "Danke für die Hilfe. Hier, wie versprochen, dein Anteil.",
           DialogueId = 71002605,
           GUID = "B1BF60E2",
           SpeakNpcId = 818023
         },
         [71002701] = {
           Content = "（一些木桶顺着水道漂来，有的还发出着诡异的声响，谨慎打开的话，也许能发现一些有用的东西。）",
+          ContentDE = "(Ein paar Fässer treiben mit der Strömung heran – aus manchen dringen sogar unheimliche Geräusche. Wenn du sie vorsichtig öffnest, findest du vielleicht etwas Brauchbares.)",
           DialogueId = 71002701,
           GUID = "B1BF70A2",
           SpeakNpcId = 800006
         },
         [71002702] = {
           Content = "（木桶底部破了个大洞，除了风声穿过的嘶吼，你找不到任何有用的东西，去看看其他木桶吧。）",
+          ContentDE = "(Im Fassboden klafft ein riesiges Loch. Außer dem heulenden Wind, der hindurchpfeift, findest du nichts Nützliches. Schau lieber bei den anderen Fässern nach.)",
           DialogueId = 71002702,
           GUID = "B1BF70CC",
           SpeakNpcId = 800006
         },
         [71002703] = {
           Content = "（木桶里装满了生活垃圾，散发着咕嘟咕嘟的闷响和刺鼻的气味，去看看其他木桶吧。）",
+          ContentDE = "(Das Fass ist bis obenhin mit Hausmüll vollgestopft. Es blubbert dumpf vor sich hin und stinkt bestialisch. Schau lieber bei den anderen Fässern nach.)",
           DialogueId = 71002703,
           GUID = "B1BF70F6",
           SpeakNpcId = 800006
         },
         [71002704] = {
           Content = "（付出必然要有回报，仔细翻找之后，你果然在木桶的夹层里找到了一些能用的物资。）",
+          ContentDE = "(Geduld zahlt sich aus: Nach gründlichem Durchwühlen findest du schließlich im doppelten Boden ein paar brauchbare Vorräte.)",
           DialogueId = 71002704,
           GUID = "B1BF7120",
           SpeakNpcId = 800006
         },
         [71002705] = {
           Content = "（破旧的木桶轰然散架，巨大的噪音将周围的秽兽吸引了过来，击败它们，拿到你应得的战利品吧。）",
+          ContentDE = "(Das morsche Fass bricht mit einem Krachen auseinander. Der Lärm lockt die Filthoiden in der Nähe an - besiege sie und hol dir die Beute, die dir zusteht.)",
           DialogueId = 71002705,
           GUID = "B1BF714A",
           SpeakNpcId = 800006
         },
         [71002801] = {
           Content = "（坍塌的碎石挡住了前路，将它们清理掉吧。）",
+          ContentDE = "(Eingestürztes Geröll versperrt den Weg. Räume es weg.)",
           DialogueId = 71002801,
           GUID = "B1BF810A",
           SpeakNpcId = 800006
         },
         [71002802] = {
           Content = "（你在清理碎石的过程中找到了些能用的物资，将它们收好吧。）",
+          ContentDE = "(Du hast beim Räumen des Gerölls brauchbare Vorräte gefunden. Sammle sie ein.)",
           DialogueId = 71002802,
           GUID = "B1BF8134",
           SpeakNpcId = 800006
         },
         [71002803] = {
           Content = "（清理碎石的响动将周围的秽兽吸引了过来，借助洞顶的落石击退它们吧。）",
+          ContentDE = "(Das Räumen des Gerölls hat die Filthoiden in der Nähe angelockt. Vertreibe sie mit den herabgefallenen Felsbrocken von der Decke!)",
           DialogueId = 71002803,
           GUID = "B1BF815E",
           SpeakNpcId = 800006
         },
         [71002804] = {
           Content = "（一番战斗后，你在周围找到了些能用的物资，将它们收好吧。）",
+          ContentDE = "(Du hast nach dem Kampf brauchbare Vorräte gefunden. Sammle sie ein.)",
           DialogueId = 71002804,
           GUID = "B1BF8188",
           SpeakNpcId = 800006
         },
         [71002901] = {
           Content = "（敌人在士官的指挥下稳步向你推进，尽快击败士官，打乱对方的指挥吧。）",
+          ContentDE = "(Unter dem Befehl des Sergeanten rückt der Feind stetig auf dich vor. Schalte den Sergeanten so schnell wie möglich aus, um ihre Formation zu durchbrechen.)",
           DialogueId = 71002901,
           GUID = "B1BF9172",
           SpeakNpcId = 800006
         },
         [71002902] = {
           Content = "（敌人在你冷静而正确的应对中溃败。）",
+          ContentDE = "(Unter deiner ruhigen, sauberen Gegenwehr bricht die feindliche Linie zusammen.)",
           DialogueId = 71002902,
           GUID = "B1BF919C",
           SpeakNpcId = 800006
         },
         [71002903] = {
           Content = "（士官呼叫了新的援军，更多的敌人向你袭来了。）",
+          ContentDE = "(Der Sergeant hat Verstärkung gerufen – noch mehr Feinde stürmen auf dich zu.)",
           DialogueId = 71002903,
           GUID = "B1BF91C6",
           SpeakNpcId = 800006
         },
         [71003001] = {
           Content = "（游荡的秽兽不安地嘶吼着，为附近笼罩起一丝不详的气息。尽快击退它们吧。）",
+          ContentDE = "(Umherstreifende Filthoiden fauchen unruhig und hüllen die Gegend in eine unheilvolle Aura. Schlage sie schnell zurück.)",
           DialogueId = 71003001,
           GUID = "B1BFA1DA",
           SpeakNpcId = 800006
         },
         [71003002] = {
           Content = "（笼罩于此的不详气息越发凝重，你知道，有什么东西就要降临了。）",
+          ContentDE = "(Die unheilvolle Aura wird immer dichter. Du spürst, wie etwas kurz davorsteht zu erscheinen.)",
           DialogueId = 71003002,
           GUID = "B1BFA204",
           SpeakNpcId = 800006
         },
         [71003003] = {
           Content = "（争斗的声响引来了不屈的灾厄，不详的化身终于降临于此。击败它吧，就像过去的无数次一样。）",
+          ContentDE = "(Der Kampflärm hat eine unbeugsame Katastrophe angelockt. Das Symbol des Unheils ist endlich da. Besiege es – wie schon unzählige Male zuvor.)",
           DialogueId = 71003003,
           GUID = "B1BFA22E",
           SpeakNpcId = 800006
         },
         [71003004] = {
           Content = "（不祥的气息随着这些秽兽一同消失了，你知道，这附近暂时安全了。）",
+          ContentDE = "(Mit den Filthoiden verfliegt auch die unheilvolle Aura. Du weißt, dass es hier fürs Erste sicher ist.)",
           DialogueId = 71003004,
           GUID = "B1BFA258",
           SpeakNpcId = 800006
         },
         [71003101] = {
           Content = "（最近多了好些觊觎魔灵的家伙，击退他们，救下眼前这只可怜的魔灵吧。）",
+          ContentDE = "Auf diesem Kontinent gibt es immer mehr Jäger, die es auf Geniemon abgesehen haben. Vertreibe sie und rette das arme Geniemon.)",
           DialogueId = 71003101,
           GUID = "B1BFB242",
           SpeakNpcId = 800006
         },
         [71003102] = {
           Content = "（更多敌人从远处冲了过来。）",
+          ContentDE = "(Aus der Ferne stürmen noch mehr Feinde heran.)",
           DialogueId = 71003102,
           GUID = "B1BFB26C",
           SpeakNpcId = 800006
         },
         [71003103] = {
           Content = "（现在，这只魔灵安全了。）",
+          ContentDE = "(Jetzt ist das Geniemon in Sicherheit.)",
           DialogueId = 71003103,
           GUID = "B1BFB296",
           SpeakNpcId = 800006
         },
         [71003201] = {
           Content = "（坍塌的碎石挡住了前路，四周遗落的爆炸物也许能帮你更快地清理这些碎石。）",
+          ContentDE = "(Das Geröll vom Einsturz versperrt den Weg. Die Sprengmittel, die hier und da herumliegen, könnten dir helfen, den Weg schneller freizuräumen.)",
           DialogueId = 71003201,
           GUID = "B1BFC2AA",
           SpeakNpcId = 800006
         },
         [71003202] = {
           Content = "（你找到了矿工们的简易爆破手册，勉强还能分辨出上面写的内容。）",
+          ContentDE = "(Du hast ein einfaches Sprenghandbuch der Bergmänner gefunden. Man kann den Inhalt gerade noch entziffern.)",
           DialogueId = 71003202,
           GUID = "B1BFC2D4",
           SpeakNpcId = 800006
         },
         [71003203] = {
           Content = "（你找到了一些爆炸物，稍微处理下应该还能用。）",
+          ContentDE = "(Du hast ein paar Sprengmittel gefunden. Mit etwas Aufbereitung sollten sie noch brauchbar sein.)",
           DialogueId = 71003203,
           GUID = "B1BFC2FE",
           SpeakNpcId = 800006
         },
         [71003204] = {
           Content = "（你找到了一些引线，稍微处理下应该还能用。）",
+          ContentDE = "(Du hast etwas Zündschnur gefunden. Mit etwas Aufbereitung sollte sie noch brauchbar sein.)",
           DialogueId = 71003204,
           GUID = "B1BFC328",
           SpeakNpcId = 800006
         },
         [71003206] = {
           Content = "（你按照矿工手册上的指示安装好了爆炸物，用它们清空面前区域吧。）",
+          ContentDE = "(Du hast die Sprengmittel nach Anleitung aus dem Sprenghandbuch installiert. Räume den Bereich vor dir frei.)",
           DialogueId = 71003206,
           Duration = 3,
           GUID = "B1BFC37C",
@@ -219566,60 +220254,70 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003207] = {
           Content = "（你在清理碎石的过程中找到了些能用的物资，将它们收好吧。）",
+          ContentDE = "(Du hast beim Räumen des Gerölls brauchbare Vorräte gefunden. Sammle sie ein.)",
           DialogueId = 71003207,
           GUID = "B1BFC3A6",
           SpeakNpcId = 800006
         },
         [71003501] = {
           Content = "（远处闪闪发光的东西吸引了你的注意，靠近看看到底是什么吧。）",
+          ContentDE = "(In der Ferne glitzert etwas und zieht deine Aufmerksamkeit auf sich. Geh näher ran und sieh nach, was es ist.)",
           DialogueId = 71003501,
           GUID = "B1BFF3E2",
           SpeakNpcId = 800006
         },
         [71003502] = {
           Content = "我就说这亮闪闪的破镜子能引来狩月人吧，动手！",
+          ContentDE = "Hab ich doch gesagt, dass dieser glitzernde Schrottspiegel Phoxjäger anlockt. Los, packt ihn euch!",
           DialogueId = 71003502,
           GUID = "B1BFF40C",
           SpeakNpcId = 818028
         },
         [71003504] = {
           Content = "别打了别打了，我们再也不敢了……",
+          ContentDE = "Hör auf, hör auf! Wir trauen uns nie wieder ...",
           DialogueId = 71003504,
           GUID = "B1BFF460",
           SpeakNpcId = 818028
         },
         [71003601] = {
           Content = "（四周突然响起了刺耳的警报，大量磁暴机朝你涌了过来。）",
+          ContentDE = "(Plötzlich heult rundherum ein schriller Alarm auf und eine große Menge Magnetdrohnen strömt auf dich zu.)",
           DialogueId = 71003601,
           GUID = "B1C0044A",
           SpeakNpcId = 800006
         },
         [71003602] = {
           Content = "（警报愈发响亮，更多敌人朝你涌了过来。）",
+          ContentDE = "(Der Alarm wird immer lauter. Noch mehr Feinde strömen auf dich zu.)",
           DialogueId = 71003602,
           GUID = "B1C00474",
           SpeakNpcId = 800006
         },
         [71003603] = {
           Content = "（在逐渐安静的警报声中，最后一批敌人抵达了此处。）",
+          ContentDE = "(Im langsam verstummenden Alarmton trifft die letzte Feindeswelle ein.)",
           DialogueId = 71003603,
           GUID = "B1C0049E",
           SpeakNpcId = 800006
         },
         [71003604] = {
           Content = "（伴随着所有敌人倒下，四周总算重归寂静。）",
+          ContentDE = "(Mit dem Fall der letzten Feinde kehrt endlich wieder Ruhe ein.)",
           DialogueId = 71003604,
           GUID = "B1C004C8",
           SpeakNpcId = 800006
         },
         [71003701] = {
           Content = "咱不想……不想……不想上工啊……",
+          ContentDE = "Ich will nicht ... nicht zur Schicht ...",
           DialogueId = 71003701,
           GUID = "B1C014B2",
           SpeakNpcId = 818019
         },
         [71003702] = {
           Content = "可恶……怎么这次还要往泪湖送吃的啊。大家就不能挑点正常的地方吃饭吗！不怕出事吗！跑死我了……",
+          ContentDE = "Verdammt ... warum muss ich diesmal bis zum Klagenden See liefern? Können die Leute nicht einfach mal an einem normalen Ort essen?! Keine Angst, dass was passiert?! Ich bin total am Ende ...",
           DialogueId = 71003702,
           GUID = "B1C014DC",
           NextDialogue = 71003703,
@@ -219627,6 +220325,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003703] = {
           Content = "需要帮忙吗？",
+          ContentDE = "Brauchst du Hilfe?",
           DialogueId = 71003703,
           GUID = "B1C014DD",
           NextDialogue = 71003704,
@@ -219634,6 +220333,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003704] = {
           Content = "需要！我需要你狠狠咬几口这些麻烦的客人，还要朝他们丢一大堆雪球！让他们以后别在这么难找的地方叫人送菜了。",
+          ContentDE = "Ja! Verpass diesen nervigen Kunden ein paar ordentliche Bisse und wirf ihnen einen Haufen Schneebälle an den Kopf! Damit sie’s künftig lassen, sich in so einem beschissen Kaff Essen liefern zu lassen.",
           DialogueId = 71003704,
           GUID = "B1C014DE",
           NextOptions = {
@@ -219645,24 +220345,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003705] = {
           Content = "唉……也就只能嘴上过过瘾了，你来了就陪咱一起去吧，多个人路上还能解解闷。上工上工……",
+          ContentDE = "*seufz* Am Ende bleibt’s eh nur beim Maulhelden. Aber wenn du schon da bist, komm einfach mit. Zu zweit ist der Weg weniger öde. Los geht’s, ab zur Arbeit ...",
           DialogueId = 71003705,
           GUID = "B1C01506",
           SpeakNpcId = 818019
         },
         [71003706] = {
           Content = "这些冰渣渣掉进菜里就不好了，有没有什么办法把它们清理掉呢……",
+          ContentDE = "Wenn diese Eisbrösel ins Essen fallen, ist es vorbei. Gibt’s nicht irgendeinen Trick, die wegzukriegen?",
           DialogueId = 71003706,
           GUID = "B1C01530",
           SpeakNpcId = 818019
         },
         [71003707] = {
           Content = "诶，好快！菜都还是暖的呢，我们快点送过去吧，不然老板又要唠唠叨叨了。",
+          ContentDE = "Huch, mega schnell! Das Essen ist sogar noch warm. Los, liefern wir’s schnell, sonst fängt der Boss wieder an zu nörgeln.",
           DialogueId = 71003707,
           GUID = "B1C01656",
           SpeakNpcId = 818019
         },
         [71003708] = {
           Content = "救命啊，至少让我吃饱了再死！",
+          ContentDE = "Hilfe! Lass mich wenigstens satt werden, bevor ich verrecke!",
           DialogueId = 71003708,
           GUID = "B1C0155A",
           NextDialogue = 71003709,
@@ -219670,12 +220374,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003709] = {
           Content = "居然真出事了啊！我们过去救他吧，如果他在老板面前夸夸我，老板说不定会给咱加工钱呢，嘿嘿，嘿嘿嘿……",
+          ContentDE = "Verdammt, es ist wirklich etwas passiert! Komm, wir retten ihn. Wenn er mich vor meinem Boss ein bisschen lobt, gibt’s vielleicht sogar mehr Lohn für uns, hehehehe ...",
           DialogueId = 71003709,
           GUID = "B1C01584",
           SpeakNpcId = 818019
         },
         [71003710] = {
           Content = "碍眼的家伙没了，还有新鲜的饭菜，配着泪湖的美景，真是一大享受啊~",
+          ContentDE = "Diese Nervensäge ist weg, das Essen ist frisch, und dazu die Aussicht auf den Klagenden See. Das ist ja ein purer Genuss!",
           DialogueId = 71003710,
           GUID = "B1C015AE",
           NextDialogue = 71003711,
@@ -219683,6 +220389,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003711] = {
           Content = "啊，那个……客人，你还没付钱……",
+          ContentDE = "Äh, also ... Herr, du hast noch nicht bezahlt ...",
           DialogueId = 71003711,
           GUID = "B1C015D8",
           NextDialogue = 71003712,
@@ -219690,6 +220397,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003712] = {
           Content = "嗯？你不就是个跑腿的吗，站在这干啥？餐钱等我下次去你们餐厅再结。",
+          ContentDE = "Hm? Du bist doch nur ein Laufbursche. Warum stehst du hier einfach rum? Ich zahl beim nächsten Mal, wenn ich bei euch im Laden bin.",
           DialogueId = 71003712,
           GUID = "B1C01602",
           NextDialogue = 71003713,
@@ -219697,6 +220405,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003713] = {
           Content = "可是……这样咱没法交差呀……",
+          ContentDE = "Aber ... ich kann doch nicht mit leeren Händen zurückgehen ... Mein Boss wird mich anschreien ...",
           DialogueId = 71003713,
           Duration = 3,
           GUID = "B1C0162C",
@@ -219705,6 +220414,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003714] = {
           Content = "（你将一切看在眼里，迈步跟了上去。没有人注意到，你背在身后的手上已经悄悄攒出了一枚雪球，蓄势待发。）",
+          ContentDE = "(Du hast alles mit angesehen und gehst hinterher. Niemand merkt, dass sich in deiner Hand hinter dem Rücken bereits unauffällig ein Schneeball formt ... bereit zum Abwurf.)",
           DialogueId = 71003714,
           Duration = 4,
           GUID = "B1C0162D",
@@ -219713,24 +220423,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71003715] = {
           Content = "啊！哪来的雪球，好冰好冰！啊啊啊啊我的饭掉水里了！不————",
+          ContentDE = "Aah! Wo kommt denn der Schneeball her?! Er ist eiskalt! Aaaah! Mein Essen ist ins Wasser gefallen! Neeeeeeein ...!",
           DialogueId = 71003715,
           GUID = "B1C0162E",
           SpeakNpcId = 818024
         },
         [71003801] = {
           Content = "（游荡的秽兽挤满了通道，击退它们吧。）",
+          ContentDE = "(Umherstreifende Filthoiden drängen in den Tunnel. Vertreibe sie.)",
           DialogueId = 71003801,
           GUID = "B1C0251A",
           SpeakNpcId = 800006
         },
         [71003802] = {
           Content = "（更多秽兽被打斗的声响吸引，涌向了通道，击退它们吧。）",
+          ContentDE = "(Die Kampfgeräusche haben noch mehr Filthoiden angelockt. Sie strömen in den Tunnel. Vertreibe sie!)",
           DialogueId = 71003802,
           GUID = "B1C02544",
           SpeakNpcId = 800006
         },
         [71003803] = {
           Content = "（通道中的所有秽兽都被你清理干净，这里暂时安全了。）",
+          ContentDE = "(Alle Filthoiden im Tunnel sind beseitigt. Hier ist es vorerst sicher.)",
           DialogueId = 71003803,
           GUID = "B1C0256E",
           SpeakNpcId = 800006
@@ -219767,30 +220481,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71004101] = {
           Content = "（废弃飞艇不知何时成了山间部分动物的大号储物箱，翻找一下也许能发现些有用的物资。）",
+          ContentDE = "(Das verlassene Luftschiff ist irgendwann zum riesigen Lagerplatz für Tiere in den Bergen geworden. Wühl dich durch – vielleicht findest du brauchbare Vorräte.)",
           DialogueId = 71004101,
           GUID = "B1C05652",
           SpeakNpcId = 800006
         },
         [71004102] = {
           Content = "（翻动物资的声响将周围的敌人吸引了过来，击退他们吧。）",
+          ContentDE = "(Das Gewühle hat die Feinde in der Nähe angelockt. Vertreibe sie!)",
           DialogueId = 71004102,
           GUID = "B1C056A6",
           SpeakNpcId = 800006
         },
         [71004103] = {
           Content = "（敌人退去，现在可以清点下你方才收集的物资了。）",
+          ContentDE = "(Die Feinde sind vertrieben. Jetzt kannst du die Vorräte zählen, die du eingesammelt hast.)",
           DialogueId = 71004103,
           GUID = "B1C056D0",
           SpeakNpcId = 800006
         },
         [71004201] = {
           Content = "唔嗯嗯嗯嗯，好结实……",
+          ContentDE = "Hmmm, ganz schön stabil ...",
           DialogueId = 71004201,
           GUID = "B1C066BA",
           SpeakNpcId = 818038
         },
         [71004202] = {
           Content = "你在干什么？",
+          ContentDE = "Was machst du da?",
           DialogueId = 71004202,
           GUID = "B1C066E4",
           NextDialogue = 71004203,
@@ -219798,6 +220517,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71004203] = {
           Content = "我最近在研究秽兽的生态，你要不要帮我找点死掉的秽兽样本呀。",
+          ContentDE = "Ich erforsche gerade die Ökologie der Filthoiden. Kannst du mir ein paar Proben von toten Filthoiden besorgen?",
           DialogueId = 71004203,
           GUID = "B1C066E5",
           NextOptions = {
@@ -219808,12 +220528,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71004204] = {
           Content = "好，那就交给你了！我先休息一下，一直一个人收集样本差点累死我……",
+          ContentDE = "Alles klar, dann bist du gefragt! Ich ruhe mich kurz aus ... Allein Proben zu sammeln, hat mich fast das Leben gekostet ...",
           DialogueId = 71004204,
           GUID = "B1C0670E",
           SpeakNpcId = 818038
         },
         [71004205] = {
           Content = "呜哇哇哇，周围怎么还有活的秽兽呀，别过来别过来，是我研究你们不是你们研究我！",
+          ContentDE = "Wäääh! Wieso sind hier noch lebendige Filthoide?! Nicht näher kommen! Ich erforsche euchn, nicht ihr mich!",
           DialogueId = 71004205,
           GUID = "B1C06738",
           GuideFacialId = "Shock",
@@ -219822,114 +220544,133 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71004206] = {
           Content = "谢啦谢啦，现在样本集齐了，我也该去继续研究了，下次见喽！",
+          ContentDE = "Danke, danke! Die Proben sind komplett. Ich geh dann weiterforschen. Bis zum nächsten Mal!",
           DialogueId = 71004206,
           GUID = "B1C0678C",
           SpeakNpcId = 818038
         },
         [71004301] = {
           Content = "（这一带总能捡到些漂亮的贝壳，打碎那些冲上岸的箱子找找看吧。）",
+          ContentDE = "(In dieser Gegend kann man oft hübsche Muscheln finden. Zerschlag die angeschwemmten Kisten und schau nach.)",
           DialogueId = 71004301,
           GUID = "B1C07722",
           SpeakNpcId = 800006
         },
         [71004302] = {
           Content = "（你在箱子底部找到了些被压住的贝壳。）",
+          ContentDE = "(Du hast am Boden der Kisten ein paar zerdrückte Muscheln gefunden.)",
           DialogueId = 71004302,
           GUID = "B1C0774C",
           SpeakNpcId = 800006
         },
         [71004303] = {
           Content = "（你早就听闻部分秽兽会躲藏在阴暗的箱子内袭击他人，但不幸的是，这一次它们撞上你了。击败它们，拿到你应得的战利品吧。）",
+          ContentDE = "(Du hast schon gehört, dass manche Filthoiden in dunklen Kisten lauern und über andere herfallen. Leider sind sie diesmal dir in die Arme gelaufen. Besiege sie und hol dir deine verdiente Beute!)",
           DialogueId = 71004303,
           GUID = "B1C07776",
           SpeakNpcId = 800006
         },
         [71004401] = {
           Content = "（游荡的秽兽挤满了四周，先击退它们，再去解救魔灵吧。）",
+          ContentDE = "(Umherstreifende Filthoiden drängen sich von überall. Vertreibe sie zuerst, dann jage nach Geniemon.)",
           DialogueId = 71004401,
           GUID = "B1C0878A",
           SpeakNpcId = 800006
         },
         [71004402] = {
           Content = "（争斗的声响引来了不屈的灾厄，不详的化身终于降临于此。击败它吧，就像过去的无数次一样。）",
+          ContentDE = "(Der Kampflärm hat eine unbeugsame Katastrophe angelockt. Das Symbol des Unheils ist endlich da. Besiege es – wie schon unzählige Male zuvor.)",
           DialogueId = 71004402,
           GUID = "B1C087B4",
           SpeakNpcId = 800006
         },
         [71004403] = {
           Content = "（附近暂时安全了，趁现在解救魔灵吧。）",
+          ContentDE = "(Hier ist es vorerst sicher. Nutze die Gelegenheit und fange jetzt Geniemon.)",
           DialogueId = 71004403,
           GUID = "B1C087DE",
           SpeakNpcId = 800006
         },
         [71004501] = {
           Content = "（敌人站在要回收的物资前，击败他们吧。）",
+          ContentDE = "(Feinde stehen vor den zu bergenden Vorräten. Besiege sie!)",
           DialogueId = 71004501,
           GUID = "B1C097F2",
           SpeakNpcId = 800006
         },
         [71004502] = {
           Content = "（不详的化身终于降临于此，击败它后再回收物资吧。）",
+          ContentDE = "(Das Symbol des Unheils ist endlich erschienen. Besiege es und sichere dann die Vorräte!)",
           DialogueId = 71004502,
           GUID = "B1C0981C",
           SpeakNpcId = 800006
         },
         [71004503] = {
           Content = "（附近暂时安全了，趁现在回收所有物资吧。）",
+          ContentDE = "(Hier ist es vorerst sicher. Nutze die Gelegenheit und berge jetzt alle Vorräte.)",
           DialogueId = 71004503,
           GUID = "B1C09846",
           SpeakNpcId = 800006
         },
         [71004601] = {
           Content = "（面前摆放着大量的物资箱，打开它们搜寻有用的物资吧。）",
+          ContentDE = "(Vor dir stehen zahlreiche Vorratskisten. Öffne sie und suche nach brauchbaren Vorräten.)",
           DialogueId = 71004601,
           GUID = "B1C0A85A",
           SpeakNpcId = 800006
         },
         [71004602] = {
           Content = "（你在箱子中找到了些有用的物资。）",
+          ContentDE = "(Du hast in den Kisten brauchbare Vorräte gefunden.)",
           DialogueId = 71004602,
           GUID = "B1C0A884",
           SpeakNpcId = 800006
         },
         [71004603] = {
           Content = "（你早就听闻部分秽兽会躲藏在阴暗的箱子内袭击他人，但不幸的是，这一次它们撞上你了。击败它们，拿到你应得的战利品吧。）",
+          ContentDE = "(Du hast schon gehört, dass manche Filthoiden in dunklen Kisten lauern und über andere herfallen. Leider sind sie diesmal dir in die Arme gelaufen. Besiege sie und hol dir deine verdiente Beute!)",
           DialogueId = 71004603,
           GUID = "B1C0A8AE",
           SpeakNpcId = 800006
         },
         [71004701] = {
           Content = "（远处闪闪发光的东西吸引了你的注意，靠近看看到底是什么吧。）",
+          ContentDE = "(In der Ferne glitzert etwas und zieht deine Aufmerksamkeit auf sich. Geh näher ran und sieh nach, was es ist.)",
           DialogueId = 71004701,
           GUID = "B1C0B8C2",
           SpeakNpcId = 800006
         },
         [71004702] = {
           Content = "（在你捡起物资的一瞬间，警报响起，大量敌人朝你涌了过来，击退他们吧。）",
+          ContentDE = "(In dem Moment, als du die Vorräte aufhebst, heult der Alarm los und viele Feinde stürmen auf dich zu. Besiege sie!)",
           DialogueId = 71004702,
           GUID = "B1C0B8EC",
           SpeakNpcId = 800006
         },
         [71004703] = {
           Content = "（警报解除，又一批敌人循着声响赶到了此处，击退他们吧。）",
+          ContentDE = "(Der Alarm ist aufgehoben. Eine weitere Feindeswelle ist den Geräuschen gefolgt. Besiege sie!)",
           DialogueId = 71004703,
           GUID = "B1C0B916",
           SpeakNpcId = 800006
         },
         [71004704] = {
           Content = "（伴随着所有敌人倒下，四周总算重归寂静。）",
+          ContentDE = "(Mit dem Fall der letzten Feinde kehrt endlich wieder Ruhe ein.)",
           DialogueId = 71004704,
           GUID = "B1C0B940",
           SpeakNpcId = 800006
         },
         [71004801] = {
           Content = "（远处传来碎冰掉落的声音，过去看看发生了什么吧。）",
+          ContentDE = "(Aus der Ferne ist das Klirren von herabfallendem Eis zu hören. Sieh nach, was los ist.)",
           DialogueId = 71004801,
           GUID = "B1C0C92A",
           SpeakNpcId = 800006
         },
         [71004802] = {
           Content = "狩月人？你来得正好，最近公路下面结的冰锥有点多了，一起把它们清理掉吧。",
+          ContentDE = "{性别:Phoxjäger|Phoxjägerin}? Gut, dass du da bist. In letzter Zeit hängen unter der Straße ziemlich viele Eiszapfen. Räum die bitte mit mir weg.",
           DialogueId = 71004802,
           GUID = "B1C0C954",
           NextOptions = {
@@ -219940,24 +220681,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71004803] = {
           Content = "感谢帮助，那边几块交给你了。",
+          ContentDE = "Danke für die Hilfe. Die drüben gehören dir.",
           DialogueId = 71004803,
           GUID = "B1C0C97E",
           SpeakNpcId = 818039
         },
         [71004805] = {
           Content = "这样安全隐患就小很多了，拿上吧，这些都是给你的报酬。",
+          ContentDE = "Jetzt ist es deutlich sicherer. Nimm das – das ist deine Belohnung.",
           DialogueId = 71004805,
           GUID = "B1C0C9D2",
           SpeakNpcId = 818039
         },
         [71004901] = {
           Content = "唉……我过不去啊，早知道提前买点草饵了。",
+          ContentDE = "*seufz* ... Ich komm da nicht rüber. Hätte ich bloß vorher noch Grasköder gekauft.",
           DialogueId = 71004901,
           GUID = "B1C0D992",
           SpeakNpcId = 818040
         },
         [71004902] = {
           Content = "狩月人啊，我需要点莲草做鱼饵，但莲草都在湖对面我过不去啊，你能帮我采点回来吗？",
+          ContentDE = "{性别:Phoxjäger|Phoxjägerin}, ich brauch etwas Ecliptakraut als Köder, aber das wächst drüben am anderen Ufer. Ich komm da nicht rüber. Kannst du mir ein bisschen davon besorgen?",
           DialogueId = 71004902,
           GUID = "B1C0D9BC",
           NextOptions = {
@@ -219969,24 +220714,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71004903] = {
           Content = "谢谢！那我就先把竿架上等你哈。",
+          ContentDE = "Danke! Dann stell ich schon mal die Rute auf und warte auf dich, ja?",
           DialogueId = 71004903,
           GUID = "B1C0D9E6",
           SpeakNpcId = 818040
         },
         [71004905] = {
           Content = "（游荡的秽兽挤满了四周，先击退它们，再去采集莲草吧。）",
+          ContentDE = "(Umherstreifende Filthoiden drängen sich von überall. Vertreibe sie zuerst, dann sammle Ecliptakraut.)",
           DialogueId = 71004905,
           GUID = "B1C0DA3A",
           SpeakNpcId = 800006
         },
         [71004906] = {
           Content = "（附近的莲草被你一扫而空，把它们交给捕鱼人吧。）",
+          ContentDE = "(Du hast das Ecliptakraut im Umkreis komplett abgeerntet. Bring es dem Fischer.)",
           DialogueId = 71004906,
           GUID = "B1C0DA64",
           SpeakNpcId = 800006
         },
         [71004907] = {
           Content = "好好好，这么多饵料，今天绝对能钓上鱼！",
+          ContentDE = "Sehr gut, sehr gut! Mit so vielen Köder fang ich heute garantiert etwas!",
           DialogueId = 71004907,
           GUID = "B1C0DA8E",
           SpeakNpcId = 818040
@@ -220001,12 +220750,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
       return {
         [71005001] = {
           Content = "喂，那边的朋友，能帮我拍张照吗？",
+          ContentDE = "Hey, du da! Kannst du mir ein Foto machen?",
           DialogueId = 71005001,
           GUID = "B1C0E9FA",
           SpeakNpcId = 818041
         },
         [71005002] = {
           Content = "这位朋友，你能帮我拍几张照片吗？难得来一趟冰湖城，不留点合影就太可惜了。",
+          ContentDE = "Hey, kannst du mir ein paar Fotos machen? Wenn man schon mal in Icelake ist und kein Erinnerungsfoto mitnimmt, wär das doch echt schade.",
           DialogueId = 71005002,
           GUID = "B1C0EA24",
           NextOptions = {
@@ -220018,24 +220769,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005004] = {
           Content = "太好了，记得把我后面的这栋房子也拍进去哦，我很喜欢它的造型。",
+          ContentDE = "Vielen Dank! Achte bitte darauf, das schöne Gebäude hinter mir mit aufs Bild zu bekommen – ich liebe das Design.",
           DialogueId = 71005004,
           GUID = "B1C0EA78",
           SpeakNpcId = 818041
         },
         [71005005] = {
           Content = "你拍得也太好了，真棒呀，多谢多谢。",
+          ContentDE = "Wow, du hast das richtig gut gemacht! Echt stark, danke, danke!",
           DialogueId = 71005005,
           GUID = "B1C0EAA2",
           SpeakNpcId = 818041
         },
         [71005101] = {
           Content = "鱼来，鱼来。",
+          ContentDE = "Fisch, komm her. Fisch, komm her.",
           DialogueId = 71005101,
           GUID = "B1C0EAA3",
           SpeakNpcId = 818045
         },
         [71005102] = {
           Content = "你在干什么？",
+          ContentDE = "Was machst du da?",
           DialogueId = 71005102,
           GUID = "B1C0FA62",
           NextDialogue = 71005103,
@@ -220043,12 +220798,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005103] = {
           Content = "钓鱼呢，等会再说。",
+          ContentDE = "Angeln. Wir reden später.",
           DialogueId = 71005103,
           GUID = "B1C0FA8C",
           SpeakNpcId = 818045
         },
         [71005104] = {
           Content = "（你在一旁等了许久，男人一条鱼都没钓上来。）",
+          ContentDE = "(Du wartest eine ganze Weile neben ihm – der Mann fängt keinen einen einzigen Fisch.)",
           DialogueId = 71005104,
           GUID = "B1C0FA8D",
           NextDialogue = 71005105,
@@ -220056,6 +220813,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005105] = {
           Content = "这样能钓上什么鱼啊？",
+          ContentDE = "Und so willst du einen Fisch fangen?",
           DialogueId = 71005105,
           GUID = "B1C0FAB6",
           NextDialogue = 71005106,
@@ -220063,12 +220821,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005106] = {
           Content = "别说话，看着就好。",
+          ContentDE = "Still. Nur zusehen.",
           DialogueId = 71005106,
           GUID = "B1C0FAE0",
           SpeakNpcId = 818045
         },
         [71005107] = {
           Content = "（你在一旁等了许久，男人还是一条鱼都没钓上来。）",
+          ContentDE = "(Du wartest eine ganze Weile neben ihm – der Mann fängt immer noch keinen einen einzigen Fisch.)",
           DialogueId = 71005107,
           GUID = "B1C0FAE1",
           NextDialogue = 71005108,
@@ -220076,6 +220836,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005108] = {
           Content = "鱼来，鱼来。",
+          ContentDE = "Fisch, komm her. Fisch, komm her.",
           DialogueId = 71005108,
           GUID = "B1C0FAE2",
           NextDialogue = 71005109,
@@ -220083,6 +220844,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005109] = {
           Content = "我觉得钓鱼至少得有个鱼竿吧，而不是嘴上说说就能钓到。",
+          ContentDE = "Ich finde, zum Angeln braucht man zumindest eine Rute. Nur so vor sich hinzureden, kannst du keine Fische fangen.",
           DialogueId = 71005109,
           GUID = "B1C0FB0A",
           NextDialogue = 71005110,
@@ -220090,12 +220852,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005110] = {
           Content = "这是我与无数人交流后掌握的最新钓鱼技巧，钓到的鱼那是又大又好，不信你去钓一条我们比比看。",
+          ContentDE = "Das ist die neueste Angeltechnik, die ich mir nach Gesprächen mit unzähligen Leuten angeeignet hab. Die Fische, die ich fange, sind die besten. Du glaubst mir nicht? Dann angel du einen und wir vergleichen.",
           DialogueId = 71005110,
           GUID = "B1C0FB34",
           SpeakNpcId = 818045
         },
         [71005111] = {
           Content = "我钓到了，你的鱼呢？",
+          ContentDE = "Ich hab einen. Und wo ist deiner?",
           DialogueId = 71005111,
           GUID = "B1C0FB5E",
           NextDialogue = 71005112,
@@ -220103,6 +220867,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005112] = {
           Content = "嗯，你这确实是条大鱼，但跟我要钓的相比还是差了点。",
+          ContentDE = "Hm. Ja, das ist ein großer Fisch. Aber gegen den, den ich fangen will, ist der noch klein.",
           DialogueId = 71005112,
           GUID = "B1C0FB88",
           NextDialogue = 71005113,
@@ -220110,18 +220875,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005113] = {
           Content = "我闻到那边有莲草的味道，害我的鱼都不咬钩了，你去把它们拔了再回来看看吧。",
+          ContentDE = "Ich rieche da drüben Ecliptakraut, deswegen beißt mein Fisch nicht. Geh hin, reiß es raus und komm dann wieder.",
           DialogueId = 71005113,
           GUID = "B1C0FC06",
           SpeakNpcId = 818045
         },
         [71005114] = {
           Content = "男人说的问题解决掉了，回去看看吧。",
+          ContentDE = "Das Problem ist erledigt. Geh zurück und sieh nach.",
           DialogueId = 71005114,
           GUID = "B1C0FC30",
           SpeakNpcId = 100001
         },
         [71005115] = {
           Content = "弄好了，你说的鱼呢。",
+          ContentDE = "Erledigt. Und wo ist jetzt dein Fisch?",
           DialogueId = 71005115,
           GUID = "B1C0FC5A",
           NextDialogue = 71005116,
@@ -220129,6 +220897,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005116] = {
           Content = "已经钓上了，你看。",
+          ContentDE = "Schon dran. Schau.",
           DialogueId = 71005116,
           GUID = "B1C0FC84",
           NextDialogue = 71005117,
@@ -220136,6 +220905,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005117] = {
           Content = "（男人说完指了指你。）",
+          ContentDE = "(Der Mann zeigt dabei auf dich.)",
           DialogueId = 71005117,
           GUID = "B1C0FCAE",
           NextDialogue = 71005118,
@@ -220150,6 +220920,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005119] = {
           Content = "这就是我与无数人交流后学到的感悟，希望以后你不会再被别人撒下的“鱼饵”戏弄。",
+          ContentDE = "Das ist die Erkenntnis, die ich nach Gesprächen mit unzähligen Leuten gewonnen habe. Ich hoffe, du lässt dich in Zukunft nicht mehr von den „Ködern“ anderer an der Nase herumführen.",
           DialogueId = 71005119,
           GUID = "B1C0FD02",
           NextDialogue = 71005120,
@@ -220157,12 +220928,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005120] = {
           Content = "折腾了你半天真是抱歉。这些是我的赔礼，对不起了。",
+          ContentDE = "Sorry, dass ich dich so lange herumgescheucht habe. Das hier ist meine Entschädigung. Tut mir leid.",
           DialogueId = 71005120,
           GUID = "B1C0FD2C",
           SpeakNpcId = 818045
         },
         [71005121] = {
           Content = "我钓到了，你的鱼呢？",
+          ContentDE = "Ich hab einen. Und wo ist deiner?",
           DialogueId = 71005121,
           GUID = "B1C0FD56",
           NextDialogue = 71005122,
@@ -220170,6 +220943,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005122] = {
           Content = "嗯，你这确实是条大鱼，但跟我要钓的相比还是差了点。",
+          ContentDE = "Hm. Ja, das ist ein großer Fisch. Aber gegen den, den ich fangen will, ist der noch klein.",
           DialogueId = 71005122,
           GUID = "B1C0FD80",
           NextDialogue = 71005123,
@@ -220177,18 +220951,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005123] = {
           Content = "我听到那边有秽兽的动静，害我的鱼都不咬钩了，你去把它们赶走再回来看看吧。",
+          ContentDE = "Ich habe da drüben Filthoiden gehört, deswegen beißt mein Fisch nicht. Geh hin, vertreibe sie und komm dann wieder.",
           DialogueId = 71005123,
           GUID = "B1C0FDAA",
           SpeakNpcId = 818045
         },
         [71005124] = {
           Content = "男人说的问题解决掉了，回去看看吧。",
+          ContentDE = "Das Problem ist erledigt. Geh zurück und sieh nach.",
           DialogueId = 71005124,
           GUID = "B1C0FDD4",
           SpeakNpcId = 100001
         },
         [71005125] = {
           Content = "弄好了，你说的鱼呢。",
+          ContentDE = "Erledigt. Und wo ist jetzt dein Fisch?",
           DialogueId = 71005125,
           GUID = "B1C0FDFE",
           NextDialogue = 71005126,
@@ -220196,6 +220973,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005126] = {
           Content = "已经钓上了，你看。",
+          ContentDE = "Schon dran. Schau.",
           DialogueId = 71005126,
           GUID = "B1C0FDFF",
           NextDialogue = 71005127,
@@ -220203,6 +220981,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005127] = {
           Content = "（男人说完指了指你。）",
+          ContentDE = "(Der Mann zeigt dabei auf dich.)",
           DialogueId = 71005127,
           GUID = "B1C0FE28",
           NextDialogue = 71005128,
@@ -220210,6 +220989,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005128] = {
           Content = "钓鱼钓的也可以不是鱼。撒下几句话，做一些奇怪的事，自会有无数鱼争相咬钩。",
+          ContentDE = "Nicht jeder Fisch hat Flossen, weißt du. Manchmal genügen ein paar kryptische Worte und ein, zwei seltsame Handlungen ... und irgendetwas beißt immer an.",
           DialogueId = 71005128,
           GUID = "B1C0FE52",
           NextDialogue = 71005129,
@@ -220217,6 +220997,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005129] = {
           Content = "这就是我与无数人交流后学到的感悟，希望以后你不会再被别人撒下的“鱼饵”戏弄。",
+          ContentDE = "Das ist die Erkenntnis, die ich nach Gesprächen mit unzähligen Leuten gewonnen habe. Ich hoffe, du lässt dich in Zukunft nicht mehr von den „Ködern“ anderer an der Nase herumführen.",
           DialogueId = 71005129,
           GUID = "B1C0FE7C",
           NextDialogue = 71005130,
@@ -220224,12 +221005,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005130] = {
           Content = "折腾了你半天真是抱歉。这些是我的赔礼，对不起了。",
+          ContentDE = "Sorry, dass ich dich so lange herumgescheucht habe. Das hier ist meine Entschädigung. Tut mir leid.",
           DialogueId = 71005130,
           GUID = "B1C0FEA6",
           SpeakNpcId = 818045
         },
         [71005131] = {
           Content = "我钓到了，你的鱼呢？",
+          ContentDE = "Ich hab einen. Und wo ist deiner?",
           DialogueId = 71005131,
           GUID = "B1C0FEA7",
           NextDialogue = 71005132,
@@ -220237,6 +221020,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005132] = {
           Content = "嗯，你这确实是条大鱼，但跟我要钓的相比还是差了点。",
+          ContentDE = "Hm. Ja, das ist ein großer Fisch. Aber gegen den, den ich fangen will, ist der noch klein.",
           DialogueId = 71005132,
           GUID = "B1C0FEA8",
           NextDialogue = 71005133,
@@ -220244,18 +221028,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005133] = {
           Content = "那边几块浮冰害我的鱼不咬钩了，你去把它们踩碎再回来看看吧。",
+          ContentDE = "Da drüben sind Eisschollen, deswegen beißt mein Fisch nicht. Geh hin, tritt sie kaputt und komm dann wieder.",
           DialogueId = 71005133,
           GUID = "B1C0FEA9",
           SpeakNpcId = 818045
         },
         [71005134] = {
           Content = "男人说的问题解决掉了，回去看看吧。",
+          ContentDE = "Das Problem ist erledigt. Geh zurück und sieh nach.",
           DialogueId = 71005134,
           GUID = "B1C0FED0",
           SpeakNpcId = 100001
         },
         [71005135] = {
           Content = "弄好了，你说的鱼呢。",
+          ContentDE = "Erledigt. Und wo ist jetzt dein Fisch?",
           DialogueId = 71005135,
           GUID = "B1C0FEFA",
           NextDialogue = 71005136,
@@ -220263,6 +221050,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005136] = {
           Content = "已经钓上了，你看。",
+          ContentDE = "Schon dran. Schau.",
           DialogueId = 71005136,
           GUID = "B1C0FEFB",
           NextDialogue = 71005137,
@@ -220270,6 +221058,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005137] = {
           Content = "（男人说完指了指你。）",
+          ContentDE = "(Der Mann zeigt dabei auf dich.)",
           DialogueId = 71005137,
           GUID = "B1C0FEFC",
           NextDialogue = 71005138,
@@ -220277,6 +221066,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005138] = {
           Content = "钓鱼钓的也可以不是鱼。撒下几句话，做一些奇怪的事，就会有无数鱼争相咬钩。",
+          ContentDE = "Nicht jeder Fisch hat Flossen, weißt du. Manchmal genügen ein paar kryptische Worte und ein, zwei seltsame Handlungen ... und irgendetwas beißt immer an.",
           DialogueId = 71005138,
           GUID = "B1C0FEFD",
           NextDialogue = 71005139,
@@ -220284,6 +221074,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005139] = {
           Content = "这就是我与无数人交流后学到的感悟，希望以后你不会再被别人撒下的“鱼饵”戏弄。",
+          ContentDE = "Das ist die Erkenntnis, die ich nach Gesprächen mit unzähligen Leuten gewonnen habe. Ich hoffe, du lässt dich in Zukunft nicht mehr von den „Ködern“ anderer an der Nase herumführen.",
           DialogueId = 71005139,
           GUID = "B1C0FF24",
           NextDialogue = 71005140,
@@ -220291,18 +221082,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005140] = {
           Content = "折腾了你半天真是抱歉。这些是我的赔礼，对不起了。",
+          ContentDE = "Sorry, dass ich dich so lange herumgescheucht habe. Das hier ist meine Entschädigung. Tut mir leid.",
           DialogueId = 71005140,
           GUID = "B1C0FF4E",
           SpeakNpcId = 818045
         },
         [71005141] = {
           Content = "看来只有一种办法能让你说真话了。",
+          ContentDE = "Sieht so aus, als gibt’s nur einen Weg, die Wahrheit aus dir herauszulocken.",
           DialogueId = 71005141,
           GUID = "B1C0FF78",
           SpeakNpcId = 100001
         },
         [71005142] = {
           Content = "我错了我错了，我就是看到经常有人随便讲几句话，就把一大波人耍得团团转，所以就想验证一下试试……",
+          ContentDE = "Schon gut, schon gut! Du hast mich erwischt. Ich habe gesehen, wie die Leute auf ein paar glatte Worte und ein bisschen Showmanship reinfallen ... also dachte ich mir: Warum nicht selbst mal versuchen?",
           DialogueId = 71005142,
           GUID = "B1C0FFA2",
           NextDialogue = 71005143,
@@ -220310,18 +221104,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005143] = {
           Content = "折腾了你半天真是抱歉。这些是我的赔礼，对不起了。",
+          ContentDE = "Sorry, dass ich dich so lange herumgescheucht habe. Das hier ist meine Entschädigung. Tut mir leid.",
           DialogueId = 71005143,
           GUID = "B1C0FFCC",
           SpeakNpcId = 818045
         },
         [71005201] = {
           Content = "幸福硬币，有魔法的幸福硬币，大哥哥大姐姐们，来买一枚吧。",
+          ContentDE = "Glücksmünzen! Echte magische Glücksmünzen! Holt euch eine, solange der Vorrat reicht!",
           DialogueId = 71005201,
           GUID = "B1C10ACA",
           SpeakNpcId = 818046
         },
         [71005202] = {
           Content = "（待你靠近后，女孩立马从怀中掏出几枚铜币递到了你的面前。）",
+          ContentDE = "(Sobald du näher kommst, zieht das Mädchen sofort ein paar Kupfermünzen hervor und hält sie dir hin.)",
           DialogueId = 71005202,
           GUID = "B1C10AF4",
           NextDialogue = 71005203,
@@ -220329,6 +221126,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005203] = {
           Content = "{性别：大哥哥|大姐姐}，你好你好，要买幸福硬币吗？这是妈妈留给我的，她说一枚烦恼消散，两枚幸福常伴，三枚……三枚想做什么都能做到！",
+          ContentDE = "Hallo, {性别:Herr|Fräulein}! Möchten Sie eine Glücksmünze? Meine Mama hat sie mir gegeben! Sie sagte: Eine Münze vertreibt deine Sorgen, zwei halten das Glück ganz nah bei dir, und drei ... drei können jeden Wunsch wahr werden lassen!",
           DialogueId = 71005203,
           GUID = "B1C10B1E",
           NextDialogue = 71005204,
@@ -220336,6 +221134,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005204] = {
           Content = "……",
+          ContentDE = "...",
           DialogueId = 71005204,
           GUID = "B1C10B48",
           NextDialogue = 71005205,
@@ -220343,12 +221142,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005205] = {
           Content = "它们都被妈妈施过魔法了，真的很有用，不骗你！不信的话你去问问其他人嘛，问完再来看看要不要买呗。去吧去吧，我就在这等你。",
+          ContentDE = "Mama hat sie alle verzaubert. Wirklich! Ich tische dir keine Lüge auf! Wenn du mir nicht glaubst, frag doch die anderen! Frag sie und komm dann zurück und entscheide, ob du eine kaufen willst. Geh nur, ich warte hier.",
           DialogueId = 71005205,
           GUID = "B1C10B49",
           SpeakNpcId = 818046
         },
         [71005206] = {
           Content = "（你注意到老人的脚边摆放着几枚幸福硬币，于是你与他攀谈了起来。）",
+          ContentDE = "(Du bemerkst ein paar Glücksmünzen zu den Füßen eines alten Mannes. Du sprichst ihn an.)",
           DialogueId = 71005206,
           GUID = "B1C10B72",
           NextDialogue = 71005207,
@@ -220356,6 +221157,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005207] = {
           Content = "幸福硬币？哈哈，真有这好东西我还会在这破地方饿肚子？",
+          ContentDE = "Glücksmünzen? Haha, wenn’s so was wirklich gäbe, würde ich dann hier an diesem Drecksort Hunger schieben?",
           DialogueId = 71005207,
           GUID = "B1C10B73",
           NextDialogue = 71005208,
@@ -220363,12 +221165,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005208] = {
           Content = "这话不要告诉那小姑娘啊。她那么小就没有亲人了，怪可怜的……很多东西就算是假的，也能给人点盼头，你说对吧。",
+          ContentDE = "Sag das bloß nicht dem kleinen Mädchen. Sie hat in ihrem Alter schon niemanden mehr ... Sie kann einem echt leid tun. Manches ist vielleicht nicht echt, aber es gibt den Leuten trotzdem ein bisschen Hoffnung, oder?",
           DialogueId = 71005208,
           GUID = "B1C10B74",
           SpeakNpcId = 818047
         },
         [71005209] = {
           Content = "（你注意到男孩手中正把玩着几枚幸福硬币，于是你与他攀谈了起来。）",
+          ContentDE = "(Du bemerkst, wie ein Junge ein paar Glücksmünzen in der Hand dreht. Du sprichst ihn an.)",
           DialogueId = 71005209,
           GUID = "B1C10B9C",
           NextDialogue = 71005210,
@@ -220376,6 +221180,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005210] = {
           Content = "你看我左手的幸福硬币和右手的铜币有什么不一样吗？",
+          ContentDE = "Siehst du einen Unterschied zwischen der Glücksmünze in meiner linken Hand und der Kupfermünze in meiner rechten?",
           DialogueId = 71005210,
           GUID = "B1C10B9D",
           NextDialogue = 71005211,
@@ -220383,6 +221188,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005211] = {
           Content = "（男孩举起双手，你仔细观察后，确认它们就是完全一样的东西。）",
+          ContentDE = "(Der Junge hebt beide Hände. Als du genau hinsiehst, stellst du fest: Sie sind exakt gleich.)",
           DialogueId = 71005211,
           GUID = "B1C10B9E",
           NextDialogue = 71005212,
@@ -220390,6 +221196,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005212] = {
           Content = "是呀，幸福硬币就是我们手里的铜币。它不是魔法创造出来的宝贝，而是诞生自大家的善意。",
+          ContentDE = "Genau. Glücksmünzen sind die Kupfermünzen in unseren Händen. Sie sind kein Schatz, der aus Magie entstanden ist – sie werden aus der Güte der Menschen geboren.",
           DialogueId = 71005212,
           GUID = "B1C10B9F",
           NextDialogue = 71005213,
@@ -220397,24 +221204,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005213] = {
           Content = "一枚幸福硬币就能买到她的笑容，这么轻松的买卖可不多见呀。",
+          ContentDE = "Eine Glücksmünze kauft dir ihr Lächeln. So ein leichter Handel kommt nicht oft vor.",
           DialogueId = 71005213,
           GUID = "B1C10BA0",
           SpeakNpcId = 818048
         },
         [71005214] = {
           Content = "怎么样，大家都说很有用吧！",
+          ContentDE = "Na, siehst du! Alle sagen doch, dass sie helfen, oder?",
           DialogueId = 71005214,
           GUID = "B1C10BC6",
           SpeakNpcId = 818046
         },
         [71005215] = {
           Content = "嘿嘿，真是拿你没办法。那就全都卖给你吧，希望你能找到属于自己的幸福哦。",
+          ContentDE = "Hehe, bei dir kann man echt nicht nein sagen. Na gut, dann verkauf ich sie dir alle. Ich hoffe, du findest dein eigenes Glück.",
           DialogueId = 71005215,
           GUID = "B1C10BF0",
           SpeakNpcId = 818046
         },
         [71005216] = {
           Content = "靠自己吗……好帅气的发言啊！我以后也可以像你这样吗？",
+          ContentDE = "Mit eigenen Händen ... Wow, das klingt richtig stark! Kann ich später auch so werden wie du?",
           DialogueId = 71005216,
           GUID = "B1C10C1A",
           NextDialogue = 71005217,
@@ -220422,6 +221233,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005217] = {
           Content = "当然。",
+          ContentDE = "Klar.",
           DialogueId = 71005217,
           GUID = "B1C10C1B",
           NextDialogue = 71005218,
@@ -220429,18 +221241,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005218] = {
           Content = "唔……这样子啊……我会好好想想的，谢谢你！",
+          ContentDE = "Hm ... so ist das also ... Ich denk da drüber nach. Danke dir!",
           DialogueId = 71005218,
           GUID = "B1C10C1C",
           SpeakNpcId = 818046
         },
         [71005301] = {
           Content = "抢劫啦，抢劫啦，有没有人帮帮我啊！",
+          ContentDE = "Hilfe! Ich wurde ausgeraubt! Jemand soll mir helfen – bitte! Irgendwer!",
           DialogueId = 71005301,
           GUID = "B1C11B32",
           SpeakNpcId = 818042
         },
         [71005302] = {
           Content = "抢你的人跑哪去了？",
+          ContentDE = "Wo sind die Räuber hin?",
           DialogueId = 71005302,
           GUID = "B1C11B5C",
           NextDialogue = 71005303,
@@ -220448,12 +221263,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005303] = {
           Content = "他们，他们往那边跑了，呜呜呜，外城真的好危险啊……",
+          ContentDE = "D... Die sind da lang! Wäääh ... die Außenstadt ist echt gefährlich ...",
           DialogueId = 71005303,
           GUID = "B1C11B86",
           SpeakNpcId = 818042
         },
         [71005304] = {
           Content = "内城的家伙一个比一个有钱啊，几个月不愁吃喝喽。",
+          ContentDE = "Die Spießer aus der Innenstadt sind alle stinkreich. Für ein paar Monate ist Essen gesichert.",
           DialogueId = 71005304,
           GUID = "B1C11C04",
           NextDialogue = 71005305,
@@ -220461,6 +221278,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005305] = {
           Content = "站住，把抢来的东西还回来。",
+          ContentDE = "Stehen bleiben! Gebt das Diebesgut zurück.",
           DialogueId = 71005305,
           GUID = "B1C11C2E",
           NextDialogue = 71005306,
@@ -220468,30 +221286,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005306] = {
           Content = "哼，这么快就有人帮忙出头啊，那就别怪我们下狠手了！",
+          ContentDE = "Tss, schon kommt Hilfe angekrochen. Dann mach dich auf die harte Tour gefasst!",
           DialogueId = 71005306,
           GUID = "B1C11C58",
           SpeakNpcId = 818043
         },
         [71005307] = {
           Content = "啧，今天真是晦气，撤！",
+          ContentDE = "Pah, heute ist echt ein Scheißtag. Rückzug!",
           DialogueId = 71005307,
           GUID = "B1C11CAC",
           SpeakNpcId = 818043
         },
         [71005308] = {
           Content = "（抢劫者们说完便朝各个方向逃去，你捡起地上的包裹，思索着下一步行动。）",
+          ContentDE = "(Die Räuber rennen in alle Richtungen davon. Du hebst die Tasche vom Boden auf und überlegst, was du als Nächstes tust.)",
           DialogueId = 71005308,
           GUID = "B1C11CD6",
           SpeakNpcId = 800006
         },
         [71005309] = {
           Content = "（这是帮女孩认识外城险恶的“学费”，你拿走它们天经地义。不找她再多要点钱已经算是相当仁慈了。）",
+          ContentDE = "(Nenn es Lehrgeld – eine Lektion fürs Überleben. Ohne zu zögern steckst du das Geld ein. Ehrlich gesagt ist es großzügig von dir, ihr nicht noch extra etwas zu berechnen.)",
           DialogueId = 71005309,
           GUID = "B1C11D2A",
           SpeakNpcId = 800006
         },
         [71005310] = {
           Content = "我拿回来了，是这个包裹没错吧。",
+          ContentDE = "Ich hab’s zurückgeholt. Das ist doch diese Tasche, oder?",
           DialogueId = 71005310,
           GUID = "B1C11D54",
           NextDialogue = 71005311,
@@ -220499,6 +221322,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005311] = {
           Content = "是的是的，谢谢你！",
+          ContentDE = "Ja, ja! Danke!",
           DialogueId = 71005311,
           GUID = "B1C11D7E",
           NextDialogue = 71005312,
@@ -220506,6 +221330,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005312] = {
           Content = "（女孩擦了擦眼泪，从包裹中取出一大笔钱放到了你的手上。）",
+          ContentDE = "(Das Mädchen wischt sich die Tränen vom Gesicht, holt einen dicken Geldschein-Stapel aus der Tasche und drückt ihn dir in die Hand.)",
           DialogueId = 71005312,
           GUID = "B1C11DA8",
           NextDialogue = 71005313,
@@ -220513,30 +221338,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005313] = {
           Content = "这些是谢礼，外城还有你这样善良的狩月人真是太好了，呜呜呜……",
+          ContentDE = "Das ist ein kleines Dankeschön. Wie schön, dass es in der Außenstadt echt noch so gutherzige Phoxjäger wie dich gibt ... buhu ...",
           DialogueId = 71005313,
           GUID = "B1C11DA9",
           SpeakNpcId = 818042
         },
         [71005401] = {
           Content = "丰厚奖励就在眼前，走过路过别错过。",
+          ContentDE = "Fette Belohnungen gleich vor der Nase! Wer vorbeikommt, sollte’s nicht verpassen!",
           DialogueId = 71005401,
           GUID = "B1C12B9A",
           SpeakNpcId = 818044
         },
         [71005402] = {
           Content = "呦，这位狩月人要来试试吗，只要你能打开这个箱子，里面的奖励就都是你的了！",
+          ContentDE = "Na, du da, {性别:Phoxjäger|Phoxjägerin}, willst du dein Glück versuchen? Wenn du diese Kiste aufkriegst, gehört dir die ganze Belohnung da drin!",
           DialogueId = 71005402,
           GUID = "B1C12BC4",
           SpeakNpcId = 818044
         },
         [71005403] = {
           Content = "（锁孔打开的声音传来，当你以为自己成功时，缓缓开启的箱子突然发出“咔哒”一声脆响，重重地关上。无论如何尝试，箱子都再也无法打开了。）",
+          ContentDE = "(Du hörst, wie das Schloss aufspringt. Gerade als du glaubst, du hättest es geschafft, gibt die sich langsam öffnende Kiste plötzlich ein scharfes „Klick“ von sich und klappt mit einem lauten Knall wieder zu. Egal was du versuchst, sie lässt sich nicht mehr öffnen.)",
           DialogueId = 71005403,
           GUID = "B1C12C18",
           SpeakNpcId = 800006
         },
         [71005404] = {
           Content = "啊，你把我的宝箱弄坏了啊，赔钱赔钱！",
+          ContentDE = "Hey! Du hast meine Schatzkiste kaputtgemacht! Du musst bezahlen!",
           DialogueId = 71005404,
           GUID = "B1C12C42",
           NextOptions = {
@@ -220547,6 +221377,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005405] = {
           Content = "嘘……别喊别喊，我之后还要在这一带骗……不是，跟其他人做生意呢。这些东西给你，行行好别喊了。",
+          ContentDE = "Psst ... nicht so laut, nicht so laut! Ich muss hier später noch weiter Leute abzieh... äh, ich meine, Geschäfte machen. Hier, nimm das. Bitte hör auf zu kreischen.",
           DialogueId = 71005405,
           GUID = "B1C12CC0",
           NextDialogue = 71005406,
@@ -220554,12 +221385,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005406] = {
           Content = "（男人自知理亏，塞给你一袋钱财便抱着箱子灰溜溜地走开了。）",
+          ContentDE = "(Der Mann weiß, dass er im Unrecht ist. Er drückt dir einen Geldbeutel in die Hand und trottet mit der Kiste davon.)",
           DialogueId = 71005406,
           GUID = "B1C12CEA",
           SpeakNpcId = 800006
         },
         [71005407] = {
           Content = "你这家伙，非逼我动手是吧！",
+          ContentDE = "Du Mistkerl, willst du mich echt zum Zuschlagen bringen?!",
           DialogueId = 71005407,
           GUID = "B1C12D14",
           NextDialogue = 71005408,
@@ -220567,48 +221400,56 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005408] = {
           Content = "没想到你这骗子还有跟人动手的勇气啊，那就来吧。",
+          ContentDE = "Hätte nicht gedacht, dass du als Betrüger auch noch den Mumm hast, dich zu prügeln. Na gut, dann komm her.",
           DialogueId = 71005408,
           GUID = "B1C12D3E",
           SpeakNpcId = 100001
         },
         [71005409] = {
           Content = "（男人自知理亏，抱着箱子灰溜溜地走开了。）",
+          ContentDE = "(Der Mann weiß, dass er im Unrecht ist. Er trottet mit der Kiste davon.)",
           DialogueId = 71005409,
           GUID = "B1C12D68",
           SpeakNpcId = 800006
         },
         [71005501] = {
           Content = "那边的狩月人，帮帮我吧。",
+          ContentDE = "Hey, {性别:Phoxjäger|Phoxjägerin} da drüben ... hilf mir bitte.",
           DialogueId = 71005501,
           GUID = "B1C13C02",
           SpeakNpcId = 818049
         },
         [71005502] = {
           Content = "我，我好像听到前面有可怕的声音，你能帮我去看看吗？",
+          ContentDE = "Ich ... Ich glaube, ich hab da vorne schreckliche Geräusche gehört. Kannst du nachsehen?",
           DialogueId = 71005502,
           GUID = "B1C13C2C",
           SpeakNpcId = 818049
         },
         [71005503] = {
           Content = "（你并未看到什么值得恐惧的东西，也许一切只是男子的错觉而已。）",
+          ContentDE = "(Du siehst nichts, wovor man sich fürchten müsste. Vielleicht war es nur Einbildung.)",
           DialogueId = 71005503,
           GUID = "B1C13CAA",
           SpeakNpcId = 800006
         },
         [71005504] = {
           Content = "（几只秽兽徘徊在水道上游，不时发出嘶哑的吼叫。这大概就是吓到男子的声音。）",
+          ContentDE = "(Oben am Wasserlauf streifen ein paar Filthoiden umher und stoßen hin und wieder heisere Schreie aus. Das waren vermutlich die Geräusche, die den Mann erschreckt haben.)",
           DialogueId = 71005504,
           GUID = "B1C13CFE",
           SpeakNpcId = 800006
         },
         [71005505] = {
           Content = "（所有秽兽被你击退，四周恢复了寂静。回去告诉男子吧。）",
+          ContentDE = "(Alle Filthoiden sind vertrieben. Die Umgebung ist wieder still. Geh zurück und sag dem Mann Bescheid.)",
           DialogueId = 71005505,
           GUID = "B1C13D28",
           SpeakNpcId = 800006
         },
         [71005506] = {
           Content = "（几块金属卡在了水道旁，不时发出刺耳的声响。这大概就是吓到男子的声音。）",
+          ContentDE = "(Ein paar Metallstücke haben sich am Rand des Wasserlaufs verklemmt und geben immer wieder ein schrilles Kreischen von sich. Das waren vermutlich die Geräusche, die den Mann erschreckt haben.)",
           DialogueId = 71005506,
           Duration = 3,
           GUID = "B1C13D52",
@@ -220617,24 +221458,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005507] = {
           Content = "（你将金属捡起，因为金属永远不缺买家。等完成男子的委托就找个地方把它们卖掉吧。）",
+          ContentDE = "(Du hebst die Metallstücke auf – für Metall findet sich immer ein Käufer. Sobald du die Mission erledigt hast, kannst du sie irgendwo verkaufen.)",
           DialogueId = 71005507,
           GUID = "B1C13D53",
           SpeakNpcId = 800006
         },
         [71005508] = {
           Content = "我听不到可怕的声音了，谢谢你。",
+          ContentDE = "Ich höre keine schrecklichen Geräusche mehr. Danke dir.",
           DialogueId = 71005508,
           GUID = "B1C13D7C",
           SpeakNpcId = 818049
         },
         [71005601] = {
           Content = "哼啊啊啊……好重……鱼线，拉不起来了……",
+          ContentDE = "Aaah ... so schwer ... die Angelschnur ... ich krieg sie nicht hoch ...",
           DialogueId = 71005601,
           GUID = "B1C14C6A",
           SpeakNpcId = 818050
         },
         [71005602] = {
           Content = "发生什么了？",
+          ContentDE = "Was ist passiert?",
           DialogueId = 71005602,
           GUID = "B1C14C94",
           NextDialogue = 71005603,
@@ -220642,6 +221487,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005603] = {
           Content = "狩月人是你啊，我的鱼线被下面几块垃圾缠住了，你能帮帮我吗？",
+          ContentDE = "Ach, du bist’s, {性别:Phoxjäger|Phoxjägerin}. Meine Schnur hat sich unten an ein paar Müllklumpen verheddert. Kannst du mir helfen?",
           DialogueId = 71005603,
           GUID = "B1C14CBE",
           NextOptions = {
@@ -220652,24 +221498,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005604] = {
           Content = "好，那我在这边拉，你去那边打碎垃圾。",
+          ContentDE = "Gut, dann ziehe ich hier und du gehst rüber und zerschlägst den Müll.",
           DialogueId = 71005604,
           GUID = "B1C14CE8",
           SpeakNpcId = 818050
         },
         [71005605] = {
           Content = "呼……拉起来了，谢谢你哈。",
+          ContentDE = "Puh ... jetzt geht’s. Danke dir.",
           DialogueId = 71005605,
           GUID = "B1C14D12",
           SpeakNpcId = 818050
         },
         [71005701] = {
           Content = "救命啊，有没有人来救救我。",
+          ContentDE = "Hilfe! Kann mich jemand retten?!",
           DialogueId = 71005701,
           GUID = "B1C15CD2",
           SpeakNpcId = 818051
         },
         [71005702] = {
           Content = "多谢……那个，能不能再帮我一个小忙。我逃跑的时候把鱼竿落在前面了，但那里还有几只秽兽……",
+          ContentDE = "Danke ... äh, könntest du mir noch einen kleinen Gefallen tun? Beim Weglaufen hab ich meine Angelrute vorne liegen gelassen, aber da sind noch ein paar Filthoiden ...",
           DialogueId = 71005702,
           GUID = "B1C15CFC",
           NextOptions = {
@@ -220680,24 +221530,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005703] = {
           Content = "谢谢谢谢，我就在这等你哈。",
+          ContentDE = "Danke, danke! Ich warte hier auf dich, ja?",
           DialogueId = 71005703,
           GUID = "B1C15D26",
           SpeakNpcId = 818051
         },
         [71005704] = {
           Content = "就是这根鱼竿，谢谢你！",
+          ContentDE = "Genau diese Angelrute. Danke dir!",
           DialogueId = 71005704,
           GUID = "B1C15D50",
           SpeakNpcId = 818051
         },
         [71005801] = {
           Content = "喂，那边的狩月人，我这里有个大便宜要不要来看看。",
+          ContentDE = "Hey, {性别:Phoxjäger|Phoxjägerin} da drüben. Ich hab hier einen fetten Deal für dich. Willst du mal schauen?",
           DialogueId = 71005801,
           GUID = "B1C16D3A",
           SpeakNpcId = 818052
         },
         [71005802] = {
           Content = "我在前面发现了一堆银辉石，但我实在拿不下了，就全让给你吧。有兴趣的话我就带你过去。",
+          ContentDE = "Vorne hab ich einen ganzen Haufen Silberiten gefunden, aber ich kann unmöglich alles schleppen. Ich lass dir einfach alles. Wenn du Bock hast, führ ich dich hin.",
           DialogueId = 71005802,
           GUID = "B1C16D64",
           NextOptions = {
@@ -220708,18 +221562,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005804] = {
           Content = "好，跟我来。",
+          ContentDE = "Alles klar, komm mit.",
           DialogueId = 71005804,
           GUID = "B1C16DB8",
           SpeakNpcId = 818052
         },
         [71005805] = {
           Content = "第一批在这。",
+          ContentDE = "Die erste Ladung ist hier.",
           DialogueId = 71005805,
           GUID = "B1C16DE2",
           SpeakNpcId = 818052
         },
         [71005806] = {
           Content = "前面还有，你还要吗？",
+          ContentDE = "Vorne ist noch mehr. Willst du noch?",
           DialogueId = 71005806,
           GUID = "B1C16E0C",
           NextOptions = {
@@ -220730,18 +221587,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005807] = {
           Content = "好，跟我来。",
+          ContentDE = "Alles klar, komm mit.",
           DialogueId = 71005807,
           GUID = "B1C16E36",
           SpeakNpcId = 818052
         },
         [71005808] = {
           Content = "第二批在这。",
+          ContentDE = "Die zweite Ladung ist hier.",
           DialogueId = 71005808,
           GUID = "B1C16E60",
           SpeakNpcId = 818052
         },
         [71005809] = {
           Content = "前面还有，你还要吗？",
+          ContentDE = "Vorne ist noch mehr. Willst du noch?",
           DialogueId = 71005809,
           GUID = "B1C16E8A",
           NextOptions = {
@@ -220752,12 +221612,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005810] = {
           Content = "好，你往前走就看到了。",
+          ContentDE = "Gut, geh einfach weiter nach vorn, dann siehst du’s schon.",
           DialogueId = 71005810,
           GUID = "B1C16EB4",
           SpeakNpcId = 818052
         },
         [71005811] = {
           Content = "就是现在，兄弟们动手！",
+          ContentDE = "Jetzt! Jungs, es geht los!",
           DialogueId = 71005811,
           GUID = "B1C16EDE",
           NextDialogue = 71005812,
@@ -220765,6 +221627,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005812] = {
           Content = "（显然银辉石都是这几名矿工装扮的强盗布置的陷阱，击退他们吧。）",
+          ContentDE = "(Offensichtlich ist das Silberit nur eine Falle, die von diesen als Bergmännern verkleideten Banditen gelegt wurde. Besiege sie!)",
           DialogueId = 71005812,
           Duration = 3,
           GUID = "B1C16F08",
@@ -220772,24 +221635,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005813] = {
           Content = "（你击退了所有人，现在可以清点一下今天的收获了。）",
+          ContentDE = "(Du hast alle besiegt. Jetzt kannst du abrechnen, was du heute erbeutet hast.)",
           DialogueId = 71005813,
           GUID = "B1C16F32",
           SpeakNpcId = 800006
         },
         [71005814] = {
           Content = "可恶，就差一点……不，我的意思是真可惜。那我就不打扰你了，再见。",
+          ContentDE = "Verdammt, nur noch ein Stückchen ... Äh, ich meine: echt schade. Dann halte ich dich nicht weiter auf. Mach’s gut.",
           DialogueId = 71005814,
           GUID = "B1C16F5C",
           SpeakNpcId = 818052
         },
         [71005901] = {
           Content = "爸爸跑得好快，所有人都输给你了！",
+          ContentDE = "Du läufst so schnell, Papa! Du hast alle geschlagen!",
           DialogueId = 71005901,
           GUID = "B1C17DA2",
           SpeakNpcId = 818053
         },
         [71005902] = {
           Content = "又有人过来了。我告诉你哦，我爸爸跑得可快了，你要不要跟他比比看！",
+          ContentDE = "Da kommt schon wieder jemand. Ich sag’s dir: Mein Papa ist super schnell! Willst du mal gegen ihn antreten?",
           DialogueId = 71005902,
           GUID = "B1C17DCC",
           NextOptions = {
@@ -220801,12 +221668,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005903] = {
           Content = "咳，既然要比那就来吧。不过比之前我有几句话要跟你交代一下，请跟我来。",
+          ContentDE = "Hm ... wenn ich antreten soll, dann los. Aber bevor wir starten, muss ich dir kurz etwas mitteilen. Komm bitte mit.",
           DialogueId = 71005903,
           GUID = "B1C17DF6",
           SpeakNpcId = 818054
         },
         [71005904] = {
           Content = "这些钱你拿着，等会比的时候拜托你放放水哈……我……不想让儿子失望，所以就跟他编了个瞎话说谁都跑不过我。",
+          ContentDE = "Hier, nimm das Geld ... und beim Rennen lass bitte ein bisschen nach, ja? Ich ... Ich will meinen Sohn nicht enttäuschen. Ich hab ihm Quatsch erzählt, dass mich niemand schlagen kann.",
           DialogueId = 71005904,
           GUID = "B1C17E20",
           NextOptions = {
@@ -220818,18 +221687,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005905] = {
           Content = "谢谢，给你添麻烦了……",
+          ContentDE = "Danke ... und Entschuldigung, dass ich dich da reinziehe.",
           DialogueId = 71005905,
           GUID = "B1C17E4A",
           SpeakNpcId = 818054
         },
         [71005906] = {
           Content = "唉……好吧。",
+          ContentDE = "*seufz* ... Na gut.",
           DialogueId = 71005906,
           GUID = "B1C17E74",
           SpeakNpcId = 818054
         },
         [71005907] = {
           Content = "那么比赛马上开始，爸爸加油哦！",
+          ContentDE = "Gleich geht’s los! Papa, streng dich an!",
           DialogueId = 71005907,
           GUID = "B1C17E9E",
           NextDialogue = 71005908,
@@ -220837,6 +221709,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005908] = {
           Content = "三……",
+          ContentDE = "Auf die Plätze ...",
           DialogueId = 71005908,
           Duration = 1,
           GUID = "B1C17EC8",
@@ -220845,6 +221718,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005909] = {
           Content = "二……",
+          ContentDE = "Fertig ...",
           DialogueId = 71005909,
           Duration = 1,
           GUID = "B1C17EF2",
@@ -220853,6 +221727,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005910] = {
           Content = "一！",
+          ContentDE = "Los!",
           DialogueId = 71005910,
           Duration = 1,
           GUID = "B1C17F1C",
@@ -220860,6 +221735,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005911] = {
           Content = "哇，爸爸真的好厉害！",
+          ContentDE = "Wow! Papa ist echt der Beste!",
           DialogueId = 71005911,
           GUID = "B1C17F46",
           NextDialogue = 71005912,
@@ -220867,12 +221743,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005912] = {
           Content = "谢谢……这是我的一点心意，都拿去吧。",
+          ContentDE = "He ... das war absichtlich, oder? Danke ... hier ein kleines Dankeschön.",
           DialogueId = 71005912,
           GUID = "B1C17F70",
           SpeakNpcId = 818054
         },
         [71005913] = {
           Content = "喂，这跟我们说好的不一样啊……",
+          ContentDE = "Hey, das ist aber nicht, was wir abgemacht hatten ...",
           DialogueId = 71005913,
           GUID = "B1C17F9A",
           NextDialogue = 71005914,
@@ -220880,6 +221758,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005914] = {
           Content = "咦，说好的什么？",
+          ContentDE = "Hä? Abgemacht was?",
           DialogueId = 71005914,
           GUID = "B1C17FC4",
           NextDialogue = 71005915,
@@ -220887,6 +221766,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005915] = {
           Content = "咳，没什么。抱歉啊儿子，我输了……",
+          ContentDE = "Äh, nichts. Tut mir leid, mein Sohn. Ich hab verloren ...",
           DialogueId = 71005915,
           GUID = "B1C17FEE",
           NextDialogue = 71005916,
@@ -220894,6 +221774,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005916] = {
           Content = "没事的爸爸，这次只是失误！下次我们一起赢回来！",
+          ContentDE = "Macht nichts, Papa! Das war nur ein Ausrutscher! Nächstes Mal gewinnen wir zusammen!",
           DialogueId = 71005916,
           GUID = "B1C18018",
           NextDialogue = 71005917,
@@ -220901,12 +221782,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005917] = {
           Content = "唉……好，好吧。来，这是你应得的奖品，都拿去吧。",
+          ContentDE = "*seufz* ... Und hier, das ist dein Preis, nimm alles.",
           DialogueId = 71005917,
           GUID = "B1C18042",
           SpeakNpcId = 818054
         },
         [71005918] = {
           Content = "抱歉啊儿子，我输了……",
+          ContentDE = "Tut mir leid, mein Sohn. Ich hab verloren ...",
           DialogueId = 71005918,
           GUID = "B1C1806C",
           NextDialogue = 71005919,
@@ -220914,6 +221797,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005919] = {
           Content = "没事的爸爸，这次只是失误！下次我们一起赢回来！",
+          ContentDE = "Macht nichts, Papa! Das war nur ein Ausrutscher! Nächstes Mal gewinnen wir zusammen!",
           DialogueId = 71005919,
           GUID = "B1C18096",
           NextDialogue = 71005920,
@@ -220921,12 +221805,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005920] = {
           Content = "唉……好，好吧。也要谢谢这位狩月人了，这是你应得的奖品，都拿去吧。",
+          ContentDE = "*seufz* ... Und auch danke an dich, {性别:Phoxjäger|Phoxjägerin}. Hier, das ist dein Preis, nimm alles.",
           DialogueId = 71005920,
           GUID = "B1C180C0",
           SpeakNpcId = 818054
         },
         [71005921] = {
           Content = "哇，爸爸真的好厉害！",
+          ContentDE = "Wow! Papa ist echt der Beste!",
           DialogueId = 71005921,
           GUID = "B1C180EA",
           NextDialogue = 71005922,
@@ -220934,36 +221820,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71005922] = {
           Content = "嘿……你是故意的吧。谢谢……这是我的一点心意，都拿去吧。",
+          ContentDE = "Danke ... hier ein kleines Dankeschön.",
           DialogueId = 71005922,
           GUID = "B1C18114",
           SpeakNpcId = 818054
         },
         [71006001] = {
           Content = "（游荡的秽兽挤满了四周，先击退它们，再去解救魔灵吧。）",
+          ContentDE = "(Umherstreifende Filthoiden drängen sich von überall. Vertreibe sie zuerst, dann jage nach Geniemon.)",
           DialogueId = 71006001,
           GUID = "B1C18E0A",
           SpeakNpcId = 800006
         },
         [71006002] = {
           Content = "（争斗的声响引来了更多秽兽。）",
+          ContentDE = "(Der Lärm des Gefechts hat weitere Filthoiden angelockt.)",
           DialogueId = 71006002,
           GUID = "B1C18E34",
           SpeakNpcId = 800006
         },
         [71006003] = {
           Content = "（附近暂时安全了，趁现在解救魔灵吧。）",
+          ContentDE = "(Hier ist es vorerst sicher. Nutze die Gelegenheit und fange jetzt Geniemon.)",
           DialogueId = 71006003,
           GUID = "B1C18E5E",
           SpeakNpcId = 800006
         },
         [71006101] = {
           Content = "咱不想……不想……不想上工啊……",
+          ContentDE = "Ich will nicht ... nicht zur Schicht ...",
           DialogueId = 71006101,
           GUID = "B1C19E72",
           SpeakNpcId = 818019
         },
         [71006102] = {
           Content = "可恶……怎么这次还要往废矿送吃的啊。大家就不能挑点正常的地方吃饭吗！不怕出事吗！跑死我了……",
+          ContentDE = "Verdammt ... warum muss ich diesmal bis zur Grube liefern? Können die Leute nicht einfach mal an einem normalen Ort essen?! Keine Angst, dass was passiert?! Ich bin total am Ende ...",
           DialogueId = 71006102,
           GUID = "B1C19E9C",
           NextDialogue = 71006103,
@@ -220971,6 +221863,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006103] = {
           Content = "需要帮忙吗？",
+          ContentDE = "Brauchst du Hilfe?",
           DialogueId = 71006103,
           GUID = "B1C19EC6",
           NextDialogue = 71006104,
@@ -220978,6 +221871,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006104] = {
           Content = "需要！这下面全是秽兽我过不去，你帮我把这份吃的送过去吧。",
+          ContentDE = "Ja! Unten wimmelt es von Filthoiden, ich komm nicht durch. Kannst du das Essen für mich ausliefern?",
           DialogueId = 71006104,
           GUID = "B1C19EF0",
           NextDialogue = 71006105,
@@ -220985,24 +221879,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006105] = {
           Content = "好，交给我吧。",
+          ContentDE = "Alles klar, ich übernehme.",
           DialogueId = 71006105,
           GUID = "B1C19F1A",
           SpeakNpcId = 100001
         },
         [71006106] = {
           Content = "（大批秽兽拦住了你的去路，击退它们再过去吧。）",
+          ContentDE = "(Eine große Gruppe von Filthoiden versperrt dir den Weg. Vertreibe sie, bevor du weitergehst.)",
           DialogueId = 71006106,
           GUID = "B1C19F44",
           SpeakNpcId = 800006
         },
         [71006107] = {
           Content = "怎么还没送到……",
+          ContentDE = "Warum ist das Essen immer noch nicht da ...",
           DialogueId = 71006107,
           GUID = "B1C19F6E",
           SpeakNpcId = 818058
         },
         [71006108] = {
           Content = "你好，你订的饭送到了。",
+          ContentDE = "Hallo, dein Essen ist da.",
           DialogueId = 71006108,
           GUID = "B1C19F98",
           NextDialogue = 71006109,
@@ -221010,6 +221908,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006109] = {
           Content = "我看看，这都洒成什么样子，根本没法吃啊！银色和平餐厅这新服务真是不靠谱！",
+          ContentDE = "Mal sehen ... das ist ja komplett verschüttet! Das kann man doch nicht mehr essen! Der neue Service vom Silberfrieden-Restaurant ist ja völlig unzuverlässig!",
           DialogueId = 71006109,
           GUID = "B1C19FC2",
           NextOptions = {
@@ -221021,12 +221920,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006110] = {
           Content = "这样啊……那你来送餐，比我写论文也简单不了多少。算了，这些给你，刚刚凶了你不好意思啊。",
+          ContentDE = "Ah ... na ja. Essen ausliefern ist wohl auch nicht leichter, als meine Thesis zu schreiben. Schon gut. Hier, nimm das. Sorry, dass ich dich gerade angemault hab.",
           DialogueId = 71006110,
           GUID = "B1C19FEC",
           SpeakNpcId = 818058
         },
         [71006111] = {
           Content = "（你当着地质学者的面快速吃完了饭菜。）",
+          ContentDE = "(Vor den Augen des Geologen isst du das Essen in Windeseile auf.)",
           DialogueId = 71006111,
           Duration = 3,
           GUID = "B1C1A016",
@@ -221035,24 +221936,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006112] = {
           Content = "慢点慢点，要是我害你噎死了怎么办……唉……你来送餐，比我写论文也简单不了多少。算了，这些给你，刚刚凶了你不好意思啊。",
+          ContentDE = "Ganz ruhig! Wenn du dich verschluckst und stirbst, fällt das auf mich zurück! Schon gut, schon gut ... ich hab’s verstanden – dein Job ist auch nicht leichter als Forschungsarbeiten zu schreiben. Tut mir leid, dass ich dich angefahren habe. Hier, nimm das.",
           DialogueId = 71006112,
           GUID = "B1C1A040",
           SpeakNpcId = 818058
         },
         [71006201] = {
           Content = "今天怎么回事，这么久了一条鱼都没上钩。",
+          ContentDE = "Was ist heute los? Ich sitze hier schon so lange und nicht ein einziger Biss.",
           DialogueId = 71006201,
           GUID = "B1C1AEDA",
           SpeakNpcId = 818055
         },
         [71006202] = {
           Content = "狩月人你来啦，我怀疑这地方今天根本没有鱼，你能不能帮我试试？",
+          ContentDE = "{性别:Phoxjäger|Phoxjägerin}, du bist da! Ich glaube, hier gibt’s heute einfach keine Fische. Kannst du mal probieren?",
           DialogueId = 71006202,
           GUID = "B1C1AF04",
           SpeakNpcId = 818055
         },
         [71006203] = {
           Content = "好，拜托你了。",
+          ContentDE = "Alles klar, ich danke dir.",
           DialogueId = 71006203,
           GUID = "B1C1AF2E",
           SpeakNpcId = 818055
@@ -221066,6 +221971,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006205] = {
           Content = "太厉害了，一下就钓上来了。看来不是地方的问题。",
+          ContentDE = "Unglaublich. Schon hast du einen! Dann liegt’s wohl nicht am Ort.",
           DialogueId = 71006205,
           GUID = "B1C1AF82",
           NextDialogue = 71006206,
@@ -221073,24 +221979,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006206] = {
           Content = "谢谢你帮我验证了一下哈，我自己再在这里试试看。今天绝对不能再提着空桶回去了！",
+          ContentDE = "Danke, dass du die Sache für mich klargestellt hast. Ich versuch’s noch mal selbst. Heute geh ich garantiert nicht wieder mit leerem Eimer heim!",
           DialogueId = 71006206,
           GUID = "B1C1AFAC",
           SpeakNpcId = 818055
         },
         [71006301] = {
           Content = "救命啊，有没有人来救救我。",
+          ContentDE = "Hilfe! Kann mich jemand retten?!",
           DialogueId = 71006301,
           GUID = "B1C1BF42",
           SpeakNpcId = 818056
         },
         [71006302] = {
           Content = "多谢……那个，能不能再帮我一个小忙。我这几天一条鱼都没钓上，回去总被大家笑话。你能不能帮我钓一条呢。",
+          ContentDE = "Danke ... äh, könntest du mir noch einen kleinen Gefallen tun? Ich hab die letzten Tage keinen einen einzigen Fisch gefangen. Wenn ich zurückkomme, lachen mich immer alle aus. Kannst du mir nicht einen fangen?",
           DialogueId = 71006302,
           GUID = "B1C1BF6C",
           SpeakNpcId = 818056
         },
         [71006303] = {
           Content = "谢谢谢谢，桶我给你放边上了哈。",
+          ContentDE = "Danke! Den Eimer stell ich dir hier nebenhin, ja?",
           DialogueId = 71006303,
           GUID = "B1C1BF96",
           SpeakNpcId = 818056
@@ -221104,24 +222014,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006305] = {
           Content = "太好了，今天终于不用被大伙嘲笑了！这是我的谢礼，真是辛苦你啦。",
+          ContentDE = "Super! Heute werd ich endlich nicht mehr von allen ausgelacht! Das ist mein Dankeschön. Danke für deine Mühe!",
           DialogueId = 71006305,
           GUID = "B1C1BFEA",
           SpeakNpcId = 818056
         },
         [71006401] = {
           Content = "（玄色狴犴骤然出现，击退它们！）",
+          ContentDE = "(Zobel-Bi’an tauchen auf. Vertreibe sie!)",
           DialogueId = 71006401,
           GUID = "B1C1CFAA",
           SpeakNpcId = 800006
         },
         [71006501] = {
           Content = "有奖竞猜有奖竞猜，那边那位朋友要不要来看看呀。",
+          ContentDE = "Preisquiz! Hey du da drüben, willst du mal vorbeischauen?",
           DialogueId = 71006501,
           GUID = "B1C1E012",
           SpeakNpcId = 818060
         },
         [71006502] = {
           Content = "恰逢奉香大典临近，本店特推出节庆活动，在举办一个叫非常大脑的智力问答活动，答错也有安慰奖，要不要来挑战一下？",
+          ContentDE = "Passend zum nahenden Großen Weihrauchritual haben wir eine Festaktion: ein Wissensquiz namens „Gedankenblitz“. Selbst wenn du falsch liegst, gibt’s einen Trostpreis. Willst du’s versuchen?",
           DialogueId = 71006502,
           GUID = "B1C1E03C",
           NextOptions = {
@@ -221133,18 +222047,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006504] = {
           Content = "好，你先稍作休息，我们马上开始。",
+          ContentDE = "Gut, ruh dich kurz aus. Wir starten gleich.",
           DialogueId = 71006504,
           GUID = "B1C1E090",
           SpeakNpcId = 818060
         },
         [71006505] = {
           Content = "喂，那边的朋友先别急着去答题，要不要听听我的提议？",
+          ContentDE = "Hey, du da drüben, geh nicht gleich zum Quiz. Willst du meinen Vorschlag hören?",
           DialogueId = 71006505,
           GUID = "B1C1E0BA",
           SpeakNpcId = 818061
         },
         [71006506] = {
           Content = "那家伙净出一些麻烦的脑筋急转弯，你要是帮我搬下货，我就直接告诉你答案。如何？这样也省得你动脑子了。",
+          ContentDE = "Der Typ da stellt nur nervige Denksportaufgaben. Wenn du mir hilfst, die Ware zu schleppen, geb ich dir die Antworten. Wie wär’s? Dann musst du dir auch keinen Kopf machen.",
           DialogueId = 71006506,
           GUID = "B1C1E0E4",
           NextOptions = {
@@ -221155,30 +222072,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006507] = {
           Content = "辛苦了，货就在那边的船上。",
+          ContentDE = "Danke dir. Die Ware liegt da drüben auf dem Boot.",
           DialogueId = 71006507,
           GUID = "B1C1E10E",
           SpeakNpcId = 818061
         },
         [71006508] = {
           Content = "辛苦了，他今天这个问题应该选第一个。",
+          ContentDE = "Zum Wohl. Für die heutige Frage nimm die erste Option.",
           DialogueId = 71006508,
           GUID = "B1C1E138",
           SpeakNpcId = 818061
         },
         [71006509] = {
           Content = "辛苦了，他今天这个问题应该选第二个。",
+          ContentDE = "Zum Wohl. Für die heutige Frage nimm die zweite Option.",
           DialogueId = 71006509,
           GUID = "B1C1E162",
           SpeakNpcId = 818061
         },
         [71006510] = {
           Content = "辛苦了，他今天这个问题应该选第三个。",
+          ContentDE = "Zum Wohl. Für die heutige Frage nimm die dritte Option.",
           DialogueId = 71006510,
           GUID = "B1C1E18C",
           SpeakNpcId = 818061
         },
         [71006511] = {
           Content = "休息好了吗？",
+          ContentDE = "Bist du bereit?",
           DialogueId = 71006511,
           GUID = "B1C1E1B6",
           NextOptions = {
@@ -221190,6 +222112,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006512] = {
           Content = "休息好了吗？",
+          ContentDE = "Bist du bereit?",
           DialogueId = 71006512,
           GUID = "B1C1E1E0",
           NextOptions = {
@@ -221201,6 +222124,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006513] = {
           Content = "休息好了吗？",
+          ContentDE = "Bist du bereit?",
           DialogueId = 71006513,
           GUID = "B1C1E20A",
           NextOptions = {
@@ -221212,6 +222136,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006514] = {
           Content = "请听题！织星客丢了一件商品，经过调查找到了甲乙丙三人。甲指责：“是乙偷的！”。乙声称：“是丙偷的！”。丙说：“确实是我偷的！”。仅一人说了真话，请问到底是谁偷走了商品？",
+          ContentDE = "Hör gut zu! Ein Sternenweber hat eine Ware verloren. Nach der Ermittlung wurden drei Verdächtige gefunden: A, B und C.\n A behauptet: „B hat sie gestohlen!“\n B sagt: „C hat sie gestohlen!“\n C sagt: „Ja, ich war’s!“\n Nur eine Person sagt die Wahrheit ... Dann wer hat die Ware gestohlen?",
           DialogueId = 71006514,
           GUID = "B1C1E234",
           NextOptions = {
@@ -221224,6 +222149,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006515] = {
           Content = "请听题！锦鲤皎皎的好友有三个皎皎朋友，第一个叫黄金皎皎，第二个叫白银皎皎，第三个叫什么？",
+          ContentDE = "Hör gut zu! Karp-Lunos Freund hat drei Luno-Freundinnen: Die erste heißt Gold-Luno, die zweite heißt Silber-Luno. Wie heißt der dritte?",
           DialogueId = 71006515,
           GUID = "B1C1E25E",
           NextOptions = {
@@ -221236,6 +222162,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006516] = {
           Content = "请听题！三人前后排队，各带帽子一顶，帽子颜色可能会出现红、黄、蓝其中一种。最后一人能看到前两人的帽子，中间的人只能看前面。最后一人沉默，接着中间人也沉默。第一人说自己戴黄帽。已知至少一人戴黄帽。下列哪个说法是正确的？",
+          ContentDE = "Also gut, hier ist die Frage: Drei Personen stehen hintereinander in einer Reihe. Jede trägt einen Hut, der entweder rot, gelb oder blau sein kann. Die Person ganz hinten kann die Hüte der beiden vor ihr sehen. Die Person in der Mitte kann nur den Hut der Person vor sich sehen.\n Zunächst schweigt die Person hinten. Dann schweigt auch die Person in der Mitte. Und genau in diesem Moment meldet sich plötzlich die Person ganz vorne zu Wort und sagt, sie trage einen gelben Hut. Wir wissen außerdem, dass mindestens einer der Hüte gelb ist.\n Also – welche der folgenden Aussagen ist korrekt?",
           DialogueId = 71006516,
           GUID = "B1C1E288",
           NextOptions = {
@@ -221248,36 +222175,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006517] = {
           Content = "恭喜你答对了！这是为你准备的豪华奖品，请拿好～",
+          ContentDE = "Glückwunsch, richtig geraten! Hier ist dein Preis – bitte schön!",
           DialogueId = 71006517,
           GUID = "B1C1E2B2",
           SpeakNpcId = 818060
         },
         [71006518] = {
           Content = "回答错误，这是你的安慰奖，欢迎下次再来挑战哦～",
+          ContentDE = "Leider falsch. Das ist dein Trostpreis. Versuch’s beim nächsten Mal noch mal!",
           DialogueId = 71006518,
           GUID = "B1C1E2DC",
           SpeakNpcId = 818060
         },
         [71006519] = {
           Content = "好吧好吧，还是年轻人有干劲，那你加油。",
+          ContentDE = "Na gut, na gut. Die Jugend hat eben noch Energie. Dann viel Glück.",
           DialogueId = 71006519,
           GUID = "B1C1E306",
           SpeakNpcId = 818061
         },
         [71006520] = {
           Content = "嗯，准备好了再来找我吧！",
+          ContentDE = "Hm. Komm wieder, wenn du bereit bist!",
           DialogueId = 71006520,
           GUID = "B1C1E330",
           SpeakNpcId = 818060
         },
         [71006601] = {
           Content = "好想要小青蛙呀，咕咕呱呱呱。",
+          ContentDE = "Ich will so sehr ein kleines Fröschlein ... Quak, quak, quak.",
           DialogueId = 71006601,
           GUID = "B1C1F07A",
           SpeakNpcId = 818062
         },
         [71006602] = {
           Content = "小青蛙，好想要小青蛙，小青蛙小青蛙小青蛙。",
+          ContentDE = "Kleines Fröschlein ... Ich will so sehr ein kleines Fröschlein. Kleines Fröschlein, kleines Fröschlein.",
           DialogueId = 71006602,
           GUID = "B1C1F0A4",
           NextOptions = {
@@ -221289,18 +222222,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006603] = {
           Content = "（它似乎对青蛙有什么执念，帮它找找看吧。）",
+          ContentDE = "(Es scheint regelrecht auf Frösche fixiert zu sein. Suche welche.)",
           DialogueId = 71006603,
           GUID = "B1C1F0CE",
           SpeakNpcId = 100001
         },
         [71006604] = {
           Content = "这些应该足够了，回去交给它吧。",
+          ContentDE = "Das sollte reichen. Bring es zurück zu ihm.",
           DialogueId = 71006604,
           GUID = "B1C1F0F8",
           SpeakNpcId = 100001
         },
         [71006605] = {
           Content = "小青蛙，好耶，小青蛙，好～咕呱咕呱。",
+          ContentDE = "Kleines Fröschlein, juhu! Kleines Fröschlein ... Quak, quak, quak.",
           DialogueId = 71006605,
           GUID = "B1C1F122",
           NextDialogue = 71006606,
@@ -221308,12 +222244,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006606] = {
           Content = "（就这样，无由生消失在了你的面前。）",
+          ContentDE = "(Und so verschwindet Wishen vor deinen Augen.)",
           DialogueId = 71006606,
           GUID = "B1C1F14C",
           SpeakNpcId = 800006
         },
         [71006701] = {
           Content = "这么简单的题要是再答错，今晚就给我留下来抄一百遍吧。",
+          ContentDE = "Wenn du so eine einfache Frage nochmal falsch beantwortest, bleibst du heute Abend hier und schreibst das hundert Mal ab!",
           DialogueId = 71006701,
           GUID = "B1C200E2",
           NextDialogue = 71006702,
@@ -221321,12 +222259,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006702] = {
           Content = "（愤怒的声音从远处传来，过去看看发生了什么吧。）",
+          ContentDE = "(Aus der Ferne ist eine wütende Stimme zu hören. Geh rüber und sieh nach, was los ist.)",
           DialogueId = 71006702,
           GUID = "B1C2010C",
           SpeakNpcId = 800006
         },
         [71006703] = {
           Content = "这是怎么了？",
+          ContentDE = "Was ist denn hier los?",
           DialogueId = 71006703,
           GUID = "B1C20136",
           NextDialogue = 71006704,
@@ -221334,6 +222274,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006704] = {
           Content = "呼……这孩子连大风九章都默写不下来。这点定性都没有，以后还怎么精进学业？",
+          ContentDE = "Puh ... dieses Kind kriegt nicht mal Neun Kapitel von Dafeng auswendig hin. Mit so wenig Disziplin – wie soll das später mal was werden mit dem Aufstieg?",
           DialogueId = 71006704,
           GUID = "B1C20160",
           NextDialogue = 71006705,
@@ -221341,6 +222282,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006705] = {
           Content = "不行，越想越气，我去喝口茶冷静一下，你帮我盯一下吧。",
+          ContentDE = "Je mehr ich dran denke, desto wütender werde ich. Ich geh kurz einen Tee trinken und beruhige mich. Du behältst ihn solange im Auge, ja?",
           DialogueId = 71006705,
           GUID = "B1C2018A",
           NextOptions = {
@@ -221352,12 +222294,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006706] = {
           Content = "劳烦你了，我很快回来。",
+          ContentDE = "Ich danke dir. Ich bin gleich wieder da.",
           DialogueId = 71006706,
           GUID = "B1C201B4",
           SpeakNpcId = 818064
         },
         [71006707] = {
           Content = "呜呜呜呜……下一句到底是什么来着……",
+          ContentDE = "Buhu ... wie ging der nächste Satz nur ...",
           DialogueId = 71006707,
           GUID = "B1C201DE",
           NextDialogue = 71006708,
@@ -221365,12 +222309,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006708] = {
           Content = "这位朋友，你能不能也帮帮我呀……",
+          ContentDE = "Hey, du da ... kannst du mir auch helfen ...?",
           DialogueId = 71006708,
           GUID = "B1C20208",
           SpeakNpcId = 818063
         },
         [71006709] = {
           Content = "我写到“著真去伪，赤心为诚。”了，但下一句怎么都想不起来，你能帮我翻下书看看后面是什么吗？",
+          ContentDE = "Ich hab es bis „Lasst Wahrheit offenbar werden und Falschheit vergehen.“ Aber der nächste Satz fällt mir einfach nicht ein. Kannst du bitte im Buch nachschauen, wie’s weitergeht?",
           DialogueId = 71006709,
           GUID = "B1C20232",
           NextOptions = {
@@ -221390,18 +222336,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
       return {
         [71006711] = {
           Content = "不……我想出去玩啊……",
+          ContentDE = "Aber ... ich will noch spielen gehen ...",
           DialogueId = 71006711,
           GUID = "B1C20286",
           SpeakNpcId = 818063
         },
         [71006712] = {
           Content = "真是帮了大忙了！谢谢你谢谢你！",
+          ContentDE = "Du hast mir echt den Hintern gerettet! Danke!",
           DialogueId = 71006712,
           GUID = "B1C202B0",
           SpeakNpcId = 818063
         },
         [71006713] = {
           Content = "（你翻开抄写着大风九章的册子，“著真去伪，赤心为诚。”下一句是“妄言欺众，不可为也。”）",
+          ContentDE = "(Du schlägst das Heft auf. Nach „Lasst Wahrheit offenbar werden und Falschheit vergehen.“ folgt: „Die Vielen zu täuschen und irrezuführen – dies darf nicht geschehen.“)",
           DialogueId = 71006713,
           GUID = "B1C202DA",
           NextDialogue = 71006714,
@@ -221409,18 +222358,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006714] = {
           Content = "找到了，回去告诉他答案吧。",
+          ContentDE = "Gefunden. Sag ihm die richtige Zeile.",
           DialogueId = 71006714,
           GUID = "B1C20304",
           SpeakNpcId = 100001
         },
         [71006715] = {
           Content = "你可算回来了，快快快，下一句是什么？",
+          ContentDE = "Du bist wieder da! Schnell, was ist die nächste Zeile?!",
           DialogueId = 71006715,
           GUID = "B1C2032E",
           SpeakNpcId = 818063
         },
         [71006717] = {
           Content = "哼，这都能错！今晚给我再抄五百遍，少一遍都不准走！",
+          ContentDE = "Hmph. Und das kriegst du auch noch falsch hin! Heute Abend schreibst du das fünfhundert Mal ab. Eine Zeile weniger, und du gehst nicht nach Hause!",
           DialogueId = 71006717,
           GUID = "B1C20382",
           NextDialogue = 71006718,
@@ -221428,6 +222380,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006718] = {
           Content = "不——",
+          ContentDE = "Neeein!",
           DialogueId = 71006718,
           GUID = "B1C203AC",
           NextDialogue = 71006719,
@@ -221435,12 +222388,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006719] = {
           Content = "谢谢你帮我盯着他了，这是给你的谢礼，还请收下。",
+          ContentDE = "Danke, dass du ein Auge auf ihn hattest. Hier, das ist mein Dankeschön. Bitte nimm es an.",
           DialogueId = 71006719,
           GUID = "B1C203D6",
           SpeakNpcId = 818064
         },
         [71006720] = {
           Content = "你看，只要沉下心来仔细回想，这不是能写出来吗！",
+          ContentDE = "Siehst du? Wenn du dich konzentrierst, kriegst du’s doch hin!",
           DialogueId = 71006720,
           GUID = "B1C20400",
           NextDialogue = 71006721,
@@ -221448,6 +222403,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006721] = {
           Content = "好耶，出去玩喽！",
+          ContentDE = "Juhu! Dann kann ich endlich raus spielen!",
           DialogueId = 71006721,
           GUID = "B1C2042A",
           NextDialogue = 71006722,
@@ -221455,6 +222411,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006722] = {
           Content = "站住！因为你今日的默写达标，所以只用再抄五十遍就行，抄完再走。",
+          ContentDE = "Halt! Weil du heute beim Auswendiglernen bestanden hast, musst du nur noch fünfzig Mal abschreiben. Erst fertig machen, dann gehst du.",
           DialogueId = 71006722,
           Duration = 3,
           GUID = "B1C20454",
@@ -221463,6 +222420,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006723] = {
           Content = "不——",
+          ContentDE = "Neeein!",
           DialogueId = 71006723,
           GUID = "B1C2047E",
           NextDialogue = 71006724,
@@ -221470,18 +222428,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006724] = {
           Content = "谢谢你帮我盯着他了，这是给你的谢礼，还请收下。",
+          ContentDE = "Danke, dass du ein Auge auf ihn hattest. Hier, das ist mein Dankeschön. Bitte nimm es an.",
           DialogueId = 71006724,
           GUID = "B1C204A8",
           SpeakNpcId = 818064
         },
         [71006801] = {
           Content = "喂，那边的朋友，能帮我拍张照吗？",
+          ContentDE = "Hey, du da! Kannst du mir ein Foto machen?",
           DialogueId = 71006801,
           GUID = "B1C2114A",
           SpeakNpcId = 818041
         },
         [71006802] = {
           Content = "这位朋友，你能帮我拍几张照片吗？难得来一趟百年春，不留点合影就太可惜了。",
+          ContentDE = "Hey, kannst du mir ein paar Fotos machen? Wenn man schon mal in EverSpring ist und kein Erinnerungsfoto mitnimmt, wär das doch echt schade.",
           DialogueId = 71006802,
           GUID = "B1C21174",
           NextOptions = {
@@ -221493,24 +222454,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006804] = {
           Content = "太好了，记得把我后面的这条白龙也拍进去哦，我很喜欢它的造型。",
+          ContentDE = "Super! Denk dran, Lord Argent hinter mir muss mit drauf – ich mag die Form total.",
           DialogueId = 71006804,
           GUID = "B1C211C8",
           SpeakNpcId = 818041
         },
         [71006805] = {
           Content = "你拍得也太好了，真棒呀，多谢多谢。",
+          ContentDE = "Wow, du hast das richtig gut gemacht! Danke!",
           DialogueId = 71006805,
           GUID = "B1C211F2",
           SpeakNpcId = 818041
         },
         [71006901] = {
           Content = "哎呀哎呀，这可糟了……",
+          ContentDE = "Ach du meine Güte, das ist ja übel ...",
           DialogueId = 71006901,
           GUID = "B1C221B2",
           SpeakNpcId = 818065
         },
         [71006902] = {
           Content = "这位朋友，我不小心把酒壶、鱼饵还有鱼竿全掉水里了，你能不能帮我钓几条鱼上来啊，不然回去又要被大伙嘲笑了。",
+          ContentDE = "Hey, du da! Ich hab aus Versehen meinen Schnapskrug, den Köder und sogar die Angel ins Wasser fallen lassen. Kannst du mir ein paar Fische angeln? Sonst werd ich zu Hause wieder ausgelacht.",
           DialogueId = 71006902,
           GUID = "B1C221DC",
           NextOptions = {
@@ -221521,12 +222486,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006903] = {
           Content = "好好好，拜托你了。",
+          ContentDE = "Alles klar, ich zähle auf dich.",
           DialogueId = 71006903,
           GUID = "B1C22206",
           SpeakNpcId = 818065
         },
         [71006904] = {
           Content = "怎么还能钓上这种鱼，总不会是被我的酒壶吸引过来的吧？！算了算了，以后再研究。",
+          ContentDE = "Wie kannst du denn sowas angeln?! Die Fische wurden nicht vom Schnapskrug angelockt, oder?! Ach egal, das erforsch ich später.",
           DialogueId = 71006904,
           GUID = "B1C22230",
           NextDialogue = 71006905,
@@ -221534,18 +222501,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006905] = {
           Content = "谢谢你今天帮我钓的这些鱼啊，帮大忙了！",
+          ContentDE = "Danke, dass du mir heute so viele Fische geangelt hast. Du hast mir echt den Hintern gerettet!",
           DialogueId = 71006905,
           GUID = "B1C2225A",
           SpeakNpcId = 818065
         },
         [71007001] = {
           Content = "这可怎生是好？白龙神君，派个人来帮帮我吧！",
+          ContentDE = "Oh je, oh je ... das ist ja gar nicht gut ... Lord Argent, schick mir jemanden zur Hilfe!",
           DialogueId = 71007001,
           GUID = "B1C2321A",
           SpeakNpcId = 818066
         },
         [71007002] = {
           Content = "发生什么了？",
+          ContentDE = "Was ist passiert?",
           DialogueId = 71007002,
           GUID = "B1C23244",
           NextDialogue = 71007003,
@@ -221553,6 +222523,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007003] = {
           Content = "我与心上人约在此处相见，但场地尚未布置妥当。阁下可以替我跑一趟，买件礼物回来吗？",
+          ContentDE = "Ich soll mich hier mit dem Mädchen treffen, das ich liebe, aber ich habe noch nicht einmal alles vorbereitet. Könntest du kurz für mich losgehen und ein Geschenk kaufen?",
           DialogueId = 71007003,
           GUID = "B1C2326E",
           NextOptions = {
@@ -221564,12 +222535,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007004] = {
           Content = "那可真是有劳了！啊对了，我那心上人对花过敏，切记不要买含花的礼物啊。",
+          ContentDE = "Das wäre wirklich eine große Hilfe! Ah, und noch was: Meine Liebe ist allergisch gegen Blumen. Bloß nichts mit Blumen kaufen, ja?",
           DialogueId = 71007004,
           GUID = "B1C23298",
           SpeakNpcId = 818066
         },
         [71007005] = {
           Content = "你好，我想挑一件适合送人的礼物。",
+          ContentDE = "Hallo, ich möchte ein Geschenk aussuchen, das man gut verschenken kann.",
           DialogueId = 71007005,
           GUID = "B1C232C2",
           NextDialogue = 71007006,
@@ -221577,6 +222550,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007006] = {
           Content = "好嘞，现在这三款礼物最受欢迎，且听我慢慢道来。",
+          ContentDE = "Aber gern! Diese drei Geschenke sind gerade am beliebtesten – hör gut zu.",
           DialogueId = 71007006,
           GUID = "B1C232EC",
           NextDialogue = 71007007,
@@ -221584,6 +222558,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007007] = {
           Content = "第一件是蒹葭浦现采的告苍花，还带着清晨的露珠，送女孩子准没错。",
+          ContentDE = "Das erste: frisch gepflückte Skylilien aus dem Schilfstrand, noch mit Morgentau. Damit liegst du bei Mädchen immer richtig.",
           DialogueId = 71007007,
           GUID = "B1C23316",
           NextDialogue = 71007008,
@@ -221591,6 +222566,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007008] = {
           Content = "第二件是机枢派名家打磨的青铜吊坠，做功考究，细节精致。",
+          ContentDE = "Das zweite: ein Bronzeanhänger, von einem Meister der Jishu-Sekte poliert – sauber verarbeitet, feine Details.",
           DialogueId = 71007008,
           GUID = "B1C23340",
           NextDialogue = 71007009,
@@ -221598,6 +222574,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007009] = {
           Content = "第三件是悬衡派特制的白龙神君造型摆件，技艺精湛，栩栩如生。",
+          ContentDE = "Das dritte: eine Sonderanfertigung der Xuanheng-Sekte – ein Deko-Stück in Form von Lord Argent. Handwerklich top, lebensecht.",
           DialogueId = 71007009,
           GUID = "B1C2336A",
           NextDialogue = 71007010,
@@ -221605,6 +222582,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007010] = {
           Content = "你想要哪一件呀？",
+          ContentDE = "Welches willst du?",
           DialogueId = 71007010,
           GUID = "B1C23394",
           NextOptions = {
@@ -221617,12 +222595,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007011] = {
           Content = "好嘞，这就给您包装好。下次再来哈。",
+          ContentDE = "Alles klar. Ich pack’s dir sofort ein. Komm gern wieder!",
           DialogueId = 71007011,
           GUID = "B1C233BE",
           SpeakNpcId = 818067
         },
         [71007012] = {
           Content = "礼物来了，快打开看看合不合你心意！",
+          ContentDE = "Das Geschenk ist da. Mach schnell auf und schau, ob’s dir gefällt!",
           DialogueId = 71007012,
           GUID = "B1C233E8",
           NextDialogue = 71007013,
@@ -221630,6 +222610,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007013] = {
           Content = "阿嚏！阿……阿嚏……怎，怎么有花……我感觉有点不舒服，要……喘不上气了……",
+          ContentDE = "Hatschi! Ha... Hatschi ... w... wieso ist da eine Blume ... Mir wird ganz komisch ... Ich ... krieg keine Luft ...",
           DialogueId = 71007013,
           GUID = "B1C23412",
           NextDialogue = 71007014,
@@ -221637,6 +222618,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007014] = {
           Content = "（男子见状立马背起他的心上人求医，留你一个人在原地。）",
+          ContentDE = "(Der Mann hebt seine Liebe sofort hoch und rennt zum Arzt. Du bleibst allein zurück.)",
           DialogueId = 71007014,
           GUID = "B1C2343C",
           NextDialogue = 71007015,
@@ -221644,12 +222626,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007015] = {
           Content = "（这里的事已经处理完毕，可以离开了。）",
+          ContentDE = "(Hier ist alles erledigt. Du kannst gehen.)",
           DialogueId = 71007015,
           GUID = "B1C23466",
           SpeakNpcId = 800006
         },
         [71007016] = {
           Content = "礼物拿来了，快拆开来看看合不合你心意！",
+          ContentDE = "Das Geschenk ist da. Mach schnell auf und schau, ob’s dir gefällt!",
           DialogueId = 71007016,
           GUID = "B1C23490",
           NextDialogue = 71007017,
@@ -221657,6 +222641,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007017] = {
           Content = "谢谢，只要是你为我准备的，我都喜欢！",
+          ContentDE = "Danke. Egal was – wenn’s von dir ist, lieb ich es!",
           DialogueId = 71007017,
           GUID = "B1C234BA",
           NextDialogue = 71007018,
@@ -221664,6 +222649,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007018] = {
           Content = "（男子看着心上人脸上幸福的表情，悄悄向你竖起了大拇指。）",
+          ContentDE = "(Der Mann sieht das glückliche Lächeln seiner Liebe und zeigt dir heimlich seinen hochgestreckten Daumen.)",
           DialogueId = 71007018,
           GUID = "B1C234E4",
           NextDialogue = 71007019,
@@ -221671,18 +222657,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007019] = {
           Content = "（这里的事已经处理完毕，可以离开了。）",
+          ContentDE = "(Hier ist alles erledigt. Du kannst gehen.)",
           DialogueId = 71007019,
           GUID = "B1C2350E",
           SpeakNpcId = 800006
         },
         [71007101] = {
           Content = "唉……怎么时间刚好都撞一块了呢……",
+          ContentDE = "*seufz* ... Warum fällt das alles ausgerechnet jetzt zusammen ...",
           DialogueId = 71007101,
           GUID = "B1C24282",
           SpeakNpcId = 818069
         },
         [71007103] = {
           Content = "诶，这位朋友来得正好，你能帮我去那边排块核桃酥吗？",
+          ContentDE = "Hey, du da! Du kommst wie gerufen. Kannst du dich da drüben für ein Stück Walnussgebäck anstellen?",
           DialogueId = 71007103,
           GUID = "B1C242D6",
           NextDialogue = 71007104,
@@ -221690,6 +222679,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007104] = {
           Content = "我等会还约了其他人谈生意，实在没空去排队了。",
+          ContentDE = "Ich hab gleich noch ein Geschäftstreffen und keine Zeit, mich in die Schlange zu stellen.",
           DialogueId = 71007104,
           GUID = "B1C24300",
           NextOptions = {
@@ -221701,24 +222691,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007105] = {
           Content = "谢了，那我先走一步。",
+          ContentDE = "Danke dir. Ich bin dann mal weg.",
           DialogueId = 71007105,
           GUID = "B1C2432A",
           SpeakNpcId = 818069
         },
         [71007106] = {
           Content = "（一段时间后……）",
+          ContentDE = "(Eine Weile später ...)",
           DialogueId = 71007106,
           GUID = "B1C24354",
           SpeakNpcId = 800006
         },
         [71007107] = {
           Content = "（刚买好小吃，你就看到身后有个孩子眼巴巴地看着你。）",
+          ContentDE = "(Kaum hast du es gekauft, siehst du hinter dir ein Kind, das dich mit großen Augen anstarrt.)",
           DialogueId = 71007107,
           GUID = "B1C2437E",
           SpeakNpcId = 800006
         },
         [71007108] = {
           Content = "那个……我能用这些钱买你的核桃酥吗？我妈妈很喜欢这家的核桃酥，但她最近生病了，我想给她带一份回家……",
+          ContentDE = "Äh ... kann ich dir das Walnussgebäck mit diesem Geld abkaufen? Meine Mama liebt es, aber sie ist in letzter Zeit krank. Ich will ihr eins mit nach Hause bringen ...",
           DialogueId = 71007108,
           GUID = "B1C243A8",
           NextOptions = {
@@ -221730,6 +222724,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007109] = {
           Content = "既然这样，那还是让给你吧，希望你妈妈能快点好起来。",
+          ContentDE = "Wenn das so ist, dann nimm es. Ich hoffe, deine Mama wird schnell wieder gesund.",
           DialogueId = 71007109,
           GUID = "B1C243D2",
           NextDialogue = 710071091,
@@ -221737,6 +222732,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007110] = {
           Content = "回来了回来了，吃的在哪呢？",
+          ContentDE = "Da bist du ja. Wo ist das Gebäck?",
           DialogueId = 71007110,
           GUID = "B1C243FC",
           NextDialogue = 71007111,
@@ -221744,6 +222740,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007111] = {
           Content = "（你和男子说明了事情经过……）",
+          ContentDE = "(Du erklärst dem Mann, was passiert ist ...)",
           DialogueId = 71007111,
           GUID = "B1C24426",
           NextDialogue = 71007112,
@@ -221751,12 +222748,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007112] = {
           Content = "这样啊，那就没办法了，毕竟那孩子比我更需要嘛，辛苦你啦。",
+          ContentDE = "Ach so ... dann kann man nichts machen. Das Kind braucht es mehr als ich. Danke dir, und gute Arbeit.",
           DialogueId = 71007112,
           GUID = "B1C24450",
           SpeakNpcId = 818069
         },
         [71007113] = {
           Content = "抱歉，我答应了别人。",
+          ContentDE = "Tut mir leid, ich hab’s schon jemand anderem versprochen.",
           DialogueId = 71007113,
           GUID = "B1C2447A",
           NextDialogue = 710071131,
@@ -221764,6 +222763,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007114] = {
           Content = "回来了回来了，吃的在哪呢？",
+          ContentDE = "Da bist du ja, da bist du ja – wo ist das Gebäck?",
           DialogueId = 71007114,
           GUID = "B1C244A4",
           NextDialogue = 71007115,
@@ -221771,6 +222771,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007115] = {
           Content = "给你。",
+          ContentDE = "Hier.",
           DialogueId = 71007115,
           GUID = "B1C244CE",
           NextDialogue = 71007116,
@@ -221778,18 +222779,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007116] = {
           Content = "嗯～真香！辛苦你啦，来来来，这是你的报酬。",
+          ContentDE = "Mmmh! Riecht köstlich! Danke dir. Komm, hier ist dein Lohn.",
           DialogueId = 71007116,
           GUID = "B1C244F8",
           SpeakNpcId = 818069
         },
         [71007201] = {
           Content = "嗯……到底选哪家好呢……",
+          ContentDE = "Hm ... welche Bude ist wohl besser ...",
           DialogueId = 71007201,
           GUID = "B1C252EA",
           SpeakNpcId = 818074
         },
         [71007203] = {
           Content = "啊呀，这位朋友来得正好。我每次买东西都拿不定主意，能拜托你帮我看看，给点建议吗？",
+          ContentDE = "Oh, du kommst wie gerufen! Ich kann mich beim Einkaufen nie entscheiden. Kannst du mal schauen und mir einen Tipp geben?",
           DialogueId = 71007203,
           GUID = "B1C2533E",
           NextOptions = {
@@ -221801,30 +222805,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007204] = {
           Content = "万分感谢，我就在这儿等你。",
+          ContentDE = "Tausend Dank! Ich warte hier.",
           DialogueId = 71007204,
           GUID = "B1C25368",
           SpeakNpcId = 818074
         },
         [71007206] = {
           Content = "我这可都是从原产地千里迢迢运输回来的高档货，更有百年春官方认证。虽说贵了些，但一分钱绝对对得起一分货。",
+          ContentDE = "Bei mir ist alles Premiumware, alles über tausend Meilen importiert, offiziell zertifiziert von EverSpring. Ist zwar teurer, aber jeden Kupfer wert.",
           DialogueId = 71007206,
           GUID = "B1C253BC",
           SpeakNpcId = 818072
         },
         [71007207] = {
           Content = "都是日用品，高不高档有啥区别。还是我这便宜实惠的性价比更高，你说对吧。",
+          ContentDE = "Alles nur Alltagskram – was bringt „Premium“ da überhaupt? Bei mir bekommst du günstig und ordentlich. Bestes Preis-Leistungs-Verhältnis. Meinst du nicht?",
           DialogueId = 71007207,
           GUID = "B1C253E6",
           SpeakNpcId = 818073
         },
         [71007208] = {
           Content = "（仔细确认之后，你已经做出了选择。现在去给那位纠结的旅人提供你的宝贵建议吧。）",
+          ContentDE = "(Du prüfst alles sorgfältig und triffst eine Entscheidung. Jetzt geh zurück und gib dem unentschlossenen Reisenden deinen Rat.)",
           DialogueId = 71007208,
           GUID = "B1C25410",
           SpeakNpcId = 800006
         },
         [71007209] = {
           Content = "怎么样，你觉得哪家卖的更好？",
+          ContentDE = "Na? Welches davon hältst du für den besseren Kauf?",
           DialogueId = 71007209,
           GUID = "B1C2543A",
           NextOptions = {
@@ -221836,24 +222845,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007210] = {
           Content = "好，那就买他的吧！谢谢你！",
+          ContentDE = "Okay, dann nehm ich den! Danke!",
           DialogueId = 71007210,
           GUID = "B1C25464",
           SpeakNpcId = 818074
         },
         [71007301] = {
           Content = "（游荡的敌人挤满了四周，先击退它们，再去解救魔灵吧。）",
+          ContentDE = "(Umherstreifende Feinde drängen sich von überall. Vertreibe sie zuerst, dann rette die Geniemon.)",
           DialogueId = 71007301,
           GUID = "B1C26352",
           SpeakNpcId = 800006
         },
         [71007302] = {
           Content = "（争斗的声响引来了更多敌人。）",
+          ContentDE = "(Der Lärm des Gefechts hat weitere Feinde angelockt.)",
           DialogueId = 71007302,
           GUID = "B1C2637C",
           SpeakNpcId = 800006
         },
         [71007303] = {
           Content = "（附近暂时安全了，趁现在解救魔灵吧。）",
+          ContentDE = "(Hier ist es vorerst sicher. Nutze die Gelegenheit und rette jetzt die Geniemon.)",
           DialogueId = 71007303,
           GUID = "B1C263A6",
           SpeakNpcId = 800006
@@ -221866,12 +222879,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007501] = {
           Content = "别抢了别抢了，都被你们抢完了我还卖什么啊！有没有人来帮帮我！",
+          ContentDE = "Drängeln nicht, drängeln nicht! Ihr habt mir schon alles weggeklaut! Was soll ich denn noch verkaufen?! Kann mir jemand helfen?!",
           DialogueId = 71007501,
           GUID = "B1C28422",
           SpeakNpcId = 818078
         },
         [71007502] = {
           Content = "（靠近之后，你发现了一名颓废的男子蹲坐在地上，在他身旁是散落一地的土豆丝。）",
+          ContentDE = "(Als du näher kommst, siehst du einen heruntergekommenen Mann, der am Boden hockt. Neben ihm liegen überall verstreute Kartoffelstreifen.)",
           DialogueId = 71007502,
           GUID = "B1C2844C",
           NextDialogue = 71007503,
@@ -221879,6 +222894,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007503] = {
           Content = "这位外乡人，我一眼就看出你身手不凡了，帮帮忙吧。",
+          ContentDE = "Held, ich seh’s doch, dass du kein Anfänger bist. Hilf mir bitte!",
           DialogueId = 71007503,
           GUID = "B1C28476",
           NextOptions = {
@@ -221889,18 +222905,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007504] = {
           Content = "多谢多谢。事情是这样的，每次我往摊子上摆点土豆丝，港口周围那些云翎鸥就跟疯了一样冲过来哄抢，就像这样……",
+          ContentDE = "Danke, danke, Held! Also, jedes Mal, wenn ich ein paar Kartoffelstreifen auf den Stand lege, stürzen sich die Möwen aus dem Hafen wie besessen drauf und reißen alles an sich, so wie jetzt ...",
           DialogueId = 71007504,
           GUID = "B1C284A0",
           SpeakNpcId = 818078
         },
         [71007505] = {
           Content = "（男子说罢，从怀里颤巍巍地捡起几条土豆丝拿在手上，顿时几只云翎鸥就扇着翅膀在周围盘旋了起来。）",
+          ContentDE = "(Der Mann kramt zitternd ein paar Kartoffelstreifen aus seiner Tasche. Sofort kommen ein paar Möwen angeschwirrt und kreisen mit schlagenden Flügeln über euch.)",
           DialogueId = 71007505,
           GUID = "B1C284CA",
           SpeakNpcId = 800006
         },
         [71007506] = {
           Content = "呃啊啊啊……你看你看，它们来了！快帮我赶走它们吧……",
+          ContentDE = "Aaaah ... siehst du, siehst du?! Da sind sie! Bitte, jag sie weg!",
           DialogueId = 71007506,
           GUID = "B1C284F4",
           NextDialogue = 71007507,
@@ -221908,6 +222927,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007507] = {
           Content = "（这些云翎鸥盘旋在四周久久不愿离去，稍有机会就朝男子飞近一些。就好像它们存在的意义就是土豆丝，活着的目标就是从男子手上抢走土豆丝一样。）",
+          ContentDE = "(Die Möwen kreisen hartnäckig um euch. Sobald sich eine Gelegenheit bietet, kommen sie näher. Als bestünde ihr einziger Lebenszweck aus Kartoffelstreifen und ihr einziges Ziel war es, sie dem Mann aus der Hand zu reißen.)",
           DialogueId = 71007507,
           GUID = "B1C2851E",
           SpeakNpcId = 800006
@@ -221921,6 +222941,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007509] = {
           Content = "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
+          ContentDE = "Puh ... Kartoffeln am Hafen zu verkaufen, ist lebensgefährlich. Danke, danke!",
           DialogueId = 71007509,
           GUID = "B1C28548",
           SpeakNpcId = 818078
@@ -221934,6 +222955,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007511] = {
           Content = "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
+          ContentDE = "Puh ... Kartoffeln am Hafen zu verkaufen, ist lebensgefährlich. Danke, danke!",
           DialogueId = 71007511,
           GUID = "B1C2855A",
           SpeakNpcId = 818078
@@ -221957,6 +222979,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007603] = {
           Content = "好，拜托你了。",
+          ContentDE = "Alles klar, ich zähle auf dich.",
           DialogueId = 71007603,
           GUID = "B1C294DE",
           SpeakNpcId = 818079
@@ -222017,24 +223040,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007706] = {
           Content = "好，那你就拿去吧。",
+          ContentDE = "Danke, das ist die Truhe, die ich verloren habe.",
           DialogueId = 71007706,
           GUID = "B1C2A5C4",
           SpeakNpcId = 818081
         },
         [71007707] = {
           Content = "没错没错，就是这个，太谢谢你了。",
+          ContentDE = "Hier ist deine Belohnung.",
           DialogueId = 71007707,
           GUID = "B1C2A5EE",
           SpeakNpcId = 818080
         },
         [71007708] = {
           Content = "这明显不是我掉的普通箱子，不过还是谢谢你了。",
+          ContentDE = "Diese Truhe ist viel zu luxuriös – die ist eindeutig nicht meine.",
           DialogueId = 71007708,
           GUID = "B1C2A618",
           SpeakNpcId = 818080
         },
         [71007710] = {
           Content = "哇，没想到你找到了这么多箱子呀，那我就先拿走我掉的普通箱子了哈，谢谢你！",
+          ContentDE = "Meine Güte, wie hast du so viele Truhen gefunden?!",
           DialogueId = 71007710,
           GUID = "B1C2A66C",
           SpeakNpcId = 818080
@@ -222047,12 +223074,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007801] = {
           Content = "香……点燃……请……",
+          ContentDE = "Hey, du da, {性别:Phoxjäger|Phoxjägerin}. Kannst du mal kurz herkommen?",
           DialogueId = 71007801,
           GUID = "B1C2B55A",
           SpeakNpcId = 818082
         },
         [71007802] = {
           Content = "那边……请……点燃……谢谢……",
+          ContentDE = "Ich hab ein neues Räucherwerk entwickelt. Es kann das Unterbewusste im Herzen wecken. Kannst du bei einem Experiment mitmachen und mir danach beschreiben, was du gesehen hast?",
           DialogueId = 71007802,
           GUID = "B1C2B584",
           NextOptions = {
@@ -222064,12 +223093,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007803] = {
           Content = "焚香……好……",
+          ContentDE = "Gut. Zünde das Räucherwerk in diesem Weihrauchbrenner an.",
           DialogueId = 71007803,
           GUID = "B1C2B5AE",
           SpeakNpcId = 818082
         },
         [71007805] = {
           Content = "（点燃香炉之后，四周顿时弥漫起了浓厚的烟雾，透过这些烟雾，你似乎看到了什么东西？）",
+          ContentDE = "(In deinem Herzen taucht eine Frage auf: Was würdest du dir genau jetzt am meisten wünschen?)",
           DialogueId = 71007805,
           GUID = "B1C2B602",
           NextOptions = {
@@ -222082,42 +223113,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007806] = {
           Content = "（朦胧的雾气中，你看到了数之不尽的宝箱，打开它们吧。）",
+          ContentDE = "(Truhen erscheinen ringsum.)",
           DialogueId = 71007806,
           GUID = "B1C2B62C",
           SpeakNpcId = 800006
         },
         [71007807] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
+          ContentDE = "(Erzähle Wishen, was gerade passiert ist.)",
           DialogueId = 71007807,
           GUID = "B1C2B656",
           SpeakNpcId = 100001
         },
         [71007808] = {
           Content = "焚香……再见……",
+          ContentDE = "Also hast du diese Dinge gesehen ... verstanden. Danke für deine Mitarbeit.",
           DialogueId = 71007808,
           GUID = "B1C2B680",
           SpeakNpcId = 818082
         },
         [71007809] = {
           Content = "（朦胧的雾气中，你看到了大量敌人，击败它们吧。）",
+          ContentDE = "(Feinde erscheinen ringsum.)",
           DialogueId = 71007809,
           GUID = "B1C2B6AA",
           SpeakNpcId = 800006
         },
         [71007810] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
+          ContentDE = "(Erzähle Wishen, was gerade passiert ist.)",
           DialogueId = 71007810,
           GUID = "B1C2B6D4",
           SpeakNpcId = 100001
         },
         [71007811] = {
           Content = "焚香……再见……",
+          ContentDE = "Also hast du diese Dinge gesehen ... verstanden. Danke für deine Mitarbeit.",
           DialogueId = 71007811,
           GUID = "B1C2B6FE",
           SpeakNpcId = 818082
         },
         [71007812] = {
           Content = "（朦胧的雾气中，你看到了贝蕾妮卡的身影。）",
+          ContentDE = "(Berenica erscheint vor dir.)",
           DialogueId = 71007812,
           GUID = "B1C2B728",
           NextDialogue = 71007813,
@@ -222125,18 +223163,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007813] = {
           Content = "（伸手触碰，贝蕾的身影开始变得模糊不清。你知道，她只是焚香之后出现的幻影。）",
+          ContentDE = "(Gespräch mit Berenica)",
           DialogueId = 71007813,
           GUID = "B1C2B752",
           SpeakNpcId = 800006
         },
         [71007814] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
+          ContentDE = "(Erzähle Wishen, was gerade passiert ist.)",
           DialogueId = 71007814,
           GUID = "B1C2B77C",
           SpeakNpcId = 100001
         },
         [71007815] = {
           Content = "焚香……再见……",
+          ContentDE = "Also hast du diese Dinge gesehen ... verstanden. Danke für deine Mitarbeit.",
           DialogueId = 71007815,
           GUID = "B1C2B7A6",
           SpeakNpcId = 818082
@@ -222155,6 +223196,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007905] = {
           Content = "谢谢你救了我，但我没什么好东西能够报答你……对了，我这有一张爸爸留下的藏宝图，要是你能找到宝藏，它们就归你了！",
+          ContentDE = "Als du sein unschuldiges Gesicht siehst, beschließt du ...)",
           DialogueId = 71007905,
           GUID = "B1C2C66A",
           NextOptions = {
@@ -222341,42 +223383,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008201] = {
           Content = "（附近生长着不少山瑚，若是有空，不妨收集一些吧。）",
+          ContentDE = "(In der Nähe wachsen reichlich Korallensteine. Wenn du einen Moment Zeit hast, könntest du einige sammeln.)",
           DialogueId = 71008201,
           GUID = "B1C2F6FA",
           SpeakNpcId = 800006
         },
         [71008202] = {
           Content = "（收集山瑚的响动将周围的敌人吸引了过来，击退它们吧。）",
+          ContentDE = "(Der Aufruhr beim Sammeln der Korallensteine hat Gegner aus der Umgebung angelockt. Vertreibe sie.)",
           DialogueId = 71008202,
           GUID = "B1C2F724",
           SpeakNpcId = 800006
         },
         [71008203] = {
           Content = "（虽然出现了一点小意外，但最后总算是顺利收集完了附近的所有山瑚。）",
+          ContentDE = "(Obwohl es zu einem kleinen Zwischenfall kam, hast du am Ende alle Korallensteine in der Nähe eingesammelt.)",
           DialogueId = 71008203,
           GUID = "B1C2F74E",
           SpeakNpcId = 800006
         },
         [71008204] = {
           Content = "（成功收集完了附近的所有山瑚，是时候离开了。）",
+          ContentDE = "(Du hast erfolgreich alle Korallensteine in der Nähe gesammelt. Zeit, weiterzuziehen.)",
           DialogueId = 71008204,
           GUID = "B1C2F778",
           SpeakNpcId = 800006
         },
         [71008301] = {
           Content = "（坍塌的碎石挡住了前路，将它们清理掉吧。）",
+          ContentDE = "(Eingestürzte Trümmer versperren den Weg nach vorn. Räume sie beiseite.)",
           DialogueId = 71008301,
           GUID = "B1C30762",
           SpeakNpcId = 800006
         },
         [71008302] = {
           Content = "（清理碎石的响动将周围的敌人吸引了过来，击退它们吧。）",
+          ContentDE = "(Der Lärm beim Beseitigen der Trümmer hat Gegner aus der Nähe angelockt. Vertreibe sie.)",
           DialogueId = 71008302,
           GUID = "B1C3078C",
           SpeakNpcId = 800006
         },
         [71008303] = {
           Content = "（一番战斗后，你在周围找到了些能用的物资，将它们收好吧。）",
+          ContentDE = "(Nach dem Gefecht hast du in der Umgebung einige brauchbare Vorräte gefunden. Nimm sie mit.)",
           DialogueId = 71008303,
           GUID = "B1C307B6",
           SpeakNpcId = 800006
@@ -257178,7 +258227,6 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
         },
         [80180244] = {
           Content = "（子弹上膛声）",
-          ContentDE = " ",
           DialogueId = 80180244,
           GUID = "C8B90B48",
           IsBlack = 1,
@@ -282704,39 +283752,46 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710001001] = {
           Content = "（它看起来很饿，去帮忙找点吃的吧。）",
+          ContentDE = "(Sie wirkt ziemlich hungrig. Vielleicht sollte ich ihr etwas zu fressen suchen.)",
           DialogueId = 710001001,
           GUID = "710001001.0"
         },
         [710001002] = {
           Content = "（它看起来很寂寞，陪它玩一会吧。）",
+          ContentDE = "(Sie wirkt sehr einsam. Vielleicht hilft es, wenn ich eine Weile mit ihr spiele.)",
           DialogueId = 710001002,
           GUID = "710001002.0"
         },
         [710001003] = {
           Content = "（还有很多人饿着肚子，就别管猫了吧。）",
+          ContentDE = "(Es gibt noch genug Leute, die mit leerem Magen herumlaufen. Kümmer dich lieber nicht um die Katze.)",
           DialogueId = 710001003,
           GUID = "710001003.0"
         },
         [710002001] = {
           Content = "没有没有，人吃的都不够，谁还有心思管猫啊。",
+          ContentDE = "Nein, nein. Für die Menschen reicht’s kaum – wer hat da noch den Kopf frei für Katzen?",
           DialogueId = 710002001,
           GUID = "710002001.0",
           SpeakNpcId = 700107
         },
         [710002101] = {
           Content = "有，自己选吧。真是稀客，我还以为只有内城的老爷太太们会专门给猫买吃的。",
+          ContentDE = "Ja. Such dir was aus. Na so was, seltener Besuch. Ich dachte schon, nur die feinen Herrschaften aus der Innenstadt kaufen extra Futter für Katzen.",
           DialogueId = 710002101,
           GUID = "710002101.0",
           SpeakNpcId = 700106
         },
         [710002201] = {
           Content = "（野猫围着你的食物转了两圈后才放下戒备，吃了起来。看着它满足的表情，你的内心也得到了极大的治愈。）",
+          ContentDE = "(Die Katze streicht um das Futter herum, lässt dann die Vorsicht fallen und beginnt zu fressen. Als du ihren zufriedenen Blick siehst, fühlt sich das irgendwie gut an.)",
           DialogueId = 710002201,
           GUID = "710002201.0",
           SpeakNpcId = 800006
         },
         [710007210] = {
           Content = "好吧。",
+          ContentDE = "Na gut.",
           DialogueId = 710007210,
           GUID = "710007210.0",
           NextDialogue = 71000741,
@@ -282744,18 +283799,21 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710007211] = {
           Content = "抱歉，我还有其他事。",
+          ContentDE = "Entschuldigung, ich habe noch anderes zu tun.",
           DialogueId = 710007211,
           GUID = "710007211.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710008021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710008021,
           GUID = "710008021.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710008022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710008022,
           GUID = "710008022.0",
           NextDialogue = 71000805,
@@ -282763,27 +283821,32 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710009060] = {
           Content = "唉，就陪你们玩一小会儿。",
+          ContentDE = "Na gut, ich spiele kurz mit euch.",
           DialogueId = 710009060,
           Duration = 3,
           GUID = "710009060.0"
         },
         [710009061] = {
           Content = "（假装看不见，快步走开。）",
+          ContentDE = "(Ignoriere sie und gehe schnell weiter.)",
           DialogueId = 710009061,
           GUID = "710009061.0"
         },
         [710010020] = {
           Content = "（尝试拿走月髓能源装置。）",
+          ContentDE = "(Nimm den Phoxichor-Behälter mit.)",
           DialogueId = 710010020,
           GUID = "710010020.0"
         },
         [710010021] = {
           Content = "（抵抗诱惑。）",
+          ContentDE = "(Widerstehe der Versuchung.)",
           DialogueId = 710010021,
           GUID = "710010021.0"
         },
         [710014041] = {
           Content = "（卖给本地商人。）",
+          ContentDE = "(Mach das Geschäft mit dem örtlichen Händler.)",
           DialogueId = 710014041,
           GUID = "710014041.0",
           NextDialogue = 71001406,
@@ -282791,12 +283854,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710014042] = {
           Content = "（再考虑一下。）",
+          ContentDE = "(Lass es dir noch einmal durch den Kopf gehen.)",
           DialogueId = 710014042,
           GUID = "710014042.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710014051] = {
           Content = "（卖给外地商人。）",
+          ContentDE = "(Mach das Geschäft mit dem auswärtigen Händler.)",
           DialogueId = 710014051,
           GUID = "710014051.0",
           NextDialogue = 71001407,
@@ -282804,27 +283869,32 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710014052] = {
           Content = "（再考虑一下。）",
+          ContentDE = "(Lass es dir noch einmal durch den Kopf gehen.)",
           DialogueId = 710014052,
           GUID = "710014052.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710015031] = {
           Content = "我来试试好了。",
+          ContentDE = "Okay, ich versuch’s mal.",
           DialogueId = 710015031,
           GUID = "710015031.0"
         },
         [710015032] = {
           Content = "不用那么麻烦，拍两下就好了。",
+          ContentDE = "Einmal kräftig draufhauen, dann läuft das wieder.",
           DialogueId = 710015032,
           GUID = "710015032.0"
         },
         [710015033] = {
           Content = "（不想跟军团的人扯上关系，离开此处。）",
+          ContentDE = "(Du hast keine Lust, dich mit der Legion einzulassen. Geh einfach weiter.)",
           DialogueId = 710015033,
           GUID = "710015033.0"
         },
         [710016081] = {
           Content = "（交出武器。）",
+          ContentDE = "(Gib die Waffe zurück.)",
           DialogueId = 710016081,
           GUID = "710016081.0",
           NextDialogue = 71001609,
@@ -282832,12 +283902,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710016082] = {
           Content = "（再考虑一下。）",
+          ContentDE = "(Lass dir etwas Zeit zum Nachdenken.)",
           DialogueId = 710016082,
           GUID = "710016082.0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [710016101] = {
           Content = "（卖掉武器。）",
+          ContentDE = "(Verkaufe die Waffe.)",
           DialogueId = 710016101,
           GUID = "710016101.0",
           NextDialogue = 71001611,
@@ -282845,18 +283917,21 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710016102] = {
           Content = "（再考虑一下。）",
+          ContentDE = "(Lass dir etwas Zeit zum Nachdenken.)",
           DialogueId = 710016102,
           GUID = "710016102.0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [710017021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710017021,
           GUID = "710017021.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710017022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710017022,
           GUID = "710017022.0",
           NextDialogue = 71001707,
@@ -282864,87 +283939,104 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710018051] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710018051,
           GUID = "710018051.0"
         },
         [710018052] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710018052,
           GUID = "710018052.0"
         },
         [710019021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710019021,
           GUID = "710019021.0"
         },
         [710019022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710019022,
           GUID = "710019022.0"
         },
         [710020021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710020021,
           GUID = "710020021.0",
           NextDialogue = 71002007
         },
         [710020022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710020022,
           GUID = "710020022.0"
         },
         [710020031] = {
           Content = "（一把抓住它，抱给那个女孩。）",
+          ContentDE = "(Pack ihn und bring ihn zum Mädchen.)",
           DialogueId = 710020031,
           GUID = "710020031.0"
         },
         [710020032] = {
           Content = "（把它留在原地，找个借口应付一下那个女孩。）",
+          ContentDE = "(Lass ihn einfach dort und erfinde eine Ausrede für das Mädchen.)",
           DialogueId = 710020032,
           GUID = "710020032.0"
         },
         [710021021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710021021,
           GUID = "710021021.0"
         },
         [710021022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710021022,
           GUID = "710021022.0"
         },
         [710021041] = {
           Content = "（对方腰侧闪过的亮光吸引了你的注意，你敏锐地察觉到对方已经握住了武器，准备迎战！）",
+          ContentDE = "(Dir fällt ein Aufblitzen an seiner Hüfte auf. Instinktiv merkst du: Er hat die Hand schon an der Waffe. Sei bereit, dich zu verteidigen!)",
           DialogueId = 710021041,
           GUID = "710021041.0"
         },
         [710021042] = {
           Content = "（劝对方冷静，等凯文回来说清怎么回事。）",
+          ContentDE = "(Beruhige ihn. Wartet ab, bis Kevin zurück ist, um die Sache zu klären.)",
           DialogueId = 710021042,
           GUID = "710021042.0"
         },
         [710023031] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710023031,
           GUID = "710023031.0"
         },
         [710023032] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710023032,
           GUID = "710023032.0"
         },
         [710024021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710024021,
           GUID = "710024021.0"
         },
         [710024022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710024022,
           GUID = "710024022.0"
         },
         [710025041] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710025041,
           GUID = "710025041.0",
           NextDialogue = 71002505,
@@ -282952,12 +284044,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710025042] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710025042,
           GUID = "710025042.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710026021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710026021,
           GUID = "710026021.0",
           NextDialogue = 71002603,
@@ -282965,34 +284059,40 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710026022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710026022,
           GUID = "710026022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710035041] = {
           Content = "道歉有用还要我的拳头做什么。今天就给你们好好长长记性。",
+          ContentDE = "Würde eine Entschuldigung genügen, hätte ich mein Schwert nie gezogen. Vergiss diese Lektion nicht.",
           DialogueId = 710035041,
           GUID = "710035041.0"
         },
         [710035042] = {
           Content = "同样的话我听很多人说过，但我愿意给你们一次机会。以后别再做这种事了。",
+          ContentDE = "Den Spruch hab ich schon von vielen gehört. Aber ich gebe euch eine Chance. Macht so was nie wieder.",
           DialogueId = 710035042,
           GUID = "710035042.0"
         },
         [710037041] = {
           Content = "收到收到，嗷呜嗷呜嗷呜。",
+          ContentDE = "Alles klar. Pow! Bam! Betrachte sie als verpasst.",
           DialogueId = 710037041,
           GUID = "710037021.0",
           NextDialogue = 71003705
         },
         [710037042] = {
           Content = "你又在被工作压榨得说气话了。",
+          ContentDE = "Du machst schon wieder deinem Ärger Luft, weil dich die Arbeit ausquetscht.",
           DialogueId = 710037042,
           GUID = "710037022.0",
           NextDialogue = 71003705
         },
         [710042031] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710042031,
           GUID = "710042021.0",
           NextDialogue = 71004204,
@@ -283000,12 +284100,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710042032] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710042032,
           GUID = "710042022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710048021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710048021,
           GUID = "710048021.0",
           NextDialogue = 71004803,
@@ -283013,96 +284115,114 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710048022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710048022,
           GUID = "710048022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710049021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710049021,
           GUID = "710049021.0",
           NextDialogue = 71004903
         },
         [710049022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710049022,
           GUID = "710049022.0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [710050021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710050021,
           GUID = "710050021.0",
           NextDialogue = 71005004
         },
         [710050022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710050022,
           GUID = "710050022.0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [710051131] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710051131,
           GUID = "710051111.0"
         },
         [710051132] = {
           Content = "（前言不搭后语，男人明显在耍你。）",
+          ContentDE = "(Seine Worte ergeben vorne und hinten keinen Sinn. Der Kerl nimmt dich ganz offensichtlich auf den Arm.)",
           DialogueId = 710051132,
           GUID = "710051112.0"
         },
         [710051231] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710051231,
           GUID = "710051211.0"
         },
         [710051232] = {
           Content = "（前言不搭后语，男人明显在耍你。）",
+          ContentDE = "(Seine Worte ergeben vorne und hinten keinen Sinn. Der Kerl nimmt dich ganz offensichtlich auf den Arm.)",
           DialogueId = 710051232,
           GUID = "710051212.0"
         },
         [710051331] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710051331,
           GUID = "710051271.0"
         },
         [710051332] = {
           Content = "（前言不搭后语，男人明显在耍你。）",
+          ContentDE = "(Seine Worte ergeben vorne und hinten keinen Sinn. Der Kerl nimmt dich ganz offensichtlich auf den Arm.)",
           DialogueId = 710051332,
           GUID = "710051272.0"
         },
         [710052141] = {
           Content = "太神奇了，所有幸福硬币我都要了！",
+          ContentDE = "Ist ja irre ... Ich nehme alle Glücksmünzen!",
           DialogueId = 710052141,
           GUID = "710052071.0"
         },
         [710052142] = {
           Content = "比起借助外物，我选择靠自己的双手来获得幸福。",
+          ContentDE = "Statt mich darauf zu verlassen, beschaffe ich mir mein Glück lieber mit meinen eigenen Händen.",
           DialogueId = 710052142,
           GUID = "710052072.0"
         },
         [710053081] = {
           Content = "（拿走钱财，给内城那些高高在上的家伙一点教训。）",
+          ContentDE = "(Das Geld an dich nehmen und den hochnäsigen Innenstadt-Leuten eine Lektion erteilen.)",
           DialogueId = 710053081,
           GUID = "710053121.0"
         },
         [710053082] = {
           Content = "（归还钱财，即使出身不同，丢失物品的悲伤都是共通的。）",
+          ContentDE = "(Das Geld zurückgeben. Egal wo man herkommt – der Schmerz des Verlusts ist überall derselbe.)",
           DialogueId = 710053082,
           GUID = "710053122.0"
         },
         [710054021] = {
           Content = "试试看吧。",
+          ContentDE = "Probier’s aus.",
           DialogueId = 710054021,
           GUID = "710054031.0"
         },
         [710054022] = {
           Content = "稍等一下。",
+          ContentDE = "Später vielleicht.",
           DialogueId = 710054022,
           GUID = "710054032.0"
         },
         [710054041] = {
           Content = "箱子一碰就坏，你没做手脚的话我把锁芯拆出来给所有人看看如何。",
+          ContentDE = "Wenn die Kiste schon bei einer Berührung kaputtgeht, hast du doch dran rumgefummelt. Soll ich den Schließzylinder ausbauen und es allen zeigen?",
           DialogueId = 710054041,
           GUID = "710054071.0",
           NextDialogue = 71005405,
@@ -283110,6 +284230,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710054042] = {
           Content = "上一个讹我钱的人已经成为病房贵宾了。",
+          ContentDE = "Der letzte, der mich abziehen wollte, ist inzwischen Ehrengast auf der Krankenstation.",
           DialogueId = 710054042,
           GUID = "710054072.0",
           NextDialogue = 71005407,
@@ -283117,26 +284238,31 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710055021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710055021,
           GUID = "710055041.0"
         },
         [710055022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710055022,
           GUID = "710055042.0"
         },
         [710055031] = {
           Content = "（声音可以传播很远。再往前看看吧。）",
+          ContentDE = "(Still – Geräusche tragen an Orten wie diesem weit. Vielleicht lohnt es sich, noch ein Stück tiefer hineinzugehen.)",
           DialogueId = 710055031,
           GUID = "710055061.0"
         },
         [710055032] = {
           Content = "（水道旁有什么东西在闪闪发光，先过去看看吧。）",
+          ContentDE = "(Am Wasserlauf glitzert etwas. Geh rüber und sieh nach.)",
           DialogueId = 710055032,
           GUID = "710055062.0"
         },
         [710056031] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710056031,
           GUID = "710056031.0",
           NextDialogue = 71005604,
@@ -283144,12 +284270,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710056032] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710056032,
           GUID = "710056032.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710057021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710057021,
           GUID = "710057021.0",
           NextDialogue = 71005703,
@@ -283157,12 +284285,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710057022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710057022,
           GUID = "710057022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710058031] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710058031,
           GUID = "710058031.0",
           NextDialogue = 71005804,
@@ -283170,12 +284300,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710058032] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710058032,
           GUID = "710058032.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710058061] = {
           Content = "当然，走吧。",
+          ContentDE = "Na klar, dann los!",
           DialogueId = 710058061,
           GUID = "710058061.0",
           NextDialogue = 71005807,
@@ -283183,6 +284315,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710058062] = {
           Content = "算了，足够了。",
+          ContentDE = "Schon gut. Mehr kann ich sowieso nicht tragen.",
           DialogueId = 710058062,
           GUID = "710058062.0",
           NextDialogue = 71005814,
@@ -283190,6 +284323,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710058091] = {
           Content = "当然，走吧。",
+          ContentDE = "Na klar, dann los!",
           DialogueId = 710058091,
           GUID = "710058091.0",
           NextDialogue = 71005810,
@@ -283197,6 +284331,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710058092] = {
           Content = "算了，足够了。",
+          ContentDE = "Schon gut. Mehr kann ich sowieso nicht tragen.",
           DialogueId = 710058092,
           GUID = "710058092.0",
           NextDialogue = 71005814,
@@ -283204,18 +284339,21 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710059021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710059021,
           GUID = "710059021.0",
           NextDialogue = 71005903
         },
         [710059022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710059022,
           GUID = "710059022.0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [710059041] = {
           Content = "原来是这样，交给我吧。",
+          ContentDE = "Ach, so ist das. Lass mich machen.",
           DialogueId = 710059041,
           GUID = "710059041.0",
           NextDialogue = 71005905,
@@ -283223,6 +284361,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710059042] = {
           Content = "不行，要比就堂堂正正地比。",
+          ContentDE = "Nein. Wenn schon Rennen, dann fair und ehrlich.",
           DialogueId = 710059042,
           GUID = "710059042.0",
           NextDialogue = 71005906,
@@ -283230,6 +284369,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710061091] = {
           Content = "抱歉，可能是击退秽兽时候洒出来的。",
+          ContentDE = "Tut mir leid, wahrscheinlich ist was ausgelaufen, als ich gegen die Filthoiden gekämpft habe.",
           DialogueId = 710061091,
           GUID = "710061091.0",
           NextDialogue = 71006110,
@@ -283237,6 +284377,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710061092] = {
           Content = "怎么不能吃，我给你示范一下。",
+          ContentDE = "Wie, nicht essbar? Ich zeig dir, wie das geht.",
           DialogueId = 710061092,
           GUID = "710061092.0",
           NextDialogue = 71006111,
@@ -283244,38 +284385,45 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710062021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710062021,
           GUID = "710062021.0"
         },
         [710062022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710062022,
           GUID = "710062022.0"
         },
         [710063021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710063021,
           GUID = "710063021.0"
         },
         [710063022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710063022,
           GUID = "710063022.0"
         },
         [710065021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710065021,
           GUID = "710065021.0",
           NextDialogue = 71006504
         },
         [710065022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710065022,
           GUID = "710065022.0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [710065071] = {
           Content = "好啊，还是你这办法省事。",
+          ContentDE = "Na gut, das ist wirklich die bequemere Lösung.",
           DialogueId = 710065071,
           GUID = "710065071.0",
           NextDialogue = 71006507,
@@ -283283,6 +284431,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065072] = {
           Content = "算了，我想自己找到答案。",
+          ContentDE = "Nee, ich will die Antworten selbst finden.",
           DialogueId = 710065072,
           GUID = "710065072.0",
           NextDialogue = 71006519,
@@ -283290,12 +284439,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065111] = {
           Content = "开始吧。",
+          ContentDE = "Fangen wir an.",
           DialogueId = 710065111,
           GUID = "710065111.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710065112] = {
           Content = "再等等。",
+          ContentDE = "Warten wir noch.",
           DialogueId = 710065112,
           GUID = "710065112.0",
           NextDialogue = 71006520,
@@ -283303,12 +284454,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065121] = {
           Content = "开始吧。",
+          ContentDE = "Fangen wir an.",
           DialogueId = 710065121,
           GUID = "710065121.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710065122] = {
           Content = "再等等。",
+          ContentDE = "Warten wir noch.",
           DialogueId = 710065122,
           GUID = "710065122.0",
           NextDialogue = 71006520,
@@ -283316,12 +284469,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065131] = {
           Content = "开始吧。",
+          ContentDE = "Fangen wir an.",
           DialogueId = 710065131,
           GUID = "710065131.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710065132] = {
           Content = "再等等。",
+          ContentDE = "Warten wir noch.",
           DialogueId = 710065132,
           GUID = "710065132.0",
           NextDialogue = 71006520,
@@ -283329,6 +284484,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065141] = {
           Content = "是甲偷的。",
+          ContentDE = "A",
           DialogueId = 710065141,
           GUID = "710065141.0",
           NextDialogue = 71006518,
@@ -283336,6 +284492,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065142] = {
           Content = "是乙偷的。",
+          ContentDE = "B",
           DialogueId = 710065142,
           GUID = "710065142.0",
           NextDialogue = 71006517,
@@ -283343,6 +284500,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065143] = {
           Content = "是丙偷的。",
+          ContentDE = "C",
           DialogueId = 710065143,
           GUID = "710065143.0",
           NextDialogue = 71006518,
@@ -283350,6 +284508,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065151] = {
           Content = "青铜皎皎。",
+          ContentDE = "Bronze-Luno.",
           DialogueId = 710065151,
           GUID = "710065151.0",
           NextDialogue = 71006518,
@@ -283357,6 +284516,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065152] = {
           Content = "黑铁皎皎。",
+          ContentDE = "Eisen-Luno.",
           DialogueId = 710065152,
           GUID = "710065152.0",
           NextDialogue = 71006518,
@@ -283364,6 +284524,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065153] = {
           Content = "锦鲤皎皎。",
+          ContentDE = "Karp-Luno.",
           DialogueId = 710065153,
           GUID = "710065153.0",
           NextDialogue = 71006517,
@@ -283371,6 +284532,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065161] = {
           Content = "第一个人说得对。",
+          ContentDE = "Die erste Person hat recht.",
           DialogueId = 710065161,
           GUID = "710065161.0",
           NextDialogue = 71006517,
@@ -283378,6 +284540,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065162] = {
           Content = "最后一人沉默说明前两人都戴蓝帽，所以第一人错。",
+          ContentDE = "Das Schweigen der letzten Person bedeutet, dass die beiden vorne blaue Hüte tragen, also lügt die erste Person.",
           DialogueId = 710065162,
           GUID = "710065162.0",
           NextDialogue = 71006518,
@@ -283385,6 +284548,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710065163] = {
           Content = "中间人沉默说明第一人戴红帽，所以第一人错。",
+          ContentDE = "Das Schweigen der Person in der Mitte bedeutet, dass die erste Person einen roten Hut trägt, also lügt die erste Person.",
           DialogueId = 710065163,
           GUID = "710065163.0",
           NextDialogue = 71006518,
@@ -283392,6 +284556,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710066021] = {
           Content = "（帮它解决执念。）",
+          ContentDE = "(Hilf ihm, seine Besessenheit loszuwerden.)",
           DialogueId = 710066021,
           GUID = "710066021.0",
           NextDialogue = 71006603,
@@ -283399,12 +284564,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710066022] = {
           Content = "（默默离开。）",
+          ContentDE = "(Leise gehen.)",
           DialogueId = 710066022,
           GUID = "710066022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710067051] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710067051,
           GUID = "710067051.0",
           NextDialogue = 71006706,
@@ -283412,12 +284579,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710067052] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710067052,
           GUID = "710067052.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710067091] = {
           Content = "（欣然接受。）",
+          ContentDE = "(Fröhlich zustimmen.)",
           DialogueId = 710067091,
           GUID = "710067091.0",
           NextDialogue = 71006712,
@@ -283425,6 +284594,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710067092] = {
           Content = "（严词拒绝。）",
+          ContentDE = "(Streng ablehnen.)",
           DialogueId = 710067092,
           GUID = "710067092.0",
           NextDialogue = 71006711,
@@ -283432,21 +284602,25 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710067151] = {
           Content = "“妄言欺众，不可为也。”",
+          ContentDE = "„Die Vielen zu täuschen und irrezuführen – dies darf nicht geschehen.“",
           DialogueId = 710067151,
           GUID = "710067151.0"
         },
         [710067152] = {
           Content = "“离经叛道，不可为也。”",
+          ContentDE = "„Gegen die heilige Ordnung aufzubegehren – dies darf nicht geschehen.“",
           DialogueId = 710067152,
           GUID = "710067152.0"
         },
         [710067153] = {
           Content = "“妄言欺众，大可为也。”",
+          ContentDE = "„Die Vielen zu täuschen und irrezuführen – dies darf nicht geschehen.“",
           DialogueId = 710067153,
           GUID = "710067153.0"
         },
         [710068021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710068021,
           GUID = "710068021.0",
           NextDialogue = 71006804,
@@ -283454,12 +284628,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710068022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710068022,
           GUID = "710068022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710069021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710069021,
           GUID = "710069021.0",
           NextDialogue = 71006903,
@@ -283467,12 +284643,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710069022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710069022,
           GUID = "710069022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710070031] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710070031,
           GUID = "710070031.0",
           NextDialogue = 71007004,
@@ -283480,12 +284658,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710070032] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710070032,
           GUID = "710070032.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710070101] = {
           Content = "告苍花。",
+          ContentDE = "Skylilien.",
           DialogueId = 710070101,
           GUID = "710070101.0",
           NextDialogue = 71007011,
@@ -283493,6 +284673,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710070102] = {
           Content = "青铜吊坠。",
+          ContentDE = "Bronzeanhänger.",
           DialogueId = 710070102,
           GUID = "710070102.0",
           NextDialogue = 71007011,
@@ -283500,6 +284681,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710070103] = {
           Content = "白龙摆件。",
+          ContentDE = "Lord Argent-Figur.",
           DialogueId = 710070103,
           GUID = "710070103.0",
           NextDialogue = 71007011,
@@ -283507,6 +284689,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710071041] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710071041,
           GUID = "710071041.0",
           NextDialogue = 71007105,
@@ -283514,18 +284697,21 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710071042] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710071042,
           GUID = "710071042.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710071061] = {
           Content = "你运气真好，这是最后一份特色小吃了请拿好",
+          ContentDE = "Du hast echt Glück, das ist das letzte Stück. Hier, nimm’s.",
           DialogueId = 710071061,
           GUID = "710071061.0",
           SpeakNpcId = 818071
         },
         [710071081] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710071081,
           GUID = "710071081.0",
           NextDialogue = 71007109,
@@ -283533,6 +284719,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710071082] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710071082,
           GUID = "710071082.0",
           NextDialogue = 71007113,
@@ -283540,30 +284727,35 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710071091] = {
           Content = "谢谢{性别：大哥哥|大姐姐}！你真是个大好人！",
+          ContentDE = "Danke, {性别:Herr|Frau}! Du bist wirklich ein lieber Mensch!",
           DialogueId = 710071091,
           GUID = "710071091.0",
           SpeakNpcId = 818070
         },
         [710071131] = {
           Content = "唔……好吧，谢谢……",
+          ContentDE = "Hm ... na gut. Danke ...",
           DialogueId = 710071131,
           GUID = "710071131.0",
           SpeakNpcId = 818070
         },
         [710072031] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710072031,
           GUID = "710072031.0",
           NextDialogue = 71007204
         },
         [710072032] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710072032,
           GUID = "710072032.0",
           Scripts = "SetOutport{FinishType{\"Fail\"}}"
         },
         [710072091] = {
           Content = "织星客卖的质量更好，买他的比较有保障。",
+          ContentDE = "Der Sternenweber hat die bessere Qualität. Bei ihm bist du auf der sicheren Seite.",
           DialogueId = 710072091,
           GUID = "710072091.0",
           NextDialogue = 71007210,
@@ -283579,6 +284771,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
       return {
         [710072092] = {
           Content = "黑市商人价格便宜，买他的更实惠。",
+          ContentDE = "Der Schwarzmarkthändler ist günstiger. Bei ihm lohnt es sich preislich mehr.",
           DialogueId = 710072092,
           GUID = "710072092.0",
           NextDialogue = 71007210,
@@ -283586,6 +284779,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710075031] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710075031,
           GUID = "710075031.0",
           NextDialogue = 71007504,
@@ -283593,12 +284787,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710075032] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710075032,
           GUID = "710075032.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710076021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710076021,
           GUID = "710076021.0",
           NextDialogue = 71007603,
@@ -283606,12 +284802,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710076022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710076022,
           GUID = "710076022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710077021] = {
           Content = "（帮忙寻找。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710077021,
           GUID = "710077021.0",
           NextDialogue = 71007703,
@@ -283619,12 +284817,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710077022,
           GUID = "710077022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710077051] = {
           Content = "我在找这个普通箱子。",
+          ContentDE = "Einfache Truhe",
           DialogueId = 710077051,
           GUID = "710077051.0",
           NextDialogue = 71007706,
@@ -283632,6 +284832,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077052] = {
           Content = "我在找这个看起来稍微华丽一点的箱子。",
+          ContentDE = "Standardtruhe",
           DialogueId = 710077052,
           GUID = "710077052.0",
           NextDialogue = 71007706,
@@ -283639,6 +284840,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077053] = {
           Content = "我在找这个最华丽的箱子。",
+          ContentDE = "Premiumtruhe",
           DialogueId = 710077053,
           GUID = "710077053.0",
           NextDialogue = 71007706,
@@ -283646,6 +284848,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077054] = {
           Content = "这几个箱子都是我的。",
+          ContentDE = "Ich nehm sie alle.",
           DialogueId = 710077054,
           GUID = "710077054.0",
           NextDialogue = 71007706,
@@ -283653,6 +284856,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710078021] = {
           Content = "（接受。）",
+          ContentDE = "(Annehmen)",
           DialogueId = 710078021,
           GUID = "710078021.0",
           NextDialogue = 71007803,
@@ -283660,30 +284864,35 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710078022] = {
           Content = "（拒绝。）",
+          ContentDE = "(Ablehnen)",
           DialogueId = 710078022,
           GUID = "710078022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710078051] = {
           Content = "宝箱。",
+          ContentDE = "(Truhen ohne Ende)",
           DialogueId = 710078051,
           GUID = "710078051.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710078052] = {
           Content = "敌人。",
+          ContentDE = "(Feinde auslöschen)",
           DialogueId = 710078052,
           GUID = "710078052.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710078053] = {
           Content = "熟悉的人。",
+          ContentDE = "(Jemanden wiedersehen, den du unbedingt sehen willst)",
           DialogueId = 710078053,
           GUID = "710078053.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{3}}"
         },
         [710079051] = {
           Content = "从地形上来看应该就在这附近，我去找找吧。",
+          ContentDE = "(ihm zu erklären, dass ein Schatz, der tief im Boden vergraben ist, keinen Nutzen hat – nur wenn etwas genutzt wird, hat es einen Wert.)",
           DialogueId = 710079051,
           GUID = "710079051.0",
           NextDialogue = 71007906,
@@ -283691,6 +284900,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710079052] = {
           Content = "既然是你父亲留给你的，那我就不要了。",
+          ContentDE = "(ihm dafür zu danken, dass er dir das Geheimnis verraten hat, deine Gedanken als Erwachsener für dich zu behalten und seine Unschuld zu schützen.)",
           DialogueId = 710079052,
           GUID = "710079052.0",
           NextDialogue = 71007908,

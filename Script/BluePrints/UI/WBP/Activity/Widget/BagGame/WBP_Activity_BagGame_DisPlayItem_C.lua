@@ -48,7 +48,9 @@ function M:OnListItemObjectSet(Content)
     OnDragCancelCallback = function(self, PointerEvent, Operation)
       Content.SwitchIndex = 0
       local Screen = self.PlayScreen or Content.PlayScreen
-      if Screen then
+      if Screen and Screen.HandleCancelledDragReturnToList then
+        Screen:HandleCancelledDragReturnToList(Operation, Operation and Operation.DefaultDragVisual, Content.DisPlayItemId)
+      elseif Screen then
         Screen:SetDisPlayItemSwitchIndex(Content.DisPlayItemId, 0)
         Screen:OnDragStateChanged(false)
       else
@@ -215,7 +217,10 @@ function M:Init(Content, PlayScreen)
         self.Content.SwitchIndex = 0
       end
       local Screen = not self.PlayScreen and self.Content and self.Content.PlayScreen
-      if Screen then
+      if Screen and Screen.HandleCancelledDragReturnToList then
+        local ItemId = not self.DisPlayItemId and self.Content and self.Content.DisPlayItemId
+        Screen:HandleCancelledDragReturnToList(Operation, Operation and Operation.DefaultDragVisual, ItemId)
+      elseif Screen then
         local ItemId = not self.DisPlayItemId and self.Content and self.Content.DisPlayItemId
         if ItemId then
           Screen:SetDisPlayItemSwitchIndex(ItemId, 0)
@@ -346,11 +351,15 @@ function M:OnDrop(MyGeometry, PointerEvent, Operation)
   local DragUI = Operation.DefaultDragVisual
   local Screen = not self.PlayScreen and self.Content and self.Content.PlayScreen
   if DragUI and Screen then
-    if DragUI.DisPlayItemId then
-      Screen:SetDisPlayItemSwitchIndex(DragUI.DisPlayItemId, 0)
+    if Screen.HandleCancelledDragReturnToList then
+      Screen:HandleCancelledDragReturnToList(Operation, DragUI)
+    else
+      if DragUI.DisPlayItemId then
+        Screen:SetDisPlayItemSwitchIndex(DragUI.DisPlayItemId, 0)
+      end
+      Screen:DeactivateShapeArea()
+      Screen:OnDragStateChanged(false)
     end
-    Screen:DeactivateShapeArea()
-    Screen:OnDragStateChanged(false)
   end
   return true
 end

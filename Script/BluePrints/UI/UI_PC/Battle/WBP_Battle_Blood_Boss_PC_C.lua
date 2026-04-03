@@ -324,6 +324,7 @@ function WBP_Battle_Blood_Boss_PC_C:InitChargeBar()
     if self.Bar_Energy then
       self.Bar_Energy:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
+    self:Show("ChargeHide")
     return
   end
   self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -518,7 +519,7 @@ function WBP_Battle_Blood_Boss_PC_C:UpdateTakeDownTipText()
 end
 
 function WBP_Battle_Blood_Boss_PC_C:UpdateDamageRate(SourceEid)
-  if self.Owner.Eid ~= SourceEid then
+  if not IsValid(self.Owner) or self.Owner.Eid ~= SourceEid then
     return
   end
   self:UpdateTakeDownTipText()

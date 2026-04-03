@@ -895,7 +895,7 @@ return {
             name = "设置全局音效参数",
             pos = {x = 1031.4736842105262, y = -549.0526315789473},
             propsData = {
-              ParamName = "parameter:/story/story_1_3_final_disaste",
+              ParamName = "story_1_3_final_disaste",
               ParamValue = 1
             }
           },
@@ -915,7 +915,7 @@ return {
             name = "设置全局音效参数",
             pos = {x = 2462.848997493734, y = 395.4812030075189},
             propsData = {
-              ParamName = "parameter:/story/story_1_3_final_disaste",
+              ParamName = "story_1_3_final_disaste",
               ParamValue = 0
             }
           }

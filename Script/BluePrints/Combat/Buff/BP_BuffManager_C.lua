@@ -97,16 +97,4 @@ function BP_BuffManager_C:HasDestructParts(Invincible, CurrentLockHp)
   self.Owner.BillBoardComponent:OnBuffChange_LockHp(Invincible, nil, CurrentLockHp)
 end
 
-function BP_BuffManager_C:CheckDisableSkillBuff(TargetSkillType)
-  if not self.DisableSkills or not type(self.DisableSkills) == "table" or not next(self.DisableSkills) then
-    return false
-  end
-  for _, SkillType in pairs(self.DisableSkills) do
-    if SkillType == TargetSkillType then
-      return true
-    end
-  end
-  return false
-end
-
 return BP_BuffManager_C

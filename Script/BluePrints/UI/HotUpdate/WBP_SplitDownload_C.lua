@@ -207,6 +207,14 @@ function M:PostInitDownloadUI(NecessoryPatchSigns, bReInit)
   end
   self.Btn_Continue:SetText(GText("UI_Esc_Continue"))
   self.Btn_Continue:UnBindEventOnClickedByObj(self)
+  local bAllNecessaryDownloaded = self:RefreshContinueButtonState(NecessoryPatchSigns)
+  self.Btn_Continue:BindSingleEventOnClicked(self, self.OnClickBackToGame)
+end
+
+function M:RefreshContinueButtonState(NecessoryPatchSigns)
+  if not self.Btn_Continue then
+    return false
+  end
   local bAllNecessaryDownloaded = true
   if NecessoryPatchSigns and #NecessoryPatchSigns > 0 then
     local DownloadedAssetState = self.DownloadedAssetState
@@ -226,10 +234,8 @@ function M:PostInitDownloadUI(NecessoryPatchSigns, bReInit)
       end
     end
   end
-  self.Btn_Continue:ForbidBtn(not bAllNecessaryDownloaded)
-  if bAllNecessaryDownloaded then
-    self.Btn_Continue:BindSingleEventOnClicked(self, self.OnClickBackToGame)
-  end
+  self.Btn_Continue:ForbidBtn(not bAllNecessaryDownloaded and not self:IsInGame())
+  return bAllNecessaryDownloaded
 end
 
 function M:CreateEmptyContent()
@@ -267,6 +273,7 @@ function M:OnSelectPatchItem(Content)
     self.TitleAnchor:ClearChildren()
     local Title = UIManager(self):CreateWidget(PatchResource.TitleBP)
     if Title then
+      Title.Text_Title:SetText(GText(PatchResource.Name))
       self.TitleAnchor:AddChild(Title)
     end
   end
@@ -321,7 +328,10 @@ function M:OnAssetStartDownload(TotalBytes, DownloadedBytes)
 end
 
 function M:OnPatchPostSuccess(bFirst)
+  self.Btn_Continue:UnBindEventOnClickedByObj(self)
   self:RefreshDownloadedAssetState(bFirst)
+  local bAllNecessaryDownloaded = self:RefreshContinueButtonState(HotUpdateUtils.GetNecessoryPatchSigns())
+  self.Btn_Continue:BindSingleEventOnClicked(self, self.OnClickBackToGame)
 end
 
 function M:RefreshDownloadedAssetState(bFirst)
