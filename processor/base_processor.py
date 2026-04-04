@@ -7,17 +7,41 @@ from threading import Lock
 class BaseProcessor:
     _shared_items_cache = {}
     _shared_items_cache_lock = Lock()
+    _shared_i18n_cn_alt_cache = {}
 
     def __init__(self, data_loader):
         self.data_loader = data_loader
         self.file_type = "Base"
         self.i18n_data = data_loader.load_json("TextMap_I18n.json")
-        self.i18n_data_cn_alt = {}
-        for item in data_loader.load_json("TextMap_TextMapContent.json"):
-            self.i18n_data_cn_alt.update(item.get("Loader"))
+        self.i18n_data_cn_alt = self._load_shared_i18n_cn_alt(data_loader)
         self.condition_data = data_loader.load_json("Condition.json")
         # 预加载所有语言的对话数据
         self.dialogue_data_cache = {}
+
+    @classmethod
+    def _load_shared_i18n_cn_alt(cls, data_loader):
+        """共享加载中文补充翻译表。"""
+        base_dir = getattr(data_loader, "base_dir", None)
+        cache_key = str(base_dir) if base_dir is not None else "__none__"
+        with cls._shared_items_cache_lock:
+            cached = cls._shared_i18n_cn_alt_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+        i18n_data_cn_alt = {}
+        for item in data_loader.load_json("TextMap_TextMapContent.json"):
+            if not isinstance(item, dict):
+                continue
+            loader_data = item.get("Loader")
+            if isinstance(loader_data, dict):
+                i18n_data_cn_alt.update(loader_data)
+
+        with cls._shared_items_cache_lock:
+            cached = cls._shared_i18n_cn_alt_cache.get(cache_key)
+            if cached is not None:
+                return cached
+            cls._shared_i18n_cn_alt_cache[cache_key] = i18n_data_cn_alt
+        return i18n_data_cn_alt
 
     def _load_all_dialogue_data(self):
         """预加载所有语言的对话数据到缓存中"""

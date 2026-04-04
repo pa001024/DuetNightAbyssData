@@ -7,9 +7,14 @@ from processor.base_processor import BaseProcessor
 
 
 class ResourceProcessor(BaseProcessor):
-    _design_level_json_cache: Dict[str, list] = {}
-    _resource_source_cache_by_base: Dict[str, Dict[int, List[Dict[str, Any]]]] = {}
-    _cache_lock = threading.Lock()
+    _shared_build_locks: Dict[Tuple[str, str, str], threading.Lock] = {}
+    _shared_build_locks_lock = threading.Lock()
+    _shared_resource_sources_cache: Dict[str, Dict[int, List[Dict[str, Any]]]] = {}
+    _shared_design_map_paths_cache: Dict[Tuple[str, str], List[Path]] = {}
+    _shared_design_level_json_cache: Dict[str, list] = {}
+    _shared_level_to_sub_region_id_cache: Dict[str, Dict[str, int]] = {}
+    _shared_design_data_dirs_cache: Dict[str, List[Path]] = {}
+    _shared_design_dir_files_cache: Dict[str, List[Path]] = {}
 
     def __init__(self, data_loader):
         super().__init__(data_loader)
@@ -18,25 +23,21 @@ class ResourceProcessor(BaseProcessor):
         self.drop_data = data_loader.load_json("Drop.json")
         self.reward_data = data_loader.load_json("Reward.json")
         self.mechanism_data = data_loader.load_json("Mechanism.json")
-        self.draft_data = data_loader.load_json("Draft.json")
-        self.char_break_data = data_loader.load_json("CharBreak.json")
-        self.skill_level_up_data = data_loader.load_json("SkillLevelUp.json")
-        self.weapon_break_data = data_loader.load_json("WeaponBreak.json")
-        self.shop_item_data = data_loader.load_json("ShopItem.json")
-        self.shop_tab_sub_data = data_loader.load_json("ShopTabSub.json")
-        self.resource_map = {}
-        for resource_id, resource_info in self.resource_data.items():
-            self.resource_map[resource_info.get("ResourceId")] = resource_info
+        self.resource_map = {
+            resource_info.get("ResourceId"): resource_info
+            for resource_info in self.resource_data.values()
+            if isinstance(resource_info, dict)
+        }
 
-        self.rarely_to_drop_ids = self._build_rarely_to_drop_ids()
-        self.drop_to_resource_ids = self._build_drop_to_resource_ids()
-        self.mechanism_to_reward_ids = self._build_mechanism_to_reward_ids()
-        self.reward_to_resource_ids = self._build_reward_to_resource_ids()
-        self.mechanism_to_resource_ids = self._build_mechanism_to_resource_ids()
-        self.draft_resource_ids = self.get_draft_resource_ids()
         self.exports_root = self._resolve_exports_root()
         self.sub_region_data = data_loader.load_json("SubRegion.json")
-        self.resource_sources = self._get_or_build_resource_sources()
+        self.resource_sources = None
+        self.rarely_to_drop_ids = None
+        self.drop_to_resource_ids = None
+        self.mechanism_to_reward_ids = None
+        self.reward_to_resource_ids = None
+        self.mechanism_to_resource_ids = None
+        self.draft_resource_ids = None
 
     def process_item(self, resource_data, language):
         """处理单个资源数据
@@ -84,12 +85,13 @@ class ResourceProcessor(BaseProcessor):
             "icon": icon,
             "rarity": resource_data.get("Rarity", 1),
         }
-        source = self.resource_sources.get(resource_id)
+        source = self._get_resource_sources().get(resource_id)
         if source:
             filtered_source = [
                 item for item in source if item.get("srId") != 210101
             ]
             if filtered_source:
+                filtered_source.sort(key=self._sort_source_items_key)
                 processed_resource["source"] = filtered_source
         if resource_desc:
             processed_resource["desc"] = resource_desc
@@ -97,6 +99,34 @@ class ResourceProcessor(BaseProcessor):
             processed_resource["desc2"] = resource_desc2
 
         return processed_resource
+
+    def _get_resource_sources(self) -> Dict[int, List[Dict[str, Any]]]:
+        """按需获取资源来源索引。"""
+        if self.resource_sources is None:
+            self.resource_sources = self._get_or_build_resource_sources()
+        return self.resource_sources
+
+    def _ensure_resource_link_maps(self) -> None:
+        """按需构建资源链路映射。"""
+        if (
+            self.rarely_to_drop_ids is not None
+            and self.drop_to_resource_ids is not None
+            and self.mechanism_to_reward_ids is not None
+            and self.reward_to_resource_ids is not None
+            and self.mechanism_to_resource_ids is not None
+        ):
+            return
+        self.rarely_to_drop_ids = self._build_rarely_to_drop_ids()
+        self.drop_to_resource_ids = self._build_drop_to_resource_ids()
+        self.mechanism_to_reward_ids = self._build_mechanism_to_reward_ids()
+        self.reward_to_resource_ids = self._build_reward_to_resource_ids()
+        self.mechanism_to_resource_ids = self._build_mechanism_to_resource_ids()
+
+    def _get_draft_resource_ids(self):
+        """按需获取 Draft 资源集合。"""
+        if self.draft_resource_ids is None:
+            self.draft_resource_ids = self.get_draft_resource_ids()
+        return self.draft_resource_ids
 
     def _resolve_exports_root(self) -> Optional[Path]:
         """解析 FModel Exports 根目录。"""
@@ -122,96 +152,290 @@ class ResourceProcessor(BaseProcessor):
     def _get_or_build_resource_sources(self) -> Dict[int, List[Dict[str, Any]]]:
         """构建资源来源坐标索引。"""
         cache_key = self._get_exports_root_cache_key()
-        cached = self._resource_source_cache_by_base.get(cache_key)
-        if cached is not None:
-            return cached
-
-        with self._cache_lock:
-            cached = self._resource_source_cache_by_base.get(cache_key)
+        with self._shared_build_locks_lock:
+            cached = self._shared_resource_sources_cache.get(cache_key)
             if cached is not None:
                 return cached
+
+        build_lock = self._get_shared_build_lock(("resource_processor", cache_key, "resource_sources"))
+        with build_lock:
+            with self._shared_build_locks_lock:
+                cached = self._shared_resource_sources_cache.get(cache_key)
+                if cached is not None:
+                    return cached
 
             sources: Dict[int, List[Dict[str, Any]]] = {}
             self._collect_resource_sources_from_design_levels(sources)
 
-            self._resource_source_cache_by_base[cache_key] = sources
+            with self._shared_build_locks_lock:
+                cached = self._shared_resource_sources_cache.get(cache_key)
+                if cached is not None:
+                    return cached
+                self._shared_resource_sources_cache[cache_key] = sources
+            with BaseProcessor._shared_items_cache_lock:
+                BaseProcessor._shared_items_cache[
+                    self._shared_cache_key("resource_sources")
+                ] = sources
             return sources
+
+    def _get_shared_build_lock(self, cache_key: Tuple[str, str, str]) -> threading.Lock:
+        """获取共享构建锁，避免并发重复构建同一缓存。"""
+        with self._shared_build_locks_lock:
+            lock = self._shared_build_locks.get(cache_key)
+            if lock is None:
+                lock = threading.Lock()
+                self._shared_build_locks[cache_key] = lock
+            return lock
+
+    def _shared_cache_key(self, suffix: str) -> Tuple[str, str, str]:
+        """生成进程共享缓存键。"""
+        return ("resource_processor", self._get_exports_root_cache_key(), suffix)
 
     def _load_design_level_json(self, json_path: Path) -> list:
         """加载设计层 JSON。"""
-        cache_key = str(json_path)
-        cached = self._design_level_json_cache.get(cache_key)
-        if cached is not None:
-            return cached
+        resolved_path = json_path.resolve()
+        cache_key = str(resolved_path)
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_level_json_cache.get(cache_key)
+            if cached is not None:
+                return cached
+        build_lock = self._get_shared_build_lock(cache_key)
+        with build_lock:
+            with self._shared_build_locks_lock:
+                cached = self._shared_design_level_json_cache.get(cache_key)
+                if cached is not None:
+                    return cached
         try:
-            data = json.loads(json_path.read_text(encoding="utf-8"))
+            data = json.loads(resolved_path.read_text(encoding="utf-8"))
         except Exception:
             data = {}
         if not isinstance(data, (list, dict)):
             data = []
-        self._design_level_json_cache[cache_key] = data
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_level_json_cache.get(cache_key)
+            if cached is not None:
+                return cached
+            self._shared_design_level_json_cache[cache_key] = data
         return data
 
     def _collect_resource_sources_from_design_levels(
         self, sources: Dict[int, List[Dict[str, Any]]]
     ) -> None:
         """从设计层数据收集资源实例坐标。"""
-        design_map_paths = self._resolve_design_map_paths()
-        if not design_map_paths:
+        level_to_sub_region_id = self._get_shared_level_to_sub_region_id_map()
+        if level_to_sub_region_id is None:
+            level_to_sub_region_id = {}
+            for _, info in self.sub_region_data.items():
+                if not isinstance(info, dict):
+                    continue
+                level_name = info.get("SubRegionLevel")
+                sub_region_id = self._to_int(info.get("SubRegionId"))
+                if isinstance(level_name, str) and level_name and sub_region_id is not None:
+                    level_to_sub_region_id[level_name.lower()] = sub_region_id
+            with self._shared_build_locks_lock:
+                self._shared_level_to_sub_region_id_cache[
+                    self._get_exports_root_cache_key()
+                ] = level_to_sub_region_id
+
+        level_order = self._build_sub_region_level_order()
+        if not level_order:
             return
 
-        level_to_sub_region_id: Dict[str, int] = {}
-        for _, info in self.sub_region_data.items():
-            if not isinstance(info, dict):
-                continue
-            level_name = info.get("SubRegionLevel")
-            sub_region_id = self._to_int(info.get("SubRegionId"))
-            if isinstance(level_name, str) and level_name and sub_region_id is not None:
-                level_to_sub_region_id[level_name.lower()] = sub_region_id
+        design_map_paths: List[Path] = []
+        for level_name in level_order:
+            design_map_paths.extend(self._resolve_design_map_paths_for_level(level_name))
 
+        design_map_paths.sort(key=lambda p: str(p))
         for json_path in design_map_paths:
             sub_region_id = level_to_sub_region_id.get(self._normalize_level_map_key(json_path))
             if sub_region_id is None:
                 continue
-            level_data = self._load_design_level_json(json_path)
-            by_outer_name, by_name, by_path = self._build_object_maps(level_data)
-            self._collect_resource_sources_from_design_level(
-                level_data, sub_region_id, sources, by_outer_name, by_name, by_path
-            )
+            self._collect_resource_sources_for_design_job(json_path, sub_region_id, sources)
 
-    def _resolve_design_map_paths(self) -> List[Path]:
-        """解析设计层地图 JSON 列表。"""
-        candidates: List[Path] = []
+    def _get_shared_level_to_sub_region_id_map(self) -> Optional[Dict[str, int]]:
+        """读取共享的 SubRegionLevel -> SubRegionId 索引。"""
+        cache_key = self._get_exports_root_cache_key()
+        with self._shared_build_locks_lock:
+            cached = self._shared_level_to_sub_region_id_cache.get(cache_key)
+            if isinstance(cached, dict):
+                return cached
+        return None
+
+    def _collect_resource_sources_for_design_job(
+        self,
+        json_path: Path,
+        sub_region_id: int,
+        sources: Optional[Dict[int, List[Dict[str, Any]]]] = None,
+    ) -> Dict[int, List[Dict[str, Any]]]:
+        """处理单个设计层并返回该层的资源来源结果。"""
+        self._ensure_resource_link_maps()
+        level_data = self._load_design_level_json(json_path)
+        combined_level_data = self._build_design_level_scope(json_path, level_data)
+        by_outer_name, by_name, by_path = self._build_object_maps(combined_level_data)
+        local_sources: Dict[int, List[Dict[str, Any]]] = {}
+        self._collect_resource_sources_from_design_level(
+            combined_level_data,
+            sub_region_id,
+            local_sources,
+            by_outer_name,
+            by_name,
+            by_path,
+        )
+        if sources is not None:
+            self._merge_resource_sources(sources, local_sources)
+        return local_sources
+
+    def _merge_resource_sources(
+        self,
+        target: Dict[int, List[Dict[str, Any]]],
+        source: Dict[int, List[Dict[str, Any]]],
+    ) -> None:
+        """合并单个设计层的资源来源结果。"""
+        for resource_id, source_items in source.items():
+            target_items = target.setdefault(resource_id, [])
+            for source_item in source_items:
+                if not isinstance(source_item, dict):
+                    continue
+                target_item = self._get_or_create_source_item(
+                    target_items,
+                    source_item.get("srId"),
+                    source_item.get("rewardId"),
+                )
+                if not target_item:
+                    continue
+                for pos in source_item.get("pos", []):
+                    self._append_source_pos(target_item, pos)
+
+    def _build_design_level_scope(self, design_json_path: Path, level_data: Any) -> List[Any]:
+        """构建设计层可用的数据范围，只加载当前设计层。"""
+        combined_level_data: List[Any] = []
+        self._append_level_data(combined_level_data, level_data)
+        return combined_level_data
+
+    @staticmethod
+    def _append_level_data(target: List[Any], level_data: Any) -> None:
+        """把单个 JSON 数据追加到合并列表。"""
+        if isinstance(level_data, list):
+            target.extend(level_data)
+        elif isinstance(level_data, dict):
+            target.append(level_data)
+
+    def _resolve_design_map_paths_for_level(self, level_name: str) -> List[Path]:
+        """按 SubRegionLevel 懒加载对应的设计层 JSON。"""
+        maps_root = self._resolve_maps_root()
+        if maps_root is None or not level_name:
+            return []
+
+        cache_key = (self._get_exports_root_cache_key(), level_name)
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_map_paths_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+        build_lock = self._get_shared_build_lock(("resource_processor", cache_key[0], f"design_paths:{level_name}"))
+        with build_lock:
+            with self._shared_build_locks_lock:
+                cached = self._shared_design_map_paths_cache.get(cache_key)
+                if cached is not None:
+                    return cached
+
+            matched_paths: List[Path] = []
+            for design_dir in self._iter_design_data_dirs(maps_root):
+                for json_path in self._iter_design_dir_design_files(design_dir):
+                    if self._normalize_level_map_key(json_path) != level_name:
+                        continue
+                    matched_paths.append(json_path)
+
+            matched_paths.sort(key=lambda p: (len(str(p)), str(p)))
+            with self._shared_build_locks_lock:
+                cached = self._shared_design_map_paths_cache.get(cache_key)
+                if cached is not None:
+                    return cached
+                self._shared_design_map_paths_cache[cache_key] = matched_paths
+            return matched_paths
+
+    def _resolve_maps_root(self) -> Optional[Path]:
+        """解析 Maps/Levels 根目录。"""
         exports_root_env = os.getenv("DNA_EXPORTS_ROOT")
         if exports_root_env:
-            candidates.append(Path(exports_root_env))
-        candidates.append(
-            Path("..")
-            / "dna-unpack"
-            / "Fmodel"
-            / "Output"
-            / "Exports"
-            / "EM"
-            / "Content"
-            / "Maps"
-            / "Levels"
-        )
+            env_root = Path(exports_root_env)
+            if env_root.name == "Levels":
+                return env_root
+            candidate = env_root / "EM" / "Content" / "Maps" / "Levels"
+            if candidate.is_dir():
+                return candidate
 
-        for base in candidates:
-            if base is None:
+        default_root = Path("..") / "dna-unpack" / "Fmodel" / "Output" / "Exports" / "EM" / "Content" / "Maps" / "Levels"
+        if default_root.is_dir():
+            return default_root
+        return None
+
+    def _build_sub_region_level_order(self) -> List[str]:
+        """按 SubRegion 数据中的顺序返回需要处理的地图名。"""
+        level_order: List[str] = []
+        for _, info in self.sub_region_data.items():
+            if not isinstance(info, dict):
                 continue
-            maps_root = base if base.name == "Levels" else base / "EM" / "Content" / "Maps" / "Levels"
-            if not maps_root.is_dir():
+            level_name = info.get("SubRegionLevel")
+            if isinstance(level_name, str) and level_name and level_name not in level_order:
+                level_order.append(level_name.lower())
+        return level_order
+
+    def _iter_design_data_dirs(self, maps_root: Path):
+        """递归枚举所有 Design_Data 目录，只扫目录不扫内容。"""
+        cache_key = str(maps_root.resolve())
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_data_dirs_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+        stack = [maps_root]
+        design_dirs: List[Path] = []
+        while stack:
+            current = stack.pop()
+            try:
+                entries = list(current.iterdir())
+            except Exception:
                 continue
-            return sorted(
-                [
-                    json_path
-                    for json_path in maps_root.rglob("*.json")
-                    if json_path.name.endswith("_Design.json")
-                ],
-                key=lambda p: str(p),
-            )
-        return []
+            for entry in entries:
+                if not entry.is_dir():
+                    continue
+                if entry.name == "Design_Data":
+                    design_dirs.append(entry)
+                else:
+                    stack.append(entry)
+
+        design_dirs.sort(key=lambda p: str(p))
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_data_dirs_cache.get(cache_key)
+            if cached is not None:
+                return cached
+            self._shared_design_data_dirs_cache[cache_key] = design_dirs
+        return design_dirs
+
+    def _iter_design_dir_design_files(self, design_dir: Path) -> List[Path]:
+        """读取单个 Design_Data 目录中的设计层文件列表。"""
+        cache_key = str(design_dir.resolve())
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_dir_files_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+        design_files: List[Path] = []
+        try:
+            for json_path in design_dir.iterdir():
+                if json_path.is_file() and json_path.name.endswith("_Design.json"):
+                    design_files.append(json_path)
+        except Exception:
+            design_files = []
+
+        design_files.sort(key=lambda p: (len(str(p)), str(p)))
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_dir_files_cache.get(cache_key)
+            if cached is not None:
+                return cached
+            self._shared_design_dir_files_cache[cache_key] = design_files
+        return design_files
 
     def _normalize_level_map_key(self, json_path: Path) -> Optional[str]:
         """从地图 JSON 路径提取用于匹配 SubRegionLevel 的键。"""
@@ -267,6 +491,7 @@ class ResourceProcessor(BaseProcessor):
         by_path: Optional[Dict[str, dict]] = None,
     ) -> None:
         """从设计层数据提取资源来源。"""
+        candidate_nodes: List[Tuple[dict, List[Tuple[int, Optional[int]]], Optional[int], Optional[int]]] = []
         unit_based_resource_ids = set()
         for node in self._iter_design_level_nodes(level_data):
             if not isinstance(node, dict):
@@ -282,18 +507,11 @@ class ResourceProcessor(BaseProcessor):
             if unit_id is not None or static_creator_id is not None:
                 for resource_id, _ in resource_ids:
                     unit_based_resource_ids.add(resource_id)
+            candidate_nodes.append(
+                (node, resource_ids, unit_id, static_creator_id)
+            )
 
-        for node in self._iter_design_level_nodes(level_data):
-            if not isinstance(node, dict):
-                continue
-            props = node.get("Properties", {})
-            if not isinstance(props, dict):
-                continue
-            resource_ids = self._extract_resource_ids_from_node(node, props)
-            if not resource_ids:
-                continue
-            unit_id = self._to_int(props.get("UnitId"))
-            static_creator_id = self._to_int(props.get("StaticCreatorId"))
+        for node, resource_ids, unit_id, static_creator_id in candidate_nodes:
             if (
                 unit_id is None
                 and static_creator_id is None
@@ -333,13 +551,17 @@ class ResourceProcessor(BaseProcessor):
         self, node: dict, props: Dict[str, Any]
     ) -> List[Tuple[int, Optional[int]]]:
         """从设计层节点提取资源 ID 和可选 RewardId。"""
+        self._ensure_resource_link_maps()
         resource_ids: List[Tuple[int, Optional[int]]] = []
 
-        def has_resource_id(candidate_id: Optional[int]) -> bool:
-            return any(item_id == candidate_id for item_id, _ in resource_ids)
+        def has_resource_pair(candidate_id: Optional[int], candidate_reward_id: Optional[int]) -> bool:
+            return any(
+                item_id == candidate_id and reward_id == candidate_reward_id
+                for item_id, reward_id in resource_ids
+            )
 
         resource_id = self._to_int(props.get("ResourceId"))
-        if resource_id is not None and resource_id in self.resource_map:
+        if resource_id is not None and resource_id in self.resource_map and not has_resource_pair(resource_id, None):
             resource_ids.append((resource_id, None))
 
         unit_id = self._to_int(props.get("UnitId"))
@@ -348,19 +570,19 @@ class ResourceProcessor(BaseProcessor):
 
         if unit_id is not None:
             for resource_id in self.drop_to_resource_ids.get(unit_id, []):
-                if resource_id in self.resource_map and not has_resource_id(resource_id):
+                if resource_id in self.resource_map and not has_resource_pair(resource_id, None):
                     resource_ids.append((resource_id, None))
 
         if (unit_id is not None or static_creator_id is not None) and rarely_id is not None:
             for drop_id in self.rarely_to_drop_ids.get(rarely_id, []):
                 for resource_id in self.drop_to_resource_ids.get(drop_id, []):
-                    if resource_id in self.resource_map and not has_resource_id(resource_id):
+                    if resource_id in self.resource_map and not has_resource_pair(resource_id, None):
                         resource_ids.append((resource_id, None))
 
         mechanism_id = unit_id if unit_id is not None else static_creator_id
         if mechanism_id is not None:
             for resource_id, reward_id in self.mechanism_to_resource_ids.get(mechanism_id, []):
-                if resource_id in self.resource_map and not has_resource_id(resource_id):
+                if resource_id in self.resource_map and not has_resource_pair(resource_id, reward_id):
                     resource_ids.append((resource_id, reward_id))
 
         return resource_ids
@@ -674,6 +896,23 @@ class ResourceProcessor(BaseProcessor):
         )
 
     @staticmethod
+    def _sort_source_items_key(source_item: Dict[str, Any]) -> Tuple[bool, int, int, float, float]:
+        """固定 source 输出顺序，避免缓存改变插入顺序。"""
+        reward_id = source_item.get("rewardId")
+        sr_id = source_item.get("srId")
+        pos = source_item.get("pos", [])
+        first_pos = pos[0] if isinstance(pos, list) and pos else []
+        x = float(first_pos[0]) if isinstance(first_pos, list) and len(first_pos) >= 1 and first_pos[0] is not None else 0.0
+        y = float(first_pos[1]) if isinstance(first_pos, list) and len(first_pos) >= 2 and first_pos[1] is not None else 0.0
+        return (
+            reward_id is None,
+            sr_id if isinstance(sr_id, int) else 0,
+            reward_id if isinstance(reward_id, int) else 0,
+            x,
+            y,
+        )
+
+    @staticmethod
     def _format_source_pos_value(value: float) -> float:
         """保留 source 坐标的整数外观。"""
         if abs(value - round(value)) < 1e-6:
@@ -686,10 +925,22 @@ class ResourceProcessor(BaseProcessor):
         Returns:
             需要导出的资源ID集合
         """
+        cache_key = self._shared_cache_key("draft_resource_ids")
+        with BaseProcessor._shared_items_cache_lock:
+            cached = BaseProcessor._shared_items_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+        draft_data = self.data_loader.load_json("Draft.json")
+        char_break_data = self.data_loader.load_json("CharBreak.json")
+        skill_level_up_data = self.data_loader.load_json("SkillLevelUp.json")
+        weapon_break_data = self.data_loader.load_json("WeaponBreak.json")
+        shop_item_data = self.data_loader.load_json("ShopItem.json")
+
         resource_ids = set()
 
         # 从 Draft 中收集资源
-        for draft_id, draft_info in self.draft_data.items():
+        for draft_id, draft_info in draft_data.items():
             product_id = draft_info.get("ProductId")
             product_type = draft_info.get("ProductType")
 
@@ -703,7 +954,7 @@ class ResourceProcessor(BaseProcessor):
                     resource_ids.add(resource.get("Id"))
 
         # 从 CharBreak 中收集资源
-        for char_id, break_list in self.char_break_data.items():
+        for char_id, break_list in char_break_data.items():
             if isinstance(break_list, list):
                 for break_stage in break_list:
                     item_ids = break_stage.get("ItemId", [])
@@ -711,7 +962,7 @@ class ResourceProcessor(BaseProcessor):
                         resource_ids.add(item_id)
 
         # 从 SkillLevelUp 中收集资源
-        for skill_id, level_list in self.skill_level_up_data.items():
+        for skill_id, level_list in skill_level_up_data.items():
             if isinstance(level_list, list):
                 for level_stage in level_list:
                     item_ids = level_stage.get("ItemId", [])
@@ -719,7 +970,7 @@ class ResourceProcessor(BaseProcessor):
                         resource_ids.add(item_id)
 
         # 从 WeaponBreak 中收集资源
-        for weapon_id, break_list in self.weapon_break_data.items():
+        for weapon_id, break_list in weapon_break_data.items():
             if isinstance(break_list, list):
                 for break_stage in break_list:
                     item_ids = break_stage.get("ItemId", [])
@@ -727,7 +978,7 @@ class ResourceProcessor(BaseProcessor):
                         resource_ids.add(item_id)
 
         # 从 ShopItem 中收集资源
-        for shop_item_id, shop_item_info in self.shop_item_data.items():
+        for shop_item_id, shop_item_info in shop_item_data.items():
             # 收集商品类型为Resource的TypeId
             item_type = shop_item_info.get("ItemType")
             type_id = shop_item_info.get("TypeId")
@@ -739,6 +990,11 @@ class ResourceProcessor(BaseProcessor):
             if price_type:
                 resource_ids.add(price_type)
 
+        with BaseProcessor._shared_items_cache_lock:
+            cached = BaseProcessor._shared_items_cache.get(cache_key)
+            if cached is not None:
+                return cached
+            BaseProcessor._shared_items_cache[cache_key] = resource_ids
         return resource_ids
 
     def process_draft_resources(self, language):
