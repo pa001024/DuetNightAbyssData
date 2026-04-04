@@ -12,9 +12,11 @@ class ResourceProcessor(BaseProcessor):
     _shared_resource_sources_cache: Dict[str, Dict[int, List[Dict[str, Any]]]] = {}
     _shared_design_map_paths_cache: Dict[Tuple[str, str], List[Path]] = {}
     _shared_design_level_json_cache: Dict[str, list] = {}
+    _shared_design_map_json_cache: Dict[str, list] = {}
     _shared_level_to_sub_region_id_cache: Dict[str, Dict[str, int]] = {}
     _shared_design_data_dirs_cache: Dict[str, List[Path]] = {}
     _shared_design_dir_files_cache: Dict[str, List[Path]] = {}
+    _shared_random_rule_to_resource_ids_cache: Dict[str, Dict[int, List[int]]] = {}
 
     def __init__(self, data_loader):
         super().__init__(data_loader)
@@ -23,6 +25,7 @@ class ResourceProcessor(BaseProcessor):
         self.drop_data = data_loader.load_json("Drop.json")
         self.reward_data = data_loader.load_json("Reward.json")
         self.mechanism_data = data_loader.load_json("Mechanism.json")
+        self.random_creator_data = data_loader.load_json("RandomCreator.json")
         self.resource_map = {
             resource_info.get("ResourceId"): resource_info
             for resource_info in self.resource_data.values()
@@ -37,6 +40,7 @@ class ResourceProcessor(BaseProcessor):
         self.mechanism_to_reward_ids = None
         self.reward_to_resource_ids = None
         self.mechanism_to_resource_ids = None
+        self.random_rule_to_resource_ids = None
         self.draft_resource_ids = None
 
     def process_item(self, resource_data, language):
@@ -114,6 +118,7 @@ class ResourceProcessor(BaseProcessor):
             and self.mechanism_to_reward_ids is not None
             and self.reward_to_resource_ids is not None
             and self.mechanism_to_resource_ids is not None
+            and self.random_rule_to_resource_ids is not None
         ):
             return
         self.rarely_to_drop_ids = self._build_rarely_to_drop_ids()
@@ -121,6 +126,7 @@ class ResourceProcessor(BaseProcessor):
         self.mechanism_to_reward_ids = self._build_mechanism_to_reward_ids()
         self.reward_to_resource_ids = self._build_reward_to_resource_ids()
         self.mechanism_to_resource_ids = self._build_mechanism_to_resource_ids()
+        self.random_rule_to_resource_ids = self._build_random_rule_to_resource_ids()
 
     def _get_draft_resource_ids(self):
         """按需获取 Draft 资源集合。"""
@@ -280,6 +286,12 @@ class ResourceProcessor(BaseProcessor):
             by_outer_name,
             by_name,
             by_path,
+        )
+        self._collect_resource_sources_from_random_rule_points(
+            json_path,
+            level_data,
+            sub_region_id,
+            local_sources,
         )
         if sources is not None:
             self._merge_resource_sources(sources, local_sources)
@@ -529,6 +541,32 @@ class ResourceProcessor(BaseProcessor):
                     continue
                 self._append_source_pos(source_item, pos)
 
+    def _collect_resource_sources_from_random_rule_points(
+        self,
+        json_path: Path,
+        level_data: Any,
+        sub_region_id: int,
+        sources: Dict[int, List[Dict[str, Any]]],
+    ) -> None:
+        """从随机规则点位补充资源来源。"""
+        if not isinstance(json_path, Path):
+            return
+        random_rule_points = self._get_random_actor_points_by_rule(json_path)
+        if not random_rule_points:
+            return
+
+        for random_rule_id, points in random_rule_points.items():
+            resource_ids = self._get_resource_ids_by_random_rule(random_rule_id)
+            if not resource_ids:
+                continue
+            for resource_id in resource_ids:
+                resource_sources = sources.setdefault(resource_id, [])
+                source_item = self._get_or_create_source_item(resource_sources, sub_region_id, None)
+                if not source_item:
+                    continue
+                for pos in points:
+                    self._append_source_pos(source_item, pos)
+
     @staticmethod
     def _iter_design_level_nodes(level_data: Any):
         """遍历设计层可扫描节点。"""
@@ -670,6 +708,59 @@ class ResourceProcessor(BaseProcessor):
                         mapping[unit_id].append(pair)
         return mapping
 
+    def _build_random_rule_to_resource_ids(self) -> Dict[int, List[int]]:
+        """构建 RandomRuleId -> ResourceId 列表映射。"""
+        cache_key = self._shared_cache_key("random_rule_to_resource_ids")
+        with BaseProcessor._shared_items_cache_lock:
+            cached = BaseProcessor._shared_items_cache.get(cache_key)
+            if isinstance(cached, dict):
+                return cached
+
+        shared_cache_key = self._get_exports_root_cache_key()
+        with self._shared_build_locks_lock:
+            cached = self._shared_random_rule_to_resource_ids_cache.get(shared_cache_key)
+            if cached is not None:
+                return cached
+
+        mapping: Dict[int, List[int]] = {}
+        for random_rule_id, creator in self.random_creator_data.items():
+            if not isinstance(creator, dict):
+                continue
+            if creator.get("UnitType") != "Mechanism":
+                continue
+            rule_id = self._to_int(random_rule_id)
+            if rule_id is None:
+                continue
+            resource_ids: List[int] = []
+            for unit_info in self._normalize_list_field(creator.get("RandomInfos", [])):
+                if not isinstance(unit_info, dict):
+                    continue
+                unit_id = self._to_int(unit_info.get("UnitId"))
+                if unit_id is None:
+                    continue
+                for resource_id, _ in self.mechanism_to_resource_ids.get(unit_id, []):
+                    if resource_id in self.resource_map and resource_id not in resource_ids:
+                        resource_ids.append(resource_id)
+            if resource_ids:
+                mapping[rule_id] = resource_ids
+
+        with self._shared_build_locks_lock:
+            cached = self._shared_random_rule_to_resource_ids_cache.get(shared_cache_key)
+            if cached is not None:
+                return cached
+            self._shared_random_rule_to_resource_ids_cache[shared_cache_key] = mapping
+        with BaseProcessor._shared_items_cache_lock:
+            BaseProcessor._shared_items_cache[cache_key] = mapping
+        return mapping
+
+    def _get_resource_ids_by_random_rule(self, random_rule_id: Any) -> List[int]:
+        """根据 RandomRuleId 读取资源 ID。"""
+        self._ensure_resource_link_maps()
+        rule_id = self._to_int(random_rule_id)
+        if rule_id is None:
+            return []
+        return self.random_rule_to_resource_ids.get(rule_id, [])
+
     @staticmethod
     def _normalize_list_field(value: Any) -> List[Any]:
         """兼容 list/dict/scalar 的字段，统一返回 list。"""
@@ -690,6 +781,248 @@ class ResourceProcessor(BaseProcessor):
         if value is None:
             return []
         return [value]
+
+    def _extract_random_rule_ids(self, design_level_data: Any) -> List[int]:
+        """提取地图中的 RandomRuleId 列表。"""
+        random_rule_data = {}
+        if isinstance(design_level_data, dict):
+            random_rule_data = design_level_data.get("RandomRule", {})
+        if not random_rule_data:
+            return []
+
+        random_rule_ids: List[int] = []
+        seen = set()
+
+        if isinstance(random_rule_data, dict):
+            for key, value in random_rule_data.items():
+                rule_id = None
+                if isinstance(value, dict):
+                    rule_id = value.get("RandomRuleId")
+                if not rule_id:
+                    rule_id = key
+                rule_id = self._to_int(rule_id)
+                if rule_id is None or rule_id in seen:
+                    continue
+                seen.add(rule_id)
+                random_rule_ids.append(rule_id)
+        elif isinstance(random_rule_data, list):
+            for value in random_rule_data:
+                if not isinstance(value, dict):
+                    continue
+                rule_id = self._to_int(value.get("RandomRuleId"))
+                if rule_id is None or rule_id in seen:
+                    continue
+                seen.add(rule_id)
+                random_rule_ids.append(rule_id)
+
+        return random_rule_ids
+
+    def _load_design_map_json(self, json_path: Path) -> list:
+        """加载地图 JSON。"""
+        resolved_path = json_path.resolve()
+        cache_key = str(resolved_path)
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_map_json_cache.get(cache_key)
+            if cached is not None:
+                return cached
+        build_lock = self._get_shared_build_lock(("resource_processor", cache_key, "design_map_json"))
+        with build_lock:
+            with self._shared_build_locks_lock:
+                cached = self._shared_design_map_json_cache.get(cache_key)
+                if cached is not None:
+                    return cached
+        try:
+            data = json.loads(resolved_path.read_text(encoding="utf-8"))
+        except Exception:
+            data = []
+        if not isinstance(data, list):
+            data = []
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_map_json_cache.get(cache_key)
+            if cached is not None:
+                return cached
+            self._shared_design_map_json_cache[cache_key] = data
+        return data
+
+    def _get_random_actor_points_by_rule(self, json_path: Path) -> Dict[str, List[List]]:
+        """提取关卡随机点位：RandomRuleId -> [[x,y,z], ...]。"""
+        if not isinstance(json_path, Path):
+            return {}
+        cache_key = str(json_path.resolve())
+        shared_key = self._get_exports_root_cache_key()
+        cache_name = f"{shared_key}|{cache_key}"
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_map_json_cache.get(cache_name)
+            if isinstance(cached, dict):
+                return cached
+
+        arr = self._load_design_map_json(json_path)
+        if not arr:
+            return {}
+
+        rule_points: Dict[str, List[List]] = {}
+        rule_point_set: Dict[str, set] = {}
+        root_loc = self._resolve_random_actor_root_location(arr)
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            props = obj.get("Properties")
+            if not isinstance(props, dict):
+                continue
+            random_actor_infos = props.get("RandomActorInfos")
+            if not isinstance(random_actor_infos, list):
+                continue
+            for item in random_actor_infos:
+                if not isinstance(item, dict):
+                    continue
+                rule_key = item.get("Key")
+                if rule_key is None:
+                    continue
+                value = item.get("Value")
+                if not isinstance(value, dict):
+                    continue
+                params = value.get("Params")
+                if not isinstance(params, list):
+                    continue
+                rule_id_str = str(rule_key)
+                points = rule_points.setdefault(rule_id_str, [])
+                point_set = rule_point_set.setdefault(rule_id_str, set())
+                for param in params:
+                    if not isinstance(param, dict):
+                        continue
+                    loc = self._to_vector3(param.get("ActorLoc"))
+                    if loc is None:
+                        continue
+                    if root_loc is not None:
+                        loc = self._vec_add(loc, root_loc)
+                    pos = self._format_vec3(loc)
+                    pos_tuple = (pos[0], pos[1], pos[2])
+                    if pos_tuple in point_set:
+                        continue
+                    point_set.add(pos_tuple)
+                    points.append(pos)
+
+        with self._shared_build_locks_lock:
+            self._shared_design_map_json_cache[cache_name] = rule_points
+        return rule_points
+
+    def _resolve_random_actor_root_location(self, arr: List[dict]) -> Optional[List[float]]:
+        """读取随机生成器根节点偏移。"""
+        by_outer_name, by_name, by_path = self._build_object_maps(arr)
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            props = obj.get("Properties", {})
+            if not isinstance(props, dict):
+                continue
+            if obj.get("Type") != "BP_RandomActorDataManager_C":
+                continue
+            root_ref = props.get("DefaultSceneRoot")
+            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name, by_path)
+            if not isinstance(root_obj, dict):
+                continue
+            root_props = root_obj.get("Properties", {})
+            if not isinstance(root_props, dict):
+                continue
+            root = self._to_vector3(root_props.get("RelativeLocation"))
+            if root is not None:
+                return root
+        return None
+
+    @staticmethod
+    def _build_object_maps(arr: List[dict]) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]], Dict[str, dict]]:
+        """构建对象查找索引。"""
+        by_outer_name: Dict[Tuple[str, str], dict] = {}
+        by_name: Dict[str, List[dict]] = {}
+        by_path: Dict[str, dict] = {}
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            name = obj.get("Name")
+            if isinstance(name, str) and name:
+                by_name.setdefault(name, []).append(obj)
+            outer = obj.get("Outer")
+            outer_name = outer.get("ObjectName") if isinstance(outer, dict) else outer
+            outer_short_name = None
+            if isinstance(outer_name, str):
+                _, outer_short_name = ResourceProcessor._ref_outer_and_name(outer_name)
+            if isinstance(outer_name, str) and isinstance(name, str):
+                by_outer_name[(outer_name, name)] = obj
+            if isinstance(outer_short_name, str) and isinstance(name, str):
+                by_outer_name[(outer_short_name, name)] = obj
+            object_path = obj.get("ObjectPath")
+            if isinstance(object_path, str) and object_path:
+                by_path[object_path] = obj
+        return by_outer_name, by_name, by_path
+
+    @staticmethod
+    def _ref_outer_and_name(object_name: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
+        """解析对象引用的 Outer 与短名。"""
+        if not object_name:
+            return None, None
+        raw = object_name.strip("'")
+        if ":" in raw:
+            raw = raw.split(":", 1)[1]
+        parts = raw.split(".")
+        if len(parts) >= 2:
+            return parts[-2], parts[-1]
+        if len(parts) == 1:
+            return None, parts[0]
+        return None, None
+
+    @staticmethod
+    def _resolve_ref_object(
+        ref_obj: Optional[dict],
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
+    ) -> Optional[dict]:
+        """解析对象引用。"""
+        if not isinstance(ref_obj, dict):
+            return None
+        object_name = ref_obj.get("ObjectName")
+        object_path = ref_obj.get("ObjectPath")
+        outer_name, short_name = ResourceProcessor._ref_outer_and_name(object_name)
+        if by_path is not None and isinstance(object_path, str) and object_path in by_path:
+            return by_path[object_path]
+        if outer_name and short_name:
+            found = by_outer_name.get((outer_name, short_name))
+            if found is not None:
+                return found
+        if short_name:
+            candidates = by_name.get(short_name, [])
+            if len(candidates) == 1:
+                return candidates[0]
+        return None
+
+    @staticmethod
+    def _to_vector3(value) -> Optional[List[float]]:
+        """将向量数据转为三元坐标。"""
+        if not isinstance(value, dict):
+            return None
+        x = value.get("X")
+        y = value.get("Y")
+        z = value.get("Z")
+        if x is None or y is None:
+            return None
+        try:
+            return [float(x), float(y), float(z if z is not None else 0.0)]
+        except Exception:
+            return None
+
+    @staticmethod
+    def _vec_add(left: List[float], right: List[float]) -> List[float]:
+        return [left[0] + right[0], left[1] + right[1], left[2] + right[2]]
+
+    @staticmethod
+    def _format_num(value: float):
+        rounded = round(float(value), 6)
+        if abs(rounded - round(rounded)) < 1e-6:
+            return int(round(rounded))
+        return rounded
+
+    def _format_vec3(self, vec: List[float]) -> List:
+        return [self._format_num(vec[0]), self._format_num(vec[1]), self._format_num(vec[2])]
 
     def _extract_design_level_pos(
         self,
