@@ -166,6 +166,19 @@
         "描述": "Switches the melee weapon to [Ymir] and casts 1 Swordwave.\nWhen performing Normal Attack using [Ymir], unleashes Swordwaves in the attacking direction and constantly consumes Sanity, during which Benerica is immune to Hitstun when taking damage. Once Sanity drops to 0 or the skill is used again, [Ymir] is sheathed.",
         "icon": "Heitao02_On",
         "cd": 2.7,
+        "创造物": [
+          {
+            "id": 110141,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 20,
+              "BoxLength": 600,
+              "BoxWidth": 200
+            },
+            "时长": 3,
+            "速度": 2500
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -678,6 +691,16 @@
         "类型": "DMG",
         "描述": "Deals Umbro Damage to enemies in front and inflicts 5 stacks of [Adagio] on them, up to 10 stacks. The remaining time of the effect is refreshed with each new stack gained.\nWhen in [Bestial Fury] state, this skill is replaced with [Aria].",
         "icon": "Tuosi01_1",
+        "创造物": [
+          {
+            "id": 110301,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 300
+            },
+            "时长": 0.3
+          }
+        ],
         "字段": [
           {
             "名称": "[Recitativo]Sanity Cost",
@@ -818,6 +841,16 @@
             "id": 110311,
             "类型": "DMG",
             "icon": "Tuosi01_2",
+            "创造物": [
+              {
+                "id": 110301,
+                "形状": {
+                  "类型": "Sphere",
+                  "Radius": 300
+                },
+                "时长": 0.3
+              }
+            ],
             "名称": "Aria"
           }
         ]
@@ -829,6 +862,16 @@
         "描述": "Enters [Bestial Fury] state and continuously consumes Sanity; when Sanity drops to 0, [Bestial Fury] state ends.\nWeapons can not be used during [Bestial Fury] state. \nMelee Attack is replaced with [Furious Claws], performing up to four consecutive attacks to deal Umbro Damage. When used in the air, Phantasio performs Plunging Attack and deals Umbro damage to enemies within range.\nRanged Attack is replaced with [Mournful Howl], firing an energy beam to deal Umbro Damage.\nWhen the 3-hit of [Furious Claws] and [Mournful Howl] deal damage, triggers [Duo]; when the 4-hit of [Furious Claws] and the Plunging Attack deal damage, triggers [Fermata].",
         "icon": "Tuosi02_On",
         "cd": 3,
+        "创造物": [
+          {
+            "id": 110301,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 300
+            },
+            "时长": 0.3
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -1965,6 +2008,48 @@
         "类型": "DMG",
         "描述": "Creates 1 [Lunar Hunt] and replaces this skill with [Solar Eclipse]. \n [Lunar Hunt]: Deals Umbro Damage to all enemies within range upon spawn and reduces their Movement Speed.",
         "icon": "Nifu01_1",
+        "创造物": [
+          {
+            "id": 150202,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 500,
+              "BoxLength": 200,
+              "BoxWidth": 200
+            },
+            "时长": 1
+          },
+          {
+            "id": 150204,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 500,
+              "BoxLength": 200,
+              "BoxWidth": 200
+            },
+            "时长": 1
+          },
+          {
+            "id": 150201,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 500,
+              "BoxLength": 200,
+              "BoxWidth": 200
+            },
+            "时长": 1
+          },
+          {
+            "id": 150203,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 500,
+              "BoxLength": 200,
+              "BoxWidth": 200
+            },
+            "时长": 1
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -2111,17 +2196,83 @@
             "id": 150211,
             "类型": "DMG",
             "icon": "Nifu01_2",
+            "创造物": [
+              {
+                "id": 150201,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              },
+              {
+                "id": 150203,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              }
+            ],
             "名称": "Solar Eclipse"
           },
           {
             "id": 150212,
             "类型": "DMG",
-            "icon": "Nifu01_3"
+            "icon": "Nifu01_3",
+            "创造物": [
+              {
+                "id": 150202,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              },
+              {
+                "id": 150204,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              }
+            ]
           },
           {
             "id": 150213,
             "类型": "DMG",
-            "icon": "Nifu01_4"
+            "icon": "Nifu01_4",
+            "创造物": [
+              {
+                "id": 150201,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              },
+              {
+                "id": 150203,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              }
+            ]
           }
         ]
       },
@@ -2549,6 +2700,19 @@
         "描述": "Enters [Aspect Manifestation] state and summons [Edges of All Times] to rain from the sky, dealing Lumino Damage to enemies within range.\nWhile in [Aspect Manifestation] state, Kezhou's Melee Weapon becomes [Phanosword]. When triggering Bonus Effect using [Phanosword], generates 1 [Phanoplume].\nWhile in [Aspect Manifestation] state, this skill is replaced with [Feathers Chase Dust In Dreams].",
         "icon": "Kezhou02_On",
         "cd": 3,
+        "创造物": [
+          {
+            "id": 150332,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 10,
+              "BoxLength": 50,
+              "BoxWidth": 10
+            },
+            "时长": 0.8,
+            "速度": 100
+          }
+        ],
         "字段": [
           {
             "名称": "[Lightswords Slice Starry Streams]Sanity Cost",
@@ -2837,6 +3001,19 @@
             "类型": "Buff",
             "icon": "Kezhou02_Off",
             "cd": 3,
+            "创造物": [
+              {
+                "id": 150332,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 10,
+                  "BoxLength": 50,
+                  "BoxWidth": 10
+                },
+                "时长": 0.8,
+                "速度": 100
+              }
+            ],
             "名称": "Phanosword"
           }
         ]
@@ -3194,6 +3371,33 @@
         "描述": "Activates [Starfall Mode] by consuming all Sanity with Fengshi Type Ⅲ. Gain 1 stack of [Soar] for every 40 Sanity consumed, up to 10 stacks. Gain [Artificer Powder] based on the maximum ammo capacity of the equipped ranged weapon, up to 300 rounds.\nWhile in [Starfall Mode], weapons become unavailable, and Su Yi becomes immune to Hitstun. Recasting the skill deactivates [Starfall Mode].\nWhile in this mode, melee attacks are replaced with [Sword Aflash], and ranged attacks are replaced with [Stars Ashower].",
         "icon": "Suyi02_On",
         "cd": 2,
+        "创造物": [
+          {
+            "id": 150402,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 5,
+              "BoxLength": 10,
+              "BoxWidth": 5
+            },
+            "时长": 4,
+            "速度": 4000,
+            "射击间隔": 0.25
+          },
+          {
+            "id": 150403,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 10,
+              "BoxLength": 10,
+              "BoxWidth": 10
+            },
+            "时长": 1.2,
+            "速度": 8000,
+            "特效循环间隔": 0.1,
+            "射击间隔": 0.5
+          }
+        ],
         "字段": [
           {
             "名称": "[Artificer Powder] Amount",
@@ -3583,6 +3787,30 @@
         "类型": "DMG",
         "描述": "Unleashes 2 Swordwaves, dealing Lumino DMG to enemies on hit and guaranteed to trigger Lumino bonus effects.",
         "icon": "Zhujue01",
+        "创造物": [
+          {
+            "id": 160101,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 40,
+              "BoxLength": 500,
+              "BoxWidth": 200
+            },
+            "时长": 2,
+            "速度": 3500
+          },
+          {
+            "id": 160102,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 40,
+              "BoxLength": 500,
+              "BoxWidth": 200
+            },
+            "时长": 2,
+            "速度": 3500
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -3678,6 +3906,13 @@
         "描述": "Deals Lumino DMG to nearby enemies and grants self and allies both Ultra Shields and [Incandescence].",
         "icon": "Zhujue02",
         "cd": 3,
+        "创造物": [
+          {
+            "id": 160103,
+            "时长": 10,
+            "特效循环间隔": 1
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -7896,6 +8131,22 @@
         "类型": "Buff",
         "描述": "Summons 8 [Sommelier's Blades] to orbit the user. A maximum of 8 [Sommelier's Blades] can exist at once.",
         "icon": "Kami02",
+        "创造物": [
+          {
+            "id": 320202,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 250
+            },
+            "时长": 20,
+            "Vars": {
+              "FlyDistanceMax": 4300,
+              "FlyDistanceMin": 3700,
+              "Grade4OffsetSpeed": 2500,
+              "OffsetSpeed": 2000
+            }
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -8189,6 +8440,12 @@
         "类型": "DMG",
         "描述": "Attack enemies within range, dealing Pyro Damage and stunning them. When using this skill by holding, Margie makes a continuous attack.",
         "icon": "Maer01",
+        "创造物": [
+          {
+            "id": 330103,
+            "时长": 2
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -8295,6 +8552,19 @@
         "描述": "Casts 3 [Margie's Combustible Bins] forward. They immediately explode upon hitting any target or obstacle, dealing AoE Pyro Damage and consuming a certain stacks of [Jackpot!] for enhancement:\nWhen consuming 3 stacks of [Jackpot!]: Increases the explosion range and damage.\nWhen consuming 6 stacks of [Jackpot!]: Creates a Zealous Zone after the explosion, dealing Pyro Damage once every 2s to enemies within the zone.\nWhen consuming 9 stacks of [Jackpot!]: Deals additional AoE Pyro Damage 2 times after the explosion.",
         "icon": "Maer02",
         "cd": 2.9,
+        "创造物": [
+          {
+            "id": 330111,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 30,
+              "BoxLength": 30,
+              "BoxWidth": 30
+            },
+            "时长": 18,
+            "速度": 2000
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -9116,6 +9386,13 @@
         "类型": "DMG",
         "描述": "Press: \nZhiliu uses [Celestial Revelation: Zhen], dealing Electro Damage to enemies within range, which grants Zhiliu 1 [Talisman: Zhen].\n\nHold:\nZhiliu uses [Celestial Revelation: Xun], dealing Electro Damage to enemies within range, which grants Zhiliu Ultra Shield and 1 [Talisman: Xun].",
         "icon": "Zhiliu01",
+        "创造物": [
+          {
+            "id": 410201,
+            "时长": 3,
+            "特效循环间隔": 1.15
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -9244,6 +9521,53 @@
         "描述": "When the user holds fewer than 2 [Talismans], deals Electro Damage to enemies within range. \nWhen the user holds 2 [Talismans], this skill transforms based on the combination.",
         "icon": "Zhiliu02_1",
         "cd": 2.5,
+        "创造物": [
+          {
+            "id": 410211,
+            "时长": 3,
+            "特效循环间隔": 1.23
+          },
+          {
+            "id": 410231,
+            "时长": 5,
+            "Vars": {
+              "RotType": 1
+            },
+            "特效循环间隔": 1.09
+          },
+          {
+            "id": 410232,
+            "时长": 5
+          },
+          {
+            "id": 410233,
+            "时长": 5,
+            "Vars": {
+              "RotType": 1
+            },
+            "特效循环间隔": 0.1
+          },
+          {
+            "id": 410221,
+            "时长": 5,
+            "特效循环间隔": 2.43
+          },
+          {
+            "id": 410222,
+            "时长": 5,
+            "特效循环间隔": 3.09
+          },
+          {
+            "id": 410223,
+            "时长": 5,
+            "特效循环间隔": 3.75
+          },
+          {
+            "id": 410224,
+            "时长": 7,
+            "特效循环间隔": 5
+          }
+        ],
         "字段": [
           {
             "名称": "[Heaven-Earth Divination] Sanity Cost",
@@ -9515,12 +9839,56 @@
             "id": 410221,
             "类型": "DMG",
             "icon": "Zhiliu02_2",
+            "创造物": [
+              {
+                "id": 410231,
+                "时长": 5,
+                "Vars": {
+                  "RotType": 1
+                },
+                "特效循环间隔": 1.09
+              },
+              {
+                "id": 410232,
+                "时长": 5
+              },
+              {
+                "id": 410233,
+                "时长": 5,
+                "Vars": {
+                  "RotType": 1
+                },
+                "特效循环间隔": 0.1
+              }
+            ],
             "名称": "Thunder's Oracle Peal"
           },
           {
             "id": 410222,
             "类型": "DMG",
             "icon": "Zhiliu02_3",
+            "创造物": [
+              {
+                "id": 410221,
+                "时长": 5,
+                "特效循环间隔": 2.43
+              },
+              {
+                "id": 410222,
+                "时长": 5,
+                "特效循环间隔": 3.09
+              },
+              {
+                "id": 410223,
+                "时长": 5,
+                "特效循环间隔": 3.75
+              },
+              {
+                "id": 410224,
+                "时长": 7,
+                "特效循环间隔": 5
+              }
+            ],
             "名称": "Myriad Things Thrive"
           },
           {
@@ -10368,6 +10736,22 @@
         "描述": "Throws 1 [Bespoke Shield] forward, triggering [Impact] once when it halts. While active on the battlefield, [Bespoke Shield] triggers [Impact] every 3s.\n[Impact] deals damage only to Shields, based on Randy's DEF, and grants an Ultra Shield based on Randy's DEF to Randy and allies. For targets with 0 Shield, [Impact] paralyses them.",
         "icon": "Landi02",
         "cd": 3.6,
+        "创造物": [
+          {
+            "id": 420202,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 10
+            },
+            "时长": 12,
+            "速度": 5000,
+            "Vars": {
+              "ConvertRate": 0.3,
+              "Grade2DefToEsRate": 0.1
+            },
+            "特效循环间隔": 3
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -10706,6 +11090,13 @@
         "类型": "DMG",
         "描述": "Deals Electro Damage to enemies within range in front and creates a field of [Legion's Punishment] at the locations.",
         "icon": "Xibi01",
+        "创造物": [
+          {
+            "id": 430111,
+            "时长": 10,
+            "特效循环间隔": 1.5
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",
@@ -11249,6 +11640,19 @@
         "类型": "DMG",
         "描述": "Commands [Filbert] to charge forwards, dealing Anemo Damage to enemies in the path. Upon hitting any obstacles, triggers Anemo AoE Damage at the endpoint. While this skill is active, heals Truffle and allies, and increases their damage.\nWhen Truffle rides on [Filbert], this skill is replaced with [Trotters Charge-Charge].",
         "icon": "Songlu01",
+        "创造物": [
+          {
+            "id": 510131,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 100,
+              "BoxLength": 150,
+              "BoxWidth": 100
+            },
+            "时长": 5,
+            "速度": 2500
+          }
+        ],
         "字段": [
           {
             "名称": "[Trotters Trot-Trot]Sanity Cost",
@@ -11483,6 +11887,19 @@
         "描述": "Truffle rides on [Filbert] and gains 100 points of [Passion For Work] and a Movement Speed boost, dealing Anemo Damage to enemies in the path when moving.\nWhen riding on [Filbert], Truffle is unable to use any weapon but can command [Filbert] to attack. When this skill is used again, Truffle dismounts and unleashes [Trotters Trot-Trot] once.",
         "icon": "Songlu02_On",
         "cd": 3.4,
+        "创造物": [
+          {
+            "id": 510131,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 100,
+              "BoxLength": 150,
+              "BoxWidth": 100
+            },
+            "时长": 5,
+            "速度": 2500
+          }
+        ],
         "字段": [
           {
             "名称": "Sanity Cost",

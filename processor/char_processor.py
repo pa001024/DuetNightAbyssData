@@ -1,4 +1,7 @@
 from processor.base_processor import BaseProcessor
+from processor.skill_creature_utils import (
+    extract_skill_creatures,
+)
 from ast_parser import NodeType
 import re
 import os
@@ -195,20 +198,34 @@ class CharProcessor(BaseProcessor):
             "第七溯源消耗": self._process_seventh_trace_cost(char_id),
             # "档案": self._process_character_data(char_id),
             "专武": self._process_abyss_special_weapon(char_id, language),
-            "同律武器": self._process_u_weapon(char_data.get("UWeapon", [])),
         }
+        abstract_u_weapon_creatures = self._collect_abstract_u_weapon_creatures(
+            char_data.get("UWeapon", [])
+        )
+        if abstract_u_weapon_creatures:
+            processed["技能"] = self._process_skills(
+                battle_char,
+                language,
+                char_id,
+                abstract_u_weapon_creatures,
+            )
+        else:
+            processed["技能"] = self._process_skills(battle_char, language, char_id)
+        u_weapons = self._process_u_weapon(char_data.get("UWeapon", []))
+        if u_weapons:
+            processed["同律武器"] = u_weapons
         if not processed["专武"]:
             del processed["专武"]
         if not processed["加成"]:
             del processed["加成"]
         if not processed["标签"]:
             del processed["标签"]
-        if not processed.get("同律武器"):
-            del processed["同律武器"]
         if not processed.get("碎片"):
             del processed["碎片"]
         if not processed.get("第七溯源消耗"):
             del processed["第七溯源消耗"]
+        if not processed.get("同律武器"):
+            processed.pop("同律武器", None)
         for field in [
             "出生地",
             "生日",
@@ -253,7 +270,6 @@ class CharProcessor(BaseProcessor):
             tags = battle_weapon.get("WeaponTag", [])
             if "Abstract" in tags:
                 continue
-
             # 处理图标，从Icon路径中提取图标名称
             icon_path = weapon.get("Icon", "")
             icon = ""
@@ -293,10 +309,7 @@ class CharProcessor(BaseProcessor):
     def _build_abyss_special_weapon_data(self):
         """基于 AbyssShop 的时间窗预计算角色专武。"""
         result = {}
-        abyss_shop = (
-            self.shop_item2_shop_sub_id.get("Walnut", {})
-            .get("AbyssShop", {})
-        )
+        abyss_shop = self.shop_item2_shop_sub_id.get("Walnut", {}).get("AbyssShop", {})
         abyss_shop_item_ids = {
             entry.get("ShopItemId")
             for entries in abyss_shop.values()
@@ -547,7 +560,13 @@ class CharProcessor(BaseProcessor):
 
         return break_info
 
-    def _process_skills(self, battle_char, language, char_id=None):
+    def _process_skills(
+        self,
+        battle_char,
+        language,
+        char_id=None,
+        abstract_u_weapon_creatures=None,
+    ):
         """处理角色技能数据"""
         if not battle_char:
             return []
@@ -571,7 +590,9 @@ class CharProcessor(BaseProcessor):
         for skill_id in skill_list:
             if skill_id == ultra_passive_skill_id:
                 continue
-            skill_info = self._process_single_skill(skill_id)
+            skill_info = self._process_single_skill(
+                skill_id, abstract_u_weapon_creatures
+            )
             if skill_info:
                 skills.append(skill_info)
 
@@ -612,7 +633,7 @@ class CharProcessor(BaseProcessor):
 
         return level_up_materials
 
-    def _process_single_skill(self, skill_id):
+    def _process_single_skill(self, skill_id, abstract_u_weapon_creatures=None):
         """处理单个技能"""
         # 获取Skill数据
         skill = self.skill_data.get(str(skill_id), {})
@@ -668,6 +689,23 @@ class CharProcessor(BaseProcessor):
 
         if skill_info.get("CD"):
             result["cd"] = skill_info.get("CD")
+
+        creatures = extract_skill_creatures(
+            skill_id,
+            self.skill_data,
+            self.skill_node_data,
+            self.skill_effects_data,
+            self.skill_creature_data,
+        )
+        if (
+            abstract_u_weapon_creatures
+            and skill_info.get("SkillType") == "Skill2"
+        ):
+            for creature in abstract_u_weapon_creatures:
+                if creature not in creatures:
+                    creatures.append(creature)
+        if creatures:
+            result["创造物"] = creatures
 
         # 处理技能特效解析
         # skill_effects = self._process_skill_effects(skill_info, skill_id, max_level)
@@ -761,6 +799,30 @@ class CharProcessor(BaseProcessor):
                 result["子技能"] = processed_sub_skills
 
         return result
+
+    def _collect_abstract_u_weapon_creatures(self, u_weapon_ids):
+        """收集 Abstract 同律武器对应的创造物。"""
+        creatures = []
+        if not u_weapon_ids:
+            return creatures
+
+        for weapon_id in u_weapon_ids:
+            weapon = self.u_weapon_data.get(str(weapon_id), {})
+            battle_weapon = self.battle_weapon_data.get(str(weapon_id), {})
+            tags = battle_weapon.get("WeaponTag", [])
+            if "Abstract" not in tags:
+                continue
+            creature_list = extract_skill_creatures(
+                weapon_id,
+                self.skill_data,
+                self.skill_node_data,
+                self.skill_effects_data,
+                self.skill_creature_data,
+            )
+            for creature in creature_list:
+                if creature not in creatures:
+                    creatures.append(creature)
+        return creatures
 
     def _replace_skill_desc_placeholders(self, skill_desc, desc_values, skill_id):
         """替换技能描述中的 #1/#2 这类占位符。"""

@@ -1,4 +1,5 @@
 from processor.base_processor import BaseProcessor
+from processor.skill_creature_utils import extract_skill_creatures
 import re
 import os
 import json
@@ -21,6 +22,7 @@ class WeaponProcessor(BaseProcessor):
         self.attribute_data = data_loader.load_json("Attribute.json")
         self.skill_effects_data = data_loader.load_json("SkillEffects.json")
         self.skill_node_data = data_loader.load_json("SkillNode.json")
+        self.skill_creature_data = data_loader.load_json("SkillCreature.json")
         self._project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self._asset_root = os.path.join(self._project_root, "out", "Asset")
         self._anim_path_cache = {}
@@ -91,6 +93,8 @@ class WeaponProcessor(BaseProcessor):
         shooting_interval = 0.0
         is_ranged_weapon = self._is_ranged_weapon(battle_weapon)
 
+        loop_interval_map = self._collect_loop_interval_map(weapon_skill_list, weapon_id)
+
         # 处理每个技能
         for skill_id in weapon_skill_list:
             skill_info = self.skill_data.get(str(skill_id), {})
@@ -136,9 +140,13 @@ class WeaponProcessor(BaseProcessor):
                 if reload_candidate:
                     reload_value = max(reload_value, reload_candidate)
             if is_ranged_weapon and skill_type == "Shooting":
-                shooting_candidate = self._extract_shooting_interval_from_skill(
-                    skill_entry
-                )
+                shooting_candidate = loop_interval_map.get(weapon_id, 0.0)
+                if not shooting_candidate:
+                    shooting_candidate = loop_interval_map.get(skill_id, 0.0)
+                if not shooting_candidate:
+                    shooting_candidate = self._extract_shooting_interval_from_skill(
+                        skill_entry
+                    )
                 if shooting_candidate:
                     if shooting_interval:
                         shooting_interval = min(shooting_interval, shooting_candidate)
@@ -154,6 +162,16 @@ class WeaponProcessor(BaseProcessor):
                 if processed_desc:
                     skill_info_dict["字段"] = processed_desc
 
+            creatures = extract_skill_creatures(
+                skill_id,
+                self.skill_data,
+                self.skill_node_data,
+                self.skill_effects_data,
+                self.skill_creature_data,
+            )
+            if creatures:
+                skill_info_dict["创造物"] = creatures
+
             skills.append(skill_info_dict)
 
         rst = []
@@ -165,15 +183,53 @@ class WeaponProcessor(BaseProcessor):
             "SlideAttack": "滑行攻击",
         }
         for skill in skills:
+            skill_item = {}
+            if "id" in skill:
+                skill_item["id"] = skill["id"]
+            skill_item["名称"] = typeMap.get(skill["名称"], skill["名称"])
+            skill_item["类型"] = "武器伤害"
             if "字段" in skill:
-                skill_item = {}
-                if "id" in skill:
-                    skill_item["id"] = skill["id"]
-                skill_item["名称"] = typeMap.get(skill["名称"], skill["名称"])
-                skill_item["类型"] = "武器伤害"
                 skill_item["字段"] = skill["字段"]
+            if "创造物" in skill:
+                skill_item["创造物"] = skill["创造物"]
+            if "字段" in skill or "创造物" in skill:
                 rst.append(skill_item)
         return rst, self.round_value(reload_value), self.round_value(shooting_interval)
+
+    def _collect_loop_interval_map(self, weapon_skill_list, weapon_id):
+        """优先收集显式 LoopInterval，用于覆盖动画时长兜底。"""
+        loop_interval_map = {}
+        if not weapon_skill_list:
+            return loop_interval_map
+
+        target_skill_ids = {str(skill_id) for skill_id in weapon_skill_list}
+        target_skill_ids.add(str(weapon_id))
+        for effect in self.skill_effects_data.values():
+            if not isinstance(effect, dict):
+                continue
+            task_effects = effect.get("TaskEffects", [])
+            if not isinstance(task_effects, list):
+                continue
+            for task_effect in task_effects:
+                if not isinstance(task_effect, dict):
+                    continue
+                if task_effect.get("Function") not in (
+                    "StartLoopShoot",
+                    "UpdateLoopShoot",
+                ):
+                    continue
+                loop_shoot_id = task_effect.get("LoopShootId")
+                if str(loop_shoot_id) not in target_skill_ids:
+                    continue
+                loop_interval = task_effect.get("LoopInterval")
+                if isinstance(loop_interval, (int, float)):
+                    loop_interval = self.round_value(loop_interval)
+                    current = loop_interval_map.get(loop_shoot_id)
+                    if current is None:
+                        loop_interval_map[loop_shoot_id] = loop_interval
+                    else:
+                        loop_interval_map[loop_shoot_id] = min(current, loop_interval)
+        return loop_interval_map
 
     def _is_ranged_weapon(self, battle_weapon):
         """根据武器数据判断是否为远程武器"""

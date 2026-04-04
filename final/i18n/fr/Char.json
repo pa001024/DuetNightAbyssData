@@ -166,6 +166,19 @@
         "描述": "Berenica substitue son arme de mêlée par [Ymir] et libère une onde tranchante.\nLors des Attaques normales effectuées avec [Ymir], elle projette des ondes tranchantes dans la direction de l’attaque.\nTant qu’elle manie [Ymir], elle ne peut pas être interrompue par les dégâts et consomme continuellement de la Lucidité.\nLorsque sa Lucidité atteint 0 ou si la compétence est réactivée, [Ymir] est rengainée.",
         "icon": "Heitao02_On",
         "cd": 2.7,
+        "创造物": [
+          {
+            "id": 110141,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 20,
+              "BoxLength": 600,
+              "BoxWidth": 200
+            },
+            "时长": 3,
+            "速度": 2500
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -678,6 +691,16 @@
         "类型": "Dégâts",
         "描述": "Inflige des Dégâts Umbro aux ennemis devant lui et applique 5 cumuls d’[Adagio], jusqu’à un maximum de 10. Gagner un cumul rafraîchit la durée.\nEn état [Fureur bestiale], cette compétence est remplacée par [Aria].",
         "icon": "Tuosi01_1",
+        "创造物": [
+          {
+            "id": 110301,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 300
+            },
+            "时长": 0.3
+          }
+        ],
         "字段": [
           {
             "名称": "[Recitativo]Coût en Lucidité",
@@ -818,6 +841,16 @@
             "id": 110311,
             "类型": "Dégâts",
             "icon": "Tuosi01_2",
+            "创造物": [
+              {
+                "id": 110301,
+                "形状": {
+                  "类型": "Sphere",
+                  "Radius": 300
+                },
+                "时长": 0.3
+              }
+            ],
             "名称": "Aria"
           }
         ]
@@ -829,6 +862,16 @@
         "描述": "Entre en état [Fureur bestiale], consommant continuellement de la Lucidité. Lorsque la Lucidité atteint 0, l’état prend fin. Les armes ne peuvent pas être utilisées dans cet état.\nAttaque de mêlée remplacée par [Griffes sauvages], qui enchaîne jusqu’à 4 coups infligeant des Dégâts Umbro. En l’air, déclenche une Attaque plongeante infligeant des Dégâts Umbro en zone.\nAttaque à distance remplacée par [Hurlement funèbre], tirant un rayon d’énergie infligeant des Dégâts Umbro.\n— Le 3ᵉ coup de [Griffes sauvages] et [Hurlement funèbre] déclenche [Duo].\n— Le 4ᵉ coup de [Griffes sauvages] et l’Attaque plongeante déclenchent [Fermata].",
         "icon": "Tuosi02_On",
         "cd": 3,
+        "创造物": [
+          {
+            "id": 110301,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 300
+            },
+            "时长": 0.3
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -1965,6 +2008,48 @@
         "类型": "Dégâts",
         "描述": "Génère 1 [Chasse lunaire] et remplace cette compétence par [Éclipse solaire].\n[Chasse lunaire] : inflige des Dégâts Umbro de zone à la création et réduit la Vitesse de déplacement des ennemis affectés.",
         "icon": "Nifu01_1",
+        "创造物": [
+          {
+            "id": 150202,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 500,
+              "BoxLength": 200,
+              "BoxWidth": 200
+            },
+            "时长": 1
+          },
+          {
+            "id": 150204,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 500,
+              "BoxLength": 200,
+              "BoxWidth": 200
+            },
+            "时长": 1
+          },
+          {
+            "id": 150201,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 500,
+              "BoxLength": 200,
+              "BoxWidth": 200
+            },
+            "时长": 1
+          },
+          {
+            "id": 150203,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 500,
+              "BoxLength": 200,
+              "BoxWidth": 200
+            },
+            "时长": 1
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -2111,17 +2196,83 @@
             "id": 150211,
             "类型": "Dégâts",
             "icon": "Nifu01_2",
+            "创造物": [
+              {
+                "id": 150201,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              },
+              {
+                "id": 150203,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              }
+            ],
             "名称": "Éclipse solaire"
           },
           {
             "id": 150212,
             "类型": "Dégâts",
-            "icon": "Nifu01_3"
+            "icon": "Nifu01_3",
+            "创造物": [
+              {
+                "id": 150202,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              },
+              {
+                "id": 150204,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              }
+            ]
           },
           {
             "id": 150213,
             "类型": "Dégâts",
-            "icon": "Nifu01_4"
+            "icon": "Nifu01_4",
+            "创造物": [
+              {
+                "id": 150201,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              },
+              {
+                "id": 150203,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 500,
+                  "BoxLength": 200,
+                  "BoxWidth": 200
+                },
+                "时长": 1
+              }
+            ]
           }
         ]
       },
@@ -2549,6 +2700,19 @@
         "描述": "Entre en état [Manifestation d’aspect] et invoque une pluie de [Lames d’antan], infligeant des Dégâts Lumino aux ennemis dans la zone d’impact.\nEn état [Manifestation d’aspect] :\n– L’arme de mêlée devient [Phanolame].\n– Lorsque [Phanolame] déclenche un Effet supplémentaire, génère 1 [Phanoplume].\n– Cette compétence est remplacée par [Plumes chassant la poussière des songes].",
         "icon": "Kezhou02_On",
         "cd": 3,
+        "创造物": [
+          {
+            "id": 150332,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 10,
+              "BoxLength": 50,
+              "BoxWidth": 10
+            },
+            "时长": 0.8,
+            "速度": 100
+          }
+        ],
         "字段": [
           {
             "名称": "[Ciel tranché par la lumière]Coût en Lucidité",
@@ -2837,6 +3001,19 @@
             "类型": "Bonus",
             "icon": "Kezhou02_Off",
             "cd": 3,
+            "创造物": [
+              {
+                "id": 150332,
+                "形状": {
+                  "类型": "Box",
+                  "BoxHeight": 10,
+                  "BoxLength": 50,
+                  "BoxWidth": 10
+                },
+                "时长": 0.8,
+                "速度": 100
+              }
+            ],
             "名称": "Phanolame"
           }
         ]
@@ -3194,6 +3371,33 @@
         "描述": "Contrôle le Fengshi n° 3 et consomme toute la Lucidité pour entrer en état [Mode annihilation stellaire].\nChaque tranche de 30 de Lucidité consommée confère 1 cumul d’[Errance céleste], jusqu’à 10 cumuls.\nEn fonction de la capacité maximale de munitions de votre arme à distance, vous obtenez de la [Poudre d’artifice], jusqu’à un maximum de 300 charges.\nPendant l’état [Mode annihilation stellaire], les armes ne peuvent pas être utilisées et les dégâts subis n’interrompent pas vos actions. Réutiliser cette compétence met fin à l’état [Mode annihilation stellaire].\nLes attaques de mêlée sont remplacées par [Lame irisée], et les attaques à distance par [Pluie d’étoiles].",
         "icon": "Suyi02_On",
         "cd": 2,
+        "创造物": [
+          {
+            "id": 150402,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 5,
+              "BoxLength": 10,
+              "BoxWidth": 5
+            },
+            "时长": 4,
+            "速度": 4000,
+            "射击间隔": 0.25
+          },
+          {
+            "id": 150403,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 10,
+              "BoxLength": 10,
+              "BoxWidth": 10
+            },
+            "时长": 1.2,
+            "速度": 8000,
+            "特效循环间隔": 0.1,
+            "射击间隔": 0.5
+          }
+        ],
         "字段": [
           {
             "名称": "Quantité obtenue de [Poudre d’artifice]",
@@ -3583,6 +3787,30 @@
         "类型": "Dégâts",
         "描述": "Libère 2 ondes tranchantes infligeant des Dégâts Lumino et déclenchant toujours l’Effet supplémentaire : Lumino.",
         "icon": "Zhujue01",
+        "创造物": [
+          {
+            "id": 160101,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 40,
+              "BoxLength": 500,
+              "BoxWidth": 200
+            },
+            "时长": 2,
+            "速度": 3500
+          },
+          {
+            "id": 160102,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 40,
+              "BoxLength": 500,
+              "BoxWidth": 200
+            },
+            "时长": 2,
+            "速度": 3500
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -3678,6 +3906,13 @@
         "描述": "Inflige des Dégâts Lumino aux ennemis proches, confère un Ultra-bouclier au personnage et aux alliés, et applique [Incandescence].",
         "icon": "Zhujue02",
         "cd": 3,
+        "创造物": [
+          {
+            "id": 160103,
+            "时长": 10,
+            "特效循环间隔": 1
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -7896,6 +8131,22 @@
         "类型": "Bonus",
         "描述": "Génère 8 [Lames du sommelier] qui orbitent autour du personnage. Un maximum de 8 [Lames du sommelier] peut être présent simultanément.",
         "icon": "Kami02",
+        "创造物": [
+          {
+            "id": 320202,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 250
+            },
+            "时长": 20,
+            "Vars": {
+              "FlyDistanceMax": 4300,
+              "FlyDistanceMin": 3700,
+              "Grade4OffsetSpeed": 2500,
+              "OffsetSpeed": 2000
+            }
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -8189,6 +8440,12 @@
         "类型": "Dégâts",
         "描述": "Attaque les ennemis devant elle, infligeant des Dégâts Pyro et les étourdit. En maintenant la compétence, l’attaque devient continue.",
         "icon": "Maer01",
+        "创造物": [
+          {
+            "id": 330103,
+            "时长": 2
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -8295,6 +8552,19 @@
         "描述": "Projette 3 [Poubelles explosives de Margie] vers l’avant. Elles explosent à l’impact (ennemi ou obstacle), infligeant des Dégâts Pyro en zone, et consomment des cumuls de [Jackpot !] pour se renforcer :\n– 3 cumuls consommés : augmente la portée et les dégâts de l’explosion.\n– 6 cumuls consommés : crée une zone de cendres infligeant des Dégâts Pyro toutes les 2 s.\n– 9 cumuls consommés : inflige 2 fois des Dégâts Pyro de zone supplémentaires.",
         "icon": "Maer02",
         "cd": 2.9,
+        "创造物": [
+          {
+            "id": 330111,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 30,
+              "BoxLength": 30,
+              "BoxWidth": 30
+            },
+            "时长": 18,
+            "速度": 2000
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -9116,6 +9386,13 @@
         "类型": "Dégâts",
         "描述": "Appui simple : utilise [Révélation céleste : Zhen], inflige des Dégâts Électro aux ennemis devant elle et obtient 1 [Talisman : Zhen].\nAppui maintenu : utilise [Révélation céleste : Xun], inflige des Dégâts Électro aux ennemis autour d’elle, confère un Ultra-bouclier, et obtient 1 [Talisman : Xun].",
         "icon": "Zhiliu01",
+        "创造物": [
+          {
+            "id": 410201,
+            "时长": 3,
+            "特效循环间隔": 1.15
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -9244,6 +9521,53 @@
         "描述": "Inflige des Dégâts Électro aux ennemis proches lorsque vous possédez moins de 2 [Talismans].\nLorsque vous détenez 2 [Talismans] ou plus, cette compétence est remplacée par une autre selon leur combinaison.",
         "icon": "Zhiliu02_1",
         "cd": 2.5,
+        "创造物": [
+          {
+            "id": 410211,
+            "时长": 3,
+            "特效循环间隔": 1.23
+          },
+          {
+            "id": 410231,
+            "时长": 5,
+            "Vars": {
+              "RotType": 1
+            },
+            "特效循环间隔": 1.09
+          },
+          {
+            "id": 410232,
+            "时长": 5
+          },
+          {
+            "id": 410233,
+            "时长": 5,
+            "Vars": {
+              "RotType": 1
+            },
+            "特效循环间隔": 0.1
+          },
+          {
+            "id": 410221,
+            "时长": 5,
+            "特效循环间隔": 2.43
+          },
+          {
+            "id": 410222,
+            "时长": 5,
+            "特效循环间隔": 3.09
+          },
+          {
+            "id": 410223,
+            "时长": 5,
+            "特效循环间隔": 3.75
+          },
+          {
+            "id": 410224,
+            "时长": 7,
+            "特效循环间隔": 5
+          }
+        ],
         "字段": [
           {
             "名称": "[Divination cosmique]Coût en Lucidité de [Divination cosmique]",
@@ -9515,12 +9839,56 @@
             "id": 410221,
             "类型": "Dégâts",
             "icon": "Zhiliu02_2",
+            "创造物": [
+              {
+                "id": 410231,
+                "时长": 5,
+                "Vars": {
+                  "RotType": 1
+                },
+                "特效循环间隔": 1.09
+              },
+              {
+                "id": 410232,
+                "时长": 5
+              },
+              {
+                "id": 410233,
+                "时长": 5,
+                "Vars": {
+                  "RotType": 1
+                },
+                "特效循环间隔": 0.1
+              }
+            ],
             "名称": "Voix du tonnerre"
           },
           {
             "id": 410222,
             "类型": "Dégâts",
             "icon": "Zhiliu02_3",
+            "创造物": [
+              {
+                "id": 410221,
+                "时长": 5,
+                "特效循环间隔": 2.43
+              },
+              {
+                "id": 410222,
+                "时长": 5,
+                "特效循环间隔": 3.09
+              },
+              {
+                "id": 410223,
+                "时长": 5,
+                "特效循环间隔": 3.75
+              },
+              {
+                "id": 410224,
+                "时长": 7,
+                "特效循环间隔": 5
+              }
+            ],
             "名称": "Convergence primordiale"
           },
           {
@@ -10368,6 +10736,22 @@
         "描述": "Lance un [Bouclier de résonance] vers l’avant, provoquant un [Choc] lorsqu’il s’immobilise. Tant qu’il demeure sur le champ de bataille, déclenche un [Choc] toutes les 3 s. Le [Choc] inflige des Dégâts Électro uniquement aux boucliers ennemis, proportionnels à la DÉF de Randy, et confère un Ultra-bouclier basé sur la DÉF de Randy et de ses alliés.\nSi la cible n’a plus de bouclier, le [Choc] la paralyse.",
         "icon": "Landi02",
         "cd": 3.6,
+        "创造物": [
+          {
+            "id": 420202,
+            "形状": {
+              "类型": "Sphere",
+              "Radius": 10
+            },
+            "时长": 12,
+            "速度": 5000,
+            "Vars": {
+              "ConvertRate": 0.3,
+              "Grade2DefToEsRate": 0.1
+            },
+            "特效循环间隔": 3
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -10706,6 +11090,13 @@
         "类型": "Dégâts",
         "描述": "Inflige des Dégâts Électro aux ennemis devant elle et crée une zone de [Châtiment de la Légion].",
         "icon": "Xibi01",
+        "创造物": [
+          {
+            "id": 430111,
+            "时长": 10,
+            "特效循环间隔": 1.5
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
@@ -11249,6 +11640,19 @@
         "类型": "Dégâts",
         "描述": "Ordonne à [Filbert] de charger droit devant, infligeant des Dégâts Anémo aux ennemis sur sa route.\nLorsqu’elle percute un obstacle, déclenche une explosion de DGT Anémo de zone.\nPendant l’effet, cela soigne Truffe et ses alliés, tout en augmentant leurs dégâts infligés.\nLorsque Truffe chevauche [Filbert], cette compétence est remplacée par [Filbert fonce !].",
         "icon": "Songlu01",
+        "创造物": [
+          {
+            "id": 510131,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 100,
+              "BoxLength": 150,
+              "BoxWidth": 100
+            },
+            "时长": 5,
+            "速度": 2500
+          }
+        ],
         "字段": [
           {
             "名称": "[Pas de panique, c’est Filbert !]Coût en Lucidité",
@@ -11483,6 +11887,19 @@
         "描述": "Truffle chevauche [Filbert], gagne 100 points de [Passion du travail] et voit sa Vitesse de déplacement augmentée.\nLorsqu’elle se déplace en chevauchant, elle inflige des Dégâts Anémo aux ennemis sur sa trajectoire. Pendant la chevauchée, Truffle ne peut pas utiliser d’arme mais peut ordonner à [Filbert] d’attaquer.\nRéactiver cette compétence met fin à la chevauchée et déclenche immédiatement [Pas de panique, c’est Filbert !].",
         "icon": "Songlu02_On",
         "cd": 3.4,
+        "创造物": [
+          {
+            "id": 510131,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 100,
+              "BoxLength": 150,
+              "BoxWidth": 100
+            },
+            "时长": 5,
+            "速度": 2500
+          }
+        ],
         "字段": [
           {
             "名称": "Coût en Lucidité",
