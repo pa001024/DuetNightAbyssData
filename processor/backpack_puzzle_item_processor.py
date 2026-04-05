@@ -48,9 +48,9 @@ class BackpackPuzzleItemProcessor(BaseProcessor):
         if current_ammo is not None:
             processed["currentAmmo"] = current_ammo
 
-        template_id = template_info.get("TemplateId")
-        if template_id is not None:
-            processed["templateId"] = template_id
+        current_stack = template_info.get("CurrentStack")
+        if current_stack is not None:
+            processed["currentStack"] = current_stack
 
         if not processed["name"]:
             del processed["name"]

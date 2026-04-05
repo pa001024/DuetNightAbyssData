@@ -22,8 +22,7 @@
     "icon": "T_Bag_2x5_01",
     "basicPoint": 1000,
     "maxAmmo": 6,
-    "currentAmmo": 0,
-    "templateId": 101
+    "currentAmmo": 0
   },
   {
     "id": 102,
@@ -44,8 +43,7 @@
     "icon": "T_Bag_3x2_02",
     "basicPoint": 600,
     "maxAmmo": 6,
-    "currentAmmo": 0,
-    "templateId": 102
+    "currentAmmo": 0
   },
   {
     "id": 103,
@@ -68,8 +66,7 @@
     "icon": "T_Bag_4x2_01",
     "basicPoint": 600,
     "maxAmmo": 30,
-    "currentAmmo": 0,
-    "templateId": 103
+    "currentAmmo": 0
   },
   {
     "id": 104,
@@ -93,8 +90,7 @@
     "basicPoint": 600,
     "maxAmmo": 30,
     "isMirror": true,
-    "currentAmmo": 0,
-    "templateId": 104
+    "currentAmmo": 0
   },
   {
     "id": 105,
@@ -115,8 +111,7 @@
     "icon": "T_Bag_3x2_01",
     "basicPoint": 400,
     "maxAmmo": 20,
-    "currentAmmo": 0,
-    "templateId": 105
+    "currentAmmo": 0
   },
   {
     "id": 106,
@@ -138,8 +133,7 @@
     "basicPoint": 400,
     "maxAmmo": 20,
     "isMirror": true,
-    "currentAmmo": 0,
-    "templateId": 106
+    "currentAmmo": 0
   },
   {
     "id": 107,
@@ -162,8 +156,7 @@
     "icon": "T_Bag_4x2_02",
     "basicPoint": 700,
     "maxAmmo": 25,
-    "currentAmmo": 0,
-    "templateId": 107
+    "currentAmmo": 0
   },
   {
     "id": 108,
@@ -187,8 +180,7 @@
     "basicPoint": 700,
     "maxAmmo": 25,
     "isMirror": true,
-    "currentAmmo": 0,
-    "templateId": 108
+    "currentAmmo": 0
   },
   {
     "id": 109,
@@ -211,8 +203,7 @@
     "icon": "T_Bag_4x2_03",
     "basicPoint": 500,
     "maxAmmo": 35,
-    "currentAmmo": 0,
-    "templateId": 109
+    "currentAmmo": 0
   },
   {
     "id": 110,
@@ -236,8 +227,7 @@
     "basicPoint": 500,
     "maxAmmo": 35,
     "isMirror": true,
-    "currentAmmo": 0,
-    "templateId": 110
+    "currentAmmo": 0
   },
   {
     "id": 111,
@@ -260,8 +250,7 @@
     "icon": "T_Bag_4x2_04",
     "basicPoint": 800,
     "maxAmmo": 20,
-    "currentAmmo": 0,
-    "templateId": 111
+    "currentAmmo": 0
   },
   {
     "id": 201,
@@ -278,7 +267,7 @@
     "icon": "T_Bag_1x2_01",
     "basicPoint": 50,
     "maxStack": 30,
-    "templateId": 201
+    "currentStack": 5
   },
   {
     "id": 301,
@@ -297,7 +286,7 @@
     "icon": "T_Bag_2x2_01",
     "basicPoint": 300,
     "maxStack": 6,
-    "templateId": 301
+    "currentStack": 1
   },
   {
     "id": 302,
@@ -318,7 +307,7 @@
     "icon": "T_Bag_3x2_04",
     "basicPoint": 400,
     "maxStack": 5,
-    "templateId": 302
+    "currentStack": 1
   },
   {
     "id": 303,
@@ -332,7 +321,7 @@
     "icon": "T_Bag_1x1_01",
     "basicPoint": 100,
     "maxStack": 5,
-    "templateId": 303
+    "currentStack": 1
   },
   {
     "id": 304,
@@ -353,7 +342,7 @@
     "icon": "T_Bag_3x2_03",
     "basicPoint": 500,
     "maxStack": 5,
-    "templateId": 304
+    "currentStack": 1
   },
   {
     "id": 305,
@@ -375,7 +364,7 @@
     "basicPoint": 500,
     "maxStack": 5,
     "isMirror": true,
-    "templateId": 305
+    "currentStack": 1
   },
   {
     "id": 306,
@@ -406,7 +395,7 @@
     "icon": "T_Bag_3x4_01",
     "basicPoint": 600,
     "maxStack": 1,
-    "templateId": 306
+    "currentStack": 1
   },
   {
     "id": 307,
@@ -432,7 +421,7 @@
     "icon": "T_Bag_1x5_01",
     "basicPoint": 500,
     "maxStack": 1,
-    "templateId": 307
+    "currentStack": 1
   },
   {
     "id": 308,
@@ -455,7 +444,7 @@
     "icon": "T_Bag_1x4_01",
     "basicPoint": 400,
     "maxStack": 1,
-    "templateId": 308
+    "currentStack": 1
   },
   {
     "id": 309,
@@ -490,7 +479,7 @@
     "icon": "T_Bag_2x6_01",
     "basicPoint": 1200,
     "maxStack": 1,
-    "templateId": 309
+    "currentStack": 1
   },
   {
     "id": 310,
@@ -521,7 +510,7 @@
     "icon": "T_Bag_2x5_02",
     "basicPoint": 900,
     "maxStack": 1,
-    "templateId": 310
+    "currentStack": 1
   },
   {
     "id": 311,
@@ -553,7 +542,7 @@
     "basicPoint": 900,
     "maxStack": 1,
     "isMirror": true,
-    "templateId": 311
+    "currentStack": 1
   },
   {
     "id": 312,
@@ -573,6 +562,6 @@
     "icon": "T_Bag_1x3_01",
     "basicPoint": 300,
     "maxStack": 1,
-    "templateId": 312
+    "currentStack": 1
   }
 ]
