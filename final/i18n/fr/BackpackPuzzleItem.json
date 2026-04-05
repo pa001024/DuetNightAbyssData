@@ -1,0 +1,578 @@
+[
+  {
+    "id": 101,
+    "name": "Désintégrateur",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_01",
+    "basicPoint": 1000,
+    "maxAmmo": 6,
+    "currentAmmo": 0,
+    "templateId": 101
+  },
+  {
+    "id": 102,
+    "name": "Singularité entropique",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_02",
+    "basicPoint": 600,
+    "maxAmmo": 6,
+    "currentAmmo": 0,
+    "templateId": 102
+  },
+  {
+    "id": 103,
+    "name": "Disloqueur",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_01",
+    "basicPoint": 600,
+    "maxAmmo": 30,
+    "currentAmmo": 0,
+    "templateId": 103
+  },
+  {
+    "id": 104,
+    "name": "Disloqueur",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_01",
+    "basicPoint": 600,
+    "maxAmmo": 30,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 104
+  },
+  {
+    "id": 105,
+    "name": "Inflorescence d’Embla",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x2_01",
+    "basicPoint": 400,
+    "maxAmmo": 20,
+    "currentAmmo": 0,
+    "templateId": 105
+  },
+  {
+    "id": 106,
+    "name": "Inflorescence d’Embla",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_01",
+    "basicPoint": 400,
+    "maxAmmo": 20,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 106
+  },
+  {
+    "id": 107,
+    "name": "Colère proscrite",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_02",
+    "basicPoint": 700,
+    "maxAmmo": 25,
+    "currentAmmo": 0,
+    "templateId": 107
+  },
+  {
+    "id": 108,
+    "name": "Colère proscrite",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_02",
+    "basicPoint": 700,
+    "maxAmmo": 25,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 108
+  },
+  {
+    "id": 109,
+    "name": "Soupir du désert",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_03",
+    "basicPoint": 500,
+    "maxAmmo": 35,
+    "currentAmmo": 0,
+    "templateId": 109
+  },
+  {
+    "id": 110,
+    "name": "Soupir du désert",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_03",
+    "basicPoint": 500,
+    "maxAmmo": 35,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 110
+  },
+  {
+    "id": 111,
+    "name": "Lumière éphémère",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_04",
+    "basicPoint": 800,
+    "maxAmmo": 20,
+    "currentAmmo": 0,
+    "templateId": 111
+  },
+  {
+    "id": 201,
+    "name": "Munitions",
+    "type": "Ammo",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x2_01",
+    "basicPoint": 50,
+    "maxStack": 30,
+    "templateId": 201
+  },
+  {
+    "id": 301,
+    "name": "Débris de statue",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x2_01",
+    "basicPoint": 300,
+    "maxStack": 6,
+    "templateId": 301
+  },
+  {
+    "id": 302,
+    "name": "Injecteur de sérum",
+    "type": "Other",
+    "itemGrid": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_04",
+    "basicPoint": 400,
+    "maxStack": 5,
+    "templateId": 302
+  },
+  {
+    "id": 303,
+    "name": "Souvenir des Lunariens",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x1_01",
+    "basicPoint": 100,
+    "maxStack": 5,
+    "templateId": 303
+  },
+  {
+    "id": 304,
+    "name": "Versets en suspens – Bleu indigo",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x2_03",
+    "basicPoint": 500,
+    "maxStack": 5,
+    "templateId": 304
+  },
+  {
+    "id": 305,
+    "name": "Versets en suspens – Bleu indigo",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_03",
+    "basicPoint": 500,
+    "maxStack": 5,
+    "isMirror": true,
+    "templateId": 305
+  },
+  {
+    "id": 306,
+    "name": "Moisson de l’espoir",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x4_01",
+    "basicPoint": 600,
+    "maxStack": 1,
+    "templateId": 306
+  },
+  {
+    "id": 307,
+    "name": "Baiser de la sirène",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x5_01",
+    "basicPoint": 500,
+    "maxStack": 1,
+    "templateId": 307
+  },
+  {
+    "id": 308,
+    "name": "Trancheur d’ambre",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x4_01",
+    "basicPoint": 400,
+    "maxStack": 1,
+    "templateId": 308
+  },
+  {
+    "id": 309,
+    "name": "Adieu éternel",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x6_01",
+    "basicPoint": 1200,
+    "maxStack": 1,
+    "templateId": 309
+  },
+  {
+    "id": 310,
+    "name": "Momiji Itteki",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_02",
+    "basicPoint": 900,
+    "maxStack": 1,
+    "templateId": 310
+  },
+  {
+    "id": 311,
+    "name": "Momiji Itteki",
+    "type": "Other",
+    "itemGrid": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_02",
+    "basicPoint": 900,
+    "maxStack": 1,
+    "isMirror": true,
+    "templateId": 311
+  },
+  {
+    "id": 312,
+    "name": "Pointe de fer d’Ask",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x3_01",
+    "basicPoint": 300,
+    "maxStack": 1,
+    "templateId": 312
+  }
+]

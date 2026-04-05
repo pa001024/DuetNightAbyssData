@@ -1,0 +1,578 @@
+[
+  {
+    "id": 101,
+    "name": "와해",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_01",
+    "basicPoint": 1000,
+    "maxAmmo": 6,
+    "currentAmmo": 0,
+    "templateId": 101
+  },
+  {
+    "id": 102,
+    "name": "무질서의 특이점",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_02",
+    "basicPoint": 600,
+    "maxAmmo": 6,
+    "currentAmmo": 0,
+    "templateId": 102
+  },
+  {
+    "id": 103,
+    "name": "발골",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_01",
+    "basicPoint": 600,
+    "maxAmmo": 30,
+    "currentAmmo": 0,
+    "templateId": 103
+  },
+  {
+    "id": 104,
+    "name": "발골",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_01",
+    "basicPoint": 600,
+    "maxAmmo": 30,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 104
+  },
+  {
+    "id": 105,
+    "name": "엠블라의 꽃차례",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x2_01",
+    "basicPoint": 400,
+    "maxAmmo": 20,
+    "currentAmmo": 0,
+    "templateId": 105
+  },
+  {
+    "id": 106,
+    "name": "엠블라의 꽃차례",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_01",
+    "basicPoint": 400,
+    "maxAmmo": 20,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 106
+  },
+  {
+    "id": 107,
+    "name": "방출하는 천둥",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_02",
+    "basicPoint": 700,
+    "maxAmmo": 25,
+    "currentAmmo": 0,
+    "templateId": 107
+  },
+  {
+    "id": 108,
+    "name": "방출하는 천둥",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_02",
+    "basicPoint": 700,
+    "maxAmmo": 25,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 108
+  },
+  {
+    "id": 109,
+    "name": "열염의 모래",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_03",
+    "basicPoint": 500,
+    "maxAmmo": 35,
+    "currentAmmo": 0,
+    "templateId": 109
+  },
+  {
+    "id": 110,
+    "name": "열염의 모래",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_03",
+    "basicPoint": 500,
+    "maxAmmo": 35,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 110
+  },
+  {
+    "id": 111,
+    "name": "덧없는 달빛",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_04",
+    "basicPoint": 800,
+    "maxAmmo": 20,
+    "currentAmmo": 0,
+    "templateId": 111
+  },
+  {
+    "id": 201,
+    "name": "탄약",
+    "type": "Ammo",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x2_01",
+    "basicPoint": 50,
+    "maxStack": 30,
+    "templateId": 201
+  },
+  {
+    "id": 301,
+    "name": "성스러운 석상의 잔해",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x2_01",
+    "basicPoint": 300,
+    "maxStack": 6,
+    "templateId": 301
+  },
+  {
+    "id": 302,
+    "name": "혈청 주사기",
+    "type": "Other",
+    "itemGrid": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_04",
+    "basicPoint": 400,
+    "maxStack": 5,
+    "templateId": 302
+  },
+  {
+    "id": 303,
+    "name": "루나의 증표",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x1_01",
+    "basicPoint": 100,
+    "maxStack": 5,
+    "templateId": 303
+  },
+  {
+    "id": 304,
+    "name": "현 위의 시편·\n다크 블루",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x2_03",
+    "basicPoint": 500,
+    "maxStack": 5,
+    "templateId": 304
+  },
+  {
+    "id": 305,
+    "name": "현 위의 시편·\n다크 블루",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_03",
+    "basicPoint": 500,
+    "maxStack": 5,
+    "isMirror": true,
+    "templateId": 305
+  },
+  {
+    "id": 306,
+    "name": "희망의 풍작",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x4_01",
+    "basicPoint": 600,
+    "maxStack": 1,
+    "templateId": 306
+  },
+  {
+    "id": 307,
+    "name": "세이렌의 입맞춤",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x5_01",
+    "basicPoint": 500,
+    "maxStack": 1,
+    "templateId": 307
+  },
+  {
+    "id": 308,
+    "name": "빛나는 붉은 칼날",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x4_01",
+    "basicPoint": 400,
+    "maxStack": 1,
+    "templateId": 308
+  },
+  {
+    "id": 309,
+    "name": "오랜 세월의 결별",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x6_01",
+    "basicPoint": 1200,
+    "maxStack": 1,
+    "templateId": 309
+  },
+  {
+    "id": 310,
+    "name": "단풍 한 방울",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_02",
+    "basicPoint": 900,
+    "maxStack": 1,
+    "templateId": 310
+  },
+  {
+    "id": 311,
+    "name": "단풍 한 방울",
+    "type": "Other",
+    "itemGrid": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_02",
+    "basicPoint": 900,
+    "maxStack": 1,
+    "isMirror": true,
+    "templateId": 311
+  },
+  {
+    "id": 312,
+    "name": "아스크의 철막대",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x3_01",
+    "basicPoint": 300,
+    "maxStack": 1,
+    "templateId": 312
+  }
+]

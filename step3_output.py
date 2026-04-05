@@ -44,7 +44,9 @@ from processor.weapon_skin_processor import WeaponSkinProcessor
 from processor.head_sculpture_processor import HeadSculptureProcessor
 from processor.head_frame_processor import HeadFrameProcessor
 from processor.hair_processor import HairProcessor
+from processor.backpack_puzzle_item_processor import BackpackPuzzleItemProcessor
 from processor.impression_shop_processor import ImpressionShopProcessor
+from processor.backpack_puzzle_level_processor import BackpackPuzzleLevelProcessor
 from processor.event_processor import EventProcessor
 from processor.monster_strong_affixes_processor import MonsterStrongAffixesProcessor
 from processor.skin_processor import SkinProcessor
@@ -269,6 +271,7 @@ class FinalProcessor:
             "HardBoss": "HardBossMain",
             "CharDataTarget": "CharacterDataTarget",
             "Event": "EventMain",
+            "BackpackPuzzleItem": "PuzzleItemAttr",
         }
 
         # 不在这里创建共享的DataLoader实例，改为每个任务创建独立实例
@@ -318,6 +321,8 @@ class FinalProcessor:
             "HeadSculpture": HeadSculptureProcessor,
             "HeadFrame": HeadFrameProcessor,
             "Hair": HairProcessor,
+            "BackpackPuzzleItem": BackpackPuzzleItemProcessor,
+            "BackpackPuzzleLevel": BackpackPuzzleLevelProcessor,
             "ImpressionShop": ImpressionShopProcessor,
             "Event": EventProcessor,
             "MonsterStrongAffixes": MonsterStrongAffixesProcessor,
@@ -473,6 +478,8 @@ if __name__ == "__main__":
         "HeadSculpture",
         "HeadFrame",
         "Hair",
+        "BackpackPuzzleItem",
+        "BackpackPuzzleLevel",
         "ImpressionShop",
         "Event",
         "MonsterStrongAffixes",

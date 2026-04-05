@@ -1,0 +1,578 @@
+[
+  {
+    "id": 101,
+    "name": "崩解",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_01",
+    "basicPoint": 1000,
+    "maxAmmo": 6,
+    "currentAmmo": 0,
+    "templateId": 101
+  },
+  {
+    "id": 102,
+    "name": "無序奇點",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_02",
+    "basicPoint": 600,
+    "maxAmmo": 6,
+    "currentAmmo": 0,
+    "templateId": 102
+  },
+  {
+    "id": 103,
+    "name": "銷骨",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_01",
+    "basicPoint": 600,
+    "maxAmmo": 30,
+    "currentAmmo": 0,
+    "templateId": 103
+  },
+  {
+    "id": 104,
+    "name": "銷骨",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_01",
+    "basicPoint": 600,
+    "maxAmmo": 30,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 104
+  },
+  {
+    "id": 105,
+    "name": "茵布拉花序",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x2_01",
+    "basicPoint": 400,
+    "maxAmmo": 20,
+    "currentAmmo": 0,
+    "templateId": 105
+  },
+  {
+    "id": 106,
+    "name": "茵布拉花序",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_01",
+    "basicPoint": 400,
+    "maxAmmo": 20,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 106
+  },
+  {
+    "id": 107,
+    "name": "放逐怒雷",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_02",
+    "basicPoint": 700,
+    "maxAmmo": 25,
+    "currentAmmo": 0,
+    "templateId": 107
+  },
+  {
+    "id": 108,
+    "name": "放逐怒雷",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_02",
+    "basicPoint": 700,
+    "maxAmmo": 25,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 108
+  },
+  {
+    "id": 109,
+    "name": "烈焰孤沙",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "icon": "T_Bag_4x2_03",
+    "basicPoint": 500,
+    "maxAmmo": 35,
+    "currentAmmo": 0,
+    "templateId": 109
+  },
+  {
+    "id": 110,
+    "name": "烈焰孤沙",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_03",
+    "basicPoint": 500,
+    "maxAmmo": 35,
+    "isMirror": true,
+    "currentAmmo": 0,
+    "templateId": 110
+  },
+  {
+    "id": 111,
+    "name": "若華的飛光",
+    "type": "Gun",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_4x2_04",
+    "basicPoint": 800,
+    "maxAmmo": 20,
+    "currentAmmo": 0,
+    "templateId": 111
+  },
+  {
+    "id": 201,
+    "name": "彈藥",
+    "type": "Ammo",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x2_01",
+    "basicPoint": 50,
+    "maxStack": 30,
+    "templateId": 201
+  },
+  {
+    "id": 301,
+    "name": "聖像石骸",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x2_01",
+    "basicPoint": 300,
+    "maxStack": 6,
+    "templateId": 301
+  },
+  {
+    "id": 302,
+    "name": "血清注射器",
+    "type": "Other",
+    "itemGrid": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_04",
+    "basicPoint": 400,
+    "maxStack": 5,
+    "templateId": 302
+  },
+  {
+    "id": 303,
+    "name": "皎皎之民的信物",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x1_01",
+    "basicPoint": 100,
+    "maxStack": 5,
+    "templateId": 303
+  },
+  {
+    "id": 304,
+    "name": "弦上詩篇·黛藍",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x2_03",
+    "basicPoint": 500,
+    "maxStack": 5,
+    "templateId": 304
+  },
+  {
+    "id": 305,
+    "name": "弦上詩篇·黛藍",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_3x2_03",
+    "basicPoint": 500,
+    "maxStack": 5,
+    "isMirror": true,
+    "templateId": 305
+  },
+  {
+    "id": 306,
+    "name": "希冀的豐稔",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "icon": "T_Bag_3x4_01",
+    "basicPoint": 600,
+    "maxStack": 1,
+    "templateId": 306
+  },
+  {
+    "id": 307,
+    "name": "塞壬的擁吻",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x5_01",
+    "basicPoint": 500,
+    "maxStack": 1,
+    "templateId": 307
+  },
+  {
+    "id": 308,
+    "name": "輝珀刃",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x4_01",
+    "basicPoint": 400,
+    "maxStack": 1,
+    "templateId": 308
+  },
+  {
+    "id": 309,
+    "name": "萬古的訣別",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x6_01",
+    "basicPoint": 1200,
+    "maxStack": 1,
+    "templateId": 309
+  },
+  {
+    "id": 310,
+    "name": "紅葉一滴",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_02",
+    "basicPoint": 900,
+    "maxStack": 1,
+    "templateId": 310
+  },
+  {
+    "id": 311,
+    "name": "紅葉一滴",
+    "type": "Other",
+    "itemGrid": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "icon": "T_Bag_2x5_02",
+    "basicPoint": 900,
+    "maxStack": 1,
+    "isMirror": true,
+    "templateId": 311
+  },
+  {
+    "id": 312,
+    "name": "埃斯刻鐵枝",
+    "type": "Other",
+    "itemGrid": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "icon": "T_Bag_1x3_01",
+    "basicPoint": 300,
+    "maxStack": 1,
+    "templateId": 312
+  }
+]
