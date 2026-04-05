@@ -93,7 +93,9 @@ class WeaponProcessor(BaseProcessor):
         shooting_interval = 0.0
         is_ranged_weapon = self._is_ranged_weapon(battle_weapon)
 
-        loop_interval_map = self._collect_loop_interval_map(weapon_skill_list, weapon_id)
+        loop_interval_map = self._collect_loop_interval_map(
+            weapon_skill_list, weapon_id
+        )
 
         # 处理每个技能
         for skill_id in weapon_skill_list:
@@ -170,7 +172,7 @@ class WeaponProcessor(BaseProcessor):
                 self.skill_creature_data,
             )
             if creatures:
-                skill_info_dict["创造物"] = creatures
+                skill_info_dict["实体"] = creatures
 
             skills.append(skill_info_dict)
 
@@ -190,9 +192,9 @@ class WeaponProcessor(BaseProcessor):
             skill_item["类型"] = "武器伤害"
             if "字段" in skill:
                 skill_item["字段"] = skill["字段"]
-            if "创造物" in skill:
-                skill_item["创造物"] = skill["创造物"]
-            if "字段" in skill or "创造物" in skill:
+            if "实体" in skill:
+                skill_item["实体"] = skill["实体"]
+            if "字段" in skill or "实体" in skill:
                 rst.append(skill_item)
         return rst, self.round_value(reload_value), self.round_value(shooting_interval)
 

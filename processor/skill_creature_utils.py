@@ -1,4 +1,4 @@
-"""技能创造物提取工具。"""
+"""技能实体提取工具。"""
 
 
 def extract_skill_creatures(
@@ -10,7 +10,7 @@ def extract_skill_creatures(
     limit=8,
     keep_hidden=False,
 ):
-    """从技能链中提取 CreateSkillCreature 对应的创造物数据。"""
+    """从技能链中提取 CreateSkillCreature 对应的实体数据。"""
     skill_info = skill_data.get(str(skill_id), {})
     if not skill_info:
         skill_info = skill_data.get(skill_id, {})

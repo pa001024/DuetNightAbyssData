@@ -697,15 +697,12 @@ class CharProcessor(BaseProcessor):
             self.skill_effects_data,
             self.skill_creature_data,
         )
-        if (
-            abstract_u_weapon_creatures
-            and skill_info.get("SkillType") == "Skill2"
-        ):
+        if abstract_u_weapon_creatures and skill_info.get("SkillType") == "Skill2":
             for creature in abstract_u_weapon_creatures:
                 if creature not in creatures:
                     creatures.append(creature)
         if creatures:
-            result["创造物"] = creatures
+            result["实体"] = creatures
 
         # 处理技能特效解析
         # skill_effects = self._process_skill_effects(skill_info, skill_id, max_level)
@@ -801,7 +798,7 @@ class CharProcessor(BaseProcessor):
         return result
 
     def _collect_abstract_u_weapon_creatures(self, u_weapon_ids):
-        """收集 Abstract 同律武器对应的创造物。"""
+        """收集 Abstract 同律武器对应的实体。"""
         creatures = []
         if not u_weapon_ids:
             return creatures

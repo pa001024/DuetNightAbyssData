@@ -166,7 +166,7 @@
         "描述": "Switches the melee weapon to [Ymir] and casts 1 Swordwave.\nWhen performing Normal Attack using [Ymir], unleashes Swordwaves in the attacking direction and constantly consumes Sanity, during which Benerica is immune to Hitstun when taking damage. Once Sanity drops to 0 or the skill is used again, [Ymir] is sheathed.",
         "icon": "Heitao02_On",
         "cd": 2.7,
-        "创造物": [
+        "实体": [
           {
             "id": 110141,
             "形状": {
@@ -691,7 +691,7 @@
         "类型": "DMG",
         "描述": "Deals Umbro Damage to enemies in front and inflicts 5 stacks of [Adagio] on them, up to 10 stacks. The remaining time of the effect is refreshed with each new stack gained.\nWhen in [Bestial Fury] state, this skill is replaced with [Aria].",
         "icon": "Tuosi01_1",
-        "创造物": [
+        "实体": [
           {
             "id": 110301,
             "形状": {
@@ -841,7 +841,7 @@
             "id": 110311,
             "类型": "DMG",
             "icon": "Tuosi01_2",
-            "创造物": [
+            "实体": [
               {
                 "id": 110301,
                 "形状": {
@@ -862,7 +862,7 @@
         "描述": "Enters [Bestial Fury] state and continuously consumes Sanity; when Sanity drops to 0, [Bestial Fury] state ends.\nWeapons can not be used during [Bestial Fury] state. \nMelee Attack is replaced with [Furious Claws], performing up to four consecutive attacks to deal Umbro Damage. When used in the air, Phantasio performs Plunging Attack and deals Umbro damage to enemies within range.\nRanged Attack is replaced with [Mournful Howl], firing an energy beam to deal Umbro Damage.\nWhen the 3-hit of [Furious Claws] and [Mournful Howl] deal damage, triggers [Duo]; when the 4-hit of [Furious Claws] and the Plunging Attack deal damage, triggers [Fermata].",
         "icon": "Tuosi02_On",
         "cd": 3,
-        "创造物": [
+        "实体": [
           {
             "id": 110301,
             "形状": {
@@ -2008,7 +2008,7 @@
         "类型": "DMG",
         "描述": "Creates 1 [Lunar Hunt] and replaces this skill with [Solar Eclipse]. \n [Lunar Hunt]: Deals Umbro Damage to all enemies within range upon spawn and reduces their Movement Speed.",
         "icon": "Nifu01_1",
-        "创造物": [
+        "实体": [
           {
             "id": 150202,
             "形状": {
@@ -2196,7 +2196,7 @@
             "id": 150211,
             "类型": "DMG",
             "icon": "Nifu01_2",
-            "创造物": [
+            "实体": [
               {
                 "id": 150201,
                 "形状": {
@@ -2224,7 +2224,7 @@
             "id": 150212,
             "类型": "DMG",
             "icon": "Nifu01_3",
-            "创造物": [
+            "实体": [
               {
                 "id": 150202,
                 "形状": {
@@ -2251,7 +2251,7 @@
             "id": 150213,
             "类型": "DMG",
             "icon": "Nifu01_4",
-            "创造物": [
+            "实体": [
               {
                 "id": 150201,
                 "形状": {
@@ -2700,7 +2700,7 @@
         "描述": "Enters [Aspect Manifestation] state and summons [Edges of All Times] to rain from the sky, dealing Lumino Damage to enemies within range.\nWhile in [Aspect Manifestation] state, Kezhou's Melee Weapon becomes [Phanosword]. When triggering Bonus Effect using [Phanosword], generates 1 [Phanoplume].\nWhile in [Aspect Manifestation] state, this skill is replaced with [Feathers Chase Dust In Dreams].",
         "icon": "Kezhou02_On",
         "cd": 3,
-        "创造物": [
+        "实体": [
           {
             "id": 150332,
             "形状": {
@@ -3001,7 +3001,7 @@
             "类型": "Buff",
             "icon": "Kezhou02_Off",
             "cd": 3,
-            "创造物": [
+            "实体": [
               {
                 "id": 150332,
                 "形状": {
@@ -3371,7 +3371,7 @@
         "描述": "Activates [Starfall Mode] by consuming all Sanity with Fengshi Type Ⅲ. Gain 1 stack of [Soar] for every 40 Sanity consumed, up to 10 stacks. Gain [Artificer Powder] based on the maximum ammo capacity of the equipped ranged weapon, up to 300 rounds.\nWhile in [Starfall Mode], weapons become unavailable, and Su Yi becomes immune to Hitstun. Recasting the skill deactivates [Starfall Mode].\nWhile in this mode, melee attacks are replaced with [Sword Aflash], and ranged attacks are replaced with [Stars Ashower].",
         "icon": "Suyi02_On",
         "cd": 2,
-        "创造物": [
+        "实体": [
           {
             "id": 150402,
             "形状": {
@@ -3787,7 +3787,7 @@
         "类型": "DMG",
         "描述": "Unleashes 2 Swordwaves, dealing Lumino DMG to enemies on hit and guaranteed to trigger Lumino bonus effects.",
         "icon": "Zhujue01",
-        "创造物": [
+        "实体": [
           {
             "id": 160101,
             "形状": {
@@ -3906,7 +3906,7 @@
         "描述": "Deals Lumino DMG to nearby enemies and grants self and allies both Ultra Shields and [Incandescence].",
         "icon": "Zhujue02",
         "cd": 3,
-        "创造物": [
+        "实体": [
           {
             "id": 160103,
             "时长": 10,
@@ -8131,7 +8131,7 @@
         "类型": "Buff",
         "描述": "Summons 8 [Sommelier's Blades] to orbit the user. A maximum of 8 [Sommelier's Blades] can exist at once.",
         "icon": "Kami02",
-        "创造物": [
+        "实体": [
           {
             "id": 320202,
             "形状": {
@@ -8440,7 +8440,7 @@
         "类型": "DMG",
         "描述": "Attack enemies within range, dealing Pyro Damage and stunning them. When using this skill by holding, Margie makes a continuous attack.",
         "icon": "Maer01",
-        "创造物": [
+        "实体": [
           {
             "id": 330103,
             "时长": 2
@@ -8552,7 +8552,7 @@
         "描述": "Casts 3 [Margie's Combustible Bins] forward. They immediately explode upon hitting any target or obstacle, dealing AoE Pyro Damage and consuming a certain stacks of [Jackpot!] for enhancement:\nWhen consuming 3 stacks of [Jackpot!]: Increases the explosion range and damage.\nWhen consuming 6 stacks of [Jackpot!]: Creates a Zealous Zone after the explosion, dealing Pyro Damage once every 2s to enemies within the zone.\nWhen consuming 9 stacks of [Jackpot!]: Deals additional AoE Pyro Damage 2 times after the explosion.",
         "icon": "Maer02",
         "cd": 2.9,
-        "创造物": [
+        "实体": [
           {
             "id": 330111,
             "形状": {
@@ -9386,7 +9386,7 @@
         "类型": "DMG",
         "描述": "Press: \nZhiliu uses [Celestial Revelation: Zhen], dealing Electro Damage to enemies within range, which grants Zhiliu 1 [Talisman: Zhen].\n\nHold:\nZhiliu uses [Celestial Revelation: Xun], dealing Electro Damage to enemies within range, which grants Zhiliu Ultra Shield and 1 [Talisman: Xun].",
         "icon": "Zhiliu01",
-        "创造物": [
+        "实体": [
           {
             "id": 410201,
             "时长": 3,
@@ -9521,7 +9521,7 @@
         "描述": "When the user holds fewer than 2 [Talismans], deals Electro Damage to enemies within range. \nWhen the user holds 2 [Talismans], this skill transforms based on the combination.",
         "icon": "Zhiliu02_1",
         "cd": 2.5,
-        "创造物": [
+        "实体": [
           {
             "id": 410211,
             "时长": 3,
@@ -9839,7 +9839,7 @@
             "id": 410221,
             "类型": "DMG",
             "icon": "Zhiliu02_2",
-            "创造物": [
+            "实体": [
               {
                 "id": 410231,
                 "时长": 5,
@@ -9867,7 +9867,7 @@
             "id": 410222,
             "类型": "DMG",
             "icon": "Zhiliu02_3",
-            "创造物": [
+            "实体": [
               {
                 "id": 410221,
                 "时长": 5,
@@ -10736,7 +10736,7 @@
         "描述": "Throws 1 [Bespoke Shield] forward, triggering [Impact] once when it halts. While active on the battlefield, [Bespoke Shield] triggers [Impact] every 3s.\n[Impact] deals damage only to Shields, based on Randy's DEF, and grants an Ultra Shield based on Randy's DEF to Randy and allies. For targets with 0 Shield, [Impact] paralyses them.",
         "icon": "Landi02",
         "cd": 3.6,
-        "创造物": [
+        "实体": [
           {
             "id": 420202,
             "形状": {
@@ -11090,7 +11090,7 @@
         "类型": "DMG",
         "描述": "Deals Electro Damage to enemies within range in front and creates a field of [Legion's Punishment] at the locations.",
         "icon": "Xibi01",
-        "创造物": [
+        "实体": [
           {
             "id": 430111,
             "时长": 10,
@@ -11640,7 +11640,7 @@
         "类型": "DMG",
         "描述": "Commands [Filbert] to charge forwards, dealing Anemo Damage to enemies in the path. Upon hitting any obstacles, triggers Anemo AoE Damage at the endpoint. While this skill is active, heals Truffle and allies, and increases their damage.\nWhen Truffle rides on [Filbert], this skill is replaced with [Trotters Charge-Charge].",
         "icon": "Songlu01",
-        "创造物": [
+        "实体": [
           {
             "id": 510131,
             "形状": {
@@ -11887,7 +11887,7 @@
         "描述": "Truffle rides on [Filbert] and gains 100 points of [Passion For Work] and a Movement Speed boost, dealing Anemo Damage to enemies in the path when moving.\nWhen riding on [Filbert], Truffle is unable to use any weapon but can command [Filbert] to attack. When this skill is used again, Truffle dismounts and unleashes [Trotters Trot-Trot] once.",
         "icon": "Songlu02_On",
         "cd": 3.4,
-        "创造物": [
+        "实体": [
           {
             "id": 510131,
             "形状": {
