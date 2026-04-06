@@ -376,7 +376,7 @@ class DynQuestProcessor(QuestStoryProcessor):
         return start_ids
 
     def _apply_dyn_impression(self, dialogues, dyn_impression):
-        """根据 DynImpression 补充选项的 impr（对白本体不写 impr）。"""
+        """根据 DynImpression 补充对白或选项的 impr。"""
         if not dialogues or not isinstance(dyn_impression, dict):
             return
 
@@ -407,17 +407,17 @@ class DynQuestProcessor(QuestStoryProcessor):
                     next_key = str(next_id)
                     option_next_map.setdefault(next_key, []).append(option_item)
 
-        def patch_impr(option_item, impr_plus_id):
-            if not isinstance(option_item, dict):
+        def patch_impr(target_item, impr_plus_id):
+            if not isinstance(target_item, dict):
                 return
-            if option_item.get("impr"):
+            if target_item.get("impr"):
                 return
             impr_data = impression_plus_data.get(str(impr_plus_id))
             if not impr_data:
                 return
             impr = self._inline_impr_plus(impr_data)
             if impr:
-                option_item["impr"] = impr
+                target_item["impr"] = impr
 
         for dialogue_id, impr_plus_id in dyn_impression.items():
             key = str(dialogue_id)
@@ -431,12 +431,8 @@ class DynQuestProcessor(QuestStoryProcessor):
 
             dialogue_item = dialogue_map.get(key)
             if dialogue_item:
-                options = dialogue_item.get("options", [])
-                if options:
-                    # 命中对白ID：对白下所有选项共享同一个 impr
-                    for option_item in options:
-                        patch_impr(option_item, impr_plus_id)
-                    continue
+                patch_impr(dialogue_item, impr_plus_id)
+                continue
 
             # 兜底：对白ID无选项时，尝试命中指向该对白的上游选项
             for option_item in option_next_map.get(key, []):

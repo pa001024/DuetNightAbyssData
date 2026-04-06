@@ -20,6 +20,7 @@ from processor.fish_processor import FishProcessor
 from processor.fishing_spot_processor import FishingSpotProcessor
 from processor.resource_processor import ResourceProcessor
 from processor.book_series_archive_processor import BookSeriesArchiveProcessor
+from processor.dispatch_processor import DispatchProcessor
 from processor.dyn_quest_processor import DynQuestProcessor
 from processor.quest_chain_processor import QuestChainProcessor
 from processor.quest_story_processor import QuestStoryProcessor
@@ -296,6 +297,7 @@ class FinalProcessor:
             "FishingSpot": FishingSpotProcessor,
             "Resource": ResourceProcessor,
             "BookSeriesArchive": BookSeriesArchiveProcessor,
+            "Dispatch": DispatchProcessor,
             "DynQuest": DynQuestProcessor,
             "QuestChain": QuestChainProcessor,
             "QuestStory": QuestStoryProcessor,
@@ -451,6 +453,7 @@ if __name__ == "__main__":
         "Walnut",
         "Fish",
         "FishingSpot",
+        "Dispatch",
         "DynQuest",
         "Resource",
         "BookSeriesArchive",
