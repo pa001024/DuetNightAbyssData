@@ -654,7 +654,7 @@ return {
       key = "17684617573395568",
       type = "StoryNode",
       name = "境界岛拍照",
-      pos = {x = 2140.2353605716607, y = 320.42729929580446},
+      pos = {x = 2140.2353605716607, y = 321.5811454496506},
       propsData = {
         QuestId = 40012104,
         QuestDescriptionComment = "",

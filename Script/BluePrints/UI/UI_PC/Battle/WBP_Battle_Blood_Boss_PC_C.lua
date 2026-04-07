@@ -19,17 +19,9 @@ function WBP_Battle_Blood_Boss_PC_C:InitBossUI(Owner, IsBossInPart, BossUIType)
   self.IsBossInPart = IsBossInPart
   self.BossUIType = BossUIType
   self:K2_SetBuffsOwner(self.Owner)
-  self.DelayInitBossBloodUI_FailCount = 0
   
   local function DoInit()
     if not self.Owner or not self.Owner.BillboardComponent then
-      self.DelayInitBossBloodUI_FailCount = self.DelayInitBossBloodUI_FailCount + 1
-      DebugPrint("WBP_Battle_Blood_Boss_PC_C InitBossUI: DoInit failed ", self.DelayInitBossBloodUI_FailCount, " times.")
-      if not self.Owner then
-        DebugPrint("self.Owner is nil")
-      elseif not self.Owner.BillboardComponent then
-        DebugPrint("self.Owner.BillboardComponent is nil")
-      end
       return
     end
     self:RemoveTimer("DelayInitBossBloodUI")
@@ -39,8 +31,6 @@ function WBP_Battle_Blood_Boss_PC_C:InitBossUI(Owner, IsBossInPart, BossUIType)
       self.Owner.BillboardComponent.bNeedUpdateBossUI = true
     end
     self.InitSuccess = true
-    DebugPrint("WBP_Battle_Blood_Boss_PC_C InitBossUI: DoInit Success after failed ", self.DelayInitBossBloodUI_FailCount, " times.")
-    self.DelayInitBossBloodUI_FailCount = 0
   end
   
   if not self.Owner.BillboardComponent and IsClient(self) then

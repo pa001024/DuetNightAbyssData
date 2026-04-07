@@ -2963,8 +2963,6 @@ function BP_PlayerCharacter_C:ForbidActiveSkills(bForbid)
   self:ForbidSkills(bForbid, Skills)
 end
 
-local bDungeonForbidSkillsByBuff = {}
-
 function BP_PlayerCharacter_C:ForbidAllSkillsByBuff(bForbid)
   DebugPrint("lgc@ ForbidAllSkillsByBuff", bForbid)
   local DisableSkillsBuffId = 311
@@ -3000,16 +2998,10 @@ function BP_PlayerCharacter_C:ForbidAllSkillsByBuff(bForbid)
   if bForbid then
     DebugPrint("lgc@ AddBuffToTarget", DisableSkillsBuffId, self:GetName())
     Battle(self):AddBuffToTarget(self, self, DisableSkillsBuffId, -1, nil, nil)
-    bDungeonForbidSkillsByBuff[self.Eid] = true
   else
     DebugPrint("lgc@ RemoveBuffFromTarget", DisableSkillsBuffId, self:GetName())
     Battle(self):RemoveBuffFromTarget(self, self, DisableSkillsBuffId, false, -1)
-    bDungeonForbidSkillsByBuff[self.Eid] = false
   end
-end
-
-function BP_PlayerCharacter_C:IsDungeonForbidSkillsByBuff()
-  return bDungeonForbidSkillsByBuff[self.Eid]
 end
 
 function BP_PlayerCharacter_C:ForbidAllSkills(bForbid)

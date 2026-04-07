@@ -514,17 +514,17 @@ function M:InitListTabInfo()
       table.insert(SubTabList, {
         Text = GText(TabItem.Title),
         TabId = Index,
-        ShowRedDot = false
+        ShowRedDot = false,
+        SoundFunc = function()
+          AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_sort_tab", "TabClickSound", nil)
+        end
       })
     end
     self.Com_TabSub:Init({
       PlatformName = self.Platform,
       LeftKey = "A",
       RightKey = "D",
-      Tabs = SubTabList,
-      SoundFunc = function()
-        AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_sort_tab", "TabClickSound", nil)
-      end
+      Tabs = SubTabList
     })
     self.Com_TabSub:BindEventOnTabSelected(self, self.OnTabSelected)
     self.Com_TabSub:SelectTab(1)

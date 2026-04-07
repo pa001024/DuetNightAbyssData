@@ -764,9 +764,7 @@ function Component:OnCharacterReady(Info)
     self:SetPlayerInfo(Info)
   end
   self.InfoForInit.ChangeRole = true
-  if self.IsMainPlayer and self:IsMainPlayer() then
-    self:CheckAndApplyDungeonForbidSkills()
-  end
+  self:CheckAndApplyDungeonForbidSkills()
 end
 
 function Component:CheckAndApplyDungeonForbidSkills()
@@ -774,36 +772,30 @@ function Component:CheckAndApplyDungeonForbidSkills()
   if not self.ForbidAllSkillsByBuff then
     return
   end
-  
-  local function UnforbidAllSkillsByBuff()
-    if self.IsDungeonForbidSkillsByBuff and self:IsDungeonForbidSkillsByBuff() then
-      self:ForbidAllSkillsByBuff(false)
-    end
-  end
-  
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
   if GWorld.GameInstance:IsNullDungeonId(DungeonId) then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills NullDungeonId")
-    UnforbidAllSkillsByBuff()
+    self:ForbidAllSkillsByBuff(false)
     return
   end
   local DungeonData = DataMgr.Dungeon[DungeonId]
   if not DungeonData then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not DungeonData")
-    UnforbidAllSkillsByBuff()
+    self:ForbidAllSkillsByBuff(false)
     return
   end
   local FbdRule = DungeonData.FbdRule
   if not FbdRule then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not FbdRule")
-    UnforbidAllSkillsByBuff()
+    self:ForbidAllSkillsByBuff(false)
     return
   end
-  if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill and self.ForbidAllSkillsByBuff then
+  if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill then
     self:ForbidAllSkillsByBuff(true)
   else
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not FbdRule.NoSkill")
-    UnforbidAllSkillsByBuff()
+    self:ForbidAllSkillsByBuff(false)
   end
 end
 

@@ -16,7 +16,8 @@ class ResourceProcessor(BaseProcessor):
     _shared_level_to_sub_region_id_cache: Dict[str, Dict[str, int]] = {}
     _shared_design_data_dirs_cache: Dict[str, List[Path]] = {}
     _shared_design_dir_files_cache: Dict[str, List[Path]] = {}
-    _shared_random_rule_to_resource_ids_cache: Dict[str, Dict[int, List[int]]] = {}
+    _shared_random_rule_to_resource_ids_cache: Dict[str, Dict[int, List[Tuple[int, Optional[int]]]]] = {}
+    _shared_design_level_unit_id_cache: Dict[str, Dict[int, int]] = {}
 
     def __init__(self, data_loader):
         super().__init__(data_loader)
@@ -42,6 +43,7 @@ class ResourceProcessor(BaseProcessor):
         self.mechanism_to_resource_ids = None
         self.random_rule_to_resource_ids = None
         self.draft_resource_ids = None
+        self.design_level_unit_ids = None
 
     def process_item(self, resource_data, language):
         """处理单个资源数据
@@ -119,6 +121,7 @@ class ResourceProcessor(BaseProcessor):
             and self.reward_to_resource_ids is not None
             and self.mechanism_to_resource_ids is not None
             and self.random_rule_to_resource_ids is not None
+            and self.design_level_unit_ids is not None
         ):
             return
         self.rarely_to_drop_ids = self._build_rarely_to_drop_ids()
@@ -127,6 +130,7 @@ class ResourceProcessor(BaseProcessor):
         self.reward_to_resource_ids = self._build_reward_to_resource_ids()
         self.mechanism_to_resource_ids = self._build_mechanism_to_resource_ids()
         self.random_rule_to_resource_ids = self._build_random_rule_to_resource_ids()
+        self.design_level_unit_ids = self._build_design_level_unit_ids()
 
     def _get_draft_resource_ids(self):
         """按需获取 Draft 资源集合。"""
@@ -528,7 +532,9 @@ class ResourceProcessor(BaseProcessor):
                 unit_id is None
                 and static_creator_id is None
                 and len(resource_ids) == 1
+                and resource_ids[0][1] is None
                 and resource_ids[0][0] in unit_based_resource_ids
+                and node.get("Type") != "Explore_Treasure_C"
             ):
                 continue
             pos = self._extract_design_level_pos(node, by_outer_name, by_name, by_path)
@@ -559,9 +565,9 @@ class ResourceProcessor(BaseProcessor):
             resource_ids = self._get_resource_ids_by_random_rule(random_rule_id)
             if not resource_ids:
                 continue
-            for resource_id in resource_ids:
+            for resource_id, reward_id in resource_ids:
                 resource_sources = sources.setdefault(resource_id, [])
-                source_item = self._get_or_create_source_item(resource_sources, sub_region_id, None)
+                source_item = self._get_or_create_source_item(resource_sources, sub_region_id, reward_id)
                 if not source_item:
                     continue
                 for pos in points:
@@ -605,9 +611,12 @@ class ResourceProcessor(BaseProcessor):
         unit_id = self._to_int(props.get("UnitId"))
         static_creator_id = self._to_int(props.get("StaticCreatorId"))
         rarely_id = self._to_int(props.get("RarelyId"))
+        resolved_unit_id = unit_id
+        if resolved_unit_id is None and static_creator_id is not None:
+            resolved_unit_id = self._get_unit_id_by_static_creator_id(static_creator_id)
 
-        if unit_id is not None:
-            for resource_id in self.drop_to_resource_ids.get(unit_id, []):
+        if resolved_unit_id is not None:
+            for resource_id in self.drop_to_resource_ids.get(resolved_unit_id, []):
                 if resource_id in self.resource_map and not has_resource_pair(resource_id, None):
                     resource_ids.append((resource_id, None))
 
@@ -617,13 +626,74 @@ class ResourceProcessor(BaseProcessor):
                     if resource_id in self.resource_map and not has_resource_pair(resource_id, None):
                         resource_ids.append((resource_id, None))
 
-        mechanism_id = unit_id if unit_id is not None else static_creator_id
+        mechanism_id = resolved_unit_id
         if mechanism_id is not None:
             for resource_id, reward_id in self.mechanism_to_resource_ids.get(mechanism_id, []):
                 if resource_id in self.resource_map and not has_resource_pair(resource_id, reward_id):
                     resource_ids.append((resource_id, reward_id))
 
         return resource_ids
+
+    def _get_unit_id_by_static_creator_id(self, static_creator_id: int) -> Optional[int]:
+        """通过 StaticCreatorId 反查对应的 UnitId。"""
+        self._ensure_resource_link_maps()
+        if self.design_level_unit_ids is None:
+            return None
+        return self.design_level_unit_ids.get(static_creator_id)
+
+    def _build_design_level_unit_ids(self) -> Dict[int, int]:
+        """从 DesignLevel_data 反查 StaticCreatorId -> UnitId。"""
+        cache_key = self._get_exports_root_cache_key()
+        with self._shared_build_locks_lock:
+            cached = self._shared_design_level_unit_id_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+        build_lock = self._get_shared_build_lock(("resource_processor", cache_key, "design_level_unit_ids"))
+        with build_lock:
+            with self._shared_build_locks_lock:
+                cached = self._shared_design_level_unit_id_cache.get(cache_key)
+                if cached is not None:
+                    return cached
+
+            mapping: Dict[int, int] = {}
+            design_level_dir = Path("Script") / "Datas" / "DesignLevel_data"
+            if design_level_dir.is_dir():
+                try:
+                    from step1_convert import parse_lua_file
+                except Exception:
+                    parse_lua_file = None
+                if parse_lua_file is not None:
+                    for lua_path in sorted(design_level_dir.glob("*.lua")):
+                        try:
+                            design_level_data = parse_lua_file(str(lua_path))
+                        except Exception:
+                            continue
+                        self._collect_design_level_unit_ids(design_level_data, mapping)
+
+            with self._shared_build_locks_lock:
+                cached = self._shared_design_level_unit_id_cache.get(cache_key)
+                if cached is not None:
+                    return cached
+                self._shared_design_level_unit_id_cache[cache_key] = mapping
+            with BaseProcessor._shared_items_cache_lock:
+                BaseProcessor._shared_items_cache[
+                    self._shared_cache_key("design_level_unit_ids")
+                ] = mapping
+            return mapping
+
+    def _collect_design_level_unit_ids(self, design_level_data: Any, mapping: Dict[int, int]) -> None:
+        """递归收集 DesignLevel_data 中的 CreatorId -> UnitId。"""
+        if isinstance(design_level_data, dict):
+            creator_id = self._to_int(design_level_data.get("CreatorId"))
+            unit_id = self._to_int(design_level_data.get("UnitId"))
+            if creator_id is not None and unit_id is not None and creator_id not in mapping:
+                mapping[creator_id] = unit_id
+            for value in design_level_data.values():
+                self._collect_design_level_unit_ids(value, mapping)
+        elif isinstance(design_level_data, list):
+            for value in design_level_data:
+                self._collect_design_level_unit_ids(value, mapping)
 
     def _build_rarely_to_drop_ids(self) -> Dict[int, List[int]]:
         """构建 RarelyId -> DropId 映射。"""
@@ -708,8 +778,8 @@ class ResourceProcessor(BaseProcessor):
                         mapping[unit_id].append(pair)
         return mapping
 
-    def _build_random_rule_to_resource_ids(self) -> Dict[int, List[int]]:
-        """构建 RandomRuleId -> ResourceId 列表映射。"""
+    def _build_random_rule_to_resource_ids(self) -> Dict[int, List[Tuple[int, Optional[int]]]]:
+        """构建 RandomRuleId -> ResourceId/RewardId 列表映射。"""
         cache_key = self._shared_cache_key("random_rule_to_resource_ids")
         with BaseProcessor._shared_items_cache_lock:
             cached = BaseProcessor._shared_items_cache.get(cache_key)
@@ -722,7 +792,7 @@ class ResourceProcessor(BaseProcessor):
             if cached is not None:
                 return cached
 
-        mapping: Dict[int, List[int]] = {}
+        mapping: Dict[int, List[Tuple[int, Optional[int]]]] = {}
         for random_rule_id, creator in self.random_creator_data.items():
             if not isinstance(creator, dict):
                 continue
@@ -731,16 +801,16 @@ class ResourceProcessor(BaseProcessor):
             rule_id = self._to_int(random_rule_id)
             if rule_id is None:
                 continue
-            resource_ids: List[int] = []
+            resource_ids: List[Tuple[int, Optional[int]]] = []
             for unit_info in self._normalize_list_field(creator.get("RandomInfos", [])):
                 if not isinstance(unit_info, dict):
                     continue
                 unit_id = self._to_int(unit_info.get("UnitId"))
                 if unit_id is None:
                     continue
-                for resource_id, _ in self.mechanism_to_resource_ids.get(unit_id, []):
-                    if resource_id in self.resource_map and resource_id not in resource_ids:
-                        resource_ids.append(resource_id)
+                for resource_id, reward_id in self.mechanism_to_resource_ids.get(unit_id, []):
+                    if resource_id in self.resource_map and (resource_id, reward_id) not in resource_ids:
+                        resource_ids.append((resource_id, reward_id))
             if resource_ids:
                 mapping[rule_id] = resource_ids
 
@@ -753,8 +823,8 @@ class ResourceProcessor(BaseProcessor):
             BaseProcessor._shared_items_cache[cache_key] = mapping
         return mapping
 
-    def _get_resource_ids_by_random_rule(self, random_rule_id: Any) -> List[int]:
-        """根据 RandomRuleId 读取资源 ID。"""
+    def _get_resource_ids_by_random_rule(self, random_rule_id: Any) -> List[Tuple[int, Optional[int]]]:
+        """根据 RandomRuleId 读取资源 ID 和 RewardId。"""
         self._ensure_resource_link_maps()
         rule_id = self._to_int(random_rule_id)
         if rule_id is None:
@@ -1037,6 +1107,20 @@ class ResourceProcessor(BaseProcessor):
         props = node.get("Properties", {})
         if not isinstance(props, dict):
             return None
+
+        if node.get("Type") == "BP_StaticCreatorComponent_C" and node.get("Name") == "FinishMechanism":
+            attach_parent_ref = props.get("AttachParent")
+            if attach_parent_ref is not None and by_outer_name is not None and by_name is not None:
+                pos = self._extract_ref_location(attach_parent_ref, by_outer_name, by_name, by_path)
+                if pos is not None:
+                    return [pos[0], pos[1]]
+
+        if node.get("Type") == "Explore_Treasure_C":
+            drop_ref = props.get("Drop")
+            if drop_ref is not None and by_outer_name is not None and by_name is not None:
+                pos = self._extract_ref_location(drop_ref, by_outer_name, by_name, by_path)
+                if pos is not None:
+                    return [pos[0], pos[1]]
 
         for key in ("RelativeLocation", "Location"):
             pos = self._to_vector3(props.get(key))

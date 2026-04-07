@@ -4670,7 +4670,7 @@ return ReadOnly("VisualEffect", {
       Rotation = T.RT_99
     },
     EffectPath = "/Game/Asset/Effect/Niagara/Player/Suyi01/NS_SP01_SM_neck_01_star.NS_SP01_SM_neck_01_star",
-    FXPriorityType = 90,
+    FXPriorityType = 100,
     NotHideInSkillFeature = true,
     PlayLocation = {
       socket = "chest_spring"

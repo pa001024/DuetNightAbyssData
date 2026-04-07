@@ -47,7 +47,7 @@ return {
       key = "17727828900465420529",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1300.764705882353, y = 294.7689075630252},
+      pos = {x = 1300.764705882353, y = 292.7689075630252},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",

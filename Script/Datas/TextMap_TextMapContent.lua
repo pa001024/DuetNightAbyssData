@@ -57603,7 +57603,7 @@ local Data = {
           TextMapId = "UIGuide_FuWen_2"
         },
         UIGuide_GongFeng_1 = {
-          TextMapContent = "赛场上会随机出现<Highlight>供奉篮</>，可将百宝囊内的宝物放置其中供奉给白龙神君，神君会根据供奉宝物的价值赐予不同程度的试炼，供奉价值越高，敌人战力越高。\n每个<Highlight>供奉篮</>只能成功供奉一次，供奉完成后，不可再次使用。",
+          TextMapContent = "<Highlight>机枢密室</>可使用对应编号的<Highlight>机枢密钥</>开启，其中不仅有高价值宝物容器，还有概率开出藏匿毒烟的容器，请小心躲避毒烟。\n开启密室所用的机枢密钥可于赛内搜索特定容器获得，每枚秘钥仅可使用一次；参与赛中守护任务将大幅提升获取秘钥概率。如将密钥带出赛场，则折算为100文筹（文筹折算不受熏香效果影响）。",
           TextMapId = "UIGuide_GongFeng_1"
         },
         UIGuide_HardBoss_01 = {
@@ -91745,7 +91745,7 @@ local Data = {
           TextMapId = "UI_SoloTreasureShop"
         },
         UI_SoloTreasureTicketLevelTips = {
-          TextMapContent = "成功结算时将会额外结算铜币奖励。\n正常难度成功结算时，结算获得文武筹奖励的同时，以<H>50%</>的比例将文武筹<H>额外</>转化为铜币奖励，单局铜币获取数量上限为<H>1000000</>。\n挑战难度成功结算时，结算获得文武筹奖励的同时，以<H>200%</>的比例将文武筹<H>额外</>转化为铜币奖励，单局铜币获取数量上限为<H>3000000</>。\n",
+          TextMapContent = "成功结算时将会额外结算铜币奖励。\n正常难度成功结算时，结算获得文武筹奖励的同时，以<H>50%</>的比例将文武筹<H>额外</>转化为铜币奖励，单局铜币获取数量上限为<H>1000000</>。\n挑战难度成功结算时，结算获得文武筹奖励的同时，以<H>200%</>的比例将文武筹<H>额外</>转化为铜币奖励，单局铜币获取数量上限为<H>3000000</>。",
           TextMapId = "UI_SoloTreasureTicketLevelTips"
         },
         UI_SoloTreasure_ArmoryEmptyComponent = {

@@ -3318,17 +3318,17 @@ return ReadOnly("Talk_SoundEditor", {
   voice_ch_char_Kami_vo_topic_03_1 = {
     ProgrammerSoundPath = "event:/voice/ch/char/Kami/vo",
     SelectKey = "voice_ch_char_Kami_vo_topic_03_1",
-    SoundLength = 15670
+    SoundLength = 3050
   },
   voice_ch_char_Kami_vo_topic_03_2 = {
     ProgrammerSoundPath = "event:/voice/ch/char/Kami/vo",
     SelectKey = "voice_ch_char_Kami_vo_topic_03_2",
-    SoundLength = 16960
+    SoundLength = 16480
   },
   voice_ch_char_Kami_vo_topic_03_3 = {
     ProgrammerSoundPath = "event:/voice/ch/char/Kami/vo",
     SelectKey = "voice_ch_char_Kami_vo_topic_03_3",
-    SoundLength = 3000
+    SoundLength = 3010
   },
   voice_ch_char_Kami_vo_topic_04 = {
     ProgrammerSoundPath = "event:/voice/ch/char/Kami/vo",
@@ -74863,11 +74863,6 @@ return ReadOnly("Talk_SoundEditor", {
     ProgrammerSoundPath = "event:/voice/ch/story/1204",
     SelectKey = "voice_ch_story_1204_120432_1E262020_f",
     SoundLength = 1980
-  },
-  voice_ch_story_1204_120432_1E262020_m = {
-    ProgrammerSoundPath = "event:/voice/ch/story/1204",
-    SelectKey = "voice_ch_story_1204_120432_1E262020_m",
-    SoundLength = 1970
   },
   voice_ch_story_1204_120432_1E26204A = {
     ProgrammerSoundPath = "event:/voice/ch/story/1204",
@@ -244471,7 +244466,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_jp_story_1204_120466_1E284CA0 = {
     ProgrammerSoundPath = "event:/voice/jp/story/1204",
     SelectKey = "voice_jp_story_1204_120466_1E284CA0",
-    SoundLength = 13250
+    SoundLength = 13420
   },
   voice_jp_story_1204_120466_1E284CCA = {
     ProgrammerSoundPath = "event:/voice/jp/story/1204",
@@ -244516,7 +244511,7 @@ return ReadOnly("Talk_SoundEditor", {
   voice_jp_story_1204_120467_1E285C8A = {
     ProgrammerSoundPath = "event:/voice/jp/story/1204",
     SelectKey = "voice_jp_story_1204_120467_1E285C8A",
-    SoundLength = 16000
+    SoundLength = 4020
   },
   voice_jp_story_1204_120467_1E285CB4 = {
     ProgrammerSoundPath = "event:/voice/jp/story/1204",
@@ -248162,11 +248157,6 @@ return ReadOnly("Talk_SoundEditor", {
     ProgrammerSoundPath = "event:/voice/jp/story/1206",
     SelectKey = "voice_jp_story_1206_120609_1E317592",
     SoundLength = 7750
-  },
-  voice_jp_story_1206_120609_1E3175BC = {
-    ProgrammerSoundPath = "event:/voice/jp/story/1206",
-    SelectKey = "voice_jp_story_1206_120609_1E3175BC",
-    SoundLength = 12180
   },
   voice_jp_story_1206_120609_1E3175E6 = {
     ProgrammerSoundPath = "event:/voice/jp/story/1206",

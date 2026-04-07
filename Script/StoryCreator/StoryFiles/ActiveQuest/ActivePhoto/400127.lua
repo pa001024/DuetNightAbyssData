@@ -47,7 +47,7 @@ return {
       key = "17694125753735204177",
       type = "StoryNode",
       name = "执律阁拍照",
-      pos = {x = 1373.1216687333697, y = 295.5159026324627},
+      pos = {x = 1374.1561514919904, y = 295.5159026324627},
       propsData = {
         QuestId = 40012700,
         QuestDescriptionComment = "",

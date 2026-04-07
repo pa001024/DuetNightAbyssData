@@ -44,7 +44,7 @@ function BP_AutoDoor_C:EndWait(Character)
 end
 
 function BP_AutoDoor_C:OpenMechanism(CharacterEid)
-  print(_G.LogTag, "LXZ OpenMechanism", self:GetName(), CharacterEid)
+  print(_G.LogTag, "LXZ OpenMechanism")
   self:UpdateRegionData("DoorOpenState", true)
   local NeedRepair = false
   for i, v in pairs(self.ComponentLoc) do
@@ -67,7 +67,7 @@ function BP_AutoDoor_C:OpenMechanism(CharacterEid)
 end
 
 function BP_AutoDoor_C:CloseMechanism(CharacterEid)
-  print(_G.LogTag, "LXZ CloseMechanism", self:GetName())
+  print(_G.LogTag, "LXZ CloseMechanism")
   self:UpdateRegionData("DoorOpenState", false)
   local NeedRepair = false
   for i, v in pairs(self.ComponentLoc) do
