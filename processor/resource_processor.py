@@ -2,7 +2,7 @@ import json
 import os
 import threading
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 from processor.base_processor import BaseProcessor
 
 
@@ -507,6 +507,7 @@ class ResourceProcessor(BaseProcessor):
         by_path: Optional[Dict[str, dict]] = None,
     ) -> None:
         """从设计层数据提取资源来源。"""
+        treasure_actor_names = self._collect_treasure_actor_names(level_data)
         candidate_nodes: List[Tuple[dict, List[Tuple[int, Optional[int]]], Optional[int], Optional[int]]] = []
         unit_based_resource_ids = set()
         for node in self._iter_design_level_nodes(level_data):
@@ -514,6 +515,18 @@ class ResourceProcessor(BaseProcessor):
                 continue
             props = node.get("Properties", {})
             if not isinstance(props, dict):
+                continue
+            if (
+                node.get("Type") == "BP_StaticCreatorComponent_C"
+                and node.get("Name") == "Drop"
+                and self._is_treasure_drop_component(node, treasure_actor_names)
+            ):
+                continue
+            if (
+                node.get("Type") == "BP_StaticCreatorComponent_C"
+                and node.get("Name") == "Drop"
+                and self._is_explore_drop_component(node)
+            ):
                 continue
             resource_ids = self._extract_resource_ids_from_node(node, props)
             if not resource_ids:
@@ -546,6 +559,53 @@ class ResourceProcessor(BaseProcessor):
                 if not source_item:
                     continue
                 self._append_source_pos(source_item, pos)
+
+    @staticmethod
+    def _collect_treasure_actor_names(level_data: Any) -> Set[str]:
+        """收集当前设计层中的 Explore_Treasure_C actor 名称。"""
+        treasure_actor_names: Set[str] = set()
+        if isinstance(level_data, list):
+            iterable = level_data
+        elif isinstance(level_data, dict):
+            iterable = []
+            for group_data in level_data.values():
+                if isinstance(group_data, dict):
+                    iterable.extend(group_data.values())
+                elif isinstance(group_data, list):
+                    iterable.extend(group_data)
+        else:
+            iterable = []
+        for node in iterable:
+            if not isinstance(node, dict):
+                continue
+            if node.get("Type") != "Explore_Treasure_C":
+                continue
+            name = node.get("Name")
+            if isinstance(name, str) and name:
+                treasure_actor_names.add(name)
+        return treasure_actor_names
+
+    def _is_treasure_drop_component(self, node: dict, treasure_actor_names: Set[str]) -> bool:
+        """判断 Drop 组件是否属于 Explore_Treasure_C。"""
+        outer = node.get("Outer")
+        outer_name = outer.get("ObjectName") if isinstance(outer, dict) else outer
+        if not isinstance(outer_name, str):
+            return False
+        _, outer_short_name = self._ref_outer_and_name(outer_name)
+        if outer_short_name and outer_short_name in treasure_actor_names:
+            return True
+        return "Explore_Treasure_C'" in outer_name
+
+    def _is_explore_drop_component(self, node: dict) -> bool:
+        """判断 Drop 组件是否属于 Explore_Drop_C。"""
+        outer = node.get("Outer")
+        outer_name = outer.get("ObjectName") if isinstance(outer, dict) else outer
+        if not isinstance(outer_name, str):
+            return False
+        _, outer_short_name = self._ref_outer_and_name(outer_name)
+        if outer_short_name and outer_short_name.startswith("Explore_Drop"):
+            return True
+        return "Explore_Drop_C'" in outer_name
 
     def _collect_resource_sources_from_random_rule_points(
         self,
@@ -988,13 +1048,13 @@ class ResourceProcessor(BaseProcessor):
             if obj.get("Type") != "BP_RandomActorDataManager_C":
                 continue
             root_ref = props.get("DefaultSceneRoot")
-            root_obj = self._resolve_ref_object(root_ref, by_outer_name, by_name, by_path)
+            root_obj = BaseProcessor._resolve_ref_object(root_ref, by_outer_name, by_name, by_path)
             if not isinstance(root_obj, dict):
                 continue
             root_props = root_obj.get("Properties", {})
             if not isinstance(root_props, dict):
                 continue
-            root = self._to_vector3(root_props.get("RelativeLocation"))
+            root = BaseProcessor._to_vector3(root_props.get("RelativeLocation"))
             if root is not None:
                 return root
         return None
@@ -1116,11 +1176,17 @@ class ResourceProcessor(BaseProcessor):
                     return [pos[0], pos[1]]
 
         if node.get("Type") == "Explore_Treasure_C":
-            drop_ref = props.get("Drop")
-            if drop_ref is not None and by_outer_name is not None and by_name is not None:
-                pos = self._extract_ref_location(drop_ref, by_outer_name, by_name, by_path)
-                if pos is not None:
-                    return [pos[0], pos[1]]
+            pos = self._extract_object_location(
+                node, by_outer_name, by_name, by_path, prefer_root_first=True
+            )
+            if pos is not None:
+                return [pos[0], pos[1]]
+        if node.get("Type") == "Explore_Drop_C":
+            pos = self._extract_object_location(
+                node, by_outer_name, by_name, by_path, prefer_root_first=True
+            )
+            if pos is not None:
+                return [pos[0], pos[1]]
 
         for key in ("RelativeLocation", "Location"):
             pos = self._to_vector3(props.get(key))

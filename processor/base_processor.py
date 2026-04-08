@@ -2,6 +2,7 @@ import json
 import re
 from collections import OrderedDict
 from threading import Lock
+from typing import Any, Dict, List, Optional, Tuple
 
 
 class BaseProcessor:
@@ -17,6 +18,256 @@ class BaseProcessor:
         self.condition_data = data_loader.load_json("Condition.json")
         # 预加载所有语言的对话数据
         self.dialogue_data_cache = {}
+
+    @staticmethod
+    def _ref_outer_and_name(object_name: Optional[str]) -> Tuple[Optional[str], Optional[str]]:
+        """解析对象引用的 Outer 与短名。"""
+        if not object_name:
+            return None, None
+        raw = object_name.strip("'")
+        if ":" in raw:
+            raw = raw.split(":", 1)[1]
+        parts = raw.split(".")
+        if len(parts) >= 2:
+            return parts[-2], parts[-1]
+        if len(parts) == 1:
+            return None, parts[0]
+        return None, None
+
+    @staticmethod
+    def _build_object_maps(
+        arr: List[dict],
+    ) -> Tuple[Dict[Tuple[str, str], dict], Dict[str, List[dict]], Dict[str, dict]]:
+        """构建对象索引，便于从 ObjectRef 快速反查对象。"""
+        by_outer_name: Dict[Tuple[str, str], dict] = {}
+        by_name: Dict[str, List[dict]] = {}
+        by_path: Dict[str, dict] = {}
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            name = obj.get("Name")
+            outer = obj.get("Outer")
+            outer_name = outer.get("ObjectName") if isinstance(outer, dict) else outer
+            outer_short_name = None
+            if isinstance(outer_name, str):
+                _, outer_short_name = BaseProcessor._ref_outer_and_name(outer_name)
+            if isinstance(name, str):
+                by_name.setdefault(name, []).append(obj)
+                if isinstance(outer_name, str):
+                    by_outer_name[(outer_name, name)] = obj
+                if isinstance(outer_short_name, str):
+                    by_outer_name[(outer_short_name, name)] = obj
+            if isinstance(object_path := obj.get("ObjectPath"), str):
+                by_path[object_path] = obj
+        return by_outer_name, by_name, by_path
+
+    @staticmethod
+    def _resolve_ref_object(
+        ref_obj: Optional[dict],
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
+    ) -> Optional[dict]:
+        """从引用对象中反查真实对象。"""
+        if not isinstance(ref_obj, dict):
+            return None
+        object_name = ref_obj.get("ObjectName")
+        object_path = ref_obj.get("ObjectPath")
+        outer_name, short_name = BaseProcessor._ref_outer_and_name(object_name)
+        if by_path is not None and isinstance(object_path, str) and object_path in by_path:
+            return by_path[object_path]
+        if outer_name and short_name:
+            found = by_outer_name.get((outer_name, short_name))
+            if found is not None:
+                return found
+        if short_name:
+            candidates = by_name.get(short_name, [])
+            if len(candidates) == 1:
+                return candidates[0]
+        return None
+
+    @staticmethod
+    def _to_vector3(value) -> Optional[List[float]]:
+        """将向量数据转为三元坐标。"""
+        if not isinstance(value, dict):
+            return None
+        x = value.get("X")
+        y = value.get("Y")
+        z = value.get("Z")
+        if x is None or y is None:
+            return None
+        try:
+            return [float(x), float(y), float(z if z is not None else 0.0)]
+        except Exception:
+            return None
+
+    def _extract_ref_location(
+        self,
+        ref_obj: Optional[dict],
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
+        prefer_root_first: bool = False,
+        accumulate_attach_parent: bool = False,
+    ) -> Optional[List[float]]:
+        """从引用对象中直接解析坐标。"""
+        resolved_obj = BaseProcessor._resolve_ref_object(ref_obj, by_outer_name, by_name, by_path)
+        if not isinstance(resolved_obj, dict):
+            return None
+
+        props = resolved_obj.get("Properties", {})
+        if not isinstance(props, dict):
+            return None
+
+        if prefer_root_first:
+            root_ref = props.get("RootComponent") or props.get("DefaultSceneRoot")
+            if root_ref is not None:
+                loc = BaseProcessor._extract_ref_location(
+                    self,
+                    root_ref,
+                    by_outer_name,
+                    by_name,
+                    by_path,
+                    prefer_root_first=False,
+                )
+                if loc is not None:
+                    return loc
+
+        local_loc = None
+        for key in ("RelativeLocation", "Location"):
+            local_loc = BaseProcessor._to_vector3(props.get(key))
+            if local_loc is not None:
+                break
+
+        transform = props.get("RelativeTransform")
+        if isinstance(transform, dict):
+            transform_loc = BaseProcessor._to_vector3(transform.get("Translation"))
+            if transform_loc is not None:
+                local_loc = transform_loc
+
+        if local_loc is not None:
+            if accumulate_attach_parent:
+                attach_parent = props.get("AttachParent")
+                if isinstance(attach_parent, dict):
+                    parent_loc = BaseProcessor._extract_ref_location(
+                        self,
+                        attach_parent,
+                        by_outer_name,
+                        by_name,
+                        by_path,
+                        prefer_root_first=False,
+                        accumulate_attach_parent=True,
+                        )
+                    if parent_loc is not None:
+                        return [
+                            local_loc[0] + parent_loc[0],
+                            local_loc[1] + parent_loc[1],
+                            local_loc[2] + parent_loc[2],
+                        ]
+                outer_ref = resolved_obj.get("Outer")
+                if isinstance(outer_ref, dict):
+                    outer_loc = BaseProcessor._extract_ref_location(
+                        self,
+                        outer_ref,
+                        by_outer_name,
+                        by_name,
+                        by_path,
+                        prefer_root_first=True,
+                        accumulate_attach_parent=False,
+                    )
+                    if outer_loc is not None:
+                        return outer_loc
+            return local_loc
+
+        attach_parent = props.get("AttachParent")
+        if isinstance(attach_parent, dict):
+            loc = self._extract_ref_location(
+                attach_parent,
+                by_outer_name,
+                by_name,
+                by_path,
+                prefer_root_first=False,
+                accumulate_attach_parent=accumulate_attach_parent,
+            )
+            if loc is not None:
+                return loc
+
+        return None
+
+    def _extract_object_location(
+        self,
+        obj: dict,
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
+        prefer_root_first: bool = False,
+    ) -> Optional[List[float]]:
+        """提取对象自身或其根组件的位置。"""
+        if not isinstance(obj, dict):
+            return None
+
+        props = obj.get("Properties", {})
+        if not isinstance(props, dict):
+            return None
+
+        def resolve_root_related() -> Optional[List[float]]:
+            root_ref = props.get("RootComponent") or props.get("DefaultSceneRoot")
+            if root_ref is not None:
+                loc = self._extract_ref_location(root_ref, by_outer_name, by_name, by_path)
+                if loc is not None:
+                    return loc
+
+            attach_parent = props.get("AttachParent")
+            if attach_parent is not None:
+                loc = self._extract_ref_location(
+                    attach_parent, by_outer_name, by_name, by_path
+                )
+                if loc is not None:
+                    return loc
+
+            for component_key in ("Sphere", "SceneComponent", "CollisionComponent"):
+                component_ref = props.get(component_key)
+                if component_ref is None:
+                    continue
+                loc = self._extract_ref_location(
+                    component_ref, by_outer_name, by_name, by_path
+                )
+                if loc is not None:
+                    return loc
+
+            blueprint_components = props.get("BlueprintCreatedComponents")
+            if isinstance(blueprint_components, list):
+                for component_ref in blueprint_components:
+                    loc = self._extract_ref_location(
+                        component_ref, by_outer_name, by_name, by_path
+                    )
+                    if loc is not None:
+                        return loc
+            return None
+
+        def resolve_direct_fields() -> Optional[List[float]]:
+            for key in ("RelativeLocation", "Location"):
+                loc = BaseProcessor._to_vector3(props.get(key))
+                if loc is not None:
+                    return loc
+
+            transform = props.get("RelativeTransform")
+            if isinstance(transform, dict):
+                loc = BaseProcessor._to_vector3(transform.get("Translation"))
+                if loc is not None:
+                    return loc
+            return None
+
+        if prefer_root_first:
+            loc = resolve_root_related()
+            if loc is not None:
+                return loc
+            return resolve_direct_fields()
+
+        loc = resolve_direct_fields()
+        if loc is not None:
+            return loc
+        return resolve_root_related()
 
     @classmethod
     def _load_shared_i18n_cn_alt(cls, data_loader):

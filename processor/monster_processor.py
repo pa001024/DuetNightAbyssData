@@ -140,9 +140,10 @@ class MonsterProcessor(BaseProcessor):
             # 使用ModelId到图标的映射获取图标
             icon = self.model_id_to_icon.get(model_id, "")
 
-        # 如果通过ModelId没有获取到图标，回退到原来的逻辑
+        # 如果通过ModelId没有获取到图标，优先按GalleryRuleId回退
         if not icon:
-            gallery_info = self.gallery_rule_data.get(str(id), {})
+            gallery_rule_id = monster_data.get("GalleryRuleId", id)
+            gallery_info = self.gallery_rule_data.get(str(gallery_rule_id), {})
             if gallery_info and "MonsterIcon" in gallery_info:
                 monster_icon = gallery_info["MonsterIcon"]
                 # 提取T_Head_后面的值

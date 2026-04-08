@@ -12,12 +12,12 @@
         "text": "1er janvier\nAujourd’hui, ▇▇▇▇ m’a donné quelques éclats de Phoxène en guise « d’argent de poche ».\nElle m’a expliqué qu’à la Capitale, les enfants reçoivent régulièrement de l’argent de leurs aînés jusqu’à leur majorité — pour acheter ce qu’ils désirent : nourriture, jouets, et autres babioles.\n\nIl n’y a aucune boutique dans la zone des ruines ; elle m’a donc dit de les économiser. Ainsi, le jour où j’aurai envie de quelque chose, ou que je voudrai accomplir quelque chose, je pourrai lui remettre une partie de cet « argent de poche » pour qu’elle m’aide.\n\nMais... je ne sais pas vraiment ce que je veux.\n\n2 janvier\nJ’ai trouvé ! Je pourrais offrir un « cadeau d’anniversaire » à {nickname} !\nDans les livres, il est écrit que les enfants de la Capitale mangent un gâteau pour célébrer leur anniversaire. Cela a l’air très précieux... mais si j’économise assez, je pourrai demander à ▇▇▇▇ de m’aider à en obtenir un.\n\nJ’ai trouvé une vieille jarre en argile dans la cuisine : parfaite pour y garder mes économies.\n\n16 janvier\nAujourd’hui, alors que nous jouions à cache-cache, {nickname} a découvert ma jarre et a failli l’ouvrir... Je dois lui trouver une meilleure cachette.\nDemain, je me faufilerai dans la salle d’alchimie de ▇▇▇▇ pour chercher un endroit sûr. Il y a là-bas plein d’appareils impressionnants, et ▇▇▇▇ ne laisse jamais {nickname} y entrer.\n\n17 janvier\nJ’ai caché ma tirelire <H>près de la cascade, dans la salle d’alchimie</>.\nAinsi, ni {nickname} ni ▇▇▇▇ ne tomberont dessus.\n\n...\n\n▇▇ ▇▇\nL’anniversaire de {nickname} approche, et j’ai économisé assez pour remplir toute une caisse d’« argent de poche ». Cela devrait suffire pour échanger contre un gâteau. Mais ▇▇▇▇ semble préoccupée ces derniers temps. Elle se couche très tard... Peut-être que ce n’est pas le bon moment pour lui demander quoi que ce soit.\n\nL’an prochain, je pourrai demander un gâteau encore plus grand — tellement grand que nous pourrons tous les trois en manger jusqu’à ne plus avoir faim.",
         "srId": 100102,
         "pos": [
-          -3099.1875,
-          -1306.1221
+          27885,
+          5905
         ],
         "treasurePos": [
-          1441.5254,
-          -126.45215
+          29326.5254,
+          5778.54785
         ]
       },
       {
@@ -27,12 +27,12 @@
         "text": "Berry,\n\nSi tu lis cette lettre, c’est que tu es revenue ici.\nTu as toujours été une fille réfléchie, et je suis sûr que tu avais une bonne raison de revenir.\nJ’ai laissé des provisions pour ton voyage, enterrées <H>près du dirigeable</> — elles devraient suffire à quitter l’Île du Purgatoire.\n\nPuisses-tu voyager en sécurité.",
         "srId": 100103,
         "pos": [
-          -3521,
-          674
+          21480,
+          24980
         ],
         "treasurePos": [
-          4685.4395,
-          6653.086
+          26165.4395,
+          31633.086
         ]
       },
       {
@@ -42,12 +42,12 @@
         "text": "La Déesse du Destin tisse la course des étoiles et nous offre la lumière pour guider nos pas vers le bonheur éternel.\n\nPourtant, les humains ont trahi Ses enseignements.\nNous avons oublié l’amour et la compassion, et brandissons à présent des lames glacées les uns contre les autres.\nLes terres sacrées se sont effondrées, et même Ses temples ont été souillés.\n\nSi cette épreuve est bien celle qu’Elle a voulue — la nuit avant l’aube — alors, à toi, voyageur du futur, je lègue une bénédiction venue d’un autre temps.\n\nDans <H>un lieu que Son regard ne frôlera jamais</>, j’ai enfoui l’héritage d’une ère où l’humanité croyait encore en l’amour et en la fraternité.\n\nQue Ses fils du destin te guident vers la véritable aurore.",
         "srId": 100101,
         "pos": [
-          -3525,
-          9915
+          8260,
+          -3620
         ],
         "treasurePos": [
-          3730,
-          -80
+          11990,
+          -3700
         ]
       },
       {
@@ -57,12 +57,12 @@
         "text": "Le temps s’efface, la mémoire s’endort.\nLes visages changent, les vents se souviennent.\nSous les collines, la lumière des dieux persiste.\nLes racines murmurent au voyageur patient.\nDans la caverne, la vérité sommeille.\nLà où tout se fane, un nouveau cycle s’éveille.",
         "srId": 100103,
         "pos": [
-          -135,
-          -191
+          38879,
+          19823
         ],
         "treasurePos": [
-          -8901.225,
-          -42.904297
+          29977.775,
+          19780.095703
         ]
       }
     ]
@@ -80,12 +80,12 @@
         "text": "Désolé ma belle, j’ai eu quelques ennuis à la maison. Ce mois-ci, je ne pourrai pas t’emmener vivre dans la cité intérieure comme promis. Mais ne t’en fais pas — dès que tout sera réglé, je viendrai te chercher. Fais-moi confiance, une dernière fois, d’accord ?\nPour me faire pardonner, j’ai caché quelques pièces <H>sous le carré d’herbe à gauche du passage</> vers la cité intérieure. N’oublie pas d’aller les chercher. Je t’aime.\n\n<W>Sale menteur ! Salaud ! À chaque fois, tu crois pouvoir m’acheter avec ton fric ! Je ne suis pas ton chien ! Je ne veux rien de toi ! Garde ton argent et casse-toi !</>",
         "srId": 101101,
         "pos": [
-          -1,
-          38
+          -2050,
+          4170
         ],
         "treasurePos": [
-          2869.9685,
-          -6204.9277
+          819.9685,
+          -2034.9277
         ]
       },
       {
@@ -95,12 +95,12 @@
         "text": "Hé, toi ! Marre de galérer dans la misère ?\nFatigué de bosser comme un chien pour une misère, sous les regards méprisants ?\nT’as beau te tuer à la tâche, tu restes toujours fauché ?\nNe t’en veux pas — le problème, c’est pas toi. Ce qu’il te manque, c’est pas le talent... c’est la chance !\nAujourd’hui, ta chance tourne !\nLe mois dernier, notre Alliance Minière Légendaire a dévoilé une invention révolutionnaire, dix ans de travail !\nUne machine d’extraction nouvelle génération : facile à utiliser, durable, et surtout capable d’extraire les particules de Phoxène invisibles à l’œil nu, pour les transformer en pierres solides !\nGrâce à elle, les mines épuisées de Givrelac vont renaître, et notre industrie minière retrouvera sa gloire passée !\n\nEt nous recrutons dès maintenant ! Une occasion pareille ne se présentera qu’une fois ! Résous l’énigme ci-dessous pour obtenir ton laissez-passer !\n\n(En bas de la page figure un croquis sommaire des taudis, avec un symbole de Phoxène marquant <H>un tas de ferraille près d’une poubelle sur le bas-côté</>.)",
         "srId": 101101,
         "pos": [
-          -155.99997,
-          101.00003
+          -1700.7699,
+          -7420.7163
         ],
         "treasurePos": [
-          -5315.8823,
-          819.4922
+          -7016.6522,
+          -6601.2241
         ]
       },
       {
@@ -110,12 +110,12 @@
         "text": "La dernière fois, on a trouvé ma cachette d’argent de poche...\nCette fois, j’ai demandé conseil à un pro : il m’a dit de cacher mon magot <H>près d’une flaque, hors de la cité</>.\n\nBon, le Phoxène ne craint pas l’eau, mais la boîte, elle, risque de moisir avec l’humidité... Et si tout partait en bouillie, ce serait vraiment de l’argent jeté à l’eau, pas vrai ?\n\nEnfin... mieux vaut ça que de se le faire piquer.\nJ’irai vérifier la cache la semaine prochaine, juste pour être sûr.",
         "srId": 101101,
         "pos": [
-          -585,
-          296
+          -9393,
+          7504
         ],
         "treasurePos": [
-          -5981.3486,
-          5351.575
+          -15374.3486,
+          12855.575
         ]
       },
       {
@@ -125,12 +125,12 @@
         "text": "Hé ! On joue à un jeu ?\nSi tu trouves <H>le plus gros cristal</> des environs, je te donne un cadeau !",
         "srId": 101301,
         "pos": [
-          -718.21533,
-          3934.8008
+          6308,
+          2379
         ],
         "treasurePos": [
-          -6188.044,
-          668.41797
+          119.956,
+          3047.41797
         ]
       },
       {
@@ -140,12 +140,12 @@
         "text": "<W>Il n’y a ici aucun morceau de Phoxène, pas même cent.</>\n\n(Sous ces mots, des lignes irrégulières esquissent vaguement les galeries de la mine. Le cercle rouge semble indiquer <H>l’entrée de la mine</>.)",
         "srId": 101103,
         "pos": [
-          1508.2344,
-          4569.042
+          -39461,
+          -3328
         ],
         "treasurePos": [
-          6686.7773,
-          -8421.505
+          -32774.2227,
+          -11749.505
         ]
       },
       {
@@ -155,12 +155,12 @@
         "text": "Je l’ai vu de mes propres yeux : un éclat bleu surgir <H>du pied de cette colonne effondrée</> ! Et pourtant, il n’y a aucun dispositif lumineux à cet endroit ! Il y a forcément quelque chose de louche...\n\nSans doute l’esprit d’un mineur mort d’épuisement, resté accroché là... Voilà pourquoi personne n’a jamais réussi à réparer cette colonne depuis si longtemps !",
         "srId": 101103,
         "pos": [
-          2924.7324,
-          1436.1116
+          -28580,
+          -5200
         ],
         "treasurePos": [
-          -4828.461,
-          2864.8145
+          -33408.461,
+          -2335.1855
         ]
       },
       {
@@ -170,12 +170,12 @@
         "text": "Salut, étranger.\nJe suis un explorateur, et cette caverne est l’un des plus beaux endroits que j’aie jamais vus — on croirait le repaire des fées des neiges !\n\nDe gigantesques stalactites de glace pure, les racines pétrifiées d’un vieil Arbre Céleste, un labyrinthe naturel fascinant... Tout ici palpite d’énergie et d’émerveillement.\n\nSi tu es arrivé jusqu’ici, ne rebrousse pas chemin ! Plus haut, le spectacle est encore plus grandiose.\nJ’ai laissé pour toi un petit présent et quelques provisions <H>au sommet de la caverne</>.\n\nAvance sans crainte, aventurier : la vie est un voyage, et le voyage ne s’arrête jamais !",
         "srId": 101103,
         "pos": [
-          -5404.076,
-          3901.4297
+          -25917,
+          5325
         ],
         "treasurePos": [
-          28171,
-          6877
+          2254,
+          12202
         ]
       },
       {
@@ -185,12 +185,12 @@
         "text": "Te souviens-tu ? Ce jour où nous avons quitté la cité pour marcher jusqu’à la <H>Rive du Lac du Deuil</>, traversant les eaux peu profondes.« Regarde, un arbre aux feuilles rouges », disais-tu.« Elles sont orange », t’ai-je corrigé.« J’ai dit rouge », as-tu insisté, obstinée.\nJ’avais mis de côté quelques morceaux de Phoxène — je voulais les échanger contre une véritable plante aux feuilles rouges, un cadeau pour toi.Finalement, je les ai enfouies <H>sous cet arbre aux feuilles orangées</>.\n... Oui, je pense toujours qu’elles sont orange. Pardonne-moi.Les feuilles ne virent pas au rouge parce que tu l’affirmes, tout comme tu ne reviendras pas simplement parce que je le désire.\nPeut-être qu’au printemps, le Phoxène germera — comme les sentiments que je porte encore. Ou peut-être qu’un passant chanceux les déterrera.\nPeu importe. Tu disais toujours que les bonnes choses doivent être partagées.Si ce présent que je n’ai jamais pu t’offrir peut aider quelqu’un dans le besoin... alors peut-être est-ce là une forme d’heureuse conclusion.",
         "srId": 101103,
         "pos": [
-          -2639.332,
-          983.77734
+          -38101.484,
+          30920.523
         ],
         "treasurePos": [
-          -17432.828,
-          -3684.5176
+          -55534.312,
+          27236.0054
         ]
       },
       {
@@ -200,12 +200,12 @@
         "text": "On sait qu’un œuf laissé au chaud finit par éclore.\nAlors le Phoxène, si on le garde au chaud... ne ferait-il pas pousser un Arbre Céleste ? J’aurais de l’argent pour l’éternité ! Quel génie je fais — non, quel visionnaire !\nEt justement, je suis de garde au <H>Four de Régulation</>.\nHéhé... demain, j’y apporterai le Phoxène de la maison pour le faire éclore...",
         "srId": 101702,
         "pos": [
-          0,
-          0
+          -32562,
+          -16124
         ],
         "treasurePos": [
-          -3198,
-          8512
+          -35760,
+          -7612
         ]
       },
       {
@@ -215,12 +215,12 @@
         "text": "... Tout le monde se trompe sur les Bonnets de neige : ils ne sont pas effrayants, ni toxiques. Avec assez de cuisson et les bons assaisonnements, c’est un plat délicieux !\nMais maintenant... les Bonnets de neige ne me suffisent plus. Et les champignons ordinaires du marché ? Je les ai mangés mille fois ! Insuffisant ! Bien trop insuffisant !\n\nJe veux trouver plus grand, plus étrange, plus merveilleux — le Roi des Champignons !\n\nJ’ai fouillé les égouts toute la journée, et finalement, <H>près de la vanne la plus profonde</>, j’ai découvert une touffe d’un tout nouveau champignon... Rien que leurs couleurs me faisaient saliver ! J’en ai déterré quelques-uns pour tester des recettes.\n\nOn dit que les anciens déposaient des offrandes aux dieux pour obtenir une bonne récolte. Si je laisse quelque chose sous ces champignons... le Dieu des Champignons d’Atlasia me bénira-t-il pour que j’en trouve encore plus, encore meilleurs ? Je n’avais que quelques pièces et un peu de nourriture sur moi — j’ai tout offert.\nJ’espère que le Dieu des Champignons ne m’en tiendra pas rigueur...",
         "srId": 101701,
         "pos": [
-          0,
-          26.611816
+          -14120,
+          -7175
         ],
         "treasurePos": [
-          3642,
-          1860
+          -10478,
+          -5315
         ]
       }
     ]
@@ -238,12 +238,12 @@
         "text": "« La forteresse ne tiendra pas plus longtemps... Ne restez pas là à mourir en suivant les ordres. Vous n’êtes pas inscrits sur les registres militaires, personne ne remarquera votre absence.\nDes vivres de secours se trouvent <H>près du dirigeable</> — prenez-les, et rentrez chez vous. »\n\n(Le bas de la page est couvert d’une large tache brun rouge, rendant la suite illisible.)",
         "srId": 102101,
         "pos": [
-          0,
-          0
+          30081,
+          -31233
         ],
         "treasurePos": [
-          17.173828,
-          2263.6016
+          30098.173828,
+          -28969.3984
         ]
       },
       {
@@ -253,12 +253,12 @@
         "text": "Point de ravitaillement temporaire :\n<H>Sous la console de commande, près de la fenêtre d’observation extérieure de la salle des machines.</>",
         "srId": 102101,
         "pos": [
-          0,
-          0
+          19415,
+          -37668
         ],
         "treasurePos": [
-          -9476.516,
-          -4061.3125
+          9938.484,
+          -41729.3125
         ]
       },
       {
@@ -268,12 +268,12 @@
         "text": "« Hé, mes chers anciens camarades — et si l’on fêtait un petit quelque chose ?\n\nPas d’inquiétude, je sais très bien que la forteresse n’autorise que la célébration de la Journée du Triomphe... mais rien ne nous empêche d’honorer en secret un autre festival, non ?\n\nChez moi, le premier jour d’avril est celui de la Fête du Dégel : on accroche des breloques aux branches des pins libérées de la neige, on s’échange des présents à leur pied, et l’on salue la fin de l’hiver pour accueillir le printemps à venir.\n\nVous vous souvenez sans doute du pin dans le <H>Champ de Bataille Simulé</> ? Celui que nos entraînements ont criblé d’impacts et assombri de fumée ? À ce stade, on peut presque appeler ça des décorations.\n\nLa semaine prochaine, c’est votre 6ᵉ escouade qui aura séance d’entraînement — et j’ai peut-être caché un petit cadeau <H>sous le pin près de l’eau</>. Pensez à vous porter volontaires pour le nettoyage du terrain... et à découvrir le paquet, mine de rien.\n\n(Une part chacun — pas de triche ! Je vous surveillerai dans l’ombre, 0^0)\n\nMême si j’ai été transféré dans une autre unité, vous resterez toujours mes amis. »",
         "srId": 102102,
         "pos": [
-          9218.941,
-          -20395.379
+          -10037,
+          -1317
         ],
         "treasurePos": [
-          1.175781,
-          1.61792
+          -10035.824219,
+          -1315.38208
         ]
       }
     ]
@@ -628,8 +628,8 @@
         "text": "« Affrontez la question. Trouvez la réponse.\nAlors seulement, vous atteindrez ce que vous désirez.\nSinon, vous finirez comme ces Souillés. »",
         "srId": 101701,
         "pos": [
-          0,
-          0
+          -21486,
+          4826
         ]
       },
       {
@@ -639,8 +639,8 @@
         "text": "« Affrontez la question. Trouvez la réponse.\nAlors seulement, vous atteindrez ce que vous désirez. »\n\n« Les hommes jettent leurs souillures et leurs péchés <H>dans les caniveaux</>, les enfouissent sous terre, se persuadant que rien n’est arrivé.\nIls ne voient pas les <H>rats</> et la haine que leur oubli fait croître. »",
         "srId": 101701,
         "pos": [
-          0,
-          0
+          -18821,
+          -5456
         ]
       }
     ]
@@ -1601,8 +1601,8 @@
         "text": "Contrat de prêt — Année X de Dafeng\n\nEn l’an X de Dafeng, le Xᵉ jour du Xᵉ mois, She Yuqing a emprunté dix mille pièces de cuivre auprès de Li Laoqian, avec un intérêt mensuel de cent pièces.\nLe remboursement du capital et des intérêts devra être effectué avant le Xᵉ jour du Xᵉ mois. Passé ce délai, la somme totale due — capital et intérêts compris — sera exigible au triple du montant.\nSous le témoignage du Seigneur Dragon d’Argent, et conformément aux enseignements des Neuf Chapitres de Dafeng, les deux parties établissent le présent contrat et y apposent leur empreinte digitale en guise de foi.\n\nParties contractantes :\nShe Yuqing\nLi Laoqian\n\nRédigé à Huaxu, en l’an X de Dafeng, le Xᵉ jour du Xᵉ mois.",
         "srId": 104109,
         "pos": [
-          54.078125,
-          29.636719
+          -13013.81,
+          11761.229
         ]
       }
     ]
@@ -1861,12 +1861,12 @@
         "text": "Ouinn... L’autre jour, pour frimer devant mes amis, je suis monté sur la tête de la statue de Bi’an, <H>derrière la Stèle de l’Admonition</>. Et voilà que depuis, j’attrape un rhume et je tombe sans arrêt... C’est sûrement une punition divine, non ?\n\nJ’ai offert tout mon argent de poche du mois <H>aux pieds de Seigneur Bi’an</>. J’espère qu’il fera preuve de clémence et me pardonnera vite...",
         "srId": 104108,
         "pos": [
-          -486.25,
-          -5053.3477
+          41170,
+          67884
         ],
         "treasurePos": [
-          17646.09,
-          -49363.67
+          58816.09,
+          18520.33
         ]
       },
       {
@@ -1876,12 +1876,12 @@
         "text": "...\n21 septembre\n\nPris d’une impulsion soudaine, j’ai tiré cinq Œufs porte-bonheur. Les quatre premiers contenaient une boîte de cure-dents, un chiffon, un sachet de graines de lys céleste et des pastilles pour la gorge — rien de bien remarquable. Mais le dernier renfermait un paquet de thé printanier de Port-des-Brumes, de qualité supérieure !\n\nLuno, la carpe, a dit que j’étais chanceux... Serais-je vraiment un enfant chéri de la fortune ? J’essaierai de nouveau quand j’en aurai l’occasion.\n...\n27 septembre\n\nDix Œufs porte-bonheur aujourd’hui. Trois sachets parfumés, un bon d’échange pour des gâteaux d’osmanthe, deux coupons de réduction de sept pièces d’argent pour des places de théâtre (non cumulables, en plus ?), une brosse en bois, cent grammes de fientes de paon séchées — la notice prétend que c’est médicinal... répugnant, je l’enterrerai dans un champ — puis un pain d’encre et une boîte d’allumettes...\n\nMaudit soit-il... Pas un seul objet rare ces derniers jours ! Si Luno, la carpe n’était pas si adorable, je n’ouvrirais plus un seul œuf.\n\n28 septembre\n\nSous l’insistance de Luno, la carpe, j’ai ouvert plus de vingt Œufs porte-bonheur. Elle disait que j’avais atteint le seuil garanti et que j’obtiendrais un œuf « ultra-rare »... Et qu’y avait-il dedans ?! Des bouts de papier, de la nourriture pour animaux et des jouets pour enfants ?!\nC’est clairement une boutique frauduleuse ! Une arnaque ! Pourquoi le Bi’an ne fait-il rien ?!\nPlus jamais je n’ouvrirai ces maudits œufs !\nJe vais jeter toute cette camelote dans le <H>bassin aux lotus</> pour nourrir les poissons !",
         "srId": 104110,
         "pos": [
-          148.5332,
-          165.83447
+          31508,
+          -3480
         ],
         "treasurePos": [
-          -4513.375,
-          -3257.4932
+          26994.625,
+          -6737.4932
         ]
       },
       {
@@ -1895,8 +1895,8 @@
           -15002.944
         ],
         "treasurePos": [
-          -745.6113,
-          -24522.855
+          22662.3887,
+          -39525.799
         ]
       },
       {
@@ -1906,12 +1906,12 @@
         "text": "Depuis notre débat ce jour-là, une chose m’est devenue claire : si nous restons au Marché Voilé, nous ne comprendrons jamais la véritable signification de la liberté, ni le prix qu’elle exige.\n\nLes jeux de mots et les combines du Marché Voilé ne sont que des compromissions sous couvert de règles. Je refuse une liberté née de la ruse et de l’évitement. Il doit exister, quelque part, une liberté droite et franche, sans calcul ni faux-semblants... Je veux en apporter la preuve.\n\nC’est pourquoi je pars — au-delà de la montagne que nous avons tant de fois contemplée, vers des sommets plus hauts encore. Même si le prix à payer est l’errance et la rupture avec le monde.\n\nLorsque tu liras cette lettre, je serai déjà loin. J’ai laissé quelques présents <H>sur la vieille barque au bord de l’eau</> où nous jouions autrefois. Pardonne mon départ sans adieu. Je te le promets : nous nous reverrons... le jour où j’aurai trouvé ma réponse.",
         "srId": 104109,
         "pos": [
-          93.015625,
-          -205.73828
+          -19023,
+          5230
         ],
         "treasurePos": [
-          -1672.9785,
-          12123.496
+          -20695.9785,
+          17353.496
         ]
       },
       {
@@ -1921,12 +1921,12 @@
         "text": "J’avais entendu dire que la Mer de Poussière était d’une dangerosité extrême. Après cette exploration, je ne peux que confirmer : c’est terrifiant, mais exaltant. À y regarder de plus près, le paysage possède même une beauté singulière ; sans l’invasion des Souillés, ce lieu pourrait presque devenir un site renommé.\n\nMais partout s’étendent rochers et arbres morts, au point qu’il est facile de perdre tout sens de l’orientation. Lors d’une pause, j’ai égaré un paquet — je crois qu’il se trouvait dans une <H>certaine grotte</>... J’ai beau chercher depuis des heures, je n’en trouve pas l’entrée. La nuit va bientôt tomber.\n\nTant pis. Qu’un heureux élu le découvre...",
         "srId": 104105,
         "pos": [
-          -1118.1562,
-          -321.44336
+          -18718,
+          -31299
         ],
         "treasurePos": [
-          -859.2344,
-          9510.727
+          -19577.2344,
+          -21788.273
         ]
       }
     ]
@@ -2120,8 +2120,8 @@
         "text": "4 juin\nDemandeur : Wang Quan\nMotif : Je soutiens que le tofu soyeux sucré est le meilleur, mais Zhang Fu affirme que le salé est supérieur. Il ne reste qu’une solution : un duel pour trancher la question !\n\n28 juin\nDemandeur : Xu Hong\nMotif : Je souhaite tester un nouveau mécanisme explosif. Le terrain d’entraînement étant assez dégagé, il s’y prête parfaitement.\n\n15 juillet\nDemandeur : Su Yi\nMotif : Lu Ye et Pei Jing veulent s’exercer au tir à l’arc et à l’arbalète. On m’a donc demandé de venir les superviser.\n\n16 juillet\nDemandeur : Su Yi\nMotif : Même raison qu’hier. (Ces enfants progressent vraiment bien !)\n\n6 août\nDemandeur : Oncle Tang\nMotif : Un nouveau dispositif d’amplification sonore pour le combat vient d’être achevé. Je voudrais que chacun vienne chanter à tour de rôle sur le terrain d’entraînement afin d’en tester la portée.\n\n20 août\nDemandeur : Oncle Tang\nMotif : Zhu Pu s’est blessé à la jambe à force de s’entraîner. Je voudrais aujourd’hui tester l’attelle de soutien que j’ai conçue pour lui et relever quelques données.",
         "srId": 105201,
         "pos": [
-          -19.21,
-          30.43
+          15713.31,
+          2236.39
         ]
       }
     ]
@@ -2174,8 +2174,8 @@
         "text": "Souhaitez-vous devenir Haut Chancelier de Longyuan ?\nAutrement dit : si l’on met de côté toutes les affaires administratives complexes qu’implique réellement cette fonction, et que l’on imagine simplement posséder ce titre prestigieux, admiré par tout Huaxu, sans avoir rien à faire... aimeriez-vous devenir Haut Chancelier de Longyuan ?\n\nLa plupart des réponses seraient sans doute : bien sûr !\n\nLa question suivante est donc inévitable : comment devient-on réellement Haut Chancelier de Longyuan ?\nDans notre précédent numéro, nous avons brièvement évoqué le fonctionnement du Tournoi de l’Encens, système d’examen destiné à la majorité des citoyens de Huaxu.\nMais qu’en est-il de ces prodiges que l’on qualifie de génies hors du commun ? Existe-t-il un système spécial pour eux ? Sont-ils choisis dès leur naissance pour devenir Haut Chancelier de Longyuan ?\n\nBien sûr que non.\nDevenir Haut Chancelier de Longyuan est loin d’être simple.\n\nLa plupart d’entre vous l’auront deviné : les personnes sélectionnées reçoivent effectivement un message du Seigneur Dragon d’Argent, transmis par un Bi’an, envoyé du Seigneur Dragon d’Argent. Cependant, recevoir ce message ne signifie pas que vous êtes déjà devenu Haut Chancelier de Longyuan. Cela signifie seulement que vous obtenez un nouveau titre : candidat au poste de Haut Chancelier de Longyuan. Vous répondez alors à l’appel et vous rendez à Haojing.\nL’actuel Haut Chancelier de Longyuan vous accueille chaleureusement et vous vous réunissez dans la grande salle du Pavillon de l’Arbitrage. Vous y discutez parfois de politique ou d’affaires publiques, parfois simplement de sujets de la vie quotidienne.\n\nCette étape porte un nom : l’Épreuve de la Voie.\nUne fois cette étape terminée, vous êtes reconduit à l’auberge où vous logez temporairement afin d’attendre la convocation suivante.\nLes jours passent.\nVous attendez dans une agitation permanente, incapable de tenir en place. Toutes les quelques minutes, vous ouvrez la porte pour vérifier si quelqu’un est venu vous apporter un message.\nLa bonne nouvelle, c’est que le message finit par arriver. Après tout, s’il n’arrivait jamais, cet article s’arrêterait ici...\nRempli d’espoir, vous retournez au Pavillon de l’Arbitrage.\nVous vous dites : la dernière fois, l’examinateur était déjà le Haut Chancelier ; cette fois-ci, je vais sûrement rencontrer le Seigneur Dragon d’Argent !\nMais lorsque vous arrivez, il n’y a ni Seigneur Dragon d’Argent, ni Haut Chancelier.\nSeuls quelques fonctionnaires du Pavillon de l’Arbitrage vous attendent. Ils vous remettent à la hâte une énorme pile de dossiers... puis disparaissent aussitôt.\nVotre tâche consiste alors à parcourir cet océan d’archives, à retrouver les liens entre divers événements désignés et à formuler vos propres conclusions.\nPendant ce temps, quelqu’un s’occupe de votre nourriture et de votre logement.\nMais attention : toute tentative de tricherie ou de paresse vous ferait immédiatement rayer de la liste des candidats.\n\nCette étape s’appelle l’Épreuve des Stratégies.\nNaturellement, vous êtes une exception.\nAprès avoir passé ce qui vous semble des années à lire ces dossiers — jusqu’à mémoriser la moindre anecdote des vingt dernières années — vous recevez enfin une bonne nouvelle un matin : vous avez réussi.\nL’Épreuve des Stratégies est terminée.\nLa prochaine étape consiste à rencontrer le Seigneur Dragon d’Argent.\n\nVous êtes fou de joie.\nVous vous précipitez au Pavillon des Mille Broderies pour commander une tenue éclatante. Combien de personnes passent toute leur vie sans jamais entendre une seule parole du Seigneur Dragon d’Argent ? Et vous, vous pourriez le voir de vos propres yeux !\nEn racontant avec enthousiasme votre projet à la vendeuse, la jeune fille vous regarde, voit votre visage rayonnant... et ne peut s’empêcher de rire.\n« Vous ne le savez donc pas ? Tous les candidats au poste de Haut Chancelier de Longyuan ne rencontrent pas forcément le Seigneur Dragon d’Argent... »\nVous êtes stupéfait et vous vous apprêtez à demander des explications lorsqu’un messager arrive avec une convocation urgente : vous devez immédiatement vous rendre au Pavillon de l’Arbitrage pour préparer l’Épreuve du Cœur.\nVous vous empressez alors de remettre de l’ordre dans vos vêtements avant de repartir vers ce lieu que vous connaissez désormais si bien.\n\nÀ l’intérieur, une épaisse fumée d’encens flotte dans l’air.\nPourtant, vous ne percevez aucune odeur.\nOn vous demande de vous asseoir sur un coussin de méditation et de vous concentrer sur votre respiration.\nLa fumée tourne autour de vos yeux et de votre nez... et peu à peu, une étrange somnolence vous gagne.\nVous fermez les yeux.\nEt vous vous endormez.\n\nVous faites un très long rêve.\nDans ce rêve, vous voyez votre passé : votre mère vous tenant dans ses bras, votre père vous soulevant au-dessus de sa tête. Puis votre avenir : vous devenez Haut Chancelier de Longyuan, consacrez toute votre vie au peuple de Huaxu, et êtes finalement enterré dans le Mausolée de Taixu.\nPuis apparaissent d’innombrables visages.\nDes regards vous fixent, des voix vous interrogent sans cesse.\nVous êtes submergé, couvert de sueur... et soudain vous vous réveillez.\nL’encens qui avait été allumé au début n’est même pas encore entièrement consumé. Bien sûr, au final, vous ne réussissez pas la sélection pour devenir Haut Chancelier de Longyuan.\nIl semble que votre comportement dans ce rêve n’ait pas satisfait le Seigneur Dragon d’Argent.\nCependant, même si vous n’avez pas été choisi, vous décidez finalement de rejoindre le Pavillon de l’Encens afin de continuer à servir le peuple de Huaxu.\n\nUne fin heureuse, après tout.\n\nAinsi, chers lecteurs, vous savez désormais comment devenir Haut Chancelier de Longyuan. Et si l’un d’entre vous y parvient un jour... j’espère que vous vous souviendrez de l’auteur de ce modeste article.\nUn petit présent de remerciement ne serait pas de refus, n’est-ce pas ?",
         "srId": 104502,
         "pos": [
-          0,
-          20
+          19290,
+          -2900
         ]
       }
     ]
@@ -2245,8 +2245,8 @@
           -55218.5
         ],
         "treasurePos": [
-          10367.36,
-          8883.55
+          -12578.17,
+          -46334.95
         ]
       },
       {
@@ -2256,12 +2256,12 @@
         "text": "À l’est, les herbes des confins deviennent de plus en plus denses, on s’enfonce dans les cavités... sans jamais rien trouver.\nÀ force d’attendre, les yeux levés vers les étoiles et la lune, dans une vaine obstination, on découvre enfin que le trésor repose, profondément enfoui à la racine.",
         "srId": 104505,
         "pos": [
-          -2077.42,
-          -1227.76
+          61191.07,
+          -76997.71
         ],
         "treasurePos": [
-          2421.61,
-          -5988.82
+          63612.68,
+          -82986.53
         ]
       },
       {
@@ -2271,12 +2271,12 @@
         "text": "Du sud au nord, de l’est à l’ouest, la quête ne connaît pas de repos.\nVers l’ouest, les routes convergent et mènent à la cité centrale. Mais où donc se cache le trésor ? Sous l’arbre desséché, au-dessus des eaux.",
         "srId": 104502,
         "pos": [
-          -77.9,
-          1.54
+          18391.01,
+          -38555.32
         ],
         "treasurePos": [
-          3489.87,
-          -4415.6
+          21880.88,
+          -42970.92
         ]
       }
     ]

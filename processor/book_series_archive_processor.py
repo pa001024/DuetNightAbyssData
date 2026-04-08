@@ -407,7 +407,7 @@ class BookSeriesArchiveProcessor(BaseProcessor):
         """从引用对象中反查真实对象。"""
         if not isinstance(ref_obj, dict):
             return None
-        outer, name = self._ref_outer_and_name(ref_obj.get("ObjectName"))
+        outer, name = BaseProcessor._ref_outer_and_name(ref_obj.get("ObjectName"))
         if not name:
             return None
         if outer:
@@ -430,7 +430,7 @@ class BookSeriesArchiveProcessor(BaseProcessor):
                     if isinstance(candidate_outer, dict)
                     else candidate_outer
                 )
-                _, candidate_outer_short = self._ref_outer_and_name(candidate_outer_name)
+                _, candidate_outer_short = BaseProcessor._ref_outer_and_name(candidate_outer_name)
                 if candidate_outer_name == outer or candidate_outer_short == outer:
                     return candidate
         return None
@@ -471,6 +471,88 @@ class BookSeriesArchiveProcessor(BaseProcessor):
         by_path: Optional[Dict[str, dict]] = None,
     ) -> Optional[List[float]]:
         """提取对象自身或其根组件的位置。"""
+        return BaseProcessor._extract_object_location(
+            self, obj, by_outer_name, by_name, by_path, prefer_root_first=True
+        )
+
+    def _extract_ref_location(
+        self,
+        ref_obj: Optional[dict],
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
+    ) -> Optional[List[float]]:
+        """从引用对象中直接解析坐标。"""
+        return BaseProcessor._extract_ref_location(
+            self, ref_obj, by_outer_name, by_name, by_path
+        )
+
+    def _extract_resource_position_from_arr(
+        self, arr: List[dict], resource_id: int
+    ) -> Optional[Dict[str, List[float]]]:
+        """从 Design.json 中提取指定资源对应的拾取点和藏宝点。"""
+        if not isinstance(arr, list):
+            return None
+
+        by_outer_name, by_name, by_path = BaseProcessor._build_object_maps(arr)
+        result: Dict[str, List[float]] = {}
+        for obj in arr:
+            if not isinstance(obj, dict):
+                continue
+            obj_type = obj.get("Type")
+            if obj_type not in {"Explore_Drop_C", "Explore_Treasure_C"}:
+                continue
+            props = obj.get("Properties", {})
+            if not isinstance(props, dict):
+                continue
+            if self._to_int(props.get("ResourceId")) != resource_id:
+                continue
+
+            if obj_type == "Explore_Treasure_C":
+                drop_loc = BaseProcessor._extract_object_location(
+                    self, obj, by_outer_name, by_name, by_path, prefer_root_first=True
+                )
+                chest_loc = BaseProcessor._extract_ref_location(
+                    self,
+                    props.get("Chest"),
+                    by_outer_name,
+                    by_name,
+                    by_path,
+                    prefer_root_first=True,
+                    accumulate_attach_parent=True,
+                )
+                if drop_loc is not None and "pos" not in result:
+                    result["pos"] = self._to_vec2(drop_loc)
+                elif "pos" not in result:
+                    print(
+                        f"BookSeriesArchive 导出错误: 资源 {resource_id} 的 Drop 坐标缺失，已跳过 pos 导出",
+                        flush=True,
+                    )
+                if chest_loc is not None and "treasurePos" not in result:
+                    result["treasurePos"] = self._to_vec2(chest_loc)
+                continue
+
+            drop_loc = BaseProcessor._extract_object_location(
+                self, obj, by_outer_name, by_name, by_path, prefer_root_first=True
+            )
+            if drop_loc is not None and "pos" not in result:
+                result["pos"] = self._to_vec2(drop_loc)
+            elif "pos" not in result:
+                print(
+                    f"BookSeriesArchive 导出错误: 资源 {resource_id} 的 Drop 坐标缺失，已跳过 pos 导出",
+                    flush=True,
+                )
+
+        return {k: v for k, v in result.items() if v is not None} or None
+
+    def _extract_object_location(
+        self,
+        obj: dict,
+        by_outer_name: Dict[Tuple[str, str], dict],
+        by_name: Dict[str, List[dict]],
+        by_path: Optional[Dict[str, dict]] = None,
+    ) -> Optional[List[float]]:
+        """提取对象自身或其根组件的位置。"""
         if not isinstance(obj, dict):
             return None
 
@@ -495,144 +577,32 @@ class BookSeriesArchiveProcessor(BaseProcessor):
             if loc is not None:
                 return loc
 
+        attach_parent = props.get("AttachParent")
+        if attach_parent is not None:
+            loc = BaseProcessor._extract_ref_location(
+                self, attach_parent, by_outer_name, by_name, by_path
+            )
+            if loc is not None:
+                return loc
+
         for component_key in ("Sphere", "SceneComponent", "CollisionComponent"):
             component_ref = props.get(component_key)
             if component_ref is None:
                 continue
-            loc = self._extract_ref_location(component_ref, by_outer_name, by_name, by_path)
+            loc = BaseProcessor._extract_ref_location(
+                self, component_ref, by_outer_name, by_name, by_path
+            )
             if loc is not None:
                 return loc
 
         blueprint_components = props.get("BlueprintCreatedComponents")
         if isinstance(blueprint_components, list):
             for component_ref in blueprint_components:
-                loc = self._extract_ref_location(component_ref, by_outer_name, by_name, by_path)
+                loc = BaseProcessor._extract_ref_location(
+                    self, component_ref, by_outer_name, by_name, by_path
+                )
                 if loc is not None:
                     return loc
-
-        return None
-
-    def _extract_ref_location(
-        self,
-        ref_obj: Optional[dict],
-        by_outer_name: Dict[Tuple[str, str], dict],
-        by_name: Dict[str, List[dict]],
-        by_path: Optional[Dict[str, dict]] = None,
-    ) -> Optional[List[float]]:
-        """从引用对象中直接解析坐标。"""
-        resolved_obj = self._resolve_ref_object(ref_obj, by_outer_name, by_name, by_path)
-        if not isinstance(resolved_obj, dict):
-            return None
-
-        props = resolved_obj.get("Properties", {})
-        if not isinstance(props, dict):
-            return None
-
-        for key in ("RelativeLocation", "Location"):
-            loc = self._to_vector3(props.get(key))
-            if loc is not None:
-                return loc
-
-        transform = props.get("RelativeTransform")
-        if isinstance(transform, dict):
-            loc = self._to_vector3(transform.get("Translation"))
-            if loc is not None:
-                return loc
-
-        attach_parent = props.get("AttachParent")
-        if isinstance(attach_parent, dict):
-            loc = self._extract_ref_location(
-                attach_parent, by_outer_name, by_name, by_path
-            )
-            if loc is not None:
-                return loc
-
-        return None
-
-    def _extract_resource_position_from_arr(
-        self, arr: List[dict], resource_id: int
-    ) -> Optional[Dict[str, List[float]]]:
-        """从 Design.json 中提取指定资源对应的拾取点和藏宝点。"""
-        if not isinstance(arr, list):
-            return None
-
-        by_outer_name, by_name, by_path = self._build_object_maps(arr)
-        result: Dict[str, List[float]] = {}
-        for obj in arr:
-            if not isinstance(obj, dict):
-                continue
-            obj_type = obj.get("Type")
-            if obj_type not in {"Explore_Drop_C", "Explore_Treasure_C"}:
-                continue
-            props = obj.get("Properties", {})
-            if not isinstance(props, dict):
-                continue
-            if self._to_int(props.get("ResourceId")) != resource_id:
-                continue
-
-            if obj_type == "Explore_Treasure_C":
-                drop_loc = self._extract_ref_location(
-                    props.get("Drop"), by_outer_name, by_name, by_path
-                )
-                chest_loc = self._extract_ref_location(
-                    props.get("Chest"), by_outer_name, by_name, by_path
-                )
-                if drop_loc is not None and "pos" not in result:
-                    result["pos"] = self._to_vec2(drop_loc)
-                elif "pos" not in result:
-                    print(
-                        f"BookSeriesArchive 导出错误: 资源 {resource_id} 的 Drop 坐标缺失，已跳过 pos 导出",
-                        flush=True,
-                    )
-                if chest_loc is not None and "treasurePos" not in result:
-                    result["treasurePos"] = self._to_vec2(chest_loc)
-                continue
-
-            drop_loc = self._extract_drop_component_location(obj, by_outer_name, by_name, by_path)
-            if drop_loc is not None and "pos" not in result:
-                result["pos"] = self._to_vec2(drop_loc)
-            elif "pos" not in result:
-                print(
-                    f"BookSeriesArchive 导出错误: 资源 {resource_id} 的 Drop 坐标缺失，已跳过 pos 导出",
-                    flush=True,
-                )
-
-        return {k: v for k, v in result.items() if v is not None} or None
-
-    def _extract_drop_component_location(
-        self,
-        obj: dict,
-        by_outer_name: Dict[Tuple[str, str], dict],
-        by_name: Dict[str, List[dict]],
-        by_path: Optional[Dict[str, dict]] = None,
-    ) -> Optional[List[float]]:
-        """优先解析 Explore_Drop_C 的 Drop 组件坐标。"""
-        props = obj.get("Properties", {})
-        if not isinstance(props, dict):
-            return None
-
-        drop_ref = props.get("Drop")
-        if isinstance(drop_ref, dict):
-            resolved_obj = self._resolve_ref_object(drop_ref, by_outer_name, by_name, by_path)
-            if isinstance(resolved_obj, dict):
-                resolved_props = resolved_obj.get("Properties", {})
-                if isinstance(resolved_props, dict):
-                    for key in ("RelativeLocation", "Location"):
-                        loc = self._to_vector3(resolved_props.get(key))
-                        if loc is not None:
-                            return loc
-                    transform = resolved_props.get("RelativeTransform")
-                    if isinstance(transform, dict):
-                        loc = self._to_vector3(transform.get("Translation"))
-                        if loc is not None:
-                            return loc
-                    attach_parent = resolved_props.get("AttachParent")
-                    if isinstance(attach_parent, dict):
-                        loc = self._extract_ref_location(
-                            attach_parent, by_outer_name, by_name, by_path
-                        )
-                        if loc is not None:
-                            return loc
 
         return None
 

@@ -12,12 +12,12 @@
         "text": "January 1st\nToday, ▇▇▇▇ gave me some Phoxene shards as \"pocket money.\" She said that back in the capital, kids get pocket money from their elders before they come of age — to spend on treats or toys.\nThere aren't any shops around here, so she told me to save it. Then, when there's something I really want or need, I can use it to ask for her help.\nThing is... I can't really think of anything I want.\n\n\nJanuary 2nd\nI've got it! I could get {nickname} a \"birthday present\"! Maybe one of those \"birthday cakes\" kids in the capital have when they turn a year older — I read they're really tasty! They might be expensive... but if I save enough pocket money to give to ▇▇▇▇, I bet she could help me get one.\nI found an old clay jar in the kitchen. It's just right for keeping my savings.\n\n\nJanuary 16th\nWe were playing hide-and-seek today, and {nickname} found the jar and almost opened it... I need to find a better hiding spot.\nMaybe tomorrow I'll sneak into the room where ▇▇▇▇ does her alchemy work. There are loads of strange machines in there — she never lets {nickname} go near them.\n\n\nJanuary 17th\nI hid my piggy bank under the <H>waterfall, right next to the alchemy chamber</>. That way, neither {nickname} nor ▇▇▇▇ will stumble across it.\n\n\n...\n\n\n▇▇ ▇▇\n{nickname}'s birthday is coming up, and I've saved a whole box full of pocket money. It should be enough for a cake. But ▇▇▇▇ seems really busy these days. She's been staying up late a lot... Maybe it's not the right time to bother her. I guess I'll ask her next year.\nWith another year of saving, I can get an even bigger cake — big enough for all three of us.",
         "srId": 100102,
         "pos": [
-          -3099.1875,
-          -1306.1221
+          27885,
+          5905
         ],
         "treasurePos": [
-          1441.5254,
-          -126.45215
+          29326.5254,
+          5778.54785
         ]
       },
       {
@@ -27,12 +27,12 @@
         "text": "Dear Berry,\n \n If you are reading this letter, it means you've returned after all.\n You've always been a good girl, and I trust you had your reasons for coming back.\n I've left some supplies for you, buried <H>near the airship</> — they should be enough to get you both off Purgatorio Island.\n I wish you the best on your journey. Stay safe.",
         "srId": 100103,
         "pos": [
-          -3521,
-          674
+          21480,
+          24980
         ],
         "treasurePos": [
-          4685.4395,
-          6653.086
+          26165.4395,
+          31633.086
         ]
       },
       {
@@ -42,12 +42,12 @@
         "text": "The Goddess of Fate weaves the stars into their paths, gifting us with guiding lights that lead us towards eternal bliss.\n Yet, in our times, humanity has strayed from Her teachings. We have forsaken the bonds of love and compassion, choosing instead to arm ourselves with cold steel against our own kin. Our sacred lands have crumbled, and even Her sanctuaries have been defiled.\n Should this be the ordeal She has devised — a sombre prelude to the dawn — then to you, the destined one who will one day reach this place, I offer a blessing that transcends time.\n \n In <H>a place overlooked by Her gaze</>, I have hidden the final legacy of an age when humanity cherished love and solidarity.\n May Her tender threads of fate lead you to the true dawn.",
         "srId": 100101,
         "pos": [
-          -3525,
-          9915
+          8260,
+          -3620
         ],
         "treasurePos": [
-          3730,
-          -80
+          11990,
+          -3700
         ]
       },
       {
@@ -57,12 +57,12 @@
         "text": "Time, slips swiftly by, ever a fading treasure.\nIn the distant corners of memory, truth stays hidden.\nHaving pierced countless illusions, the path leads under.\nThrough winding stone, with divine light, to the forgotten cave.\nIn lands devoid of life and hope, a new cycle takes root.",
         "srId": 100103,
         "pos": [
-          -135,
-          -191
+          38879,
+          19823
         ],
         "treasurePos": [
-          -8901.225,
-          -42.904297
+          29977.775,
+          19780.095703
         ]
       }
     ]
@@ -80,12 +80,12 @@
         "text": "Sorry, babe, there's been a hiccup at home, so I can't take you to the inner city this month as I promised. But hang tight, I'll come for you as soon as I sort things out. Trust me one more time, okay?\n As a little something to make it up to you, I've hidden some cash <H>under the grass on the left side of the pathway</> to the inner city. Don't forget to pick it up. Love you!\n \n <W>You liar! You jerk! Every time you lie to me, you just throw money at me like I'm some kind of pet you own! I'd rather starve or drop dead in the street than take another coin from you! You can rot with your filthy money for all I care!</>",
         "srId": 101101,
         "pos": [
-          -1,
-          38
+          -2050,
+          4170
         ],
         "treasurePos": [
-          2869.9685,
-          -6204.9277
+          819.9685,
+          -2034.9277
         ]
       },
       {
@@ -95,12 +95,12 @@
         "text": "Hey there! Are you tired of struggling to make ends meet?\nSick of breaking your back every day for a pittance, only to be treated like dirt?\nDo you feel like, no matter how hard you try, you just can't catch a break?\nDon't beat yourself up — it's not your fault. What you're lacking isn't skill, but a stroke of luck! All you need is the right opportunity, and you could be the next bigshot!\nAnd guess what? It's your lucky day! Just last month, the chief engineer of our Legendary Mining Alliance unveiled a new mining marvel, ten years in the making! It is user-friendly, boasts an impressive battery life, and the cherry on top — it can automatically extract microscopic Phoxene particles — invisible to the naked eye — and turn them into solid Phoxene! With this revolutionary technology, we can breathe new life into the exhausted mines and bring Icelake's mining industry back from the brink!\n \nWe're on the lookout for partners right now! Opportunities like this come once in a lifetime!\nWant in? Solve the puzzle below for a chance to join our elite team!\n \n(Beneath the text is a simple map of the slums with a Phoxene symbol marking a spot — it appears to be near <H>a pile of old junk by the roadside rubbish bin</>.)",
         "srId": 101101,
         "pos": [
-          -155.99997,
-          101.00003
+          -1700.7699,
+          -7420.7163
         ],
         "treasurePos": [
-          -5315.8823,
-          819.4922
+          -7016.6522,
+          -6601.2241
         ]
       },
       {
@@ -110,12 +110,12 @@
         "text": "Someone found my secret stash last time...\nThis time, I consulted a professional, who suggested I hide it somewhere outside the city, perhaps <H>somewhere near a puddle</>.\nSure, Phoxene won't go bad in water, but what if the box gets mouldy or rots from the moisture? Then my stash would literally be \"money down the drain\", right?\nStill, it's better than having it stolen... I'm going to give it a shot. I'll check on it next week.",
         "srId": 101101,
         "pos": [
-          -585,
-          296
+          -9393,
+          7504
         ],
         "treasurePos": [
-          -5981.3486,
-          5351.575
+          -15374.3486,
+          12855.575
         ]
       },
       {
@@ -125,12 +125,12 @@
         "text": "Hey, wanna play a game?\nIf you can find the <H>biggest gem</> around here, I'll give you a reward!",
         "srId": 101301,
         "pos": [
-          -718.21533,
-          3934.8008
+          6308,
+          2379
         ],
         "treasurePos": [
-          -6188.044,
-          668.41797
+          119.956,
+          3047.41797
         ]
       },
       {
@@ -140,12 +140,12 @@
         "text": "<W>There are no 100 pieces of Phoxene here.</>\n \n(Beneath this message, some squiggly lines attempt to outline the mine's paths. The spot marked with a red circle appears to be <H>near the mine's entrance</>.)",
         "srId": 101103,
         "pos": [
-          1508.2344,
-          4569.042
+          -39461,
+          -3328
         ],
         "treasurePos": [
-          6686.7773,
-          -8421.505
+          -32774.2227,
+          -11749.505
         ]
       },
       {
@@ -155,12 +155,12 @@
         "text": "I saw it with my own eyes — blue light, shining out from <H>under that fallen pillar</>! But there's no lighting rig down there... none at all. There's definitely something weird going on!\nLike... maybe some miner worked himself to death and just... never left. No wonder no one's bothered to fix it since.",
         "srId": 101103,
         "pos": [
-          2924.7324,
-          1436.1116
+          -28580,
+          -5200
         ],
         "treasurePos": [
-          -4828.461,
-          2864.8145
+          -33408.461,
+          -2335.1855
         ]
       },
       {
@@ -170,12 +170,12 @@
         "text": "Hello, stranger, I am an explorer.\nThis cavern is absolutely enchanting, like something out of a fairy tale where snow fairies might live! The massive, crystal-clear ice pillars, the rugged old roots of a withered Heaventree, and the complex terrain that twists and turns like a natural labyrinth... it'll take your breath away!\nIf you've made it this far, don't give up now — the scenery up there is even more spectacular! I've left a gift and some provisions for you at the <H>cavern's summit</>. Keep going — you're almost there.\nMay you discover the same thrill of adventure that drives me. As long as there's life in you, let the journey never end!",
         "srId": 101103,
         "pos": [
-          -5404.076,
-          3901.4297
+          -25917,
+          5325
         ],
         "treasurePos": [
-          28171,
-          6877
+          2254,
+          12202
         ]
       },
       {
@@ -185,12 +185,12 @@
         "text": "Do you remember that day we left the city and wandered along the <H>lakeside of Lamenting Lake</>, wading barefoot through the shallows?\n\"Look at that tree with red leaves,\" you said.\n\"They're orange,\" I corrected.\n\"I said red,\" you insisted.\n\nI'd saved up a few pieces of Phoxene — I was going to trade them for a real red-leafed plant, as a gift for you.\nIn the end, I buried them <H>beneath that tree with the orange leaves</>.\n\n...Yes, I still think they're orange. I'm sorry. Leaves don't turn red just because you say they are — just like you won't come back just because I keep saying you will.\n\nMaybe, when spring comes, the Phoxene will sprout and grow — like the feelings I still carry for you. Or maybe some lucky passerby will dig them up instead.\n\nEither way, I think that would be a good thing. You always said good things are meant to be shared. If this gift I never gave ends up helping someone else... maybe that's a kind of happy ending, too.",
         "srId": 101103,
         "pos": [
-          -2639.332,
-          983.77734
+          -38101.484,
+          30920.523
         ],
         "treasurePos": [
-          -17432.828,
-          -3684.5176
+          -55534.312,
+          27236.0054
         ]
       },
       {
@@ -200,12 +200,12 @@
         "text": "Fact: if you keep an egg somewhere warm, it hatches into a chick.\nSo if I leave some Phoxene somewhere warm... they'll grow into a Heaventree, right? Then I'll be rich. Forever.\nI'm a genius! No, scratch that — I'm a true visionary!\n\nAnd guess what? I'm on <H>furnace</> maintenance duty. Hehehe... Tomorrow, I'll sneak my Phoxene in and start the hatching...",
         "srId": 101702,
         "pos": [
-          0,
-          0
+          -32562,
+          -16124
         ],
         "treasurePos": [
-          -3198,
-          8512
+          -35760,
+          -7612
         ]
       },
       {
@@ -215,12 +215,12 @@
         "text": "Everyone's got Snowcaps all wrong! They're not dangerous — they're delicious! Simmer them just right, season with care, and boom — gourmet magic, totally safe!\nBut that's old news. I'm done with boring, basic mushrooms. I want more. Something wild. Something weird.\nI need the king of mushrooms!\n\nSo I scoured the sewers all day, and finally, <H>near the deepest sluice gate</>, I found them — a whole cluster of brand-new mushrooms! Just the colours were enough to make my mouth water. I took a few back. Already scribbling down some ideas for the first recipe draft...\n\nThey say people used to leave offerings to the gods for good harvests. So maybe... if I leave something under this mushroom patch, the great Mushroom God of Atlasia will reward me with even tastier treasures? Didn't have much on me — just a handful of coins and a few snacks. Gave it all. Hope the Mushroom God's not too picky...",
         "srId": 101701,
         "pos": [
-          0,
-          26.611816
+          -14120,
+          -7175
         ],
         "treasurePos": [
-          3642,
-          1860
+          -10478,
+          -5315
         ]
       }
     ]
@@ -238,12 +238,12 @@
         "text": "The fortress won't hold much longer... Don't be a fool and stay behind just because of orders. You're not even on the official roster — no one will notice if you're gone.\nThere are spare supplies <H>near the airship</>. Take what you need and head home!\n\n(The bottom half of the page is unreadable from dark red splodges.)",
         "srId": 102101,
         "pos": [
-          0,
-          0
+          30081,
+          -31233
         ],
         "treasurePos": [
-          17.173828,
-          2263.6016
+          30098.173828,
+          -28969.3984
         ]
       },
       {
@@ -253,12 +253,12 @@
         "text": "Temporary Supply Pick-up Point:\n\n<H>Beneath the control console by the viewing window on the engine room's outer perimeter.</>",
         "srId": 102101,
         "pos": [
-          0,
-          0
+          19415,
+          -37668
         ],
         "treasurePos": [
-          -9476.516,
-          -4061.3125
+          9938.484,
+          -41729.3125
         ]
       },
       {
@@ -268,12 +268,12 @@
         "text": "Hey, my dear ex-teammates — let's celebrate a little festival of our own!\n \nNow, don't be hasty to shoot me down. I know the Fortress only allows Triumph Day... but surely there's no harm in a secret celebration or two, right?\nBack home, we mark the first of April with the Snowmelt Festival: trinkets hung from pine boughs as the snow retreats, gifts exchanged beneath the trees, and a fond farewell to winter as spring draws near.\nYou all remember that pine in the <H>Simulated Battlefield</>, don't you? The one we riddled with bullet holes and cordite burns during drills? If you squint, I'd say those count as decorations. Next week just happens to be your training rotation — and I may have buried a little something <H>beneath that tree by the water</>. Volunteer for post-training clean-up and \"accidentally\" dig them up, yeah~?\n(One each — no hoarding! I'll be watching, 0^0)\n \nEven though I've been transferred to another squad, we'll always be best buds!",
         "srId": 102102,
         "pos": [
-          9218.941,
-          -20395.379
+          -10037,
+          -1317
         ],
         "treasurePos": [
-          1.175781,
-          1.61792
+          -10035.824219,
+          -1315.38208
         ]
       }
     ]
@@ -628,8 +628,8 @@
         "text": "Address the issue and provide the solution, then you will find what you deeply desire.\nOtherwise, you might end up like these Filthoids.",
         "srId": 101701,
         "pos": [
-          0,
-          0
+          -21486,
+          4826
         ]
       },
       {
@@ -639,8 +639,8 @@
         "text": "Address the issue and provide the solution, then you will find what you deeply desire.\n \nPeople dump their filth and sins <H>into the gutters</>, burying them underground, comforting themselves with the illusion that nothing ever happened. Naturally, they remain blind to the <H>rats</> and hatred festering from them.",
         "srId": 101701,
         "pos": [
-          0,
-          0
+          -18821,
+          -5456
         ]
       }
     ]
@@ -1601,8 +1601,8 @@
         "text": "Loan Contract — Year X of Dafeng\n\nOn the Xth day of the Xth month in Year X of Dafeng, She Yuqing borrowed ten thousand copper coins from Li Laoqian, with interest accruing at one hundred per month.\nRepayment of both principal and interest is due by the Xth day of the Xth month. After that date, the total amount owed — principal and interest — shall be eligible for triple compensation..\n\nWitnessed by Lord Argent, and in accordance with the teachings of the Nine Chapters of Dafeng, both parties hereby establish this contract and seal it with their fingerprints as proof.\n\nSignatories:\nShe Yuqing\nLi Laoqian\n\nIssued in Huaxu, on the Xth day of the Xth month in Year X of Dafeng.",
         "srId": 104109,
         "pos": [
-          54.078125,
-          29.636719
+          -13013.81,
+          11761.229
         ]
       }
     ]
@@ -1862,12 +1862,12 @@
         "text": "Ughh... A few days ago, trying to show off in front of my friends, I climbed all the way up onto the head of the Bi'an statue <H>behind the Admonition Stele</>. Now I've come down with a cold and taken a nasty fall. Feels like punishment catching up with me...\nI've left all of this month's pocket money at <H>Lord Bi'an's feet</>. Really hope Lord Bi'an won't hold it against me...",
         "srId": 104108,
         "pos": [
-          -486.25,
-          -5053.3477
+          41170,
+          67884
         ],
         "treasurePos": [
-          17646.09,
-          -49363.67
+          58816.09,
+          18520.33
         ]
       },
       {
@@ -1877,12 +1877,12 @@
         "text": "...\n\n21 September\nI felt like trying my luck today, so I opened five Lucky Eggs. The first four were nothing special: a box of toothpicks, a rag, a packet of Skylily seeds, and some throat lozenges. But the last one actually turned out to be a packet of fine Mistwharf Green Tea!\n Lunocarp said my luck was pretty good... could I really be Lady Luck's favourite after all!?\n Might try a few more when I get the chance.\n\n...\n\n27 September\nOpened ten Lucky Eggs today. Got three sachets, a voucher for osmanthus cakes, two discount coupons that each take seven silver off a better theatre seat (and they don't even stack!), a wooden brush, a hundred grams of dried peafowl droppings — the note says it's medicinal, but it's honestly just disgusting, so I'll probably bury it in the field when I get home — plus a block of ink and a box of matches.\n Darn it... not a single rare item these past few days! If it weren't for how cute Lunocarp is, I really wouldn't bother opening another one.\n\n28 September\nLunocarp talked me into opening more than twenty Lucky Eggs today. She said I'd hit the guarantee and could get a \"super rare\" one. And what was inside? Two slips of paper, pet food, and some kid stuff!!!\nWhat a rip-off! Why doesn't Bi'an step in and do something about it!?\nI'm done. I'm never opening another Lucky Egg again!\n\nIn a minute I'm throwing the rubbish straight into the <H>lotus pond</> to feed the fish!",
         "srId": 104110,
         "pos": [
-          148.5332,
-          165.83447
+          31508,
+          -3480
         ],
         "treasurePos": [
-          -4513.375,
-          -3257.4932
+          26994.625,
+          -6737.4932
         ]
       },
       {
@@ -1896,8 +1896,8 @@
           -15002.944
         ],
         "treasurePos": [
-          -745.6113,
-          -24522.855
+          22662.3887,
+          -39525.799
         ]
       },
       {
@@ -1907,12 +1907,12 @@
         "text": "Ever since our debate that day, one thing has become clear to me: if we stay in Haze Market, we will never know what freedom truly is, nor what it costs.\n\nWhat we do here — all the little tricks and the loopholes we exploit — are merely ways of bending the rules without ever going beyond them. I don't want freedom that lives on compromise. There must be a freedom in this world that needs no cunning and no pretence... and I want to prove it exists. So I have to go — beyond the mountain we've looked to so many times, and further still, to heights neither of us has yet seen. Even if it means becoming a wanderer, cut loose from the world.\n\nBy the time you read this, I will be far away. I've left a few gifts <H>on the old boat by the water</> where we always played. Forgive me for leaving without a proper farewell, but I promise you this: we will meet again, on the day I find my answer.",
         "srId": 104109,
         "pos": [
-          93.015625,
-          -205.73828
+          -19023,
+          5230
         ],
         "treasurePos": [
-          -1672.9785,
-          12123.496
+          -20695.9785,
+          17353.496
         ]
       },
       {
@@ -1922,12 +1922,12 @@
         "text": "I'd heard the Gritblight Expanse was brutally dangerous, and after today's wandering... well, it really is — terrifying at times, but thrilling all the same. Look closely and the place even has a strange sort of beauty to it; if not for the Filthoids running wild, it might pass for a scenic spot.\n\nBut with nothing around me except rock and deadwood, it's far too easy to lose your bearings. I left a pack behind earlier when I stopped to rest — I'm fairly sure it was in some <H>cave</>... but after circling the area for ages, I still can't find the entrance. At this rate, night will catch me out here.\n\nForget it. Whoever comes across it can have it...",
         "srId": 104105,
         "pos": [
-          -1118.1562,
-          -321.44336
+          -18718,
+          -31299
         ],
         "treasurePos": [
-          -859.2344,
-          9510.727
+          -19577.2344,
+          -21788.273
         ]
       }
     ]
@@ -2121,8 +2121,8 @@
         "text": "4 June\nFiled by: Wang Quan\nReason: I say sweet tofu pudding is best. Zhang Fu swears by the savoury kind. Only one way to settle it — a match!\n\n28 June\nFiled by: Xu Hong\nReason: I want to test a new explosive prototype. The yard is open enough for it.\n\n15 July\nFiled by: Su Yi\nReason: Lu Ye and Pei Jing want to practise with crossbows. I've been asked to keep an eye on them.\n\n16 July\nFiled by: Su Yi\nReason: Same as yesterday (the kids are really coming along!).\n\n6 August\nFiled by: Uncle Tang\nReason: Finished a new battlefield loudhailer. Need everyone to take turns singing in the yard for a sound test.\n\n20 August\nFiled by: Uncle Tang\nReason: Zhu Pu overtrained and hurt his leg. Want to test the support brace I made for him and log a few measurements.",
         "srId": 105201,
         "pos": [
-          -19.21,
-          30.43
+          15713.31,
+          2236.39
         ]
       }
     ]
@@ -2175,8 +2175,8 @@
         "text": "Do you want to become High Chancellor of Loongyuan?\nLet me be specific: set aside the tangled official duties the post entails. Imagine instead that you keep the title and bask in universal admiration across Huaxu without having to lift a finger. Under those conditions, do you want it?\nI expect most answers would be: of course!\nWhich brings us to the real question: how does one actually become High Chancellor of Loongyuan?\n\nIn last issue, we touched on the Incense Trial — the examination system by which the state selects officials from among the common run of Huaxu's citizens. But what of those so-called prodigies, the dazzling geniuses beyond the common measure? Is there a special track reserved for them? Are they appointed the moment they first wail into the world?\nCertainly not.\nBecoming High Chancellor of Loongyuan is no simple matter. Most readers will have guessed correctly: those singled out do indeed receive a message from Lord Argent — delivered, of course, by a Bi'an. But don't celebrate just yet. Receiving the message does not mean you've already made it. All it gives you is a new label: Candidate for High Chancellor of Loongyuan.\nYou answer the summons and travel to Haojing. There, the sitting High Chancellor receives you with great warmth. You gather in the Hall of Adjudication and talk — perhaps of state affairs, perhaps simply of daily life. This stage has a name: \"The Trial of the Way.\"\nWhen it ends, you are escorted back to your temporary quarters at the posting station to await the next summons.\nAnd you wait.\nDays pass. You pace like a cat on a hot tin roof, opening the door every few moments to see whether someone has come with news. The good news is that someone eventually does. If they didn't, this essay would end here — and then what would you do with your evening?\n\nFilled with anticipation, you return once more to the Hall of Adjudication. You assume that since your previous examiner was the sitting High Chancellor of Loongyuan, this time you must surely meet Lord Argent themselves. But upon arrival, you notice there is no Lord Argent, nor the High Chancellor. Instead, a handful of Hall staffers hurriedly thrust an enormous stack of dossiers into your arms and then flee at once, as if the building is about to collapse.\nNow comes your task: in this sea of records, you must trace the links between designated incidents and present your own reasoned conclusions. Someone will see to your meals, your lodging, your daily needs. You, however, are strictly forbidden from cutting corners. Try to slack off and you will be struck from the candidate list without ceremony.\nThis stage is called \"The Trial of Statecraft.\"\nNaturally, you are exceptional. After what feels like years poring over records — memorising every last petty detail from the past twenty years — you finally receive word one morning: you passed. The Trial of Statecraft is complete. Next comes, supposedly, an audience with Lord Argent.\nYou are beside yourself. You rush to Qianxiu Pavilion to have a new set of robes made — something bright and showy for the occasion. How many people go their entire lives without hearing even a single true word from Lord Argent? And you — you might see Them with your own eyes. What fortune beyond measure!\nUnable to contain your excitement, you tell the shop assistant exactly why you are having clothes made. The girl takes one look at your glowing face and cannot help it: she covers her mouth and giggles.\n\"You know,\" she says, \"not every candidate gets to see Lord Argent.\"\nYou go pale. You are just about to seek a further explanation when a messenger arrives with urgent orders: report to the Hall of Adjudication at once and prepare for the Trial of the Heart. With no time to dig, you hurriedly straighten your robes and make your way back to that now-familiar place.\n\nInside, incense smoke curls through the Hall — thick enough to be seen, yet without the faintest scent. This seems odd. An attendant arrives and has you sit on a cushion with the other candidates, instructing you to meditate and regulate your breath. Suspicious but obedient, you sit. Smoke coils around your eyes and nose. Your thoughts grow heavy. Drowsiness steals over you. You think you might as well close your eyes for a moment. So you do.\nAnd you fall asleep.\nYou dream a long dream.\nIn it, you see your past: your mother cradling you, your father lifting you high above his head.\nIn it, you see your future: you succeed to the post of High Chancellor of Loongyuan, spend a lifetime wringing yourself dry for the people of Huaxu, and at last are laid to rest in the Taixu Mausoleum.\nIn it, you see others — countless faces, countless eyes fixed upon you. Questions rise, one after another, pressing and demanding. You are flustered, drenched in sweat, pushed to the brink — and then you jolt awake.\nYou look up. The incense lit at the beginning has not yet burned out.\n\nIn the end, you do not pass the selection. Presumably, your performance in the dream failed to please Lord Argent. Still, though not chosen, you ultimately join the Hall of Incense and continue serving the people of Huaxu. A happy ending all the same, wouldn't you say?\n\nAnd so, dear readers, you now know exactly how to become High Chancellor of Loongyuan. And if one of you actually does make it to High Chancellor someday... well, I trust you'll remember me, the humble author who wrote this helpful little piece. A little token of appreciation sent my way would not go amiss. Don't you think?",
         "srId": 104502,
         "pos": [
-          0,
-          20
+          19290,
+          -2900
         ]
       }
     ]
@@ -2246,8 +2246,8 @@
           -55218.5
         ],
         "treasurePos": [
-          10367.36,
-          8883.55
+          -12578.17,
+          -46334.95
         ]
       },
       {
@@ -2257,12 +2257,12 @@
         "text": "East of the city, where wild grasses creep,\nlies a cavern with pathways running deep.\nNight after night, searching bears no fruit;\nyet the treasure lies where the grasses root.",
         "srId": 104505,
         "pos": [
-          -2077.42,
-          -1227.76
+          61191.07,
+          -76997.71
         ],
         "treasurePos": [
-          2421.61,
-          -5988.82
+          63612.68,
+          -82986.53
         ]
       },
       {
@@ -2272,12 +2272,12 @@
         "text": "Southward, northward, east and west,\nseekers roam each road in restless quest.\nBut where, at last, will the treasure be?\nAbove the water, beneath the dead tree.",
         "srId": 104502,
         "pos": [
-          -77.9,
-          1.54
+          18391.01,
+          -38555.32
         ],
         "treasurePos": [
-          3489.87,
-          -4415.6
+          21880.88,
+          -42970.92
         ]
       }
     ]

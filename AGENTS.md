@@ -40,6 +40,8 @@ python step3_output.py
 python step3_output.py -f Char Weapon Mod
 ```
 
+- 修改导出相关代码后，必须重跑对应导出命令验证结果，例如 `python step3_output.py -f Monster`
+
 ### Development
 
 - No formal linting or type checking configured
