@@ -269,6 +269,7 @@ function M:OnAnchorGetUserMenuContent()
       local Params = {
         Nickname = AvatarInfo.Nickname,
         UID = AvatarInfo.Uid,
+        RealUID = AvatarInfo.RealUID,
         Level = AvatarInfo.Level,
         TextLenMax = 50,
         ForbidRightBtn = true,

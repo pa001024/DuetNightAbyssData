@@ -182915,7 +182915,7 @@ SetVisibility{ActorId{700331},Visibility{"Hide"}}
         [51105310] = {
           Camera = "618.50708,-678.68042,180.93396,0.000092,-5.799923,127.191681,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "锻造！\n经商！\n冒险！",
-          ContentTC = "鍛造！_x000D_\n經商！_x000D_\n冒險！",
+          ContentTC = "鍛造！\n經商！\n冒險！",
           DialogueId = 51105310,
           FacialId = {
             [1] = "700353:Smile02"
@@ -237423,6 +237423,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007401] = {
           Content = "（应天尉来袭，击退他们！）",
+          ContentTC = "（應天尉來襲，擊退他們！）",
           DialogueId = 71007401,
           GUID = "B1C273BA",
           SpeakNpcId = 800006
@@ -237484,6 +237485,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007508] = {
           Content = "没想到你出手如此果断，在下佩服佩服。",
+          ContentTC = "沒想到你出手如此果斷，在下佩服佩服。",
           DialogueId = 71007508,
           GUID = "B1C2851F",
           NextDialogue = 71007509,
@@ -237498,6 +237500,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007510] = {
           Content = "还好你把它们赶走了，希望能消停一段时间。",
+          ContentTC = "還好你把它們趕走了，希望能消停一段時間。",
           DialogueId = 71007510,
           GUID = "B1C28549",
           NextDialogue = 71007511,
@@ -237512,12 +237515,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007601] = {
           Content = "今天怎么回事，这么久了一条鱼都没上钩。",
+          ContentTC = "今天怎麼回事，這麼久了一條魚都沒上鉤。",
           DialogueId = 71007601,
           GUID = "B1C2948A",
           SpeakNpcId = 818079
         },
         [71007602] = {
           Content = "这位路过的朋友，我怀疑这地方今天根本没有鱼，你能不能帮我试试？",
+          ContentTC = "這位路過的朋友，我懷疑這地方今天根本沒有魚，你能不能幫我試試？",
           DialogueId = 71007602,
           GUID = "B1C294B4",
           NextOptions = {
@@ -237529,13 +237534,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007603] = {
           Content = "好，拜托你了。",
-          ContentTC = "好好好，拜託你了。",
+          ContentTC = "好，拜託你了。",
           DialogueId = 71007603,
           GUID = "B1C294DE",
           SpeakNpcId = 818079
         },
         [71007604] = {
           Content = "太厉害了，一下就钓上来了。看来不是水域的问题。",
+          ContentTC = "太厲害了，一下就釣上來了。看來不是水域的問題。",
           DialogueId = 71007604,
           GUID = "B1C29508",
           NextDialogue = 71007605,
@@ -237543,18 +237549,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007605] = {
           Content = "谢谢你帮我验证了一下哈，我自己再试试看。今天绝对不能再提着空桶回去了！",
+          ContentTC = "謝謝你幫我驗證了一下哈，我自己再試試看。今天絕對不能再提著空桶回去了！",
           DialogueId = 71007605,
           GUID = "B1C29532",
           SpeakNpcId = 818079
         },
         [71007701] = {
           Content = "奇怪，到底掉到哪里去了……",
+          ContentTC = "奇怪，到底掉到哪裡去了……",
           DialogueId = 71007701,
           GUID = "B1C2A4F2",
           SpeakNpcId = 818080
         },
         [71007702] = {
           Content = "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+          ContentTC = "請問你有在附近看到我掉的箱子嗎？就普普通通的一個箱子，我找了半天都沒找到。",
           DialogueId = 71007702,
           GUID = "B1C2A51C",
           NextOptions = {
@@ -237566,18 +237575,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007703] = {
           Content = "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+          ContentTC = "謝謝，我在上面這塊再找找，麻煩你去下面看看吧。",
           DialogueId = 71007703,
           GUID = "B1C2A546",
           SpeakNpcId = 818080
         },
         [71007704] = {
           Content = "咦，看你在找什么东西的样子，是这些箱子吗？",
+          ContentTC = "咦，看你在找什麼東西的樣子，是這些箱子嗎？",
           DialogueId = 71007704,
           GUID = "B1C2A570",
           SpeakNpcId = 818081
         },
         [71007705] = {
           Content = "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+          ContentTC = "我在勘探河水數據的時候撿到了這幾個箱子，你看看有你在找的嗎？",
           DialogueId = 71007705,
           GUID = "B1C2A59A",
           NextOptions = {
@@ -237590,48 +237602,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007706] = {
           Content = "好，那你就拿去吧。",
-          ContentTC = "謝謝，這就是我掉的寶箱",
+          ContentTC = "好，那你就拿去吧。",
           DialogueId = 71007706,
           GUID = "B1C2A5C4",
           SpeakNpcId = 818081
         },
         [71007707] = {
           Content = "没错没错，就是这个，太谢谢你了。",
-          ContentTC = "這是給你的報酬",
+          ContentTC = "沒錯沒錯，就是這個，太謝謝你了。",
           DialogueId = 71007707,
           GUID = "B1C2A5EE",
           SpeakNpcId = 818080
         },
         [71007708] = {
           Content = "这明显不是我掉的普通箱子，不过还是谢谢你了。",
-          ContentTC = "這個箱子太豪華了，明顯不是我的",
+          ContentTC = "這明顯不是我掉的普通箱子，不過還是謝謝你了。",
           DialogueId = 71007708,
           GUID = "B1C2A618",
           SpeakNpcId = 818080
         },
         [71007710] = {
           Content = "哇，没想到你找到了这么多箱子呀，那我就先拿走我掉的普通箱子了哈，谢谢你！",
-          ContentTC = "天啊，你這麼找到了這麼多箱子",
+          ContentTC = "哇，沒想到你找到了這麼多箱子呀，那我就先拿走我掉的普通箱子了哈，謝謝你！",
           DialogueId = 71007710,
           GUID = "B1C2A66C",
           SpeakNpcId = 818080
         },
         [71007712] = {
           Content = "（附近没看到什么箱子，再去其他地方找找。）",
+          ContentTC = "（附近沒看到什麼箱子，再去其他地方找找。）",
           DialogueId = 71007712,
           GUID = "B1C2A6C0",
           SpeakNpcId = 800006
         },
         [71007801] = {
           Content = "香……点燃……请……",
-          ContentTC = "那邊那位狩月人，能過來一下嗎",
+          ContentTC = "香……點燃……請……",
           DialogueId = 71007801,
           GUID = "B1C2B55A",
           SpeakNpcId = 818082
         },
         [71007802] = {
           Content = "那边……请……点燃……谢谢……",
-          ContentTC = "我新研究了一種香，能夠將心中的潛意識喚醒，你能配合我做一下實驗,然後把你見到的東西描述給我嗎",
+          ContentTC = "那邊……請……點燃……謝謝……",
           DialogueId = 71007802,
           GUID = "B1C2B584",
           NextOptions = {
@@ -237643,14 +237656,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007803] = {
           Content = "焚香……好……",
-          ContentTC = "很好，你去點燃那座香爐中的香吧",
+          ContentTC = "焚香……好……",
           DialogueId = 71007803,
           GUID = "B1C2B5AE",
           SpeakNpcId = 818082
         },
         [71007805] = {
           Content = "（点燃香炉之后，四周顿时弥漫起了浓厚的烟雾，透过这些烟雾，你似乎看到了什么东西？）",
-          ContentTC = "（心中浮現出了一個問題——此時你最希望做什麼呢）",
+          ContentTC = "（點燃香爐之後，四周頓時瀰漫起了濃厚的煙霧，透過這些煙霧，你似乎看到了什麼東西？）",
           DialogueId = 71007805,
           GUID = "B1C2B602",
           NextOptions = {
@@ -237663,49 +237676,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007806] = {
           Content = "（朦胧的雾气中，你看到了数之不尽的宝箱，打开它们吧。）",
-          ContentTC = "（寶箱出現在了周圍）",
+          ContentTC = "（朦朧的霧氣中，你看到了數之不盡的寶箱，打開它們吧。）",
           DialogueId = 71007806,
           GUID = "B1C2B62C",
           SpeakNpcId = 800006
         },
         [71007807] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentTC = "（和無由生彙報剛剛發生的事情吧）",
+          ContentTC = "（煙霧散去，方才見到的一切也隨之消散。回去問問無由生是怎麼回事吧。）",
           DialogueId = 71007807,
           GUID = "B1C2B656",
           SpeakNpcId = 100001
         },
         [71007808] = {
           Content = "焚香……再见……",
-          ContentTC = "原來你見到了這些東西，我明白了，感謝你的配合",
+          ContentTC = "焚香……再見……",
           DialogueId = 71007808,
           GUID = "B1C2B680",
           SpeakNpcId = 818082
         },
         [71007809] = {
           Content = "（朦胧的雾气中，你看到了大量敌人，击败它们吧。）",
-          ContentTC = "（敵人出現在了周圍）",
+          ContentTC = "（朦朧的霧氣中，你看到了大量敵人，擊敗它們吧。）",
           DialogueId = 71007809,
           GUID = "B1C2B6AA",
           SpeakNpcId = 800006
         },
         [71007810] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentTC = "（和無由生彙報剛剛發生的事情吧）",
+          ContentTC = "（煙霧散去，方才見到的一切也隨之消散。回去問問無由生是怎麼回事吧。）",
           DialogueId = 71007810,
           GUID = "B1C2B6D4",
           SpeakNpcId = 100001
         },
         [71007811] = {
           Content = "焚香……再见……",
-          ContentTC = "原來你見到了這些東西，我明白了，感謝你的配合",
+          ContentTC = "焚香……再見……",
           DialogueId = 71007811,
           GUID = "B1C2B6FE",
           SpeakNpcId = 818082
         },
         [71007812] = {
           Content = "（朦胧的雾气中，你看到了贝蕾妮卡的身影。）",
-          ContentTC = "（貝蕾出現在了面前）",
+          ContentTC = "（朦朧的霧氣中，你看到了貝蕾妮卡的身影。）",
           DialogueId = 71007812,
           GUID = "B1C2B728",
           NextDialogue = 71007813,
@@ -237713,40 +237726,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007813] = {
           Content = "（伸手触碰，贝蕾的身影开始变得模糊不清。你知道，她只是焚香之后出现的幻影。）",
-          ContentTC = "（與貝蕾的對話占位）",
+          ContentTC = "（伸手觸碰，貝蕾的身影開始變得模糊不清。你知道，她只是焚香之後出現的幻影。）",
           DialogueId = 71007813,
           GUID = "B1C2B752",
           SpeakNpcId = 800006
         },
         [71007814] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentTC = "（和無由生彙報剛剛發生的事情吧）",
+          ContentTC = "（煙霧散去，方才見到的一切也隨之消散。回去問問無由生是怎麼回事吧。）",
           DialogueId = 71007814,
           GUID = "B1C2B77C",
           SpeakNpcId = 100001
         },
         [71007815] = {
           Content = "焚香……再见……",
-          ContentTC = "原來你見到了這些東西，我明白了，感謝你的配合",
+          ContentTC = "焚香……再見……",
           DialogueId = 71007815,
           GUID = "B1C2B7A6",
           SpeakNpcId = 818082
         },
         [71007816] = {
           Content = "（一个香炉不知何时出现在了你的背后，这只无由生看起来很希望你能点燃它。）",
+          ContentTC = "（一個香爐不知何時出現在了你的背後，這隻無由生看起來很希望你能點燃它。）",
           DialogueId = 71007816,
           GUID = "B1C2B7A7",
           SpeakNpcId = 800006
         },
         [71007901] = {
           Content = "救救我啊，我还没找到爸爸埋的宝藏，我不要死在这里哇……",
+          ContentTC = "救救我啊，我還沒找到爸爸埋的寶藏，我不要死在這裡哇……",
           DialogueId = 71007901,
           GUID = "B1C2C5C2",
           SpeakNpcId = 818083
         },
         [71007905] = {
           Content = "谢谢你救了我，但我没什么好东西能够报答你……对了，我这有一张爸爸留下的藏宝图，要是你能找到宝藏，它们就归你了！",
-          ContentTC = "（望著他天真的臉龐，你打算——）",
+          ContentTC = "謝謝你救了我，但我沒什麼好東西能夠報答你……對了，我這有一張爸爸留下的藏寶圖，要是你能找到寶藏，它們就歸你了！",
           DialogueId = 71007905,
           GUID = "B1C2C66A",
           NextOptions = {
@@ -237757,30 +237772,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007906] = {
           Content = "好厉害，一眼就看出来了！那快去把它挖出来吧。",
+          ContentTC = "好厲害，一眼就看出來了！那快去把它挖出來吧。",
           DialogueId = 71007906,
           GUID = "B1C2C694",
           SpeakNpcId = 818083
         },
         [71007907] = {
           Content = "好，按照约定，这些宝藏从现在开始就归你啦，谢谢你刚才救了我。",
+          ContentTC = "好，按照約定，這些寶藏從現在開始就歸你啦，謝謝你剛才救了我。",
           DialogueId = 71007907,
           GUID = "B1C2C6BE",
           SpeakNpcId = 818083
         },
         [71007908] = {
           Content = "这怎么好意思呀……那，那我给你拿点其他小礼物吧，谢谢你刚才救了我。",
+          ContentTC = "這怎麼好意思呀……那，那我給你拿點其他小禮物吧，謝謝你剛才救了我。",
           DialogueId = 71007908,
           GUID = "B1C2C6E8",
           SpeakNpcId = 818083
         },
         [71008001] = {
           Content = "那边那位外乡人，对对就是叫你呢，能不能来帮我个忙。",
+          ContentTC = "那邊那位外鄉人，對對就是叫你呢，能不能來幫我個忙。",
           DialogueId = 71008001,
           GUID = "B1C2D62A",
           SpeakNpcId = 818084
         },
         [71008002] = {
           Content = "我店里有个伙计最近总是偷偷跑出去跟隔壁店主碰面，我怀疑是想对我的店动什么手脚。能帮我去找点证据吗？",
+          ContentTC = "我店裡有個夥計最近總是偷偷跑出去跟隔壁店主碰面，我懷疑是想對我的店動什麼手腳。能幫我去找點證據嗎？",
           DialogueId = 71008002,
           GUID = "B1C2D654",
           NextOptions = {
@@ -237791,12 +237811,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008003] = {
           Content = "好，他们应该就在附近，全交给你了，我就不过去打草惊蛇了。",
+          ContentTC = "好，他們應該就在附近，全交給你了，我就不過去打草驚蛇了。",
           DialogueId = 71008003,
           GUID = "B1C2D67E",
           SpeakNpcId = 818084
         },
         [71008004] = {
           Content = "只是把秘方拿出来给我看一眼而已，不会有什么风险的。",
+          ContentTC = "只是把秘方拿出來給我看一眼而已，不會有什麼風險的。",
           DialogueId = 71008004,
           GUID = "B1C2D6A8",
           NextDialogue = 71008005,
@@ -237804,6 +237826,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008005] = {
           Content = "我……",
+          ContentTC = "我……",
           DialogueId = 71008005,
           GUID = "B1C2D6D2",
           NextDialogue = 71008006,
@@ -237811,6 +237834,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008006] = {
           Content = "事成之后分你三成，怎么样？",
+          ContentTC = "事成之後分你三成，怎麼樣？",
           DialogueId = 71008006,
           GUID = "B1C2D6FC",
           NextDialogue = 71008007,
@@ -237818,6 +237842,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008007] = {
           Content = "……",
+          ContentTC = "……",
           DialogueId = 71008007,
           GUID = "B1C2D726",
           NextDialogue = 71008008,
@@ -237825,24 +237850,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008008] = {
           Content = "还不行，那就干脆……等等，你是不是听到什么了，过来过来。",
+          ContentTC = "還不行，那就乾脆……等等，你是不是聽到什麼了，過來過來。",
           DialogueId = 71008008,
           GUID = "B1C2D750",
           SpeakNpcId = 818086
         },
         [71008009] = {
           Content = "这笔钱你拿着，刚才我们俩的对话你就当没听到如何。",
+          ContentTC = "這筆錢你拿著，剛才我們倆的對話你就當沒聽到如何。",
           DialogueId = 71008009,
           GUID = "B1C2D77A",
           SpeakNpcId = 818086
         },
         [71008010] = {
           Content = "（男子给你的这笔钱无疑就是他们在酝酿什么阴谋的证据，现在可以直接回去交差，揭露二人的阴谋，或是藏在附近，继续听听这二人的对话。）",
+          ContentTC = "（男子給你的這筆錢無疑就是他們在醞釀什麼陰謀的證據，現在可以直接回去交差，揭露二人的陰謀，或是藏在附近，繼續聽聽這二人的對話。）",
           DialogueId = 71008010,
           GUID = "B1C2D7A4",
           SpeakNpcId = 100001
         },
         [71008011] = {
           Content = "四成，给个痛快话，到底行不行啊，拖了我好几天了。",
+          ContentTC = "四成，給個痛快話，到底行不行啊，拖了我好幾天了。",
           DialogueId = 71008011,
           GUID = "B1C2D7CE",
           NextDialogue = 71008012,
@@ -237850,6 +237879,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008012] = {
           Content = "对，对不起。店主于我有恩，我不能帮你做这种事。",
+          ContentTC = "對，對不起。店主於我有恩，我不能幫你做這種事。",
           DialogueId = 71008012,
           GUID = "B1C2D7F8",
           NextDialogue = 71008013,
@@ -237857,30 +237887,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008013] = {
           Content = "（你成功躲过二人的注意，了解到了伙计真正的选择，现在回去向店主揭露真相吧。）",
+          ContentTC = "（你成功躲過二人的注意，了解到了夥計真正的選擇，現在回去向店主揭露真相吧。）",
           DialogueId = 71008013,
           GUID = "B1C2D822",
           SpeakNpcId = 100001
         },
         [71008014] = {
           Content = "哈哈，果然是我想得那样！等我家伙计回来我就让他滚蛋。",
+          ContentTC = "哈哈，果然是我想得那樣！等我傢伙計回來我就讓他滾蛋。",
           DialogueId = 71008014,
           GUID = "B1C2D84C",
           SpeakNpcId = 818084
         },
         [71008015] = {
           Content = "原来是这样，差点错怪我家伙计了，谢谢你啊。",
+          ContentTC = "原來是這樣，差點錯怪我家夥計了，謝謝你啊。",
           DialogueId = 71008015,
           GUID = "B1C2D876",
           SpeakNpcId = 818084
         },
         [71008101] = {
           Content = "今天就差最后一圈了，大家再坚持一下！",
+          ContentTC = "今天就差最後一圈了，大家再堅持一下！",
           DialogueId = 71008101,
           GUID = "B1C2E692",
           SpeakNpcId = 818087
         },
         [71008102] = {
           Content = "要想成为织星客，脚力也是很重要的！你要不要跟我一起监督他们跑完今天的最后一圈呀？",
+          ContentTC = "要想成為織星客，腳力也是很重要的！你要不要跟我一起監督他們跑完今天的最後一圈呀？",
           DialogueId = 71008102,
           GUID = "B1C2E6BC",
           NextOptions = {
@@ -237891,12 +237926,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008103] = {
           Content = "好，你来选一个人监督就好，选好了告诉我哦。",
+          ContentTC = "好，你來選一個人監督就好，選好了告訴我哦。",
           DialogueId = 71008103,
           GUID = "B1C2E6E6",
           SpeakNpcId = 818087
         },
         [71008104] = {
           Content = "怎么样，想好要监督谁了吗？",
+          ContentTC = "怎麼樣，想好要監督誰了嗎？",
           DialogueId = 71008104,
           GUID = "B1C2E710",
           NextOptions = {
@@ -237908,12 +237945,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008105] = {
           Content = "没问题，我会好好盯着剩下两个人的！",
+          ContentTC = "沒問題，我會好好盯著剩下兩個人的！",
           DialogueId = 71008105,
           GUID = "B1C2E73A",
           SpeakNpcId = 818087
         },
         [71008106] = {
           Content = "最后冲刺了！加油加油，不可以慢慢走哦！",
+          ContentTC = "最後衝刺了！加油加油，不可以慢慢走哦！",
           DialogueId = 71008106,
           Duration = 1,
           GUID = "B1C2E7E2",
@@ -237921,12 +237960,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008110] = {
           Content = "有你在一边盯着，他虽然跑得很慢，但还是坚持到最后了，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentTC = "有你在一邊盯著，他居然能跑這麼快呀，真厲害！今天真是謝謝你啦，這是我們的一點小小心意。",
           DialogueId = 71008110,
           GUID = "B1C2E80C",
           SpeakNpcId = 818087
         },
         [71008111] = {
           Content = "有你在一边盯着，他居然能跑这么快呀，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentTC = "有你在一邊盯著，他雖然跑得很慢，但還是堅持到最後了，真厲害！今天真是謝謝你啦，這是我們的一點小小心意。",
           DialogueId = 71008111,
           GUID = "B1C2E836",
           SpeakNpcId = 818087
@@ -237975,18 +238016,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008401] = {
           Content = "（游荡的秽兽徘徊在附近，先击退它们，再去解救魔灵吧。）",
+          ContentTC = "（遊蕩的穢獸徘徊在附近，先擊退它們，再去解救魔靈吧。）",
           DialogueId = 71008401,
           GUID = "B1C317CA",
           SpeakNpcId = 800006
         },
         [71008402] = {
           Content = "（争斗的声响引来了更多秽兽。）",
+          ContentTC = "（爭鬥的聲響引來了更多穢獸。）",
           DialogueId = 71008402,
           GUID = "B1C317F4",
           SpeakNpcId = 800006
         },
         [71008403] = {
           Content = "（这里暂时安全了，趁现在解救魔灵吧。）",
+          ContentTC = "（這裡暫時安全了，趁現在解救魔靈吧。）",
           DialogueId = 71008403,
           GUID = "B1C3181E",
           SpeakNpcId = 800006
@@ -303480,7 +303524,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077021] = {
           Content = "（帮忙寻找。）",
-          ContentTC = "（接受。）",
+          ContentTC = "（幫忙尋找。）",
           DialogueId = 710077021,
           GUID = "710077021.0",
           NextDialogue = 71007703,
@@ -303495,7 +303539,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077051] = {
           Content = "我在找这个普通箱子。",
-          ContentTC = "普通寶箱",
+          ContentTC = "我在找這個普通箱子。",
           DialogueId = 710077051,
           GUID = "710077051.0",
           NextDialogue = 71007706,
@@ -303503,7 +303547,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077052] = {
           Content = "我在找这个看起来稍微华丽一点的箱子。",
-          ContentTC = "中級寶箱",
+          ContentTC = "我在找這個看起來稍微華麗一點的箱子。",
           DialogueId = 710077052,
           GUID = "710077052.0",
           NextDialogue = 71007706,
@@ -303511,7 +303555,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077053] = {
           Content = "我在找这个最华丽的箱子。",
-          ContentTC = "高級寶箱",
+          ContentTC = "我在找這個最華麗的箱子。",
           DialogueId = 710077053,
           GUID = "710077053.0",
           NextDialogue = 71007706,
@@ -303519,7 +303563,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077054] = {
           Content = "这几个箱子都是我的。",
-          ContentTC = "我全都要",
+          ContentTC = "這幾個箱子都是我的。",
           DialogueId = 710077054,
           GUID = "710077054.0",
           NextDialogue = 71007706,
@@ -303542,28 +303586,28 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710078051] = {
           Content = "宝箱。",
-          ContentTC = "（開不完的寶箱）",
+          ContentTC = "寶箱。",
           DialogueId = 710078051,
           GUID = "710078051.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710078052] = {
           Content = "敌人。",
-          ContentTC = "（希望消滅敵人）",
+          ContentTC = "敵人。",
           DialogueId = 710078052,
           GUID = "710078052.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710078053] = {
           Content = "熟悉的人。",
-          ContentTC = "（見到希望見到的故人）",
+          ContentTC = "熟悉的人。",
           DialogueId = 710078053,
           GUID = "710078053.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{3}}"
         },
         [710079051] = {
           Content = "从地形上来看应该就在这附近，我去找找吧。",
-          ContentTC = "（告訴他寶物深埋在地下是發揮不了作用的，只有物有所用才能發揮價值）",
+          ContentTC = "從地形上來看應該就在這附近，我去找找吧。",
           DialogueId = 710079051,
           GUID = "710079051.0",
           NextDialogue = 71007906,
@@ -303571,7 +303615,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710079052] = {
           Content = "既然是你父亲留给你的，那我就不要了。",
-          ContentTC = "（感謝他告訴你這個秘密，隱藏作為成年人的想法，守護他的童真）",
+          ContentTC = "既然是你父親留給你的，那我就不要了。",
           DialogueId = 710079052,
           GUID = "710079052.0",
           NextDialogue = 71007908,
@@ -303579,6 +303623,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710080021] = {
           Content = "（接受。）",
+          ContentTC = "（接受。）",
           DialogueId = 710080021,
           GUID = "710080021.0",
           NextDialogue = 71008003,
@@ -303586,12 +303631,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710080022] = {
           Content = "（拒绝。）",
+          ContentTC = "（拒絕。）",
           DialogueId = 710080022,
           GUID = "710080022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081021] = {
           Content = "（接受。）",
+          ContentTC = "（接受。）",
           DialogueId = 710081021,
           GUID = "710081021.0",
           NextDialogue = 71008103,
@@ -303599,12 +303646,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081022] = {
           Content = "（拒绝。）",
+          ContentTC = "（拒絕。）",
           DialogueId = 710081022,
           GUID = "710081022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081041] = {
           Content = "红衣服的。",
+          ContentTC = "紅衣服的。",
           DialogueId = 710081041,
           GUID = "710081041.0",
           NextDialogue = 71008105,
@@ -303612,6 +303661,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081042] = {
           Content = "绿衣服的。",
+          ContentTC = "綠衣服的。",
           DialogueId = 710081042,
           GUID = "710081042.0",
           NextDialogue = 71008105,
@@ -303619,6 +303669,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081043] = {
           Content = "蓝衣服的。",
+          ContentTC = "藍衣服的。",
           DialogueId = 710081043,
           GUID = "710081043.0",
           NextDialogue = 71008105,

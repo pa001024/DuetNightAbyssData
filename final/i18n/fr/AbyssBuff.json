@@ -19,7 +19,7 @@
     "id": 30,
     "icon": "Common",
     "n": "Andante furioso : Don de l’assaut",
-    "d": "Toutes les 5 attaques infligeant des dégâts par un allié confèrent un cumul de +12% d’ATQ pendant 10 s, jusqu’à un maximum de 10 cumuls.",
+    "d": "Toutes les 5 instances de dégâts infligées par un allié confèrent un cumul de +12% d’ATQ pendant 10 s, jusqu’à 10 cumuls.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },
@@ -105,7 +105,7 @@
     "id": 301,
     "icon": "Skill",
     "n": "Andante furioso : L’éloge de la virtuosité",
-    "d": "Tous les alliés gagnent 1 cumul de bonus de 10% à la Puissance de compétence toutes les 5 attaques, pendant 15 s, jusqu’à 10 cumuls.",
+    "d": "Tous les alliés gagnent 1 cumul de +10% de Puissance de compétence toutes les 5 instances de dégâts infligées, pendant 15 s, jusqu’à 10 cumuls.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },
@@ -371,7 +371,7 @@
     "id": 13221,
     "icon": "Skill",
     "n": "Andante furioso : L’éloge de la virtuosité",
-    "d": "Tous les alliés gagnent 1 cumul de bonus de 3% à la Puissance de compétence toutes les 3 attaques, pendant 20 s, jusqu’à 50 cumuls.",
+    "d": "Tous les alliés gagnent 1 cumul de +3% de Puissance de compétence toutes les 3 instances de dégâts infligées, pendant 20 s, jusqu’à 50 cumuls.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },

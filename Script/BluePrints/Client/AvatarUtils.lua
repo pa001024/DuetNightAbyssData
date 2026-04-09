@@ -1267,7 +1267,7 @@ end
 
 function AvatarUtils:GetRaidSeasonsRecord(Avatar, FromDb)
   local RaidSeasons = Avatar.RaidSeasons
-  if not next(RaidSeasons) then
+  if not RaidSeasons or not next(RaidSeasons) then
     return {}
   end
   local Ret = {}
@@ -1281,7 +1281,7 @@ function AvatarUtils:GetRaidSeasonsRecord(Avatar, FromDb)
     local RaidSeasonConf = DataMgr.RaidSeason[RaidSeasonId]
     if RaidSeasonConf then
       local RaidSeasonEventConf = DataMgr.EventId2RaidSeason[RaidSeasonConf.EventId]
-      if RaidSeasonEventConf and not (NowTime <= TimeUtils.EastEightToLocalTimestamp(RaidSeasonEventConf.EventEndTime)) and not (v.BanState > 0) and v.PreRaidGroupId and v.RaidGroupId and not (v.PreRaidGroupId <= 0) and not (v.RaidGroupId <= 0) and v.MaxRaidScore and not (v.MaxRaidScore <= 0) then
+      if RaidSeasonEventConf and not (NowTime <= TimeUtils.EastEightToLocalTimestamp(RaidSeasonEventConf.EventEndTime)) and (not v.BanState or not (v.BanState > 0)) and v.PreRaidGroupId and v.RaidGroupId and not (v.PreRaidGroupId <= 0) and not (v.RaidGroupId <= 0) and v.MaxRaidScore and not (v.MaxRaidScore <= 0) then
         table.insert(Ret, {
           RaidSeasonId = RaidSeasonId,
           PreRaidGroupId = v.PreRaidGroupId,

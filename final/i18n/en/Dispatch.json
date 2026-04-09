@@ -10670,7 +10670,7 @@
         "dialogues": [
           {
             "id": 71006514,
-            "content": "Right then, here's the question! A Starweaver lost something from their stall, and they've narrowed it down to three suspects: A, B, and C.\n A says B stole it.\n B says C stole it.\n C admits it — says he's the guilty one.\n Only one of them is telling the truth... so who actually took it?",
+            "content": "Right then, here's the question! A Starweaver lost something from their stall, and they've narrowed it down to three suspects: A, B, and C.\nA says B stole it.\nB says C stole it.\nC admits it — says he's the guilty one.\nOnly one of them is telling the truth... so who actually took it?",
             "npc": 818060,
             "options": [
               {
@@ -10748,7 +10748,7 @@
         "dialogues": [
           {
             "id": 71006516,
-            "content": "Right then, here's the question! Three people are standing in a line, each wearing a hat that could be red, yellow, or blue. The one at the back can see the two hats ahead. The one in the middle can only see the hat of the person in front.\n At first, the person at the back stays quiet. And the one in the middle stays quiet too. And that's when the person at the front suddenly pipes up and says they're wearing a yellow hat.\n We also know at least one of the hats is yellow.\n So — which of these statements is correct?",
+            "content": "Right then, here's the question! Three people are standing in a line, each wearing a hat that could be red, yellow, or blue. The one at the back can see the two hats ahead. The one in the middle can only see the hat of the person in front.\nAt first, the person at the back stays quiet. And the one in the middle stays quiet too. And that's when the person at the front suddenly pipes up and says they're wearing a yellow hat.\nWe also know at least one of the hats is yellow.\nSo — which of these statements is correct?",
             "npc": 818060,
             "options": [
               {
@@ -10787,7 +10787,7 @@
         "dialogues": [
           {
             "id": 71006514,
-            "content": "Right then, here's the question! A Starweaver lost something from their stall, and they've narrowed it down to three suspects: A, B, and C.\n A says B stole it.\n B says C stole it.\n C admits it — says he's the guilty one.\n Only one of them is telling the truth... so who actually took it?",
+            "content": "Right then, here's the question! A Starweaver lost something from their stall, and they've narrowed it down to three suspects: A, B, and C.\nA says B stole it.\nB says C stole it.\nC admits it — says he's the guilty one.\nOnly one of them is telling the truth... so who actually took it?",
             "npc": 818060,
             "options": [
               {
@@ -10870,7 +10870,7 @@
         "dialogues": [
           {
             "id": 71006516,
-            "content": "Right then, here's the question! Three people are standing in a line, each wearing a hat that could be red, yellow, or blue. The one at the back can see the two hats ahead. The one in the middle can only see the hat of the person in front.\n At first, the person at the back stays quiet. And the one in the middle stays quiet too. And that's when the person at the front suddenly pipes up and says they're wearing a yellow hat.\n We also know at least one of the hats is yellow.\n So — which of these statements is correct?",
+            "content": "Right then, here's the question! Three people are standing in a line, each wearing a hat that could be red, yellow, or blue. The one at the back can see the two hats ahead. The one in the middle can only see the hat of the person in front.\nAt first, the person at the back stays quiet. And the one in the middle stays quiet too. And that's when the person at the front suddenly pipes up and says they're wearing a yellow hat.\nWe also know at least one of the hats is yellow.\nSo — which of these statements is correct?",
             "npc": 818060,
             "options": [
               {
@@ -13063,7 +13063,7 @@
         "dialogues": [
           {
             "id": 71007401,
-            "content": "（应天尉来袭，击退他们！）",
+            "content": "(Magistrates of Yingtian incoming! Dispel them!)",
             "npc": 800006
           }
         ]
@@ -13211,7 +13211,7 @@
           },
           {
             "id": 71007511,
-            "content": "Whew... selling potatoes on the docks is far more dangerous than I thought. Thank you so much...",
+            "content": "Whew... selling potatoes here is far more dangerous than I thought. Thank you so much...",
             "npc": 818078
           }
         ]
@@ -13837,7 +13837,7 @@
         "dialogues": [
           {
             "id": 71007801,
-            "content": "Hey — Phoxhunter. Have you a moment to spare?",
+            "content": "Incense... light... please...",
             "npc": 818082
           }
         ]
@@ -13852,7 +13852,7 @@
         "dialogues": [
           {
             "id": 71007802,
-            "content": "I've been working on a new incense that awakens what lies buried in the mind. Would you help me test it? Just light it, and then tell me what you see.",
+            "content": "Over there... light it... please... thank you...",
             "npc": 818082,
             "options": [
               {
@@ -13862,13 +13862,13 @@
               },
               {
                 "id": 710078022,
-                "content": "(Decline.)"
+                "content": "(Refuse)"
               }
             ]
           },
           {
             "id": 71007803,
-            "content": "Good. You can start by lighting the incense in the censer over there.",
+            "content": "Burning incense... good...",
             "npc": 818082,
             "next": 71007805
           }
@@ -13889,22 +13889,22 @@
         "dialogues": [
           {
             "id": 71007805,
-            "content": "(A question rises within you — what is it you desire most in this moment?)",
+            "content": "(After lighting the incense, thick smoke fills the air. Through the haze, you catch glimpses of something...)",
             "npc": 800006,
             "options": [
               {
                 "id": 710078051,
-                "content": "(Endless treasure chests)",
+                "content": "Treasure chests.",
                 "next": 71007806
               },
               {
                 "id": 710078052,
-                "content": "(Eliminate every foe)",
+                "content": "Enemies.",
                 "next": 71007809
               },
               {
                 "id": 710078053,
-                "content": "(See the person you've missed dearly)",
+                "content": "A familiar figure.",
                 "next": 71007813
               }
             ]
@@ -13921,7 +13921,7 @@
         "dialogues": [
           {
             "id": 71007813,
-            "content": "(Conversation with Berry)",
+            "content": "(You reach out to touch her, but her form blurs. You know she is nothing more than a vision conjured by the incense.)",
             "npc": 800006
           }
         ]
@@ -13936,7 +13936,7 @@
         "dialogues": [
           {
             "id": 71007810,
-            "content": "(Get back to the Wishen and report what happened.)",
+            "content": "(The smoke clears, and everything you saw fades away. Head back and ask the Wishen what that was all about.)",
             "npc": 100001,
             "next": 71007811
           }
@@ -13952,7 +13952,7 @@
         "dialogues": [
           {
             "id": 71007807,
-            "content": "(Get back to the Wishen and report what happened.)",
+            "content": "(The smoke clears, and everything you saw fades away. Head back and ask the Wishen what that was all about.)",
             "npc": 100001,
             "next": 71007808
           }
@@ -13968,7 +13968,7 @@
         "dialogues": [
           {
             "id": 71007814,
-            "content": "(Get back to the Wishen and report what happened.)",
+            "content": "(The smoke clears, and everything you saw fades away. Head back and ask the Wishen what that was all about.)",
             "npc": 100001,
             "next": 71007815
           }
@@ -13981,7 +13981,7 @@
         "dialogues": [
           {
             "id": 71007808,
-            "content": "So that is what you saw. I see. Thank you for your help.",
+            "content": "Incense burned... farewell...",
             "npc": 818082,
             "impr": [
               1041,
@@ -14001,7 +14001,7 @@
         "dialogues": [
           {
             "id": 71007806,
-            "content": "(Chests appear around you in an instant.)",
+            "content": "(In the swirling mist, you see countless treasure chests. Go ahead, open them.)",
             "npc": 800006
           }
         ]
@@ -14016,7 +14016,7 @@
         "dialogues": [
           {
             "id": 71007809,
-            "content": "(Enemies materialise around you without warning.)",
+            "content": "(In the swirling mist, you see a horde of enemies. Take them down.)",
             "npc": 800006
           }
         ]
@@ -14031,13 +14031,13 @@
         "dialogues": [
           {
             "id": 71007812,
-            "content": "(Berry appears before you.)",
+            "content": "(In the swirling mist, you see a figure — Berry.)",
             "npc": 800006,
             "next": 71007813
           },
           {
             "id": 71007813,
-            "content": "(Conversation with Berry)",
+            "content": "(You reach out to touch her, but her form blurs. You know she is nothing more than a vision conjured by the incense.)",
             "npc": 800006,
             "next": 71007814
           }
@@ -14050,7 +14050,7 @@
         "dialogues": [
           {
             "id": 71007811,
-            "content": "So that is what you saw. I see. Thank you for your help.",
+            "content": "Incense burned... farewell...",
             "npc": 818082,
             "impr": [
               1041,
@@ -14067,7 +14067,7 @@
         "dialogues": [
           {
             "id": 71007815,
-            "content": "So that is what you saw. I see. Thank you for your help.",
+            "content": "Incense burned... farewell...",
             "npc": 818082,
             "impr": [
               1041,
@@ -14204,7 +14204,7 @@
         "dialogues": [
           {
             "id": 71007901,
-            "content": "救救我啊，我还没找到爸爸埋的宝藏，我不要死在这里哇……",
+            "content": "Help! I haven't found papa's buried treasure yet. I don't wanna die here...",
             "npc": 818083
           }
         ]
@@ -14219,30 +14219,30 @@
         "dialogues": [
           {
             "id": 71007905,
-            "content": "(You look at his innocent face and decide to...)",
+            "content": "Thanks for saving me! I don't really have anything good to give you... Oh, but I do have a treasure map my papa left. If you find the treasure, it's all yours!",
             "npc": 818083,
             "options": [
               {
                 "id": 710079051,
-                "content": "(Tell him that treasure buried deep underground is worthless — it only finds meaning when brought out and put to use.)",
+                "content": "Judging by the terrain, it should be around here. I'll go take a look.",
                 "next": 71007906
               },
               {
                 "id": 710079052,
-                "content": "(Thank him for the secret and keep your heavier thoughts to yourself, so as to protect his innocence.)",
+                "content": "If your papa left it for you, I can't take it.",
                 "next": 71007908
               }
             ]
           },
           {
             "id": 71007906,
-            "content": "好厉害，一眼就看出来了！那快去把它挖出来吧。",
+            "content": "Whoa, you figured it out just like that? Go dig it up!",
             "npc": 818083,
             "next": 71007907
           },
           {
             "id": 71007908,
-            "content": "这怎么好意思呀……那，那我给你拿点其他小礼物吧，谢谢你刚才救了我。",
+            "content": "Oh, that's... that's way too nice of you... Then, um, I'll get you a little something else instead. Thanks again for saving me!",
             "npc": 818083,
             "impr": [
               1041,
@@ -14259,7 +14259,7 @@
         "dialogues": [
           {
             "id": 71007907,
-            "content": "好，按照约定，这些宝藏从现在开始就归你啦，谢谢你刚才救了我。",
+            "content": "Alright, like I said, the treasure is all yours now. Thanks again for saving me back there.",
             "npc": 818083,
             "impr": [
               1041,
@@ -14365,7 +14365,7 @@
         "dialogues": [
           {
             "id": 71008010,
-            "content": "（男子给你的这笔钱无疑就是他们在酝酿什么阴谋的证据，现在可以直接回去交差，揭露二人的阴谋，或是藏在附近，继续听听这二人的对话。）",
+            "content": "(The money is clear proof of their scheme. You can head back now and expose them both, or stick around a little longer and see what else they let slip.)",
             "npc": 100001
           }
         ]
@@ -14380,7 +14380,7 @@
         "dialogues": [
           {
             "id": 71008001,
-            "content": "那边那位外乡人，对对就是叫你呢，能不能来帮我个忙。",
+            "content": "You there, outsider — yes, I mean you! Could you lend me a hand?",
             "npc": 818084
           }
         ]
@@ -14395,23 +14395,23 @@
         "dialogues": [
           {
             "id": 71008002,
-            "content": "我店里有个伙计最近总是偷偷跑出去跟隔壁店主碰面，我怀疑是想对我的店动什么手脚。能帮我去找点证据吗？",
+            "content": "My clerk has been sneaking off to see the shopkeeper next door. Pretty sure he's up to something. Think you could help me dig up some proof?",
             "npc": 818084,
             "options": [
               {
                 "id": 710080021,
-                "content": "（接受。）",
+                "content": "(Accept)",
                 "next": 71008003
               },
               {
                 "id": 710080022,
-                "content": "（拒绝。）"
+                "content": "(Refuse)"
               }
             ]
           },
           {
             "id": 71008003,
-            "content": "好，他们应该就在附近，全交给你了，我就不过去打草惊蛇了。",
+            "content": "Good. They're probably around here somewhere. I'll leave it to you — better if I stay out of sight.",
             "npc": 818084,
             "next": 71008004
           }
@@ -14429,7 +14429,7 @@
         "dialogues": [
           {
             "id": 71008009,
-            "content": "这笔钱你拿着，刚才我们俩的对话你就当没听到如何。",
+            "content": "Here, take this. And you didn't hear a thing, alright?",
             "npc": 818086,
             "next": 71008014
           }
@@ -14445,31 +14445,31 @@
         "dialogues": [
           {
             "id": 71008004,
-            "content": "只是把秘方拿出来给我看一眼而已，不会有什么风险的。",
+            "content": "Just a quick look at the recipe. What's the harm?",
             "npc": 818086,
             "next": 71008005
           },
           {
             "id": 71008005,
-            "content": "我……",
+            "content": "I...",
             "npc": 818085,
             "next": 71008006
           },
           {
             "id": 71008006,
-            "content": "事成之后分你三成，怎么样？",
+            "content": "How about a thirty percent cut once it's done? Deal?",
             "npc": 818086,
             "next": 71008007
           },
           {
             "id": 71008007,
-            "content": "……",
+            "content": "...",
             "npc": 818085,
             "next": 71008008
           },
           {
             "id": 71008008,
-            "content": "还不行，那就干脆……等等，你是不是听到什么了，过来过来。",
+            "content": "Not enough? Then how about— Hang on... you hear something? Come here.",
             "npc": 818086,
             "next": 71008009
           }
@@ -14482,7 +14482,7 @@
         "dialogues": [
           {
             "id": 71008014,
-            "content": "哈哈，果然是我想得那样！等我家伙计回来我就让他滚蛋。",
+            "content": "Hah! Just as I thought. Once he gets back, he's out of here.",
             "npc": 818084,
             "impr": [
               1041,
@@ -14503,19 +14503,19 @@
         "dialogues": [
           {
             "id": 71008011,
-            "content": "四成，给个痛快话，到底行不行啊，拖了我好几天了。",
+            "content": "Alright, forty percent. Just tell me straight, are you in or not? You've been dragging this out for days.",
             "npc": 818086,
             "next": 71008012
           },
           {
             "id": 71008012,
-            "content": "对，对不起。店主于我有恩，我不能帮你做这种事。",
+            "content": "I... I'm sorry. The owner's always looked out for me. I can't do this.",
             "npc": 818085,
             "next": 71008013
           },
           {
             "id": 71008013,
-            "content": "（你成功躲过二人的注意，了解到了伙计真正的选择，现在回去向店主揭露真相吧。）",
+            "content": "(You manage to stay out of sight and learn what the clerk truly chose. Now head back and tell the shopkeeper the truth.)",
             "npc": 100001,
             "next": 71008015
           }
@@ -14528,7 +14528,7 @@
         "dialogues": [
           {
             "id": 71008015,
-            "content": "原来是这样，差点错怪我家伙计了，谢谢你啊。",
+            "content": "So that's how it was. I nearly blamed him for nothing. Thanks.",
             "npc": 818084,
             "impr": [
               1041,
@@ -14698,7 +14698,7 @@
         "dialogues": [
           {
             "id": 71008101,
-            "content": "今天就差最后一圈了，大家再坚持一下！",
+            "content": "Just one more lap, everyone! Hang in there!",
             "npc": 818087
           }
         ]
@@ -14713,23 +14713,23 @@
         "dialogues": [
           {
             "id": 71008102,
-            "content": "要想成为织星客，脚力也是很重要的！你要不要跟我一起监督他们跑完今天的最后一圈呀？",
+            "content": "Starweavers definitely need strong legs too! Want to help me keep an eye on them for the last lap?",
             "npc": 818087,
             "options": [
               {
                 "id": 710081021,
-                "content": "（接受。）",
+                "content": "(Accept)",
                 "next": 71008103
               },
               {
                 "id": 710081022,
-                "content": "（拒绝。）"
+                "content": "(Refuse)"
               }
             ]
           },
           {
             "id": 71008103,
-            "content": "好，你来选一个人监督就好，选好了告诉我哦。",
+            "content": "Great! Just pick one to watch, and let me know when you've decided.",
             "npc": 818087,
             "next": 71008104
           }
@@ -14748,7 +14748,7 @@
         "dialogues": [
           {
             "id": 71008106,
-            "content": "最后冲刺了！加油加油，不可以慢慢走哦！",
+            "content": "Final sprint! Come on, — no walking now!",
             "npc": 818087,
             "next": 71008111
           }
@@ -14768,29 +14768,29 @@
         "dialogues": [
           {
             "id": 71008104,
-            "content": "怎么样，想好要监督谁了吗？",
+            "content": "So, made up your mind yet?",
             "npc": 818087,
             "options": [
               {
                 "id": 710081041,
-                "content": "红衣服的。",
+                "content": "The one in red.",
                 "next": 71008105
               },
               {
                 "id": 710081042,
-                "content": "绿衣服的。",
+                "content": "The one in green.",
                 "next": 71008105
               },
               {
                 "id": 710081043,
-                "content": "蓝衣服的。",
+                "content": "The one in blue.",
                 "next": 71008105
               }
             ]
           },
           {
             "id": 71008105,
-            "content": "没问题，我会好好盯着剩下两个人的！",
+            "content": "Got it! I'll keep an eye on the other two!",
             "npc": 818087,
             "next": 71008110
           }
@@ -14803,7 +14803,7 @@
         "dialogues": [
           {
             "id": 71008111,
-            "content": "有你在一边盯着，他居然能跑这么快呀，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+            "content": "Having you there really pushed him — he was slow, but he made it all the way to the end! You were a huge help today. Here's a little something from us.",
             "npc": 818087
           }
         ]
@@ -14815,7 +14815,7 @@
         "dialogues": [
           {
             "id": 71008110,
-            "content": "有你在一边盯着，他虽然跑得很慢，但还是坚持到最后了，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+            "content": "Having you there really pushed him — he ran so fast! You were a huge help today. Here's a little something from us.",
             "npc": 818087
           }
         ]
@@ -14827,7 +14827,7 @@
         "dialogues": [
           {
             "id": 71008111,
-            "content": "有你在一边盯着，他居然能跑这么快呀，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+            "content": "Having you there really pushed him — he was slow, but he made it all the way to the end! You were a huge help today. Here's a little something from us.",
             "npc": 818087
           }
         ]
@@ -14839,7 +14839,7 @@
         "dialogues": [
           {
             "id": 71008111,
-            "content": "有你在一边盯着，他居然能跑这么快呀，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+            "content": "Having you there really pushed him — he was slow, but he made it all the way to the end! You were a huge help today. Here's a little something from us.",
             "npc": 818087
           }
         ]

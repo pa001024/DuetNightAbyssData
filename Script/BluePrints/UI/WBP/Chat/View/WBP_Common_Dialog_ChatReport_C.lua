@@ -79,7 +79,7 @@ function WBP_Common_Dialog_ChatReport_C:InitContent(Params, PopupData, Owner)
   self.Owner:GetButtonBar().Btn_Quit:BindEventOnReleased(self, self.OnBtnNo)
   self.Text_Title:SetText(string.format("%s: ", GText("UI_COMMONPOP_TEXT_100090_1")))
   self.Text_PlayerName:SetText(string.format("%s ", Params.Nickname))
-  self.Text_PlayerUID:SetText(string.format(" UID%s", Params.UID))
+  self.Text_PlayerUID:SetText(string.format(" UID%s", Params.RealUID or Params.UID))
   self.Text_ReportTypeTitle:SetText(GText("UI_COMMONPOP_TEXT_100090_2"))
   local InDungeon = GWorld:GetAvatar():IsInDungeon()
   local TabConfig = {

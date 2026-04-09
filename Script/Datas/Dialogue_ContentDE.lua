@@ -222136,7 +222136,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006514] = {
           Content = "请听题！织星客丢了一件商品，经过调查找到了甲乙丙三人。甲指责：“是乙偷的！”。乙声称：“是丙偷的！”。丙说：“确实是我偷的！”。仅一人说了真话，请问到底是谁偷走了商品？",
-          ContentDE = "Hör gut zu! Ein Sternenweber hat eine Ware verloren. Nach der Ermittlung wurden drei Verdächtige gefunden: A, B und C.\n A behauptet: „B hat sie gestohlen!“\n B sagt: „C hat sie gestohlen!“\n C sagt: „Ja, ich war’s!“\n Nur eine Person sagt die Wahrheit ... Dann wer hat die Ware gestohlen?",
+          ContentDE = "Hör gut zu! Ein Sternenweber hat eine Ware verloren. Nach der Ermittlung wurden drei Verdächtige gefunden: A, B und C.\nA behauptet: „B hat sie gestohlen!“\nB sagt: „C hat sie gestohlen!“\nC sagt: „Ja, ich war’s!“\nNur eine Person sagt die Wahrheit ... Dann wer hat die Ware gestohlen?",
           DialogueId = 71006514,
           GUID = "B1C1E234",
           NextOptions = {
@@ -222162,7 +222162,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71006516] = {
           Content = "请听题！三人前后排队，各带帽子一顶，帽子颜色可能会出现红、黄、蓝其中一种。最后一人能看到前两人的帽子，中间的人只能看前面。最后一人沉默，接着中间人也沉默。第一人说自己戴黄帽。已知至少一人戴黄帽。下列哪个说法是正确的？",
-          ContentDE = "Also gut, hier ist die Frage: Drei Personen stehen hintereinander in einer Reihe. Jede trägt einen Hut, der entweder rot, gelb oder blau sein kann. Die Person ganz hinten kann die Hüte der beiden vor ihr sehen. Die Person in der Mitte kann nur den Hut der Person vor sich sehen.\n Zunächst schweigt die Person hinten. Dann schweigt auch die Person in der Mitte. Und genau in diesem Moment meldet sich plötzlich die Person ganz vorne zu Wort und sagt, sie trage einen gelben Hut. Wir wissen außerdem, dass mindestens einer der Hüte gelb ist.\n Also – welche der folgenden Aussagen ist korrekt?",
+          ContentDE = "Also gut, hier ist die Frage: Drei Personen stehen hintereinander in einer Reihe. Jede trägt einen Hut, der entweder rot, gelb oder blau sein kann. Die Person ganz hinten kann die Hüte der beiden vor ihr sehen. Die Person in der Mitte kann nur den Hut der Person vor sich sehen.\nZunächst schweigt die Person hinten. Dann schweigt auch die Person in der Mitte. Und genau in diesem Moment meldet sich plötzlich die Person ganz vorne zu Wort und sagt, sie trage einen gelben Hut. Wir wissen außerdem, dass mindestens einer der Hüte gelb ist.\nAlso – welche der folgenden Aussagen ist korrekt?",
           DialogueId = 71006516,
           GUID = "B1C1E288",
           NextOptions = {

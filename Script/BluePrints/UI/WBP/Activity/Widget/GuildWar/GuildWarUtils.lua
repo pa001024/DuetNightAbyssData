@@ -181,9 +181,6 @@ function GuildWarUtils.HasShopReddot()
   end
   local ShowReddot = false
   pcall(function()
-    local CoinId = GuildWarUtils.GetCoinId(RaidSeasons.Shop)
-    local CoinNum = Avatar:GetResourceNum(CoinId) or 0
-    CoinNum = tonumber(CoinNum) or 0
     local MaxRaidScore = GuildWarUtils.IsPreRaidTime() and RaidSeasons.MaxPreRaidScore or RaidSeasons.MaxRaidScore
     MaxRaidScore = tonumber(MaxRaidScore) or 0
     local SubTabId = GuildWarUtils.GetShopSubTabId(RaidSeasons.Shop)
@@ -191,6 +188,8 @@ function GuildWarUtils.HasShopReddot()
       if ShopData.SubTabId == SubTabId and ShopUtils:GetShopItemCanShow(ShopItemId) then
         local PurchaseLimit = ShopUtils:GetShopItemPurchaseLimit(ShopData.ItemId)
         if 0 ~= PurchaseLimit and not Avatar:CheckShopItemUnique(ShopData.ItemId) then
+          local CoinNum = Avatar:GetResourceNum(ShopData.PriceType) or 0
+          CoinNum = tonumber(CoinNum) or 0
           local UnLockRaidPoint = tonumber(ShopData.UnlockRaidPoint) or 0
           local Price = tonumber(ShopData.Price) or 0
           if CoinNum >= Price and MaxRaidScore >= UnLockRaidPoint then

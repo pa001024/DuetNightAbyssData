@@ -198,6 +198,9 @@ function M:OnTaskTabItemClick(TabWidget)
 end
 
 function M:OnMenuOpenChanged(IsOpen)
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    return
+  end
   if IsOpen then
     self.Com_Tab:UpdateBottomKeyInfo({
       {
@@ -732,6 +735,9 @@ function M:RefreshRecurringTaskDetail()
 end
 
 function M:UpdateQuickClaimButtomTip()
+  if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+    return
+  end
   local NewBottomKeyInfo = {
     {
       GamePadInfoList = {
@@ -913,7 +919,11 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       IsEventHandled = self.Com_Tab:Handle_KeyEventOnGamePad(InKeyName)
     end
   else
-    IsEventHandled = self.Com_Tab:Handle_KeyEventOnPC(InKeyName)
+    if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
+      IsEventHandled = self.Com_Tab:Handle_KeyEventOnPC(InKeyName)
+    else
+      IsEventHandled = self.Com_Tab:Handle_KeyEventOnTouch(InKeyName)
+    end
     IsEventHandled = IsEventHandled or self:Handle_OnPCButtonDown(InKeyName)
   end
   if IsEventHandled then

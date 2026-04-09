@@ -42,6 +42,14 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   EventManager:AddEvent(EventID.CloseLoading, self, self.AfterLoading)
   EventManager:AddEvent(EventID.OnLevelDeliverBlackCurtainEnd, self, self.AfterLoading)
   EventManager:AddEvent(EventID.OnRepBulletNum, self, self.UpdateBulletNumUI)
+  self.SpecialMountList = {
+    1004,
+    1005,
+    1006,
+    1007
+  }
+  EventManager:AddEvent(EventID.OnEnableBattleMount, self, self.OnEnableBattleMount)
+  EventManager:AddEvent(EventID.OnDisableBattleMount, self, self.OnDisableBattleMount)
   self:SetActorHideTag("login", true)
   self.DisableInputTags = TArray("")
   MiscUtils.InitializeSettings(self)
@@ -71,6 +79,18 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   end
   if self.CharFSMComp then
     self.CharFSMComp.OnAfterTagChanged:Add(self, self.OnTagChange)
+  end
+end
+
+function BP_PlayerCharacter_C:OnEnableBattleMount(Character)
+  if self == Character and self:IsMainPlayer() and CommonUtils.HasValue(self.SpecialMountList, self.CurrentMountId) then
+    UTalkFunctionLibrary.EnterHeadUIState(self, EHeadWidgetLocationState.SpecialAction)
+  end
+end
+
+function BP_PlayerCharacter_C:OnDisableBattleMount(Character)
+  if self == Character and self:IsMainPlayer() then
+    UTalkFunctionLibrary.LeaveHeadUIState(self, EHeadWidgetLocationState.SpecialAction)
   end
 end
 
@@ -2963,6 +2983,8 @@ function BP_PlayerCharacter_C:ForbidActiveSkills(bForbid)
   self:ForbidSkills(bForbid, Skills)
 end
 
+local bDungeonForbidSkillsByBuff = {}
+
 function BP_PlayerCharacter_C:ForbidAllSkillsByBuff(bForbid)
   DebugPrint("lgc@ ForbidAllSkillsByBuff", bForbid)
   local DisableSkillsBuffId = 311
@@ -2998,10 +3020,16 @@ function BP_PlayerCharacter_C:ForbidAllSkillsByBuff(bForbid)
   if bForbid then
     DebugPrint("lgc@ AddBuffToTarget", DisableSkillsBuffId, self:GetName())
     Battle(self):AddBuffToTarget(self, self, DisableSkillsBuffId, -1, nil, nil)
+    bDungeonForbidSkillsByBuff[self.Eid] = true
   else
     DebugPrint("lgc@ RemoveBuffFromTarget", DisableSkillsBuffId, self:GetName())
     Battle(self):RemoveBuffFromTarget(self, self, DisableSkillsBuffId, false, -1)
+    bDungeonForbidSkillsByBuff[self.Eid] = false
   end
+end
+
+function BP_PlayerCharacter_C:IsDungeonForbidSkillsByBuff()
+  return bDungeonForbidSkillsByBuff[self.Eid]
 end
 
 function BP_PlayerCharacter_C:ForbidAllSkills(bForbid)

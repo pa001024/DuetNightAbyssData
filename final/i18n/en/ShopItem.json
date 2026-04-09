@@ -13532,7 +13532,7 @@
                 "sequence": 293,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Unlocks after obtaining a Radiant Posture",
+                "cond": "Unlocks upon obtaining any of the following Postures: Throne Above All, Shore Leisure, or Snapfreeze.",
                 "isSpPopup": 1
               },
               {
@@ -13549,7 +13549,7 @@
                 "sequence": 292,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Unlocks after obtaining a Radiant Posture",
+                "cond": "Unlocks upon obtaining any of the following Postures: Throne Above All, Shore Leisure, or Snapfreeze.",
                 "isSpPopup": 1
               },
               {

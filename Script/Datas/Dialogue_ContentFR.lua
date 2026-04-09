@@ -231874,7 +231874,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000210] = {
           Content = "请问这里有猫粮卖吗？",
-          ContentFR = "Excusez-moi, vous auriez de la nourriture pour chat ? ",
+          ContentFR = "Excusez-moi, vous auriez de la nourriture pour chat ?",
           DialogueId = 71000210,
           GUID = "B1BDD7F4",
           NextDialogue = 710002101,
@@ -231944,7 +231944,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000504] = {
           Content = "我去看看附近还有没有敌人，你自己小心。",
-          ContentFR = "Je vais vérifier si d’autres ennemis rôdent dans le coin. Sois prudent. ",
+          ContentFR = "Je vais vérifier si d’autres ennemis rôdent dans le coin. Sois prudent.",
           DialogueId = 71000504,
           GUID = "B1BE0830",
           NextDialogue = 71000505,
@@ -231952,7 +231952,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000505] = {
           Content = "收到收到，我会注意的！",
-          ContentFR = "Reçu, reçu ! Je ferai attention ! ",
+          ContentFR = "Reçu, reçu ! Je ferai attention !",
           DialogueId = 71000505,
           GUID = "B1BE085A",
           NextDialogue = 71000506,
@@ -231960,7 +231960,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71000506] = {
           Content = "诶，你也来啦。呜呜……原来有这么多人愿意帮助我……这是给大家准备的谢礼，以后也请多多关照了。",
-          ContentFR = "Oh, toi aussi tu es venu... <I>Snif...</> Je ne pensais pas qu’autant de monde viendrait m’aider... Voici un petit présent pour vous remercier. Comptez sur moi à l’avenir ! ",
+          ContentFR = "Oh, toi aussi tu es venu... <I>Snif...</> Je ne pensais pas qu’autant de monde viendrait m’aider... Voici un petit présent pour vous remercier. Comptez sur moi à l’avenir !",
           DialogueId = 71000506,
           GUID = "B1BE0884",
           Scripts = "TurnTo{TurnToDescription{\"818015:n(0)\"}}",
@@ -233801,7 +233801,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71004402] = {
           Content = "（争斗的声响引来了不屈的灾厄，不详的化身终于降临于此。击败它吧，就像过去的无数次一样。）",
-          ContentFR = "Le fracas du combat a attiré un fléau indomptable. L’incarnation de la destruction est enfin là. Abats-la, comme tu l’as déjà fait tant de fois.",
+          ContentFR = "Le fracas du combat a attiré un fléau indomptable. L’incarnation de la destruction est enfin là. Abats-la, comme tu l’as déjà fait tant de fois.\n",
           DialogueId = 71004402,
           GUID = "B1C087B4",
           SpeakNpcId = 800006
@@ -236095,6 +236095,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007401] = {
           Content = "（应天尉来袭，击退他们！）",
+          ContentFR = "Des Magistrats de Yingtian approchent — repoussez-les !",
           DialogueId = 71007401,
           GUID = "B1C273BA",
           SpeakNpcId = 800006
@@ -236156,6 +236157,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007508] = {
           Content = "没想到你出手如此果断，在下佩服佩服。",
+          ContentFR = "Je ne pensais pas que vous interviendriez aussi vite... vraiment, je vous dois beaucoup !",
           DialogueId = 71007508,
           GUID = "B1C2851F",
           NextDialogue = 71007509,
@@ -236170,6 +236172,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007510] = {
           Content = "还好你把它们赶走了，希望能消停一段时间。",
+          ContentFR = "Heureusement que vous les avez chassées... j’espère qu’elles vont nous laisser tranquilles un moment.",
           DialogueId = 71007510,
           GUID = "B1C28549",
           NextDialogue = 71007511,
@@ -236184,13 +236187,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007601] = {
           Content = "今天怎么回事，这么久了一条鱼都没上钩。",
-          ContentFR = "Quelle journée étrange... Voilà des heures que j’attends et pas une seule touche.",
+          ContentFR = "Qu’est-ce qui se passe aujourd’hui... ça fait un moment et pas un seul poisson à l’horizon.",
           DialogueId = 71007601,
           GUID = "B1C2948A",
           SpeakNpcId = 818079
         },
         [71007602] = {
           Content = "这位路过的朋友，我怀疑这地方今天根本没有鱼，你能不能帮我试试？",
+          ContentFR = "Hé, toi là-bas... j’ai l’impression qu’il n’y a pas de poisson ici aujourd’hui. Tu pourrais essayer à ma place ?",
           DialogueId = 71007602,
           GUID = "B1C294B4",
           NextOptions = {
@@ -236202,13 +236206,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007603] = {
           Content = "好，拜托你了。",
-          ContentFR = "Parfait... je vous en prie, aidez-moi.",
+          ContentFR = "Parfait... s’il te plaît, aide-moi.",
           DialogueId = 71007603,
           GUID = "B1C294DE",
           SpeakNpcId = 818079
         },
         [71007604] = {
           Content = "太厉害了，一下就钓上来了。看来不是水域的问题。",
+          ContentFR = "Incroyable... tu en as attrapé un du premier coup. Ce n’était donc pas un problème d’endroit.",
           DialogueId = 71007604,
           GUID = "B1C29508",
           NextDialogue = 71007605,
@@ -236216,18 +236221,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007605] = {
           Content = "谢谢你帮我验证了一下哈，我自己再试试看。今天绝对不能再提着空桶回去了！",
+          ContentFR = "Merci d’avoir vérifié pour moi. Je vais réessayer... aujourd’hui, hors de question de rentrer avec un seau vide !",
           DialogueId = 71007605,
           GUID = "B1C29532",
           SpeakNpcId = 818079
         },
         [71007701] = {
           Content = "奇怪，到底掉到哪里去了……",
+          ContentFR = "C’est étrange... où est-ce que ça a bien pu tomber...",
           DialogueId = 71007701,
           GUID = "B1C2A4F2",
           SpeakNpcId = 818080
         },
         [71007702] = {
           Content = "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+          ContentFR = "Excusez-moi, vous n’auriez pas vu un coffre que j’ai perdu dans les environs ? Un coffre tout simple... je le cherche depuis un bon moment.",
           DialogueId = 71007702,
           GUID = "B1C2A51C",
           NextOptions = {
@@ -236239,18 +236247,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007703] = {
           Content = "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+          ContentFR = "Merci. Je vais continuer à chercher ici... vous pourriez regarder plus bas, s’il vous plaît ?",
           DialogueId = 71007703,
           GUID = "B1C2A546",
           SpeakNpcId = 818080
         },
         [71007704] = {
           Content = "咦，看你在找什么东西的样子，是这些箱子吗？",
+          ContentFR = "Oh ? On dirait que tu cherches quelque chose... ce ne serait pas ces coffres ?",
           DialogueId = 71007704,
           GUID = "B1C2A570",
           SpeakNpcId = 818081
         },
         [71007705] = {
           Content = "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+          ContentFR = "Je les ai trouvés en étudiant le cours de la rivière. Regarde, il y en a un qui est à toi ?",
           DialogueId = 71007705,
           GUID = "B1C2A59A",
           NextOptions = {
@@ -236263,48 +236274,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007706] = {
           Content = "好，那你就拿去吧。",
-          ContentFR = "Merci, oui... c’est bien le coffre que j’avais perdu.",
+          ContentFR = "Très bien... prends ce que tu veux.",
           DialogueId = 71007706,
           GUID = "B1C2A5C4",
           SpeakNpcId = 818081
         },
         [71007707] = {
           Content = "没错没错，就是这个，太谢谢你了。",
-          ContentFR = "Voici votre récompense.",
+          ContentFR = "Oui, oui, c’est bien celui-là ! Merci infiniment !",
           DialogueId = 71007707,
           GUID = "B1C2A5EE",
           SpeakNpcId = 818080
         },
         [71007708] = {
           Content = "这明显不是我掉的普通箱子，不过还是谢谢你了。",
-          ContentFR = "Ce coffre est beaucoup trop luxueux. Il ne peut clairement pas être à moi.",
+          ContentFR = "Ce n’est pas le coffre que j’ai perdu... il est bien trop luxueux. Mais merci quand même. Tenez, prenez ceci en récompense.",
           DialogueId = 71007708,
           GUID = "B1C2A618",
           SpeakNpcId = 818080
         },
         [71007710] = {
           Content = "哇，没想到你找到了这么多箱子呀，那我就先拿走我掉的普通箱子了哈，谢谢你！",
-          ContentFR = "Par tous les cieux... comment avez-vous réussi à trouver autant de coffres ?",
+          ContentFR = "Ouah... tu en as trouvé autant ? Je vais récupérer mon coffre, alors. Merci beaucoup !",
           DialogueId = 71007710,
           GUID = "B1C2A66C",
           SpeakNpcId = 818080
         },
         [71007712] = {
           Content = "（附近没看到什么箱子，再去其他地方找找。）",
+          ContentFR = "Aucun coffre en vue... mieux vaut chercher ailleurs.",
           DialogueId = 71007712,
           GUID = "B1C2A6C0",
           SpeakNpcId = 800006
         },
         [71007801] = {
           Content = "香……点燃……请……",
-          ContentFR = "Toi, là-bas... {性别:Chasseur de Phoxène|Chasseuse de Phoxène}. Pourrais-tu t’approcher un instant ?",
+          ContentFR = "Encens... allumez... s’il-vous-plaît...",
           DialogueId = 71007801,
           GUID = "B1C2B55A",
           SpeakNpcId = 818082
         },
         [71007802] = {
           Content = "那边……请……点燃……谢谢……",
-          ContentFR = "J’ai récemment mis au point un nouvel encens capable d’éveiller l’inconscient enfoui dans l’esprit. Accepterais-tu de m’aider à mener une expérience ? Il te suffira de l’allumer, puis de me décrire ce que tu verras.",
+          ContentFR = "Là-bas... s’il vous plaît... allumez... merci...",
           DialogueId = 71007802,
           GUID = "B1C2B584",
           NextOptions = {
@@ -236316,14 +236328,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007803] = {
           Content = "焚香……好……",
-          ContentFR = "Parfait. Va donc allumer l’encens dans ce brûle-parfum.",
+          ContentFR = "Encens... brûle... bien...",
           DialogueId = 71007803,
           GUID = "B1C2B5AE",
           SpeakNpcId = 818082
         },
         [71007805] = {
           Content = "（点燃香炉之后，四周顿时弥漫起了浓厚的烟雾，透过这些烟雾，你似乎看到了什么东西？）",
-          ContentFR = "Une question émerge au plus profond de votre esprit — qu’est-ce que vous désirez le plus en cet instant ?",
+          ContentFR = "Après avoir allumé le brûle-encens, une épaisse fumée envahit aussitôt les alentours. À travers ce voile, il vous semble apercevoir quelque chose...",
           DialogueId = 71007805,
           GUID = "B1C2B602",
           NextOptions = {
@@ -236336,49 +236348,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007806] = {
           Content = "（朦胧的雾气中，你看到了数之不尽的宝箱，打开它们吧。）",
-          ContentFR = "Des coffres surgissent soudainement tout autour de vous.",
+          ContentFR = "Dans la brume indistincte, vous apercevez d’innombrables coffres. Ouvrez-les.",
           DialogueId = 71007806,
           GUID = "B1C2B62C",
           SpeakNpcId = 800006
         },
         [71007807] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentFR = "Retourner voir le Wishen et lui raconter ce qui vient de se produire.",
+          ContentFR = "La fumée se dissipe, et tout ce que vous venez de voir s’évanouit avec elle. Vous devriez aller demander au Wishen ce qui vient de se passer.",
           DialogueId = 71007807,
           GUID = "B1C2B656",
           SpeakNpcId = 100001
         },
         [71007808] = {
           Content = "焚香……再见……",
-          ContentFR = "Ainsi... voilà ce que tu as vu. Je comprends. Merci pour ta coopération.",
+          ContentFR = "Encens... consumé... adieu...",
           DialogueId = 71007808,
           GUID = "B1C2B680",
           SpeakNpcId = 818082
         },
         [71007809] = {
           Content = "（朦胧的雾气中，你看到了大量敌人，击败它们吧。）",
-          ContentFR = "Des ennemis apparaissent tout autour de vous.",
+          ContentFR = "Dans la brume indistincte, vous apercevez une multitude d’ennemis. Éliminez-les.",
           DialogueId = 71007809,
           GUID = "B1C2B6AA",
           SpeakNpcId = 800006
         },
         [71007810] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentFR = "Retourner voir le Wishen et lui raconter ce qui vient de se produire.",
+          ContentFR = "La fumée se dissipe, et tout ce que vous venez de voir s’évanouit avec elle. Vous devriez aller demander au Wishen ce qui vient de se passer.",
           DialogueId = 71007810,
           GUID = "B1C2B6D4",
           SpeakNpcId = 100001
         },
         [71007811] = {
           Content = "焚香……再见……",
-          ContentFR = "Ainsi... voilà ce que tu as vu. Je comprends. Merci pour ta coopération.",
+          ContentFR = "Encens... consumé... adieu...",
           DialogueId = 71007811,
           GUID = "B1C2B6FE",
           SpeakNpcId = 818082
         },
         [71007812] = {
           Content = "（朦胧的雾气中，你看到了贝蕾妮卡的身影。）",
-          ContentFR = "Berry apparaît devant vous.",
+          ContentFR = "Dans la brume indistincte, vous apercevez la silhouette de Berenica.",
           DialogueId = 71007812,
           GUID = "B1C2B728",
           NextDialogue = 71007813,
@@ -236386,40 +236398,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007813] = {
           Content = "（伸手触碰，贝蕾的身影开始变得模糊不清。你知道，她只是焚香之后出现的幻影。）",
-          ContentFR = "Dialogue avec Berry",
+          ContentFR = "Vous tendez la main pour la toucher, mais sa silhouette devient floue. Vous le savez — ce n’est qu’une illusion née de l’encens.",
           DialogueId = 71007813,
           GUID = "B1C2B752",
           SpeakNpcId = 800006
         },
         [71007814] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentFR = "Retourner voir le Wishen et lui raconter ce qui vient de se produire.",
+          ContentFR = "La fumée se dissipe, et tout ce que vous venez de voir s’évanouit avec elle. Vous devriez aller demander au Wishen ce qui vient de se passer.",
           DialogueId = 71007814,
           GUID = "B1C2B77C",
           SpeakNpcId = 100001
         },
         [71007815] = {
           Content = "焚香……再见……",
-          ContentFR = "Ainsi... voilà ce que tu as vu. Je comprends. Merci pour ta coopération.",
+          ContentFR = "Encens... consumé... adieu...",
           DialogueId = 71007815,
           GUID = "B1C2B7A6",
           SpeakNpcId = 818082
         },
         [71007816] = {
           Content = "（一个香炉不知何时出现在了你的背后，这只无由生看起来很希望你能点燃它。）",
+          ContentFR = "Un brûle-encens est apparu derrière vous sans que vous ne sachiez quand. Ce Wishen semble vraiment vouloir que vous l’allumiez.",
           DialogueId = 71007816,
           GUID = "B1C2B7A7",
           SpeakNpcId = 800006
         },
         [71007901] = {
           Content = "救救我啊，我还没找到爸爸埋的宝藏，我不要死在这里哇……",
+          ContentFR = "Au secours... je n’ai pas encore trouvé le trésor que papa a caché... je ne veux pas mourir ici...",
           DialogueId = 71007901,
           GUID = "B1C2C5C2",
           SpeakNpcId = 818083
         },
         [71007905] = {
           Content = "谢谢你救了我，但我没什么好东西能够报答你……对了，我这有一张爸爸留下的藏宝图，要是你能找到宝藏，它们就归你了！",
-          ContentFR = "En observant son visage encore empreint de naïveté, vous décidez de...",
+          ContentFR = "Merci de m’avoir sauvé... mais je n’ai rien de précieux pour te remercier... Ah, si ! J’ai une carte au trésor que papa m’a laissée. Si tu trouves le trésor, tout sera à toi !",
           DialogueId = 71007905,
           GUID = "B1C2C66A",
           NextOptions = {
@@ -236430,30 +236444,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007906] = {
           Content = "好厉害，一眼就看出来了！那快去把它挖出来吧。",
+          ContentFR = "Trop fort ! Tu l’as compris en un coup d’œil ! Alors va vite le déterrer !",
           DialogueId = 71007906,
           GUID = "B1C2C694",
           SpeakNpcId = 818083
         },
         [71007907] = {
           Content = "好，按照约定，这些宝藏从现在开始就归你啦，谢谢你刚才救了我。",
+          ContentFR = "Bon, comme promis, ce trésor est à toi maintenant. Merci encore de m’avoir sauvé.",
           DialogueId = 71007907,
           GUID = "B1C2C6BE",
           SpeakNpcId = 818083
         },
         [71007908] = {
           Content = "这怎么好意思呀……那，那我给你拿点其他小礼物吧，谢谢你刚才救了我。",
+          ContentFR = "Oh... ça se fait pas... Alors je vais te donner autre chose ! Merci de m’avoir sauvé !",
           DialogueId = 71007908,
           GUID = "B1C2C6E8",
           SpeakNpcId = 818083
         },
         [71008001] = {
           Content = "那边那位外乡人，对对就是叫你呢，能不能来帮我个忙。",
+          ContentFR = "Hé, vous là-bas, l’{性别:étranger|étrangère} — oui, vous ! Vous pourriez me rendre un service ?",
           DialogueId = 71008001,
           GUID = "B1C2D62A",
           SpeakNpcId = 818084
         },
         [71008002] = {
           Content = "我店里有个伙计最近总是偷偷跑出去跟隔壁店主碰面，我怀疑是想对我的店动什么手脚。能帮我去找点证据吗？",
+          ContentFR = "Un de mes employés sort en cachette ces derniers temps pour voir le commerçant d’à côté. Je suis sûr qu’il prépare quelque chose contre moi. Vous pourriez m’aider à trouver des preuves ?",
           DialogueId = 71008002,
           GUID = "B1C2D654",
           NextOptions = {
@@ -236464,12 +236483,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008003] = {
           Content = "好，他们应该就在附近，全交给你了，我就不过去打草惊蛇了。",
+          ContentFR = "Bien. Ils doivent être dans le coin. Je vous laisse faire — mieux vaut que je ne m’en mêle pas pour ne pas les alerter.",
           DialogueId = 71008003,
           GUID = "B1C2D67E",
           SpeakNpcId = 818084
         },
         [71008004] = {
           Content = "只是把秘方拿出来给我看一眼而已，不会有什么风险的。",
+          ContentFR = "Juste me montrer la recette un instant. Il n’y a aucun risque.",
           DialogueId = 71008004,
           GUID = "B1C2D6A8",
           NextDialogue = 71008005,
@@ -236477,6 +236498,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008005] = {
           Content = "我……",
+          ContentFR = "Je...",
           DialogueId = 71008005,
           GUID = "B1C2D6D2",
           NextDialogue = 71008006,
@@ -236484,6 +236506,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008006] = {
           Content = "事成之后分你三成，怎么样？",
+          ContentFR = "Une fois que ce sera fait, je t’en donne trente pour cent. Alors, ça te va ?",
           DialogueId = 71008006,
           GUID = "B1C2D6FC",
           NextDialogue = 71008007,
@@ -236491,6 +236514,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008007] = {
           Content = "……",
+          ContentFR = "...",
           DialogueId = 71008007,
           GUID = "B1C2D726",
           NextDialogue = 71008008,
@@ -236498,24 +236522,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008008] = {
           Content = "还不行，那就干脆……等等，你是不是听到什么了，过来过来。",
+          ContentFR = "Toujours pas ? Alors dans ce cas... attends... tu n’as rien entendu, hein ? Viens par ici.",
           DialogueId = 71008008,
           GUID = "B1C2D750",
           SpeakNpcId = 818086
         },
         [71008009] = {
           Content = "这笔钱你拿着，刚才我们俩的对话你就当没听到如何。",
+          ContentFR = "Tiens, prends ça. Et fais comme si tu n’avais rien entendu, d’accord ?",
           DialogueId = 71008009,
           GUID = "B1C2D77A",
           SpeakNpcId = 818086
         },
         [71008010] = {
           Content = "（男子给你的这笔钱无疑就是他们在酝酿什么阴谋的证据，现在可以直接回去交差，揭露二人的阴谋，或是藏在附近，继续听听这二人的对话。）",
+          ContentFR = "L’argent qu’il vous tend constitue une preuve évidente de leur manigance. Vous pouvez rentrer faire votre rapport dès maintenant et révéler leur complot, ou rester caché pour écouter davantage.",
           DialogueId = 71008010,
           GUID = "B1C2D7A4",
           SpeakNpcId = 100001
         },
         [71008011] = {
           Content = "四成，给个痛快话，到底行不行啊，拖了我好几天了。",
+          ContentFR = "Quarante pour cent. Allez, réponds franchement, tu acceptes ou pas ? Ça fait des jours que tu fais traîner.",
           DialogueId = 71008011,
           GUID = "B1C2D7CE",
           NextDialogue = 71008012,
@@ -236523,6 +236551,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008012] = {
           Content = "对，对不起。店主于我有恩，我不能帮你做这种事。",
+          ContentFR = "Je... je suis désolé. Le patron a toujours été bon avec moi. Je ne peux pas faire ça.",
           DialogueId = 71008012,
           GUID = "B1C2D7F8",
           NextDialogue = 71008013,
@@ -236530,30 +236559,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008013] = {
           Content = "（你成功躲过二人的注意，了解到了伙计真正的选择，现在回去向店主揭露真相吧。）",
+          ContentFR = "Vous parvenez à rester hors de vue et découvrez le véritable choix de l’employé. Il est temps de retourner voir le commerçant pour lui dire la vérité.",
           DialogueId = 71008013,
           GUID = "B1C2D822",
           SpeakNpcId = 100001
         },
         [71008014] = {
           Content = "哈哈，果然是我想得那样！等我家伙计回来我就让他滚蛋。",
+          ContentFR = "Ah ! C’est bien ce que je pensais ! Quand mon employé reviendra, je le renvoie sur-le-champ.",
           DialogueId = 71008014,
           GUID = "B1C2D84C",
           SpeakNpcId = 818084
         },
         [71008015] = {
           Content = "原来是这样，差点错怪我家伙计了，谢谢你啊。",
+          ContentFR = "Je vois... j’ai failli accuser mon employé à tort. Merci à vous.",
           DialogueId = 71008015,
           GUID = "B1C2D876",
           SpeakNpcId = 818084
         },
         [71008101] = {
           Content = "今天就差最后一圈了，大家再坚持一下！",
+          ContentFR = "Plus qu’un tour ! Tenez bon, tout le monde !",
           DialogueId = 71008101,
           GUID = "B1C2E692",
           SpeakNpcId = 818087
         },
         [71008102] = {
           Content = "要想成为织星客，脚力也是很重要的！你要不要跟我一起监督他们跑完今天的最后一圈呀？",
+          ContentFR = "Pour devenir Tisse-Étoiles, il faut aussi de bonnes jambes ! Ça vous dit de m’aider à les surveiller pour leur dernier tour ?",
           DialogueId = 71008102,
           GUID = "B1C2E6BC",
           NextOptions = {
@@ -236564,12 +236598,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008103] = {
           Content = "好，你来选一个人监督就好，选好了告诉我哦。",
+          ContentFR = "Parfait ! Choisissez simplement quelqu’un à surveiller, puis dites-le-moi.",
           DialogueId = 71008103,
           GUID = "B1C2E6E6",
           SpeakNpcId = 818087
         },
         [71008104] = {
           Content = "怎么样，想好要监督谁了吗？",
+          ContentFR = "Alors, vous avez choisi qui surveiller ?",
           DialogueId = 71008104,
           GUID = "B1C2E710",
           NextOptions = {
@@ -236581,12 +236617,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008105] = {
           Content = "没问题，我会好好盯着剩下两个人的！",
+          ContentFR = "Très bien, je vais m’occuper des deux autres !",
           DialogueId = 71008105,
           GUID = "B1C2E73A",
           SpeakNpcId = 818087
         },
         [71008106] = {
           Content = "最后冲刺了！加油加油，不可以慢慢走哦！",
+          ContentFR = "Dernière ligne droite ! Courage, courage — pas question de marcher !",
           DialogueId = 71008106,
           Duration = 1,
           GUID = "B1C2E7E2",
@@ -236594,12 +236632,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008110] = {
           Content = "有你在一边盯着，他虽然跑得很慢，但还是坚持到最后了，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentFR = "Avec vous pour le surveiller, il a couru bien plus vite. C’est très bien. Merci pour votre aide. Voici une petite récompense.",
           DialogueId = 71008110,
           GUID = "B1C2E80C",
           SpeakNpcId = 818087
         },
         [71008111] = {
           Content = "有你在一边盯着，他居然能跑这么快呀，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentFR = "Avec vous pour le surveiller, il a tenu jusqu’au bout, même s’il était lent. C’est bien. Merci pour votre aide. Voici une petite récompense.",
           DialogueId = 71008111,
           GUID = "B1C2E836",
           SpeakNpcId = 818087
@@ -236655,18 +236695,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008401] = {
           Content = "（游荡的秽兽徘徊在附近，先击退它们，再去解救魔灵吧。）",
+          ContentFR = "Des Souillés rôdent dans les environs. Éliminez-les d’abord, puis allez secourir le Géniemon.",
           DialogueId = 71008401,
           GUID = "B1C317CA",
           SpeakNpcId = 800006
         },
         [71008402] = {
           Content = "（争斗的声响引来了更多秽兽。）",
+          ContentFR = "Le bruit du combat a attiré encore plus de Souillés.",
           DialogueId = 71008402,
           GUID = "B1C317F4",
           SpeakNpcId = 800006
         },
         [71008403] = {
           Content = "（这里暂时安全了，趁现在解救魔灵吧。）",
+          ContentFR = "La zone est sécurisée pour le moment. Profitez-en pour secourir le Géniemon.",
           DialogueId = 71008403,
           GUID = "B1C3181E",
           SpeakNpcId = 800006
@@ -302117,7 +302160,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077021] = {
           Content = "（帮忙寻找。）",
-          ContentFR = "<I>Accepter</>",
+          ContentFR = "<I>Aider à chercher</>",
           DialogueId = 710077021,
           GUID = "710077021.0",
           NextDialogue = 71007703,
@@ -302132,7 +302175,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077051] = {
           Content = "我在找这个普通箱子。",
-          ContentFR = "<I>Coffre ordinaire</>",
+          ContentFR = "<I>Le coffre ordinaire.</>",
           DialogueId = 710077051,
           GUID = "710077051.0",
           NextDialogue = 71007706,
@@ -302140,7 +302183,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077052] = {
           Content = "我在找这个看起来稍微华丽一点的箱子。",
-          ContentFR = "<I>Coffre intermédiaire</>",
+          ContentFR = "<I>Le coffre plus raffiné.</>",
           DialogueId = 710077052,
           GUID = "710077052.0",
           NextDialogue = 71007706,
@@ -302148,7 +302191,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077053] = {
           Content = "我在找这个最华丽的箱子。",
-          ContentFR = "<I>Coffre luxueux</>",
+          ContentFR = "<I>Le coffre le plus luxueux.</>",
           DialogueId = 710077053,
           GUID = "710077053.0",
           NextDialogue = 71007706,
@@ -302156,7 +302199,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077054] = {
           Content = "这几个箱子都是我的。",
-          ContentFR = "<I>Tout prendre</>",
+          ContentFR = "<I>Ils sont tous à moi.</>",
           DialogueId = 710077054,
           GUID = "710077054.0",
           NextDialogue = 71007706,
@@ -302179,28 +302222,28 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710078051] = {
           Content = "宝箱。",
-          ContentFR = "<I>Des coffres sans fin</>",
+          ContentFR = "<I>Des coffres.</>",
           DialogueId = 710078051,
           GUID = "710078051.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710078052] = {
           Content = "敌人。",
-          ContentFR = "<I>Anéantir tous les ennemis</>",
+          ContentFR = "<I>Des ennemis.</>",
           DialogueId = 710078052,
           GUID = "710078052.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710078053] = {
           Content = "熟悉的人。",
-          ContentFR = "<I>Revoir un être cher disparu</>",
+          ContentFR = "<I>Une personne familière.</>",
           DialogueId = 710078053,
           GUID = "710078053.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{3}}"
         },
         [710079051] = {
           Content = "从地形上来看应该就在这附近，我去找找吧。",
-          ContentFR = "<I>Lui expliquer que les trésors enfouis sous terre sont inutiles, et que seule leur mise en usage leur confère une véritable valeur</>",
+          ContentFR = "<I>Vu le terrain, ça doit être dans les environs. Je vais aller chercher.</>",
           DialogueId = 710079051,
           GUID = "710079051.0",
           NextDialogue = 71007906,
@@ -302208,7 +302251,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710079052] = {
           Content = "既然是你父亲留给你的，那我就不要了。",
-          ContentFR = "<I>Le remercier pour ce secret, taire vos pensées d’adulte et préserver son innocence</>",
+          ContentFR = "<I>Puisque c’est ton père qui te l’a laissé, je ne vais pas le prendre.</>",
           DialogueId = 710079052,
           GUID = "710079052.0",
           NextDialogue = 71007908,
@@ -302216,6 +302259,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710080021] = {
           Content = "（接受。）",
+          ContentFR = "<I>Accepter</>",
           DialogueId = 710080021,
           GUID = "710080021.0",
           NextDialogue = 71008003,
@@ -302223,12 +302267,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710080022] = {
           Content = "（拒绝。）",
+          ContentFR = "<I>Refuser</>",
           DialogueId = 710080022,
           GUID = "710080022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081021] = {
           Content = "（接受。）",
+          ContentFR = "<I>Accepter</>",
           DialogueId = 710081021,
           GUID = "710081021.0",
           NextDialogue = 71008103,
@@ -302236,12 +302282,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081022] = {
           Content = "（拒绝。）",
+          ContentFR = "<I>Refuser</>",
           DialogueId = 710081022,
           GUID = "710081022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081041] = {
           Content = "红衣服的。",
+          ContentFR = "<I>Celui en rouge.</>",
           DialogueId = 710081041,
           GUID = "710081041.0",
           NextDialogue = 71008105,
@@ -302249,6 +302297,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081042] = {
           Content = "绿衣服的。",
+          ContentFR = "<I>Celui en vert.</>",
           DialogueId = 710081042,
           GUID = "710081042.0",
           NextDialogue = 71008105,
@@ -302256,6 +302305,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081043] = {
           Content = "蓝衣服的。",
+          ContentFR = "<I>Celui en bleu.</>",
           DialogueId = 710081043,
           GUID = "710081043.0",
           NextDialogue = 71008105,

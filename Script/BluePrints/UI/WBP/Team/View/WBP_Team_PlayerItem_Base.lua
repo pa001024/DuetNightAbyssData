@@ -259,7 +259,7 @@ function M:OnGetMenuContent(Anchor)
   end
   
   local AddBlackList = FriendController:GenAddBlackListFunc(self, self.Head_Anchor)
-  local AccusePlayer = FriendController:GenAccusePlayerFunc(self, self.Head_Anchor)
+  local AccusePlayer = FriendController:GenAccusePlayerFunc(self, self.Head_Anchor, true)
   local Switch = {}
   if TeamModel:IsYourself(self.Member.Uid) then
     Switch = {InitShowRecordBtn}

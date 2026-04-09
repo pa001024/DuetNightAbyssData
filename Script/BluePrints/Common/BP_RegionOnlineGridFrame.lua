@@ -168,6 +168,14 @@ function M:ExitTrigger()
 end
 
 function M:OnTriggerEnd()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  if not Avatar.IsInRegionOnline and self:IsExistTimer("CheckIdleTagTimer") then
+    self:RemoveTimer("CheckIdleTagTimer")
+    return
+  end
   local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   PlayerCharacter:RemoveCurRegionOnline(self)
 end

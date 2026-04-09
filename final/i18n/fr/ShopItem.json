@@ -13532,7 +13532,7 @@
                 "sequence": 293,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture radieuse",
+                "cond": "Débloqué avec l’une des postures suivantes : Dominer monts et fleuves, Rives paisibles ou Gel instantané",
                 "isSpPopup": 1
               },
               {
@@ -13549,7 +13549,7 @@
                 "sequence": 292,
                 "startTime": 1770602400,
                 "endTime": 1776027600,
-                "cond": "Débloqué après l’obtention de n’importe quelle Posture radieuse",
+                "cond": "Débloqué avec l’une des postures suivantes : Dominer monts et fleuves, Rives paisibles ou Gel instantané",
                 "isSpPopup": 1
               },
               {

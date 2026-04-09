@@ -1,7 +1,7 @@
 [
   {
     "id": 1101,
-    "name": "Accessoire de Berenica",
+    "name": "Tenue de Berenica",
     "desc": "Le noir est la couleur de la nuit : un voile paisible posé sur le monde. Le noir est la couleur de l’ombre : une présence fidèle près de ceux que l’on aime. C’est pour cela que Berenica l’affectionne tant.",
     "icon": "T_Head_Heitao",
     "rarity": 5,
@@ -51,7 +51,7 @@
   },
   {
     "id": 1103,
-    "name": "Accessoire de Phantasio",
+    "name": "Tenue de Phantasio",
     "desc": "Une ombre en mouvement. Un comédien maladroit sur scène. Une histoire que seul un fou raconterait.",
     "icon": "T_Head_Tuosi",
     "rarity": 5,
@@ -76,7 +76,7 @@
   },
   {
     "id": 1501,
-    "name": "Accessoire de Lisbell",
+    "name": "Tenue de Lisbell",
     "desc": "Les inscriptions de l’Église Élysienne ne sont pas seulement brodées sur ses habits : elles sont gravées dans son âme. Elles témoignent de la jeune fille qui, maintes fois, a mué de rage en résilience.",
     "icon": "T_Head_Baonu",
     "rarity": 5,
@@ -101,7 +101,7 @@
   },
   {
     "id": 1502,
-    "name": "Accessoire de Dame Nifle",
+    "name": "Tenue de Dame Nifle",
     "desc": "Un voile tissé de crépuscule et d’aurore guide les âmes à travers le fleuve de larmes — vers la Mer du Silence, où toute vie renaît.",
     "icon": "T_Head_Nifu",
     "rarity": 5,
@@ -126,7 +126,7 @@
   },
   {
     "id": 1503,
-    "name": "Accessoire de Kezhou",
+    "name": "Tenue de Kezhou",
     "desc": "La pluie glisse le long de ses vêtements, s’accumule à la pointe de l’épée... puis disparaît dans les chemins du monde des sabres errants.",
     "icon": "T_Head_Kezhou",
     "rarity": 5,
@@ -151,7 +151,7 @@
   },
   {
     "id": 1504,
-    "name": "Accessoire de Su Yi",
+    "name": "Tenue de Su Yi",
     "desc": "Sous une touche d’azur façonnée, mêlée à mille subtilités d’ingéniosité, puis portée par un souffle du vent matinal, s’envolent les rêves et la fierté d’une jeune fille.",
     "icon": "T_Head_Suyi",
     "rarity": 5,
@@ -176,7 +176,7 @@
   },
   {
     "id": 1601,
-    "name": "Accessoire de {nickname}",
+    "name": "Tenue de {nickname}",
     "desc": "Un être, une lame, une robe immaculée. Traverser l’océan et la nuit glacée, pour enfin se retrouver à l’orée de l’aube.",
     "icon": "T_Head_Nvzhu",
     "rarity": 5,
@@ -194,7 +194,7 @@
   },
   {
     "id": 1801,
-    "name": "Accessoire de Fina",
+    "name": "Tenue de Fina",
     "desc": "Le rossignol a ajouté des plumes blanches à son histoire : de petites ailes qui portent ses rêves jusqu’aux nuages.",
     "icon": "T_Head_Feina",
     "rarity": 5,
@@ -219,7 +219,7 @@
   },
   {
     "id": 2101,
-    "name": "Accessoire de Rebecca",
+    "name": "Tenue de Rebecca",
     "desc": "Les tentacules d’une méduse descendent dans l’abysse comme une traîne flottante, troublant le cœur de son amant.",
     "icon": "T_Head_Shuimu",
     "rarity": 5,
@@ -262,7 +262,7 @@
   },
   {
     "id": 2301,
-    "name": "Accessoire de Tabethe",
+    "name": "Tenue de Tabethe",
     "desc": "Qu’est-ce qui rampe dans l’obscurité ? Un complot ? Le chaos ? Un crime ? Non. Juste... des tentacules.",
     "icon": "T_Head_Zhangyu",
     "rarity": 5,
@@ -287,7 +287,7 @@
   },
   {
     "id": 2401,
-    "name": "Accessoire de Fushu",
+    "name": "Tenue de Fushu",
     "desc": "Des effluves d’herbes glissent entre ses manches immaculées, murmurant le retour du printemps aux herbes sèches.",
     "icon": "T_Head_Baiheng",
     "rarity": 5,
@@ -312,7 +312,7 @@
   },
   {
     "id": 3101,
-    "name": "Accessoire de Lynn",
+    "name": "Tenue de Lynn",
     "desc": "La chaleur de la poudre persiste sur l’uniforme mat — attisée par le rythme d’un sang trop ardent.",
     "icon": "T_Head_Linen",
     "rarity": 5,
@@ -362,7 +362,7 @@
   },
   {
     "id": 3103,
-    "name": "Accessoire de Yale et Oliver",
+    "name": "Tenue de Yale et Oliver",
     "desc": "Le rouge et le blanc en flammes emprisonnent les rêveries explosives d’un fou... et recousent le rêve immaculé d’un garçon.",
     "icon": "T_Head_Yeer",
     "rarity": 5,
@@ -387,7 +387,7 @@
   },
   {
     "id": 3201,
-    "name": "Accessoire de Vulcera",
+    "name": "Tenue de Vulcera",
     "desc": "Les chaînes et les ronces punissent le péché autant qu’elles contiennent la justice brûlante qui consume son cœur.",
     "icon": "T_Head_Haier",
     "rarity": 5,
@@ -412,7 +412,7 @@
   },
   {
     "id": 3202,
-    "name": "Accessoire de Camilla",
+    "name": "Tenue de Camilla",
     "desc": "Un éclat somptueux dessine des courbes à couper le souffle ; chacun de ses gestes exhale un parfum mêlé de vin et de nuit profonde.",
     "icon": "T_Head_Kami",
     "rarity": 5,
@@ -437,7 +437,7 @@
   },
   {
     "id": 3301,
-    "name": "Accessoire de Margie",
+    "name": "Tenue de Margie",
     "desc": "Un casque polyvalent forgé à partir d’une simple marmite — l’armure robuste d’une jeune récupératrice.",
     "icon": "T_Head_Maer",
     "rarity": 5,
@@ -462,7 +462,7 @@
   },
   {
     "id": 4101,
-    "name": "Accessoire de Rhythm",
+    "name": "Tenue de Rhythm",
     "desc": "Les éclats bleutés qui dansent sur son uniforme sont une volonté de protéger — et un regard tourné vers l’avenir.",
     "icon": "T_Head_Lise",
     "rarity": 5,
@@ -487,7 +487,7 @@
   },
   {
     "id": 4102,
-    "name": "Accessoire de Zhiliu",
+    "name": "Tenue de Zhiliu",
     "desc": "L’aube fait fondre les feuilles d’or et les répand sur le brocart, embrasant son regard d’or de l’éclat d’une révolution.",
     "icon": "T_Head_Zhiliu",
     "rarity": 5,
@@ -512,7 +512,7 @@
   },
   {
     "id": 4201,
-    "name": "Accessoire de Yuming",
+    "name": "Tenue de Yuming",
     "desc": "Le tonnerre divin circule en lui. En portant le jugement de Dafeng, le péché n’a nulle part où fuir... et lui non plus.",
     "icon": "T_Head_Yuming",
     "rarity": 5,
@@ -537,7 +537,7 @@
   },
   {
     "id": 4202,
-    "name": "Accessoire de Randy",
+    "name": "Tenue de Randy",
     "desc": "Au-dessus : un esprit de génie, brillant dans l’éclat d’une médaille.\nAu-dessous : le cœur simple d’un homme ordinaire.",
     "icon": "T_Head_Landi",
     "rarity": 5,
@@ -562,7 +562,7 @@
   },
   {
     "id": 4301,
-    "name": "Accessoire de Sibylle",
+    "name": "Tenue de Sibylle",
     "desc": "Elle n’a ni armure ni couronne — et pourtant, sa seule présence fait gronder l’autorité.",
     "icon": "T_Head_Xibi",
     "rarity": 5,
@@ -587,7 +587,7 @@
   },
   {
     "id": 5101,
-    "name": "Accessoire de Truffle et Filbert",
+    "name": "Tenue de Truffle et Filbert",
     "desc": "Dansant au ras du sol, des plumes blanches diffusent un parfum de malt et de feu de foyer — s’envolant vers chaque ventre affamé.",
     "icon": "T_Head_Songlu",
     "rarity": 5,
@@ -612,7 +612,7 @@
   },
   {
     "id": 5102,
-    "name": "Accessoire de l’Étranger",
+    "name": "Tenue de l’Étranger",
     "desc": "Une tenue modeste ne fait pas taire les plaintes écarlates des ruelles... mais elle protège une lueur d’étoile au cœur de la brutalité du monde.",
     "icon": "T_Head_Aote",
     "rarity": 5,
@@ -637,7 +637,7 @@
   },
   {
     "id": 5301,
-    "name": "Accessoire de Psyche",
+    "name": "Tenue de Psyche",
     "desc": "Un papillon posé dans le creux de son bras apporte une multitude de rêves ayant traversé l’hiver.",
     "icon": "T_Head_Saiqi",
     "rarity": 5,
@@ -662,7 +662,7 @@
   },
   {
     "id": 5401,
-    "name": "Accessoire de Daphne",
+    "name": "Tenue de Daphne",
     "desc": "Le vert naissant qui perce la poussière et la fumée — léger comme l’herbe sauvage, tenace comme elle.",
     "icon": "T_Head_Dafu",
     "rarity": 5,
@@ -752,7 +752,7 @@
   },
   {
     "id": 160101,
-    "name": "Accessoire de {nickname}",
+    "name": "Tenue de {nickname}",
     "desc": "Un être, une lame, une robe immaculée. Traverser l’océan et la nuit glacée, pour enfin se retrouver à l’orée de l’aube.",
     "icon": "T_Head_Nanzhu",
     "rarity": 5,

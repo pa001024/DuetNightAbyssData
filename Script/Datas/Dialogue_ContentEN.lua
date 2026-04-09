@@ -117517,7 +117517,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12043815] = {
           Content = "唉，你们啊……算了，正巧{nickname}来了，就让{性别：他|她}来给你们露一手吧。",
-          ContentEN = "*sighs*... You two really are a handful. Lucky for you, {nickname} just happens to be here — how about we let {性别:him|her} show you how it's done?",
+          ContentEN = "...You two really are a handful. Lucky for you, {nickname} just happens to be here — how about we let {性别:him|her} show you how it's done?",
           DialogueId = 12043815,
           GUID = "1E268266",
           NextDialogue = 12043816,
@@ -117861,7 +117861,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044013] = {
           Content = "唉，小苏啊，唐叔生命中的乐趣都要被你剥夺了。",
-          ContentEN = "*sighs*... You've robbed me of one of life's rare joys, kiddo.",
+          ContentEN = "...You've robbed me of one of life's rare joys, kiddo.",
           DialogueId = 12044013,
           GUID = "1E26A2E2",
           NextDialogue = 12044014,
@@ -118086,7 +118086,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044204] = {
           Content = "要是连这点小事都办不到，还怎么祭奠阿爹阿娘的在天之灵？站起来继续啊，朱朴！",
-          ContentEN = "If you can't even manage this... how'll you ever avenge Ma and Pa? Get up, Zhu Pu! don't stop now!",
+          ContentEN = "If you can't even manage this... how'll you ever avenge Ma and Pa? Get up, Zhu Pu! Don't stop now!",
           DialogueId = 12044204,
           GUID = "1E26C238",
           NextDialogue = 12044205,
@@ -118112,7 +118112,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044207] = {
           Content = "……苏乙姐，是你。",
-          ContentEN = "...Sister Yi.",
+          ContentEN = "... Sister Yi.",
           DialogueId = 12044207,
           GUID = "1E26C2B6",
           NextDialogue = 12044208,
@@ -121601,7 +121601,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12046109] = {
           Content = "我小时候到处上墙揭瓦，村里全都被我倒腾了个遍，每块石头在哪儿我都记得。唯有那里，我每次跑去，就迷迷瞪瞪，不知怎的就发现自己倒栽在树桩旁。",
-          ContentEN = "I was a real rascal as a kid — scaled every wall, nicked every loose tile, turned the village inside out... except that spot. Every time I went near it, I'd blank out and end up nose-down by a stump.",
+          ContentEN = "I was a real rascal as a kid — scaled every wall, nicked every loose tile, turned the entire village inside out... except that spot. Every time I went near it, I'd blank out and end up nose-down by a stump.",
           DialogueId = 12046109,
           GUID = "1E27FAC2",
           NextDialogue = 12046110,
@@ -123885,7 +123885,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12047911] = {
           Content = "我答应！",
-          ContentEN = "Sounds perfect!",
+          ContentEN = "Sounds perfect.",
           DialogueId = 12047911,
           GUID = "1E292266",
           NextDialogue = 12047910
@@ -129994,7 +129994,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12061216] = {
           Content = "来，战啊！",
-          ContentEN = "Come on, Let’s fight! ",
+          ContentEN = "Come on, Let's fight!",
           DialogueId = 12061216,
           GUID = "1E31A940",
           ImprPlusId = 1205,
@@ -132645,7 +132645,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12062323] = {
           Content = "哎呀师兄你放心，俗话说得好，债多不压身嘛。反正惹她生气了这么多次，也不差这一回。",
-          ContentEN = "Relax, Shixiong. You know what they say — in for a penny, in for a pound. I've made her mad plenty of times before. One more won't kill me.",
+          ContentEN = "Relax, shixiong. You know what they say — in for a penny, in for a pound. I've made her mad plenty of times before. One more won't kill me.",
           DialogueId = 12062323,
           GUID = "1E325EDE",
           NextDialogue = 12062324,
@@ -177773,7 +177773,7 @@ PlayAnimation{ActorId{700305},AnimationId{"Explain02_Start"},Duration{1}}
         },
         [51100141] = {
           Content = "我想着师兄说不定会奉命前来调查，才总是守在这里，没想到碰到这老头迷失其中，这人嘴皮子利索，倒也有趣。可惜……",
-          ContentEN = "I thought my Shixiong might be sent to investigate, so I lingered here. Never thought I'd run into a sharp-tongued old fossil. Amusing sort... pity, really.",
+          ContentEN = "I thought my shixiong might be sent to investigate, so I lingered here. Never thought I'd run into a sharp-tongued old fossil. Amusing sort... pity, really.",
           DialogueId = 51100141,
           GUID = "7FEC80E2",
           NextDialogue = 51100142,
@@ -217663,7 +217663,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51169504] = {
           Content = "我呀？当然是卖报的啦！上至龙君动向，下至家长里短，我们报童无一不知无一不晓！",
-          ContentEN = "Me? I'm a newsboy, obviously! From Lord Argent’s decrees to the neighbours' squabbles, there ain't a thing us paper lads don't know!",
+          ContentEN = "Me? I'm a newsboy, obviously! From Lord Argent's decrees to the neighbours' squabbles, there ain't a thing us paper lads don't know!",
           DialogueId = 51169504,
           GUID = "8018F4C0",
           NextDialogue = 51169505,
@@ -218510,7 +218510,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51170001] = {
           Content = "我家老婆子好好地走在街上，他路也不看，直接推着车撞了过来。",
-          ContentEN = "My wife was just walking down the street, minding her own business. Then this bloke comes barreling along, not looking where he's going, and rams his cart straight into her.",
+          ContentEN = "My mum was just walking down the street, minding her own business. Then this bloke comes barreling along, not looking where he's going, and rams his cart straight into her.",
           DialogueId = 51170001,
           GUID = "8019464A",
           NextDialogue = 51170002,
@@ -218550,7 +218550,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51170006] = {
           Content = "二位先别急，我先在此问一句，您家婆婆被撞后现下伤势如何了？可曾医治？",
-          ContentEN = "Gentlemen, please, settle down. First things first: how is your wife doing? Has she received any medical attention?",
+          ContentEN = "Gentlemen, please, settle down. First things first: how is your mother doing? Has she received any medical attention?",
           DialogueId = 51170006,
           GUID = "8019471C",
           NextDialogue = 51170007,
@@ -226386,7 +226386,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175608] = {
           Content = "幸会，我是同福饭馆的厨子——李大嘴，我忧心之事其实是近期店里生意不好，掌柜的就让我想办法，去琢磨些新菜式。",
-          ContentEN = "Pleasure. I'm Mouth Li, chef at the Tongfu Restaurant. I'm in a right state because business has been rubbish. The Guv'nor's on my back to dream up some fancy new dishes.",
+          ContentEN = "Pleasure. I'm Mouth Li, chef at the Tongfu Eatery. I'm in a right state because business has been rubbish. The Guv'nor's on my back to dream up some fancy new dishes.",
           DialogueId = 51175608,
           GUID = "801CDE30"
         },
@@ -226542,7 +226542,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175634] = {
           Content = "不夸张，师傅，我今日要先回去钻研你传授的菜谱了，您若是有空，一定要来一趟同福饭馆，我定要请你吃一顿我的拿手好菜！",
-          ContentEN = "Not at all, master! Don't be daft! I'm off to study these recipes. If you've got a moment, swing by our Tongfu Restaurant. I'll cook you up a proper feast, on the house!",
+          ContentEN = "Not at all, master! Don't be daft! I'm off to study these recipes. If you've got a moment, swing by our Tongfu Eatery. I'll cook you up a proper feast, on the house!",
           DialogueId = 51175634,
           GUID = "801CE274"
         },
@@ -237272,7 +237272,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71006514] = {
           Content = "请听题！织星客丢了一件商品，经过调查找到了甲乙丙三人。甲指责：“是乙偷的！”。乙声称：“是丙偷的！”。丙说：“确实是我偷的！”。仅一人说了真话，请问到底是谁偷走了商品？",
-          ContentEN = "Right then, here's the question! A Starweaver lost something from their stall, and they've narrowed it down to three suspects: A, B, and C.\n A says B stole it.\n B says C stole it.\n C admits it — says he's the guilty one.\n Only one of them is telling the truth... so who actually took it?",
+          ContentEN = "Right then, here's the question! A Starweaver lost something from their stall, and they've narrowed it down to three suspects: A, B, and C.\nA says B stole it.\nB says C stole it.\nC admits it — says he's the guilty one.\nOnly one of them is telling the truth... so who actually took it?",
           DialogueId = 71006514,
           GUID = "B1C1E234",
           NextOptions = {
@@ -237298,7 +237298,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71006516] = {
           Content = "请听题！三人前后排队，各带帽子一顶，帽子颜色可能会出现红、黄、蓝其中一种。最后一人能看到前两人的帽子，中间的人只能看前面。最后一人沉默，接着中间人也沉默。第一人说自己戴黄帽。已知至少一人戴黄帽。下列哪个说法是正确的？",
-          ContentEN = "Right then, here's the question! Three people are standing in a line, each wearing a hat that could be red, yellow, or blue. The one at the back can see the two hats ahead. The one in the middle can only see the hat of the person in front.\n At first, the person at the back stays quiet. And the one in the middle stays quiet too. And that's when the person at the front suddenly pipes up and says they're wearing a yellow hat.\n We also know at least one of the hats is yellow.\n So — which of these statements is correct?",
+          ContentEN = "Right then, here's the question! Three people are standing in a line, each wearing a hat that could be red, yellow, or blue. The one at the back can see the two hats ahead. The one in the middle can only see the hat of the person in front.\nAt first, the person at the back stays quiet. And the one in the middle stays quiet too. And that's when the person at the front suddenly pipes up and says they're wearing a yellow hat.\nWe also know at least one of the hats is yellow.\nSo — which of these statements is correct?",
           DialogueId = 71006516,
           GUID = "B1C1E288",
           NextOptions = {
@@ -238009,6 +238009,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71007401] = {
           Content = "（应天尉来袭，击退他们！）",
+          ContentEN = "(Magistrates of Yingtian incoming! Dispel them!)",
           DialogueId = 71007401,
           GUID = "B1C273BA",
           SpeakNpcId = 800006
@@ -238093,7 +238094,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71007511] = {
           Content = "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
-          ContentEN = "Whew... selling potatoes on the docks is far more dangerous than I thought. Thank you so much...",
+          ContentEN = "Whew... selling potatoes here is far more dangerous than I thought. Thank you so much...",
           DialogueId = 71007511,
           GUID = "B1C2855A",
           SpeakNpcId = 818078
@@ -238222,14 +238223,14 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71007801] = {
           Content = "香……点燃……请……",
-          ContentEN = "Hey — Phoxhunter. Have you a moment to spare?",
+          ContentEN = "Incense... light... please...",
           DialogueId = 71007801,
           GUID = "B1C2B55A",
           SpeakNpcId = 818082
         },
         [71007802] = {
           Content = "那边……请……点燃……谢谢……",
-          ContentEN = "I've been working on a new incense that awakens what lies buried in the mind. Would you help me test it? Just light it, and then tell me what you see.",
+          ContentEN = "Over there... light it... please... thank you...",
           DialogueId = 71007802,
           GUID = "B1C2B584",
           NextOptions = {
@@ -238241,14 +238242,14 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71007803] = {
           Content = "焚香……好……",
-          ContentEN = "Good. You can start by lighting the incense in the censer over there.",
+          ContentEN = "Burning incense... good...",
           DialogueId = 71007803,
           GUID = "B1C2B5AE",
           SpeakNpcId = 818082
         },
         [71007805] = {
           Content = "（点燃香炉之后，四周顿时弥漫起了浓厚的烟雾，透过这些烟雾，你似乎看到了什么东西？）",
-          ContentEN = "(A question rises within you — what is it you desire most in this moment?)",
+          ContentEN = "(After lighting the incense, thick smoke fills the air. Through the haze, you catch glimpses of something...)",
           DialogueId = 71007805,
           GUID = "B1C2B602",
           NextOptions = {
@@ -238261,49 +238262,49 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71007806] = {
           Content = "（朦胧的雾气中，你看到了数之不尽的宝箱，打开它们吧。）",
-          ContentEN = "(Chests appear around you in an instant.)",
+          ContentEN = "(In the swirling mist, you see countless treasure chests. Go ahead, open them.)",
           DialogueId = 71007806,
           GUID = "B1C2B62C",
           SpeakNpcId = 800006
         },
         [71007807] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentEN = "(Get back to the Wishen and report what happened.)",
+          ContentEN = "(The smoke clears, and everything you saw fades away. Head back and ask the Wishen what that was all about.)",
           DialogueId = 71007807,
           GUID = "B1C2B656",
           SpeakNpcId = 100001
         },
         [71007808] = {
           Content = "焚香……再见……",
-          ContentEN = "So that is what you saw. I see. Thank you for your help.",
+          ContentEN = "Incense burned... farewell...",
           DialogueId = 71007808,
           GUID = "B1C2B680",
           SpeakNpcId = 818082
         },
         [71007809] = {
           Content = "（朦胧的雾气中，你看到了大量敌人，击败它们吧。）",
-          ContentEN = "(Enemies materialise around you without warning.)",
+          ContentEN = "(In the swirling mist, you see a horde of enemies. Take them down.)",
           DialogueId = 71007809,
           GUID = "B1C2B6AA",
           SpeakNpcId = 800006
         },
         [71007810] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentEN = "(Get back to the Wishen and report what happened.)",
+          ContentEN = "(The smoke clears, and everything you saw fades away. Head back and ask the Wishen what that was all about.)",
           DialogueId = 71007810,
           GUID = "B1C2B6D4",
           SpeakNpcId = 100001
         },
         [71007811] = {
           Content = "焚香……再见……",
-          ContentEN = "So that is what you saw. I see. Thank you for your help.",
+          ContentEN = "Incense burned... farewell...",
           DialogueId = 71007811,
           GUID = "B1C2B6FE",
           SpeakNpcId = 818082
         },
         [71007812] = {
           Content = "（朦胧的雾气中，你看到了贝蕾妮卡的身影。）",
-          ContentEN = "(Berry appears before you.)",
+          ContentEN = "(In the swirling mist, you see a figure — Berry.)",
           DialogueId = 71007812,
           GUID = "B1C2B728",
           NextDialogue = 71007813,
@@ -238311,40 +238312,42 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71007813] = {
           Content = "（伸手触碰，贝蕾的身影开始变得模糊不清。你知道，她只是焚香之后出现的幻影。）",
-          ContentEN = "(Conversation with Berry)",
+          ContentEN = "(You reach out to touch her, but her form blurs. You know she is nothing more than a vision conjured by the incense.)",
           DialogueId = 71007813,
           GUID = "B1C2B752",
           SpeakNpcId = 800006
         },
         [71007814] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentEN = "(Get back to the Wishen and report what happened.)",
+          ContentEN = "(The smoke clears, and everything you saw fades away. Head back and ask the Wishen what that was all about.)",
           DialogueId = 71007814,
           GUID = "B1C2B77C",
           SpeakNpcId = 100001
         },
         [71007815] = {
           Content = "焚香……再见……",
-          ContentEN = "So that is what you saw. I see. Thank you for your help.",
+          ContentEN = "Incense burned... farewell...",
           DialogueId = 71007815,
           GUID = "B1C2B7A6",
           SpeakNpcId = 818082
         },
         [71007816] = {
           Content = "（一个香炉不知何时出现在了你的背后，这只无由生看起来很希望你能点燃它。）",
+          ContentEN = "(An incense burner has appeared behind you. This Wishen seems to really want you to light it.)",
           DialogueId = 71007816,
           GUID = "B1C2B7A7",
           SpeakNpcId = 800006
         },
         [71007901] = {
           Content = "救救我啊，我还没找到爸爸埋的宝藏，我不要死在这里哇……",
+          ContentEN = "Help! I haven't found papa's buried treasure yet. I don't wanna die here...",
           DialogueId = 71007901,
           GUID = "B1C2C5C2",
           SpeakNpcId = 818083
         },
         [71007905] = {
           Content = "谢谢你救了我，但我没什么好东西能够报答你……对了，我这有一张爸爸留下的藏宝图，要是你能找到宝藏，它们就归你了！",
-          ContentEN = "(You look at his innocent face and decide to...)",
+          ContentEN = "Thanks for saving me! I don't really have anything good to give you... Oh, but I do have a treasure map my papa left. If you find the treasure, it's all yours!",
           DialogueId = 71007905,
           GUID = "B1C2C66A",
           NextOptions = {
@@ -238355,30 +238358,35 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71007906] = {
           Content = "好厉害，一眼就看出来了！那快去把它挖出来吧。",
+          ContentEN = "Whoa, you figured it out just like that? Go dig it up!",
           DialogueId = 71007906,
           GUID = "B1C2C694",
           SpeakNpcId = 818083
         },
         [71007907] = {
           Content = "好，按照约定，这些宝藏从现在开始就归你啦，谢谢你刚才救了我。",
+          ContentEN = "Alright, like I said, the treasure is all yours now. Thanks again for saving me back there.",
           DialogueId = 71007907,
           GUID = "B1C2C6BE",
           SpeakNpcId = 818083
         },
         [71007908] = {
           Content = "这怎么好意思呀……那，那我给你拿点其他小礼物吧，谢谢你刚才救了我。",
+          ContentEN = "Oh, that's... that's way too nice of you... Then, um, I'll get you a little something else instead. Thanks again for saving me!",
           DialogueId = 71007908,
           GUID = "B1C2C6E8",
           SpeakNpcId = 818083
         },
         [71008001] = {
           Content = "那边那位外乡人，对对就是叫你呢，能不能来帮我个忙。",
+          ContentEN = "You there, outsider — yes, I mean you! Could you lend me a hand?",
           DialogueId = 71008001,
           GUID = "B1C2D62A",
           SpeakNpcId = 818084
         },
         [71008002] = {
           Content = "我店里有个伙计最近总是偷偷跑出去跟隔壁店主碰面，我怀疑是想对我的店动什么手脚。能帮我去找点证据吗？",
+          ContentEN = "My clerk has been sneaking off to see the shopkeeper next door. Pretty sure he's up to something. Think you could help me dig up some proof?",
           DialogueId = 71008002,
           GUID = "B1C2D654",
           NextOptions = {
@@ -238389,12 +238397,14 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008003] = {
           Content = "好，他们应该就在附近，全交给你了，我就不过去打草惊蛇了。",
+          ContentEN = "Good. They're probably around here somewhere. I'll leave it to you — better if I stay out of sight.",
           DialogueId = 71008003,
           GUID = "B1C2D67E",
           SpeakNpcId = 818084
         },
         [71008004] = {
           Content = "只是把秘方拿出来给我看一眼而已，不会有什么风险的。",
+          ContentEN = "Just a quick look at the recipe. What's the harm?",
           DialogueId = 71008004,
           GUID = "B1C2D6A8",
           NextDialogue = 71008005,
@@ -238402,6 +238412,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008005] = {
           Content = "我……",
+          ContentEN = "I...",
           DialogueId = 71008005,
           GUID = "B1C2D6D2",
           NextDialogue = 71008006,
@@ -238409,6 +238420,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008006] = {
           Content = "事成之后分你三成，怎么样？",
+          ContentEN = "How about a thirty percent cut once it's done? Deal?",
           DialogueId = 71008006,
           GUID = "B1C2D6FC",
           NextDialogue = 71008007,
@@ -238416,6 +238428,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008007] = {
           Content = "……",
+          ContentEN = "...",
           DialogueId = 71008007,
           GUID = "B1C2D726",
           NextDialogue = 71008008,
@@ -238423,24 +238436,28 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008008] = {
           Content = "还不行，那就干脆……等等，你是不是听到什么了，过来过来。",
+          ContentEN = "Not enough? Then how about— Hang on... you hear something? Come here.",
           DialogueId = 71008008,
           GUID = "B1C2D750",
           SpeakNpcId = 818086
         },
         [71008009] = {
           Content = "这笔钱你拿着，刚才我们俩的对话你就当没听到如何。",
+          ContentEN = "Here, take this. And you didn't hear a thing, alright?",
           DialogueId = 71008009,
           GUID = "B1C2D77A",
           SpeakNpcId = 818086
         },
         [71008010] = {
           Content = "（男子给你的这笔钱无疑就是他们在酝酿什么阴谋的证据，现在可以直接回去交差，揭露二人的阴谋，或是藏在附近，继续听听这二人的对话。）",
+          ContentEN = "(The money is clear proof of their scheme. You can head back now and expose them both, or stick around a little longer and see what else they let slip.)",
           DialogueId = 71008010,
           GUID = "B1C2D7A4",
           SpeakNpcId = 100001
         },
         [71008011] = {
           Content = "四成，给个痛快话，到底行不行啊，拖了我好几天了。",
+          ContentEN = "Alright, forty percent. Just tell me straight, are you in or not? You've been dragging this out for days.",
           DialogueId = 71008011,
           GUID = "B1C2D7CE",
           NextDialogue = 71008012,
@@ -238448,6 +238465,7 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008012] = {
           Content = "对，对不起。店主于我有恩，我不能帮你做这种事。",
+          ContentEN = "I... I'm sorry. The owner's always looked out for me. I can't do this.",
           DialogueId = 71008012,
           GUID = "B1C2D7F8",
           NextDialogue = 71008013,
@@ -238455,30 +238473,35 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008013] = {
           Content = "（你成功躲过二人的注意，了解到了伙计真正的选择，现在回去向店主揭露真相吧。）",
+          ContentEN = "(You manage to stay out of sight and learn what the clerk truly chose. Now head back and tell the shopkeeper the truth.)",
           DialogueId = 71008013,
           GUID = "B1C2D822",
           SpeakNpcId = 100001
         },
         [71008014] = {
           Content = "哈哈，果然是我想得那样！等我家伙计回来我就让他滚蛋。",
+          ContentEN = "Hah! Just as I thought. Once he gets back, he's out of here.",
           DialogueId = 71008014,
           GUID = "B1C2D84C",
           SpeakNpcId = 818084
         },
         [71008015] = {
           Content = "原来是这样，差点错怪我家伙计了，谢谢你啊。",
+          ContentEN = "So that's how it was. I nearly blamed him for nothing. Thanks.",
           DialogueId = 71008015,
           GUID = "B1C2D876",
           SpeakNpcId = 818084
         },
         [71008101] = {
           Content = "今天就差最后一圈了，大家再坚持一下！",
+          ContentEN = "Just one more lap, everyone! Hang in there!",
           DialogueId = 71008101,
           GUID = "B1C2E692",
           SpeakNpcId = 818087
         },
         [71008102] = {
           Content = "要想成为织星客，脚力也是很重要的！你要不要跟我一起监督他们跑完今天的最后一圈呀？",
+          ContentEN = "Starweavers definitely need strong legs too! Want to help me keep an eye on them for the last lap?",
           DialogueId = 71008102,
           GUID = "B1C2E6BC",
           NextOptions = {
@@ -238489,12 +238512,14 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008103] = {
           Content = "好，你来选一个人监督就好，选好了告诉我哦。",
+          ContentEN = "Great! Just pick one to watch, and let me know when you've decided.",
           DialogueId = 71008103,
           GUID = "B1C2E6E6",
           SpeakNpcId = 818087
         },
         [71008104] = {
           Content = "怎么样，想好要监督谁了吗？",
+          ContentEN = "So, made up your mind yet?",
           DialogueId = 71008104,
           GUID = "B1C2E710",
           NextOptions = {
@@ -238506,12 +238531,14 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008105] = {
           Content = "没问题，我会好好盯着剩下两个人的！",
+          ContentEN = "Got it! I'll keep an eye on the other two!",
           DialogueId = 71008105,
           GUID = "B1C2E73A",
           SpeakNpcId = 818087
         },
         [71008106] = {
           Content = "最后冲刺了！加油加油，不可以慢慢走哦！",
+          ContentEN = "Final sprint! Come on, — no walking now!",
           DialogueId = 71008106,
           Duration = 1,
           GUID = "B1C2E7E2",
@@ -238519,12 +238546,14 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008110] = {
           Content = "有你在一边盯着，他虽然跑得很慢，但还是坚持到最后了，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentEN = "Having you there really pushed him — he ran so fast! You were a huge help today. Here's a little something from us.",
           DialogueId = 71008110,
           GUID = "B1C2E80C",
           SpeakNpcId = 818087
         },
         [71008111] = {
           Content = "有你在一边盯着，他居然能跑这么快呀，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentEN = "Having you there really pushed him — he was slow, but he made it all the way to the end! You were a huge help today. Here's a little something from us.",
           DialogueId = 71008111,
           GUID = "B1C2E836",
           SpeakNpcId = 818087
@@ -238580,18 +238609,21 @@ Upon closer inspection, it matches the fabric found at the crime scene.]],
         },
         [71008401] = {
           Content = "（游荡的秽兽徘徊在附近，先击退它们，再去解救魔灵吧。）",
+          ContentEN = "(There are Filthoids roaming nearby. Drive them off first and rescue the Geniemon.",
           DialogueId = 71008401,
           GUID = "B1C317CA",
           SpeakNpcId = 800006
         },
         [71008402] = {
           Content = "（争斗的声响引来了更多秽兽。）",
+          ContentEN = "(The sounds of battle have drawn in even more Filthoids.)",
           DialogueId = 71008402,
           GUID = "B1C317F4",
           SpeakNpcId = 800006
         },
         [71008403] = {
           Content = "（这里暂时安全了，趁现在解救魔灵吧。）",
+          ContentEN = "(It's safe for now. Use the chance to rescue the Geniemon.)",
           DialogueId = 71008403,
           GUID = "B1C3181E",
           SpeakNpcId = 800006
@@ -297343,7 +297375,7 @@ I can't take it anymore! Don't imitate me dwarf in the name of the Nine Gods I'l
         },
         [90260202] = {
           Content = "我比较幸运，我的老师——也就是我的姑姑，她辈分很高，所以我的辈分自然也很高啦。",
-          ContentEN = "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too. (bright, explanatory)",
+          ContentEN = "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too.",
           DialogueId = 90260202,
           GUID = "E1F4FA64",
           NextDialogue = 90260203,
@@ -304149,35 +304181,35 @@ However, her teacher is displeased with her momentary distraction.]],
         },
         [710078022] = {
           Content = "（拒绝。）",
-          ContentEN = "(Decline.)",
+          ContentEN = "(Refuse)",
           DialogueId = 710078022,
           GUID = "710078022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710078051] = {
           Content = "宝箱。",
-          ContentEN = "(Endless treasure chests)",
+          ContentEN = "Treasure chests.",
           DialogueId = 710078051,
           GUID = "710078051.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710078052] = {
           Content = "敌人。",
-          ContentEN = "(Eliminate every foe)",
+          ContentEN = "Enemies.",
           DialogueId = 710078052,
           GUID = "710078052.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710078053] = {
           Content = "熟悉的人。",
-          ContentEN = "(See the person you've missed dearly)",
+          ContentEN = "A familiar figure.",
           DialogueId = 710078053,
           GUID = "710078053.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{3}}"
         },
         [710079051] = {
           Content = "从地形上来看应该就在这附近，我去找找吧。",
-          ContentEN = "(Tell him that treasure buried deep underground is worthless — it only finds meaning when brought out and put to use.)",
+          ContentEN = "Judging by the terrain, it should be around here. I'll go take a look.",
           DialogueId = 710079051,
           GUID = "710079051.0",
           NextDialogue = 71007906,
@@ -304185,7 +304217,7 @@ However, her teacher is displeased with her momentary distraction.]],
         },
         [710079052] = {
           Content = "既然是你父亲留给你的，那我就不要了。",
-          ContentEN = "(Thank him for the secret and keep your heavier thoughts to yourself, so as to protect his innocence.)",
+          ContentEN = "If your papa left it for you, I can't take it.",
           DialogueId = 710079052,
           GUID = "710079052.0",
           NextDialogue = 71007908,
@@ -304193,6 +304225,7 @@ However, her teacher is displeased with her momentary distraction.]],
         },
         [710080021] = {
           Content = "（接受。）",
+          ContentEN = "(Accept)",
           DialogueId = 710080021,
           GUID = "710080021.0",
           NextDialogue = 71008003,
@@ -304200,12 +304233,14 @@ However, her teacher is displeased with her momentary distraction.]],
         },
         [710080022] = {
           Content = "（拒绝。）",
+          ContentEN = "(Refuse)",
           DialogueId = 710080022,
           GUID = "710080022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081021] = {
           Content = "（接受。）",
+          ContentEN = "(Accept)",
           DialogueId = 710081021,
           GUID = "710081021.0",
           NextDialogue = 71008103,
@@ -304213,12 +304248,14 @@ However, her teacher is displeased with her momentary distraction.]],
         },
         [710081022] = {
           Content = "（拒绝。）",
+          ContentEN = "(Refuse)",
           DialogueId = 710081022,
           GUID = "710081022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081041] = {
           Content = "红衣服的。",
+          ContentEN = "The one in red.",
           DialogueId = 710081041,
           GUID = "710081041.0",
           NextDialogue = 71008105,
@@ -304226,6 +304263,7 @@ However, her teacher is displeased with her momentary distraction.]],
         },
         [710081042] = {
           Content = "绿衣服的。",
+          ContentEN = "The one in green.",
           DialogueId = 710081042,
           GUID = "710081042.0",
           NextDialogue = 71008105,
@@ -304233,6 +304271,7 @@ However, her teacher is displeased with her momentary distraction.]],
         },
         [710081043] = {
           Content = "蓝衣服的。",
+          ContentEN = "The one in blue.",
           DialogueId = 710081043,
           GUID = "710081043.0",
           NextDialogue = 71008105,

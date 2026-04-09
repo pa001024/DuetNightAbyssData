@@ -65144,7 +65144,7 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
   },
   {
     MinKey = "UI_Language_Switch_Text",
-    MaxKey = "UI_MECHANISM_98",
+    MaxKey = "UI_MECHANISM_ALT_ENTER",
     Loader = function()
       return {
         UI_Language_Switch_Text = {
@@ -65250,13 +65250,6 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Level_Max = {
           ContentDE = "Max.",
           TextMapId = "UI_Level_Max"
-        },
-        UI_Loading_Antiaddiction = {
-          ContentDE = [[
- 
- 
- ]],
-          TextMapId = "UI_Loading_Antiaddiction"
         },
         UI_Loading_Checking = {
           ContentDE = "Suche nach Aktualiesierung ...",
@@ -65949,19 +65942,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_MECHANISM_98 = {
           ContentDE = "Wurfanker",
           TextMapId = "UI_MECHANISM_98"
+        },
+        UI_MECHANISM_ALT_ENTER = {
+          ContentDE = "Betritt den Zhuyin-Altar",
+          TextMapId = "UI_MECHANISM_ALT_ENTER"
         }
       }
     end
   },
   {
-    MinKey = "UI_MECHANISM_ALT_ENTER",
-    MaxKey = "UI_NPC_Name_Afu_Sce",
+    MinKey = "UI_MECHANISM_ENTER_FLOW",
+    MaxKey = "UI_NPC_Name_Agui_Sce",
     Loader = function()
       return {
-        UI_MECHANISM_ALT_ENTER = {
-          ContentDE = "Betritt den Zhuyin-Altar",
-          TextMapId = "UI_MECHANISM_ALT_ENTER"
-        },
         UI_MECHANISM_ENTER_FLOW = {
           ContentDE = "Betritt „Blumen der Fürsorge“",
           TextMapId = "UI_MECHANISM_ENTER_FLOW"
@@ -66754,19 +66747,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_NPC_Name_Afu_Sce = {
           ContentDE = "Fu",
           TextMapId = "UI_NPC_Name_Afu_Sce"
+        },
+        UI_NPC_Name_Agui_Sce = {
+          ContentDE = "Gui",
+          TextMapId = "UI_NPC_Name_Agui_Sce"
         }
       }
     end
   },
   {
-    MinKey = "UI_NPC_Name_Agui_Sce",
-    MaxKey = "UI_Name_Walnut_2052",
+    MinKey = "UI_NPC_Name_Atu_Sce",
+    MaxKey = "UI_Name_Walnut_2053",
     Loader = function()
       return {
-        UI_NPC_Name_Agui_Sce = {
-          ContentDE = "Gui",
-          TextMapId = "UI_NPC_Name_Agui_Sce"
-        },
         UI_NPC_Name_Atu_Sce = {
           ContentDE = "Bunny",
           TextMapId = "UI_NPC_Name_Atu_Sce"
@@ -67562,19 +67555,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Name_Walnut_2052 = {
           ContentDE = "Geheimbrief: Azurnes Reich",
           TextMapId = "UI_Name_Walnut_2052"
+        },
+        UI_Name_Walnut_2053 = {
+          ContentDE = "Geheimbrief: Friedenstaube",
+          TextMapId = "UI_Name_Walnut_2053"
         }
       }
     end
   },
   {
-    MinKey = "UI_Name_Walnut_2053",
-    MaxKey = "UI_Npc_Name_ObMech_4",
+    MinKey = "UI_Name_Walnut_2054",
+    MaxKey = "UI_Npc_Name_ObMech_6",
     Loader = function()
       return {
-        UI_Name_Walnut_2053 = {
-          ContentDE = "Geheimbrief: Friedenstaube",
-          TextMapId = "UI_Name_Walnut_2053"
-        },
         UI_Name_Walnut_2054 = {
           ContentDE = "Geheimbrief: Obsidian-Herzensstecher",
           TextMapId = "UI_Name_Walnut_2054"
@@ -68367,19 +68360,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Npc_Name_ObMech_4 = {
           ContentDE = "Noch zu entwickeln",
           TextMapId = "UI_Npc_Name_ObMech_4"
+        },
+        UI_Npc_Name_ObMech_6 = {
+          ContentDE = "Das Gerät betreten",
+          TextMapId = "UI_Npc_Name_ObMech_6"
         }
       }
     end
   },
   {
-    MinKey = "UI_Npc_Name_ObMech_6",
-    MaxKey = "UI_OPTION_HidePlayer",
+    MinKey = "UI_Npc_Name_OldFisher",
+    MaxKey = "UI_OPTION_HorizontalSensitivity",
     Loader = function()
       return {
-        UI_Npc_Name_ObMech_6 = {
-          ContentDE = "Das Gerät betreten",
-          TextMapId = "UI_Npc_Name_ObMech_6"
-        },
         UI_Npc_Name_OldFisher = {
           ContentDE = "In Gedanken versunkener Mann",
           TextMapId = "UI_Npc_Name_OldFisher"
@@ -69175,19 +69168,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_OPTION_HidePlayer = {
           ContentDE = "Nicht-Party-Spieler automatisch ausblenden",
           TextMapId = "UI_OPTION_HidePlayer"
+        },
+        UI_OPTION_HorizontalSensitivity = {
+          ContentDE = "Horizontale Kameraempfindlichkeit",
+          TextMapId = "UI_OPTION_HorizontalSensitivity"
         }
       }
     end
   },
   {
-    MinKey = "UI_OPTION_HorizontalSensitivity",
-    MaxKey = "UI_PATCH_PERSISTENTFAILED",
+    MinKey = "UI_OPTION_HorizontalSensitivityOnShooting",
+    MaxKey = "UI_PATCH_VERTIFYASSETS",
     Loader = function()
       return {
-        UI_OPTION_HorizontalSensitivity = {
-          ContentDE = "Horizontale Kameraempfindlichkeit",
-          TextMapId = "UI_OPTION_HorizontalSensitivity"
-        },
         UI_OPTION_HorizontalSensitivityOnShooting = {
           ContentDE = "Zielsensitivität (horizontal)",
           TextMapId = "UI_OPTION_HorizontalSensitivityOnShooting"
@@ -69983,19 +69976,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_PATCH_PERSISTENTFAILED = {
           ContentDE = "Speicherung der Ressource fehlgeschlagen, möglicherweise nicht genügend Speicherplatz. Jetzt erneut versuchen?",
           TextMapId = "UI_PATCH_PERSISTENTFAILED"
+        },
+        UI_PATCH_VERTIFYASSETS = {
+          ContentDE = "Ressourcen werden überprüft",
+          TextMapId = "UI_PATCH_VERTIFYASSETS"
         }
       }
     end
   },
   {
-    MinKey = "UI_PATCH_VERTIFYASSETS",
-    MaxKey = "UI_PlayerHead_Name_30031",
+    MinKey = "UI_PRICE_NAME",
+    MaxKey = "UI_PlayerHead_Name_30032",
     Loader = function()
       return {
-        UI_PATCH_VERTIFYASSETS = {
-          ContentDE = "Ressourcen werden überprüft",
-          TextMapId = "UI_PATCH_VERTIFYASSETS"
-        },
         UI_PRICE_NAME = {
           ContentDE = "Preis",
           TextMapId = "UI_PRICE_NAME"
@@ -70788,19 +70781,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_PlayerHead_Name_30031 = {
           ContentDE = "Avatar – Glänzender Flauschblitz",
           TextMapId = "UI_PlayerHead_Name_30031"
+        },
+        UI_PlayerHead_Name_30032 = {
+          ContentDE = "Avatar – Wunderbarer Flauschblitz",
+          TextMapId = "UI_PlayerHead_Name_30032"
         }
       }
     end
   },
   {
-    MinKey = "UI_PlayerHead_Name_30032",
-    MaxKey = "UI_Read_Click",
+    MinKey = "UI_PlayerHead_Name_30033",
+    MaxKey = "UI_Recommend_Server",
     Loader = function()
       return {
-        UI_PlayerHead_Name_30032 = {
-          ContentDE = "Avatar – Wunderbarer Flauschblitz",
-          TextMapId = "UI_PlayerHead_Name_30032"
-        },
         UI_PlayerHead_Name_30033 = {
           ContentDE = "Avatar – Leidenschaftlicher Flauschblitz",
           TextMapId = "UI_PlayerHead_Name_30033"
@@ -71578,19 +71571,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Read_Click = {
           ContentDE = "Jetzt lesen",
           TextMapId = "UI_Read_Click"
+        },
+        UI_Recommend_Server = {
+          ContentDE = "Empfohlener Server",
+          TextMapId = "UI_Recommend_Server"
         }
       }
     end
   },
   {
-    MinKey = "UI_Recommend_Server",
-    MaxKey = "UI_SHOP_REFRESH_TIME",
+    MinKey = "UI_Recommend_Weapon",
+    MaxKey = "UI_SHOP_REMAINTIME",
     Loader = function()
       return {
-        UI_Recommend_Server = {
-          ContentDE = "Empfohlener Server",
-          TextMapId = "UI_Recommend_Server"
-        },
         UI_Recommend_Weapon = {
           ContentDE = "Beherrschte Waffen anzeigen",
           TextMapId = "UI_Recommend_Weapon"
@@ -72386,19 +72379,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_SHOP_REFRESH_TIME = {
           ContentDE = "Aktualisiert in: %s",
           TextMapId = "UI_SHOP_REFRESH_TIME"
+        },
+        UI_SHOP_REMAINTIME = {
+          ContentDE = "%s",
+          TextMapId = "UI_SHOP_REMAINTIME"
         }
       }
     end
   },
   {
-    MinKey = "UI_SHOP_REMAINTIME",
-    MaxKey = "UI_Shadow_Carrying",
+    MinKey = "UI_SHOP_REMAINTIME_DAY",
+    MaxKey = "UI_Shadow_Name",
     Loader = function()
       return {
-        UI_SHOP_REMAINTIME = {
-          ContentDE = "%s",
-          TextMapId = "UI_SHOP_REMAINTIME"
-        },
         UI_SHOP_REMAINTIME_DAY = {
           ContentDE = "%d T",
           TextMapId = "UI_SHOP_REMAINTIME_DAY"
@@ -73188,19 +73181,19 @@ Wenn eine Figur angegriffen wird, wird zuerst das <Highlight>Schild</> verbrauch
         UI_Shadow_Carrying = {
           ContentDE = "Ausgerüstet mit",
           TextMapId = "UI_Shadow_Carrying"
+        },
+        UI_Shadow_Name = {
+          ContentDE = "Kampfbegleiter",
+          TextMapId = "UI_Shadow_Name"
         }
       }
     end
   },
   {
-    MinKey = "UI_Shadow_Name",
-    MaxKey = "UI_SubTitle_EnemyArchive",
+    MinKey = "UI_Shop_Bonus",
+    MaxKey = "UI_SubTitle_ItemArchive",
     Loader = function()
       return {
-        UI_Shadow_Name = {
-          ContentDE = "Kampfbegleiter",
-          TextMapId = "UI_Shadow_Name"
-        },
         UI_Shop_Bonus = {
           ContentDE = "Doppel",
           TextMapId = "UI_Shop_Bonus"
@@ -73995,19 +73988,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_SubTitle_EnemyArchive = {
           ContentDE = "Gegner",
           TextMapId = "UI_SubTitle_EnemyArchive"
+        },
+        UI_SubTitle_ItemArchive = {
+          ContentDE = "Gegenstand",
+          TextMapId = "UI_SubTitle_ItemArchive"
         }
       }
     end
   },
   {
-    MinKey = "UI_SubTitle_ItemArchive",
-    MaxKey = "UI_TRAINING_FAIL_GUIDWAR",
+    MinKey = "UI_SubTitle_MeeleArchive",
+    MaxKey = "UI_TRAINING_FAIL_INTEAM",
     Loader = function()
       return {
-        UI_SubTitle_ItemArchive = {
-          ContentDE = "Gegenstand",
-          TextMapId = "UI_SubTitle_ItemArchive"
-        },
         UI_SubTitle_MeeleArchive = {
           ContentDE = "Fernkampfwaffen",
           TextMapId = "UI_SubTitle_MeeleArchive"
@@ -74803,19 +74796,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_TRAINING_FAIL_GUIDWAR = {
           ContentDE = "Herausforderung kann im Team nicht gestartet werden",
           TextMapId = "UI_TRAINING_FAIL_GUIDWAR"
+        },
+        UI_TRAINING_FAIL_INTEAM = {
+          ContentDE = "Zugang zur Sandreich-Meditation ist im Team nicht verfügbar",
+          TextMapId = "UI_TRAINING_FAIL_INTEAM"
         }
       }
     end
   },
   {
-    MinKey = "UI_TRAINING_FAIL_INTEAM",
-    MaxKey = "UI_WEAPON_DESC_10105",
+    MinKey = "UI_TRAIN_CLOSE",
+    MaxKey = "UI_WEAPON_DESC_10198",
     Loader = function()
       return {
-        UI_TRAINING_FAIL_INTEAM = {
-          ContentDE = "Zugang zur Sandreich-Meditation ist im Team nicht verfügbar",
-          TextMapId = "UI_TRAINING_FAIL_INTEAM"
-        },
         UI_TRAIN_CLOSE = {
           ContentDE = "Klicke auf den leeren Bereich, um zu schließen",
           TextMapId = "UI_TRAIN_CLOSE"
@@ -75608,19 +75601,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_WEAPON_DESC_10105 = {
           ContentDE = "Ich werde eine Reise jenseits des Sandes antreten, genau wie du.",
           TextMapId = "UI_WEAPON_DESC_10105"
+        },
+        UI_WEAPON_DESC_10198 = {
+          ContentDE = "Ein Schwert, veredelt mit den neuesten Technologien zur Oberflächenbehandlung – beliebt bei Rittern, die für ihre Loyalität und Disziplin bekannt sind.",
+          TextMapId = "UI_WEAPON_DESC_10198"
         }
       }
     end
   },
   {
-    MinKey = "UI_WEAPON_DESC_10198",
-    MaxKey = "UI_Walnut_Type_Des_1",
+    MinKey = "UI_WEAPON_DESC_10199",
+    MaxKey = "UI_Walnut_Type_Des_2",
     Loader = function()
       return {
-        UI_WEAPON_DESC_10198 = {
-          ContentDE = "Ein Schwert, veredelt mit den neuesten Technologien zur Oberflächenbehandlung – beliebt bei Rittern, die für ihre Loyalität und Disziplin bekannt sind.",
-          TextMapId = "UI_WEAPON_DESC_10198"
-        },
         UI_WEAPON_DESC_10199 = {
           ContentDE = "Ein gewöhnliches Schwert. Aus dem billigsten Metall hergestellt, also ist es nicht schlimm, wenn es zerbricht.",
           TextMapId = "UI_WEAPON_DESC_10199"
@@ -76416,19 +76409,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         UI_Walnut_Type_Des_1 = {
           ContentDE = "Geheimbrief: Figur",
           TextMapId = "UI_Walnut_Type_Des_1"
+        },
+        UI_Walnut_Type_Des_2 = {
+          ContentDE = "Geheimbrief: Waffe",
+          TextMapId = "UI_Walnut_Type_Des_2"
         }
       }
     end
   },
   {
-    MinKey = "UI_Walnut_Type_Des_2",
-    MaxKey = "VoiceDes040",
+    MinKey = "UI_Walnut_Type_Des_3",
+    MaxKey = "VoiceDes041",
     Loader = function()
       return {
-        UI_Walnut_Type_Des_2 = {
-          ContentDE = "Geheimbrief: Waffe",
-          TextMapId = "UI_Walnut_Type_Des_2"
-        },
         UI_Walnut_Type_Des_3 = {
           ContentDE = "Geheimbrief: Dämonenkeil",
           TextMapId = "UI_Walnut_Type_Des_3"
@@ -77221,19 +77214,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         VoiceDes040 = {
           ContentDE = "(Ⅹ)",
           TextMapId = "VoiceDes040"
+        },
+        VoiceDes041 = {
+          ContentDE = "Zufällige Begegnung (Ⅰ)",
+          TextMapId = "VoiceDes041"
         }
       }
     end
   },
   {
-    MinKey = "VoiceDes041",
-    MaxKey = "WikiText_20300101",
+    MinKey = "VoiceDes042",
+    MaxKey = "WikiText_20300102",
     Loader = function()
       return {
-        VoiceDes041 = {
-          ContentDE = "Zufällige Begegnung (Ⅰ)",
-          TextMapId = "VoiceDes041"
-        },
         VoiceDes042 = {
           ContentDE = "Zufällige Begegnung (Ⅱ)",
           TextMapId = "VoiceDes042"
@@ -78029,19 +78022,19 @@ Kann gegen die strahlende Pose eingetauscht werden:
         WikiText_20300101 = {
           ContentDE = "Eine mysteriöse Händlerin aus Huaxu, die trotz ihrer Herkunft als Charon eine hohe Stellung innehat. Sie begegnete {nickname} erstmals, als sie am Galea-Theater eingriff und Hilfe leistete.",
           TextMapId = "WikiText_20300101"
+        },
+        WikiText_20300102 = {
+          ContentDE = "Während einer Legion-Operation, die darauf abzielte, {nickname} anzulocken, griff Zhiliu erneut ein, rettete {nickname} und eskortierte {nickname} nach Huaxu.",
+          TextMapId = "WikiText_20300102"
         }
       }
     end
   },
   {
-    MinKey = "WikiText_20300102",
-    MaxKey = "voice_ch_char_Baiheng_vo_battlestart",
+    MinKey = "WikiText_20300103",
+    MaxKey = "voice_ch_char_Baiheng_vo_be_hit_heavy_r01",
     Loader = function()
       return {
-        WikiText_20300102 = {
-          ContentDE = "Während einer Legion-Operation, die darauf abzielte, {nickname} anzulocken, griff Zhiliu erneut ein, rettete {nickname} und eskortierte {nickname} nach Huaxu.",
-          TextMapId = "WikiText_20300102"
-        },
         WikiText_20300103 = {
           ContentDE = "Als Hohe Kanzlerin von Loongyuan steht Zhiliu dem Ministerium des Wohlstands vor und führt zugleich den Kaufmannsgildeverband EverSpring. Obwohl sie dieses hohe Amt bekleidet, bevorzugt sie die schlichte Anrede als Händlerin. Mit ihrem zugänglichen Auftreten und ihrem scharfen Geschäftssinn genießt sie großes Ansehen unter den Sternenwebern.",
           TextMapId = "WikiText_20300103"
@@ -78836,19 +78829,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Baiheng_vo_battlestart = {
           ContentDE = "Ich darf nicht zulassen, dass der Tod die Oberhand behält.",
           TextMapId = "voice_ch_char_Baiheng_vo_battlestart"
+        },
+        voice_ch_char_Baiheng_vo_be_hit_heavy_r01 = {
+          ContentDE = "Üble Unreinheiten ...",
+          TextMapId = "voice_ch_char_Baiheng_vo_be_hit_heavy_r01"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Baiheng_vo_be_hit_heavy_r01",
-    MaxKey = "voice_ch_char_Heitao_vo_birthday",
+    MinKey = "voice_ch_char_Baiheng_vo_be_hit_r02",
+    MaxKey = "voice_ch_char_Heitao_vo_companio_01",
     Loader = function()
       return {
-        voice_ch_char_Baiheng_vo_be_hit_heavy_r01 = {
-          ContentDE = "Üble Unreinheiten ...",
-          TextMapId = "voice_ch_char_Baiheng_vo_be_hit_heavy_r01"
-        },
         voice_ch_char_Baiheng_vo_be_hit_r02 = {
           ContentDE = "Meine Kleider sind schmutzig ...",
           TextMapId = "voice_ch_char_Baiheng_vo_be_hit_r02"
@@ -79644,19 +79637,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Heitao_vo_birthday = {
           ContentDE = "Du hast mir einmal gesagt, du möchtest auch so eine Geburtstagsfeier wie andere haben. Also habe ich dir einen Kuchen gemacht – ich habe gehört, ein Geburtstag ohne Kuchen ist gar kein richtiger Geburtstag. Möge dich in den kommenden Jahren Freude erfüllen, jedes Mal, wenn du das Wort „Geburtstag“ hörst.",
           TextMapId = "voice_ch_char_Heitao_vo_birthday"
+        },
+        voice_ch_char_Heitao_vo_companio_01 = {
+          ContentDE = "All die Jahre habe ich gut auf {性别:ihn|sie} und auf mich selbst aufgepasst, so wie ich es dir versprochen habe ... Könntest du mir über den Kopf streichen und sagen, dass ich es gut gemacht habe – so wie damals, als ich klein war? Und dieses Mal, bitte ... verlass uns nicht wieder.",
+          TextMapId = "voice_ch_char_Heitao_vo_companio_01"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Heitao_vo_companio_01",
-    MaxKey = "voice_ch_char_Maer_vo_idle",
+    MinKey = "voice_ch_char_Heitao_vo_companio_02_1",
+    MaxKey = "voice_ch_char_Maer_vo_lvup",
     Loader = function()
       return {
-        voice_ch_char_Heitao_vo_companio_01 = {
-          ContentDE = "All die Jahre habe ich gut auf {性别:ihn|sie} und auf mich selbst aufgepasst, so wie ich es dir versprochen habe ... Könntest du mir über den Kopf streichen und sagen, dass ich es gut gemacht habe – so wie damals, als ich klein war? Und dieses Mal, bitte ... verlass uns nicht wieder.",
-          TextMapId = "voice_ch_char_Heitao_vo_companio_01"
-        },
         voice_ch_char_Heitao_vo_companio_02_1 = {
           ContentDE = "Frau Truffle, darf ich … dein Schwein streicheln? Nur ein einziges Mal. Bitte halte es kurz fest, ich fürchte, es könnte davonlaufen. Kleine Tiere neigen immer dazu, vor mir zu fliehen.",
           TextMapId = "voice_ch_char_Heitao_vo_companio_02_1"
@@ -80452,19 +80445,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Maer_vo_idle = {
           ContentDE = "Mmh ... schönes Wetter. Es ist perfekt, um ein paar Blumen zu pflücken und gut zu duften! {nickname}, willst du mitkommen?",
           TextMapId = "voice_ch_char_Maer_vo_idle"
+        },
+        voice_ch_char_Maer_vo_lvup = {
+          ContentDE = "Wow! Der Sack zum Sammeln ist ja viel größer geworden!",
+          TextMapId = "voice_ch_char_Maer_vo_lvup"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Maer_vo_lvup",
-    MaxKey = "voice_ch_char_Songlu_vo_be_hit_r01",
+    MinKey = "voice_ch_char_Maer_vo_revive",
+    MaxKey = "voice_ch_char_Songlu_vo_birthday",
     Loader = function()
       return {
-        voice_ch_char_Maer_vo_lvup = {
-          ContentDE = "Wow! Der Sack zum Sammeln ist ja viel größer geworden!",
-          TextMapId = "voice_ch_char_Maer_vo_lvup"
-        },
         voice_ch_char_Maer_vo_revive = {
           ContentDE = "Aus Müll wird Schatz!",
           TextMapId = "voice_ch_char_Maer_vo_revive"
@@ -81260,19 +81253,19 @@ Die Stadt ist in die Innenstadt und vier sie umgebende Distrikte gegliedert.
         voice_ch_char_Songlu_vo_be_hit_r01 = {
           ContentDE = "Aua ...",
           TextMapId = "voice_ch_char_Songlu_vo_be_hit_r01"
+        },
+        voice_ch_char_Songlu_vo_birthday = {
+          ContentDE = "Alles Gute zum Geburtstag! Ich habe dir eine Torte voller Nüsse, Sahne und Marmelade gebacken. Aber der Duft hat viele Leute angelockt. Also … ähm … habe ich sie mit ihnen geteilt.\n Aber keine Sorge! Ich habe ein Stück für dich aufgehoben! Schau mal, extra mit viel Marmelade und Borealbeeren obendrauf!\n Komm, probier es. Es schmeckt bestimmt viel besser als die normale Armeeverpflegung!",
+          TextMapId = "voice_ch_char_Songlu_vo_birthday"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Songlu_vo_birthday",
-    MaxKey = "voice_ch_char_Yeer_vo_topic_02_3",
+    MinKey = "voice_ch_char_Songlu_vo_companio_01",
+    MaxKey = "voice_ch_char_Yeer_vo_topic_03_1",
     Loader = function()
       return {
-        voice_ch_char_Songlu_vo_birthday = {
-          ContentDE = "Alles Gute zum Geburtstag! Ich habe dir eine Torte voller Nüsse, Sahne und Marmelade gebacken. Aber der Duft hat viele Leute angelockt. Also … ähm … habe ich sie mit ihnen geteilt.\n Aber keine Sorge! Ich habe ein Stück für dich aufgehoben! Schau mal, extra mit viel Marmelade und Borealbeeren obendrauf!\n Komm, probier es. Es schmeckt bestimmt viel besser als die normale Armeeverpflegung!",
-          TextMapId = "voice_ch_char_Songlu_vo_birthday"
-        },
         voice_ch_char_Songlu_vo_companio_01 = {
           ContentDE = "Du hast keimende Kartoffeln im Mülleimer gefunden? Wirf sie nicht weg! Wir können sie pflanzen! Einfach ein bisschen Erde lockern, gießen – und schon bald haben wir genug Kartoffeln für alle!",
           TextMapId = "voice_ch_char_Songlu_vo_companio_01"
@@ -82070,19 +82063,19 @@ Yale: H... Hallo ... du singst wirklich w... wunderbar.
         voice_ch_char_Yeer_vo_topic_02_3 = {
           ContentDE = "Yale: Aber das liegt nicht daran, dass ich so geschickt bin ... Das verdanken wir alles Olivers Fachwissen.",
           TextMapId = "voice_ch_char_Yeer_vo_topic_02_3"
+        },
+        voice_ch_char_Yeer_vo_topic_03_1 = {
+          ContentDE = "Yale: Ach, entschuldige! A... Aber wenn ich zu schnell spreche, dann ... äh ... verheddert sich meine Zunge.",
+          TextMapId = "voice_ch_char_Yeer_vo_topic_03_1"
         }
       }
     end
   },
   {
-    MinKey = "voice_ch_char_Yeer_vo_topic_03_1",
+    MinKey = "voice_ch_char_Yeer_vo_topic_03_2",
     MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
     Loader = function()
       return {
-        voice_ch_char_Yeer_vo_topic_03_1 = {
-          ContentDE = "Yale: Ach, entschuldige! A... Aber wenn ich zu schnell spreche, dann ... äh ... verheddert sich meine Zunge.",
-          TextMapId = "voice_ch_char_Yeer_vo_topic_03_1"
-        },
         voice_ch_char_Yeer_vo_topic_03_2 = {
           ContentDE = "Yale: D... Das ist okay, manchmal spricht Oliver für mich ... und wenn niemand anderes da ist, hört Oliver mir immer zu.",
           TextMapId = "voice_ch_char_Yeer_vo_topic_03_2"

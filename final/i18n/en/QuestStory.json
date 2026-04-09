@@ -40395,7 +40395,7 @@
               },
               {
                 "id": 12043815,
-                "content": "*sighs*... You two really are a handful. Lucky for you, {nickname} just happens to be here — how about we let {性别:him|her} show you how it's done?",
+                "content": "...You two really are a handful. Lucky for you, {nickname} just happens to be here — how about we let {性别:him|her} show you how it's done?",
                 "voice": "story/1204/120438/1E268266",
                 "npc": 240026,
                 "next": 12043816
@@ -40679,7 +40679,7 @@
               },
               {
                 "id": 12044013,
-                "content": "*sighs*... You've robbed me of one of life's rare joys, kiddo.",
+                "content": "...You've robbed me of one of life's rare joys, kiddo.",
                 "voice": "story/1204/120440/1E26A2E2",
                 "npc": 240029,
                 "next": 12044014
@@ -40872,7 +40872,7 @@
               },
               {
                 "id": 12044204,
-                "content": "If you can't even manage this... how'll you ever avenge Ma and Pa? Get up, Zhu Pu! don't stop now!",
+                "content": "If you can't even manage this... how'll you ever avenge Ma and Pa? Get up, Zhu Pu! Don't stop now!",
                 "voice": "story/1204/120442/1E26C238",
                 "npc": 240034,
                 "next": 12044205
@@ -40892,7 +40892,7 @@
               },
               {
                 "id": 12044207,
-                "content": "...Sister Yi.",
+                "content": "... Sister Yi.",
                 "voice": "story/1204/120442/1E26C2B6",
                 "npc": 240034,
                 "next": 12044208
@@ -43582,7 +43582,7 @@
               },
               {
                 "id": 12046109,
-                "content": "I was a real rascal as a kid — scaled every wall, nicked every loose tile, turned the village inside out... except that spot. Every time I went near it, I'd blank out and end up nose-down by a stump.",
+                "content": "I was a real rascal as a kid — scaled every wall, nicked every loose tile, turned the entire village inside out... except that spot. Every time I went near it, I'd blank out and end up nose-down by a stump.",
                 "voice": "story/1204/120461/1E27FAC2",
                 "npc": 240013,
                 "next": 12046110
@@ -45806,7 +45806,7 @@
                 "options": [
                   {
                     "id": 12047911,
-                    "content": "Sounds perfect!",
+                    "content": "Sounds perfect.",
                     "next": 12047910
                   }
                 ]
@@ -48320,7 +48320,7 @@
                   },
                   {
                     "id": 12061216,
-                    "content": "Come on, Let’s fight! ",
+                    "content": "Come on, Let's fight!",
                     "next": 12061217,
                     "impr": [
                       1041,
@@ -50037,7 +50037,7 @@
               },
               {
                 "id": 12062323,
-                "content": "Relax, Shixiong. You know what they say — in for a penny, in for a pound. I've made her mad plenty of times before. One more won't kill me.",
+                "content": "Relax, shixiong. You know what they say — in for a penny, in for a pound. I've made her mad plenty of times before. One more won't kill me.",
                 "voice": "story/1206/120623/1E325EDE",
                 "npc": 250002,
                 "next": 12062324
@@ -50351,7 +50351,7 @@
       },
       {
         "id": 12030603,
-        "name": "Leave the arena",
+        "name": "Leave this place",
         "desc": "Su Yi's sudden desperation to win backfires badly. Qingluan Type Ⅱ explodes during the match, catching everyone off guard, and your team is declared defeated. The crowd is in uproar, and everything quickly descends into chaos. Leave the arena before the situation gets worse.",
         "nodes": [
           {
@@ -70199,7 +70199,7 @@
               },
               {
                 "id": 51100141,
-                "content": "I thought my Shixiong might be sent to investigate, so I lingered here. Never thought I'd run into a sharp-tongued old fossil. Amusing sort... pity, really.",
+                "content": "I thought my shixiong might be sent to investigate, so I lingered here. Never thought I'd run into a sharp-tongued old fossil. Amusing sort... pity, really.",
                 "npc": 700318,
                 "next": 51100142
               },

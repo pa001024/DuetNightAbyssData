@@ -2376,7 +2376,7 @@ local Data = {
           TextMapContent = "抉择变奏：风与暗之歌",
           TextMapId = "Buff_Title_951"
         },
-        Busy = {TextMapContent = "繁忙\n", TextMapId = "Busy"},
+        Busy = {TextMapContent = "繁忙", TextMapId = "Busy"},
         CAPTURE_BULLETJUMP_PC = {
           TextMapContent = "使用螺旋飞跃（&Slide& + &Jump&）可以更快追上目标",
           TextMapId = "CAPTURE_BULLETJUMP_PC"
@@ -59406,7 +59406,7 @@ local Data = {
   },
   {
     MinKey = "UI_Accessory_Desc_30020",
-    MaxKey = "UI_Accessory_Name_13015",
+    MaxKey = "UI_Accessory_Name_13014",
     Loader = function()
       return {
         UI_Accessory_Desc_30020 = {
@@ -59608,6 +59608,10 @@ local Data = {
         UI_Accessory_Desc_90012 = {
           TextMapContent = "冷风吹响了衣摆，让人不禁回想起净界岛上那绵柔的白沙，还有手牵着手，踩着浪花的二人。",
           TextMapId = "UI_Accessory_Desc_90012"
+        },
+        UI_Accessory_Desc_90014 = {
+          TextMapContent = "举起酒杯，向夜色诉说秘密。",
+          TextMapId = "UI_Accessory_Desc_90014"
         },
         UI_Accessory_Desc_91001 = {
           TextMapContent = "贝蕾妮卡的头饰\n“愿望？我……没有什么特别的愿望。每个早上都看见你笑着，就足够了。”",
@@ -60204,19 +60208,19 @@ local Data = {
         UI_Accessory_Name_13014 = {
           TextMapContent = "长喵喵腰饰·墨玉",
           TextMapId = "UI_Accessory_Name_13014"
-        },
-        UI_Accessory_Name_13015 = {
-          TextMapContent = "长喵喵腰饰·白樱",
-          TextMapId = "UI_Accessory_Name_13015"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_13016",
-    MaxKey = "UI_Accessory_Name_40056",
+    MinKey = "UI_Accessory_Name_13015",
+    MaxKey = "UI_Accessory_Name_40054",
     Loader = function()
       return {
+        UI_Accessory_Name_13015 = {
+          TextMapContent = "长喵喵腰饰·白樱",
+          TextMapId = "UI_Accessory_Name_13015"
+        },
         UI_Accessory_Name_13016 = {
           TextMapContent = "长喵喵腰饰·铅灰",
           TextMapId = "UI_Accessory_Name_13016"
@@ -61012,19 +61016,19 @@ local Data = {
         UI_Accessory_Name_40054 = {
           TextMapContent = "星霜披肩·墨玉",
           TextMapId = "UI_Accessory_Name_40054"
-        },
-        UI_Accessory_Name_40056 = {
-          TextMapContent = "永冻玫瑰·鎏金",
-          TextMapId = "UI_Accessory_Name_40056"
         }
       }
     end
   },
   {
-    MinKey = "UI_Accessory_Name_40057",
-    MaxKey = "UI_Achievement_Des_17002021",
+    MinKey = "UI_Accessory_Name_40056",
+    MaxKey = "UI_Achievement_Des_17002019",
     Loader = function()
       return {
+        UI_Accessory_Name_40056 = {
+          TextMapContent = "永冻玫瑰·鎏金",
+          TextMapId = "UI_Accessory_Name_40056"
+        },
         UI_Accessory_Name_40057 = {
           TextMapContent = "永冻玫瑰·墨玉",
           TextMapId = "UI_Accessory_Name_40057"
@@ -61256,6 +61260,10 @@ local Data = {
         UI_Accessory_Name_90012 = {
           TextMapContent = "白沙的回声",
           TextMapId = "UI_Accessory_Name_90012"
+        },
+        UI_Accessory_Name_90014 = {
+          TextMapContent = "天鹅绒羽衣",
+          TextMapId = "UI_Accessory_Name_90014"
         },
         UI_Accessory_Name_91001 = {
           TextMapContent = "另一面",
@@ -61816,7 +61824,15 @@ local Data = {
         UI_Achievement_Des_17002019 = {
           TextMapContent = "于休憩之所“点滴”处完整阅读止流的光阴集故事",
           TextMapId = "UI_Achievement_Des_17002019"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_17002020",
+    MaxKey = "UI_Achievement_Des_5071",
+    Loader = function()
+      return {
         UI_Achievement_Des_17002020 = {
           TextMapContent = "于休憩之所“点滴”处完整阅读煜明的光阴集故事",
           TextMapId = "UI_Achievement_Des_17002020"
@@ -61824,15 +61840,7 @@ local Data = {
         UI_Achievement_Des_17002021 = {
           TextMapContent = "于休憩之所“点滴”处完整阅读兰迪的光阴集故事",
           TextMapId = "UI_Achievement_Des_17002021"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_17002022",
-    MaxKey = "UI_Achievement_Des_5073",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_17002022 = {
           TextMapContent = "于休憩之所“点滴”处完整阅读西比尔的光阴集故事",
           TextMapId = "UI_Achievement_Des_17002022"
@@ -62624,7 +62632,15 @@ local Data = {
         UI_Achievement_Des_5071 = {
           TextMapContent = "累计在最高难度“梦魇残声·西比尔”中击破<highlight>#1</>个弹幕",
           TextMapId = "UI_Achievement_Des_5071"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Des_5072",
+    MaxKey = "UI_Achievement_Name_1010302",
+    Loader = function()
+      return {
         UI_Achievement_Des_5072 = {
           TextMapContent = "在最高难度“梦魇残声·嗜晶者”中，令<highlight>嗜晶者</>撞<highlight>#1</>次柱子",
           TextMapId = "UI_Achievement_Des_5072"
@@ -62632,15 +62648,7 @@ local Data = {
         UI_Achievement_Des_5073 = {
           TextMapContent = "在最高难度“梦魇残声·羽化者”中，击破<highlight>羽化者</>所有翅膀的总时间小于<highlight>#1</>秒",
           TextMapId = "UI_Achievement_Des_5073"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Des_50901",
-    MaxKey = "UI_Achievement_Name_1010304",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Des_50901 = {
           TextMapContent = "首次完成委托“扼守·无尽”",
           TextMapId = "UI_Achievement_Des_50901"
@@ -63432,7 +63440,15 @@ local Data = {
         UI_Achievement_Name_1010302 = {
           TextMapContent = "纸间火种Ⅱ",
           TextMapId = "UI_Achievement_Name_1010302"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_1010303",
+    MaxKey = "UI_Achievement_Name_201203",
+    Loader = function()
+      return {
         UI_Achievement_Name_1010303 = {
           TextMapContent = "纸间火种Ⅲ",
           TextMapId = "UI_Achievement_Name_1010303"
@@ -63440,15 +63456,7 @@ local Data = {
         UI_Achievement_Name_1010304 = {
           TextMapContent = "往日之影",
           TextMapId = "UI_Achievement_Name_1010304"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_1010305",
-    MaxKey = "UI_Achievement_Name_201302",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_1010305 = {
           TextMapContent = "西奥的研究伙伴",
           TextMapId = "UI_Achievement_Name_1010305"
@@ -64240,7 +64248,15 @@ local Data = {
         UI_Achievement_Name_201203 = {
           TextMapContent = "犹豫就会败北Ⅲ",
           TextMapId = "UI_Achievement_Name_201203"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_201301",
+    MaxKey = "UI_Achievement_Name_505101",
+    Loader = function()
+      return {
         UI_Achievement_Name_201301 = {
           TextMapContent = "梁上君子Ⅰ",
           TextMapId = "UI_Achievement_Name_201301"
@@ -64248,15 +64264,7 @@ local Data = {
         UI_Achievement_Name_201302 = {
           TextMapContent = "梁上君子Ⅱ",
           TextMapId = "UI_Achievement_Name_201302"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_201303",
-    MaxKey = "UI_Achievement_Name_50510102",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_201303 = {
           TextMapContent = "梁上君子Ⅲ",
           TextMapId = "UI_Achievement_Name_201303"
@@ -65048,7 +65056,15 @@ local Data = {
         UI_Achievement_Name_505101 = {
           TextMapContent = "梦魇终结·无双：西比尔",
           TextMapId = "UI_Achievement_Name_505101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_50510101",
+    MaxKey = "UI_Achievement_Name_940201",
+    Loader = function()
+      return {
         UI_Achievement_Name_50510101 = {
           TextMapContent = "魔灵潘神如是说Ⅰ",
           TextMapId = "UI_Achievement_Name_50510101"
@@ -65056,15 +65072,7 @@ local Data = {
         UI_Achievement_Name_50510102 = {
           TextMapContent = "魔灵潘神如是说Ⅱ",
           TextMapId = "UI_Achievement_Name_50510102"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_50510103",
-    MaxKey = "UI_Achievement_Name_940401",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_50510103 = {
           TextMapContent = "魔灵潘神如是说Ⅲ",
           TextMapId = "UI_Achievement_Name_50510103"
@@ -65856,7 +65864,15 @@ local Data = {
         UI_Achievement_Name_940201 = {
           TextMapContent = "普通一枪·迷津",
           TextMapId = "UI_Achievement_Name_940201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Achievement_Name_940301",
+    MaxKey = "UI_Attr_Thunder_Name",
+    Loader = function()
+      return {
         UI_Achievement_Name_940301 = {
           TextMapContent = "执灯人·噬影蝶",
           TextMapId = "UI_Achievement_Name_940301"
@@ -65864,15 +65880,7 @@ local Data = {
         UI_Achievement_Name_940401 = {
           TextMapContent = "执灯人·曳光虫",
           TextMapId = "UI_Achievement_Name_940401"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Achievement_Name_940501",
-    MaxKey = "UI_Attr_Wind_Name",
-    Loader = function()
-      return {
+        },
         UI_Achievement_Name_940501 = {
           TextMapContent = "执灯人·流明枝",
           TextMapId = "UI_Achievement_Name_940501"
@@ -66661,7 +66669,15 @@ local Data = {
         UI_Attr_Thunder_Name = {
           TextMapContent = "雷属性",
           TextMapId = "UI_Attr_Thunder_Name"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Attr_Water_Name",
+    MaxKey = "UI_Bag_ModExtract_MaxNum",
+    Loader = function()
+      return {
         UI_Attr_Water_Name = {
           TextMapContent = "水属性",
           TextMapId = "UI_Attr_Water_Name"
@@ -66669,15 +66685,7 @@ local Data = {
         UI_Attr_Wind_Name = {
           TextMapContent = "风属性",
           TextMapId = "UI_Attr_Wind_Name"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_AutoChess_AccessDes",
-    MaxKey = "UI_Bag_ModExtract_Overflow",
-    Loader = function()
-      return {
+        },
         UI_AutoChess_AccessDes = {
           TextMapContent = "完成对弈感悟解锁",
           TextMapId = "UI_AutoChess_AccessDes"
@@ -67466,7 +67474,15 @@ local Data = {
         UI_Bag_ModExtract_MaxNum = {
           TextMapContent = "今日剩余可萃取",
           TextMapId = "UI_Bag_ModExtract_MaxNum"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Bag_ModExtract_NotGet",
+    MaxKey = "UI_CHAR_DATA_TEXT_11030105",
+    Loader = function()
+      return {
         UI_Bag_ModExtract_NotGet = {
           TextMapContent = "已达上限，无法继续获得深红凝珠",
           TextMapId = "UI_Bag_ModExtract_NotGet"
@@ -67474,15 +67490,7 @@ local Data = {
         UI_Bag_ModExtract_Overflow = {
           TextMapContent = "溢出",
           TextMapId = "UI_Bag_ModExtract_Overflow"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Bag_ModExtract_Ready",
-    MaxKey = "UI_CHAR_DATA_TEXT_11030202",
-    Loader = function()
-      return {
+        },
         UI_Bag_ModExtract_Ready = {
           TextMapContent = "待萃取",
           TextMapId = "UI_Bag_ModExtract_Ready"
@@ -68274,7 +68282,15 @@ local Data = {
         UI_CHAR_DATA_TEXT_11030105 = {
           TextMapContent = "盖雷亚剧院重新开始营业了。\n舞台的地板和墙面都焕然一新，没有留下哪怕一道弹痕、一丝血迹。你从舞台的这一头走到那一头，找不到任何他留下的痕迹，就好像过去发生的一切如他的名字一般只是稍纵即逝的幻象。\n你想起了最后道别时他的模样，透过那张狰狞的面孔，你分明看到了一位自信的演员，意气风发，正准备上台为观众带来一场完美的演出。\n他做到了。",
           TextMapId = "UI_CHAR_DATA_TEXT_11030105"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_11030201",
+    MaxKey = "UI_CHAR_DATA_TEXT_31030101",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_11030201 = {
           TextMapContent = "冰湖城外城南区的一条街道上，开面包店的女人还在等她的常客回来。\n\n十几年前，她还没有自己的店面，在这条街道上摆了个小小的摊位。每天清早她为开摊做准备时，总能听见楼上传来一个孩子清亮的歌声。尽管她从未见过歌声的主人，却不知不觉地把那孩子当成了一起努力的同伴。每当她感到疲倦、想要放弃的时候，只要听见那歌声，便能重新振作起来。\n\n某一天，女人注意到，楼上的歌声变得和往常有些不一样。尽管她在音乐方面并无造诣，但也能听出来，那孩子唱得有些心不在焉。同样的情况持续了数日，又一个清晨，女人听见那孩子唱到一半忽然停下，紧接着发出一声惊呼。她心中一惊，连忙冲上楼梯，迎面撞见了一位慌张的卡戎少年。\n“女士，我的母亲……我的母亲晕倒了。求求您帮帮我——”少年语无伦次地开口向她求助。\n听到少年的声音，女人微微愣了愣神。她太熟悉这个声音了，毫无疑问，眼前的少年正是歌声的主人，她素未谋面的“同伴”。\n她很快反应过来，帮着少年一起将他的母亲送去诊所。\n\n经过治疗，少年的母亲暂时脱离了危险，但少年还是在母亲病榻前寸步不离地守着。眼见他一整天一口饭也没吃，女人回到自己的摊位，装了一篮子面包送到了诊所。\n“谢谢您……谢谢您，尊敬的女士。”少年向她连连道谢，“今天您帮了我太多，我不知该怎么感谢您才好。”\n“叫我霍勒阿姨就好，”女人说，“不必客气，你也帮过我很多。”\n少年一脸困惑。\n“多亏了你，我每天都能听到免费的歌剧演出。”女人答道，“我早就想说了，孩子，你唱得可真好！”\n“谢谢……！”少年脸上露出惊讶的神情，似乎还有一丝羞赧。“但，母亲说过，我们不能平白接受别人的好意，必须要有所报答。”\n“那你下次来我的摊位上买个面包就好。”女人笑了。\n\n这只是女人随口的无心之言，但从那一天起，那少年真的隔三差五便会下楼买一块面包。女人也在和他的闲谈中得知，他从小就没见过父亲，多年来和母亲相依为命，而母亲一向病痛缠身，如今愈发严重了。\n女人为这对可怜的母子祈祷着，但少年的歌声也再回不到曾经的清澈，总掺杂着一丝挥之不去的忧愁。听着这样的歌声，女人也不免感到悲伤，可她能做的也只有每天将最松软饱满的那块面包留给少年，希冀面包的香甜滋味能多少抚慰一些他的痛苦。\n\n后来，歌声消失了，少年也不再来买面包了。\n\n又过了很多天，女人偶然看见少年神色恍惚地走过街道，连忙叫住了他。\n“你怎么不唱歌了？”女人问他。\n“我的母亲去世了。”他开口，嗓音干涩得可怕，“我从前努力学唱歌，是为了唱给母亲听。可是现在她不在了。”\n女人闻言沉默了一阵，而后，将一袋热乎的面包递给了他。“你妈妈对我说过，她希望你可以唱得越来越好，站上闪闪发亮的舞台，让大家都听见你的歌声。即便她不在了，你仍然可以实现她的愿望呀。”\n少年抬起眼眸，似有一瞬的亮光闪过。\n其实女人只见过少年的母亲寥寥几面，印象中对方总是用帽子和面纱遮掩面容，也很少开口说话；可事到如今，她唯一能为少年做的，也只有编织一个善意的谎言了。\n第二天，少年的歌声终于再次响起。或许正因为曾一度沉寂过，这一次他的歌声比以往更有力量，也更动人。\n\n一年又一年，冰湖城的雪落了又融化，少年变成了青年，女人的面包铺也变成了一间面包店。一个寻常的清晨，离开店还有半刻钟的时候，青年敲响了面包店的门。\n\n“阿姨，我要离开一段时间，去军团服役。”他说着将一把钥匙和一小袋钱币递给女人，“我不在的时候，可以麻烦您帮忙照看一下我家吗？”\n“当然可以，但我不收你的钱。你一个人生活不容易，还是自己留着用吧。”女人将钱推还给青年，“不过，你为什么进军队？你不唱歌了吗？”\n“我想取得桂冠卡戎的身份，这样我才可以上台演出。”青年一边解释，一边又将钱袋推过来，“我不能平白接受您的帮助……”\n“那就等你回来的时候再报答我吧。”女人一边说着，一边将预先留好的面包交给青年，一如往常。“等你成为了演员，来给我的面包店当代言人怎么样？”\n“如果您不嫌弃的话……”\n“那就一言为定了。”她笑着对青年挥了挥手，“祝你得偿所愿，帕西法尔。”",
           TextMapId = "UI_CHAR_DATA_TEXT_11030201"
@@ -68282,15 +68298,7 @@ local Data = {
         UI_CHAR_DATA_TEXT_11030202 = {
           TextMapContent = "并不是每一出戏剧都好看，而一出好看的戏剧里也不是每一个片段都精彩。观众们往往会被跌宕起伏、紧张刺激的片段牢牢吸引，而每每演到那些用于衔接的琐碎过场，台下总是有许多人走神。因此，演员们往往也更在意自己在那些精彩片段中的表现。\n但是帕西法尔不一样，剧团的老师回忆说，哪怕是那些其他演员不太在意的平淡普通的情节，他也会以最认真的态度对待。这一方面当然是因为他十分勤奋，但另一方面也是因为，即便是那些“平淡而普通”的片段，对他来说也是触不可及的另一种生活。\n\n“对大部分演员来说，表演是工作，是爱好，抑或是理想。但对帕西法尔来说，表演大概是与生命同等珍贵的东西吧。”他的老师如此评价道，“或者说，表演已经融入了他的生命本身。”",
           TextMapId = "UI_CHAR_DATA_TEXT_11030202"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_11030203",
-    MaxKey = "UI_CHAR_DATA_TEXT_31030103",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_11030203 = {
           TextMapContent = "晚宴开始了。\n\n在璀璨的灯光照耀之下，人们手中的酒杯和衣摆上的宝石仿佛也都变成了一盏盏小灯，让宴会厅的角角落落都流淌着金色的光芒。如同每一场类似的宴会，这里充斥着对名利的崇拜与渴望，到处是虚与委蛇的礼节和奉承；但也就是在这里，一场童话般浪漫的邂逅即将开启，在一个男人和一个女人之间。\n\n男人是第一次来到如此高级的晚宴，虽然身着华服、举止得体，但眉眼间不经意流露出的不安和肢体动作中细微的僵硬感还是出卖了他。他是个年轻有为的商人，头脑聪明，靠着钢铁生意积累来的财富得到了这张上流社会的入场券；然而，这一切都无法改写他低微的出身，在场的所有人——包括他自己——都对此心知肚明。人人都用玩味的目光审视他，带着居高临下的微笑接受他的问好，转身又与同伴毫不顾忌地嘲讽他过时的品味和拘谨的言辞。在被某位刻薄的贵族捉弄、喝下了整整三杯苦酒后，男人不得不悄悄退到大厅角落，低声向侍者要了一杯白水，小口喝起来。\n\n女人是内城炙手可热的交际花，是此等上流宴会的常客。她游刃有余地应付着络绎不绝拥上来的追求者，让每一个人都坚信自己得到了特别的青睐，还巧妙地制止了两位差点为她大打出手的青年。之后，她用余光瞥见了那位前些日子给她送上名贵首饰的男爵，他的身边跟着一位陌生的美丽女子。女人对此并不意外，她很清楚，在这些贵族眼里她与物品无异，就像花钱买来的一个名贵瓷瓶，若是打碎了、弄脏了或是看腻了，便会毫不留情地换上另一个。然而和瓷瓶不同的是，她会说会笑，可以靠自己的绰约风姿和伶牙俐齿重新唤起对方的怜爱；在这样的游戏里，她每一次都是赢家。正当她提起裙摆打算施展手段时，却不知为何觉得有些头晕——也许是因为刚才喝下的酒太烈了吧。于是她转身走向餐台，找到一碟刚切好的柠檬，伸手拈起一块。生吃柠檬是她个人的小习惯，那酸涩的味道能让她清醒。\n\n为了避免弄脏自己洁白的裙摆，她将一大块柠檬整个塞进嘴里。抬起头，她发现男人正端着水杯目瞪口呆地看着自己。\n\n“……不酸吗？”他问。\n她没法张嘴，只好点了点头，模糊地发出了“酸”的音节。\n“那为什么要吃？”他又问。\n她指了指脑袋，表示自己想要借此醒神。\n男人盯着她看了一会儿，也不知是否读懂了她的意思。只见他也拿起一块柠檬，学着她的样子塞进嘴里，脸上的五官瞬间皱成了一团。\n女人笑了，用手帕遮着嘴优雅地将柠檬皮吐出来，而后从容地问道：“是不是感觉清醒了不少，先生？”\n“是、是的……谢谢您，美丽的小姐。”男人在大口喝水的间隙狼狈地回道。这句“美丽的小姐”比起奉承更像是讽刺，却是女人今天听见的最真诚的话语。\n\n“我叫赫泽蕾德·斯诺菲尔德。”她说，“我从前没见过您，请问您是？”\n“莫里斯·格伦维尔。一名商人。”\n“商人？您都做些什么生意呢？”女人眼中流露出好奇的神色，并不含半分轻蔑。\n男人于是微笑着答道：“很多。下一步我打算试试水果贸易，比如说，进口一些不那么酸的柠檬。”\n女人噗嗤一声笑了出来，男人也跟着笑了。\n\n——就这样，两个孤独的灵魂相遇了，在这光鲜亮丽的世界中的一个小小的、幽暗的角落，像柠檬落入水中，酸涩之味被稀释得恰到好处。\n可童话之所以是童话，就在于它总能在“恰到好处”的地方停下，保留最大限度的体面。当童话结束之后，剩下的便只有难堪、冰冷的现实了。",
           TextMapId = "UI_CHAR_DATA_TEXT_11030203"
@@ -69082,7 +69090,15 @@ local Data = {
         UI_CHAR_DATA_TEXT_31030101 = {
           TextMapContent = "越来越多的人知道，耶尔腰间的皮球会说话——即使这片大陆上的骸可谓是千奇百怪，但当那个画着鬼脸的小东西突然用刻薄刺耳的男声说出一些颇为“文明”的词句时，第一次见的顾客总还是会惊讶地后退。同样吃惊的还有耶尔：从他磕磕绊绊的道歉中，可以朦胧听明白他的皮球被叫做“小可爱”，是耶尔自制的炸弹，而炸弹中则寄宿着一个名叫奥利弗的灵魂。尽管他们已经以这样的方式一起生活了很久，但每当奥利弗开口大肆评判客人的品味，耶尔依旧还是会结结巴巴起来，不知所措。",
           TextMapId = "UI_CHAR_DATA_TEXT_31030101"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_31030102",
+    MaxKey = "UI_CHAR_DATA_TEXT_53010104",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_31030102 = {
           TextMapContent = "耶尔讨厌医院的味道，讨厌消毒水的味道，讨厌那些瓶瓶罐罐的味道。甚至华胥药师身上的草药的气息都会让他离远一些，再远一些——即使耶尔明白这样并不礼貌。但他还是厌恶着那种味道，那是炼金院的味道，是“过去”的味道，也是梦魇的味道。",
           TextMapId = "UI_CHAR_DATA_TEXT_31030102"
@@ -69090,15 +69106,7 @@ local Data = {
         UI_CHAR_DATA_TEXT_31030103 = {
           TextMapContent = "先是一竖，然后再稍微钩一下，这是鼻子。\n在鼻子下面一道弧线，拉得长长的，这是嘴。\n最后在圆形的上半部画出两个圆圆的小黑豆，嗯，勉强能够算得上是眼睛。\n就这样，奥利弗的身体——小可爱的最后制作工序完成，虽然奥利弗总是抗议耶尔画得很丑，但耶尔还是把这些炸弹当作自己的作品。\n作品。\n是啊，耶尔抓起一颗炸弹——琼斯先生当初也是这样欣喜地看着他的成长，在他身上画出过许多愿望。只是，自己和琼斯不一样。",
           TextMapId = "UI_CHAR_DATA_TEXT_31030103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_31030104",
-    MaxKey = "UI_CHAR_DATA_TEXT_53010201",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_31030104 = {
           TextMapContent = "耶尔曾以为自己永远都不会有朋友，炼金院的一切都是冷冰冰、白茫茫的——走廊的白光灯，研究员的白大褂，堆叠的报告，组成了他回忆里的每一天。\n了无生机的一切笼罩着他，他开始幻想自己能有个朋友，画技不佳的耶尔只能画出来个皮球，或者说，一个不太规整的圆。白光映在白纸上，白色的圆形看起来冷冷的，直到耶尔给它涂上了橙色——那是他有记忆来的第一抹亮色。",
           TextMapId = "UI_CHAR_DATA_TEXT_31030104"
@@ -69890,7 +69898,15 @@ local Data = {
         UI_CHAR_DATA_TEXT_53010104 = {
           TextMapContent = "如果——你忍不住想象——如果赛琪顺利完成了觉醒。那么，你们就可以成为一起战斗的同伴了吧。\n赛琪会展开翅膀，遨游于天空，宛如她最喜爱的蝴蝶那样。在战斗结束的时候，她会收起翅膀，轻盈地落在你面前，如同蝴蝶停在花瓣上歇息。",
           TextMapId = "UI_CHAR_DATA_TEXT_53010104"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CHAR_DATA_TEXT_53010105",
+    MaxKey = "UI_CMNpc_Name_BlackmarketMerchantC",
+    Loader = function()
+      return {
         UI_CHAR_DATA_TEXT_53010105 = {
           TextMapContent = "你为赛琪筑起了一个小小的石堆。石堆看上去光秃秃的，什么装饰也没有。\n你想放上盛开的鲜花，但花会枯萎。你想放上纸折的蝴蝶，但纸会腐烂。\n那就什么都不放吧。你的思念会一直陪伴着她。\n你在石堆前闭上眼睛，恍惚间有一道绿色的亮光出现在你的视野里，像翩跹的蝴蝶一样盘旋而去，越来越远。",
           TextMapId = "UI_CHAR_DATA_TEXT_53010105"
@@ -69898,15 +69914,7 @@ local Data = {
         UI_CHAR_DATA_TEXT_53010201 = {
           TextMapContent = "赛琪是旅馆“修普诺斯之家”的住客，同时也担任着招待员的工作。话虽如此，但因“修普诺斯之家”的大门从不向众人敞开，所以罕有往来冰湖城的旅客真的接受过她的招待服务。只是每个清晨，如果你站在旅馆台阶之下向上张望，你会看到一袭纤瘦的身影掩映在枝叶和藤蔓之后，影影绰绰。那是赛琪在忙碌着，她拉开厚实的窗帘让花朵沐浴为数不多的日光，轻柔地向叶片撒上水，仔细修剪去枯萎的花枝。在“修普诺斯之家”这栋由砖石的深灰和残雪的苍白组成的冰冷宅邸，唯有赛琪的花带来了几缕稀薄的暖意。",
           TextMapId = "UI_CHAR_DATA_TEXT_53010201"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CHAR_DATA_TEXT_53010202",
-    MaxKey = "UI_CMNpc_Name_Chatanlaoban",
-    Loader = function()
-      return {
+        },
         UI_CHAR_DATA_TEXT_53010202 = {
           TextMapContent = "赛琪在“修普诺斯之家”照看的植物并非来自家里的花店。虽然她爱着家中亲手栽培的花儿，但她知道父母比自己更需要它们。\n那些花朵是赛琪在修普诺斯之家的台阶下捡来的。那时，一个同样借宿在“修普诺斯之家”的女孩儿一边声嘶力竭地哭泣，一边将父母托人送来的盆栽一盆一盆掷出窗外。安慰好哭泣的女孩后，赛琪独自来到窗下，修剪去折断的花枝和根须，又一片片收敛起破碎的花盆，将它们重新粘合，拼凑完整。在赛琪的精心照料下，那些险些被摔碎的花存活了下来，甚至开得愈发旺盛。",
           TextMapId = "UI_CHAR_DATA_TEXT_53010202"
@@ -70698,7 +70706,15 @@ local Data = {
         UI_CMNpc_Name_BlackmarketMerchantC = {
           TextMapContent = "冯强",
           TextMapId = "UI_CMNpc_Name_BlackmarketMerchantC"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_Blue",
+    MaxKey = "UI_COIN_LIMITTIME46",
+    Loader = function()
+      return {
         UI_CMNpc_Name_Blue = {
           TextMapContent = "布鲁内托",
           TextMapId = "UI_CMNpc_Name_Blue"
@@ -70706,15 +70722,7 @@ local Data = {
         UI_CMNpc_Name_Chatanlaoban = {
           TextMapContent = "茶摊老板",
           TextMapId = "UI_CMNpc_Name_Chatanlaoban"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_CheZhanAnBaoDuiZhang",
-    MaxKey = "UI_COIN_LIMITTIME66",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_CheZhanAnBaoDuiZhang = {
           TextMapContent = "安保队长【远期待包装】",
           TextMapId = "UI_CMNpc_Name_CheZhanAnBaoDuiZhang"
@@ -71506,7 +71514,15 @@ local Data = {
         UI_COIN_LIMITTIME46 = {
           TextMapContent = "第4/6轮 本轮次金币消失时间剩余：",
           TextMapId = "UI_COIN_LIMITTIME46"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_COIN_LIMITTIME56",
+    MaxKey = "UI_CTL_CheckCondition",
+    Loader = function()
+      return {
         UI_COIN_LIMITTIME56 = {
           TextMapContent = "第5/6轮 本轮次金币消失时间剩余：",
           TextMapId = "UI_COIN_LIMITTIME56"
@@ -71514,15 +71530,7 @@ local Data = {
         UI_COIN_LIMITTIME66 = {
           TextMapContent = "第6/6轮 本轮次金币消失时间剩余：",
           TextMapId = "UI_COIN_LIMITTIME66"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COMMONPOP_CHECK_100027",
-    MaxKey = "UI_CTL_CheckPlan",
-    Loader = function()
-      return {
+        },
         UI_COMMONPOP_CHECK_100027 = {
           TextMapContent = "本周不再提示",
           TextMapId = "UI_COMMONPOP_CHECK_100027"
@@ -72311,7 +72319,15 @@ local Data = {
         UI_CTL_CheckCondition = {
           TextMapContent = "查看条件",
           TextMapId = "UI_CTL_CheckCondition"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CTL_CheckPet",
+    MaxKey = "UI_Chat_Default_8",
+    Loader = function()
+      return {
         UI_CTL_CheckPet = {
           TextMapContent = "查看宠物",
           TextMapId = "UI_CTL_CheckPet"
@@ -72319,15 +72335,7 @@ local Data = {
         UI_CTL_CheckPlan = {
           TextMapContent = "查看方案",
           TextMapId = "UI_CTL_CheckPlan"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CTL_CheckProperty",
-    MaxKey = "UI_Chat_GotoLeague",
-    Loader = function()
-      return {
+        },
         UI_CTL_CheckProperty = {
           TextMapContent = "查看属性",
           TextMapId = "UI_CTL_CheckProperty"
@@ -73119,7 +73127,15 @@ local Data = {
         UI_Chat_Default_8 = {
           TextMapContent = "再邀请我一次！",
           TextMapId = "UI_Chat_Default_8"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chat_DyeSuitFormat",
+    MaxKey = "UI_Convert_Num",
+    Loader = function()
+      return {
         UI_Chat_DyeSuitFormat = {
           TextMapContent = "【染色方案：%s】",
           TextMapId = "UI_Chat_DyeSuitFormat"
@@ -73127,15 +73143,7 @@ local Data = {
         UI_Chat_GotoLeague = {
           TextMapContent = "前往公会",
           TextMapId = "UI_Chat_GotoLeague"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Chat_GotoTeamUp",
-    MaxKey = "UI_Cost_For_Unlock",
-    Loader = function()
-      return {
+        },
         UI_Chat_GotoTeamUp = {
           TextMapContent = "前往组队频道",
           TextMapId = "UI_Chat_GotoTeamUp"
@@ -73924,7 +73932,15 @@ local Data = {
         UI_Convert_Num = {
           TextMapContent = "重铸数量：",
           TextMapId = "UI_Convert_Num"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Convert_ReviseResources",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_43",
+    Loader = function()
+      return {
         UI_Convert_ReviseResources = {
           TextMapContent = "更改材料",
           TextMapId = "UI_Convert_ReviseResources"
@@ -73932,15 +73948,7 @@ local Data = {
         UI_Cost_For_Unlock = {
           TextMapContent = "解锁需消耗",
           TextMapId = "UI_Cost_For_Unlock"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Current_Attr",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_45",
-    Loader = function()
-      return {
+        },
         UI_Current_Attr = {
           TextMapContent = "当前属性",
           TextMapId = "UI_Current_Attr"
@@ -74729,7 +74737,15 @@ local Data = {
         UI_DUNGEON_AUTOCHESS_43 = {
           TextMapContent = "无尽棋局023",
           TextMapId = "UI_DUNGEON_AUTOCHESS_43"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_AUTOCHESS_44",
+    MaxKey = "UI_DUNGEON_TYPE_EXTERMINATE",
+    Loader = function()
+      return {
         UI_DUNGEON_AUTOCHESS_44 = {
           TextMapContent = "无尽棋局024",
           TextMapId = "UI_DUNGEON_AUTOCHESS_44"
@@ -74737,15 +74753,7 @@ local Data = {
         UI_DUNGEON_AUTOCHESS_45 = {
           TextMapContent = "无尽棋局025",
           TextMapId = "UI_DUNGEON_AUTOCHESS_45"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_46",
-    MaxKey = "UI_DUNGEON_TYPE_PETDEFENCE",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_46 = {
           TextMapContent = "无尽棋局026",
           TextMapId = "UI_DUNGEON_AUTOCHESS_46"
@@ -75537,7 +75545,15 @@ local Data = {
         UI_DUNGEON_TYPE_EXTERMINATE = {
           TextMapContent = "驱逐",
           TextMapId = "UI_DUNGEON_TYPE_EXTERMINATE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_TYPE_HIJACK",
+    MaxKey = "UI_Disptach_Toast_NoAgent",
+    Loader = function()
+      return {
         UI_DUNGEON_TYPE_HIJACK = {
           TextMapContent = "迁移",
           TextMapId = "UI_DUNGEON_TYPE_HIJACK"
@@ -75545,15 +75561,7 @@ local Data = {
         UI_DUNGEON_TYPE_PETDEFENCE = {
           TextMapContent = "解救",
           TextMapId = "UI_DUNGEON_TYPE_PETDEFENCE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_TYPE_RESCUE",
-    MaxKey = "UI_DraftDes_General",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_TYPE_RESCUE = {
           TextMapContent = "护送",
           TextMapId = "UI_DUNGEON_TYPE_RESCUE"
@@ -76345,7 +76353,15 @@ local Data = {
         UI_Disptach_Toast_NoAgent = {
           TextMapContent = "请选择代理人",
           TextMapId = "UI_Disptach_Toast_NoAgent"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Disptach_Warm_ManualDoing",
+    MaxKey = "UI_Event_MidTerm_NoPoint",
+    Loader = function()
+      return {
         UI_Disptach_Warm_ManualDoing = {
           TextMapContent = "事件手动处理中",
           TextMapId = "UI_Disptach_Warm_ManualDoing"
@@ -76353,15 +76369,7 @@ local Data = {
         UI_DraftDes_General = {
           TextMapContent = "一页铸造蓝图，展示了物品的制作过程，流程简单却饱含设计者的匠心。",
           TextMapId = "UI_DraftDes_General"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Dress_Back",
-    MaxKey = "UI_Event_MidTerm_NormalTask",
-    Loader = function()
-      return {
+        },
         UI_Dress_Back = {
           TextMapContent = "背部·上",
           TextMapId = "UI_Dress_Back"
@@ -77153,7 +77161,15 @@ local Data = {
         UI_Event_MidTerm_NoPoint = {
           TextMapContent = "未获得皎皎积分",
           TextMapId = "UI_Event_MidTerm_NoPoint"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Event_MidTerm_NormalPreview",
+    MaxKey = "UI_FNNpc_Name_Mario",
+    Loader = function()
+      return {
         UI_Event_MidTerm_NormalPreview = {
           TextMapContent = "皎皎珍藏",
           TextMapId = "UI_Event_MidTerm_NormalPreview"
@@ -77161,15 +77177,7 @@ local Data = {
         UI_Event_MidTerm_NormalTask = {
           TextMapContent = "常规博弈",
           TextMapId = "UI_Event_MidTerm_NormalTask"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Event_MidTerm_Overflow",
-    MaxKey = "UI_FNNpc_Name_MrBird",
-    Loader = function()
-      return {
+        },
         UI_Event_MidTerm_Overflow = {
           TextMapContent = "超额皎皎积分将转化为铜币",
           TextMapId = "UI_Event_MidTerm_Overflow"
@@ -77961,7 +77969,15 @@ local Data = {
         UI_FNNpc_Name_Mario = {
           TextMapContent = "下水道维修工人",
           TextMapId = "UI_FNNpc_Name_Mario"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_FNNpc_Name_Mark",
+    MaxKey = "UI_GameEvent_StarterQuest_RewardPreview",
+    Loader = function()
+      return {
         UI_FNNpc_Name_Mark = {
           TextMapContent = "马克",
           TextMapId = "UI_FNNpc_Name_Mark"
@@ -77969,15 +77985,7 @@ local Data = {
         UI_FNNpc_Name_MrBird = {
           TextMapContent = "白鸟先生",
           TextMapId = "UI_FNNpc_Name_MrBird"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_FNNpc_Name_Muban",
-    MaxKey = "UI_GameEvent_TimeRemain_Day",
-    Loader = function()
-      return {
+        },
         UI_FNNpc_Name_Muban = {
           TextMapContent = "松动的木板",
           TextMapId = "UI_FNNpc_Name_Muban"
@@ -78766,7 +78774,15 @@ local Data = {
         UI_GameEvent_StarterQuest_RewardPreview = {
           TextMapContent = "奖励预览",
           TextMapId = "UI_GameEvent_StarterQuest_RewardPreview"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_GameEvent_StarterQuest_UnlockCondition",
+    MaxKey = "UI_Impression_Continue",
+    Loader = function()
+      return {
         UI_GameEvent_StarterQuest_UnlockCondition = {
           TextMapContent = "领取阶段%02d所有任务奖励后解锁",
           TextMapId = "UI_GameEvent_StarterQuest_UnlockCondition"
@@ -78774,15 +78790,7 @@ local Data = {
         UI_GameEvent_TimeRemain_Day = {
           TextMapContent = "天",
           TextMapId = "UI_GameEvent_TimeRemain_Day"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_GameEvent_TimeRemain_Hour",
-    MaxKey = "UI_Impression_Throw",
-    Loader = function()
-      return {
+        },
         UI_GameEvent_TimeRemain_Hour = {
           TextMapContent = "小时",
           TextMapId = "UI_GameEvent_TimeRemain_Hour"
@@ -79574,7 +79582,15 @@ local Data = {
         UI_Impression_Continue = {
           TextMapContent = "放弃",
           TextMapId = "UI_Impression_Continue"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Impression_Fail",
+    MaxKey = "UI_Locked_Des_Mod",
+    Loader = function()
+      return {
         UI_Impression_Fail = {
           TextMapContent = "提升五维印象可提高检定通过概率",
           TextMapId = "UI_Impression_Fail"
@@ -79582,15 +79598,7 @@ local Data = {
         UI_Impression_Throw = {
           TextMapContent = "掷骰",
           TextMapId = "UI_Impression_Throw"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Input_Clean",
-    MaxKey = "UI_Locked_Des_ModDungeon",
-    Loader = function()
-      return {
+        },
         UI_Input_Clean = {
           TextMapContent = "清空",
           TextMapId = "UI_Input_Clean"
@@ -80237,7 +80245,7 @@ local Data = {
           TextMapId = "UI_Locked_Des_4030002"
         },
         UI_Locked_Des_4030003 = {
-          TextMapContent = "获得任意璀璨展示动作解锁",
+          TextMapContent = "获得睥睨山河、悠游水岸、极速定格其中任一展示动作解锁",
           TextMapId = "UI_Locked_Des_4030003"
         },
         UI_Locked_Des_4030004 = {
@@ -80379,7 +80387,15 @@ local Data = {
         UI_Locked_Des_Mod = {
           TextMapContent = "魔之楔暂未解锁",
           TextMapId = "UI_Locked_Des_Mod"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Locked_Des_ModArchive",
+    MaxKey = "UI_MECHANISM_ENTER_SEW",
+    Loader = function()
+      return {
         UI_Locked_Des_ModArchive = {
           TextMapContent = "魔之匣暂未解锁",
           TextMapId = "UI_Locked_Des_ModArchive"
@@ -80387,15 +80403,7 @@ local Data = {
         UI_Locked_Des_ModDungeon = {
           TextMapContent = "夜航手册暂未解锁",
           TextMapId = "UI_Locked_Des_ModDungeon"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Locked_Des_Mount",
-    MaxKey = "UI_MECHANISM_HAOJING_ENTER",
-    Loader = function()
-      return {
+        },
         UI_Locked_Des_Mount = {
           TextMapContent = "载具暂未解锁",
           TextMapId = "UI_Locked_Des_Mount"
@@ -81187,7 +81195,15 @@ local Data = {
         UI_MECHANISM_ENTER_SEW = {
           TextMapContent = "进入下水道",
           TextMapId = "UI_MECHANISM_ENTER_SEW"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_ENTER_TAVERN",
+    MaxKey = "UI_MonthlyCard_Title_1",
+    Loader = function()
+      return {
         UI_MECHANISM_ENTER_TAVERN = {
           TextMapContent = "进入“水仙平原”",
           TextMapId = "UI_MECHANISM_ENTER_TAVERN"
@@ -81195,15 +81211,7 @@ local Data = {
         UI_MECHANISM_HAOJING_ENTER = {
           TextMapContent = "前往皓京",
           TextMapId = "UI_MECHANISM_HAOJING_ENTER"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_LEAVE_FLOW",
-    MaxKey = "UI_Mount",
-    Loader = function()
-      return {
+        },
         UI_MECHANISM_LEAVE_FLOW = {
           TextMapContent = "离开牵念之花",
           TextMapId = "UI_MECHANISM_LEAVE_FLOW"
@@ -81995,20 +82003,20 @@ local Data = {
         UI_MonthlyCard_Title_1 = {
           TextMapContent = "侍者皎皎的",
           TextMapId = "UI_MonthlyCard_Title_1"
-        },
-        UI_MonthlyCard_Title_2 = {
-          TextMapContent = "月度订单",
-          TextMapId = "UI_MonthlyCard_Title_2"
-        },
-        UI_Mount = {TextMapContent = "载具", TextMapId = "UI_Mount"}
+        }
       }
     end
   },
   {
-    MinKey = "UI_Mount_Activated",
-    MaxKey = "UI_NPC_Name_tiaojieren_Sce",
+    MinKey = "UI_MonthlyCard_Title_2",
+    MaxKey = "UI_NPC_Name_tantaiyan_Sce",
     Loader = function()
       return {
+        UI_MonthlyCard_Title_2 = {
+          TextMapContent = "月度订单",
+          TextMapId = "UI_MonthlyCard_Title_2"
+        },
+        UI_Mount = {TextMapContent = "载具", TextMapId = "UI_Mount"},
         UI_Mount_Activated = {
           TextMapContent = "已激活",
           TextMapId = "UI_Mount_Activated"
@@ -82794,7 +82802,15 @@ local Data = {
         UI_NPC_Name_tantaiyan_Sce = {
           TextMapContent = "澹台烟",
           TextMapId = "UI_NPC_Name_tantaiyan_Sce"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_NPC_Name_taoqibao_Sce",
+    MaxKey = "UI_Name_Walnut_2016",
+    Loader = function()
+      return {
         UI_NPC_Name_taoqibao_Sce = {
           TextMapContent = "淘气包",
           TextMapId = "UI_NPC_Name_taoqibao_Sce"
@@ -82802,15 +82818,7 @@ local Data = {
         UI_NPC_Name_tiaojieren_Sce = {
           TextMapContent = "调解人",
           TextMapId = "UI_NPC_Name_tiaojieren_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_tiaojieyuan_Sce",
-    MaxKey = "UI_Name_Walnut_2018",
-    Loader = function()
-      return {
+        },
         UI_NPC_Name_tiaojieyuan_Sce = {
           TextMapContent = "调解员",
           TextMapId = "UI_NPC_Name_tiaojieyuan_Sce"
@@ -83602,7 +83610,15 @@ local Data = {
         UI_Name_Walnut_2016 = {
           TextMapContent = "密函：赘生",
           TextMapId = "UI_Name_Walnut_2016"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_2017",
+    MaxKey = "UI_Npc_Name_Badshangren",
+    Loader = function()
+      return {
         UI_Name_Walnut_2017 = {
           TextMapContent = "密函：蓝色脉动",
           TextMapId = "UI_Name_Walnut_2017"
@@ -83610,15 +83626,7 @@ local Data = {
         UI_Name_Walnut_2018 = {
           TextMapContent = "密函：崩解",
           TextMapId = "UI_Name_Walnut_2018"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_2019",
-    MaxKey = "UI_Npc_Name_Bai",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_2019 = {
           TextMapContent = "密函：银白敕令",
           TextMapId = "UI_Name_Walnut_2019"
@@ -84407,7 +84415,15 @@ local Data = {
         UI_Npc_Name_Badshangren = {
           TextMapContent = "黑市商人",
           TextMapId = "UI_Npc_Name_Badshangren"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Bag",
+    MaxKey = "UI_Npc_Name_SongluVoice",
+    Loader = function()
+      return {
         UI_Npc_Name_Bag = {
           TextMapContent = "背包皎皎",
           TextMapId = "UI_Npc_Name_Bag"
@@ -84415,15 +84431,7 @@ local Data = {
         UI_Npc_Name_Bai = {
           TextMapContent = "白",
           TextMapId = "UI_Npc_Name_Bai"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Beilesuo",
-    MaxKey = "UI_Npc_Name_Staff01Spr",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Beilesuo = {
           TextMapContent = "哭喊的富家少女",
           TextMapId = "UI_Npc_Name_Beilesuo"
@@ -85215,7 +85223,15 @@ local Data = {
         UI_Npc_Name_SongluVoice = {
           TextMapContent = "清脆的声音",
           TextMapId = "UI_Npc_Name_SongluVoice"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_StableGirl",
+    MaxKey = "UI_OPTION_InterfaceMode",
+    Loader = function()
+      return {
         UI_Npc_Name_StableGirl = {
           TextMapContent = "沉稳的女孩",
           TextMapId = "UI_Npc_Name_StableGirl"
@@ -85223,15 +85239,7 @@ local Data = {
         UI_Npc_Name_Staff01Spr = {
           TextMapContent = "百年春工作人员",
           TextMapId = "UI_Npc_Name_Staff01Spr"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_StrangeMan",
-    MaxKey = "UI_OPTION_InterfaceMode_NoFrame",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_StrangeMan = {
           TextMapContent = "奇怪的人",
           TextMapId = "UI_Npc_Name_StrangeMan"
@@ -86023,7 +86031,15 @@ local Data = {
         UI_OPTION_InterfaceMode = {
           TextMapContent = "显示模式",
           TextMapId = "UI_OPTION_InterfaceMode"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_InterfaceMode_Full",
+    MaxKey = "UI_PARTY_PARKOUR_UNFINISH",
+    Loader = function()
+      return {
         UI_OPTION_InterfaceMode_Full = {
           TextMapContent = "全屏",
           TextMapId = "UI_OPTION_InterfaceMode_Full"
@@ -86031,15 +86047,7 @@ local Data = {
         UI_OPTION_InterfaceMode_NoFrame = {
           TextMapContent = "无边框窗口化",
           TextMapId = "UI_OPTION_InterfaceMode_NoFrame"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_InterfaceMode_Window16:9",
-    MaxKey = "UI_PATCH_DIFFVERSION",
-    Loader = function()
-      return {
+        },
         ["UI_OPTION_InterfaceMode_Window16:9"] = {
           TextMapContent = "16:9窗口",
           TextMapId = "UI_OPTION_InterfaceMode_Window16:9"
@@ -86831,7 +86839,15 @@ local Data = {
         UI_PARTY_PARKOUR_UNFINISH = {
           TextMapContent = "未完成",
           TextMapId = "UI_PARTY_PARKOUR_UNFINISH"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PATCH_CANCEL",
+    MaxKey = "UI_PlayerHead_Name_10016",
+    Loader = function()
+      return {
         UI_PATCH_CANCEL = {
           TextMapContent = "取消",
           TextMapId = "UI_PATCH_CANCEL"
@@ -86839,15 +86855,7 @@ local Data = {
         UI_PATCH_DIFFVERSION = {
           TextMapContent = "正在校验版本",
           TextMapId = "UI_PATCH_DIFFVERSION"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PATCH_DOWNLOADFAILED",
-    MaxKey = "UI_PlayerHead_Name_10018",
-    Loader = function()
-      return {
+        },
         UI_PATCH_DOWNLOADFAILED = {
           TextMapContent = "更新资源下载失败，是否重新下载？",
           TextMapId = "UI_PATCH_DOWNLOADFAILED"
@@ -87636,7 +87644,15 @@ local Data = {
         UI_PlayerHead_Name_10016 = {
           TextMapContent = "逐灯者的肖像",
           TextMapId = "UI_PlayerHead_Name_10016"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10017",
+    MaxKey = "UI_QUEST_TRACK_LOCK",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10017 = {
           TextMapContent = "垃圾桶公主的肖像",
           TextMapId = "UI_PlayerHead_Name_10017"
@@ -87644,15 +87660,7 @@ local Data = {
         UI_PlayerHead_Name_10018 = {
           TextMapContent = "幕后之人的肖像",
           TextMapId = "UI_PlayerHead_Name_10018"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_10019",
-    MaxKey = "UI_QUEST_UNLOCKFINISH",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_10019 = {
           TextMapContent = "大军团长的肖像",
           TextMapId = "UI_PlayerHead_Name_10019"
@@ -88444,7 +88452,15 @@ local Data = {
         UI_QUEST_TRACK_LOCK = {
           TextMapContent = "任务未解锁，请先完成解锁条件",
           TextMapId = "UI_QUEST_TRACK_LOCK"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_QUEST_UNKNOWN",
+    MaxKey = "UI_RougeLike_Bag",
+    Loader = function()
+      return {
         UI_QUEST_UNKNOWN = {
           TextMapContent = "未知任务",
           TextMapId = "UI_QUEST_UNKNOWN"
@@ -88452,15 +88468,7 @@ local Data = {
         UI_QUEST_UNLOCKFINISH = {
           TextMapContent = "已完成",
           TextMapId = "UI_QUEST_UNLOCKFINISH"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Quest_AbandonQuest_Text",
-    MaxKey = "UI_RougeLike_BlessingUpgrade_Title",
-    Loader = function()
-      return {
+        },
         UI_Quest_AbandonQuest_Text = {
           TextMapContent = "是否确认放弃该任务？",
           TextMapId = "UI_Quest_AbandonQuest_Text"
@@ -89249,7 +89257,15 @@ local Data = {
         UI_RougeLike_Bag = {
           TextMapContent = "探索详情",
           TextMapId = "UI_RougeLike_Bag"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RougeLike_BlessingConfirm",
+    MaxKey = "UI_STAT_KILL_TITLE",
+    Loader = function()
+      return {
         UI_RougeLike_BlessingConfirm = {
           TextMapContent = "选择",
           TextMapId = "UI_RougeLike_BlessingConfirm"
@@ -89257,15 +89273,7 @@ local Data = {
         UI_RougeLike_BlessingUpgrade_Title = {
           TextMapContent = "烛芯升级",
           TextMapId = "UI_RougeLike_BlessingUpgrade_Title"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_RougeLike_Blessing_CanUpgrade",
-    MaxKey = "UI_STAT_Online_Damage_1P",
-    Loader = function()
-      return {
+        },
         UI_RougeLike_Blessing_CanUpgrade = {
           TextMapContent = "升级",
           TextMapId = "UI_RougeLike_Blessing_CanUpgrade"
@@ -90057,7 +90065,15 @@ local Data = {
         UI_STAT_KILL_TITLE = {
           TextMapContent = "击败数",
           TextMapId = "UI_STAT_KILL_TITLE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_STAT_Online",
+    MaxKey = "UI_Server_Europe",
+    Loader = function()
+      return {
         UI_STAT_Online = {
           TextMapContent = "联机数据",
           TextMapId = "UI_STAT_Online"
@@ -90065,15 +90081,7 @@ local Data = {
         UI_STAT_Online_Damage_1P = {
           TextMapContent = "1P 伤害",
           TextMapId = "UI_STAT_Online_Damage_1P"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_STAT_Online_Damage_2P",
-    MaxKey = "UI_Server_Recommend",
-    Loader = function()
-      return {
+        },
         UI_STAT_Online_Damage_2P = {
           TextMapContent = "2P 伤害",
           TextMapId = "UI_STAT_Online_Damage_2P"
@@ -90859,7 +90867,15 @@ local Data = {
         UI_Server_Europe = {
           TextMapContent = "欧服:Europe",
           TextMapId = "UI_Server_Europe"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Server_HMT",
+    MaxKey = "UI_Skin_Not_Have_Char",
+    Loader = function()
+      return {
         UI_Server_HMT = {
           TextMapContent = "港澳台:HMT",
           TextMapId = "UI_Server_HMT"
@@ -90867,15 +90883,7 @@ local Data = {
         UI_Server_Recommend = {
           TextMapContent = "推荐",
           TextMapId = "UI_Server_Recommend"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SetTime_Button_SetTime",
-    MaxKey = "UI_Skin_Upgrade_Confirm",
-    Loader = function()
-      return {
+        },
         UI_SetTime_Button_SetTime = {
           TextMapContent = "改变时刻",
           TextMapId = "UI_SetTime_Button_SetTime"
@@ -91667,7 +91675,15 @@ local Data = {
         UI_Skin_Not_Have_Char = {
           TextMapContent = "未解锁该角色",
           TextMapId = "UI_Skin_Not_Have_Char"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Skin_Preview",
+    MaxKey = "UI_TELEPORTPOINT_NAME_104501_1",
+    Loader = function()
+      return {
         UI_Skin_Preview = {
           TextMapContent = "角色形象预览",
           TextMapId = "UI_Skin_Preview"
@@ -91675,15 +91691,7 @@ local Data = {
         UI_Skin_Upgrade_Confirm = {
           TextMapContent = "是否消耗资源为当前形象进阶",
           TextMapId = "UI_Skin_Upgrade_Confirm"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Skin_Upgrade_Cost",
-    MaxKey = "UI_TELEPORTPOINT_NAME_104501_3",
-    Loader = function()
-      return {
+        },
         UI_Skin_Upgrade_Cost = {
           TextMapContent = "进阶消耗",
           TextMapId = "UI_Skin_Upgrade_Cost"
@@ -92475,7 +92483,15 @@ local Data = {
         UI_TELEPORTPOINT_NAME_104501_1 = {
           TextMapContent = "东城",
           TextMapId = "UI_TELEPORTPOINT_NAME_104501_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TELEPORTPOINT_NAME_104501_2",
+    MaxKey = "UI_TEXT_SOLDFISH",
+    Loader = function()
+      return {
         UI_TELEPORTPOINT_NAME_104501_2 = {
           TextMapContent = "东城观景台【废弃】",
           TextMapId = "UI_TELEPORTPOINT_NAME_104501_2"
@@ -92483,15 +92499,7 @@ local Data = {
         UI_TELEPORTPOINT_NAME_104501_3 = {
           TextMapContent = "分殊学院",
           TextMapId = "UI_TELEPORTPOINT_NAME_104501_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TELEPORTPOINT_NAME_104502_1",
-    MaxKey = "UI_TOAST_FORGING_WARNING",
-    Loader = function()
-      return {
+        },
         UI_TELEPORTPOINT_NAME_104502_1 = {
           TextMapContent = "参商港",
           TextMapId = "UI_TELEPORTPOINT_NAME_104502_1"
@@ -93283,7 +93291,15 @@ local Data = {
         UI_TEXT_SOLDFISH = {
           TextMapContent = "出售渔获",
           TextMapId = "UI_TEXT_SOLDFISH"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TIP_MP",
+    MaxKey = "UI_Vote_End",
+    Loader = function()
+      return {
         UI_TIP_MP = {
           TextMapContent = "神智不足",
           TextMapId = "UI_TIP_MP"
@@ -93291,15 +93307,7 @@ local Data = {
         UI_TOAST_FORGING_WARNING = {
           TextMapContent = "请于休憩之所：铁匠皎皎处开启铸造",
           TextMapId = "UI_TOAST_FORGING_WARNING"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TRAINING_FAIL_GUIDWAR",
-    MaxKey = "UI_Vote_Finish_Continue",
-    Loader = function()
-      return {
+        },
         UI_TRAINING_FAIL_GUIDWAR = {
           TextMapContent = "组队时无法开始挑战",
           TextMapId = "UI_TRAINING_FAIL_GUIDWAR"
@@ -94085,7 +94093,15 @@ local Data = {
         UI_Vote_End = {
           TextMapContent = "轮次结束",
           TextMapId = "UI_Vote_End"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Vote_Finish_Choice",
+    MaxKey = "UI_WEAPON_NAME_AutoChess_10",
+    Loader = function()
+      return {
         UI_Vote_Finish_Choice = {
           TextMapContent = "第%d轮次已结束，继续挑战还是选择撤离？",
           TextMapId = "UI_Vote_Finish_Choice"
@@ -94093,15 +94109,7 @@ local Data = {
         UI_Vote_Finish_Continue = {
           TextMapContent = "继续挑战",
           TextMapId = "UI_Vote_Finish_Continue"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Vote_Finish_Continued",
-    MaxKey = "UI_WEAPON_NAME_AutoChess_12",
-    Loader = function()
-      return {
+        },
         UI_Vote_Finish_Continued = {
           TextMapContent = "已选择继续挑战",
           TextMapId = "UI_Vote_Finish_Continued"
@@ -94893,7 +94901,15 @@ local Data = {
         UI_WEAPON_NAME_AutoChess_10 = {
           TextMapContent = "击溃符石",
           TextMapId = "UI_WEAPON_NAME_AutoChess_10"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_NAME_AutoChess_11",
+    MaxKey = "UI_WeaponSkin_Name_3010201",
+    Loader = function()
+      return {
         UI_WEAPON_NAME_AutoChess_11 = {
           TextMapContent = "瓦解符石",
           TextMapId = "UI_WEAPON_NAME_AutoChess_11"
@@ -94901,15 +94917,7 @@ local Data = {
         UI_WEAPON_NAME_AutoChess_12 = {
           TextMapContent = "淬炼符石",
           TextMapId = "UI_WEAPON_NAME_AutoChess_12"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_NAME_AutoChess_13",
-    MaxKey = "UI_WeaponSkin_Name_3010203",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_NAME_AutoChess_13 = {
           TextMapContent = "激怒符石",
           TextMapId = "UI_WEAPON_NAME_AutoChess_13"
@@ -95701,7 +95709,15 @@ local Data = {
         UI_WeaponSkin_Name_3010201 = {
           TextMapContent = "空军二号",
           TextMapId = "UI_WeaponSkin_Name_3010201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponSkin_Name_3010202",
+    MaxKey = "VoiceDes064",
+    Loader = function()
+      return {
         UI_WeaponSkin_Name_3010202 = {
           TextMapContent = "父辈余荫",
           TextMapId = "UI_WeaponSkin_Name_3010202"
@@ -95709,15 +95725,7 @@ local Data = {
         UI_WeaponSkin_Name_3010203 = {
           TextMapContent = "喵手回春",
           TextMapId = "UI_WeaponSkin_Name_3010203"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WeaponSkin_Name_3010204",
-    MaxKey = "VoiceDes066",
-    Loader = function()
-      return {
+        },
         UI_WeaponSkin_Name_3010204 = {
           TextMapContent = "势如破竹·单手剑",
           TextMapId = "UI_WeaponSkin_Name_3010204"
@@ -96506,7 +96514,15 @@ local Data = {
         VoiceDes064 = {
           TextMapContent = "关于偷东西",
           TextMapId = "VoiceDes064"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes065",
+    MaxKey = "WikiText_20300102",
+    Loader = function()
+      return {
         VoiceDes065 = {
           TextMapContent = "关于恶魔的称号",
           TextMapId = "VoiceDes065"
@@ -96514,15 +96530,7 @@ local Data = {
         VoiceDes066 = {
           TextMapContent = "关于西比尔",
           TextMapId = "VoiceDes066"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes067",
-    MaxKey = "WikiText_20300104",
-    Loader = function()
-      return {
+        },
         VoiceDes067 = {
           TextMapContent = "关于解决问题的方式",
           TextMapId = "VoiceDes067"
@@ -97314,7 +97322,15 @@ local Data = {
         WikiText_20300102 = {
           TextMapContent = "在军团试图钓出{nickname}的诱饵作战中，止流再次出面将{nickname}救下，并将其带往华胥。",
           TextMapId = "WikiText_20300102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_20300103",
+    MaxKey = "Wiki_RewardProgress",
+    Loader = function()
+      return {
         WikiText_20300103 = {
           TextMapContent = "身为龙渊上卿，执掌天禄司，同时也是大型商会百年春的会首。其人更愿意以商人自称，作风平易近人，经商手段高明，广受织星客爱戴。",
           TextMapId = "WikiText_20300103"
@@ -97322,15 +97338,7 @@ local Data = {
         WikiText_20300104 = {
           TextMapContent = "止流希望化解烛阴之灾的危机，为了这个目的，她委托{nickname}前去采摘烛阴鳞。\n与烛阴鳞共鸣的高浓度活性物质是此前止流出现在冰湖城的原因。她本来的目标落空了，却意外发现了{nickname}的存在。",
           TextMapId = "WikiText_20300104"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_20300105",
-    MaxKey = "WuyoushengEvent_Pet601_SkillDesLv_1",
-    Loader = function()
-      return {
+        },
         WikiText_20300105 = {
           TextMapContent = "止流的真实目的并非封印烛阴，而是获取烛阴的力量。为了避免计划出现变量，止流在烛阴祭坛上将{nickname}囚禁，与其反目。",
           TextMapId = "WikiText_20300105"
@@ -98122,7 +98130,15 @@ local Data = {
         Wiki_RewardProgress = {
           TextMapContent = "收集进度",
           TextMapId = "Wiki_RewardProgress"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WorldChannelWithParam",
+    MaxKey = "voice_ch_char_Feina_vo_battlestart",
+    Loader = function()
+      return {
         WorldChannelWithParam = {
           TextMapContent = "世界频道（%s）",
           TextMapId = "WorldChannelWithParam"
@@ -98130,15 +98146,7 @@ local Data = {
         WuyoushengEvent_Pet601_SkillDesLv_1 = {
           TextMapContent = "伤害提高至主角色攻击的12000%",
           TextMapId = "WuyoushengEvent_Pet601_SkillDesLv_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WuyoushengEvent_Pet601_SkillDesLv_2",
-    MaxKey = "voice_ch_char_Feina_vo_be_hit_r02",
-    Loader = function()
-      return {
+        },
         WuyoushengEvent_Pet601_SkillDesLv_2 = {
           TextMapContent = "技能威力提高150%",
           TextMapId = "WuyoushengEvent_Pet601_SkillDesLv_2"
@@ -98927,7 +98935,15 @@ local Data = {
         voice_ch_char_Feina_vo_battlestart = {
           TextMapContent = "好大的花园呀~",
           TextMapId = "voice_ch_char_Feina_vo_battlestart"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Feina_vo_be_hit_heavy_r02",
+    MaxKey = "voice_ch_char_Landi_vo_fail",
+    Loader = function()
+      return {
         voice_ch_char_Feina_vo_be_hit_heavy_r02 = {
           TextMapContent = "我不怕……！",
           TextMapId = "voice_ch_char_Feina_vo_be_hit_heavy_r02"
@@ -98935,15 +98951,7 @@ local Data = {
         voice_ch_char_Feina_vo_be_hit_r02 = {
           TextMapContent = "别碰我！",
           TextMapId = "voice_ch_char_Feina_vo_be_hit_r02"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Feina_vo_birthday",
-    MaxKey = "voice_ch_char_Landi_vo_idle",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Feina_vo_birthday = {
           TextMapContent = "在生日那天，白色的独角兽{性别：先生|小姐}，回到了{性别：他|她}小小的，温暖的家。纯白羽毛的鸟儿衔来桂叶，魔法师吟唱着带来欢笑的咒语，勇敢的骑士守在{性别：他|她}身旁，一如往昔。火苗在壁炉里跳着轻快的舞，雪花自天空送来遥远的祝福。小小的家啊，摇曳着无可比拟的幸福……",
           TextMapId = "voice_ch_char_Feina_vo_birthday"
@@ -99735,7 +99743,15 @@ local Data = {
         voice_ch_char_Landi_vo_fail = {
           TextMapContent = "适时撤退也是重要的战术！溜了溜了。",
           TextMapId = "voice_ch_char_Landi_vo_fail"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Landi_vo_gain",
+    MaxKey = "voice_ch_char_Nifu_vo_topic_04_6",
+    Loader = function()
+      return {
         voice_ch_char_Landi_vo_gain = {
           TextMapContent = "唉，怎么让你抓到了，看来清闲日子要到头了……咳，看在你人还不赖的份上，以私人名义给你们提供一点帮助也不是不行啦。",
           TextMapId = "voice_ch_char_Landi_vo_gain"
@@ -99743,15 +99759,7 @@ local Data = {
         voice_ch_char_Landi_vo_idle = {
           TextMapContent = "嗯……这个自动绕后的折叠枪可以升级成连发的……火力也可以再猛一些……嗯，不错不错，下次出任务就可以更快地解决敌人，然后回家休息了。",
           TextMapId = "voice_ch_char_Landi_vo_idle"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Landi_vo_lvup",
-    MaxKey = "voice_ch_char_Nifu_vo_topic_04_8",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Landi_vo_lvup = {
           TextMapContent = "虽然麻烦，但战前准备永远不嫌少。",
           TextMapId = "voice_ch_char_Landi_vo_lvup"
@@ -100543,7 +100551,15 @@ local Data = {
         voice_ch_char_Nifu_vo_topic_04_6 = {
           TextMapContent = "嗯……有一次，莱克西斯为了某件事去给艾瑞卡道歉，艾瑞卡便随口指着士兵们用来练箭的靶子说，他要是能射中红心就原谅他……",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Nifu_vo_topic_04_7",
+    MaxKey = "voice_ch_char_Suyi_vo_topic_04_4",
+    Loader = function()
+      return {
         voice_ch_char_Nifu_vo_topic_04_7 = {
           TextMapContent = "当然，这是一句气话。连士兵都不是每个人都做得到，更何况莱克西斯的双手并不是用来握剑，而是用来书写灵智与真理的。",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_7"
@@ -100551,15 +100567,7 @@ local Data = {
         voice_ch_char_Nifu_vo_topic_04_8 = {
           TextMapContent = "但他却把这话当真了，趁士兵们歇息之后，一个人练习了一晚上。",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_8"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Nifu_vo_topic_04_9",
-    MaxKey = "voice_ch_char_Suyi_vo_topic_04_6",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Nifu_vo_topic_04_9 = {
           TextMapContent = "当然，历史不是英雄传说。即使是聪慧如莱克西斯，也有学不会的事。他一直练习到手心被磨出血，艾瑞卡为他包上麻布，也没能射中靶心。",
           TextMapId = "voice_ch_char_Nifu_vo_topic_04_9"
@@ -101351,7 +101359,15 @@ local Data = {
         voice_ch_char_Suyi_vo_topic_04_4 = {
           TextMapContent = "这……当然也是我家了！",
           TextMapId = "voice_ch_char_Suyi_vo_topic_04_4"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Suyi_vo_topic_04_5",
+    MaxKey = "voice_ch_char_Yuming_vo_topic_02_2",
+    Loader = function()
+      return {
         voice_ch_char_Suyi_vo_topic_04_5 = {
           TextMapContent = "好敏锐啊，这就是雇佣兵……不对不对，狩月人的直觉？不只是战斗，接人待物也有用？要是我的机傀探测导航装置，也能和你一样灵活就好了。",
           TextMapId = "voice_ch_char_Suyi_vo_topic_04_5"
@@ -101359,15 +101375,7 @@ local Data = {
         voice_ch_char_Suyi_vo_topic_04_6 = {
           TextMapContent = "我只是有点迷茫……家应该是一个什么样的地方？",
           TextMapId = "voice_ch_char_Suyi_vo_topic_04_6"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Suyi_vo_topic_04_7",
-    MaxKey = "voice_ch_char_Yuming_vo_topic_03_2",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Suyi_vo_topic_04_7 = {
           TextMapContent = "那……回不去的地方，还算是家吗？……抱歉，让你听了奇怪的话，还是当我没说过吧！",
           TextMapId = "voice_ch_char_Suyi_vo_topic_04_7"
@@ -102159,7 +102167,15 @@ local Data = {
         voice_ch_char_Yuming_vo_topic_02_2 = {
           TextMapContent = "……也许吧，我不常与人们闲谈，毕竟但凡需要我出手的地方，总有伤逝。大部华胥之民，是并不乐见我的。",
           TextMapId = "voice_ch_char_Yuming_vo_topic_02_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Yuming_vo_topic_03_1",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Yuming_vo_topic_03_1 = {
           TextMapContent = "无事可乐，自然如此。",
           TextMapId = "voice_ch_char_Yuming_vo_topic_03_1"
@@ -102167,15 +102183,7 @@ local Data = {
         voice_ch_char_Yuming_vo_topic_03_2 = {
           TextMapContent = "谢了，但是说与你听，也不过是徒然让这世上又多了一个烦恼之人，何必。",
           TextMapId = "voice_ch_char_Yuming_vo_topic_03_2"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Yuming_vo_topic_04_1",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Yuming_vo_topic_04_1 = {
           TextMapContent = "是啊，月亮很好，很好。无论前一天发生过什么，杯盘狼籍还是血溅五步，月光都能洗净一切。不管过去多久，天边的一角总是会为你留下一弯月亮。",
           TextMapId = "voice_ch_char_Yuming_vo_topic_04_1"

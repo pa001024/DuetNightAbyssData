@@ -46,6 +46,9 @@ function M:ChangeCharAppearance(AppearanceInfo)
     if ModelComp then
       ModelComp:LoadCurrentModel()
     end
+    if Character.EMAnimInstance.CharacterTag ~= Character:GetCharacterTag() then
+      Character.EMAnimInstance.CharacterTag = Character:GetCharacterTag()
+    end
     Character.CharacterFashion:InitAppearanceSuit(AppearanceInfo)
     if Character.PlayerAnimInstance then
       Character.PlayerAnimInstance:SetKawiiLayerState(EKawaiiLayerState.EKLS_Armory)

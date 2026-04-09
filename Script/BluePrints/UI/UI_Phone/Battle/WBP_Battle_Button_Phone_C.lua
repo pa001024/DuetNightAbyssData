@@ -793,8 +793,10 @@ function WBP_Battle_Button_Phone:ChangeSkillButtonState(SkillName, StateName)
       self.Squat:PlayAnimationForward(self.Squat.Normal)
     elseif SkillName == ESkillName.Skill1 then
       self.SkillItems[1].CurButtonState = "Normal"
+      self.SkillItems[1]:PlayButtonStateAnimation()
     elseif SkillName == ESkillName.Skill2 then
       self.SkillItems[2].CurButtonState = "Normal"
+      self.SkillItems[2]:PlayButtonStateAnimation()
     elseif SkillName == ESkillName.Skill3 then
       self.SupportSkill.CurButtonState = "Normal"
       self.SupportSkill:PlayAnimationForward(self.SupportSkill.Normal)

@@ -311,14 +311,7 @@ Const.StatePause = 5
 Const.StateEnd = 6
 Const.ExitStateAlert = 7
 Const.StateBattleProgress = 99
-Const.ProgressRecoverDungeonType = {
-  Survival = true,
-  SurvivalPro = true,
-  SurvivalMini = true,
-  Defence = true,
-  Excavation = true,
-  Rouge = true
-}
+Const.ProgressRecoverDungeonType = {Rouge = true}
 Const.DungeonErrorType = {
   DungeonGame = "拼接关玩法",
   StaticCreator = "静态刷新点",

@@ -121211,7 +121211,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12046114] = {
           Content = "嗨呀，您千万别放在心上。我现在活得好好的，吃好喝好，逍遥自在。我爹心宽，也绝不会念你。",
-          ContentKR = "어이쿠, 마음에 담아두지 마십시오. 전 지금 잘 먹고 잘살고, 아주 자유롭게 잘 지냅니다. 어버지도 워낙 너그러운 분이시니, 절대 어르신을 원망하지 않으실 겁니다.",
+          ContentKR = "어이쿠, 마음에 담아두지 마십시오. 전 지금 잘 먹고 잘살고, 아주 자유롭게 잘 지냅니다. 아버지도 워낙 너그러운 분이시니, 절대 어르신을 원망하지 않으실 겁니다.",
           DialogueId = 12046114,
           GUID = "1E27FB94",
           NextDialogue = 12046115,
@@ -123084,7 +123084,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12047405] = {
           Content = "姑奶奶，你来得真及时！",
-          ContentKR = "고모할머님, 딱 맞춰 왔네요!",
+          ContentKR = "고모할머님, 딱 맞춰 오셨네요!",
           DialogueId = 12047405,
           GUID = "1E28CF62",
           NextDialogue = 12047406,
@@ -126032,7 +126032,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12049232] = {
           Content = "人是可以开辟出新的选项的。",
-          ContentKR = "사람은... 스스로 새로운 선택지를 만들어 낼 수 있단 걸요.",
+          ContentKR = "사람은... 스스로 선택지를 만들어 낼 수 있단 걸요.",
           DialogueId = 12049232,
           GUID = "1E29FB20",
           VoiceName = "voice/$Locale$/story/1204/120492/1E29FB20"
@@ -218063,7 +218063,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51170002] = {
           Content = "谁没看路呢？！分明是我老远就叫着让她让开些，她却充耳不闻，我那车上放着多少重物，我骤然之间停不下来呀！",
-          ContentKR = "앞을 안 본 게 누군데 그래요? 멀리서부터 비키라고 몇 번을 소리 질렀는데요! 그런데도 안 비킨 건 저 사람 아내라고요! 짐을 가득 실은 수레를 어떻게 갑자기 멈추라는 거예요!",
+          ContentKR = "앞을 안 본 게 누군데 그래요? 멀리서부터 비키라고 몇 번을 소리 질렀는데요! 그런데도 안 비킨 건 그쪽 어머니라고요! 짐을 가득 실은 수레를 어떻게 갑자기 멈추라는 거예요!",
           DialogueId = 51170002,
           GUID = "80194674.0",
           NextDialogue = 51170003,
@@ -218071,7 +218071,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51170003] = {
           Content = "老婆子年纪大了，有些耳背也是常事吧，你为何不让旁人提醒一下，现在说这些又有何用？",
-          ContentKR = "집사람이 나이가 들어서 귀가 잘 안 들린다고! 주변 사람들한테 부탁이라도 했어야지! 이제 와서 그런 말 한다고 뭐가 달라져!",
+          ContentKR = "나이가 많아서 귀가 잘 안 들리신다고! 주변 사람들한테 부탁이라도 했어야지! 이제 와서 그런 말 한다고 뭐가 달라져!",
           DialogueId = 51170003,
           GUID = "8019469E",
           NextDialogue = 51170004,
@@ -218095,7 +218095,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51170006] = {
           Content = "二位先别急，我先在此问一句，您家婆婆被撞后现下伤势如何了？可曾医治？",
-          ContentKR = "두 분, 우선 진정하시고요. 먼저 부인께서는 지금 상태가 어떠신가요? 치료는 받으셨나요?",
+          ContentKR = "두 분, 우선 진정하시고요. 먼저 어머니께선 지금 상태가 어떠신가요? 치료는 받으셨나요?",
           DialogueId = 51170006,
           GUID = "8019471C",
           NextDialogue = 51170007,
@@ -218103,7 +218103,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51170007] = {
           Content = "腿上磕到了，乌青一大截，老年人本就骨头脆，现在已经在床上躺着了。",
-          ContentKR = "다리가 시퍼렇게 멍들었어요. 원래도 뼈가 약한 편인데, 이젠 아예 침대에 누워서 움직이질 못하게 됐어요.",
+          ContentKR = "다리가 시퍼렇게 멍들었어요. 원래도 뼈가 약하신데, 이젠 아예 침대에서 움직이지도 못하시게 됐어요.",
           DialogueId = 51170007,
           GUID = "80194746.0",
           NextDialogue = 51170008,
@@ -237428,6 +237428,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007401] = {
           Content = "（应天尉来袭，击退他们！）",
+          ContentKR = "(응천위가 습격해 온다. 해치우자!)",
           DialogueId = 71007401,
           GUID = "B1C273BA",
           SpeakNpcId = 800006
@@ -237489,6 +237490,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007508] = {
           Content = "没想到你出手如此果断，在下佩服佩服。",
+          ContentKR = "\n\n이렇게 과감하게 나서 주시다니, 정말 존경스럽네요. \n",
           DialogueId = 71007508,
           GUID = "B1C2851F",
           NextDialogue = 71007509,
@@ -237496,13 +237498,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007509] = {
           Content = "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
-          ContentKR = "휴... 이 부두에선 감자 팔면 안 되겠어. 고맙습니다, 고마워요...",
+          ContentKR = "휴... 이 부두에선 감자채를 팔면 안 되겠어. 고맙습니다, 고마워요...",
           DialogueId = 71007509,
           GUID = "B1C28548",
           SpeakNpcId = 818078
         },
         [71007510] = {
           Content = "还好你把它们赶走了，希望能消停一段时间。",
+          ContentKR = "녀석들을 쫓아내 주셔서 다행이에요. 이제 조금만 잠잠해졌으면 좋겠는데...",
           DialogueId = 71007510,
           GUID = "B1C28549",
           NextDialogue = 71007511,
@@ -237510,19 +237513,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007511] = {
           Content = "呼……在码头卖土豆真是太危险了。谢谢，谢谢啊……",
-          ContentKR = "휴... 이 부두에선 감자 팔면 안 되겠어. 고맙습니다, 고마워요...",
+          ContentKR = "휴... 이 부두에선 감자채를 팔면 안 되겠어. 고맙습니다, 고마워요...",
           DialogueId = 71007511,
           GUID = "B1C2855A",
           SpeakNpcId = 818078
         },
         [71007601] = {
           Content = "今天怎么回事，这么久了一条鱼都没上钩。",
+          ContentKR = "오늘은 왜 이러지... 이렇게 오래 낚싯줄을 담갔는데, 한 마리도 안 잡히네.",
           DialogueId = 71007601,
           GUID = "B1C2948A",
           SpeakNpcId = 818079
         },
         [71007602] = {
           Content = "这位路过的朋友，我怀疑这地方今天根本没有鱼，你能不能帮我试试？",
+          ContentKR = "거기 지나가는 친구, 오늘 여긴 물고기 자체가 없는 것 같은데, 그쪽이 한번 해볼래?",
           DialogueId = 71007602,
           GUID = "B1C294B4",
           NextOptions = {
@@ -237534,13 +237539,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007603] = {
           Content = "好，拜托你了。",
-          ContentKR = "그럼 부탁해요.",
+          ContentKR = "그럼 부탁해.",
           DialogueId = 71007603,
           GUID = "B1C294DE",
           SpeakNpcId = 818079
         },
         [71007604] = {
           Content = "太厉害了，一下就钓上来了。看来不是水域的问题。",
+          ContentKR = "이야, 대단하군! 한 번에 낚다니. 장소 탓은 아니었나 보군...",
           DialogueId = 71007604,
           GUID = "B1C29508",
           NextDialogue = 71007605,
@@ -237548,18 +237554,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007605] = {
           Content = "谢谢你帮我验证了一下哈，我自己再试试看。今天绝对不能再提着空桶回去了！",
+          ContentKR = "확인해 줘서 고마워. 이번엔 내가 다시 해 볼게. 오늘은 절대 빈손으로 돌아갈 수 없지!",
           DialogueId = 71007605,
           GUID = "B1C29532",
           SpeakNpcId = 818079
         },
         [71007701] = {
           Content = "奇怪，到底掉到哪里去了……",
+          ContentKR = "이상하네, 도대체 어디로 떨어진 거지...",
           DialogueId = 71007701,
           GUID = "B1C2A4F2",
           SpeakNpcId = 818080
         },
         [71007702] = {
           Content = "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+          ContentKR = "혹시 이 근처에서 상자 못 보셨나요? 실수로 떨어뜨렸는데, 평범한 상자예요. 한참을 찾아도 안 보이네요.",
           DialogueId = 71007702,
           GUID = "B1C2A51C",
           NextOptions = {
@@ -237571,18 +237580,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007703] = {
           Content = "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+          ContentKR = "고맙습니다. 그럼 아래쪽을 한번 찾아봐 주세요. 전 위쪽을 찾아볼게요.",
           DialogueId = 71007703,
           GUID = "B1C2A546",
           SpeakNpcId = 818080
         },
         [71007704] = {
           Content = "咦，看你在找什么东西的样子，是这些箱子吗？",
+          ContentKR = "음? 뭔가를 찾는 것 같은데, 혹시 이 상자들이야?",
           DialogueId = 71007704,
           GUID = "B1C2A570",
           SpeakNpcId = 818081
         },
         [71007705] = {
           Content = "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+          ContentKR = "하천 데이터를 조사하다가 이 상자들을 주웠거든. 네가 찾는 게 있는지 한번 볼래?",
           DialogueId = 71007705,
           GUID = "B1C2A59A",
           NextOptions = {
@@ -237595,48 +237607,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007706] = {
           Content = "好，那你就拿去吧。",
-          ContentKR = "고마워요. 제가 잃어버렸던 보물 상자 맞아요.",
+          ContentKR = "좋아, 그럼 가져가.",
           DialogueId = 71007706,
           GUID = "B1C2A5C4",
           SpeakNpcId = 818081
         },
         [71007707] = {
           Content = "没错没错，就是这个，太谢谢你了。",
-          ContentKR = "보상으로 이걸 드릴게요.",
+          ContentKR = "맞아요, 바로 이거예요. 정말 고맙습니다.",
           DialogueId = 71007707,
           GUID = "B1C2A5EE",
           SpeakNpcId = 818080
         },
         [71007708] = {
           Content = "这明显不是我掉的普通箱子，不过还是谢谢你了。",
-          ContentKR = "상자가 너무 화려해요. 아무리 봐도 제 게 아니에요.",
+          ContentKR = "이건 딱 봐도 제가 떨어뜨린 평범한 상자가 아닌데요? 그래도 감사합니다.",
           DialogueId = 71007708,
           GUID = "B1C2A618",
           SpeakNpcId = 818080
         },
         [71007710] = {
           Content = "哇，没想到你找到了这么多箱子呀，那我就先拿走我掉的普通箱子了哈，谢谢你！",
-          ContentKR = "세상에, 상자를 이렇게나 많이 찾아왔군요!",
+          ContentKR = "와, 상자를 이렇게 많이 찾아오실 줄이야... 그럼 이 평범한 상자는 제가 떨어뜨린 거니까 가져갈게요. 고맙습니다!",
           DialogueId = 71007710,
           GUID = "B1C2A66C",
           SpeakNpcId = 818080
         },
         [71007712] = {
           Content = "（附近没看到什么箱子，再去其他地方找找。）",
+          ContentKR = "(근처에 상자는 안 보이는 것 같다. 다른 곳을 찾아보자.)",
           DialogueId = 71007712,
           GUID = "B1C2A6C0",
           SpeakNpcId = 800006
         },
         [71007801] = {
           Content = "香……点燃……请……",
-          ContentKR = "저기, 월석 사냥꾼님? 잠깐 괜찮으세요?",
+          ContentKR = "향을... 피워... 주세요...",
           DialogueId = 71007801,
           GUID = "B1C2B55A",
           SpeakNpcId = 818082
         },
         [71007802] = {
           Content = "那边……请……点燃……谢谢……",
-          ContentKR = "제가 마음속 깊은 곳의 잠재의식을 발견할 수 있는 새로운 향을 하나 개발했는데, 실험에 참여해서 뭐가 보였는지 말씀해 주실 수 있을까요?",
+          ContentKR = "저쪽... 향을... 피워 주세요... 감사합니다...",
           DialogueId = 71007802,
           GUID = "B1C2B584",
           NextOptions = {
@@ -237648,14 +237661,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007803] = {
           Content = "焚香……好……",
-          ContentKR = "잘 생각하셨어요. 그러면 저기 있는 향로에 향을 피워 주세요.",
+          ContentKR = "향불이다... 좋아...",
           DialogueId = 71007803,
           GUID = "B1C2B5AE",
           SpeakNpcId = 818082
         },
         [71007805] = {
           Content = "（点燃香炉之后，四周顿时弥漫起了浓厚的烟雾，透过这些烟雾，你似乎看到了什么东西？）",
-          ContentKR = "(마음속 깊은 곳에서 질문이 하나 떠오른다. '지금 이 순간, 내가 가장 바라는 건 무엇인가?')",
+          ContentKR = "(향로에 불을 붙이자, 순식간에 주위가 짙은 연기로 가득 찬다. 그런데 연기 속에 무언가가 보이는 듯하다.)",
           DialogueId = 71007805,
           GUID = "B1C2B602",
           NextOptions = {
@@ -237668,49 +237681,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007806] = {
           Content = "（朦胧的雾气中，你看到了数之不尽的宝箱，打开它们吧。）",
-          ContentKR = "(주변에 수많은 보물 상자가 나타났다.)",
+          ContentKR = "(희미한 연기 속에서 셀 수 없이 많은 보물 상자가 보인다. 얼른 열어 보자.)",
           DialogueId = 71007806,
           GUID = "B1C2B62C",
           SpeakNpcId = 800006
         },
         [71007807] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentKR = "(무유생한테 방금 겪은 일을 말해 주자.)",
+          ContentKR = "(연기가 흩어지자, 방금 본 모든 것이 함께 사라져 버렸다. 무유생에게 돌아가 무슨 일인지 물어보자.)",
           DialogueId = 71007807,
           GUID = "B1C2B656",
           SpeakNpcId = 100001
         },
         [71007808] = {
           Content = "焚香……再见……",
-          ContentKR = "그런 걸 보셨군요. 알겠습니다. 협조해 주셔서 감사해요.",
+          ContentKR = "향불이다... 그럼 안녕...",
           DialogueId = 71007808,
           GUID = "B1C2B680",
           SpeakNpcId = 818082
         },
         [71007809] = {
           Content = "（朦胧的雾气中，你看到了大量敌人，击败它们吧。）",
-          ContentKR = "(주변에 적이 나타났다.)",
+          ContentKR = "(희미한 연기 속에서 많은 적들이 보인다. 얼른 해치우자.)",
           DialogueId = 71007809,
           GUID = "B1C2B6AA",
           SpeakNpcId = 800006
         },
         [71007810] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentKR = "(무유생한테 방금 겪은 일을 말해 주자.)",
+          ContentKR = "(연기가 흩어지자, 방금 본 모든 것이 함께 사라져 버렸다. 무유생에게 돌아가 무슨 일인지 물어보자.)",
           DialogueId = 71007810,
           GUID = "B1C2B6D4",
           SpeakNpcId = 100001
         },
         [71007811] = {
           Content = "焚香……再见……",
-          ContentKR = "그런 걸 보셨군요. 알겠습니다. 협조해 주셔서 감사해요.",
+          ContentKR = "향불이다... 그럼 안녕...",
           DialogueId = 71007811,
           GUID = "B1C2B6FE",
           SpeakNpcId = 818082
         },
         [71007812] = {
           Content = "（朦胧的雾气中，你看到了贝蕾妮卡的身影。）",
-          ContentKR = "(눈앞에 베레가 나타났다.)",
+          ContentKR = "(희미한 연기 속에서 베레니카의 모습이 보인다.)",
           DialogueId = 71007812,
           GUID = "B1C2B728",
           NextDialogue = 71007813,
@@ -237718,40 +237731,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007813] = {
           Content = "（伸手触碰，贝蕾的身影开始变得模糊不清。你知道，她只是焚香之后出现的幻影。）",
-          ContentKR = "(베레와의 대화 플레이스 홀더)",
+          ContentKR = "(손을 가져다 대자, 베레니카의 모습이 희미해진다. 이건 향불 속에 나타난 환영일 뿐이다.)",
           DialogueId = 71007813,
           GUID = "B1C2B752",
           SpeakNpcId = 800006
         },
         [71007814] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentKR = "(무유생한테 방금 겪은 일을 말해 주자.)",
+          ContentKR = "(연기가 흩어지자, 방금 본 모든 것이 함께 사라져 버렸다. 무유생에게 돌아가 무슨 일인지 물어보자.)",
           DialogueId = 71007814,
           GUID = "B1C2B77C",
           SpeakNpcId = 100001
         },
         [71007815] = {
           Content = "焚香……再见……",
-          ContentKR = "그런 걸 보셨군요. 알겠습니다. 협조해 주셔서 감사해요.",
+          ContentKR = "향불이다... 그럼 안녕...",
           DialogueId = 71007815,
           GUID = "B1C2B7A6",
           SpeakNpcId = 818082
         },
         [71007816] = {
           Content = "（一个香炉不知何时出现在了你的背后，这只无由生看起来很希望你能点燃它。）",
+          ContentKR = "(언제 나타났는지 모를 향로가 등 뒤에 놓여 있다. 이 무유생은 내가 향을 피워주길 몹시 바라는 것 같다.)",
           DialogueId = 71007816,
           GUID = "B1C2B7A7",
           SpeakNpcId = 800006
         },
         [71007901] = {
           Content = "救救我啊，我还没找到爸爸埋的宝藏，我不要死在这里哇……",
+          ContentKR = "제발 살려 주세요. 아버지께서 묻어두신 보물을 찾지도 못했는데, 여기서 죽을 순 없어요...",
           DialogueId = 71007901,
           GUID = "B1C2C5C2",
           SpeakNpcId = 818083
         },
         [71007905] = {
           Content = "谢谢你救了我，但我没什么好东西能够报答你……对了，我这有一张爸爸留下的藏宝图，要是你能找到宝藏，它们就归你了！",
-          ContentKR = "(맑고 천진한 얼굴을 보며, 나는...)",
+          ContentKR = "구해 주셔서 고맙습니다. 하지만 드릴 만한 게 없는데... 아, 이건 아버지께서 남기신 보물지도인데, 혹시 보물을 찾아내시면 그냥 드릴게요!",
           DialogueId = 71007905,
           GUID = "B1C2C66A",
           NextOptions = {
@@ -237762,30 +237777,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007906] = {
           Content = "好厉害，一眼就看出来了！那快去把它挖出来吧。",
+          ContentKR = "보자마자 아시다니 대단하세요! 그럼 얼른 가서 파 봐요.",
           DialogueId = 71007906,
           GUID = "B1C2C694",
           SpeakNpcId = 818083
         },
         [71007907] = {
           Content = "好，按照约定，这些宝藏从现在开始就归你啦，谢谢你刚才救了我。",
+          ContentKR = "좋아요, 약속대로 이 보물을 드릴게요. 아까 구해주셔서 감사해요.",
           DialogueId = 71007907,
           GUID = "B1C2C6BE",
           SpeakNpcId = 818083
         },
         [71007908] = {
           Content = "这怎么好意思呀……那，那我给你拿点其他小礼物吧，谢谢你刚才救了我。",
+          ContentKR = "그러면 제가 너무 죄송한데요... 그럼, 따로 작은 선물을 드릴게요. 아까 구해주셔서 감사해요.",
           DialogueId = 71007908,
           GUID = "B1C2C6E8",
           SpeakNpcId = 818083
         },
         [71008001] = {
           Content = "那边那位外乡人，对对就是叫你呢，能不能来帮我个忙。",
+          ContentKR = "거기 외지인! 그래, 너 말이야. 혹시 나 좀 도와줄 수 있을까?",
           DialogueId = 71008001,
           GUID = "B1C2D62A",
           SpeakNpcId = 818084
         },
         [71008002] = {
           Content = "我店里有个伙计最近总是偷偷跑出去跟隔壁店主碰面，我怀疑是想对我的店动什么手脚。能帮我去找点证据吗？",
+          ContentKR = "점원 하나가 요즘 자꾸 몰래 옆집 사장을 만나는 것 같단 말이야. 혹시 우리 가게에 뭔가 수작을 부리려는 게 아닌가 싶어서 말인데, 대신 증거 좀 잡아줄 수 있을까?",
           DialogueId = 71008002,
           GUID = "B1C2D654",
           NextOptions = {
@@ -237796,12 +237816,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008003] = {
           Content = "好，他们应该就在附近，全交给你了，我就不过去打草惊蛇了。",
+          ContentKR = "좋아. 두 사람은 분명히 이 근처에 있을 거야. 잘 좀 부탁해. 괜히 일을 그르치면 안 되니까 난 빠져 있을게.",
           DialogueId = 71008003,
           GUID = "B1C2D67E",
           SpeakNpcId = 818084
         },
         [71008004] = {
           Content = "只是把秘方拿出来给我看一眼而已，不会有什么风险的。",
+          ContentKR = "그냥 그 비밀 조리법을 한 번만 보여주면 돼. 절대 아무 일 없을 테니까 걱정 말고.",
           DialogueId = 71008004,
           GUID = "B1C2D6A8",
           NextDialogue = 71008005,
@@ -237809,6 +237831,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008005] = {
           Content = "我……",
+          ContentKR = "전...",
           DialogueId = 71008005,
           GUID = "B1C2D6D2",
           NextDialogue = 71008006,
@@ -237816,6 +237839,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008006] = {
           Content = "事成之后分你三成，怎么样？",
+          ContentKR = "일이 잘 되면 이익의 30%를 나눠 줄게. 어때?",
           DialogueId = 71008006,
           GUID = "B1C2D6FC",
           NextDialogue = 71008007,
@@ -237823,6 +237847,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008007] = {
           Content = "……",
+          ContentKR = "......",
           DialogueId = 71008007,
           GUID = "B1C2D726",
           NextDialogue = 71008008,
@@ -237830,24 +237855,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008008] = {
           Content = "还不行，那就干脆……等等，你是不是听到什么了，过来过来。",
+          ContentKR = "그걸로도 부족해? 그럼 아예... 잠깐만, 거기 당신, 뭔가 들은 거야? 이쪽으로 와 봐.",
           DialogueId = 71008008,
           GUID = "B1C2D750",
           SpeakNpcId = 818086
         },
         [71008009] = {
           Content = "这笔钱你拿着，刚才我们俩的对话你就当没听到如何。",
+          ContentKR = "이 돈을 줄 테니까, 방금 우리 둘 얘기는 못 들은 걸로 해줘.",
           DialogueId = 71008009,
           GUID = "B1C2D77A",
           SpeakNpcId = 818086
         },
         [71008010] = {
           Content = "（男子给你的这笔钱无疑就是他们在酝酿什么阴谋的证据，现在可以直接回去交差，揭露二人的阴谋，或是藏在附近，继续听听这二人的对话。）",
+          ContentKR = "(남자가 돈을 쥐어주는 것 자체가 음모가 오간다는 증거이므로, 지금 바로 사장을 찾아가 두 사람의 음모를 까발릴 수 있다. 물론 근처에 숨어서 계속 대화를 엿들을 수도 있다.)",
           DialogueId = 71008010,
           GUID = "B1C2D7A4",
           SpeakNpcId = 100001
         },
         [71008011] = {
           Content = "四成，给个痛快话，到底行不行啊，拖了我好几天了。",
+          ContentKR = "좋아, 시원하게 40% 줄게. 어때? 계속 질질 끌지 말고 얼른 대답해줘.",
           DialogueId = 71008011,
           GUID = "B1C2D7CE",
           NextDialogue = 71008012,
@@ -237855,6 +237884,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008012] = {
           Content = "对，对不起。店主于我有恩，我不能帮你做这种事。",
+          ContentKR = "죄, 죄송합니다. 사장님께서 얼마나 잘해주셨는데... 전 이런 일 못 합니다.",
           DialogueId = 71008012,
           GUID = "B1C2D7F8",
           NextDialogue = 71008013,
@@ -237862,30 +237892,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008013] = {
           Content = "（你成功躲过二人的注意，了解到了伙计真正的选择，现在回去向店主揭露真相吧。）",
+          ContentKR = "(두 사람의 대화를 몰래 엿들어, 점원이 올바른 선택을 한 것을 알아냈다. 이제 사장에게 돌아가서 진실을 알려주자.)",
           DialogueId = 71008013,
           GUID = "B1C2D822",
           SpeakNpcId = 100001
         },
         [71008014] = {
           Content = "哈哈，果然是我想得那样！等我家伙计回来我就让他滚蛋。",
+          ContentKR = "하하, 역시 내 의심이 맞았군. 그 녀석 돌아오기만 해봐. 바로 내쫓아 버릴 테니까!",
           DialogueId = 71008014,
           GUID = "B1C2D84C",
           SpeakNpcId = 818084
         },
         [71008015] = {
           Content = "原来是这样，差点错怪我家伙计了，谢谢你啊。",
+          ContentKR = "그랬군, 점원을 괜히 의심할 뻔했네. 고마워.",
           DialogueId = 71008015,
           GUID = "B1C2D876",
           SpeakNpcId = 818084
         },
         [71008101] = {
           Content = "今天就差最后一圈了，大家再坚持一下！",
+          ContentKR = "이번이 마지막 한 바퀴에요. 모두 지치지 말고 끝까지 힘내요!",
           DialogueId = 71008101,
           GUID = "B1C2E692",
           SpeakNpcId = 818087
         },
         [71008102] = {
           Content = "要想成为织星客，脚力也是很重要的！你要不要跟我一起监督他们跑完今天的最后一圈呀？",
+          ContentKR = "별을 잇는 자가 되려면, 체력도 중요해요! 저 사람들이 마지막 한 바퀴를 제대로 도는지 저랑 같이 감독할래요?",
           DialogueId = 71008102,
           GUID = "B1C2E6BC",
           NextOptions = {
@@ -237896,12 +237931,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008103] = {
           Content = "好，你来选一个人监督就好，选好了告诉我哦。",
+          ContentKR = "좋아요. 누굴 감독할지 고른 다음 알려 주세요.",
           DialogueId = 71008103,
           GUID = "B1C2E6E6",
           SpeakNpcId = 818087
         },
         [71008104] = {
           Content = "怎么样，想好要监督谁了吗？",
+          ContentKR = "어때요? 골랐나요?",
           DialogueId = 71008104,
           GUID = "B1C2E710",
           NextOptions = {
@@ -237913,12 +237950,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008105] = {
           Content = "没问题，我会好好盯着剩下两个人的！",
+          ContentKR = "그래요. 그럼 나머지 두 사람은 제가 지켜볼게요!",
           DialogueId = 71008105,
           GUID = "B1C2E73A",
           SpeakNpcId = 818087
         },
         [71008106] = {
           Content = "最后冲刺了！加油加油，不可以慢慢走哦！",
+          ContentKR = "마지막 스퍼트니까, 힘내요! 걷지 말고 뛰어요!",
           DialogueId = 71008106,
           Duration = 1,
           GUID = "B1C2E7E2",
@@ -237926,12 +237965,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008110] = {
           Content = "有你在一边盯着，他虽然跑得很慢，但还是坚持到最后了，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentKR = "옆에서 봐주니까, 정말 빨리 뛰네요! 오늘은 정말 고마웠어요. 이건 제 성의니까 받으세요.",
           DialogueId = 71008110,
           GUID = "B1C2E80C",
           SpeakNpcId = 818087
         },
         [71008111] = {
           Content = "有你在一边盯着，他居然能跑这么快呀，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentKR = "옆에서 봐주니까, 속도는 느려도 끝까지 포기하지 않고 뛰네요! 오늘은 정말 고마웠어요. 이건 제 성의니까 받으세요.",
           DialogueId = 71008111,
           GUID = "B1C2E836",
           SpeakNpcId = 818087
@@ -237987,18 +238028,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008401] = {
           Content = "（游荡的秽兽徘徊在附近，先击退它们，再去解救魔灵吧。）",
+          ContentKR = "(필토이드들이 주변을 배회하고 있다. 먼저 처치하고 마령을 구출하자.)",
           DialogueId = 71008401,
           GUID = "B1C317CA",
           SpeakNpcId = 800006
         },
         [71008402] = {
           Content = "（争斗的声响引来了更多秽兽。）",
+          ContentKR = "(싸움 소리에 이끌려, 더 많은 필토이드가 나타났다.)",
           DialogueId = 71008402,
           GUID = "B1C317F4",
           SpeakNpcId = 800006
         },
         [71008403] = {
           Content = "（这里暂时安全了，趁现在解救魔灵吧。）",
+          ContentKR = "(이곳은 잠시 안전해졌다. 지금이 마령을 구출할 기회다.)",
           DialogueId = 71008403,
           GUID = "B1C3181E",
           SpeakNpcId = 800006
@@ -286106,7 +286150,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80230338] = {
           Content = "我很抱歉只能让你待在黑暗之中……但是不会有谁来救你了，你只能凭自己的力量走出这里。",
-          ContentKR = "어둠 속에서 꺼내 주지 못해서 미안... 하지만 널 구하러 와 줄 사람은 없어. 벗어나고 싶다면, 네 힘으로 빠져나와.",
+          ContentKR = "어둠 속에서 꺼내 주지 못해서 미안해... 하지만 널 구하러 와 줄 사람은 없어. 벗어나고 싶다면, 네 힘으로 빠져나와.",
           DialogueId = 80230338,
           GUID = "C8D925D4",
           NextDialogue = 80230339,
@@ -303477,7 +303521,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077021] = {
           Content = "（帮忙寻找。）",
-          ContentKR = "(수락한다.)",
+          ContentKR = "(찾아본다.)",
           DialogueId = 710077021,
           GUID = "710077021.0",
           NextDialogue = 71007703,
@@ -303492,7 +303536,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077051] = {
           Content = "我在找这个普通箱子。",
-          ContentKR = "일반 보물 상자",
+          ContentKR = "이 평범한 상자를 찾고 있었어.",
           DialogueId = 710077051,
           GUID = "710077051.0",
           NextDialogue = 71007706,
@@ -303500,7 +303544,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077052] = {
           Content = "我在找这个看起来稍微华丽一点的箱子。",
-          ContentKR = "중급 보물 상자",
+          ContentKR = "약간 화려하게 생긴 이 상자를 찾고 있었어.",
           DialogueId = 710077052,
           GUID = "710077052.0",
           NextDialogue = 71007706,
@@ -303508,7 +303552,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077053] = {
           Content = "我在找这个最华丽的箱子。",
-          ContentKR = "고급 보물 상자",
+          ContentKR = "가장 화려한 이 상자를 찾고 있었어.",
           DialogueId = 710077053,
           GUID = "710077053.0",
           NextDialogue = 71007706,
@@ -303516,7 +303560,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077054] = {
           Content = "这几个箱子都是我的。",
-          ContentKR = "다 갖고 싶은데요.",
+          ContentKR = "여기 있는 상자들 전부 다 내 거야.",
           DialogueId = 710077054,
           GUID = "710077054.0",
           NextDialogue = 71007706,
@@ -303539,28 +303583,28 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710078051] = {
           Content = "宝箱。",
-          ContentKR = "(셀 수 없이 많은 보물 상자를 갖는 것)",
+          ContentKR = "보물 상자",
           DialogueId = 710078051,
           GUID = "710078051.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710078052] = {
           Content = "敌人。",
-          ContentKR = "(적을 없애는 것)",
+          ContentKR = "적",
           DialogueId = 710078052,
           GUID = "710078052.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710078053] = {
           Content = "熟悉的人。",
-          ContentKR = "(그리운 사람을 다시 만나는 것)",
+          ContentKR = "잘 아는 사람",
           DialogueId = 710078053,
           GUID = "710078053.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{3}}"
         },
         [710079051] = {
           Content = "从地形上来看应该就在这附近，我去找找吧。",
-          ContentKR = "(보물이 진정한 가치를 발휘하려면, 땅에 묻어둘 게 아니라, 본래 용도에 맞게 사용해야 한다고 가르쳐 준다.)",
+          ContentKR = "지형으로 볼 때 아마 이 근처일 텐데... 한번 찾아 볼게.",
           DialogueId = 710079051,
           GUID = "710079051.0",
           NextDialogue = 71007906,
@@ -303568,7 +303612,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710079052] = {
           Content = "既然是你父亲留给你的，那我就不要了。",
-          ContentKR = "(어른의 속마음은 숨긴 채, 비밀을 알려 줘서 고맙다고 말하며 동심을 지켜 준다.)",
+          ContentKR = "아버지께서 남기신 보물인데 내가 가질 순 없지.",
           DialogueId = 710079052,
           GUID = "710079052.0",
           NextDialogue = 71007908,
@@ -303576,6 +303620,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710080021] = {
           Content = "（接受。）",
+          ContentKR = "(수락한다.)",
           DialogueId = 710080021,
           GUID = "710080021.0",
           NextDialogue = 71008003,
@@ -303583,12 +303628,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710080022] = {
           Content = "（拒绝。）",
+          ContentKR = "(거절한다.)",
           DialogueId = 710080022,
           GUID = "710080022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081021] = {
           Content = "（接受。）",
+          ContentKR = "(수락한다.)",
           DialogueId = 710081021,
           GUID = "710081021.0",
           NextDialogue = 71008103,
@@ -303596,12 +303643,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081022] = {
           Content = "（拒绝。）",
+          ContentKR = "(거절한다.)",
           DialogueId = 710081022,
           GUID = "710081022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081041] = {
           Content = "红衣服的。",
+          ContentKR = "빨간 옷을 입은 사람.",
           DialogueId = 710081041,
           GUID = "710081041.0",
           NextDialogue = 71008105,
@@ -303609,6 +303658,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081042] = {
           Content = "绿衣服的。",
+          ContentKR = "녹색 옷을 입은 사람.",
           DialogueId = 710081042,
           GUID = "710081042.0",
           NextDialogue = 71008105,
@@ -303616,6 +303666,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081043] = {
           Content = "蓝衣服的。",
+          ContentKR = "파란 옷을 입은 사람.",
           DialogueId = 710081043,
           GUID = "710081043.0",
           NextDialogue = 71008105,

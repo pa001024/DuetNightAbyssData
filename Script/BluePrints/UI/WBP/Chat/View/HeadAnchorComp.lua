@@ -80,7 +80,8 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
   bNotInvitable = bNotInvitable or 4 == (TeamData and #TeamData.Members)
   local Channel = ChatController:GetModel():GetCurrentChannel()
   local InviteTeamIdx
-  local AccusePlayer = FriendController:GenAccusePlayerFunc(self, self.HeadAnchor, self._MessageContent, function()
+  local ShowNegativeAttitudeOption = Channel == ChatCommon.ChannelDef.InTeam
+  local AccusePlayer = FriendController:GenAccusePlayerFunc(self, self.HeadAnchor, ShowNegativeAttitudeOption, self._MessageContent, function()
     self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
       bHideDialogItem = true,
       DialogItemIndex = 1,

@@ -105,7 +105,7 @@ function WBP_Armory_ModRecommend_C:UpdateEmptyTip()
     self.WS_State:SetActiveWidgetIndex(0)
   else
     self.WS_State:SetActiveWidgetIndex(1)
-    self.Com_Empty.Text_Empty:SetText(GText("UI_ModRecommandData_NoData"))
+    self.Text_Empty:SetText(GText("UI_ModRecommandData_NoData"))
   end
 end
 

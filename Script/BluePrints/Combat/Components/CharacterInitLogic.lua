@@ -189,6 +189,7 @@ function Component:AuthorityPreInitInfo(Info)
   self:ClearSkill()
   self:ClearAttrs()
   self:ServerResourceDisableBattleMount(true)
+  UTalkFunctionLibrary.LeaveHeadUIState(self, EHeadWidgetLocationState.SpecialAction)
 end
 
 function Component:ClientPreInitInfo(Info)
@@ -764,7 +765,9 @@ function Component:OnCharacterReady(Info)
     self:SetPlayerInfo(Info)
   end
   self.InfoForInit.ChangeRole = true
-  self:CheckAndApplyDungeonForbidSkills()
+  if self.IsMainPlayer and self:IsMainPlayer() then
+    self:CheckAndApplyDungeonForbidSkills()
+  end
 end
 
 function Component:CheckAndApplyDungeonForbidSkills()
@@ -772,30 +775,36 @@ function Component:CheckAndApplyDungeonForbidSkills()
   if not self.ForbidAllSkillsByBuff then
     return
   end
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  
+  local function UnforbidAllSkillsByBuff()
+    if self.IsDungeonForbidSkillsByBuff and self:IsDungeonForbidSkillsByBuff() then
+      self:ForbidAllSkillsByBuff(false)
+    end
+  end
+  
   local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
   if GWorld.GameInstance:IsNullDungeonId(DungeonId) then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills NullDungeonId")
-    self:ForbidAllSkillsByBuff(false)
+    UnforbidAllSkillsByBuff()
     return
   end
   local DungeonData = DataMgr.Dungeon[DungeonId]
   if not DungeonData then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not DungeonData")
-    self:ForbidAllSkillsByBuff(false)
+    UnforbidAllSkillsByBuff()
     return
   end
   local FbdRule = DungeonData.FbdRule
   if not FbdRule then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not FbdRule")
-    self:ForbidAllSkillsByBuff(false)
+    UnforbidAllSkillsByBuff()
     return
   end
-  if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill then
+  if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill and self.ForbidAllSkillsByBuff then
     self:ForbidAllSkillsByBuff(true)
   else
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not FbdRule.NoSkill")
-    self:ForbidAllSkillsByBuff(false)
+    UnforbidAllSkillsByBuff()
   end
 end
 

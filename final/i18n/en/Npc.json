@@ -1337,7 +1337,7 @@
       },
       {
         "id": 90260202,
-        "content": "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too. (bright, explanatory)",
+        "content": "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too.",
         "voice": "char/Suyi/vo_topic_02_2",
         "npc": 81504,
         "next": 90260203
@@ -5579,7 +5579,7 @@
       },
       {
         "id": 90260202,
-        "content": "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too. (bright, explanatory)",
+        "content": "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too.",
         "voice": "char/Suyi/vo_topic_02_2",
         "npc": 81504,
         "next": 90260203
@@ -37086,7 +37086,7 @@
       },
       {
         "id": 51169504,
-        "content": "Me? I'm a newsboy, obviously! From Lord Argent’s decrees to the neighbours' squabbles, there ain't a thing us paper lads don't know!",
+        "content": "Me? I'm a newsboy, obviously! From Lord Argent's decrees to the neighbours' squabbles, there ain't a thing us paper lads don't know!",
         "npc": 701198,
         "next": 51169505
       },
@@ -37690,7 +37690,7 @@
     "talks": [
       {
         "id": 51170001,
-        "content": "My wife was just walking down the street, minding her own business. Then this bloke comes barreling along, not looking where he's going, and rams his cart straight into her.",
+        "content": "My mum was just walking down the street, minding her own business. Then this bloke comes barreling along, not looking where he's going, and rams his cart straight into her.",
         "npc": 701202,
         "next": 51170002
       },
@@ -37718,7 +37718,7 @@
       },
       {
         "id": 51170006,
-        "content": "Gentlemen, please, settle down. First things first: how is your wife doing? Has she received any medical attention?",
+        "content": "Gentlemen, please, settle down. First things first: how is your mother doing? Has she received any medical attention?",
         "next": 51170007
       },
       {
@@ -44831,7 +44831,7 @@
       },
       {
         "id": 90260202,
-        "content": "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too. (bright, explanatory)",
+        "content": "I got lucky — my teacher was my aunt, and she was way up in the sect. So yeah, that still bumps me up too.",
         "voice": "char/Suyi/vo_topic_02_2",
         "npc": 81504,
         "next": 90260203

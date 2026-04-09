@@ -3264,13 +3264,13 @@
         "cd": 1,
         "字段": [
           {
-            "名称": "[Artificer Energy] consumed per second during [Sunward]",
+            "名称": "[Artificer Energy] consumed during [Sunward]",
             "值": 1,
             "值2": 0.2,
             "格式": "{}/{}s"
           },
           {
-            "名称": "[Artificer Energy] consumed per second during [Heavenbound]",
+            "名称": "[Artificer Energy] consumed during [Heavenbound]",
             "值": 1,
             "值2": 0.2,
             "格式": "{}/{}s"
@@ -3368,7 +3368,7 @@
         "id": 150402,
         "名称": "Starfall Mode",
         "类型": "Buff",
-        "描述": "Activates [Starfall Mode] by consuming all Sanity with Fengshi Type Ⅲ. Gain 1 stack of [Soar] for every 40 Sanity consumed, up to 10 stacks. Gain [Artificer Powder] based on the maximum ammo capacity of the equipped ranged weapon, up to 300 rounds.\nWhile in [Starfall Mode], weapons become unavailable, and Su Yi becomes immune to Hitstun. Recasting the skill deactivates [Starfall Mode].\nWhile in this mode, melee attacks are replaced with [Sword Aflash], and ranged attacks are replaced with [Stars Ashower].",
+        "描述": "Activates [Starfall Mode] by consuming all Sanity with Fengshi Type Ⅲ. Gain 1 stack of [Soar] for every 30 Sanity consumed, up to 10 stacks. Gain [Artificer Powder] based on the maximum ammo capacity of the equipped ranged weapon, up to 300 rounds.\nWhile in [Starfall Mode], weapons become unavailable, and Su Yi becomes immune to Hitstun. Recasting the skill deactivates [Starfall Mode].\nWhile in this mode, melee attacks are replaced with [Sword Aflash], and ranged attacks are replaced with [Stars Ashower].",
         "icon": "Suyi02_On",
         "cd": 2,
         "实体": [
@@ -3553,7 +3553,7 @@
         "术语解释": {
           "Soar": "Gains Morale Boost.",
           "Sword Aflash": "Each attack consumes 5 [Artificer Powder] to unleash a massive blade of light, dealing Lumino DMG to enemies in its path.",
-          "Stars Ashower": "Each attack consumes 1 [Artificer Powder] to fire a projectile that deals AoE Lumino DMG on hit.\nWhen equipped with Demon Wedge [Fengshi Type Ⅲ: Tracking Mode], this attack instead fires homing projectiles that seek out random enemies, dealing AoE Lumino DMG every 0.1s along their path."
+          "Stars Ashower": "Each attack consumes [Artificer Powder] ×1 to fire a projectile that deals AoE Lumino DMG on hit.\nWhen equipped with Demon Wedge [Fengshi Type Ⅲ: Tracking Mode], this attack instead fires homing projectiles that seek out random enemies, dealing AoE Lumino DMG every 0.1s along their path."
         },
         "子技能": [
           {

@@ -23,6 +23,13 @@ function NpcHeadUISubsystem:OnDeinitialize()
   end
 end
 
+function NpcHeadUISubsystem:GetHeadWidgetComponent(Character)
+  if Character.IsMainPlayer and Character:IsMainPlayer() and not Character.HeadWidgetComponent then
+    Character:InitHeadWidgetComponent()
+  end
+  return self.Overridden.GetHeadWidgetComponent(self, Character)
+end
+
 function NpcHeadUISubsystem:OnShowPlayerEmoji(Uid, EmojiPath)
   local EMGameState = UE4.UGameplayStatics.GetGameState(self)
   local IsInDungeon = EMGameState and EMGameState:IsInDungeon()

@@ -5,6 +5,10 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("TextMapWildcard", {
+  AFDayEvent_TransformItem_Found = {
+    TextMapId = "AFDayEvent_TransformItem_Found",
+    WildcardClassification = "Story"
+  },
   Abyss_Battle_RemainTime = {
     TextMapId = "Abyss_Battle_RemainTime",
     WildcardClassification = "Story"
@@ -663,6 +667,10 @@ return ReadOnly("TextMapWildcard", {
   },
   RLArchive_ID = {
     TextMapId = "RLArchive_ID",
+    WildcardClassification = "Story"
+  },
+  RaidDungeon_Max_Point = {
+    TextMapId = "RaidDungeon_Max_Point",
     WildcardClassification = "Story"
   },
   RegionReputation_EntrustContent_14 = {

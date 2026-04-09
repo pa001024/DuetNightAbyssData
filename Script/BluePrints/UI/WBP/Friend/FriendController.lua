@@ -542,10 +542,15 @@ function M:GenAddBlackListFunc(Widget, HeadAnchor)
   end
 end
 
-function M:GenAccusePlayerFunc(Widget, HeadAnchor, ...)
-  local MsgContent, HideItemTips, OnTextChange, OnTextComposing, OnEditTextFocusReceived = ...
+function M:GetAllowNegativeAttitude(ShowNegativeAttitudeOption)
   local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
   local IsInHardBoss = GWorld:GetAvatar():IsInHardBoss()
+  return (IsInDungeon or IsInHardBoss) and true == ShowNegativeAttitudeOption
+end
+
+function M:GenAccusePlayerFunc(Widget, HeadAnchor, ShowNegativeAttitudeOption, ...)
+  local MsgContent, HideItemTips, OnTextChange, OnTextComposing, OnEditTextFocusReceived = ...
+  local AllowNegativeAttitude = self:GetAllowNegativeAttitude(ShowNegativeAttitudeOption)
   return function(Content, AvatarInfo)
     Content.Text = GText("UI_Chat_Accuse")
     
@@ -571,7 +576,7 @@ function M:GenAccusePlayerFunc(Widget, HeadAnchor, ...)
         }
       }
       Params.InGameOnly = Widget.InGameOnly
-      Params.AllowNegativeAttitude = IsInDungeon or IsInHardBoss
+      Params.AllowNegativeAttitude = AllowNegativeAttitude
       ChatController:OpenChatReportDialog(Params)
       HeadAnchor:Close()
     end

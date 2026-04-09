@@ -121867,7 +121867,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12046608] = {
           Content = "可神明真的能永远庇护华胥吗？烛阴之灾横生，太皓无力阻止，难道不是昭示着大风九章正在衰弱？",
-          ContentJP = "しかし、神は果たして、この華胥をいつまでも守ってくれるのかしら。燭陰の禍は太皓にもどうすることもできないでしょう。大風九章も日ごとに弱くなってるよ。",
+          ContentJP = "けれど――もしその加護が絶えたらどうする？どう世界を見極め、どう生き延びればいいの？どう抗い、善悪を定め、秩序を築き直すの？",
           DialogueId = 12046608,
           GUID = "1E284CA0",
           NextDialogue = 12046613,
@@ -121968,7 +121968,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12046705] = {
           Content = "人性没有你想的那么脆弱。当不再仰赖神明，人类便会重新学习如何用自己的双手应对秽蚀、战争、伤害、和罪恶。",
-          ContentJP = "人は、あなたが思うほど弱くはない。神の加護を失った彼らは必ず、再び学ぶでしょう。穢蝕に抗う術を。戦いの痛みを。そして、罪と向き合う覚悟を。",
+          ContentJP = "人は、あなたが思うほど弱くはない。彼らは必ず、再び学ぶでしょう。穢蝕に抗う術を。戦いの痛みを。そして、罪と向き合う覚悟を。",
           DialogueId = 12046705,
           GUID = "1E285C8A",
           NextDialogue = 12046708,
@@ -125965,7 +125965,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12049223] = {
           Content = "华胥子民将怀勇毅之心，行公正之事，无畏罪恶，亦不惧怕灾难。他们……将成为自己的主人。",
-          ContentJP = "皆が勇敢な心を抱き、公正を行い、悪にも災いにも屈しない。そうして……自らが主になれる。",
+          ContentJP = "皆が自由な心を抱き、公正を行い、悪にも災いにも屈しない。そうして……自らが主になれる。",
           DialogueId = 12049223,
           GUID = "1E29F9A6",
           VoiceName = "voice/$Locale$/story/1204/120492/1E29F9A6"
@@ -133315,7 +133315,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12062637] = {
           Content = "这种问题，你明明可以不用问的……",
-          ContentJP = "わざわざ言わないで……",
+          ContentJP = "わざわざ聞かなくてもいいのに……",
           DialogueId = 12062637,
           GUID = "1E329262",
           SpeakNpcId = 250003,
@@ -134132,7 +134132,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12062901] = {
           Content = "你好，请问有人在家吗……？",
-          ContentJP = "あの……どなたか、ご在宅でしょうか……？（ノック）",
+          ContentJP = "あの……どなたか、ご在宅でしょうか……？",
           DialogueId = 12062901,
           GUID = "1E32BDB2",
           NextDialogue = 12062902,
@@ -134178,7 +134178,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12062905] = {
           Content = "……来人啊……有谁在吗…………",
-          ContentJP = "……誰か……誰かいませんか…………（かすれた弱い声）",
+          ContentJP = "……誰か……誰かいませんか…………",
           DialogueId = 12062905,
           GUID = "1E32BE5A",
           NextDialogue = 12062906,
@@ -134375,7 +134375,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12063106] = {
           Content = "这里的地宫是机枢派的旧址，与偃隐宫为同一前辈设计。比起外力破解，找到始作俑者会更加迅速。",
-          ContentJP = "ここは<Default note=\"text:きすうは\">機枢派</>の旧跡、<Default note=\"text:えんいんきゅう\">偃隠宮</>と同じ設計者によるもの。外部から無理やりこじ開けるより――設計を知る者を探した方が早いわ。（考え込む）",
+          ContentJP = "ここは<Default note=\"text:きすうは\">機枢派</>の旧跡、<Default note=\"text:えんいんきゅう\">偃隠宮</>と同じ設計者によるもの。外部から無理やりこじ開けるより――設計を知る者を探した方が早いわ。",
           DialogueId = 12063106,
           GUID = "1E32DF54",
           NextDialogue = 12063107,
@@ -134590,7 +134590,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12063218] = {
           Content = "…………",
-          ContentJP = "…………（目をそらす）",
+          ContentJP = "…………",
           DialogueId = 12063218,
           GUID = "1E32F1B4",
           NextDialogue = 12063219,
@@ -233188,7 +233188,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71001301] = {
           Content = "依贝蕾所说，这里就是我们曾经的家，可我却一点印象都没有……",
-          ContentJP = "ベレは、昔ここに{性别:僕|私}たちが住んでいたというけれど、まったく覚えていない……",
+          ContentJP = "ベレは、昔ここに{性别:僕|私}たちが住んでいたというけれど、まったく覚えていない……\n",
           DialogueId = 71001301,
           GUID = "B1BE8AF2",
           NextDialogue = 71001302,
@@ -233716,7 +233716,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002103] = {
           Content = "你好，这些是凯文托我转交的物资。",
-          ContentJP = "こんにちは。ケビンから預かった物資です。",
+          ContentJP = "こんにちは。ケビンから預かった物資です。\n",
           DialogueId = 71002103,
           GUID = "B1BF0E86",
           NextDialogue = 71002104,
@@ -233738,7 +233738,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002106] = {
           Content = "啊？？我上个厕所的工夫，大伙怎么打起来了！",
-          ContentJP = "あれ？トイレ行ってる間に何してんだよ！",
+          ContentJP = "あれ？トイレ行ってる間に何してんだよ！\n",
           DialogueId = 71002106,
           GUID = "B1BF0F04",
           NextDialogue = 71002107,
@@ -233746,7 +233746,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71002107] = {
           Content = "他们先动手的。",
-          ContentJP = "あっちが先に手を出した{性别:んだよ|の}。",
+          ContentJP = "あっちが先に手を出した{性别:んだよ|の}。\n",
           DialogueId = 71002107,
           GUID = "B1BF0F2E",
           NextDialogue = 71002108,
@@ -236969,6 +236969,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007401] = {
           Content = "（应天尉来袭，击退他们！）",
+          ContentJP = "（応天尉襲来、撃退しろ！）",
           DialogueId = 71007401,
           GUID = "B1C273BA",
           SpeakNpcId = 800006
@@ -237108,6 +237109,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007702] = {
           Content = "请问你有在附近看到我掉的箱子吗？就普普通通的一个箱子，我找了半天都没找到。",
+          ContentJP = "すみません、この辺で私が落とした箱を見かけませんでしたか？ただの何の変哲もない箱なんです。ずっと探しているんですけど……",
           DialogueId = 71007702,
           GUID = "B1C2A51C",
           NextOptions = {
@@ -237119,18 +237121,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007703] = {
           Content = "谢谢，我在上面这块再找找，麻烦你去下面看看吧。",
+          ContentJP = "ありがとうございます。じゃあ、私はこの上のあたりを探してみます。そちらは下のほうを探してもらえますか？",
           DialogueId = 71007703,
           GUID = "B1C2A546",
           SpeakNpcId = 818080
         },
         [71007704] = {
           Content = "咦，看你在找什么东西的样子，是这些箱子吗？",
+          ContentJP = "おや？何か探してるみたいだね。もしかして、この箱のどれかな？",
           DialogueId = 71007704,
           GUID = "B1C2A570",
           SpeakNpcId = 818081
         },
         [71007705] = {
           Content = "我在勘探河水数据的时候捡到了这几个箱子，你看看有你在找的吗？",
+          ContentJP = "川を調査する途中で拾ったんだ。{nickname}のがこの中にあるか、見てみなよ。",
           DialogueId = 71007705,
           GUID = "B1C2A59A",
           NextOptions = {
@@ -237143,48 +237148,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007706] = {
           Content = "好，那你就拿去吧。",
-          ContentJP = "ありがとう、それが{性别:僕|私}の落とした宝箱だ",
+          ContentJP = "わかった。じゃあ、持ってって。",
           DialogueId = 71007706,
           GUID = "B1C2A5C4",
           SpeakNpcId = 818081
         },
         [71007707] = {
           Content = "没错没错，就是这个，太谢谢你了。",
-          ContentJP = "これが報酬だ。",
+          ContentJP = "これです！本当にありがとうございます。",
           DialogueId = 71007707,
           GUID = "B1C2A5EE",
           SpeakNpcId = 818080
         },
         [71007708] = {
           Content = "这明显不是我掉的普通箱子，不过还是谢谢你了。",
-          ContentJP = "この箱は豪華すぎる。絶対、{性别:僕|私}のじゃない",
+          ContentJP = "私のものではありませんが、それでもありがとうございます。",
           DialogueId = 71007708,
           GUID = "B1C2A618",
           SpeakNpcId = 818080
         },
         [71007710] = {
           Content = "哇，没想到你找到了这么多箱子呀，那我就先拿走我掉的普通箱子了哈，谢谢你！",
-          ContentJP = "うわ……こんなに見つけてきたのか",
+          ContentJP = "わっ、本当にこんなにたくさんのを見つけてきたんですか？じゃあ、自分のだけもらっていきますね。ありがとうございます！",
           DialogueId = 71007710,
           GUID = "B1C2A66C",
           SpeakNpcId = 818080
         },
         [71007712] = {
           Content = "（附近没看到什么箱子，再去其他地方找找。）",
+          ContentJP = "（箱は見当たらない。ほかを探したほうがよさそうだ。）",
           DialogueId = 71007712,
           GUID = "B1C2A6C0",
           SpeakNpcId = 800006
         },
         [71007801] = {
           Content = "香……点燃……请……",
-          ContentJP = "そこの月狩り人、ちょっと来てくれないか",
+          ContentJP = "ドウカ……ヒヲ…",
           DialogueId = 71007801,
           GUID = "B1C2B55A",
           SpeakNpcId = 818082
         },
         [71007802] = {
           Content = "那边……请……点燃……谢谢……",
-          ContentJP = "新しい香を開発したんだ。潜在意識を呼び覚ます効果がある。少し協力してくれないか？見えたものを教えてほしい。",
+          ContentJP = "ソコノ…。ヒヲツケテ……",
           DialogueId = 71007802,
           GUID = "B1C2B584",
           NextOptions = {
@@ -237196,14 +237202,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007803] = {
           Content = "焚香……好……",
-          ContentJP = "よし、あそこの香炉に火をつけてくれ",
+          ContentJP = "ヨカッタ…。",
           DialogueId = 71007803,
           GUID = "B1C2B5AE",
           SpeakNpcId = 818082
         },
         [71007805] = {
           Content = "（点燃香炉之后，四周顿时弥漫起了浓厚的烟雾，透过这些烟雾，你似乎看到了什么东西？）",
-          ContentJP = "（胸の内にひとつの問いが浮かぶ──今、あなたが最も願うことは？）",
+          ContentJP = "（香炉に火をつけると、濃い煙があたりに立ちこめた。霞む視界の向こうに、何かが見える……）",
           DialogueId = 71007805,
           GUID = "B1C2B602",
           NextOptions = {
@@ -237216,49 +237222,49 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007806] = {
           Content = "（朦胧的雾气中，你看到了数之不尽的宝箱，打开它们吧。）",
-          ContentJP = "（宝箱が周囲に現れた）",
+          ContentJP = "（渦巻く煙の中に、無数の宝箱が見える。さあ、開けてみよう。）",
           DialogueId = 71007806,
           GUID = "B1C2B62C",
           SpeakNpcId = 800006
         },
         [71007807] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentJP = "（ムユウセイに今の出来事を報告しよう）",
+          ContentJP = "（煙が晴れると、見えていたものはすべて消え去った。ひとまず戻って、今のが何だったのかムユウセイに聞いてみよう。）",
           DialogueId = 71007807,
           GUID = "B1C2B656",
           SpeakNpcId = 100001
         },
         [71007808] = {
           Content = "焚香……再见……",
-          ContentJP = "なるほど……そう見えたのか。協力、感謝するよ",
+          ContentJP = "サヨナラ…。",
           DialogueId = 71007808,
           GUID = "B1C2B680",
           SpeakNpcId = 818082
         },
         [71007809] = {
           Content = "（朦胧的雾气中，你看到了大量敌人，击败它们吧。）",
-          ContentJP = "（敵が周囲に現れた）",
+          ContentJP = "（渦巻く煙の中に、敵の群れが見える。倒してしまおう。）",
           DialogueId = 71007809,
           GUID = "B1C2B6AA",
           SpeakNpcId = 800006
         },
         [71007810] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentJP = "（ムユウセイに今の出来事を報告しよう）",
+          ContentJP = "（煙が晴れると、見えていたものはすべて消え去った。ひとまず戻って、今のが何だったのかムユウセイに聞いてみよう。）",
           DialogueId = 71007810,
           GUID = "B1C2B6D4",
           SpeakNpcId = 100001
         },
         [71007811] = {
           Content = "焚香……再见……",
-          ContentJP = "なるほど……そう見えたのか。協力、感謝するよ",
+          ContentJP = "サヨナラ…。",
           DialogueId = 71007811,
           GUID = "B1C2B6FE",
           SpeakNpcId = 818082
         },
         [71007812] = {
           Content = "（朦胧的雾气中，你看到了贝蕾妮卡的身影。）",
-          ContentJP = "（ベレが目の前に現れた）",
+          ContentJP = "（渦巻く煙の中に、一人の姿が見える――ベレニカだ。）",
           DialogueId = 71007812,
           GUID = "B1C2B728",
           NextDialogue = 71007813,
@@ -237266,40 +237272,42 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007813] = {
           Content = "（伸手触碰，贝蕾的身影开始变得模糊不清。你知道，她只是焚香之后出现的幻影。）",
-          ContentJP = "（ベレとの会話・仮置き）",
+          ContentJP = "（手を伸ばして触れようとするが、その姿は揺らいでいる。彼女が香の生み出した幻にすぎないことを、あなたは理解している。）",
           DialogueId = 71007813,
           GUID = "B1C2B752",
           SpeakNpcId = 800006
         },
         [71007814] = {
           Content = "（烟雾散去，方才见到的一切也随之消散。回去问问无由生是怎么回事吧。）",
-          ContentJP = "（ムユウセイに今の出来事を報告しよう）",
+          ContentJP = "（煙が晴れると、見えていたものはすべて消え去った。ひとまず戻って、今のが何だったのかムユウセイに聞いてみよう。）",
           DialogueId = 71007814,
           GUID = "B1C2B77C",
           SpeakNpcId = 100001
         },
         [71007815] = {
           Content = "焚香……再见……",
-          ContentJP = "なるほど……そう見えたのか。協力、感謝するよ",
+          ContentJP = "サヨナラ…。",
           DialogueId = 71007815,
           GUID = "B1C2B7A6",
           SpeakNpcId = 818082
         },
         [71007816] = {
           Content = "（一个香炉不知何时出现在了你的背后，这只无由生看起来很希望你能点燃它。）",
+          ContentJP = "（あなたの背後に香炉が現れた。このムユウセイは、どうしてもあなたに火をつけてほしいようだ。）",
           DialogueId = 71007816,
           GUID = "B1C2B7A7",
           SpeakNpcId = 800006
         },
         [71007901] = {
           Content = "救救我啊，我还没找到爸爸埋的宝藏，我不要死在这里哇……",
+          ContentJP = "助けて…こんなところで…死にたくない……父さんが残したお宝、まだ見つけてないんだ……",
           DialogueId = 71007901,
           GUID = "B1C2C5C2",
           SpeakNpcId = 818083
         },
         [71007905] = {
           Content = "谢谢你救了我，但我没什么好东西能够报答你……对了，我这有一张爸爸留下的藏宝图，要是你能找到宝藏，它们就归你了！",
-          ContentJP = "（彼の無邪気な顔を見て、あなたは──）",
+          ContentJP = "助けてくれてありがとう！でも、あげられるようないいものは何もなくて……あっ、でもパパが残してくれた宝の地図ならあるよ。もしお宝を見つけたら、それは全部あげる！",
           DialogueId = 71007905,
           GUID = "B1C2C66A",
           NextOptions = {
@@ -237310,30 +237318,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71007906] = {
           Content = "好厉害，一眼就看出来了！那快去把它挖出来吧。",
+          ContentJP = "もう分かったの！？すごい！じゃあ、掘ってみてよ！",
           DialogueId = 71007906,
           GUID = "B1C2C694",
           SpeakNpcId = 818083
         },
         [71007907] = {
           Content = "好，按照约定，这些宝藏从现在开始就归你啦，谢谢你刚才救了我。",
+          ContentJP = "うん、言った通り、そのお宝はもう君のものだよ。助けてくれて、本当にありがとう。",
           DialogueId = 71007907,
           GUID = "B1C2C6BE",
           SpeakNpcId = 818083
         },
         [71007908] = {
           Content = "这怎么好意思呀……那，那我给你拿点其他小礼物吧，谢谢你刚才救了我。",
+          ContentJP = "えっ、そんな……じゃあ、その代わりに何か別のお礼をするね。助けてくれて本当にありがとう！",
           DialogueId = 71007908,
           GUID = "B1C2C6E8",
           SpeakNpcId = 818083
         },
         [71008001] = {
           Content = "那边那位外乡人，对对就是叫你呢，能不能来帮我个忙。",
+          ContentJP = "おい、そこの異邦人――そうだ、お前さんだ！ちょっと手を貸してくれねえか？",
           DialogueId = 71008001,
           GUID = "B1C2D62A",
           SpeakNpcId = 818084
         },
         [71008002] = {
           Content = "我店里有个伙计最近总是偷偷跑出去跟隔壁店主碰面，我怀疑是想对我的店动什么手脚。能帮我去找点证据吗？",
+          ContentJP = "うちの店員が、こそこそ隣の店の店主に会いに行ってるんだ。どうも何か企んでやがるらしい。証拠をつかむのを手伝ってくれねえか？",
           DialogueId = 71008002,
           GUID = "B1C2D654",
           NextOptions = {
@@ -237344,12 +237357,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008003] = {
           Content = "好，他们应该就在附近，全交给你了，我就不过去打草惊蛇了。",
+          ContentJP = "よし。あいつら、この辺にいるはずだ。ここはお前さんに任せる――俺は姿を見せねえほうがよさそうだからな。",
           DialogueId = 71008003,
           GUID = "B1C2D67E",
           SpeakNpcId = 818084
         },
         [71008004] = {
           Content = "只是把秘方拿出来给我看一眼而已，不会有什么风险的。",
+          ContentJP = "ほんの少しレシピを見せてもらうだけだ。別に害はないだろう？",
           DialogueId = 71008004,
           GUID = "B1C2D6A8",
           NextDialogue = 71008005,
@@ -237357,6 +237372,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008005] = {
           Content = "我……",
+          ContentJP = "そ…その……",
           DialogueId = 71008005,
           GUID = "B1C2D6D2",
           NextDialogue = 71008006,
@@ -237364,6 +237380,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008006] = {
           Content = "事成之后分你三成，怎么样？",
+          ContentJP = "終わったら取り分を三割やる、ってのはどうだ？悪くない話だろう？",
           DialogueId = 71008006,
           GUID = "B1C2D6FC",
           NextDialogue = 71008007,
@@ -237371,6 +237388,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008007] = {
           Content = "……",
+          ContentJP = "……",
           DialogueId = 71008007,
           GUID = "B1C2D726",
           NextDialogue = 71008008,
@@ -237378,24 +237396,28 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008008] = {
           Content = "还不行，那就干脆……等等，你是不是听到什么了，过来过来。",
+          ContentJP = "なんだ、まだ足りないか？なら――待て……そこの君、何か聞こえないか？こっちへ来い。",
           DialogueId = 71008008,
           GUID = "B1C2D750",
           SpeakNpcId = 818086
         },
         [71008009] = {
           Content = "这笔钱你拿着，刚才我们俩的对话你就当没听到如何。",
+          ContentJP = "ほら、これを持っていけ。いいな、今の話は聞かなかったことにしろ。",
           DialogueId = 71008009,
           GUID = "B1C2D77A",
           SpeakNpcId = 818086
         },
         [71008010] = {
           Content = "（男子给你的这笔钱无疑就是他们在酝酿什么阴谋的证据，现在可以直接回去交差，揭露二人的阴谋，或是藏在附近，继续听听这二人的对话。）",
+          ContentJP = "（この金は、奴らの企みを示す決定的な証拠だ。今すぐ戻って二人を暴くこともできるし、もう少しここに残って、ほかに何を口走るか確かめることもできる。）",
           DialogueId = 71008010,
           GUID = "B1C2D7A4",
           SpeakNpcId = 100001
         },
         [71008011] = {
           Content = "四成，给个痛快话，到底行不行啊，拖了我好几天了。",
+          ContentJP = "四割だ。はっきり言え、乗るのか乗らないのか。もう何日も引っぱりやがって。",
           DialogueId = 71008011,
           GUID = "B1C2D7CE",
           NextDialogue = 71008012,
@@ -237403,6 +237425,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008012] = {
           Content = "对，对不起。店主于我有恩，我不能帮你做这种事。",
+          ContentJP = "す……すみません。店主にはずっと世話になってきたんです。こんなこと、できません……",
           DialogueId = 71008012,
           GUID = "B1C2D7F8",
           NextDialogue = 71008013,
@@ -237410,30 +237433,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008013] = {
           Content = "（你成功躲过二人的注意，了解到了伙计真正的选择，现在回去向店主揭露真相吧。）",
+          ContentJP = "（うまく身を隠したまま、店員が本当はどういう選択をしたのかを知ることができた。さあ、戻って店主に真実を伝えよう。）",
           DialogueId = 71008013,
           GUID = "B1C2D822",
           SpeakNpcId = 100001
         },
         [71008014] = {
           Content = "哈哈，果然是我想得那样！等我家伙计回来我就让他滚蛋。",
+          ContentJP = "はっ、やっぱりな。あいつが戻ってきたら、もうクビだ。",
           DialogueId = 71008014,
           GUID = "B1C2D84C",
           SpeakNpcId = 818084
         },
         [71008015] = {
           Content = "原来是这样，差点错怪我家伙计了，谢谢你啊。",
+          ContentJP = "そういうことだったのか…危うく、あいつを何の証拠もなく責めるところだった。助かったよ。",
           DialogueId = 71008015,
           GUID = "B1C2D876",
           SpeakNpcId = 818084
         },
         [71008101] = {
           Content = "今天就差最后一圈了，大家再坚持一下！",
+          ContentJP = "あと一周よ、みんな！踏ん張りなさい！",
           DialogueId = 71008101,
           GUID = "B1C2E692",
           SpeakNpcId = 818087
         },
         [71008102] = {
           Content = "要想成为织星客，脚力也是很重要的！你要不要跟我一起监督他们跑完今天的最后一圈呀？",
+          ContentJP = "星織人にも、強い足腰は必要なんだから！最後の一周、あの子たちを見ててくれない？",
           DialogueId = 71008102,
           GUID = "B1C2E6BC",
           NextOptions = {
@@ -237444,12 +237472,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008103] = {
           Content = "好，你来选一个人监督就好，选好了告诉我哦。",
+          ContentJP = "よし！誰を見るか一人決めて、決まったらあたしに知らせなさい。",
           DialogueId = 71008103,
           GUID = "B1C2E6E6",
           SpeakNpcId = 818087
         },
         [71008104] = {
           Content = "怎么样，想好要监督谁了吗？",
+          ContentJP = "で、もう決めたの？",
           DialogueId = 71008104,
           GUID = "B1C2E710",
           NextOptions = {
@@ -237461,12 +237491,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008105] = {
           Content = "没问题，我会好好盯着剩下两个人的！",
+          ContentJP = "じゃあ、残りの二人はあたしが見てるね！",
           DialogueId = 71008105,
           GUID = "B1C2E73A",
           SpeakNpcId = 818087
         },
         [71008106] = {
           Content = "最后冲刺了！加油加油，不可以慢慢走哦！",
+          ContentJP = "ラストスパートよ！ほら、走って走って！歩くのは禁止！",
           DialogueId = 71008106,
           Duration = 1,
           GUID = "B1C2E7E2",
@@ -237474,12 +237506,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008110] = {
           Content = "有你在一边盯着，他虽然跑得很慢，但还是坚持到最后了，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentJP = "あなたが見ててくれたおかげで、あの子すごく頑張ってたわよ。ものすごい速さで走ってたね！今日は本当に助かったわ。はい、これ、お礼。",
           DialogueId = 71008110,
           GUID = "B1C2E80C",
           SpeakNpcId = 818087
         },
         [71008111] = {
           Content = "有你在一边盯着，他居然能跑这么快呀，真厉害！今天真是谢谢你啦，这是我们的一点小小心意。",
+          ContentJP = "あなたが見ててくれたおかげで、あの子すごく頑張ってたわよ。遅くても、ちゃんと最後まで走りきったんだから！今日は本当に助かったわ。はい、これ、お礼。",
           DialogueId = 71008111,
           GUID = "B1C2E836",
           SpeakNpcId = 818087
@@ -237535,18 +237569,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [71008401] = {
           Content = "（游荡的秽兽徘徊在附近，先击退它们，再去解救魔灵吧。）",
+          ContentJP = "（穢獣が彷徨っている。やつらを退治してから、ジェネモンの救出に移ろう。）",
           DialogueId = 71008401,
           GUID = "B1C317CA",
           SpeakNpcId = 800006
         },
         [71008402] = {
           Content = "（争斗的声响引来了更多秽兽。）",
+          ContentJP = "（争いの音に、さらに多くの穢獣が引き寄せられてしまった。）",
           DialogueId = 71008402,
           GUID = "B1C317F4",
           SpeakNpcId = 800006
         },
         [71008403] = {
           Content = "（这里暂时安全了，趁现在解救魔灵吧。）",
+          ContentJP = "（ここはひとまず安全だ。今のうちに、ジェネモンを救出しよう。）",
           DialogueId = 71008403,
           GUID = "B1C3181E",
           SpeakNpcId = 800006
@@ -285278,7 +285315,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80230251] = {
           Content = "你们知道吗？听说那个止流啊，从前也受过大风九章的冤屈。",
-          ContentJP = "……知ってる？あのシリュウって女、<Default note=\"text:たいふうきゅうしょう\">大風九章</>の誤審で裁かれたことがあるらしいよ。",
+          ContentJP = "……知ってるか？あのシリュウって女、<Default note=\"text:たいふうきゅうしょう\">大風九章</>の誤審で裁かれたことがあるらしいぞ。",
           DialogueId = 80230251,
           GUID = "C8D9178E",
           NextDialogue = 80230252,
@@ -285371,7 +285408,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80230306] = {
           Content = "从很久之前，我就已明确此心志向，不会再随外物而动。",
-          ContentJP = "ずっと以前より、進む道は定まっています。もはや、外のものに心を揺らされることはありません。",
+          ContentJP = "ずっと以前より、進む道は定まっています。もはや、外のものに心を揺さぶられることはありません。",
           DialogueId = 80230306,
           GUID = "C8D92094",
           NextDialogue = 80230307,
@@ -285527,7 +285564,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80230324] = {
           Content = "（是的……是的……你不需要去铭记。因为遗忘明显更加甜美。）",
-          ContentJP = "（そうだ……そうだ……覚えている必要などない。忘却こそ、何より楽にしてくれる。）",
+          ContentJP = "（そうだ……そうだ……覚えている必要などない。忘却こそが、何より楽にしてくれる。）",
           DialogueId = 80230324,
           GUID = "C8D92388",
           NextDialogue = 80230325,
@@ -287474,7 +287511,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80250108] = {
           Content = "长话短说，我得罪人了，你得帮我。",
-          ContentJP = "手短に言う。ちょっとやからしちゃったんだ。助けてくんねえか？（切迫）",
+          ContentJP = "手短に言う。ちょっとやからしちゃったんだ。助けてくんねえか？",
           DialogueId = 80250108,
           GUID = "14170B48",
           NextDialogue = 80250109,
@@ -287672,7 +287709,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80250130] = {
           Content = "你，或者你的弟妹。你必须做出选择。",
-          ContentJP = "あなたか、家族か。どちらを残るか、決めなさい。",
+          ContentJP = "あなたか、家族か。どちらが残るか、決めなさい。",
           DialogueId = 80250130,
           GUID = "14170EE4",
           NextDialogue = 80250131,
@@ -288398,7 +288435,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80250308] = {
           Content = "但所谓的“告别昨日”，不过是酒醒后的一时愧疚作祟罢了。等到漫长的白天过完，这些人又会一头扎进酩酊大醉中……喊口号有什么用呢？",
-          ContentJP = "でもね、昨日と別れなんてできやしないのよ。残るのは酒が抜けた一瞬の罪悪感だけ。日が暮れれば、どうせまた酔い潰れて同じとこに戻ってくるわ。言葉だけで何か変わると思う？",
+          ContentJP = "でもね、昨日と別れることなんてできやしないのよ。残るのは酒が抜けたあとの後悔だけ。日が暮れれば、どうせまた酔い潰れて同じとこに戻ってくるわ。言葉だけで何か変わると思う？",
           DialogueId = 80250308,
           GUID = "14172C18",
           NextDialogue = 80250309,
@@ -288470,7 +288507,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80250316] = {
           Content = "…………",
-          ContentJP = "…………（深呼吸、息を止める）",
+          ContentJP = "…………",
           DialogueId = 80250316,
           GUID = "14172D68",
           NextDialogue = 80250317,
@@ -288713,7 +288750,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [80250343] = {
           Content = "……嗐，这一长串描述，听着就不便宜。",
-          ContentJP = "はぁ～、その説明だけ、もう高いのがわかるわ。",
+          ContentJP = "はぁ～、その説明だけで、もう高いのがわかるわ。",
           DialogueId = 80250343,
           GUID = "141731D6",
           NextDialogue = 80250344,
@@ -303023,7 +303060,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077021] = {
           Content = "（帮忙寻找。）",
-          ContentJP = "（引き受ける）",
+          ContentJP = "（探してあげる）",
           DialogueId = 710077021,
           GUID = "710077021.0",
           NextDialogue = 71007703,
@@ -303038,7 +303075,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077051] = {
           Content = "我在找这个普通箱子。",
-          ContentJP = "普通の宝箱",
+          ContentJP = "この普通の箱だ",
           DialogueId = 710077051,
           GUID = "710077051.0",
           NextDialogue = 71007706,
@@ -303046,7 +303083,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077052] = {
           Content = "我在找这个看起来稍微华丽一点的箱子。",
-          ContentJP = "中級の宝箱",
+          ContentJP = "このちょっとだけ立派な箱だ",
           DialogueId = 710077052,
           GUID = "710077052.0",
           NextDialogue = 71007706,
@@ -303054,7 +303091,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077053] = {
           Content = "我在找这个最华丽的箱子。",
-          ContentJP = "上級の宝箱",
+          ContentJP = "このいちばん豪華な箱だ",
           DialogueId = 710077053,
           GUID = "710077053.0",
           NextDialogue = 71007706,
@@ -303062,7 +303099,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710077054] = {
           Content = "这几个箱子都是我的。",
-          ContentJP = "全部欲しい",
+          ContentJP = "全部だ。",
           DialogueId = 710077054,
           GUID = "710077054.0",
           NextDialogue = 71007706,
@@ -303085,28 +303122,28 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710078051] = {
           Content = "宝箱。",
-          ContentJP = "（宝箱を好きなだけ開けたい）",
+          ContentJP = "宝箱",
           DialogueId = 710078051,
           GUID = "710078051.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
         },
         [710078052] = {
           Content = "敌人。",
-          ContentJP = "（敵を倒したい）",
+          ContentJP = "敵",
           DialogueId = 710078052,
           GUID = "710078052.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710078053] = {
           Content = "熟悉的人。",
-          ContentJP = "（会いたい人に会いたい）",
+          ContentJP = "あの人",
           DialogueId = 710078053,
           GUID = "710078053.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{3}}"
         },
         [710079051] = {
           Content = "从地形上来看应该就在这附近，我去找找吧。",
-          ContentJP = "（宝は地中深くに眠らせても意味がない。使われてこそ価値がある、と教える）",
+          ContentJP = "地形から見て、このあたりのはずだ。少し探してみよう。",
           DialogueId = 710079051,
           GUID = "710079051.0",
           NextDialogue = 71007906,
@@ -303114,7 +303151,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710079052] = {
           Content = "既然是你父亲留给你的，那我就不要了。",
-          ContentJP = "（秘密を教えてくれたことに礼を言い、大人の考えは伏せて、彼の純真を守る）",
+          ContentJP = "これはあなたに残した物だ。こちらがもらうわけにはいかない。",
           DialogueId = 710079052,
           GUID = "710079052.0",
           NextDialogue = 71007908,
@@ -303122,6 +303159,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710080021] = {
           Content = "（接受。）",
+          ContentJP = "（受け入れる）",
           DialogueId = 710080021,
           GUID = "710080021.0",
           NextDialogue = 71008003,
@@ -303129,12 +303167,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710080022] = {
           Content = "（拒绝。）",
+          ContentJP = "（断る）",
           DialogueId = 710080022,
           GUID = "710080022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081021] = {
           Content = "（接受。）",
+          ContentJP = "（受け入れる）",
           DialogueId = 710081021,
           GUID = "710081021.0",
           NextDialogue = 71008103,
@@ -303142,12 +303182,14 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081022] = {
           Content = "（拒绝。）",
+          ContentJP = "（断る）",
           DialogueId = 710081022,
           GUID = "710081022.0",
           Scripts = "SetOutport{FinishType{2},OptionIdx{2}}"
         },
         [710081041] = {
           Content = "红衣服的。",
+          ContentJP = "赤い服を着た子",
           DialogueId = 710081041,
           GUID = "710081041.0",
           NextDialogue = 71008105,
@@ -303155,6 +303197,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081042] = {
           Content = "绿衣服的。",
+          ContentJP = "緑の服を着た子",
           DialogueId = 710081042,
           GUID = "710081042.0",
           NextDialogue = 71008105,
@@ -303162,6 +303205,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
         },
         [710081043] = {
           Content = "蓝衣服的。",
+          ContentJP = "青い服を着た子",
           DialogueId = 710081043,
           GUID = "710081043.0",
           NextDialogue = 71008105,

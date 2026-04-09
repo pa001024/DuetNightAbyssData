@@ -3925,7 +3925,7 @@ return {
               SoundStateType = 0,
               SoundPriority = 0,
               SoundType = 0,
-              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_1/0101_story_zhuyinzhizai_full.0101_story_zhuyinzhizai_full'",
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_1/0107_story_zhuyinzhizai_full.0107_story_zhuyinzhizai_full'",
               ParamKey = "",
               ParamValue = 0,
               RelatedRegionId = {104501, 104503},

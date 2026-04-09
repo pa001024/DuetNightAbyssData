@@ -358,6 +358,18 @@
         "rewardId": 3016,
         "pos": [
           [
+            -0.000601,
+            -0.485625
+          ],
+          [
+            -0.103769,
+            0.028189
+          ],
+          [
+            -42.70781,
+            0.004658
+          ],
+          [
             1052.165,
             -476.29117
           ],
@@ -828,6 +840,16 @@
         ]
       },
       {
+        "srId": 104401,
+        "rewardId": 3018,
+        "pos": [
+          [
+            25650.97,
+            -6548.4463
+          ]
+        ]
+      },
+      {
         "srId": 104501,
         "rewardId": 3015,
         "pos": [
@@ -1254,6 +1276,28 @@
         ]
       },
       {
+        "srId": 105001,
+        "rewardId": 3018,
+        "pos": [
+          [
+            -443.94922,
+            -456.14844
+          ],
+          [
+            1022.1904,
+            -216.15234
+          ],
+          [
+            -1098.6997,
+            632.8877
+          ],
+          [
+            37916.695,
+            -18315.69
+          ]
+        ]
+      },
+      {
         "srId": 105101,
         "rewardId": 3016,
         "pos": [
@@ -1606,7 +1650,7 @@
     "name": "Gliscent Needle",
     "icon": "T_Resource_ActivityIcon_02",
     "rarity": 5,
-    "desc": "The needle's tip draws trails of light, stitching new raiment from the weave of thread and fate. It can be used to upgrade certain character cosmetics.",
+    "desc": "The needle's tip draws trails of light, stitching new raiment from the weave of thread and fate. It can be used to upgrade certain character skins.",
     "desc2": "\"With every stitch, the transformation draws closer. I see a new work of art slowly coming to life — born from the tender dance between thread and fingertip.\"\n\n— Amiette, an Artist "
   },
   {
@@ -2953,24 +2997,6 @@
       },
       {
         "srId": 104104,
-        "rewardId": 3004,
-        "pos": [
-          [
-            -0.000601,
-            -0.485625
-          ],
-          [
-            -0.103769,
-            0.028189
-          ],
-          [
-            -42.70781,
-            0.004658
-          ]
-        ]
-      },
-      {
-        "srId": 104104,
         "rewardId": 3015,
         "pos": [
           [
@@ -2983,6 +3009,18 @@
         "srId": 104104,
         "rewardId": 3016,
         "pos": [
+          [
+            -0.000601,
+            -0.485625
+          ],
+          [
+            -0.103769,
+            0.028189
+          ],
+          [
+            -42.70781,
+            0.004658
+          ],
           [
             1052.165,
             -476.29117
@@ -3437,16 +3475,6 @@
       },
       {
         "srId": 104401,
-        "rewardId": 3007,
-        "pos": [
-          [
-            25650.97,
-            -6548.4463
-          ]
-        ]
-      },
-      {
-        "srId": 104401,
         "rewardId": 3016,
         "pos": [
           [
@@ -3470,6 +3498,16 @@
           [
             -27102.537,
             -326.2573
+          ]
+        ]
+      },
+      {
+        "srId": 104401,
+        "rewardId": 3018,
+        "pos": [
+          [
+            25650.97,
+            -6548.4463
           ]
         ]
       },
@@ -3931,7 +3969,7 @@
       },
       {
         "srId": 105001,
-        "rewardId": 3007,
+        "rewardId": 3018,
         "pos": [
           [
             -443.94922,
@@ -4480,6 +4518,16 @@
         ]
       },
       {
+        "srId": 104401,
+        "rewardId": 3018,
+        "pos": [
+          [
+            25650.97,
+            -6548.4463
+          ]
+        ]
+      },
+      {
         "srId": 104502,
         "rewardId": 3018,
         "pos": [
@@ -4506,6 +4554,28 @@
           [
             0,
             0
+          ]
+        ]
+      },
+      {
+        "srId": 105001,
+        "rewardId": 3018,
+        "pos": [
+          [
+            -443.94922,
+            -456.14844
+          ],
+          [
+            1022.1904,
+            -216.15234
+          ],
+          [
+            -1098.6997,
+            632.8877
+          ],
+          [
+            37916.695,
+            -18315.69
           ]
         ]
       }
@@ -10476,7 +10546,7 @@
   },
   {
     "id": 42001,
-    "name": "Mechanical Nexus: Evilbane",
+    "name": "Mechanical Nexus: The Bane",
     "icon": "T_Icon_CentralSquare_Equip01",
     "rarity": 4,
     "desc": "Found within the Labyrinth of Yanyin, this finely crafted square construct was made using techniques long lost to the Jishu Sect. Its energy core emits a beam of light capable of activating other Jishu constructs.",
