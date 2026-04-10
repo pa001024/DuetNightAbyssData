@@ -564,7 +564,7 @@ function M:SetCharAccessoryOffset(AccessoryId, AccessoryType, Scale, Location, R
     Trans.Scale3D = Scale
   end
   local OriginTrans = self.ArmoryPlayer.CharacterFashion:GetAccessoryOriginOffset(AccessoryId)
-  Trans = Trans * OriginTrans
+  Trans = OriginTrans * Trans
   
   local function SetCharAccessoryOffsetInternal(PlayerCharacter)
     if nil == PlayerCharacter then

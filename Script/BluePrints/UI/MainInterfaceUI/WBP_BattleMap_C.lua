@@ -239,6 +239,10 @@ function WBP_BattleMap_C:ChangeEvent()
   if self.IsOpen then
     self.RetainerBox_101:SetVisibility(ESlateVisibility.Collapsed)
     self.Battle.Map_Img:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if self.WildMap then
+      self.WildMap:RemoveFromParent()
+      self.WildMap = nil
+    end
     self.Battle.Map_Img:AddChild(self.Panel_Root)
     self.Battle.Map_Out:AddChild(self.TracePanel)
     self.Battle.Map_Out:AddChild(self.GamerPanel)
@@ -250,6 +254,10 @@ function WBP_BattleMap_C:ChangeEvent()
   else
     self.RetainerBox_101:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Battle.Map_Img:SetVisibility(ESlateVisibility.Collapsed)
+    if self.WildMap then
+      self.WildMap:RemoveFromParent()
+      self.WildMap = nil
+    end
     self.RetainerBox_101:AddChild(self.Panel_Root)
     self.Panel_Map:AddChild(self.TracePanel)
     self.Panel_Map:AddChild(self.GamerPanel)
@@ -259,9 +267,10 @@ function WBP_BattleMap_C:ChangeEvent()
     self:SetVisibility(0)
     self.MiniMapRad = 135
   end
-  if self.DungeonData and self.WildMap then
+  if self.DungeonData then
     for Id, Data in pairs(DataMgr.Region) do
       if Data.RegionMapFile == self.DungeonData.DungeonMapFile then
+        self.WildMap = self:InitWildMap()
         self.WildMap:InitInDungeon(Id, self, true)
         self.WildMap:InitMapRect()
         break
@@ -890,6 +899,7 @@ function WBP_BattleMap_C:Destruct()
   if self.WildMap then
     self.WildMap:RemoveFromParent()
     self.WildMap = nil
+    self.DungeonData = nil
   end
   self:OnClickClose()
   for _, map in pairs(self.MapArray) do

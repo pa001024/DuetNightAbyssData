@@ -33654,7 +33654,7 @@ LookAt{_delay{1.2},LookAtDescription{"200002:n(200003)"}}
         [10100809] = {
           Camera = "-226.311523,-113.507812,192.955566,0.001224,-17.302214,34.000774,50.0,381.876587,false,Manual,6.0",
           Content = "好吧……有个穿白斗篷的家伙和卡米拉谈了一笔交易，要她找到你，带你进城。",
-          ContentFR = "Bon d’accord... Un type en manteau blanc est venu, il a proposé un marché, te retrouver et t’enmener en ville.",
+          ContentFR = "Bon d’accord... Un type en manteau blanc est venu, il a proposé un marché, te retrouver et t’emmener en ville.",
           DialogueId = 10100809,
           FacialId = {
             [1] = "200002:None"
@@ -33684,7 +33684,7 @@ PlayAnimation{ActorId{200002},AnimationId{"Explain01_Start"},Duration{0.5}}
         [10100810] = {
           Camera = "311.154297,29.604004,51.351074,0.001201,7.799625,177.456207,40.0,405.292908,false,Manual,5.0",
           Content = "你还记得那个人的长相吗？",
-          ContentFR = "Tu te souviens de son visage ?",
+          ContentFR = "Vous vous souvenez de son visage ?",
           DialogueId = 10100810,
           ExStoryInfo = "Player",
           FacialId = {
@@ -117942,7 +117942,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044424] = {
           Content = "......",
-          ContentFR = "... Incroyable... Comment a-t-il pu... ?",
+          ContentFR = "...",
           DialogueId = 12044424,
           GUID = "12044424.0",
           NextDialogue = 12044405,
@@ -296640,7 +296640,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
         },
         [101008061] = {
           Content = "你们救下我，似乎并不是巧合。难道这就是你口中的“交易”？",
-          ContentFR = "<I>Ce n’était pas un hasard que vous m’ayez {性别:sauvé|sauvée}. C’est ça, \"l’accord\" dont tu parles ?</>",
+          ContentFR = "<I>Ce n’était pas un hasard que vous m’ayez {性别:sauvé|sauvée}. C’est ça, l’accord dont vous parlez ?</>",
           DialogueId = 101008061,
           GUID = "101008061",
           NextDialogue = 10100807

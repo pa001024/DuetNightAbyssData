@@ -1492,51 +1492,51 @@ local Data = {
           TextMapId = "BackSpace"
         },
         BackpackEventDes_10301501 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les emplacements spéciaux accordent un bonus de score.",
+          ContentFR = "Rangez tous les objets dans le sac. Les emplacements spéciaux accordent un bonus de score.",
           TextMapId = "BackpackEventDes_10301501"
         },
         BackpackEventDes_10301502 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les emplacements spéciaux accordent un bonus de score.",
+          ContentFR = "Rangez tous les objets dans le sac. Les emplacements spéciaux accordent un bonus de score.",
           TextMapId = "BackpackEventDes_10301502"
         },
         BackpackEventDes_10301503 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les emplacements spéciaux accordent un bonus de score.",
+          ContentFR = "Rangez tous les objets dans le sac. Les emplacements spéciaux accordent un bonus de score.",
           TextMapId = "BackpackEventDes_10301503"
         },
         BackpackEventDes_10301504 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les objets du même type peuvent être empilés.",
+          ContentFR = "Rangez tous les objets dans le sac. Les objets du même type peuvent être empilés.",
           TextMapId = "BackpackEventDes_10301504"
         },
         BackpackEventDes_10301505 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les objets du même type peuvent être empilés.",
+          ContentFR = "Rangez tous les objets dans le sac. Les objets du même type peuvent être empilés.",
           TextMapId = "BackpackEventDes_10301505"
         },
         BackpackEventDes_10301506 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les objets du même type peuvent être empilés.",
+          ContentFR = "Rangez tous les objets dans le sac. Les objets du même type peuvent être empilés.",
           TextMapId = "BackpackEventDes_10301506"
         },
         BackpackEventDes_10301507 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
+          ContentFR = "Rangez tous les objets dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
           TextMapId = "BackpackEventDes_10301507"
         },
         BackpackEventDes_10301508 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
+          ContentFR = "Rangez tous les objets dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
           TextMapId = "BackpackEventDes_10301508"
         },
         BackpackEventDes_10301509 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
+          ContentFR = "Rangez tous les objets dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
           TextMapId = "BackpackEventDes_10301509"
         },
         BackpackEventDes_10301510 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Laissez libre cours à votre créativité.",
+          ContentFR = "Rangez tous les objets dans le sac. Laissez libre cours à votre créativité.",
           TextMapId = "BackpackEventDes_10301510"
         },
         BackpackEventDes_10301511 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Laissez libre cours à votre créativité.",
+          ContentFR = "Rangez tous les objets dans le sac. Laissez libre cours à votre créativité.",
           TextMapId = "BackpackEventDes_10301511"
         },
         BackpackEventDes_10301512 = {
-          ContentFR = "Organiser les objets et les placer intégralement dans le sac. Laissez libre cours à votre créativité.",
+          ContentFR = "Rangez tous les objets dans le sac. Laissez libre cours à votre créativité.",
           TextMapId = "BackpackEventDes_10301512"
         },
         BackpackEventTitle_10301501 = {
@@ -15800,7 +15800,7 @@ local Data = {
           TextMapId = "GRADEUP_1601_03"
         },
         GRADEUP_1601_04 = {
-          ContentFR = "L’utilisation d’une compétence confère +#4 % de Vitesse d’attaque pendant #5 s, jusqu’à #6 cumuls.",
+          ContentFR = "L’utilisation d’une compétence confère +#4 de Vitesse d’attaque pendant #5 s, jusqu’à #6 cumuls.",
           TextMapId = "GRADEUP_1601_04"
         },
         GRADEUP_1601_05 = {
@@ -15808,7 +15808,7 @@ local Data = {
           TextMapId = "GRADEUP_1601_05"
         },
         GRADEUP_1601_06 = {
-          ContentFR = "[Incandescence] confère également +#7 % de Taux CRIT.",
+          ContentFR = "[Incandescence] confère également +#7 de Taux CRIT.",
           TextMapId = "GRADEUP_1601_06"
         },
         GRADEUP_1801_01 = {
@@ -29842,7 +29842,7 @@ local Data = {
           TextMapId = "NpcBiography_Information_OptimisticWhite"
         },
         NpcBiography_Information_PilgrimWhite = {
-          ContentFR = "La plupart des gens finissent par ignorer les jugements que les autres portent sur leurs capacités en grandissant. Certains choisissent de fermer les yeux, d’autres décident de lutter à contre-courant pour prouver leur valeur. Luno, l’officière de l’encens, fait partie de ceux-là.\nElle ne se souvient même plus du nombre de regards méfiants — presque comme si elle était une étrangère — qu’elle a dû subir depuis qu’elle a obtenu ce titre. Heureusement, les Lunariens jouissent d’une longue espérance de vie, ce qui lui laisse tout le temps de poursuivre ses rêves. Pourtant, même après être arrivée jusque-là, tout cela lui semble encore irréel.\nMais elle reste une Luno à part. Puisqu’elle est arrivée jusqu’ici, elle continuera d’avancer. Toujours plus haut.",
+          ContentFR = "La plupart des gens finissent par ignorer les jugements que les autres portent sur leurs capacités en grandissant. Certains choisissent de fermer les yeux, d’autres décident de lutter à contre-courant pour prouver leur valeur. Luno, l’officiante de l’encens, fait partie de ceux-là.\nElle ne se souvient même plus du nombre de regards méfiants — presque comme si elle était une étrangère — qu’elle a dû subir depuis qu’elle a obtenu ce titre. Heureusement, les Lunariens jouissent d’une longue espérance de vie, ce qui lui laisse tout le temps de poursuivre ses rêves. Pourtant, même après être arrivée jusque-là, tout cela lui semble encore irréel.\nMais elle reste une Luno à part. Puisqu’elle est arrivée jusqu’ici, elle continuera d’avancer. Toujours plus haut.",
           TextMapId = "NpcBiography_Information_PilgrimWhite"
         },
         NpcBiography_Information_QuanDoutong = {
@@ -32772,7 +32772,7 @@ local Data = {
           TextMapId = "Pet_Affix_Archive_LockToast"
         },
         Pet_Affix_AutoLock = {
-          ContentFR = "Verrouillage automatique à l’obtention",
+          ContentFR = "Auto-verrouillage à l’obtention",
           TextMapId = "Pet_Affix_AutoLock"
         },
         Pet_Affix_AutoLock_ReConfirm = {
@@ -32808,7 +32808,7 @@ local Data = {
           TextMapId = "Pet_Affix_GetTime"
         },
         Pet_Affix_Hold = {
-          ContentFR = "Possédés :",
+          ContentFR = "Possédés :{空格}",
           TextMapId = "Pet_Affix_Hold"
         },
         Pet_Affix_LevelAdd = {
@@ -50171,7 +50171,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "SKILL_20405_DESC"
         },
         SKILL_20406_DESC = {
-          ContentFR = "DGT CRIT +<H>#1</>. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de <H>#2</>.",
+          ContentFR = "DGT CRIT +<H>#1</>. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de <H>#2</>.",
           TextMapId = "SKILL_20406_DESC"
         },
         SKILL_20407_DESC = {
@@ -76197,7 +76197,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_EventPortalFinish"
         },
         UI_EventReward_Achieved = {
-          ContentFR = "Atteint",
+          ContentFR = "Atteint{空格}",
           TextMapId = "UI_EventReward_Achieved"
         },
         UI_EventReward_NotAchieved = {
@@ -77782,7 +77782,7 @@ Allez voir ce qui se passe.]],
           TextMapId = "UI_GameEvent_BagGame_LevelDes"
         },
         UI_GameEvent_BagGame_LockDes_PerviousLevel = {
-          ContentFR = "Débloqué après avoir terminé le niveau précédent",
+          ContentFR = "Terminer d’abord le niveau précédent",
           TextMapId = "UI_GameEvent_BagGame_LockDes_PerviousLevel"
         },
         UI_GameEvent_BagGame_LockDes_Time = {
@@ -92568,7 +92568,7 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "UI_TextMap_Talk_levelTwo"
         },
         UI_Text_ExitTime = {
-          ContentFR = "Fermeture automatique dans %d s",
+          ContentFR = "Fermeture dans %d s",
           TextMapId = "UI_Text_ExitTime"
         },
         UI_Theater_CommonReward = {
@@ -92945,11 +92945,11 @@ Tirer sur les cibles pour marquer des points.
           TextMapId = "UI_UIGUIDE_CLOSE"
         },
         UI_UIGUIDE_NEXT = {
-          ContentFR = "Page suivante",
+          ContentFR = "Suivant",
           TextMapId = "UI_UIGUIDE_NEXT"
         },
         UI_UIGUIDE_PREV = {
-          ContentFR = "Page précédente",
+          ContentFR = "Précédent",
           TextMapId = "UI_UIGUIDE_PREV"
         },
         UI_UNLOCK = {ContentFR = "Débloquer", TextMapId = "UI_UNLOCK"},

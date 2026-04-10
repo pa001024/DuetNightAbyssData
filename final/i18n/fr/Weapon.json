@@ -6288,12 +6288,12 @@
       }
     ],
     "熔炼": [
-      "DGT CRIT +62.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 35.0%.",
-      "DGT CRIT +75.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 42.0%.",
-      "DGT CRIT +87.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 49.0%.",
-      "DGT CRIT +100.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 56.0%.",
-      "DGT CRIT +112.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 63.0%.",
-      "DGT CRIT +125.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts infligés augmentent de 70.0%."
+      "DGT CRIT +62.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 35.0%.",
+      "DGT CRIT +75.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 42.0%.",
+      "DGT CRIT +87.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 49.0%.",
+      "DGT CRIT +100.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 56.0%.",
+      "DGT CRIT +112.5%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 63.0%.",
+      "DGT CRIT +125.0%. Lorsque cette arme inflige des dégâts, si l’arme équipée est une arme de mêlée, les dégâts de cette arme augmentent de 70.0%."
     ],
     "技能": [
       {

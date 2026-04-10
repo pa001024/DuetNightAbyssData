@@ -759,13 +759,15 @@ function M:UpdateMapImageFog()
     end
   end
   local AnimId = {}
-  for Id, State in pairs(self.TeleportState) do
-    if State or Const.UnlockRegionTeleport then
-      local ShowAnimId = ShowFogAnimId[Id] and Id or nil
-      if not ShowAnimId then
-        self:UpdateSingleMapFogByTeleport(DataMgr.TeleportPoint[Id].Block, true, nil)
-      else
-        table.insert(AnimId, ShowAnimId)
+  if self.TeleportState then
+    for Id, State in pairs(self.TeleportState) do
+      if State or Const.UnlockRegionTeleport then
+        local ShowAnimId = ShowFogAnimId[Id] and Id or nil
+        if not ShowAnimId then
+          self:UpdateSingleMapFogByTeleport(DataMgr.TeleportPoint[Id].Block, true, nil)
+        else
+          table.insert(AnimId, ShowAnimId)
+        end
       end
     end
   end

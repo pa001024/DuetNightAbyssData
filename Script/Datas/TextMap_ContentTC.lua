@@ -60762,7 +60762,7 @@ local Data = {
           TextMapId = "UI_Achievement_Des_10051702"
         },
         UI_Achievement_Des_101 = {
-          ContentTC = "曆練等級達到10級",
+          ContentTC = "歷練等級達到10級",
           TextMapId = "UI_Achievement_Des_101"
         },
         UI_Achievement_Des_1010 = {
@@ -60890,7 +60890,7 @@ local Data = {
           TextMapId = "UI_Achievement_Des_1018"
         },
         UI_Achievement_Des_102 = {
-          ContentTC = "曆練等級達到20級",
+          ContentTC = "歷練等級達到20級",
           TextMapId = "UI_Achievement_Des_102"
         },
         UI_Achievement_Des_10201 = {
@@ -60922,7 +60922,7 @@ local Data = {
           TextMapId = "UI_Achievement_Des_1023"
         },
         UI_Achievement_Des_103 = {
-          ContentTC = "曆練等級達到30級",
+          ContentTC = "歷練等級達到30級",
           TextMapId = "UI_Achievement_Des_103"
         },
         UI_Achievement_Des_1030101 = {
@@ -60954,11 +60954,11 @@ local Data = {
           TextMapId = "UI_Achievement_Des_1035203"
         },
         UI_Achievement_Des_104 = {
-          ContentTC = "曆練等級達到40級",
+          ContentTC = "歷練等級達到40級",
           TextMapId = "UI_Achievement_Des_104"
         },
         UI_Achievement_Des_105 = {
-          ContentTC = "曆練等級達到50級",
+          ContentTC = "歷練等級達到50級",
           TextMapId = "UI_Achievement_Des_105"
         },
         UI_Achievement_Des_106 = {

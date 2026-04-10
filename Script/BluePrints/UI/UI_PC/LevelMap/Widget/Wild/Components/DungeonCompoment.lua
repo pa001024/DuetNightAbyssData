@@ -80,6 +80,21 @@ function Component:DungeonInitCoroutine()
     self.MiniMapRad = 135
     self.Panel_Point:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.HideTrack = false
+    self.MinimapDelayMapImagePosReason = {}
+    self.TickRegionMapImageOpen = false
+    if not self.TickRegionMapImageOpen then
+      UKismetRenderingLibrary.ClearRenderTarget2D(self, self.MapMistyRTMiniMap)
+      self:AddTimer(1, function()
+        local UIManager = GWorld.GameInstance:GetGameUIManager()
+        local Battle = UIManager:GetUIObj("BattleMain")
+        if self.MainMap.Battle and self.MainMap.Battle:IsVisible() and self.MainMap:IsVisible() and Battle and not Battle:IsHide() then
+          DebugPrint("TickRegionMapImageOpen")
+          self:GetMapImageLocalPos()
+          self.TickRegionMapImageOpen = true
+          self:RemoveTimer("TickRegionMapImageOpen")
+        end
+      end, true, 0, "TickRegionMapImageOpen")
+    end
     EventManager:AddEvent(EventID.OnNotifyClientToCloseLoading, self, self.InitMapRect)
   else
     self:InitInDungeonMap()
@@ -118,6 +133,7 @@ function Component:DungeonInitCoroutine()
     if not self.CurrentFloorId then
       self:ShowFloor(self.MaxFloorId)
     end
+    self:MinimapDelayMapImagePos("OnScaleChange")
   else
     self:ShowFloor(self.MaxFloorId)
   end

@@ -118209,7 +118209,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044424] = {
           Content = "......",
-          ContentKR = "...어떻게...\n더빙: 사람이 어떻게 그런 짓을... (여러 사람의 목소리)",
+          ContentKR = "......",
           DialogueId = 12044424,
           GUID = "12044424.0",
           NextDialogue = 12044405,

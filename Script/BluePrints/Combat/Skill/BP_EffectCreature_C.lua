@@ -1,8 +1,10 @@
 local EMCache = require("EMCache.EMCache")
+local Const = require("Const")
 local BP_EffectCreature_C = Class("BluePrints.Common.TimerMgr")
 
 function BP_EffectCreature_C:ReceiveBeginPlay()
   self.HideTags = {}
+  self:ApplyImmersionModelHideTag()
 end
 
 function BP_EffectCreature_C:OnBeginPlay()
@@ -300,6 +302,16 @@ function BP_EffectCreature_C:HideEffectCreatureByTag(HideTag, IsHide)
   end
   self.IsHide = Num > 0
   self:SetActorHiddenInGame(self.IsHide)
+end
+
+function BP_EffectCreature_C:ApplyImmersionModelHideTag()
+  local Player = GWorld and GWorld:GetMainPlayer()
+  if not (Player and Player.IsImmersionModel) then
+    return
+  end
+  if Const and Const.ImmersionModelHideTag then
+    self:HideEffectCreatureByTag(Const.ImmersionModelHideTag, true)
+  end
 end
 
 return BP_EffectCreature_C

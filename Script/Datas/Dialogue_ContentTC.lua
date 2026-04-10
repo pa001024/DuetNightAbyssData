@@ -118205,7 +118205,6 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044424] = {
           Content = "......",
-          ContentTC = "……竟然……",
           DialogueId = 12044424,
           GUID = "12044424.0",
           NextDialogue = 12044405,

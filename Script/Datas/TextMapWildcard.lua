@@ -1377,6 +1377,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Disptach_State_Vanish",
     WildcardClassification = "Story"
   },
+  UI_EventReward_Achieved = {
+    TextMapId = "UI_EventReward_Achieved",
+    WildcardClassification = "Story"
+  },
   UI_Event_ModDrop_ChallengeRemain = {
     TextMapId = "UI_Event_ModDrop_ChallengeRemain",
     WildcardClassification = "Story"

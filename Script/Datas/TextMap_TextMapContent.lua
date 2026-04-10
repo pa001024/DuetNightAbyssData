@@ -2376,7 +2376,7 @@ local Data = {
           TextMapContent = "抉择变奏：风与暗之歌",
           TextMapId = "Buff_Title_951"
         },
-        Busy = {TextMapContent = "繁忙\n", TextMapId = "Busy"},
+        Busy = {TextMapContent = "繁忙", TextMapId = "Busy"},
         CAPTURE_BULLETJUMP_PC = {
           TextMapContent = "使用螺旋飞跃（&Slide& + &Jump&）可以更快追上目标",
           TextMapId = "CAPTURE_BULLETJUMP_PC"

@@ -3,7 +3,7 @@
     "id": 10301501,
     "eventId": 103015,
     "name": "Chercheur d’or I",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les emplacements spéciaux accordent un bonus de score.",
+    "desc": "Rangez tous les objets dans le sac. Les emplacements spéciaux accordent un bonus de score.",
     "gridDistribute": [
       [
         0,
@@ -122,7 +122,7 @@
     "id": 10301502,
     "eventId": 103015,
     "name": "Chercheur d’or II",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les emplacements spéciaux accordent un bonus de score.",
+    "desc": "Rangez tous les objets dans le sac. Les emplacements spéciaux accordent un bonus de score.",
     "gridDistribute": [
       [
         0,
@@ -242,7 +242,7 @@
     "id": 10301503,
     "eventId": 103015,
     "name": "Chercheur d’or III",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les emplacements spéciaux accordent un bonus de score.",
+    "desc": "Rangez tous les objets dans le sac. Les emplacements spéciaux accordent un bonus de score.",
     "gridDistribute": [
       [
         0,
@@ -362,7 +362,7 @@
     "id": 10301504,
     "eventId": 103015,
     "name": "Montagnes de richesses I",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les objets du même type peuvent être empilés.",
+    "desc": "Rangez tous les objets dans le sac. Les objets du même type peuvent être empilés.",
     "gridDistribute": [
       [
         0,
@@ -485,7 +485,7 @@
     "id": 10301505,
     "eventId": 103015,
     "name": "Montagnes de richesses II",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les objets du même type peuvent être empilés.",
+    "desc": "Rangez tous les objets dans le sac. Les objets du même type peuvent être empilés.",
     "gridDistribute": [
       [
         0,
@@ -609,7 +609,7 @@
     "id": 10301506,
     "eventId": 103015,
     "name": "Montagnes de richesses III",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les objets du même type peuvent être empilés.",
+    "desc": "Rangez tous les objets dans le sac. Les objets du même type peuvent être empilés.",
     "gridDistribute": [
       [
         0,
@@ -733,7 +733,7 @@
     "id": 10301507,
     "eventId": 103015,
     "name": "Chaque chose à sa place I",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
+    "desc": "Rangez tous les objets dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
     "gridDistribute": [
       [
         0,
@@ -858,7 +858,7 @@
     "id": 10301508,
     "eventId": 103015,
     "name": "Chaque chose à sa place II",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
+    "desc": "Rangez tous les objets dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
     "gridDistribute": [
       [
         0,
@@ -985,7 +985,7 @@
     "id": 10301509,
     "eventId": 103015,
     "name": "Chaque chose à sa place III",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
+    "desc": "Rangez tous les objets dans le sac. Les munitions peuvent être chargées directement dans les armes à feu.",
     "gridDistribute": [
       [
         0,
@@ -1115,7 +1115,7 @@
     "id": 10301510,
     "eventId": 103015,
     "name": "Accueillir toutes choses I",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Laissez libre cours à votre créativité.",
+    "desc": "Rangez tous les objets dans le sac. Laissez libre cours à votre créativité.",
     "gridDistribute": [
       [
         1,
@@ -1241,7 +1241,7 @@
     "id": 10301511,
     "eventId": 103015,
     "name": "Accueillir toutes choses II",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Laissez libre cours à votre créativité.",
+    "desc": "Rangez tous les objets dans le sac. Laissez libre cours à votre créativité.",
     "gridDistribute": [
       [
         1,
@@ -1368,7 +1368,7 @@
     "id": 10301512,
     "eventId": 103015,
     "name": "Accueillir toutes choses III",
-    "desc": "Organiser les objets et les placer intégralement dans le sac. Laissez libre cours à votre créativité.",
+    "desc": "Rangez tous les objets dans le sac. Laissez libre cours à votre créativité.",
     "gridDistribute": [
       [
         0,

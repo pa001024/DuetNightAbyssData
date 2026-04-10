@@ -118647,7 +118647,7 @@ PlayFacial{_delay{8.5},ActorId{211001},FacialId{"Smile01"}}
         },
         [12044424] = {
           Content = "......",
-          ContentEN = "Can't believe it...",
+          ContentEN = "...",
           DialogueId = 12044424,
           GUID = "12044424.0",
           NextDialogue = 12044405,
