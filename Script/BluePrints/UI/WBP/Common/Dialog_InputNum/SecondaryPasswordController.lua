@@ -265,6 +265,7 @@ function M:Weapon_OpenSeconderyPassword(WeaponUuid, View)
     OnCancel = function()
       if View then
         View:SetFocus()
+        View:BlockAllUIInput(false)
       end
     end
   }
@@ -282,6 +283,7 @@ function M:Pet_OpenSeconderyPassword(PetUuid, View)
     end,
     OnCancel = function()
       if View then
+        View:BlockAllUIInput(false)
         View:SetFocus()
       end
     end

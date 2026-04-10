@@ -126,12 +126,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1732783210910571732",
-            startPort = "QuestStart",
-            endQuest = "17401223494776958",
-            endPort = "In"
-          },
-          {
             startQuest = "1732783210910571736",
             startPort = "Out",
             endQuest = "17418570819691558755",
@@ -142,12 +136,6 @@ return {
             startPort = "Out",
             endQuest = "1732783210910571734",
             endPort = "Fail"
-          },
-          {
-            startQuest = "17401223999679220",
-            startPort = "Out",
-            endQuest = "17428831955541046971",
-            endPort = "In"
           },
           {
             startQuest = "17428831955541046971",
@@ -171,12 +159,6 @@ return {
             startQuest = "17401223999679220",
             startPort = "Out",
             endQuest = "17485146243129308614",
-            endPort = "In"
-          },
-          {
-            startQuest = "17401223494776958",
-            startPort = "Out",
-            endQuest = "17485210385975016",
             endPort = "In"
           },
           {
@@ -207,6 +189,24 @@ return {
             startQuest = "1749197726996757",
             startPort = "Out",
             endQuest = "1732783210910571735",
+            endPort = "In"
+          },
+          {
+            startQuest = "1732783210910571732",
+            startPort = "QuestStart",
+            endQuest = "17485210385975016",
+            endPort = "In"
+          },
+          {
+            startQuest = "17401223999679220",
+            startPort = "Out",
+            endQuest = "17401223494776958",
+            endPort = "In"
+          },
+          {
+            startQuest = "17401223494776958",
+            startPort = "Out",
+            endQuest = "17428831955541046971",
             endPort = "In"
           }
         },
@@ -455,7 +455,7 @@ return {
             key = "17401223494776958",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = -2438, y = 248.39999999999952},
+            pos = {x = -1816.3333333333335, y = 164.23333333333295},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "cp2sew2bossstart",

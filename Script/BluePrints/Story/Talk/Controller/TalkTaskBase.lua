@@ -283,16 +283,21 @@ function TalkTaskBase_C:PauseCamera(bPause)
   if not PlayerController then
     return
   end
+  local GameMode = UGameplayStatics.GetGameMode(GWorld.GameInstance)
   if bPause then
     self.CacheControllerPausedParam = PlayerController.bShouldPerformFullTickWhenPaused
     PlayerController.bShouldPerformFullTickWhenPaused = false
-    UGameplayStatics.SetGamePaused(GWorld.GameInstance, true)
+    if IsValid(GameMode) and GameMode:IsA(UE4.AEMGameMode) then
+      GameMode:SetGamePaused("TalkCamera", true)
+    end
     if self.TalkContext and self.TalkContext.TalkCameraManager then
       self.TalkContext.TalkCameraManager:PauseCameraBreathe(true)
     end
   else
     PlayerController.bShouldPerformFullTickWhenPaused = self.CacheControllerPausedParam
-    UGameplayStatics.SetGamePaused(GWorld.GameInstance, false)
+    if IsValid(GameMode) and GameMode:IsA(UE4.AEMGameMode) then
+      GameMode:SetGamePaused("TalkCamera", false)
+    end
     if self.TalkContext and self.TalkContext.TalkCameraManager then
       self.TalkContext.TalkCameraManager:PauseCameraBreathe(false)
     end

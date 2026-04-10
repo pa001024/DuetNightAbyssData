@@ -441,6 +441,7 @@ function Component:LockOrUnlockPet()
 end
 
 function Component:OnPetLocked(ErrCode, UniqueId, IsLocked)
+  self:BlockAllUIInput(false)
   local CurrentContent = self.ItemDetailsContent
   if not CurrentContent then
     return

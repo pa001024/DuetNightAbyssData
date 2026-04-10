@@ -946,8 +946,10 @@ end
 
 function Menu_Level_PC_C:ItemMenuAnchorChanged()
   if UIManager(self):IsHaveMenuAnchorOpen() then
-    self.KeyTips:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  elseif self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
+    if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
+      self.KeyTips:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  elseif self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad and CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     self.KeyTips:SetVisibility(UIConst.VisibilityOp.Visible)
   end
 end

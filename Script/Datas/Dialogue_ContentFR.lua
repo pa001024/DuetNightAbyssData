@@ -212066,334 +212066,387 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51164901] = {
           Content = "故人来之，不曾相迎，是我逍遥生之过，二位恕罪恕罪~",
+          ContentFR = "Ah... voilà de vieilles connaissances. Ne pas vous avoir accueillis plus tôt est une faute de ma part... pardonnez-moi, pardonnez-moi~",
           DialogueId = 51164901,
           GUID = "80160192",
           SpeakNpcId = 700385
         },
         [51164902] = {
           Content = "你你你——就是那个……之前莫名其妙抢我们东西，却又在后面救了我们一命的那个无由生对吧！又见到你了！",
+          ContentFR = "Toi— attends une seconde ! C’est bien toi qui nous a piqué nos affaires sans raison... avant de nous sauver la vie juste après, pas vrai ?! Eh ben dis donc... le monde est petit !",
           DialogueId = 51164902,
           GUID = "801601BC",
           SpeakNpcId = 200002
         },
         [51164903] = {
           Content = "之前救了我们的事情，谢谢。",
+          ContentFR = "Merci pour l’aide que tu nous as apportée, la dernière fois.",
           DialogueId = 51164903,
           GUID = "801601E6",
           SpeakNpcId = 100001
         },
         [51164904] = {
           Content = "虽是萍水相逢，但小生所为却被二位牢记于心，让我很是感动，想要送你们什么东西用以报答这份知遇之恩啊……",
+          ContentFR = "Une rencontre de hasard… et pourtant, vous m’avez gardé en mémoire. Voilà qui me touche. Laisse-moi t’offrir quelque chose... en guise de remerciement.",
           DialogueId = 51164904,
           GUID = "80160210",
           SpeakNpcId = 700385
         },
         [51164905] = {
           Content = "谢谢你，但是不用啦，我们也没做什么事。",
+          ContentFR = "<I>Merci, mais ce n’est pas nécessaire. On n’a rien fait de spécial.</>",
           DialogueId = 51164905,
           GUID = "8016023A",
           ImprPlusId = 1209
         },
         [51164906] = {
           Content = "无功不受禄，我们也没做什么，报答的事还是算了。",
+          ContentFR = "<I>On ne peut pas accepter une récompense sans raison.</>",
           DialogueId = 51164906,
           GUID = "80160264",
           ImprPlusId = 1206
         },
         [51164907] = {
           Content = "无由生还能送什么东西？",
+          ContentFR = "<I>Et un Wishen, ça peut bien offrir quoi, au juste ?</>",
           DialogueId = 51164907,
           GUID = "8016028E",
           ImprPlusId = 1210
         },
         [51164908] = {
           Content = "此言差矣~我们三次相遇，第一次你手中有一我心许之物，乌龙一场，第二次是你们置身危境之中，我出手相助，这一次是你我荒野偶遇，缘分天成，实在难得。",
+          ContentFR = "Allons, tu te trompes~ Nos chemins se sont croisés à trois reprises. La première fois, tu détenais un objet qui avait retenu mon attention — une simple méprise. La deuxième, vous étiez en danger, et je vous ai aidés. Et maintenant... une rencontre au hasard, en pleine nature. Une telle coïncidence est trop rare pour être laissée de côté.",
           DialogueId = 51164908,
           GUID = "801602B8",
           SpeakNpcId = 700385
         },
         [51164909] = {
           Content = "且不说功禄一事，仅你我相遇三次之缘分，便是值得上我这一份礼物，你看如何？",
+          ContentFR = "Ne parle pas de récompense. Le simple fait que nos chemins se soient croisés trois fois... mérite bien un petit présent, tu ne trouves pas ?",
           DialogueId = 51164909,
           GUID = "801602E2",
           SpeakNpcId = 700385
         },
         [51164910] = {
           Content = "说的也是，无由生便是这般，无由而死，无由往生，死前了无牵挂，死后也岌岌无名啊。",
-          ContentFR = "C’est vrai... les Wishen sont ainsi : sans cause à leur mort, sans raison à leur retour à la vie. Sans attaches avant de mourir... et, après, condamnés à sombrer dans l’oubli.",
+          ContentFR = "C’est bien dit. Être Wishen, c’est venir de nulle part... et y retourner sans nom. Sans attaches de son vivant... oublié après la mort.",
           DialogueId = 51164910,
           GUID = "8016030C",
           SpeakNpcId = 700385
         },
         [51164911] = {
           Content = "所以你要送我们什么？",
+          ContentFR = "<I>Alors, qu’est-ce que tu veux nous offrir ?</>",
           DialogueId = 51164911,
           GUID = "80160336",
           SpeakNpcId = 100001
         },
         [51164912] = {
           Content = "小生近日碰巧得知一绝世琴谱的下落，据说这琴谱乃是一名琴师的传家之宝，那琴师凭借高超琴艺，堆金积玉，驰名华胥。",
+          ContentFR = "Il se trouve que j’ai récemment appris où se trouve une partition de qin d’exception. On raconte qu’elle appartenait à un maître musicien, dont le talent lui valut richesse et renommée à travers tout Huaxu.",
           DialogueId = 51164912,
           GUID = "80160360",
           SpeakNpcId = 700385
         },
         [51164913] = {
           Content = "多有人心向往之，斥资千金求购琴谱，他却守谱如玉，只为找到心中适合继承琴谱之人选，将琴谱传授于他。",
+          ContentFR = "Nombreux sont ceux qui l’ont convoitée, prêts à dépenser des fortunes pour l’obtenir. Pourtant, il l’a toujours gardée précieusement... attendant de trouver un héritier digne de recevoir à la fois la partition et son art.",
           DialogueId = 51164913,
           GUID = "8016038A",
           SpeakNpcId = 700385
         },
         [51164914] = {
           Content = "你的意思是……让我和小仆从去继承他的琴谱？虽然白魔王是什么都很厉害啦，但是弹琴这种事情之前压根没学过。",
+          ContentFR = "Attends... Tu veux dire que moi et mon petit larbin devrions hériter de ce truc ? Bon, d’accord, le Roi Démon excelle en tout... mais jouer du qin, c’est clairement pas mon domaine !",
           DialogueId = 51164914,
           GUID = "801603B4",
           SpeakNpcId = 200002
         },
         [51164915] = {
           Content = "非也非也，在下得知的琴谱，并非需要经过漫长学习才可获得，而是轻而易举便能到手。",
+          ContentFR = "Pas du tout, pas du tout. La partition dont je parle ne demande aucun long apprentissage. Elle peut être obtenue... avec une facilité déconcertante.",
           DialogueId = 51164915,
           GUID = "801603DE",
           SpeakNpcId = 700385
         },
         [51164916] = {
           Content = "怎么样，二位可有兴趣？有了琴谱，二位随意将之抛售于织星客，便可赚得盆满钵满，届时用这笔钱游山玩水，岂不逍遥？",
+          ContentFR = "Alors ? Ça t’intéresse ? Une fois en ta possession, tu pourrais la revendre à un Tisse-Étoiles... et remplir tes bourses à ras bord. De quoi parcourir le monde en toute liberté... n’est-ce pas tentant ?",
           DialogueId = 51164916,
           GUID = "80160408",
           SpeakNpcId = 700385
         },
         [51164917] = {
           Content = "听起来好像的确很有诱惑力……小仆从，我们要不要听他的试试看，反正在华胥也不会遇到什么很大的危险吧。",
+          ContentFR = "Hm... c’est vrai que ça donne envie... Dis, petit larbin, on tente le coup ? Après tout, on est à Huaxu... on ne risque pas grand-chose, non ?",
           DialogueId = 51164917,
           GUID = "80160432",
           SpeakNpcId = 200002
         },
         [51164918] = {
           Content = "好，逍遥生，我们想知道这绝世琴谱的下落。",
+          ContentFR = "D’accord. Xiaoyao, où se trouve cette partition ?",
           DialogueId = 51164918,
           GUID = "8016045C",
           SpeakNpcId = 100001
         },
         [51164919] = {
           Content = "触机便悟，玲珑心思啊，这琴谱的下落呢，远在天边，近在眼前~",
+          ContentFR = "Toujours aussi vif... Quant à sa localisation... loin dans les cieux, et pourtant juste sous tes yeux~",
           DialogueId = 51164919,
           GUID = "80160486",
           SpeakNpcId = 700385
         },
         [51164920] = {
           Content = "（逍遥生转身，看向了一旁的水面。）",
+          ContentFR = "Xiaoyao se tourne vers la surface du lac.",
           DialogueId = 51164920,
           GUID = "801604B0"
         },
         [51164921] = {
           Content = "在湖里？那不是早就被水泡发了吗？算了算了，小仆从，我们用<H>钓鱼</>的方式试试看能不能把琴谱捞上来吧！",
+          ContentFR = "Dans le lac ?! Mais elle doit être complètement fichue à force de tremper là-dedans ! Bon, tant pis ! On tente le coup — essayons avec <H>la pêche</>, on verra bien si on peut la remonter !",
           DialogueId = 51164921,
           GUID = "801604DA",
           SpeakNpcId = 200002
         },
         [51165001] = {
           Content = "小小小小仆从……你你你，你钓上了……什么东西啊……",
+          ContentFR = "P-p-petit larbin... T-tu... tu viens de remonter... quoi, exactement... ?",
           DialogueId = 51165001,
           GUID = "801611FA",
           SpeakNpcId = 200002
         },
         [51165002] = {
           Content = "一具骷髅。",
+          ContentFR = "<I>Un squelette.</>",
           DialogueId = 51165002,
           GUID = "80161224",
           ImprPlusId = 1208
         },
         [51165003] = {
           Content = "怎么会有人横死在此？",
+          ContentFR = "<I>Quelqu’un a dû mourir ici...</>",
           DialogueId = 51165003,
           GUID = "8016124E",
           ImprPlusId = 1209
         },
         [51165004] = {
           Content = "我再钓一下看看能不能钓上琴谱。",
+          ContentFR = "<I>Je relance. On verra si je peux remonter la partition.</>",
           DialogueId = 51165004,
           GUID = "80161278",
           ImprPlusId = 1210
         },
         [51165005] = {
           Content = "谁都看得出来这是骷髅啦！但是我是想问，为什么钓鱼会钓上这种东西？！",
+          ContentFR = "Merci, j’avais vu ! Ce que je veux savoir, c’est pourquoi on pêche ce genre de chose ?!",
           DialogueId = 51165005,
           GUID = "801612A2",
           SpeakNpcId = 200002
         },
         [51165006] = {
           Content = "这里不是华胥吗？最和平的国家，怎么会在湖里钓上一副骷髅嘛！",
+          ContentFR = "Mais on est à Huaxu, non ?! Le pays le plus paisible qui soit ! Comment un squelette peut finir au fond d’un lac ?!",
           DialogueId = 51165006,
           GUID = "801612CC",
           SpeakNpcId = 200002
         },
         [51165007] = {
           Content = "你在说什么胡话啊！现在的紧急情况是你钓上了一副骷髅，这到底是怎么回事嘛！",
+          ContentFR = "Mais tu racontes quoi ?! On s’en fiche de la partition ! Tu viens de repêcher un cadavre !",
           DialogueId = 51165007,
           GUID = "801612F6",
           SpeakNpcId = 200002
         },
         [51165008] = {
           Content = "光天化日朗朗乾坤，你二位居然从湖中打捞上一具无名尸骨，实在惊悚，着实荒唐！",
+          ContentFR = "En plein jour, sous un ciel aussi limpide... et vous voilà à repêcher une dépouille sans nom au fond d’un lac... Voilà qui est pour le moins troublant... et profondément absurde.",
           DialogueId = 51165008,
           GUID = "80161320",
           SpeakNpcId = 700385
         },
         [51165009] = {
           Content = "是你搞的鬼吧？逍遥生。",
+          ContentFR = "C’est ton coup, pas vrai, Xiaoyao ?",
           DialogueId = 51165009,
           GUID = "8016134A",
           SpeakNpcId = 100001
         },
         [51165010] = {
           Content = "诶呀，你可别将脏水往我这里泼呀，我本逍遥，天地悠悠，如何与这水中枯骨沾上关系呢？",
+          ContentFR = "Allons... ne m’accuse pas si vite. Je me laisse porter par le vent... quel lien pourrais-je bien avoir avec ces ossements oubliés ?",
           DialogueId = 51165010,
           GUID = "80161374",
           SpeakNpcId = 700385
         },
         [51165011] = {
           Content = "你还狡辩，要不是你跟我们说什么水里有琴谱，我们才不会……才不会……",
+          ContentFR = "Arrête de faire l’innocent ! Si tu ne nous avais pas parlé de cette partition, on n’aurait jamais—",
           DialogueId = 51165011,
           GUID = "8016139E",
           SpeakNpcId = 200002
         },
         [51165012] = {
           Content = "所以这到底是怎么回事，逍遥生，这不是华胥吗？也会出现这种藏尸冤案？",
+          ContentFR = "Alors qu’est-ce que ça signifie, Xiaoyao ? On est à Huaxu. Ce genre d’affaire peut vraiment arriver ici ?",
           DialogueId = 51165012,
           GUID = "801613C8",
           SpeakNpcId = 100001
         },
         [51165013] = {
           Content = "嗯……到底是怎么回事呢？小生也不知情呀。",
+          ContentFR = "Hm... qui sait ? Moi-même, je l’ignore~",
           DialogueId = 51165013,
           GUID = "801613F2",
           SpeakNpcId = 700385
         },
         [51165014] = {
           Content = "他开始装傻了，看起来明明一副什么都知道的样子却硬要说自己不知道……",
+          ContentFR = "Il fait exprès ! On dirait qu’il sait tout... mais il refuse de le dire !",
           DialogueId = 51165014,
           GUID = "8016141C",
           SpeakNpcId = 200002
         },
         [51165015] = {
           Content = "二位先别急嘛，虽然小生不知道这白骨姓甚名谁从何而来，但却知晓琴谱的线索就在这尸体之中。",
+          ContentFR = "Allons, ne t’impatiente pas. Je ne connais ni le nom ni l’origine de ces ossements... mais une chose est sûre : la clé de la partition se trouve dans ce corps.",
           DialogueId = 51165015,
           GUID = "80161446",
           SpeakNpcId = 700385
         },
         [51165016] = {
           Content = "不如这样~若是你们能调查出尸骨的真相，我就将这琴谱作为报偿送你，如何？",
+          ContentFR = "Que dirais-tu de ceci~ Si tu découvres la vérité derrière ce squelette... la partition sera à toi.",
           DialogueId = 51165016,
           GUID = "80161470",
           SpeakNpcId = 700385
         },
         [51165017] = {
           Content = "本来说的是送我们，现在又变成了查案的奖励，逍遥生，你不会又耍我们一次吧……",
+          ContentFR = "Tu devais nous l’offrir. Depuis quand c’est devenu une récompense ? Xiaoyao... tu nous manipules encore ?",
           DialogueId = 51165017,
           GUID = "8016149A",
           SpeakNpcId = 100001
         },
         [51165018] = {
           Content = "诚心寻宝物，信物通妙境啊，这弥足珍贵之物总不能乖乖跳到你怀里是不是？你定然是需要付出一些小小的努力，才能寻到你想要的东西呀。",
-          ContentFR = "Quand on cherche sincèrement un trésor, un simple talisman ne suffit pas à en révéler le chemin. Les choses précieuses ne tombent pas toutes seules entre tes mains, pas vrai ? Il te faudra faire quelques efforts pour obtenir ce que tu désires.",
+          ContentFR = "Lorsqu’on cherche un trésor avec sincérité... il ne vient jamais de lui-même. Les choses précieuses ne tombent pas entre tes mains sans effort. Il faut aller les chercher.",
           DialogueId = 51165018,
           GUID = "801614C4",
           SpeakNpcId = 700385
         },
         [51165019] = {
           Content = "说的信誓旦旦，说不定真的有什么绝世琴谱。",
+          ContentFR = "<I>Tu as l’air sûr de toi... Peut-être que cette partition existe vraiment.</>",
           DialogueId = 51165019,
           GUID = "801614EE",
           ImprPlusId = 1208
         },
         [51165020] = {
           Content = "即使琴谱的下落是假，但白骨是真，得还白骨一个清白。",
+          ContentFR = "<I>Que la partition existe ou non, ce squelette est réel. On ne peut pas le laisser comme ça.</>",
           DialogueId = 51165020,
           GUID = "80161518",
           ImprPlusId = 1207
         },
         [51165021] = {
           Content = "如果琴谱真的如他所说，那拿到想必真能赚上一大笔。",
+          ContentFR = "<I>Si c’est vrai, cette partition doit valoir une fortune.</>",
           DialogueId = 51165021,
           GUID = "80161542",
           ImprPlusId = 1210
         },
         [51165022] = {
           Content = "虽然我平日里爱插科打诨，但此事我倒是真没骗你们，只可惜我已是无由生的身份，不然此等美物，我定是不能放手的呀。",
-          ContentFR = "Même si j’aime plaisanter à longueur de journée, sur ce point je ne t’ai pas menti. Hélas, en tant que Wishen, je ne peux m’en emparer... autrement, une telle merveille, je ne pourrais certainement pas m’en séparer.",
+          ContentFR = "Je peux plaisanter, parfois... mais pas sur ce point. Si je n’étais pas lié à cette existence de Wishen... je ne laisserais jamais filer un tel trésor.",
           DialogueId = 51165022,
           GUID = "8016156C",
           SpeakNpcId = 700385
         },
         [51165023] = {
           Content = "你倒是个慈心善念之人，浮名重利在前也不为所动，倒先想起了还人清白一事，鉴事如高屋建瓴，实在逍遥。",
+          ContentFR = "Tu as le cœur droit. Même face à la richesse et à la renommée... tu penses d’abord à rendre justice à un mort oublié. Une vision rare... presque détachée du monde.",
           DialogueId = 51165023,
           GUID = "80161596",
           SpeakNpcId = 700385
         },
         [51165024] = {
           Content = "啧啧，事境千转，只世人所追求之物从未变革，或许钱财或许功名或许神力，困之扰之，难得逍遥啊。",
+          ContentFR = "Hm... le monde change sans cesse... mais ce que les gens poursuivent ne change jamais. Richesse, gloire... pouvoir. Autant de chaînes. La liberté, elle, est bien plus rare.",
           DialogueId = 51165024,
           GUID = "801615C0",
           SpeakNpcId = 700385
         },
         [51165025] = {
           Content = "小仆从，你要是带着这样的想法以后一定会被骗的，诶……没办法，谁叫本魔王惯着你呢~就交给我吧，一定会陪你把真相调查到底的！",
+          ContentFR = "Petit larbin... si tu continues à le croire comme ça, tu vas te faire avoir un jour... Pff... bon, tant pis ! Qui d’autre que moi, le Roi Démon, pour veiller sur toi ? Allez, on s’en occupe ! On va tirer toute cette histoire au clair !",
           DialogueId = 51165025,
           GUID = "801615EA",
           SpeakNpcId = 200002
         },
         [51165101] = {
           Content = "（你强忍着内心的不适，试图从白骨之上寻找线索。）",
+          ContentFR = "Vous réprimez le malaise qui vous serre la poitrine, puis vous vous penchez sur les ossements à la recherche du moindre indice.",
           DialogueId = 51165101,
           GUID = "80162262"
         },
         [51165102] = {
           Content = "这位……大哥，或者大姐，在你去世多年后我们还摆弄你的遗骨，非常抱歉，但我们没有恶意，不要怪我们！",
+          ContentFR = "Euh... monsieur... ou madame... On est vraiment désolés de manipuler vos restes autant d’années après votre mort... On n’a aucune mauvaise intention, alors... ne nous en voulez pas !",
           DialogueId = 51165102,
           GUID = "8016228C",
           SpeakNpcId = 200002
         },
         [51165103] = {
           Content = "按照骨架大小来看，应该是男的吧……但距离去世多久已经没法判断了。",
+          ContentFR = "À en juger par la carrure... ce serait plutôt un homme. Mais impossible de dire depuis combien de temps il est là...",
           DialogueId = 51165103,
           GUID = "801622B6",
           SpeakNpcId = 100001
         },
         [51165104] = {
           Content = "大哥，大哥，非常抱歉……",
+          ContentFR = "Monsieur... vraiment, vraiment désolée...",
           DialogueId = 51165104,
           GUID = "801622E0",
           SpeakNpcId = 200002
         },
         [51165105] = {
           Content = "检查是否有受伤。",
+          ContentFR = "<I>Vérifier d’éventuelles blessures</>",
           DialogueId = 51165105,
           GUID = "8016230A"
         },
         [51165106] = {
           Content = "看起来骨骼上面没有刀剑痕迹，应该不是外伤。",
+          ContentFR = "Aucun signe de coup. Pas de trace de lame... Ce n’est probablement pas une blessure externe.",
           DialogueId = 51165106,
           GUID = "80162334",
           SpeakNpcId = 100001
         },
         [51165107] = {
           Content = "检查是否有中毒的痕迹。",
+          ContentFR = "<I>Vérifier d’éventuels signes d’empoisonnement</>",
           DialogueId = 51165107,
           GUID = "8016235E"
         },
         [51165108] = {
           Content = "骨头颜色都是正常的话，应该也不是被下毒。",
+          ContentFR = "La couleur des os est normale... Ce n’est sans doute pas un empoisonnement.",
           DialogueId = 51165108,
           GUID = "80162388",
           SpeakNpcId = 100001
         },
         [51165109] = {
           Content = "检查是否有挣扎的迹象。",
+          ContentFR = "<I>Vérifier des signes de lutte</>",
           DialogueId = 51165109,
           GUID = "801623B2"
         },
         [51165110] = {
           Content = "骸骨的排列都很自然，也不像是被人扔进水中的。",
+          ContentFR = "Les os sont disposés naturellement... On dirait qu’il n’a pas été jeté ici.",
           DialogueId = 51165110,
           GUID = "801623DC",
           SpeakNpcId = 100001
@@ -212408,370 +212461,431 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
       return {
         [51165111] = {
           Content = "检查是否有其他值得注意的点。",
+          ContentFR = "<I>Examiner d’autres éléments</>",
           DialogueId = 51165111,
           GUID = "80162406"
         },
         [51165112] = {
           Content = "他的右手掌部分的骨骼完全不见了。",
+          ContentFR = "Il manque complètement les os de la main droite.",
           DialogueId = 51165112,
           GUID = "80162430",
           SpeakNpcId = 200002
         },
         [51165113] = {
           Content = "也许是因为被什么东西压着，还留在水里。",
+          ContentFR = "Peut-être qu’elle est restée coincée sous quelque chose... au fond de l’eau.",
           DialogueId = 51165113,
           GUID = "8016245A",
           SpeakNpcId = 100001
         },
         [51165114] = {
           Content = "再次检查找到白骨的水域。",
+          ContentFR = "<I>Fouiller à nouveau la zone</>",
           DialogueId = 51165114,
           GUID = "80162484"
         },
         [51165115] = {
           Content = "唔……找到手掌的骨头了，被压在这个盒子下面。",
+          ContentFR = "Hm... trouvé. Les os de la main étaient coincés sous cette boîte.",
           DialogueId = 51165115,
           GUID = "801624AE",
           SpeakNpcId = 100001
         },
         [51165116] = {
           Content = "盒子！打开看看，说不定逍遥生说的琴谱就藏在了这里面！",
+          ContentFR = "Une boîte ?! Ouvre-la ! Peut-être que la partition dont parlait Xiaoyao est dedans !",
           DialogueId = 51165116,
           GUID = "801624D8",
           SpeakNpcId = 200002
         },
         [51165117] = {
           Content = "打开盒子",
+          ContentFR = "<I>Ouvrir la boîte</>",
           DialogueId = 51165117,
           GUID = "80162502"
         },
         [51165118] = {
           Content = "里面真有东西，是一个香囊……还有一件帛书！不过……不是琴谱，是一封信，我来看看写着什么。",
+          ContentFR = "Il y a bien quelque chose... Un sachet d’encens... et un morceau de soie. Mais... ce n’est pas une partition. C’est une lettre. Je vais voir ce qu’elle dit.",
           DialogueId = 51165118,
           GUID = "8016252C",
           SpeakNpcId = 100001
         },
         [51165119] = {
           Content = "让我看看让我看看！师亲启……众徒之中，独余秀之……随师往椒兰……什么乱七八糟的？",
+          ContentFR = "Laisse-moi voir, laisse-moi voir ! « À l’attention du maître... parmi tous vos disciples, moi seul... », « ... vous suivre jusqu’à Jiaolan... » Hein ? Mais c’est quoi ce charabia ?",
           DialogueId = 51165119,
           GUID = "80162556",
           SpeakNpcId = 200002
         },
         [51165120] = {
           Content = "落款是……商……",
+          ContentFR = "La signature... « Shang ».",
           DialogueId = 51165120,
           GUID = "80162580",
           SpeakNpcId = 100001
         },
         [51165121] = {
           Content = "商？是说他姓商吗？这好像是写给这个人的师父的信呢。",
+          ContentFR = "Shang ? C’est son nom ? On dirait une lettre adressée à son maître...",
           DialogueId = 51165121,
           GUID = "801625AA",
           SpeakNpcId = 200002
         },
         [51165201] = {
           Content = "大叔您好！可以稍微打扰你一下下吗？",
-          ContentFR = "Monsieur ! Excusez-moi... puis-je vous déranger un instant ?",
+          ContentFR = "Bonjour, monsieur ! Excusez-nous de vous déranger un instant...",
           DialogueId = 51165201,
           GUID = "801632CA",
           SpeakNpcId = 200002
         },
         [51165202] = {
           Content = "皎皎之民？有什么事吗，我正准备回家奉香呢。",
+          ContentFR = "Une Luno ? Qu’est-ce que vous voulez ? Je rentrais justement pour faire mon offrande d’encens.",
           DialogueId = 51165202,
           GUID = "801632F4",
           SpeakNpcId = 700389
         },
         [51165203] = {
           Content = "您好，我们想向你打探一下，你们村子里是否曾有姓商，或名字中有商字的人居住？",
+          ContentFR = "Bonjour. Nous cherchons quelqu’un. Y a-t-il eu, dans ce village, une personne portant le nom de Shang... ou contenant ce caractère dans son nom ?",
           DialogueId = 51165203,
           GUID = "8016331E",
           SpeakNpcId = 100001
         },
         [51165204] = {
           Content = "商？这字起的倒是雅，我在这住了大半辈子，倒是没听过本地人起这种雅字。",
+          ContentFR = "Shang ? C’est un nom plutôt raffiné. Je vis ici depuis des décennies, mais je n’ai pas souvenir d’un habitant portant ce genre de nom.",
           DialogueId = 51165204,
           GUID = "80163348",
           SpeakNpcId = 700389
         },
         [51165205] = {
           Content = "那不打扰了，谢谢您。",
+          ContentFR = "Très bien, merci pour votre aide.",
           DialogueId = 51165205,
           GUID = "80163372",
           SpeakNpcId = 100001
         },
         [51165206] = {
           Content = "慢着慢着！我突然想起来……商……村里好像还真住过这号人物，但现在好像已经搬走了。",
+          ContentFR = "Attendez ! Maintenant que vous en parlez... Shang... Il me semble qu’il y a bien eu quelqu’un lié à ce nom, autrefois.",
           DialogueId = 51165206,
           GUID = "8016339C",
           SpeakNpcId = 700389
         },
         [51165207] = {
           Content = "大概是五年前？具体时间我也没什么印象了，有个皓京城来的琴师，名唤宫先生，曾带着他的徒弟搬来椒兰村，他那徒弟就叫清商。",
+          ContentFR = "C’était il y a... cinq ans, peut-être ? Un maître de qin venu de Haojing, appelé Maître Gong, s’est installé ici avec son disciple. Ce disciple s’appelait Qing Shang.",
           DialogueId = 51165207,
           GUID = "801633C6",
           SpeakNpcId = 700389
         },
         [51165208] = {
           Content = "他们为什么会搬过来呀？",
+          ContentFR = "Pourquoi sont-ils venus s’installer ici ?",
           DialogueId = 51165208,
           GUID = "801633F0",
           SpeakNpcId = 200002
         },
         [51165209] = {
           Content = "谁知道呢……宫先生好像说是要远离喧嚣之地，静心锻炼徒弟的琴艺，结果好像是出了什么矛盾，反正后面清商也跑了。",
+          ContentFR = "Qui sait... Maître Gong disait vouloir fuir l’agitation de la ville pour perfectionner l’art de son élève. Mais quelque chose s’est mal passé... Et peu après, Qing Shang a disparu.",
           DialogueId = 51165209,
           GUID = "8016341A",
           SpeakNpcId = 700389
         },
         [51165210] = {
           Content = "跑了？是主动离开还是……",
+          ContentFR = "Disparu ? Il est parti de lui-même, ou... ?",
           DialogueId = 51165210,
           GUID = "80163444",
           SpeakNpcId = 100001
         },
         [51165211] = {
           Content = "那我就不清楚了，那宫先生在清商跑了之后没多久就搬走了，但具体在哪……我还真不晓得。",
+          ContentFR = "Aucune idée. Maître Gong a quitté le village peu de temps après. Quant à savoir où il est allé... ça, je ne saurais pas vous dire.",
           DialogueId = 51165211,
           GUID = "8016346E",
           SpeakNpcId = 700389
         },
         [51165301] = {
           Content = "您好，阿姨，我们想问些问题，不知道你有没有空。",
+          ContentFR = "Bonjour madame, auriez-vous un moment ? Nous aimerions vous poser quelques questions.",
           DialogueId = 51165301,
           GUID = "80164332",
           SpeakNpcId = 100001
         },
         [51165302] = {
           Content = "什么？怎么没空呢，今儿天好，我刚把吿苍送到晾晒场，现在正闲呢，娃娃有什么事，你就问吧。",
+          ContentFR = "Comment ça, pas le temps ? Bien sûr que si ! Il fait beau aujourd’hui, je viens justement de mettre mes lys célestes à sécher. Vas-y, dis-moi ce que tu veux savoir.",
           DialogueId = 51165302,
           GUID = "8016435C",
           SpeakNpcId = 240038
         },
         [51165303] = {
           Content = "我们想问问你知不知道村子里有一位琴师，名唤宫先生。",
+          ContentFR = "Nous cherchons des informations sur un joueur de qin nommé Maître Gong. Vous en avez entendu parler ?",
           DialogueId = 51165303,
           GUID = "80164386",
           SpeakNpcId = 200002
         },
         [51165304] = {
           Content = "咦？你们不像本地人啊，这事你们都知道，宫先生可是当年名动皓京的奇人呢，想听他弹琴的每回都花个上千白银，他搬来我们村子那天，我们都可高兴了。",
+          ContentFR = "Oh ? Vous n’êtes pas d’ici, vous... Si vous connaissez son nom, vous avez sûrement entendu parler de lui. Il était très célèbre à Haojing. Les gens payaient des fortunes pour l’écouter jouer. On était ravis quand il est venu s’installer chez nous.",
           DialogueId = 51165304,
           GUID = "801643B0",
           SpeakNpcId = 240038
         },
         [51165305] = {
           Content = "他是在我们村子住过一段时间，不过后面他对那收来的徒弟坏的很，我们都看不惯，椒兰村不收这种铁石心肠的家伙，就把他劝走了。",
+          ContentFR = "Il a vécu ici quelque temps... mais il traitait son disciple avec une dureté insupportable. On ne pouvait pas fermer les yeux là-dessus. À Jiaolan, on ne tolère pas les gens sans cœur. Alors on l’a poussé à partir.",
           DialogueId = 51165305,
           GUID = "801643DA",
           SpeakNpcId = 240038
         },
         [51165306] = {
           Content = "对徒弟很坏？",
+          ContentFR = "Il le traitait si mal que ça ?",
           DialogueId = 51165306,
           GUID = "80164404",
           SpeakNpcId = 100001
         },
         [51165307] = {
           Content = "对啊，清商！多好的娃娃，闲下来就来村子里帮我们挑水砍柴，但那老头却说什么……做这些杂活沾染了俗气，弹不出好琴，就罚他在雨天跪了一夜。",
+          ContentFR = "Oui ! Qing Shang était un enfant si gentil... Dès qu’il avait un moment, il aidait au village : porter de l’eau, couper du bois... Mais ce vieil homme prétendait que ces tâches \"vulgaires\" corrompaient son art. Alors il l’a puni... en le forçant à s’agenouiller toute une nuit sous la pluie.",
           DialogueId = 51165307,
           GUID = "8016442E",
           SpeakNpcId = 240038
         },
         [51165308] = {
           Content = "啊？这也太夸张了吧，哪有这种说法啊。",
+          ContentFR = "Quoi ?! C’est n’importe quoi ! Quel genre de maître fait ça ?!",
           DialogueId = 51165308,
           GUID = "80164458",
           SpeakNpcId = 200002
         },
         [51165309] = {
           Content = "还不止呢，你可知晓咱们这到了冬天便冷的出奇，檐下滴水成冰，那老头说什么，在大寒之日练琴更有醍醐灌顶，振聋发聩之功，对练琴更有益处啊。",
+          ContentFR = "Et ce n’est pas tout... Ici, l’hiver est glacial. L’eau gèle au bord des toits. Mais lui disait que s’exercer dans le froid apportait une « illumination soudaine »... et rendait la pratique encore plus efficace.",
           DialogueId = 51165309,
           GUID = "80164482",
           SpeakNpcId = 240038
         },
         [51165310] = {
           Content = "可怜那娃娃，手上生的全是冻疮，大冷天来我这里借冻伤药，我看他可怜，还塞了他好些个热馍馍。",
+          ContentFR = "Le pauvre enfant... ses mains étaient couvertes d’engelures. Il venait me voir pour des onguents contre le froid. Il me faisait tellement de peine... que je lui donnais parfois des petits pains chauds.",
           DialogueId = 51165310,
           GUID = "801644AC",
           SpeakNpcId = 240038
         },
         [51165311] = {
           Content = "太过分了，怎么会有这样的师父！这简直就是虐待嘛！",
+          ContentFR = "C’est horrible... Ce n’est plus de l’enseignement, c’est de la maltraitance !",
           DialogueId = 51165311,
           GUID = "801644D6",
           SpeakNpcId = 200002
         },
         [51165312] = {
           Content = "要说虐待，倒也谈不上，毕竟那个宫先生对自己比对徒弟还要狠。那些娃娃在练琴的时候跟着练，那些娃娃没在练琴的时候，他也在练。",
+          ContentFR = "Hm... je ne dirais pas ça. Maître Gong était encore plus dur avec lui-même. Quand l’enfant s’exerçait, il s’exerçait aussi. Et même quand l’enfant se reposait... lui continuait.",
           DialogueId = 51165312,
           GUID = "80164500",
           SpeakNpcId = 240038
         },
         [51165313] = {
           Content = "我曾经问过他为什么要对自己这么狠心，他理都没理我，脾气古怪的很，感觉像是受过什么刺激一样。",
+          ContentFR = "Je lui ai déjà demandé pourquoi il s’infligeait ça... Il ne m’a jamais répondu. Un homme étrange... comme s’il portait une blessure ancienne.",
           DialogueId = 51165313,
           GUID = "8016452A",
           SpeakNpcId = 240038
         },
         [51165314] = {
           Content = "后来有一天，清商那娃娃就不见了，也不知道是受不了这个宫先生，还是被宫先生赶走了，不过不管怎么样，都算是逃离了苦日子，是好事。",
+          ContentFR = "Puis un jour, Qing Shang a disparu. Je ne sais pas s’il s’est enfui... ou s’il a été chassé. Mais dans tous les cas... il a échappé à cette vie. Et c’est sans doute mieux ainsi.",
           DialogueId = 51165314,
           GUID = "80164554",
           SpeakNpcId = 240038
         },
         [51165315] = {
           Content = "不见了？……那宫先生现在住在哪里呢？",
+          ContentFR = "Disparu... Savez-vous où se trouve Maître Gong aujourd’hui ?",
           DialogueId = 51165315,
           GUID = "8016457E",
           SpeakNpcId = 100001
         },
         [51165316] = {
           Content = "谁知道呢，清商离开后他就搬走了，但应该也没搬远，毕竟没人愿意帮他搬家了。",
+          ContentFR = "Aucune idée. Il est parti peu après la disparition de l’enfant... mais il n’a sûrement pas été bien loin. À vrai dire, personne ici n’aurait accepté de l’aider à déménager.",
           DialogueId = 51165316,
           GUID = "801645A8",
           SpeakNpcId = 240038
         },
         [51165317] = {
           Content = "谢谢你，那我们再打探打探。",
+          ContentFR = "Merci pour ces informations. Nous allons continuer nos recherches.",
           DialogueId = 51165317,
           GUID = "801645D2",
           SpeakNpcId = 100001
         },
         [51165401] = {
           Content = "又香又甜的大包子嘞，皮薄馅厚，面劲十足，要来一个吗？",
+          ContentFR = "Des brioches bien chaudes, sucrées et parfumées ! Une pâte fine, une garniture généreuse... moelleuses à souhait ! Ça vous tente ?",
           DialogueId = 51165401,
           GUID = "8016539A",
           SpeakNpcId = 700388
         },
         [51165402] = {
           Content = "你好，我们不买包子，我们想从你这问个人，你认识一名琴师吗？",
+          ContentFR = "Bonjour. Nous ne venons pas pour les brioches. Nous cherchons quelqu’un... un maître de qin.",
           DialogueId = 51165402,
           GUID = "801653C4",
           SpeakNpcId = 100001
         },
         [51165403] = {
           Content = "琴师？哦！我知晓了，你们是宫先生从外面请来的医师是吗？他怎么连地址都不跟你们说清楚呢？",
+          ContentFR = "Un maître de qin ? Ah ! Je vois ! Vous êtes les médecins que Maître Gong a fait venir, c’est ça ? Franchement... il n’aurait pas pu vous indiquer clairement où il habite ?",
           DialogueId = 51165403,
           GUID = "801653EE",
           SpeakNpcId = 700388
         },
         [51165404] = {
           Content = "（说实话）",
+          ContentFR = "<I>Dire la vérité</>",
           DialogueId = 51165404,
           GUID = "80165418",
           ImprPlusId = 1207
         },
         [51165405] = {
           Content = "（将计就计）",
+          ContentFR = "<I>Entrer dans son jeu</>",
           DialogueId = 51165405,
           GUID = "80165442",
           ImprPlusId = 1208
         },
         [51165406] = {
           Content = "不是，我们只是外乡来客，想向你打听他现在的住址，找他有些事。",
+          ContentFR = "Non, nous sommes simplement de passage. Nous cherchons son adresse actuelle... nous avons quelque chose à lui demander.",
           DialogueId = 51165406,
           GUID = "8016546C",
           SpeakNpcId = 100001
         },
         [51165407] = {
           Content = "不是？他居然真没听我的劝，诶……这倔老头。",
+          ContentFR = "Ah bon... Il n’a vraiment pas écouté mes conseils, alors... Quel vieil entêté...",
           DialogueId = 51165407,
           GUID = "80165496",
           SpeakNpcId = 700388
         },
         [51165408] = {
           Content = "他生了什么病呀？",
+          ContentFR = "Il est malade ?",
           DialogueId = 51165408,
           GUID = "801654C0",
           SpeakNpcId = 200002
         },
         [51165409] = {
           Content = "自从宫先生的徒弟走了之后，他那咳疾便一天比一天严重，现在更是连每日奉香都没法了，他又住的偏，要是哪天被什么野兽盯上了……",
+          ContentFR = "Depuis que son disciple est parti, sa toux empire de jour en jour. Il n’arrive même plus à faire ses offrandes quotidiennes. Et avec l’endroit isolé où il vit... s’il venait à attirer une bête sauvage un jour...",
           DialogueId = 51165409,
           GUID = "801654EA",
           SpeakNpcId = 700388
         },
         [51165410] = {
           Content = "是的，我们就是医师，想向你打听他现在的住址，找他有些事。",
+          ContentFR = "Oui, nous sommes bien des médecins. Nous cherchons son adresse actuelle pour le voir.",
           DialogueId = 51165410,
           GUID = "80165514",
           SpeakNpcId = 100001
         },
         [51165411] = {
           Content = "等你们好久啦，自从宫先生的徒弟走了之后，他那咳疾便一天比一天严重，现在更是连每日奉香都没法了，他又住的偏，要是哪天被什么野兽盯上了……",
+          ContentFR = "Je vous attendais ! Depuis que son disciple est parti, sa toux empire de jour en jour... Il ne peut même plus assurer ses offrandes. Et avec l’endroit isolé où il vit... s’il lui arrivait quelque chose...",
           DialogueId = 51165411,
           GUID = "8016553E",
           SpeakNpcId = 700388
         },
         [51165412] = {
           Content = "那宫先生的徒弟为什么会走呀？",
+          ContentFR = "Pourquoi son disciple est-il parti ?",
           DialogueId = 51165412,
           GUID = "80165568",
           SpeakNpcId = 200002
         },
         [51165413] = {
           Content = "肯定是被他赶走了呀，清商哥脾气可好了，要不是宫先生对他那琴谱继承人一事执迷不悟，找不出来就赶走，清商哥留在村子里多好呀。",
+          ContentFR = "Parti ? Il a été chassé, plutôt ! Qing Shang était quelqu’un de si gentil... Si seulement Maître Gong n’avait pas été obsédé par cette histoire d’héritier de partition... À force de rejeter tous ceux qu’il jugeait indignes... Qing Shang aurait été bien mieux ici, au village.",
           DialogueId = 51165413,
           GUID = "80165592",
           SpeakNpcId = 700388
         },
         [51165414] = {
           Content = "找不出就赶走……是什么意思？",
+          ContentFR = "« Rejeter tous ceux qu’il jugeait indignes »... qu’est-ce que ça veut dire ?",
           DialogueId = 51165414,
           GUID = "801655BC",
           SpeakNpcId = 100001
         },
         [51165415] = {
           Content = "诶呀，你们不清楚，宫先生以前在皓京就收了很多徒弟，但后面他觉得那些人都没什么练琴的天赋，继承不了他那家传琴谱，就全都赶走了。",
+          ContentFR = "Vous ne savez pas ? À Haojing, Maître Gong avait de nombreux disciples. Mais il a fini par considérer qu’aucun d’eux n’avait le talent nécessaire pour hériter de sa partition familiale... alors il les a tous renvoyés.",
           DialogueId = 51165415,
           GUID = "801655E6",
           SpeakNpcId = 700388
         },
         [51165416] = {
           Content = "其实啊，他自己都没学成琴谱，那一辈子不也就这么过来了，一定纠结那琴谱传承有什么必要呢……",
+          ContentFR = "Le pire, c’est qu’il n’a jamais réussi à maîtriser cette partition lui-même... Toute une vie à s’y accrocher... Franchement, je ne vois pas pourquoi il y tenait autant...",
           DialogueId = 51165416,
           GUID = "80165610",
           SpeakNpcId = 700388
         },
         [51165417] = {
           Content = "什么？！他自己也没有学成那琴谱？",
+          ContentFR = "Quoi ?! Il ne l’a jamais maîtrisée lui-même ?",
           DialogueId = 51165417,
           GUID = "8016563A",
           SpeakNpcId = 200002
         },
         [51165418] = {
           Content = "是啊，他每天——就板着脸，像这样：唔！琴艺不精，不堪学谱，再练，再练！然后就钻研出了一些什么……淋瀑修心，沐雪练琴，乱七八糟的。",
+          ContentFR = "Non. Tous les jours, il faisait cette tête-là — « Hm ! Mon art est insuffisant, je ne suis pas digne d’étudier la partition. Encore ! Encore ! » Et il inventait des méthodes absurdes... jouer sous une cascade... pratiquer sous la neige...",
           DialogueId = 51165418,
           GUID = "80165664",
           SpeakNpcId = 700388
         },
         [51165419] = {
           Content = "清商哥当年为了得到宫先生的认可，练琴练到双指溃烂，包上了纱布后又无法演奏，他忍着痛也要继续弹……可惜……",
+          ContentFR = "Qing Shang, lui, faisait tout pour obtenir son approbation... Il s’est abîmé les doigts à force de jouer, jusqu’au sang. Il se les bandait... et continuait malgré la douleur... C’était difficile à regarder...",
           DialogueId = 51165419,
           GUID = "8016568E",
           SpeakNpcId = 700388
         },
         [51165420] = {
           Content = "当年明明他有说过，无论如何都要获得师父的认可。但突然有一天他就消失了，我也不知道到底发生了什么事……",
+          ContentFR = "Il disait pourtant qu’il ferait tout pour être reconnu par son maître... Et puis un jour... il a disparu. Je ne sais toujours pas ce qui s’est passé...",
           DialogueId = 51165420,
           GUID = "801656B8",
           SpeakNpcId = 700388
         },
         [51165421] = {
           Content = "哦哦！不知不觉就说多了，你们总归是要去找宫先生的，他一个老人家，住的又偏，要是有个三长两短我也不放心，快去看看吧。",
+          ContentFR = "Oh... pardon, je parle trop. Vous allez voir Maître Gong, de toute façon. C’est un vieil homme, isolé... S’il lui arrivait quelque chose, ça m’inquiéterait. Allez vite le voir.",
           DialogueId = 51165421,
           GUID = "801656E2",
           SpeakNpcId = 700388
         },
         [51165422] = {
           Content = "那就麻烦你给我们指个位置了。",
+          ContentFR = "Merci. Pouvez-vous nous indiquer où il se trouve ?",
           DialogueId = 51165422,
           GUID = "8016570C",
           SpeakNpcId = 100001
         },
         [51165501] = {
           Content = "咳咳……咳咳咳……腌臜恶物，滚……滚开！",
+          ContentFR = "<I>Kof... Kof...</> Misérables créatures... disparaissez... !",
           DialogueId = 51165501,
           GUID = "80166402",
           SpeakNpcId = 700386,
@@ -212779,12 +212893,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165502] = {
           Content = "老爷爷，我们已经把玄色狴犴赶走啦，你现在安全了！",
+          ContentFR = "Monsieur ! On a chassé les Bi’an obscurs, vous êtes en sécurité !",
           DialogueId = 51165502,
           GUID = "8016642C",
           SpeakNpcId = 200002
         },
         [51165503] = {
           Content = "你……你们，咳咳，宫某多谢侠士出手相助。",
+          ContentFR = "Vous... vous deux... Ce vieux Gong vous remercie... de lui être venu en aide.",
           DialogueId = 51165503,
           GUID = "80166456",
           SpeakNpcId = 700386,
@@ -212792,6 +212908,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165504] = {
           Content = "在下已经独居许久，爱徒们有的蠢笨不堪被我赶走，有的娇生惯养自行离去，只留老朽一个人在此。",
+          ContentFR = "Je vis seul depuis bien longtemps... Certains de mes disciples étaient trop médiocres, je les ai renvoyés. D’autres sont partis d’eux-mêmes... Au final... il ne reste que moi.",
           DialogueId = 51165504,
           GUID = "80166480",
           SpeakNpcId = 700386,
@@ -212799,6 +212916,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165505] = {
           Content = "无以为报，只能抚琴一曲，以报救命之恩了。",
+          ContentFR = "Je n’ai rien pour vous remercier... Permettez-moi de jouer un air de qin... en guise de gratitude.",
           DialogueId = 51165505,
           GUID = "801664AA",
           SpeakNpcId = 700386,
@@ -212806,275 +212924,323 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165506] = {
           Content = "宫某……不会你就是……",
+          ContentFR = "« Gong »... Attendez... vous seriez—",
           DialogueId = 51165506,
           GUID = "801664D4",
           SpeakNpcId = 100001
         },
         [51165507] = {
           Content = "宫先生！",
+          ContentFR = "Maître Gong !",
           DialogueId = 51165507,
           GUID = "801664FE",
           SpeakNpcId = 200002
         },
         [51165508] = {
           Content = "什么？你们认识我？难道你们是专门到此处学琴的？太好了，我又要有徒弟了，想必你一定比我那不成器的……",
+          ContentFR = "Comment ? Vous me connaissez ? Seriez-vous venus pour apprendre le qin ? Formidable ! De nouveaux disciples ! Vous serez sans doute bien meilleurs que ce bon à rien de—",
           DialogueId = 51165508,
           GUID = "80166528",
           SpeakNpcId = 700386
         },
         [51165509] = {
           Content = "我们发现了一具白骨。",
+          ContentFR = "Nous avons trouvé un squelette.",
           DialogueId = 51165509,
           GUID = "80166552",
           SpeakNpcId = 200002
         },
         [51165510] = {
           Content = "嗯？白骨？这和我有何干系……如此凶残一事，你们该去找应天尉报案，而不是来找老朽……",
+          ContentFR = "Un squelette ? En quoi cela me concerne-t-il... Une affaire aussi grave doit être signalée aux Magistrats de Yingtian... pas à un vieil homme comme moi.",
           DialogueId = 51165510,
           GUID = "8016657C",
           SpeakNpcId = 700386
         },
         [51165511] = {
           Content = "小仆从！上证据！",
+          ContentFR = "Petit larbin ! Les preuves !",
           DialogueId = 51165511,
           GUID = "801665A6",
           SpeakNpcId = 200002
         },
         [51165512] = {
           Content = "出示尸体的死因推测。",
+          ContentFR = "<I>Présenter les conclusions sur la cause de la mort</>",
           DialogueId = 51165512,
           GUID = "801665D0"
         },
         [51165513] = {
           Content = "出示从尸体上搜来的香囊。",
+          ContentFR = "<I>Présenter le sachet retrouvé sur le corps</>",
           DialogueId = 51165513,
           GUID = "801665FA"
         },
         [51165514] = {
           Content = "告知死者是他的徒弟。",
+          ContentFR = "<I>Révéler que la victime était son disciple</>",
           DialogueId = 51165514,
           GUID = "80166624"
         },
         [51165515] = {
           Content = "小仆从，说这个没用啦！",
+          ContentFR = "Petit larbin, ça ne sert à rien de dire ça !",
           DialogueId = 51165515,
           GUID = "8016664E",
           SpeakNpcId = 200002
         },
         [51165516] = {
           Content = "小仆从，这种香囊华胥人人都有啦！",
+          ContentFR = "Petit larbin, tout le monde à Huaxu porte ce genre de sachet !",
           DialogueId = 51165516,
           GUID = "80166678",
           SpeakNpcId = 200002
         },
         [51165517] = {
           Content = "根据白骨留下的信息，他很可能是你曾经的学徒！",
+          ContentFR = "D’après les indices laissés par les ossements... il s’agirait très probablement de l’un de vos anciens disciples !",
           DialogueId = 51165517,
           GUID = "801666A2",
           SpeakNpcId = 200002
         },
         [51165518] = {
           Content = "咳咳……我年轻之时，门徒众多，后来见他们天赋逊色，便都赶走了，与我有何关联？",
+          ContentFR = "<I>Kof...</> J’ai eu de nombreux disciples autrefois... Je les ai renvoyés lorsqu’ils se sont révélés indignes. Cela n’a rien à voir avec moi.",
           DialogueId = 51165518,
           GUID = "801666CC",
           SpeakNpcId = 700386
         },
         [51165519] = {
           Content = "小仆从！上证据！",
+          ContentFR = "Petit larbin ! Les preuves !",
           DialogueId = 51165519,
           GUID = "801666F6",
           SpeakNpcId = 200002
         },
         [51165520] = {
           Content = "出示在村子里打探到的消息。",
+          ContentFR = "<I>Présenter les informations recueillies au village</>",
           DialogueId = 51165520,
           GUID = "80166720"
         },
         [51165521] = {
           Content = "出示找到的香囊。",
+          ContentFR = "<I>Présenter le sachet trouvé</>",
           DialogueId = 51165521,
           GUID = "8016674A"
         },
         [51165522] = {
           Content = "出示找到的信件。",
+          ContentFR = "<I>Présenter la lettre trouvée</>",
           DialogueId = 51165522,
           GUID = "80166774"
         },
         [51165523] = {
           Content = "还没到说这个的时候啦！",
+          ContentFR = "Petit larbin, ce n’est pas le moment de dire ça !",
           DialogueId = 51165523,
           GUID = "8016679E",
           SpeakNpcId = 200002
         },
         [51165524] = {
           Content = "小仆从……都说了这个没用……",
+          ContentFR = "Petit larbin... je t’ai dit que ça ne servait à rien...",
           DialogueId = 51165524,
           GUID = "801667C8",
           SpeakNpcId = 200002
         },
         [51165525] = {
           Content = "你看！这是我们从尸体上找到的信件，是清商写给你的，上面写的是你当年在皓京遣散那一堆徒弟的事情吧，是你把他带来了椒兰村吧？",
+          ContentFR = "Regarde ! Cette lettre a été retrouvée sur le corps — elle est signée Qing Shang ! Elle parle de l’époque où vous avez renvoyé vos disciples à Haojing... C’est vous qui l’avez emmené au Village de Jiaolan, n’est-ce pas ?",
           DialogueId = 51165525,
           GUID = "801667F2",
           SpeakNpcId = 200002
         },
         [51165526] = {
           Content = "你说，那句尸骨是清商？！他死了……不可能……那孩子多年前便被我赶走了！",
+          ContentFR = "Tu dis... que ce squelette... serait Qing Shang ?! Impossible... Je l’ai renvoyé il y a des années !",
           DialogueId = 51165526,
           GUID = "8016681C",
           SpeakNpcId = 700386
         },
         [51165527] = {
           Content = "小仆从！上证据！",
+          ContentFR = "Petit larbin ! Les preuves !",
           DialogueId = 51165527,
           GUID = "80166846",
           SpeakNpcId = 200002
         },
         [51165528] = {
           Content = "出示尸体的死因推测。",
+          ContentFR = "<I>Présenter les conclusions sur la cause de la mort</>",
           DialogueId = 51165528,
           GUID = "80166870"
         },
         [51165529] = {
           Content = "出示从尸体上搜来的香囊。",
+          ContentFR = "<I>Présenter le sachet retrouvé sur le corps</>",
           DialogueId = 51165529,
           GUID = "8016689A"
         },
         [51165530] = {
           Content = "出示从尸体上搜来的信件。",
+          ContentFR = "<I>Présenter la lettre retrouvée sur le corps</>",
           DialogueId = 51165530,
           GUID = "801668C4"
         },
         [51165531] = {
           Content = "清商的确是早就被你赶走了，我们发现他的时候，他已经在湖中沉尸数年！",
+          ContentFR = "Qing Shang a bien été renvoyé il y a longtemps... Mais lorsque nous l’avons retrouvé, son corps reposait au fond du lac depuis des années.",
           DialogueId = 51165531,
           GUID = "801668EE",
           SpeakNpcId = 200002
         },
         [51165532] = {
           Content = "小仆从，这个没有用啦！",
+          ContentFR = "Petit larbin, ça ne sert à rien !",
           DialogueId = 51165532,
           GUID = "80166918",
           SpeakNpcId = 200002
         },
         [51165533] = {
           Content = "小仆从，现在还不是出示这个的时候啦！",
+          ContentFR = "Petit larbin, ce n’est pas encore le moment de présenter ça !",
           DialogueId = 51165533,
           GUID = "80166942",
           SpeakNpcId = 200002
         },
         [51165534] = {
           Content = "可为何……我只是让他离开，但师徒一场，我从未有过害他之心！",
+          ContentFR = "Mais pourquoi... Je l’ai simplement renvoyé... jamais je n’aurais voulu sa mort !",
           DialogueId = 51165534,
           GUID = "8016696C",
           SpeakNpcId = 700386
         },
         [51165535] = {
           Content = "小仆从！上证据！",
+          ContentFR = "Petit larbin ! Les preuves !",
           DialogueId = 51165535,
           GUID = "80166996",
           SpeakNpcId = 200002
         },
         [51165536] = {
           Content = "出示尸体的死因推测。",
+          ContentFR = "<I>Présenter les conclusions sur la cause de la mort</>",
           DialogueId = 51165536,
           GUID = "801669C0"
         },
         [51165537] = {
           Content = "出示从尸体上搜来的香囊。",
+          ContentFR = "<I>Présenter le sachet retrouvé sur le corps</>",
           DialogueId = 51165537,
           GUID = "801669EA"
         },
         [51165538] = {
           Content = "出示死者名为清商。",
+          ContentFR = "<I>Révéler que la victime était Qing Shang</>",
           DialogueId = 51165538,
           GUID = "80166A14"
         },
         [51165539] = {
           Content = "但就是因为你各种虐待清商，他忍都忍了，你还是要将他赶走，导致他离开你之后，心灰意冷，投湖自尽！",
+          ContentFR = "C’est à cause de ce que vous lui avez fait subir ! Il a tout enduré... et vous l’avez quand même rejeté ! Après vous avoir quitté, il a perdu tout espoir... et s’est jeté dans le lac !",
           DialogueId = 51165539,
           GUID = "80166A3E",
           SpeakNpcId = 200002
         },
         [51165540] = {
           Content = "诶……你换个别的吧。",
+          ContentFR = "Hé... essaie autre chose.",
           DialogueId = 51165540,
           GUID = "80166A68",
           SpeakNpcId = 200002
         },
         [51165541] = {
           Content = "这个已经说过啦……",
+          ContentFR = "Ça, on l’a déjà dit...",
           DialogueId = 51165541,
           GUID = "80166A92",
           SpeakNpcId = 200002
         },
         [51165542] = {
           Content = "一派胡言！咳咳！老朽！何曾虐待过那孩子！",
+          ContentFR = "Mensonges ! <I>Kof... kof...</> ! Je... je ne l’ai jamais maltraité !",
           DialogueId = 51165542,
           GUID = "80166ABC",
           SpeakNpcId = 700386
         },
         [51165543] = {
           Content = "小仆从！上证据！",
+          ContentFR = "Petit larbin ! Les preuves !",
           DialogueId = 51165543,
           GUID = "80166AE6",
           SpeakNpcId = 200002
         },
         [51165544] = {
           Content = "出示在村子里打探到的消息。",
+          ContentFR = "<I>Présenter les informations recueillies au village</>",
           DialogueId = 51165544,
           GUID = "80166B10"
         },
         [51165545] = {
           Content = "你以学琴为由，逼迫清商日夜辛苦学琴，致使清商身上长冻疮，手上全是伤，这是身体上的虐待。",
+          ContentFR = "Vous l’avez forcé à s’entraîner jour et nuit, jusqu’à ce que ses mains soient couvertes d’engelures. C’était de la maltraitance physique.",
           DialogueId = 51165545,
           GUID = "80166B3A",
           SpeakNpcId = 100001
         },
         [51165546] = {
           Content = "你在常年霸凌他如此之久后，还要将其赶走，不顾多年师徒之情，致使他最终走向绝望的结局，这是精神上的虐待。",
+          ContentFR = "Et après des années de pression, vous l’avez chassé sans aucun égard. C’était de la maltraitance psychologique.",
           DialogueId = 51165546,
           GUID = "80166B64",
           SpeakNpcId = 100001
         },
         [51165547] = {
           Content = "所以，虽然你未杀清商，但清商却因为你而死！",
+          ContentFR = "Vous ne l’avez peut-être pas tué de vos propres mains... Mais Qing Shang est mort à cause de vous !",
           DialogueId = 51165547,
           GUID = "80166B8E",
           SpeakNpcId = 200002
         },
         [51165548] = {
           Content = "不……不可能，我明明是为他好的，是他不能领会我的善意。再说了，自古学琴都是要这样受苦的，怎么偏偏就他受不了……",
+          ContentFR = "Non... ce n’est pas possible... Tout ce que j’ai fait... c’était pour son bien... C’est lui qui n’a pas su comprendre... Depuis toujours, apprendre le qin exige de souffrir... Pourquoi serait-il le seul à ne pas l’avoir supporté... ?",
           DialogueId = 51165548,
           GUID = "80166BB8",
           SpeakNpcId = 700386
         },
         [51165549] = {
           Content = "怎么偏偏就是……他……",
+          ContentFR = "Pourquoi... lui...",
           DialogueId = 51165549,
           GUID = "80166BE2",
           SpeakNpcId = 700386
         },
         [51165550] = {
           Content = "我……难道……难道真的是我……我害死了清商……",
+          ContentFR = "Moi... Serait-ce... ma faute... ? Ai-je... causé sa mort... ?",
           DialogueId = 51165550,
           GUID = "80166C0C",
           SpeakNpcId = 700386
         },
         [51165551] = {
           Content = "如果真的是这样的话，我又有何面目再存活于这个世上……",
+          ContentFR = "Si c’est vrai... Comment pourrais-je encore vivre après ça... ?",
           DialogueId = 51165551,
           GUID = "80166C36",
           SpeakNpcId = 700386
         },
         [51165552] = {
           Content = "等等，我们不是想让你也和清商一样寻短见……",
+          ContentFR = "Hé ! Attendez ! On ne vous demande pas de finir comme lui !",
           DialogueId = 51165552,
           GUID = "80166C60",
           SpeakNpcId = 200002
         },
         [51165553] = {
           Content = "先生等等！",
+          ContentFR = "Maître, attendez !",
           DialogueId = 51165553,
           GUID = "80166C8A",
           SpeakNpcId = 700387,
@@ -213082,6 +213248,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165601] = {
           Content = "先生，好久不见。",
+          ContentFR = "Maître... cela fait longtemps.",
           DialogueId = 51165601,
           GUID = "8016746A",
           SpeakNpcId = 700387,
@@ -213089,505 +213256,590 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51165602] = {
           Content = "清……清商？你不是死了吗？还留下了什么香囊帛书之类的？",
+          ContentFR = "Qing... Qing Shang ? Mais... tu n’étais pas mort ? Et cette histoire de sachet... de lettre sur soie... ?",
           DialogueId = 51165602,
           GUID = "80167494",
           SpeakNpcId = 700386
         },
         [51165603] = {
           Content = "难道说……这也是华胥的什么法术吗？能让白骨重新成为活人。",
+          ContentFR = "Attends... Ce serait encore un des sorts de Huaxu ? Ramener les morts à la vie à partir de simples ossements ?",
           DialogueId = 51165603,
           GUID = "801674BE",
           SpeakNpcId = 200002
         },
         [51165604] = {
           Content = "清商，真是你吗？你没有死？",
+          ContentFR = "Qing Shang... c’est vraiment toi ? Tu es... vivant ?",
           DialogueId = 51165604,
           GUID = "801674E8",
           SpeakNpcId = 700386
         },
         [51165605] = {
           Content = "如假包换，正是你那教不会的愚笨学生清商……从刚刚开始先生就在说什么死不死的，难道先生盼着我死吗？",
+          ContentFR = "En chair et en os. Votre élève trop médiocre pour mériter votre enseignement... Qing Shang. Mais dites-moi, maître... depuis mon arrivée, vous ne parlez que de mort... Espériez-vous vraiment que je sois mort ?",
           DialogueId = 51165605,
           GUID = "80167512",
           SpeakNpcId = 700387
         },
         [51165606] = {
           Content = "先生何出此言？虽然我当初被您赶走之时也曾说过若是离开先生倒不如死了，但倒终究没法狠下心来，毕竟父母尚在，不能让他们伤心。",
+          ContentFR = "Pourquoi dire cela ? Certes, lorsque vous m’avez chassé, j’ai pensé qu’il valait mieux mourir que vivre sans vous... Mais je n’en ai pas eu le cœur. Mes parents sont encore en vie... je ne pouvais pas leur infliger une telle peine.",
           DialogueId = 51165606,
           GUID = "8016753C",
           SpeakNpcId = 700387
         },
         [51165607] = {
           Content = "那你……咳咳……那他们说的？",
+          ContentFR = "Alors... <I>kof... kof...</> Ce qu’ils ont dit... c’était donc... ?",
           DialogueId = 51165607,
           GUID = "80167566",
           SpeakNpcId = 700386
         },
         [51165608] = {
           Content = "他们说的？是指什么意思？",
+          ContentFR = "Ce qu’ils ont dit ? Que voulez-vous dire, maître ?",
           DialogueId = 51165608,
           GUID = "80167590",
           SpeakNpcId = 700387
         },
         [51165609] = {
           Content = "（你将在湖边发现白骨到现在一路追踪过来的事情又说了一遍。）",
+          ContentFR = "Vous racontez toute votre enquête, depuis la découverte du squelette au bord du lac jusqu’à votre arrivée ici.",
           DialogueId = 51165609,
           GUID = "801675BA"
         },
         [51165610] = {
           Content = "称宫先生为师父的白骨……但又不是我的话……",
+          ContentFR = "Un squelette... présenté comme le disciple de Maître Gong... Mais ce n’est pas moi...",
           DialogueId = 51165610,
           GUID = "801675E4",
           SpeakNpcId = 700387
         },
         [51165611] = {
           Content = "那么，只能是他了。先生是否记得，当年我们准备搬往椒兰村之时是三人同行，但却有一位临时离开……",
+          ContentFR = "Alors... il ne peut s’agir que de lui. Maître, vous souvenez-vous ? Lorsque nous avons quitté Haojing pour rejoindre le Village de Jiaolan... nous étions trois. Mais l’un de nous nous a quittés en chemin...",
           DialogueId = 51165611,
           GUID = "8016760E",
           SpeakNpcId = 700387
         },
         [51165612] = {
           Content = "什么临时离开！是畏罪潜逃！清徵！那个盗走我琴谱的小偷！",
+          ContentFR = "Quitté ?! Il s’est enfui ! Il a pris la fuite ! Qing Zhi ! Ce voleur qui a dérobé ma partition !",
           DialogueId = 51165612,
           GUID = "80167638",
           SpeakNpcId = 700386
         },
         [51165613] = {
           Content = "不错，尸体应是我的师兄——清徵。",
+          ContentFR = "Oui... Le squelette doit être celui de... Qing Zhi.",
           DialogueId = 51165613,
           GUID = "80167662",
           SpeakNpcId = 700387
         },
         [51165614] = {
           Content = "有趣有趣，事到如今居然才发现所寻非人，闹得荒唐一场，可笑可笑啊！",
+          ContentFR = "Fascinant... fascinant ! Arriver jusque-là... pour découvrir seulement maintenant que vous cherchiez la mauvaise personne... Quelle farce délicieuse !",
           DialogueId = 51165614,
           GUID = "8016768C",
           SpeakNpcId = 700385
         },
         [51165615] = {
           Content = "（小声）逍！遥！生！你根本就是故意的！你早就知道湖里的尸体是清徵而不是清商对吧！",
+          ContentFR = "Xiaoyao... Tu l’as fait exprès, pas vrai ? Tu savais depuis le début que le corps dans le lac était celui de Qing Zhi... pas de Qing Shang !",
           DialogueId = 51165615,
           GUID = "801676B6",
           SpeakNpcId = 200002
         },
         [51165616] = {
           Content = "冤枉啊，小生何从知晓呢，只是一路跟随至此，见至真相，感之乐哉，心境逍遥啊！",
+          ContentFR = "Quelle injustice... Comment aurais-je pu le savoir ? Je me suis contenté de vous suivre... et d’observer la vérité se révéler. Quelle scène réjouissante...",
           DialogueId = 51165616,
           GUID = "801676E0",
           SpeakNpcId = 700385
         },
         [51165617] = {
           Content = "所以当年，清徵师兄在盗走琴谱之后，便自杀了？这怎么想也不对吧。",
+          ContentFR = "Donc... après avoir volé la partition, il se serait donné la mort ? Non... ça ne tient pas.",
           DialogueId = 51165617,
           GUID = "8016770A",
           SpeakNpcId = 700387
         },
         [51165618] = {
           Content = "确实没有任何自寻短见的理由，难道真的是意外？",
+          ContentFR = "Il n’y avait aucune raison pour qu’il mette fin à ses jours... Peut-être un accident ?",
           DialogueId = 51165618,
           GUID = "80167734",
           SpeakNpcId = 100001
         },
         [51165619] = {
           Content = "什么？查到现在，原来只是这个清徵自己倒霉，无辜落水淹死吗？",
+          ContentFR = "Quoi ? Après tout ça... on en conclut qu’il s’est simplement noyé par malchance ?",
           DialogueId = 51165619,
           GUID = "8016775E",
           SpeakNpcId = 200002
         },
         [51165620] = {
           Content = "哪里无辜！他是罪有应得！若不是他心性浮躁，急于求成，盗走我的琴谱，如何害得我师徒落到今日的地步！",
+          ContentFR = "Par malchance ?! Il a eu ce qu’il méritait ! S’il n’avait pas été aussi impatient et avide... s’il n’avait pas volé ma partition... jamais nous n’en serions arrivés là !",
           DialogueId = 51165620,
           GUID = "80167788",
           SpeakNpcId = 700386
         },
         [51165621] = {
           Content = "既然你们发现了他的尸骸，那一定能顺水推舟找到琴谱的下落，清商，速速随我过去，若是有那琴谱，再按我之前教授于你的琴艺，不日便……",
+          ContentFR = "Maintenant que vous avez retrouvé son corps... vous pourrez sûrement remonter jusqu’à la partition ! Qing Shang, viens avec moi ! Si nous la retrouvons, et que tu appliques enfin ce que je t’ai enseigné... bientôt, tu—",
           DialogueId = 51165621,
           GUID = "801677B2",
           SpeakNpcId = 700386
         },
         [51165622] = {
           Content = "先生，我想不必了。",
+          ContentFR = "Maître... cela ne sera pas nécessaire.",
           DialogueId = 51165622,
           GUID = "801677DC",
           SpeakNpcId = 700387
         },
         [51165623] = {
           Content = "什么不必了，那可是琴谱！那可是……",
+          ContentFR = "Comment ça, pas nécessaire ?! Cette partition est—",
           DialogueId = 51165623,
           GUID = "80167806",
           SpeakNpcId = 700386
         },
         [51165624] = {
           Content = "不，先生，琴谱如何已经不重要了，此次回来，我便是要于你弹奏一曲，我想，我已经找到了我自己的琴艺。",
+          ContentFR = "Non, maître. La partition n’a plus d’importance. Si je suis revenu aujourd’hui... c’est pour vous jouer un morceau. Je crois... avoir enfin trouvé ma propre voie.",
           DialogueId = 51165624,
           GUID = "80167830",
           SpeakNpcId = 700387
         },
         [51165625] = {
           Content = "这位侠士，不知你可懂调琴？方便的话，您可以帮我检查一下琴弦？一路奔波数里，不知有无伤到爱琴。",
+          ContentFR = "Excusez-moi... sauriez-vous accorder un qin ? Pourriez-vous vérifier les cordes ? Après un si long voyage... j’espère qu’il n’a rien subi.",
           DialogueId = 51165625,
           GUID = "8016785A",
           SpeakNpcId = 700387
         },
         [51165626] = {
           Content = "（你在回忆中检索是否曾在哪里看到过调试古琴的相关书籍……）",
+          ContentFR = "Vous fouillez dans vos souvenirs... avez-vous déjà vu comment accorder un qin ?",
           DialogueId = 51165626,
           GUID = "80167884",
           ImprCheckId = 1136
         },
         [51165627] = {
           Content = "没关系，那我便自己看看吧。",
+          ContentFR = "Ce n’est pas grave. Je vais m’en charger.",
           DialogueId = 51165627,
           GUID = "801678AE",
           SpeakNpcId = 700387
         },
         [51165628] = {
           Content = "侠士果然博学多才，那么就让我来为你们弹奏一曲吧。",
+          ContentFR = "Vous êtes vraiment plein de ressources... Alors laissez-moi vous jouer quelque chose.",
           DialogueId = 51165628,
           GUID = "801678D8",
           SpeakNpcId = 700387
         },
         [51165701] = {
           Content = "此曲……前段温婉缠绵，中段苍茫激越，末段却似天宫洞开，仙乐在鸣，竟是比我幼时听家父对琴谱的演绎还要动听……",
+          ContentFR = "Cette mélodie... Son ouverture est douce et délicate... puis elle s’élève, vaste et puissante... Et cette fin... comme si les portes célestes s’ouvraient... Même l’interprétation de mon père... autrefois... ne lui arrive pas à la cheville...",
           DialogueId = 51165701,
           GUID = "801684D2",
           SpeakNpcId = 700386
         },
         [51165702] = {
           Content = "清商，你是从何处学来此曲？为何分明没有琴谱——我知道了，清徵素来与你友善，一定是他偷出琴谱后和你讲述了其中关键。",
+          ContentFR = "Qing Shang... où as-tu appris cela ? Sans partition... Je comprends... Qing Zhi t’était proche... Il a dû te transmettre l’essence de cette musique après l’avoir volée...",
           DialogueId = 51165702,
           GUID = "801684FC",
           SpeakNpcId = 700386
         },
         [51165703] = {
           Content = "不是的，宫先生，我从未见过琴谱，这是我自己写的曲子。",
+          ContentFR = "Non, maître. Je n’ai jamais vu cette partition. Ce morceau... je l’ai composé moi-même.",
           DialogueId = 51165703,
           GUID = "80168526",
           SpeakNpcId = 700387
         },
         [51165704] = {
           Content = "确实，这其中一些指法并不完善，甚至可以说是稚嫩，比起在我门下时还有退步，但是为何却能扣人心弦？",
+          ContentFR = "Pourtant... certaines techniques sont imparfaites... presque naïves... Tu jouais avec plus de maîtrise autrefois... sous ma tutelle... Et pourtant... pourquoi cela touche-t-il autant le cœur... ?",
           DialogueId = 51165704,
           GUID = "80168550",
           SpeakNpcId = 700386
         },
         [51165705] = {
           Content = "先生好耳力，这首曲子名叫《清宵引》，是我在夜里回想起在师父门下学艺时所作，这其中的稚嫩部分，正是对那时入门未久的自己的追忆。",
+          ContentFR = "Vous avez l’oreille fine. Ce morceau s’intitule « <I>Éveil d’une nuit claire</> ». Je l’ai composé en repensant à mes années auprès de vous. Ces imperfections... sont le reflet de celui que j’étais à mes débuts.",
           DialogueId = 51165705,
           GUID = "8016857A",
           SpeakNpcId = 700387
         },
         [51165706] = {
           Content = "啊……是了，这一抹，正是如同那一夜落雪，其中的杂音，正是你练琴时的情状。",
+          ContentFR = "Oui... Cela évoque cette nuit de neige... Et ces légères dissonances... ressemblent à tes premiers essais...",
           DialogueId = 51165706,
           GUID = "801685A4",
           SpeakNpcId = 700386
         },
         [51165707] = {
           Content = "虽然与琴谱中记载的秘曲相较非常古拙，但正是这份古拙与你的琴技相符。",
+          ContentFR = "Ce n’est pas aussi raffiné que la partition... mais cette sincérité... elle te correspond.",
           DialogueId = 51165707,
           GUID = "801685CE",
           SpeakNpcId = 700386
         },
         [51165708] = {
           Content = "我为什么没有早点发觉……抚琴之时，有比琴谱更加重要的事物，那就是悦己之心，首先要自己了解琴谱中的情感……",
+          ContentFR = "Comment ai-je pu passer à côté de cela si longtemps... Jouer du qin, ce n’est pas suivre une partition... Ce qui compte, c’est de ressentir la musique... en comprendre les émotions... avant même de la jouer...",
           DialogueId = 51165708,
           GUID = "801685F8",
           SpeakNpcId = 700386
         },
         [51165709] = {
           Content = "先生……",
+          ContentFR = "Maître...",
           DialogueId = 51165709,
           GUID = "80168622",
           SpeakNpcId = 700387
         },
         [51165710] = {
           Content = "（宫先生因苍老而满手褶皱的手轻抚上清商曾因冻疮与伤口溃烂而满是伤疤的双手，一道道捻过，似要从那丑陋的的褶皱之间窥见他昔日受下的所有苦难。）",
+          ContentFR = "Les mains ridées de Maître Gong se posent doucement sur celles de Qing Shang... marquées de cicatrices et d’engelures. Il en suit chaque trace du bout des doigts... comme pour en lire l’histoire silencieuse.",
           DialogueId = 51165710,
           GUID = "8016864C"
         },
         [51165711] = {
           Content = "清商，你受委屈了……虽然你没有说，但是我能从琴声中听出来。",
+          ContentFR = "Qing Shang... tu as tant souffert... Tu ne l’as jamais dit... mais je l’entends... dans ta musique.",
           DialogueId = 51165711,
           GUID = "80168676",
           SpeakNpcId = 700386
         },
         [51165712] = {
           Content = "可笑我宫某自诩抚琴妙手几十年，想要钻研琴艺之极，没想到求来求去，却发现自己从根本上就想错了，还毁了学生的半生。",
+          ContentFR = "Quelle ironie... Moi qui me croyais maître du qin depuis des décennies... à poursuivre la perfection... Je me suis trompé depuis le début... et j’ai brisé la vie de mon élève...",
           DialogueId = 51165712,
           GUID = "801686A0",
           SpeakNpcId = 700386
         },
         [51165713] = {
           Content = "过去了，先生，一切都已过去了，一切也该过去了……",
+          ContentFR = "C’est terminé, maître... Tout cela appartient au passé. Et il est temps de le laisser derrière nous.",
           DialogueId = 51165713,
           GUID = "801686CA",
           SpeakNpcId = 700387
         },
         [51165714] = {
           Content = "这位侠士，既然你说你找到了我师兄的尸骨，我与他好歹昔日同窗，不如你将我带去，为他……收个尸吧。",
+          ContentFR = "Vous avez dit avoir retrouvé les restes de Qing Zhi... Nous avons partagé le même maître... Emmenez-moi auprès de lui. Je veux... lui offrir une sépulture digne.",
           DialogueId = 51165714,
           GUID = "801686F4",
           SpeakNpcId = 700387
         },
         [51165715] = {
           Content = "可以。",
+          ContentFR = "Bien sûr.",
           DialogueId = 51165715,
           GUID = "8016871E",
           SpeakNpcId = 100001
         },
         [51165716] = {
           Content = "先生，你先在此处等我，我随侠士去去便回。",
+          ContentFR = "Maître... attendez-moi ici. Je reviens bientôt.",
           DialogueId = 51165716,
           GUID = "80168748",
           SpeakNpcId = 700387
         },
         [51165801] = {
           Content = "君埋泉下泥销骨……师兄，未想到经年不见，你我却已是阴阳两隔。",
+          ContentFR = "« Tu reposes sous la terre, tes os retournés à la poussière... » Qing Zhi... après tant d’années... je n’aurais jamais cru que nos retrouvailles se feraient ainsi... séparés à jamais par la vie et la mort.",
           DialogueId = 51165801,
           GUID = "8016953A",
           SpeakNpcId = 700387
         },
         [51165802] = {
           Content = "记得小时师父总说，你比我在琴艺一道上更为优秀，同是他演奏一遍的曲子，师兄不出半炷香便复刻了个七七八八。",
+          ContentFR = "Je me souviens... maître disait toujours que ton talent surpassait le mien. Un morceau joué une seule fois... et avant même qu’un bâton d’encens ne se consume... tu en avais déjà reproduit l’essentiel.",
           DialogueId = 51165802,
           GUID = "80169564",
           SpeakNpcId = 700387
         },
         [51165803] = {
           Content = "那样被寄予厚望的师兄，终究被一时的贪念所害，成了一滩枯骨……",
+          ContentFR = "Et pourtant, toi qui portais tant d’espoirs... tu as été emporté par un instant de convoitise... pour finir réduit à ces os...",
           DialogueId = 51165803,
           GUID = "8016958E",
           SpeakNpcId = 700387
         },
         [51165804] = {
           Content = "我们还是先找个地方葬了他吧，感觉怪可怜的……",
+          ContentFR = "On devrait lui trouver un endroit pour l’enterrer. C’est triste de le laisser comme ça...",
           DialogueId = 51165804,
           GUID = "801695B8",
           SpeakNpcId = 200002
         },
         [51165805] = {
           Content = "此地恶水环绕，邪气傍身，不是安葬的好地方，在下知晓一处逍遥宝地，不如让我带你们过去？",
+          ContentFR = "Ces eaux sont souillées, chargées d’énergies néfastes. Ce n’est pas un lieu digne pour reposer en paix. Je connais un endroit idéal... laissez-moi vous y conduire.",
           DialogueId = 51165805,
           GUID = "801695E2",
           SpeakNpcId = 700385
         },
         [51165806] = {
           Content = "又是你这家伙！现在真相调查出来了，你还没把我们的奖励琴谱拿出来呢！",
+          ContentFR = "Encore toi ! Maintenant que toute l’affaire est résolue, tu ne nous aurais pas oublié notre récompense ? La partition !",
           DialogueId = 51165806,
           GUID = "8016960C",
           SpeakNpcId = 200002
         },
         [51165807] = {
           Content = "琴谱的事情稍后再说，先随我等，速来速来！",
+          ContentFR = "Chaque chose en son temps... Suivez-moi d’abord. Vite.",
           DialogueId = 51165807,
           GUID = "80169636",
           SpeakNpcId = 700385
         },
         [51165901] = {
           Content = "龙脉送福，生气串行，在此地安葬，定有祥瑞之兆，若是死者也有来世，必为大富大贵，逍遥一生之命啊！",
+          ContentFR = "Les veines du dragon y circulent... l’énergie vitale y afflue... Être enterré ici est de bon augure. Si une nouvelle vie l’attend... elle sera prospère... libre et sans entraves.",
           DialogueId = 51165901,
           GUID = "8016A5A2",
           SpeakNpcId = 700385
         },
         [51165902] = {
           Content = "二位侠士，为何在此处停下了？",
+          ContentFR = "Pourquoi vous arrêtez-vous ici ?",
           DialogueId = 51165902,
           GUID = "8016A5CC",
           SpeakNpcId = 700387
         },
         [51165903] = {
           Content = "就是这里了！这里……额，白龙送福，生气……生气盎然，就埋在这里好了！",
+          ContentFR = "C’est ici ! Euh... les veines du dragon... l’énergie... oui, c’est ça ! Bref ! C’est parfait, on l’enterre là !",
           DialogueId = 51165903,
           GUID = "8016A5F6",
           SpeakNpcId = 200002
         },
         [51165904] = {
           Content = "这位皎皎之民对风水一说的确颇有造诣，那请二位稍等，我将师兄放下便来挖坑。",
+          ContentFR = "Vous semblez très versée en feng shui... Attendez-moi un instant, je vais le déposer et commencer à creuser.",
           DialogueId = 51165904,
           GUID = "8016A620",
           SpeakNpcId = 700387
         },
         [51165905] = {
           Content = "不用，我来吧。",
+          ContentFR = "Laisse-moi faire.",
           DialogueId = 51165905,
           GUID = "8016A64A",
           SpeakNpcId = 100001
         },
         [51165906] = {
           Content = "（你用力撬开地面，却觉得剑尖接触到了什么东西……）",
+          ContentFR = "Vous enfoncez votre arme dans le sol... mais la pointe heurte quelque chose.",
           DialogueId = 51165906,
           GUID = "8016A674"
         },
         [51165907] = {
           Content = "小仆从，你的剑跟着你过的真是太惨了……这让铁匠皎皎知道了，估计胡子都要气歪了！",
+          ContentFR = "Petit larbin... ton arme doit vraiment souffrir avec toi... Si Luno, la forgeronne, voyait ça... elle piquerait une crise !",
           DialogueId = 51165907,
           GUID = "8016A69E",
           SpeakNpcId = 200002
         },
         [51165908] = {
           Content = "等……一下，那是……什么啊？小仆从，你不会又找到了什么不得了的东西吧？",
+          ContentFR = "Attends... c’est quoi ça ? Dis-moi que tu n’as pas encore trouvé un truc bizarre...",
           DialogueId = 51165908,
           GUID = "8016A6C8",
           SpeakNpcId = 200002
         },
         [51165909] = {
           Content = "（剑尖挑开沾染泥土的破烂布衣，从里面露出了一卷书籍一样的东西，你拿起一看，上书四个大字——绝世琴谱。）",
+          ContentFR = "Vous soulevez un morceau de tissu usé... révélant un objet enveloppé comme un livre. Sur la couverture, on peut lire : « Partition de qin sans égale ».",
           DialogueId = 51165909,
           GUID = "8016A6F2"
         },
         [51165910] = {
           Content = "清商，你最好来看看这个。",
+          ContentFR = "Qing Shang... tu devrais voir ça.",
           DialogueId = 51165910,
           GUID = "8016A71C",
           SpeakNpcId = 100001
         },
         [51165911] = {
           Content = "这是？！师父的琴谱？这件旧衣……是师兄的？！琴谱竟是被他埋在这里了吗？",
+          ContentFR = "C’est... ! La partition de mon maître ? Et ce vêtement... c’est celui de Qing Zhi... Il l’avait donc enterrée ici...",
           DialogueId = 51165911,
           GUID = "8016A746",
           SpeakNpcId = 700387
         },
         [51165912] = {
           Content = "好不容易偷来琴谱……却又把琴谱埋在了这里，人又不小心坠了湖，最后什么也没捞到，他到底图什么呀？",
+          ContentFR = "Il a volé la partition pour finalement la cacher ici, puis il est mort sans rien obtenir. Mais... qu’est-ce qu’il cherchait au juste ?",
           DialogueId = 51165912,
           GUID = "8016A770",
           SpeakNpcId = 200002
         },
         [51165913] = {
           Content = "即使拿走琴谱，是否真正能掌握其中诀窍才是关键，以当时师兄的技艺，想必并没有如此决绝的信心，想必会为自己留一个后手。",
+          ContentFR = "Posséder la partition ne garantit pas d’en comprendre l’essence. À l’époque, il devait lui-même douter... Peut-être voulait-il simplement se laisser une échappatoire.",
           DialogueId = 51165913,
           GUID = "8016A79A",
           SpeakNpcId = 700387
         },
         [51165914] = {
           Content = "所以你的意思是，他偷走琴谱，是想偷偷把它埋在此处，然后回去继续扮演宫先生的好徒弟？",
+          ContentFR = "Donc... il l’a volée pour l’enterrer ici... puis retourner jouer l’élève modèle comme si de rien n’était ?",
           DialogueId = 51165914,
           GUID = "8016A7C4",
           SpeakNpcId = 100001
         },
         [51165915] = {
           Content = "那时我还在想，他既然要偷走琴谱，为何要跟我说只是取信，晚上便回，我还以为他是骗我，却没想到……",
+          ContentFR = "À l’époque, il m’avait dit qu’il ne faisait que l’emprunter et qu’il la remettrait en place dans la nuit. Je pensais qu’il mentait... mais je n’aurais jamais imaginé...",
           DialogueId = 51165915,
           GUID = "8016A7EE",
           SpeakNpcId = 700387
         },
         [51165916] = {
           Content = "霜寒尸骨重，侠士，我们还是快些让师兄入土为安吧。",
+          ContentFR = "Le froid gagne ces os... Allons... donnons-lui enfin une sépulture digne.",
           DialogueId = 51165916,
           GUID = "8016A818",
           SpeakNpcId = 700387
         },
         [51165917] = {
           Content = "（你们将这位清徵葬下，众人立于坟前。）",
+          ContentFR = "Vous enterrez Qing Zhi. Tous se tiennent devant la tombe.",
           DialogueId = 51165917,
           GUID = "8016A842"
         },
         [51165918] = {
           Content = "这琴谱怎么办？",
+          ContentFR = "Et la partition ?",
           DialogueId = 51165918,
           GUID = "8016A86C",
           SpeakNpcId = 100001
         },
         [51165919] = {
           Content = "便将琴谱丢在这里吧。",
+          ContentFR = "Laissons-la ici.",
           DialogueId = 51165919,
           GUID = "8016A896",
           SpeakNpcId = 700387
         },
         [51165920] = {
           Content = "什么？你不要了？你们之前不就是因为这琴谱争得你死我活，头破血流吗？现在怎么说不要就不要了？",
+          ContentFR = "Quoi ?! Tu n’en veux plus ?! Vous étiez prêts à vous battre à mort pour elle... et maintenant tu l’abandonnes ?",
           DialogueId = 51165920,
           GUID = "8016A8C0",
           SpeakNpcId = 200002
         },
         [51165921] = {
           Content = "是，不要了，正是因为之前我们三人都将这琴谱看的太重，才会让我师体弱身残，我师兄化为白骨，而我也蹉跎半生。",
+          ContentFR = "Justement. C’est parce que nous lui accordions trop d’importance que tout cela est arrivé. Elle a brisé mon maître... réduit Qing Zhi à l’état d’os... et moi... j’ai perdu la moitié de ma vie à la poursuivre.",
           DialogueId = 51165921,
           GUID = "8016A8EA",
           SpeakNpcId = 700387
         },
         [51165922] = {
           Content = "人人都因为这琴谱近乎成痴，却又求不得。只有我还算幸运，在受挫之后又重新找回了半个自我。",
+          ContentFR = "Nous en étions tous devenus prisonniers. Et pourtant, aucun de nous ne l’a réellement obtenue. Moi seul ai eu de la chance... après avoir chuté... j’ai retrouvé une part de moi-même.",
           DialogueId = 51165922,
           GUID = "8016A914",
           SpeakNpcId = 700387
         },
         [51165923] = {
           Content = "虽然能再次见到这张琴谱简直像是做梦一样，但我却不敢打开，生怕打开了过后，发现经历的一切真的是一场梦，我还在雪地中弹琴。",
+          ContentFR = "La revoir aujourd’hui me semble irréel. Mais je n’ose pas l’ouvrir. De peur de découvrir que tout ceci n’était qu’un rêve et que je suis encore là... seul, dans la neige... à jouer.",
           DialogueId = 51165923,
           GUID = "8016A93E",
           SpeakNpcId = 700387
         },
         [51165924] = {
           Content = "而已经失去执念的我，说不定可就真的捱不过师父的斥责啦。",
+          ContentFR = "Et maintenant que j’ai laissé tomber cette obsession, je ne suis même plus sûr de pouvoir supporter les reproches de mon maître.",
           DialogueId = 51165924,
           GUID = "8016A968",
           SpeakNpcId = 700387
         },
         [51165925] = {
           Content = "所以啊，比起让我们这些个被琴谱影响了半生的人来说，还是你更适合拿着这卷琴谱。",
+          ContentFR = "C’est pourquoi nous, qui avons laissé cette partition peser sur la moitié de notre vie, c’est toi qui es le plus à même de la porter.",
           DialogueId = 51165925,
           GUID = "8016A992",
           SpeakNpcId = 700387
         },
         [51165926] = {
           Content = "我想，师兄也乐于见得最终由你来处理这卷琴谱，否则啊，他现在还在河底下躺着，看小鱼儿游泳呢。",
+          ContentFR = "Je pense que Qing Zhi en serait satisfait. Sinon... il serait encore au fond de l’eau, à regarder passer les poissons.",
           DialogueId = 51165926,
           GUID = "8016A9BC",
           SpeakNpcId = 700387
         },
         [51165927] = {
           Content = "那么，我就恭敬不如从命了。",
+          ContentFR = "Dans ce cas, je l’accepte.",
           DialogueId = 51165927,
           GUID = "8016A9E6",
           SpeakNpcId = 100001
         },
         [51165928] = {
           Content = "小仆从，原来逍遥生说的用琴谱作为奖励，是这样的方式啊……",
+          ContentFR = "Petit larbin, donc c’est ça que Xiaoyao voulait dire, utiliser la partition comme récompense...",
           DialogueId = 51165928,
           GUID = "8016AA10",
           SpeakNpcId = 200002
         },
         [51165929] = {
           Content = "不管怎么说，真相已然明了，奖励也的确到手了，走吧，白，留清商在这里静静。",
+          ContentFR = "Quoi qu’il en soit, la vérité a été révélée et nous avons obtenu ce que nous étions venus chercher. Allons-y, Snow... laissons Qing Shang seul un moment.",
           DialogueId = 51165929,
           GUID = "8016AA3A",
           SpeakNpcId = 100001
         },
         [51166001] = {
           Content = "师兄可知，自我离开先生后，每时每刻都在思考，莫非我真如他所说，心性天残，学艺不精，注定无法继承他的衣钵，重现他昔日辉煌。",
+          ContentFR = "Qing Zhi... après avoir quitté le maître, je me suis posé la même question chaque jour. Avait-il raison ? Suis-je né avec une nature défaillante ? Était-il écrit que je ne pourrais jamais hériter de son enseignement ni faire renaître sa gloire passée ?",
           DialogueId = 51166001,
           GUID = "8016B60A",
           SpeakNpcId = 700387
         },
         [51166002] = {
           Content = "于是我发了疯似地练琴，日夜不辍，直至一日我对镜自照时，发现自己居然已经双鬓斑白，那时才惊觉竟已荒废了这么多个年头。",
+          ContentFR = "Alors je me suis mis à pratiquer comme un forcené. Jour et nuit, sans jamais m’arrêter. Jusqu’au jour où, en me regardant dans un miroir, j’ai aperçu des mèches grisonnantes à mes tempes. C’est à cet instant que j’ai réalisé combien d’années s’étaient déjà envolées.",
           DialogueId = 51166002,
           GUID = "8016B634",
           SpeakNpcId = 700387
         },
         [51166003] = {
           Content = "我见到琴便害怕，我做梦时总看到你的脸，看到你在我面前举着琴谱笑着说你已经学会了，看到师父呵斥我为何总学不会。",
+          ContentFR = "J’en suis venu à craindre le qin. Dans mes rêves, je voyais ton visage... tu me souriais, disant que tu avais déjà maîtrisé la partition. Et le maître me reprochait encore de ne jamais y parvenir.",
           DialogueId = 51166003,
           GUID = "8016B65E",
           SpeakNpcId = 700387
         },
         [51166004] = {
           Content = "后来我便不弹琴了，我过上了正常的生活，结婚……生子……",
+          ContentFR = "Alors j’ai cessé de jouer. J’ai essayé de mener une vie ordinaire. Je me suis marié... j’ai eu un enfant...",
           DialogueId = 51166004,
           GUID = "8016B688",
           SpeakNpcId = 700387
         },
         [51166005] = {
           Content = "那日我家孩子啼哭不止，妻子摸不着头脑，便让我想办法哄他睡觉，我左思右想，最终看向了那琴。",
+          ContentFR = "Un jour, mon enfant n’arrêtait pas de pleurer. Ma femme ne savait plus quoi faire, alors elle m’a demandé de m’en occuper. J’ai longuement réfléchi... puis mon regard s’est posé sur le qin.",
           DialogueId = 51166005,
           GUID = "8016B6B2",
           SpeakNpcId = 700387
         },
         [51166006] = {
           Content = "我想起小时，晚上我总睡不着，你便用琴声为我助眠，那时师父还嫌我两吵，后来就把我们赶到偏院……",
+          ContentFR = "Je me suis souvenu de notre enfance. La nuit, quand je n’arrivais pas à dormir, tu jouais pour m’apaiser. Le maître trouvait que nous faisions trop de bruit... et nous envoyait dans la cour annexe.",
           DialogueId = 51166006,
           GUID = "8016B6DC",
           SpeakNpcId = 700387
@@ -213602,245 +213854,286 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
       return {
         [51166007] = {
           Content = "我拿起琴，第一次，没有想你，没有想师父，没有想那琴谱，就这样随意演奏了一曲，却奏出了我这一生最满意的曲子。",
+          ContentFR = "J’ai pris le qin. Pour la première fois, je n’ai pensé ni à toi, ni au maître, ni à cette partition. J’ai simplement joué... et c’est ainsi que j’ai produit le morceau dont je suis le plus fier de toute ma vie.",
           DialogueId = 51166007,
           GUID = "8016B706",
           SpeakNpcId = 700387
         },
         [51166008] = {
           Content = "也就是在那一瞬间，我才终于知晓，所谓琴谱不过一场浮云，我所追求的琴艺，出自我自己，只有我用本心滋养，才可找到正确的道路。",
+          ContentFR = "C’est à cet instant que j’ai compris : cette partition n’était qu’un nuage éphémère. La véritable musique ne se trouve pas sur le papier. Elle naît en soi. Ce n’est qu’en la nourrissant avec son propre cœur que l’on trouve la bonne voie.",
           DialogueId = 51166008,
           GUID = "8016B730",
           SpeakNpcId = 700387
         },
         [51166009] = {
           Content = "师兄，若是我们早些明白这道理，是不是师父也不会病魇缠身，是不是你也不会在这湖底等上这么久，是不是……",
+          ContentFR = "Qing Zhi... si nous avions compris cela plus tôt... le maître serait-il tombé malade ? Serais-tu resté au fond de ce lac pendant toutes ces années... Et moi...",
           DialogueId = 51166009,
           GUID = "8016B75A",
           SpeakNpcId = 700387
         },
         [51166010] = {
           Content = "是不是我还能听到那曲安眠的琴声……",
+          ContentFR = "Aurais-je encore pu entendre cette mélodie qui m’apaisait...",
           DialogueId = 51166010,
           GUID = "8016B784",
           SpeakNpcId = 700387
         },
         [51166101] = {
           Content = "一切众生，从无始来，迷己为物，失于本心，为物所转，故于是中，观大观小，可悲可叹，如何逍遥啊。",
+          ContentFR = "Tous les êtres, depuis des temps immémoriaux, se perdent dans l’illusion. Ils prennent le monde pour leur essence, oublient leur cœur véritable et se laissent emporter par les choses. Ils jugent le grand et le petit... Quelle tristesse. Comment trouver la liberté dans de telles conditions ?",
           DialogueId = 51166101,
           GUID = "8016C672",
           SpeakNpcId = 700385
         },
         [51166102] = {
           Content = "你们无由生不都是因为执念才留存于世间吗？逍遥生，你的执念是什么？",
+          ContentFR = "Les Wishen existent bien à cause de leurs obsessions, non ? Xiaoyao, quelle est la tienne ?",
           DialogueId = 51166102,
           GUID = "8016C69C",
           SpeakNpcId = 100001
         },
         [51166103] = {
           Content = "我？为人为魂，所求不过逍遥二字，你是觉得做人逍遥还是做无由生逍遥呢？",
+          ContentFR = "Moi ? Je ne cherche qu’une chose : la liberté. Dis-moi... est-on plus libre en tant qu’humain, ou en tant que Wishen ?",
           DialogueId = 51166103,
           GUID = "8016C6C6",
           SpeakNpcId = 700385
         },
         [51166104] = {
           Content = "这么想或许还是做无由生比较好，那你为什么如此了解这件事，又为什么要一路指引我们发掘事情的真相？",
+          ContentFR = "À ce compte-là, être Wishen semble plus enviable. Alors pourquoi en sais-tu autant ? Et pourquoi nous avoir guidés jusqu’à la vérité ?",
           DialogueId = 51166104,
           GUID = "8016C6F0",
           SpeakNpcId = 100001
         },
         [51166105] = {
           Content = "唔……为什么呢？是个好问题，但我逍遥生行事，自当随心所欲，穷尽逍遥呀！想到要做那便做了，这才有逍遥之心。",
+          ContentFR = "Hmm... pourquoi, en effet ? Bonne question. Mais moi, Xiaoyao, je ne fais que suivre mon cœur. Quand j’ai envie d’agir, j’agis. C’est cela, être libre.",
           DialogueId = 51166105,
           GUID = "8016C71A",
           SpeakNpcId = 700385
         },
         [51166106] = {
           Content = "我不相信。",
+          ContentFR = "Je n’y crois pas vraiment.",
           DialogueId = 51166106,
           GUID = "8016C744",
           SpeakNpcId = 100001
         },
         [51166107] = {
           Content = "随去罢！若是一切随他去，方成世间逍遥人！你对问题纠缠不休，小心也成执念，困缠伤神啊。",
+          ContentFR = "Libre à toi. Laisse simplement les choses suivre leur cours, et peut-être deviendras-tu, toi aussi, quelqu’un de libre. Mais si tu t’accroches trop à tes questions... prends garde qu’elles ne deviennent des obsessions, et n’enchaînent ton esprit.",
           DialogueId = 51166107,
           GUID = "8016C76E",
           SpeakNpcId = 700385
         },
         [51166201] = {
           Content = "那边那只无由生……看起来好眼熟呀，小仆从，我们要过去看看吗？",
+          ContentFR = "Hé... ce Wishen là-bas... il me dit quelque chose. Dis, petit larbin, on va voir ?",
           DialogueId = 51166201,
           GUID = "8016D6DA",
           SpeakNpcId = 200002
         },
         [51166202] = {
           Content = "在湖里？那不是早就被水泡发了吗？算了算了，小仆从，我们用<H>钓鱼</>的方式试试看能不能把琴谱捞上来吧！",
+          ContentFR = "Dans le lac ?! Mais elle doit être complètement fichue à force de tremper là-dedans ! Bon, tant pis ! On tente le coup — essayons avec <H>la pêche</>, on verra bien si on peut la remonter !",
           DialogueId = 51166202,
           GUID = "8016D704"
         },
         [51166203] = {
           Content = "那个……唔，就是那个……放在路边吗？不会把路过的人吓到吧？",
+          ContentFR = "Euh... ce truc... Tu l’as vraiment laissé sur le bord de la route ? Ça ne va pas effrayer les passants... ?",
           DialogueId = 51166203,
           GUID = "8016D72E",
           SpeakNpcId = 200002
         },
         [51166204] = {
           Content = "那里很偏僻，我用枯草做了一些掩盖，应该不会被人轻易发现。",
+          ContentFR = "L’endroit est isolé. Je l’ai recouvert de branches et d’herbes sèches, ça ne devrait pas se voir.",
           DialogueId = 51166204,
           GUID = "8016D758",
           SpeakNpcId = 100001
         },
         [51166205] = {
           Content = "我晚上一定会做噩梦的！",
+          ContentFR = "Je vais faire des cauchemars cette nuit... c’est sûr !",
           DialogueId = 51166205,
           GUID = "8016D782",
           SpeakNpcId = 200002
         },
         [51166206] = {
           Content = "所以他们产生嫌隙的原因就是因为逍遥生说的那琴谱，可是怎么会发生死了人这种可怕的事情呢？清商这人听起来挺好的，不至于和人结仇吧？",
+          ContentFR = "Donc... tout est lié à cette partition dont parlait Xiaoyao... Mais comment on en arrive à une mort pareille ? Qing Shang avait l’air quelqu’un de bien... difficile d’imaginer qu’il ait pu se faire des ennemis...",
           DialogueId = 51166206,
           GUID = "8016D7AC",
           SpeakNpcId = 200002
         },
         [51166207] = {
           Content = "如果是师徒之间因为琴谱的争执，从赶走的那个决定产生时就应该结束了，似乎的确不会上升到谋杀之类的事件……",
+          ContentFR = "Si le conflit se limitait à la partition, tout aurait dû s’arrêter au moment où il a été renvoyé... Ça ne ressemble pas à une affaire qui dégénère en meurtre.",
           DialogueId = 51166207,
           GUID = "8016D7D6",
           SpeakNpcId = 100001
         },
         [51166208] = {
           Content = "他明明那么努力想要练好琴艺了，却还是要被那个坏师父赶走！会不会……会不会是他在被赶走后，心灰意冷，投湖自尽？",
+          ContentFR = "Il s’est donné tant de mal pour progresser... et il a quand même été rejeté par ce maître horrible ! Tu crois que... après avoir été chassé... il a perdu tout espoir... et s’est jeté dans le lac ?",
           DialogueId = 51166208,
           GUID = "8016D800",
           SpeakNpcId = 200002
         },
         [51166209] = {
           Content = "感觉八九不离十……不知道那位宫先生知不知道自己的徒弟走后就……",
+          ContentFR = "C’est plausible... Reste à savoir si Maître Gong sait ce qui lui est arrivé...",
           DialogueId = 51166209,
           GUID = "8016D82A",
           SpeakNpcId = 100001
         },
         [51166210] = {
           Content = "那前面怎么有这么多玄色狴犴？小仆从快看，他们围着一个老爷爷呢！快出手帮忙把狴犴赶走吧！",
+          ContentFR = "Mais... pourquoi il y a autant de Bi’an obscurs là-bas ?! Petit larbin, regarde ! Ils encerclent un vieil homme ! Vite, aide-le !",
           DialogueId = 51166210,
           GUID = "8016D854",
           SpeakNpcId = 200002
         },
         [51166211] = {
           Content = "还在皓京之时，我曾施舍给一名乞丐食物。",
+          ContentFR = "À l’époque où j’étais encore à Haojing... j’ai un jour donné à manger à un mendiant.",
           DialogueId = 51166211,
           GUID = "8016D87E",
           SpeakNpcId = 700387
         },
         [51166212] = {
           Content = "很奇怪吧？在华胥，如何有这种吃不起饭之人？我当时很好奇，就与他说道了几句。",
+          ContentFR = "Étrange, n’est-ce pas ? À Huaxu, comment quelqu’un pourrait-il manquer de nourriture ? Intrigué, je me suis arrêté pour lui parler.",
           DialogueId = 51166212,
           GUID = "8016D8A8",
           SpeakNpcId = 700387
         },
         [51166213] = {
           Content = "那乞丐却说，他贪财，想要这世间所有的东西，无论是金珠玉翠还是绫罗珍宝，于是他苦苦追寻，花了大半辈子，却始终无法满足自己。",
+          ContentFR = "Il m’a dit qu’il était avide... Qu’il voulait tout posséder : or, jade, soieries, trésors... Il a passé la majeure partie de sa vie à les poursuivre... sans jamais être satisfait.",
           DialogueId = 51166213,
           GUID = "8016D8D2",
           SpeakNpcId = 700387
         },
         [51166214] = {
           Content = "于是他就在追求他想要的事物的道路上，循环往复，不断投入更多，直至一场意外导致家财散尽……",
+          ContentFR = "Alors il a continué, encore et encore... à investir toujours plus dans ce qu’il désirait... jusqu’au jour où un accident lui a tout fait perdre.",
           DialogueId = 51166214,
           GUID = "8016D8FC",
           SpeakNpcId = 700387
         },
         [51166215] = {
           Content = "那时我想，他可真傻，我断然不会做这种傻子一样的事，蹉跎了自己的人生。",
+          ContentFR = "À l’époque, je me disais qu’il était stupide... Je m’étais juré de ne jamais vivre ainsi... à gaspiller mon existence à courir après des illusions.",
           DialogueId = 51166215,
           GUID = "8016D926",
           SpeakNpcId = 700387
         },
         [51166216] = {
           Content = "呵呵……一眨眼，竟也过了半生呢……",
+          ContentFR = "Héhé... et me voilà, une moitié de vie déjà écoulée.",
           DialogueId = 51166216,
           GUID = "8016D950",
           SpeakNpcId = 700387
         },
         [51166217] = {
           Content = "这无由生也不知道安的是什么心，一会儿出现一会儿消失的……真是奇怪。",
+          ContentFR = "Ce Wishen... impossible de savoir ce qu’il prépare. Il apparaît, disparaît... franchement, il est louche.",
           DialogueId = 51166217,
           GUID = "8016D97A",
           SpeakNpcId = 200002
         },
         [51166218] = {
           Content = "话说，这位侠士，你刚才说……无由生？那是什么？",
+          ContentFR = "À propos, vous avez mentionné un Wishen... qu’est-ce que c’est ?",
           DialogueId = 51166218,
           GUID = "8016D9A4",
           SpeakNpcId = 700387
         },
         [51166219] = {
           Content = "哦！他看不见！没什么没什么，你就当我……随便说的好啦！",
+          ContentFR = "Ah ! Euh... rien du tout ! Disons que je parlais toute seule !",
           DialogueId = 51166219,
           GUID = "8016D9CE",
           SpeakNpcId = 200002
         },
         [51166220] = {
           Content = "二位侠士认为我师兄应葬在何处？",
+          ContentFR = "Où pensez-vous que Qing Zhi devrait être enterré ?",
           DialogueId = 51166220,
           GUID = "8016D9F8",
           SpeakNpcId = 700387
         },
         [51166221] = {
           Content = "我，很懂，唔……风水？你懂吧，所以听我的安排，准没错！",
+          ContentFR = "Moi, je m’y connais ! En... feng shui, tu vois ? Fais-moi confiance, ça sera parfait !",
           DialogueId = 51166221,
           GUID = "8016DA22",
           SpeakNpcId = 200002
         },
         [51166222] = {
           Content = "侠士仗义相助，在下的师兄黄泉有知，定当感慨万分啊！",
+          ContentFR = "Votre aide est précieuse... S’il peut en avoir conscience... il vous en sera profondément reconnaissant.",
           DialogueId = 51166222,
           GUID = "8016DA4C",
           SpeakNpcId = 700387
         },
         [51166223] = {
           Content = "师兄以前玩闹时，总让我背他，那时只觉得好重，要被压塌了。现在……原来只有骨头时，竟是如此轻飘飘的。",
+          ContentFR = "Quand nous étions enfants, il me forçait toujours à le porter sur mon dos... À l’époque, je le trouvais terriblement lourd... Et maintenant... il ne reste plus que des os... si légers...",
           DialogueId = 51166223,
           GUID = "8016DA76",
           SpeakNpcId = 700387
         },
         [51166301] = {
           Content = "好像根本没有什么有用的信息啊……",
+          ContentFR = "On dirait qu’on n’a rien appris de vraiment utile...",
           DialogueId = 51166301,
           GUID = "8016E742",
           SpeakNpcId = 200002
         },
         [51166302] = {
           Content = "如果是路过被杀，他有香囊在身，应该会有狴犴庇佑，如果是蓄意谋杀，那也应该早有应天尉前来调查，不至于在水底藏了这么久……",
+          ContentFR = "S’il avait été tué en chemin, son sachet d’encens aurait dû lui assurer la protection des Bi’an. Et si c’était un meurtre prémédité, les Magistrats de Yingtian seraient intervenus depuis longtemps. Un corps ne resterait pas caché sous l’eau aussi longtemps...",
           DialogueId = 51166302,
           GUID = "8016E76C",
           SpeakNpcId = 100001
         },
         [51166303] = {
           Content = "难道他只是个路过不幸落水的无辜倒霉蛋？",
+          ContentFR = "Alors... juste un pauvre type qui serait tombé à l’eau par accident ?",
           DialogueId = 51166303,
           GUID = "8016E796",
           SpeakNpcId = 200002
         },
         [51166304] = {
           Content = "只是这样的话，逍遥生为什么还要跟我们绕这些弯弯绕绕，白，你还记得黑市那些人吗？利用大风九章的漏洞，用绊马索致使他人摔倒，或者言语逼人自杀……",
+          ContentFR = "Si c’était si simple, Xiaoyao ne nous aurait pas fait tourner en rond. Tu te souviens des gens du marché noir ? Ceux qui exploitent les failles des Neuf Chapitres de Dafeng... Pièges, provocations... jusqu’à pousser quelqu’un à la mort.",
           DialogueId = 51166304,
           GUID = "8016E7C0",
           SpeakNpcId = 100001
         },
         [51166305] = {
           Content = "噫……真是一群坏家伙！不说我还想不起来，的确有这样的可能呢！",
+          ContentFR = "Pouah... quelle bande de monstres ! Maintenant que tu le dis... ce n’est pas impossible...",
           DialogueId = 51166305,
           GUID = "8016E7EA",
           SpeakNpcId = 200002
         },
         [51166306] = {
           Content = "无论怎么说，目前唯一已知的线索也就是椒兰村了，或许我们去村子里打探一番有没有一些与商有关的人比较好……",
+          ContentFR = "Quoi qu’il en soit, notre seule piste reste le Village de Jiaolan. On devrait aller voir s’il existe quelqu’un lié au nom de Shang.",
           DialogueId = 51166306,
           GUID = "8016E814",
           SpeakNpcId = 100001
         },
         [51166307] = {
           Content = "说得对！既然他提到了椒兰村，那死者多少会和那里有些关联，小仆从，我们快出发吧！",
+          ContentFR = "Exactement ! S’il a mentionné Jiaolan, il doit forcément y être lié d’une manière ou d’une autre. Petit larbin, en route !",
           DialogueId = 51166307,
           GUID = "8016E83E",
           SpeakNpcId = 200002
@@ -224016,6 +224309,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175201] = {
           Content = "{nickname}，你有珍视的家人吗？",
+          ContentFR = "{nickname}, as-tu quelqu’un qui t’est cher ?",
           DialogueId = 51175201,
           GUID = "801C9B6A",
           NextDialogue = 51175202,
@@ -224023,6 +224317,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175202] = {
           Content = "如果有一天，你的家人从这个世界上消失了，再也无迹可寻……那时候，你会怎么做呢？",
+          ContentFR = "Si un jour cette personne disparaissait sans laisser de trace... que ferais-tu ?",
           DialogueId = 51175202,
           GUID = "801C9B94",
           NextDialogue = 51175203,
@@ -224030,6 +224325,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175203] = {
           Content = "那我会不顾一切地找到她，把她带回来，无论付出什么样的代价。",
+          ContentFR = "Je la retrouverais, quoi qu’il en coûte. Et je la ramènerais.",
           DialogueId = 51175203,
           GUID = "801C9BBE",
           NextDialogue = 51175204,
@@ -224037,6 +224333,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175204] = {
           Content = "不顾一切……吗……",
+          ContentFR = "Quoi qu’il en coûte...",
           DialogueId = 51175204,
           GUID = "801C9BE8",
           NextDialogue = 51175205,
@@ -224044,11 +224341,13 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175205] = {
           Content = "（正当皓京因止流的布局陷入滔天大乱之际，在不为人知之处，一位祝由在心中暗暗下定了决心。）",
+          ContentFR = "Alors que Haojing sombre dans le chaos sous les manigances de Zhiliu, dans l’ombre, une Zhuyou prend silencieusement sa décision.",
           DialogueId = 51175205,
           GUID = "801C9C12"
         },
         [51175206] = {
           Content = "那，小仆从，我们赶紧往前……",
+          ContentFR = "Bon, petit larbin, on y va—",
           DialogueId = 51175206,
           GUID = "801C9C3C",
           NextDialogue = 51175207,
@@ -224056,6 +224355,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175207] = {
           Content = "……稍等。",
+          ContentFR = "... Attends.",
           DialogueId = 51175207,
           GUID = "801C9C66",
           NextDialogue = 51175208,
@@ -224063,6 +224363,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175208] = {
           Content = "抱歉，{nickname}，接下来的路，我……恐怕没法陪伴你了。",
+          ContentFR = "Je suis désolée, {nickname}. À partir d’ici... je ne pourrai pas t’accompagner.",
           DialogueId = 51175208,
           GUID = "801C9C90",
           NextDialogue = 51175209,
@@ -224070,6 +224371,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175209] = {
           Content = "倘若大风九章即将终结，在一切成为定局之前，我有必须完成的夙愿……",
+          ContentFR = "Si les Neuf Chapitres de Dafeng touchent à leur fin, alors avant que tout ne soit scellé... il y a quelque chose que je dois accomplir.",
           DialogueId = 51175209,
           GUID = "801C9CBA",
           NextDialogue = 51175210,
@@ -224077,6 +224379,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175210] = {
           Content = "您追求的阴阳逆转之法本不可得，但虞泉既因烛阴之灾的缘故连通往隙，那或许便可有解。",
+          ContentFR = "Ce que tu cherches — inverser le yin et le yang — n’est pas chose aisée. Mais si la Source de Yu s’est connectée à la Faille de l’Oubli à cause du Fléau de Zhuyin... alors une solution est peut-être possible.",
           DialogueId = 51175210,
           GUID = "801C9CE4",
           NextDialogue = 51175211,
@@ -224084,6 +224387,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175211] = {
           Content = "若在往隙开放时刻，前往忘川动用枯荣之术，届时，您想见之故人自当应召而来——前提是，她的灵魂还尚存于世。",
+          ContentFR = "Lorsque la Faille s’ouvrira, rends-toi au Fleuve de l’Oubli et utilise l’Art de l’Éphémère. La personne que tu souhaites revoir répondra à ton appel... à condition que son âme existe encore en ce monde.",
           DialogueId = 51175211,
           GUID = "801C9D0E",
           NextDialogue = 51175212,
@@ -224091,6 +224395,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175212] = {
           Content = "然后，您便可以使用枯荣术最终极的阴阳逆转秘法。只是，您应当知晓，那秘法要求施术者拥有极高资质，即使是祝由也罕有成功。而代价更是……",
+          ContentFR = "Ensuite, tu pourras tenter la véritable inversion du yin et du yang. Mais sache-le : cela exige des capacités exceptionnelles. Même parmi les Zhuyou, rares sont ceux qui y parviennent. Et le prix à payer est...",
           DialogueId = 51175212,
           GUID = "801C9D38",
           NextDialogue = 51175213,
@@ -224098,6 +224403,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175213] = {
           Content = "…………",
+          ContentFR = "...",
           DialogueId = 51175213,
           GUID = "801C9D62",
           NextDialogue = 51175214,
@@ -224105,6 +224411,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175214] = {
           Content = "扶疏，你不用道歉。作为朋友，我只希望你能实现自己的心愿。",
+          ContentFR = "Fushu, tu n’as pas à t’excuser. En tant qu’{性别:ami|amie}, je veux simplement que tu réalises ton souhait.",
           DialogueId = 51175214,
           GUID = "801C9D8C",
           NextDialogue = 51175215,
@@ -224112,12 +224419,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175215] = {
           Content = "……{nickname}，谢谢。",
+          ContentFR = "... Merci, {nickname}.",
           DialogueId = 51175215,
           GUID = "801C9DB6",
           SpeakNpcId = 700390
         },
         [51175216] = {
           Content = "抱歉，请原谅我的一意孤行。以及，请再稍等片刻，姐姐……",
+          ContentFR = "Pardonne-moi... et attends-moi encore un peu... grande sœur.",
           DialogueId = 51175216,
           GUID = "801C9DE0",
           GuideFacialId = "Sad",
@@ -224126,6 +224435,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175217] = {
           Content = "（按那位无由生所说，此时正是往隙现世之时。根据测算，入口应就在附近……）",
+          ContentFR = "<I>D’après ce Wishen, la faille devrait apparaître à ce moment précis. Si mes calculs sont exacts... l’entrée doit se trouver non loin d’ici.</>",
           DialogueId = 51175217,
           GUID = "801C9E0A",
           GuideFacialId = "Shock",
@@ -224134,6 +224444,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175218] = {
           Content = "谁……有谁能来……救、救我……",
+          ContentFR = "Quelqu’un... à l’aide... sauvez-moi...",
           DialogueId = 51175218,
           GUID = "801C9E34",
           NextDialogue = 51175219,
@@ -224141,6 +224452,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175219] = {
           Content = "（大风九章的终结只在一念之间，若是因施救而误了进入往隙的时辰……）",
+          ContentFR = "<I>Si je m’attarde ici… je risque de manquer le moment d’entrer dans la faille…</>",
           DialogueId = 51175219,
           GUID = "801C9E5E",
           NextOptions = {
@@ -224151,30 +224463,35 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175220] = {
           Content = "救。",
+          ContentFR = "<I>Sauver</>",
           DialogueId = 51175220,
           GUID = "801C9E88",
           NextDialogue = 51175221
         },
         [51175221] = {
           Content = "（若是对求救之人视若罔闻，扶疏还如何对得起家传祖训，对得起祝由的职责……）",
+          ContentFR = "Si j’ignore un appel à l’aide... comment pourrais-je encore prétendre suivre les préceptes de ma famille... ou remplir mon devoir de Zhuyou ?",
           DialogueId = 51175221,
           GUID = "801C9EB2",
           SpeakNpcId = 700390
         },
         [51175222] = {
           Content = "不救。",
+          ContentFR = "<I>Ne pas sauver</>",
           DialogueId = 51175222,
           GUID = "801C9EDC",
           NextDialogue = 51175223
         },
         [51175223] = {
           Content = "抱歉……",
+          ContentFR = "... Désolée.",
           DialogueId = 51175223,
           GUID = "801C9F06",
           SpeakNpcId = 700390
         },
         [51175224] = {
           Content = "咳，救……救救我……我不想死在这里……我的家人在等着我回去……",
+          ContentFR = "S’il vous plaît... aidez-moi... je ne veux pas mourir ici... ma famille m’attend...",
           DialogueId = 51175224,
           GUID = "801C9F30",
           NextDialogue = 51175225,
@@ -224182,6 +224499,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175225] = {
           Content = "……………………",
+          ContentFR = "...",
           DialogueId = 51175225,
           GUID = "801C9F5A",
           NextDialogue = 51175226,
@@ -224189,12 +224507,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175226] = {
           Content = "唉……",
+          ContentFR = "... Très bien",
           DialogueId = 51175226,
           GUID = "801C9F84",
           SpeakNpcId = 700390
         },
         [51175227] = {
           Content = "稍等，我来为你调理。",
+          ContentFR = "Attends. Je vais m’occuper de toi.",
           DialogueId = 51175227,
           GUID = "801C9FAE",
           NextDialogue = 51175228,
@@ -224202,6 +224522,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175228] = {
           Content = "咳……咳……是祝由大人吗？我好痛……",
+          ContentFR = "Vous êtes... une Zhuyou... ? J’ai mal...",
           DialogueId = 51175228,
           GUID = "801C9FD8",
           NextDialogue = 51175229,
@@ -224209,6 +224530,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175229] = {
           Content = "我会治愈你的伤势，还请忍耐片刻。",
+          ContentFR = "Reste immobile. Je vais refermer tes blessures.",
           DialogueId = 51175229,
           GUID = "801CA002",
           NextDialogue = 51175230,
@@ -224216,6 +224538,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175230] = {
           Content = "治疗患者。",
+          ContentFR = "<I>Soigner le blessé</>",
           DialogueId = 51175230,
           GUID = "801CA02C",
           NextOptions = {
@@ -224224,6 +224547,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175231] = {
           Content = "（奇怪？此等伤势，以枯荣之术不应当如此吃力……难道是受大风九章陷入紊乱的影响……）",
+          ContentFR = "<I>Étrange... ce type de blessure ne devrait pas être aussi difficile à traiter avec l’Art de l’Éphémère... Est-ce dû au désordre des Neuf Chapitres ?</>",
           DialogueId = 51175231,
           GUID = "801CA056",
           NextDialogue = 51175232,
@@ -224231,6 +224555,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175232] = {
           Content = "咳咳……谢谢……若是治不好……也不必……勉强……",
+          ContentFR = "Merci... si ça ne marche pas... ne vous épuisez pas...",
           DialogueId = 51175232,
           GUID = "801CA080",
           NextDialogue = 51175233,
@@ -224238,6 +224563,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175233] = {
           Content = "凝神，不要轻言放弃。",
+          ContentFR = "Concentre-toi. N’abandonne pas.",
           DialogueId = 51175233,
           GUID = "801CA0AA",
           NextDialogue = 51175234,
@@ -224245,6 +224571,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175234] = {
           Content = "继续施放枯荣之术。",
+          ContentFR = "<I>Continuer l’Art de l’Éphémère</>",
           DialogueId = 51175234,
           GUID = "801CA0D4",
           NextOptions = {
@@ -224253,6 +224580,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175235] = {
           Content = "（只要大风九章尚未消逝……）",
+          ContentFR = "Tant que les Neuf Chapitres n’ont pas disparu...",
           DialogueId = 51175235,
           GUID = "801CA0FE",
           NextDialogue = 51175236,
@@ -224260,6 +224588,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175236] = {
           Content = "唔……",
+          ContentFR = "... hn...",
           DialogueId = 51175236,
           GUID = "801CA128",
           NextDialogue = 51175237,
@@ -224267,6 +224596,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175237] = {
           Content = "（只要我再拼命一点……）",
+          ContentFR = "<I>Encore un peu...</>",
           DialogueId = 51175237,
           GUID = "801CA152",
           NextDialogue = 51175238,
@@ -224274,6 +224604,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175238] = {
           Content = "咳……呃…………",
+          ContentFR = "<I>kof...</> !",
           DialogueId = 51175238,
           GUID = "801CA17C",
           NextDialogue = 51175239,
@@ -224281,6 +224612,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175239] = {
           Content = "（只要我能坚持下去……）",
+          ContentFR = "<I>Je peux tenir...</>",
           DialogueId = 51175239,
           GUID = "801CA1A6",
           NextDialogue = 51175240,
@@ -224288,6 +224620,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175240] = {
           Content = "呃啊！！！",
+          ContentFR = "Aaaah !",
           DialogueId = 51175240,
           GUID = "801CA1D0",
           NextDialogue = 51175241,
@@ -224295,12 +224628,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175241] = {
           Content = "随着萦绕在扶疏与伤者之间的白色光点散去，扶疏的面色肉眼可见地苍白了起来。地上的伤者虽然脱离了危险，但却因剧痛而陷入了昏迷。",
+          ContentFR = "La lumière blanche qui enveloppait leurs corps se dissipe peu à peu. Le visage de Fushu pâlit visiblement. Le blessé est hors de danger, mais s’évanouit sous la douleur.",
           DialogueId = 51175241,
           GUID = "801CA1FA",
           NextDialogue = 51175242
         },
         [51175242] = {
           Content = "呼……呼…………",
+          ContentFR = "... ha...",
           DialogueId = 51175242,
           GUID = "801CA224",
           NextDialogue = 51175243,
@@ -224308,12 +224643,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175243] = {
           Content = "脉象已趋平缓，稍事休息便可醒转。抱歉不能留下来照顾你……但我该继续赶路了……",
+          ContentFR = "Son pouls s’est stabilisé. Avec du repos, il se réveillera. Désolée... je ne peux pas rester plus longtemps. Je dois poursuivre ma route.",
           DialogueId = 51175243,
           GUID = "801CA24E",
           SpeakNpcId = 700390
         },
         [51175244] = {
           Content = "往隙那边……应该来得……及……",
+          ContentFR = "La Faille de l’Oubli... je peux encore... y arriver...",
           DialogueId = 51175244,
           GUID = "801CA278",
           GuideFacialId = "Sad",
@@ -224322,6 +224659,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175301] = {
           Content = "我……这是在哪？",
+          ContentFR = "... Où suis-je ?",
           DialogueId = 51175301,
           GUID = "801CABD2",
           NextDialogue = 51175302,
@@ -224329,6 +224667,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175302] = {
           Content = "皓京，泽生阁。",
+          ContentFR = "À Haojing. À la Pharmacie Zesheng.",
           DialogueId = 51175302,
           GUID = "801CABFC",
           NextDialogue = 51175303,
@@ -224336,6 +224675,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175303] = {
           Content = "泽生阁……虽不知是何地界，但还是感谢各位在我昏迷这段时间的照料……",
+          ContentFR = "Pharmacie Zesheng... Je ne connais pas cet endroit. Mais... merci de vous être occupés de moi durant mon inconscience.",
           DialogueId = 51175303,
           GUID = "801CAC26",
           NextDialogue = 51175304,
@@ -224343,6 +224683,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175304] = {
           Content = "呵呵，昏迷……在您看来，确实只是一次力竭的昏迷啊。",
+          ContentFR = "« Inconscience »... Pour vous, ce n’était qu’un simple épuisement.",
           DialogueId = 51175304,
           GUID = "801CAC50",
           NextDialogue = 51175305,
@@ -224350,6 +224691,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175305] = {
           Content = "但事实是，扶风祖师当年为了延缓您的死亡，冰冻了您的身躯，泽生阁花了百年时间，才终于找到化解枯荣术沉疴之法，并将您唤醒。",
+          ContentFR = "Mais en réalité, pour retarder votre mort, Fufeng a gelé votre corps il y a cent ans. La Pharmacie Zesheng a mis un siècle à trouver un moyen de contrer les effets de l’Art de l’Éphémère... et à vous ramener à la vie.",
           DialogueId = 51175305,
           GUID = "801CAC7A",
           NextDialogue = 51175306,
@@ -224357,18 +224699,21 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175306] = {
           Content = "……百年？",
+          ContentFR = "... Cent ans ?",
           DialogueId = 51175306,
           GUID = "801CACA4",
           SpeakNpcId = 700390
         },
         [51175307] = {
           Content = "夜晚的泽生阁格外安静，院子中偶尔响起微弱的的虫鸣，扶疏翻阅着卷宗，指尖摩挲的沙沙声在这个夜晚显得无比清晰。",
+          ContentFR = "La Pharmacie Zesheng est plongée dans le silence nocturne. Quelques insectes murmurent dans la cour. Fushu feuillette des archives, le frottement du papier résonnant dans le calme.",
           DialogueId = 51175307,
           GUID = "801CACCE",
           NextDialogue = 51175308
         },
         [51175308] = {
           Content = "（看来我终究还是没能阻止百年前那场大疫的蔓延……哪怕烛阴最终被封印，那场大疫也还是夺走了无数生命。）",
+          ContentFR = "<I>Je n’ai donc pas réussi à arrêter la propagation de la Grande Épidémie... Même si Zhuyin a été scellé... elle a tout de même emporté d’innombrables vies.</>",
           DialogueId = 51175308,
           GUID = "801CACF8",
           NextDialogue = 51175309,
@@ -224376,6 +224721,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175309] = {
           Content = "（姐姐在大疫中将我冷冻，穷极一生寻找如何阻止枯荣之术反噬的办法，但直到她溘然长逝也未能成功，只得将希望寄托于后世之人。）",
+          ContentFR = "<I>Ma sœur m’a figée dans la glace au cœur de l’épidémie... Elle a consacré toute sa vie à chercher un moyen d’empêcher le contrecoup de l’Art de l’Éphémère... Mais elle est morte avant d’y parvenir... laissant cet espoir aux générations futures.</>",
           DialogueId = 51175309,
           GUID = "801CAD22",
           NextDialogue = 51175310,
@@ -224383,6 +224729,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175310] = {
           Content = "也就是如今泽生阁的药师们……",
+          ContentFR = "Ce sont donc les apothicaires de la Pharmacie Zesheng...",
           DialogueId = 51175310,
           GUID = "801CAD4C",
           NextDialogue = 51175311,
@@ -224390,6 +224737,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175311] = {
           Content = "扶疏阁下，夜深露重，还是早点回去休息吧。您才刚刚苏醒不久，就在这里不眠不休地翻阅卷宗……",
+          ContentFR = "Dame Fushu, la nuit est fraîche. Vous devriez vous reposer. Vous venez à peine de vous éveiller... et pourtant vous passez vos nuits ici.",
           DialogueId = 51175311,
           GUID = "801CAD76",
           NextDialogue = 51175312,
@@ -224397,6 +224745,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175312] = {
           Content = "泽生阁用了百年才找到医治您的方法，要是您因这等小事搞垮了身子，却是辜负了扶风祖师的殷殷切望。",
+          ContentFR = "Nous avons mis cent ans à vous sauver. Si vous deviez vous épuiser à nouveau pour si peu... ce serait trahir les espoirs de Fufeng.",
           DialogueId = 51175312,
           GUID = "801CADA0",
           NextDialogue = 51175313,
@@ -224404,6 +224753,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175313] = {
           Content = "…………",
+          ContentFR = "...",
           DialogueId = 51175313,
           GUID = "801CADCA",
           NextDialogue = 51175314,
@@ -224411,6 +224761,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175314] = {
           Content = "抱歉。但我熟悉的人事都已故去，这些卷宗，是我能找到与过往联系的唯一方法了。",
+          ContentFR = "Je comprends. Mais tous ceux que je connaissais ont disparu. Ces archives... sont le seul lien qu’il me reste avec le passé.",
           DialogueId = 51175314,
           GUID = "801CADF4",
           NextDialogue = 51175315,
@@ -224418,6 +224769,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175315] = {
           Content = "扶疏阁下……您今后真的要独自回到枯荣阁，继续行使祝由之责吗？泽生阁能够为您提供一处安生之所，您不必……",
+          ContentFR = "Dame Fushu... Souhaitez-vous vraiment retourner seule au Pavillon de l’Éphémère ? Reprendre votre rôle de Zhuyou ? Ici... vous pourriez vivre en paix...",
           DialogueId = 51175315,
           GUID = "801CAE1E",
           NextDialogue = 51175316,
@@ -224425,6 +224777,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175316] = {
           Content = "劳您费心了，我的去意已决。",
+          ContentFR = "Merci pour votre sollicitude. Mais ma décision est prise.",
           DialogueId = 51175316,
           GUID = "801CAE48",
           NextDialogue = 51175317,
@@ -224432,6 +224785,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175317] = {
           Content = "恕我提醒一句，扶疏阁下。以您现在的身体状况，再去频繁使用枯荣之术，恐有性命之虞。",
+          ContentFR = "Alors permettez-moi de vous prévenir. Dans votre état... utiliser trop souvent l’Art de l’Éphémère pourrait vous coûter la vie.",
           DialogueId = 51175317,
           GUID = "801CAE72",
           NextDialogue = 51175318,
@@ -224439,6 +224793,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175318] = {
           Content = "扶风祖师生前最为牵挂的就是您的身体。如今华胥药学已经在祖师的创举下开枝散叶，有我等药师代劳，您今后不必再去频繁使用伤身劳命的枯荣之术了。",
+          ContentFR = "Fufeng ne pensait qu’à votre santé. Aujourd’hui, la médecine de Huaxu a prospéré grâce à elle. Nous pouvons prendre le relais. Vous n’avez plus besoin de vous sacrifier ainsi.",
           DialogueId = 51175318,
           GUID = "801CAE9C",
           NextDialogue = 51175319,
@@ -224446,6 +224801,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175319] = {
           Content = "多谢提点。",
+          ContentFR = "Merci pour votre conseil.",
           DialogueId = 51175319,
           GUID = "801CAEC6",
           NextDialogue = 51175320,
@@ -224453,6 +224809,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175320] = {
           Content = "唉，扶风祖师说您素来性格执拗，今天我算是见识到了。",
+          ContentFR = "... Elle avait raison. Vous êtes d’une ténacité rare.",
           DialogueId = 51175320,
           GUID = "801CAEF0",
           NextDialogue = 51175321,
@@ -224460,6 +224817,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175321] = {
           Content = "……倘若活到今日的是姐姐，或许会做得比我好很多吧。",
+          ContentFR = "... Si ma sœur avait survécu... elle aurait sans doute fait bien mieux que moi.",
           DialogueId = 51175321,
           GUID = "801CAF1A",
           NextDialogue = 51175322,
@@ -224467,6 +224825,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175322] = {
           Content = "无由生尚能因执念尚存而流连于世间，我却无牵无挂，放眼黄泉碧落，举目无一亲人，也不知今后此身归处……尚不如一缕亡魂。",
+          ContentFR = "Même les Wishen restent dans ce monde à cause de leurs attaches... Et moi... je n’ai plus rien. Plus personne, ni ici... ni ailleurs.",
           DialogueId = 51175322,
           GUID = "801CAF44",
           NextDialogue = 51175323,
@@ -224474,6 +224833,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175323] = {
           Content = "扶疏阁下……",
+          ContentFR = "Dame Fushu...",
           DialogueId = 51175323,
           GUID = "801CAF6E",
           NextDialogue = 51175324,
@@ -224481,6 +224841,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175324] = {
           Content = "若是连祝由的家传职责也一并摈弃，扶疏便更不知生而为何了。",
+          ContentFR = "Si j’abandonne aussi mon devoir de Zhuyou... alors je ne saurai même plus pourquoi je vis.",
           DialogueId = 51175324,
           GUID = "801CAF98",
           NextDialogue = 51175325,
@@ -224488,6 +224849,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175325] = {
           Content = "生死有命，我的命，早就该在百年前的大疫中消逝……",
+          ContentFR = "Ma vie... aurait dû s’éteindre lors de la Grande Épidémie.",
           DialogueId = 51175325,
           GUID = "801CAFC2",
           NextDialogue = 51175326,
@@ -224495,12 +224857,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175326] = {
           Content = "枯荣之术乃扶氏的立身之本，扶氏一族因祝由而生，因枯荣而死，这就是我们的宿命……",
+          ContentFR = "L’Art de l’Éphémère est le fondement de notre lignée. Nous naissons pour cela... et nous mourons pour cela.",
           DialogueId = 51175326,
           GUID = "801CAFEC",
           SpeakNpcId = 700390
         },
         [51175327] = {
           Content = "刚刚是……昏倒了吗？……我竟已失态至此……",
+          ContentFR = "... Je viens de m’évanouir ? Je me suis laissée aller à ce point...",
           DialogueId = 51175327,
           GUID = "801CB016",
           NextDialogue = 51175328,
@@ -224508,12 +224872,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175328] = {
           Content = "现在……仍有点虚弱，但是不打紧……必须赶在大风九章终结之前……",
+          ContentFR = "Je suis encore faible... mais peu importe. Je dois atteindre la Faille de l’Oubli avant la fin des Neuf Chapitres de Dafeng.",
           DialogueId = 51175328,
           GUID = "801CB040",
           SpeakNpcId = 700390
         },
         [51175329] = {
           Content = "事到如今，必须先确认往隙的状况……",
+          ContentFR = "Je dois d’abord vérifier l’état de la faille.",
           DialogueId = 51175329,
           Duration = 5,
           GUID = "801CB06A",
@@ -224523,6 +224889,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175330] = {
           Content = "没想到我身为祝由，居然会有一天真切地希望烛阴……能多存在片刻……多延续一下往隙的存在……",
+          ContentFR = "Moi, une Zhuyou... espérer que Zhuyin survive encore un peu... juste pour maintenir la faille ouverte...",
           DialogueId = 51175330,
           Duration = 8,
           GUID = "801CB094",
@@ -224532,6 +224899,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175401] = {
           Content = "幸好，现在只需赶往忘川……",
+          ContentFR = "Bien... il ne me reste plus qu’à atteindre le Fleuve de l’Oubli.",
           DialogueId = 51175401,
           Duration = 5,
           GUID = "801CBC3A",
@@ -224541,6 +224909,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175402] = {
           Content = "这里比以往更显暴虐了……",
+          ContentFR = "Cet endroit... est encore plus instable qu’avant.",
           DialogueId = 51175402,
           Duration = 3,
           GUID = "801CBC64",
@@ -224550,6 +224919,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175403] = {
           Content = "祝由大人，为什么……",
+          ContentFR = "Zhuyou... pourquoi...",
           DialogueId = 51175403,
           Duration = 3,
           GUID = "801CBC8E",
@@ -224557,6 +224927,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175404] = {
           Content = "我一直相信您会来救我们，但为什么您突然消失了，留下我们在痛苦与绝望中死去！",
+          ContentFR = "Tu avais promis de nous sauver ! Pourquoi nous avoir abandonnés ?!",
           DialogueId = 51175404,
           Duration = 4,
           GUID = "801CBCB8",
@@ -224565,6 +224936,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175405] = {
           Content = "我们托付错了人……或许从一开始就不该指望什么祝由……",
+          ContentFR = "Nous avons cru en toi... Nous aurions dû nous en douter.",
           DialogueId = 51175405,
           Duration = 4,
           GUID = "801CBCE2",
@@ -224573,6 +224945,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175406] = {
           Content = "如果不是我……也许大家都能得救……",
+          ContentFR = "Si je n’avais pas échoué... peut-être qu’ils auraient survécu...",
           DialogueId = 51175406,
           Duration = 4,
           GUID = "801CBD0C",
@@ -224582,6 +224955,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175407] = {
           Content = "咳、咳……已经……很难调动大风九章的力量了……",
+          ContentFR = "<I>Kof... kof...</> Je n’arrive presque plus à mobiliser la puissance des Neuf Chapitres…",
           DialogueId = 51175407,
           GUID = "801CBD36",
           GuideFacialId = "Sad",
@@ -224590,6 +224964,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175408] = {
           Content = "祝由上膺天命，下悯苍生，应克己守节，普渡众生……此身为烛，此心为薪，燃魂济世……",
+          ContentFR = "Un Zhuyou reçoit le Mandat Céleste et doit protéger les êtres. Son corps est une flamme, son cœur en est le combustible. Se consumer pour sauver le monde.",
           DialogueId = 51175408,
           Duration = 7,
           GUID = "801CBD60",
@@ -224598,6 +224973,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175409] = {
           Content = "扶疏，你不可辱了家传使命。记住了吗？",
+          ContentFR = "Fushu. N’oublie jamais ton devoir.",
           DialogueId = 51175409,
           Duration = 4,
           GUID = "801CBD8A",
@@ -224606,6 +224982,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175410] = {
           Content = "扶疏记住了！",
+          ContentFR = "Je m’en souviendrai !",
           DialogueId = 51175410,
           Duration = 3,
           GUID = "801CBDB4",
@@ -224614,6 +224991,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175411] = {
           Content = "父亲……但若是有一天大风九章即将走向终结，我又该何去何从……",
+          ContentFR = "Père... si les Neuf Chapitres disparaissent... que deviendrai-je ?",
           DialogueId = 51175411,
           Duration = 4,
           GUID = "801CBDDE",
@@ -224623,6 +225001,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175412] = {
           Content = "忘川……就在前面了……",
+          ContentFR = "Le Fleuve de l’Oubli... est juste devant...",
           DialogueId = 51175412,
           Duration = 3,
           GUID = "801CBE08",
@@ -224632,6 +225011,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175413] = {
           Content = "姐姐……父亲寂灭了……",
+          ContentFR = "Grande sœur... Père... n’est plus...",
           DialogueId = 51175413,
           Duration = 3,
           GUID = "801CBE32",
@@ -224640,6 +225020,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175414] = {
           Content = "…………",
+          ContentFR = "...",
           DialogueId = 51175414,
           Duration = 3,
           GUID = "801CBE5C",
@@ -224656,6 +225037,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
       return {
         [51175415] = {
           Content = "小疏，你觉得这样对吗？",
+          ContentFR = "Dis-moi, Shu... tu crois vraiment que c’est la bonne voie ?",
           DialogueId = 51175415,
           Duration = 3,
           GUID = "801CBE86",
@@ -224664,6 +225046,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175416] = {
           Content = "但，以枯荣之术渡人苦厄，直至寂灭，这是祝由的使命……",
+          ContentFR = "Soulager les souffrances avec l’Art de l’Éphémère... jusqu’à en mourir... c’est le devoir d’un Zhuyou.",
           DialogueId = 51175416,
           Duration = 3,
           GUID = "801CBEB0",
@@ -224672,6 +225055,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175417] = {
           Content = "不，我偏不信这个理！小疏，我才不要死，也不要眼睁睁看着大家去死！",
+          ContentFR = "Non. Je refuse. Je ne veux pas mourir... et je refuse de regarder les autres mourir.",
           DialogueId = 51175417,
           Duration = 4,
           GUID = "801CBEDA",
@@ -224679,6 +225063,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175418] = {
           Content = "我一直知道……姐姐比我聪明，比我更懂得变通，比我更擅长应对危局。",
+          ContentFR = "Je l’ai toujours su... ma sœur était plus brillante que moi. Plus souple. Plus apte à faire face aux situations critiques.",
           DialogueId = 51175418,
           GUID = "801CBF04",
           NextDialogue = 51175419,
@@ -224686,6 +225071,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175419] = {
           Content = "我是一名祝由，也只是一名祝由……只能调用大风九章的力量，依赖枯荣之术的我，不过是在往必定熄灭的火焰中投入微不足道的柴薪。",
+          ContentFR = "Je ne suis qu’une Zhuyou... rien de plus. Je ne fais qu’emprunter la puissance des Neuf Chapitres de Dafeng, m’appuyer sur l’Art de l’Éphémère... ajouter une brindille dérisoire à un feu voué à s’éteindre.",
           DialogueId = 51175419,
           GUID = "801CBF2E",
           NextDialogue = 51175420,
@@ -224693,6 +225079,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175420] = {
           Content = "能够扭转乾坤，以烈火照亮世界的人永远不会是我，只会是姐姐和{nickname}这样的人。",
+          ContentFR = "Ceux capables de renverser le destin et d’illuminer le monde ne seront jamais des gens comme moi. Seulement toi... et des personnes comme {nickname}.",
           DialogueId = 51175420,
           GUID = "801CBF58",
           NextDialogue = 51175421,
@@ -224700,6 +225087,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175421] = {
           Content = "所以我谨在此，以枯荣之术呼唤寄托在此物之上的灵魂，从忘川的渊流中苏醒吧。",
+          ContentFR = "Alors ici, j’invoque, par l’Art de l’Éphémère, l’âme liée à cet objet... Éveille-toi depuis les profondeurs du Fleuve de l’Oubli.",
           DialogueId = 51175421,
           GUID = "801CBF82",
           NextDialogue = 51175422,
@@ -224707,12 +225095,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175422] = {
           Content = "莹白的光点笼罩着扶疏手中的竹笛，但回应扶疏的，只有忘川拍打彼岸的涛涛声。",
+          ContentFR = "Une douce lumière se rassemble autour de la flûte de bambou dans ses mains... mais seul le grondement du fleuve lui répond.",
           DialogueId = 51175422,
           GUID = "801CBFAC",
           NextDialogue = 51175423
         },
         [51175423] = {
           Content = "…………",
+          ContentFR = "...",
           DialogueId = 51175423,
           GUID = "801CBFD6",
           NextDialogue = 51175424,
@@ -224720,6 +225110,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175424] = {
           Content = "是啊……过去了无数年月……这才是理所当然的结果……",
+          ContentFR = "Oui... tant d’années ont passé... C’était à prévoir.",
           DialogueId = 51175424,
           GUID = "801CC000",
           NextDialogue = 51175425,
@@ -224727,6 +225118,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175425] = {
           Content = "但是……如果还能听到的话，就请回应我吧！",
+          ContentFR = "Mais... si tu peux encore m’entendre... réponds-moi !",
           DialogueId = 51175425,
           GUID = "801CC02A",
           NextDialogue = 51175426,
@@ -224734,6 +225126,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175426] = {
           Content = "……当年未能说出口的抱歉……我真的很想……亲口告诉你……姐姐……",
+          ContentFR = "... Les excuses que je n’ai jamais su te dire... je veux... te les dire de vive voix... grande sœur...",
           DialogueId = 51175426,
           GUID = "801CC054",
           NextDialogue = 51175427,
@@ -224741,12 +225134,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175427] = {
           Content = "扶疏的话语开始变得有些哽咽，她竭力呼吸，努力平复心中的情绪，但还是止不住一滴眼泪顺着脸颊滑落，滴落到了手中的竹笛上。",
+          ContentFR = "Sa voix se brise. Elle tente de se maîtriser, mais une larme glisse le long de sa joue et tombe sur la flûte.",
           DialogueId = 51175427,
           GUID = "801CC07E",
           NextDialogue = 51175428
         },
         [51175428] = {
           Content = "咿咿呀，咿！",
+          ContentFR = "Yi-ya— !",
           DialogueId = 51175428,
           GUID = "801CC0A8",
           NextDialogue = 51175429,
@@ -224754,6 +225149,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175429] = {
           Content = "……是你……你怎么在这里……？",
+          ContentFR = "... Toi... Que fais-tu ici... ?",
           DialogueId = 51175429,
           GUID = "801CC0D2",
           NextDialogue = 51175430,
@@ -224761,12 +225157,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175430] = {
           Content = "莹白的光点自竹笛蔓延至无由生的身上，待到光点散去，一道模糊的人影出现在了扶疏的面前。",
+          ContentFR = "La lumière quitte la flûte et enveloppe le Wishen. Lorsqu’elle se dissipe, une silhouette floue apparaît devant Fushu.",
           DialogueId = 51175430,
           GUID = "801CC0FC",
           NextDialogue = 51175431
         },
         [51175431] = {
           Content = "……",
+          ContentFR = "...",
           DialogueId = 51175431,
           GUID = "801CC126",
           NextDialogue = 51175432,
@@ -224774,6 +225172,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175432] = {
           Content = "姐，姐姐……原来……是你……",
+          ContentFR = "... Grande sœur... c’est donc toi...",
           DialogueId = 51175432,
           GUID = "801CC150",
           NextDialogue = 51175433,
@@ -224781,6 +225180,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175433] = {
           Content = "我遍寻不得，原来是因为你一直跟在我身边……",
+          ContentFR = "Je t’ai cherchée partout... sans savoir que tu étais à mes côtés depuis le début...",
           DialogueId = 51175433,
           GUID = "801CC17A",
           NextDialogue = 51175434,
@@ -224788,6 +225188,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175434] = {
           Content = "…………",
+          ContentFR = "...",
           DialogueId = 51175434,
           GUID = "801CC1A4",
           NextDialogue = 51175435,
@@ -224795,6 +225196,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175435] = {
           Content = "太好了……你的灵魂还尚存于世，那么一切都还来得及……",
+          ContentFR = "C’est merveilleux... Ton âme est toujours là... Alors tout n’est pas perdu.",
           DialogueId = 51175435,
           GUID = "801CC1CE",
           NextDialogue = 51175436,
@@ -224802,6 +225204,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175436] = {
           Content = "姐姐，请再稍等片刻……",
+          ContentFR = "Grande sœur... attends encore un peu.",
           DialogueId = 51175436,
           GUID = "801CC1F8",
           NextDialogue = 51175437,
@@ -224809,6 +225212,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175437] = {
           Content = "枯荣流转，月盈而亏……扶疏愿<H>以己身性命为代价</>，换取面前人重返世间。",
+          ContentFR = "Les flux de vie et de mort se succèdent, la lune croît puis décroît... Je <H>donne ma vie en échange</> du retour de celle qui se tient devant moi.",
           DialogueId = 51175437,
           GUID = "801CC222",
           NextDialogue = 51175438,
@@ -224816,6 +225220,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175438] = {
           Content = "只有姐姐……才是这个时代所需要的医师。我、祝由、扶氏一族的传承，都该随着大风九章一起，埋葬于历史的角落之中了……",
+          ContentFR = "Seule ma sœur est la guérisseuse dont ce monde a besoin. Quant à moi... aux Zhuyou... de la Maison Fu… tout cela doit disparaître avec les Neuf Chapitres de Dafeng... et être enfoui dans l’oubli.",
           DialogueId = 51175438,
           GUID = "801CC24C",
           NextDialogue = 51175439,
@@ -224823,6 +225228,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175439] = {
           Content = "实在荒唐！",
+          ContentFR = "Ça suffit !",
           DialogueId = 51175439,
           GUID = "801CC276",
           NextDialogue = 51175440,
@@ -224830,6 +225236,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175440] = {
           Content = "姐姐！你能说话了！你为何要阻止我……？",
+          ContentFR = "Grande sœur ! Tu peux parler... Pourquoi m’arrêter ?",
           DialogueId = 51175440,
           GUID = "801CC2A0",
           NextDialogue = 51175441,
@@ -224837,6 +225244,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175441] = {
           Content = "你这倔脾气妮子！我好不容易把你救回来的一条命，差点就这样被你糟践了去。",
+          ContentFR = "Espèce de tête de mule ! J’ai fait tout ce que j’ai pu pour te ramener à la vie, et tu allais la gaspiller ainsi ?",
           DialogueId = 51175441,
           GUID = "801CC2CA",
           NextDialogue = 51175442,
@@ -224844,6 +225252,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175442] = {
           Content = "还好……还好我放心不下，就算是化身无由生，也要缠着你。还得是我有先见之明，方才阻止你这傻丫头去送命！",
+          ContentFR = "Heureusement que je ne t’ai pas quittée. Même devenue un Wishen, je suis restée à tes côtés. Je savais bien que tu finirais par tenter une folie pareille.",
           DialogueId = 51175442,
           GUID = "801CC2F4",
           NextDialogue = 51175443,
@@ -224851,6 +225260,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175443] = {
           Content = "姐姐……对不起，当年我不该说那些话……",
+          ContentFR = "Grande sœur... pardon... Je n’aurais pas dû dire ces choses à l’époque...",
           DialogueId = 51175443,
           GUID = "801CC31E",
           NextDialogue = 51175444,
@@ -224858,6 +225268,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175444] = {
           Content = "我的傻妹妹，我们从小到大都吵过多少架了。一些争执龃龉我怎会放在心上。",
+          ContentFR = "Ma pauvre petite sœur... On s’est disputées combien de fois depuis qu’on est enfants ? Tu crois vraiment que je m’arrête à ça ?",
           DialogueId = 51175444,
           GUID = "801CC348",
           NextDialogue = 51175445,
@@ -224865,6 +225276,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175445] = {
           Content = "可是姐姐……！纵使你费尽心思把我救活，这条捡来的性命，我也不知道该如何是好！尚不如还给你，换得你活在这世上！！",
+          ContentFR = "Mais malgré tout ce que tu as fait pour me sauver... je ne sais pas quoi faire de cette vie qu’on m’a rendue. Autant te la rendre à toi... pour que tu puisses vivre à nouveau !",
           DialogueId = 51175445,
           GUID = "801CC372",
           NextDialogue = 51175446,
@@ -224872,6 +225284,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175446] = {
           Content = "唉…………",
+          ContentFR = "...",
           DialogueId = 51175446,
           GUID = "801CC39C",
           NextDialogue = 51175447,
@@ -224879,6 +225292,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175447] = {
           Content = "妹妹啊……你总是不顾己身，好像只要再压榨自己一点，再拼命一点，就能挽救一切……",
+          ContentFR = "Ma petite sœur... tu continues à te consumer pour les autres. Comme si en t’épuisant encore davantage... tu pouvais tout sauver.",
           DialogueId = 51175447,
           GUID = "801CC3C6",
           NextDialogue = 51175448,
@@ -224886,6 +225300,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175448] = {
           Content = "可是生命自有叶荣叶枯之常理，牺牲自己渡人的祝由之道无法长久。医者说到底只能顺势而为，对抗疾病，而非对抗生死规律本身。",
+          ContentFR = "Mais la vie a ses cycles. Floraison, déclin... Un Zhuyou ne peut pas se sacrifier indéfiniment. Nous soignons les maladies, pas les lois de la vie et de la mort elles-mêmes.",
           DialogueId = 51175448,
           GUID = "801CC3F0",
           NextDialogue = 51175449,
@@ -224893,6 +225308,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175449] = {
           Content = "我这一辈子，已经活得够啦，精精彩彩。世界各地我都走过，一生的药学追求也已了无遗憾。",
+          ContentFR = "Moi, j’ai vécu ma vie pleinement. J’ai parcouru le monde. J’ai accompli ce que je voulais.",
           DialogueId = 51175449,
           GUID = "801CC41A",
           NextDialogue = 51175450,
@@ -224900,6 +225316,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175450] = {
           Content = "可是你呢？",
+          ContentFR = "Mais toi ?",
           DialogueId = 51175450,
           GUID = "801CC444",
           NextDialogue = 51175451,
@@ -224907,6 +225324,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175451] = {
           Content = "你的生命才刚刚开始。直到你找到活下去的意义，安安稳稳过完一生，那时候，我们再在忘川之中相会吧。",
+          ContentFR = "Ta vie ne fait que commencer. Trouve ta propre voie. Vis pleinement. Et quand ton chemin prendra fin... nous nous retrouverons au Fleuve de l’Oubli.",
           DialogueId = 51175451,
           GUID = "801CC46E",
           NextDialogue = 51175452,
@@ -224914,6 +225332,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175452] = {
           Content = "往隙要崩塌了……回去吧，扶疏……",
+          ContentFR = "La Faille de l’Oubli est en train de s’effondrer... rentre, Fushu...",
           DialogueId = 51175452,
           GUID = "801CC498",
           NextDialogue = 51175453,
@@ -224921,6 +225340,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175453] = {
           Content = "用你……喜欢的方式……去度过……这一生……",
+          ContentFR = "Vis... comme ton cœur le souhaite...",
           DialogueId = 51175453,
           GUID = "801CC4C2",
           NextDialogue = 51175454,
@@ -224928,6 +225348,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175454] = {
           Content = "这是……母亲说过的……",
+          ContentFR = "C’était... les paroles de mère...",
           DialogueId = 51175454,
           GUID = "801CC4EC",
           NextDialogue = 51175455,
@@ -224935,6 +225356,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175455] = {
           Content = "姐姐……姐姐！",
+          ContentFR = "Grande sœur... grande sœur !",
           DialogueId = 51175455,
           GUID = "801CC516",
           NextDialogue = 51175456,
@@ -224942,6 +225364,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175456] = {
           Content = "好好活下去……你的路……还很漫长……",
+          ContentFR = "Vis... Ta route est encore longue...",
           DialogueId = 51175456,
           GUID = "801CC540",
           NextDialogue = 51175457,
@@ -224949,12 +225372,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175457] = {
           Content = "……姐姐！",
+          ContentFR = "... Grande sœur !",
           DialogueId = 51175457,
           GUID = "801CC56A",
           SpeakNpcId = 700390
         },
         [51175501] = {
           Content = "姐姐……为什么……",
+          ContentFR = "Grande sœur... pourquoi...",
           DialogueId = 51175501,
           GUID = "801CCCA2",
           GuideFacialId = "Sad",
@@ -224963,6 +225388,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175502] = {
           Content = "放心！只是轻微骨折，我给你敷上药，打上夹板固定好了。现在还请不要剧烈运动，在旁边先休息一下。",
+          ContentFR = "Ne bougez pas ! Ce n’est qu’une fracture légère. J’ai posé une attelle. Reposez-vous.",
           DialogueId = 51175502,
           GUID = "801CCCCC",
           NextDialogue = 51175503,
@@ -224970,12 +225396,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175503] = {
           Content = "不行不行，我大哥也是泽生阁的药师，他这会肯定在城里哪个地方救人呢，我得过去帮他！",
+          ContentFR = "Non, je ne peux pas ! Mon frère est apothicaire à la Pharmacie Zesheng, il doit être quelque part en train d’aider ! Je dois y aller aussi !",
           DialogueId = 51175503,
           GUID = "801CCCF6",
           SpeakNpcName = "UI_CMNpc_Name_JidongHuangzhe"
         },
         [51175504] = {
           Content = "咦？",
+          ContentFR = "... ?",
           DialogueId = 51175504,
           GUID = "801CCD20",
           GuideFacialId = "Shock",
@@ -224984,6 +225412,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175505] = {
           Content = "胡闹！泽生阁的药师人手足够，尚不用一个伤员来帮忙！",
+          ContentFR = "Ne dites pas de bêtises ! Nous avons assez de monde. Un blessé n’a rien à faire là-bas !",
           DialogueId = 51175505,
           GUID = "801CCD4A",
           NextDialogue = 51175506,
@@ -224991,6 +225420,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175506] = {
           Content = "大夫，我这就一点小擦伤而已，我自己缠个绷带就好，你去帮其他人吧。",
+          ContentFR = "Ce n’est qu’une égratignure. Je peux me débrouiller seul. Allez aider les autres.",
           DialogueId = 51175506,
           GUID = "801CCD74",
           NextDialogue = 51175507,
@@ -224998,12 +225428,14 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175507] = {
           Content = "嗯，动乱还未结束，你多加小心。",
+          ContentFR = "D’accord. Faites attention. La situation n’est pas encore totalement stabilisée.",
           DialogueId = 51175507,
           GUID = "801CCD9E",
           SpeakNpcName = "UI_CMNpc_Name_ZeshengXuetu"
         },
         [51175508] = {
           Content = "这是……",
+          ContentFR = "C’est donc...",
           DialogueId = 51175508,
           GUID = "801CCDC8",
           GuideFacialId = "Shock",
@@ -225012,6 +225444,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175509] = {
           Content = "扶疏阁下，您来了。",
+          ContentFR = "Fushu. Vous êtes revenue.",
           DialogueId = 51175509,
           GUID = "801CCDF2",
           NextDialogue = 51175510,
@@ -225019,6 +225452,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175510] = {
           Content = "现在……情势如何？",
+          ContentFR = "Quelle est la situation ?",
           DialogueId = 51175510,
           GUID = "801CCE1C",
           NextDialogue = 51175511,
@@ -225026,6 +225460,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175511] = {
           Content = "数百伤员都已经被安置完毕，还有更多泽生阁的药师正在外出奔走救治。这场大乱虽起势仓促，但影响终究是被控制下来了。",
+          ContentFR = "Des centaines de blessés ont été pris en charge. D’autres apothicaires sont encore sur le terrain. L’agitation a été contenue.",
           DialogueId = 51175511,
           GUID = "801CCE46",
           NextDialogue = 51175512,
@@ -225033,6 +225468,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175512] = {
           Content = "…………",
+          ContentFR = "...",
           DialogueId = 51175512,
           GUID = "801CCE70",
           NextDialogue = 51175513,
@@ -225040,6 +225476,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175513] = {
           Content = "扶疏阁下，您是想到百年前那场大疫了吗？",
+          ContentFR = "Vous pensez à la Grande Épidémie d’il y a cent ans, n’est-ce pas ?",
           DialogueId = 51175513,
           GUID = "801CCE9A",
           NextDialogue = 51175514,
@@ -225047,6 +225484,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175514] = {
           Content = "当时……我虽殚精竭虑，不眠不休，但终究治不来那么多伤者。我只能在他们的痛苦哀嚎声前束手无策……",
+          ContentFR = "À l’époque... j’ai tout donné. Jour et nuit. Mais il y avait trop de blessés. Je ne pouvais que les regarder souffrir... impuissante.",
           DialogueId = 51175514,
           GUID = "801CCEC4",
           NextDialogue = 51175515,
@@ -225054,6 +225492,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175515] = {
           Content = "呵呵。扶疏阁下，一人之力渡不尽千万人的病厄，但以千万人之力，便可渡尽千万人的病厄。",
+          ContentFR = "Une seule personne ne peut pas sauver des milliers. Mais si des milliers s’unissent, alors chacun peut être sauvé.",
           DialogueId = 51175515,
           GUID = "801CCEEE",
           NextDialogue = 51175516,
@@ -225061,6 +225500,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175516] = {
           Content = "现在时机成熟，正好把扶风祖师的一句话转达给您。",
+          ContentFR = "Le moment est venu de vous transmettre une parole de Fufeng.",
           DialogueId = 51175516,
           GUID = "801CCF18",
           NextDialogue = 51175517,
@@ -225068,6 +225508,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175517] = {
           Content = "“我想象中的华胥，会因为药学的蓬勃发展，而不再需要祝由、扶风或是任何一个具体的人。”",
+          ContentFR = "« Le Huaxu que j’imagine n’aura plus besoin des Zhuyou, ni de moi, ni d’aucune personne en particulier. »",
           DialogueId = 51175517,
           GUID = "801CCF42",
           NextDialogue = 51175518,
@@ -225075,6 +225516,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175518] = {
           Content = "“医术不再是只能依赖神明的神术，它终将通过世世代代的传承，成为属于每一位医师、每一个普通人的奇迹。”",
+          ContentFR = "« La médecine ne sera plus un art dépendant du divin. Elle deviendra, au fil des générations, quelque chose que chacun pourra maîtriser. Un miracle appartenant à tous. »",
           DialogueId = 51175518,
           GUID = "801CCF6C",
           NextDialogue = 51175519,
@@ -225082,6 +225524,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175519] = {
           Content = "不知祝由大人看来，我们这些后人是否对得起祖师的这番教诲呢？",
+          ContentFR = "Dites-moi... avons-nous été à la hauteur de son idéal ?",
           DialogueId = 51175519,
           GUID = "801CCF96",
           NextDialogue = 51175520,
@@ -225089,6 +225532,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175520] = {
           Content = "那边还有伤员，来人搭把手。",
+          ContentFR = "Il y a encore des blessés ici ! Venez aider !",
           DialogueId = 51175520,
           GUID = "801CCFC0",
           NextDialogue = 51175521,
@@ -225096,6 +225540,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175521] = {
           Content = "我家里还有担架，等我回去拿一下！",
+          ContentFR = "J’ai une civière chez moi, j’arrive !",
           DialogueId = 51175521,
           GUID = "801CCFEA",
           NextDialogue = 51175522,
@@ -225103,6 +225548,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175522] = {
           Content = "……",
+          ContentFR = "...",
           DialogueId = 51175522,
           GUID = "801CD014",
           NextDialogue = 51175523,
@@ -225110,6 +225556,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175523] = {
           Content = "大乱虽已结束，但伤员的安置还不可大意。恕我失陪，我要继续去检查善后情况……",
+          ContentFR = "La crise est passée, mais il reste encore beaucoup à faire. Je dois m’occuper de la suite. Veuillez m’excuser.",
           DialogueId = 51175523,
           GUID = "801CD03E",
           NextDialogue = 51175524,
@@ -225117,6 +225564,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175524] = {
           Content = "请等一下。",
+          ContentFR = "Attendez.",
           DialogueId = 51175524,
           GUID = "801CD068",
           NextDialogue = 51175525,
@@ -225124,6 +225572,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175525] = {
           Content = "哦？",
+          ContentFR = "Oui ?",
           DialogueId = 51175525,
           GUID = "801CD092",
           NextDialogue = 51175526,
@@ -225131,6 +225580,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175526] = {
           Content = "我还……不太清楚，但身为医者的使命告诉我，现在不是驻足迷茫的时刻。",
+          ContentFR = "Je ne comprends pas encore tout... mais une chose est certaine. En tant que médecin... je ne peux pas rester immobile.",
           DialogueId = 51175526,
           GUID = "801CD0BC",
           NextDialogue = 51175527,
@@ -225138,6 +225588,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175527] = {
           Content = "我想与泽生阁的众人同行，尽一丝绵薄之力——不是以祝由，而是以医者的身份。",
+          ContentFR = "Je veux vous aider. Non pas en tant que Zhuyou... mais simplement en tant que guérisseuse.",
           DialogueId = 51175527,
           GUID = "801CD0E6",
           NextDialogue = 51175528,
@@ -225145,6 +225596,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175528] = {
           Content = "呵呵，有医学基础的您愿意出手帮助，确实能缓解泽生阁的部分压力。以后，还请多多关照了。",
+          ContentFR = "Avec vos bases, votre aide sera précieuse. Nous serons heureux de vous compter parmi nous.",
           DialogueId = 51175528,
           GUID = "801CD110",
           NextDialogue = 51175529,
@@ -225152,6 +225604,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175529] = {
           Content = "不敢当。于药理一道，扶疏只是初学者。今后烦请你们指教了。",
+          ContentFR = "Je suis encore débutante en médecine... j’aurai beaucoup à apprendre de vous.",
           DialogueId = 51175529,
           GUID = "801CD13A",
           NextDialogue = 51175530,
@@ -225159,6 +225612,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175530] = {
           Content = "（姐姐……这是你想让我去寻找的答案吗？）",
+          ContentFR = "<I>Sœur... est-ce la réponse que tu voulais que je trouve ?</>",
           DialogueId = 51175530,
           GUID = "801CD164",
           SpeakNpcId = 700390

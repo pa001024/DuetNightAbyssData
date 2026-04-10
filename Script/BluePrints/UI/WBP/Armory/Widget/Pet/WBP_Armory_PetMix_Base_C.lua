@@ -629,6 +629,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:OnPetLocked(ErrCode, UniqueId, IsLocked)
+  self:BlockAllUIInput(false)
   if not ErrorCode:Check(ErrCode) then
     return
   end

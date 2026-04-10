@@ -12,6 +12,7 @@ function M:CreateNode(Flow, TalkTask, Params)
   local Duration = Params.duration or 0
   local CurveName = Params.Blend
   local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+  local GameMode = UGameplayStatics.GetGameMode(GWorld.GameInstance)
   if CurveName and nil == ECameraBlendFunc[CurveName] then
     local Message = string.format("Invalid curve name: %s, DialogueId: %d", CurveName, Flow.DialogueId)
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, ScriptLogType, "CameraMoveTo脚本执行失败: Curve无效", Message)
@@ -45,12 +46,16 @@ function M:CreateNode(Flow, TalkTask, Params)
   local CacheControllerPausedParam = PlayerController.bShouldPerformFullTickWhenPaused
   CameraMoveToNode.OnPause:Add(CameraMoveToNode, function(Node)
     PlayerController.bShouldPerformFullTickWhenPaused = false
-    UGameplayStatics.SetGamePaused(GWorld.GameInstance, true)
+    if IsValid(GameMode) and GameMode:IsA(UE4.AEMGameMode) then
+      GameMode:SetGamePaused("TalkCamera", true)
+    end
     TalkContext.TalkCameraManager:PauseCameraBreathe(true)
   end)
   CameraMoveToNode.OnResume:Add(CameraMoveToNode, function(Node)
     PlayerController.bShouldPerformFullTickWhenPaused = CacheControllerPausedParam
-    UGameplayStatics.SetGamePaused(GWorld.GameInstance, false)
+    if IsValid(GameMode) and GameMode:IsA(UE4.AEMGameMode) then
+      GameMode:SetGamePaused("TalkCamera", false)
+    end
     TalkContext.TalkCameraManager:PauseCameraBreathe(false)
   end)
   return CameraMoveToNode
