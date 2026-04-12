@@ -757,6 +757,8 @@ class SubRegionProcessor(BaseProcessor):
 
         points = self._collect_sub_region_point_positions(sub_region_id)
         if not points:
+            points = self._collect_target_point_positions(sub_region_level)
+        if not points:
             return None
 
         total_x = 0.0
@@ -769,6 +771,47 @@ class SubRegionProcessor(BaseProcessor):
         if count <= 0:
             return None
         return self._format_vec2([total_x / count, total_y / count])
+
+    def _collect_target_point_positions(self, sub_region_level: str) -> List[List[float]]:
+        """收集关卡内的目标点坐标。"""
+        design_map_paths = self._resolve_design_map_paths(sub_region_level)
+        if not design_map_paths:
+            return []
+
+        positions: List[List[float]] = []
+        seen = set()
+        for design_map_path in design_map_paths:
+            arr = self._load_design_map_json(design_map_path)
+            if not arr:
+                continue
+
+            by_outer_name, by_name, by_path = self._build_object_maps(arr)
+
+            for obj in arr:
+                if not isinstance(obj, dict):
+                    continue
+                if obj.get("Type") != "BP_NewTargetPoint_C":
+                    continue
+                name = obj.get("Name")
+                if not isinstance(name, str) or not name.startswith("TargetPoint_"):
+                    continue
+                props = obj.get("Properties", {})
+                if not isinstance(props, dict):
+                    continue
+                root_ref = props.get("RootComponent")
+                loc = self._extract_ref_location(root_ref, by_outer_name, by_name, by_path)
+                if loc is None:
+                    continue
+                pos2 = self._to_vec2(loc)
+                if pos2 is None:
+                    continue
+                key = (pos2[0], pos2[1])
+                if key in seen:
+                    continue
+                seen.add(key)
+                positions.append(pos2)
+
+        return positions
 
     def _extract_level_volume_range(self, arr: List[dict]) -> Optional[dict]:
         """提取关卡 LevelVolume 的 Box0 范围。"""
