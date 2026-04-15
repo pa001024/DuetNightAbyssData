@@ -1855,6 +1855,37 @@ return ReadOnly("QuestChain", {
     StoryPath = "SpecialSideStory/2003/200315_Yanjinduzuidaweiji.story",
     UnlockCondition = 120106
   },
+  [200317] = {
+    ChapterName = "UI_ChapterName_E0",
+    Episode = "Name_200317",
+    EpisodeName = "Name_200317",
+    IfAutoStart = true,
+    MainStoryUnlockMessage = "Textmap_UnlockTitle",
+    QuestChainId = 200317,
+    QuestChainName = "Name_200317",
+    QuestChainReward = {50629},
+    QuestChainType = 3,
+    QuestDescription = "Description_20031701_01",
+    QuestDetail = "Content_20031701_01",
+    ShowCondition = 120206,
+    StoryPath = "SpecialSideStory/2003/200317_QinSheng.story",
+    UnlockCondition = 120206
+  },
+  [200318] = {
+    ChapterName = "UI_ChapterName_E0",
+    Episode = "Name_200318",
+    EpisodeName = "Name_200318",
+    IfAutoStart = true,
+    IsShowWindow = true,
+    MainStoryUnlockMessage = "Textmap_UnlockTitle",
+    QuestChainId = 200318,
+    QuestChainName = "Name_200318",
+    QuestChainReward = {50630},
+    QuestChainType = 3,
+    ShowCondition = 120206,
+    StoryPath = "SpecialSideStory/2003/200318_FushuEcho.story",
+    UnlockCondition = 120206
+  },
   [400101] = {
     ActivelyAccept = true,
     ChapterBeginEndIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Chapter/T_Chapter_Icon03.T_Chapter_Icon03'",

@@ -1200,5 +1200,155 @@ return ReadOnly("ImpressionCheck", {
     MoralityCheck = 0,
     RegionId = 1041,
     WisdomCheck = 60
+  },
+  [1137] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1137,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 40
+  },
+  [1138] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1138,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 50
+  },
+  [1139] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1139,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 60
+  },
+  [1140] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1140,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 70
+  },
+  [1141] = {
+    BenefitCheck = 0,
+    ChaosCheck = 40,
+    EmpathyCheck = 0,
+    ImprCheckId = 1141,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1142] = {
+    BenefitCheck = 0,
+    ChaosCheck = 40,
+    EmpathyCheck = 0,
+    ImprCheckId = 1142,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1143] = {
+    BenefitCheck = 40,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1143,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1144] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1144,
+    MoralityCheck = 40,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1145] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 40,
+    ImprCheckId = 1145,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1146] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1146,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 40
+  },
+  [1147] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1147,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 40
+  },
+  [1148] = {
+    BenefitCheck = 0,
+    ChaosCheck = 40,
+    EmpathyCheck = 0,
+    ImprCheckId = 1148,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1149] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1149,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 40
+  },
+  [1150] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 40,
+    ImprCheckId = 1150,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1151] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1151,
+    MoralityCheck = 0,
+    RegionId = 1041,
+    RewardId = 7070,
+    WisdomCheck = 40
   }
 })

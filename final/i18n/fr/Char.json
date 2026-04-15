@@ -3552,7 +3552,7 @@
         ],
         "术语解释": {
           "Errance céleste": "Confère une augmentation de Vigueur.",
-          "Lame irisée": "Chaque attaque consomme 5 [Poudre d’artifice] et balaie l’ennemi d’un immense sabre de lumière, infligeant des Dégâts Lumino aux ennemis sur la trajectoire.",
+          "Lame irisée": "Chaque attaque consomme 10 [Poudre d’artifice] et balaie l’ennemi d’un immense sabre de lumière, infligeant des Dégâts Lumino aux ennemis sur la trajectoire.",
           "Pluie d’étoiles": "Chaque attaque consomme 1 [Poudre d’artifice] et tire un projectile qui inflige des Dégâts Lumino de zone à l’impact.\nSi le Sceau démoniaque [Mode de poursuite du Fengshi n° 3] est équipé, tire à la place un projectile traqueur qui se dirige vers une cible aléatoire et inflige des Dégâts Lumino de zone toutes les 0,1 s sur sa trajectoire."
         },
         "子技能": [

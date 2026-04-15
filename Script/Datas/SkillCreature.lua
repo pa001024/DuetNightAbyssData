@@ -1952,6 +1952,11 @@ return ReadOnly("SkillCreature", {
     DirectionOnSocket = true,
     FixedBornRotation = true,
     HitEnemy = {150455},
+    HitOthers = {
+      0,
+      0,
+      1
+    },
     ShapeInfo = T.RT_63,
     SpawnSocket = T.RT_64,
     Speed = 0,
@@ -1972,6 +1977,11 @@ return ReadOnly("SkillCreature", {
     DirectionOnSocket = true,
     FixedBornRotation = true,
     HitEnemy = {150456},
+    HitOthers = {
+      0,
+      0,
+      1
+    },
     ShapeInfo = T.RT_63,
     SpawnSocket = T.RT_64,
     Speed = 0,

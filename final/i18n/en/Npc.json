@@ -20698,7 +20698,7 @@
   },
   {
     "id": 700387,
-    "name": "Qingshang",
+    "name": "Qing Shang",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -28800,7 +28800,7 @@
           },
           {
             "id": 51156005,
-            "content": "I can’t imagine pickpockets in Huaxu.",
+            "content": "I can't imagine pickpockets in Huaxu.",
             "next": 51156006,
             "impr": [
               1041,
@@ -34205,7 +34205,7 @@
       },
       {
         "id": 51162302,
-        "content": "But to say they escaped on their own? That’s rubbish. They’re just birds. Magic or not, I doubt they suddenly grew thumbs and learnt to pick locks overnight.",
+        "content": "But to say they escaped on their own? That's rubbish. They're just birds. Magic or not, I doubt they suddenly grew thumbs and learnt to pick locks overnight.",
         "npc": 701172,
         "options": [
           {
@@ -34922,7 +34922,7 @@
         "options": [
           {
             "id": 51162803,
-            "content": "Hello, I’m curious about what you were saying, you know?",
+            "content": "Hello, I'm curious about what you were saying, you know?",
             "next": 51162804
           }
         ]
@@ -38158,7 +38158,7 @@
     "talks": [
       {
         "id": 51170401,
-        "content": "\"One law\" is the idea that heaven, earth, and all things share a single underlying truth. \"Myriad reflections\" means that the countless differences we see are simply manifestations of that same truth.",
+        "content": "\"One principle\" is the idea that heaven, earth, and all things share a single underlying truth. \"Myriad reflections\" means that the countless differences we see are simply manifestations of that same truth.",
         "npc": 701206,
         "next": 51170402
       },
@@ -38169,19 +38169,19 @@
       },
       {
         "id": 51170403,
-        "content": "Let me put it this way. Consider the Law of \"Master and Apprentice\". You have a master, just as I do. My master had his own teacher, and if you apply yourself, you too shall have students one day.",
+        "content": "Let me put it this way. Consider the principle of \"Master and Apprentice\". You have a master, just as I do. My master had his own teacher, and if you apply yourself, you too shall have students one day.",
         "npc": 701206,
         "next": 51170404
       },
       {
         "id": 51170404,
-        "content": "We are both bound by the same governing Law of that relationship, yet our specific roles and circumstances differ. That distinction is what we call \"Myriad Reflections.\"",
+        "content": "We are both bound by the same governing principle of that relationship, yet our specific roles and circumstances differ. That distinction is what we call \"Myriad Reflections.\"",
         "npc": 701206,
         "next": 51170405
       },
       {
         "id": 51170405,
-        "content": "But Master... what is this \"Law\", actually?",
+        "content": "But Master... what is this \"Principle\", actually?",
         "next": 51170406
       },
       {
@@ -38209,7 +38209,7 @@
       },
       {
         "id": 51170410,
-        "content": "The Nine Chapters represent the Law itself. You must follow the spirit of that Law, using it to judge each unique situation as it arises. That is \"One Law, Myriad Reflections.\"",
+        "content": "The Nine Chapters represent the Principle itself. You must follow the spirit of that Principle, using it to judge each unique situation as it arises. That is \"One Principle, Myriad Reflections.\"",
         "npc": 701206,
         "next": 51170411
       },
@@ -38316,13 +38316,13 @@
       },
       {
         "id": 51170514,
-        "content": "The Law we teach is not about mastering a specific trade. It is quite common for a child to have a poor memory for texts, or to struggle endlessly with arithmetic.",
+        "content": "The Principle we teach is not about mastering a specific trade. It is quite common for a child to have a poor memory for texts, or to struggle endlessly with arithmetic.",
         "npc": 701207,
         "next": 51170515
       },
       {
         "id": 51170515,
-        "content": "But to force every child into the same mould is to limit the Law itself. Our duty is to teach them to judge right from wrong, good from bad.",
+        "content": "But to force every child into the same mould is to limit the Principle itself. Our duty is to teach them to judge right from wrong, good from bad.",
         "npc": 701207,
         "next": 51170516
       },
@@ -38359,35 +38359,35 @@
     "talks": [
       {
         "id": 51170601,
-        "content": "There's one law behind everything. If it encompasses all things, it must come before all else!",
+        "content": "There's one principle behind everything. If it encompasses all things, it must come before all else!",
         "npc": 701208,
         "next": 51170602
       },
       {
         "id": 51170602,
-        "content": "Rubbish. This \"Law\" is invisible and intangible. One can only perceive it by examining the Diversity of Reflections — by looking at actual events.",
+        "content": "And without concrete things to embody it, your so-called \"Principle\" is nothing but a castle in the air. We must observe the Reflections before we can deduce the Principle!",
         "next": 51170603
       },
       {
         "id": 51170603,
-        "content": "Without a guiding Law — without an origin — how could specific things ever come into existence? You are speaking absolute nonsense!",
+        "content": "Without a guiding Principle — without an origin — how could specific things ever come into existence? You are speaking absolute nonsense!",
         "npc": 701208,
         "next": 51170604
       },
       {
         "id": 51170604,
-        "content": "And without concrete things to embody it, your so-called \"Law\" is nothing but a castle in the air. We must observe the Reflections before we can deduce the Law!",
+        "content": "And without concrete things to embody it, your so-called \"Principle\" is nothing but a castle in the air. We must observe the Reflections before we can deduce the Principle!",
         "next": 51170605
       },
       {
         "id": 51170605,
-        "content": "Then tell me this: without the Law to underpin your judgment, how do you distinguish right from wrong? Gut instinct? Or do you simply jump to conclusions based on nothing?",
+        "content": "Then tell me this: without the Principle to underpin your judgment, how do you distinguish right from wrong? Gut instinct? Or do you simply jump to conclusions based on nothing?",
         "npc": 701208,
         "next": 51170606
       },
       {
         "id": 51170606,
-        "content": "And I shall ask you: without action and reflection, how can you grasp the Law at all? We spot connections between events first, and then we summarise the truth.",
+        "content": "And I shall ask you: without action and reflection, how can you grasp the Principle at all? We spot connections between events first, and then we summarise the truth.",
         "next": 51170607
       },
       {
@@ -38409,7 +38409,7 @@
       },
       {
         "id": 51170610,
-        "content": "You see? You only deduced the \"Law\" of your victory because of the specific event of me leaving. So I ask you again: which comes first? The One Law, or the Myriad Reflections?",
+        "content": "You see? You only deduced the \"Principle\" of your victory because of the specific event of me leaving. So I ask you again: which comes first? The One Principle, or the Myriad Reflections?",
         "next": 51170611
       },
       {
@@ -42703,6 +42703,3748 @@
   {
     "id": 701266,
     "name": "Wei Pu",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701267,
+    "name": "李大嘴",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51175601,
+        "content": "\"Food is the first necessity\"... and when it comes to food, it's all about the smell. And this... this smell... mm... that's the stuff.",
+        "npc": 701267,
+        "options": [
+          {
+            "id": 51175602,
+            "content": "Is this \"smell\" something rare around here?",
+            "next": 51175603,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51175604,
+            "content": "Is something troubling you?",
+            "next": 51175605,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          },
+          {
+            "id": 51175606,
+            "content": "What are you mumbling about?",
+            "next": 51175607,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51175603,
+        "content": "Eh? No, aromatics are common as muck in Huaxu. It's just that...",
+        "npc": 701267,
+        "next": 51175608
+      },
+      {
+        "id": 51175605,
+        "content": "Troubling me? Well, I'm in a spot of bother, alright. But looking at you... you ain't exactly a local, are you?",
+        "npc": 701267,
+        "next": 51175608
+      },
+      {
+        "id": 51175607,
+        "content": "Matters of national importance, mate. You can't be too careful when it comes to the menu.",
+        "npc": 701267,
+        "next": 51175608
+      },
+      {
+        "id": 51175608,
+        "content": "Pleasure. I'm Mouth Li, chef at the Tongfu Eatery. I'm in a right state because business has been rubbish. The Guv'nor's on my back to dream up some fancy new dishes.",
+        "npc": 701267,
+        "next": 51175609
+      },
+      {
+        "id": 51175609,
+        "content": "Since we've got foreigners wandering about, he reckons I should mix our local aromatics into the food. Says it's a \"gimmick\" — something to dazzle folks who've never tasted the like.",
+        "npc": 701267,
+        "next": 51175610
+      },
+      {
+        "id": 51175610,
+        "content": "But for the life of me, I can't make these fragrances actually taste good. I wanted to pick someone's brains, but who'd know a thing like that...",
+        "npc": 701267,
+        "options": [
+          {
+            "id": 51175611,
+            "content": "Cooking with aromatics? You know a recipe or two. Why not give him a hand?",
+            "next": 51175612
+          }
+        ]
+      },
+      {
+        "id": 51175612,
+        "content": "Where I grew up, we had to scrape by. The villagers would cook whatever plants they could scrounge up. I don't know Huaxu's incense well, but the principles might be the same.",
+        "npc": 100001,
+        "next": 51175613
+      },
+      {
+        "id": 51175613,
+        "content": "Oh? Is that right? Tell you what: I'll list the edible spices I know, and you tell me how to cook 'em up. Deal?",
+        "npc": 701267,
+        "next": 51175614
+      },
+      {
+        "id": 51175614,
+        "content": "Worth a punt.",
+        "npc": 100001,
+        "next": 51175615
+      },
+      {
+        "id": 51175615,
+        "content": "There's a Huaxu incense herb called Frostleaf. Looks like a scrawny weed you'd find by the roadside, but crush it, and the scent hits you — sharp and freezing cold, right to the bone.",
+        "npc": 701267,
+        "next": 51175616
+      },
+      {
+        "id": 51175616,
+        "content": "I've heard folk can hold it in their mouths for ages without getting poisoned. Ever heard of a dish using something like that?",
+        "npc": 701267,
+        "options": [
+          {
+            "id": 51175617,
+            "content": "Let me think...",
+            "next": 51175618
+          }
+        ]
+      },
+      {
+        "id": 51175618,
+        "content": "It's common enough. Since it has that cooling kick, it's best cooked with heavy meats. The chill cuts right through the grease.",
+        "npc": 100001,
+        "next": 51175619
+      },
+      {
+        "id": 51175619,
+        "content": "I'd suggest frying it up with spare ribs, trotters, or offal.",
+        "npc": 100001,
+        "next": 51175620
+      },
+      {
+        "id": 51175620,
+        "content": "Ooh! Never thought of doing it that way! That makes proper sense, that does. I'd better scribble this down...",
+        "npc": 701267,
+        "next": 51175621
+      },
+      {
+        "id": 51175621,
+        "content": "Now, {性别:sir|ma'am}, we've got another special plant here. Tiny leaves, small flowers, but when it blooms... cor, the scent is heavenly. Real airy and light. We say a local lad should be pure as the season, so we call this Vernal Prime.",
+        "npc": 701267,
+        "options": [
+          {
+            "id": 51175622,
+            "content": "\"{性别:Sir|Ma'am}\" now, is it? Let me think...",
+            "next": 51175623
+          }
+        ]
+      },
+      {
+        "id": 51175623,
+        "content": "I've heard of floral cooking. Remove the stems, wash and dry the petals, then toss a handful in just before you take your veg off the heat.",
+        "npc": 100001,
+        "next": 51175624
+      },
+      {
+        "id": 51175624,
+        "content": "The fragrance acts as seasoning, and the petals are just another leafy green, really. Looks elegant on the plate and adds a unique flavour to boot.",
+        "npc": 100001,
+        "next": 51175625
+      },
+      {
+        "id": 51175625,
+        "content": "Blimey, you really know your onions! Why didn't I think of that? I've seen nippers picking 'em off the bush to chew on, reckoning they taste sweet enough.",
+        "npc": 701267,
+        "next": 51175626
+      },
+      {
+        "id": 51175626,
+        "content": "Right then, {性别:sir|ma'am}. There's one more oddity called Cherishseed. It's got a punchy, spicy aroma, so we usually go easy on it when making Incense. But the doctors say the seeds ain't poisonous...",
+        "npc": 701267,
+        "options": [
+          {
+            "id": 51175627,
+            "content": "Spicy and strong? Think carefully...",
+            "next": 51175628
+          }
+        ]
+      },
+      {
+        "id": 51175628,
+        "content": "Strong spices are perfect for seasoning. You have gamey meat here, right? Roast it over a high fire, grind the seeds into a powder, and sprinkle it over the top. It'll mask the funk.",
+        "npc": 100001,
+        "next": 51175629
+      },
+      {
+        "id": 51175629,
+        "content": "As for the amount... just don't go dumping the whole bottle in like some people I know.",
+        "npc": 100001,
+        "next": 51175630
+      },
+      {
+        "id": 51175630,
+        "content": "You're a marvel, you are! You ain't even from round here, yet you know more about our aromatics than I do! I owe you one, big time!",
+        "npc": 701267,
+        "next": 51175631
+      },
+      {
+        "id": 51175631,
+        "content": "You're too kind.",
+        "npc": 100001,
+        "next": 51175632
+      },
+      {
+        "id": 51175632,
+        "content": "Don't be modest! From today on, you are my \"master\". As the saying goes: a teacher for a day is a parent for life. You're practically family to me now!",
+        "npc": 701267,
+        "next": 51175633
+      },
+      {
+        "id": 51175633,
+        "content": "That's a bit dramatic...",
+        "npc": 100001,
+        "next": 51175634
+      },
+      {
+        "id": 51175634,
+        "content": "Not at all, master! Don't be daft! I'm off to study these recipes. If you've got a moment, swing by our Tongfu Eatery. I'll cook you up a proper feast, on the house!",
+        "npc": 701267,
+        "next": 51175635
+      },
+      {
+        "id": 51175635,
+        "content": "I'll be there if I got the time!",
+        "npc": 100001,
+        "next": 51175636
+      },
+      {
+        "id": 51175636,
+        "content": "(Mouth Li bows and scrapes repeatedly, looking back every few steps to thank you until he finally disappears from view.)"
+      }
+    ]
+  },
+  {
+    "id": 701268,
+    "name": "花留情",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51175702,
+        "content": "Ah... my poor, lonely heart. In a world this vast, am I truly doomed to be alone forever?",
+        "next": 51175703
+      },
+      {
+        "id": 51175703,
+        "content": "(The flamboyant man beats his chest and stamps his feet, eyes squeezed shut, muttering like a possessed poet. He reeks of spirits — absolutely plastered.)",
+        "next": 51175704
+      },
+      {
+        "id": 51175704,
+        "content": "A tragedy, truly! I am cursed with such devastating beauty, yet none can look past this exquisite facade to see the crystal-clear waters of my soul!",
+        "next": 51175705
+      },
+      {
+        "id": 51175705,
+        "content": "Alas! The world is blind! They see not the poetry within, the distant horizons, the hope... the winter of my discontent!",
+        "next": 51175706
+      },
+      {
+        "id": 51175706,
+        "content": "Oh! Lord Argent! Heed my prayer! If you truly cherish your people, deliver my one true love before me the very moment I open my eyes!",
+        "next": 51175707
+      },
+      {
+        "id": 51175707,
+        "content": "(The man's eyes snap open. He finds himself staring directly at you.)",
+        "next": 51175708
+      },
+      {
+        "id": 51175708,
+        "content": "It... it worked? A miracle! Has Lord Argent actually delivered my soulmate to my doorstep?",
+        "next": 51175709
+      },
+      {
+        "id": 51175709,
+        "content": "Ahem. Allow me to introduce myself. I am Hua Liuqing. \"Through myriad flowers I wander, yet I keep my heart yonder.\" That is I. Handsome, brilliant, and dashing... the one and only...",
+        "npc": 701268,
+        "next": 51175710
+      },
+      {
+        "id": 51175710,
+        "content": "Heart!",
+        "npc": 701268,
+        "next": 51175711
+      },
+      {
+        "id": 51175711,
+        "content": "Breaker!",
+        "npc": 701268,
+        "next": 51175712
+      },
+      {
+        "id": 51175712,
+        "content": "Extraordinaire!",
+        "npc": 701268,
+        "options": [
+          {
+            "id": 51175713,
+            "content": "Er, hello? I'm {nickname}.",
+            "next": 51175714,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          },
+          {
+            "id": 51175716,
+            "content": "The name's Heart Fixer.",
+            "next": 51175717,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51175714,
+        "content": "Oh! {nickname}! What a ravishing name! In the countless lonely nights to come, I shall whisper it in my dreams. A name sweet as honey!",
+        "npc": 701268,
+        "next": 51175715
+      },
+      {
+        "id": 51175717,
+        "content": "Heart Fixer... Heart Fixer! What a magnificent, heroic title! Look at that blade at your hip, that piercing gaze! I knew it! You are the one I've been waiting for!",
+        "npc": 701268,
+        "next": 51175718
+      },
+      {
+        "id": 51175715,
+        "content": "Like the best incense or the finest wine! I shall roll your name around my tongue again and again! Oh! {nickname}! {nickname}!",
+        "npc": 701268,
+        "next": 51175719
+      },
+      {
+        "id": 51175718,
+        "content": "Oh, Lord Argent! You do love your faithful servant after all! To send such a gallant hero to my side... how can I ever repay such grace?",
+        "npc": 701268,
+        "next": 51175719
+      },
+      {
+        "id": 51175719,
+        "content": "Stop right there! You're drunk and you've got the wrong person. I haven't the foggiest idea who you are.",
+        "npc": 100001,
+        "next": 51175720
+      },
+      {
+        "id": 51175720,
+        "content": "Yes! Exactly! First, the cold rejection! Then, I shall pursue you with fiery passion, whilst your heart remains as hard as iron, cruelly telling me we can never be!",
+        "npc": 701268,
+        "next": 51175721
+      },
+      {
+        "id": 51175721,
+        "content": "Then, my heart turns to ash! I shall drink myself into a stupor at the Bazhen Pavilion, weeping manly tears, murmuring your name amidst the noisy rabble!",
+        "npc": 701268,
+        "next": 51175722
+      },
+      {
+        "id": 51175722,
+        "content": "And finally, my tale becomes legend! All of Haojing will speak of the devoted lover, heartbroken over the mysterious stranger in white!",
+        "npc": 701268,
+        "next": 51175723
+      },
+      {
+        "id": 51175723,
+        "content": "And you... my dearest love, my soulmate!",
+        "npc": 701268,
+        "next": 51175724
+      },
+      {
+        "id": 51175724,
+        "content": "On a moonlit night, gazing upon the pale, vast earth, you will hear the wind whispering in your ear... and every word will be of my longing for you.",
+        "npc": 701268,
+        "next": 51175725
+      },
+      {
+        "id": 51175725,
+        "content": "That is true love! Gut-wrenching! Soul-stirring! A sublime beauty moves world to tears!",
+        "npc": 701268,
+        "options": [
+          {
+            "id": 51175726,
+            "content": "(This bloke's completely lost the plot... Logic won't work. I'll have to beat him at his own game.)",
+            "next": 51175728
+          }
+        ]
+      },
+      {
+        "id": 51175728,
+        "content": "No, no! That sort of romance is far too pedestrian! Too easy!",
+        "npc": 100001,
+        "next": 51175729
+      },
+      {
+        "id": 51175729,
+        "content": "Wh-What?!",
+        "npc": 701268,
+        "next": 51175730
+      },
+      {
+        "id": 51175730,
+        "content": "Do you not crave a love that shakes the firmament? An epic saga with your so-called... soulmate?",
+        "npc": 100001,
+        "next": 51175731
+      },
+      {
+        "id": 51175731,
+        "content": "It certainly won't be me, mind you. But your little story? Too simple. Too happy. I have a much better idea.",
+        "npc": 100001,
+        "next": 51175732
+      },
+      {
+        "id": 51175732,
+        "content": "Oh! Oh, yes! You understand me after all!!! Tell me! Let us explore the true depths of passion together!",
+        "npc": 701268,
+        "next": 51175733
+      },
+      {
+        "id": 51175733,
+        "content": "Love is possession. Love is surrender. Love is sacrifice. So, the story must go like this...",
+        "npc": 100001,
+        "options": [
+          {
+            "id": 51175734,
+            "content": "Tell a tragic tale.",
+            "next": 51175735,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51175746,
+            "content": "Tell a crazy tale.",
+            "next": 51175747,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51175735,
+        "content": "It begins with a grand adventure. You travel far beyond Huaxu, witnessing the world. Then, on a Starweaver ship bound for home, you meet.",
+        "npc": 100001,
+        "next": 51175736
+      },
+      {
+        "id": 51175747,
+        "content": "It starts with a family visit. You've been invited to a wedding — your distant uncle's niece's brother.",
+        "npc": 100001,
+        "next": 51175748
+      },
+      {
+        "id": 51175736,
+        "content": "You fall for your soulmate the moment your eyes lock. You cannot bear to be apart for a single second.",
+        "npc": 100001,
+        "next": 51175737
+      },
+      {
+        "id": 51175748,
+        "content": "You arrive, gift in hand. The woman who greets you is gentle, considerate. Sparks fly, conversation flows, and you think: \"This is it. My soulmate.\"",
+        "npc": 100001,
+        "next": 51175749
+      },
+      {
+        "id": 51175737,
+        "content": "What is this drivel? That's too simple! That is not my story at all!",
+        "npc": 701268,
+        "next": 51175738
+      },
+      {
+        "id": 51175749,
+        "content": "Just as you prepare to confess your undying devotion, your relative walks out, takes your \"soulmate\" by the arm, and introduces her: \"Meet the bride. My wife-to-be.\"",
+        "npc": 100001,
+        "next": 51175750
+      },
+      {
+        "id": 51175738,
+        "content": "Hold your horses. I haven't finished yet.",
+        "npc": 100001,
+        "next": 51175739
+      },
+      {
+        "id": 51175750,
+        "content": "No! Oh, cruel fate! Why must my true love be pledged to another the very moment our eyes meet? I cannot accept this injustice!",
+        "npc": 701268,
+        "next": 51175751
+      },
+      {
+        "id": 51175739,
+        "content": "On the voyage home, a massive reef looms out of the darkness. It was a pitch-black night, and the lookout was drunk on duty... much like you are now...",
+        "npc": 100001,
+        "next": 51175740
+      },
+      {
+        "id": 51175751,
+        "content": "I haven't finished! Give it a rest and listen.",
+        "npc": 100001,
+        "next": 51175752
+      },
+      {
+        "id": 51175740,
+        "content": "At the stroke of midnight, blind as a bat, the ship strikes the reef. A terrible crash wakes everyone on board, including you two.",
+        "npc": 100001,
+        "next": 51175741
+      },
+      {
+        "id": 51175752,
+        "content": "Speak on, then! Let me hear what other daggers your cruel lips wish to fling at my heart!",
+        "npc": 701268,
+        "next": 51175753
+      },
+      {
+        "id": 51175741,
+        "content": "Panic sets in. Driven by instinct, you scramble through the freezing water flooding the cabins. You manage to protect your beloved and secure a lifeboat.",
+        "npc": 100001,
+        "next": 51175742
+      },
+      {
+        "id": 51175753,
+        "content": "Disheartened, you swallow your anguish and never ask after her again. But not long after... you hear news that the bride has died.",
+        "npc": 100001,
+        "next": 51175754
+      },
+      {
+        "id": 51175742,
+        "content": "But alas, the boat is full. There is only room for one more soul...",
+        "npc": 100001,
+        "next": 51175743
+      },
+      {
+        "id": 51175754,
+        "content": "Then, on a dark and stormy night, whilst you stare blankly at the swaying trees, you hear rhythmic footsteps approaching your door. A scent drifts in. Sweet perfume, mingled with the metallic tang of fresh blood...",
+        "npc": 100001,
+        "next": 51175755
+      },
+      {
+        "id": 51175743,
+        "content": "...Huu... Huuuuuuuaaaaah!",
+        "npc": 701268,
+        "next": 51175744
+      },
+      {
+        "id": 51175755,
+        "content": "I know how this ends! I fling open the door and we embrace, weeping! We pour out our hearts, letting the rain wash away our sorrow!",
+        "npc": 701268,
+        "next": 51175756
+      },
+      {
+        "id": 51175744,
+        "content": "I know! I know how it ends! My soulmate... she gave the last spot to me! She sank into the icy depths all alone!",
+        "npc": 701268,
+        "next": 51175745
+      },
+      {
+        "id": 51175756,
+        "content": "Right... suppose that's one interpretation.",
+        "npc": 100001,
+        "next": 51175757
+      },
+      {
+        "id": 51175745,
+        "content": "I was actually going to say you sank... never mind. Yes! Exactly that!",
+        "npc": 100001,
+        "next": 51175757
+      },
+      {
+        "id": 51175757,
+        "content": "Thank you! That is the most exquisite tragedy I have ever heard! It satisfies every romantic fantasy I possess! Thank you! My...",
+        "npc": 701268,
+        "options": [
+          {
+            "id": 51175758,
+            "content": "Stop right there!",
+            "next": 51175759
+          }
+        ]
+      },
+      {
+        "id": 51175759,
+        "content": "You should look for your soulmate in storybooks, not in reality. Frankly, your fantasies about love belong in fiction.",
+        "npc": 100001,
+        "next": 51175760
+      },
+      {
+        "id": 51175760,
+        "content": "Instead of drowning in daydreams, you'd be better off chasing something tangible. Something flesh and blood.",
+        "npc": 100001,
+        "next": 51175761
+      },
+      {
+        "id": 51175761,
+        "content": "Something tangible? Flesh and blood? Why... that would be you!",
+        "npc": 701268,
+        "next": 51175762
+      },
+      {
+        "id": 51175762,
+        "content": "............",
+        "npc": 100001,
+        "next": 51175763
+      },
+      {
+        "id": 51175763,
+        "content": "(Sod this. Time to leave.)",
+        "next": 51175764
+      },
+      {
+        "id": 51175764,
+        "content": "Oi! Soulmate! Where are you going? Come back! Let us enact our beautiful romance together! My love!",
+        "npc": 701268,
+        "next": 51175765
+      },
+      {
+        "id": 51175765,
+        "content": "(Scarper!! Before he catches up!!)"
+      },
+      {
+        "id": 51175766,
+        "content": "Ah... it's you! My one true love — have you finally come back to stay with me forever?",
+        "npc": 701268
+      }
+    ]
+  },
+  {
+    "id": 701269,
+    "name": "天通君子",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51175802,
+        "content": "If I kill him... people will love it. And if I take that one out as well, while I'm at it...",
+        "next": 51175803
+      },
+      {
+        "id": 51175803,
+        "content": "But a simple death? It's abrupt. Shocking, perhaps, but it lacks that gut-wrenching tragedy. It's dreadfully dull!",
+        "next": 51175804
+      },
+      {
+        "id": 51175804,
+        "content": "Yet if I spare him... where's the drama? Where's the growth? It becomes mere fan service — shamelessly commercial!",
+        "next": 51175805
+      },
+      {
+        "id": 51175805,
+        "content": "(You stare blankly as the man mutters these unhinged, violent threats. A chill runs down your spine. What on earth is he on about?)",
+        "next": 51175806
+      },
+      {
+        "id": 51175806,
+        "content": "Sigh! It's tearing me apart. I brought him into this world, yet now his life hangs in the balance, I simply cannot decide.",
+        "next": 51175807
+      },
+      {
+        "id": 51175807,
+        "content": "(What?! He's talking about his own son? Does the Nine Chapters of Dafeng mean nothing to this lunatic?)",
+        "options": [
+          {
+            "id": 51175808,
+            "content": "(Shout at him.)",
+            "next": 51175809,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          },
+          {
+            "id": 51175810,
+            "content": "(Report him to the Magistrate of Yingtian.)",
+            "next": 51175811,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51175809,
+        "content": "You monster! How could you even think of murdering your own child?",
+        "npc": 100001,
+        "next": 51175814
+      },
+      {
+        "id": 51175811,
+        "content": "(You turn to leg it, but he grabs you before you can take a step.)",
+        "next": 51175812
+      },
+      {
+        "id": 51175814,
+        "content": "Me? Murder? Hahaha! Oh dear, I believe you've got the wrong end of the stick.",
+        "next": 51175815
+      },
+      {
+        "id": 51175812,
+        "content": "Wait, friend! You've been earwigging for a while now. Tell me, should I kill him or not?",
+        "next": 51175813
+      },
+      {
+        "id": 51175815,
+        "content": "Wrong end of the...? What do you mean?",
+        "npc": 100001,
+        "next": 51175816
+      },
+      {
+        "id": 51175813,
+        "content": "...Have you lost your mind? You're plotting a murder and asking me for advice?",
+        "npc": 100001,
+        "next": 51175814
+      },
+      {
+        "id": 51175816,
+        "content": "What was I saying... let me think... Ah! I was rambling on about killing people and the methodology thereof, wasn't I?",
+        "next": 51175817
+      },
+      {
+        "id": 51175817,
+        "content": "No wonder you're startled. A perfectly natural misunderstanding.",
+        "next": 51175818
+      },
+      {
+        "id": 51175818,
+        "content": "Don't panic, lad. I'm no homicidal maniac. Besides, you wouldn't find types like that wandering openly around Huaxu, would you?",
+        "next": 51175819
+      },
+      {
+        "id": 51175819,
+        "content": "I am Mr. Tian Tong. Not my real name, of course. It's my... nom de plume.",
+        "npc": 701269,
+        "options": [
+          {
+            "id": 51175820,
+            "content": "Nom de plume? So you're an author.",
+            "next": 51175822,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51175821,
+            "content": "So all that talk about killing was...",
+            "next": 51175822,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51175822,
+        "content": "Precisely. The man whose fate hangs in the balance is Zhang Yuan, the protagonist of my current serial, The Twin Swords of Love.",
+        "npc": 701269,
+        "next": 51175823
+      },
+      {
+        "id": 51175823,
+        "content": "Every serial must conclude eventually. I've drafted up to the finale, and the publisher will be breathing down my neck by the month's end.",
+        "npc": 701269,
+        "next": 51175824
+      },
+      {
+        "id": 51175824,
+        "content": "I'm in a bit of a pickle, actually. I can't decide if my protagonist should survive the final chapter.",
+        "npc": 701269,
+        "options": [
+          {
+            "id": 51175825,
+            "content": "So, what's the plot?",
+            "next": 51175826
+          }
+        ]
+      },
+      {
+        "id": 51175826,
+        "content": "The plot... hmm. Let me see if I can give you the potted version.",
+        "npc": 701269,
+        "next": 51175827
+      },
+      {
+        "id": 51175827,
+        "content": "It's a classic revenge tale. A Sable Bi'an slaughters the hero's family while he's away. He survives, trains hard, and with help from the heroine, Le Yang, rises to become a Magistrate of Yingtian.",
+        "npc": 701269,
+        "next": 51175828
+      },
+      {
+        "id": 51175828,
+        "content": "There are the usual tropes: cornered by rivals, falling off cliffs, finding ancient artifacts... a misunderstanding that parts him from Le Yang for eight years... I shan't bore you with the lot.",
+        "npc": 701269,
+        "next": 51175829
+      },
+      {
+        "id": 51175829,
+        "content": "Surely him becoming a Magistrate makes for a natural conclusion?",
+        "npc": 100001,
+        "next": 51175830
+      },
+      {
+        "id": 51175830,
+        "content": "Most would agree. My readers certainly expect him to overcome his hardships, win the glory, and fall in love.",
+        "npc": 701269,
+        "next": 51175831
+      },
+      {
+        "id": 51175831,
+        "content": "And yet... it all feels rather too convenient.",
+        "npc": 701269,
+        "next": 51175832
+      },
+      {
+        "id": 51175832,
+        "content": "You know the feeling? You open a novel, watch the plot unfold, and see the hero triumph in every single battle...",
+        "npc": 701269,
+        "next": 51175833
+      },
+      {
+        "id": 51175833,
+        "content": "It becomes tedious. You stop fearing for them because you know that no matter how dire the straits, the author will bail them out.",
+        "npc": 701269,
+        "next": 51175834
+      },
+      {
+        "id": 51175834,
+        "content": "A safe ending is the sensible choice, I admit. But a part of me craves a proper twist.",
+        "npc": 701269,
+        "next": 51175835
+      },
+      {
+        "id": 51175835,
+        "content": "So you're going to kill him?",
+        "npc": 100001,
+        "next": 51175836
+      },
+      {
+        "id": 51175836,
+        "content": "The very same Sable Bi'an King that murdered his family in Chapter One is his final opponent.",
+        "npc": 701269,
+        "next": 51175837
+      },
+      {
+        "id": 51175837,
+        "content": "My readers believe it's a done deal: he takes his revenge and becomes Head Magistrate. But if I were to pull the rug out from under them...",
+        "npc": 701269,
+        "options": [
+          {
+            "id": 51175838,
+            "content": "You're right. He has to die.",
+            "next": 51175839
+          },
+          {
+            "id": 51175849,
+            "content": "I really don't think you should kill him off.",
+            "next": 51175850
+          }
+        ]
+      },
+      {
+        "id": 51175839,
+        "content": "You think so? I'm still wavering. What's your logic?",
+        "npc": 701269,
+        "options": [
+          {
+            "id": 51175840,
+            "content": "(He's already leaning that way. Might as well give him a nudge.)",
+            "next": 51175842
+          },
+          {
+            "id": 51175844,
+            "content": "(He's poured his soul into this. Surely he wants it to leave a mark?)",
+            "next": 51175846
+          }
+        ]
+      },
+      {
+        "id": 51175850,
+        "content": "You think so? I'm still wavering. What's your logic?",
+        "npc": 701269,
+        "options": [
+          {
+            "id": 51175851,
+            "content": "(He wants critical acclaim, doesn't he? Better advise him to play it safe.)",
+            "next": 51175853
+          },
+          {
+            "id": 51175856,
+            "content": "(Even a fictional character carries a piece of the author's soul, doesn't it?)",
+            "next": 51175858
+          }
+        ]
+      },
+      {
+        "id": 51175842,
+        "content": "The best stories are the ones where you never see the ending coming.",
+        "npc": 100001,
+        "next": 51175843
+      },
+      {
+        "id": 51175846,
+        "content": "You admitted your readers can see the ending coming a mile off. If you give them exactly what they expect, they'll just scoff: \"Predicted that from Chapter One. \"",
+        "npc": 100001,
+        "next": 51175847
+      },
+      {
+        "id": 51175853,
+        "content": "You've spent the entire book establishing the hero's competence. Your readers trust him to win. Killing him at the finish line is a massive gamble.",
+        "npc": 100001,
+        "next": 51175854
+      },
+      {
+        "id": 51175858,
+        "content": "You created him. You must have poured a great deal of yourself into his pages.",
+        "npc": 100001,
+        "next": 51175859
+      },
+      {
+        "id": 51175843,
+        "content": "If you want a shock, simply killing the hero won't cut it. Why not kill the heroine too? Let them be star-crossed lovers, united in death.",
+        "npc": 100001,
+        "next": 51175861
+      },
+      {
+        "id": 51175847,
+        "content": "They'll dismiss it as just another bog-standard tale, indistinguishable from the rest of the novels on the shelves.",
+        "npc": 100001,
+        "next": 51175848
+      },
+      {
+        "id": 51175854,
+        "content": "They won't necessarily thank you for a \"shocking twist.\" On the contrary, they might feel cheated as if you're taking the mickey out of their emotional investment.",
+        "npc": 100001,
+        "next": 51175855
+      },
+      {
+        "id": 51175859,
+        "content": "You wrote his life. You watched him suffer, bleed, face death time and again, and fight his way back from the brink.",
+        "npc": 100001,
+        "next": 51175860
+      },
+      {
+        "id": 51175861,
+        "content": "I... You... I see it now! A kindred spirit at last! You are the one reader who truly understands my craft!",
+        "npc": 701269,
+        "next": 51175862
+      },
+      {
+        "id": 51175848,
+        "content": "But if the hero dies? That changes everything. It becomes an anomaly, a unique piece of work. Whether they love it or hate it, they will remember it.",
+        "npc": 100001,
+        "next": 51175861
+      },
+      {
+        "id": 51175855,
+        "content": "Instead of risking a public outcry and bad reviews, surely it's wiser to bring the story in for a safe landing?",
+        "npc": 100001,
+        "next": 51175861
+      },
+      {
+        "id": 51175860,
+        "content": "You know him best. Do you really believe your character — your own child — would simply accept death just as he crosses the finish line?",
+        "npc": 100001,
+        "next": 51175861
+      },
+      {
+        "id": 51175862,
+        "content": "That is the ending I need! Thank you! I'm going straight home to rewrite the finale of The Twin Swords of Love from scratch!",
+        "npc": 701269,
+        "next": 51175863
+      },
+      {
+        "id": 51175863,
+        "content": "This shall be my magnum opus! Hahahaha!",
+        "npc": 701269,
+        "next": 51175864
+      },
+      {
+        "id": 51175864,
+        "content": "(He throws back his head and laughs, then strides away... leaving you to wonder just how that story is going to end.)"
+      }
+    ]
+  },
+  {
+    "id": 701270,
+    "name": "罗汉",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51175902,
+        "content": "Lovely weather today! Come spring, I'll buy some fresh tea and brew a pot.",
+        "npc": 701270,
+        "next": 51175903
+      },
+      {
+        "id": 51175903,
+        "content": "I do worry about that tea garden I visited last year. They say a heavy winter snow crushes the branches, and ruins the next year's crop.",
+        "npc": 701270,
+        "next": 51175904
+      },
+      {
+        "id": 51175904,
+        "content": "Eh? Why the stare, youngster? Fancy a taste of this new batch I just bought?",
+        "npc": 701270,
+        "options": [
+          {
+            "id": 51175905,
+            "content": "No thanks, uncle.",
+            "next": 51175907,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          },
+          {
+            "id": 51175906,
+            "content": "Yes please! Thanks, uncle.",
+            "next": 51175907,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51175907,
+        "content": "Oho! \"Uncle\", is it? You've got a silver tongue! For that, I've simply got to pour you a cup.",
+        "npc": 701270,
+        "next": 51175908
+      },
+      {
+        "id": 51175908,
+        "content": "(The old man sets down his pot and bustles inside. Moments later, he returns with a steaming cup of clear tea.)",
+        "next": 51175909
+      },
+      {
+        "id": 51175909,
+        "content": "Go on, get that down you. It's proper stuff! Cross my heart. Bought it off a lass at a mountain tea garden during my spring wanderings.",
+        "npc": 701270,
+        "next": 51175910
+      },
+      {
+        "id": 51175910,
+        "content": "I tried to wave her off at first, didn't want it. But she shoved the leaves right under my nose. One sniff, and I knew — it was the real deal!",
+        "npc": 701270,
+        "next": 51175911
+      },
+      {
+        "id": 51175911,
+        "content": "Go on then, have a sip!",
+        "npc": 701270,
+        "options": [
+          {
+            "id": 51175912,
+            "content": "(He's so insistent. Suppose you have to try it.)",
+            "next": 51175913,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51175915,
+            "content": "(He's too eager. What's the catch?)",
+            "next": 51175916,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51175913,
+        "content": "(You take a sip. You can't tell good from bad. It's just bitter. Only after a long pause does a faint sweetness rise on your tongue.)",
+        "next": 51175914
+      },
+      {
+        "id": 51175916,
+        "content": "(A flicker of hurt crosses the old man's eyes at your hesitation, but he masks it instantly with a genial smile.)",
+        "next": 51175917
+      },
+      {
+        "id": 51175914,
+        "content": "It's... nice? I suppose?",
+        "npc": 100001,
+        "next": 51175918
+      },
+      {
+        "id": 51175917,
+        "content": "Never mind, kid. Don't force it.",
+        "npc": 701270,
+        "next": 51175918
+      },
+      {
+        "id": 51175918,
+        "content": "I can tell by your face. You're just like my old missus. No head for tea, couldn't tell the finest brew from dishwater.",
+        "npc": 701270,
+        "next": 51175919
+      },
+      {
+        "id": 51175919,
+        "content": "It's got a lovely aroma, this has. Next spring, when I'm out for my spring walk, I'll find that lass and buy a few more catties.",
+        "npc": 701270,
+        "options": [
+          {
+            "id": 51175920,
+            "content": "(Spring walk? Is that a specific ritual? You rack your brains for anything you've read about Huaxu customs.)",
+            "next": 51175922
+          }
+        ]
+      },
+      {
+        "id": 51175922,
+        "content": "When you say \"spring walk,\" you're referring to the traditional vernal excursions of the Huaxu people, correct?",
+        "npc": 100001,
+        "next": 51175923
+      },
+      {
+        "id": 51175923,
+        "content": "Err... I suppose that's the gist of it. But you make it sound so stiff! A spring walk is just... popping out for a wander. It's fun, aye, but putting it like that sucks the joy right out of it.",
+        "npc": 701270,
+        "next": 51175924
+      },
+      {
+        "id": 51175924,
+        "content": "It ain't some fancy ritual. It's just what ordinary folk do. The warm breeze blows, the flowers bloom, and — hah! — you get a little itch in your heart.. You just want to step out the door and have a look at the world.",
+        "npc": 701270,
+        "next": 51175925
+      },
+      {
+        "id": 51175925,
+        "content": "You grab the whole family. Pack up your food and drink and head for the outskirts. Some even go further afield, visiting other cities for a lark.",
+        "npc": 701270,
+        "next": 51175926
+      },
+      {
+        "id": 51175926,
+        "content": "There's always something going on. You can barely keep up with the seasons. If you lived here a while, you'd know exactly what I mean.",
+        "npc": 701270,
+        "next": 51175927
+      },
+      {
+        "id": 51175927,
+        "content": "Unfortunately, I'm only in Huaxu for a short while. I'll likely be leaving soon.",
+        "npc": 100001,
+        "next": 51175928
+      },
+      {
+        "id": 51175928,
+        "content": "Still, what you've described sounds lovely.",
+        "npc": 100001,
+        "next": 51175929
+      },
+      {
+        "id": 51175929,
+        "content": "Doesn't it just! You know the Grand Incense Rite is coming up? In the old days, before the Rite, we'd all organise a trip to Jiaolan Village to make our own incense.",
+        "npc": 701270,
+        "next": 51175930
+      },
+      {
+        "id": 51175930,
+        "content": "You'd get your hands dirty making it yourself, then burn it at the Rite. It was a way of showing your personal devotion to Lord Argent.",
+        "npc": 701270,
+        "next": 51175931
+      },
+      {
+        "id": 51175931,
+        "content": "But then the Hall of Incense started that \"Daily Incense\" drive. Lunarose became cheap as rice. Wasn't worth the time or money to make it yourself when you could just buy it ready-made.",
+        "npc": 701270,
+        "next": 51175932
+      },
+      {
+        "id": 51175932,
+        "content": "So folks couldn't be bothered with the hassle. The raw materials aren't cheap, and let's be honest, our homemade stuff was never as good as what the Incense Wardens make.",
+        "npc": 701270,
+        "next": 51175933
+      },
+      {
+        "id": 51175933,
+        "content": "Then, in the dead of summer, everyone in Haojing loves splashing about in the water on the outskirts. I think there's a posh word for it... a \"Grace Gathering\"? Aye, that's the one!",
+        "npc": 701270,
+        "next": 51175934
+      },
+      {
+        "id": 51175934,
+        "content": "We haul melons and fruits up the mountain. The trees block out the sun so it's grand and cool. The stream is freezing, see? So we soak the fruit in the brook, wedging them between stones so they don't float away.",
+        "npc": 701270,
+        "next": 51175935
+      },
+      {
+        "id": 51175935,
+        "content": "The strong lads crack the melons open with one chop of their hand, and all the little 'uns come running. Everyone eating until the juice runs down their chins... Oh, aye... just thinking about it gives you something to look forward to, doesn't it?",
+        "npc": 701270,
+        "next": 51175936
+      },
+      {
+        "id": 51175936,
+        "content": "So, you're always welcome in Haojing, kid. If you ever get the chance, come find me again. I'll take you out for a proper wander. How does that sound?",
+        "npc": 701270,
+        "next": 51175937
+      },
+      {
+        "id": 51175937,
+        "content": "(You know the chances of returning to Huaxu are slim, but...)",
+        "options": [
+          {
+            "id": 51175938,
+            "content": "Alright, Uncle. I'll come find you next time.",
+            "next": 51175939,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51175940,
+            "content": "I probably won't have the chance to come back.",
+            "next": 51175941
+          }
+        ]
+      },
+      {
+        "id": 51175939,
+        "content": "Great! That'd be great! I'll be waiting for you, kid!",
+        "npc": 701270
+      },
+      {
+        "id": 51175941,
+        "content": "Don't say that. Life is long. Until your last day comes, who knows where your feet might take you tomorrow?",
+        "npc": 701270,
+        "next": 51175942
+      },
+      {
+        "id": 51175942,
+        "content": "Maybe you'll find your way back one day, with a dear friend in tow. When that happens, come find me. I'll brew you another pot of good tea and we'll have some sweet fruits. It's a promise!",
+        "npc": 701270
+      },
+      {
+        "id": 51175943,
+        "content": "Ah, you're back, dear~ See? I knew you'd come back for me.",
+        "npc": 701270
+      }
+    ]
+  },
+  {
+    "id": 701271,
+    "name": "贺仙姑",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51176002,
+        "content": "See that tower in the distance? When I was little, the old folks used to say it wasn't real at all — just a trick of the eye!",
+        "npc": 701271,
+        "next": 51176003
+      },
+      {
+        "id": 51176003,
+        "content": "They reckoned it was built by eight Immortals serving Lord Argent. Each one governed a different face of the world — Yin and Yang, Soft and Hard, Good and Bad, Fire and Water.",
+        "npc": 701271,
+        "next": 51176004
+      },
+      {
+        "id": 51176004,
+        "content": "We mortals spend lifetime after lifetime grinding through those cycles. Only when we see through the illusion do we truly understand what life is about.",
+        "npc": 701271,
+        "next": 51176005
+      },
+      {
+        "id": 51176005,
+        "content": "Auntie, that's wrong! First you say the tower isn't there, then you say the Eight Immortals built it. Which is it?",
+        "npc": 701272,
+        "next": 51176006
+      },
+      {
+        "id": 51176006,
+        "content": "Well, that's a question for you, Tao. Do you think the Eight Immortals are real?",
+        "npc": 701271,
+        "next": 51176007
+      },
+      {
+        "id": 51176007,
+        "content": "Are they real? Umm... I dunno. What do you think?",
+        "npc": 701272,
+        "next": 51176008
+      },
+      {
+        "id": 51176008,
+        "content": "(The little girl timidly tugs at your sleeve, looking up with wide, expectant eyes.)",
+        "options": [
+          {
+            "id": 51176009,
+            "content": "Probably not. You did say the tower was a fake, after all.",
+            "next": 51176012,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51176010,
+            "content": "Maybe? Life is certainly full of trials, just as she said.",
+            "next": 51176012,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51176011,
+            "content": "What \"Eight Immortals\"? I thought Huaxu only had two Loongs?",
+            "next": 51176012,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51176012,
+        "content": "Tao! Don't pester the stranger! Sorry about that, {性别：sir|miss}. I was just teasing my niece with some tall tales.",
+        "npc": 701271,
+        "next": 51176013
+      },
+      {
+        "id": 51176013,
+        "content": "Not at all. I'm actually quite interested in your story.",
+        "npc": 100001,
+        "next": 51176014
+      },
+      {
+        "id": 51176014,
+        "content": "Auntie! I want to listen to the story with {性别：him|her}!",
+        "npc": 701272,
+        "next": 51176015
+      },
+      {
+        "id": 51176015,
+        "content": "Well... alright then. But mind you, {性别：sir|miss}, this is just idle gossip from the neighbourhood. Don't go taking it as truth from the ancients.",
+        "npc": 701271,
+        "next": 51176016
+      },
+      {
+        "id": 51176016,
+        "content": "Right then, I'll carry on...",
+        "npc": 701271,
+        "next": 51176017
+      },
+      {
+        "id": 51176017,
+        "content": "Yay!",
+        "npc": 701272,
+        "next": 51176018
+      },
+      {
+        "id": 51176018,
+        "content": "So, are the Eight Immortals real? In this story, at least, they certainly are.",
+        "npc": 701271,
+        "next": 51176019
+      },
+      {
+        "id": 51176019,
+        "content": "They used their magic to conjure a pavilion on the sea. They called it a Mirage Tower — said it was formed by the breath of a giant clam.",
+        "npc": 701271,
+        "next": 51176020
+      },
+      {
+        "id": 51176020,
+        "content": "Don't ask me how, but a rumour started doing the rounds: reach that tower on your own two feet — no boats, no magic — and you'll live forever.",
+        "npc": 701271,
+        "next": 51176021
+      },
+      {
+        "id": 51176021,
+        "content": "Live forever? Does that mean you get old but never die? What if a Loongscion grows up into a Bi'an? Would they live forever too?",
+        "npc": 701272,
+        "next": 51176022
+      },
+      {
+        "id": 51176022,
+        "content": "Lord Bi'an is immortal by nature, my poor mite. The ones chasing eternal life are mostly ordinary Earthborn folk like us.",
+        "npc": 701271,
+        "next": 51176023
+      },
+      {
+        "id": 51176023,
+        "content": "I don't suppose you is chasing immortality, are you?",
+        "npc": 701271,
+        "options": [
+          {
+            "id": 51176024,
+            "content": "If I were the last one left... it'd be too lonely.",
+            "next": 51176027,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51176025,
+            "content": "Sounds brilliant. All the time in the world to do whatever I fancy.",
+            "next": 51176027,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          },
+          {
+            "id": 51176026,
+            "content": "I'd only end up on a slab at the Imperial Alchemy Academy.",
+            "next": 51176027,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51176027,
+        "content": "Hah! Well, it's a load of old cobblers anyway. Doesn't exist. Yet plenty of Earthborn waste their lives trying to climb that tower, one after another.",
+        "npc": 701271,
+        "next": 51176028
+      },
+      {
+        "id": 51176028,
+        "content": "No boats, no oars. You had to cross on your own steam. Near impossible, that. Most drowned before they got halfway, bodies lost to the deep.",
+        "npc": 701271,
+        "next": 51176029
+      },
+      {
+        "id": 51176029,
+        "content": "So, to stop the daft sods chasing a fantasy, the Ministry of Fortune built a real island out there and stuck a tower on it.",
+        "npc": 701271,
+        "next": 51176030
+      },
+      {
+        "id": 51176030,
+        "content": "Oh! So the tower now is real, but the old one was fake?",
+        "npc": 701272,
+        "next": 51176031
+      },
+      {
+        "id": 51176031,
+        "content": "In a manner of speaking. Though some reckon what we see now is a \"False Mirage\" — a decoy to hide the real tower away forever. No one can find it again.",
+        "npc": 701271,
+        "options": [
+          {
+            "id": 51176032,
+            "content": "Again? You mean someone actually...",
+            "next": 51176033
+          }
+        ]
+      },
+      {
+        "id": 51176033,
+        "content": "Aye. Shen, a scholar, claimed he found the true Mirage Tower. Said he met the Eight Immortals but failed their trials.",
+        "npc": 701271,
+        "next": 51176034
+      },
+      {
+        "id": 51176034,
+        "content": "He swore the Immortals feasted him anyway — ambrosia, nectar, the works. Even gave him a strange magical artefact as a parting gift.",
+        "npc": 701271,
+        "next": 51176035
+      },
+      {
+        "id": 51176035,
+        "content": "Supposed to ward off bad luck and extend his life, or so he said.",
+        "npc": 701271,
+        "next": 51176036
+      },
+      {
+        "id": 51176036,
+        "content": "Cor! That sounds brilliant! Where's Shen now, Auntie?",
+        "npc": 701272,
+        "next": 51176037
+      },
+      {
+        "id": 51176037,
+        "content": "Oh, that was donkey's years ago, love. They say he moved into the Ministry of Fortune's fake tower, hoping to find his way back to the real one.",
+        "npc": 701271,
+        "next": 51176038
+      },
+      {
+        "id": 51176038,
+        "content": "Nothing ever came of it. He's long dead, I expect. Although, he did write a book about his journey... Mirage Musings, I think?",
+        "npc": 701271,
+        "next": 51176039
+      },
+      {
+        "id": 51176039,
+        "content": "Rare as hen's teeth now. Unless some dusty bookseller has a copy, or it's propping up a wobbly table somewhere.",
+        "npc": 701271,
+        "next": 51176040
+      },
+      {
+        "id": 51176040,
+        "content": "What a story! Auntie, take me to the fake tower one day! Please?",
+        "npc": 701272,
+        "next": 51176041
+      },
+      {
+        "id": 51176041,
+        "content": "Alright. But only if you trot home and hand over that jar of sweets your mum bought you. Hear me?",
+        "npc": 701271,
+        "next": 51176042
+      },
+      {
+        "id": 51176042,
+        "content": "But... umm... well... I ate them all...",
+        "npc": 701272,
+        "next": 51176043
+      },
+      {
+        "id": 51176043,
+        "content": "What?! It's only been three days! You greedy little piglet! Your teeth will rot out if you're not careful!",
+        "npc": 701271,
+        "next": 51176044
+      },
+      {
+        "id": 51176044,
+        "content": "(Laughing and scolding, they chase each other into the distance, leaving you standing alone in their wake...)",
+        "next": 51176045
+      },
+      {
+        "id": 51176045,
+        "content": "(Mirage Musings, was it? Might be worth tracking down.)"
+      }
+    ]
+  },
+  {
+    "id": 701272,
+    "name": "阿桃",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701273,
+    "name": "乐观皎皎",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51177002,
+        "content": "Hey, everyone — look at me! You're all smart — every one of you!",
+        "npc": 701273,
+        "next": 51177003
+      },
+      {
+        "id": 51177003,
+        "content": "(The Lunarian stands tall atop the table, chest puffed out, radiating boundless energy.)",
+        "options": [
+          {
+            "id": 51177004,
+            "content": "You can't stand up there.",
+            "next": 51177005,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          },
+          {
+            "id": 51177007,
+            "content": "Isn't it tiring, standing up there shouting?",
+            "next": 51177008,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51177005,
+        "content": "\"Can't\"? That word is not in my vocabulary! Look through the lens of positivity, and every dead end in Haojing becomes a wide-open road!",
+        "npc": 701273,
+        "next": 51177006
+      },
+      {
+        "id": 51177008,
+        "content": "Tired? Weary? Down in the dumps? Spent? Rubbish! Those words are not in my vocabulary! Describe me with something else entirely!",
+        "npc": 701273,
+        "next": 51177009
+      },
+      {
+        "id": 51177006,
+        "content": "Let us speak of brighter things! Words like Love! Hope! Tomorrow!",
+        "npc": 701273,
+        "next": 51177010
+      },
+      {
+        "id": 51177009,
+        "content": "Words like Love! Hope! Tomorrow!",
+        "npc": 701273,
+        "next": 51177010
+      },
+      {
+        "id": 51177010,
+        "content": "So... what exactly are you doing?",
+        "npc": 100001,
+        "next": 51177011
+      },
+      {
+        "id": 51177011,
+        "content": "I am preaching! Preaching the one true creed — Positivity! I am a Lunarian infected by optimism, and my sole purpose is to spread this glorious contagion to everyone!",
+        "npc": 701273,
+        "next": 51177012
+      },
+      {
+        "id": 51177012,
+        "content": "Do you see it? Do you see optimism raining down upon Haojing?",
+        "npc": 701273,
+        "next": 51177013
+      },
+      {
+        "id": 51177013,
+        "content": "Yesterday's wilted flowers were on their last legs, but look at them now! Perking up, swaying in the breeze, smelling divine!",
+        "npc": 701273,
+        "next": 51177014
+      },
+      {
+        "id": 51177014,
+        "content": "The bun stall used to be dead quiet, but this morning? Queues round the block! Everyone clamouring for a piping hot steamer basket!",
+        "npc": 701273,
+        "next": 51177015
+      },
+      {
+        "id": 51177015,
+        "content": "And the shopkeeper with my favourite mung bean soup? He remembered my order! Slipped six extra lotus seeds in my bowl! Six!",
+        "npc": 701273,
+        "next": 51177016
+      },
+      {
+        "id": 51177016,
+        "content": "Everyone is starting to see the light! Everyone is smiling, just like me!",
+        "npc": 701273,
+        "next": 51177017
+      },
+      {
+        "id": 51177017,
+        "content": "This is it...",
+        "npc": 701273,
+        "next": 51177018
+      },
+      {
+        "id": 51177018,
+        "content": "This is the positivity infection taking hold! What about you? Have you caught the bug yet?!",
+        "npc": 701273,
+        "options": [
+          {
+            "id": 51177019,
+            "content": "I think I've caught it.",
+            "next": 51177021,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51177020,
+            "content": "I've been \"infected\", alright.",
+            "next": 51177021,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51177021,
+        "content": "Yes! That's the spirit! As long as we keep optimism in our hearts, the world will be a better place!",
+        "npc": 701273,
+        "next": 51177022
+      },
+      {
+        "id": 51177022,
+        "content": "Go forth! Take this joy with you, keep that smile plastered on your face, and spread the good word to everyone you meet!",
+        "npc": 701273,
+        "next": 51177023
+      },
+      {
+        "id": 51177023,
+        "content": "(Lunojoy reaches out and claps you solemnly on the shoulder. Her burning gaze, however, is fixed straight ahead, staring right through you at something far beyond...)",
+        "next": 51177024
+      },
+      {
+        "id": 51177024,
+        "content": "(After a moment, her eyes snap back to yours. A brief stare, a firm nod, and then she withdraws her hand to resume her sermon.)",
+        "next": 51177025
+      },
+      {
+        "id": 51177025,
+        "content": "(You can't shake a sense of déjà vu. It feels like this conversation has happened before... just not quite like this...)"
+      },
+      {
+        "id": 51177026,
+        "content": "Well? Feeling any more positive today than yesterday? If not, stay a while and hear me out again!",
+        "npc": 701273
+      }
+    ]
+  },
+  {
+    "id": 701274,
+    "name": "砚台清",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51178002,
+        "content": "How come no one wants to debate me? Have I been coming on too strong?",
+        "npc": 701274,
+        "next": 51178003
+      },
+      {
+        "id": 51178003,
+        "content": "I have devised a proposition of such exquisite brilliance! To debate it would be a moment of true enlightenment!",
+        "npc": 701274,
+        "next": 51178004
+      },
+      {
+        "id": 51178004,
+        "content": "But those narrow-minded fools! Dull-eyed simpletons, the lot of them. They haven't the wit to appreciate my genius. Just wait until the master returns. I shall lodge a formal complaint!",
+        "npc": 701274,
+        "next": 51178005
+      },
+      {
+        "id": 51178005,
+        "content": "Sigh... Where might I find a kindred spirit? Someone with the vision to look past my fragility, perceive my intellectual fortitude, and engage me in a glorious battle of wits?",
+        "npc": 701274,
+        "options": [
+          {
+            "id": 51178006,
+            "content": "I'll take you on!",
+            "next": 51178007,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51178009,
+            "content": "(Boring. Time to leave.)",
+            "next": 51178010
+          }
+        ]
+      },
+      {
+        "id": 51178007,
+        "content": "(He whips his head around, his eyes locking onto yours with a frightening intensity.)",
+        "next": 51178008
+      },
+      {
+        "id": 51178010,
+        "content": "I say, hold on a moment! You have a striking presence. I daresay you are a hidden gem, a talent waiting to be discovered.",
+        "npc": 701274,
+        "next": 51178011
+      },
+      {
+        "id": 51178008,
+        "content": "Yes! Splendid! You shall be the one!",
+        "npc": 701274,
+        "next": 51178012
+      },
+      {
+        "id": 51178011,
+        "content": "Why not grace me with a debate? What do you say?",
+        "npc": 701274,
+        "next": 51178012
+      },
+      {
+        "id": 51178012,
+        "content": "I don't know the first thing about debating. Never learned the proper way.",
+        "npc": 100001,
+        "next": 51178013
+      },
+      {
+        "id": 51178013,
+        "content": "Oh, don't be so modest! \"Don't know about it\"? Nonsense. There's a first time for everything, isn't there?",
+        "npc": 701274,
+        "next": 51178014
+      },
+      {
+        "id": 51178014,
+        "content": "Besides, debating is essentially just flapping your gums with a bit of style. You seem articulate enough. I wager you've a natural gift for rhetoric!",
+        "npc": 701274,
+        "next": 51178015
+      },
+      {
+        "id": 51178015,
+        "content": "Look, usually at Academy of Reflections, it's a dreadful rigmarole — applications, formal stages, judges to score points... terribly bureaucratic.",
+        "npc": 701274,
+        "next": 51178016
+      },
+      {
+        "id": 51178016,
+        "content": "But since you're a novice, let's keep it informal. A private sparring session. A pure clash of minds, with no winners or losers. How does that sound?",
+        "npc": 701274,
+        "options": [
+          {
+            "id": 51178017,
+            "content": "(You begin to wonder if your wits are sharp enough to survive this bizarre argument.)",
+            "next": 51178020
+          }
+        ]
+      },
+      {
+        "id": 51178020,
+        "content": "Fine. What's the motion? I'll humour you.",
+        "npc": 100001,
+        "next": 51178021
+      },
+      {
+        "id": 51178021,
+        "content": "Aha! A decisive spirit! The motion is simple: \"Does the onlooker see the whole picture, or are they blind to it?\" Which side do you take?",
+        "npc": 701274,
+        "options": [
+          {
+            "id": 51178022,
+            "content": "The onlooker sees the whole picture.",
+            "next": 51178023
+          },
+          {
+            "id": 51178037,
+            "content": "The onlooker is blind to the whole picture.",
+            "next": 51178038
+          }
+        ]
+      },
+      {
+        "id": 51178023,
+        "content": "Splendid. You shall argue for the proposition.",
+        "npc": 701274,
+        "next": 51178024
+      },
+      {
+        "id": 51178038,
+        "content": "Excellent. You shall take the opposition.",
+        "npc": 701274,
+        "next": 51178039
+      },
+      {
+        "id": 51178024,
+        "content": "(Yan Taiqing clears his throat theatrically, puffs out his chest, and assumes a posture of severe academic gravity.)",
+        "next": 51178025
+      },
+      {
+        "id": 51178039,
+        "content": "Since you've chosen your stance, the floor is yours. Present your opening argument — and don't hold back on my account!",
+        "npc": 701274,
+        "next": 51178040
+      },
+      {
+        "id": 51178025,
+        "content": "Since you've chosen your stance, the floor is yours. Present your opening argument — and don't hold back on my account!",
+        "npc": 701274,
+        "next": 51178026
+      },
+      {
+        "id": 51178040,
+        "content": "(You try to marshal your thoughts. Perhaps a concrete example would drive the point home?)",
+        "options": [
+          {
+            "id": 51178041,
+            "content": "Take the Nine Chapters of Dafeng, for example.",
+            "next": 51178042,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51178046,
+            "content": "Take children fighting, for example.",
+            "next": 51178047,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178026,
+        "content": "(You ponder the concept. Perhaps a concrete example would illustrate your point best?)",
+        "options": [
+          {
+            "id": 51178027,
+            "content": "Take chess, for instance.",
+            "next": 51178028,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51178032,
+            "content": "Take business, for example.",
+            "next": 51178033,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178042,
+        "content": "A Drifter once told me that the Nine Chapters sometimes dispatches a Bi'an to enforce the law before the facts are fully established.",
+        "npc": 100001,
+        "next": 51178043
+      },
+      {
+        "id": 51178047,
+        "content": "Back in my village, children would often squabble while playing. Sometimes, it would escalate into a proper scrap.",
+        "npc": 100001,
+        "next": 51178048
+      },
+      {
+        "id": 51178028,
+        "content": "I've watched punters playing chess in the tavern. They get so absorbed in the match, agonizing over every single move and staring at the board until their eyes cross.",
+        "npc": 100001,
+        "next": 51178029
+      },
+      {
+        "id": 51178033,
+        "content": "A publican once told me about high-stakes negotiations. The people in the thick of it often get muddled by the complex profit margins.",
+        "npc": 100001,
+        "next": 51178034
+      },
+      {
+        "id": 51178043,
+        "content": "Consequently, many who erred under duress or by honest mistake never get the chance to plead their case.",
+        "npc": 100001,
+        "next": 51178044
+      },
+      {
+        "id": 51178048,
+        "content": "They'd come home bruised and bloody, and their parents would see red the moment they saw the injuries.",
+        "npc": 100001,
+        "next": 51178049
+      },
+      {
+        "id": 51178029,
+        "content": "The trouble is, they develop tunnel vision. They focus so intently on one piece that they can't see the wood for the trees.",
+        "npc": 100001,
+        "next": 51178030
+      },
+      {
+        "id": 51178034,
+        "content": "They get dazzled by short-term gains and completely lose the plot regarding their long-term goals. That is how bad deals are struck.",
+        "npc": 100001,
+        "next": 51178035
+      },
+      {
+        "id": 51178044,
+        "content": "In such cases, the Nine Chapters acts like an onlooker judging in ignorance. You can hardly call that \"seeing the whole picture.\"",
+        "npc": 100001,
+        "next": 51178045
+      },
+      {
+        "id": 51178049,
+        "content": "They'd march straight to the other family's house without asking why it started — never stopping to think that maybe their own little darling was the bully.",
+        "npc": 100001,
+        "next": 51178050
+      },
+      {
+        "id": 51178030,
+        "content": "Meanwhile, a spectator on the sidelines can tell who's winning at a glance. They aren't obsessing over a single pawn. They're reading the whole board.",
+        "npc": 100001,
+        "next": 51178031
+      },
+      {
+        "id": 51178035,
+        "content": "That's why they bring advisors along — an extra pair of eyes to act as a sanity check and pull them back from the brink before they sign something stupid.",
+        "npc": 100001,
+        "next": 51178036
+      },
+      {
+        "id": 51178045,
+        "content": "Nonsense! The audacity! How dare you question the Nine Chapters? They are the very embodiment of Divine Order, infallible by definition! How could they possibly be unclear?",
+        "npc": 701274,
+        "next": 51178053
+      },
+      {
+        "id": 51178050,
+        "content": "The children are the participants; the parents, the onlookers. Yet the parents ignore the cause. They see only their child's pain and demand the other be punished.",
+        "npc": 100001,
+        "next": 51178051
+      },
+      {
+        "id": 51178031,
+        "content": "Nonsense! You're describing a hopeless amateur who doesn't know a rook from a turnip! A true grandmaster would never make such blunders. If they were actually skilled, that simply wouldn't happen.",
+        "npc": 701274,
+        "next": 51178053
+      },
+      {
+        "id": 51178036,
+        "content": "Nonsense! You're talking about incompetent fools who couldn't sell water in a desert! A master merchant would never be so easily bamboozled. If they were actually skilled, that simply wouldn't happen.",
+        "npc": 701274,
+        "next": 51178053
+      },
+      {
+        "id": 51178053,
+        "content": "(Hearing Yan Taiqing's bizarre logic, you can't help but frown.)",
+        "next": 51178054
+      },
+      {
+        "id": 51178051,
+        "content": "You might call it parental love... but I'd say that is a classic case of an onlooker seeing nothing at all.",
+        "npc": 100001,
+        "next": 51178052
+      },
+      {
+        "id": 51178054,
+        "content": "I thought we were having a debate? Why are you flying off the handle instead of presenting a counter-argument?",
+        "npc": 100001,
+        "next": 51178055
+      },
+      {
+        "id": 51178052,
+        "content": "Nonsense! I don't care about your backward village. Fighting and harming others is wrong! In Huaxu, Bi'an would have every one of them punished!",
+        "npc": 701274,
+        "next": 51178053
+      },
+      {
+        "id": 51178055,
+        "content": "This is my argument! Did you expect me to sit here and listen to such drivel without correcting you?",
+        "npc": 701274,
+        "next": 51178056
+      },
+      {
+        "id": 51178056,
+        "content": "(You recall what he said at the very beginning...)",
+        "next": 51178057
+      },
+      {
+        "id": 51178057,
+        "content": "(You're starting to understand why nobody wants to debate him...)",
+        "next": 51178058
+      },
+      {
+        "id": 51178058,
+        "content": "You're impossible.",
+        "npc": 100001,
+        "next": 51178059
+      },
+      {
+        "id": 51178059,
+        "content": "What did you say? Are you insulting me?",
+        "npc": 701274,
+        "options": [
+          {
+            "id": 51178060,
+            "content": "Ignore him.",
+            "next": 51178061,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51178062,
+            "content": "Scare him.",
+            "next": 51178063,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178061,
+        "content": "(You walk away without a word, leaving Yan Taiqing hopping mad and shouting abuse at your back.)"
+      },
+      {
+        "id": 51178063,
+        "content": "Watch your back when you're walking home at night.",
+        "npc": 100001,
+        "next": 51178064
+      },
+      {
+        "id": 51178064,
+        "content": "(You grip the hilt of your blade, flashing it just enough to make your point, then turn and walk away.)"
+      }
+    ]
+  },
+  {
+    "id": 701275,
+    "name": "萍姐",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51178102,
+        "content": "The most complicated mediation case I ever handled was the accident ten years ago.",
+        "npc": 701275,
+        "next": 51178103
+      },
+      {
+        "id": 51178103,
+        "content": "You're fresh to the job, though. I'm not sure a grim tale like this is fit for green ears...",
+        "npc": 701275,
+        "next": 51178104
+      },
+      {
+        "id": 51178104,
+        "content": "Oh, come off it! I'm not just any rookie. Top of the class, sharpest wits, got the gift of the gab. I'm the full package! Go on, spill it!",
+        "npc": 701276,
+        "next": 51178105
+      },
+      {
+        "id": 51178105,
+        "content": "Hah! \"Gift of the gab\"? \"Cheekiest waffler\" is more like it.",
+        "npc": 701275,
+        "options": [
+          {
+            "id": 51178106,
+            "content": "(Sidle up quietly, pretending to browse...)",
+            "next": 51178108,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178108,
+        "content": "It was a decade ago, but the memory is as fresh as if it happened yesterday.",
+        "npc": 701275,
+        "next": 51178109
+      },
+      {
+        "id": 51178109,
+        "content": "My uncle came bursting in from the street, covered head to toe in gore.",
+        "npc": 701275,
+        "next": 51178110
+      },
+      {
+        "id": 51178110,
+        "content": "Nearly stopped my heart. I thought he'd been attacked...",
+        "npc": 701275,
+        "next": 51178111
+      },
+      {
+        "id": 51178111,
+        "content": "He was in a right state — gasping, panicking, couldn't get a word out properly. Then he just blurted it: \"Someone's dead.\"",
+        "npc": 701275,
+        "next": 51178112
+      },
+      {
+        "id": 51178112,
+        "content": "Dead? Who died? But surely Bi'an enforces the law? If it was that nasty, wouldn't he have just nicked the killer on the spot?",
+        "npc": 701276,
+        "next": 51178113
+      },
+      {
+        "id": 51178113,
+        "content": "Mm-hm. In a normal case, yes. But this was far from normal.",
+        "npc": 701275,
+        "next": 51178114
+      },
+      {
+        "id": 51178114,
+        "content": "The victim was a schoolboy. Wealthy family, spoiled rotten, and never taught any manners. He was a nasty piece of work, a proper little tyrant in the schoolyard.",
+        "npc": 701275,
+        "next": 51178115
+      },
+      {
+        "id": 51178115,
+        "content": "They say he was a terror. He'd shake down the other lads for pocket money and play vicious pranks on his classmates. Even as an adult, he never grew out of it.",
+        "npc": 701275,
+        "next": 51178116
+      },
+      {
+        "id": 51178116,
+        "content": "Ugh, sounds like a right charmer... But surely Bi'an would have punished him for that sort of rubbish?",
+        "npc": 701276,
+        "options": [
+          {
+            "id": 51178117,
+            "content": "(Is there such a thing as a prank that goes unpunished...?)",
+            "next": 51178119
+          }
+        ]
+      },
+      {
+        "id": 51178119,
+        "content": "When I was little, there was a nasty kid next door who loved winding up his mates. Once, while a friend was napping, he stuffed a load of live crabs into her jar of seashells.",
+        "npc": 100001,
+        "next": 51178120
+      },
+      {
+        "id": 51178120,
+        "content": "When she woke up and reached in for her shells, the startled crabs gave her fingers a nasty nip.",
+        "npc": 100001,
+        "next": 51178121
+      },
+      {
+        "id": 51178121,
+        "content": "What a horrid boy. And what became of him?",
+        "npc": 701275,
+        "next": 51178122
+      },
+      {
+        "id": 51178122,
+        "content": "He laughed his head off, until my family and I stepped in. We gave him a proper sorting out, and he kept his nose clean after that.",
+        "npc": 100001,
+        "next": 51178123
+      },
+      {
+        "id": 51178123,
+        "content": "If someone steps in to set a lad straight, that's a mercy in itself. But the tyrant I'm talking about... he wasn't so lucky.",
+        "npc": 701275,
+        "next": 51178124
+      },
+      {
+        "id": 51178124,
+        "content": "— He died. But his killer...",
+        "npc": 701275,
+        "next": 51178125
+      },
+      {
+        "id": 51178125,
+        "content": "Come on! Stop keeping us in suspense!",
+        "npc": 701276,
+        "next": 51178126
+      },
+      {
+        "id": 51178126,
+        "content": "Was a simpleton.",
+        "npc": 701275,
+        "next": 51178127
+      },
+      {
+        "id": 51178127,
+        "content": "?!",
+        "npc": 100001,
+        "next": 51178128
+      },
+      {
+        "id": 51178128,
+        "content": "He wasn't quite right in the head, born that way. The neighbours pitied him and were kind enough when he was small. But children can be cruel... once he started school, they didn't take kindly to him.",
+        "npc": 701275,
+        "next": 51178129
+      },
+      {
+        "id": 51178129,
+        "content": "After years of cold shoulders, the boy grew timid. And once he was timid, the others stopped seeing him as a person. They looked down on him, ordered him about, and made him do their dirty work.",
+        "npc": 701275,
+        "next": 51178130
+      },
+      {
+        "id": 51178130,
+        "content": "Sounds like straight-up bullying. I get it now. So the worst of the lot was that \"little tyrant\" you mentioned?",
+        "npc": 701276,
+        "next": 51178131
+      },
+      {
+        "id": 51178131,
+        "content": "Exactly. The tyrant always claimed he was just \"playing\", but he was tormenting the poor lad. Then one day, during their \"play\", the simple boy accidentally pushed him from the second floor. Dead before he hit the ground.",
+        "npc": 701275,
+        "next": 51178132
+      },
+      {
+        "id": 51178132,
+        "content": "The poor soul didn't even understand. There was blood everywhere, people screaming for help... and he just stood there, clapping his hands and giggling.",
+        "npc": 701275,
+        "next": 51178133
+      },
+      {
+        "id": 51178133,
+        "content": "Then what? How did Bi'an judge him?",
+        "npc": 701276,
+        "next": 51178134
+      },
+      {
+        "id": 51178134,
+        "content": "Lord Bi'an arrived in a flash and took the simple boy's life as payment. Pity his poor mother. She'd carried him, raised him as her own flesh and blood, struggled to bring him to adulthood... only for it to end like that.",
+        "npc": 701275,
+        "next": 51178135
+      },
+      {
+        "id": 51178135,
+        "content": "The injustice consumed her. When she found out how her son had been treated, she cried herself blind. She went door to door, begging neighbours and relatives to help her find justice.",
+        "npc": 701275,
+        "next": 51178136
+      },
+      {
+        "id": 51178136,
+        "content": "Most folks turned a blind eye, avoiding her like the plague. Only my uncle had the heart to help. Having witnessed the whole thing, he stood by her side and fought her case to the very end.",
+        "npc": 701275,
+        "next": 51178137
+      },
+      {
+        "id": 51178137,
+        "content": "So? What was the verdict?",
+        "npc": 701276,
+        "next": 51178138
+      },
+      {
+        "id": 51178138,
+        "content": "I'd love to tell you, but I was only a teenager at the time. As for how it all ended... I honestly don't know.",
+        "npc": 701275,
+        "next": 51178139
+      },
+      {
+        "id": 51178139,
+        "content": "You don't know?! Please, stop pulling my leg! Just tell me!",
+        "npc": 701276,
+        "next": 51178140
+      },
+      {
+        "id": 51178140,
+        "content": "I truly don't. I pestered my uncle about it, but never got a straight answer. Well, tell me, what do you reckon happened?",
+        "npc": 701275,
+        "options": [
+          {
+            "id": 51178141,
+            "content": "I believe the mother got justice for her son.",
+            "next": 51178142,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51178145,
+            "content": "I suspect it all came to nothing in the end.",
+            "next": 51178146,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178142,
+        "content": "I reckon she cleared his name. She couldn't bring him back, but she wouldn't let him be branded a criminal. It wasn't malicious, after all. At worst, a tragic accident.",
+        "npc": 100001,
+        "next": 51178143
+      },
+      {
+        "id": 51178146,
+        "content": "If she'd actually found justice, your uncle wouldn't have kept quiet. He likely failed, and didn't have the heart to tell you the sad truth.",
+        "npc": 100001,
+        "next": 51178147
+      },
+      {
+        "id": 51178143,
+        "content": "You're right. If that happened in Huaxu today, after the reforms, I'd fight tooth and nail for that mother until every wrong was righted.",
+        "npc": 701275,
+        "next": 51178144
+      },
+      {
+        "id": 51178147,
+        "content": "Aye. Deep down, we all know. We just don't want to admit it...",
+        "npc": 701275,
+        "next": 51178148
+      },
+      {
+        "id": 51178144,
+        "content": "That's why we mediators exist, isn't it? To ensure that judgement isn't left to the Nine Chapters of Dafeng anymore. It's in human hands now, where it belongs.",
+        "npc": 701275,
+        "next": 51178149
+      },
+      {
+        "id": 51178148,
+        "content": "Still, thank goodness for the reforms and for us mediators. Judgement isn't left to the Nine Chapters of Dafeng anymore. It's in human hands now, where it belongs.",
+        "npc": 701275,
+        "next": 51178149
+      },
+      {
+        "id": 51178149,
+        "content": "But still... whatever the outcome, you can't exactly call it a happy ending, can you?",
+        "npc": 701276,
+        "next": 51178150
+      },
+      {
+        "id": 51178150,
+        "content": "The boy is dead. What does right or wrong matter to him now? The dead don't care about their reputation...",
+        "npc": 701276,
+        "next": 51178151
+      },
+      {
+        "id": 51178151,
+        "content": "At the end of the day, it's all because of Bi'an...",
+        "npc": 701276,
+        "next": 51178152
+      },
+      {
+        "id": 51178152,
+        "content": "That's bold talk. You dare say that out loud?",
+        "npc": 100001,
+        "next": 51178153
+      },
+      {
+        "id": 51178153,
+        "content": "Why shouldn't I? Passing judgement blindly before knowing the facts is wrong, plain and simple. I became a mediator to stop things like that happening, to ensure people get a fair shake!",
+        "npc": 701276,
+        "next": 51178154
+      },
+      {
+        "id": 51178154,
+        "content": "...Pfft.",
+        "npc": 701275,
+        "next": 51178155
+      },
+      {
+        "id": 51178155,
+        "content": "What? What are you laughing at?",
+        "npc": 701276,
+        "next": 51178156
+      },
+      {
+        "id": 51178156,
+        "content": "If that's how you feel, then listening to me rattle on today wasn't a waste of time after all...",
+        "npc": 701275,
+        "next": 51178157
+      },
+      {
+        "id": 51178157,
+        "content": "I don't get it. What do you mean?",
+        "npc": 701276,
+        "next": 51178158
+      },
+      {
+        "id": 51178158,
+        "content": "Nothing, nothing. Story time is over. I've got files to sort back at the office, and you're helping me.",
+        "npc": 701275,
+        "next": 51178159
+      },
+      {
+        "id": 51178159,
+        "content": "Oh, and friend—apologies for bending your ear for so long with my dusty old tales.",
+        "npc": 701275,
+        "next": 51178160
+      },
+      {
+        "id": 51178160,
+        "content": "No bother at all.",
+        "npc": 100001,
+        "next": 51178161
+      },
+      {
+        "id": 51178161,
+        "content": "Right then. We won't keep you any longer. Goodbye.",
+        "npc": 701275
+      },
+      {
+        "id": 51178162,
+        "content": "Why are you still here?",
+        "npc": 701275,
+        "next": 51178163
+      },
+      {
+        "id": 51178163,
+        "content": "Come on, the paperwork can wait — there's always more to do. Let's make the most of this rare break while we can.",
+        "npc": 701276
+      }
+    ]
+  },
+  {
+    "id": 701276,
+    "name": "谢迁",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 701277,
+    "name": "程宫",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51178202,
+        "content": "If the law can't stand up to scrutiny, letting personal feelings decide is even less defensible.",
+        "npc": 701277,
+        "next": 51178203
+      },
+      {
+        "id": 51178203,
+        "content": "(The man bellows his views to the crowd, chin held high in arrogance. Curious, you step closer to catch his drift.)",
+        "next": 51178204
+      },
+      {
+        "id": 51178204,
+        "content": "The Nine Chapters of Dafeng was once a flawless system!",
+        "npc": 701277,
+        "next": 51178205
+      },
+      {
+        "id": 51178205,
+        "content": "Right was right, wrong was wrong. A life for a life. Stark, simple, and requiring no meddling from human hands.",
+        "npc": 701277,
+        "next": 51178206
+      },
+      {
+        "id": 51178206,
+        "content": "But look at us now! Saddled with these damnable \"reforms.\" A Bi'an makes an arrest, but then? It vanishes into bureaucracy, secret deals are struck, and the crime is simply forgotten!",
+        "npc": 701277,
+        "next": 51178207
+      },
+      {
+        "id": 51178207,
+        "content": "A thousand years of celestial law, thrown in the bin! What is to become of us?!",
+        "npc": 701277,
+        "next": 51178208
+      },
+      {
+        "id": 51178208,
+        "content": "(He continues to vent his spleen about the reforms. You try to think of a sharp retort.)",
+        "options": [
+          {
+            "id": 51178209,
+            "content": "(Challenge his views.)",
+            "next": 51178211
+          }
+        ]
+      },
+      {
+        "id": 51178211,
+        "content": "You don't seem to have much faith in your own people.",
+        "npc": 100001,
+        "next": 51178212
+      },
+      {
+        "id": 51178212,
+        "content": "I beg your pardon? Whatever do you mean?",
+        "npc": 701277,
+        "next": 51178213
+      },
+      {
+        "id": 51178213,
+        "content": "You speak as if everyone here is an idiot — incapable of putting one foot in front of the other without a god dictating their every move.",
+        "npc": 100001,
+        "next": 51178214
+      },
+      {
+        "id": 51178214,
+        "content": "Absolute nonsense! That is not my meaning at all. Hear me out.",
+        "npc": 701277,
+        "next": 51178215
+      },
+      {
+        "id": 51178215,
+        "content": "If people know that murder isn't met with immediate punishment, but merely an arrest and a tedious trial... they will lose their fear.",
+        "npc": 701277,
+        "next": 51178216
+      },
+      {
+        "id": 51178216,
+        "content": "Fear is the tether that holds the wild stallion! It is the cage for the vulture, the dyke that stops the river from flooding our homes!",
+        "npc": 701277,
+        "next": 51178217
+      },
+      {
+        "id": 51178217,
+        "content": "Without fear, dark thoughts will fester and rot the soul. We shall descend into chaos and violence before you know it. Is that the peaceful Huaxu we know?",
+        "npc": 701277,
+        "next": 51178218
+      },
+      {
+        "id": 51178218,
+        "content": "Even if the Nine Chapters makes mistakes, surely a harsh law is better than a toothless one that lets people forget their place!",
+        "npc": 701277,
+        "next": 51178219
+      },
+      {
+        "id": 51178219,
+        "content": "You aren't \"the people\". Why assume every soul in Huaxu harbours such wickedness? Or are you simply projecting your own dark impulses onto everyone else?",
+        "npc": 100001,
+        "next": 51178220
+      },
+      {
+        "id": 51178220,
+        "content": "I was speaking hypothetically! Purely hypothetically! But dare you guarantee such chaos won't come to pass?",
+        "npc": 701277,
+        "options": [
+          {
+            "id": 51178221,
+            "content": "(Invoke Zhiliu's authority.)",
+            "next": 51178222,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51178226,
+            "content": "(Appeal to reason.)",
+            "next": 51178227,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178222,
+        "content": "I understand that the High Chancellor of Loongyuan was chosen by Lord Argent.",
+        "npc": 100001,
+        "next": 51178223
+      },
+      {
+        "id": 51178227,
+        "content": "The old Nine Chapters never stopped those truly determined to do evil. I've watched slippery wretches in Haze Market dance around the rules, finding loopholes to escape justice entirely.",
+        "npc": 100001,
+        "next": 51178228
+      },
+      {
+        "id": 51178223,
+        "content": "If you trust Lord Argent, you must trust Zhiliu. She is the chosen High Chancellor. Have a little faith in the judgement, and hers.",
+        "npc": 100001,
+        "next": 51178224
+      },
+      {
+        "id": 51178228,
+        "content": "Yet the innocents wrongly condemned by those same laws... once the Bi'an took them, there was no bringing them back.",
+        "npc": 100001,
+        "next": 51178229
+      },
+      {
+        "id": 51178224,
+        "content": "Perhaps these reforms she drives are exactly what Lord Argent intended all along.",
+        "npc": 100001,
+        "next": 51178225
+      },
+      {
+        "id": 51178229,
+        "content": "I believe \"certainty\" and \"fairness\" matter more than cruelty. We must ensure every criminal faces punishment, yes, but also give the wrongly accused a chance to clear their names.",
+        "npc": 100001,
+        "next": 51178230
+      },
+      {
+        "id": 51178225,
+        "content": "What Lord Argent intended? No... surely...?",
+        "npc": 701277,
+        "next": 51178232
+      },
+      {
+        "id": 51178230,
+        "content": "Isn't that the true purpose of the law?",
+        "npc": 100001,
+        "next": 51178231
+      },
+      {
+        "id": 51178232,
+        "content": "You... you may actually have a point. I need a moment to think...",
+        "npc": 701277,
+        "next": 51178233
+      },
+      {
+        "id": 51178231,
+        "content": "Certainty... and fairness. Could it be...",
+        "npc": 701277,
+        "next": 51178232
+      },
+      {
+        "id": 51178233,
+        "content": "(The man mutters to himself, his bluster deflating into quiet anxiety. You realise his anger was just a mask for fear — fear of the reforms, and of an uncertain future.)",
+        "next": 51178234
+      },
+      {
+        "id": 51178234,
+        "content": "(But no matter his fears, change has arrived. And it was inevitable.)"
+      },
+      {
+        "id": 51178235,
+        "content": "Just give me a moment... I need time to think.",
+        "npc": 701277
+      }
+    ]
+  },
+  {
+    "id": 701278,
+    "name": "诸葛明",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51178302,
+        "content": "These bits of wood you lot keep knocking together — there's nothing to them. Back in the day, I could've shown you the real stuff.",
+        "npc": 701278,
+        "next": 51178303
+      },
+      {
+        "id": 51178303,
+        "content": "Back then, I built marvels that made the heavens shake and the ghosts weep! Ever heard of the Ying Loong Type Ⅰ? It was a colossal Mechapuppet I modelled after Lord Argent!",
+        "npc": 701278,
+        "next": 51178304
+      },
+      {
+        "id": 51178304,
+        "content": "But alas... those gutless, blind fools! \"It's disrespectful to the Lord,\" they whined. \"It might step on someone!\" \"It's scaring the children!\" Absolute tosh!",
+        "npc": 701278,
+        "next": 51178305
+      },
+      {
+        "id": 51178305,
+        "content": "They didn't even let me switch it on! Tore it down overnight, right down to the bolts. After all my blood, sweat, and tears... I never even got to see it move. Not once!",
+        "npc": 701278,
+        "options": [
+          {
+            "id": 51178306,
+            "content": "Well, at least you got to see it in pieces.",
+            "next": 51178307,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          },
+          {
+            "id": 51178308,
+            "content": "So... what did they do with the scrap metal?",
+            "next": 51178309,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178307,
+        "content": "You! You heartless sod! How can you say that?! Waaaah... My Ying Loong Type Ⅰ! Waaaaah!",
+        "npc": 701278,
+        "next": 51178310
+      },
+      {
+        "id": 51178309,
+        "content": "What do you think?! They recycled it into parts for those piddling little toys... Ugh... My poor Ying Loong Type Ⅰ! Waaaaah!",
+        "npc": 701278,
+        "next": 51178310
+      },
+      {
+        "id": 51178310,
+        "content": "(A grown man sobbing like a toddler right in front of you. It's a truly pitiful sight.)",
+        "options": [
+          {
+            "id": 51178311,
+            "content": "(You started this. Better try and comfort him.)",
+            "next": 51178313
+          }
+        ]
+      },
+      {
+        "id": 51178313,
+        "content": "Alright, alright, dry your eyes. My fault. I shouldn't have brought up such painful memories.",
+        "npc": 100001,
+        "next": 51178314
+      },
+      {
+        "id": 51178314,
+        "content": "Sniff... No, no, I don't blame you. It just hurts to see how far the Jishu Sect has fallen these past few years.",
+        "npc": 701278,
+        "next": 51178315
+      },
+      {
+        "id": 51178315,
+        "content": "The Jishu Sect used to be a garden of innovation! The history books say Mechapuppetry was iterating daily back then. Superior performance, magnificent designs...",
+        "npc": 701278,
+        "next": 51178316
+      },
+      {
+        "id": 51178316,
+        "content": "And now? Stagnation. No innovation to speak of. Just petty tinkering. It's so dull! If only I'd been born earlier to witness that golden age...",
+        "npc": 701278,
+        "next": 51178317
+      },
+      {
+        "id": 51178317,
+        "content": "If you keep at it, things might pick up. You could always build another one... a Ying Loong Type Ⅱ, perhaps?",
+        "npc": 100001,
+        "next": 51178318
+      },
+      {
+        "id": 51178318,
+        "content": "To be honest, I've already had a few ideas brewing. About rebuilding the Type Ⅰ — no, wait, the Type Ⅱ, as we're calling it now.",
+        "npc": 701278,
+        "next": 51178319
+      },
+      {
+        "id": 51178319,
+        "content": "My early designs were a bit... immature, I admit. Energy consumption was through the roof, the chassis tended to overheat, and it was a bit too bulky to move gracefully...",
+        "npc": 701278,
+        "next": 51178320
+      },
+      {
+        "id": 51178320,
+        "content": "I've got a few concepts rattling around in my head, but I'd love a second opinion... Tell me, what's your idea of the perfect Mechapuppet? Don't hold back. Just treat it as a bit of a chinwag.",
+        "npc": 701278,
+        "options": [
+          {
+            "id": 51178321,
+            "content": "A Mechapuppet must be powerful! Unbeatable!",
+            "next": 51178322,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          },
+          {
+            "id": 51178324,
+            "content": "Power fades, but style is eternal.",
+            "next": 51178325,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51178328,
+            "content": "A Mechapuppet should be entertaining!",
+            "next": 51178329,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178322,
+        "content": "Powerful... Yes, precisely. That was the very philosophy behind the Yinglong series. After all, nothing in Huaxu rivals the raw might of Lord Agrent himself.",
+        "npc": 701278,
+        "next": 51178323
+      },
+      {
+        "id": 51178325,
+        "content": "Style... Of course! You make a splendid point. If Huaxu's Mechapuppetry is to reclaim its former glory, it must look the part!",
+        "npc": 701278,
+        "next": 51178326
+      },
+      {
+        "id": 51178329,
+        "content": "Entertaining...? I'm not sure I follow. You mean it should be... fun? Amusing? That's rather unorthodox compared to current design trends.",
+        "npc": 701278,
+        "next": 51178330
+      },
+      {
+        "id": 51178323,
+        "content": "Since we're of the same mind, I shall focus the Type Ⅱ's design on output efficiency and sheer force. We'll make it a proper beast...",
+        "npc": 701278,
+        "next": 51178332
+      },
+      {
+        "id": 51178326,
+        "content": "Technology moves at such a breakneck pace. Even if I built the most powerful machine in existence today, it'd be obsolete by next Tuesday.",
+        "npc": 701278,
+        "next": 51178327
+      },
+      {
+        "id": 51178330,
+        "content": "Ooh! I see! You mean I should think completely outside the box! Imagine a Mechapuppet shaped like Lord Argent, but one that sings and dances! The crowds would go wild!",
+        "npc": 701278,
+        "next": 51178331
+      },
+      {
+        "id": 51178332,
+        "content": "I understand completely now. Thanks to you, the Ying Loong Type Ⅱ is going to be absolute perfection!",
+        "npc": 701278,
+        "next": 51178333
+      },
+      {
+        "id": 51178327,
+        "content": "Aesthetics are key! What if I replaced the outer plating with white marble? It would be absolutely breathtaking!",
+        "npc": 701278,
+        "next": 51178332
+      },
+      {
+        "id": 51178331,
+        "content": "Why didn't I think of that? If my Type Ⅰ had just belted out a tune for those miserable sods, they might have clapped along instead of tearing it to pieces...",
+        "npc": 701278,
+        "next": 51178332
+      },
+      {
+        "id": 51178333,
+        "content": "Once the Type Ⅱ is up and running, you'll be the first person I invite for a viewing!",
+        "npc": 701278
+      },
+      {
+        "id": 51178334,
+        "content": "Back already? We're still getting nowhere with the Ying Loong Type Ⅱ!",
+        "npc": 701278
+      }
+    ]
+  },
+  {
+    "id": 701279,
+    "name": "香官皎皎",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51178402,
+        "content": "Why can't a Lunarian be an Incense Warden? I'll be the first — just you wait and see!",
+        "npc": 701279,
+        "next": 51178403
+      },
+      {
+        "id": 51178403,
+        "content": "(The Lunarian stands hands on hips, face flushed crimson, furiously arguing with thin air.)",
+        "next": 51178404
+      },
+      {
+        "id": 51178404,
+        "content": "You! What are you gawking at? You reckon I'm not fit for the job either, don't you?",
+        "npc": 701279,
+        "options": [
+          {
+            "id": 51178405,
+            "content": "I never said that. You're the one shouting about it.",
+            "next": 51178406,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51178408,
+            "content": "Not at all. I think it's brilliant.",
+            "next": 51178409,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51178412,
+            "content": "Since when can a gormless fish be a warden?",
+            "next": 51178413,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178406,
+        "content": "You were thinking it! I saw it in your eyes, your posture... even that smirk is mocking me!",
+        "npc": 701279,
+        "next": 51178407
+      },
+      {
+        "id": 51178409,
+        "content": "Really?! Your eyes are darting all over. You aren't just buttering me up to shut me up, are you?",
+        "npc": 701279,
+        "next": 51178410
+      },
+      {
+        "id": 51178413,
+        "content": "Who are you calling gormless?!",
+        "npc": 701279,
+        "next": 51178414
+      },
+      {
+        "id": 51178407,
+        "content": "I'm literally just breathing.",
+        "npc": 100001,
+        "next": 51178416
+      },
+      {
+        "id": 51178410,
+        "content": "Honest truth. Do I look like the type to flatter people?",
+        "npc": 100001,
+        "next": 51178411
+      },
+      {
+        "id": 51178414,
+        "content": "If the fin fits...",
+        "npc": 100001,
+        "next": 51178415
+      },
+      {
+        "id": 51178416,
+        "content": "Anyway... no matter how hard I try, people always doubt me. I'm used to it by now.",
+        "npc": 701279,
+        "next": 51178417
+      },
+      {
+        "id": 51178411,
+        "content": "Hmm... Hmmm... Alright, then. I suppose I'll believe you!",
+        "npc": 701279,
+        "next": 51178416
+      },
+      {
+        "id": 51178415,
+        "content": "Hmph! I'm not like those other short-fused Lunarians. I am a trained professional! I am far above such petty insults!",
+        "npc": 701279,
+        "next": 51178416
+      },
+      {
+        "id": 51178417,
+        "content": "They see the fancy title, not the graft. I started out unable to read a word of Huaxu script, and now I can recite A Compendium of Incense backwards!",
+        "npc": 701279,
+        "next": 51178418
+      },
+      {
+        "id": 51178418,
+        "content": "Everyone says Lunarians should just be \"cute\". That we exist for the big folk to pick up and cuddle. But I refuse to be a pet.",
+        "npc": 701279,
+        "next": 51178419
+      },
+      {
+        "id": 51178419,
+        "content": "I want to be more than that. When people look at me, I don't want them thinking, \"Oh look, a little Lunarian.\"",
+        "npc": 701279,
+        "next": 51178420
+      },
+      {
+        "id": 51178420,
+        "content": "I want them to say: \"Look! That's the formidable Incense Warden!\"",
+        "npc": 701279,
+        "options": [
+          {
+            "id": 51178421,
+            "content": "I reckon you've already managed that.",
+            "next": 51178422
+          }
+        ]
+      },
+      {
+        "id": 51178422,
+        "content": "The fact they question your rank means they see you as an \"Incense Warden\" first, not just another Lunarian.",
+        "npc": 100001,
+        "next": 51178423
+      },
+      {
+        "id": 51178423,
+        "content": "As for whether you're up to the task... well, give it time. You'll prove them wrong.",
+        "npc": 100001,
+        "next": 51178424
+      },
+      {
+        "id": 51178424,
+        "content": "You're right. If I just keep my head down and do my job, the gossips will have to admit my skill eventually. I just need to keep climbing...",
+        "npc": 701279,
+        "next": 51178425
+      },
+      {
+        "id": 51178425,
+        "content": "Yes! I'm going to do it! Just you watch!",
+        "npc": 701279,
+        "next": 51178426
+      },
+      {
+        "id": 51178426,
+        "content": "(A bright, confident smile breaks across her face, outshining the sun itself.)"
+      },
+      {
+        "id": 51178427,
+        "content": "May your virtue endure for all time.... Hm? Oh, it's you~ You came back to see me.",
+        "npc": 701279
+      }
+    ]
+  },
+  {
+    "id": 701280,
+    "name": "因何生",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51178502,
+        "content": "Oh! I remember now! The past... I remember it all, clear as a bell!",
+        "npc": 701280,
+        "next": 51178503
+      },
+      {
+        "id": 51178503,
+        "content": "You there... come closer, quickly. I must tell you this whilst my mind is still lucid. Once the moonlight creeps past that wall, the memories will fade into the mist again...",
+        "npc": 701280,
+        "next": 51178504
+      },
+      {
+        "id": 51178504,
+        "content": "Young one, could you spare a moment for an old soul? Will you hear my tale?",
+        "npc": 701280,
+        "options": [
+          {
+            "id": 51178505,
+            "content": "I'm listening.",
+            "next": 51178506,
+            "impr": [
+              1041,
+              "Empathy",
+              3
+            ]
+          },
+          {
+            "id": 51178507,
+            "content": "My time is precious. Be quick.",
+            "next": 51178508,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178506,
+        "content": "Good, very good... I must make haste.",
+        "npc": 701280,
+        "next": 51178511
+      },
+      {
+        "id": 51178508,
+        "content": "It shan't take long. I daren't tarry myself, lest I forget where I began...",
+        "npc": 701280,
+        "options": [
+          {
+            "id": 51178509,
+            "content": "I haven't the time.",
+            "next": 51178510
+          }
+        ]
+      },
+      {
+        "id": 51178511,
+        "content": "Let me think... where to begin...?",
+        "npc": 701280,
+        "next": 51178512
+      },
+      {
+        "id": 51178510,
+        "content": "Is that so...? Never mind, then. I shall simply wait for the next soul who crosses my path... someone meant to hear my story.",
+        "npc": 701280
+      },
+      {
+        "id": 51178512,
+        "content": "All this land once belonged to a single family: the Xiaos. The wealthiest, most illustrious clan in all of Haojing.",
+        "npc": 701280,
+        "next": 51178513
+      },
+      {
+        "id": 51178513,
+        "content": "I served as the steward, you see. Been with the Master since I was a nipper. He made a fortune in trade, then took a fancy to antiques and art in his later years. Kept me running ragged fetching treasures for him.",
+        "npc": 701280,
+        "next": 51178514
+      },
+      {
+        "id": 51178514,
+        "content": "I thought my days would pass quietly enough. But then, a miracle — the master had a son in his twilight years! The whole house was beside itself with joy.",
+        "npc": 701280,
+        "next": 51178515
+      },
+      {
+        "id": 51178515,
+        "content": "The young master was a sharp lad, but the Master doted on him something fierce. Spoiled him rotten, truth be told. Let him shirk his studies and play with priceless heirlooms as if they were common toys.",
+        "npc": 701280,
+        "next": 51178516
+      },
+      {
+        "id": 51178516,
+        "content": "Who could have foreseen it? The boy grew into an arrogant wastrel. He looked down his nose at everyone and squandered the family fortune without a second thought.",
+        "npc": 701280,
+        "next": 51178517
+      },
+      {
+        "id": 51178517,
+        "content": "I managed the accounts back then. Tried to warn the master time and again, but he'd just wave me off and let the boy be.",
+        "npc": 701280,
+        "next": 51178518
+      },
+      {
+        "id": 51178518,
+        "content": "Then the business turned sour. Gold stopped flowing in, and things grew dire. But the young master cared not a whit — he just carried on drinking and gambling as if the coffers were full.",
+        "npc": 701280,
+        "next": 51178519
+      },
+      {
+        "id": 51178519,
+        "content": "It broke the Master's heart, yet he couldn't bring himself to scold his son. Instead, he began taking in orphans — children left alone in the world. Perhaps to fill the void, or perhaps simply out of kindness, he raised them as his own.",
+        "npc": 701280,
+        "next": 51178520
+      },
+      {
+        "id": 51178520,
+        "content": "By then, he was frail. Bent double, eyes cloudy... The only time I saw a spark in him was when those children gathered round, calling him \"Grandpa.\"",
+        "npc": 701280,
+        "next": 51178521
+      },
+      {
+        "id": 51178521,
+        "content": "Not long after, he passed. His final orders were to keep the funeral simple and save the coin to raise those poor children. As for the young master... he said nothing.",
+        "npc": 701280,
+        "next": 51178522
+      },
+      {
+        "id": 51178522,
+        "content": "With the pillar of the Xiao family gone, everything collapsed. The young master had no head for business, but the debts kept piling up. I had no choice but to carve up the estate, selling off that grand old manor piece by piece just to survive.",
+        "npc": 701280,
+        "next": 51178523
+      },
+      {
+        "id": 51178523,
+        "content": "Those poor children... They didn't understand. All they knew was that the grandpa who doted on them had vanished, and their fine feasts had turned to scraps and gruel.",
+        "npc": 701280,
+        "next": 51178524
+      },
+      {
+        "id": 51178524,
+        "content": "The young master cleared off soon enough. I don't know where he went, and frankly, I was too busy keeping those children alive to care. It was a hard slog, raising them all alone...",
+        "npc": 701280,
+        "next": 51178525
+      },
+      {
+        "id": 51178525,
+        "content": "Until that day... It was the eldest lad's tenth birthday. Just a few years more, and he'd have been old enough to find work.",
+        "npc": 701280,
+        "next": 51178526
+      },
+      {
+        "id": 51178526,
+        "content": "We were huddled in the main hall — the only room left unsold. I'd scraped together enough for flour and eggs to make noodles. The young master returned for the occasion. He looked haggard, though I suppose we were in no state to judge.",
+        "npc": 701280,
+        "next": 51178527
+      },
+      {
+        "id": 51178527,
+        "content": "They were such bonny babes when they arrived. Perhaps I failed to feed them right... as they grew, they turned into little more than skin and bone. Fainting all the time, they were.",
+        "npc": 701280,
+        "next": 51178528
+      },
+      {
+        "id": 51178528,
+        "content": "When I brought out the noodles, their eyes lit up like starving wolves. You could hear them licking their lips, ready to pounce.",
+        "npc": 701280,
+        "next": 51178529
+      },
+      {
+        "id": 51178529,
+        "content": "That night, the Young Master brought a great wicker basket of fish. Huge things, all different kinds. I... I can't quite recall the details...",
+        "npc": 701280,
+        "next": 51178530
+      },
+      {
+        "id": 51178530,
+        "content": "He loved to fish when the old master was alive. He hadn't cast a line since the funeral, what with all the trouble, but it seemed he hadn't lost his touch.",
+        "npc": 701280,
+        "next": 51178531
+      },
+      {
+        "id": 51178531,
+        "content": "We were so happy. We boiled the catch right then and there. We'd no salt, just plain water, but because they were fresh from the hook, they didn't taste fishy at all...",
+        "npc": 701280,
+        "next": 51178532
+      },
+      {
+        "id": 51178532,
+        "content": "And then... what happened next...? Ah... I can't remember... What happened...?",
+        "npc": 701280,
+        "options": [
+          {
+            "id": 51178533,
+            "content": "(His story sounds familiar. You vaguely recall...)",
+            "next": 51178535
+          }
+        ]
+      },
+      {
+        "id": 51178535,
+        "content": "I've heard there's a fish in Huaxu that carries a deadly poison... It requires expert preparation... or else...",
+        "npc": 100001,
+        "next": 51178536
+      },
+      {
+        "id": 51178536,
+        "content": "......!",
+        "npc": 701280,
+        "next": 51178537
+      },
+      {
+        "id": 51178537,
+        "content": "Yes... that's it. My chest went tight, and I took a queer turn before blacking out. Just as I fell, I saw the young master and the children... sprawled on the floor, twisted in agony...",
+        "npc": 701280,
+        "next": 51178538
+      },
+      {
+        "id": 51178538,
+        "content": "Master... I failed you. I failed you! You trusted me with them, and I let them die...",
+        "npc": 701280,
+        "next": 51178539
+      },
+      {
+        "id": 51178539,
+        "content": "(The Wishen before you begins to tremble violently, radiating pure grief... Do Wishens cry?)",
+        "next": 51178540
+      },
+      {
+        "id": 51178540,
+        "content": "(A moment later, the emotion drains away. It resumes its pacing, just as it did when you first arrived...)",
+        "next": 51178541
+      },
+      {
+        "id": 51178541,
+        "content": "Ah... I remember! The past... I remember it all!",
+        "npc": 701280,
+        "next": 51178542
+      },
+      {
+        "id": 51178542,
+        "content": "You there... come closer, quickly. I must tell you this whilst my mind is still lucid. Once the moonlight creeps past that wall, the memories will fade into the mist again...",
+        "npc": 701280,
+        "next": 51178543
+      },
+      {
+        "id": 51178543,
+        "content": "You've already told me that story.",
+        "npc": 100001,
+        "next": 51178544
+      },
+      {
+        "id": 51178544,
+        "content": "Have I? Why does my memory fail me so? Did I truly? I could have sworn I hadn't...",
+        "npc": 701280,
+        "next": 51178545
+      },
+      {
+        "id": 51178545,
+        "content": "......Goodbye.",
+        "npc": 100001,
+        "next": 51178546
+      },
+      {
+        "id": 51178546,
+        "content": "Did I really say it? Master... why did that word just spring to mind? Who is the master?",
+        "npc": 701280,
+        "next": 51178547
+      },
+      {
+        "id": 51178547,
+        "content": "Who? And who am I...? I failed you... I failed... who was it?",
+        "npc": 701280
+      },
+      {
+        "id": 51178548,
+        "content": "Who am I? Can I still remember anything from my past? *sob*",
+        "npc": 701280
+      }
+    ]
+  },
+  {
+    "id": 701281,
+    "name": "空庭老人",
+    "camp": "NPC",
+    "type": "Normal",
+    "talks": [
+      {
+        "id": 51178602,
+        "content": "The Four Drifters... Ah, they had fire in their bellies back then. But that's all ancient history now...",
+        "npc": 701281,
+        "next": 51178603
+      },
+      {
+        "id": 51178603,
+        "content": "To us old folk in the Outer Peaks, they'll always be the wild, scrappy lads who first turned up on our doorstep. Hard to believe it's been over a decade. Now, down in Haojing, they've become myths whispered across streets.",
+        "npc": 701281,
+        "next": 51178604
+      },
+      {
+        "id": 51178604,
+        "content": "I'll save the rest for another time. Off you pop now, get back to your studies.",
+        "npc": 701281,
+        "next": 51178605
+      },
+      {
+        "id": 51178605,
+        "content": "You're so mean! You always leave us hanging! You chased us off right in the middle of the Zhuyin story last time, too. You do it on purpose!",
+        "next": 51178606
+      },
+      {
+        "id": 51178606,
+        "content": "Oh ho! Don't pin that on me! Remember when Miss Han stormed over here mid-lesson because you lot were scribbling my tales all over your homework? I'm not getting on her bad side again!",
+        "npc": 701281,
+        "next": 51178607
+      },
+      {
+        "id": 51178607,
+        "content": "Bleugh! I don't care! You're just telling fibs. Tell you what — have some barley sugar waiting for me tomorrow, and I might just forgive you.",
+        "next": 51178608
+      },
+      {
+        "id": 51178608,
+        "content": "You cheeky little monkey! You're just trying to swindle sweets out of me!",
+        "npc": 701281,
+        "next": 51178609
+      },
+      {
+        "id": 51178609,
+        "content": "Not listening! It's a deal! I'm coming for the barley sugar tomorrow! Bye!",
+        "next": 51178610
+      },
+      {
+        "id": 51178610,
+        "content": "(The mischievous brat scarpers, laughing and flailing his arms about.)",
+        "next": 51178611
+      },
+      {
+        "id": 51178611,
+        "content": "Little brat...",
+        "npc": 701281,
+        "next": 51178612
+      },
+      {
+        "id": 51178612,
+        "content": "(The old man finally spots you, looking mildly surprised.)",
+        "next": 51178613
+      },
+      {
+        "id": 51178613,
+        "content": "New around here, are you, youngster? Don't think I've seen your face before.",
+        "npc": 701281,
+        "options": [
+          {
+            "id": 51178614,
+            "content": "I'm here as a guest of Su Yi.",
+            "next": 51178619,
+            "impr": [
+              1041,
+              "Morality",
+              3
+            ]
+          },
+          {
+            "id": 51178615,
+            "content": "Didn't you know? The Outer Peaks invited me here to lend a hand.",
+            "next": 51178616,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          },
+          {
+            "id": 51178617,
+            "content": "I am the Fifth Drifter — ｛性别：King|Queen} of Phoxhunters, Ruler of Purgatorio Island, {nickname}",
+            "next": 51178618,
+            "impr": [
+              1041,
+              "Chaos",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178619,
+        "content": "Pleasure to meet you. Whatever brings you here, welcome to the Outer Peaks.",
+        "npc": 701281,
+        "next": 51178620
+      },
+      {
+        "id": 51178616,
+        "content": "Oh? Is that right? Must have missed the news. Well, if they've invited you, you must have something about you.",
+        "npc": 701281,
+        "next": 51178619
+      },
+      {
+        "id": 51178618,
+        "content": "Hahaha! You enjoy a laugh, don't you? But the era of the Four Drifters has passed. Even if new heroes were to write their own legends today, I doubt they'd choose such an old-fashioned title.",
+        "npc": 701281,
+        "next": 51178619
+      },
+      {
+        "id": 51178620,
+        "content": "I couldn't help overhearing your story about the Four Drifters...",
+        "npc": 100001,
+        "next": 51178621
+      },
+      {
+        "id": 51178621,
+        "content": "Sharp ears, eh? I take it that's why you've stopped? Fancy hearing an old man ramble on about the past?",
+        "npc": 701281,
+        "next": 51178622
+      },
+      {
+        "id": 51178622,
+        "content": "I admit, I'm intrigued.",
+        "npc": 100001,
+        "next": 51178623
+      },
+      {
+        "id": 51178623,
+        "content": "Hmm... trouble is, I've spun that yarn once today already. If you want an encore, you'll have to make it worth my while. I don't loosen my tongue for free.",
+        "npc": 701281,
+        "options": [
+          {
+            "id": 51178624,
+            "content": "I'm an honoured guest here. Surely I'm entitled to a bit of local history?",
+            "next": 51178627,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          },
+          {
+            "id": 51178625,
+            "content": "A fair trade, then. You tell me a story, and I'll tell you one.",
+            "next": 51178627,
+            "impr": [
+              1041,
+              "Wisdom",
+              3
+            ]
+          },
+          {
+            "id": 51178626,
+            "content": "It sounds like mere gossip to me. Hardly valuable intel worth paying for.",
+            "next": 51178627,
+            "impr": [
+              1041,
+              "Benefit",
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 51178627,
+        "content": "Hahaha! I'm only having you on! Don't look so alarmed. I just wanted to see if you'd bite.",
+        "npc": 701281,
+        "next": 51178628
+      },
+      {
+        "id": 51178628,
+        "content": "Right then, who strikes your fancy? I won't bore you with the famous tales everyone knows. I'll stick to the good bits — the stories I find amusing.",
+        "npc": 701281,
+        "options": [
+          {
+            "id": 51178629,
+            "content": "Tell me about Yan Shanting.",
+            "next": 51178630
+          },
+          {
+            "id": 51178634,
+            "content": "Tell me about Su Muzhe.",
+            "next": 51178635
+          },
+          {
+            "id": 51178640,
+            "content": "Tell me about Xing Xiangzi.",
+            "next": 51178641
+          },
+          {
+            "id": 51178646,
+            "content": "Tell me about the Wen sisters.",
+            "next": 51178647
+          }
+        ]
+      },
+      {
+        "id": 51178630,
+        "content": "Yan Shanting, the Master of Thousand Peaks. Dashing title, isn't it? He had the skills to match his ego, too. Loved showing off his swordplay and collecting apprentices like trinkets.",
+        "npc": 701281,
+        "next": 51178631
+      },
+      {
+        "id": 51178635,
+        "content": "Su Muzhe, the River-Taming Swallow. Young Su Yi's aunt. There's not much to tell, really. Just look at Su Yi now. She's the spitting image of her aunt. Cut from the very same cloth.",
+        "npc": 701281,
+        "next": 51178636
+      },
+      {
+        "id": 51178641,
+        "content": "Hah! That old scoundrel! Haven't seen hide nor hair of him in donkeys' years. Now that man... he was an absolute wizard with iron and fire.",
+        "npc": 701281,
+        "next": 51178642
+      },
+      {
+        "id": 51178647,
+        "content": "Those two lasses... Poor little mites. Identical twins, they were. If they stood right in front of you, you'd be hard-pressed to tell one from t'other.",
+        "npc": 701281,
+        "next": 51178648
+      },
+      {
+        "id": 51178631,
+        "content": "You know he was once an Incense Warden? I wager you picture Huaxu's wardens as stiff, serious types. Well, not him! \"Mature and steady\" wasn't even in his vocabulary.",
+        "npc": 701281,
+        "next": 51178632
+      },
+      {
+        "id": 51178636,
+        "content": "I didn't know her well, honestly. She was always tucked away tinkering with her Mechapuppets, and passed far too young... But everyone here knew about her and Yan Shanting. We all assumed they'd eventually...",
+        "npc": 701281,
+        "next": 51178637
+      },
+      {
+        "id": 51178642,
+        "content": "But he was also the most boring man I've ever met. Back in the day, everyone in the Outer Peaks cooked on wood stoves. If the damp got to the wood, the fire would splutter and die, and your supper would be ruined.",
+        "npc": 701281,
+        "next": 51178643
+      },
+      {
+        "id": 51178648,
+        "content": "Good girls, truly. Young, but carrying heavy burdens in their hearts. Mostly kept to themselves, quiet as mice.",
+        "npc": 701281,
+        "next": 51178649
+      },
+      {
+        "id": 51178632,
+        "content": "Once, in a fit of youthful madness, he poked a hornet's nest out of a tree with his sword. Heaven knows why. The swarm chased him for three miles! He came crawling back to me for ointment, face swollen like a doughball.",
+        "npc": 701281,
+        "next": 51178633
+      },
+      {
+        "id": 51178637,
+        "content": "Ah, never mind... let's not dwell on the sad bits. Su Muzhe... I remember she had a craving for sour things. Whenever she visited Haojing, she'd buy out the stalls' entire stock of their most lip-puckering dried fruits.",
+        "npc": 701281,
+        "next": 51178638
+      },
+      {
+        "id": 51178643,
+        "content": "He'd spot a struggling chimney a mile off. Then he'd \"happen\" to stroll past the door, waiting for the family to come out and beg for help. He'd get the fire roaring, and they'd be obliged to feed him dinner out of gratitude.",
+        "npc": 701281,
+        "next": 51178644
+      },
+      {
+        "id": 51178649,
+        "content": "The only time you'd see their softer side was when they had a needle in hand.",
+        "npc": 701281,
+        "next": 51178650
+      },
+      {
+        "id": 51178633,
+        "content": "Well? Paints a rather different picture from the legend, doesn't it?",
+        "npc": 701281,
+        "next": 51178628
+      },
+      {
+        "id": 51178638,
+        "content": "Then she'd sit there, buried under a mountain of blueprints, stuffing her face with fruit sour enough to shatter your teeth. Didn't even flinch.",
+        "npc": 701281,
+        "next": 51178639
+      },
+      {
+        "id": 51178644,
+        "content": "It was his secret technique that made the flames leap, of course, but he'd never admit it. Swore blind it was down to his \"good deeds\" and \"pure heart.\"",
+        "npc": 701281,
+        "next": 51178645
+      },
+      {
+        "id": 51178650,
+        "content": "Most folk round here are handy with a hammer or a blade, but give them an embroidery needle and they're helpless. When the sisters arrived, they took over most of the stitching and mending for us.",
+        "npc": 701281,
+        "next": 51178651
+      },
+      {
+        "id": 51178639,
+        "content": "She claimed it sharpened the mind. I suppose I'll never understand the appeal, eh?",
+        "npc": 701281,
+        "next": 51178628
+      },
+      {
+        "id": 51178645,
+        "content": "A fast talker who loved to blow his own trumpet. That was Xing Xiangzi, the White Flame.",
+        "npc": 701281,
+        "next": 51178628
+      },
+      {
+        "id": 51178651,
+        "content": "For a while, everyone in the Outer Peaks was walking about with flowery handkerchiefs and fancy insoles. It was their quiet way of being kind, and we did our best to pay them back however we could.",
+        "npc": 701281,
+        "next": 51178652
+      },
+      {
+        "id": 51178652,
+        "content": "It's just a shame... such a shame...",
+        "npc": 701281,
+        "next": 51178628
+      }
+    ]
+  },
+  {
+    "id": 701282,
+    "name": "孩童",
     "camp": "NPC",
     "type": "Normal"
   },

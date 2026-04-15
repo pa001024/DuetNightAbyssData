@@ -6604,6 +6604,144 @@
     ]
   },
   {
+    "id": 200317,
+    "name": "Silence des cordes",
+    "chapterName": "Chroniques du Monde",
+    "episode": "Silence des cordes",
+    "desc": "Parler à Xiaoyao",
+    "detail": "Alors que vous flânez avec Snow aux abords de Haojing, vous apercevez au bord de la route un Wishen familier. Si vos souvenirs sont bons, il se nomme Xiaoyao. Ayant déjà traversé ensemble des situations périlleuses, vous décidez d’aller lui parler.",
+    "type": 3,
+    "reward": [
+      50629
+    ],
+    "quests": [
+      {
+        "id": 20031700,
+        "sr": 104504,
+        "next": {
+          "Success": 20031701
+        }
+      },
+      {
+        "id": 20031701,
+        "sr": 104504,
+        "next": {
+          "Success": 20031702
+        }
+      },
+      {
+        "id": 20031702,
+        "sr": 104504,
+        "next": {
+          "Success": 20031703
+        }
+      },
+      {
+        "id": 20031703,
+        "sr": 104504,
+        "next": {
+          "Success": 20031704
+        }
+      },
+      {
+        "id": 20031704,
+        "sr": 104504,
+        "next": {
+          "Success": 20031705
+        }
+      },
+      {
+        "id": 20031705,
+        "sr": 104504,
+        "next": {
+          "Success": 20031706
+        }
+      },
+      {
+        "id": 20031706,
+        "sr": 104504,
+        "next": {
+          "Success": 20031707
+        }
+      },
+      {
+        "id": 20031707,
+        "sr": 104504,
+        "next": {
+          "Success": 20031708
+        }
+      },
+      {
+        "id": 20031708,
+        "sr": 104504,
+        "next": {
+          "Success": 20031710
+        }
+      },
+      {
+        "id": 20031710,
+        "sr": 104504,
+        "next": {
+          "Success": 20031711
+        }
+      },
+      {
+        "id": 20031711,
+        "sr": 104504
+      }
+    ]
+  },
+  {
+    "id": 200318,
+    "name": "Échos du Fleuve de l’Oubli",
+    "chapterName": "Chroniques du Monde",
+    "episode": "Échos du Fleuve de l’Oubli",
+    "type": 3,
+    "reward": [
+      50630
+    ],
+    "quests": [
+      {
+        "id": 20031801,
+        "sr": 104501,
+        "next": {
+          "Success": 20031803
+        }
+      },
+      {
+        "id": 20031803,
+        "sr": 104501,
+        "next": {
+          "Success": 20031805
+        }
+      },
+      {
+        "id": 20031805,
+        "sr": 104501,
+        "next": {
+          "Success": 20031806
+        }
+      },
+      {
+        "id": 20031806,
+        "sr": 104501,
+        "next": {
+          "Success": 20031807
+        }
+      },
+      {
+        "id": 20031807,
+        "next": {
+          "Success": 20031808
+        }
+      },
+      {
+        "id": 20031808,
+        "sr": 104501
+      }
+    ]
+  },
+  {
     "id": 400101,
     "name": "Mission de chasse (I)",
     "chapterName": "Chroniques du Monde",

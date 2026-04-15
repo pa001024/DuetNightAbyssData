@@ -2203,6 +2203,84 @@ return ReadOnly("TalkTrigger", {
       ImprComp = {TalkTriggerId = 510134}
     }
   },
+  [510152] = {
+    StoryLinePath = "Impression/East02/Impression/701267_LiDazui",
+    TalkId = 510152,
+    TalkTriggerId = 510152,
+    Type = "Impression"
+  },
+  [510153] = {
+    StoryLinePath = "Impression/East02/Impression/701268_HuaLiuqing",
+    TalkId = 510153,
+    TalkTriggerId = 510153,
+    Type = "Impression"
+  },
+  [510154] = {
+    StoryLinePath = "Impression/East02/Impression/701269_Tiantong",
+    TalkId = 510154,
+    TalkTriggerId = 510154,
+    Type = "Impression"
+  },
+  [510155] = {
+    StoryLinePath = "Impression/East02/Impression/701270_LuoHan",
+    TalkId = 510155,
+    TalkTriggerId = 510155,
+    Type = "Impression"
+  },
+  [510156] = {
+    StoryLinePath = "Impression/East02/Impression/701271_HeXiangu",
+    TalkId = 510156,
+    TalkTriggerId = 510156,
+    Type = "Impression"
+  },
+  [510157] = {
+    StoryLinePath = "Impression/East02/Impression/701273_OptimisticWhite",
+    TalkId = 510157,
+    TalkTriggerId = 510157,
+    Type = "Impression"
+  },
+  [510158] = {
+    StoryLinePath = "Impression/East02/Impression/701274_YanTaiqing",
+    TalkId = 510158,
+    TalkTriggerId = 510158,
+    Type = "Impression"
+  },
+  [510159] = {
+    StoryLinePath = "Impression/East02/Impression/701275_MsPing",
+    TalkId = 510159,
+    TalkTriggerId = 510159,
+    Type = "Impression"
+  },
+  [510160] = {
+    StoryLinePath = "Impression/East02/Impression/701277_ChengGong",
+    TalkId = 510160,
+    TalkTriggerId = 510160,
+    Type = "Impression"
+  },
+  [510161] = {
+    StoryLinePath = "Impression/East02/Impression/701278_ZhugeMing",
+    TalkId = 510161,
+    TalkTriggerId = 510161,
+    Type = "Impression"
+  },
+  [510162] = {
+    StoryLinePath = "Impression/East02/Impression/701279_XiangguanWhite",
+    TalkId = 510162,
+    TalkTriggerId = 510162,
+    Type = "Impression"
+  },
+  [510163] = {
+    StoryLinePath = "Impression/East02/Impression/701280_YinheSheng",
+    TalkId = 510163,
+    TalkTriggerId = 510163,
+    Type = "Impression"
+  },
+  [510164] = {
+    StoryLinePath = "Impression/East02/Impression/701281_CourtyardElder",
+    TalkId = 510164,
+    TalkTriggerId = 510164,
+    Type = "Impression"
+  },
   [511010] = {
     StoryLinePath = "BubbleTalk/51101001.story",
     TalkId = 511010,
@@ -6958,6 +7036,130 @@ return ReadOnly("TalkTrigger", {
     TriggerCondition = {
       QuestChainFinish = {QuestChainId = 200311}
     }
+  },
+  [51015301] = {
+    StoryLinePath = "Impression/East02/Impression/701268_HuaLiuqing_2",
+    TalkId = 51015301,
+    TalkTriggerId = 51015301,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510153}
+    }
+  },
+  [51015302] = {
+    StoryLinePath = "Impression/East02/Impression/701268_HuaLiuqing_Bubble",
+    TalkId = 51015302,
+    TalkTriggerId = 51015302
+  },
+  [51015401] = {
+    StoryLinePath = "Impression/East02/Impression/701269_Tiantong_Bubble",
+    TalkId = 51015401,
+    TalkTriggerId = 51015401
+  },
+  [51015501] = {
+    StoryLinePath = "Impression/East02/Impression/701270_LuoHan_2",
+    TalkId = 51015501,
+    TalkTriggerId = 51015501,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510155}
+    }
+  },
+  [51015502] = {
+    StoryLinePath = "Impression/East02/Impression/701270_LuoHan_Bubble",
+    TalkId = 51015502,
+    TalkTriggerId = 51015502
+  },
+  [51015601] = {
+    StoryLinePath = "Impression/East02/Impression/701271_HeXiangu_Bubble",
+    TalkId = 51015601,
+    TalkTriggerId = 51015601
+  },
+  [51015701] = {
+    StoryLinePath = "Impression/East02/Impression/701273_OptimisticWhite_2",
+    TalkId = 51015701,
+    TalkTriggerId = 51015701,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510157}
+    }
+  },
+  [51015702] = {
+    StoryLinePath = "Impression/East02/Impression/701273_OptimisticWhite_Bubble",
+    TalkId = 51015702,
+    TalkTriggerId = 51015702
+  },
+  [51015801] = {
+    StoryLinePath = "Impression/East02/Impression/701274_YanTaiqing_Bubble",
+    TalkId = 51015801,
+    TalkTriggerId = 51015801
+  },
+  [51015901] = {
+    StoryLinePath = "Impression/East02/Impression/701275_MsPing_2",
+    TalkId = 51015901,
+    TalkTriggerId = 51015901,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510159}
+    }
+  },
+  [51015902] = {
+    StoryLinePath = "Impression/East02/Impression/701275_MsPing_Bubble",
+    TalkId = 51015902,
+    TalkTriggerId = 51015902
+  },
+  [51016001] = {
+    StoryLinePath = "Impression/East02/Impression/701277_ChengGong_2",
+    TalkId = 51016001,
+    TalkTriggerId = 51016001,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510160}
+    }
+  },
+  [51016002] = {
+    StoryLinePath = "Impression/East02/Impression/701277_ChengGong_Bubble",
+    TalkId = 51016002,
+    TalkTriggerId = 51016002
+  },
+  [51016101] = {
+    StoryLinePath = "Impression/East02/Impression/701278_ZhugeMing_2",
+    TalkId = 51016101,
+    TalkTriggerId = 51016101,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510161}
+    }
+  },
+  [51016102] = {
+    StoryLinePath = "Impression/East02/Impression/701278_ZhugeMing_Bubble",
+    TalkId = 51016102,
+    TalkTriggerId = 51016102
+  },
+  [51016201] = {
+    StoryLinePath = "Impression/East02/Impression/701279_XiangguanWhite_2",
+    TalkId = 51016201,
+    TalkTriggerId = 51016201,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510162}
+    }
+  },
+  [51016202] = {
+    StoryLinePath = "Impression/East02/Impression/701279_XiangguanWhite_Bubble",
+    TalkId = 51016202,
+    TalkTriggerId = 51016202
+  },
+  [51016301] = {
+    StoryLinePath = "Impression/East02/Impression/701280_YinheSheng_2",
+    TalkId = 51016301,
+    TalkTriggerId = 51016301,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510163}
+    }
+  },
+  [51016302] = {
+    StoryLinePath = "Impression/East02/Impression/701280_YinheSheng_Bubble",
+    TalkId = 51016302,
+    TalkTriggerId = 51016302
+  },
+  [51016401] = {
+    StoryLinePath = "Impression/East02/Impression/701281_CourtyardElder_Bubble",
+    TalkId = 51016401,
+    TalkTriggerId = 51016401
   },
   [51105801] = {
     StoryLinePath = "ActiveQuest/ActiveThea/Gossip/51105801.story",

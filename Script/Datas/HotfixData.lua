@@ -2,8 +2,8 @@ local hotfix_data = "\t-- 请在此处编写HotFix代码,请组长编写\n\tloca
 return {
   index = 3,
   script = hotfix_data,
-  client_version = {ForceUpdateCheck = "4"},
-  force_update_version = "4",
+  client_version = {ForceUpdateCheck = "5"},
+  force_update_version = "5",
   patch_version = {
     ["1"] = "0"
   }

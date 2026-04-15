@@ -20158,7 +20158,7 @@
               },
               {
                 "id": 11013403,
-                "content": "Bonjour, lieutenant-colonel Avar Hrodland ! Précepte n° 16 de la Légion Hyperboréenne : Quand l’ennemi est à portée de ton arme, n’oublie pas que tu es aussi à portée de la sienne.",
+                "content": "Bonjour, lieutenant-colonel Avar Hrodland ! Maxime n° 16 de la Légion Hyperboréenne : Quand l’ennemi est à portée de ton arme, n’oublie pas que tu es aussi à portée de la sienne.",
                 "voice": "story/1002/110134/1B92266E",
                 "next": 11013404
               },
@@ -31218,7 +31218,7 @@
               },
               {
                 "id": 12015805,
-                "content": "Elle a dit... « tonton » ? Elle cherche sa famille, elle aussi ?",
+                "content": "Elle a dit... « Adèle » ? Elle cherche sa famille, elle aussi ?",
                 "voice": "story/1201/120158/1E148F02",
                 "npc": 200002,
                 "next": 12015806
@@ -77484,6 +77484,915 @@
             ]
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": 200317,
+    "quests": [
+      {
+        "id": 20031700,
+        "name": "",
+        "nodes": [
+          {
+            "id": "17721064747833543314",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031701,
+        "name": "Parler à Xiaoyao",
+        "desc": "Alors que vous flânez avec Snow aux abords de Haojing, vous apercevez au bord de la route un Wishen familier. Si vos souvenirs sont bons, il se nomme Xiaoyao. Ayant déjà traversé ensemble des situations périlleuses, vous décidez d’aller lui parler.",
+        "nodes": [
+          {
+            "id": "17706055912062169",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51164901,
+                "content": "Ah... voilà de vieilles connaissances. Ne pas vous avoir accueillis plus tôt est une faute de ma part... pardonnez-moi, pardonnez-moi~",
+                "npc": 700385
+              },
+              {
+                "id": 51164902,
+                "content": "Toi— attends une seconde ! C’est bien toi qui nous a piqué nos affaires sans raison... avant de nous sauver la vie juste après, pas vrai ?! Eh ben dis donc... le monde est petit !",
+                "npc": 200002
+              },
+              {
+                "id": 51164903,
+                "content": "Merci pour l’aide que tu nous as apportée, la dernière fois.",
+                "npc": 100001
+              },
+              {
+                "id": 51164904,
+                "content": "Une rencontre de hasard… et pourtant, vous m’avez gardé en mémoire. Voilà qui me touche. Laisse-moi t’offrir quelque chose... en guise de remerciement.",
+                "npc": 700385,
+                "options": [
+                  {
+                    "id": 51164905,
+                    "content": "<I>Merci, mais ce n’est pas nécessaire. On n’a rien fait de spécial.</>",
+                    "impr": [
+                      1041,
+                      "Empathy",
+                      3
+                    ],
+                    "next": 51164908
+                  },
+                  {
+                    "id": 51164906,
+                    "content": "<I>On ne peut pas accepter une récompense sans raison.</>",
+                    "impr": [
+                      1041,
+                      "Benefit",
+                      3
+                    ],
+                    "next": 51164909
+                  },
+                  {
+                    "id": 51164907,
+                    "content": "<I>Et un Wishen, ça peut bien offrir quoi, au juste ?</>",
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ],
+                    "next": 51164910
+                  }
+                ]
+              },
+              {
+                "id": 51164908,
+                "content": "Allons, tu te trompes~ Nos chemins se sont croisés à trois reprises. La première fois, tu détenais un objet qui avait retenu mon attention — une simple méprise. La deuxième, vous étiez en danger, et je vous ai aidés. Et maintenant... une rencontre au hasard, en pleine nature. Une telle coïncidence est trop rare pour être laissée de côté.",
+                "npc": 700385
+              },
+              {
+                "id": 51164909,
+                "content": "Ne parle pas de récompense. Le simple fait que nos chemins se soient croisés trois fois... mérite bien un petit présent, tu ne trouves pas ?",
+                "npc": 700385
+              },
+              {
+                "id": 51164910,
+                "content": "C’est bien dit. Être Wishen, c’est venir de nulle part... et y retourner sans nom. Sans attaches de son vivant... oublié après la mort.",
+                "npc": 700385
+              },
+              {
+                "id": 51164911,
+                "content": "<I>Alors, qu’est-ce que tu veux nous offrir ?</>",
+                "npc": 100001
+              },
+              {
+                "id": 51164912,
+                "content": "Il se trouve que j’ai récemment appris où se trouve une partition de qin d’exception. On raconte qu’elle appartenait à un maître musicien, dont le talent lui valut richesse et renommée à travers tout Huaxu.",
+                "npc": 700385
+              },
+              {
+                "id": 51164913,
+                "content": "Nombreux sont ceux qui l’ont convoitée, prêts à dépenser des fortunes pour l’obtenir. Pourtant, il l’a toujours gardée précieusement... attendant de trouver un héritier digne de recevoir à la fois la partition et son art.",
+                "npc": 700385
+              },
+              {
+                "id": 51164914,
+                "content": "Attends... Tu veux dire que moi et mon petit larbin devrions hériter de ce truc ? Bon, d’accord, le Roi Démon excelle en tout... mais jouer du qin, c’est clairement pas mon domaine !",
+                "npc": 200002
+              },
+              {
+                "id": 51164915,
+                "content": "Pas du tout, pas du tout. La partition dont je parle ne demande aucun long apprentissage. Elle peut être obtenue... avec une facilité déconcertante.",
+                "npc": 700385
+              },
+              {
+                "id": 51164916,
+                "content": "Alors ? Ça t’intéresse ? Une fois en ta possession, tu pourrais la revendre à un Tisse-Étoiles... et remplir tes bourses à ras bord. De quoi parcourir le monde en toute liberté... n’est-ce pas tentant ?",
+                "npc": 700385
+              },
+              {
+                "id": 51164917,
+                "content": "Hm... c’est vrai que ça donne envie... Dis, petit larbin, on tente le coup ? Après tout, on est à Huaxu... on ne risque pas grand-chose, non ?",
+                "npc": 200002
+              },
+              {
+                "id": 51164918,
+                "content": "D’accord. Xiaoyao, où se trouve cette partition ?",
+                "npc": 100001
+              },
+              {
+                "id": 51164919,
+                "content": "Toujours aussi vif... Quant à sa localisation... loin dans les cieux, et pourtant juste sous tes yeux~",
+                "npc": 700385
+              },
+              {
+                "id": 51164920,
+                "content": "Xiaoyao se tourne vers la surface du lac."
+              },
+              {
+                "id": 51164921,
+                "content": "Dans le lac ?! Mais elle doit être complètement fichue à force de tremper là-dedans ! Bon, tant pis ! On tente le coup — essayons avec <H>la pêche</>, on verra bien si on peut la remonter !",
+                "npc": 200002
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031702,
+        "name": "Pêcher à l’emplacement indiqué",
+        "desc": "Xiaoyao affirme qu’une partition de qin sans égale repose au fond de l’eau. L’histoire semble pour le moins douteuse... mais après tout, vous n’avez rien à perdre. Vous décidez de tenter votre chance et de jeter votre ligne à l’eau.",
+        "nodes": []
+      },
+      {
+        "id": 20031703,
+        "name": "Voir le résultat de la pêche",
+        "desc": "Xiaoyao affirme qu’une partition de qin sans égale repose au fond de l’eau. L’histoire semble pour le moins douteuse... mais après tout, vous n’avez rien à perdre. Vous décidez de tenter votre chance et de jeter votre ligne à l’eau.",
+        "nodes": [
+          {
+            "id": "17706065442553653",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "17706066093534486"
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "17706066093534486",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "17706066096274494"
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "17706066096274494",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031704,
+        "name": "Se rendre au Village de Jiaolan",
+        "desc": "Vous ne remontez aucune partition légendaire, mais faites une découverte bien plus sombre : un squelette reposant au fond du lac depuis de nombreuses années. Afin de découvrir l’identité du défunt, vous décidez de vous rendre au Village de Jiaolan pour mener l’enquête.",
+        "nodes": [
+          {
+            "id": "17706077604796495",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "17706072118665786",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "17706072103395699"
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "17706072103395699",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "17706077604796495"
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031705,
+        "name": "Se rendre à l’endroit indiqué par la jeune fille",
+        "desc": "Après avoir interrogé les habitants du village, vous commencez à soupçonner que le défunt pourrait être Qing Shang, un disciple qui aurait longtemps subi les mauvais traitements de son maître, Maître Gong. Pour vérifier cette hypothèse, vous interrogez la jeune vendeuse de baozi, qui vous indique où réside le musicien.",
+        "nodes": [
+          {
+            "id": "17706080335587699",
+            "type": "TalkNode",
+            "name": "开车",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031706,
+        "name": "Parler au vieil homme secouru",
+        "desc": "Vous vous rendez à l’endroit indiqué par la jeune fille, mais tombez sur une scène inattendue : un vieil homme encerclé par des Bi’an obscurs...",
+        "nodes": [
+          {
+            "id": "17706081112459517",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "17748604765523287"
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "17748604765523287",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031707,
+        "name": "Parler à l’homme mystérieux",
+        "desc": "Le vieil homme que vous secourez n’est autre que Maître Gong lui-même. Vous le confrontez au sujet de l’identité du défunt, et il est contraint d’admettre que la pression qu’il a exercée sur son disciple a pu le conduire au désespoir. Alors que vous pensez enfin tenir la vérité, un homme mystérieux fait soudain son apparition.",
+        "nodes": [
+          {
+            "id": "177060818182310749",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031708,
+        "name": "Retourner auprès des ossements",
+        "desc": "Il apparaît finalement que le corps immergé depuis toutes ces années est celui de Qing Zhi, l’aîné des disciples de Maître Gong, qui avait autrefois volé la partition — et non Qing Shang, que les habitants du Village de Jiaolan pensaient être la victime. La présence de Qing Shang, bien vivant devant vous, ne laisse plus place au doute. Une fois le malentendu dissipé, Qing Shang interprète <I>Éveil d’une nuit claire</>, apaisant ainsi les tensions accumulées avec son maître au fil des années. En souvenir du lien qui les unissait autrefois en tant que disciples, il décide de vous accompagner jusqu’aux ossements afin d’offrir à son frère d’apprentissage une sépulture digne.",
+        "nodes": [
+          {
+            "id": "177060824346211772",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          },
+          {
+            "id": "177060825704512154",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "177060824346211772"
+            ],
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031710,
+        "name": "Suivre Xiaoyao",
+        "desc": "De retour auprès des ossements, vous trouvez Xiaoyao déjà sur place. Il insiste pour vous conduire vers un lieu propice à l’inhumation de Qing Zhi. Sans comprendre ses véritables intentions, vous choisissez néanmoins de jouer le jeu... pour l’instant.",
+        "nodes": [
+          {
+            "id": "177060832859213225",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031711,
+        "name": "Parler à Xiaoyao",
+        "desc": "Tous les êtres portent en eux sagesse et vertu, mais, entravés par l’illusion et l’attachement, ils ne peuvent les réaliser. Ce qui est passé ne peut être changé... Xiaoyao semble pourtant avoir encore quelque chose à dire.",
+        "nodes": [
+          {
+            "id": "17733963080211264978",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 10010101,
+                "content": "Berry, je...",
+                "voice": "story/1001/100101/190F2A32",
+                "npc": 100001
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 200318,
+    "quests": [
+      {
+        "id": 20031801,
+        "name": "Entrer dans le souvenir",
+        "desc": "Alors que Haojing sombre dans le chaos sous les manigances de Zhiliu, dans l’ombre, une Zhuyou prend silencieusement sa décision.",
+        "nodes": [
+          {
+            "id": "1770278557956386838",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "17726066180633637092"
+            ],
+            "dialogues": [
+              {
+                "id": 51175201,
+                "content": "{nickname}, as-tu quelqu’un qui t’est cher ?",
+                "npc": 700390,
+                "next": 51175202
+              },
+              {
+                "id": 51175202,
+                "content": "Si un jour cette personne disparaissait sans laisser de trace... que ferais-tu ?",
+                "npc": 700390,
+                "next": 51175203
+              },
+              {
+                "id": 51175203,
+                "content": "Je la retrouverais, quoi qu’il en coûte. Et je la ramènerais.",
+                "npc": 100001,
+                "next": 51175204
+              },
+              {
+                "id": 51175204,
+                "content": "Quoi qu’il en coûte...",
+                "npc": 700390,
+                "next": 51175205
+              },
+              {
+                "id": 51175205,
+                "content": "Alors que Haojing sombre dans le chaos sous les manigances de Zhiliu, dans l’ombre, une Zhuyou prend silencieusement sa décision."
+              }
+            ]
+          },
+          {
+            "id": "17726066180633637092",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51175206,
+                "content": "Bon, petit larbin, on y va—",
+                "npc": 200002,
+                "next": 51175207
+              },
+              {
+                "id": 51175207,
+                "content": "... Attends.",
+                "npc": 700390,
+                "next": 51175208
+              },
+              {
+                "id": 51175208,
+                "content": "Je suis désolée, {nickname}. À partir d’ici... je ne pourrai pas t’accompagner.",
+                "npc": 700390,
+                "next": 51175209
+              },
+              {
+                "id": 51175209,
+                "content": "Si les Neuf Chapitres de Dafeng touchent à leur fin, alors avant que tout ne soit scellé... il y a quelque chose que je dois accomplir.",
+                "npc": 700390,
+                "next": 51175210
+              },
+              {
+                "id": 51175210,
+                "content": "Ce que tu cherches — inverser le yin et le yang — n’est pas chose aisée. Mais si la Source de Yu s’est connectée à la Faille de l’Oubli à cause du Fléau de Zhuyin... alors une solution est peut-être possible.",
+                "next": 51175211
+              },
+              {
+                "id": 51175211,
+                "content": "Lorsque la Faille s’ouvrira, rends-toi au Fleuve de l’Oubli et utilise l’Art de l’Éphémère. La personne que tu souhaites revoir répondra à ton appel... à condition que son âme existe encore en ce monde.",
+                "next": 51175212
+              },
+              {
+                "id": 51175212,
+                "content": "Ensuite, tu pourras tenter la véritable inversion du yin et du yang. Mais sache-le : cela exige des capacités exceptionnelles. Même parmi les Zhuyou, rares sont ceux qui y parviennent. Et le prix à payer est...",
+                "next": 51175213
+              },
+              {
+                "id": 51175213,
+                "content": "...",
+                "npc": 700390,
+                "next": 51175214
+              },
+              {
+                "id": 51175214,
+                "content": "Fushu, tu n’as pas à t’excuser. En tant qu’{性别:ami|amie}, je veux simplement que tu réalises ton souhait.",
+                "npc": 100001,
+                "next": 51175215
+              },
+              {
+                "id": 51175215,
+                "content": "... Merci, {nickname}.",
+                "npc": 700390
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031803,
+        "name": "Chercher la Faille de l’Oubli",
+        "desc": "Alors que le chaos engloutit Haojing, Fushu fait ses adieux à {nickname} dans la précipitation. Si les Neuf Chapitres de Dafeng approchent véritablement de leur terme, alors avant que tout ne s’achève, elle est prête à tout sacrifier pour revoir un être cher et accomplir le vœu qu’elle porte en elle depuis si longtemps.",
+        "nodes": [
+          {
+            "id": "1770278966032389765",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51175218,
+                "content": "Quelqu’un... à l’aide... sauvez-moi...",
+                "npc": 700393,
+                "next": 51175219
+              },
+              {
+                "id": 51175219,
+                "content": "<I>Si je m’attarde ici… je risque de manquer le moment d’entrer dans la faille…</>",
+                "npc": 700390,
+                "options": [
+                  {
+                    "id": 51175220,
+                    "content": "<I>Sauver</>",
+                    "next": 51175221
+                  },
+                  {
+                    "id": 51175222,
+                    "content": "<I>Ne pas sauver</>",
+                    "next": 51175223
+                  }
+                ]
+              },
+              {
+                "id": 51175221,
+                "content": "Si j’ignore un appel à l’aide... comment pourrais-je encore prétendre suivre les préceptes de ma famille... ou remplir mon devoir de Zhuyou ?",
+                "npc": 700390
+              },
+              {
+                "id": 51175223,
+                "content": "... Désolée.",
+                "npc": 700390
+              }
+            ]
+          },
+          {
+            "id": "1770279070734391456",
+            "type": "TalkNode",
+            "name": "对话",
+            "dialogues": [
+              {
+                "id": 51175224,
+                "content": "S’il vous plaît... aidez-moi... je ne veux pas mourir ici... ma famille m’attend...",
+                "npc": 700393,
+                "next": 51175225
+              },
+              {
+                "id": 51175225,
+                "content": "...",
+                "npc": 700390,
+                "next": 51175226
+              },
+              {
+                "id": 51175226,
+                "content": "... Très bien",
+                "npc": 700390
+              }
+            ]
+          },
+          {
+            "id": "1770279138866392190",
+            "type": "TalkNode",
+            "name": "对话",
+            "dialogues": [
+              {
+                "id": 51175227,
+                "content": "Attends. Je vais m’occuper de toi.",
+                "npc": 700390,
+                "next": 51175228
+              },
+              {
+                "id": 51175228,
+                "content": "Vous êtes... une Zhuyou... ? J’ai mal...",
+                "npc": 700393,
+                "next": 51175229
+              },
+              {
+                "id": 51175229,
+                "content": "Reste immobile. Je vais refermer tes blessures.",
+                "npc": 700390,
+                "options": [
+                  {
+                    "id": 51175230,
+                    "content": "<I>Soigner le blessé</>",
+                    "options": [
+                      {
+                        "id": 51175231,
+                        "content": "<I>Étrange... ce type de blessure ne devrait pas être aussi difficile à traiter avec l’Art de l’Éphémère... Est-ce dû au désordre des Neuf Chapitres ?</>",
+                        "next": 51175232
+                      }
+                    ],
+                    "next": 51175231
+                  }
+                ]
+              },
+              {
+                "id": 51175232,
+                "content": "Merci... si ça ne marche pas... ne vous épuisez pas...",
+                "npc": 700393,
+                "next": 51175233
+              },
+              {
+                "id": 51175233,
+                "content": "Concentre-toi. N’abandonne pas.",
+                "npc": 700390,
+                "options": [
+                  {
+                    "id": 51175234,
+                    "content": "<I>Continuer l’Art de l’Éphémère</>",
+                    "options": [
+                      {
+                        "id": 51175235,
+                        "content": "Tant que les Neuf Chapitres n’ont pas disparu...",
+                        "next": 51175236
+                      }
+                    ],
+                    "next": 51175235
+                  }
+                ]
+              },
+              {
+                "id": 51175236,
+                "content": "... hn...",
+                "npc": 700390,
+                "next": 51175237
+              },
+              {
+                "id": 51175237,
+                "content": "<I>Encore un peu...</>",
+                "npc": 700390,
+                "next": 51175238
+              },
+              {
+                "id": 51175238,
+                "content": "<I>kof...</> !",
+                "npc": 700390,
+                "next": 51175239
+              },
+              {
+                "id": 51175239,
+                "content": "<I>Je peux tenir...</>",
+                "npc": 700390,
+                "next": 51175240
+              },
+              {
+                "id": 51175240,
+                "content": "Aaaah !",
+                "npc": 700393,
+                "next": 51175241
+              },
+              {
+                "id": 51175241,
+                "content": "La lumière blanche qui enveloppait leurs corps se dissipe peu à peu. Le visage de Fushu pâlit visiblement. Le blessé est hors de danger, mais s’évanouit sous la douleur.",
+                "next": 51175242
+              },
+              {
+                "id": 51175242,
+                "content": "... ha...",
+                "npc": 700390,
+                "next": 51175243
+              },
+              {
+                "id": 51175243,
+                "content": "Son pouls s’est stabilisé. Avec du repos, il se réveillera. Désolée... je ne peux pas rester plus longtemps. Je dois poursuivre ma route.",
+                "npc": 700390
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031805,
+        "name": "???",
+        "desc": "Fushu fait tout ce qui est en son pouvoir pour soigner le blessé, mais le dérèglement des Neuf Chapitres de Dafeng l’a poussée à dépasser ses limites. Plongée dans l’inconscience, elle se retrouve entraînée dans un souvenir du passé...",
+        "nodes": [
+          {
+            "id": "1770281427083396372",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "next": [
+              "1770281440102396712"
+            ],
+            "dialogues": [
+              {
+                "id": 51175301,
+                "content": "... Où suis-je ?",
+                "npc": 700390,
+                "next": 51175302
+              },
+              {
+                "id": 51175302,
+                "content": "À Haojing. À la Pharmacie Zesheng.",
+                "npc": 700392,
+                "next": 51175303
+              },
+              {
+                "id": 51175303,
+                "content": "Pharmacie Zesheng... Je ne connais pas cet endroit. Mais... merci de vous être occupés de moi durant mon inconscience.",
+                "npc": 700390,
+                "next": 51175304
+              },
+              {
+                "id": 51175304,
+                "content": "« Inconscience »... Pour vous, ce n’était qu’un simple épuisement.",
+                "npc": 700392,
+                "next": 51175305
+              },
+              {
+                "id": 51175305,
+                "content": "Mais en réalité, pour retarder votre mort, Fufeng a gelé votre corps il y a cent ans. La Pharmacie Zesheng a mis un siècle à trouver un moyen de contrer les effets de l’Art de l’Éphémère... et à vous ramener à la vie.",
+                "npc": 700392,
+                "next": 51175306
+              },
+              {
+                "id": 51175306,
+                "content": "... Cent ans ?",
+                "npc": 700390
+              }
+            ]
+          },
+          {
+            "id": "1770281440102396712",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "dialogues": [
+              {
+                "id": 51175307,
+                "content": "La Pharmacie Zesheng est plongée dans le silence nocturne. Quelques insectes murmurent dans la cour. Fushu feuillette des archives, le frottement du papier résonnant dans le calme.",
+                "next": 51175308
+              },
+              {
+                "id": 51175308,
+                "content": "<I>Je n’ai donc pas réussi à arrêter la propagation de la Grande Épidémie... Même si Zhuyin a été scellé... elle a tout de même emporté d’innombrables vies.</>",
+                "npc": 700390,
+                "next": 51175309
+              },
+              {
+                "id": 51175309,
+                "content": "<I>Ma sœur m’a figée dans la glace au cœur de l’épidémie... Elle a consacré toute sa vie à chercher un moyen d’empêcher le contrecoup de l’Art de l’Éphémère... Mais elle est morte avant d’y parvenir... laissant cet espoir aux générations futures.</>",
+                "npc": 700390,
+                "next": 51175310
+              },
+              {
+                "id": 51175310,
+                "content": "Ce sont donc les apothicaires de la Pharmacie Zesheng...",
+                "npc": 700390,
+                "next": 51175311
+              },
+              {
+                "id": 51175311,
+                "content": "Dame Fushu, la nuit est fraîche. Vous devriez vous reposer. Vous venez à peine de vous éveiller... et pourtant vous passez vos nuits ici.",
+                "npc": 700392,
+                "next": 51175312
+              },
+              {
+                "id": 51175312,
+                "content": "Nous avons mis cent ans à vous sauver. Si vous deviez vous épuiser à nouveau pour si peu... ce serait trahir les espoirs de Fufeng.",
+                "npc": 700392,
+                "next": 51175313
+              },
+              {
+                "id": 51175313,
+                "content": "...",
+                "npc": 700390,
+                "next": 51175314
+              },
+              {
+                "id": 51175314,
+                "content": "Je comprends. Mais tous ceux que je connaissais ont disparu. Ces archives... sont le seul lien qu’il me reste avec le passé.",
+                "npc": 700390,
+                "next": 51175315
+              },
+              {
+                "id": 51175315,
+                "content": "Dame Fushu... Souhaitez-vous vraiment retourner seule au Pavillon de l’Éphémère ? Reprendre votre rôle de Zhuyou ? Ici... vous pourriez vivre en paix...",
+                "npc": 700392,
+                "next": 51175316
+              },
+              {
+                "id": 51175316,
+                "content": "Merci pour votre sollicitude. Mais ma décision est prise.",
+                "npc": 700390,
+                "next": 51175317
+              },
+              {
+                "id": 51175317,
+                "content": "Alors permettez-moi de vous prévenir. Dans votre état... utiliser trop souvent l’Art de l’Éphémère pourrait vous coûter la vie.",
+                "npc": 700392,
+                "next": 51175318
+              },
+              {
+                "id": 51175318,
+                "content": "Fufeng ne pensait qu’à votre santé. Aujourd’hui, la médecine de Huaxu a prospéré grâce à elle. Nous pouvons prendre le relais. Vous n’avez plus besoin de vous sacrifier ainsi.",
+                "npc": 700392,
+                "next": 51175319
+              },
+              {
+                "id": 51175319,
+                "content": "Merci pour votre conseil.",
+                "npc": 700390,
+                "next": 51175320
+              },
+              {
+                "id": 51175320,
+                "content": "... Elle avait raison. Vous êtes d’une ténacité rare.",
+                "npc": 700392,
+                "next": 51175321
+              },
+              {
+                "id": 51175321,
+                "content": "... Si ma sœur avait survécu... elle aurait sans doute fait bien mieux que moi.",
+                "npc": 700390,
+                "next": 51175322
+              },
+              {
+                "id": 51175322,
+                "content": "Même les Wishen restent dans ce monde à cause de leurs attaches... Et moi... je n’ai plus rien. Plus personne, ni ici... ni ailleurs.",
+                "npc": 700390,
+                "next": 51175323
+              },
+              {
+                "id": 51175323,
+                "content": "Dame Fushu...",
+                "npc": 700392,
+                "next": 51175324
+              },
+              {
+                "id": 51175324,
+                "content": "Si j’abandonne aussi mon devoir de Zhuyou... alors je ne saurai même plus pourquoi je vis.",
+                "npc": 700390,
+                "next": 51175325
+              },
+              {
+                "id": 51175325,
+                "content": "Ma vie... aurait dû s’éteindre lors de la Grande Épidémie.",
+                "npc": 700390,
+                "next": 51175326
+              },
+              {
+                "id": 51175326,
+                "content": "L’Art de l’Éphémère est le fondement de notre lignée. Nous naissons pour cela... et nous mourons pour cela.",
+                "npc": 700390
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20031806,
+        "name": "Chercher la Faille de l’Oubli",
+        "desc": "Fushu reprend connaissance. Le temps presse — elle doit atteindre le Fleuve de l’Oubli avant que les Neuf Chapitres de Dafeng ne s’effondrent totalement.",
+        "nodes": []
+      },
+      {
+        "id": 20031807,
+        "name": "Se rendre au Fleuve de l’Oubli",
+        "desc": "Fushu reprend connaissance. Le temps presse — elle doit atteindre le Fleuve de l’Oubli avant que les Neuf Chapitres de Dafeng ne s’effondrent totalement.",
+        "nodes": []
+      },
+      {
+        "id": 20031808,
+        "name": "Continuer à avancer",
+        "desc": "Fushu tente, au cœur du Fleuve de l’Oubli, d’échanger sa propre vie contre le retour de sa sœur Fufeng parmi les vivants. Mais son geste est interrompu par cette dernière.\nAvant de disparaître, Fufeng lui laisse ces mots : « Vis... comme ton cœur le souhaite. »\nIncapable d’aller au bout de son sacrifice, Fushu quitte le Fleuve de l’Oubli et erre dans les rues de Haojing, perdue et désorientée...",
+        "nodes": []
       }
     ]
   },

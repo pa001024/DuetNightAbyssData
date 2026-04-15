@@ -84,5 +84,9 @@ function BP_SkillCreature_C:ClientBeginPlay()
   self.Overridden.ClientBeginPlay(self)
 end
 
+function BP_SkillCreature_C:AddTarget(HitTarget)
+  self.Targets:Add(HitTarget)
+end
+
 AssembleComponents(BP_SkillCreature_C)
 return BP_SkillCreature_C

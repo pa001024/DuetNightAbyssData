@@ -3280,6 +3280,86 @@ return ReadOnly("Condition", {
     },
     Remark = "灵异皎皎个人小传"
   },
+  [1147] = {
+    ConditionId = 1147,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Impression = {
+        {510153, 1}
+      }
+    },
+    Remark = "花留情个人小传"
+  },
+  [1148] = {
+    ConditionId = 1148,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Impression = {
+        {510155, 1}
+      }
+    },
+    Remark = "罗汉个人小传"
+  },
+  [1149] = {
+    ConditionId = 1149,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Impression = {
+        {510157, 1}
+      }
+    },
+    Remark = "乐观皎皎个人小传"
+  },
+  [1150] = {
+    ConditionId = 1150,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Impression = {
+        {510159, 1}
+      }
+    },
+    Remark = "萍姐个人小传"
+  },
+  [1151] = {
+    ConditionId = 1151,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Impression = {
+        {510160, 1}
+      }
+    },
+    Remark = "程宫个人小传"
+  },
+  [1152] = {
+    ConditionId = 1152,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Impression = {
+        {510161, 1}
+      }
+    },
+    Remark = "诸葛明个人小传"
+  },
+  [1153] = {
+    ConditionId = 1153,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Impression = {
+        {510162, 1}
+      }
+    },
+    Remark = "香官皎皎个人小传"
+  },
+  [1154] = {
+    ConditionId = 1154,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Impression = {
+        {510163, 1}
+      }
+    },
+    Remark = "因何生个人小传"
+  },
   [2001] = {
     ConditionId = 2001,
     ConditionLogic = "AND",
@@ -9204,7 +9284,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DynamicEventCompleteTimes = {
-        {109204, 1}
+        {109204, 1},
+        {109205, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9214,7 +9295,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DynamicEventCompleteTimes = {
-        {209304, 1}
+        {209304, 1},
+        {209305, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9224,7 +9306,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DynamicEventCompleteTimes = {
-        {309404, 1}
+        {309404, 1},
+        {309405, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9234,7 +9317,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DynamicEventCompleteTimes = {
-        {209504, 1}
+        {209504, 1},
+        {209505, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9246,7 +9330,10 @@ return ReadOnly("Condition", {
       DynamicEventCompleteTimes = {
         {209614, 1},
         {209624, 1},
-        {209654, 1}
+        {209654, 1},
+        {209615, 1},
+        {209625, 1},
+        {209655, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9258,7 +9345,10 @@ return ReadOnly("Condition", {
       DynamicEventCompleteTimes = {
         {209714, 1},
         {209724, 1},
-        {209744, 1}
+        {209744, 1},
+        {209715, 1},
+        {209725, 1},
+        {209745, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9269,7 +9359,9 @@ return ReadOnly("Condition", {
     ConditionMap = {
       DynamicEventCompleteTimes = {
         {109834, 1},
-        {109844, 1}
+        {109844, 1},
+        {109835, 1},
+        {109845, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9280,7 +9372,9 @@ return ReadOnly("Condition", {
     ConditionMap = {
       DynamicEventCompleteTimes = {
         {209934, 1},
-        {209954, 1}
+        {209954, 1},
+        {209935, 1},
+        {209955, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9290,7 +9384,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DynamicEventCompleteTimes = {
-        {110004, 1}
+        {110004, 1},
+        {110005, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -9300,7 +9395,8 @@ return ReadOnly("Condition", {
     ConditionLogic = "OR",
     ConditionMap = {
       DynamicEventCompleteTimes = {
-        {110104, 1}
+        {110104, 1},
+        {110105, 1}
       }
     },
     Remark = "可派遣前置条件"
@@ -11648,6 +11744,14 @@ return ReadOnly("Condition", {
       Quest = {12020628}
     },
     Remark = "东国二期12020628任务完成"
+  },
+  [12030101] = {
+    ConditionId = 12030101,
+    ConditionLogic = "AND",
+    ConditionMap = {
+      Quest = {12030101}
+    },
+    Remark = "奉香大典任务1-1完成"
   },
   [20010104] = {
     ConditionId = 20010104,

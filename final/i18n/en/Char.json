@@ -3552,7 +3552,7 @@
         ],
         "术语解释": {
           "Soar": "Gains Morale Boost.",
-          "Sword Aflash": "Each attack consumes 5 [Artificer Powder] to unleash a massive blade of light, dealing Lumino DMG to enemies in its path.",
+          "Sword Aflash": "Each attack consumes 10 [Artificer Powder] to unleash a massive blade of light, dealing Lumino DMG to enemies in its path.",
           "Stars Ashower": "Each attack consumes [Artificer Powder] ×1 to fire a projectile that deals AoE Lumino DMG on hit.\nWhen equipped with Demon Wedge [Fengshi Type Ⅲ: Tracking Mode], this attack instead fires homing projectiles that seek out random enemies, dealing AoE Lumino DMG every 0.1s along their path."
         },
         "子技能": [

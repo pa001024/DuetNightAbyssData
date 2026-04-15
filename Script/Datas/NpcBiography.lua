@@ -540,5 +540,77 @@ return ReadOnly("NpcBiography", {
     NpcInformation = "NpcBiography_Information_MysteryWhite",
     NpcName = "UI_CMNpc_Yanjindu_Name_MysteryWhite",
     ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105601] = {
+    ConditionId = 1147,
+    DispConditionId = 1147,
+    NpcAge = "28",
+    NpcBiographyId = 105601,
+    NpcInformation = "NpcBiography_Information_HuaLiuqing",
+    NpcName = "UI_CMNpc_Haojing_Name_HuaLiuqing",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105701] = {
+    ConditionId = 1148,
+    DispConditionId = 1148,
+    NpcAge = "62",
+    NpcBiographyId = 105701,
+    NpcInformation = "NpcBiography_Information_LuoHan",
+    NpcName = "UI_CMNpc_Haojing_Name_LuoHan",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105801] = {
+    ConditionId = 1149,
+    DispConditionId = 1149,
+    NpcAge = "？？",
+    NpcBiographyId = 105801,
+    NpcInformation = "NpcBiography_Information_OptimisticWhite",
+    NpcName = "UI_CMNpc_Haojing_Name_OptimisticWhite",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [105901] = {
+    ConditionId = 1150,
+    DispConditionId = 1150,
+    NpcAge = "48",
+    NpcBiographyId = 105901,
+    NpcInformation = "NpcBiography_Information_LadyPing",
+    NpcName = "UI_CMNpc_Haojing_Name_MsPing",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [106001] = {
+    ConditionId = 1151,
+    DispConditionId = 1151,
+    NpcAge = "45",
+    NpcBiographyId = 106001,
+    NpcInformation = "NpcBiography_Information_ChengGong",
+    NpcName = "UI_CMNpc_Haojing_Name_ChengGong",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [106101] = {
+    ConditionId = 1152,
+    DispConditionId = 1152,
+    NpcAge = "40",
+    NpcBiographyId = 106101,
+    NpcInformation = "NpcBiography_Information_ZhugeMing",
+    NpcName = "UI_CMNpc_Haojing_Name_ZhugeMing",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [106201] = {
+    ConditionId = 1153,
+    DispConditionId = 1153,
+    NpcAge = "？？",
+    NpcBiographyId = 106201,
+    NpcInformation = "NpcBiography_Information_PilgrimWhite",
+    NpcName = "UI_CMNpc_Haojing_Name_XiangguanWhite",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [106301] = {
+    ConditionId = 1154,
+    DispConditionId = 1154,
+    NpcAge = "？？",
+    NpcBiographyId = 106301,
+    NpcInformation = "NpcBiography_Information_HeyinSheng",
+    NpcName = "UI_CMNpc_Haojing_Name_YinheSheng",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
   }
 })

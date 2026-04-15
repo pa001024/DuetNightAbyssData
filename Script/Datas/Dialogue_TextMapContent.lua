@@ -205568,7 +205568,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
   },
   {
     MinKey = 51175415,
-    MaxKey = 51175825,
+    MaxKey = 51175821,
     Loader = function()
       return {
         [51175415] = {
@@ -206083,502 +206083,829 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51175601] = {
           Content = "民以食为天，食以香为先，香……这香……香啊……香。",
           DialogueId = 51175601,
-          GUID = "801CDD0A"
+          GUID = "801CDD0A",
+          LookAt = {
+            [1] = "701267:n(0)"
+          },
+          NextOptions = {
+            [1] = 51175602,
+            [2] = 51175604,
+            [3] = 51175606
+          },
+          SpeakNpcId = 701267
         },
         [51175602] = {
           Content = "香是什么很稀奇的东西吗？",
           DialogueId = 51175602,
-          GUID = "801CDD34"
+          GUID = "801CDD34",
+          ImprPlusId = 1208,
+          NextDialogue = 51175603
         },
         [51175603] = {
           Content = "唔……不是，香在华胥自然不是什么稀奇的事物，只是……",
           DialogueId = 51175603,
-          GUID = "801CDD5E"
+          GUID = "801CDD5E",
+          NextDialogue = 51175608,
+          SpeakNpcId = 701267
         },
         [51175604] = {
           Content = "有什么需要帮助的事情吗？",
           DialogueId = 51175604,
-          GUID = "801CDD88"
+          GUID = "801CDD88",
+          ImprPlusId = 1207,
+          NextDialogue = 51175605
         },
         [51175605] = {
           Content = "需要帮助？唔，虽然的确需要帮助，但阁下看起来……并非华胥人士呀。",
           DialogueId = 51175605,
-          GUID = "801CDDB2"
+          GUID = "801CDDB2",
+          NextDialogue = 51175608,
+          SpeakNpcId = 701267
         },
         [51175606] = {
           Content = "叽里咕噜说什么呢？",
           DialogueId = 51175606,
-          GUID = "801CDDDC"
+          GUID = "801CDDDC",
+          ImprPlusId = 1210,
+          NextDialogue = 51175607
         },
         [51175607] = {
           Content = "自然是在思考一些重要之事了，尤其是和食物相关的事，更是不能马虎呀。",
           DialogueId = 51175607,
-          GUID = "801CDE06"
+          GUID = "801CDE06",
+          NextDialogue = 51175608,
+          SpeakNpcId = 701267
         },
         [51175608] = {
           Content = "幸会，我是同福饭馆的厨子——李大嘴，我忧心之事其实是近期店里生意不好，掌柜的就让我想办法，去琢磨些新菜式。",
           DialogueId = 51175608,
-          GUID = "801CDE30"
+          GUID = "801CDE30",
+          NextDialogue = 51175609,
+          SpeakNpcId = 701267,
+          TalkActionId = {
+            [1] = "701267:Talk01_Start"
+          }
         },
         [51175609] = {
           Content = "掌柜的说，最近来这的外国人有些多，要是能让菜系里融入咱们华胥特色的香料，岂不是更有噱头，更能吸引不熟悉香料的人。",
           DialogueId = 51175609,
-          GUID = "801CDE5A"
+          GUID = "801CDE5A",
+          NextDialogue = 51175610,
+          SpeakNpcId = 701267,
+          TalkActionId = {
+            [1] = "701267:Talk01_End"
+          }
         },
         [51175610] = {
           Content = "可我是如何也想不明白，到底要怎么做才能做出与香料结合的好吃食物。虽然是想请教他人，可这一时半会谁知道该问谁呢？欸！",
           DialogueId = 51175610,
-          GUID = "801CDE84"
+          GUID = "801CDE84",
+          NextOptions = {
+            [1] = 51175611
+          },
+          RestartTag = 51175610,
+          SpeakNpcId = 701267
         },
         [51175611] = {
           Content = "香料做的食物吗？你倒是略有耳闻，教他几道也无妨。",
           DialogueId = 51175611,
-          GUID = "801CDEAE"
+          FailDialogue = 51175637,
+          GUID = "801CDEAE",
+          ImprCheckId = 1137,
+          NextDialogue = 51175612
         },
         [51175612] = {
           Content = "我长大的地方，因物资贫瘠，听说过有些村民会将生活中采集的任何植物用来制作食物，但我对华胥的香料不怎么了解，不知道能不能对应的上。",
           DialogueId = 51175612,
-          GUID = "801CDED8"
+          GUID = "801CDED8",
+          NextDialogue = 51175613,
+          SpeakNpcId = 100001
         },
         [51175613] = {
           Content = "哦？还有这种事？那这样，我和你说我知晓的一些可食用的香料，你告诉我可以怎么做菜，如何？",
           DialogueId = 51175613,
-          GUID = "801CDF02"
+          GUID = "801CDF02",
+          NextDialogue = 51175614,
+          SpeakNpcId = 701267,
+          TalkActionId = {
+            [1] = "701267:Think_Start"
+          }
         },
         [51175614] = {
           Content = "可以试试。",
           DialogueId = 51175614,
-          GUID = "801CDF2C"
+          GUID = "801CDF2C",
+          NextDialogue = 51175615,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "701267:Think_End"
+          }
         },
         [51175615] = {
           Content = "华胥有一香，名唤冰台，平常看起来便如路边的野草一般羸弱娇小，但若是将其碾碎，其香气沁人心脾，冰凉透骨。",
           DialogueId = 51175615,
-          GUID = "801CDF56"
+          GUID = "801CDF56",
+          NextDialogue = 51175616,
+          SpeakNpcId = 701267
         },
         [51175616] = {
           Content = "我听闻有人曾将其含在口中许久也没有中毒，您可有听说过这样的食物呢？",
           DialogueId = 51175616,
-          GUID = "801CDF80"
+          GUID = "801CDF80",
+          NextOptions = {
+            [1] = 51175617
+          },
+          RestartTag = 51175616,
+          SpeakNpcId = 701267
         },
         [51175617] = {
           Content = "你想想……",
           DialogueId = 51175617,
-          GUID = "801CDFAA"
+          FailDialogue = 51175638,
+          GUID = "801CDFAA",
+          ImprCheckId = 1138,
+          NextDialogue = 51175618
         },
         [51175618] = {
           Content = "这种东西倒是常见，入口冰凉，与大荤之物一同烹煮最合适，能以清凉的感觉将食材本身的油腻压下去。",
           DialogueId = 51175618,
-          GUID = "801CDFD4"
+          GUID = "801CDFD4",
+          NextDialogue = 51175619,
+          SpeakNpcId = 100001
         },
         [51175619] = {
           Content = "我建议你可以使用此物与排骨，猪蹄，大肠等一同炸制。",
           DialogueId = 51175619,
-          GUID = "801CDFFE"
+          GUID = "801CDFFE",
+          NextDialogue = 51175620,
+          SpeakNpcId = 100001
         },
         [51175620] = {
           Content = "哦哦！还有这种做法，的确十分有道理，我得记下来……",
           DialogueId = 51175620,
-          GUID = "801CE028"
+          GUID = "801CE028",
+          NextDialogue = 51175621,
+          SpeakNpcId = 701267,
+          TalkActionId = {
+            [1] = "701267:Talk02_Start"
+          }
         },
         [51175621] = {
           Content = "前辈，我们华胥还有另一种独特香料，叶细花小，盛开之时却香气扑鼻，有飘飘然空灵之感，我们常说若是身为华胥子民，应品行如春，此香名为——春一品。",
           DialogueId = 51175621,
-          GUID = "801CE052"
+          GUID = "801CE052",
+          NextOptions = {
+            [1] = 51175622
+          },
+          RestartTag = 51175621,
+          SpeakNpcId = 701267,
+          TalkActionId = {
+            [1] = "701267:Talk02_End"
+          }
         },
         [51175622] = {
           Content = "称呼已经是前辈了吗，你再想想……",
           DialogueId = 51175622,
-          GUID = "801CE07C"
+          FailDialogue = 51175639,
+          GUID = "801CE07C",
+          ImprCheckId = 1139,
+          NextDialogue = 51175623
         },
         [51175623] = {
           Content = "以前曾听说过花朵入菜的说法，花朵去蒂，花瓣清洗干净，沥干水分，在蔬菜入锅沾油后出锅前撒上一把。",
           DialogueId = 51175623,
-          GUID = "801CE0A6"
+          GUID = "801CE0A6",
+          NextDialogue = 51175624,
+          SpeakNpcId = 100001
         },
         [51175624] = {
           Content = "以花香佐料，花瓣本身也是一种菜叶，花瓣点缀菜肴之上，既风雅又有风味。",
           DialogueId = 51175624,
-          GUID = "801CE0D0"
+          GUID = "801CE0D0",
+          NextDialogue = 51175625,
+          SpeakNpcId = 100001
         },
         [51175625] = {
           Content = "前辈好见识啊！我怎么没有想到可以将花瓣做成菜的方法。的确有馋嘴的娃娃经常去摘花来嚼，说是有清甜之味。",
           DialogueId = 51175625,
-          GUID = "801CE0FA"
+          GUID = "801CE0FA",
+          NextDialogue = 51175626,
+          SpeakNpcId = 701267,
+          TalkActionId = {
+            [1] = "701267:Talk03_Start"
+          }
         },
         [51175626] = {
           Content = "那么前辈，华胥还有一种奇香，名叫怀香子，因它辛香浓烈，我们在用其制香时都不会放置太多，但却有医生曾说过，怀香子并无毒性……",
           DialogueId = 51175626,
-          GUID = "801CE124"
+          GUID = "801CE124",
+          NextOptions = {
+            [1] = 51175627
+          },
+          RestartTag = 51175627,
+          SpeakNpcId = 701267,
+          TalkActionId = {
+            [1] = "701267:Talk03_End"
+          }
         },
         [51175627] = {
           Content = "浓香吗，你得好好想想……",
           DialogueId = 51175627,
-          GUID = "801CE14E"
+          FailDialogue = 51175640,
+          GUID = "801CE14E",
+          ImprCheckId = 1140,
+          NextDialogue = 51175628
         },
         [51175628] = {
           Content = "浓烈之香，作为调味最合适，华胥应该也有膻味极重的食物？烈火灸烤后可将怀香子研磨后的粉均匀撒上，让香气盖过膻味。",
           DialogueId = 51175628,
-          GUID = "801CE178"
+          GUID = "801CE178",
+          NextDialogue = 51175629,
+          SpeakNpcId = 100001
         },
         [51175629] = {
           Content = "至于用量嘛……只要不像某些人一样把一瓶都倒进锅里去就好……",
           DialogueId = 51175629,
-          GUID = "801CE1A2"
+          GUID = "801CE1A2",
+          NextDialogue = 51175630,
+          SpeakNpcId = 100001
         },
         [51175630] = {
           Content = "前辈真乃奇人啊！虽不是华胥本地人，但却比我这种还要了解香料，还传授于我这么多知识，大恩大德，没齿难忘啊！",
           DialogueId = 51175630,
-          GUID = "801CE1CC"
+          GUID = "801CE1CC",
+          NextDialogue = 51175631,
+          SpeakNpcId = 701267
         },
         [51175631] = {
           Content = "客气客气~",
           DialogueId = 51175631,
-          GUID = "801CE1F6"
+          GUID = "801CE1F6",
+          NextDialogue = 51175632,
+          SpeakNpcId = 100001
         },
         [51175632] = {
           Content = "不管前辈如何推脱，我李大嘴今天都敬你一句恩师，华胥有句话，一日为师，终生为父，阁下就是我的再生父母！",
           DialogueId = 51175632,
-          GUID = "801CE220"
+          GUID = "801CE220",
+          NextDialogue = 51175633,
+          SpeakNpcId = 701267,
+          TalkActionId = {
+            [1] = "701267:Talk01_Start"
+          }
         },
         [51175633] = {
           Content = "夸张了哈……",
           DialogueId = 51175633,
-          GUID = "801CE24A"
+          GUID = "801CE24A",
+          NextDialogue = 51175634,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "701267:Talk01_End"
+          }
         },
         [51175634] = {
           Content = "不夸张，师傅，我今日要先回去钻研你传授的菜谱了，您若是有空，一定要来一趟同福饭馆，我定要请你吃一顿我的拿手好菜！",
           DialogueId = 51175634,
-          GUID = "801CE274"
+          GUID = "801CE274",
+          NextDialogue = 51175635,
+          SpeakNpcId = 701267
         },
         [51175635] = {
           Content = "有空一定！",
           DialogueId = 51175635,
-          GUID = "801CE29E"
+          GUID = "801CE29E",
+          NextDialogue = 51175636,
+          SpeakNpcId = 100001
         },
         [51175636] = {
           Content = "（李大嘴一步三回头，连连作揖道谢，直至消失在你的视野之中。）",
           DialogueId = 51175636,
-          GUID = "801CE2C8"
+          GUID = "801CE2C8",
+          IsBlack = 1
+        },
+        [51175637] = {
+          Content = "（你没有思考出结果，所以含糊了几句糊弄了事……）",
+          DialogueId = 51175637,
+          GUID = "801CE30A"
+        },
+        [51175638] = {
+          Content = "（你没有思考出结果，所以含糊了几句糊弄了事……）",
+          DialogueId = 51175638,
+          GUID = "801CE34C"
+        },
+        [51175639] = {
+          Content = "（你没有思考出结果，所以含糊了几句糊弄了事……）",
+          DialogueId = 51175639,
+          GUID = "801CE38E"
+        },
+        [51175640] = {
+          Content = "（你没有思考出结果，所以含糊了几句糊弄了事……）",
+          DialogueId = 51175640,
+          GUID = "801CE3D0"
         },
         [51175701] = {
           Content = "难道我真就无法找到相伴一生之人？",
           DialogueId = 51175701,
-          GUID = "801CED72"
+          GUID = "801CED72",
+          SpeakNpcId = 701268,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_StrangeMan"
         },
         [51175702] = {
           Content = "青青子衿，悠悠我心，在这苍茫人世间，难道我真就无法找到相伴一生之人？",
           DialogueId = 51175702,
-          GUID = "801CED9C"
+          GUID = "801CED9C",
+          LookAt = {
+            [1] = "701268:n(701268)"
+          },
+          NextDialogue = 51175703,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_StrangeMan",
+          TalkActionId = {
+            [1] = "701268:Sigh_Start"
+          }
         },
         [51175703] = {
           Content = "（这名穿着打扮张扬的男子正捶胸顿足，闭着眼，嘴上念念有词。从他身上飘来一阵浓郁的酒气，想必是喝醉了。）",
           DialogueId = 51175703,
-          GUID = "801CEDC6"
+          GUID = "801CEDC6",
+          NextDialogue = 51175704
         },
         [51175704] = {
           Content = "可怜我天生丽质，为何却无一人透过我俊美无双的外表，走进我澄澈如水的内心？",
           DialogueId = 51175704,
-          GUID = "801CEDF0"
+          GUID = "801CEDF0",
+          NextDialogue = 51175705,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_StrangeMan"
         },
         [51175705] = {
           Content = "可悲可叹，可惜世人身无慧眼，看不穿我心中的诗与远方，希望与寒冬……",
           DialogueId = 51175705,
-          GUID = "801CEE1A"
+          GUID = "801CEE1A",
+          NextDialogue = 51175706,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_StrangeMan"
         },
         [51175706] = {
           Content = "啊！白龙神君啊，回应我的祈愿吧，若你真的眷顾自己的人民，就在我睁眼之时，将我的真命佳偶带到我的面前吧！",
           DialogueId = 51175706,
-          GUID = "801CEE44"
+          GUID = "801CEE44",
+          NextDialogue = 51175707,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_StrangeMan",
+          TalkActionId = {
+            [1] = "701268:Sigh_End"
+          }
         },
         [51175707] = {
           Content = "（男子蓦然睁开双眼，与你盯着他打量的视线撞个正着。）",
           DialogueId = 51175707,
-          GUID = "801CEE6E"
+          GUID = "801CEE6E",
+          LookAt = {
+            [1] = "701268:n(0)"
+          },
+          NextDialogue = 51175708
         },
         [51175708] = {
           Content = "这……显……显灵了？这就是白龙神君为我送来的真命佳偶吗？",
           DialogueId = 51175708,
-          GUID = "801CEE98"
+          GUID = "801CEE98",
+          NextDialogue = 51175709,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_StrangeMan"
         },
         [51175709] = {
           Content = "咳咳~自我介绍一下，小生——花~留情，万花丛中过，片叶不留情，说的就是小生这种英俊帅气与聪慧潇洒并存的……",
           DialogueId = 51175709,
-          GUID = "801CEEC2"
+          GUID = "801CEEC2",
+          NextDialogue = 51175710,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Talk01_Start"
+          }
         },
         [51175710] = {
           Content = "万！",
           DialogueId = 51175710,
-          GUID = "801CEEEC"
+          GUID = "801CEEEC",
+          NextDialogue = 51175711,
+          SpeakNpcId = 701268
         },
         [51175711] = {
           Content = "人！",
           DialogueId = 51175711,
-          GUID = "801CEF16"
+          GUID = "801CEF16",
+          NextDialogue = 51175712,
+          SpeakNpcId = 701268
         },
         [51175712] = {
           Content = "迷~~~",
           DialogueId = 51175712,
-          GUID = "801CEF40"
+          GUID = "801CEF40",
+          NextOptions = {
+            [1] = 51175713,
+            [2] = 51175716
+          },
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Talk01_End"
+          }
         },
         [51175713] = {
           Content = "额，你好？我叫{nickname}。",
           DialogueId = 51175713,
-          GUID = "801CEF6A"
+          GUID = "801CEF6A",
+          ImprPlusId = 1207,
+          NextDialogue = 51175714
         },
         [51175714] = {
           Content = "哦！{nickname}！多么美丽的名字啊，在未来无数次的深夜梦回之中，我一定会想起你，想起这个甜美的名字。",
           DialogueId = 51175714,
-          GUID = "801CEF94"
+          GUID = "801CEF94",
+          NextDialogue = 51175715,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Talk02_Start"
+          }
         },
         [51175715] = {
           Content = "像博山香行飘来的香薰，像八珍楼回荡的酒香，我把你的名字反复放在唇边咀嚼，哦！{nickname}！{nickname}！",
           DialogueId = 51175715,
-          GUID = "801CEFBE"
+          GUID = "801CEFBE",
+          NextDialogue = 51175719,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Talk02_End"
+          }
         },
         [51175716] = {
           Content = "我叫万人敌。",
           DialogueId = 51175716,
-          GUID = "801CEFE8"
+          GUID = "801CEFE8",
+          ImprPlusId = 1210,
+          NextDialogue = 51175717
         },
         [51175717] = {
           Content = "万人敌……万人敌！多么豪迈壮阔的名字啊，看看你腰间的剑，看看你锐利的眼神，我就知道，我等的就是这个！",
           DialogueId = 51175717,
-          GUID = "801CF012"
+          GUID = "801CF012",
+          NextDialogue = 51175718,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Talk02_Start"
+          }
         },
         [51175718] = {
           Content = "白龙神君啊，你果然爱着你虔诚的子民，你竟将如此英武豪迈之人送来我的身边，我要如何感激您的恩德！",
           DialogueId = 51175718,
-          GUID = "801CF03C"
+          GUID = "801CF03C",
+          NextDialogue = 51175719,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Talk02_End"
+          }
         },
         [51175719] = {
           Content = "停——停！你这家伙喝醉认错人了，我根本不认识你。",
           DialogueId = 51175719,
-          GUID = "801CF066"
+          GUID = "801CF066",
+          NextDialogue = 51175720,
+          SpeakNpcId = 100001
         },
         [51175720] = {
           Content = "对！就是这样，就是要先冷漠地拒绝我，然后我再对你展开猛烈的追求，但你郎心似铁，绝情地告知我，我们不能在一起。",
           DialogueId = 51175720,
-          GUID = "801CF090"
+          GUID = "801CF090",
+          NextDialogue = 51175721,
+          SpeakNpcId = 701268
         },
         [51175721] = {
           Content = "接着，我心如死灰，日日买醉，八珍楼的酒桌上摆了一排又一排男儿泪，而我，在喧嚣的人流声中，喃喃唤你的名！",
           DialogueId = 51175721,
-          GUID = "801CF0BA"
+          GUID = "801CF0BA",
+          NextDialogue = 51175722,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Talk03_Start"
+          }
         },
         [51175722] = {
           Content = "最终，我的故事化作一段坊间流传的佳话，谁人不道皓京有一位痴情男儿，为异国的白衣过客肝肠寸断！",
           DialogueId = 51175722,
-          GUID = "801CF0E4"
+          GUID = "801CF0E4",
+          NextDialogue = 51175723,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Talk03_End"
+          }
         },
         [51175723] = {
           Content = "而你~我最爱的人啊，我的真命佳偶！",
           DialogueId = 51175723,
-          GUID = "801CF10E"
+          GUID = "801CF10E",
+          NextDialogue = 51175724,
+          SpeakNpcId = 701268
         },
         [51175724] = {
           Content = "你会在一个月亮正高的夜晚，望着被照得白茫茫的苍茫大地，你听见风从你的耳边低语，诉说的全是我对你的思念。",
           DialogueId = 51175724,
-          GUID = "801CF138"
+          GUID = "801CF138",
+          NextDialogue = 51175725,
+          SpeakNpcId = 701268
         },
         [51175725] = {
           Content = "所谓爱情，就是要这样荡气回肠，牵肠挂肚，才会有如此惊天地泣鬼神之美啊！",
           DialogueId = 51175725,
-          GUID = "801CF162"
+          GUID = "801CF162",
+          NextOptions = {
+            [1] = 51175726
+          },
+          RestartTag = 51175725,
+          SpeakNpcId = 701268
         },
         [51175726] = {
           Content = "（这家伙简直是疯子……正常的方法想必没法打发走他，不如另辟蹊径？）",
           DialogueId = 51175726,
-          GUID = "801CF18C"
+          FailDialogue = 51175727,
+          GUID = "801CF18C",
+          ImprCheckId = 1141,
+          NextDialogue = 51175728
         },
         [51175727] = {
           Content = "（不够疯狂，还是想想别的法子吧……）",
           DialogueId = 51175727,
-          GUID = "801CF1B6"
+          GUID = "801CF1B6",
+          SpeakNpcId = 100001
         },
         [51175728] = {
           Content = "不，这样就得到的感情实在是太轻易了！",
           DialogueId = 51175728,
-          GUID = "801CF1E0"
+          GUID = "801CF1E0",
+          NextDialogue = 51175729,
+          SpeakNpcId = 100001
         },
         [51175729] = {
           Content = "什……什么？！",
           DialogueId = 51175729,
-          GUID = "801CF20A"
+          GUID = "801CF20A",
+          NextDialogue = 51175730,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Shock_Start"
+          }
         },
         [51175730] = {
           Content = "你不是渴望一段荡气回肠的爱情故事吗？与你那个所谓的……真命佳偶？",
           DialogueId = 51175730,
-          GUID = "801CF234"
+          GUID = "801CF234",
+          NextDialogue = 51175731,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "701268:Shock_End"
+          }
         },
         [51175731] = {
           Content = "虽说那个人肯定不会是我，但你编写的故事怎么想都太轻易得到爱情了，所以我这里有个更好的想法。",
           DialogueId = 51175731,
-          GUID = "801CF25E"
+          GUID = "801CF25E",
+          NextDialogue = 51175732,
+          SpeakNpcId = 100001
         },
         [51175732] = {
           Content = "哦哦哦！~~~你果然懂我！！！快说吧，我们一起探讨什么是真正的爱情！",
           DialogueId = 51175732,
-          GUID = "801CF288"
+          GUID = "801CF288",
+          NextDialogue = 51175733,
+          SpeakNpcId = 701268
         },
         [51175733] = {
           Content = "爱是得到，爱是占有，爱是成全，所以这个故事应该这么编……",
           DialogueId = 51175733,
-          GUID = "801CF2B2"
+          GUID = "801CF2B2",
+          NextOptions = {
+            [1] = 51175734,
+            [2] = 51175746
+          },
+          SpeakNpcId = 100001
         },
         [51175734] = {
           Content = "说一个悲伤的故事。",
           DialogueId = 51175734,
-          GUID = "801CF2DC"
+          GUID = "801CF2DC",
+          ImprPlusId = 1208,
+          NextDialogue = 51175735
         },
         [51175735] = {
           Content = "你的故事始于一场冒险，你见证华胥之外的世界，当你的眼界足够高时，你们会在回程的织星客船上相遇。",
           DialogueId = 51175735,
-          GUID = "801CF306"
+          GUID = "801CF306",
+          NextDialogue = 51175736,
+          SpeakNpcId = 100001
         },
         [51175736] = {
           Content = "你对那位真命佳偶一见钟情，你们很快相爱，难舍难分。",
           DialogueId = 51175736,
-          GUID = "801CF330"
+          GUID = "801CF330",
+          NextDialogue = 51175737,
+          SpeakNpcId = 100001
         },
         [51175737] = {
           Content = "你在说什么？这种爱情太轻易了，这不是我的故事！",
           DialogueId = 51175737,
-          GUID = "801CF35A"
+          GUID = "801CF35A",
+          NextDialogue = 51175738,
+          SpeakNpcId = 701268
         },
         [51175738] = {
           Content = "别急，我还没说完呢。",
           DialogueId = 51175738,
-          GUID = "801CF384"
+          GUID = "801CF384",
+          NextDialogue = 51175739,
+          SpeakNpcId = 100001
         },
         [51175739] = {
           Content = "在你们归来的路上，海面上突然惊现一座巨型礁石，那天晚上，天很黑，负责观测航向的船员喝醉了酒，就像现在的你一样……",
           DialogueId = 51175739,
-          GUID = "801CF3AE"
+          GUID = "801CF3AE",
+          NextDialogue = 51175740,
+          SpeakNpcId = 100001
         },
         [51175740] = {
           Content = "在伸手不见五指的午夜，船只撞上了暗礁，船上所有人都被巨大的动静吵醒，你们也不例外。",
           DialogueId = 51175740,
-          GUID = "801CF3D8"
+          GUID = "801CF3D8",
+          NextDialogue = 51175741,
+          SpeakNpcId = 100001
         },
         [51175741] = {
           Content = "求生的欲望使你们靠着本能在漫进船舱的冰冷海水中摸索，你好不容易护着心爱的那位找到了一艘救生艇。",
           DialogueId = 51175741,
-          GUID = "801CF402"
+          GUID = "801CF402",
+          NextDialogue = 51175742,
+          SpeakNpcId = 100001
         },
         [51175742] = {
           Content = "然而，那艘小艇已经满员，最多只能再塞下一名成员……",
           DialogueId = 51175742,
-          GUID = "801CF42C"
+          GUID = "801CF42C",
+          NextDialogue = 51175743,
+          SpeakNpcId = 100001
         },
         [51175743] = {
           Content = "……呜呜……呜呜呜呜哇！",
           DialogueId = 51175743,
-          GUID = "801CF456"
+          GUID = "801CF456",
+          NextDialogue = 51175744,
+          SpeakNpcId = 701268
         },
         [51175744] = {
           Content = "我！我已经知道结局了！我的真命佳偶啊，她一定是将最后的求生机会让给了我，她独自沉入了海水之中！",
           DialogueId = 51175744,
-          GUID = "801CF480"
+          GUID = "801CF480",
+          NextDialogue = 51175745,
+          SpeakNpcId = 701268
         },
         [51175745] = {
           Content = "我本来想说其实是你……算了，对！就是这样！",
           DialogueId = 51175745,
-          GUID = "801CF4AA"
+          GUID = "801CF4AA",
+          NextDialogue = 51175757,
+          SpeakNpcId = 100001
         },
         [51175746] = {
           Content = "说一个疯狂的故事。",
           DialogueId = 51175746,
-          GUID = "801CF4D4"
+          GUID = "801CF4D4",
+          ImprPlusId = 1210,
+          NextDialogue = 51175747
         },
         [51175747] = {
           Content = "你的故事始于一次探亲，你远房舅舅的侄女的哥哥结婚，邀请你前往婚宴。",
           DialogueId = 51175747,
-          GUID = "801CF4FE"
+          GUID = "801CF4FE",
+          NextDialogue = 51175748,
+          SpeakNpcId = 100001
         },
         [51175748] = {
           Content = "你带好了贺礼，来到了那个地方，接待你的人温柔体贴，你与她交谈甚欢，以至于你觉得这就是你的真命佳偶。",
           DialogueId = 51175748,
-          GUID = "801CF528"
+          GUID = "801CF528",
+          NextDialogue = 51175749,
+          SpeakNpcId = 100001
         },
         [51175749] = {
           Content = "在你正试图倾诉你的爱慕之时，那位远房亲戚走了出来，揽过你眼中真命佳偶的胳膊，向你介绍道：这是今天的新娘，他将要成婚的爱人。",
           DialogueId = 51175749,
-          GUID = "801CF552"
+          GUID = "801CF552",
+          NextDialogue = 51175750,
+          SpeakNpcId = 100001
         },
         [51175750] = {
           Content = "不！怎会如此！为何我的真命佳偶在与我相遇之时就与他人私定终生了！我不接受！",
           DialogueId = 51175750,
-          GUID = "801CF57C"
+          GUID = "801CF57C",
+          NextDialogue = 51175751,
+          SpeakNpcId = 701268
         },
         [51175751] = {
           Content = "还没说完呢！你别急啊。",
           DialogueId = 51175751,
-          GUID = "801CF5A6"
+          GUID = "801CF5A6",
+          NextDialogue = 51175752,
+          SpeakNpcId = 100001
         },
         [51175752] = {
           Content = "说吧，让我听听你那残忍的双唇还能吐出怎样伤人的话语！",
           DialogueId = 51175752,
-          GUID = "801CF5D0"
+          GUID = "801CF5D0",
+          NextDialogue = 51175753,
+          SpeakNpcId = 701268
         },
         [51175753] = {
           Content = "你心灰意冷，之后你咽下痛苦，不再问新娘的消息。可没过多久，你竟然得知了那位新娘的死讯……",
           DialogueId = 51175753,
-          GUID = "801CF5FA"
+          GUID = "801CF5FA",
+          NextDialogue = 51175754,
+          SpeakNpcId = 100001
         },
         [51175754] = {
           Content = "就在一个风雨交加的夜晚，你望着窗外摇曳的叶子出神，正在这时，你听到门外传来有节奏的脚步声。一缕香气飘来，但香气中似乎还夹杂着血腥味……",
           DialogueId = 51175754,
-          GUID = "801CF624"
+          GUID = "801CF624",
+          NextDialogue = 51175755,
+          SpeakNpcId = 100001
         },
         [51175755] = {
           Content = "后面的故事我已经知道了！我迫不及待地打开房门，与她相拥而泣，我们互诉衷肠，让雨水见证我们的泪！",
           DialogueId = 51175755,
-          GUID = "801CF64E"
+          GUID = "801CF64E",
+          NextDialogue = 51175756,
+          SpeakNpcId = 701268
         },
         [51175756] = {
           Content = "好吧……也不是不行。",
           DialogueId = 51175756,
-          GUID = "801CF678"
+          GUID = "801CF678",
+          NextDialogue = 51175757,
+          SpeakNpcId = 100001
         },
         [51175757] = {
           Content = "谢谢你！你真是给我说了一个我生平所听的最完美的爱情故事，它满足了我对于所有爱情的期待和幻想，谢谢你！我的……",
           DialogueId = 51175757,
-          GUID = "801CF6A2"
+          GUID = "801CF6A2",
+          NextOptions = {
+            [1] = 51175758
+          },
+          SpeakNpcId = 701268
         },
         [51175758] = {
           Content = "打住！",
           DialogueId = 51175758,
-          GUID = "801CF6CC"
+          GUID = "801CF6CC",
+          NextDialogue = 51175759
         },
         [51175759] = {
           Content = "你的真命佳偶应该去故事里寻找，而不是现实之中，就像你对于爱情的幻想也多半只是存在于故事中一样。",
           DialogueId = 51175759,
-          GUID = "801CF6F6"
+          GUID = "801CF6F6",
+          NextDialogue = 51175760,
+          SpeakNpcId = 100001
         },
         [51175760] = {
           Content = "与其把时间沉溺在幻想之中，还是脚踏实地地去追寻一些看得见摸得着的东西吧。",
           DialogueId = 51175760,
-          GUID = "801CF720"
+          GUID = "801CF720",
+          NextDialogue = 51175761,
+          SpeakNpcId = 100001
         },
         [51175761] = {
           Content = "看得见摸得着的存在？那……那不就是你吗？！",
           DialogueId = 51175761,
-          GUID = "801CF74A"
+          GUID = "801CF74A",
+          NextDialogue = 51175762,
+          SpeakNpcId = 701268,
+          TalkActionId = {
+            [1] = "701268:Think_Start"
+          }
         },
         [51175762] = {
           Content = "………………",
           DialogueId = 51175762,
-          GUID = "801CF774"
+          GUID = "801CF774",
+          NextDialogue = 51175763,
+          SpeakNpcId = 100001,
+          TalkActionId = {
+            [1] = "701268:Think_End"
+          }
         },
         [51175763] = {
           Content = "（你决定先走为敬。）",
           DialogueId = 51175763,
-          GUID = "801CF79E"
+          GUID = "801CF79E",
+          NextDialogue = 51175764
         },
         [51175764] = {
           Content = "喂！真命佳偶！你要去哪里啊？来和我一起出演美好的爱情故事吧！真命佳偶！",
           DialogueId = 51175764,
-          GUID = "801CF7C8"
+          GUID = "801CF7C8",
+          NextDialogue = 51175765,
+          SpeakNpcId = 701268
         },
         [51175765] = {
           Content = "（快跑吧！！不要再被缠上了！！）",
@@ -206588,235 +206915,353 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51175766] = {
           Content = "是你！我的真命佳偶，你还是决定要回来与我相伴终生了吗？！",
           DialogueId = 51175766,
-          GUID = "801CF834"
+          GUID = "801CF834",
+          SpeakNpcId = 701268
         },
         [51175801] = {
           Content = "要是我把这个人杀了……",
           DialogueId = 51175801,
-          GUID = "801CFDDA"
+          GUID = "801CFDDA",
+          SpeakNpcId = 701269,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy"
         },
         [51175802] = {
           Content = "要是我把这个人杀了……大家一定都会叫好，要是再把这个也顺便杀了……",
           DialogueId = 51175802,
-          GUID = "801CFE04"
+          GUID = "801CFE04",
+          NextDialogue = 51175803,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy",
+          TalkActionId = {
+            [1] = "701269:Think_Start"
+          }
         },
         [51175803] = {
           Content = "可这样简单地杀，有些唐突，有些意外，却没有刻骨铭心的痛，实在无趣！",
           DialogueId = 51175803,
-          GUID = "801CFE2E"
+          GUID = "801CFE2E",
+          NextDialogue = 51175804,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy",
+          TalkActionId = {
+            [1] = "701269:Think_End"
+          }
         },
         [51175804] = {
           Content = "但若是不杀，没有爆点，没有成长，只能圆大家心中的一个美好念想，着实商业！",
           DialogueId = 51175804,
-          GUID = "801CFE58"
+          GUID = "801CFE58",
+          NextDialogue = 51175805,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy"
         },
         [51175805] = {
           Content = "（你呆呆地注视着这名男人嘴中不断蹦出疯狂且大逆不道的话语，心中一惊。这家伙到底在说什么呢？！）",
           DialogueId = 51175805,
-          GUID = "801CFE82"
+          GUID = "801CFE82",
+          NextDialogue = 51175806
         },
         [51175806] = {
           Content = "唉！实在是让我十分纠结，虽然我是他的亲生父亲，但到了这种要决定他生死的时刻，却是怎么也拿不定主意。",
           DialogueId = 51175806,
-          GUID = "801CFEAC"
+          GUID = "801CFEAC",
+          NextDialogue = 51175807,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy"
         },
         [51175807] = {
           Content = "（什么？！还是有血缘关系的犯罪案件？难道大风九章不阻止吗？）",
           DialogueId = 51175807,
-          GUID = "801CFED6"
+          GUID = "801CFED6",
+          NextOptions = {
+            [1] = 51175808,
+            [2] = 51175810
+          }
         },
         [51175808] = {
           Content = "（出言呵斥。）",
           DialogueId = 51175808,
-          GUID = "801CFF00"
+          GUID = "801CFF00",
+          ImprPlusId = 1207,
+          NextDialogue = 51175809
         },
         [51175809] = {
           Content = "你这混蛋，连自己的孩子都下得了手？",
           DialogueId = 51175809,
-          GUID = "801CFF2A"
+          GUID = "801CFF2A",
+          NextDialogue = 51175814,
+          SpeakNpcId = 100001
         },
         [51175810] = {
           Content = "（去找应天尉检举。）",
           DialogueId = 51175810,
-          GUID = "801CFF54"
+          GUID = "801CFF54",
+          ImprPlusId = 1208,
+          NextDialogue = 51175811
         },
         [51175811] = {
           Content = "（你转身欲逃，他却直接伸手将你拉住。）",
           DialogueId = 51175811,
-          GUID = "801CFF7E"
+          GUID = "801CFF7E",
+          NextDialogue = 51175812
         },
         [51175812] = {
           Content = "小友，我见你在这听了半天，你能不能告诉我，这个人我杀不杀呢？",
           DialogueId = 51175812,
-          GUID = "801CFFA8"
+          GUID = "801CFFA8",
+          NextDialogue = 51175813,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy"
         },
         [51175813] = {
           Content = "……你疯了吗，准备杀人，还问我的意见？",
           DialogueId = 51175813,
-          GUID = "801CFFD2"
+          GUID = "801CFFD2",
+          NextDialogue = 51175814,
+          SpeakNpcId = 100001
         },
         [51175814] = {
           Content = "我？你说我吗？哈哈哈！小友，你是不是误会了什么？",
           DialogueId = 51175814,
-          GUID = "801CFFFC"
+          GUID = "801CFFFC",
+          NextDialogue = 51175815,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy"
         },
         [51175815] = {
           Content = "误会？你的意思是……",
           DialogueId = 51175815,
-          GUID = "801D0026"
+          GUID = "801D0026",
+          NextDialogue = 51175816,
+          SpeakNpcId = 100001
         },
         [51175816] = {
           Content = "我刚才说了什么……我想想……哦！我似乎是一直在说要不要杀人，要怎么杀，是吗？",
           DialogueId = 51175816,
-          GUID = "801D0050"
+          GUID = "801D0050",
+          NextDialogue = 51175817,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy",
+          TalkActionId = {
+            [1] = "701269:Talk02_Start"
+          }
         },
         [51175817] = {
           Content = "难怪了，你会误会也是正常。",
           DialogueId = 51175817,
-          GUID = "801D007A"
+          GUID = "801D007A",
+          NextDialogue = 51175818,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy",
+          TalkActionId = {
+            [1] = "701269:Talk02_End"
+          }
         },
         [51175818] = {
           Content = "小友不必慌张，我不是什么可怕的杀人狂魔，再说了，在华胥应该也不会有这样的家伙吧？",
           DialogueId = 51175818,
-          GUID = "801D00A4"
+          GUID = "801D00A4",
+          NextDialogue = 51175819,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_WeirdGuy"
         },
         [51175819] = {
           Content = "我叫天通君子，当然，并非我的真名，而是我的……笔名。",
           DialogueId = 51175819,
-          GUID = "801D00CE"
+          GUID = "801D00CE",
+          NextOptions = {
+            [1] = 51175820,
+            [2] = 51175821
+          },
+          SpeakNpcId = 701269
         },
         [51175820] = {
           Content = "笔名？原来你是写小说的。",
           DialogueId = 51175820,
-          GUID = "801D00F8"
+          GUID = "801D00F8",
+          ImprPlusId = 1208,
+          NextDialogue = 51175822
         },
         [51175821] = {
           Content = "所以你刚才说的杀人是……",
           DialogueId = 51175821,
-          GUID = "801D0122"
-        },
-        [51175822] = {
-          Content = "是啊，我所纠结的这位杀或是不杀的人，正是我目前连载的话本《鸳鸯双飞剑》里的男主人公——张渊。",
-          DialogueId = 51175822,
-          GUID = "801D014C"
-        },
-        [51175823] = {
-          Content = "只要是连载，终归都会有完结的一天。我这里的存稿已经来到了大结局，月底书商就要来找我催稿了。",
-          DialogueId = 51175823,
-          GUID = "801D0176"
-        },
-        [51175824] = {
-          Content = "我目前所纠结的，就是这个故事的结局里，身为男主角的张渊要不要死……",
-          DialogueId = 51175824,
-          GUID = "801D01A0"
-        },
-        [51175825] = {
-          Content = "所以这是个怎么样的故事？",
-          DialogueId = 51175825,
-          GUID = "801D01CA"
+          GUID = "801D0122",
+          ImprPlusId = 1207,
+          NextDialogue = 51175822
         }
       }
     end
   },
   {
-    MinKey = 51175826,
-    MaxKey = 51178047,
+    MinKey = 51175822,
+    MaxKey = 51178043,
     Loader = function()
       return {
+        [51175822] = {
+          Content = "是啊，我所纠结的这位杀或是不杀的人，正是我目前连载的话本《鸳鸯双飞剑》里的男主人公——张渊。",
+          DialogueId = 51175822,
+          GUID = "801D014C",
+          NextDialogue = 51175823,
+          SpeakNpcId = 701269
+        },
+        [51175823] = {
+          Content = "只要是连载，终归都会有完结的一天。我这里的存稿已经来到了大结局，月底书商就要来找我催稿了。",
+          DialogueId = 51175823,
+          GUID = "801D0176",
+          NextDialogue = 51175824,
+          SpeakNpcId = 701269
+        },
+        [51175824] = {
+          Content = "我目前所纠结的，就是这个故事的结局里，身为男主角的张渊要不要死……",
+          DialogueId = 51175824,
+          GUID = "801D01A0",
+          NextOptions = {
+            [1] = 51175825
+          },
+          SpeakNpcId = 701269
+        },
+        [51175825] = {
+          Content = "所以这是个怎么样的故事？",
+          DialogueId = 51175825,
+          GUID = "801D01CA",
+          NextDialogue = 51175826
+        },
         [51175826] = {
           Content = "怎么样的故事……唔……我想想怎么快速给你介绍一下。",
           DialogueId = 51175826,
-          GUID = "801D01F4"
+          GUID = "801D01F4",
+          NextDialogue = 51175827,
+          SpeakNpcId = 701269,
+          TalkActionId = {
+            [1] = "701269:Talk03_Start"
+          }
         },
         [51175827] = {
           Content = "大概就是一个，男主角全家从小被玄色狴犴屠杀，自己因为外出探亲躲过一劫，后来刻苦修炼，并得到女主角乐泱相助，最终成为应天尉的故事。",
           DialogueId = 51175827,
-          GUID = "801D021E"
+          GUID = "801D021E",
+          NextDialogue = 51175828,
+          SpeakNpcId = 701269
         },
         [51175828] = {
           Content = "期间各种曲折，比如张渊如何被仇敌逼入绝境坠下悬崖得到奇宝，如何与乐泱产生嫌隙导致二人分别八年……桩桩故事，不便细说。",
           DialogueId = 51175828,
-          GUID = "801D0248"
+          GUID = "801D0248",
+          NextDialogue = 51175829,
+          SpeakNpcId = 701269,
+          TalkActionId = {
+            [1] = "701269:Talk03_End"
+          }
         },
         [51175829] = {
           Content = "这个故事写到张渊当上应天尉后，不是就该结束了吗？",
           DialogueId = 51175829,
-          GUID = "801D0272"
+          GUID = "801D0272",
+          NextDialogue = 51175830,
+          SpeakNpcId = 100001
         },
         [51175830] = {
           Content = "大多数人都是这么觉得，我的读者们也都如此想着，虽说张渊一路变强的过程之中波折重重，但最终也算是功成名就，抱得美人归。",
           DialogueId = 51175830,
-          GUID = "801D029C"
+          GUID = "801D029C",
+          NextDialogue = 51175831,
+          SpeakNpcId = 701269
         },
         [51175831] = {
           Content = "我总觉得……这故事一路上都太顺遂了……",
           DialogueId = 51175831,
-          GUID = "801D02C6"
+          GUID = "801D02C6",
+          NextDialogue = 51175832,
+          SpeakNpcId = 701269
         },
         [51175832] = {
           Content = "我不知道你能不能理解，就是你打开了一本话本，然后一路看着这个故事发展下去，你看着主角战无不胜，克服了所有难关……",
           DialogueId = 51175832,
-          GUID = "801D02F0"
+          GUID = "801D02F0",
+          NextDialogue = 51175833,
+          SpeakNpcId = 701269
         },
         [51175833] = {
           Content = "一次两次也还好，只是看多了，你就不会再关心主人公的命运了，反正你早就知道，就算遇到再凶险的困难，主角也总是能搞定一切的。",
           DialogueId = 51175833,
-          GUID = "801D031A"
+          GUID = "801D031A",
+          NextDialogue = 51175834,
+          SpeakNpcId = 701269
         },
         [51175834] = {
           Content = "虽说平稳落地的确是我目前最好的抉择，但我还是觉得……可以再来点意料之外的……",
           DialogueId = 51175834,
-          GUID = "801D0344"
+          GUID = "801D0344",
+          NextDialogue = 51175835,
+          SpeakNpcId = 701269
         },
         [51175835] = {
           Content = "所以你就想把他写死？",
           DialogueId = 51175835,
-          GUID = "801D036E"
+          GUID = "801D036E",
+          NextDialogue = 51175836,
+          SpeakNpcId = 100001
         },
         [51175836] = {
           Content = "《鸳鸯双飞剑》的开头杀死男主角全家性命的那只玄色狴犴王，正是男主最终要面对的死敌。",
           DialogueId = 51175836,
-          GUID = "801D0398"
+          GUID = "801D0398",
+          NextDialogue = 51175837,
+          SpeakNpcId = 701269
         },
         [51175837] = {
           Content = "我的读者们都心知肚明，男主角会成功复仇，成为第一应天尉，但如果我此时兵行险着……",
           DialogueId = 51175837,
-          GUID = "801D03C2"
+          GUID = "801D03C2",
+          NextOptions = {
+            [1] = 51175838,
+            [2] = 51175849
+          },
+          RestartTag = 51175837,
+          SpeakNpcId = 701269
         },
         [51175838] = {
           Content = "你说得对，应该把他写死。",
           DialogueId = 51175838,
-          GUID = "801D03EC"
+          GUID = "801D03EC",
+          NextDialogue = 51175839
         },
         [51175839] = {
           Content = "是吗？可是……我实在找不到说服自己的理由，你能说说看你的想法吗？",
           DialogueId = 51175839,
-          GUID = "801D0416"
+          GUID = "801D0416",
+          NextOptions = {
+            [1] = 51175840,
+            [2] = 51175844
+          },
+          SpeakNpcId = 701269
         },
         [51175840] = {
           Content = "（他既然已经有了这样的想法，我为什么不顺着他的意思呢？）",
           DialogueId = 51175840,
-          GUID = "801D0440"
+          FailDialogue = 51175841,
+          GUID = "801D0440",
+          ImprCheckId = 1142,
+          NextDialogue = 51175842
         },
         [51175841] = {
           Content = "（理清楚自己的思绪再开口吧。）",
           DialogueId = 51175841,
-          GUID = "801D046A"
+          GUID = "801D046A",
+          SpeakNpcId = 100001
         },
         [51175842] = {
           Content = "一个好故事，一定得是让读者猜不到的结局。",
           DialogueId = 51175842,
-          GUID = "801D0494"
+          GUID = "801D0494",
+          NextDialogue = 51175843,
+          SpeakNpcId = 100001
         },
         [51175843] = {
           Content = "依我看，只是让男主角死掉，还不够意料之外。或许你可以让女主角也一起死，让他们做一对苦命鸳鸯。",
           DialogueId = 51175843,
-          GUID = "801D04BE"
+          GUID = "801D04BE",
+          NextDialogue = 51175861,
+          SpeakNpcId = 100001
         },
         [51175844] = {
           Content = "（既然是精心创作的话本，肯定希望读者印象深刻吧？）",
           DialogueId = 51175844,
-          GUID = "801D04E8"
+          FailDialogue = 51175845,
+          GUID = "801D04E8",
+          ImprCheckId = 1143,
+          NextDialogue = 51175846
         },
         [51175845] = {
           Content = "（理清楚自己的思绪再开口吧。）",
@@ -206826,32 +207271,48 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51175846] = {
           Content = "既然你都说了，读者们已经对结局心知肚明，那么看到意料之中的结局，他们就会想，“果然如我所料，看到开头就猜到结局。”",
           DialogueId = 51175846,
-          GUID = "801D053C"
+          GUID = "801D053C",
+          NextDialogue = 51175847,
+          SpeakNpcId = 100001
         },
         [51175847] = {
           Content = "他们会说，这本书只是和其他话本没什么区别的普通故事，毫无新意。",
           DialogueId = 51175847,
-          GUID = "801D0566"
+          GUID = "801D0566",
+          NextDialogue = 51175848,
+          SpeakNpcId = 100001
         },
         [51175848] = {
           Content = "但主人公死去了，那就不一样了，它会成为一个例外，一本独特的小说，无论你写得好与不好，读者都会记住它。",
           DialogueId = 51175848,
-          GUID = "801D0590"
+          GUID = "801D0590",
+          NextDialogue = 51175861,
+          SpeakNpcId = 100001
         },
         [51175849] = {
           Content = "我觉得还是不要把主角写死吧。",
           DialogueId = 51175849,
-          GUID = "801D05BA"
+          GUID = "801D05BA",
+          NextDialogue = 51175850
         },
         [51175850] = {
           Content = "是吗？可是……我实在找不到说服自己的理由，你能说说看你的想法吗？",
           DialogueId = 51175850,
-          GUID = "801D05E4"
+          GUID = "801D05E4",
+          NextOptions = {
+            [1] = 51175851,
+            [2] = 51175856
+          },
+          RestartTag = 51175850,
+          SpeakNpcId = 701269
         },
         [51175851] = {
           Content = "（既然是精心创作的话本，肯定希望能得到良好的回馈吧？）",
           DialogueId = 51175851,
-          GUID = "801D060E"
+          FailDialogue = 51175852,
+          GUID = "801D060E",
+          ImprCheckId = 1144,
+          NextDialogue = 51175853
         },
         [51175852] = {
           Content = "（理清楚自己的思绪再开口吧。）",
@@ -206861,22 +207322,31 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51175853] = {
           Content = "正是因为你写了很多主人公无所不能的桥段，你的读者也相信他可以解决一切，所以在结局让他死掉是一件风险很高的事。",
           DialogueId = 51175853,
-          GUID = "801D0662"
+          GUID = "801D0662",
+          NextDialogue = 51175854,
+          SpeakNpcId = 100001
         },
         [51175854] = {
           Content = "你的读者未必会因为一个意料之外的结局而满意，相反，他们可能会为此感到冒犯，认为你在戏耍他们的感情。",
           DialogueId = 51175854,
-          GUID = "801D068C"
+          GUID = "801D068C",
+          NextDialogue = 51175855,
+          SpeakNpcId = 100001
         },
         [51175855] = {
           Content = "与其冒可能落得糟糕口碑的风险，还是让故事平稳落地会更好吧？",
           DialogueId = 51175855,
-          GUID = "801D06B6"
+          GUID = "801D06B6",
+          NextDialogue = 51175861,
+          SpeakNpcId = 100001
         },
         [51175856] = {
           Content = "（即使是一个虚拟角色，不也倾注了他的心血吗？）",
           DialogueId = 51175856,
-          GUID = "801D06E0"
+          FailDialogue = 51175857,
+          GUID = "801D06E0",
+          ImprCheckId = 1145,
+          NextDialogue = 51175858
         },
         [51175857] = {
           Content = "（理清楚自己的思绪再开口吧。）",
@@ -206886,137 +207356,214 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51175858] = {
           Content = "既然这位主人公是你创造出来的，想必你在他身上倾注了很多感情。",
           DialogueId = 51175858,
-          GUID = "801D0734"
+          GUID = "801D0734",
+          NextDialogue = 51175859,
+          SpeakNpcId = 100001
         },
         [51175859] = {
           Content = "他自你的笔下诞生，你亲眼见证了他如何刻苦训练自身，数次三番身入险境，又在挣扎中绝境逢生。",
           DialogueId = 51175859,
-          GUID = "801D075E"
+          GUID = "801D075E",
+          NextDialogue = 51175860,
+          SpeakNpcId = 100001
         },
         [51175860] = {
           Content = "你是作者，是比所有人都要了解你的主角的人，你觉得你所书写的角色，你的孩子，会甘心在走到终点的时候，坦然接受死亡的结局吗？",
           DialogueId = 51175860,
-          GUID = "801D0788"
+          GUID = "801D0788",
+          NextDialogue = 51175861,
+          SpeakNpcId = 100001
         },
         [51175861] = {
           Content = "我……你……我明白了！高山流水，知音难觅，你正是我苦苦追寻的知音啊！",
           DialogueId = 51175861,
-          GUID = "801D07B2"
+          GUID = "801D07B2",
+          NextDialogue = 51175862,
+          SpeakNpcId = 701269,
+          TalkActionId = {
+            [1] = "701269:Talk01_Start"
+          }
         },
         [51175862] = {
           Content = "这就是我想要的结局！谢谢你，我这就回家，将《鸳鸯双飞剑》的结局彻底重写！",
           DialogueId = 51175862,
-          GUID = "801D07DC"
+          GUID = "801D07DC",
+          NextDialogue = 51175863,
+          SpeakNpcId = 701269,
+          TalkActionId = {
+            [1] = "701269:Talk01_End"
+          }
         },
         [51175863] = {
           Content = "我相信，这会成为我最完美的作品！哈哈哈哈哈哈！",
           DialogueId = 51175863,
-          GUID = "801D0806"
+          GUID = "801D0806",
+          NextDialogue = 51175864,
+          SpeakNpcId = 701269
         },
         [51175864] = {
           Content = "（他仰天大笑，叉着腰疾步离开了……你不禁思索，这本话本究竟会迎来怎么样的结局呢？）",
           DialogueId = 51175864,
-          GUID = "801D0830"
+          GUID = "801D0830",
+          IsBlack = 1
         },
         [51175901] = {
           Content = "等开春，去收两斤新茶泡来喝！",
           DialogueId = 51175901,
-          GUID = "801D0E42"
+          GUID = "801D0E42",
+          SpeakNpcId = 701270
         },
         [51175902] = {
           Content = "天气大好啊，等开春，去收两斤新茶泡来喝！",
           DialogueId = 51175902,
-          GUID = "801D0E6C"
+          GUID = "801D0E6C",
+          NextDialogue = 51175903,
+          SpeakNpcId = 701270,
+          TalkActionId = {
+            [1] = "701270:Talk01_Start"
+          }
         },
         [51175903] = {
           Content = "只是不晓得去年去的那茶园今年如何了，听说要是冬天落雪太多，茶树便会被压了杆子，来年长不出好叶子。",
           DialogueId = 51175903,
-          GUID = "801D0E96"
+          GUID = "801D0E96",
+          NextDialogue = 51175904,
+          SpeakNpcId = 701270,
+          TalkActionId = {
+            [1] = "701270:Talk01_End"
+          }
         },
         [51175904] = {
           Content = "诶~小娃，你为何一直看着我？怎么？也想来尝尝我这刚买的茶叶吗？",
           DialogueId = 51175904,
-          GUID = "801D0EC0"
+          GUID = "801D0EC0",
+          NextOptions = {
+            [1] = 51175905,
+            [2] = 51175906
+          },
+          SpeakNpcId = 701270
         },
         [51175905] = {
           Content = "不用了，谢谢阿伯。",
           DialogueId = 51175905,
-          GUID = "801D0EEA"
+          GUID = "801D0EEA",
+          ImprPlusId = 1207,
+          NextDialogue = 51175907
         },
         [51175906] = {
           Content = "好好好，谢谢阿伯。",
           DialogueId = 51175906,
-          GUID = "801D0F14"
+          GUID = "801D0F14",
+          ImprPlusId = 1206,
+          NextDialogue = 51175907
         },
         [51175907] = {
           Content = "诶哟，阿伯都叫上了，小嘴真甜！看在你叫我一句阿伯的份上，这茶怎么也得分你一壶了！",
           DialogueId = 51175907,
-          GUID = "801D0F3E"
+          GUID = "801D0F3E",
+          NextDialogue = 51175908,
+          SpeakNpcId = 701270,
+          TalkActionId = {
+            [1] = "701270:Talk02_Start"
+          }
         },
         [51175908] = {
           Content = "（老伯放下手中捧着的茶壶，转身急匆匆跑进了屋内，片刻后，又端着一盏清茶走了出来。）",
           DialogueId = 51175908,
-          GUID = "801D0F68"
+          GUID = "801D0F68",
+          NextDialogue = 51175909,
+          TalkActionId = {
+            [1] = "701270:Talk02_End"
+          }
         },
         [51175909] = {
           Content = "来，娃娃来尝尝，都是好茶！阿伯我不骗你的，是之前出门踏青时，碰到那山上的茶园，园子里的小妹卖给我的。",
           DialogueId = 51175909,
-          GUID = "801D0F92"
+          GUID = "801D0F92",
+          NextDialogue = 51175910,
+          SpeakNpcId = 701270
         },
         [51175910] = {
           Content = "我当时还不想要，连连摆手，结果她把那茶叶凑到我鼻尖，我一嗅，就知道这绝对是好东西！",
           DialogueId = 51175910,
-          GUID = "801D0FBC"
+          GUID = "801D0FBC",
+          NextDialogue = 51175911,
+          SpeakNpcId = 701270
         },
         [51175911] = {
           Content = "来来，你来尝尝嘛！",
           DialogueId = 51175911,
-          GUID = "801D0FE6"
+          GUID = "801D0FE6",
+          NextOptions = {
+            [1] = 51175912,
+            [2] = 51175915
+          },
+          SpeakNpcId = 701270
         },
         [51175912] = {
           Content = "（盛情难却，尝尝吧。）",
           DialogueId = 51175912,
-          GUID = "801D1010"
+          GUID = "801D1010",
+          ImprPlusId = 1209,
+          NextDialogue = 51175913
         },
         [51175913] = {
           Content = "（你接过杯子，抿了一口，没品出好坏，只觉得有些苦，过了半响，甜味才稍稍从舌尖泛上来。）",
           DialogueId = 51175913,
-          GUID = "801D103A"
+          GUID = "801D103A",
+          NextDialogue = 51175914
         },
         [51175914] = {
           Content = "挺好喝……吧？",
           DialogueId = 51175914,
-          GUID = "801D1064"
+          GUID = "801D1064",
+          NextDialogue = 51175918,
+          SpeakNpcId = 100001
         },
         [51175915] = {
           Content = "（这么热情，一定有诈！）",
           DialogueId = 51175915,
-          GUID = "801D108E"
+          GUID = "801D108E",
+          ImprPlusId = 1208,
+          NextDialogue = 51175916
         },
         [51175916] = {
           Content = "（老伯见你犹豫不决的样子，眼底闪过一抹受伤，却又转瞬即逝，摆出一副憨厚的笑颜。）",
           DialogueId = 51175916,
-          GUID = "801D10B8"
+          GUID = "801D10B8",
+          NextDialogue = 51175917
         },
         [51175917] = {
           Content = "没事，娃娃，没事，那就不喝了吧。",
           DialogueId = 51175917,
-          GUID = "801D10E2"
+          GUID = "801D10E2",
+          NextDialogue = 51175918,
+          SpeakNpcId = 701270
         },
         [51175918] = {
           Content = "一看你那样子，就和我那老伴一样，不擅品茶，喝不出好歹。",
           DialogueId = 51175918,
-          GUID = "801D110C"
+          GUID = "801D110C",
+          NextDialogue = 51175919,
+          SpeakNpcId = 701270
         },
         [51175919] = {
           Content = "这茶香的很，等来年开春我去郊外踏青之时，定要再去那茶园子找小妹买上几斤。",
           DialogueId = 51175919,
-          GUID = "801D1136"
+          GUID = "801D1136",
+          NextOptions = {
+            [1] = 51175920
+          },
+          RestartTag = 51175919,
+          SpeakNpcId = 701270
         },
         [51175920] = {
           Content = "（踏青是什么特殊的活动吗？你开始在脑中思索自己曾经看过的华胥书籍。）",
           DialogueId = 51175920,
-          GUID = "801D1160"
+          FailDialogue = 51175921,
+          GUID = "801D1160",
+          ImprCheckId = 1147,
+          NextDialogue = 51175922
         },
         [51175921] = {
           Content = "（没想起来，还是不要继续搭话了。）",
@@ -207026,457 +207573,730 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51175922] = {
           Content = "你说的踏青，是指华胥人在春季会进行的一种娱乐活动吧？",
           DialogueId = 51175922,
-          GUID = "801D11B4"
+          GUID = "801D11B4",
+          NextDialogue = 51175923,
+          SpeakNpcId = 100001
         },
         [51175923] = {
           Content = "呃……是这么个理，但你这种说法却让人觉得陌生了，踏青就是，出门踏青嘛，的确是娱乐活动，但怎么说怎么不对味呢……",
           DialogueId = 51175923,
-          GUID = "801D11DE"
+          GUID = "801D11DE",
+          NextDialogue = 51175924,
+          SpeakNpcId = 701270,
+          TalkActionId = {
+            [1] = "701270:Talk03_Start"
+          }
         },
         [51175924] = {
           Content = "不是什么雅事，就是咱们小老百姓的生活日常，春天那暖风一吹，小花一开，呵！人心里就痒痒了，就想走出家门，去到外面看看了。",
           DialogueId = 51175924,
-          GUID = "801D1208"
+          GUID = "801D1208",
+          NextDialogue = 51175925,
+          SpeakNpcId = 701270
         },
         [51175925] = {
           Content = "携家带口的，老的少的，带上吃喝用具，就往城郊跑，有的还跑的更远，要去别的城市玩。",
           DialogueId = 51175925,
-          GUID = "801D1232"
+          GUID = "801D1232",
+          NextDialogue = 51175926,
+          SpeakNpcId = 701270
         },
         [51175926] = {
           Content = "像这样的活动可太多了，一年四季转不过来的，若是你久居华胥，就知道个中滋味了。",
           DialogueId = 51175926,
-          GUID = "801D125C"
+          GUID = "801D125C",
+          NextDialogue = 51175927,
+          SpeakNpcId = 701270,
+          TalkActionId = {
+            [1] = "701270:Talk03_End"
+          }
         },
         [51175927] = {
           Content = "可惜我只是因为一些事情在华胥耽误一段时间，或许没多久就会离开了。",
           DialogueId = 51175927,
-          GUID = "801D1286"
+          GUID = "801D1286",
+          NextDialogue = 51175928,
+          SpeakNpcId = 100001
         },
         [51175928] = {
           Content = "不过，阿伯说的事情听起来都很有意思。",
           DialogueId = 51175928,
-          GUID = "801D12B0"
+          GUID = "801D12B0",
+          NextDialogue = 51175929,
+          SpeakNpcId = 100001
         },
         [51175929] = {
           Content = "那是自然！你也知道最近的奉香大典吧？其实早年有些说法，就是奉香大典前我们会组织一场去椒兰村制香的活动。",
           DialogueId = 51175929,
-          GUID = "801D12DA"
+          GUID = "801D12DA",
+          NextDialogue = 51175930,
+          SpeakNpcId = 701270,
+          TalkActionId = {
+            [1] = "701270:Talk01_Start"
+          }
         },
         [51175930] = {
           Content = "就是亲手参与一下制香过程，然后把做好的香在奉香大典上点掉，也算是表达了一些自己对龙君的心意。",
           DialogueId = 51175930,
-          GUID = "801D1304"
+          GUID = "801D1304",
+          NextDialogue = 51175931,
+          SpeakNpcId = 701270
         },
         [51175931] = {
           Content = "不过后来，祀香阁推行了每日奉香，沉月香的价格变得十分低廉，去制香的时间成本还不如直接去祀香阁买成品香。",
           DialogueId = 51175931,
-          GUID = "801D132E"
+          GUID = "801D132E",
+          NextDialogue = 51175932,
+          SpeakNpcId = 701270
         },
         [51175932] = {
           Content = "所以这事大家伙也就不愿去浪费时间了，毕竟原料的价格也不算太便宜，做出来的也不一定有香官们做的好。",
           DialogueId = 51175932,
-          GUID = "801D1358"
+          GUID = "801D1358",
+          NextDialogue = 51175933,
+          SpeakNpcId = 701270
         },
         [51175933] = {
           Content = "还有最热的那个时候，皓京的大伙都爱在郊外戏水，好像有个更雅的说法，叫……雅集？对，雅集！",
           DialogueId = 51175933,
-          GUID = "801D1382"
+          GUID = "801D1382",
+          NextDialogue = 51175934,
+          SpeakNpcId = 701270
         },
         [51175934] = {
           Content = "大家带着瓜啊果啊的，就上山去了，山上树荫遮天，凉快的很，那溪水摸起来冰冰凉，就把果子都泡进去，用交叠的石头卡住，不让它被冲走。",
           DialogueId = 51175934,
-          GUID = "801D13AC"
+          GUID = "801D13AC",
+          NextDialogue = 51175935,
+          SpeakNpcId = 701270
         },
         [51175935] = {
           Content = "力气大的娃娃一掌就能给瓜劈开，然后其他娃娃就都凑过来，大家吃瓜吃得满嘴流汁，诶呀……想起来就觉得日子有盼头了……",
           DialogueId = 51175935,
-          GUID = "801D13D6"
+          GUID = "801D13D6",
+          NextDialogue = 51175936,
+          SpeakNpcId = 701270
         },
         [51175936] = {
           Content = "所以啊，娃娃，欢迎你来皓京玩，以后有机会的话，你再来找我吧，我带你多去走走逛逛，好不好？",
           DialogueId = 51175936,
-          GUID = "801D1400"
+          GUID = "801D1400",
+          NextDialogue = 51175937,
+          SpeakNpcId = 701270,
+          TalkActionId = {
+            [1] = "701270:Talk01_End"
+          }
         },
         [51175937] = {
           Content = "（你心知下次再来华胥的可能性其实并不高，但……）",
           DialogueId = 51175937,
-          GUID = "801D142A"
+          GUID = "801D142A",
+          NextOptions = {
+            [1] = 51175938,
+            [2] = 51175940
+          }
         },
         [51175938] = {
           Content = "好，阿伯，我下次再来找你玩。",
           DialogueId = 51175938,
-          GUID = "801D1454"
+          GUID = "801D1454",
+          ImprPlusId = 1209,
+          NextDialogue = 51175939
         },
         [51175939] = {
           Content = "好！好啊！我等着你，娃娃！",
           DialogueId = 51175939,
-          GUID = "801D147E"
+          GUID = "801D147E",
+          SpeakNpcId = 701270
         },
         [51175940] = {
           Content = "我可能没有再来的机会了。",
           DialogueId = 51175940,
-          GUID = "801D14A8"
+          GUID = "801D14A8",
+          ImprPlusId = 1211,
+          NextDialogue = 51175941
         },
         [51175941] = {
           Content = "娃娃，别这么说，人生很长的，没过完最后一天之前，谁知道明天会去哪里呢？",
           DialogueId = 51175941,
-          GUID = "801D14D2"
+          GUID = "801D14D2",
+          NextDialogue = 51175942,
+          SpeakNpcId = 701270
         },
         [51175942] = {
           Content = "或许你哪天就回来了，带着你重要的朋友，到时候再回来找我玩吧，我再给你们泡壶好茶，吃甜果子，好吧！",
           DialogueId = 51175942,
-          GUID = "801D14FC"
+          GUID = "801D14FC",
+          SpeakNpcId = 701270
         },
         [51175943] = {
           Content = "娃娃哟~我说什么来着？你这不是回来看我了吗？",
           DialogueId = 51175943,
-          GUID = "801D153E"
+          GUID = "801D153E",
+          SpeakNpcId = 701270
         },
         [51176001] = {
           Content = "瞧见那远处的楼没？",
           DialogueId = 51176001,
-          GUID = "801D1EAA"
+          GUID = "801D1EAA",
+          SpeakNpcId = 701271
         },
         [51176002] = {
           Content = "瞧见那远处的楼没？我啊，小时候曾听老人说，其实它根本不存在，都是假的！",
           DialogueId = 51176002,
-          GUID = "801D1ED4"
+          GUID = "801D1ED4",
+          NextDialogue = 51176003,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk01_Start"
+          }
         },
         [51176003] = {
           Content = "他们跟我说，那座楼是龙君麾下的八名仙人所建造，八名仙人分别掌管着人间的阴阳柔刚善恶水火之相。",
           DialogueId = 51176003,
-          GUID = "801D1EFE"
+          GUID = "801D1EFE",
+          NextDialogue = 51176004,
+          SpeakNpcId = 701271
         },
         [51176004] = {
           Content = "我们凡人呢，每经一世，便是要在这八相之中轮转磨练，直至看破虚相，参悟一生。",
           DialogueId = 51176004,
-          GUID = "801D1F28"
+          GUID = "801D1F28",
+          NextDialogue = 51176005,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk01_End"
+          }
         },
         [51176005] = {
           Content = "姑母，你说的不对吧，为何前脚刚说这楼不存在，后脚却又说是八仙所建呢？",
           DialogueId = 51176005,
-          GUID = "801D1F52"
+          GUID = "801D1F52",
+          NextDialogue = 51176006,
+          SpeakNpcId = 701272
         },
         [51176006] = {
           Content = "那就要问问小桃你啊，你觉得八仙是否真正存在于世上呢？",
           DialogueId = 51176006,
-          GUID = "801D1F7C"
+          GUID = "801D1F7C",
+          NextDialogue = 51176007,
+          SpeakNpcId = 701271
         },
         [51176007] = {
           Content = "八仙是否真的存在？呜……我想不到，{性别：大哥哥|大姐姐}，你可以帮小桃回答吗？",
           DialogueId = 51176007,
-          GUID = "801D1FA6"
+          GUID = "801D1FA6",
+          NextDialogue = 51176008,
+          SpeakNpcId = 701272
         },
         [51176008] = {
           Content = "（小女孩怯生生地拉住你的袖口，充满期待地看向你。）",
           DialogueId = 51176008,
-          GUID = "801D1FD0"
+          GUID = "801D1FD0",
+          NextOptions = {
+            [1] = 51176009,
+            [2] = 51176010,
+            [3] = 51176011
+          }
         },
         [51176009] = {
           Content = "不存在吧，都说了楼是假的。",
           DialogueId = 51176009,
-          GUID = "801D1FFA"
+          GUID = "801D1FFA",
+          ImprPlusId = 1208,
+          NextDialogue = 51176012
         },
         [51176010] = {
           Content = "存在？毕竟人生在世，的确历经磨练。",
           DialogueId = 51176010,
-          GUID = "801D2024"
+          GUID = "801D2024",
+          ImprPlusId = 1209,
+          NextDialogue = 51176012
         },
         [51176011] = {
           Content = "哪来的八仙，华胥不是只有两条龙？",
           DialogueId = 51176011,
-          GUID = "801D204E"
+          GUID = "801D204E",
+          ImprPlusId = 1210,
+          NextDialogue = 51176012
         },
         [51176012] = {
           Content = "小桃！真不懂事！这位{性别：公子|姑娘}，实在不好意思，我在和我侄女开玩笑呢，打扰到你了。",
           DialogueId = 51176012,
-          GUID = "801D2078"
+          GUID = "801D2078",
+          LookAt = {
+            [1] = "701271:n(0)"
+          },
+          NextDialogue = 51176013,
+          SpeakNpcId = 701271,
+          TurnTo = {
+            [1] = "701271:n(0)"
+          }
         },
         [51176013] = {
           Content = "没关系，我对你们的话题也很感兴趣。",
           DialogueId = 51176013,
-          GUID = "801D20A2"
+          GUID = "801D20A2",
+          NextDialogue = 51176014,
+          SpeakNpcId = 100001
         },
         [51176014] = {
           Content = "姑母！我要和{性别：大哥哥|大姐姐}一起听故事！",
           DialogueId = 51176014,
-          GUID = "801D20CC"
+          GUID = "801D20CC",
+          NextDialogue = 51176015,
+          SpeakNpcId = 701272
         },
         [51176015] = {
           Content = "这……好吧，{性别：公子|姑娘}，我所说的都是一些街坊之间的传言，没什么可信度的，你莫要放在心上。",
           DialogueId = 51176015,
-          GUID = "801D20F6"
+          GUID = "801D20F6",
+          NextDialogue = 51176016,
+          SpeakNpcId = 701271
         },
         [51176016] = {
           Content = "那我可就继续说了啊……",
           DialogueId = 51176016,
-          GUID = "801D2120"
+          GUID = "801D2120",
+          NextDialogue = 51176017,
+          SpeakNpcId = 701271
         },
         [51176017] = {
           Content = "好！",
           DialogueId = 51176017,
-          GUID = "801D214A"
+          GUID = "801D214A",
+          NextDialogue = 51176018,
+          SpeakNpcId = 701272
         },
         [51176018] = {
           Content = "先说回八仙是否真实存在的说法，其实呢，在这个故事里，八仙的确是真实存在的。",
           DialogueId = 51176018,
-          GUID = "801D2174"
+          GUID = "801D2174",
+          NextDialogue = 51176019,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk02_Start"
+          }
         },
         [51176019] = {
           Content = "他们共同用仙术，创造出了一座海上楼阁，并将其取名为蜃楼，说是一种巨大的贝壳吞吐仙气而形成。",
           DialogueId = 51176019,
-          GUID = "801D219E"
+          GUID = "801D219E",
+          NextDialogue = 51176020,
+          SpeakNpcId = 701271
         },
         [51176020] = {
           Content = "不知道为什么，百姓之间就开始流传一种说法，说只要凭借自己的力量，不借助外物踏上蜃楼，便可获得长生不老的力量。",
           DialogueId = 51176020,
-          GUID = "801D21C8"
+          GUID = "801D21C8",
+          NextDialogue = 51176021,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk02_End"
+          }
         },
         [51176021] = {
           Content = "长生不老？就是长大了，变老了，也不会死掉是吗？那如果是有龙氏长大变成狴犴大人了呢？也会长生不老吗？",
           DialogueId = 51176021,
-          GUID = "801D21F2"
+          GUID = "801D21F2",
+          NextDialogue = 51176022,
+          SpeakNpcId = 701272
         },
         [51176022] = {
           Content = "狴犴大人本来就是长生不老的，我所说的那些想要追求长生不老的家伙，反而是大多数像我们一样的抟土氏。",
           DialogueId = 51176022,
-          GUID = "801D221C"
+          GUID = "801D221C",
+          NextDialogue = 51176023,
+          SpeakNpcId = 701271
         },
         [51176023] = {
           Content = "唔，当然，您应该也不会追求长生不老吧？",
           DialogueId = 51176023,
-          GUID = "801D2246"
+          GUID = "801D2246",
+          NextOptions = {
+            [1] = 51176024,
+            [2] = 51176025,
+            [3] = 51176026
+          },
+          SpeakNpcId = 701271
         },
         [51176024] = {
           Content = "如果是一个人的话，太孤独了。",
           DialogueId = 51176024,
-          GUID = "801D2270"
+          GUID = "801D2270",
+          ImprPlusId = 1209,
+          NextDialogue = 51176027
         },
         [51176025] = {
           Content = "不是很好吗？想做什么就做什么。",
           DialogueId = 51176025,
-          GUID = "801D229A"
+          GUID = "801D229A",
+          ImprPlusId = 1210,
+          NextDialogue = 51176027
         },
         [51176026] = {
           Content = "我会被帝国炼金院抓去研究的吧？",
           DialogueId = 51176026,
-          GUID = "801D22C4"
+          GUID = "801D22C4",
+          ImprPlusId = 1206,
+          NextDialogue = 51176027
         },
         [51176027] = {
           Content = "哈哈，不管怎么说，可惜的是，长生不老根本是不可能存在的，反而有大多数抟土氏，因为过于渴望这一点，前赴后继地踏上登楼的道路。",
           DialogueId = 51176027,
-          GUID = "801D22EE"
+          GUID = "801D22EE",
+          NextDialogue = 51176028,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk03_Start"
+          }
         },
         [51176028] = {
           Content = "不能借助外力，即坐不了船，用不了桨，凭借自己的力量过去谈何容易？大多都在水上夭折，尸骨无存。",
           DialogueId = 51176028,
-          GUID = "801D2318"
+          GUID = "801D2318",
+          NextDialogue = 51176029,
+          SpeakNpcId = 701271
         },
         [51176029] = {
           Content = "再后来，为了让那些愚昧的家伙们不再去追求一些不可能实现的梦想，天禄司便真的在水上建了一座小岛，并在小岛上盖了个楼。",
           DialogueId = 51176029,
-          GUID = "801D2342"
+          GUID = "801D2342",
+          NextDialogue = 51176030,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk03_End"
+          }
         },
         [51176030] = {
           Content = "啊！所以，现在的楼是真的，以前的楼是假的，是吗？",
           DialogueId = 51176030,
-          GUID = "801D236C"
+          GUID = "801D236C",
+          NextDialogue = 51176031,
+          SpeakNpcId = 701272
         },
         [51176031] = {
           Content = "可以这么说，但也有一种说法其实是，现在的楼是假蜃楼，真蜃楼则被藏了起来，任何人都无法再度找到它。",
           DialogueId = 51176031,
-          GUID = "801D2396"
+          GUID = "801D2396",
+          NextOptions = {
+            [1] = 51176032
+          },
+          SpeakNpcId = 701271
         },
         [51176032] = {
           Content = "再？你的意思是……",
           DialogueId = 51176032,
-          GUID = "801D23C0"
+          GUID = "801D23C0",
+          NextDialogue = 51176033
         },
         [51176033] = {
           Content = "是的，曾有一名沈姓书生，扬言自己登上了真蜃楼，并在上面见到了八仙，但却没有通过他们的考验。",
           DialogueId = 51176033,
-          GUID = "801D23EA"
+          GUID = "801D23EA",
+          NextDialogue = 51176034,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk01_Start"
+          }
         },
         [51176034] = {
           Content = "他声称即使自己没有通过考验，但八仙依旧端出玉液琼浆，蟠桃珍馐，热情款待了他，并在他离开之际赠给他一个样貌别致的法宝。",
           DialogueId = 51176034,
-          GUID = "801D2414"
+          GUID = "801D2414",
+          NextDialogue = 51176035,
+          SpeakNpcId = 701271
         },
         [51176035] = {
           Content = "说是可以消灾抵难，福寿延长。",
           DialogueId = 51176035,
-          GUID = "801D243E"
+          GUID = "801D243E",
+          NextDialogue = 51176036,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk01_End"
+          }
         },
         [51176036] = {
           Content = "哇！听起来好厉害啊，那姑母，沈书生现在在哪里？",
           DialogueId = 51176036,
-          GUID = "801D2468"
+          GUID = "801D2468",
+          NextDialogue = 51176037,
+          SpeakNpcId = 701272
         },
         [51176037] = {
           Content = "那名沈书生啊，早就是一百多年前的事情了，听说他后来搬到了天禄司新建的假蜃楼上，并幻想着有一天可以再次登上真蜃楼。",
           DialogueId = 51176037,
-          GUID = "801D2492"
+          GUID = "801D2492",
+          NextDialogue = 51176038,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk03_Start"
+          }
         },
         [51176038] = {
           Content = "不过呢……多半是没有后话了，应该是早已离世了吧，他似乎有留下一些书籍，写了自己登上真蜃楼后的经历，那书叫什么……《蜃景笔谈》？",
           DialogueId = 51176038,
-          GUID = "801D24BC"
+          GUID = "801D24BC",
+          NextDialogue = 51176039,
+          SpeakNpcId = 701271
         },
         [51176039] = {
           Content = "估计现在早就找不到了，可能只有资历老的书商那边才有留档吧，也可能早就被丢到哪个瘸了腿的桌子下面当踮脚砖了。",
           DialogueId = 51176039,
-          GUID = "801D24E6"
+          GUID = "801D24E6",
+          NextDialogue = 51176040,
+          SpeakNpcId = 701271,
+          TalkActionId = {
+            [1] = "701271:Talk03_End"
+          }
         },
         [51176040] = {
           Content = "好有趣的故事，姑母，哪天你带我去假蜃楼玩吧！",
           DialogueId = 51176040,
-          GUID = "801D2510"
+          GUID = "801D2510",
+          NextDialogue = 51176041,
+          SpeakNpcId = 701272
         },
         [51176041] = {
           Content = "好啊，条件是你现在乖乖回家，把昨天你阿娘给你买的糖罐交出来，听到没？",
           DialogueId = 51176041,
-          GUID = "801D253A"
+          GUID = "801D253A",
+          NextDialogue = 51176042,
+          SpeakNpcId = 701271
         },
         [51176042] = {
           Content = "可是那个，就是，嗯……吃，吃完了……",
           DialogueId = 51176042,
-          GUID = "801D2564"
+          GUID = "801D2564",
+          NextDialogue = 51176043,
+          SpeakNpcId = 701272
         },
         [51176043] = {
           Content = "什么？！这才过了三天！你这贪吃的娃娃！小心牙齿全都掉光光！",
           DialogueId = 51176043,
-          GUID = "801D258E"
+          GUID = "801D258E",
+          NextDialogue = 51176044,
+          SpeakNpcId = 701271
         },
         [51176044] = {
           Content = "（姑侄两人笑着闹着跑远了，独留你在原地看着她们离开的背影……）",
           DialogueId = 51176044,
-          GUID = "801D25B8"
+          GUID = "801D25B8",
+          IsBlack = 1,
+          NextDialogue = 51176045
         },
         [51176045] = {
           Content = "（《蜃景笔谈》吗？有机会找来看看吧。）",
           DialogueId = 51176045,
-          GUID = "801D25E2"
+          GUID = "801D25E2",
+          IsBlack = 1
         },
         [51177001] = {
           Content = "所有目光向我看齐！",
           DialogueId = 51177001,
-          GUID = "801DC2BA"
+          GUID = "801DC2BA",
+          SpeakNpcId = 701273
         },
         [51177002] = {
           Content = "所有目光向我看齐，在场的各位，都是彻彻底底的聪明龙！聪明土！",
           DialogueId = 51177002,
-          GUID = "801DC2E4"
+          GUID = "801DC2E4",
+          NextDialogue = 51177003,
+          SpeakNpcId = 701273
         },
         [51177003] = {
           Content = "（眼前的皎皎趾高气昂地站在桌子上，意气风发。）",
           DialogueId = 51177003,
-          GUID = "801DC30E"
+          GUID = "801DC30E",
+          NextOptions = {
+            [1] = 51177004,
+            [2] = 51177007
+          }
         },
         [51177004] = {
           Content = "这里不能站着。",
           DialogueId = 51177004,
-          GUID = "801DC338"
+          GUID = "801DC338",
+          ImprPlusId = 1207,
+          NextDialogue = 51177005
         },
         [51177005] = {
           Content = "乐观皎皎的词典里没有不可以！只要用积极的眼光看出去，就会发现皓京里到处都是条条大道~",
           DialogueId = 51177005,
-          GUID = "801DC362"
+          GUID = "801DC362",
+          LookAt = {
+            [1] = "701273:n(701273)"
+          },
+          NextDialogue = 51177006,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Confident_Start"
+          }
         },
         [51177006] = {
           Content = "让我们说一些更加灿烂的词语吧，比如爱，比如希望，比如明天！",
           DialogueId = 51177006,
-          GUID = "801DC38C"
+          GUID = "801DC38C",
+          NextDialogue = 51177010,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Confident_End"
+          }
         },
         [51177007] = {
           Content = "站这么高不累吗？",
           DialogueId = 51177007,
-          GUID = "801DC3B6"
+          GUID = "801DC3B6",
+          ImprPlusId = 1209,
+          NextDialogue = 51177008
         },
         [51177008] = {
           Content = "累，困，沮丧，疲惫……这些词在我乐观皎皎的词典里统统不存在！我想请你以其他的词语来形容我。",
           DialogueId = 51177008,
-          GUID = "801DC3E0"
+          GUID = "801DC3E0",
+          LookAt = {
+            [1] = "701273:n(701273)"
+          },
+          NextDialogue = 51177009,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Confident_Start"
+          }
         },
         [51177009] = {
           Content = "比如爱，比如希望，比如明天！",
           DialogueId = 51177009,
-          GUID = "801DC40A"
+          GUID = "801DC40A",
+          NextDialogue = 51177010,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Confident_End"
+          }
         },
         [51177010] = {
           Content = "所以你在这里做什么？",
           DialogueId = 51177010,
-          GUID = "801DC434"
+          GUID = "801DC434",
+          NextDialogue = 51177011,
+          SpeakNpcId = 100001
         },
         [51177011] = {
           Content = "如你所见，我在宣讲，宣讲一段独属于乐观的发言，我是被乐观感染的皎皎，我的存在即是为了将乐观传递给他人！",
           DialogueId = 51177011,
-          GUID = "801DC45E"
+          GUID = "801DC45E",
+          NextDialogue = 51177012,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Explain01_Start"
+          }
         },
         [51177012] = {
           Content = "你看见了吗？看见了乐观洒满皓京城内的样子了吗？",
           DialogueId = 51177012,
-          GUID = "801DC488"
+          GUID = "801DC488",
+          NextDialogue = 51177013,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Explain01_End"
+          }
         },
         [51177013] = {
           Content = "隔夜的鲜花曾经奄奄一息，现在却焕发新姿，摇曳间散发芳香。",
           DialogueId = 51177013,
-          GUID = "801DC4B2"
+          GUID = "801DC4B2",
+          NextDialogue = 51177014,
+          SpeakNpcId = 701273
         },
         [51177014] = {
           Content = "包子摊本来冷冷清清，今早一开摊却排起了长龙，大家抢着要买刚出笼的热乎乎的包子。",
           DialogueId = 51177014,
-          GUID = "801DC4DC"
+          GUID = "801DC4DC",
+          NextDialogue = 51177015,
+          SpeakNpcId = 701273
         },
         [51177015] = {
           Content = "我最爱喝的绿豆沙店主也记住了我的口味，一碗里多放了六颗莲子！",
           DialogueId = 51177015,
-          GUID = "801DC506"
+          GUID = "801DC506",
+          NextDialogue = 51177016,
+          SpeakNpcId = 701273
         },
         [51177016] = {
           Content = "大家开始像我一样乐观，像我一样爱笑……",
           DialogueId = 51177016,
-          GUID = "801DC530"
+          GUID = "801DC530",
+          NextDialogue = 51177017,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Explain01_Start"
+          }
         },
         [51177017] = {
           Content = "这就是……",
           DialogueId = 51177017,
-          GUID = "801DC55A"
+          GUID = "801DC55A",
+          NextDialogue = 51177018,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Explain01_End"
+          }
         },
         [51177018] = {
           Content = "这就是乐观的感染啊！你呢？你有被感染到吗？！",
           DialogueId = 51177018,
-          GUID = "801DC584"
+          GUID = "801DC584",
+          NextOptions = {
+            [1] = 51177019,
+            [2] = 51177020
+          },
+          SpeakNpcId = 701273
         },
         [51177019] = {
           Content = "有被感染。",
           DialogueId = 51177019,
-          GUID = "801DC5AE"
+          GUID = "801DC5AE",
+          ImprPlusId = 1209,
+          NextDialogue = 51177021
         },
         [51177020] = {
           Content = "有被“感染”。",
           DialogueId = 51177020,
-          GUID = "801DC5D8"
+          GUID = "801DC5D8",
+          ImprPlusId = 1210,
+          NextDialogue = 51177021
         },
         [51177021] = {
           Content = "对啦，这就对啦！只要所有人都心存乐观，世界就会变得更美好！",
           DialogueId = 51177021,
-          GUID = "801DC602"
+          GUID = "801DC602",
+          NextDialogue = 51177022,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Confident_Start"
+          }
         },
         [51177022] = {
           Content = "去吧，带着这份乐观，保持脸上的笑容，去把乐观传递给更多人吧！",
           DialogueId = 51177022,
-          GUID = "801DC62C"
+          GUID = "801DC62C",
+          NextDialogue = 51177023,
+          SpeakNpcId = 701273,
+          TalkActionId = {
+            [1] = "701273:Confident_End"
+          }
         },
         [51177023] = {
           Content = "（乐观皎皎伸出手，煞有介事地拍了拍你的肩膀，目光却灼灼地直视前方，似乎要透过你，看向更多的地方……）",
           DialogueId = 51177023,
-          GUID = "801DC656"
+          GUID = "801DC656",
+          NextDialogue = 51177024
         },
         [51177024] = {
           Content = "（过了一会，她的目光转向了你，在短暂对视后，她重重的点了点头，然后挪开手，继续开始了宣讲。）",
           DialogueId = 51177024,
-          GUID = "801DC680"
+          GUID = "801DC680",
+          NextDialogue = 51177025
         },
         [51177025] = {
           Content = "（你总觉得这种感觉似乎有些熟悉，像是这段对话曾经在何时发生过，只是不是以这样的形式……）",
@@ -207486,315 +208306,468 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51177026] = {
           Content = "怎么样，今天有比昨天更乐观一些吗？如果没有的话，那就留下来再听听我的宣讲吧！",
           DialogueId = 51177026,
-          GUID = "801DC6EC"
+          GUID = "801DC6EC",
+          SpeakNpcId = 701273
         },
         [51178001] = {
           Content = "怎就没有愿意与我辩论之人？",
           DialogueId = 51178001,
-          GUID = "801E66CA"
+          GUID = "801E66CA",
+          SpeakNpcId = 701274
         },
         [51178002] = {
           Content = "怎就没有愿意与我辩论之人？莫非是我过于咄咄逼人了？",
           DialogueId = 51178002,
-          GUID = "801E66F4"
+          GUID = "801E66F4",
+          NextDialogue = 51178003,
+          SpeakNpcId = 701274,
+          TalkActionId = {
+            [1] = "701274:Talk01_Start"
+          }
         },
         [51178003] = {
           Content = "明明我想了个如此精妙绝伦的辩题，辩完后必定醍醐灌顶，效用堪比仙人抚顶啊！",
           DialogueId = 51178003,
-          GUID = "801E671E"
+          GUID = "801E671E",
+          NextDialogue = 51178004,
+          SpeakNpcId = 701274
         },
         [51178004] = {
           Content = "偏生那帮混蛋双目昏昏，愚钝不堪，不看好我的辩题，等到夫子回来，我定要狠狠告他们一桩。",
           DialogueId = 51178004,
-          GUID = "801E6748"
+          GUID = "801E6748",
+          NextDialogue = 51178005,
+          SpeakNpcId = 701274
         },
         [51178005] = {
           Content = "唉……究竟何处能有慧眼识珠之人，透过我的脆弱，看穿我的坚强，与我展开一场精彩的辩论……",
           DialogueId = 51178005,
-          GUID = "801E6772"
+          GUID = "801E6772",
+          NextOptions = {
+            [1] = 51178006,
+            [2] = 51178009
+          },
+          SpeakNpcId = 701274,
+          TalkActionId = {
+            [1] = "701274:Talk01_End"
+          }
         },
         [51178006] = {
           Content = "我来！",
           DialogueId = 51178006,
-          GUID = "801E679C"
+          GUID = "801E679C",
+          ImprPlusId = 1208,
+          NextDialogue = 51178007
         },
         [51178007] = {
           Content = "（他的目光移向你，炽热的视线似乎要把你灼伤。）",
           DialogueId = 51178007,
-          GUID = "801E67C6"
+          GUID = "801E67C6",
+          NextDialogue = 51178008
         },
         [51178008] = {
           Content = "好！好啊！就决定是你了！",
           DialogueId = 51178008,
-          GUID = "801E67F0"
+          GUID = "801E67F0",
+          NextDialogue = 51178012,
+          SpeakNpcId = 701274
         },
         [51178009] = {
           Content = "（没意思，走吧。）",
           DialogueId = 51178009,
-          GUID = "801E681A"
+          GUID = "801E681A",
+          ImprPlusId = 1211,
+          NextDialogue = 51178010
         },
         [51178010] = {
           Content = "这位朋友请留步！我见你相貌堂堂，一表人才，眉间似有龙气萦绕，想必定是卧虎藏龙之辈。",
           DialogueId = 51178010,
-          GUID = "801E6844"
+          GUID = "801E6844",
+          NextDialogue = 51178011,
+          SpeakNpcId = 701274
         },
         [51178011] = {
           Content = "不如就由你来与我辩论一番，如何？",
           DialogueId = 51178011,
-          GUID = "801E686E"
+          GUID = "801E686E",
+          NextDialogue = 51178012,
+          SpeakNpcId = 701274
         },
         [51178012] = {
           Content = "你说的这个辩论我不懂，之前也没学过。",
           DialogueId = 51178012,
-          GUID = "801E6898"
+          GUID = "801E6898",
+          NextDialogue = 51178013,
+          SpeakNpcId = 100001
         },
         [51178013] = {
           Content = "这话说得就生疏了，什么叫不懂和没学过呢，凡事不都得有第一次尝试？",
           DialogueId = 51178013,
-          GUID = "801E68C2"
+          GUID = "801E68C2",
+          NextDialogue = 51178014,
+          SpeakNpcId = 701274,
+          TalkActionId = {
+            [1] = "701274:Talk02_Start"
+          }
         },
         [51178014] = {
           Content = "再说了，辩论辩论，说白了就是嘴皮子一掀就能做的，我见你口齿伶俐，说不定在辩论一事上颇有天赋呢？",
           DialogueId = 51178014,
-          GUID = "801E68EC"
+          GUID = "801E68EC",
+          NextDialogue = 51178015,
+          SpeakNpcId = 701274
         },
         [51178015] = {
           Content = "这样，本来分殊学院内部的辩论流程应该是要提前申请，再开论台请人鉴辩，最终由鉴辩者分出高低。",
           DialogueId = 51178015,
-          GUID = "801E6916"
+          GUID = "801E6916",
+          NextDialogue = 51178016,
+          SpeakNpcId = 701274,
+          TalkActionId = {
+            [1] = "701274:Talk02_End"
+          }
         },
         [51178016] = {
           Content = "不过看在你第一次尝试，我们便进行一场私下较量，只碰撞思想，不考虑胜负，如何？",
           DialogueId = 51178016,
-          GUID = "801E6940"
+          GUID = "801E6940",
+          NextOptions = {
+            [1] = 51178017
+          },
+          RestartTag = 51178016,
+          SpeakNpcId = 701274
         },
         [51178017] = {
           Content = "（你不由开始思索起自己的才智究竟能不能承托起这场莫名其妙的辩论。）",
           DialogueId = 51178017,
-          GUID = "801E696A"
+          FailDialogue = 51178018,
+          GUID = "801E696A",
+          ImprCheckId = 1147,
+          NextDialogue = 51178020
         },
         [51178018] = {
           Content = "算了，我还是不感兴趣。",
           DialogueId = 51178018,
-          GUID = "801E6994"
+          GUID = "801E6994",
+          NextDialogue = 51178019,
+          SpeakNpcId = 100001
         },
         [51178019] = {
           Content = "……罢了，罢了，只能说是缘分未至……",
           DialogueId = 51178019,
-          GUID = "801E69BE"
+          GUID = "801E69BE",
+          SpeakNpcId = 701274
         },
         [51178020] = {
           Content = "好，你说说辩题，我陪你玩玩。",
           DialogueId = 51178020,
-          GUID = "801E69E8"
+          GUID = "801E69E8",
+          NextDialogue = 51178021,
+          SpeakNpcId = 100001
         },
         [51178021] = {
           Content = "哎呀！阁下也是爽快人！我的辩题十分简单，即：旁观者清亦或旁观者不清，你想选哪边？",
           DialogueId = 51178021,
-          GUID = "801E6A12"
+          GUID = "801E6A12",
+          NextOptions = {
+            [1] = 51178022,
+            [2] = 51178037
+          },
+          SpeakNpcId = 701274
         },
         [51178022] = {
           Content = "旁观者清。",
           DialogueId = 51178022,
-          GUID = "801E6A3C"
+          GUID = "801E6A3C",
+          NextDialogue = 51178023
         },
         [51178023] = {
           Content = "好啊，那便是正方了。",
           DialogueId = 51178023,
-          GUID = "801E6A66"
+          GUID = "801E6A66",
+          NextDialogue = 51178024,
+          SpeakNpcId = 701274,
+          TalkActionId = {
+            [1] = "701274:Talk03_Start"
+          }
         },
         [51178024] = {
           Content = "（砚台清故意咳嗽了两声，挺胸抬头，摆出一副正经的样子，脸也板正了起来。）",
           DialogueId = 51178024,
-          GUID = "801E6A90"
+          GUID = "801E6A90",
+          NextDialogue = 51178025
         },
         [51178025] = {
           Content = "既然你选了这个，那你便先提出你的观点吧，随便说就行，想怎么说就怎么说！",
           DialogueId = 51178025,
-          GUID = "801E6ABA"
+          GUID = "801E6ABA",
+          NextDialogue = 51178026,
+          SpeakNpcId = 701274,
+          TalkActionId = {
+            [1] = "701274:Talk03_End"
+          }
         },
         [51178026] = {
           Content = "（你开始思索你对于旁观者清的理解，或许举例描述会更直白？）",
           DialogueId = 51178026,
-          GUID = "801E6AE4"
+          GUID = "801E6AE4",
+          NextOptions = {
+            [1] = 51178027,
+            [2] = 51178032
+          }
         },
         [51178027] = {
           Content = "以下棋为例。",
           DialogueId = 51178027,
-          GUID = "801E6B0E"
+          GUID = "801E6B0E",
+          ImprPlusId = 1208,
+          NextDialogue = 51178028
         },
         [51178028] = {
           Content = "我在酒馆见过别人下棋，他们往往会将所有心力都沉浸在当前的棋局之中，每一枚棋子要放在哪个格子上，都需要经过多种思考。",
           DialogueId = 51178028,
-          GUID = "801E6B38"
+          GUID = "801E6B38",
+          NextDialogue = 51178029,
+          SpeakNpcId = 100001
         },
         [51178029] = {
           Content = "但这也直接导致了他们无法顾及全盘的局势，过于将心思放在这一枚棋子之上。",
           DialogueId = 51178029,
-          GUID = "801E6B62"
+          GUID = "801E6B62",
+          NextDialogue = 51178030,
+          SpeakNpcId = 100001
         },
         [51178030] = {
           Content = "与此同时，在一边观看他们下棋的人则很容易就能分辨出来谁可能会赢，因为他们可以将全部的精力用于分析局势，而不是研究这一枚棋子。",
           DialogueId = 51178030,
-          GUID = "801E6B8C"
+          GUID = "801E6B8C",
+          NextDialogue = 51178031,
+          SpeakNpcId = 100001
         },
         [51178031] = {
           Content = "胡说八道！你说的这是下棋下得不好的笨蛋，而不是真正的国手，要是足够厉害，怎会有你说的这种情况？",
           DialogueId = 51178031,
-          GUID = "801E6BB6"
+          GUID = "801E6BB6",
+          NextDialogue = 51178053,
+          SpeakNpcId = 701274
         },
         [51178032] = {
           Content = "以生意为例。",
           DialogueId = 51178032,
-          GUID = "801E6BE0"
+          GUID = "801E6BE0",
+          ImprPlusId = 1206,
+          NextDialogue = 51178033
         },
         [51178033] = {
           Content = "我曾听一位熟悉做生意的酒馆老板说起，谈判极为重要，但参与谈判的人有时并不能明确繁杂的利润算法。",
           DialogueId = 51178033,
-          GUID = "801E6C0A"
+          GUID = "801E6C0A",
+          NextDialogue = 51178034,
+          SpeakNpcId = 100001
         },
         [51178034] = {
           Content = "他们经常会被对方开出的短期利益迷惑，从而忘记自己的长久目的，造成谈判失误。",
           DialogueId = 51178034,
-          GUID = "801E6C34"
+          GUID = "801E6C34",
+          NextDialogue = 51178035,
+          SpeakNpcId = 100001
         },
         [51178035] = {
           Content = "所以他们会多带一两个人，那带过去的人就相当于他们的警钟，在他们快要迷失之时拉他们一把。",
           DialogueId = 51178035,
-          GUID = "801E6C5E"
+          GUID = "801E6C5E",
+          NextDialogue = 51178036,
+          SpeakNpcId = 100001
         },
         [51178036] = {
           Content = "胡说八道！你说的这是做生意做不明白的笨蛋，而不是真正的大商贾，要是足够厉害，怎会有你说的这种情况？",
           DialogueId = 51178036,
-          GUID = "801E6C88"
+          GUID = "801E6C88",
+          NextDialogue = 51178053,
+          SpeakNpcId = 701274
         },
         [51178037] = {
           Content = "旁观者不清。",
           DialogueId = 51178037,
-          GUID = "801E6CB2"
+          GUID = "801E6CB2",
+          NextDialogue = 51178038
         },
         [51178038] = {
           Content = "好啊，那便是反方了。",
           DialogueId = 51178038,
-          GUID = "801E6CDC"
+          GUID = "801E6CDC",
+          NextDialogue = 51178039,
+          SpeakNpcId = 701274,
+          TalkActionId = {
+            [1] = "701274:Talk03_Start"
+          }
         },
         [51178039] = {
           Content = "既然你选了这个，那你便先提出你的观点吧，随便说就行，想怎么说就怎么说！",
           DialogueId = 51178039,
-          GUID = "801E6D06"
+          GUID = "801E6D06",
+          NextDialogue = 51178040,
+          SpeakNpcId = 701274,
+          TalkActionId = {
+            [1] = "701274:Talk03_End"
+          }
         },
         [51178040] = {
           Content = "（你开始思索你对于旁观者不清的理解，或许举例描述会更直白？）",
           DialogueId = 51178040,
-          GUID = "801E6D30"
+          GUID = "801E6D30",
+          NextOptions = {
+            [1] = 51178041,
+            [2] = 51178046
+          }
         },
         [51178041] = {
           Content = "以大风九章为例。",
           DialogueId = 51178041,
-          GUID = "801E6D5A"
+          GUID = "801E6D5A",
+          ImprPlusId = 1209,
+          NextDialogue = 51178042
         },
         [51178042] = {
           Content = "我听一位飘零人说过，大风九章有时在尚未摸清事情的始末之时，便会派出狴犴前往执法。",
           DialogueId = 51178042,
-          GUID = "801E6D84"
+          GUID = "801E6D84",
+          NextDialogue = 51178043,
+          SpeakNpcId = 100001
         },
         [51178043] = {
           Content = "导致许多人明明是因为一些不得已的原因犯下错误，却根本得不到辩解的机会。",
           DialogueId = 51178043,
-          GUID = "801E6DAE"
-        },
-        [51178044] = {
-          Content = "我想，在这些案件里，大风九章的判决就像是一种另类的旁观者一样，不知全情便进行判断，实在是算不上“清”。",
-          DialogueId = 51178044,
-          GUID = "801E6DD8"
-        },
-        [51178045] = {
-          Content = "胡说八道！你好大的胆子！怎么敢置喙大风九章的判决？大风九章就是天理，说什么都是对的，怎会不清？",
-          DialogueId = 51178045,
-          GUID = "801E6E02"
-        },
-        [51178046] = {
-          Content = "以小孩打架为例。",
-          DialogueId = 51178046,
-          GUID = "801E6E2C"
-        },
-        [51178047] = {
-          Content = "我小时候生活的村子，孩子们常常在玩耍的时候争执，有时候甚至会闹到要打起来的地步。",
-          DialogueId = 51178047,
-          GUID = "801E6E56"
+          GUID = "801E6DAE",
+          NextDialogue = 51178044,
+          SpeakNpcId = 100001
         }
       }
     end
   },
   {
-    MinKey = 51178048,
-    MaxKey = 51178524,
+    MinKey = 51178044,
+    MaxKey = 51178520,
     Loader = function()
       return {
+        [51178044] = {
+          Content = "我想，在这些案件里，大风九章的判决就像是一种另类的旁观者一样，不知全情便进行判断，实在是算不上“清”。",
+          DialogueId = 51178044,
+          GUID = "801E6DD8",
+          NextDialogue = 51178045,
+          SpeakNpcId = 100001
+        },
+        [51178045] = {
+          Content = "胡说八道！你好大的胆子！怎么敢置喙大风九章的判决？大风九章就是天理，说什么都是对的，怎会不清？",
+          DialogueId = 51178045,
+          GUID = "801E6E02",
+          NextDialogue = 51178053,
+          SpeakNpcId = 701274
+        },
+        [51178046] = {
+          Content = "以小孩打架为例。",
+          DialogueId = 51178046,
+          GUID = "801E6E2C",
+          ImprPlusId = 1207,
+          NextDialogue = 51178047
+        },
+        [51178047] = {
+          Content = "我小时候生活的村子，孩子们常常在玩耍的时候争执，有时候甚至会闹到要打起来的地步。",
+          DialogueId = 51178047,
+          GUID = "801E6E56",
+          NextDialogue = 51178048,
+          SpeakNpcId = 100001
+        },
         [51178048] = {
           Content = "孩子们鼻青脸肿地回家后，关心他们的父母看到伤痕就红了眼。",
           DialogueId = 51178048,
-          GUID = "801E6E80"
+          GUID = "801E6E80",
+          NextDialogue = 51178049,
+          SpeakNpcId = 100001
         },
         [51178049] = {
           Content = "他们直接粗暴地找到其他孩子家里去，甚至不预先询问究竟是因为什么原因打架——比如，是不是他们的孩子先欺负了其他孩子。",
           DialogueId = 51178049,
-          GUID = "801E6EAA"
+          GUID = "801E6EAA",
+          NextDialogue = 51178050,
+          SpeakNpcId = 100001
         },
         [51178050] = {
           Content = "在这场斗殴中，孩子是参与者，而父母却是旁观者，但父母却不愿追究这场争斗的原因，只是因为自己的孩子受伤了，就要惩罚其他孩子。",
           DialogueId = 51178050,
-          GUID = "801E6ED4"
+          GUID = "801E6ED4",
+          NextDialogue = 51178051,
+          SpeakNpcId = 100001
         },
         [51178051] = {
           Content = "虽说是出于对孩子的关爱，但……我觉得这应该也是一种旁观者不清吧？",
           DialogueId = 51178051,
-          GUID = "801E6EFE"
+          GUID = "801E6EFE",
+          NextDialogue = 51178052,
+          SpeakNpcId = 100001
         },
         [51178052] = {
           Content = "胡说八道！我不管你什么村子，打架了、出手伤人那就是不对的，这在我们华胥是要被狴犴大人惩罚的！",
           DialogueId = 51178052,
-          GUID = "801E6F28"
+          GUID = "801E6F28",
+          NextDialogue = 51178053,
+          SpeakNpcId = 701274
         },
         [51178053] = {
           Content = "（听到砚台清莫名其妙的话，你不由得眉头一皱。）",
           DialogueId = 51178053,
-          GUID = "801E6F52"
+          GUID = "801E6F52",
+          NextDialogue = 51178054
         },
         [51178054] = {
           Content = "我们不是在辩论吗？你为什么不说你的观点，而是突然气急败坏？",
           DialogueId = 51178054,
-          GUID = "801E6F7C"
+          GUID = "801E6F7C",
+          NextDialogue = 51178055,
+          SpeakNpcId = 100001
         },
         [51178055] = {
           Content = "这就是我的辩论道理！不然难道要任由你这样胡言乱语？",
           DialogueId = 51178055,
-          GUID = "801E6FA6"
+          GUID = "801E6FA6",
+          NextDialogue = 51178056,
+          SpeakNpcId = 701274
         },
         [51178056] = {
           Content = "（你回想起了他最开始说的话……）",
           DialogueId = 51178056,
-          GUID = "801E6FD0"
+          GUID = "801E6FD0",
+          NextDialogue = 51178057
         },
         [51178057] = {
           Content = "（你逐渐理解了为什么没有人愿意与他辩论……）",
           DialogueId = 51178057,
-          GUID = "801E6FFA"
+          GUID = "801E6FFA",
+          NextDialogue = 51178058
         },
         [51178058] = {
           Content = "不可理喻。",
           DialogueId = 51178058,
-          GUID = "801E7024"
+          GUID = "801E7024",
+          NextDialogue = 51178059,
+          SpeakNpcId = 100001
         },
         [51178059] = {
           Content = "你说什么呢？你骂我？",
           DialogueId = 51178059,
-          GUID = "801E704E"
+          GUID = "801E704E",
+          NextOptions = {
+            [1] = 51178060,
+            [2] = 51178062
+          },
+          SpeakNpcId = 701274
         },
         [51178060] = {
           Content = "不理他。",
           DialogueId = 51178060,
-          GUID = "801E7078"
+          GUID = "801E7078",
+          ImprPlusId = 1208,
+          NextDialogue = 51178061
         },
         [51178061] = {
           Content = "（你径自走开，不理会在你身后跳脚大骂的砚台清。）",
@@ -207804,12 +208777,16 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51178062] = {
           Content = "吓唬他。",
           DialogueId = 51178062,
-          GUID = "801E70CC"
+          GUID = "801E70CC",
+          ImprPlusId = 1210,
+          NextDialogue = 51178063
         },
         [51178063] = {
           Content = "最近走夜路小心点。",
           DialogueId = 51178063,
-          GUID = "801E70F6"
+          GUID = "801E70F6",
+          NextDialogue = 51178064,
+          SpeakNpcId = 100001
         },
         [51178064] = {
           Content = "（你握紧了腰间的刀柄，向他威慑性地亮了亮，然后转身离开。）",
@@ -207819,32 +208796,52 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51178101] = {
           Content = "要说最为复杂的调解案……",
           DialogueId = 51178101,
-          GUID = "801E7732"
+          GUID = "801E7732",
+          SpeakNpcId = 701275
         },
         [51178102] = {
           Content = "要说最为复杂的案件……莫过于十年前的那场意外了。",
           DialogueId = 51178102,
-          GUID = "801E775C"
+          GUID = "801E775C",
+          NextDialogue = 51178103,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk01_Start"
+          }
         },
         [51178103] = {
           Content = "你毕竟也是刚来做调解人，这样的事件说给你实在有些……",
           DialogueId = 51178103,
-          GUID = "801E7786"
+          GUID = "801E7786",
+          NextDialogue = 51178104,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk01_End"
+          }
         },
         [51178104] = {
           Content = "姐，能一样吗？我可是新晋的调解人里接受度最高，能力也最为出众，口才也最好的那一位了。你就说给我听听吧~",
           DialogueId = 51178104,
-          GUID = "801E77B0"
+          GUID = "801E77B0",
+          NextDialogue = 51178105,
+          SpeakNpcId = 701276
         },
         [51178105] = {
           Content = "我看你是嘴最贫，心眼子最多的那个还差不多！",
           DialogueId = 51178105,
-          GUID = "801E77DA"
+          GUID = "801E77DA",
+          NextOptions = {
+            [1] = 51178106
+          },
+          RestartTag = 51178105,
+          SpeakNpcId = 701275
         },
         [51178106] = {
           Content = "（默不作声假装靠近……）",
           DialogueId = 51178106,
-          GUID = "801E7804"
+          GUID = "801E7804",
+          ImprPlusId = 1206,
+          NextDialogue = 51178108
         },
         [51178107] = {
           Content = "（没意思，走吧。）",
@@ -207854,52 +208851,88 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51178108] = {
           Content = "那件事说起来是十年前，但对我来说，就像在昨天一样。",
           DialogueId = 51178108,
-          GUID = "801E7858"
+          GUID = "801E7858",
+          NextDialogue = 51178109,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk02_Start"
+          }
         },
         [51178109] = {
           Content = "那日，我的舅父浑身浴血，急匆匆从外面赶了回来。",
           DialogueId = 51178109,
-          GUID = "801E7882"
+          GUID = "801E7882",
+          NextDialogue = 51178110,
+          SpeakNpcId = 701275
         },
         [51178110] = {
           Content = "我看到时，吓了一跳，以为是他在外遇到了危险……",
           DialogueId = 51178110,
-          GUID = "801E78AC"
+          GUID = "801E78AC",
+          NextDialogue = 51178111,
+          SpeakNpcId = 701275
         },
         [51178111] = {
           Content = "他慌里慌张的，喘着粗气，话也说不利索。他说：死人了。",
           DialogueId = 51178111,
-          GUID = "801E78D6"
+          GUID = "801E78D6",
+          NextDialogue = 51178112,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk02_End"
+          }
         },
         [51178112] = {
           Content = "死人？死的是谁？咱们不是有狴犴大人执法吗？如果真闹出了什么恶性事件，狴犴大人岂不是直接就将犯人逮捕了？",
           DialogueId = 51178112,
-          GUID = "801E7900"
+          GUID = "801E7900",
+          NextDialogue = 51178113,
+          SpeakNpcId = 701276
         },
         [51178113] = {
           Content = "嗯哼~常理来说如此，但那件事并非常理之中。",
           DialogueId = 51178113,
-          GUID = "801E792A"
+          GUID = "801E792A",
+          NextDialogue = 51178114,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk03_Start"
+          }
         },
         [51178114] = {
           Content = "遇害的那位是一名学堂的孩子，因为家境好，父母疏于管教又溺爱，导致性格十分恶劣，在学堂里一直有小霸王之称。",
           DialogueId = 51178114,
-          GUID = "801E7954"
+          GUID = "801E7954",
+          NextDialogue = 51178115,
+          SpeakNpcId = 701275
         },
         [51178115] = {
           Content = "据说当时的孩子都很怕他，因为他经常威胁别的孩子把零花钱给自己，还会做出一些顽劣的恶作剧整蛊自己的同窗——直到成年，都是顽劣如此。",
           DialogueId = 51178115,
-          GUID = "801E797E"
+          GUID = "801E797E",
+          NextDialogue = 51178116,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk03_End"
+          }
         },
         [51178116] = {
           Content = "诶呀，这孩子真是……可是这样不会被狴犴惩罚吗？",
           DialogueId = 51178116,
-          GUID = "801E79A8"
+          GUID = "801E79A8",
+          NextOptions = {
+            [1] = 51178117
+          },
+          RestartTag = 51178116,
+          SpeakNpcId = 701276
         },
         [51178117] = {
           Content = "（有什么不会被惩罚的恶作剧吗……）",
           DialogueId = 51178117,
-          GUID = "801E79D2"
+          FailDialogue = 51178118,
+          GUID = "801E79D2",
+          ImprCheckId = 1148,
+          NextDialogue = 51178119
         },
         [51178118] = {
           Content = "（想不出来，你果然是一个善良的孩子。）",
@@ -207909,272 +208942,418 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51178119] = {
           Content = "我小时候，隔壁一个顽劣的孩子喜欢捉弄自己的玩伴。他趁玩伴小睡的时候，把几只螃蟹塞在她装贝壳的陶罐里。",
           DialogueId = 51178119,
-          GUID = "801E7A26"
+          GUID = "801E7A26",
+          NextDialogue = 51178120,
+          SpeakNpcId = 100001
         },
         [51178120] = {
           Content = "玩伴醒来，想把贝壳拿出来玩，就被受惊的螃蟹狠狠地夹了手指。",
           DialogueId = 51178120,
-          GUID = "801E7A50"
+          GUID = "801E7A50",
+          NextDialogue = 51178121,
+          SpeakNpcId = 100001
         },
         [51178121] = {
           Content = "真是个坏孩子。那他后来怎么样了？",
           DialogueId = 51178121,
-          GUID = "801E7A7A"
+          GUID = "801E7A7A",
+          NextDialogue = 51178122,
+          SpeakNpcId = 701275
         },
         [51178122] = {
           Content = "他站在一边捧腹大笑，但很快他就笑不出来了，因为我看不过去，和家人一起把他“修理”了一顿，从此之后他就老实了。",
           DialogueId = 51178122,
-          GUID = "801E7AA4"
+          GUID = "801E7AA4",
+          NextDialogue = 51178123,
+          SpeakNpcId = 100001
         },
         [51178123] = {
           Content = "若有人管教，能走上正途，也算是一件好事了。只是我说的那小霸王，就没有那么好运了。",
           DialogueId = 51178123,
-          GUID = "801E7ACE"
+          GUID = "801E7ACE",
+          NextDialogue = 51178124,
+          SpeakNpcId = 701275
         },
         [51178124] = {
           Content = "——他死了。但杀他的……",
           DialogueId = 51178124,
-          GUID = "801E7AF8"
+          GUID = "801E7AF8",
+          NextDialogue = 51178125,
+          SpeakNpcId = 701275
         },
         [51178125] = {
           Content = "什么呀，姐你就别卖关子了！",
           DialogueId = 51178125,
-          GUID = "801E7B22"
+          GUID = "801E7B22",
+          NextDialogue = 51178126,
+          SpeakNpcId = 701276
         },
         [51178126] = {
           Content = "是个傻子。",
           DialogueId = 51178126,
-          GUID = "801E7B4C"
+          GUID = "801E7B4C",
+          NextDialogue = 51178127,
+          SpeakNpcId = 701275
         },
         [51178127] = {
           Content = "？！",
           DialogueId = 51178127,
-          GUID = "801E7B76"
+          GUID = "801E7B76",
+          NextDialogue = 51178128,
+          SpeakNpcId = 100001
         },
         [51178128] = {
           Content = "他从娘胎里生出来就和旁人就不大一样，街坊邻居也都可怜他，自小也宽厚待他，只是长大了，送到学堂里，孩子们不懂事，有时便不给他好脸色。",
           DialogueId = 51178128,
-          GUID = "801E7BA0"
+          GUID = "801E7BA0",
+          NextDialogue = 51178129,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk01_Start"
+          }
         },
         [51178129] = {
           Content = "只是不给好脸色久了，那孩子比起旁的孩子就显得有几分怯懦。怯懦久了，孩子们便不再把他当回事，不给他好脸色，或是总差遣他去做些杂活。",
           DialogueId = 51178129,
-          GUID = "801E7BCA"
+          GUID = "801E7BCA",
+          NextDialogue = 51178130,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk01_End"
+          }
         },
         [51178130] = {
           Content = "如此说来，这不就是在霸凌他吗？我明白了，所以那个欺负得最过分的那位，就是姐你刚才说的……“小霸王”？",
           DialogueId = 51178130,
-          GUID = "801E7BF4"
+          GUID = "801E7BF4",
+          NextDialogue = 51178131,
+          SpeakNpcId = 701276
         },
         [51178131] = {
           Content = "没错，“小霸王”总是用玩闹的借口欺负傻的那位，可也是在一次玩闹里，那痴傻少年不小心把人从二楼推了下去，当场便没了气。",
           DialogueId = 51178131,
-          GUID = "801E7C1E"
+          GUID = "801E7C1E",
+          NextDialogue = 51178132,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk02_Start"
+          }
         },
         [51178132] = {
           Content = "傻孩子还不知道发生了什么，见那血流了三尺，围观者无不尖叫呼救，他只意味站在原地拍手傻乐。",
           DialogueId = 51178132,
-          GUID = "801E7C48"
+          GUID = "801E7C48",
+          NextDialogue = 51178133,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk02_End"
+          }
         },
         [51178133] = {
           Content = "然后呢？狴犴大人是如何裁决的？",
           DialogueId = 51178133,
-          GUID = "801E7C72"
+          GUID = "801E7C72",
+          NextDialogue = 51178134,
+          SpeakNpcId = 701276
         },
         [51178134] = {
           Content = "自然是飞速赶来，同样将傻孩子的命带走了，可怜那孩子的母亲，十月怀胎生下他，当的是心头肉一样拉扯他，好不容易长大成人，却得到这般结局。",
           DialogueId = 51178134,
-          GUID = "801E7C9C"
+          GUID = "801E7C9C",
+          NextDialogue = 51178135,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk03_Start"
+          }
         },
         [51178135] = {
-          Content = "冤情难解，尤其是她四处走访得知自己的孩子生前遭遇，更是哭瞎了眼。只能到处拜托近亲远邻，求他们换自己一个公道。",
+          Content = "冤情难解，尤其是她四处走访得知自己的孩子生前遭遇，更是哭瞎了眼。只能到处拜托近亲远邻，求他们还自己一个公道。",
           DialogueId = 51178135,
-          GUID = "801E7CC6"
+          GUID = "801E7CC6",
+          NextDialogue = 51178136,
+          SpeakNpcId = 701275
         },
         [51178136] = {
           Content = "大伙儿纷纷避之不及，只有我的舅父心热，因着当时亲历现场，所以一路陪她诉冤陪到底。",
           DialogueId = 51178136,
-          GUID = "801E7CF0"
+          GUID = "801E7CF0",
+          NextDialogue = 51178137,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk03_End"
+          }
         },
         [51178137] = {
           Content = "所以最终的结局是什么？",
           DialogueId = 51178137,
-          GUID = "801E7D1A"
+          GUID = "801E7D1A",
+          NextDialogue = 51178138,
+          SpeakNpcId = 701276
         },
         [51178138] = {
           Content = "虽然很想告诉你，但是我当时也只是个十几岁的孩子，所以这件事的结果，我不知道。",
           DialogueId = 51178138,
-          GUID = "801E7D44"
+          GUID = "801E7D44",
+          NextDialogue = 51178139,
+          SpeakNpcId = 701275
         },
         [51178139] = {
           Content = "不知道？！姐，你就别拿我开玩笑了，就告诉我吧！",
           DialogueId = 51178139,
-          GUID = "801E7D6E"
+          GUID = "801E7D6E",
+          NextDialogue = 51178140,
+          SpeakNpcId = 701276
         },
         [51178140] = {
           Content = "我是真的不晓得结果是什么，几次和舅父探听，也没有得到答案。不过，我今日来问问你们，你们觉得这场案件的结果会是什么呢？",
           DialogueId = 51178140,
-          GUID = "801E7D98"
+          GUID = "801E7D98",
+          NextOptions = {
+            [1] = 51178141,
+            [2] = 51178145
+          },
+          SpeakNpcId = 701275
         },
         [51178141] = {
           Content = "我认为杀人者的母亲取得了自己的公道。",
           DialogueId = 51178141,
-          GUID = "801E7DC2"
+          GUID = "801E7DC2",
+          ImprPlusId = 1209,
+          NextDialogue = 51178142
         },
         [51178142] = {
           Content = "我想……她应该得到了公道。就算死者不能复活，也不能让他背负罪犯的恶名。无论怎么说，这件事都不能算是蓄意伤人，顶多算是一场意外。",
           DialogueId = 51178142,
-          GUID = "801E7DEC"
+          GUID = "801E7DEC",
+          NextDialogue = 51178143,
+          SpeakNpcId = 100001
         },
         [51178143] = {
           Content = "你说得对，如果这事放在今日改制后的华胥，我也会竭尽全力为他的母亲辩护，直至她沉冤得雪。",
           DialogueId = 51178143,
-          GUID = "801E7E16"
+          GUID = "801E7E16",
+          NextDialogue = 51178144,
+          SpeakNpcId = 701275
         },
         [51178144] = {
           Content = "毕竟，我们调解人就是为了这个目的诞生的——裁定罪行的不再是大风九章，而应当是人类自己，不是吗？",
           DialogueId = 51178144,
-          GUID = "801E7E40"
+          GUID = "801E7E40",
+          NextDialogue = 51178149,
+          SpeakNpcId = 701275
         },
         [51178145] = {
           Content = "我认为这件事多半不了了之了。",
           DialogueId = 51178145,
-          GUID = "801E7E6A"
+          GUID = "801E7E6A",
+          ImprPlusId = 1208,
+          NextDialogue = 51178146
         },
         [51178146] = {
           Content = "如果这件事真的让那位孩子的母亲讨回了公道，你的舅父不会因此避而不谈的，只不过是没有做到，所以也不愿告知你，让你伤心。",
           DialogueId = 51178146,
-          GUID = "801E7E94"
+          GUID = "801E7E94",
+          NextDialogue = 51178147,
+          SpeakNpcId = 100001
         },
         [51178147] = {
           Content = "是啊，我们心里其实都晓得，只是不愿去接受这样的结果……",
           DialogueId = 51178147,
-          GUID = "801E7EBE"
+          GUID = "801E7EBE",
+          NextDialogue = 51178148,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk01_Start"
+          }
         },
         [51178148] = {
           Content = "还好，改制后有了我们调解员——裁定罪行的不再是大风九章，而应当是人类自己，不是吗？",
           DialogueId = 51178148,
-          GUID = "801E7EE8"
+          GUID = "801E7EE8",
+          NextDialogue = 51178149,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk01_End"
+          }
         },
         [51178149] = {
           Content = "但是吧……无论结果如何，其实都谈不上是个好结果。",
           DialogueId = 51178149,
-          GUID = "801E7F12"
+          GUID = "801E7F12",
+          NextDialogue = 51178150,
+          SpeakNpcId = 701276
         },
         [51178150] = {
           Content = "那孩子已经死了，那些是非对错又有什么意义呢？死了的人哪里还会在意自己的名声……",
           DialogueId = 51178150,
-          GUID = "801E7F3C"
+          GUID = "801E7F3C",
+          NextDialogue = 51178151,
+          SpeakNpcId = 701276
         },
         [51178151] = {
           Content = "说到底，都是因为狴犴大人它……",
           DialogueId = 51178151,
-          GUID = "801E7F66"
+          GUID = "801E7F66",
+          NextDialogue = 51178152,
+          SpeakNpcId = 701276
         },
         [51178152] = {
           Content = "这话你也敢说？",
           DialogueId = 51178152,
-          GUID = "801E7F90"
+          GUID = "801E7F90",
+          NextDialogue = 51178153,
+          SpeakNpcId = 100001
         },
         [51178153] = {
           Content = "为何不敢说？未知结果之前，盲目断案，错的就是错的，我成为调解人，不就是为了减少这样的事情发生，还更多人一个公道吗？",
           DialogueId = 51178153,
-          GUID = "801E7FBA"
+          GUID = "801E7FBA",
+          NextDialogue = 51178154,
+          SpeakNpcId = 701276
         },
         [51178154] = {
           Content = "……噗嗤~",
           DialogueId = 51178154,
-          GUID = "801E7FE4"
+          GUID = "801E7FE4",
+          NextDialogue = 51178155,
+          SpeakNpcId = 701275
         },
         [51178155] = {
           Content = "萍姐，你笑什么？",
           DialogueId = 51178155,
-          GUID = "801E800E"
+          GUID = "801E800E",
+          NextDialogue = 51178156,
+          SpeakNpcId = 701276
         },
         [51178156] = {
           Content = "你能这样想，那就不算浪费我今日唠叨的口舌啦……",
           DialogueId = 51178156,
-          GUID = "801E8038"
+          GUID = "801E8038",
+          NextDialogue = 51178157,
+          SpeakNpcId = 701275
         },
         [51178157] = {
           Content = "我没理解，姐你到底什么意思嘛？",
           DialogueId = 51178157,
-          GUID = "801E8062"
+          GUID = "801E8062",
+          NextDialogue = 51178158,
+          SpeakNpcId = 701276
         },
         [51178158] = {
           Content = "没事没事，今天的故事时间结束了，我还要回去整理卷宗，你也得一起。",
           DialogueId = 51178158,
-          GUID = "801E808C"
+          GUID = "801E808C",
+          NextDialogue = 51178159,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk02_Start"
+          }
         },
         [51178159] = {
           Content = "对啦，这位{性别:公子|姑娘}，不好意思，耽误你许久听我讲这陈芝麻烂谷子的旧事。",
           DialogueId = 51178159,
-          GUID = "801E80B6"
+          GUID = "801E80B6",
+          NextDialogue = 51178160,
+          SpeakNpcId = 701275,
+          TalkActionId = {
+            [1] = "701275:Talk02_End"
+          }
         },
         [51178160] = {
           Content = "没关系。",
           DialogueId = 51178160,
-          GUID = "801E80E0"
+          GUID = "801E80E0",
+          NextDialogue = 51178161,
+          SpeakNpcId = 100001
         },
         [51178161] = {
           Content = "既然如此，那我们也不再叨扰了，再见。",
           DialogueId = 51178161,
-          GUID = "801E810A"
+          GUID = "801E810A",
+          SpeakNpcId = 701275
         },
         [51178162] = {
           Content = "还不回去是要等到什么时候？",
           DialogueId = 51178162,
-          GUID = "801E814C"
+          GUID = "801E814C",
+          NextDialogue = 51178163,
+          SpeakNpcId = 701275
         },
         [51178163] = {
           Content = "再等等嘛，卷宗是整不完的，还是先珍惜一下我们难得的休息时间吧！",
           DialogueId = 51178163,
-          GUID = "801E818E"
+          GUID = "801E818E",
+          SpeakNpcId = 701276
         },
         [51178201] = {
           Content = "若是法理不通……",
           DialogueId = 51178201,
-          GUID = "801E879A"
+          GUID = "801E879A",
+          SpeakNpcId = 701277
         },
         [51178202] = {
           Content = "若是法理不通，又怎敢把评判的权利交由那劳什子人心私情？",
           DialogueId = 51178202,
-          GUID = "801E87C4"
+          GUID = "801E87C4",
+          NextDialogue = 51178203,
+          SpeakNpcId = 701277
         },
         [51178203] = {
           Content = "（眼前的男人趾高气昂地向人们大肆宣扬着，你不由地走近了些，想听听他说的是什么。）",
           DialogueId = 51178203,
-          GUID = "801E87EE"
+          GUID = "801E87EE",
+          NextDialogue = 51178204
         },
         [51178204] = {
           Content = "本来咱们华胥的大风九章是多么完善的制度？",
           DialogueId = 51178204,
-          GUID = "801E8818"
+          GUID = "801E8818",
+          NextDialogue = 51178205,
+          SpeakNpcId = 701277,
+          TalkActionId = {
+            [1] = "701277:Talk01_Start"
+          }
         },
         [51178205] = {
           Content = "对就是对，错就是错，杀人就要偿命，伤人就要惩处，一切都简单明了，勿需他人来断。",
           DialogueId = 51178205,
-          GUID = "801E8842"
+          GUID = "801E8842",
+          NextDialogue = 51178206,
+          SpeakNpcId = 701277
         },
         [51178206] = {
           Content = "现在倒好，弄出个劳什子改制。狴犴大人过去了，把人带回收押，期间不知道多少纠葛不足为外人道也，几番周折，罪行也被人忘了，不了了之了！",
           DialogueId = 51178206,
-          GUID = "801E886C"
+          GUID = "801E886C",
+          NextDialogue = 51178207,
+          SpeakNpcId = 701277
         },
         [51178207] = {
           Content = "我华胥千年天人律法竟就此断送，以后，该怎么办呐！",
           DialogueId = 51178207,
-          GUID = "801E8896"
+          GUID = "801E8896",
+          NextDialogue = 51178208,
+          SpeakNpcId = 701277,
+          TalkActionId = {
+            [1] = "701277:Talk01_End"
+          }
         },
         [51178208] = {
           Content = "（这家伙肆意倾泻着对于大风九章改制的不满，想想用什么话来反驳他吧。）",
           DialogueId = 51178208,
-          GUID = "801E88C0"
+          GUID = "801E88C0",
+          NextOptions = {
+            [1] = 51178209
+          },
+          RestartTag = 51178208
         },
         [51178209] = {
           Content = "（说点什么来反驳他。）",
           DialogueId = 51178209,
-          GUID = "801E88EA"
+          FailDialogue = 51178210,
+          GUID = "801E88EA",
+          ImprCheckId = 1149,
+          NextDialogue = 51178211
         },
         [51178210] = {
           Content = "（你似乎想不到该说什么，对于这种人似乎也没什么好说的。）",
@@ -208184,117 +209363,177 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51178211] = {
           Content = "你对华胥人好像缺乏应有的尊重。",
           DialogueId = 51178211,
-          GUID = "801E893E"
+          GUID = "801E893E",
+          NextDialogue = 51178212,
+          SpeakNpcId = 100001
         },
         [51178212] = {
           Content = "什么？你什么意思？",
           DialogueId = 51178212,
-          GUID = "801E8968"
+          GUID = "801E8968",
+          NextDialogue = 51178213,
+          SpeakNpcId = 701277
         },
         [51178213] = {
           Content = "按你的说法，你把华胥人说得很愚蠢，失去了神君的判断就没有办法独立行走。",
           DialogueId = 51178213,
-          GUID = "801E8992"
+          GUID = "801E8992",
+          NextDialogue = 51178214,
+          SpeakNpcId = 100001
         },
         [51178214] = {
           Content = "绝无此意！且听我道来。",
           DialogueId = 51178214,
-          GUID = "801E89BC"
+          GUID = "801E89BC",
+          NextDialogue = 51178215,
+          SpeakNpcId = 701277
         },
         [51178215] = {
           Content = "如果现在的人知晓了谋财害命的下场不是被狴犴惩处，而是被抓起来，经历审讯，那他们的心中便不会畏惧。",
           DialogueId = 51178215,
-          GUID = "801E89E6"
+          GUID = "801E89E6",
+          NextDialogue = 51178216,
+          SpeakNpcId = 701277,
+          TalkActionId = {
+            [1] = "701277:Talk02_Start"
+          }
         },
         [51178216] = {
           Content = "而畏惧就是栓马的木桩，是囚禁兀鹫的牢笼，是限制河水肆意横流的河堤。",
           DialogueId = 51178216,
-          GUID = "801E8A10"
+          GUID = "801E8A10",
+          NextDialogue = 51178217,
+          SpeakNpcId = 701277
         },
         [51178217] = {
           Content = "失去了畏惧，那些阴暗的念头就会不断滋生，蔓延，直至大家又因为兵戈相见而惴惴不安，这还是华胥吗？还是和平的，安宁的华胥吗？",
           DialogueId = 51178217,
-          GUID = "801E8A3A"
+          GUID = "801E8A3A",
+          NextDialogue = 51178218,
+          SpeakNpcId = 701277
         },
         [51178218] = {
           Content = "就算大风九章有错，也好过减轻惩罚，让人们忘却畏惧之心！",
           DialogueId = 51178218,
-          GUID = "801E8A64"
+          GUID = "801E8A64",
+          NextDialogue = 51178219,
+          SpeakNpcId = 701277,
+          TalkActionId = {
+            [1] = "701277:Talk02_End"
+          }
         },
         [51178219] = {
           Content = "你又不是其他人，怎么知道其他华胥人都像你所说的那样心怀不轨呢？还是说你本身是这样的人，于是就拿这样的念头去揣度别人？",
           DialogueId = 51178219,
-          GUID = "801E8A8E"
+          GUID = "801E8A8E",
+          NextDialogue = 51178220,
+          SpeakNpcId = 100001
         },
         [51178220] = {
           Content = "我只是假设，我是说假设！你敢保证没有这样的情况发生吗？",
           DialogueId = 51178220,
-          GUID = "801E8AB8"
+          GUID = "801E8AB8",
+          NextOptions = {
+            [1] = 51178221,
+            [2] = 51178226
+          },
+          SpeakNpcId = 701277
         },
         [51178221] = {
           Content = "（搬出止流。）",
           DialogueId = 51178221,
-          GUID = "801E8AE2"
+          GUID = "801E8AE2",
+          ImprPlusId = 1208,
+          NextDialogue = 51178222
         },
         [51178222] = {
           Content = "我听说，龙渊上卿就是神君的选择。",
           DialogueId = 51178222,
-          GUID = "801E8B0C"
+          GUID = "801E8B0C",
+          NextDialogue = 51178223,
+          SpeakNpcId = 100001
         },
         [51178223] = {
           Content = "既然你相信神君，那你应该选择相信止流——白龙神君选择的龙渊上卿，相信她的判断。",
           DialogueId = 51178223,
-          GUID = "801E8B36"
+          GUID = "801E8B36",
+          NextDialogue = 51178224,
+          SpeakNpcId = 100001
         },
         [51178224] = {
           Content = "止流推动的改制，或许正是神君自己的旨意。",
           DialogueId = 51178224,
-          GUID = "801E8B60"
+          GUID = "801E8B60",
+          NextDialogue = 51178225,
+          SpeakNpcId = 100001
         },
         [51178225] = {
           Content = "神君自己的旨意？不，难道说……",
           DialogueId = 51178225,
-          GUID = "801E8B8A"
+          GUID = "801E8B8A",
+          NextDialogue = 51178232,
+          SpeakNpcId = 701277
         },
         [51178226] = {
           Content = "（讲道理。）",
           DialogueId = 51178226,
-          GUID = "801E8BB4"
+          GUID = "801E8BB4",
+          ImprPlusId = 1207,
+          NextDialogue = 51178227
         },
         [51178227] = {
           Content = "可即使是过去的大风九章，也无法阻止那些存心想做恶事的人。相反，我见过微茫市一群圆滑老道的家伙是如何钻大风九章的空子，逃避惩罚。",
           DialogueId = 51178227,
-          GUID = "801E8BDE"
+          GUID = "801E8BDE",
+          NextDialogue = 51178228,
+          SpeakNpcId = 100001
         },
         [51178228] = {
           Content = "但那些过去因为大风九章错判而被狴犴夺去性命的人，却再也回不来了。",
           DialogueId = 51178228,
-          GUID = "801E8C08"
+          GUID = "801E8C08",
+          NextDialogue = 51178229,
+          SpeakNpcId = 100001
         },
         [51178229] = {
           Content = "我想……相比严酷，可能“确定”和“公正”更重要吧？——确保每一个做错事的人受到惩罚，给每一个被错判的人以纠正的机会。",
           DialogueId = 51178229,
-          GUID = "801E8C32"
+          GUID = "801E8C32",
+          NextDialogue = 51178230,
+          SpeakNpcId = 100001
         },
         [51178230] = {
           Content = "这才是律法的意义，不是吗？",
           DialogueId = 51178230,
-          GUID = "801E8C5C"
+          GUID = "801E8C5C",
+          NextDialogue = 51178231,
+          SpeakNpcId = 100001
         },
         [51178231] = {
           Content = "确定和公正……难道说……",
           DialogueId = 51178231,
-          GUID = "801E8C86"
+          GUID = "801E8C86",
+          NextDialogue = 51178232,
+          SpeakNpcId = 701277,
+          TalkActionId = {
+            [1] = "701277:Think_Start"
+          }
         },
         [51178232] = {
           Content = "你，你说的好像也有点道理，我想想……",
           DialogueId = 51178232,
-          GUID = "801E8CB0"
+          GUID = "801E8CB0",
+          NextDialogue = 51178233,
+          SpeakNpcId = 701277,
+          TalkActionId = {
+            [1] = "701277:Think_End"
+          }
         },
         [51178233] = {
           Content = "（你眼前的男人在你面前失落地喃喃自语，你察觉到他只是有些恐惧——对于华胥即将迎来的改制，对于充满不确定性的未来。）",
           DialogueId = 51178233,
-          GUID = "801E8CDA"
+          GUID = "801E8CDA",
+          NextDialogue = 51178234
         },
         [51178234] = {
           Content = "（但无论如何，变革已然发生——它也必然会发生。）",
@@ -208304,302 +209543,478 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51178235] = {
           Content = "我想想……我再想想……",
           DialogueId = 51178235,
-          GUID = "801E8D46"
+          GUID = "801E8D46",
+          SpeakNpcId = 701277
         },
         [51178301] = {
           Content = "这些木头块都没意思！",
           DialogueId = 51178301,
-          GUID = "801E9802"
+          GUID = "801E9802",
+          SpeakNpcId = 701278
         },
         [51178302] = {
           Content = "现在敲敲打打的这些木头块，那都没意思！要是放在以前，我能给你们看带劲的大家伙！",
           DialogueId = 51178302,
-          GUID = "801E982C"
+          GUID = "801E982C",
+          NextDialogue = 51178303,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Talk02_Start"
+          }
         },
         [51178303] = {
           Content = "想当初，我造的那可都是惊天地泣鬼神的东西，知道应龙壹型吗，那可是我仿造龙君的外型制造出的大型机傀。",
           DialogueId = 51178303,
-          GUID = "801E9856"
+          GUID = "801E9856",
+          NextDialogue = 51178304,
+          SpeakNpcId = 701278
         },
         [51178304] = {
           Content = "可惜啊……那帮不长眼胆子小的，说什么，不敬龙君……什么恐伤路人……什么能止孩儿夜啼……",
           DialogueId = 51178304,
-          GUID = "801E9880"
+          GUID = "801E9880",
+          NextDialogue = 51178305,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Talk02_End"
+          }
         },
         [51178305] = {
           Content = "连启动都没有，连夜拆了个干净，可怜我花了多少心血，却见一眼他动起来的样子都不行……",
           DialogueId = 51178305,
-          GUID = "801E98AA"
+          GUID = "801E98AA",
+          NextOptions = {
+            [1] = 51178306,
+            [2] = 51178308
+          },
+          SpeakNpcId = 701278
         },
         [51178306] = {
           Content = "至少你还见过他被拆成碎片的样子。",
           DialogueId = 51178306,
-          GUID = "801E98D4"
+          GUID = "801E98D4",
+          ImprPlusId = 1210,
+          NextDialogue = 51178307
         },
         [51178307] = {
           Content = "你！你这家伙！怎么这么说话的！呜呜呜……我的应龙壹型，呜啊！",
           DialogueId = 51178307,
-          GUID = "801E98FE"
+          GUID = "801E98FE",
+          NextDialogue = 51178310,
+          SpeakNpcId = 701278
         },
         [51178308] = {
           Content = "拆了之后的碎片做什么了？",
           DialogueId = 51178308,
-          GUID = "801E9928"
+          GUID = "801E9928",
+          ImprPlusId = 1206,
+          NextDialogue = 51178309
         },
         [51178309] = {
           Content = "还能做什么……当然是再利用成了那些小玩具的零件……呜……可怜了我的应龙壹型，呜啊！",
           DialogueId = 51178309,
-          GUID = "801E9952"
+          GUID = "801E9952",
+          NextDialogue = 51178310,
+          SpeakNpcId = 701278
         },
         [51178310] = {
           Content = "（老大不小的男人在你面前哭得像个稚嫩的孩子，看起来十分可怜。）",
           DialogueId = 51178310,
-          GUID = "801E997C"
+          GUID = "801E997C",
+          NextOptions = {
+            [1] = 51178311
+          },
+          RestartTag = 51178310
         },
         [51178311] = {
           Content = "（你挑起来的，还是安慰安慰他吧。）",
           DialogueId = 51178311,
-          GUID = "801E99A6"
+          FailDialogue = 51178312,
+          GUID = "801E99A6",
+          ImprCheckId = 1150,
+          NextDialogue = 51178313
         },
         [51178312] = {
           Content = "（想不到该说什么，你实在不会安慰人。）",
           DialogueId = 51178312,
-          GUID = "801E99D0"
+          GUID = "801E99D0",
+          SpeakNpcId = 100001
         },
         [51178313] = {
           Content = "别哭了，是我不好，让你想起了难过的事情。",
           DialogueId = 51178313,
-          GUID = "801E99FA"
+          GUID = "801E99FA",
+          NextDialogue = 51178314,
+          SpeakNpcId = 100001
         },
         [51178314] = {
           Content = "嘶……不，不怪你，我只是感叹机枢派近些年来落魄至此。",
           DialogueId = 51178314,
-          GUID = "801E9A24"
+          GUID = "801E9A24",
+          NextDialogue = 51178315,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Talk03_Start"
+          }
         },
         [51178315] = {
           Content = "曾经的机枢派，是多么百花齐放，书本上说，机傀术几乎每天都会进行迭代。更优越的性能，更炫酷的外型……",
           DialogueId = 51178315,
-          GUID = "801E9A4E"
+          GUID = "801E9A4E",
+          NextDialogue = 51178316,
+          SpeakNpcId = 701278
         },
         [51178316] = {
           Content = "而现在呢，没法做出什么创新了。有也只是小打小闹，多么无趣，我只恨自己生的晚，没能亲历那个辉煌的年代。",
           DialogueId = 51178316,
-          GUID = "801E9A78"
+          GUID = "801E9A78",
+          NextDialogue = 51178317,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Talk03_End"
+          }
         },
         [51178317] = {
           Content = "只要你潜心钻研，以后说不定会好起来的，可以再造一个……应龙贰型？",
           DialogueId = 51178317,
-          GUID = "801E9AA2"
+          GUID = "801E9AA2",
+          NextDialogue = 51178318,
+          SpeakNpcId = 100001
         },
         [51178318] = {
           Content = "实不相瞒，我最近已有了一些念头，就是关于重建应龙壹型的，不对，现在应该叫应龙贰型。",
           DialogueId = 51178318,
-          GUID = "801E9ACC"
+          GUID = "801E9ACC",
+          NextDialogue = 51178319,
+          SpeakNpcId = 701278
         },
         [51178319] = {
           Content = "早年的设计稍许还是有些稚嫩，比如耗能过高，机体容易过热，还有外型过于庞大，移动不是很方便……",
           DialogueId = 51178319,
-          GUID = "801E9AF6"
+          GUID = "801E9AF6",
+          NextDialogue = 51178320,
+          SpeakNpcId = 701278
         },
         [51178320] = {
           Content = "虽然我的确有了一些想法，但我也想听听别人的意见……对了，你觉得你理想中的机傀应该是什么样子，没关系，随便说就行，只当是聊天就好。",
           DialogueId = 51178320,
-          GUID = "801E9B20"
+          GUID = "801E9B20",
+          NextOptions = {
+            [1] = 51178321,
+            [2] = 51178324,
+            [3] = 51178328
+          },
+          SpeakNpcId = 701278
         },
         [51178321] = {
           Content = "机傀就应该强大！战无不胜！",
           DialogueId = 51178321,
-          GUID = "801E9B4A"
+          GUID = "801E9B4A",
+          ImprPlusId = 1206,
+          NextDialogue = 51178322
         },
         [51178322] = {
           Content = "强大……没错，我也这么觉得，这也是我设计应龙形态机傀的初衷，毕竟在华胥，没有什么比龙神更为强大的东西了。",
           DialogueId = 51178322,
-          GUID = "801E9B74"
+          GUID = "801E9B74",
+          NextDialogue = 51178323,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Think_Start"
+          }
         },
         [51178323] = {
           Content = "既然你也觉得强大是对的，那我在下次设计应龙贰型时，将重点放在供能和耗能相关上吧……",
           DialogueId = 51178323,
-          GUID = "801E9B9E"
+          GUID = "801E9B9E",
+          NextDialogue = 51178332,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Think_End"
+          }
         },
         [51178324] = {
           Content = "强是暂时的，但帅气是一辈子的。",
           DialogueId = 51178324,
-          GUID = "801E9BC8"
+          GUID = "801E9BC8",
+          ImprPlusId = 1208,
+          NextDialogue = 51178325
         },
         [51178325] = {
           Content = "帅气……没错！你说的很有道理，日后华胥的机傀术一定会再现曾经的荣光。",
           DialogueId = 51178325,
-          GUID = "801E9BF2"
+          GUID = "801E9BF2",
+          NextDialogue = 51178326,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Think_Start"
+          }
         },
         [51178326] = {
           Content = "当更新迭代的速度过快时，我即使做出了当前最为强大的机傀，没两天也会被淘汰。",
           DialogueId = 51178326,
-          GUID = "801E9C1C"
+          GUID = "801E9C1C",
+          NextDialogue = 51178327,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Think_End"
+          }
         },
         [51178327] = {
           Content = "所以，我就应该在外型上多下些功夫，比如我把外甲替换为汉白玉如何？一定艳惊四座！",
           DialogueId = 51178327,
-          GUID = "801E9C46"
+          GUID = "801E9C46",
+          NextDialogue = 51178332,
+          SpeakNpcId = 701278
         },
         [51178328] = {
           Content = "机傀一定要有娱乐性。",
           DialogueId = 51178328,
-          GUID = "801E9C70"
+          GUID = "801E9C70",
+          ImprPlusId = 1210,
+          NextDialogue = 51178329
         },
         [51178329] = {
           Content = "娱乐……性？我没有特别理解你的意思，你是说，机傀要有趣？好玩？这听起来好像和现在的机傀方向没什么相关性。",
           DialogueId = 51178329,
-          GUID = "801E9C9A"
+          GUID = "801E9C9A",
+          NextDialogue = 51178330,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Think_Start"
+          }
         },
         [51178330] = {
           Content = "哦哦！我明白了，你的意思是，机傀应该剑走偏锋，比如我设计出一个龙君外型的机傀，它如果会唱歌跳舞，那一定十分受人欢迎。",
           DialogueId = 51178330,
-          GUID = "801E9CC4"
+          GUID = "801E9CC4",
+          NextDialogue = 51178331,
+          SpeakNpcId = 701278,
+          TalkActionId = {
+            [1] = "701278:Think_End"
+          }
         },
         [51178331] = {
           Content = "是啊，我怎么没想到呢，如果当时我的应龙壹型可以给那些家伙唱首歌，说不定他们就乐颠颠地拍手叫好，也不会拆了它……",
           DialogueId = 51178331,
-          GUID = "801E9CEE"
+          GUID = "801E9CEE",
+          NextDialogue = 51178332,
+          SpeakNpcId = 701278
         },
         [51178332] = {
           Content = "你的建议我完全明白了，我相信我会设计出一个最完美的应龙贰型！",
           DialogueId = 51178332,
-          GUID = "801E9D18"
+          GUID = "801E9D18",
+          NextDialogue = 51178333,
+          SpeakNpcId = 701278
         },
         [51178333] = {
           Content = "等到应龙贰型落地后，我一定第一个找你来看看！",
           DialogueId = 51178333,
-          GUID = "801E9D42"
+          GUID = "801E9D42",
+          SpeakNpcId = 701278
         },
         [51178334] = {
           Content = "怎么这么快就回来了，应龙贰型还没头绪呢！",
           DialogueId = 51178334,
-          GUID = "801E9D84"
+          GUID = "801E9D84",
+          SpeakNpcId = 701278
         },
         [51178401] = {
           Content = "皎皎为何不能当香官？",
           DialogueId = 51178401,
-          GUID = "801EA86A"
+          GUID = "801EA86A",
+          SpeakNpcId = 701279
         },
         [51178402] = {
           Content = "皎皎为何不能当香官？我偏要当这皎皎第一人！",
           DialogueId = 51178402,
-          GUID = "801EA894"
+          GUID = "801EA894",
+          NextDialogue = 51178403,
+          SpeakNpcId = 701279,
+          TalkActionId = {
+            [1] = "701279:Confident_Start"
+          }
         },
         [51178403] = {
           Content = "（在你面前的这位皎皎双手叉腰，似乎在和谁较劲一般，气得面红耳赤。）",
           DialogueId = 51178403,
-          GUID = "801EA8BE"
+          GUID = "801EA8BE",
+          NextDialogue = 51178404,
+          TalkActionId = {
+            [1] = "701279:Confident_End"
+          }
         },
         [51178404] = {
           Content = "你你你！你看什么看！你也觉得我不能当香官？",
           DialogueId = 51178404,
-          GUID = "801EA8E8"
+          GUID = "801EA8E8",
+          NextOptions = {
+            [1] = 51178405,
+            [2] = 51178408,
+            [3] = 51178412
+          },
+          SpeakNpcId = 701279
         },
         [51178405] = {
           Content = "我没这么说，是你自己说的。",
           DialogueId = 51178405,
-          GUID = "801EA912"
+          GUID = "801EA912",
+          ImprPlusId = 1208,
+          NextDialogue = 51178406
         },
         [51178406] = {
           Content = "分明就是有！你的眼神，你的行为，你嘴巴弯起的弧度，都在挑衅我！",
           DialogueId = 51178406,
-          GUID = "801EA93C"
+          GUID = "801EA93C",
+          NextDialogue = 51178407,
+          SpeakNpcId = 701279
         },
         [51178407] = {
           Content = "我只是在呼吸。",
           DialogueId = 51178407,
-          GUID = "801EA966"
+          GUID = "801EA966",
+          NextDialogue = 51178416,
+          SpeakNpcId = 100001
         },
         [51178408] = {
           Content = "挺好的啊，我没这么觉得。",
           DialogueId = 51178408,
-          GUID = "801EA990"
+          GUID = "801EA990",
+          ImprPlusId = 1209,
+          NextDialogue = 51178409
         },
         [51178409] = {
           Content = "真的吗？！看你飘忽不定的眼神，该不会是随便说些好听的话来哄我的吧？",
           DialogueId = 51178409,
-          GUID = "801EA9BA"
+          GUID = "801EA9BA",
+          NextDialogue = 51178410,
+          SpeakNpcId = 701279
         },
         [51178410] = {
           Content = "真的啊，我像在哄你吗？",
           DialogueId = 51178410,
-          GUID = "801EA9E4"
+          GUID = "801EA9E4",
+          NextDialogue = 51178411,
+          SpeakNpcId = 100001
         },
         [51178411] = {
           Content = "嗯……嗯……好吧，那我就相信你了！",
           DialogueId = 51178411,
-          GUID = "801EAA0E"
+          GUID = "801EAA0E",
+          NextDialogue = 51178416,
+          SpeakNpcId = 701279
         },
         [51178412] = {
           Content = "大头鱼还能当香官？",
           DialogueId = 51178412,
-          GUID = "801EAA38"
+          GUID = "801EAA38",
+          ImprPlusId = 1210,
+          NextDialogue = 51178413
         },
         [51178413] = {
           Content = "骂谁大头鱼呢！",
           DialogueId = 51178413,
-          GUID = "801EAA62"
+          GUID = "801EAA62",
+          NextDialogue = 51178414,
+          SpeakNpcId = 701279
         },
         [51178414] = {
           Content = "谁应了谁就是大头鱼。",
           DialogueId = 51178414,
-          GUID = "801EAA8C"
+          GUID = "801EAA8C",
+          NextDialogue = 51178415,
+          SpeakNpcId = 100001
         },
         [51178415] = {
           Content = "哼！本香官和其他一触即炸的皎皎们可不一样，我可是经受过专业教育，这种小小的挑衅才不会放在眼里呢！",
           DialogueId = 51178415,
-          GUID = "801EAAB6"
+          GUID = "801EAAB6",
+          NextDialogue = 51178416,
+          SpeakNpcId = 701279
         },
         [51178416] = {
           Content = "反正无论怎么样努力都要被质疑……我早就习惯了……",
           DialogueId = 51178416,
-          GUID = "801EAAE0"
+          GUID = "801EAAE0",
+          NextDialogue = 51178417,
+          SpeakNpcId = 701279,
+          TalkActionId = {
+            [1] = "701279:Explain01_Start"
+          }
         },
         [51178417] = {
           Content = "他们只看到我当上香官时的风风光光，怎么就不看我从最开始压根不认识华胥字，到现在可以对《香籍》倒背如流？",
           DialogueId = 51178417,
-          GUID = "801EAB0A"
+          GUID = "801EAB0A",
+          NextDialogue = 51178418,
+          SpeakNpcId = 701279,
+          TalkActionId = {
+            [1] = "701279:Explain01_End"
+          }
         },
         [51178418] = {
           Content = "他们都说皎皎一族只要负责可爱就好了，可以被大个子们抱起来捏捏脸揉揉头发就好，但我不想成为这样的皎皎。",
           DialogueId = 51178418,
-          GUID = "801EAB34"
+          GUID = "801EAB34",
+          NextDialogue = 51178419,
+          SpeakNpcId = 701279
         },
         [51178419] = {
           Content = "我觉得我应该要更特殊一些，大家看到我的时候想到的不是：啊，这是一个皎皎。",
           DialogueId = 51178419,
-          GUID = "801EAB5E"
+          GUID = "801EAB5E",
+          NextDialogue = 51178420,
+          SpeakNpcId = 701279
         },
         [51178420] = {
           Content = "而是：快看呐，是那个很厉害的香官皎皎！",
           DialogueId = 51178420,
-          GUID = "801EAB88"
+          GUID = "801EAB88",
+          NextOptions = {
+            [1] = 51178421
+          },
+          SpeakNpcId = 701279
         },
         [51178421] = {
           Content = "我觉得你已经做到了。",
           DialogueId = 51178421,
-          GUID = "801EABB2"
+          GUID = "801EABB2",
+          NextDialogue = 51178422
         },
         [51178422] = {
           Content = "人们对你的香官身份产生质疑，不正是说明他们想起你的时候冒出的第一个身份是香官皎皎，而不是一位普通的皎皎吗？",
           DialogueId = 51178422,
-          GUID = "801EABDC"
+          GUID = "801EABDC",
+          NextDialogue = 51178423,
+          SpeakNpcId = 100001
         },
         [51178423] = {
           Content = "剩下的，有关你能不能胜任这个职位的事情，不如就交给时间来证明吧。",
           DialogueId = 51178423,
-          GUID = "801EAC06"
+          GUID = "801EAC06",
+          NextDialogue = 51178424,
+          SpeakNpcId = 100001
         },
         [51178424] = {
           Content = "你说得对。只要我做好自己的本职工作，那些闲言碎语的人迟早会意识到我有多厉害，我只要一直努力，一直向上走……",
           DialogueId = 51178424,
-          GUID = "801EAC30"
+          GUID = "801EAC30",
+          NextDialogue = 51178425,
+          SpeakNpcId = 701279,
+          TalkActionId = {
+            [1] = "701279:Confident_Start"
+          }
         },
         [51178425] = {
           Content = "一定！我一定可以做到的！",
           DialogueId = 51178425,
-          GUID = "801EAC5A"
+          GUID = "801EAC5A",
+          NextDialogue = 51178426,
+          SpeakNpcId = 701279,
+          TalkActionId = {
+            [1] = "701279:Confident_End"
+          }
         },
         [51178426] = {
           Content = "（她的脸上扬起明媚而自信的笑容，比今天的阳光还要耀眼。）",
@@ -208609,180 +210024,253 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51178427] = {
           Content = "愿你善根常驻……咦？是你~你回来看我啦~",
           DialogueId = 51178427,
-          GUID = "801EACC6"
+          GUID = "801EACC6",
+          SpeakNpcId = 701279
         },
         [51178501] = {
           Content = "这些往事，我可全都记着呢！",
           DialogueId = 51178501,
-          GUID = "801EB8D2"
+          GUID = "801EB8D2",
+          SpeakNpcId = 701280
         },
         [51178502] = {
           Content = "想起来了，我可都想起来了，这些往事，我可全都记着呢！",
           DialogueId = 51178502,
-          GUID = "801EB8FC"
+          GUID = "801EB8FC",
+          NextDialogue = 51178503,
+          SpeakNpcId = 701280
         },
         [51178503] = {
           Content = "你……就是你，你快过来，趁着我还清醒，这事我要说给你听，不然在月光拐过墙头时，我可能就什么也想不起来了……",
           DialogueId = 51178503,
-          GUID = "801EB926"
+          GUID = "801EB926",
+          NextDialogue = 51178504,
+          SpeakNpcId = 701280
         },
         [51178504] = {
-          Content = "小娃儿，你愿意耽搁片刻，听老头子我说说这个故事吗？",
+          Content = "小娃儿，你愿意耽搁片刻，听老婆子我说说这个故事吗？",
           DialogueId = 51178504,
-          GUID = "801EB950"
+          GUID = "801EB950",
+          NextOptions = {
+            [1] = 51178505,
+            [2] = 51178507
+          },
+          SpeakNpcId = 701280
         },
         [51178505] = {
           Content = "我愿意。",
           DialogueId = 51178505,
-          GUID = "801EB97A"
+          GUID = "801EB97A",
+          ImprPlusId = 1209,
+          NextDialogue = 51178506
         },
         [51178506] = {
           Content = "好，太好了，我要抓紧……",
           DialogueId = 51178506,
-          GUID = "801EB9A4"
+          GUID = "801EB9A4",
+          NextDialogue = 51178511,
+          SpeakNpcId = 701280
         },
         [51178507] = {
           Content = "我的时间很宝贵。",
           DialogueId = 51178507,
-          GUID = "801EB9CE"
+          GUID = "801EB9CE",
+          ImprPlusId = 1206,
+          NextDialogue = 51178508
         },
         [51178508] = {
           Content = "不会耽误你太久的，毕竟时间久了，可能我也要忘了……",
           DialogueId = 51178508,
-          GUID = "801EB9F8"
+          GUID = "801EB9F8",
+          NextOptions = {
+            [1] = 51178509
+          },
+          SpeakNpcId = 701280
         },
         [51178509] = {
           Content = "没空。",
           DialogueId = 51178509,
-          GUID = "801EBA22"
+          GUID = "801EBA22",
+          NextDialogue = 51178510
         },
         [51178510] = {
           Content = "是吗……那算了，只好等到下一位有缘人，下一位让我想起这些事的有缘人了……",
           DialogueId = 51178510,
-          GUID = "801EBA4C"
+          GUID = "801EBA4C",
+          SpeakNpcId = 701280
         },
         [51178511] = {
           Content = "让我想想，这事要从哪里说起来呢……",
           DialogueId = 51178511,
-          GUID = "801EBA76"
+          GUID = "801EBA76",
+          NextDialogue = 51178512,
+          SpeakNpcId = 701280
         },
         [51178512] = {
           Content = "这一片儿，以前都是一家的，那家正是皓京城里赫赫有名的首富——萧府。",
           DialogueId = 51178512,
-          GUID = "801EBAA0"
+          GUID = "801EBAA0",
+          NextDialogue = 51178513,
+          SpeakNpcId = 701280
         },
         [51178513] = {
           Content = "我是府上的管事，自小就跟着老爷做事，老爷年轻时经商，攒下了万贯家财，平日里便喜欢收集些古玩书画，我便常年帮他跑东跑西，收集藏品。",
           DialogueId = 51178513,
-          GUID = "801EBACA"
+          GUID = "801EBACA",
+          NextDialogue = 51178514,
+          SpeakNpcId = 701280
         },
         [51178514] = {
           Content = "本想这辈子便也就这样了，谁想到老爷竟老来得子，府里上下欢天喜地。",
           DialogueId = 51178514,
-          GUID = "801EBAF4"
+          GUID = "801EBAF4",
+          NextDialogue = 51178515,
+          SpeakNpcId = 701280
         },
         [51178515] = {
           Content = "小公子年幼，但聪慧的很，老爷十分看重他，更是宠得无法无天，不爱读书那便不读，喜欢拿那些老爷的藏品当玩具那也随他。",
           DialogueId = 51178515,
-          GUID = "801EBB1E"
+          GUID = "801EBB1E",
+          NextDialogue = 51178516,
+          SpeakNpcId = 701280
         },
         [51178516] = {
           Content = "谁曾想呢，小公子竟成了个纨绔性格，不把所有人看在眼里，还十分挥霍，花起府上的钱来眼也不眨。",
           DialogueId = 51178516,
-          GUID = "801EBB48"
+          GUID = "801EBB48",
+          NextDialogue = 51178517,
+          SpeakNpcId = 701280
         },
         [51178517] = {
           Content = "我当时管着账房，几次向老爷劝阻，他却只摆摆手由着。",
           DialogueId = 51178517,
-          GUID = "801EBB72"
+          GUID = "801EBB72",
+          NextDialogue = 51178518,
+          SpeakNpcId = 701280
         },
         [51178518] = {
           Content = "后来啊，老爷生意出现了问题，府上收入渐少，形势日益严峻。少爷还充耳不闻，整日花天酒地。",
           DialogueId = 51178518,
-          GUID = "801EBB9C"
+          GUID = "801EBB9C",
+          NextDialogue = 51178519,
+          SpeakNpcId = 701280
         },
         [51178519] = {
           Content = "老爷心痛，却不好说什么，可能是为了寄托，也可能只是他心善，他从外接回来许多孩子，都是父母因意外离世后没人管的孤儿，养在府中当义子。",
           DialogueId = 51178519,
-          GUID = "801EBBC6"
+          GUID = "801EBBC6",
+          NextDialogue = 51178520,
+          SpeakNpcId = 701280
         },
         [51178520] = {
           Content = "那时他已经很老了，坐在那腰也直不起来，眼神也浑浊起来，只在看到孩子们围在他身边叫爷爷时才冒出些光彩来。",
           DialogueId = 51178520,
-          GUID = "801EBBF0"
-        },
-        [51178521] = {
-          Content = "没多久，老爷离世了，他嘱咐我葬礼一切从简，省下钱将这些苦命的孩子们拉扯长大，至于少爷……他没吩咐。",
-          DialogueId = 51178521,
-          GUID = "801EBC1A"
-        },
-        [51178522] = {
-          Content = "萧府的顶梁柱断了，少爷没那个本事管着家里的铺子，但各方的开销还在继续，我只能变卖府上房子，将偌大一个府邸拆成各个房子出售给他人。",
-          DialogueId = 51178522,
-          GUID = "801EBC44"
-        },
-        [51178523] = {
-          Content = "那些孩子，可怜的孩子们，他们不知道发生了什么，只知道疼他们的爷爷不见了，吃的东西从顿顿好的变成了粗茶淡饭。",
-          DialogueId = 51178523,
-          GUID = "801EBC6E"
-        },
-        [51178524] = {
-          Content = "少爷没多久就离开了萧府，我不晓得他去哪里了，因我根本没那个闲心去管，那些孩子逐渐长大，我拉扯他们也不容易……",
-          DialogueId = 51178524,
-          GUID = "801EBC98"
+          GUID = "801EBBF0",
+          NextDialogue = 51178521,
+          SpeakNpcId = 701280
         }
       }
     end
   },
   {
-    MinKey = 51178525,
-    MaxKey = 60030301,
+    MinKey = 51178521,
+    MaxKey = 60020901,
     Loader = function()
       return {
+        [51178521] = {
+          Content = "没多久，老爷离世了，他嘱咐我葬礼一切从简，省下钱将这些苦命的孩子们拉扯长大，至于少爷……他没吩咐。",
+          DialogueId = 51178521,
+          GUID = "801EBC1A",
+          NextDialogue = 51178522,
+          SpeakNpcId = 701280
+        },
+        [51178522] = {
+          Content = "萧府的顶梁柱断了，少爷没那个本事管着家里的铺子，但各方的开销还在继续，我只能变卖府上房子，将偌大一个府邸拆成各个房子出售给他人。",
+          DialogueId = 51178522,
+          GUID = "801EBC44",
+          NextDialogue = 51178523,
+          SpeakNpcId = 701280
+        },
+        [51178523] = {
+          Content = "那些孩子，可怜的孩子们，他们不知道发生了什么，只知道疼他们的爷爷不见了，吃的东西从顿顿好的变成了粗茶淡饭。",
+          DialogueId = 51178523,
+          GUID = "801EBC6E",
+          NextDialogue = 51178524,
+          SpeakNpcId = 701280
+        },
+        [51178524] = {
+          Content = "少爷没多久就离开了萧府，我不晓得他去哪里了，因我根本没那个闲心去管，那些孩子逐渐长大，我拉扯他们也不容易……",
+          DialogueId = 51178524,
+          GUID = "801EBC98",
+          NextDialogue = 51178525,
+          SpeakNpcId = 701280
+        },
         [51178525] = {
           Content = "一直到那一日……那些孩子里最大的那位，十岁生日的时候……再过几年就可以出去做工的年纪。",
           DialogueId = 51178525,
-          GUID = "801EBCC2"
+          GUID = "801EBCC2",
+          NextDialogue = 51178526,
+          SpeakNpcId = 701280
         },
         [51178526] = {
           Content = "我们都围在最后卖剩下的那间主屋里，我去买了米面和蛋，做了长寿面，少爷也赶了回来，他看起来十分憔悴，虽说我们也好不到哪去。",
           DialogueId = 51178526,
-          GUID = "801EBCEC"
+          GUID = "801EBCEC",
+          NextDialogue = 51178527,
+          SpeakNpcId = 701280
         },
         [51178527] = {
           Content = "那些孩子，小时候都是健健康康的，可能是我没能好好喂养他们，各个长大后瘦骨嶙峋，动不动就晕倒。",
           DialogueId = 51178527,
-          GUID = "801EBD16"
+          GUID = "801EBD16",
+          NextDialogue = 51178528,
+          SpeakNpcId = 701280
         },
         [51178528] = {
           Content = "我端了面出来，一个二个眼睛冒着光，小狼一样，哧溜哧溜吸口水。",
           DialogueId = 51178528,
-          GUID = "801EBD40"
+          GUID = "801EBD40",
+          NextDialogue = 51178529,
+          SpeakNpcId = 701280
         },
         [51178529] = {
           Content = "那天晚上啊少爷回来了，带着一大篓鱼，鱼又多又大，也有好多种，我都记不太清。",
           DialogueId = 51178529,
-          GUID = "801EBD6A"
+          GUID = "801EBD6A",
+          NextDialogue = 51178530,
+          SpeakNpcId = 701280
         },
         [51178530] = {
           Content = "老爷还在世的时候少爷就最喜欢钓鱼，但等他过世的后少爷就一直劳碌，就没怎么挥过杆，没曾想他这本事一直没丢。",
           DialogueId = 51178530,
-          GUID = "801EBD94"
+          GUID = "801EBD94",
+          NextDialogue = 51178531,
+          SpeakNpcId = 701280
         },
         [51178531] = {
           Content = "全家欢天喜地把这些鱼给煮了，府上也没有盐巴，就白水煮了，但毕竟是少爷新钓的，竟是一点也没有腥气……",
           DialogueId = 51178531,
-          GUID = "801EBDBE"
+          GUID = "801EBDBE",
+          NextDialogue = 51178532,
+          SpeakNpcId = 701280
         },
         [51178532] = {
           Content = "后来……后来发生了什么……啊……我想不起来了……发生了什么呢……",
           DialogueId = 51178532,
-          GUID = "801EBDE8"
+          GUID = "801EBDE8",
+          NextOptions = {
+            [1] = 51178533
+          },
+          RestartTag = 51178532,
+          SpeakNpcId = 701280
         },
         [51178533] = {
           Content = "（他说的话听起来有些耳熟，你隐约想起了……）",
           DialogueId = 51178533,
-          GUID = "801EBE12"
+          FailDialogue = 51178534,
+          GUID = "801EBE12",
+          ImprCheckId = 1151,
+          NextDialogue = 51178535
         },
         [51178534] = {
           Content = "（你没有想起什么。）",
@@ -208792,352 +210280,506 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         [51178535] = {
           Content = "我听说，华胥有一种鱼有剧毒……需要细心处理……否则……",
           DialogueId = 51178535,
-          GUID = "801EBE66"
+          GUID = "801EBE66",
+          NextDialogue = 51178536,
+          SpeakNpcId = 100001
         },
         [51178536] = {
           Content = "…………！",
           DialogueId = 51178536,
-          GUID = "801EBE90"
+          GUID = "801EBE90",
+          NextDialogue = 51178537,
+          SpeakNpcId = 701280
         },
         [51178537] = {
           Content = "是了，那时候我不知怎的胸闷，迷迷瞪瞪地晕过去了。昏迷前，我看见少爷和孩子们都歪七扭八地躺在周围的地上……",
           DialogueId = 51178537,
-          GUID = "801EBEBA"
+          GUID = "801EBEBA",
+          NextDialogue = 51178538,
+          SpeakNpcId = 701280
         },
         [51178538] = {
           Content = "老爷……我没做到，我没做到啊……您让我照顾好的孩子们，我都没做到……",
           DialogueId = 51178538,
-          GUID = "801EBEE4"
+          GUID = "801EBEE4",
+          NextDialogue = 51178539,
+          SpeakNpcId = 701280
         },
         [51178539] = {
           Content = "（你面前的无由生突然剧烈地抖动，看起来悲怆万分……无由生也会流泪吗？）",
           DialogueId = 51178539,
-          GUID = "801EBF0E"
+          GUID = "801EBF0E",
+          NextDialogue = 51178540
         },
         [51178540] = {
           Content = "（片刻之后，它似乎平复了情绪。又如同初见时一般在原地徘徊着……）",
           DialogueId = 51178540,
-          GUID = "801EBF38"
+          GUID = "801EBF38",
+          NextDialogue = 51178541
         },
         [51178541] = {
           Content = "啊……我想起来了，这些往事，我都想起来了！",
           DialogueId = 51178541,
-          GUID = "801EBF62"
+          GUID = "801EBF62",
+          NextDialogue = 51178542,
+          SpeakNpcId = 701280
         },
         [51178542] = {
           Content = "你……就是你，你快过来，趁着我还清醒，这事我要说给你听，不然在月光拐过墙头时，我可能就什么也想不起来了……",
           DialogueId = 51178542,
-          GUID = "801EBF8C"
+          GUID = "801EBF8C",
+          NextDialogue = 51178543,
+          SpeakNpcId = 701280
         },
         [51178543] = {
           Content = "这故事你已经说过一遍了。",
           DialogueId = 51178543,
-          GUID = "801EBFB6"
+          GUID = "801EBFB6",
+          NextDialogue = 51178544,
+          SpeakNpcId = 100001
         },
         [51178544] = {
           Content = "说过了？我怎么想不起来了？已经说过了吗？我记得……我没……",
           DialogueId = 51178544,
-          GUID = "801EBFE0"
+          GUID = "801EBFE0",
+          NextDialogue = 51178545,
+          SpeakNpcId = 701280
         },
         [51178545] = {
           Content = "………………再见。",
           DialogueId = 51178545,
-          GUID = "801EC00A"
+          GUID = "801EC00A",
+          NextDialogue = 51178546,
+          SpeakNpcId = 100001
         },
         [51178546] = {
           Content = "说过了吗？老爷……为何突然想起这个名字？老爷是谁？",
           DialogueId = 51178546,
-          GUID = "801EC034"
+          GUID = "801EC034",
+          NextDialogue = 51178547,
+          SpeakNpcId = 701280
         },
         [51178547] = {
           Content = "谁？我又是谁……我有愧于你啊……有愧于……谁？",
           DialogueId = 51178547,
-          GUID = "801EC05E"
+          GUID = "801EC05E",
+          SpeakNpcId = 701280
         },
         [51178548] = {
           Content = "我是谁？以前的那些事，我还记得吗？呜呜呜……",
           DialogueId = 51178548,
-          GUID = "801EC0A0"
+          GUID = "801EC0A0",
+          SpeakNpcId = 701280
         },
         [51178601] = {
           Content = "飘零四杰啊……",
           DialogueId = 51178601,
-          GUID = "801EC93A"
+          GUID = "801EC93A",
+          SpeakNpcId = 701281
         },
         [51178602] = {
           Content = "飘零四杰啊……那时候的意气风发，如今尽往矣……",
           DialogueId = 51178602,
-          GUID = "801EC964"
+          GUID = "801EC964",
+          NextDialogue = 51178603,
+          SpeakNpcId = 701281,
+          TalkActionId = {
+            [1] = "701281:Talk01_Start"
+          }
         },
         [51178603] = {
           Content = "在我们山外山老一辈人的眼里，他们好似还是来时那桀骜不驯的半大青年。未曾想到，十数年过去，如今的皓京城里，他们也成为了街头巷尾的传奇故事。",
           DialogueId = 51178603,
-          GUID = "801EC98E"
+          GUID = "801EC98E",
+          NextDialogue = 51178604,
+          SpeakNpcId = 701281
         },
         [51178604] = {
           Content = "有空的话，再说与你们听。今天先回去做功课吧。",
           DialogueId = 51178604,
-          GUID = "801EC9B8"
+          GUID = "801EC9B8",
+          NextDialogue = 51178605,
+          SpeakNpcId = 701281,
+          TalkActionId = {
+            [1] = "701281:Talk01_End"
+          }
         },
         [51178605] = {
           Content = "老爷爷好坏，回回都吊着我们，上次说的烛阴闹海的故事也是说到一半就赶我们走，分明是故意的。",
           DialogueId = 51178605,
-          GUID = "801EC9E2"
+          GUID = "801EC9E2",
+          NextDialogue = 51178606,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_Kid"
         },
         [51178606] = {
           Content = "噢哟，倒赖上我了，你可记得你们的好老师菡姐因着你们在功课里胡乱写我讲的传奇故事，课上到一半就要来我这儿要说法，我可惹不起！",
           DialogueId = 51178606,
-          GUID = "801ECA0C"
+          GUID = "801ECA0C",
+          NextDialogue = 51178607,
+          SpeakNpcId = 701281
         },
         [51178607] = {
           Content = "略略略！我不管，你就是骗我们，除非明天我来的时候你给我吃饴糖，我就原谅你。",
           DialogueId = 51178607,
-          GUID = "801ECA36"
+          GUID = "801ECA36",
+          NextDialogue = 51178608,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_Kid"
         },
         [51178608] = {
           Content = "你这小鬼，是想从我这里骗饴糖吧！",
           DialogueId = 51178608,
-          GUID = "801ECA60"
+          GUID = "801ECA60",
+          NextDialogue = 51178609,
+          SpeakNpcId = 701281
         },
         [51178609] = {
           Content = "不听不听，咱们说好了，明天我就来取饴糖！我先走了！",
           DialogueId = 51178609,
-          GUID = "801ECA8A"
+          GUID = "801ECA8A",
+          NextDialogue = 51178610,
+          SpeakNpcName = "UI_CMNpc_Haojing_Name_Kid"
         },
         [51178610] = {
           Content = "（顽劣的孩子嬉笑打闹着，张牙舞爪地跑开了。）",
           DialogueId = 51178610,
-          GUID = "801ECAB4"
+          GUID = "801ECAB4",
+          IsBlack = 1,
+          NextDialogue = 51178611,
+          Scripts = "SetVisibility{ActorId{701282},Visibility{\"Hide\"}}"
         },
         [51178611] = {
           Content = "这孩子……",
           DialogueId = 51178611,
-          GUID = "801ECADE"
+          GUID = "801ECADE",
+          NextDialogue = 51178612,
+          SpeakNpcId = 701281
         },
         [51178612] = {
           Content = "（老人这才注意到你，面上显出几分诧异。）",
+          DefaultLookAt = "701281:n(0)",
           DialogueId = 51178612,
-          GUID = "801ECB08"
+          GUID = "801ECB08",
+          LookAt = {
+            [1] = "701281:n(0)"
+          },
+          NextDialogue = 51178613
         },
         [51178613] = {
           Content = "你是刚来的后生吗？看着有些面生……",
           DialogueId = 51178613,
-          GUID = "801ECB32"
+          GUID = "801ECB32",
+          NextOptions = {
+            [1] = 51178614,
+            [2] = 51178615,
+            [3] = 51178617
+          },
+          SpeakNpcId = 701281
         },
         [51178614] = {
           Content = "我是苏乙带来的客人。",
           DialogueId = 51178614,
-          GUID = "801ECB5C"
+          GUID = "801ECB5C",
+          ImprPlusId = 1207,
+          NextDialogue = 51178619
         },
         [51178615] = {
           Content = "你不知道吗，山外山请我来帮忙的。",
           DialogueId = 51178615,
-          GUID = "801ECB86"
+          GUID = "801ECB86",
+          ImprPlusId = 1206,
+          NextDialogue = 51178616
         },
         [51178616] = {
           Content = "哦？还有这事？我确是不晓得，不过既然他们这么决定，想必你定是有几分过人之处。",
           DialogueId = 51178616,
-          GUID = "801ECBB0"
+          GUID = "801ECBB0",
+          NextDialogue = 51178619,
+          SpeakNpcId = 701281
         },
         [51178617] = {
           Content = "我是飘零四杰第五杰——人称狩月人之王的净界岛主{nickname}。",
           DialogueId = 51178617,
-          GUID = "801ECBDA"
+          GUID = "801ECBDA",
+          ImprPlusId = 1210,
+          NextDialogue = 51178618
         },
         [51178618] = {
           Content = "哈哈，小友真会开玩笑，飘零四杰的时代已经过去啦，即使再有新人谱写故事，应该也不会选择如此古早的称号。",
           DialogueId = 51178618,
-          GUID = "801ECC04"
+          GUID = "801ECC04",
+          NextDialogue = 51178619,
+          SpeakNpcId = 701281
         },
         [51178619] = {
           Content = "幸会幸会，不管怎么说，欢迎你来到山外山。",
           DialogueId = 51178619,
-          GUID = "801ECC2E"
+          GUID = "801ECC2E",
+          NextDialogue = 51178620,
+          SpeakNpcId = 701281
         },
         [51178620] = {
           Content = "我刚才听到你和那些孩子们说起飘零四杰……",
           DialogueId = 51178620,
-          GUID = "801ECC58"
+          GUID = "801ECC58",
+          NextDialogue = 51178621,
+          SpeakNpcId = 100001
         },
         [51178621] = {
           Content = "是啊，被你听到了。你也是因为好奇他们的事情才在老头子我这里留步的吗？",
           DialogueId = 51178621,
-          GUID = "801ECC82"
+          GUID = "801ECC82",
+          NextDialogue = 51178622,
+          SpeakNpcId = 701281
         },
         [51178622] = {
           Content = "确实有兴趣。",
           DialogueId = 51178622,
-          GUID = "801ECCAC"
+          GUID = "801ECCAC",
+          NextDialogue = 51178623,
+          SpeakNpcId = 100001
         },
         [51178623] = {
           Content = "嗯……只是我今天已经讲过一遍啦，想要再听一遍的话，总得拿些什么东西换才是，老头子我啊可不乐意白讲。",
           DialogueId = 51178623,
-          GUID = "801ECCD6"
+          GUID = "801ECCD6",
+          NextOptions = {
+            [1] = 51178624,
+            [2] = 51178625,
+            [3] = 51178626
+          },
+          SpeakNpcId = 701281
         },
         [51178624] = {
           Content = "我是你们山外山的贵客，了解一些基础情报也不行吗？",
           DialogueId = 51178624,
-          GUID = "801ECD00"
+          GUID = "801ECD00",
+          ImprPlusId = 1206,
+          NextDialogue = 51178627
         },
         [51178625] = {
           Content = "一物换一物，你告诉我一个故事，我告诉你一个故事。",
           DialogueId = 51178625,
-          GUID = "801ECD2A"
+          GUID = "801ECD2A",
+          ImprPlusId = 1208,
+          NextDialogue = 51178627
         },
         [51178626] = {
           Content = "这听起来只是一些往事，不是什么有价值的情报吧。",
           DialogueId = 51178626,
-          GUID = "801ECD54"
+          GUID = "801ECD54",
+          ImprPlusId = 1206,
+          NextDialogue = 51178627
         },
         [51178627] = {
           Content = "哈哈哈！开玩笑的！不要惊慌，只是我想看看小友会如何反应，方才出此下策。",
           DialogueId = 51178627,
-          GUID = "801ECD7E"
+          GUID = "801ECD7E",
+          NextDialogue = 51178628,
+          SpeakNpcId = 701281
         },
         [51178628] = {
           Content = "既然这样，小友想了解谁的故事呢？先说好，那些大家都耳熟能详的我就不说了，我只说一些我觉得有趣的事。",
           DialogueId = 51178628,
-          GUID = "801ECDA8"
+          FinalDialogueId = 51178653,
+          GUID = "801ECDA8",
+          NextOptions = {
+            [1] = 51178629,
+            [2] = 51178634,
+            [3] = 51178640,
+            [4] = 51178646
+          },
+          SpeakNpcId = 701281
         },
         [51178629] = {
           Content = "问问宴山亭。",
           DialogueId = 51178629,
-          GUID = "801ECDD2"
+          GUID = "801ECDD2",
+          NextDialogue = 51178630
         },
         [51178630] = {
           Content = "荡涤千山——宴山亭，名字很潇洒吧？那家伙艺高人胆大，喜欢耍点剑法，还爱显摆，总喜欢收一个又一个徒弟。",
           DialogueId = 51178630,
-          GUID = "801ECDFC"
+          GUID = "801ECDFC",
+          NextDialogue = 51178631,
+          SpeakNpcId = 701281
         },
         [51178631] = {
           Content = "你知道他以前是个香官吧？是不是下意识里会觉得，华胥的香官便是成熟稳重的家伙？他嘛，简直是成熟稳重的反义词！",
           DialogueId = 51178631,
-          GUID = "801ECE26"
+          GUID = "801ECE26",
+          NextDialogue = 51178632,
+          SpeakNpcId = 701281
         },
         [51178632] = {
           Content = "他有次聊发少年狂，不知为何用剑挑下了树上的蜂窝，引得那马蜂追着他跑了三里地，鼻青脸肿地回来找我取药。",
           DialogueId = 51178632,
-          GUID = "801ECE50"
+          GUID = "801ECE50",
+          NextDialogue = 51178633,
+          SpeakNpcId = 701281
         },
         [51178633] = {
           Content = "怎么样，是不是和你印象里的宴山亭大相径庭？",
           DialogueId = 51178633,
-          GUID = "801ECE7A"
+          GUID = "801ECE7A",
+          NextDialogue = 51178628,
+          SpeakNpcId = 701281
         },
         [51178634] = {
           Content = "问问苏暮鹧。",
           DialogueId = 51178634,
-          GUID = "801ECEA4"
+          GUID = "801ECEA4",
+          NextDialogue = 51178635
         },
         [51178635] = {
           Content = "一燕平川——苏暮鹧，苏乙那丫头的姑姑。其实她没什么好说的，或者说，苏乙现在什么样子，当年的苏暮鹧就是什么样子，简直一个模子印出来的。",
           DialogueId = 51178635,
-          GUID = "801ECECE"
+          GUID = "801ECECE",
+          NextDialogue = 51178636,
+          SpeakNpcId = 701281
         },
         [51178636] = {
           Content = "其实我不太了解她，她大多数时间都在研究机傀术，后面也因为一些原因早早离世……但山外山的人们都知晓她与宴山亭的关系，并且以为他们会早早……",
           DialogueId = 51178636,
-          GUID = "801ECEF8"
+          GUID = "801ECEF8",
+          NextDialogue = 51178637,
+          SpeakNpcId = 701281
         },
         [51178637] = {
           Content = "算啦……不说这个。苏暮鹧嘛……我记得她特别爱吃酸食，就是皓京城里那些卖蜜饯的小摊，她回回都要去把最酸的那些果干买空。",
           DialogueId = 51178637,
-          GUID = "801ECF22"
+          GUID = "801ECF22",
+          NextDialogue = 51178638,
+          SpeakNpcId = 701281
         },
         [51178638] = {
           Content = "然后就一边对着她那堆叠如山的设计图纸，一边像是没有味觉一样把酸到掉牙的果干往嘴里塞。",
           DialogueId = 51178638,
-          GUID = "801ECF4C"
+          GUID = "801ECF4C",
+          NextDialogue = 51178639,
+          SpeakNpcId = 701281
         },
         [51178639] = {
           Content = "据说是这样可以有一些提神醒脑的效果？我非她，焉知她之乐呢？",
           DialogueId = 51178639,
-          GUID = "801ECF76"
+          GUID = "801ECF76",
+          NextDialogue = 51178628,
+          SpeakNpcId = 701281
         },
         [51178640] = {
           Content = "问问行香子。",
           DialogueId = 51178640,
-          GUID = "801ECFA0"
+          GUID = "801ECFA0",
+          NextDialogue = 51178641
         },
         [51178641] = {
           Content = "哎呀那个老混蛋！我可好久没见到他了！那家伙，打铁玩火一把好手！",
           DialogueId = 51178641,
-          GUID = "801ECFCA"
+          GUID = "801ECFCA",
+          NextDialogue = 51178642,
+          SpeakNpcId = 701281
         },
         [51178642] = {
           Content = "他是我见过最无聊的人了，之前的山外山，家家户户都用灶火烧饭，有时柴火受潮，火头就不旺。火头不旺，烧出的饭便不香。",
           DialogueId = 51178642,
-          GUID = "801ECFF4"
+          GUID = "801ECFF4",
+          NextDialogue = 51178643,
+          SpeakNpcId = 701281
         },
         [51178643] = {
           Content = "他就专门盯着人家火头不旺的锅沿，假装从门口路过，等人家恭恭敬敬请他去帮忙点火，再客客气气请他吃上一顿晚饭。",
           DialogueId = 51178643,
-          GUID = "801ED01E"
+          GUID = "801ED01E",
+          NextDialogue = 51178644,
+          SpeakNpcId = 701281
         },
         [51178644] = {
           Content = "至于为什么他点火就旺其他人不行，这自然是他自己的功夫，但他非要说是自己到处行善积德，一颗赤子之心的缘故。",
           DialogueId = 51178644,
-          GUID = "801ED048"
+          GUID = "801ED048",
+          NextDialogue = 51178645,
+          SpeakNpcId = 701281
         },
         [51178645] = {
           Content = "喜欢贫嘴，带点自吹自擂，这就是白焰丹曦——行香子。",
           DialogueId = 51178645,
-          GUID = "801ED072"
+          GUID = "801ED072",
+          NextDialogue = 51178628,
+          SpeakNpcId = 701281
         },
         [51178646] = {
           Content = "问问文氏姐妹。",
           DialogueId = 51178646,
-          GUID = "801ED09C"
+          GUID = "801ED09C",
+          NextDialogue = 51178647
         },
         [51178647] = {
           Content = "那两个娃娃啊……是可怜丫头，长得一模一样，伫在你面前，不仔细看是完全分不出来的。",
           DialogueId = 51178647,
-          GUID = "801ED0C6"
+          GUID = "801ED0C6",
+          NextDialogue = 51178648,
+          SpeakNpcId = 701281
         },
         [51178648] = {
           Content = "其实她俩乖的很，年纪轻但心里藏着事，所以大多数时间都沉默寡言。",
           DialogueId = 51178648,
-          GUID = "801ED0F0"
+          GUID = "801ED0F0",
+          NextDialogue = 51178649,
+          SpeakNpcId = 701281
         },
         [51178649] = {
           Content = "她们难得展露出女儿家情态，是在绣东西的时候。",
           DialogueId = 51178649,
-          GUID = "801ED11A"
+          GUID = "801ED11A",
+          NextDialogue = 51178650,
+          SpeakNpcId = 701281
         },
         [51178650] = {
           Content = "我们这的大多数人，手可以搓机傀可以拿利器，但捧起绣花针那就傻了眼，只能干看着发愣。但她俩一来，却是将大多数针线活都包揽了过去。",
           DialogueId = 51178650,
-          GUID = "801ED144"
+          GUID = "801ED144",
+          NextDialogue = 51178651,
+          SpeakNpcId = 701281
         },
         [51178651] = {
           Content = "有段时间，山外山人人都用上了绣着小花的手绢，纳着鸳鸯的鞋垫，我们就这样接受着她们俩默默的善意，用力所能及的东西回馈她们。",
           DialogueId = 51178651,
-          GUID = "801ED16E"
+          GUID = "801ED16E",
+          NextDialogue = 51178652,
+          SpeakNpcId = 701281
         },
         [51178652] = {
           Content = "只是可惜……只是可惜啊……",
           DialogueId = 51178652,
-          GUID = "801ED198"
+          GUID = "801ED198",
+          NextDialogue = 51178628,
+          SpeakNpcId = 701281
         },
         [51178653] = {
           Content = "你看我，年龄大了，说起过去的事情就有些收不住，耽误你的时间了吧？",
           DialogueId = 51178653,
-          GUID = "801ED1C2"
+          GUID = "801ED1C2",
+          NextDialogue = 51178654,
+          SpeakNpcId = 701281
         },
         [51178654] = {
           Content = "倒也没有。",
           DialogueId = 51178654,
-          GUID = "801ED1EC"
+          GUID = "801ED1EC",
+          NextDialogue = 51178655,
+          SpeakNpcId = 100001
         },
         [51178655] = {
           Content = "没有？没有我也说不下去啦，我一想到曾经的光景，那几个孩子在我面前嬉闹，练剑的练剑，造机傀的造机傀，我心里就……",
           DialogueId = 51178655,
-          GUID = "801ED216"
+          GUID = "801ED216",
+          NextDialogue = 51178656,
+          SpeakNpcId = 701281
         },
         [51178656] = {
           Content = "罢啦！今日就到这里吧，老头子身体弱，要回去休息了，我们有缘再聊吧！",
           DialogueId = 51178656,
-          GUID = "801ED240"
+          GUID = "801ED240",
+          SpeakNpcId = 701281
         },
         [51179001] = {
           Content = "好想让我的绵绵草开心起来……",
@@ -209792,7 +211434,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 900005,
           VoiceName = "voice/$Locale$/story/0/600208/96417AAB",
           bTurnOffVoice = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 60030101,
+    MaxKey = 60300101,
+    Loader = function()
+      return {
         [60030101] = {
           Content = "这里居然也有毒雾！光靠我们带的血清撑不了太久诶。",
           DialogueId = 60030101,
@@ -209830,15 +211480,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/0/600303/96478104",
           bTurnOffVoice = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 60030302,
-    MaxKey = 60800104,
-    Loader = function()
-      return {
+        },
         [60030302] = {
           Content = "啊，血清回收完记得去取哦！要是血清耗尽的话，我们就只能终止委托了！",
           DialogueId = 60030302,
@@ -211519,7 +213161,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           SpeakNpcId = 200002,
           VoiceName = "voice/$Locale$/story/0/603001/96F47952",
           bTurnOffVoice = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 60800101,
+    MaxKey = 71001501,
+    Loader = function()
+      return {
         [60800101] = {
           Content = "没有钥匙……在附近找找看吧。",
           DialogueId = 60800101,
@@ -211544,15 +213194,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 60800104,
           GUID = "9834E910",
           SpeakNpcId = 0
-        }
-      }
-    end
-  },
-  {
-    MinKey = 60800105,
-    MaxKey = 71001505,
-    Loader = function()
-      return {
+        },
         [60800105] = {
           Content = "【待包装】似乎能在附近找到钥匙E",
           DialogueId = 60800105,
@@ -212952,7 +214594,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           Duration = 3,
           GUID = "B1BEABC2",
           SpeakNpcId = 818006
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71001502,
+    MaxKey = 71004902,
+    Loader = function()
+      return {
         [71001502] = {
           Content = "发生什么了？",
           DialogueId = 71001502,
@@ -212978,15 +214628,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71001505,
           GUID = "B1BEAC6A",
           SpeakNpcId = 818006
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71001506,
-    MaxKey = 71004907,
-    Loader = function()
-      return {
+        },
         [71001506] = {
           Content = "这也行？",
           DialogueId = 71001506,
@@ -214259,7 +215901,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           },
           SpeakNpcId = 818040,
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71004903,
+    MaxKey = 71006705,
+    Loader = function()
+      return {
         [71004903] = {
           Content = "谢谢！那我就先把竿架上等你哈。",
           DialogueId = 71004903,
@@ -214283,15 +215933,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           DialogueId = 71004907,
           GUID = "B1C0DA8E",
           SpeakNpcId = 818040
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71005001,
-    MaxKey = 71006709,
-    Loader = function()
-      return {
+        },
         [71005001] = {
           Content = "喂，那边的朋友，能帮我拍张照吗？",
           DialogueId = 71005001,
@@ -215642,7 +217284,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           },
           SpeakNpcId = 818064,
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 71006706,
+    MaxKey = 72001204,
+    Loader = function()
+      return {
         [71006706] = {
           Content = "劳烦你了，我很快回来。",
           DialogueId = 71006706,
@@ -215672,15 +217322,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           },
           SpeakNpcId = 818063,
           bForbidSkipOptions = true
-        }
-      }
-    end
-  },
-  {
-    MinKey = 71006711,
-    MaxKey = 72001304,
-    Loader = function()
-      return {
+        },
         [71006711] = {
           Content = "不……我想出去玩啊……",
           DialogueId = 71006711,
@@ -217220,7 +218862,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B43F5988",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72001301,
+    MaxKey = 72101701,
+    Loader = function()
+      return {
         [72001301] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72001301,
@@ -217263,15 +218913,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B43F69F0",
           Scripts = "PlayAnimation{ActorId{820000},AnimationId{\"Wuyou_Disappear\"}}",
           bAllowClickSkipScript = false
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72001401,
-    MaxKey = 72200101,
-    Loader = function()
-      return {
+        },
         [72001401] = {
           Camera = "196.204834,-2.952148,87.243896,0.0,-7.999989,179.200043,35.0,100000.0,false,DoNotOverride,2.8",
           DialogueId = 72001401,
@@ -219205,7 +220847,15 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B47FC152",
           NextDialogue = 72101702,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{830001},AnimationId{\"Wuyou_Born\"}}"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 72101702,
+    MaxKey = 80004105,
+    Loader = function()
+      return {
         [72101702] = {
           Content = "这些明黄的色彩，是落叶还是花瓣？",
           DialogueId = 72101702,
@@ -219237,15 +220887,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
           GUID = "B4BED112",
           NextDialogue = 72200102,
           Scripts = "PlayAnimation{Sync{true},Duration{1},ActorId{240110},AnimationId{\"Wuyou_Born\"}}"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 72200102,
-    MaxKey = 80004109,
-    Loader = function()
-      return {
+        },
         [72200102] = {
           Content = "无趣无趣，贪愚痴妄，转首空空，不如逍遥～东西还你，有缘再会！",
           DialogueId = 72200102,
@@ -221008,7 +222650,15 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           NextDialogue = 80004106,
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120114/C848297A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80004106,
+    MaxKey = 80020402,
+    Loader = function()
+      return {
         [80004106] = {
           Content = "别害怕，菲娜会帮助你的！",
           DialogueId = 80004106,
@@ -221049,15 +222699,7 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           HeadIconType = "Npc",
           SpeakNpcId = 700142,
           VoiceName = "voice/$Locale$/story/1201/120114/C8482A22"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80004110,
-    MaxKey = 80020406,
-    Loader = function()
-      return {
+        },
         [80004110] = {
           Camera = "-4.021118,-147.850586,140.854248,0.000064,-3.469995,89.231857,35.0,160.025635,false,Manual,12.0",
           Content = "（好像还没有把小夜莺的羽毛收集全……要再回去找找看吗？）",
@@ -222649,7 +224291,15 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
           },
           SpeakNpcId = 93102,
           VoiceName = "voice/$Locale$/inv/Xier/004/C8529B34"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80020403,
+    MaxKey = 80040122,
+    Loader = function()
+      return {
         [80020403] = {
           Content = "其实相反，正是因为心情糟糕，所以才想要拿起剪刀。",
           DialogueId = 80020403,
@@ -222696,15 +224346,7 @@ PlayFacial{_delay{0.5},ActorId{211001},FacialId{"Smile01"}}
             [1] = "93102:Sit_Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Xier/004/C8529BDC"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80020407,
-    MaxKey = 80040126,
-    Loader = function()
-      return {
+        },
         [80020407] = {
           Content = "当我还在做密探的时候，听说过一些同僚有更加病态的压力抒发方式。",
           DialogueId = 80020407,
@@ -224817,7 +226459,15 @@ CameraMoveTo{TargetPosition{"-178.94751,-87.67041,150.519897,-0.000519,-4.804505
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/inv/Heitao/001/C85F3E84"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80040123,
+    MaxKey = 80050311,
+    Loader = function()
+      return {
         [80040123] = {
           Camera = "15.265137,-28.532227,112.855957,0.000011,7.606453,-170.384079,40.0,142.232559,false,Manual,5.845709",
           Content = "我害你吃了很多难吃的东西……",
@@ -224879,15 +226529,7 @@ CameraMoveTo{TargetPosition{"-178.94751,-87.67041,150.519897,-0.000519,-4.804505
           Scripts = "PARA{SEQ{PlayAnimation{ActorId{790008},AnimationId{\"Agree\"},Duration{1}},PlayAnimation{_delay{3},ActorId{790008},AnimationId{\"Confident_Start\"},Duration{3}}},SEQ{CameraMoveTo{_delay{3},TargetPosition{\"-451.446045,109.144287,58.609131,0.000133,5.802526,-23.556147,40.0,62.233727,false,Manual,22.0\"},duration{0}},CameraMoveTo{_delay{0},TargetPosition{\"-448.734375,115.36499,58.609131,0.000134,5.802526,-23.555901,40.0,62.233727,false,Manual,22.0\"},duration{15}}}}",
           SpeakNpcId = 790008,
           VoiceName = "voice/$Locale$/inv/Heitao/001/C85F3F2C"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80040127,
-    MaxKey = 80050315,
-    Loader = function()
-      return {
+        },
         [80040127] = {
           Camera = "-7.822998,17.936523,129.39856,0.000159,0.802219,-147.953476,40.0,127.794029,false,Manual,5.845709",
           Content = "真的吗？你不是故意这么说的吧？",
@@ -227443,7 +229085,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           NextDialogue = 80050312,
           SpeakNpcId = 790017,
           VoiceName = "voice/$Locale$/inv/Feina/003/C865C626"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80050312,
+    MaxKey = 80060331,
+    Loader = function()
+      return {
         [80050312] = {
           Camera = "3399.474609,-93.6745,782.563721,0.000066,-15.400177,-17.203409,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "那个黄铜色的，圆圆的，有一个尖尖翘起来的，是银色和平广场的雕塑！它已经站在那儿好几百年了哦。",
@@ -227496,15 +229146,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           },
           SpeakNpcId = 790017,
           VoiceName = "voice/$Locale$/inv/Feina/003/C865C6CE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80050316,
-    MaxKey = 80060335,
-    Loader = function()
-      return {
+        },
         [80050316] = {
           Content = "怎么了？你不认识的话，我来告诉你吧。",
           DialogueId = 80050316,
@@ -229611,7 +231253,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           NextDialogue = 80060332,
           SpeakNpcId = 95101,
           VoiceName = "voice/$Locale$/inv/Songlu/003/C86C320E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80060332,
+    MaxKey = 80080131,
+    Loader = function()
+      return {
         [80060332] = {
           Content = "和我一起背根本记不住的教典、在我生病时安慰我、和我在清晨或者傍晚飞奔的也是榛子。",
           DialogueId = 80060332,
@@ -229654,15 +231304,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [1] = "95101:Sit_Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Songlu/003/C86C32B6"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80060336,
-    MaxKey = 80080135,
-    Loader = function()
-      return {
+        },
         [80060336] = {
           Content = "嗯，我记得。是“粮秣特别专员”。",
           DialogueId = 80060336,
@@ -232043,7 +233685,15 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
             [1] = "790004:Agree"
           },
           VoiceName = "voice/$Locale$/inv/Saiqi/001/C878E27E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80080132,
+    MaxKey = 80090323,
+    Loader = function()
+      return {
         [80080132] = {
           Camera = "-182.740234,418.929565,109.427734,0.000006,0.00002,-72.598679,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "……但我还是觉得……有哪里不对。",
@@ -232095,15 +233745,7 @@ CameraMoveTo{TargetPosition{"-194.081055,279.682129,195.641724,0.00232,-16.00859
           SpeakNpcId = 790004,
           ToFinalCameraBlendTime = 15,
           VoiceName = "voice/$Locale$/inv/Saiqi/001/C878E326"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80080136,
-    MaxKey = 80090327,
-    Loader = function()
-      return {
+        },
         [80080136] = {
           Camera = "-115.056641,157.29718,104.279297,0.000006,2.600007,-78.7966,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "……也许这样，等那天到来的时候，就可以少一点点遗憾吧。",
@@ -234342,7 +235984,15 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           NextDialogue = 80090324,
           SpeakNpcId = 92301,
           VoiceName = "voice/$Locale$/inv/Zhangyu/003/C87F6A9E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80090324,
+    MaxKey = 80110109,
+    Loader = function()
+      return {
         [80090324] = {
           Content = "开玩笑的。所以，塔比瑟是很在意她的想法吗？",
           DialogueId = 80090324,
@@ -234380,15 +236030,7 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           NextDialogue = 80090328,
           SpeakNpcId = 92301,
           VoiceName = "voice/$Locale$/inv/Zhangyu/003/C87F6B46"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80090328,
-    MaxKey = 80110113,
-    Loader = function()
-      return {
+        },
         [80090328] = {
           Content = "追着我打的小贩们，好像也只是追几步就算了……当然了，也是因为本大盗逃得够快！",
           DialogueId = 80090328,
@@ -236584,7 +238226,15 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
           IsBlack = 1,
           NextDialogue = 80110110,
           VoiceName = "voice/$Locale$/inv/Linen/001/C88C18C2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80110110,
+    MaxKey = 80120334,
+    Loader = function()
+      return {
         [80110110] = {
           Content = "（可以预见，这是必然的结局。你摇摇头，打消了这个过于冒险的念头。）",
           DialogueId = 80110110,
@@ -236628,15 +238278,7 @@ TurnTo{TurnToDescription{"790006:n(790004)"}}
             [1] = "93101:Sit_AgreeHead"
           },
           VoiceName = "voice/$Locale$/inv/Linen/001/C88C196A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80110114,
-    MaxKey = 80120338,
-    Loader = function()
-      return {
+        },
         [80110114] = {
           Content = "毕竟之前也有胆大包天的狩月人看我以前也干过这行，就跑来套近乎，跟我打听军团的秘密。",
           DialogueId = 80110114,
@@ -239258,7 +240900,15 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "93301:Sit_Talk03_Start"
           },
           VoiceName = "voice/$Locale$/inv/Maer/003/C892A64C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80120335,
+    MaxKey = 80130416,
+    Loader = function()
+      return {
         [80120335] = {
           Content = "所以去年，我偷偷调查了他很久，但臭老头神出鬼没，老家带来的行李也不知藏到哪儿去了。",
           DialogueId = 80120335,
@@ -239310,15 +240960,7 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "93301:Sit_Think_Start"
           },
           VoiceName = "voice/$Locale$/inv/Maer/003/C892A6F4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80120339,
-    MaxKey = 80130420,
-    Loader = function()
-      return {
+        },
         [80120339] = {
           Content = "（玛尔洁愤怒地敲了敲自己盖在头顶的东西，发出了咚咚的响声。）",
           DialogueId = 80120339,
@@ -241846,7 +243488,15 @@ LookAt{LookAtDescription{"790019:p(P33010202)"}},
             [1] = "790023:Talk02R_Start"
           },
           VoiceName = "voice/$Locale$/inv/Yeer/004/C8991C60"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80130417,
+    MaxKey = 80140341,
+    Loader = function()
+      return {
         [80130417] = {
           Camera = "-160.233398,-161.052856,109.0,0.0,0.0,15.397967,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "只是那时候还有琼斯在，我知道他对你的恶意，所以必须要先离开他，先到外面的世界才行。",
@@ -241906,15 +243556,7 @@ PlayAnimation{ActorId{790023},AnimationId{"Think_End"},Duration{1},_click{false}
 }]],
           SpeakNpcId = 790023,
           VoiceName = "voice/$Locale$/inv/Yeer/004/C8991D08"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80130421,
-    MaxKey = 80140345,
-    Loader = function()
-      return {
+        },
         [80130421] = {
           Camera = "138.503418,-201.674438,112.0,0.000002,-2.799927,155.996429,35.0,100000.0,false,DoNotOverride,2.8",
           Content = "还提到一个叫做丹流城的地方，城外的河水看起来是红色的，当落日的时候，会非常漂亮。",
@@ -244332,7 +245974,15 @@ PlayAnimation{_delay{2},ActorId{790041},AnimationId{"Think_End"},Duration{1},_cl
           NextDialogue = 80140342,
           SpeakNpcId = 790036,
           VoiceName = "voice/$Locale$/inv/Tuosi/003/C89F78B2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80140342,
+    MaxKey = 80160121,
+    Loader = function()
+      return {
         [80140342] = {
           Content = "我还记得它被切开的时候，深红色的果酱从金黄色的酥皮里溢出来，一股劣质糖果远远无法比拟的香甜气息在一瞬间填满了整个餐厅。",
           DialogueId = 80140342,
@@ -244364,15 +246014,7 @@ PlayAnimation{_delay{2},ActorId{790041},AnimationId{"Think_End"},Duration{1},_cl
           NextDialogue = 80140346,
           SpeakNpcId = 790036,
           VoiceName = "voice/$Locale$/inv/Tuosi/003/C89F795A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80140346,
-    MaxKey = 80160125,
-    Loader = function()
-      return {
+        },
         [80140346] = {
           Content = "哈哈……也不知道大家现在过得怎么样。没了我这个“骗子”，他们应该能正常举办演出了吧。",
           DialogueId = 80140346,
@@ -247046,7 +248688,15 @@ CameraMoveTo{TargetPosition{"-46.92395,-890.245117,476.808594,0.000113,-11.39855
           NextDialogue = 80160122,
           SpeakNpcId = 790055,
           VoiceName = "voice/$Locale$/inv/Haier/001/C8AC25DA"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80160122,
+    MaxKey = 80170157,
+    Loader = function()
+      return {
         [80160122] = {
           Camera = "-59.147827,-133.68457,134.808594,0.000211,8.401542,69.408882,35.0,451.476898,false,DoNotOverride,10.496961",
           Content = "呵呵……感谢您的谬赞，可惜我只是个连拖欠税款都万万不敢的酒馆老板。至于秘密，谁没有几个秘密呢？",
@@ -247099,15 +248749,7 @@ CameraMoveTo{TargetPosition{"-46.92395,-890.245117,476.808594,0.000113,-11.39855
             [1] = "790055:DisagreeHead"
           },
           VoiceName = "voice/$Locale$/inv/Haier/001/C8AC2682"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80160126,
-    MaxKey = 80170201,
-    Loader = function()
-      return {
+        },
         [80160126] = {
           Camera = "279.85791,105.764648,170.447266,0.000227,-3.998898,-152.592499,68.94529,451.476898,false,DoNotOverride,10.496961",
           Content = "这里是你的“水仙平原”，不是法庭，也不是皇家监狱，没有人会把吐真剂扎进你的脖子，逼你坦白从宽。",
@@ -249008,7 +250650,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           NextDialogue = 80170159,
           SpeakNpcId = 91502,
           VoiceName = "voice/$Locale$/inv/Nifu/001/C8B29462"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80170158,
+    MaxKey = 80180223,
+    Loader = function()
+      return {
         [80170158] = {
           Content = "这是个勇敢的回答。",
           DialogueId = 80170158,
@@ -249052,15 +250702,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
             [1] = "91502:Sit_Talk03_Start"
           },
           VoiceName = "voice/$Locale$/inv/Nifu/002/C8B29B9A"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80170202,
-    MaxKey = 80180227,
-    Loader = function()
-      return {
+        },
         [80170202] = {
           Content = "自从离开家乡以后，我经历过很多事，其中很多充满遗憾。有时我会觉得很无力，似乎很多努力都是徒劳。",
           DialogueId = 80170202,
@@ -251057,7 +252699,15 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
           },
           ToFinalCameraBlendTime = 10,
           VoiceName = "voice/$Locale$/inv/Dafu/002/C8B907D6"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80180224,
+    MaxKey = 80200012,
+    Loader = function()
+      return {
         [80180224] = {
           Camera = "40.990723,54.654297,136.542969,0.000085,-1.399444,-109.997879,30.000002,249.443985,false,Manual,2.8",
           Content = "哦……你是说，半年前意外死掉的那个炼金术师。",
@@ -251106,15 +252756,7 @@ MoveTo{ActorId{790055},TargetPoint{"Move_H"},MoveSpeed{80},Visibility{"Show"}}
             [1] = "790045:Talk02_Start"
           },
           VoiceName = "voice/$Locale$/inv/Dafu/002/C8B9087E"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80180228,
-    MaxKey = 80200018,
-    Loader = function()
-      return {
+        },
         [80180228] = {
           Camera = "543.975098,-643.192871,207.191406,0.000092,-8.199464,137.000534,30.000002,861.833862,false,Manual,1.2",
           Content = "您看到的只是艾米莉亚之死的报告书，但您不知道的是……她临死之前，满地都是血……血还在从她的身体往外流……但她没有对她的同僚说“救救我”……",
@@ -253253,7 +254895,15 @@ TurnTo{_delay{3},TurnToDescription{"790053:p(90)"}}
             [1] = "790053:Explain02_End"
           },
           VoiceName = "voice/$Locale$/inv/Fushu/001/C8C5B678"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80200014,
+    MaxKey = 80210111,
+    Loader = function()
+      return {
         [80200014] = {
           Content = "谢你海涵，这就是所谓的“君子之交淡若水”吧。",
           DialogueId = 80200014,
@@ -253307,15 +254957,7 @@ TurnTo{_delay{3},TurnToDescription{"790053:p(90)"}}
           },
           ToFinalCameraBlendTime = 15,
           VoiceName = "voice/$Locale$/inv/Fushu/001/C8C5B774"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80200019,
-    MaxKey = 80210115,
-    Loader = function()
-      return {
+        },
         [80200019] = {
           Content = "上次凭笔记中寻来的方子治好了那位被玄色狴犴所伤的姑娘，使我对药理生出几分兴趣。",
           DialogueId = 80200019,
@@ -256133,7 +257775,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80210112,
           SpeakNpcId = 790065,
           VoiceName = "voice/$Locale$/inv/Kezhou/001/C8CC2F56"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80210112,
+    MaxKey = 80220102,
+    Loader = function()
+      return {
         [80210112] = {
           Camera = "-97.171875,135.871094,124.923828,0.000072,-11.800135,-56.803616,25.0,226.88681,false,Manual,2.8",
           Content = "留你的性命！",
@@ -256199,15 +257849,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           },
           ToFinalCameraBlendTime = 8,
           VoiceName = "voice/$Locale$/inv/Kezhou/001/C8CC2FFE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80210116,
-    MaxKey = 80220106,
-    Loader = function()
-      return {
+        },
         [80210116] = {
           Camera = "274.847656,276.966309,232.944336,0.00018,-20.000671,-141.973434,30.0,445.724579,false,Manual,4.0",
           Content = "这都不知道，我们这是在模仿飘零人对话呀。",
@@ -258442,7 +260084,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220103,
           SpeakNpcId = 790073,
           VoiceName = "voice/$Locale$/inv/Yuming/001/C8D2967C"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80220103,
+    MaxKey = 80220443,
+    Loader = function()
+      return {
         [80220103] = {
           Content = "是不夏啊。",
           DialogueId = 80220103,
@@ -258474,15 +260124,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220107,
           SpeakNpcId = 790073,
           VoiceName = "voice/$Locale$/inv/Yuming/001/C8D29724"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80220107,
-    MaxKey = 80220447,
-    Loader = function()
-      return {
+        },
         [80220107] = {
           Content = "我和刻舟师兄在山外山外面发现了这只小狐狸，它被野兽咬伤了。",
           DialogueId = 80220107,
@@ -260038,7 +261680,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220444,
           SpeakNpcId = 790072,
           VoiceName = "voice/$Locale$/inv/Yuming/004/C8D2CE6E"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80220444,
+    MaxKey = 80240117,
+    Loader = function()
+      return {
         [80220444] = {
           Content = "嗷呜！嗷呜！",
           DialogueId = 80220444,
@@ -260070,15 +261720,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80220448,
           SpeakNpcId = 790072,
           VoiceName = "voice/$Locale$/inv/Yuming/004/C8D2CF16"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80220448,
-    MaxKey = 80240121,
-    Loader = function()
-      return {
+        },
         [80220448] = {
           Content = "去吧，他们在等你。",
           DialogueId = 80220448,
@@ -261625,7 +263267,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80240118,
           SpeakNpcId = 790083,
           VoiceName = "voice/$Locale$/inv/Suyi/001/C8DF6A32"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80240118,
+    MaxKey = 80250225,
+    Loader = function()
+      return {
         [80240118] = {
           Content = "才没有！我家里人就在皓京，离得又不远，我想回去就回去了，有什么好想的。",
           DialogueId = 80240118,
@@ -261657,15 +263307,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80240122,
           SpeakNpcId = 790082,
           VoiceName = "voice/$Locale$/inv/Suyi/001/C8DF6ADA"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80240122,
-    MaxKey = 80250229,
-    Loader = function()
-      return {
+        },
         [80240122] = {
           Content = "不是身体上的问题，就是心里的问题喽？",
           DialogueId = 80240122,
@@ -263228,7 +264870,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80250226,
           SpeakNpcId = 790087,
           VoiceName = "voice/$Locale$/inv/Kami/002/14171E7A"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 80250226,
+    MaxKey = 90060000,
+    Loader = function()
+      return {
         [80250226] = {
           Content = "看来你还没跟他们好好说明情况呢，这可不行。",
           DialogueId = 80250226,
@@ -263260,15 +264910,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 80250230,
           SpeakNpcId = 790014,
           VoiceName = "voice/$Locale$/inv/Kami/002/14171F22"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 80250230,
-    MaxKey = 90060101,
-    Loader = function()
-      return {
+        },
         [80250230] = {
           Content = "你们两个，就是中选的幸运儿！这样的机会可不常有，好好珍惜吧！",
           DialogueId = 80250230,
@@ -265010,7 +266652,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E174ACE9",
           SpeakNpcId = 83201,
           VoiceName = "voice/$Locale$/char/Haier/vo_idle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90060001,
+    MaxKey = 90150105,
+    Loader = function()
+      return {
         [90060001] = {
           Content = "今天准备好接受拷问了吗？！",
           DialogueId = 90060001,
@@ -265059,15 +266709,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
             [1] = "83201:Talk03_Start"
           },
           VoiceName = "voice/$Locale$/char/Haier/vo_topic_01_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90060102,
-    MaxKey = 90150205,
-    Loader = function()
-      return {
+        },
         [90060102] = {
           Content = "而我，作为她的后代，继承了她的名号，同样会用炼火将一切罪行烧成炉灰。",
           DialogueId = 90060102,
@@ -267196,7 +268838,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           SpeakNpcId = 81801,
           VoiceName = "voice/$Locale$/char/Feina/vo_topic_01_3",
           bForbidSkipOptions = true
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90150201,
+    MaxKey = 90210303,
+    Loader = function()
+      return {
         [90150201] = {
           Content = "我有一个很大很大的玻璃盒子，盒子里面装着窗户外软绵绵的雪，装着雪一样白白的棉花糖。我还想装进去棉花糖一样轻飘飘的云朵，云朵一样暖乎乎的风……",
           DialogueId = 90150201,
@@ -267227,15 +268877,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 90150206,
           SpeakNpcId = 81801,
           VoiceName = "voice/$Locale$/char/Feina/vo_topic_02_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90150206,
-    MaxKey = 90210402,
-    Loader = function()
-      return {
+        },
         [90150206] = {
           Content = "如果我迷路了，菲娜会来救我吗？",
           DialogueId = 90150206,
@@ -269257,7 +270899,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 90210304,
           SpeakNpcId = 84101,
           VoiceName = "voice/$Locale$/char/Lise/vo_topic_03_2"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90210304,
+    MaxKey = 90270401,
+    Loader = function()
+      return {
         [90210304] = {
           Content = "不过实话说，我不理解他们是怎么想的，可能觉得卫戍部队就只是一份普通的工作，只要不被上司发现，怎么胡闹都无所谓。",
           DialogueId = 90210304,
@@ -269292,15 +270942,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           GUID = "E1D51014",
           NextDialogue = 90210403,
           SpeakNpcId = 100001
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90210403,
-    MaxKey = 90270405,
-    Loader = function()
-      return {
+        },
         [90210403] = {
           Content = "不，我并非对我们一族的外表自轻自贱。我只是觉得，如果它能长得更规则、更对称一些，也许会看起来舒服很多。啊，不是，我也没有在说你的角……",
           DialogueId = 90210403,
@@ -271203,7 +272845,15 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 90270402,
           SpeakNpcId = 83202,
           VoiceName = "voice/$Locale$/char/Kami/vo_topic_04_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 90270402,
+    MaxKey = 120131062,
+    Loader = function()
+      return {
         [90270402] = {
           Content = "我唯一可以确认的便是他的力量深不可测。只是短暂的交手，我便知绝无胜算。",
           DialogueId = 90270402,
@@ -271234,15 +272884,7 @@ PlayAnimation{_delay{8.1},ActorId{790053},AnimationId{"Explain01_End"},Duration{
           NextDialogue = 90270406,
           SpeakNpcId = 83202,
           VoiceName = "voice/$Locale$/char/Kami/vo_topic_04_4"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 90270406,
-    MaxKey = 120131211,
-    Loader = function()
-      return {
+        },
         [90270406] = {
           Content = "他说，他希望从你那里得到的，是一个“答案”。",
           DialogueId = 90270406,
@@ -272555,7 +274197,15 @@ SetLocation{ActorId{110022},TargetPoint{"nanzhu_hugset"},Visibility{"Show"}}
           DialogueId = 120131062,
           GUID = "120131062.0",
           NextDialogue = 12013107
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 120131141,
+    MaxKey = 510029101,
+    Loader = function()
+      return {
         [120131141] = {
           Content = "你调理了我的身体，送给你是应当的。",
           DialogueId = 120131141,
@@ -272582,15 +274232,7 @@ SetLocation{ActorId{110022},TargetPoint{"nanzhu_hugset"},Visibility{"Show"}}
           DialogueId = 120131211,
           GUID = "120131211.0",
           NextDialogue = 12013125
-        }
-      }
-    end
-  },
-  {
-    MinKey = 120131212,
-    MaxKey = 510030052,
-    Loader = function()
-      return {
+        },
         [120131212] = {
           Content = "我是骁勇的独目勇者，冷酷的冰湖之主，第一代下水道公爵。",
           DialogueId = 120131212,
@@ -273989,7 +275631,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510029101.0",
           ImprCheckId = 1019,
           NextDialogue = 51002912
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 510030031,
+    MaxKey = 510092251,
+    Loader = function()
+      return {
         [510030031] = {
           Content = "巴克先生总是熬夜创作。",
           DialogueId = 510030031,
@@ -274017,15 +275667,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510030052.0",
           ImprPlusId = 1005,
           NextDialogue = 51003006
-        }
-      }
-    end
-  },
-  {
-    MinKey = 510030071,
-    MaxKey = 510092382,
-    Loader = function()
-      return {
+        },
         [510030071] = {
           Content = "巴克先生在睡着的时候注意到了一些反常的动静。",
           DialogueId = 510030071,
@@ -275364,7 +277006,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "510092251.0",
           ImprPlusId = 1003,
           NextDialogue = 51009226
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 510092252,
+    MaxKey = 710071091,
+    Loader = function()
+      return {
         [510092252] = {
           Content = "我没有审美水平还真是对不起了。",
           DialogueId = 510092252,
@@ -275390,15 +277040,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 510092382,
           GUID = "510092382.0",
           NextDialogue = 51009241
-        }
-      }
-    end
-  },
-  {
-    MinKey = 510093271,
-    MaxKey = 710072091,
-    Loader = function()
-      return {
+        },
         [510093271] = {
           Content = "有印象",
           DialogueId = 510093271,
@@ -276615,7 +278257,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 710071091,
           GUID = "710071091.0",
           SpeakNpcId = 818070
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 710071131,
+    MaxKey = 741147161,
+    Loader = function()
+      return {
         [710071131] = {
           Content = "唔……好吧，谢谢……",
           DialogueId = 710071131,
@@ -276640,15 +278290,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           GUID = "710072091.0",
           NextDialogue = 71007210,
           Scripts = "SetOutport{FinishType{2},OptionIdx{1}}"
-        }
-      }
-    end
-  },
-  {
-    MinKey = 710072092,
-    MaxKey = 741147165,
-    Loader = function()
-      return {
+        },
         [710072092] = {
           Content = "黑市商人价格便宜，买他的更实惠。",
           DialogueId = 710072092,
@@ -278469,7 +280111,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114706:Think_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147162,
+    MaxKey = 741147385,
+    Loader = function()
+      return {
         [741147162] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Think_End",
@@ -278508,15 +280158,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114707:p(-90)"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147166,
-    MaxKey = 741147392,
-    Loader = function()
-      return {
+        },
         [741147166] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "R180",
@@ -280465,7 +282107,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114735:Think_Start"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741147386,
+    MaxKey = 741148009,
+    Loader = function()
+      return {
         [741147386] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "Think_End",
@@ -280504,15 +282154,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114737:p(-90)"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741147393,
-    MaxKey = 741148013,
-    Loader = function()
-      return {
+        },
         [741147393] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.26",
           Content = "R180",
@@ -282465,7 +284107,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114751:Confident_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148010,
+    MaxKey = 741148717,
+    Loader = function()
+      return {
         [741148010] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Disagree",
@@ -282505,15 +284155,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114751:Explain02_Start"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148014,
-    MaxKey = 741148721,
-    Loader = function()
-      return {
+        },
         [741148014] = {
           Camera = "475.393555,129.051514,93.175293,0.000036,-0.99996,-164.797562,35.000008,100000.0,false,Disable,2.8",
           Content = "Explain02_End",
@@ -284450,7 +286092,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114765:Shock_End"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741148718,
+    MaxKey = 741149501,
+    Loader = function()
+      return {
         [741148718] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Sigh_Start",
@@ -284490,15 +286140,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114765:Talk01_End"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741148722,
-    MaxKey = 741149505,
-    Loader = function()
-      return {
+        },
         [741148722] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Talk02_Start",
@@ -286450,7 +288092,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TurnTo = {
             [1] = "74114781:p(90)"
           }
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 741149502,
+    MaxKey = 800304352,
+    Loader = function()
+      return {
         [741149502] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "L180",
@@ -286490,15 +288140,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TalkActionId = {
             [1] = "74114781:Agree"
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 741149506,
-    MaxKey = 800305082,
-    Loader = function()
-      return {
+        },
         [741149506] = {
           Camera = "562.100586,152.578491,110.129761,0.000036,-1.199948,-164.795944,35.000011,100000.0,false,Disable,2.17",
           Content = "Angry01_Start",
@@ -288226,7 +289868,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 800304352,
           GUID = "800304352.0",
           NextDialogue = 80030437
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 800305011,
+    MaxKey = 801604051,
+    Loader = function()
+      return {
         [800305011] = {
           Content = "谢谢，看上去心情不错？",
           DialogueId = 800305011,
@@ -288256,15 +289906,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           TriggerCondition = {
             IsGirl = {}
           }
-        }
-      }
-    end
-  },
-  {
-    MinKey = 800305091,
-    MaxKey = 801604261,
-    Loader = function()
-      return {
+        },
         [800305091] = {
           Content = "你自己怎么不扮？",
           DialogueId = 800305091,
@@ -289439,7 +291081,15 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 801604051,
           GUID = "801604051",
           NextDialogue = 80160406
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = 801604121,
+    MaxKey = 7411482302,
+    Loader = function()
+      return {
         [801604121] = {
           Content = "你还好吗？我都已经警告过你别喝这么快了！",
           DialogueId = 801604121,
@@ -289463,15 +291113,7 @@ PlayFacial{ActorId{100001},FacialId{"None"}}
           DialogueId = 801604261,
           GUID = "801604261.0",
           NextDialogue = 80160427
-        }
-      }
-    end
-  },
-  {
-    MinKey = 801701051,
-    MaxKey = 7411482302,
-    Loader = function()
-      return {
+        },
         [801701051] = {
           Content = "不可思议。",
           DialogueId = 801701051,
