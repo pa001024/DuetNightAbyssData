@@ -2651,6 +2651,7 @@ end
 
 function WBP_Battle_C:GetDefaultLayoutInfoFromDesign(LayoutPlan, LayoutIndex)
   local ResultDesignData = {}
+  LayoutPlan = self:_GetMappedPlanIndex(LayoutPlan)
   local DefaultPositionPlan = self["DefaultPosition0" .. tostring(LayoutPlan)]
   local DefaultScalePlan = self["DefaultPosScale0" .. tostring(LayoutPlan)]
   local ChildIndex = math.max(0, LayoutIndex)
@@ -2679,6 +2680,13 @@ function WBP_Battle_C:GetLayoutInfoFromServer(LayoutWidgetName, EditPlanIndex)
   end
   local WidgetPlanData = PlayerAvatar:GetMobileHudPlan(EditPlanIndex) or {}
   return WidgetPlanData[LayoutWidgetName]
+end
+
+function WBP_Battle_C:_GetMappedPlanIndex(EditPlanIndex)
+  if nil == EditPlanIndex then
+    return 1
+  end
+  return (EditPlanIndex - 1) % 2 + 1
 end
 
 AssembleComponents(WBP_Battle_C)

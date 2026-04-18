@@ -8,34 +8,20 @@ class NpcProcessor(BaseProcessor):
     """NPC数据处理器"""
 
     def __init__(self, data_loader):
-        """初始化NPC处理器
-
-        Args:
-            data_loader: 数据加载器实例
-        """
         super().__init__(data_loader)
         self.file_type = "Npc"
         self.story_files_base_path = os.path.join("out", "StoryCreator", "StoryFiles")
-        # 加载必要的数据文件
         self.i18n_data = data_loader.load_json("TextMap_I18n.json")
         self.camp_data = data_loader.load_json("CharCamp.json")
         self.talk_trigger_data = data_loader.load_json("TalkTrigger.json")
+        self.story_file_cache = {}
 
     def process_item(self, npc_data, language):
-        """处理单个NPC数据
-
-        Args:
-            npc_data: NPC原始数据
-            language: 语言代码
-
-        Returns:
-            dict: 处理后的NPC数据
-        """
+        """处理单个NPC数据。"""
         unit_id = npc_data.get("UnitId", 0)
         if not unit_id:
             return {}
 
-        # 构建处理后的NPC数据
         processed = {
             "id": unit_id,
             "name": self.get_translated_text(npc_data.get("UnitName", "")),
@@ -47,13 +33,6 @@ class NpcProcessor(BaseProcessor):
             "type": npc_data.get("NpcType", ""),
         }
 
-        # 处理可选字段
-        # if "MouthProfile" in npc_data:
-        #     processed["口型配置"] = npc_data.get("MouthProfile")
-
-        # if "PlayerInfo" in npc_data:
-        #     processed["玩家信息"] = npc_data.get("PlayerInfo")
-
         if "MailHead" in npc_data:
             processed["icon"] = (
                 npc_data.get("MailHead")
@@ -62,8 +41,14 @@ class NpcProcessor(BaseProcessor):
                 .replace("'", "")
             )
 
-        # if "MailSender" in npc_data:
-        #     processed["邮件发送者"] = npc_data.get("MailSender")
+        if not processed["charId"]:
+            del processed["charId"]
+
+        sr_id, pos = self._resolve_npc_context(npc_data)
+        if sr_id:
+            processed["srId"] = sr_id
+        if sr_id and pos is not None:
+            processed["pos"] = pos
 
         if "RelatedTalks" in npc_data:
             talks = npc_data.get("RelatedTalks")
@@ -74,14 +59,12 @@ class NpcProcessor(BaseProcessor):
                 chain = self._process_talk_trigger(talk, language)
                 if chain:
                     for dialogue in chain:
-                        # 去重：只添加新的对话条目
                         dialogue_id = dialogue.get("id")
                         if dialogue_id not in seen_dialogue_ids:
                             seen_dialogue_ids.add(dialogue_id)
                             dialogue_chains.append(dialogue)
                             dialogue_index[dialogue_id] = dialogue
                         else:
-                            # 已存在时补齐缺失字段（例如 voice）
                             existing_dialogue = dialogue_index.get(dialogue_id)
                             if not isinstance(existing_dialogue, dict):
                                 continue
@@ -93,86 +76,121 @@ class NpcProcessor(BaseProcessor):
             if dialogue_chains:
                 processed["talks"] = dialogue_chains
 
-        # if "ShowAnimationId" in npc_data:
-        #     processed["展示动画ID"] = npc_data.get("ShowAnimationId")
+        return {k: v for k, v in processed.items() if v is not None and v != ""}
 
-        # if "SpecialSit" in npc_data:
-        #     processed["特殊坐姿"] = npc_data.get("SpecialSit")
+    @staticmethod
+    def _to_int(value):
+        """尽量把值收敛为整数。"""
+        try:
+            return int(value)
+        except Exception:
+            return None
 
-        # if "Gender" in npc_data:
-        #     processed["性别"] = npc_data.get("Gender")
+    @staticmethod
+    def _format_num(value):
+        return int(round(float(value)))
 
-        # if "BT" in npc_data:
-        #     processed["行为树"] = npc_data.get("BT")
+    def _format_vec2(self, vec):
+        """将二维坐标取整并保留为数组。"""
+        if not isinstance(vec, list) or len(vec) < 2:
+            return None
+        try:
+            return [self._format_num(vec[0]), self._format_num(vec[1])]
+        except Exception:
+            return None
 
-        # if "GuideHeadId" in npc_data:
-        #     processed["引导头像ID"] = npc_data.get("GuideHeadId")
+    def _load_story_data_cached(self, story_path):
+        """加载并缓存故事文件。"""
+        cache_key = str(story_path)
+        if cache_key in self.story_file_cache:
+            return self.story_file_cache[cache_key]
 
-        # if "IsEmptyNpc" in npc_data:
-        #     processed["是否空NPC"] = npc_data.get("IsEmptyNpc")
+        story_data = self.load_story_file(story_path)
+        self.story_file_cache[cache_key] = story_data
+        return story_data
 
-        # if "RelateNpcId" in npc_data:
-        #     processed["关联NPC ID"] = npc_data.get("RelateNpcId")
+    def _resolve_npc_sr_id(self, npc_data):
+        """从关联对话故事中提取 NPC 子区域 ID。"""
+        sr_id, _ = self._resolve_npc_context(npc_data)
+        return sr_id
 
-        # if "SwitchPlayer" in npc_data:
-        #     processed["切换玩家"] = npc_data.get("SwitchPlayer")
+    def _resolve_npc_pos(self, npc_data):
+        """从关联对话故事中提取 NPC 的编辑器坐标。"""
+        _, pos = self._resolve_npc_context(npc_data)
+        return pos
 
-        # if "DefaultAction" in npc_data:
-        #     processed["默认动作"] = npc_data.get("DefaultAction")
+    def _resolve_npc_context(self, npc_data):
+        """从真实导引点中提取 NPC 的子区域与坐标。"""
+        unit_id = self._to_int(npc_data.get("UnitId"))
+        if unit_id is None:
+            return 0, None
 
-        # if "GlobalGameUITagList" in npc_data:
-        #     processed["全局游戏UI标签"] = npc_data.get("GlobalGameUITagList")
+        story_candidates = []
+        for talk_key in ("RelatedTalks", "RelatedBubble"):
+            talks = npc_data.get(talk_key)
+            if not isinstance(talks, list):
+                continue
+            for talk in talks:
+                trdata = self.talk_trigger_data.get(str(talk), {})
+                story_path = trdata.get("StoryLinePath", "")
+                if story_path:
+                    story_candidates.append(story_path)
 
-        # if "GuideCanMove" in npc_data:
-        #     processed["引导可移动"] = npc_data.get("GuideCanMove")
+        seen_candidates = set()
+        for story_path in story_candidates:
+            if story_path in seen_candidates:
+                continue
+            seen_candidates.add(story_path)
 
-        # if "IsRepeatable" in npc_data:
-        #     processed["是否可重复"] = npc_data.get("IsRepeatable")
+            story_data = self._load_story_data_cached(story_path)
+            if not story_data:
+                continue
 
-        # if "DefaultExpression" in npc_data:
-        #     processed["默认表情"] = npc_data.get("DefaultExpression")
+            sr_id, pos = self._find_story_npc_context(story_data, npc_data, unit_id)
+            if sr_id and pos is not None:
+                return sr_id, pos
 
-        # 移除值为空的字段
-        return {k: v for k, v in processed.items() if v}
+        return 0, None
+
+    def _find_story_npc_context(self, story_data, npc_data, unit_id):
+        """从故事节点中提取与指定 NPC 相关的 srId 与真实 pos。"""
+        unit_token = self._extract_path_token(npc_data.get("UnitBPPath") or npc_data.get("UnitName"))
+        guide_point_name = self._find_guide_point_name_by_token(unit_token)
+        if not guide_point_name:
+            guide_point_name = self._find_guide_point_name_by_token(
+                self._extract_path_token(npc_data.get("UnitName"))
+            )
+        if guide_point_name:
+            sr_id, pos = self._resolve_guide_point_pos(guide_point_name)
+            if sr_id and pos is not None:
+                return sr_id, pos
+
+        return 0, None
 
     def _process_talk_trigger(self, trigger, language=""):
-        """处理对话触发数据
-
-        Args:
-            trigger: 对话触发代码
-            language: 语言代码
-
-        Returns:
-            list: 对话链列表
-        """
+        """处理对话触发数据。"""
         if not trigger:
             return []
 
-        # 获取对话触发数据
         trdata = self.talk_trigger_data.get(str(trigger), {})
         if not trdata:
             print(f"未找到对话触发ID: {trigger}")
             return []
 
-        # 获取故事文件路径
         story_path = trdata.get("StoryLinePath", "")
         if not story_path:
-            # print(f"对话触发ID {trigger} 没有故事路径")
             return []
 
-        # 加载故事文件
         story_data = self.load_story_file(story_path)
         if not story_data:
             print(f"无法加载故事文件: {story_path}", flush=True)
             return []
 
-        # 查找对话节点
         talk_nodes = self._find_talk_nodes_in_story(story_data)
         if not talk_nodes:
             print(f"故事文件 {story_path} 中未找到对话节点")
             return []
 
-        # 构建对话链
         dialogue_chain = []
         for talk_node in talk_nodes:
             first_dialogue_id = talk_node.get("first_dialogue_id")
@@ -184,26 +202,15 @@ class NpcProcessor(BaseProcessor):
         return dialogue_chain
 
     def _find_talk_nodes_in_story(self, story_data):
-        """在故事数据中查找所有对话节点
-
-        Args:
-            story_data: 故事数据
-
-        Returns:
-            list: 对话节点列表
-        """
+        """在故事数据中查找所有对话节点。"""
         talk_nodes = []
         if not story_data or "storyNodeData" not in story_data:
             return talk_nodes
 
         story_node_data = story_data["storyNodeData"]
-
-        # 遍历所有故事节点
         for node_key, node_data in story_node_data.items():
-            # 检查该节点是否是对话节点
             if node_data.get("type") == "TalkNode":
                 node_props_data = node_data.get("propsData", {})
-                # 检查是否有 FirstDialogueId
                 if "FirstDialogueId" in node_props_data:
                     talk_nodes.append(
                         {
@@ -213,7 +220,6 @@ class NpcProcessor(BaseProcessor):
                         }
                     )
 
-            # 检查 questNodeData 中的对话节点
             quest_node_data = node_data.get("questNodeData", {})
             if quest_node_data:
                 node_data_dict = quest_node_data.get("nodeData", {})
@@ -234,22 +240,12 @@ class NpcProcessor(BaseProcessor):
         return talk_nodes
 
     def load_story_file(self, story_path):
-        """加载故事文件
-
-        Args:
-            story_path: 故事路径，如 "MainStory/1001/100101.story"
-
-        Returns:
-            dict: 故事文件数据，如果加载失败返回 None
-        """
+        """加载故事文件。"""
         try:
-            # 将 .story 替换为 .json
             json_path = story_path.replace(".story", ".json")
-            # 替换路径分隔符
             json_path = json_path.replace("\\", os.sep).replace("/", os.sep)
             if not json_path.endswith(".json"):
                 json_path += ".json"
-            # 构建完整路径
             full_path = os.path.join(self.story_files_base_path, json_path)
 
             if not os.path.exists(full_path):
@@ -263,14 +259,7 @@ class NpcProcessor(BaseProcessor):
             return None
 
     def _process_camp(self, camp):
-        """处理阵营数据
-
-        Args:
-            camp: 阵营代码
-
-        Returns:
-            str: 阵营名称
-        """
+        """处理阵营数据。"""
         if not camp:
             return ""
         camp_name = self.camp_data.get(camp, {}).get("CampName", "")

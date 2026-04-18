@@ -3316,7 +3316,7 @@ return ReadOnly("Target", {
   [70156] = {
     TargetId = 70156,
     TargetParam = {
-      [1] = {"12020628"}
+      [1] = {"12030101"}
     },
     TargetType = 10702
   },

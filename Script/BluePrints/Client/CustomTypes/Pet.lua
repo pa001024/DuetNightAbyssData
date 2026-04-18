@@ -126,8 +126,7 @@ function Pet:GetSkillLevelUp()
         SkillLevelUp = SkillLevelUp + (AffixData.PetSkillLevelUp or 0)
       end
     end
-    self.SkillLevelUp = SkillLevelUp
-    return self.SkillLevelUp
+    return SkillLevelUp
   end
 end
 

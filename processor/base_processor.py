@@ -1,5 +1,6 @@
 import json
 import re
+from pathlib import Path
 from collections import OrderedDict
 from threading import Lock
 from typing import Any, Dict, List, Optional, Tuple
@@ -9,6 +10,10 @@ class BaseProcessor:
     _shared_items_cache = {}
     _shared_items_cache_lock = Lock()
     _shared_i18n_cn_alt_cache = {}
+    _shared_guide_point_loc_cache = {}
+    _shared_guide_point_loc_cache_lock = Lock()
+    _shared_guide_point_loc_index_cache = {}
+    _shared_guide_point_loc_index_cache_lock = Lock()
 
     def __init__(self, data_loader):
         self.data_loader = data_loader
@@ -16,6 +21,7 @@ class BaseProcessor:
         self.i18n_data = data_loader.load_json("TextMap_I18n.json")
         self.i18n_data_cn_alt = self._load_shared_i18n_cn_alt(data_loader)
         self.condition_data = data_loader.load_json("Condition.json")
+        self.impression_check_data = data_loader.load_json("ImpressionCheck.json")
         # 预加载所有语言的对话数据
         self.dialogue_data_cache = {}
 
@@ -85,6 +91,219 @@ class BaseProcessor:
             if len(candidates) == 1:
                 return candidates[0]
         return None
+
+    @classmethod
+    def _get_guide_point_loc_data(cls) -> Dict[str, Any]:
+        """加载 QuestGuidePointLocData.lua 并缓存。"""
+        cache_key = "Script/BluePrints/UI/TaskPanel/QuestGuidePointLocData.lua"
+        with cls._shared_guide_point_loc_cache_lock:
+            cached = cls._shared_guide_point_loc_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+        lua_path = (
+            Path(__file__).resolve().parents[1]
+            / "Script"
+            / "BluePrints"
+            / "UI"
+            / "TaskPanel"
+            / "QuestGuidePointLocData.lua"
+        )
+        guide_point_data: Dict[str, Any] = {}
+        if lua_path.exists():
+            try:
+                from step1_convert import parse_lua_file
+
+                loaded = parse_lua_file(str(lua_path))
+                if isinstance(loaded, dict):
+                    guide_point_data = loaded
+            except Exception:
+                guide_point_data = {}
+
+        with cls._shared_guide_point_loc_cache_lock:
+            existing = cls._shared_guide_point_loc_cache.get(cache_key)
+            if existing is not None:
+                return existing
+            cls._shared_guide_point_loc_cache[cache_key] = guide_point_data
+        return guide_point_data
+
+    @classmethod
+    def _get_guide_point_loc_index(cls) -> Dict[str, Dict[str, List[str]]]:
+        """加载 QuestGuidePointLocData.lua 的索引缓存。"""
+        cache_key = "Script/BluePrints/UI/TaskPanel/QuestGuidePointLocData.lua"
+        with cls._shared_guide_point_loc_index_cache_lock:
+            cached = cls._shared_guide_point_loc_index_cache.get(cache_key)
+            if cached is not None:
+                return cached
+
+        guide_point_data = cls._get_guide_point_loc_data()
+        index = cls._build_guide_point_loc_index(guide_point_data)
+
+        with cls._shared_guide_point_loc_index_cache_lock:
+            existing = cls._shared_guide_point_loc_index_cache.get(cache_key)
+            if existing is not None:
+                return existing
+            cls._shared_guide_point_loc_index_cache[cache_key] = index
+        return index
+
+    @classmethod
+    def _build_guide_point_loc_index(cls, guide_point_data: Dict[str, Any]) -> Dict[str, Dict[str, List[str]]]:
+        """构建导引点索引，避免每次查找全表扫描。"""
+        by_normalized_name: Dict[str, List[str]] = {}
+        by_token: Dict[str, List[str]] = {}
+        if not isinstance(guide_point_data, dict):
+            return {"by_normalized_name": by_normalized_name, "by_token": by_token}
+
+        for guide_point_name in guide_point_data.keys():
+            if not isinstance(guide_point_name, str) or not guide_point_name:
+                continue
+            normalized_name = cls._normalize_guide_point_token(guide_point_name)
+            if not normalized_name:
+                continue
+            by_normalized_name.setdefault(normalized_name, []).append(guide_point_name)
+
+            for token in cls._extract_guide_point_name_tokens(guide_point_name):
+                by_token.setdefault(token, []).append(guide_point_name)
+
+        return {"by_normalized_name": by_normalized_name, "by_token": by_token}
+
+    @staticmethod
+    def _extract_guide_point_pos(guide_point_data: Optional[dict]) -> Tuple[Optional[int], Optional[List[float]]]:
+        """将导引点数据收敛为 srId 与二维整数坐标。"""
+        if not isinstance(guide_point_data, dict):
+            return None, None
+
+        x = guide_point_data.get("X")
+        y = guide_point_data.get("Y")
+        if x is None or y is None:
+            return None, None
+
+        try:
+            pos = [int(round(float(x))), int(round(float(y)))]
+        except Exception:
+            return None, None
+
+        try:
+            sr_id = int(guide_point_data.get("SubRegionId"))
+        except Exception:
+            sr_id = None
+
+        if sr_id is None or sr_id <= 0:
+            return None, None
+
+        return sr_id, pos
+
+    def _resolve_guide_point_pos(self, guide_point_name: Optional[str]) -> Tuple[Optional[int], Optional[List[float]]]:
+        """按导引点名称读取真实坐标。"""
+        if not isinstance(guide_point_name, str) or not guide_point_name:
+            return None, None
+
+        guide_point_data = self._get_guide_point_loc_data().get(guide_point_name)
+        return self._extract_guide_point_pos(guide_point_data)
+
+    @classmethod
+    def _normalize_guide_point_token(cls, value: Optional[str]) -> str:
+        """将导引点相关名称标准化用于模糊匹配。"""
+        if not isinstance(value, str):
+            return ""
+        return re.sub(r"[^0-9A-Za-z]+", "", value).lower()
+
+    @classmethod
+    def _extract_guide_point_name_tokens(cls, guide_point_name: Optional[str]) -> List[str]:
+        """提取导引点名可用于检索的 token。"""
+        if not isinstance(guide_point_name, str) or not guide_point_name:
+            return []
+
+        tokens = []
+        seen = set()
+        for part in re.split(r"[^0-9A-Za-z]+", guide_point_name):
+            if not part:
+                continue
+            normalized_part = cls._normalize_guide_point_token(part)
+            if normalized_part and normalized_part not in seen:
+                seen.add(normalized_part)
+                tokens.append(normalized_part)
+
+            for chunk in re.findall(r"[0-9]+|[A-Za-z]+", part):
+                normalized_chunk = cls._normalize_guide_point_token(chunk)
+                if not normalized_chunk:
+                    continue
+                if not normalized_chunk.isdigit() and len(normalized_chunk) < 3:
+                    continue
+                if normalized_chunk in seen:
+                    continue
+                seen.add(normalized_chunk)
+                tokens.append(normalized_chunk)
+
+        normalized_name = cls._normalize_guide_point_token(guide_point_name)
+        if normalized_name and normalized_name not in seen:
+            tokens.append(normalized_name)
+        return tokens
+
+    @classmethod
+    def _pick_guide_point_name_from_candidates(
+        cls, normalized_token: str, candidates: List[str]
+    ) -> Optional[str]:
+        """从候选导引点名中挑出唯一命中项。"""
+        if not candidates:
+            return None
+        if len(candidates) == 1:
+            return candidates[0]
+
+        normalized_candidates = [
+            (name, cls._normalize_guide_point_token(name))
+            for name in candidates
+        ]
+        exact = [name for name, normalized_name in normalized_candidates if normalized_name == normalized_token]
+        if len(exact) == 1:
+            return exact[0]
+
+        suffix = [name for name, normalized_name in normalized_candidates if normalized_name.endswith(normalized_token)]
+        if len(suffix) == 1:
+            return suffix[0]
+
+        contains = [name for name, normalized_name in normalized_candidates if normalized_token in normalized_name]
+        if len(contains) == 1:
+            return contains[0]
+
+        return None
+
+    @classmethod
+    def _find_guide_point_name_by_token(cls, token: Optional[str]) -> Optional[str]:
+        """按名称 token 在 QuestGuidePointLocData 中查找真实导引点名。"""
+        normalized_token = cls._normalize_guide_point_token(token)
+        if not normalized_token:
+            return None
+
+        guide_point_index = cls._get_guide_point_loc_index()
+        by_normalized_name = guide_point_index.get("by_normalized_name", {})
+        by_token = guide_point_index.get("by_token", {})
+
+        exact_matches = by_normalized_name.get(normalized_token, [])
+        if len(exact_matches) == 1:
+            return exact_matches[0]
+        if len(exact_matches) > 1:
+            picked = cls._pick_guide_point_name_from_candidates(normalized_token, exact_matches)
+            if picked:
+                return picked
+
+        token_matches = by_token.get(normalized_token, [])
+        picked = cls._pick_guide_point_name_from_candidates(normalized_token, token_matches)
+        if picked:
+            return picked
+
+        return None
+
+    @staticmethod
+    def _extract_path_token(path_value: Optional[str]) -> str:
+        """从路径或对象名中提取最后一个语义 token。"""
+        if not isinstance(path_value, str) or not path_value:
+            return ""
+        token = path_value.replace("\\", "/").split("/")[-1]
+        token = token.split(".")[0]
+        if "_" in token:
+            token = token.split("_")[-1]
+        return token
 
     @staticmethod
     def _to_vector3(value) -> Optional[List[float]]:
@@ -704,13 +923,26 @@ class BaseProcessor:
         return rst
 
     def _inline_impr_check(self, condition_id):
-        """将ImprCheckId转换为Condition中的ImprShopUnlock数组"""
-        condition = self.condition_data.get(str(condition_id), {})
-        condition_map = condition.get("ConditionMap", {})
-        unlock_list = condition_map.get("ImprShopUnlock", [])
+        """将ImprCheckId转换为印象检定数组。"""
+        check_data = self.impression_check_data.get(str(condition_id), {})
+        if not isinstance(check_data, dict):
+            return []
 
-        if unlock_list and isinstance(unlock_list[0], list):
-            return unlock_list[0]
+        region_id = self._to_int(check_data.get("RegionId"))
+        if region_id is None:
+            return []
+
+        check_fields = [
+            ("BenefitCheck", "Benefit"),
+            ("MoralityCheck", "Morality"),
+            ("WisdomCheck", "Wisdom"),
+            ("EmpathyCheck", "Empathy"),
+            ("ChaosCheck", "Chaos"),
+        ]
+        for field, name in check_fields:
+            value = self._to_int(check_data.get(field))
+            if value and value > 0:
+                return [region_id, name, value]
 
         return []
 

@@ -13,6 +13,8 @@ class QuestStoryProcessor(BaseProcessor):
         self.story_files_base_path = os.path.join("out", "StoryCreator", "StoryFiles")
         self.dialogue_flow_base_path = os.path.join("out", "Dialogue")
         self.dialogue_flow_cache = {}
+        self.sub_region_data = data_loader.load_json("SubRegion.json")
+        self.sub_region_center_by_id = self._build_sub_region_center_by_id()
 
     def load_items(self, file_path):
         """加载任务链数据（兼容接口）
@@ -83,6 +85,145 @@ class QuestStoryProcessor(BaseProcessor):
             json.dump(items, f, ensure_ascii=False, indent=2, sort_keys=False)
 
         return output_file
+
+    @staticmethod
+    def _to_int(value):
+        """尽量把值收敛为整数。"""
+        try:
+            return int(value)
+        except Exception:
+            return None
+
+    @staticmethod
+    def _format_num(value):
+        return int(round(float(value)))
+
+    def _format_vec2(self, vec):
+        """将二维坐标取整并保留为数组。"""
+        if not isinstance(vec, list) or len(vec) < 2:
+            return None
+        try:
+            return [self._format_num(vec[0]), self._format_num(vec[1])]
+        except Exception:
+            return None
+
+    def _build_sub_region_center_by_id(self):
+        """构建 SubRegionId -> 中心点映射。"""
+        mapping = {}
+        if not isinstance(self.sub_region_data, dict):
+            return mapping
+        for sub_region in self.sub_region_data.values():
+            if not isinstance(sub_region, dict):
+                continue
+            sub_region_id = self._to_int(sub_region.get("SubRegionId"))
+            center = sub_region.get("SubRegionCenter")
+            if sub_region_id is None or not isinstance(center, list) or len(center) < 2:
+                continue
+            mapping[sub_region_id] = self._format_vec2(center)
+        return mapping
+
+    def _extract_story_context(self, story_node_data):
+        """提取外层故事节点的真实导引点上下文。"""
+        return self._resolve_guide_point_context(story_node_data)
+
+    def _resolve_story_context_sr_id(self, story_context):
+        """从外层故事节点上下文解析 SubRegionId。"""
+        if not isinstance(story_context, dict):
+            return None
+
+        sr_id = self._to_int(story_context.get("srId"))
+        if sr_id:
+            return sr_id
+
+        props_data = story_context.get("propsData", {})
+        if isinstance(props_data, dict):
+            sr_id = self._to_int(props_data.get("SubRegionId"))
+            if sr_id:
+                return sr_id
+
+        return None
+
+    def _resolve_story_context_pos(self, story_context):
+        """保留兼容接口，但不再使用节点布局位置。"""
+        return None
+
+    def _resolve_guide_point_context(self, node_data):
+        """从节点导引点名解析真实 srId 与 pos。"""
+        if not isinstance(node_data, dict):
+            return None, None
+
+        props_data = node_data.get("propsData", {})
+        if not isinstance(props_data, dict):
+            props_data = {}
+
+        guide_point_name = props_data.get("GuidePointName") or props_data.get(
+            "StoryGuidePointName"
+        )
+        if not isinstance(guide_point_name, str) or not guide_point_name:
+            guide_point_name = self._extract_path_token(
+                props_data.get("UnitBPPath") or props_data.get("UnitName")
+            )
+
+        resolved_name = self._find_guide_point_name_by_token(guide_point_name)
+        if not resolved_name:
+            return None, None
+        return self._resolve_guide_point_pos(resolved_name)
+
+    def _resolve_story_node_pos(self, node_data, story_context=None):
+        """按真实导引点解析坐标。"""
+        sr_id, pos = self._resolve_guide_point_context(node_data)
+        if pos is not None:
+            return pos
+        return None
+
+    def _iter_story_nodes(self, story_data):
+        """遍历故事节点和 questNodeData 内节点。"""
+        story_node_data = story_data.get("storyNodeData", {})
+        if not isinstance(story_node_data, dict):
+            return
+
+        for node_key, node_data in story_node_data.items():
+            if not isinstance(node_data, dict):
+                continue
+            yield node_key, node_data
+            quest_node_data = node_data.get("questNodeData", {})
+            if not isinstance(quest_node_data, dict):
+                continue
+            node_data_dict = quest_node_data.get("nodeData", {})
+            if not isinstance(node_data_dict, dict):
+                continue
+            for sub_node_key, sub_node in node_data_dict.items():
+                if isinstance(sub_node, dict):
+                    yield sub_node_key, sub_node
+
+    def _build_story_node_item(self, node_key, node_data, story_context=None):
+        """构造统一的故事节点输出。"""
+        props_data = node_data.get("propsData", {})
+        sr_id, pos = self._resolve_guide_point_context(node_data)
+        if not sr_id:
+            sr_id, pos = self._resolve_guide_point_context(story_context)
+        node_item = {
+            "node_key": node_key,
+            "type": node_data.get("type"),
+            "name": node_data.get("name", ""),
+            "props_data": props_data,
+        }
+        if sr_id:
+            node_item["srId"] = sr_id
+            if pos is not None:
+                node_item["pos"] = pos
+        node_type = node_item["type"]
+        if node_type == "TalkNode":
+            node_item["first_dialogue_id"] = props_data.get("FirstDialogueId")
+        elif node_type == "UnlockDetectiveQuestionNode":
+            question_ids = props_data.get("QuestionIds", [])
+            if question_ids:
+                node_item["question_ids"] = question_ids
+        elif node_type == "UnlockDetectiveAnswerNode":
+            answer_ids = props_data.get("AnswerIds", [])
+            if answer_ids:
+                node_item["answer_ids"] = answer_ids
+        return node_item
 
     def load_story_file(self, story_path):
         """加载故事文件
@@ -523,7 +664,7 @@ class QuestStoryProcessor(BaseProcessor):
         story_node_data = story_data["storyNodeData"]
 
         # 遍历所有故事节点
-        for node_key, node_data in story_node_data.items():
+        for node_key, node_data in self._iter_story_nodes(story_data):
             # 检查该故事节点是否包含指定的 QuestId
             props_data = node_data.get("propsData", {})
             if props_data.get("QuestId") != quest_id:
@@ -542,37 +683,23 @@ class QuestStoryProcessor(BaseProcessor):
                         # 检查是否有 FirstDialogueId
                         if "FirstDialogueId" in sub_props_data:
                             nodes.append(
-                                {
-                                    "node_key": sub_node_key,
-                                    "type": node_type,
-                                    "name": sub_node.get("name", ""),
-                                    "first_dialogue_id": sub_props_data.get(
-                                        "FirstDialogueId"
-                                    ),
-                                    "props_data": sub_props_data,
-                                }
+                                self._build_story_node_item(
+                                    sub_node_key, sub_node, node_data
+                                )
                             )
                     # 检查是否是推理问题节点
                     elif node_type == "UnlockDetectiveQuestionNode":
                         nodes.append(
-                            {
-                                "node_key": sub_node_key,
-                                "type": node_type,
-                                "name": sub_node.get("name", ""),
-                                "props_data": sub_props_data,
-                                "question_ids": sub_props_data.get("QuestionIds", []),
-                            }
+                            self._build_story_node_item(
+                                sub_node_key, sub_node, node_data
+                            )
                         )
                     # 检查是否是推理答案节点
                     elif node_type == "UnlockDetectiveAnswerNode":
                         nodes.append(
-                            {
-                                "node_key": sub_node_key,
-                                "type": node_type,
-                                "name": sub_node.get("name", ""),
-                                "props_data": sub_props_data,
-                                "answer_ids": sub_props_data.get("AnswerIds", []),
-                            }
+                            self._build_story_node_item(
+                                sub_node_key, sub_node, node_data
+                            )
                         )
 
             # 检查该节点本身是否是对话节点
@@ -581,15 +708,7 @@ class QuestStoryProcessor(BaseProcessor):
                 node_props_data = node_data.get("propsData", {})
                 # 检查是否有 FirstDialogueId
                 if "FirstDialogueId" in node_props_data:
-                    nodes.append(
-                        {
-                            "node_key": node_key,
-                            "type": node_type,
-                            "name": node_data.get("name", ""),
-                            "first_dialogue_id": node_props_data.get("FirstDialogueId"),
-                            "props_data": node_props_data,
-                        }
-                    )
+                    nodes.append(self._build_story_node_item(node_key, node_data))
 
         return nodes
 
@@ -751,41 +870,25 @@ class QuestStoryProcessor(BaseProcessor):
                             if node_type == "TalkNode":
                                 # 检查是否有 FirstDialogueId
                                 if "FirstDialogueId" in sub_props_data:
-                                    node_item = {
-                                        "node_key": current_node,
-                                        "type": node_type,
-                                        "name": node_map[current_node].get("name", ""),
-                                        "first_dialogue_id": sub_props_data.get(
-                                            "FirstDialogueId"
-                                        ),
-                                        "props_data": sub_props_data,
-                                    }
+                                    node_item = self._build_story_node_item(
+                                        current_node, node_map[current_node], node_data
+                                    )
                                     if next_node_ids:
                                         node_item["next"] = next_node_ids
                                     ordered_nodes.append(node_item)
                             # 检查是否是推理问题节点
                             elif node_type == "UnlockDetectiveQuestionNode":
-                                node_item = {
-                                    "node_key": current_node,
-                                    "type": node_type,
-                                    "name": node_map[current_node].get("name", ""),
-                                    "props_data": sub_props_data,
-                                    "question_ids": sub_props_data.get(
-                                        "QuestionIds", []
-                                    ),
-                                }
+                                node_item = self._build_story_node_item(
+                                    current_node, node_map[current_node], node_data
+                                )
                                 if next_node_ids:
                                     node_item["next"] = next_node_ids
                                 ordered_nodes.append(node_item)
                             # 检查是否是推理答案节点
                             elif node_type == "UnlockDetectiveAnswerNode":
-                                node_item = {
-                                    "node_key": current_node,
-                                    "type": node_type,
-                                    "name": node_map[current_node].get("name", ""),
-                                    "props_data": sub_props_data,
-                                    "answer_ids": sub_props_data.get("AnswerIds", []),
-                                }
+                                node_item = self._build_story_node_item(
+                                    current_node, node_map[current_node], node_data
+                                )
                                 if next_node_ids:
                                     node_item["next"] = next_node_ids
                                 ordered_nodes.append(node_item)
@@ -1065,6 +1168,10 @@ class QuestStoryProcessor(BaseProcessor):
                     "type": node["type"],
                     "name": node.get("name", ""),
                 }
+                if node.get("srId"):
+                    node_info["srId"] = node["srId"]
+                if node.get("srId") and node.get("pos") is not None:
+                    node_info["pos"] = node["pos"]
 
                 if "next" in node:
                     node_info["next"] = node["next"]
@@ -1074,20 +1181,22 @@ class QuestStoryProcessor(BaseProcessor):
                     dialogue_chain = []
 
                     first_dialogue_id = node.get("first_dialogue_id", 0)
-                    if first_dialogue_id:
+                    props_data = node.get("props_data", {})
+                    flow_asset_path = props_data.get("FlowAssetPath", "")
+                    use_flow_asset_actors = bool(props_data.get("bUseFlowAssetActors"))
+
+                    if use_flow_asset_actors and flow_asset_path:
+                        dialogue_chain = self.get_dialogue_chain_from_flow_asset(
+                            flow_asset_path, language
+                        )
+                    if not dialogue_chain and first_dialogue_id:
                         dialogue_chain = self.get_dialogue_chain(
                             first_dialogue_id, language
                         )
-
-                    # FirstDialogueId 为 0 时，尝试走 FlowAssetPath 对话流
-                    if not dialogue_chain:
-                        flow_asset_path = node.get("props_data", {}).get(
-                            "FlowAssetPath", ""
+                    if not dialogue_chain and flow_asset_path:
+                        dialogue_chain = self.get_dialogue_chain_from_flow_asset(
+                            flow_asset_path, language
                         )
-                        if flow_asset_path:
-                            dialogue_chain = self.get_dialogue_chain_from_flow_asset(
-                                flow_asset_path, language
-                            )
 
                     if dialogue_chain:
                         node_info["dialogues"] = dialogue_chain
@@ -1191,6 +1300,8 @@ class QuestStoryProcessor(BaseProcessor):
                         s["startIds"] = start_ids
                 if s["desc"] == s["name"]:
                     del s["desc"]
+                if not s["nodes"]:
+                    del s["nodes"]
                 quest_stories.append(s)
 
         if not quest_stories:

@@ -387,10 +387,10 @@ function M:CreateHairContents(Target)
       if Data.CharId ~= Char.CharId then
       else
         if not OtherOwnedHairs[HairId] and not Char:GetHair(HairId, Avatar) and not UIUtils.ShouldDisplayItem(CommonConst.DataType.Hair, HairId) then
-          goto lbl_320
+          goto lbl_323
         end
         elseif not UIUtils.ShouldDisplayItem(CommonConst.DataType.Hair, HairId) then
-          goto lbl_320
+          goto lbl_323
         end
         local Obj = NewObject(UIUtils.GetCommonItemContentClass())
         rawset(Obj, "IsCharacterTrialMode", self.IsCharacterTrialMode)
@@ -407,7 +407,7 @@ function M:CreateHairContents(Target)
         rawset(Obj, "CharId", Char.CharId)
         rawset(Obj, "ItemType", CommonConst.DataType.Hair)
         rawset(Obj, "Owner", self)
-        rawset(Obj, "bDyeable", HairId ~= DefaultHairId)
+        rawset(Obj, "bDyeable", HairId ~= DefaultHairId and not Data.IsCommon)
         if 1 == CharHairCacheDetail[HairId] or 1 == CommonCharHairCacheDetail[HairId] then
           rawset(Obj, "RedDotType", UIConst.RedDotType.NewRedDot)
         end
@@ -435,7 +435,7 @@ function M:CreateHairContents(Target)
         self:OnHairContentCreated(Obj)
         table.insert(self.HairArray, Obj)
       end
-    ::lbl_320::
+    ::lbl_323::
   end
   table.sort(self.HairArray, function(a, b)
     if a.LockType and b.LockType or not a.LockType and not b.LockType then

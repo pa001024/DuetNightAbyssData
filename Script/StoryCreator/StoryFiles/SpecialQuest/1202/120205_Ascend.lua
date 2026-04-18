@@ -2316,7 +2316,7 @@ return {
               WeaponTags = {"Melee", "Ranged"},
               bForbid = false,
               ForbidTag = "ForbidDefault",
-              bHidewhenForbid = false
+              bHidewhenForbid = true
             }
           },
           ["17747043252861775"] = {
@@ -2473,7 +2473,7 @@ return {
               WeaponTags = {"Melee", "Ranged"},
               bForbid = false,
               ForbidTag = "ForbidDefault",
-              bHidewhenForbid = false
+              bHidewhenForbid = true
             }
           },
           ["17748570588077251989"] = {

@@ -346,7 +346,7 @@ end
 
 function WBP_Forging_Convert_Main_C:OnClose()
   DebugPrint("Yihan@ OnClose")
-  if self:IsAnimationPlaying(self.In) then
+  if self:IsAnimationPlaying(self.In) or self.WBP_Forging_Convert.bInMixAnimation then
     return
   end
   if self.IsClosing then

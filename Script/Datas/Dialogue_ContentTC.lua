@@ -131533,6 +131533,7 @@ LookAt{LookAtDescription{"250006:n(100001)"}}
         },
         [12062014] = {
           Content = "但愿如此吧。",
+          ContentTC = "但願如此吧。",
           DialogueId = 12062014,
           GUID = "1E322C2C",
           SpeakNpcId = 250015,

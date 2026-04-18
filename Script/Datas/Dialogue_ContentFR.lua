@@ -144522,6 +144522,7 @@ PlayAnimation{_delay{0.5},ActorId{700248},AnimationId{"Sigh_End"},Duration{1}}}]
         },
         [50107201] = {
           Content = "我的钱袋子呢？",
+          ContentFR = "Où est passée ma bourse ?!",
           DialogueId = 50107201,
           GUID = "7D7028AA",
           SpeakNpcId = 701113,

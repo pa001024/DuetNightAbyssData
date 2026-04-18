@@ -5282,7 +5282,7 @@ return ReadOnly("Achievement", {
     AchievementRequire = {7015501},
     AchievementReward = 7003,
     AchievementType = 1,
-    DesUnlockCon = 12020628,
+    DesUnlockCon = 12030101,
     IsShowInList = true,
     TargetId = {70156},
     TargetProgress = 1

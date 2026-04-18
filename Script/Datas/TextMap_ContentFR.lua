@@ -69113,7 +69113,7 @@ Allez voir ce qui se passe.]],
   },
   {
     MinKey = "UI_CHAR_DATA_TEXT_51020301",
-    MaxKey = "UI_CMNpc_Name_BanShou",
+    MaxKey = "UI_CMNpc_Name_Aima",
     Loader = function()
       return {
         UI_CHAR_DATA_TEXT_51020301 = {
@@ -69820,6 +69820,78 @@ Allez voir ce qui se passe.]],
           ContentFR = "Examiner la stèle",
           TextMapId = "UI_CMNpc_CheckStele"
         },
+        UI_CMNpc_Haojing_Name_ATao = {
+          ContentFR = "Tao",
+          TextMapId = "UI_CMNpc_Haojing_Name_ATao"
+        },
+        UI_CMNpc_Haojing_Name_ChengGong = {
+          ContentFR = "Cheng Gong",
+          TextMapId = "UI_CMNpc_Haojing_Name_ChengGong"
+        },
+        UI_CMNpc_Haojing_Name_CourtyardElder = {
+          ContentFR = "Vieil homme Kongting",
+          TextMapId = "UI_CMNpc_Haojing_Name_CourtyardElder"
+        },
+        UI_CMNpc_Haojing_Name_HeXiangu = {
+          ContentFR = "Tante He",
+          TextMapId = "UI_CMNpc_Haojing_Name_HeXiangu"
+        },
+        UI_CMNpc_Haojing_Name_HuaLiuqing = {
+          ContentFR = "Hua Liuqing",
+          TextMapId = "UI_CMNpc_Haojing_Name_HuaLiuqing"
+        },
+        UI_CMNpc_Haojing_Name_Kid = {
+          ContentFR = "Enfant",
+          TextMapId = "UI_CMNpc_Haojing_Name_Kid"
+        },
+        UI_CMNpc_Haojing_Name_LiDazui = {
+          ContentFR = "Li Dazui",
+          TextMapId = "UI_CMNpc_Haojing_Name_LiDazui"
+        },
+        UI_CMNpc_Haojing_Name_LuoHan = {
+          ContentFR = "Luo Han",
+          TextMapId = "UI_CMNpc_Haojing_Name_LuoHan"
+        },
+        UI_CMNpc_Haojing_Name_MsPing = {
+          ContentFR = "Mademoiselle Ping",
+          TextMapId = "UI_CMNpc_Haojing_Name_MsPing"
+        },
+        UI_CMNpc_Haojing_Name_OptimisticWhite = {
+          ContentFR = "Luno, l’optimiste",
+          TextMapId = "UI_CMNpc_Haojing_Name_OptimisticWhite"
+        },
+        UI_CMNpc_Haojing_Name_StrangeMan = {
+          ContentFR = "Homme étrange",
+          TextMapId = "UI_CMNpc_Haojing_Name_StrangeMan"
+        },
+        UI_CMNpc_Haojing_Name_Tiantong = {
+          ContentFR = "Tian Tong",
+          TextMapId = "UI_CMNpc_Haojing_Name_Tiantong"
+        },
+        UI_CMNpc_Haojing_Name_WeirdGuy = {
+          ContentFR = "Homme bizarre",
+          TextMapId = "UI_CMNpc_Haojing_Name_WeirdGuy"
+        },
+        UI_CMNpc_Haojing_Name_XiangguanWhite = {
+          ContentFR = "Luno, officiante de l’encens",
+          TextMapId = "UI_CMNpc_Haojing_Name_XiangguanWhite"
+        },
+        UI_CMNpc_Haojing_Name_XieQian = {
+          ContentFR = "Xie Qian",
+          TextMapId = "UI_CMNpc_Haojing_Name_XieQian"
+        },
+        UI_CMNpc_Haojing_Name_YanTaiqing = {
+          ContentFR = "Yan Taiqing",
+          TextMapId = "UI_CMNpc_Haojing_Name_YanTaiqing"
+        },
+        UI_CMNpc_Haojing_Name_YinheSheng = {
+          ContentFR = "Yinhe Shen",
+          TextMapId = "UI_CMNpc_Haojing_Name_YinheSheng"
+        },
+        UI_CMNpc_Haojing_Name_ZhugeMing = {
+          ContentFR = "Zhuge Ming",
+          TextMapId = "UI_CMNpc_Haojing_Name_ZhugeMing"
+        },
         UI_CMNpc_KnockDoor = {
           ContentFR = "Frapper à la porte",
           TextMapId = "UI_CMNpc_KnockDoor"
@@ -69843,7 +69915,15 @@ Allez voir ce qui se passe.]],
         UI_CMNpc_Name_Aima = {
           ContentFR = "Emma",
           TextMapId = "UI_CMNpc_Name_Aima"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Name_Aimi",
+    MaxKey = "UI_CMNpc_Yanjindu_Name_PresentMan",
+    Loader = function()
+      return {
         UI_CMNpc_Name_Aimi = {
           ContentFR = "Emilia",
           TextMapId = "UI_CMNpc_Name_Aimi"
@@ -69915,15 +69995,7 @@ Allez voir ce qui se passe.]],
         UI_CMNpc_Name_BanShou = {
           ContentFR = "Clé à molette",
           TextMapId = "UI_CMNpc_Name_BanShou"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CMNpc_Name_Bandit",
-    MaxKey = "UI_COIN_LIMITTIME23",
-    Loader = function()
-      return {
+        },
         UI_CMNpc_Name_Bandit = {
           ContentFR = "Bandit",
           TextMapId = "UI_CMNpc_Name_Bandit"
@@ -70651,7 +70723,15 @@ Allez voir ce qui se passe.]],
         UI_CMNpc_Yanjindu_Name_PresentMan = {
           ContentFR = "L’Homme aux cadeaux",
           TextMapId = "UI_CMNpc_Yanjindu_Name_PresentMan"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CMNpc_Yanjindu_Name_QingQing",
+    MaxKey = "UI_CONFIRM_OPENRLTSHOP",
+    Loader = function()
+      return {
         UI_CMNpc_Yanjindu_Name_QingQing = {
           ContentFR = "Qingqing",
           TextMapId = "UI_CMNpc_Yanjindu_Name_QingQing"
@@ -70723,15 +70803,7 @@ Allez voir ce qui se passe.]],
         UI_COIN_LIMITTIME23 = {
           ContentFR = "Manche 2/3 — Temps restant avant la disparition des pièces :",
           TextMapId = "UI_COIN_LIMITTIME23"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_COIN_LIMITTIME26",
-    MaxKey = "UI_CTL_BulletJump",
-    Loader = function()
-      return {
+        },
         UI_COIN_LIMITTIME26 = {
           ContentFR = "Manche 2/6 — Temps restant avant la disparition des pièces :",
           TextMapId = "UI_COIN_LIMITTIME26"
@@ -71459,7 +71531,15 @@ Allez voir ce qui se passe.]],
         UI_CONFIRM_OPENRLTSHOP = {
           ContentFR = "Échange d’Artéfacts",
           TextMapId = "UI_CONFIRM_OPENRLTSHOP"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_CONFIRM_OPENSHOP",
+    MaxKey = "UI_Chardata_Data_Num_7",
+    Loader = function()
+      return {
         UI_CONFIRM_OPENSHOP = {
           ContentFR = "Boutique",
           TextMapId = "UI_CONFIRM_OPENSHOP"
@@ -71528,15 +71608,7 @@ Allez voir ce qui se passe.]],
         UI_CTL_BulletJump = {
           ContentFR = "Bond Cyclonique",
           TextMapId = "UI_CTL_BulletJump"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_CTL_Camera",
-    MaxKey = "UI_Chat_Default_7",
-    Loader = function()
-      return {
+        },
         UI_CTL_Camera = {
           ContentFR = "Contrôle de la caméra",
           TextMapId = "UI_CTL_Camera"
@@ -72261,7 +72333,15 @@ Allez voir ce qui se passe.]],
         UI_Chardata_Data_Num_7 = {
           ContentFR = "VII",
           TextMapId = "UI_Chardata_Data_Num_7"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Chardata_Data_Of",
+    MaxKey = "UI_Consume_Select_Skin",
+    Loader = function()
+      return {
         UI_Chardata_Data_Of = {
           ContentFR = "·",
           TextMapId = "UI_Chardata_Data_Of"
@@ -72333,15 +72413,7 @@ Allez voir ce qui se passe.]],
         UI_Chat_Default_7 = {
           ContentFR = "Désolé !",
           TextMapId = "UI_Chat_Default_7"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Chat_Default_8",
-    MaxKey = "UI_Convert_AddResources",
-    Loader = function()
-      return {
+        },
         UI_Chat_Default_8 = {
           ContentFR = "Invitez-moi encore !",
           TextMapId = "UI_Chat_Default_8"
@@ -73069,7 +73141,15 @@ Allez voir ce qui se passe.]],
         UI_Consume_Select_Skin = {
           ContentFR = "Utiliser l’objet pour débloquer cette apparence",
           TextMapId = "UI_Consume_Select_Skin"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Content_SaiqiBossWarning",
+    MaxKey = "UI_DUNGEON_AUTOCHESS_26",
+    Loader = function()
+      return {
         UI_Content_SaiqiBossWarning = {
           ContentFR = "Vous êtes sur le point d’affronter un combat difficile. Assurez-vous que votre <H>Sac tactique</> contient des <H>Emblèmes de combat</> et que votre personnage possède une <H>arme à distance</> suffisamment développée.",
           TextMapId = "UI_Content_SaiqiBossWarning"
@@ -73138,15 +73218,7 @@ Allez voir ce qui se passe.]],
         UI_Convert_AddResources = {
           ContentFR = "Ajouter des matériaux",
           TextMapId = "UI_Convert_AddResources"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Convert_Num",
-    MaxKey = "UI_DUNGEON_AUTOCHESS_42",
-    Loader = function()
-      return {
+        },
         UI_Convert_Num = {
           ContentFR = "Quantité de reforges :",
           TextMapId = "UI_Convert_Num"
@@ -73871,7 +73943,15 @@ Allez voir ce qui se passe.]],
         UI_DUNGEON_AUTOCHESS_26 = {
           ContentFR = "Partie sans fin 006",
           TextMapId = "UI_DUNGEON_AUTOCHESS_26"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_AUTOCHESS_27",
+    MaxKey = "UI_DUNGEON_Locked",
+    Loader = function()
+      return {
         UI_DUNGEON_AUTOCHESS_27 = {
           ContentFR = "Partie sans fin 007",
           TextMapId = "UI_DUNGEON_AUTOCHESS_27"
@@ -73943,15 +74023,7 @@ Allez voir ce qui se passe.]],
         UI_DUNGEON_AUTOCHESS_42 = {
           ContentFR = "Partie sans fin 022",
           TextMapId = "UI_DUNGEON_AUTOCHESS_42"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_AUTOCHESS_43",
-    MaxKey = "UI_DUNGEON_TYPE_EXCAVATION",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_AUTOCHESS_43 = {
           ContentFR = "Partie sans fin 023",
           TextMapId = "UI_DUNGEON_AUTOCHESS_43"
@@ -74679,7 +74751,15 @@ Allez voir ce qui se passe.]],
         UI_DUNGEON_Locked = {
           ContentFR = "Verrouillé",
           TextMapId = "UI_DUNGEON_Locked"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_DUNGEON_MonsterType",
+    MaxKey = "UI_Disptach_Perfect",
+    Loader = function()
+      return {
         UI_DUNGEON_MonsterType = {
           ContentFR = "Informations sur les ennemis",
           TextMapId = "UI_DUNGEON_MonsterType"
@@ -74751,15 +74831,7 @@ Allez voir ce qui se passe.]],
         UI_DUNGEON_TYPE_EXCAVATION = {
           ContentFR = "Excavation ∞",
           TextMapId = "UI_DUNGEON_TYPE_EXCAVATION"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_DUNGEON_TYPE_EXTERMINATE",
-    MaxKey = "UI_Disptach_Toast_Lock",
-    Loader = function()
-      return {
+        },
         UI_DUNGEON_TYPE_EXTERMINATE = {
           ContentFR = "Extermination",
           TextMapId = "UI_DUNGEON_TYPE_EXTERMINATE"
@@ -75487,7 +75559,15 @@ Allez voir ce qui se passe.]],
         UI_Disptach_Perfect = {
           ContentFR = "Parfait",
           TextMapId = "UI_Disptach_Perfect"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Disptach_Recom",
+    MaxKey = "UI_Event_CumulativeTopUpEvent_FinalRewardDes",
+    Loader = function()
+      return {
         UI_Disptach_Recom = {
           ContentFR = "Trait recommandé",
           TextMapId = "UI_Disptach_Recom"
@@ -75559,15 +75639,7 @@ Allez voir ce qui se passe.]],
         UI_Disptach_Toast_Lock = {
           ContentFR = "Les expéditions de cette région seront débloquées après avoir terminé la quête dynamique associée",
           TextMapId = "UI_Disptach_Toast_Lock"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Disptach_Toast_NoAgent",
-    MaxKey = "UI_Event_MidTerm_NewChallenge",
-    Loader = function()
-      return {
+        },
         UI_Disptach_Toast_NoAgent = {
           ContentFR = "Veuillez sélectionner un personnage",
           TextMapId = "UI_Disptach_Toast_NoAgent"
@@ -76295,7 +76367,15 @@ Allez voir ce qui se passe.]],
         UI_Event_CumulativeTopUpEvent_FinalRewardDes = {
           ContentFR = "Récompenses pour %s points cumulés",
           TextMapId = "UI_Event_CumulativeTopUpEvent_FinalRewardDes"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Event_CumulativeTopUpEvent_GoodsName",
+    MaxKey = "UI_FNNpc_Name_AnimalAote",
+    Loader = function()
+      return {
         UI_Event_CumulativeTopUpEvent_GoodsName = {
           ContentFR = "Nom de l’article",
           TextMapId = "UI_Event_CumulativeTopUpEvent_GoodsName"
@@ -76367,15 +76447,7 @@ Allez voir ce qui se passe.]],
         UI_Event_MidTerm_NewChallenge = {
           ContentFR = "Nouveaux Jeux de défi dans %d j %d h",
           TextMapId = "UI_Event_MidTerm_NewChallenge"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Event_MidTerm_NoPoint",
-    MaxKey = "UI_FNNpc_Name_SoldierPSD",
-    Loader = function()
-      return {
+        },
         UI_Event_MidTerm_NoPoint = {
           ContentFR = "Aucun Point Luno obtenu",
           TextMapId = "UI_Event_MidTerm_NoPoint"
@@ -77103,7 +77175,15 @@ Allez voir ce qui se passe.]],
         UI_FNNpc_Name_AnimalAote = {
           ContentFR = "Grand Magicien",
           TextMapId = "UI_FNNpc_Name_AnimalAote"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_FNNpc_Name_AnimalFeina",
+    MaxKey = "UI_GameEvent_EventTimeRemain",
+    Loader = function()
+      return {
         UI_FNNpc_Name_AnimalFeina = {
           ContentFR = "Oiseau blanc",
           TextMapId = "UI_FNNpc_Name_AnimalFeina"
@@ -77175,15 +77255,7 @@ Allez voir ce qui se passe.]],
         UI_FNNpc_Name_SoldierPSD = {
           ContentFR = "Soldat du Bureau de la Sécurité",
           TextMapId = "UI_FNNpc_Name_SoldierPSD"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_FORGE_NOFORGING",
-    MaxKey = "UI_GameReview_Comment",
-    Loader = function()
-      return {
+        },
         UI_FORGE_NOFORGING = {
           ContentFR = "Aucun objet en cours de fabrication",
           TextMapId = "UI_FORGE_NOFORGING"
@@ -77908,7 +77980,15 @@ Allez voir ce qui se passe.]],
         UI_GameEvent_EventTimeRemain = {
           ContentFR = "Durée de l’événement :",
           TextMapId = "UI_GameEvent_EventTimeRemain"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_GameEvent_GachaPortal",
+    MaxKey = "UI_ImpressionShop_UnlockCon_Any",
+    Loader = function()
+      return {
         UI_GameEvent_GachaPortal = {
           ContentFR = "Évocation",
           TextMapId = "UI_GameEvent_GachaPortal"
@@ -77980,15 +78060,7 @@ Allez voir ce qui se passe.]],
         UI_GameReview_Comment = {
           ContentFR = "Signaler un problème",
           TextMapId = "UI_GameReview_Comment"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_GameReview_Content_1",
-    MaxKey = "UI_ItemArchive_SubProgress",
-    Loader = function()
-      return {
+        },
         UI_GameReview_Content_1 = {
           ContentFR = "N’hésitez pas à nous laisser votre avis.",
           TextMapId = "UI_GameReview_Content_1"
@@ -78716,7 +78788,15 @@ Allez voir ce qui se passe.]],
         UI_ImpressionShop_UnlockCon_Any = {
           ContentFR = "N’importe lequel",
           TextMapId = "UI_ImpressionShop_UnlockCon_Any"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_ImpressionShop_UnlockCondition_01",
+    MaxKey = "UI_Locked_Des_Map",
+    Loader = function()
+      return {
         UI_ImpressionShop_UnlockCondition_01 = {
           ContentFR = "%s : %d",
           TextMapId = "UI_ImpressionShop_UnlockCondition_01"
@@ -78788,15 +78868,7 @@ Allez voir ce qui se passe.]],
         UI_ItemArchive_SubProgress = {
           ContentFR = "%s – Objets obtenus :",
           TextMapId = "UI_ItemArchive_SubProgress"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_JingLi_NoCost",
-    MaxKey = "UI_Locked_Des_Shop",
-    Loader = function()
-      return {
+        },
         UI_JingLi_NoCost = {
           ContentFR = "Aucune dépense d’énergie requise",
           TextMapId = "UI_JingLi_NoCost"
@@ -79524,7 +79596,15 @@ Allez voir ce qui se passe.]],
         UI_Locked_Des_Map = {
           ContentFR = "Carte et téléportation non déverrouillées",
           TextMapId = "UI_Locked_Des_Map"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Locked_Des_Match",
+    MaxKey = "UI_MECHANISM_ENTER_OUTSIDERHOME",
+    Loader = function()
+      return {
         UI_Locked_Des_Match = {
           ContentFR = "Coop non déverrouillé",
           TextMapId = "UI_Locked_Des_Match"
@@ -79596,15 +79676,7 @@ Allez voir ce qui se passe.]],
         UI_Locked_Des_Shop = {
           ContentFR = "Boutique non déverrouillée",
           TextMapId = "UI_Locked_Des_Shop"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Locked_Des_StarterQuest",
-    MaxKey = "UI_MECHANISM_SICK_LEAVE",
-    Loader = function()
-      return {
+        },
         UI_Locked_Des_StarterQuest = {
           ContentFR = "Guide du débutant non déverrouillé",
           TextMapId = "UI_Locked_Des_StarterQuest"
@@ -80332,7 +80404,15 @@ Allez voir ce qui se passe.]],
         UI_MECHANISM_ENTER_OUTSIDERHOME = {
           ContentFR = "Entrer dans la Maison de l’Étranger",
           TextMapId = "UI_MECHANISM_ENTER_OUTSIDERHOME"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MECHANISM_ENTER_SANATORIUM",
+    MaxKey = "UI_MonthlyCard_None",
+    Loader = function()
+      return {
         UI_MECHANISM_ENTER_SANATORIUM = {
           ContentFR = "Entrer dans la Maison d’Hypnos",
           TextMapId = "UI_MECHANISM_ENTER_SANATORIUM"
@@ -80404,15 +80484,7 @@ Allez voir ce qui se passe.]],
         UI_MECHANISM_SICK_LEAVE = {
           ContentFR = "Quitter l’Hôpital de la Légion",
           TextMapId = "UI_MECHANISM_SICK_LEAVE"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_MECHANISM_THEA_ENTER",
-    MaxKey = "UI_NPC_Name_Bainianchungongzuorenyuan_Sce",
-    Loader = function()
-      return {
+        },
         UI_MECHANISM_THEA_ENTER = {
           ContentFR = "Entrer dans le Théâtre Galea",
           TextMapId = "UI_MECHANISM_THEA_ENTER"
@@ -81140,7 +81212,15 @@ Allez voir ce qui se passe.]],
         UI_MonthlyCard_None = {
           ContentFR = "Aucun Pass actif",
           TextMapId = "UI_MonthlyCard_None"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_MonthlyCard_SellRemain",
+    MaxKey = "UI_NPC_Name_tangsheng_Sce",
+    Loader = function()
+      return {
         UI_MonthlyCard_SellRemain = {
           ContentFR = "Durée restante :",
           TextMapId = "UI_MonthlyCard_SellRemain"
@@ -81206,15 +81286,7 @@ Allez voir ce qui se passe.]],
         UI_NPC_Name_Bainianchungongzuorenyuan_Sce = {
           ContentFR = "Employé d’Éternel Printemps",
           TextMapId = "UI_NPC_Name_Bainianchungongzuorenyuan_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_Baiwen_Sce",
-    MaxKey = "UI_NPC_Name_wenbo_Sce",
-    Loader = function()
-      return {
+        },
         UI_NPC_Name_Baiwen_Sce = {
           ContentFR = "Bai Wen",
           TextMapId = "UI_NPC_Name_Baiwen_Sce"
@@ -81942,7 +82014,15 @@ Allez voir ce qui se passe.]],
         UI_NPC_Name_tangsheng_Sce = {
           ContentFR = "Tangsheng",
           TextMapId = "UI_NPC_Name_tangsheng_Sce"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_NPC_Name_tangwenbing_Sce",
+    MaxKey = "UI_Name_Walnut_2014",
+    Loader = function()
+      return {
         UI_NPC_Name_tangwenbing_Sce = {
           ContentFR = "Tang Wenbing",
           TextMapId = "UI_NPC_Name_tangwenbing_Sce"
@@ -82014,15 +82094,7 @@ Allez voir ce qui se passe.]],
         UI_NPC_Name_wenbo_Sce = {
           ContentFR = "Wen Bo",
           TextMapId = "UI_NPC_Name_wenbo_Sce"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_NPC_Name_wenjingchuan_Sce",
-    MaxKey = "UI_Name_Walnut_2032",
-    Loader = function()
-      return {
+        },
         UI_NPC_Name_wenjingchuan_Sce = {
           ContentFR = "Wen Jingchuan",
           TextMapId = "UI_NPC_Name_wenjingchuan_Sce"
@@ -82750,7 +82822,15 @@ Allez voir ce qui se passe.]],
         UI_Name_Walnut_2014 = {
           ContentFR = "Mandat scellé : Singularité entropique",
           TextMapId = "UI_Name_Walnut_2014"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Name_Walnut_2015",
+    MaxKey = "UI_Npc_Name_Aware",
+    Loader = function()
+      return {
         UI_Name_Walnut_2015 = {
           ContentFR = "Mandat scellé : Dépouilleur",
           TextMapId = "UI_Name_Walnut_2015"
@@ -82822,15 +82902,7 @@ Allez voir ce qui se passe.]],
         UI_Name_Walnut_2032 = {
           ContentFR = "Mandat scellé : Vagues sinueuses",
           TextMapId = "UI_Name_Walnut_2032"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Name_Walnut_2033",
-    MaxKey = "UI_Npc_Name_Continue",
-    Loader = function()
-      return {
+        },
         UI_Name_Walnut_2033 = {
           ContentFR = "Mandat scellé : Grâce sacrée",
           TextMapId = "UI_Name_Walnut_2033"
@@ -83555,7 +83627,15 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Aware = {
           ContentFR = "Avar",
           TextMapId = "UI_Npc_Name_Aware"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_Badi",
+    MaxKey = "UI_Npc_Name_Songlu",
+    Loader = function()
+      return {
         UI_Npc_Name_Badi = {
           ContentFR = "Badi",
           TextMapId = "UI_Npc_Name_Badi"
@@ -83627,15 +83707,7 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Continue = {
           ContentFR = "Continuer d’avancer",
           TextMapId = "UI_Npc_Name_Continue"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_Dafu",
-    MaxKey = "UI_Npc_Name_Toudu",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_Dafu = {
           ContentFR = "Daphne",
           TextMapId = "UI_Npc_Name_Dafu"
@@ -84363,7 +84435,15 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Songlu = {
           ContentFR = "Truffle",
           TextMapId = "UI_Npc_Name_Songlu"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Npc_Name_SongluVoice",
+    MaxKey = "UI_OPTION_InputKeyForChange",
+    Loader = function()
+      return {
         UI_Npc_Name_SongluVoice = {
           ContentFR = "Voix cristalline",
           TextMapId = "UI_Npc_Name_SongluVoice"
@@ -84435,15 +84515,7 @@ Allez voir ce qui se passe.]],
         UI_Npc_Name_Toudu = {
           ContentFR = "Toxiné",
           TextMapId = "UI_Npc_Name_Toudu"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Npc_Name_TpSew",
-    MaxKey = "UI_OPTION_Language_Pause_Unable",
-    Loader = function()
-      return {
+        },
         UI_Npc_Name_TpSew = {
           ContentFR = "Entrer dans les Égouts Souterrains",
           TextMapId = "UI_Npc_Name_TpSew"
@@ -85171,7 +85243,15 @@ Allez voir ce qui se passe.]],
         UI_OPTION_InputKeyForChange = {
           ContentFR = "Appuyez sur la touche à assigner",
           TextMapId = "UI_OPTION_InputKeyForChange"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_OPTION_InterfaceMode",
+    MaxKey = "UI_PARTY_PARKOUR_TEAMWAIT",
+    Loader = function()
+      return {
         UI_OPTION_InterfaceMode = {
           ContentFR = "Mode d’affichage",
           TextMapId = "UI_OPTION_InterfaceMode"
@@ -85243,15 +85323,7 @@ Allez voir ce qui se passe.]],
         UI_OPTION_Language_Pause_Unable = {
           ContentFR = "Impossible de mettre en pause à ce stade",
           TextMapId = "UI_OPTION_Language_Pause_Unable"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_OPTION_Language_Unload",
-    MaxKey = "UI_Pan_Survey",
-    Loader = function()
-      return {
+        },
         UI_OPTION_Language_Unload = {
           ContentFR = "Désinstaller",
           TextMapId = "UI_OPTION_Language_Unload"
@@ -85979,7 +86051,15 @@ Allez voir ce qui se passe.]],
         UI_PARTY_PARKOUR_TEAMWAIT = {
           ContentFR = "En attente des autres joueurs...",
           TextMapId = "UI_PARTY_PARKOUR_TEAMWAIT"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PARTY_PARKOUR_UNFINISH",
+    MaxKey = "UI_PlayerHead_Name_10016",
+    Loader = function()
+      return {
         UI_PARTY_PARKOUR_UNFINISH = {
           ContentFR = "Incomplet",
           TextMapId = "UI_PARTY_PARKOUR_UNFINISH"
@@ -86051,15 +86131,7 @@ Allez voir ce qui se passe.]],
         UI_Pan_Survey = {
           ContentFR = "Pister",
           TextMapId = "UI_Pan_Survey"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Pan_Touch",
-    MaxKey = "UI_PlayerHead_Name_20003",
-    Loader = function()
-      return {
+        },
         UI_Pan_Touch = {
           ContentFR = "Fouiller",
           TextMapId = "UI_Pan_Touch"
@@ -86787,7 +86859,15 @@ Allez voir ce qui se passe.]],
         UI_PlayerHead_Name_10016 = {
           ContentFR = "Portrait : Chasseuse de lumière",
           TextMapId = "UI_PlayerHead_Name_10016"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_PlayerHead_Name_10017",
+    MaxKey = "UI_QUEST_TRACK",
+    Loader = function()
+      return {
         UI_PlayerHead_Name_10017 = {
           ContentFR = "Portrait : Princesse des déchets",
           TextMapId = "UI_PlayerHead_Name_10017"
@@ -86859,15 +86939,7 @@ Allez voir ce qui se passe.]],
         UI_PlayerHead_Name_20003 = {
           ContentFR = "Portrait : Commissaire – Soleil",
           TextMapId = "UI_PlayerHead_Name_20003"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_PlayerHead_Name_20004",
-    MaxKey = "UI_RARITY_NAME",
-    Loader = function()
-      return {
+        },
         UI_PlayerHead_Name_20004 = {
           ContentFR = "Portrait : Apothicaire de Huaxu – Ondes paisibles",
           TextMapId = "UI_PlayerHead_Name_20004"
@@ -87595,7 +87667,15 @@ Allez voir ce qui se passe.]],
         UI_QUEST_TRACK = {
           ContentFR = "Suivre la quête",
           TextMapId = "UI_QUEST_TRACK"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_QUEST_TRACK_LOCK",
+    MaxKey = "UI_RougeExchangeShop_Title",
+    Loader = function()
+      return {
         UI_QUEST_TRACK_LOCK = {
           ContentFR = "Quête verrouillée : veuillez remplir les conditions requises",
           TextMapId = "UI_QUEST_TRACK_LOCK"
@@ -87667,15 +87747,7 @@ Allez voir ce qui se passe.]],
         UI_RARITY_NAME = {
           ContentFR = "Rareté",
           TextMapId = "UI_RARITY_NAME"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_REGIONDUNGEON_EXIT",
-    MaxKey = "UI_RougeLike_End__ClickEmpty",
-    Loader = function()
-      return {
+        },
         UI_REGIONDUNGEON_EXIT = {
           ContentFR = "Quitter l’Écho de l’Oiseau onirique",
           TextMapId = "UI_REGIONDUNGEON_EXIT"
@@ -88376,7 +88448,15 @@ Allez voir ce qui se passe.]],
         UI_RougeExchangeShop_Title = {
           ContentFR = "Le Fuseau du Destin",
           TextMapId = "UI_RougeExchangeShop_Title"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_RougeLike_Bag",
+    MaxKey = "UI_STAT_KILL_RANGE",
+    Loader = function()
+      return {
         UI_RougeLike_Bag = {
           ContentFR = "Sacoche d’exploration",
           TextMapId = "UI_RougeLike_Bag"
@@ -88448,15 +88528,7 @@ Allez voir ce qui se passe.]],
         UI_RougeLike_End__ClickEmpty = {
           ContentFR = "Cliquer sur une zone vide pour fermer",
           TextMapId = "UI_RougeLike_End__ClickEmpty"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_RougeLike_GiveUpSelect",
-    MaxKey = "UI_STAT_Sigil",
-    Loader = function()
-      return {
+        },
         UI_RougeLike_GiveUpSelect = {
           ContentFR = "Abandonner",
           TextMapId = "UI_RougeLike_GiveUpSelect"
@@ -89184,7 +89256,15 @@ Allez voir ce qui se passe.]],
         UI_STAT_KILL_RANGE = {
           ContentFR = "Par attaques à distance",
           TextMapId = "UI_STAT_KILL_RANGE"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_STAT_KILL_TITLE",
+    MaxKey = "UI_Shadow_Carrying",
+    Loader = function()
+      return {
         UI_STAT_KILL_TITLE = {
           ContentFR = "Ennemis vaincus",
           TextMapId = "UI_STAT_KILL_TITLE"
@@ -89256,15 +89336,7 @@ Allez voir ce qui se passe.]],
         UI_STAT_Sigil = {
           ContentFR = "Emblème de combat",
           TextMapId = "UI_STAT_Sigil"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_STAT_Sigil_DAMAGE",
-    MaxKey = "UI_Shop_TW_Confirm",
-    Loader = function()
-      return {
+        },
         UI_STAT_Sigil_DAMAGE = {
           ContentFR = "Dégâts infligés (Emblème de combat)",
           TextMapId = "UI_STAT_Sigil_DAMAGE"
@@ -89989,7 +90061,15 @@ Allez voir ce qui se passe.]],
         UI_Shadow_Carrying = {
           ContentFR = "Arme équipée",
           TextMapId = "UI_Shadow_Carrying"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Shadow_Name",
+    MaxKey = "UI_SoloTreasure_BagInUse",
+    Loader = function()
+      return {
         UI_Shadow_Name = {
           ContentFR = "Partenaire de combat",
           TextMapId = "UI_Shadow_Name"
@@ -90061,15 +90141,7 @@ Allez voir ce qui se passe.]],
         UI_Shop_TW_Confirm = {
           ContentFR = "Les achats nécessitent d’avoir 18 ans ou plus. Confirmez-vous remplir cette condition ?",
           TextMapId = "UI_Shop_TW_Confirm"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Shop_TW_Confirm_No",
-    MaxKey = "UI_SoloTreasure_Evacuation_PlayAgainConfirm",
-    Loader = function()
-      return {
+        },
         UI_Shop_TW_Confirm_No = {
           ContentFR = "Non",
           TextMapId = "UI_Shop_TW_Confirm_No"
@@ -90797,7 +90869,15 @@ Allez voir ce qui se passe.]],
         UI_SoloTreasure_BagInUse = {
           ContentFR = "Équipé",
           TextMapId = "UI_SoloTreasure_BagInUse"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_SoloTreasure_BagLocked",
+    MaxKey = "UI_TELEPORTPOINT_NAME_DEFENCE_1",
+    Loader = function()
+      return {
         UI_SoloTreasure_BagLocked = {
           ContentFR = "Accès non encore débloqué",
           TextMapId = "UI_SoloTreasure_BagLocked"
@@ -90869,15 +90949,7 @@ Allez voir ce qui se passe.]],
         UI_SoloTreasure_Evacuation_PlayAgainConfirm = {
           ContentFR = "Commencer le défi ? (Les points d’entrée ne seront pas remboursés en cas d’échec de l’extraction.)",
           TextMapId = "UI_SoloTreasure_Evacuation_PlayAgainConfirm"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_SoloTreasure_Evacuation_PointsNotEnoughTips",
-    MaxKey = "UI_TEMPLE_23",
-    Loader = function()
-      return {
+        },
         UI_SoloTreasure_Evacuation_PointsNotEnoughTips = {
           ContentFR = "Points insuffisants",
           TextMapId = "UI_SoloTreasure_Evacuation_PointsNotEnoughTips"
@@ -91602,7 +91674,15 @@ Allez voir ce qui se passe.]],
         UI_TELEPORTPOINT_NAME_DEFENCE_1 = {
           ContentFR = "Écho de l’Oiseau onirique : Défense (Baie des Roseaux-Pâles)",
           TextMapId = "UI_TELEPORTPOINT_NAME_DEFENCE_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_TELEPORTPOINT_NAME_DEFENCE_2",
+    MaxKey = "UI_Team_TeamDisband",
+    Loader = function()
+      return {
         UI_TELEPORTPOINT_NAME_DEFENCE_2 = {
           ContentFR = "Écho de l’Oiseau onirique : Défense (Chant-des-Marées)",
           TextMapId = "UI_TELEPORTPOINT_NAME_DEFENCE_2"
@@ -91674,15 +91754,7 @@ Allez voir ce qui se passe.]],
         UI_TEMPLE_23 = {
           ContentFR = "Frappez toutes les sphères et atteignez le Point d’évacuation dans le temps imparti",
           TextMapId = "UI_TEMPLE_23"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TEMPLE_38",
-    MaxKey = "UI_TempleEvent_NormalMode",
-    Loader = function()
-      return {
+        },
         UI_TEMPLE_38 = {
           ContentFR = "Activez toutes les dalles pour qu’elles deviennent vertes, puis atteignez le Point d’évacuation dans le temps imparti",
           TextMapId = "UI_TEMPLE_38"
@@ -92418,7 +92490,15 @@ Tirer sur les cibles pour marquer des points.
         UI_Team_TeamDisband = {
           ContentFR = "L’équipe a été dissoute",
           TextMapId = "UI_Team_TeamDisband"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_Team_TeamFull",
+    MaxKey = "UI_WEAPON_DESC_10303",
+    Loader = function()
+      return {
         UI_Team_TeamFull = {
           ContentFR = "L’équipe de votre ami est complète",
           TextMapId = "UI_Team_TeamFull"
@@ -92490,15 +92570,7 @@ Tirer sur les cibles pour marquer des points.
         UI_TempleEvent_NormalMode = {
           ContentFR = "Normal",
           TextMapId = "UI_TempleEvent_NormalMode"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_TempleEvent_RewardDes",
-    MaxKey = "UI_WEAPON_DESC_10602",
-    Loader = function()
-      return {
+        },
         UI_TempleEvent_RewardDes = {
           ContentFR = "Récompenses : %s",
           TextMapId = "UI_TempleEvent_RewardDes"
@@ -93220,7 +93292,15 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_DESC_10303 = {
           ContentFR = "Une lame immaculée, qui fend l’air d’un gémissement muet — avide, éternellement, d’être rougie d’écarlate.",
           TextMapId = "UI_WEAPON_DESC_10303"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WEAPON_DESC_10304",
+    MaxKey = "UI_WORLDMAP_NAME_3",
+    Loader = function()
+      return {
         UI_WEAPON_DESC_10304 = {
           ContentFR = "Tranche l’écho des âges révolus, et ouvre la voie à des siècles de paix.",
           TextMapId = "UI_WEAPON_DESC_10304"
@@ -93292,15 +93372,7 @@ Tirer sur les cibles pour marquer des points.
         UI_WEAPON_DESC_10602 = {
           ContentFR = "Dans les yeux du mourant, on voit flotter une fleur de cerisier écarlate — légère, silencieuse... définitive.",
           TextMapId = "UI_WEAPON_DESC_10602"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_WEAPON_DESC_10603",
-    MaxKey = "UI_Walnut_CompleteCount",
-    Loader = function()
-      return {
+        },
         UI_WEAPON_DESC_10603 = {
           ContentFR = "Une inscription pâlie court le long de la garde : « Louange à l’Église Élyséenne ! Puissent les Neuf Dieux répandre leur grâce sur la terre pécheresse du duché de Yashnia ! »",
           TextMapId = "UI_WEAPON_DESC_10603"
@@ -94028,7 +94100,15 @@ Tirer sur les cibles pour marquer des points.
         UI_WORLDMAP_NAME_3 = {
           ContentFR = "Forteresse de Lonza",
           TextMapId = "UI_WORLDMAP_NAME_3"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WORLDMAP_NAME_4",
+    MaxKey = "UI_WeaponSkin_Name_3011102",
+    Loader = function()
+      return {
         UI_WORLDMAP_NAME_4 = {
           ContentFR = "Port-des-Brumes",
           TextMapId = "UI_WORLDMAP_NAME_4"
@@ -94100,15 +94180,7 @@ Tirer sur les cibles pour marquer des points.
         UI_Walnut_CompleteCount = {
           ContentFR = "Nombre de complétions :",
           TextMapId = "UI_Walnut_CompleteCount"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Walnut_Des",
-    MaxKey = "UI_Weapon_Accessory",
-    Loader = function()
-      return {
+        },
         UI_Walnut_Des = {
           ContentFR = "Une lettre scellée avec le plus grand soin — adressée uniquement aux Chasseurs de Phoxène les plus aguerris. Sa difficulté et sa singularité ne font aucun doute, mais l’achèvement de cette mission promet une récompense tout aussi exceptionnelle.",
           TextMapId = "UI_Walnut_Des"
@@ -94836,7 +94908,15 @@ Tirer sur les cibles pour marquer des points.
         UI_WeaponSkin_Name_3011102 = {
           ContentFR = "Chant du Firmament – Pistolet",
           TextMapId = "UI_WeaponSkin_Name_3011102"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "UI_WeaponSkin_Name_3011201",
+    MaxKey = "VoiceDes106",
+    Loader = function()
+      return {
         UI_WeaponSkin_Name_3011201 = {
           ContentFR = "Galette de chat n° 2",
           TextMapId = "UI_WeaponSkin_Name_3011201"
@@ -94908,15 +94988,7 @@ Tirer sur les cibles pour marquer des points.
         UI_Weapon_Accessory = {
           ContentFR = "Accessoires d’arme",
           TextMapId = "UI_Weapon_Accessory"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "UI_Weapon_BreakRewardAutoCollect",
-    MaxKey = "VoiceDes124",
-    Loader = function()
-      return {
+        },
         UI_Weapon_BreakRewardAutoCollect = {
           ContentFR = "Les récompenses d’ascension non réclamées de <H>%s</> ont été récupérées automatiquement",
           TextMapId = "UI_Weapon_BreakRewardAutoCollect"
@@ -95641,7 +95713,15 @@ Tirer sur les cibles pour marquer des points.
         VoiceDes106 = {
           ContentFR = "À propos des parents",
           TextMapId = "VoiceDes106"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "VoiceDes107",
+    MaxKey = "WikiText_30300201",
+    Loader = function()
+      return {
         VoiceDes107 = {
           ContentFR = "À propos de l’Étranger",
           TextMapId = "VoiceDes107"
@@ -95713,15 +95793,7 @@ Tirer sur les cibles pour marquer des points.
         VoiceDes124 = {
           ContentFR = "À propos de Blues",
           TextMapId = "VoiceDes124"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "VoiceDes125",
-    MaxKey = "WikiText_30301103",
-    Loader = function()
-      return {
+        },
         VoiceDes125 = {
           ContentFR = "À propos de son nom",
           TextMapId = "VoiceDes125"
@@ -96449,7 +96521,15 @@ Tirer sur les cibles pour marquer des points.
         WikiText_30300201 = {
           ContentFR = "Race non humaine à l’apparence de jeunes enfants, dotée d’une haute intelligence. Leur peau et leurs cheveux d’un blanc éclatant constituent leur signe distinctif. Bien qu’ils vivent longtemps, leur corps ne vieillit pas.\nTrès proches des humains, ils vivent harmonieusement à leurs côtés partout en Atlasia.",
           TextMapId = "WikiText_30300201"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "WikiText_30300202",
+    MaxKey = "voice_ch_char_Aote_vo_idle",
+    Loader = function()
+      return {
         WikiText_30300202 = {
           ContentFR = "Bien qu’elles paraissent presque identiques, chaque Luno possède un domaine d’excellence propre : forge, commerce, investissements, etc.\n\nSnow, qui vagabonde sans arrêt aux Asphodèles, semble toutefois faire exception — à moins que son véritable talent ne soit... de se vanter.",
           TextMapId = "WikiText_30300202"
@@ -96521,15 +96601,7 @@ Tirer sur les cibles pour marquer des points.
         WikiText_30301103 = {
           ContentFR = "À la suite de la Bataille de Shuli, survenue plusieurs siècles auparavant, Zhuyin fut scellé puis expulsé du système des Neuf Chapitres de Dafeng. Son passé en tant que divinité vénérée sombra peu à peu dans l’oubli.",
           TextMapId = "WikiText_30301103"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "WikiText_30301201",
-    MaxKey = "voice_ch_char_Aote_vo_topic_05_3",
-    Loader = function()
-      return {
+        },
         WikiText_30301201 = {
           ContentFR = "À Huaxu, sous l’influence omniprésente de l’Encens, certaines obsessions persistantes au moment de la mort se transforment en entités particulières appelées Wishen. Ces êtres ont généralement perdu la majeure partie de leurs souvenirs et présentent une régression de leurs capacités de langage et de compréhension. Invisibles aux yeux des gens ordinaires, ils ne peuvent être perçus que par les enfants ou par des individus sensibles à des champs énergétiques particuliers. Les Wishen sont incapables d’interagir directement avec le monde matériel, mais peuvent influencer de petits objets légers. Leurs légendes populaires se transmettent depuis des générations à Huaxu, sous de nombreuses variantes.",
           TextMapId = "WikiText_30301201"
@@ -97254,7 +97326,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Aote_vo_idle = {
           ContentFR = "Cette tranquillité, ça fait drôle... j’aurais jamais cru pouvoir me sentir à ma place, même après tout ce temps.",
           TextMapId = "voice_ch_char_Aote_vo_idle"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Aote_vo_lvup",
+    MaxKey = "voice_ch_char_Haier_vo_revive",
+    Loader = function()
+      return {
         voice_ch_char_Aote_vo_lvup = {
           ContentFR = "T’embête pas trop pour moi, je suis pas à l’aise avec ça... Bon, laisse tomber.",
           TextMapId = "voice_ch_char_Aote_vo_lvup"
@@ -97326,15 +97406,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Aote_vo_topic_05_3 = {
           ContentFR = "... Je t’aide en tant qu’ami, pas pour que tu m’arnaques !",
           TextMapId = "voice_ch_char_Aote_vo_topic_05_3"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Aote_vo_victory",
-    MaxKey = "voice_ch_char_Haier_vo_topic_05_1",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Aote_vo_victory = {
           ContentFR = "Je m’occupe de nettoyer. Il y a peut-être deux trois trucs bons à récupérer.",
           TextMapId = "voice_ch_char_Aote_vo_victory"
@@ -98062,7 +98134,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Haier_vo_revive = {
           ContentFR = "Les péchés du monde dépassent ceux de l’enfer !",
           TextMapId = "voice_ch_char_Haier_vo_revive"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Haier_vo_skill01_r01",
+    MaxKey = "voice_ch_char_Linen_vo_topic_04_1",
+    Loader = function()
+      return {
         voice_ch_char_Haier_vo_skill01_r01 = {
           ContentFR = "Brûlez !",
           TextMapId = "voice_ch_char_Haier_vo_skill01_r01"
@@ -98134,15 +98214,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Haier_vo_topic_05_1 = {
           ContentFR = "Avec des criminels partout dans les rues de l’Empire, une geôlière n’a pas de loisirs. Je profite juste de quelques verres quand je peux.",
           TextMapId = "voice_ch_char_Haier_vo_topic_05_1"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Haier_vo_topic_05_2",
-    MaxKey = "voice_ch_char_Lise_vo_lvup",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Haier_vo_topic_05_2 = {
           ContentFR = "Ça te surprend ? Ce n’est qu’un passe-temps. Pendant les interrogatoires, j’entends constamment parler de toutes sortes d’alcools, ce qui m’a rendue curieuse au sujet de cette soi-disant potion maléfique souvent liée au crime. Alors j’en bois à l’occasion.",
           TextMapId = "voice_ch_char_Haier_vo_topic_05_2"
@@ -98870,7 +98942,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Linen_vo_topic_04_1 = {
           ContentFR = "Si je bosse pas, je mange pas. C’est clair, non ?",
           TextMapId = "voice_ch_char_Linen_vo_topic_04_1"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Linen_vo_topic_04_2",
+    MaxKey = "voice_ch_char_Shuimu01_vo_appear",
+    Loader = function()
+      return {
         voice_ch_char_Linen_vo_topic_04_2 = {
           ContentFR = "J’aimerais bien, mais les clients, eux, s’en fichent. Tous les deux jours, c’est \"Alors, c’est fini ?\", \"Dépêche-toi un peu !\"… Toujours à me harceler. Si j’avais pas une famille à nourrir, je leur aurais déjà collé quelques bastos.",
           TextMapId = "voice_ch_char_Linen_vo_topic_04_2"
@@ -98942,15 +99022,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Lise_vo_lvup = {
           ContentFR = "Ce flux désordonné... pour qui résonne-t-il ?",
           TextMapId = "voice_ch_char_Lise_vo_lvup"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Lise_vo_revive",
-    MaxKey = "voice_ch_char_Shuimu_vo_gain",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Lise_vo_revive = {
           ContentFR = "J’ai promis de continuer à vivre.",
           TextMapId = "voice_ch_char_Lise_vo_revive"
@@ -99678,7 +99750,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Shuimu01_vo_appear = {
           ContentFR = "Poch ... poch ... Hörst du das? Es ist mein Herzschlag. Jeder Schlag eine Silbe des Vermissens.",
           TextMapId = "voice_ch_char_Shuimu01_vo_appear"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Shuimu01_vo_battlestart",
+    MaxKey = "voice_ch_char_Xibi_vo_be_hit_heavy_r02",
+    Loader = function()
+      return {
         voice_ch_char_Shuimu01_vo_battlestart = {
           ContentFR = "Sollen wir mit einem Walzer beginnen? Genau so ... eins, und zwei ...",
           TextMapId = "voice_ch_char_Shuimu01_vo_battlestart"
@@ -99750,15 +99830,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Shuimu_vo_gain = {
           ContentFR = "Quelle rencontre romantique ! Est-ce un signe du Dieu de l’Amour ? Je suis Rebecca, la parfumeuse. Que dirais-tu d’essayer mon parfum unique, l’Essence de l’Amour ?",
           TextMapId = "voice_ch_char_Shuimu_vo_gain"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Shuimu_vo_idle",
-    MaxKey = "voice_ch_char_Xibi_vo_skill02_r03",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Shuimu_vo_idle = {
           ContentFR = "Tu es là pour partager un doux instant à deux avec moi... J’ai hâte que ça commence.",
           TextMapId = "voice_ch_char_Shuimu_vo_idle"
@@ -100486,7 +100558,15 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Xibi_vo_be_hit_heavy_r02 = {
           ContentFR = "Hein !",
           TextMapId = "voice_ch_char_Xibi_vo_be_hit_heavy_r02"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Xibi_vo_birthday",
+    MaxKey = "voice_ch_char_Zhiliu_vo_skill02_sp",
+    Loader = function()
+      return {
         voice_ch_char_Xibi_vo_birthday = {
           ContentFR = "Qu’est-ce que tu attends ? Tu espérais un gâteau ? Rêve toujours. Mais à notre prochaine rencontre, je te laisserai peut-être une ouverture...",
           TextMapId = "voice_ch_char_Xibi_vo_birthday"
@@ -100558,15 +100638,7 @@ Tirer sur les cibles pour marquer des points.
         voice_ch_char_Xibi_vo_skill02_r03 = {
           ContentFR = "Soumettez-vous !",
           TextMapId = "voice_ch_char_Xibi_vo_skill02_r03"
-        }
-      }
-    end
-  },
-  {
-    MinKey = "voice_ch_char_Xibi_vo_topic_01_1",
-    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
-    Loader = function()
-      return {
+        },
         voice_ch_char_Xibi_vo_topic_01_1 = {
           ContentFR = "Une unité d’élite sous les ordres directs de l’Empereur. Chargée de missions secrètes et d’interventions ciblées.",
           TextMapId = "voice_ch_char_Xibi_vo_topic_01_1"
@@ -101296,7 +101368,15 @@ Oliver : Pff. Encore une pauvre victime.]],
         voice_ch_char_Zhiliu_vo_skill02_sp = {
           ContentFR = "Anéantis-les tous.",
           TextMapId = "voice_ch_char_Zhiliu_vo_skill02_sp"
-        },
+        }
+      }
+    end
+  },
+  {
+    MinKey = "voice_ch_char_Zhiliu_vo_topic_01_1",
+    MaxKey = "voice_ch_char_Zhiliu_vo_welcome",
+    Loader = function()
+      return {
         voice_ch_char_Zhiliu_vo_topic_01_1 = {
           ContentFR = "Rien n’échappe à la table des négociations. La seule question est de savoir : quel prix suffit à faire pencher la balance en ta faveur ?",
           TextMapId = "voice_ch_char_Zhiliu_vo_topic_01_1"

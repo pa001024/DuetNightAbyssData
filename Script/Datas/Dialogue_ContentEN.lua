@@ -204609,7 +204609,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51156101] = {
           Content = "要我说，那位姑娘何必再找那钱袋子，她自从进了这条街开始，我便一直盯着她的一举一动，她接触过的人里面，最有嫌疑的，就是刚才那吹糖人的小贩！",
-          ContentEN = "If you ask me, that lady can stop looking. I've had my eye on him from the moment he stepped onto this street. And out of everyone she crossed paths with, the dodgiest by far was that sugar-figure seller.",
+          ContentEN = "If you ask me, that lady can stop looking. I've had my eye on her from the moment she stepped onto this street. And out of everyone she crossed paths with, the dodgiest by far was that sugar-figure seller.",
           DialogueId = 51156101,
           GUID = "80105DD2",
           NextOptions = {
@@ -204627,7 +204627,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51156103] = {
           Content = "她与那么多人都擦肩而过，只在那糖人摊前停了片刻，排除所有嫌疑，那必然是这一种可能了！",
-          ContentEN = "She passed plenty of people, but he only stopped at that sugar-figure stall. Rule out everyone else, and who does that leave? Her.",
+          ContentEN = "She passed plenty of people, but she only stopped at that sugar-figure stall. Rule out everyone else, and who does that leave? Him.",
           DialogueId = 51156103,
           GUID = "80105E26",
           NextOptions = {
@@ -211905,7 +211905,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51162502] = {
           Content = "现在该怎么办啊，那翠屏雀占屋为王，疯狂在人家的屋顶上……",
-          ContentEN = "What's the plan, then? That Emeraldfinch is strutting about like he owns the manor, causing a right scene...",
+          ContentEN = "What's the plan, then? That Emeraldfinch is strutting about like it owns the manor, causing a right scene...",
           DialogueId = 51162502,
           GUID = "801477FC",
           NextDialogue = 51162503,
@@ -212742,7 +212742,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51162903] = {
           Content = "大家请跟紧我，我们现在一路走到西市，先去吃个饭，毕竟一路奔波，就算哥哥姐姐们不饿，我的肚子却是早就咕咕作响了。",
-          ContentEN = "Right, stick together! We're marching straight to the western market for a spot of lunch. It's been a long trek, and even if you aren't peckish, my stomach is growling something fierce!",
+          ContentEN = "Right, stick together! We're marching straight to the West Market for a spot of lunch. It's been a long trek, and even if you aren't peckish, my stomach is growling something fierce!",
           DialogueId = 51162903,
           GUID = "8014B9C6",
           NextOptions = {
@@ -215226,7 +215226,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51167222] = {
           Content = "我不喜欢死板的家伙，但不代表我讨厌他们，你可别跑去跟香官们告我的状哦！诶，还有你，听了半天不说话的家伙，你也不许告状！",
-          ContentEN = "I don't like stiff-necked people, doesn't mean I hate 'em. Don't you go snitching to the incense wardens now! And you, the quiet one over there, keep your mouth shut too!",
+          ContentEN = "I don't like stiff-necked people, doesn't mean I hate 'em. Don't you go snitching to the incense wardens now! And you, the quiet one, keep your mouth shut too!",
           DialogueId = 51167222,
           GUID = "80177E5C",
           NextDialogue = 51167223,
@@ -215524,7 +215524,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51167430] = {
           Content = "说完，那娃娃居然从房顶上站了起来，拍拍屁股，居然直接从上一跃而下，眨眼就跑了个无影无踪。",
-          ContentEN = "With that, the child stood up, dusted off his bottom, and jumped straight off the roof! In the blink of an eye, the child'd vanished into thin air.",
+          ContentEN = "With that, the child stood up, dusted off her bottom, and jumped straight off the roof! In the blink of an eye, the child'd vanished into thin air.",
           DialogueId = 51167430,
           GUID = "8017A07C",
           NextDialogue = 51167431,
@@ -226065,7 +226065,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175453] = {
           Content = "用你……喜欢的方式……去度过……这一生……",
-          ContentEN = "Live your life... in whatever way your heart truly wish...",
+          ContentEN = "Live your life... in whatever way your heart truly wishes...",
           DialogueId = 51175453,
           GUID = "801CC4C2",
           NextDialogue = 51175454,
@@ -227432,7 +227432,7 @@ TurnTo{TurnToDescription{"701091:p(-180)"}},   PlayAnimation{ActorId{100001},Ani
         },
         [51175818] = {
           Content = "小友不必慌张，我不是什么可怕的杀人狂魔，再说了，在华胥应该也不会有这样的家伙吧？",
-          ContentEN = "Don't panic, lad. I'm no homicidal maniac. Besides, you wouldn't find types like that wandering openly around Huaxu, would you?",
+          ContentEN = "Don't panic, {性别:lad |lass}. I'm no homicidal maniac. Besides, you wouldn't find types like that wandering openly around Huaxu, would you?",
           DialogueId = 51175818,
           GUID = "801D00A4",
           NextDialogue = 51175819,
