@@ -328,6 +328,9 @@ function Controller:OnSpawnMonster()
   for RuleId, _ in pairs(self.MonsterChecked) do
     local RuleData = DataMgr.GalleryRule[RuleId]
     local MonsterId = RuleData.PreferredMonsterId
+    if RuleId == 6002001 then
+      MonsterId = 100 -- patch 游击秽兽 6002001 -> 100 目标假人-10e血量
+    end
     if MonsterId and self.MonsterCheckedNum[RuleId] then
       table.insert(MonstersToSpawn, {
         MonsterId,
