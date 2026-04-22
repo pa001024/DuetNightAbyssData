@@ -81,6 +81,9 @@ class MonsterProcessor(BaseProcessor):
                 )
                 for monster_id in dungeon_init_guide_unit_id:
                     self.valid_monster_ids.add(monster_id)
+        self._add_solo_treasure_monster_ids(data_loader)
+        self._add_solo_treasure_gameplay_monster_ids(data_loader)
+        self._add_solo_treasure_gameplay_spawn_monster_ids(data_loader)
         abyss_dungeon_data = data_loader.load_json("AbyssDungeon.json")
         for abyss_dungeon_id, abyss_dungeon_info in abyss_dungeon_data.items():
             # 检查AbyssDungeonID是否大于20000
@@ -126,7 +129,6 @@ class MonsterProcessor(BaseProcessor):
 
         tags = monster_data.get("GamePlayTags", [])
         fact = [tag for tag in tags if tag in self.tab_trans]
-        strong_tags = [tag for tag in tags if isinstance(tag, str) and tag.startswith("Mon.Strong.") and tag != "Mon.Strong.Double"]
         # fact = [self.get_translated_text(fact) for fact in facts]
         if len(fact) == 0:
             fact = [""]
@@ -177,8 +179,8 @@ class MonsterProcessor(BaseProcessor):
             del processed["f"]
         if processed["es"] == 0:
             del processed["es"]
-        if strong_tags:
-            processed["tags"] = strong_tags
+        if tags:
+            processed["tags"] = tags
 
         return processed
 
@@ -285,6 +287,82 @@ class MonsterProcessor(BaseProcessor):
                     for monster_id in relation_info.get("UnitId", []):
                         if monster_id:
                             self.valid_monster_ids.add(monster_id)
+
+    def _add_solo_treasure_gameplay_monster_ids(self, data_loader):
+        """补充SoloTreasureGamePlay中的Monster1..4怪物ID"""
+        solo_treasure_gameplay_data = data_loader.load_json("SoloTreasureGamePlay.json")
+        for game_play_info in solo_treasure_gameplay_data.values():
+            if not isinstance(game_play_info, dict):
+                continue
+            for idx in range(1, 5):
+                monster_id = game_play_info.get(f"Monster{idx}")
+                if monster_id:
+                    self.valid_monster_ids.add(monster_id)
+
+    def _add_solo_treasure_monster_ids(self, data_loader):
+        """补充SoloTreasure中RandomCreator关联的怪物ID"""
+        solo_treasure_data = data_loader.load_json("SoloTreasure.json")
+        random_creator_data = data_loader.load_json("RandomCreator.json")
+        for solo_treasure_info in solo_treasure_data.values():
+            if not isinstance(solo_treasure_info, dict):
+                continue
+            rainy_ids = solo_treasure_info.get("RainyRandomId", [])
+            if isinstance(rainy_ids, dict):
+                rainy_ids = list(rainy_ids.values())
+            elif not isinstance(rainy_ids, list):
+                rainy_ids = [rainy_ids] if rainy_ids else []
+
+            for rainy_id in rainy_ids:
+                rainy_info = random_creator_data.get(str(rainy_id)) or random_creator_data.get(rainy_id)
+                if not isinstance(rainy_info, dict):
+                    continue
+                random_infos = rainy_info.get("RandomInfos", [])
+                if isinstance(random_infos, dict):
+                    random_infos = list(random_infos.values())
+                elif not isinstance(random_infos, list):
+                    random_infos = [random_infos] if random_infos else []
+
+                for random_info in random_infos:
+                    if not isinstance(random_info, dict):
+                        continue
+                    monster_id = random_info.get("UnitId")
+                    if monster_id:
+                        self.valid_monster_ids.add(monster_id)
+
+    def _add_solo_treasure_gameplay_spawn_monster_ids(self, data_loader):
+        """补充SoloTreasureGamePlay中的MonsterSpawn关联怪物ID"""
+        solo_treasure_gameplay_data = data_loader.load_json("SoloTreasureGamePlay.json")
+        monster_spawn_data = data_loader.load_json("MonsterSpawn.json")
+        relation_spawn_data = data_loader.load_json("RelationSpawn.json")
+
+        for game_play_info in solo_treasure_gameplay_data.values():
+            if not isinstance(game_play_info, dict):
+                continue
+
+            spawn_id = game_play_info.get("MonsterSpawn")
+            if not spawn_id:
+                continue
+
+            spawn_config = monster_spawn_data.get(str(spawn_id)) or monster_spawn_data.get(spawn_id)
+            if not isinstance(spawn_config, dict):
+                continue
+
+            for spawn_monster in spawn_config.get("MonsterSpawnInfos", []):
+                if not isinstance(spawn_monster, dict):
+                    continue
+                monster_id = spawn_monster.get("UnitId")
+                if monster_id:
+                    self.valid_monster_ids.add(monster_id)
+
+            relation_id = spawn_config.get("RelationId")
+            if relation_id is None:
+                continue
+            relation_info = relation_spawn_data.get(str(relation_id)) or relation_spawn_data.get(relation_id)
+            if not isinstance(relation_info, dict):
+                continue
+            for monster_id in relation_info.get("UnitId", []):
+                if monster_id:
+                    self.valid_monster_ids.add(monster_id)
 
     def _append_spawn_rule_waves(
         self, target_waves, raw_spawn_rule, split_list_items=False

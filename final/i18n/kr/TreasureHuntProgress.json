@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1001,
+    "did": 10301411,
+    "name": "초시",
+    "score": 20000,
+    "icon": "T_SoloTreasure_Bird01",
+    "petConText": "저출력 작동",
+    "condition": 10301422
+  },
+  {
+    "id": 1002,
+    "did": 10301412,
+    "name": "향시",
+    "score": 50000,
+    "icon": "T_SoloTreasure_Bird02",
+    "petConText": "중간 출력 작동",
+    "condition": 10301423
+  },
+  {
+    "id": 1003,
+    "did": 10301413,
+    "name": "회시",
+    "score": 80000,
+    "icon": "T_SoloTreasure_Bird03",
+    "petConText": "고출력 작동",
+    "condition": 10301424
+  },
+  {
+    "id": 1004,
+    "did": 10301414,
+    "name": "전시",
+    "score": 120000,
+    "icon": "T_SoloTreasure_Bird04",
+    "petConText": "과부하 작동",
+    "condition": 10301425
+  },
+  {
+    "id": 1005,
+    "did": 10301415,
+    "name": "결승전",
+    "score": 120000,
+    "icon": "T_SoloTreasure_Bird05",
+    "petConText": "파손됨",
+    "condition": 10301426
+  }
+]

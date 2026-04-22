@@ -10,7 +10,10 @@
     "hp": 340,
     "tn": 250,
     "tags": [
-      "Mon.Strong.Burst"
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Burst",
+      "Mon.Elite.Jailer"
     ]
   },
   {
@@ -21,7 +24,12 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "Gr_Jichong_C01"
+    "icon": "Gr_Jichong_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6001011,
@@ -34,7 +42,11 @@
     "tn": 600,
     "icon": "Gr_Jichong_C01",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Frozen",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -48,7 +60,11 @@
     "tn": 600,
     "icon": "Gr_Jichong_C01",
     "tags": [
-      "Mon.Strong.Burst"
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Burst",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -62,7 +78,12 @@
     "tn": 600,
     "icon": "Gr_Jichong_C01",
     "tags": [
-      "Mon.Strong.Poison"
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -76,7 +97,11 @@
     "tn": 600,
     "icon": "Gr_Jichong_C01",
     "tags": [
-      "Mon.Strong.Thunder"
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Thunder",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -90,7 +115,11 @@
     "tn": 600,
     "icon": "Gr_Jichong_C01",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Fade",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -104,7 +133,11 @@
     "tn": 600,
     "icon": "Gr_Jichong_C01",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Revenge",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -115,7 +148,12 @@
     "def": 130,
     "hp": 350,
     "tn": 150,
-    "icon": "Gr_Jichong_C01"
+    "icon": "Gr_Jichong_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6001701,
@@ -128,8 +166,13 @@
     "tn": 600,
     "icon": "Gr_Jichong_C01",
     "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
       "Mon.Strong.Thunder.Double",
-      "Mon.Strong.Kamikaze.Double"
+      "Mon.Strong.Kamikaze.Double",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -140,7 +183,12 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "Gr_Youji_C01"
+    "icon": "Gr_Youji_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6002011,
@@ -153,7 +201,11 @@
     "tn": 600,
     "icon": "Gr_Youji_C01",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Strong.Frozen",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -167,7 +219,11 @@
     "tn": 600,
     "icon": "Gr_Youji_C01",
     "tags": [
-      "Mon.Strong.Blood"
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Strong.Blood",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -181,7 +237,11 @@
     "tn": 600,
     "icon": "Gr_Youji_C01",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Strong.Fade",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -195,7 +255,11 @@
     "tn": 600,
     "icon": "Gr_Youji_C01",
     "tags": [
-      "Mon.Strong.Shield"
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Strong.Shield",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -209,7 +273,11 @@
     "tn": 600,
     "icon": "Gr_Youji_C01",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Strong.Revenge",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -220,7 +288,12 @@
     "def": 130,
     "hp": 350,
     "tn": 150,
-    "icon": "Gr_Youji_C01"
+    "icon": "Gr_Youji_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6002701,
@@ -233,8 +306,13 @@
     "tn": 600,
     "icon": "Gr_Youji_C01",
     "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
       "Mon.Strong.Revenge.Double",
-      "Mon.Strong.Reflect.Double"
+      "Mon.Strong.Reflect.Double",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -245,7 +323,13 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "Gr_Piaofu_C01"
+    "icon": "Gr_Piaofu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6003601,
@@ -255,7 +339,13 @@
     "def": 130,
     "hp": 350,
     "tn": 150,
-    "icon": "Gr_Piaofu_C01"
+    "icon": "Gr_Piaofu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6004001,
@@ -265,7 +355,12 @@
     "def": 200,
     "hp": 245,
     "tn": 300,
-    "icon": "Gr_Baotu_C01"
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.D"
+    ]
   },
   {
     "id": 6004007,
@@ -275,7 +370,12 @@
     "def": 200,
     "hp": 3450,
     "tn": 300,
-    "icon": "Boss_04_Lizhan"
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.D"
+    ]
   },
   {
     "id": 6004012,
@@ -288,6 +388,10 @@
     "tn": 600,
     "icon": "Gr_Baotu_C01",
     "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Burst"
     ]
   },
@@ -302,7 +406,12 @@
     "tn": 600,
     "icon": "Gr_Baotu_C01",
     "tags": [
-      "Mon.Strong.Poison"
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -316,6 +425,10 @@
     "tn": 600,
     "icon": "Gr_Baotu_C01",
     "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Thunder"
     ]
   },
@@ -330,6 +443,10 @@
     "tn": 600,
     "icon": "Gr_Baotu_C01",
     "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Reflect"
     ]
   },
@@ -341,7 +458,12 @@
     "def": 200,
     "hp": 1225,
     "tn": 300,
-    "icon": "Gr_Baotu_C01"
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.D"
+    ]
   },
   {
     "id": 6005001,
@@ -351,7 +473,12 @@
     "def": 130,
     "hp": 71,
     "tn": 600,
-    "icon": "GR_Longcao"
+    "icon": "GR_Longcao",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6006001,
@@ -361,7 +488,13 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "GR_Banyun"
+    "icon": "GR_Banyun",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6006002,
@@ -371,7 +504,12 @@
     "def": 130,
     "hp": 40,
     "tn": 150,
-    "icon": "GR_Banyun"
+    "icon": "GR_Banyun",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly"
+    ]
   },
   {
     "id": 6007001,
@@ -381,7 +519,12 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "GR_Zhuoxin"
+    "icon": "GR_Zhuoxin",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6007011,
@@ -394,7 +537,11 @@
     "tn": 150,
     "icon": "GR_Zhuoxin",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Frozen",
+      "Mon.Elite"
     ]
   },
   {
@@ -408,7 +555,11 @@
     "tn": 150,
     "icon": "GR_Zhuoxin",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade",
+      "Mon.Elite"
     ]
   },
   {
@@ -422,7 +573,11 @@
     "tn": 150,
     "icon": "GR_Zhuoxin",
     "tags": [
-      "Mon.Strong.Threefold"
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Threefold",
+      "Mon.Elite"
     ]
   },
   {
@@ -433,7 +588,12 @@
     "def": 130,
     "hp": 350,
     "tn": 150,
-    "icon": "GR_Zhuoxin"
+    "icon": "GR_Zhuoxin",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6011001,
@@ -443,7 +603,13 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "Gr_Jichong_C01"
+    "icon": "Gr_Jichong_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Attribute.Thunder",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6011601,
@@ -453,7 +619,13 @@
     "def": 130,
     "hp": 350,
     "tn": 150,
-    "icon": "Gr_Jichong_C01"
+    "icon": "Gr_Jichong_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Attribute.Thunder",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6012001,
@@ -463,7 +635,13 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "Gr_Youji_C01"
+    "icon": "Gr_Youji_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Attribute.Fire",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6012601,
@@ -473,7 +651,13 @@
     "def": 130,
     "hp": 350,
     "tn": 150,
-    "icon": "Gr_Youji_C01"
+    "icon": "Gr_Youji_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Attribute.Fire",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6013001,
@@ -483,7 +667,14 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "Gr_Piaofu_C01"
+    "icon": "Gr_Piaofu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Attribute.Water",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6013015,
@@ -496,6 +687,12 @@
     "tn": 150,
     "icon": "Gr_Piaofu_C01",
     "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Attribute.Water",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Blood"
     ]
   },
@@ -510,6 +707,12 @@
     "tn": 150,
     "icon": "Gr_Piaofu_C01",
     "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Attribute.Water",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Shield"
     ]
   },
@@ -524,6 +727,12 @@
     "tn": 150,
     "icon": "Gr_Piaofu_C01",
     "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Attribute.Water",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Revenge"
     ]
   },
@@ -535,7 +744,14 @@
     "def": 130,
     "hp": 350,
     "tn": 150,
-    "icon": "Gr_Piaofu_C01"
+    "icon": "Gr_Piaofu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Attribute.Water",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6014001,
@@ -545,7 +761,13 @@
     "def": 200,
     "hp": 245,
     "tn": 300,
-    "icon": "Gr_Baotu_C01"
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Attribute.Fire",
+      "Mon.Reward.D"
+    ]
   },
   {
     "id": 6014601,
@@ -555,7 +777,13 @@
     "def": 200,
     "hp": 1225,
     "tn": 300,
-    "icon": "Gr_Baotu_C01"
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Attribute.Fire",
+      "Mon.Reward.D"
+    ]
   },
   {
     "id": 6015001,
@@ -565,7 +793,13 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "GR_Fangjin"
+    "icon": "GR_Fangjin",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6015013,
@@ -578,7 +812,13 @@
     "tn": 150,
     "icon": "GR_Fangjin",
     "tags": [
-      "Mon.Strong.Poison"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison"
     ]
   },
   {
@@ -592,7 +832,12 @@
     "tn": 150,
     "icon": "GR_Fangjin",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge",
+      "Mon.Elite"
     ]
   },
   {
@@ -606,7 +851,46 @@
     "tn": 150,
     "icon": "GR_Fangjin",
     "tags": [
-      "Mon.Strong.Kamikaze"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Kamikaze",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 6015051,
+    "n": "燼香の穢獣",
+    "f": 1,
+    "atk": 5.56,
+    "def": 130,
+    "hp": 71,
+    "tn": 150,
+    "icon": "GR_Fangjin",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.E",
+      "Mon.SoloTreasure.BPoint"
+    ]
+  },
+  {
+    "id": 6015052,
+    "n": "燼香の穢獣",
+    "f": 1,
+    "atk": 5.56,
+    "def": 130,
+    "hp": 71,
+    "tn": 150,
+    "icon": "GR_Fangjin",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.E",
+      "Mon.SoloTreasure.APoint"
     ]
   },
   {
@@ -617,7 +901,13 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "GR_Eshi"
+    "icon": "GR_Eshi",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6016011,
@@ -630,7 +920,12 @@
     "tn": 150,
     "icon": "GR_Eshi",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Frozen",
+      "Mon.Elite"
     ]
   },
   {
@@ -644,7 +939,13 @@
     "tn": 150,
     "icon": "GR_Eshi",
     "tags": [
-      "Mon.Strong.Poison"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison"
     ]
   },
   {
@@ -658,7 +959,12 @@
     "tn": 150,
     "icon": "GR_Eshi",
     "tags": [
-      "Mon.Strong.Blood"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Blood",
+      "Mon.Elite"
     ]
   },
   {
@@ -672,7 +978,12 @@
     "tn": 150,
     "icon": "GR_Eshi",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade",
+      "Mon.Elite"
     ]
   },
   {
@@ -686,7 +997,12 @@
     "tn": 150,
     "icon": "GR_Eshi",
     "tags": [
-      "Mon.Strong.Shield"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Shield",
+      "Mon.Elite"
     ]
   },
   {
@@ -700,7 +1016,12 @@
     "tn": 150,
     "icon": "GR_Eshi",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge",
+      "Mon.Elite"
     ]
   },
   {
@@ -714,7 +1035,12 @@
     "tn": 150,
     "icon": "GR_Eshi",
     "tags": [
-      "Mon.Strong.Kamikaze"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Kamikaze",
+      "Mon.Elite"
     ]
   },
   {
@@ -728,7 +1054,46 @@
     "tn": 150,
     "icon": "GR_Eshi",
     "tags": [
-      "Mon.Strong.ThunderLaser"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.ThunderLaser",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 6016051,
+    "n": "花蝕の穢獣",
+    "f": 1,
+    "atk": 5.56,
+    "def": 130,
+    "hp": 71,
+    "tn": 150,
+    "icon": "GR_Eshi",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.E",
+      "Mon.SoloTreasure.BPoint"
+    ]
+  },
+  {
+    "id": 6016052,
+    "n": "花蝕の穢獣",
+    "f": 1,
+    "atk": 5.56,
+    "def": 130,
+    "hp": 71,
+    "tn": 150,
+    "icon": "GR_Eshi",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.E",
+      "Mon.SoloTreasure.APoint"
     ]
   },
   {
@@ -739,7 +1104,13 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "GR_Kuirui"
+    "icon": "GR_Kuirui",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 6017012,
@@ -752,7 +1123,12 @@
     "tn": 150,
     "icon": "GR_Kuirui",
     "tags": [
-      "Mon.Strong.Burst"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Burst",
+      "Mon.Elite"
     ]
   },
   {
@@ -766,7 +1142,13 @@
     "tn": 150,
     "icon": "GR_Kuirui",
     "tags": [
-      "Mon.Strong.Poison"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison",
+      "Mon.Elite"
     ]
   },
   {
@@ -780,7 +1162,12 @@
     "tn": 150,
     "icon": "GR_Kuirui",
     "tags": [
-      "Mon.Strong.Thunder"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Thunder",
+      "Mon.Elite"
     ]
   },
   {
@@ -794,7 +1181,46 @@
     "tn": 150,
     "icon": "GR_Kuirui",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 6017051,
+    "n": "巨蕊の穢獣",
+    "f": 1,
+    "atk": 10,
+    "def": 130,
+    "hp": 71,
+    "tn": 150,
+    "icon": "GR_Kuirui",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Melee",
+      "Mon.Reward.E",
+      "Mon.SoloTreasure.BPoint"
+    ]
+  },
+  {
+    "id": 6017052,
+    "n": "巨蕊の穢獣",
+    "f": 1,
+    "atk": 10,
+    "def": 130,
+    "hp": 71,
+    "tn": 150,
+    "icon": "GR_Kuirui",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Melee",
+      "Mon.Reward.E",
+      "Mon.SoloTreasure.APoint"
     ]
   },
   {
@@ -806,7 +1232,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Juji_C01"
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7001005,
@@ -818,7 +1249,14 @@
     "es": 340,
     "hp": 340,
     "tn": 600,
-    "icon": "Jt_Juji_C01"
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Capture",
+      "Mon.Reward.B",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 7001008,
@@ -829,7 +1267,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Juji"
+    "icon": "Jt_Juji",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7001011,
@@ -843,7 +1286,11 @@
     "tn": 600,
     "icon": "Jt_Juji_C01",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Frozen",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -858,7 +1305,11 @@
     "tn": 600,
     "icon": "Jt_Juji_C01",
     "tags": [
-      "Mon.Strong.Blood"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Blood",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -873,7 +1324,11 @@
     "tn": 600,
     "icon": "Jt_Juji_C01",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Fade",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -888,7 +1343,11 @@
     "tn": 600,
     "icon": "Jt_Juji_C01",
     "tags": [
-      "Mon.Strong.Shield"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Shield",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -903,7 +1362,11 @@
     "tn": 600,
     "icon": "Jt_Juji_C01",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Revenge",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -918,7 +1381,11 @@
     "tn": 600,
     "icon": "Jt_Juji_C01",
     "tags": [
-      "Mon.Strong.Threefold"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Threefold",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -930,7 +1397,12 @@
     "es": 170,
     "hp": 230,
     "tn": 150,
-    "icon": "Jt_Juji_C01"
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7002001,
@@ -941,7 +1413,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Pizhuo_C01"
+    "icon": "Jt_Pizhuo_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7002005,
@@ -953,7 +1430,14 @@
     "es": 340,
     "hp": 340,
     "tn": 600,
-    "icon": "Jt_Pizhuo_C01"
+    "icon": "Jt_Pizhuo_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Capture",
+      "Mon.Reward.B",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 7002007,
@@ -964,7 +1448,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Pizhuo"
+    "icon": "Jt_Pizhuo",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7002011,
@@ -978,7 +1467,11 @@
     "tn": 600,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Frozen",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -993,7 +1486,11 @@
     "tn": 600,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
-      "Mon.Strong.Burst"
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Burst",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1008,7 +1505,11 @@
     "tn": 600,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
-      "Mon.Strong.Thunder"
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Thunder",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1023,7 +1524,11 @@
     "tn": 600,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Fade",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1038,7 +1543,11 @@
     "tn": 600,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Revenge",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1053,7 +1562,11 @@
     "tn": 600,
     "icon": "Jt_Pizhuo_C01",
     "tags": [
-      "Mon.Strong.IceOrb"
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.IceOrb",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1065,7 +1578,12 @@
     "es": 170,
     "hp": 230,
     "tn": 150,
-    "icon": "Jt_Pizhuo_C01"
+    "icon": "Jt_Pizhuo_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7003001,
@@ -1076,7 +1594,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Ranger_C01"
+    "icon": "Jt_Ranger_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7003005,
@@ -1088,7 +1611,14 @@
     "es": 340,
     "hp": 340,
     "tn": 600,
-    "icon": "Jt_Ranger_C01"
+    "icon": "Jt_Ranger_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Capture",
+      "Mon.Reward.B",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 7003011,
@@ -1102,7 +1632,11 @@
     "tn": 600,
     "icon": "Jt_Ranger_C01",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Frozen",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1117,7 +1651,11 @@
     "tn": 600,
     "icon": "Jt_Ranger_C01",
     "tags": [
-      "Mon.Strong.Blood"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Blood",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1132,7 +1670,11 @@
     "tn": 600,
     "icon": "Jt_Ranger_C01",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Fade",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1147,7 +1689,11 @@
     "tn": 600,
     "icon": "Jt_Ranger_C01",
     "tags": [
-      "Mon.Strong.Shield"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Shield",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1162,7 +1708,11 @@
     "tn": 600,
     "icon": "Jt_Ranger_C01",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Revenge",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1177,7 +1727,11 @@
     "tn": 600,
     "icon": "Jt_Ranger_C01",
     "tags": [
-      "Mon.Strong.ThunderLaser"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.ThunderLaser",
+      "Mon.Reward.B",
+      "Mon.Elite"
     ]
   },
   {
@@ -1189,7 +1743,12 @@
     "es": 170,
     "hp": 230,
     "tn": 150,
-    "icon": "Jt_Ranger_C01"
+    "icon": "Jt_Ranger_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7004001,
@@ -1200,7 +1759,12 @@
     "es": 136,
     "hp": 163,
     "tn": 300,
-    "icon": "Jt_Tuji_C01"
+    "icon": "Jt_Tuji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7004017,
@@ -1214,6 +1778,10 @@
     "tn": 600,
     "icon": "Jt_Tuji_C01",
     "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Shield"
     ]
   },
@@ -1229,6 +1797,10 @@
     "tn": 600,
     "icon": "Jt_Tuji_C01",
     "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Reflect"
     ]
   },
@@ -1241,7 +1813,12 @@
     "es": 680,
     "hp": 815,
     "tn": 300,
-    "icon": "Jt_Tuji_C01"
+    "icon": "Jt_Tuji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7006001,
@@ -1252,7 +1829,12 @@
     "es": 200,
     "hp": 500,
     "tn": 150,
-    "icon": "Jt_HealRobot"
+    "icon": "Jt_HealRobot",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Summon.Light"
+    ]
   },
   {
     "id": 7007001,
@@ -1262,7 +1844,12 @@
     "def": 0,
     "hp": 200,
     "tn": 100,
-    "icon": "Jt_BlastRobot"
+    "icon": "Jt_BlastRobot",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Summon.Light"
+    ]
   },
   {
     "id": 7007002,
@@ -1272,7 +1859,12 @@
     "def": 0,
     "hp": 2,
     "tn": 150,
-    "icon": "Jt_BlastRobot_C01"
+    "icon": "Jt_BlastRobot_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.ChangeColor.BlastRobot01"
+    ]
   },
   {
     "id": 7008001,
@@ -1284,7 +1876,13 @@
     "es": 340,
     "hp": 340,
     "tn": 600,
-    "icon": "Jt_Zhihui"
+    "icon": "Jt_Zhihui",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 7008023,
@@ -1298,6 +1896,10 @@
     "tn": 600,
     "icon": "Jt_Zhihui",
     "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite",
       "Mon.Strong.Vampire"
     ]
   },
@@ -1311,7 +1913,14 @@
     "es": 1700,
     "hp": 1700,
     "tn": 600,
-    "icon": "Jt_Zhihui"
+    "icon": "Jt_Zhihui",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite",
+      "Mon.Corp"
+    ]
   },
   {
     "id": 7009001,
@@ -1322,7 +1931,12 @@
     "es": 136,
     "hp": 163,
     "tn": 300,
-    "icon": "Jt_Zhiren"
+    "icon": "Jt_Zhiren",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7009020,
@@ -1336,6 +1950,10 @@
     "tn": 300,
     "icon": "Jt_Zhiren",
     "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.Reflect"
     ]
   },
@@ -1348,7 +1966,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Zhijian"
+    "icon": "Jt_Zhijian",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7010022,
@@ -1362,6 +1985,10 @@
     "tn": 150,
     "icon": "Jt_Zhijian",
     "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Elite",
       "Mon.Strong.ThunderLaser"
     ]
   },
@@ -1374,7 +2001,12 @@
     "es": 170,
     "hp": 235,
     "tn": 150,
-    "icon": "Jt_Zhijian"
+    "icon": "Jt_Zhijian",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7011001,
@@ -1385,7 +2017,13 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Juji_C01"
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Attribute.Water",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7011601,
@@ -1396,7 +2034,13 @@
     "es": 170,
     "hp": 235,
     "tn": 150,
-    "icon": "Jt_Juji_C01"
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Attribute.Water",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7012001,
@@ -1407,7 +2051,13 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Pizhuo_C01"
+    "icon": "Jt_Pizhuo_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E",
+      "Mon.Attribute.Wind"
+    ]
   },
   {
     "id": 7012005,
@@ -1418,7 +2068,13 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Pizhuo_C01"
+    "icon": "Jt_Pizhuo_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E",
+      "Mon.Attribute.Wind"
+    ]
   },
   {
     "id": 7012601,
@@ -1429,7 +2085,13 @@
     "es": 170,
     "hp": 235,
     "tn": 150,
-    "icon": "Jt_Pizhuo_C01"
+    "icon": "Jt_Pizhuo_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E",
+      "Mon.Attribute.Wind"
+    ]
   },
   {
     "id": 7013001,
@@ -1440,7 +2102,13 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "Jt_Ranger_C01"
+    "icon": "Jt_Ranger_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E",
+      "Mon.Attribute.Thunder"
+    ]
   },
   {
     "id": 7013601,
@@ -1451,7 +2119,13 @@
     "es": 170,
     "hp": 235,
     "tn": 150,
-    "icon": "Jt_Ranger_C01"
+    "icon": "Jt_Ranger_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E",
+      "Mon.Attribute.Thunder"
+    ]
   },
   {
     "id": 7014001,
@@ -1462,7 +2136,13 @@
     "es": 136,
     "hp": 163,
     "tn": 300,
-    "icon": "Jt_Tuji_C01"
+    "icon": "Jt_Tuji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E",
+      "Mon.Attribute.Thunder"
+    ]
   },
   {
     "id": 7015001,
@@ -1473,7 +2153,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "JT_Jingjie"
+    "icon": "JT_Jingjie",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7015011,
@@ -1487,7 +2172,11 @@
     "tn": 150,
     "icon": "JT_Jingjie",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Frozen",
+      "Mon.Elite"
     ]
   },
   {
@@ -1499,7 +2188,12 @@
     "es": 170,
     "hp": 235,
     "tn": 150,
-    "icon": "JT_Jingjie"
+    "icon": "JT_Jingjie",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 7016001,
@@ -1510,7 +2204,14 @@
     "es": 20,
     "hp": 100,
     "tn": 150,
-    "icon": "JT_Zhiyan"
+    "icon": "JT_Zhiyan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Reward.E",
+      "Mon.Vehicle"
+    ]
   },
   {
     "id": 7018001,
@@ -1521,7 +2222,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "JT_Zhiyan"
+    "icon": "JT_Zhiyan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 8001001,
@@ -1532,7 +2238,12 @@
     "es": 82,
     "hp": 14,
     "tn": 150,
-    "icon": "Jh_Zhishi"
+    "icon": "Jh_Zhishi",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 8001015,
@@ -1546,7 +2257,11 @@
     "tn": 150,
     "icon": "Jh_Zhishi",
     "tags": [
-      "Mon.Strong.Blood"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Blood",
+      "Mon.Elite"
     ]
   },
   {
@@ -1561,7 +2276,11 @@
     "tn": 150,
     "icon": "Jh_Zhishi",
     "tags": [
-      "Mon.Strong.IceOrb"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.IceOrb",
+      "Mon.Elite"
     ]
   },
   {
@@ -1576,7 +2295,11 @@
     "tn": 150,
     "icon": "Jh_Zhishi",
     "tags": [
-      "Mon.Strong.Kamikaze"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Kamikaze",
+      "Mon.Elite"
     ]
   },
   {
@@ -1588,7 +2311,12 @@
     "es": 410,
     "hp": 70,
     "tn": 150,
-    "icon": "Jh_Zhishi"
+    "icon": "Jh_Zhishi",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 8002001,
@@ -1599,7 +2327,12 @@
     "es": 82,
     "hp": 14,
     "tn": 150,
-    "icon": "Jh_Xianfeng"
+    "icon": "Jh_Xianfeng",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 8002012,
@@ -1613,7 +2346,11 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
-      "Mon.Strong.Burst"
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Burst",
+      "Mon.Elite"
     ]
   },
   {
@@ -1628,7 +2365,11 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
-      "Mon.Strong.Thunder"
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Thunder",
+      "Mon.Elite"
     ]
   },
   {
@@ -1643,7 +2384,11 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade",
+      "Mon.Elite"
     ]
   },
   {
@@ -1658,7 +2403,11 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge",
+      "Mon.Elite"
     ]
   },
   {
@@ -1673,7 +2422,11 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
-      "Mon.Strong.Reflect"
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Reflect",
+      "Mon.Elite"
     ]
   },
   {
@@ -1685,7 +2438,12 @@
     "es": 410,
     "hp": 70,
     "tn": 150,
-    "icon": "Jh_Xianfeng"
+    "icon": "Jh_Xianfeng",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 8002701,
@@ -1699,8 +2457,13 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
       "Mon.Strong.Thunder.Double",
-      "Mon.Strong.IceOrb.Double"
+      "Mon.Strong.IceOrb.Double",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -1715,7 +2478,11 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
-      "Mon.Strong.Thunder"
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Thunder",
+      "Mon.Elite"
     ]
   },
   {
@@ -1730,7 +2497,11 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
-      "Mon.Strong.IceOrb"
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.IceOrb",
+      "Mon.Elite"
     ]
   },
   {
@@ -1745,8 +2516,13 @@
     "tn": 150,
     "icon": "Jh_Xianfeng",
     "tags": [
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
       "Mon.Strong.Fade.Double",
-      "Mon.Strong.Burst.Double"
+      "Mon.Strong.Burst.Double",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -1758,7 +2534,12 @@
     "es": 82,
     "hp": 14,
     "tn": 150,
-    "icon": "Jh_Shenfu"
+    "icon": "Jh_Shenfu",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 8003016,
@@ -1772,7 +2553,11 @@
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade",
+      "Mon.Elite"
     ]
   },
   {
@@ -1787,7 +2572,11 @@
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
-      "Mon.Strong.Kamikaze"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Kamikaze",
+      "Mon.Elite"
     ]
   },
   {
@@ -1802,7 +2591,11 @@
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
-      "Mon.Strong.ThunderLaser"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.ThunderLaser",
+      "Mon.Elite"
     ]
   },
   {
@@ -1817,7 +2610,11 @@
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
-      "Mon.Strong.Threefold"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Threefold",
+      "Mon.Elite"
     ]
   },
   {
@@ -1829,7 +2626,12 @@
     "es": 410,
     "hp": 70,
     "tn": 150,
-    "icon": "Jh_Shenfu"
+    "icon": "Jh_Shenfu",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 8003701,
@@ -1843,8 +2645,13 @@
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
       "Mon.Strong.Fade.Double",
-      "Mon.Strong.Shield.Double"
+      "Mon.Strong.Shield.Double",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -1859,7 +2666,11 @@
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade",
+      "Mon.Elite"
     ]
   },
   {
@@ -1874,7 +2685,11 @@
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge",
+      "Mon.Elite"
     ]
   },
   {
@@ -1889,8 +2704,13 @@
     "tn": 150,
     "icon": "Jh_Shenfu",
     "tags": [
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
       "Mon.Strong.Frozen.Double",
-      "Mon.Strong.Vampire.Double"
+      "Mon.Strong.Vampire.Double",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -1901,7 +2721,11 @@
     "def": 415,
     "hp": 4200,
     "tn": 1400,
-    "icon": "Boss_00_Xibi"
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8500002,
@@ -1911,7 +2735,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_00_Xibi"
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8500601,
@@ -1921,7 +2749,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_00_Xibi"
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8501001,
@@ -1931,7 +2763,11 @@
     "def": 0,
     "hp": 1440,
     "tn": 2500,
-    "icon": "Boss_04_Lizhan"
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8501002,
@@ -1941,7 +2777,11 @@
     "def": 300,
     "hp": 1530,
     "tn": 1000,
-    "icon": "Boss_04_Lizhan"
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8501601,
@@ -1951,7 +2791,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 6000,
-    "icon": "Boss_04_Lizhan"
+    "icon": "Boss_04_Lizhan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8502001,
@@ -1961,7 +2805,11 @@
     "def": 0,
     "hp": 6000,
     "tn": 4500,
-    "icon": "Boss_01_Saiqi"
+    "icon": "Boss_01_Saiqi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8502002,
@@ -1971,7 +2819,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_01_Saiqi"
+    "icon": "Boss_01_Saiqi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8502601,
@@ -1981,7 +2833,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_01_Saiqi"
+    "icon": "Boss_01_Saiqi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8502602,
@@ -1991,7 +2847,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_01_Saiqi"
+    "icon": "Boss_01_Saiqi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8503001,
@@ -2001,7 +2861,12 @@
     "def": 0,
     "hp": 6000,
     "tn": 99999,
-    "icon": "Boss_03_Shijing"
+    "icon": "Boss_03_Shijing",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.IgnoreSeekEnemy"
+    ]
   },
   {
     "id": 8503002,
@@ -2011,7 +2876,12 @@
     "def": 160,
     "hp": 6000,
     "tn": 6000,
-    "icon": "Boss_03_Shijing"
+    "icon": "Boss_03_Shijing",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.IgnoreSeekEnemy"
+    ]
   },
   {
     "id": 8503601,
@@ -2021,7 +2891,12 @@
     "def": 0,
     "hp": 6000,
     "tn": 6000,
-    "icon": "Boss_03_Shijing"
+    "icon": "Boss_03_Shijing",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.IgnoreSeekEnemy"
+    ]
   },
   {
     "id": 8505001,
@@ -2031,7 +2906,11 @@
     "def": 135,
     "hp": 6000,
     "tn": 4500,
-    "icon": "Boss_05_Lianhuo"
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8505002,
@@ -2041,7 +2920,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_05_Lianhuo"
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8505601,
@@ -2051,7 +2934,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_05_Lianhuo"
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8505602,
@@ -2061,7 +2948,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_05_Lianhuo"
+    "icon": "Boss_05_Lianhuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8509001,
@@ -2071,7 +2962,11 @@
     "def": 0,
     "hp": 2000,
     "tn": 4500,
-    "icon": "Boss_Tuosi"
+    "icon": "Boss_Tuosi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8509601,
@@ -2081,7 +2976,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 3000,
-    "icon": "Boss_Tuosi"
+    "icon": "Boss_Tuosi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8510001,
@@ -2091,7 +2990,11 @@
     "def": 0,
     "hp": 6000,
     "tn": 4500,
-    "icon": "Boss_Heilong"
+    "icon": "Boss_Heilong",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8510004,
@@ -2101,7 +3004,11 @@
     "def": 300,
     "hp": 3000,
     "tn": 4500,
-    "icon": "Boss_Heilong"
+    "icon": "Boss_Heilong",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8511001,
@@ -2111,7 +3018,11 @@
     "def": 0,
     "hp": 3000,
     "tn": 4500,
-    "icon": "Boss_Bailong"
+    "icon": "Boss_Bailong",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8511002,
@@ -2121,7 +3032,11 @@
     "def": 300,
     "hp": 3000,
     "tn": 4500,
-    "icon": "Boss_Heilong"
+    "icon": "Boss_Heilong",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8512001,
@@ -2131,7 +3046,11 @@
     "def": 0,
     "hp": 4800,
     "tn": 99999,
-    "icon": "Boss_Linen"
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8512002,
@@ -2141,7 +3060,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 8400,
-    "icon": "Boss_Linen"
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8512601,
@@ -2151,7 +3074,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 10000,
-    "icon": "Boss_Linen"
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8512602,
@@ -2161,7 +3088,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 10000,
-    "icon": "Boss_Linen"
+    "icon": "Boss_Linen",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8513001,
@@ -2171,7 +3102,11 @@
     "def": 0,
     "hp": 6000,
     "tn": 2000,
-    "icon": "Boss_Kuxiu"
+    "icon": "Boss_Kuxiu",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8513601,
@@ -2181,7 +3116,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 2000,
-    "icon": "Boss_Kuxiu"
+    "icon": "Boss_Kuxiu",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8513701,
@@ -2193,6 +3132,8 @@
     "tn": 2000,
     "icon": "Boss_Kuxiu",
     "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
       "Mon.Strong.ThunderLaser"
     ]
   },
@@ -2204,7 +3145,11 @@
     "def": 0,
     "hp": 6000,
     "tn": 4500,
-    "icon": "Boss_Shenpan"
+    "icon": "Boss_Shenpan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8514051,
@@ -2214,7 +3159,12 @@
     "def": 0,
     "hp": 2000,
     "tn": 4500,
-    "icon": "Boss_Shenpan"
+    "icon": "Boss_Shenpan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.NoTeleport"
+    ]
   },
   {
     "id": 8514601,
@@ -2224,7 +3174,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 4500,
-    "icon": "Boss_Shenpan"
+    "icon": "Boss_Shenpan",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8514701,
@@ -2236,6 +3190,8 @@
     "tn": 4500,
     "icon": "Boss_Shenpan",
     "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
       "Mon.Strong.Thunder"
     ]
   },
@@ -2247,7 +3203,43 @@
     "def": 0,
     "hp": 6000,
     "tn": 1000,
-    "icon": "Boss_Jushi"
+    "icon": "Boss_Jushi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8515053,
+    "n": "淵食い",
+    "t": "Elite_Monster",
+    "atk": 15,
+    "def": 0,
+    "hp": 6000,
+    "tn": 1000,
+    "icon": "Boss_Jushi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.SoloTreasure.FPoint",
+      "Mon.SoloTreasure.FContainer"
+    ]
+  },
+  {
+    "id": 8515054,
+    "n": "淵食い",
+    "t": "Elite_Monster",
+    "atk": 15,
+    "def": 0,
+    "hp": 6000,
+    "tn": 1000,
+    "icon": "Boss_Jushi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.SoloTreasure.EPoint",
+      "Mon.SoloTreasure.EContainer"
+    ]
   },
   {
     "id": 8515601,
@@ -2257,7 +3249,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 1000,
-    "icon": "Boss_Jushi"
+    "icon": "Boss_Jushi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8516001,
@@ -2267,7 +3263,11 @@
     "def": 720,
     "hp": 6000,
     "tn": 1000,
-    "icon": "Empty"
+    "icon": "Empty",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8518001,
@@ -2277,7 +3277,11 @@
     "def": 0,
     "hp": 3000,
     "tn": 3000,
-    "icon": "Boss_Juque"
+    "icon": "Boss_Juque",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8518601,
@@ -2287,7 +3291,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 3000,
-    "icon": "Boss_Juque"
+    "icon": "Boss_Juque",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8519001,
@@ -2297,7 +3305,11 @@
     "def": 0,
     "hp": 1500,
     "tn": 99999,
-    "icon": "Empty"
+    "icon": "Empty",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8520001,
@@ -2307,7 +3319,11 @@
     "def": 0,
     "hp": 4000,
     "tn": 0,
-    "icon": "Empty"
+    "icon": "Empty",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8522001,
@@ -2317,7 +3333,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 4500,
-    "icon": "HX_Tuisheng"
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8522601,
@@ -2327,7 +3347,11 @@
     "def": 300,
     "hp": 6000,
     "tn": 4500,
-    "icon": "HX_Tuisheng"
+    "icon": "HX_Tuisheng",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 8522701,
@@ -2339,6 +3363,8 @@
     "tn": 4500,
     "icon": "HX_Tuisheng",
     "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
       "Mon.Strong.Frozen"
     ]
   },
@@ -2350,7 +3376,12 @@
     "def": 0,
     "hp": 6000,
     "tn": 2000,
-    "icon": "Empty"
+    "icon": "Empty",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.Corp"
+    ]
   },
   {
     "id": 8524001,
@@ -2360,7 +3391,11 @@
     "def": 0,
     "hp": 7000,
     "tn": 4500,
-    "icon": "Empty"
+    "icon": "Empty",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
   },
   {
     "id": 9001001,
@@ -2371,7 +3406,12 @@
     "es": 82,
     "hp": 14,
     "tn": 150,
-    "icon": "SQ_Yinxie"
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9001014,
@@ -2385,7 +3425,11 @@
     "tn": 600,
     "icon": "SQ_Yinxie",
     "tags": [
-      "Mon.Strong.Thunder"
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Thunder",
+      "Mon.Elite"
     ]
   },
   {
@@ -2400,7 +3444,11 @@
     "tn": 600,
     "icon": "SQ_Yinxie",
     "tags": [
-      "Mon.Strong.Shield"
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Shield",
+      "Mon.Elite"
     ]
   },
   {
@@ -2415,7 +3463,11 @@
     "tn": 600,
     "icon": "SQ_Yinxie",
     "tags": [
-      "Mon.Strong.Vampire"
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Vampire",
+      "Mon.Elite"
     ]
   },
   {
@@ -2430,7 +3482,11 @@
     "tn": 600,
     "icon": "SQ_Yinxie",
     "tags": [
-      "Mon.Strong.Threefold"
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Threefold",
+      "Mon.Elite"
     ]
   },
   {
@@ -2442,7 +3498,12 @@
     "es": 410,
     "hp": 70,
     "tn": 150,
-    "icon": "SQ_Yinxie"
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9002001,
@@ -2453,7 +3514,12 @@
     "es": 82,
     "hp": 14,
     "tn": 150,
-    "icon": "SQ_Dufeng"
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9002015,
@@ -2467,7 +3533,11 @@
     "tn": 600,
     "icon": "SQ_Dufeng",
     "tags": [
-      "Mon.Strong.Blood"
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Blood",
+      "Mon.Elite"
     ]
   },
   {
@@ -2482,7 +3552,11 @@
     "tn": 600,
     "icon": "SQ_Dufeng",
     "tags": [
-      "Mon.Strong.IceOrb"
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.IceOrb",
+      "Mon.Elite"
     ]
   },
   {
@@ -2497,7 +3571,11 @@
     "tn": 600,
     "icon": "SQ_Dufeng",
     "tags": [
-      "Mon.Strong.Vampire"
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Vampire",
+      "Mon.Elite"
     ]
   },
   {
@@ -2512,7 +3590,11 @@
     "tn": 600,
     "icon": "SQ_Dufeng",
     "tags": [
-      "Mon.Strong.Threefold"
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Threefold",
+      "Mon.Elite"
     ]
   },
   {
@@ -2524,7 +3606,12 @@
     "es": 410,
     "hp": 70,
     "tn": 150,
-    "icon": "SQ_Dufeng"
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9003001,
@@ -2536,7 +3623,13 @@
     "es": 817,
     "hp": 102,
     "tn": 300,
-    "icon": "SQ_Wanju"
+    "icon": "SQ_Wanju",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 9003004,
@@ -2548,7 +3641,13 @@
     "es": 817,
     "hp": 102,
     "tn": 300,
-    "icon": "SQ_Wanju"
+    "icon": "SQ_Wanju",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 9005001,
@@ -2560,7 +3659,13 @@
     "es": 817,
     "hp": 102,
     "tn": 300,
-    "icon": "SQ_Baozha"
+    "icon": "SQ_Baozha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 9005004,
@@ -2572,7 +3677,13 @@
     "es": 817,
     "hp": 102,
     "tn": 300,
-    "icon": "SQ_Baozha"
+    "icon": "SQ_Baozha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 9006001,
@@ -2584,7 +3695,13 @@
     "es": 817,
     "hp": 102,
     "tn": 300,
-    "icon": "SQ_Qizha"
+    "icon": "SQ_Qizha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 9006004,
@@ -2596,7 +3713,13 @@
     "es": 817,
     "hp": 102,
     "tn": 300,
-    "icon": "SQ_Qizha"
+    "icon": "SQ_Qizha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 9007001,
@@ -2607,7 +3730,12 @@
     "es": 82,
     "hp": 14,
     "tn": 150,
-    "icon": "SQ_Niaopao"
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9007019,
@@ -2621,7 +3749,11 @@
     "tn": 600,
     "icon": "SQ_Niaopao",
     "tags": [
-      "Mon.Strong.IceOrb"
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.IceOrb",
+      "Mon.Elite"
     ]
   },
   {
@@ -2636,7 +3768,11 @@
     "tn": 600,
     "icon": "SQ_Niaopao",
     "tags": [
-      "Mon.Strong.ThunderLaser"
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.ThunderLaser",
+      "Mon.Elite"
     ]
   },
   {
@@ -2651,7 +3787,11 @@
     "tn": 600,
     "icon": "SQ_Niaopao",
     "tags": [
-      "Mon.Strong.Vampire"
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Vampire",
+      "Mon.Elite"
     ]
   },
   {
@@ -2663,7 +3803,12 @@
     "es": 410,
     "hp": 70,
     "tn": 150,
-    "icon": "SQ_Niaopao"
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9500001,
@@ -2672,7 +3817,12 @@
     "def": 0,
     "hp": 1000,
     "tn": 300,
-    "icon": "NE_Dajie"
+    "icon": "NE_Dajie",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.A",
+      "Mon.Treasure"
+    ]
   },
   {
     "id": 9501001,
@@ -2682,7 +3832,12 @@
     "def": 75,
     "hp": 450,
     "tn": 100,
-    "icon": "MN_Haer"
+    "icon": "MN_Haer",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 9801001,
@@ -2691,7 +3846,11 @@
     "def": 130,
     "hp": 71,
     "tn": 150,
-    "icon": "Animal_Xuelang_01"
+    "icon": "Animal_Xuelang_01",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9801002,
@@ -2701,7 +3860,11 @@
     "def": 130,
     "hp": 142,
     "tn": 150,
-    "icon": "Animal_Xuelang_02"
+    "icon": "Animal_Xuelang_02",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9802001,
@@ -2710,7 +3873,11 @@
     "def": 130,
     "hp": 45,
     "tn": 150,
-    "icon": "Animal_Hongjiaolu_02"
+    "icon": "Animal_Hongjiaolu_02",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9802002,
@@ -2719,7 +3886,11 @@
     "def": 130,
     "hp": 45,
     "tn": 150,
-    "icon": "Animal_Hongjiaolu_01"
+    "icon": "Animal_Hongjiaolu_01",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9803001,
@@ -2728,7 +3899,11 @@
     "def": 130,
     "hp": 25,
     "tn": 150,
-    "icon": "Animal_Yinbeishu_02"
+    "icon": "Animal_Yinbeishu_02",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9803002,
@@ -2738,7 +3913,11 @@
     "def": 130,
     "hp": 45,
     "tn": 150,
-    "icon": "Animal_Yinbeishu_02"
+    "icon": "Animal_Yinbeishu_02",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9804001,
@@ -2747,7 +3926,11 @@
     "def": 0,
     "hp": 1,
     "tn": 0,
-    "icon": "Mon_Jiiujiu"
+    "icon": "Mon_Jiiujiu",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9805001,
@@ -2756,7 +3939,11 @@
     "def": 0,
     "hp": 1,
     "tn": 0,
-    "icon": "Mon_Suoweng"
+    "icon": "Mon_Suoweng",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9806001,
@@ -2765,7 +3952,11 @@
     "def": 0,
     "hp": 1,
     "tn": 0,
-    "icon": "Mon_Cuiping01"
+    "icon": "Mon_Cuiping01",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9807001,
@@ -2774,7 +3965,11 @@
     "def": 0,
     "hp": 1,
     "tn": 0,
-    "icon": "Mon_Zhenzhu"
+    "icon": "Mon_Zhenzhu",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9808001,
@@ -2783,7 +3978,11 @@
     "def": 0,
     "hp": 1,
     "tn": 0,
-    "icon": "Mon_Chihu"
+    "icon": "Mon_Chihu",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9809001,
@@ -2792,7 +3991,11 @@
     "def": 130,
     "hp": 45,
     "tn": 150,
-    "icon": "Mon_Yunzong02"
+    "icon": "Mon_Yunzong02",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9809002,
@@ -2801,7 +4004,11 @@
     "def": 130,
     "hp": 45,
     "tn": 150,
-    "icon": "Mon_Yunzong01"
+    "icon": "Mon_Yunzong01",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 9810001,
@@ -2810,7 +4017,11 @@
     "def": 130,
     "hp": 1,
     "tn": 150,
-    "icon": "HX_Hainiao"
+    "icon": "HX_Hainiao",
+    "tags": [
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 10001001,
@@ -2821,7 +4032,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "HX_Tianshi02"
+    "icon": "HX_Tianshi02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 10002001,
@@ -2833,7 +4049,13 @@
     "es": 340,
     "hp": 340,
     "tn": 600,
-    "icon": "HX_Tianwei"
+    "icon": "HX_Tianwei",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
   },
   {
     "id": 10003001,
@@ -2844,7 +4066,51 @@
     "def": 300,
     "hp": 510,
     "tn": 1000,
-    "icon": "HX_Bian01"
+    "icon": "HX_Bian01",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 10003051,
+    "n": "玄狴",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 1000,
+    "icon": "HX_Bian01",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite",
+      "Mon.SoloTreasure.DPoint",
+      "Mon.SoloTreasure.DContainer"
+    ]
+  },
+  {
+    "id": 10003052,
+    "n": "玄狴",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 1000,
+    "icon": "HX_Bian01",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.C",
+      "Mon.Elite",
+      "Mon.SoloTreasure.CPoint",
+      "Mon.SoloTreasure.CContainer"
+    ]
   },
   {
     "id": 10004001,
@@ -2855,7 +4121,51 @@
     "def": 300,
     "hp": 510,
     "tn": 1000,
-    "icon": "HX_Bian02"
+    "icon": "HX_Bian02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 10004051,
+    "n": "狴犴",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 1000,
+    "icon": "HX_Bian02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite",
+      "Mon.SoloTreasure.DPoint",
+      "Mon.SoloTreasure.DContainer"
+    ]
+  },
+  {
+    "id": 10004052,
+    "n": "狴犴",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 1000,
+    "icon": "HX_Bian02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite",
+      "Mon.SoloTreasure.CPoint",
+      "Mon.SoloTreasure.CContainer"
+    ]
   },
   {
     "id": 10005001,
@@ -2866,7 +4176,12 @@
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "HX_Tianshi02"
+    "icon": "HX_Tianshi02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.E"
+    ]
   },
   {
     "id": 10005011,
@@ -2880,7 +4195,11 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.Frozen"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Frozen",
+      "Mon.Elite"
     ]
   },
   {
@@ -2895,7 +4214,11 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.Burst"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Burst",
+      "Mon.Elite"
     ]
   },
   {
@@ -2910,7 +4233,12 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.Poison"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison",
+      "Mon.Elite"
     ]
   },
   {
@@ -2925,7 +4253,11 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.Thunder"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Thunder",
+      "Mon.Elite"
     ]
   },
   {
@@ -2940,7 +4272,11 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.Fade"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade",
+      "Mon.Elite"
     ]
   },
   {
@@ -2955,7 +4291,11 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.Revenge"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge",
+      "Mon.Elite"
     ]
   },
   {
@@ -2970,7 +4310,11 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.IceOrb"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.IceOrb",
+      "Mon.Elite"
     ]
   },
   {
@@ -2985,7 +4329,11 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.Vampire"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Vampire",
+      "Mon.Elite"
     ]
   },
   {
@@ -3000,7 +4348,11 @@
     "tn": 150,
     "icon": "HX_Tianshi02",
     "tags": [
-      "Mon.Strong.Threefold"
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Threefold",
+      "Mon.Elite"
     ]
   }
 ]

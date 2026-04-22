@@ -1,0 +1,202 @@
+[
+  {
+    "id": 10301411,
+    "did": 41801,
+    "name": "Port-des-Brumes",
+    "desc": "Port-des-Brumes était à l’origine le plus grand port de transport de Haojing, ainsi que le principal point de passage par lequel les Tisse-Étoiles entrent et sortent de Huaxu. Il s’est ensuite progressivement développé pour devenir une véritable ville.\nRépondant à l’appel de la Cérémonie de l’Encens, les Tisse-Étoiles ont offert d’importantes richesses et de nombreux trésors afin de soutenir le Tournoi de l’Encens. En reconnaissance de cette contribution, les organisateurs ont choisi d’établir la première arène de la compétition au Port-des-Brumes.",
+    "image": "T_SoloTreasure_Gangkou",
+    "fee": 0,
+    "feeResource": 6000004,
+    "banPhantom": false,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "limitCharacter": [
+      1504,
+      2301,
+      1601,
+      160101
+    ],
+    "trialCharacter": [
+      150402,
+      230101
+    ],
+    "trialPet": [
+      605
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001
+    ],
+    "unlockCondition": 10301422
+  },
+  {
+    "id": 10301412,
+    "did": 41803,
+    "name": "Port-des-Brumes",
+    "desc": "Port-des-Brumes était à l’origine le plus grand port de transport de Haojing, ainsi que le principal point de passage par lequel les Tisse-Étoiles entrent et sortent de Huaxu. Il s’est ensuite progressivement développé pour devenir une véritable ville.\nRépondant à l’appel de la Cérémonie de l’Encens, les Tisse-Étoiles ont offert d’importantes richesses et de nombreux trésors afin de soutenir le Tournoi de l’Encens. En reconnaissance de cette contribution, les organisateurs ont choisi d’établir la première arène de la compétition au Port-des-Brumes.",
+    "image": "T_SoloTreasure_Gangkou",
+    "fee": 1000,
+    "feeResource": 6000004,
+    "banPhantom": false,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "limitCharacter": [
+      1504,
+      4201,
+      1601,
+      160101
+    ],
+    "trialCharacter": [
+      150402,
+      420101
+    ],
+    "trialPet": [
+      605
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10203001,
+      20502002
+    ],
+    "unlockCondition": 10301423
+  },
+  {
+    "id": 10301413,
+    "did": 41805,
+    "name": "Mer de Poussière",
+    "desc": "La Mer de Poussière fut autrefois réduite à un territoire inhabité par le Fléau de Zhuyin, un nom qui suffit encore à glacer le sang des habitants de Huaxu. Bien que Zhuyin ait depuis retrouvé sa place, le phénomène de Poussière-corrompue qui marque ces terres ne peut être entièrement éradiqué. Afin d’apaiser les craintes persistantes de la population et d’éliminer les Souillés qui y rôdent encore, les organisateurs ont établi ici la deuxième arène de la compétition.",
+    "image": "T_SoloTreasure_Wuhui",
+    "fee": 2000,
+    "feeResource": 6000004,
+    "banPhantom": false,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "limitCharacter": [
+      1504,
+      4201,
+      1601,
+      160101
+    ],
+    "trialCharacter": [
+      150402,
+      420101
+    ],
+    "trialPet": [
+      605
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10203001,
+      20502002
+    ],
+    "unlockCondition": 10301424
+  },
+  {
+    "id": 10301414,
+    "did": 41807,
+    "name": "Mer de Poussière",
+    "desc": "La Mer de Poussière fut autrefois réduite à un territoire inhabité par le Fléau de Zhuyin, un nom qui suffit encore à glacer le sang des habitants de Huaxu. Bien que Zhuyin ait depuis retrouvé sa place, le phénomène de Poussière-corrompue qui marque ces terres ne peut être entièrement éradiqué. Afin d’apaiser les craintes persistantes de la population et d’éliminer les Souillés qui y rôdent encore, les organisateurs ont établi ici la deuxième arène de la compétition.",
+    "image": "T_SoloTreasure_Wuhui",
+    "fee": 3000,
+    "feeResource": 6000004,
+    "banPhantom": false,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "limitCharacter": [
+      1504,
+      4201,
+      1601,
+      160101
+    ],
+    "trialCharacter": [
+      150402,
+      420101
+    ],
+    "trialPet": [
+      605
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10203001,
+      20502002
+    ],
+    "unlockCondition": 10301425
+  },
+  {
+    "id": 10301415,
+    "did": 41809,
+    "name": "Banlieue Ouest de Haojing",
+    "desc": "La Banlieue Ouest de Haojing est principalement constituée de zones forestières et demeure peu habitée.\nÀ la suite des dégâts subis par plusieurs bâtiments de la ville lors du chaos des deux Seigneurs Dragons, cette région a été choisie comme arène finale de la compétition.",
+    "image": "T_SoloTreasure_Dongjiao",
+    "fee": 5000,
+    "feeResource": 6000004,
+    "banPhantom": false,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "limitCharacter": [
+      4201,
+      2301,
+      1601,
+      160101
+    ],
+    "trialCharacter": [
+      420101,
+      230101
+    ],
+    "trialPet": [
+      -1
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      10203001,
+      20502002,
+      10102001,
+      20602001
+    ],
+    "unlockCondition": 10301426
+  }
+]

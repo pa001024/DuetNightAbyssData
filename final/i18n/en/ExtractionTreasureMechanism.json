@@ -1,0 +1,446 @@
+[
+  {
+    "id": 131059,
+    "name": "Bamboo Treasure Basket",
+    "itemLevelLimit": {
+      "3": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.6,
+      "2": 0.3,
+      "3": 0.07,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      1,
+      4
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131060,
+    "name": "Small Bamboo Basket",
+    "itemLevelLimit": {
+      "3": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.6,
+      "2": 0.3,
+      "3": 0.07,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      2,
+      3
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131061,
+    "name": "Mystic Gourd",
+    "itemLevelLimit": {
+      "3": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.6,
+      "2": 0.3,
+      "3": 0.07,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      1,
+      4
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131062,
+    "name": "Wicker Basket of Treasures",
+    "itemLevelLimit": {
+      "4": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.4,
+      "2": 0.3,
+      "3": 0.25,
+      "6": 0.05
+    },
+    "itemNumRange": [
+      2,
+      3
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131063,
+    "name": "Mystic Box",
+    "itemLevelLimit": {
+      "4": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.4,
+      "2": 0.3,
+      "3": 0.25,
+      "6": 0.05
+    },
+    "itemNumRange": [
+      2,
+      3
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131064,
+    "name": "Medium Bamboo Basket",
+    "itemLevelLimit": {
+      "4": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.4,
+      "2": 0.3,
+      "3": 0.25,
+      "6": 0.05
+    },
+    "itemNumRange": [
+      2,
+      4
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131065,
+    "name": "Custom Treasure Stove",
+    "itemLevelLimit": {
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {},
+    "itemNumRange": [
+      3,
+      4
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  },
+  {
+    "id": 131066,
+    "name": "Triple Ritual Vessel",
+    "itemLevelLimit": {
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {},
+    "itemNumRange": [
+      3,
+      5
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  },
+  {
+    "id": 131072,
+    "name": "Custom Treasure Stove",
+    "itemLevelLimit": {
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {},
+    "itemNumRange": [
+      3,
+      5
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  },
+  {
+    "id": 131074,
+    "name": "Bamboo Treasure Basket",
+    "itemLevelLimit": {
+      "3": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.6,
+      "2": 0.3,
+      "3": 0.07,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      1,
+      4
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131075,
+    "name": "Small Bamboo Basket",
+    "itemLevelLimit": {
+      "3": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.6,
+      "2": 0.3,
+      "3": 0.07,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      2,
+      3
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131076,
+    "name": "Mystic Gourd",
+    "itemLevelLimit": {
+      "3": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.6,
+      "2": 0.3,
+      "3": 0.07,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      1,
+      4
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131077,
+    "name": "Wicker Basket of Treasures",
+    "itemLevelLimit": {
+      "3": 1,
+      "4": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.17,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.2,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      2,
+      3
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131078,
+    "name": "Mystic Box",
+    "itemLevelLimit": {
+      "3": 1,
+      "4": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.17,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.2,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      2,
+      3
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131079,
+    "name": "Medium Bamboo Basket",
+    "itemLevelLimit": {
+      "3": 1,
+      "4": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.17,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.2,
+      "6": 0.03
+    },
+    "itemNumRange": [
+      2,
+      4
+    ],
+    "shape": [
+      6,
+      4
+    ]
+  },
+  {
+    "id": 131080,
+    "name": "Custom Treasure Stove",
+    "itemLevelLimit": {
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {},
+    "itemNumRange": [
+      3,
+      4
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  },
+  {
+    "id": 131081,
+    "name": "Triple Ritual Vessel",
+    "itemLevelLimit": {
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {},
+    "itemNumRange": [
+      3,
+      5
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  },
+  {
+    "id": 131084,
+    "name": "Bamboo Treasure Basket",
+    "itemLevelLimit": {
+      "3": 1,
+      "4": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.2,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.2,
+      "6": 0.1
+    },
+    "itemNumRange": [
+      2,
+      4
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  },
+  {
+    "id": 131085,
+    "name": "Small Bamboo Basket",
+    "itemLevelLimit": {
+      "3": 1,
+      "4": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {
+      "1": 0.2,
+      "2": 0.2,
+      "3": 0.3,
+      "4": 0.2,
+      "6": 0.1
+    },
+    "itemNumRange": [
+      2,
+      3
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  },
+  {
+    "id": 131086,
+    "name": "Medium Bamboo Basket",
+    "itemLevelLimit": {
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {},
+    "itemNumRange": [
+      3,
+      4
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  },
+  {
+    "id": 131087,
+    "name": "Wicker Basket of Treasures",
+    "itemLevelLimit": {
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "itemLevelWeight": {},
+    "itemNumRange": [
+      2,
+      5
+    ],
+    "shape": [
+      8,
+      6
+    ]
+  }
+]

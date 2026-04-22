@@ -1,0 +1,152 @@
+[
+  {
+    "id": 10301401,
+    "name": "煙津渡",
+    "desc": "煙津渡原身為皓京最大的運輸碼頭，也是織星客們進出華胥的首要關卡樞紐，後逐步發展為城市。在奉香大典的召集下，織星客們出資捐贈了大量珍寶財物用以支持群英試，為此，大典官方將第一道賽場安排在了煙津渡。",
+    "image": "T_SoloTreasure_Gangkou",
+    "easyDungeonId": 41802,
+    "easyModeFee": 0,
+    "hardDungeonId": 41804,
+    "hardModeFee": 1000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ],
+    "unlockCondition": 10301401
+  },
+  {
+    "id": 10301402,
+    "name": "塵漠石海",
+    "desc": "塵漠石海曾因燭陰之災而淪為無人之境，令華胥人聞之心驚。現燭陰歸位，此地的晶塵化現象卻無法徹底改繕，為消弭群眾心中對於此地的恐懼，也為了清理此地剩餘的盤踞穢獸，大典官方將第二道賽場安排在這裡。",
+    "image": "T_SoloTreasure_Wuhui",
+    "easyDungeonId": 41806,
+    "easyModeFee": 500,
+    "hardDungeonId": 41808,
+    "hardModeFee": 2000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ],
+    "unlockCondition": 10301402
+  },
+  {
+    "id": 10301403,
+    "name": "皓京西郊",
+    "desc": "皓京西郊以林地為主，人煙稀少。由於皓京城區因雙龍之亂部分建築受創，西郊被設立為本次比賽的最終場地。",
+    "image": "T_SoloTreasure_Dongjiao",
+    "hardDungeonId": 41810,
+    "hardModeFee": 4000,
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ],
+    "unlockCondition": 10301403
+  },
+  {
+    "id": 10301404,
+    "name": "特邀賽",
+    "desc": "奉香群英試舉辦以來在華胥各地引起了極高的關注度，各路明星選手在賽事中的亮眼表現十分引人注目。為吸引更多年輕子弟接受華胥這場翻天覆地的變化，大賽官方邀請這些明星選手們參與挑戰升級的特邀賽，並準備了對應的邀請函。",
+    "image": "T_SoloTreasure_Dongjiao",
+    "easyDungeonId": 41811,
+    "easyModeFee": 1,
+    "hardDungeonId": 41812,
+    "hardModeFee": 3,
+    "easyMaxConvertResource": 1000000,
+    "easyScoreToResource": {
+      "101": 2
+    },
+    "hardMaxConvertResource": 3000000,
+    "hardScoreToResource": {
+      "101": 0.5
+    },
+    "banEasyPhantom": false,
+    "banHardPhantom": true,
+    "levelBackPack": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trialCharacter": [
+      150402,
+      230101,
+      420101
+    ],
+    "trialWeapon": [
+      10103002,
+      20501002,
+      20407002,
+      10202002,
+      10102001,
+      20602001,
+      10203001,
+      20502002
+    ],
+    "unlockCondition": 10301404
+  }
+]

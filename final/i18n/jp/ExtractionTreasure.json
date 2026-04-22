@@ -1,0 +1,314 @@
+[
+  {
+    "id": 100101,
+    "name": "竹製麻雀牌（中）",
+    "icon": "T_Activity_SoloTreasure_22",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 1,
+    "rarity": 1,
+    "value": 50
+  },
+  {
+    "id": 100104,
+    "name": "銅の耳飾り",
+    "icon": "T_Activity_SoloTreasure_12",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 2,
+    "rarity": 1,
+    "value": 80
+  },
+  {
+    "id": 100105,
+    "name": "香袋",
+    "icon": "T_Activity_SoloTreasure_14",
+    "shape": [
+      2,
+      2
+    ],
+    "type": 3,
+    "rarity": 1,
+    "value": 320
+  },
+  {
+    "id": 100106,
+    "name": "木製の櫛",
+    "icon": "T_Activity_SoloTreasure_07",
+    "shape": [
+      1,
+      3
+    ],
+    "type": 3,
+    "rarity": 1,
+    "value": 180
+  },
+  {
+    "id": 100107,
+    "name": "食籠",
+    "icon": "T_Activity_SoloTreasure_10",
+    "shape": [
+      2,
+      3
+    ],
+    "type": 3,
+    "rarity": 1,
+    "value": 360
+  },
+  {
+    "id": 100108,
+    "name": "骨製雀牌（中）",
+    "icon": "T_Activity_SoloTreasure_03",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 1,
+    "rarity": 2,
+    "value": 250
+  },
+  {
+    "id": 100111,
+    "name": "玉の指輪",
+    "icon": "T_Activity_SoloTreasure_18",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 2,
+    "rarity": 2,
+    "value": 500
+  },
+  {
+    "id": 100112,
+    "name": "長命鎖",
+    "icon": "T_Activity_SoloTreasure_20",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 2,
+    "rarity": 2,
+    "value": 450
+  },
+  {
+    "id": 100113,
+    "name": "硯",
+    "icon": "T_Activity_SoloTreasure_16",
+    "shape": [
+      2,
+      2
+    ],
+    "type": 3,
+    "rarity": 2,
+    "value": 1200
+  },
+  {
+    "id": 100114,
+    "name": "一灯の油ランプ",
+    "icon": "T_Activity_SoloTreasure_17",
+    "shape": [
+      1,
+      2
+    ],
+    "type": 3,
+    "rarity": 2,
+    "value": 600
+  },
+  {
+    "id": 100115,
+    "name": "金製麻雀牌（中）",
+    "icon": "T_Activity_SoloTreasure_05",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 1,
+    "rarity": 3,
+    "value": 1000
+  },
+  {
+    "id": 100118,
+    "name": "兼毫筆",
+    "icon": "T_Activity_SoloTreasure_04",
+    "shape": [
+      1,
+      2
+    ],
+    "type": 3,
+    "rarity": 3,
+    "value": 2000
+  },
+  {
+    "id": 100119,
+    "name": "鳥の紋様の酒器",
+    "icon": "T_Activity_SoloTreasure_08",
+    "shape": [
+      2,
+      3
+    ],
+    "type": 4,
+    "rarity": 3,
+    "value": 9000
+  },
+  {
+    "id": 100120,
+    "name": "鍍金と玉象嵌の銅枕",
+    "icon": "T_Activity_SoloTreasure_21",
+    "shape": [
+      3,
+      4
+    ],
+    "type": 3,
+    "rarity": 3,
+    "value": 12000
+  },
+  {
+    "id": 100121,
+    "name": "玉玦",
+    "icon": "T_Activity_SoloTreasure_19",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 2,
+    "rarity": 3,
+    "value": 1500
+  },
+  {
+    "id": 100122,
+    "name": "金の腕輪",
+    "icon": "T_Activity_SoloTreasure_06",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 2,
+    "rarity": 3,
+    "value": 1600
+  },
+  {
+    "id": 100123,
+    "name": "真珠と宝石をあしらった金のネックレス",
+    "icon": "T_Activity_SoloTreasure_15",
+    "shape": [
+      2,
+      2
+    ],
+    "type": 2,
+    "rarity": 4,
+    "value": 20000
+  },
+  {
+    "id": 100124,
+    "name": "天青磁のお椀",
+    "icon": "T_Activity_SoloTreasure_11",
+    "shape": [
+      2,
+      2
+    ],
+    "type": 3,
+    "rarity": 4,
+    "value": 16000
+  },
+  {
+    "id": 100125,
+    "name": "博山の炉",
+    "icon": "T_Activity_SoloTreasure_01",
+    "shape": [
+      2,
+      3
+    ],
+    "type": 3,
+    "rarity": 4,
+    "value": 26000
+  },
+  {
+    "id": 100126,
+    "name": "点翠の冠",
+    "icon": "T_Activity_SoloTreasure_02",
+    "shape": [
+      3,
+      3
+    ],
+    "type": 2,
+    "rarity": 5,
+    "value": 150000
+  },
+  {
+    "id": 100127,
+    "name": "玉彫りの太皓神像",
+    "icon": "T_Activity_SoloTreasure_23",
+    "shape": [
+      3,
+      3
+    ],
+    "type": 4,
+    "rarity": 5,
+    "value": 135000
+  },
+  {
+    "id": 100128,
+    "name": "青銅の神樹",
+    "icon": "T_Activity_SoloTreasure_09",
+    "shape": [
+      3,
+      4
+    ],
+    "type": 4,
+    "rarity": 5,
+    "value": 240000
+  },
+  {
+    "id": 100129,
+    "name": "四羊酒器",
+    "icon": "T_Activity_SoloTreasure_13",
+    "shape": [
+      3,
+      4
+    ],
+    "type": 4,
+    "rarity": 5,
+    "value": 280000
+  },
+  {
+    "id": 100130,
+    "name": "機枢の鍵・一",
+    "icon": "T_Activity_SoloTreasure_27",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 5,
+    "rarity": 6,
+    "value": 0
+  },
+  {
+    "id": 100131,
+    "name": "機枢の鍵・二",
+    "icon": "T_Activity_SoloTreasure_28",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 5,
+    "rarity": 6,
+    "value": 0
+  },
+  {
+    "id": 100132,
+    "name": "機枢の鍵・三",
+    "icon": "T_Activity_SoloTreasure_29",
+    "shape": [
+      1,
+      1
+    ],
+    "type": 5,
+    "rarity": 6,
+    "value": 0
+  }
+]

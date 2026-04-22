@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1001,
+    "did": 10301411,
+    "name": "初筛",
+    "score": 20000,
+    "icon": "T_SoloTreasure_Bird01",
+    "petConText": "低功率运行",
+    "condition": 10301422
+  },
+  {
+    "id": 1002,
+    "did": 10301412,
+    "name": "再试",
+    "score": 50000,
+    "icon": "T_SoloTreasure_Bird02",
+    "petConText": "中功率运行",
+    "condition": 10301423
+  },
+  {
+    "id": 1003,
+    "did": 10301413,
+    "name": "次选",
+    "score": 80000,
+    "icon": "T_SoloTreasure_Bird03",
+    "petConText": "高功率运行",
+    "condition": 10301424
+  },
+  {
+    "id": 1004,
+    "did": 10301414,
+    "name": "终赛",
+    "score": 120000,
+    "icon": "T_SoloTreasure_Bird04",
+    "petConText": "超载运行",
+    "condition": 10301425
+  },
+  {
+    "id": 1005,
+    "did": 10301415,
+    "name": "决胜",
+    "score": 120000,
+    "icon": "T_SoloTreasure_Bird05",
+    "petConText": "已损毁",
+    "condition": 10301426
+  }
+]

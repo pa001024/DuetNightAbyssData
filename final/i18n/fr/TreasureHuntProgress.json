@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1001,
+    "did": 10301411,
+    "name": "Épreuve préliminaire",
+    "score": 20000,
+    "icon": "T_SoloTreasure_Bird01",
+    "petConText": "Mode basse puissance",
+    "condition": 10301422
+  },
+  {
+    "id": 1002,
+    "did": 10301412,
+    "name": "Seconde épreuve",
+    "score": 50000,
+    "icon": "T_SoloTreasure_Bird02",
+    "petConText": "Mode puissance standard",
+    "condition": 10301423
+  },
+  {
+    "id": 1003,
+    "did": 10301413,
+    "name": "Épreuve qualificative",
+    "score": 80000,
+    "icon": "T_SoloTreasure_Bird03",
+    "petConText": "Mode haute puissance",
+    "condition": 10301424
+  },
+  {
+    "id": 1004,
+    "did": 10301414,
+    "name": "Épreuve finale",
+    "score": 120000,
+    "icon": "T_SoloTreasure_Bird04",
+    "petConText": "Mode surcharge",
+    "condition": 10301425
+  },
+  {
+    "id": 1005,
+    "did": 10301415,
+    "name": "Grande finale",
+    "score": 120000,
+    "icon": "T_SoloTreasure_Bird05",
+    "petConText": "Détruit",
+    "condition": 10301426
+  }
+]

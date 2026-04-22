@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1001,
+    "did": 10301411,
+    "name": "一次選考",
+    "score": 20000,
+    "icon": "T_SoloTreasure_Bird01",
+    "petConText": "低出力運転",
+    "condition": 10301422
+  },
+  {
+    "id": 1002,
+    "did": 10301412,
+    "name": "再選",
+    "score": 50000,
+    "icon": "T_SoloTreasure_Bird02",
+    "petConText": "中出力運転",
+    "condition": 10301423
+  },
+  {
+    "id": 1003,
+    "did": 10301413,
+    "name": "二次選考",
+    "score": 80000,
+    "icon": "T_SoloTreasure_Bird03",
+    "petConText": "高出力運転",
+    "condition": 10301424
+  },
+  {
+    "id": 1004,
+    "did": 10301414,
+    "name": "最終戦",
+    "score": 120000,
+    "icon": "T_SoloTreasure_Bird04",
+    "petConText": "過負荷運転",
+    "condition": 10301425
+  },
+  {
+    "id": 1005,
+    "did": 10301415,
+    "name": "決勝",
+    "score": 120000,
+    "icon": "T_SoloTreasure_Bird05",
+    "petConText": "破損済み",
+    "condition": 10301426
+  }
+]

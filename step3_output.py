@@ -51,6 +51,26 @@ from processor.backpack_puzzle_level_processor import BackpackPuzzleLevelProcess
 from processor.event_processor import EventProcessor
 from processor.monster_strong_affixes_processor import MonsterStrongAffixesProcessor
 from processor.skin_processor import SkinProcessor
+from processor.solo_treasure_processor import SoloTreasureProcessor
+from processor.solo_treasure_gameplay_processor import SoloTreasureGamePlayProcessor
+from processor.extraction_treasure_bag_processor import (
+    ExtractionTreasureBagProcessor,
+)
+from processor.extraction_treasure_processor import (
+    ExtractionTreasureProcessor,
+)
+from processor.extraction_treasure_mechanism_processor import (
+    ExtractionTreasureMechanismProcessor,
+)
+from processor.treasure_hunt_progress_processor import (
+    TreasureHuntProgressProcessor,
+)
+from processor.treasure_hunt_repeat_dungeon_processor import (
+    TreasureHuntRepeatDungeonProcessor,
+)
+from processor.treasure_hunt_story_dungeon_processor import (
+    TreasureHuntStoryDungeonProcessor,
+)
 from processor.rouge_processor import (
     RougeLikeBlessingProcessor,
     RougeLikeContractProcessor,
@@ -334,6 +354,14 @@ class FinalProcessor:
             "RougeLikeStoryEvent": RougeLikeStoryEventProcessor,
             "RougeLikeTalent": RougeLikeTalentProcessor,
             "RougeLikeTreasure": RougeLikeTreasureProcessor,
+            "SoloTreasure": SoloTreasureProcessor,
+            "SoloTreasureGamePlay": SoloTreasureGamePlayProcessor,
+            "ExtractionTreasure": ExtractionTreasureProcessor,
+            "ExtractionTreasureBag": ExtractionTreasureBagProcessor,
+            "ExtractionTreasureMechanism": ExtractionTreasureMechanismProcessor,
+            "TreasureHuntProgress": TreasureHuntProgressProcessor,
+            "TreasureHuntRepeatDungeon": TreasureHuntRepeatDungeonProcessor,
+            "TreasureHuntStoryDungeon": TreasureHuntStoryDungeonProcessor,
             # Add other processor classes here as they are implemented
         }
 
@@ -492,6 +520,14 @@ if __name__ == "__main__":
         "RougeLikeStoryEvent",
         "RougeLikeTalent",
         "RougeLikeTreasure",
+        "SoloTreasure",
+        "SoloTreasureGamePlay",
+        "ExtractionTreasure",
+        "ExtractionTreasureBag",
+        "ExtractionTreasureMechanism",
+        "TreasureHuntProgress",
+        "TreasureHuntRepeatDungeon",
+        "TreasureHuntStoryDungeon",
     ]
 
     # 使用命令行参数指定的文件类型，如果没有则使用默认列表
