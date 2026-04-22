@@ -118,7 +118,7 @@ function M:InitItemContent()
     self.Btn_DoubleMod.Text_Button:SetText(GText("UI_GameEvent_Goto"))
     if self.DoubleMod then
       local IsDoubleModDungeon = false
-      local EventId = GWorld.GameInstance.DoubleModDropEventID
+      local EventId = ActivityController:GetDoubleModDropEventID()
       local DoubleModDrop = DataMgr.DoubleModDrop and DataMgr.DoubleModDrop[EventId]
       local ModDungeonIds = DoubleModDrop and DoubleModDrop.ModDungeonId
       if ModDungeonIds and self.MonRewardData and self.MonRewardData.DungeonList then

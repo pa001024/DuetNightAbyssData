@@ -506,7 +506,6 @@ local CommonConst = {
   MailMaxDueTime = 9999,
   GMMailTimeLimit = 30,
   MailTabMaxRedNums = 99,
-  DoubleModDropEventID = 103009001,
   AbyssEventId = 103002,
   FeinaEventId = 103010,
   TheaterEventId = 103011,
