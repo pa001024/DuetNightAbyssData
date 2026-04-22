@@ -23,7 +23,7 @@ return ReadOnly("GlobalConstant", {
   },
   AbyssMonsterLevelLimit = {
     ConstantName = "AbyssMonsterLevelLimit",
-    ConstantValue = 220
+    ConstantValue = 120
   },
   AccelerateCostMax = {
     ConstantName = "AccelerateCostMax",
@@ -99,7 +99,7 @@ return ReadOnly("GlobalConstant", {
   },
   AutoRoundsCheckTime = {
     ConstantName = "AutoRoundsCheckTime",
-    ConstantValue = 3
+    ConstantValue = 0.1
   },
   BackToHomeBaseCondition = {
     ConstantName = "BackToHomeBaseCondition",
@@ -315,7 +315,7 @@ return ReadOnly("GlobalConstant", {
   },
   DefenceWaveInterval = {
     ConstantName = "DefenceWaveInterval",
-    ConstantValue = 5
+    ConstantValue = 0.1
   },
   DeliveryBlackCurtainTime = {
     ConstantName = "DeliveryBlackCurtainTime",
@@ -702,7 +702,7 @@ return ReadOnly("GlobalConstant", {
   },
   MonsterLevelUpperLimit = {
     ConstantName = "MonsterLevelUpperLimit",
-    ConstantValue = 180
+    ConstantValue = 80
   },
   MonthlyCardHoldMax = {
     ConstantName = "MonthlyCardHoldMax",
