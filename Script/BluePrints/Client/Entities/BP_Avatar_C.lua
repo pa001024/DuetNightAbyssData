@@ -80,18 +80,18 @@ function BP_Avatar_C:GetDSEntity()
 end
 
 function BP_Avatar_C:SendToFeishuForCombatMonitor(Msg)
-  local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    local GameInstance = GWorld.GameInstance
-    local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
-    if Player then
-      if BattleMonitorConst:CheckAttributeValid(Player) then
-        Avatar:SendToFeishuForCombatMonitor(Msg)
-      end
-    else
-      Avatar:SendToFeishuForCombatMonitor(Msg)
-    end
-  end
+  -- local Avatar = GWorld:GetAvatar()
+  -- if Avatar then
+  --   local GameInstance = GWorld.GameInstance
+  --   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
+  --   if Player then
+  --     if BattleMonitorConst:CheckAttributeValid(Player) then
+  --       Avatar:SendToFeishuForCombatMonitor(Msg)
+  --     end
+  --   else
+  --     Avatar:SendToFeishuForCombatMonitor(Msg)
+  --   end
+  -- end
 end
 
 function BP_Avatar_C:IntProp(Path)
