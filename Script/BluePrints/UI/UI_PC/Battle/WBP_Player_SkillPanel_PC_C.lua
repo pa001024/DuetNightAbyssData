@@ -789,6 +789,12 @@ function WBP_Player_SkillPanel_PC_C:UpdatePlayerSupportSkill()
   if -1 ~= self.OwnerPlayer.ActivePropEffectId then
     return
   end
+  -- patch: nocd
+  for SkillId, Skill in pairs(self.OwnerPlayer.Skills) do
+    Skill:ResetSkillCd()
+    Skill.SkillCd = nil
+  end
+  -- nocd end
   local Skill3CdTime, Skill3CdPercent = self.OwnerPlayer:GetSkillCdTimeAndPercent(self.SupportSkillId)
   if Skill3CdTime > 0 then
     self.SupportSkillState = "InCDTime"
