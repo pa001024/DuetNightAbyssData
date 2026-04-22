@@ -687,7 +687,7 @@ function Component:OnCharacterReady(Info)
       self:SetCanInteractiveTrigger(false, "Loading")
     end
   end
-  self:SetInteractiveTriggerDistance(self:GetAttr("DropDistance"))
+  self:SetInteractiveTriggerDistance(self:GetAttr("DropDistance")+10000) -- patch: 拾取范围+100m
   if self:IsPlayer() and not Info.ChangeRole then
     local function ClientTryEndLoading()
       local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
