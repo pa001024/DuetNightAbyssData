@@ -95,7 +95,7 @@ function BP_MiniGame_C:CheckCanCrack()
       end
     end
   end
-  return false
+  return true -- auto unlock
 end
 
 function BP_MiniGame_C:GetRandomMapIndex()
