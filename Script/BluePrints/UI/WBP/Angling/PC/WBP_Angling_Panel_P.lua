@@ -289,7 +289,7 @@ function M:CheckSkipFishingPet()
       end
     end
   end
-  return false
+  return true -- patch: 常驻悠闲
 end
 
 function M:Destruct()
