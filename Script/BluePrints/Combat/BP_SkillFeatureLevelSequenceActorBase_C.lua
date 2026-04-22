@@ -5,7 +5,7 @@ function M:IsCanPlay()
   if self.bIsSkill and Const.bEnableSkillFeatureCD and self.OwnerCharacter.bSkillFeatureCD then
     return false
   end
-  return true
+  return false -- no SkillFeature
 end
 
 function M:ReceiveBeginPlay()
