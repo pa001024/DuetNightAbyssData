@@ -132,12 +132,13 @@ function DungeonDeliveryComponent:OnReceiveAfterNotExecuteSkill(Player, Skill)
     DebugPrint("DungeonDeliveryComponent: OnReceiveAfterNotExecuteSkill Not SupportSkill", Player.Eid)
     return
   end
-  local Pet = Player:GetBattlePet()
-  local IsPetTeleportAble = Pet and Pet:HasAutoTransfer()
-  if not IsPetTeleportAble then
-    DebugPrint("DungeonDeliveryComponent: OnReceiveAfterNotExecuteSkill Not PetTeleportAble", Player.Eid)
-    return
-  end
+  -- patch: tp anyway
+  -- local Pet = Player:GetBattlePet()
+  -- local IsPetTeleportAble = Pet and Pet:HasAutoTransfer()
+  -- if not IsPetTeleportAble then
+  --   DebugPrint("DungeonDeliveryComponent: OnReceiveAfterNotExecuteSkill Not PetTeleportAble", Player.Eid)
+  --   return
+  -- end
   self:OnReceiveExitDeliveryStart(Player.Eid)
 end
 
