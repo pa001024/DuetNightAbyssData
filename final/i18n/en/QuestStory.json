@@ -13749,6 +13749,9 @@
             "id": "173313073996623541",
             "type": "TalkNode",
             "name": "站桩",
+            "next": [
+              "173313073996623542"
+            ],
             "dialogues": [
               {
                 "id": 10033501,
@@ -13959,19 +13962,6 @@
                 "content": "Sure, whenever you're ready.",
                 "voice": "story/1003/100335/191E2D35",
                 "npc": 200021
-              }
-            ]
-          },
-          {
-            "id": "173588627805218617",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "dialogues": [
-              {
-                "id": 10033311,
-                "content": "—ROAR!!",
-                "voice": "story/1003/100333/191E0A16",
-                "npc": 100328
               }
             ]
           }
@@ -16396,54 +16386,6 @@
                 "voice": "story/1003/100354/191F6346",
                 "npc": 100304,
                 "next": 10035425
-              }
-            ]
-          },
-          {
-            "id": "17410579739793626",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "dialogues": [
-              {
-                "id": 10035401,
-                "content": "I knew the perpetrator is still alive!",
-                "voice": "story/1003/100354/191F60FA",
-                "npc": 100304,
-                "next": 10035402
-              },
-              {
-                "id": 10035402,
-                "content": "Huh, came straight to us this time.",
-                "voice": "story/1003/100354/191F6124",
-                "npc": 200021,
-                "next": 10035403
-              },
-              {
-                "id": 10035403,
-                "content": "\"Perpetrator\"...?",
-                "voice": "story/1003/100354/191F614E",
-                "npc": 100327,
-                "next": 10035404
-              },
-              {
-                "id": 10035404,
-                "content": "Hmph. Even now, they haven't... told you... the truth. Dirty liars. Even the 13th Legion... is no exception.",
-                "voice": "story/1003/100354/191F6178",
-                "npc": 100327,
-                "next": 10035405
-              },
-              {
-                "id": 10035405,
-                "content": "The truth? What do you mean...?",
-                "voice": "story/1003/100354/191F61A2",
-                "npc": 100304,
-                "next": 10035406
-              },
-              {
-                "id": 10035406,
-                "content": "It's stalling — Take it down first!",
-                "voice": "story/1003/100354/191F61CC",
-                "npc": 200021
               }
             ]
           }
@@ -38728,24 +38670,6 @@
         "desc": "After bidding Zhiliu farewell, you and Snow set out for the Port of Parting Stars, the Hall of Incense, and the Hall of Craft to gather supplies for the Grand Incense Rite.\nFirst, head to the Port of Parting Stars and find the port master.",
         "nodes": [
           {
-            "id": "17637999960361371064",
-            "type": "TalkNode",
-            "name": "看到人了",
-            "srId": 104502,
-            "pos": [
-              21564,
-              -22818
-            ],
-            "dialogues": [
-              {
-                "id": 12049009,
-                "content": "Little Minion, that person over there looks like a manager. Let's go ask him!",
-                "voice": "story/1204/120490/1E29D68A",
-                "npc": 200002
-              }
-            ]
-          },
-          {
             "id": "17638012925591372625",
             "type": "TalkNode",
             "name": "对话节点",
@@ -38788,6 +38712,24 @@
                 "content": "Head down the path to your right — get the crate with a label stuck on it. You can't miss it. Much obliged.",
                 "voice": "story/1204/120407/1E24842A",
                 "npc": 240027
+              }
+            ]
+          },
+          {
+            "id": "17637999960361371064",
+            "type": "TalkNode",
+            "name": "看到人了",
+            "srId": 104502,
+            "pos": [
+              21564,
+              -22818
+            ],
+            "dialogues": [
+              {
+                "id": 12049009,
+                "content": "Little Minion, that person over there looks like a manager. Let's go ask him!",
+                "voice": "story/1204/120490/1E29D68A",
+                "npc": 200002
               }
             ]
           }
@@ -39208,6 +39150,9 @@
               16196,
               -18823
             ],
+            "next": [
+              "17696887908412259516"
+            ],
             "dialogues": [
               {
                 "id": 12040801,
@@ -39248,6 +39193,31 @@
                 "id": 12040806,
                 "content": "Oh no! That Wishen just made off with our cargo! We can't let him get away — come on, Little Minion, after him!",
                 "voice": "story/1204/120408/1E2494BC",
+                "npc": 200002
+              }
+            ]
+          },
+          {
+            "id": "17696887908412259516",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104502,
+            "pos": [
+              16196,
+              -18823
+            ],
+            "dialogues": [
+              {
+                "id": 12049016,
+                "content": "Hmph... Didn't even notice how far we'd chased him. No clue where we are now.",
+                "voice": "story/1204/120490/1E29D7B0",
+                "npc": 200002,
+                "next": 12049017
+              },
+              {
+                "id": 12049017,
+                "content": "Let me check the map... Aha! Totally clear! Come on, Little Minion — off to the next stop!",
+                "voice": "story/1204/120490/1E29D7DA",
                 "npc": 200002
               }
             ]
@@ -39381,6 +39351,9 @@
               27545,
               -58568
             ],
+            "next": [
+              "17750410303116410660"
+            ],
             "dialogues": [
               {
                 "id": 12041001,
@@ -39454,6 +39427,24 @@
                 "id": 12041011,
                 "content": "...Little Minion, she looks seriously upset. Let's be the bigger people here and fetch it back for her.",
                 "voice": "story/1204/120410/1E24B65E",
+                "npc": 200002
+              }
+            ]
+          },
+          {
+            "id": "17750410303116410660",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              27545,
+              -58568
+            ],
+            "dialogues": [
+              {
+                "id": 12049303,
+                "content": "All done! Let's hurry back and return the sachet to her, Little Minion!",
+                "voice": "story/1204/120493/12049303",
                 "npc": 200002
               }
             ]
@@ -49717,6 +49708,157 @@
                 "npc": 250011
               }
             ]
+          },
+          {
+            "id": "17634578623896770278",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              22462,
+              -77036
+            ],
+            "dialogues": [
+              {
+                "id": 12060801,
+                "content": "There you are! I saw the whole thing from the stands — you did great! Keep that up and first place is in the bag!",
+                "voice": "story/1206/120608/1E31652A",
+                "npc": 200002,
+                "next": 12060802
+              },
+              {
+                "id": 12060802,
+                "content": "Hmph. That was easy! Told you this kind of treasure-snatching game is right up my alley!",
+                "voice": "story/1206/120608/1E316554",
+                "npc": 250006,
+                "next": 12060803
+              },
+              {
+                "id": 12060803,
+                "content": "It's a treasure hunt. I can't believe you're still calling it stealing... I guess a leopard can't change its spots.",
+                "voice": "story/1206/120608/1E31657E",
+                "npc": 250003,
+                "next": 12060804
+              },
+              {
+                "id": 12060804,
+                "content": "Hee-hee... so, how about we go out and celebrate, teammates? I've only ever heard people talk about it, but never actually done it. Come on! Let's hit the street stalls and eat our way down the line!",
+                "voice": "story/1206/120608/1E3165A8",
+                "npc": 250006,
+                "next": 12060805
+              },
+              {
+                "id": 12060805,
+                "content": "Perfect. That was a great warm-up — I've worked up an appetite.",
+                "voice": "story/1206/120608/1E3165D2",
+                "npc": 100001,
+                "next": 12060806
+              },
+              {
+                "id": 12060806,
+                "content": "Seriously, you two. That was just the qualifiers. The Proving's packed with strong teams. This is no time to get full of ourselves.",
+                "voice": "story/1206/120608/1E3165FC",
+                "npc": 250003,
+                "next": 12060807
+              },
+              {
+                "id": 12060807,
+                "content": "Our teamwork still needs polishing, so I had Qingluan Type Ⅱ record that round.",
+                "voice": "story/1206/120608/1E316626",
+                "npc": 250003,
+                "next": 12060808
+              },
+              {
+                "id": 12060808,
+                "content": "They say looking back brings fresh insight — if we review the footage between rounds, we'll spot what we missed and stay a step ahead.",
+                "voice": "story/1206/120608/1E316650",
+                "npc": 250003,
+                "next": 12060809
+              },
+              {
+                "id": 12060809,
+                "content": "Ugh—! Studying's the worst! Even the matron at the orphanage didn't nag this much. Nope! Not listening! La-la-la!",
+                "voice": "story/1206/120608/1E31667A",
+                "npc": 250006,
+                "next": 12060810
+              },
+              {
+                "id": 12060810,
+                "content": "Hopeless! {nickname}, back me up — talk some sense into her!",
+                "voice": "story/1206/120608/1E3166A4",
+                "npc": 250003,
+                "options": [
+                  {
+                    "id": 12060811,
+                    "content": "You can't win on an empty stomach.",
+                    "next": 12060813,
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 12060812,
+                    "content": "Yes, Muuum...",
+                    "next": 12060813,
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 12060813,
+                "content": "...{nickname}, seriously? You're taking her side?",
+                "voice": "story/1206/120608/1E316722",
+                "npc": 250003,
+                "next": 12060814
+              },
+              {
+                "id": 12060814,
+                "content": "Su Yi, you're wound up too tight. A little downtime does us good, right?",
+                "voice": "story/1206/120608/1E31674C",
+                "npc": 100001,
+                "next": 12060815
+              },
+              {
+                "id": 12060815,
+                "content": "... You two are unbelievable.",
+                "voice": "story/1206/120608/1E316776",
+                "npc": 250003,
+                "next": 12060816
+              },
+              {
+                "id": 12060816,
+                "content": "Come on, then. My treat today, since I'm the one who dragged you into this.",
+                "voice": "story/1206/120608/1E3167A0",
+                "npc": 250003,
+                "next": 12060817
+              },
+              {
+                "id": 12060817,
+                "content": "Your treat? So I can order whatever I want? Yes! You said it — you're stuck with me. You'd better make sure all eight of my tentacles are fed... And I'll just hold on to this for now~",
+                "voice": "story/1206/120608/1E3167CA",
+                "npc": 250006,
+                "next": 12060818
+              },
+              {
+                "id": 12060818,
+                "content": "...My purse! When did you get your hands on that!? Get back here!",
+                "voice": "story/1206/120608/1E3167F4",
+                "npc": 250003,
+                "next": 12060819
+              },
+              {
+                "id": 12060819,
+                "content": "Huh? Where'd they go? They just vanished! Little Minion, come on — we'd better catch up!",
+                "voice": "story/1206/120608/1E31681E",
+                "npc": 200002
+              }
+            ]
           }
         ]
       },
@@ -50700,6 +50842,129 @@
                 "npc": 250011
               }
             ]
+          },
+          {
+            "id": "17637245989842738034",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              22462,
+              -77036
+            ],
+            "dialogues": [
+              {
+                "id": 12061301,
+                "content": "Didn't we win? Why's everyone pulling such long faces...?",
+                "voice": "story/1206/120613/1E31B732",
+                "npc": 200002,
+                "next": 12061302
+              },
+              {
+                "id": 12061302,
+                "content": "I mean... sure, Tabethe stood us up, but do we really need to be this upset?",
+                "voice": "story/1206/120613/1E31B75C",
+                "npc": 200002,
+                "next": 12061303
+              },
+              {
+                "id": 12061303,
+                "content": "Su Yi. We had no time to speak before the match, but there is something I need to ask.",
+                "voice": "story/1206/120613/1E31B786",
+                "npc": 250005,
+                "next": 12061304
+              },
+              {
+                "id": 12061304,
+                "content": "Earlier, when you confronted that man, you mentioned Su Muzhe. What brought it on? And... are you still carrying it with you?",
+                "voice": "story/1206/120613/1E31B7B0",
+                "npc": 250005,
+                "next": 12061305
+              },
+              {
+                "id": 12061305,
+                "content": "He slandered my aunt. Of course I gave him a piece of my mind. What, have you got a problem with that?",
+                "voice": "story/1206/120613/1E31B7DA",
+                "npc": 250003,
+                "next": 12061306
+              },
+              {
+                "id": 12061306,
+                "content": "I do not mean to pry. I only worry that scenes like that will draw attention to the Outer Peaks.",
+                "voice": "story/1206/120613/1E31B804",
+                "npc": 250005,
+                "next": 12061307
+              },
+              {
+                "id": 12061307,
+                "content": "So you want me to keep my head down at a time like this? You're saying a Drifter drawing attention right now will bring trouble to the Outer Peaks?",
+                "voice": "story/1206/120613/1E31B82E",
+                "npc": 250003,
+                "next": 12061308
+              },
+              {
+                "id": 12061308,
+                "content": "Save it. I don't care who asked you to come. I don't need your help. If you want to say \"let bygones be bygones\" and go stand with the Nine Chapters, that's your choice. I can't.",
+                "voice": "story/1206/120613/1E31B858",
+                "npc": 250003,
+                "next": 12061309
+              },
+              {
+                "id": 12061309,
+                "content": "...Su Yi. You've misunderstood.",
+                "voice": "story/1206/120613/1E31B882",
+                "npc": 250005,
+                "next": 12061310
+              },
+              {
+                "id": 12061310,
+                "content": "It's stuffy in here. The next round isn't for another half hour, right? I'm going out for a walk.",
+                "voice": "story/1206/120613/1E31B8AC",
+                "npc": 250003,
+                "next": 12061311
+              },
+              {
+                "id": 12061311,
+                "content": "{nickname}, — I'll see you later.",
+                "voice": "story/1206/120613/1E31B8D6",
+                "npc": 250003,
+                "next": 12061312
+              },
+              {
+                "id": 12061312,
+                "content": "Aw... how did it get this awkward...?",
+                "voice": "story/1206/120613/1E31B900",
+                "npc": 200002,
+                "next": 12061313
+              },
+              {
+                "id": 12061313,
+                "content": "{nickname}. There are misunderstandings between Su Yi and me. If I speak again, I may only upset her further. Could I ask you to talk to her?",
+                "voice": "story/1206/120613/1E31B92A",
+                "npc": 250005,
+                "next": 12061314
+              },
+              {
+                "id": 12061314,
+                "content": "Sure. Even if you hadn't asked, I'd have gone anyway.",
+                "voice": "story/1206/120613/1E31B954",
+                "npc": 100001,
+                "next": 12061315
+              },
+              {
+                "id": 12061315,
+                "content": "Snow, you stay here with Yuming. I'll go find Su Yi and bring her back.",
+                "voice": "story/1206/120613/1E31B97E",
+                "npc": 100001,
+                "next": 12061316
+              },
+              {
+                "id": 12061316,
+                "content": "Alright. Don't take too long, Little Minion.",
+                "voice": "story/1206/120613/1E31B9A8",
+                "npc": 200002
+              }
+            ]
           }
         ]
       },
@@ -51412,6 +51677,311 @@
                 "content": "Ready to enter the arena?",
                 "voice": "story/1206/120607/1E315B28",
                 "npc": 250011
+              }
+            ]
+          },
+          {
+            "id": "17637293161184114789",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              22462,
+              -77036
+            ],
+            "dialogues": [
+              {
+                "id": 12061701,
+                "content": "Phew... that's us done for today. Well done! If we keep this pace up tomorrow, the championship's as good as ours!",
+                "voice": "story/1206/120617/1E31F8D2",
+                "npc": 250003,
+                "next": 12061702
+              },
+              {
+                "id": 12061702,
+                "content": "I'll help however I can.",
+                "voice": "story/1206/120617/1E31F8FC",
+                "npc": 250005,
+                "next": 12061703
+              },
+              {
+                "id": 12061703,
+                "content": "Shall we start rehearsing your victory speech? \"Hello, I'm Su Yi. I'm honoured to be here...\"",
+                "voice": "story/1206/120617/1E31F926",
+                "npc": 100001,
+                "next": 12061744
+              },
+              {
+                "id": 12061704,
+                "content": "Little Minion! You're finally back! Uh... something's not right out there...",
+                "voice": "story/1206/120617/1E31F950",
+                "npc": 200002,
+                "next": 12061705
+              },
+              {
+                "id": 12061705,
+                "content": "What happened?",
+                "voice": "story/1206/120617/1E31F97A",
+                "npc": 100001,
+                "next": 12061745
+              },
+              {
+                "id": 12061706,
+                "content": "Hey, did you hear? They say a Drifter snuck into the competition. Is it true...?",
+                "voice": "story/1206/120617/1E31F9A4",
+                "next": 12061707
+              },
+              {
+                "id": 12061707,
+                "content": "A Drifter? One of those brutes from the stories — green-skinned, fanged, swinging a great club? And with Huaxu in the middle of all these reforms... you think they're here to stir up trouble?",
+                "voice": "story/1206/120617/1E31F9CE",
+                "next": 12061708
+              },
+              {
+                "id": 12061708,
+                "content": "Are Drifters really that scary? I've only read about them in novels...",
+                "voice": "story/1206/120617/1E31F9F8",
+                "next": 12061709
+              },
+              {
+                "id": 12061709,
+                "content": "I've heard some Drifters have done good too... but I suppose stories are just stories. I'd still rather not meet one in the flesh.",
+                "voice": "story/1206/120617/1E31FA22",
+                "next": 12061710
+              },
+              {
+                "id": 12061710,
+                "content": "I don't know what's going on, but should we get out of here, Little Minion? Just... keep our heads down till this blows over—",
+                "voice": "story/1206/120617/1E31FA4C",
+                "npc": 200002,
+                "next": 12061746
+              },
+              {
+                "id": 12061711,
+                "content": "Ah—! We're all good people here, sir! We didn't say anything!",
+                "voice": "story/1206/120617/1E31FA76",
+                "npc": 200002,
+                "next": 12061712
+              },
+              {
+                "id": 12061712,
+                "content": "No need to panic. {nickname} is an honoured guest of Huaxu, and {性别：his|her} companions are likewise to be treated with respect. This is Taihao's will.",
+                "voice": "story/1206/120617/1E31FAA0",
+                "npc": 250030,
+                "next": 12061713
+              },
+              {
+                "id": 12061713,
+                "content": "However, we must confirm: are you Miss Su Yi?",
+                "voice": "story/1206/120617/1E31FACA",
+                "npc": 250030,
+                "next": 12061714
+              },
+              {
+                "id": 12061714,
+                "content": "That's me. What's this about?",
+                "voice": "story/1206/120617/1E31FAF4",
+                "npc": 250003,
+                "next": 12061715
+              },
+              {
+                "id": 12061715,
+                "content": "We've received a report that your mechapuppet may not comply with the event regulations. In accordance with procedure, we'll need to inspect it. Apologies for the inconvenience.",
+                "voice": "story/1206/120617/1E31FB1E",
+                "npc": 250030,
+                "next": 12061716
+              },
+              {
+                "id": 12061716,
+                "content": "So she's the Drifter who slipped in...",
+                "voice": "story/1206/120617/1E31FB48",
+                "next": 12061717
+              },
+              {
+                "id": 12061717,
+                "content": "She looks harmless... just some dainty young woman. And they're saying she's a Drifter? Doesn't look half as scary as the stories.",
+                "voice": "story/1206/120617/1E31FB72",
+                "next": 12061718
+              },
+              {
+                "id": 12061718,
+                "content": "My Qingluan Type Ⅱ? Here. Take it.",
+                "voice": "story/1206/120617/1E31FB9C",
+                "npc": 250003,
+                "next": 12061719
+              },
+              {
+                "id": 12061719,
+                "content": "For the record, I've read the competition rulebook. It's fully compliant. Inspect it all you like — just don't damage the frame. Every part is the product of a Construct Artificer's painstaking work.",
+                "voice": "story/1206/120617/1E31FBC6",
+                "npc": 250003,
+                "next": 12061720
+              },
+              {
+                "id": 12061720,
+                "content": "Thank you for your cooperation. The mechapuppet will be held by the Stewards' Council and returned to you tomorrow morning, before the match. Please rest assured.",
+                "voice": "story/1206/120617/1E31FBF0",
+                "npc": 250030,
+                "next": 12061747
+              },
+              {
+                "id": 12061721,
+                "content": "Compliant? Is that what you Drifters call it when you're trying to make something shady sound legitimate?",
+                "voice": "story/1206/120617/1E31FC1A",
+                "npc": 250015,
+                "next": 12061722
+              },
+              {
+                "id": 12061722,
+                "content": "You again? Do you ever give it a rest? Tell me you're not the one who filed that report.",
+                "voice": "story/1206/120617/1E31FC44",
+                "npc": 250003,
+                "next": 12061723
+              },
+              {
+                "id": 12061723,
+                "content": "Heh. We've crossed paths a few times. I knew something was off. I thought your kind only had the nerve to skulk like sewer rats — slipping through the gaps in the Nine Chapters of Dafeng. And now you've wormed your way into the Grand Incense Rite? What are you after?",
+                "voice": "story/1206/120617/1E31FC6E",
+                "npc": 250015,
+                "next": 12061724
+              },
+              {
+                "id": 12061724,
+                "content": "If no one had flagged you, you'd still be getting away with it, and everyone else would be none the wiser.",
+                "voice": "story/1206/120617/1E31FC98",
+                "npc": 250015,
+                "next": 12061725
+              },
+              {
+                "id": 12061725,
+                "content": "I've done nothing wrong, so I've had nothing to hide. I just didn't see the point in announcing myself to everyone.",
+                "voice": "story/1206/120617/1E31FCC2",
+                "npc": 250003,
+                "next": 12061726
+              },
+              {
+                "id": 12061726,
+                "content": "Tell me, what did the Drifters ever do to you?",
+                "voice": "story/1206/120617/1E31FCEC",
+                "npc": 250003,
+                "next": 12061727
+              },
+              {
+                "id": 12061727,
+                "content": "What did they ever do to me? You talk as if your kind's history is nothing. Drifters have a reputation for a reason. Want me to spell it out one by one?",
+                "voice": "story/1206/120617/1E31FD16",
+                "npc": 250015,
+                "next": 12061728
+              },
+              {
+                "id": 12061728,
+                "content": "The rumours people like you invent and spread? Repeat them a thousand times — what does that prove?",
+                "voice": "story/1206/120617/1E31FD40",
+                "npc": 250003,
+                "next": 12061729
+              },
+              {
+                "id": 12061729,
+                "content": "(The crowd breaks into murmurs.)",
+                "voice": "story/1206/120617/1E31FD6A",
+                "next": 12061748
+              },
+              {
+                "id": 12061730,
+                "content": "So this is the source of the disturbance — a dispute between competitors.",
+                "voice": "story/1206/120617/1E31FD94",
+                "npc": 250004,
+                "next": 12061731
+              },
+              {
+                "id": 12061731,
+                "content": "Zhiliu...?",
+                "voice": "story/1206/120617/1E31FDBE",
+                "npc": 100001,
+                "next": 12061732
+              },
+              {
+                "id": 12061732,
+                "content": "...I heard the High Chancellor of Loongyuan took heavy criticism and has been forced to resign after the incident. This hardly concerns you. Or do you disagree?",
+                "voice": "story/1206/120617/1E31FDE8",
+                "npc": 250015,
+                "next": 12061733
+              },
+              {
+                "id": 12061733,
+                "content": "Heh... I'm afraid you are mistaken. I may no longer hold that title, but I am the coordinator for this Incense Proving. As such, I have the authority to intervene.",
+                "voice": "story/1206/120617/1E31FE12",
+                "npc": 250004,
+                "next": 12061734
+              },
+              {
+                "id": 12061734,
+                "content": "I am aware of the concerns. Drifters are still counted among the people of Huaxu. The Nine Chapters of Dafeng have chosen to let the past lie. And absent proven wrongdoing, there is no lawful basis to bar them from the Incense Proving.",
+                "voice": "story/1206/120617/1E31FE3C",
+                "npc": 250004,
+                "next": 12061735
+              },
+              {
+                "id": 12061735,
+                "content": "Moreover, Taihao has returned judgement to the people. So I would ask you to judge with your own eyes — rather than by rumour.",
+                "voice": "story/1206/120617/1E31FE66",
+                "npc": 250004,
+                "next": 12061736
+              },
+              {
+                "id": 12061736,
+                "content": "To accuse Miss Su Yi of ill intent without evidence would be unfair.",
+                "voice": "story/1206/120617/1E31FE90",
+                "npc": 250004,
+                "next": 12061737
+              },
+              {
+                "id": 12061737,
+                "content": "Hmph. True. I have no evidence. But we can't just let Drifters swagger around unchecked. If we wait until a crime is committed, the proof will be undeniable — and by then it'll be too late.",
+                "voice": "story/1206/120617/1E31FEBA",
+                "npc": 250015,
+                "next": 12061738
+              },
+              {
+                "id": 12061738,
+                "content": "Mm. Your concern isn't unfounded.",
+                "voice": "story/1206/120617/1E31FEE4",
+                "npc": 250004,
+                "next": 12061739
+              },
+              {
+                "id": 12061739,
+                "content": "Hey— why are you taking his side all of a sudden!?",
+                "voice": "story/1206/120617/1E31FF0E",
+                "npc": 200002,
+                "next": 12061740
+              },
+              {
+                "id": 12061740,
+                "content": "The event's safety comes first. Any credible risk will be treated accordingly.",
+                "voice": "story/1206/120617/1E31FF38",
+                "npc": 250004,
+                "next": 12061741
+              },
+              {
+                "id": 12061741,
+                "content": "So, I must ask those involved to accompany me and cooperate with a formal inquiry. Everyone else, please remain calm. A statement will be provided shortly.",
+                "voice": "story/1206/120617/1E31FF62",
+                "npc": 250004,
+                "next": 12061742
+              },
+              {
+                "id": 12061742,
+                "content": "Miss Su Yi, I would appreciate your cooperation.",
+                "voice": "story/1206/120617/1E31FF8C",
+                "npc": 250004,
+                "next": 12061743
+              },
+              {
+                "id": 12061743,
+                "content": "...Alright. Lead the way.",
+                "voice": "story/1206/120617/1E31FFB6",
+                "npc": 250003
               }
             ]
           }
@@ -52656,6 +53226,155 @@
                 "content": "Ready to enter the arena?",
                 "voice": "story/1206/120607/1E315B28",
                 "npc": 250011
+              }
+            ]
+          },
+          {
+            "id": "17638126691113436594",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              22462,
+              -77036
+            ],
+            "dialogues": [
+              {
+                "id": 12062501,
+                "content": "...",
+                "voice": "story/1206/120625/1E327C12",
+                "next": 12062502
+              },
+              {
+                "id": 12062502,
+                "content": "I confirmed the details with the Stewards' Council. The device detonated in an open area with few people present. There were no injuries and no property damage.",
+                "voice": "story/1206/120625/1E327C3C",
+                "npc": 250005,
+                "next": 12062503
+              },
+              {
+                "id": 12062503,
+                "content": "However, it was witnessed by other contestants, and it caused panic. As our team was clearly at fault, the match has been ruled a loss.",
+                "voice": "story/1206/120625/1E327C66",
+                "npc": 250005,
+                "next": 12062504
+              },
+              {
+                "id": 12062504,
+                "content": "Miss Zhiliu intervened and prevented our disqualification. We remain eligible for the second chance round.",
+                "voice": "story/1206/120625/1E327C90",
+                "npc": 250005,
+                "next": 12062505
+              },
+              {
+                "id": 12062505,
+                "content": "I'm sorry... It's all my fault.",
+                "voice": "story/1206/120625/1E327CBA",
+                "npc": 250003,
+                "next": 12062506
+              },
+              {
+                "id": 12062506,
+                "content": "Su Yi... we've still got the second chance. We can still win. You don't have to beat yourself up.",
+                "voice": "story/1206/120625/1E327CE4",
+                "npc": 100001,
+                "next": 12062507
+              },
+              {
+                "id": 12062507,
+                "content": "No. It's not about winning...",
+                "voice": "story/1206/120625/1E327D0E",
+                "npc": 250003,
+                "next": 12062508
+              },
+              {
+                "id": 12062508,
+                "content": "I was this close... this close to becoming exactly what they say we are — a Drifter who doesn't care if someone gets hurt because of us...",
+                "voice": "story/1206/120625/1E327D38",
+                "npc": 250003,
+                "next": 12062509
+              },
+              {
+                "id": 12062509,
+                "content": "I was so desperate to prove them wrong... and I ended up proving them right. I don't even know what I was trying to prove anymore...",
+                "voice": "story/1206/120625/1E327D62",
+                "npc": 250003,
+                "next": 12062510
+              },
+              {
+                "id": 12062510,
+                "content": "There you guys are.",
+                "voice": "story/1206/120625/1E327D8C",
+                "npc": 250006,
+                "next": 12062511
+              },
+              {
+                "id": 12062511,
+                "content": "Tabethe?",
+                "voice": "story/1206/120625/1E327DB6",
+                "npc": 100001,
+                "next": 12062512
+              },
+              {
+                "id": 12062512,
+                "content": "Uh... I came to apologise. About earlier.",
+                "voice": "story/1206/120625/1E327DE0",
+                "npc": 250006,
+                "next": 12062513
+              },
+              {
+                "id": 12062513,
+                "content": "I know you didn't ditch me. And this guy only jumped in at the last minute so you could stay in the match...",
+                "voice": "story/1206/120625/1E327E0A",
+                "npc": 250006,
+                "next": 12062514
+              },
+              {
+                "id": 12062514,
+                "content": "I was just winding you up before. I didn't mean to make you so upset.",
+                "voice": "story/1206/120625/1E327E34",
+                "npc": 250006,
+                "next": 12062515
+              },
+              {
+                "id": 12062515,
+                "content": "Tabethe... it's not you. It's me.",
+                "voice": "story/1206/120625/1E327E5E",
+                "npc": 250003,
+                "next": 12062516
+              },
+              {
+                "id": 12062516,
+                "content": "Hey... Su Yi. Chin up. We're still getting up there to collect our prize together, aren't we?",
+                "voice": "story/1206/120625/1E327E88",
+                "npc": 250006,
+                "next": 12062517
+              },
+              {
+                "id": 12062517,
+                "content": "And... look. I know you're not a bad person. I mess with you all the time, yeah, but... I liked you better when you had that swagger.",
+                "voice": "story/1206/120625/1E327EB2",
+                "npc": 250006,
+                "next": 12062518
+              },
+              {
+                "id": 12062518,
+                "content": "(The crowd murmurs, growing louder.)",
+                "voice": "story/1206/120625/1E327EDC",
+                "next": 12062519
+              },
+              {
+                "id": 12062519,
+                "content": "...The crowd is already in an uproar. We shouldn't linger.",
+                "voice": "story/1206/120625/1E327F06",
+                "npc": 250005,
+                "next": 12062520
+              },
+              {
+                "id": 12062520,
+                "content": "{nickname}, I'll draw their attention. Stay with Su Yi and get her out first.",
+                "voice": "story/1206/120625/1E327F30",
+                "npc": 250005
               }
             ]
           }
@@ -81084,6 +81803,9 @@
               35340,
               4970
             ],
+            "next": [
+              "17675080839196736"
+            ],
             "dialogues": [
               {
                 "id": 51153063,
@@ -81106,6 +81828,147 @@
               {
                 "id": 51153066,
                 "content": "Would you humour me and race me?",
+                "npc": 701091
+              }
+            ]
+          },
+          {
+            "id": "17675080839196736",
+            "type": "TalkNode",
+            "name": "完成Fixsimple对话",
+            "srId": 104107,
+            "pos": [
+              35340,
+              4970
+            ],
+            "dialogues": [
+              {
+                "id": 51153070,
+                "content": "(Chen Baisha drains the tea in great gulps, then drops to the ground, utterly spent.)",
+                "next": 51153071
+              },
+              {
+                "id": 51153071,
+                "content": "So? Was that the taste you were after?",
+                "npc": 100001,
+                "next": 51153072
+              },
+              {
+                "id": 51153072,
+                "content": "So close... But it's not quite there. Something's still missing.",
+                "npc": 701091,
+                "next": 51153073
+              },
+              {
+                "id": 51153073,
+                "content": "I remember...",
+                "npc": 701091,
+                "next": 51153074
+              },
+              {
+                "id": 51153074,
+                "content": "What is it?",
+                "npc": 100001,
+                "next": 51153075
+              },
+              {
+                "id": 51153075,
+                "content": "It's those days I'm thinking of. Before the Scourge of Zhuyin ever reached this place. Back when my friends and I played in the mud here, polishing shells by the river.",
+                "npc": 701091,
+                "next": 51153076
+              },
+              {
+                "id": 51153076,
+                "content": "White clouds drifting lazily overhead... as if we'd never known worry.",
+                "npc": 701091,
+                "next": 51153077
+              },
+              {
+                "id": 51153077,
+                "content": "When did I decide to become a Starweaver? And when did we start to drift apart? One by one, we ended up far from home... year after year.",
+                "npc": 701091,
+                "next": 51153078
+              },
+              {
+                "id": 51153078,
+                "content": "When did you first drink that bowl of tea?",
+                "npc": 100001,
+                "next": 51153079
+              },
+              {
+                "id": 51153079,
+                "content": "When I was young, my father took me on foot along the riverbank — from Reedshore all the way to Starwharf — just to watch the ships. It was a long walk. I was exhausted, and buzzing with excitement.",
+                "npc": 701091,
+                "next": 51153080
+              },
+              {
+                "id": 51153080,
+                "content": "We bought tea from a stall. The sea glittered nearby. Merchant ships came and went. The quay was buzzing. I was a wide-eyed boy... I couldn't look away.",
+                "npc": 701091,
+                "next": 51153081
+              },
+              {
+                "id": 51153081,
+                "content": "Maybe it began there. The first time I saw the sea. The first time I knew I'd one day go beyond this land... all the way to the ends of the world.",
+                "npc": 701091,
+                "next": 51153082
+              },
+              {
+                "id": 51153082,
+                "content": "And yet... coming back under this same sky still catches in my throat.",
+                "npc": 701091,
+                "next": 51153083
+              },
+              {
+                "id": 51153083,
+                "content": "(Chen Baisha falls silent. He lies there for a long while, staring up at the sky, lost in thought.)",
+                "next": 51153084
+              },
+              {
+                "id": 51153084,
+                "content": "My friend... I understand now.",
+                "npc": 701091,
+                "next": 51153085
+              },
+              {
+                "id": 51153085,
+                "content": "There'll never be tea that tastes the way it did back then... just as there'll never be days like those again.",
+                "npc": 701091,
+                "next": 51153086
+              },
+              {
+                "id": 51153086,
+                "content": "It isn't the tea I miss. It's those days... and the childhood I can't return to.",
+                "npc": 701091,
+                "next": 51153087
+              },
+              {
+                "id": 51153087,
+                "content": "Farewell, my friend. Please — take this. You've earned it.",
+                "npc": 701091,
+                "next": 51153088
+              },
+              {
+                "id": 51153088,
+                "content": "Where are you going?",
+                "npc": 100001,
+                "next": 51153089
+              },
+              {
+                "id": 51153089,
+                "content": "You can't take back what's gone. But there are things I can still hold on to.",
+                "npc": 701091,
+                "next": 51153090
+              },
+              {
+                "id": 51153090,
+                "content": "I may never find that tea from twenty years ago again... but I can still walk with my father, talk as we go, and watch the ships at the quay with him.",
+                "npc": 701091,
+                "next": 51153091
+              },
+              {
+                "id": 51153091,
+                "content": "I'm going home.",
                 "npc": 701091
               }
             ]

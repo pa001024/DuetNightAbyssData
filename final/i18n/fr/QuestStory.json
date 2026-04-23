@@ -13694,6 +13694,9 @@
             "id": "173313073996623541",
             "type": "TalkNode",
             "name": "站桩",
+            "next": [
+              "173313073996623542"
+            ],
             "dialogues": [
               {
                 "id": 10033501,
@@ -13904,19 +13907,6 @@
                 "content": "Pas de problème. Quand tu seras {性别:prêt|prête}, on sortira.",
                 "voice": "story/1003/100335/191E2D35",
                 "npc": 200021
-              }
-            ]
-          },
-          {
-            "id": "173588627805218617",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "dialogues": [
-              {
-                "id": 10033311,
-                "content": "—ROOAAAR !",
-                "voice": "story/1003/100333/191E0A16",
-                "npc": 100328
               }
             ]
           }
@@ -16341,54 +16331,6 @@
                 "voice": "story/1003/100354/191F6346",
                 "npc": 100304,
                 "next": 10035425
-              }
-            ]
-          },
-          {
-            "id": "17410579739793626",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "dialogues": [
-              {
-                "id": 10035401,
-                "content": "... L’agresseur est encore en vie !",
-                "voice": "story/1003/100354/191F60FA",
-                "npc": 100304,
-                "next": 10035402
-              },
-              {
-                "id": 10035402,
-                "content": "Eh ben, il vient de lui-même cette fois.",
-                "voice": "story/1003/100354/191F6124",
-                "npc": 200021,
-                "next": 10035403
-              },
-              {
-                "id": 10035403,
-                "content": "« Agresseur »... ?",
-                "voice": "story/1003/100354/191F614E",
-                "npc": 100327,
-                "next": 10035404
-              },
-              {
-                "id": 10035404,
-                "content": "Il faut croire qu’ils ne t’ont jamais dit la vérité... Même le XIIIᵉ Légion n’est qu’une bande d’hypocrites.",
-                "voice": "story/1003/100354/191F6178",
-                "npc": 100327,
-                "next": 10035405
-              },
-              {
-                "id": 10035405,
-                "content": "La vérité ? De quoi parlez-vous ?",
-                "voice": "story/1003/100354/191F61A2",
-                "npc": 100304,
-                "next": 10035406
-              },
-              {
-                "id": 10035406,
-                "content": "Il nous fait perdre du temps. Abattons-le d’abord !",
-                "voice": "story/1003/100354/191F61CC",
-                "npc": 200021
               }
             ]
           }
@@ -38423,24 +38365,6 @@
         "desc": "Après avoir quitté Zhiliu, Snow et vous décidez de vous rendre au Port des Astres Séparés, au Pavillon de l’Encens et au Pavillon des Artisans afin de récupérer les fournitures nécessaires à la Cérémonie de l’Encens.\nCommencez par vous rendre au Port des Astres Séparés et cherchez le responsable du port.",
         "nodes": [
           {
-            "id": "17637999960361371064",
-            "type": "TalkNode",
-            "name": "看到人了",
-            "srId": 104502,
-            "pos": [
-              21564,
-              -22818
-            ],
-            "dialogues": [
-              {
-                "id": 12049009,
-                "content": "Petit larbin, cette personne là-bas a l’air responsable. Allons lui parler !",
-                "voice": "story/1204/120490/1E29D68A",
-                "npc": 200002
-              }
-            ]
-          },
-          {
             "id": "17638012925591372625",
             "type": "TalkNode",
             "name": "对话节点",
@@ -38483,6 +38407,24 @@
                 "content": "Prenez à droite et descendez. Cherchez une caisse portant une étiquette officielle. Vous ne pourrez pas la manquer.",
                 "voice": "story/1204/120407/1E24842A",
                 "npc": 240027
+              }
+            ]
+          },
+          {
+            "id": "17637999960361371064",
+            "type": "TalkNode",
+            "name": "看到人了",
+            "srId": 104502,
+            "pos": [
+              21564,
+              -22818
+            ],
+            "dialogues": [
+              {
+                "id": 12049009,
+                "content": "Petit larbin, cette personne là-bas a l’air responsable. Allons lui parler !",
+                "voice": "story/1204/120490/1E29D68A",
+                "npc": 200002
               }
             ]
           }
@@ -38903,6 +38845,9 @@
               16196,
               -18823
             ],
+            "next": [
+              "17696887908412259516"
+            ],
             "dialogues": [
               {
                 "id": 12040801,
@@ -38943,6 +38888,31 @@
                 "id": 12040806,
                 "content": "Il a pris notre cargaison ! On ne va pas le laisser faire — poursuis-le, vite !",
                 "voice": "story/1204/120408/1E2494BC",
+                "npc": 200002
+              }
+            ]
+          },
+          {
+            "id": "17696887908412259516",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104502,
+            "pos": [
+              16196,
+              -18823
+            ],
+            "dialogues": [
+              {
+                "id": 12049016,
+                "content": "On a couru partout... Je ne sais même plus où on est.",
+                "voice": "story/1204/120490/1E29D7B0",
+                "npc": 200002,
+                "next": 12049017
+              },
+              {
+                "id": 12049017,
+                "content": "Voyons la carte... Parfait ! Petit larbin, en route pour la prochaine étape !",
+                "voice": "story/1204/120490/1E29D7DA",
                 "npc": 200002
               }
             ]
@@ -39076,6 +39046,9 @@
               27545,
               -58568
             ],
+            "next": [
+              "17750410303116410660"
+            ],
             "dialogues": [
               {
                 "id": 12041001,
@@ -39149,6 +39122,24 @@
                 "id": 12041011,
                 "content": "... Petit larbin, elle a l’air vraiment en détresse. Faisons preuve de générosité et allons le lui rapporter !",
                 "voice": "story/1204/120410/1E24B65E",
+                "npc": 200002
+              }
+            ]
+          },
+          {
+            "id": "17750410303116410660",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              27545,
+              -58568
+            ],
+            "dialogues": [
+              {
+                "id": 12049303,
+                "content": "Mission accomplie ! Petit larbin, retournons vite le lui rendre !",
+                "voice": "story/1204/120493/12049303",
                 "npc": 200002
               }
             ]
@@ -49412,6 +49403,157 @@
                 "npc": 250011
               }
             ]
+          },
+          {
+            "id": "17634578623896770278",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              22462,
+              -77036
+            ],
+            "dialogues": [
+              {
+                "id": 12060801,
+                "content": "Vous voilà ! J’ai tout suivi depuis les gradins ! À ce rythme-là, le titre est déjà dans la poche !",
+                "voice": "story/1206/120608/1E31652A",
+                "npc": 200002,
+                "next": 12060802
+              },
+              {
+                "id": 12060802,
+                "content": "Héhé... trop facile ! Je vous l’avais dit : un tournoi où il faut « récupérer des trésors » ? C’est pile mon terrain de jeu !",
+                "voice": "story/1206/120608/1E316554",
+                "npc": 250006,
+                "next": 12060803
+              },
+              {
+                "id": 12060803,
+                "content": "C’est une chasse au trésor, pas un cambriolage... Tu ne changeras donc jamais.",
+                "voice": "story/1206/120608/1E31657E",
+                "npc": 250003,
+                "next": 12060804
+              },
+              {
+                "id": 12060804,
+                "content": "Hihi... D’habitude, après une victoire, on sort fêter ça tous ensemble, non ? Je n’ai fait qu’en entendre parler... jamais vraiment vécu ! Allez, on va dévaliser les échoppes jusqu’à ne plus pouvoir bouger !",
+                "voice": "story/1206/120608/1E3165A8",
+                "npc": 250006,
+                "next": 12060805
+              },
+              {
+                "id": 12060805,
+                "content": "Parfait. Après l’échauffement, j’ai déjà digéré. On peut bien enchaîner.",
+                "voice": "story/1206/120608/1E3165D2",
+                "npc": 100001,
+                "next": 12060806
+              },
+              {
+                "id": 12060806,
+                "content": "Hé, vous deux... Ce n’était que les éliminatoires. Le Tournoi de l’Encens regorge d’équipes redoutables. Ce n’est pas le moment de fanfaronner.",
+                "voice": "story/1206/120608/1E3165FC",
+                "npc": 250003,
+                "next": 12060807
+              },
+              {
+                "id": 12060807,
+                "content": "Notre coordination laisse encore à désirer. J’ai demandé au Qingluan Type II d’enregistrer la manche.",
+                "voice": "story/1206/120608/1E316626",
+                "npc": 250003,
+                "next": 12060808
+              },
+              {
+                "id": 12060808,
+                "content": "On dit qu’en revenant sur le passé, on progresse. Si on analyse nos actions entre les manches, on prendra de l’avance.",
+                "voice": "story/1206/120608/1E316650",
+                "npc": 250003,
+                "next": 12060809
+              },
+              {
+                "id": 12060809,
+                "content": "Aaaah non, tout sauf ça ! Même la surveillante de l’orphelinat ne me sermonnait pas autant ! Je n’écoute pas, je n’écoute pas !",
+                "voice": "story/1206/120608/1E31667A",
+                "npc": 250006,
+                "next": 12060810
+              },
+              {
+                "id": 12060810,
+                "content": "Incorrigible ! {nickname}, aide-moi à lui faire entendre raison !",
+                "voice": "story/1206/120608/1E3166A4",
+                "npc": 250003,
+                "options": [
+                  {
+                    "id": 12060811,
+                    "content": "<I>On ne gagne pas le ventre vide.</>",
+                    "next": 12060813,
+                    "impr": [
+                      1041,
+                      "Wisdom",
+                      3
+                    ]
+                  },
+                  {
+                    "id": 12060812,
+                    "content": "<I>Oui, Maman...</>",
+                    "next": 12060813,
+                    "impr": [
+                      1041,
+                      "Chaos",
+                      3
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 12060813,
+                "content": "...{nickname}, ne me dis pas que toi aussi ?",
+                "voice": "story/1206/120608/1E316722",
+                "npc": 250003,
+                "next": 12060814
+              },
+              {
+                "id": 12060814,
+                "content": "Tu en fais un peu trop, Su Yi. Se détendre un peu nous aidera aussi à gagner.",
+                "voice": "story/1206/120608/1E31674C",
+                "npc": 100001,
+                "next": 12060815
+              },
+              {
+                "id": 12060815,
+                "content": "... Je n’ai vraiment aucune autorité sur vous.",
+                "voice": "story/1206/120608/1E316776",
+                "npc": 250003,
+                "next": 12060816
+              },
+              {
+                "id": 12060816,
+                "content": "Très bien. Allons-y. Aujourd’hui, c’est moi qui invite. Après tout, c’est moi qui vous ai embarqués dans cette histoire.",
+                "voice": "story/1206/120608/1E3167A0",
+                "npc": 250003,
+                "next": 12060817
+              },
+              {
+                "id": 12060817,
+                "content": "Tu invites ? Ça veut dire... à volonté ? Parfait ! Tu l’as dit — il faudra rassasier mes huit tentacules ! Oh, et ça... je le garde~",
+                "voice": "story/1206/120608/1E3167CA",
+                "npc": 250006,
+                "next": 12060818
+              },
+              {
+                "id": 12060818,
+                "content": "... Mon portefeuille ! Depuis quand il est dans tes mains ?! Reviens ici !",
+                "voice": "story/1206/120608/1E3167F4",
+                "npc": 250003,
+                "next": 12060819
+              },
+              {
+                "id": 12060819,
+                "content": "Hé ! Elles ont disparu en un clin d’œil ?! Elles vont beaucoup trop vite ! Petit larbin, on y va !",
+                "voice": "story/1206/120608/1E31681E",
+                "npc": 200002
+              }
+            ]
           }
         ]
       },
@@ -50395,6 +50537,129 @@
                 "npc": 250011
               }
             ]
+          },
+          {
+            "id": "17637245989842738034",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              22462,
+              -77036
+            ],
+            "dialogues": [
+              {
+                "id": 12061301,
+                "content": "On a gagné... alors pourquoi tout le monde tire une tête pareille ?",
+                "voice": "story/1206/120613/1E31B732",
+                "npc": 200002,
+                "next": 12061302
+              },
+              {
+                "id": 12061302,
+                "content": "Euh... bon, d’accord, Tabethe nous a posé un lapin, mais vous n’avez pas besoin d’être aussi fâchés...",
+                "voice": "story/1206/120613/1E31B75C",
+                "npc": 200002,
+                "next": 12061303
+              },
+              {
+                "id": 12061303,
+                "content": "Su Yi. Avant la manche, nous n’avons pas eu le temps de parler. Mais une chose me préoccupe.",
+                "voice": "story/1206/120613/1E31B786",
+                "npc": 250005,
+                "next": 12061304
+              },
+              {
+                "id": 12061304,
+                "content": "Tout à l’heure, lors de ton altercation avec cet homme, tu as mentionné Su Muzhe. Qu’est-ce qui a provoqué cette dispute ? Et... après tout ce temps, tu n’as toujours pas réussi à tourner la page ?",
+                "voice": "story/1206/120613/1E31B7B0",
+                "npc": 250005,
+                "next": 12061305
+              },
+              {
+                "id": 12061305,
+                "content": "Quelqu’un a insulté la mémoire de ma tante. Il était normal que je réponde. Pourquoi ? Tu as un problème avec ça ?",
+                "voice": "story/1206/120613/1E31B7DA",
+                "npc": 250003,
+                "next": 12061306
+              },
+              {
+                "id": 12061306,
+                "content": "Je ne cherche pas à m’immiscer dans tes affaires. Je crains seulement que ce genre de scène n’attire l’attention sur les Pics Extérieurs.",
+                "voice": "story/1206/120613/1E31B804",
+                "npc": 250005,
+                "next": 12061307
+              },
+              {
+                "id": 12061307,
+                "content": "Donc tu voudrais que je me fasse discrète dans un moment pareil ? Tu penses qu’un Vagabond qui attire l’attention dans une période aussi sensible va causer des ennuis aux Pics Extérieurs ?",
+                "voice": "story/1206/120613/1E31B82E",
+                "npc": 250003,
+                "next": 12061308
+              },
+              {
+                "id": 12061308,
+                "content": "Désolée. Je ne sais pas qui t’a demandé de venir, mais je refuse. Peut-être que toi, tu peux tourner la page et rejoindre les Neuf Chapitres de Dafeng comme si de rien n’était. Moi, je n’en suis pas capable.",
+                "voice": "story/1206/120613/1E31B858",
+                "npc": 250003,
+                "next": 12061309
+              },
+              {
+                "id": 12061309,
+                "content": "... Su Yi. Tu te méprends.",
+                "voice": "story/1206/120613/1E31B882",
+                "npc": 250005,
+                "next": 12061310
+              },
+              {
+                "id": 12061310,
+                "content": "L’air est étouffant ici. La prochaine manche commence dans une demi-heure, n’est-ce pas ? Je vais prendre l’air pendant la pause.",
+                "voice": "story/1206/120613/1E31B8AC",
+                "npc": 250003,
+                "next": 12061311
+              },
+              {
+                "id": 12061311,
+                "content": "{nickname}, je vous laisse vous en occuper.",
+                "voice": "story/1206/120613/1E31B8D6",
+                "npc": 250003,
+                "next": 12061312
+              },
+              {
+                "id": 12061312,
+                "content": "Aaaah... comment l’ambiance a pu devenir aussi bizarre...",
+                "voice": "story/1206/120613/1E31B900",
+                "npc": 200002,
+                "next": 12061313
+              },
+              {
+                "id": 12061313,
+                "content": "... {nickname}. Il existe de nombreux malentendus entre Su Yi et moi. Si je parle davantage, je ne ferai que la contrarier davantage. Pourrais-tu aller lui parler ?",
+                "voice": "story/1206/120613/1E31B92A",
+                "npc": 250005,
+                "next": 12061314
+              },
+              {
+                "id": 12061314,
+                "content": "Même si tu ne l’avais pas demandé, j’y serais {性别:allé|allée}.",
+                "voice": "story/1206/120613/1E31B954",
+                "npc": 100001,
+                "next": 12061315
+              },
+              {
+                "id": 12061315,
+                "content": "Snow, reste ici avec Yuming. Je vais retrouver Su Yi.",
+                "voice": "story/1206/120613/1E31B97E",
+                "npc": 100001,
+                "next": 12061316
+              },
+              {
+                "id": 12061316,
+                "content": "D’accord, petit larbin. Reviens vite.",
+                "voice": "story/1206/120613/1E31B9A8",
+                "npc": 200002
+              }
+            ]
           }
         ]
       },
@@ -51107,6 +51372,311 @@
                 "content": "Êtes-vous prêts à entrer dans l’arène ?",
                 "voice": "story/1206/120607/1E315B28",
                 "npc": 250011
+              }
+            ]
+          },
+          {
+            "id": "17637293161184114789",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              22462,
+              -77036
+            ],
+            "dialogues": [
+              {
+                "id": 12061701,
+                "content": "<I>Pfiou...</> Voilà qui conclut les épreuves d’aujourd’hui. Beau travail ! Si nous maintenons ce rythme demain, la victoire sera pratiquement assurée !",
+                "voice": "story/1206/120617/1E31F8D2",
+                "npc": 250003,
+                "next": 12061702
+              },
+              {
+                "id": 12061702,
+                "content": "Je ferai de mon mieux.",
+                "voice": "story/1206/120617/1E31F8FC",
+                "npc": 250005,
+                "next": 12061703
+              },
+              {
+                "id": 12061703,
+                "content": "On devrait peut-être commencer à réfléchir à ton discours de victoire. « Bonjour, je m’appelle Su Yi, c’est un honneur pour moi de me tenir ici aujourd’hui... »",
+                "voice": "story/1206/120617/1E31F926",
+                "npc": 100001,
+                "next": 12061744
+              },
+              {
+                "id": 12061704,
+                "content": "Petit larbin ! Vous voilà enfin ! Euh... l’ambiance dans l’arène est un peu étrange...",
+                "voice": "story/1206/120617/1E31F950",
+                "npc": 200002,
+                "next": 12061705
+              },
+              {
+                "id": 12061705,
+                "content": "Que se passe-t-il ?",
+                "voice": "story/1206/120617/1E31F97A",
+                "npc": 100001,
+                "next": 12061745
+              },
+              {
+                "id": 12061706,
+                "content": "Hé, vous avez entendu ? On dit qu’un Vagabond s’est infiltré dans la compétition...",
+                "voice": "story/1206/120617/1E31F9A4",
+                "next": 12061707
+              },
+              {
+                "id": 12061707,
+                "content": "Un Vagabond ? Ceux des histoires, avec la peau verdâtre et des crocs, qui brandissent d’énormes massues ? Avec tous les changements récents à Huaxu... tu crois qu’ils sont venus semer le trouble ?",
+                "voice": "story/1206/120617/1E31F9CE",
+                "next": 12061708
+              },
+              {
+                "id": 12061708,
+                "content": "Les Vagabonds sont vraiment aussi effrayants ? Je n’en ai vu que dans des romans...",
+                "voice": "story/1206/120617/1E31F9F8",
+                "next": 12061709
+              },
+              {
+                "id": 12061709,
+                "content": "J’ai entendu dire que certains d’entre eux rendaient justice... mais bon, les histoires restent des histoires. Dans la vraie vie, je préférerais ne jamais en croiser.",
+                "voice": "story/1206/120617/1E31FA22",
+                "next": 12061710
+              },
+              {
+                "id": 12061710,
+                "content": "Je ne sais pas ce qui se passe, mais... on devrait peut-être partir d’ici et se faire discret un moment—",
+                "voice": "story/1206/120617/1E31FA4C",
+                "npc": 200002,
+                "next": 12061746
+              },
+              {
+                "id": 12061711,
+                "content": "—Ah ! Monsieur ! Nous sommes des citoyens honnêtes, nous n’avons rien dit !",
+                "voice": "story/1206/120617/1E31FA76",
+                "npc": 200002,
+                "next": 12061712
+              },
+              {
+                "id": 12061712,
+                "content": "Nul besoin de paniquer. {nickname} est {性别:un|une} hôte d’honneur de Huaxu, et ses compagnons doivent également être traités avec respect. C’est la volonté de Taihao.",
+                "voice": "story/1206/120617/1E31FAA0",
+                "npc": 250030,
+                "next": 12061713
+              },
+              {
+                "id": 12061713,
+                "content": "Cependant, nous devons vérifier une chose. Êtes-vous Mademoiselle Su Yi ?",
+                "voice": "story/1206/120617/1E31FACA",
+                "npc": 250030,
+                "next": 12061714
+              },
+              {
+                "id": 12061714,
+                "content": "C’est bien moi. Que se passe-t-il ?",
+                "voice": "story/1206/120617/1E31FAF4",
+                "npc": 250003,
+                "next": 12061715
+              },
+              {
+                "id": 12061715,
+                "content": "Nous avons reçu un signalement selon lequel la méchapoupée que vous utilisez dans la compétition pourrait ne pas être conforme au règlement. Conformément aux procédures, nous devons procéder à une inspection. Veuillez nous excuser pour ce désagrément.",
+                "voice": "story/1206/120617/1E31FB1E",
+                "npc": 250030,
+                "next": 12061716
+              },
+              {
+                "id": 12061716,
+                "content": "Alors c’est elle...",
+                "voice": "story/1206/120617/1E31FB48",
+                "next": 12061717
+              },
+              {
+                "id": 12061717,
+                "content": "Elle a l’air si fragile... une simple jeune fille. Et on dit que c’est une Vagabonde ? Elle n’a pourtant rien de terrifiant.",
+                "voice": "story/1206/120617/1E31FB72",
+                "next": 12061718
+              },
+              {
+                "id": 12061718,
+                "content": "Mon Qingluan Type II ? Tenez. Prenez-le.",
+                "voice": "story/1206/120617/1E31FB9C",
+                "npc": 250003,
+                "next": 12061719
+              },
+              {
+                "id": 12061719,
+                "content": "Je précise que j’ai soigneusement vérifié les règles de cette compétition. Ma méthode de fabrication est parfaitement conforme. Vous pouvez inspecter autant que vous voulez — mais je vous prie de ne pas endommager sa structure. Chaque pièce représente le travail acharné d’un maître des méchapoupées.",
+                "voice": "story/1206/120617/1E31FBC6",
+                "npc": 250003,
+                "next": 12061720
+              },
+              {
+                "id": 12061720,
+                "content": "Merci pour votre coopération. Cette méchapoupée sera placée sous la garde du conseil administratif et vous sera restituée demain matin avant le début des épreuves. Soyez rassurée.",
+                "voice": "story/1206/120617/1E31FBF0",
+                "npc": 250030,
+                "next": 12061747
+              },
+              {
+                "id": 12061721,
+                "content": "Conforme ? C’est donc ainsi que vous, les Vagabonds, maquillez vos agissements ?",
+                "voice": "story/1206/120617/1E31FC1A",
+                "npc": 250015,
+                "next": 12061722
+              },
+              {
+                "id": 12061722,
+                "content": "Encore toi ? Tu ne lâches jamais l’affaire... Dis-moi, ce signalement ne viendrait pas de toi, par hasard ?",
+                "voice": "story/1206/120617/1E31FC44",
+                "npc": 250003,
+                "next": 12061723
+              },
+              {
+                "id": 12061723,
+                "content": "<I>Hmpf.</> Depuis que nos chemins se sont croisés, j’avais déjà des soupçons. Je pensais que vous autres hors-la-loi n’osiez vous cacher que dans les failles des Neuf Chapitres de Dafeng comme des rats... mais voilà que vous vous infiltrez dans la Cérémonie de l’Encens. Qu’espérez-vous accomplir ?",
+                "voice": "story/1206/120617/1E31FC6E",
+                "npc": 250015,
+                "next": 12061724
+              },
+              {
+                "id": 12061724,
+                "content": "Sans quelqu’un pour révéler ton identité, tout le monde serait encore dans l’ignorance.",
+                "voice": "story/1206/120617/1E31FC98",
+                "npc": 250015,
+                "next": 12061725
+              },
+              {
+                "id": 12061725,
+                "content": "Je n’ai jamais rien fait dont j’aurais à rougir. Je n’ai simplement jamais jugé nécessaire de crier mon identité sur tous les toits.",
+                "voice": "story/1206/120617/1E31FCC2",
+                "npc": 250003,
+                "next": 12061726
+              },
+              {
+                "id": 12061726,
+                "content": "Au fond, qu’est-ce que les Vagabonds t’ont fait ?",
+                "voice": "story/1206/120617/1E31FCEC",
+                "npc": 250003,
+                "next": 12061727
+              },
+              {
+                "id": 12061727,
+                "content": "... Qu’est-ce qu’ils m’ont fait ? Tu parles des crimes accumulés par tes prédécesseurs comme si ce n’était rien. Les Vagabonds sont connus pour leurs méfaits. Veux-tu vraiment que je les énumère un par un ?",
+                "voice": "story/1206/120617/1E31FD16",
+                "npc": 250015,
+                "next": 12061728
+              },
+              {
+                "id": 12061728,
+                "content": "Des rumeurs sans fondement que les gens répètent sans réfléchir ? Même si tu les répétais mille fois, qu’est-ce que cela prouverait ?",
+                "voice": "story/1206/120617/1E31FD40",
+                "npc": 250003,
+                "next": 12061729
+              },
+              {
+                "id": 12061729,
+                "content": "(La foule commence à murmurer bruyamment.)",
+                "voice": "story/1206/120617/1E31FD6A",
+                "next": 12061748
+              },
+              {
+                "id": 12061730,
+                "content": "Je me demandais d’où venait tout ce tumulte. Il semble qu’il s’agisse simplement d’un malentendu entre concurrents.",
+                "voice": "story/1206/120617/1E31FD94",
+                "npc": 250004,
+                "next": 12061731
+              },
+              {
+                "id": 12061731,
+                "content": "Zhiliu... ?",
+                "voice": "story/1206/120617/1E31FDBE",
+                "npc": 100001,
+                "next": 12061732
+              },
+              {
+                "id": 12061732,
+                "content": "... J’ai entendu dire qu’après cet incident, l’actuel Haut Chancelier de Longyuan avait suscité de nombreuses critiques et qu’il avait été contraint de se retirer. Dans ces conditions, il ne serait peut-être pas très approprié que vous veniez vous mêler de cette affaire, n’est-ce pas ?",
+                "voice": "story/1206/120617/1E31FDE8",
+                "npc": 250015,
+                "next": 12061733
+              },
+              {
+                "id": 12061733,
+                "content": "Héhé... Malheureusement pour vous, même si je ne suis plus Haut Chancelier de Longyuan, j’assume toujours les fonctions de coordinatrice pour ce Tournoi de l’Encens. À ce titre, j’ai parfaitement le droit de prendre la parole ici.",
+                "voice": "story/1206/120617/1E31FE12",
+                "npc": 250004,
+                "next": 12061734
+              },
+              {
+                "id": 12061734,
+                "content": "Je comprends les inquiétudes de chacun. Mais même les Vagabonds restent des citoyens de Huaxu. Les Neuf Chapitres de Dafeng ont déjà décidé de ne plus revenir sur le passé. Tant qu’aucun crime n’a été commis, rien ne s’oppose à leur participation au Tournoi de l’Encens.",
+                "voice": "story/1206/120617/1E31FE3C",
+                "npc": 250004,
+                "next": 12061735
+              },
+              {
+                "id": 12061735,
+                "content": "À présent, Taihao a de nouveau confié au peuple le pouvoir de juger. Il vous appartient donc d’observer par vous-mêmes ce qui est vrai et ce qui ne l’est pas.",
+                "voice": "story/1206/120617/1E31FE66",
+                "npc": 250004,
+                "next": 12061736
+              },
+              {
+                "id": 12061736,
+                "content": "Accuser Mademoiselle Su Yi de mauvaises intentions alors qu’aucune preuve n’existe serait sans doute un peu hâtif, non ?",
+                "voice": "story/1206/120617/1E31FE90",
+                "npc": 250004,
+                "next": 12061737
+              },
+              {
+                "id": 12061737,
+                "content": "<I>Hmpf.</> C’est vrai, je n’ai aucune preuve. Mais on ne peut pas non plus laisser ces gens sans foi ni loi parader ici comme si de rien n’était ! Si on attend qu’ils commettent un crime, les preuves seront peut-être irréfutables... mais il sera déjà trop tard.",
+                "voice": "story/1206/120617/1E31FEBA",
+                "npc": 250015,
+                "next": 12061738
+              },
+              {
+                "id": 12061738,
+                "content": "Hm. Tes inquiétudes ne sont pas dénuées de fondement.",
+                "voice": "story/1206/120617/1E31FEE4",
+                "npc": 250004,
+                "next": 12061739
+              },
+              {
+                "id": 12061739,
+                "content": "Hé, hé ! Pourquoi tu prends soudain le parti de ce type... !",
+                "voice": "story/1206/120617/1E31FF0E",
+                "npc": 200002,
+                "next": 12061740
+              },
+              {
+                "id": 12061740,
+                "content": "La sécurité du tournoi est la priorité absolue de cette édition. Toute menace potentielle doit être prise au sérieux.",
+                "voice": "story/1206/120617/1E31FF38",
+                "npc": 250004,
+                "next": 12061741
+              },
+              {
+                "id": 12061741,
+                "content": "Je vous demanderai donc de me suivre pour coopérer à l’enquête officielle. Quant aux autres, veuillez rester calmes. Une explication vous sera donnée par la suite.",
+                "voice": "story/1206/120617/1E31FF62",
+                "npc": 250004,
+                "next": 12061742
+              },
+              {
+                "id": 12061742,
+                "content": "Mademoiselle Su Yi, cela ne te pose pas de problème ?",
+                "voice": "story/1206/120617/1E31FF8C",
+                "npc": 250004,
+                "next": 12061743
+              },
+              {
+                "id": 12061743,
+                "content": "... Très bien. Fais comme tu veux.",
+                "voice": "story/1206/120617/1E31FFB6",
+                "npc": 250003
               }
             ]
           }
@@ -52351,6 +52921,155 @@
                 "content": "Êtes-vous prêts à entrer dans l’arène ?",
                 "voice": "story/1206/120607/1E315B28",
                 "npc": 250011
+              }
+            ]
+          },
+          {
+            "id": "17638126691113436594",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 104503,
+            "pos": [
+              22462,
+              -77036
+            ],
+            "dialogues": [
+              {
+                "id": 12062501,
+                "content": "...",
+                "voice": "story/1206/120625/1E327C12",
+                "next": 12062502
+              },
+              {
+                "id": 12062502,
+                "content": "J’ai confirmé les détails avec le conseil administratif. Heureusement, l’explosion s’est produite dans une zone dégagée où il y avait peu de monde. Il n’y a eu ni blessés ni dégâts matériels.",
+                "voice": "story/1206/120625/1E327C3C",
+                "npc": 250005,
+                "next": 12062503
+              },
+              {
+                "id": 12062503,
+                "content": "Cependant, plusieurs concurrents ont été témoins de l’explosion, ce qui a provoqué un mouvement de panique parmi les participants. Étant donné la responsabilité évidente de notre équipe, le match est considéré comme perdu.",
+                "voice": "story/1206/120625/1E327C66",
+                "npc": 250005,
+                "next": 12062504
+              },
+              {
+                "id": 12062504,
+                "content": "Heureusement, grâce à l’intervention de Zhiliu, notre participation n’a pas été annulée. Nous avons encore une chance de nous rattraper lors de l’épreuve de repêchage.",
+                "voice": "story/1206/120625/1E327C90",
+                "npc": 250005,
+                "next": 12062505
+              },
+              {
+                "id": 12062505,
+                "content": "Je suis désolée... tout est de ma faute.",
+                "voice": "story/1206/120625/1E327CBA",
+                "npc": 250003,
+                "next": 12062506
+              },
+              {
+                "id": 12062506,
+                "content": "Su Yi... il reste encore l’épreuve de repêchage. Nous pouvons toujours gagner. Tu n’as pas besoin de t’en vouloir autant.",
+                "voice": "story/1206/120625/1E327CE4",
+                "npc": 100001,
+                "next": 12062507
+              },
+              {
+                "id": 12062507,
+                "content": "Non... ce n’est pas une question de victoire ou de défaite...",
+                "voice": "story/1206/120625/1E327D0E",
+                "npc": 250003,
+                "next": 12062508
+              },
+              {
+                "id": 12062508,
+                "content": "J’étais à deux doigts... à deux doigts de devenir exactement ce qu’ils disent que nous sommes : une Vagabonde prête à mettre la vie des autres en danger.",
+                "voice": "story/1206/120625/1E327D38",
+                "npc": 250003,
+                "next": 12062509
+              },
+              {
+                "id": 12062509,
+                "content": "Je voulais tellement prouver qu’ils avaient tort... et au final, j’ai prouvé qu’ils avaient raison. Je ne sais même plus ce que j’essayais de prouver...",
+                "voice": "story/1206/120625/1E327D62",
+                "npc": 250003,
+                "next": 12062510
+              },
+              {
+                "id": 12062510,
+                "content": "Alors c’est ici que vous étiez.",
+                "voice": "story/1206/120625/1E327D8C",
+                "npc": 250006,
+                "next": 12062511
+              },
+              {
+                "id": 12062511,
+                "content": "Tabethe ?",
+                "voice": "story/1206/120625/1E327DB6",
+                "npc": 100001,
+                "next": 12062512
+              },
+              {
+                "id": 12062512,
+                "content": "Euh... je suis venue m’excuser. Pour tout à l’heure.",
+                "voice": "story/1206/120625/1E327DE0",
+                "npc": 250006,
+                "next": 12062513
+              },
+              {
+                "id": 12062513,
+                "content": "Je sais que vous ne m’avez pas abandonnée. Et ce type est seulement venu me remplacer à la dernière minute pour que vous puissiez continuer la compétition...",
+                "voice": "story/1206/120625/1E327E0A",
+                "npc": 250006,
+                "next": 12062514
+              },
+              {
+                "id": 12062514,
+                "content": "Ce que j’ai dit avant la manche, c’était juste pour vous taquiner... Je ne pensais pas que ça te mettrait dans un tel état.",
+                "voice": "story/1206/120625/1E327E34",
+                "npc": 250006,
+                "next": 12062515
+              },
+              {
+                "id": 12062515,
+                "content": "Tabethe... ce n’est pas à cause de toi. C’est moi le problème...",
+                "voice": "story/1206/120625/1E327E5E",
+                "npc": 250003,
+                "next": 12062516
+              },
+              {
+                "id": 12062516,
+                "content": "Hé... Su Yi, reprends-toi. On doit encore monter ensemble pour recevoir notre récompense, non ?",
+                "voice": "story/1206/120625/1E327E88",
+                "npc": 250006,
+                "next": 12062517
+              },
+              {
+                "id": 12062517,
+                "content": "Et puis... je sais que tu n’es pas quelqu’un de mauvais. Je t’embête tout le temps, mais... je préfère quand tu fais la fière.",
+                "voice": "story/1206/120625/1E327EB2",
+                "npc": 250006,
+                "next": 12062518
+              },
+              {
+                "id": 12062518,
+                "content": "Les murmures de la foule deviennent de plus en plus forts.",
+                "voice": "story/1206/120625/1E327EDC",
+                "next": 12062519
+              },
+              {
+                "id": 12062519,
+                "content": "... L’agitation dans la foule devient incontrôlable. Nous ne devrions pas rester ici.",
+                "voice": "story/1206/120625/1E327F06",
+                "npc": 250005,
+                "next": 12062520
+              },
+              {
+                "id": 12062520,
+                "content": "{nickname}, je vais attirer l’attention des spectateurs. Toi, emmène Su Yi et faites-la sortir d’ici.",
+                "voice": "story/1206/120625/1E327F30",
+                "npc": 250005
               }
             ]
           }
@@ -80779,6 +81498,9 @@
               35340,
               4970
             ],
+            "next": [
+              "17675080839196736"
+            ],
             "dialogues": [
               {
                 "id": 51153063,
@@ -80801,6 +81523,147 @@
               {
                 "id": 51153066,
                 "content": "Si cela vous dit, faisons donc la course ensemble.",
+                "npc": 701091
+              }
+            ]
+          },
+          {
+            "id": "17675080839196736",
+            "type": "TalkNode",
+            "name": "完成Fixsimple对话",
+            "srId": 104107,
+            "pos": [
+              35340,
+              4970
+            ],
+            "dialogues": [
+              {
+                "id": 51153070,
+                "content": "Chen Baisha porte la théière à ses lèvres et boit à grandes gorgées, avant de s’effondrer, épuisé.",
+                "next": 51153071
+              },
+              {
+                "id": 51153071,
+                "content": "Alors ? Est-ce le goût que vous cherchiez ?",
+                "npc": 100001,
+                "next": 51153072
+              },
+              {
+                "id": 51153072,
+                "content": "À huit parts près... Il en manque encore deux...",
+                "npc": 701091,
+                "next": 51153073
+              },
+              {
+                "id": 51153073,
+                "content": "Je me souviens... Oui... je me souviens...",
+                "npc": 701091,
+                "next": 51153074
+              },
+              {
+                "id": 51153074,
+                "content": "De quoi vous rappelez-vous ?",
+                "npc": 100001,
+                "next": 51153075
+              },
+              {
+                "id": 51153075,
+                "content": "D’il y a plus de dix ans. À l’époque où la Baie des Roseaux-Pâles n’avait pas encore subi le Fléau de Zhuyin. Quand mes compagnons et moi jouions dans la boue, polissions des coquilles sur cette rive.",
+                "npc": 701091,
+                "next": 51153076
+              },
+              {
+                "id": 51153076,
+                "content": "Le ciel était exactement comme aujourd’hui. Des nuages blancs glissaient lentement au-dessus de nos têtes. On aurait dit que les soucis n’existaient pas encore.",
+                "npc": 701091,
+                "next": 51153077
+              },
+              {
+                "id": 51153077,
+                "content": "À quel moment ai-je décidé de devenir un Tisse-Étoiles... Et à partir de quand avons-nous suivi chacun notre route, partant aux quatre coins du monde, sans jamais rentrer vraiment chez nous ?",
+                "npc": 701091,
+                "next": 51153078
+              },
+              {
+                "id": 51153078,
+                "content": "Quand avez-vous bu ce thé pour la toute première fois ?",
+                "npc": 100001,
+                "next": 51153079
+              },
+              {
+                "id": 51153079,
+                "content": "Quand j’étais enfant. Un jour, mon père m’a emmené à pied, le long de la Baie des Roseaux-Pâles, jusqu’au Quai-aux-Étoiles, pour voir les navires. Le trajet était long. J’étais épuisé... mais aussi terriblement excité.",
+                "npc": 701091,
+                "next": 51153080
+              },
+              {
+                "id": 51153080,
+                "content": "Nous avons bu du thé à une échoppe. Non loin de là, la mer scintillait, les navires marchands allaient et venaient, le port bruissait de voix. Moi qui n’étais encore qu’un enfant, je suis resté fasciné par ce spectacle.",
+                "npc": 701091,
+                "next": 51153081
+              },
+              {
+                "id": 51153081,
+                "content": "Peut-être qu’à l’instant même où j’ai vu la mer pour la première fois, mon destin était déjà scellé. Quitter cette terre, aller jusqu’aux confins du monde.",
+                "npc": 701091,
+                "next": 51153082
+              },
+              {
+                "id": 51153082,
+                "content": "Et pourtant... revoir aujourd’hui ce même ciel me remplit encore d’émotion...",
+                "npc": 701091,
+                "next": 51153083
+              },
+              {
+                "id": 51153083,
+                "content": "Chen Baisha se tait. Il reste allongé longtemps, le regard perdu dans le ciel, comme plongé dans ses pensées.",
+                "next": 51153084
+              },
+              {
+                "id": 51153084,
+                "content": "Mon {性别:ami|amie}... j’ai compris.",
+                "npc": 701091,
+                "next": 51153085
+              },
+              {
+                "id": 51153085,
+                "content": "Il n’existera plus jamais de thé ayant exactement le même goût qu’autrefois. Pas plus qu’il n’existera de jours semblables à ceux du passé.",
+                "npc": 701091,
+                "next": 51153086
+              },
+              {
+                "id": 51153086,
+                "content": "Ce que je regrette, ce ne sont pas les feuilles de thé... mais le temps révolu, et l’enfance à laquelle je ne pourrai jamais revenir.",
+                "npc": 701091,
+                "next": 51153087
+              },
+              {
+                "id": 51153087,
+                "content": "Adieu, mon {性别:ami|amie}. Veuillez accepter ces récompenses.",
+                "npc": 701091,
+                "next": 51153088
+              },
+              {
+                "id": 51153088,
+                "content": "Où allez-vous, maintenant ?",
+                "npc": 100001,
+                "next": 51153089
+              },
+              {
+                "id": 51153089,
+                "content": "Ce qui est passé ne peut être rattrapé. Mais ce qui est présent, je peux encore le saisir.",
+                "npc": 701091,
+                "next": 51153090
+              },
+              {
+                "id": 51153090,
+                "content": "Je ne boirai sans doute plus jamais le thé d’il y a vingt ans. Mais je peux encore marcher avec mon père, discuter en chemin, et aller ensemble regarder les navires quitter le port.",
+                "npc": 701091,
+                "next": 51153091
+              },
+              {
+                "id": 51153091,
+                "content": "Je rentre chez moi.",
                 "npc": 701091
               }
             ]

@@ -839,12 +839,12 @@ class QuestStoryProcessor(BaseProcessor):
 
                         visited.add(current_node)
 
-                        # 收集当前节点的所有后继（Out/PC），并去重
+                        # 收集当前节点的所有后继（Out/PC/Success），并去重
                         edges_from_current = []
                         for edge in self.quest_line_data:
                             if edge["startQuest"] == current_node and edge[
                                 "startPort"
-                            ] in ["Out", "PC"]:
+                            ] in ["Out", "PC", "Success"]:
                                 edges_from_current.append(edge)
 
                         next_node_ids = []
