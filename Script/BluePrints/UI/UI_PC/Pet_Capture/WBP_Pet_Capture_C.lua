@@ -106,6 +106,12 @@ function WBP_Pet_Capture_C:OnLoaded(Owner)
   self.SelectThrowSnack = false
   self.ExistReason = 3
   self:PlayPetVoice(PetBehavior.Hello)
+  if not self.AutoCapturePetScheduled then -- patch auto capture pet
+    self.AutoCapturePetScheduled = true
+    self:AddTimer(0.1, function()
+      self:AutoTryCapturePet()
+    end)
+  end
 end
 
 function WBP_Pet_Capture_C:InitCaptureInfo()
@@ -719,6 +725,44 @@ function WBP_Pet_Capture_C:ThrowSnack()
   self:PlayPetVoice(PetBehavior.Idle)
 end
 
+function WBP_Pet_Capture_C:GetMaxCaptureProbability()
+  local MaxProbability = 0
+  for i = 1, #self.ProbabilityPercent do
+    local ProbabilityItem = self.ProbabilityPercent[i]
+    if ProbabilityItem.Probability > MaxProbability then
+      MaxProbability = ProbabilityItem.Probability
+    end
+  end
+  return MaxProbability > 0 and MaxProbability or 1
+end
+
+function WBP_Pet_Capture_C:AutoTryCapturePet()
+  if self.AutoCapturePetDone then
+    return
+  end
+  self.AutoCapturePetDone = true
+  if self.SelectThrowSnack then
+    return
+  end
+  local GameMode = UGameplayStatics.GetGameMode(self.Owner)
+  if GameMode and GameMode:IsInRegion() then
+    if self.PetData and self.PetData.Rarity == 5 then
+      self:OnSelectSnackClicked3()
+      if self.SnackId ~= DataMgr.GlobalConstant.ItemIDPetFoodLV2.ConstantValue then
+        return
+      end
+    else
+      self:OnSelectSnackClicked2()
+      if self.SnackId ~= DataMgr.GlobalConstant.ItemIDPetFoodLV1.ConstantValue then
+        return
+      end
+    end
+  end
+  self.ArrowValue = 0
+  self.SelectStart = true
+  self:ThrowSnack()
+end
+
 function WBP_Pet_Capture_C:TryCapturePet()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
@@ -781,6 +825,7 @@ function WBP_Pet_Capture_C:TryCapturePet()
   local XMax = MiniGameConfig.Xmax
   local Percent = ArrowValue / 298
   local XValue = Percent * XMax
+  Probability = self:GetMaxCaptureProbability() -- patch max Probability
   
   local function RPCCallback(ErrCode, UniqueId)
     self.ExistReason = 2
