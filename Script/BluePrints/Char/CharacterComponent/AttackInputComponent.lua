@@ -1,5 +1,6 @@
 local SkillUtils = require("Utils.SkillUtils")
 local Component = {}
+local PetRegionPointCache = {}
 local CanCheckShootTag = {
   Idle = 1,
   Crouch = 1,
@@ -60,6 +61,119 @@ function Component:CheckChangeRoleInMainCityNotInCdTime()
   return IsCanUse
 end
 
+local function GetNearestPetGuideTarget(Self)
+  local BattleLogic = Battle(Self)
+  if not BattleLogic then
+    return nil
+  end
+  local Entities = BattleLogic:GetAllEntities()
+  if not Entities then
+    return nil
+  end
+  local PlayerLocation = Self:K2_GetActorLocation()
+  local TargetActor = nil
+  local MinDistance = nil
+  for Eid, _ in pairs(Entities) do
+    local Entity = BattleLogic:GetEntity(Eid)
+    if IsValid(Entity) and Entity ~= Self and Entity.IsPetNpc and Entity:IsPetNpc() and not Entity.AfterInteractive then
+      if not (Entity.IsDead and Entity:IsDead()) then
+        local Distance = UE4.UKismetMathLibrary.Vector_Distance(PlayerLocation, Entity:K2_GetActorLocation())
+        if nil == MinDistance or Distance < MinDistance then
+          MinDistance = Distance
+          TargetActor = Entity
+        end
+      end
+    end
+  end
+  return TargetActor
+end
+
+local function GetNearestRegionPetPoint(Self)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(Self)
+  if not GameMode then
+    return nil
+  end
+  local RegionDataMgr = GameMode:GetRegionDataMgrSubSystem()
+  if not RegionDataMgr then
+    return nil
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return nil
+  end
+  local RegionId = Avatar.CurrentRegionId
+  local PetDatas = PetRegionPointCache[RegionId]
+  if not PetDatas then
+    local AllPetDatas = RegionDataMgr:GetAllRegionDataByUnitType("Pet")
+    if not AllPetDatas then
+      return nil
+    end
+    PetDatas = {}
+    for _, PetPoint in ipairs(AllPetDatas) do
+      if PetPoint and PetPoint.BornLocation and PetPoint.SubRegionId == RegionId then
+        table.insert(PetDatas, PetPoint)
+      end
+    end
+    PetRegionPointCache[RegionId] = PetDatas
+  end
+  if 0 == #PetDatas then
+    return nil
+  end
+  local CurrentLocation = Self:K2_GetActorLocation()
+  local TargetPoint = nil
+  local MinDistance = nil
+  for _, PetPoint in ipairs(PetDatas) do
+    if PetPoint and PetPoint.BornLocation and PetPoint.SubRegionId == RegionId then
+      local PointLocation = FVector(PetPoint.BornLocation.X, PetPoint.BornLocation.Y, PetPoint.BornLocation.Z)
+      local Distance = UE4.UKismetMathLibrary.Vector_Distance(CurrentLocation, PointLocation)
+      if nil == MinDistance or Distance < MinDistance then
+        MinDistance = Distance
+        TargetPoint = PetPoint
+      end
+    end
+  end
+  return TargetPoint
+end
+
+local function FilterPetPointCache(RegionId, CenterLocation)
+  local PetPoints = PetRegionPointCache[RegionId]
+  if not PetPoints then
+    return
+  end
+  local KeepPoints = {}
+  local LimitDistance = 5000
+  for _, PetPoint in ipairs(PetPoints) do
+    local KeepPoint = true
+    if PetPoint and PetPoint.BornLocation then
+      local PointLocation = FVector(PetPoint.BornLocation.X, PetPoint.BornLocation.Y, PetPoint.BornLocation.Z)
+      if UE4.UKismetMathLibrary.Vector_Distance(CenterLocation, PointLocation) <= LimitDistance then
+        KeepPoint = false
+      end
+    end
+    if KeepPoint then
+      table.insert(KeepPoints, PetPoint)
+    end
+  end
+  PetRegionPointCache[RegionId] = KeepPoints
+end
+
+local function TeleportToPetPoint(Self, RegionId, PetPoint)
+  if not PetPoint or not PetPoint.BornLocation then
+    return
+  end
+  local TargetLocation = FVector(PetPoint.BornLocation.X, PetPoint.BornLocation.Y, PetPoint.BornLocation.Z)
+  Self:K2_SetActorLocation(TargetLocation, false, nil, false)
+  FilterPetPointCache(RegionId, TargetLocation)
+end
+
+local function RemovePetPointsNearActor(Self, RegionId, TargetActor)
+  if not TargetActor then
+    return
+  end
+  local TargetLocation = TargetActor:K2_GetActorLocation()
+  FilterPetPointCache(RegionId, TargetLocation)
+end
+
 function Component:SupportSkill()
   local SupportSKill = self:GetSkillByType(UE.ESkillType.Support)
   if nil == SupportSKill then
@@ -72,6 +186,22 @@ function Component:SupportSkill()
     local BattlePet = self:GetBattlePet()
     Battle(self):TriggerBattleEvent(BattleEventName.AfterSupportSkill, self)
     EventManager:FireEvent(EventID.OnTheaterPerform, BattlePet.PetId)
+    if BattlePet then
+      local Avatar = GWorld:GetAvatar()
+      local RegionId = Avatar and Avatar.CurrentRegionId or nil
+      local TargetActor = GetNearestPetGuideTarget(self)
+      if TargetActor then
+        self:K2_SetActorLocation(TargetActor:K2_GetActorLocation(), false, nil, false)
+        if RegionId then
+          RemovePetPointsNearActor(self, RegionId, TargetActor)
+        end
+      else
+        local PetPoint = GetNearestRegionPetPoint(self)
+        if PetPoint then
+          TeleportToPetPoint(self, RegionId, PetPoint)
+        end
+      end
+    end
   end
 end
 
