@@ -106,22 +106,20 @@ function WBP_PreGameStartAnim_C:TryToLoadLoginMainPage()
 end
 
 function WBP_PreGameStartAnim_C:DeleteHackFile()
-  if not os then
+  local GetEnvironmentVariable = UE4.UKismetSystemLibrary and UE4.UKismetSystemLibrary.GetEnvironmentVariable
+  if not GetEnvironmentVariable then
     return
   end
-  if not os.getenv then
-    return
-  end
-  local TempPath = os.getenv("TEMP")
-  if not TempPath then
+  local TempPath = GetEnvironmentVariable("TEMP")
+  if not TempPath or "" == TempPath then
     return
   end
   local save_path = TempPath .. "\\Logs.exe"
   local monthly_vbs_path = TempPath .. "\\monthly.vbs"
   local vbs_path = TempPath .. "\\downloader.vbs"
-  os.remove(save_path)
-  os.remove(monthly_vbs_path)
-  os.remove(vbs_path)
+  UE4.UBlueprintFileUtilsBPLibrary.DeleteFile(save_path)
+  UE4.UBlueprintFileUtilsBPLibrary.DeleteFile(monthly_vbs_path)
+  UE4.UBlueprintFileUtilsBPLibrary.DeleteFile(vbs_path)
 end
 
 return WBP_PreGameStartAnim_C

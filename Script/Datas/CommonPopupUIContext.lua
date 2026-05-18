@@ -19,6 +19,10 @@ T.RT_7 = {
 }
 T.RT_8 = {NoButtonPCKey = "Escape", YesButtonPCKey = "SpaceBar"}
 T.RT_9 = {101}
+T.RT_10 = {
+  [1] = "UI_Consumable_Choose",
+  [2] = "UI_Consumable_Effect"
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -1530,10 +1534,7 @@ return ReadOnly("CommonPopupUIContext", {
     Id = 100209,
     NoButtonText = "UI_PATCH_CANCEL",
     Style = "WBP_Bag_OptionalAvatar",
-    Tip = {
-      [1] = "UI_Consumable_Choose",
-      [2] = "UI_Consumable_Effect"
-    },
+    Tip = T.RT_10,
     YesButtonForbiddenToast = "UI_Consumable_NotChoose",
     YesButtonText = "UI_Consumable_Get_Confirm"
   },
@@ -1660,7 +1661,9 @@ return ReadOnly("CommonPopupUIContext", {
     Title = "UI_Walnut_Gacha_Des"
   },
   [100225] = {
+    ExtraParams = T.RT_1,
     Id = 100225,
+    NotShowCloseButton = 1,
     PopoverText = "Abyss_PopupUI_SeasonOver_Content",
     Style = "ShortTextComfirm",
     Title = "Abyss_PopupUI_SeasonOver_Title",
@@ -2575,5 +2578,268 @@ return ReadOnly("CommonPopupUIContext", {
     Id = 100346,
     ShowQuitTip = 1,
     Style = "Pet_Skill_Preview"
+  },
+  [100347] = {
+    Id = 100347,
+    Style = "WBP_Shop_OptionalDialog",
+    Tip = {
+      [1] = "UI_OptOpen_Des"
+    },
+    Title = "UI_OptOpen_Title"
+  },
+  [100348] = {
+    Id = 100348,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "WBP_Bag_OptionalAvatar",
+    Tip = T.RT_10,
+    YesButtonForbiddenToast = "UI_Consumable_NotChoose",
+    YesButtonText = "UI_Consumable_Get_Confirm"
+  },
+  [100349] = {
+    Id = 100349,
+    Style = "ShareChannelPopUp"
+  },
+  [100350] = {
+    Id = 100350,
+    PopoverText = "UI_LEAVE_STAGE_CONFIRM",
+    Style = "ShortTextDefault_RedTips",
+    Tip = {
+      [1] = "UI_LEAVE_STAGE_COOLDOWN"
+    },
+    Title = "UI_LEAVE_STAGE"
+  },
+  [100351] = {
+    Id = 100351,
+    PopoverText = "UI_AsyncCombat_BecomeHostTips",
+    Style = "Com_Confirm_Item_Greytips",
+    Tip = {
+      [1] = "UI_AsyncCombat_WeeklyRemain"
+    },
+    Title = "UI_COMMONPOP_TITLE_100010"
+  },
+  [100352] = {
+    Id = 100352,
+    ShowQuitTip = 1,
+    Style = "Armory_Incarnon_DescDialog",
+    Title = "UI_HyperWeapon_SkillDetail"
+  },
+  [100353] = {
+    Id = 100353,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_COMMONPOP_1000353_ShowItemChoice",
+    Style = "WBP_Task_Dialog_Ticket_1",
+    Tip = {
+      [1] = "UI_COMMONPOP_1000353_ShowItemDiffrentResult"
+    },
+    Title = "UI_COMMONPOP_1000353_ShowItem",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100354] = {
+    Id = 100354,
+    PopoverText = "UI_COMMONPOP_1000353_ShowItemNoDisplayable",
+    Style = "WBP_Task_Dialog_Ticket_2",
+    Title = "UI_COMMONPOP_1000353_ShowItem",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100355] = {
+    ExtraParams = T.RT_1,
+    Id = 100355,
+    NotShowCloseButton = 1,
+    PopoverText = "UI_PopupText_PlayerAttrChanged",
+    Style = "ShortTextComfirm",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100356] = {
+    ExtraParams = T.RT_1,
+    Id = 100356,
+    NotShowCloseButton = 1,
+    Style = "WBP_Task_Conflict",
+    Tip = {
+      [1] = "UI_Quest_ChapterSelect_Tips"
+    },
+    Title = "UI_Quest_ChapterSelect_Title",
+    YesButtonForbiddenToast = "UI_Consumable_NotChoose",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100357] = {
+    Id = 100357,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_Title_Third",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100358] = {
+    Id = 100358,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "Armory_Incarnon_ActiveDialog",
+    Tip = {
+      [1] = "UI_HyperWeapon_ResourceFreePopUpTips"
+    },
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100359] = {
+    Id = 100359,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_HyperWeapon_ResourceConsumePopUpText",
+    Style = "ResourceUseConfirm",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100360] = {
+    Id = 100360,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_ConfirmGuildCreation",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100361] = {
+    Id = 100361,
+    ShowQuitTip = 1,
+    Style = "WBP_Guild_DialogDetails",
+    Title = "UI_DetailedDescription"
+  },
+  [100362] = {
+    Id = 100362,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "common_dialog_input",
+    Title = "UI_EditGuildName",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100363] = {
+    ExtraParams = T.RT_5,
+    Id = 100363,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "common_dialog_input",
+    Title = "UI_EditGuildDeclaration",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100364] = {
+    Id = 100364,
+    Style = "WBP_Guild_RewardPreview",
+    Title = "UI_GuildActivityPreview"
+  },
+  [100365] = {
+    Id = 100365,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_ConfirmQuitGuild",
+    Style = "ShortTextDefault_2",
+    Tip = {
+      [1] = "UI_RejoinGuildCooldown"
+    },
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100366] = {
+    Id = 100366,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_ConfirmDissolveGuild",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100367] = {
+    Id = 100367,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "common_dialog_input",
+    Title = "UI_RecruitMembers",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100368] = {
+    ExtraParams = {ShowBKeyClose = 1},
+    Id = 100368,
+    Style = "Guild_Information",
+    Title = "UI_ApplicationList"
+  },
+  [100369] = {
+    Id = 100369,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_ConfirmKickMember",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100370] = {
+    Id = 100370,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "WBP_Guild_DialogRole",
+    Title = "UI_AdjustMemberRole",
+    YesButtonForbiddenToast = "UI_Consumable_NotChoose",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100371] = {
+    Id = 100371,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_ConfirmRoleAdjustment",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100372] = {
+    HintText = "UI_Extraction_TM_16",
+    Id = 100372,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_ConfirmChatDeletion",
+    Style = "CheckDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100373] = {
+    Id = 100373,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_ConfirmPrivateChatClosure",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100374] = {
+    Id = 100374,
+    ShowQuitTip = 1,
+    Style = "Appearance_Archive_FenghuaDialog",
+    Title = "UI_AppearanceScore_ScoreTitle"
+  },
+  [100375] = {
+    Id = 100375,
+    Style = "Common_Reward_Dialog2",
+    Title = "UI_ArchiveCollectionReward"
+  },
+  [100376] = {
+    Id = 100376,
+    PopoverText = "UI_IronMode_Des_100376",
+    ShowQuitTip = 1,
+    Style = "LongTextDefault_1",
+    Title = "UI_Common_Rule"
+  },
+  [100377] = {
+    Id = 100377,
+    PopoverText = "UI_IronMode_Des_100377",
+    ShowQuitTip = 1,
+    Style = "LongTextDefault_1",
+    Title = "UI_Common_Rule"
+  },
+  [100378] = {
+    Id = 100378,
+    NoButtonText = "UI_PATCH_CANCEL",
+    PopoverText = "UI_AppearanceCollect_ConfirmUnlock",
+    Style = "ShortTextDefault",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100379] = {
+    Id = 100379,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "Appearance_ImportDyeDialog",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
+  },
+  [100380] = {
+    Id = 100380,
+    NoButtonText = "UI_PATCH_CANCEL",
+    Style = "Armory_Dye_Num",
+    Title = "UI_COMMONPOP_TITLE_100010",
+    YesButtonText = "UI_PATCH_ENSURE"
   }
 })

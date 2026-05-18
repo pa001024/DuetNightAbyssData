@@ -16,9 +16,10 @@ end
 
 function BP_EnergySupplyMini_C:OnRepSurvivalMiniValue(SurvivalValue)
   local ChangeValue = SurvivalValue - self.NowEnergy
-  self.NowEnergy = SurvivalValue
-  self.NowEnergy = math.min(self.NowEnergy, self.MaxEnergy)
-  self.NowEnergy = math.max(self.NowEnergy, 0)
+  local newEnergy = SurvivalValue
+  newEnergy = math.min(newEnergy, self.MaxEnergy)
+  newEnergy = math.max(newEnergy, 0)
+  self:SetNowEnergy(newEnergy)
   if IsAuthority(self) then
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     if GameMode and self.NowEnergy >= self.MaxEnergy then

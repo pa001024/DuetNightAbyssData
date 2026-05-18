@@ -21,11 +21,7 @@ function M:Init(InitParams)
     return
   end
   local PocketName = InventoryCommonConst.SearchPocketNamePrefix .. self.MechanismUid
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
-    return
-  end
-  local Dungeonobject = ServerEntity:GetDungeonObject()
+  local Dungeonobject = GWorld:GetGameModeDungeonObject()
   if not Dungeonobject then
     return
   end

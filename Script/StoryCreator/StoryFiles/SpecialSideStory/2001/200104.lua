@@ -258,57 +258,51 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700251,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200075,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200087,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -496,33 +490,31 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700248,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -699,39 +691,36 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -991,33 +980,31 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700248,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1078,45 +1065,41 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700248,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1658,57 +1641,51 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700251,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200075,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200087,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1755,39 +1732,36 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1874,57 +1848,51 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700251,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200075,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200087,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -2001,57 +1969,51 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 820000,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200075,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200087,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -2186,57 +2148,51 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700251,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200075,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200087,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -2446,8 +2402,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -2564,57 +2522,51 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700251,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200087,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200075,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -2950,6 +2902,7 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               TalkActors = {},
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -2999,57 +2952,51 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700251,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200075,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200087,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -3289,39 +3236,36 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700248,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700253,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700254,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700252,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -3368,57 +3312,51 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700248,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200074,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200086,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700252,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200003,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",

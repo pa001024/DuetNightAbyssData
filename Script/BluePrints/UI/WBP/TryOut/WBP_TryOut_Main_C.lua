@@ -100,12 +100,15 @@ function M:InitItems()
   for _, Skill in ipairs(Char.SkillList) do
     local SkillData = DataMgr.Skill[Skill]
     if SkillData and SkillData[1] and SkillData[1][0] then
-      local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-      Obj.SkillId = Skill
-      Obj.Owner = self
-      Obj.Id = Id
-      self.List_Item:AddItem(Obj)
-      Id = Id + 1
+      local Data = SkillData[1][0]
+      if Data.SkillType ~= "UltraPassive" then
+        local Obj = NewObject(UIUtils.GetCommonItemContentClass())
+        Obj.SkillId = Skill
+        Obj.Owner = self
+        Obj.Id = Id
+        self.List_Item:AddItem(Obj)
+        Id = Id + 1
+      end
     end
   end
 end

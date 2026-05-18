@@ -9,6 +9,20 @@ ArchiveNumberModel.ArchiveType2Name = {
   [1006] = "Enemy"
 }
 
+function ArchiveNumberModel:CheckHyperWeaponCanShow()
+  local ShowHyperWeapon = false
+  local UIUnlockRuleInfo = DataMgr.UIUnlockRule.HyperWeapon
+  if UIUnlockRuleInfo and UIUnlockRuleInfo.ConditionId then
+    local Avatar = GWorld:GetAvatar()
+    if Avatar then
+      ShowHyperWeapon = ConditionUtils.CheckCondition(Avatar, UIUnlockRuleInfo.ConditionId)
+    end
+  else
+    ShowHyperWeapon = true
+  end
+  return ShowHyperWeapon
+end
+
 function ArchiveNumberModel:GetCharacterSumNumber()
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   local Sum = 0
@@ -31,13 +45,16 @@ end
 function ArchiveNumberModel:GetMeleeSumNumber()
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   local Sum = 0
+  local ShowHyperWeapon = self:CheckHyperWeaponCanShow()
   for _, Info in pairs(DataMgr.Weapon) do
-    local WeaponTags = DataMgr.BattleWeapon[Info.WeaponId].WeaponTag
-    if not Info.IsNotOpen and WeaponTags and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) then
-      for _, Tag in pairs(WeaponTags) do
-        if "Melee" == Tag then
-          Sum = Sum + 1
-          break
+    if Info.WeaponSubType ~= "Hyper" or ShowHyperWeapon then
+      local WeaponTags = DataMgr.BattleWeapon[Info.WeaponId].WeaponTag
+      if not Info.IsNotOpen and WeaponTags and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) then
+        for _, Tag in pairs(WeaponTags) do
+          if "Melee" == Tag then
+            Sum = Sum + 1
+            break
+          end
         end
       end
     end
@@ -48,13 +65,16 @@ end
 function ArchiveNumberModel:GetRangedSumNumber()
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   local Sum = 0
+  local ShowHyperWeapon = self:CheckHyperWeaponCanShow()
   for _, Info in pairs(DataMgr.Weapon) do
-    local WeaponTags = DataMgr.BattleWeapon[Info.WeaponId].WeaponTag
-    if not Info.IsNotOpen and WeaponTags and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) then
-      for _, Tag in pairs(WeaponTags) do
-        if "Ranged" == Tag then
-          Sum = Sum + 1
-          break
+    if Info.WeaponSubType ~= "Hyper" or ShowHyperWeapon then
+      local WeaponTags = DataMgr.BattleWeapon[Info.WeaponId].WeaponTag
+      if not Info.IsNotOpen and WeaponTags and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) then
+        for _, Tag in pairs(WeaponTags) do
+          if "Ranged" == Tag then
+            Sum = Sum + 1
+            break
+          end
         end
       end
     end

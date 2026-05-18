@@ -404,8 +404,9 @@ function M:CheckCurrentStage()
     return
   end
   local RegionId = Avatar.CurrentRegionId
+  local TargetRegionId = DataMgr.GlobalConstant.TheaterRegionId and DataMgr.GlobalConstant.TheaterRegionId.ConstantValue or 0
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-  if not GameState:IsInRegion() or Avatar:IsInHardBoss() or 101901 ~= RegionId then
+  if not GameState:IsInRegion() or Avatar:IsInHardBoss() or RegionId ~= TargetRegionId then
     DebugPrint("ayff 离开剧院区域，关闭剧院活动UI regionid:", RegionId)
     self:Close()
   end

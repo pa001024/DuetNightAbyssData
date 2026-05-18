@@ -22,7 +22,7 @@ function M:OnListItemObjectSet(Content)
   self:InitIcon()
   self:InitInteractivity()
   self:InitIsLock()
-  if self.Content.IsHUDChange and self.ParentWidget.LastClickedItem == Content then
+  if self.Content.IsHUDChange and self:IsAlreadySelected() then
     self:PlayAnimation(self.Click)
   else
     self:PlayAnimation(self.Normal)
@@ -97,7 +97,7 @@ function M:OnButonClicked()
 end
 
 function M:OnButonHovered()
-  if self.Content.Islock or self.ParentWidget.LastClickedItem == self.Content then
+  if self.Content.Islock or self:IsAlreadySelected() then
     return
   end
   self:StopAnimation(self.UnHover)
@@ -105,7 +105,7 @@ function M:OnButonHovered()
 end
 
 function M:OnButonUnhovered()
-  if self.Content.Islock or self.ParentWidget.LastClickedItem == self.Content then
+  if self.Content.Islock or self:IsAlreadySelected() then
     return
   end
   self:StopAnimation(self.Hover)
@@ -113,7 +113,7 @@ function M:OnButonUnhovered()
 end
 
 function M:OnButonPressed()
-  if self.Content.Islock or self.ParentWidget.LastClickedItem == self.Content then
+  if self.Content.Islock or self:IsAlreadySelected() then
     return
   end
   self:PlayAnimation(self.Press)
@@ -148,6 +148,16 @@ function M:HandleHUDNavigationRight()
   end
   Parent.List_Change:NavigateToIndex(self.Content.Index)
   return Parent.UnLockedContents[self.Content.Index + 1].SelfWidget
+end
+
+function M:IsAlreadySelected()
+  if not self.ParentWidget then
+    return false
+  end
+  if self.ParentWidget.LastClickedItem == self.Content then
+    return true
+  end
+  return false
 end
 
 return M

@@ -41,6 +41,16 @@ return ReadOnly("RegionMap", {
     RegionMapId = 204,
     RegionMapUnlockCondition = 317
   },
+  [205] = {
+    RegionId = 1060,
+    RegionMapId = 205,
+    RegionMapUnlockCondition = 332
+  },
+  [206] = {
+    RegionId = 1063,
+    RegionMapId = 206,
+    RegionMapUnlockCondition = 333
+  },
   [300] = {
     RegionId = 1021,
     RegionMapId = 300,

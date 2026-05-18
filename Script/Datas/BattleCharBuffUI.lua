@@ -7,17 +7,17 @@ end
 return ReadOnly("BattleCharBuffUI", {
   [1102] = {
     BuffId = {
-      [0] = 110231,
-      [1] = 110231,
-      [2] = 110231,
-      [3] = 110231,
-      [4] = 110231,
-      [5] = 110231,
-      [6] = 110231
+      [0] = 110201,
+      [1] = 110201,
+      [2] = 110201,
+      [3] = 110201,
+      [4] = 110201,
+      [5] = 110201,
+      [6] = 110201
     },
     ElementAttr = "Dark",
     ID = 1102,
-    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Buff/T_Buff_Taunt.T_Buff_Taunt'",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_FuLuo01.T_Skill_FuLuo01'",
     Type = "Layer"
   },
   [1103] = {
@@ -49,6 +49,21 @@ return ReadOnly("BattleCharBuffUI", {
     ID = 1104,
     IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Yeer01.T_Skill_Yeer01'",
     Type = "Layer"
+  },
+  [1201] = {
+    BuffId = {
+      [0] = 120102,
+      [1] = 120102,
+      [2] = 120102,
+      [3] = 120102,
+      [4] = 120102,
+      [5] = 120102,
+      [6] = 120102
+    },
+    ElementAttr = "Dark",
+    ID = 1201,
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Buff/T_Buff_BonusDmg_Dark.T_Buff_BonusDmg_Dark'",
+    Type = "LastTime"
   },
   [1502] = {
     BuffId = {
@@ -302,6 +317,20 @@ return ReadOnly("BattleCharBuffUI", {
     ElementAttr = "Wind",
     ID = 5401,
     IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Dafu03.T_Skill_Dafu03'",
+    Type = "Layer"
+  },
+  [1029901] = {
+    BuffId = {
+      [0] = 1029901
+    },
+    ID = 1029901,
+    Type = "Layer"
+  },
+  [1029903] = {
+    BuffId = {
+      [0] = 1029903
+    },
+    ID = 1029903,
     Type = "Layer"
   }
 })

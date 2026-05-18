@@ -311,12 +311,18 @@ return ReadOnly("MapIdConfig", {
     MapName = "Haiboliya_Chezhan05_Design"
   },
   Haiboliya_Chezhan_BHCZ_Design = {
+    ExploreID = 7090,
     MapID = 248,
     MapName = "Haiboliya_Chezhan_BHCZ_Design"
   },
   Haiboliya_Chezhan_CXQ_Design = {
     MapID = 249,
     MapName = "Haiboliya_Chezhan_CXQ_Design"
+  },
+  Haiboliya_Chezhan_CZDX_Design = {
+    ExploreID = 7091,
+    MapID = 289,
+    MapName = "Haiboliya_Chezhan_CZDX_Design"
   },
   Haiboliya_Chezhan_CZYW_Design = {
     MapID = 263,

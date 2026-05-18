@@ -235,11 +235,9 @@ class QuestStoryProcessor(BaseProcessor):
             dict: 故事文件数据，如果加载失败返回 None
         """
         try:
-            # 将 .story 替换为 .json
-            json_path = story_path.replace(".story", ".json")
-            # 替换路径分隔符
-            json_path = json_path.replace("\\", os.sep).replace("/", os.sep)
-            # 构建完整路径
+            json_path = self._normalize_story_path(story_path)
+            if not json_path:
+                return None
             full_path = os.path.join(self.story_files_base_path, json_path)
 
             if not os.path.exists(full_path):

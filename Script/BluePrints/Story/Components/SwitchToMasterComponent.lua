@@ -32,29 +32,37 @@ function FSwitchToMasterComponent:Execute()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     GWorld.logger.error("FSwitchToMasterComponent@没有正常登录")
-    Avatar = {Sex = 0, WeitaSex = 1}
+    Avatar = {
+      Sex = 0,
+      WeitaSex = 1,
+      CharacterAttributeSwitch = {}
+    }
   end
   local RealMasterType, MasterGender, MasterRoleId
   if self.MasterType == "Player" then
     MasterGender = Avatar.Sex
+    MasterRoleId = Avatar.CharacterAttributeSwitch[MasterGender]
     RealMasterType = "PlayerLight"
   else
     MasterGender = Avatar.WeitaSex
   end
-  RealMasterType = RealMasterType or self.MasterType
-  local MasterInfo = DataMgr.Player2RoleId[RealMasterType]
-  if not MasterInfo then
-    GWorld.logger.error("FSwitchToMasterComponent@没有找到对应的主角信息，请检查导表" .. RealMasterType)
-    return
+  if not MasterRoleId then
+    RealMasterType = RealMasterType or self.MasterType
+    local MasterInfo = DataMgr.Player2RoleId[RealMasterType]
+    if not MasterInfo then
+      GWorld.logger.error("FSwitchToMasterComponent@没有找到对应的主角信息，请检查导表" .. RealMasterType)
+      return
+    end
+    local GenderInfo = MasterInfo[MasterGender]
+    if not GenderInfo then
+      GWorld.logger.error("FSwitchToMasterComponent@对应性别没有角色，请检查导表")
+      return
+    end
+    MasterRoleId = GenderInfo
   end
-  local GenderInfo = MasterInfo[MasterGender]
-  if not GenderInfo then
-    GWorld.logger.error("FSwitchToMasterComponent@对应性别没有角色，请检查导表")
-    return
-  end
-  MasterRoleId = GenderInfo
   print(_G.LogTag, "FSwitchToMasterComponent@ChangeToMaster", MasterRoleId, MasterGender)
   Player.HeroTempInfo = {
+    QuestRoleID = Player.AvatarQuestRoleID,
     RoleInfo = {
       PlayerHp = Player:GetAttr("Hp"),
       PlayerSp = Player:GetAttr("Sp"),
@@ -136,16 +144,17 @@ function FSwitchToMasterComponent:Resume()
     DebugPrint("FSwitchToMasterComponent:Resume(), Avatar无效\n")
     return
   end
+  local PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   if Player:GetController():GetClass():GetName() == "TalkAIController" and not self.SeamlessBlendOut then
     self.TalkAIController = Player:GetController()
-    self.PlayerController = UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    self.PlayerController = PlayerController
     self.TalkPawn = self.PlayerController.Pawn
     self.TalkAIController:UnPossess(Player)
     self.PlayerController:Possess(Player)
   end
   Player:UnBanSkills()
   Player:RecoverHeroInfo()
-  Player:ChangeRole(nil, AvatarUtils:GetDefaultBattleInfo(GWorld:GetAvatar()))
+  Player:ChangeRole(nil, PlayerController and PlayerController:GetAvatarInfo() or AvatarUtils:GetDefaultBattleInfo(Avatar))
   if Player.RangedWeapon and 0 == Player.RangedWeapon:GetAttr("MagazineBulletNum") then
     Player.RangedWeapon:SetWeaponState("NoBullet", true)
   end

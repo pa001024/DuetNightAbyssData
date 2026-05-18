@@ -109,5 +109,45 @@
     "access": [
       "ショップ"
     ]
+  },
+  {
+    "id": 1008,
+    "name": "考える人の座",
+    "des": "忠誠の叫びを聞き、星々が燃えるのを見た。",
+    "icon": "Mounts_0009",
+    "resourceIcon": "Icon_Mounts_0009",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49991,
+    "fly": 1,
+    "access": [
+      "ショップ"
+    ]
+  },
+  {
+    "id": 1009,
+    "name": "ナイトメア",
+    "des": "夜の帳が天地を覆い隠し、かすれた汽笛がその間に響き渡る。",
+    "icon": "Mounts_0011",
+    "resourceIcon": "Icon_Mounts_0011",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49990,
+    "access": [
+      "プリズムショップ期間限定交換"
+    ]
+  },
+  {
+    "id": 1010,
+    "name": "シャドウメア",
+    "des": "漆黒の双翼が夜を切り裂き、月明かりさえ届かぬ彼岸へと静かに走り込む。",
+    "icon": "Mounts_0010",
+    "resourceIcon": "Icon_Mounts_0010",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49989,
+    "access": [
+      "プリズムショップ期間限定交換"
+    ]
   }
 ]

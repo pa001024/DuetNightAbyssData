@@ -336,6 +336,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51003101,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -363,8 +364,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -462,6 +465,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51003103,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -489,8 +493,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -923,33 +929,31 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700102,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700103,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1025,33 +1029,31 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700103,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700102,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1411,6 +1413,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = false,
               IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51003111,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -1438,8 +1441,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -1505,6 +1510,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = false,
               IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51003115,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -1532,8 +1538,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -1587,6 +1595,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = false,
               IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51003117,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -1614,15 +1623,16 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 700219,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -1881,6 +1891,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51003105,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -1908,8 +1919,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -2074,6 +2087,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51002901,
               FlowAssetPath = "",
               TalkType = "Impression",
@@ -2101,8 +2115,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "check",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -2129,6 +2145,7 @@ return {
               IsNpcNode = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51002912,
               FlowAssetPath = "",
               TalkType = "Impression",
@@ -2156,8 +2173,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -2175,6 +2194,7 @@ return {
               IsNpcNode = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51002911,
               FlowAssetPath = "",
               TalkType = "Impression",
@@ -2202,8 +2222,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",

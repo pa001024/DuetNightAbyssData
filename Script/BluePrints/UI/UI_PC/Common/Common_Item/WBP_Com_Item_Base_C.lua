@@ -137,7 +137,26 @@ function M:InitCommonView()
   end
 end
 
+function M:SetHeadDynamicPath(WidgetPath)
+  self:AsyncLoadWidgetCommon(nil, "SetHeadDynamicPathTask", function(CoroutineObj)
+    if self.WidgetMap[self.HeadDynamicWidget] then
+      self:RemoveWidgetFromNode(self.HeadDynamicWidget)
+    end
+    self.HeadDynamicWidget = self:CreateWidgetAsync(nil, CoroutineObj, WidgetPath)
+    self:AddWidgetToNode(self.HeadDynamicWidget)
+  end)
+end
+
 function M:SetIcon(IconPath)
+  if self.ItemType == "HeadFrame" or self.ItemType == "HeadSculpture" then
+    local CheckIconPath = DataMgr[self.ItemType][self.Id].Icon
+    if not CheckIconPath then
+      local DynamicMaterial = self.Item.Item_BG:GetDynamicMaterial()
+      DynamicMaterial:SetScalarParameterValue("IconOpacity", 0)
+      self:SetHeadDynamicPath(IconPath)
+      return
+    end
+  end
   if self.ItemType == "Walnut" then
     IconPath = DataMgr.Walnut[self.Id].Icon
     self:SetWalnutNum(self.Id)
@@ -224,7 +243,6 @@ end
 function M:SetRarity(Rarity)
   local Item_BG = self.Item.Item_BGPanel or self.Item.Item_BG
   local DynamicMaterial = Item_BG:GetDynamicMaterial()
-  DynamicMaterial:SetScalarParameterValue("IconOpacity", 1)
   if not IsValid(DynamicMaterial) then
     DebugPrint("ZDX_DynamicMaterial不合法")
   end
@@ -360,7 +378,7 @@ function M:OnMouseButtonUp(MyGeometry, MouseEvent)
       Content.ItemType = self.ItemType
       Content.SinglePreview = true
       Content.HidePurchase = true
-      UIManager(self):LoadUINew("SkinPreview", Content, self.ParentWidget)
+      PageJumpUtils:JumpToSkinPreview(Content, self.ParentWidget)
       return UWidgetBlueprintLibrary.Handled()
     end
   end
@@ -579,7 +597,7 @@ function M:OnOwningListItemClicked(Content)
       Content.ItemType = self.ItemType
       Content.SinglePreview = true
       Content.HidePurchase = true
-      UIManager(self):LoadUINew("SkinPreview", Content, self.ParentWidget)
+      PageJumpUtils:JumpToSkinPreview(Content, self.ParentWidget)
       return
     end
   end

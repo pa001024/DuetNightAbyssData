@@ -2634,8 +2634,17 @@ return {
         RarelyId = 7031070
       }
     },
-    ["7031001"] = {
+    ["7031071"] = {
       AutoReset = 0,
+      ["1650747"] = {
+        CreatorId = 1650747,
+        UnitType = "Mechanism",
+        UnitId = 70113,
+        RarelyId = 7031071
+      }
+    },
+    ["7031001"] = {
+      AutoReset = 1,
       ["1650110"] = {
         CreatorId = 1650110,
         UnitType = "Mechanism",
@@ -2689,15 +2698,6 @@ return {
         UnitType = "Mechanism",
         UnitId = 111010,
         RarelyId = 7031001
-      }
-    },
-    ["7031071"] = {
-      AutoReset = 0,
-      ["1650747"] = {
-        CreatorId = 1650747,
-        UnitType = "Mechanism",
-        UnitId = 70113,
-        RarelyId = 7031071
       }
     }
   },

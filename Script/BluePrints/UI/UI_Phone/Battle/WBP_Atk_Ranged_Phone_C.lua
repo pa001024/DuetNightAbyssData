@@ -10,8 +10,6 @@ function M:Initialize(Initializer)
   self.LocalTurnSpeed_Horizontal = 4.5
   self.LocalTurnSpeed_Vertical = 2
   self.DefaultEdgeWidth = 60
-  self.LerpTime = 1.5
-  self.YawRotateSpeed = 30
   self.BtnHoldCD = 3
   self.OccupiedTag = "Right"
   self.EdgeWidth = 60
@@ -29,24 +27,12 @@ function M:Construct()
   end
 end
 
-function M:Tick(MyGeometry, InDeltaTime)
-  if self.AutoYawRotate and self.YawDirection then
-    local YawSpeed = self.YawRotateSpeed
-    if self.YawDirection < 0 then
-      YawSpeed = -self.YawRotateSpeed
-    end
-    if self.PassedTime < self.LerpTime then
-      self.PassedTime = self.PassedTime + InDeltaTime
-      local Alpha = self.PassedTime / self.LerpTime
-      Alpha = math.clamp(Alpha, 0, 1)
-      YawSpeed = UE4.UKismetMathLibrary.Ease(self.LastYawSpeed, YawSpeed, Alpha, UE4.EEasingFunc.EaseOut)
-    end
-    self.OwnerPlayer:AddControllerYawInput(YawSpeed * InDeltaTime)
-  end
-end
-
 function M.ButtonFireDown(Battle_Button_Phone, Index, StartPos)
   local FireBtn = Battle_Button_Phone.AtkRanged
+  if FireBtn.CurButtonState == "Ban" then
+    UIManager(FireBtn):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_RANGED_FORBIDDEN"))
+    return
+  end
   if not FireBtn.OwnerPanel.FireOccupied then
     FireBtn.OwnerPanel.FireOccupied = FireBtn.OccupiedTag
     FireBtn.OwnerPanel:TryToPlayTargetCommand("Fire", true)
@@ -57,10 +43,7 @@ function M.ButtonFireDown(Battle_Button_Phone, Index, StartPos)
   end
   FireBtn.IsFireDown = true
   FireBtn.ViewPortSize = UWidgetLayoutLibrary.GetViewportSize(Battle_Button_Phone)
-  if FireBtn.CurButtonState == "Ban" then
-    UIManager(FireBtn):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_RANGED_FORBIDDEN"))
-    return
-  elseif FireBtn.OwnerPlayer:CheckSkillInActive(ESkillName.Fire) then
+  if FireBtn.OwnerPlayer:CheckSkillInActive(ESkillName.Fire) then
     return
   end
   FireBtn.Joystick:SetRenderOpacity(1.0)
@@ -72,16 +55,15 @@ end
 
 function M.ButtonFireMove(Battle_Button_Phone, TouchFingerCount, Index, LastPos, TotalDeltaDis, LastDeltaDis, TouchLocalPos)
   local FireBtn = Battle_Button_Phone.AtkRanged
+  if FireBtn.CurButtonState == "Ban" then
+    return
+  end
   local WorldDeltaTime = UE4.UGameplayStatics.GetWorldDeltaSeconds(FireBtn)
   FireBtn.OwnerPlayer:AddCharacterPitchInput(-FireBtn.LocalTurnSpeed_Vertical * LastDeltaDis.Y * WorldDeltaTime)
   if TouchLocalPos.X > FireBtn.EdgeWidth and TouchLocalPos.X < FireBtn.ViewPortSize.X - FireBtn.EdgeWidth then
-    FireBtn.AutoYawRotate = false
     FireBtn.LastYawSpeed = FireBtn.LocalTurnSpeed_Horizontal * LastDeltaDis.X
     FireBtn.OwnerPlayer:AddCharacterYawInput(FireBtn.LastYawSpeed * WorldDeltaTime)
-    FireBtn.PassedTime = 0
     FireBtn.YawDirection = TotalDeltaDis.X
-  else
-    FireBtn.AutoYawRotate = true
   end
   if FireBtn.CurButtonState == "Forbidden" or FireBtn.CurButtonState == "Ban" or FireBtn.CurButtonState == "Empty" then
     return
@@ -103,13 +85,16 @@ end
 
 function M.ButtonFireUp(Battle_Button_Phone, Index, WidgetLocalPos, LastWidgetTouchPos, EndTouchPos, TotalDeltaDis)
   local FireBtn = Battle_Button_Phone.AtkRanged
+  if FireBtn.CurButtonState == "Ban" then
+    return
+  end
   if FireBtn.OwnerPanel.FireOccupied == FireBtn.OccupiedTag or not FireBtn.OwnerPanel.FireOccupied then
     FireBtn.OwnerPanel.FireOccupied = nil
     if FireBtn.LockShooting and FireBtn.OwnerPlayer:CharacterInTag("Shooting") and not FireBtn.HasHeavyShooting then
       FireBtn.CurrentTime = UE4.UGameplayStatics.GetRealTimeSeconds(FireBtn)
       if FireBtn.CurrentTime - FireBtn.StartTime > FireBtn.BtnHoldCD then
         FireBtn.IsLockingShoot = true
-        UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_Toast_FireLocked"))
+        UIManager(FireBtn):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, GText("UI_Toast_FireLocked"))
         return
       end
     end
@@ -198,6 +183,10 @@ function M:OnWeaponHUDIconLoadFinish(Object, ResourceID)
   if self.ImageMat then
     self.ImageMat:SetTextureParameterValue("Icon_Ranged", Object)
   end
+  if self.CurButtonState == "Ban" then
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Ban)
+    return
+  end
   self:UpdateRangeWeaponButton()
 end
 
@@ -245,6 +234,9 @@ end
 function M:UpdateRangeWeaponButton()
   DebugPrint("射击键当前状态", self.CurButtonState)
   if not self.RangedWeapon then
+    return
+  end
+  if self.CurButtonState == "Ban" then
     return
   end
   if self.CurButtonState == "Empty" then

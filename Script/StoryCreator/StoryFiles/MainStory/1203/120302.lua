@@ -203,7 +203,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -233,7 +235,8 @@ return {
             propsData = {
               TargetTime = 12,
               NeedLerp = false,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           },
           ["17737463772611735705"] = {
@@ -423,7 +426,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -461,6 +466,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 12060740,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -488,8 +494,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -538,7 +546,8 @@ return {
             propsData = {
               TargetTime = 12,
               NeedLerp = false,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           },
           ["17738244732136518277"] = {
@@ -762,7 +771,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -816,14 +827,12 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 250012,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 250013,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OverrideFailBlend = false
@@ -855,7 +864,8 @@ return {
             propsData = {
               TargetTime = 12,
               NeedLerp = true,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           },
           ["17737182103911455"] = {
@@ -1064,7 +1074,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1217,7 +1229,8 @@ return {
             propsData = {
               TargetTime = 12,
               NeedLerp = true,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           }
         },
@@ -1373,7 +1386,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1427,7 +1442,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1485,7 +1502,8 @@ return {
             propsData = {
               TargetTime = 12,
               NeedLerp = true,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           }
         },

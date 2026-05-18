@@ -1,4 +1,21 @@
 require("UnLua")
+local I18N_PACK_PREFIX = "#I18N#"
+local I18N_PACK_SEPARATOR = "|"
+
+local function PackI18nText(TextMapId, ...)
+  local Args = {
+    ...
+  }
+  local Parts = {
+    I18N_PACK_PREFIX,
+    tostring(TextMapId)
+  }
+  for i = 1, #Args do
+    table.insert(Parts, tostring(Args[i]))
+  end
+  return table.concat(Parts, I18N_PACK_SEPARATOR)
+end
+
 local BP_SynthesisIIComponent_C = Class({
   "BluePrints.Common.TimerMgr"
 })
@@ -9,9 +26,9 @@ function BP_SynthesisIIComponent_C:InitSynthesisIIComponent()
   self.IconPathRed = "DefeatMission"
   self.IconPathSpecialEnemy = "SpecialEnemy"
   self.TextTitle = "DUNGEON_SYNTHESIS2_100"
-  self.TextWave1 = string.format(GText("DUNGEON_SYNTHESIS2_101"), 1, 3)
-  self.TextWave2 = string.format(GText("DUNGEON_SYNTHESIS2_101"), 2, 3)
-  self.TextWave3 = string.format(GText("DUNGEON_SYNTHESIS2_101"), 3, 3)
+  self.TextWave1 = PackI18nText("DUNGEON_SYNTHESIS2_101", 1, 3)
+  self.TextWave2 = PackI18nText("DUNGEON_SYNTHESIS2_101", 2, 3)
+  self.TextWave3 = PackI18nText("DUNGEON_SYNTHESIS2_101", 3, 3)
   local SynthesisIIInfo = DataMgr.SynthesisII[self.GameMode.DungeonId]
   if not SynthesisIIInfo then
     GameState(self):ShowDungeonError("SynthesisIIComponent:当前副本ID没有填写在对应的副本表中, 读表失败! 读入Id：" .. self.GameMode.DungeonId, Const.DungeonErrorType.DungeonGame, Const.DungeonErrorTitle.Config)
@@ -299,7 +316,7 @@ function BP_SynthesisIIComponent_C:InitFortDefenceMission()
     local FirstEid = self.CannonCreatorIdToEid[FirstCreatorId]
     self.GameMode.EMGameState:AddGuideEid(FirstEid)
   end
-  local FortDefenceTaskText = string.format(GText("DUNGEON_SYNTHESIS2_104"), 0, self.FortDefenceGameTotalCount)
+  local FortDefenceTaskText = PackI18nText("DUNGEON_SYNTHESIS2_104", 0, self.FortDefenceGameTotalCount)
   self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, FortDefenceTaskText, self.TextWave2)
 end
 
@@ -332,7 +349,7 @@ function BP_SynthesisIIComponent_C:OnOneFortDefenceBegin(CreatorId)
   self:SetFortDefenceGameIndex(self:GetFortDefenceGameIndex() + 1)
   self:SetFortDefenceKilledNum(0)
   self.FortDefenceTargetNum = self.FortDefenceTargetNums[self:GetFortDefenceGameIndex()]
-  local FortDefenceTaskText = string.format(GText("DUNGEON_SYNTHESIS2_105"), self:GetFortDefenceGameIndex(), self.FortDefenceGameTotalCount)
+  local FortDefenceTaskText = PackI18nText("DUNGEON_SYNTHESIS2_105", self:GetFortDefenceGameIndex(), self.FortDefenceGameTotalCount)
   self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, FortDefenceTaskText, self.TextWave2)
   self.GameMode:TriggerGameModeEvent("Event_OnOneFortDefenceBegin")
   self:ShowFortDefenceProgressUI(self.FortDefenceTargetNum)
@@ -403,7 +420,7 @@ function BP_SynthesisIIComponent_C:OnOneFortDefenceFinished(CreatorId)
     if NextMiniGameCreatorId then
       self:ActiveSubGameModeStaticCreator(NextMiniGameCreatorId)
     end
-    local FortDefenceTaskText = string.format(GText("DUNGEON_SYNTHESIS2_104"), NextIndex - 1, self.FortDefenceGameTotalCount)
+    local FortDefenceTaskText = PackI18nText("DUNGEON_SYNTHESIS2_104", NextIndex - 1, self.FortDefenceGameTotalCount)
     self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, FortDefenceTaskText, self.TextWave2)
   end
 end
@@ -428,11 +445,18 @@ function BP_SynthesisIIComponent_C:InitEscortMission()
   self.NextRouteIndex = 1
   self.CurHostageIndex = 0
   self.TriggerdRouteLevelNames = {}
+  self.EscortEliteEidNeedCheckDis = {}
+  self.FinishedCheckDisCount = 0
+  self.EscortEliteDistanceThreshold = 600
+  if DataMgr.GlobalConstant.EscortEliteDisThreshold then
+    self.EscortEliteDistanceThreshold = DataMgr.GlobalConstant.EscortEliteDisThreshold.ConstantValue
+  end
   self:ActiveSubGameModeStaticCreator(self.HostageCreatorId, "EscortHostage")
   for _, EliteCreatorId in pairs(self.EliteCreatorIds) do
     self:ActiveSubGameModeStaticCreator(EliteCreatorId, "EscortElite")
   end
   self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, "DUNGEON_SYNTHESIS2_106", self.TextWave3)
+  self:AddTimer(1, self.DoCheckEscortEliteDistance, true, 0, "CheckEscortEliteDistance", false)
 end
 
 function BP_SynthesisIIComponent_C:OnStaticCreatorEvent_Escort(EventName, Eid, UnitId, UnitType, CreatorId)
@@ -446,6 +470,8 @@ function BP_SynthesisIIComponent_C:OnStaticCreatorEvent_Escort(EventName, Eid, U
     self.EidToTimerHandle = self:AddTimer(self.CheckResetInterval, function()
       self:CheckHostageNeedToResetPoint()
     end, true, 0, "StartResetCheck", false)
+  elseif "EscortElite" == EventName then
+    self.EscortEliteEidNeedCheckDis[Eid] = true
   end
 end
 
@@ -525,6 +551,7 @@ function BP_SynthesisIIComponent_C:OnHostageEnterPoint(PointLevelName)
     self.GameMode:AddDungeonEvent("FinishSynthesisII")
     self.GameMode:NotifyClientShowDungeonToast("DUNGEON_SYNTHESIS2_117", 2, EToastType.Success)
     self.GameMode:NotifyClientShowDungeonTaskNew(self.IconPathYellow, self.TextTitle, "DUNGEON_SYNTHESIS2_108", self.TextWave3)
+    self:RemoveTimer("CheckEscortEliteDistance")
   end
   self.NextRouteIndex = self.NextRouteIndex + 1
 end
@@ -545,6 +572,35 @@ function BP_SynthesisIIComponent_C:GetHostageRouteFinalLoc()
   end
   DebugPrint("SynthesisIIComponent: GetHostageRouteFinalLoc LevelName:", LevelName, "ResLoc:", ResLoc)
   return ResLoc
+end
+
+function BP_SynthesisIIComponent_C:DoCheckEscortEliteDistance()
+  local Hostage = Battle(self):GetEntity(self.HostageEid)
+  if not IsValid(Hostage) then
+    return
+  end
+  local HostageLoc = Hostage:K2_GetActorLocation()
+  for EliteEid, NeedCheck in pairs(self.EscortEliteEidNeedCheckDis) do
+    if NeedCheck then
+      local Elite = Battle(self):GetEntity(EliteEid)
+      if IsValid(Elite) then
+        local Dist = UE4.UKismetMathLibrary.Vector_Distance(HostageLoc, Elite:K2_GetActorLocation())
+        if Dist <= self.EscortEliteDistanceThreshold then
+          self.EscortEliteEidNeedCheckDis[EliteEid] = false
+          self.FinishedCheckDisCount = self.FinishedCheckDisCount + 1
+          self:DoEliteTooCloseToHostage(EliteEid)
+        end
+      end
+    end
+  end
+  if self.FinishedCheckDisCount >= #self.EliteCreatorIds then
+    self:RemoveTimer("CheckEscortEliteDistance")
+  end
+end
+
+function BP_SynthesisIIComponent_C:DoEliteTooCloseToHostage(Eid)
+  self.GameMode.EMGameState:AddGuideEid(Eid)
+  self.GameMode:NotifyClientShowDungeonToast("DUNGEON_SYNTHESIS2_125", 2, EToastType.CombineWarning)
 end
 
 function BP_SynthesisIIComponent_C:ActiveSubGameModeStaticCreator(CreatorId, EventName)

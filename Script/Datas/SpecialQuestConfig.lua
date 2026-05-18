@@ -3,34 +3,38 @@ T.RT_1 = {304}
 T.RT_2 = {101101, 101103}
 T.RT_3 = {1}
 T.RT_4 = {102101}
-T.RT_5 = {102104}
-T.RT_6 = {101401}
-T.RT_7 = {103201}
-T.RT_8 = {101402}
-T.RT_9 = {101901}
-T.RT_10 = {101103}
-T.RT_11 = {101101}
-T.RT_12 = {104503}
-T.RT_13 = {304, 94}
-T.RT_14 = {104506}
-T.RT_15 = {105601, 105602}
-T.RT_16 = {104505}
-T.RT_17 = {105201}
-T.RT_18 = {104801}
-T.RT_19 = {105301}
-T.RT_20 = {104501, 104503}
-T.RT_21 = {105401}
-T.RT_22 = {104504}
-T.RT_23 = {104301}
-T.RT_24 = {104108}
-T.RT_25 = {104501}
-T.RT_26 = {104103}
-T.RT_27 = {105701}
-T.RT_28 = {104105}
-T.RT_29 = {104110}
-T.RT_30 = {104106}
-T.RT_31 = {104104}
-T.RT_32 = {101105}
+T.RT_5 = {106301}
+T.RT_6 = {106001}
+T.RT_7 = {106101}
+T.RT_8 = {102104}
+T.RT_9 = {101401}
+T.RT_10 = {103201}
+T.RT_11 = {101402}
+T.RT_12 = {101901}
+T.RT_13 = {101103}
+T.RT_14 = {101101}
+T.RT_15 = {104503}
+T.RT_16 = {304, 94}
+T.RT_17 = {104506}
+T.RT_18 = {105601, 105602}
+T.RT_19 = {104505}
+T.RT_20 = {105201}
+T.RT_21 = {104801}
+T.RT_22 = {105301}
+T.RT_23 = {104501, 104503}
+T.RT_24 = {105401}
+T.RT_25 = {104503, 104504}
+T.RT_26 = {104504}
+T.RT_27 = {104301}
+T.RT_28 = {104108}
+T.RT_29 = {104501}
+T.RT_30 = {104103}
+T.RT_31 = {105701}
+T.RT_32 = {104105}
+T.RT_33 = {104110}
+T.RT_34 = {104106}
+T.RT_35 = {104104}
+T.RT_36 = {101105}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -54,7 +58,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 102,
     StoryPath = "SpecialQuest\\1002\\SaiqiDream1.story",
-    SubRegionIds = T.RT_6,
+    SubRegionIds = T.RT_9,
     UniversalConfigId = 102
   },
   [103] = {
@@ -63,7 +67,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 103,
     StoryPath = "SpecialQuest\\1002\\SaiqiDream2.story",
-    SubRegionIds = T.RT_6,
+    SubRegionIds = T.RT_9,
     UniversalConfigId = 103
   },
   [104] = {
@@ -72,7 +76,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 104,
     StoryPath = "SpecialQuest\\1002\\SaiqiDreamBoss1.story",
-    SubRegionIds = T.RT_8,
+    SubRegionIds = T.RT_11,
     UniversalConfigId = 104
   },
   [105] = {
@@ -81,7 +85,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 105,
     StoryPath = "SpecialQuest\\1002\\SaiqiDreamBoss2.story",
-    SubRegionIds = T.RT_8,
+    SubRegionIds = T.RT_11,
     UniversalConfigId = 105
   },
   [106] = {
@@ -188,7 +192,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 120,
     StoryPath = "SpecialQuest\\1002\\TraceEnlike.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 120
   },
@@ -305,7 +309,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1014,
     StoryPath = "SpecialQuest\\1101\\Shenpan01.story",
-    SubRegionIds = T.RT_5,
+    SubRegionIds = T.RT_8,
     TalkTriggerId = 1001,
     UniversalConfigId = 1014
   },
@@ -314,7 +318,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 1015,
     StoryPath = "SpecialQuest\\1101\\HaierBoss3.story",
-    SubRegionIds = T.RT_5,
+    SubRegionIds = T.RT_8,
     TalkTriggerId = 1001,
     UniversalConfigId = 1015
   },
@@ -371,7 +375,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1024,
     StoryPath = "SpecialQuest\\1101\\Shenpan02.story",
-    SubRegionIds = T.RT_5,
+    SubRegionIds = T.RT_8,
     TalkTriggerId = 1001,
     UniversalConfigId = 1024
   },
@@ -382,7 +386,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1025,
     StoryPath = "SpecialQuest\\1101\\Shenpan03.story",
-    SubRegionIds = T.RT_5,
+    SubRegionIds = T.RT_8,
     TalkTriggerId = 1001,
     UniversalConfigId = 1025
   },
@@ -402,7 +406,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1028,
     StoryPath = "SpecialQuest\\1003\\100305battle1pre.story",
-    SubRegionIds = T.RT_7,
+    SubRegionIds = T.RT_10,
     TalkTriggerId = 1001,
     UniversalConfigId = 1030
   },
@@ -413,7 +417,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1029,
     StoryPath = "SpecialQuest\\1003\\100305escape.story",
-    SubRegionIds = T.RT_7,
+    SubRegionIds = T.RT_10,
     TalkTriggerId = 1001,
     UniversalConfigId = 1030
   },
@@ -424,7 +428,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1030,
     StoryPath = "SpecialQuest\\1003\\100305battle.story",
-    SubRegionIds = T.RT_7,
+    SubRegionIds = T.RT_10,
     TalkTriggerId = 1001,
     UniversalConfigId = 1030
   },
@@ -435,7 +439,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1031,
     StoryPath = "SpecialQuest\\1003\\100305battle2.story",
-    SubRegionIds = T.RT_7,
+    SubRegionIds = T.RT_10,
     TalkTriggerId = 1001,
     UniversalConfigId = 1030
   },
@@ -446,7 +450,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1032,
     StoryPath = "SpecialQuest\\1003\\100305battle3.story",
-    SubRegionIds = T.RT_7,
+    SubRegionIds = T.RT_10,
     TalkTriggerId = 1001,
     UniversalConfigId = 1030
   },
@@ -457,7 +461,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1033,
     StoryPath = "SpecialQuest\\1003\\100305battle4.story",
-    SubRegionIds = T.RT_7,
+    SubRegionIds = T.RT_10,
     TalkTriggerId = 1001,
     UniversalConfigId = 1035
   },
@@ -468,7 +472,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1034,
     StoryPath = "SpecialQuest\\1003\\100305battle5.story",
-    SubRegionIds = T.RT_7,
+    SubRegionIds = T.RT_10,
     TalkTriggerId = 1001,
     UniversalConfigId = 1035
   },
@@ -519,7 +523,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1041,
     StoryPath = "SpecialQuest\\1003\\100306thea.story",
-    SubRegionIds = T.RT_9,
+    SubRegionIds = T.RT_12,
     TalkTriggerId = 1001,
     UniversalConfigId = 1034
   },
@@ -530,7 +534,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1042,
     StoryPath = "SpecialQuest\\1003\\100306thea2.story",
-    SubRegionIds = T.RT_9,
+    SubRegionIds = T.RT_12,
     TalkTriggerId = 1001,
     UniversalConfigId = 1034
   },
@@ -595,7 +599,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1048,
     StoryPath = "SpecialQuest\\1101\\ShenpanPre.story",
-    SubRegionIds = T.RT_5,
+    SubRegionIds = T.RT_8,
     TalkTriggerId = 1001,
     UniversalConfigId = 1048
   },
@@ -646,7 +650,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 1053,
     StoryPath = "SpecialQuest\\1003\\100306thea1.story",
-    SubRegionIds = T.RT_9,
+    SubRegionIds = T.RT_12,
     TalkTriggerId = 1001,
     UniversalConfigId = 1034
   },
@@ -656,7 +660,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 1054,
     StoryPath = "SpecialQuest\\Side\\200103_Pet01Battle01.story",
-    SubRegionIds = T.RT_10,
+    SubRegionIds = T.RT_13,
     TalkTriggerId = 1001,
     UniversalConfigId = 1054
   },
@@ -686,7 +690,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 1057,
     StoryPath = "SpecialQuest\\1101\\ShenpanWaitDafu.story",
-    SubRegionIds = T.RT_5,
+    SubRegionIds = T.RT_8,
     TalkTriggerId = 1001,
     UniversalConfigId = 1057
   },
@@ -697,7 +701,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2001,
     StoryPath = "SpecialQuest\\1201\\Nai01.story",
-    SubRegionIds = T.RT_23,
+    SubRegionIds = T.RT_27,
     TalkTriggerId = 1001,
     UniversalConfigId = 2001
   },
@@ -739,7 +743,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2005,
     StoryPath = "SpecialQuest\\1201\\Cav01.story",
-    SubRegionIds = T.RT_26,
+    SubRegionIds = T.RT_30,
     TalkTriggerId = 1001,
     UniversalConfigId = 2005
   },
@@ -749,7 +753,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2006,
     StoryPath = "SpecialQuest\\1201\\Cav02.story",
-    SubRegionIds = T.RT_26,
+    SubRegionIds = T.RT_30,
     TalkTriggerId = 1001,
     UniversalConfigId = 2007
   },
@@ -759,7 +763,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2007,
     StoryPath = "SpecialQuest\\1201\\Cav02.story",
-    SubRegionIds = T.RT_26,
+    SubRegionIds = T.RT_30,
     TalkTriggerId = 1001,
     UniversalConfigId = 2005
   },
@@ -809,7 +813,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2012,
     StoryPath = "SpecialQuest\\1201\\HeilongBossFight.story",
-    SubRegionIds = T.RT_27,
+    SubRegionIds = T.RT_31,
     TalkTriggerId = 1001,
     UniversalConfigId = 2012
   },
@@ -820,7 +824,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2013,
     StoryPath = "SpecialQuest\\1201\\PortJiebei.story",
-    SubRegionIds = T.RT_24,
+    SubRegionIds = T.RT_28,
     TalkTriggerId = 1001,
     UniversalConfigId = 2013
   },
@@ -831,7 +835,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2014,
     StoryPath = "SpecialQuest\\1201\\HeilongBossHook.story",
-    SubRegionIds = T.RT_27,
+    SubRegionIds = T.RT_31,
     TalkTriggerId = 1001,
     UniversalConfigId = 2014
   },
@@ -842,7 +846,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2015,
     StoryPath = "SpecialQuest\\1201\\HeilongBossWalk.story",
-    SubRegionIds = T.RT_27,
+    SubRegionIds = T.RT_31,
     TalkTriggerId = 1001,
     UniversalConfigId = 2015
   },
@@ -863,7 +867,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2017,
     StoryPath = "SpecialQuest\\1201\\FilWalk01.story",
-    SubRegionIds = T.RT_28,
+    SubRegionIds = T.RT_32,
     TalkTriggerId = 1001,
     UniversalConfigId = 2017
   },
@@ -873,7 +877,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2018,
     StoryPath = "SpecialQuest\\1201\\FilFight01.story",
-    SubRegionIds = T.RT_28,
+    SubRegionIds = T.RT_32,
     TalkTriggerId = 1001,
     UniversalConfigId = 2018
   },
@@ -884,7 +888,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2019,
     StoryPath = "SpecialQuest\\1201\\FilWalk02.story",
-    SubRegionIds = T.RT_28,
+    SubRegionIds = T.RT_32,
     TalkTriggerId = 1001,
     UniversalConfigId = 2019
   },
@@ -904,7 +908,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2021,
     StoryPath = "SpecialQuest\\1201\\SprFight02.story",
-    SubRegionIds = T.RT_29,
+    SubRegionIds = T.RT_33,
     TalkTriggerId = 1001,
     UniversalConfigId = 2021
   },
@@ -914,7 +918,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2022,
     StoryPath = "SpecialQuest\\1201\\SprFight03.story",
-    SubRegionIds = T.RT_29,
+    SubRegionIds = T.RT_33,
     TalkTriggerId = 1001,
     UniversalConfigId = 2022
   },
@@ -924,7 +928,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2023,
     StoryPath = "SpecialQuest\\1201\\FilMech.story",
-    SubRegionIds = T.RT_28,
+    SubRegionIds = T.RT_32,
     TalkTriggerId = 1001,
     UniversalConfigId = 2023
   },
@@ -935,7 +939,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2024,
     StoryPath = "SpecialQuest\\1201\\FushuHosWalk01.story",
-    SubRegionIds = T.RT_30,
+    SubRegionIds = T.RT_34,
     TalkTriggerId = 1001,
     UniversalConfigId = 2024
   },
@@ -945,7 +949,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2025,
     StoryPath = "SpecialQuest\\1201\\FushuHosWalk02.story",
-    SubRegionIds = T.RT_30,
+    SubRegionIds = T.RT_34,
     TalkTriggerId = 1001,
     UniversalConfigId = 2025
   },
@@ -955,7 +959,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2026,
     StoryPath = "SpecialQuest\\1201\\FushuCenWuyou01Mech.story",
-    SubRegionIds = T.RT_31,
+    SubRegionIds = T.RT_35,
     TalkTriggerId = 1001,
     UniversalConfigId = 2026
   },
@@ -965,7 +969,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2027,
     StoryPath = "SpecialQuest\\1201\\FushuCenWuyou01Walk.story",
-    SubRegionIds = T.RT_31,
+    SubRegionIds = T.RT_35,
     TalkTriggerId = 1001,
     UniversalConfigId = 2027
   },
@@ -975,7 +979,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2028,
     StoryPath = "SpecialQuest\\1201\\FushuCenWuyou02Mech.story",
-    SubRegionIds = T.RT_31,
+    SubRegionIds = T.RT_35,
     TalkTriggerId = 1001,
     UniversalConfigId = 2028
   },
@@ -985,7 +989,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2029,
     StoryPath = "SpecialQuest\\1201\\FushuCenWuyou02Walk.story",
-    SubRegionIds = T.RT_31,
+    SubRegionIds = T.RT_35,
     TalkTriggerId = 1001,
     UniversalConfigId = 2029
   },
@@ -995,7 +999,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2030,
     StoryPath = "SpecialQuest\\1201\\FushuCenWuyou03Mech.story",
-    SubRegionIds = T.RT_31,
+    SubRegionIds = T.RT_35,
     TalkTriggerId = 1001,
     UniversalConfigId = 2030
   },
@@ -1005,7 +1009,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 2031,
     StoryPath = "SpecialQuest\\1201\\FushuCenWuyou03Walk.story",
-    SubRegionIds = T.RT_31,
+    SubRegionIds = T.RT_35,
     TalkTriggerId = 1001,
     UniversalConfigId = 2031
   },
@@ -1016,7 +1020,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2051,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay01Home.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2051
   },
@@ -1027,7 +1031,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2052,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay01Walk.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2052
   },
@@ -1038,7 +1042,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2053,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay01Catch01.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2053
   },
@@ -1049,7 +1053,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2054,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay01Catch02.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2054
   },
@@ -1060,7 +1064,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2055,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay01Catch03.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2055
   },
@@ -1071,7 +1075,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2056,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay01Back.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2056
   },
@@ -1082,7 +1086,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2057,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay01Sleep.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2057
   },
@@ -1093,7 +1097,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2058,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay02Home.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2058
   },
@@ -1104,7 +1108,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2059,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay02Walk.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2059
   },
@@ -1115,7 +1119,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2060,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay02Survey01.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2060
   },
@@ -1126,7 +1130,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2061,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay02Survey02.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2061
   },
@@ -1137,7 +1141,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2062,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay02Back01.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2062
   },
@@ -1148,7 +1152,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2063,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay02Back02.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2063
   },
@@ -1159,7 +1163,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2064,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay03Home.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2064
   },
@@ -1170,7 +1174,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2065,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay03Walk.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2065
   },
@@ -1181,7 +1185,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2066,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay03Catch.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2066
   },
@@ -1192,7 +1196,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2067,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay03HomeBook.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2067
   },
@@ -1203,7 +1207,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2070,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04Home.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2070
   },
@@ -1214,7 +1218,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2071,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04Walk01.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2071
   },
@@ -1225,7 +1229,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2072,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04Walk02.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2072
   },
@@ -1236,7 +1240,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2073,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04HomeCry.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2073
   },
@@ -1247,7 +1251,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2074,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04Find01.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2074
   },
@@ -1258,7 +1262,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2075,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04Find02.story",
-    SubRegionIds = T.RT_10,
+    SubRegionIds = T.RT_13,
     TalkTriggerId = 1001,
     UniversalConfigId = 2075
   },
@@ -1269,7 +1273,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2076,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04Thief.story",
-    SubRegionIds = T.RT_10,
+    SubRegionIds = T.RT_13,
     TalkTriggerId = 1001,
     UniversalConfigId = 2076
   },
@@ -1280,7 +1284,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2077,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04Fight.story",
-    SubRegionIds = T.RT_10,
+    SubRegionIds = T.RT_13,
     TalkTriggerId = 1001,
     UniversalConfigId = 2077
   },
@@ -1291,7 +1295,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2078,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04BackCity01.story",
-    SubRegionIds = T.RT_10,
+    SubRegionIds = T.RT_13,
     TalkTriggerId = 1001,
     UniversalConfigId = 2078
   },
@@ -1302,7 +1306,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2079,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04BackCity02.story",
-    SubRegionIds = T.RT_11,
+    SubRegionIds = T.RT_14,
     TalkTriggerId = 1001,
     UniversalConfigId = 2079
   },
@@ -1313,7 +1317,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2080,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04Back.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2080
   },
@@ -1324,7 +1328,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2081,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04HomeParty.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2081
   },
@@ -1335,7 +1339,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 2082,
     StoryPath = "SpecialQuest\\ActiveFina\\FeinaDay04StoryEnd.story",
-    SubRegionIds = T.RT_32,
+    SubRegionIds = T.RT_36,
     TalkTriggerId = 1001,
     UniversalConfigId = 2082
   },
@@ -1348,6 +1352,586 @@ return ReadOnly("SpecialQuestConfig", {
     SubRegionIds = T.RT_2,
     TalkTriggerId = 1001,
     UniversalConfigId = 1001
+  },
+  [10040103] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040103,
+    StoryPath = "SpecialQuest\\1004\\10040103BuyTicket.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 272480346,
+    UniversalConfigId = 10040103
+  },
+  [10040104] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040104,
+    StoryPath = "SpecialQuest\\1004\\10040104PartTime.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 272480346,
+    UniversalConfigId = 10040104
+  },
+  [10040105] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040105,
+    StoryPath = "SpecialQuest\\1004\\10040105PartTimeEnd.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 272480346,
+    UniversalConfigId = 10040105
+  },
+  [10040106] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040106,
+    StoryPath = "SpecialQuest\\1004\\10040106Qianru01.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 272480347,
+    UniversalConfigId = 10040106
+  },
+  [10040107] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040107,
+    StoryPath = "SpecialQuest\\1004\\10040107Qianru02.story",
+    SubRegionIds = T.RT_5,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040107
+  },
+  [10040108] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040108,
+    StoryPath = "SpecialQuest\\1004\\10040108Qianru03.story",
+    SubRegionIds = T.RT_5,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040108
+  },
+  [10040109] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040109,
+    StoryPath = "SpecialQuest\\1004\\10040109Qianru04.story",
+    SubRegionIds = T.RT_5,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040109
+  },
+  [10040110] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040110,
+    StoryPath = "SpecialQuest\\1004\\10040110Qianru05.story",
+    SubRegionIds = T.RT_5,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040110
+  },
+  [10040111] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040111,
+    StoryPath = "SpecialQuest\\1004\\10040111Qianru06.story",
+    SubRegionIds = T.RT_5,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040111
+  },
+  [10040112] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040112,
+    StoryPath = "SpecialQuest\\1004\\10040112Qianru07.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 272480351,
+    UniversalConfigId = 10040112
+  },
+  [10040201] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 100402,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040201,
+    StoryPath = "SpecialQuest\\1004\\10040201Panpa.story",
+    SubRegionIds = T.RT_6,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040201
+  },
+  [10040202] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 100402,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040202,
+    StoryPath = "SpecialQuest\\1004\\10040202GotoYWS.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 272480349,
+    UniversalConfigId = 10040202
+  },
+  [10040203] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 100402,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040203,
+    StoryPath = "SpecialQuest\\1004\\10040203ChaosStationPre.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 272480352,
+    UniversalConfigId = 10040203
+  },
+  [10040204] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100402,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040204,
+    StoryPath = "SpecialQuest\\1004\\10040204Guanlishi.story",
+    SubRegionIds = T.RT_6,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040204
+  },
+  [10040205] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100402,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040205,
+    StoryPath = "SpecialQuest\\1004\\10040205DixiaZZZ.story",
+    SubRegionIds = T.RT_5,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040205
+  },
+  [10040206] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100402,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040206,
+    StoryPath = "SpecialQuest\\1004\\10040206YWS.story",
+    SubRegionIds = T.RT_6,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040206
+  },
+  [10040210] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100402,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040210,
+    StoryPath = "SpecialQuest\\1004\\10040210ChaosStation.story",
+    SubRegionIds = T.RT_6,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040210
+  },
+  [10040301] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040301,
+    StoryPath = "SpecialQuest\\1004\\10040301.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040301
+  },
+  [10040302] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040302,
+    StoryPath = "SpecialQuest\\1004\\10040302.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040302
+  },
+  [10040303] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040303,
+    StoryPath = "SpecialQuest\\1004\\10040303.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040303
+  },
+  [10040305] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040305,
+    StoryPath = "SpecialQuest\\1004\\10040305.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040305
+  },
+  [10040306] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040306,
+    StoryPath = "SpecialQuest\\1004\\10040306.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040306
+  },
+  [10040307] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040307,
+    StoryPath = "SpecialQuest\\1004\\10040307.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040307
+  },
+  [10040308] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040308,
+    StoryPath = "SpecialQuest\\1004\\10040308.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040308
+  },
+  [10040309] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040309,
+    StoryPath = "SpecialQuest\\1004\\10040309.story",
+    SubRegionIds = T.RT_6,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040309
+  },
+  [10040310] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040310,
+    StoryPath = "SpecialQuest\\1004\\10040310.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480412,
+    UniversalConfigId = 10040310
+  },
+  [10040311] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040311,
+    StoryPath = "SpecialQuest\\1004\\10040311.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040311
+  },
+  [10040312] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040312,
+    StoryPath = "SpecialQuest\\1004\\10040312.story",
+    SubRegionIds = T.RT_6,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040312
+  },
+  [10040313] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040313,
+    StoryPath = "SpecialQuest\\1004\\10040313.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 152480411,
+    UniversalConfigId = 10040313
+  },
+  [10040401] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100403,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040401,
+    StoryPath = "SpecialQuest\\1004\\10040401Dengche.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040401
+  },
+  [10040403] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040403,
+    StoryPath = "SpecialQuest\\1004\\10040403Tiaoche.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040403
+  },
+  [10040404] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040404,
+    StoryPath = "SpecialQuest\\1004\\10040404Xier.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040404
+  },
+  [10040405] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040405,
+    StoryPath = "SpecialQuest\\1004\\10040405XierBattle.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040405
+  },
+  [10040406] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040406,
+    StoryPath = "SpecialQuest\\1004\\10040406PlayerBattle.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040406
+  },
+  [10040408] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040408,
+    StoryPath = "SpecialQuest\\1004\\10040408Putong.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040408
+  },
+  [10040409] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040409,
+    StoryPath = "SpecialQuest\\1004\\10040409PutongGuancha.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040409
+  },
+  [10040410] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040410,
+    StoryPath = "SpecialQuest\\1004\\10040410FuluoTalk.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040410
+  },
+  [10040411] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040411,
+    StoryPath = "SpecialQuest\\1004\\10040411ShidifenTalk.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040411
+  },
+  [10040413] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040413,
+    StoryPath = "SpecialQuest\\1004\\10040413GotoShouwei.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040413
+  },
+  [10040414] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040414,
+    StoryPath = "SpecialQuest\\1004\\10040414GotoPuren.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040414
+  },
+  [10040415] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040415,
+    StoryPath = "SpecialQuest\\1004\\10040415Touting.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040415
+  },
+  [10040416] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040416,
+    StoryPath = "SpecialQuest\\1004\\10040416Jiandao.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040416
+  },
+  [10040417] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040417,
+    StoryPath = "SpecialQuest\\1004\\10040417GotoGuizu.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040417
+  },
+  [10040418] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040418,
+    StoryPath = "SpecialQuest\\1004\\10040418Piano.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040418
+  },
+  [10040419] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040419,
+    StoryPath = "SpecialQuest\\1004\\10040419GotoChezhang.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040419
+  },
+  [10040420] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040420,
+    StoryPath = "SpecialQuest\\1004\\10040420Diaocha.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040420
+  },
+  [10040421] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040421,
+    StoryPath = "SpecialQuest\\1004\\10040421FanzhiKajia.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040421
+  },
+  [10040428] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100404,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040428,
+    StoryPath = "SpecialQuest\\1004\\10040428FanzhiKajiaQian.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040428
+  },
+  [10040501] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100405,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040501,
+    StoryPath = "SpecialQuest\\1004\\10040501Paotai.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040501
+  },
+  [10040502] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100405,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040502,
+    StoryPath = "SpecialQuest\\1004\\10040502Haluo02.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040502
+  },
+  [10040503] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100405,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040503,
+    StoryPath = "SpecialQuest\\1004\\10040503KajiaBoss01.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040503
+  },
+  [10040504] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100405,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040504,
+    StoryPath = "SpecialQuest\\1004\\10040504KajiaBoss02.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040504
+  },
+  [10040505] = {
+    BuffId = T.RT_1,
+    FailCustomEvent = "Fail",
+    QuestChainId = 100405,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 10040505,
+    StoryPath = "SpecialQuest\\1004\\10040505Shikong.story",
+    SubRegionIds = T.RT_7,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 10040505
   },
   [12000208] = {
     FailCustomEvent = "Fail",
@@ -1395,7 +1979,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020109,
     StoryPath = "SpecialQuest\\1202\\120201_Xiangge.story",
-    SubRegionIds = T.RT_12,
+    SubRegionIds = T.RT_15,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020109
   },
@@ -1410,7 +1994,7 @@ return ReadOnly("SpecialQuestConfig", {
     UniversalConfigId = 12020122
   },
   [12020201] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120202,
     QuestFailTalkTriggerId = 1002,
@@ -1431,13 +2015,13 @@ return ReadOnly("SpecialQuestConfig", {
     UniversalConfigId = 12020208
   },
   [12020210] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120202,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020210,
     StoryPath = "SpecialQuest\\1202\\120202_zhilvdingBATTLE.story",
-    SubRegionIds = T.RT_14,
+    SubRegionIds = T.RT_17,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020210
   },
@@ -1447,7 +2031,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020212,
     StoryPath = "SpecialQuest\\1202\\120202_WuyouEscape.story",
-    SubRegionIds = T.RT_12,
+    SubRegionIds = T.RT_15,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020212
   },
@@ -1457,7 +2041,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020305,
     StoryPath = "SpecialQuest\\1202\\120203_xiaoheiwu.story",
-    SubRegionIds = T.RT_15,
+    SubRegionIds = T.RT_18,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020305
   },
@@ -1467,7 +2051,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020307,
     StoryPath = "SpecialQuest\\1202\\120203_Mark1.story",
-    SubRegionIds = T.RT_16,
+    SubRegionIds = T.RT_19,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020307
   },
@@ -1477,7 +2061,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020308,
     StoryPath = "SpecialQuest\\1202\\120203_Mark2.story",
-    SubRegionIds = T.RT_16,
+    SubRegionIds = T.RT_19,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020308
   },
@@ -1502,57 +2086,57 @@ return ReadOnly("SpecialQuestConfig", {
     UniversalConfigId = 12020320
   },
   [12020402] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120204,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020402,
     StoryPath = "SpecialQuest\\1202\\120204_FangShou.story",
-    SubRegionIds = T.RT_17,
+    SubRegionIds = T.RT_20,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020402
   },
   [12020404] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120204,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020404,
     StoryPath = "SpecialQuest\\1202\\120204_Yuming.story",
-    SubRegionIds = T.RT_17,
+    SubRegionIds = T.RT_20,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020404
   },
   [12020406] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120204,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020406,
     StoryPath = "SpecialQuest\\1202\\120204_Maze.story",
-    SubRegionIds = T.RT_18,
+    SubRegionIds = T.RT_21,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020406
   },
   [12020407] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120204,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020407,
     StoryPath = "SpecialQuest\\1202\\120204_Maze2.story",
-    SubRegionIds = T.RT_18,
+    SubRegionIds = T.RT_21,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020407
   },
   [12020410] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120204,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020410,
     StoryPath = "SpecialQuest\\1202\\120204_Connon.story",
-    SubRegionIds = T.RT_17,
+    SubRegionIds = T.RT_20,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020410
   },
@@ -1562,7 +2146,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020413,
     StoryPath = "SpecialQuest\\1202\\120204_xiaoheiwu.story",
-    SubRegionIds = T.RT_15,
+    SubRegionIds = T.RT_18,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020413
   },
@@ -1572,7 +2156,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020414,
     StoryPath = "SpecialQuest\\1202\\120204_Ascend.story",
-    SubRegionIds = T.RT_14,
+    SubRegionIds = T.RT_17,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020414
   },
@@ -1582,95 +2166,95 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020512,
     StoryPath = "SpecialQuest\\1202\\120205_xiaoheiwu.story",
-    SubRegionIds = T.RT_15,
+    SubRegionIds = T.RT_18,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020512
   },
   [12020513] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120205,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020513,
     StoryPath = "SpecialQuest\\1202\\120205_Ascend.story",
-    SubRegionIds = T.RT_19,
+    SubRegionIds = T.RT_22,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020513
   },
   [12020602] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120206,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020602,
     StoryPath = "SpecialQuest\\1202\\120206_SUYI1.story",
-    SubRegionIds = T.RT_20,
+    SubRegionIds = T.RT_23,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020602
   },
   [12020603] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120206,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020603,
     StoryPath = "SpecialQuest\\1202\\120206_SUYI2.story",
-    SubRegionIds = T.RT_20,
+    SubRegionIds = T.RT_23,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020603
   },
   [12020605] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120206,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020605,
     StoryPath = "SpecialQuest\\1202\\120206_SUYI3.story",
-    SubRegionIds = T.RT_20,
+    SubRegionIds = T.RT_23,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020605
   },
   [12020606] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120206,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020606,
     StoryPath = "SpecialQuest\\1202\\120206_SUYI4.story",
-    SubRegionIds = T.RT_20,
+    SubRegionIds = T.RT_23,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020606
   },
   [12020607] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120206,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020607,
     StoryPath = "SpecialQuest\\1202\\120206_SUYI5.story",
-    SubRegionIds = T.RT_20,
+    SubRegionIds = T.RT_23,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020607
   },
   [12020608] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120206,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020608,
     StoryPath = "SpecialQuest\\1202\\120206_SUYI6.story",
-    SubRegionIds = T.RT_20,
+    SubRegionIds = T.RT_23,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020608
   },
   [12020611] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120206,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020611,
     StoryPath = "SpecialQuest\\1202\\120206_Juezhanpre.story",
-    SubRegionIds = T.RT_12,
+    SubRegionIds = T.RT_15,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020611
   },
@@ -1680,18 +2264,18 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020613,
     StoryPath = "SpecialQuest\\1202\\120206_TRLM.story",
-    SubRegionIds = T.RT_19,
+    SubRegionIds = T.RT_22,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020613
   },
   [12020615] = {
-    BuffId = T.RT_13,
+    BuffId = T.RT_16,
     FailCustomEvent = "Fail",
     QuestChainId = 120206,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020615,
     StoryPath = "SpecialQuest\\1202\\120206_BOSS.story",
-    SubRegionIds = T.RT_19,
+    SubRegionIds = T.RT_22,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020615
   },
@@ -1701,7 +2285,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020620,
     StoryPath = "SpecialQuest\\1202\\120206_ZHILIU.story",
-    SubRegionIds = T.RT_21,
+    SubRegionIds = T.RT_24,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020620
   },
@@ -1711,7 +2295,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12020622,
     StoryPath = "SpecialQuest\\1202\\120206_TAIXU.story",
-    SubRegionIds = T.RT_21,
+    SubRegionIds = T.RT_24,
     TalkTriggerId = 1001,
     UniversalConfigId = 12020622
   },
@@ -1725,13 +2309,23 @@ return ReadOnly("SpecialQuestConfig", {
     TriggerBoxStaticCreatorId = 242420220,
     UniversalConfigId = 12020627
   },
+  [12030303] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 120303,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 12030303,
+    StoryPath = "SpecialQuest\\1203\\120303_JiuXiaoan.story",
+    SubRegionIds = T.RT_25,
+    TalkTriggerId = 1001,
+    UniversalConfigId = 12030303
+  },
   [12030703] = {
     FailCustomEvent = "Fail",
     QuestChainId = 120307,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12030703,
     StoryPath = "SpecialQuest\\1203\\120307_SongYizhi.story",
-    SubRegionIds = {104503, 104504},
+    SubRegionIds = T.RT_25,
     TalkTriggerId = 1001,
     UniversalConfigId = 12030703
   },
@@ -1741,11 +2335,12 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 12030704,
     StoryPath = "SpecialQuest\\1203\\120307_FindXiaoXiang.story",
-    SubRegionIds = T.RT_22,
+    SubRegionIds = T.RT_26,
     TalkTriggerId = 1001,
     UniversalConfigId = 12030704
   },
   [12030705] = {
+    BuffId = T.RT_1,
     FailCustomEvent = "Fail",
     QuestChainId = 120307,
     QuestFailTalkTriggerId = 1002,
@@ -1771,7 +2366,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 20030401,
     StoryPath = "SpecialQuest\\Side\\200304_MuXiBattle01.story",
-    SubRegionIds = T.RT_24,
+    SubRegionIds = T.RT_28,
     TalkTriggerId = 1001,
     UniversalConfigId = 20030401
   },
@@ -1781,7 +2376,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 20030402,
     StoryPath = "SpecialQuest\\Side\\200304_MuXiBattle02.story",
-    SubRegionIds = T.RT_24,
+    SubRegionIds = T.RT_28,
     TalkTriggerId = 1001,
     UniversalConfigId = 20030402
   },
@@ -1831,7 +2426,7 @@ return ReadOnly("SpecialQuestConfig", {
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 20031799,
     StoryPath = "SpecialQuest\\Side\\200317_QinshengWuyou.story",
-    SubRegionIds = T.RT_22,
+    SubRegionIds = T.RT_26,
     TalkTriggerId = 1001,
     UniversalConfigId = 20031799
   },
@@ -1842,7 +2437,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 20031803,
     StoryPath = "SpecialQuest\\Side\\200318_WangchuanFushu01.story",
-    SubRegionIds = T.RT_20,
+    SubRegionIds = T.RT_23,
     TalkTriggerId = 1001,
     UniversalConfigId = 20031803
   },
@@ -1853,7 +2448,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 20031806,
     StoryPath = "SpecialQuest\\Side\\200318_WangchuanFushu03.story",
-    SubRegionIds = T.RT_25,
+    SubRegionIds = T.RT_29,
     TalkTriggerId = 1001,
     UniversalConfigId = 20031806
   },
@@ -1864,7 +2459,7 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 20031807,
     StoryPath = "SpecialQuest\\Side\\200318_WangchuanFushu04.story",
-    SubRegionIds = T.RT_23,
+    SubRegionIds = T.RT_27,
     TalkTriggerId = 1001,
     UniversalConfigId = 20031807
   },
@@ -1875,8 +2470,18 @@ return ReadOnly("SpecialQuestConfig", {
     ServerEffectId = T.RT_3,
     SpecialConfigId = 20031808,
     StoryPath = "SpecialQuest\\Side\\200318_WangchuanFushu05.story",
-    SubRegionIds = T.RT_25,
+    SubRegionIds = T.RT_29,
     TalkTriggerId = 1001,
     UniversalConfigId = 20031808
+  },
+  [20040104] = {
+    FailCustomEvent = "Fail",
+    QuestChainId = 200401,
+    QuestFailTalkTriggerId = 1002,
+    SpecialConfigId = 20040104,
+    StoryPath = "SpecialQuest\\Side\\200401_WipeGlass.story",
+    TalkTriggerId = 1001,
+    TriggerBoxStaticCreatorId = 312480269,
+    UniversalConfigId = 20040104
   }
 })

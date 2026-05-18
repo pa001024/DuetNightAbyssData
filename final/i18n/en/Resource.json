@@ -164,6 +164,13 @@
     "desc2": "\"This is the 'Rainbow.' It's right there in your palm, hidden inside this small, glittering tube. Turn it, and you can see forests, constellations, snow stretching like an endless desert... Berry, {nickname}, even if we have to stay hidden in these ruins for now, I still want you both to see a world far more vast and wondrous.\"\n\n— ???"
   },
   {
+    "id": 112,
+    "name": "闪烁星芒",
+    "icon": "T_Coin_SkinCollect02",
+    "rarity": 5,
+    "desc": "装饰品上的点点星光，铭刻着美与闪耀的瞬间。"
+  },
+  {
     "id": 121,
     "name": "Lunotress's Monthly Pass #1",
     "icon": "T_Read_03",
@@ -1108,8 +1115,8 @@
             -55302.52
           ],
           [
-            4222.48,
-            -76797.22
+            4181.7705,
+            -76947.875
           ],
           [
             -28387.24,
@@ -1496,7 +1503,7 @@
     "name": "Starglow Coin",
     "icon": "T_Resource_ActivityIcon_01",
     "rarity": 5,
-    "desc": "A commemorative coin that gleams like starlight. Exchange it for various rewards.\n Dress to impress and shine like a star."
+    "desc": "A commemorative coin that gleams like starlight. Exchange it for various rewards.\nDress to impress and shine like a star."
   },
   {
     "id": 222,
@@ -1504,6 +1511,13 @@
     "icon": "T_Resource_Abyss_LimitTime_Icon01",
     "rarity": 5,
     "desc": "A commemorative keepsake from the theatre, inscribed with the legends and emotions of every stage. Can be exchanged for special rewards."
+  },
+  {
+    "id": 223,
+    "name": "Starglow Coin",
+    "icon": "T_Resource_ActivityIcon_01",
+    "rarity": 5,
+    "desc": "A commemorative coin that gleams like starlight. Exchange it for various rewards.\nDress to impress and shine like a star."
   },
   {
     "id": 301,
@@ -3780,8 +3794,8 @@
             -55302.52
           ],
           [
-            4222.48,
-            -76797.22
+            4181.7705,
+            -76947.875
           ],
           [
             -28387.24,
@@ -4768,6 +4782,49 @@
     "icon": "T_Impression_Chaos",
     "rarity": 5,
     "desc": "Boosts a character's Chaos Impression in Huaxu"
+  },
+  {
+    "id": 4001,
+    "name": "Personal Activity",
+    "icon": "T_Guild_IconActivity",
+    "rarity": 5,
+    "desc": "Personal Activity reflects how active a guild member has been this week. Take part in guild activities to earn various rewards."
+  },
+  {
+    "id": 4002,
+    "name": "Guild Activity",
+    "icon": "T_Guild_IconActivity",
+    "rarity": 5,
+    "desc": "The Greenwich Archaeological Society oversees a vast network of guilds, and Guild Activity is a key metric for assessing each guild's recent performance."
+  },
+  {
+    "id": 4003,
+    "name": "Guild Licence",
+    "icon": "T_Guild_IconLicense",
+    "rarity": 5,
+    "desc": "A special licence issued by the Greenwich Archaeological Society. Possessing one allows you to form a guild.",
+    "desc2": "\"The Greenwich Archaeological Society may be known for its scholarship, but an organisation with branches across the continent cannot survive on public research alone. Naturally, it maintains its own channels for self-defence and intelligence gathering. Think of these resources as another investment I am making in you.\"\n\n— Mr Qiu"
+  },
+  {
+    "id": 4004,
+    "name": "Guild Prestige",
+    "icon": "T_Guild_IconReputation",
+    "rarity": 5,
+    "desc": "Prestige represents a guild's influence. Accumulate Guild Prestige to increase your guild level."
+  },
+  {
+    "id": 4005,
+    "name": "Guild Funds",
+    "icon": "T_Guild_IconFunds",
+    "rarity": 5,
+    "desc": "Funds are essential to a guild's daily operations and may be spent on guild development."
+  },
+  {
+    "id": 4006,
+    "name": "Guild Commendations",
+    "icon": "T_Guild_IconMedal",
+    "rarity": 5,
+    "desc": "The guild follows Mr Qiu's creed: merit is rewarded, and negligence is not overlooked. Active members earn Guild Commendations, which can be exchanged within the guild for various rewards."
   },
   {
     "id": 10001,
@@ -6474,12 +6531,372 @@
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
+    "id": 12155,
+    "name": "囚鸟的刺羽的握柄",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的囚鸟的刺羽部件。冷兵器上最贴近使用者的部分，“趁手”，是它最实际的设计目的。",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12156,
+    "name": "囚鸟的刺羽的刀刃",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的囚鸟的刺羽部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12157,
+    "name": "圣血*太刀的握柄",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的圣血*太刀部件。冷兵器上最贴近使用者的部分，“趁手”，是它最实际的设计目的。",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12158,
+    "name": "圣血*太刀的刀刃",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的圣血*太刀部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12159,
+    "name": "圣血*太刀的饰物",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的圣血*太刀部件。充分贯彻了使用者的意志，而唯有强大，才有资格在战场上彰显这份独一无二的个性。",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12160,
+    "name": "薄暮契约的枪机",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的薄暮契约部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12161,
+    "name": "薄暮契约的枪身",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的薄暮契约部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
+    "id": 12162,
+    "name": "薄暮契约的枪管",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的薄暮契约部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
+  },
+  {
     "id": 15001,
     "name": "测试用武器原型",
-    "icon": "T_Range_Weapon_Part01",
+    "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
     "desc": "测试用武器原型",
     "desc2": "测试用武器原型"
+  },
+  {
+    "id": 15002,
+    "name": "Prototype: Perpetual Strife",
+    "icon": "T_Weapon_Polearm_Zaie",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15003,
+    "name": "Prototype: Thorned Requiem",
+    "icon": "T_Weapon_Machinegun_Zaie",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15004,
+    "name": "Prototype: Sanguine Plume",
+    "icon": "T_Weapon_Crossbow_Zaie",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15005,
+    "name": "Prototype: Nocturne – Sword",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15006,
+    "name": "Prototype: Sovereign Ember",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15007,
+    "name": "Prototype: Nocturne – Whipblade",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15008,
+    "name": "Prototype: Nocturne – Katana",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15009,
+    "name": "Prototype: Nocturne – Grenade Launcher",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15010,
+    "name": "Prototype: Tomorrow's Ruin",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15011,
+    "name": "Prototype: Nocturne – Bow",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15012,
+    "name": "Prototype: Nocturne – Dual Blades",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15013,
+    "name": "Prototype: Nocturne – Pistol",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15014,
+    "name": "Forging Insight: Polearm",
+    "icon": "T_Weapon_Piece_Polearm_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15015,
+    "name": "Forging Insight: Assault Rifle",
+    "icon": "T_Weapon_Piece_Machinegun_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15016,
+    "name": "Forging Insight: Dual Pistols",
+    "icon": "T_Weapon_Piece_Crossbow_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15017,
+    "name": "Forging Insight: Sword",
+    "icon": "T_Weapon_Piece_Sword_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15018,
+    "name": "Forging Insight: Greatsword",
+    "icon": "T_Weapon_Piece_Claymore_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15019,
+    "name": "Forging Insight: Whipblade",
+    "icon": "T_Weapon_Piece_Swordwhip_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15020,
+    "name": "Forging Insight: Katana",
+    "icon": "T_Weapon_Piece_Katana_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15021,
+    "name": "Forging Insight: Grenade Launcher",
+    "icon": "T_Weapon_Piece_Cannon_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15022,
+    "name": "Forging Insight: Shotgun",
+    "icon": "T_Weapon_Piece_Shotgun_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15023,
+    "name": "Forging Insight: Bow",
+    "icon": "T_Weapon_Piece_Bow_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15024,
+    "name": "Forging Insight: Dual Blades",
+    "icon": "T_Weapon_Piece_Dualblade_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15025,
+    "name": "Forging Insight: Pistol",
+    "icon": "T_Weapon_Piece_Pistol_Zaie",
+    "rarity": 5,
+    "desc": "All power springs from the same source, whether as tool or weapon. A scythe was made for labour; a firearm, for fireworks.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Because they cannot rise above suffering, they know its weight all too well. And so they are cruel; when they inflict suffering on others, they show no mercy.\nYes... Mother, I was wrong.\"\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15026,
+    "name": "Emblem of Strength",
+    "icon": "T_Resource_ZaieBadge_03",
+    "rarity": 4,
+    "desc": "A token earned by defeating Hyperborean Empire enemies.\nThe supreme power they pursued was smothered in the cradle of defeat.\nCan be used to forge Calamity Weapons.",
+    "desc2": "The cold wind cuts them open. The warmth of blood becomes their only heat as they press on, holding one another up.\nHigher still — ever higher — towards the iron throne forged from power and glory, towards the crown of thorns they would place upon their own heads, even as its barbs pierce their skulls.\n\n— Iris, Wandering Bard, in \"Why Do They Fight?\""
+  },
+  {
+    "id": 15027,
+    "name": "Emblem of Faith",
+    "icon": "T_Resource_ZaieBadge_05",
+    "rarity": 4,
+    "desc": "A token earned by defeating Elysian Church enemies.\nTheir faith lies broken in the endless night, while ascetics rage at a sun not yet risen.\nCan be used to forge Calamity Weapons.",
+    "desc2": "The cold wind cuts them open. The warmth of blood becomes their only heat as they press on, holding one another up.\nHigher still — ever higher — towards the iron throne forged from power and glory, towards the crown of thorns they would place upon their own heads, even as its barbs pierce their skulls.\n\n— Iris, Wandering Bard, in \"Why Do They Fight?\""
+  },
+  {
+    "id": 15028,
+    "name": "Emblem of Harmony",
+    "icon": "T_Resource_ZaieBadge_04",
+    "rarity": 4,
+    "desc": "A token earned by defeating Huaxu enemies.\nThe peace founded on heart and principle is a fragile balance, upheld by countless souls through countless ages.\nCan be used to forge Calamity Weapons.",
+    "desc2": "The cold wind cuts them open. The warmth of blood becomes their only heat as they press on, holding one another up.\nHigher still — ever higher — towards the iron throne forged from power and glory, towards the crown of thorns they would place upon their own heads, even as its barbs pierce their skulls.\n\n— Iris, Wandering Bard, in \"Why Do They Fight?\""
+  },
+  {
+    "id": 15029,
+    "name": "Emblem of Corruption",
+    "icon": "T_Resource_ZaieBadge_02",
+    "rarity": 4,
+    "desc": "A token earned by defeating Filthoids.\nThe memory of your blade cleaving their foul flesh still lingers, yet not a single drop of blood seeps from the wound.\nCan be used to forge Calamity Weapons.",
+    "desc2": "The cold wind cuts them open. The warmth of blood becomes their only heat as they press on, holding one another up.\nHigher still — ever higher — towards the iron throne forged from power and glory, towards the crown of thorns they would place upon their own heads, even as its barbs pierce their skulls.\n\n— Iris, Wandering Bard, in \"Why Do They Fight?\""
+  },
+  {
+    "id": 15030,
+    "name": "Emblem of Rebellion",
+    "icon": "T_Resource_ZaieBadge_01",
+    "rarity": 4,
+    "desc": "A token earned by defeating members of the Forsakens.\nForsaken by the world, they answer with slaughter — but can bloodshed truly become their salvation?\nCan be used to forge Calamity Weapons.",
+    "desc2": "The cold wind cuts them open. The warmth of blood becomes their only heat as they press on, holding one another up.\nHigher still — ever higher — towards the iron throne forged from power and glory, towards the crown of thorns they would place upon their own heads, even as its barbs pierce their skulls.\n\n— Iris, Wandering Bard, in \"Why Do They Fight?\""
+  },
+  {
+    "id": 15031,
+    "name": "Hydro Crystal",
+    "icon": "T_Resource_Zaie_Ice",
+    "rarity": 4,
+    "desc": "A crystal infused with Hydro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+  },
+  {
+    "id": 15032,
+    "name": "Pyro Crystal",
+    "icon": "T_Resource_Zaie_Fire",
+    "rarity": 4,
+    "desc": "A crystal infused with Pyro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+  },
+  {
+    "id": 15033,
+    "name": "Anemo Crystal",
+    "icon": "T_Resource_Zaie_Wind",
+    "rarity": 4,
+    "desc": "A crystal infused with Anemo magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+  },
+  {
+    "id": 15034,
+    "name": "Electro Crystal",
+    "icon": "T_Resource_Zaie_Lighting",
+    "rarity": 4,
+    "desc": "A crystal infused with Electro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+  },
+  {
+    "id": 15035,
+    "name": "Lumino Crystal",
+    "icon": "T_Resource_Zaie_Light",
+    "rarity": 4,
+    "desc": "A crystal infused with Lumino magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+  },
+  {
+    "id": 15036,
+    "name": "Umbro Crystal",
+    "icon": "T_Resource_Zaie_Dark",
+    "rarity": 4,
+    "desc": "A crystal infused with Umbro magic. Obtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Ask presses on through dusk's lament.\nHis gaze remains unclouded by the dark; he lifts it to the heavens and offers up his final light.\nThough his mind is cast into turmoil, it soon scatters like the shadows of days long gone.\nHis swift legs pursue the storm, and fire bursts from his radiant eyes.\nHis broad chest meets the rain, and his roar rolls like thunder.\nThis is no curse, but the gift the Father left to his children.\nFor from destruction, new life shall bloom.\n\n— Lirico, Wandering Bard, in \"Tales of the Misty Sea\""
+  },
+  {
+    "id": 15037,
+    "name": "Radiant Crystal",
+    "icon": "T_Resource_Zaie_Rainbow",
+    "rarity": 5,
+    "desc": "A crystal aglow with shifting colours. Within its facets, one may glimpse the splendour of all Atlasia, suffused with the power of every element. \nObtained through Abyss Expedition. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Mother Embla weeps. Her child, battered and bloodied, crawls through the blazing furnace, begging her for absolution.\nShe would reclaim the joy and mercy once bestowed, and strip away every blessing once granted by her grace.\nFor the evil he has wrought cannot be pardoned, nor the sins he bears forgiven.\nThen she sheds a single tear, and as it slips down her cheek, it hardens into a precious crystal.\n\n— A tribal legend from Askard"
+  },
+  {
+    "id": 15038,
+    "name": "Abyssal Compass Lv. %s",
+    "icon": "T_Resource_Coin_Zaie",
+    "rarity": 5,
+    "desc": "Follow in Calamity's wake, seek the power to overturn the world, and let the compass lead you onward.\nCan be used to enter the Abyss Expedition.",
+    "desc2": "The explorer who set out in pursuit of Calamity can no longer turn back. From the moment that enticing voice first began to whisper in his mind, every step he took was already being bent to its will. Now, all he can do is feel his way forward through the dark.\n\n— The Mystery of the Calamity Furnace, an adventure novel"
   },
   {
     "id": 19000,
@@ -7467,6 +7884,46 @@
     ],
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
     "desc2": "Southward, northward, east and west,\nseekers roam each road in restless quest.\nBut where, at last, will the treasure be?\nAbove the water, beneath the dead tree."
+  },
+  {
+    "id": 20650,
+    "name": "百花车站·其一",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "上次谢谢你给我打掩护，谁能想到，只是打个牌的工夫，刚好赶上工头来检查了……幸亏你反应快，就是下次能不能换个理由，闹肚子拉裤裆里听起来太不体面了……总之还是多谢，今天难得摸到一把好牌，要是被工头抓回去可就冤死了。赢的钱咱也有你一份，给你放在<H>炉子边上了</>，记得去拿。"
+  },
+  {
+    "id": 20651,
+    "name": "百花车站·其二",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "想知道轻松工作的秘诀吗？那就是——定期供奉古阿特拉西亚掌管铁轨的神！只要把供品放在<H>轨道附近</>，神明大人就能听到咱们的祈祷！最近我负责的列车的故障率就下降了不少，全都是拜这位神明大人所赐！"
+  },
+  {
+    "id": 20652,
+    "name": "百花车站·其三",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "太可怕了……下车的时候发现有位乘客的钱包掉在地上，我一时鬼迷心窍，把它偷偷拿走了……结果里面竟然装着许多符咒一样的奇怪纸张，上面画着好些黑色的月亮，怪瘆人的……听说这是艾利西安的邪教还是什么的标识来着？\n我把钱包放在了<H>医务室门口</>，这样能帮到有需要的人，应该能功过相抵了吧？艾利西安的七神……还是九神来着？总之看到我没拿钱的份上请不要诅咒我啊拜托了！"
+  },
+  {
+    "id": 20653,
+    "name": "百花车站·其四",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "（从折痕判断这原本是一封精心递上的信件，不过现在却以展开的状态躺在墙角杂物中，似乎是被谁随手扔掉了……）\n\n亲爱的<H>广播员</>小姐……希望您不会觉得冒昧，但如若不能将我此刻热烈的心情传达给您，我将会为此后悔一生！\n这是我第一次来到冰湖城，站内严厉的安保措施让我不知所措，不慎迷了路。幸运的是，您如同一位从天而降的天使般降临在我面前——即便被制服遮去了大半，我依然能瞥见您那如春日的花儿一般娇艳的粉色长发，您那与紫罗兰同色的优雅眼眸更是令我沉醉。\n虽然您为我指点了出站的方向，但为了再听一次您动听的嗓音，我决定留下来等待您提到的特别广播。\n我在您的<H>工作岗位</>上留下了一份小小的赠礼，作为对您辛勤工作的慰劳。当您甜美的嗓音响起，我将在站厅为您送上最响亮的喝彩！"
+  },
+  {
+    "id": 20654,
+    "name": "百花车站·其五",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "desc2": "哼，你这家伙成天就知道蹲在轨道边里看火车，你的头发都被煤灰腌入味了！\n告诉你个好消息，我把一份零花钱藏在了附近的<H>树林下</>，金额足够买下两个月的连载。怎么样，这下你总愿意起身走走了吧？趁这个机会动动你那僵硬的身体，相信我，你一定能从这个过程中感受到大自然的乐趣！"
   },
   {
     "id": 29001,
@@ -9883,6 +10340,14 @@
     "desc2": "In the Far East stands a great city, where pavilions and waterside halls raised by ancient hands have endured unchanged for a thousand years, as though they might stand until sea and stone are worn away.\n\nYet even songs passed down through the ages will one day find a new verse, and familiar tales will welcome new faces. Beneath the vault of heaven, the winds are rising and the tides beginning to turn.\n\nGo forth to explore, to witness, and to listen in Haojing, a city soon to be made anew."
   },
   {
+    "id": 29007,
+    "name": "Advensphere: Icelake",
+    "icon": "T_ExploreBadge_Beibao_Chapter01",
+    "rarity": 5,
+    "desc": "Tokens said to lie scattered across Icelake. They stand as proof of courage, wisdom, and patience — virtues forged through the trials of adventure. Gather enough and present them to the Lunoxplorer in Icelake's town square to earn valuable rewards.",
+    "desc2": "This is Icelake.\nBefore others define it for you, knock on every door. Search every hidden corner. Speak to every soul. And in time, you'll see the city changing — quietly, subtly — because of you. No introductions are needed. Icelake is you, and you it.\nStep beyond — to witness, to listen, to become one with a city still waiting to be known."
+  },
+  {
     "id": 30001,
     "name": "Essence Gelatin",
     "icon": "T_Resource_PolarityPart01",
@@ -10392,7 +10857,7 @@
   },
   {
     "id": 41037,
-    "name": "Blazing Heartbeat: Glit",
+    "name": "Blazing Heartbeat: Gilt",
     "icon": "T_Resource_Gesture_0401",
     "rarity": 4,
     "desc": "Consumable, single use.\nCelebration, sparkles, and our mirrored gaze — a moment made eternal."
@@ -10427,7 +10892,7 @@
   },
   {
     "id": 41042,
-    "name": "Silkrain: Glit",
+    "name": "Silkrain: Gilt",
     "icon": "T_Resource_Gesture_0501",
     "rarity": 4,
     "desc": "Consumable, single use.\nCountless bursts light the night, each a heartbeat traced in fire."
@@ -10476,17 +10941,17 @@
   },
   {
     "id": 41049,
-    "name": "RESOURCE_NAME_41049",
+    "name": "Party Fever",
     "icon": "T_Resource_Gesture_Fire",
-    "rarity": 4,
-    "desc": "RESOURCE_DESC_41049"
+    "rarity": 5,
+    "desc": "Party time!"
   },
   {
     "id": 41050,
-    "name": "RESOURCE_NAME_41050",
+    "name": "Helix Spin",
     "icon": "T_Resource_Gesture_Spin",
     "rarity": 4,
-    "desc": "RESOURCE_DESC_41050"
+    "desc": "For you, the DNA keeps spinning."
   },
   {
     "id": 41051,
@@ -10539,10 +11004,45 @@
   },
   {
     "id": 41058,
-    "name": "RESOURCE_NAME_41058",
-    "icon": "T_Resource_Gesture_Zuirang",
+    "name": "Miserere Ground: Rust Red",
+    "icon": "T_Resource_Gesture_Fuluo_03",
+    "rarity": 6,
+    "desc": "Prayer earns no absolution. Only destruction offers redemption."
+  },
+  {
+    "id": 41059,
+    "name": "Platform Waiting",
+    "icon": "T_Resource_Gesture_07",
     "rarity": 5,
-    "desc": "RESOURCE_DESC_41058"
+    "desc": "The whistle blows — time to depart."
+  },
+  {
+    "id": 41060,
+    "name": "RESOURCE_NAME_41060",
+    "icon": "T_Resource_Gesture_Dida",
+    "rarity": 5,
+    "desc": "RESOURCE_DESC_41060"
+  },
+  {
+    "id": 41061,
+    "name": "Ready to Roll",
+    "icon": "T_Resource_Gesture_08",
+    "rarity": 4,
+    "desc": "Toot-toot!"
+  },
+  {
+    "id": 41062,
+    "name": "Miserere Ground: Gilt",
+    "icon": "T_Resource_Gesture_Fuluo_02",
+    "rarity": 6,
+    "desc": "Prayer earns no absolution. Only destruction offers redemption."
+  },
+  {
+    "id": 41063,
+    "name": "Miserere Ground: Celeste",
+    "icon": "T_Resource_Gesture_Fuluo_01",
+    "rarity": 6,
+    "desc": "Prayer earns no absolution. Only destruction offers redemption."
   },
   {
     "id": 42001,
@@ -10559,6 +11059,27 @@
     "rarity": 4,
     "desc": "An intricately designed square construct built using techniques long lost to the Jishu Sect. Its power core generates a powerful suction capable of clearing the Gritblight caused by the Scourge of Zhuyin.",
     "desc2": "Taixu arose from the primeval mists — formless, colourless, diffusing through all six directions. Later, when Zhuyin succumbed to corruption, its impurities settled and hardened, giving rise to the tangible substance we now call Gritblight... What's that — you'd rather I skip the principles and go straight to the instructions? Alas. Youngsters these days have no patience at all.\n \n— Master Gongshang, Mechanist of Jishu Sect"
+  },
+  {
+    "id": 49989,
+    "name": "Into the Nightveil",
+    "icon": "T_Mounts_Gesture_0701",
+    "rarity": 6,
+    "desc": "Pitch-black wings cleave the night, bearing a lone figure towards a far shore untouched by moonlight."
+  },
+  {
+    "id": 49990,
+    "name": "Nekral",
+    "icon": "T_Mounts_Gesture_0703",
+    "rarity": 6,
+    "desc": "Night draws its veil across heaven and earth. Hoarse whistles echo beneath it."
+  },
+  {
+    "id": 49991,
+    "name": "Throne of Contemplation",
+    "icon": "T_Mounts_Gesture_0603",
+    "rarity": 4,
+    "desc": "I heard cries of loyalty, and saw the stars set ablaze."
   },
   {
     "id": 49992,
@@ -10684,7 +11205,7 @@
     "name": "Silkrain Surprise Item Chest",
     "icon": "T_Pack_RandomMod_Daily",
     "rarity": 5,
-    "desc": "The specific probabilities and quantities are as follows (values rounded to four decimal places):\n Phoxene Plumule ×10: 29.4010%\n Phoxene Plumule ×16: 44.1014%\n Phoxene Plumule ×18: 22.0507%\n Phoxene Plumule ×40: 3.6751%\n Phoxene Plumule ×100: 0.7350%\n Phoxene Plumule ×888: 0.0368%"
+    "desc": "Possible rewards and drop rates. Rates are rounded to four decimal places:\n\nPhoxene Plumule ×10: 29.4010%\nPhoxene Plumule ×16: 44.1014%\nPhoxene Plumule ×18: 22.0507%\nPhoxene Plumule ×40: 3.6751%\nPhoxene Plumule ×100: 0.7350%\nPhoxene Plumule ×888: 0.0368%"
   },
   {
     "id": 110019,
@@ -10804,7 +11325,7 @@
     "id": 110038,
     "name": "Portrait: Miss Nightingale – Dappled Shade",
     "icon": "T_Head_Other0014",
-    "rarity": 1
+    "rarity": 4
   },
   {
     "id": 110039,
@@ -10825,6 +11346,111 @@
     "rarity": 1
   },
   {
+    "id": 110042,
+    "name": "自选形象礼箱·暗巷",
+    "icon": "T_Pack_Common04",
+    "rarity": 5,
+    "desc": "使用后可从芙罗拉，妮弗尔夫人，苏乙，菲娜，丽蓓卡，扶疏，琳恩，希尔妲，海尔法，卡米拉，黎瑟，止流，赛琪中自选一套角色形象。"
+  },
+  {
+    "id": 110043,
+    "name": "Thought Selection Chest Ⅰ",
+    "icon": "T_Pack_Char3In1",
+    "rarity": 5,
+    "desc": "Grants one of the following rewards: Thought: Rhythm ×30, Thought: Phantasio ×30, or Thought: Rebecca ×30."
+  },
+  {
+    "id": 110045,
+    "name": "Anemo Covenanter Demon Wedge Chest",
+    "icon": "T_Pack_RandomMod_11",
+    "rarity": 5
+  },
+  {
+    "id": 110046,
+    "name": "Pyro Covenanter Demon Wedge Chest",
+    "icon": "T_Pack_RandomMod_16",
+    "rarity": 5
+  },
+  {
+    "id": 110047,
+    "name": "Electro Covenanter Demon Wedge Chest",
+    "icon": "T_Pack_RandomMod_12",
+    "rarity": 5
+  },
+  {
+    "id": 110048,
+    "name": "Hydro Covenanter Demon Wedge Chest",
+    "icon": "T_Pack_RandomMod_13",
+    "rarity": 5
+  },
+  {
+    "id": 110049,
+    "name": "Lumino Covenanter Demon Wedge Chest",
+    "icon": "T_Pack_RandomMod_14",
+    "rarity": 5
+  },
+  {
+    "id": 110050,
+    "name": "Umbro Covenanter Demon Wedge Chest",
+    "icon": "T_Pack_RandomMod_15",
+    "rarity": 5
+  },
+  {
+    "id": 110051,
+    "name": "Soaring Loong Surprise Chest",
+    "icon": "T_Pack_ModFx",
+    "rarity": 5,
+    "desc": "具体概率与数量如下：\n腾龙诀*1：2%\n排斥结晶*1：8%\n金砂*1：8%\n铜币*10000：10%\n铜币*20000：16%\n铜币*50000：26%\n铜币*100000：30%"
+  },
+  {
+    "id": 110052,
+    "name": "Brass Violin Surprise Chest",
+    "icon": "T_Pack_Machinegun_Huangtong",
+    "rarity": 5,
+    "desc": "具体概率与数量如下：\n黄铜小提琴*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+  },
+  {
+    "id": 110053,
+    "name": "[Cosmic Invitation – Whipblade] Surprise Chest",
+    "icon": "T_Pack_Swordwhip_Huanyu",
+    "rarity": 5,
+    "desc": "具体概率与数量如下：\n寰宇邀约·鞭刃*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+  },
+  {
+    "id": 110054,
+    "name": "[Cosmic Invitation – Katana] Surprise Chest",
+    "icon": "T_Pack_Katana_Huanyu",
+    "rarity": 5,
+    "desc": "具体概率与数量如下：\n寰宇邀约·太刀*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+  },
+  {
+    "id": 110055,
+    "name": "Silkrain Surprise Item Chest",
+    "icon": "T_Pack_RandomMod_Daily",
+    "rarity": 5,
+    "desc": "具体概率与数量如下，概率四舍五入至小数点后4位：\n月石晶胚*36：22.0507%\n月石晶胚*48：51.4517%\n月石晶胚*68：22.0507%\n月石晶胚*100：3.6751%\n月石晶胚*120：0.7350%\n月石晶胚*888：0.0368%"
+  },
+  {
+    "id": 110056,
+    "name": "晶块自选礼箱·其一",
+    "icon": "T_Pack_ZaieRes",
+    "rarity": 5
+  },
+  {
+    "id": 110057,
+    "name": "启航武器自选礼箱",
+    "icon": "T_Pack_Char_Choose",
+    "rarity": 5,
+    "desc": "使用后可从辉珀刃，枯朽，焦渴，幽鲨眼，缠结，凋零，剥离，赘生，崩解，嘶鸣，裂魂，销骨，慧谋的攻守，塞壬的拥吻，铸铁者，失乡的獠牙，不渝的梦海，红叶一滴，无序奇点，蓝色脉动，银白敕令，缄默育种者，祈请净火，烈焰孤沙，追忆的残影，流浪的蔷薇，告谕圣言，放逐怒雷，引浪小调，春玦戟，苍瑚凝碧，归墟棘轮，孤子的缚锁，告谕圣音，群星无意赦免，爆破艺术，惩戒的炼火，圣裁日，茵布拉花序，弧光百劫，蒙恩御礼，鎏金岁月，破晓赞美诗，希冀的丰稔中选择一份作为奖励。"
+  },
+  {
+    "id": 110058,
+    "name": "启航角色自选礼箱",
+    "icon": "T_Pack_Weapon_Choose",
+    "rarity": 5,
+    "desc": "使用后可从思绪片段·贝蕾妮卡*30，思绪片段·玛尔洁*30，思绪片段·兰迪*30，思绪片段·奥特赛德*30，思绪片段·达芙涅*30，思绪片段·妮弗尔夫人*30，思绪片段·丽蓓卡*30，思绪片段·琳恩*30，思绪片段·西比尔*30，思绪片段·塔比瑟*30，思绪片段·莉兹贝尔*30，思绪片段·黎瑟*30，思绪片段·海尔法*30，思绪片段·松露与榛子*30，思绪片段·耶尔与奥利弗*30，思绪片段·幻景*30，思绪片段·赛琪*30中选择一份作为奖励。"
+  },
+  {
     "id": 120001,
     "name": "Tough Love Coupon",
     "icon": "T_Resource_DiscountTicket_01",
@@ -10834,6 +11460,20 @@
   {
     "id": 120002,
     "name": "Windbreath Accessory Coupon",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Spend Phoxene Plumule ×480 to save Phoxene Plumule ×300"
+  },
+  {
+    "id": 120003,
+    "name": "喵喵代金券",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Spend Phoxene Plumule ×680 to save Phoxene Plumule ×300"
+  },
+  {
+    "id": 120004,
+    "name": "银星装饰代金券",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Spend Phoxene Plumule ×480 to save Phoxene Plumule ×300"
@@ -10858,6 +11498,14 @@
     "id": 1001103,
     "name": "Thought: Phantasio",
     "icon": "T_CharPiece_Tuosi",
+    "rarity": 5,
+    "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
+    "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
+  },
+  {
+    "id": 1001201,
+    "name": "Thought: Phoxhunter – Umbro",
+    "icon": "T_CharPiece_Protagonist02",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
     "desc2": "\"You have three lives.\n\nYour first life is breath and heartbeat. You measure and perceive the world with your flesh and blood.\nYour second life is connection and bond. Your soul dwells in the nourishment of family, a lover's kiss, and the embrace of friends.\nYour third life is thought and memory. When a reader sees your name upon a page, when a traveler hears it in a bard's song, when a child draws wisdom and courage from your story—your life echoes once more in this world.\n\nAll return to the Misty Sea, but not all truly die.\"\n\n— Lady Nifle, Ferrywoman of the Misty Sea"
@@ -10920,7 +11568,7 @@
   },
   {
     "id": 1002102,
-    "name": "Thought: Yvaine",
+    "name": "Thought: Eve",
     "icon": "T_Resource_Root_Star5",
     "rarity": 5,
     "desc": "Thoughts sifted from the drifting sands of remembrance. They carry the memory of someone — from the past, or from what is yet to come.",
@@ -11087,6 +11735,14 @@
     "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
   },
   {
+    "id": 1011201,
+    "name": "Sigil: Phoxhunter – Umbro",
+    "icon": "T_Phantom_Nvzhu02",
+    "rarity": 5,
+    "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
+    "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
+  },
+  {
     "id": 1011501,
     "name": "Sigil: Lisbell",
     "icon": "T_Phantom_Baonu",
@@ -11144,7 +11800,7 @@
   },
   {
     "id": 1012102,
-    "name": "Sigil: Yvaine",
+    "name": "Sigil: Eve",
     "icon": "T_Phantom_Shuimu",
     "rarity": 5,
     "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
@@ -13485,7 +14141,7 @@
   },
   {
     "id": 2000116,
-    "name": "Notes on the Mirage (Ⅱ)",
+    "name": "Mirage Musings (Ⅱ)",
     "icon": "T_Read_East01",
     "rarity": 3,
     "source": [
@@ -13501,6 +14157,78 @@
     ],
     "desc": "A book set down by a man of letters surnamed Shen. Its authenticity cannot be verified, but it remains an entertaining read. Much of the text has been lost to time. This is Part Ⅱ.",
     "desc2": "On the surface of Haojing Lake, mist sometimes gathers into shapes — towers, palaces, immortals, spectres — each outlined with startling clarity. People call such sights the Mirage. Some say it is Lord Argent's breath; others insist it is the work of Lord Argent's eight immortal attendants. Accounts multiply without end. I doubt them all.\n\nI chased down every rumour I could find, yet reached no firm conclusion. I went about the city seeking out the elders, asking how one might reach the Mirage, and I began with the boatmen, hoping they would row me across the lake in search of it. They mocked my folly — yet they agreed readily once paid, and accompanied me on several trips. Back and forth we went, again and again, and still we found nothing.\n\nI searched daily until my meagre means were spent. A few, taking pity, would join me in their spare hours, though their earlier enthusiasm was gone. I did not resent them; I felt only shame. In the end I put what little remained to my name into buying a bamboo raft, resolved to seek the Mirage on my own.\n\nThough I am but a bookish sort, I grew up climbing hills and swimming rivers with the neighbourhood boys. I am no weakling — yet my skills go no further than that. At first, poling the raft was awkward and stiff; with time I grew steadily more practised.\n\nThe search proved arduous indeed. At first I tried to take my bearings and fix a heading. Later there was only the endless expanse, drifting and bobbing with the waves. Still I never beheld the Mirage's true face. In time my spirit faltered. I began to suspect I was clinging to emptiness, wasting my days and wearing down my resolve. Now and then I would glimpse it in the distance and strain towards it, only for it to vanish the moment I drew near — like moonlight on water, dissolving into nothing at the slightest touch.\n\nOne day a thick fog rolled in over Haojing, and I could not make out a person two steps away. Everyone warned me not to go, fearing I would lose my way on the lake and die there. I sighed and said, \"Other than my life, what do I have left to lose?\" My purse was already empty. We scraped by on my wife's needlework. Thankfully we had no children; otherwise, what kind of husband would that make me?\n\nStill I insisted on leaving. My wife wept and tried to stop me. \"If you step out that door,\" she said, \"I will never be your wife again.\" My resolve faltered — yet in the end I steeled myself, flung the door wide, and went.\n\nThe fog blotted out heaven and earth. When the tip of my pole struck the water, I could not even see where it fell. I could only feel the raft's motion through my wrists. The cold was sharper than on any ordinary day; it cut to the bone. Frost gathered in my beard; I breathed it away, and moments later it formed again.\n\nNothing about the scene seemed especially strange. Perhaps there was something wondrous, yet my mind was so muddled that I could not recall it. I remember only one instant: at one point it felt as though my pole was no longer meeting water at all, but something lighter — like pushing through cloud. A feeling too surreal for words to depict.\n\nI cannot say how long I went on. Then the fog began to thin. Before me, overlapping haloes of light shimmered, and within them rose halls and pavilions, radiant beyond measure. Joy seized me like a fever. I gathered what strength remained and drove the raft forward. Just as my strength drained, the raft struck shore. It was as though a stone had finally dropped from my chest. My heart, at last, began to steady.\n\nI left the raft behind and stepped ashore. The ground beneath my feet felt soft as water, yet I neither sank nor grew wet. With each step, ripples spread outward. It was wonder that defied belief.\n\n..."
+  },
+  {
+    "id": 2000118,
+    "name": "Bloomfield Station Workers' Menu",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "A printed poster found in the underground ironworks beneath Bloomfield Station. It appears to have been ripped down from wherever it was originally posted and tossed aside. Whoever removed it was clearly furious about its contents; when unfolded, even the corners are flecked with something that looks suspiciously like spit...",
+    "desc2": "Meals Provided at Bloomfield Station\n\nBreakfast: black bread, water\nLunch: boiled potatoes, bean soup\nDinner: no additional meal provided. Workers assigned to overnight duty may collect one portion of pickled vegetables from the gatehouse.\n\nNotice\n\n1. Under the Long Schedule, breakfast is distributed from 8:30 to 9:00. Under the Short Schedule, breakfast is distributed from 9:00 to 9:30. Lunch is served from 12:00 to 13:00 under both schedules. All times are determined by station clocks. Workers who report for duty after 6:00 are not entitled to meals that day.\n2. Meal collection closes five minutes before the end of the meal period. Workers arriving after that time will not be served. When the work bell sounds, the canteen gates will be closed. Any worker who fails to return to their post on time will receive one demerit. Three demerits will result in dismissal.\n3. Food may not be taken out of the canteen. Eating while on duty is prohibited. Unfinished food may not be taken back to the workplace.\n4. Rejoining the queue to collect additional food is prohibited. Offenders will be charged that day's meal fee.\n5. Child labourers may not eat while seated. Part-time workers are not authorised to enter the canteen.\n6. Disruption of order in the canteen is prohibited, including, but not limited to: chatting, fainting, vomiting, quarrelling, queue-jumping, and breastfeeding.\n7. Meal periods are determined by the bells. When the warning bell sounds, workers must begin leaving the canteen. When the work bell sounds, all workers must already be at their assigned posts for attendance inspection by the foreman.\n8. Workers may not begin eating until food distribution has ended. Note: once the warning bell sounds, workers must stop eating, return their trays and utensils, and clean their places before leaving.\n9. Workers may bring their own food, provided it is consumed in the canteen during the designated meal period. All food must be registered before entry into the canteen. In the event of diarrhoea or similar symptoms, the Station accepts no responsibility. Anyone who sees another worker bring in unregistered food may report them to the guard on duty.\n\n...\n\n(I thought this was just an ordinary workers' menu, but there's barely anything about the food. Most of the poster is taken up by cruel, pointless rules... Working conditions at Bloomfield Station must be appalling.)"
+  },
+  {
+    "id": 2000119,
+    "name": "Bloomfield Station Recruitment Notice",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "A factory recruitment poster displayed at the station entrance. Its claims are emphatic, its tone fervent — enough to stir the blood of any young reader. Strangely, someone has scrawled a smiley face across it... perhaps in wholehearted approval of its message.",
+    "desc2": "Linking the far south to the distant north, bridging distance and dreams — our criss-crossing railways span the land, and our stations shine like stars across the vast expanse of Hyperborea. Loyal subjects of His Majesty, let us stand as one, march forward hand in hand, and forge the future of the Hyperborean railways with our own hands!\nBloomfield Station warmly welcomes all who meet the following requirements:\n1. Hardworking, dependable, disciplined, of good character, and eager to build a better future\n2. No restrictions on age, gender, race, or previous work experience\n\nWhat we offer:\n1. Guidance from veteran workers with more than twenty years of experience. Whatever you wish to learn, you can learn here.\n2. A most stable wage, paid in full and never late.\n3. Daily meals provided on schedule, so every hardworking labourer is kept well fed.\n4. A united and friendly workplace. Here, rank and race are left at the door. From the moment you arrive, you are one of us. We welcome every citizen loyal to Hyperborea.\n\nJoin Bloomfield Station and begin a new chapter in your life. Even if you cannot fight for His Majesty's glory on the battlefield, you may still prove your worth here. Bloomfield Station needs you. So too does the future of Hyperborea.\nJoin us! Join the glorious cause!\n\n(What a stirring piece of recruitment propaganda... Anyone reading it would surely be swept up in its fervour. The terms it promises even sound rather appealing.)"
+  },
+  {
+    "id": 2000120,
+    "name": "My Will",
+    "icon": "T_Read_03",
+    "rarity": 3,
+    "desc": "A plain sheet of white paper. The writing is crooked and uneven, the lines slanting across the page with no proper order. Punctuation appears only here and there, wherever the writer happened to remember it. Wrong words and misspellings appear throughout. You can still make out what it says, but as a will, it contains no instructions worth carrying out — only a rambling account of a life that seems to have left nothing behind.",
+    "desc2": "Today I am going to write my will\nI still dont really know what a will is. I heard the fine lords saying it when they walked past. There was an old man dying and they said he had to write his will before he went. I didnt understand it much, but it sounded like something fancy. They all sounded happy too, like the old man dying and writing his will was a good thing. So before I die I ought to write a will too\nI am probly not even old enough for that. At the ironworks they call the gate man that old bastard. Some people even call the stationmaster that when they got enough guts. But nobody ever called me old. They call me kid, oi you, or that Charon there\nBut that dont stop me dying. And it dont stop me writing a will neither\nOnly I still havent thought what to write. I never had much schooling. I dont know how long I was in school for. Not long I guess. I got sent out to work soon enough. There was no other way. My ma was dying then and she needed money so I stopped going to school and went to work\nBut she died in the end anyway\nSo thats me, a useless Karon. I am bad at working and bad at talking when people talk to me. I think maybe I am no use at all... No, not no use. I am good for getting yelled at. Maybe people feel better after they yell at me. My dad does. When he drinks he yells at me, then he hits me, then the next day he says sory to me. Sometimes I think he does it on purpose. He just wants to hit somebody and nobody else will let him\nI keep thinking if anyone will be sad after I die. I guess my dad will. He wont have anyone to hit after that. I need a good way to die. One where there is still some money after. But I havent thought of one yet. I hope my dying can at least buy my dad a bottle of wine, or else I really am too useless. I wish I could die like that old man the fine lords were talking about. They all sounded so happy, like the old man dying was a good thing\nAlright. I went off again. I have to think of a good way to die. But I still havent thought of one. Maybe if I wait a bit I wont want to die any more\nBut its so f***ing funny. I wrote all this and I still cant think of one thing I want to live for... Forget it then. I will just die\nAlright that is all for my will. I dont know what else to write. If I could get that old mans will maybe I could copy it and make mine look better. But I cant get it obviously. Anyway that is all. I am going to think how to do it now"
+  },
+  {
+    "id": 2000121,
+    "name": "Steamwhistle Salon Code of Conduct",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "A shared document circulated among members of the Steamwhistle Salon, containing a series of thoroughly absurd rules of conduct. The first few pages are neatly written and clearly structured, setting out the Salon's existing rules and internal systems. Between the lines and across the margins, handwritten notes have been crammed into every spare inch — fervent, almost fanatical declarations of devotion to their beloved Stationmaster.",
+    "desc2": "1. When addressing His Honour, Stationmaster Eisenbahn, members must use the proper honorific in full.\n(All hail Stationmaster Eisenbahn!)\n(That right there is a textbook mistake. The full form is \"His Honour, Stationmaster Eisenbahn\"! Not a single word may be omitted!)\n\n2. All attention must remain on His Honour, Stationmaster Eisenbahn. Members are not to bring up other public figures, including opera stars, stage actors, and the like.\n(*a name scratched out* has been an embarrassment lately. How can someone act that badly and still call themselves a professional? Unlike His Honour, Stationmaster Eisenbahn — he never lets us down.)\n(Didn't we have a rule about not mentioning other public figures? Why is this one still breaking the rules? Don't let me find out who wrote this.)\n\n3. Memorise His Honour, Stationmaster Eisenbahn's birthday, height, body measurements, and weight.\n(Latest update — His Honour, Stationmaster Eisenbahn, has lost another kilo. Current weight: 73 kg.)\n(He's lost weight again from working so hard... Breaks my heart. What are the people around him even doing? How did no one notice?)\n(Working hard? Entertaining foreign businesswomen, more like!)\n(Found the anti. Get out. This handbook is for Salon members only.)\n(Lol. People are actually spreading romance rumours about His Honour? Everyone knows there's room in his heart only for work.)\n\n4. Members of the Steamwhistle Salon must support one another and must not hoard memorabilia connected to His Honour, Stationmaster Eisenbahn, including cigarette cases, posters, and similar items.\n\n5. The sale of unauthorised merchandise featuring His Honour, Stationmaster Eisenbahn, is strictly forbidden. Offenders will bear all consequences.\n\n...\n\n54. Members must actively safeguard the reputation of His Honour, Stationmaster Eisenbahn, and firmly oppose all attempts to belittle him, smear his name, slander him, or spread malicious rumours. If necessary, extreme measures may be employed.\n\n(So... throwing bricks is allowed?)\n(You could, but that's terribly ungentlemanly. I have connections at the Security Bureau — write the name here and I'll take care of them.)\n\n(I'm new... there are way too many rules. If I can't memorise them all, can I write cheat notes?)\n(How can you fail to remember this little? What are you, a plant from a rival fan club?)"
+  },
+  {
+    "id": 2000122,
+    "name": "Daily Activity Report: His Honour, Stationmaster Eisenbahn",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "An activity report concerning Eisenbahn, with precise records of times, locations, and observed activities. Written in a detached, clinical tone, it records his movements and routines in exhaustive detail — as if the author were a shadow trailing a few steps behind him.\nIts complete lack of personal feeling stands in stark contrast to the usual fervour of the Steamwhistle Salon, giving the document an oddly suspicious quality.",
+    "desc2": "Daily Activity Report: His Honour, Stationmaster Eisenbahn\n\n12 September, Clear — Bloomfield Station Freight Yard\nApprox. 10:00 — Subject observed in the mid-rear section of the freight yard. Accompanied by four guards. Engaged in conversation with officials from Icelake. Subject repeatedly directed his gaze into the interiors of freight carriages.\n\n25 September, Overcast — Station Concourse\n15:00 — Subject appeared at the ticket gate in disguise. Wearing a checked cap with a long peak and brown-tinted sunglasses. Behaviour deemed suspicious.\n\n2 October, Cloudy, Clearing Later — Bloomfield Station Freight Yard\n01:40 — An unauthorised train entered the station. Subject not sighted. Members of his personal guard were present. Incident confirmed to be closely connected to the meeting on 12 September.\n\n5 October, Rain — Bloomfield Station Materials Yard\nSubject not sighted. An intoxicated merchant was observed loitering in the area, alleging deception and betrayal in connection with a transaction. The individual later left the station. Violent assault suspected thereafter.\n\n27 October, Clear — Platform\nSubject appeared in full military uniform. Offered formal greetings to boarding passengers and remained on site to see the train off. Presentation stable. No abnormalities observed.\n\n..."
+  },
+  {
+    "id": 2000123,
+    "name": "The Sacred Ledger",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "A soft-bound ledger containing no ordinary income or expenditure records. Instead, it serves as the Steamwhistle Salon's main channel for exchanging and trading merchandise related to their beloved idol, Stationmaster Eisenbahn.\nTo those who worship Eisenbahn with near-fanatical devotion, the ledger is more precious than their own lives — a \"Sacred Ledger\" not to be defiled.",
+    "desc2": "In a neat hand: Looking to buy His Honour, Stationmaster Eisenbahn's 2nd Anniversary Poster. 50 silver.\nIn a hasty hand: That little for a 2nd Anniversary? You couldn't even get this year's poster for that.\nIn a cramped, cursive hand: 80 silver. Deal or no deal?\nIn a neat hand: Sorry... that's more than I'm willing to pay.\n\nIn a broken, uneven hand: Anyone want His Honour, Stationmaster Eisenbahn's Birthday Commemorative Cigarettes? No cigarette pack, just the cigarettes.\nIn a neat hand: What's the point of buying just the cigarettes?\nIn a broken, uneven hand: You can smoke the same kind as His Honour, Stationmaster Eisenbahn.\n\nIn a bold, forceful hand: His Honour, Stationmaster Eisenbahn's 5th Anniversary Commemorative Stamp, rubbing edition. 50 silver. Trade in person tomorrow at 15:00.\nIn a childish hand: \"Rubbing edition\"? Yeah, right. Isn't that just a knock-off you made yourself?\nIn a neat hand: Do not defile the Sacred Ledger. Keep this nonsense out of it!\n\n...\nIn an elegant hand: His Honour, Stationmaster Eisenbahn will appear on the platform tomorrow afternoon. Further details available by private trade.\n\nIn a light, rounded hand: His Honour, Stationmaster Eisenbahn's 10th Anniversary Photography Event. Looking for a partner. I'll bring the camera; you take the photo. I'm a terrible photographer.\n\nIn a sharp, angular hand: His Honour, Stationmaster Eisenbahn's newcomer welcome event souvenir available. Leave contact details if interested.\nIn a childish hand: Where did you even get those? The chairman said no reselling. Consider this a warning."
+  },
+  {
+    "id": 2000124,
+    "name": "The Invincible Stationmaster: Volume Ⅰ",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "A serial novel with a sloppy title, set against the backdrop of the decades-old war between Hyperborea and Elysium, centring on the adventures of a Hyperborean boy. Published as a companion title to The Invincible Legion Chief, it is a favourite among the Empire's youth.",
+    "desc2": "Chapter 189: The Rails Will Stretch Ever Farther\n\n\"Stationmaster Leo, is there truly no way to increase this station's capacity fivefold?\"\nLeo set down the Minister of Transport's letter and let out a quiet sigh.\nIt was not the minister's seemingly unreasonable demand that weighed on him. Leo knew all too well that, with the front lines mired in bitter fighting, a fivefold increase was not merely reasonable. It was necessary.\nThe railways were the veins of Hyperborea. Through them flowed supplies, weapons, equipment, and legionaries bound for every corner of the Empire, carrying hot lifeblood through its body without pause.\nAs stationmaster, Leo knew better than anyone that the Empire's current rail capacity was nowhere near enough to meet the needs of the front. Without a dramatic increase in efficiency, the soldiers fighting there might soon find themselves short of guns and ammunition, forced to charge the enemy with nothing but their fists.\nHyperborean soldiers would remain brave and unyielding even then. But Leo, entrusted with the Empire's transport lifeline, knew it was his duty to do everything in his power to spare his countrymen at the front needless sacrifice.\nHe picked up his communicator, his mind already racing through ways to improve the station's efficiency.\n\"Expand the station... centralise dispatch... refit passenger trains for military freight...\"\nHe opened a channel and began assigning tasks to his subordinates according to their strengths.\n\"Kate, you have the contacts. Gather every available hand you can find. I'll bring in engineers from the Aeolipile, and together we'll lay the new tracks.\"\n\"Understood.\"\n\"Wolfe, you know machinery. Put together an emergency repair crew. If a train breaks down, I want it dragged off the track and repaired immediately.\"\n\"Understood.\"\n...\nOnce all the tasks had been assigned, Leo rolled a cigarette and gazed south, towards the Elysian Church.\n\"One day, I will see the Empire's railways laid all the way to the Tower of Elysium. I will see the Empire's veins reach every last inch of the false god's lands.\"\nLeo tucked the cigarette away, turned, and strode back towards the station. A fierce wind swept past, snapping his greatcoat behind him, but his stride never faltered.\n\"I'll save this cigarette for that day.\"\n\nCan Leo carry out his superiors' order? Can his station bear the burden of sustaining the front? The saga continues in the next instalment of The Invincible Stationmaster."
+  },
+  {
+    "id": 2000125,
+    "name": "Flodia Bloomfield Station Annual Accounts Ledger",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "A ledger apparently left in the station's left-luggage office by Handy, who was later executed on Eisenbahn's orders. Packed with figures and complex entries, it is enough to make your head spin at a glance. What remains unclear is why it was enough to cost Handy his life.",
+    "desc2": "Request Ⅰ\nRoutine Maintenance of Bloomfield Station\nBudget: 100,000 gold coins\nDecision: Denied\nNotes: Last year's maintenance budget was 80,000 gold coins. Some increase is justified given the station's age, but this is still far too much. Keep your spending under control. Some parts now cost more to maintain than to replace. I have a list here — inspect them accordingly.\n\nRequest Ⅱ\nThe Alchemy Academy has requested funding from the station for the development of its newest locomotive. If successful, it will be put into service at Bloomfield Station first.\nBudget: 245,700 gold coins\nDecision: Reduced budget approved — 45,700 gold coins\nNotes: All those odd figures make it seem convincing, don't they? They requested sponsorship from us under the same pretext a few years ago. Then last year, when I visited the stationmaster in Dismania, I learned they had made the same promise to every station of any real size. They are simply trying to squeeze money out of us. Still, we cannot afford an open confrontation with them. Give them a token sum and close the matter.\n\nRequest Ⅲ\nThe Steamwhistle Salon requests funding for activities promoting Stationmaster Eisenbahn's public image.\nBudget: 10,000 gold coins\nDecision: Denied\nNotes: This organisation has nothing to do with me. If they submit another request, do not bring it to my desk. Reject it outright.\n\nRequest Ⅳ\nImprovement of labour conditions for station workers\nBudget: 10,000 gold coins\nDecision: Increased to 30,000 gold coins\nDirective: Redirect the amount cut from routine maintenance to this project. Proceed under the usual arrangements. Full authorisation granted."
+  },
+  {
+    "id": 2000126,
+    "name": "Aurora Express Hijacking Incident Report",
+    "icon": "T_Read_03",
+    "rarity": 3,
+    "desc": "A report alarming enough to give officials across the Empire a collective headache.",
+    "desc2": "The incident occurred at 09:00 yesterday morning. Princess Flodia departed from Platform Ⅰ aboard the Jackdaw, bound for the Imperial Capital, Dismania.\nOne of the perpetrators, an Icelake Phoxhunter whose identity has yet to be confirmed, had boarded the Gale at 08:00, also bound for Dismania. Roughly three hours after departure, the Jackdaw overtook the Gale. The Phoxhunter seized the opportunity to leap aboard the Jackdaw. Taking advantage of the relatively light guard presence on the roof, they entered the carriage from above, seized Princess Flodia, and jumped with her onto the Aurora Express, another train travelling on an adjacent track.\n\nThe Aurora Express was then hijacked by Katya of the Hazering, one of the leaders of the Forsakens, known by the codename \"Beast-King\". After the hijacking began, the 6th Legion stationed in the Cocytus Region immediately dispatched the airship Deepwinter in response. Katya used Princess Flodia as a hostage to prevent the airship from engaging. She later used the Aurora Express's main cannon to strike Deepwinter, and the blast also ignited a Heaventree in southern Cocytus.\nA violent confrontation then broke out between Katya and the Phoxhunter, presumably over what was to be done with Princess Flodia. Katya was later extracted by members of the Forsakens. The Phoxhunter's whereabouts remain unknown, and they are presumed to have been killed in the locomotive explosion.\n\nThe incident caused significant losses. The airship Deepwinter crashed, and the Aurora Express's locomotive was wrecked beyond repair.\nIn addition, dense airborne particulates released by the burning Heaventree will render the airspace between Cocytus and Dismania impassable for a considerable period. Should the Forsakens launch a large-scale uprising during this time, the Empire will have difficulty redeploying airships from across its territory to suppress the unrest.\nPrincess Flodia's current whereabouts are unknown. However, according to passengers aboard the Aurora Express who saw her during the incident, she does not appear to have been caught in the locomotive explosion.\n\nThe incident resulted in the deaths of more than a dozen civilians, with over forty others injured. The conductor, driver, and many train guards were killed in action while resisting the Forsakens. We honour these brave souls. The Empire will see the demons of the Forsakens pay blood for blood.\nAll glory to our Emperor!\n\nAttachment: Civilian Victims, 13 Total\nJeff Eysen — Icelake courier\nElena Horn — Icelake fur merchant\nCliff Miller — Dismania bank clerk\n..."
   },
   {
     "id": 3000001,
@@ -13649,6 +14377,70 @@
     "rarity": 2,
     "desc": "A creeping plant commonly found in shaded areas, highly flexible with intertwined fibers. After processing, they are used in various applications, and they are durable and resistant to wear. \nSaid to be the inspiration for cable design.",
     "desc2": "\"Also known as the Ashless Wood, dark in colour, with leaves white as bone; resembling rotten timber, yet flame shuns its touch.\nIts bark is edible, with an astringent and cold taste, non-toxic.\nCan soothe swollen throats and quell inner heat, taken twice daily in a brew.\"\n\n— Fufeng, Huaxu Apothecary, in \"Essentials of Medicinal Herbs\""
+  },
+  {
+    "id": 3000018,
+    "name": "颜料【待包装】",
+    "icon": "T_Dye_01",
+    "rarity": 4,
+    "desc": "颜料的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000018"
+  },
+  {
+    "id": 3000019,
+    "name": "止痛药【待包装】",
+    "icon": "T_Guide_ChapterItem_003",
+    "rarity": 4,
+    "desc": "止痛药的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000019"
+  },
+  {
+    "id": 3000020,
+    "name": "工卡【待包装】",
+    "icon": "T_Guide_ChapterItem_0026",
+    "rarity": 4,
+    "desc": "工卡的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000020"
+  },
+  {
+    "id": 3000021,
+    "name": "支票【待包装】",
+    "icon": "T_Guide_ChapterItem_0024",
+    "rarity": 4,
+    "desc": "支票的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000021"
+  },
+  {
+    "id": 3000022,
+    "name": "止血钳【待包装】",
+    "icon": "T_Guide_ChapterItem_0037",
+    "rarity": 4,
+    "desc": "止血钳的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000022"
+  },
+  {
+    "id": 3000023,
+    "name": "金属酒壶【待包装】",
+    "icon": "T_Guide_ChapterItem_0028",
+    "rarity": 4,
+    "desc": "金属酒壶的功能描述【待包装】",
+    "desc2": "金属酒壶的文案描述【待包装】"
+  },
+  {
+    "id": 3000024,
+    "name": "走私棉衣【待包装】",
+    "icon": "T_Guide_ChapterItem_0029",
+    "rarity": 4,
+    "desc": "走私棉衣的功能描述【待包装】",
+    "desc2": "走私棉衣的文案描述【待包装】"
+  },
+  {
+    "id": 3000025,
+    "name": "消毒剂【待包装】",
+    "icon": "T_Guide_ChapterItem_0033",
+    "rarity": 4,
+    "desc": "消毒剂的功能描述【待包装】",
+    "desc2": "消毒剂的文案描述【待包装】"
   },
   {
     "id": 4010001,
@@ -18048,6 +18840,14 @@
     "desc2": "\"Hyperborea is so far away and so cold! People there must wrap up in fur or padded coats... they probably never see silk at all. So I thought — why not send some for the stage decor? And who knows — maybe it'll even bring a few customers to my stall! Hopefully!\""
   },
   {
+    "id": 4030007,
+    "name": "Commemorative Ticket",
+    "icon": "T_Icon_TheaterOnline_07",
+    "rarity": 4,
+    "desc": "A commemorative item from Lunotoot, specially made to resemble a ticket. Though it cannot be used for travel, it helps create the festive ambience of the [Festive Gathering: Bloomfield Station] event.",
+    "desc2": "\"I asked my friend Gloria, who works here too, to help me get these ready in time. What do you think? They look just like real tickets, don't they? I hope they can carry a memory for you, just like real tickets do!\""
+  },
+  {
     "id": 5011010,
     "name": "Tidewanderer",
     "icon": "T_Fish_Sea_Normal_1",
@@ -19072,6 +19872,86 @@
     "desc2": "\"Good grief... I've been fishing all my life and never once questioned it. Turns out the Siltshark isn't a shark at all. Reckon 'Siltshark' sounds a fair bit better than 'mudfish' when you're bragging about your catch. No wonder it stuck.\"\n\n— An old fisherman, deep in thought"
   },
   {
+    "id": 5032010,
+    "name": "浮草鱼",
+    "icon": "T_Fish_FreshWater_Chapter03_1",
+    "rarity": 3,
+    "desc": "广泛分布在阿特拉西亚大陆各处的知名食用鱼之一。生命力旺盛且环境适应性极强，因此常被人笑称为路边野草一样多的杂鱼。",
+    "desc2": "“你知道吗，浮草鱼虽然是很常见的淡水鱼，但你是怎么知道我刚钓上来一条100多斤的浮草鱼王啊。”\n\n——自豪的捕鱼人"
+  },
+  {
+    "id": 5032011,
+    "name": "浮草鱼·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_1_1",
+    "rarity": 3,
+    "desc": "广泛分布在阿特拉西亚大陆各处的知名食用鱼之一。生命力旺盛且环境适应性极强，因此常被人笑称为路边野草一样多的杂鱼。",
+    "desc2": "“你知道吗，浮草鱼虽然是很常见的淡水鱼，但你是怎么知道我刚钓上来一条100多斤的浮草鱼王啊。”\n\n——自豪的捕鱼人"
+  },
+  {
+    "id": 5032020,
+    "name": "嘀嘟鱼",
+    "icon": "T_Fish_FreshWater_Chapter03_2",
+    "rarity": 3,
+    "desc": "生活在百花车站附近的淡水鱼之一，不知是天性如此还是受来往的列车影响，嘀嘟鱼学会了从修长的口器中发出类似列车汽笛的“嘟嘟”声。当人们从它们的领地经过时，就能听到湖水中此起彼伏的“嘟——嘟”。",
+    "desc2": "“每次检修轨道我都得仔细分辨汽笛声到底是来自列车还是来自嘀嘟鱼，再这么干下去，我早晚得神经衰弱……”\n\n——精神紧绷的轨道维修工"
+  },
+  {
+    "id": 5032021,
+    "name": "嘀嘟鱼·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_2_1",
+    "rarity": 3,
+    "desc": "生活在百花车站附近的淡水鱼之一，不知是天性如此还是受来往的列车影响，嘀嘟鱼学会了从修长的口器中发出类似列车汽笛的“嘟嘟”声。当人们从它们的领地经过时，就能听到湖水中此起彼伏的“嘟——嘟”。",
+    "desc2": "“每次检修轨道我都得仔细分辨汽笛声到底是来自列车还是来自嘀嘟鱼，再这么干下去，我早晚得神经衰弱……”\n\n——精神紧绷的轨道维修工"
+  },
+  {
+    "id": 5032030,
+    "name": "观星鱼",
+    "icon": "T_Fish_FreshWater_Chapter03_3",
+    "rarity": 4,
+    "desc": "常见于科赛托斯行省的淡水鱼之一，无论何时都仰着它那高傲的头，哪怕做熟以后也是如此，仿佛群星之间有什么东西在呼唤它们一样。",
+    "desc2": "“到底是谁想出来在派里塞观星鱼，甚至是头朝上塞进去的？？？简直是暴殄天物、天理难容、罪大恶极！！”\n\n——愤怒的厨师长"
+  },
+  {
+    "id": 5032031,
+    "name": "观星鱼·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_3_1",
+    "rarity": 4,
+    "desc": "常见于科赛托斯行省的淡水鱼之一，无论何时都仰着它那高傲的头，哪怕做熟以后也是如此，仿佛群星之间有什么东西在呼唤它们一样。",
+    "desc2": "“到底是谁想出来在派里塞观星鱼，甚至是头朝上塞进去的？？？简直是暴殄天物、天理难容、罪大恶极！！”\n\n——愤怒的厨师长"
+  },
+  {
+    "id": 5032040,
+    "name": "球球豚",
+    "icon": "T_Fish_FreshWater_Chapter03_4",
+    "rarity": 4,
+    "desc": "生活在科赛托斯行省的河豚亚种。攻击性远低于同族，遇到捕食者时，也只是胀圆了身子，飞速滚动着逃跑。",
+    "desc2": "“烹饪前明明很可爱的，做熟以后怎么跟漏了气的皮球一样啊……”\n\n——沮丧的厨师"
+  },
+  {
+    "id": 5032041,
+    "name": "球球豚·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_4_1",
+    "rarity": 4,
+    "desc": "生活在科赛托斯行省的河豚亚种。攻击性远低于同族，遇到捕食者时，也只是胀圆了身子，飞速滚动着逃跑。",
+    "desc2": "“烹饪前明明很可爱的，做熟以后怎么跟漏了气的皮球一样啊……”\n\n——沮丧的厨师"
+  },
+  {
+    "id": 5032050,
+    "name": "铁额鲑",
+    "icon": "T_Fish_FreshWater_Chapter03_5",
+    "rarity": 5,
+    "desc": "生长迅速，体型巨大的洄游鱼，因其金属般的色泽而得名。但与其外表完全相反的是，铁额鲑的肉质十分软嫩，咬一口如同奶油在嘴里化开，无比的肥美多汁，因此常见于冰湖城各路名流的宴会之上。",
+    "desc2": "“世界各地都有水怪传说，到最后，它们往往都被证明只是生活在当地的某种生长迅速的大鱼而已，所谓的科赛托斯水怪，亦是如此。”\n\n——正在翻看都市怪谈的无名学者"
+  },
+  {
+    "id": 5032051,
+    "name": "铁额鲑·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_5_1",
+    "rarity": 5,
+    "desc": "生长迅速，体型巨大的洄游鱼，因其金属般的色泽而得名。但与其外表完全相反的是，铁额鲑的肉质十分软嫩，咬一口如同奶油在嘴里化开，无比的肥美多汁，因此常见于冰湖城各路名流的宴会之上。",
+    "desc2": "“世界各地都有水怪传说，到最后，它们往往都被证明只是生活在当地的某种生长迅速的大鱼而已，所谓的科赛托斯水怪，亦是如此。”\n\n——正在翻看都市怪谈的无名学者"
+  },
+  {
     "id": 5110100,
     "name": "Training Rod",
     "icon": "T_FishingRod_Normal_1",
@@ -19778,6 +20658,15 @@
           [
             -350,
             -8710
+          ]
+        ]
+      },
+      {
+        "srId": 105301,
+        "pos": [
+          [
+            43714.61,
+            23454.56
           ]
         ]
       }
@@ -20560,6 +21449,94 @@
     "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
   },
   {
+    "id": 31013001,
+    "name": "Dust on the Capital Road",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013002,
+    "name": "Splendour of Haojing",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013003,
+    "name": "Jiaolan Village: Echoes of the Past – Xiao",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013004,
+    "name": "Jiaolan Village: Echoes of the Past – Piano",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013005,
+    "name": "Beyond the Mountains",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013006,
+    "name": "The Balance of Black and White",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013007,
+    "name": "Fate Without Cause",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013008,
+    "name": "Jishu's Wonders",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013009,
+    "name": "The Black Covenant",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013010,
+    "name": "Where Light Cannot Reach",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
+    "id": 31013011,
+    "name": "Lotus Born of Flame",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "A piece of sheet music — its notes trace a story like footprints in the sand.",
+    "desc2": "\"When your fingers brush the keys, the notes awaken — the wind's whispers, time's soft sigh, the hush of new shoots breaking soil. They give voice to ancient histories, to heroes' unspoken vows, to tales never etched on any page. They stand as testament to all that has ever been upon this land.\"\n \n— Lirico, the Wandering Bard"
+  },
+  {
     "id": 60000041,
     "name": "Upgrade Voucher Ⅰ",
     "icon": "T_Activity_SoloTreasure_BagSign01",
@@ -20600,6 +21577,14 @@
     "icon": "T_Activity_SoloTreasure_BagSign06",
     "rarity": 5,
     "desc": "Unlocks access to the corresponding Treasure Pouch"
+  },
+  {
+    "id": 101120101,
+    "name": "Sigil: Phoxhunter – Umbro",
+    "icon": "T_Phantom_Nanzhu02",
+    "rarity": 5,
+    "desc": "A sigil for summoning Combat Partners. It is a staff to lean on in a battle, a pact of companionship, and an oath unspoken.\nHeartfelt prayers shall be answered, and the desired one shall appear by your side.",
+    "desc2": "\"Our tale spans over two millennia: a saga of embrace and massacre, of furore and mercy. History ebbs and flows like the celestial dance of the sun and the moon – constant and cyclical. In the grand tapestry of time recounted in these pages, I am but a mere observer, as insignificant as a flake of Hyperborean snow, a leaf from Aethyrie, a drop in Luca's waters, or a grain from Khemet's sands. Yet, in this immense cosmos, I harbour the hope that snowflakes will forge snowfields, leaves will form forests, drops of water will coalesce into rivers, and grains will gather to sculpt deserts. As all singular entities unite, history shall pivot in our favour.\"\n\n— Betwixt Leaves And Branches — History of Atlasia, by Comnena, Chief Librarian of the Aethyrie Cloud Cavern Library"
   },
   {
     "id": 101160101,

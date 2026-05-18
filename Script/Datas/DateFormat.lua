@@ -8,6 +8,8 @@ return ReadOnly("DateFormat", {
   Date_MD = {
     FormatCN = "%m月%d日",
     FormatEN = "%B %e",
+    FormatES = "%d de %B",
+    FormatFR = "%d %B",
     FormatID = "Date_MD",
     FormatJP = "%m月%d日",
     FormatKR = "%m월%d일"
@@ -15,6 +17,8 @@ return ReadOnly("DateFormat", {
   Date_MD_Raw = {
     FormatCN = "%m-%d",
     FormatEN = "%d-%m",
+    FormatES = "%d-%m",
+    FormatFR = "%d-%m",
     FormatID = "Date_MD_Raw",
     FormatJP = "%m-%d",
     FormatKR = "%m-%d"
@@ -22,6 +26,8 @@ return ReadOnly("DateFormat", {
   Date_YMD = {
     FormatCN = "%Y年%m月%d日",
     FormatEN = "%B %e, %Y",
+    FormatES = "%d de %B %Y",
+    FormatFR = "%d %B %Y",
     FormatID = "Date_YMD",
     FormatJP = "%Y年%m月%d日",
     FormatKR = "%Y년%m월%d일"
@@ -29,6 +35,8 @@ return ReadOnly("DateFormat", {
   Date_YMD_Raw = {
     FormatCN = "%y-%m-%d",
     FormatEN = "%d-%m-%y",
+    FormatES = "%d-%m-%y",
+    FormatFR = "%d-%m-%y",
     FormatID = "Date_YMD_Raw",
     FormatJP = "%y-%m-%d",
     FormatKR = "%y-%m-%d"

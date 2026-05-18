@@ -176,6 +176,9 @@ function M:Construct()
   if self.WidgetSwitcher_Max then
     self.WidgetSwitcher_Max:SetActiveWidgetIndex(self.IsMaximized and 1 or 0)
   end
+  if self.Group_TopTips then
+    self.Group_TopTips:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self:EnableTips()
   if self.Tips_In then
     self:BindToAnimationFinished(self.Tips_In, {
@@ -190,8 +193,13 @@ function M:Construct()
     })
   end
   local Root = UE.UWindowTitleBarFunctionLibrary.GetWindowTitleBarRootWidget()
-  if Root and Root.OnWindowMaximizeStateChanged then
-    Root.OnWindowMaximizeStateChanged:Add(self, self.OnWindowMaximizeStateChanged)
+  if Root then
+    if Root.WidgetTree and Root.WidgetTree.RootWidget then
+      Root.WidgetTree.RootWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    end
+    if Root.OnWindowMaximizeStateChanged then
+      Root.OnWindowMaximizeStateChanged:Add(self, self.OnWindowMaximizeStateChanged)
+    end
   end
 end
 
@@ -258,6 +266,9 @@ function M:ShowTopToast(Key)
   end
   local Text = GText(Key)
   if self.ToastState == "Idle" then
+    if self.Group_TopTips then
+      self.Group_TopTips:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
     self.Text_TopTips:SetText(Text)
     self:PlayAnimation(self.Tips_In)
     self.ToastState = "In"
@@ -288,11 +299,17 @@ end
 
 function M:OnTipsOutFinished()
   if self.PendingToastText then
+    if self.Group_TopTips then
+      self.Group_TopTips:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
     self.Text_TopTips:SetText(self.PendingToastText)
     self.PendingToastText = nil
     self:PlayAnimation(self.Tips_In)
     self.ToastState = "In"
   else
+    if self.Group_TopTips then
+      self.Group_TopTips:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
     self.ToastState = "Idle"
   end
 end

@@ -18,6 +18,21 @@ local RightBottomBtnName = {
   "Announcement",
   "Back"
 }
+local HideSwitchAccountChannelIdList = {
+  255,
+  11,
+  2,
+  23
+}
+
+local function IsChannelIdInList(ChannelId)
+  for _, Item in ipairs(HideSwitchAccountChannelIdList) do
+    if Item == ChannelId then
+      return true
+    end
+  end
+  return false
+end
 
 function WBP_GameStartMainPage_C:Initialize(Initializer)
   self.Super.Initialize(self)
@@ -1003,7 +1018,7 @@ function WBP_GameStartMainPage_C:SwitchAccount()
     self.bSwitchCountCD = false
   end)
   local Platform = UE4.UUIFunctionLibrary.GetDevicePlatformName()
-  if "Android" == Platform and not HeroUSDKSubsystem(self):IsGlobalSDK() then
+  if ("Android" == Platform or "OpenHarmony" == Platform) and not HeroUSDKSubsystem(self):IsGlobalSDK() then
     self.bSwitchingAccount = true
   end
   HeroUSDKSubsystem(self):EMHeroSDKSwitchAccount()
@@ -1091,7 +1106,7 @@ end
 function WBP_GameStartMainPage_C:ExitGame()
   local PlatformName = UGameplayStatics.GetPlatformName()
   local HeroUSDKSubsystem = HeroUSDKSubsystem(self)
-  if HeroUSDKSubsystem:IsHeroSDKEnable() and "Android" == PlatformName then
+  if HeroUSDKSubsystem:IsHeroSDKEnable() and ("Android" == PlatformName or "OpenHarmony" == PlatformName) then
     HeroUSDKSubsystem:HeroSDKExitGame()
   else
     self:ShowExitGamePopupUI()
@@ -1622,7 +1637,7 @@ function WBP_GameStartMainPage_C:OnPatchFinished(bFrist)
     self:BindDelegates()
   end
   self.Btn_Support:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  if AHotUpdateGameMode.IsExamineDistribution() or HeroUSDKSubsystem(self):IsBilibili() or UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
+  if AHotUpdateGameMode.IsExamineDistribution() or self:IsNonHeroChannel() or UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
     self.Btn_Support:SetVisibility(ESlateVisibility.Collapsed)
   end
   UIManager(self):UnLoadUI("CommonDialog")
@@ -1801,7 +1816,7 @@ function WBP_GameStartMainPage_C:ShowDownloadBasepakUI(bLargeVersion)
       if not bLargeVersion then
         UE4.UKismetSystemLibrary.LaunchURL(NewGMHyperLink)
       end
-      if "Android" ~= PlatformName then
+      if "Android" ~= PlatformName or bLargeVersion then
         self:ForceQuitGame()
       end
       return
@@ -1879,7 +1894,9 @@ end
 
 function WBP_GameStartMainPage_C:SetSwitchBtnVisable(bShow)
   local bIsWegameChannel = UE4.UUsdkSettings:GetDefaultObject().Channel == UE4.EHeroUSDKChannel.WeGame
-  if bShow and not bIsWegameChannel and not UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
+  local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
+  local bIsHideSwitchAccountChannel = IsChannelIdInList(ChannelId)
+  if bShow and not bIsWegameChannel and not bIsHideSwitchAccountChannel and not UE4.UUCloudGameInstanceSubsystem.IsCloudGame() then
     self.Btn_Back:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   else
     self.Btn_Back:SetVisibility(ESlateVisibility.Collapsed)
@@ -2088,6 +2105,16 @@ end
 
 function WBP_GameStartMainPage_C:SetServerInfo(SInfo)
   self.ServerInfo = SInfo
+end
+
+function WBP_GameStartMainPage_C:IsNonHeroChannel()
+  if self._IsNonHeroChannel ~= nil then
+    return self._IsNonHeroChannel
+  end
+  local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
+  local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
+  self._IsNonHeroChannel = nil ~= ChannelInfo and ChannelInfo.AccountPrefix ~= "hero"
+  return self._IsNonHeroChannel
 end
 
 AssembleComponents(WBP_GameStartMainPage_C)

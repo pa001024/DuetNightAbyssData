@@ -261,6 +261,7 @@ function M:AddReward(PoolId, Number, Ids, Type, Count, Probability)
     Content = UE4.NewObject(UIUtils.GetCommonItemContentClass())
   end
   Content.EventId = self.EventId
+  Content.PoolId = PoolId
   Content.Number = Number
   Content.Ids = Ids
   Content.Type = ItemUtils.GetItemType(Type)

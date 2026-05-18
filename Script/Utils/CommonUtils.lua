@@ -581,16 +581,10 @@ function CommonUtils.GetCapFixLocation(Character, Loc, LocationExtraZ, StartZ, E
   local NewLoc = Loc
   local OriginCapsuleRadius = Character.CapsuleComponent and Character.CapsuleComponent:GetScaledCapsuleRadius() or 0
   local OriginHalfHeight = Character.CapsuleComponent and Character.CapsuleComponent:GetScaledCapsuleHalfHeight() or 0
-  for _, Offsets in pairs(Const.SummonOffset) do
-    local x = Offsets[1]
-    local y = Offsets[2]
-    local HitResult = FHitResult()
-    local _NewLoc = FVector(Loc.X + x, Loc.Y + y, Loc.Z)
-    local bHit = UE4.UKismetSystemLibrary.CapsuleTraceSingle(Character, _NewLoc + FVector(0, 0, StartZ or 0), _NewLoc + FVector(0, 0, EndZ or -1500), OriginCapsuleRadius, OriginHalfHeight, Const.FixTraceChannel[TraceType], false, nil, 0, HitResult, true, UE4.FLinearColor(1, 0, 0, 1), UE4.FLinearColor(0, 1, 0, 1), 5)
-    if bHit and HitResult.Location ~= _NewLoc then
-      NewLoc = HitResult.Location
-      break
-    end
+  local HitResult = FHitResult()
+  local bHit = UE4.UKismetSystemLibrary.CapsuleTraceSingle(Character, NewLoc + FVector(0, 0, StartZ or 0), NewLoc + FVector(0, 0, EndZ or -1500), OriginCapsuleRadius, OriginHalfHeight, Const.FixTraceChannel[TraceType], false, nil, 0, HitResult, true, UE4.FLinearColor(1, 0, 0, 1), UE4.FLinearColor(0, 1, 0, 1), 5)
+  if bHit and HitResult.Location ~= _NewLoc then
+    NewLoc = HitResult.Location
   end
   NewLoc = FVector(NewLoc.X, NewLoc.Y, NewLoc.Z + (LocationExtraZ or 50))
   return NewLoc

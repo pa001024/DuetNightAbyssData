@@ -90,24 +90,32 @@ function M:StartToShowItem()
       local LotteryInfo = self.TicketId and DataMgr.ExtractionLottery[self.TicketId]
       local AddScore = 0
       self.SoloTreasureScore = 0
+      local ScoreExcludeKey = 0
       for Index, ItemContent in pairs(self.RealShowItemList) do
         if self:CheckBuffCondition(ItemContent) then
           self.SoloTreasureScore = self.SoloTreasureScore + ItemContent.Value * ItemContent.BuffRate
         else
           self.SoloTreasureScore = self.SoloTreasureScore + ItemContent.Value
         end
+        if 6 ~= ItemContent.Rarity then
+          if self:CheckBuffCondition(ItemContent) then
+            ScoreExcludeKey = ScoreExcludeKey + ItemContent.Value * ItemContent.BuffRate
+          else
+            ScoreExcludeKey = ScoreExcludeKey + ItemContent.Value
+          end
+        end
       end
       if LotteryInfo then
         if 3 == self.TicketType then
-          if self.SoloTreasureScore >= LotteryInfo.Param[1] then
-            AddScore = self.SoloTreasureScore * (LotteryInfo.EffectParam - 1)
+          if ScoreExcludeKey >= LotteryInfo.Param[1] then
+            AddScore = ScoreExcludeKey * (LotteryInfo.EffectParam - 1)
           end
         elseif 4 == self.TicketType then
           if self:GetItemNumByType("TreasureType", LotteryInfo.Param[1], LotteryInfo.Param[2]) then
-            AddScore = self.SoloTreasureScore * (LotteryInfo.EffectParam - 1)
+            AddScore = ScoreExcludeKey * (LotteryInfo.EffectParam - 1)
           end
         elseif 5 == self.TicketType and self:GetItemNumByType("Rarity", LotteryInfo.Param[1], LotteryInfo.Param[2]) then
-          AddScore = self.SoloTreasureScore * (LotteryInfo.EffectParam - 1)
+          AddScore = ScoreExcludeKey * (LotteryInfo.EffectParam - 1)
         end
       end
       if AddScore > 0 then
@@ -159,6 +167,9 @@ end
 
 function M:CheckBuffCondition(Content)
   if not Content.BuffType then
+    return false
+  end
+  if 6 == Content.Rarity then
     return false
   end
   if 1 == Content.BuffType then

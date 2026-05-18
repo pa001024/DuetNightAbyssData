@@ -355,11 +355,17 @@ function Component:HostageDyingCountDown_Lua()
     RescueTimeFloat = UIManager(self):LoadUINew("DungeonRescueTimeFloat")
   end
   RescueTimeFloat:InitRescueTimeFloatOnHostageDead()
+  local MaxDyingDuration = 20
+  local RespawnRuleName = DataMgr.Dungeon[self.DungeonId] and DataMgr.Dungeon[self.DungeonId].RespawnRule or "CommonSolo"
+  local RespawnRuleData = DataMgr.RespawnRule[RespawnRuleName]
+  if RespawnRuleData and RespawnRuleData.DyingDuration then
+    MaxDyingDuration = RespawnRuleData.DyingDuration
+  end
   local CaptureFloat = UIManager(self):GetUIObj("DungeonCaptureFloat")
   if nil == CaptureFloat then
-    CaptureFloat = UIManager(self):LoadUINew("DungeonCaptureFloat", 15, 15)
+    CaptureFloat = UIManager(self):LoadUINew("DungeonCaptureFloat", MaxDyingDuration, MaxDyingDuration)
   end
-  CaptureFloat:InitCaptureTimeUIOnHostageDead(self:GetHostagePhantomState())
+  CaptureFloat:InitCaptureTimeUIOnHostageDead(self:GetHostagePhantomState(), MaxDyingDuration)
 end
 
 function Component:GetHostagePhantomState()
@@ -469,7 +475,7 @@ function Component:GetDistanceToPlayerComponent(PlayerCharacter)
   else
     ExitTriggerBoxLocation = BP_ExitTriggerBoxMechanism.CollisionComponent and BP_ExitTriggerBoxMechanism.CollisionComponent:K2_GetComponentLocation()
     if ExitTriggerBoxLocation ~= Const.ZeroVector then
-      self.ExitTriggerBoxLocation = ExitTriggerBoxLocation
+      self:SetExitTriggerBoxLocation_MD(ExitTriggerBoxLocation)
     end
   end
   if nil == ExitTriggerBoxLocation or ExitTriggerBoxLocation == Const.ZeroVector then
@@ -921,6 +927,9 @@ function Component:ShowDungeonToast_Lua(TextMapIndex, Duration, ToastType, Toast
       ToastUI:InitializeData(Duration, true)
     end
   end
+  if ToastType == EToastType.CombineWarning then
+    UIManager:ShowUITip(UIConst.Tip_CombineWarning, GText(TextMapIndex), Duration)
+  end
 end
 
 function Component:UnShowDungeonToast_Lua(Key, ToastType)
@@ -1214,91 +1223,7 @@ function Component:NeedPreloadGameAssets()
   return not self:IsPreloadGameAssetsReady() and not self.bAssetsPreloading
 end
 
-local DoubleDragonDungeonIdSet = {
-  [50601] = true,
-  [50602] = true,
-  [50603] = true,
-  [50604] = true,
-  [50605] = true,
-  [50606] = true
-}
-local DoubleDragonAssetsPath = {
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill04_Montage.Boss_Heilong_Skill04_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong02_Skill06_Montage.Boss_Heilong02_Skill06_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill11_H_Montage.Boss_Heilong_Skill11_H_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill03_Montage.Boss_Heilong_Skill03_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill02_Montage.Boss_Heilong_Skill02_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill05_Montage.Boss_Heilong_Skill05_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill07_Montage.Boss_Heilong_Skill07_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill08_Montage.Boss_Heilong_Skill08_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill09_Montage.Boss_Heilong_Skill09_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill10_Montage.Boss_Heilong_Skill10_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill01_Montage.Boss_Heilong_Skill01_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Boss_Heilong_Skill06_Montage.Boss_Heilong_Skill06_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill07_H_Montage.Boss_Heilong_Skill07_H_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill01_H_Montage.Boss_Heilong_Skill01_H_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill02_H_Montage.Boss_Heilong_Skill02_H_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill03_H_Montage.Boss_Heilong_Skill03_H_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill04_H_Montage.Boss_Heilong_Skill04_H_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill05_H_Montage.Boss_Heilong_Skill05_H_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/Boss_Heilong_Skill06_H_Montage.Boss_Heilong_Skill06_H_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_CondemnDie_Montage.Boss_Heilong_CondemnDie_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_Condemned_Loop_Montage.Boss_Heilong_Condemned_Loop_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_CondemnEnd_Montage.Boss_Heilong_CondemnEnd_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_CondemnStart_Montage.Boss_Heilong_CondemnStart_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_Condemn_Montage.Boss_Heilong_Condemn_Montage",
-  "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Hit/Boss_Heilong_Die_Montage.Boss_Heilong_Die_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill02_Montage.Boss_Bailong_Skill02_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill03_Montage.Boss_Bailong_Skill03_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill05_Montage.Boss_Bailong_Skill05_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill07_Montage.Boss_Bailong_Skill07_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill08_Montage.Boss_Bailong_Skill08_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill09_Montage.Boss_Bailong_Skill09_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill10_Montage.Boss_Bailong_Skill10_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill01_Montage.Boss_Bailong_Skill01_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill04_Montage.Boss_Bailong_Skill04_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill06_Montage.Boss_Bailong_Skill06_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/Boss_Bailong_Skill11_Montage.Boss_Bailong_Skill11_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_CondemnDie_Montage.Boss_Bailong_CondemnDie_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_Condemned_Loop_Montage.Boss_Bailong_Condemned_Loop_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_CondemnEnd_Montage.Boss_Bailong_CondemnEnd_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_CondemnStart_Montage.Boss_Bailong_CondemnStart_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_Condemn_Montage.Boss_Bailong_Condemn_Montage",
-  "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Hit/Boss_Bailong_Die_Montage.Boss_Bailong_Die_Montage"
-}
-
-function Component:TemporaryHandlingForDoubleDragon()
-  if not IsClient(self) then
-    return
-  end
-  if not GWorld or not GWorld.GameInstance then
-    return
-  end
-  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
-  if not DungeonId or not DoubleDragonDungeonIdSet[DungeonId] then
-    self.DoubleDragonPreload = nil
-  elseif self.DoubleDragonPreload == nil then
-    self.DoubleDragonPreload = {}
-    for _, AssetPath in ipairs(DoubleDragonAssetsPath) do
-      local LoadedObj
-      local ok, res = pcall(function()
-        return UE4.UObject.Load(AssetPath)
-      end)
-      if ok then
-        LoadedObj = res
-      end
-      if LoadedObj then
-        table.insert(self.DoubleDragonPreload, LoadedObj)
-      else
-        DebugPrint("TemporaryHandlingForDoubleDragon: load failed ->", AssetPath)
-      end
-    end
-    DebugPrint("TemporaryHandlingForDoubleDragon: loaded assets count", #self.DoubleDragonPreload)
-  end
-end
-
 function Component:PreloadGameAssets()
-  self:TemporaryHandlingForDoubleDragon()
   local PreloadSystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UE4.URolePreloadGameInstanceSubsystem)
   if not PreloadSystem then
     self.bPreloadAssetsReady = true
@@ -1611,7 +1536,7 @@ function Component:SelectTicket_Lua()
       PlayerCharacter.RPCComponent:SendDungeonTicket(PlayerCharacter.Eid, true)
     end
     
-    print(_G.LogTag, "LXZ SelectTicket OnRep_NextTicketPlayer", self.IsInSelectTicket, NeedVote)
+    print(_G.LogTag, "LXZ SelectTicket OnRep_NextTicketPlayer", self.IsInSelectTicket)
     if self:CheckAvatarHasTicket() then
       local CommonDialog = UIManager(self):ShowCommonPopupUI(100252, {
         DungeonId = DungeonId,
@@ -2154,11 +2079,64 @@ end
 function Component:RemoveShowSynthesisIIHostageHealthBarUI_Lua()
   if self.SynthesisIIHostageHealthBarHudWidget then
     self.SynthesisIIHostageHealthBarHudWidget:SetVisibility(ESlateVisibility.Collapsed)
+    self.SynthesisIIHostageHealthBarHudWidget:OnHideUI()
   end
 end
 
 function Component:FinishSynthesisII_Lua()
   self:ShowSynthesisSuccessEffect()
+end
+
+function Component:OnDungeonRandomEventUINode_Lua()
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  local BattleMain = UIManager:GetUIObj("BattleMain")
+  if BattleMain then
+    local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
+    DynamicEventUI:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    DynamicEventUI:DungeonRandomEventPlayInAnim()
+    DynamicEventUI:SetEventInfo(self.DungeonUIEventName, self.DungeonUIEventDescribe)
+    DynamicEventUI:HideDungeonRandomEventProgressRoot()
+    DynamicEventUI.Name:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+end
+
+function Component:ShowDungeonRandomEventProgress_Lua()
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  local BattleMain = UIManager:GetUIObj("BattleMain")
+  if BattleMain then
+    local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
+    DynamicEventUI:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    DynamicEventUI:PlayAnimation(DynamicEventUI.Get_In)
+    DynamicEventUI:SetEventInfo(self.DungeonUIEventName, self.DungeonUIEventDescribe)
+    DynamicEventUI:ShowDungeonRandomEventProgress()
+  end
+end
+
+function Component:RemoveShowDungeonRandomEventProgress_Lua()
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  local BattleMain = UIManager:GetUIObj("BattleMain")
+  if BattleMain then
+    local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
+    DynamicEventUI:HideDungeonRandomEventProgress(self.DungeonUIEventSuccess, self.DungeonUIEventFail, self.DungeonUIEventSuccessState)
+  end
+end
+
+function Component:RemoveOnDungeonRandomEventUINode_Lua()
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  local BattleMain = UIManager:GetUIObj("BattleMain")
+  if BattleMain then
+    local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
+    DynamicEventUI:HideDungeonRandomEventProgress(self.DungeonUIEventSuccess, self.DungeonUIEventFail, self.DungeonUIEventSuccessState)
+  end
+end
+
+function Component:UpdateDungeonRandomEventProgress(TotalVal, CurVal)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  local BattleMain = UIManager:GetUIObj("BattleMain")
+  if BattleMain then
+    local DynamicEventUI = BattleMain:GetOrAddDynamicEventWidget()
+    DynamicEventUI:UpdateDungeonRandomEventProgress(TotalVal, CurVal)
+  end
 end
 
 return Component

@@ -17,6 +17,10 @@ return ReadOnly("BuffNextPass", {
     NextPassKey = "Kezhou_Skill02_Body",
     Params = {Width = 0.5}
   },
+  Mon_BossLiecheBomb = {
+    MaterialPath = "/Game/Asset/Effect/Material/Object/MI_Monster_Common8.MI_Monster_Common8",
+    NextPassKey = "Mon_BossLiecheBomb"
+  },
   Mon_Strong_Double = {
     MaterialPath = "/Game/Asset/Effect/Material/Object/MI_Monster_Common1.MI_Monster_Common1",
     NextPassKey = "Mon_Strong_Double",

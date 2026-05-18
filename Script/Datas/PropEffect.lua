@@ -15,6 +15,7 @@ return ReadOnly("PropEffect", {
     Id = 42001,
     ReplaceShootIconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Ray.T_Skill_Ray",
     ReplaceSupportIconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Pet_EastScan.T_Skill_Pet_EastScan",
+    ReplaceSupportSkillDesc = "SKILL_ICON_Search",
     UsingIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_CentralSquare_Unequip01.T_Icon_CentralSquare_Unequip01"
   },
   [42002] = {
@@ -22,7 +23,20 @@ return ReadOnly("PropEffect", {
     Id = 42002,
     ReplaceShootIconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Blow.T_Skill_Blow",
     ReplaceSupportIconPath = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_Skill_Pet_EastScan.T_Skill_Pet_EastScan",
+    ReplaceSupportSkillDesc = "SKILL_ICON_Search",
     UsingIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_CentralSquare_Unequip.T_Icon_CentralSquare_Unequip"
+  },
+  [49989] = {
+    Id = 49989,
+    UsingIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0702.T_Mounts_Gesture_0702'"
+  },
+  [49990] = {
+    Id = 49990,
+    UsingIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0704.T_Mounts_Gesture_0704'"
+  },
+  [49991] = {
+    Id = 49991,
+    UsingIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_Gesture_0604.T_Mounts_Gesture_0604'"
   },
   [49992] = {
     Id = 49992,

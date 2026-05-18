@@ -47,6 +47,22 @@ T.RT_12 = {
   [7] = 6,
   [8] = 6
 }
+T.RT_13 = {150201, 310101}
+T.RT_14 = {21011, 21012}
+T.RT_15 = {13037, 13039}
+T.RT_16 = {20082, 20084}
+T.RT_17 = {10037, 10038}
+T.RT_18 = {30140, 30141}
+T.RT_19 = {
+  [1] = T.RT_13,
+  [2] = T.RT_14,
+  [3] = T.RT_15,
+  [4] = T.RT_16,
+  [5] = T.RT_17,
+  [6] = T.RT_18,
+  [7] = T.RT_8,
+  [8] = T.RT_9
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -67,6 +83,22 @@ return ReadOnly("LimitedPrizeItem", {
     Count = T.RT_1,
     Id = T.RT_10,
     LimitedPrizePoolId = 1002,
+    Probability = T.RT_11,
+    Type = T.RT_12
+  },
+  [1003] = {
+    CostRuleId = 1001,
+    Count = T.RT_1,
+    Id = T.RT_19,
+    LimitedPrizePoolId = 1003,
+    Probability = T.RT_11,
+    Type = T.RT_12
+  },
+  [1004] = {
+    CostRuleId = 1002,
+    Count = T.RT_1,
+    Id = T.RT_19,
+    LimitedPrizePoolId = 1004,
     Probability = T.RT_11,
     Type = T.RT_12
   }

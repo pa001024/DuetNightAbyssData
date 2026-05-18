@@ -109,5 +109,45 @@
     "access": [
       "商店"
     ]
+  },
+  {
+    "id": 1008,
+    "name": "沉思王座",
+    "des": "我聽到了忠誠的呼喊，看到了群星的燃燒。",
+    "icon": "Mounts_0009",
+    "resourceIcon": "Icon_Mounts_0009",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49991,
+    "fly": 1,
+    "access": [
+      "商店"
+    ]
+  },
+  {
+    "id": 1009,
+    "name": "夜帷",
+    "des": "夜色的帷幕將天與地遮掩，嘶啞的鳴嘯響徹其間。",
+    "icon": "Mounts_0011",
+    "resourceIcon": "Icon_Mounts_0011",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49990,
+    "access": [
+      "稜鏡商店限時兌換"
+    ]
+  },
+  {
+    "id": 1010,
+    "name": "駛入夜幕",
+    "des": "漆黑的雙翼劃開夜色，悄然駛入連月光都無法抵達的彼岸。",
+    "icon": "Mounts_0010",
+    "resourceIcon": "Icon_Mounts_0010",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49989,
+    "access": [
+      "稜鏡商店限時兌換"
+    ]
   }
 ]

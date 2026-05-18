@@ -1,6 +1,7 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.Item.BP_CombatItemBase_C"
+  "BluePrints.Item.BP_CombatItemBase_C",
+  "BluePrints.Common.DelayFrameComponent"
 })
 
 function M:OnActorReady(Info)
@@ -47,7 +48,7 @@ function M:OpenMechanism(PlayerId)
   print(_G.LogTag, "LXZ SetPlayer OpenMechanism", PlayerCharacter)
   self:SetPlayer(PlayerCharacter, true)
   self:SetPlayerEid(PlayerId, true)
-  if GameState.ValidHook then
+  if GameState.ValidHook and GameState.ValidHook ~= self then
     GameState.ValidHook.HookInteractiveComponent:ForceEndInteractive(PlayerCharacter)
   end
   GameState.ValidHook = self
@@ -138,7 +139,9 @@ function M:BoxEndOverlap(Component, OtherActor)
   if OtherActor ~= MainPlayer then
     return
   end
-  self:SetPlayer(OtherActor, false)
+  self:AddDelayFrameFunc(function()
+    self:SetPlayer(OtherActor, false)
+  end, 1, "SetPlayerFalse")
 end
 
 function M:ShowUI()

@@ -112,7 +112,8 @@ function WalnutComponent:IsAllPlayerNotChoosedNextWalnut()
   if 0 == self.EMGameState.NextWalnutPlayer:Length() then
     PrintTable(self.AvatarInfos, 10)
     for _, v in pairs(self.AvatarInfos) do
-      if -1 ~= v.PlayerInfo.Walnuts.WalnutId then
+      local Id = v.PlayerInfo.Walnuts.WalnutId
+      if -1 ~= Id and 0 ~= Id then
         return false
       end
     end

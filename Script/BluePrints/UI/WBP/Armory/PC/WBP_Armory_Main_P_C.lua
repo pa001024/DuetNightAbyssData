@@ -16,7 +16,8 @@ M._components = {
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_WeaponMainCompnent",
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_BattleWheelMainComponent",
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_ExpandListComponent",
-  "BluePrints.UI.WBP.Armory.MainComponent.Armory_PointerInputComponent"
+  "BluePrints.UI.WBP.Armory.MainComponent.Armory_PointerInputComponent",
+  "BluePrints.UI.KeyInputComponent"
 }
 
 function M:Construct()
@@ -39,7 +40,6 @@ function M:Construct()
   self.KeyDownEvents = {}
   self.RepeatKeyDownEvents = {}
   self.KeyUpEvents = {}
-  self.LongPressEvents = {}
   self:CreateKeySetting()
   self:CreateKeyInfoLists()
   self.FSM = FSM:New(self, {
@@ -47,6 +47,7 @@ function M:Construct()
     OnStateChanged = self.OnFocusChanged,
     CheckFunction = self.IsFocusStateValid
   })
+  self.CheckBox_Incarnon:InitGamepadKey(UIConst.GamePadImgKey.SpecialLeft, true)
 end
 
 function M:CreateConstInfos()
@@ -288,19 +289,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   end
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local LongPressEvent = self.LongPressEvents[InKeyName]
-  if LongPressEvent then
-    Reply, IsHandled = LongPressEvent(self, MyGeometry, InKeyEvent, true)
-    if IsHandled then
-      return Reply
-    end
-  end
-  local KeyDownEvent = self.KeyDownEvents[InKeyName]
-  if KeyDownEvent then
-    Reply, IsHandled = KeyDownEvent(self, MyGeometry, InKeyEvent)
-    if IsHandled then
-      return Reply
-    end
+  Reply, IsHandled = self:ProcessOnKeyDown(MyGeometry, InKeyEvent)
+  if IsHandled then
+    return Reply
   end
   return Handled
 end
@@ -318,12 +309,9 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
   end
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local LongPressEvent = self.LongPressEvents[InKeyName]
-  if LongPressEvent then
-    Reply, IsHandled = LongPressEvent(self, MyGeometry, InKeyEvent, true)
-    if IsHandled then
-      return Reply
-    end
+  Reply, IsHandled = self:ProcessOnKeyUp(MyGeometry, InKeyEvent)
+  if IsHandled then
+    return Reply
   end
   local KeyUpEvent = self.KeyUpEvents and self.KeyUpEvents[InKeyName]
   if KeyUpEvent then
@@ -797,10 +785,7 @@ end
 
 function M:InitKeySettingCommon()
   self.BottomKeyInfo = {}
-  self.KeyDownEvents = {}
-  self.RepeatKeyDownEvents = {}
-  self.KeyUpEvents = {}
-  self.LongPressEvents = {}
+  self:ClearAllKeyEvents()
   local ConstCurSubTab = self:GetConstTab(self.CurMainTab.Name, self.CurSubTab.Name)
   if self.bFromArchive and (self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Melee or self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Ranged or self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Weapon) then
     self.EnableMouseWheel = false

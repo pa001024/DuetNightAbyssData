@@ -1,4 +1,5 @@
 require("UnLua")
+local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -181,7 +182,7 @@ function M:InitSkinLevel()
     return
   end
   self:UpdateSKinLevel(1)
-  local Avatar = GWorld:GetAvatar()
+  local Avatar = ArmoryUtils:GetAvatar()
   if not Avatar or not Avatar.CommonChars then
     return
   end

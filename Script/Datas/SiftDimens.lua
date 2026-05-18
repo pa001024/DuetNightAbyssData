@@ -312,7 +312,20 @@ return ReadOnly("SiftDimens", {
       "1013",
       "1014",
       "1015",
-      "1016"
+      "1016",
+      "1017",
+      "1018",
+      "1019",
+      "1020",
+      "1021",
+      "1022",
+      "1023",
+      "1024",
+      "1025",
+      "1026",
+      "1027",
+      "1028",
+      "1029"
     },
     SelectionField = {"PetEntry"},
     SelectionText = {
@@ -331,7 +344,21 @@ return ReadOnly("SiftDimens", {
       "UI_PetEntry_Title13",
       "UI_PetEntry_Title14",
       "UI_PetEntry_Title15",
-      "UI_PetEntry_Title16"
+      "UI_PetEntry_Title16",
+      "UI_PetEntry_Title17",
+      "UI_PetEntry_Title18",
+      "UI_PetEntry_Title19",
+      "UI_PetEntry_Title20",
+      "UI_PetEntry_Title21",
+      "UI_PetEntry_Title22",
+      "UI_PetEntry_Title23",
+      "UI_PetEntry_Title24",
+      "UI_PetEntry_Title25",
+      "UI_PetEntry_Title26",
+      "UI_PetEntry_Title27",
+      "UI_PetEntry_Title28",
+      "UI_PetEntry_Title29",
+      "UI_PetEntry_Title30"
     },
     Title = "Pet_Filter_Title4"
   }

@@ -17,8 +17,8 @@ function M:Destruct()
   M.Super.Destruct(self)
 end
 
-function M:Init(RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback)
-  M.Super.Init(self, RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback)
+function M:Init(RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback, EventId)
+  M.Super.Init(self, RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback, EventId)
 end
 
 return M

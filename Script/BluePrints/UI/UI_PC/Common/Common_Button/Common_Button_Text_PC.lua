@@ -96,7 +96,9 @@ function Common_Button_Text_PC:SetIconPanelVisibility(Op)
   else
     self.Spacer_L:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Spacer_R:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self._NowSpacerVisibility = UIConst.VisibilityOp.Collapsed
   end
+  self:SetUpOnFranch()
 end
 
 function Common_Button_Text_PC:SetTextColor(InColorAndOpacity)
@@ -114,12 +116,31 @@ function Common_Button_Text_PC:SetIconColor(HexColorString)
 end
 
 function Common_Button_Text_PC:UpdateSpacerVisibility()
+  self._NowSpacerVisibility = nil
   if self.Img_Slot:GetVisibility() ~= UIConst.VisibilityOp.Collapsed and self.Img_Slot:HasAnyChildren() then
     self.Spacer_L:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Spacer_R:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self._NowSpacerVisibility = UIConst.VisibilityOp.SelfHitTestInvisible
   else
     self.Spacer_L:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Spacer_R:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self._NowSpacerVisibility = UIConst.VisibilityOp.Collapsed
+  end
+end
+
+function Common_Button_Text_PC:SetUpOnFranch()
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    self.Spacer_L:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Spacer_R:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    local NewSize = FVector2D(5, 1)
+    self.Spacer_L:SetSize(NewSize)
+    self.Spacer_R:SetSize(NewSize)
+  else
+    self.Spacer_L:SetVisibility(self._NowSpacerVisibility)
+    self.Spacer_R:SetVisibility(self._NowSpacerVisibility)
+    local NewSize = FVector2D(self.SpacerWidth, 1)
+    self.Spacer_L:SetSize(NewSize)
+    self.Spacer_R:SetSize(NewSize)
   end
 end
 
@@ -152,6 +173,14 @@ function Common_Button_Text_PC:SetReddot(IsNew, Upgradeable, OhterReddot)
   else
     self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+end
+
+function Common_Button_Text_PC:SetReddotNumberVisibility(Op)
+  self.Reddot_Num:SetVisibility(Op)
+end
+
+function Common_Button_Text_PC:SetReddotNumber(Num)
+  self.Reddot_Num:SetNum(tostring(Num))
 end
 
 function Common_Button_Text_PC:SwitchNormalAnimation()
@@ -268,6 +297,28 @@ function Common_Button_Text_PC:PlayButtonUnForbidAnim()
     self.Key_PC:EnableKey()
   end
   self.Super.PlayButtonUnForbidAnim(self)
+end
+
+function Common_Button_Text_PC:OnListItemObjectSet(Content)
+  self:SetText(GText(Content.Text))
+  if Content.bGamepadIconVisible ~= nil then
+    self:SetGamepadIconVisibility(Content.bGamepadIconVisible)
+  end
+  if Content.OnClickFunction then
+    self:BindEventOnClicked(Content.ParentWidget, Content.OnClickFunction)
+  end
+  if Content.OnForbiddenClickFunction then
+    self:BindForbidStateExecuteEvent(Content.ParentWidget, Content.OnForbiddenClickFunction)
+  end
+  if Content.IsForbid then
+    self:ForbidBtn(true)
+  end
+  if Content.IsLock then
+    self:LockBtn(true)
+  end
+  if Content.UseRedText then
+    self:SetTextColor(self.Text_Red)
+  end
 end
 
 return Common_Button_Text_PC

@@ -138,12 +138,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17734948303383377794",
-            startPort = "Out",
-            endQuest = "1769845067925760709",
-            endPort = "In"
-          },
-          {
             startQuest = "17678537949081014467",
             startPort = "QuestStart",
             endQuest = "17739040803956296454",
@@ -550,6 +544,18 @@ return {
             startPort = "Out",
             endQuest = "17734948303383377794",
             endPort = "In"
+          },
+          {
+            startQuest = "17734948303383377794",
+            startPort = "Out",
+            endQuest = "17734948303383377795",
+            endPort = "In"
+          },
+          {
+            startQuest = "17734948303383377795",
+            startPort = "Out",
+            endQuest = "1769845067925760709",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -557,7 +563,7 @@ return {
             key = "17678537949081014467",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 138.5515496521188, y = 292.5047438330171},
+            pos = {x = -64.92671121744644, y = 292.5047438330171},
             propsData = {ModeType = 0}
           },
           ["17678537949081014468"] = {
@@ -634,7 +640,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -752,7 +760,7 @@ return {
             key = "17734948303383377794",
             type = "SendMessageNode",
             name = "开启小黑屋玩法",
-            pos = {x = 927.4838067568751, y = 300.04151242876986},
+            pos = {x = 836.1794589307881, y = 306.5632515592047},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "ReStartBox2",
@@ -763,14 +771,14 @@ return {
             key = "17734948303383377795",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 1189.1877464536933, y = 521.022025461727},
-            propsData = {WaitTime = 1.5}
+            pos = {x = 954.4051377580411, y = 524.9350689399879},
+            propsData = {WaitTime = 1}
           },
           ["17739040803956296454"] = {
             key = "17739040803956296454",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 528.3205659075225, y = 294.44685990338166},
+            pos = {x = 313.1031746031746, y = 293.1425120772947},
             propsData = {QuestRoleId = 24010102, IsPlayFX = false}
           },
           ["17741844011671687130"] = {
@@ -1339,7 +1347,7 @@ return {
             key = "17747877568601704184",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 752.309366106118, y = 406.4590918911065},
+            pos = {x = 574.9180617582919, y = 281.2417005867586},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "XHWstart2",

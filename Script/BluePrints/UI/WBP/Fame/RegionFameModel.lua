@@ -337,9 +337,13 @@ function M:GetCurrentRecurringTaskLevel(RegionId)
 end
 
 function M:GetTargetRegionAllCanClaimRecurringTasks(RegionId)
+  local RegionState = self:GetRegionState(RegionId, true)
+  if RegionState == CommonConst.RegionFameState.MaxLevel or RegionState == CommonConst.RegionFameState.WeeklyFameLimit then
+    return {}
+  end
   local Quests = self:GetRecurringTasks(RegionId)
   if not Quests then
-    return
+    return {}
   end
   local CanClaimTasks = {}
   for Index, TaskInfo in pairs(Quests) do

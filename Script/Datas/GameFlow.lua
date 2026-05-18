@@ -1,13 +1,28 @@
 local T = {}
 T.RT_1 = {
   "ImmersiveStory",
+  "OpenSystemUI",
+  "GetItemPage",
+  "SkillFeature",
+  "SystemGuideWithUI",
+  "SystemGuideWithoutUI",
+  "GuideMain",
+  "Sojourn",
+  "LevelDelivery",
+  "ShowHudReward",
+  "StorylineCountdown",
+  "ChapterMutexSelect"
+}
+T.RT_2 = {
+  "ImmersiveStory",
   "GetItemPage",
   "SkillFeature",
   "SystemGuideWithUI",
   "SystemGuideWithoutUI",
   "GuideMain",
   "LevelDelivery",
-  "StorylineCountdown"
+  "StorylineCountdown",
+  "ChapterMutexSelect"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -16,8 +31,13 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("GameFlow", {
-  GetItemPage = {
+  ChapterMutexSelect = {
     BlockChannels = T.RT_1,
+    Channel = "ChapterMutexSelect",
+    Priority = 100
+  },
+  GetItemPage = {
+    BlockChannels = T.RT_2,
     Channel = "GetItemPage",
     Priority = 100
   },
@@ -28,7 +48,8 @@ return ReadOnly("GameFlow", {
       "SkillFeature",
       "Sojourn",
       "LevelDelivery",
-      "StorylineCountdown"
+      "StorylineCountdown",
+      "ChapterMutexSelect"
     },
     Channel = "GuideMain",
     Priority = 100
@@ -43,7 +64,8 @@ return ReadOnly("GameFlow", {
       "GuideMain",
       "LevelDelivery",
       "ShowHudReward",
-      "StorylineCountdown"
+      "StorylineCountdown",
+      "ChapterMutexSelect"
     },
     Channel = "ImmersiveStory",
     Priority = 100
@@ -59,7 +81,8 @@ return ReadOnly("GameFlow", {
       "GuideMain",
       "Sojourn",
       "LevelDelivery",
-      "StorylineCountdown"
+      "StorylineCountdown",
+      "ChapterMutexSelect"
     },
     Channel = "LevelDelivery",
     Priority = 200
@@ -69,7 +92,8 @@ return ReadOnly("GameFlow", {
       "ImmersiveStory",
       "LevelDelivery",
       "ShowHudReward",
-      "StorylineCountdown"
+      "StorylineCountdown",
+      "ChapterMutexSelect"
     },
     Channel = "OpenSystemUI",
     Priority = 100
@@ -78,13 +102,14 @@ return ReadOnly("GameFlow", {
     BlockChannels = {
       "OpenSystemUI",
       "ShowHudReward",
-      "StorylineCountdown"
+      "StorylineCountdown",
+      "ChapterMutexSelect"
     },
     Channel = "ShowHudReward",
     Priority = 99
   },
   SkillFeature = {
-    BlockChannels = T.RT_1,
+    BlockChannels = T.RT_2,
     Channel = "SkillFeature",
     Priority = 100
   },
@@ -94,25 +119,14 @@ return ReadOnly("GameFlow", {
       "SystemGuideWithoutUI",
       "GuideMain",
       "LevelDelivery",
-      "StorylineCountdown"
+      "StorylineCountdown",
+      "ChapterMutexSelect"
     },
     Channel = "Sojourn",
     Priority = 100
   },
   StorylineCountdown = {
-    BlockChannels = {
-      "ImmersiveStory",
-      "OpenSystemUI",
-      "GetItemPage",
-      "SkillFeature",
-      "SystemGuideWithUI",
-      "SystemGuideWithoutUI",
-      "GuideMain",
-      "Sojourn",
-      "LevelDelivery",
-      "ShowHudReward",
-      "StorylineCountdown"
-    },
+    BlockChannels = T.RT_1,
     Channel = "StorylineCountdown",
     Priority = 0
   },
@@ -124,7 +138,8 @@ return ReadOnly("GameFlow", {
       "SystemGuideWithoutUI",
       "Sojourn",
       "LevelDelivery",
-      "StorylineCountdown"
+      "StorylineCountdown",
+      "ChapterMutexSelect"
     },
     Channel = "SystemGuideWithUI",
     Priority = 100
@@ -139,7 +154,8 @@ return ReadOnly("GameFlow", {
       "SystemGuideWithoutUI",
       "Sojourn",
       "LevelDelivery",
-      "StorylineCountdown"
+      "StorylineCountdown",
+      "ChapterMutexSelect"
     },
     Channel = "SystemGuideWithoutUI",
     Priority = 100

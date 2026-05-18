@@ -81,6 +81,10 @@ function M:Construct()
   self.WB_EliteProp:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
   self.WB_EliteProp:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
   self.WB_EliteProp:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+  self.IronExp_TitleItem:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+  self.IronExp_TitleItem:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+  self.IronExp_TitleItem:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
+  self.IronExp_TitleItem:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
   self.IsFocusProp = false
   self.IsFocus_Monster = false
   self.IsFocusEliteProp = false
@@ -149,6 +153,54 @@ function M:InitLevelList(DungeonList, SelectDungeonId, DeputeType, WalnutId)
     return
   end
   self.ActionPointId = DataMgr.ResourceSType2Resource.ActionPoint[1]
+  self.isIron = false
+  local firstId = DungeonList[1]
+  if firstId then
+    for _, chapterData in pairs(DataMgr.SelectDungeon) do
+      if chapterData.DungeonList and chapterData.DungeonList[1] == firstId then
+        self.isIron = chapterData.IronSurvival == true
+        break
+      end
+    end
+  end
+  self.WS_TitleList:SetActiveWidgetIndex(self.isIron and 1 or 0)
+  if self.isIron and IsValid(self.IronExp_TitleItem) then
+    self.IronFirstId = firstId
+    local IronDungeonData = DataMgr.IronSurvivalDungeon[firstId]
+    if IronDungeonData and IronDungeonData.MonsterLevelDrop then
+      local allDropViews = {}
+      local viewToDropId = {}
+      local dropIdToView = {}
+      local now = TimeUtils.NowTime()
+      for _, dropId in ipairs(IronDungeonData.MonsterLevelDrop) do
+        local DropData = DataMgr.MonsterLevelDrop[dropId]
+        if DropData and DropData.MonsterLevelDropView then
+          local startOk = not DropData.StartTime or now >= DropData.StartTime
+          local endOk = not DropData.EndTime or now <= DropData.EndTime
+          if startOk and endOk then
+            table.insert(allDropViews, DropData.MonsterLevelDropView)
+            viewToDropId[DropData.MonsterLevelDropView] = dropId
+            dropIdToView[dropId] = DropData.MonsterLevelDropView
+          end
+        end
+      end
+      if #allDropViews > 0 then
+        local cachedDropId = EMCache:Get("IronDropCache_" .. firstId, true)
+        local defaultViewId = cachedDropId and dropIdToView[cachedDropId] or allDropViews[1]
+        self.IronExp_TitleItem:SetData(allDropViews, defaultViewId)
+        
+        function self.IronExp_TitleItem.OnItemSelected(selectedViewId)
+          self:OnIronItemSelected(viewToDropId[selectedViewId])
+        end
+        
+        function self.IronExp_TitleItem.OnPopupClosed()
+          self:FocusIronExpTitle()
+        end
+        
+        self.PendingDefaultIronDropId = viewToDropId[defaultViewId]
+      end
+    end
+  end
   local IsNightFlight = self.DeputeType == Const.DeputeType.NightFlightManualDepute
   local SubTabList = {
     {
@@ -268,7 +320,9 @@ function M:InitLevelList(DungeonList, SelectDungeonId, DeputeType, WalnutId)
     self.ScrollBox_List:AddChild(Item)
   end
   if self.SelectCell then
-    self:SelectCellFocus()
+    if not self.isIron then
+      self:SelectCellFocus()
+    end
     self.ScrollBox_List:ScrollWidgetIntoView(self.SelectCell, true, EDescendantScrollDestination.Center)
   end
   self.ScrollBox_List:GetChildAt(0):SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
@@ -276,7 +330,54 @@ function M:InitLevelList(DungeonList, SelectDungeonId, DeputeType, WalnutId)
   self:PlayAnimation(self.In)
   if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
     self:UpdateUIStyleInPlatform(false)
+    if self.isIron then
+      self:FocusIronExpTitle()
+    end
   end
+end
+
+function M:OnIronItemSelected(selectedId)
+  self.SelectedIronItemId = selectedId
+  if self.IronFirstId then
+    EMCache:Set("IronDropCache_" .. self.IronFirstId, selectedId, true)
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  Avatar:SetIronRareDrop(nil, self.CurSelectedDungeonId, selectedId)
+end
+
+function M:OnClickIronExp()
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/confirm_click", nil, nil)
+  if not self:EnsureOptionalPatchDownloaded() then
+    return
+  end
+  UIManager(self):LoadUINew("IronExpPopup", {
+    DungeonId = self.CurSelectedDungeonId,
+    ParentWidget = self,
+    StartCallback = function(ticketUid, ticketLevel)
+      self:OnIronExpStart(ticketUid, ticketLevel)
+    end
+  })
+end
+
+function M:OnIronExpStart(ticketUid, ticketLevel)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local bIsInTeam = Avatar:IsInTeam()
+  if bIsInTeam then
+    TeamController:GetModel().bPressedSolo = true
+  end
+  self:TryEnterDungeon(Avatar, self.CurSelectedDungeonId, CommonConst.DungeonNetMode.Standalone, function(RetCode, ...)
+    self:BlockAllUIInput(false)
+    local bCanEnter = self.HandleEnterDungeonRetCode(RetCode, ...)
+    if bCanEnter and bIsInTeam then
+      UIManager(self):LoadUINew("DungeonMatchTimingBar", self.CurSelectedDungeonId, Const.DUNGEON_MATCH_BAR_STATE.SPONSOR_WAITING_CONFIRM, false, ticketLevel)
+    end
+  end, nil, {IronTicketId = ticketUid})
 end
 
 function M:SetWalnutTitleMatColor(WalnutType)
@@ -387,7 +488,11 @@ function M:ItemMenuAnchorChanged(bIsOpen)
     self:UpdatKeyDisplay("")
   else
     self:UpdatKeyDisplay("SelfWidget")
-    self:SelectCellFocus()
+    if self.isIron then
+      self:FocusIronExpTitle()
+    else
+      self:SelectCellFocus()
+    end
   end
 end
 
@@ -541,11 +646,19 @@ function M:InitListCellInfo(DungeonId)
   self.DungeonData = DungeonData
   self:AutoNextRoundInit()
   if self.SelectCell then
-    self:SelectCellFocus()
+    if self.isIron then
+      self:FocusIronExpTitle()
+    else
+      self:SelectCellFocus()
+    end
   end
   local Dungeon2SubDungeon = DataMgr.Dungeon2SubDungeon
   self.CurSelectedDungeonId = DungeonId
   M.SelectedDungeonId = DungeonId
+  if self.PendingDefaultIronDropId then
+    self:OnIronItemSelected(self.PendingDefaultIronDropId)
+    self.PendingDefaultIronDropId = nil
+  end
   self.HasTypeSelect = false
   self.Stats:SetRenderOpacity(0)
   self:RefreshDeputeEvent(DungeonId)
@@ -564,10 +677,10 @@ function M:InitListCellInfo(DungeonId)
   if bSquad then
     self.DefaultList:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     local DungeonType = DataMgr.Dungeon[self.CurSelectedDungeonId].DungeonType
-    local bDisablePhantom = "Rouge" == DungeonType or false
     local Avatar = GWorld:GetAvatar()
     if Avatar then
       local SquadId = Avatar.DungeonSquad[DungeonType] and Avatar.DungeonSquad[DungeonType] or 0
+      local bDisablePhantom = "Rouge" == DungeonType or false
       self.DefaultList:Init(self, bDisablePhantom, SquadId, self.CurSelectedDungeonId)
     end
   else
@@ -776,7 +889,11 @@ function M:OpenRewardDetails()
   Params.RewardList = self.RewardList
   
   function Params.CloseBtnCallbackFunction()
-    self:SelectCellFocus()
+    if self.isIron then
+      self:FocusIronExpTitle()
+    else
+      self:SelectCellFocus()
+    end
   end
   
   Params.AutoFocus = true
@@ -1496,7 +1613,11 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     local isInvisible = self.DefaultList:GetVisibility() == ESlateVisibility.SelfHitTestInvisible
     local isNotShown = not self.DefaultList.IsShow
     if isInvisible and isNotShown or not isInvisible then
-      self:SelectCellFocus()
+      if self.isIron then
+        self:FocusIronExpTitle()
+      else
+        self:SelectCellFocus()
+      end
     end
   elseif self.Image_Select and self.Image_Select:GetRenderOpacity() > 0 then
     self:PlayAnimation(self.UnHover)
@@ -1896,7 +2017,19 @@ function M:OnGamePadDown(InKeyName)
       UIManager(self):ShowCommonPopupUI(100241)
       return true
     end
-    if self.SelectCell then
+    if self.isIron then
+      if self.CurrentFocusType ~= "SelectCell" then
+        self:FocusIronExpTitle()
+        IsEventHandled = true
+      else
+        if self.IsOpenAttibute then
+          self:OnButtonAttibuteUnhovered()
+        else
+          self:OnReturnKeyDown()
+        end
+        IsEventHandled = true
+      end
+    elseif self.SelectCell then
       local btnArea = self.SelectCell.Bg_List and self.SelectCell.Bg_List.Button_Area
       if btnArea and not btnArea:HasAnyUserFocus() then
         self:SelectCellFocus()
@@ -1954,6 +2087,8 @@ function M:OnGamePadDown(InKeyName)
       self.PressedKeys.Gamepad_FaceButton_Top = nil
       if IsDpadUp then
         self:OpenDetails()
+      elseif self.isIron then
+        self:OnClickIronExp()
       elseif self.Button_DoubleMod:GetVisibility() == ESlateVisibility.Visible and self.Button_DoubleMod:IsBtnForbidden() then
         self:OnForbiddenDoubleModBtnClicked()
       else
@@ -1962,9 +2097,9 @@ function M:OnGamePadDown(InKeyName)
       IsEventHandled = true
     end
   elseif "Gamepad_LeftThumbstick" == InKeyName then
-    if "SelectCell" ~= self.CurrentFocusType then
+    if self.CurrentFocusType ~= "SelectCell" then
       return IsEventHandled
-    elseif "SelectCell" == self.CurrentFocusType then
+    elseif self.CurrentFocusType == "SelectCell" then
       if self.CurrentTabIdx == self.ObtainTabId then
         self.List_Prop:SetFocus()
         self:UpdatKeyDisplay("RewardWidget")
@@ -2125,6 +2260,18 @@ function M:SelectCellFocus()
   end
 end
 
+function M:FocusIronExpTitle()
+  if not self.isIron or not IsValid(self.IronExp_TitleItem) then
+    return
+  end
+  self:UpdatKeyDisplay("SelfWidget")
+  self.IronExp_TitleItem:SetFocus()
+  self.CurrentFocusType = "SelectCell"
+  if self.StyleOfPlay then
+    self.StyleOfPlay.IsKeyEventOnGamePad = true
+  end
+end
+
 function M:OnSelectCellFocus()
   if self.Image_Select then
     self.Image_Select:SetRenderOpacity(0)
@@ -2261,7 +2408,8 @@ function M:RefreshBtnState(bInIsMatching)
     tostring(ShowDouble or false),
     tostring(RemainOK),
     tostring(bIsInTeam),
-    tostring(self.ContinuousCombat)
+    tostring(self.ContinuousCombat),
+    tostring(self.isIron or false)
   }, "|")
   if self._Btn_sig == Sig then
     return
@@ -2348,6 +2496,36 @@ function M:RefreshBtnState(bInIsMatching)
       end)
     end
   end
+  if not self.isIron then
+    self.Button_IronExp:SetVisibility(ESlateVisibility.Collapsed)
+    if self.DeputeType == Const.DeputeType.RegularDepute then
+      self.Button_Solo:SetVisibility(ESlateVisibility.Visible)
+      self.Button_Multi:SetVisibility(ESlateVisibility.Visible)
+    end
+  elseif self.isIron then
+    self.Button_Solo:SetVisibility(ESlateVisibility.Collapsed)
+    self.Button_Multi:SetVisibility(ESlateVisibility.Collapsed)
+    self.Button_DoubleMod:SetVisibility(ESlateVisibility.Collapsed)
+    self.Button_IronExp:SetVisibility(ESlateVisibility.Visible)
+    self.Button_IronExp:UnBindEventOnClickedByObj(self)
+    self.Button_IronExp:BindForbidStateExecuteEvent(self, function()
+    end)
+    local isLeader = true
+    if bIsInTeam then
+      local IronAvatar = GWorld:GetAvatar()
+      local leaderId = TeamController:GetModel():GetTeamLeaderId()
+      isLeader = IronAvatar and IronAvatar.Uid == leaderId
+    end
+    if isLeader then
+      self.Button_IronExp:SetText(GText("UI_IronSurvival_SelectExpeditionProof"))
+      self.Button_IronExp:ForbidBtn(false)
+      self.Button_IronExp:BindEventOnClicked(self, self.OnClickIronExp)
+      self.Button_IronExp:SetDefaultGamePadImg("Y")
+    else
+      self.Button_IronExp:SetText(GText("UI_IronSurvival_NotLeaderDisableDesc"))
+      self.Button_IronExp:ForbidBtn(true)
+    end
+  end
 end
 
 function M:IsMatching()
@@ -2370,14 +2548,14 @@ function M:PlayTabSound()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_03", nil, nil)
 end
 
-function M:TryEnterDungeon(Avatar, DungeonId, DungeonNetMode, OtherCallback, TicketId)
+function M:TryEnterDungeon(Avatar, DungeonId, DungeonNetMode, OtherCallback, TicketId, CustomParams)
   if self:DoCheckCanEnterDungeon(Avatar, DungeonId) then
     self:BlockAllUIInput(true)
     DebugPrint("gmy@M:TryEnterDungeon ", Avatar, DungeonId, DungeonNetMode, OtherCallback, TicketId)
     if self.DefaultList:GetVisibility() == ESlateVisibility.Collapsed then
-      Avatar:EnterDungeon(DungeonId, DungeonNetMode, OtherCallback, TicketId)
+      Avatar:EnterDungeon(DungeonId, DungeonNetMode, OtherCallback, TicketId, nil, CustomParams)
     else
-      Avatar:EnterDungeon(DungeonId, DungeonNetMode, OtherCallback, TicketId, self.SquadId)
+      Avatar:EnterDungeon(DungeonId, DungeonNetMode, OtherCallback, TicketId, self.SquadId, CustomParams)
     end
   else
     TeamController:GetModel().bPressedSolo = false
@@ -2390,11 +2568,15 @@ function M.HandleEnterDungeonRetCode(RetCode, ...)
   if RetCode == ErrorCode.RET_SUCCESS then
     return true
   else
-    local FailedMember = (...)
-    if FailedMember then
-      TeamController:DoWhenEnterDungeonCheckFailed(RetCode, FailedMember)
+    if RetCode == ErrorCode.RET_DUNGEON_MAX_PLAYERS then
+      UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText("UI_Toast_TeamPlayerLimit"))
     else
-      ErrorCode:Check(RetCode)
+      local FailedMember = (...)
+      if FailedMember then
+        TeamController:DoWhenEnterDungeonCheckFailed(RetCode, FailedMember)
+      else
+        ErrorCode:Check(RetCode)
+      end
     end
     EventManager:FireEvent(EventID.TeamMatchTimingEnd)
     return false

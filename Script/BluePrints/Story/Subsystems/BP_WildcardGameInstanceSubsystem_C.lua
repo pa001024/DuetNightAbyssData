@@ -1,13 +1,13 @@
 local function CreateWildcardReplaceFunctionMap()
   return {
-    ["{性别[:：]+.-|.-}"] = "ReplaceProtagonistGenderWildcard",
+    ["{性别:.-|.-}"] = "ReplaceProtagonistGenderWildcard",
     
-    ["{性别2[:：]+.-|.-}"] = "ReplaceFormerProtagonistGenderWildcard",
+    ["{性别2:.-|.-}"] = "ReplaceFormerProtagonistGenderWildcard",
     ["{[Cc]+at[Nn]+ame}"] = "ReplaceCatNameWildcard",
     ["{[Nn]+ick[Nn]+ame}"] = "ReplaceNickNameWildcard",
     ["{[Nn]+ick[Nn]+ame2}"] = "ReplaceNickName2Wildcard",
     ["{%$.-%$|.-}"] = "ReplaceTagWildcard",
-    ["{序数[:：]+.-}"] = "ReplaceNumberWildcard",
+    ["{序数:.-}"] = "ReplaceNumberWildcard",
     ["{空格}"] = "ReplaceSpaceWildcard",
     ["{[Qq]+uest%(.-%):.-|.-}"] = "ReplaceQuestWildcard",
     ["{[Qq]+uest[Cc]+hain%(.-%):.-|.-}"] = "ReplaceQuestChainWildcard"
@@ -39,6 +39,8 @@ function M:ReplaceWildcard(Text)
     self:Reinitialize()
   end
   local ReplacedText, _ = string.gsub(Text, "{.-}", function(Wildcard)
+    Wildcard = string.gsub(Wildcard, "：", ":")
+    Wildcard = string.gsub(Wildcard, "丨", "|")
     for WildcardTypeRegex, Function in pairs(self.WildcardReplaceFunctionMap) do
       if string.match(Wildcard, WildcardTypeRegex) then
         return self[Function](self, Wildcard)
@@ -54,7 +56,7 @@ function M:ReplaceProtagonistGenderWildcard(Wildcard)
   if nil == Avatar then
     return "(未联网)主角性别"
   end
-  local LeftValue, RightValue = string.match(Wildcard, "{.-[：:]+(.-)|(.-)}")
+  local LeftValue, RightValue = string.match(Wildcard, "{.-:(.-)|(.-)}")
   if 0 == Avatar.Sex then
     return LeftValue
   else
@@ -67,7 +69,7 @@ function M:ReplaceFormerProtagonistGenderWildcard(Wildcard)
   if nil == Avatar then
     return "(未联网)前主角性别"
   end
-  local LeftValue, RightValue = string.match(Wildcard, "{.-[：:]+(.-)|(.-)}")
+  local LeftValue, RightValue = string.match(Wildcard, "{.-:(.-)|(.-)}")
   if 0 == Avatar.WeitaSex then
     return LeftValue
   else
@@ -140,7 +142,7 @@ function M:ReplaceTagWildcard(Wildcard)
 end
 
 function M:ReplaceNumberWildcard(Wildcard)
-  local Number = string.match(Wildcard, "{序数[：:]+(.-)}")
+  local Number = string.match(Wildcard, "{序数:(.-)}")
   if CommonConst.SystemLanguage ~= CommonConst.SystemLanguages.EN then
     return Number
   end

@@ -121,6 +121,12 @@ function ItemUtils.GetItemIconPath(ItemId, TableName)
   if IconPath and not string.find(IconPath, "/Game/") then
     IconPath = "/Game/" .. IconPath
   end
+  if "HeadSculpture" == TableName and not IconPath then
+    IconPath = DataMgr.HeadSculpture[ItemId].DynamicPath
+  end
+  if "HeadFrame" == TableName and not IconPath then
+    IconPath = DataMgr.HeadFrame[ItemId].DynamicPath
+  end
   if "Walnut" == TableName then
     IconPath = DataMgr.Walnut[ItemId].Icon
   end

@@ -138,8 +138,7 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 701055,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OverrideFailBlend = false

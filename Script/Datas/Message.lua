@@ -2607,6 +2607,188 @@ return ReadOnly("Message", {
     MessageId = 303902,
     MessageType = "Guide"
   },
+  [304001] = {
+    MessageContentGamePad = "Message_Guide_Appearance_1",
+    MessageContentPC = "Message_Guide_Appearance_1",
+    MessageContentPhone = "Message_Guide_Appearance_1",
+    MessageId = 304001,
+    MessageType = "Guide"
+  },
+  [304002] = {
+    MessageContentGamePad = "Message_Guide_Appearance_2_Pad",
+    MessageContentPC = "Message_Guide_Appearance_2",
+    MessageContentPhone = "Message_Guide_Appearance_2",
+    MessageId = 304002,
+    MessageType = "Guide"
+  },
+  [304003] = {
+    MessageContentGamePad = "Message_Guide_Appearance_3",
+    MessageContentPC = "Message_Guide_Appearance_3",
+    MessageContentPhone = "Message_Guide_Appearance_3",
+    MessageId = 304003,
+    MessageType = "Guide"
+  },
+  [304004] = {
+    MessageContentGamePad = "Message_Guide_Appearance_4",
+    MessageContentPC = "Message_Guide_Appearance_4",
+    MessageContentPhone = "Message_Guide_Appearance_4",
+    MessageId = 304004,
+    MessageType = "Guide"
+  },
+  [304005] = {
+    MessageContentGamePad = "Message_Guide_Appearance_5",
+    MessageContentPC = "Message_Guide_Appearance_5",
+    MessageContentPhone = "Message_Guide_Appearance_5",
+    MessageId = 304005,
+    MessageType = "Guide"
+  },
+  [304006] = {
+    MessageContentGamePad = "Message_Guide_Appearance_6_Pad",
+    MessageContentPC = "Message_Guide_Appearance_6",
+    MessageContentPhone = "Message_Guide_Appearance_6",
+    MessageId = 304006,
+    MessageType = "Guide"
+  },
+  [304101] = {
+    MessageContentGamePad = "Message_Guide_Hyper_1",
+    MessageContentPC = "Message_Guide_Hyper_1",
+    MessageContentPhone = "Message_Guide_Hyper_1",
+    MessageId = 304101,
+    MessageType = "Guide"
+  },
+  [304102] = {
+    MessageContentGamePad = "Message_Guide_Hyper_2_Pad",
+    MessageContentPC = "Message_Guide_Hyper_2",
+    MessageContentPhone = "Message_Guide_Hyper_2",
+    MessageId = 304102,
+    MessageType = "Guide"
+  },
+  [304103] = {
+    MessageContentGamePad = "Message_Guide_Hyper_3_Pad",
+    MessageContentPC = "Message_Guide_Hyper_3",
+    MessageContentPhone = "Message_Guide_Hyper_3",
+    MessageId = 304103,
+    MessageType = "Guide"
+  },
+  [304104] = {
+    MessageContentGamePad = "Message_Guide_Hyper_4_Pad",
+    MessageContentPC = "Message_Guide_Hyper_4",
+    MessageContentPhone = "Message_Guide_Hyper_4",
+    MessageId = 304104,
+    MessageType = "Guide"
+  },
+  [304201] = {
+    MessageContentGamePad = "Message_Guide_IronExp_1",
+    MessageContentPC = "Message_Guide_IronExp_1",
+    MessageContentPhone = "Message_Guide_IronExp_1",
+    MessageId = 304201,
+    MessageType = "Guide"
+  },
+  [304202] = {
+    MessageContentGamePad = "Message_Guide_Dungeon_1_Pad",
+    MessageContentPC = "Message_Guide_Dungeon_1_PC",
+    MessageContentPhone = "Message_Guide_Dungeon_1_Phone",
+    MessageId = 304202,
+    MessageType = "Guide"
+  },
+  [304203] = {
+    MessageContentGamePad = "Message_Guide_Dungeon_13_Pad",
+    MessageContentPC = "Message_Guide_Dungeon_13",
+    MessageContentPhone = "Message_Guide_Dungeon_13",
+    MessageId = 304203,
+    MessageType = "Guide"
+  },
+  [304204] = {
+    MessageContentGamePad = "Message_Guide_IronExp_4_Pad",
+    MessageContentPC = "Message_Guide_IronExp_4",
+    MessageContentPhone = "Message_Guide_IronExp_4",
+    MessageId = 304204,
+    MessageType = "Guide"
+  },
+  [304205] = {
+    MessageContentGamePad = "Message_Guide_IronExp_5_Pad",
+    MessageContentPC = "Message_Guide_IronExp_5",
+    MessageContentPhone = "Message_Guide_IronExp_5",
+    MessageId = 304205,
+    MessageType = "Guide"
+  },
+  [304206] = {
+    MessageContentGamePad = "Message_Guide_IronExp_6",
+    MessageContentPC = "Message_Guide_IronExp_6",
+    MessageContentPhone = "Message_Guide_IronExp_6",
+    MessageId = 304206,
+    MessageType = "Guide"
+  },
+  [304207] = {
+    MessageContentGamePad = "Message_Guide_IronExp_7",
+    MessageContentPC = "Message_Guide_IronExp_7",
+    MessageContentPhone = "Message_Guide_IronExp_7",
+    MessageId = 304207,
+    MessageType = "Guide"
+  },
+  [304208] = {
+    MessageContentGamePad = "Message_Guide_IronExp_8_Pad",
+    MessageContentPC = "Message_Guide_IronExp_8",
+    MessageContentPhone = "Message_Guide_IronExp_8",
+    MessageId = 304208,
+    MessageType = "Guide"
+  },
+  [304209] = {
+    MessageContentGamePad = "Message_Guide_IronExp_9",
+    MessageContentPC = "Message_Guide_IronExp_9",
+    MessageContentPhone = "Message_Guide_IronExp_9",
+    MessageId = 304209,
+    MessageType = "Guide"
+  },
+  [304210] = {
+    MessageContentGamePad = "Message_Guide_IronExp_10",
+    MessageContentPC = "Message_Guide_IronExp_10",
+    MessageContentPhone = "Message_Guide_IronExp_10",
+    MessageId = 304210,
+    MessageType = "Guide"
+  },
+  [304301] = {
+    MessageContentGamePad = "Message_Guide_Guild_1",
+    MessageContentPC = "Message_Guide_Guild_1",
+    MessageContentPhone = "Message_Guide_Guild_1",
+    MessageId = 304301,
+    MessageType = "Guide"
+  },
+  [304302] = {
+    MessageContentGamePad = "Message_Guide_Guild_2_Pad",
+    MessageContentPC = "Message_Guide_Guild_2",
+    MessageContentPhone = "Message_Guide_Guild_2",
+    MessageId = 304302,
+    MessageType = "Guide"
+  },
+  [304303] = {
+    MessageContentGamePad = "Message_Guide_Guild_3",
+    MessageContentPC = "Message_Guide_Guild_3",
+    MessageContentPhone = "Message_Guide_Guild_3",
+    MessageId = 304303,
+    MessageType = "Guide"
+  },
+  [304401] = {
+    MessageContentGamePad = "Message_Guide_GuildQuest_1_Pad",
+    MessageContentPC = "Message_Guide_GuildQuest_1",
+    MessageContentPhone = "Message_Guide_GuildQuest_1",
+    MessageId = 304401,
+    MessageType = "Guide"
+  },
+  [304402] = {
+    MessageContentGamePad = "Message_Guide_GuildQuest_2",
+    MessageContentPC = "Message_Guide_GuildQuest_2",
+    MessageContentPhone = "Message_Guide_GuildQuest_2",
+    MessageId = 304402,
+    MessageType = "Guide"
+  },
+  [304403] = {
+    MessageContentGamePad = "Message_Guide_GuildQuest_3",
+    MessageContentPC = "Message_Guide_GuildQuest_3",
+    MessageContentPhone = "Message_Guide_GuildQuest_3",
+    MessageId = 304403,
+    MessageType = "Guide"
+  },
   [310001] = {
     MessageContentGamePad = "Message_Guide_Fish01",
     MessageContentPC = "Message_Guide_Fish01",
@@ -3537,6 +3719,48 @@ return ReadOnly("Message", {
     MessageContentPhone = "MESSAGE_LOADING_418_PC",
     MessageId = 900418,
     MessageTitlePC = "MESSAGE_TITLE_LOADING_418_PC"
+  },
+  [900419] = {
+    MessageContentPC = "MESSAGE_LOADING_419",
+    MessageContentPhone = "MESSAGE_LOADING_419",
+    MessageId = 900419,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_419"
+  },
+  [900420] = {
+    MessageContentPC = "MESSAGE_LOADING_420",
+    MessageContentPhone = "MESSAGE_LOADING_420",
+    MessageId = 900420,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_420"
+  },
+  [900421] = {
+    MessageContentPC = "MESSAGE_LOADING_421",
+    MessageContentPhone = "MESSAGE_LOADING_421",
+    MessageId = 900421,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_421"
+  },
+  [900422] = {
+    MessageContentPC = "MESSAGE_LOADING_422",
+    MessageContentPhone = "MESSAGE_LOADING_422",
+    MessageId = 900422,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_422"
+  },
+  [900423] = {
+    MessageContentPC = "MESSAGE_LOADING_423",
+    MessageContentPhone = "MESSAGE_LOADING_423",
+    MessageId = 900423,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_423"
+  },
+  [900424] = {
+    MessageContentPC = "MESSAGE_LOADING_424",
+    MessageContentPhone = "MESSAGE_LOADING_424",
+    MessageId = 900424,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_424"
+  },
+  [900425] = {
+    MessageContentPC = "MESSAGE_LOADING_425",
+    MessageContentPhone = "MESSAGE_LOADING_425",
+    MessageId = 900425,
+    MessageTitlePC = "MESSAGE_TITLE_LOADING_425"
   },
   [910001] = {
     MessageContentPC = "MESSAGE_TRACKQUEST_910001_PC",

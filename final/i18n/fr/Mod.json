@@ -2783,29 +2783,44 @@
     "id": 41715,
     "icon": "FeatheredSnake01_Black",
     "名称": "Éternité",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Personnages",
-    "技能耐久": 1.0,
+    "技能耐久": 0.36,
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
     "id": 41716,
     "icon": "FeatheredSnake01_Black",
     "名称": "Vigueur",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "de Quetzalcoatl",
     "品质": "紫",
     "极性": "V",
     "属性": "Umbro",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Personnages",
-    "昂扬": 1.0,
-    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "昂扬": 0.36,
+    "效果": "Cet effet ne s’active que si tous les Sceaux démoniaques équipés sont différents."
+  },
+  {
+    "id": 41717,
+    "icon": "Mephisto01_Black",
+    "名称": "Vigueur · Décision",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "O",
+    "属性": "Umbro",
+    "耐受": 21,
+    "类型": "Personnages",
+    "昂扬": 0.15,
+    "技能威力": 0.3,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
     "id": 41721,
@@ -2896,6 +2911,20 @@
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
+    "id": 41727,
+    "icon": "Mephisto01_Blue",
+    "名称": "Décision · Éveil",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "A",
+    "属性": "Hydro",
+    "耐受": 25,
+    "类型": "Personnages",
+    "技能威力": 0.3,
+    "效果": "Les dégâts infligés par vos invocations augmentent de 30.0%. Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
     "id": 41731,
     "icon": "Mephisto01_Red",
     "名称": "Ardeur · Dévotion",
@@ -2982,6 +3011,20 @@
     "类型": "Personnages",
     "技能范围": 1.0,
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
+  },
+  {
+    "id": 41737,
+    "icon": "Mephisto01_Red",
+    "名称": "Décision",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "O",
+    "属性": "Pyro",
+    "耐受": 25,
+    "类型": "Personnages",
+    "技能威力": 0.6,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
     "id": 41741,
@@ -3072,6 +3115,21 @@
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
+    "id": 41747,
+    "icon": "Mephisto01_Purple",
+    "名称": "Vigueur · Raffinement",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "V",
+    "属性": "Électro",
+    "耐受": 21,
+    "类型": "Personnages",
+    "昂扬": 0.15,
+    "造成的伤害": 0.15,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
     "id": 41751,
     "icon": "Mephisto01_Green",
     "名称": "Ardeur · Dévotion",
@@ -3160,6 +3218,21 @@
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
   },
   {
+    "id": 41757,
+    "icon": "Mephisto01_Green",
+    "名称": "Ténacité · Décision",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "D",
+    "属性": "Anémo",
+    "耐受": 22,
+    "类型": "Personnages",
+    "背水": 0.054,
+    "技能威力": 0.3,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
     "id": 41761,
     "icon": "Mephisto01_Orange",
     "名称": "Embrasement",
@@ -3245,6 +3318,21 @@
     "类型": "Personnages",
     "技能威力": 0.48,
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+  },
+  {
+    "id": 41767,
+    "icon": "Mephisto01_Orange",
+    "名称": "Décision · Raffinement",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "紫",
+    "极性": "V",
+    "属性": "Lumino",
+    "耐受": 25,
+    "类型": "Personnages",
+    "技能威力": 0.3,
+    "造成的伤害": 0.15,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
     "id": 41801,
@@ -3772,6 +3860,42 @@
     "耐受": 14,
     "类型": "Armes de mêlée",
     "触发倍率": 0.8
+  },
+  {
+    "id": 42701,
+    "icon": "Fenrir01",
+    "名称": "Pillage",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "紫",
+    "极性": "A",
+    "耐受": 15,
+    "类型": "Armes de mêlée",
+    "效果": "Après avoir vaincu un ennemi de niveau égal ou inférieur au vôtre, votre arme à distance est immédiatement rechargée jusqu’à sa capacité maximale."
+  },
+  {
+    "id": 42702,
+    "icon": "Fenrir01",
+    "名称": "Ascendant",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 15,
+    "类型": "Armes de mêlée",
+    "效果": "Après avoir vaincu un ennemi de niveau égal ou inférieur au vôtre, vous obtenez 120 points de Combo."
+  },
+  {
+    "id": 42703,
+    "icon": "Fenrir01",
+    "名称": "Répression",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 15,
+    "类型": "Armes de mêlée",
+    "效果": "Les dégâts infligés aux ennemis de niveau égal ou inférieur au vôtre sont toujours critiques et déclenchent des effets supplémentaires."
   },
   {
     "id": 43001,
@@ -5376,29 +5500,53 @@
     "id": 51715,
     "icon": "FeatheredSnake01_Black",
     "名称": "Éternité",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Personnages",
-    "技能耐久": 1.0,
+    "消耗": [
+      51715
+    ],
+    "技能耐久": 0.66,
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
     "id": 51716,
     "icon": "FeatheredSnake01_Black",
     "名称": "Vigueur",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "de Quetzalcoatl",
     "品质": "金",
     "极性": "V",
     "属性": "Umbro",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Personnages",
-    "昂扬": 1.0,
-    "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+    "消耗": [
+      51716
+    ],
+    "昂扬": 0.66,
+    "效果": "Cet effet ne s’active que si tous les Sceaux démoniaques équipés sont différents."
+  },
+  {
+    "id": 51717,
+    "icon": "Mephisto01_Black",
+    "名称": "Vigueur · Décision",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "O",
+    "属性": "Umbro",
+    "耐受": 23,
+    "类型": "Personnages",
+    "消耗": [
+      51717
+    ],
+    "昂扬": 0.275,
+    "技能威力": 0.55,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
     "id": 51721,
@@ -5501,6 +5649,23 @@
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
   },
   {
+    "id": 51727,
+    "icon": "Mephisto01_Blue",
+    "名称": "Décision · Éveil",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "A",
+    "属性": "Hydro",
+    "耐受": 28,
+    "类型": "Personnages",
+    "消耗": [
+      51727
+    ],
+    "技能威力": 0.55,
+    "效果": "Les dégâts infligés par vos invocations augmentent de 55.0%. Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
     "id": 51731,
     "icon": "Mephisto01_Red",
     "名称": "Ardeur · Dévotion",
@@ -5599,6 +5764,23 @@
     "类型": "Personnages",
     "技能范围": 1.0,
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
+  },
+  {
+    "id": 51737,
+    "icon": "Mephisto01_Red",
+    "名称": "Décision",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "O",
+    "属性": "Pyro",
+    "耐受": 28,
+    "类型": "Personnages",
+    "消耗": [
+      51737
+    ],
+    "技能威力": 1.1,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
     "id": 51741,
@@ -5707,6 +5889,24 @@
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité D sont équipés."
   },
   {
+    "id": 51747,
+    "icon": "Mephisto01_Purple",
+    "名称": "Vigueur · Raffinement",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "V",
+    "属性": "Électro",
+    "耐受": 23,
+    "类型": "Personnages",
+    "消耗": [
+      51747
+    ],
+    "昂扬": 0.275,
+    "造成的伤害": 0.275,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
     "id": 51751,
     "icon": "Mephisto01_Green",
     "名称": "Ardeur · Dévotion",
@@ -5813,6 +6013,24 @@
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité O sont équipés."
   },
   {
+    "id": 51757,
+    "icon": "Mephisto01_Green",
+    "名称": "Ténacité · Décision",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "D",
+    "属性": "Anémo",
+    "耐受": 24,
+    "类型": "Personnages",
+    "消耗": [
+      51757
+    ],
+    "背水": 0.099,
+    "技能威力": 0.55,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
+  },
+  {
     "id": 51761,
     "icon": "Mephisto01_Orange",
     "名称": "Embrasement",
@@ -5916,6 +6134,24 @@
     ],
     "技能威力": 0.88,
     "效果": "L’effet élémentaire s’active uniquement lorsque au moins 4 Sceaux démoniaques d’affinité V sont équipés."
+  },
+  {
+    "id": 51767,
+    "icon": "Mephisto01_Orange",
+    "名称": "Décision · Raffinement",
+    "版本": "1.4",
+    "系列": "du Pactisant",
+    "品质": "金",
+    "极性": "V",
+    "属性": "Lumino",
+    "耐受": 28,
+    "类型": "Personnages",
+    "消耗": [
+      51767
+    ],
+    "技能威力": 0.55,
+    "造成的伤害": 0.275,
+    "效果": "Une fois amélioré jusqu’à +5.0, ce Sceau démoniaque peut être équipé en plusieurs exemplaires simultanément."
   },
   {
     "id": 51801,
@@ -6328,6 +6564,54 @@
     "触发": 0.99
   },
   {
+    "id": 52010,
+    "icon": "Cerberus01",
+    "名称": "Concentration · Célérité",
+    "版本": "1.4",
+    "系列": "du Cerbère",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 27,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52010
+    ],
+    "暴击": 1.21,
+    "攻速": 0.44
+  },
+  {
+    "id": 52011,
+    "icon": "Cerberus01",
+    "名称": "Fureur · Élan",
+    "版本": "1.4",
+    "系列": "du Cerbère",
+    "品质": "金",
+    "极性": "D",
+    "耐受": 29,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52011
+    ],
+    "暴伤": 1.21,
+    "蓄力攻击伤害": 0.33
+  },
+  {
+    "id": 52012,
+    "icon": "Cerberus01",
+    "名称": "Fulgurance · Impact",
+    "版本": "1.4",
+    "系列": "du Cerbère",
+    "品质": "金",
+    "极性": "D",
+    "耐受": 30,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52012
+    ],
+    "攻击": 1.65,
+    "下落攻击伤害": 0.33
+  },
+  {
     "id": 52101,
     "icon": "Cerberus01",
     "名称": "Tranchant",
@@ -6374,6 +6658,39 @@
     ],
     "限定": "震荡",
     "物理": 0.99
+  },
+  {
+    "id": 52203,
+    "icon": "Fenrir01",
+    "名称": "Cycle · Entrave",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "金",
+    "极性": "O",
+    "耐受": 25,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52203
+    ],
+    "连击持续时间": 11,
+    "触发": 1.65
+  },
+  {
+    "id": 52204,
+    "icon": "Fenrir01",
+    "名称": "Fortune · Limite",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "金",
+    "极性": "O",
+    "耐受": 22,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52204
+    ],
+    "额外连击": 1,
+    "攻击范围": 2.2,
+    "效果": "Lors de l’obtention de points de Combo via une attaque, a 100.0% de chance d’obtenir 1 point de Combo supplémentaire."
   },
   {
     "id": 53001,
@@ -6954,73 +7271,73 @@
     "id": 56111,
     "icon": "Changeling01_Black",
     "名称": "Poursuite",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "du Métamorphe",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Personnages",
     "消耗": [
       56111
     ],
     "减伤": 0.3,
-    "效果": "Lorsque la Durée de compétence est ≥ 150.0%, confère +100.0% de Dégâts Umbro supplémentaires."
+    "效果": "Lorsque la Vigueur est ≥ 60.0%, confère +66.0% de Dégâts Umbro supplémentaires."
   },
   {
     "id": 56112,
     "icon": "Siren01_Black",
     "名称": "Ailes · Inspiration · Poursuite",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "de la Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Personnages",
     "消耗": [
       56112
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Lorsque la Durée de compétence est ≥ 150.0%, confère +100.0% de Dégâts Umbro supplémentaires."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Lorsque la Vigueur est ≥ 60.0%, confère +66.0% de Dégâts Umbro supplémentaires."
   },
   {
     "id": 56113,
     "icon": "Changeling01_Black",
-    "名称": "Concentration",
-    "版本": "99.9",
+    "名称": "Fureur",
+    "版本": "1.4",
     "系列": "du Métamorphe",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Personnages",
     "消耗": [
       56113
     ],
     "减伤": 0.3,
-    "效果": "Lorsque la Durée de compétence est ≥ 150.0%, votre Taux CRIT et celui de vos alliés augmentent de 100.0%."
+    "效果": "Lorsque la Durée de compétence est ≥ 180.0%, vos DGT CRIT ainsi que ceux de vos alliés augmentent de 99.0%."
   },
   {
     "id": 56114,
     "icon": "Siren01_Black",
-    "名称": "Ailes · Inspiration · Concentration",
-    "版本": "99.9",
+    "名称": "Ailes · Inspiration · Fureur",
+    "版本": "1.4",
     "系列": "de la Sirène",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Personnages",
     "消耗": [
       56114
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Lorsque la Durée de compétence est ≥ 150.0%, votre Taux CRIT et celui de vos alliés augmentent de 100.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Lorsque la Durée de compétence est ≥ 180.0%, vos DGT CRIT ainsi que ceux de vos alliés augmentent de 99.0%."
   },
   {
     "id": 56121,
@@ -7953,6 +8270,44 @@
     }
   },
   {
+    "id": 106002,
+    "icon": "Fenrir01",
+    "名称": "Splendeur éblouissante",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "紫",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Armes de mêlée",
+    "攻速": 0.2,
+    "效果": "Modifie l’Attaque normale du Katana : enchaîne de rapides coups de lame sur les ennemis devant vous. Inflige 100 % de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1060101": {
+        "id": 1060201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.25,
+            "格式": "{%}×2",
+            "削韧": 10,
+            "取消": 0.4333,
+            "连段": 1
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.385,
+            "格式": "{%}×3",
+            "削韧": 12,
+            "取消": 0.4333,
+            "连段": 1.3
+          }
+        ]
+      }
+    }
+  },
+  {
     "id": 150401,
     "icon": "Suyi",
     "名称": "Mode de poursuite",
@@ -7968,6 +8323,134 @@
     ],
     "技能威力": 0.55,
     "效果": "Modifie les attaques à distance du Mode annihilation stellaire pour tirer des projectiles traqueurs."
+  },
+  {
+    "id": 201001,
+    "icon": "Fenrir01",
+    "名称": "Tourbillon illusoire",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52001,
+      52008
+    ],
+    "攻速": 0.2,
+    "效果": "Modifie l’Attaque normale de l’Épée : inflige 200.0% de dégâts supplémentaires par rapport à l’attaque de base.",
+    "技能替换": {
+      "1010101": {
+        "id": 1010201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.65,
+            "削韧": 20,
+            "卡肉": 0.03,
+            "取消": 0.2,
+            "连段": 0.3
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.85,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.2,
+            "连段": 0.3
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.55,
+            "格式": "{%}×4",
+            "削韧": 25,
+            "取消": 0.2667,
+            "连段": 0.6
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 1.2,
+            "削韧": 40,
+            "卡肉": 0.1,
+            "取消": 0.6333,
+            "连段": 1.1333
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 202001,
+    "icon": "Fenrir01",
+    "名称": "Cascade perforante",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52001,
+      52008
+    ],
+    "暴伤": 0.5,
+    "效果": "Modifie l’Attaque chargée de l’Arme d’hast : vous projetez 5 armes vers l’avant, touchant tous les ennemis sur votre trajectoire. Les dégâts sont augmentés de 200.0% par rapport à l’attaque de base.",
+    "技能替换": {
+      "1020102": {
+        "id": 1020202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 0.3,
+            "削韧": 10,
+            "取消": 1.5
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 202002,
+    "icon": "Fenrir01",
+    "名称": "Onde retentissante",
+    "版本": "1.4",
+    "系列": "de Fenrir",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Armes de mêlée",
+    "消耗": [
+      52001,
+      52008
+    ],
+    "暴击": 0.4,
+    "效果": "Modifie l’Attaque plongeante de l’Arme d’hast : l’impact génère une onde de choc de plus grande portée. Les dégâts sont augmentés de 200.0% par rapport à l’attaque de base.",
+    "技能替换": {
+      "1020103": {
+        "id": 1020203,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque plongeante",
+            "值": 0.47,
+            "削韧": 15,
+            "取消": 1.7
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup d’attaque plongeante",
+            "值": 0.63,
+            "削韧": 20,
+            "取消": 1.7
+          }
+        ]
+      }
+    }
   },
   {
     "id": 202003,

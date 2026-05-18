@@ -16,7 +16,7 @@ function M:OnLoaded(...)
     self.CurActivityId = EventTabConfigData.EventId[1]
   end
   self.CurrentEventId = DataMgr.ComeBackEventConstant.CurrentEventId.ConstantValue
-  self.CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
+  self.CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
   if self.CurrentEventSchemeId then
     self.EventSchemeData = DataMgr.ComeBackEvent[self.CurrentEventSchemeId]
   end

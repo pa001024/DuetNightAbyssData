@@ -136,6 +136,7 @@ return ReadOnly("DamageTag", {
   WeeklyPaoTai = {
     DamageTag = "WeeklyPaoTai"
   },
+  WeitaWater = {DamageTag = "WeitaWater"},
   XibiSkill01 = {
     DamageTag = "XibiSkill01"
   },

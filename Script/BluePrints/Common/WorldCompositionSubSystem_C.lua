@@ -148,7 +148,7 @@ end
 
 function M:GetRealStreamingDistanceRatio(ScalabilityLevel, Platform)
   local Ratio = 1
-  if "Android" == Platform then
+  if "Android" == Platform or "OpenHarmony" == Platform then
     Ratio = Const.AndroidRealStreamingDistanceRatio[ScalabilityLevel] or Ratio
   elseif "IOS" == Platform then
     Ratio = Const.IOSRealStreamingDistanceRatio[ScalabilityLevel] or Ratio
@@ -179,7 +179,7 @@ function M:GetFoliageQualityEMCache()
   end
   local PlatformName = UGameplayStatics.GetPlatformName()
   local GameInstance = GWorld.GameInstance
-  local IsPhone = "IOS" == PlatformName or "Android" == PlatformName or GameInstance and GameInstance:GetUseMapPhoneInPC()
+  local IsPhone = "IOS" == PlatformName or "Android" == PlatformName or "OpenHarmony" == PlatformName or GameInstance and GameInstance:GetUseMapPhoneInPC()
   local DefaultValue = 0
   if IsPhone then
     DefaultValue = OptionInfo.DefaultValueM
@@ -194,9 +194,9 @@ end
 function M:IsFoliageLevelContain(TableFoliageLevel, IsPhone, PackageName)
   local FoliageStrTable = {}
   if IsPhone then
-    FoliageStrTable = Const.HuaxuFoliagePhone[TableFoliageLevel]
+    FoliageStrTable = Const.NewFoliageRulePhone[TableFoliageLevel]
   else
-    FoliageStrTable = Const.HuaxuFoliagePC[TableFoliageLevel]
+    FoliageStrTable = Const.NewFoliageRulePC[TableFoliageLevel]
   end
   for _, v in pairs(FoliageStrTable) do
     if string.find(PackageName, v) then
@@ -204,6 +204,15 @@ function M:IsFoliageLevelContain(TableFoliageLevel, IsPhone, PackageName)
     end
   end
   return false
+end
+
+function M:IsNewFoliageRuleMap(PackageName)
+  for _, v in pairs(Const.OldFoliageRuleMap) do
+    if string.find(PackageName, v) then
+      return false
+    end
+  end
+  return true
 end
 
 function M:DestroyAllRegionDataAndEnterDungeon(DungeonId)

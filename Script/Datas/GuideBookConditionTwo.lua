@@ -306,7 +306,7 @@ return ReadOnly("GuideBookConditionTwo", {
         FinishQuest = 12010415,
         GuideId = 97,
         GuideNoteId = 122,
-        GuideNoteTab = 5,
+        GuideNoteTab = 3,
         RewardId = 7000
       }
     },
@@ -648,6 +648,66 @@ return ReadOnly("GuideBookConditionTwo", {
         GuideNoteId = 160,
         GuideNoteTab = 3,
         MechanismTag = "DarkClouds",
+        RewardId = 7000
+      }
+    },
+    [148] = {
+      [1] = {
+        CompleteUIGuideId = 148,
+        GuideId = 148,
+        GuideNoteId = 161,
+        GuideNoteTab = 5,
+        MechanismTag = "AppearanceScore",
+        RewardId = 7000
+      }
+    },
+    [149] = {
+      [1] = {
+        CompleteUIGuideId = 149,
+        GuideId = 149,
+        GuideNoteId = 162,
+        GuideNoteTab = 5,
+        MechanismTag = "HyperWeapon",
+        RewardId = 7000
+      }
+    },
+    [150] = {
+      [1] = {
+        CompleteUIGuideId = 150,
+        GuideId = 150,
+        GuideNoteId = 163,
+        GuideNoteTab = 5,
+        MechanismTag = "IronMode",
+        RewardId = 7000
+      }
+    },
+    [151] = {
+      [1] = {
+        CompleteUIGuideId = 151,
+        GuideId = 151,
+        GuideNoteId = 164,
+        GuideNoteTab = 5,
+        MechanismTag = "OpenGuild",
+        RewardId = 7000
+      }
+    },
+    [152] = {
+      [1] = {
+        CompleteUIGuideId = 152,
+        FinishQuestChain = 100405,
+        GuideId = 152,
+        GuideNoteId = 165,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
+    [153] = {
+      [1] = {
+        CompleteUIGuideId = 153,
+        GuideId = 153,
+        GuideNoteId = 166,
+        GuideNoteTab = 5,
+        MechanismTag = "OpenGuild",
         RewardId = 7000
       }
     },

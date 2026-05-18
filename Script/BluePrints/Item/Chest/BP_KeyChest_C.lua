@@ -32,7 +32,8 @@ end
 
 function M:CreateKeyList()
   self.KeyList = {}
-  local InteractiveCondition = self.ChestInteractiveComponent.InteractiveParam.InteractiveCondition
+  local InteractiveParam = rawget(self.ChestInteractiveComponent, "InteractiveParam")
+  local InteractiveCondition = InteractiveParam.InteractiveCondition
   local ConditionMap = ConditionUtils:GetConditionContent(InteractiveCondition)
   for i, ParamTable in pairs(ConditionMap) do
     if "HaveResource" == i then

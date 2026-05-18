@@ -1,9 +1,7 @@
 require("UnLua")
-local TaskType = {
-  Daily = {1, 2},
-  Cycle = 3,
-  Achievement = 4
-}
+local JJGameModel = require("BluePrints.UI.WBP.ActivityJJGame.JJGameModel")
+local JJGameController = require("BluePrints.UI.WBP.ActivityJJGame.JJGameController")
+local TaskType = JJGameModel.TaskType
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -11,15 +9,16 @@ local NormalTaskBP_P = "/Game/UI/WBP/Activity/PC/JJGame/WBP_Activity_JJGame_Norm
 local NormalTaskBP_M = "/Game/UI/WBP/Activity/Mobile/JJGame/WBP_Activity_JJGame_NormalTask_M.WBP_Activity_JJGame_NormalTask_M"
 local ChallengeTaskBP_P = "/Game/UI/WBP/Activity/PC/JJGame/WBP_Activity_JJGame_ChallengeTask_P.WBP_Activity_JJGame_ChallengeTask_P"
 local ChallengeTaskBP_M = "/Game/UI/WBP/Activity/Mobile/JJGame/WBP_Activity_JJGame_ChallengeTask_M.WBP_Activity_JJGame_ChallengeTask_M"
-local NormalRewardReddotName = "JJGameTask_Normal_Reddot"
-local ChallengeRewardReddotName = "JJGameTask_Challenge_Reddot"
-local NormalTaskNewReddotName = "JJGameTask_Normal_New"
-local ChallengeTaskNewReddotName = "JJGameTask_Challenge_New"
+local NormalRewardReddotName = JJGameModel.NormalRewardReddotName
+local ChallengeRewardReddotName = JJGameModel.ChallengeRewardReddotName
+local NormalTaskNewReddotName = JJGameModel.NormalTaskNewReddotName
+local ChallengeTaskNewReddotName = JJGameModel.ChallengeTaskNewReddotName
 
 function M:Construct()
   self.Super.Construct(self)
   self:AddDispatcher(EventID.OnMidTermTaskComplete, self, self.OnAchvFinished)
   self:AddDispatcher(EventID.OnMidTermTaskProgressChange, self, self.OnMidTermTaskProgressChange)
+  self:AddDispatcher(EventID.OnActivityEntryShowVisible, self, self.RefreshCurrentTaskWidget)
   self:InitListenEvent()
   self:RefreshBaseInfo()
   ReddotManager.AddListenerEx(NormalTaskNewReddotName, self, self.UpdateNormalTaskNewReddot)
@@ -61,84 +60,27 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
 end
 
 function M:InitTaskData()
-  self.MidTermConst = DataMgr.MidTermGoalConstant
-  self.MidTermGoalEventId = self.MidTermConst.MidTermGoalEventId.ConstantValue
-  self.EventStartTime = DataMgr.EventMain[self.MidTermGoalEventId].EventStartTime
-  self.EventEndTime = DataMgr.EventMain[self.MidTermGoalEventId].EventEndTime
-  self.RewardEndTime = DataMgr.EventMain[self.MidTermGoalEventId].RewardEndTime
-  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
-  self.MidTermAchvScores = self.MidTermGoals.AchvScores or 0
-  self.MidTermTasks = self.MidTermGoals.Tasks
-  self.MidTermTasksRecord = self.MidTermGoals.TaskFinishCount
-  self.MidTermAchvProgressRewarded = self.MidTermGoals.AchvProgressRewarded or {}
-  self.MidTermScores = self.MidTermGoals.Scores or 0
-  self.MidTermScoresRewards = self.MidTermGoals.ScoresRewards or {}
+  local Model = JJGameController:RefreshModel()
+  self.MidTermConst = Model.MidTermConst
+  self.MidTermGoalEventId = Model.MidTermGoalEventId
+  self.EventStartTime = Model.EventStartTime
+  self.EventEndTime = Model.EventEndTime
+  self.RewardEndTime = Model.RewardEndTime
+  self.MidTermGoals = Model.MidTermGoals
+  self.MidTermAchvScores = Model.MidTermAchvScores
+  self.MidTermTasks = Model.MidTermTasks
+  self.MidTermTasksRecord = Model.MidTermTasksRecord
+  self.MidTermAchvProgressRewarded = Model.MidTermAchvProgressRewarded
+  self.MidTermScores = Model.MidTermScores
+  self.MidTermScoresRewards = Model.MidTermScoresRewards
+  self.EventDay = Model.EventDay
   self.remainDays, self.remainHours = self:UpdateEventDay()
 end
 
 function M:UpdateEventDay()
-  local currentTime = TimeUtils.NowTime()
-  local SECOND_IN_DAY = CommonConst.SECOND_IN_DAY
-  local SECOND_IN_HOUR = CommonConst.SECOND_IN_HOUR
-  local RESET_HOUR = 5
-  local RESET_OFFSET = RESET_HOUR * SECOND_IN_HOUR
-  local intervalDays = TimeUtils.GetIntervalDay(self.EventStartTime, currentTime)
-  local calculatedEventDay = intervalDays + 1
-  local hasDailyTask = false
-  local enableDayEventDay = -1
-  for _, Task in pairs(self.MidTermTasks) do
-    local TaskData = DataMgr.MidTermTask[Task.UniqueID]
-    if not TaskData then
-      Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
-    elseif TaskData.TaskType == TaskType.Daily[1] or TaskData.TaskType == TaskType.Daily[2] then
-      enableDayEventDay = TaskData.EnableDay
-      hasDailyTask = true
-      break
-    end
-  end
-  if hasDailyTask and calculatedEventDay ~= enableDayEventDay then
-    DebugPrint(TXTTag, "警告：EventDay计算不一致！GetIntervalDay方法：" .. calculatedEventDay .. "，EnableDay方法：" .. enableDayEventDay)
-  end
-  self.EventDay = calculatedEventDay
-  if not hasDailyTask then
-    DebugPrint(TXTTag, "NO DailyTask, EventDay: " .. self.EventDay .. " currentTime: ", TimeUtils.TimeToYMDHMStr(currentTime))
-    return false, false
-  end
-  local nextEnableDay
-  for _, Task in pairs(DataMgr.MidTermTask) do
-    local TaskData = Task
-    if not TaskData then
-      Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
-    elseif TaskData and TaskData.TaskType == TaskType.Achievement and TaskData.EnableDay then
-      local enableDay = TaskData.EnableDay
-      if enableDay > self.EventDay and (not nextEnableDay or nextEnableDay > enableDay) then
-        nextEnableDay = enableDay
-      end
-    end
-  end
-  if not nextEnableDay then
-    DebugPrint(TXTTag, "NO nextEnableDay, EventDay: " .. self.EventDay .. " currentTime: ", TimeUtils.TimeToYMDHMStr(currentTime))
-    return false, false
-  end
-  local nextUnlockTime
-  if 1 == nextEnableDay then
-    nextUnlockTime = self.EventStartTime
-  else
-    local eventStartData = TimeUtils.TimestampToDataObj(self.EventStartTime)
-    local targetDate = TimeUtils.DataToTimestamp(eventStartData.year, eventStartData.month, eventStartData.day + (nextEnableDay - 1), RESET_HOUR, 0, 0)
-    nextUnlockTime = targetDate
-  end
-  local remainTime = nextUnlockTime - currentTime
-  if remainTime < 0 then
-    remainTime = 0
-  end
-  local remainDays = math.floor(remainTime / SECOND_IN_DAY)
-  local remainHours = math.floor((remainTime - remainDays * SECOND_IN_DAY) / SECOND_IN_HOUR)
-  if 0 == remainDays and 0 == remainHours and remainTime > 0 then
-    remainHours = 1
-  end
-  DebugPrint(TXTTag, "EventDay: " .. self.EventDay .. " remainDays: " .. remainDays .. " remainHours: " .. remainHours, TimeUtils.TimeToYMDHMStr(currentTime))
-  return remainDays, remainHours
+  local Model = JJGameController:RefreshModel()
+  self.EventDay = Model.EventDay
+  return Model.RemainDays, Model.RemainHours
 end
 
 function M:InitMainTab(TargetTabId)
@@ -216,84 +158,10 @@ function M:InitMainTab(TargetTabId)
 end
 
 function M:UpdateTabNewReddot()
-  local HasNewNormalTask = false
-  local HasNewChallengeTask = false
-  local HasNormalReward = false
-  local HasChallengeReward = false
-  local Avatar = GWorld:GetAvatar()
-  self.MidTermGoals = Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
-  local MidTermTasks = self.MidTermGoals.Tasks or {}
-  for TaskId, Task in pairs(MidTermTasks) do
-    local TaskData = DataMgr.MidTermTask[Task.UniqueID]
-    if not TaskData then
-      Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
-    else
-      local CacheKey = Task.UniqueID
-      if TaskData.TaskType == TaskType.Achievement then
-        local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeTaskNewReddotName)
-        if CacheData and CacheData[CacheKey] then
-          HasNewChallengeTask = true
-        end
-      else
-        local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalTaskNewReddotName)
-        if CacheData and CacheData[CacheKey] then
-          HasNewNormalTask = true
-        end
-      end
-    end
-  end
-  local NormalRewardCacheData = ReddotManager.GetLeafNodeCacheDetail(NormalRewardReddotName)
-  if NormalRewardCacheData then
-    if NormalRewardCacheData[NormalRewardReddotName .. "ScoresRewards"] then
-      HasNormalReward = true
-    end
-    if not HasNormalReward then
-      for TaskId, Task in pairs(MidTermTasks) do
-        local TaskData = DataMgr.MidTermTask[Task.UniqueID]
-        if not TaskData then
-          Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
-        elseif TaskData.TaskType ~= TaskType.Achievement then
-          local TaskCacheKey = NormalRewardReddotName .. Task.UniqueID
-          if NormalRewardCacheData[TaskCacheKey] then
-            HasNormalReward = true
-            break
-          end
-        end
-      end
-    end
-  end
-  local ChallengeRewardCacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
-  if ChallengeRewardCacheData then
-    for key, _ in pairs(ChallengeRewardCacheData) do
-      if ChallengeRewardCacheData[key] then
-        HasChallengeReward = true
-        break
-      end
-    end
-  end
-  if HasNormalReward then
-    self.Com_Tab:ShowTabRedDot(1, false, true)
-  elseif HasNewNormalTask then
-    if TimeUtils.NowTime() < self.EventEndTime then
-      self.Com_Tab:ShowTabRedDot(1, true, false)
-    end
-  else
-    self.Com_Tab:ShowTabRedDot(1, false)
-  end
-  if HasChallengeReward then
-    self.Com_Tab:ShowTabRedDot(2, false, true)
-  elseif HasNewChallengeTask then
-    if TimeUtils.NowTime() < self.EventEndTime then
-      self.Com_Tab:ShowTabRedDot(2, true, false)
-    end
-  else
-    self.Com_Tab:ShowTabRedDot(2, false)
-  end
-  if TimeUtils.NowTime() > self.RewardEndTime then
-    self.Com_Tab:ShowTabRedDot(1, false)
-    self.Com_Tab:ShowTabRedDot(2, false)
+  if not self.Com_Tab then
     return
   end
+  JJGameController:UpdateTaskTabReddot(self.Com_Tab)
 end
 
 function M:UpdateNormalRewardReddot(Count)
@@ -326,10 +194,13 @@ end
 
 function M:InitTask(TargetTabId)
   self.PanelAnchor:ClearChildren()
+  self.TaskWidget = nil
   if 0 == TargetTabId then
+    self.ChallengeTaskWidget = nil
     self.NormalTaskWidget = UIManager(self):CreateWidget(self.NormalTaskBP)
     self.TaskWidget = self.NormalTaskWidget
   else
+    self.NormalTaskWidget = nil
     self.ChallengeTaskWidget = UIManager(self):CreateWidget(self.ChallengeTaskBP)
     self.TaskWidget = self.ChallengeTaskWidget
   end
@@ -350,58 +221,34 @@ function M:InitTask(TargetTabId)
 end
 
 function M:TryIncreaceNormalRewardReddot(TaskId)
-  local CacheKey = NormalRewardReddotName .. TaskId
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalRewardReddotName)
-  if CacheData and nil == CacheData[CacheKey] then
-    CacheData[CacheKey] = true
-    ReddotManager.IncreaseLeafNodeCount(NormalRewardReddotName)
-  end
+  JJGameController:TryIncreaseNormalRewardReddot(TaskId)
 end
 
 function M:TryIncreaceChallengeTaskRewardReddot(TaskId)
-  local allRewardsClaimed = true
-  for _, v in pairs(self.MidTermAchvProgressRewarded) do
-    if 0 == v then
-      allRewardsClaimed = false
-      break
-    end
-  end
-  if allRewardsClaimed then
+  if self._Avatar:CheckIsChallengeRewardAllClaimed() then
     return
   end
-  local CacheKey = ChallengeRewardReddotName .. TaskId
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
-  if CacheData and nil == CacheData[CacheKey] then
-    CacheData[CacheKey] = true
-    ReddotManager.IncreaseLeafNodeCount(ChallengeRewardReddotName)
-  end
+  JJGameController:TryIncreaseChallengeTaskRewardReddot(TaskId)
 end
 
 function M:OnAchvFinished(TaskId)
-  if self.NormalTaskWidget and self.NormalTaskWidget.OnAchvFinished then
-    self.NormalTaskWidget:OnAchvFinished(TaskId)
+  if IsValid(self.TaskWidget) and self.TaskWidget.OnAchvFinished then
+    self.TaskWidget:OnAchvFinished(TaskId)
   end
-  if self.ChallengeTaskWidget and self.ChallengeTaskWidget.OnAchvFinished then
-    self.ChallengeTaskWidget:OnAchvFinished(TaskId)
-  end
-  local Avatar = GWorld:GetAvatar()
-  local MidTermGoals = Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
-  local MidTermTasks = MidTermGoals.Tasks or {}
-  local Task = MidTermTasks[TaskId]
+  local Model = JJGameController:RefreshModel()
+  self.MidTermAchvProgressRewarded = Model.MidTermAchvProgressRewarded
+  self.EventDay = Model.EventDay
+  local Task = Model:GetTaskByTaskId(TaskId)
   if Task then
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
-    if TaskData and TaskData.TaskType == TaskType.Achievement then
-      if TaskData.EnableDay <= self.EventDay then
-        self:TryIncreaceChallengeTaskRewardReddot(TaskId)
-      end
-    else
-      self:TryIncreaceNormalRewardReddot(TaskId)
+    if TaskData and TaskData.TaskType == TaskType.Achievement and TaskData.EnableDay <= self.EventDay then
+      self:TryIncreaceChallengeTaskRewardReddot(TaskId)
     end
   end
 end
 
 function M:OnMidTermTaskProgressChange(TaskId, Progress)
-  if self.TaskWidget and self.TaskWidget.OnMidTermTaskProgressChange then
+  if IsValid(self.TaskWidget) and self.TaskWidget.OnMidTermTaskProgressChange then
     self.TaskWidget:OnMidTermTaskProgressChange(TaskId, Progress)
   end
 end
@@ -412,12 +259,18 @@ function M:GetTaskReward(Item, TaskWidget, TaskId)
   local function Callback(ErrCode)
     print("MidTermGetTaskReward", ErrorCode:Name(ErrCode))
     if ErrCode == ErrorCode.RET_SUCCESS then
-      TaskWidget:OnTaskGet(Item)
+      if IsValid(TaskWidget) and TaskWidget.OnTaskGet then
+        TaskWidget:OnTaskGet(Item)
+      end
     else
       local ErrorCodeData = DataMgr.ErrorCode[ErrCode]
-      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(ErrorCodeData.ErrorCodeContent))
+      if IsValid(self) then
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText(ErrorCodeData.ErrorCodeContent))
+      end
     end
-    self:BlockAllUIInput(false)
+    if IsValid(self) then
+      self:BlockAllUIInput(false)
+    end
   end
   
   self:BlockAllUIInput(true)
@@ -435,6 +288,21 @@ function M:OnTabChanged(TabWidget)
   self.CurrentTabIndex = TabId
   self:SwitchBG(TabId)
   self:InitTask(TabId)
+end
+
+function M:RefreshCurrentTaskWidget()
+  if not IsValid(self) then
+    return
+  end
+  self:InitTaskData()
+  if IsValid(self.TaskWidget) then
+    if self.TaskWidget.RefreshTaskView then
+      self.TaskWidget:RefreshTaskView()
+    elseif self.TaskWidget.InitTaskList then
+      self.TaskWidget:InitTaskList()
+    end
+  end
+  self:UpdateTabNewReddot()
 end
 
 function M:SwitchBG(TabId)
@@ -463,9 +331,8 @@ end
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local IsEventHandled = false
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    IsEventHandled = self:OnGamePadDown(InKeyName)
+    self:OnGamePadDown(InKeyName)
   elseif "Escape" == InKeyName then
     self:CloseSelf()
   elseif "Q" == InKeyName then
@@ -477,7 +344,6 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:OnGamePadDown(InKeyName)
-  local IsEventHandled = false
   if "Gamepad_FaceButton_Right" == InKeyName then
     if self.NormalTaskWidget and self.NormalTaskWidget.IsFocusBigReward then
       self.NormalTaskWidget.IsFocusBigReward = false
@@ -508,10 +374,6 @@ end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.CurGamepadName = CurGamepadName
-  local IsUseGamepad = CurInputDevice == ECommonInputType.Gamepad
-  if IsUseGamepad then
-  else
-  end
   self.CurInputDevice = CurInputDevice
 end
 
@@ -521,10 +383,14 @@ end
 
 function M:ReceiveEnterState(StackAction)
   self.Super.ReceiveEnterState(self, StackAction)
+  self:RefreshCurrentTaskWidget()
+  if not IsValid(self.TaskWidget) then
+    return
+  end
   if 0 == self.CurrentTabIndex then
     if IsValid(self.TaskWidget.NormalItem) then
       local FirstItem = self.TaskWidget.NormalItem.List_Task:GetItemAt(0)
-      if FirstItem and FirstItem.SelfWidget then
+      if FirstItem and FirstItem.SelfWidget and IsValid(FirstItem.SelfWidget) then
         FirstItem.SelfWidget:SetFocus()
       else
         self.TaskWidget.NormalItem:SetFocus()
@@ -532,7 +398,7 @@ function M:ReceiveEnterState(StackAction)
     end
   elseif 1 == self.CurrentTabIndex and IsValid(self.TaskWidget.List_Challenge) then
     local FirstItem = self.TaskWidget.List_Challenge:GetItemAt(0)
-    if FirstItem and FirstItem.SelfWidget then
+    if FirstItem and FirstItem.SelfWidget and IsValid(FirstItem.SelfWidget) then
       FirstItem.SelfWidget:SetFocus()
     else
       self.TaskWidget.List_Challenge:SetFocus()

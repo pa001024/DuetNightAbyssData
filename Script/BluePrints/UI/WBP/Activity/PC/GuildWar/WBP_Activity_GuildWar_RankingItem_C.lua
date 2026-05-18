@@ -226,7 +226,7 @@ function M:OnAnchorGetUserMenuContent()
       if AvatarInfo.Uid == self.SelfAvatar.Uid then
         PersonInfoController:OpenView()
       else
-        GWorld:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid)
+        GWorld:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid, nil, AvatarInfo)
       end
       self.Head_Anchor:Close()
     end

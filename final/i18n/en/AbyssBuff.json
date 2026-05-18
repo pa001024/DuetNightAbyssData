@@ -19,7 +19,7 @@
     "id": 30,
     "icon": "Common",
     "n": "Andante Furioso: Onslaught's Boon",
-    "d": "Every 5 instances of damage dealt by any ally grant 1 stack of 12% ATK Increase, lasting 10 s and stacking up to 10 times.",
+    "d": "Every 5 instances of damage dealt by any ally grant 1 stack of +12% ATK, lasting 10 s and stacking up to 10 times.",
     "t": 1,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   },
@@ -381,6 +381,54 @@
     "n": "Coordinated Adagio: Adrift in the Storm",
     "d": "Reduces allies' ATK by 150% and increases their Multishot by 120%.",
     "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 14111,
+    "icon": "Melee",
+    "n": "Andante Furioso: Blazing Ire",
+    "d": "Every 1 instances of CRIT DMG dealt by any ally grant 1 stack of +5% ATK, lasting 12s and stacking up to 30 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 14121,
+    "icon": "Skill",
+    "n": "Allegro Agitato: Call to Arms",
+    "d": "When an ally uses a Combat Skill or Ultimate Skill, gains 1 stack of +10% DMG Dealt for 18s, stacking up to 5 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 14122,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Resolute Farewell",
+    "d": "Reduces allies' ATK by 150% and increases their CRIT Chance by 100%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 14211,
+    "icon": "Skill",
+    "n": "Allegro Agitato: Chasing the Horizon",
+    "d": "For every 20 Sanity Cost by any ally, gains 1 stack of +10% Damage Dealt for 18s, stacking up to 5 times.",
+    "t": 1,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 14212,
+    "icon": "Exchange",
+    "n": "Coordinated Adagio: Glorious Farewell",
+    "d": "Reduces allies' ATK by 150% and increases their Morale by 90%.",
+    "t": 2,
+    "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
+  },
+  {
+    "id": 14221,
+    "icon": "Skill",
+    "n": "Allegro Agitato: Call to Victory",
+    "d": "When an ally uses a Combat Skill or Ultimate Skill, gains 1 stack of +30% Skill Intensity for 18s, stacking up to 5 times.",
+    "t": 1,
     "tip": "Takes effect when the Featured Repertoire Act Ⅱ challenge starts "
   }
 ]

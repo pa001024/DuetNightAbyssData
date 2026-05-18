@@ -833,6 +833,48 @@ return ReadOnly("UIGuide", {
     GuideId = 147,
     MainGuideTitle = "MAINUIGUIDE_TITLE_YuBo_1"
   },
+  [148] = {
+    ChildGuideId = {
+      14801,
+      14802,
+      14803
+    },
+    GuideId = 148,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_Appearance_1"
+  },
+  [149] = {
+    ChildGuideId = {
+      14901,
+      14902,
+      14903
+    },
+    GuideId = 149,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_Hyper_1"
+  },
+  [150] = {
+    ChildGuideId = {
+      15001,
+      15002,
+      15003
+    },
+    GuideId = 150,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_IronExp_1"
+  },
+  [151] = {
+    ChildGuideId = {15101, 15102},
+    GuideId = 151,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_GuildQuest_1"
+  },
+  [152] = {
+    ChildGuideId = {15201},
+    GuideId = 152,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_ChangeElem_1"
+  },
+  [153] = {
+    ChildGuideId = {15301, 15302},
+    GuideId = 153,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_GuildChat_1"
+  },
   [1001] = {
     ChildGuideId = {
       100101,

@@ -57,7 +57,6 @@ return ReadOnly("BagTab", {
     TabName = "UI_BAG_SUBTAB_NAME_DRAFT"
   },
   [101] = {
-    HideSell = true,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_CloseIn_Weapons.T_Tab_CloseIn_Weapons",
     Sequence = 80,
     TabDefaultSlot = 999,
@@ -65,7 +64,6 @@ return ReadOnly("BagTab", {
     TabName = "UI_BAG_SUBTAB_NAME_MELEEWEAPON"
   },
   [102] = {
-    HideSell = true,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_RangedWeapon.T_Tab_RangedWeapon",
     Sequence = 70,
     TabDefaultSlot = 999,

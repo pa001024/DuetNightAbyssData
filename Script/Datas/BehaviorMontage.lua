@@ -341,6 +341,19 @@ return ReadOnly("BehaviorMontage", {
     MontagePath = "/Game/Asset/Char/Monster/JT_Tiequan/Animation/Montage/SpeicaIIdle/JT_Tiequan_SpecialIdle01_End_Montage.JT_Tiequan_SpecialIdle01_End_Montage",
     MontageType = "EnterAlert"
   },
+  [7019001] = {
+    MontageGroupId = 7019,
+    MontageId = 7019001,
+    MontagePath = "/Game/Asset/Char/Monster/JT_Hongshan/Animation/Montage/SpecialIdle/JT_Hongshan_SpecialIdle01_Montage.JT_Hongshan_SpecialIdle01_Montage",
+    MontageType = "OutBattleBehavior",
+    NextMontage = 7019100
+  },
+  [7019100] = {
+    MontageGroupId = 7019,
+    MontageId = 7019100,
+    MontagePath = "/Game/Asset/Char/Monster/JT_Hongshan/Animation/Montage/SpecialIdle/JT_Hongshan_SpecialAlert_Montage.JT_Hongshan_SpecialAlert_Montage",
+    MontageType = "EnterAlert"
+  },
   [8001001] = {
     MontageGroupId = 8001,
     MontageId = 8001001,

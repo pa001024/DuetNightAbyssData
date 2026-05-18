@@ -412,6 +412,12 @@ function M:TrySubReddotCacheDetail(Conf)
     CacheDetail[CacheKey] = false
     ReddotManager.DecreaseLeafNodeCount(ReddotName)
   end
+  local BeReads = EMCache:Get("AnnouncementHasRead", false)
+  if not BeReads then
+    EMCache:Set("AnnouncementHasRead", {}, true)
+    BeReads = EMCache:Get("AnnouncementHasRead", false)
+  end
+  BeReads[Conf.NoticeID] = 1
 end
 
 function M:_SyncReddotCache()
@@ -522,7 +528,14 @@ function M:_AddNewConf(Info, ShowTag)
     DebugPrint(LXYTag, ErrorTag, Info.UniqueId .. " 公告当前语言的内容为空！！当前游戏语言：" .. CommonConst.SystemLanguage)
     return
   end
-  self:_TryAddReddotCacheDetail(Conf)
+  local BeReads = EMCache:Get("AnnouncementHasRead", false)
+  if not BeReads then
+    EMCache:Set("AnnouncementHasRead", {}, false)
+    BeReads = EMCache:Get("AnnouncementHasRead", false)
+  end
+  if not BeReads[Conf.NoticeID] then
+    self:_TryAddReddotCacheDetail(Conf)
+  end
   table.insert(self.Confs, Conf)
 end
 
@@ -694,7 +707,7 @@ function M:CheckPakInfos(Info)
     img_channel_id = {}
   }
   for _, pakInfo in ipairs(Info.pakInfos) do
-    local EInfo = DataMgr.ExamineInfo[pakInfo.code]
+    local EInfo = DataMgr.ExamineInfo[tonumber(pakInfo.code)]
     table.insert(DummyInfo.Channels, {
       code = EInfo.ChannelID
     })

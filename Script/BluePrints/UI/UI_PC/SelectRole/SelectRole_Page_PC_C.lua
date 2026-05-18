@@ -77,7 +77,6 @@ function M:CreateCommonKeyAndLogic(Root, Key, Text, DescText, Logic, LogicObj)
     },
     Desc = DescText
   })
-  Key:AddExecuteLogic(Root, Logic)
 end
 
 function M:OnClickButtonObserve()
@@ -94,7 +93,7 @@ function M:ChangeWidget(Reason)
     self.Page_Role:StopAnimation(self.Page_Role.In)
     self.Page_Role:PlayAnimation(self.Page_Role.Out)
     self.Page_Role:SetVisibility(ESlateVisibility.Collapsed)
-    self.Page_Role:StopAnimation(self.Page_Name.Out)
+    self.Page_Name:StopAnimation(self.Page_Name.Out)
     self.Page_Name:PlayAnimation(self.Page_Name.In)
     self.Page_Name:SetVisibility(ESlateVisibility.Visible)
     self.Page_Name:CheckStrLen()
@@ -105,7 +104,7 @@ function M:ChangeWidget(Reason)
     self.Page_Role:StopAnimation(self.Page_Role.Out)
     self.Page_Role:PlayAnimation(self.Page_Role.In)
     self.Page_Role:SetVisibility(ESlateVisibility.Visible)
-    self.Page_Role:StopAnimation(self.Page_Name.In)
+    self.Page_Name:StopAnimation(self.Page_Name.In)
     self.Page_Name:PlayAnimation(self.Page_Name.Out)
     self.Page_Name:SetVisibility(ESlateVisibility.Collapsed)
     self.Page_Role:SetFocus()
@@ -151,29 +150,6 @@ function M:OnClickBtn()
     return
   end
   print(_G.LogTag, "lxz OnClickDetailL", self.Page_Role.NowState)
-  if 5 == self.Page_Role.NowState or 4 == self.Page_Role.NowState then
-    self:GetSelectImage({
-      {
-        Btn = self.Btn_Select01_L,
-        Tag = "L"
-      },
-      {
-        Btn = self.Btn_Select01_R,
-        Tag = "R"
-      }
-    }, "FullBody", false)
-  elseif 6 == self.Page_Role.NowState or 7 == self.Page_Role.NowState then
-    self:GetSelectImage({
-      {
-        Btn = self.Btn_Select02_L,
-        Tag = "L"
-      },
-      {
-        Btn = self.Btn_Select02_R,
-        Tag = "R"
-      }
-    }, "Detail", true)
-  end
 end
 
 function M:GetSelectImage(BtnList, Type, IsFullScreen)
@@ -214,8 +190,7 @@ function M:OnBackToDetail()
     return
   end
   self.Key_Right:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Key_Right:ChangeText(GText("UI_CTL_SelectRole_Change"))
-  self.Key_Left:SetVisibility(ESlateVisibility.Collapsed)
+  self.Key_Left:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Key_Continue:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Key_Back:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Key_Observe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)

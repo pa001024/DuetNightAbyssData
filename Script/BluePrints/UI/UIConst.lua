@@ -632,6 +632,7 @@ UIConst.Tip_CommonToast = "CommonToastMain"
 UIConst.Tip_ExcavationToast = "ExcavationToast"
 UIConst.Tip_CommonDialogTip = "CommonDialogTip"
 UIConst.Tip_StoryToast = "CommonStoryToast"
+UIConst.Tip_AsyncCombat = "AsyncCombatTips"
 UIConst.RarityColor = {
   [1] = "d1d1d1ff",
   [2] = "4cb587ff",
@@ -694,6 +695,7 @@ UIConst.AnimWithJumpConfig = {
   FameMain = {IsNeedFadeOut = false, IsNeedFadeIn = true},
   ShopActivity = {IsNeedFadeOut = true},
   ActivityRewardPacking = {IsNeedFadeOut = true, IsNeedFadeIn = false},
+  AsyncCombat = {IsNeedFadeOut = true, IsNeedFadeIn = false},
   Normal = {
     InAnimWithJumpTime = 0.3,
     OutAnimWithJumpTime = 0.1,
@@ -915,6 +917,7 @@ UIConst.LimitPreviewResource = {
   [41044] = true,
   [41045] = true
 }
+UIConst.DeputeDetailPopupInfoId = 100376
 UIConst.BlockingTime = 3
 UIConst.MaxBlockTime = 10
 UIConst.bUseHierarchicalLayer = false

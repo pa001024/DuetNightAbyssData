@@ -63,11 +63,25 @@
     "rarity": 4
   },
   {
+    "id": 110292,
+    "name": "용서하는 자",
+    "icon": "T_Icon_Fuluo",
+    "rarity": 5,
+    "charId": 1102
+  },
+  {
     "id": 150492,
     "name": "푸른 날개",
     "icon": "T_Fashion_Suyi_01",
     "rarity": 5,
     "charId": 1504
+  },
+  {
+    "id": 210182,
+    "name": "베일과 바다의 약속",
+    "icon": "T_Fashion_Shuimu_02",
+    "rarity": 5,
+    "charId": 2101
   },
   {
     "id": 240192,
@@ -103,6 +117,20 @@
     "icon": "T_Fashion_Head46",
     "rarity": 5,
     "charId": 1103
+  },
+  {
+    "id": 12010121,
+    "name": "겨울 판타지",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 1201
+  },
+  {
+    "id": 12010221,
+    "name": "겨울 판타지",
+    "icon": "T_Fashion_Head46",
+    "rarity": 5,
+    "charId": 120101
   },
   {
     "id": 15010121,

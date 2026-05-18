@@ -14,9 +14,8 @@ function Component:TryCreateServerDungeon(DungeonId)
   ClearDungeonInstance()
   if not bInitEnv then
     bInitEnv = true
-    DungeonFactory:InitEnv({
-      GameInstance = GWorld.GameInstance,
-      DSEntity = self,
+    DebugPrint("TryCreateServerDungeon InitEnv")
+    DungeonFactory.InitEnv({
       ServerPrint = ServerPrint
     })
   end
@@ -29,7 +28,12 @@ function Component:TryCreateServerDungeon(DungeonId)
   if not DungeonInstance then
     return
   end
-  DungeonInstance:Init({DungeonId = DungeonId})
+  DebugPrint("TryCreateServerDungeon Success")
+  DungeonInstance:Init({
+    DungeonId = DungeonId,
+    GameInstance = GWorld.GameInstance,
+    DSEntity = self
+  })
   DungeonInstance:BeginPlay()
 end
 

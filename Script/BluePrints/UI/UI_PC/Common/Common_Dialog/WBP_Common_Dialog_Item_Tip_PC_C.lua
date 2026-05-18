@@ -33,15 +33,37 @@ function WBP_Common_Dialog_Item_Tip_PC_C:ShowTip(Params, PopupData)
     self:SetVisibility(ESlateVisibility.Visible)
   end
   if Text then
-    self.Text_Tips:SetText(GText(Text))
-  else
+    self.CachedTipText = GText(Text)
+    self.Text_Tips:SetText(self.CachedTipText)
+    self.bHasContent = true
+    local IsBig = self.Owner and self.Owner.PopupStyle and self.Owner.PopupStyle.BigSize
+    local WrapAt = IsBig and self.WrapText_Large or self.WarpText_Normal
+    if WrapAt then
+      self.Text_Tips:SetWrapTextAt(WrapAt)
+    end
+  elseif not self.bHasContent then
     self:SetVisibility(UE.ESlateVisibility.Collapsed)
   end
+end
+
+function WBP_Common_Dialog_Item_Tip_PC_C:DetectTipTwoLine()
+  local TextWidget = self.Text_Tips
+  if not TextWidget or not self.CachedTipText then
+    return false
+  end
+  TextWidget:SetText("A")
+  self:ForceLayoutPrepass()
+  local OneLineH = TextWidget:GetDesiredSize().Y
+  TextWidget:SetText(self.CachedTipText)
+  self:ForceLayoutPrepass()
+  local ActualH = TextWidget:GetDesiredSize().Y
+  return ActualH > OneLineH + 4
 end
 
 function WBP_Common_Dialog_Item_Tip_PC_C:HideDialogItem(Params, PopupData)
   if Params.DialogItemIndex == self.PosIndex then
     if Params.bHideDialogItem then
+      self.Owner.bTipTwoLine = false
       if Params.bShouldPlayAnim and self.Visibility == UE.ESlateVisibility.SelfHitTestInvisible then
         self:PlayAnimation(self.Out)
       else
@@ -49,6 +71,7 @@ function WBP_Common_Dialog_Item_Tip_PC_C:HideDialogItem(Params, PopupData)
       end
     else
       self:SetVisibility(UE.ESlateVisibility.SelfHitTestInvisible)
+      self.Owner.bTipTwoLine = self:DetectTipTwoLine()
       self:PlayAnimation(self.In)
       local ContentName = self:GetContentWidgetName()
       if ContentName and "Item_Tip2" == ContentName then
@@ -64,6 +87,8 @@ end
 function WBP_Common_Dialog_Item_Tip_PC_C:UpdateDialogTipText(Params, PopupData)
   if Params.DialogItemIndex == self.PosIndex then
     self:ShowTip(Params, PopupData)
+    self.Owner.bTipTwoLine = self:DetectTipTwoLine()
+    self.Owner:AutofitDialog()
   end
 end
 

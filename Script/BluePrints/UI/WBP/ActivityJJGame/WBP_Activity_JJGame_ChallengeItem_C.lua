@@ -1,9 +1,10 @@
 require("UnLua")
+local JJGameModel = require("BluePrints.UI.WBP.ActivityJJGame.JJGameModel")
+local JJGameController = require("BluePrints.UI.WBP.ActivityJJGame.JJGameController")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
-local ChallengeTaskNewReddotName = "JJGameTask_Challenge_New"
-local ChallengeRewardReddotName = "JJGameTask_Challenge_Reddot"
+local ChallengeTaskNewReddotName = JJGameModel.ChallengeTaskNewReddotName
 
 function M:Construct()
   self.Text_Doing:SetText(GText("UI_Event_MidTerm_InProgress"))
@@ -62,6 +63,9 @@ function M:OnListItemObjectSet(Content)
 end
 
 function M:BP_OnEntryReleased()
+  if self.Content then
+    self.Content.SelfWidget = nil
+  end
   ReddotManager.RemoveListener(ChallengeTaskNewReddotName, self)
 end
 
@@ -79,51 +83,50 @@ function M:OnControllerClicked()
 end
 
 function M:UpdateGetRewardNum()
-  local Avatar = GWorld:GetAvatar()
-  local TaskProp = self.TaskProp
-  local Num = tostring(TaskProp.Progress) .. "/" .. tostring(TaskProp.Target)
-  self.Text_GetRewardNum:SetText(Num)
-  self.Text_DoingNum:SetText(Num)
-  self.Text_JumpNum:SetText(Num)
-  if TaskProp.Progress >= TaskProp.Target and TaskProp.RewardsGot then
+  if not IsValid(self) or not self.TaskProp then
+    return
+  end
+  JJGameController:UpdateTaskProgressTexts(self, self.TaskProp)
+  if self.TaskProp.Progress >= self.TaskProp.Target and self.TaskProp.RewardsGot then
     if self.Owner and self.Owner.TrySubChallengeTaskRewardReddot then
-      self.Owner:TrySubChallengeTaskRewardReddot(TaskProp.UniqueID)
+      self.Owner:TrySubChallengeTaskRewardReddot(self.TaskProp.UniqueID)
     end
     if self.Owner and self.Owner.TrySubChallengeTaskNewReddot then
-      self.Owner:TrySubChallengeTaskNewReddot(TaskProp.UniqueID)
+      self.Owner:TrySubChallengeTaskNewReddot(self.TaskProp.UniqueID)
     end
     self.WS_Btn:SetActiveWidgetIndex(3)
   end
 end
 
 function M:OnJumpClicked()
-  PageJumpUtils:JumpToTargetPageByJumpId(self.TaskConfig.JumpUIId)
+  JJGameController:JumpToTask(self.TaskConfig.JumpUIId)
 end
 
-function M:TryIncreaceChallengeRewardReddot(Key)
+function M:TryIncreaceChallengeTaskRewardReddot(TaskId)
   local Avatar = GWorld:GetAvatar()
   if Avatar:CheckIsChallengeRewardAllClaimed() then
     return
   end
-  local CacheKey = ChallengeRewardReddotName .. Key
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(ChallengeRewardReddotName)
-  if CacheData and nil == CacheData[CacheKey] then
-    CacheData[CacheKey] = true
-    ReddotManager.IncreaseLeafNodeCount(ChallengeRewardReddotName)
-  end
+  JJGameController:TryIncreaseChallengeTaskRewardReddot(TaskId)
 end
 
 function M:OnAchvFinished(TaskId)
+  if not IsValid(self) then
+    return
+  end
   if TaskId == self.TaskId then
     self.Content.CanGet = true
     self.WS_Btn:SetActiveWidgetIndex(2)
     self:UpdateGetRewardNum()
-    self:TryIncreaceChallengeRewardReddot(self.TaskProp.UniqueID)
+    self:TryIncreaceChallengeTaskRewardReddot(self.TaskProp.UniqueID)
     DebugPrint("任务", self.TaskId, "已完成，可以领取奖励")
   end
 end
 
 function M:OnMidTermTaskProgressChange(TaskId, Progress)
+  if not IsValid(self) then
+    return
+  end
   if TaskId == self.TaskId then
     self:UpdateGetRewardNum()
   end
@@ -144,21 +147,7 @@ function M:RefreshBaseInfo()
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  self.CurGamepadName = CurGamepadName
-  local IsUseGamepad = CurInputDevice == ECommonInputType.Gamepad
-  if IsUseGamepad then
-    self.Btn_Controller:SetVisibility(UIConst.VisibilityOp.Visible)
-    self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    if self:HasAnyUserFocus() or self:HasFocusedDescendants() then
-      self:PlayAnimation(self.Hover)
-    end
-  else
-    self.Btn_Controller:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self:SetVisibility(UIConst.VisibilityOp.Visible)
-    self:StopAnimation(self.Hover)
-    self:PlayAnimation(self.Normal)
-  end
-  self.CurInputDevice = CurInputDevice
+  JJGameController:RefreshTaskOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
@@ -186,7 +175,7 @@ function M:OnRemovedFromFocusPath(InFocusEvent)
 end
 
 function M:UpdateChallengeTaskNewReddot(Count)
-  if not self.TaskProp then
+  if not IsValid(self) or not self.TaskProp then
     return
   end
   local CacheKey = self.TaskProp.UniqueID or ""

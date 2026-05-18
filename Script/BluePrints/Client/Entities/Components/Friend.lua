@@ -6,7 +6,7 @@ local Decorator = require("BluePrints.Client.Wrapper.Decorator")
 local Component = {}
 Decorator:ApplyDecorator(Component)
 
-function Component:EnterWorld()
+function Component:_OnLoginSuccess()
   FriendController:Init()
 end
 
@@ -57,7 +57,7 @@ function Component:FriendSendAddRequest(Uid, Remark)
   
   local function Cb(ErrCode)
     DebugPrint("FriendSendAddRequest", ErrorCode:Name(ErrCode))
-    FriendController:RecvResponse(FriendCommon.EventId.AddFriend, ErrCode, Uid)
+    FriendController:RecvResponse(FriendCommon.EventId.AddFriendRequest, ErrCode, Uid)
   end
   
   self:CallServer("FriendSendAddRequest", Cb, Uid, tostring(Remark) or "")

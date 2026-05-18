@@ -1,4 +1,5 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local UpgradeUtils = require("Utils.UpgradeUtils")
 local WeaponModel = require("BluePrints.Common.MVC.Model.WeaponModel")
 local M = {}
@@ -50,7 +51,8 @@ function M:Construct()
     "Main_OnLockKeyDown",
     "Main_UpdateGamepadStyle",
     "Main_JumpToSubPage",
-    "Main_OnArmoryTargetStateChanged"
+    "Main_OnArmoryTargetStateChanged",
+    "Main_OnFilterCheckBoxClicked"
   }
   local WeaponTag = {
     CommonConst.ArmoryTag.Melee,
@@ -61,6 +63,7 @@ function M:Construct()
       self[Tag .. FuncName] = self["Weapon" .. FuncName]
     end
   end
+  self.WeaponFilterTag = CommonConst.WeaponSubType.Normal
 end
 
 function M:MeleeMain_Init()
@@ -131,7 +134,13 @@ function M:WeaponMain_Init()
     self:CreateAndSelectSubTab()
   else
     self:InitRoleList()
-    self:SelectRoleListItem(self[self.CmpContentName])
+    local Content = self[self.CmpContentName]
+    local WeaponId = Content.UnitId
+    local ShouldSwitchToHyperWeapon = self.bHyperWeaponFilterEnabled and not HyperWeaponUtils.IsHyperWeapon(WeaponId)
+    if ShouldSwitchToHyperWeapon then
+      Content = self.WeaponItemContentsArray[1]
+    end
+    self:SelectRoleListItem(Content)
   end
   self:PlayAnimation(self.RoleList_In)
   self:UpdateBoxReddot()
@@ -246,6 +255,9 @@ function M:SwitchContentsArray()
   self.BP_WeaponItemContents = self["BP_" .. self.WeaponTag .. "ItemContents"]
   self.UnownedWeaponContentMap = self[self.WeaponTag .. "UnownedWeaponContentMap"]
   self.WeaponId2Contents = self[self.WeaponTag .. "WeaponId2Contents"]
+  if ArmoryUtils:IsShowHyperWeapon(self.WeaponTag) and self.WeaponFilterTag == CommonConst.WeaponSubType.Hyper then
+    self.WeaponItemContentsArray = self[self.WeaponTag .. "Hyper" .. "ItemContentsArray"]
+  end
 end
 
 function M:WeaponMain_InitSubUI()
@@ -387,6 +399,43 @@ function M:UpdateWeaponInfos()
   self:SetStars(Data.WeaponRarity or 0)
 end
 
+function M:IsHyperWeapon(Weapon)
+  Weapon = Weapon or self[self.ComparedWeaponName]
+  if not Weapon or not Weapon.WeaponId then
+    return false
+  end
+  return HyperWeaponUtils.IsHyperWeapon(Weapon.WeaponId)
+end
+
+function M:WeaponMain_FilterHyperWeaponContents()
+  if self.WeaponTag == CommonConst.ArmoryTag.UWeapon then
+    return
+  end
+  if not ArmoryUtils:IsShowHyperWeapon(self.WeaponTag) then
+    return
+  end
+  self:SwitchContentsArray()
+  self:InitRoleList()
+  local CompareContent = self[self.CmpContentName]
+  if not HyperWeaponUtils.IsHyperWeapon(CompareContent.UnitId) then
+    CompareContent = self.WeaponItemContentsArray[1]
+  end
+  self:WeaponMain_OnRoleListItemClicked(CompareContent)
+end
+
+function M:WeaponMain_OnFilterCheckBoxClicked(IsChecked)
+  if self.bHyperWeaponFilterEnabled == IsChecked then
+    return
+  end
+  if not ArmoryUtils:IsShowHyperWeapon(self.WeaponTag) then
+    return
+  end
+  self.bHyperWeaponFilterEnabled = IsChecked
+  local SubType = CommonConst.WeaponSubType
+  self.WeaponFilterTag = IsChecked and SubType.Hyper or SubType.Normal
+  self:WeaponMain_FilterHyperWeaponContents()
+end
+
 function M:WeaponMain_UpdateWeaponTagIcon()
   local TargetWeapon = self[self.ComparedWeaponName]
   local MeleeTags, MeleeTagNames, RangedTags, RangedTagNames = UIUtils.GetAllWeaponTags()
@@ -450,6 +499,8 @@ function M:WeaponMain_OnRoleListItemClicked(Content)
 end
 
 function M:WeaponMain_SelectRoleListItem(Content)
+  local Avatar = ArmoryUtils:GetAvatar()
+  self[self.ComparedWeaponName] = Avatar.Weapons[Content.Uuid] or Content.Target
   if self.bFromArchive then
     ArmoryUtils:SetArchiveReddotRead(Content)
   end
@@ -469,22 +520,31 @@ function M:WeaponMain_SelectRoleListItem(Content)
     ArmoryUtils:SetItemReddotRead(Content, true)
     self:AddSubTabReddotListen()
   end
+  if HyperWeaponUtils.IsHyperWeapon(self[self.ComparedWeaponName].WeaponId) then
+    self.ActorController:ChangeWeaponFashion(self[self.ComparedWeaponName])
+  end
   self:UpdateWeaponCardLevel()
 end
 
 function M:UpdateWeaponCardLevel()
+  local Grade = ArmoryUtils.ArmorySubTabNames.Grade
+  local HyperGrade = ArmoryUtils.ArmorySubTabNames.HyperGrade
   for _, value in ipairs(self.SubTabs) do
-    if value.Name == ArmoryUtils.ArmorySubTabNames.Grade then
+    if value.Name == Grade or value.Name == HyperGrade then
+      local MaxGradeLevel = 0
+      if value.Name == Grade then
+        local Data = DataMgr.WeaponCardLevel[self[self.ComparedWeaponName].WeaponId]
+        MaxGradeLevel = Data and Data.CardLevelMax or 0
+      else
+        MaxGradeLevel = HyperWeaponUtils.GetMaxForgeLevel(self[self.ComparedWeaponName].WeaponId)
+      end
       value.Number = self[self.ComparedWeaponName].GradeLevel
-      local Data = DataMgr.WeaponCardLevel[self[self.ComparedWeaponName].WeaponId]
-      local MaxGradeLevel = Data and Data.CardLevelMax or 0
       value.IsMaxLevel = MaxGradeLevel <= value.Number
       local Widget = value.Widget
       if Widget then
         Widget:SetNumber(value.Number)
         Widget:SetIsMaxLevel(value.IsMaxLevel)
       end
-      break
     end
   end
 end
@@ -506,6 +566,9 @@ local function AddContentCommon(self, Obj, MainTabName)
   local VarName = self.WeaponTag .. "WeaponId2Contents"
   self[VarName][Obj.UnitId] = self[VarName][Obj.UnitId] or {}
   self[VarName][Obj.UnitId][Obj.Uuid] = Obj
+  if HyperWeaponUtils.IsHyperWeapon(Obj.UnitId) then
+    table.insert(self[MainTabName .. "Hyper" .. "ItemContentsArray"], Obj)
+  end
   self:OnRoleListContentCreated(Obj)
   return Obj
 end
@@ -591,6 +654,7 @@ function M:WeaponMain_CreateItemContents()
   self[self.WeaponTag .. "ItemContentsMap"] = {}
   self[self.WeaponTag .. "ItemContentsArray"] = {}
   self[self.WeaponTag .. "UnownedWeaponContentMap"] = {}
+  self[self.WeaponTag .. "Hyper" .. "ItemContentsArray"] = {}
   rawset(self, self.WeaponTag .. "WeaponId2Contents", {})
   self["BP_" .. self.WeaponTag .. "ItemContents"]:Clear()
   local OwnedWeapons = {}
@@ -692,7 +756,7 @@ function M:WeaponMain_CreateItemContents()
           
           ArmoryUtils:DontResetUuid(true)
           for WeaponId, value in pairs(DataMgr.Weapon) do
-            if not value.IsNotOpen and not OwnedWeapons[WeaponId] and ShouldDisplayWeapon(WeaponId) and CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Weapon, WeaponId) then
+            if not value.IsNotOpen and not OwnedWeapons[WeaponId] and ShouldDisplayWeapon(WeaponId) and CommonUtils.IsCurrentVersionRealease(CommonConst.DataType.Weapon, WeaponId) and (not HyperWeaponUtils.IsHyperWeapon(WeaponId) or ArmoryUtils:IsShowHyperWeapon(self.WeaponTag)) then
               local DummyAvatar = ArmoryUtils:CreateNewDummyAvatar(ArmoryUtils.PreviewTargetStates.Prime, {
                 WeaponIds = {WeaponId}
               })
@@ -893,6 +957,11 @@ function M:WeaponMain_SetAllReddotRead()
   end
 end
 
+function M:UpdateSubTabReddot_Grade()
+  self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Grade)
+  self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.HyperGrade)
+end
+
 function M:ResetWeaponData()
   local Avatar = ArmoryUtils:GetAvatar()
   if self.WeaponTag == CommonConst.ArmoryTag.UWeapon then
@@ -941,7 +1010,7 @@ function M:OnNewWeaponObtained(WeaponUuid)
   if IsCmpContent then
     self:SelectRoleListItem(UnownedContent)
   end
-  self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Grade)
+  self:UpdateSubTabReddot_Grade()
   self:UpdateBoxReddot()
 end
 
@@ -954,7 +1023,7 @@ function M:OnWeaponDeleted(WeaponUuid)
     return
   end
   self:InitRoleList()
-  self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Grade)
+  self:UpdateSubTabReddot_Grade()
   self:UpdateBoxReddot()
 end
 
@@ -1029,6 +1098,22 @@ end
 function M:WeaponMain_OnFocusReceived(ReplyInfo)
 end
 
+function M:StartFilterHyperWeapon()
+  if UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad then
+    self.CheckBox_Incarnon.Com_KeyImg:AddExecuteLogic(self, function()
+      self.CheckBox_Incarnon:OnClicked()
+      self:CancelFilterHyperWeapon()
+    end)
+    self.CheckBox_Incarnon.Com_KeyImg:OnButtonPressed(nil, true, 0, 0.5)
+  end
+end
+
+function M:CancelFilterHyperWeapon()
+  self.CheckBox_Incarnon.Com_KeyImg:RemoveExecuteLogic()
+  self.CheckBox_Incarnon.Com_KeyImg:OnButtonReleased()
+  self.EMListView_SubTab:BP_NavigateToItem(self.CurSubTab)
+end
+
 function M:WeaponMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
   if not self.bHideSquadBuildBtn or not self.IsPreviewMode then
     self:AddKeyEvents(KeyDownEvents, self.MenuKeyDownEvents)
@@ -1050,6 +1135,9 @@ function M:WeaponMain_InitKeySetting(KeyDownEvents, KeyUpEvents, BottomKeyInfo)
     elseif self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Appearance then
       self:AddKeyEvents(KeyDownEvents, self.SubTabKeyDownEvents)
     end
+  end
+  if ArmoryUtils:IsShowHyperWeapon(self.WeaponTag) and self.CurSubTab.Name == ArmoryUtils.ArmorySubTabNames.Attribute then
+    self:AddLongPressEvent(UIConst.GamePadKey.SpecialLeft, 0.5, self.StartFilterHyperWeapon, self.CancelFilterHyperWeapon)
   end
   table.insert(self.BottomKeyInfo, self.ESCKeyInfoList)
 end
@@ -1137,7 +1225,7 @@ function M:OnWeaponGradeLevelUp(Ret, WeaponUuid, CurrentGradeLevel, ConsumeWeapo
   end
   if self[self.ComparedWeaponName] == Weapon then
     self:UpdateWeaponCardLevel()
-    self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Grade)
+    self:UpdateSubTabReddot_Grade()
     self:InitSubUI()
   end
 end

@@ -252,6 +252,7 @@ function BP_ExitTriggerBoxMechanism_C:IsSomeoneWaiting()
   local WaitingNum, TotalNum = self:GetPlayerNum()
   self.ExitInfo.WaitingPlayerNum = WaitingNum
   self.ExitInfo.TotalPlayerNum = TotalNum
+  self:MarkDirty_ExitInfo()
   Res = WaitingNum > 0
   DebugPrint("IsSomeoneWaiting Res = " .. (true == Res and "true" or "false"), WaitingNum)
   return Res
@@ -283,6 +284,7 @@ function BP_ExitTriggerBoxMechanism_C:ShowOrHideCountdownToast(bIsShow)
     if bIsShow then
       GameState.ExitInfo.WaitingPlayerNum, GameState.ExitInfo.TotalPlayerNum = self:GetPlayerNum()
     end
+    GameState:MarkDirty_ExitInfo()
   end
 end
 
@@ -386,6 +388,7 @@ function BP_ExitTriggerBoxMechanism_C:RefreshPlayerNumInfo()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   if GameState and self.bShowingCountdownToast then
     GameState.ExitInfo.WaitingPlayerNum, GameState.ExitInfo.TotalPlayerNum = self:GetPlayerNum()
+    GameState:MarkDirty_ExitInfo()
   end
 end
 

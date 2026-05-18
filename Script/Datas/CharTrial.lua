@@ -139,5 +139,25 @@ return ReadOnly("CharTrial", {
     CharTrialId = 101025,
     QuestRoleId = 3202,
     TrialDungeonId = 900002
+  },
+  [101026] = {
+    CharTrialId = 101026,
+    QuestRoleId = 1102,
+    TrialDungeonId = 900002
+  },
+  [101027] = {
+    CharTrialId = 101027,
+    QuestRoleId = 3102,
+    TrialDungeonId = 900002
+  },
+  [101028] = {
+    CharTrialId = 101028,
+    QuestRoleId = 110201,
+    TrialDungeonId = 900002
+  },
+  [101029] = {
+    CharTrialId = 101029,
+    QuestRoleId = 210102,
+    TrialDungeonId = 900002
   }
 })

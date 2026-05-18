@@ -38,6 +38,16 @@ function M:Resume()
   Flow:Resume()
 end
 
+function M:Stop()
+  local Flow = self.TalkFlow
+  if not Flow then
+    DebugPrint("FTalkFlowController:Stop: Flow不存在")
+    return
+  end
+  Flow:Stop()
+  self.TalkFlow = nil
+end
+
 function M:Skip()
   local Flow = self.TalkFlow
   if not Flow then

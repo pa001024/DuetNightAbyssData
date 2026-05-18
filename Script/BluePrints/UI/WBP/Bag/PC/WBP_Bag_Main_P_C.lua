@@ -256,7 +256,7 @@ function WBP_Bag_Main_P_C:SetConsumeReddot()
             ClickedCount = 0,
             ShowReddot = true
           }
-        elseif BagConsumeNodeDetails[StuffData.StuffId].StuffCount ~= StuffData.StuffCount then
+        elseif BagConsumeNodeDetails[StuffData.StuffId].StuffCount < StuffData.StuffCount then
           ReddotManager.IncreaseLeafNodeCount("Bag_Consume", StuffData.StuffCount - BagConsumeNodeDetails[StuffData.StuffId].StuffCount)
           BagConsumeNodeDetails[StuffData.StuffId].StuffCount = StuffData.StuffCount
           BagConsumeNodeDetails[StuffData.StuffId].ShowReddot = true
@@ -528,7 +528,7 @@ function WBP_Bag_Main_P_C:RefreshDetail(GridIndex, StuffUuid)
   end
   self.Panel_Detail:RefreshInfoByData(self.CurSelectStuffContent, StuffServerData, StuffConfigData, self, DetailPanelAnim)
   self:RefreshDetailView(StuffConfigData)
-  self.Button_DetailClose:SetVisibility(UE4.ESlateVisibility.Visable)
+  self.Button_DetailClose:SetVisibility(UE4.ESlateVisibility.Visible)
 end
 
 function WBP_Bag_Main_P_C:EnterStuffSellState()
@@ -1043,11 +1043,13 @@ function WBP_Bag_Main_P_C:TabBagItemClick(TabWidget)
   end
   self.Button_Sell:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Filter:Init(self, BagCommon.SortFilters[self.CurTabId or BagCommon.ItemTypeToTabId.Resource], CommonConst.DESC)
-  self.Panel_Detail:SetVisibility(UE4.ESlateVisibility.Hidden)
-  self.ListCanvas:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   if self.GameInputModeSubsystem and self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
+    self.Panel_Detail:RefreshItemTextAgain()
+  else
+    self.Panel_Detail:SetVisibility(UE4.ESlateVisibility.Hidden)
   end
+  self.ListCanvas:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
   self:FillWithListViewData(TabId, true)
 end
 

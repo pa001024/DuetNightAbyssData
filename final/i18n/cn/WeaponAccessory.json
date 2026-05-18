@@ -285,7 +285,7 @@
     "desc": "以云霄为线，令每一次挥舞都闪动着点点青光。",
     "icon": "T_Fashion_Weapon38_02",
     "rarity": 5,
-    "unlock": "通过活动获得"
+    "unlock": "通过商店获得"
   },
   {
     "id": 10037,
@@ -293,7 +293,7 @@
     "desc": "以云霄为线，令每一次挥舞都闪动着点点青光。",
     "icon": "T_Fashion_Weapon38_01",
     "rarity": 5,
-    "unlock": "通过活动获得"
+    "unlock": "通过商店获得"
   },
   {
     "id": 10038,
@@ -301,7 +301,7 @@
     "desc": "以云霄为线，令每一次挥舞都闪动着点点青光。",
     "icon": "T_Fashion_Weapon38_03",
     "rarity": 5,
-    "unlock": "通过活动获得"
+    "unlock": "通过商店获得"
   },
   {
     "id": 10039,
@@ -352,10 +352,98 @@
     "unlock": "通过棱镜兑换获得"
   },
   {
+    "id": 10045,
+    "name": "天之泪·锈红",
+    "desc": "圣洁的光辉，包裹着凝结的悲悯。",
+    "icon": "T_Fashion_Weapon41_03",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10046,
+    "name": "天之泪·绛紫",
+    "desc": "圣洁的光辉，包裹着凝结的悲悯。",
+    "icon": "T_Fashion_Weapon41_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10047,
+    "name": "天之泪·晴蓝",
+    "desc": "圣洁的光辉，包裹着凝结的悲悯。",
+    "icon": "T_Fashion_Weapon41_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10048,
+    "name": "永恒花·锈红",
+    "desc": "芳华终是刹那，死亡才是永恒。",
+    "icon": "T_Fashion_Weapon40_03",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10049,
+    "name": "永恒花·白樱",
+    "desc": "芳华终是刹那，死亡才是永恒。",
+    "icon": "T_Fashion_Weapon40_02",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10050,
+    "name": "永恒花·墨玉",
+    "desc": "芳华终是刹那，死亡才是永恒。",
+    "icon": "T_Fashion_Weapon40_01",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 10051,
+    "name": "愤怒的小鸭·涅白",
+    "desc": "咻——嘎！！！",
+    "icon": "T_Fashion_Weapon42_04",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10052,
+    "name": "愤怒的小鸭·杏黄",
+    "desc": "咻——嘎！！！",
+    "icon": "T_Fashion_Weapon42_03",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10053,
+    "name": "愤怒的小鸭·碧绿",
+    "desc": "咻——嘎！！！",
+    "icon": "T_Fashion_Weapon42_02",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
+    "id": 10054,
+    "name": "愤怒的小鸭·焦糖",
+    "desc": "咻——嘎！！！",
+    "icon": "T_Fashion_Weapon42_01",
+    "rarity": 4,
+    "unlock": "通过商店获得"
+  },
+  {
     "id": 20001,
     "name": "爆裂涂鸦",
     "desc": "适用于招式魔之楔咆哮切割。",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "通过棱镜兑换获得"
+  },
+  {
+    "id": 30001,
+    "name": "腾龙诀",
+    "desc": "适用于招式魔之楔腾龙诀。",
+    "icon": "T_Fashion_Fx21",
     "rarity": 5,
     "unlock": "通过棱镜兑换获得"
   }

@@ -4,6 +4,7 @@ local Menu_Level_PC_C = Class({
   "Blueprints.UI.BP_UIState_C"
 })
 local UIUtils = require("Utils.UIUtils")
+local CoopUtils = require("BluePrints.UI.WBP.Activity.PC.Coop.CoopUtils")
 Menu_Level_PC_C._components = {
   "BluePrints.UI.UI_PC.Menu.MenuLevelAbyssComponent"
 }
@@ -33,7 +34,8 @@ function Menu_Level_PC_C:Initialize(Initializer)
     UI_SpecialQuest_GiveUp = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
     UI_CharTrial_LeaveTitle = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
     FeinaEvent_Exit_Title = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
-    UI_Esc_ExitTemple = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit"
+    UI_Esc_ExitTemple = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit",
+    UI_AsyncCombat_LeaveStage = "/Game/UI/Texture/Dynamic/Atlas/Menu/T_Menu_Exit.T_Menu_Exit"
   }
   self.BtnIdx = 0
   self.CloseBySelf = false
@@ -100,6 +102,7 @@ function Menu_Level_PC_C:InitByType()
   end
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
+  local Widget = self.Coop_PauseRound.EMScrollBox_176
   if nil ~= GameMode and nil ~= GameState then
     if GameState.GameModeType == "Training" then
       self:InitTraining()
@@ -137,6 +140,10 @@ function Menu_Level_PC_C:InitByType()
     elseif GameState.GameModeType == "AutoChess" then
       self:InitAutoChess()
       self.IsInAutoChess = true
+      return
+    elseif GameState.GameModeType == "AsyncCombat" then
+      self:InitAsyncCombat()
+      self.IsInAsyncCombat = true
       return
     end
   end
@@ -242,7 +249,7 @@ function Menu_Level_PC_C:InitTemple()
       self.WidgetRewards:StartShowNoStarRewards()
     end
   end
-  self.WidgetRewards:SetVisibility(ESlateVisibility.Visable)
+  self.WidgetRewards:SetVisibility(ESlateVisibility.Visible)
   self.SizeBox_Rewards:AddChild(self.WidgetRewards)
   self.RewardItems = {
     self.WidgetRewards.Item01,
@@ -308,7 +315,7 @@ function Menu_Level_PC_C:InitParty()
       self.WidgetRewards:SetNoStarRewards(RewardsInfo, true)
     end
   end
-  self.WidgetRewards:SetVisibility(ESlateVisibility.Visable)
+  self.WidgetRewards:SetVisibility(ESlateVisibility.Visible)
   self.SizeBox_Rewards:AddChild(self.WidgetRewards)
   self.RewardItems = {
     self.WidgetRewards.Item01,
@@ -404,6 +411,39 @@ function Menu_Level_PC_C:InitContractHeatPanel()
     })
     self.Text_Heat:SetText(CurrentHeatValue)
   end
+end
+
+function Menu_Level_PC_C:InitAsyncCombat()
+  self.WidgetSwitcher_Type:SetActiveWidgetIndex(4)
+  self.WidgetSwitcher_Show:SetActiveWidgetIndex(0)
+  self.SizeBox_HeatBtn:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  table.insert(self.BtnName, "UI_AsyncCombat_LeaveStage")
+  table.insert(self.ClickFunction, "OnClickExitGame")
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not GameMode then
+    return
+  end
+  local AsyncCombatComponent = GameMode:GetDungeonComponent()
+  if not AsyncCombatComponent then
+    return
+  end
+  local CurRound = AsyncCombatComponent.BossCurStep
+  self.Ws_Tips:SetActiveWidgetIndex(1)
+  local GTextDebuffTitle = CoopUtils.GetGTextDebuffTitle(AsyncCombatComponent)
+  if GTextDebuffTitle then
+    self.Coop_Debuff.TextTitle:SetText(GTextDebuffTitle)
+  end
+  self.Coop_Debuff.TextDebuff:SetText(GText("AsyncCombatDebuffDesc"))
+  self.Coop_PauseRound.TextNow:SetText(tostring(CurRound))
+  self.Coop_PauseRound.TextTitle:SetText(GText("UI_AsyncCombat_TotalStages"))
+  self.Coop_PauseRound:InitAsyncCombat(AsyncCombatComponent.AsyncCombatInfo)
+  local AsyncCombatData = DataMgr.AsyncCombat[AsyncCombatComponent.RoomConfId]
+  local BossRound = {2, 4}
+  if AsyncCombatData and AsyncCombatData.BossRound then
+    BossRound = AsyncCombatData.BossRound
+  end
+  self.Coop_PauseRound:UpdateVX(CurRound, BossRound)
+  self.Coop_PauseRound:ScrollWidgetIntoView(CurRound)
 end
 
 function Menu_Level_PC_C:OpenContractHeatPanel()
@@ -1171,6 +1211,9 @@ function Menu_Level_PC_C:OnClickExitGame()
   end
   if self.IsInAutoChess then
     PopupId = 100096
+  end
+  if self.IsInAsyncCombat then
+    PopupId = 100350
   end
   UIManager(self):ShowCommonPopupUI(PopupId, Params, self)
 end

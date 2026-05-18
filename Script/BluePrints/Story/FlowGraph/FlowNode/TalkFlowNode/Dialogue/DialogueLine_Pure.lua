@@ -23,6 +23,7 @@ function DialogueLine_Pure:Play()
   local Node = self.Node
   local DialogueFlowGraphComponent = Node:TryGetFlowGraphComponent()
   local DialogueRecordComponent = Node:TryGetRecordComponent()
+  local DialogueWikiComponent = Node:TryGetWikiComponent()
   local FlowDialogue = FFlowDialogue.New(self.DialogueData, self.DialogueSetting)
   FlowDialogue:BindOnForceCompleteDialogue(function(Id)
     self:OnDialogueForceToEnd(Id)
@@ -30,6 +31,9 @@ function DialogueLine_Pure:Play()
   FlowDialogue:BindOnDialogueFinish(function(Id)
     self:OnDialogueFinish(Id)
   end)
+  if DialogueWikiComponent then
+    DialogueWikiComponent:AddListenWikiIdByDialogueId(self.DialogueId)
+  end
   DialogueFlowGraphComponent:PlayDialogue(FlowDialogue)
   DialogueRecordComponent:OnDialogueRecord(self.DialogueId, DataMgr.Dialogue[self.DialogueId])
   Node:TriggerNormalOutput(self.DialogueId)

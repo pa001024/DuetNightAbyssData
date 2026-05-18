@@ -1,4 +1,5 @@
 require("UnLua")
+local BattleUtils = require("Utils.BattleUtils")
 local Handled = UE4.UWidgetBlueprintLibrary.Handled()
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
@@ -86,6 +87,9 @@ function M:RefreshItemInfo(Content, bNotFocus, bInitLockedEvent)
     if self.ItemId then
       ItemInfo = DataMgr[self.Type][self.ItemId]
       assert(ItemInfo, "没有找到物品信息" .. self.Type .. "," .. self.ItemId)
+      if self.Type == "Resource" then
+        ItemInfo = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(ItemInfo)
+      end
     else
       ItemInfo = {
         Name = Content.Name
@@ -197,7 +201,7 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
     else
       self.Img_Aura:SetVisibility(ESlateVisibility.Collapsed)
     end
-  elseif "Tips" == ItemType or "Resource" == ItemType or "CharAccessory" == ItemType or "WeaponAccessory" == ItemType or "CharPartMesh" == ItemType or "RougeLikeBlessing" == ItemType or "RougeLikeTreasure" == ItemType or "HeadSculpture" == ItemType or "HeadFrame" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType or "Mount" == ItemType then
+  elseif "Tips" == ItemType or "Resource" == ItemType or "IronTicket" == ItemType or "CharAccessory" == ItemType or "WeaponAccessory" == ItemType or "CharPartMesh" == ItemType or "RougeLikeBlessing" == ItemType or "RougeLikeTreasure" == ItemType or "HeadSculpture" == ItemType or "HeadFrame" == ItemType or "Skin" == ItemType or "WeaponSkin" == ItemType or "Title" == ItemType or "TitleFrame" == ItemType or "Mount" == ItemType then
     if Avatar.Resources[ItemId] and Avatar.Resources[ItemId]:IsInfiniteBattleItem() and self:IsHasChar(ItemId) then
       self.Switch_Show:SetActiveWidgetIndex(1)
       ItemInfoWidget = self:CreateWidgetNew("PhantomItemDetails")
@@ -242,7 +246,7 @@ function M:InitItemDetails(ItemType, ItemId, Uuid)
     self.Parent:Close()
     return
   end
-  if (not ("Resource" ~= ItemType and ("Mod" ~= ItemType or self.Content.IsArmoryMod)) or "CharPartMesh" == ItemType or "Draft" == ItemType) and not self.Content.bNotShowAccess then
+  if (not ("Resource" ~= ItemType and "IronTicket" ~= ItemType and ("Mod" ~= ItemType or self.Content.IsArmoryMod)) or "CharPartMesh" == ItemType or "Draft" == ItemType) and not self.Content.bNotShowAccess then
     self:SetAccessItem(ItemType, ItemId)
   else
     self.Panel_Method:SetVisibility(UIConst.VisibilityOp.Collapsed)

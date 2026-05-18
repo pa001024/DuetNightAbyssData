@@ -10,7 +10,7 @@ return {
     Area = "China",
     DevFlag = "Development",
     GroupId = 102,
-    Name = "1.2分支国服",
+    Name = "1.4分支国服",
     ServerID = 102
   },
   [103] = {
@@ -73,14 +73,14 @@ return {
     Area = "China",
     DevFlag = "Development",
     GroupId = 204,
-    Name = "跑测服1.2上",
+    Name = "跑测服1.4上",
     ServerID = 204
   },
   [205] = {
     Area = "China",
     DevFlag = "Development",
     GroupId = 205,
-    Name = "跑测服1.2下",
+    Name = "跑测服1.4下",
     ServerID = 205
   },
   [301] = {

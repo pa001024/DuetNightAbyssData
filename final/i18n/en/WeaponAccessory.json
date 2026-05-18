@@ -285,7 +285,7 @@
     "desc": "With only the open sky to guide it, each sweep glimmers with traces of azure light.",
     "icon": "T_Fashion_Weapon38_02",
     "rarity": 5,
-    "unlock": "Available from events"
+    "unlock": "Available at Shop"
   },
   {
     "id": 10037,
@@ -293,7 +293,7 @@
     "desc": "With only the open sky to guide it, each sweep glimmers with traces of azure light.",
     "icon": "T_Fashion_Weapon38_01",
     "rarity": 5,
-    "unlock": "Available from events"
+    "unlock": "Available at Shop"
   },
   {
     "id": 10038,
@@ -301,7 +301,7 @@
     "desc": "With only the open sky to guide it, each sweep glimmers with traces of azure light.",
     "icon": "T_Fashion_Weapon38_03",
     "rarity": 5,
-    "unlock": "Available from events"
+    "unlock": "Available at Shop"
   },
   {
     "id": 10039,
@@ -352,10 +352,98 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 10045,
+    "name": "Ethereal Tear: Rust Red",
+    "desc": "Sacred radiance enfolds sorrow, crystallised from compassion.",
+    "icon": "T_Fashion_Weapon41_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10046,
+    "name": "Ethereal Tear: Violet",
+    "desc": "Sacred radiance enfolds sorrow, crystallised from compassion.",
+    "icon": "T_Fashion_Weapon41_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10047,
+    "name": "Ethereal Tear: Celeste",
+    "desc": "Sacred radiance enfolds sorrow, crystallised from compassion.",
+    "icon": "T_Fashion_Weapon41_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10048,
+    "name": "Everbloom: Rust Red",
+    "desc": "All beauty is fleeting. Death alone endures.",
+    "icon": "T_Fashion_Weapon40_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10049,
+    "name": "Everbloom: White Sakura",
+    "desc": "All beauty is fleeting. Death alone endures.",
+    "icon": "T_Fashion_Weapon40_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10050,
+    "name": "Everbloom: Dark Jade",
+    "desc": "All beauty is fleeting. Death alone endures.",
+    "icon": "T_Fashion_Weapon40_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10051,
+    "name": "Grumpy Duckling: Opaque White",
+    "desc": "Whoosh—! Quack!!!",
+    "icon": "T_Fashion_Weapon42_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10052,
+    "name": "Grumpy Duckling: Apricot",
+    "desc": "Whoosh—! Quack!!!",
+    "icon": "T_Fashion_Weapon42_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10053,
+    "name": "Grumpy Duckling: Emerald Green",
+    "desc": "Whoosh—! Quack!!!",
+    "icon": "T_Fashion_Weapon42_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10054,
+    "name": "Grumpy Duckling: Caramel",
+    "desc": "Whoosh—! Quack!!!",
+    "icon": "T_Fashion_Weapon42_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 20001,
     "name": "Paint Pop",
     "desc": "Used for Move-Variant Demon Wedge: Savage Cleave.",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 30001,
+    "name": "Soaring Loong",
+    "desc": "For use with the Soaring Loong Demon Wedge.",
+    "icon": "T_Fashion_Fx21",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   }

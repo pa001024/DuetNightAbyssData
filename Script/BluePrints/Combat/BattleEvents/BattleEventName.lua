@@ -26,6 +26,8 @@ local BattleEventName = {
   "BeforeSpChanged",
   "SpChanged",
   "SecondSpChanged",
+  "WeaponSpChanged",
+  "SecondaryResourceChanged",
   "ComboCountChanged",
   "AttackSpeedNormalChanged",
   "SkillSpeedChanged",

@@ -4,6 +4,7 @@ local M = Class("BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentB
 function M:Construct()
   M.Super.Construct(self)
   self.ItemUIPathName = "/Game/UI/WBP/Common/FilterSort/WBP_Com_SiftDialogItem.WBP_Com_SiftDialogItem"
+  self.CoopItemIconUIPathName = "/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_Coop_SiftDialogItem.WBP_Activity_Coop_SiftDialogItem"
   self.SelectionItemUIPathName = "/Game/UI/WBP/Common/FilterSort/WBP_Com_SiftSelection.WBP_Com_SiftSelection"
   self.SelectedItems = {}
   self.IsQuitBtnForbidden = true
@@ -42,7 +43,11 @@ end
 
 function M:AddItem(ItemData)
   local UIManager = UIManager(GWorld.GameInstance)
-  local ItemUI = UIManager:CreateWidget(self.ItemUIPathName)
+  local ItemUIPathName = self.ItemUIPathName
+  if ItemData.ShowItemIcon then
+    ItemUIPathName = self.CoopItemIconUIPathName
+  end
+  local ItemUI = UIManager:CreateWidget(ItemUIPathName)
   self.List_Selection:AddChild(ItemUI)
   ItemUI:Init(self, ItemData)
   self.List_Selection:ScrollWidgetIntoView(ItemUI, true)
@@ -105,13 +110,23 @@ function M:OnBtnNo()
   local dimensionCount = self.List_Selection:GetChildrenCount() - 1
   for i = 0, dimensionCount do
     local dimensionItem = self.List_Selection:GetChildAt(i)
-    local tagItems = dimensionItem.WBox_Selection:GetAllChildren()
-    local tagCount = tagItems:Num()
-    for j = 1, tagCount do
-      local tagItem = tagItems:Get(j)
-      if tagItem and tagItem.CheckBox_Selection and tagItem.CheckBox_Selection:IsChecked() then
-        tagItem.CheckBox_Selection:SetIsChecked(false)
-        tagItem:OnItemSelectionChanged()
+    if dimensionItem and dimensionItem.WBox_Selection then
+      local tagItems = dimensionItem.WBox_Selection:GetAllChildren()
+      local tagCount = tagItems:Num()
+      for j = 1, tagCount do
+        local tagItem = tagItems:Get(j)
+        if tagItem and tagItem.CheckBox_Selection and tagItem.CheckBox_Selection:IsChecked() then
+          tagItem.CheckBox_Selection:SetIsChecked(false)
+          tagItem:OnItemSelectionChanged()
+        end
+      end
+    elseif dimensionItem and dimensionItem.ListReward then
+      local rewardItemNums = dimensionItem.ListReward:GetNumItems()
+      for j = 1, rewardItemNums do
+        local rewardItem = dimensionItem.ListReward:GetItemAt(j - 1)
+        if rewardItem and rewardItem.UI and rewardItem.UI.Content.bClick then
+          rewardItem.UI:OnClickSelected()
+        end
       end
     end
   end
@@ -129,17 +144,31 @@ function M:Reselection(SelectedItems)
       local dimensionItem = self.List_Selection:GetChildAt(dimensionIndex - 1)
       if dimensionItem then
         for _, selectionIndex in ipairs(selectedIndices) do
-          local selectionItem = dimensionItem.WBox_Selection:GetChildAt(selectionIndex - 1)
-          if selectionItem and selectionItem.CheckBox_Selection then
-            selectionItem.CheckBox_Selection:SetIsChecked(true)
-            selectionItem:OnItemSelectionChanged()
+          if dimensionItem.WBox_Selection then
+            local selectionItem = dimensionItem.WBox_Selection:GetChildAt(selectionIndex - 1)
+            if selectionItem and selectionItem.CheckBox_Selection then
+              selectionItem.CheckBox_Selection:SetIsChecked(true)
+              selectionItem:OnItemSelectionChanged()
+            end
+            local totalSelections = dimensionItem.WBox_Selection:GetChildrenCount()
+            if #selectedIndices == totalSelections then
+              dimensionItem.isSelectedAll = true
+            else
+              dimensionItem.isSelectedAll = false
+            end
           end
-        end
-        local totalSelections = dimensionItem.WBox_Selection:GetChildrenCount()
-        if #selectedIndices == totalSelections then
-          dimensionItem.isSelectedAll = true
-        else
-          dimensionItem.isSelectedAll = false
+          if dimensionItem.ListReward then
+            local rewardItem = dimensionItem.ListReward:GetItemAt(selectionIndex - 1)
+            if rewardItem and rewardItem.bClick ~= nil then
+              rewardItem.bClick = true
+            end
+            local totalSelections = dimensionItem.ListReward:GetNumItems()
+            if #selectedIndices == totalSelections then
+              dimensionItem.isSelectedAll = true
+            else
+              dimensionItem.isSelectedAll = false
+            end
+          end
         end
       end
     end
@@ -194,12 +223,23 @@ function M:InitGamePadTarget()
   if self.CurInputDevice == ECommonInputType.Gamepad then
     local firstSiftItem = self.List_Selection:GetChildAt(0)
     self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstSiftItem)
-    if firstSiftItem then
+    if firstSiftItem and firstSiftItem.WBox_Selection then
       local firstCheckBox = firstSiftItem.WBox_Selection:GetChildAt(0)
       self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstCheckBox)
       if firstCheckBox and firstCheckBox.CheckBox_Selection then
         self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstCheckBox.CheckBox_Selection)
         self.List_Selection:SetScrollOffset(0)
+      end
+    elseif firstSiftItem and firstSiftItem.ListReward then
+      local firstCheckBox = firstSiftItem.ListReward:GetItemAt(0)
+      if firstCheckBox and firstCheckBox.UI then
+        self:AddTimer(0.1, function()
+          self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstCheckBox.UI)
+        end, false)
+        self.List_Selection:ScrollToStart()
+      else
+        self.GameInputModeSubsystem:SetTargetUIFocusWidget(firstSiftItem.ListReward)
+        self.List_Selection:ScrollToStart()
       end
     end
   end
@@ -232,26 +272,33 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
 end
 
 function M:InitHintGamepadBtn()
-  self.Owner.Gamepad_Shortcut01:CreateCommonKey({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("A", self.CurGamepadName)
-      }
-    },
-    Desc = GText("UI_RougeLike_BlessingConfirm") .. "/" .. GText("UI_PATCH_CANCEL")
-  })
-  self.Owner.Gamepad_Shortcut01:SetVisibility(UIConst.VisibilityOp.Visible)
-  self.Owner.Gamepad_Shortcut02:CreateCommonKey({
-    KeyInfoList = {
-      {
-        Type = "Img",
-        ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("B", self.CurGamepadName)
-      }
-    },
-    Desc = GText("UI_Controller_Close")
-  })
-  self.Owner.Gamepad_Shortcut02:SetVisibility(UIConst.VisibilityOp.Visible)
+  if self.Params.ShowParamsKeyInfoList then
+    for idx, KeyInfo in ipairs(self.Params.ShowParamsKeyInfoList) do
+      self.Owner["Gamepad_Shortcut0" .. idx]:CreateCommonKey(KeyInfo)
+      self.Owner["Gamepad_Shortcut0" .. idx]:SetVisibility(UIConst.VisibilityOp.Visible)
+    end
+  else
+    self.Owner.Gamepad_Shortcut01:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("A", self.CurGamepadName)
+        }
+      },
+      Desc = GText("UI_RougeLike_BlessingConfirm") .. "/" .. GText("UI_PATCH_CANCEL")
+    })
+    self.Owner.Gamepad_Shortcut01:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Owner.Gamepad_Shortcut02:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgLongPath = UIUtils.UtilsGetKeyIconPathInGamepad("B", self.CurGamepadName)
+        }
+      },
+      Desc = GText("UI_Controller_Close")
+    })
+    self.Owner.Gamepad_Shortcut02:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
 end
 
 return M

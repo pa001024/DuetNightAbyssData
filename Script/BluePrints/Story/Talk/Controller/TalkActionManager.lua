@@ -281,15 +281,28 @@ function TalkActionManager_C:ResetLookAtImmediate(TalkActor)
 end
 
 function TalkActionManager_C:ResetLookAt(TalkActor)
-  if TalkActor.Mesh and TalkActor.Mesh:GetAnimInstance() then
-    local AnimInstance = TalkActor.Mesh:GetAnimInstance()
-    if TalkActor.NPCAnimInstance and AnimInstance:Cast(UNPCAnimInstance) then
-      AnimInstance:ResetNormalLookAt()
-    else
-      AnimInstance.bIsLookAt = false
-    end
-  else
-    DebugPrint("error: TalkActionManager_C:ResetLookAt:TalkActor.Mesh or TalkActor.Mesh:GetAnimInstance() is nil")
+  if not IsValid(TalkActor) then
+    local Message = "Reset look at failed, TalkActor is invalid"
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, ActionLogType, "ResetLookAt出错: TalkActor无效", Message)
+    return
+  end
+  local Mesh = TalkActor.Mesh
+  if not IsValid(Mesh) then
+    local Message = string.format("Reset look at failed, Mesh is invalid, ActorName: %s", TalkActor:GetName())
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, ActionLogType, "ResetLookAt出错: Mesh无效", Message)
+    return
+  end
+  local AnimInstance = Mesh:GetAnimInstance()
+  if not IsValid(AnimInstance) then
+    local Message = string.format("Reset look at failed, AnimInstance is invalid, ActorName: %s", TalkActor:GetName())
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, ActionLogType, "ResetLookAt出错: AnimInstance无效", Message)
+    return
+  end
+  if AnimInstance:IsA(UE4.UPlayerAnimInstance) then
+    AnimInstance:StopLookAt()
+  elseif AnimInstance:IsA(UE4.UNPCAnimInstance) then
+    AnimInstance:ResetNormalLookAt()
+    AnimInstance.bIsLookAt = false
   end
 end
 
@@ -299,18 +312,22 @@ function TalkActionManager_C:StartLookAt(TalkActor, TargetTalkActor, NotUsingSoc
     UE4.UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, ActionLogType, "StartLookAt出错: TalkActor无效", Message)
     return
   end
-  if not IsValid(TalkActor.Mesh) then
-    local Message = string.format("Start look at failed, TalkActor.Mesh is invalid, ActorName: %s", TalkActor:GetName())
-    UE4.UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, ActionLogType, "StartLookAt出错: TalkActor.Mesh无效", Message)
+  local Mesh = TalkActor.Mesh
+  if not IsValid(Mesh) then
+    local Message = string.format("Start look at failed, Mesh is invalid, ActorName: %s", TalkActor:GetName())
+    UE4.UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, ActionLogType, "StartLookAt出错: Mesh无效", Message)
     return
   end
-  if TalkActor.Mesh and TalkActor.Mesh:GetAnimInstance() then
-    local AnimInstance = TalkActor.Mesh:GetAnimInstance()
-    if TalkActor.NPCAnimInstance and AnimInstance:Cast(UNPCAnimInstance) then
-      AnimInstance:SetLookAtActor(TargetTalkActor, "head", NotUsingSocket)
-    end
-  else
-    DebugPrint("error: TalkActionManager_C:StartLookAt:TalkActor.Mesh or TalkActor.Mesh:GetAnimInstance() is nil")
+  local AnimInstance = Mesh:GetAnimInstance()
+  if not IsValid(AnimInstance) then
+    local Message = string.format("Start look at failed, AnimInstance is invalid, ActorName: %s", TalkActor:GetName())
+    UE4.UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, ActionLogType, "StartLookAt出错: AnimInstance无效", Message)
+    return
+  end
+  if AnimInstance:IsA(UE4.UPlayerAnimInstance) then
+    AnimInstance:SetLookAtActor(TargetTalkActor, "head")
+  elseif AnimInstance:IsA(UE4.UNPCAnimInstance) then
+    AnimInstance:SetLookAtActor(TargetTalkActor, "head", NotUsingSocket)
   end
 end
 
@@ -447,6 +464,7 @@ function TalkActionManager_C:RotateToActor(TalkTask, SrcActor, DstActor, Montage
     SrcActor.TalkRotateToTimer = SrcActor:AddTimer(0.5, function()
       SrcActor.TalkRotateToTimer = nil
       self:StartLookAt(SrcActor, DstActor)
+      self:RecordLookAt(TalkTask, SrcActor)
       self:RotateOffset(SrcActor, DeltaRot, MontageName, CallBack, TalkTask, TalkTask.TalkTaskData)
     end)
   else

@@ -5,6 +5,7 @@ local ModCom = require("BluePrints.Client.CustomTypes.Mod")
 local prop = require("NetworkEngine.Common.Prop")
 local FormatProperties = require("NetworkEngine.Common.Assemble").FormatProperties
 local SkillUtils = require("Utils.SkillUtils")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local Weapon = Class("Weapon", CustomTypes.CustomMetaAttr)
 Weapon.__Props__ = {
   Uuid = prop.prop("ObjId", "client save"),
@@ -34,7 +35,10 @@ Weapon.__Props__ = {
   WeaponTag = prop.getter("BattleData", "WeaponTag"),
   ModApplicationType = prop.getter("BattleData", "ModApplicationType"),
   MaxLevel = prop.getter("Data", "WeaponMaxLevel"),
-  DecomposeReward = prop.getter("Data", "DecomposeReward")
+  DecomposeReward = prop.getter("Data", "DecomposeReward"),
+  WeaponSubType = prop.getter("Data", "WeaponSubType"),
+  HyperCardLevel = prop.prop("Int", "client save", 0),
+  HyperTalent = prop.prop("Int2IntSetDict", "client save")
 }
 
 function Weapon:Init(Uuid, WeaponId, Level)
@@ -47,6 +51,7 @@ function Weapon:Init(Uuid, WeaponId, Level)
   self:SetLevel(Level or 1)
   self:InitModConfig()
   self:InitAppearanceConfig()
+  self:InitTalent()
   if WeaponId then
     self:_Init()
   end
@@ -377,6 +382,14 @@ function Weapon:SetGradeLevel(IsUWeapon, TargetLevel)
   self.GradeLevel = TargetLevel
 end
 
+function Weapon:SetHyperCardLevel(TargetLevel)
+  if not DataMgr.HyperWeaponCardLevel[self.WeaponId] then
+    return
+  end
+  local MaxCardLevel = HyperWeaponUtils.GetMaxForgeLevel(self.WeaponId)
+  self.HyperCardLevel = math.clamp(TargetLevel, 1, MaxCardLevel)
+end
+
 function Weapon:AddConsumeWeaponLevel(Level)
   if Level > 0 then
     self.ConsumeWeaponLevel = self.ConsumeWeaponLevel + Level
@@ -442,9 +455,22 @@ function Weapon:BattleDump(Avatar, ExtraInfo)
     AppearanceInfo = self:DumpAppearanceInfo(),
     ModData = AvatarUtils:DumpModData(ExtraInfo),
     SlotData = ExtraInfo.SlotData,
-    ModSuitIndex = ExtraInfo.ModSuit
+    ModSuitIndex = ExtraInfo.ModSuit,
+    HyperTalent = self:DumpHyperTalent()
   }
   return result
+end
+
+function Weapon:DumpHyperTalent()
+  local HyperTalent = {}
+  for k, Talents in pairs(self.HyperTalent) do
+    local TalentList = {}
+    for TalentId, _ in pairs(Talents) do
+      table.insert(TalentList, TalentId)
+    end
+    HyperTalent[k] = TalentList
+  end
+  return HyperTalent
 end
 
 function Weapon:DumpAppearanceInfo()
@@ -457,6 +483,8 @@ function Weapon:DumpAppearanceInfo()
   AppearanceInfo.Colors = self:DumpColors()
   AppearanceInfo.AccessorySuit = self:DumpAccessory()
   AppearanceInfo.WeaponId = self.WeaponId
+  AppearanceInfo.GradeLevel = self.GradeLevel
+  AppearanceInfo.HyperCardLevel = self.HyperCardLevel
   return AppearanceInfo
 end
 
@@ -465,6 +493,7 @@ function Weapon:OnlineDumpInfo()
   WeaponInfo.WeaponId = self.WeaponId
   WeaponInfo.EnhanceLevel = self.EnhanceLevel
   WeaponInfo.GradeLevel = self.GradeLevel
+  WeaponInfo.HyperCardLevel = self.HyperCardLevel
   return WeaponInfo
 end
 
@@ -560,31 +589,27 @@ end
 function Weapon:DumpPassiveEffects(Avatar, ExtraInfo)
   local PassiveEffects = {}
   local ModPolarityMap = {}
+  local ModIdSet = {}
+  local HasDuplicateModId = false
   local ModData = ExtraInfo.ModData
   if ModData then
     for _, Mod in pairs(ModData) do
       Mod:CountModPolarity(ModPolarityMap)
+      if ModIdSet[Mod.ModId] then
+        HasDuplicateModId = true
+      else
+        ModIdSet[Mod.ModId] = true
+      end
     end
     for _, Mod in pairs(ModData) do
       local ModData = Mod:Data()
-      if ModData.PassiveEffects then
-        local ShouldAddPassiveEffects = true
-        if ModData.PolarityNeedNum then
-          for Polarity, NeedNum in pairs(ModData.PolarityNeedNum) do
-            if not ModPolarityMap[Polarity] or NeedNum > ModPolarityMap[Polarity] then
-              ShouldAddPassiveEffects = false
-              break
-            end
-          end
-        end
-        if ShouldAddPassiveEffects then
-          for k = 1, #ModData.PassiveEffects do
-            table.insert(PassiveEffects, {
-              ModData.PassiveEffects[k],
-              Mod.Level,
-              false
-            })
-          end
+      if ModData.PassiveEffects and Mod:CheckPreCondition(ModPolarityMap, HasDuplicateModId) then
+        for k = 1, #ModData.PassiveEffects do
+          table.insert(PassiveEffects, {
+            ModData.PassiveEffects[k],
+            Mod.Level,
+            false
+          })
         end
       end
     end
@@ -713,12 +738,21 @@ function Weapon:DumpBattleAttr(Avatar, ExtraInfo)
     for _, Mod in pairs(Mods) do
       Mod:CountModPolarity(ModPolarityMap)
     end
+    local ModIdSet = {}
+    local HasDuplicateModId = false
     for _, Mod in pairs(Mods) do
-      Mod:CalcAttrs(BaseValues, ModRateValues, ModAddValues, ModUniteTypes, ModMultiplier, ModPolarityMap)
+      if ModIdSet[Mod.ModId] then
+        HasDuplicateModId = true
+      else
+        ModIdSet[Mod.ModId] = true
+      end
+    end
+    for _, Mod in pairs(Mods) do
+      Mod:CalcAttrs(BaseValues, ModRateValues, ModAddValues, ModUniteTypes, ModMultiplier, ModPolarityMap, HasDuplicateModId)
     end
   end
   self:CheckUnconstrainedMCByMod(ModRateValues, ModAddValues)
-  self:CalcAddAttrs(Avatar, BaseValues, ModRateValues, ModAddValues)
+  self:CalcAddAttrs(Avatar, BaseValues, ModRateValues, ModAddValues, ExtraInfo.Char)
   self:CalcExcelWeaponAttr(Avatar, ModRateValues, ExtraInfo.Char)
   local TotalValues = self:CalcTotalValue(CardValues, BaseValues, ModRateValues, ModAddValues)
   for _, Data in pairs(DataMgr.AttrLimit) do
@@ -742,40 +776,76 @@ function Weapon:DumpBattleAttr(Avatar, ExtraInfo)
   return BattleAttrs
 end
 
-function Weapon:CalcAddAttrs(Avatar, BaseValues, ModRateValues, ModAddValues)
+function Weapon:CalcAddAttrs(Avatar, BaseValues, ModRateValues, ModAddValues, Char)
   local AddData = self:BattleData()
   if not AddData.AddAttrs then
     return
   end
   for Index, AttrData in pairs(AddData.AddAttrs) do
-    if not AttrData.IsCharAttr then
-      local UniqueName = table.concat({
-        "Weapon:[",
-        self.WeaponId,
-        "]AddAttrs:[",
-        Index,
-        "]"
-      })
-      self:CalcOneAttrData(BaseValues, ModRateValues, ModAddValues, AttrData, 1, UniqueName)
+    if AttrData.HyperWeaponSkillTreeID and 0 ~= AttrData.HyperWeaponSkillTreeID and not HyperWeaponUtils.IsHyperWeaponSkillActivatedByUid(self.Uuid, AttrData.HyperWeaponSkillTreeID) then
+    elseif AttrData.IsWeaponMastery then
+      if not Char then
+      else
+        local BattleInfo = Char:BattleData()
+        local ExcelWeaponTags = BattleInfo and BattleInfo.ExcelWeaponTags
+        local bMasteryMatch = false
+        if ExcelWeaponTags then
+          for _, ExcelWeaponTag in pairs(ExcelWeaponTags) do
+            if self:HasTag(ExcelWeaponTag) then
+              bMasteryMatch = true
+              break
+            end
+          end
+        end
+        if not bMasteryMatch then
+        elseif not AttrData.IsCharAttr then
+          local UniqueName = table.concat({
+            "Weapon:[",
+            self.WeaponId,
+            "]AddAttrs:[",
+            Index,
+            "]"
+          })
+          self:CalcOneAttrData(BaseValues, ModRateValues, ModAddValues, AttrData, 1, UniqueName)
+        end
+      end
     end
   end
 end
 
-function Weapon:CalcCharAddAttrs(BaseValues, ModRateValue, ModAddValues)
+function Weapon:CalcCharAddAttrs(BaseValues, ModRateValue, ModAddValues, Char)
   local AddData = self:BattleData()
   if not AddData.AddAttrs then
     return
   end
   for Index, AttrData in pairs(AddData.AddAttrs) do
-    if AttrData.IsCharAttr then
-      local UniqueName = table.concat({
-        "Weapon:[",
-        self.WeaponId,
-        "]AddAttrs:[",
-        Index,
-        "]"
-      })
-      self:CalcOneAttrData(BaseValues, ModRateValue, ModAddValues, AttrData, 1, UniqueName)
+    if AttrData.HyperWeaponSkillTreeID and 0 ~= AttrData.HyperWeaponSkillTreeID and not HyperWeaponUtils.IsHyperWeaponSkillActivatedByUid(self.Uuid, AttrData.HyperWeaponSkillTreeID) then
+    elseif AttrData.IsWeaponMastery then
+      if not Char then
+      else
+        local BattleInfo = Char:BattleData()
+        local ExcelWeaponTags = BattleInfo and BattleInfo.ExcelWeaponTags
+        local bMasteryMatch = false
+        if ExcelWeaponTags then
+          for _, ExcelWeaponTag in pairs(ExcelWeaponTags) do
+            if self:HasTag(ExcelWeaponTag) then
+              bMasteryMatch = true
+              break
+            end
+          end
+        end
+        if not bMasteryMatch then
+        elseif AttrData.IsCharAttr then
+          local UniqueName = table.concat({
+            "Weapon:[",
+            self.WeaponId,
+            "]AddAttrs:[",
+            Index,
+            "]"
+          })
+          self:CalcOneAttrData(BaseValues, ModRateValue, ModAddValues, AttrData, 1, UniqueName)
+        end
+      end
     end
   end
 end

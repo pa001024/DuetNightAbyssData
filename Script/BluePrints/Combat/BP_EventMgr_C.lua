@@ -41,7 +41,7 @@ end
 
 function BP_EventMgr_C:ReceiveBeginPlay()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName()
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     self.bEnableCreateUnitCtrlOpt = true
   else
     self.bEnableCreateUnitCtrlOpt = false
@@ -884,7 +884,12 @@ function BP_EventMgr_C:RealSpawnDrop_Region(ActorPath, Count, CreateIndex, ItemI
   UE4.UResourceLibrary.LoadClassAsync(self, ActorPath, {self, LoadClassFinished})
 end
 
-function BP_EventMgr_C:RealSpawnRewards_Normal(ItemId, Count, Transform, Reason, ExtraInfo, bExtra)
+function BP_EventMgr_C:RealSpawnRewards_Normal(ItemId, Count, Transform, Reason, ExtraInfoParentEid, ExtraInfoRegionDataType, ExtraInfoWorldRegionEid, bExtra)
+  local ExtraInfo = {
+    ParentEid = ExtraInfoParentEid,
+    RegionDataType = ExtraInfoRegionDataType,
+    WorldRegionEid = ExtraInfoWorldRegionEid
+  }
   local Res, ActorPath, UpdateCount = self:CheckSpawnDrop(ItemId, Count)
   if not Res then
     return
@@ -892,7 +897,13 @@ function BP_EventMgr_C:RealSpawnRewards_Normal(ItemId, Count, Transform, Reason,
   self:RealSpawnDrop_Normal(ActorPath, UpdateCount, ItemId, Transform, Reason, ExtraInfo, bExtra)
 end
 
-function BP_EventMgr_C:RealSpawnRewards_Region(ItemId, Count, Transform, Reason, ExtraInfo, bExtra, CreateIndex, DropRegionDatas)
+function BP_EventMgr_C:RealSpawnRewards_Region(ItemId, Count, Transform, Reason, ExtraInfoParentEid, ExtraInfoRegionDataType, ExtraInfoWorldRegionEid, bExtra, CreateIndex, RewardDropDatas)
+  local ExtraInfo = {
+    ParentEid = ExtraInfoParentEid,
+    RegionDataType = ExtraInfoRegionDataType,
+    WorldRegionEid = ExtraInfoWorldRegionEid
+  }
+  local DropRegionDatas = RewardDropDatas
   local Res, ActorPath, UpdateCount = self:CheckSpawnDrop(ItemId, Count)
   DebugPrint("ZJT_ CreateRes ", Res, ActorPath, UpdateCount)
   if not Res then

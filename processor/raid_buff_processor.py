@@ -19,6 +19,37 @@ class RaidBuffProcessor(BaseProcessor):
 
         return f"{rounded:.4f}".rstrip("0").rstrip(".")
 
+    def _normalize_raid_buff_parameters(self, buff_parameters):
+        """兼容 RaidBuffParameter 的列表和 1-based map 形态。"""
+        if isinstance(buff_parameters, list):
+            return buff_parameters
+
+        if isinstance(buff_parameters, dict):
+            if not buff_parameters:
+                return []
+
+            normalized_items = []
+            max_index = 0
+            for key, value in buff_parameters.items():
+                try:
+                    index = int(key)
+                except (TypeError, ValueError):
+                    continue
+                if index <= 0:
+                    continue
+                normalized_items.append((index, value))
+                max_index = max(max_index, index)
+
+            if not normalized_items:
+                return []
+
+            result = [None] * max_index
+            for index, value in normalized_items:
+                result[index - 1] = value
+            return result
+
+        return []
+
     def process_item(self, raid_buff_data, language):
         """处理单个 RaidBuff 项目"""
         # 获取基本信息
@@ -26,7 +57,9 @@ class RaidBuffProcessor(BaseProcessor):
         buff_des = raid_buff_data.get("RaidBuffDes", "")
         
         # 处理 RaidBuffParameter 中的表达式
-        buff_parameters = raid_buff_data.get("RaidBuffParameter", [])
+        buff_parameters = self._normalize_raid_buff_parameters(
+            raid_buff_data.get("RaidBuffParameter", [])
+        )
         processed_parameters = []
         
         for param in buff_parameters:

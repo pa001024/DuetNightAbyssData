@@ -467,6 +467,39 @@ function Component:GetInviteActivityInfo(Callback)
   self:CallServer("GetInviteActivityInfo", cb)
 end
 
+function Component:GetAccessoryRankList(InCallBack)
+  self.logger.info("GetAccessoryRankList")
+  
+  local function Cb(ErrCode)
+    DebugPrint("GetAccessoryRankList", ErrorCode:Name(ErrCode))
+    if InCallBack then
+      InCallBack(ErrCode)
+    end
+  end
+  
+  self:CallServer("GetAccessoryRankList", Cb)
+end
+
+function Component:OnGetAccessoryRankList(RetErrorCode, RankInfo)
+  self.logger.debug("OnGetAccessoryRankList", RetErrorCode, RankInfo)
+  if not ErrorCode:Check(RetErrorCode) then
+    return
+  end
+  DebugPrint("[AccessoryRank] OnGetAccessoryRankList payload type:", type(RankInfo))
+  if type(RankInfo) == "table" then
+    PrintTable(RankInfo, 10, "[AccessoryRank] Raw RankInfo")
+    if RankInfo.SelfRankInfo or RankInfo.TopNInfo then
+      PrintTable(RankInfo.SelfRankInfo or {}, 10, "[AccessoryRank] SelfRankInfo")
+      PrintTable(RankInfo.TopNInfo or {}, 10, "[AccessoryRank] TopNInfo")
+    elseif RankInfo[1] and type(RankInfo[1]) == "table" then
+      PrintTable(RankInfo[1], 10, "[AccessoryRank] First Rank Entry")
+    end
+  else
+    DebugPrint("[AccessoryRank] RankInfo is not table:", RankInfo)
+  end
+  EventManager:FireEvent(EventID.OnAccessoryRankList, RankInfo)
+end
+
 function Component:OnHourlyRefresh(ServerTime)
   self.logger.debug("OnHourlyRefresh", TimeUtils.TimeToStr(ServerTime))
   EventManager:FireEvent(EventID.OnHourlyRefresh)

@@ -19,6 +19,18 @@ function FDialogueWikiComponent:Initialize(TalkTask)
   self.ListenedWikiList = self.ListenedWikiList or {}
 end
 
+function FDialogueWikiComponent:AddListenWikiIdByDialogueId(DialogueId)
+  local DialogueData = DataMgr.Dialogue[DialogueId]
+  if not DialogueData then
+    return
+  end
+  local WikiIds = DialogueData.RelatedWikiId
+  if not WikiIds then
+    return
+  end
+  self:AddListenWikiId(WikiIds)
+end
+
 function FDialogueWikiComponent:AddListenWikiId(WikiIds)
   if not WikiIds then
     return

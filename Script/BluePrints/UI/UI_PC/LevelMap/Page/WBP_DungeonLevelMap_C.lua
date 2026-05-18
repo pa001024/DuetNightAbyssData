@@ -21,7 +21,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, RegionID, ...)
   end
   self.RealWildMap:SetFocus()
   self.Tab:SetVisibility(ESlateVisibility.Collapsed)
-  self.SliderPecent = GWorld.GameInstance.RegionMapScale or 0.5
+  self.SliderPecent = 1
   local ConfigData = {
     InitValue = self.SliderPecent * 100,
     ClickInterval = 10,
@@ -321,6 +321,12 @@ end
 
 function M:IsInteractiveOpen()
   return self.Panel_Interactive:GetVisibility() == ESlateVisibility.SelfHitTestInvisible
+end
+
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self.RealWildMap then
+    self.RealWildMap:SetFocus()
+  end
 end
 
 return M

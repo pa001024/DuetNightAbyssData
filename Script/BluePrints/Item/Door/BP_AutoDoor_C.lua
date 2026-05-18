@@ -44,7 +44,7 @@ function BP_AutoDoor_C:EndWait(Character)
 end
 
 function BP_AutoDoor_C:OpenMechanism(CharacterEid)
-  print(_G.LogTag, "LXZ OpenMechanism")
+  print(_G.LogTag, "LXZ OpenMechanism", self:GetName(), CharacterEid)
   self:UpdateRegionData("DoorOpenState", true)
   local NeedRepair = false
   for i, v in pairs(self.ComponentLoc) do
@@ -67,7 +67,7 @@ function BP_AutoDoor_C:OpenMechanism(CharacterEid)
 end
 
 function BP_AutoDoor_C:CloseMechanism(CharacterEid)
-  print(_G.LogTag, "LXZ CloseMechanism")
+  print(_G.LogTag, "LXZ CloseMechanism", self:GetName())
   self:UpdateRegionData("DoorOpenState", false)
   local NeedRepair = false
   for i, v in pairs(self.ComponentLoc) do
@@ -92,6 +92,11 @@ end
 function BP_AutoDoor_C:DelayCloseDoor(Character)
   self:CloseMechanism()
   self:PlayDoorSound(false)
+end
+
+function BP_AutoDoor_C:SetDoorState(b)
+  self.door_state = b
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "door_state")
 end
 
 function BP_AutoDoor_C:Init()
@@ -143,7 +148,7 @@ function BP_AutoDoor_C:UnLockDoor()
     self:ActiveGuide("Add")
   end
   self.Box:SetCollisionEnabled(1)
-  self.door_state = true
+  self:SetDoorState(true)
   self:IndicatorColor()
   self:OnUnLockDoor()
 end
@@ -159,7 +164,7 @@ function BP_AutoDoor_C:LockDoor()
   end
   self.Box:SetCollisionEnabled(0)
   self:DelayCloseDoor()
-  self.door_state = false
+  self:SetDoorState(false)
   self:IndicatorColor()
   self:OnLockDoor()
 end

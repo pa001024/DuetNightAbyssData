@@ -322,7 +322,6 @@ function WBP_ModArchive_Main_C:RefreshData()
   EMCache:Set("ModArchiveNewByViewState", ModArchiveNewByViewState, true)
   if #ModShows > 0 or #ModUnlocks > 0 then
     DebugPrint("加载弹窗 ")
-    self.ShouldShowTips = true
     self.TipsModShows = ModShows
     self.TipsModUnlocks = ModUnlocks
   end
@@ -677,6 +676,22 @@ function WBP_ModArchive_Main_C:SwitchComKeyTipsState(Index)
     self.Com_KeyTips:UpdateKeyInfo(KeyInfo)
   elseif 7 == Index then
     local KeyInfo = {
+      {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "B"}
+        },
+        Desc = GText("UI_BACK")
+      }
+    }
+    self.Com_KeyTips:UpdateKeyInfo(KeyInfo)
+  elseif 8 == Index then
+    local KeyInfo = {
+      {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "A"}
+        },
+        Desc = GText("UI_Tips_Ensure")
+      },
       {
         KeyInfoList = {
           {Type = "Img", ImgShortPath = "B"}

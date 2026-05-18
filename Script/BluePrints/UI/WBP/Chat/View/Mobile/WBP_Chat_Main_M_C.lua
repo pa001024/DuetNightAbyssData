@@ -51,6 +51,25 @@ function M:Construct()
     elseif EventId == ChatCommon.EventID.SelectPlayerToChat then
       local Uid = (...)
       self:HandleSelectPlayerToChat(Uid)
+    elseif EventId == ChatCommon.EventID.SelectGuildMemberToChat then
+      local Uid = (...)
+      self:HandleSelectPlayerToChat(Uid)
+    elseif EventId == ChatCommon.EventID.RefreshGuildPlayerList then
+      local Uid = (...)
+      if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+        self:_HandleRefreshGuildInPrivateChannel(Uid)
+      end
+    elseif EventId == ChatCommon.EventID.ResetSendBtn then
+      self:_HandleChatSendFailed()
+    elseif EventId == ChatCommon.EventID.GuildPrivateTargetDisabled then
+      local Uid, TimeWrap, MsgWrap, bNeedRebuild = ...
+      self:_HandleGuildPrivateTargetDisabled(Uid, TimeWrap, MsgWrap, bNeedRebuild)
+    elseif EventId == ChatCommon.EventID.GuildPrivateTargetLeftGuild then
+      local Uid, TimeWrap, MsgWrap, bNeedRebuild = ...
+      self:_HandleGuildPrivateTargetLeftGuild(Uid, TimeWrap, MsgWrap, bNeedRebuild)
+    elseif EventId == ChatCommon.EventID.GuildPrivateTargetEnabled then
+      local Uid = (...)
+      self:_HandleGuildPrivateTargetEnabled(Uid)
     elseif EventId == ChatCommon.EventID.SendCDTimerUpdate then
       local RemainTime = (...)
       self:HandleSendCDTimerUpdate(RemainTime)
@@ -107,26 +126,27 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   M.Super.InitUIInfo(self, Name, bInUIMode, EventList, ...)
   self.Com_Input:SetText("")
   local AllChannelInfo = {}
-  local Index = 0
-  local ChannelType2Index = {}
-  for Id, ChannelInfo in ipairs(DataMgr.Channel) do
-    if not ChatModel:IsChannelExclude(Id) then
-      Index = Index + 1
+  for Id, ChannelInfo in pairs(DataMgr.Channel) do
+    if ChatModel:IsChannelExclude(Id) or Id == ChatCommon.ChannelDef.SettlementOnline and not self.bInDungeonSettlement then
+    else
       local Text = GText(ChannelInfo.Name)
       table.insert(AllChannelInfo, {
         Text = Text,
         TabId = Id,
         IconPath = ChannelInfo.Icon,
-        ChannelType = Id
+        ChannelType = Id,
+        _Order = ChatCommon.GetChannelTabOrder(Id)
       })
-      ChannelType2Index[Id] = Index
     end
   end
-  local ChannelCount = #AllChannelInfo
-  if not self.bInDungeonSettlement then
-    AllChannelInfo[ChatCommon.ChannelDef.SettlementOnline] = nil
-    ChannelCount = ChannelCount - 1
+  table.sort(AllChannelInfo, function(a, b)
+    return a._Order < b._Order
+  end)
+  local ChannelType2Index = {}
+  for Idx, Info in ipairs(AllChannelInfo) do
+    ChannelType2Index[Info.ChannelType] = Idx
   end
+  local ChannelCount = #AllChannelInfo
   self.List_SubTab:ClearListItems()
   self.NeedSelectItemIndex = 1
   self.ChannelTypeToIdx = {}
@@ -211,65 +231,72 @@ end
 function M:_AddReddotListenInner(ChannelName, ChannelType)
   local NodeName = ChatCommon.ReddotNamePre .. ChannelName
   local Node = ReddotManager.GetTreeNode(NodeName)
-  if Node and not Node:HadAddChangeCb(self) then
-    ReddotManager.AddListener(NodeName, self, function(self, Count)
-      local function ComputeTabNodeRedCount()
-        if NodeName ~= ChatCommon.ReddotNamePre .. ChatCommon.ChannelNames[ChatCommon.ChannelDef.Friend] then
-          local TotalNormalChatCount = 0
-          
-          for _ChannelName, _ChannelType in pairs(ChatCommon.ChannelDef) do
-            if _ChannelType ~= ChatCommon.ChannelDef.Friend then
-              local _NodeName = ChatCommon.ReddotNamePre .. _ChannelName
-              TotalNormalChatCount = TotalNormalChatCount + ReddotManager.GetTreeNode(_NodeName).Count
-            end
-          end
-          if TotalNormalChatCount > ChatCommon.ReddotMaxCount then
-            TotalNormalChatCount = ChatCommon.ReddotMaxCount .. "+"
-          end
-          self.TabIcon_1:SetReddotNum(TotalNormalChatCount)
-        end
-      end
-      
-      local TabItem
-      if ChannelType == ChatCommon.ChannelDef.Friend then
-        TabItem = self.TabIcon_2
-      else
-        local ChannelIdx = self.ChannelTypeToIdx[ChannelType]
-        TabItem = self.List_SubTab:GetItemAt(ChannelIdx)
-      end
-      if not TabItem then
-        return
-      end
-      local TabUI
-      if ChannelType == ChatCommon.ChannelDef.Friend then
-        if not TabItem.Info then
-          TabUI = nil
-        else
-          TabUI = TabItem.Info.UI
-        end
-      else
-        TabUI = TabItem.UI
-      end
-      if not IsValid(TabUI) then
-        if ChannelType ~= ChatCommon.ChannelDef.Friend then
-          TabItem.ShowRedDotNum = Count
-          ComputeTabNodeRedCount()
-        end
-        return
-      end
-      if Count > 0 then
-        local NumText = tostring(Count)
-        if Count > ChatCommon.ReddotMaxCount then
-          NumText = ChatCommon.ReddotMaxCount .. "+"
-        end
-        TabUI.Reddot_Num:SetNum(NumText)
-        TabUI.Reddot_Num:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      else
-        TabUI.Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      end
-      ComputeTabNodeRedCount()
-    end)
+  if not Node or Node:HadAddChangeCb(self) then
+    return
   end
+  
+  local function RefreshTab()
+    local function ComputeTabNodeRedCount()
+      if NodeName ~= ChatCommon.ReddotNamePre .. ChatCommon.ChannelNames[ChatCommon.ChannelDef.Friend] then
+        local TotalNormalChatCount = 0
+        
+        for _ChannelName, _ChannelType in pairs(ChatCommon.ChannelDef) do
+          if _ChannelType ~= ChatCommon.ChannelDef.Friend then
+            local _NodeName = ChatCommon.ReddotNamePre .. _ChannelName
+            TotalNormalChatCount = TotalNormalChatCount + ReddotManager.GetTreeNode(_NodeName).Count
+          end
+        end
+        if TotalNormalChatCount > ChatCommon.ReddotMaxCount then
+          TotalNormalChatCount = ChatCommon.ReddotMaxCount .. "+"
+        end
+        self.TabIcon_1:SetReddotNum(TotalNormalChatCount)
+      end
+    end
+    
+    local Count = Node:GetNodeCount()
+    local TabItem
+    if ChannelType == ChatCommon.ChannelDef.Friend then
+      TabItem = self.TabIcon_2
+    else
+      local ChannelIdx = self.ChannelTypeToIdx[ChannelType]
+      TabItem = self.List_SubTab:GetItemAt(ChannelIdx)
+    end
+    if not TabItem then
+      return
+    end
+    local TabUI
+    if ChannelType == ChatCommon.ChannelDef.Friend then
+      if not TabItem.Info then
+        TabUI = nil
+      else
+        TabUI = TabItem.Info.UI
+      end
+    else
+      TabUI = TabItem.UI
+    end
+    if not IsValid(TabUI) then
+      if ChannelType ~= ChatCommon.ChannelDef.Friend then
+        TabItem.ShowRedDotNum = Count
+        ComputeTabNodeRedCount()
+      end
+      return
+    end
+    if Count > 0 then
+      local NumText = tostring(Count)
+      if Count > ChatCommon.ReddotMaxCount then
+        NumText = ChatCommon.ReddotMaxCount .. "+"
+      end
+      TabUI.Reddot_Num:SetNum(NumText)
+      TabUI.Reddot_Num:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    else
+      TabUI.Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    ComputeTabNodeRedCount()
+  end
+  
+  ReddotManager.AddListener(NodeName, self, function(_self, _Count)
+    RefreshTab()
+  end)
 end
 
 function M:ResetUI()
@@ -292,7 +319,7 @@ function M:_SetUpChatMsgListTimerCallback(MsgList)
   if self._SetUpChatMsgListIndex == #MsgList then
     self:_Stop_SetUpChatMsgListTimer()
     if 0 == #MsgList then
-      self.Text_DialogEmptyText:SetText(GText("UI_Chat_NoChatHistory"))
+      self.Text_DialogEmptyText:SetText(self:_GetCurrentDialogEmptyText())
       self.WS_Dialoglist:SetActiveWidgetIndex(1)
     end
     if ChatModel:GetChannelUnreadCount() > 0 then
@@ -395,6 +422,7 @@ function M:OnHandleChangeChannel(TabWidget, ItemInfo)
     [ChatCommon.ChannelDef.TeamUp] = self.OnTabSelected_TeamUp,
     [ChatCommon.ChannelDef.Friend] = self.OnTabSelected_Friend,
     [ChatCommon.ChannelDef.Public] = self.OnTabSelected_Public,
+    [ChatCommon.ChannelDef.InGuild] = self.OnTabSelected_InGuild,
     [ChatCommon.ChannelDef.InTeam] = self.OnTabSelected_InTeam,
     [ChatCommon.ChannelDef.Region] = self.OnTabSelected_Region
   }
@@ -402,6 +430,7 @@ function M:OnHandleChangeChannel(TabWidget, ItemInfo)
     Switch[ChatCommon.ChannelDef.SettlementOnline] = self.OnTabSelected_SettlementOnline
   end
   Switch[self.CurrChannel](self, TabWidget, ItemInfo)
+  self:_RefreshGuildPermissionVisibility()
   self:OnHandleChangeChannelWithOperate(TabWidget, ItemInfo)
   if not ChatController:IsSendCDTimerExist(self.CurrChannel) then
     self.Btn_Sent.WS:SetActiveWidgetIndex(0)

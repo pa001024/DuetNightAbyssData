@@ -329,26 +329,26 @@ end
 _G.CreateCoroutine = CreateCoroutine
 
 local function RunAsyncTask(Obj, TaskName, TaskFunc)
-  if Obj[TaskName] then
+  if rawget(Obj, TaskName) then
     return
   end
-  Obj[TaskName] = coroutine.create(function()
-    local Co = Obj[TaskName]
+  rawset(Obj, TaskName, coroutine.create(function()
+    local Co = rawget(Obj, TaskName)
     try({exec = TaskFunc}, Co, Obj)
-    Obj[TaskName] = nil
+    rawset(Obj, TaskName, nil)
     coroutine.close(Co)
-  end)
-  coroutine.resume(Obj[TaskName])
+  end))
+  coroutine.resume(rawget(Obj, TaskName))
 end
 
 _G.RunAsyncTask = RunAsyncTask
 
 local function ForceStopAsyncTask(Obj, TaskName)
-  if not Obj[TaskName] then
+  if not rawget(Obj, TaskName) then
     return
   end
-  local Co = Obj[TaskName]
-  Obj[TaskName] = nil
+  local Co = rawget(Obj, TaskName)
+  rawset(Obj, TaskName, nil)
   local Status = coroutine.status(Co)
   if "running" == Status or "suspended" == Status then
     coroutine.close(Co)

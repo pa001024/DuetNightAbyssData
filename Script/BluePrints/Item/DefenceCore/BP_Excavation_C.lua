@@ -9,8 +9,8 @@ function BP_Excavation_C:AuthorityInitInfo(Info)
   self.DepleteRate = 1
   self.AttractRange = self.UnitParams.AttractRange
   self.MaxEnergy = 100
-  self.NowEnergy = self.UnitParams.NowEnergy
-  self.Progress = 0
+  self:SetNowEnergy(self.UnitParams.NowEnergy)
+  self:SetProgress(0)
   self.PreProgress = 0
   self.BatteryEnergy = DataMgr.GlobalConstant.BatteryEnergy.ConstantValue
   self.BatteryNum = self.NowEnergy / self.BatteryEnergy
@@ -22,7 +22,7 @@ function BP_Excavation_C:AuthorityInitInfo(Info)
   self.CreatorId = RandomCreator.StaticCreatorId
   self.RandomCreatorId = Info.IntParams:Find("RandomCreatorId")
   RandomCreator:AddUserEid(self)
-  self.GuideOrderIndex = GameMode:TriggerDungeonComponentFun("RegisterGuideOrder", self.Eid)
+  self:SetGuideOrderIndex(GameMode:TriggerDungeonComponentFun("RegisterGuideOrder", self.Eid))
 end
 
 function BP_Excavation_C:CommonInitInfo(Info)
@@ -44,6 +44,24 @@ function BP_Excavation_C:InitExcavationMonsterSpawn(Info)
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   GameState.ExcavationMechanismInfos:Add(self.Eid, MonsterSpawnId)
   GameMode:TriggerCreateMonsterSpawn(Ids)
+end
+
+function BP_Excavation_C:SetNowEnergy(v)
+  v = tonumber(v)
+  self.NowEnergy = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "NowEnergy")
+end
+
+function BP_Excavation_C:SetProgress(v)
+  v = tonumber(v)
+  self.Progress = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "Progress")
+end
+
+function BP_Excavation_C:SetGuideOrderIndex(v)
+  v = tonumber(v)
+  self.GuideOrderIndex = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "GuideOrderIndex")
 end
 
 function BP_Excavation_C:StartDig()
@@ -92,9 +110,7 @@ function BP_Excavation_C:AttractBattery()
       if not self:IsExistTimer("ExcavationCreateReward") and self.NowEnergy > 0 then
         self:ChangeState("Manual", Player.Eid, self.StartDigStateId)
       end
-      if self.BatteryNum >= self.MaxEnergy / self.BatteryEnergy then
-        self.DepleteRate = self.DepleteRate * self.MultiDepleteRate
-        self:RemoveTimer(self.BatteryHandle)
+      if self:CheckBatteryNumFull() then
         return
       end
       local NowBatteryNum = math.floor(math.min(self.BatteryNum + Player.BatteryNum, self.MaxEnergy / self.BatteryEnergy) - self.BatteryNum)
@@ -103,7 +119,13 @@ function BP_Excavation_C:AttractBattery()
       end
       self.BatteryNum = self.BatteryNum + NowBatteryNum
       self.PreEnergy = self.NowEnergy
-      self.NowEnergy = math.min(self.NowEnergy + NowBatteryNum * self.BatteryEnergy, self.MaxEnergy)
+      self:SetNowEnergy(math.min(self.NowEnergy + NowBatteryNum * self.BatteryEnergy, self.MaxEnergy))
+      if NowBatteryNum > 0 and not self:IsExistTimer("ExcavationCreateReward") and self.NowEnergy > 0 then
+        self:ChangeState("Manual", Player.Eid, self.StartDigStateId)
+      end
+      if NowBatteryNum > 0 then
+        self:CheckBatteryNumFull()
+      end
       GameState.BatteryToTalNum = GameState.BatteryToTalNum - Player.BatteryNum
       Player.BatteryNum = Player.BatteryNum - NowBatteryNum
       if NowBatteryNum > 0 then
@@ -116,9 +138,18 @@ function BP_Excavation_C:AttractBattery()
   end
 end
 
+function BP_Excavation_C:CheckBatteryNumFull()
+  if self.BatteryNum >= self.MaxEnergy / self.BatteryEnergy then
+    self.DepleteRate = self.DepleteRate * self.MultiDepleteRate
+    self:RemoveTimer(self.BatteryHandle)
+    return true
+  end
+  return false
+end
+
 function BP_Excavation_C:CreateReward()
-  self.NowEnergy = math.max(self.NowEnergy - self.DepleteRate, 0)
-  self.Progress = self.Progress + self.DepleteRate
+  self:SetNowEnergy(math.max(self.NowEnergy - self.DepleteRate, 0))
+  self:SetProgress(self.Progress + self.DepleteRate)
   local RealProgress = (self.Progress - self.PreProgress) // 10
   if self.PreProgress < 50 and self.Progress >= 50 then
     self:CreateNextExcavation()
@@ -265,6 +296,14 @@ function BP_Excavation_C:OnAttractBattery_Lua(ExcavationEid, BatteryEnergy)
   if not IsAuthority(self) or IsStandAlone(self) then
     EventManager:FireEvent(EventID.OnAttractBattery, ExcavationEid, BatteryEnergy)
   end
+end
+
+function BP_Excavation_C:OnAttractBattery(ExcavationEid, BatteryEnergy)
+  self.Overridden.OnAttractBattery(self, ExcavationEid, BatteryEnergy)
+end
+
+function BP_Excavation_C:ChangeValueLua()
+  self.TestValue = "Lua"
 end
 
 return BP_Excavation_C

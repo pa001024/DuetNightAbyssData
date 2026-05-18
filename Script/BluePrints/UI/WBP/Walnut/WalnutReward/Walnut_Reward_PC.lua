@@ -154,7 +154,6 @@ function M:InitRewards()
         end
       end
     end
-    PrintTable(WalnutRewardList, 8)
     if #WalnutRewardList <= 0 then
       self.NoWalnut = true
       self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
@@ -177,11 +176,11 @@ function M:InitRewards()
             RewardInfo.RewardCount = RewardCount
             RewardInfo.WalnutRewardRarity = self:GetWalnutRewardRarity(RewardID, RewardInfo.RewardType, RewardInfo.RewardCount)
             self.MaxRarity = math.min(self.MaxRarity, RewardInfo.WalnutRewardRarity)
-            goto lbl_152
+            goto lbl_148
           end
         end
       end
-      ::lbl_152::
+      ::lbl_148::
       table.insert(self.RewardList, RewardInfo)
     end
   end
@@ -243,12 +242,13 @@ function M:InitCommonItem(Index)
   Content.Parent = self
   Content.Count = CurRewardInfo.RewardCount
   Content.IsShowDetails = true
+  Content.RewardIndex = Index
   Content.OnMenuOpenChangedEvents = {
     Obj = self,
     Callback = self.ItemMenuAnchorChanged
   }, Parent.Item_Reward:CreateWidgetNew("ComItemUniversalL")
   Parent.Item_Reward:Init(Content)
-  if Content.Type == "Mod" then
+  if Content.ItemType == "Mod" then
     Parent.Item_Reward.ItemName:SetVisibility(UE4.ESlateVisibility.Collapsed)
     Parent.Item_Reward.Count:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
@@ -335,8 +335,10 @@ function M:OnClickReward1st()
     return
   end
   self:UpdateSelectedReward(1)
-  self.Reward_1st:PlayAnimation(self.Reward_1st.Click)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
+  if not self.TipsIndex or 1 ~= self.TipsIndex then
+    self.Reward_1st:PlayAnimation(self.Reward_1st.Click)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
+  end
   self.State = 0
   self:UpdateCommonKeys("LS", GText("UI_Controller_CheckDetails"))
   self:InterruptAutoMode()
@@ -347,8 +349,10 @@ function M:OnClickReward2nd()
     return
   end
   self:UpdateSelectedReward(2)
-  self.Reward_2nd:PlayAnimation(self.Reward_2nd.Click)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
+  if not self.TipsIndex or 2 ~= self.TipsIndex then
+    self.Reward_2nd:PlayAnimation(self.Reward_2nd.Click)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
+  end
   self.State = 0
   self:UpdateCommonKeys("LS", GText("UI_Controller_CheckDetails"))
   self:InterruptAutoMode()
@@ -359,8 +363,10 @@ function M:OnClickReward3rd()
     return
   end
   self:UpdateSelectedReward(3)
-  self.Reward_3rd:PlayAnimation(self.Reward_3rd.Click)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
+  if not self.TipsIndex or 3 ~= self.TipsIndex then
+    self.Reward_3rd:PlayAnimation(self.Reward_3rd.Click)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/mihan_level_finish_choice_btn_click", "WalnutRewardOptionClick", nil)
+  end
   self.State = 0
   self:UpdateCommonKeys("LS", GText("UI_Controller_CheckDetails"))
   self:InterruptAutoMode()
@@ -778,7 +784,12 @@ function M:InterruptAutoMode()
   end
 end
 
-function M:ItemMenuAnchorChanged(bIsOpen)
+function M:ItemMenuAnchorChanged(bIsOpen, Content)
+  if bIsOpen then
+    self.TipsIndex = Content.RewardIndex
+  else
+    self.TipsIndex = nil
+  end
   if not self.IsGamepad then
     return
   end

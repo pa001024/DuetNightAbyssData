@@ -23,11 +23,19 @@ function Component:CharMain_CreateItemContents()
   self.CharItemContentsArray = {}
   self.BP_CharItemContents:Clear()
   local Obj
+  local UnitId2PlayerData = DataMgr.CharacterAttributeSwitch
   for Uuid, Char in pairs(Avatar.Chars) do
-    Obj = self:NewItemContent(Char, CommonConst.ArmoryType.Char, CommonConst.ArmoryTag.Char)
-    self.CharItemContentsMap[Uuid] = Obj
-    self.BP_CharItemContents:Add(Obj)
-    table.insert(self.CharItemContentsArray, Obj)
+    local PlayerData = UnitId2PlayerData and UnitId2PlayerData[Char.CharId]
+    if PlayerData then
+      local CharGroupId = PlayerData.CharGroupId
+      if Char.CharId ~= Avatar.CharacterAttributeSwitch[CharGroupId] then
+    end
+    else
+      Obj = self:NewItemContent(Char, CommonConst.ArmoryType.Char, CommonConst.ArmoryTag.Char)
+      self.CharItemContentsMap[Uuid] = Obj
+      self.BP_CharItemContents:Add(Obj)
+      table.insert(self.CharItemContentsArray, Obj)
+    end
   end
 end
 

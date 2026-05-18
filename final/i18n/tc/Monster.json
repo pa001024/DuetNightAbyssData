@@ -141,6 +141,27 @@
     ]
   },
   {
+    "id": 6001301,
+    "n": "舍身·枯萎·爆破 疾衝穢獸",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "Gr_Jichong_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Kamikaze.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 6001601,
     "n": "疾衝穢獸",
     "f": 1,
@@ -157,7 +178,7 @@
   },
   {
     "id": 6001701,
-    "n": "霹靂·捨身 疾沖穢獸",
+    "n": "霹靂·舍身 疾沖穢獸",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 32,
@@ -278,6 +299,27 @@
       "Mon.Strong.Revenge",
       "Mon.Reward.B",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 6002301,
+    "n": "猩紅·凜霜·守護 遊擊穢獸",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "Gr_Youji_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -451,6 +493,49 @@
     ]
   },
   {
+    "id": 6004301,
+    "n": "霹靂·爆破·霜獄 暴徒穢獸",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
+    "id": 6004302,
+    "n": "轉雷·霹靂·侵蝕 暴徒穢獸",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.Poison.Triple",
+      "Mon.Strong.Triple",
+      "Mon.SurvivalPoison"
+    ]
+  },
+  {
     "id": 6004601,
     "n": "暴徒穢獸",
     "f": 1,
@@ -581,6 +666,27 @@
     ]
   },
   {
+    "id": 6007301,
+    "n": "復仇·爆破·殘火 灼心穢獸",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "GR_Zhuoxin",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Strong.Revenge.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 6007601,
     "n": "灼心穢獸",
     "f": 1,
@@ -609,6 +715,27 @@
       "Mon.Melee",
       "Mon.Attribute.Thunder",
       "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 6011301,
+    "n": "舍身·枯萎·爆破 疾衝穢獸Ⅱ",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 10,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "Gr_Jichong_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Kamikaze.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -641,6 +768,27 @@
       "Mon.Ranged",
       "Mon.Attribute.Fire",
       "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 6012301,
+    "n": "猩紅·凜霜·守護 遊擊穢獸Ⅱ",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "Gr_Youji_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -737,6 +885,28 @@
     ]
   },
   {
+    "id": 6013301,
+    "n": "猩紅·復仇·守護 飄浮穢獸Ⅱ",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "Gr_Piaofu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Ranged",
+      "Mon.Fly",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Strong.Revenge.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 6013601,
     "n": "飄浮穢獸Ⅱ",
     "f": 1,
@@ -767,6 +937,27 @@
       "Mon.Melee",
       "Mon.Attribute.Fire",
       "Mon.Reward.D"
+    ]
+  },
+  {
+    "id": 6014301,
+    "n": "霹靂·爆破·霜獄 暴徒穢獸Ⅱ",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 300,
+    "icon": "Gr_Baotu_C01",
+    "tags": [
+      "Mon.Gr",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -891,6 +1082,28 @@
       "Mon.Ranged",
       "Mon.Reward.E",
       "Mon.SoloTreasure.APoint"
+    ]
+  },
+  {
+    "id": 6015301,
+    "n": "复仇·爆破·残火 芳烬秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "GR_Fangjin",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Strong.Revenge.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -1097,6 +1310,28 @@
     ]
   },
   {
+    "id": 6016301,
+    "n": "转雷·凛霜·守护 萼蚀秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 600,
+    "icon": "GR_Eshi",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Ranged",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 6017001,
     "n": "魁蕊穢獸",
     "f": 1,
@@ -1221,6 +1456,51 @@
       "Mon.Melee",
       "Mon.Reward.E",
       "Mon.SoloTreasure.APoint"
+    ]
+  },
+  {
+    "id": 6017301,
+    "n": "舍身·枯萎·爆破 魁蕊秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "GR_Kuirui",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Melee",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Kamikaze.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
+    "id": 6017302,
+    "n": "侵蚀·霜狱·守护 魁蕊秽兽",
+    "t": "Elite_Monster",
+    "f": 1,
+    "atk": 11,
+    "def": 300,
+    "hp": 510,
+    "tn": 150,
+    "icon": "GR_Kuirui",
+    "tags": [
+      "Mon.Gr",
+      "Mon.HxGr",
+      "Mon.Reward.B",
+      "Mon.Melee",
+      "Mon.Strong.Poison.Triple",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple",
+      "Mon.SurvivalPoison"
     ]
   },
   {
@@ -1386,6 +1666,28 @@
       "Mon.Strong.Threefold",
       "Mon.Reward.B",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 7001301,
+    "n": "猩紅·枯萎·凜霜 狙擊列兵",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 11,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -1570,6 +1872,28 @@
     ]
   },
   {
+    "id": 7002301,
+    "n": "枯萎·守護·猩紅 劈斬列兵",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "Jt_Pizhuo_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Kamikaze.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 7002601,
     "n": "劈斬列兵",
     "f": 2,
@@ -1732,6 +2056,28 @@
       "Mon.Strong.ThunderLaser",
       "Mon.Reward.B",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 7003301,
+    "n": "掠影·轉雷·霜獄 遠征列兵",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 11,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "Jt_Ranger_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -1923,6 +2269,28 @@
     ]
   },
   {
+    "id": 7008301,
+    "n": "浴血·掠影·復仇 精銳士官",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 12,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "Jt_Zhihui",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.C",
+      "Mon.Elite",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Revenge.Triple",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 7009001,
     "n": "帝皇之仁",
     "f": 2,
@@ -1955,6 +2323,51 @@
       "Mon.Reward.B",
       "Mon.Elite",
       "Mon.Strong.Reflect"
+    ]
+  },
+  {
+    "id": 7009301,
+    "n": "浴血·殘火·霜獄 帝皇之仁",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 300,
+    "icon": "Jt_Zhiren",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
+    "id": 7009302,
+    "n": "侵蝕·舍身·爆破 帝皇之仁",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 300,
+    "icon": "Jt_Zhiren",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Poison.Triple",
+      "Mon.Strong.Kamikaze.Triple",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Triple",
+      "Mon.SurvivalPoison"
     ]
   },
   {
@@ -2026,6 +2439,28 @@
     ]
   },
   {
+    "id": 7011301,
+    "n": "猩紅·枯萎·凜霜 狙擊列兵Ⅱ",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 11,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "Jt_Juji_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 7011601,
     "n": "狙擊列兵Ⅱ",
     "f": 2,
@@ -2077,6 +2512,28 @@
     ]
   },
   {
+    "id": 7012301,
+    "n": "枯萎·守護·猩紅 劈斬列兵Ⅱ",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "Jt_Pizhuo_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Strong.Kamikaze.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 7012601,
     "n": "劈斬列兵Ⅱ",
     "f": 2,
@@ -2108,6 +2565,28 @@
       "Mon.Ranged",
       "Mon.Reward.E",
       "Mon.Attribute.Thunder"
+    ]
+  },
+  {
+    "id": 7013301,
+    "n": "掠影·轉雷·霜獄 遠征列兵Ⅱ",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 5.56,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "Jt_Ranger_C01",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -2180,6 +2659,28 @@
     ]
   },
   {
+    "id": 7015301,
+    "n": "枯萎·復仇·凜霜 警戒機",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "JT_Jingjie",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Revenge.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 7015601,
     "n": "警戒機",
     "f": 2,
@@ -2215,18 +2716,131 @@
   },
   {
     "id": 7018001,
-    "n": "列车警卫【远期待包装】",
+    "n": "鋼拳鐵衛",
     "f": 2,
     "atk": 10,
     "def": 130,
     "es": 34,
     "hp": 47,
     "tn": 150,
-    "icon": "JT_Zhiyan",
+    "icon": "JT_Tiequan",
     "tags": [
       "Mon.Jt",
       "Mon.Melee",
       "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 7018013,
+    "n": "侵蝕 鋼拳鐵衛",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "JT_Tiequan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison"
+    ]
+  },
+  {
+    "id": 7018014,
+    "n": "霹靂 鋼拳鐵衛",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "JT_Tiequan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Thunder"
+    ]
+  },
+  {
+    "id": 7018020,
+    "n": "殘火 鋼拳鐵衛",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "JT_Tiequan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Reflect"
+    ]
+  },
+  {
+    "id": 7019001,
+    "n": "紅衫鐵衛",
+    "f": 2,
+    "atk": 5.56,
+    "def": 130,
+    "es": 34,
+    "hp": 47,
+    "tn": 150,
+    "icon": "JT_Hongshan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 7019013,
+    "n": "侵蝕 紅衫鐵衛",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "JT_Hongshan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Poison",
+      "Mon.SurvivalPoison",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 7019016,
+    "n": "枯萎 紅衫鐵衛",
+    "t": "Elite_Monster",
+    "f": 2,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 150,
+    "icon": "JT_Hongshan",
+    "tags": [
+      "Mon.Jt",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade",
+      "Mon.Elite"
     ]
   },
   {
@@ -2300,6 +2914,28 @@
       "Mon.Reward.B",
       "Mon.Strong.Kamikaze",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 8001301,
+    "n": "轉雷·枯萎·凜霜 蒙恩的執事",
+    "t": "Elite_Monster",
+    "f": 4,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 150,
+    "icon": "Jh_Zhishi",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -2427,6 +3063,28 @@
       "Mon.Reward.B",
       "Mon.Strong.Reflect",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 8002301,
+    "n": "掠影·霹靂·舍身 蒙恩的先鋒",
+    "t": "Elite_Monster",
+    "f": 4,
+    "atk": 13.1,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 150,
+    "icon": "Jh_Xianfeng",
+    "tags": [
+      "Mon.Jh",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Kamikaze.Triple",
+      "Mon.Strong.Revenge.Triple",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -2756,6 +3414,20 @@
     ]
   },
   {
+    "id": 8500602,
+    "n": "西比爾",
+    "t": "Boss",
+    "atk": 10,
+    "def": 300,
+    "hp": 11300,
+    "tn": 8400,
+    "icon": "Boss_00_Xibi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8501001,
     "n": "曆戰者",
     "t": "Boss",
@@ -2983,12 +3655,26 @@
     ]
   },
   {
+    "id": 8509602,
+    "n": "？？？",
+    "t": "Boss",
+    "atk": 15,
+    "def": 300,
+    "hp": 6000,
+    "tn": 3000,
+    "icon": "Boss_Tuosi",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
     "id": 8510001,
     "n": "燭陰",
     "t": "Boss",
     "atk": 30,
     "def": 0,
-    "hp": 6000,
+    "hp": 3000,
     "tn": 4500,
     "icon": "Boss_Heilong",
     "tags": [
@@ -3017,7 +3703,7 @@
     "atk": 18,
     "def": 0,
     "hp": 3000,
-    "tn": 4500,
+    "tn": 2000,
     "icon": "Boss_Bailong",
     "tags": [
       "Mon.Boss",
@@ -3031,7 +3717,7 @@
     "atk": 30,
     "def": 300,
     "hp": 3000,
-    "tn": 4500,
+    "tn": 2000,
     "icon": "Boss_Heilong",
     "tags": [
       "Mon.Boss",
@@ -3298,14 +3984,55 @@
     ]
   },
   {
-    "id": 8519001,
-    "n": "列车【远期待包装】",
+    "id": 8518701,
+    "n": "巨闕",
     "t": "Boss",
-    "atk": 15,
+    "atk": 60,
+    "def": 300,
+    "hp": 225000,
+    "tn": 3000,
+    "icon": "Boss_Juque",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A",
+      "Mon.Strong.Thunder"
+    ]
+  },
+  {
+    "id": 8519001,
+    "n": "極光號主炮",
+    "t": "Boss",
+    "atk": 20,
     "def": 0,
-    "hp": 1500,
+    "hp": 3000,
     "tn": 99999,
-    "icon": "Empty",
+    "icon": "Boss_Lieche",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8519501,
+    "n": "極光號主炮",
+    "t": "Boss",
+    "atk": 25,
+    "def": 300,
+    "hp": 3000,
+    "tn": 99999,
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8519504,
+    "n": "仿生列車鐵腕",
+    "t": "Elite_Monster",
+    "atk": 25,
+    "def": 300,
+    "hp": 1250,
+    "tn": 99999,
     "tags": [
       "Mon.Boss",
       "Mon.Reward.A"
@@ -3315,7 +4042,7 @@
     "id": 8520001,
     "n": "艾达【远期待包装】",
     "t": "Boss",
-    "atk": 15,
+    "atk": 25,
     "def": 0,
     "hp": 4000,
     "tn": 0,
@@ -3323,6 +4050,20 @@
     "tags": [
       "Mon.Boss",
       "Mon.Reward.A"
+    ]
+  },
+  {
+    "id": 8521001,
+    "n": "欺惑者哈洛吉",
+    "t": "Boss",
+    "atk": 20,
+    "def": 0,
+    "hp": 6000,
+    "tn": 6000,
+    "icon": "Boss_Qihuo",
+    "tags": [
+      "Mon.Boss",
+      "Mon.Reward"
     ]
   },
   {
@@ -3490,6 +4231,28 @@
     ]
   },
   {
+    "id": 9001301,
+    "n": "浴血·爆破·殘火 野蜂利刃",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 9001601,
     "n": "野蜂利刃",
     "f": 3,
@@ -3503,6 +4266,27 @@
       "Mon.Sq",
       "Mon.Melee",
       "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 9001701,
+    "n": "凜霜·守護 野蜂利刃",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 32,
+    "def": 300,
+    "es": 3268,
+    "hp": 408,
+    "tn": 600,
+    "icon": "SQ_Yinxie",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Frozen.Double",
+      "Mon.Strong.Shield.Double",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -3598,6 +4382,28 @@
     ]
   },
   {
+    "id": 9002301,
+    "n": "掠影·轉雷·猩紅 野蜂暗箭",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 5.56,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 9002601,
     "n": "野蜂暗箭",
     "f": 3,
@@ -3611,6 +4417,27 @@
       "Mon.Sq",
       "Mon.Ranged",
       "Mon.Reward.E"
+    ]
+  },
+  {
+    "id": 9002701,
+    "n": "霹靂·復仇 野蜂暗箭",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 3268,
+    "hp": 408,
+    "tn": 600,
+    "icon": "SQ_Dufeng",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Thunder.Double",
+      "Mon.Strong.Revenge.Double",
+      "Mon.Elite",
+      "Mon.Strong.Double"
     ]
   },
   {
@@ -3650,6 +4477,28 @@
     ]
   },
   {
+    "id": 9003301,
+    "n": "浴血·爆破·守護 「玩具家」",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Wanju",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.Shield.Triple",
+      "Mon.Strong.Burst.Triple",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 9005001,
     "n": "「爆炸狂」",
     "t": "Elite_Monster",
@@ -3683,6 +4532,28 @@
       "Mon.Melee",
       "Mon.Reward.C",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9005301,
+    "n": "掠影·霹靂·殘火 「爆炸狂」",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Baozha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -3722,6 +4593,28 @@
     ]
   },
   {
+    "id": 9006301,
+    "n": "浴血·掠影·凜霜 「欺詐師」",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 12,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 300,
+    "icon": "SQ_Qizha",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.Kamikaze.Triple",
+      "Mon.Strong.Revenge.Triple",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 9007001,
     "n": "野蜂密探",
     "f": 3,
@@ -3753,6 +4646,25 @@
       "Mon.Ranged",
       "Mon.Reward.B",
       "Mon.Strong.IceOrb",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9007021,
+    "n": "舍身 野蜂密探",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Kamikaze",
       "Mon.Elite"
     ]
   },
@@ -3792,6 +4704,51 @@
       "Mon.Reward.B",
       "Mon.Strong.Vampire",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 9007301,
+    "n": "浴血·轉雷·凜霜 野蜂密探",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Strong.ThunderLaser.Triple",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
+    "id": 9007302,
+    "n": "侵蝕·枯萎·凜霜 野蜂密探",
+    "t": "Elite_Monster",
+    "f": 3,
+    "atk": 11,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 600,
+    "icon": "SQ_Niaopao",
+    "tags": [
+      "Mon.Sq",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Strong.Poison.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Strong.Frozen.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple",
+      "Mon.SurvivalPoison"
     ]
   },
   {
@@ -4040,6 +4997,29 @@
     ]
   },
   {
+    "id": 10001301,
+    "n": "霹靂·侵蝕·猩紅 應天侍",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "HX_Tianshi02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.Poison.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple",
+      "Mon.SurvivalPoison"
+    ]
+  },
+  {
     "id": 10002001,
     "n": "應天尉",
     "t": "Elite_Monster",
@@ -4055,6 +5035,29 @@
       "Mon.Melee",
       "Mon.Reward.C",
       "Mon.Elite"
+    ]
+  },
+  {
+    "id": 10002301,
+    "n": "浴血·侵蝕·殘火 應天尉",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 24,
+    "def": 300,
+    "es": 340,
+    "hp": 340,
+    "tn": 600,
+    "icon": "HX_Tianwei",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Thunder.Triple",
+      "Mon.Strong.Poison.Triple",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Elite",
+      "Mon.Strong.Triple",
+      "Mon.SurvivalPoison"
     ]
   },
   {
@@ -4113,6 +5116,27 @@
     ]
   },
   {
+    "id": 10003301,
+    "n": "枯萎·残火·霜狱 玄色狴犴",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 1000,
+    "icon": "HX_Bian01",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Strong.Triple"
+    ]
+  },
+  {
     "id": 10004001,
     "n": "狴犴",
     "t": "Elite_Monster",
@@ -4165,6 +5189,27 @@
       "Mon.Elite",
       "Mon.SoloTreasure.CPoint",
       "Mon.SoloTreasure.CContainer"
+    ]
+  },
+  {
+    "id": 10004301,
+    "n": "枯萎·残火·霜狱 狴犴",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "hp": 510,
+    "tn": 1000,
+    "icon": "HX_Bian02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Ranged",
+      "Mon.Reward.B",
+      "Mon.Elite",
+      "Mon.Strong.IceOrb.Triple",
+      "Mon.Strong.Reflect.Triple",
+      "Mon.Strong.Fade.Triple",
+      "Mon.Strong.Triple"
     ]
   },
   {
@@ -4276,6 +5321,25 @@
       "Mon.Melee",
       "Mon.Reward.B",
       "Mon.Strong.Fade",
+      "Mon.Elite"
+    ]
+  },
+  {
+    "id": 10005017,
+    "n": "守護 失序的應天侍",
+    "t": "Elite_Monster",
+    "f": 5,
+    "atk": 20,
+    "def": 300,
+    "es": 817,
+    "hp": 102,
+    "tn": 150,
+    "icon": "HX_Tianshi02",
+    "tags": [
+      "Mon.Hx",
+      "Mon.Melee",
+      "Mon.Reward.B",
+      "Mon.Strong.Shield",
       "Mon.Elite"
     ]
   },

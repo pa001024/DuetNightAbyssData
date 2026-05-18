@@ -1,4 +1,6 @@
 local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
+local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
+local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local M = Class("BluePrints.Common.MVC.Model")
 
@@ -39,7 +41,11 @@ function M:InitData(PlayerInfo)
   if nil ~= self._PersonID then
     local CharInfo = self:ChangeToCharBattleDumpInfo(PlayerInfo.Char)
     local WeaponInfo = self:ChangeToWeaponBattleDumpInfo(PlayerInfo.Weapon)
-    self.OtherBattleDumpInfo = {Char = CharInfo, Weapon = WeaponInfo}
+    self.OtherBattleDumpInfo = {
+      Char = CharInfo,
+      Weapon = WeaponInfo,
+      WeaponForgeLevel = PlayerInfo.WeaponForgeLevel or 0
+    }
     self.OtherPersonInfo = PlayerInfo
     for i = 1, 3 do
       if self.OtherPersonInfo.Char[i] then
@@ -298,6 +304,7 @@ function M:GetPersonalBaseInfo()
     _ModelInfo.TitleFrame = self._Avatar.TitleFrame
     _ModelInfo.TitleAfter = self._Avatar.TitleAfter
     _ModelInfo.TitleBefore = self._Avatar.TitleBefore
+    self:FillOwnerGuildBaseInfo(_ModelInfo, self._Avatar)
   else
     _ModelInfo.PlayerName = self.OtherPersonInfo.Nickname
     _ModelInfo.PlayerSignature = self.OtherPersonInfo.Signature
@@ -308,6 +315,7 @@ function M:GetPersonalBaseInfo()
     _ModelInfo.TitleFrame = self.OtherPersonInfo.TitleFrame
     _ModelInfo.TitleAfter = self.OtherPersonInfo.TitleAfter
     _ModelInfo.TitleBefore = self.OtherPersonInfo.TitleBefore
+    self:FillGuildBaseInfo(_ModelInfo, self.OtherPersonInfo)
   end
   return _ModelInfo
 end
@@ -551,15 +559,33 @@ function M:GetDisplayWeaponInfos()
   return WeaponInfos
 end
 
+function M:GetAvatarForgeLevel()
+  local WeaponForgeLevel = 0
+  if self:IsOwener() then
+    local Avatar = GWorld:GetAvatar()
+    WeaponForgeLevel = Avatar.WeaponForgeLevel
+  else
+    WeaponForgeLevel = self.OtherBattleDumpInfo.WeaponForgeLevel
+  end
+  return WeaponForgeLevel
+end
+
 function M:ChangeToCharBattleDumpInfo(CharInfos)
   local Chars = {}
   for i, CharInfo in ipairs(CharInfos) do
+    local Appearance = CharInfo.Appearance or {}
+    local CurrentPlanIndex = Appearance.CurrentPlanIndex or 1
     local AppearanceSuit = {
-      Colors = CharInfo.Appearance.SkinColors[CharInfo.Appearance.CurrentPlanIndex],
-      SkinId = CharInfo.Appearance.SkinId,
-      AccessorySuit = CharInfo.Appearance.Accessory,
-      HairId = CharInfo.Appearance.HairId,
-      HairColors = CharInfo.Appearance.HairColors
+      Colors = Appearance.SkinColors and Appearance.SkinColors[CurrentPlanIndex],
+      SkinId = Appearance.SkinId,
+      SkinLevel = Appearance.SkinSelectedLevel or Appearance.SkinLevel or 1,
+      AccessorySuit = Appearance.Accessory or {},
+      AccessoryCustomParams = Appearance.AccessoryCustomParams or {},
+      HairId = Appearance.HairId,
+      HairColors = Appearance.HairColors,
+      IsShowPartMesh = Appearance.IsShowPartMesh,
+      IsCornerVisible = Appearance.IsCornerVisible,
+      CharId = CharInfo.CharId
     }
     local SkillInfos = {}
     for _, Skill in ipairs(CharInfo.Skills) do
@@ -651,10 +677,12 @@ function M:ChangeToWeaponBattleDumpInfo(WeaponInfos)
       WeaponId = WeaponInfo.WeaponId,
       Level = WeaponInfo.Level,
       GradeLevel = WeaponInfo.GradeLevel,
+      HyperCardLevel = WeaponInfo.HyperCardLevel,
       EnhanceLevel = WeaponInfo.EnhanceLevel,
       SlotData = SlotData,
       ModData = ModData,
-      ModSuitIndex = 1
+      ModSuitIndex = 1,
+      HyperTalent = WeaponInfo.HyperTalent
     }
     table.insert(Weapons, Weapon)
   end
@@ -743,7 +771,8 @@ function M:GetFakeAvatar()
         self.OtherBattleDumpInfo.Weapon[1],
         self.OtherBattleDumpInfo.Weapon[2],
         self.OtherBattleDumpInfo.Weapon[3]
-      }
+      },
+      WeaponForgeLevel = self.OtherBattleDumpInfo.WeaponForgeLevel
     })
     ArmoryUtils:SwitchPreviewTargetState(ArmoryUtils.PreviewTargetStates.Custom)
     local Avatar = ArmoryUtils:GetAvatar()
@@ -852,6 +881,96 @@ function M:BuildGuildWarHistorySelfRank(TopNInfo)
     UpdateTime = First.UpdateTime,
     PreRaidGroupId = First.PreRaidGroupId
   }
+end
+
+function M:FillGuildBaseInfo(TargetInfo, SourceInfo)
+  if type(TargetInfo) ~= "table" or type(SourceInfo) ~= "table" then
+    return
+  end
+  TargetInfo.GuildId = tonumber(SourceInfo.GuildId or 0) or 0
+  TargetInfo.GuildSimpleInfo = SourceInfo.GuildSimpleInfo
+  TargetInfo.GuildName = SourceInfo.GuildName
+  TargetInfo.GuildLogoInfo = SourceInfo.GuildLogoInfo
+  TargetInfo.GuildLogo = SourceInfo.GuildLogo
+end
+
+function M:FillOwnerGuildBaseInfo(TargetInfo, Avatar)
+  if type(TargetInfo) ~= "table" or type(Avatar) ~= "table" then
+    return
+  end
+  TargetInfo.GuildId = tonumber(Avatar.GuildId or 0) or 0
+  if TargetInfo.GuildId <= 0 then
+    return
+  end
+  local CurrGuild = GuildController:GetModel():GetCurrGuild()
+  if type(CurrGuild) ~= "table" then
+    return
+  end
+  TargetInfo.GuildSimpleInfo = CurrGuild
+  TargetInfo.GuildName = CurrGuild.Name
+  TargetInfo.GuildLogoInfo = CurrGuild.LogoInfo
+  TargetInfo.GuildLogo = CurrGuild.LogoInfo
+end
+
+local function GetGuildDisplayData(SourceInfo)
+  if type(SourceInfo) ~= "table" then
+    return 0, "", nil, nil
+  end
+  local GuildSimpleInfo = "table" == type(SourceInfo.GuildSimpleInfo) and SourceInfo.GuildSimpleInfo or nil
+  local GuildId = tonumber(GuildSimpleInfo and (GuildSimpleInfo.GuildId or GuildSimpleInfo.GuildID or GuildSimpleInfo.Id) or SourceInfo.GuildId or SourceInfo.GuildID or 0) or 0
+  local GuildName = GuildSimpleInfo and (GuildSimpleInfo.Name or GuildSimpleInfo.GuildName) or SourceInfo.GuildName or ""
+  local GuildLogo = GuildSimpleInfo and (GuildSimpleInfo.LogoInfo or GuildSimpleInfo.Logo or GuildSimpleInfo.GuildLogoInfo or GuildSimpleInfo.GuildLogo) or SourceInfo.GuildLogoInfo or SourceInfo.GuildLogo
+  return GuildId, GuildName, GuildLogo, GuildSimpleInfo
+end
+
+function M:GetOtherPersonGuildId()
+  if self:IsOwener() or type(self.OtherPersonInfo) ~= "table" then
+    return 0
+  end
+  local GuildId = select(1, GetGuildDisplayData(self.OtherPersonInfo))
+  return GuildId
+end
+
+function M:HasOtherPersonGuildDisplayInfo()
+  if self:IsOwener() or type(self.OtherPersonInfo) ~= "table" then
+    return false
+  end
+  local GuildId, GuildName, GuildLogo = GetGuildDisplayData(self.OtherPersonInfo)
+  if GuildId <= 0 then
+    return true
+  end
+  if "" == GuildName then
+    return false
+  end
+  return GuildLogoInfo.Parse(GuildLogo) ~= nil
+end
+
+function M:ShouldRequestOtherGuildSimpleInfo()
+  if self:IsOwener() then
+    return false
+  end
+  local GuildId = self:GetOtherPersonGuildId()
+  if GuildId <= 0 then
+    return false
+  end
+  return not self:HasOtherPersonGuildDisplayInfo()
+end
+
+function M:ApplyOtherGuildSimpleInfo(GuildSimpleInfo)
+  if self:IsOwener() or type(self.OtherPersonInfo) ~= "table" or type(GuildSimpleInfo) ~= "table" then
+    return false
+  end
+  local CurrentGuildId = self:GetOtherPersonGuildId()
+  local NewGuildId = tonumber(GuildSimpleInfo.GuildId or 0) or 0
+  if CurrentGuildId <= 0 or NewGuildId <= 0 or CurrentGuildId ~= NewGuildId then
+    return false
+  end
+  self.OtherPersonInfo.GuildId = NewGuildId
+  self.OtherPersonInfo.GuildSimpleInfo = GuildSimpleInfo
+  self.OtherPersonInfo.GuildName = GuildSimpleInfo.Name or self.OtherPersonInfo.GuildName
+  self.OtherPersonInfo.GuildLogoInfo = GuildSimpleInfo.LogoInfo or self.OtherPersonInfo.GuildLogoInfo
+  self.OtherPersonInfo.GuildLogo = GuildSimpleInfo.LogoInfo or GuildSimpleInfo.Logo or self.OtherPersonInfo.GuildLogo
+  return true
 end
 
 return M

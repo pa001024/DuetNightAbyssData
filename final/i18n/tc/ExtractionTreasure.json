@@ -285,7 +285,7 @@
     ],
     "type": 5,
     "rarity": 6,
-    "value": 0
+    "value": 100
   },
   {
     "id": 100131,
@@ -297,7 +297,7 @@
     ],
     "type": 5,
     "rarity": 6,
-    "value": 0
+    "value": 100
   },
   {
     "id": 100132,
@@ -309,6 +309,6 @@
     ],
     "type": 5,
     "rarity": 6,
-    "value": 0
+    "value": 100
   }
 ]

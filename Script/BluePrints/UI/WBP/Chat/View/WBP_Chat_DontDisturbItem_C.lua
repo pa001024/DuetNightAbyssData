@@ -36,6 +36,9 @@ function M:OnListItemObjectSet(Content)
     self:SetClickCallback(Content.ClickCallback, Content.ClickCallbackObj)
   end
   Content.UI = self
+  if Content.EnableHover ~= nil then
+    self:SetEnableHover(Content.EnableHover)
+  end
   if self.ChannelId == nil then
     self.WS_Item:SetActiveWidgetIndex(1)
   end

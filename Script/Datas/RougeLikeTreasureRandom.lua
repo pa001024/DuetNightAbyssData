@@ -4,14 +4,16 @@ T.RT_1 = {
   3,
   10304,
   10305,
-  10310
+  10310,
+  10220
 }
 T.RT_2 = {1}
 T.RT_3 = {
   2,
   10304,
   10305,
-  10310
+  10310,
+  10220
 }
 T.RT_4 = {2}
 T.RT_5 = {3}
@@ -31,7 +33,8 @@ T.RT_9 = {
   10108,
   10304,
   10305,
-  10310
+  10310,
+  10220
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -212,5 +215,22 @@ return ReadOnly("RougeLikeTreasureRandom", {
     RandomType = 2,
     TreasureRandom = 27,
     TreasureRarity = T.RT_5
+  },
+  [28] = {
+    Designated = 10220,
+    ExcludeGroup = {
+      2,
+      3,
+      4,
+      10211,
+      102,
+      10108,
+      10304,
+      10305,
+      10310
+    },
+    RandomType = 3,
+    TreasureRandom = 28,
+    TreasureRarity = T.RT_4
   }
 })

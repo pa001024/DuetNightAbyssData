@@ -109,5 +109,45 @@
     "access": [
       "Boutique"
     ]
+  },
+  {
+    "id": 1008,
+    "name": "Trône de contemplation",
+    "des": "J’ai entendu les appels de la loyauté et vu les étoiles se consumer.",
+    "icon": "Mounts_0009",
+    "resourceIcon": "Icon_Mounts_0009",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49991,
+    "fly": 1,
+    "access": [
+      "Boutique"
+    ]
+  },
+  {
+    "id": 1009,
+    "name": "Nekral",
+    "des": "Le voile de la nuit recouvre ciel et terre, tandis qu’un sifflement rauque résonne dans l’obscurité.",
+    "icon": "Mounts_0011",
+    "resourceIcon": "Icon_Mounts_0011",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49990,
+    "access": [
+      "Échange à durée limitée dans Boutique > Prismes"
+    ]
+  },
+  {
+    "id": 1010,
+    "name": "Vers les ténèbres",
+    "des": "Deux ailes d’un noir absolu déchirent la nuit et s’élancent silencieusement vers une rive que même la lumière de la lune ne peut atteindre.",
+    "icon": "Mounts_0010",
+    "resourceIcon": "Icon_Mounts_0010",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49989,
+    "access": [
+      "Échange à durée limitée dans Boutique > Prismes"
+    ]
   }
 ]

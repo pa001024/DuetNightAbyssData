@@ -5,24 +5,49 @@ local M = Class({
 })
 local FirstInitTime = 0.25
 
-function M:Init(InSelectUI, InItem, OptionIdx, ListIdx)
-  self.SelectUI = InSelectUI
-  self.Item = InItem
+local function ParseInitParams(Params)
+  local InitParams = Params or {}
+  return {
+    SelectUI = InitParams.SelectUI,
+    OptionText = InitParams.OptionText or InitParams.Text,
+    OptionIdx = InitParams.OptionIdx or InitParams.Index,
+    ListIdx = InitParams.ListIdx,
+    bIsSelected = InitParams.bIsSelected == true,
+    bCanReselect = true == InitParams.bCanReselect,
+    OnItemClickedDelegate = InitParams.OnItemClickedDelegate,
+    OnItemClickStartDelegate = InitParams.OnItemClickStartDelegate
+  }
+end
+
+function M:Init(Params)
+  local InitParams = ParseInitParams(Params)
+  self.SelectUI = InitParams.SelectUI
   self.OutAnimFinishedInfo = nil
-  self.OptionIdx = OptionIdx
-  self.ListIdx = ListIdx
+  self.OptionIdx = InitParams.OptionIdx
+  self.ListIdx = InitParams.ListIdx
+  self.bCanReselect = InitParams.bCanReselect
+  self.OnItemClickedDelegate = InitParams.OnItemClickedDelegate
+  self.OnItemClickStartDelegate = InitParams.OnItemClickStartDelegate
   self:InitPlatform()
   self:InitKey()
-  self:InitText()
-  self:SwitchPlayInAnimation(InItem)
+  self:InitText(InitParams.OptionText)
+  self:SwitchPlayInAnimation(InitParams.bIsSelected)
   self:BindAnimationEvents()
   self:AddTimer(FirstInitTime, function()
     self:BindMouseTriggerEvents()
   end, false, 0, "BindMouseTriggerEvents", true)
 end
 
-function M:InitText()
-  self.Text_Talk:SetText(self.Item.OptionTopic)
+function M:FireDelegate(Delegate, ...)
+  if Delegate and Delegate[1] and Delegate[2] then
+    Delegate[2](Delegate[1], ...)
+    return true
+  end
+  return false
+end
+
+function M:InitText(OptionText)
+  self.Text_Talk:SetText(OptionText)
 end
 
 function M:InitPlatform()
@@ -66,11 +91,11 @@ function M:ShowKey(bShow)
 end
 
 function M:BindMouseTriggerEvents()
-  self.Button_Area.OnClicked:Add(self, self.OnItemClicked)
-  self.Button_Area.OnHovered:Add(self, self.OnItemHovered)
-  self.Button_Area.OnUnhovered:Add(self, self.OnItemUnhovered)
-  self.Button_Area.OnPressed:Add(self, self.OnItemPressed)
-  self.Button_Area.OnReleased:Add(self, self.OnItemReleased)
+  self.Button_Area.OnClicked:Add(self, self.OnClicked)
+  self.Button_Area.OnHovered:Add(self, self.OnHovered)
+  self.Button_Area.OnUnhovered:Add(self, self.OnUnhovered)
+  self.Button_Area.OnPressed:Add(self, self.OnPressed)
+  self.Button_Area.OnReleased:Add(self, self.OnReleased)
 end
 
 function M:UnBindAllEvents()
@@ -83,12 +108,11 @@ end
 
 function M:Clear()
   self:UnBindAllEvents()
-  self:StopListeningForInputAction("TalkOption", EInputEvent.IE_Pressed)
   self:CleanTimer()
 end
 
-function M:SwitchPlayInAnimation(InItem)
-  if InItem.bIsSelected then
+function M:SwitchPlayInAnimation(bIsSelected)
+  if bIsSelected then
     self.bIsSelected = true
     self:PlayAnimation(self.Read)
   else
@@ -105,37 +129,33 @@ function M:BindAnimationEvents()
 end
 
 function M:OnClickAnimationFinished()
-  if self.bIsSelected and not self.Item.bCanReselect then
+  if self.bIsSelected and not self.bCanReselect then
     return
   end
-  self.SelectUI:OnItemClicked(self.OptionIdx)
+  self:FireDelegate(self.OnItemClickedDelegate, self.OptionIdx)
 end
 
-function M:OnItemClicked()
-  DebugPrint("OnItemClicked", self)
-  if self.bIsSelected and not self.Item.bCanReselect then
+function M:OnClicked()
+  if self.bIsSelected and not self.bCanReselect then
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", "", nil)
     self:StopAllAnimations()
     self:PlayAnimation(self.Read_Click)
     local TalkContext = GWorld.GameInstance:GetTalkContext()
     TalkContext:TalkShowUITip("CommonToastMain", "Impression_UI_Read")
   else
-    self:StopListeningForInputAction("TalkOption", EInputEvent.IE_Pressed)
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", "", nil)
     self:StopAllAnimations()
     self:PlayAnimation(self.Click)
     self:UnBindAllEvents()
-    self.SelectUI:OnItemClickStart()
+    self:FireDelegate(self.OnItemClickStartDelegate)
   end
 end
 
-function M:OnItemHovered()
-  DebugPrint("OnItemHovered", self)
+function M:OnHovered()
   self.SelectUI:SelectNewItem(self.ListIdx)
 end
 
-function M:OnItemUnhovered()
-  DebugPrint("OnItemUnhovered", self)
+function M:OnUnhovered()
   if self.bInMobile then
     return
   end
@@ -147,34 +167,16 @@ function M:OnItemUnhovered()
   end
 end
 
-function M:OnItemPressed()
-  DebugPrint("OnItemPressed", self)
+function M:OnPressed()
   self:StopAllAnimations()
   self:PlayAnimation(self.Press)
 end
 
-function M:OnItemReleased()
-  DebugPrint("OnItemReleased", self)
-  if self.bInMobile then
-    self:PlayAnimation(self.Normal)
-  end
+function M:OnReleased()
 end
 
 function M:OnSelectItem(bIsDefault)
   DebugPrint("OnSelectItem", self, bIsDefault)
-  if bIsDefault then
-    self:AddTimer(FirstInitTime, function()
-      self:ListenForInputAction("TalkOption", EInputEvent.IE_Pressed, false, {
-        self,
-        self.OnItemClicked
-      })
-    end, false, 0, "OnSelectItem", true)
-  else
-    self:ListenForInputAction("TalkOption", EInputEvent.IE_Pressed, false, {
-      self,
-      self.OnItemClicked
-    })
-  end
   if not self.bInMobile then
     self:PlayAnimation(self.Hover)
   end
@@ -183,8 +185,6 @@ end
 
 function M:OnUnselectItem()
   DebugPrint("OnUnselectItem", self)
-  self:StopListeningForInputAction("TalkOption", EInputEvent.IE_Pressed)
-  self:RemoveTimer("OnSelectItem", true)
   if not self.bInMobile then
     self:PlayAnimation(self.UnHover)
   end

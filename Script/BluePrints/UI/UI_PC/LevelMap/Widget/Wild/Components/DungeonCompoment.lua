@@ -157,7 +157,23 @@ function Component:InitInDungeonMap()
     self.WheelMaxScale = self.RegionData.RegionMapWheelScale[2]
   end
   self.CurrentFloorId = self.MaxFloorId
-  self.Panel_Bg:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.Panel_Bg:SetVisibility(ESlateVisibility.HitTestInvisible)
+  if self.ColorBg then
+    self.ColorBg:RemoveFromParent()
+    self.ColorBg = nil
+  end
+  if self.RegionData.BgBlueprintPath then
+    self.ColorBg = UIManager(self):CreateWidgetAsync(nil, self.CoroutineInitObj, self.RegionData.BgBlueprintPath)
+  end
+  if self.ColorBg then
+    self.Panel_Bg:AddChild(self.ColorBg)
+    local Anchors = self.ColorBg.Slot:GetAnchors()
+    Anchors.Minimum = UKismetMathLibrary.Vector2D_Zero()
+    Anchors.Maximum = UKismetMathLibrary.Vector2D_One()
+    self.ColorBg.Slot:SetAnchors(Anchors)
+    self.ColorBg.Slot:SetAutoSize(true)
+    self.ColorBg.Slot:SetOffsets(FMargin())
+  end
   self.BackgroundBlur:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self:PlayAnimation(self.Auto_In)
   self.BackgroundScale = FVector2D(self.BackgroundMinScale.X, self.BackgroundMinScale.Y)

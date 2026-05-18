@@ -39,7 +39,9 @@ end
 
 function Component:MultiCastSetCharacterTagAfterMaxTN_Implementation(CharacterTag)
   if "Idle" == CharacterTag then
-    self.IsBossDefeated = false
+    if self.SetIsBossDefeated_MD then
+      self:SetIsBossDefeated_MD(false)
+    end
     local CondemnPath = self:GetCondemnMontagePath("CondemnEnd_Montage")
     local AnimTime = self:PlayMontageByPath(CondemnPath) or 0
     AnimTime = math.max(0, AnimTime - 0.25)
@@ -65,7 +67,9 @@ function Component:DefeatedRecoverToIdle(RecoverMaxTN)
   if not self:CharacterInTag("Defeated") then
     return
   end
-  self.IsBossDefeated = false
+  if self.SetIsBossDefeated_MD then
+    self:SetIsBossDefeated_MD(false)
+  end
   if self:GetAttr("Hp") > 0 then
     if RecoverMaxTN then
       self:TriggerRecoverMaxTNEvent()
@@ -99,7 +103,9 @@ function Component:SetCharacterDefeatedTag()
   end
   if not self:CharacterInTag("Defeated") then
     self.EnterDefeatedCount = self.EnterDefeatedCount and self.EnterDefeatedCount + 1 or 1
-    self.IsBossDefeated = true
+    if self.SetIsBossDefeated_MD then
+      self:SetIsBossDefeated_MD(true)
+    end
     self:SetCharacterTag("Defeated")
     self:MulticastSetCharacterTagOnHitLogic("Defeated", true)
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)

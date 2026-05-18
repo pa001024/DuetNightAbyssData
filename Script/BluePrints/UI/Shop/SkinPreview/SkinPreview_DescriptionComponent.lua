@@ -47,8 +47,14 @@ function M:UpdateCharSkinDescription(SkinInfo)
     local AttributeIcon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
     self.Image_Element:SetBrushResourceObject(AttributeIcon)
     self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
   if self.Avatar:CheckCharEnough({
     [SkinData.CharId] = 1
@@ -73,7 +79,6 @@ function M:UpdateHairDescription(SkinInfo)
   self:HideZoomKey(false)
   self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.HorizontalBox_Color:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
   self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
   local AccessoryIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Fashion_Hair.T_Tab_Fashion_Hair"
@@ -81,8 +86,19 @@ function M:UpdateHairDescription(SkinInfo)
     local AccessoryIcon = LoadObject(AccessoryIconPath)
     self.Image_Element:SetBrushResourceObject(AccessoryIcon)
     self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
+  if HairData.IsCommon == true then
+    self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
+  else
+    self.HorizontalBox_Color:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
 end
 
@@ -107,8 +123,14 @@ function M:UpdateCharAccessoryDescription(SkinInfo)
     local AccessoryIcon = LoadObject(AccessoryIconPath)
     self.Image_Element:SetBrushResourceObject(AccessoryIcon)
     self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 
@@ -136,8 +158,14 @@ function M:UpdateCharGestureDescription(SkinInfo)
   if GestureIcon then
     self.Image_Element:SetBrushResourceObject(GestureIcon)
     self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 
@@ -165,8 +193,14 @@ function M:UpdateWeaponSkinDescription(SkinInfo)
     local TagIcon = LoadObject(WeaponTypeInfo.Icon)
     self.Image_Element:SetBrushResourceObject(TagIcon)
     self.Image_Element:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self.Image_Element:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 
@@ -184,6 +218,9 @@ function M:UpdateWeaponAccessoryDescription(SkinInfo)
   self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
   self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  if self.BG_Icon then
+    self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
   self.Tab_Change:SetVisibility(ESlateVisibility.Visible)
   self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
@@ -204,7 +241,6 @@ function M:UpdateMountDescription(ItemData)
   self:UpdateSkinNameFontByRarity(MountData.MountRarity)
   self.WBP_Mounts:SetVisibility(ESlateVisibility.Collapsed)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
   self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
   self.HorizontalBox_Color:SetVisibility(ESlateVisibility.Collapsed)
   local MountIconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Mounts.T_Tab_Mounts"
@@ -212,8 +248,14 @@ function M:UpdateMountDescription(ItemData)
     local MountIcon = LoadObject(MountIconPath)
     self.Image_Element:SetBrushResourceObject(MountIcon)
     self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+    if self.BG_Icon then
+      self.BG_Icon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 

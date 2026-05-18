@@ -455,7 +455,7 @@ return ReadOnly("EventTab", {
     EventTabId = 53,
     EventTabName = "Event_Tab_114001",
     ReddotNode = "Acti_ComeBackTab",
-    Sequence = 101
+    Sequence = 99999
   },
   [54] = {
     EventId = {103019},
@@ -645,6 +645,203 @@ return ReadOnly("EventTab", {
     ReddotNode = "Acti_Abyss02",
     Sequence = 1301
   },
+  [75] = {
+    EventId = {101012},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_SevenDayFuluo.T_Activity_Tab_Head_SevenDayFuluo",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_SevenDayFuluo.T_Activity_Tab_Sign_SevenDayFuluo",
+    EventTabId = 75,
+    EventTabName = "Event_Tab_101012",
+    ReddotNode = "Acti_SignInFuluo",
+    Sequence = 1419
+  },
+  [76] = {
+    EventId = {101013},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_SevenDayXier.T_Activity_Tab_Head_SevenDayXier",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_SevenDayXier.T_Activity_Tab_Sign_SevenDayXier",
+    EventTabId = 76,
+    EventTabName = "Event_Tab_101013",
+    ReddotNode = "Acti_SignInXier",
+    Sequence = 1419
+  },
+  [77] = {
+    EventId = {10300602},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_JJGame.T_Activity_Tab_Head_JJGame",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_JJGame.T_Activity_Tab_Sign_JJGame",
+    EventTabId = 77,
+    EventTabName = "Event_Tab_103006",
+    ReddotNode = "Acti_JJGame",
+    Sequence = 1410
+  },
+  [78] = {
+    EventId = {105101020},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_TryOut_Fuluo",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_TryOut_Fuluo",
+    EventTabId = 78,
+    EventTabName = "Event_Tab_CharTrialEvent",
+    ReddotNode = "Acti_TrailFuluoChar",
+    Sequence = 1416
+  },
+  [79] = {
+    EventId = {105101021},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_TryOut_Xier",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_TryOut_Xier",
+    EventTabId = 79,
+    EventTabName = "Event_Tab_CharTrialEvent",
+    ReddotNode = "Acti_TrailXierChar",
+    Sequence = 1414
+  },
+  [80] = {
+    EventId = {105102022},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_TryOut_Fuluo01",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_TryOut_Fuluo01",
+    EventTabId = 80,
+    EventTabName = "Event_Tab_FuluoSkinTrialEvent",
+    ReddotNode = "Acti_TrailFuluoSkin01",
+    Sequence = 1417
+  },
+  [81] = {
+    EventId = {103022},
+    EventTabBg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Permanent_01.T_Activity_Tab_Head_Permanent_01'",
+    EventTabIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Permanent_01.T_Activity_Tab_Sign_Permanent_01'",
+    EventTabId = 81,
+    EventTabName = "Event_Tab_103022",
+    ReddotNode = "Acti_PermanentReward",
+    Sequence = 9998
+  },
+  [82] = {
+    EventId = {101014},
+    EventTabBg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_14DaySign.T_Activity_Tab_Head_14DaySign'",
+    EventTabIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_14DaySign.T_Activity_Tab_Sign_14DaySign'",
+    EventTabId = 82,
+    EventTabName = "Event_Tab_101014",
+    ReddotNode = "Acti_SignIn14",
+    Sequence = 9997
+  },
+  [83] = {
+    EventId = {1030029},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Abyss.T_Activity_Tab_Head_Abyss",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Abyss.T_Activity_Tab_Sign_Abyss",
+    EventTabId = 83,
+    EventTabName = "Abyss_entry",
+    ReddotNode = "Acti_Abyss02",
+    Sequence = 1402
+  },
+  [84] = {
+    EventId = {1030030},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Abyss.T_Activity_Tab_Head_Abyss",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Abyss.T_Activity_Tab_Sign_Abyss",
+    EventTabId = 84,
+    EventTabName = "Abyss_entry",
+    ReddotNode = "Acti_Abyss02",
+    Sequence = 1401
+  },
+  [85] = {
+    EventId = {10301101},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Theater.T_Activity_Tab_Head_Theater",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_Theater.T_Activity_Tab_Sign_Theater",
+    EventTabId = 85,
+    EventTabName = "Event_Tab_10301101",
+    ReddotNode = "Acti_Theater",
+    Sequence = 1401
+  },
+  [86] = {
+    EventId = {105102023},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_TryOut_Shuimu02",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_TryOut_Shuimu02",
+    EventTabId = 86,
+    EventTabName = "Event_Tab_shuimuhunshaSkinTrialEvent",
+    ReddotNode = "Acti_TrailShuimuSkin02",
+    Sequence = 1418
+  },
+  [87] = {
+    EventId = {112003},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_OnlineTime.T_Activity_Tab_Head_OnlineTime",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_OnlineTime.T_Activity_Tab_Sign_OnlineTime",
+    EventTabId = 87,
+    EventTabName = "Event_Tab_112001",
+    ReddotNode = "Acti_OnlineTime",
+    Sequence = 1411
+  },
+  [88] = {
+    EventId = {109003},
+    EventTabBg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_SpecialPage_Eve.T_Activity_Tab_Head_SpecialPage_Eve'",
+    EventTabIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_SpecialPage_Eve.T_Activity_Tab_Sign_SpecialPage_Eve'",
+    EventTabId = 88,
+    EventTabName = "Event_Tab_109003",
+    ReddotNode = "Acti_WebJumpEvent01",
+    Sequence = 1407
+  },
+  [89] = {
+    EventId = {101015},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_WarmUp_Eve.T_Activity_Tab_Head_WarmUp_Eve",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_WarmUp_Eve.T_Activity_Tab_Sign_WarmUp_Eve",
+    EventTabId = 89,
+    EventTabName = "Event_Tab_101015",
+    ReddotNode = "Acti_SignInYure",
+    Sequence = 1408
+  },
+  [90] = {
+    EventId = {103009006},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_DoubleMod.T_Activity_Tab_Head_DoubleMod",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_DoubleMod.T_Activity_Tab_Sign_DoubleMod",
+    EventTabId = 90,
+    EventTabName = "Event_Tab_103009001",
+    ReddotNode = "Acti_DoubleMod140",
+    Sequence = 1404
+  },
+  [91] = {
+    EventId = {103009007},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_DoubleMod.T_Activity_Tab_Head_DoubleMod",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_DoubleMod.T_Activity_Tab_Sign_DoubleMod",
+    EventTabId = 91,
+    EventTabName = "Event_Tab_103009001",
+    ReddotNode = "Acti_DoubleMod145",
+    Sequence = 1410
+  },
+  [92] = {
+    EventId = {102002},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_WorldExplore_V14_Season01",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_WorldExplore_V14_Season01",
+    EventTabId = 92,
+    EventTabName = "Event_Tab_102002",
+    ReddotNode = "Acti_Chezhan",
+    Sequence = 1406
+  },
+  [93] = {
+    EventId = {10302001},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_AccessoryDrop.T_Activity_Tab_Head_AccessoryDrop",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_AccessoryDrop.T_Activity_Tab_Sign_AccessoryDrop",
+    EventTabId = 93,
+    EventTabName = "Event_Title_103020",
+    ReddotNode = "Acti_AccessoryDrop01",
+    Sequence = 1403
+  },
+  [94] = {
+    EventId = {103023},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_InviteCode.T_Activity_Tab_Head_InviteCode",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_InviteCode.T_Activity_Tab_Sign_InviteCode",
+    EventTabId = 94,
+    EventTabName = "Event_Tab_103019",
+    Sequence = 1485
+  },
+  [95] = {
+    EventId = {10302101},
+    EventTabBg = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_LimitedPrizePool_Nun.T_Activity_Tab_Head_LimitedPrizePool_Nun'",
+    EventTabIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_LimitedPrizePool_Nun.T_Activity_Tab_Sign_LimitedPrizePool_Nun'",
+    EventTabId = 95,
+    EventTabName = "Event_Title_10302101",
+    ReddotNode = "Acti_LimitedPrizeTab",
+    Sequence = 1415
+  },
+  [96] = {
+    EventId = {103024},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_SkinCollect.T_Activity_Tab_Head_SkinCollect",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_SkinCollect.T_Activity_Tab_Sign_SkinCollect",
+    EventTabId = 96,
+    EventTabName = "Event_Title_103024",
+    ReddotNode = "Acti_SkinCollectTab",
+    Sequence = 1416
+  },
   [111002] = {
     EventId = {111002},
     EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_GuildWar.T_Activity_Tab_Head_GuildWar",
@@ -662,5 +859,23 @@ return ReadOnly("EventTab", {
     EventTabName = "Event_Raid_Title",
     ReddotNode = "Acti_SoloRaid",
     Sequence = 1313
+  },
+  [111004] = {
+    EventId = {111004},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_GuildWar.T_Activity_Tab_Head_GuildWar",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_GuildWar.T_Activity_Tab_Sign_GuildWar",
+    EventTabId = 111004,
+    EventTabName = "Event_Raid_Title",
+    ReddotNode = "Acti_SoloRaid",
+    Sequence = 1413
+  },
+  [121001] = {
+    EventId = {121001},
+    EventTabBg = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Head_Coop.T_Activity_Tab_Head_Coop",
+    EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_TryOut_Coop.T_Activity_Tab_Sign_TryOut_Coop",
+    EventTabId = 121001,
+    EventTabName = "UI_AsyncCombat_CombatRoom",
+    ReddotNode = "Acti_AsyncCombatTab",
+    Sequence = 1415
   }
 })

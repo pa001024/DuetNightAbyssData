@@ -157,6 +157,7 @@ function M:UpdateCurrentDungeonSquad(Index)
       self.CurSelectContent = nil
     end
     self.Btn_Build:ForbidBtn(true)
+    self.Btn_Build:UnBindEventOnClickedByObj(self)
     self.Btn_Build:BindForbidStateExecuteEvent(self, self.OnForbiddenBtnClicked)
   end
   

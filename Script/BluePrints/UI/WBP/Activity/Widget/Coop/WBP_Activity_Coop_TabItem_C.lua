@@ -1,0 +1,252 @@
+require("UnLua")
+local M = Class("BluePrints.UI.BP_EMUserWidget_C")
+
+function M:Update(Idx, Info)
+  self.Info = Info
+  Info.UI = self
+  self.Idx = Idx
+  if self.Reddot then
+    self:SetReddot(Info.IsNew, Info.ShowRedDot)
+  end
+  if self.Reddot_Num then
+    self:SetReddotNum(Info.ShowRedDotNum)
+  end
+  self.bClickEnable = not Info.IsForbidden
+  if not self.bClickEnable then
+    self:PlayAnimation(self.Forbidden)
+  end
+  self.IsOn = Info.IsOn
+  if Info.IsOn then
+    if self:IsAnimationPlaying(self.UnHover) then
+      self:StopAnimation(self.UnHover)
+    end
+    self:PlayAnimation(self.Click, 0, 1, 0, 1000)
+  else
+    self:PlayAnimation(self.Normal, 0, 1, 0, 1000)
+  end
+  if self.Info.BindReddotNode then
+    local ReddotNodeName = self.Info.BindReddotNode
+    ReddotManager.RemoveListener(ReddotNodeName, self)
+    ReddotManager.AddListener(ReddotNodeName, self, function(self, Count, RdType, RdName)
+      if Count > 0 then
+        if RdType == EReddotType.Normal then
+          self:SetReddot(false, true)
+        elseif RdType == EReddotType.New then
+          self:SetReddot(true, false)
+        end
+      else
+        self:SetReddot(false, false)
+      end
+    end)
+  end
+end
+
+function M:SetIconPath(IconPath)
+  if IconPath then
+    local Icon = LoadObject(IconPath)
+    local Material = self.Img_Icon:GetDynamicMaterial()
+    Material:SetTextureParameterValue("Mask", Icon)
+  end
+end
+
+function M:GetTabId()
+  return self.Info.TabId
+end
+
+function M:GetTabIndex()
+  return self.Idx
+end
+
+function M:Update_LineEffect(InGeometry, MouseEvent)
+  if self.IsOn or not self.bClickEnable then
+    return
+  end
+  local ScreenSpacePosition = UE4.UKismetInputLibrary.PointerEvent_GetScreenSpacePosition(MouseEvent)
+  local Scale = UE4.UWidgetLayoutLibrary.GetViewportScale(self)
+  local thisPos = UE4.USlateBlueprintLibrary.AbsoluteToLocal(InGeometry, ScreenSpacePosition) * Scale
+  local halfSizeX, MatFactor = self.ItemSize.X * 0.5, 0
+  if halfSizeX > thisPos.X then
+    MatFactor = math.max(0, 0.4 - thisPos.X / halfSizeX * 0.4)
+  else
+    MatFactor = math.max(-0.4, -0.4 * (thisPos.X - halfSizeX) / halfSizeX)
+  end
+  local VXLineMat = self.VX_Line:GetDynamicMaterial()
+  VXLineMat:SetScalarParameterValue("Mask_U_offset", MatFactor)
+end
+
+function M:SetSwitchOn(IsOn, IsNeedPressAnim)
+  self.IsOn = IsOn
+  if IsOn then
+    if self:IsAnimationPlaying(self.UnHover) then
+      self:StopAnimation(self.UnHover)
+    end
+    if IsNeedPressAnim then
+      local function PlayPressAnimFinished()
+        self:PlayAnimation(self.Click)
+      end
+      
+      self:UnbindAllFromAnimationFinished(self.Press)
+      self:BindToAnimationFinished(self.Press, {self, PlayPressAnimFinished})
+      self:PlayAnimation(self.Press)
+    else
+      self:PlayAnimation(self.Click)
+    end
+    if self.EventSwitchOn then
+      self.EventSwitchOn(self.ObjSwitchOn, self)
+    end
+  else
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Normal)
+    if self.EventSwitchOff then
+      self.EventSwitchOff(self.ObjSwitchOff, self)
+    end
+  end
+end
+
+function M:BindEventOnHoverOnOrOff(Obj, Event)
+  self.ObjHoverOnOrOff = Obj
+  self.EventHoverOnOrOff = Event
+end
+
+function M:UnbindEventOnHoverOnOrOff()
+  self.ObjHoverOnOrOff = nil
+  self.EventHoverOnOrOff = nil
+end
+
+function M:BindEventOnSwitchOn(Obj, Event)
+  self.ObjSwitchOn = Obj
+  self.EventSwitchOn = Event
+end
+
+function M:UnbindEventOnSwitchOn()
+  self.ObjSwitchOn = nil
+  self.EventSwitchOn = nil
+end
+
+function M:BindEventOnSwitchOff(Obj, Event)
+  self.ObjSwitchOff = Obj
+  self.EventSwitchOff = Event
+end
+
+function M:UnbindEventOnSwitchOff()
+  self.ObjSwitchOff = nil
+  self.EventSwitchOff = nil
+end
+
+function M:BindSoundFunc(func, Receiver)
+  self.SoundFunc = func
+  self.SoundFuncReceiver = Receiver
+end
+
+function M:BindHoverSoundFunc(func, Receiver)
+  self.HoverSoundFunc = func
+  self.SoundFuncReceiver = Receiver
+end
+
+function M:SetClickEnable(bEnable)
+  self.bClickEnable = bEnable
+end
+
+function M:SetShowText(ShowText)
+  self.Text_SubTab:SetText(ShowText)
+end
+
+function M:GetIsCanSelect()
+  return self.bClickEnable
+end
+
+function M:Btn_Click()
+  if not self.bClickEnable then
+    return
+  end
+  if self.SoundFunc then
+    self.SoundFunc(self.SoundFuncReceiver, self.Idx)
+  end
+  if not self.IsOn then
+    self:SetSwitchOn(true, false)
+  end
+end
+
+function M:Btn_Press()
+  if self.IsOn or not self.bClickEnable then
+    return
+  end
+  if self:IsAnimationPlaying(self.Press) then
+    return
+  end
+  self:UnbindAllFromAnimationFinished(self.Press)
+  self:PlayAnimation(self.Press)
+end
+
+function M:Btn_Hover()
+  if self.IsOn or not self.bClickEnable then
+    return
+  end
+  if self.HoverSoundFunc then
+    self.HoverSoundFunc(self.SoundFuncReceiver, self.Idx)
+  end
+  self:PlayAnimation(self.Hover)
+  if self.EventHoverOnOrOff then
+    self.EventHoverOnOrOff(self.ObjHoverOnOrOff, self, true)
+  end
+end
+
+function M:Btn_UnHover()
+  if self.IsOn or not self.bClickEnable then
+    return
+  end
+  if self:IsAnimationPlaying(self.Hover) then
+    self:StopAnimation(self.Hover)
+  end
+  self:PlayAnimation(self.UnHover)
+  if self.EventHoverOnOrOff then
+    self.EventHoverOnOrOff(self.ObjHoverOnOrOff, self, false)
+  end
+end
+
+function M:SetReddot(IsNew, Upgradeable, OtherReddot)
+  self.IsNew = IsNew
+  self.Upgradeable = Upgradeable
+  self.OtherReddot = OtherReddot
+  if Upgradeable then
+    self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Reddot then
+      self.Reddot:SetReddotStyle(0)
+      self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+    return
+  end
+  if IsNew then
+    if self.Reddot then
+      self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    self.New:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    return
+  end
+  if OtherReddot then
+    self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Reddot then
+      self.Reddot:SetReddotStyle(1)
+      self.Reddot:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+    return
+  end
+  self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.Reddot then
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:SetReddotNum(RedNum)
+  if nil ~= RedNum then
+    RedNum = tostring(RedNum)
+    if not string.isempty(RedNum) and "0" ~= RedNum then
+      self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      self.Reddot_Num:SetNum(RedNum)
+      return
+    end
+  end
+  self.Reddot_Num:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
+return M

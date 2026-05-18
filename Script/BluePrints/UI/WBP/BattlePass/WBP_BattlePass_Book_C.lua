@@ -155,6 +155,10 @@ function WBP_BattlePass_Book_C:InitSkinOrAccessoryInfo()
     local Id = BattlePassController:GetModelData("TargetSkinId")
     Name = GText(DataMgr.Skin[Id].SkinName)
     Rarity = DataMgr.Skin[Id].Rarity
+  elseif BattlePassController:GetModelData("BPRewardTyppe") == "WeaponSkin" then
+    local Id = BattlePassController:GetModelData("WeaponSkinId")
+    Name = GText(DataMgr.WeaponSkin[Id].Name)
+    Rarity = DataMgr.WeaponSkin[Id].Rarity
   elseif BattlePassController:GetModelData("BPRewardTyppe") == "Accessory" then
     local Id = BattlePassController:GetModelData("AccessoryId")
     Name = GText(DataMgr.CharAccessory[Id].Name)
@@ -1681,7 +1685,12 @@ function WBP_BattlePass_Book_C:DoOpenPurchase()
     PurchasePanel = UIManager(self):LoadUINew("BattlePassPurchase", BattlePassController:GetModelData("ActorController"), 666)
     DebugPrint("gmy@WBP_BattlePass_Book_C WBP_BattlePass_Book_C:OpenPurchase")
     if BattlePassController:GetModelData("ActorController") then
-      BattlePassController:GetModelData("ActorController"):SetMontageAndCamera(CommonConst.ArmoryType.Char, "Skin", CommonConst.ArmoryTag.Appearance, "Purchase")
+      if BattlePassController:GetModelData("BPRewardTyppe") == "WeaponSkin" then
+        BattlePassController:GetModelData("ActorController"):SetMontageAndCamera("Weapon", BattlePassController:GetModelData("WeaponTag"))
+        BattlePassController:GetModelData("ActorController"):SetArmoryCameraTag(CommonConst.ArmoryType.Char, "Skin", "Purchase")
+      else
+        BattlePassController:GetModelData("ActorController"):SetMontageAndCamera(CommonConst.ArmoryType.Char, "Skin", CommonConst.ArmoryTag.Appearance, "Purchase")
+      end
     end
   end
 end

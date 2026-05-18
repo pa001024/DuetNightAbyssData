@@ -98,6 +98,22 @@ function GWorld:GetServerEntity()
   return nil
 end
 
+function GWorld:GetGameModeDungeonObject()
+  local ServerEntity = self:GetServerEntity()
+  if ServerEntity then
+    return ServerEntity:GetGameModeDungeonObject()
+  end
+  return nil
+end
+
+function GWorld:SetClientDungeonObject_C(InClientDungeonObject_C)
+  self.ClientDungeonObject_C = InClientDungeonObject_C
+end
+
+function GWorld:GetClientModeDungeonObject()
+  return self.ClientDungeonObject_C
+end
+
 function GWorld:DSBLog(...)
   local DSEntity = self:GetDSEntity()
   if not DSEntity then

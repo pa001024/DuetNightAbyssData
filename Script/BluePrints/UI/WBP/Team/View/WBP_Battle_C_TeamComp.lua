@@ -284,7 +284,12 @@ function Component:AddBattleTeamBloodBar(Eid, bIsPlayer, Entity)
     self.TeamBloodBarCount = self.TeamBloodBarCount + 1
     if bIsPlayer and IsValid(Entity) then
       for _, PhantomEntity in pairs(Entity:GetPhantomTeammates(false, false)) do
-        PhantomEntity.PhantomOwner = Entity
+        if PhantomEntity.SetPhantomOwner_MD then
+          PhantomEntity:SetPhantomOwner_MD(Entity)
+        else
+          Traceback(ErrorTag, "PhantomEntity偶现没有SetPhantomOwner_MD方法，联系《mhn》看一下")
+          PhantomEntity.PhantomOwner = Entity
+        end
         self:AddTeammateUI(PhantomEntity.Eid, false, PhantomEntity)
       end
     end

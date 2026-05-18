@@ -526,6 +526,19 @@ function WBP_Bag_Detail_View_C:RefreshAccessMethod(StuffConfigData)
   end
 end
 
+function WBP_Bag_Detail_View_C:RefreshItemTextAgain()
+  if self:IsExistTimer("RefreshItemTextAgain") then
+    self:RemoveTimer("RefreshItemTextAgain")
+  end
+  self:SeekWidgetByName("Panel_Detail"):SetRenderOpacity(0)
+  self:AddTimer(0.8, function()
+    self:SeekWidgetByName("Panel_Detail"):SetRenderOpacity(1)
+    local ItemName = self.Text_ItemName:GetText()
+    self.Text_ItemName:SetText(ItemName)
+    self.Text_ItemName:ForceLayoutPrepass()
+  end, false, 0, "RefreshItemTextAgain")
+end
+
 function WBP_Bag_Detail_View_C:UpdateAttrInfo(StuffType, TargetServerData, ...)
   if StuffType == BagCommon.StuffType.Weapon then
     self.ItemAttrs = {}
@@ -560,7 +573,17 @@ function WBP_Bag_Detail_View_C:UpdateAttrInfo(StuffType, TargetServerData, ...)
     local ModAttrs, ModId = ...
     local ModLevel = TargetServerData.Level
     for _, ModAttr in ipairs(ModAttrs) do
-      local AttrConfig = DataMgr.AttrConfig[ModAttr.AttrName]
+      local AttrNameKey = ""
+      if ModAttr.Tag and ModAttr.RateZone then
+        AttrNameKey = string.format("%s_%s_%s", ModAttr.AttrName, ModAttr.Tag, ModAttr.RateZone)
+      elseif ModAttr.Tag then
+        AttrNameKey = string.format("%s_%s", ModAttr.AttrName, ModAttr.Tag)
+      elseif ModAttr.RateZone then
+        AttrNameKey = string.format("%s_%s", ModAttr.AttrName, ModAttr.RateZone)
+      else
+        AttrNameKey = ModAttr.AttrName
+      end
+      local AttrConfig = DataMgr.AttrConfig[AttrNameKey]
       if not AttrConfig then
       else
         local Value, ValueStr = ArmoryUtils:GenModAttrData(ModAttr, ModLevel, AttrConfig, ModId)

@@ -2,8 +2,13 @@ local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 
 function M:Construct()
   self:BindButtonPerformances()
+  self.SelectGlowFX = self.Select_Glow
   self.OnClickEvent = nil
   self.Checked = false
+  self.IsEnabled = true
+  self.IsHovering = false
+  self.IsPressing = false
+  self.SelectGlow = nil
 end
 
 function M:Destruct()
@@ -11,25 +16,97 @@ function M:Destruct()
   self:UnBindButtonPerformances()
 end
 
-function M:Init(AttrIndex, AttrIcon, ChangeAttrPage)
+function M:Init(Index, ChangeAttrPage, IsEnabled)
   if not ChangeAttrPage then
     GWorld.logger.error("WBP_Abyss_AttributeSelection_C@Init, ChangeAttrPage is nil!")
     return
   end
   self.Checked = false
-  self.AttrIndex = AttrIndex
+  self.IsHovering = false
+  self.IsPressing = false
+  self.Index = Index
   self.ChangeAttrPage = ChangeAttrPage
+  self:SetEnableState(true == IsEnabled, true)
+end
+
+function M:SetAttribute(AttrId, AttrIcon)
+  self.AttrId = AttrId
   if IsValid(AttrIcon) then
-    self.Attribute:SetBrushResourceObject(AttrIcon)
+    local IconMaterial = self.Attribute and self.Attribute:GetDynamicMaterial()
+    if IconMaterial then
+      IconMaterial:SetTextureParameterValue("MainTex", AttrIcon)
+    end
+  end
+  local Color = self["Color_" .. AttrId]
+  if IsValid(self.SelectGlowFX) then
+    self.SelectGlowFX:SetColorAndOpacity(Color and Color.SpecifiedColor)
   end
 end
 
 function M:OnClicked()
   if self.ChangeAttrPage then
-    self.ChangeAttrPage:AttrSelectionChanged(self.AttrIndex)
+    self.ChangeAttrPage:AttrSelectionChanged(self.Index)
   else
     GWorld.logger.error("WBP_Abyss_AttributeSelection_C@OnClicked, ChangeAttrPage is nil!")
   end
+end
+
+function M:OnForbiddenClicked()
+  if self.ChangeAttrPage then
+    self.ChangeAttrPage:OnForbiddenAttrClicked(self.AttrId)
+  end
+end
+
+function M:BindSelectGlow(SelectGlow)
+  self.SelectGlow = SelectGlow
+end
+
+function M:PlaySelectGlow(IsChecked, bIniting)
+  if not self.SelectGlow then
+    return
+  end
+  if IsChecked then
+    local SelectAnim = bIniting and self.SelectGlow.Select_In or self.SelectGlow.Select
+    self.SelectGlow:StopAnimation(self.SelectGlow.Unselect)
+    if SelectAnim then
+      self.SelectGlow:PlayAnimation(SelectAnim)
+    end
+  elseif self.SelectGlow.Unselect then
+    self.SelectGlow:StopAnimation(self.SelectGlow.Select)
+    self.SelectGlow:StopAnimation(self.SelectGlow.Select_In)
+    self.SelectGlow:PlayAnimation(self.SelectGlow.Unselect)
+  end
+end
+
+function M:SetEnableState(IsEnabled, bIniting)
+  self.IsEnabled = IsEnabled
+  if not self.IsEnabled then
+    local bWasChecked = self.Checked == true
+    self.Checked = false
+    self.IsHovering = false
+    self.IsPressing = false
+    if bWasChecked or bIniting then
+      self:PlaySelectGlow(false)
+    end
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Forbidden)
+  elseif self.Checked == true then
+    self:PlayButtonCheckAnimation()
+  else
+    self:SwitchNormalAnimation()
+  end
+end
+
+function M:IsBtnEnabled()
+  return self.IsEnabled == true
+end
+
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if self.IsEnabled == true and self.ChangeAttrPage.UsingGamepad then
+    self:OnBtnClicked()
+    return UIUtils.Handled
+  end
+  return UIUtils.Unhandled
 end
 
 function M:BindButtonPerformances()
@@ -75,6 +152,10 @@ function M:PlayButtonClickAnimation()
 end
 
 function M:OnBtnClicked()
+  if not self:IsBtnEnabled() then
+    self:OnForbiddenClicked()
+    return
+  end
   if self.Checked == false then
     self:SetIsChecked(true, true)
     self:OnClicked()
@@ -87,6 +168,9 @@ function M:PlayButtonPressAnim()
 end
 
 function M:OnBtnPressed()
+  if not self:IsBtnEnabled() then
+    return
+  end
   if self.Checked == true then
     return
   end
@@ -96,16 +180,17 @@ function M:OnBtnPressed()
 end
 
 function M:PlayButtonHoverAnim()
-  if self.ChangeAttrPage.UsingGamepad then
-    self:OnBtnClicked()
+  if not self:IsBtnEnabled() then
     return
   end
-  self:StopAllAnimations()
-  self:SwitchNormalAnimation()
+  self:StopAnimation(self.UnHover)
   self:PlayAnimation(self.Hover)
 end
 
 function M:OnBtnHovered()
+  if not self:IsBtnEnabled() then
+    return
+  end
   if self.Checked == true then
     return
   end
@@ -132,6 +217,9 @@ function M:PlayButtonReleaseAndUnHoverAnim()
 end
 
 function M:OnBtnReleased()
+  if not self:IsBtnEnabled() then
+    return
+  end
   self.IsPressing = false
   if self.Checked == true then
     return
@@ -144,11 +232,14 @@ function M:OnBtnReleased()
 end
 
 function M:PlayButtonUnHoverAnim()
-  self:StopAllAnimations()
+  self:StopAnimation(self.Hover)
   self:PlayAnimation(self.UnHover)
 end
 
 function M:OnBtnUnhovered()
+  if not self:IsBtnEnabled() then
+    return
+  end
   self.IsHovering = false
   if self.Checked == true then
     return
@@ -158,19 +249,28 @@ function M:OnBtnUnhovered()
   end
 end
 
-function M:SetIsChecked(IsChecked, IsPlaySound)
+function M:SetIsChecked(IsChecked, IsPlaySound, bIniting)
+  if not self:IsBtnEnabled() then
+    return
+  end
   if self.Checked == false and true == IsChecked then
     self.Checked = true
     if IsPlaySound then
       self:PlayCheckSound(true)
     end
     self:PlayButtonCheckAnimation()
-  elseif self.Checked == true and false == IsChecked then
-    self.Checked = false
-    if IsPlaySound then
-      self:PlayCheckSound(false)
+    self:PlaySelectGlow(true, bIniting)
+  elseif false == IsChecked then
+    if self.Checked == true then
+      self.Checked = false
+      if IsPlaySound then
+        self:PlayCheckSound(false)
+      end
+      self:PlayButtonUnCheckAnimation()
+      self:PlaySelectGlow(false, bIniting)
+    elseif true == bIniting then
+      self:PlaySelectGlow(false, bIniting)
     end
-    self:PlayButtonUnCheckAnimation()
   end
 end
 

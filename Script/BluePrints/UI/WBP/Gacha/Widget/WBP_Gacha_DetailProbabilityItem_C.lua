@@ -52,6 +52,7 @@ function M:OnListItemObjectSet(Content)
         if Content.ItemType == "Skin" then
           PageJumpUtils:CloseFrontDialog()
           UIManager(self):LoadUINew("ArmorySkin", {
+            IsPreviewMode = true,
             Type = "Char",
             SkinId = Content.Id,
             OnCloseCallback = function()
@@ -64,6 +65,7 @@ function M:OnListItemObjectSet(Content)
         elseif Content.ItemType == "WeaponSkin" then
           PageJumpUtils:CloseFrontDialog()
           UIManager(self):LoadUINew("ArmorySkin", {
+            IsPreviewMode = true,
             Type = "Weapon",
             SkinId = Content.Id,
             OnCloseCallback = function()

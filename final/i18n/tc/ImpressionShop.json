@@ -199,6 +199,180 @@
                 ]
               },
               {
+                "id": 1011103,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "戰鬥旋律·四",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  100
+                ]
+              },
+              {
+                "id": 1011102,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "戰鬥旋律·三",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  80
+                ]
+              },
+              {
+                "id": 1011101,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "戰鬥旋律·二",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  60
+                ]
+              },
+              {
+                "id": 1011100,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "戰鬥旋律·一",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  60
+                ]
+              },
+              {
+                "id": 1011123,
+                "itemType": "Resource",
+                "typeId": 10202,
+                "typeName": "鍍金勳章",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 5,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  100
+                ]
+              },
+              {
+                "id": 1011122,
+                "itemType": "Resource",
+                "typeId": 10201,
+                "typeName": "白銀勳章",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  80
+                ]
+              },
+              {
+                "id": 1011121,
+                "itemType": "Resource",
+                "typeId": 10200,
+                "typeName": "黑鐵勳章",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  60
+                ]
+              },
+              {
+                "id": 1011120,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "皎皎之民的信物",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  60
+                ]
+              },
+              {
                 "id": 1011037,
                 "itemType": "Resource",
                 "typeId": 19003,
@@ -580,6 +754,190 @@
                 ]
               },
               {
+                "id": 1011107,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "戰鬥旋律·四",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  100
+                ]
+              },
+              {
+                "id": 1011106,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "戰鬥旋律·三",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  80
+                ]
+              },
+              {
+                "id": 1011105,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "戰鬥旋律·二",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Chaos",
+                  60
+                ]
+              },
+              {
+                "id": 1011104,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "戰鬥旋律·一",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  60
+                ]
+              },
+              {
+                "id": 1011127,
+                "itemType": "Resource",
+                "typeId": 10205,
+                "typeName": "啟迪冠冕",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 5,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  100
+                ]
+              },
+              {
+                "id": 1011126,
+                "itemType": "Resource",
+                "typeId": 10204,
+                "typeName": "全視之眼",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  80
+                ]
+              },
+              {
+                "id": 1011125,
+                "itemType": "Resource",
+                "typeId": 10203,
+                "typeName": "不語面罩",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Chaos",
+                  60
+                ]
+              },
+              {
+                "id": 1011124,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "皎皎之民的信物",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  60
+                ]
+              },
+              {
                 "id": 1011038,
                 "itemType": "Resource",
                 "typeId": 19004,
@@ -914,6 +1272,190 @@
                   1011,
                   "Empathy",
                   40
+                ]
+              },
+              {
+                "id": 1011111,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "戰鬥旋律·四",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  100
+                ]
+              },
+              {
+                "id": 1011110,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "戰鬥旋律·三",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  80
+                ]
+              },
+              {
+                "id": 1011109,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "戰鬥旋律·二",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "All",
+                  60
+                ]
+              },
+              {
+                "id": 1011108,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "戰鬥旋律·一",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  60
+                ]
+              },
+              {
+                "id": 1011131,
+                "itemType": "Resource",
+                "typeId": 10208,
+                "typeName": "複方藥劑",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 5,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  100
+                ]
+              },
+              {
+                "id": 1011130,
+                "itemType": "Resource",
+                "typeId": 10207,
+                "typeName": "精研草藥",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  80
+                ]
+              },
+              {
+                "id": 1011129,
+                "itemType": "Resource",
+                "typeId": 10206,
+                "typeName": "碧薷嫩葉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "All",
+                  60
+                ]
+              },
+              {
+                "id": 1011128,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "皎皎之民的信物",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  60
                 ]
               },
               {
@@ -1313,6 +1855,190 @@
                   1011,
                   "Chaos",
                   40
+                ]
+              },
+              {
+                "id": 1011115,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "戰鬥旋律·四",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  100
+                ]
+              },
+              {
+                "id": 1011114,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "戰鬥旋律·三",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Chaos",
+                  80
+                ]
+              },
+              {
+                "id": 1011113,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "戰鬥旋律·二",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  80
+                ]
+              },
+              {
+                "id": 1011112,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "戰鬥旋律·一",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  60
+                ]
+              },
+              {
+                "id": 1011135,
+                "itemType": "Resource",
+                "typeId": 10211,
+                "typeName": "流光箭匣",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 5,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  100
+                ]
+              },
+              {
+                "id": 1011134,
+                "itemType": "Resource",
+                "typeId": 10210,
+                "typeName": "流光瞄具",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Chaos",
+                  80
+                ]
+              },
+              {
+                "id": 1011133,
+                "itemType": "Resource",
+                "typeId": 10209,
+                "typeName": "流光箭矢",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  80
+                ]
+              },
+              {
+                "id": 1011132,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "皎皎之民的信物",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  60
                 ]
               },
               {
@@ -1876,6 +2602,190 @@
                 ]
               },
               {
+                "id": 1011119,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "戰鬥旋律·四",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  100
+                ]
+              },
+              {
+                "id": 1011118,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "戰鬥旋律·三",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "All",
+                  80
+                ]
+              },
+              {
+                "id": 1011117,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "戰鬥旋律·二",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  80
+                ]
+              },
+              {
+                "id": 1011116,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "戰鬥旋律·一",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  60
+                ]
+              },
+              {
+                "id": 1011139,
+                "itemType": "Resource",
+                "typeId": 10209,
+                "typeName": "流光箭矢",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 50,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  100
+                ]
+              },
+              {
+                "id": 1011138,
+                "itemType": "Resource",
+                "typeId": 10206,
+                "typeName": "碧薷嫩葉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 50,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "All",
+                  80
+                ]
+              },
+              {
+                "id": 1011137,
+                "itemType": "Resource",
+                "typeId": 10203,
+                "typeName": "不語面罩",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 50,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  80
+                ]
+              },
+              {
+                "id": 1011136,
+                "itemType": "Resource",
+                "typeId": 10200,
+                "typeName": "黑鐵勳章",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 50,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  60
+                ]
+              },
+              {
                 "id": 1011034,
                 "itemType": "Resource",
                 "typeId": 19000,
@@ -2235,6 +3145,29 @@
                   "Any",
                   10
                 ]
+              },
+              {
+                "id": 1041060,
+                "itemType": "Resource",
+                "typeId": 31013001,
+                "typeName": "《紫陌紅塵》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2001,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Benefit",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Any",
+                  10
+                ]
               }
             ]
           },
@@ -2482,6 +3415,29 @@
                   "Benefit",
                   10
                 ]
+              },
+              {
+                "id": 1041061,
+                "itemType": "Resource",
+                "typeId": 31013003,
+                "typeName": "《椒蘭昔影·洞簫》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2002,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Morality",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Benefit",
+                  10
+                ]
               }
             ]
           },
@@ -2712,6 +3668,29 @@
                 "itemType": "Resource",
                 "typeId": 31010011,
                 "typeName": "《狡兔》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2003,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Wisdom",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Morality",
+                  10
+                ]
+              },
+              {
+                "id": 1041062,
+                "itemType": "Resource",
+                "typeId": 31013006,
+                "typeName": "《黑白天平》",
                 "price": 1,
                 "priceType": 3001,
                 "priceName": "十面骰",
@@ -3022,6 +4001,29 @@
                   "Wisdom",
                   10
                 ]
+              },
+              {
+                "id": 1041063,
+                "itemType": "Resource",
+                "typeId": 31013007,
+                "typeName": "《緣因無由》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2004,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Empathy",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Wisdom",
+                  10
+                ]
               }
             ]
           },
@@ -3305,6 +4307,75 @@
                 "itemType": "Resource",
                 "typeId": 31010018,
                 "typeName": "《機傀甦醒》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2005,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Chaos",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041064,
+                "itemType": "Resource",
+                "typeId": 31013008,
+                "typeName": "《機樞洞天》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2005,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Chaos",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041065,
+                "itemType": "Resource",
+                "typeId": 31013010,
+                "typeName": "《忘卻的暗角》",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "十面骰",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2005,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Chaos",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041066,
+                "itemType": "Resource",
+                "typeId": 31013011,
+                "typeName": "《火中生蓮》",
                 "price": 1,
                 "priceType": 3001,
                 "priceName": "十面骰",

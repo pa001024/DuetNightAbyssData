@@ -138,12 +138,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17734950658525063859",
-            startPort = "Out",
-            endQuest = "17698459273514558764",
-            endPort = "In"
-          },
-          {
             startQuest = "17678537949091014611",
             startPort = "QuestStart",
             endQuest = "17739040035675457889",
@@ -550,6 +544,18 @@ return {
             startPort = "Out",
             endQuest = "17734950658525063859",
             endPort = "In"
+          },
+          {
+            startQuest = "17734950658525063859",
+            startPort = "Out",
+            endQuest = "17734950658525063860",
+            endPort = "In"
+          },
+          {
+            startQuest = "17734950658525063860",
+            startPort = "Out",
+            endQuest = "17698459273514558764",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -624,7 +630,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -656,7 +664,7 @@ return {
             key = "17698459273514558764",
             type = "SendMessageNode",
             name = "开启小黑屋玩法",
-            pos = {x = 1196.705061274487, y = 269.76921387089186},
+            pos = {x = 1242.705061274487, y = 294.76921387089186},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "StartBox3",
@@ -754,7 +762,7 @@ return {
             type = "WaitOfTimeNode",
             name = "延迟等待",
             pos = {x = 1197.0908553076401, y = 473.8441292124835},
-            propsData = {WaitTime = 1.5}
+            propsData = {WaitTime = 1}
           },
           ["17739040035675457889"] = {
             key = "17739040035675457889",

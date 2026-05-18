@@ -189,7 +189,7 @@ function M:InitButtons()
   end
   if self.Btn_Change then
     self.Btn_Change.Btn_Click.OnPressed:Add(self, function()
-      self:TryToPlayTargetCommand("Reload")
+      self:TryToPlayTargetCommand("ChargeBullet")
     end)
   end
   if self.Btn_Shoot then
@@ -221,7 +221,7 @@ function M:TryToPlayTargetCommand(KeyName, IsAddInputCache)
   end
   if "Fire" == KeyName then
     self.Player:ActionCallback("Fire", EInputEvent.IE_Pressed)
-  elseif "Reload" == KeyName then
+  elseif "ChargeBullet" == KeyName then
     self.Player:ActionCallback("ChargeBullet", EInputEvent.IE_Pressed)
     self:ChangeColor()
   elseif "Jump" == KeyName then

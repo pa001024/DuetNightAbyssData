@@ -45,8 +45,8 @@ function M:InitSkipKeys()
   end
 end
 
-function M:Init(RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback)
-  M.Super.Init(self, RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback)
+function M:Init(RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback, EventId)
+  M.Super.Init(self, RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback, EventId)
   self:AddTimer(0.1, function()
     if IsValid(self) then
       self:SetFocus()

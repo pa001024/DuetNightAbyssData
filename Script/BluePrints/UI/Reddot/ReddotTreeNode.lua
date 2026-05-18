@@ -129,6 +129,7 @@ end
 function ReddotTreeNode:InitNodeCache()
   self:OnInitNodeCache(self.Cache)
   if self.Cache.Count > 0 then
+    self.bIgnoreJudge = true
     self:IncreaseCount(self.Cache.Count)
   else
     self.Cache.Count = 0
@@ -291,8 +292,12 @@ function ReddotTreeNode:IncreaseCount(AddValue, CacheDetailChangedParams)
     AddValue = 1
   end
   if not self:OnIncreaseJudge(AddValue, CacheDetailChangedParams) then
-    DebugPrint(WarningTag, "ReddotTreeNode:IncreaseCount 不符合红点计数增加的条件", self.Name)
-    return false
+    if self.bIgnoreJudge then
+      self.bIgnoreJudge = nil
+    else
+      DebugPrint(WarningTag, "ReddotTreeNode:IncreaseCount 不符合红点计数增加的条件", self.Name)
+      return false
+    end
   end
   local OldCount = self.Count
   self.Count = self.Count + AddValue

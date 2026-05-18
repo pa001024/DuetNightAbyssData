@@ -94,6 +94,19 @@ end
 Utils.ScreenPrint = not (not bDistribution or bEnableShippingLog) and MiscUtils.EmptyFunction or function(text)
   GWorld.logger.error(text)
 end
+Utils.SPrint = not (not bDistribution or bEnableShippingLog) and MiscUtils.EmptyFunction or function(text, duration, color)
+  duration = duration or 4
+  color = color or UE4.FLinearColor(0, 1, 0, 1)
+  UE4.UKismetSystemLibrary.PrintString(GWorld.GameInstance, tostring(text), true, false, color, duration)
+end
+
+function Utils.GreenPrint(text)
+  Utils.SPrint(text, nil, UE4.FLinearColor(0, 1, 0, 1))
+end
+
+function Utils.RedPrint(text)
+  Utils.SPrint(text, nil, UE4.FLinearColor(1, 0, 0, 1))
+end
 
 function Utils.GLink(LinkId)
   local IsGlobalPak = UE.AHotUpdateGameMode.IsGlobalPak()
@@ -297,6 +310,7 @@ function Utils.FormatWeaponInfo(TempWeapon, DumpWeaponInfo)
   TempWeapon.EnhanceLevel = DumpWeaponInfo.EnhanceLevel or 0
   TempWeapon.WeaponId = DumpWeaponInfo.WeaponId or 0
   TempWeapon.GradeLevel = DumpWeaponInfo.GradeLevel or 0
+  TempWeapon.HyperCardLevel = DumpWeaponInfo.HyperCardLevel or 0
   TempWeapon.AppearanceInfo = DumpWeaponInfo
   TempWeapon.AppearanceInfo.EnhanceLevel = nil
   TempWeapon.AppearanceInfo.GradeLevel = nil

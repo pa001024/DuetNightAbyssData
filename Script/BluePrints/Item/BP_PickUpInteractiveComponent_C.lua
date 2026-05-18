@@ -1,5 +1,8 @@
 require("UnLua")
-local BP_PickUpInteractiveComponent_C = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
+local BP_PickUpInteractiveComponent_C = Class({
+  "BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C",
+  "BluePrints.Common.TimerMgr"
+})
 
 function BP_PickUpInteractiveComponent_C:GetInteractiveName()
   if self.CommonUIConfirmID and self.CommonUIConfirmID > 0 then
@@ -25,6 +28,9 @@ function BP_PickUpInteractiveComponent_C:GetInteractiveIcon(PlayerActor)
 end
 
 function BP_PickUpInteractiveComponent_C:BtnClicked(PlayerActor, InPressTimeSeconds)
+  if self:IsLastingInteract() then
+    return
+  end
   if not self:CheckInteractiveSucc(PlayerActor.Eid) then
     self:InteractiveFailed()
     return
@@ -71,6 +77,82 @@ function BP_PickUpInteractiveComponent_C:GetSpecialQuestID()
     return Owner.ExtraRegionInfo.SpecialQuestId
   end
   return nil
+end
+
+function BP_PickUpInteractiveComponent_C:IsLastingInteract()
+  if self.InteractiveTime and self.InteractiveTime > 0 then
+    return true
+  end
+end
+
+function BP_PickUpInteractiveComponent_C:GetNeedLongPressTime()
+  return self.InteractiveTime
+end
+
+function BP_PickUpInteractiveComponent_C:BtnPressed(PlayerActor)
+  if not self:IsLastingInteract() then
+    return
+  end
+  local Owner = self:GetOwner()
+  if PlayerActor and PlayerActor.SetEnterInteractive and 0 ~= Owner.Eid then
+    PlayerActor:SetEnterInteractive(true, self.MontageName or "Interactive_01_Montage", Owner.InteractiveTag, "MechInteractive")
+    PlayerActor:SetCharacterTag("Interactive")
+    if self.OnPickupPressed and type(self.OnPickupPressed) == "table" then
+      self.OnPickupPressed[2](self.OnPickupPressed[1])
+    end
+    self.PressStartTime = UGameplayStatics.GetTimeSeconds(self)
+    self.PressTimer = self:AddTimer(0.05, function()
+      if self.PressStartTime + self:GetNeedLongPressTime() <= UGameplayStatics.GetTimeSeconds(self) then
+        self:RemoveTimer(self.PressTimer)
+        if PlayerActor and PlayerActor.SetEnterInteractive then
+          PlayerActor:SetEnterInteractive(false, self.MontageName or "Interactive_01_Montage", nil, "MechInteractive")
+          PlayerActor:SetCharacterTag(nil)
+        end
+        if not self:CheckInteractiveSucc(PlayerActor.Eid) then
+          self:InteractiveFailed()
+          return
+        end
+        self:OnBtnReleased()
+        if self:GetOuter():CanBePickedUp(PlayerActor) then
+          self:GetOuter():ClearGuideIconComponent()
+          self:GetOuter().ToCharacter = PlayerActor
+          self.StopResetInteractive = true
+          self:GetOuter():PickupOnTouch(PlayerActor)
+          self.StopResetInteractive = false
+          self:ResetInteractive()
+        end
+      end
+    end, true)
+  end
+end
+
+function BP_PickUpInteractiveComponent_C:BtnReleased(PlayerActor, InPressTimeSeconds)
+  if not self:IsLastingInteract() then
+    return
+  end
+  self:RemoveTimer(self.PressTimer)
+  local Owner = self:GetOwner()
+  if PlayerActor and PlayerActor.SetEnterInteractive then
+    PlayerActor:SetEnterInteractive(false, self.MontageName or "Interactive_01_Montage", nil, "MechInteractive")
+    PlayerActor:SetCharacterTag(nil)
+    self:OnBtnReleased()
+  end
+end
+
+function BP_PickUpInteractiveComponent_C:OnBtnReleased()
+  if self.OnPickupReleased and type(self.OnPickupReleased) == "table" then
+    self.OnPickupReleased[2](self.OnPickupReleased[1])
+  end
+end
+
+function BP_PickUpInteractiveComponent_C:ResetInteractive()
+  if self.StopResetInteractive then
+    return
+  end
+  self.InteractiveTime = nil
+  self.OnPickupPressed = nil
+  self.OnPickupReleased = nil
+  self.MontageName = nil
 end
 
 return BP_PickUpInteractiveComponent_C

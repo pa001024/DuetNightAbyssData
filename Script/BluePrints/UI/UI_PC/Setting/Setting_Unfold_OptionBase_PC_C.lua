@@ -108,7 +108,8 @@ function S:InitOptionEMCache()
   end
   self.NowOptionId = self.OldOptionId
   if self.EMCacheName == "GameUserSettings" or self.EMCacheName == "ConsoleVariable" or self.EMCacheName == "AntiAliasing" or self.EMCacheName == "ContentPerformance" or self.CacheName == "MobileResolution" then
-    self["Save" .. self.CacheName .. "OptionSetting"](self)
+    local IsInitSync = self.EMCacheName == "GameUserSettings"
+    self["Save" .. self.CacheName .. "OptionSetting"](self, IsInitSync)
   end
 end
 
@@ -577,9 +578,12 @@ function S:SetDLSSOptionOldOptionId()
   self.DLSSFGList = {
     [1] = 0,
     [2] = 251,
-    [3] = 17,
-    [4] = 23,
-    [5] = 31
+    [3] = 241,
+    [4] = 17,
+    [5] = 23,
+    [6] = 31,
+    [7] = 41,
+    [8] = 47
   }
   local NowOptionId = EMCache:Get("DLSSFG")
   if nil == NowOptionId then
@@ -644,12 +648,15 @@ function S:RestoreDefaultEffectQuality()
   self:SaveEffectQualityOptionSetting()
 end
 
-function S:SaveEffectQualityOptionSetting()
+function S:SaveEffectQualityOptionSetting(IsInitSync)
   self.OptionCache = self.EffectQualityList[self.NowOptionId]
   SettingUtils.SaveEMCache(self.EMCacheName, "VisualEffectQuality", self.OptionCache)
+  if IsInitSync then
+    return
+  end
   local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
   GameUserSettings:SetVisualEffectQuality(self.OptionCache)
-  GameUserSettings:ApplySettings(true)
+  GameUserSettings:ApplySettings(false)
 end
 
 function S:SetAntiAliasingOldOptionId()
@@ -712,12 +719,15 @@ function S:RestoreDefaultMaterialQuality()
   self:SaveMaterialQualityOptionSetting()
 end
 
-function S:SaveMaterialQualityOptionSetting()
+function S:SaveMaterialQualityOptionSetting(IsInitSync)
   self.OptionCache = self.MaterialQualityList[self.NowOptionId]
   SettingUtils.SaveEMCache(self.EMCacheName, "ShadingQuality", self.OptionCache)
+  if IsInitSync then
+    return
+  end
   local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
   GameUserSettings:SetShadingQuality(self.OptionCache)
-  GameUserSettings:ApplySettings(true)
+  GameUserSettings:ApplySettings(false)
 end
 
 function S:SetShadowQualityOldOptionId()
@@ -737,12 +747,15 @@ function S:RestoreDefaultShadowQuality()
   self:SaveShadowQualityOptionSetting()
 end
 
-function S:SaveShadowQualityOptionSetting()
+function S:SaveShadowQualityOptionSetting(IsInitSync)
   self.OptionCache = self.ShadowQualityList[self.NowOptionId]
   SettingUtils.SaveEMCache(self.EMCacheName, "ShadowQuality", self.OptionCache)
+  if IsInitSync then
+    return
+  end
   local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
   GameUserSettings:SetShadowQuality(self.OptionCache)
-  GameUserSettings:ApplySettings(true)
+  GameUserSettings:ApplySettings(false)
 end
 
 function S:SetDetailDistanceOldOptionId()
@@ -765,7 +778,7 @@ function S:SaveDetailDistanceOptionSetting()
   SettingUtils.SaveEMCache(self.EMCacheName, "ViewDistanceQuality", self.OptionCache)
   local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
   GameUserSettings:SetViewDistanceQuality(self.OptionCache)
-  GameUserSettings:ApplySettings(true)
+  GameUserSettings:ApplySettings(false)
 end
 
 function S:SetHUDSizeOldOptionId()
@@ -1028,7 +1041,7 @@ function S:SaveFpsOptionSetting()
     GWorld.GameInstance:SetUnfixedFrameRate()
   else
     GameUserSettings:SetFrameRateLimit(self.OptionCache)
-    GameUserSettings:ApplySettings(true)
+    GameUserSettings:ApplySettings(false)
     UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "r.SetFramePace " .. FramePace, nil)
   end
   DebugPrint("---jzn---SaveFpsOptionSetting----", self.OptionCache)
@@ -1311,7 +1324,7 @@ end
 
 function S:SetMobileResolutionOldOptionId()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     self.MobileResolutionList = {
       [1] = {
         80,

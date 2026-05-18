@@ -155,6 +155,51 @@ return ReadOnly("GlobalPassiveData", {
     ID = 13222,
     Vars = {Buff = 2013222}
   },
+  [14111] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
+    Camp = "Player",
+    ID = 14111,
+    Vars = {
+      Buff = 2014111,
+      HitCount = 1,
+      IsCrit = true,
+      LastTime = 12
+    }
+  },
+  [14121] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SkillAddBuff.BP_AbyssGP_SkillAddBuff",
+    Camp = "Player",
+    ID = 14121,
+    Vars = {Buff = 2014121, LastTime = 18}
+  },
+  [14122] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 14122,
+    Vars = {Buff = 2014122}
+  },
+  [14211] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SpAddBuff.BP_AbyssGP_SpAddBuff",
+    Camp = "Player",
+    ID = 14211,
+    Vars = {
+      Buff = 2014211,
+      LastTime = 18,
+      SpCost = 20
+    }
+  },
+  [14212] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_AddBuff.BP_AbyssGP_AddBuff",
+    Camp = "Player",
+    ID = 14212,
+    Vars = {Buff = 2014212}
+  },
+  [14221] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_SkillAddBuff.BP_AbyssGP_SkillAddBuff",
+    Camp = "Player",
+    ID = 14221,
+    Vars = {Buff = 2014221, LastTime = 18}
+  },
   [20030] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Abyss/BP_AbyssGP_HitCountBuff.BP_AbyssGP_HitCountBuff",
     Camp = "Player",
@@ -365,6 +410,16 @@ return ReadOnly("GlobalPassiveData", {
       MaxSustain = 1,
       Penetration1 = 0.07,
       Penetration2 = 0.1
+    }
+  },
+  [30104] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Raid/BP_RaidGP_014.BP_RaidGP_014",
+    Camp = "Player",
+    ID = 30104,
+    Vars = {
+      Divider = 0.12,
+      MaxStrong = 0.6,
+      Penetration = 0.1
     }
   },
   [30101001] = {

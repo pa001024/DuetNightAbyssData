@@ -47,8 +47,8 @@ function Component:SettlementBattleEvent(EventName, ...)
   end
 end
 
-function Component:SettlementBattleEvent_StartVote(DungeonId, bMatch)
-  DebugPrint("gmy@Component:SettlementBattleEvent_StartVote", DungeonId)
+function Component:SettlementBattleEvent_StartVote(DungeonId, bMatch, EventParams)
+  DebugPrint("gmy@Component:SettlementBattleEvent_StartVote", DungeonId, EventParams, EventParams)
   local Avatar = GWorld:GetAvatar()
   assert(Avatar, "Avatar is nil")
   local Panel = UIManager(self):GetUI("DungeonMatchTimingBar")
@@ -109,7 +109,8 @@ function Component:SettlementBattleEvent_SelectTicket(DungeonId)
     
     local function Functor()
       local bIsSolo = #self.SettlementUidArray <= 1
-      if bIsSolo then
+      local DungeonData = DataMgr.Dungeon[DungeonId]
+      if bIsSolo and (not DungeonData or not DungeonData.IsModDungeon) then
         UIManager(self):LoadUINew("DungeonMatchTimingBar", DungeonId, Const.DUNGEON_MATCH_BAR_STATE.WAITING_MATCHING_WITH_CANCEL, true)
       end
     end

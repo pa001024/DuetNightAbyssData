@@ -15,7 +15,7 @@ function SplineMoveFinishNode:Execute(Callback)
     return
   end
   self.bEventExecuted = false
-  self.CinemaMoveSpline:BindEventOnEndBoxOverlap(function()
+  self.CinemaMoveSpline:BindOnSplineMoveFinished(function()
     if not self.bEventExecuted then
       self.bEventExecuted = true
       Callback()
@@ -29,7 +29,7 @@ end
 
 function SplineMoveFinishNode:Clear()
   if IsValid(self.CinemaMoveSpline) then
-    self.CinemaMoveSpline:ClearEventOnEndBoxOverlap()
+    self.CinemaMoveSpline:ClearOnSplineMoveFinished()
   end
   self.CinemaMoveSpline = nil
   self.bEventExecuted = false

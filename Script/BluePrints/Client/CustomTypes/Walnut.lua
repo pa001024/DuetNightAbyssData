@@ -13,7 +13,8 @@ Walnut.__Props__ = {
   WalnutId = prop.prop("Int", "cross", 0),
   WalnutRewardList = prop.prop("List", ""),
   WalnutRarityList = prop.prop("List", ""),
-  bCanSelectWalnut = prop.prop("Int", "")
+  bCanSelectWalnut = prop.prop("Int", ""),
+  bCanSelectWalnutId = prop.prop("Int", "")
 }
 
 function Walnut:GetCount(WalnutId)
@@ -49,7 +50,6 @@ end
 
 function Walnut:SelectWalnut(WalnutId)
   self.WalnutId = WalnutId
-  self:SetCanSelectWalnut(false)
 end
 
 function Walnut:UpdateWalnutRewardList(WalnutRewardList, RarityList)
@@ -68,6 +68,14 @@ end
 
 function Walnut:CanSelectWalnut()
   return 1 == self.bCanSelectWalnut and self.WalnutId > 0
+end
+
+function Walnut:CanSelectWalnutId()
+  return 1 == self.bCanSelectWalnutId
+end
+
+function Walnut:SetCanSelectWalnutId(bCanSelect)
+  self.bCanSelectWalnutId = bCanSelect and 1 or 0
 end
 
 FormatProperties(Walnut)

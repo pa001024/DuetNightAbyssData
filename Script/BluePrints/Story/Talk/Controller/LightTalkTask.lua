@@ -165,7 +165,8 @@ end
 function LightTalkTask:OnExceptionInterruptedBySTL()
   DebugPrint("LightTalkTask:OnExceptionInterruptedBySTL")
   TalkUtils:RemovePlayerInvincible()
-  self.NodeFinished_Callback = nil
+  self.bHasInterrupted = true
+  self:Clear()
 end
 
 function LightTalkTask:OnInterrupted()

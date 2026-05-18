@@ -351,6 +351,11 @@ return ReadOnly("PassiveEffect", {
     ID = 1532,
     UniquePassive = 1
   },
+  [1727] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Char_1727.BP_Char_1727",
+    ID = 1727,
+    Vars = T.RT_1
+  },
   [1801] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Char_1800.BP_Char_1800",
     ID = 1801,
@@ -530,6 +535,15 @@ return ReadOnly("PassiveEffect", {
       AttrName = "SlideAttackRate"
     }
   },
+  [2404] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2400.BP_Melee_2400",
+    ID = 2404,
+    UniquePassive = 1,
+    Vars = {
+      AttackType = "HeavyAttack",
+      AttrName = "HeavyAttackRate"
+    }
+  },
   [2421] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2421.BP_Melee_2421",
     ID = 2421,
@@ -558,6 +572,18 @@ return ReadOnly("PassiveEffect", {
     ID = 2504,
     UniquePassive = 1,
     Vars = T.RT_23
+  },
+  [2701] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2701.BP_Melee_2701",
+    ID = 2701
+  },
+  [2702] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2702.BP_Melee_2702",
+    ID = 2702
+  },
+  [2703] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Melee_2703.BP_Melee_2703",
+    ID = 2703
   },
   [3301] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Ranged_3301.BP_Ranged_3301",
@@ -682,9 +708,9 @@ return ReadOnly("PassiveEffect", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mod/BP_Char_6100.BP_Char_6100",
     ID = 6111,
     Vars = {
-      AttrName = "SkillSustain",
+      AttrName = "StrongValue",
       BuffId = 6111,
-      CompareBase = 1.5
+      CompareBase = 0.6
     }
   },
   [6113] = {
@@ -693,7 +719,7 @@ return ReadOnly("PassiveEffect", {
     Vars = {
       AttrName = "SkillSustain",
       BuffId = 6113,
-      CompareBase = 1.5
+      CompareBase = 1.8
     }
   },
   [6121] = {
@@ -817,6 +843,15 @@ return ReadOnly("PassiveEffect", {
     ID = 10105,
     Vars = T.RT_8
   },
+  [10107] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Sword_10107.BP_Sword_10107",
+    ID = 10107,
+    Vars = {
+      DmgRate = "#1",
+      LastTime = 8,
+      MoraleRate = "#2"
+    }
+  },
   [10200] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/BP_Polearm_HeavyAttack.BP_Polearm_HeavyAttack",
     ID = 10200
@@ -844,6 +879,19 @@ return ReadOnly("PassiveEffect", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Polearm_10208.BP_Polearm_10208",
     ID = 10208,
     Vars = T.RT_8
+  },
+  [10299] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Polearm_10299.BP_Polearm_10299",
+    ID = 10299,
+    Vars = {
+      AddWeaponSP01 = 1,
+      AddWeaponSP02 = 1,
+      AddWeaponSP03 = 80,
+      AddWeaponSP04 = 1,
+      BuffTime = 10,
+      BuffTime01 = 20,
+      Layer = 20
+    }
   },
   [10301] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Claymore_10301.BP_Claymore_10301",
@@ -903,6 +951,11 @@ return ReadOnly("PassiveEffect", {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Katana_10603.BP_Katana_10603",
     ID = 10603,
     Vars = T.RT_10
+  },
+  [10604] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Katana_10604.BP_Katana_10604",
+    ID = 10604,
+    Vars = T.RT_6
   },
   [18011] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Event/BP_Event_Feina.BP_Event_Feina",
@@ -1019,6 +1072,11 @@ return ReadOnly("PassiveEffect", {
     ID = 20510,
     Vars = T.RT_10
   },
+  [20511] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/RangedPassive/BP_Machinegun_20511.BP_Machinegun_20511",
+    ID = 20511,
+    Vars = T.RT_14
+  },
   [20512] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/RangedPassive/BP_Machinegun_20512.BP_Machinegun_20512",
     ID = 20512,
@@ -1026,7 +1084,18 @@ return ReadOnly("PassiveEffect", {
   },
   [20599] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/RangedPassive/BP_Machinegun_20599.BP_Machinegun_20599",
-    ID = 20599
+    ID = 20599,
+    Vars = {
+      AddWeaponSP01 = 2,
+      AddWeaponSP02 = 2,
+      AddWeaponSP03 = 4,
+      AddWeaponSP04 = 80,
+      BuffTime = 3,
+      ComboCount_20599Add = 20,
+      MaxComboCountUse = 120,
+      MaxComboCount_20599 = 360,
+      Rate = 0.6
+    }
   },
   [20600] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/BP_Ranged_NoMagzine.BP_Ranged_NoMagzine",
@@ -1113,6 +1182,14 @@ return ReadOnly("PassiveEffect", {
     ID = 90022,
     Vars = {ShootInterval = 0.15, SkillNodes = 90021}
   },
+  [90031] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mechanism/BP_Mechanism_ExcuteSkillEffects_YW.BP_Mechanism_ExcuteSkillEffects_YW",
+    ID = 90031
+  },
+  [90032] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Mechanism/BP_Mechanism_ExcuteSkillEffects_YW02.BP_Mechanism_ExcuteSkillEffects_YW02",
+    ID = 90032
+  },
   [100001] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Common_PhantomPassive.BP_Common_PhantomPassive",
     ID = 100001,
@@ -1165,11 +1242,21 @@ return ReadOnly("PassiveEffect", {
   },
   [110201] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Fuluo.BP_Fuluo",
-    ID = 110201
+    ID = 110201,
+    Vars = {
+      DollCD = 1,
+      DollLastTime = 6,
+      HeavyExtraRate = "#1"
+    }
   },
   [110202] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Fuluo_Extra.BP_Fuluo_Extra",
-    ID = 110202
+    ID = 110202,
+    Vars = {
+      ExtraSp = 1,
+      Grade4Combo = 2,
+      Grade4ExtraSp = 3
+    }
   },
   [110203] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Fuluo_RealDoll.BP_Fuluo_RealDoll",
@@ -1212,11 +1299,29 @@ return ReadOnly("PassiveEffect", {
   },
   [120101] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu_Dark_Passive.BP_Nvzhu_Dark_Passive",
-    ID = 120101
+    ID = 120101,
+    Vars = {
+      ComboCountTrans = 0.5,
+      ComboHoldTime = 10,
+      Grade0PassiveCount = 8,
+      Grade6BuffLastTime = 3,
+      Grade6PassiveCount = 6,
+      PassiveCD = 2
+    }
   },
   [120102] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu_Dark_Passive2.BP_Nvzhu_Dark_Passive2",
-    ID = 120102
+    ID = 120102,
+    Vars = {ExtraPassiveDmgCD = 1}
+  },
+  [120103] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu_Dark_Extra.BP_Nvzhu_Dark_Extra",
+    ID = 120103
+  },
+  [120104] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu_Dark_Extra_Debuff.BP_Nvzhu_Dark_Extra_Debuff",
+    ID = 120104,
+    Vars = {AddDamagedRate = 0.6}
   },
   [120201] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Passive.BP_Falu_Passive",
@@ -1428,6 +1533,14 @@ return ReadOnly("PassiveEffect", {
     ID = 210212,
     Vars = {Prob = 0.5}
   },
+  [220101] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_WeitaF_Water_Passvie.BP_WeitaF_Water_Passvie",
+    ID = 220101
+  },
+  [220102] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_WeitaF_Water_Passvie2.BP_WeitaF_Water_Passvie2",
+    ID = 220102
+  },
   [230101] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Zhangyu.BP_Zhangyu",
     ID = 230101,
@@ -1532,26 +1645,23 @@ return ReadOnly("PassiveEffect", {
     Vars = {
       FunnelLifeTime = 12,
       Grade1Value = 0.3,
-      Grade2InDamageRate = 0.85,
       IncreaseAttackSpeed = "#1",
-      PassiveBuffLastTime = 6,
-      Skill2DeDamageLastTime = 12
+      PassiveBuffLastTime = 6
     }
   },
   [310202] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Xier_Skill1.BP_Xier_Skill1",
     ID = 310202,
-    Vars = {
-      InfoLaserLength = 1500,
-      Skill1IncreaseDamageLastTime = 2,
-      SpIncrease = 5,
-      SpIncreaseProb = "#1"
-    }
+    Vars = {Grade2BuffLastTime = 15, InfoLaserLength = 1500}
   },
   [310203] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Xier_Passive2.BP_Xier_Passive2",
     ID = 310203,
-    Vars = {AddValue = 0.2, BaseValue = 0.3}
+    Vars = {
+      AddValue = 0.15,
+      BaseValue = 0.2,
+      MaxRate = 2
+    }
   },
   [310301] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Yeer_Passive.BP_Yeer_Passive",
@@ -2059,6 +2169,10 @@ return ReadOnly("PassiveEffect", {
   [1020302] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/BP_Polearm_Mod02_HeavyAttack.BP_Polearm_Mod02_HeavyAttack",
     ID = 1020302
+  },
+  [1029901] = {
+    BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/MeleePassive/BP_Polearm_10299_Sum.BP_Polearm_10299_Sum",
+    ID = 1029901
   },
   [1030202] = {
     BPPath = "/Game/BluePrints/Combat/PassiveEffect/DesignerBP/Weapon/BP_Claymore_Mod01_HeavyAttack.BP_Claymore_Mod01_HeavyAttack",

@@ -1,8 +1,23 @@
 local Component = {}
 
-function Component:PickupToRecoverSurvival(PickUpCount, UseFunctionParam)
+function Component:PickupToRecoverSurvival(PickUpCount, UseFunctionParam, DropId, Transform, PickUpEid, bExtra)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  GameMode:TriggerDungeonComponentFun("AddSurvivalValue", UseFunctionParam * PickUpCount)
+  if GameMode:CheckServerDungeonEnable() then
+    local Pickup = GameMode.EMGameState.CombatItemMap:Find(PickUpEid)
+    if not Pickup then
+      if IsDedicatedServer(self) then
+        local UniqueId = GameMode.EMGameState.PickupEid2ServerUniqueId:Find(PickUpEid)
+        if UniqueId then
+          GameMode:NotifyServerDungeonEvent("TriggerPickupAddSurvivalValueEvent", DropId, UniqueId)
+          GameMode.EMGameState.PickupEid2ServerUniqueId:Remove(PickUpEid)
+        end
+      end
+      return
+    end
+    GameMode:NotifyServerDungeonEvent("TriggerPickupAddSurvivalValueEvent", Pickup.UnitId, Pickup.ServerUniqueId)
+  else
+    GameMode:TriggerDungeonComponentFun("AddSurvivalValue", UseFunctionParam * PickUpCount)
+  end
 end
 
 function Component:PickupToGetResource(PickUpCount, ResourceId, DropId, Transform, PickUpEid, bExtra)

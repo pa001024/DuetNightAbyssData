@@ -361,8 +361,7 @@ local function update_global(value_map)
   local running_state = coroutine.running()
   local exclude = {
     [debug] = true,
-    [coroutine] = true,
-    [io] = true
+    [coroutine] = true
   }
   exclude[exclude] = true
   exclude[M] = true

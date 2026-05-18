@@ -261,6 +261,12 @@ T.RT_52 = {
   [3] = 10103,
   [4] = 10100
 }
+T.RT_53 = {
+  [120102] = 4
+}
+T.RT_54 = {
+  [120101] = 4
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -328,6 +334,66 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       }
     }
   },
+  [1102] = {
+    [1] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 1102,
+        NeedSkill = {
+          [110201] = 4
+        },
+        Num = 1,
+        ResourceID = T.RT_28,
+        Skill = T.RT_15
+      },
+      [3] = {
+        Amount = T.RT_14,
+        CharID = 1102,
+        NeedBreak = 5,
+        Num = 2,
+        ResourceID = T.RT_27,
+        Skill = T.RT_13
+      }
+    },
+    [2] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 1102,
+        NeedSkill = {
+          [110202] = 4
+        },
+        Num = 3,
+        ResourceID = T.RT_28,
+        Skill = T.RT_10
+      },
+      [3] = {
+        Amount = T.RT_9,
+        CharID = 1102,
+        NeedLevel = 75,
+        Num = 4,
+        ResourceID = T.RT_27,
+        Skill = T.RT_7
+      }
+    },
+    [3] = {
+      [2] = {
+        Amount = T.RT_6,
+        CharID = 1102,
+        NeedBreak = 2,
+        Num = 5,
+        ResourceID = T.RT_26,
+        Skill = T.RT_4
+      },
+      [3] = {
+        Amount = T.RT_3,
+        CharID = 1102,
+        NeedBreak = 4,
+        Num = 6,
+        ResourceID = T.RT_25,
+        Skill = T.RT_1
+      }
+    }
+  },
   [1103] = {
     [1] = {
       [2] = {
@@ -381,6 +447,62 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
       [3] = {
         Amount = T.RT_3,
         CharID = 1103,
+        NeedBreak = 4,
+        Num = 6,
+        ResourceID = T.RT_25,
+        Skill = T.RT_1
+      }
+    }
+  },
+  [1201] = {
+    [1] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 1201,
+        NeedSkill = T.RT_54,
+        Num = 1,
+        ResourceID = T.RT_28,
+        Skill = T.RT_15
+      },
+      [3] = {
+        Amount = T.RT_14,
+        CharID = 1201,
+        NeedBreak = 5,
+        Num = 2,
+        ResourceID = T.RT_27,
+        Skill = T.RT_13
+      }
+    },
+    [2] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 1201,
+        NeedSkill = T.RT_53,
+        Num = 3,
+        ResourceID = T.RT_28,
+        Skill = T.RT_10
+      },
+      [3] = {
+        Amount = T.RT_9,
+        CharID = 1201,
+        NeedLevel = 75,
+        Num = 4,
+        ResourceID = T.RT_27,
+        Skill = T.RT_7
+      }
+    },
+    [3] = {
+      [2] = {
+        Amount = T.RT_6,
+        CharID = 1201,
+        NeedBreak = 2,
+        Num = 5,
+        ResourceID = T.RT_26,
+        Skill = T.RT_4
+      },
+      [3] = {
+        Amount = T.RT_3,
+        CharID = 1201,
         NeedBreak = 4,
         Num = 6,
         ResourceID = T.RT_25,
@@ -1920,6 +2042,62 @@ return ReadOnly("SkillTreeNode2SkillTreeUnlock", {
         NeedBreak = 4,
         Num = 6,
         ResourceID = T.RT_2,
+        Skill = T.RT_1
+      }
+    }
+  },
+  [120101] = {
+    [1] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 120101,
+        NeedSkill = T.RT_54,
+        Num = 1,
+        ResourceID = T.RT_28,
+        Skill = T.RT_15
+      },
+      [3] = {
+        Amount = T.RT_14,
+        CharID = 120101,
+        NeedBreak = 5,
+        Num = 2,
+        ResourceID = T.RT_27,
+        Skill = T.RT_13
+      }
+    },
+    [2] = {
+      [2] = {
+        Amount = T.RT_12,
+        CharID = 120101,
+        NeedSkill = T.RT_53,
+        Num = 3,
+        ResourceID = T.RT_28,
+        Skill = T.RT_10
+      },
+      [3] = {
+        Amount = T.RT_9,
+        CharID = 120101,
+        NeedLevel = 75,
+        Num = 4,
+        ResourceID = T.RT_27,
+        Skill = T.RT_7
+      }
+    },
+    [3] = {
+      [2] = {
+        Amount = T.RT_6,
+        CharID = 120101,
+        NeedBreak = 2,
+        Num = 5,
+        ResourceID = T.RT_26,
+        Skill = T.RT_4
+      },
+      [3] = {
+        Amount = T.RT_3,
+        CharID = 120101,
+        NeedBreak = 4,
+        Num = 6,
+        ResourceID = T.RT_25,
         Skill = T.RT_1
       }
     }

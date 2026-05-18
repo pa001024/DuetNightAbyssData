@@ -88,6 +88,25 @@ function M:Construct()
     elseif EventId == ChatCommon.EventID.SelectPlayerToChat then
       local Uid = (...)
       self:HandleSelectPlayerToChat(Uid)
+    elseif EventId == ChatCommon.EventID.SelectGuildMemberToChat then
+      local Uid = (...)
+      self:HandleSelectPlayerToChat(Uid)
+    elseif EventId == ChatCommon.EventID.RefreshGuildPlayerList then
+      local Uid = (...)
+      if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+        self:_HandleRefreshGuildInPrivateChannel(Uid)
+      end
+    elseif EventId == ChatCommon.EventID.ResetSendBtn then
+      self:_HandleChatSendFailed()
+    elseif EventId == ChatCommon.EventID.GuildPrivateTargetDisabled then
+      local Uid, TimeWrap, MsgWrap, bNeedRebuild = ...
+      self:_HandleGuildPrivateTargetDisabled(Uid, TimeWrap, MsgWrap, bNeedRebuild)
+    elseif EventId == ChatCommon.EventID.GuildPrivateTargetLeftGuild then
+      local Uid, TimeWrap, MsgWrap, bNeedRebuild = ...
+      self:_HandleGuildPrivateTargetLeftGuild(Uid, TimeWrap, MsgWrap, bNeedRebuild)
+    elseif EventId == ChatCommon.EventID.GuildPrivateTargetEnabled then
+      local Uid = (...)
+      self:_HandleGuildPrivateTargetEnabled(Uid)
     elseif EventId == ChatCommon.EventID.SendCDTimerUpdate then
       local RemainTime = (...)
       self:HandleSendCDTimerUpdate(RemainTime)
@@ -157,28 +176,28 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   self.OriginPivotX, self.OriginPivotY = self.WidgetPivot.X, self.WidgetPivot.Y
   self.Com_Input:SetText("")
   local Tabs = {}
-  local Index = 0
-  local ChannelType2Index = {}
   for Id, ChannelInfo in pairs(DataMgr.Channel) do
-    if not ChatModel:IsChannelExclude(Id) then
-      Index = Index + 1
+    if ChatModel:IsChannelExclude(Id) or Id == ChatCommon.ChannelDef.SettlementOnline and not self.bInDungeonSettlement then
+    else
       local Text = GText(ChannelInfo.Name)
       table.insert(Tabs, {
         Text = Text,
-        TabId = Index,
+        TabId = ChatCommon.GetChannelTabOrder(Id),
         IconPath = ChannelInfo.Icon,
         ChannelType = Id,
         HideText = true
       })
-      ChannelType2Index[Id] = Index
     end
-  end
-  if not self.bInDungeonSettlement then
-    Tabs[ChannelType2Index[ChatCommon.ChannelDef.SettlementOnline]] = nil
   end
   table.sort(Tabs, function(a, b)
     return a.TabId < b.TabId
   end)
+  local ChannelType2Index = {}
+  for Idx, Tab in ipairs(Tabs) do
+    Tab.TabId = Idx
+    ChannelType2Index[Tab.ChannelType] = Idx
+  end
+  self.ChannelType2Index = ChannelType2Index
   local TabInfo = {
     StyleName = "Text",
     Tabs = Tabs,
@@ -194,7 +213,7 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   self:InitUIStyleInPlatform()
   self:FreshTabDisturbIcon()
   self.WBP_Com_TabSub01:BindEventOnTabSelected(self, self.OnTabSelected)
-  self.WBP_Com_TabSub01:SelectTab(ChannelType2Index[ChatModel:GetCurrentChannel()] or 1)
+  self:SelectTabByChannelType(ChatModel:GetCurrentChannel(), 1)
   self.WBP_Com_TabSub01.Key_Left:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.WBP_Com_TabSub01.Key_Right:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self:AddReddotListen()
@@ -248,6 +267,7 @@ function M:OnTabSelected(TabWidget, TabItemInfo)
     [ChatCommon.ChannelDef.TeamUp] = self.OnTabSelected_TeamUp,
     [ChatCommon.ChannelDef.Friend] = self.OnTabSelected_Friend,
     [ChatCommon.ChannelDef.Public] = self.OnTabSelected_Public,
+    [ChatCommon.ChannelDef.InGuild] = self.OnTabSelected_InGuild,
     [ChatCommon.ChannelDef.InTeam] = self.OnTabSelected_InTeam,
     [ChatCommon.ChannelDef.Region] = self.OnTabSelected_Region
   }
@@ -258,6 +278,7 @@ function M:OnTabSelected(TabWidget, TabItemInfo)
   self.CanSelectChat = false
   self:SetFocusStateType(ChatFocusType.Default)
   Switch[self.CurrChannel](self, TabWidget, TabItemInfo)
+  self:_RefreshGuildPermissionVisibility()
   self:UpdateUIStyleInPlatform()
   self:SetFocus()
   if self.CurSelectTabWidget then
@@ -273,28 +294,45 @@ end
 function M:_AddReddotListenInner(ChannelName, ChannelType)
   local NodeName = ChatCommon.ReddotNamePre .. ChannelName
   local Node = ReddotManager.GetTreeNode(NodeName)
-  if Node and not Node:HadAddChangeCb(self) then
-    ReddotManager.AddListener(NodeName, self, function(self, Count)
-      local Tabs = self.WBP_Com_TabSub01.Tabs
-      if not Tabs or not Tabs[ChannelType] then
-        return
-      end
-      local TabUI = Tabs[ChannelType].UI
-      if not IsValid(TabUI) then
-        return
-      end
-      if Count > 0 then
-        local NumText = tostring(Count)
-        if Count >= ChatCommon.ReddotMaxCount then
-          NumText = ChatCommon.ReddotMaxCount .. "+"
-        end
-        TabUI.Reddot_Num:SetNum(NumText)
-        TabUI.Reddot_Num:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      else
-        TabUI.Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      end
-    end)
+  if not Node or Node:HadAddChangeCb(self) then
+    return
   end
+  
+  local function RefreshTab()
+    local Tabs = self.WBP_Com_TabSub01.Tabs
+    if not Tabs then
+      return
+    end
+    local TabData
+    for _, Data in ipairs(Tabs) do
+      if Data and Data.ChannelType == ChannelType then
+        TabData = Data
+        break
+      end
+    end
+    if not TabData then
+      return
+    end
+    local TabUI = TabData.UI
+    if not IsValid(TabUI) then
+      return
+    end
+    local Count = Node:GetNodeCount()
+    if Count > 0 then
+      local NumText = tostring(Count)
+      if Count >= ChatCommon.ReddotMaxCount then
+        NumText = ChatCommon.ReddotMaxCount .. "+"
+      end
+      TabUI.Reddot_Num:SetNum(NumText)
+      TabUI.Reddot_Num:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    else
+      TabUI.Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
+  
+  ReddotManager.AddListener(NodeName, self, function(_self, _Count)
+    RefreshTab()
+  end)
 end
 
 function M:ResetUI()
@@ -337,7 +375,7 @@ function M:_SetUpChatMsgListTimerCallback(MsgList)
   if self._SetUpChatMsgListIndex == #MsgList then
     self:_Stop_SetUpChatMsgListTimer()
     if 0 == #MsgList then
-      self.Text_DialogEmptyText:SetText(GText("UI_Chat_NoChatHistory"))
+      self.Text_DialogEmptyText:SetText(self:_GetCurrentDialogEmptyText())
       self.WS_Dialoglist:SetActiveWidgetIndex(1)
     end
     if ChatModel:GetChannelUnreadCount() > 0 then
@@ -358,17 +396,26 @@ function M:CalcWrapTextAt()
   return self.WidgetSlot:GetSize().X - self.DialogPadding - PlayerListWidth
 end
 
+function M:SelectTabByChannelType(ChannelType, FallbackIndex)
+  local TabIndex = self.ChannelType2Index and self.ChannelType2Index[ChannelType]
+  TabIndex = TabIndex or FallbackIndex
+  if not TabIndex then
+    return
+  end
+  self.WBP_Com_TabSub01:SelectTab(TabIndex)
+end
+
 function M:HandleGoToTeamType()
-  self.WBP_Com_TabSub01:SelectTab(ChatCommon.ChannelDef.TeamUp)
+  self:SelectTabByChannelType(ChatCommon.ChannelDef.TeamUp)
 end
 
 function M:HandleAddBlackList()
-  self.WBP_Com_TabSub01:SelectTab(self.CurrChannel)
+  self:SelectTabByChannelType(self.CurrChannel)
 end
 
 function M:HandleSelectPlayerToChat(Uid)
   self._bSelectedPlayerToChat = true
-  self.WBP_Com_TabSub01:SelectTab(ChatCommon.ChannelDef.Friend)
+  self:SelectTabByChannelType(ChatCommon.ChannelDef.Friend)
   self._bSelectedPlayerToChat = false
 end
 
@@ -386,11 +433,40 @@ function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
   if self.PreViewKeyTable == nil then
     self.PreViewKeyTable = {
       [UIConst.GamePadKey.DPadDown] = function()
+        if self.Group_Permission and self.Group_Permission:IsVisible() and self.SwitchCheckBox_Permission then
+          local bNew = not self.SwitchCheckBox_Permission:GetChecked()
+          self.SwitchCheckBox_Permission:SetChecked(bNew, true)
+          return true
+        end
         if self.Group_NewMessage:IsVisible() then
           self:BtnNewMsgOnClicked()
           self:NavigateToLastMsg()
           return true
         end
+      end,
+      [Const.GamepadLeftTrigger] = function()
+        if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+          return false
+        end
+        if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Friend then
+          return false
+        end
+        if self.SubTab_Friend and self.SubTab_Friend.Btn_Click then
+          self.SubTab_Friend.Btn_Click.OnClicked:Broadcast()
+        end
+        return true
+      end,
+      [Const.GamepadRightTrigger] = function()
+        if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+          return false
+        end
+        if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+          return false
+        end
+        if self.SubTab_Guild and self.SubTab_Guild.Btn_Click then
+          self.SubTab_Guild.Btn_Click.OnClicked:Broadcast()
+        end
+        return true
       end,
       [Const.GamepadDPadUp] = function()
         if self.Key_Reset:IsVisible() then
@@ -459,7 +535,6 @@ end
 function M:OnKeyUp(MyGeo, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  ScreenPrint("OnKeyUp:" .. InKeyName)
   if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and InKeyName == Const.GamepadSpecialLeft then
     self.IsForBidDisturb = false
   end
@@ -588,11 +663,18 @@ end
 function M:InitGamepadKeyTable(InKeyName)
   self.GamepadKeyTable = {
     [Const.GamepadLeftShoulder] = function()
-      self.WBP_Com_TabSub01:ClickTab(self.CurrChannel - 1)
+      local CurIdx = self.WBP_Com_TabSub01:GetCurrentTabIndex()
+      if CurIdx and CurIdx > 1 then
+        self.WBP_Com_TabSub01:ClickTab(CurIdx - 1)
+      end
       return true
     end,
     [Const.GamepadRightShoulder] = function()
-      self.WBP_Com_TabSub01:ClickTab(self.CurrChannel + 1)
+      local CurIdx = self.WBP_Com_TabSub01:GetCurrentTabIndex()
+      local Tabs = self.WBP_Com_TabSub01.Tabs
+      if CurIdx and Tabs and CurIdx < #Tabs then
+        self.WBP_Com_TabSub01:ClickTab(CurIdx + 1)
+      end
       return true
     end,
     [Const.GamepadSpecialLeft] = function()
@@ -604,6 +686,10 @@ function M:InitGamepadKeyTable(InKeyName)
       return false
     end,
     [Const.GamepadSpecialRight] = function()
+      if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild and self.FocusStateType == ChatFocusType.PlayerList and self.CurrSelectPlayer and IsValid(self.CurrSelectPlayer.UI) and self.CurrSelectPlayer.UI._OnDeleteClicked then
+        self.CurrSelectPlayer.UI:_OnDeleteClicked()
+        return true
+      end
       if self.CurrChannel == ChatCommon.ChannelDef.InTeam and self.Key_PlayerListTitle:IsVisible() then
         self:RefreshFocusWidget(ChatFocusType.PlayerList)
         return true
@@ -657,6 +743,8 @@ function M:OnGamePadDown(InKeyName)
     if InKeyName == Const.GamepadFaceButtonLeft then
       if self.Group_ChatEmpty:IsVisible() then
         self:BtnEmptyOnClicked()
+      elseif self.CurrChannel == ChatCommon.ChannelDef.Friend and self.Panel_Add_02 and self.Panel_Add_02:IsVisible() and self.Btn_Empty_02 then
+        self.Btn_Empty_02.OnClicked:Broadcast()
       else
         self:RefreshFocusWidget(ChatFocusType.InputField)
       end
@@ -742,6 +830,18 @@ function M:UpdateUIStyleInPlatform()
   local IsGamepad = self.CurInputDeviceType == ECommonInputType.Gamepad and not self:CheckIsOpenHeadBtnList()
   local Visibility = IsGamepad and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed
   self.Key_Recruit:SetVisibility(Visibility)
+  if self.Key_Recruit_02 then
+    self.Key_Recruit_02:SetVisibility(Visibility)
+  end
+  if self.Controller_Permission then
+    self.Controller_Permission:SetVisibility(Visibility)
+  end
+  if self.SubTab_Friend and self.SubTab_Friend.Controller then
+    self.SubTab_Friend.Controller:SetVisibility(Visibility)
+  end
+  if self.SubTab_Guild and self.SubTab_Guild.Controller then
+    self.SubTab_Guild.Controller:SetVisibility(Visibility)
+  end
   self.Group_BottomControllerKey:SetVisibility(Visibility)
   self.WS_NewMassage:SetActiveWidgetIndex(IsGamepad and 1 or 0)
   self.WBP_Com_TabSub01.Key_Left:GetParent():SetVisibility(Visibility)
@@ -800,6 +900,19 @@ function M:UpdateUIStyleInPlatform()
         Desc = GText("UI_CTL_PlayerOptions"),
         bLongPress = false
       })
+      if self.CurrSelectPlayer and self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+        table.insert(BottomKeyInfo, {
+          KeyInfoList = {
+            {
+              Type = "Img",
+              ImgShortPath = "Menu",
+              Owner = self
+            }
+          },
+          Desc = GText("UI_RegionMap_Delete"),
+          bLongPress = false
+        })
+      end
       table.insert(BottomKeyInfo, {
         KeyInfoList = {
           {
@@ -857,7 +970,7 @@ function M:UpdateUIStyleInPlatform()
           },
           Desc = GText("UI_CTL_PlayerOptions")
         })
-        if self.CurrSelectChatItem.MsgWrap.ModSuitInfo then
+        if self.CurrSelectChatItem.IsShowCheckPlan and self.CurrSelectChatItem:IsShowCheckPlan() then
           table.insert(BottomKeyInfo, {
             KeyInfoList = {
               {
@@ -995,6 +1108,54 @@ function M:InitUIStyleInPlatform()
     },
     bAllowForbid = bAllowForbid
   })
+  if self.Key_Recruit_02 then
+    self.Key_Recruit_02:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "X",
+          Owner = self
+        }
+      },
+      bAllowForbid = bAllowForbid
+    })
+  end
+  if self.Controller_Permission then
+    self.Controller_Permission:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "Down",
+          Owner = self
+        }
+      },
+      bAllowForbid = bAllowForbid
+    })
+  end
+  if self.SubTab_Friend and self.SubTab_Friend.Controller then
+    self.SubTab_Friend.Controller:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "LT",
+          Owner = self
+        }
+      },
+      bAllowForbid = bAllowForbid
+    })
+  end
+  if self.SubTab_Guild and self.SubTab_Guild.Controller then
+    self.SubTab_Guild.Controller:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = "RT",
+          Owner = self
+        }
+      },
+      bAllowForbid = bAllowForbid
+    })
+  end
   self.Key_PlayerListTitle:CreateCommonKey({
     KeyInfoList = {
       {

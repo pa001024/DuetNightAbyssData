@@ -109,5 +109,45 @@
     "access": [
       "상점"
     ]
+  },
+  {
+    "id": 1008,
+    "name": "사색의 왕좌",
+    "des": "나는 들었다, 그 충성의 외침을. 나는 보았다, 그 불타는 별들을!",
+    "icon": "Mounts_0009",
+    "resourceIcon": "Icon_Mounts_0009",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49991,
+    "fly": 1,
+    "access": [
+      "상점"
+    ]
+  },
+  {
+    "id": 1009,
+    "name": "밤의 준마",
+    "des": "밤의 장막이 하늘과 땅에 내려앉고, 메마른 울부짖음이 그 안에 울려 퍼진다.",
+    "icon": "Mounts_0011",
+    "resourceIcon": "Icon_Mounts_0011",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49990,
+    "access": [
+      "프리즘 상점 기간 한정 교환"
+    ]
+  },
+  {
+    "id": 1010,
+    "name": "밤하늘을 향해",
+    "des": "칠흑 같은 날개가 밤을 가르고, 달빛조차 닿지 않는 저편으로 조용히 숨어든다.",
+    "icon": "Mounts_0010",
+    "resourceIcon": "Icon_Mounts_0010",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49989,
+    "access": [
+      "프리즘 상점 기간 한정 교환"
+    ]
   }
 ]

@@ -106,6 +106,8 @@ function M:EnterStuffViewMode()
   self.FocusWidgetWidget = self.List_Reward
   if self.ParentWidget then
     self.ParentWidget:UpdateActivityKeyTips(self.FocusWidgetName, self.FocusWidgetWidget)
+    self.ParentWidget:UpdateUIStyleInPlatform(false)
+    self.ParentWidget:EnterForbiddenState()
   end
   self:OnUpdateSubUIViewStyle(false, true)
   local ChildItemSubWidget = self:GetSupportsFocusSubWidget()
@@ -128,6 +130,8 @@ function M:LeaveStuffViewMode()
   self.List_Reward:BP_ClearSelection()
   if self.ParentWidget then
     self.ParentWidget:UpdateActivityKeyTips()
+    self.ParentWidget:UpdateUIStyleInPlatform(true)
+    self.ParentWidget:LeaveForbiddenState()
     self.ParentWidget:SetFocus()
   end
   self:OnUpdateSubUIViewStyle(true, true)

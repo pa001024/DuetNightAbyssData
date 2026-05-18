@@ -191,17 +191,32 @@ function Mod:CountModPolarity(ModPolarityMap)
   ModPolarityMap[self.Polarity] = ModPolarityMap[self.Polarity] + 1
 end
 
-function Mod:CalcAttrs(BaseValues, ModRateValues, ModAddValues, ModUniteTypes, ModMultiplier, ModPolarityMap)
+function Mod:CheckPreCondition(ModPolarityMap, HasDuplicateModId)
+  local ModData = self:Data()
+  if not ModData.PreConditions then
+    return true
+  end
+  if ModData.PreConditions.Polarity then
+    for Polarity, NeedNum in pairs(ModData.PreConditions.Polarity) do
+      local PolarityNum = tonumber(Polarity)
+      if not ModPolarityMap[PolarityNum] or NeedNum > ModPolarityMap[PolarityNum] then
+        return false
+      end
+    end
+  end
+  if ModData.PreConditions.Highlander and HasDuplicateModId then
+    return false
+  end
+  return true
+end
+
+function Mod:CalcAttrs(BaseValues, ModRateValues, ModAddValues, ModUniteTypes, ModMultiplier, ModPolarityMap, HasDuplicateModId)
   local ModData = self:Data()
   if not ModData.AddAttrs then
     return
   end
-  if ModData.PolarityNeedNum then
-    for Polarity, NeedNum in pairs(ModData.PolarityNeedNum) do
-      if not ModPolarityMap[Polarity] or NeedNum > ModPolarityMap[Polarity] then
-        return
-      end
-    end
+  if not self:CheckPreCondition(ModPolarityMap, HasDuplicateModId) then
+    return
   end
   for Index, AttrData in pairs(ModData.AddAttrs) do
     local UniqueName = table.concat({

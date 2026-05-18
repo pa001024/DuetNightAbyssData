@@ -9,7 +9,7 @@ local InteractiveTypeEnum = {
 }
 
 function BP_InteractiveBaseComponent_C:ReceiveBeginPlay()
-  self.Priority = "Normal"
+  rawset(self, "Priority", "Normal")
   self.Owner = self:GetOwner()
   if self.CommonUIConfirmID then
     self:InitCommonUIConfirmID(self.CommonUIConfirmID)
@@ -30,7 +30,8 @@ function BP_InteractiveBaseComponent_C:DisplayInteractiveBtn(PlayerActor)
   if not InteractiveUI then
     return
   end
-  DebugPrint("1111111111111111", self:GetName(), self.InteractiveDistance)
+  local GetDistanceCheckResult = self:GetDistanceCheckResult()
+  DebugPrint("BP_InteractiveBaseComponent_C:DisplayInteractiveBtn", self:GetName(), self.InteractiveDistance, GetDistanceCheckResult and "GetDistanceCheckResult = true" or "GetDistanceCheckResult = false")
   InteractiveUI:AddInteractiveItem(self)
   self:SetBtnDisplayed(PlayerActor, true)
   self:RefreshInteractiveBtn(PlayerActor)
@@ -114,19 +115,46 @@ function BP_InteractiveBaseComponent_C:GetInteractiveIcon(PlayerActor)
 end
 
 function BP_InteractiveBaseComponent_C:GetInteractiveName()
-  if self.InteractiveName ~= "" then
-    local Language = CommonConst.SystemLanguage or CommonConst.SystemLanguages.Default
-    local TextMap = DataMgr["TextMap_" .. Language]
-    local TextMapData = TextMap[self.InteractiveName]
-    if nil ~= TextMapData then
-      return GText(self.InteractiveName)
+  local Language = CommonConst.SystemLanguage or CommonConst.SystemLanguages.Default
+  local InteractiveName = self.InteractiveName or ""
+  local ConfirmID = self.CommonUIConfirmID
+  local CachedValue = rawget(self, "InteractiveNameCacheValue")
+  local CacheKey
+  if nil ~= CachedValue then
+    local CachedKey = rawget(self, "InteractiveNameCacheKey")
+    CacheKey = table.concat({
+      Language,
+      InteractiveName,
+      ConfirmID
+    }, "_")
+    if CachedKey == CacheKey then
+      return CachedValue
     end
   end
-  local Data = DataMgr.CommonUIConfirm[self.CommonUIConfirmID]
-  if not Data then
-    return GText(self.InteractiveName)
+  local Result
+  if "" ~= InteractiveName then
+    local TextMap = DataMgr["TextMap_" .. Language]
+    local TextMapData = TextMap[InteractiveName]
+    if nil ~= TextMapData then
+      Result = GText(InteractiveName)
+    end
   end
-  return GText(Data.ConfirmText)
+  if not Result then
+    local Data = DataMgr.CommonUIConfirm[ConfirmID]
+    if Data then
+      Result = GText(Data.ConfirmText)
+    else
+      Result = GText(InteractiveName)
+    end
+  end
+  CacheKey = table.concat({
+    Language,
+    InteractiveName,
+    ConfirmID
+  }, "_")
+  rawset(self, "InteractiveNameCacheKey", CacheKey)
+  rawset(self, "InteractiveNameCacheValue", Result)
+  return Result
 end
 
 function BP_InteractiveBaseComponent_C:GetInteractiveCondition()
@@ -185,7 +213,6 @@ function BP_InteractiveBaseComponent_C:InitCommonUIConfirmID(CommonUIConfirmID)
   self:SetInteractiveDistance(Data.InteractiveRadius or self.InteractiveDistance)
   self.InteractiveAngle = Data.InteractiveAngle or self.InteractiveAngle
   self.InteractiveFaceAngle = Data.PlayerFaceAngle or self.InteractiveFaceAngle
-  self.ListPriority = Data.InteractivePriority or 0
 end
 
 function BP_InteractiveBaseComponent_C:CheckInteractiveSucc(PlayerEid)
@@ -253,11 +280,11 @@ function BP_InteractiveBaseComponent_C:GetUUID()
 end
 
 function BP_InteractiveBaseComponent_C:GetOverridenFailMsg()
-  return self.OverridenFailMsg
+  return rawget(self, "OverridenFailMsg")
 end
 
 function BP_InteractiveBaseComponent_C:SetOverridenFailMsg(FailMsg)
-  self.OverridenFailMsg = FailMsg
+  rawset(self, "OverridenFailMsg", FailMsg)
 end
 
 function BP_InteractiveBaseComponent_C:UpdateLockState()
@@ -291,12 +318,12 @@ function BP_InteractiveBaseComponent_C:UpdateLockState()
 end
 
 function BP_InteractiveBaseComponent_C:UpdateForbiddenState(PlayerActor)
-  if self.bForbidden == nil then
-    self.bForbidden = self:IsForbidden(PlayerActor)
+  local bOldForbidden = rawget(self, "bForbidden")
+  if nil == bOldForbidden then
+    rawset(self, "bForbidden", self:IsForbidden(PlayerActor))
   else
-    local bOldForbidden = self.bForbidden
-    self.bForbidden = self:IsForbidden(PlayerActor)
-    if self.bForbidden ~= bOldForbidden then
+    rawset(self, "bForbidden", self:IsForbidden(PlayerActor))
+    if rawget(self, "bForbidden") ~= bOldForbidden then
       return true
     end
   end

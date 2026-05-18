@@ -11,20 +11,7 @@ function M:Construct()
     table.insert(self.CharFilterIcons, "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
   end
   self.MeleeFilterTags, self.MeleeFilterNames, self.RangedFilterTags, self.RangedFilterNames = UIUtils.GetAllWeaponTags()
-  self.MeleeFilterIcons = {}
-  self.Melee2Icon = {}
-  for _, Tag in ipairs(self.MeleeFilterTags) do
-    local Data = DataMgr.WeaponTag[Tag]
-    table.insert(self.MeleeFilterIcons, Data and Data.Icon)
-    self.Melee2Icon[Tag] = Data.Icon
-  end
-  self.RangedFilterIcons = {}
-  self.Ranged2Icon = {}
-  for _, Tag in ipairs(self.RangedFilterTags) do
-    local Data = DataMgr.WeaponTag[Tag]
-    table.insert(self.RangedFilterIcons, Data and Data.Icon)
-    self.Ranged2Icon[Tag] = Data.Icon
-  end
+  self.MeleeFilterIcons, self.Melee2Icon, self.RangedFilterIcons, self.Ranged2Icon = UIUtils.GetAllWeaponTagIcons()
   self.Btn_Selective:BindEventOnClicked(self, self.OnExpandListButtonClicked)
   self.IsListExpanded = false
 end
@@ -229,12 +216,16 @@ function M:ExpandList(IsListExpanded)
     else
       OrderByDisplayNames = self[self.CurMainTab.Name .. "OrderByDisplayNames"]
     end
+    local ItemContents = self[self.CurMainTab.Name .. "ItemContentsArray"]
+    if self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Melee or self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Ranged then
+      ItemContents = self.WeaponItemContentsArray
+    end
     self.Selective_Listing:Init(self, {
       Filters = self.Filters,
       OrderByDisplayNames = OrderByDisplayNames,
       SortIdx = self:GetCurSortIdx() or 1,
       SortType = self:GetCurSortType() or CommonConst.DESC,
-      ItemContents = self[self.CurMainTab.Name .. "ItemContentsArray"]
+      ItemContents = ItemContents
     })
     local LastCameraTags = self.ActorController.LastCameraTags
     if LastCameraTags then
@@ -606,29 +597,33 @@ end
 
 function M:InitKeySettingCommon()
   if self.IsListExpanded then
-    self:AddKeyEvents(self.KeyDownEvents, self.ViewKeyDownEvents)
+    self:AddKeyClickEvent(UIConst.GamePadKey.SpecialLeft, self.OnViewKeyDown)
   elseif self.BoxWidget:IsVisible() then
-    self:AddKeyEvents(self.KeyDownEvents, self.ViewKeyDownEvents)
+    self:AddKeyClickEvent(UIConst.GamePadKey.SpecialLeft, self.OnViewKeyDown)
   end
 end
 
-function M:CharMain_OnViewKeyDown()
-  self:ExpandList_OnViewKeyDown()
+function M:CharMain_OnViewKeyDown(ReplyInfo)
+  self:ExpandList_OnViewKeyDown(ReplyInfo)
 end
 
-function M:WeaponMain_OnViewKeyDown()
-  self:ExpandList_OnViewKeyDown()
+function M:WeaponMain_OnViewKeyDown(ReplyInfo)
+  self:ExpandList_OnViewKeyDown(ReplyInfo)
 end
 
-function M:PetMain_OnViewKeyDown()
-  self:ExpandList_OnViewKeyDown()
+function M:PetMain_OnViewKeyDown(ReplyInfo)
+  self:ExpandList_OnViewKeyDown(ReplyInfo)
 end
 
-function M:ExpandList_OnViewKeyDown()
+function M:ExpandList_OnViewKeyDown(ReplyInfo)
   if self.IsListExpanded then
     self:ExpandList(false)
+    ReplyInfo.Reply = UIUtils.Handled
+    ReplyInfo.IsHandled = true
   elseif self.BoxWidget:IsVisible() then
     self:ExpandList(true)
+    ReplyInfo.Reply = UIUtils.Handled
+    ReplyInfo.IsHandled = true
   end
 end
 

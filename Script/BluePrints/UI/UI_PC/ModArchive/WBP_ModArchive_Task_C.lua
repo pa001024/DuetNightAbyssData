@@ -947,7 +947,7 @@ function WBP_ModArchive_Task_C:UpdateOnInputDeviceTypeChange()
     if self.TitleItem.IsHovering then
       self.TitleItem:PlayAnimation(self.TitleItem.Unhover)
     end
-    if self.StillHasReward then
+    if self.StillHasReward and 1 == self.Owner.CurTab then
       self.Owner:SwitchComKeyTipsState(4)
     else
       self.Owner:SwitchComKeyTipsState(1)

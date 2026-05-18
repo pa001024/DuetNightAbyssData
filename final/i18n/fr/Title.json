@@ -440,14 +440,12 @@
   {
     "id": 10078,
     "name": "tourmenté",
-    "suf": false,
-    "src": "Livrer un total de <H>300</> matériaux communs durant l’événement"
+    "suf": false
   },
   {
     "id": 10079,
     "name": "immaculé",
-    "suf": false,
-    "src": "Livrer un total de <H>100</> matériaux rares durant l’événement"
+    "suf": false
   },
   {
     "id": 10080,
@@ -523,7 +521,7 @@
   },
   {
     "id": 10093,
-    "name": "d’Yvaine",
+    "name": "d’Eve",
     "suf": false
   },
   {
@@ -547,7 +545,8 @@
   {
     "id": 10097,
     "name": "d’Hilda",
-    "suf": false
+    "suf": false,
+    "src": "成就「Instants figés : Hilda」"
   },
   {
     "id": 10098,
@@ -665,6 +664,12 @@
     "name": "face aux dieux",
     "suf": false,
     "src": "成就「Retour à l’Origine」"
+  },
+  {
+    "id": 10118,
+    "name": "芙罗拉的",
+    "suf": false,
+    "src": "成就「停驻光阴·芙罗拉」"
   },
   {
     "id": 20001,
@@ -1040,14 +1045,12 @@
   {
     "id": 20067,
     "name": "Roi de l’empressement",
-    "suf": true,
-    "src": "Livrer un total de <H>30</> Rémanences festives"
+    "suf": true
   },
   {
     "id": 20068,
     "name": "Roi Démon",
-    "suf": true,
-    "src": "Obtenir la récompense maximale dans <H>5</> mini-jeux"
+    "suf": true
   },
   {
     "id": 20069,
@@ -1099,7 +1102,7 @@
   },
   {
     "id": 20077,
-    "name": "Yvaine",
+    "name": "Eve",
     "suf": true
   },
   {
@@ -1123,7 +1126,8 @@
   {
     "id": 20081,
     "name": "Hilda",
-    "suf": true
+    "suf": true,
+    "src": "成就「Un moment de répit : Hilda」"
   },
   {
     "id": 20082,
@@ -1225,5 +1229,16 @@
     "name": "Grande-tante",
     "suf": true,
     "src": "成就「Hiérarchie et traditions」"
+  },
+  {
+    "id": 20099,
+    "name": "Seigneur du rail",
+    "suf": true
+  },
+  {
+    "id": 20100,
+    "name": "芙罗拉",
+    "suf": true,
+    "src": "成就「休憩一刻·芙罗拉」"
   }
 ]

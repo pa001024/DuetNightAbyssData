@@ -124,7 +124,7 @@
   },
   {
     "id": 4,
-    "name": "« Geôlière de la fournaise »",
+    "name": "Geôlière de la fournaise",
     "icon": "T_Permanent_HardBoss_Haier_S",
     "desc": "Geôlière de la Prison Militaire Royale : ses chaînes châtient le péché, et ses flammes veillent sur la justice.",
     "diff": [
@@ -165,7 +165,7 @@
   },
   {
     "id": 5,
-    "name": "« La Bête née du blizzard »",
+    "name": "La Bête née du blizzard",
     "icon": "T_Permanent_HardBoss_Linen_S",
     "desc": "C’est la Bête née du blizzard, celle qui ravagea le Nord, détruisant les foyers d’enfants et dissipant les rêves des fées endormies.",
     "diff": [
@@ -244,6 +244,49 @@
     "mid": [
       8510004,
       8511002
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Canon principal de l’Express Aurora",
+    "icon": "T_Permanent_HardBoss_Lieche_S",
+    "desc": "Canon à propulsion Phoxichor monté à l’avant du train.\nCalibre 210 mm, canon lisse doté d’une excellente capacité de pénétration.\nCombiné aux autres armes embarquées du train, il peut anéantir tout ennemi à portée de vue.",
+    "diff": [
+      {
+        "id": 1061,
+        "lv": 30,
+        "r": 1022
+      },
+      {
+        "id": 1062,
+        "lv": 40,
+        "r": 1023
+      },
+      {
+        "id": 1063,
+        "lv": 50,
+        "r": 1024
+      },
+      {
+        "id": 1064,
+        "lv": 60,
+        "r": 1025
+      },
+      {
+        "id": 1065,
+        "lv": 70,
+        "r": 1026
+      },
+      {
+        "id": 1066,
+        "lv": 80,
+        "r": 1027
+      }
+    ],
+    "mid": [
+      8519501,
+      8519504,
+      8519504
     ]
   }
 ]

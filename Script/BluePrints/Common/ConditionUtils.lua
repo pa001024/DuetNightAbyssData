@@ -89,6 +89,21 @@ function ConditionUtils:JudgePlayerLevelMin(Params)
   return false
 end
 
+function ConditionUtils:JudgeInGuild(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    return self.GuildId ~= nil and 0 ~= self.GuildId
+  end
+  return false
+end
+
+function ConditionUtils:JudgeGuildLevelMin(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local GuildLevel = tonumber((self.GuildSimpleInfo or {}).Level) or 0
+    return math.floor(GuildLevel) >= math.floor(tonumber(Params) or 0)
+  end
+  return false
+end
+
 function ConditionUtils:JudgePlayerLevelMax(Params)
   if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
     return Params >= self.Level
@@ -248,6 +263,27 @@ function ConditionUtils:JudgeDungeonComplete(Params)
     end
     local PassCount = Dungeon.PassCount
     return Relation > 0 and Counts <= PassCount or Relation < 0 and Counts >= PassCount or 0 == Relation and PassCount == Counts
+  end
+  return false
+end
+
+function ConditionUtils:JudgeStarterQuestFinish(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local PhaseId = Params
+    local StarterQuestIds = DataMgr.StarterQuestPhaseMap[PhaseId]
+    if not StarterQuestIds or not self.StarterQuests then
+      return false
+    end
+    for _, StarterQuestId in ipairs(StarterQuestIds) do
+      local StarterQuest = self.StarterQuests[StarterQuestId]
+      if not StarterQuest then
+        return false
+      end
+      if StarterQuest:IsComplete() == false or false == StarterQuest.RewardsGot then
+        return false
+      end
+    end
+    return true
   end
   return false
 end
@@ -590,6 +626,36 @@ function ConditionUtils:JudgeEquipPetId(PetUnitId)
   end
   local Pet = self.Pets[self.CurrentPet]
   if Pet and Pet.PetId == PetUnitId then
+    return true
+  end
+  return false
+end
+
+function ConditionUtils:JudgeLoginEventFinish(EventId)
+  if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
+    return false
+  end
+  local Event = self.DailyLogin[EventId]
+  local EventMainExcel = DataMgr.EventMain[EventId]
+  local DailyLoginExcel = DataMgr.DailyLogin[EventId]
+  if not (Event and EventMainExcel) or not DailyLoginExcel then
+    return false
+  end
+  for Index, _ in ipairs(DailyLoginExcel.EventReward) do
+    local IsGot = Event.RewardsRecord[Index] or 0
+    if 0 == IsGot then
+      return false
+    end
+  end
+  return true
+end
+
+function ConditionUtils:JudgeTrialEventFinish(EventId)
+  if not GWorld:IsSkynetServer() and IsDedicatedServer(GWorld.GameInstance) then
+    return false
+  end
+  local CharTrial = self.CharTrial:GetOrInit(EventId)
+  if CharTrial:IsGetReward() then
     return true
   end
   return false
@@ -969,27 +1035,33 @@ end
 
 function ConditionUtils:JudgeForgeLevel(Params)
   if GWorld:IsSkynetServer() then
-    return Params < self.WeaponForgeLevel
+    return Params <= self.WeaponForgeLevel
   end
   return false
 end
 
 function ConditionUtils:JudgeHyperCardLevel(Params)
-  if GWorld:IsSkynetServer() then
-    local WeaponId = Params[1]
-    local NeedHyperLevel = Params[2]
-    local WeaponConf = DataMgr.Weapon[WeaponId]
-    if WeaponConf.WeaponSubType == CommonConst.WeaponSubType.Normal then
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    if type(Params) ~= "table" then
       return false
     end
-    local bFinishCond = false
+    local WeaponId = Params[1]
+    local NeedHyperLevel = Params[2] or 0
+    if nil == WeaponId then
+      return false
+    end
+    if -1 == WeaponId then
+      return NeedHyperLevel <= (self.HyperCardLevelMax or 0)
+    end
     for _, Weapon in pairs(self.Weapons) do
-      if Weapon.WeaponId == WeaponId and NeedHyperLevel <= Weapon.HyperCardLevel then
-        bFinishCond = true
-        break
+      if Weapon.WeaponId == WeaponId then
+        local WeaponConf = DataMgr.Weapon[Weapon.WeaponId]
+        if WeaponConf and WeaponConf.WeaponSubType == CommonConst.WeaponSubType.Hyper and NeedHyperLevel <= Weapon.HyperCardLevel then
+          return true
+        end
       end
     end
-    return bFinishCond
+    return false
   end
   return false
 end
@@ -1025,6 +1097,67 @@ function ConditionUtils:JudgeComeBackEventScore(Params)
   local CurrentEventId = DataMgr.ComeBackEventConstant.CurrentEventId.ConstantValue
   local ComeBackData = self.ComeBacks[CurrentEventId]
   return Params <= ComeBackData.QuestProgress
+end
+
+function ConditionUtils:JudgePermRewardCollectionFinish(Params, ConditionCheckId)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local EventId = Params
+    if nil == EventId then
+      return false
+    end
+    local RewardCollectionTable = DataMgr.PermRewardCollection
+    if nil == RewardCollectionTable then
+      return false
+    end
+    local HasMatchedRow = false
+    for key, RewardInfo in pairs(RewardCollectionTable) do
+      if RewardInfo and RewardInfo.EventId == EventId then
+        HasMatchedRow = true
+        if not self.PermRewardCollections[key] then
+          return false
+        end
+      end
+    end
+    if not HasMatchedRow then
+      return false
+    end
+    return true
+  end
+  return false
+end
+
+function ConditionUtils:JudgeHasModLevel(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local ModType, ModLevel, ModCount = Params[1], Params[2], Params[3]
+    local Count = 0
+    if ModCount <= Count then
+      return true
+    end
+    for _, Mod in pairs(self.Mods) do
+      if (-1 == ModType or ModType == Mod.ApplicationType) and ModLevel <= Mod.Level then
+        Count = Count + 1
+        if ModCount <= Count then
+          return true
+        end
+      end
+    end
+  end
+  return false
+end
+
+function ConditionUtils:JudgeFinishAbyss(Params)
+  if GWorld:IsSkynetServer() or not IsDedicatedServer(GWorld.GameInstance) then
+    local AbyssType, LevelCount = Params[1], Params[2]
+    for _, Abyss in pairs(self.Abysses) do
+      if AbyssType == Abyss.AbyssType then
+        local AbyssLevel = Abyss.AbyssLevelList[LevelCount]
+        if AbyssLevel and AbyssLevel:IsAbyssLevelPass() then
+          return true
+        end
+      end
+    end
+  end
+  return false
 end
 
 function ConditionUtils:PackParams(ConditionName, Params)

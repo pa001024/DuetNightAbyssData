@@ -10,33 +10,41 @@ T.RT_4 = {
   Rate = 0.075
 }
 T.RT_5 = {
-  AttrName = "SkillSustain",
-  Rate = 0.06
-}
-T.RT_6 = {
-  AttrName = "SkillSustain",
-  Rate = 0.09
-}
-T.RT_7 = {AttrName = "SkillRange", Rate = 0.12}
-T.RT_8 = {AttrName = "SkillRange", Rate = 0.18}
-T.RT_9 = {
   AttrName = "StrongValue",
   Value = 0.06
 }
-T.RT_10 = {
+T.RT_6 = {
   AttrName = "StrongValue",
   Value = 0.09
 }
-T.RT_11 = {
+T.RT_7 = {
+  AttrName = "WeaponCRIModifierRate",
+  Value = 0.2
+}
+T.RT_8 = {
+  AttrName = "WeaponCRIModifierRate",
+  Value = 0.3
+}
+T.RT_9 = {
+  AttrName = "SkillSustain",
+  Rate = 0.06
+}
+T.RT_10 = {
+  AttrName = "SkillSustain",
+  Rate = 0.09
+}
+T.RT_11 = {AttrName = "SkillRange", Rate = 0.12}
+T.RT_12 = {AttrName = "SkillRange", Rate = 0.18}
+T.RT_13 = {
   AttrName = "SkillIntensity",
   Rate = 0.08
 }
-T.RT_12 = {
+T.RT_14 = {
   AttrName = "SkillIntensity",
   Rate = 0.12
 }
-T.RT_13 = {AttrName = "MaxHp", Rate = 0.2}
-T.RT_14 = {AttrName = "MaxHp", Rate = 0.3}
+T.RT_15 = {AttrName = "MaxHp", Rate = 0.2}
+T.RT_16 = {AttrName = "MaxHp", Rate = 0.3}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -68,6 +76,30 @@ return ReadOnly("CharAddonAttr", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_13",
     Name = "ADDONATTR_110104_NAME"
   },
+  [110201] = {
+    AddAttrs = T.RT_5,
+    AttrId = 110201,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_02",
+    Name = "ADDONATTR_110201_NAME"
+  },
+  [110202] = {
+    AddAttrs = T.RT_6,
+    AttrId = 110202,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_02",
+    Name = "ADDONATTR_110202_NAME"
+  },
+  [110203] = {
+    AddAttrs = T.RT_7,
+    AttrId = 110203,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_03",
+    Name = "ADDONATTR_110203_NAME"
+  },
+  [110204] = {
+    AddAttrs = T.RT_8,
+    AttrId = 110204,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_03",
+    Name = "ADDONATTR_110204_NAME"
+  },
   [110301] = {
     AddAttrs = T.RT_1,
     AttrId = 110301,
@@ -92,6 +124,30 @@ return ReadOnly("CharAddonAttr", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_13",
     Name = "ADDONATTR_110304_NAME"
   },
+  [120101] = {
+    AddAttrs = T.RT_1,
+    AttrId = 120101,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_08",
+    Name = "ADDONATTR_120101_NAME"
+  },
+  [120102] = {
+    AddAttrs = T.RT_2,
+    AttrId = 120102,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_08",
+    Name = "ADDONATTR_120102_NAME"
+  },
+  [120103] = {
+    AddAttrs = T.RT_9,
+    AttrId = 120103,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
+    Name = "ADDONATTR_120103_NAME"
+  },
+  [120104] = {
+    AddAttrs = T.RT_10,
+    AttrId = 120104,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
+    Name = "ADDONATTR_120104_NAME"
+  },
   [150101] = {
     AddAttrs = T.RT_1,
     AttrId = 150101,
@@ -105,13 +161,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_150102_NAME"
   },
   [150103] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 150103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_150103_NAME"
   },
   [150104] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 150104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_150104_NAME"
@@ -129,13 +185,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_150202_NAME"
   },
   [150203] = {
-    AddAttrs = T.RT_7,
+    AddAttrs = T.RT_11,
     AttrId = 150203,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_150203_NAME"
   },
   [150204] = {
-    AddAttrs = T.RT_8,
+    AddAttrs = T.RT_12,
     AttrId = 150204,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_150204_NAME"
@@ -153,91 +209,85 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_150302_NAME"
   },
   [150303] = {
-    AddAttrs = {
-      AttrName = "WeaponCRIModifierRate",
-      Value = 0.2
-    },
+    AddAttrs = T.RT_7,
     AttrId = 150303,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_03",
     Name = "ADDONATTR_150303_NAME"
   },
   [150304] = {
-    AddAttrs = {
-      AttrName = "WeaponCRIModifierRate",
-      Value = 0.3
-    },
+    AddAttrs = T.RT_8,
     AttrId = 150304,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_03",
     Name = "ADDONATTR_150304_NAME"
   },
   [150401] = {
-    AddAttrs = T.RT_7,
+    AddAttrs = T.RT_11,
     AttrId = 150401,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_150401_NAME"
   },
   [150402] = {
-    AddAttrs = T.RT_8,
+    AddAttrs = T.RT_12,
     AttrId = 150402,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_150402_NAME"
   },
   [150403] = {
-    AddAttrs = T.RT_9,
+    AddAttrs = T.RT_5,
     AttrId = 150403,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_02",
     Name = "ADDONATTR_150403_NAME"
   },
   [150404] = {
-    AddAttrs = T.RT_10,
+    AddAttrs = T.RT_6,
     AttrId = 150404,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_02",
     Name = "ADDONATTR_150404_NAME"
   },
   [160101] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 160101,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_160101_NAME"
   },
   [160102] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 160102,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_160102_NAME"
   },
   [160103] = {
-    AddAttrs = T.RT_7,
+    AddAttrs = T.RT_11,
     AttrId = 160103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_160103_NAME"
   },
   [160104] = {
-    AddAttrs = T.RT_8,
+    AddAttrs = T.RT_12,
     AttrId = 160104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_160104_NAME"
   },
   [180101] = {
-    AddAttrs = T.RT_7,
+    AddAttrs = T.RT_11,
     AttrId = 180101,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_180101_NAME"
   },
   [180102] = {
-    AddAttrs = T.RT_8,
+    AddAttrs = T.RT_12,
     AttrId = 180102,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_180102_NAME"
   },
   [180103] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 180103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_180103_NAME"
   },
   [180104] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 180104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_180104_NAME"
@@ -255,13 +305,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_210102_NAME"
   },
   [210103] = {
-    AddAttrs = T.RT_7,
+    AddAttrs = T.RT_11,
     AttrId = 210103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_210103_NAME"
   },
   [210104] = {
-    AddAttrs = T.RT_8,
+    AddAttrs = T.RT_12,
     AttrId = 210104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_210104_NAME"
@@ -279,37 +329,37 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_230102_NAME"
   },
   [230103] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 230103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_230103_NAME"
   },
   [230104] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 230104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_230104_NAME"
   },
   [240101] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 240101,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_240101_NAME"
   },
   [240102] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 240102,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_240102_NAME"
   },
   [240103] = {
-    AddAttrs = T.RT_11,
+    AddAttrs = T.RT_13,
     AttrId = 240103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_240103_NAME"
   },
   [240104] = {
-    AddAttrs = T.RT_12,
+    AddAttrs = T.RT_14,
     AttrId = 240104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_240104_NAME"
@@ -327,13 +377,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_310102_NAME"
   },
   [310103] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 310103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_310103_NAME"
   },
   [310104] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 310104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_310104_NAME"
@@ -381,37 +431,37 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_310302_NAME"
   },
   [310303] = {
-    AddAttrs = T.RT_11,
+    AddAttrs = T.RT_13,
     AttrId = 310303,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_310303_NAME"
   },
   [310304] = {
-    AddAttrs = T.RT_12,
+    AddAttrs = T.RT_14,
     AttrId = 310304,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_310304_NAME"
   },
   [320101] = {
-    AddAttrs = T.RT_13,
+    AddAttrs = T.RT_15,
     AttrId = 320101,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_14",
     Name = "ADDONATTR_320101_NAME"
   },
   [320102] = {
-    AddAttrs = T.RT_14,
+    AddAttrs = T.RT_16,
     AttrId = 320102,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_14",
     Name = "ADDONATTR_320102_NAME"
   },
   [320103] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 320103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_320103_NAME"
   },
   [320104] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 320104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_320104_NAME"
@@ -429,13 +479,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_320202_NAME"
   },
   [320203] = {
-    AddAttrs = T.RT_11,
+    AddAttrs = T.RT_13,
     AttrId = 320203,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_320203_NAME"
   },
   [320204] = {
-    AddAttrs = T.RT_12,
+    AddAttrs = T.RT_14,
     AttrId = 320204,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_320204_NAME"
@@ -453,13 +503,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_330102_NAME"
   },
   [330103] = {
-    AddAttrs = T.RT_7,
+    AddAttrs = T.RT_11,
     AttrId = 330103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_330103_NAME"
   },
   [330104] = {
-    AddAttrs = T.RT_8,
+    AddAttrs = T.RT_12,
     AttrId = 330104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_330104_NAME"
@@ -477,37 +527,37 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_410102_NAME"
   },
   [410103] = {
-    AddAttrs = T.RT_7,
+    AddAttrs = T.RT_11,
     AttrId = 410103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_410103_NAME"
   },
   [410104] = {
-    AddAttrs = T.RT_8,
+    AddAttrs = T.RT_12,
     AttrId = 410104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_410104_NAME"
   },
   [410201] = {
-    AddAttrs = T.RT_9,
+    AddAttrs = T.RT_5,
     AttrId = 410201,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_02",
     Name = "ADDONATTR_410201_NAME"
   },
   [410202] = {
-    AddAttrs = T.RT_10,
+    AddAttrs = T.RT_6,
     AttrId = 410202,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_02",
     Name = "ADDONATTR_410202_NAME"
   },
   [410203] = {
-    AddAttrs = T.RT_11,
+    AddAttrs = T.RT_13,
     AttrId = 410203,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_410203_NAME"
   },
   [410204] = {
-    AddAttrs = T.RT_12,
+    AddAttrs = T.RT_14,
     AttrId = 410204,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_410204_NAME"
@@ -525,13 +575,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_420102_NAME"
   },
   [420103] = {
-    AddAttrs = T.RT_11,
+    AddAttrs = T.RT_13,
     AttrId = 420103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_420103_NAME"
   },
   [420104] = {
-    AddAttrs = T.RT_12,
+    AddAttrs = T.RT_14,
     AttrId = 420104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_420104_NAME"
@@ -549,61 +599,61 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_420202_NAME"
   },
   [420203] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 420203,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_420203_NAME"
   },
   [420204] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 420204,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_420204_NAME"
   },
   [430101] = {
-    AddAttrs = T.RT_13,
+    AddAttrs = T.RT_15,
     AttrId = 430101,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_14",
     Name = "ADDONATTR_430101_NAME"
   },
   [430102] = {
-    AddAttrs = T.RT_14,
+    AddAttrs = T.RT_16,
     AttrId = 430102,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_14",
     Name = "ADDONATTR_430102_NAME"
   },
   [430103] = {
-    AddAttrs = T.RT_11,
+    AddAttrs = T.RT_13,
     AttrId = 430103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_430103_NAME"
   },
   [430104] = {
-    AddAttrs = T.RT_12,
+    AddAttrs = T.RT_14,
     AttrId = 430104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_430104_NAME"
   },
   [510101] = {
-    AddAttrs = T.RT_13,
+    AddAttrs = T.RT_15,
     AttrId = 510101,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_14",
     Name = "ADDONATTR_510101_NAME"
   },
   [510102] = {
-    AddAttrs = T.RT_14,
+    AddAttrs = T.RT_16,
     AttrId = 510102,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_14",
     Name = "ADDONATTR_510102_NAME"
   },
   [510103] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 510103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_510103_NAME"
   },
   [510104] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 510104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_510104_NAME"
@@ -621,13 +671,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_510202_NAME"
   },
   [510203] = {
-    AddAttrs = T.RT_5,
+    AddAttrs = T.RT_9,
     AttrId = 510203,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_510203_NAME"
   },
   [510204] = {
-    AddAttrs = T.RT_6,
+    AddAttrs = T.RT_10,
     AttrId = 510204,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_11",
     Name = "ADDONATTR_510204_NAME"
@@ -651,13 +701,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_530102_NAME"
   },
   [530103] = {
-    AddAttrs = T.RT_11,
+    AddAttrs = T.RT_13,
     AttrId = 530103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_530103_NAME"
   },
   [530104] = {
-    AddAttrs = T.RT_12,
+    AddAttrs = T.RT_14,
     AttrId = 530104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_12",
     Name = "ADDONATTR_530104_NAME"
@@ -675,13 +725,13 @@ return ReadOnly("CharAddonAttr", {
     Name = "ADDONATTR_540102_NAME"
   },
   [540103] = {
-    AddAttrs = T.RT_7,
+    AddAttrs = T.RT_11,
     AttrId = 540103,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_540103_NAME"
   },
   [540104] = {
-    AddAttrs = T.RT_8,
+    AddAttrs = T.RT_12,
     AttrId = 540104,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Skill/T_SkillTalent_10",
     Name = "ADDONATTR_540104_NAME"

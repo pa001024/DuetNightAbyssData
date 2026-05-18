@@ -109,5 +109,45 @@
     "access": [
       "Shop"
     ]
+  },
+  {
+    "id": 1008,
+    "name": "Throne of Contemplation",
+    "des": "I heard cries of loyalty, and saw the stars set ablaze.",
+    "icon": "Mounts_0009",
+    "resourceIcon": "Icon_Mounts_0009",
+    "rarity": 4,
+    "sort": 98,
+    "resourceId": 49991,
+    "fly": 1,
+    "access": [
+      "Shop"
+    ]
+  },
+  {
+    "id": 1009,
+    "name": "Nekral",
+    "des": "Night draws its veil across heaven and earth. Hoarse whistles echo beneath it.",
+    "icon": "Mounts_0011",
+    "resourceIcon": "Icon_Mounts_0011",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49990,
+    "access": [
+      "Source: Limited-Time Exchange in the Prism Shop"
+    ]
+  },
+  {
+    "id": 1010,
+    "name": "Into the Nightveil",
+    "des": "Pitch-black wings cleave the night, bearing a lone figure towards a far shore untouched by moonlight.",
+    "icon": "Mounts_0010",
+    "resourceIcon": "Icon_Mounts_0010",
+    "rarity": 6,
+    "sort": 103,
+    "resourceId": 49989,
+    "access": [
+      "Source: Limited-Time Exchange in the Prism Shop"
+    ]
   }
 ]

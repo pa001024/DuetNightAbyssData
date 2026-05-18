@@ -9,6 +9,14 @@ return ReadOnly("ComeBackEvent", {
     EventLoginId = 114001,
     EventOneTimeReward = 114001,
     EventQuestId = 114001,
-    EventSchemeId = 114001
+    EventSchemeId = 114001,
+    InviteEventSchemeId = 114001
+  },
+  [114002] = {
+    EventLoginId = 114001,
+    EventOneTimeReward = 114001,
+    EventQuestId = 114002,
+    EventSchemeId = 114002,
+    InviteEventSchemeId = 114001
   }
 })

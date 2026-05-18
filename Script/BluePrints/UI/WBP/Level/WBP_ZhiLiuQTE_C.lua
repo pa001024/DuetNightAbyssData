@@ -2,6 +2,9 @@ require("UnLua")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
+local PC_QTE_KEY_NAME = "F"
+local GAME_VIEWPORT_INPUT_KEY_PRESSED = "GameViewportInputKeyPressed"
+local GAME_VIEWPORT_INPUT_KEY_RELEASED = "GameViewportInputKeyReleased"
 
 function M:Construct()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
@@ -11,6 +14,9 @@ function M:Construct()
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
     self.Btn_Click.OnPressed:Add(self, self.PressedSelectAction)
     self.Btn_Click.OnReleased:Add(self, self.ReleasedSelectAction)
+  else
+    self:AddDispatcher(GAME_VIEWPORT_INPUT_KEY_PRESSED, self, self.OnGlobalKeyDown)
+    self:AddDispatcher(GAME_VIEWPORT_INPUT_KEY_RELEASED, self, self.OnGlobalKeyUp)
   end
 end
 
@@ -23,16 +29,6 @@ function M:OnLoaded(...)
   self.CurInteractiveNum = 0
   self.CurInteractivePercent = 0.0
   self.Material = self.Progress_Bar_LongPress:GetDynamicMaterial()
-  if not self:IsListeningForInputAction("Interactive") then
-    self:ListenForInputAction("Interactive", EInputEvent.IE_Pressed, true, {
-      self,
-      self.PressedSelectAction
-    })
-    self:ListenForInputAction("Interactive", EInputEvent.IE_Released, true, {
-      self,
-      self.ReleasedSelectAction
-    })
-  end
   self.CanInteract = false
   self:StopAllAnimations()
   self:PlayAnimation(self.In)
@@ -196,13 +192,11 @@ function M:InitGamepadView()
 end
 
 function M:InitKeyBoardView()
-  local KeyName = CommonUtils:GetActionMappingKeyName("Interactive", false)
-  DebugPrint("zwkkk Key ", KeyName)
   self.Key_Handle:CreateCommonKey({
     KeyInfoList = {
       {
         Type = "Text",
-        Text = KeyName,
+        Text = PC_QTE_KEY_NAME,
         bLargeSize = true
       }
     }
@@ -213,17 +207,18 @@ function M:InitMobileView()
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
-  local IsEventHandled = false
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    IsEventHandled = self:Handle_OnGamePadDown(InKeyName)
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
+end
+
+function M:OnGlobalKeyDown(Key)
+  if not Key then
+    return
   end
-  if IsEventHandled then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  else
-    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  local InKeyName = Key.KeyName
+  if self:Handle_OnGamePadDown(InKeyName) then
+    return
   end
+  self:Handle_OnKeyBoardDown(InKeyName)
 end
 
 function M:Handle_OnGamePadDown(InKeyName)
@@ -234,18 +229,27 @@ function M:Handle_OnGamePadDown(InKeyName)
   return false
 end
 
+function M:Handle_OnKeyBoardDown(InKeyName)
+  if InKeyName == PC_QTE_KEY_NAME then
+    self:PressedSelectAction()
+    return true
+  end
+  return false
+end
+
 function M:OnKeyUp(MyGeometry, InKeyEvent)
-  local IsEventHandled = false
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) then
-    IsEventHandled = self:Handle_OnGamePadUp(InKeyName)
+  return UE4.UWidgetBlueprintLibrary.UnHandled()
+end
+
+function M:OnGlobalKeyUp(Key)
+  if not Key then
+    return
   end
-  if IsEventHandled then
-    return UE4.UWidgetBlueprintLibrary.Handled()
-  else
-    return UE4.UWidgetBlueprintLibrary.UnHandled()
+  local InKeyName = Key.KeyName
+  if self:Handle_OnGamePadUp(InKeyName) then
+    return
   end
+  self:Handle_OnKeyBoardUp(InKeyName)
 end
 
 function M:Handle_OnGamePadUp(InKeyName)
@@ -254,6 +258,22 @@ function M:Handle_OnGamePadUp(InKeyName)
     return true
   end
   return false
+end
+
+function M:Handle_OnKeyBoardUp(InKeyName)
+  if InKeyName == PC_QTE_KEY_NAME then
+    self:ReleasedSelectAction()
+    return true
+  end
+  return false
+end
+
+function M:Destruct()
+  self:RemoveDispatcher(GAME_VIEWPORT_INPUT_KEY_PRESSED, self)
+  self:RemoveDispatcher(GAME_VIEWPORT_INPUT_KEY_RELEASED, self)
+  if M.Super and M.Super.Destruct then
+    M.Super.Destruct(self)
+  end
 end
 
 return M

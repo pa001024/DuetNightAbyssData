@@ -9,6 +9,7 @@ function M:Init()
   self.Btn_Continue:ForbidBtn(true)
   self.Text_Input:Init({
     Owner = self,
+    bNeedPasteBtn = true,
     Events = {
       OnTextChanged = self.OnNameChanged
     },
@@ -117,8 +118,8 @@ function M:OnClickButtonBack()
   self.RootPage.Page_Role.NowState = self.RootPage.Page_Role.NowRole == "Male" and 7 or 6
   self.RootPage:OnBackToDetail()
   if self.RootPage.DeviceInPc then
-    self.RootPage.Key_Back:SetVisibility(ESlateVisibility.Collapsed)
-    self.RootPage.Key_Observe:SetVisibility(ESlateVisibility.Collapsed)
+    self.RootPage.Key_Back:ChangeText(GText("UI_Unselect"))
+    self.RootPage.Key_Observe:ChangeText(GText("UI_Unselect"))
   end
 end
 
@@ -132,13 +133,20 @@ function M:Handle_KeyEventOnGamePad(InKeyName)
   elseif "Gamepad_FaceButton_Left" == InKeyName then
     self.Text_Input:SetFocus()
   elseif "Gamepad_LeftThumbstick" == InKeyName then
-    self.Text_Input:PasteText()
+    if self.Text_Input:GetText() ~= "" then
+      self.Text_Input:DeleteText()
+    else
+      self.Text_Input:PasteText()
+    end
+  elseif "Gamepad_LeftShoulder" == InKeyName then
+    print(_G.LogTag, "LXZ Handle_KeyEventOnGamePad", InKeyName, self.RootPage.Page_Role.NowState)
+    if self.RootPage.Page_Role.NowRole == "Male" then
+      self.RootPage.Page_Role:OnClickButtonFemale()
+    end
   elseif "Gamepad_RightShoulder" == InKeyName then
     print(_G.LogTag, "LXZ Handle_KeyEventOnGamePad", InKeyName, self.RootPage.Page_Role.NowState)
     if self.RootPage.Page_Role.NowRole == "Female" then
       self.RootPage.Page_Role:OnClickButtonMale()
-    elseif self.RootPage.Page_Role.NowRole == "Male" then
-      self.RootPage.Page_Role:OnClickButtonFemale()
     end
   end
   return true

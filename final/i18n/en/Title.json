@@ -440,14 +440,12 @@
   {
     "id": 10078,
     "name": "Worry-Worn",
-    "suf": false,
-    "src": "Deliver a total of <H>300</> Green-tier materials"
+    "suf": false
   },
   {
     "id": 10079,
     "name": "Pure-White",
-    "suf": false,
-    "src": "Deliver a total of <H>100</> Blue-tier materials"
+    "suf": false
   },
   {
     "id": 10080,
@@ -523,7 +521,7 @@
   },
   {
     "id": 10093,
-    "name": "Yvaine's",
+    "name": "Eve's",
     "suf": false
   },
   {
@@ -547,7 +545,8 @@
   {
     "id": 10097,
     "name": "Hilda's",
-    "suf": false
+    "suf": false,
+    "src": "成就「A Quiet Sojourn: Hilda」"
   },
   {
     "id": 10098,
@@ -665,6 +664,12 @@
     "name": "Godward",
     "suf": false,
     "src": "成就「Reset」"
+  },
+  {
+    "id": 10118,
+    "name": "芙罗拉的",
+    "suf": false,
+    "src": "成就「停驻光阴·芙罗拉」"
   },
   {
     "id": 20001,
@@ -1040,14 +1045,12 @@
   {
     "id": 20067,
     "name": " King Hustle",
-    "suf": true,
-    "src": "Deliver a total of <H>30</> Festive Afterglow"
+    "suf": true
   },
   {
     "id": 20068,
     "name": " Demon King",
-    "suf": true,
-    "src": "Earn the highest reward in <H>5</> minigame(s)"
+    "suf": true
   },
   {
     "id": 20069,
@@ -1099,7 +1102,7 @@
   },
   {
     "id": 20077,
-    "name": " Yvaine",
+    "name": "Eve",
     "suf": true
   },
   {
@@ -1123,7 +1126,8 @@
   {
     "id": 20081,
     "name": " Hilda",
-    "suf": true
+    "suf": true,
+    "src": "成就「A Little Get-Together: Hilda」"
   },
   {
     "id": 20082,
@@ -1225,5 +1229,16 @@
     "name": " Great-aunt",
     "suf": true,
     "src": "成就「A Young Matriarch」"
+  },
+  {
+    "id": 20099,
+    "name": " Railmaster",
+    "suf": true
+  },
+  {
+    "id": 20100,
+    "name": "芙罗拉",
+    "suf": true,
+    "src": "成就「休憩一刻·芙罗拉」"
   }
 ]

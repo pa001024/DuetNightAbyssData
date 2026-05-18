@@ -38,6 +38,7 @@ function M:OnListItemObjectSet(Content)
   self:SetIsGot(Content.GotType)
   self:SetHideLevelPanel(Content.bHideLevelPanel)
   self:SetCharSkinPreViewItemIsLocked(Content.CharSkinPreViewLockType)
+  self:SetIsHyperWeapon(Content.bIncarnon)
   self.OwningList = UE4.UUserListEntryLibrary.GetOwningListView(self)
   if self.OwningList then
     self.OwningList.BP_OnItemClicked:Remove(self, self.OnOwningListItemClicked)
@@ -177,6 +178,14 @@ function M:SetIsPremium(IsPremium)
   else
     self.PetEffect:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:PlayAnimationReverse(self.PetLight)
+  end
+end
+
+function M:SetIsHyperWeapon(IsHyperWeapon)
+  if IsHyperWeapon then
+    self.IncarnonEffect:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.IncarnonEffect:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 

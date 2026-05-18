@@ -208,6 +208,9 @@ function M:StopTimer(TimerKey)
 end
 
 function M:IsExistTimer(TimerKey)
+  if not TimerKey then
+    return false
+  end
   if not self.TimerKeys then
     self.TimerKeys = {}
   end

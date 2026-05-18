@@ -1,5 +1,10 @@
 require("UnLua")
+local ImpressionItemUIPath = "/Game/UI/WBP/Impression/Mobile/WBP_Impression_Item_M.WBP_Impression_Item_M"
 local WBP_Impression_Mobile = Class("BluePrints.Story.Talk.UI.Common.WBP_Impression_Common")
+
+function WBP_Impression_Mobile:GetImpressionItemUIPath()
+  return ImpressionItemUIPath
+end
 
 function WBP_Impression_Mobile:InitPlayKey()
   self.bAutoPlay = GWorld.GameInstance.bGlobalAutoPlay

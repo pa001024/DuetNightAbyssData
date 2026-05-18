@@ -73,20 +73,5 @@ function BP_SkillCreature_C:ResetPauseCreature()
   end
 end
 
-function BP_SkillCreature_C:ClientBeginPlay()
-  if self.CreatureId == 150405 or self.CreatureId == 150406 then
-    local Transform = FTransform()
-    Transform.Translation = FVector(0, 0, 0)
-    Transform.Rotation = FRotator(0, 0, 0):ToQuat()
-    Transform.Scale3D = self:GetActorScale3D()
-    self.RootComponent:K2_SetRelativeTransform(Transform, false, nil, false)
-  end
-  self.Overridden.ClientBeginPlay(self)
-end
-
-function BP_SkillCreature_C:AddTarget(HitTarget)
-  self.Targets:Add(HitTarget)
-end
-
 AssembleComponents(BP_SkillCreature_C)
 return BP_SkillCreature_C

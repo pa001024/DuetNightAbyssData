@@ -90,6 +90,9 @@ function M:OnLicenseItemBtn_OnClicked()
   self:PlayAnimation(self.Click)
   UIManager(self):LoadUINew("MountLicenseUnlockDialog", self.LicenseId, self)
   AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_mid", nil, nil)
+  if self.ParentWidget then
+    self.ParentWidget:Close()
+  end
 end
 
 function M:OnLicenseItemBtn_OnHovered()

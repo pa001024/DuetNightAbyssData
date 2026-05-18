@@ -7,14 +7,16 @@ function BP_AirWallBox_C:ReceiveBeginPlay()
   BP_AirWallBox_C.Super.ReceiveBeginPlay(self)
   EventManager:AddEvent(EventID.OnLevelDeliverBlackCurtainEnd, self, self.CloseLoading)
   EventManager:AddEvent(EventID.CloseLoading, self, self.CloseLoading)
-  local GameState = UGameplayStatics.GetGameState(self)
-  local IsInDungeon = GameState and GameState:IsInDungeon()
-  if GameState and IsInDungeon and URuntimeCommonFunctionLibrary.IsWorldCompositionEnabled(self) and self.OutAirWallCheckBox then
-    DebugPrint(self:GetName() .. " @gulinan Start Huaxu region dungeon AirDoorBoxOutCheck")
-    GameState.CheckOutAirDoorBoxTransform = self.OutAirWallCheckBox:K2_GetComponentToWorld()
-    GameState.CheckOutAirBoxLocal = self.OutAirWallCheckBox.BoxExtent * self:GetActorScale3D()
-    if Const.bOutAirWallBoxCheckRangeVisualDebug then
-      UE4.UKismetSystemLibrary.DrawDebugBox(self, GameState.CheckOutAirDoorBoxTransform.Translation, GameState.CheckOutAirBoxLocal, FLinearColor(255, 0, 0), self.OutAirWallCheckBox:K2_GetComponentRotation(), 6000, 20)
+  if Const.bOutAirWallBoxCheckEnable then
+    local GameState = UGameplayStatics.GetGameState(self)
+    local IsInDungeon = GameState and GameState:IsInDungeon()
+    if GameState and IsInDungeon and URuntimeCommonFunctionLibrary.IsWorldCompositionEnabled(self) and self.OutAirWallCheckBox then
+      DebugPrint(self:GetName() .. " @gulinan Start Huaxu region dungeon AirDoorBoxOutCheck")
+      GameState.CheckOutAirDoorBoxTransform = self.OutAirWallCheckBox:K2_GetComponentToWorld()
+      GameState.CheckOutAirBoxLocal = self.OutAirWallCheckBox.BoxExtent * self:GetActorScale3D()
+      if Const.bOutAirWallBoxCheckRangeVisualDebug then
+        UE4.UKismetSystemLibrary.DrawDebugBox(self, GameState.CheckOutAirDoorBoxTransform.Translation, GameState.CheckOutAirBoxLocal, FLinearColor(255, 0, 0), self.OutAirWallCheckBox:K2_GetComponentRotation(), 6000, 20)
+      end
     end
   end
 end
@@ -28,10 +30,16 @@ function BP_AirWallBox_C:OnRep_Size()
   self:SetBoxExtent(self.Size)
 end
 
+function BP_AirWallBox_C:SetSize(v)
+  v = tonumber(v)
+  self.Size = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "Size")
+end
+
 function BP_AirWallBox_C:AuthorityInitInfo(Info)
   BP_AirWallBox_C.Super.AuthorityInitInfo(self, Info)
   if not self.BpBorn then
-    self.Size = Info.Creator.TriggerBoxContent
+    self:SetSize(Info.Creator.TriggerBoxContent)
     self:SetBoxExtent(Info.Creator.TriggerBoxContent, Info.Creator.TriggerTipsBoxContent)
   end
 end

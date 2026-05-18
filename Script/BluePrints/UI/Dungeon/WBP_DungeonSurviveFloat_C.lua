@@ -31,6 +31,8 @@ function WBP_DungeonSurviveFloat_C:Initialize(Initializer)
   self.LowPercent = DataMgr.GlobalConstant.MinExtraFixVitamin.ConstantValue / 100
   self.LoadingSurvivalItemData = {}
   self.LoadingBuffIcon = {}
+  self.SpecialMonsterEidList = {}
+  self.SpecialMonsterAliveCount = 0
 end
 
 function WBP_DungeonSurviveFloat_C:Close()
@@ -140,7 +142,7 @@ end
 
 function WBP_DungeonSurviveFloat_C:CheckDungeonMode()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
-  if GameState.GameModeType == "SurvivalMini" or GameState.GameModeType == "SurvivalUltra" then
+  if GameState.GameModeType == "SurvivalMini" or GameState.GameModeType == "IronSurvival" then
     self.IsSurvivalMini = true
     self.IsNewSurvival = true
   end
@@ -161,15 +163,9 @@ function WBP_DungeonSurviveFloat_C:InitListenEvent()
 end
 
 function WBP_DungeonSurviveFloat_C:TryToAddSurvivalValue(AddValue)
-  local GameState = UE4.UGameplayStatics.GetGameState(self)
-  if not IsValid(GameState) then
-    return
-  end
-  local CurSurvivalValue = GameState:GetSurvivalValue()
   local MaxSurvivalValue = DataMgr.GlobalConstant.SurvivalValue.ConstantValue
   local AddPercent = math.floor((AddValue + self.LastAddValue) / MaxSurvivalValue * 100)
   self.LastAddValue = self.LastAddValue + AddValue
-  local NowPercent = CurSurvivalValue / MaxSurvivalValue
   self.Text_Add:SetText("+" .. tostring(AddPercent) .. "%")
   if self.bIsPro then
     local AddAnim = self:GetAnimationByName("Add_Slow")
@@ -383,7 +379,9 @@ function WBP_DungeonSurviveFloat_C:OnRepSurvivalTime(SurvivalTime)
 end
 
 function WBP_DungeonSurviveFloat_C:OnRepSurvivalMiniValue(CurSurvivalMiniValue)
-  self:OnRepSurvivalValue(CurSurvivalMiniValue)
+  self:AddDelayFrameFunc(function()
+    self:OnRepSurvivalValue(CurSurvivalMiniValue)
+  end, 1, "OnRepSurvivalMiniValue")
 end
 
 function WBP_DungeonSurviveFloat_C:OnRepSurvivalValue(CurSurvivalValue)
@@ -508,18 +506,28 @@ function WBP_DungeonSurviveFloat_C:PlayVitaminCostPrompt()
 end
 
 function WBP_DungeonSurviveFloat_C:OnSpecialMonsterCreated(Eid)
-  self.SpecialMonsterAlive = true
-  self.SpecialMonsterEid = Eid
-  DebugPrint("lxh_SpecialMonsterAlive: ", self.SpecialMonsterAlive)
-  self:ConditionalPlayAnimation()
-  self:StartSpecialMonsterGuideLoop()
+  if CommonUtils.HasValue(self.SpecialMonsterEidList, Eid) then
+    return
+  end
+  table.insert(self.SpecialMonsterEidList, Eid)
+  self.SpecialMonsterAliveCount = self.SpecialMonsterAliveCount + 1
+  if 1 == self.SpecialMonsterAliveCount then
+    DebugPrint("lxh_SpecialMonsterAlive: ", self.SpecialMonsterAliveCount)
+    self:ConditionalPlayAnimation()
+    self:StartSpecialMonsterGuideLoop()
+  end
 end
 
-function WBP_DungeonSurviveFloat_C:OnSpecialMonsterDead()
-  self.SpecialMonsterAlive = false
-  self.bShouldContinueAnim = false
-  self.SpecialMonsterEid = nil
-  self:StopSpecialMonsterGuideLoop()
+function WBP_DungeonSurviveFloat_C:OnSpecialMonsterDead(Eid)
+  if not CommonUtils.HasValue(self.SpecialMonsterEidList, Eid) then
+    return
+  end
+  CommonUtils.RemoveValue(self.SpecialMonsterEidList, Eid)
+  self.SpecialMonsterAliveCount = self.SpecialMonsterAliveCount - 1
+  if 0 == self.SpecialMonsterAliveCount then
+    self.bShouldContinueAnim = false
+    self:StopSpecialMonsterGuideLoop()
+  end
 end
 
 function WBP_DungeonSurviveFloat_C:ConditionalPlayAnimation()
@@ -539,7 +547,7 @@ function WBP_DungeonSurviveFloat_C:ConditionalPlayAnimation()
     end
   end
   if self.IsNewSurvival then
-    if self.SpecialMonsterAlive and NowPercent >= self.LowPercent and CurSurvivalValue < 100 then
+    if self.SpecialMonsterAliveCount > 0 and NowPercent >= self.LowPercent and CurSurvivalValue < 100 then
       self.VX_prompt02:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.VX_prompt03:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
       self.SurvivalPercent:SetColorAndOpacity(self.CriticalColor)
@@ -563,19 +571,17 @@ function WBP_DungeonSurviveFloat_C:StartSpecialMonsterGuideLoop()
 end
 
 function WBP_DungeonSurviveFloat_C:ShowSpecialMonsterGuideLoop()
-  if not self.SpecialMonsterEid then
-    return
-  end
   local SceneManager = GWorld.GameInstance:GetSceneManager()
   if not SceneManager then
     return
   end
-  local GuideUIName = SceneManager.GuideIcons:FindRef(self.SpecialMonsterEid)
-  local GuideIcon = UIManager(self):GetUIObj(GuideUIName)
-  if not GuideIcon then
-    return
+  for _, Eid in pairs(self.SpecialMonsterEidList) do
+    local GuideUIName = SceneManager.GuideIcons:FindRef(Eid)
+    local GuideIcon = UIManager(self):GetUIObj(GuideUIName)
+    if GuideIcon then
+      GuideIcon:PlayLoopAnim()
+    end
   end
-  GuideIcon:PlayLoopAnim()
 end
 
 function WBP_DungeonSurviveFloat_C:StopSpecialMonsterGuideLoop()

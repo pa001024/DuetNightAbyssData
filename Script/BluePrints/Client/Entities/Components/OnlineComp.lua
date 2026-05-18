@@ -28,7 +28,8 @@ local MessageTypeToFunc = {
   SwitchOnlineState = "HandleSwitchOnlineState",
   HeadFrame = "HandleHeadFrame",
   HeadIcon = "HandleHeadIcon",
-  TransformAFDay = "HandleTransformAFDay"
+  TransformAFDay = "HandleTransformAFDay",
+  HyperWeaponLevelUp = "HandleHyperWeaponLevelUp"
 }
 local Component = {}
 
@@ -368,7 +369,7 @@ function Component:HandleGestureState(Message, bIsInit)
                 Player.MeleeWeapon = nil
               end
               if Player.MeleeWeapon == nil then
-                Player.MeleeWeapon = Player:SpawnShowWeapon(WeaponId, nil, nil, nil, WeaponInfo)
+                Player.MeleeWeapon = Player:SpawnShowWeapon(WeaponId, nil, nil, nil, WeaponInfo.AppearanceInfo, WeaponInfo)
                 Player:RawAddWeapon(Player.MeleeWeapon)
               end
             end
@@ -382,7 +383,7 @@ function Component:HandleGestureState(Message, bIsInit)
                 Player.RangedWeapon = nil
               end
               if nil == Player.RangedWeapon then
-                Player.RangedWeapon = Player:SpawnShowWeapon(WeaponId, nil, nil, nil, WeaponInfo)
+                Player.RangedWeapon = Player:SpawnShowWeapon(WeaponId, nil, nil, nil, WeaponInfo.AppearanceInfo, WeaponInfo)
                 Player:RawAddWeapon(Player.RangedWeapon)
               end
             end
@@ -1146,6 +1147,42 @@ function Component:HandleOnDeadRegionOnlineItem(message)
   self:RealDeadRegionOnlineItem(message.UniqueId, message.Sender, false)
 end
 
+function Component:HandleHyperWeaponLevelUp(message)
+  local SenderInfo = self.RegionAvatars[message.Sender]
+  if not SenderInfo then
+    return
+  end
+  local Uid = SenderInfo.AvatarInfo.Uid
+  local GameInstance = GWorld.GameInstance
+  if not GameInstance then
+    return
+  end
+  local ScenceManager = GameInstance:GetSceneManager()
+  if not ScenceManager then
+    return
+  end
+  local RegionOnlineCharacterInfo = ScenceManager.RegionOnlineCharacterInfo
+  if not RegionOnlineCharacterInfo then
+    return
+  end
+  local Eid = RegionOnlineCharacterInfo[Uid]
+  local Battle = Battle(GWorld.GameInstance)
+  local Player = Eid and Battle:GetEntity(Eid)
+  if not Player then
+    return
+  end
+  local WeaponBase = message.bMelee and Player.MeleeWeapon or Player.RangedWeapon
+  if not WeaponBase or not IsValid(WeaponBase) then
+    return
+  end
+  if not WeaponBase:IsHyperWeapon() then
+    return
+  end
+  if WeaponBase.WeaponFashion then
+    WeaponBase.WeaponFashion:ApplyHyperWeaponMaterialEffect(message.HyperCardLevel or 0)
+  end
+end
+
 function Component:RealCreateMechanism(message)
   local Loc = message.Location
   local Rot = message.Rotation
@@ -1183,7 +1220,8 @@ function Component:RealInteractive(message)
   print(_G.LogTag, "LXZ HandleOnChangeRegionOnlineItemState111", message.UniqueId, Mechanism, message.IsGlobalOnlineItem)
   if message.Sender == self.Eid then
     if not (Player and Mechanism) or not Mechanism:IsCanOnlineInteractive(Player) then
-      self:RequestLeaveRegionOnlineItem(self.CurrentOnlineType, message.UniqueId, self.Eid, message.InteractiveId)
+      local bInMobile = CommonUtils.GetRuntimePlatform(GWorld.GameInstance) == "Mobile"
+      self:RequestLeaveRegionOnlineItem(self.CurrentOnlineType, message.UniqueId, self.Eid, message.InteractiveId, bInMobile)
       return
     end
     local InteractiveComp = Mechanism.ChestInteractiveComponent

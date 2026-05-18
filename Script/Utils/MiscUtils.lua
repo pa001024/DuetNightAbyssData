@@ -571,17 +571,18 @@ function Utils.WithTolerance(Value, Tolerance)
 end
 
 function Utils.FormatNumberWithCommas(Number)
+  local Sep = CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR and " " or ","
   if type(Number) == "number" then
     if Number < 100000 then
       return tostring(math.floor(Number))
     else
-      return tostring(math.floor(Number)):reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
+      return tostring(math.floor(Number)):reverse():gsub("(%d%d%d)", "%1" .. Sep):reverse():gsub("^" .. Sep, "")
     end
   elseif type(Number) == "string" then
     if Number:len() < 6 then
       return Number
     else
-      return Number:reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
+      return Number:reverse():gsub("(%d%d%d)", "%1" .. Sep):reverse():gsub("^" .. Sep, "")
     end
   end
 end

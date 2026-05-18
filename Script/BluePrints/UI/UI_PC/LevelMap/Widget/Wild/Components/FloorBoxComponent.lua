@@ -150,10 +150,10 @@ function Component:ShowFloor_Component(FloorId)
     for _, map in pairs(mapArray) do
       if floor == FloorId then
         map:SetRenderOpacity(1)
-        map.Slot:SetZOrder(1)
+        map:GetParent().Slot:SetZOrder(1)
       else
         map:SetRenderOpacity(0.3)
-        map.Slot:SetZOrder(0)
+        map:GetParent().Slot:SetZOrder(0)
       end
     end
   end

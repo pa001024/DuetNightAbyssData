@@ -347,6 +347,7 @@ return {
               MoveSpeedRate = 1,
               ExitBlendTime = 0.5,
               IsTriggerable = false,
+              UseEndOverlapBox = true,
               CanMoveReverse = false
             }
           },

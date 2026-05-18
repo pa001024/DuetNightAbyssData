@@ -1,6 +1,7 @@
 require("UnLua")
 local NumberModel = require("BluePrints.UI.UI_PC.Archive.WBP_Archive_Number_Model")
 local RewardModel = require("BluePrints.UI.UI_PC.Archive.WBP_Archive_Reward_Model")
+local AppearanceRewardModel = require("BluePrints.UI.WBP.Appearance.Appearance_Archive_Reward_Model")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -35,13 +36,16 @@ function M:Construct()
 end
 
 function M:Destruct()
+  ReddotManager.RemoveListener("ArchiveReward", self)
+  ReddotManager.RemoveListener("AppearanceArchiveReward", self)
   self:ClearListenEvent()
 end
 
-function M:Init(Name, Type, Idx, TabText, Num_Now, Num_Total, ParentWidget)
+function M:Init(Name, Type, Idx, TabText, Num_Now, Num_Total, ParentWidget, IsAppearanceArchive)
   self.Name = Name
   self.Type = Type
   self.ParentWidget = ParentWidget
+  self.IsAppearanceArchive = IsAppearanceArchive
   if Num_Now then
     self.Num_Now = Num_Now
   else
@@ -52,24 +56,44 @@ function M:Init(Name, Type, Idx, TabText, Num_Now, Num_Total, ParentWidget)
   else
     self.Num_Total = NumberModel["Get" .. self.Name .. "SumNumber"](NumberModel)
   end
-  if not Idx or 1 == Idx then
-    self.Text_Desc:SetText(GText(self.Name2Text[self.Name]))
+  if not self.IsAppearanceArchive then
+    if not Idx or 1 == Idx then
+      self.Text_Desc:SetText(GText(self.Name2Text[self.Name]))
+    else
+      self.Text_Desc:SetText(string.format(GText(self.Name2TabNameText[self.Name]), TabText))
+    end
   else
-    self.Text_Desc:SetText(string.format(GText(self.Name2TabNameText[self.Name]), TabText))
+    self.Text_Desc:SetText(string.format(GText("UI_AppearanceScore_CollectProgress"), GText(TabText)))
   end
   self.Text_Collect:SetText(string.format(GText("UI_Archive_Progress"), self.Num_Now, self.Num_Total))
-  if not ReddotManager.GetTreeNode("ArchiveReward") then
-    ReddotManager.AddNode("ArchiveReward")
+  if self.IsAppearanceArchive then
+    if not ReddotManager.GetTreeNode("AppearanceArchiveReward") then
+      ReddotManager.AddNode("AppearanceArchiveReward")
+    end
+    ReddotManager.AddListener("AppearanceArchiveReward", self, self.RefreshReddot)
+  else
+    if not ReddotManager.GetTreeNode("ArchiveReward") then
+      ReddotManager.AddNode("ArchiveReward")
+    end
+    ReddotManager.AddListener("ArchiveReward", self, self.RefreshReddot)
   end
-  ReddotManager.AddListener("ArchiveReward", self, self.RefreshReddot)
 end
 
 function M:RefreshReddot()
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("ArchiveReward")
-  if CacheDetail[self.Type] then
-    self.Reddot:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  if self.IsAppearanceArchive then
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("AppearanceArchiveReward")
+    if CacheDetail[self.Type] then
+      self.Reddot:SetVisibility(ESlateVisibility.HitTestInvisible)
+    else
+      self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
+    end
   else
-    self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("ArchiveReward")
+    if CacheDetail[self.Type] then
+      self.Reddot:SetVisibility(ESlateVisibility.HitTestInvisible)
+    else
+      self.Reddot:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
 end
 
@@ -84,7 +108,11 @@ function M:OnCellClicked()
 end
 
 function M:OpenReward()
-  RewardModel:OpenReward(self.ParentWidget, self.Type)
+  if self.IsAppearanceArchive then
+    AppearanceRewardModel:OpenReward(self.ParentWidget, self.Type)
+  else
+    RewardModel:OpenReward(self.ParentWidget, self.Type)
+  end
 end
 
 function M:PlayClickAnim()

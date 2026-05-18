@@ -167,4 +167,52 @@ function WBP_Battle_TaskBar_DynamicEvent_C:UpdatePetProgress()
   end
 end
 
+function WBP_Battle_TaskBar_DynamicEvent_C:DungeonRandomEventPlayInAnim()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/task_dynamic_start", nil, nil)
+  self:PlayAnimation(self.Get_In)
+end
+
+function WBP_Battle_TaskBar_DynamicEvent_C:ShowDungeonRandomEventProgress()
+  self.Pos_Progress:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  local Widget = self.Pos_Progress:GetChildAt(0)
+  if nil == Widget then
+    Widget = self:CreateWidgetNew("PetCaptureDefenseProgress")
+    if nil == Widget then
+      Utils.ScreenPrint("CreateWidgetNew Error WBP_Pet_Capture_DefenseProgress")
+    end
+  end
+  if Widget then
+    self.Pos_Progress:AddChild(Widget)
+    self.Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self:UpdateDungeonRandomEventProgress()
+  end
+end
+
+function WBP_Battle_TaskBar_DynamicEvent_C:HideDungeonRandomEventProgress(DungeonRandomEventSuccess, DungeonRandomEventFail, DungeonRandomEventSuccessState)
+  self.Pos_Progress:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  if DungeonRandomEventSuccessState then
+    self:PlaySuccessAnim(DungeonRandomEventSuccess)
+  else
+    self:PlayFailAnim(DungeonRandomEventFail)
+  end
+end
+
+function WBP_Battle_TaskBar_DynamicEvent_C:HideDungeonRandomEventProgressRoot()
+  self.Pos_Progress:SetVisibility(UE4.ESlateVisibility.Collapsed)
+end
+
+function WBP_Battle_TaskBar_DynamicEvent_C:UpdateDungeonRandomEventProgress(TotalVal, CurVal)
+  local Widget = self.Pos_Progress:GetChildAt(0)
+  if nil ~= Widget then
+    local Rate = 0
+    if TotalVal and CurVal then
+      Rate = CurVal / TotalVal
+    end
+    Rate = math.min(Rate, 1)
+    Widget.Text_Process:SetText(math.floor(Rate * 100))
+    Widget.ProgressBar_Defense:SetPercent(Rate)
+  end
+end
+
 return WBP_Battle_TaskBar_DynamicEvent_C

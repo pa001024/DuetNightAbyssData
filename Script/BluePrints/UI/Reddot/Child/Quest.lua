@@ -57,6 +57,9 @@ function M:OnInitNodeCache(NodeCache)
 end
 
 function M:CheckQuestIsShowByCheckState(QuestChainId, QuestChainData)
+  if not (QuestChainId and QuestChainData) or DataMgr.QuestChain[QuestChainId] == nil then
+    return false
+  end
   local QuestChainType = 0
   if DataMgr.QuestChain[QuestChainId] and DataMgr.QuestChain[QuestChainId].QuestChainType then
     QuestChainType = DataMgr.QuestChain[QuestChainId].QuestChainType

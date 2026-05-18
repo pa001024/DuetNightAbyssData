@@ -621,7 +621,7 @@ end
 
 function M:OnClick_Desc()
   UIManager(self):ShowCommonPopupUI(100293, {
-    ShortText = self:GetQAText()
+    LongText = self:GetQAText()
   })
 end
 

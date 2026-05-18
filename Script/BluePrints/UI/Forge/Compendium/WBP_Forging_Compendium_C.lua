@@ -220,7 +220,20 @@ end
 function WBP_Forging_Compendium_C:UpdateTabReddot(TabIdx)
   local TabType = self.TabIdx2TabType[TabIdx]
   local NewdotNode = ReddotManager.GetTreeNode(ForgeConst.NewdotNodeName[TabType])
-  local ShowNewReddot = NewdotNode.Count > 0
+  local NewdotCount = NewdotNode.Count
+  if NewdotNode.Children then
+    for _, ChildNode in pairs(NewdotNode.Children) do
+      if ChildNode.Cache and ChildNode.Cache.Detail then
+        for DraftId, _ in pairs(ChildNode.Cache.Detail) do
+          local DraftData = DataMgr.Draft[DraftId]
+          if DraftData and not DraftData.ShowInDraftArchive then
+            NewdotCount = NewdotCount - 1
+          end
+        end
+      end
+    end
+  end
+  local ShowNewReddot = NewdotCount > 0
   self.Tab:ShowTabRedDot(TabIdx, ShowNewReddot, false)
 end
 

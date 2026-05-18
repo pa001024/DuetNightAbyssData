@@ -29,5 +29,10 @@ return ReadOnly("Explore_Treasure", {
   [20634] = {ExploreGroupId = 7050011, ResourceId = 20634},
   [20640] = {ExploreGroupId = 7072034, ResourceId = 20640},
   [20641] = {ExploreGroupId = 7073022, ResourceId = 20641},
-  [20642] = {ExploreGroupId = 7070029, ResourceId = 20642}
+  [20642] = {ExploreGroupId = 7070029, ResourceId = 20642},
+  [20650] = {ExploreGroupId = 7091049, ResourceId = 20650},
+  [20651] = {ExploreGroupId = 7091050, ResourceId = 20651},
+  [20652] = {ExploreGroupId = 7090001, ResourceId = 20652},
+  [20653] = {ExploreGroupId = 7090099, ResourceId = 20653},
+  [20654] = {ExploreGroupId = 7090109, ResourceId = 20654}
 })

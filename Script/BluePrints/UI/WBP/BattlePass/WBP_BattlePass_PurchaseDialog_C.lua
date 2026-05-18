@@ -75,7 +75,7 @@ function M:RefreshRewardList()
     DebugPrint("gmy@WBP_BattlePass_PurchaseDialog_C M:RefreshRewardList", AvatarLevel, SelectedLevel)
     self:SetRewardList(AvatarLevel + 1, TargetLevel)
     self.Text_Title:SetText(string.format(GText("UI_BATTLEPASS_PURCHASE_DIALOG_LABEL"), TargetLevel))
-    self.Text_Purchase:SetText(GText("UI_BattlePass_BuyLevel"))
+    self.Text_Purchase:SetText(GText("UI_BattlePass_PopupDes_PhurchaseLevel"))
     self.Num_Purchase:SetText(tostring(SelectedLevel))
   end
 end

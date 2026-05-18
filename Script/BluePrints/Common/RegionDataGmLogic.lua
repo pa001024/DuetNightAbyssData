@@ -1,5 +1,6 @@
 require("UnLua")
 require("Const")
+local pb = require("pb")
 local M = Class()
 
 function M:OnRegionDataClaim_Log(WorldRegionEid, Eid, LevelName, Message)
@@ -28,12 +29,15 @@ function M:GMTest_PrintServerRegionData(PartRegionStoreData)
   self.TestGMRegionServerData = {}
   for RegionDataType, SubRegionDatas in pairs(PartRegionStoreData) do
     for SubRegionId, LevelRegionDatas in pairs(SubRegionDatas) do
-      for LevelName, RegionDatas in pairs(LevelRegionDatas) do
-        for WorldRegionEid, RegionBaseData in pairs(RegionDatas) do
-          self.TestGMRegionServerData[tonumber(RegionDataType)] = self.TestGMRegionServerData[tonumber(RegionDataType)] or {}
-          self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)] = self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)] or {}
-          self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)][LevelName] = self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)][LevelName] or {}
-          self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)][LevelName][WorldRegionEid] = RegionBaseData
+      if LevelRegionDatas then
+        local DecodeStr = pb.decode(".LevelBaseDataAttrDict", LevelRegionDatas)
+        for LevelName, RegionDatas in pairs(DecodeStr) do
+          for WorldRegionEid, RegionBaseData in pairs(RegionDatas) do
+            self.TestGMRegionServerData[tonumber(RegionDataType)] = self.TestGMRegionServerData[tonumber(RegionDataType)] or {}
+            self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)] = self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)] or {}
+            self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)][LevelName] = self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)][LevelName] or {}
+            self.TestGMRegionServerData[tonumber(RegionDataType)][tonumber(SubRegionId)][LevelName][WorldRegionEid] = RegionBaseData
+          end
         end
       end
     end

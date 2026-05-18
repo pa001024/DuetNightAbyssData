@@ -66,7 +66,17 @@ function Component:FilterTempTeamInfo(RawTempTeamInfo)
     local Info = RawTempTeamInfo[SettlementUid]
     if Info then
       table.insert(TempTeamInfo, Info)
-      DebugPrint("ljl@WalnutChoice", Info.Uid, Info.PlayerName)
+      DebugPrint("ljl@FilterTempTeamInfo FromPlayerArray", Info.Uid, Info.PlayerName)
+    else
+      local NewInfo = {}
+      NewInfo.IsMainPlayer = false
+      NewInfo.Eid = SettlementUid
+      NewInfo.Uid = SettlementUid
+      NewInfo.PlayerLevel = 0
+      NewInfo.PlayerName = ""
+      NewInfo.HeadIconId = 0
+      table.insert(TempTeamInfo, NewInfo)
+      DebugPrint("ljl@FilterTempTeamInfo NotFromPlayerArray", SettlementUid)
     end
   end
   return TempTeamInfo

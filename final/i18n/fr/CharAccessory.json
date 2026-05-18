@@ -169,7 +169,7 @@
   },
   {
     "id": 10023,
-    "name": "Masque de fertilité",
+    "name": "Masque de prospérité",
     "desc": "Autrefois, il servait à converser avec les divinités en quête de prospérité. Aujourd’hui, ceux qui attendent encore la grâce du miracle tournent leurs prières vers la haute tour d’Élysium, quelque part au loin.",
     "icon": "T_Fashion_Head_FoxMask",
     "rarity": 4,
@@ -680,6 +680,14 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 10092,
+    "name": "Brûle-encens rituel – Blanc ivoire",
+    "desc": "Rendons-nous hommage aux cieux... ou aux mortels ?",
+    "icon": "T_Fashion_Head55",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 10094,
     "name": "Plume d’écriture – Blanc ivoire",
     "desc": "Écrivons l’histoire qui n’appartient qu’à nous.",
@@ -760,6 +768,246 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 10106,
+    "name": "Oreilles de loup – Gris plomb",
+    "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles de loup. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
+    "icon": "T_Fashion_Head63_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10107,
+    "name": "Oreilles de loup – Jade noir",
+    "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles de loup. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
+    "icon": "T_Fashion_Head63_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10108,
+    "name": "Oreilles de loup – Rouille",
+    "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles de loup. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
+    "icon": "T_Fashion_Head63_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10109,
+    "name": "Oreilles de loup – Bleu indigo",
+    "desc": "Vives, adorables, espiègles, ravissantes... Tous les mots du monde pâlissent face aux oreilles de loup. Voilà leur charme irrésistible... Tiens, cette réplique me dit quelque chose... Enfin, sûrement une impression.",
+    "icon": "T_Fashion_Head63_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10110,
+    "name": "Casque miaou – Menthe",
+    "desc": "Ça, c’est de la vraie musique féline.",
+    "icon": "T_Fashion_Head65_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10111,
+    "name": "Casque miaou – Blanc ivoire",
+    "desc": "Ça, c’est de la vraie musique féline.",
+    "icon": "T_Fashion_Head65_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10112,
+    "name": "Casque miaou – Jade noir",
+    "desc": "Ça, c’est de la vraie musique féline.",
+    "icon": "T_Fashion_Head65_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10113,
+    "name": "Casque miaou – Rouille",
+    "desc": "Ça, c’est de la vraie musique féline.",
+    "icon": "T_Fashion_Head65_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10114,
+    "name": "Auréole céleste – Blanc ivoire",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10115,
+    "name": "Auréole céleste – Doré",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10116,
+    "name": "Auréole céleste – Rouille",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10117,
+    "name": "Auréole céleste – Pourpre profond",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10118,
+    "name": "Ruban du crépuscule – Jade noir",
+    "desc": "La nuit tombe comme un voile de soie, et nul ne peut en percer les secrets.",
+    "icon": "T_Fashion_Head68_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10119,
+    "name": "Ruban du crépuscule – Blanc ivoire",
+    "desc": "La nuit tombe comme un voile de soie, et nul ne peut en percer les secrets.",
+    "icon": "T_Fashion_Head68_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10120,
+    "name": "Ruban du crépuscule – Caramel",
+    "desc": "La nuit tombe comme un voile de soie, et nul ne peut en percer les secrets.",
+    "icon": "T_Fashion_Head68_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10121,
+    "name": "Ruban du crépuscule – Blanc sakura",
+    "desc": "La nuit tombe comme un voile de soie, et nul ne peut en percer les secrets.",
+    "icon": "T_Fashion_Head68_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10122,
+    "name": "En charge",
+    "desc": "Indicateur de batterie : en charge.",
+    "icon": "T_Fashion_Head59_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10123,
+    "name": "Batterie pleine",
+    "desc": "Indicateur de batterie : batterie pleine.",
+    "icon": "T_Fashion_Head59_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10124,
+    "name": "Batterie faible",
+    "desc": "Indicateur de batterie : batterie faible.",
+    "icon": "T_Fashion_Head59_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10125,
+    "name": "Batterie critique",
+    "desc": "Indicateur de batterie : batterie critique.",
+    "icon": "T_Fashion_Head59_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10126,
+    "name": "Cône de signalisation – Rouille",
+    "desc": "Cette route est fermée.",
+    "icon": "T_Fashion_Hat14_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10127,
+    "name": "Cône de signalisation – Émeraude",
+    "desc": "Cette route est fermée.",
+    "icon": "T_Fashion_Hat14_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10128,
+    "name": "Cône de signalisation – Jaune abricot",
+    "desc": "Cette route est fermée.",
+    "icon": "T_Fashion_Hat14_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10129,
+    "name": "Cône de signalisation – Gris plomb",
+    "desc": "Cette route est fermée.",
+    "icon": "T_Fashion_Hat14_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10130,
+    "name": "Pinson gazouilleur",
+    "desc": "由于阿特拉西亚大陆知名童话故事《啾啾的奇妙冒险》的传播，很多人误认为啾啾莺是那本童话故事的主角。因此每本新书出版时，作者都会在书中强调，“啾啾是小鸡，啾啾莺是小鸟！”",
+    "icon": "T_Fashion_Head64",
+    "rarity": 4,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10131,
+    "name": "Lion de pierre",
+    "desc": "辟邪退灾。",
+    "icon": "T_Fashion_Head66",
+    "rarity": 4,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10132,
+    "name": "Dispositif Luno (I)",
+    "desc": "Un dispositif de mesure installé par Luno, l’exploratrice. Une fois activé, il devrait recueillir les données dont elle a besoin.",
+    "icon": "T_Fashion_Head67_01",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10139,
+    "name": "节日气球·黛蓝",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head60_04",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10140,
+    "name": "Fleur d’acier",
+    "desc": "Emprisonner la vie dans l’acier et la mécanique a toujours été l’un des grands sujets d’étude des alchimistes.",
+    "icon": "T_Fashion_Head62",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 10149,
+    "name": "节日气球·薄荷",
+    "desc": "Lors des festivités, on les accroche aux bancs ou aux rebords des toits. Ils se balancent doucement au gré du vent, projetant de délicats jeux de lumière.",
+    "icon": "T_Fashion_Head60_02",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -796,6 +1044,14 @@
     "name": "Rythme espiègle",
     "desc": "Oscillant au rythme, vous dansez au gré d’une mélodie espiègle.",
     "icon": "T_Fashion_Fx16",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 11007,
+    "name": "Mer de lycoris éternels",
+    "desc": "Les fleurs éclosent là où les anges sont tombés.",
+    "icon": "T_Fashion_Fx27",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -860,6 +1116,70 @@
     "name": "Sélection de Filbert",
     "desc": "Le processus était un peu étrange et chaotique, mais au final, c’est bien Filbert qui l’a choisi.",
     "icon": "T_Fashion_Hat08",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12009,
+    "name": "Nuages d’après-midi",
+    "desc": "Sous de doux nuages blancs se cache le réconfort d’un repos paisible.",
+    "icon": "T_Fashion_Hat11",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12010,
+    "name": "Lueur de la première neige",
+    "desc": "Les flocons portent les rires du matin et scintillent sous la lumière du soleil.",
+    "icon": "T_Fashion_Hat10",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12011,
+    "name": "Clous rebelles",
+    "desc": "Dans l’obscurité, les reflets des pointes acérées dessinent leur silhouette.",
+    "icon": "T_Fashion_Hat15",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12012,
+    "name": "Iris silencieux – Jade noir",
+    "desc": "Le silence a parfois plus de poids que les mots.",
+    "icon": "T_Fashion_Hat12_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12013,
+    "name": "Iris silencieux – Caramel",
+    "desc": "Le silence a parfois plus de poids que les mots.",
+    "icon": "T_Fashion_Hat12_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12014,
+    "name": "Iris silencieux – Blanc ivoire",
+    "desc": "Le silence a parfois plus de poids que les mots.",
+    "icon": "T_Fashion_Hat12_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12015,
+    "name": "Iris silencieux – Gris plomb",
+    "desc": "Le silence a parfois plus de poids que les mots.",
+    "icon": "T_Fashion_Hat12_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 12016,
+    "name": "Voile nocturne",
+    "desc": "Un voile de gaze noire dissimule son visage écarlate.",
+    "icon": "T_Fashion_Hat16",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
@@ -1150,6 +1470,86 @@
     "icon": "T_Fashion_Waist23_02",
     "rarity": 4,
     "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13029,
+    "name": "Queue de loup – Gris plomb",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13030,
+    "name": "Queue de loup — Jade noir",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13031,
+    "name": "Queue de loup – Rouille",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13032,
+    "name": "Queue de loup – Bleu indigo",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13033,
+    "name": "Cauchemar du crépuscule – Jade noir",
+    "desc": "Ça, c’est de la vraie musique féline.",
+    "icon": "T_Fashion_Back43_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13034,
+    "name": "Cauchemar du crépuscule – Doré",
+    "desc": "Ça, c’est de la vraie musique féline.",
+    "icon": "T_Fashion_Back43_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13035,
+    "name": "Cauchemar du crépuscule – Émeraude",
+    "desc": "Ça, c’est de la vraie musique féline.",
+    "icon": "T_Fashion_Back43_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13036,
+    "name": "Cauchemar du crépuscule – Blanc sakura",
+    "desc": "Ça, c’est de la vraie musique féline.",
+    "icon": "T_Fashion_Back43_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 13037,
+    "name": "Reliquaire sacré – Doré",
+    "desc": "Les dieux ont abandonné leur corps au monde des hommes, laissant derrière eux une chaleur qui ne s’éteint jamais.",
+    "icon": "T_Fashion_Waist33_04",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 13039,
+    "name": "Reliquaire sacré – Blanc ivoire",
+    "desc": "Les dieux ont abandonné leur corps au monde des hommes, laissant derrière eux une chaleur qui ne s’éteint jamais.",
+    "icon": "T_Fashion_Waist33_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
   },
   {
     "id": 20001,
@@ -1581,7 +1981,7 @@
     "desc": "Cible verrouillée.",
     "icon": "T_Fashion_Face24__03",
     "rarity": 5,
-    "unlock": "Disponible via l’échange de Prismes"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 20056,
@@ -1589,7 +1989,7 @@
     "desc": "Cible verrouillée.",
     "icon": "T_Fashion_Face24__02",
     "rarity": 5,
-    "unlock": "Disponible via l’échange de Prismes"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 20057,
@@ -1597,7 +1997,7 @@
     "desc": "Cible verrouillée.",
     "icon": "T_Fashion_Face24",
     "rarity": 5,
-    "unlock": "Disponible via l’échange de Prismes"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 20058,
@@ -1605,7 +2005,7 @@
     "desc": "Cible verrouillée.",
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
-    "unlock": "Disponible via l’échange de Prismes"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 20063,
@@ -1760,6 +2160,54 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 20082,
+    "name": "Radiance sacrée – Blanc ivoire",
+    "desc": "神将光芒弃于人间，静待信仰的回响。",
+    "icon": "T_Fashion_Face26_04",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 20084,
+    "name": "Radiance sacrée – Bleu céleste",
+    "desc": "神将光芒弃于人间，静待信仰的回响。",
+    "icon": "T_Fashion_Face26_02",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 20086,
+    "name": "Voile de murmure – Jade noir",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20087,
+    "name": "Voile de murmure – Blanc ivoire",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20088,
+    "name": "Voile de murmure – Rouille",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 20089,
+    "name": "Voile de murmure – Doré",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -1812,6 +2260,30 @@
     "name": "Talisman ésotérique – Doré",
     "desc": "Le talisman s’anime à la pensée, et les voies occultes lui répondent.",
     "icon": "T_Fashion_Fx17_01",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 21010,
+    "name": "Sillage de lycoris éternels",
+    "desc": "Sillage de lycoris éternels",
+    "icon": "T_Fashion_Fx23",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 21011,
+    "name": "Sillage sacré – Doré",
+    "desc": "Sillage sacré – Doré",
+    "icon": "T_Fashion_Fx22",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 21012,
+    "name": "Sillage sacré – Gris plomb",
+    "desc": "Sillage sacré – Doré",
+    "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "Disponible via les événements"
   },
@@ -2088,6 +2560,174 @@
     "unlock": "Disponible via les événements"
   },
   {
+    "id": 30041,
+    "name": "Lanterne nocturne – Jaune abricot",
+    "desc": "La longue nuit a toujours une fin. Puissent-elles éclairer votre chemin vers la maison.",
+    "icon": "T_Fashion_Waist22_02",
+    "rarity": 3,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 30042,
+    "name": "Cage dorée – Doré",
+    "desc": "Une fois qu’on a goûté à la liberté, nul ne souhaite retourner dans une cage dorée.",
+    "icon": "T_Fashion_Waist27_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30043,
+    "name": "Cage dorée – Blanc ivoire",
+    "desc": "Une fois qu’on a goûté à la liberté, nul ne souhaite retourner dans une cage dorée.",
+    "icon": "T_Fashion_Waist27_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30044,
+    "name": "Cage dorée – Jade noir",
+    "desc": "Une fois qu’on a goûté à la liberté, nul ne souhaite retourner dans une cage dorée.",
+    "icon": "T_Fashion_Waist27_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30045,
+    "name": "Cage dorée – Jaune abricot",
+    "desc": "Une fois qu’on a goûté à la liberté, nul ne souhaite retourner dans une cage dorée.",
+    "icon": "T_Fashion_Waist27_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30046,
+    "name": "Sachet rembourré – Pourpre profond ",
+    "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
+    "icon": "T_Fashion_Waist32_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30047,
+    "name": "Sachet rembourré – Émeraude",
+    "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
+    "icon": "T_Fashion_Waist32_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 30048,
+    "name": "Sachet rembourré – Caramel",
+    "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
+    "icon": "T_Fashion_Waist32_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30049,
+    "name": "Sachet rembourré – Blanc ivoire",
+    "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
+    "icon": "T_Fashion_Waist32_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30054,
+    "name": "Bonheur en bouteille – Rouille",
+    "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
+    "icon": "T_Fashion_Waist29_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30055,
+    "name": "Bonheur en bouteille – Émeraude",
+    "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
+    "icon": "T_Fashion_Waist29_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30056,
+    "name": "Bonheur en bouteille – Jaune abricot",
+    "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
+    "icon": "T_Fashion_Waist29_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30057,
+    "name": "Bonheur en bouteille – Rouille",
+    "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
+    "icon": "T_Fashion_Waist29_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30058,
+    "name": "Bonheur en canette – Bleu indigo",
+    "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
+    "icon": "T_Fashion_Waist28_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30059,
+    "name": "Bonheur en canette – Blanc sakura",
+    "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
+    "icon": "T_Fashion_Waist28_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30060,
+    "name": "Bonheur en canette – Émeraude",
+    "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
+    "icon": "T_Fashion_Waist28_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30061,
+    "name": "Bonheur en canette – Jade noir",
+    "desc": "Une gorgée rafraîchissante pour les journées d’été accablantes.",
+    "icon": "T_Fashion_Waist28_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30062,
+    "name": "Pistolets du crépuscule – Jade noir",
+    "desc": "Lorsque la douille touche le sol, la peur s’éteint aussitôt.",
+    "icon": "T_Fashion_Waist31_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30063,
+    "name": "Pistolets du crépuscule – Blanc ivoire",
+    "desc": "Lorsque la douille touche le sol, la peur s’éteint aussitôt.",
+    "icon": "T_Fashion_Waist31_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30064,
+    "name": "Pistolets du crépuscule – Caramel",
+    "desc": "Lorsque la douille touche le sol, la peur s’éteint aussitôt.",
+    "icon": "T_Fashion_Waist31_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 30065,
+    "name": "Pistolets du crépuscule – Blanc sakura",
+    "desc": "Lorsque la douille touche le sol, la peur s’éteint aussitôt.",
+    "icon": "T_Fashion_Waist31_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 31001,
     "name": "Animation de victoire : Rives paisibles",
     "desc": "Permet de modifier l’animation de victoire.",
@@ -2104,10 +2744,26 @@
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
+    "id": 31003,
+    "name": "Animation de victoire : Instant figé",
+    "desc": "Permet de modifier l’animation de victoire.",
+    "icon": "T_Fashion_SettlementAction_05",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
     "id": 31004,
     "name": "Animation de victoire : Fantaisie Jishu ",
     "desc": "Permet de modifier l’animation de victoire.",
     "icon": "T_Fashion_SettlementAction_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 31005,
+    "name": "Animation de victoire : Terre du péché",
+    "desc": "Permet de modifier l’animation de victoire.",
+    "icon": "T_Fashion_SettlementAction_04",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -2137,7 +2793,7 @@
   },
   {
     "id": 40005,
-    "name": "Hymne du vent",
+    "name": "Plumes du hibou nocturne",
     "desc": "Portée par le vent et ses ailes, elle étreint le ciel — chante, plane, et ne regarde jamais en bas.",
     "icon": "T_Fashion_Back05",
     "rarity": 5,
@@ -2504,6 +3160,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 40055,
+    "name": "Effigie de Wishen",
+    "desc": "Né sous un regard attentif, il retourne à la poussière lorsque l’esprit s’apaise.",
+    "icon": "T_Fashion_Back38",
+    "rarity": 4,
+    "unlock": "Disponible via les événements"
+  },
+  {
     "id": 40056,
     "name": "Rose de givre éternel – Doré",
     "desc": "Peut-être que lorsque la rose éclot sur la terre gelée, les souvenirs et les serments scellés s’éveilleront enfin.",
@@ -2568,6 +3232,70 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 40068,
+    "name": "Sac rembourré – Émeraude",
+    "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
+    "icon": "T_Fashion_Back44_03",
+    "rarity": 5,
+    "unlock": "Disponible via les événements"
+  },
+  {
+    "id": 40069,
+    "name": "Sac rembourré – Blanc ivoire",
+    "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
+    "icon": "T_Fashion_Back44_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40070,
+    "name": "Sac rembourré – Bleu indigo",
+    "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
+    "icon": "T_Fashion_Back44_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40071,
+    "name": "Sac rembourré – Rouille",
+    "desc": "Petit sachet délicat, tout doux, suspendu au coin d’un vêtement.",
+    "icon": "T_Fashion_Back44_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40072,
+    "name": "Sombre vague – Jade noir",
+    "desc": "Sous le voile de la nuit, des courants obscurs déferlent, prêts à tout engloutir.",
+    "icon": "T_Fashion_Back42_01",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40073,
+    "name": "Sombre vague – Caramel",
+    "desc": "Sous le voile de la nuit, des courants obscurs déferlent, prêts à tout engloutir.",
+    "icon": "T_Fashion_Back42_02",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40074,
+    "name": "Sombre vague – Blanc ivoire",
+    "desc": "Sous le voile de la nuit, des courants obscurs déferlent, prêts à tout engloutir.",
+    "icon": "T_Fashion_Back42_04",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 40075,
+    "name": "Sombre vague – Gris plomb",
+    "desc": "Sous le voile de la nuit, des courants obscurs déferlent, prêts à tout engloutir.",
+    "icon": "T_Fashion_Back42_03",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -2592,8 +3320,16 @@
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
+    "id": 50004,
+    "name": "Stèle éternelle",
+    "desc": " ",
+    "icon": "T_Fashion_Fx25",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
     "id": 60001,
-    "name": " ",
+    "name": "Stèle éternelle",
     "desc": " ",
     "icon": "",
     "rarity": 5,
@@ -2636,6 +3372,14 @@
     "name": "Feux d’éclat – Doré",
     "desc": "Le dragon s’élance et crache ses flammes ; et nos chants traversent la nuit.",
     "icon": "T_Fashion_Fx10_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70005,
+    "name": "Bouquet de lycoris éternels – Pourpre profond",
+    "desc": "Les fleurs épanouies de la terre du péché peuvent elles aussi devenir éternelles.",
+    "icon": "T_Fashion_Fx31_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -2740,6 +3484,30 @@
     "name": "Empreintes félines – Rouille",
     "desc": "Les empreintes félines sont là... mais où est donc passé le chat ?",
     "icon": "T_Fashion_Fx19_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70051,
+    "name": "Bouquet de lycoris éternels – Blanc sakura",
+    "desc": "Les fleurs épanouies de la terre du péché peuvent elles aussi devenir éternelles.",
+    "icon": "T_Fashion_Fx31_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70052,
+    "name": "Bouquet de lycoris éternels – Rouille",
+    "desc": "Les fleurs épanouies de la terre du péché peuvent elles aussi devenir éternelles.",
+    "icon": "T_Fashion_Fx31_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 70053,
+    "name": "Bouquet de lycoris éternels – Doré",
+    "desc": "Les fleurs épanouies de la terre du péché peuvent elles aussi devenir éternelles.",
+    "icon": "T_Fashion_Fx31_02",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   },
@@ -2868,6 +3636,38 @@
     "name": "Jeux félins – Bleu indigo",
     "desc": "Tourner, tomber... parfait !",
     "icon": "T_Fashion_Fx18_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80051,
+    "name": "Esprit céleste – Blanc ivoire",
+    "desc": "Faites résonner le cor et accueillez la descente des anges.",
+    "icon": "T_Fashion_Fx28_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80052,
+    "name": "Esprit céleste – Doré",
+    "desc": "Faites résonner le cor et accueillez la descente des anges.",
+    "icon": "T_Fashion_Fx28_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80053,
+    "name": "Esprit céleste – Bleu céleste",
+    "desc": "Faites résonner le cor et accueillez la descente des anges.",
+    "icon": "T_Fashion_Fx28_04",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 80054,
+    "name": "Esprit céleste – Blanc sakura",
+    "desc": "Faites résonner le cor et accueillez la descente des anges.",
+    "icon": "T_Fashion_Fx28_03",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   }

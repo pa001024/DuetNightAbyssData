@@ -10,7 +10,10 @@ return ReadOnly("CombatVersionControl", {
       10,
       11,
       12,
-      13
+      13,
+      14,
+      15,
+      999
     },
     Id = 1
   }

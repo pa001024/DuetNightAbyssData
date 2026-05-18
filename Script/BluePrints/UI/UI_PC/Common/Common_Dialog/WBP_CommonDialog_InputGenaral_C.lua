@@ -5,6 +5,10 @@ local Component = {}
 
 function Component:OnClickButtonContinue()
   local Text = self.Common_EditText:GetText()
+  if self.Params.ExtraCheckFunc and not self.Params.ExtraCheckFunc(true, self, Text) then
+    self.Owner.DontCloseWhenRightBtnClicked = true
+    return
+  end
   HeroUSDKUtils.CheckStringSensitive(self, Text, self.OnTextSensitive, self.OnTextQualified)
 end
 
@@ -90,6 +94,7 @@ function Component:InitContentComp(Params, PopupData, Owner)
     Owner = self,
     HintText = Params.HintText,
     TextLimit = Params.TextLenMax,
+    ResidentTipText = Params.EditTextConfig and Params.EditTextConfig.ResidentTipText,
     Events = {
       OnTextChanged = function(self, InText)
         self:OnTextChange(InText)

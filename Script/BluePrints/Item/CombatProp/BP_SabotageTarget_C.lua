@@ -19,6 +19,11 @@ function BP_SabotageTarget_C:AuthorityInitInfo(Info)
   end
 end
 
+function BP_SabotageTarget_C:SetbSabotageIsDead(b)
+  self.bSabotageIsDead = b
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "bSabotageIsDead")
+end
+
 function BP_SabotageTarget_C:CustomAddGuideCondition()
   return false
 end
@@ -75,7 +80,7 @@ function BP_SabotageTarget_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathReaso
   BP_SabotageTarget_C.Super.OnDead(self, KillMineRoleEid, KillMineSkillId, DeathReason)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if GameMode and not self.bSabotageIsDead then
-    self.bSabotageIsDead = true
+    self:SetbSabotageIsDead(true)
     GameMode:TriggerGameModeEvent("OnSabotageTargetDead")
   end
 end

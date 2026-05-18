@@ -419,11 +419,17 @@ function WBP_ForgeItemWidget:UpdateMaterial()
     self.BtnStart:SetTextColor(self.BtnStart.Color_Forge)
     self.BtnStart.WS_Type:SetActiveWidgetIndex(0)
     self.BtnStart.Icon_Forging:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.BtnStart:ForbidBtn(false)
   else
     self.BtnStart:SetText(GText("UI_FORGING_PATH"))
     self.BtnStart:SetTextColor(self.BtnStart.Color_Path)
     self.BtnStart.WS_Type:SetActiveWidgetIndex(1)
     self.BtnStart.Icon_Forging:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    if DataMgr.Draft[self.Content.Id].NotDraftTree and (not self.Content.IsFoundryEnough or not self.Content.IsResourceEnough) then
+      self.BtnStart:ForbidBtn(true)
+    else
+      self.BtnStart:ForbidBtn(false)
+    end
   end
 end
 

@@ -13,7 +13,6 @@ end
 
 function M:Destruct()
   self.OthersItem = nil
-  self:PauseTalkAudio()
 end
 
 function M:PlaySoundWithTalk(AudioManager, VoiceName, ExStoryInfo, SnapShot)
@@ -116,6 +115,7 @@ end
 function M:PauseTalkAudio()
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   AudioManager(self):StopSound(PlayerController, Const.ReviewSoundKey)
+  AudioManager(self):SetEventSoundParam(nil, Const.DialogueEffectSoundKey, {voice_effect_type = 0})
   self.AudioState = "Stop"
   self:StopAnimation(self.Click_Sound_Loop)
   self:PlayAnimation(self.Normal_Sound)

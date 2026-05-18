@@ -29,6 +29,7 @@ function Component:LoadSkyBoxScene(NewResult)
   local CharId = DataMgr.Player2RoleId.Player[Sex]
   if CharId then
     self.ActorController:ChangeCharModel({CharId = CharId}, true, true)
+    self.ActorController:ChangeCharAppearance({})
   end
   if self.ActorController.TryCreateSequenceActorController then
     self.ActorController:TryCreateSequenceActorController()

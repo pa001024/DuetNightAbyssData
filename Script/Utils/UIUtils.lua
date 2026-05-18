@@ -273,20 +273,12 @@ function UIUtils.ShowGetItemPageAndOpenBagIfNeeded(ItemType, ItemId, Count, Purc
   if PurchaseRewards and PurchaseRewards.Resources then
     for Id, resource in pairs(PurchaseRewards.Resources) do
       local RewardData = DataMgr.Resource[Id]
-      if RewardData and RewardData.MaterialClassify == BagCommon.ItemTypeToTabId.ConsumableItem then
-        needOpenBag = true
-        OpenBagId = tostring(Id)
-      end
       if RewardData and RewardData.ResourceSType == "GestureItem" then
         bHasGestureItem = true
       end
     end
   elseif ItemId then
     local RewardData = DataMgr.Resource[ItemId]
-    if RewardData and RewardData.MaterialClassify == BagCommon.ItemTypeToTabId.ConsumableItem then
-      needOpenBag = true
-      OpenBagId = tostring(ItemId)
-    end
     if RewardData and RewardData.ResourceSType == "GestureItem" then
       bHasGestureItem = true
     end
@@ -1563,6 +1555,28 @@ function UIUtils.GetAllWeaponTags()
   return UIUtils.MeleeTags, UIUtils.MeleeTagNames, UIUtils.RangedTags, UIUtils.RangedTagNames
 end
 
+function UIUtils.GetAllWeaponTagIcons()
+  if UIUtils.MeleeIcons then
+    return UIUtils.MeleeIcons, UIUtils.UnorderedMeleeIcons, UIUtils.RangedIcons, UIUtils.UnorderedRangedIcons
+  end
+  UIUtils.GetAllWeaponTags()
+  UIUtils.MeleeIcons = {}
+  UIUtils.UnorderedMeleeIcons = {}
+  for _, Tag in ipairs(UIUtils.MeleeTags) do
+    local Data = DataMgr.WeaponTag[Tag]
+    table.insert(UIUtils.MeleeIcons, Data and Data.Icon)
+    UIUtils.UnorderedMeleeIcons[Tag] = Data.Icon
+  end
+  UIUtils.RangedIcons = {}
+  UIUtils.UnorderedRangedIcons = {}
+  for _, Tag in ipairs(UIUtils.RangedTags) do
+    local Data = DataMgr.WeaponTag[Tag]
+    table.insert(UIUtils.RangedIcons, Data and Data.Icon)
+    UIUtils.UnorderedRangedIcons[Tag] = Data.Icon
+  end
+  return UIUtils.MeleeIcons, UIUtils.UnorderedMeleeIcons, UIUtils.RangedIcons, UIUtils.UnorderedRangedIcons
+end
+
 function UIUtils.CanApplyWeaponSkin(WeaponId, SkinApplicationType)
   local Data = DataMgr.Weapon[WeaponId]
   if Data and Data.SkinApplicationType then
@@ -1868,6 +1882,23 @@ function UIUtils.GetLeftTimeStrStyle2(EndTime, StartTime)
     table.insert(RemainTimeDict, {TimeType = "Sec", TimeValue = LeftSecondTime})
   end
   return RemainTimeDict, TimeCount
+end
+
+function UIUtils.FormatRemainDurationCoarseLoc(remainingSec)
+  if nil == remainingSec or remainingSec <= 0 then
+    return ""
+  end
+  local r = math.floor(remainingSec + 0.5)
+  if r >= 86400 then
+    local n = math.ceil(r / 86400)
+    return string.format(GText("UI_DailyGoal_RemainTime_Day"), n)
+  end
+  if r >= 3600 then
+    local n = math.ceil(r / 3600)
+    return string.format(GText("UI_DailyGoal_RemainTime_Hour"), n)
+  end
+  local n = math.max(1, math.ceil(r / 60))
+  return string.format(GText("UI_DailyGoal_RemainTime_Minute"), n)
 end
 
 function UIUtils.GenRougeModAttrData(ModAttrConf, ModLevel, AttrConf, ModId)
@@ -2563,7 +2594,7 @@ function UIUtils.InitDefinitionTextWidget(TargetWidget, TargetTextWidget, TermsS
       return
     end
     UIUtils.SetDefinitionText(TargetTextWidget, TargetWidget[TermsStr])
-  end, 2, "UpdateTargetTextFunc")
+  end, 5, "UpdateTargetTextFunc")
 end
 
 function UIUtils.AddPositioningTagToPanel(Panel, CharId)

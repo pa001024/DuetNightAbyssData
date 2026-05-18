@@ -178,11 +178,13 @@ function Component:UseResourceInBag(ResourceId, Count, InCallBack)
     
     if ErrorCode:Check(ErrCode) then
       local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
-      local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
-      local Avatar = GWorld:GetAvatar()
-      if BagConsumeNode and BagConsumeNode.Cache.Detail[ResourceId] then
-        BagConsumeNodeDetails[ResourceId].ClickedCount = Avatar:GetResourceNum(ResourceId)
-        BagConsumeNodeDetails[ResourceId].StuffCount = Avatar:GetResourceNum(ResourceId)
+      if BagConsumeNode and BagConsumeNode.Cache and BagConsumeNode.Cache.Detail then
+        local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
+        local Avatar = GWorld:GetAvatar()
+        if BagConsumeNode and BagConsumeNode.Cache.Detail[ResourceId] then
+          BagConsumeNodeDetails[ResourceId].ClickedCount = Avatar:GetResourceNum(ResourceId)
+          BagConsumeNodeDetails[ResourceId].StuffCount = Avatar:GetResourceNum(ResourceId)
+        end
       end
     end
     if InCallBack then
@@ -200,11 +202,13 @@ function Component:UseOptResourceInBag(ResourceId, OptIdxList, InCallBack)
     self.logger.info("UseOptResourceInBag", ErrorCode:Name(ErrCode))
     if ErrorCode:Check(ErrCode) then
       local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
-      local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
-      local Avatar = GWorld:GetAvatar()
-      if BagConsumeNode and BagConsumeNode.Cache.Detail[ResourceId] then
-        BagConsumeNodeDetails[ResourceId].ClickedCount = Avatar:GetResourceNum(ResourceId)
-        BagConsumeNodeDetails[ResourceId].StuffCount = Avatar:GetResourceNum(ResourceId)
+      if BagConsumeNode and BagConsumeNode.Cache and BagConsumeNode.Cache.Detail then
+        local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
+        local Avatar = GWorld:GetAvatar()
+        if BagConsumeNodeDetails[ResourceId] then
+          BagConsumeNodeDetails[ResourceId].ClickedCount = Avatar:GetResourceNum(ResourceId)
+          BagConsumeNodeDetails[ResourceId].StuffCount = Avatar:GetResourceNum(ResourceId)
+        end
       end
     end
     if InCallBack then
@@ -282,6 +286,16 @@ function Component:GetStoredCollectReward(Callback, RewardPaths)
   end
   
   self:CallServer("GetStoredCollectReward", cb, RewardPaths)
+end
+
+function Component:RegainItemAutoConvertResource(ItemId, ItemType, ItemCount, RegainItemId, RegainItemNum)
+  self.logger.debug("RegainItemAutoConvertResource", ItemId, ItemType, ItemCount, RegainItemId, RegainItemNum)
+  assert(DataMgr.Resource[RegainItemId], "未找到对应Resource" .. RegainItemId)
+  local GachaMain = UIManager(GWorld.GameInstance):GetUIObj("GachaMain")
+  if GachaMain then
+    return
+  end
+  UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonTop, GText(string.format(GText("UI_RegainItem_Toast"), GText(DataMgr.Resource[RegainItemId].ResourceName), RegainItemNum)))
 end
 
 return Component

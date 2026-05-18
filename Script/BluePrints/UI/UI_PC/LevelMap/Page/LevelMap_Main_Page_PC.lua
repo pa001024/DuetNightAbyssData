@@ -1,5 +1,6 @@
 require("UnLua")
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
+local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
 local M = Class("BluePrints.UI.BP_UIState_C")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocData")
@@ -322,10 +323,13 @@ function M:InitCommonWidget()
   end
   self.Entrance_Dispatch.Btn_Click.OnClicked:Add(self, self.OnClickDispatch)
   self.Entrance_Dispatch.Text_Name:SetText(GText("UI_Disptach_Title"))
-  local ChatWidget = UIManager(self):_CreateWidgetNew("ChannelMapBtn")
-  if ChatWidget then
-    self.Dispatch_ChatChannel:AddChild(ChatWidget)
-    self.ChannelMapBtn = ChatWidget
+  if not self.ChannelMapBtn then
+    local ChatWidget = UIManager(self):_CreateWidgetNew("ChannelMapBtn")
+    if ChatWidget then
+      self.Dispatch_ChatChannel:ClearChildren()
+      self.Dispatch_ChatChannel:AddChild(ChatWidget)
+      self.ChannelMapBtn = ChatWidget
+    end
   end
 end
 
@@ -455,7 +459,7 @@ function M:UpdateWildMapKeys()
   if self.RealWildMap.IsOpenDispatch == true then
     return
   end
-  if self.WildMapKeysShow then
+  if self.WildMapKeysShow or self.RealWildMap.IsEmpty then
     if self.ReturnHomeConditionRes then
       self.Btn_ReturnHome:SetVisibility(ESlateVisibility.Visible)
     end
@@ -485,6 +489,17 @@ function M:UpdateWildMapKeys()
     self.Slider_Zoom:SetVisibility(ESlateVisibility.Collapsed)
   else
     self.Slider_Zoom:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local ConditionId = DataMgr.UIUnlockRule.Dispatch.ConditionId
+  local Res = ConditionUtils.CheckCondition(Avatar, ConditionId)
+  if Res then
+    self.Entrance_Dispatch:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 
@@ -690,7 +705,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     self:OnReturnHomeKeyDown()
     return UWidgetBlueprintLibrary.Handled()
   elseif "Gamepad_Special_Right" == InKeyName and self.Dispatch_ChatChannel:IsVisible() then
-    ChatController:OpenChatChannelUI(self)
+    ChatController:OpenChatChannelUI(self, ChatCommon.ChannelDef.Region)
   else
     if self.DeviceInPc then
       if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then

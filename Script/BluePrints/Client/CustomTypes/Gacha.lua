@@ -10,6 +10,7 @@ GachaBase.__Props__ = {
   Usable = prop.prop("Int", "client save", 1),
   SelfSelect = prop.prop("Int", "client save", 0),
   Already5StarCount = prop.prop("Int", "client save", 0),
+  bUpForClose = prop.prop("Int", "save", 0),
   GachaType = prop.getter("Data", "GachaType"),
   GachaTimes = prop.getter("Data", "GachaTimes"),
   GachaLimit = prop.getter("Data", "GachaLimit")
@@ -28,6 +29,14 @@ end
 
 function GachaBase:IsSelfSelectGacha()
   return self:SelfSelectData() ~= nil
+end
+
+function GachaBase:SetUpForClose()
+  self.bUpForClose = 1
+end
+
+function GachaBase:IsUpForClose()
+  return self.bUpForClose > 0
 end
 
 function GachaBase:Type()

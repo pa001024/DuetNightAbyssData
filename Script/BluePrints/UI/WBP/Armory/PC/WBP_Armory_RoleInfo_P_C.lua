@@ -1,4 +1,5 @@
 require("UnLua")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local M = Class("BluePrints.UI.WBP.Armory.WBP_Armory_RoleInfo_Base_C")
 M._components = {
   "BluePrints.UI.KeyInputComponent"
@@ -35,6 +36,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnFaceButtonTopKeyDown)
   self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonLeft, self.OnFaceButtonLeftKeyDown)
   self:AddKeyUpEvent(UIConst.GamePadKey.FaceButtonTop, self.OnFaceButtonTopKeyUp)
+  self:AddLongPressEvent(UIConst.GamePadKey.FaceButtonLeft, 1, self.OnGamepad_FaceButton_Left_LongPressStart, self.OnGamepad_FaceButton_Left_LongPressCancel, self.OnGamepad_FaceButton_Left_LongPressEnd)
   if self.UnlockBtnParams and self.UnlockBtnParams.bShowCoin then
     self:AddLongPressEvent(UIConst.GamePadKey.FaceButtonTop, 1, self.OnGamepad_FaceButton_Top_LongPressStart, self.OnGamepad_FaceButton_Top_LongPressCancel, self.OnGamepad_FaceButton_Top_LongPressEnd)
   end
@@ -49,48 +51,71 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   end
 end
 
+function M:CollectVisibleWidgets()
+  if not self._AllWidgets then
+    self._AllWidgets = {
+      {
+        Widget = self.RewardBtn,
+        Visible = function()
+          return self.LevelInfo:GetBtnExpRewardVisible()
+        end
+      },
+      {
+        Widget = self.Button_More,
+        Visible = function()
+          return self.Tag == "Melee" or self.Tag == "Ranged"
+        end
+      },
+      {
+        Widget = self.PosItem,
+        Visible = function()
+          return self.Tag == "Char"
+        end
+      },
+      {
+        Widget = self.Btn_Info,
+        Visible = function()
+          return self.Btn_Info and self.Btn_Info:IsVisible()
+        end
+      }
+    }
+  end
+  local Widgets = {}
+  for _, Item in ipairs(self._AllWidgets) do
+    if Item.Visible and Item.Visible() then
+      table.insert(Widgets, Item.Widget)
+    end
+  end
+  return Widgets
+end
+
 function M:InitNavigationRules()
-  local TopWidget
-  if self.LevelInfo:GetBtnExpRewardVisible() then
-    TopWidget = self.RewardBtn
-  elseif self.Describe:IsVisible() then
-    TopWidget = self.Button_More
-  else
-    TopWidget = self.PosItem
+  local Widgets = self:CollectVisibleWidgets()
+  if 0 == #Widgets then
+    return
   end
-  TopWidget:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
-  TopWidget:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Escape)
-  TopWidget:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
-  local NextWidget = TopWidget
-  if self.LevelInfo:GetBtnExpRewardVisible() then
-    NextWidget = self.Describe:IsVisible() and self.Button_More or self.PosItem
-    TopWidget:SetNavigationRuleExplicit(EUINavigation.Down, NextWidget)
-    NextWidget:SetNavigationRuleExplicit(EUINavigation.Up, TopWidget)
-    NextWidget:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Escape)
-    NextWidget:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+  for i, Widget in ipairs(Widgets) do
+    Widget:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Escape)
+    Widget:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
+    if 1 == i then
+      Widget:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
+    else
+      Widget:SetNavigationRuleExplicit(EUINavigation.Up, Widgets[i - 1])
+    end
+    if i == #Widgets then
+      Widget:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
+    else
+      Widget:SetNavigationRuleExplicit(EUINavigation.Down, Widgets[i + 1])
+    end
   end
-  local NextWidgetDownRule = self.Btn_Info:IsVisible() and self.Btn_Info or EUINavigationRule.Stop
-  NextWidget:SetNavigationRuleExplicit(EUINavigation.Down, NextWidgetDownRule)
-  if NextWidget:IsVisible() then
-    self.Btn_Info:SetNavigationRuleExplicit(EUINavigation.Up, NextWidget)
-  else
-    self.Btn_Info:SetNavigationRuleExplicit(EUINavigation.Up, TopWidget)
-  end
-  self.Btn_Info:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Escape)
-  self.Btn_Info:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
-  self.Btn_Info:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  if self.LevelInfo:GetBtnExpRewardVisible() then
-    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.RewardBtn)
-  elseif self.Describe:IsVisible() then
-    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.Button_More)
-  elseif self.PosItem:IsVisible() then
-    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.PosItem)
-  else
-    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.Btn_Info)
+  local Widgets = self:CollectVisibleWidgets()
+  if #Widgets > 0 then
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), Widgets[1])
   end
+  return UWidgetBlueprintLibrary.Handled()
 end
 
 function M:UpdateTargetInfo(...)
@@ -104,6 +129,7 @@ end
 
 function M:Init(Params)
   M.Super.Init(self, Params)
+  self.Owner = Params.Parent
   self._OnAddedToFocusPath = Params.OnAddedToFocusPath
   self._OnRemovedFromFocusPath = Params.OnRemovedFromFocusPath
   self:InitNavigationRules()
@@ -131,8 +157,41 @@ function M:OnFaceButtonLeftKeyDown()
   if not self.Btn_MaxSwitch:IsVisible() then
     return
   end
+  if self.IsPreviewMode and self.bNeedPreviewSwitcher or self.IsTargetUnowned then
+    self.Btn_MaxSwitch:OnClicked()
+  end
+end
+
+function M:OnGamepad_FaceButton_Left_LongPressStart()
+  if self.IsTargetUnowned or self.bNeedAttrSwitcher then
+    return
+  end
+  if not self.Btn_MaxSwitch:IsVisible() then
+    return
+  end
+  self.Btn_MaxSwitch.Key_Switch:OnButtonPressed(false, true, 0, self:GetLongPressAnimationTime(UIConst.GamePadKey.FaceButtonLeft))
+end
+
+function M:OnGamepad_FaceButton_Left_LongPressEnd()
+  if self.IsTargetUnowned or self.bNeedAttrSwitcher then
+    return
+  end
+  if not self.Btn_MaxSwitch:IsVisible() then
+    return
+  end
   self.Btn_MaxSwitch:OnClicked()
-  return UIUtils.Handled, true
+end
+
+function M:OnGamepad_FaceButton_Left_LongPressCancel()
+  if self.IsTargetUnowned or self.bNeedAttrSwitcher then
+    return
+  end
+  if not self.Btn_MaxSwitch:IsVisible() then
+    return
+  end
+  self.Btn_MaxSwitch.Key_Switch:OnButtonReleased()
+  self.Btn_MaxSwitch.Key_Switch:StopAllAnimations()
+  self.Btn_MaxSwitch.Key_Switch:PlayAnimation(self.Btn_MaxSwitch.Key_Switch.Normal)
 end
 
 function M:OnFaceButtonTopKeyUp()

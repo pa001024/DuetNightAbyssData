@@ -218,16 +218,16 @@ return {
     },
     ["7064001"] = {
       AutoReset = 1,
+      ["2340042"] = {
+        CreatorId = 2340042,
+        UnitType = "Npc",
+        UnitId = 240110,
+        RarelyId = 7064001
+      },
       ["2340044"] = {
         CreatorId = 2340044,
         UnitType = "Mechanism",
         UnitId = 121034,
-        RarelyId = 7064001
-      },
-      ["2340043"] = {
-        CreatorId = 2340043,
-        UnitType = "Mechanism",
-        UnitId = 121032,
         RarelyId = 7064001
       },
       ["2340046"] = {
@@ -236,10 +236,10 @@ return {
         UnitId = 121035,
         RarelyId = 7064001
       },
-      ["2340042"] = {
-        CreatorId = 2340042,
-        UnitType = "Npc",
-        UnitId = 240110,
+      ["2340045"] = {
+        CreatorId = 2340045,
+        UnitType = "Mechanism",
+        UnitId = 121035,
         RarelyId = 7064001
       },
       ["2340041"] = {
@@ -248,10 +248,10 @@ return {
         UnitId = 1210343,
         RarelyId = 7064001
       },
-      ["2340045"] = {
-        CreatorId = 2340045,
+      ["2340043"] = {
+        CreatorId = 2340043,
         UnitType = "Mechanism",
-        UnitId = 121035,
+        UnitId = 121032,
         RarelyId = 7064001
       }
     }

@@ -24,10 +24,10 @@ end
 
 function WBP_UnlockCondition_C:SetConditionText(ConditionType, IsFinish, Param)
   local NeedCompleteText
-  if "ShowTime" ~= ConditionType then
+  if "ShowTime" ~= ConditionType and "Block" ~= ConditionType then
     NeedCompleteText = GText(DataMgr.ConditionText[ConditionType].ConditionName)
   end
-  if not NeedCompleteText and "ShowTime" ~= ConditionType then
+  if not NeedCompleteText and "ShowTime" ~= ConditionType and "Block" ~= ConditionType then
     return
   end
   self.WS_Text:SetActiveWidgetIndex(0)
@@ -49,6 +49,9 @@ function WBP_UnlockCondition_C:SetConditionText(ConditionType, IsFinish, Param)
     self.Com_Time.Text_TimeDesc:SetText(Time)
   elseif "HaveGotSoloTreasureScore" == ConditionType then
     self.Text_Condition:SetText(NeedCompleteText .. Param[2])
+  elseif "Block" == ConditionType then
+    local QuestChainName = DataMgr.QuestChain[Param].QuestChainName
+    self.Text_Condition:SetText(GText(QuestChainName))
   end
   if IsFinish then
     self.Text_CompleteDesc:SetText(GText("UI_QUEST_UNLOCKFINISH"))

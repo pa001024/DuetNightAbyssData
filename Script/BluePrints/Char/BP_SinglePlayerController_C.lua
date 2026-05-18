@@ -3,6 +3,63 @@ local EMCache = require("EMCache.EMCache")
 local msgpack = require("msgpack_core")
 local SettingUtils = require("Utils.SettingUtils")
 local BP_SinglePlayerController_C = Class()
+local EMInputEventConfigs = {
+  BeginCursorOver = {
+    DelegateName = "OnBeginCursorOver",
+    BindingsField = "EMBeginCursorOverBindings",
+    SwitchName = "bEnableMouseOverEvents"
+  },
+  EndCursorOver = {
+    DelegateName = "OnEndCursorOver",
+    BindingsField = "EMEndCursorOverBindings",
+    SwitchName = "bEnableMouseOverEvents"
+  },
+  Clicked = {
+    DelegateName = "OnClicked",
+    BindingsField = "EMClickedBindings",
+    SwitchName = "bEnableClickEvents"
+  },
+  Released = {
+    DelegateName = "OnReleased",
+    BindingsField = "EMReleasedBindings",
+    SwitchName = "bEnableClickEvents"
+  },
+  InputTouchBegin = {
+    DelegateName = "OnInputTouchBegin",
+    BindingsField = "EMInputTouchBeginBindings",
+    SwitchName = "bEnableTouchEvents"
+  },
+  InputTouchEnd = {
+    DelegateName = "OnInputTouchEnd",
+    BindingsField = "EMInputTouchEndBindings",
+    SwitchName = "bEnableTouchEvents"
+  },
+  InputTouchEnter = {
+    DelegateName = "OnInputTouchEnter",
+    BindingsField = "EMInputTouchEnterBindings",
+    SwitchName = "bEnableTouchOverEvents"
+  },
+  InputTouchLeave = {
+    DelegateName = "OnInputTouchLeave",
+    BindingsField = "EMInputTouchLeaveBindings",
+    SwitchName = "bEnableTouchOverEvents"
+  }
+}
+local EMInputSwitchEvents = {
+  bEnableMouseOverEvents = {
+    "BeginCursorOver",
+    "EndCursorOver"
+  },
+  bEnableClickEvents = {"Clicked", "Released"},
+  bEnableTouchEvents = {
+    "InputTouchBegin",
+    "InputTouchEnd"
+  },
+  bEnableTouchOverEvents = {
+    "InputTouchEnter",
+    "InputTouchLeave"
+  }
+}
 BP_SinglePlayerController_C._components = {
   "BluePrints.Char.CharacterComponent.DedicatedServerGMComponent"
 }
@@ -19,6 +76,273 @@ function BP_SinglePlayerController_C:ReceiveBeginPlay()
     self:SetForceFeedbackScaleFromCache()
     self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.ChangeForceFeedbackByDevice)
   end
+  for _, Config in pairs(EMInputEventConfigs) do
+    self[Config.BindingsField] = {}
+  end
+end
+
+local function ResolveEMInputCallback(Listener, InFunction)
+  if not Listener or not InFunction then
+    return nil, nil
+  end
+  if type(InFunction) == "string" then
+    return Listener[InFunction]
+  end
+  if type(InFunction) == "function" then
+    return InFunction
+  end
+  return nil, nil
+end
+
+local function GetEMInputBindings(self, EventType)
+  local Config = EMInputEventConfigs[EventType]
+  if not Config then
+    print("[Yoko.Guo] BP_SinglePlayerController_C Line=", debug.getinfo(1).currentline, " eventType is invalid.")
+    return nil, nil
+  end
+  local Bindings = self[Config.BindingsField]
+  if not Bindings then
+    Bindings = {}
+    self[Config.BindingsField] = Bindings
+  end
+  return Bindings, Config
+end
+
+local function EnsureEMInputBindingNode(Bindings, DelegateOwner, Listener)
+  local OwnerBindings = Bindings[DelegateOwner]
+  if not OwnerBindings then
+    OwnerBindings = {}
+    Bindings[DelegateOwner] = OwnerBindings
+  end
+  local ListenerBindings = OwnerBindings[Listener]
+  if not ListenerBindings then
+    ListenerBindings = {}
+    OwnerBindings[Listener] = ListenerBindings
+  end
+  return ListenerBindings
+end
+
+local function HasEMInputBinding(Bindings, DelegateOwner, Listener, Callback)
+  local OwnerBindings = Bindings[DelegateOwner]
+  if not OwnerBindings then
+    return false
+  end
+  local ListenerBindings = OwnerBindings[Listener]
+  if not ListenerBindings then
+    return false
+  end
+  return nil ~= ListenerBindings[Callback]
+end
+
+local function RemoveEMInputBindingKey(Bindings, DelegateOwner, Listener, Callback)
+  local OwnerBindings = Bindings[DelegateOwner]
+  if not OwnerBindings then
+    return false
+  end
+  local ListenerBindings = OwnerBindings[Listener]
+  if not ListenerBindings or nil == ListenerBindings[Callback] then
+    return false
+  end
+  ListenerBindings[Callback] = nil
+  if nil == next(ListenerBindings) then
+    OwnerBindings[Listener] = nil
+  end
+  if nil == next(OwnerBindings) then
+    Bindings[DelegateOwner] = nil
+  end
+  return true
+end
+
+local function GetEMInputDelegate(DelegateOwner, EventType)
+  local Config = EMInputEventConfigs[EventType]
+  if not Config or not IsValid(DelegateOwner) then
+    print("[Yoko.Guo] BP_SinglePlayerController_C Line=", debug.getinfo(1).currentline, " delegateOwner is invalid.")
+    return nil, nil
+  end
+  local Delegate = DelegateOwner[Config.DelegateName]
+  if not Delegate then
+    print("[Yoko.Guo] BP_SinglePlayerController_C Line=", debug.getinfo(1).currentline, " delegateName is invalid.")
+    return nil, Config
+  end
+  return Delegate, Config
+end
+
+function BP_SinglePlayerController_C:RefreshEMInputEventSwitch(EventType)
+  local Config = EMInputEventConfigs[EventType]
+  if not Config then
+    return
+  end
+  local EventTypes = EMInputSwitchEvents[Config.SwitchName]
+  if not EventTypes then
+    return
+  end
+  local bHasBinding = false
+  for _, RelatedEventType in ipairs(EventTypes) do
+    local Bindings = GetEMInputBindings(self, RelatedEventType)
+    if next(Bindings) ~= nil then
+      bHasBinding = true
+    end
+  end
+  self[Config.SwitchName] = bHasBinding
+  print("[Yoko.Guo] BP_SinglePlayerController_C Line=", debug.getinfo(1).currentline, Config.SwitchName, "inputEventsEnable is ", tostring(bHasBinding))
+end
+
+function BP_SinglePlayerController_C:AddEMInputBinding(EventType, DelegateOwner, Listener, InFunction)
+  local Bindings = GetEMInputBindings(self, EventType)
+  local Delegate = GetEMInputDelegate(DelegateOwner, EventType)
+  local Callback = ResolveEMInputCallback(Listener, InFunction)
+  if not (Delegate and IsValid(Listener)) or not Callback then
+    print("[Yoko.Guo] BP_SinglePlayerController_C Line=", debug.getinfo(1).currentline, " delegateName is invalid.")
+    return false
+  end
+  if HasEMInputBinding(Bindings, DelegateOwner, Listener, Callback) then
+    print("[Yoko.Guo] BP_SinglePlayerController_C Line=", debug.getinfo(1).currentline, " indelegate is repeat.")
+    return true
+  end
+  Delegate:Add(Listener, Callback)
+  local ListenerBindings = EnsureEMInputBindingNode(Bindings, DelegateOwner, Listener)
+  ListenerBindings[Callback] = true
+  self:RefreshEMInputEventSwitch(EventType)
+  return true
+end
+
+function BP_SinglePlayerController_C:RemoveEMInputBinding(EventType, DelegateOwner, Listener, InFunction)
+  local Bindings = GetEMInputBindings(self, EventType)
+  local Delegate = GetEMInputDelegate(DelegateOwner, EventType)
+  local Callback = ResolveEMInputCallback(Listener, InFunction)
+  if not (Delegate and IsValid(Listener)) or not Callback then
+    return false
+  end
+  Delegate:Remove(Listener, Callback)
+  local Removed = RemoveEMInputBindingKey(Bindings, DelegateOwner, Listener, Callback)
+  self:RefreshEMInputEventSwitch(EventType)
+  return Removed
+end
+
+function BP_SinglePlayerController_C:ClearEMInputBinding(EventType, DelegateOwner)
+  local Bindings = GetEMInputBindings(self, EventType)
+  local RemovedCount = 0
+  local PendingRemove = {}
+  for RecordDelegateOwner, OwnerBindings in pairs(Bindings) do
+    if nil == DelegateOwner or RecordDelegateOwner == DelegateOwner then
+      for RecordListener, ListenerBindings in pairs(OwnerBindings) do
+        for RecordCallback, _ in pairs(ListenerBindings) do
+          local Delegate = GetEMInputDelegate(RecordDelegateOwner, EventType)
+          if Delegate and IsValid(RecordListener) and RecordCallback then
+            Delegate:Remove(RecordListener, RecordCallback)
+          end
+          table.insert(PendingRemove, {
+            DelegateOwner = RecordDelegateOwner,
+            Listener = RecordListener,
+            Callback = RecordCallback
+          })
+        end
+      end
+    end
+  end
+  for _, Record in ipairs(PendingRemove) do
+    if RemoveEMInputBindingKey(Bindings, Record.DelegateOwner, Record.Listener, Record.Callback) then
+      RemovedCount = RemovedCount + 1
+    end
+  end
+  self:RefreshEMInputEventSwitch(EventType)
+  return RemovedCount
+end
+
+function BP_SinglePlayerController_C:AddEMOnBeginCursorOver(DelegateOwner, Listener, InFunction)
+  return self:AddEMInputBinding("BeginCursorOver", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:RemoveEMOnBeginCursorOver(DelegateOwner, Listener, InFunction)
+  return self:RemoveEMInputBinding("BeginCursorOver", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:ClearEMOnBeginCursorOver(DelegateOwner)
+  return self:ClearEMInputBinding("BeginCursorOver", DelegateOwner)
+end
+
+function BP_SinglePlayerController_C:AddEMOnEndCursorOver(DelegateOwner, Listener, InFunction)
+  return self:AddEMInputBinding("EndCursorOver", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:RemoveEMOnEndCursorOver(DelegateOwner, Listener, InFunction)
+  return self:RemoveEMInputBinding("EndCursorOver", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:ClearEMOnEndCursorOver(DelegateOwner)
+  return self:ClearEMInputBinding("EndCursorOver", DelegateOwner)
+end
+
+function BP_SinglePlayerController_C:AddEMOnClicked(DelegateOwner, Listener, InFunction)
+  return self:AddEMInputBinding("Clicked", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:RemoveEMOnClicked(DelegateOwner, Listener, InFunction)
+  return self:RemoveEMInputBinding("Clicked", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:ClearEMOnClicked(DelegateOwner)
+  return self:ClearEMInputBinding("Clicked", DelegateOwner)
+end
+
+function BP_SinglePlayerController_C:AddEMOnReleased(DelegateOwner, Listener, InFunction)
+  return self:AddEMInputBinding("Released", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:RemoveEMOnReleased(DelegateOwner, Listener, InFunction)
+  return self:RemoveEMInputBinding("Released", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:ClearEMOnReleased(DelegateOwner)
+  return self:ClearEMInputBinding("Released", DelegateOwner)
+end
+
+function BP_SinglePlayerController_C:AddEMOnInputTouchBegin(DelegateOwner, Listener, InFunction)
+  return self:AddEMInputBinding("InputTouchBegin", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:RemoveEMOnInputTouchBegin(DelegateOwner, Listener, InFunction)
+  return self:RemoveEMInputBinding("InputTouchBegin", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:ClearEMOnInputTouchBegin(DelegateOwner)
+  return self:ClearEMInputBinding("InputTouchBegin", DelegateOwner)
+end
+
+function BP_SinglePlayerController_C:AddEMOnInputTouchEnd(DelegateOwner, Listener, InFunction)
+  return self:AddEMInputBinding("InputTouchEnd", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:RemoveEMOnInputTouchEnd(DelegateOwner, Listener, InFunction)
+  return self:RemoveEMInputBinding("InputTouchEnd", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:ClearEMOnInputTouchEnd(DelegateOwner)
+  return self:ClearEMInputBinding("InputTouchEnd", DelegateOwner)
+end
+
+function BP_SinglePlayerController_C:AddEMOnInputTouchEnter(DelegateOwner, Listener, InFunction)
+  return self:AddEMInputBinding("InputTouchEnter", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:RemoveEMOnInputTouchEnter(DelegateOwner, Listener, InFunction)
+  return self:RemoveEMInputBinding("InputTouchEnter", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:ClearEMOnInputTouchEnter(DelegateOwner)
+  return self:ClearEMInputBinding("InputTouchEnter", DelegateOwner)
+end
+
+function BP_SinglePlayerController_C:AddEMOnInputTouchLeave(DelegateOwner, Listener, InFunction)
+  return self:AddEMInputBinding("InputTouchLeave", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:RemoveEMOnInputTouchLeave(DelegateOwner, Listener, InFunction)
+  return self:RemoveEMInputBinding("InputTouchLeave", DelegateOwner, Listener, InFunction)
+end
+
+function BP_SinglePlayerController_C:ClearEMOnInputTouchLeave(DelegateOwner)
+  return self:ClearEMInputBinding("InputTouchLeave", DelegateOwner)
 end
 
 function BP_SinglePlayerController_C:GetDefaulAvatarInfo()

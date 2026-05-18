@@ -67,9 +67,13 @@ function StuffIconObject:GetWeaponStuffData(StuffServerData, ParentWidget, Click
   StuffConfig.LockType = StuffServerData:IsLock() and 1 or 0
   StuffConfig.Level = StuffServerData.Level
   StuffConfig.Rarity = WeaponConfigData.WeaponRarity or 1
-  StuffConfig.Price = WeaponConfigData.WeaponValue or 1
-  StuffConfig.SortPriority = WeaponConfigData.SortPriority or 1
   StuffConfig.CoinId = WeaponConfigData.DecomposeReward
+  if -1 ~= StuffConfig.CoinId then
+    StuffConfig.Price = WeaponConfigData.WeaponValue or 1
+  else
+    StuffConfig.Price = -1
+  end
+  StuffConfig.SortPriority = WeaponConfigData.SortPriority or 1
   StuffConfig.AssisterId = StuffServerData.AssisterId
   if StuffServerData.GradeLevel > 0 then
     StuffConfig.GradeLevel = StuffServerData.GradeLevel

@@ -179,10 +179,6 @@ function M:OnAnimationFinished(InAnimation)
 end
 
 function M:Destruct()
-  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
-  if Player then
-    Player:SetCanInteractiveTrigger(true)
-  end
   self:HorizontalListViewResize_TearDown()
   self:CleanTimer()
   self.List_Item.OnCreateEmptyContent:Unbind()

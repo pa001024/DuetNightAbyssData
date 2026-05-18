@@ -170,7 +170,9 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
   end
   if self:HasFocusedDescendants() or self:HasAnyUserFocus() then
     if self.DeputeTabType == "Regular" then
-      self.RegularUI.List_Depute:NavigateToIndex(0)
+      local IsIronOn = 1 == self.RegularUI.WS_List:GetActiveWidgetIndex()
+      local ActiveList = IsIronOn and self.RegularUI.List_IronExp or self.RegularUI.List_Depute
+      ActiveList:NavigateToIndex(0)
     elseif self.DeputeTabType == "NightBook" then
       self.NightBookUI.List_NightBookItem:NavigateToIndex(0)
     elseif self.DeputeTabType == "Walnut" then

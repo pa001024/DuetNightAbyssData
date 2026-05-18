@@ -2,8 +2,9 @@ local T = {}
 T.RT_1 = {210, 101}
 T.RT_2 = {215}
 T.RT_3 = {99, 100}
-T.RT_4 = {99}
-T.RT_5 = {211}
+T.RT_4 = {111, 110}
+T.RT_5 = {99}
+T.RT_6 = {211}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -71,14 +72,22 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Gacha_Higth",
     SubName = "UI_SHOP_SUBTAB_NAME_SPPrism",
     SubTabId = 1401,
-    TabCoin = {111, 110},
+    TabCoin = T.RT_4,
     TabType = "Normal"
   },
   [1402] = {
     MainTabId = 140,
+    ReddotNode = "Shop_Gacha_Mid",
+    SubName = "UI_SHOP_SUBTAB_NAME_ReSPPrism",
+    SubTabId = 1402,
+    TabCoin = T.RT_4,
+    TabType = "Normal"
+  },
+  [1403] = {
+    MainTabId = 140,
     ReddotNode = "Shop_Gacha_Low",
     SubName = "UI_SHOP_SUBTAB_NAME_Prism",
-    SubTabId = 1402,
+    SubTabId = 1403,
     TabCoin = {110},
     TabType = "Normal"
   },
@@ -87,7 +96,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Item_Yueshijingpei",
     SubName = "UI_SHOP_SUBTAB_NAME_YUESHIJINGPEI",
     SubTabId = 1500,
-    TabCoin = T.RT_4,
+    TabCoin = T.RT_5,
     TabType = "Normal"
   },
   [1501] = {
@@ -103,7 +112,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Item_CharPiece",
     SubName = "UI_SHOP_SUBTAB_NAME_CHARPIECE",
     SubTabId = 1502,
-    TabCoin = T.RT_4,
+    TabCoin = T.RT_5,
     TabType = "Normal"
   },
   [1503] = {
@@ -111,7 +120,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Item_Weapon",
     SubName = "UI_SHOP_SUBTAB_NAME_WEAPON",
     SubTabId = 1503,
-    TabCoin = T.RT_4,
+    TabCoin = T.RT_5,
     TabType = "Normal"
   },
   [1601] = {
@@ -159,7 +168,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Walnut_1",
     SubName = "UI_Armory_Char",
     SubTabId = 1801,
-    TabCoin = T.RT_5,
+    TabCoin = T.RT_6,
     TabType = "CharWalnut"
   },
   [1802] = {
@@ -168,7 +177,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Walnut_2",
     SubName = "UI_SHOP_SUBTAB_NAME_WEAPON",
     SubTabId = 1802,
-    TabCoin = T.RT_5,
+    TabCoin = T.RT_6,
     TabType = "WeaponWalnut"
   },
   [1803] = {
@@ -177,7 +186,7 @@ return ReadOnly("ShopTabSub", {
     ReddotNode = "Shop_Walnut_3",
     SubName = "UI_Armory_Mod",
     SubTabId = 1803,
-    TabCoin = T.RT_5,
+    TabCoin = T.RT_6,
     TabType = "ModWalnut"
   },
   [2001] = {
@@ -362,6 +371,20 @@ return ReadOnly("ShopTabSub", {
     TabCoin = {221},
     TabType = "Normal"
   },
+  [100091] = {
+    MainTabId = 10009,
+    SubName = "UI_GuildShop",
+    SubTabId = 100091,
+    TabCoin = {4006},
+    TabType = "Normal"
+  },
+  [100101] = {
+    MainTabId = 10010,
+    SubName = "UI_AppearenceShop",
+    SubTabId = 100101,
+    TabCoin = {112},
+    TabType = "Normal"
+  },
   [900011] = {
     MainTabId = 90001,
     SubName = "UI_SHOP_SUBTAB_SKIN",
@@ -380,6 +403,13 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 90003,
     SubName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
     SubTabId = 900013,
+    TabCoin = T.RT_3,
+    TabType = "Skin"
+  },
+  [900014] = {
+    MainTabId = 90004,
+    SubName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
+    SubTabId = 900014,
     TabCoin = T.RT_3,
     TabType = "Skin"
   }

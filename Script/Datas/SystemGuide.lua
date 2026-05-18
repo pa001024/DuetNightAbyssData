@@ -783,12 +783,13 @@ return ReadOnly("SystemGuide", {
     SysGuideId = 2094
   },
   [2095] = {
-    ConditionCheck = 10301404,
+    FinishQuest = 12030702,
     GuideChannel = "SystemGuideWithoutUI",
     GuideEnd = 0,
     GuideSkip = 1,
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_TeYao.story",
+    IsInRegion = 1,
     OpenInterface = "ActivitySoloTreasureMain",
     SysGuideId = 2095
   },
@@ -918,5 +919,63 @@ return ReadOnly("SystemGuide", {
     GuideStart = 0,
     GuideStoryline = "Guide/Guide_IntDrone.story",
     SysGuideId = 2110
+  },
+  [2111] = {
+    GuideChannel = "SystemGuideWithUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Appearance.story",
+    IsInRegion = 1,
+    OpenInterface = "BattleMain",
+    PlayerInControl = 1,
+    PreSysGuideId = 2078,
+    SysGuideId = 2111
+  },
+  [2112] = {
+    ConditionCheck = 4432,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Hyper.story",
+    IsInRegion = 1,
+    OpenInterface = "ArmoryMain",
+    SysGuideId = 2112
+  },
+  [2113] = {
+    ConditionCheck = 4431,
+    GuideChannel = "SystemGuideWithUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_IronExp.story",
+    IsInRegion = 1,
+    OpenInterface = "BattleMain",
+    PlayerInControl = 1,
+    SysGuideId = 2113
+  },
+  [2114] = {
+    GuideChannel = "SystemGuideWithUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_Guild.story",
+    IsInRegion = 1,
+    OpenInterface = "BattleMain",
+    PlayerInControl = 1,
+    SysGuideId = 2114,
+    UIUnlockRule = "OpenGuild"
+  },
+  [2115] = {
+    ConditionCheck = 4192,
+    GuideChannel = "SystemGuideWithUI",
+    GuideEnd = 0,
+    GuideSkip = 1,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_GuildQuest.story",
+    IsInRegion = 1,
+    OpenInterface = "GuildMain",
+    SysGuideId = 2115
   }
 })

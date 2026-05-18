@@ -106,16 +106,20 @@ function M:OnWorldClick(id)
   if self.LastWorldWidget and self.LastWorldWidget ~= self.WorldList[id] and self.LastWorldWidget.IsOpen then
     self.LastWorldWidget:PlayAnimation(self.LastWorldWidget.Normal)
     self.LastWorldWidget.IsOpen = false
+    self.LastWorldWidget:PlayAnimation(self.LastWorldWidget.Point_Unselect)
   end
   if self.LastWorldWidget ~= self.WorldList[id] then
     self.WorldList[id]:PlayAnimation(self.WorldList[id].Click)
     self.WorldList[id].IsOpen = true
+    self.WorldList[id]:PlayAnimation(self.WorldList[id].Point_Select)
   elseif self.WorldList[id].IsOpen then
     self.WorldList[id]:PlayAnimation(self.WorldList[id].Normal)
     self.WorldList[id].IsOpen = false
+    self.WorldList[id]:PlayAnimation(self.WorldList[id].Point_Unselect)
   else
     self.WorldList[id]:PlayAnimation(self.WorldList[id].Click)
     self.WorldList[id].IsOpen = true
+    self.WorldList[id]:PlayAnimation(self.WorldList[id].Point_Select)
   end
   for _, region in pairs(self.RegionList) do
     region.Btn_ShowUp.OnClicked:Clear()

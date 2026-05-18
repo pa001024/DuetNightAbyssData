@@ -156,9 +156,13 @@ function M:OnGoToSystem()
 end
 
 function M:UpdateCurrentDungeonSquad(Index)
+  local DungeonType = DataMgr.Dungeon[self.CurSelectedDungeonId] and DataMgr.Dungeon[self.CurSelectedDungeonId].DungeonType or ""
+  local bDisablePhantom = "Rouge" == DungeonType or not self.CurSelectedDungeonId
+  self.bDisablePhantom = bDisablePhantom
+  self.Preview.bDisablePhantom = bDisablePhantom
+  
   local function HandleEmptySquadView()
     self.CurrentSquad = 0
-    
     self.Preview:UpdateView(self.SquadNewInfo, Index)
     self.CurrentCharId = self.SquadNewInfo.CharId
     self.CurrentCharLevel = self.SquadNewInfo.CharLevel
@@ -171,6 +175,7 @@ function M:UpdateCurrentDungeonSquad(Index)
     end
     self.Preview.WS_Type:SetActiveWidgetIndex(1)
     self.Btn_Build:ForbidBtn(true)
+    self.Btn_Build:UnBindEventOnClickedByObj(self)
     self.Btn_Build:BindForbidStateExecuteEvent(self, self.OnForbiddenBtnClicked)
     EventManager:FireEvent(EventID.CurrentSquadChange, 0, false, self.CurSelectedDungeonId)
   end
@@ -357,6 +362,9 @@ end
 function M:OnCloseSquadGamepad()
   self.Preview.Parent = self
   self.Preview:OnClicked()
+  if self.Parent.bAsyncCombat and type(self.Parent.SelectCellFocus) == "function" then
+    self.Parent:SelectCellFocus()
+  end
   if self.Parent.SelectCell then
     local LevelButton
     if not self.bGuildWar then

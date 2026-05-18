@@ -26,6 +26,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconMaterial.T_Permanent_IconMaterial",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_Survival.T_Play_Depute_Survival",
     RewardViewId = 90007,
     Sequence = 40
@@ -47,6 +48,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconCoin.T_Permanent_IconCoin",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_Excavation.T_Play_Depute_Excavation",
     RewardViewId = 90000,
     Sequence = 10
@@ -66,6 +68,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconMaterial.T_Permanent_IconMaterial",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_DefencePro.T_Play_Depute_DefencePro",
     RewardViewId = 90010,
     Sequence = 70
@@ -87,6 +90,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconMaterial.T_Permanent_IconMaterial",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_Sabotage.T_Play_Depute_Sabotage",
     RewardViewId = 90008,
     Sequence = 41
@@ -108,6 +112,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconExp.T_Permanent_IconExp",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_SurvivalPro.T_Play_Depute_SurvivalPro",
     RewardViewId = 90001,
     Sequence = 20
@@ -128,6 +133,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconMaterial.T_Permanent_IconMaterial",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_Hijack.T_Play_Depute_Hijack",
     RewardViewId = 90011,
     Sequence = 80
@@ -149,6 +155,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconExp.T_Permanent_IconExp",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_Exterminate.T_Play_Depute_Exterminate",
     RewardViewId = 90002,
     Sequence = 21
@@ -169,6 +176,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconCoin.T_Permanent_IconCoin",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_Rescue.T_Play_Depute_Rescue",
     RewardViewId = 90009,
     Sequence = 54
@@ -188,6 +196,7 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconMaterial.T_Permanent_IconMaterial",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_Capture.T_Play_Depute_Capture",
     RewardViewId = 90004,
     Sequence = 65
@@ -206,8 +215,23 @@ return ReadOnly("SelectDungeon", {
     },
     GuidanceTitle = 200001,
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconMod.T_Permanent_IconMod",
+    IronSurvival = false,
     Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_ExterminatePro.T_Play_Depute_ExterminatePro",
     RewardViewId = 90006,
     Sequence = 42
+  },
+  [11] = {
+    ChapterContent = "UI_DUNGEON_CONTENT_SURVIVAL_1",
+    ChapterId = 11,
+    ChapterName = "UI_DUNGEON_TYPE_IRONSURVIVAL",
+    ChapterSubName = "UI_DUNGEON_DROP_HyperWeapon",
+    Condition = T.RT_1,
+    DungeonList = {91601},
+    GuidanceTitle = 200001,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Permanent/T_Permanent_IconMaterial.T_Permanent_IconMaterial",
+    IronSurvival = true,
+    Path = "/Game/UI/Texture/Dynamic/Image/Play/T_Play_Depute_IronExpedition01.T_Play_Depute_IronExpedition01",
+    RewardViewId = 303001,
+    Sequence = 1
   }
 })

@@ -931,6 +931,30 @@ GMCommandConfig.commands.UI.commands = {
     }
   },
   {
+    text = "打开外观排行榜(服务端)",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm OpenAppearanceRank 0"
+    }
+  },
+  {
+    text = "打开外观排行榜(测试10条)",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm OpenAppearanceRank 1"
+    }
+  },
+  {
+    text = "打开外观方案导入",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {
+      "gm OpenAppearanceImport"
+    }
+  },
+  {
     text = "显示怪物指引点",
     mode = "button",
     callback = "ExecConsoleCommand",
@@ -1093,6 +1117,18 @@ GMCommandConfig.commands["系统"].commands = {
     parameters = {"sgm macml"}
   },
   {
+    text = "所有角色满溯源",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"sgm macgml"}
+  },
+  {
+    text = "所有角色技能满级",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"sgm macsml"}
+  },
+  {
     text = "获得所有皮肤",
     mode = "button",
     callback = "ExecConsoleCommand",
@@ -1144,6 +1180,12 @@ GMCommandConfig.commands["系统"].commands = {
     mode = "button",
     callback = "ExecConsoleCommand",
     parameters = {"sgm mawml"}
+  },
+  {
+    text = "所有武器满熔炼",
+    mode = "button",
+    callback = "ExecConsoleCommand",
+    parameters = {"sgm mawgml"}
   },
   {
     text = "设置所有武器的等级",
@@ -1257,6 +1299,11 @@ GMCommandConfig.commands["系统"].commands = {
     text = "获得所有宠物",
     mode = "button",
     callback = "GetAllPet"
+  },
+  {
+    text = "获得所有坐骑",
+    mode = "button",
+    callback = "GetAllMount"
   },
   {
     text = "解锁条件",
@@ -1512,7 +1559,14 @@ GMCommandConfig.commands["系统"].commands = {
     callback = "SwitchIgnoreGiftShopFriendLimit"
   }
 }
-GMCommandConfig.commands["任务"].commands = {}
+GMCommandConfig.commands["任务"].commands = {
+  {
+    text = "屏蔽所有任务触发",
+    mode = "switch",
+    var_name = "BlockAllQuestTrigger",
+    callback = "SwitchBlockAllQuestTrigger"
+  }
+}
 GMCommandConfig.commands["关卡"].commands = {
   {
     text = "血清/维生值一直满",

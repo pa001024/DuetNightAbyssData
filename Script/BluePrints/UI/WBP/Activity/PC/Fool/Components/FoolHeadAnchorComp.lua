@@ -1,10 +1,11 @@
 local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
 local FriendModel = FriendController:GetModel()
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
-local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
+local PlayerMenuActionRegistry = require("BluePrints.UI.WBP.Chat.View.PlayerMenuActionRegistry")
+local MenuActionId = PlayerMenuActionRegistry.ActionId
 local Component = {}
 
-function Component:SetupAnchor(Anchor, Head, AvatarInfo)
+function Component:SetupAnchor(Anchor, Head, AvatarInfo, MenuConfig)
   self.HeadAnchor = Anchor
   self.HeadAnchor:Close()
   self.Head = Head
@@ -13,6 +14,7 @@ function Component:SetupAnchor(Anchor, Head, AvatarInfo)
     self.HeadAnchor:Open(true)
   end)
   self._AvatarInfo = AvatarInfo
+  self._MenuConfig = MenuConfig
   self.HeadAnchor.OnGetMenuContentEvent:Bind(self, self.OnAnchorGetUserMenuContent)
   self.HeadAnchor.OnMenuOpenChanged:Add(self, self.HeadMenuOpenChanged)
 end
@@ -26,99 +28,75 @@ function Component:CleanUpAnchor()
   end
   self.Head = nil
   self.bAnchorOpen = false
+  self._MenuConfig = nil
+end
+
+local function CopyActionIds(ActionIds)
+  local Copied = {}
+  for _, ActionId in ipairs(ActionIds or {}) do
+    table.insert(Copied, ActionId)
+  end
+  return Copied
+end
+
+local function RemoveActionById(ActionIds, TargetActionId)
+  for Idx, ActionId in ipairs(ActionIds or {}) do
+    if ActionId == TargetActionId then
+      table.remove(ActionIds, Idx)
+      return
+    end
+  end
 end
 
 function Component:OnAnchorGetUserMenuContent(Anchor)
-  local function InitShowRecordBtn(Content, AvatarInfo)
-    Content.Text = GText("UI_Chat_ShowRecord")
-    
-    function Content.Callback()
-      if AvatarInfo.Uid == GWorld:GetAvatar().Uid then
-        PersonInfoController:OpenView()
-      else
-        GWorld:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid)
-      end
-      self.HeadAnchor:Close()
-    end
-  end
-  
-  local function AddFriend(Content, AvatarInfo)
-    Content.Text = GText("UI_Friend_AddFriend")
-    
-    function Content.Callback()
-      FriendController:OpenAddFriendDialog(self, AvatarInfo)
-      self.HeadAnchor:Close()
-    end
-  end
-  
-  local Switch = {}
+  local ActionIds = {}
   local Avatar = ChatController:GetAvatar()
   local IsYourSelf = self._AvatarInfo.Uid == Avatar.Uid
   local InBounsScene = GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
   local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
   local IsInHardBoss = GWorld:GetAvatar():IsInHardBoss()
-  
-  local function AccusePlayer(Content, AvatarInfo)
-    Content.Text = GText("UI_Chat_Accuse")
-    
-    function Content.Callback()
-      local Params = {
-        Nickname = AvatarInfo.Nickname,
-        UID = AvatarInfo.Uid,
-        Url = AvatarInfo.Url,
-        Level = AvatarInfo.Level,
-        PictureUniqueId = AvatarInfo.PictureUniqueId,
-        TextLenMax = 50,
-        ForbidRightBtn = true,
-        DontCloseWhenRightBtnClicked = true,
-        isPhotoReport = true
-      }
-      
-      function Params.HideItemTips()
-        self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
-          bHideDialogItem = true,
-          DialogItemIndex = 1,
-          bShouldPlayAnim = false
-        })
-        self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
-          bHideDialogItem = true,
-          DialogItemIndex = 2,
-          bShouldPlayAnim = false
-        })
-      end
-      
-      Params.EditTextConfig = {
-        Owner = self,
-        TextLimit = 50,
-        Events = {
-          OnTextChanged = self.OnTextChange,
-          OnTextComposing = self.OnTextComposing
-        }
-      }
-      Params.AllowNegativeAttitude = IsInDungeon or IsInHardBoss
-      ChatController:OpenChatReportDialog(Params)
-      self.HeadAnchor:Close()
-    end
-  end
-  
   if IsInHardBoss then
     if InBounsScene then
-      Switch = IsYourSelf and {} or {AddFriend}
+      ActionIds = IsYourSelf and {} or {
+        MenuActionId.AddFriendOnly
+      }
     else
-      Switch = IsYourSelf and {InitShowRecordBtn} or {AddFriend, InitShowRecordBtn}
+      ActionIds = IsYourSelf and {
+        MenuActionId.ShowRecord
+      } or {
+        MenuActionId.AddFriendOnly,
+        MenuActionId.ShowRecord
+      }
     end
   elseif InBounsScene or IsInDungeon then
-    Switch = IsYourSelf and {} or {AddFriend}
+    ActionIds = IsYourSelf and {} or {
+      MenuActionId.AddFriendOnly
+    }
   else
-    Switch = IsYourSelf and {InitShowRecordBtn} or {AddFriend, InitShowRecordBtn}
-  end
-  if not IsYourSelf and not table.isempty(Switch) then
-    table.insert(Switch, AccusePlayer)
+    ActionIds = IsYourSelf and {
+      MenuActionId.ShowRecord
+    } or {
+      MenuActionId.AddFriendOnly,
+      MenuActionId.ShowRecord
+    }
   end
   if not IsYourSelf and FriendModel:GetFriendDict()[self._AvatarInfo.Uid] then
-    table.remove(Switch, 1)
+    RemoveActionById(ActionIds, MenuActionId.AddFriendOnly)
   end
-  return ChatController:OpenPlayerBtnList(self, self._AvatarInfo, Switch)
+  local ConfigActionIds = self._MenuConfig and self._MenuConfig.VisibleActionIds
+  if type(ConfigActionIds) == "table" then
+    ActionIds = CopyActionIds(ConfigActionIds)
+  end
+  local FuncList = PlayerMenuActionRegistry:BuildMenuFuncList(ActionIds, {
+    Owner = self,
+    AvatarInfo = self._AvatarInfo,
+    CloseMenu = function()
+      if self.HeadAnchor then
+        self.HeadAnchor:Close()
+      end
+    end
+  })
+  return ChatController:OpenPlayerBtnList(self, self._AvatarInfo, FuncList)
 end
 
 function Component:HeadMenuOpenChanged(bOpen)

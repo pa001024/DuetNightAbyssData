@@ -62,6 +62,9 @@ function M:OnPropIconLoadFinish(Object)
 end
 
 function M:UpdateRangeWeaponButtonByState(CurButtonState)
+  if self.CurButtonState == "Ban" then
+    return
+  end
   self.CurButtonState = CurButtonState
   DebugPrint("Left射击键当前状态", self.CurButtonState)
   if self.CurButtonState == "Forbidden" then

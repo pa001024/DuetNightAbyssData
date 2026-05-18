@@ -1,5 +1,10 @@
 local WBP_Battle_FortItem_Base_C = {}
 
+function WBP_Battle_FortItem_Base_C:InitItem_PaoTaiPre()
+  function self.RefreshFunc_PaoTai()
+  end
+end
+
 function WBP_Battle_FortItem_Base_C:InitItem_PaoTai(SkillName, Skill, OwnerPlayer, Index, Root)
   self.SkillName_PaoTai = SkillName
   self.Skill_PaoTai = Skill
@@ -24,6 +29,17 @@ function WBP_Battle_FortItem_Base_C:InitItem_PaoTai(SkillName, Skill, OwnerPlaye
     self.BuffId = 40101002
     self.OwnerPlayer.BuffManager:BP_BindOnBuffAdded(self.BuffId, self.BuffsAddedDelegate)
     self.OwnerPlayer.BuffManager:BP_BindOnBuffRemoved(self.BuffId, self.BuffsRemovedDelegate)
+  end
+  self.IsHotItem = false
+  if 2 == self.Index then
+    local SkillCd = Skill.SkillCD
+    if SkillCd > 0 then
+      self.IsHotItem = false
+      self.RefreshFunc_PaoTai = self.RefreshSkillStyleInTimer_PaoTai
+    else
+      self.IsHotItem = true
+      self.RefreshFunc_PaoTai = self.RefreshSkillItem_HotValue
+    end
   end
 end
 
@@ -69,6 +85,9 @@ function WBP_Battle_FortItem_Base_C:RefreshSkillItem_HotValue(DeltaTime, Percent
   if self.Root then
     if self.Root.OwnerMechanism.Hot then
       local HotValue = self.Root.OwnerMechanism.HotValue
+      if not HotValue then
+        return
+      end
       if HotValue < 0 then
         HotValue = 0
       end

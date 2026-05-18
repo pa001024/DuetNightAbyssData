@@ -2,12 +2,17 @@ local M = Class()
 local DefaultBlendTime = 0.5
 local DefaultBlendFunc = UE4.EViewTargetBlendFunction.VTBlend_Linear
 
-function M:SplineInit(Player, WalkType, MoveSpeedRate, bCanMoveReverse, bCanExit, IsTriggerable, StopAtEndPoint)
+function M:SplineInit(Player, WalkType, MoveSpeedRate, bCanMoveReverse, bCanExit, IsTriggerable, StopAtEndPoint, UseEndOverlapBox, GuideCameraToStart)
   self.Player = Player
   self.WalkType = WalkType or 0
   self.MoveSpeedRate = MoveSpeedRate or 1.0
   self.bCanExit = bCanExit or false
   self.IsTriggerable = IsTriggerable or false
+  self.bGuideCameraToStart = false ~= GuideCameraToStart
+  self.bUseEndOverlapBox = true
+  if nil ~= UseEndOverlapBox then
+    self.bUseEndOverlapBox = UseEndOverlapBox
+  end
   if not IsValid(Player) then
     GWorld.logger.error("CinemaMoveSpline:Init, Player is Invalid!")
     return false
@@ -27,6 +32,7 @@ function M:SplineInit(Player, WalkType, MoveSpeedRate, bCanMoveReverse, bCanExit
   self.bEnableCameraSeq = IsValid(self.CameraSequence)
   self.bStartBoxOverlap = false
   self.BlendCameraInitialized = false
+  self.bSplineMoveFinished = false
   return true
 end
 
@@ -34,8 +40,9 @@ function M:SplineStart()
   if not IsValid(self.Player) then
     return
   end
-  self.EndPointOverlapBox.OnComponentBeginOverlap:Add(self, self.OnEndBoxOverlap)
   if self.IsTriggerable then
+    self.StartPointOverlapBox.OnComponentBeginOverlap:Clear()
+    self.StartPointOverlapBox.OnComponentEndOverlap:Clear()
     if self.StartPointOverlapBox:IsOverlappingComponent(self.Player.CapsuleComponent) then
       self:OnStartBoxOverlap(true)
     end
@@ -57,16 +64,13 @@ function M:SplineStart()
     end)
   else
     self:ExecEnterLogic()
-    if self.bEnableCameraSeq then
+    if self.bEnableCameraSeq == true or self.bUseEndOverlapBox == false then
       self:SetActorTickEnabled(true)
     end
   end
 end
 
 function M:SplineEnd(EndBlendTime)
-  self.StartPointOverlapBox.OnComponentBeginOverlap:Clear()
-  self.StartPointOverlapBox.OnComponentEndOverlap:Clear()
-  self.EndPointOverlapBox.OnComponentBeginOverlap:Clear()
   self:SetActorTickEnabled(false)
   if self.bEnableCameraSeq then
     self:SequenceBlendOut(EndBlendTime)
@@ -101,26 +105,44 @@ function M:OnEndBoxOverlap(Comp, OtherActor, OtherComp)
   if OtherComp ~= self.Player.CapsuleComponent then
     return
   end
+  self:OnSplineMoveFinished()
+end
+
+function M:OnSplineMoveFinished()
+  if self.bSplineMoveFinished then
+    return
+  end
+  self.bSplineMoveFinished = true
   if self.bStopAtEndPoint then
     self.Player.bCinemaMoveCanReverse = false
   end
-  if self.EndPointOverlapEvent then
-    self.EndPointOverlapEvent()
+  if self.SplineMoveFinishEvent then
+    self.SplineMoveFinishEvent()
   end
 end
 
-function M:BindEventOnEndBoxOverlap(Event)
+function M:BindOnSplineMoveFinished(Event)
   if type(Event) ~= "function" then
     return
   end
-  if IsValid(self.Player) and self.EndPointOverlapBox:IsOverlappingComponent(self.Player.CapsuleComponent) then
-    Event()
+  self.SplineMoveFinishEvent = Event
+  if self.bUseEndOverlapBox then
+    self.EndPointOverlapBox.OnComponentBeginOverlap:Clear()
+    if IsValid(self.Player) and self.EndPointOverlapBox:IsOverlappingComponent(self.Player.CapsuleComponent) then
+      self:OnSplineMoveFinished()
+    else
+      self.EndPointOverlapBox.OnComponentBeginOverlap:Add(self, self.OnEndBoxOverlap)
+    end
+  elseif not self.bUseEndOverlapBox and IsValid(self.PlayerMoveComp) and IsValid(self.SplineComponent) then
+    local TotalLength = self.SplineComponent:GetSplineLength()
+    if TotalLength > 1.0E-4 and self.PlayerMoveComp.MoveSplineAccumlate / TotalLength >= 1 then
+      self:OnSplineMoveFinished()
+    end
   end
-  self.EndPointOverlapEvent = Event
 end
 
-function M:ClearEventOnEndBoxOverlap()
-  self.EndPointOverlapEvent = nil
+function M:ClearOnSplineMoveFinished()
+  self.SplineMoveFinishEvent = nil
 end
 
 function M:ExecEnterLogic()
@@ -143,8 +165,11 @@ function M:ExecEnterLogic()
   if self.bEnableCameraSeq then
     self:LockPlayerCamera(true)
   end
-  if self.IsTriggerable then
+  if self.IsTriggerable and self.bGuideCameraToStart then
     self:StartCameraGuidance()
+  end
+  if self.IsTriggerable and self.bEnableCameraBlend then
+    self:InitBlendCamera()
   end
 end
 
@@ -162,8 +187,11 @@ function M:ExecQuitLogic()
   if self.bEnableCameraSeq then
     self:LockPlayerCamera(false)
   end
-  if self.IsTriggerable then
+  if self.IsTriggerable and self.bGuideCameraToStart then
     self:StopCameraGuidance()
+  end
+  if self.IsTriggerable and self.bEnableCameraBlend then
+    self:StopBlendCamera()
   end
 end
 
@@ -188,17 +216,10 @@ function M:StartCameraGuidance()
   local DestRotation = FRotator(CurrentPitch, 0, 0)
   self.Player.CameraRotationComponent:SetControlRotationAbsolute_Lerp(DestRotation, 1, 5, false, function()
   end)
-  if self.bEnableCameraBlend then
-    self:InitBlendCamera()
-  end
 end
 
 function M:StopCameraGuidance()
   self.Player.CameraRotationComponent:StopControlRotationLerp()
-  if self.BlendCameraInitialized then
-    USequenceFunctionLibrary.SetViewTargetWithBlend(self.Controller, self.Player, DefaultBlendTime, DefaultBlendFunc)
-  end
-  self.BlendCameraInitialized = false
 end
 
 function M:InitBlendCamera()
@@ -217,6 +238,13 @@ function M:InitBlendCamera()
   self:UpdateBlendCameraLoc(self.Player:K2_GetActorLocation())
   USequenceFunctionLibrary.SetViewTargetWithBlend(self.Controller, BlendCamera, DefaultBlendTime, DefaultBlendFunc)
   self.BlendCameraInitialized = true
+end
+
+function M:StopBlendCamera()
+  if self.BlendCameraInitialized then
+    USequenceFunctionLibrary.SetViewTargetWithBlend(self.Controller, self.Player, DefaultBlendTime, DefaultBlendFunc)
+  end
+  self.BlendCameraInitialized = false
 end
 
 function M:SequenceBlendOut(EndBlendTime)
@@ -238,7 +266,11 @@ function M:SequenceBlendOut(EndBlendTime)
 end
 
 function M:Clear()
+  self.StartPointOverlapBox.OnComponentBeginOverlap:Clear()
+  self.StartPointOverlapBox.OnComponentEndOverlap:Clear()
+  self.EndPointOverlapBox.OnComponentBeginOverlap:Clear()
   self.BlendCameraInitialized = false
+  self.bSplineMoveFinished = false
   self.bStartBoxOverlap = false
   self.CameraLocked = false
   self.PlayerMoveComp = nil
@@ -246,6 +278,10 @@ function M:Clear()
 end
 
 function M:ReceiveEndPlay()
+end
+
+function M:OnReachSplineEndByProgress()
+  self:OnSplineMoveFinished()
 end
 
 return M

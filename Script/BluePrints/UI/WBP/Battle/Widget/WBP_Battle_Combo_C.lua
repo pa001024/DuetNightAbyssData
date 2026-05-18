@@ -80,8 +80,8 @@ end
 function M:HideCombo()
   self.IsShowingCombo = false
   self.IsPendingHide = false
-  self:StopAnimation(self.In)
-  self:StopAnimation(self.Change)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.In)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Change)
   if self.HideReason == UE4.EClearComboReason.SkillEffect then
     self:SetConsumeColor(self["ComboConsumeColor_" .. self.CurLevel])
     if 4 == self.CurLevel then

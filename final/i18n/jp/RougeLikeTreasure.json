@@ -361,7 +361,7 @@
     "name": "ポケット型連れの乾物",
     "desc": "ジェネモン支援を発動後、<Highlight>$2</>秒間自身の与ダメージが<Highlight>$1</>アップする。",
     "simple_desc": "ジェネモン支援発動後、ダメージアップ。",
-    "ip_desc": "「何かを得るには必ず代価が伴う」——ありきたりな教えも、ゲームという視点から見れば、また新たな発見がある。\n魔術師は箱におもちゃのボールを投げ入れ、「良い知らせと悪い知らせ、どちらから聞きたい？」と聞いた。",
+    "ip_desc": "前を進むその時も、共に深淵へと飛び込んだ小さな仲間たちを忘れるな。さあ、缶を開けよう、彼らへの賛歌と糧のために！",
     "treasure_group": 1,
     "treasure_rarity": 1,
     "treasure_weight": 1000,
@@ -951,6 +951,36 @@
     "rl_archive_id": 32,
     "unlock_condition_text": "レリック未解放",
     "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10220,
+    "name": "純潔天使の聖音",
+    "desc": "足跡の獲得量<Highlight>50%</>アップ。",
+    "simple_desc": "足跡の獲得量大幅アップ。",
+    "ip_desc": "それは誰もが知る、迷途の子らを導く慈悲の神々を讃える賛歌。エリュシオンの信者らは深淵に佇み、欠けた旋律を紡ぎながら、神々に救済を求め、約束の天蓋へと導くことを乞う。やがて黄金の音色に包まれ、彼らは幸福の微笑みを浮かべたまま、永遠の眠りに就いた。",
+    "treasure_group": 10220,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_07.T_Rouge_Treasure_07",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        51
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 62,
+    "unlock_condition_text": "レリック未解放",
+    "can_sell": 0,
     "client_build": {}
   },
   {

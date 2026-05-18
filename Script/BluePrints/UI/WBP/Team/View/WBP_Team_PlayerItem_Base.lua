@@ -241,7 +241,7 @@ function M:OnGetMenuContent(Anchor)
       if TeamModel:IsYourself(AvatarInfo.Uid) then
         PersonInfoController:OpenView()
       else
-        TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid)
+        TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid, nil, AvatarInfo)
       end
       self.Head_Anchor:Close()
       self.Owner:Close()
@@ -258,8 +258,6 @@ function M:OnGetMenuContent(Anchor)
     end
   end
   
-  local AddBlackList = FriendController:GenAddBlackListFunc(self, self.Head_Anchor)
-  local AccusePlayer = FriendController:GenAccusePlayerFunc(self, self.Head_Anchor, true)
   local Switch = {}
   if TeamModel:IsYourself(self.Member.Uid) then
     Switch = {InitShowRecordBtn}
@@ -276,10 +274,6 @@ function M:OnGetMenuContent(Anchor)
     if not FriendController:GetModel():GetFriendDict()[self.Member.Uid] then
       table.insert(Switch, InitAddFriendBtn)
     end
-    if not FriendController:GetModel():GetBlackListDict()[self.Member.Uid] then
-      table.insert(Switch, AddBlackList)
-    end
-    table.insert(Switch, AccusePlayer)
   end
   if IsEmptyTable(Switch) then
     self.bOpenMenu = false

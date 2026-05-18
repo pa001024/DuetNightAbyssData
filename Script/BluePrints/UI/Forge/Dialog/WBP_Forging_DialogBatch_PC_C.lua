@@ -113,10 +113,10 @@ function WBP_Forging_DialogBatch_PC_C:InitView()
     self.Switch_Num:SetActiveWidgetIndex(1)
   else
     self.Switch_Num:SetActiveWidgetIndex(0)
-    self.Text_BluePrintsNumName:SetText(GText("UI_FORGING_BLUEPRINT"))
     self.Text_BluePrintsNum:SetText(FormatNumber(self.ForgeItemContent.Count, true))
     self.Text_BluePrintsNum:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
+  self.Text_BluePrintsNumName:SetText(GText("UI_FORGING_BLUEPRINT"))
   self.Text_ItemCurrentOwned:SetText(GText("UI_FORGING_CURRENT"))
   self.Text_ItemOwnedNum:SetText(FormatNumber(self.ForgeItemContent.ProductCount, true))
   self:UpdateMaterials()

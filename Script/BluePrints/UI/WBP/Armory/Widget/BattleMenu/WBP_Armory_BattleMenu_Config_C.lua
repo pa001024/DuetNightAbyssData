@@ -1,5 +1,6 @@
 require("UnLua")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local BattleUtils = require("Utils.BattleUtils")
 local FSM = require("Blueprints.UI.FocusStateMachine")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
@@ -228,10 +229,12 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:InitPhantomContents()
   self:SortPhantomContents()
-  self.CurPhantomContent = self.PhantomContentArray[1]
+  self.CurPhantomContent = self.CurPhantomContent or self.PhantomContentArray[1]
   self:InitWeaponContents()
   self:InitPhantomList()
-  self:OnPhantomSelected(self.CurPhantomContent, true)
+  if self.CurPhantomContent then
+    self:OnPhantomSelected(self.CurPhantomContent, true)
+  end
   self:InitNavigationRules()
   AudioManager(self):PlayUISound(self, "event:/ui/common/preset_team_panel_expand", "Open", nil)
 end
@@ -518,6 +521,10 @@ function M:ShowWeaponTips(IsShow)
 end
 
 local function AddPhantomContent(self, Resource, CharId2Char)
+  local RawResourceData = Resource:Data()
+  if BattleUtils.ShouldHideCharacterAttributeSwitchPhantom(RawResourceData) then
+    return
+  end
   local Content = self:NewResourceItemContent(Resource)
   if Content then
     if not CharId2Char then
@@ -578,10 +585,11 @@ function M:InitPhantomList()
 end
 
 function M:NewResourceItemContent(ServerData)
-  local Data = ServerData:Data()
-  if not Data or ServerData.ResourceSType ~= "PhantomItem" then
+  local RawData = ServerData:Data()
+  if not RawData or ServerData.ResourceSType ~= "PhantomItem" then
     return
   end
+  local DisplayData = BattleUtils.GetCharacterAttributeSwitchVisiblePhantomData(RawData) or RawData
   local Obj = NewObject(UIUtils.GetCommonItemContentClass())
   Obj.Owner = self
   Obj.Count = GText("INFINITY_SYMBOL")
@@ -589,9 +597,9 @@ function M:NewResourceItemContent(ServerData)
   Obj.UnitId = ServerData.ResourceId
   Obj.ResourceSType = ServerData.ResourceSType
   Obj.IsEquiped = false
-  Obj.Rarity = Data.Rarity or 0
-  Obj.Icon = Data.Icon
-  Obj.CharId = Data.UseParam
+  Obj.Rarity = DisplayData.Rarity or RawData.Rarity or 0
+  Obj.Icon = DisplayData.Icon or RawData.Icon
+  Obj.CharId = DisplayData.UseParam or RawData.UseParam
   Obj.OnAddedToFocusPath = self.OnPhantomItemAddedToFocusPath
   Obj.OnRemovedFromFocusPath = self.OnPhantomItemRemovedFromFocusPath
   return Obj
@@ -602,13 +610,14 @@ function M:UpdatePhantomInfo(Content)
   Content = Content or self.CurPhantomContent
   local Avatar = ArmoryUtils:GetAvatar()
   local PhantomResource = Avatar.Resources[Content.UnitId]
-  local ResourceData = PhantomResource and PhantomResource:Data()
-  if not ResourceData then
+  local RawResourceData = PhantomResource and PhantomResource:Data()
+  if not RawResourceData then
     return
   end
+  local ResourceData = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(RawResourceData)
   self:UpdatePhantomWeaponCount(Content)
   self.Text_PhantomName:SetText(GText(ResourceData.ResourceName))
-  local BattleCharData = DataMgr.BattleChar[PhantomResource.UseParam]
+  local BattleCharData = DataMgr.BattleChar[ResourceData.UseParam]
   if not BattleCharData then
     return
   end
@@ -616,7 +625,7 @@ function M:UpdatePhantomInfo(Content)
   local IconName = "Armory_" .. ElmtType
   local AttributeIcon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
   self.Icon_Attribute:SetBrushResourceObject(AttributeIcon)
-  UIUtils.AddPositioningTagToPanel(self.WB_Tag, PhantomResource.UseParam)
+  UIUtils.AddPositioningTagToPanel(self.WB_Tag, ResourceData.UseParam)
 end
 
 function M:UpdatePhantomWeaponCount(Content)
@@ -654,6 +663,9 @@ function M:OnPhantomListClicked(Content)
 end
 
 function M:OnPhantomSelected(Content, bForceUpdate)
+  if not Content then
+    return
+  end
   if Content == self.CurPhantomContent and not bForceUpdate then
     return
   end

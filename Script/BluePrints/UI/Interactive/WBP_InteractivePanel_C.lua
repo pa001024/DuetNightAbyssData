@@ -116,7 +116,6 @@ function WBP_InteractivePanel_C:AddNormalInteractiveItem(InItem)
       MergeActor.BP_MergeInteractiveComponent.TemplateInteractiveComponent = InItem
       MergeActor.BP_MergeInteractiveComponent:SetInteractiveName(InItem:GetInteractiveName())
       MergeActor.BP_MergeInteractiveComponent.MergeActorName = InItem.MergeName
-      MergeActor.BP_MergeInteractiveComponent.ListPriority = 0
       self:AddUIItem(MergeActor.BP_MergeInteractiveComponent)
       Ret = MergeActor.BP_MergeInteractiveComponent
     end
@@ -195,14 +194,8 @@ function WBP_InteractivePanel_C:AddUIItem(InItem)
     local Item = self.ScrollBox_Interactive:GetChildAt(i)
     table.insert(TmpItemList, Item)
   end
-  local Slot = self.ScrollBox_Interactive:AddChild(InteractiveItem)
+  local Slot = UE4.UUIFunctionLibrary.InsertChildAtUScrollBox(self.ScrollBox_Interactive, Index, InteractiveItem)
   Slot:SetHorizontalAlignment(UE4.EHorizontalAlignment.HAlign_Left)
-  for i = 1, #TmpItemList do
-    rawset(TmpItemList[i], "bSkipDestruct", true)
-    Slot = self.ScrollBox_Interactive:AddChild(TmpItemList[i])
-    rawset(TmpItemList[i], "bSkipDestruct", false)
-    Slot:SetHorizontalAlignment(UE4.EHorizontalAlignment.HAlign_Left)
-  end
   if 0 == Index then
     self:SelectFirstItem()
   end
@@ -298,14 +291,8 @@ function WBP_InteractivePanel_C:AddPickAllInteractiveItem()
     local Item = self.ScrollBox_Interactive:GetChildAt(i)
     table.insert(TempItemList, Item)
   end
-  local Slot = self.ScrollBox_Interactive:AddChild(InteractiveItem)
+  local Slot = UE4.UUIFunctionLibrary.InsertChildAtUScrollBox(self.ScrollBox_Interactive, InsertIndex, InteractiveItem)
   Slot:SetHorizontalAlignment(UE4.EHorizontalAlignment.HAlign_Left)
-  for i = 1, #TempItemList do
-    rawset(TempItemList[i], "bSkipDestruct", true)
-    Slot = self.ScrollBox_Interactive:AddChild(TempItemList[i])
-    rawset(TempItemList[i], "bSkipDestruct", false)
-    Slot:SetHorizontalAlignment(UE4.EHorizontalAlignment.HAlign_Left)
-  end
   if 0 == InsertIndex then
     self:SelectFirstItem()
   end
@@ -430,7 +417,7 @@ function WBP_InteractivePanel_C:TryClickItem(CurTime)
     if 0 == #self.BattleInteractiveComp and self.bCurrentForbid or self.bCurrentLocked then
       self.CurSelectedItem:PlayInteractiveItemAnim("Click")
     else
-      self:GetCurrentInteractiveItem():BtnClicked(UE4.UGameplayStatics.GetPlayerCharacter(self, 0), self.bPressed and CurTime - self.TouchStartTime or 0)
+      self:GetCurrentInteractiveItem():BtnClicked(UE4.UGameplayStatics.GetPlayerCharacter(self, 0), CurTime - self.TouchStartTime)
     end
   end
   self:OnItemClicked()

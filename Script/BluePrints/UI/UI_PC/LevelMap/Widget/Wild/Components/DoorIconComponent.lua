@@ -18,7 +18,7 @@ end
 function Component:ClearData()
   if self.DoorIcons then
     for _, Widget in pairs(self.DoorIcons) do
-      Widget:RemoveFromParent()
+      self:ReleasePointToPool(Widget)
     end
     self.DoorIcons = {}
   end

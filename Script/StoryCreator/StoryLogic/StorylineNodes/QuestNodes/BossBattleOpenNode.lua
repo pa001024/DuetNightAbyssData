@@ -1,5 +1,8 @@
 local M = Class("StoryCreator.StoryLogic.StorylineNodes.BaseAsynQuestNode")
 local PauseTag = "BossFightOpen"
+local FHideGameUIComponent = require("BluePrints.Story.Components.HideGameUIComponent")
+local FHideAllMonstersComponent = require("BluePrints.Story.Components.HideAllMonstersComponent")
+local FHideAllNpcsComponent = require("BluePrints.Story.Components.HideAllNpcsComponent")
 
 function M:Init()
   self.SequencePath = ""
@@ -12,6 +15,9 @@ function M:Init()
   self.TalkContext = GWorld.GameInstance:GetTalkContext()
   self.Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   EventManager:AddEvent(EventID.OnHardBossOpeningAllPlayerReady, self, self.OnAllPlayerReadyCallback)
+  self.HideGameUIComponent = FHideGameUIComponent:New()
+  self.HideAllMonstersComponent = FHideAllMonstersComponent:New()
+  self.HideAllNpcsComponent = FHideAllNpcsComponent:New()
 end
 
 function M:Execute(Callback)
@@ -73,10 +79,13 @@ end
 function M:ShowUI()
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   UIManager:HideAllUI(true, Const.BossBattleOpenHideTag)
+  self.HideGameUIComponent:SetGameUIHiddenExceptStory(true)
   self.LoadingUI = UIManager:LoadUINew("HardBossBattleOpen", self.EnableFadeIn, self.EnableSkip, self, self.SkipToEnd)
   self.LoadingUI.Text_CoopTitle:SetText(GText("UI_HardBoss_WaitOthers"))
   TeamController:OpenHeadUI(self.LoadingUI.Group_Team)
   TeamController:GetModel():SetIsInOpenCoop(true)
+  self.HideAllMonstersComponent:DoHide()
+  self.HideAllNpcsComponent:DoHide()
 end
 
 function M:SkipToEnd()
@@ -97,7 +106,10 @@ function M:UnShowUI()
     BossBattleOpenUI:Close()
   end
   UIManager:HideAllUI(false, Const.BossBattleOpenHideTag)
+  self.HideGameUIComponent:SetGameUIHiddenExceptStory(false)
   TeamController:GetModel():SetIsInOpenCoop(false)
+  self.HideAllMonstersComponent:ResumeHide()
+  self.HideAllNpcsComponent:ResumeHide()
 end
 
 function M:OnSequencePlayFinished()

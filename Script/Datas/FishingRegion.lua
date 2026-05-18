@@ -15,7 +15,11 @@ return ReadOnly("FishingRegion", {
   [2] = {
     FishingRegionId = 2,
     FishingRegionName = "FishingRegion_Name_2",
-    FishingSpotList = {10110301, 10170101},
+    FishingSpotList = {
+      10110301,
+      10170101,
+      10600101
+    },
     IconId = 2,
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_IceLake"
   },

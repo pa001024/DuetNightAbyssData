@@ -89,7 +89,7 @@ end
 function WBP_GM_C:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   self:RegisterFlow()
-  if not IsValid(self.GMPanelObj) then
+  if not IsValid(GWorld.GameInstance.AllCommands) then
     self:TryToGetCommandList()
     assert(self.GMPanelObj, "GM指令列表读取失败,请检查格式或路径！")
     self.List_Tab_Top:ClearListItems()
@@ -98,6 +98,7 @@ function WBP_GM_C:OnLoaded(...)
     end
     self.List_Tab_Top:SetSelectedIndex(LastGMTabIndex)
   end
+  self.GMPanelObj = GWorld.GameInstance.AllCommands
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if Player then
     local str = "沉浸模式"
@@ -135,7 +136,9 @@ function WBP_GM_C:OnLoaded(...)
 end
 
 function WBP_GM_C:TryToGetCommandList()
-  self.GMPanelObj = GMObjectUtils.NewCommandObject(GMCommandConfig, self.CommandContentClass)
+  local GameInstance = GWorld.GameInstance
+  GameInstance.AllCommands = GMObjectUtils.NewCommandObject(GMCommandConfig, self.CommandContentClass)
+  self.GMPanelObj = GameInstance.AllCommands
   if IsValid(self.GMPanelObj) then
     local len1 = self.GMPanelObj.Commands:Length()
     for i = 1, len1 do

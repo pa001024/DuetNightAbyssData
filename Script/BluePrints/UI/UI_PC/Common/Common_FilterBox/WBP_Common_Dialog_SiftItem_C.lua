@@ -235,6 +235,12 @@ function M:GetNextWrapBox()
   local nextSiftItemIdx = self.Owner.List_Selection:GetChildIndex(self) + 1
   if nextSiftItemIdx < self.Owner.List_Selection:GetChildrenCount() then
     local nextSiftItem = self.Owner.List_Selection:GetChildAt(nextSiftItemIdx)
+    if nextSiftItem and nextSiftItem.WBox_Selection then
+      return nextSiftItem.WBox_Selection
+    end
+    if nextSiftItem and nextSiftItem.ListReward then
+      return nextSiftItem.ListReward
+    end
     return nextSiftItem.WBox_Selection
   end
   return nil
@@ -244,7 +250,12 @@ function M:GetPrevWrapBox()
   local prevSiftItemIdx = self.Owner.List_Selection:GetChildIndex(self) - 1
   if prevSiftItemIdx >= 0 then
     local prevSiftItem = self.Owner.List_Selection:GetChildAt(prevSiftItemIdx)
-    return prevSiftItem.WBox_Selection
+    if prevSiftItem and prevSiftItem.WBox_Selection then
+      return prevSiftItem.WBox_Selection
+    end
+    if prevSiftItem and prevSiftItem.ListReward then
+      return prevSiftItem
+    end
   end
   return nil
 end

@@ -66,9 +66,17 @@
   {
     "id": 3010109,
     "name": "碧霄吟·重劍",
-    "desc": "",
+    "desc": "塵囂無染，碧波破浪。",
     "icon": "T_Head_Claymore_Bixiao",
     "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010110,
+    "name": "吶喊·重劍",
+    "desc": "",
+    "icon": "T_Head_Claymore_Nahan",
+    "rarity": 4,
     "unlock": "通過商店獲得"
   },
   {
@@ -120,6 +128,14 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010207,
+    "name": "赦罪日冕",
+    "desc": "以拂曉明光，寫就寬恕的裁決。",
+    "icon": "T_Head_Sword_Shezui",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3010301,
     "name": "喚日急板",
     "desc": "太陽在哪裡呀太陽在哪裡？太陽就在我們的手心裡。",
@@ -157,6 +173,22 @@
     "desc": "塵囂無染，碧波破浪。",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010306,
+    "name": "吶喊·長弓",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Bow_Nahan01",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010307,
+    "name": "吶喊·短弓",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Bow_Nahan02",
+    "rarity": 4,
     "unlock": "通過商店獲得"
   },
   {
@@ -216,6 +248,14 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010408,
+    "name": "寰宇邀約·長柄",
+    "desc": "聆聽自群星傳來的亙古邀約。",
+    "icon": "T_Head_Polearm_Huanyu",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3010501,
     "name": "大浪淘鯊",
     "desc": "小鯊魚能有什麼壞心思。",
@@ -237,6 +277,22 @@
     "desc": "塵囂無染，碧波破浪。",
     "icon": "T_Head_Machinegun_Bixiao",
     "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010504,
+    "name": "黃銅小提琴",
+    "desc": "提琴盒打開，為各位獻上一曲黃銅編織的死亡旋律。",
+    "icon": "T_Head_Machinegun_Huangtong",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010505,
+    "name": "吶喊·突擊槍",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Machinegun_Nahan",
+    "rarity": 4,
     "unlock": "通過商店獲得"
   },
   {
@@ -320,6 +376,30 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010711,
+    "name": "寰宇邀約·太刀",
+    "desc": "聆聽自群星傳來的亙古邀約。",
+    "icon": "T_Head_Katana_Huanyu",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010713,
+    "name": "幽藍星",
+    "desc": "幽藍的軌跡揮灑著星辰的碎屑。",
+    "icon": "T_Head_Katana_Youlan",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010715,
+    "name": "吶喊·太刀",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Katana_Nahan",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3010801,
     "name": "父輩餘蔭·鞭刃",
     "desc": "一柄頗為特殊的鞭刃，象徵著父親的鞭策——呃，我的意思是說，父愛如山。",
@@ -360,6 +440,14 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3010806,
+    "name": "寰宇邀約·鞭刃",
+    "desc": "聆聽自群星傳來的亙古邀約。",
+    "icon": "T_Head_Swordwhip_Huanyu",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3010901,
     "name": "大橘已定",
     "desc": "喵~~~",
@@ -369,10 +457,18 @@
   },
   {
     "id": 3010902,
-    "name": "",
+    "name": "碧霄吟·榴炮",
     "desc": "塵囂無染，碧波破浪。",
     "icon": "T_Head_Cannon_Bixiao",
     "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3010903,
+    "name": "吶喊·榴炮",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Cannon_Nahan",
+    "rarity": 4,
     "unlock": "通過商店獲得"
   },
   {
@@ -400,6 +496,14 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3011004,
+    "name": "吶喊·霰彈槍",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Shotgun_Nahan",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3011101,
     "name": "貓餅一號",
     "desc": "喵。",
@@ -408,11 +512,43 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 3011102,
+    "name": "碧霄吟·手槍",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Pistol_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3011103,
+    "name": "吶喊·手槍",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Pistol_Nahan",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 3011201,
     "name": "貓餅二號",
     "desc": "喵喵。",
     "icon": "T_Head_Crossbow_Maobing",
     "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3011203,
+    "name": "碧霄吟·雙槍",
+    "desc": "塵囂無染，碧波破浪。",
+    "icon": "T_Head_Crossbow_Bixiao",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 3011205,
+    "name": "吶喊·雙槍",
+    "desc": "嘎啊——————————",
+    "icon": "T_Head_Crossbow_Nahan",
+    "rarity": 4,
     "unlock": "通過商店獲得"
   }
 ]

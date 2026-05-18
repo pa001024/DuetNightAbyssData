@@ -155,215 +155,220 @@ T.RT_55 = {
 }
 T.RT_56 = {"vo_fail"}
 T.RT_57 = {
+  "VoiceDes002",
+  "VoiceDes031"
+}
+T.RT_58 = {"vo_gain_01"}
+T.RT_59 = {
+  "VoiceDes002",
+  "VoiceDes032"
+}
+T.RT_60 = {"vo_gain_02"}
+T.RT_61 = {
   "vo_topic_01_3"
 }
-T.RT_58 = {
+T.RT_62 = {
   "vo_topic_01_4"
 }
-T.RT_59 = {
+T.RT_63 = {
   "vo_topic_01_5"
 }
-T.RT_60 = {
-  "vo_topic_01_6"
-}
-T.RT_61 = {
+T.RT_64 = {
   "vo_topic_02_3"
 }
-T.RT_62 = {
+T.RT_65 = {
+  "vo_topic_04_4"
+}
+T.RT_66 = {
+  "vo_topic_04_5"
+}
+T.RT_67 = {
+  "vo_topic_04_6"
+}
+T.RT_68 = {
+  "vo_topic_04_7"
+}
+T.RT_69 = {
+  "vo_companio_01"
+}
+T.RT_70 = {
+  "vo_companio_02"
+}
+T.RT_71 = {
+  "VoiceDes012"
+}
+T.RT_72 = {
+  "VoiceDes013"
+}
+T.RT_73 = {
+  "vo_be_hit_heavy_r01"
+}
+T.RT_74 = {
+  "VoiceDes_Skin_gain"
+}
+T.RT_75 = {
+  "VoiceDes_Skin_appear"
+}
+T.RT_76 = {
+  "VoiceDes_Skin_battlestart"
+}
+T.RT_77 = {
+  "vo_topic_01_6"
+}
+T.RT_78 = {
   "vo_topic_02_4"
 }
-T.RT_63 = {
+T.RT_79 = {
   "VoiceDes001",
   "VoiceDes103",
   "VoiceDes031"
-}
-T.RT_64 = {
-  "VoiceDes001",
-  "VoiceDes103",
-  "VoiceDes032"
-}
-T.RT_65 = {
-  "vo_topic_03_3"
-}
-T.RT_66 = {
-  "VoiceDes001",
-  "VoiceDes103",
-  "VoiceDes033"
-}
-T.RT_67 = {
-  "vo_topic_03_4"
-}
-T.RT_68 = {
-  "vo_topic_03_5"
-}
-T.RT_69 = {
-  "vo_topic_03_6"
-}
-T.RT_70 = {
-  "vo_topic_05_3"
-}
-T.RT_71 = {
-  "vo_topic_05_4"
-}
-T.RT_72 = {
-  "vo_companio_01"
-}
-T.RT_73 = {
-  "vo_companio_02"
-}
-T.RT_74 = {
-  "VoiceDes001",
-  "VoiceDes044"
-}
-T.RT_75 = {
-  "vo_companio_04"
-}
-T.RT_76 = {
-  "VoiceDes012"
-}
-T.RT_77 = {
-  "vo_be_hit_heavy_r01"
-}
-T.RT_78 = {
-  "VoiceDes013"
-}
-T.RT_79 = {
-  "vo_be_hit_heavy_r02"
 }
 T.RT_80 = {
   "VoiceDes001",
+  "VoiceDes103",
+  "VoiceDes032"
+}
+T.RT_81 = {
+  "vo_topic_03_3"
+}
+T.RT_82 = {
+  "VoiceDes001",
+  "VoiceDes103",
+  "VoiceDes033"
+}
+T.RT_83 = {
+  "vo_topic_03_4"
+}
+T.RT_84 = {
+  "vo_topic_03_5"
+}
+T.RT_85 = {
+  "vo_topic_03_6"
+}
+T.RT_86 = {
+  "vo_topic_05_3"
+}
+T.RT_87 = {
+  "vo_topic_05_4"
+}
+T.RT_88 = {
+  "vo_topic_05_5"
+}
+T.RT_89 = {
+  "VoiceDes001",
+  "VoiceDes044"
+}
+T.RT_90 = {
+  "vo_companio_04"
+}
+T.RT_91 = {
+  "vo_be_hit_heavy_r02"
+}
+T.RT_92 = {
+  "VoiceDes001",
   "VoiceDes071",
   "VoiceDes031"
 }
-T.RT_81 = {
+T.RT_93 = {
   "VoiceDes001",
   "VoiceDes071",
   "VoiceDes032"
 }
-T.RT_82 = {
+T.RT_94 = {
   "VoiceDes001",
   "VoiceDes071",
   "VoiceDes033"
 }
-T.RT_83 = {
+T.RT_95 = {
   "VoiceDes001",
   "VoiceDes071",
   "VoiceDes034"
 }
-T.RT_84 = {
-  "vo_topic_04_4"
-}
-T.RT_85 = {
-  "vo_topic_04_5"
-}
-T.RT_86 = {
-  "vo_topic_04_6"
-}
-T.RT_87 = {
-  "vo_topic_04_7"
-}
-T.RT_88 = {
+T.RT_96 = {
   "vo_topic_02_5"
 }
-T.RT_89 = {
+T.RT_97 = {
   "VoiceDes001",
   "VoiceDes102",
   "VoiceDes031"
 }
-T.RT_90 = {
+T.RT_98 = {
   "VoiceDes001",
   "VoiceDes102",
   "VoiceDes032"
 }
-T.RT_91 = {
+T.RT_99 = {
   "VoiceDes001",
   "VoiceDes102",
   "VoiceDes033"
 }
-T.RT_92 = {
-  "VoiceDes_Skin_gain"
-}
-T.RT_93 = {
-  "VoiceDes_Skin_appear"
-}
-T.RT_94 = {
-  "VoiceDes_Skin_battlestart"
-}
-T.RT_95 = {
+T.RT_100 = {
   "VoiceDes_Skin_skill02_r01"
 }
-T.RT_96 = {
+T.RT_101 = {
   "vo_topic_02_6"
 }
-T.RT_97 = {
-  "VoiceDes002",
-  "VoiceDes031"
-}
-T.RT_98 = {"vo_gain_1"}
-T.RT_99 = {
-  "VoiceDes001",
-  "VoiceDes066",
-  "VoiceDes031"
-}
-T.RT_100 = {
-  "VoiceDes001",
-  "VoiceDes066",
-  "VoiceDes032"
-}
-T.RT_101 = {
-  "VoiceDes001",
-  "VoiceDes109",
-  "VoiceDes031"
-}
-T.RT_102 = {
-  "VoiceDes001",
-  "VoiceDes109",
-  "VoiceDes032"
-}
+T.RT_102 = {"vo_gain_1"}
 T.RT_103 = {
   "VoiceDes001",
-  "VoiceDes111",
+  "VoiceDes066",
   "VoiceDes031"
 }
 T.RT_104 = {
   "VoiceDes001",
-  "VoiceDes111",
+  "VoiceDes066",
   "VoiceDes032"
 }
 T.RT_105 = {
   "VoiceDes001",
-  "VoiceDes111",
-  "VoiceDes033"
+  "VoiceDes109",
+  "VoiceDes031"
 }
 T.RT_106 = {
-  "VoiceDes002",
+  "VoiceDes001",
+  "VoiceDes109",
   "VoiceDes032"
 }
 T.RT_107 = {
   "VoiceDes001",
-  "VoiceDes045"
+  "VoiceDes111",
+  "VoiceDes031"
 }
 T.RT_108 = {
   "VoiceDes001",
-  "VoiceDes113",
-  "VoiceDes031"
+  "VoiceDes111",
+  "VoiceDes032"
 }
 T.RT_109 = {
   "VoiceDes001",
+  "VoiceDes111",
+  "VoiceDes033"
+}
+T.RT_110 = {
+  "VoiceDes001",
+  "VoiceDes045"
+}
+T.RT_111 = {
+  "VoiceDes001",
+  "VoiceDes113",
+  "VoiceDes031"
+}
+T.RT_112 = {
+  "VoiceDes001",
   "VoiceDes113",
   "VoiceDes032"
 }
-T.RT_110 = {
+T.RT_113 = {
   "VoiceDes001",
   "VoiceDes075",
   "VoiceDes031"
 }
-T.RT_111 = {
+T.RT_114 = {
   "VoiceDes001",
   "VoiceDes075",
   "VoiceDes032"
 }
-T.RT_112 = {
+T.RT_115 = {
   "VoiceDes001",
   "VoiceDes075",
   "VoiceDes033"
@@ -850,6 +855,686 @@ return ReadOnly("CharVoice", {
       VoiceType = 2
     }
   },
+  [1102] = {
+    [11006] = {
+      CharId = 1102,
+      GachaVoicePart = 1,
+      UnitId = 81102,
+      VoiceDes = T.RT_57,
+      VoiceId = 11006,
+      VoiceRes = T.RT_58,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_gain_01"
+      },
+      VoiceType = 1
+    },
+    [11007] = {
+      CharId = 1102,
+      GachaVoiceCondition = {100405},
+      GachaVoicePart = 1,
+      UnitId = 81102,
+      VoiceDes = T.RT_59,
+      VoiceId = 11007,
+      VoiceRes = T.RT_60,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_gain_02"
+      },
+      VoiceType = 1
+    },
+    [11008] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_3,
+      VoiceId = 11008,
+      VoiceRes = T.RT_4,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_welcome"
+      },
+      VoiceType = 1
+    },
+    [11009] = {
+      CharId = 1102,
+      Dialogue = 90280100,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280101,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes163",
+        "VoiceDes031"
+      },
+      VoiceId = 11009,
+      VoiceRes = T.RT_5,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_01_1"
+      },
+      VoiceType = 1
+    },
+    [11010] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280102,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes163",
+        "VoiceDes032"
+      },
+      VoiceId = 11010,
+      VoiceRes = T.RT_6,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_01_2"
+      },
+      VoiceType = 1
+    },
+    [11011] = {
+      CharId = 1102,
+      Dialogue = 90280103,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280104,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes163",
+        "VoiceDes033"
+      },
+      VoiceId = 11011,
+      VoiceRes = T.RT_61,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_01_3"
+      },
+      VoiceType = 1
+    },
+    [11012] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280105,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes163",
+        "VoiceDes034"
+      },
+      VoiceId = 11012,
+      VoiceRes = T.RT_62,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_01_4"
+      },
+      VoiceType = 1
+    },
+    [11013] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280106,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes163",
+        "VoiceDes035"
+      },
+      VoiceId = 11013,
+      VoiceRes = T.RT_63,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_01_5"
+      },
+      VoiceType = 1
+    },
+    [11014] = {
+      CharId = 1102,
+      Dialogue = 90280200,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280201,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes164",
+        "VoiceDes031"
+      },
+      VoiceId = 11014,
+      VoiceRes = T.RT_8,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_02_1"
+      },
+      VoiceType = 1
+    },
+    [11015] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280202,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes164",
+        "VoiceDes032"
+      },
+      VoiceId = 11015,
+      VoiceRes = T.RT_10,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_02_2"
+      },
+      VoiceType = 1
+    },
+    [11016] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280203,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes164",
+        "VoiceDes033"
+      },
+      VoiceId = 11016,
+      VoiceRes = T.RT_64,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_02_3"
+      },
+      VoiceType = 1
+    },
+    [11017] = {
+      CharId = 1102,
+      Dialogue = 90280300,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280301,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes165",
+        "VoiceDes031"
+      },
+      VoiceId = 11017,
+      VoiceRes = T.RT_11,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_03_1"
+      },
+      VoiceType = 1
+    },
+    [11018] = {
+      CharId = 1102,
+      Dialogue = 90280302,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280303,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes165",
+        "VoiceDes032"
+      },
+      VoiceId = 11018,
+      VoiceRes = T.RT_12,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_03_2"
+      },
+      VoiceType = 1
+    },
+    [11019] = {
+      CharId = 1102,
+      Dialogue = 90280400,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280401,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes166",
+        "VoiceDes031"
+      },
+      VoiceId = 11019,
+      VoiceRes = T.RT_13,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_04_1"
+      },
+      VoiceType = 1
+    },
+    [11020] = {
+      CharId = 1102,
+      Dialogue = 90280402,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280403,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes166",
+        "VoiceDes032"
+      },
+      VoiceId = 11020,
+      VoiceRes = T.RT_14,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_04_2"
+      },
+      VoiceType = 1
+    },
+    [11021] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280404,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes166",
+        "VoiceDes033"
+      },
+      VoiceId = 11021,
+      VoiceRes = T.RT_15,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_04_3"
+      },
+      VoiceType = 1
+    },
+    [11022] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280405,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes166",
+        "VoiceDes034"
+      },
+      VoiceId = 11022,
+      VoiceRes = T.RT_65,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_04_4"
+      },
+      VoiceType = 1
+    },
+    [11023] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280406,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes166",
+        "VoiceDes035"
+      },
+      VoiceId = 11023,
+      VoiceRes = T.RT_66,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_04_5"
+      },
+      VoiceType = 1
+    },
+    [11024] = {
+      CharId = 1102,
+      Dialogue = 90280407,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280408,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes166",
+        "VoiceDes036"
+      },
+      VoiceId = 11024,
+      VoiceRes = T.RT_67,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_04_6"
+      },
+      VoiceType = 1
+    },
+    [11025] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280409,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes166",
+        "VoiceDes037"
+      },
+      VoiceId = 11025,
+      VoiceRes = T.RT_68,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_04_7"
+      },
+      VoiceType = 1
+    },
+    [11026] = {
+      CharId = 1102,
+      Dialogue = 90280500,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280501,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes167",
+        "VoiceDes031"
+      },
+      VoiceId = 11026,
+      VoiceRes = T.RT_16,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_05_1"
+      },
+      VoiceType = 1
+    },
+    [11027] = {
+      CharId = 1102,
+      Dialogue = 90280502,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280503,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes167",
+        "VoiceDes032"
+      },
+      VoiceId = 11027,
+      VoiceRes = T.RT_17,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_topic_05_2"
+      },
+      VoiceType = 1
+    },
+    [11028] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_19,
+      VoiceId = 11028,
+      VoiceRes = T.RT_20,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_idle"
+      },
+      VoiceType = 1
+    },
+    [11029] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280601,
+      VoiceDes = T.RT_21,
+      VoiceId = 11029,
+      VoiceRes = T.RT_69,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_companio_01"
+      },
+      VoiceType = 1
+    },
+    [11030] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280701,
+      VoiceDes = T.RT_24,
+      VoiceId = 11030,
+      VoiceRes = T.RT_70,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_companio_02"
+      },
+      VoiceType = 1
+    },
+    [11031] = {
+      CharId = 1102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81102,
+      UnlockDialogue = 90280801,
+      VoiceDes = T.RT_26,
+      VoiceId = 11031,
+      VoiceRes = T.RT_25,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_companio_03"
+      },
+      VoiceType = 1
+    },
+    [11032] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_29,
+      VoiceId = 11032,
+      VoiceRes = T.RT_30,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_appear"
+      },
+      VoiceType = 2
+    },
+    [11033] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_31,
+      VoiceId = 11033,
+      VoiceRes = T.RT_32,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_lvup"
+      },
+      VoiceType = 2
+    },
+    [11034] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_33,
+      VoiceId = 11034,
+      VoiceRes = T.RT_34,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_battlestart"
+      },
+      VoiceType = 2
+    },
+    [11035] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_35,
+      VoiceId = 11035,
+      VoiceRes = T.RT_36,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_battleidle"
+      },
+      VoiceType = 2
+    },
+    [11036] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_71,
+      VoiceId = 11036,
+      VoiceRes = {
+        "vo_be_hit_r01"
+      },
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_be_hit_r01"
+      },
+      VoiceType = 2
+    },
+    [11037] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_72,
+      VoiceId = 11037,
+      VoiceRes = T.RT_73,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_be_hit_heavy_r01"
+      },
+      VoiceType = 2
+    },
+    [11038] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_37,
+      VoiceId = 11038,
+      VoiceRes = T.RT_38,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_skill01_r01"
+      },
+      VoiceType = 2
+    },
+    [11039] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_39,
+      VoiceId = 11039,
+      VoiceRes = T.RT_40,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_skill01_r02"
+      },
+      VoiceType = 2
+    },
+    [11040] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_41,
+      VoiceId = 11040,
+      VoiceRes = T.RT_42,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_skill02_r01"
+      },
+      VoiceType = 2
+    },
+    [11041] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_43,
+      VoiceId = 11041,
+      VoiceRes = T.RT_44,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_skill02_r02"
+      },
+      VoiceType = 2
+    },
+    [11042] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_45,
+      VoiceId = 11042,
+      VoiceRes = T.RT_46,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_skill02_r03"
+      },
+      VoiceType = 2
+    },
+    [11043] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_47,
+      VoiceId = 11043,
+      VoiceRes = T.RT_48,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_die_r01"
+      },
+      VoiceType = 2
+    },
+    [11044] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_49,
+      VoiceId = 11044,
+      VoiceRes = T.RT_50,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_die_r02"
+      },
+      VoiceType = 2
+    },
+    [11045] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_51,
+      VoiceId = 11045,
+      VoiceRes = T.RT_52,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_revive"
+      },
+      VoiceType = 2
+    },
+    [11046] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_53,
+      VoiceId = 11046,
+      VoiceRes = T.RT_54,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_victory"
+      },
+      VoiceType = 2
+    },
+    [11047] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceDes = T.RT_55,
+      VoiceId = 11047,
+      VoiceRes = T.RT_56,
+      VoiceText = {
+        "voice_ch_char_Fuluo_vo_fail"
+      },
+      VoiceType = 2
+    },
+    [11048] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceChar = "Fuluo01",
+      VoiceDes = T.RT_74,
+      VoiceId = 11048,
+      VoiceRes = T.RT_2,
+      VoiceText = {
+        "voice_ch_char_Fuluo01_vo_gain"
+      },
+      VoiceType = 1
+    },
+    [11049] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceChar = "Fuluo01",
+      VoiceDes = T.RT_75,
+      VoiceId = 11049,
+      VoiceRes = T.RT_30,
+      VoiceText = {
+        "voice_ch_char_Fuluo01_vo_appear"
+      },
+      VoiceType = 2
+    },
+    [11050] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceChar = "Fuluo01",
+      VoiceDes = T.RT_76,
+      VoiceId = 11050,
+      VoiceRes = T.RT_34,
+      VoiceText = {
+        "voice_ch_char_Fuluo01_vo_battlestart"
+      },
+      VoiceType = 2
+    },
+    [11051] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceChar = "Fuluo01",
+      VoiceDes = {
+        "VoiceDes_Skin_skill02_r01",
+        "VoiceDes031"
+      },
+      VoiceId = 11051,
+      VoiceRes = T.RT_42,
+      VoiceText = {
+        "voice_ch_char_Fuluo01_vo_skill02_r01"
+      },
+      VoiceType = 2
+    },
+    [11052] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceChar = "Fuluo01",
+      VoiceDes = {
+        "VoiceDes_Skin_skill02_r01",
+        "VoiceDes032"
+      },
+      VoiceId = 11052,
+      VoiceRes = T.RT_44,
+      VoiceText = {
+        "voice_ch_char_Fuluo01_vo_skill02_r02"
+      },
+      VoiceType = 2
+    },
+    [11053] = {
+      CharId = 1102,
+      UnitId = 81102,
+      VoiceChar = "Fuluo01",
+      VoiceDes = {
+        "VoiceDes_Skin_skill02_r01",
+        "VoiceDes033"
+      },
+      VoiceId = 11053,
+      VoiceRes = T.RT_46,
+      VoiceText = {
+        "voice_ch_char_Fuluo01_vo_skill02_r03"
+      },
+      VoiceType = 2
+    }
+  },
   [1103] = {
     [10659] = {
       CharId = 1103,
@@ -921,7 +1606,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10663,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_01_3"
       },
@@ -938,7 +1623,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10664,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_01_4"
       },
@@ -956,7 +1641,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10665,
-      VoiceRes = T.RT_59,
+      VoiceRes = T.RT_63,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_01_5"
       },
@@ -973,7 +1658,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10666,
-      VoiceRes = T.RT_60,
+      VoiceRes = T.RT_77,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_01_6"
       },
@@ -1026,7 +1711,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10669,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_02_3"
       },
@@ -1043,7 +1728,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10670,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_02_4"
       },
@@ -1055,7 +1740,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81103,
       UnlockDialogue = 90200301,
-      VoiceDes = T.RT_63,
+      VoiceDes = T.RT_79,
       VoiceId = 10671,
       VoiceRes = T.RT_11,
       VoiceText = {
@@ -1068,9 +1753,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81103,
       UnlockDialogue = 90200303,
-      VoiceDes = T.RT_64,
+      VoiceDes = T.RT_80,
       VoiceId = 10672,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_03_3"
       },
@@ -1081,9 +1766,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81103,
       UnlockDialogue = 90200304,
-      VoiceDes = T.RT_66,
+      VoiceDes = T.RT_82,
       VoiceId = 10673,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_03_4"
       },
@@ -1100,7 +1785,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10674,
-      VoiceRes = T.RT_68,
+      VoiceRes = T.RT_84,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_03_5"
       },
@@ -1118,7 +1803,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10675,
-      VoiceRes = T.RT_69,
+      VoiceRes = T.RT_85,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_03_6"
       },
@@ -1223,7 +1908,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10681,
-      VoiceRes = T.RT_70,
+      VoiceRes = T.RT_86,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_05_3"
       },
@@ -1240,7 +1925,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10682,
-      VoiceRes = T.RT_71,
+      VoiceRes = T.RT_87,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_05_4"
       },
@@ -1258,9 +1943,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10683,
-      VoiceRes = {
-        "vo_topic_05_5"
-      },
+      VoiceRes = T.RT_88,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_topic_05_5"
       },
@@ -1322,7 +2005,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90200601,
       VoiceDes = T.RT_21,
       VoiceId = 10687,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_companio_01"
       },
@@ -1335,7 +2018,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90200701,
       VoiceDes = T.RT_24,
       VoiceId = 10688,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_companio_02"
       },
@@ -1346,9 +2029,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81103,
       UnlockDialogue = 90200901,
-      VoiceDes = T.RT_74,
+      VoiceDes = T.RT_89,
       VoiceId = 10690,
-      VoiceRes = T.RT_75,
+      VoiceRes = T.RT_90,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_companio_04"
       },
@@ -1401,9 +2084,9 @@ return ReadOnly("CharVoice", {
     [10696] = {
       CharId = 1103,
       UnitId = 81103,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10696,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_be_hit_heavy_r01"
       },
@@ -1412,9 +2095,9 @@ return ReadOnly("CharVoice", {
     [10697] = {
       CharId = 1103,
       UnitId = 81103,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10697,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Tuosi_vo_be_hit_heavy_r02"
       },
@@ -1428,7 +2111,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes137"
       },
       VoiceId = 10698,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Tuosi02_vo_be_hit_heavy_r01"
       },
@@ -1442,7 +2125,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes138"
       },
       VoiceId = 10699,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Tuosi02_vo_be_hit_heavy_r02"
       },
@@ -1687,7 +2370,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10888,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Baonu_vo_topic_01_3"
       },
@@ -1705,7 +2388,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10889,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Baonu_vo_topic_01_4"
       },
@@ -1794,7 +2477,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10894,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Baonu_vo_topic_03_3"
       },
@@ -1812,7 +2495,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10895,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Baonu_vo_topic_03_4"
       },
@@ -1872,7 +2555,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90250601,
       VoiceDes = T.RT_24,
       VoiceId = 10900,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Baonu_vo_companio_02"
       },
@@ -1938,9 +2621,9 @@ return ReadOnly("CharVoice", {
     [10907] = {
       CharId = 1501,
       UnitId = 81501,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10907,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Baonu_vo_be_hit_heavy_r01"
       },
@@ -1949,9 +2632,9 @@ return ReadOnly("CharVoice", {
     [10908] = {
       CharId = 1501,
       UnitId = 81501,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10908,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Baonu_vo_be_hit_heavy_r02"
       },
@@ -2139,7 +2822,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10569,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_01_3"
       },
@@ -2157,7 +2840,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10570,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_01_4"
       },
@@ -2174,7 +2857,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10571,
-      VoiceRes = T.RT_59,
+      VoiceRes = T.RT_63,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_01_5"
       },
@@ -2228,7 +2911,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10574,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_02_3"
       },
@@ -2245,7 +2928,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10575,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_02_4"
       },
@@ -2257,7 +2940,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81502,
       UnlockDialogue = 90220301,
-      VoiceDes = T.RT_80,
+      VoiceDes = T.RT_92,
       VoiceId = 10576,
       VoiceRes = T.RT_11,
       VoiceText = {
@@ -2270,7 +2953,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81502,
       UnlockDialogue = 90220302,
-      VoiceDes = T.RT_81,
+      VoiceDes = T.RT_93,
       VoiceId = 10577,
       VoiceRes = T.RT_12,
       VoiceText = {
@@ -2283,9 +2966,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81502,
       UnlockDialogue = 90220303,
-      VoiceDes = T.RT_82,
+      VoiceDes = T.RT_94,
       VoiceId = 10578,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_03_3"
       },
@@ -2297,9 +2980,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81502,
       UnlockDialogue = 90220305,
-      VoiceDes = T.RT_83,
+      VoiceDes = T.RT_95,
       VoiceId = 10579,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_03_4"
       },
@@ -2316,7 +2999,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10580,
-      VoiceRes = T.RT_68,
+      VoiceRes = T.RT_84,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_03_5"
       },
@@ -2386,7 +3069,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10584,
-      VoiceRes = T.RT_84,
+      VoiceRes = T.RT_65,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_04_4"
       },
@@ -2403,7 +3086,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10585,
-      VoiceRes = T.RT_85,
+      VoiceRes = T.RT_66,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_04_5"
       },
@@ -2421,7 +3104,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10586,
-      VoiceRes = T.RT_86,
+      VoiceRes = T.RT_67,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_04_6"
       },
@@ -2438,7 +3121,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes037"
       },
       VoiceId = 10587,
-      VoiceRes = T.RT_87,
+      VoiceRes = T.RT_68,
       VoiceText = {
         "voice_ch_char_Nifu_vo_topic_04_7"
       },
@@ -2539,7 +3222,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90220501,
       VoiceDes = T.RT_21,
       VoiceId = 10593,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Nifu_vo_companio_01"
       },
@@ -2552,7 +3235,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90220601,
       VoiceDes = T.RT_24,
       VoiceId = 10594,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Nifu_vo_companio_02"
       },
@@ -2605,9 +3288,9 @@ return ReadOnly("CharVoice", {
     [10601] = {
       CharId = 1502,
       UnitId = 81502,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10601,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Nifu_vo_be_hit_heavy_r01"
       },
@@ -2616,9 +3299,9 @@ return ReadOnly("CharVoice", {
     [10602] = {
       CharId = 1502,
       UnitId = 81502,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10602,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Nifu_vo_be_hit_heavy_r02"
       },
@@ -2817,7 +3500,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10767,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_topic_01_3"
       },
@@ -2834,7 +3517,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10768,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_topic_01_4"
       },
@@ -2851,7 +3534,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10769,
-      VoiceRes = T.RT_59,
+      VoiceRes = T.RT_63,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_topic_01_5"
       },
@@ -2904,7 +3587,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10772,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_topic_02_3"
       },
@@ -2921,7 +3604,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10773,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_topic_02_4"
       },
@@ -2938,7 +3621,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10774,
-      VoiceRes = T.RT_88,
+      VoiceRes = T.RT_96,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_topic_02_5"
       },
@@ -2991,7 +3674,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10777,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_topic_03_3"
       },
@@ -3003,7 +3686,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81503,
       UnlockDialogue = 90240401,
-      VoiceDes = T.RT_89,
+      VoiceDes = T.RT_97,
       VoiceId = 10778,
       VoiceRes = T.RT_13,
       VoiceText = {
@@ -3016,7 +3699,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81503,
       UnlockDialogue = 90240402,
-      VoiceDes = T.RT_90,
+      VoiceDes = T.RT_98,
       VoiceId = 10779,
       VoiceRes = T.RT_14,
       VoiceText = {
@@ -3030,7 +3713,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81503,
       UnlockDialogue = 90240404,
-      VoiceDes = T.RT_91,
+      VoiceDes = T.RT_99,
       VoiceId = 10780,
       VoiceRes = T.RT_15,
       VoiceText = {
@@ -3049,7 +3732,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10781,
-      VoiceRes = T.RT_84,
+      VoiceRes = T.RT_65,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_topic_04_4"
       },
@@ -3066,6 +3749,19 @@ return ReadOnly("CharVoice", {
       },
       VoiceType = 1
     },
+    [10783] = {
+      CharId = 1503,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 81503,
+      UnlockDialogue = 90240501,
+      VoiceDes = T.RT_21,
+      VoiceId = 10783,
+      VoiceRes = T.RT_69,
+      VoiceText = {
+        "voice_ch_char_Kezhou_vo_companio_01"
+      },
+      VoiceType = 1
+    },
     [10784] = {
       CharId = 1503,
       LockedDes = "VoiceLocked_Dialogue",
@@ -3073,7 +3769,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90240601,
       VoiceDes = T.RT_24,
       VoiceId = 10784,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_companio_02"
       },
@@ -3139,9 +3835,9 @@ return ReadOnly("CharVoice", {
     [10790] = {
       CharId = 1503,
       UnitId = 81503,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10790,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_be_hit_heavy_r01"
       },
@@ -3150,9 +3846,9 @@ return ReadOnly("CharVoice", {
     [10791] = {
       CharId = 1503,
       UnitId = 81503,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10791,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Kezhou_vo_be_hit_heavy_r02"
       },
@@ -3285,7 +3981,7 @@ return ReadOnly("CharVoice", {
       CharId = 1504,
       UnitId = 81504,
       VoiceChar = "Suyi01",
-      VoiceDes = T.RT_92,
+      VoiceDes = T.RT_74,
       VoiceId = 10957,
       VoiceRes = T.RT_2,
       VoiceText = {
@@ -3297,7 +3993,7 @@ return ReadOnly("CharVoice", {
       CharId = 1504,
       UnitId = 81504,
       VoiceChar = "Suyi01",
-      VoiceDes = T.RT_93,
+      VoiceDes = T.RT_75,
       VoiceId = 10958,
       VoiceRes = T.RT_30,
       VoiceText = {
@@ -3309,7 +4005,7 @@ return ReadOnly("CharVoice", {
       CharId = 1504,
       UnitId = 81504,
       VoiceChar = "Suyi01",
-      VoiceDes = T.RT_94,
+      VoiceDes = T.RT_76,
       VoiceId = 10959,
       VoiceRes = T.RT_34,
       VoiceText = {
@@ -3321,7 +4017,7 @@ return ReadOnly("CharVoice", {
       CharId = 1504,
       UnitId = 81504,
       VoiceChar = "Suyi01",
-      VoiceDes = T.RT_95,
+      VoiceDes = T.RT_100,
       VoiceId = 10960,
       VoiceRes = T.RT_42,
       VoiceText = {
@@ -3399,7 +4095,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10965,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_01_3"
       },
@@ -3416,7 +4112,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10966,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_01_4"
       },
@@ -3468,7 +4164,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10969,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_02_3"
       },
@@ -3486,7 +4182,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10970,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_02_4"
       },
@@ -3503,7 +4199,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10971,
-      VoiceRes = T.RT_88,
+      VoiceRes = T.RT_96,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_02_5"
       },
@@ -3520,7 +4216,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10972,
-      VoiceRes = T.RT_96,
+      VoiceRes = T.RT_101,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_02_6"
       },
@@ -3572,7 +4268,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10975,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_03_3"
       },
@@ -3589,7 +4285,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10976,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_03_4"
       },
@@ -3607,7 +4303,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10977,
-      VoiceRes = T.RT_68,
+      VoiceRes = T.RT_84,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_03_5"
       },
@@ -3624,7 +4320,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10978,
-      VoiceRes = T.RT_69,
+      VoiceRes = T.RT_85,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_03_6"
       },
@@ -3694,7 +4390,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10982,
-      VoiceRes = T.RT_84,
+      VoiceRes = T.RT_65,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_04_4"
       },
@@ -3712,7 +4408,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10983,
-      VoiceRes = T.RT_85,
+      VoiceRes = T.RT_66,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_04_5"
       },
@@ -3729,7 +4425,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10984,
-      VoiceRes = T.RT_86,
+      VoiceRes = T.RT_67,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_04_6"
       },
@@ -3747,7 +4443,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes037"
       },
       VoiceId = 10985,
-      VoiceRes = T.RT_87,
+      VoiceRes = T.RT_68,
       VoiceText = {
         "voice_ch_char_Suyi_vo_topic_04_7"
       },
@@ -3771,7 +4467,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90260501,
       VoiceDes = T.RT_21,
       VoiceId = 10987,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Suyi_vo_companio_01"
       },
@@ -3784,7 +4480,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90260601,
       VoiceDes = T.RT_24,
       VoiceId = 10988,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Suyi_vo_companio_02"
       },
@@ -3850,9 +4546,9 @@ return ReadOnly("CharVoice", {
     [10994] = {
       CharId = 1504,
       UnitId = 81504,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10994,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Suyi_vo_be_hit_heavy_r01"
       },
@@ -3861,9 +4557,9 @@ return ReadOnly("CharVoice", {
     [10995] = {
       CharId = 1504,
       UnitId = 81504,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10995,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Suyi_vo_be_hit_heavy_r02"
       },
@@ -4010,7 +4706,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81801,
       UnlockDialogue = 90150101,
-      VoiceDes = T.RT_63,
+      VoiceDes = T.RT_79,
       VoiceId = 10454,
       VoiceRes = T.RT_5,
       VoiceText = {
@@ -4023,7 +4719,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81801,
       UnlockDialogue = 90150103,
-      VoiceDes = T.RT_64,
+      VoiceDes = T.RT_80,
       VoiceId = 10455,
       VoiceRes = T.RT_6,
       VoiceText = {
@@ -4037,9 +4733,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 81801,
       UnlockDialogue = 90150105,
-      VoiceDes = T.RT_66,
+      VoiceDes = T.RT_82,
       VoiceId = 10456,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Feina_vo_topic_01_3"
       },
@@ -4092,7 +4788,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10459,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Feina_vo_topic_02_3"
       },
@@ -4110,7 +4806,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10460,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Feina_vo_topic_02_4"
       },
@@ -4235,7 +4931,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10467,
-      VoiceRes = T.RT_70,
+      VoiceRes = T.RT_86,
       VoiceText = {
         "voice_ch_char_Feina_vo_topic_05_3"
       },
@@ -4259,7 +4955,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90150601,
       VoiceDes = T.RT_21,
       VoiceId = 10469,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Feina_vo_companio_01"
       },
@@ -4272,7 +4968,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90150701,
       VoiceDes = T.RT_24,
       VoiceId = 10470,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Feina_vo_companio_02"
       },
@@ -4338,7 +5034,7 @@ return ReadOnly("CharVoice", {
     [10477] = {
       CharId = 1801,
       UnitId = 81801,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10477,
       VoiceRes = {
         "vo_be_hit_r02"
@@ -4351,9 +5047,9 @@ return ReadOnly("CharVoice", {
     [10478] = {
       CharId = 1801,
       UnitId = 81801,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10478,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Feina_vo_be_hit_heavy_r02"
       },
@@ -4486,7 +5182,7 @@ return ReadOnly("CharVoice", {
       CharId = 2101,
       UnitId = 82101,
       VoiceChar = "Shuimu01",
-      VoiceDes = T.RT_92,
+      VoiceDes = T.RT_74,
       VoiceId = 10037,
       VoiceRes = T.RT_2,
       VoiceText = {
@@ -4498,7 +5194,7 @@ return ReadOnly("CharVoice", {
       CharId = 2101,
       UnitId = 82101,
       VoiceChar = "Shuimu01",
-      VoiceDes = T.RT_93,
+      VoiceDes = T.RT_75,
       VoiceId = 10038,
       VoiceRes = T.RT_30,
       VoiceText = {
@@ -4510,7 +5206,7 @@ return ReadOnly("CharVoice", {
       CharId = 2101,
       UnitId = 82101,
       VoiceChar = "Shuimu01",
-      VoiceDes = T.RT_94,
+      VoiceDes = T.RT_76,
       VoiceId = 10039,
       VoiceRes = T.RT_34,
       VoiceText = {
@@ -4522,7 +5218,7 @@ return ReadOnly("CharVoice", {
       CharId = 2101,
       UnitId = 82101,
       VoiceChar = "Shuimu01",
-      VoiceDes = T.RT_95,
+      VoiceDes = T.RT_100,
       VoiceId = 10040,
       VoiceRes = T.RT_42,
       VoiceText = {
@@ -4600,7 +5296,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10045,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Shuimu_vo_topic_01_3"
       },
@@ -4653,7 +5349,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10048,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Shuimu_vo_topic_02_3"
       },
@@ -4705,7 +5401,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10051,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Shuimu_vo_topic_03_3"
       },
@@ -4722,7 +5418,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10052,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Shuimu_vo_topic_03_4"
       },
@@ -4818,7 +5514,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90040601,
       VoiceDes = T.RT_21,
       VoiceId = 10058,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Shuimu_vo_companio_01"
       },
@@ -4831,7 +5527,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90040701,
       VoiceDes = T.RT_24,
       VoiceId = 10059,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Shuimu_vo_companio_02"
       },
@@ -4917,9 +5613,9 @@ return ReadOnly("CharVoice", {
     [10068] = {
       CharId = 2101,
       UnitId = 82101,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10068,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Shuimu_vo_be_hit_heavy_r01"
       },
@@ -4928,9 +5624,9 @@ return ReadOnly("CharVoice", {
     [10069] = {
       CharId = 2101,
       UnitId = 82101,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10069,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Shuimu_vo_be_hit_heavy_r02"
       },
@@ -5097,7 +5793,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10082,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Zhangyu_vo_topic_01_3"
       },
@@ -5150,7 +5846,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10085,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Zhangyu_vo_topic_02_3"
       },
@@ -5203,7 +5899,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10088,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Zhangyu_vo_topic_03_3"
       },
@@ -5280,7 +5976,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90050501,
       VoiceDes = T.RT_21,
       VoiceId = 10093,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Zhangyu_vo_companio_01"
       },
@@ -5293,7 +5989,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90050601,
       VoiceDes = T.RT_24,
       VoiceId = 10094,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Zhangyu_vo_companio_02"
       },
@@ -5392,9 +6088,9 @@ return ReadOnly("CharVoice", {
     [10103] = {
       CharId = 2301,
       UnitId = 82301,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10103,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Zhangyu_vo_be_hit_heavy_r01"
       },
@@ -5403,9 +6099,9 @@ return ReadOnly("CharVoice", {
     [10104] = {
       CharId = 2301,
       UnitId = 82301,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10104,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Zhangyu_vo_be_hit_heavy_r02"
       },
@@ -5505,7 +6201,7 @@ return ReadOnly("CharVoice", {
       CharId = 2401,
       UnitId = 82401,
       VoiceChar = "Baiheng01",
-      VoiceDes = T.RT_92,
+      VoiceDes = T.RT_74,
       VoiceId = 10259,
       VoiceRes = T.RT_2,
       VoiceText = {
@@ -5517,7 +6213,7 @@ return ReadOnly("CharVoice", {
       CharId = 2401,
       UnitId = 82401,
       VoiceChar = "Baiheng01",
-      VoiceDes = T.RT_93,
+      VoiceDes = T.RT_75,
       VoiceId = 10260,
       VoiceRes = T.RT_30,
       VoiceText = {
@@ -5529,7 +6225,7 @@ return ReadOnly("CharVoice", {
       CharId = 2401,
       UnitId = 82401,
       VoiceChar = "Baiheng01",
-      VoiceDes = T.RT_94,
+      VoiceDes = T.RT_76,
       VoiceId = 10261,
       VoiceRes = T.RT_34,
       VoiceText = {
@@ -5541,7 +6237,7 @@ return ReadOnly("CharVoice", {
       CharId = 2401,
       UnitId = 82401,
       VoiceChar = "Baiheng01",
-      VoiceDes = T.RT_95,
+      VoiceDes = T.RT_100,
       VoiceId = 10262,
       VoiceRes = T.RT_42,
       VoiceText = {
@@ -5553,9 +6249,9 @@ return ReadOnly("CharVoice", {
       CharId = 2401,
       GachaVoicePart = 1,
       UnitId = 82401,
-      VoiceDes = T.RT_97,
+      VoiceDes = T.RT_57,
       VoiceId = 10263,
-      VoiceRes = T.RT_98,
+      VoiceRes = T.RT_102,
       VoiceText = {
         "voice_ch_char_Baiheng_vo_gain_1"
       },
@@ -5619,7 +6315,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10267,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Baiheng_vo_topic_01_3"
       },
@@ -5637,7 +6333,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10268,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Baiheng_vo_topic_01_4"
       },
@@ -5726,7 +6422,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10273,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Baiheng_vo_topic_03_3"
       },
@@ -5743,7 +6439,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10274,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Baiheng_vo_topic_03_4"
       },
@@ -5820,7 +6516,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90110501,
       VoiceDes = T.RT_21,
       VoiceId = 10279,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Baiheng_vo_companio_01"
       },
@@ -5833,7 +6529,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90110601,
       VoiceDes = T.RT_24,
       VoiceId = 10280,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Baiheng_vo_companio_02"
       },
@@ -5910,9 +6606,9 @@ return ReadOnly("CharVoice", {
     [10287] = {
       CharId = 2401,
       UnitId = 82401,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10287,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Baiheng_vo_be_hit_heavy_r01"
       },
@@ -6059,7 +6755,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83101,
       UnlockDialogue = 90130101,
-      VoiceDes = T.RT_99,
+      VoiceDes = T.RT_103,
       VoiceId = 10115,
       VoiceRes = T.RT_5,
       VoiceText = {
@@ -6073,7 +6769,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83101,
       UnlockDialogue = 90130104,
-      VoiceDes = T.RT_100,
+      VoiceDes = T.RT_104,
       VoiceId = 10116,
       VoiceRes = T.RT_6,
       VoiceText = {
@@ -6129,7 +6825,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10119,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Linen_vo_topic_02_3"
       },
@@ -6225,7 +6921,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90130501,
       VoiceDes = T.RT_21,
       VoiceId = 10125,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Linen_vo_companio_01"
       },
@@ -6238,7 +6934,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90130601,
       VoiceDes = T.RT_24,
       VoiceId = 10126,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Linen_vo_companio_02"
       },
@@ -6337,9 +7033,9 @@ return ReadOnly("CharVoice", {
     [10135] = {
       CharId = 3101,
       UnitId = 83101,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10135,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Linen_vo_be_hit_heavy_r01"
       },
@@ -6348,9 +7044,9 @@ return ReadOnly("CharVoice", {
     [10136] = {
       CharId = 3101,
       UnitId = 83101,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10136,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Linen_vo_be_hit_heavy_r02"
       },
@@ -6457,6 +7153,568 @@ return ReadOnly("CharVoice", {
         "voice_ch_char_Xier_vo_gain"
       },
       VoiceType = 1
+    },
+    [10146] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_3,
+      VoiceId = 10146,
+      VoiceRes = T.RT_4,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_welcome"
+      },
+      VoiceType = 1
+    },
+    [10147] = {
+      CharId = 3102,
+      Dialogue = 901400011,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140101,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes070",
+        "VoiceDes031"
+      },
+      VoiceId = 10147,
+      VoiceRes = T.RT_5,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_01_1"
+      },
+      VoiceType = 1
+    },
+    [10148] = {
+      CharId = 3102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140103,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes070",
+        "VoiceDes032"
+      },
+      VoiceId = 10148,
+      VoiceRes = T.RT_6,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_01_2"
+      },
+      VoiceType = 1
+    },
+    [10149] = {
+      CharId = 3102,
+      Dialogue = 90140104,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140105,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes070",
+        "VoiceDes033"
+      },
+      VoiceId = 10149,
+      VoiceRes = T.RT_61,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_01_3"
+      },
+      VoiceType = 1
+    },
+    [10150] = {
+      CharId = 3102,
+      Dialogue = 901400012,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140201,
+      VoiceDes = T.RT_92,
+      VoiceId = 10150,
+      VoiceRes = T.RT_8,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_02_1"
+      },
+      VoiceType = 1
+    },
+    [10151] = {
+      CharId = 3102,
+      Dialogue = 90140203,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140204,
+      VoiceDes = T.RT_93,
+      VoiceId = 10151,
+      VoiceRes = T.RT_10,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_02_2"
+      },
+      VoiceType = 1
+    },
+    [10152] = {
+      CharId = 3102,
+      Dialogue = 901400013,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140301,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes072",
+        "VoiceDes031"
+      },
+      VoiceId = 10152,
+      VoiceRes = T.RT_11,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_03_1"
+      },
+      VoiceType = 1
+    },
+    [10153] = {
+      CharId = 3102,
+      Dialogue = 90140303,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140304,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes072",
+        "VoiceDes032"
+      },
+      VoiceId = 10153,
+      VoiceRes = T.RT_12,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_03_2"
+      },
+      VoiceType = 1
+    },
+    [10154] = {
+      CharId = 3102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140305,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes072",
+        "VoiceDes033"
+      },
+      VoiceId = 10154,
+      VoiceRes = T.RT_81,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_03_3"
+      },
+      VoiceType = 1
+    },
+    [10155] = {
+      CharId = 3102,
+      Dialogue = 901400014,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140401,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes073",
+        "VoiceDes031"
+      },
+      VoiceId = 10155,
+      VoiceRes = T.RT_13,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_04_1"
+      },
+      VoiceType = 1
+    },
+    [10156] = {
+      CharId = 3102,
+      Dialogue = 90140403,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140404,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes073",
+        "VoiceDes032"
+      },
+      VoiceId = 10156,
+      VoiceRes = T.RT_14,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_04_2"
+      },
+      VoiceType = 1
+    },
+    [10157] = {
+      CharId = 3102,
+      Dialogue = 90140405,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140406,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes073",
+        "VoiceDes033"
+      },
+      VoiceId = 10157,
+      VoiceRes = T.RT_15,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_04_3"
+      },
+      VoiceType = 1
+    },
+    [10158] = {
+      CharId = 3102,
+      Dialogue = 901400015,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140501,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes074",
+        "VoiceDes031"
+      },
+      VoiceId = 10158,
+      VoiceRes = T.RT_16,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_05_1"
+      },
+      VoiceType = 1
+    },
+    [10159] = {
+      CharId = 3102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140503,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes074",
+        "VoiceDes032"
+      },
+      VoiceId = 10159,
+      VoiceRes = T.RT_17,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_05_2"
+      },
+      VoiceType = 1
+    },
+    [10160] = {
+      CharId = 3102,
+      Dialogue = 90140504,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140505,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes074",
+        "VoiceDes033"
+      },
+      VoiceId = 10160,
+      VoiceRes = T.RT_86,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_05_3"
+      },
+      VoiceType = 1
+    },
+    [10161] = {
+      CharId = 3102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140506,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes074",
+        "VoiceDes034"
+      },
+      VoiceId = 10161,
+      VoiceRes = T.RT_87,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_05_4"
+      },
+      VoiceType = 1
+    },
+    [10162] = {
+      CharId = 3102,
+      Dialogue = 90140507,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140508,
+      VoiceDes = {
+        "VoiceDes001",
+        "VoiceDes074",
+        "VoiceDes035"
+      },
+      VoiceId = 10162,
+      VoiceRes = T.RT_88,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_topic_05_5"
+      },
+      VoiceType = 1
+    },
+    [10163] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_19,
+      VoiceId = 10163,
+      VoiceRes = T.RT_20,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_idle"
+      },
+      VoiceType = 1
+    },
+    [10164] = {
+      CharId = 3102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140601,
+      VoiceDes = T.RT_21,
+      VoiceId = 10164,
+      VoiceRes = T.RT_69,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_companio_01"
+      },
+      VoiceType = 1
+    },
+    [10165] = {
+      CharId = 3102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140701,
+      VoiceDes = T.RT_24,
+      VoiceId = 10165,
+      VoiceRes = T.RT_70,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_companio_02"
+      },
+      VoiceType = 1
+    },
+    [10166] = {
+      CharId = 3102,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83102,
+      UnlockDialogue = 90140801,
+      VoiceDes = T.RT_26,
+      VoiceId = 10166,
+      VoiceRes = T.RT_25,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_companio_03"
+      },
+      VoiceType = 1
+    },
+    [10167] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_27,
+      VoiceId = 10167,
+      VoiceRes = T.RT_28,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_birthday"
+      },
+      VoiceType = 1
+    },
+    [10168] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_29,
+      VoiceId = 10168,
+      VoiceRes = T.RT_30,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_appear"
+      },
+      VoiceType = 2
+    },
+    [10169] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_31,
+      VoiceId = 10169,
+      VoiceRes = T.RT_32,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_lvup"
+      },
+      VoiceType = 2
+    },
+    [10170] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_33,
+      VoiceId = 10170,
+      VoiceRes = T.RT_34,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_battlestart"
+      },
+      VoiceType = 2
+    },
+    [10171] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_35,
+      VoiceId = 10171,
+      VoiceRes = T.RT_36,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_battleidle"
+      },
+      VoiceType = 2
+    },
+    [10172] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_71,
+      VoiceId = 10172,
+      VoiceRes = T.RT_73,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_be_hit_heavy_r01"
+      },
+      VoiceType = 2
+    },
+    [10173] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_37,
+      VoiceId = 10173,
+      VoiceRes = T.RT_38,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_skill01_r01"
+      },
+      VoiceType = 2
+    },
+    [10174] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_39,
+      VoiceId = 10174,
+      VoiceRes = T.RT_40,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_skill01_r02"
+      },
+      VoiceType = 2
+    },
+    [10175] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_41,
+      VoiceId = 10175,
+      VoiceRes = T.RT_42,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_skill02_r01"
+      },
+      VoiceType = 2
+    },
+    [10176] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_43,
+      VoiceId = 10176,
+      VoiceRes = T.RT_44,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_skill02_r02"
+      },
+      VoiceType = 2
+    },
+    [10177] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_45,
+      VoiceId = 10177,
+      VoiceRes = T.RT_46,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_skill02_r03"
+      },
+      VoiceType = 2
+    },
+    [10178] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_47,
+      VoiceId = 10178,
+      VoiceRes = T.RT_48,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_die_r01"
+      },
+      VoiceType = 2
+    },
+    [10179] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_49,
+      VoiceId = 10179,
+      VoiceRes = T.RT_50,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_die_r02"
+      },
+      VoiceType = 2
+    },
+    [10180] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_51,
+      VoiceId = 10180,
+      VoiceRes = T.RT_52,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_revive"
+      },
+      VoiceType = 2
+    },
+    [10181] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = {
+        "VoiceDes024"
+      },
+      VoiceId = 10181,
+      VoiceRes = {
+        "vo_victory_01"
+      },
+      VoiceText = {
+        "voice_ch_char_Xier_vo_victory_r01"
+      },
+      VoiceType = 2
+    },
+    [10182] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = {
+        "VoiceDes025"
+      },
+      VoiceId = 10182,
+      VoiceRes = {
+        "vo_victory_02"
+      },
+      VoiceText = {
+        "voice_ch_char_Xier_vo_victory_r02"
+      },
+      VoiceType = 2
+    },
+    [10183] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = {
+        "VoiceDes026"
+      },
+      VoiceId = 10183,
+      VoiceRes = {
+        "vo_victory_03"
+      },
+      VoiceText = {
+        "voice_ch_char_Xier_vo_victory_r03"
+      },
+      VoiceType = 2
+    },
+    [10184] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = {
+        "VoiceDes027"
+      },
+      VoiceId = 10184,
+      VoiceRes = {
+        "vo_victory_04"
+      },
+      VoiceText = {
+        "voice_ch_char_Xier_vo_victory_r04"
+      },
+      VoiceType = 2
+    },
+    [10185] = {
+      CharId = 3102,
+      UnitId = 83102,
+      VoiceDes = T.RT_55,
+      VoiceId = 10185,
+      VoiceRes = T.RT_56,
+      VoiceText = {
+        "voice_ch_char_Xier_vo_fail"
+      },
+      VoiceType = 2
     }
   },
   [3103] = {
@@ -6530,7 +7788,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10494,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Yeer_vo_topic_01_3"
       },
@@ -6547,7 +7805,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10495,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Yeer_vo_topic_01_4"
       },
@@ -6600,7 +7858,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10498,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Yeer_vo_topic_02_3"
       },
@@ -6706,7 +7964,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10504,
-      VoiceRes = T.RT_84,
+      VoiceRes = T.RT_65,
       VoiceText = {
         "voice_ch_char_Yeer_vo_topic_04_4"
       },
@@ -6730,7 +7988,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90180501,
       VoiceDes = T.RT_21,
       VoiceId = 10506,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Yeer_vo_companio_01"
       },
@@ -6743,7 +8001,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90180601,
       VoiceDes = T.RT_24,
       VoiceId = 10507,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Yeer_vo_companio_02"
       },
@@ -6830,9 +8088,9 @@ return ReadOnly("CharVoice", {
     [10514] = {
       CharId = 3103,
       UnitId = 83103,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10514,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Yeer_vo_be_hit_heavy_r01"
       },
@@ -6841,9 +8099,9 @@ return ReadOnly("CharVoice", {
     [10515] = {
       CharId = 3103,
       UnitId = 83103,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10515,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Yeer_vo_be_hit_heavy_r02"
       },
@@ -7042,7 +8300,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10531,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Haier_vo_topic_01_3"
       },
@@ -7059,7 +8317,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10532,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Haier_vo_topic_01_4"
       },
@@ -7104,7 +8362,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10535,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Haier_vo_topic_02_3"
       },
@@ -7116,7 +8374,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83201,
       UnlockDialogue = 90060301,
-      VoiceDes = T.RT_101,
+      VoiceDes = T.RT_105,
       VoiceId = 10536,
       VoiceRes = T.RT_11,
       VoiceText = {
@@ -7129,7 +8387,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83201,
       UnlockDialogue = 90060302,
-      VoiceDes = T.RT_102,
+      VoiceDes = T.RT_106,
       VoiceId = 10537,
       VoiceRes = T.RT_12,
       VoiceText = {
@@ -7149,7 +8407,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10538,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Haier_vo_topic_03_3"
       },
@@ -7197,7 +8455,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83201,
       UnlockDialogue = 90060501,
-      VoiceDes = T.RT_103,
+      VoiceDes = T.RT_107,
       VoiceId = 10541,
       VoiceRes = T.RT_16,
       VoiceText = {
@@ -7211,7 +8469,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83201,
       UnlockDialogue = 90060503,
-      VoiceDes = T.RT_104,
+      VoiceDes = T.RT_108,
       VoiceId = 10542,
       VoiceRes = T.RT_17,
       VoiceText = {
@@ -7224,9 +8482,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83201,
       UnlockDialogue = 90060504,
-      VoiceDes = T.RT_105,
+      VoiceDes = T.RT_109,
       VoiceId = 10543,
-      VoiceRes = T.RT_70,
+      VoiceRes = T.RT_86,
       VoiceText = {
         "voice_ch_char_Haier_vo_topic_05_3"
       },
@@ -7250,7 +8508,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90060601,
       VoiceDes = T.RT_21,
       VoiceId = 10545,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Haier_vo_companio_01"
       },
@@ -7263,7 +8521,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90060701,
       VoiceDes = T.RT_24,
       VoiceId = 10546,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Haier_vo_companio_02"
       },
@@ -7329,9 +8587,9 @@ return ReadOnly("CharVoice", {
     [10552] = {
       CharId = 3201,
       UnitId = 83201,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10552,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Haier_vo_be_hit_heavy_r01"
       },
@@ -7340,9 +8598,9 @@ return ReadOnly("CharVoice", {
     [10553] = {
       CharId = 3201,
       UnitId = 83201,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10553,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Haier_vo_be_hit_heavy_r02"
       },
@@ -7541,7 +8799,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10923,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Kami_vo_topic_01_3"
       },
@@ -7558,7 +8816,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10924,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Kami_vo_topic_01_4"
       },
@@ -7575,7 +8833,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10925,
-      VoiceRes = T.RT_59,
+      VoiceRes = T.RT_63,
       VoiceText = {
         "voice_ch_char_Kami_vo_topic_01_5"
       },
@@ -7593,7 +8851,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10926,
-      VoiceRes = T.RT_60,
+      VoiceRes = T.RT_77,
       VoiceText = {
         "voice_ch_char_Kami_vo_topic_01_6"
       },
@@ -7681,7 +8939,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10931,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Kami_vo_topic_03_3"
       },
@@ -7751,7 +9009,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10935,
-      VoiceRes = T.RT_84,
+      VoiceRes = T.RT_65,
       VoiceText = {
         "voice_ch_char_Kami_vo_topic_04_4"
       },
@@ -7768,7 +9026,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10936,
-      VoiceRes = T.RT_85,
+      VoiceRes = T.RT_66,
       VoiceText = {
         "voice_ch_char_Kami_vo_topic_04_5"
       },
@@ -7792,7 +9050,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90270601,
       VoiceDes = T.RT_21,
       VoiceId = 10938,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Kami_vo_companio_02"
       },
@@ -7818,7 +9076,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90270801,
       VoiceDes = T.RT_26,
       VoiceId = 10940,
-      VoiceRes = T.RT_75,
+      VoiceRes = T.RT_90,
       VoiceText = {
         "voice_ch_char_Kami_vo_companio_04"
       },
@@ -7871,9 +9129,9 @@ return ReadOnly("CharVoice", {
     [10945] = {
       CharId = 3202,
       UnitId = 83202,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10945,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Kami_vo_be_hit_heavy_r01"
       },
@@ -7882,9 +9140,9 @@ return ReadOnly("CharVoice", {
     [10946] = {
       CharId = 3202,
       UnitId = 83202,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10946,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Kami_vo_be_hit_heavy_r02"
       },
@@ -8006,9 +9264,9 @@ return ReadOnly("CharVoice", {
       CharId = 3301,
       GachaVoicePart = 1,
       UnitId = 83301,
-      VoiceDes = T.RT_97,
+      VoiceDes = T.RT_57,
       VoiceId = 10409,
-      VoiceRes = T.RT_98,
+      VoiceRes = T.RT_102,
       VoiceText = {
         "voice_ch_char_Maer_vo_gain_1"
       },
@@ -8019,7 +9277,7 @@ return ReadOnly("CharVoice", {
       GachaVoiceCondition = {6007},
       GachaVoicePart = 2,
       UnitId = 83301,
-      VoiceDes = T.RT_106,
+      VoiceDes = T.RT_59,
       VoiceId = 10410,
       VoiceRes = {"vo_gain_2"},
       VoiceText = {
@@ -8085,7 +9343,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10414,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Maer_vo_topic_01_3"
       },
@@ -8102,7 +9360,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10415,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Maer_vo_topic_01_4"
       },
@@ -8154,7 +9412,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10418,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Maer_vo_topic_02_3"
       },
@@ -8172,7 +9430,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10419,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Maer_vo_topic_02_4"
       },
@@ -8225,7 +9483,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10422,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Maer_vo_topic_03_3"
       },
@@ -8291,7 +9549,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83301,
       UnlockDialogue = 90170501,
-      VoiceDes = T.RT_89,
+      VoiceDes = T.RT_97,
       VoiceId = 10426,
       VoiceRes = T.RT_16,
       VoiceText = {
@@ -8305,7 +9563,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83301,
       UnlockDialogue = 90170504,
-      VoiceDes = T.RT_90,
+      VoiceDes = T.RT_98,
       VoiceId = 10427,
       VoiceRes = T.RT_17,
       VoiceText = {
@@ -8318,9 +9576,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83301,
       UnlockDialogue = 90170505,
-      VoiceDes = T.RT_91,
+      VoiceDes = T.RT_99,
       VoiceId = 10428,
-      VoiceRes = T.RT_70,
+      VoiceRes = T.RT_86,
       VoiceText = {
         "voice_ch_char_Maer_vo_topic_05_3"
       },
@@ -8337,6 +9595,19 @@ return ReadOnly("CharVoice", {
       },
       VoiceType = 1
     },
+    [10430] = {
+      CharId = 3301,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 83301,
+      UnlockDialogue = 90170601,
+      VoiceDes = T.RT_21,
+      VoiceId = 10430,
+      VoiceRes = T.RT_69,
+      VoiceText = {
+        "voice_ch_char_Maer_vo_companio_01"
+      },
+      VoiceType = 1
+    },
     [10431] = {
       CharId = 3301,
       LockedDes = "VoiceLocked_Dialogue",
@@ -8344,7 +9615,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90170701,
       VoiceDes = T.RT_24,
       VoiceId = 10431,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Maer_vo_companio_02"
       },
@@ -8368,9 +9639,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83301,
       UnlockDialogue = 90170901,
-      VoiceDes = T.RT_74,
+      VoiceDes = T.RT_89,
       VoiceId = 10433,
-      VoiceRes = T.RT_75,
+      VoiceRes = T.RT_90,
       VoiceText = {
         "voice_ch_char_Maer_vo_companio_04"
       },
@@ -8381,7 +9652,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 83301,
       UnlockDialogue = 90171001,
-      VoiceDes = T.RT_107,
+      VoiceDes = T.RT_110,
       VoiceId = 10434,
       VoiceRes = {
         "vo_companio_05"
@@ -8438,9 +9709,9 @@ return ReadOnly("CharVoice", {
     [10439] = {
       CharId = 3301,
       UnitId = 83301,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10439,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Maer_vo_be_hit_heavy_r01"
       },
@@ -8449,9 +9720,9 @@ return ReadOnly("CharVoice", {
     [10440] = {
       CharId = 3301,
       UnitId = 83301,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10440,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Maer_vo_be_hit_heavy_r02"
       },
@@ -8584,9 +9855,9 @@ return ReadOnly("CharVoice", {
       CharId = 4101,
       GachaVoicePart = 1,
       UnitId = 84101,
-      VoiceDes = T.RT_97,
+      VoiceDes = T.RT_57,
       VoiceId = 10614,
-      VoiceRes = {"vo_gain_01"},
+      VoiceRes = T.RT_58,
       VoiceText = {
         "voice_ch_char_Lise_vo_gain_01"
       },
@@ -8597,9 +9868,9 @@ return ReadOnly("CharVoice", {
       GachaVoiceCondition = {100307},
       GachaVoicePart = 2,
       UnitId = 84101,
-      VoiceDes = T.RT_106,
+      VoiceDes = T.RT_59,
       VoiceId = 10615,
-      VoiceRes = {"vo_gain_02"},
+      VoiceRes = T.RT_60,
       VoiceText = {
         "voice_ch_char_Lise_vo_gain_02"
       },
@@ -8666,7 +9937,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10619,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Lise_vo_topic_01_3"
       },
@@ -8684,7 +9955,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10620,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Lise_vo_topic_01_4"
       },
@@ -8740,7 +10011,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10623,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Lise_vo_topic_02_3"
       },
@@ -8758,7 +10029,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10624,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Lise_vo_topic_02_4"
       },
@@ -8771,7 +10042,7 @@ return ReadOnly("CharVoice", {
       UnitId = 84101,
       UnlockDialogue = 90210301,
       UnlockOption = 100307,
-      VoiceDes = T.RT_108,
+      VoiceDes = T.RT_111,
       VoiceId = 10625,
       VoiceRes = T.RT_11,
       VoiceText = {
@@ -8786,7 +10057,7 @@ return ReadOnly("CharVoice", {
       UnitId = 84101,
       UnlockDialogue = 90210303,
       UnlockOption = 100307,
-      VoiceDes = T.RT_109,
+      VoiceDes = T.RT_112,
       VoiceId = 10626,
       VoiceRes = T.RT_12,
       VoiceText = {
@@ -8806,7 +10077,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10627,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Lise_vo_topic_03_3"
       },
@@ -8824,7 +10095,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10628,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Lise_vo_topic_03_4"
       },
@@ -8918,7 +10189,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10633,
-      VoiceRes = T.RT_70,
+      VoiceRes = T.RT_86,
       VoiceText = {
         "voice_ch_char_Lise_vo_topic_05_3"
       },
@@ -8931,7 +10202,7 @@ return ReadOnly("CharVoice", {
       UnitId = 84101,
       UnlockDialogue = 90210601,
       UnlockOption = 100307,
-      VoiceDes = T.RT_101,
+      VoiceDes = T.RT_105,
       VoiceId = 10634,
       VoiceRes = T.RT_18,
       VoiceText = {
@@ -8946,7 +10217,7 @@ return ReadOnly("CharVoice", {
       UnitId = 84101,
       UnlockDialogue = 90210603,
       UnlockOption = 100307,
-      VoiceDes = T.RT_102,
+      VoiceDes = T.RT_106,
       VoiceId = 10635,
       VoiceRes = {
         "vo_topic_06_2"
@@ -9029,6 +10300,19 @@ return ReadOnly("CharVoice", {
       },
       VoiceType = 1
     },
+    [10640] = {
+      CharId = 4101,
+      LockedDes = "VoiceLocked_Dialogue",
+      UnitId = 84101,
+      UnlockDialogue = 90210801,
+      VoiceDes = T.RT_21,
+      VoiceId = 10640,
+      VoiceRes = T.RT_69,
+      VoiceText = {
+        "voice_ch_char_Lise_vo_companio_01"
+      },
+      VoiceType = 1
+    },
     [10641] = {
       CharId = 4101,
       LockedDes = "VoiceLocked_Dialogue",
@@ -9036,7 +10320,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90210901,
       VoiceDes = T.RT_24,
       VoiceId = 10641,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Lise_vo_companio_02"
       },
@@ -9089,9 +10373,9 @@ return ReadOnly("CharVoice", {
     [10647] = {
       CharId = 4101,
       UnitId = 84101,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10647,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Lise_vo_be_hit_heavy_r01"
       },
@@ -9224,7 +10508,7 @@ return ReadOnly("CharVoice", {
       CharId = 4102,
       UnitId = 84102,
       VoiceChar = "Zhiliu01",
-      VoiceDes = T.RT_92,
+      VoiceDes = T.RT_74,
       VoiceId = 10840,
       VoiceRes = T.RT_2,
       VoiceText = {
@@ -9236,7 +10520,7 @@ return ReadOnly("CharVoice", {
       CharId = 4102,
       UnitId = 84102,
       VoiceChar = "Zhiliu01",
-      VoiceDes = T.RT_93,
+      VoiceDes = T.RT_75,
       VoiceId = 10841,
       VoiceRes = T.RT_30,
       VoiceText = {
@@ -9248,7 +10532,7 @@ return ReadOnly("CharVoice", {
       CharId = 4102,
       UnitId = 84102,
       VoiceChar = "Zhiliu01",
-      VoiceDes = T.RT_94,
+      VoiceDes = T.RT_76,
       VoiceId = 10842,
       VoiceRes = T.RT_34,
       VoiceText = {
@@ -9260,7 +10544,7 @@ return ReadOnly("CharVoice", {
       CharId = 4102,
       UnitId = 84102,
       VoiceChar = "Zhiliu01",
-      VoiceDes = T.RT_95,
+      VoiceDes = T.RT_100,
       VoiceId = 10843,
       VoiceRes = T.RT_42,
       VoiceText = {
@@ -9338,7 +10622,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10848,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_topic_01_3"
       },
@@ -9355,7 +10639,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10849,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_topic_01_4"
       },
@@ -9403,7 +10687,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84102,
       UnlockDialogue = 90230301,
-      VoiceDes = T.RT_103,
+      VoiceDes = T.RT_107,
       VoiceId = 10852,
       VoiceRes = T.RT_11,
       VoiceText = {
@@ -9416,7 +10700,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84102,
       UnlockDialogue = 90230302,
-      VoiceDes = T.RT_104,
+      VoiceDes = T.RT_108,
       VoiceId = 10853,
       VoiceRes = T.RT_12,
       VoiceText = {
@@ -9430,9 +10714,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84102,
       UnlockDialogue = 90230304,
-      VoiceDes = T.RT_105,
+      VoiceDes = T.RT_109,
       VoiceId = 10854,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_topic_03_3"
       },
@@ -9449,7 +10733,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10855,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_topic_03_4"
       },
@@ -9519,7 +10803,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10859,
-      VoiceRes = T.RT_84,
+      VoiceRes = T.RT_65,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_topic_04_4"
       },
@@ -9536,7 +10820,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10860,
-      VoiceRes = T.RT_85,
+      VoiceRes = T.RT_66,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_topic_04_5"
       },
@@ -9560,7 +10844,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90230501,
       VoiceDes = T.RT_21,
       VoiceId = 10862,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_companio_01"
       },
@@ -9584,9 +10868,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84102,
       UnlockDialogue = 90230701,
-      VoiceDes = T.RT_74,
+      VoiceDes = T.RT_89,
       VoiceId = 10866,
-      VoiceRes = T.RT_75,
+      VoiceRes = T.RT_90,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_companio_04"
       },
@@ -9639,9 +10923,9 @@ return ReadOnly("CharVoice", {
     [10871] = {
       CharId = 4102,
       UnitId = 84102,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10871,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Zhiliu_vo_be_hit_heavy_r01"
       },
@@ -9850,7 +11134,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84201,
       UnlockDialogue = 90070201,
-      VoiceDes = T.RT_108,
+      VoiceDes = T.RT_111,
       VoiceId = 10190,
       VoiceRes = T.RT_8,
       VoiceText = {
@@ -9864,7 +11148,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84201,
       UnlockDialogue = 90070203,
-      VoiceDes = T.RT_109,
+      VoiceDes = T.RT_112,
       VoiceId = 10191,
       VoiceRes = T.RT_10,
       VoiceText = {
@@ -9962,7 +11246,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90070501,
       VoiceDes = T.RT_21,
       VoiceId = 10197,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Yuming_vo_companio_01"
       },
@@ -9975,7 +11259,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90070601,
       VoiceDes = T.RT_24,
       VoiceId = 10198,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Yuming_vo_companio_02"
       },
@@ -10052,9 +11336,9 @@ return ReadOnly("CharVoice", {
     [10205] = {
       CharId = 4201,
       UnitId = 84201,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10205,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Yuming_vo_be_hit_heavy_r01"
       },
@@ -10273,7 +11557,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84202,
       UnlockDialogue = 90080301,
-      VoiceDes = T.RT_99,
+      VoiceDes = T.RT_103,
       VoiceId = 10347,
       VoiceRes = T.RT_11,
       VoiceText = {
@@ -10287,7 +11571,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84202,
       UnlockDialogue = 90080304,
-      VoiceDes = T.RT_100,
+      VoiceDes = T.RT_104,
       VoiceId = 10348,
       VoiceRes = T.RT_12,
       VoiceText = {
@@ -10366,7 +11650,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90080501,
       VoiceDes = T.RT_21,
       VoiceId = 10353,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Landi_vo_companio_01"
       },
@@ -10379,7 +11663,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90080601,
       VoiceDes = T.RT_24,
       VoiceId = 10354,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Landi_vo_companio_02"
       },
@@ -10445,9 +11729,9 @@ return ReadOnly("CharVoice", {
     [10360] = {
       CharId = 4202,
       UnitId = 84202,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10360,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Landi_vo_be_hit_heavy_r01"
       },
@@ -10456,9 +11740,9 @@ return ReadOnly("CharVoice", {
     [10361] = {
       CharId = 4202,
       UnitId = 84202,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10361,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Landi_vo_be_hit_heavy_r02"
       },
@@ -10658,7 +11942,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10377,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Xibi_vo_topic_01_3"
       },
@@ -10747,7 +12031,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10382,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Xibi_vo_topic_03_3"
       },
@@ -10824,7 +12108,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90090501,
       VoiceDes = T.RT_21,
       VoiceId = 10387,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Xibi_vo_companio_01"
       },
@@ -10835,9 +12119,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84301,
       UnlockDialogue = 90090801,
-      VoiceDes = T.RT_74,
+      VoiceDes = T.RT_89,
       VoiceId = 10390,
-      VoiceRes = T.RT_75,
+      VoiceRes = T.RT_90,
       VoiceText = {
         "voice_ch_char_Xibi_vo_companio_04"
       },
@@ -10848,7 +12132,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 84301,
       UnlockDialogue = 90091001,
-      VoiceDes = T.RT_107,
+      VoiceDes = T.RT_110,
       VoiceId = 10391,
       VoiceRes = {
         "vo_companio_06"
@@ -10905,9 +12189,9 @@ return ReadOnly("CharVoice", {
     [10396] = {
       CharId = 4301,
       UnitId = 84301,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10396,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Xibi_vo_be_hit_heavy_r01"
       },
@@ -10916,9 +12200,9 @@ return ReadOnly("CharVoice", {
     [10397] = {
       CharId = 4301,
       UnitId = 84301,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10397,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Xibi_vo_be_hit_heavy_r02"
       },
@@ -11051,7 +12335,7 @@ return ReadOnly("CharVoice", {
       CharId = 5101,
       UnitId = 85101,
       VoiceChar = "Songlu01",
-      VoiceDes = T.RT_92,
+      VoiceDes = T.RT_74,
       VoiceId = 10298,
       VoiceRes = T.RT_2,
       VoiceText = {
@@ -11063,7 +12347,7 @@ return ReadOnly("CharVoice", {
       CharId = 5101,
       UnitId = 85101,
       VoiceChar = "Songlu01",
-      VoiceDes = T.RT_93,
+      VoiceDes = T.RT_75,
       VoiceId = 10299,
       VoiceRes = T.RT_30,
       VoiceText = {
@@ -11075,7 +12359,7 @@ return ReadOnly("CharVoice", {
       CharId = 5101,
       UnitId = 85101,
       VoiceChar = "Songlu01",
-      VoiceDes = T.RT_94,
+      VoiceDes = T.RT_76,
       VoiceId = 10300,
       VoiceRes = T.RT_34,
       VoiceText = {
@@ -11087,7 +12371,7 @@ return ReadOnly("CharVoice", {
       CharId = 5101,
       UnitId = 85101,
       VoiceChar = "Songlu01",
-      VoiceDes = T.RT_95,
+      VoiceDes = T.RT_100,
       VoiceId = 10301,
       VoiceRes = T.RT_42,
       VoiceText = {
@@ -11164,7 +12448,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10306,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Songlu_vo_topic_01_3"
       },
@@ -11182,7 +12466,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10307,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Songlu_vo_topic_01_4"
       },
@@ -11199,7 +12483,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10308,
-      VoiceRes = T.RT_59,
+      VoiceRes = T.RT_63,
       VoiceText = {
         "voice_ch_char_Songlu_vo_topic_01_5"
       },
@@ -11211,7 +12495,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85101,
       UnlockDialogue = 90120201,
-      VoiceDes = T.RT_80,
+      VoiceDes = T.RT_92,
       VoiceId = 10309,
       VoiceRes = T.RT_8,
       VoiceText = {
@@ -11224,7 +12508,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85101,
       UnlockDialogue = 90120203,
-      VoiceDes = T.RT_81,
+      VoiceDes = T.RT_93,
       VoiceId = 10310,
       VoiceRes = T.RT_10,
       VoiceText = {
@@ -11238,9 +12522,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85101,
       UnlockDialogue = 90120205,
-      VoiceDes = T.RT_82,
+      VoiceDes = T.RT_94,
       VoiceId = 10311,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Songlu_vo_topic_02_3"
       },
@@ -11252,9 +12536,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85101,
       UnlockDialogue = 90120207,
-      VoiceDes = T.RT_83,
+      VoiceDes = T.RT_95,
       VoiceId = 10312,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Songlu_vo_topic_02_4"
       },
@@ -11302,7 +12586,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85101,
       UnlockDialogue = 90120401,
-      VoiceDes = T.RT_110,
+      VoiceDes = T.RT_113,
       VoiceId = 10315,
       VoiceRes = T.RT_13,
       VoiceText = {
@@ -11316,7 +12600,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85101,
       UnlockDialogue = 90120404,
-      VoiceDes = T.RT_111,
+      VoiceDes = T.RT_114,
       VoiceId = 10316,
       VoiceRes = T.RT_14,
       VoiceText = {
@@ -11329,7 +12613,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85101,
       UnlockDialogue = 90120405,
-      VoiceDes = T.RT_112,
+      VoiceDes = T.RT_115,
       VoiceId = 10317,
       VoiceRes = T.RT_15,
       VoiceText = {
@@ -11384,7 +12668,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10320,
-      VoiceRes = T.RT_70,
+      VoiceRes = T.RT_86,
       VoiceText = {
         "voice_ch_char_Songlu_vo_topic_05_3"
       },
@@ -11408,7 +12692,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90120601,
       VoiceDes = T.RT_21,
       VoiceId = 10322,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Songlu_vo_companio_01"
       },
@@ -11421,7 +12705,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90120701,
       VoiceDes = T.RT_24,
       VoiceId = 10323,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Songlu_vo_companio_02"
       },
@@ -11498,9 +12782,9 @@ return ReadOnly("CharVoice", {
     [10330] = {
       CharId = 5101,
       UnitId = 85101,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10330,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Songlu_vo_be_hit_heavy_r01"
       },
@@ -11833,7 +13117,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10815,
-      VoiceRes = T.RT_70,
+      VoiceRes = T.RT_86,
       VoiceText = {
         "voice_ch_char_Aote_vo_topic_05_3"
       },
@@ -11857,7 +13141,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90160601,
       VoiceDes = T.RT_21,
       VoiceId = 10817,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Aote_vo_companio_01"
       },
@@ -11966,9 +13250,9 @@ return ReadOnly("CharVoice", {
     [10827] = {
       CharId = 5102,
       UnitId = 85102,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10827,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Aote_vo_be_hit_heavy_r01"
       },
@@ -11977,9 +13261,9 @@ return ReadOnly("CharVoice", {
     [10828] = {
       CharId = 5102,
       UnitId = 85102,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10828,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Aote_vo_be_hit_heavy_r02"
       },
@@ -12112,7 +13396,7 @@ return ReadOnly("CharVoice", {
       CharId = 5301,
       UnitId = 85301,
       VoiceChar = "Saiqi01",
-      VoiceDes = T.RT_92,
+      VoiceDes = T.RT_74,
       VoiceId = 10216,
       VoiceRes = T.RT_2,
       VoiceText = {
@@ -12124,7 +13408,7 @@ return ReadOnly("CharVoice", {
       CharId = 5301,
       UnitId = 85301,
       VoiceChar = "Saiqi01",
-      VoiceDes = T.RT_93,
+      VoiceDes = T.RT_75,
       VoiceId = 10217,
       VoiceRes = T.RT_30,
       VoiceText = {
@@ -12136,7 +13420,7 @@ return ReadOnly("CharVoice", {
       CharId = 5301,
       UnitId = 85301,
       VoiceChar = "Saiqi01",
-      VoiceDes = T.RT_94,
+      VoiceDes = T.RT_76,
       VoiceId = 10218,
       VoiceRes = T.RT_34,
       VoiceText = {
@@ -12148,7 +13432,7 @@ return ReadOnly("CharVoice", {
       CharId = 5301,
       UnitId = 85301,
       VoiceChar = "Saiqi01",
-      VoiceDes = T.RT_95,
+      VoiceDes = T.RT_100,
       VoiceId = 10219,
       VoiceRes = T.RT_42,
       VoiceText = {
@@ -12185,7 +13469,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85301,
       UnlockDialogue = 90100101,
-      VoiceDes = T.RT_110,
+      VoiceDes = T.RT_113,
       VoiceId = 10222,
       VoiceRes = T.RT_5,
       VoiceText = {
@@ -12198,7 +13482,7 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85301,
       UnlockDialogue = 90100103,
-      VoiceDes = T.RT_111,
+      VoiceDes = T.RT_114,
       VoiceId = 10223,
       VoiceRes = T.RT_6,
       VoiceText = {
@@ -12212,9 +13496,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85301,
       UnlockDialogue = 90100105,
-      VoiceDes = T.RT_112,
+      VoiceDes = T.RT_115,
       VoiceId = 10224,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_topic_01_3"
       },
@@ -12267,7 +13551,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10227,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_topic_02_3"
       },
@@ -12284,7 +13568,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10228,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_topic_02_4"
       },
@@ -12302,7 +13586,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10229,
-      VoiceRes = T.RT_88,
+      VoiceRes = T.RT_96,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_topic_02_5"
       },
@@ -12319,7 +13603,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10230,
-      VoiceRes = T.RT_96,
+      VoiceRes = T.RT_101,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_topic_02_6"
       },
@@ -12372,7 +13656,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10233,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_topic_03_3"
       },
@@ -12467,7 +13751,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90100601,
       VoiceDes = T.RT_21,
       VoiceId = 10239,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_companio_01"
       },
@@ -12480,7 +13764,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90100701,
       VoiceDes = T.RT_24,
       VoiceId = 10240,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_companio_02"
       },
@@ -12557,9 +13841,9 @@ return ReadOnly("CharVoice", {
     [10247] = {
       CharId = 5301,
       UnitId = 85301,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10247,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_be_hit_heavy_r01"
       },
@@ -12568,9 +13852,9 @@ return ReadOnly("CharVoice", {
     [10248] = {
       CharId = 5301,
       UnitId = 85301,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10248,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Saiqi_vo_be_hit_heavy_r02"
       },
@@ -12757,7 +14041,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10718,
-      VoiceRes = T.RT_57,
+      VoiceRes = T.RT_61,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_01_3"
       },
@@ -12775,7 +14059,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10719,
-      VoiceRes = T.RT_58,
+      VoiceRes = T.RT_62,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_01_4"
       },
@@ -12792,7 +14076,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10720,
-      VoiceRes = T.RT_59,
+      VoiceRes = T.RT_63,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_01_5"
       },
@@ -12810,7 +14094,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10721,
-      VoiceRes = T.RT_60,
+      VoiceRes = T.RT_77,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_01_6"
       },
@@ -12862,7 +14146,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10724,
-      VoiceRes = T.RT_61,
+      VoiceRes = T.RT_64,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_02_3"
       },
@@ -12880,7 +14164,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10725,
-      VoiceRes = T.RT_62,
+      VoiceRes = T.RT_78,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_02_4"
       },
@@ -12898,7 +14182,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10726,
-      VoiceRes = T.RT_88,
+      VoiceRes = T.RT_96,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_02_5"
       },
@@ -12915,7 +14199,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes036"
       },
       VoiceId = 10727,
-      VoiceRes = T.RT_96,
+      VoiceRes = T.RT_101,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_02_6"
       },
@@ -12968,7 +14252,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10730,
-      VoiceRes = T.RT_65,
+      VoiceRes = T.RT_81,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_03_3"
       },
@@ -12985,7 +14269,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10731,
-      VoiceRes = T.RT_67,
+      VoiceRes = T.RT_83,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_03_4"
       },
@@ -13002,7 +14286,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes035"
       },
       VoiceId = 10732,
-      VoiceRes = T.RT_68,
+      VoiceRes = T.RT_84,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_03_5"
       },
@@ -13072,7 +14356,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10736,
-      VoiceRes = T.RT_84,
+      VoiceRes = T.RT_65,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_04_4"
       },
@@ -13124,7 +14408,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes033"
       },
       VoiceId = 10739,
-      VoiceRes = T.RT_70,
+      VoiceRes = T.RT_86,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_05_3"
       },
@@ -13142,7 +14426,7 @@ return ReadOnly("CharVoice", {
         "VoiceDes034"
       },
       VoiceId = 10740,
-      VoiceRes = T.RT_71,
+      VoiceRes = T.RT_87,
       VoiceText = {
         "voice_ch_char_Dafu_vo_topic_05_4"
       },
@@ -13166,7 +14450,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90190601,
       VoiceDes = T.RT_21,
       VoiceId = 10742,
-      VoiceRes = T.RT_72,
+      VoiceRes = T.RT_69,
       VoiceText = {
         "voice_ch_char_Dafu_vo_companio_01"
       },
@@ -13179,7 +14463,7 @@ return ReadOnly("CharVoice", {
       UnlockDialogue = 90190701,
       VoiceDes = T.RT_24,
       VoiceId = 10743,
-      VoiceRes = T.RT_73,
+      VoiceRes = T.RT_70,
       VoiceText = {
         "voice_ch_char_Dafu_vo_companio_02"
       },
@@ -13203,9 +14487,9 @@ return ReadOnly("CharVoice", {
       LockedDes = "VoiceLocked_Dialogue",
       UnitId = 85401,
       UnlockDialogue = 90190901,
-      VoiceDes = T.RT_74,
+      VoiceDes = T.RT_89,
       VoiceId = 10745,
-      VoiceRes = T.RT_75,
+      VoiceRes = T.RT_90,
       VoiceText = {
         "voice_ch_char_Dafu_vo_companio_04"
       },
@@ -13258,9 +14542,9 @@ return ReadOnly("CharVoice", {
     [10750] = {
       CharId = 5401,
       UnitId = 85401,
-      VoiceDes = T.RT_76,
+      VoiceDes = T.RT_71,
       VoiceId = 10750,
-      VoiceRes = T.RT_77,
+      VoiceRes = T.RT_73,
       VoiceText = {
         "voice_ch_char_Dafu_vo_be_hit_heavy_r01"
       },
@@ -13269,9 +14553,9 @@ return ReadOnly("CharVoice", {
     [10751] = {
       CharId = 5401,
       UnitId = 85401,
-      VoiceDes = T.RT_78,
+      VoiceDes = T.RT_72,
       VoiceId = 10751,
-      VoiceRes = T.RT_79,
+      VoiceRes = T.RT_91,
       VoiceText = {
         "voice_ch_char_Dafu_vo_be_hit_heavy_r02"
       },

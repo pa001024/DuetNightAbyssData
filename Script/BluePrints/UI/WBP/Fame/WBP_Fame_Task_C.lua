@@ -453,15 +453,10 @@ function M:OnRecurringFameTaskReddotChange()
     self:UpdateRegionTabReddot()
     return
   end
-  for RegionId, _ in pairs(AllRegionReputationData) do
-    local bHasCanClaim = false
-    local AllCanClaimTasks = RegionFameModel:GetTargetRegionAllCanClaimRecurringTasks(RegionId)
-    if AllCanClaimTasks and #AllCanClaimTasks > 0 then
-      bHasCanClaim = true
-      if RegionId == self.CurRegionTabId then
-        self:UpdateRecurringTaskReddot()
-        self:RefreshRecurringTask()
-      end
+  if self.CurRegionTabId then
+    self:UpdateRecurringTaskReddot()
+    if self.CurTaskTabId == FameTaskType.RecurringTask then
+      self:RefreshRecurringTask()
     end
   end
   self:UpdateRegionTabReddot()
@@ -719,6 +714,8 @@ function M:RefreshRecurringTaskDetail()
       if Ret == ErrorCode.RET_SUCCESS then
         self:RefreshRecurringTask()
         self:InitWeeklyDetail()
+        self:UpdateRecurringTaskReddot()
+        self:UpdateRegionTabReddot()
         return
       end
       local Error = DataMgr.ErrorCode[Ret]
@@ -836,6 +833,7 @@ function M:RefreshEntrustTask()
         self:RefreshEntrustTask()
         self:InitWeeklyDetail()
         self:UpdateEntrustTaskReddot()
+        self:UpdateRegionTabReddot()
         return
       end
       local Error = DataMgr.ErrorCode[Ret]

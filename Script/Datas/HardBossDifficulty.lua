@@ -328,5 +328,59 @@ return ReadOnly("HardBossDifficulty", {
     DifficultyReward = 1021,
     ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Bailong.T_Permanent_HardBoss_VideoImg_Bailong",
     UnlockCondition = {2056, 160}
+  },
+  [1061] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1061",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_1",
+    DifficultyID = 1061,
+    DifficultyLevel = 30,
+    DifficultyReward = 1022,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
+    UnlockCondition = {2061}
+  },
+  [1062] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1061",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_2",
+    DifficultyID = 1062,
+    DifficultyLevel = 40,
+    DifficultyReward = 1023,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
+    UnlockCondition = {2062, 125}
+  },
+  [1063] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1061",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_3",
+    DifficultyID = 1063,
+    DifficultyLevel = 50,
+    DifficultyReward = 1024,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
+    UnlockCondition = {2063, 135}
+  },
+  [1064] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1061",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_4",
+    DifficultyID = 1064,
+    DifficultyLevel = 60,
+    DifficultyReward = 1025,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
+    UnlockCondition = {2064, 145}
+  },
+  [1065] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1061",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_5",
+    DifficultyID = 1065,
+    DifficultyLevel = 70,
+    DifficultyReward = 1026,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
+    UnlockCondition = {2065, 155}
+  },
+  [1066] = {
+    DifficultyDes = "UI_HardBoss_Difficulty_Des_1061",
+    DifficultyDesOpen = "UI_HardBoss_Difficulty_Des_Open_6",
+    DifficultyID = 1066,
+    DifficultyLevel = 80,
+    DifficultyReward = 1027,
+    ImgPath = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
+    UnlockCondition = {2066, 160}
   }
 })

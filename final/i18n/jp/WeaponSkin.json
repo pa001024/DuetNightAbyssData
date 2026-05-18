@@ -66,9 +66,17 @@
   {
     "id": 3010109,
     "name": "青空の龍吟・大剣",
-    "desc": "",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
     "icon": "T_Head_Claymore_Bixiao",
     "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010110,
+    "name": "グワグワッ！・大剣",
+    "desc": "",
+    "icon": "T_Head_Claymore_Nahan",
+    "rarity": 4,
     "unlock": "ショップで獲得"
   },
   {
@@ -120,6 +128,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010207,
+    "name": "赦罪の太陽",
+    "desc": "暁の光をもって、赦しの裁決を記す。",
+    "icon": "T_Head_Sword_Shezui",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010301,
     "name": "太陽を呼ぶプレスト",
     "desc": "お日さまはどこに？お日さまはどこに？お日さまは、私たちの手のひらの中に。",
@@ -157,6 +173,22 @@
     "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010306,
+    "name": "グワグワッ！・弓（長弓）",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Bow_Nahan01",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010307,
+    "name": "グワグワッ！・弓（短弓）",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Bow_Nahan02",
+    "rarity": 4,
     "unlock": "ショップで獲得"
   },
   {
@@ -216,6 +248,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010408,
+    "name": "コスミック・インビテーション・長柄",
+    "desc": "星々より届く悠久の招待に耳を澄ませ。",
+    "icon": "T_Head_Polearm_Huanyu",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010501,
     "name": "ホワイトシャーク",
     "desc": "サメちゃんはヘンな企みがあるわけじゃない。",
@@ -237,6 +277,22 @@
     "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
     "icon": "T_Head_Machinegun_Bixiao",
     "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010504,
+    "name": "ブラス・ヴァイオリン",
+    "desc": "ヴァイオリンケースを開け、皆さまに真鍮で編まれた死の旋律を一曲お届けする。",
+    "icon": "T_Head_Machinegun_Huangtong",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010505,
+    "name": "グワグワッ！・ライフル",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Machinegun_Nahan",
+    "rarity": 4,
     "unlock": "ショップで獲得"
   },
   {
@@ -320,6 +376,30 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010711,
+    "name": "コスミック・インビテーション・太刀",
+    "desc": "星々より届く悠久の招待に耳を澄ませ。",
+    "icon": "T_Head_Katana_Huanyu",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010713,
+    "name": "ブルースター",
+    "desc": "青い軌跡が、星屑をまき散らす。",
+    "icon": "T_Head_Katana_Youlan",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010715,
+    "name": "グワグワッ！・太刀",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Katana_Nahan",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010801,
     "name": "父祖の遺志・ウィップブレード",
     "desc": "とある父の叱咤がウィップブレードとなった。愛という名の鞭だ――いや、つまりは、父の愛は重いってことだ。",
@@ -360,6 +440,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3010806,
+    "name": "コスミック・インビテーション・ウィップブレード",
+    "desc": "星々より届く悠久の招待に耳を澄ませ。",
+    "icon": "T_Head_Swordwhip_Huanyu",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3010901,
     "name": "茶トラの天下",
     "desc": "にゃ～～～",
@@ -369,10 +457,18 @@
   },
   {
     "id": 3010902,
-    "name": "",
+    "name": "青空の龍吟・ランチャー",
     "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
     "icon": "T_Head_Cannon_Bixiao",
     "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3010903,
+    "name": "グワグワッ！・ランチャー",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Cannon_Nahan",
+    "rarity": 4,
     "unlock": "ショップで獲得"
   },
   {
@@ -400,6 +496,14 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3011004,
+    "name": "グワグワッ！・ショットガン",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Shotgun_Nahan",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3011101,
     "name": "もちねこ1号",
     "desc": "にゃ。",
@@ -408,11 +512,43 @@
     "unlock": "ショップで獲得"
   },
   {
+    "id": 3011102,
+    "name": "青空の龍吟・ピストル",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Pistol_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011103,
+    "name": "グワグワッ！・ピストル",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Pistol_Nahan",
+    "rarity": 4,
+    "unlock": "ショップで獲得"
+  },
+  {
     "id": 3011201,
     "name": "もちねこ2号",
     "desc": "にゃにゃ。",
     "icon": "T_Head_Crossbow_Maobing",
     "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011203,
+    "name": "青空の龍吟・デュアルガン",
+    "desc": "俗世の喧騒に染まらず、碧い波を切り裂いて進む。",
+    "icon": "T_Head_Crossbow_Bixiao",
+    "rarity": 5,
+    "unlock": "ショップで獲得"
+  },
+  {
+    "id": 3011205,
+    "name": "グワグワッ！・デュアルガン",
+    "desc": "グワッ――—————！",
+    "icon": "T_Head_Crossbow_Nahan",
+    "rarity": 4,
     "unlock": "ショップで獲得"
   }
 ]

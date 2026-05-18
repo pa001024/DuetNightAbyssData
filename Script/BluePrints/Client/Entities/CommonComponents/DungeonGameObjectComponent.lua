@@ -54,9 +54,7 @@ function Component:CreateDungeonObject(DungeonId, NetGuid)
   if DungeonObject then
     DebugPrint("Warning!!! GameModeDungeonObject Exists")
   end
-  local Env = {
-    ClearPackageFunc = require("UnLuaHotReload").RemoveLoadedModule
-  }
+  local Env = {}
   DungeonObject = DungeonFactory.CreateGameModeDungeon(DungeonType, Env)
   if not DungeonObject then
     DebugPrint("ReplicatedDungeonObject CreateDungeonObject failed", DungeonType)
@@ -66,7 +64,7 @@ function Component:CreateDungeonObject(DungeonId, NetGuid)
   DungeonObject:Init({DungeonId = DungeonId, NetGuid = NetGuid})
 end
 
-function Component:GetDungeonObject()
+function Component:GetGameModeDungeonObject()
   return DungeonObject
 end
 
@@ -97,13 +95,6 @@ function Component:DeleteDungeonObjectActor(NetGuid)
   else
     DungeonObject:ReplicatedDeleteActor(NetGuid)
   end
-end
-
-function Component:DungeonObjectBindCObject(CObj)
-  if not DungeonObject then
-    return
-  end
-  DungeonObject:BindCObject(CObj)
 end
 
 return Component

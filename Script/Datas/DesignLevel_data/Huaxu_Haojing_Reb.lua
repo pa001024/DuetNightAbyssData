@@ -570,6 +570,15 @@ return {
         RarelyId = 7066006
       }
     },
+    ["7066021"] = {
+      AutoReset = 0,
+      ["2360107"] = {
+        CreatorId = 2360107,
+        UnitType = "Drop",
+        UnitId = 90026,
+        RarelyId = 7066021
+      }
+    },
     ["7066020"] = {
       AutoReset = 0,
       ["2360075"] = {

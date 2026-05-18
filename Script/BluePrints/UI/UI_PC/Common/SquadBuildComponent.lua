@@ -1,47 +1,15 @@
 require("UnLua")
 local Component = {}
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
+local SquadPresetUtils = require("Utils.SquadPresetUtils")
 local UIUtils = require("Utils.UIUtils")
-Component.ESlotName = {
-  Char = 1,
-  MeleeWeapon = 2,
-  RangedWeapon = 3,
-  Phantom1 = 4,
-  PhantomWeapon1 = 5,
-  Phantom2 = 6,
-  PhantomWeapon2 = 7,
-  Pet = 8,
-  Null = 0
-}
-Component.SlotNameOrder = {
-  "Char",
-  "MeleeWeapon",
-  "RangedWeapon",
-  "Phantom1",
-  "PhantomWeapon1",
-  "Phantom2",
-  "PhantomWeapon2",
-  "Pet"
-}
-Component.SlotName2Type = {
-  [Component.ESlotName.Char] = "Char",
-  [Component.ESlotName.Pet] = "Pet",
-  [Component.ESlotName.RangedWeapon] = "Ranged",
-  [Component.ESlotName.MeleeWeapon] = "Melee",
-  [Component.ESlotName.Phantom1] = "Char",
-  [Component.ESlotName.PhantomWeapon1] = "Weapon",
-  [Component.ESlotName.Phantom2] = "Char",
-  [Component.ESlotName.PhantomWeapon2] = "Weapon"
-}
-Component.SlotType2DataType = {
-  Char = "Char",
-  Pet = "Pet",
-  Weapon = "Weapon",
-  Ranged = "Weapon",
-  Melee = "Weapon"
-}
-local NullUUid = CommonConst.AbyssTeamNoChar
-local NullUnitId = CommonConst.AbyssTeamNoPet
+Component.ESlotName = SquadPresetUtils.ESlotName
+Component.SlotNameOrder = SquadPresetUtils.SlotNameOrder
+Component.SlotName2Type = SquadPresetUtils.SlotName2Type
+Component.SlotType2DataType = SquadPresetUtils.SlotType2DataType
+Component.GetCharConflictKey = SquadPresetUtils.GetCharConflictKey
+Component.IsTryoutCmpFunc = SquadPresetUtils.IsTryoutCmpFunc
 
 function Component:InitSquadBuildWidget(Slots, List_Select, Sort, EMListView_Filter, Pos_Tip, Tab_Primary, Empty, Text_Empty, Type_Range, Type_Melee, Owner, Panel_FilterTab)
   self.Slots = Slots or {}
@@ -90,51 +58,11 @@ function Component:InitSquadBuildData(TrialData)
 end
 
 function Component:BindSlotEvents()
-  for SlotName, SlotWidget in pairs(self.Slots) do
-    if SlotWidget then
-      SlotWidget:Init(SlotName, self)
-      if SlotName == Component.ESlotName.Phantom1 then
-        SlotWidget.WeaponSlot = self.Slots[Component.ESlotName.PhantomWeapon1]
-      elseif SlotName == Component.ESlotName.Phantom2 then
-        SlotWidget.WeaponSlot = self.Slots[Component.ESlotName.PhantomWeapon2]
-      elseif SlotName == Component.ESlotName.PhantomWeapon1 or SlotName == Component.ESlotName.PhantomWeapon2 then
-        local PhantomSlotName = SlotName == Component.ESlotName.PhantomWeapon1 and Component.ESlotName.Phantom1 or Component.ESlotName.Phantom2
-        local PhantomSlot = self.Slots[PhantomSlotName]
-        if PhantomSlot and PhantomSlot.IsEmpty then
-          SlotWidget:SetForbidden(true)
-        end
-      end
-    end
-  end
+  SquadPresetUtils.BindSquadSlotEvents(self)
 end
 
 function Component:BindListEvents()
-  if self.List_Select then
-    if self.List_Select.BP_OnItemClicked then
-      self.List_Select.BP_OnItemClicked:Clear()
-      self.List_Select.BP_OnItemClicked:Add(self, self.OnListItemClicked)
-    end
-    if self.List_Select.BP_OnItemIsHoveredChanged then
-      self.List_Select.BP_OnItemIsHoveredChanged:Add(self, self.OnItemIsHoverChanged)
-    end
-  end
-  if self.Sort then
-    if self.Sort.BindEventOnSelectionsChanged then
-      self.Sort:BindEventOnSelectionsChanged(self, self.OnSortListSelectionsChanged)
-    end
-    if self.Sort.BindEventOnSortTypeChanged then
-      self.Sort:BindEventOnSortTypeChanged(self, self.OnSortTypeChanged)
-    end
-  end
-  if self.EMListView_Filter then
-    if self.EMListView_Filter.BP_OnItemClicked then
-      self.EMListView_Filter.BP_OnItemClicked:Clear()
-      self.EMListView_Filter.BP_OnItemClicked:Add(self, self.OnFilterListItemClicked)
-    end
-    if self.EMListView_Filter.BP_OnEntryInitialized then
-      self.EMListView_Filter.BP_OnEntryInitialized:Add(self, self.OnFilterListItemInited)
-    end
-  end
+  SquadPresetUtils.BindSquadListEvents(self)
 end
 
 function Component:OnSlotClicked(SlotName, bIsInit)
@@ -187,39 +115,7 @@ function Component:ChangeEmptyTextBySlotType(SlotType)
 end
 
 function Component:InitSelectiveList()
-  self.OrderByDisplayNames = {
-    "UI_LEVEL_SELECT"
-  }
-  self.OrderByAttrNames = {
-    "Level",
-    "Rarity",
-    "SortPriority",
-    "UnitId"
-  }
-  self.PetOrderByAttrNames = {
-    "BreakNum",
-    "Level",
-    "Rarity",
-    "SortPriority",
-    "UnitId"
-  }
-  self.CharFilterTags, self.CharFilterNames = UIUtils.GetAllElementTypes()
-  self.CharFilterIcons = {}
-  for key, Tag in pairs(self.CharFilterTags) do
-    local IconName = "Armory_" .. Tag
-    table.insert(self.CharFilterIcons, "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
-  end
-  self.MeleeFilterTags, self.MeleeFilterNames, self.RangedFilterTags, self.RangedFilterNames = UIUtils.GetAllWeaponTags()
-  self.MeleeFilterIcons = {}
-  for _, Tag in ipairs(self.MeleeFilterTags) do
-    local Data = DataMgr.WeaponTag[Tag]
-    table.insert(self.MeleeFilterIcons, Data and Data.Icon)
-  end
-  self.RangedFilterIcons = {}
-  for _, Tag in ipairs(self.RangedFilterTags) do
-    local Data = DataMgr.WeaponTag[Tag]
-    table.insert(self.RangedFilterIcons, Data and Data.Icon)
-  end
+  SquadPresetUtils.InitSelectiveListMetadata(self)
 end
 
 function Component:InitWidget()
@@ -235,30 +131,7 @@ function Component:InitWidget()
 end
 
 function Component:ReInitListItems()
-  if not self.Slots[self.CurSlotName] then
-    return
-  end
-  local SlotWidget = self.Slots[self.CurSlotName]
-  local Uuid
-  if SlotWidget.Uuid then
-    Uuid = SlotWidget.Uuid
-  end
-  if self.CurSlotType == "Weapon" then
-    self["Current" .. self.CurWeaponType .. "Uuid"] = Uuid
-  else
-    self["Current" .. self.CurSlotType .. "Uuid"] = Uuid
-  end
-  local FuncName
-  if self.CurSlotType == "Weapon" then
-    FuncName = self.CurWeaponType .. "Main_Init"
-  else
-    FuncName = self.CurSlotType .. "Main_Init"
-  end
-  self:CallFunctionByName(FuncName)
-  if self.ItemDetailWidget then
-    self:InitItemDetailWidget()
-  end
-  self:FillSelectiveList()
+  SquadPresetUtils.ReInitLineupSelectiveList(self)
 end
 
 function Component:CharMain_Init(NeedInit)
@@ -283,9 +156,11 @@ function Component:CharMain_CreateItemContents()
   self.BP_CharItemContents:Clear()
   local Obj
   if self.TrialData.ShowOwned.Chars then
+    local MainPlayerCharId = AvatarUtils:GetMainPlayerCharacterAttributeCharId(Avatar)
     for Uuid, Char in pairs(Avatar.Chars) do
       local CharId = Char.CharId
-      if self:CheckInLimitList(CharId, self.LimitData and self.LimitData.LimitCharacters) then
+      local bSkipAltProtagonist = MainPlayerCharId and -1 ~= MainPlayerCharId and AvatarUtils:IsCharacterAttributeSwitchSameGroup(MainPlayerCharId, CharId) and MainPlayerCharId ~= CharId
+      if not bSkipAltProtagonist and self:CheckInLimitList(CharId, self.LimitData and self.LimitData.LimitCharacters) then
         Obj = self:NewItemContent(Char, CommonConst.ArmoryType.Char, CommonConst.ArmoryTag.Char)
         self.CharItemContentsMap[Uuid] = Obj
         self.BP_CharItemContents:Add(Obj)
@@ -387,7 +262,7 @@ function Component:PetMain_CreateItemContents()
 end
 
 function Component:CheckPetType(PetId)
-  return 1 == DataMgr.Pet[PetId].PetType
+  return SquadPresetUtils.CheckPetType(PetId)
 end
 
 function Component:PetMain_InitListView()
@@ -547,7 +422,7 @@ function Component:FillSelectiveList()
     FilterIcons = self[self.CurSlotType .. "FilterIcons"]
   end
   if FilterTags then
-    Filters = self:CreateFilters(FilterTags, FilterNames, FilterIcons)
+    Filters = SquadPresetUtils.CreateFilters(FilterTags, FilterNames, FilterIcons)
   end
   if self.EMListView_Filter then
     self.EMListView_Filter:ClearListItems()
@@ -618,40 +493,8 @@ function Component:FillListView()
   self:OnListInited(bListEmpty)
 end
 
-function Component:CreateFilters(InTags, InTexts, InIcons)
-  local Filters = {}
-  for i, _ in ipairs(InTags) do
-    table.insert(Filters, {
-      Tag = InTags[i],
-      Text = InTexts[i],
-      Icon = InIcons[i]
-    })
-  end
-  return Filters
-end
-
 function Component:PhantomWeaponTypeChanged(Type, IsPlaySound, bSlotChanged)
-  if "Ranged" ~= Type and "Melee" ~= Type then
-    DebugPrint("SquadBuildComponent:PhantomWeaponTypeChanged:传入武器类型无效,", Type)
-    return
-  end
-  if not bSlotChanged and not self:IsListAllowRefresh() then
-    return
-  end
-  if self.CurWeaponType then
-    if not bSlotChanged and Type == self.CurWeaponType then
-      return
-    end
-    if self.TypeTabs and self.TypeTabs[self.CurWeaponType] then
-      self.TypeTabs[self.CurWeaponType]:SetIsChecked(false)
-    end
-  end
-  if self.TypeTabs and self.TypeTabs[Type] then
-    self.TypeTabs[Type]:SetIsChecked(true, IsPlaySound)
-  end
-  self.CurWeaponType = Type
-  self.CurSlotType = self.CurWeaponType
-  self:ReInitListItems()
+  SquadPresetUtils.PhantomWeaponTypeChanged(self, Type, IsPlaySound, bSlotChanged, "SquadBuildComponent")
 end
 
 function Component:EquipItemToSlot(Content, ModIndex, NeedShowModIndexInfo)
@@ -695,6 +538,7 @@ function Component:EquipItemToSlot(Content, ModIndex, NeedShowModIndexInfo)
       end
       if CurContent then
         self:UpdateSlot(OtherSlotInfo.SlotName, CurContent)
+        self:HandleHyperWeaponConflictAfterEquip(OtherSlotInfo.SlotName, CurContent)
         self:SetContentIsChosen(CurContent, true)
       else
         self:ClearSlot(OtherSlotInfo.SlotName)
@@ -702,6 +546,7 @@ function Component:EquipItemToSlot(Content, ModIndex, NeedShowModIndexInfo)
       self:UpdateSlot(self.CurSlotName, Content)
       self:SetContentIsChosen(Content, true)
       self:UpdateCurrentUuid(Type, Content.Uuid)
+      self:HandleHyperWeaponConflictAfterEquip(self.CurSlotName, Content)
       if "Char" == Type then
         self:UpdateCharConflict()
       end
@@ -718,6 +563,7 @@ function Component:EquipItemToSlot(Content, ModIndex, NeedShowModIndexInfo)
   self:UpdateSlot(self.CurSlotName, Content)
   self:SetContentIsChosen(Content, true)
   self:UpdateCurrentUuid(Type, Content.Uuid)
+  self:HandleHyperWeaponConflictAfterEquip(self.CurSlotName, Content)
   if "Char" == Type then
     self:UpdateCharConflict()
   end
@@ -760,23 +606,13 @@ function Component:UpdateCharConflict()
   if not self.CharItemContentsArray then
     return
   end
-  local EquippedCharInfo = {}
-  for SlotName, SlotWidget in pairs(self.Slots) do
-    if SlotWidget and SlotWidget.Content then
-      local SlotType = Component.SlotName2Type[SlotName]
-      if "Char" == SlotType then
-        local Content = SlotWidget.Content
-        if Content and Content.CharId then
-          EquippedCharInfo[Content.CharId] = SlotName
-        end
-      end
-    end
-  end
+  local EquippedConflictKeyToSlot = SquadPresetUtils.BuildEquippedCharConflictKeyToSlot(self.Slots, Component.SlotName2Type)
   local CurSlotName = self.CurSlotName or Component.ESlotName.Null
   for _, Content in ipairs(self.CharItemContentsArray) do
     if Content and Content.CharId then
       local IsConflict = false
-      local EquippedSlotName = EquippedCharInfo[Content.CharId]
+      local Key = SquadPresetUtils.GetCharConflictKey(Content.CharId)
+      local EquippedSlotName = EquippedConflictKeyToSlot[Key]
       if EquippedSlotName and EquippedSlotName ~= CurSlotName then
         IsConflict = true
       end
@@ -792,13 +628,57 @@ function Component:UpdateCharConflict()
 end
 
 function Component:UpdateCurrentUuid(Type, Uuid)
-  if "Char" == Type then
-    self.CurrentCharUuid = Uuid
-  elseif "Pet" == Type then
-    self.CurrentPetUuid = Uuid
-  elseif "Melee" == Type or "Ranged" == Type then
-    self["Current" .. Type .. "Uuid"] = Uuid
+  SquadPresetUtils.UpdateCurrentUuidOnPage(self, Type, Uuid)
+end
+
+function Component:GetWeaponIdByContent(Content)
+  if not Content or Content.Type ~= CommonConst.ArmoryType.Weapon then
+    return nil
   end
+  if Content.IsTryout then
+    return Content.WeaponId
+  end
+  return Content.UnitId
+end
+
+function Component:IsHyperWeaponContent(Content)
+  local WeaponId = self:GetWeaponIdByContent(Content)
+  if not WeaponId then
+    return false
+  end
+  return HyperWeaponUtils.IsHyperWeapon(WeaponId)
+end
+
+function Component:GetHyperWeaponConflictSlotName(SlotName)
+  if SlotName == Component.ESlotName.MeleeWeapon then
+    return Component.ESlotName.RangedWeapon
+  end
+  if SlotName == Component.ESlotName.RangedWeapon then
+    return Component.ESlotName.MeleeWeapon
+  end
+  return nil
+end
+
+function Component:HandleHyperWeaponConflictAfterEquip(SlotName, Content)
+  if not self:IsHyperWeaponContent(Content) then
+    return
+  end
+  local ConflictSlotName = self:GetHyperWeaponConflictSlotName(SlotName)
+  if not ConflictSlotName or not self.Slots then
+    return
+  end
+  local ConflictSlotWidget = self.Slots[ConflictSlotName]
+  local ConflictContent = ConflictSlotWidget and ConflictSlotWidget.Content
+  if not ConflictContent or ConflictContent == Content or ConflictContent.Uuid == Content.Uuid then
+    return
+  end
+  if not self:IsHyperWeaponContent(ConflictContent) then
+    return
+  end
+  self:SetContentIsChosen(ConflictContent, false)
+  self:ClearSlot(ConflictSlotName)
+  self:UpdateCurrentUuid(Component.SlotName2Type[ConflictSlotName], nil)
+  UIManager():ShowUITip(UIConst.Tip_CommonToast, GText("UI_HyperWeapon_CannotEquipAtSameTime"))
 end
 
 function Component:SetContentIsChosen(Content, IsChosen)
@@ -842,17 +722,6 @@ function Component:PlayEquipSound(Type)
   AudioManager(self):PlayUISound(self, EquipSoundPaths[Type] or EquipSoundPaths.Default, nil, nil)
 end
 
-function Component.IsTryoutCmpFunc(a, b)
-  if a.IsTryout ~= b.IsTryout then
-    if a.IsTryout then
-      return true
-    else
-      return false
-    end
-  end
-  return nil
-end
-
 function Component:SortItemContents(InOutContentArray, SortByIdx, SortType)
   local FirstContent = self:GetCurrentContentForSort()
   local OrderByAttrNames
@@ -894,57 +763,13 @@ function Component:GetCurrentContentForSort()
 end
 
 function Component:FilterItemContents(InContentArray, FilterIdxes)
-  local SlotType = self.CurSlotType
-  local DataType = Component.SlotType2DataType[SlotType]
-  local FilteredItems = {}
-  local FilterFunc, FilterTags
-  if "Weapon" == SlotType then
-    FilterTags = self[self.CurWeaponType .. "FilterTags"]
+  local filterTags
+  if self.CurSlotType == "Weapon" then
+    filterTags = self[self.CurWeaponType .. "FilterTags"]
   else
-    FilterTags = self[SlotType .. "FilterTags"]
+    filterTags = self[self.CurSlotType .. "FilterTags"]
   end
-  if "Char" == DataType then
-    function FilterFunc(FilterTag, Content)
-      return FilterTag == Content.Attribute
-    end
-  elseif "Weapon" == DataType then
-    local Avatar = GWorld:GetAvatar()
-    
-    function FilterFunc(FilterTag, Content)
-      if Content.IsTryout then
-        local WeaponInfo = DataMgr.BattleWeapon[Content.WeaponId]
-        if WeaponInfo then
-          for _, Tag in ipairs(WeaponInfo.WeaponTag) do
-            if Tag == FilterTag then
-              return true
-            end
-          end
-        end
-        return false
-      else
-        local Weapon = Avatar.Weapons[Content.Uuid]
-        return Weapon and Weapon:HasTag(FilterTag)
-      end
-    end
-  elseif "Pet" == DataType then
-    function FilterFunc()
-      return true
-    end
-  end
-  if FilterFunc and FilterTags then
-    for _, Content in ipairs(InContentArray) do
-      if Content then
-        local ContentKey = Content.Uuid or tostring(Content)
-        for _, Idx in ipairs(FilterIdxes) do
-          if FilterTags[Idx] and FilterFunc(FilterTags[Idx], Content) then
-            table.insert(FilteredItems, Content)
-            break
-          end
-        end
-      end
-    end
-  end
-  return FilteredItems
+  return SquadPresetUtils.FilterItemContents(self.CurSlotType, self.CurWeaponType, filterTags, Component.SlotType2DataType, InContentArray, FilterIdxes)
 end
 
 function Component:OnItemIsHoverChanged(ItemContent, bHovered)
@@ -957,25 +782,11 @@ function Component:OnItemIsHoverChanged(ItemContent, bHovered)
 end
 
 function Component:OnSortListSelectionsChanged()
-  if not self.Sort then
-    return
-  end
-  local SortByIdx, SortType = self.Sort:GetSortInfos()
-  if self.SortItemContents then
-    self:SortItemContents(self.FilteredContents, SortByIdx, SortType)
-    self:FillListView()
-  end
+  SquadPresetUtils.OnSortListOrTypeChanged(self)
 end
 
 function Component:OnSortTypeChanged()
-  if not self.Sort then
-    return
-  end
-  local SortByIdx, SortType = self.Sort:GetSortInfos()
-  if self.SortItemContents then
-    self:SortItemContents(self.FilteredContents, SortByIdx, SortType)
-    self:FillListView()
-  end
+  SquadPresetUtils.OnSortListOrTypeChanged(self)
 end
 
 function Component:OnFilterListItemClicked(Content)
@@ -1118,163 +929,27 @@ function Component:CheckInLimitList(Id, LimitList)
 end
 
 function Component:NewItemContent(Target, Type, Tag)
-  local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = Target.Uuid
-  Obj.Type = Type
-  Obj.Tag = Tag
-  Obj.UnitId = Target[Type .. "Id"]
-  Obj.CharId = Obj.UnitId
-  Obj.UnitName = Target[Type .. "Name"]
-  Obj.Rarity = Target[Type .. "Rarity"]
-  Obj.Icon = Target:Data().Icon
-  Obj.GachaIcon = Target:Data().GachaIcon
-  Obj.Level = Target.Level
-  Obj.GradeLevel = Target.GradeLevel
-  Obj.IsTryout = false
-  Obj.bIsHoverState = true
-  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
-  Obj.Attribute = DataMgr["Battle" .. Type][Obj.UnitId].Attribute
-  local Element = DataMgr["Battle" .. Type][Obj.UnitId].Attribute
-  if Element then
-    local IconName = "Armory_" .. Element
-    Obj.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
-  end
-  Obj.SortPriority = Target:Data().SortPriority or 0
-  return Obj
+  return SquadPresetUtils.NewItemContent(Target, Type, Tag)
 end
 
 function Component:NewPetItemContent(Target)
-  local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = Target.UniqueId
-  Obj.Type = CommonConst.ArmoryType.Pet
-  Obj.Tag = CommonConst.ArmoryType.Pet
-  Obj.UnitId = Target.PetId
-  local Data = DataMgr.Pet[Obj.UnitId]
-  Obj.UnitName = Data.Name
-  Obj.Rarity = Data.Rarity
-  Obj.Icon = Data.Icon
-  Obj.Level = Target.Level
-  Obj.BreakNum = Target.BreakNum
-  Obj.IsTryout = false
-  Obj.bIsHoverState = true
-  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
-  Obj.SortPriority = Data.SortPriority or 0
-  return Obj
+  return SquadPresetUtils.NewPetItemContent(Target)
 end
 
 function Component:NewTrialCharContent(RuleId)
-  if not RuleId or not DataMgr.CharTemplate[RuleId] then
-    return nil
-  end
-  local Template = DataMgr.CharTemplate[RuleId]
-  local CharId = Template.CharId
-  if not CharId then
-    return nil
-  end
-  local CharData = DataMgr.Char[CharId]
-  if not CharData then
-    return nil
-  end
-  local BattleCharData = DataMgr.BattleChar[CharId]
-  if not BattleCharData then
-    return nil
-  end
-  local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = RuleId
-  Obj.Type = CommonConst.ArmoryType.Char
-  Obj.Tag = CommonConst.ArmoryTag.Char
-  Obj.UnitId = RuleId
-  Obj.CharId = CharId
-  Obj.UnitName = CharData.CharName or BattleCharData.CharName
-  Obj.Rarity = CharData.CharRarity or BattleCharData.Rarity
-  Obj.Icon = CharData.Icon
-  Obj.GachaIcon = CharData.GachaIcon
-  Obj.Level = Template.CharLevel or 1
-  Obj.GradeLevel = 0
-  Obj.IsTryout = true
-  Obj.SquadBuildTryOutText = GText("UI_Wuyousheng_ArmoryTrial")
-  Obj.bIsHoverState = true
-  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
-  Obj.Attribute = BattleCharData.Attribute
-  local Element = BattleCharData.Attribute
-  if Element then
-    local IconName = "Armory_" .. Element
-    Obj.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
-  end
-  Obj.SortPriority = CharData.SortPriority or 0
-  return Obj
+  return SquadPresetUtils.NewTrialCharContent(RuleId, GText("UI_Wuyousheng_ArmoryTrial"))
 end
 
 function Component:NewTrialWeaponContent(RuleId, WeaponTag)
-  if not RuleId or not DataMgr.WeaponTemplate[RuleId] then
-    return nil
-  end
-  local Template = DataMgr.WeaponTemplate[RuleId]
-  local WeaponId = Template.WeaponId
-  if not WeaponId then
-    return nil
-  end
-  local WeaponData = DataMgr.Weapon[WeaponId]
-  if not WeaponData then
-    return nil
-  end
-  local BattleWeaponData = DataMgr.BattleWeapon[WeaponId]
-  if not BattleWeaponData then
-    return nil
-  end
-  local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = RuleId
-  Obj.Type = CommonConst.ArmoryType.Weapon
-  Obj.Tag = WeaponTag
-  Obj.UnitId = RuleId
-  Obj.UnitName = WeaponData.WeaponName or BattleWeaponData.Name
-  Obj.Rarity = WeaponData.WeaponRarity or BattleWeaponData.Rarity
-  Obj.Icon = WeaponData.Icon
-  Obj.GachaIcon = WeaponData.GachaIcon
-  Obj.Level = Template.WeaponLevel or 1
-  Obj.GradeLevel = 0
-  Obj.WeaponId = WeaponId
-  Obj.IsTryout = true
-  Obj.SquadBuildTryOutText = GText("UI_Wuyousheng_ArmoryTrial")
-  Obj.bIsHoverState = true
-  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
-  Obj.ItemId = WeaponId
-  local Element = BattleWeaponData.Attribute
-  if Element then
-    local IconName = "Armory_" .. Element
-    Obj.AttrIcon = "/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName
-  end
-  Obj.SortPriority = WeaponData.SortPriority or 0
-  return Obj
+  return SquadPresetUtils.NewTrialWeaponContent(RuleId, WeaponTag, GText("UI_Wuyousheng_ArmoryTrial"))
 end
 
 function Component:NewTrialPetContent(PetId)
-  if not PetId or not DataMgr.Pet[PetId] then
-    return nil
-  end
-  local PetData = DataMgr.Pet[PetId]
-  local Obj = NewObject(UIUtils.GetCommonItemContentClass())
-  Obj.Uuid = PetId
-  Obj.Type = CommonConst.ArmoryType.Pet
-  Obj.Tag = CommonConst.ArmoryType.Pet
-  Obj.UnitId = PetId
-  Obj.UnitName = PetData.Name
-  Obj.Rarity = PetData.Rarity
-  Obj.Icon = PetData.Icon
-  Obj.Level = 1
-  Obj.BreakNum = 0
-  Obj.IsTryout = true
-  Obj.SquadBuildTryOutText = GText("UI_Wuyousheng_ArmoryTrial")
-  Obj.bIsHoverState = true
-  Obj.ConfirmDesc = "UI_CTL_Add/Remove"
-  Obj.SortPriority = PetData.SortPriority or 0
-  return Obj
+  return SquadPresetUtils.NewTrialPetContent(PetId, GText("UI_Wuyousheng_ArmoryTrial"))
 end
 
 function Component:CallFunctionByName(FunctionName, ...)
-  if self[FunctionName] then
-    return self[FunctionName](self, ...)
-  end
+  return SquadPresetUtils.CallFunctionByName(self, FunctionName, ...)
 end
 
 function Component:GetCurrentContent()
@@ -1297,51 +972,11 @@ function Component:SetListAllowRefresh(bAllow)
 end
 
 function Component:GetTeamTable()
-  local TeamTable = {
-    Char = NullUUid,
-    MeleeWeapon = NullUUid,
-    RangedWeapon = NullUUid,
-    Phantom1 = NullUUid,
-    PhantomWeapon1 = NullUUid,
-    Phantom2 = NullUUid,
-    PhantomWeapon2 = NullUUid,
-    Pet = NullUnitId
-  }
-  for SlotName, SlotWidget in pairs(self.Slots) do
-    if SlotName ~= Component.ESlotName.Null and SlotWidget then
-      local Uuid = SlotWidget.Uuid
-      if Uuid then
-        TeamTable[SlotName] = Uuid
-      end
-    end
-  end
-  return TeamTable
+  return SquadPresetUtils.GetTeamTableFromSlots(self.Slots)
 end
 
 function Component:UpdateTeamIcons()
-  for SlotName, SlotWidget in pairs(self.Slots) do
-    if SlotWidget and SlotWidget.Uuid and not SlotWidget.IsEmpty then
-      local Type = Component.SlotName2Type[SlotName]
-      local IsPhantomWeapon = false
-      if "Weapon" == Type then
-        Type = SlotWidget.WeaponType or "Melee"
-        if Type ~= self.CurSlotType then
-        else
-          IsPhantomWeapon = true
-          elseif Type ~= self.CurSlotType then
-            goto lbl_52
-          end
-          if self[Type .. "ItemContentsMap"] then
-            local Content = self[Type .. "ItemContentsMap"][SlotWidget.Uuid]
-            if Content and IsPhantomWeapon then
-              local PhantomSlotName = SlotName - 1
-              local PhantomSlotWidget = self.Slots[PhantomSlotName]
-            end
-          end
-        end
-    end
-    ::lbl_52::
-  end
+  SquadPresetUtils.UpdateTeamIconsForPage(self)
 end
 
 function Component:ClearAllSlots()
@@ -1499,7 +1134,7 @@ function Component:GoToArmory()
       OnCloseDelegate = {
         self,
         function()
-          self:UpdateSquadModels()
+          self:OnArmoryDetailClosed()
         end
       }
     }
@@ -1570,46 +1205,46 @@ function Component:GoToArmory()
   UIManager(self):LoadUINew("ArmoryDetail", Params)
 end
 
-local function TableContains(Table, Value)
-  if type(Table) ~= "table" then
-    return Table == Value
-  end
-  for _, V in pairs(Table) do
-    if V == Value then
-      return true
+function Component:OnArmoryDetailClosed()
+  local CharSlotEnums = {
+    Component.ESlotName.Char,
+    Component.ESlotName.Phantom1,
+    Component.ESlotName.Phantom2
+  }
+  local Snapshot = {}
+  for _, EName in ipairs(CharSlotEnums) do
+    local Sw = self.Slots and self.Slots[EName]
+    if Sw and not Sw.IsEmpty and Sw.Content then
+      local C = Sw.Content
+      Snapshot[EName] = {
+        Uuid = C.Uuid,
+        IsTryout = C.IsTryout,
+        ModSuitIndex = C.ModSuitIndex
+      }
     end
   end
-  return false
+  self:CharMain_Init(true)
+  for _, EName in ipairs(CharSlotEnums) do
+    local Snap = Snapshot[EName]
+    if Snap then
+      local NewContent = self.CharItemContentsMap and self.CharItemContentsMap[Snap.Uuid]
+      if NewContent then
+        if Snap.ModSuitIndex then
+          NewContent.ModSuitIndex = Snap.ModSuitIndex
+        end
+        self:UpdateSlot(EName, NewContent)
+        self:SetContentIsChosen(NewContent, true)
+      else
+        self:ClearSlot(EName)
+      end
+    end
+  end
+  self:UpdateCharConflict()
+  self:UpdateSquadModels()
 end
 
 function Component:GetWeaponTypeList(WeaponIdList)
-  local MeleeWeaponList = {}
-  local RangedWeaponList = {}
-  if not WeaponIdList then
-    return MeleeWeaponList, RangedWeaponList
-  end
-  for _, WeaponId in pairs(WeaponIdList) do
-    local WeaponData = DataMgr.BattleWeapon[WeaponId]
-    local TemplateWeaponData = DataMgr.WeaponTemplate[WeaponId]
-    local WeaponType
-    if WeaponData then
-      WeaponType = WeaponData.WeaponTag
-    elseif TemplateWeaponData then
-      WeaponData = DataMgr.BattleWeapon[TemplateWeaponData.WeaponId]
-      if WeaponData then
-        WeaponType = WeaponData.WeaponTag
-      end
-    end
-    if WeaponType then
-      if TableContains(WeaponType, "Melee") then
-        MeleeWeaponList[#MeleeWeaponList + 1] = WeaponId
-      end
-      if TableContains(WeaponType, "Ranged") then
-        RangedWeaponList[#RangedWeaponList + 1] = WeaponId
-      end
-    end
-  end
-  return MeleeWeaponList, RangedWeaponList
+  return SquadPresetUtils.GetWeaponTypeList(WeaponIdList)
 end
 
 function Component:UpdateSquadModels()
@@ -1632,6 +1267,9 @@ function Component:UpdateSquadModels()
         Uuid = Content.Uuid
       }
       ActorController:ChangeCharModel(ProtagonistInfo, false, false, false, true)
+      if Content.IsTryout then
+        ActorController:ChangeCharAppearance({})
+      end
       self.Owner.ActorController:HidePlayerActor("SuqadRole", false)
       self.Owner.ActorController:FixedCameraTransTimeOnce(0)
       self.Owner.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, nil, nil)

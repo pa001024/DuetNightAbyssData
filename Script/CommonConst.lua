@@ -94,12 +94,13 @@ local CommonConst = {
     0,
     0
   },
+  ServerControlGameLevelType = {IronSurvival = true},
   DungeonUINameMap = {
     Survival = "DungenonSurviveFloat",
     SurvivalPro = "DungenonSurviveFloat",
     SurvivalMini = "DungenonSurviveFloat",
     SurvivalMiniPro = "DungenonSurviveFloat",
-    SurvivalUltra = "DungenonSurviveFloat",
+    IronSurvival = "DungenonSurviveFloat",
     Defence = "DungenonDefenseFloat",
     DefenceMove = "DungenonDefenseFloat",
     DefencePro = "DungenonDefenseProFloat",
@@ -151,7 +152,9 @@ local CommonConst = {
     HardBossDg = "HardBossDg",
     SoloRaid = "SoloRaid",
     AutoChess = "AutoChess",
-    SoloTreasure = "SoloTreasure"
+    SoloTreasure = "SoloTreasure",
+    RougePro = "RougePro",
+    AsyncCombat = "AsyncCombat"
   },
   SubRegionType = {Field = "field", Home = "home"},
   AvatarStatus = {
@@ -395,6 +398,7 @@ local CommonConst = {
   TargetTypeConsecutiveLoginDays = 10003,
   TargetTypeConsumeActionPoint = 10004,
   TargetTypeLoginDay = 10005,
+  TargetTypeConsecutiveLoginDayTargetCounter = 10006,
   TargetTypeAccumulatedNumberOfFriendsAdded = 10801,
   TargetTypeGetReource = 10101,
   TargetTypeCostResource = 10102,
@@ -502,6 +506,12 @@ local CommonConst = {
   TargetTypeFoolsDayLikeCount = 22010,
   TargetTypeFoolsDayMiniGameCount = 22011,
   TargetTypeFoolsDayCompleteMiniGameCount = 22012,
+  TargetTypeGuildUseRegionOnlineItem = 22201,
+  TargetTypeGuildChannelChat = 22202,
+  TargetTypeGuildMemberChat = 22203,
+  TargetTypeGuildWeeklyDungeon = 22204,
+  TargetTypeGuildMultiDungeon = 22205,
+  TargetTypeWeeklyScoreMax = 23002,
   MaxGradeLevel = 6,
   MailMaxDueTime = 9999,
   GMMailTimeLimit = 30,
@@ -590,7 +600,9 @@ local CommonConst = {
     17004,
     13002,
     13003,
-    14008
+    14008,
+    22204,
+    22205
   },
   TargetCheckFisrtAndLess = {10503, 10507},
   TargetCheckFisrtAndMore = {
@@ -738,6 +750,7 @@ local CommonConst = {
     Char = "Char",
     Skill = "Skill",
     Weapon = "Weapon",
+    HyperWeapon = "HyperWeapon",
     Trace = "Trace",
     Grade = "Grade",
     Mod = "Mod",
@@ -751,6 +764,7 @@ local CommonConst = {
     Ranged = "Ranged",
     Trace = "Trace",
     Grade = "Grade",
+    HyperGrade = "HyperGrade",
     Condemn = "Condemn",
     Prominent = "Prominent",
     UWeapon = "UWeapon",
@@ -900,6 +914,36 @@ local CommonConst = {
     ReadResource = 1005,
     Monster = 1006
   },
+  AppearanceCollectType = {
+    Skin = "Skin",
+    CharAccessory = "CharAccessory",
+    Hair = "Hair",
+    WeaponSkin = "WeaponSkin",
+    WeaponAccessory = "WeaponAccessory",
+    Mount = "Mount",
+    Resource = "Resource"
+  },
+  AppearanceCollectTypeEnum = {
+    Skin = 1,
+    CharAccessory = 2,
+    Hair = 3,
+    WeaponSkin = 4,
+    WeaponAccessory = 5,
+    Mount = 6,
+    Resource = 7
+  },
+  AppearanceScoreIndex = {
+    Skin = "Skin",
+    CharAccessory = "CharAccessory",
+    WeaponSkin = "WeaponSkin",
+    WeaponAccessory = "WeaponAccessory",
+    Mount = "Mount",
+    Resource = "Resource",
+    SkinDye = "SkinDye",
+    WeaponSkinDye = "WeaponSkinDye",
+    HairDye = "HairDye",
+    Total = "Total"
+  },
   ItemArchiveTypeList = {1, 2},
   ArchiveInfo_Weapon = {MaxEnhanceLevel = 1, MaxGradeLevel = 2},
   FishSizeScale = 10,
@@ -1024,7 +1068,14 @@ local CommonConst = {
     unlock = 1,
     doing = 2,
     finish = 3,
-    preQuest = 4
+    preQuest = 4,
+    stop = 5
+  },
+  QuestChapterState = {
+    NoneStart = 0,
+    Lock = 1,
+    Doing = 2,
+    Finish = 3
   },
   RecurringTaskState = {
     NotAccept = 0,
@@ -1050,6 +1101,7 @@ local CommonConst = {
   MESSAGE_TYPE_PRIVATE = 3,
   MESSAGE_TYPE_LEAGUE = 4,
   MESSAGE_TYPE_TEAM = 5,
+  MESSAGE_TYPE_GUILD = 6,
   MAX_MESSAGE_COUNT = 50,
   ChatChannel = {
     Name = 0,
@@ -1059,7 +1111,10 @@ local CommonConst = {
     Friend = 4,
     RegionOnline = 5,
     SettlementOnline = 6,
-    Signature = 7
+    Signature = 7,
+    InGuild = 8,
+    GuildRecruitment = 9,
+    GuildName = 10
   },
   INIT_WORLD_CHANNEL_COUNT = 1,
   MAX_WORLD_CHANNEL_MEMBER = 200,
@@ -1098,7 +1153,11 @@ local CommonConst = {
     "HeadFrameId",
     "TitleBefore",
     "TitleAfter",
-    "TitleFrame"
+    "TitleFrame",
+    "GuildId",
+    "GuildSimpleInfo",
+    "GuildActivityLevel",
+    "AvatarStatus"
   },
   RMN2GiftQuota = 10,
   GIFT_MAIL_CONTENT_MAX_LEN = 500,
@@ -1234,7 +1293,9 @@ local CommonConst = {
     "#session_id",
     "#device_model",
     "#app_version_code",
-    "#brand"
+    "#brand",
+    "#odid",
+    "#aaid"
   },
   SaLogUserProperties = {
     "#user_ip",
@@ -1261,7 +1322,9 @@ local CommonConst = {
     "#device_model",
     "#app_version_code",
     "#brand",
-    "#cloud_app_msg"
+    "#cloud_app_msg",
+    "#odid",
+    "#aaid"
   },
   SaLogTrackNeedWeGame = {
     "user_login",
@@ -1279,7 +1342,8 @@ local CommonConst = {
     Mod = "Mod",
     Weapon = "Weapon",
     Resource = "Resource",
-    Char = "Char"
+    Char = "Char",
+    IronTicket = "IronTicket"
   },
   BagResourceType = {
     Weapon = 1,
@@ -1484,7 +1548,9 @@ CommonConst.MonitorCheatType = {
   Mouse = 8,
   Keyboard = 9,
   Raid = 11,
-  DungeonReward = 12
+  DungeonReward = 12,
+  UnreleasedChar = 13,
+  MonsterLevel = 14
 }
 CommonConst.MonitorReportPeriod = 1
 CommonConst.MonitorCheatPeriod = {
@@ -1522,7 +1588,11 @@ CommonConst.TheaterPerformGameState = {
   Settle = 3
 }
 CommonConst.RankType = {PreRaidRank = 1, RaidRank = 2}
-CommonConst.CommonQuestType = {Normal = 1, Daily = 2}
+CommonConst.CommonQuestType = {
+  Normal = 1,
+  Daily = 2,
+  Weekly = 3
+}
 CommonConst.TheaterDonationRefreshCD = 3
 CommonConst.PlayerTag = {
   New = 1,
@@ -1540,4 +1610,25 @@ CommonConst.RegionOnlineState = {
 }
 CommonConst.WeaponSubType = {Normal = "Normal", Hyper = "Hyper"}
 CommonConst.SynthesisIIHostageUnitId = 7017051
+CommonConst.AsyncCombatRoomPermission = {
+  Public = 1,
+  FriendVisible = 2,
+  GuildVisible = 3,
+  InviteOnly = 4
+}
+CommonConst.AsyncCombatRewardState = {
+  CannotClaim = 0,
+  CanClaim = 1,
+  Claimed = 2
+}
+CommonConst.DungeonSyncMsg = {
+  AsyncCombatBossDamage = "AsyncCombatBossDamage",
+  AsyncCombatQueryState = "AsyncCombatQueryState",
+  AsyncCombatBossDead = "AsyncCombatBossDead",
+  AsyncCombatBattleStateUpdate = "AsyncCombatBattleStateUpdate",
+  AsyncCombatRoomStateUpdate = "AsyncCombatRoomStateUpdate",
+  AsyncCombatRoomPass = "AsyncCombatRoomPass",
+  AsyncCombatRoomClose = "AsyncCombatRoomClose"
+}
+CommonConst.GatherTargets = {CDTime = 1, MaxPerFrame = 5}
 return CommonConst

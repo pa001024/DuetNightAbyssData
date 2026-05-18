@@ -285,7 +285,7 @@
     "desc": "창공을 엮어 만든 매듭. 휘두를 때마다 푸른빛이 일렁인다.",
     "icon": "T_Fashion_Weapon38_02",
     "rarity": 5,
-    "unlock": "이벤트를 통해 획득"
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 10037,
@@ -293,7 +293,7 @@
     "desc": "창공을 엮어 만든 매듭. 휘두를 때마다 푸른빛이 일렁인다.",
     "icon": "T_Fashion_Weapon38_01",
     "rarity": 5,
-    "unlock": "이벤트를 통해 획득"
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 10038,
@@ -301,7 +301,7 @@
     "desc": "창공을 엮어 만든 매듭. 휘두를 때마다 푸른빛이 일렁인다.",
     "icon": "T_Fashion_Weapon38_03",
     "rarity": 5,
-    "unlock": "이벤트를 통해 획득"
+    "unlock": "상점을 통해 획득"
   },
   {
     "id": 10039,
@@ -352,10 +352,98 @@
     "unlock": "프리즘 교환으로 획득"
   },
   {
+    "id": 10045,
+    "name": "천공의 눈물·러스트 레드",
+    "desc": "맑고 성스러운 빛이, 결정처럼 굳어진 연민을 감싼다.",
+    "icon": "T_Fashion_Weapon41_03",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10046,
+    "name": "천공의 눈물·보라",
+    "desc": "맑고 성스러운 빛이, 결정처럼 굳어진 연민을 감싼다.",
+    "icon": "T_Fashion_Weapon41_02",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10047,
+    "name": "천공의 눈물·스카이 블루",
+    "desc": "맑고 성스러운 빛이, 결정처럼 굳어진 연민을 감싼다.",
+    "icon": "T_Fashion_Weapon41_01",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10048,
+    "name": "영원의 꽃·러스트 레드",
+    "desc": "화려함은 찰나일 뿐, 오직 죽음만이 영원할지어다.",
+    "icon": "T_Fashion_Weapon40_03",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10049,
+    "name": "영원의 꽃·벚꽃",
+    "desc": "화려함은 찰나일 뿐, 오직 죽음만이 영원할지어다.",
+    "icon": "T_Fashion_Weapon40_02",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10050,
+    "name": "영원의 꽃·제트 블랙",
+    "desc": "화려함은 찰나일 뿐, 오직 죽음만이 영원할지어다.",
+    "icon": "T_Fashion_Weapon40_01",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 10051,
+    "name": "앵그리 덕·아이보리",
+    "desc": "슈우욱——꽥!",
+    "icon": "T_Fashion_Weapon42_04",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10052,
+    "name": "앵그리 덕·오렌지",
+    "desc": "슈우욱——꽥!",
+    "icon": "T_Fashion_Weapon42_03",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10053,
+    "name": "앵그리 덕·비취",
+    "desc": "슈우욱——꽥!",
+    "icon": "T_Fashion_Weapon42_02",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 10054,
+    "name": "앵그리 덕·캐러멜",
+    "desc": "슈우욱——꽥!",
+    "icon": "T_Fashion_Weapon42_01",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 20001,
     "name": "폭렬 그라피티",
     "desc": "패턴 악마의 쐐기 절단의 포효에 사용된다.",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "프리즘 교환으로 획득"
+  },
+  {
+    "id": 30001,
+    "name": "비상하는 용",
+    "desc": "패턴 악마의 쐐기 비상하는 용에 사용된다.",
+    "icon": "T_Fashion_Fx21",
     "rarity": 5,
     "unlock": "프리즘 교환으로 획득"
   }

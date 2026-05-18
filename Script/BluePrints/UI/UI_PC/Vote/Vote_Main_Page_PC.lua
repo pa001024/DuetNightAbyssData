@@ -31,6 +31,7 @@ function M:Construct()
   self.bCanAutoFocus = false
   self.SelectContinue = nil
   self.SelfPlayerEid = UGameplayStatics.GetPlayerCharacter(self, 0).Eid
+  self:InitCustomDisplayType()
   self:SetCurrentWave()
   self:StartCountDown()
   self:SetPlayerInfo()
@@ -82,6 +83,31 @@ function M:Construct()
   self.CurMode = self.GameInputModeSubsystem:GetCurrentInputType()
   self:RefreshInfoByInputTypeChange(self.CurMode)
   self:InitAutoVote()
+  self:InitIronSurvivalInfo()
+end
+
+function M:InitCustomDisplayType()
+  if GameState(self).GameModeType == "IronSurvival" then
+    self.IsType_IronSurvival = true
+  end
+end
+
+function M:InitIronSurvivalInfo()
+  if not self.IsType_IronSurvival then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  local DungeonId = GameState(self).DungeonId or 0
+  if not Avatar or not Avatar.Dungeons[DungeonId] then
+    return
+  end
+  local MonsterLevelDropId = Avatar.Dungeons[DungeonId].IronSurvivalDropId or -1
+  local DisplayResourceId = DataMgr.MonsterLevelDrop[MonsterLevelDropId] and DataMgr.MonsterLevelDrop[MonsterLevelDropId].MonsterLevelDropView or -1
+  print(_G.LogTag, "LXZ InitIronSurvivalInfo MonsterLevelDropId", MonsterLevelDropId, "  DisplayResourceId", DisplayResourceId)
+  self.IronSurvivalTips = self:CreateWidgetNew("VoteIronExpTips")
+  self.IronSurvivalTips:Init(DisplayResourceId)
+  self.IronExpAnchor:AddChildToOverlay(self.IronSurvivalTips)
+  self.IronExpAnchor:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
 end
 
 function M:InitAutoVote()

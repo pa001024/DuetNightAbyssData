@@ -250,7 +250,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasureId = 100130,
     TreasureRarity = 6,
     TreasureType = 5,
-    TreasureValue = 0
+    TreasureValue = 100
   },
   [100131] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_28.T_Activity_SoloTreasure_28",
@@ -260,7 +260,7 @@ return ReadOnly("ExtractionTreasure", {
     TreasureId = 100131,
     TreasureRarity = 6,
     TreasureType = 5,
-    TreasureValue = 0
+    TreasureValue = 100
   },
   [100132] = {
     Icon = "/Game/UI/Texture/Dynamic/Image/Prop/Activity/SoloTreasure/T_Activity_SoloTreasure_29.T_Activity_SoloTreasure_29",
@@ -270,6 +270,6 @@ return ReadOnly("ExtractionTreasure", {
     TreasureId = 100132,
     TreasureRarity = 6,
     TreasureType = 5,
-    TreasureValue = 0
+    TreasureValue = 100
   }
 })

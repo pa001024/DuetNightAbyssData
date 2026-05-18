@@ -1,5 +1,4 @@
 local CountTrigger_C = require("BluePrints.Story.Talk.Controller.CountTrigger")
-local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ETalkNodeFinishType
 local TalkWaitQueueManager_C = require("BluePrints.Story.Talk.Controller.TalkWaitQueue").TalkWaitQueueManager_C
 local TalkTimerManager_C = require("BluePrints.Story.Talk.Controller.TalkTimer").TalkTimerManager_C
@@ -12,14 +11,6 @@ local FTalkTriggerComponent = require("BluePrints.Story.Talk.Component.TalkTrigg
 local TimeUtil = require("Utils.TimeUtils")
 local MiscUtils = require("Utils.MiscUtils")
 local TalkLogType = UE4.EStoryLogType.Talk
-local WaitQueueTag = {
-  LoadLevel = "LoadLevel",
-  CameraBlend = "CameraBlend",
-  DelayTime = "DelayTime",
-  CreateActors = "CreateActors",
-  TalkNpcRotateToPlayer = "TalkNpcRotateToPlayer",
-  PlayerMove = "PlayerMove"
-}
 local PlayerCharClass = LoadClass("/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C")
 local TalkActorData_C = {}
 
@@ -62,7 +53,6 @@ function BP_TalkContext_C:Initialize(Initializer)
   self.SimpleBlackUI = nil
   self.CinematicBlackUI = nil
   self.DialogueBlackUI = nil
-  self.InTalkActorVisibility = {}
   self.bUseMobileTalkUI_Debug = false
   self.FadeOutTimerInterval = 0.1
   self.TalkNodes = {}
@@ -119,13 +109,11 @@ function BP_TalkContext_C:CreateTalkActors(TalkTask, CreateInfos, DefaultCreateL
   })
   for _, CreateInfo in ipairs(CreateInfos) do
     if CreateInfo.TalkActorType == "Player" then
-      self:RecordInShowActorVisibility(self.Player, CreateInfo.TalkActorVisible)
       self:AddTalkActor(TalkTask, CreateInfo.TalkActorType, CreateInfo.TalkActorId, self.Player, true)
       CountTrigger:CountIncrement()
     elseif CreateInfo.TalkActorType == "Npc" then
       GameState:GetNpcInfoAsync(CreateInfo.TalkActorId, function(Npc)
         if IsValid(Npc) then
-          self:RecordInShowActorVisibility(Npc, CreateInfo.TalkActorVisible)
           self:AddTalkActor(TalkTask, CreateInfo.TalkActorType, CreateInfo.TalkActorId, Npc, true)
           CountTrigger:CountIncrement()
         elseif bOnlyFindActor then
@@ -140,7 +128,6 @@ function BP_TalkContext_C:CreateTalkActors(TalkTask, CreateInfos, DefaultCreateL
           Context.BoolParams:Add("InStory", true)
           Context.IntParams:Add("RegionDataType", 0)
           Context.OnUnitInitCreateReadyDynamic:Add(self, function(_, NewNpc)
-            self:RecordInShowActorVisibility(NewNpc, CreateInfo.TalkActorVisible)
             self:AddTalkActor(TalkTask, CreateInfo.TalkActorType, CreateInfo.TalkActorId, NewNpc, false)
             CountTrigger:CountIncrement()
           end)
@@ -198,7 +185,10 @@ function BP_TalkContext_C:AddTalkActor(TalkTask, UnitType, UnitId, Unit, bIsExte
   if TalkTask.TalkActorDatas[UnitId] then
     return
   end
-  Unit:PreEnterStory({}, TalkTask.TalkTaskData.TalkType == "Cinematic", TalkTask.TalkTaskData.bPauseNpcBT)
+  if TalkTask.TalkTaskData.BasicTalkType == "Cinematic" and Unit:IsA(UE4.ANpcCharacter) and Unit:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
+    Unit:TriggerKawaiiLayerLink(false)
+  end
+  Unit:PreEnterStory({}, TalkTask.TalkTaskData.BasicTalkType == "Cinematic", TalkTask.TalkTaskData.bPauseNpcBT)
   TalkTask.TalkActorDatas[UnitId] = TalkActorData_C.New(Unit, UnitType, UnitId, bIsExternal)
 end
 
@@ -208,8 +198,12 @@ function BP_TalkContext_C:RemoveTalkActor(TalkTask, UnitId)
   if not Data then
     return
   end
-  if IsValid(Data.TalkActor) then
-    Data.TalkActor:PreExitStory({}, TalkTask.TalkTaskData.bPauseNpcBT, Data.bIsExternal)
+  local Unit = Data.TalkActor
+  if IsValid(Unit) then
+    if TalkTask.TalkTaskData.BasicTalkType == "Cinematic" and Unit:IsA(UE4.ANpcCharacter) and Unit:JudgeSkinType() == UE4.ESkinType.DefaultSkin then
+      Unit:TriggerKawaiiLayerLink(true)
+    end
+    Unit:PreExitStory({}, TalkTask.TalkTaskData.bPauseNpcBT, Data.bIsExternal)
   end
   TalkTask.TalkActorDatas[UnitId] = nil
 end
@@ -1045,24 +1039,6 @@ function BP_TalkContext_C:TalkShowUITip(TipType, ...)
   end
 end
 
-function BP_TalkContext_C:OnTalkStart()
-  self.InTalkActorVisibility = {}
-end
-
-function BP_TalkContext_C:OnTalkEnd()
-  self.InTalkActorVisibility = {}
-end
-
-function BP_TalkContext_C:RecordInShowActorVisibility(Actor, bVisible)
-  self.InTalkActorVisibility[Actor] = bVisible
-end
-
-function BP_TalkContext_C:ShowHideInTalkActors()
-  for Actor, Visible in pairs(self.InTalkActorVisibility) do
-    self:ShowHideActor(Actor, Visible)
-  end
-end
-
 function BP_TalkContext_C:ShowHideActor(Actor, bShow)
   if not IsValid(Actor) then
     return
@@ -1163,12 +1139,15 @@ function BP_TalkContext_C:ShowCinematicVideoUI(bShow)
   end
 end
 
-local NPC_STAND_RADIUS = 150
-local NPC_COLLISION_RADIUS = 80
+local NPC_COLLISION_RADIUS = 50
+local NPC_COLLISION_HALF_HEIGHT = 80
+local NPC_OVERLAP_DEBUG_COLOR_HIT = FLinearColor(1, 0, 1)
+local NPC_OVERLAP_DEBUG_COLOR_CLEAR = FLinearColor(1, 1, 1)
 
 function BP_TalkContext_C:GetNPCStandPositions(CenterActor, Count, bEnableVisualization)
   local ResultPoints = {}
   Count = tonumber(Count)
+  local NPC_STAND_RADIUS = DataMgr.GlobalConstant.FreeSimpleActorRadius.ConstantValue
   if not IsValid(CenterActor) or Count <= 0 then
     DebugPrint("GetNPCStandPositions", "invalid input", CenterActor, Count)
     return ResultPoints
@@ -1220,7 +1199,7 @@ function BP_TalkContext_C:GetNPCStandPositions(CenterActor, Count, bEnableVisual
   local Queue = {}
   local Visited = {}
   for _, Point in ipairs(IdealPoints) do
-    local ValidPoint = self:GetValidStandPoint(Point, UsedPoints)
+    local ValidPoint = self:GetValidStandPoint(Point, UsedPoints, bEnableVisualization)
     if ValidPoint then
       DebugPrint("GetNPCStandPositions", "IdealPoint hit", Point, ValidPoint)
       table.insert(ResultPoints, ValidPoint)
@@ -1235,7 +1214,7 @@ function BP_TalkContext_C:GetNPCStandPositions(CenterActor, Count, bEnableVisual
   end
   for _, Point in ipairs(MissedIdealPoints) do
     DebugPrint("GetNPCStandPositions", "IdealPoint miss, searching", Point)
-    local BestAlt = self:FindBestStandPoint(Point, CenterLoc, Forward, UsedPoints, bEnableVisualization)
+    local BestAlt = self:FindBestStandPoint(Point, CenterLoc, NPC_STAND_RADIUS, Forward, UsedPoints, bEnableVisualization)
     if BestAlt then
       DebugPrint("GetNPCStandPositions", "Search hit", Point, BestAlt)
       table.insert(ResultPoints, BestAlt)
@@ -1248,10 +1227,17 @@ function BP_TalkContext_C:GetNPCStandPositions(CenterActor, Count, bEnableVisual
     end
   end
   DebugPrint("GetNPCStandPositions", "result", #ResultPoints)
+  for i = 1, Count do
+    if not ResultPoints[i] then
+      local Message = string.format("NPC站位未找到合法位置, 站位序号：%d, 将创建至玩家位置", i)
+      UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, TalkLogType, "创建环绕NPC站位无效", Message)
+      ResultPoints[i] = CenterLoc
+    end
+  end
   return ResultPoints
 end
 
-function BP_TalkContext_C:FindBestStandPoint(IdealPoint, CenterLoc, Forward, UsedPoints, bEnableVisualization)
+function BP_TalkContext_C:FindBestStandPoint(IdealPoint, CenterLoc, Radius, Forward, UsedPoints, bEnableVisualization)
   local RadiusDeltas = {
     0,
     100,
@@ -1275,7 +1261,7 @@ function BP_TalkContext_C:FindBestStandPoint(IdealPoint, CenterLoc, Forward, Use
   local MaxSteps = math.floor(180 / AngleStep)
   local Debug = true == bEnableVisualization
   for _, DeltaR in ipairs(RadiusDeltas) do
-    local SearchRadius = NPC_STAND_RADIUS + DeltaR
+    local SearchRadius = Radius + DeltaR
     if SearchRadius >= 100 then
       local PassCount = 1
       if 0 == DeltaR then
@@ -1305,7 +1291,7 @@ function BP_TalkContext_C:FindBestStandPoint(IdealPoint, CenterLoc, Forward, Use
             local Dot = UKismetMathLibrary.Dot_VectorVector(Dir, Forward2D)
             if DotLimit >= Dot then
               local CandidatePos = CenterLoc + Dir * SearchRadius
-              local ValidPoint = self:GetValidStandPoint(CandidatePos, UsedPoints)
+              local ValidPoint = self:GetValidStandPoint(CandidatePos, UsedPoints, bEnableVisualization)
               if ValidPoint then
                 DebugPrint("GetNPCStandPositions", "Candidate valid", CandidatePos, ValidPoint, Dot, SearchRadius)
                 if Debug then
@@ -1326,8 +1312,9 @@ function BP_TalkContext_C:FindBestStandPoint(IdealPoint, CenterLoc, Forward, Use
   return nil
 end
 
-function BP_TalkContext_C:GetValidStandPoint(Point, UsedPoints)
+function BP_TalkContext_C:GetValidStandPoint(Point, UsedPoints, bEnableVisualization)
   DebugPrint("GetNPCStandPositions", "GetValidStandPoint start", Point)
+  local Debug = true == bEnableVisualization
   local NavPoint = UNavigationFunctionLibrary.ProjectPointToNavigation3D(Point, self)
   if not NavPoint then
     DebugPrint("GetNPCStandPositions", "GetValidStandPoint nav fail", Point)
@@ -1340,23 +1327,27 @@ function BP_TalkContext_C:GetValidStandPoint(Point, UsedPoints)
   end
   for _, Used in ipairs(UsedPoints) do
     local Dist = FVector.Dist(NavPoint, Used)
-    if Dist < 50 then
+    if Dist < 2 * NPC_COLLISION_RADIUS then
       DebugPrint("GetNPCStandPositions", "GetValidStandPoint too close", NavPoint, Used, Dist)
       return nil
     end
   end
-  local ObjectTypes = {
-    EObjectTypeQuery.Pawn
-  }
+  local ObjectTypes = TArray(EObjectTypeQuery)
+  ObjectTypes:Add(EObjectTypeQuery.Pawn)
+  ObjectTypes:Add(EObjectTypeQuery.MonsterPawn)
+  ObjectTypes:Add(EObjectTypeQuery.Vehicle)
   local OverlapActors = TArray(AActor)
   local NavPointZ = NavPoint.Z
   NavPoint.Z = Point.Z
-  local bOverlap = UKismetSystemLibrary.SphereOverlapActors(self, NavPoint, NPC_COLLISION_RADIUS, ObjectTypes, nil, {}, OverlapActors)
+  local bOverlap = UKismetSystemLibrary.CapsuleOverlapActors(self, NavPoint, NPC_COLLISION_RADIUS, NPC_COLLISION_HALF_HEIGHT, ObjectTypes, nil, {}, OverlapActors)
+  local DebugColor = bOverlap and NPC_OVERLAP_DEBUG_COLOR_HIT or NPC_OVERLAP_DEBUG_COLOR_CLEAR
+  if Debug then
+  end
+  NavPoint.Z = NavPointZ
   if bOverlap then
     DebugPrint("GetNPCStandPositions", "GetValidStandPoint overlap", NavPoint, OverlapActors:Num())
     return nil
   end
-  NavPoint.Z = NavPointZ
   DebugPrint("GetNPCStandPositions", "GetValidStandPoint ok", NavPoint)
   return NavPoint
 end

@@ -132,5 +132,45 @@ return ReadOnly("DailyPack", {
     },
     RewardMailId = 10037,
     RewardPeriod = 5
+  },
+  [9007] = {
+    BannerCharId = 1102,
+    BannerId = 407,
+    BuyReward = 12165,
+    DailyPackId = 9007,
+    GoodsId = "com.hero.dna.Pay_DailyCharaShards_fuluola",
+    LoginRequire = T.RT_1,
+    MainRewardCount = 1,
+    MainRewardId = 12165,
+    Name = "DailyPack_Name_1",
+    Reward = {
+      [1] = 12195,
+      [2] = 12195,
+      [3] = 12195,
+      [4] = 12195,
+      [5] = 12195
+    },
+    RewardMailId = 10037,
+    RewardPeriod = 5
+  },
+  [9008] = {
+    BannerCharId = 3102,
+    BannerId = 456,
+    BuyReward = 12165,
+    DailyPackId = 9008,
+    GoodsId = "com.hero.dna.Pay_DailyCharaShards_xiertan",
+    LoginRequire = T.RT_1,
+    MainRewardCount = 1,
+    MainRewardId = 12165,
+    Name = "DailyPack_Name_1",
+    Reward = {
+      [1] = 12196,
+      [2] = 12196,
+      [3] = 12196,
+      [4] = 12196,
+      [5] = 12196
+    },
+    RewardMailId = 10037,
+    RewardPeriod = 5
   }
 })

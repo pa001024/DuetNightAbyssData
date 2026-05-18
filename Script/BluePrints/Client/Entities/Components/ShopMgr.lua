@@ -213,7 +213,7 @@ function Component:PurchaseShopItem(ShopItemId, Count, NotShow, PurchaseCallback
       if not NotShow then
         UIManager(GWorld.GameInstance):UnLoadUI("ShopItemSingle")
         UIManager(GWorld.GameInstance):UnLoadUI("ShopItemPackage")
-        UIUtils.ShowGetItemPageAndOpenBagIfNeeded(ShopItemData.ItemType, ShopItemData.TypeId, ShopItemData.TypeNum * Count, PackRewards, ShopItemData.IsSpPopup, nil, nil)
+        UIUtils.ShowGetItemPage(ShopItemData.ItemType, ShopItemData.TypeId, ShopItemData.TypeNum * Count, PackRewards, ShopItemData.IsSpPopup, nil, nil)
       end
       EventManager:FireEvent(EventID.OnPurchaseShopItemSuccess, Ret, ShopItemData.TypeId, Count, PackRewards)
     else

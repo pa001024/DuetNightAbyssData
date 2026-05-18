@@ -78,30 +78,6 @@ function M:InitBossInfo()
     return
   end
   local BossName = GText(HardBossMainData.HardBossName)
-  local ProcessUnitNameSet = {UI_HardBoss_Name_4 = true, UI_HardBoss_Name_5 = true}
-  
-  local function utf8_chars(str)
-    if type(str) ~= "string" then
-      return {}
-    end
-    local t = {}
-    for uchar in str:gmatch("[\000-\127¬-Ù][Ä-ø]*") do
-      table.insert(t, uchar)
-    end
-    return t
-  end
-  
-  if type(BossName) == "string" and ProcessUnitNameSet[HardBossMainData.HardBossName] then
-    local chars = utf8_chars(BossName)
-    local charCount = #chars
-    if charCount >= 2 and "‚Äú" == chars[1] and "‚Äù" == chars[charCount] then
-      local newChars = {}
-      for i = 2, charCount - 1 do
-        table.insert(newChars, chars[i])
-      end
-      BossName = table.concat(newChars)
-    end
-  end
   local LevelType = GText(HardBossDifficultyData.DifficultyDesOpen)
   local LevelNum = string.format("%s%s", GText("BATTLE_UI_BLOOD_LV"), HardBossDifficultyData.DifficultyLevel)
   TitleWidget:SetBossENNameVisibilityByLanguage(CommonConst.SystemLanguage)

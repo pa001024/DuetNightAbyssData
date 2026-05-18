@@ -267,6 +267,258 @@
     "singleCreate": false
   },
   {
+    "id": 2015,
+    "name": "站前穹顶（待包装）",
+    "icon": "T_Gp_Station",
+    "pos": [
+      1831,
+      -419
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [
+      106001
+    ],
+    "telepointId": 1011,
+    "teleportPointPos": 38,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 332,
+    "manualItemId": 119005,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2016,
+    "name": "冰湖城週邊",
+    "icon": "T_Gp_IceLake",
+    "pos": [
+      4354,
+      10
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [
+      101101
+    ],
+    "telepointId": 1600,
+    "teleportPointPos": 1,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": 332,
+    "manualItemId": 248006,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2017,
+    "name": "锻铁厂下层（待包装）",
+    "icon": "T_Gp_Leave",
+    "pos": [
+      -6503,
+      6478
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [
+      106301
+    ],
+    "telepointId": 1600,
+    "teleportPointPos": 11,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": 333,
+    "manualItemId": 248026,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2018,
+    "name": "锻铁厂上层（待包装）",
+    "icon": "T_Gp_Leave",
+    "pos": [
+      -16222,
+      4887
+    ],
+    "subRegion": 106301,
+    "targetSubRegion": [
+      106001
+    ],
+    "telepointId": 1601,
+    "teleportPointPos": 6,
+    "teleportSubRegion": 106301,
+    "unlockConditionId": 333,
+    "manualItemId": 289002,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2019,
+    "name": "地下轨道（待包装）",
+    "icon": "T_Gp_Leave",
+    "pos": [
+      -17163,
+      4858
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [
+      106301
+    ],
+    "telepointId": 1600,
+    "teleportPointPos": 13,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": 333,
+    "manualItemId": 248027,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2020,
+    "name": "站厅（待包装）",
+    "icon": "T_Gp_Leave",
+    "pos": [
+      -38472,
+      -6892
+    ],
+    "subRegion": 106301,
+    "targetSubRegion": [
+      106001
+    ],
+    "telepointId": 1601,
+    "teleportPointPos": 8,
+    "teleportSubRegion": 106301,
+    "unlockConditionId": 333,
+    "manualItemId": 289004,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2021,
+    "name": "站前穹顶（待包装）",
+    "icon": "T_Gp_Leave",
+    "pos": [
+      -4983,
+      6458
+    ],
+    "subRegion": 106301,
+    "targetSubRegion": [
+      106001
+    ],
+    "telepointId": 1601,
+    "teleportPointPos": 5,
+    "teleportSubRegion": 106301,
+    "unlockConditionId": 333,
+    "manualItemId": 289001,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2022,
+    "name": "站前穹顶（待包装）",
+    "icon": "T_Gp_Leave",
+    "pos": [
+      -17332,
+      4867
+    ],
+    "subRegion": 106301,
+    "targetSubRegion": [
+      106001
+    ],
+    "telepointId": 1602,
+    "teleportPointPos": 7,
+    "teleportSubRegion": 106301,
+    "unlockConditionId": 333,
+    "manualItemId": 289005,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2023,
+    "name": "UI_SUBREGION_NAME_106305",
+    "icon": "T_Gp_Leave",
+    "pos": [
+      -38432,
+      -6902
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [
+      106301
+    ],
+    "telepointId": 1600,
+    "teleportPointPos": 14,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": 333,
+    "manualItemId": 248028,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2501,
+    "name": "集結",
+    "icon": "T_Gp_Gathering",
+    "pos": [
+      -2512,
+      -2121
+    ],
+    "subRegion": 101101,
+    "targetSubRegion": [],
+    "telepointId": 1011,
+    "teleportPointPos": 1,
+    "teleportSubRegion": 101101,
+    "unlockConditionId": 100208,
+    "manualItemId": null,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2502,
+    "name": "集結",
+    "icon": "T_Gp_Gathering",
+    "pos": [
+      33046,
+      -4278
+    ],
+    "subRegion": 104110,
+    "targetSubRegion": [],
+    "telepointId": 1102,
+    "teleportPointPos": 9,
+    "teleportSubRegion": 104110,
+    "unlockConditionId": 120100,
+    "manualItemId": null,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2503,
+    "name": "集結",
+    "icon": "T_Gp_Gathering",
+    "pos": [
+      31555,
+      -45164
+    ],
+    "subRegion": 104503,
+    "targetSubRegion": [],
+    "telepointId": 1206,
+    "teleportPointPos": 1,
+    "teleportSubRegion": 104503,
+    "unlockConditionId": 12010602,
+    "manualItemId": null,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
+    "id": 2504,
+    "name": "集结",
+    "icon": "T_Gp_Gathering",
+    "pos": [
+      -7950,
+      0
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [],
+    "telepointId": 1600,
+    "teleportPointPos": 16,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": 332,
+    "manualItemId": null,
+    "staticId": null,
+    "singleCreate": false
+  },
+  {
     "id": 2612,
     "name": "蛋皎的印象商店",
     "icon": "T_Gp_Shop",
@@ -966,6 +1218,26 @@
     "unlockConditionId": 20021501,
     "manualItemId": null,
     "staticId": 242400201,
+    "singleCreate": false
+  },
+  {
+    "id": 2854,
+    "name": "百花车站钓鱼点",
+    "icon": "T_Gp_Angling",
+    "pos": [
+      -79430,
+      -3180
+    ],
+    "subRegion": 106001,
+    "targetSubRegion": [
+      106001
+    ],
+    "telepointId": 1603,
+    "teleportPointPos": 15,
+    "teleportSubRegion": 106001,
+    "unlockConditionId": 20021513,
+    "manualItemId": 248032,
+    "staticId": null,
     "singleCreate": false
   }
 ]

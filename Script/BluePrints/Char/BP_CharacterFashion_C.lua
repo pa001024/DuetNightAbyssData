@@ -146,15 +146,14 @@ function BP_CharacterFashion_C:InitAppearanceSuit(Info)
   end
   local HairData = DataMgr.Hair[Info.HairId]
   if HairData then
-    self:ChangePartLook("Hair", HairData.LinkAccessory or 1)
+    self:ChangePartLook("Hair", HairData.ChangeColor or 1)
   end
   self:CreateAllDynamicMaterialNew()
-  local Colors = Info.Colors
-  if Owner.FromArmory then
-    self:RefreshUncoloredSkinColors(Colors)
-  else
-    self:InitSkinColors(Colors)
+  if self.CharTinColorMap then
+    self.CharTinColorMap:Clear()
   end
+  local Colors = Info.Colors
+  self:InitSkinColors(Colors)
   self:InitHairColors(Info.HairColors)
   if Owner.InfoForInit then
     self:GradeUpEmissive(Owner.InfoForInit.GradeLevel)
@@ -182,6 +181,10 @@ function BP_CharacterFashion_C:ChangeCharSkin(SkinId)
   if Owner.ChangeSkinModel then
     Owner:ChangeSkinModel(SkinId)
   end
+  self:InitSkinLevelUpVisEffect(SkinId)
+end
+
+function BP_CharacterFashion_C:InitSkinLevelUpVisEffect(SkinId)
   self:StopCreateEffectTimer(true)
   self:RemoveAllSkinLevelUpVisEffect()
   self:RemoveAllSkinLevelUpEffectCreature()
@@ -269,6 +272,7 @@ function BP_CharacterFashion_C:RemoveAllSkinLevelUpVisEffect()
   local Owner = self:GetOwner()
   for i, v in ipairs(self.LevelUpVisualEffects) do
     Owner.FXComponent:StopEffectByID(v, true)
+    self.NiagaraGroup1:Remove(v)
   end
 end
 
@@ -325,6 +329,7 @@ function BP_CharacterFashion_C:CreateSkinLevelUpEffectCreature(SkinId)
           self,
           function(_, Creature)
             Creature:OnSkinLevelUp()
+            Creature:OnSkinLeveupTin(self.CharTinColorMap)
           end
         })
       else
@@ -391,9 +396,7 @@ function BP_CharacterFashion_C:RecoverHairMesh()
   local HairData = DataMgr.Hair[rawget(self, "CurrentHairId")]
   Owner:DeactivatePartMeshComp(HairType)
   if HairData then
-    if HairData.LinkAccessory then
-      self:ChangeAccessory(HairData.LinkAccessory, HairType)
-    elseif HairData.CharPartId then
+    if HairData.CharPartId then
       if self.Type2PartId then
         self.Type2PartId[HairType] = HairData.CharPartId
       else
@@ -461,7 +464,7 @@ function BP_CharacterFashion_C:ChangeCharHair(HairId)
       AddAccessoryHideTag(self, CommonConst.CharAccessoryTypes.Hat, CommonConst.DataType.Hair)
       self:ChangeAccessory(DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue, CommonConst.CharAccessoryTypes.Hat)
     end
-    self:ChangePartLook(HairType, HairData.LinkAccessory or 1)
+    self:ChangePartLook(HairType, HairData.ChangeColor or 1)
   else
     Owner:DetachSuitItem(HairType)
     if not HairData then
@@ -483,7 +486,7 @@ function BP_CharacterFashion_C:ChangeCharHair(HairId)
         Owner:SetPartMesh(HairData.CharPartId)
       end
     end
-    self:ChangePartLook(HairType, HairData.LinkAccessory or 1)
+    self:ChangePartLook(HairType, HairData.ChangeColor or 1)
   end
 end
 
@@ -587,16 +590,13 @@ function BP_CharacterFashion_C:InitColorsWithInfo()
   if not self.AppearanceSuitInfo then
     return
   end
+  if self.CharTinColorMap then
+    self.CharTinColorMap:Clear()
+  end
   local Colors = self.AppearanceSuitInfo.Colors
   if Colors and #Colors > 0 then
     self:InitSkinColors(Colors)
-    return
   end
-  local Owner = self:GetOwner()
-  if not Owner then
-    return
-  end
-  self:RefreshUncoloredSkinColors(nil)
 end
 
 local function GetMeshNameBySkinId(SkinId)
@@ -629,14 +629,10 @@ function BP_CharacterFashion_C:RefreshUncoloredSkinColors(Colors)
   if not _Owner then
     return
   end
-  local hasColors = Colors and #Colors > 0
-  if hasColors then
-    self:InitSkinColors(Colors)
-  end
   local SkinId = self.AppearanceSuitInfo and self.AppearanceSuitInfo.SkinId
   local DefaultSkinId = self:GetDefaultSkinId(_Owner, SkinId)
   local IsOriginalSkin = DefaultSkinId and SkinId == DefaultSkinId
-  if not _Owner.FromArmory or not not IsOriginalSkin then
+  if IsOriginalSkin then
     return
   end
   local DefaultColors = {
@@ -649,7 +645,7 @@ function BP_CharacterFashion_C:RefreshUncoloredSkinColors(Colors)
   local LastVal = DefaultColors[#DefaultColors]
   local Fresnel8 = type(LastVal) == "number" and LastVal or nil
   for i = 1, PartCount do
-    if not hasColors or -1 == Colors[i] or nil == Colors[i] then
+    if -1 == Colors[i] or nil == Colors[i] then
       local Color = DefaultColors[i]
       if Color then
         local Fresnel = 8 == i and Fresnel8 or nil
@@ -673,9 +669,7 @@ local function IsPartSupportDyeing(PartIdx, ColorId)
 end
 
 function BP_CharacterFashion_C:InitSkinColors(Colors)
-  if not Colors then
-    return
-  end
+  Colors = Colors or {}
   local SwatchData = DataMgr.Swatch
   local Color = FLinearColor()
   for i = 1, #Colors - 1 do
@@ -693,6 +687,7 @@ function BP_CharacterFashion_C:InitSkinColors(Colors)
       end
     end
   end
+  self:RefreshUncoloredSkinColors(Colors)
 end
 
 function BP_CharacterFashion_C:ChangePartColor(PartIdx, Color, Fresnel)
@@ -701,11 +696,38 @@ function BP_CharacterFashion_C:ChangePartColor(PartIdx, Color, Fresnel)
   if Func then
     Func(self, Color, Fresnel)
   end
+  if self.CharTinColorMap then
+    if self.CharTinColorMap:Find(PartIdx) then
+      self.CharTinColorMap:Remove(PartIdx)
+    end
+    self.CharTinColorMap:Add(PartIdx, Color)
+  end
   self:TriggerEffectCreatureEvent()
+  self:TriggerEffectCreatureTintEvent()
+end
+
+function BP_CharacterFashion_C:TriggerEffectCreatureTintEvent()
+  local Owner = self:GetOwner()
+  if not Owner then
+    return
+  end
+  local EffectCreatures = Owner:GetEffectCreatureByTag("LevelUpEffectCreature")
+  if 0 == EffectCreatures:Num() then
+    return
+  end
+  for i = 1, EffectCreatures:Num() do
+    local Creature = EffectCreatures:GetRef(i)
+    if Creature and Creature.OnSkinLeveupTin then
+      Creature:OnSkinLeveupTin(self.CharTinColorMap)
+    end
+  end
 end
 
 function BP_CharacterFashion_C:TriggerEffectCreatureEvent()
   local Owner = self:GetOwner()
+  if not Owner then
+    return
+  end
   local EffectCreatures = Owner:GetEffectCreatureByTag("Skin")
   if 0 == EffectCreatures:Num() then
     return
@@ -989,12 +1011,7 @@ function BP_CharacterFashion_C:GetCurrentHairMeshName()
     return
   end
   local ModelPath
-  if nil == HairData.CharPartId then
-    if HairData.LinkAccessory then
-      local CharAccessoryData = DataMgr.CharAccessory[HairData.LinkAccessory]
-      ModelPath = CharAccessoryData and CharAccessoryData.ModelPath
-    end
-  else
+  if nil ~= HairData.CharPartId then
     local CharPartModelData = DataMgr.CharPartModel[HairData.CharPartId]
     ModelPath = CharPartModelData and CharPartModelData.PartPath
   end

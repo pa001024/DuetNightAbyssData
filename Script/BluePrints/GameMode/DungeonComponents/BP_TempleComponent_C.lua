@@ -93,7 +93,7 @@ function BP_TempleComponent_C:GetSuccResult()
   end
 end
 
-function BP_TempleComponent_C:StartTempleDelay(Duration, DelayNode, ArchiveID, BreakID, ShowUI, Title, RedCountdownTime)
+function BP_TempleComponent_C:StartTempleDelay(Duration, DelayNode, ArchiveID, BreakID, ShowUI, Title, RedCountdownTime, TitleParam1, TitleParam2)
   if not self.CurKey and not self.DelayKeys then
     self.CurKey = 0
     self.DelayKeys = {}
@@ -109,7 +109,7 @@ function BP_TempleComponent_C:StartTempleDelay(Duration, DelayNode, ArchiveID, B
   self:AddTimer(Duration, self.DelayTimerEnd, false, 0, Key, nil, Key, DelayNode, ShowUI)
   DebugPrint("zwk 添加了一个DelayNode ", Key, self:GetName())
   if ShowUI then
-    EventManager:FireEvent(EventID.OnTempleDelayStart, Duration, Title, RedCountdownTime)
+    EventManager:FireEvent(EventID.OnTempleDelayStart, Duration, Title, RedCountdownTime, TitleParam1, TitleParam2)
     self.CurShowingKey = Key
   end
 end
@@ -710,6 +710,14 @@ function BP_TempleComponent_C:OnCageMonsterDead(Monster, CageId)
   self.GameMode:TriggerGameModeEvent("OnTempleCageKillMonster", Monster, CageId)
 end
 
+function BP_TempleComponent_C:TriggerSpawnCoin(CageId, CoinNum)
+  self.GameMode:TriggerGameModeEvent("OnGenerateCoin", CageId, CoinNum)
+end
+
+function BP_TempleComponent_C:TriggerGetCageStage(CageId, Stage)
+  self.GameMode:TriggerGameModeEvent("OnGetCageStage", CageId, Stage)
+end
+
 function BP_TempleComponent_C:TempleForbid(ForbidRule, IsForbid)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   if not Player then
@@ -721,6 +729,7 @@ function BP_TempleComponent_C:TempleForbid(ForbidRule, IsForbid)
     Player:ForbidRangedSkills(IsForbid)
   elseif ForbidRule == ETempleForbidRule.Skill then
     Player:ForbidAllSkillsByBuff(IsForbid)
+    Player:ForbidAllSkills(IsForbid)
   elseif ForbidRule == ETempleForbidRule.BattleWheel then
     if IsForbid then
       Player:DisableBattleWheel()

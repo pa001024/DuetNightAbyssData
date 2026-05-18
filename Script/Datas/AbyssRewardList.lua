@@ -1107,5 +1107,237 @@ return ReadOnly("AbyssRewardList", {
     Level = 62,
     Reward = 48031,
     RewardAddOn = 2
+  },
+  [140000] = {
+    ItemID = 140000,
+    Level = 252,
+    Reward = 48036,
+    RewardAddOn = 2
+  },
+  [140201] = {
+    ItemID = 140201,
+    Level = 2,
+    Reward = 46121,
+    WalnutReward = true
+  },
+  [140202] = {
+    ItemID = 140202,
+    Level = 4,
+    Reward = 46122,
+    WalnutReward = true
+  },
+  [140203] = {
+    ItemID = 140203,
+    Level = 6,
+    Reward = 46123,
+    WalnutReward = true
+  },
+  [140204] = {
+    ItemID = 140204,
+    Level = 8,
+    Reward = 46124,
+    WalnutReward = true
+  },
+  [140205] = {
+    ItemID = 140205,
+    Level = 10,
+    Reward = 46125,
+    WalnutReward = true
+  },
+  [140206] = {
+    ItemID = 140206,
+    Level = 12,
+    Reward = 46126,
+    WalnutReward = true
+  },
+  [140207] = {
+    ItemID = 140207,
+    Level = 14,
+    Reward = 46127,
+    WalnutReward = true
+  },
+  [140208] = {
+    ItemID = 140208,
+    Level = 16,
+    Reward = 46128,
+    WalnutReward = true
+  },
+  [140209] = {
+    ItemID = 140209,
+    Level = 18,
+    Reward = 46129,
+    WalnutReward = true
+  },
+  [140210] = {
+    ItemID = 140210,
+    Level = 20,
+    Reward = 46130,
+    WalnutReward = true
+  },
+  [140211] = {
+    ItemID = 140211,
+    Level = 22,
+    Reward = 46131,
+    WalnutReward = true
+  },
+  [140212] = {
+    ItemID = 140212,
+    Level = 24,
+    Reward = 46132,
+    WalnutReward = true
+  },
+  [140213] = {
+    ItemID = 140213,
+    Level = 26,
+    Reward = 46133,
+    WalnutReward = true
+  },
+  [140214] = {
+    ItemID = 140214,
+    Level = 28,
+    Reward = 46134,
+    WalnutReward = true
+  },
+  [140215] = {
+    ItemID = 140215,
+    Level = 30,
+    Reward = 46135,
+    WalnutReward = true
+  },
+  [140301] = {
+    ItemID = 140301,
+    Level = 10,
+    Reward = 48033,
+    RewardAddOn = 10,
+    WalnutReward = true
+  },
+  [140302] = {
+    ItemID = 140302,
+    Level = 35,
+    Reward = 48034,
+    RewardAddOn = 5,
+    WalnutReward = true
+  },
+  [140303] = {
+    ItemID = 140303,
+    Level = 62,
+    Reward = 48035,
+    RewardAddOn = 2
+  },
+  [141000] = {
+    ItemID = 141000,
+    Level = 252,
+    Reward = 48040,
+    RewardAddOn = 2
+  },
+  [141201] = {
+    ItemID = 141201,
+    Level = 2,
+    Reward = 46136,
+    WalnutReward = true
+  },
+  [141202] = {
+    ItemID = 141202,
+    Level = 4,
+    Reward = 46137,
+    WalnutReward = true
+  },
+  [141203] = {
+    ItemID = 141203,
+    Level = 6,
+    Reward = 46138,
+    WalnutReward = true
+  },
+  [141204] = {
+    ItemID = 141204,
+    Level = 8,
+    Reward = 46139,
+    WalnutReward = true
+  },
+  [141205] = {
+    ItemID = 141205,
+    Level = 10,
+    Reward = 46140,
+    WalnutReward = true
+  },
+  [141206] = {
+    ItemID = 141206,
+    Level = 12,
+    Reward = 46141,
+    WalnutReward = true
+  },
+  [141207] = {
+    ItemID = 141207,
+    Level = 14,
+    Reward = 46142,
+    WalnutReward = true
+  },
+  [141208] = {
+    ItemID = 141208,
+    Level = 16,
+    Reward = 46143,
+    WalnutReward = true
+  },
+  [141209] = {
+    ItemID = 141209,
+    Level = 18,
+    Reward = 46144,
+    WalnutReward = true
+  },
+  [141210] = {
+    ItemID = 141210,
+    Level = 20,
+    Reward = 46145,
+    WalnutReward = true
+  },
+  [141211] = {
+    ItemID = 141211,
+    Level = 22,
+    Reward = 46146,
+    WalnutReward = true
+  },
+  [141212] = {
+    ItemID = 141212,
+    Level = 24,
+    Reward = 46147,
+    WalnutReward = true
+  },
+  [141213] = {
+    ItemID = 141213,
+    Level = 26,
+    Reward = 46148,
+    WalnutReward = true
+  },
+  [141214] = {
+    ItemID = 141214,
+    Level = 28,
+    Reward = 46149,
+    WalnutReward = true
+  },
+  [141215] = {
+    ItemID = 141215,
+    Level = 30,
+    Reward = 46150,
+    WalnutReward = true
+  },
+  [141301] = {
+    ItemID = 141301,
+    Level = 10,
+    Reward = 48037,
+    RewardAddOn = 10,
+    WalnutReward = true
+  },
+  [141302] = {
+    ItemID = 141302,
+    Level = 35,
+    Reward = 48038,
+    RewardAddOn = 5,
+    WalnutReward = true
+  },
+  [141303] = {
+    ItemID = 141303,
+    Level = 62,
+    Reward = 48039,
+    RewardAddOn = 2
   }
 })

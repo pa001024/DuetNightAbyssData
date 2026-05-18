@@ -93,6 +93,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/weapon/dualbladeHit_$MeleeHitLevel$",
     SubSoundId = 7
   },
+  [106] = {
+    NumLimit = 3,
+    SoundId = 106,
+    SoundPath = "event:/sfx/common/player/hit/weapon/$MeleeHit$Hit_$MeleeHitLevel$",
+    SubSoundId = 7
+  },
   [107] = {
     NumLimit = 5,
     SoundId = 107,
@@ -107,6 +113,12 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 109,
     SoundPath = "event:/sfx/weapon/$RangedWeapon$/shoot_fire"
+  },
+  [110] = {
+    NumLimit = 2,
+    SoundId = 110,
+    SoundPath = "event:/sfx/weapon/Machinegun/Common01/hit",
+    SubSoundId = 1
   },
   [112] = {
     NumLimit = 2,
@@ -127,6 +139,11 @@ return ReadOnly("SoundEffect", {
   [119] = {
     SoundId = 119,
     SoundPath = "event:/sfx/common/player/hit/weapon/mod_$MeleeHitLevel$"
+  },
+  [120] = {
+    SoundId = 120,
+    SoundPath = "event:/sfx/weapon/Katana/Common/mod01_hit_heavy",
+    SubSoundId = 7
   },
   [151] = {
     NumLimit = 3,
@@ -800,6 +817,10 @@ return ReadOnly("SoundEffect", {
     SoundId = 3004,
     SoundPath = "event:/sfx/btc/common/footstep_costume_suyi"
   },
+  [3005] = {
+    SoundId = 3005,
+    SoundPath = "event:/sfx/btc/fuluo/footstep_leaves"
+  },
   [3101] = {
     NumLimit = 5,
     SoundId = 3101,
@@ -819,10 +840,19 @@ return ReadOnly("SoundEffect", {
     SoundId = 3104,
     SoundPath = "event:/sfx/btc/suyi/huanwen_costume_suyi"
   },
+  [3105] = {
+    SoundId = 3105,
+    SoundPath = "event:/sfx/btc/fuluo/huanwen"
+  },
   [3201] = {
     NumLimit = 5,
     SoundId = 3201,
     SoundPath = "event:/sfx/common/player/action/death01"
+  },
+  [3202] = {
+    NumLimit = 5,
+    SoundId = 3202,
+    SoundPath = "event:/sfx/btc/fuluo/death"
   },
   [3301] = {
     SoundId = 3301,
@@ -839,6 +869,10 @@ return ReadOnly("SoundEffect", {
   [3304] = {
     SoundId = 3304,
     SoundPath = "event:/sfx/btc/suyi/fallattack_scifi"
+  },
+  [3305] = {
+    SoundId = 3305,
+    SoundPath = "event:/sfx/btc/fuluo/fallattack"
   },
   [3401] = {
     SoundId = 3401,
@@ -868,6 +902,18 @@ return ReadOnly("SoundEffect", {
     SoundId = 3407,
     SoundPath = "event:/sfx/btc/suyi/bullet_jump_blue"
   },
+  [3408] = {
+    SoundId = 3408,
+    SoundPath = "event:/sfx/btc/xiunv/bulletjump_xiunv01"
+  },
+  [3409] = {
+    SoundId = 3409,
+    SoundPath = "event:/sfx/btc/xiunv/bulletjump_xiunv02"
+  },
+  [3410] = {
+    SoundId = 3410,
+    SoundPath = "event:/sfx/btc/fuluo/bulletjump"
+  },
   [3502] = {
     SoundId = 3502,
     SoundPath = "event:/sfx/common/player/action/death01"
@@ -875,6 +921,10 @@ return ReadOnly("SoundEffect", {
   [3601] = {
     SoundId = 3601,
     SoundPath = "event:/sfx/btc/common/fw_qrj"
+  },
+  [3602] = {
+    SoundId = 3602,
+    SoundPath = "event:/sfx/btc/fuluo/dance_party_start_fire_place"
   },
   [10001] = {
     NumLimit = 5,
@@ -905,6 +955,34 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 110101,
     SoundPath = "event:/sfx/player/Heitao/skill01_hit"
+  },
+  [110201] = {
+    NumLimit = 5,
+    SoundId = 110201,
+    SoundPath = "event:/sfx/player/Fuluo/passve_hit"
+  },
+  [110202] = {
+    NumLimit = 5,
+    SoundId = 110202,
+    SoundPath = "event:/sfx/player/Fuluo01/passve_hit"
+  },
+  [110203] = {
+    NumLimit = 8,
+    ReplaceSoundID = {
+      [110299] = "event:/sfx/player/Fuluo01/skill02_wawa_stop"
+    },
+    SoundId = 110203,
+    SoundPath = "event:/sfx/player/Fuluo/skill02_wawa_stop"
+  },
+  [110298] = {
+    NumLimit = 5,
+    SoundId = 110298,
+    SoundPath = "event:/sfx/player/Fuluo01/level3"
+  },
+  [110299] = {
+    NumLimit = 5,
+    SoundId = 110299,
+    SoundPath = "event:/sfx/player/Fuluo01/level2"
   },
   [110301] = {
     NumLimit = 5,
@@ -965,6 +1043,28 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 110312,
     SoundPath = "event:/sfx/weapon/Machinegun/Poxiao/hit_03"
+  },
+  [120101] = {
+    SoundId = 120101,
+    SoundPath = "event:/sfx/player/NanzhuDark/dark_hit"
+  },
+  [120102] = {
+    SoundId = 120102,
+    SoundPath = "event:/sfx/common/player/hit/weapon/swordHit_heavy"
+  },
+  [120103] = {
+    NumLimit = 5,
+    SoundId = 120103,
+    SoundPath = "event:/sfx/player/NanzhuDark/skill02_loop",
+    SoundShape = {
+      InnerRadius = 950,
+      SkillRangeModify = true,
+      Type = "Circular"
+    }
+  },
+  [120104] = {
+    SoundId = 120104,
+    SoundPath = "event:/sfx/player/NanzhuDark/skill02_loop02"
   },
   [150101] = {
     NumLimit = 5,
@@ -1225,7 +1325,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/weapon/mod_light"
   },
   [160102] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 160102,
     SoundPath = "event:/sfx/player/NanzhuLight/skill01_fx_loop"
   },
@@ -1237,15 +1337,16 @@ return ReadOnly("SoundEffect", {
   [160104] = {
     NumLimit = 5,
     SoundId = 160104,
-    SoundPath = "event:/sfx/common/player/hit/magic/NanzhuLight_hit"
+    SoundPath = "event:/sfx/common/player/hit/magic/NanzhuLight_hit",
+    SubSoundId = 53
   },
   [180101] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 180101,
     SoundPath = "event:/sfx/player/Feina/magic_water_loop"
   },
   [180102] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 180102,
     SoundPath = "event:/sfx/player/Feina/magic_fire_loop"
   },
@@ -1257,25 +1358,28 @@ return ReadOnly("SoundEffect", {
   [180104] = {
     NumLimit = 5,
     SoundId = 180104,
-    SoundPath = "event:/sfx/player/Feina/magic_wind_loop"
+    SoundPath = "event:/sfx/player/Feina/magic_wind_loop",
+    SubSoundId = 53
   },
   [180105] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 180105,
-    SoundPath = "event:/sfx/player/Feina/passive_start"
+    SoundPath = "event:/sfx/player/Feina/passive_start",
+    SubSoundId = 53
   },
   [180106] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 180106,
     SoundPath = "event:/sfx/player/Feina/passive_loop"
   },
   [180107] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 180107,
-    SoundPath = "event:/sfx/common/player/hit/magic/waterHit_normal_feina"
+    SoundPath = "event:/sfx/common/player/hit/magic/waterHit_normal_feina",
+    SubSoundId = 53
   },
   [180108] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 180108,
     SoundPath = "event:/sfx/common/player/hit/magic/fireHit_normal_feina"
   },
@@ -1285,9 +1389,10 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/magic/electricHit_normal_feina"
   },
   [180110] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 180110,
-    SoundPath = "event:/sfx/common/player/hit/magic/windHit_normal_feina"
+    SoundPath = "event:/sfx/common/player/hit/magic/windHit_normal_feina",
+    SubSoundId = 53
   },
   [201101] = {
     NumLimit = 5,
@@ -1295,17 +1400,18 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Awaer/skill01"
   },
   [201102] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 201102,
     SoundPath = "event:/sfx/player/Awaer/skill02_exp_01"
   },
   [201103] = {
     NumLimit = 5,
     SoundId = 201103,
-    SoundPath = "event:/sfx/player/Awaer/skill02_exp_02"
+    SoundPath = "event:/sfx/player/Awaer/skill02_exp_02",
+    SubSoundId = 52
   },
   [201104] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 201104,
     SoundPath = "event:/sfx/player/Awaer/skill02_exp_03"
   },
@@ -1320,59 +1426,69 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/magic/recover_hp"
   },
   [210101] = {
-    NumLimit = 5,
+    NumLimit = 3,
+    ReplaceSoundID = {
+      [210189] = "event:/sfx/player/Shuimu02/summon_hit"
+    },
     SoundId = 210101,
-    SoundPath = "event:/sfx/player/Shuimu/skill_hit",
-    SubSoundId = 53
+    SoundPath = "event:/sfx/player/Shuimu/skill_hit"
   },
   [210102] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 210102,
     SoundPath = "event:/sfx/player/Shuimu/poison_hit"
   },
   [210103] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 210103,
     SoundPath = "event:/sfx/player/Shuimu/poison_stack_warning"
   },
   [210104] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 210104,
     SoundPath = "event:/sfx/player/Shuimu/poison_spread"
   },
   [210105] = {
     NumLimit = 5,
+    ReplaceSoundID = {
+      [210189] = "event:/sfx/player/Shuimu02/skill_hit"
+    },
     SoundId = 210105,
     SoundPath = "event:/sfx/common/player/hit/magic/waterSuck_normal",
-    SubSoundId = 53
+    SubSoundId = 52
+  },
+  [210198] = {
+    SoundId = 210198,
+    SoundPath = "event:/sfx/player/Shuimu02/update_03"
+  },
+  [210199] = {
+    SoundId = 210199,
+    SoundPath = "event:/sfx/player/Shuimu02/update_02"
   },
   [230101] = {
     NumLimit = 3,
     SoundId = 230101,
-    SoundPath = "event:/sfx/player/Zhangyu/tentacle_hit_ground",
-    SubSoundId = 53
+    SoundPath = "event:/sfx/player/Zhangyu/tentacle_hit_ground"
   },
   [230102] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 230102,
     SoundPath = "event:/sfx/player/Zhangyu/skill01_tentacle"
   },
   [230103] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 230103,
-    SoundPath = "event:/sfx/player/Zhangyu/tentacle_whoosh_carray",
-    SubSoundId = 53
+    SoundPath = "event:/sfx/player/Zhangyu/tentacle_whoosh_carray"
   },
   [240101] = {
-    NumLimit = 3,
     ReplaceSoundID = {
       [240199] = "event:/sfx/player/Baiheng01/skill01_link"
     },
     SoundId = 240101,
-    SoundPath = "event:/sfx/player/Baiheng/skill01_link"
+    SoundPath = "event:/sfx/player/Baiheng/skill01_link",
+    SubSoundId = 53
   },
   [240102] = {
-    NumLimit = 5,
     ReplaceSoundID = {
       [240199] = "event:/sfx/player/Baiheng01/skill01_recover_wave"
     },
@@ -1380,70 +1496,54 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Baiheng/skill01_recover_wave"
   },
   [240103] = {
-    NumLimit = 5,
     SoundId = 240103,
-    SoundPath = "event:/sfx/common/player/hit/magic/waterSuck_normal",
-    SubSoundId = 53
+    SoundPath = "event:/sfx/common/player/hit/magic/waterSuck_normal"
   },
   [240104] = {
-    NumLimit = 5,
     ReplaceSoundID = {
       [240199] = "event:/sfx/player/Baiheng01/skill02_team_effect"
     },
     SoundId = 240104
   },
   [310101] = {
-    NumLimit = 2,
     SoundId = 310101,
     SoundPath = "event:/sfx/player/Linen/skill01_buff_start"
   },
   [310102] = {
-    NumLimit = 5,
     SoundId = 310102,
-    SoundPath = "event:/sfx/player/Linen/skill_buff_be_hit",
-    SubSoundId = 52
+    SoundPath = "event:/sfx/player/Linen/skill_buff_be_hit"
   },
   [310103] = {
-    NumLimit = 3,
     SoundId = 310103,
     SoundPath = "event:/sfx/player/Linen/skill01_buff_explode"
   },
   [310104] = {
-    NumLimit = 5,
     SoundId = 310104,
     SoundPath = "event:/sfx/player/Linen/skill02_ui_show"
   },
   [310105] = {
-    NumLimit = 5,
     SoundId = 310105,
     SoundPath = "event:/sfx/common/player/hit/magic/fireBall_hit"
   },
   [310201] = {
-    NumLimit = 3,
     SoundId = 310201,
-    SoundPath = "event:/sfx/common/player/hit/weapon/spearHit_light",
-    SubSoundId = 52
+    SoundPath = "event:/sfx/common/player/hit/weapon/spearHit_light"
   },
   [310202] = {
-    NumLimit = 5,
     SoundId = 310202,
     SoundPath = "event:/sfx/player/Xier/passive_weapon_shoot"
   },
   [310203] = {
-    NumLimit = 5,
     SoundId = 310203,
     SoundPath = "event:/sfx/player/Xier/passive_weapon_shoot_add"
   },
   [310204] = {
-    NumLimit = 2,
     SoundId = 310204,
     SoundPath = "event:/sfx/player/Xier/skill01_add_weapon_rotate"
   },
   [310205] = {
-    NumLimit = 5,
     SoundId = 310205,
-    SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit",
-    SubSoundId = 52
+    SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit"
   },
   [310301] = {
     NumLimit = 3,
@@ -1451,84 +1551,97 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Yeer/landing"
   },
   [310302] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 310302,
     SoundPath = "event:/sfx/player/Yeer/land_explode"
   },
   [320101] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 320101,
     SoundPath = "event:/sfx/player/Haier/spike_appear"
   },
   [320102] = {
+    NumLimit = 5,
     SoundId = 320102,
-    SoundPath = "event:/sfx/common/player/hit/common/weapon/single/weaponHit_metal",
-    SubSoundId = 53
+    SoundPath = "event:/sfx/common/player/hit/common/weapon/single/weaponHit_metal"
   },
   [320103] = {
+    NumLimit = 5,
     SoundId = 320103,
     SoundPath = "event:/sfx/player/Haier/skill02_cast"
   },
   [320104] = {
+    NumLimit = 5,
     SoundId = 320104,
     SoundPath = "event:/sfx/common/player/hit/weapon/heavySwordHit_normal"
   },
   [320105] = {
+    NumLimit = 5,
     SoundId = 320105,
     SoundPath = "event:/sfx/common/player/hit/weapon/heavySwordHit_heavy"
   },
   [320201] = {
+    NumLimit = 4,
     SoundId = 320201,
     SoundPath = "event:/sfx/player/Kami/knife_back"
   },
   [320202] = {
+    NumLimit = 5,
     SoundId = 320202,
     SoundPath = "event:/sfx/player/Kami/knife_explode"
   },
   [320203] = {
+    NumLimit = 2,
     SoundId = 320203,
     SoundPath = "event:/sfx/player/Kami/knife_idle_loop_1"
   },
   [320204] = {
+    NumLimit = 2,
     SoundId = 320204,
     SoundPath = "event:/sfx/player/Kami/knife_idle_loop_2"
   },
   [320205] = {
+    NumLimit = 5,
     SoundId = 320205,
     SoundPath = "event:/sfx/player/Kami/skill01_hit"
   },
   [320206] = {
+    NumLimit = 5,
     SoundId = 320206,
     SoundPath = "event:/sfx/player/Kami/skill01_loop"
   },
   [320207] = {
+    NumLimit = 5,
     SoundId = 320207,
     SoundPath = "event:/sfx/player/Kami/passive_hit"
   },
   [320208] = {
+    NumLimit = 5,
     SoundId = 320208,
     SoundPath = "event:/sfx/player/Kami/knife_hit"
   },
   [320209] = {
+    NumLimit = 4,
     SoundId = 320209,
     SoundPath = "event:/sfx/common/player/hit/weapon/katanaHit_normal"
   },
   [320210] = {
+    NumLimit = 5,
     SoundId = 320210,
     SoundPath = "event:/sfx/player/Kami/skill01_shoot"
   },
   [330101] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 330101,
     SoundPath = "event:/sfx/player/Maerjie/skill01_hit"
   },
   [330102] = {
-    NumLimit = 1,
+    NumLimit = 2,
     SoundId = 330102,
     SoundPath = "event:/sfx/player/Maerjie/passive"
   },
   [330103] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 330103,
     SoundPath = "event:/sfx/player/Maerjie/skill02_exp"
   },
@@ -1548,42 +1661,43 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Lise/skill01_elec_str"
   },
   [410104] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 410104,
     SoundPath = "event:/sfx/common/player/hit/magic/electricHit_normal_feina"
   },
   [410105] = {
-    NumLimit = 4,
+    NumLimit = 3,
     SoundId = 410105,
-    SoundPath = "event:/sfx/player/Lise/skill01_hit_str"
+    SoundPath = "event:/sfx/player/Lise/skill01_hit_str",
+    SubSoundId = 53
   },
   [410106] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 410106,
     SoundPath = "event:/sfx/player/Lise/skill02_elec_arc"
   },
   [410107] = {
-    NumLimit = 2,
+    NumLimit = 3,
     SoundId = 410107,
     SoundPath = "event:/sfx/player/Lise/skill02_elec_conncet"
   },
   [410108] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 410108,
     SoundPath = "event:/sfx/player/Lise/skill02_elec_burst"
   },
   [410109] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 410109,
     SoundPath = "event:/sfx/player/Lise/skill02_state_low"
   },
   [410201] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 410201,
     SoundPath = "event:/sfx/player/$PlayerName$/skill01_01_cast"
   },
   [410202] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 410202,
     SoundPath = "event:/sfx/player/$PlayerName$/passive_loop"
   },
@@ -1593,7 +1707,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/$PlayerName$/skill02_tt_cast"
   },
   [410205] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 410205,
     SoundPath = "event:/sfx/player/$PlayerName$/skill02_td_explode"
   },
@@ -1608,14 +1722,15 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/magic/electricHit_normal_feina"
   },
   [410208] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 410208,
     SoundPath = "event:/sfx/common/player/hit/weapon/heavySwordHit_heavy"
   },
   [410209] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 410209,
-    SoundPath = "event:/sfx/common/player/hit/magic/lightingHit"
+    SoundPath = "event:/sfx/common/player/hit/magic/lightingHit",
+    SubSoundId = 53
   },
   [410210] = {
     NumLimit = 5,
@@ -1633,23 +1748,22 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/magic/lightingHit"
   },
   [420101] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 420101,
     SoundPath = "event:/sfx/player/Yuming/summon_hit"
   },
   [420102] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 420102,
-    SoundPath = "event:/sfx/player/Yuming/summon_hit",
-    SubSoundId = 53
+    SoundPath = "event:/sfx/player/Yuming/summon_hit"
   },
   [420103] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 420103,
     SoundPath = "event:/sfx/player/Yuming/skill01_fx_hit"
   },
   [420104] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 420104,
     SoundPath = "event:/sfx/player/Yuming/grade6"
   },
@@ -1659,17 +1773,18 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Landi/skill02_cast_column"
   },
   [420202] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 420202,
-    SoundPath = "event:/sfx/player/Landi/crack_01"
+    SoundPath = "event:/sfx/player/Landi/crack_01",
+    SubSoundId = 53
   },
   [420203] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 420203,
     SoundPath = "event:/sfx/player/Landi/crack_02"
   },
   [420204] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 420204,
     SoundPath = "event:/sfx/player/Landi/crack_03"
   },
@@ -1699,10 +1814,9 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Xibi/thunderHit"
   },
   [430102] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 430102,
-    SoundPath = "event:/sfx/player/Xibi/electric_hit",
-    SubSoundId = 53
+    SoundPath = "event:/sfx/player/Xibi/electric_hit"
   },
   [430103] = {
     NumLimit = 5,
@@ -1715,7 +1829,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Xibi/skill02_ball_appear_special"
   },
   [430105] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 430105,
     SoundPath = "event:/sfx/player/Xibi/skill02_ball_loop"
   },
@@ -1745,10 +1859,9 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Songlu/skill01_ride_run_scatter"
   },
   [510102] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 510102,
-    SoundPath = "event:/sfx/player/Songlu/summon_hit",
-    SubSoundId = 53
+    SoundPath = "event:/sfx/player/Songlu/summon_hit"
   },
   [510103] = {
     NumLimit = 5,
@@ -1771,7 +1884,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Aote/skill01_background"
   },
   [510202] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 510202,
     SoundPath = "event:/sfx/player/Aote/skill01_hint"
   },
@@ -1801,7 +1914,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Aote/passive_hit"
   },
   [530101] = {
-    NumLimit = 3,
+    NumLimit = 5,
     ReplaceSoundID = {
       [530199] = "event:/sfx/player/Saiqi01/passive_skill_attack"
     },
@@ -1843,7 +1956,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Saiqi/skill02_shoot"
   },
   [530106] = {
-    NumLimit = 5,
+    NumLimit = 3,
     ReplaceSoundID = {
       [530199] = "event:/sfx/player/Saiqi01/skill02_shoot_hit"
     },
@@ -1852,7 +1965,7 @@ return ReadOnly("SoundEffect", {
     SubSoundId = 201
   },
   [530107] = {
-    NumLimit = 3,
+    NumLimit = 5,
     ReplaceSoundID = {
       [530199] = "event:/sfx/player/Saiqi01/skill02_shoot_hit_ground"
     },
@@ -1860,7 +1973,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Saiqi/skill02_shoot_hit_ground"
   },
   [530108] = {
-    NumLimit = 5,
+    NumLimit = 3,
     ReplaceSoundID = {
       [530199] = "event:/sfx/player/Saiqi01/dodge"
     },
@@ -1876,7 +1989,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/Saiqi/skill01"
   },
   [540101] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 540101,
     SoundPath = "event:/sfx/common/enemy/hit/debuff"
   },
@@ -1887,13 +2000,13 @@ return ReadOnly("SoundEffect", {
     SubSoundId = 101
   },
   [600202] = {
-    NumLimit = 3,
+    NumLimit = 2,
     SoundId = 600202,
     SoundPath = "event:/sfx/enemy/Gr/Piaofu/C01_skill01_bullet_hit",
     SubSoundId = 101
   },
   [600203] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 600203,
     SoundPath = "event:/sfx/common/enemy/hit/fireBall_hit"
   },
@@ -1903,7 +2016,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Gr/Piaofu/C01_bubble_appear"
   },
   [600302] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 600302,
     SoundPath = "event:/sfx/enemy/Gr/Piaofu/C01_bubble_boom"
   },
@@ -1913,6 +2026,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/bubble_hit"
   },
   [600401] = {
+    NumLimit = 5,
     SoundId = 600401,
     SoundPath = "event:/sfx/common/enemy/hit/explode_small_hit"
   },
@@ -1927,14 +2041,15 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Gr/Longcao/poison_hit"
   },
   [600503] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 600503,
     SoundPath = "event:/sfx/enemy/Gr/Longcao/poision_hit_ground"
   },
   [600504] = {
     NumLimit = 5,
     SoundId = 600504,
-    SoundPath = "event:/sfx/enemy/Gr/Longcao/dummy_poision"
+    SoundPath = "event:/sfx/enemy/Gr/Longcao/dummy_poision",
+    SubSoundId = 101
   },
   [600505] = {
     NumLimit = 5,
@@ -1942,17 +2057,17 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Gr/Longcao/underground_loop"
   },
   [600601] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 600601,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_light_02"
   },
   [600602] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 600602,
     SoundPath = "event:/sfx/common/enemy/buff/darkhit"
   },
   [600701] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 600701,
     SoundPath = "event:/sfx/common/enemy/hit/fireSmall_hit"
   },
@@ -1962,9 +2077,10 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Gr/Fangjin/shotboom"
   },
   [601502] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 601502,
-    SoundPath = "event:/sfx/common/enemy/hit/fireSmall_hit"
+    SoundPath = "event:/sfx/common/enemy/hit/fireSmall_hit",
+    SubSoundId = 101
   },
   [601503] = {
     NumLimit = 5,
@@ -1972,12 +2088,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/explode_small_hit"
   },
   [601601] = {
-    NumLimit = 2,
+    NumLimit = 3,
     SoundId = 601601,
     SoundPath = "event:/sfx/enemy/Gr/Eshi/bullet_hit"
   },
   [601602] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 601602,
     SoundPath = "event:/sfx/common/enemy/hit/sickleHit_normal"
   },
@@ -1987,9 +2103,10 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Gr/Eshi/bullet_hitground"
   },
   [601701] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 601701,
-    SoundPath = "event:/sfx/common/enemy/hit/clawHit_normal"
+    SoundPath = "event:/sfx/common/enemy/hit/clawHit_normal",
+    SubSoundId = 101
   },
   [601702] = {
     NumLimit = 5,
@@ -2004,26 +2121,26 @@ return ReadOnly("SoundEffect", {
   [700101] = {
     NumLimit = 5,
     SoundId = 700101,
-    SoundPath = "event:/sfx/enemy/Jt/Juji/invisible"
+    SoundPath = "event:/sfx/enemy/Jt/Juji/invisible",
+    SubSoundId = 101
   },
   [700102] = {
-    NumLimit = 5,
+    NumLimit = 10,
     SoundId = 700102,
     SoundPath = "event:/sfx/enemy/Jt/Juji/division_self"
   },
   [700103] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 700103,
     SoundPath = "event:/sfx/common/enemy/buff/wind"
   },
   [700111] = {
     NumLimit = 5,
     SoundId = 700111,
-    SoundPath = "event:/sfx/common/player/hit/magic/ice_hit",
-    SubSoundId = 101
+    SoundPath = "event:/sfx/common/player/hit/magic/ice_hit"
   },
   [700112] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700112,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_frozen_reflect"
   },
@@ -2033,12 +2150,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_frozen_fly"
   },
   [700121] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 700121,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_blood_loop"
   },
   [700122] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700122,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_blood_ hit_ground"
   },
@@ -2050,8 +2167,7 @@ return ReadOnly("SoundEffect", {
   [700131] = {
     NumLimit = 5,
     SoundId = 700131,
-    SoundPath = "event:/sfx/common/player/hit/magic/energy_hit",
-    SubSoundId = 101
+    SoundPath = "event:/sfx/common/player/hit/magic/energy_hit"
   },
   [700132] = {
     NumLimit = 5,
@@ -2059,7 +2175,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_fade_charge"
   },
   [700133] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 700133,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_fade_loop"
   },
@@ -2069,15 +2185,14 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_shield_bullet_enter"
   },
   [700142] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700142,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_shield_loop"
   },
   [700151] = {
     NumLimit = 5,
     SoundId = 700151,
-    SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit",
-    SubSoundId = 101
+    SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit"
   },
   [700152] = {
     NumLimit = 5,
@@ -2092,11 +2207,10 @@ return ReadOnly("SoundEffect", {
   [700161] = {
     NumLimit = 5,
     SoundId = 700161,
-    SoundPath = "event:/sfx/common/player/hit/magic/electric_small_hit",
-    SubSoundId = 101
+    SoundPath = "event:/sfx/common/player/hit/magic/electric_small_hit"
   },
   [700162] = {
-    NumLimit = 10,
+    NumLimit = 5,
     SoundId = 700162,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_thunder_electric_ball_distory"
   },
@@ -2111,7 +2225,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_thunder_electric_ball_loop"
   },
   [700171] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 700171,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_poison_loop"
   },
@@ -2121,12 +2235,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_poison_charge"
   },
   [700181] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700181,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_revenge_cast"
   },
   [700182] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 700182,
     SoundPath = "event:/sfx/common/enemy/buff/buff_strong_revenge_loop"
   },
@@ -2141,17 +2255,17 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Jt/HealRobot/skill01_lp"
   },
   [700203] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700203,
     SoundPath = "event:/sfx/enemy/Jt/HealRobot/skill01_end"
   },
   [700204] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700204,
     SoundPath = "event:/sfx/enemy/Jt/Pizhuo/skill02_robot"
   },
   [700205] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700205,
     SoundPath = "event:/sfx/common/enemy/buff/stunparalysis"
   },
@@ -2161,12 +2275,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Jt/Ranger/bomb_explosion"
   },
   [700312] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700312,
     SoundPath = "event:/sfx/enemy/Jt/Ranger/bomb_set_and_alarm"
   },
   [700313] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 700313,
     SoundPath = "event:/sfx/enemy/Jt/Ranger/bomb_explode"
   },
@@ -2176,7 +2290,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/magic/energy_hit"
   },
   [700315] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700315,
     SoundPath = "event:/sfx/common/enemy/hit/energy_hit"
   },
@@ -2201,12 +2315,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/electricHit_heavy_feina"
   },
   [700325] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 700325,
     SoundPath = "event:/sfx/common/enemy/hit/electric_ball"
   },
   [700401] = {
-    NumLimit = 3,
+    NumLimit = 2,
     SoundId = 700401,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_heavy"
   },
@@ -2216,7 +2330,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/shield_hit"
   },
   [700801] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 700801,
     SoundPath = "event:/sfx/enemy/Jt/Zhihui/common_explosion"
   },
@@ -2226,7 +2340,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Jt/Zhihui/skill04_explosion"
   },
   [700803] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 700803,
     SoundPath = "event:/sfx/common/enemy/hit/fireHit_normal_feina"
   },
@@ -2241,17 +2355,17 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_light"
   },
   [700902] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 700902,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_light_02"
   },
   [700903] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 700903,
     SoundPath = "event:/sfx/common/enemy/hit/heavySwordHit_normal"
   },
   [701001] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 701001,
     SoundPath = "event:/sfx/common/enemy/hit/lightingHit"
   },
@@ -2261,12 +2375,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/electric_ball"
   },
   [701602] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 701602,
     SoundPath = "event:/sfx/common/enemy/hit/fireHit_normal_feina"
   },
   [701603] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 701603,
     SoundPath = "event:/sfx/enemy/Jt/Zhiyan/death"
   },
@@ -2276,10 +2390,15 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/Jt/Zhiyan/skill01"
   },
   [701605] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 701605,
     SoundPath = "event:/sfx/enemy/Jt/Zhiyan/callback"
   },
+  [701801] = {
+    SoundId = 701801,
+    SoundPath = "event:/sfx/enemy/Jt/Tiequan/hit"
+  },
+  [701901] = {SoundId = 701901, SubSoundId = 101},
   [800101] = {
     NumLimit = 5,
     SoundId = 800101,
@@ -2291,7 +2410,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_light_02"
   },
   [800301] = {
-    NumLimit = 2,
+    NumLimit = 3,
     SoundId = 800301,
     SoundPath = "event:/sfx/common/enemy/hit/lightingHit"
   },
@@ -2301,7 +2420,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/fireBall_hit"
   },
   [800303] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 800303,
     SoundPath = "event:/sfx/enemy/JH/Shenfu/buff"
   },
@@ -2316,7 +2435,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Xibi/electricBall_hit"
   },
   [850041] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850041,
     SoundPath = "event:/sfx/boss/Xibi/skill03_electricity"
   },
@@ -2331,7 +2450,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Xibi/electricBall_hit"
   },
   [850071] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850071,
     SoundPath = "event:/sfx/boss/Xibi/drag_player"
   },
@@ -2346,22 +2465,22 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Lizhanzhe/skill03_whoosh"
   },
   [850103] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850103,
     SoundPath = "event:/sfx/boss/Lizhanzhe/skill03_exp"
   },
   [850104] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 850104,
     SoundPath = "event:/sfx/boss/Lizhanzhe/skill05_exp"
   },
   [850105] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850105,
     SoundPath = "event:/sfx/boss/Lizhanzhe/skill10_whoosh"
   },
   [850106] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850106,
     SoundPath = "event:/sfx/boss/Lizhanzhe/skill10_exp"
   },
@@ -2371,27 +2490,27 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Lizhanzhe/hit"
   },
   [850108] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850108,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_heavy"
   },
   [850211] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850211,
     SoundPath = "event:/sfx/common/player/hit/weapon/sickleHit_heavy"
   },
   [850219] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 850219,
     SoundPath = "event:/sfx/common/enemy/hit/electricBall_hit"
   },
   [850221] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850221,
     SoundPath = "event:/sfx/boss/Saiqi/skill02_fx_sickle"
   },
   [850231] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850231,
     SoundPath = "event:/sfx/boss/Saiqi/skill03_fx_attack"
   },
@@ -2411,7 +2530,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/windHit"
   },
   [850271] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850271,
     SoundPath = "event:/sfx/boss/Saiqi/skill07_fx"
   },
@@ -2421,12 +2540,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/windHit"
   },
   [850281] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850281,
     SoundPath = "event:/sfx/boss/Saiqi/skill08_fx"
   },
   [850282] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 850282,
     SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit"
   },
@@ -2436,22 +2555,22 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Saiqi/skill10_fx_wingfall"
   },
   [850292] = {
-    NumLimit = 3,
+    NumLimit = 1,
     SoundId = 850292,
     SoundPath = "event:/sfx/common/player/hit/weapon/sickleHit_heavy"
   },
   [850293] = {
-    NumLimit = 5,
+    NumLimit = 4,
     SoundId = 850293,
     SoundPath = "event:/sfx/boss/Saiqi/skill10_fx_expand_loop"
   },
   [850294] = {
-    NumLimit = 3,
+    NumLimit = 4,
     SoundId = 850294,
     SoundPath = "event:/sfx/common/player/hit/magic/fireHit_normal"
   },
   [850301] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 850301,
     SoundPath = "event:/sfx/boss/Shijingzhe/fx_crystal_little_appear"
   },
@@ -2461,7 +2580,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Shijingzhe/fx_crystal_little_boom"
   },
   [850303] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850303,
     SoundPath = "event:/sfx/boss/Shijingzhe/skill10_fx_rock"
   },
@@ -2486,7 +2605,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Shijingzhe/skill09_fx_cast_01"
   },
   [850308] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850308,
     SoundPath = "event:/sfx/boss/Shijingzhe/skill09_fx_cast_02"
   },
@@ -2506,7 +2625,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Shijingzhe/fx_crystal_large_boom"
   },
   [850312] = {
-    NumLimit = 2,
+    NumLimit = 1,
     SoundId = 850312,
     SoundPath = "event:/sfx/boss/Shijingzhe/fx_column_appear"
   },
@@ -2521,42 +2640,42 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Shijingzhe/skill14_fx_appear"
   },
   [850315] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 850315,
     SoundPath = "event:/sfx/boss/Shijingzhe/skill14_follow_fx"
   },
   [850316] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 850316,
     SoundPath = "event:/sfx/boss/Shijingzhe/skill14_loop"
   },
   [850317] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 850317,
     SoundPath = "event:/sfx/boss/Shijingzhe/skill14_fx_disappear"
   },
   [850318] = {
-    NumLimit = 1,
+    NumLimit = 4,
     SoundId = 850318,
     SoundPath = "event:/sfx/boss/Shijingzhe/skill14_fx_rock"
   },
   [850319] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 850319,
     SoundPath = "event:/sfx/boss/Shijingzhe/skill10_fx_rock"
   },
   [850320] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850320,
     SoundPath = "event:/sfx/common/enemy/hit/heavySwordHit_normal"
   },
   [850321] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850321,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_heavy"
   },
   [850322] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850322,
     SoundPath = "event:/sfx/common/enemy/hit/spearHit_heavy"
   },
@@ -2566,17 +2685,17 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/windHit"
   },
   [850324] = {
-    NumLimit = 5,
+    NumLimit = 4,
     SoundId = 850324,
     SoundPath = "event:/ui/common/boss_shield_bar_lose"
   },
   [850401] = {
-    NumLimit = 3,
+    NumLimit = 1,
     SoundId = 850401,
     SoundPath = "event:/sfx/boss/Saiqi02/danmu_big"
   },
   [850402] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 850402,
     SoundPath = "event:/sfx/boss/Saiqi02/skill21_shot02_hit02"
   },
@@ -2591,7 +2710,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Saiqi02/skill21_shot02_hit03"
   },
   [850405] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 850405,
     SoundPath = "event:/sfx/boss/Saiqi02/skill08_01"
   },
@@ -2601,7 +2720,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Saiqi02/skill08_02"
   },
   [850407] = {
-    NumLimit = 1,
+    NumLimit = 3,
     SoundId = 850407,
     SoundPath = "event:/sfx/boss/Saiqi02/skill08_03"
   },
@@ -2611,7 +2730,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Saiqi02/skill08_hit"
   },
   [850409] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850409,
     SoundPath = "event:/sfx/boss/Saiqi02/skill21_shot02_hit03"
   },
@@ -2621,12 +2740,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Saiqi02/skill10_fx"
   },
   [850411] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 850411,
     SoundPath = "event:/sfx/boss/Saiqi02/skill10_fx_01"
   },
   [850412] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 850412,
     SoundPath = "event:/sfx/boss/Saiqi02/skill10_fx_02"
   },
@@ -2636,7 +2755,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Saiqi02/skill21_shot02_hit03"
   },
   [850414] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 850414,
     SoundPath = "event:/sfx/boss/Saiqi02/skill11_fx_loop"
   },
@@ -2651,22 +2770,22 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Saiqi02/skill13_fx"
   },
   [850417] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 850417,
     SoundPath = "event:/sfx/boss/Saiqi02/danmu_small"
   },
   [850418] = {
-    NumLimit = 1,
+    NumLimit = 2,
     SoundId = 850418,
     SoundPath = "event:/sfx/boss/Saiqi02/skill17_fx_01"
   },
   [850419] = {
-    NumLimit = 1,
+    NumLimit = 2,
     SoundId = 850419,
     SoundPath = "event:/sfx/boss/Saiqi02/skill17_fx_02"
   },
   [850420] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 850420,
     SoundPath = "event:/sfx/boss/Saiqi02/skill21_shot01_hit"
   },
@@ -2681,12 +2800,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Saiqi02/skill21_shot01"
   },
   [850423] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850423,
     SoundPath = "event:/sfx/boss/Saiqi02/skill21_02"
   },
   [850501] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850501,
     SoundPath = "event:/sfx/boss/Lianhuo/skill04_explode"
   },
@@ -2696,7 +2815,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Lianhuo/skill05_explode"
   },
   [850503] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850503,
     SoundPath = "event:/sfx/boss/Lianhuo/skill06_blast"
   },
@@ -2706,7 +2825,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/magic/fireHit_normal_feina"
   },
   [850505] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850505,
     SoundPath = "event:/sfx/common/player/hit/magic/fireHit_heavy_feina"
   },
@@ -2721,7 +2840,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Lianhuo/skill10_cast_ball"
   },
   [850508] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 850508,
     SoundPath = "event:/sfx/common/player/hit/weapon/spearHit_heavy"
   },
@@ -2736,12 +2855,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/player/hit/magic/fireHit_normal_feina"
   },
   [850511] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 850511,
     SoundPath = "event:/sfx/boss/Lianhuo/skill08_explode"
   },
   [850513] = {
-    NumLimit = 2,
+    NumLimit = 3,
     SoundId = 850513,
     SoundPath = "event:/sfx/boss/Lianhuo/skill03_hard_fx_danmu_loop"
   },
@@ -2751,12 +2870,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Lianhuo/skill03_hard_fx_danmu_land"
   },
   [850516] = {
-    NumLimit = 2,
+    NumLimit = 3,
     SoundId = 850516,
     SoundPath = "event:/sfx/boss/Lianhuo/skill03_hard_fx_fire_loop"
   },
   [850517] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850517,
     SoundPath = "event:/sfx/boss/Lianhuo/skill07_fx_cast"
   },
@@ -2766,7 +2885,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Lianhuo/skill07_fx_lock"
   },
   [850601] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850601,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_normal"
   },
@@ -2776,7 +2895,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Tuosi/skill_04_fx_flame"
   },
   [850903] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 850903,
     SoundPath = "event:/sfx/boss/Tuosi/skill_05_fx_attack"
   },
@@ -2786,7 +2905,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Tuosi/skill_07_fx_boom"
   },
   [850905] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850905,
     SoundPath = "event:/sfx/boss/Tuosi/skill_07_fx_loop"
   },
@@ -2796,7 +2915,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Tuosi/skill_08_fx_laser"
   },
   [850907] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 850907,
     SoundPath = "event:/sfx/boss/Tuosi/skill_08_fx_charge"
   },
@@ -2821,17 +2940,17 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Tuosi/skill_08_fx_ball_loop"
   },
   [850912] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 850912,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_normal"
   },
   [850913] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850913,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_heavy"
   },
   [850914] = {
-    NumLimit = 2,
+    NumLimit = 4,
     SoundId = 850914,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_normal"
   },
@@ -2841,7 +2960,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_heavy"
   },
   [850916] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 850916,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_heavy"
   },
@@ -2851,7 +2970,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/electricBall_hit"
   },
   [850918] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 850918,
     SoundPath = "event:/sfx/common/enemy/hit/energy_hit"
   },
@@ -2861,7 +2980,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/electricHit_heavy_feina"
   },
   [850920] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 850920,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_normal"
   },
@@ -2871,72 +2990,61 @@ return ReadOnly("SoundEffect", {
     SoundPath = " event:/sfx/boss/Zhuyin/skill_behit_hevay"
   },
   [851002] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851002,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_heavy"
   },
   [851003] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851003,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_heavy"
   },
   [851004] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851004,
     SoundPath = "event:/sfx/common/enemy/hit/clawHit_heavy"
   },
   [851005] = {
-    NumLimit = 5,
     SoundId = 851005,
     SoundPath = "event:/sfx/boss/Zhuyin/skill04_fx_boom"
   },
   [851006] = {
-    NumLimit = 5,
     SoundId = 851006,
     SoundPath = "event:/sfx/boss/Zhuyin/skill05_fx_appear"
   },
   [851007] = {
-    NumLimit = 5,
     SoundId = 851007,
     SoundPath = "event:/sfx/boss/Zhuyin/skill05_fx_stonebehit"
   },
   [851008] = {
-    NumLimit = 5,
     SoundId = 851008,
     SoundPath = "event:/sfx/boss/Zhuyin/skill05_fx_finalexplosion"
   },
   [851009] = {
-    NumLimit = 5,
     SoundId = 851009,
     SoundPath = "event:/sfx/boss/Zhuyin/skill_behit_hevay"
   },
   [851010] = {
-    NumLimit = 5,
     SoundId = 851010,
     SoundPath = "event:/sfx/boss/Zhuyin/skill_behit_hevay"
   },
   [851011] = {
-    NumLimit = 4,
     SoundId = 851011,
     SoundPath = "event:/sfx/boss/Zhuyin/skill07_fx_groundbrk"
   },
   [851012] = {
-    NumLimit = 3,
     SoundId = 851012,
     SoundPath = "event:/sfx/common/enemy/hit/fireHit_normal_feina"
   },
   [851013] = {
-    NumLimit = 5,
     SoundId = 851013,
     SoundPath = "event:/sfx/boss/Zhuyin/skill07_fx_tornado_loop"
   },
   [851014] = {
-    NumLimit = 5,
     SoundId = 851014,
     SoundPath = "event:/sfx/boss/Zhuyin/skill_behit_light"
   },
   [851015] = {
-    NumLimit = 2,
     SoundId = 851015,
     SoundPath = "event:/sfx/boss/Zhuyin/skill07_fx_xlaser_loop"
   },
@@ -2951,66 +3059,77 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Zhuyin/skill05_fx_stoneatk"
   },
   [851018] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 851018,
     SoundPath = "event:/sfx/boss/Zhuyin/skill05_fx_loop"
   },
   [851019] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 851019,
     SoundPath = "event:/sfx/boss/Zhuyin/skill04_lightboom"
   },
   [851020] = {
-    NumLimit = 5,
+    NumLimit = 6,
     SoundId = 851020,
     SoundPath = "event:/sfx/boss/Zhuyin/skill07_lightning"
   },
   [851021] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 851021,
     SoundPath = "event:/sfx/boss/Zhuyin/skill07_fx_groundbrk"
   },
   [851101] = {
+    NumLimit = 5,
     SoundId = 851101,
     SoundPath = "event:/sfx/boss/Kuxiu/skill_aperture_hit"
   },
   [851102] = {
+    NumLimit = 5,
     SoundId = 851102,
     SoundPath = "event:/sfx/common/player/hit/weapon/clawHit_normal"
   },
   [851103] = {
+    NumLimit = 5,
     SoundId = 851103,
     SoundPath = "event:/sfx/boss/Shuanglong/bailong/bailong_skill04_fx"
   },
   [851104] = {
+    NumLimit = 5,
     SoundId = 851104,
     SoundPath = "event:/sfx/weapon/Machinegun/Fangzhu/hit"
   },
   [851105] = {
+    NumLimit = 5,
     SoundId = 851105,
     SoundPath = "event:/sfx/common/enemy/hit/electric_ball"
   },
   [851106] = {
+    NumLimit = 5,
     SoundId = 851106,
     SoundPath = "event:/sfx/boss/Kuxiu/skill_aperture_hit"
   },
   [851107] = {
+    NumLimit = 4,
     SoundId = 851107,
     SoundPath = "event:/sfx/boss/Shuanglong/bailong/bailong_skill05_fx"
   },
   [851111] = {
+    NumLimit = 5,
     SoundId = 851111,
     SoundPath = "event:/sfx/boss/Shuanglong/heilong/skill09_fx_loop"
   },
   [851112] = {
+    NumLimit = 4,
     SoundId = 851112,
     SoundPath = "event:/sfx/boss/Shuanglong/bailong/bailong_skill09_fx_loop"
   },
   [851113] = {
+    NumLimit = 3,
     SoundId = 851113,
     SoundPath = "event:/sfx/boss/Zhuyin/skill_behit_hevay"
   },
   [851116] = {
+    NumLimit = 5,
     SoundId = 851116,
     SoundPath = "event:/sfx/weapon/Machinegun/Poxiao/hit_02"
   },
@@ -3025,27 +3144,27 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/skill01_be_hit"
   },
   [851203] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851203,
     SoundPath = "event:/sfx/boss/Linen/skill02_fx_down"
   },
   [851204] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 851204,
     SoundPath = "event:/sfx/boss/Linen/skill03_bullet_loop"
   },
   [851205] = {
-    NumLimit = 6,
+    NumLimit = 4,
     SoundId = 851205,
     SoundPath = "event:/sfx/boss/Linen/skill03_fx_boom"
   },
   [851206] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 851206,
     SoundPath = "event:/sfx/boss/Linen/skill05_fx_break"
   },
   [851207] = {
-    NumLimit = 5,
+    NumLimit = 8,
     SoundId = 851207,
     SoundPath = "event:/sfx/boss/Linen/skill05_fx_laser"
   },
@@ -3055,7 +3174,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/skill05_fx_dash"
   },
   [851209] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 851209,
     SoundPath = "event:/sfx/boss/Linen/skill05_fx_shot"
   },
@@ -3065,7 +3184,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/skill05_shot_behit"
   },
   [851211] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 851211,
     SoundPath = "event:/sfx/boss/Linen/skill06_fx_shoot"
   },
@@ -3075,27 +3194,27 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/skill06_2_fx_shoot "
   },
   [851218] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 851218,
     SoundPath = "event:/sfx/boss/Linen/skill07_fx_lock"
   },
   [851219] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 851219,
     SoundPath = "event:/sfx/boss/Linen/skill07_fx_stop"
   },
   [851220] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 851220,
     SoundPath = "event:/sfx/boss/Linen/skill07_fx_attack"
   },
   [851221] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851221,
     SoundPath = "event:/sfx/boss/Linen/skill08_fx_little_charge"
   },
   [851222] = {
-    NumLimit = 5,
+    NumLimit = 10,
     SoundId = 851222,
     SoundPath = "event:/sfx/boss/Linen/skill08_fx_little_shot"
   },
@@ -3105,12 +3224,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/skill08_fx_big_charge"
   },
   [851224] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 851224,
     SoundPath = "event:/sfx/boss/Linen/skill08_big_shot"
   },
   [851225] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 851225,
     SoundPath = "event:/sfx/boss/Linen/skill08_fx_little_shunyi"
   },
@@ -3120,7 +3239,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/skill08_fx_shield_loop"
   },
   [851227] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 851227,
     SoundPath = "event:/sfx/boss/Linen/skill09_fx_energyStorm_charge"
   },
@@ -3130,7 +3249,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/skill09_fx_energyStorm_boom"
   },
   [851229] = {
-    NumLimit = 8,
+    NumLimit = 5,
     SoundId = 851229,
     SoundPath = "event:/sfx/boss/Linen/skill09_fx_aimLaser"
   },
@@ -3140,7 +3259,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/skill09_fx_shotLaser"
   },
   [851232] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851232,
     SoundPath = "event:/sfx/boss/Linen/skill11_fx_shot"
   },
@@ -3150,52 +3269,52 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Linen/move_loop"
   },
   [851234] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 851234,
     SoundPath = "event:/sfx/boss/Linen/common_fx_appear"
   },
   [851235] = {
-    NumLimit = 5,
+    NumLimit = 10,
     SoundId = 851235,
     SoundPath = "event:/sfx/boss/Linen/skill09_light"
   },
   [851236] = {
-    NumLimit = 5,
+    NumLimit = 12,
     SoundId = 851236,
     SoundPath = "event:/sfx/boss/Linen/skill09_impact"
   },
   [851301] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851301,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_heavy"
   },
   [851302] = {
-    NumLimit = 5,
+    NumLimit = 4,
     SoundId = 851302,
     SoundPath = "event:/sfx/boss/Kuxiu/skill_aperture_common"
   },
   [851303] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 851303,
     SoundPath = "event:/sfx/boss/Kuxiu/skill_aperture_hit"
   },
   [851304] = {
-    NumLimit = 10,
+    NumLimit = 5,
     SoundId = 851304,
     SoundPath = "event:/sfx/boss/Kuxiu/skill03_shot"
   },
   [851305] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 851305,
     SoundPath = "event:/sfx/boss/Kuxiu/skill03_bom"
   },
   [851306] = {
-    NumLimit = 1,
+    NumLimit = 3,
     SoundId = 851306,
     SoundPath = "event:/sfx/boss/Kuxiu/skill03_hit"
   },
   [851307] = {
-    NumLimit = 1,
+    NumLimit = 5,
     SoundId = 851307,
     SoundPath = "event:/sfx/boss/Kuxiu/skill05_shot"
   },
@@ -3215,17 +3334,17 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Kuxiu/skill06_shot"
   },
   [851311] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 851311,
     SoundPath = "event:/sfx/boss/Kuxiu/laser_hit"
   },
   [851312] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 851312,
     SoundPath = " event:/sfx/boss/Kuxiu/skill07_ping"
   },
   [851314] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 851314,
     SoundPath = "event:/sfx/boss/Kuxiu/skill07_aim"
   },
@@ -3240,12 +3359,12 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/boss/Kuxiu/laser_hit"
   },
   [851318] = {
-    NumLimit = 10,
+    NumLimit = 5,
     SoundId = 851318,
     SoundPath = "event:/sfx/boss/Kuxiu/skill03_bullet"
   },
   [851319] = {
-    NumLimit = 12,
+    NumLimit = 3,
     SoundId = 851319,
     SoundPath = "event:/sfx/boss/Kuxiu/skill05_bullet"
   },
@@ -3255,27 +3374,27 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/bullet_hit_material"
   },
   [851402] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 851402,
     SoundPath = "event:/sfx/boss/Shenpan/skill02_fx_laser"
   },
   [851403] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851403,
     SoundPath = "event:/sfx/boss/Shenpan/skill02_fx_burst"
   },
   [851404] = {
-    NumLimit = 5,
+    NumLimit = 10,
     SoundId = 851404,
     SoundPath = "event:/sfx/boss/Shenpan/skill03_fx_fire_whoosh"
   },
   [851405] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851405,
     SoundPath = "event:/sfx/boss/Shenpan/skill03_explode"
   },
   [851406] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851406,
     SoundPath = "event:/sfx/boss/Shenpan/skill04_boom"
   },
@@ -3290,7 +3409,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/shield_hit"
   },
   [851501] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 851501,
     SoundPath = "event:/sfx/boss/Jushi/common_fx_loop"
   },
@@ -3300,97 +3419,80 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/electric_ball"
   },
   [851505] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 851505,
     SoundPath = "event:/sfx/boss/Jushi/skill04_fx_shot_loop"
   },
   [851506] = {
-    NumLimit = 2,
+    NumLimit = 5,
     SoundId = 851506,
     SoundPath = "event:/sfx/boss/Jushi/skill04_fx_shot02_loop"
   },
   [851507] = {
-    NumLimit = 3,
     SoundId = 851507,
     SoundPath = "event:/sfx/common/enemy/hit/fireSmall_hit"
   },
   [851508] = {
-    NumLimit = 5,
     SoundId = 851508,
     SoundPath = "event:/sfx/boss/Jushi/skill05_fx_boom"
   },
   [851509] = {
-    NumLimit = 5,
     SoundId = 851509,
     SoundPath = "event:/sfx/boss/Jushi/skill05_fx_shot03_boom"
   },
   [851510] = {
-    NumLimit = 5,
     SoundId = 851510,
     SoundPath = "event:/sfx/boss/Jushi/skill05_fx_shot03_loop"
   },
   [851511] = {
-    NumLimit = 3,
     SoundId = 851511,
     SoundPath = "event:/sfx/common/enemy/hit/fireSmall_hit"
   },
   [851512] = {
-    NumLimit = 5,
     SoundId = 851512,
     SoundPath = "event:/sfx/boss/Jushi/common_beHit"
   },
   [851513] = {
-    NumLimit = 5,
     SoundId = 851513,
     SoundPath = "event:/sfx/boss/Jushi/skill06_fx_laser"
   },
   [851514] = {
-    NumLimit = 5,
     SoundId = 851514,
     SoundPath = "event:/sfx/boss/Kuxiu/skill_aperture_hit"
   },
   [851515] = {
-    NumLimit = 10,
     SoundId = 851515,
     SoundPath = "event:/sfx/boss/Jushi/skill07_fx_boom_pre"
   },
   [851516] = {
-    NumLimit = 5,
     SoundId = 851516,
     SoundPath = "event:/sfx/boss/Jushi/common_beHit"
   },
   [851517] = {
-    NumLimit = 5,
     SoundId = 851517,
     SoundPath = "event:/sfx/boss/Jushi/skill08_fx_laser_shot"
   },
   [851518] = {
-    NumLimit = 5,
     SoundId = 851518,
     SoundPath = "event:/sfx/boss/Kuxiu/skill_aperture_hit"
   },
   [851519] = {
-    NumLimit = 5,
     SoundId = 851519,
     SoundPath = "event:/sfx/boss/Jushi/common_beHit"
   },
   [851701] = {
-    NumLimit = 3,
     SoundId = 851701,
     SoundPath = "event:/sfx/common/enemy/hit/spearHit_heavy"
   },
   [851702] = {
-    NumLimit = 5,
     SoundId = 851702,
     SoundPath = "event:/sfx/common/enemy/hit/electricBall_hit"
   },
   [851703] = {
-    NumLimit = 5,
     SoundId = 851703,
     SoundPath = "event:/sfx/boss/Yuming/fx_electric_hit"
   },
   [851704] = {
-    NumLimit = 5,
     SoundId = 851704,
     SoundPath = "event:/sfx/boss/Yuming/fx_electric_spinning"
   },
@@ -3470,71 +3572,120 @@ return ReadOnly("SoundEffect", {
     SoundId = 851823,
     SoundPath = "event:/sfx/common/enemy/hit/shield_hit"
   },
+  [852101] = {
+    SoundId = 852101,
+    SoundPath = "event:/sfx/common/enemy/hit/heavySwordHit_normal"
+  },
+  [852102] = {
+    SoundId = 852102,
+    SoundPath = "event:/sfx/boss/Qihuo/skill02_fx"
+  },
+  [852103] = {
+    SoundId = 852103,
+    SoundPath = "event:/sfx/common/enemy/hit/clawHit_normal"
+  },
+  [852104] = {
+    SoundId = 852104,
+    SoundPath = "event:/sfx/common/enemy/hit/clawHit_normal"
+  },
+  [852105] = {
+    SoundId = 852105,
+    SoundPath = "event:/sfx/common/enemy/hit/fireSmall_hit"
+  },
+  [852106] = {
+    SoundId = 852106,
+    SoundPath = "event:/sfx/boss/Qihuo/skill06_exp"
+  },
+  [852107] = {
+    SoundId = 852107,
+    SoundPath = "event:/sfx/boss/Qihuo/skill07_ball_fx"
+  },
+  [852108] = {
+    SoundId = 852108,
+    SoundPath = "event:/sfx/boss/Qihuo/skill07_ball_exp"
+  },
   [852201] = {
+    NumLimit = 3,
     SoundId = 852201,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_heavy"
   },
   [852202] = {
+    NumLimit = 3,
     SoundId = 852202,
     SoundPath = "event:/sfx/boss/Tuisheng/skill02_fx"
   },
   [852203] = {
+    NumLimit = 4,
     SoundId = 852203,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_heavy"
   },
   [852204] = {
+    NumLimit = 4,
     SoundId = 852204,
     SoundPath = "event:/sfx/boss/Tuisheng/skill04_fx_debuff"
   },
   [852205] = {
+    NumLimit = 5,
     SoundId = 852205,
     SoundPath = "event:/sfx/boss/Tuisheng/skill04_fx_explosion"
   },
   [852206] = {
+    NumLimit = 3,
     SoundId = 852206,
     SoundPath = "event:/sfx/boss/Tuisheng/skill04_fx_laser"
   },
   [852207] = {
+    NumLimit = 3,
     SoundId = 852207,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_heavy"
   },
   [852208] = {
+    NumLimit = 5,
     SoundId = 852208,
     SoundPath = "event:/sfx/boss/Tuisheng/skill05_fx_laser"
   },
   [852209] = {
+    NumLimit = 5,
     SoundId = 852209,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_heavy"
   },
   [852211] = {
+    NumLimit = 5,
     SoundId = 852211,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_heavy"
   },
   [852212] = {
+    NumLimit = 5,
     SoundId = 852212,
     SoundPath = "event:/sfx/boss/Tuisheng/skill06_fx_loop"
   },
   [852213] = {
+    NumLimit = 5,
     SoundId = 852213,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_light"
   },
   [852214] = {
+    NumLimit = 5,
     SoundId = 852214,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_heavy"
   },
   [852215] = {
+    NumLimit = 5,
     SoundId = 852215,
     SoundPath = "event:/sfx/boss/Tuisheng/skill08_fx_explosion"
   },
   [852216] = {
+    NumLimit = 5,
     SoundId = 852216,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_heavy"
   },
   [852217] = {
+    NumLimit = 5,
     SoundId = 852217,
     SoundPath = "event:/sfx/boss/Tuisheng/skill08_fx_loop"
   },
   [852218] = {
+    NumLimit = 5,
     SoundId = 852218,
     SoundPath = "event:/sfx/boss/Tuisheng/be_hit_light"
   },
@@ -3544,22 +3695,22 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/scene/cannon_shoot_hit_ground"
   },
   [900101] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 900101,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_normal"
   },
   [900201] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 900201,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_light"
   },
   [900401] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 900401,
     SoundPath = "event:/sfx/enemy/SQ/Wanju/mech_bomb_whistle"
   },
   [900402] = {
-    NumLimit = 4,
+    NumLimit = 5,
     SoundId = 900402,
     SoundPath = "event:/sfx/enemy/SQ/Wanju/mech_bomb_exp"
   },
@@ -3569,22 +3720,22 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/SQ/Zhadan/skill01_whistle"
   },
   [900502] = {
-    NumLimit = 3,
+    NumLimit = 2,
     SoundId = 900502,
     SoundPath = "event:/sfx/enemy/SQ/Zhadan/skill01_exp"
   },
   [900601] = {
-    NumLimit = 3,
+    NumLimit = 1,
     SoundId = 900601,
     SoundPath = "event:/sfx/common/player/hit/weapon/swordHit_light"
   },
   [900602] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 900602,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill05_cast_1"
   },
   [900603] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 900603,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill05_cast_2"
   },
@@ -3609,62 +3760,58 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill04_cast"
   },
   [900608] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 900608,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/light"
   },
   [900609] = {
-    NumLimit = 5,
     SoundId = 900609,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill05_light_1"
   },
   [900610] = {
-    NumLimit = 5,
     SoundId = 900610,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill05_light_2"
   },
   [900611] = {
-    NumLimit = 5,
     SoundId = 900611,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill05_light_3"
   },
   [900612] = {
-    NumLimit = 5,
     SoundId = 900612,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill05_light_4"
   },
   [900613] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 900613,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill05_light_5"
   },
   [900614] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 900614,
     SoundPath = "event:/sfx/common/player/hit/magic/windHit"
   },
   [900615] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 900615,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/skill05_appear"
   },
   [900616] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 900616,
     SoundPath = "event:/sfx/enemy/SQ/Qizha/light"
   },
   [900701] = {
-    NumLimit = 2,
+    NumLimit = 3,
     SoundId = 900701,
     SoundPath = "event:/sfx/common/enemy/hit/lightingHit"
   },
   [900702] = {
-    NumLimit = 1,
+    NumLimit = 3,
     SoundId = 900702,
     SoundPath = "event:/sfx/enemy/SQ/Niaopao/bullet_fly"
   },
   [900703] = {
-    NumLimit = 1,
+    NumLimit = 3,
     SoundId = 900703,
     SoundPath = "event:/sfx/enemy/SQ/Niaopao/exp"
   },
@@ -3674,22 +3821,22 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_heavy"
   },
   [950001] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 950001,
     SoundPath = "event:/sfx/enemy/NE/Dajie/fast_loop_fx"
   },
   [950002] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 950002,
     SoundPath = "event:/sfx/enemy/NE/Dajie/skill03_hit"
   },
   [950003] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 950003,
     SoundPath = "event:/sfx/common/scene/shenmiao/jj_shield"
   },
   [950101] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 950101,
     SoundPath = "event:/sfx/enemy/Mn/Haer/skil02_hit"
   },
@@ -3699,23 +3846,27 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_normal"
   },
   [950401] = {
+    NumLimit = 3,
     SoundId = 950401,
     SoundPath = "event:/sfx/enemy/NE/Wuyou/skill01_loop"
   },
   [950402] = {
+    NumLimit = 3,
     SoundId = 950402,
     SoundPath = "event:/sfx/enemy/NE/Wuyou/skill01_hit"
   },
   [950701] = {
+    NumLimit = 3,
     SoundId = 950701,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_normal"
   },
   [951001] = {
+    NumLimit = 3,
     SoundId = 951001,
     SoundPath = "event:/sfx/common/enemy/hit/swordHit_light"
   },
   [980101] = {
-    NumLimit = 1,
+    NumLimit = 3,
     SoundId = 980101,
     SoundPath = "event:/sfx/common/enemy/hit/bite"
   },
@@ -3743,6 +3894,14 @@ return ReadOnly("SoundEffect", {
     NumLimit = 5,
     SoundId = 1020103,
     SoundPath = "event:/sfx/weapon/Polearm/Liandu/mod01_runattack_03_fx03"
+  },
+  [1029901] = {
+    SoundId = 1029901,
+    SoundPath = "event:/sfx/weapon/Polearm/wuzhi/explosion"
+  },
+  [1029902] = {
+    SoundId = 1029902,
+    SoundPath = "event:/sfx/weapon/Polearm/wuzhi/explosion_hit"
   },
   [1030201] = {
     NumLimit = 3,
@@ -4129,6 +4288,47 @@ return ReadOnly("SoundEffect", {
     SoundId = 2051004,
     SoundPath = "event:/sfx/weapon/Machinegun/Ruohua/fly"
   },
+  [2051101] = {
+    NumLimit = 5,
+    SoundId = 2051101,
+    SoundPath = "event:/sfx/weapon/Machinegun/Bomu/shoot_loop"
+  },
+  [2051102] = {
+    NumLimit = 5,
+    SoundId = 2051102,
+    SoundPath = "event:/sfx/weapon/Machinegun/Bomu/shootfly_loop"
+  },
+  [2051103] = {
+    NumLimit = 5,
+    SoundId = 2051103,
+    SoundPath = "event:/sfx/weapon/Machinegun/Bomu/shootfly_explosion"
+  },
+  [2051104] = {
+    NumLimit = 5,
+    SoundId = 2051104,
+    SoundPath = "event:/sfx/weapon/Machinegun/Bomu/explosion"
+  },
+  [2051105] = {
+    NumLimit = 5,
+    SoundId = 2051105,
+    SoundPath = "event:/sfx/weapon/Machinegun/Bomu/behit"
+  },
+  [2059901] = {
+    NumLimit = 5,
+    SoundId = 2059901,
+    SoundPath = "event:/sfx/weapon/Machinegun/Jingci/be_hit",
+    SubSoundId = 1
+  },
+  [2059902] = {
+    NumLimit = 10,
+    SoundId = 2059902,
+    SoundPath = "event:/sfx/weapon/Machinegun/Jingci/shoot_loop"
+  },
+  [2059903] = {
+    NumLimit = 5,
+    SoundId = 2059903,
+    SoundPath = "event:/sfx/weapon/Machinegun/Jingci/explosion"
+  },
   [2060101] = {
     NumLimit = 5,
     SoundId = 2060101,
@@ -4147,7 +4347,8 @@ return ReadOnly("SoundEffect", {
   [2060104] = {
     NumLimit = 5,
     SoundId = 2060104,
-    SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase01_light"
+    SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase01_light",
+    SubSoundId = 1
   },
   [2060105] = {
     NumLimit = 5,
@@ -4155,63 +4356,59 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase02_light"
   },
   [2060106] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 2060106,
     SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase03_light"
   },
   [2060107] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 2060107,
     SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase01_charge_loop"
   },
   [2060108] = {
-    NumLimit = 5,
+    NumLimit = 2,
     SoundId = 2060108,
-    SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase02_charge_loop"
+    SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase02_charge_loop",
+    SubSoundId = 1
   },
   [2060109] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 2060109,
     SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase03_charge_loop"
   },
   [2060110] = {
-    NumLimit = 5,
+    NumLimit = 3,
     SoundId = 2060110,
     SoundPath = "event:/sfx/weapon/$RangedWeapon$/phase04_charge_loop"
   },
   [2060201] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 2060201,
     SoundPath = "event:/sfx/weapon/Bow/Huguang/whistle"
   },
   [2060301] = {
-    NumLimit = 3,
+    NumLimit = 5,
     SoundId = 2060301,
     SoundPath = "event:/sfx/weapon/Bow/Inbu/whistle_shot"
   },
   [2060302] = {
-    NumLimit = 2,
     SoundId = 2060302,
-    SoundPath = "event:/sfx/common/player/hit/bullet/hit_normal_bow",
-    SubSoundId = 1
+    SoundPath = "event:/sfx/common/player/hit/bullet/hit_normal_bow"
   },
   [2060303] = {
-    NumLimit = 3,
     SoundId = 2060303,
     SoundPath = "event:/sfx/weapon/Bow/Inbu/hit"
   },
   [2060304] = {
-    NumLimit = 3,
     SoundId = 2060304,
     SoundPath = "event:/sfx/weapon/Bow/Inbu/lock"
   },
   [2060305] = {
-    NumLimit = 5,
     SoundId = 2060305,
     SoundPath = "event:/sfx/weapon/Bow/Inbu/start"
   },
   [2060306] = {
-    NumLimit = 5,
+    NumLimit = 1,
     SoundId = 2060306,
     SoundPath = "event:/sfx/weapon/Bow/Inbu/xuli"
   },

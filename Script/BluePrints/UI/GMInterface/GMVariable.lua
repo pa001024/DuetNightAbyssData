@@ -107,6 +107,24 @@ function VariableForGM.VarFunc.UseMapPhoneInPC_Set(k, v)
   end
 end
 
+function VariableForGM.VarFunc.BlockAllQuestTrigger_Get(k)
+  if EMCache then
+    local GMInfo = EMCache:Get("GMInfo")
+    if GMInfo and GMInfo.BlockAllQuestTrigger ~= nil then
+      return GMInfo.BlockAllQuestTrigger
+    end
+  end
+  return false
+end
+
+function VariableForGM.VarFunc.BlockAllQuestTrigger_Set(k, v)
+  if EMCache then
+    local GMInfo = EMCache:Get("GMInfo") or {}
+    GMInfo.BlockAllQuestTrigger = v and true or false
+    EMCache:Set("GMInfo", GMInfo)
+  end
+end
+
 setmetatable(VariableForGM, {
   __index = function(t, k)
     if t.VarFunc[k .. "_Get"] then

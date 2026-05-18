@@ -34,6 +34,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:CheckIsPartyMode()
   self:CheckIsWalnutMode()
   self:CheckIsNoExpMode()
+  self:CheckIsIronSurvivalMode()
   self:CheckIsAutoNextRoundMode()
   self:CheckIsAutoBanMode()
   self.HideUITag = "DungeonSettlement"
@@ -348,11 +349,14 @@ function M:InitMainButtons()
   self.Btn_Continue:BindEventOnClicked(self, self.Continue)
   self.Btn_Continue:BindForbidStateExecuteEvent(self, self.ForbidContinue)
   self.Btn_Continue:SetDefaultGamePadImg("Y")
-  if not self:CheckAgainAvailable() then
+  if not self:CheckWalnutAgainAvailable() then
     self.Btn_Continue:ForbidBtn(true)
-    self.AgainNotAvailable = true
+    self.WalnutAgainNotAvailable = true
   end
   self:AddDispatcher(EventID.OnDungeonsUpdate, self, self.OnWalnutDungeonUpdate)
+  if not self:CheckIronSurvivalAgainAvailable() then
+    self.Btn_Continue:ForbidBtn(true)
+  end
   self.Btn_Close:SetVisibility(ESlateVisibility.Visible)
   self.Btn_Close:ForbidBtn(false)
   if not self.IsTemple then
@@ -383,7 +387,7 @@ function M:OnWalnutDungeonUpdate()
     return
   end
   self.Btn_Continue:ForbidBtn(true)
-  self.AgainNotAvailable = true
+  self.WalnutAgainNotAvailable = true
 end
 
 function M:InitActionPointInfo()
@@ -622,13 +626,14 @@ end
 
 function M:ForbidContinue()
   DebugPrint("DungeonSettlement: ClickContinueButton Forbid")
-  if not self.IsWalnut then
+  if self.IsWalnut and self.WalnutAgainNotAvailable then
+    GameState(self):ShowDungeonToast_Lua("UI_WALNUTDUNGEON_REFRESH_TOAST", 2, EToastType.Common)
     return
   end
-  if not self.AgainNotAvailable then
+  if self.IsIronSurvival then
+    GameState(self):ShowDungeonToast_Lua("UI_IronSurvival_NotLeaderDisableDesc", 2, EToastType.Common)
     return
   end
-  GameState(self):ShowDungeonToast_Lua("UI_WALNUTDUNGEON_REFRESH_TOAST", 2, EToastType.Common)
 end
 
 function M:Continue()
@@ -637,9 +642,9 @@ function M:Continue()
     self:DefaultContinue()
     return
   end
-  if not self:CheckAgainAvailable() then
+  if not self:CheckWalnutAgainAvailable() then
     self.Btn_Continue:ForbidBtn(true)
-    self.AgainNotAvailable = true
+    self.WalnutAgainNotAvailable = true
     self:ForbidContinue()
     return
   end
@@ -695,6 +700,10 @@ function M:DefaultContinue()
   end
   if not Avatar:IsInNarrowDungeon() then
     self:RequestServerContinue()
+    return
+  end
+  if self.IsIronSurvival then
+    self:DoIronSurvivalContinue()
     return
   end
   if self.IsWalnut and self:IsStandAloneSolo() then
@@ -1220,6 +1229,8 @@ function M:RewardsAddToArray(TotalRewards, Rewards, IsSpecial)
   local RewardTypes = DataMgr.RewardType
   for RewardType, RewardTypeValue in pairs(RewardTypes) do
     if not RewardTypeValue.DungeonRewardType then
+    elseif "IronTicket" == RewardType then
+      self:CreateIronTicketRewards(TotalRewards, Rewards, RewardTypeValue, IsSpecial)
     else
       local Reward = Rewards[RewardType .. "s"]
       if not Reward then
@@ -1251,7 +1262,7 @@ function M:RewardsAddToArray(TotalRewards, Rewards, IsSpecial)
   end
 end
 
-function M:CreateOneReward(RewardType, RewardTypeValue, Id, Num, IsSpecial, IsExtra, IsWalnut, IsFirst)
+function M:CreateOneReward(RewardType, RewardTypeValue, Id, Num, IsSpecial, IsExtra, IsWalnut, IsFirst, Uid)
   if 0 == Num then
     return
   end
@@ -1268,9 +1279,36 @@ function M:CreateOneReward(RewardType, RewardTypeValue, Id, Num, IsSpecial, IsEx
     ResourceData.IsBonus = IsExtra
     ResourceData.IsWalnutBonus = IsWalnut
     ResourceData.IsFirst = IsFirst
+    ResourceData.Uid = Uid
     return ResourceData
   else
     return
+  end
+end
+
+function M:CreateIronTicketRewards(TotalRewards, RewardsTable, RewardTypeValue, IsSpecial)
+  if not RewardsTable.Special or not RewardsTable.Special.IronTicket then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local IronTicketRewardUid2TicketId = {}
+  for _, Uid in pairs(RewardsTable.Special.IronTicket) do
+    if Avatar.IronSurvivalTicket then
+      for _, ticket in pairs(Avatar.IronSurvivalTicket) do
+        if ticket.Uid == Uid then
+          IronTicketRewardUid2TicketId[Uid] = ticket.TicketId
+          break
+        end
+      end
+    end
+  end
+  PrintTable(IronTicketRewardUid2TicketId, 2)
+  for Uid, TicketId in pairs(IronTicketRewardUid2TicketId) do
+    local RewardData = self:CreateOneReward("IronTicket", RewardTypeValue, TicketId, 1, IsSpecial, false, false, false, Uid)
+    table.insert(TotalRewards, RewardData)
   end
 end
 
@@ -1351,6 +1389,9 @@ function M:NewPropContent(Content, RewardViewWidget)
       ItemContent.BonusType = 2
     end
     ItemContent.UIName = "DungeonSettlement"
+    if Content.Uid then
+      ItemContent.Uuid = Content.Uid
+    end
   end
   return ItemContent
 end
@@ -1574,6 +1615,14 @@ function M:CheckIsWalnutMode()
   end
 end
 
+function M:CheckIsIronSurvivalMode()
+  self.IsIronSurvival = false
+  local DungeonInfo = DataMgr.Dungeon[self.DungeonId]
+  if DungeonInfo then
+    self.IsIronSurvival = DungeonInfo.DungeonType == "IronSurvival"
+  end
+end
+
 function M:CheckIsHardBossMode()
   self.IsHardBoss = false
   local Avatar = GWorld:GetAvatar()
@@ -1587,7 +1636,7 @@ function M:CheckIsHardBossMode()
   end
 end
 
-function M:CheckAgainAvailable()
+function M:CheckWalnutAgainAvailable()
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return true
@@ -1605,6 +1654,36 @@ function M:CheckAgainAvailable()
     end
   end
   return false
+end
+
+function M:CheckIronSurvivalAgainAvailable()
+  if not self.IsIronSurvival then
+    return true
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  if not Avatar:IsInTeam() then
+    return true
+  end
+  if self:IsTeamLeader(Avatar) then
+    return true
+  end
+  return false
+end
+
+function M:IsTeamLeader(Avatar)
+  Avatar = Avatar or GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local TeamModel = TeamController:GetModel()
+  if not TeamModel then
+    return false
+  end
+  local LeaderId = TeamModel:GetTeamLeaderId()
+  return Avatar.Uid == LeaderId
 end
 
 function M:CheckIsAutoBanMode()
@@ -2710,7 +2789,13 @@ function M:OnTeamMatchTimingStart()
 end
 
 function M:OnTeamMatchTimingEnd()
-  self.Btn_Continue:ForbidBtn(false)
+  if self.IsIronSurvival then
+    if self:IsTeamLeader() then
+      self.Btn_Continue:ForbidBtn(false)
+    end
+  else
+    self.Btn_Continue:ForbidBtn(false)
+  end
 end
 
 function M:TryEnterDungeonAgain()
@@ -2745,7 +2830,7 @@ function M:TryEnterDungeonAgain()
   else
     Avatar:EnterDungeonAgain(function(Ret)
       DebugPrint("gmy@WBP_DungeonSettlement_C M:EnterDungeonAgain Callback", Ret)
-      if Ret == ErrorCode.RET_SUCCESS and not DungeonData.IsWalnutDungeon then
+      if Ret == ErrorCode.RET_SUCCESS then
         UIManager(self):LoadUINew("DungeonMatchTimingBar", self.DungeonId, Const.DUNGEON_MATCH_BAR_STATE.SPONSOR_WAITING_CONFIRM, false)
       end
     end)
@@ -2793,6 +2878,41 @@ function M:OpenTicketDialog(DungeonId)
     ForbiddenRightCallbackObj = self,
     AutoFocus = true
   }, self)
+end
+
+function M:DoIronSurvivalContinue()
+  UIManager(self):LoadUINew("IronExpPopup", {
+    DungeonId = self.DungeonId,
+    ParentWidget = self,
+    StartCallback = function(TicketUid, TicketLevel)
+      self:TryEnterIronSurvivalAgain(TicketUid, TicketLevel)
+    end
+  })
+end
+
+function M:TryEnterIronSurvivalAgain(TicketUid, TicketLevel)
+  DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronSurvivalAgain StandAloneSolo TicketUid", TicketUid)
+  local CustomParams = {IronTicketId = TicketUid}
+  local Avatar = GWorld:GetAvatar()
+  if self:IsStandAloneSolo() then
+    Avatar:EnterDungeonAgain(function(Ret)
+      self:BlockAllUIInput(false)
+      DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronSurvivalAgain StandAloneSolo Callback", Ret)
+    end, nil, CustomParams)
+    self:BlockAllUIInput(true)
+    self:AddTimer(10, function()
+      if self and self:IsAllUIInputBlocked() then
+        self:BlockAllUIInput(false)
+      end
+    end)
+  else
+    Avatar:EnterDungeonAgain(function(Ret)
+      DebugPrint("ljl@WBP_DungeonSettlement_C M:TryEnterIronSurvivalAgain InTeam Callback", Ret)
+      if Ret == ErrorCode.RET_SUCCESS then
+        UIManager(self):LoadUINew("DungeonMatchTimingBar", self.DungeonId, Const.DUNGEON_MATCH_BAR_STATE.SPONSOR_WAITING_CONFIRM, false, TicketLevel)
+      end
+    end, nil, CustomParams)
+  end
 end
 
 function M:BP_GetDesiredFocusTarget()

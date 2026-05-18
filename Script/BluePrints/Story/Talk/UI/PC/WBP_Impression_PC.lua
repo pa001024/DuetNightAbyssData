@@ -3,7 +3,7 @@ local EImpressionButtonState = require("BluePrints.UI.UI_PC.Impression.Impressio
 local Scroll_Mouse = MiscUtils.LazyLoadObject("/Game/UI/Texture/Dynamic/Atlas/Key/PC/T_Key_MouseScroll.T_Key_MouseScroll")
 local Scroll_Xbox = MiscUtils.LazyLoadObject("/Game/UI/Texture/Dynamic/Atlas/Key/XBOX/T_Key_LV.T_Key_LV")
 local Scroll_PS = MiscUtils.LazyLoadObject("/Game/UI/Texture/Dynamic/Atlas/Key/PS5/T_Key_LV.T_Key_LV")
-local ImpressionItemNum = 5
+local ImpressionItemUIPath = "/Game/UI/WBP/Impression/PC/WBP_Impression_Item_P.WBP_Impression_Item_P"
 require("UnLua")
 local ETalkOptionType = require("BluePrints.Story.Talk.Model.TalkOptionData").ETalkOptionType
 local WBP_Impression_PC = Class("BluePrints.Story.Talk.UI.Common.WBP_Impression_Common")
@@ -17,6 +17,10 @@ function WBP_Impression_PC:InitImpressionUI()
   self:RefreshBaseInfo()
   self:AddLSFocusTarget(self.Btn_DimensionDrawArea.Key_Dimension, self.Btn_DimensionDrawArea, "Menu", true)
   self:AddLSFocusTarget(self.Com_Cost.Key, self.Com_Cost, "RS", true)
+end
+
+function WBP_Impression_PC:GetImpressionItemUIPath()
+  return ImpressionItemUIPath
 end
 
 function WBP_Impression_PC:InitKeyInfo()
@@ -43,21 +47,6 @@ end
 
 function WBP_Impression_PC:OnOptionInAnimationStarted()
   WBP_Impression_PC.Super.OnOptionInAnimationStarted(self)
-  local LastItem
-  self.Button_Area:SetNavigationRuleBase(EUINavigation.Up, EUINavigationRule.Stop)
-  self.Button_Area:SetNavigationRuleBase(EUINavigation.Down, EUINavigationRule.Stop)
-  for i = 1, ImpressionItemNum do
-    local ImpressionItem = self:GetImpressionItem(i)
-    if ImpressionItem and ImpressionItem.State ~= EImpressionButtonState.None then
-      if LastItem then
-        LastItem:SetNavigationRuleExplicit(EUINavigation.Down, ImpressionItem)
-        ImpressionItem:SetNavigationRuleExplicit(EUINavigation.Up, LastItem)
-      end
-      self.Button_Area:SetNavigationRuleExplicit(EUINavigation.Up, ImpressionItem)
-      ImpressionItem:SetNavigationRuleExplicit(EUINavigation.Down, self.Button_Area)
-      LastItem = ImpressionItem
-    end
-  end
 end
 
 function WBP_Impression_PC:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
@@ -139,20 +128,6 @@ function WBP_Impression_PC:OnKeyUp(MyGeometry, InKeyEvent)
   return WBP_Impression_PC.Super.OnKeyUp(self, MyGeometry, InKeyEvent)
 end
 
-function WBP_Impression_PC:OnImpressionItemPressed()
-  if self:IsTipsOpen() then
-    return
-  end
-  WBP_Impression_PC.Super.OnImpressionItemPressed(self)
-end
-
-function WBP_Impression_PC:OnImpressionItemReleased()
-  if self:IsTipsOpen() then
-    return
-  end
-  WBP_Impression_PC.Super.OnImpressionItemReleased(self)
-end
-
 function WBP_Impression_PC:OnReviewButtonClicked()
   if self:IsTipsOpen() then
     return
@@ -175,24 +150,15 @@ function WBP_Impression_PC:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepad
   DebugPrint("WBP_Impression_PC:RefreshOpInfoByInputDevice", CurInputDevice, CurGamepadName)
   local IsGamePad = CurInputDevice == ECommonInputType.Gamepad
   self.IsGamePad = IsGamePad
-  for i = 1, ImpressionItemNum do
-    local ImpressionItem = self:GetImpressionItem(i)
-    if ImpressionItem then
-      ImpressionItem:UpdateKeyImg(IsGamePad)
-    end
+  if self.OptionList then
+    self.OptionList:UpdateKeyImg(IsGamePad, CurGamepadName)
   end
   if IsGamePad then
     if not self:HasFocusedDescendants() or self:HasAnyUserFocus() then
       self:SetFocus()
     end
-    if "XBOX" == CurGamepadName then
-      self.Img_Mouse:SetBrushResourceObject(Scroll_Xbox:get())
-    else
-      self.Img_Mouse:SetBrushResourceObject(Scroll_PS:get())
-    end
     self.WS_Node:SetActiveWidgetIndex(1)
   else
-    self.Img_Mouse:SetBrushResourceObject(Scroll_Mouse:get())
     self.WS_Node:SetActiveWidgetIndex(0)
   end
   self.WBP_Story_PlayKey_P:UpdateKeyImg(IsGamePad)

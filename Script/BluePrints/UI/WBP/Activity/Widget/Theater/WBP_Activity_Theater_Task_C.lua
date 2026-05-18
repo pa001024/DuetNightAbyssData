@@ -115,17 +115,10 @@ function M:OnBtnAutoClicked()
 end
 
 function M:PreviewLevelMax(Id)
-  local Content = self:FindSelectedContent(Id)
-  local NeedNum = self.NeedNum[Id]
-  if nil == NeedNum or 3 == self.CurStep and 3 == self.SelectedIndex then
-    return false
-  end
-  if 0 == NeedNum then
-    return true
-  end
-  if Content then
-    return NeedNum <= Content.Count
-  end
+  return false
+end
+
+function M:NeedNumConstraint(Id)
   return false
 end
 

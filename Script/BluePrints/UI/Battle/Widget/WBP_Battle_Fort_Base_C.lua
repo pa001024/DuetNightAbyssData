@@ -148,6 +148,10 @@ function WBP_Battle_Fort_Base_C:GetCurrentPercent()
   return 0
 end
 
+function WBP_Battle_Fort_Base_C:RefreshRoleSkillButton_Pre(Index)
+  self["FireUI_" .. Index]:InitItem_PaoTaiPre()
+end
+
 function WBP_Battle_Fort_Base_C:RefreshRoleSkillButton(Index)
   local SkillId = self.OwnerPlayer:GetSkillByType(self["FireUI_" .. Index].Type)
   local Skill = self.OwnerPlayer:GetSkill(SkillId)
@@ -156,7 +160,7 @@ end
 
 function WBP_Battle_Fort_Base_C:UpdateExclusiveSkill(DeltaTime)
   self.FireUI_1:RefreshSkillStyleInTimer_PaoTai()
-  self.FireUI_2:RefreshSkillItem_HotValue(DeltaTime, self.Percent)
+  self.FireUI_2:RefreshFunc_PaoTai(DeltaTime, self.Percent)
 end
 
 function WBP_Battle_Fort_Base_C:InitRoleSkillButton(Index)
@@ -169,6 +173,7 @@ function WBP_Battle_Fort_Base_C:InitRoleSkillButton(Index)
     self["FireUI_" .. Index].SkillEnumId = ESkillName.Fire
     self["FireUI_" .. Index].SkillName = "Fire"
   end
+  self:RefreshRoleSkillButton_Pre(Index)
   self:AddTimer(0.05, function()
     local SkillId = self.OwnerPlayer:GetSkillByType(self["FireUI_" .. Index].Type)
     local SKillConfig = DataMgr.Skill[SkillId][1][0]

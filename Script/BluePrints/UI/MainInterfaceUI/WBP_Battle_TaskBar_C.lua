@@ -11,6 +11,39 @@ local DisplayDungeonProgress = {
   Defence = true
 }
 local DisplayCustomProgress = {SynthesisII = true}
+local I18N_PACK_PREFIX = "#I18N#"
+local I18N_PACK_SEPARATOR = "|"
+
+local function ResolvePackedText(Text)
+  if type(Text) ~= "string" then
+    return ""
+  end
+  if string.sub(Text, 1, #I18N_PACK_PREFIX) ~= I18N_PACK_PREFIX then
+    return GText(Text)
+  end
+  local Body = string.sub(Text, #I18N_PACK_PREFIX + 1)
+  local Parts = {}
+  for Part in string.gmatch(Body, "([^" .. I18N_PACK_SEPARATOR .. "]+)") do
+    table.insert(Parts, Part)
+  end
+  local TextMapId = Parts[1]
+  if not TextMapId or "" == TextMapId then
+    return Text
+  end
+  local Args = {}
+  for i = 2, #Parts do
+    Args[i - 1] = tonumber(Parts[i]) or Parts[i]
+  end
+  local Template = GText(TextMapId)
+  if not Template then
+    return Text
+  end
+  local Ok, Formatted = pcall(string.format, Template, table.unpack(Args))
+  if Ok and Formatted then
+    return Formatted
+  end
+  return Template
+end
 
 function M:Initialize(Initializer)
   self.CurTaskInfo = {}
@@ -132,7 +165,7 @@ function M:SetTaskIconAndName(TaskIconPath, TextTitle, TaskContent, TaskWave)
   end
   self.Text_TaskName:SetText(Title)
   self.Text_TaskContent:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-  self.Text_TaskContent:SetText(Content)
+  self.Text_TaskContent:SetText(ResolvePackedText(Content))
   if self.Visibility == ESlateVisibility.Collapsed then
     self:SetVisibilityEx(ESlateVisibility.SelfHitTestInvisible)
   end
@@ -178,7 +211,7 @@ function M:SetTaskIconAndName(TaskIconPath, TextTitle, TaskContent, TaskWave)
   end
   if DisplayCustomProgress[GameState.GameModeType] then
     self.Panel_Wave:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.Text_Wave:SetText(GText(TaskWave))
+    self.Text_Wave:SetText(ResolvePackedText(TaskWave))
     self.Num_Wave:SetVisibility(ESlateVisibility.Collapsed)
   end
 end

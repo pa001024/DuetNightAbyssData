@@ -32,15 +32,19 @@ function WBP_HomeBaseMain_Item_C:RefreshNewClueUI()
     return
   end
   if ReasoningUtils:IsAllClueHasNewClue() then
-    if not self.NewClue then
+    if not IsValid(self.NewClue) then
       self.NewClue = UIManager(self):_CreateWidgetNew("ReasoningBubble")
     end
     if self.NewClue then
       self.NewClue:ShowInfo()
       self.Pos_Bubble_L:AddChild(self.NewClue)
     end
-  elseif self.NewClue then
-    self.Pos_Bubble_L:ClearChildren()
+    self.SizeBox_Bubble_L:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    if self.NewClue then
+      self.Pos_Bubble_L:ClearChildren()
+    end
+    self.SizeBox_Bubble_L:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -71,9 +75,11 @@ function WBP_HomeBaseMain_Item_C:RefreshNewTheaterUI()
   self.NewTheaterBubble:Init(ConfigData)
   self.NewTheaterBubble:PlayInAnimation()
   self.NewTheaterBubble:SetIconColor(true)
+  self.SizeBox_Bubble_L:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   
   local function HideTheaterBubble()
     self.NewTheaterBubble:PlayOutAnimation()
+    self.SizeBox_Bubble_L:SetVisibility(UE4.ESlateVisibility.Collapsed)
     if self:IsExistTimer("HideTheaterBubble") then
       self:RemoveTimer("HideTheaterBubble")
     end
@@ -484,6 +490,7 @@ function WBP_HomeBaseMain_Item_C:ShowBubble(ColorType, Arrow, Icon)
   }
   self.HudBubbleWidget:Init(ConfigData)
   self.HudBubbleWidget:PlayInAnimation()
+  self.SizeBox_Bubble:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.IsBubblePlaying = true
   EMCache:Set("GachaBubble", true)
   self:HideBubble(self.BubbleEndTime or 3)
@@ -496,6 +503,7 @@ function WBP_HomeBaseMain_Item_C:HideBubble(EndTime)
   
   local function HideBubble()
     self.HudBubbleWidget:PlayOutAnimation()
+    self.SizeBox_Bubble:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.IsBubblePlaying = false
     if self:IsExistTimer("HideBubble") then
       self:RemoveTimer("HideBubble")

@@ -103,7 +103,9 @@ function Component:_InitChatPC(Avatar, ...)
       for _, Widget in pairs(self.Pos_ChatSimple:GetDisplayedEntryWidgets()) do
         Widget:Close()
       end
+      self:ResetChatSimpleScrollOffset()
       self.Pos_ChatSimple:ClearListItems()
+      self:ResetChatSimpleScrollOffset()
       self.Pos_ChatSimple:SetVisibility(UIConst.VisibilityOp.Collapsed)
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Chat_In)
     elseif EventId == ChatCommon.EventID.EnterChatChannel then
@@ -234,11 +236,14 @@ function Component:InitChatSimple()
   local Avatar = GWorld:GetAvatar()
   if Avatar:IsInHardBoss() or Avatar:IsInDungeon() then
     self.Pos_ChatSimple:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self:ResetChatSimpleScrollOffset()
     self.bRebuildChatSimple = false
     return
   end
   self.Pos_ChatSimple:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  self:ResetChatSimpleScrollOffset()
   self.Pos_ChatSimple:ClearListItems()
+  self:ResetChatSimpleScrollOffset()
   self.bRebuildChatSimple = false
 end
 
@@ -278,7 +283,9 @@ function Component:TryAddChatSimpleProcessTimer()
       end
       if not self.Pos_ChatSimple:IsVisible() then
         self.ChatSimpleOpenQueue = Deque.New()
+        self:ResetChatSimpleScrollOffset()
         self.Pos_ChatSimple:ClearListItems()
+        self:ResetChatSimpleScrollOffset()
         self:RemoveChatSimpleProcessTimer()
         return
       end
@@ -325,6 +332,9 @@ function Component:_ProcessChatSimpleMove(Interval)
     local Content = self.Pos_ChatSimple:GetItemAt(0)
     self.Pos_ChatSimple:RemoveItem(Content)
     self.ChatSimpleOpenQueue:PopFront()
+    if self.Pos_ChatSimple:GetNumItems() <= 0 then
+      self:ResetChatSimpleScrollOffset()
+    end
     if self.ChatSimpleOpenQueue:IsEmpty() then
       self:RemoveChatSimpleProcessTimer()
     end
@@ -342,6 +352,20 @@ function Component:RemoveChatSimpleProcessTimer()
   end
   self:RemoveTimer(self.ProcessTicker)
   self.ProcessTicker = nil
+end
+
+function Component:ResetChatSimpleScrollOffset()
+  if not self.Pos_ChatSimple then
+    return
+  end
+  if self.Pos_ChatSimple.EndInertialScrolling then
+    self.Pos_ChatSimple:EndInertialScrolling()
+  end
+  if self.Pos_ChatSimple.SetScrollOffset then
+    self.Pos_ChatSimple:SetScrollOffset(0)
+  elseif self.Pos_ChatSimple.ScrollToStart then
+    self.Pos_ChatSimple:ScrollToStart()
+  end
 end
 
 function Component:ChatEntryOnClicked()

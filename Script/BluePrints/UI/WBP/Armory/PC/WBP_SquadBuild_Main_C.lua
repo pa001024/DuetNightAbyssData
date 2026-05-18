@@ -3,6 +3,8 @@ local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory
 local TimeUtils = require("Utils.TimeUtils")
 local EMCache = require("EMCache.EMCache")
 local UIUtils = require("Utils.UIUtils")
+local SquadModel = require("BluePrints.Common.MVC.Model.SquadModel")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 require("UnLua")
 local WBP_SquadBuild_Main_P_C = Class("BluePrints.UI.BP_UIState_C")
 local UnHandled = UE.UWidgetBlueprintLibrary.UnHandled()
@@ -476,7 +478,7 @@ function WBP_SquadBuild_Main_P_C:InitSquadData()
   if not self.Avatar then
     return
   end
-  self.SquadList = self.Avatar.Squad
+  self.SquadList = SquadModel:GetProcessedSquadList()
   self.RightSlots = {
     Char = self.Character,
     MeleeWeapon = self.Melee,
@@ -1122,7 +1124,11 @@ end
 function WBP_SquadBuild_Main_P_C:UpdateSquadListInfo()
   self.SquadInfoList = {}
   self.SquadListLen = 0
-  self:UpdateSquadListFromAvatar()
+  self.Avatar = GWorld:GetAvatar()
+  self.SquadList = SquadModel:GetProcessedSquadList()
+  if not self.SquadList or not self.Avatar then
+    return
+  end
   for key, value in pairs(self.SquadList) do
     local SquadInfo = {}
     self.SquadListLen = self.SquadListLen + 1
@@ -1146,15 +1152,6 @@ function WBP_SquadBuild_Main_P_C:UpdateSquadListInfo()
     end
     table.insert(self.SquadInfoList, SquadInfo)
   end
-end
-
-function WBP_SquadBuild_Main_P_C:UpdateSquadListFromAvatar()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  self.Avatar = Avatar
-  self.SquadList = self.Avatar.Squad
 end
 
 function WBP_SquadBuild_Main_P_C:UpdateSquadList()
@@ -1582,7 +1579,7 @@ function WBP_SquadBuild_Main_P_C:ClickListItem(Content)
     self.PreContent = self.CurSlot.ItemInfo
   end
   if self.CurClickItemInfo and self.CurClickItemInfo.SelfWidget then
-    if self.CurSlot.ItemInfo then
+    if self.CurSlot.ItemInfo and self.CurSlot.ItemInfo.SelfWidget then
       self.CurSlot.ItemInfo.SelfWidget:SetSelected(false)
     end
     self.CurClickItemInfo.SelfWidget:SetSelected(false)
@@ -1895,9 +1892,11 @@ function WBP_SquadBuild_Main_P_C:MakeSureCallback(ModIndex)
       PreParmas.ItemInfo = self.CurSlot.ItemInfo
       PreParmas.ModSuit = PreParmas.ModSuit and PreParmas.ModSuit > 0 and PreParmas.ModSuit or self.PreSlot.ModSuit
       self.PreSlot:InitSlot(PreParmas)
+      self:CheckAndClearHyperWeaponConflict(self.PreSlot, PreParmas.Id)
     end
     self:PopChangeRoleToastByType(Parmas)
   end
+  self:CheckAndClearHyperWeaponConflict(self.CurSlot, Parmas.Id)
   self.CurSlot:InitSlot(Parmas)
   self.PreContent = self.CurSlot.ItemInfo
   self:CloseTips(true)
@@ -1931,6 +1930,29 @@ function WBP_SquadBuild_Main_P_C:PopChangeRoleToastByType(Parmas)
     UIManager(self):ShowUITip("CommonToastMain", string.format(GText("UI_Squad_SwitchSigil_Toast"), GText(self:GetWeaponName(Parmas.Id)), GText("UI_Squad_Sigil" .. PhantomWeaponNum)))
   elseif "Melee" == WidgetName or "Ranged" == WidgetName then
     UIManager(self):ShowUITip("CommonToastMain", string.format(GText("UI_Squad_SwitchChar_Toast"), GText(self:GetWeaponName(Parmas.Id))))
+  end
+end
+
+function WBP_SquadBuild_Main_P_C:CheckAndClearHyperWeaponConflict(TargetSlot, NewWeaponId)
+  if not HyperWeaponUtils.IsHyperWeapon(NewWeaponId) then
+    return
+  end
+  local OppositeSlot
+  if TargetSlot == self.Melee then
+    OppositeSlot = self.Ranged
+  elseif TargetSlot == self.Ranged then
+    OppositeSlot = self.Melee
+  end
+  if not OppositeSlot then
+    return
+  end
+  if OppositeSlot:GetIsEmpty() then
+    return
+  end
+  if HyperWeaponUtils.IsHyperWeapon(OppositeSlot.Id) then
+    OppositeSlot:ClearItemFlag()
+    OppositeSlot:ClearSlot()
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_HyperWeapon_CannotEquipAtSameTime"))
   end
 end
 

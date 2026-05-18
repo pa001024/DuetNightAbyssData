@@ -10,7 +10,8 @@ function M:Init(RegionId)
   local RegionId = RegionId or DataMgr.SubRegion[Avatar.CurrentRegionId].RegionId
   local ImpressionAreaId = Avatar:GetImpressionAreaIdFromRegionId(RegionId)
   local Impression = Avatar:GetRegionImpression(ImpressionAreaId)
-  local ImpressionMaxValue = DataMgr.GlobalConstant.ImressionMax.ConstantValue
+  local RegionData = DataMgr.ImpressionRegion[ImpressionAreaId]
+  local ImpressionMaxValue = RegionData and RegionData.AxisMax or DataMgr.GlobalConstant.ImressionMax.ConstantValue
   for Index, ImpressionType in pairs(ImpressionTypes) do
     local PlayerValue = Impression:GetImpressionValueByType(ImpressionType)
     local CorrectionValue = (PlayerValue + 10) * 0.91

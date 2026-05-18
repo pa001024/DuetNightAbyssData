@@ -13,6 +13,7 @@ def extract_texture_input_dir(layout_json_path: Path, texture_root: Path) -> Opt
     从布局 JSON 中提取第一张 Image 的贴图目录。
     期望 ObjectPath 格式:
     EM/Content/UI/Texture/Static/Image/Map/<Region>/<Name>/<Level>/<Texture>.0
+    或 EM/Content/UI/Texture/Static/Atlas/Map_Splice_Mobile/<Region>/<Texture>.0
     """
     try:
         data = json.loads(layout_json_path.read_text(encoding="utf-8"))
@@ -43,13 +44,18 @@ def extract_texture_input_dir(layout_json_path: Path, texture_root: Path) -> Opt
         return None
 
     object_path = re.sub(r"\.[0-9]+$", "", object_path)
-    match = re.match(r"^(EM/Content/UI/Texture/Static/Image/Map/.+)$", object_path)
+    match = re.match(r"^(EM/Content/UI/Texture/Static/(?:Image/Map|Atlas/Map_Splice_Mobile)/.+)$", object_path)
     if not match:
         print(f"[SKIP] 非地图贴图路径: {layout_json_path} / {object_path}", flush=True)
         return None
 
     texture_rel = Path(match.group(1))
-    input_dir = texture_root / texture_rel.parent
+    try:
+        static_rel = texture_rel.relative_to("EM/Content/UI/Texture/Static")
+    except ValueError:
+        print(f"[SKIP] 非地图贴图路径: {layout_json_path} / {object_path}", flush=True)
+        return None
+    input_dir = texture_root / static_rel.parent
     if not input_dir.is_dir():
         print(f"[SKIP] 贴图目录不存在: {input_dir}", flush=True)
         return None
@@ -98,7 +104,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--texture-root",
-        default="../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/Texture/Static/Image/Map",
+        default="../dna-unpack/Fmodel/Output/Exports/EM/Content/UI/Texture/Static",
         help="地图贴图根目录",
     )
     parser.add_argument(

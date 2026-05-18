@@ -69,7 +69,7 @@
         "id": 110101,
         "名称": "Lueur de l’oubli",
         "类型": "Dégâts",
-        "描述": "Se rue vers l’avant, infligeant 4 vagues de DGT Umbro de zone le long de la trajectoire.",
+        "描述": "Se rue vers l’avant, infligeant 4 vagues de Dégâts Umbro de zone le long de la trajectoire.",
         "icon": "Heitao01",
         "字段": [
           {
@@ -619,6 +619,522 @@
         "触发": 0.5
       }
     ]
+  },
+  {
+    "id": 1102,
+    "icon": "Fuluo",
+    "名称": "Flora",
+    "版本": "1.4",
+    "别名": "Floraison Rebelle",
+    "出生地": "Empire Hyperboréen",
+    "势力": "Famille impériale hyperboréenne",
+    "生日": "04-28",
+    "中文CV": "刘雯",
+    "日文CV": "原由実",
+    "英文CV": "Rachel Hurd-Wood",
+    "韩文CV": "김가령",
+    "阵营": "Empire Hyperboréen",
+    "属性": "暗",
+    "精通": [
+      "Épée",
+      "Fusil d’assaut"
+    ],
+    "标签": [
+      "DPS",
+      "DGT d’arme"
+    ],
+    "基础攻击": 26,
+    "基础生命": 130,
+    "基础防御": 350,
+    "基础护盾": 130,
+    "基础神智": 180,
+    "加成": {
+      "Vigueur": 0.15,
+      "Taux CRIT (Arme)": 0.5
+    },
+    "突破": [
+      {
+        "Pièce": 4160,
+        "Grumeau de Souillé": 10,
+        "Dague rouillée": 5
+      },
+      {
+        "Pièce": 8320,
+        "Débris de statue": 5,
+        "Clé d’obsidienne": 7
+      },
+      {
+        "Pièce": 13040,
+        "Débris de statue": 10,
+        "Clé d’obsidienne": 15
+      },
+      {
+        "Pièce": 27760,
+        "Débris de statue": 20,
+        "Tome du rituel séléniste": 6
+      },
+      {
+        "Pièce": 65280,
+        "Débris de statue": 40,
+        "Tome du rituel séléniste": 12
+      },
+      {
+        "Pièce": 194400,
+        "Débris de statue": 80,
+        "Tome du rituel séléniste": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 110201,
+        "名称": "Pirouette florale",
+        "类型": "Dégâts",
+        "描述": "Appuyez pour utiliser [Petit pas], infligeant des Dégâts Umbro aux ennemis devant vous. Ces dégâts sont considérés comme des DGT d’arme de mêlée et confèrent {int}10 cumul de [Symphonie].\nMaintenez pour utiliser [Grand jeté]. Relâchez pour y mettre fin plus tôt. Fonce vers l’avant en infligeant jusqu’à 5 fois des Dégâts Umbro de zone sur la trajectoire. Ces dégâts sont considérés comme des DGT d’arme de mêlée et confèrent {int}10 cumul de [Symphonie].\n[Symphonie] peut être cumulée jusqu’à {int}30 fois. Lorsque le maximum de cumuls est atteint, [Petit pas] et [Grand jeté] ne consomment plus de Lucidité.",
+        "icon": "FuLuo01",
+        "实体": [
+          {
+            "id": 110212,
+            "时长": 0.25
+          },
+          {
+            "id": 110213,
+            "时长": 0.25
+          }
+        ],
+        "字段": [
+          {
+            "名称": "[Petit pas]Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Grand jeté]Dégâts",
+            "值": [
+              0.24,
+              0.3,
+              0.36,
+              0.42,
+              0.48,
+              0.54,
+              0.6,
+              0.66,
+              0.72,
+              0.78,
+              0.84,
+              0.9
+            ],
+            "格式": "{%}×2",
+            "削韧": 25
+          },
+          {
+            "名称": "[Grand jeté]Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Grand jeté]Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Symphonie]Dégâts",
+            "值": [
+              0.24,
+              0.3,
+              0.36,
+              0.42,
+              0.48,
+              0.54,
+              0.6,
+              0.66,
+              0.72,
+              0.78,
+              0.84,
+              0.9
+            ],
+            "格式": "{%}×5",
+            "削韧": 25
+          },
+          {
+            "名称": "[Symphonie]Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Symphonie]Dégâts",
+            "值": [
+              0.18,
+              0.23,
+              0.28,
+              0.33,
+              0.38,
+              0.43,
+              0.48,
+              0.53,
+              0.58,
+              0.63,
+              0.68,
+              0.73
+            ]
+          },
+          {
+            "名称": "Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2600,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 3200,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "Symphonie": "Lorsqu’une Attaque normale touche un ennemi pour la première fois, consomme 1 cumul de [Symphonie] pour infliger 1 fois des Dégâts Umbro de zone supplémentaires devant le personnage. Ces dégâts sont considérés comme des DGT d’arme de mêlée.\nAprès avoir utilisé [Finale], consomme 5 cumuls de [Symphonie] pour infliger 5 fois des Dégâts Umbro de zone supplémentaires autour du personnage. Ces dégâts sont considérés comme des DGT d’arme de mêlée."
+        },
+        "子技能": [
+          {
+            "id": 110211,
+            "类型": "Dégâts",
+            "icon": "FuLuo01",
+            "实体": [
+              {
+                "id": 110212,
+                "时长": 0.25
+              },
+              {
+                "id": 110213,
+                "时长": 0.25
+              }
+            ],
+            "名称": "Symphonie"
+          }
+        ]
+      },
+      {
+        "id": 110202,
+        "名称": "Bal des fleurs",
+        "类型": "Bonus",
+        "描述": "Déploie un champ [Bal des fleurs] qui suit le personnage. [Bal des fleurs] consomme continuellement de la Lucidité et prend fin lorsque la Lucidité atteint 0 ou lorsque la compétence est réutilisée. À la fin du champ, toutes les [Épines florales] sont supprimées.\nPendant la durée de [Bal des fleurs], les DGT CRIT des armes de mêlée augmentent, le personnage devient immunisé aux interruptions, et [Valse] se déclenche une fois par seconde.",
+        "icon": "Fuluo02_On",
+        "cd": 3,
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 20,
+            "格式": "{}"
+          },
+          {
+            "名称": "Coût en Lucidité par seconde",
+            "影响": "技能效益,技能耐久",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "Augmentation des DGT CRIT",
+            "影响": "技能威力",
+            "值": 0.8
+          },
+          {
+            "名称": "Rayon d’effet de [Bal des fleurs]",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Valse]Dégâts de trajectoire",
+            "值": [
+              1.55,
+              1.9,
+              2.25,
+              2.6,
+              2.95,
+              3.3,
+              3.65,
+              4,
+              4.35,
+              4.7,
+              5.05,
+              5.4
+            ],
+            "削韧": 15
+          },
+          {
+            "名称": "[Valse]Rayon des dégâts de trajectoire",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2600,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 3200,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "Valse": "Consomme 1 cumul de [Reprise] pour invoquer un pantin surgissant à grande vitesse depuis les bords de la zone, infligeant des Dégâts Umbro aux ennemis sur sa trajectoire. Ces dégâts sont considérés comme des DGT d’arme de mêlée. Confère également 1 cumul d’[Épine florale], jusqu’à 12 cumuls.\nSi [Reprise] n’est pas actif, ou pendant l’utilisation de [Finale], confère à la place 1 cumul de [Reprise]."
+        },
+        "子技能": [
+          {
+            "id": 110221,
+            "类型": "Bonus",
+            "icon": "Fuluo02_Off",
+            "cd": 3,
+            "名称": "Valse"
+          }
+        ]
+      },
+      {
+        "id": 110203,
+        "名称": "Invitation florale",
+        "类型": "Passive",
+        "描述": "Lorsqu’un DGT d’arme de mêlée inflige un coup critique, la cible devient une [Marionnette du bal], et le personnage obtient 1 cumul de [Reprise], cumulable jusqu’à {int}42 cumuls. Cet effet ne peut accorder qu’un cumul de [Reprise] à intervalles réguliers.\nLorsque la cible possède au moins 6 cumuls d’[Épine florale], l’attaque chargée de l’arme de mêlée est remplacée par [Finale].",
+        "icon": "FuLuo03",
+        "字段": [
+          {
+            "名称": "Intervalle d’obtention de [Reprise]",
+            "值": 1,
+            "格式": "{}s/Vitesse d’attaque des armes de mêlée"
+          },
+          {
+            "名称": "[Finale]Durée de [Marionnette du bal]",
+            "影响": "技能耐久",
+            "值": 6,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[Finale]Dégâts d’attaque chargée",
+            "值": [
+              0.99,
+              1.2,
+              1.41,
+              1.62,
+              1.83,
+              2.04,
+              2.25,
+              2.46,
+              2.67,
+              2.88,
+              3.09,
+              3.3
+            ],
+            "值2": [
+              0.07,
+              0.08,
+              0.09,
+              0.1,
+              0.11,
+              0.12,
+              0.13,
+              0.14,
+              0.15,
+              0.16,
+              0.17,
+              0.18
+            ],
+            "格式": "{%}+{%}× Cumuls d’[Épine florale]",
+            "削韧": 25
+          },
+          {
+            "名称": "Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1400,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2600,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 3200,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 7300,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 9000,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 30000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 47000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 90000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 170000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "Marionnette du bal": "Les unités transformées en [Marionnette du bal] ne peuvent pas agir et sont considérées comme sous effet de contrôle.",
+          "Finale": "Consomme tous les cumuls d’[Épine florale] pour infliger des Dégâts Umbro de zone. Le multiplicateur de dégâts augmente selon le nombre de cumuls consommés. Cette attaque est considérée comme une Attaque chargée d’arme de mêlée."
+        }
+      },
+      {
+        "id": 110204,
+        "名称": "Transe",
+        "类型": "Passive",
+        "描述": "Chaque cumul de [Symphonie] ou de [Reprise] consommé restaure {int}1 de Lucidité.",
+        "icon": "ExtraPassive"
+      },
+      {
+        "id": 110003,
+        "名称": "Jugement de la Balance",
+        "类型": "Support",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente l’ATQ du personnage et des alliés Électro.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Augmentation d’ATQ",
+            "值": 0.5
+          }
+        ]
+      }
+    ],
+    "溯源": [
+      "L’utilisation de [Petit pas] ou [Grand jeté] confère 5 cumuls supplémentaires de [Symphonie]. Chaque cumul de [Symphonie] consommé confère 1 cumul de [Reprise]. Tant que [Symphonie] est actif, le Taux CRIT des armes de mêlée augmente de 75%.",
+      "[Invitation florale] peut désormais accorder jusqu’à 2 cumuls de [Reprise] par déclenchement. Tous les 6 cumuls de [Reprise] possédés, l’intervalle de déclenchement de [Valse] est réduit de 0.1 s, jusqu’à un minimum de 0.5 s.",
+      "[Pirouette florale] niveau +2 ; [Invitation florale] niveau +1.",
+      "La Lucidité restaurée par [Transe] passe à 3, et confère en plus 2 points de Combo.",
+      "[Bal des fleurs] niveau +2 ; [Invitation florale] niveau +1.",
+      "Pendant la durée de [Bal des fleurs], la pénétration de tous les attributs augmente de 30%.\nLors de l’utilisation de [Finale], si les cumuls d’[Épine florale] sont inférieurs à 12, consomme immédiatement des cumuls de [Reprise] afin de compléter les cumuls manquants.\nAprès avoir utilisé [Finale], déclenche immédiatement 5 fois [Valse]. Ces activations sont considérées comme si [Reprise] était actif et ne consomment pas [Reprise]."
+    ],
+    "碎片": 1001102,
+    "专武": 10107
   },
   {
     "id": 1103,
@@ -1287,6 +1803,501 @@
     "碎片": 1001103
   },
   {
+    "id": 1201,
+    "icon": "Nvzhu02",
+    "名称": "主角-暗",
+    "版本": "1.0",
+    "别名": "UI_CHAR_SUBTITLE_1201",
+    "阵营": "Aucune affiliation",
+    "属性": "暗",
+    "精通": [
+      "Épée",
+      "Fusil d’assaut"
+    ],
+    "标签": [
+      "DPS",
+      "DGT d’arme"
+    ],
+    "基础攻击": 20,
+    "基础生命": 100,
+    "基础防御": 300,
+    "基础护盾": 100,
+    "基础神智": 150,
+    "加成": {
+      "ATQ": 0.5,
+      "Durée de compétence": 0.15
+    },
+    "突破": [
+      {
+        "Pièce": 5200,
+        "Grumeau de Souillé": 10,
+        "Dague rouillée": 5
+      },
+      {
+        "Pièce": 10400,
+        "Débris de statue": 5,
+        "Clé d’obsidienne": 7
+      },
+      {
+        "Pièce": 16300,
+        "Débris de statue": 10,
+        "Clé d’obsidienne": 15
+      },
+      {
+        "Pièce": 34700,
+        "Débris de statue": 20,
+        "Tome du rituel séléniste": 6
+      },
+      {
+        "Pièce": 81600,
+        "Débris de statue": 40,
+        "Tome du rituel séléniste": 12
+      },
+      {
+        "Pièce": 243000,
+        "Débris de statue": 80,
+        "Tome du rituel séléniste": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 120101,
+        "名称": "Marche nocturne",
+        "类型": "Dégâts",
+        "描述": "Inflige des Dégâts Umbro aux ennemis proches et invoque une [Main d’ébène]. Si une [Main d’ébène] est déjà présente, celle-ci attaque une fois et inflige des Dégâts Umbro de zone.",
+        "icon": "AnZhu01",
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 50,
+            "格式": "{}"
+          },
+          {
+            "名称": "Dégâts",
+            "影响": "技能威力",
+            "值": [
+              3.6,
+              4.4,
+              5.2,
+              6,
+              6.8,
+              7.6,
+              8.4,
+              9.2,
+              10,
+              10.8,
+              11.6,
+              12.4
+            ],
+            "削韧": 50
+          },
+          {
+            "名称": "Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Dégâts de [Main d’ébène]",
+            "影响": "技能威力",
+            "值": [
+              9,
+              11,
+              13,
+              15,
+              17,
+              19,
+              21,
+              23,
+              25,
+              27,
+              29,
+              31
+            ],
+            "削韧": 50
+          },
+          {
+            "名称": "Rayon des dégâts de [Main d’ébène]",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1120,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2080,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 2560,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 5840,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 7200,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 24000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 37600,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 72000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 136000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ]
+      },
+      {
+        "id": 120102,
+        "名称": "Hymne de la Mer du Silence",
+        "类型": "Dégâts",
+        "描述": "Inflige des Dégâts Umbro aux ennemis proches, consomme des PV afin de soigner les autres alliés et applique [Appel] au personnage ainsi qu’aux alliés.\nSi une [Main d’ébène] est déjà présente, celle-ci attaque une fois et inflige des Dégâts Umbro de zone. Le personnage et les alliés gagnent également des points de Combo, puis la [Main d’ébène] disparaît.\nCette compétence ne peut pas être utilisée lorsque les PV sont inférieurs à 30 %.",
+        "icon": "AnZhu02",
+        "cd": 5,
+        "实体": [
+          {
+            "id": 120121,
+            "时长": 10,
+            "特效循环间隔": 1
+          }
+        ],
+        "字段": [
+          {
+            "名称": "Coût en Lucidité",
+            "影响": "技能效益",
+            "值": 100,
+            "格式": "{}"
+          },
+          {
+            "名称": "Perte de PV",
+            "值": 0.12,
+            "格式": "{%}PV max"
+          },
+          {
+            "名称": "Soin",
+            "影响": "技能威力",
+            "值": 0.06,
+            "格式": "{%}PV max"
+          },
+          {
+            "名称": "Dégâts",
+            "影响": "技能威力",
+            "值": [
+              7.2,
+              8.8,
+              10.4,
+              12,
+              13.6,
+              15.2,
+              16.8,
+              18.4,
+              20,
+              21.6,
+              23.2,
+              24.8
+            ],
+            "削韧": 100
+          },
+          {
+            "名称": "Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Dégâts de [Main d’ébène]",
+            "影响": "技能威力",
+            "值": [
+              18.24,
+              22.28,
+              26.32,
+              30.36,
+              34.4,
+              38.44,
+              42.48,
+              46.52,
+              50.56,
+              54.6,
+              58.64,
+              62.68
+            ],
+            "削韧": 60
+          },
+          {
+            "名称": "Rayon des dégâts de [Main d’ébène]",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Augmentation des points de Combo",
+            "值": 120,
+            "格式": "{}"
+          },
+          {
+            "名称": "[[Appel]]Durée",
+            "影响": "技能耐久",
+            "值": 16,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[[Appel]]Multiplicateur de dégâts supplémentaires",
+            "值": [
+              0.07,
+              0.09,
+              0.11,
+              0.13,
+              0.15,
+              0.17,
+              0.19,
+              0.21,
+              0.23,
+              0.25,
+              0.27,
+              0.29
+            ]
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1120,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2080,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 2560,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 5840,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 7200,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 24000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 37600,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 72000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 136000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ],
+        "术语解释": {
+          "[Appel]": "Inflige des Dégâts Umbro supplémentaires"
+        }
+      },
+      {
+        "id": 120103,
+        "名称": "Refrain de l’âme",
+        "类型": "Passive",
+        "描述": "Lorsqu’une [Main d’ébène] est présente, toutes les 8 attaques normales de mêlée déclenchent une attaque de [Main d’ébène], qui restaure les PV du personnage. Cette attaque inflige des Dégâts Umbro de zone et est considérée comme des dégâts d’Attaque normale. Cet effet peut se déclencher au maximum une fois toutes les 2 s.\nLe personnage ne perd pas de points de Combo lors de l’utilisation de compétences ou d’attaques à distance, et la durée des combos est augmentée.\nLorsque le personnage consomme des points de Combo avec une attaque chargée, les autres alliés gagnent des points de Combo proportionnellement au nombre consommé.",
+        "icon": "AnZhu03",
+        "字段": [
+          {
+            "名称": "Dégâts de [Main d’ébène]",
+            "值": [
+              2.34,
+              2.85,
+              3.36,
+              3.87,
+              4.38,
+              4.89,
+              5.4,
+              5.91,
+              6.42,
+              6.93,
+              7.44,
+              7.95
+            ],
+            "削韧": 30
+          },
+          {
+            "名称": "Rayon des dégâts de [Main d’ébène]",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Soin",
+            "值": 0.12,
+            "格式": "{%}PV max"
+          },
+          {
+            "名称": "Augmentation de la durée du Combo",
+            "值": 10,
+            "格式": "{}s"
+          },
+          {
+            "名称": "Augmentation des points de Combo",
+            "值": 0.5
+          }
+        ],
+        "升级": [
+          {
+            "Pièce": 1120,
+            "Grumeau de Souillé": 3,
+            "Débris de statue": 1
+          },
+          {
+            "Pièce": 2080,
+            "Grumeau de Souillé": 6,
+            "Débris de statue": 2
+          },
+          {
+            "Pièce": 2560,
+            "Grumeau de Souillé": 9,
+            "Débris de statue": 3,
+            "Souvenir des Lunariens": 4
+          },
+          {
+            "Pièce": 5840,
+            "Grumeau de Souillé": 15,
+            "Débris de statue": 5,
+            "Souvenir des Lunariens": 6
+          },
+          {
+            "Pièce": 7200,
+            "Grumeau de Souillé": 30,
+            "Débris de statue": 10,
+            "Souvenir des Lunariens": 8
+          },
+          {
+            "Pièce": 24000,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 6,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 37600,
+            "Souvenir des Lunariens": 10,
+            "Tentacule de Souillé": 8,
+            "Anneau du courage retrouvé": 1
+          },
+          {
+            "Pièce": 72000,
+            "Polymère de Souillé": 1,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          },
+          {
+            "Pièce": 136000,
+            "Polymère de Souillé": 2,
+            "Anneau du courage retrouvé": 2,
+            "Trace du crépuscule": 1
+          }
+        ]
+      },
+      {
+        "id": 120104,
+        "名称": "Élégie",
+        "类型": "",
+        "描述": "Les ennemis subissent davantage de Dégâts Umbro.\nLorsque [Main d’ébène] est actif, si un ennemi subit des Dégâts Umbro infligés par un autre allié, [Main d’ébène] inflige 1 fois des Dégâts Umbro de zone. Ces dégâts sont considérés comme des dégâts d’Attaque normale. Cet effet peut se déclencher au maximum une fois par seconde.",
+        "icon": "ExtraPassive",
+        "字段": [
+          {
+            "名称": "Augmentation des dégâts subis",
+            "值": 0.6
+          },
+          {
+            "名称": "Dégâts",
+            "值": 9.42,
+            "削韧": 20
+          },
+          {
+            "名称": "Rayon des dégâts",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          }
+        ]
+      },
+      {
+        "id": 100005,
+        "名称": "Lame vive",
+        "类型": "Support",
+        "描述": "[Actif uniquement lorsqu’il est déployé comme Partenaire de combat]\nAugmente les Dégâts d’arme du personnage et des alliés.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Augmentation des DGT d’arme",
+            "值": 0.08
+          }
+        ]
+      }
+    ],
+    "溯源": [
+      "Lorsque [Refrain de l’âme] déclenche l’effet de [Main d’ébène], le personnage obtient 20 point de Combo.",
+      "Lors de l’utilisation de [Hymne de la Mer du Silence], crée un champ [Prisme ombral] de 10 mètres de rayon pendant 10 s. La portée du champ est affectée par la Portée des compétences, et sa durée par la Durée des compétences.\nLes ennemis à l’intérieur du champ subissent continuellement une réduction de Vitesse de déplacement de 50% et reçoivent chaque seconde des dégâts équivalents à 1050% de l’ATQ du personnage.",
+      "[Marche nocturne] niveau +2 ; [Refrain de l’âme] niveau +1.",
+      "Le nombre d’attaques normales de mêlée nécessaires à [Refrain de l’âme] pour déclencher l’effet de [Main d’ébène] est réduit à 6.",
+      "[Hymne de la Mer du Silence] niveau +2 ; [Refrain de l’âme] niveau +1.",
+      "Lorsque [Refrain de l’âme] déclenche l’effet de [Main d’ébène], celle-ci attaque désormais 3 fois. Lors du déclenchement, le personnage obtient 25% de pénétration de tous les attributs pendant 3 s."
+    ],
+    "碎片": 1001201
+  },
+  {
     "id": 1501,
     "icon": "Baonu",
     "名称": "Lisbell",
@@ -1912,7 +2923,7 @@
     ],
     "溯源": [
       "Utiliser [Au nom de la Résilience] augmente l’ATQ du personnage de 35% pendant 15 s.",
-      "Lorsque des dégâts déclenchent un Effet supplémentaire, gagne 1 point de combo supplémentaire.",
+      "Lorsque des dégâts déclenchent un Effet supplémentaire, gagne 1 point de Combo supplémentaire.",
       "[Au nom de la Résilience] niveau +2 ; [Hmpf !] niveau +1.",
       "Lorsque le niveau de Combo augmente, obtient 5 points de combo supplémentaires.",
       "[J’en peux plus !] niveau +2 ; [Hmpf !] niveau +1.",
@@ -6537,55 +7548,33 @@
           {
             "名称": "Coût en Lucidité",
             "影响": "技能效益",
-            "值": 10,
+            "值": 5,
             "格式": "{}"
           },
           {
             "名称": "Coût en Lucidité par seconde",
             "影响": "技能效益,技能耐久",
-            "值": 15,
+            "值": 24,
             "格式": "{}"
           },
           {
             "名称": "Dégâts",
             "影响": "技能威力",
             "值": [
-              0.73,
-              0.88,
-              1.03,
-              1.18,
-              1.33,
-              1.48,
-              1.63,
-              1.78,
-              1.93,
-              2.08,
-              2.23,
-              2.38
+              2.87,
+              3.52,
+              4.17,
+              4.82,
+              5.47,
+              6.12,
+              6.77,
+              7.42,
+              8.07,
+              8.72,
+              9.37,
+              10.02
             ],
             "削韧": 33
-          },
-          {
-            "名称": "Chance de régénération de Lucidité",
-            "值": [
-              0.13,
-              0.16,
-              0.19,
-              0.22,
-              0.25,
-              0.28,
-              0.31,
-              0.34,
-              0.37,
-              0.4,
-              0.43,
-              0.46
-            ]
-          },
-          {
-            "名称": "Régénération de Lucidité",
-            "值": 5,
-            "格式": "{}"
           },
           {
             "名称": "Longueur du [Rayon incinérateur]",
@@ -6659,25 +7648,25 @@
           {
             "名称": "Coût en Lucidité",
             "影响": "技能效益",
-            "值": 30,
+            "值": 50,
             "格式": "{}"
           },
           {
             "名称": "Dégâts",
             "影响": "技能威力",
             "值": [
-              3.53,
-              4.31,
-              5.09,
-              5.87,
-              6.65,
-              7.43,
-              8.21,
-              8.99,
-              9.77,
-              10.55,
-              11.33,
-              12.11
+              10.23,
+              12.5,
+              14.77,
+              17.04,
+              19.31,
+              21.58,
+              23.85,
+              26.12,
+              28.39,
+              30.66,
+              32.93,
+              35.2
             ],
             "削韧": 33
           },
@@ -6691,18 +7680,18 @@
             "名称": "Dégâts du [Crassinator léger]",
             "影响": "技能威力",
             "值": [
-              2.29,
-              2.8,
-              3.31,
-              3.82,
-              4.33,
-              4.84,
-              5.35,
-              5.86,
-              6.37,
-              6.88,
-              7.39,
-              7.9
+              5.82,
+              7.12,
+              8.42,
+              9.72,
+              11.02,
+              12.32,
+              13.62,
+              14.92,
+              16.22,
+              17.52,
+              18.82,
+              20.12
             ],
             "削韧": 33
           },
@@ -6710,18 +7699,18 @@
             "名称": "Dégâts du [Crassinator lourd]",
             "影响": "技能威力",
             "值": [
-              3.52,
-              4.31,
-              5.1,
-              5.89,
-              6.68,
-              7.47,
-              8.26,
-              9.05,
-              9.84,
-              10.63,
-              11.42,
-              12.21
+              8.99,
+              11,
+              13.01,
+              15.02,
+              17.03,
+              19.04,
+              21.05,
+              23.06,
+              25.07,
+              27.08,
+              29.09,
+              31.1
             ],
             "削韧": 33
           },
@@ -6907,13 +7896,14 @@
     ],
     "溯源": [
       "Nombre d’esquives +2. [Colère raffinée] voit son efficacité augmentée de 30 %.",
-      "La portée des [Rayons incinérateurs] augmente de 50 %. Lorsqu’ils infligent des dégâts, la cible subit +85% de dégâts provenant d’Hilda pendant 2 s.",
+      "La portée des [Rayons incinérateurs] augmente de 50 %. Lorsqu’ils infligent des dégâts, la cible subit +5 de dégâts provenant d’Hilda pendant 60% s.",
       "[Nettoyage thermique] niveau +2 ; [Service automatique] niveau +1.",
-      "L’utilisation de [Dévotion armée] invoque 2 [Crassinators légers] supplémentaires et réduit les dégâts infligés par la cible de 25% pendant 12 s.",
+      "L’utilisation de [Dévotion armée] invoque 2 [Crassinators légers] supplémentaires et réduit les dégâts infligés par la cible de 18% pendant 15 s.",
       "[Dévotion armée] niveau +2 ; [Service automatique] niveau +1.",
-      "Pendant [Nettoyage thermique], la Pénétration (tous attributs) d’Hilda est augmentée de 55%."
+      "Pendant [Nettoyage thermique], la Pénétration (tous attributs) d’Hilda est augmentée de #5."
     ],
-    "碎片": 1003102
+    "碎片": 1003102,
+    "专武": 20302
   },
   {
     "id": 3103,
@@ -8360,9 +9350,9 @@
     "溯源": [
       "Les dégâts des [Lames du sommelier] ont 30% de chances d’appliquer 1 cumul supplémentaire de [Blessure écarlate].",
       "Lorsque [Lame du sommelier] est active, les dégâts subis sont réduits de 15% et les dégâts infligés augmentent de 55%.",
-      "[Banquet écarlate] niveau +2 ; [Valse du Cabernet] niveau +1.",
+      "[Banquet écarlate] niveau +2 ; [Gorgée dévastatrice] niveau +1.",
       "Les dégâts de [Blessure écarlate] augmentent de 30%, et la vitesse de projection des [Lames du sommelier] est augmentée à 25.",
-      "[Valse du Cabernet] niveau +2 ; [Banquet écarlate] niveau +1.",
+      "[Valse du Cabernet] niveau +2 ; [Gorgée dévastatrice] niveau +1.",
       "Lorsque [Lame du sommelier] est active, votre Pénétration tous attributs augmente de 45%.\nLorsque [Blessure écarlate] est supprimée, 1 cumul supplémentaire est retiré et une instance de dégâts supplémentaire est infligée."
     ],
     "碎片": 1003202,

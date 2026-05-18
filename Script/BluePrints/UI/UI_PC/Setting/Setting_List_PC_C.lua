@@ -9,6 +9,9 @@ function S:Construct()
 end
 
 function S:BindEvents()
+  if self.bEventsBound then
+    return
+  end
   self.Button_Area.OnClicked:Add(self, self.OnBtnAreaClicked)
   self.Button_Area.OnPressed:Add(self, self.OnBtnAreaPressed)
   self.Button_Area.OnHovered:Add(self, self.OnBtnAreaHovered)
@@ -21,6 +24,7 @@ function S:BindEvents()
   self.Button_Gamepad.OnUnhovered:Add(self, self.OnBtnGamepadUnhovered)
   self.List_Options.BP_OnItemIsHoveredChanged:Clear()
   self.List_Options.BP_OnItemIsHoveredChanged:Add(self, self.OnItemIsHoverChanged)
+  self.bEventsBound = true
 end
 
 function S:Init(Parent, TabName, RegionIndex, RegionName, IsInit)
@@ -167,54 +171,81 @@ end
 function S:OnBtnGamepadHovered()
   self:AddTimer(0.02, function()
     DebugPrint("Tianyi@ OnBtnGamepadHovered")
-    self:StopAnimation(self.Title_Gamepad_Select)
-    self:PlayAnimationForward(self.Title_Gamepad_Select)
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Title_Gamepad_Select)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Title_Gamepad_Select, EUMGSequencePlayMode.Forward)
     self.Parent:OnGamepadFocusPanelTitle()
   end)
 end
 
 function S:OnBtnGamepadUnhovered()
-  self:StopAnimation(self.Title_Gamepad_Select)
-  self:PlayAnimationReverse(self.Title_Gamepad_Select)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Title_Gamepad_Select)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Title_Gamepad_Select, EUMGSequencePlayMode.Reverse)
+end
+
+function S:OnAnimationFinished(Animation)
+  if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
+    return
+  end
+  if Animation == self.Click then
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+  end
 end
 
 function S:OnBtnAreaClicked()
   self.Parent:ClearSettingListUnfoldState()
   self.Parent:SetSettingUnfoldListPC(false)
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Click)
+  self:StopFiveStateAnimations()
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Click)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
   if self.IsListFolded then
     self.IsListFolded = false
-    self:StopAnimation(self.Fold)
-    self:PlayAnimation(self.Unfold)
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Fold)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Unfold)
   else
     self.IsListFolded = true
-    self:StopAnimation(self.Unfold)
-    self:PlayAnimation(self.Fold)
+    EMUIAnimationSubsystem:EMStopAnimation(self, self.Unfold)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Fold)
   end
   self.Parent:UpdateEmptyGridCount()
+end
+
+function S:StopFiveStateAnimations()
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Normal)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Hover)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Unhover)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Press)
+  EMUIAnimationSubsystem:EMStopAnimation(self, self.Click)
+end
+
+function S:StopAllEMAnimations()
+  local AllAnims = UE4.UUIFunctionLibrary.GetAllAnimationOfUserWidget(self)
+  for _, Anim in pairs(AllAnims) do
+    EMUIAnimationSubsystem:EMStopAnimation(self, Anim)
+  end
 end
 
 function S:OnBtnAreaPressed()
   if self.BanHover then
     return
   end
-  self:PlayAnimation(self.Press)
+  self:StopFiveStateAnimations()
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Press)
 end
 
 function S:OnBtnAreaHovered()
   if self.BanHover then
     return
   end
-  self:PlayAnimation(self.Hover)
+  self:StopFiveStateAnimations()
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Hover)
 end
 
 function S:OnBtnAreaUnhovered()
   if self.BanHover then
     return
   end
-  self:PlayAnimation(self.Unhover)
+  self:StopFiveStateAnimations()
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Unhover)
 end
 
 function S:OnMouseButtonDown(MyGeometry, InKeyEvent)
@@ -334,10 +365,10 @@ end
 
 function S:InitFoldState()
   if self.RegionDefaultFold then
-    self:PlayAnimation(self.Fold_Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Fold_Normal)
     self.IsListFolded = true
   else
-    self:PlayAnimation(self.Unfold_Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.Unfold_Normal)
     self.IsListFolded = false
   end
 end
@@ -951,10 +982,10 @@ function S:OnClickLeftMouseButton()
 end
 
 function S:PlayInAnim()
-  self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
+  self:StopAllEMAnimations()
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  self:PlayAnimation(self.In)
+  EMUIAnimationSubsystem:EMPlayAnimation(self, self.In)
 end
 
 function S:OnParentTabSwitch()
@@ -987,6 +1018,9 @@ end
 
 function S:Destruct()
   self:RemoveDispatcher(EventID.OnVoiceResourceClicked)
+  if self.GameInputModeSubsystem then
+    self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
+  end
   S.Super.Destruct(self)
 end
 

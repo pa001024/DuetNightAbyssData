@@ -4,6 +4,8 @@ local AprilFoolDayUtils = require("BluePrints.UI.WBP.Activity.Widget.Fool.AprilF
 local AutoChessRewardModel = require("BluePrints.UI.AutoChess.WBP_AutoChess_Reward_Model")
 local ActivityUtils = require("BluePrints.UI.WBP.Activity.ActivityUtils")
 local SoloTreasure = require("BluePrints.UI.WBP.SoloTreasure.Widget.WBP_SoloTreasure_Reward_Model")
+local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
+local GuildModel = GuildController:GetModel()
 local Component = {}
 
 function Component:EnterWorld()
@@ -158,6 +160,9 @@ function Component:_OnPropChangeCommonQuestActivity(EventIDs, OldValue)
     AutoChessRewardModel:RefreshReddotInfo()
   end
   for _, EventId in pairs(EventIDs) do
+    if EventId == GuildCommon.GuildDummyEventId then
+      GuildModel:InvokeGuildTaskReddotUpdate()
+    end
     if EventId == CommonConst.AutoChessEventId or EventId == CommonConst.SoloTreasureEventId then
       EventManager:FireEvent(EventID.RefreshAcvitityRewardPanel)
     end

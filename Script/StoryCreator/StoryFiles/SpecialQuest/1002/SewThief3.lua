@@ -146,12 +146,6 @@ return {
           {
             startQuest = "17452203395828172320",
             startPort = "Out",
-            endQuest = "1721630102340392983",
-            endPort = "In"
-          },
-          {
-            startQuest = "17452203395828172320",
-            startPort = "Out",
             endQuest = "173444709904539554669",
             endPort = "In"
           },
@@ -214,6 +208,12 @@ return {
             startPort = "Out",
             endQuest = "17452203395828172320",
             endPort = "In"
+          },
+          {
+            startQuest = "17452218881778174518",
+            startPort = "Out",
+            endQuest = "1721630102340392983",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -252,7 +252,7 @@ return {
             key = "1721630102340392983",
             type = "GoToNode",
             name = "前往区域3",
-            pos = {x = 4131.842690385918, y = 226.98339794668917},
+            pos = {x = 4133.985547528775, y = 37.340540803832},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 1730005,
@@ -365,51 +365,46 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200003,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200014,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200053,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200011,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -456,51 +451,46 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200061,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200053,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200003,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200011,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200014,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -547,33 +537,31 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200002,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 200011,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -588,7 +576,7 @@ return {
             key = "1721630102340392995",
             type = "ChangeStaticCreatorNode",
             name = "生成餐刀",
-            pos = {x = 4470.589285714285, y = 63.28571428571428},
+            pos = {x = 4502.732142857142, y = 50.428571428571416},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -630,7 +618,7 @@ return {
             key = "17452203395828172320",
             type = "TalkNode",
             name = "看哈尔挨揍",
-            pos = {x = 3905.706452131076, y = 259.12375727720547},
+            pos = {x = 3680.706452131076, y = 239.83804299149116},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -658,7 +646,8 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               TalkActors = {},
-              FreezeWorldComposition = false,
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -668,7 +657,7 @@ return {
             key = "17452207814808173570",
             type = "ChangeStaticCreatorNode",
             name = "生成哈尔",
-            pos = {x = 3864.119853746147, y = 83.05144605116783},
+            pos = {x = 3596.2627108890038, y = -3.7342682345464624},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -682,12 +671,12 @@ return {
             key = "17452218881778174518",
             type = "GoToNode",
             name = "去假哈尔身边",
-            pos = {x = 4156.544770320118, y = -103.38904338153515},
+            pos = {x = 3892.9733417486896, y = 43.90418970117164},
             propsData = {
-              GuideUIEnable = false,
+              GuideUIEnable = true,
               StaticCreatorId = 1730193,
-              GuideType = "N",
-              GuidePointName = ""
+              GuideType = "M",
+              GuidePointName = "Mechanism_QuestTrigger_1730193"
             }
           },
           ["17452219101218175001"] = {
@@ -751,11 +740,11 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
-              FreezeWorldComposition = false,
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false

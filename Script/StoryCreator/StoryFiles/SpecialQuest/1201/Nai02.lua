@@ -544,21 +544,21 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 900006,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -584,6 +584,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 12017202,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -611,8 +612,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1249,11 +1252,11 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
-              FreezeWorldComposition = false,
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -2402,6 +2405,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 12017601,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -2430,8 +2434,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -2826,12 +2832,6 @@ return {
             startQuest = "173650065363810608157",
             startPort = "Out",
             endQuest = "17539301006481372266",
-            endPort = "In"
-          },
-          {
-            startQuest = "173700970464210864399",
-            startPort = "true",
-            endQuest = "17548809343303600729",
             endPort = "In"
           },
           {
@@ -3259,6 +3259,30 @@ return {
             startPort = "Out",
             endQuest = "17688909783112057391",
             endPort = "In"
+          },
+          {
+            startQuest = "17761501634196398037",
+            startPort = "Fail",
+            endQuest = "17548809343303600729",
+            endPort = "In"
+          },
+          {
+            startQuest = "173700970464210864399",
+            startPort = "true",
+            endQuest = "17761501634196398037",
+            endPort = "In"
+          },
+          {
+            startQuest = "17761501634196398037",
+            startPort = "Success",
+            endQuest = "17761575499177312473",
+            endPort = "In"
+          },
+          {
+            startQuest = "17761575499177312473",
+            startPort = "Out",
+            endQuest = "176373213412746380940",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -3266,7 +3290,7 @@ return {
             key = "1735982228549941507",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 1189.256410138747, y = 405.584899788595},
+            pos = {x = 171.92307680541376, y = 866.2515664552616},
             propsData = {ModeType = 0}
           },
           ["1735982228549941508"] = {
@@ -3320,27 +3344,26 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 210029,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 210028,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -3382,7 +3405,7 @@ return {
             key = "173700970464210864399",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "是否在阶段3",
-            pos = {x = 1560.1279746188216, y = 395.69126830454064},
+            pos = {x = 920.7433592342062, y = 856.8707554840278},
             propsData = {
               FunctionName = "Equal",
               VarName = "East01Nai02Phase",
@@ -3646,7 +3669,8 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               TalkActors = {},
-              FreezeWorldComposition = false,
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -3931,27 +3955,26 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 210029,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 210028,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -3999,7 +4022,7 @@ return {
             key = "176373213412746380940",
             type = "GoToNode",
             name = "前往【结束推船】",
-            pos = {x = 5863.254665882517, y = 510.88377058602714},
+            pos = {x = 5796.12179874965, y = 829.7648894671461},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2000548,
@@ -4293,21 +4316,21 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 210028,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -4575,7 +4598,7 @@ return {
             key = "17688899543712056385",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 2752, y = 816},
+            pos = {x = 3032, y = 1396},
             propsData = {
               ShowEnable = true,
               MessageId = 0,
@@ -4606,14 +4629,14 @@ return {
             key = "17688909783112057391",
             type = "HighlightButtonNode",
             name = "HighlightButton显示/隐藏信息",
-            pos = {x = 3330.81811174669, y = 745.3154138268355},
+            pos = {x = 3535.523994099631, y = 33.55070794448265},
             propsData = {ShowEnable = false, SkillType = "Skill1"}
           },
           ["17688909988012057687"] = {
             key = "17688909988012057687",
             type = "ShowGuideButtonNode",
             name = "Button显示/隐藏信息",
-            pos = {x = 3252.268794212692, y = 603.6716219277072},
+            pos = {x = 3524.0335000950445, y = -130.4460251311163},
             propsData = {
               ShowEnable = false,
               MessageId = 200008,
@@ -4638,6 +4661,35 @@ return {
               MessageParentLoc = "HighLightUI",
               MessageLoc = "Up",
               MessageLocOffset = {X = 0, Y = 0}
+            }
+          },
+          ["17761501634196398037"] = {
+            key = "17761501634196398037",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 1423.7942430376627, y = 791.9303883680819},
+            propsData = {ConditionId = 1201041702}
+          },
+          ["17761572986687312271"] = {
+            key = "17761572986687312271",
+            type = "OpenChapterUINode",
+            name = "打开章节开始UI",
+            pos = {x = 3927.6839396413734, y = -138.52736775608196},
+            propsData = {ChapterUIId = 0, UIType = "Start"}
+          },
+          ["17761575499177312473"] = {
+            key = "17761575499177312473",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 3778.1953032777374, y = 901.2453595166452},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "TargetPoint_BoatEnd",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = false,
+              bForceAsyncLoading = false,
+              IsWhite = false
             }
           }
         },

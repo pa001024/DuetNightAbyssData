@@ -151,7 +151,6 @@ function WBP_InteractiveItem_C:InitInteractiveInfo(InteractiveInfo)
   self:InitLongPressState()
   self:UpdateCostItemDetail()
   self:InitOwnerUuId()
-  self.ListPriority = InteractiveInfo.ListPriority or 1
 end
 
 function WBP_InteractiveItem_C:InitLongPressState()
@@ -370,6 +369,11 @@ function WBP_InteractiveItem_C:PlayReleaseAnim()
 end
 
 function WBP_InteractiveItem_C:UpdateCostItemDetail()
+  if not IsValid(self.InteractiveInfo) then
+    self.Panel_Cost:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    DebugPrint(ErrorTag, "WBP_InteractiveItem_C UpdateCostItemDetail InteractiveInfo 无效")
+    return
+  end
   local CostItemInfo = self.InteractiveInfo:GetCostItemInfo()
   if not CostItemInfo then
     self.Panel_Cost:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -749,6 +753,10 @@ function WBP_InteractiveItem_C:UpdateLongPressRemaindTime()
     return
   end
   local TotalLonPressTime = self.InteractiveInfo:GetNeedLongPressTime()
+  if nil == TotalLonPressTime then
+    self:RemoveTimer("UpdateLongPressRemaindTime", true)
+    return
+  end
   local CurPercent = self:GetAnimationCurrentTime(self.LongPress)
   self.Text_RemainTime:SetText(string.format("%ss", string.format("%.1f", math.max(0.0, TotalLonPressTime * (1 - CurPercent)))))
 end

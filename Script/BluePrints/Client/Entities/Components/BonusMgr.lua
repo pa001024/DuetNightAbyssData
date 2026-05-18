@@ -26,7 +26,7 @@ function Component:TriggerRewardEvent(LogicRewards)
           local Reward = Rewards[i]
           local Reason, Transform, ExtraInfo, CB = table.unpack(UpValues[i])
           if Reason == CommonConst.RewardReason.PickUp then
-            self:OnPickUp(GameMode, Reward, Reason, ExtraInfo, true)
+            self:CacheRewardsAndShowUI(Reward, Reason)
           else
             self:OnGetRewardInDungeon(GameMode, Reward, Reason, Transform, ExtraInfo)
           end
@@ -64,17 +64,11 @@ function Component:OnGetRewardInDungeon(GameMode, Rewards, Reason, Transform, Ex
   GameMode:ResolveRewardsInBattle(Rewards, Reason, Transform, ExtraInfo, {
     Avatar = CommonUtils.ObjId2Str(self.Eid)
   })
-  self:CacheDungeonRewards(Rewards)
+  self:CacheRewardsAndShowUI(Rewards, Reason)
 end
 
-function Component:OnPickUp(GameMode, Reward, Reason, ExtraInfo, bInDungeon)
-  if bInDungeon then
-    local Tag = ExtraInfo.bExtra and "Extra" or "Normal"
-    self.CachedDungeonRewards:Merge(Reward, nil, RewardBox:GetTag(Tag))
-  end
-  for Type, RewardInfo in pairs(Reward) do
-    UIUtils.ShowDungeonRewardUI(RewardInfo, Reason, string.sub(Type, 1, -2))
-  end
+function Component:OnPickUp(GameMode, Reward, Reason, ExtraInfo)
+  UIUtils.OnGetRewardShowUI(Reward, Reason)
   local Resource = Reward.Resources
   if not Resource then
     return
@@ -86,19 +80,6 @@ function Component:OnPickUp(GameMode, Reward, Reason, ExtraInfo, bInDungeon)
     DebugPrint("OnPlayerGetResource FireEvent", Id, ExtraInfo and ExtraInfo.WorldRegionEid or "None")
     EventManager:FireEvent(EventID.OnPlayerGetResource, Id, ExtraInfo)
   end
-end
-
-function Component:ServerOnPickUp(Reward, ExtraInfo)
-  local GameMode = GWorld.GameInstance:GetCurrentGameMode()
-  self:OnPickUp(GameMode, Reward, CommonConst.RewardReason.PickUp, ExtraInfo, false)
-end
-
-function Component:ServerOnGetRewardInDungeon(Rewards, Reason, ExtraInfo)
-  local GameMode = GWorld.GameInstance:GetCurrentGameMode()
-  GameMode:ResolveRewardsInBattle(Rewards, Reason, nil, ExtraInfo, {
-    Avatar = CommonUtils.ObjId2Str(self.Eid)
-  })
-  self:CacheDungeonRewards(Rewards)
 end
 
 function Component:OnShowRewardInDungeon(ClientResult)

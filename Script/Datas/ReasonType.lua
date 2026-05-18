@@ -22,9 +22,41 @@ return ReadOnly("ReasonType", {
     ReasonName = "ACTIONPOINT_REWRD"
   },
   AFDAY = {ReasonId = 21017, ReasonName = "AFDAY"},
+  APPEARANCECOLLECT_REWARD_GET = {
+    ReasonId = 51001,
+    ReasonName = "APPEARANCECOLLECT_REWARD_GET"
+  },
+  APPEARANCECOLLECT_REWARD_UNLOCK_CONSUME = {
+    ReasonId = 51002,
+    ReasonName = "APPEARANCECOLLECT_REWARD_UNLOCK_CONSUME"
+  },
+  APPEARANCE_COLLECT_REWARD = {
+    ReasonId = 26002,
+    ReasonName = "APPEARANCE_COLLECT_REWARD"
+  },
   ARCHIVE_COLLECT_REWARD = {
     ReasonId = 26001,
     ReasonName = "ARCHIVE_COLLECT_REWARD"
+  },
+  ASYNCCOMBAT_CREATEROOM_CONSUME = {
+    ReasonId = 52005,
+    ReasonName = "ASYNCCOMBAT_CREATEROOM_CONSUME"
+  },
+  ASYNCCOMBAT_ROOMCREATE_FAIL_GET = {
+    ReasonId = 52002,
+    ReasonName = "ASYNCCOMBAT_ROOMCREATE_FAIL_GET"
+  },
+  ASYNCCOMBAT_ROOMJOIN_FAIL_GET = {
+    ReasonId = 52003,
+    ReasonName = "ASYNCCOMBAT_ROOMJOIN_FAIL_GET"
+  },
+  ASYNCCOMBAT_ROOMPASS_FAIL_GET = {
+    ReasonId = 52001,
+    ReasonName = "ASYNCCOMBAT_ROOMPASS_FAIL_GET"
+  },
+  ASYNCCOMBAT_ROOMPASS_GET = {
+    ReasonId = 52004,
+    ReasonName = "ASYNCCOMBAT_ROOMPASS_GET"
   },
   AVATAR_LEVEL_REWARD = {
     ReasonId = 28001,
@@ -238,6 +270,11 @@ return ReadOnly("ReasonType", {
   GM = {ReasonId = 0, ReasonName = "GM"},
   GM_CONSUME = {ReasonId = 1, ReasonName = "GM_CONSUME"},
   GUIDE_BOOK = {ReasonId = 15001, ReasonName = "GUIDE_BOOK"},
+  GUILD = {ReasonId = 21018, ReasonName = "GUILD"},
+  GUILD_CONSUME = {
+    ReasonId = 21019,
+    ReasonName = "GUILD_CONSUME"
+  },
   HARDBOSS = {ReasonId = 24002, ReasonName = "HARDBOSS"},
   HYPERWEAPON_LEVELUP_CONSUME = {
     ReasonId = 2007,
@@ -424,6 +461,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 11002,
     ReasonName = "QUEST_FAKE_COMPLETE"
   },
+  QUEST_SUBMIT_CONSUME = {
+    ReasonId = 11004,
+    ReasonName = "QUEST_SUBMIT_CONSUME"
+  },
   RAID_DUNGEON_CONSUME = {
     ReasonId = 14009,
     ReasonName = "RAID_DUNGEON_CONSUME"
@@ -444,6 +485,14 @@ return ReadOnly("ReasonType", {
     ReasonId = 4015,
     ReasonName = "REPEAT_CHAR_ACCESSORY_TRANSFORM_RESOURCE_GET"
   },
+  REPEAT_HEAD_FRAME_TRANSFORM_RESOURCE_GET = {
+    ReasonId = 4020,
+    ReasonName = "REPEAT_HEAD_FRAME_TRANSFORM_RESOURCE_GET"
+  },
+  REPEAT_HEAD_SCULPTURE_TRANSFORM_RESOURCE_GET = {
+    ReasonId = 4021,
+    ReasonName = "REPEAT_HEAD_SCULPTURE_TRANSFORM_RESOURCE_GET"
+  },
   REPEAT_RESOURCE_TRANSFORM_RESOURCE_GET = {
     ReasonId = 4016,
     ReasonName = "REPEAT_RESOURCE_TRANSFORM_RESOURCE_GET"
@@ -451,6 +500,14 @@ return ReadOnly("ReasonType", {
   REPEAT_SKIN_TRANSFORM_RESOURCE_GET = {
     ReasonId = 4013,
     ReasonName = "REPEAT_SKIN_TRANSFORM_RESOURCE_GET"
+  },
+  REPEAT_TITLE_FRAME_TRANSFORM_RESOURCE_GET = {
+    ReasonId = 4023,
+    ReasonName = "REPEAT_TITLE_FRAME_TRANSFORM_RESOURCE_GET"
+  },
+  REPEAT_TITLE_TRANSFORM_RESOURCE_GET = {
+    ReasonId = 4022,
+    ReasonName = "REPEAT_TITLE_TRANSFORM_RESOURCE_GET"
   },
   REPEAT_WEAPON_ACCESSORY_TRANSFORM_RESOURCE_GET = {
     ReasonId = 4014,
@@ -636,6 +693,10 @@ return ReadOnly("ReasonType", {
     ReasonId = 2008,
     ReasonName = "WEAPON_FORGE_LEVELUP"
   },
+  WEAPON_FORGE_QUEST_REWARD = {
+    ReasonId = 53001,
+    ReasonName = "WEAPON_FORGE_QUEST_REWARD"
+  },
   WEAPON_LEVELUP_CONSUME = {
     ReasonId = 2001,
     ReasonName = "WEAPON_LEVELUP_CONSUME"
@@ -643,6 +704,10 @@ return ReadOnly("ReasonType", {
   WEAPON_LEVELUP_SKILL_CONSUME = {
     ReasonId = 2003,
     ReasonName = "WEAPON_LEVELUP_SKILL_CONSUME"
+  },
+  WEAPON_SKIN_LEVEL_CONSUME = {
+    ReasonId = 2010,
+    ReasonName = "WEAPON_SKIN_LEVEL_CONSUME"
   },
   WEAPON_UPGRADE_CONSUME = {
     ReasonId = 2006,

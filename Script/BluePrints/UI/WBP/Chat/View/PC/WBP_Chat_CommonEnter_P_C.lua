@@ -76,6 +76,18 @@ function M:ShowChatText(MsgWrap)
   if DyePlanContent then
     Content = DyePlanContent
   end
+  local AppearancePlanContent = ChatController:ParseAppearancePlanText(MsgWrap)
+  if AppearancePlanContent then
+    Content = AppearancePlanContent
+  end
+  local AsyncCombatRoomInfoContent = ChatController:ParseAsyncCombatRoomInfoText(MsgWrap)
+  if AsyncCombatRoomInfoContent then
+    Content = AsyncCombatRoomInfoContent
+  end
+  local GuildRecruitContent = ChatController:ParseGuildRecruitText(MsgWrap)
+  if nil ~= GuildRecruitContent then
+    Content = GuildRecruitContent
+  end
   local Message = ChannelName .. SenderName .. Content
   self:PlayAnimation(self.Change)
   self.Text_DialogSingle:SetText(Message)

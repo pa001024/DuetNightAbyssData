@@ -27,7 +27,6 @@ function BP_NpcTalkInteractiveComponent_C:ReceiveBeginPlay()
   self.bIsBubbleDisplayed = false
   self.bIsInvitateBubbleDisplayed = false
   self.bAllowShowName = true
-  self.bCannotActive = false
   self.bNeedCheckNpcMap = true
   self.TalkState = ETalkInteractiveState.None
   self.NPCLookAtDistance = 200
@@ -39,11 +38,11 @@ function BP_NpcTalkInteractiveComponent_C:ReceiveBeginPlay()
 end
 
 function BP_NpcTalkInteractiveComponent_C:InitDailyTalk()
-  DailyTalkController:RegisterDailyTalkNpc(self.Owner.NpcId, self)
+  DailyTalkController:RegisterDailyTalkNpc(self.UnitId, self)
 end
 
 function BP_NpcTalkInteractiveComponent_C:DeInitDailyTalk()
-  DailyTalkController:RegisterDailyTalkNpc(self.Owner.NpcId, nil)
+  DailyTalkController:RegisterDailyTalkNpc(self.UnitId, nil)
 end
 
 function BP_NpcTalkInteractiveComponent_C:ReceiveEndPlay()
@@ -61,58 +60,46 @@ end
 
 function BP_NpcTalkInteractiveComponent_C:Init()
   self.bIsInit = true
-  if DailyTalkController:GetModel():CheckHasDailyTalkReward(self.Owner and self.Owner.NpcId) then
+  self.UnitType = self.Owner.UnitType
+  self.UnitId = self.Owner.UnitId
+  if DailyTalkController:GetModel():CheckHasDailyTalkReward(self.UnitId) then
     self:InitDailyTalk()
   end
 end
 
 function BP_NpcTalkInteractiveComponent_C:GetDisplayName()
-  return StoryInterActiveModel:GetInteractiveName(self.Owner.NpcId)
+  return StoryInterActiveModel:GetInteractiveName(self.UnitId)
 end
 
 function BP_NpcTalkInteractiveComponent_C:RefreshInteractiveName()
-  local InteractiveName = self:GetDisplayName()
+  local InteractiveName = self:GetDisplayName() or ""
   if self.InteractiveName == InteractiveName then
     return
   end
   self:SetInteractiveName(InteractiveName)
+  self:UpdateInteractiveUIState()
+end
+
+function BP_NpcTalkInteractiveComponent_C:RefreshDisplayName(PlayerActor, bForce)
+  local bDisplayNameRes = self:IsCanDisplayName(PlayerActor)
+  self:UpdateDisplayName(PlayerActor, bDisplayNameRes, bForce)
 end
 
 function BP_NpcTalkInteractiveComponent_C:TriggerEnter(PlayerActor)
-  if not self:CheckSelfCanInteractive() then
-    return
-  end
-  if self.bIsInit == false or self.bCannotActive then
+  if self.bIsInit == false then
     return
   end
   self.Overridden.TriggerEnter(self, PlayerActor)
 end
 
-function BP_NpcTalkInteractiveComponent_C:CheckSelfCanInteractive()
-  local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
-  if not GameState then
-    return false
-  end
-  local NpcCharacterMap = GameState.NpcCharacterMap
-  local Npc = NpcCharacterMap:FindRef(self.Owner.NpcId)
-  if not IsValid(Npc) then
-    return false
-  end
-  return true
-end
-
 function BP_NpcTalkInteractiveComponent_C:TriggerTick(PlayerActor)
-  if not self:CheckSelfCanInteractive() then
-    self.Overridden.TriggerTick(self, PlayerActor)
-    return
-  end
-  if self.bIsInit == false or self.bCannotActive then
+  if self.bIsInit == false then
     self.Overridden.TriggerTick(self, PlayerActor)
     return
   end
   local GameInstance = GWorld.GameInstance
   local TalkContext = GameInstance:GetTalkContext()
-  local NpcData = self:GetNpcCharData(self.Owner.UnitType, self.Owner.UnitId)
+  local NpcData = self:GetNpcCharData(self.UnitType, self.UnitId)
   self:RefreshInteractiveName()
   if NpcData and NpcData.RelatedBubble then
     self.BubbleTalkTriggerId = TalkContext:GetValidTalkTriggerId(NpcData.RelatedBubble)
@@ -121,8 +108,7 @@ function BP_NpcTalkInteractiveComponent_C:TriggerTick(PlayerActor)
   end
   self.Overridden.TriggerTick(self, PlayerActor)
   if self.Owner then
-    local bDisplayNameRes = self:IsCanDisplayName(PlayerActor)
-    self:UpdateDisplayName(PlayerActor, bDisplayNameRes)
+    self:RefreshDisplayName(PlayerActor)
     self:UpdateState(PlayerActor)
     if self.Owner.bNPCDefaultLookAt then
       local IsInLookAtRange = self.DistanceCheck(self.Owner, PlayerActor, self.NPCLookAtDistance) and self.AngleCheck(self.Owner, PlayerActor, self.NPCLookAtAngle)
@@ -180,24 +166,21 @@ function BP_NpcTalkInteractiveComponent_C:IsCanInteractive(PlayerActor)
   local NPCAnimInstance = Owner.NPCAnimInstance
   local bIsRotating = NPCAnimInstance and NPCAnimInstance.IsRotating
   if LuaConst.OpenComputeInteractive then
-    return self.bIsInit and not PlayerActor:IsSeating() and self.NpcState ~= "Hide" and self:GetDistanceCheckResult() and self.BFaceToACheck(self.Owner, PlayerActor, self.InteractiveFaceAngle) and StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId) and not self.Owner.bHidden and not bIsRotating
+    return self.bIsInit and not bIsRotating and not self.Owner.bHidden and not PlayerActor:IsSeating() and self:GetDistanceCheckResult() and self.BFaceToACheck(self.Owner, PlayerActor, self.InteractiveFaceAngle) and StoryInterActiveModel:HasAnyInteractive(self.UnitId)
   else
-    return self.bIsInit and not PlayerActor:IsSeating() and self.NpcState ~= "Hide" and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(self.Owner, PlayerActor, self.InteractiveFaceAngle) and StoryInterActiveModel:HasAnyInteractive(self.Owner.NpcId) and not self.Owner.bHidden and not bIsRotating
+    return self.bIsInit and not bIsRotating and not self.Owner.bHidden and not PlayerActor:IsSeating() and self.DistanceCheck(self.Owner, PlayerActor, self.InteractiveDistance) and self.BFaceToACheck(self.Owner, PlayerActor, self.InteractiveFaceAngle) and StoryInterActiveModel:HasAnyInteractive(self.UnitId)
   end
 end
 
 function BP_NpcTalkInteractiveComponent_C:CheckForbiddenBySpecialQuest()
   local Avatar = GWorld:GetAvatar()
-  if Avatar and Avatar.InSpecialQuest and StoryInterActiveModel:IsForbidBySpecialQuest(self.Owner.NpcId) then
+  if Avatar and Avatar.InSpecialQuest and StoryInterActiveModel:IsForbidBySpecialQuest(self.UnitId) then
     return true
   end
   return false
 end
 
 function BP_NpcTalkInteractiveComponent_C:IsForbidden()
-  if self.bCannotActive then
-    return true
-  end
   if self:CheckForbiddenBySpecialQuest() then
     self:SetOverridenFailMsg("QUEST_INSPECIALQUEST_MSG")
     return true
@@ -216,13 +199,9 @@ function BP_NpcTalkInteractiveComponent_C:OnClicked_Forbidden()
   self:InteractiveFailed()
 end
 
-function BP_NpcTalkInteractiveComponent_C:SetNpcTalkActive(bActive)
-  self.bCannotActive = not bActive
-end
-
 function BP_NpcTalkInteractiveComponent_C:RefreshTalkTriggerId()
   local TalkContext = GWorld.GameInstance:GetTalkContext()
-  local NpcData = self:GetNpcCharData(self.Owner.UnitType, self.Owner.UnitId)
+  local NpcData = self:GetNpcCharData(self.UnitType, self.UnitId)
   if NpcData and NpcData.RelatedTalks then
     self.TalkTriggerId = TalkContext:GetValidTalkTriggerId(NpcData.RelatedTalks)
   else
@@ -231,11 +210,11 @@ function BP_NpcTalkInteractiveComponent_C:RefreshTalkTriggerId()
 end
 
 function BP_NpcTalkInteractiveComponent_C:GetQuestID()
-  return StoryInterActiveModel:GetNowInteractiveQuestChainId(self.Owner.NpcId)
+  return StoryInterActiveModel:GetNowInteractiveQuestChainId(self.UnitId)
 end
 
 function BP_NpcTalkInteractiveComponent_C:GetSpecialQuestID()
-  return StoryInterActiveModel:GetNowInteractiveSpecialQuestId(self.Owner.NpcId)
+  return StoryInterActiveModel:GetNowInteractiveSpecialQuestId(self.UnitId)
 end
 
 function BP_NpcTalkInteractiveComponent_C:StartInteractive(PlayerActor)
@@ -250,7 +229,7 @@ function BP_NpcTalkInteractiveComponent_C:StartInteractive(PlayerActor)
   local GameInstance = GWorld.GameInstance
   local TalkContext = GameInstance:GetTalkContext()
   TalkContext:RegisterInteractiveActor(self.Owner)
-  StoryInteractiveController:TryStartInteractive(self.Owner.NpcId, self.Owner, PlayerActor, {
+  StoryInteractiveController:TryStartInteractive(self.UnitId, self.Owner, PlayerActor, {
     Obj = self,
     Func = self.TryExitInterativeTalkState
   })
@@ -309,16 +288,16 @@ function BP_NpcTalkInteractiveComponent_C:IsCanDisplayName(PlayerActor)
   return self.bAllowShowName and self.bIsInit and self.DistanceCheck(self.Owner, PlayerActor, self.NameDisplayDistance) and not self.Owner.bHidden
 end
 
-function BP_NpcTalkInteractiveComponent_C:UpdateDisplayName(PlayerActor, bDisplayName)
-  if bDisplayName and self.bIsNameDisplayed == false then
+function BP_NpcTalkInteractiveComponent_C:UpdateDisplayName(PlayerActor, bDisplayName, bForce)
+  if bDisplayName and (self.bIsNameDisplayed == false or bForce) then
     self:DisplayName(PlayerActor)
-  elseif false == bDisplayName and self.bIsNameDisplayed then
+  elseif false == bDisplayName and (self.bIsNameDisplayed or bForce) then
     self:NotDisplayName(PlayerActor)
   end
 end
 
 function BP_NpcTalkInteractiveComponent_C:DisplayName(PlayerActor)
-  if self.DisplayInteractiveName == "" or self.bIsNameDisplayed then
+  if self.DisplayInteractiveName == "" then
     return
   end
   self.bIsNameDisplayed = true
@@ -326,9 +305,6 @@ function BP_NpcTalkInteractiveComponent_C:DisplayName(PlayerActor)
 end
 
 function BP_NpcTalkInteractiveComponent_C:NotDisplayName(PlayerActor)
-  if self.bIsNameDisplayed == false then
-    return
-  end
   self.bIsNameDisplayed = false
   self.Owner:EnableNameWidget(false)
 end
@@ -368,10 +344,10 @@ function BP_NpcTalkInteractiveComponent_C:NotDisplayBubble(PlayerActor)
 end
 
 function BP_NpcTalkInteractiveComponent_C:IsCanInteractTrigger(PlayerActor)
-  if not self.bIsInit or self.bCannotActive or self.Owner.bHidden then
+  if not self.bIsInit or self.Owner.bHidden then
     return false
   end
-  local NpcData = self:GetNpcCharData(self.Owner.UnitType, self.Owner.UnitId)
+  local NpcData = self:GetNpcCharData(self.UnitType, self.UnitId)
   if not NpcData then
     return false
   end
@@ -387,7 +363,7 @@ function BP_NpcTalkInteractiveComponent_C:BeginInteractTrigger()
     return
   end
   self.bIsInteractTrigger = true
-  local NpcData = self:GetNpcCharData(self.Owner.UnitType, self.Owner.UnitId)
+  local NpcData = self:GetNpcCharData(self.UnitType, self.UnitId)
   if not NpcData then
     return
   end
@@ -411,7 +387,7 @@ function BP_NpcTalkInteractiveComponent_C:EndInteractTrigger()
     return
   end
   self.bIsInteractTrigger = false
-  local NpcData = self:GetNpcCharData(self.Owner.UnitType, self.Owner.UnitId)
+  local NpcData = self:GetNpcCharData(self.UnitType, self.UnitId)
   if not NpcData then
     return
   end

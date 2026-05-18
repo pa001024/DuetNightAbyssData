@@ -153,6 +153,16 @@ return ReadOnly("ShopTabMain", {
     MainName = "Event_FreeAppearance_tittle01",
     MainTabId = 10008
   },
+  [10009] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "UI_GuildShop",
+    MainTabId = 10009
+  },
+  [10010] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Item.T_Tab_Item'",
+    MainName = "UI_AppearenceShop",
+    MainTabId = 10010
+  },
   [90001] = {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
     MainName = "UI_SHOP_SUBTAB_SKIN",
@@ -167,5 +177,10 @@ return ReadOnly("ShopTabMain", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
     MainName = "UI_SHOP_MAINTAB_ACCESSORY_Body",
     MainTabId = 90003
+  },
+  [90004] = {
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes.T_Tab_ShopClothes'",
+    MainName = "UI_SHOP_MAINTAB_ACCESSORY_WEAPON",
+    MainTabId = 90004
   }
 })

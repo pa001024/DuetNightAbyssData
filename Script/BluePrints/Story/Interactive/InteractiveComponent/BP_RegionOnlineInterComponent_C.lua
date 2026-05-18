@@ -24,6 +24,12 @@ function BP_RegionOnlineInterComponent_C:SetInteractiveName(Name)
 end
 
 function BP_RegionOnlineInterComponent_C:DisplayInteractiveBtn(PlayerActor)
+  if PlayerActor and PlayerActor.InteractiveTriggerComponent then
+    local IsComponentTickEnabled = PlayerActor.InteractiveTriggerComponent:IsComponentTickEnabled()
+    if not IsComponentTickEnabled then
+      return
+    end
+  end
   local UIManager = UGameplayStatics.GetGameInstance(self):GetGameUIManager()
   local InteractiveUI = UIManager:LoadUINew(UIConst.InteractiveUIName)
   if not InteractiveUI then
@@ -164,7 +170,6 @@ function BP_RegionOnlineInterComponent_C:InitCommonUIConfirmID(CommonUIConfirmID
   self:SetInteractiveDistance(Data.InteractiveRadius or self.InteractiveDistance)
   self.InteractiveAngle = Data.InteractiveAngle or self.InteractiveAngle
   self.InteractiveFaceAngle = Data.PlayerFaceAngle or self.InteractiveFaceAngle
-  self.ListPriority = Data.InteractivePriority or 0
 end
 
 return BP_RegionOnlineInterComponent_C

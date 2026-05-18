@@ -5,7 +5,6 @@ function M:OnLoaded(...)
   self.Super.OnLoaded(self, ...)
   local Info = (...)
   self.DefaultFishingSpotId = Info.FishingSpotId
-  self.DefaultFishingRegionId = DataMgr.FishingSpot2FishingRegion[self.DefaultFishingSpotId] or 1
   self.DefaultFishResourceId = Info.FishResourceId
   if not self.DefaultFishResourceId then
     self.DefaultFishId = Info.FishId
@@ -20,6 +19,7 @@ function M:OnLoaded(...)
     GWorld.logger.error("没有找到钓鱼点数据，鱼id：" .. self.DefaultFishId .. "，请检查鱼点表的鱼类列表")
     self.DefaultFishingSpotId = 10010101
   end
+  self.DefaultFishingRegionId = DataMgr.FishingSpot2FishingRegion[self.DefaultFishingSpotId] or 1
   self.RegionPointId = DataMgr.FishingSpot[self.DefaultFishingSpotId].RegionPointId
   self.RegionList = {}
   self.SpotList = {}

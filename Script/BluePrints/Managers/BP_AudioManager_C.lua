@@ -20,12 +20,12 @@ function BP_AudioManager_C:RecoverSavedData()
   if IsDedicatedServer(self) then
     return
   end
-  self:RecoverVolumeData()
   self:ReadSeGlobalParameters()
   self.bOpenSoundIDOpt = true
   self.bOpenMonsterLimit = true
   self:BindEnterforegroundDelegate()
   self:BindLogicToWindowClose()
+  self:ListenTalkState()
 end
 
 function BP_AudioManager_C:PlayFMODSoundByID(WorldContext, SoundID, LogicEventPlayer, FollowedSocketName, ExtraParams)
@@ -208,6 +208,28 @@ function BP_AudioManager_C:GetAvatarCustomBGMEventId()
     return 0
   end
   return Avatar.HomeBaseBGM
+end
+
+function BP_AudioManager_C:ListenTalkState()
+  EventManager:AddEvent(EventID.StartTalk, self, self.OnTalkStart)
+  EventManager:AddEvent(EventID.EndTalk, self, self.OnTalkEnd)
+end
+
+function BP_AudioManager_C:OnTalkStart(Message)
+  if Message.TalkCategory == "Cutscene" then
+    local PlayStruct = FPlayFMODSoundStruct()
+    PlayStruct.FMODEvent = self:GetFMODEventByPath_Sync("event:/snapshot/ui/mute_in_cg")
+    PlayStruct.EventKey = "CutScene"
+    PlayStruct.bStopWhenAttachedToDestoryed = true
+    PlayStruct = UE4.UAudioManager.SetObjectToFPlayFMODSoundStruct(PlayStruct, self)
+    self:PlayFMODSound_Sync(PlayStruct)
+  end
+end
+
+function BP_AudioManager_C:OnTalkEnd(Message)
+  if Message.TalkCategory == "Cutscene" then
+    self:StopSound(self, "CutScene")
+  end
 end
 
 AssembleComponents(BP_AudioManager_C)

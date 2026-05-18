@@ -3,6 +3,10 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
+function M:Destruct()
+  self:UnbindAllFromAnimationFinished(self.Click)
+end
+
 function M:BP_OnEntryReleased()
   if self.Content then
     self.Content.Entry = nil
@@ -23,6 +27,7 @@ end
 function M:InitData(Content)
   self.IsEmpty = Content.IsEmpty
   self.Id = Content.Id
+  self.Type = Content.Type
   self.Name = Content.Name
   self.IconPath = Content.IconPath
   self.Rarity = Content.Rarity
@@ -30,6 +35,7 @@ function M:InitData(Content)
   self.IsDraftType = Content.IsDraftType
   self.NotInteractive = Content.NotInteractive
   self.bPlayInAnim = Content.bPlayInAnim
+  self.bToNormalAfterClick = Content.bToNormalAfterClick
   self.SoundItemType = Content.SoundItemType
   self.DoNotPlaySound = Content.DoNotPlaySound
   self.DoNotPlaySoundGamePad = Content.DoNotPlaySoundGamePad
@@ -50,13 +56,14 @@ end
 function M:InitCommonView()
   self:SetEmpty(self.IsEmpty)
   if not self.IsEmpty then
-    self:SetIcon(self.IconPath)
+    self:SetIcon(self.IconPath, self.Type)
     self:SetName(self.Name)
     self:SetRarity(self.Rarity)
     self:SetLock(self.IsLock)
     self:SetDraftType(self.IsDraftType)
     self:SetNew(self.Content.IsNew)
     self:SetSelected(self.Content.IsSelect)
+    self:SetClickMode(self.bToNormalAfterClick)
   end
   if self.bPlayInAnim then
     self:PlayInAnimation()
@@ -71,10 +78,23 @@ function M:SetEmpty(IsEmpty)
   end
 end
 
-function M:SetIcon(IconPath)
-  local Object = LoadObject(IconPath)
-  local ImgMat = self.Icon:GetDynamicMaterial()
-  ImgMat:SetTextureParameterValue("MainTex", Object)
+function M:SetIcon(IconPath, Type)
+  local Object
+  if IconPath then
+    Object = LoadObject(IconPath)
+  end
+  local Icon
+  if "Mount" == Type then
+    self.WS_State:SetActiveWidgetIndex(1)
+    Icon = self.Icon_Mounts
+  else
+    self.WS_State:SetActiveWidgetIndex(0)
+    Icon = self.Icon
+  end
+  if Icon then
+    local ImgMat = Icon:GetDynamicMaterial()
+    ImgMat:SetTextureParameterValue("MainTex", Object)
+  end
 end
 
 function M:SetName(Name)
@@ -139,6 +159,20 @@ end
 
 function M:SetDoNotPlaySound(DoNotPlaySound)
   self.Content.DoNotPlaySound = DoNotPlaySound
+end
+
+function M:SetClickMode(bToNormalAfterClick)
+  if bToNormalAfterClick then
+    self:BindToAnimationFinished(self.Click, {
+      self,
+      self.PlayNormalAnimation
+    })
+  else
+    self:UnbindFromAnimationFinished(self.Click, {
+      self,
+      self.PlayNormalAnimation
+    })
+  end
 end
 
 function M:OnMouseEnter(MyGeometry, MouseEvent)
@@ -275,6 +309,10 @@ function M:PlayInAnimation()
 end
 
 function M:IsInAnimationPlaying()
+end
+
+function M:PlayNormalAnimation()
+  self:PlayAnimation(self.Normal)
 end
 
 return M

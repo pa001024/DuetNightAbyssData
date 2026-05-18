@@ -3,8 +3,17 @@ local WBP_DungeonDefenseLowHeal_C = Class("BluePrints.UI.BP_UIState_C")
 
 function WBP_DungeonDefenseLowHeal_C:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self:CheckDungeonMode()
+  local TargetEid, TargetType = select(1, ...), select(2, ...)
+  self.TargetEid = TargetEid
+  self.TargetType = TargetType
   self:SetHealthText()
-  if self.IsSynthesisMode then
+  if self.IsSynthesisIIMode then
+    if self.TargetType == "hostage" then
+      self.Text_Target:SetText(GText("DUNGEON_SYNTHESIS2_126"))
+    else
+      self.Text_Target:SetText(GText("DUNGEON_SYNTHESIS2_113"))
+    end
+  elseif self.IsSynthesisMode then
     self.Text_Target:SetText(GText("DUNGEON_SYNTHESIS_107"))
   else
     self.Text_Target:SetText(GText("UI_Defense_TargetHealth"))
@@ -12,6 +21,9 @@ function WBP_DungeonDefenseLowHeal_C:InitUIInfo(Name, IsInUIMode, EventList, ...
   self.bIsDefenceCoreDead = false
   self.PlayBreakAnimInterval = self.PlayBreakAnimInterval or 2.0
   self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
+  if self.IsSynthesisIIMode and self.TargetType == "hostage" then
+    self:PlayAnimation(self.Loop, 0, 0)
+  end
 end
 
 function WBP_DungeonDefenseLowHeal_C:OnLoaded(...)
@@ -31,6 +43,20 @@ function WBP_DungeonDefenseLowHeal_C:OnLoaded(...)
 end
 
 function WBP_DungeonDefenseLowHeal_C:SetHealthText()
+  if self.TargetEid then
+    local CurTargetActor = Battle(self):GetEntity(self.TargetEid)
+    if not CurTargetActor then
+      return
+    end
+    local NewHp = CurTargetActor:GetAttr("Hp")
+    local MaxHp = CurTargetActor:GetAttr("MaxHp")
+    if not MaxHp or MaxHp <= 0 then
+      return
+    end
+    local NewHpPercent = NewHp / MaxHp
+    self.Text_Health:SetText(tostring(math.ceil(NewHpPercent * 100)))
+    return
+  end
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   local Keys = GameState.DefBaseMap:Keys()
   if Keys:Length() <= 0 then
@@ -76,6 +102,9 @@ function WBP_DungeonDefenseLowHeal_C:CheckDungeonMode()
   end
   if GameState.GameModeType == "Synthesis" then
     self.IsSynthesisMode = true
+  end
+  if GameState.GameModeType == "SynthesisII" then
+    self.IsSynthesisIIMode = true
   end
 end
 

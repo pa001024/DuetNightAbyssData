@@ -146,6 +146,7 @@ end
 function M:OnExceptionInterruptedBySTL()
   DebugPrint("NewBossTalkTask:OnExceptionInterruptedBySTL")
   TalkUtils:RemovePlayerInvincible()
+  self:Clear()
   self.NodeFinished_Callback = nil
 end
 

@@ -143,6 +143,10 @@ function M:Construct()
   rawset(self, "bShowPlan", true)
   rawset(self, "ColorItemContents", {})
   rawset(self, "IsRiderMount", false)
+  rawset(self, "DyeAddScore", 0)
+  rawset(self, "DyeMaxScore", 0)
+  rawset(self, "AppearanceScore", 0)
+  rawset(self, "UseItemsArray", {})
   self.Tab_Dye:Init(self.TabConfig)
 end
 
@@ -351,15 +355,11 @@ end
 
 function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   M.Super.InitUIInfo(self, Name, IsInUIMode, EventList, Params)
-  local ArmoryMain = UIManager(self):GetArmoryUIObj()
-  if ArmoryMain then
-    self.ActorController = ArmoryMain.ActorController
-    self.ArmoryPlayer = ArmoryMain.ActorController.ArmoryPlayer
-  end
   Params = Params or {}
   self.Parent = Params.Parent
   self.IsPreviewMode = Params.IsPreviewMode
   self.Type = Params.Type
+  self.DyeType = Params.Type
   self.Target = Params.Target
   self.SkinType = Params.SkinType or CommonConst.DataType.Skin
   self.bOwnTargetSkin = false
@@ -446,6 +446,20 @@ function M:OnActorCreated(WeaponActor)
   elseif self.Type == CommonConst.ArmoryType.Weapon and (not self.ArmoryPlayer or self.bStandaloneWeapon) then
   else
     self.ActorController:SetArmoryCameraTag("Default")
+  end
+  if self.Type == "Char" then
+    self.DyeType = CommonConst.AppearanceCollectType.Skin
+  elseif self.Type == "Weapon" then
+    self.DyeType = CommonConst.AppearanceCollectType.WeaponSkin
+  elseif self.Type == "Hair" then
+    self.DyeType = CommonConst.AppearanceCollectType.Hair
+  end
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local ScoreInfo = Avatar:GetAppearanceAllScore(self.DyeType, self.SkinId)
+    if ScoreInfo then
+      self.AppearanceScore = ScoreInfo.DyeScore
+    end
   end
   self:InitUI()
 end
@@ -1458,6 +1472,7 @@ function M:UpdateItemConsumeManual(CurrentContents, ComparedContents)
   local UseItems_Map = {}
   local UseItems_Array = {}
   local Avatar = GWorld:GetAvatar()
+  local AddScore = 0
   for Idx, Content in pairs(ComparedContents) do
     if Content and Content ~= CurrentContents[Idx] then
       HasAnyComparedContent = true
@@ -1483,15 +1498,38 @@ function M:UpdateItemConsumeManual(CurrentContents, ComparedContents)
           UseItems_Map[ResourceId] = Obj
           table.insert(UseItems_Array, Obj)
         else
-          local Obj = UseItems_Map[ResourceId]
-          Obj.NeedCount = Obj.NeedCount + 1
-          if Obj.NeedCount > Obj.Count then
-            CanApplyColors = false
-            Obj.NotEnoughCount = Obj.NotEnoughCount + 1
+          do
+            local Obj = UseItems_Map[ResourceId]
+            Obj.NeedCount = Obj.NeedCount + 1
+            if Obj.NeedCount > Obj.Count then
+              CanApplyColors = false
+              Obj.NotEnoughCount = Obj.NotEnoughCount + 1
+            end
+          end
+        end
+      end
+      for key, value in pairs(DataMgr.DyeScore) do
+        local DyeResourceData = value.ResourceId
+        self.DyeMaxScore = value.MaxScore
+        for key, DyeResourceId in pairs(DyeResourceData) do
+          if ResourceId == DyeResourceId then
+            AddScore = AddScore + value.ScorePerUse
           end
         end
       end
     end
+  end
+  self.DyeAddScore = AddScore
+  local IsMaxScore = false
+  if self.AppearanceScore >= self.DyeMaxScore then
+    IsMaxScore = true
+  end
+  if self.DyeAddScore > 0 and not IsMaxScore then
+    self.Num_Fenghua_Now:SetText(self.AppearanceScore)
+    self.Num_Fenghua_Preview:SetText(math.min(self.AppearanceScore + self.DyeAddScore, self.DyeMaxScore))
+    self.Gruop_Fenghua:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Gruop_Fenghua:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   rawset(self, "bNeedCommonDye", false)
   rawset(self, "NotEnoughResource", {})
@@ -1574,6 +1612,7 @@ function M:UpdateItemConsumeManual(CurrentContents, ComparedContents)
     self:OnConsumItemContentCreated(value)
   end
   self.ItemConsume = UseItems_Map
+  self.UseItemsArray = UseItems_Array
   self:UpdateConsumItemWidgets(UseItems_Array, UseItems_Map)
   if HasAnyComparedContent then
     self.Btn_Compare:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -1810,7 +1849,11 @@ function M:OnDoneBtnClicked()
       }
       UIManager(self):ShowCommonPopupUI(100228, Params, self)
     else
-      UIManager(self):ShowCommonPopupUI(100100, Params, self)
+      Params.DyeAddScore = self.DyeAddScore
+      Params.AppearanceScore = self.AppearanceScore
+      Params.DyeMaxScore = self.DyeMaxScore
+      Params.UseItemsArray = self.UseItemsArray
+      UIManager(self):ShowCommonPopupUI(100380, Params, self)
     end
   else
     UIManager(self):ShowCommonPopupUI(100135, Params, self)
@@ -1890,6 +1933,13 @@ function M:OnColorsChanged(Ret)
   self:DeleteCurrentDraft()
   self.Btn_Compare:SetForbidden(true)
   self.Btn_Save:ForbidBtn(true)
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    local ScoreInfo = Avatar:GetAppearanceAllScore(self.DyeType, self.SkinId)
+    if ScoreInfo then
+      self.AppearanceScore = ScoreInfo.DyeScore
+    end
+  end
 end
 
 function M:OnCharSkinColorPlanChanged(Ret, SkinId, NewPlanIndex)

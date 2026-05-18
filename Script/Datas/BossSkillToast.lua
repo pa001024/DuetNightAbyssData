@@ -240,16 +240,64 @@ return ReadOnly("BossSkillToast", {
     TipsStyle = "Common"
   },
   [8519001] = {
-    Duration = 3,
+    Duration = 9,
     ID = 8519001,
-    TextMapKey = "并排列车驶来（待包装）",
-    TipsStyle = "InSequence"
+    TextMapKey = "BossSkillToast_LiecheHand_Skill07",
+    TipsStyle = "BossLiecheCommon"
   },
   [8519002] = {
     Duration = 3,
     ID = 8519002,
-    TextMapKey = "并排列车离去（待包装）",
+    TextMapKey = "BossSkillToast_LiecheCannon_Skill02",
+    TipsStyle = "Common"
+  },
+  [8519003] = {
+    Duration = 3,
+    ID = 8519003,
+    TextMapKey = "BossSkillToast_LiecheCannon_Skill06",
+    TipsStyle = "BossLiecheCommon"
+  },
+  [8519004] = {
+    Duration = 3,
+    ID = 8519004,
+    TextMapKey = "BossSkillToast_LiecheCannon_Skill07",
+    TipsStyle = "Common"
+  },
+  [8519005] = {
+    Duration = 3,
+    ID = 8519005,
+    TextMapKey = "BossSkillToast_LiecheCannon_Skill08",
+    TipsStyle = "Common"
+  },
+  [8519006] = {
+    Duration = 3,
+    ID = 8519006,
+    TextMapKey = "BossSkillToast_LiecheCannon_Skill09",
     TipsStyle = "InSequence"
+  },
+  [8519007] = {
+    Duration = 3,
+    ID = 8519007,
+    TextMapKey = "BossSkillToast_LiecheCore_Skill01",
+    TipsStyle = "Common"
+  },
+  [8519008] = {
+    Duration = 3,
+    ID = 8519008,
+    TextMapKey = "BossSkillToast_LiecheCore_Skill02",
+    TipsStyle = "Common"
+  },
+  [8519009] = {
+    Duration = 3,
+    ID = 8519009,
+    TextMapKey = "BossSkillToast_LiecheCannon_Skill03",
+    TipsStyle = "Common"
+  },
+  [8519010] = {
+    Duration = 3,
+    ID = 8519010,
+    TextMapKey = "BossSkillToast_LiecheCannon_Skill04",
+    TipsStyle = "Common"
   },
   [8520001] = {
     Duration = 3,
@@ -315,6 +363,48 @@ return ReadOnly("BossSkillToast", {
     Duration = 3,
     ID = 8524001,
     TextMapKey = "黑潮涌现（待包装）",
+    TipsStyle = "Common"
+  },
+  [8525001] = {
+    Duration = 4,
+    ID = 8525001,
+    TextMapKey = "超载秒杀（待包装）",
+    TipsStyle = "Common"
+  },
+  [8525002] = {
+    Duration = 4,
+    ID = 8525002,
+    TextMapKey = "大范围激活（待包装）",
+    TipsStyle = "Common"
+  },
+  [8525003] = {
+    Duration = 4,
+    ID = 8525003,
+    TextMapKey = "追踪并激活（待包装）",
+    TipsStyle = "Common"
+  },
+  [8525004] = {
+    Duration = 2,
+    ID = 8525004,
+    TextMapKey = "浪潮（待包装）",
+    TipsStyle = "Common"
+  },
+  [8525005] = {
+    Duration = 4,
+    ID = 8525005,
+    TextMapKey = "十字升级（待包装）",
+    TipsStyle = "Common"
+  },
+  [8525006] = {
+    Duration = 4,
+    ID = 8525006,
+    TextMapKey = "三向激活（待包装）",
+    TipsStyle = "Common"
+  },
+  [8525007] = {
+    Duration = 18,
+    ID = 8525007,
+    TextMapKey = "运动会（待包装）",
     TipsStyle = "Common"
   }
 })

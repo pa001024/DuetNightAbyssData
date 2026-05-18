@@ -15,7 +15,8 @@ M._components = {
   "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.MultiPlayerChangeCompoment",
   "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.DungeonCompoment",
   "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.MapPaneCompoment",
-  "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.SoloTreasureComponent"
+  "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.SoloTreasureComponent",
+  "BluePrints.UI.UI_PC.LevelMap.Widget.Wild.Components.GatherAreaComponent"
 }
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local CommonUtils = require("Utils.CommonUtils")
@@ -62,6 +63,8 @@ function M:Construct()
   self.DispatchSelect = {}
   self.DispatchLocations = {}
   self.EnterTaskRegion = {}
+  self.PointWidgetPool = {}
+  self.SelectWidgetPool = {}
   self.CurClickDispatchId = 0
   self.OriginalRegionId = 0
   self.MaxMarkNum = math.floor(DataMgr.GlobalConstant.MaxMapMarkIcon.ConstantValue)
@@ -126,7 +129,24 @@ function M:Destruct()
   if self.InteractivePanel then
     self.InteractivePanel.WBox:ClearChildren()
   end
+  if self.PointWidgetPool then
+    for _, Point in ipairs(self.PointWidgetPool) do
+      if Point.Super and Point.Super.RemoveFromParent then
+        Point.Super.RemoveFromParent(Point)
+      end
+    end
+    self.PointWidgetPool = {}
+  end
+  if self.SelectWidgetPool then
+    for _, Select in ipairs(self.SelectWidgetPool) do
+      Select:RemoveFromParent()
+    end
+    self.SelectWidgetPool = {}
+  end
   self:RemoveFocusTarget("Right")
+  if self.ColorBg then
+    self.ColorBg:RemoveFromParent()
+  end
 end
 
 function M:ClearData()
@@ -134,9 +154,6 @@ function M:ClearData()
     self.FloorWidget:ClearData()
   end
   if self.SelectWidgetTable then
-    for _, select in pairs(self.SelectWidgetTable) do
-      select:RemoveFromParent()
-    end
     self.SelectWidgetTable = {}
   end
   if self.MapImage then
@@ -214,6 +231,11 @@ function M:InitCoroutine()
     end
     RegionMapImageClass = RegionMapImageClass or LoadClass(self.RegionData.RegionMapImage)
     self.MapImage = UIManager(self):_CreateWidgetByUMGClass(RegionMapImageClass, nil, nil, nil, false)
+    if _G.ShowRegionmapPane and not self.IsMiniMap then
+      self.MapImage:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    else
+      self.MapImage:SetVisibility(ESlateVisibility.HitTestInvisible)
+    end
     if self.MapImage then
       self.Panel_Map:AddChild(self.MapImage)
       self.MapImage:SetRenderTransformAngle(self.MapRotation)
@@ -414,7 +436,23 @@ function M:InitInRegionMap()
     self.WheelMaxScale = self.RegionData.RegionMapWheelScale[2]
   end
   self.CurrentFloorId = self.MaxFloorId
-  self.Panel_Bg:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  self.Panel_Bg:SetVisibility(ESlateVisibility.HitTestInvisible)
+  if self.ColorBg then
+    self.ColorBg:RemoveFromParent()
+    self.ColorBg = nil
+  end
+  if self.RegionData.BgBlueprintPath then
+    self.ColorBg = UIManager(self):CreateWidgetAsync(nil, self.CoroutineInitObj, self.RegionData.BgBlueprintPath)
+  end
+  if self.ColorBg then
+    self.Panel_Bg:AddChild(self.ColorBg)
+    local Anchors = self.ColorBg.Slot:GetAnchors()
+    Anchors.Minimum = UKismetMathLibrary.Vector2D_Zero()
+    Anchors.Maximum = UKismetMathLibrary.Vector2D_One()
+    self.ColorBg.Slot:SetAnchors(Anchors)
+    self.ColorBg.Slot:SetAutoSize(true)
+    self.ColorBg.Slot:SetOffsets(FMargin())
+  end
   self.BackgroundBlur:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   self:PlayAnimation(self.Auto_In)
   self.BackgroundScale = FVector2D(self.BackgroundMinScale.X, self.BackgroundMinScale.Y)
@@ -817,22 +855,25 @@ function M:UpdateSingleMapFogByTeleport(TeleportJson, ShowFog, ShowAnimId)
   end
   local Seconds, PartialSeconds = UGameplayStatics.GetAccurateRealTime()
   local Time = Seconds + PartialSeconds
+  local MistyMaterial = self.MapDrawMistyMaterialInstance
+  local RTRenderTarget
+  if self.IsMiniMap then
+    RTRenderTarget = self.MapMistyRTMiniMap
+  elseif Liner then
+    RTRenderTarget = self.MapMistyRT
+  else
+    RTRenderTarget = self.MapMistyRT2
+  end
   for _, Block in pairs(TeleportJson) do
     local SubRegionId = self.NewMapType and Block.SubRegionId or self.RegionID
     if SubRegionId and self.MapFog[SubRegionId] and self.MapFog[SubRegionId][Block.FloorId] and self.MapFog[SubRegionId][Block.FloorId][Block.Big] then
       if ShowFog then
         local MapMaterial = self.MapFog[SubRegionId][Block.FloorId][Block.Big]:GetDynamicMaterial()
+        MistyMaterial:SetVectorParameterValue("Offset", MapMaterial:K2_GetVectorParameterValue("Offset"))
+        MistyMaterial:SetScalarParameterValue("Layer", Block.FloorId)
         for _, Index in pairs(Block.Small) do
-          self.MapDrawMistyMaterialInstance:SetScalarParameterValue("Pos", Index - 1)
-          self.MapDrawMistyMaterialInstance:SetVectorParameterValue("Offset", MapMaterial:K2_GetVectorParameterValue("Offset"))
-          self.MapDrawMistyMaterialInstance:SetScalarParameterValue("Layer", Block.FloorId)
-          if self.IsMiniMap then
-            UKismetRenderingLibrary.DrawMaterialToRenderTarget(self, self.MapMistyRTMiniMap, self.MapDrawMistyMaterialInstance)
-          elseif Liner then
-            UKismetRenderingLibrary.DrawMaterialToRenderTarget(self, self.MapMistyRT, self.MapDrawMistyMaterialInstance)
-          else
-            UKismetRenderingLibrary.DrawMaterialToRenderTarget(self, self.MapMistyRT2, self.MapDrawMistyMaterialInstance)
-          end
+          MistyMaterial:SetScalarParameterValue("Pos", Index - 1)
+          UKismetRenderingLibrary.DrawMaterialToRenderTarget(self, RTRenderTarget, MistyMaterial)
         end
         if Liner then
           MapMaterial:SetVectorParameterValue("Position", Liner)
@@ -863,7 +904,7 @@ function M:OnSkipRegion(SubRegionId)
     self.HideTrack = true
   else
     self.Panel_Point:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.MapImage:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.MapImage:SetVisibility(ESlateVisibility.HitTestInvisible)
     self.HideTrack = false
     if not self.TickRegionMapImageOpen then
       UKismetRenderingLibrary.ClearRenderTarget2D(self, self.MapMistyRTMiniMap)
@@ -918,12 +959,23 @@ function M:NewPoint()
 end
 
 function M:NewPointAsync(Coroutine)
-  local Point = self:CreateWidgetAsync("RegionMapPoint", Coroutine)
-  self.Panel_Point:AddChild(Point)
-  local Select = self:CreateWidgetAsync("RegionMapSelect", Coroutine)
-  self.Panel_Point:AddChild(Select)
-  self:AdjustSlot(Point.Slot)
-  self:AdjustSlot(Select.Slot)
+  local Point, Select
+  if self.PointWidgetPool and #self.PointWidgetPool > 0 then
+    Point = table.remove(self.PointWidgetPool, 1)
+  else
+    Point = self:CreateWidgetAsync("RegionMapPoint", Coroutine)
+    self.Panel_Point:AddChild(Point)
+    self:AdjustSlot(Point.Slot)
+  end
+  if self.SelectWidgetPool and #self.SelectWidgetPool > 0 then
+    Select = table.remove(self.SelectWidgetPool, 1)
+  else
+    Select = self:CreateWidgetAsync("RegionMapSelect", Coroutine)
+    self.Panel_Point:AddChild(Select)
+    self:AdjustSlot(Select.Slot)
+  end
+  Point.SelectWidget = Select
+  Select:SetVisibility(ESlateVisibility.Collapsed)
   if self.IsMiniMap then
     Point:SetRenderScale(self.MinimapIconScale)
   else
@@ -931,7 +983,6 @@ function M:NewPointAsync(Coroutine)
   end
   Point.Slot:SetZOrder(0)
   Select.Slot:SetZOrder(10)
-  Select:SetVisibility(ESlateVisibility.Collapsed)
   if self.IsMiniMap then
     self.MapPointQueue:Add(Point)
   end
@@ -942,6 +993,26 @@ function M:RemovePoint(Point)
   self.MapPoint2LocalPos:Remove(Point)
   self.MapPointQueue:Remove(Point)
   self.MapPointLock:Remove(Point)
+end
+
+function M:ReleasePointToPool(Point)
+  if not Point then
+    return
+  end
+  local Select = Point.SelectWidget
+  if Point.ClearPointData then
+    Point:ClearPointData()
+  end
+  Point:SetVisibility(ESlateVisibility.Collapsed)
+  if self.PointWidgetPool then
+    table.insert(self.PointWidgetPool, Point)
+  end
+  if Select then
+    Select:SetVisibility(ESlateVisibility.Collapsed)
+    if self.SelectWidgetPool then
+      table.insert(self.SelectWidgetPool, Select)
+    end
+  end
 end
 
 function M:OnPanelClose()
@@ -1284,6 +1355,9 @@ end
 function M:SetDragOffset()
   self.MapImage:SetRenderTranslation(self.CurrentDragOffset)
   self.Bg_Map:SetRenderTranslation(self.CurrentDragOffset * self.BackgroundDragRatio)
+  if self.ColorBg and self.ColorBg.Panel_Drag then
+    self.ColorBg.Panel_Drag:SetRenderTranslation(self.CurrentDragOffset)
+  end
   self.Panel_Gamer:SetRenderTranslation(self.CurrentDragOffset)
   self.Panel_Point:SetRenderTranslation(self.CurrentDragOffset)
   if self.IsInRegion then
@@ -1378,6 +1452,9 @@ function M:ClosePanel(IsImmediately)
     end
   end
   self.MainMap:ShoworHideBottomTab(true)
+  if 1 ~= self.WS_Indoor.RenderOpacity then
+    self:PlayAnimation(self.Gamer_In)
+  end
   if false == self.IsOpenDispatch then
     if self.FloorWidget then
       self.FloorWidget:SetVisibility(IsEmptyTable(self.FloorWidgetTable) and ESlateVisibility.Collapsed or ESlateVisibility.SelfHitTestInvisible)
@@ -1482,6 +1559,7 @@ function M:OnPanelOpen(panel)
     if self.MainMap.DispatchDetail then
       self.MainMap.DispatchDetail:RealClose()
     end
+    self:CheckAndHidePlayer(self.TempMark)
   elseif 1 == panel then
     if self.MarkPanel then
       self.MarkPanel:SetVisibility(ESlateVisibility.Collapsed)
@@ -1509,6 +1587,7 @@ function M:OnPanelOpen(panel)
     if self.MainMap.DispatchDetail then
       self.MainMap.DispatchDetail:RealClose()
     end
+    self:CheckAndHidePlayer()
   elseif 3 == panel then
     self.MainMap.Entrance_Dispatch:SetVisibility(ESlateVisibility.Collapsed)
     self:RefreshAllDispatchPoint()
@@ -1545,6 +1624,20 @@ function M:OnPanelOpen(panel)
     end
   end
   self.LastPanelId = panel
+end
+
+function M:CheckAndHidePlayer(Point)
+  local TargetPoint = Point or self.CurrentSelectPoint
+  if not TargetPoint then
+    return
+  end
+  local PointLoc = TargetPoint.RenderTransform.Translation
+  local PointSize = self.WS_Indoor:GetDesiredSize() / 2 * 1.5
+  local MyPoint = 0 == self.WS_Indoor:GetActiveWidgetIndex() and self.Gamer or self.Gamer_Indoor
+  local MyLoc = MyPoint.RenderTransform.Translation
+  if PointLoc.X - PointSize.X <= MyLoc.X and PointLoc.X + PointSize.X >= MyLoc.X and PointLoc.Y - PointSize.Y <= MyLoc.Y and PointLoc.Y + PointSize.Y >= MyLoc.Y then
+    self:PlayAnimation(self.Gamer_out)
+  end
 end
 
 function M:TouchWildMapMultiMove(TouchFingerCount, Index, Pos1, Pos2, TwoPointDist)

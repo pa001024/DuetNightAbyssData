@@ -3,6 +3,15 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
+local function FormatProgressPercent(progress, target)
+  if not target or target <= 0 then
+    return "0.0%"
+  end
+  local percent = progress / target * 100
+  local truncated = math.floor(percent * 10) / 10
+  return string.format("%.1f%%", truncated)
+end
+
 function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.Content.UI = self
@@ -31,9 +40,9 @@ function M:InitUI()
   self.Com_Item_S:Init(ItemContent)
   self.Text_Item_Name:SetText(GText(ResourceData.ResourceName))
   if self.Content.Progress >= self.Content.Target then
-    self.Text_Num:SetText(self.Content.Target .. "/" .. self.Content.Target)
+    self.Text_Num:SetText(FormatProgressPercent(self.Content.Target, self.Content.Target))
   else
-    self.Text_Num:SetText(self.Content.Progress .. "/" .. self.Content.Target)
+    self.Text_Num:SetText(FormatProgressPercent(self.Content.Progress, self.Content.Target))
   end
   self.Progress_Num:SetPercent(self.Content.Progress / self.Content.Target)
   self.Progress_NumGrow:SetPercent(0)
@@ -42,14 +51,14 @@ end
 function M:SetAddProgress(num)
   if 0 == num or nil == num or self.Content.Progress + num > self.Content.Target then
     if self.Content.Progress >= self.Content.Target then
-      self.Text_Num:SetText(self.Content.Target .. "/" .. self.Content.Target)
+      self.Text_Num:SetText(FormatProgressPercent(self.Content.Target, self.Content.Target))
     else
-      self.Text_Num:SetText(self.Content.Progress .. "/" .. self.Content.Target)
+      self.Text_Num:SetText(FormatProgressPercent(self.Content.Progress, self.Content.Target))
     end
     self.Progress_Num:SetPercent(self.Content.Progress / self.Content.Target)
     self.Progress_NumGrow:SetPercent(0)
   else
-    self.Text_Num:SetText(self.Content.Progress .. "<Qua2>+" .. num .. "</>/" .. self.Content.Target)
+    self.Text_Num:SetText(FormatProgressPercent(self.Content.Progress, self.Content.Target))
     self.Progress_Num:SetPercent(self.Content.Progress / self.Content.Target)
     self.Progress_NumGrow:SetPercent((self.Content.Progress + num) / self.Content.Target)
   end

@@ -462,7 +462,7 @@ function M:OnBtnPreviewClick()
     if self.Parent and self.Parent.ActorController then
       self.Parent.ActorController:HidePlayerActor("ActorController_HidePlayerBeforeMount", false)
     end
-    UIManager(self):LoadUINew("SkinPreview", {
+    PageJumpUtils:JumpToSkinPreview({
       ItemType = PreviewType,
       SkinList = PreviewIdList,
       HidePurchase = true
@@ -558,7 +558,7 @@ function M:InitMainBtnInfo()
   self.MainBtn = nil
   self.MainBtnClickFunc = nil
   self.PurchaseLimit = ShopUtils and ShopUtils.GetShopItemPurchaseLimit and BannerData.ItemId and ShopUtils:GetShopItemPurchaseLimit(BannerData.ItemId) or 0
-  self.ShopItemData = self:GetShopItemInfo(BannerData.ItemId)
+  self.ShopItemData = self:GetShopItemInfo(BannerData.ItemId or nil)
   self.FinalPrice, self.PriceType = self:ComputeFinalPrice(self.ShopItemData)
   self.MainBtn = 0 == self.WS_Btn:GetActiveWidgetIndex() and self.Btn_Pay or self.Btn_Get
   if not self.MainBtn or not self.MainBtn.Btn_Buy then
@@ -810,10 +810,20 @@ function M:InitButtonGetInfo()
     self.MainBtn.Text_BtnBuy:SetText(GText("UI_Banner_SkinGacha_Goto"))
     self.MainBtnTextStr = GText("UI_Banner_SkinGacha_Goto")
   end
+  local InterfaceJumpText = self.BannerData and self.BannerData.InterfaceJumpText
   if self.MainBtn.Text_BtnDesc then
-    self.MainBtn.Text_BtnDesc:SetText(GText("UI_Banner_SkinGacha_Get"))
+    if InterfaceJumpText then
+      self.MainBtn.Text_BtnDesc:SetText(GText(InterfaceJumpText))
+    else
+      self:SafeSetVisibility(self.MainBtn.Group_BtnDesc, UE4.ESlateVisibility.Collapsed)
+    end
   end
-  self:SafeSetVisibility(self.MainBtn.Image_Get, UE4.ESlateVisibility.Collapsed)
+  local IfJumpSkinGacha = self.BannerData and self.BannerData.IfJumpSkinGacha
+  if IfJumpSkinGacha then
+    self:SafeSetVisibility(self.MainBtn.ImageGetBox, UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self:SafeSetVisibility(self.MainBtn.ImageGetBox, UE4.ESlateVisibility.Collapsed)
+  end
   if self.MainBtn.Btn_Buy then
     self.MainBtn.Btn_Buy:SetForbidden(false)
   end
@@ -876,7 +886,7 @@ function M:OnOpenModelPreview()
     Params.bNoEndCamera = true
     UIManager(self):LoadUINew("ArmoryDetail", Params)
   else
-    UIManager(self):LoadUINew("SkinPreview", {
+    PageJumpUtils:JumpToSkinPreview({
       ItemType = self.BannerData.PreviewType,
       SkinList = self.BannerData.PreviewId,
       HidePurchase = true

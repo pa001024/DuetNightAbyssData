@@ -58,6 +58,24 @@ function Component:GetNPCServerSkinIdByUnitId(NpcId, ConmmonSkinId)
   return 0
 end
 
+function Component:GetNPCServerSkinIdByNpcId(NpcId)
+  local NpcInfo = DataMgr.Npc[NpcId]
+  local CharId = NpcInfo.CharId
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return 0
+  end
+  local SkinId = 0
+  for key, Char in pairs(Avatar.Chars) do
+    if Char.CharId == CharId then
+      local Appearance = Char.AppearanceSuits[Char.CurrentAppearanceIndex]
+      SkinId = Appearance.SkinId
+      return SkinId
+    end
+  end
+  return SkinId
+end
+
 function Component:GetRotationMontagePath()
   local ModelData = DataMgr.Model[self:GetCurrentModelId()]
   return ModelData.MontageFolder .. "Locomotion/" .. ModelData.MontagePrefix .. "Rotation_Montage"

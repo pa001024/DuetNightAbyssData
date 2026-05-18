@@ -6,6 +6,7 @@ end
 
 function M:ClearAllKeyEvents()
   rawset(self, "KeyDownEvents", {})
+  rawset(self, "RepeatKeyDownEvents", {})
   rawset(self, "KeyUpEvents", {})
   rawset(self, "IsKeyDown", {})
   rawset(self, "IsLongPressing", {})
@@ -27,6 +28,18 @@ end
 
 function M:HasKeyDownEvent(KeyName)
   return self.KeyDownEvents[KeyName] ~= nil
+end
+
+function M:AddRepeatKeyDownEvent(KeyName, Func)
+  self.RepeatKeyDownEvents[KeyName] = Func
+end
+
+function M:RemoveRepeatKeyDownEvent(KeyName)
+  self.RepeatKeyDownEvents[KeyName] = nil
+end
+
+function M:HasRepeatKeyDownEvent(KeyName)
+  return self.RepeatKeyDownEvents[KeyName] ~= nil
 end
 
 function M:ClearKeyUpEvents()
@@ -143,6 +156,15 @@ function M:ProcessOnKeyUp(MyGeometry, InKeyEvent)
   local KeyUpEvent = self.KeyUpEvents[InKeyName]
   if KeyUpEvent then
     return KeyUpEvent(self)
+  end
+end
+
+function M:ProcessOnRepeatKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local RepeatKeyDownEvent = self.RepeatKeyDownEvents[InKeyName]
+  if RepeatKeyDownEvent then
+    return RepeatKeyDownEvent(self)
   end
 end
 

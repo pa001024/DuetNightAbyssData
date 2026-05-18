@@ -411,6 +411,14 @@ return ReadOnly("RougeLikeServerBuild", {
     RoomCount = 6,
     ServerBuild = "Skip"
   },
+  [51] = {
+    Id = 51,
+    Param = {
+      [1] = 0.5
+    },
+    RoomCount = -1,
+    ServerBuild = "EndPointsExtraRate"
+  },
   [999] = {
     Id = 999,
     RoomCount = 1,

@@ -33,6 +33,13 @@ return ReadOnly("BattleWeaponAttr", {
     RangedWeaponAttrDisplay = "OnlyModified",
     UltraWeaponInherit = 1
   },
+  ATK_Psionic = {
+    AttrName = "ATK_Psionic",
+    DefaultValue = 0,
+    MeleeWeaponAttrDisplay = "OnlyModified",
+    RangedWeaponAttrDisplay = "OnlyModified",
+    UltraWeaponInherit = 1
+  },
   ATK_Slash = {
     AttrName = "ATK_Slash",
     DefaultValue = 0,
@@ -198,6 +205,12 @@ return ReadOnly("BattleWeaponAttr", {
   },
   GrRate = {
     AttrName = "GrRate",
+    DefaultValue = 0,
+    MeleeWeaponAttrDisplay = "AlwaysFalse",
+    RangedWeaponAttrDisplay = "AlwaysFalse"
+  },
+  HeavyAttackRate = {
+    AttrName = "HeavyAttackRate",
     DefaultValue = 0,
     MeleeWeaponAttrDisplay = "AlwaysFalse",
     RangedWeaponAttrDisplay = "AlwaysFalse"

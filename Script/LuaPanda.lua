@@ -17,7 +17,7 @@ end
 
 local consoleLogLevel = 2
 local debuggerVer = "3.2.0"
-LuaPanda = {}
+_G.LuaPanda = {}
 local this = LuaPanda
 local tools = {}
 this.tools = tools

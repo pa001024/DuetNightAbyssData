@@ -361,7 +361,7 @@
     "name": "Rations du compagnon de voyage",
     "desc": "Après avoir utilisé [Soutien de Géniemon], augmente les dégâts infligés de <Highlight>$1</> pendant <Highlight>$2</> s.",
     "simple_desc": "Après l’activation du Soutien de Géniemon, les dégâts infligés augmentent.",
-    "ip_desc": "« Toute récompense a un prix » — une maxime rabâchée jusqu’à l’usure, qui, observée sous l’angle du jeu, retrouve soudain un certain attrait.\nLe magicien au masque d’oiseau lança sa balle dans la boîte, puis demanda avec un sourire en coin : « La bonne nouvelle ou la mauvaise ? Laquelle souhaitez-vous entendre en premier ? »",
+    "ip_desc": "En poursuivant votre route, n’oubliez pas les courageux petits compagnons qui vous accompagnent dans l’Abysse. Ouvrez une conserve et récompensez-les comme il se doit !",
     "treasure_group": 1,
     "treasure_rarity": 1,
     "treasure_weight": 1000,
@@ -951,6 +951,36 @@
     "rl_archive_id": 32,
     "unlock_condition_text": "Artéfact non débloqué",
     "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10220,
+    "name": "Chant sacré de l’ange immaculé",
+    "desc": "Gain de Points d’empreinte +<Highlight>50%</>.",
+    "simple_desc": "Augmentation importante des Points d’empreinte obtenus.",
+    "ip_desc": "C’est un hymne que tous connaissent, louant les dieux compatissants qui guident les âmes égarées.\nDans l’Abysse, les fidèles d’Élysium fredonnent cette mélodie brisée, implorant les dieux de les mener hors de la souffrance, vers le Paradis des Paradis.\nLa musique dorée s’écoule, et dans l’attente du bonheur, leurs yeux se ferment à jamais.",
+    "treasure_group": 10220,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_07.T_Rouge_Treasure_07",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        51
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 62,
+    "unlock_condition_text": "Artéfact non débloqué",
+    "can_sell": 0,
     "client_build": {}
   },
   {

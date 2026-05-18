@@ -1578,11 +1578,110 @@ class CharProcessor(BaseProcessor):
 
         return trimmed
 
+    def _normalize_skill_desc_keys(self, desc_keys):
+        """兼容 SkillDescKeys 的数组和 1-based map 形态。"""
+        if isinstance(desc_keys, dict):
+            if not desc_keys:
+                return []
+
+            max_index = 0
+            normalized_items = []
+            for key, value in desc_keys.items():
+                try:
+                    index = int(key)
+                except Exception:
+                    continue
+                if index <= 0:
+                    continue
+                normalized_items.append((index, value))
+                max_index = max(max_index, index)
+
+            if not normalized_items:
+                return []
+
+            result = [None] * max_index
+            for index, value in normalized_items:
+                result[index - 1] = value
+            return result
+
+        if isinstance(desc_keys, list):
+            return desc_keys
+
+        return []
+
+    def _normalize_skill_desc_values(self, desc_values):
+        """兼容 SkillDescValues 的数组和 1-based map 形态。"""
+        if isinstance(desc_values, dict):
+            if not desc_values:
+                return []
+
+            max_index = 0
+            normalized_items = []
+            for key, value in desc_values.items():
+                try:
+                    index = int(key)
+                except Exception:
+                    continue
+                if index <= 0:
+                    continue
+                normalized_items.append((index, value))
+                max_index = max(max_index, index)
+
+            if not normalized_items:
+                return []
+
+            result = [None] * max_index
+            for index, value in normalized_items:
+                result[index - 1] = value
+            return result
+
+        if isinstance(desc_values, list):
+            return desc_values
+
+        return []
+
+    def _normalize_skill_desc_hints(self, desc_hints):
+        """兼容 SkillDescHints 的数组和 1-based map 形态。"""
+        if isinstance(desc_hints, dict):
+            if not desc_hints:
+                return []
+
+            max_index = 0
+            normalized_items = []
+            for key, value in desc_hints.items():
+                try:
+                    index = int(key)
+                except Exception:
+                    continue
+                if index <= 0:
+                    continue
+                normalized_items.append((index, value))
+                max_index = max(max_index, index)
+
+            if not normalized_items:
+                return []
+
+            result = [None] * max_index
+            for index, value in normalized_items:
+                result[index - 1] = value
+            return result
+
+        if isinstance(desc_hints, list):
+            return desc_hints
+
+        return []
+
     def process_skill_desc(self, skill_info, skill_id, max_level):
         """处理技能等级描述为紧凑格式"""
-        desc_keys = skill_info.get("SkillDescKeys", [])
-        desc_values = skill_info.get("SkillDescValues", [])
-        desc_hints = skill_info.get("SkillDescHints", [])
+        desc_keys = self._normalize_skill_desc_keys(
+            skill_info.get("SkillDescKeys", [])
+        )
+        desc_values = self._normalize_skill_desc_values(
+            skill_info.get("SkillDescValues", [])
+        )
+        desc_hints = self._normalize_skill_desc_hints(
+            skill_info.get("SkillDescHints", [])
+        )
         skill_desc_groups = skill_info.get("SkillDescGroups", [])
 
         if not desc_keys or not desc_values:
@@ -1620,6 +1719,8 @@ class CharProcessor(BaseProcessor):
         for i, desc_key in enumerate(desc_keys):
             if i >= len(desc_values):
                 continue
+            if desc_key is None:
+                continue
 
             # 获取描述文本
             desc_text = self.get_translated_text(desc_key)
@@ -1631,16 +1732,8 @@ class CharProcessor(BaseProcessor):
 
             # 获取影响类型 (从 SkillDescHints)
             impact_type = None
-            # desc_hints 可能是列表或字典
-            if desc_hints:
-                hint_items = None
-                if isinstance(desc_hints, list) and i < len(desc_hints):
-                    # 列表格式: [["SkillEfficiency"], ["SkillIntensity"], ...]
-                    hint_items = desc_hints[i]
-                elif isinstance(desc_hints, dict) and str(i + 1) in desc_hints:
-                    # 字典格式: {"1": ["SkillEfficiency"], "2": ["SkillEfficiency", "SkillSustain"], ...}
-                    # 注意：字典的键是从1开始的字符串
-                    hint_items = desc_hints[str(i + 1)]
+            if desc_hints and i < len(desc_hints):
+                hint_items = desc_hints[i]
 
                 if hint_items and isinstance(hint_items, list) and len(hint_items) > 0:
                     # 将所有的 hint key 转换为中文并连接
@@ -2069,8 +2162,12 @@ class CharProcessor(BaseProcessor):
 
     def _process_skill_level_desc(self, skill_info, skill_id, level, language):
         """处理技能等级描述"""
-        desc_keys = skill_info.get("SkillDescKeys", [])
-        desc_values = skill_info.get("SkillDescValues", [])
+        desc_keys = self._normalize_skill_desc_keys(
+            skill_info.get("SkillDescKeys", [])
+        )
+        desc_values = self._normalize_skill_desc_values(
+            skill_info.get("SkillDescValues", [])
+        )
 
         if not desc_keys or not desc_values:
             return {}

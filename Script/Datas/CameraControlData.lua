@@ -117,6 +117,32 @@ return ReadOnly("CameraControlData", {
     bIncrementArmPos = false,
     bIncrementSocketOffset = true
   },
+  BossLiecheCannonSkill06 = {
+    ArmLength = 0,
+    ArmPos = T.RT_1,
+    CameraName = "BossLiecheCannonSkill06",
+    ProbeSize = 12,
+    SocketOffset = T.RT_1,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = true,
+    bIncrementSocketOffset = true
+  },
+  BossLiecheMCoreSkill01 = {
+    ArmLength = 0,
+    ArmPos = T.RT_1,
+    CameraName = "BossLiecheMCoreSkill01",
+    ProbeSize = 12,
+    SocketOffset = {
+      -150,
+      0,
+      75
+    },
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
+    bIncrementArmPos = true,
+    bIncrementSocketOffset = true
+  },
   BossLinenDefault = {
     ArmLength = 550,
     ArmPos = T.RT_3,
@@ -143,6 +169,17 @@ return ReadOnly("CameraControlData", {
     ArmLength = 800,
     ArmPos = T.RT_3,
     CameraName = "BossShijingzheSkill15",
+    ProbeSize = 12,
+    SocketOffset = T.RT_4,
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = false,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
+  },
+  BossYidaiDefault = {
+    ArmLength = 800,
+    ArmPos = T.RT_3,
+    CameraName = "BossYidaiDefault",
     ProbeSize = 12,
     SocketOffset = T.RT_4,
     TimelineFloatCurve = "CameraCurve",
@@ -201,17 +238,6 @@ return ReadOnly("CameraControlData", {
     bIncrementArmPos = true,
     bIncrementSocketOffset = true
   },
-  FuluoSkill01 = {
-    ArmLength = 420,
-    ArmPos = T.RT_1,
-    CameraName = "FuluoSkill01",
-    ProbeSize = 12,
-    SocketOffset = T.RT_6,
-    TimelineFloatCurve = "CameraCurve",
-    bIncrementArmLength = true,
-    bIncrementArmPos = true,
-    bIncrementSocketOffset = true
-  },
   FuluoSkill02 = {
     ArmLength = 550,
     ArmPos = T.RT_6,
@@ -219,7 +245,11 @@ return ReadOnly("CameraControlData", {
     LagMaxDistance = T.RT_7,
     LagSpeed = T.RT_8,
     ProbeSize = 12,
-    SocketOffset = T.RT_4,
+    SocketOffset = {
+      0,
+      0,
+      100
+    },
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = false,
     bIncrementArmPos = false,
@@ -302,6 +332,21 @@ return ReadOnly("CameraControlData", {
     },
     TimelineFloatCurve = "CameraCurve",
     bIncrementArmLength = false,
+    bIncrementArmPos = false,
+    bIncrementSocketOffset = false
+  },
+  StoryCameraPanpa = {
+    ArmLength = 550,
+    ArmPos = T.RT_6,
+    CameraName = "StoryCameraPanpa",
+    ProbeSize = 12,
+    SocketOffset = {
+      0,
+      150,
+      100
+    },
+    TimelineFloatCurve = "CameraCurve",
+    bIncrementArmLength = true,
     bIncrementArmPos = false,
     bIncrementSocketOffset = false
   },

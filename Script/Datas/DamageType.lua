@@ -55,7 +55,7 @@ return ReadOnly("DamageType", {
     WeaknessTypeID = 6
   },
   Psionic = {
-    CounterRate = 10,
+    CounterRate = 1,
     DamageTypeUIIconPath = "/Game/UI/Texture/Dynamic/Atlas/Battle/T_Battle_Type_Thunder02.T_Battle_Type_Thunder02",
     DamageTypeUIIndex = 8,
     ID = "Psionic",

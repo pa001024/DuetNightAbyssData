@@ -5,6 +5,7 @@ local M = Class({
 
 function M:Init(Content)
   self.ItemType = Content.ItemType
+  self.TypeId = Content.TypeId
   self:OnListItemObjectSet(Content)
 end
 
@@ -18,10 +19,31 @@ function M:OnListItemObjectSet(Content)
   self:SetRarity(Content.Rarity)
 end
 
+function M:SetHeadDynamicPath(WidgetPath)
+  if self.HeadDynamicWidget then
+    self.HeadDynamicWidget:RemoveFromParent()
+  end
+  self.HeadDynamicWidget = UIManager(self):CreateWidget(WidgetPath)
+  self.DynamicHead:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.DynamicHead:AddChild(self.HeadDynamicWidget)
+  local Slot = UWidgetLayoutLibrary.SlotAsBorderSlot(self.HeadDynamicWidget)
+  Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+  Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+end
+
 function M:SetIcon(IconPath)
+  self.DynamicHead:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if self.ItemType == "HeadFrame" or self.ItemType == "HeadSculpture" then
+    local CheckIconPath = DataMgr[self.ItemType][self.TypeId].Icon
+    if not CheckIconPath then
+      local DynamicMaterial = self.Item_BG:GetDynamicMaterial()
+      DynamicMaterial:SetScalarParameterValue("IconOpacity", 0)
+      self:SetHeadDynamicPath(IconPath)
+      return
+    end
+  end
   if self.ItemType == "Walnut" then
-    IconPath = DataMgr.Walnut[self.Id].Icon
-    self:SetWalnutNum(self.Id)
+    IconPath = DataMgr.Walnut[self.TypeId].Icon
   end
   self:SetBgMaterialByItemType(self.ItemType, "HeadSculpture")
   if self.bAsyncLoadIcon then
@@ -49,6 +71,7 @@ function M:SetIcon(IconPath)
       DebugPrint("ZDX_DynamicMaterial不合法")
     end
     DynamicMaterial:SetTextureParameterValue("IconMap", Icon)
+    DynamicMaterial:SetScalarParameterValue("IconOpacity", 1)
   end
 end
 
@@ -70,7 +93,6 @@ end
 
 function M:SetRarity(Rarity)
   local DynamicMaterial = self.Item_BG:GetDynamicMaterial()
-  DynamicMaterial:SetScalarParameterValue("IconOpacity", 1)
   if not IsValid(DynamicMaterial) then
     DebugPrint("ZDX_DynamicMaterial不合法")
   end

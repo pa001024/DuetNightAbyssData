@@ -6,6 +6,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("ImpressionRegion", {
   [1011] = {
+    AxisMax = 200,
     Icon = "/Game/UI/Texture/Dynamic/Image/Area/T_Area_01.T_Area_01",
     ImpressionRegionId = 1011,
     RegionId = {
@@ -20,13 +21,18 @@ return ReadOnly("ImpressionRegion", {
       1021,
       1022,
       1031,
-      1032
+      1032,
+      1060,
+      1061,
+      1062,
+      1063
     },
     RegionName = "ImpressionRegionName_1011",
     RegionPointId = 2612,
     UIName = "DimensionGraph_Hyper"
   },
   [1041] = {
+    AxisMax = 100,
     Icon = "/Game/UI/Texture/Dynamic/Image/Area/T_Area_05.T_Area_05",
     ImpressionRegionId = 1041,
     RegionId = {

@@ -3,6 +3,7 @@ local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
 local WeaponModel = require("BluePrints.Common.MVC.Model.WeaponModel")
 local UpgradeUtils = require("Utils.UpgradeUtils")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local UIUtils = require("Utils.UIUtils")
 local M = Class("BluePrints.UI.BP_UIState_C")
 
@@ -66,6 +67,11 @@ function M:Construct()
   if GWorld.GameInstance then
     GWorld.GameInstance:SetHighFrequencyMemoryCheckGCEnabled(true, "ArmoryMain")
   end
+  self.CheckBox_Incarnon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.CheckBox_Incarnon:BindEventOnClicked({
+    Inst = self,
+    Func = self.OnFilterCheckBoxClicked
+  })
 end
 
 function M:GetDesiredFocusTargetInfo(Info)
@@ -191,6 +197,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
           UWeaponInfos = Params.PreviewUWeaponInfos,
           MeleeWeapon = Params.MeleeWeapon,
           RangedWeapon = Params.RangedWeapon,
+          WeaponForgeLevel = Params.WeaponForgeLevel,
           PetIds = Params.PreviewPetIds,
           PetInfos = Params.PreviewPetInfos
         })
@@ -485,12 +492,28 @@ end
 function M:UpdateSubTabs(SubTabs)
   self.EMListView_SubTab:ClearListItems()
   local TabNameToSelect = not self.SubTabName_JumpTo and self.CurSubTab and self.CurSubTab.Name
+  local TabNameToSelectArray = {}
+  if TabNameToSelect then
+    TabNameToSelectArray[TabNameToSelect] = true
+    if TabNameToSelect == CommonConst.ArmoryTag.Grade or TabNameToSelect == CommonConst.ArmoryTag.HyperGrade then
+      TabNameToSelectArray[CommonConst.ArmoryTag.Grade] = true
+      TabNameToSelectArray[CommonConst.ArmoryTag.HyperGrade] = true
+    end
+  end
   local TabTypeToSelect = self.CurSubTab and self.CurSubTab.Type
+  local TabTypeToSelectArray = {}
+  if TabTypeToSelect then
+    TabTypeToSelectArray[TabTypeToSelect] = true
+    if TabTypeToSelect == CommonConst.ArmoryType.Weapon or TabTypeToSelect == CommonConst.ArmoryType.HyperWeapon then
+      TabTypeToSelectArray[CommonConst.ArmoryType.Weapon] = true
+      TabTypeToSelectArray[CommonConst.ArmoryType.HyperWeapon] = true
+    end
+  end
   self.SubTabName_JumpTo = nil
   local TabToSelect
   for _, Tab in ipairs(SubTabs) do
-    local bShouldSelectTab = nil == TabTypeToSelect or TabTypeToSelect and Tab.Type == TabTypeToSelect
-    if Tab.Name == TabNameToSelect and bShouldSelectTab then
+    local bShouldSelectTab = nil == TabTypeToSelect or TabTypeToSelectArray[Tab.Type]
+    if TabNameToSelectArray[Tab.Name] and bShouldSelectTab then
       Tab.IsSelected = true
       TabToSelect = Tab
     else
@@ -536,6 +559,7 @@ function M:SelectSubTab(Content)
   if Content.Widget then
     Content.Widget:SetIsSelected(true)
   end
+  self:ShowFilterCheckBox(Content)
   self:CallFunctionByName(self.CurMainTab.Name .. "Main_PreSubTabChange")
   self.CurSubTab = Content
   self:UpdateMontageAndCamera()
@@ -548,6 +572,29 @@ function M:OnSubTabItemClicked(Content)
   end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_level_02", nil, nil)
   self:SelectSubTab(Content)
+end
+
+function M:ShowFilterCheckBox(Content)
+  self.CheckBox_Incarnon:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if not Content or not Content.Type then
+    return
+  end
+  if ArmoryUtils:IsShowHyperWeapon(Content.Tag) then
+    local Avatar = GWorld:GetAvatar()
+    local UIUnlockRuleInfo = DataMgr.UIUnlockRule.HyperWeapon
+    local IsHyperSystemUnlocked = ConditionUtils.CheckCondition(Avatar, UIUnlockRuleInfo.ConditionId)
+    if true or IsHyperSystemUnlocked then
+      self.Text_OnlyIncarnon:SetText(GText("UI_Armory_ShowHyperWeaponOnly"))
+      self.CheckBox_Incarnon:SetVisibility(UIConst.VisibilityOp.Visible)
+    end
+  end
+  if self.CheckBox_Incarnon:IsVisible() then
+    self:OnFilterCheckBoxClicked(self.CheckBox_Incarnon:IsChecked())
+  end
+end
+
+function M:OnFilterCheckBoxClicked(IsChecked)
+  self:CallFunctionByName(self.CurMainTab.Name .. "Main_OnFilterCheckBoxClicked", IsChecked)
 end
 
 function M:InitSubUI(...)
@@ -739,7 +786,13 @@ end
 
 function M:UpdateMontageAndCamera(Duration)
   self.ActorController:FixedCameraTransTimeOnce(Duration)
-  self.ActorController:SetMontageAndCamera(self.CurSubTab.Type, self.CurMainTab.Name, self.CurSubTab.Tag)
+  local TabType = self.CurSubTab.Type
+  local TabTag = self.CurSubTab.Tag
+  if self.CurSubTab.Type == CommonConst.ArmoryType.HyperWeapon then
+    TabType = CommonConst.ArmoryType.Weapon
+    TabTag = CommonConst.ArmoryTag.Grade
+  end
+  self.ActorController:SetMontageAndCamera(TabType, self.CurMainTab.Name, TabTag)
 end
 
 function M:ResetActorRotation()
@@ -986,6 +1039,9 @@ function M:CreateConstInfos()
         return false
       end
       local Weapon = Params and Params.Weapon
+      if self:IsHyperWeapon(Weapon) then
+        return false
+      end
       local CardLevelData = Weapon and DataMgr.WeaponCardLevel[Weapon.WeaponId]
       if CardLevelData and CardLevelData.CardLevelMax then
         return true
@@ -997,6 +1053,30 @@ function M:CreateConstInfos()
       local Data = DataMgr.WeaponCardLevel[Weapon.WeaponId]
       local MaxGradeLevel = Data and Data.CardLevelMax or 0
       return false, Count > 0 and MaxGradeLevel > Weapon.GradeLevel
+    end
+  }
+  self.HyperWeaponGradeSubTab = {
+    PCWidgetPath = "WidgetBlueprint'/Game/UI/WBP/Armory/PC/WBP_Armory_Incarnon_P.WBP_Armory_Incarnon_P'",
+    MobileWidgetPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Mobile/WBP_Armory_Incarnon_M.WBP_Armory_Incarnon_M'",
+    Name = ArmoryUtils.ArmorySubTabNames.HyperGrade,
+    Type = CommonConst.ArmoryType.HyperWeapon,
+    Tag = CommonConst.ArmoryTag.HyperGrade,
+    Text = GText(DataMgr.WeaponTab[4].Text),
+    IconPath = DataMgr.WeaponTab[4].IconPath,
+    CheckIsUnlocked = function(Avatar, Char, Params)
+      if self.Params.bHideWeaponGrade then
+        return false
+      end
+      local Weapon = Params and Params.Weapon
+      if self:IsHyperWeapon(Weapon) then
+        return true
+      end
+    end,
+    CheckReddot = function(Params)
+      local Weapon = Params.Weapon or self[self.ComparedWeaponName]
+      local CardLevelMax = HyperWeaponUtils.GetMaxForgeLevel(Weapon.WeaponId)
+      local HasAnyForgeRewards = HyperWeaponUtils.HasForgeLevelCanGetReward(1, CardLevelMax)
+      return false, HasAnyForgeRewards
     end
   }
   self.WeaponAppearanceSubTab = {
@@ -1016,16 +1096,12 @@ function M:CreateConstInfos()
       return Avatar:CheckUIUnlocked("Swatch")
     end,
     CheckReddot = function(Params)
-      local Weapon = Params.Weapon or self[self.ComparedWeaponName]
-      if ArmoryUtils:GetWeaponByUuid(Weapon.Uuid) == nil then
-        return
-      end
-      return self.CheckWeaponAppearanceReddot and self:CheckWeaponAppearanceReddot(Weapon), false
     end
   }
   self.WeaponTabIndexes = {
     ArmoryUtils.ArmorySubTabNames.Attribute,
     ArmoryUtils.ArmorySubTabNames.Grade,
+    ArmoryUtils.ArmorySubTabNames.HyperGrade,
     ArmoryUtils.ArmorySubTabNames.Appearance
   }
   self.ConstTabsConfig = {
@@ -1124,11 +1200,6 @@ function M:CreateConstInfos()
               return not self.Params.bHideCharAppearance
             end,
             CheckReddot = function(Params)
-              local Char = Params.Char or self.ComparedChar
-              if ArmoryUtils:GetCharByUuid(Char.Uuid) == nil then
-                return
-              end
-              return self.CheckCharAppearanceReddot and self:CheckCharAppearanceReddot(Char), false
             end
           },
           [ArmoryUtils.ArmorySubTabNames.Files] = {
@@ -1140,8 +1211,9 @@ function M:CreateConstInfos()
             Text = GText(DataMgr.CharTab[5].Text),
             IconPath = DataMgr.CharTab[5].IconPath,
             CheckIsUnlocked = function(Avatar, Char)
+              local CharGroup = ArmoryUtils:GetCharGroup(Char.CharId)
               local Gender2RoleIds = Const.DefaultAttributeMaster
-              if self.Params.bHideCharFiles or Char.CharId == Gender2RoleIds[0] or Char.CharId == Gender2RoleIds[1] then
+              if self.Params.bHideCharFiles or CharGroup then
                 return false
               end
               return not self.Params.bHideCharFiles
@@ -1186,6 +1258,7 @@ function M:CreateConstInfos()
             end
           },
           [ArmoryUtils.ArmorySubTabNames.Grade] = self.WeaponGradeSubTab,
+          [ArmoryUtils.ArmorySubTabNames.HyperGrade] = self.HyperWeaponGradeSubTab,
           [ArmoryUtils.ArmorySubTabNames.Appearance] = self.WeaponAppearanceSubTab
         },
         TabIndexes = self.WeaponTabIndexes,
@@ -1239,6 +1312,7 @@ function M:CreateConstInfos()
             end
           },
           [ArmoryUtils.ArmorySubTabNames.Grade] = self.WeaponGradeSubTab,
+          [ArmoryUtils.ArmorySubTabNames.HyperGrade] = self.HyperWeaponGradeSubTab,
           [ArmoryUtils.ArmorySubTabNames.Appearance] = self.WeaponAppearanceSubTab
         },
         TabIndexes = self.WeaponTabIndexes,
@@ -1428,6 +1502,7 @@ function M:CreateConstInfos()
             end
           },
           [ArmoryUtils.ArmorySubTabNames.Grade] = self.WeaponGradeSubTab,
+          [ArmoryUtils.ArmorySubTabNames.HyperGrade] = self.HyperWeaponGradeSubTab,
           [ArmoryUtils.ArmorySubTabNames.Appearance] = self.WeaponAppearanceSubTab
         },
         TabIndexes = self.WeaponTabIndexes,

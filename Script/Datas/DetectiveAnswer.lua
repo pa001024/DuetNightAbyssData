@@ -343,5 +343,139 @@ return ReadOnly("DetectiveAnswer", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
     Name = "TextMap_AnswerName_200403",
     QuestionID = 2004
+  },
+  [200501] = {
+    AnswerID = 200501,
+    Detail = "TextMap_AnswerDetail_200501",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200501",
+    QuestionID = 2005
+  },
+  [200502] = {
+    AnswerID = 200502,
+    Detail = "TextMap_AnswerDetail_200502",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200502",
+    QuestionID = 2005
+  },
+  [200503] = {
+    AnswerID = 200503,
+    Detail = "TextMap_AnswerDetail_200503",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_TimeIcon.T_DetectiveMinigame_TimeIcon",
+    Name = "TextMap_AnswerName_200503",
+    QuestionID = 2005
+  },
+  [200504] = {
+    AnswerID = 200504,
+    Detail = "TextMap_AnswerDetail_200504",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_CharIcon.T_DetectiveMinigame_CharIcon",
+    Name = "TextMap_AnswerName_200504",
+    QuestionID = 2005
+  },
+  [200505] = {
+    AnswerID = 200505,
+    Detail = "TextMap_AnswerDetail_200505",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_CharIcon.T_DetectiveMinigame_CharIcon",
+    Name = "TextMap_AnswerName_200505",
+    QuestionID = 2005
+  },
+  [200506] = {
+    AnswerID = 200506,
+    Detail = "TextMap_AnswerDetail_200506",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_TimeIcon.T_DetectiveMinigame_TimeIcon",
+    Name = "TextMap_AnswerName_200506",
+    QuestionID = 2005
+  },
+  [200507] = {
+    AnswerID = 200507,
+    Detail = "TextMap_AnswerDetail_200507",
+    Detective = {200504, 200505},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_CharIcon.T_DetectiveMinigame_CharIcon",
+    Name = "TextMap_AnswerName_200507",
+    QuestionID = 2005
+  },
+  [200508] = {
+    AnswerID = 200508,
+    Detail = "TextMap_AnswerDetail_200508",
+    Detective = {200503, 200506},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200508",
+    QuestionID = 2005
+  },
+  [200509] = {
+    AnswerID = 200509,
+    Detail = "TextMap_AnswerDetail_200509",
+    Detective = {200507, 200502},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_CharIcon.T_DetectiveMinigame_CharIcon",
+    Name = "TextMap_AnswerName_200509",
+    QuestionID = 2005
+  },
+  [200510] = {
+    AnswerID = 200510,
+    Detail = "TextMap_AnswerDetail_200510",
+    Detective = {200508, 200501},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200510",
+    QuestionID = 2005
+  },
+  [200511] = {
+    AnswerID = 200511,
+    Detail = "TextMap_AnswerDetail_200511",
+    Detective = {200509, 200510},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200511",
+    QuestionID = 2005
+  },
+  [200601] = {
+    AnswerID = 200601,
+    Detail = "TextMap_AnswerDetail_200601",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200601",
+    QuestionID = 2006
+  },
+  [200602] = {
+    AnswerID = 200602,
+    Detail = "TextMap_AnswerDetail_200602",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200602",
+    QuestionID = 2006
+  },
+  [200603] = {
+    AnswerID = 200603,
+    Detail = "TextMap_AnswerDetail_200603",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200603",
+    QuestionID = 2006
+  },
+  [200604] = {
+    AnswerID = 200604,
+    Detail = "TextMap_AnswerDetail_200604",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200604",
+    QuestionID = 2006
+  },
+  [200605] = {
+    AnswerID = 200605,
+    Detail = "TextMap_AnswerDetail_200605",
+    Detective = {200602, 200603},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200605",
+    QuestionID = 2006
+  },
+  [200606] = {
+    AnswerID = 200606,
+    Detail = "TextMap_AnswerDetail_200606",
+    Detective = {200601, 200604},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200606",
+    QuestionID = 2006
+  },
+  [200607] = {
+    AnswerID = 200607,
+    Detail = "TextMap_AnswerDetail_200607",
+    Detective = {200605, 200606},
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Detective/T_DetectiveMinigame_InformtIcon.T_DetectiveMinigame_InformtIcon",
+    Name = "TextMap_AnswerName_200607",
+    QuestionID = 2006
   }
 })

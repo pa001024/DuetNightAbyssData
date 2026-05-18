@@ -33,6 +33,7 @@ return ReadOnly("MapDesignerIdConfig", {
     DesignerName = "yangnongquan"
   },
   zhangkaiqi = {DesignerID = 17, DesignerName = "zhangkaiqi"},
+  zhangsiyu = {DesignerID = 33, DesignerName = "zhangsiyu"},
   zhangxiang = {DesignerID = 11, DesignerName = "zhangxiang"},
   zhongtian = {DesignerID = 16, DesignerName = "zhongtian"},
   zhujunyi = {DesignerID = 21, DesignerName = "zhujunyi"},

@@ -71,9 +71,9 @@ T.RT_36 = {
   HitFlyXY = 200,
   HitFlyZ = 500
 }
-T.RT_37 = {HitFlyXY = 50, HitFlyZ = 100}
-T.RT_38 = {MoveDis = 100, UseResourceDirection = "X"}
-T.RT_39 = {UseTargetDirection = 1}
+T.RT_37 = {UseTargetDirection = 1}
+T.RT_38 = {HitFlyXY = 50, HitFlyZ = 100}
+T.RT_39 = {MoveDis = 100, UseResourceDirection = "X"}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -615,9 +615,15 @@ return ReadOnly("HitPerformanceData", {
     HitId = "HitFly_XY800Z600_F",
     TNZeroHeavyHitParam = T.RT_3
   },
+  Hitfly_Laser = {
+    CauseHit = "HitFly",
+    CauseHitParam = T.RT_37,
+    HitFlyComboParam = T.RT_17,
+    HitId = "Hitfly_Laser"
+  },
   LightHit = {
     CauseHit = "LightHit",
-    HitFlyComboParam = T.RT_37,
+    HitFlyComboParam = T.RT_38,
     HitId = "LightHit"
   },
   LightHit_100 = {
@@ -634,7 +640,7 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit_100_F = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_38,
+    CauseHitParam = T.RT_39,
     HitFlyComboParam = T.RT_29,
     HitId = "LightHit_100_F",
     TNZeroHeavyHitParam = T.RT_10
@@ -662,7 +668,7 @@ return ReadOnly("HitPerformanceData", {
   LightHit_150_Laser = {
     CauseHit = "LightHit",
     CauseHitParam = {MoveDis = 150, UseTargetDirection = 1},
-    HitFlyComboParam = T.RT_37,
+    HitFlyComboParam = T.RT_38,
     HitId = "LightHit_150_Laser"
   },
   LightHit_200 = {
@@ -687,6 +693,12 @@ return ReadOnly("HitPerformanceData", {
     CauseHitParam = T.RT_3,
     HitId = "LightHit_400",
     TNZeroHeavyHitParam = T.RT_8
+  },
+  LightHit_40_B = {
+    CauseHit = "LightHit",
+    CauseHitParam = {MoveDis = -40},
+    HitFlyComboParam = {HitFlyXY = -50, HitFlyZ = 100},
+    HitId = "LightHit_40_B"
   },
   LightHit_50 = {
     CauseHit = "LightHit",
@@ -717,18 +729,18 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit_IceBomb = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_39,
+    CauseHitParam = T.RT_37,
     HitId = "LightHit_IceBomb"
   },
   LightHit_Laser = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_39,
-    HitFlyComboParam = T.RT_37,
+    CauseHitParam = T.RT_37,
+    HitFlyComboParam = T.RT_38,
     HitId = "LightHit_Laser"
   },
   LightHit_Tuosi = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_38,
+    CauseHitParam = T.RT_39,
     HitFlyComboParam = {
       HitFlyXY = 300,
       HitFlyZ = 80,
@@ -740,7 +752,7 @@ return ReadOnly("HitPerformanceData", {
   RangedWeapon_Common = {
     CauseHit = "LightHitRanged",
     FirstHit = "LightHit",
-    HitFlyComboParam = T.RT_37,
+    HitFlyComboParam = T.RT_38,
     HitId = "RangedWeapon_Common",
     TNZeroHeavyHitParam = T.RT_10
   },

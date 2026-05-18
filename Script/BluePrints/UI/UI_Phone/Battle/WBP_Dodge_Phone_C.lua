@@ -15,11 +15,16 @@ function M:Construct()
   self.AvoidRemainTimes = AvoidRemainTimes
   self.CDMat = self.ProgressBar_CD:GetDynamicMaterial()
   self.Text_Times:SetText(self.AvoidRemainTimes)
-  self.IsForbidden = false
+  self.IsForbidden = 0 == AvoidRemainTimes
   if self.OwnerPlayer:CheckSkillInActive(UE4.ESkillName.Avoid) then
     self.CurButtonState = "InActive"
   else
     self.CurButtonState = "Active"
+    if self.IsForbidden then
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Forbidden)
+    else
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.Normal)
+    end
   end
   local IconMat = self.Image_Main:GetDynamicMaterial()
   IconMat:SetTextureParameterValue("IconMap", self.Icon_Dodge)

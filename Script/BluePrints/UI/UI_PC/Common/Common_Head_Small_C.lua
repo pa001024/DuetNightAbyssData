@@ -1,5 +1,8 @@
 require("UnLua")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
+M._components = {
+  "BluePrints.UI.WBP.Chat.View.HeadAnchorComp"
+}
 local Handled = UWidgetBlueprintLibrary.Handled()
 
 function M:BindOnClickEvent(Func)
@@ -46,6 +49,8 @@ function M:BtnAreaOnPressed(MyGeometry, MouseEvent)
 end
 
 function M:SetHeadFrame(HeadFrameId)
+  self.DynamicFrame:ClearChildren()
+  self.DynamicFrame:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.HeadFrameId = HeadFrameId
   if not HeadFrameId or HeadFrameId == CommonConst.DefaultNoHeadFrame then
     if not HeadFrameId then
@@ -59,13 +64,26 @@ function M:SetHeadFrame(HeadFrameId)
     DebugPrint(LXYTag, "无效的头像框id")
     return
   end
-  UResourceLibrary.LoadObjectAsync(self, Conf.SmallIcon, {
-    self,
-    function(_, IconRes)
-      self.Head_Frame:SetBrushResourceObject(IconRes)
-    end
-  })
-  self.Head_Frame:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  if Conf.SmallIcon then
+    UResourceLibrary.LoadObjectAsync(self, Conf.SmallIcon, {
+      self,
+      function(_, IconRes)
+        self.Head_Frame:SetBrushResourceObject(IconRes)
+      end
+    })
+    self.Head_Frame:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  elseif Conf.DynamicPath then
+    UIManager(self):CreateWidgetAsync(string.format("HeadFrame_%s", HeadFrameId), function(Widget)
+      if self.DynamicFrame:GetChildrenCount() > 0 then
+        return
+      end
+      self.DynamicFrame:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.DynamicFrame:AddChild(Widget)
+      local Slot = UWidgetLayoutLibrary.SlotAsBorderSlot(Widget)
+      Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+    end, Conf.DynamicPath)
+  end
 end
 
 function M:BtnAreaOnClicked(MyGeometry, MouseEvent)
@@ -96,22 +114,39 @@ function M:SetHeadIcon(HeadIcon, bUseBigHead)
     return
   end
   self.bUseBigHead = false
+  self.Panel_Img:SetActiveWidgetIndex(0)
   local Material = self.Img_Item:GetDynamicMaterial()
   Material:SetTextureParameterValue("IconMap", HeadIcon)
   self.bHead = true
 end
 
 function M:SetHeadIconById(HeadIconId, bUseBigHead)
+  self.DynamicHead:ClearChildren()
+  self.DynamicHead:SetVisibility(UIConst.VisibilityOp.Collapsed)
   local HeadData = DataMgr.HeadSculpture[HeadIconId]
-  if not HeadData or not HeadData.HeadPath then
+  if not HeadData then
     return
   end
-  UResourceLibrary.LoadObjectAsync(self, HeadData.HeadPath, {
-    self,
-    function(_, HeadIcon)
-      self:SetHeadIcon(HeadIcon, bUseBigHead)
-    end
-  })
+  if HeadData.HeadPath then
+    UResourceLibrary.LoadObjectAsync(self, HeadData.HeadPath, {
+      self,
+      function(_, HeadIcon)
+        self:SetHeadIcon(HeadIcon, bUseBigHead)
+      end
+    })
+  elseif HeadData.DynamicPath then
+    UIManager(self):CreateWidgetAsync(string.format("HeadIcon_%s", HeadIconId), function(Widget)
+      if self.DynamicHead:GetChildrenCount() > 0 then
+        return
+      end
+      self.Panel_Img:SetActiveWidgetIndex(5)
+      self.DynamicHead:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.DynamicHead:AddChild(Widget)
+      local Slot = UWidgetLayoutLibrary.SlotAsBorderSlot(Widget)
+      Slot:SetHorizontalAlignment(EHorizontalAlignment.HAlign_Fill)
+      Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
+    end, HeadData.DynamicPath)
+  end
 end
 
 function M:SetHeadIconEmpty(bIsEmpty)
@@ -193,4 +228,14 @@ function M:SetDisableAction(bDisable)
   self.bDisableAction = bDisable
 end
 
+function M:HeadIconSetupAnchor(Head_Anchor, PlayerInfo, GuildInfo)
+  self:SetHoldUp(true)
+  self:BindOnClickEvent(function()
+    Head_Anchor:Open(true)
+  end)
+  self:SetGuildFullInfo(GuildInfo)
+  self:SetupAnchor(Head_Anchor, self, PlayerInfo, true)
+end
+
+AssembleComponents(M)
 return M

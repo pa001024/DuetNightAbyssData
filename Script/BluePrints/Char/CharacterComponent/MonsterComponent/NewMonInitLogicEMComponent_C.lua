@@ -38,8 +38,16 @@ function M:NewMonInitComponent_CallBPReceiveBeginPlay(Owner)
       end
     end
   end
-  if Owner.TryStartOutAirWallCheck then
+  if Const.bOutAirWallBoxCheckEnable and Owner.TryStartOutAirWallCheck then
     Owner:TryStartOutAirWallCheck()
+  end
+  local MonsterData = DataMgr.Monster[Owner.UnitId]
+  if MonsterData and MonsterData.EnableForceMaxMeshLOD and Owner.Mesh then
+    if CommonUtils.GetRuntimePlatform(self) == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
+      Owner.Mesh:SetForcedLOD(2)
+    else
+      Owner.Mesh:SetForcedLOD(1)
+    end
   end
 end
 

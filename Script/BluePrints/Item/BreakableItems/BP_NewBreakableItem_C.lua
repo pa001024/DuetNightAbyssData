@@ -73,7 +73,7 @@ function BP_NewBreakableItem_C:InitActorInfo(Info)
   if IsStandAlone(self) or not IsAuthority(self) then
     self:ClientInitInfo(Info)
   end
-  self.ServerInitSuccess = true
+  self:SetBreakableServerInitSuccess(true)
   self.InitSuccess = true
   self:OnActorReady(Info)
 end
@@ -87,11 +87,10 @@ function BP_NewBreakableItem_C:OnActorReady(Info)
 end
 
 function BP_NewBreakableItem_C:AuthorityInitInfo(Info)
-  self:SetCamp(self.Camp)
-  self:SetTableAttr()
   self.ModelId = self.ModelId or self.BPModelId
   self:InitCreatorInfo(Info)
   self:InitCombatPropInfo()
+  self:InitBreakCount()
 end
 
 function BP_NewBreakableItem_C:InitCreatorInfo(Info)
@@ -115,10 +114,10 @@ function BP_NewBreakableItem_C:PreInitInfo(Info)
   end
   self.BattleCharInfo = DataMgr.BattleMonster[self.Data.BattleRoleId]
   if Info.Eid ~= nil then
-    self.Eid = Info.Eid
+    self:SetBreakableEid(Info.Eid)
   elseif IsAuthority(self) then
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-    self.Eid = GameMode:GetBattleEid()
+    self:SetBreakableEid(GameMode:GetBattleEid())
   end
 end
 
@@ -148,53 +147,12 @@ function BP_NewBreakableItem_C:OnDead(KillMineRoleEid, KillMineSkillId, DeathRea
   end
 end
 
-function BP_NewBreakableItem_C:HandleShowDeath()
-  self:SetActorEnableCollision(false)
-  if not IsDedicatedServer(self) then
-    self:PlayBreakFx()
-    self:ArtShowDeath()
-    self:PlayBreakSound()
-  end
-  self:AddTimer(self.DelayDestoryTime, function()
-    self:EMActorDestroy(EDestroyReason.Breakable)
-  end)
-end
-
-function BP_NewBreakableItem_C:ShowDeath(DissolveDuration)
-  if self.SourceEid then
-    self:TriggerSource()
-  end
-  if self.EMNavModifierComponent then
-    self.EMNavModifierComponent:K2_DestroyComponent(self.EMNavModifierComponent)
-  end
-  self:HandleShowDeath()
-end
-
-function BP_NewBreakableItem_C:PlayBreakFx()
-  local Meshs = TArray(UStaticMeshComponent)
-  self.Mesh:GetChildrenComponents(true, Meshs)
-  for i = 1, Meshs:Length() do
-    local Mesh = Meshs:GetRef(i)
-    if Mesh:Cast(UStaticMeshComponent) then
-      Mesh:SetCastShadow(false)
-    end
-  end
-end
-
 local BreakSoundEvents = {
   Pot = "event:/sfx/common/scene/break/single/Ceramic",
   StoneFracture = "event:/sfx/common/scene/break/single/StoneFracture",
   Wood = "event:/sfx/common/scene/break/single/Wood",
   PotInWood = "event:/sfx/common/scene/break/single/PotInWood"
 }
-
-function BP_NewBreakableItem_C:PlayBreakSound()
-  if self.SoundEvent then
-    AudioManager(self):PlayFMODSound(self, nil, self.SoundEvent)
-  else
-    print(_G.LogTag, "破碎物" .. self:GetName() .. "无对应播放的音效")
-  end
-end
 
 function BP_NewBreakableItem_C:SetHollowAttribute()
   self.EnbaleHollow = true

@@ -12,7 +12,9 @@ T.RT_3 = {
   1504,
   4201,
   1601,
-  160101
+  160101,
+  1201,
+  120101
 }
 T.RT_4 = {150402, 420101}
 T.RT_5 = {
@@ -44,7 +46,9 @@ return ReadOnly("TreasureHuntStoryDungeon", {
       1504,
       2301,
       1601,
-      160101
+      160101,
+      1201,
+      120101
     },
     TrialCharacter = {150402, 230101},
     TrialPet = T.RT_2,
@@ -120,7 +124,9 @@ return ReadOnly("TreasureHuntStoryDungeon", {
       4201,
       2301,
       1601,
-      160101
+      160101,
+      1201,
+      120101
     },
     TrialCharacter = {420101, 230101},
     TrialPet = {-1},

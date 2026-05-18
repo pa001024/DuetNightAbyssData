@@ -19,5 +19,10 @@ return ReadOnly("WeaponTab", {
     IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_ShopClothes",
     TabId = 3,
     Text = "UI_Armory_Appearance"
+  },
+  [4] = {
+    IconPath = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Incarnon.T_Tab_Incarnon",
+    TabId = 4,
+    Text = "UI_Armory_HyperStrengthen"
   }
 })

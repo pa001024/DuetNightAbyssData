@@ -11,8 +11,22 @@ function Component:LeaveWorld()
   self.in_world = false
 end
 
-function Component:InitFromDict(attrs, use_protoattr)
-  self.UseProtoAttr = use_protoattr
+function Component:LoadProto(ProtoContent)
+  self.logger.debug("LoadProto")
+  assert(pb.load(ProtoContent))
+  self.AttrTypes = {}
+  for name, basename, type in pb.types() do
+    self.AttrTypes[basename] = true
+  end
+end
+
+function Component:InitFromDict(attrs, proto_content)
+  if proto_content then
+    self:LoadProto(proto_content)
+    self.UseProtoAttr = true
+  else
+    self.UseProtoAttr = false
+  end
   local _type = self.__Class__
   if not _type.Props then
     return

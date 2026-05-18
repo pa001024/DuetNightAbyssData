@@ -9,6 +9,23 @@ local ToastTime = 15
 local ShowToastDistance = DataMgr.GlobalConstant.SurvivalProRadius.ConstantValue
 local ToastTimerName = "RealShowToast"
 local AlreadyDeleteToast = false
+
+function BP_EnergySupply_C:SetNowEnergy(v)
+  v = tonumber(v)
+  self.NowEnergy = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "NowEnergy")
+end
+
+function BP_EnergySupply_C:SetIsEnergyInteractive(v)
+  self.IsEnergyInteractive = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "IsEnergyInteractive")
+end
+
+function BP_EnergySupply_C:SetEnergyChangeFromMonster(v)
+  self.EnergyChangeFromMonster = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "EnergyChangeFromMonster")
+end
+
 BP_EnergySupply_C._components = {
   "BluePrints.Item.Components.RecoverEnergy"
 }
@@ -16,7 +33,7 @@ BP_EnergySupply_C._components = {
 function BP_EnergySupply_C:AuthorityInitInfo(Info)
   BP_EnergySupply_C.Super.AuthorityInitInfo(self, Info)
   if 0 == self.NowEnergy then
-    self.NowEnergy = self.UnitParams.InitialEnergy or 0
+    self:SetNowEnergy(self.UnitParams.InitialEnergy or 0)
   end
   self.NormalEnergy = self.UnitParams.NormalEnergy
   self.EliteEnergy = self.UnitParams.EliteEnergy
@@ -117,7 +134,7 @@ function BP_EnergySupply_C:OpenMechanism(PlayerActorEid)
     GameMode:TriggerDungeonComponentFun("TryToPostFinishTutorial")
     self:ClientPlayAnim(PlayerActorEid, 0, self.Eid)
   end
-  self.IsEnergyInteractive = true
+  self:SetIsEnergyInteractive(true)
   if nil == self.EToSHandle then
     self.FXNum = 0
     self.EToSHandle = self:AddTimer(0.1, self.EnergyToSurvival, true)
@@ -141,7 +158,7 @@ function BP_EnergySupply_C:CloseMechanism(Eid, IsSuccess)
     self:RemoveTimer("EnergySupplyInteractedToast")
     self.EToSHandle = nil
     self.NowPlayerEid = 0
-    self.IsEnergyInteractive = false
+    self:SetIsEnergyInteractive(false)
     self:OnCloseMechanism()
   end
   AudioManager(self):SetEventSoundParam(self, "EnergySupplyOpen", {ToEnd = 1})
@@ -162,7 +179,7 @@ function BP_EnergySupply_C:ForceCloseMechanism(Eid, IsSuccess)
     self:RemoveTimer("EnergySupplyInteractedToast")
     self.EToSHandle = nil
     self.NowPlayerEid = 0
-    self.IsEnergyInteractive = false
+    self:SetIsEnergyInteractive(false)
   end
   AudioManager(self):SetEventSoundParam(self, "EnergySupplyOpen", {ToEnd = 1})
 end
@@ -439,16 +456,17 @@ function BP_EnergySupply_C:OnForceEndInteractive_Lua(SurvivalValue, MaxSurvivalV
 end
 
 function BP_EnergySupply_C:ChangeEnergy_Lua(ChangeValue, bFromMonster)
-  self.NowEnergy = self.NowEnergy + ChangeValue
-  self.NowEnergy = math.min(self.NowEnergy, self.MaxEnergy)
-  self.NowEnergy = math.max(self.NowEnergy, 0)
+  local newEnergy = self.NowEnergy + ChangeValue
+  newEnergy = math.min(newEnergy, self.MaxEnergy)
+  newEnergy = math.max(newEnergy, 0)
+  self:SetNowEnergy(newEnergy)
   if IsAuthority(self) then
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     if GameMode and self.NowEnergy >= self.MaxEnergy then
       GameMode:TriggerDungeonAchieve("EnergySupplyEnergyMax", -1, self.Eid, self.UnitId)
     end
   end
-  self.EnergyChangeFromMonster = bFromMonster
+  self:SetEnergyChangeFromMonster(bFromMonster)
   if IsStandAlone(self) or not IsAuthority(self) then
     self:OnEnergyChanged(self.NowEnergy, bFromMonster)
     if ChangeValue < 0 then

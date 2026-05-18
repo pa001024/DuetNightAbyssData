@@ -22,6 +22,7 @@ local FFreezeWorldCompositionComponent = require("BluePrints.Story.Components.Fr
 local FSwitchToMasterComponent = require("BluePrints.Story.Components.SwitchToMasterComponent")
 local FSetPlayerInvincibleComponent = require("BluePrints.Story.Components.SetPlayerInvincibleComponent")
 local FPauseTimeElapseComponent = require("BluePrints.Story.Components.PauseTimeElapseComponent")
+local FLockNpcSpawnComponent = require("BluePrints.Story.Components.LockNpcSpawnComponent")
 local SimpleDialogueData_C = require("BluePrints.Story.Talk.Model.DialogueData").SimpleDialogueData_C
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local TalkOptionData_C = require("BluePrints.Story.Talk.Model.TalkOptionData").TalkOptionData_C
@@ -47,16 +48,6 @@ local WaitItemUniqueTag = {
   WaitFlowEnd = "WaitFlowEnd",
   AutoPlayDelay = "AutoPlayDelay"
 }
-local LockedLod0NodeSet = {
-  ["17734793256387211"] = true,
-  ["17679612423452179680"] = true,
-  ["176250799106025770648"] = true,
-  ["17724328722381498260"] = true,
-  ["176347437470315232984"] = true,
-  ["17675829024551092776"] = true,
-  ["1768478788334729190"] = true,
-  ["1772091879610777097"] = true
-}
 local CommonTalkTask = Class({
   "BluePrints.Story.Talk.Controller.TalkTaskBase"
 })
@@ -73,7 +64,7 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
     return
   end
   AudioManager(GWorld.GameInstance):AddAuANotifyForbidTag(self.UnitKey)
-  if LockedLod0NodeSet[self.TalkTaskData.Key] then
+  if self.TalkTaskData.bLockHighestLOD then
     self.NativeStaticMeshLODDistanceScale = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.StaticMeshLODDistanceScale")
     self.NativeHLodMinDrawDistanceScale = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.HLodMinDrawDistanceScale")
     self.NativeHLODDistanceOverride = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.HLOD.DistanceOverride")
@@ -93,6 +84,8 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
   GWorld.GameInstance:SetDynamicResolution("Talk", true)
   EventManager:FireEvent(EventID.StartTalk, {
     TalkType = TalkTaskData.TalkType,
+    BasicTalkType = self.TalkTaskData.BasicTalkType,
+    TalkCategory = self.TalkTaskData.TalkCategory,
     bExitOnline = TalkTaskData.bExitOnline,
     bDisableGameInput = TalkTaskData.bDisableGameInput
   })
@@ -112,6 +105,7 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
   self:SwitchEnableComponent(self.DisableCameraArmComponent, true)
   self:SwitchEnableComponent(self.SwitchEmoIdleComponent, true)
   self:SwitchEnableComponent(self.PauseTimeElapseComponent, true)
+  self:SwitchEnableComponent(self.LockNpcSpawnComponent, true)
   self:OnCinematicBegin()
   self.UI:PreEnterTalkTask(self, self.TalkTaskData)
   self:FadeInBlack(self.TalkTaskData.BlendInType == "FadeIn", self.TalkTaskData.BlendInTime, function()
@@ -153,6 +147,7 @@ function CommonTalkTask:Finish(TalkNodeFinishType, OptionIndex)
     self:NPCEnableSkeletalMeshActorRules(self.TalkTaskData.BasicTalkType == "Cinematic", false)
     self:ResetStageSetting(self.TalkTaskData.TalkStage)
     self:ResetDefaultNpcTransform()
+    self:ResetSurroundDialogue((self.BasicTalkType == "FreeSimple" or self.BasicTalkType == "Impression") and self.TalkTaskData.bAllowSurroundDialogue, self.Player, self.TalkContext.InteractiveActor, self.TalkTaskData.TalkActors)
     self.TalkContext:DestoryTalkActors(self, self.TalkTaskData.TalkActors)
     self:TryHideDialogueBlackUI()
     self.TalkContext:ConditionalRecoverCharacterShadowSetting(self.TalkTaskData)
@@ -175,7 +170,7 @@ function CommonTalkTask:Finish(TalkNodeFinishType, OptionIndex)
 end
 
 function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
-  if LockedLod0NodeSet[self.TalkTaskData.Key] then
+  if self.TalkTaskData.bLockHighestLOD then
     UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.StaticMeshLODDistanceScale", self.NativeStaticMeshLODDistanceScale)
     UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.HLodMinDrawDistanceScale", self.NativeHLodMinDrawDistanceScale)
     UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.HLOD.DistanceOverride", self.NativeHLODDistanceOverride)
@@ -207,10 +202,13 @@ function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
   self:SwitchEnableComponent(self.DisableNpcMovementComponent, false)
   self:SwitchEnableComponent(self.SetForceLodComponent, false)
   self:SwitchEnableComponent(self.PauseTimeElapseComponent, false)
+  self:SwitchEnableComponent(self.LockNpcSpawnComponent, false)
   self:TryReleaseStoryPanelUI()
   self.TalkContext:UnRegisterTalkTask(self)
   EventManager:FireEvent(EventID.EndTalk, {
     TalkType = self.TalkTaskData.TalkType,
+    BasicTalkType = self.TalkTaskData.BasicTalkType,
+    TalkCategory = self.TalkTaskData.TalkCategory,
     bExitOnline = self.TalkTaskData.bExitOnline,
     bDisableGameInput = self.TalkTaskData.bDisableGameInput
   })
@@ -272,11 +270,11 @@ function CommonTalkTask:PreStartPerformance()
       Tag = WaitQueueTag.CreateActors
     }
   }, nil, function()
-    self:ActorsAroundPlayer(self.TalkTaskData.TalkActors)
+    self:SetupSurroundDialogue((self.BasicTalkType == "FreeSimple" or self.BasicTalkType == "Impression") and self.TalkTaskData.bAllowSurroundDialogue, self.Player, self.TalkContext.InteractiveActor, self.TalkTaskData.TalkActors)
     self:ApplyDefaultTransform()
     self:ApplyStageSetting(self.TalkTaskData.TalkStage)
     TS:TalkHidePlayerCharacter(self.Player, false, Const.TalkHideTag)
-    self.TalkContext:ShowHideInTalkActors()
+    self:HandleTalkActorsVisibility(self.TalkTaskData.TalkActors)
     self:StartPerformance()
   end)
   self:KeepBlack(self.TalkTaskData.BlendInType == "FadeIn", self.ScreenEffectDurationSeconds, function()
@@ -311,22 +309,79 @@ function CommonTalkTask:StartDialogueFlow()
   self:StartDialogueIteration()
 end
 
-function CommonTalkTask:ActorsAroundPlayer(ActorInfos)
-  local AroundActors = {}
-  local ActorInfos = ActorInfos or {}
-  for _, ActorInfo in ipairs(ActorInfos) do
-    if ActorInfo.AroundPlayer then
-      local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
-      if ActorData and IsValid(ActorData.TalkActor) then
-        table.insert(AroundActors, ActorData.TalkActor)
+function CommonTalkTask:SetupSurroundDialogue(bEnable, Player, SurroundedActor, ParticipantInfos)
+  if not (bEnable and IsValid(Player)) or not IsValid(SurroundedActor) then
+    return
+  end
+  ParticipantInfos = ParticipantInfos or {}
+  local ParticipantActors = {}
+  for _, ParticipantInfo in ipairs(ParticipantInfos) do
+    local ParticipantData = self.TalkContext:GetTalkActorData(self, ParticipantInfo.TalkActorId)
+    if ParticipantData and IsValid(ParticipantData.TalkActor) and ParticipantData.TalkActor ~= SurroundedActor then
+      local Actor = ParticipantData.TalkActor
+      if IsValid(Actor) and Actor ~= Player and Actor ~= SurroundedActor then
+        table.insert(ParticipantActors, Actor)
       end
     end
   end
-  local Locations = self.TalkContext:GetNPCStandPositions(UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0), #AroundActors, true)
-  for i, Actor in ipairs(AroundActors) do
-    if IsValid(Actor) then
-      Actor:K2_SetActorLocation(Locations[i], false, nil, true)
-      Actor:ResetLocation()
+  local SurroundedLocation = SurroundedActor:K2_GetActorLocation()
+  local ParticipantLocations = self.TalkContext:GetNPCStandPositions(UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0), #ParticipantActors)
+  for i, ParticipantActor in ipairs(ParticipantActors) do
+    if IsValid(ParticipantActor) then
+      self:CacheNpcTransform(ParticipantActor)
+      local ParticipantLocation = ParticipantLocations[i]
+      local LookAtRotation = UKismetMathLibrary.FindLookAtRotation(ParticipantLocation, SurroundedLocation)
+      LookAtRotation.Pitch = 0
+      LookAtRotation.Roll = 0
+      ParticipantActor:K2_SetActorLocationAndRotation(ParticipantLocation, LookAtRotation, false, nil, true)
+      ParticipantActor:ResetLocation()
+      if ParticipantActor.ChangeRoleEffect then
+        ParticipantActor:ChangeRoleEffect()
+      end
+      local BodyType = ParticipantActor:GetBattleCharBodyType()
+      ParticipantActor.FXComponent:PlayEffectByIDParams(401, {
+        NotAttached = true,
+        scale = Const.BattleCharTagVXScaleTable[BodyType]
+      })
+    end
+  end
+end
+
+function CommonTalkTask:ResetSurroundDialogue(bEnable, Player, SurroundedActor, ParticipantInfos)
+  if not (bEnable and IsValid(Player)) or not IsValid(SurroundedActor) then
+    return
+  end
+  ParticipantInfos = ParticipantInfos or {}
+  for _, ParticipantInfo in ipairs(ParticipantInfos) do
+    local ParticipantData = self.TalkContext:GetTalkActorData(self, ParticipantInfo.TalkActorId)
+    if ParticipantData and IsValid(ParticipantData.TalkActor) and ParticipantData.TalkActor ~= SurroundedActor then
+      local Actor = ParticipantData.TalkActor
+      if IsValid(Actor) and Actor ~= Player and Actor ~= SurroundedActor then
+        self:ResetNpcTransform(Actor)
+      end
+    end
+  end
+end
+
+function CommonTalkTask:HandleTalkActorsVisibility(ActorInfos)
+  for _, ActorInfo in ipairs(ActorInfos) do
+    local ActorData = self.TalkContext:GetTalkActorData(self, ActorInfo.TalkActorId)
+    if ActorData and IsValid(ActorData.TalkActor) then
+      self.TalkContext:ShowHideActor(ActorData.TalkActor, ActorInfo.TalkActorVisible)
+    end
+    if ActorInfo.TalkActorType == "Player" and ActorInfo.TalkActorVisible == false then
+      local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+      if IsValid(GameState) and GameState.HideAllNpcs then
+        local CustomNpcSet = GameState.CustomNpcSet:ToTable()
+        for _, entity in pairs(CustomNpcSet) do
+          if IsValid(entity) and entity.CharacterFashion then
+            entity.CharacterFashion:SetDitherAlpha(0, 1)
+            if entity.HeadAccessory then
+              entity.HeadAccessory:SetScalarParameterValueOnMaterials("DitherAlpha", 0)
+            end
+          end
+        end
+      end
     end
   end
 end
@@ -1401,6 +1456,9 @@ function CommonTalkTask:CreateComponents()
   self:CreateDisableCameraArmComponent()
   self:CreateSwitchEmoIdleComponent()
   self:CreatePauseTimeElapseComponent()
+  if self.TalkTaskData.bLockNpcSpawn then
+    self.LockNpcSpawnComponent = FLockNpcSpawnComponent:New()
+  end
 end
 
 function CommonTalkTask:OnCinematicBegin()

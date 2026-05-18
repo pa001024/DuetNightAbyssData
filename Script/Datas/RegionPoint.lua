@@ -7,7 +7,9 @@ T.RT_3 = {
   101703
 }
 T.RT_4 = {101108}
-T.RT_5 = {105501}
+T.RT_5 = {106001}
+T.RT_6 = {106301}
+T.RT_7 = {105501}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -188,6 +190,169 @@ return ReadOnly("RegionPoint", {
     TeleportPointPos = 3,
     TeleportSubRegion = 104105,
     UnlockConditionId = 324
+  },
+  [2015] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Station.T_Gp_Station",
+    Id = 2015,
+    ManualItemId = 119005,
+    Name = "UI_SUBREGION_NAME_106001",
+    Pos = {1831, -419},
+    SubRegion = 101101,
+    TargetSubRegion = T.RT_5,
+    TelepointId = 1011,
+    TeleportPointPos = 38,
+    TeleportSubRegion = 101101,
+    UnlockConditionId = 332
+  },
+  [2016] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_IceLake.T_Gp_IceLake",
+    Id = 2016,
+    ManualItemId = 248006,
+    Name = "UI_SUBREGION_NAME_101101",
+    Pos = {4354, 10},
+    SubRegion = 106001,
+    TargetSubRegion = {101101},
+    TelepointId = 1600,
+    TeleportPointPos = 1,
+    TeleportSubRegion = 106001,
+    UnlockConditionId = 332
+  },
+  [2017] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Leave.T_Gp_Leave",
+    Id = 2017,
+    ManualItemId = 248026,
+    Name = "UI_SUBREGION_NAME_106002",
+    Pos = {-6503, 6478},
+    SubRegion = 106001,
+    TargetSubRegion = T.RT_6,
+    TelepointId = 1600,
+    TeleportPointPos = 11,
+    TeleportSubRegion = 106001,
+    UnlockConditionId = 333
+  },
+  [2018] = {
+    BuildingNameAndId = "Station_L-1",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Leave.T_Gp_Leave",
+    Id = 2018,
+    ManualItemId = 289002,
+    Name = "UI_SUBREGION_NAME_106003",
+    Pos = {-16222, 4887},
+    SubRegion = 106301,
+    TargetSubRegion = T.RT_5,
+    TelepointId = 1601,
+    TeleportPointPos = 6,
+    TeleportSubRegion = 106301,
+    UnlockConditionId = 333
+  },
+  [2019] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Leave.T_Gp_Leave",
+    Id = 2019,
+    ManualItemId = 248027,
+    Name = "UI_SUBREGION_NAME_106005",
+    Pos = {-17163, 4858},
+    SubRegion = 106001,
+    TargetSubRegion = T.RT_6,
+    TelepointId = 1600,
+    TeleportPointPos = 13,
+    TeleportSubRegion = 106001,
+    UnlockConditionId = 333
+  },
+  [2020] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Leave.T_Gp_Leave",
+    Id = 2020,
+    ManualItemId = 289004,
+    Name = "UI_SUBREGION_NAME_106004",
+    Pos = {-38472, -6892},
+    SubRegion = 106301,
+    TargetSubRegion = T.RT_5,
+    TelepointId = 1601,
+    TeleportPointPos = 8,
+    TeleportSubRegion = 106301,
+    UnlockConditionId = 333
+  },
+  [2021] = {
+    BuildingNameAndId = "Station_L-3",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Leave.T_Gp_Leave",
+    Id = 2021,
+    ManualItemId = 289001,
+    Name = "UI_SUBREGION_NAME_106001",
+    Pos = {-4983, 6458},
+    SubRegion = 106301,
+    TargetSubRegion = T.RT_5,
+    TelepointId = 1601,
+    TeleportPointPos = 5,
+    TeleportSubRegion = 106301,
+    UnlockConditionId = 333
+  },
+  [2022] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Leave.T_Gp_Leave",
+    Id = 2022,
+    ManualItemId = 289005,
+    Name = "UI_SUBREGION_NAME_106001",
+    Pos = {-17332, 4867},
+    SubRegion = 106301,
+    TargetSubRegion = T.RT_5,
+    TelepointId = 1602,
+    TeleportPointPos = 7,
+    TeleportSubRegion = 106301,
+    UnlockConditionId = 333
+  },
+  [2023] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Leave.T_Gp_Leave",
+    Id = 2023,
+    ManualItemId = 248028,
+    Name = "UI_SUBREGION_NAME_106305",
+    Pos = {-38432, -6902},
+    SubRegion = 106001,
+    TargetSubRegion = T.RT_6,
+    TelepointId = 1600,
+    TeleportPointPos = 14,
+    TeleportSubRegion = 106001,
+    UnlockConditionId = 333
+  },
+  [2501] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Gathering.T_Gp_Gathering",
+    Id = 2501,
+    Name = "UI_GATHERING_NAME_ICELAKECITY",
+    Pos = {-2512, -2121},
+    SubRegion = 101101,
+    TelepointId = 1011,
+    TeleportPointPos = 1,
+    TeleportSubRegion = 101101,
+    UnlockConditionId = 100208
+  },
+  [2502] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Gathering.T_Gp_Gathering",
+    Id = 2502,
+    Name = "UI_GATHERING_NAME_SPR",
+    Pos = {33046, -4278},
+    SubRegion = 104110,
+    TelepointId = 1102,
+    TeleportPointPos = 9,
+    TeleportSubRegion = 104110,
+    UnlockConditionId = 120100
+  },
+  [2503] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Gathering.T_Gp_Gathering",
+    Id = 2503,
+    Name = "UI_GATHERING_NAME_INN",
+    Pos = {31555, -45164},
+    SubRegion = 104503,
+    TelepointId = 1206,
+    TeleportPointPos = 1,
+    TeleportSubRegion = 104503,
+    UnlockConditionId = 12010602
+  },
+  [2504] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Gathering.T_Gp_Gathering",
+    Id = 2504,
+    Name = "UI_GATHERING_NAME_GATHER",
+    Pos = {-7950, 0},
+    SubRegion = 106001,
+    TelepointId = 1600,
+    TeleportPointPos = 16,
+    TeleportSubRegion = 106001,
+    UnlockConditionId = 332
   },
   [2612] = {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Shop.T_Gp_Shop",
@@ -550,7 +715,7 @@ return ReadOnly("RegionPoint", {
     Name = "UI_SUBREGION_NAME_105501",
     Pos = {40233, -50974},
     SubRegion = 104503,
-    TargetSubRegion = T.RT_5,
+    TargetSubRegion = T.RT_7,
     TelepointId = 1206,
     TeleportPointPos = 4,
     TeleportSubRegion = 104503,
@@ -563,7 +728,7 @@ return ReadOnly("RegionPoint", {
     Name = "UI_SUBREGION_NAME_105501",
     Pos = {55237, -54316},
     SubRegion = 104505,
-    TargetSubRegion = T.RT_5,
+    TargetSubRegion = T.RT_7,
     TelepointId = 1212,
     TeleportPointPos = 5,
     TeleportSubRegion = 104505,
@@ -655,5 +820,18 @@ return ReadOnly("RegionPoint", {
     TeleportPointPos = 7,
     TeleportSubRegion = 104502,
     UnlockConditionId = 20021501
+  },
+  [2854] = {
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Angling.T_Gp_Angling",
+    Id = 2854,
+    ManualItemId = 248032,
+    Name = "FishingSpot_Name_10600101",
+    Pos = {-79430, -3180},
+    SubRegion = 106001,
+    TargetSubRegion = T.RT_5,
+    TelepointId = 1603,
+    TeleportPointPos = 15,
+    TeleportSubRegion = 106001,
+    UnlockConditionId = 20021513
   }
 })

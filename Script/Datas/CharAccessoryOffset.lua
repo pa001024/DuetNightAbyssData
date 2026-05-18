@@ -247,31 +247,28 @@ T.RT_60 = {
   Player_Part_Head = T.RT_59
 }
 T.RT_61 = {
+  Rotation = T.RT_13,
+  scale = T.RT_44
+}
+T.RT_62 = {
+  Player_Part_Eye_R = T.RT_61
+}
+T.RT_63 = {
   1,
   1,
   0.95
 }
-T.RT_62 = {
-  scale = T.RT_51
-}
-T.RT_63 = {
-  Player_Part_Mouth = T.RT_62
-}
 T.RT_64 = {
-  Player_Part_Head_B = T.RT_10
+  scale = T.RT_63
 }
 T.RT_65 = {
-  Player_Part_Head_Pair = T.RT_10
+  Player_Part_Nose = T.RT_64
 }
 T.RT_66 = {
-  0.6,
-  0.6,
-  0.6
+  scale = T.RT_51
 }
 T.RT_67 = {
-  0,
-  0,
-  -20
+  Player_Part_Mouth = T.RT_66
 }
 T.RT_68 = {
   0,
@@ -722,285 +719,288 @@ T.RT_176 = {
   0
 }
 T.RT_177 = {
+  Player_Part_Head_Pair = T.RT_10
+}
+T.RT_178 = {
   0.9,
   1,
   0.95
 }
-T.RT_178 = {
+T.RT_179 = {
   0.8,
   0.8,
   0.8
 }
-T.RT_179 = {
+T.RT_180 = {
   Location = T.RT_137
 }
-T.RT_180 = {
-  Player_Part_Eye_L = T.RT_179
-}
 T.RT_181 = {
+  Player_Part_Eye_L = T.RT_180
+}
+T.RT_182 = {
   0,
   -1,
   0
 }
-T.RT_182 = {
+T.RT_183 = {
   0,
   1,
   -1.5
 }
-T.RT_183 = {
-  Location = T.RT_182
-}
 T.RT_184 = {
+  Location = T.RT_183
+}
+T.RT_185 = {
   Location = T.RT_77,
   Rotation = T.RT_171
 }
-T.RT_185 = {
-  Player_Part_Head_B = T.RT_184
-}
 T.RT_186 = {
+  Player_Part_Head_B = T.RT_185
+}
+T.RT_187 = {
   0.95,
   0.95,
   0.9
 }
-T.RT_187 = {
+T.RT_188 = {
   Location = T.RT_43
 }
-T.RT_188 = {
-  Player_Part_Head_Fx = T.RT_187
-}
 T.RT_189 = {
+  Player_Part_Head_Fx = T.RT_188
+}
+T.RT_190 = {
   0,
   0,
   7
 }
-T.RT_190 = {
+T.RT_191 = {
   3,
   0,
   8
 }
-T.RT_191 = {
+T.RT_192 = {
   0,
   0.5,
   -1
 }
-T.RT_192 = {
+T.RT_193 = {
   0,
   1,
   -0.5
 }
-T.RT_193 = {
+T.RT_194 = {
   0,
   0.2,
   -1.5
 }
-T.RT_194 = {
+T.RT_195 = {
   10,
   0,
   5
 }
-T.RT_195 = {
-  Player_Part_Eye_L = T.RT_183
-}
 T.RT_196 = {
+  Player_Part_Eye_L = T.RT_184
+}
+T.RT_197 = {
   0,
   -0.3,
   -1.5
 }
-T.RT_197 = {
-  Location = T.RT_137,
-  scale = T.RT_186
-}
 T.RT_198 = {
-  Player_Part_Nose = T.RT_197
+  Location = T.RT_137,
+  scale = T.RT_187
 }
 T.RT_199 = {
-  Location = T.RT_122,
-  Rotation = T.RT_194
+  Player_Part_Nose = T.RT_198
 }
 T.RT_200 = {
-  Player_Part_Head_L = T.RT_199
+  Location = T.RT_122,
+  Rotation = T.RT_195
 }
 T.RT_201 = {
+  Player_Part_Head_L = T.RT_200
+}
+T.RT_202 = {
   Location = T.RT_137,
   Rotation = T.RT_13
 }
-T.RT_202 = {
-  Player_Part_Eye_R = T.RT_201
-}
 T.RT_203 = {
-  Location = T.RT_69
+  Player_Part_Eye_R = T.RT_202
 }
 T.RT_204 = {
-  Player_Part_Head_Fx = T.RT_203
+  Location = T.RT_69
 }
 T.RT_205 = {
+  Player_Part_Head_Fx = T.RT_204
+}
+T.RT_206 = {
   0,
   -0.2,
   -0.5
 }
-T.RT_206 = {
-  Location = T.RT_205,
+T.RT_207 = {
+  Location = T.RT_206,
   scale = T.RT_51
 }
-T.RT_207 = {
-  Player_Part_Mouth = T.RT_206
-}
 T.RT_208 = {
+  Player_Part_Mouth = T.RT_207
+}
+T.RT_209 = {
   0,
   -1.5,
   -2.5
 }
-T.RT_209 = {
-  Location = T.RT_208
-}
 T.RT_210 = {
-  Player_Part_Head_B = T.RT_209
+  Location = T.RT_209
 }
 T.RT_211 = {
-  Location = T.RT_181
+  Player_Part_Head_B = T.RT_210
 }
 T.RT_212 = {
-  Player_Part_Head = T.RT_211
+  Location = T.RT_182
 }
 T.RT_213 = {
+  Player_Part_Head = T.RT_212
+}
+T.RT_214 = {
   0.9,
   0.9,
   1
 }
-T.RT_214 = {
-  scale = T.RT_213
-}
 T.RT_215 = {
-  Player_Part_Head_Pair = T.RT_214
+  scale = T.RT_214
 }
 T.RT_216 = {
+  Player_Part_Head_Pair = T.RT_215
+}
+T.RT_217 = {
   Location = T.RT_12,
   scale = T.RT_6
 }
-T.RT_217 = {
-  Player_Part_Face = T.RT_216
-}
 T.RT_218 = {
-  [1] = T.RT_198,
-  [2] = T.RT_202,
-  [3] = T.RT_180,
-  [4] = T.RT_204,
-  [5] = T.RT_207,
-  [6] = T.RT_210,
-  [7] = T.RT_212,
-  [8] = T.RT_215,
-  [9] = T.RT_217,
-  [10] = T.RT_200
+  Player_Part_Face = T.RT_217
 }
 T.RT_219 = {
-  Location = T.RT_170
+  [1] = T.RT_199,
+  [2] = T.RT_203,
+  [3] = T.RT_181,
+  [4] = T.RT_205,
+  [5] = T.RT_208,
+  [6] = T.RT_211,
+  [7] = T.RT_213,
+  [8] = T.RT_216,
+  [9] = T.RT_218,
+  [10] = T.RT_201
 }
 T.RT_220 = {
-  Player_Part_Head = T.RT_219
+  Location = T.RT_170
 }
 T.RT_221 = {
-  Player_Part_Nose = T.RT_179
+  Player_Part_Head = T.RT_220
 }
 T.RT_222 = {
+  Player_Part_Nose = T.RT_180
+}
+T.RT_223 = {
   Location = T.RT_150,
   Rotation = T.RT_171,
   scale = T.RT_51
 }
-T.RT_223 = {
-  Player_Part_Face = T.RT_222
-}
 T.RT_224 = {
+  Player_Part_Face = T.RT_223
+}
+T.RT_225 = {
   Location = T.RT_170,
   Rotation = T.RT_69,
   scale = T.RT_44
 }
-T.RT_225 = {
-  Player_Part_Eye_R = T.RT_224
-}
 T.RT_226 = {
+  Player_Part_Eye_R = T.RT_225
+}
+T.RT_227 = {
   2,
   2,
   1
 }
-T.RT_227 = {
-  Location = T.RT_226,
+T.RT_228 = {
+  Location = T.RT_227,
   Rotation = T.RT_13
 }
-T.RT_228 = {
-  Player_Part_Head_L = T.RT_227
-}
 T.RT_229 = {
-  Location = T.RT_196,
+  Player_Part_Head_L = T.RT_228
+}
+T.RT_230 = {
+  Location = T.RT_197,
   Rotation = T.RT_9,
   scale = T.RT_44
 }
-T.RT_230 = {
-  Player_Part_Mouth = T.RT_229
-}
 T.RT_231 = {
-  Player_Part_Head_Pair = T.RT_92
+  Player_Part_Mouth = T.RT_230
 }
 T.RT_232 = {
+  Player_Part_Head_Pair = T.RT_92
+}
+T.RT_233 = {
   3,
   2,
   0
 }
-T.RT_233 = {
-  Location = T.RT_191
-}
 T.RT_234 = {
-  Player_Part_Eye_L = T.RT_233
+  Location = T.RT_192
 }
 T.RT_235 = {
+  Player_Part_Eye_L = T.RT_234
+}
+T.RT_236 = {
   0,
   -2,
   -2
 }
-T.RT_236 = {
+T.RT_237 = {
   -1,
   -2.2,
   -3
 }
-T.RT_237 = {
+T.RT_238 = {
   3,
   0,
   5
 }
-T.RT_238 = {
-  Location = T.RT_236,
-  Rotation = T.RT_237
-}
 T.RT_239 = {
-  Player_Part_Eye_R = T.RT_238
+  Location = T.RT_237,
+  Rotation = T.RT_238
 }
 T.RT_240 = {
+  Player_Part_Eye_R = T.RT_239
+}
+T.RT_241 = {
   0,
   -1,
   -3
 }
-T.RT_241 = {
-  Location = T.RT_240
-}
 T.RT_242 = {
-  Player_Part_Eye_L = T.RT_241
+  Location = T.RT_241
 }
 T.RT_243 = {
-  Location = T.RT_235
+  Player_Part_Eye_L = T.RT_242
 }
 T.RT_244 = {
+  Location = T.RT_236
+}
+T.RT_245 = {
   0,
   0,
   8
 }
-T.RT_245 = {
-  Location = T.RT_137,
-  Rotation = T.RT_244,
-  scale = T.RT_178
-}
 T.RT_246 = {
-  Player_Part_Eye_R = T.RT_245
+  Location = T.RT_137,
+  Rotation = T.RT_245,
+  scale = T.RT_179
 }
 T.RT_247 = {
+  Player_Part_Eye_R = T.RT_246
+}
+T.RT_248 = {
   0.95,
   0.9,
   0.95
@@ -1033,73 +1033,18 @@ return ReadOnly("CharAccessoryOffset", {
           }
         }
       },
-      [3] = {
-        Player_Part_Eye_R = {
-          Rotation = T.RT_13,
-          scale = T.RT_44
-        }
-      },
-      [4] = {
-        Player_Part_Nose = {
-          scale = T.RT_61
-        }
-      },
-      [5] = T.RT_63
+      [3] = T.RT_62,
+      [4] = T.RT_65,
+      [5] = T.RT_67
     }
   },
   [1102] = {
     OffsetId = 1102,
     OffsetParameter = {
       [1] = T.RT_60,
-      [2] = {
-        Player_Part_Face = T.RT_10
-      },
-      [3] = {
-        Player_Part_Eye_R = {
-          Location = {
-            -0.3,
-            -0.5,
-            0
-          },
-          Rotation = {
-            -5,
-            0,
-            5
-          }
-        }
-      },
-      [4] = T.RT_47,
-      [5] = {
-        Player_Part_Head_R = T.RT_10
-      },
-      [6] = {
-        Player_Part_Head_L = T.RT_10
-      },
-      [7] = T.RT_21,
-      [8] = {
-        Player_Part_Waist = {
-          Location = T.RT_9,
-          Rotation = T.RT_9,
-          scale = T.RT_66
-        }
-      },
-      [9] = {
-        Player_Part_Waist_R = {
-          Location = {
-            -2,
-            -4,
-            -4
-          },
-          Rotation = T.RT_67,
-          scale = T.RT_66
-        }
-      },
-      [10] = T.RT_63,
-      [11] = T.RT_64,
-      [12] = T.RT_65,
-      [13] = {
-        Player_Part_Cloak = T.RT_10
-      }
+      [2] = T.RT_62,
+      [3] = T.RT_65,
+      [4] = T.RT_67
     }
   },
   [1103] = {
@@ -1358,7 +1303,7 @@ return ReadOnly("CharAccessoryOffset", {
       [6] = {
         Player_Part_Nose = {
           Location = T.RT_85,
-          scale = T.RT_61
+          scale = T.RT_63
         }
       },
       [7] = {
@@ -1564,7 +1509,7 @@ return ReadOnly("CharAccessoryOffset", {
             -1.5
           },
           Rotation = T.RT_171,
-          scale = T.RT_177
+          scale = T.RT_178
         }
       },
       [3] = {
@@ -1575,10 +1520,10 @@ return ReadOnly("CharAccessoryOffset", {
             -1
           },
           Rotation = T.RT_88,
-          scale = T.RT_178
+          scale = T.RT_179
         }
       },
-      [4] = T.RT_180,
+      [4] = T.RT_181,
       [5] = {
         Player_Part_Head_L = {
           Location = T.RT_84,
@@ -1601,28 +1546,28 @@ return ReadOnly("CharAccessoryOffset", {
         Player_Part_Mouth = {
           Location = T.RT_137,
           Rotation = T.RT_171,
-          scale = T.RT_177
+          scale = T.RT_178
         }
       },
       [9] = {
         Player_Part_Head_B = {
-          Location = T.RT_181,
+          Location = T.RT_182,
           Rotation = T.RT_154
         }
       },
-      [10] = T.RT_65
+      [10] = T.RT_177
     }
   },
   [3102] = {
     OffsetId = 3102,
     OffsetParameter = {
       [1] = {
-        Player_Part_Head = T.RT_183
+        Player_Part_Head = T.RT_184
       },
       [2] = {
         Player_Part_Nose = {
           Location = T.RT_170,
-          scale = T.RT_186
+          scale = T.RT_187
         }
       },
       [3] = {
@@ -1653,7 +1598,7 @@ return ReadOnly("CharAccessoryOffset", {
           }
         }
       },
-      [6] = T.RT_188,
+      [6] = T.RT_189,
       [7] = {
         Player_Part_Waist = {
           Location = {
@@ -1686,9 +1631,9 @@ return ReadOnly("CharAccessoryOffset", {
           scale = T.RT_44
         }
       },
-      [10] = T.RT_185,
+      [10] = T.RT_186,
       [11] = {
-        Player_Part_Head_Pair = T.RT_179
+        Player_Part_Head_Pair = T.RT_180
       },
       [12] = {
         Player_Part_Cloak = {
@@ -1711,7 +1656,7 @@ return ReadOnly("CharAccessoryOffset", {
     OffsetParameter = {
       [1] = {
         Player_Part_Head = {
-          Location = T.RT_189
+          Location = T.RT_190
         }
       },
       [2] = {
@@ -1727,7 +1672,7 @@ return ReadOnly("CharAccessoryOffset", {
             1,
             -0.5
           },
-          Rotation = T.RT_190,
+          Rotation = T.RT_191,
           scale = T.RT_103
         }
       },
@@ -1786,7 +1731,7 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [10] = {
         Player_Part_Head_Pair = {
-          Location = T.RT_189,
+          Location = T.RT_190,
           scale = {
             1.1,
             1,
@@ -1810,7 +1755,7 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [2] = {
         Player_Part_Nose = {
-          Location = T.RT_182,
+          Location = T.RT_183,
           scale = {
             0.9,
             0.95,
@@ -1820,7 +1765,7 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [3] = {
         Player_Part_Eye_R = {
-          Location = T.RT_191,
+          Location = T.RT_192,
           Rotation = T.RT_88,
           scale = T.RT_44
         }
@@ -1837,9 +1782,9 @@ return ReadOnly("CharAccessoryOffset", {
       [5] = T.RT_145,
       [6] = {
         Player_Part_Face = {
-          Location = T.RT_192,
+          Location = T.RT_193,
           Rotation = T.RT_171,
-          scale = T.RT_186
+          scale = T.RT_187
         }
       },
       [7] = {
@@ -1858,7 +1803,7 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [8] = {
         Player_Part_Mouth = {
-          Location = T.RT_191,
+          Location = T.RT_192,
           Rotation = T.RT_171
         }
       },
@@ -1871,24 +1816,24 @@ return ReadOnly("CharAccessoryOffset", {
     OffsetParameter = {
       [1] = {
         Player_Part_Head = {
-          Location = T.RT_192
+          Location = T.RT_193
         }
       },
       [2] = {
         Player_Part_Face = {
-          Location = T.RT_193,
+          Location = T.RT_194,
           Rotation = T.RT_154,
           scale = T.RT_51
         }
       },
       [3] = {
         Player_Part_Eye_R = {
-          Location = T.RT_182,
-          Rotation = T.RT_194,
+          Location = T.RT_183,
+          Rotation = T.RT_195,
           scale = T.RT_44
         }
       },
-      [4] = T.RT_195,
+      [4] = T.RT_196,
       [5] = {
         Player_Part_Head_L = {
           Location = {
@@ -1903,10 +1848,10 @@ return ReadOnly("CharAccessoryOffset", {
           }
         }
       },
-      [6] = T.RT_188,
+      [6] = T.RT_189,
       [7] = {
         Player_Part_Mouth = {
-          Location = T.RT_196,
+          Location = T.RT_197,
           scale = T.RT_44
         }
       },
@@ -1919,7 +1864,7 @@ return ReadOnly("CharAccessoryOffset", {
       [9] = T.RT_78,
       [10] = {
         Player_Part_Nose = {
-          Location = T.RT_193,
+          Location = T.RT_194,
           Rotation = T.RT_171
         }
       }
@@ -1997,26 +1942,26 @@ return ReadOnly("CharAccessoryOffset", {
   },
   [4101] = {
     OffsetId = 4101,
-    OffsetParameter = T.RT_218
+    OffsetParameter = T.RT_219
   },
   [4102] = {
     OffsetId = 4102,
     OffsetParameter = {
-      [1] = T.RT_220,
-      [2] = T.RT_223,
-      [3] = T.RT_225,
-      [4] = T.RT_195,
-      [5] = T.RT_228,
-      [6] = T.RT_188,
-      [7] = T.RT_230,
+      [1] = T.RT_221,
+      [2] = T.RT_224,
+      [3] = T.RT_226,
+      [4] = T.RT_196,
+      [5] = T.RT_229,
+      [6] = T.RT_189,
+      [7] = T.RT_231,
       [8] = {
         Player_Part_Head_B = {
           Location = T.RT_54,
           Rotation = T.RT_171
         }
       },
-      [9] = T.RT_231,
-      [10] = T.RT_221
+      [9] = T.RT_232,
+      [10] = T.RT_222
     }
   },
   [4201] = {
@@ -2054,7 +1999,7 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [5] = {
         Player_Part_Head_L = {
-          Location = T.RT_232
+          Location = T.RT_233
         }
       },
       [6] = {
@@ -2179,7 +2124,7 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [2] = {
         Player_Part_Nose = {
-          Location = T.RT_191,
+          Location = T.RT_192,
           scale = {
             0.9,
             0.9,
@@ -2190,14 +2135,14 @@ return ReadOnly("CharAccessoryOffset", {
       [3] = {
         Player_Part_Eye_R = {
           Location = T.RT_137,
-          Rotation = T.RT_190,
-          scale = T.RT_178
+          Rotation = T.RT_191,
+          scale = T.RT_179
         }
       },
-      [4] = T.RT_234,
+      [4] = T.RT_235,
       [5] = {
         Player_Part_Head_L = {
-          Location = T.RT_232,
+          Location = T.RT_233,
           Rotation = {
             15,
             -15,
@@ -2229,7 +2174,7 @@ return ReadOnly("CharAccessoryOffset", {
         }
       },
       [9] = T.RT_56,
-      [10] = T.RT_65
+      [10] = T.RT_177
     }
   },
   [5101] = {
@@ -2237,7 +2182,7 @@ return ReadOnly("CharAccessoryOffset", {
     OffsetParameter = {
       [1] = {
         Player_Part_Nose = {
-          Location = T.RT_235,
+          Location = T.RT_236,
           scale = {
             1.02,
             0.9,
@@ -2245,11 +2190,11 @@ return ReadOnly("CharAccessoryOffset", {
           }
         }
       },
-      [2] = T.RT_239,
-      [3] = T.RT_242,
+      [2] = T.RT_240,
+      [3] = T.RT_243,
       [4] = T.RT_83,
       [5] = {
-        Player_Part_Mouth = T.RT_243
+        Player_Part_Mouth = T.RT_244
       },
       [6] = {
         Player_Part_Head = {
@@ -2286,7 +2231,7 @@ return ReadOnly("CharAccessoryOffset", {
       },
       [9] = {
         Player_Part_Face = {
-          Location = T.RT_208,
+          Location = T.RT_209,
           scale = {
             1.05,
             0.95,
@@ -2345,7 +2290,7 @@ return ReadOnly("CharAccessoryOffset", {
         }
       },
       [8] = {
-        Player_Part_Head_B = T.RT_243
+        Player_Part_Head_B = T.RT_244
       },
       [9] = {
         Player_Part_Face = {
@@ -2365,8 +2310,8 @@ return ReadOnly("CharAccessoryOffset", {
       [1] = {
         Player_Part_Nose = T.RT_92
       },
-      [2] = T.RT_246,
-      [3] = T.RT_234,
+      [2] = T.RT_247,
+      [3] = T.RT_235,
       [4] = {
         Player_Part_Head_B = T.RT_105
       },
@@ -2401,7 +2346,7 @@ return ReadOnly("CharAccessoryOffset", {
             0
           },
           Rotation = T.RT_171,
-          scale = T.RT_247
+          scale = T.RT_248
         }
       }
     }
@@ -2419,31 +2364,33 @@ return ReadOnly("CharAccessoryOffset", {
             0.2,
             -1
           },
-          scale = T.RT_247
+          scale = T.RT_248
         }
       },
       [3] = {
         Player_Part_Eye_R = {
-          Location = T.RT_191,
+          Location = T.RT_192,
           Rotation = T.RT_116,
           scale = T.RT_159
         }
       },
-      [4] = T.RT_234,
+      [4] = T.RT_235,
       [5] = T.RT_102,
-      [6] = T.RT_188,
+      [6] = T.RT_189,
       [7] = {
         Player_Part_Mouth = {
           Location = T.RT_149,
           scale = T.RT_44
         }
       },
-      [8] = T.RT_64,
-      [9] = T.RT_65,
+      [8] = {
+        Player_Part_Head_B = T.RT_10
+      },
+      [9] = T.RT_177,
       [10] = {
         Player_Part_Face = {
           Location = T.RT_85,
-          scale = T.RT_247
+          scale = T.RT_248
         }
       }
     }
@@ -2530,31 +2477,35 @@ return ReadOnly("CharAccessoryOffset", {
   },
   [410199] = {
     OffsetId = 410199,
-    OffsetParameter = T.RT_218
+    OffsetParameter = T.RT_219
   },
   [410299] = {
     OffsetId = 410299,
     OffsetParameter = {
-      [1] = T.RT_220,
-      [2] = T.RT_223,
-      [3] = T.RT_225,
-      [4] = T.RT_195,
-      [5] = T.RT_228,
-      [6] = T.RT_188,
-      [7] = T.RT_230,
-      [8] = T.RT_185,
-      [9] = T.RT_231,
-      [10] = T.RT_221
+      [1] = T.RT_221,
+      [2] = T.RT_224,
+      [3] = T.RT_226,
+      [4] = T.RT_196,
+      [5] = T.RT_229,
+      [6] = T.RT_189,
+      [7] = T.RT_231,
+      [8] = T.RT_186,
+      [9] = T.RT_232,
+      [10] = T.RT_222
     }
   },
   [510199] = {
     OffsetId = 510199,
     OffsetParameter = {
-      [1] = T.RT_239,
-      [2] = T.RT_242,
+      [1] = T.RT_240,
+      [2] = T.RT_243,
       [3] = {
         Player_Part_Head_Fx = {
-          Location = T.RT_67
+          Location = {
+            0,
+            0,
+            -20
+          }
         }
       }
     }
@@ -2562,8 +2513,8 @@ return ReadOnly("CharAccessoryOffset", {
   [530199] = {
     OffsetId = 530199,
     OffsetParameter = {
-      [1] = T.RT_246,
-      [2] = T.RT_234
+      [1] = T.RT_247,
+      [2] = T.RT_235
     }
   }
 })

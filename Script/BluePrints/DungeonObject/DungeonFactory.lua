@@ -18,6 +18,9 @@ function DungeonFactory.CreateDungeon(ShortName, Type, Name, Env)
   end
   local Module = require(Path)
   local Value = Module(Type)
+  if Value then
+    Value.__Type__ = Name
+  end
   return Value
 end
 

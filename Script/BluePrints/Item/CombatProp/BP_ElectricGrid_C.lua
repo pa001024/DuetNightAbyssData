@@ -87,15 +87,6 @@ function BP_ElectricGrid_C:LaunchLaser()
   if self.IsActive then
     return
   end
-  if not self.Rays then
-    self.Rays = {}
-    for i, v in pairs(self.Start) do
-      local Start, End = string.find(i, "%d+", 1)
-      local Idx = tonumber(string.sub(i, Start, End))
-      self.Rays["LaserRay" .. Idx] = self:CreateLaserComponent(v, "LaserRay" .. Idx)
-    end
-    self:SetNiagara(self.Rays)
-  end
   for i, v in pairs(self.Start) do
     local Start, End = string.find(i, "%d+", 1)
     local Idx = tonumber(string.sub(i, Start, End))
@@ -114,24 +105,20 @@ function BP_ElectricGrid_C:LaunchLaser()
     LaserInfo.Debug = false
     LaserInfo.Radiu = self.LaserRadius
     LaserInfo.MultiTrace = true
-    if self.Rays["LaserRay" .. Idx] then
-      local LaserPort = Battle(self):CreateLaser(v, self.Rays["LaserRay" .. Idx], LaserInfo)
+    if not self.Lasers[Idx] then
+      local LaserPort = Battle(self):CreateBatchLaser(v, self.BatchNiagara, LaserInfo)
       if not self.HitedArray[LaserPort] then
         self.HitedArray[LaserPort] = {}
       end
       LaserPort.OnHitTarget:Add(self, self.OnHitTarget)
-      table.insert(self.Lasers, LaserPort)
-      self.Rays["LaserRay" .. Idx]:SetActive(true, false)
+      self.Lasers[Idx] = LaserPort
     end
   end
 end
 
 function BP_ElectricGrid_C:DeActiveLaser()
-  if not self.IsActive or not self.Rays then
+  if not self.IsActive or not self.Lasers then
     return
-  end
-  for i, v in pairs(self.Rays) do
-    v:SetActive(false, false)
   end
   if self.Lasers and #self.Lasers > 0 then
     for i, v in pairs(self.Lasers) do

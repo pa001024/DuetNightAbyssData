@@ -31,16 +31,18 @@ function BP_ChestInteractiveComponent_C:InitInteractiveComponent(InteractiveId)
   if nil == InteractiveId then
     return
   end
-  self.bHasId = true
   self.bCanUsed = true
-  self.bPressed = false
+  rawset(self, "bHasId", true)
+  rawset(self, "bPressed", false)
   self:InitCommonUIConfirmID(InteractiveId)
   print(_G.LogTag, "LXZ InitInteractiveComponent", InteractiveId, self:GetOwner():GetName())
-  self.InteractiveParam = DataMgr.CommonUIConfirm[InteractiveId]
-  self.MontageName = self.InteractiveParam.TriggerInterAnim
-  self.AutoRotate = self.InteractiveParam.AutoRotate
-  if self.MontageName then
-    self.InteractiveTag = self.InteractiveParam.InteractiveTag or "Interactive"
+  local InteractiveParam = DataMgr.CommonUIConfirm[InteractiveId]
+  rawset(self, "InteractiveParam", InteractiveParam)
+  local MontageName = InteractiveParam.TriggerInterAnim
+  self.MontageName = MontageName
+  self.AutoRotate = InteractiveParam.AutoRotate
+  if MontageName then
+    self.InteractiveTag = InteractiveParam.InteractiveTag or "Interactive"
   else
     self.InteractiveTag = nil
   end
@@ -112,7 +114,8 @@ end
 
 function BP_ChestInteractiveComponent_C:CheckPlayerTag(PlayerActor)
   local Res = BP_ChestInteractiveComponent_C.Super.CheckPlayerTag(self, PlayerActor)
-  if self.InteractiveParam.IfSkipAnim then
+  local InteractiveParam = rawget(self, "InteractiveParam")
+  if InteractiveParam and InteractiveParam.IfSkipAnim then
     local Owner = self:GetOwner()
     Res = Res and (PlayerActor:CanEnterInteractive() or Owner.AutoSyncProp ~= nil and Owner.AutoSyncProp.CharacterTag == "Defeated")
   end
@@ -133,7 +136,7 @@ function BP_ChestInteractiveComponent_C:StartInteractive(PlayerActor)
     else
       PlayerActor:InteractiveMechanism(Owner.Eid, PlayerActor.Eid, self.NextStateId, self.CommonUIConfirmID, true)
       if Owner.InteractiveType == Const.PressInteractive then
-        self.bPressed = true
+        rawset(self, "bPressed", true)
       end
     end
   end
@@ -145,7 +148,7 @@ end
 
 function BP_ChestInteractiveComponent_C:BtnReleased(PlayerActor, InPressTimeSeconds)
   local Owner = self:GetOwner()
-  if Owner and Owner.InteractiveType == Const.PressInteractive and self.bPressed then
+  if Owner and Owner.InteractiveType == Const.PressInteractive and rawget(self, "bPressed") then
     self:EndPressInteractive(PlayerActor, false)
   elseif Owner.InteractiveType == Const.ClickInteractive then
     self:EndInteractive(PlayerActor)
@@ -176,14 +179,14 @@ function BP_ChestInteractiveComponent_C:EndPressInteractive(PlayerActor, IsSucce
     self.CanEnd = false
   end
   if Owner and Owner.InteractiveType == Const.PressInteractive then
-    if self.bPressed then
+    if rawget(self, "bPressed") then
       if Owner.SetInteractiveCanUsed then
         Owner:SetInteractiveCanUsed(false)
       else
         self.bCanUsed = false
       end
     end
-    self.bPressed = false
+    rawset(self, "bPressed", false)
     PlayerActor:DeInteractiveMechanism(Owner.Eid, PlayerActor.Eid, ReasonId, IsSuccess, 0, true)
     self:RemoveTimer(self.Handle)
     self.Handle = nil

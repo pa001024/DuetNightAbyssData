@@ -66,7 +66,7 @@ end
 
 function WBP_BattleAim_C:SwitchIn()
   self.Root:RefreshAimColorByState(self.Root.NextActorRelation)
-  if self.WaitingFlag and not self.Root.InBulletJumpMode then
+  if self.WaitingFlag and (not self.Root.InBulletJumpMode or self.Root.LastPanel == self.Root.Panel_Aim_BulletReload) then
     self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
 end
@@ -76,7 +76,7 @@ function WBP_BattleAim_C:SwitchOut()
 end
 
 function WBP_BattleAim_C:TryShowSelf()
-  if self.Root.CurPanel == self then
+  if self.Root.CurPanel == self and (not self.Root.InBulletJumpMode or self.Root.LastPanel == self.Root.Panel_Aim_BulletReload) then
     self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
 end

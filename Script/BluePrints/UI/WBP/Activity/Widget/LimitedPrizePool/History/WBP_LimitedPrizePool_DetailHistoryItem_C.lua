@@ -61,10 +61,10 @@ function M:SetPrizeStyle(bGrandPrize, bCustomSelected)
   if bCustomSelected then
     self.CustomTag:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     if bGrandPrize then
-      self.CustomTag.WS_Type:SetActiveWidget(self.CustomTag.Text_BigReward)
+      self.CustomTag.WS_Type:SetActiveWidgetIndex(0)
       self.CustomTag.Text_BigReward:SetText(GText("UI_LimitedPrizePool_ChooseTag"))
     else
-      self.CustomTag.WS_Type:SetActiveWidget(self.CustomTag.Text_SmallReward)
+      self.CustomTag.WS_Type:SetActiveWidgetIndex(1)
       self.CustomTag.Text_SmallReward:SetText(GText("UI_LimitedPrizePool_ChooseTag"))
     end
   else

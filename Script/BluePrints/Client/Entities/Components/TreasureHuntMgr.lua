@@ -19,10 +19,14 @@ function Component:EnterWorld()
   EventManager:AddEvent(EventID.OnLoginSuccess, self, self.OnLoginSuccess)
 end
 
+function Component:LeaveWorld()
+  EventManager:RemoveEvent(EventID.OnLoginSuccess, self)
+  SoloTreasureDataModel:UnBindLevelUnlockReddotRefresh()
+end
+
 function Component:OnLoginSuccess()
   SoloTreasureDataModel:InitBoardSnapshotOnLogin()
   SoloTreasureDataModel:Init()
-  ReddotManager.PrintNodeTree("SoloTreasure_LevelListView")
 end
 
 return Component

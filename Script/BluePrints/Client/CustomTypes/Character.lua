@@ -540,29 +540,25 @@ function Char:DumpPassiveEffects(Avatar, ExtraInfo)
   end
   local PassiveEffects = {}
   local ModPolarityMap = {}
+  local ModIdSet = {}
+  local HasDuplicateModId = false
   for _, Mod in pairs(ModData) do
     Mod:CountModPolarity(ModPolarityMap)
+    if ModIdSet[Mod.ModId] then
+      HasDuplicateModId = true
+    else
+      ModIdSet[Mod.ModId] = true
+    end
   end
   for _, Mod in pairs(ModData) do
     local ModData = Mod:Data()
-    if ModData.PassiveEffects then
-      local ShouldAddPassiveEffects = true
-      if ModData.PolarityNeedNum then
-        for Polarity, NeedNum in pairs(ModData.PolarityNeedNum) do
-          if not ModPolarityMap[Polarity] or NeedNum > ModPolarityMap[Polarity] then
-            ShouldAddPassiveEffects = false
-            break
-          end
-        end
-      end
-      if ShouldAddPassiveEffects then
-        for i = 1, #ModData.PassiveEffects do
-          table.insert(PassiveEffects, {
-            ModData.PassiveEffects[i],
-            Mod.Level,
-            ModData.SummonInherit
-          })
-        end
+    if ModData.PassiveEffects and Mod:CheckPreCondition(ModPolarityMap, HasDuplicateModId) then
+      for i = 1, #ModData.PassiveEffects do
+        table.insert(PassiveEffects, {
+          ModData.PassiveEffects[i],
+          Mod.Level,
+          ModData.SummonInherit
+        })
       end
     end
   end
@@ -813,19 +809,28 @@ function Char:DumpBattleAttr(Avatar, ExtraInfo)
   for _, Mod in pairs(Mods) do
     Mod:CountModPolarity(ModPolarityMap)
   end
+  local ModIdSet = {}
+  local HasDuplicateModId = false
+  for _, Mod in pairs(Mods) do
+    if ModIdSet[Mod.ModId] then
+      HasDuplicateModId = true
+    else
+      ModIdSet[Mod.ModId] = true
+    end
+  end
   if Pet then
     Pet:CalcAttrs(BaseValues, ModRateValues, ModAddValues, ModMultiplier)
   end
   for _, Mod in pairs(Mods) do
-    Mod:CalcAttrs(BaseValues, ModRateValues, ModAddValues, ModUniteTypes, ModMultiplier, ModPolarityMap)
+    Mod:CalcAttrs(BaseValues, ModRateValues, ModAddValues, ModUniteTypes, ModMultiplier, ModPolarityMap, HasDuplicateModId)
   end
   local MeleeWeapon = ExtraInfo.MeleeWeapon
   if MeleeWeapon then
-    MeleeWeapon:CalcCharAddAttrs(BaseValues, ModRateValues, ModAddValues)
+    MeleeWeapon:CalcCharAddAttrs(BaseValues, ModRateValues, ModAddValues, self)
   end
   local RangedWeapon = ExtraInfo.RangedWeapon
   if RangedWeapon then
-    RangedWeapon:CalcCharAddAttrs(BaseValues, ModRateValues, ModAddValues)
+    RangedWeapon:CalcCharAddAttrs(BaseValues, ModRateValues, ModAddValues, self)
   end
   local TotalValues = self:CalcTotalValue(CardValues, BaseValues, ModRateValues, ModAddValues)
   local BattleAttrs = {
@@ -833,6 +838,7 @@ function Char:DumpBattleAttr(Avatar, ExtraInfo)
     CardLevelValues = CardLevelValues,
     ModRateValues = ModRateValues,
     ModAddValues = ModAddValues,
+    ModMultiplier = ModMultiplier,
     TotalValues = TotalValues
   }
   return BattleAttrs

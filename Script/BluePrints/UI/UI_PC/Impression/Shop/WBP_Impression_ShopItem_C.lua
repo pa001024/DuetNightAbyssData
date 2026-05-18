@@ -48,9 +48,10 @@ end
 function M:InitCommonItem(ShopItemData)
   local ItemContent = {}
   ItemContent.ShopItemId = ShopItemData.ItemId
-  ItemContent.Icon = ItemUtils.GetItemIconPath(ShopItemData.ItemId, ShopItemData.ItemType)
-  ItemContent.Rarity = DataMgr[ShopItemData.ItemType][ShopItemData.ItemId].Rarity or DataMgr[ShopItemData.ItemType][ShopItemData.ItemId][ShopItemData.ItemType .. "Rarity"]
+  ItemContent.TypeId = ShopItemData.ItemId
   ItemContent.ItemType = ShopItemData.ItemType
+  ItemContent.Icon = ItemUtils.GetItemIconPath(ItemContent.TypeId, ItemContent.ItemType)
+  ItemContent.Rarity = DataMgr[ShopItemData.ItemType][ShopItemData.ItemId].Rarity or DataMgr[ShopItemData.ItemType][ShopItemData.ItemId][ShopItemData.ItemType .. "Rarity"]
   self.Com_Item_Shop:Init(ItemContent)
   self.WS_Name:SetActiveWidgetIndex(0)
   if not ItemContent.Rarity then

@@ -551,14 +551,6 @@ function BP_MonsterCharacter_C:PhysStateErrorReset_Lua()
   self.Mesh:TermBodiesBelow("Root")
 end
 
-function BP_MonsterCharacter_C:RealInitInfoLua_Stamp(Context)
-  local GameMode = UGameplayStatics.GetGameMode(self)
-  if GameMode and GameMode:GetWCSubSystem() and not Context.BoolParams:FindRef("IgnoreRegionData") then
-    DebugPrint("RegisterEntryToWorldComposition,RealInitInfoLua_Stamp", self:GetName())
-    GameMode:GetWCSubSystem():RegisterEntryToWorldComposition(self)
-  end
-end
-
 AssembleComponents(BP_MonsterCharacter_C)
 if BP_MonsterCharacter_C.TickComponent then
   AMonsterCharacter.SetHasLuaComponentTick(true)

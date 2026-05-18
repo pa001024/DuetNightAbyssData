@@ -42,6 +42,7 @@ function Common_Dialog_LuaModel_CommitItem:InitItemList(SubmitId)
       })
     end
   end
+  self:HideAllGamepadShortcut()
   self.ItemSubsize:UpdateView(Params)
   return bAllEnough
 end

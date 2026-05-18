@@ -256,27 +256,32 @@ function ForgePathController:OnItemSelected(RowIndex, ColIndex, bSelectedByGamep
   local ProductDraftId = ForgeNodeData.DraftId
   if ProductDraftId then
     local DraftInfo = DataMgr.Draft[ProductDraftId]
-    if DraftInfo.Resource and #DraftInfo.Resource > 0 then
-      if RowIndex == MaxRowNum then
-        DebugPrint("Tianyi@ 当前铸造链条长度大于4,看看有什么问题", RowIndex, ColIndex)
-        return
+    if not DraftInfo.NotDraftTree then
+      if DraftInfo.Resource and #DraftInfo.Resource > 0 then
+        if RowIndex == MaxRowNum then
+          DebugPrint("Tianyi@ 当前铸造链条长度大于4,看看有什么问题", RowIndex, ColIndex)
+          return
+        end
+        local NextRowInfo = {}
+        for Index, ResInfo in ipairs(DraftInfo.Resource) do
+          local NewNode = self.PathModel:ConstructNodeFromResourceId(ResInfo, RowIndex + 1, Index)
+          table.insert(NextRowInfo, NewNode)
+        end
+        self.PathModel.RowInfos[RowIndex + 1] = NextRowInfo
+        self.PathModel.RowSelectedIndex[RowIndex + 1] = nil
       end
-      local NextRowInfo = {}
-      for Index, ResInfo in ipairs(DraftInfo.Resource) do
-        local NewNode = self.PathModel:ConstructNodeFromResourceId(ResInfo, RowIndex + 1, Index)
-        table.insert(NextRowInfo, NewNode)
-      end
-      self.PathModel.RowInfos[RowIndex + 1] = NextRowInfo
+    else
+      self.PathModel.RowInfos[RowIndex + 1] = {}
       self.PathModel.RowSelectedIndex[RowIndex + 1] = nil
     end
   else
     self.PathModel.RowInfos[RowIndex + 1] = {}
     self.PathModel.RowSelectedIndex[RowIndex + 1] = nil
   end
-  if RowIndex + 1 <= MaxRowNum then
+  if RowIndex + 1 <= MaxRowNum and self.PathModel.RowInfos[RowIndex + 1] then
     self:UpdateRowItemsView(RowIndex + 1, self.PathModel.RowInfos[RowIndex + 1])
   end
-  if RowIndex + 1 <= MaxRowNum and RowIndex + 1 > 1 then
+  if RowIndex + 1 <= MaxRowNum and RowIndex + 1 > 1 and self.PathModel.RowInfos[RowIndex + 1] then
     local NextLineItemNum = #self.PathModel.RowInfos[RowIndex + 1]
     if NextLineItemNum <= 0 then
       self:UpdateRowLinesView(RowIndex + 1, 0)

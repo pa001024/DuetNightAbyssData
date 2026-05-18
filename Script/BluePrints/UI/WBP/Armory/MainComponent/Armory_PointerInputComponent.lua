@@ -67,15 +67,16 @@ function M:OnPointerUp(MyGeometry, MouseEvent)
 end
 
 function M:OnSinglePointerUp(MyGeometry, MouseEvent)
+  local Reply
   if self.IsDragging and not self.MovedWhileDragging and self.OnBackgroundClicked then
-    self:OnBackgroundClicked()
+    Reply = self:OnBackgroundClicked()
   end
   self.MovedWhileDragging = false
   self.IsDragging = false
   if self:HasMouseCapture() then
     return UWidgetBlueprintLibrary.ReleaseMouseCapture(UWidgetBlueprintLibrary.Unhandled())
   else
-    return Unhandled
+    return Reply or Unhandled
   end
 end
 

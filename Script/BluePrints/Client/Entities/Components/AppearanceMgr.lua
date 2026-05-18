@@ -213,6 +213,26 @@ function Component:SwitchCharSkinSelectedLevel(InCallback, SkinId, NewLevel)
   self:CallServer("SwitchCharSkinSelectedLevel", Callback, SkinId, NewLevel)
 end
 
+function Component:UpWeaponSkinLevel(SkinId, NewLevel)
+  self.logger.debug("UpWeaponSkinLevel Begin", SkinId, NewLevel)
+  
+  local function Callback(Ret)
+    self.logger.debug("UpWeaponSkinLevel Callback", Ret, SkinId, NewLevel)
+  end
+  
+  self:CallServer("UpWeaponSkinLevel", Callback, SkinId, NewLevel)
+end
+
+function Component:SwitchWeaponSkinSelectedLevel(WeaponUuid, SkinId, NewLevel)
+  self.logger.debug("SwitchWeaponSkinSelectedLevel Begin", SkinId, NewLevel)
+  
+  local function Callback(Ret)
+    self.logger.debug("SwitchWeaponSkinSelectedLevel Callback", Ret, SkinId, NewLevel)
+  end
+  
+  self:CallServer("SwitchWeaponSkinSelectedLevel", Callback, WeaponUuid, SkinId, NewLevel)
+end
+
 function Component:ChangeWeaponAppearanceAccessory(WeaponUuid, AccessoryId)
   self.logger.debug("ChangeWeaponAppearanceAccessory Begin", CommonUtils.ObjId2Str(WeaponUuid), AccessoryId)
   
@@ -354,6 +374,16 @@ function Component:ChangeCharHairColors(HairId, NewColorWithPart, PlanIndex)
   end
   
   self:CallServer("ChangeCharHairColors", Callback, HairId, PlanIndex, NewColorWithPart)
+end
+
+function Component:LeaveWorld()
+  local AppearanceRankModel = require("BluePrints.UI.WBP.Appearance.AppearanceRankModel")
+  AppearanceRankModel:LeaveWorld()
+end
+
+function Component:OpenAccessoryRankUI()
+  local AppearanceRankModel = require("BluePrints.UI.WBP.Appearance.AppearanceRankModel")
+  AppearanceRankModel:Open()
 end
 
 return Component

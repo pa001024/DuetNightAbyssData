@@ -1,44 +1,35 @@
 local EDialogueNodeType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueNodeType
 local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueIterType
-local TalkFlowUTils = require("BluePrints.Story.Talk.TalkFlow.TalkFlowUTils")
+local TalkFlowNodeMap = require("BluePrints.Story.Talk.TalkFlow.TalkFlowNodeMap")
 local M = {}
 
-function M:New(FlowId, TalkTask, Comps)
+function M:New(FirstDialogueId, TalkTask, Comps)
   local TalkFlow = setmetatable({}, {__index = M})
-  rawset(TalkFlow, "FlowId", FlowId)
-  TalkFlow:BuildFlow(FlowId, TalkTask, Comps)
+  rawset(TalkFlow, "FirstDialogueId", FirstDialogueId)
+  rawset(TalkFlow, "TalkTask", TalkTask)
+  rawset(TalkFlow, "Comps", Comps)
   return TalkFlow
 end
 
-function M:CreateNodeMaps()
-  rawset(self, "CheckConditionNodeMap", {})
-  rawset(self, "DialogueNodeMap", {})
-  rawset(self, "OptionNodeMap", {})
-end
-
-function M:BuildFlow(FirstDialogueId, TalkTask, Comps)
-  if not FirstDialogueId or not DataMgr.Dialogue[FirstDialogueId] then
-    DebugPrint("FTalkFlow:BuildFlow, FirstDialogueId is Invalid", FirstDialogueId)
+function M:BuildFlow()
+  if not self.FirstDialogueId or not DataMgr.Dialogue[self.FirstDialogueId] then
+    DebugPrint("FTalkFlow:BuildFlow, FirstDialogueId is Invalid", self.FirstDialogueId)
     return
   end
-  if not TalkTask then
-    DebugPrint("FTalkFlow:BuildFlow, TalkTask is nil", FirstDialogueId)
+  if not self.TalkTask then
+    DebugPrint("FTalkFlow:BuildFlow, TalkTask is nil", self.FirstDialogueId)
     return
   end
-  self:CreateNodeMaps()
-  local NodeMaps = {
-    CheckConditionNodeMap = self.CheckConditionNodeMap,
-    DialogueNodeMap = self.DialogueNodeMap,
-    OptionNodeMap = self.OptionNodeMap
-  }
   local NodeEvents = {
     EventReceiver = self,
     OnNodeEnter = self.OnNodeEnter,
     OnNodeCreated = self.OnNodeCreated,
     OnFlowCreated = self.OnFlowCreated
   }
-  self.EndNode = TalkFlowUTils:GetOrCreateNode("End", nil, nil, nil, nil, NodeEvents)
-  self.StartNode = TalkFlowUTils:GetOrCreateNode("Start", FirstDialogueId, TalkTask, Comps, NodeMaps, NodeEvents)
+  local NodeMaps = TalkFlowNodeMap:New(self.TalkTask, self.Comps, NodeEvents)
+  self.NodeMaps = NodeMaps
+  self.EndNode = NodeMaps:GetOrCreateNode("End")
+  self.StartNode = NodeMaps:GetOrCreateNode("Start", self.FirstDialogueId)
   self.CurrentNode = self.StartNode
 end
 
@@ -74,14 +65,23 @@ function M:Resume()
   end
 end
 
+function M:Stop()
+  if self.CurrentNode then
+    self.CurrentNode:Stop()
+  else
+    DebugPrint("FTalkFlow:Stop(),CurrentNode is nil")
+  end
+  self:End()
+end
+
 function M:Skip()
   local bSkipFail = self.CurrentNode:Skip()
   return not bSkipFail
 end
 
 function M:End()
-  if self.OnEndDelegate then
-    self.OnEndDelegate()
+  if self.OnFlowEndObj and self.OnFlowEndEvent then
+    self.OnFlowEndEvent(self.OnFlowEndObj, self)
   end
   self:Clear()
 end
@@ -102,13 +102,19 @@ function M:OnNodeCreated(Node)
   end
 end
 
-function M:BindOnFlowCreatedEvent(Event)
+function M:BindOnFlowEndEvent(Obj, Func)
+  self.OnFlowEndObj = Obj
+  self.OnFlowEndEvent = Func
+end
+
+function M:BindOnFlowCreatedEvent(Obj, Event)
+  self.OnFlowCreatedObj = Obj
   self.OnFlowCreatedEvent = Event
 end
 
 function M:OnFlowCreated(Flow, ParallelNode, WaitAllNode)
-  if self.OnFlowCreatedEvent then
-    self.OnFlowCreatedEvent(Flow, ParallelNode, WaitAllNode)
+  if self.OnFlowCreatedObj and self.OnFlowCreatedEvent then
+    self.OnFlowCreatedEvent(self.OnFlowCreatedObj, Flow, ParallelNode, WaitAllNode)
   end
 end
 
@@ -122,6 +128,9 @@ function M:OnNodeEnter(Node)
     return
   end
   self.CurrentNode = Node
+  if Node:GetType() == EDialogueNodeType.End then
+    self:End()
+  end
 end
 
 function M:GetCurrentNode()

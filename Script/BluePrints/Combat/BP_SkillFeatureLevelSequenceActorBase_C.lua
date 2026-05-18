@@ -67,6 +67,9 @@ function M:ReceiveTick(DeltaSeconds)
 end
 
 function M:SetInstanceData()
+  if self.bIgnoreSkillFeatureActorTransform then
+    return
+  end
   self.bOverrideInstanceData = true
   local DefaultInstanceData = self.DefaultInstanceData
   DefaultInstanceData.TransformOriginActor = self

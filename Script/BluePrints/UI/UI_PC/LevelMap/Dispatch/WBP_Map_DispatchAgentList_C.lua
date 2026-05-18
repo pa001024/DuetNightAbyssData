@@ -110,7 +110,7 @@ function M:Init(Owner)
   self.Chars = {}
   self.UuidList = {}
   for _, Char in pairs(Avatar.Chars) do
-    if Char.CharId ~= self.MaleId and Char.CharId ~= self.FemaleId then
+    if 1 ~= DataMgr.Char[Char.CharId].BlockDispatch then
       self.Chars[CommonUtils.ObjId2Str(Char.Uuid)] = Char.CharId
       table.insert(self.UuidList, CommonUtils.ObjId2Str(Char.Uuid))
     end

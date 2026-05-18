@@ -31,6 +31,7 @@ end
 function M:OnListItemObjectSet(Content)
   Content.UI = self
   self.IsEnter = nil
+  self.ForceHideGamepadKey = Content and Content.ForceHideGamepadKey == true
   self.Owner = Content.Owner
   self.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
   self:SetText(Content.Text)
@@ -63,6 +64,7 @@ function M:Destruct()
   self.BindObj = nil
   self.OnClick = nil
   self.bForbidden = nil
+  self.ForceHideGamepadKey = nil
   self.Button_Area.OnClicked:Remove(self, self.BtnAreaOnClicked)
   self.Button_Forbid.OnClicked:Remove(self, self.BtnAreaOnClicked)
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
@@ -112,7 +114,7 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
 end
 
 function M:UpdateUIStyleInPlatform()
-  local IsShow = self.IsEnter and self.CurInputDeviceType == ECommonInputType.Gamepad
+  local IsShow = not self.ForceHideGamepadKey and self.IsEnter and self.CurInputDeviceType == ECommonInputType.Gamepad
   self.Key_Text:SetVisibility(IsShow and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
 end
 

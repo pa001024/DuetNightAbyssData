@@ -25,6 +25,11 @@ return ReadOnly("WikiSubType", {
     SubType = 104,
     SubTypeText = "SubType_1_Other"
   },
+  [105] = {
+    MainType = 1,
+    SubType = 105,
+    SubTypeText = "SubType_1_Yiseer"
+  },
   [201] = {
     MainType = 2,
     SubType = 201,

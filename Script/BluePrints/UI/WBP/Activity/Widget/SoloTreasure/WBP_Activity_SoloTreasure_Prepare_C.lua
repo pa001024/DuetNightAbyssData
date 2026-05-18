@@ -10,6 +10,7 @@ local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory
 local EMCache = require("EMCache.EMCache")
 local TimeUtils = require("Utils.TimeUtils")
 local CommonUtils = require("Utils.CommonUtils")
+local SquadPresetUtils = require("Utils.SquadPresetUtils")
 M._components = {
   "BluePrints.UI.UI_PC.Common.SquadBuildComponent",
   "BluePrints.UI.WBP.Activity.Widget.SoloTreasure.WBP_Activity_SoloTreasure_Prepare_GamepadComp"
@@ -476,6 +477,8 @@ function M:Enter(DungeonType, DungeonId, IsHardMode)
   if nil == SavedSquad then
     SavedSquad = {BagIndex = 1}
   end
+  local Avatar = GWorld:GetAvatar()
+  SquadPresetUtils.FixMainPlayerInProps(Avatar, SavedSquad)
   self.TeamInfos = SavedSquad
   self:InitWidget()
   self:InitDungeonData(DungeonType, DungeonId)
@@ -1004,6 +1007,7 @@ function M:ReceiveEnterStateSelf(StackAction)
     self:ReInitListItems()
     self.TeamInfos = self:GetCurrentSquad()
     self:InitDetailPanels()
+    self:UpdateCharConflict()
     self:RestoreFocusOnReturn()
     local HasItemRemoved = false
     local SlotNamesToCheck = {

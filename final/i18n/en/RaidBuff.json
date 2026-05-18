@@ -46,5 +46,17 @@
       "10%",
       "50%"
     ]
+  },
+  {
+    "RaidBuffID": 14,
+    "RaidBuffDes": "Umbro characters gain 10% PEN stats for every 12% Morale, up to 50%.",
+    "RaidBuffParameter": [
+      "12%",
+      "10%",
+      "50%",
+      null,
+      "10%",
+      "50%"
+    ]
   }
 ]

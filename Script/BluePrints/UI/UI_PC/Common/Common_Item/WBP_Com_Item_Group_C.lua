@@ -6,7 +6,7 @@ local ComItemPriority = {
   ComItemMoney = 3,
   ComItemStartLevel = 4,
   ComItemCustomTag = 5,
-  DraftCompendiumItem = 6
+  DraftCompendiumItem = 7
 }
 
 function M:Construct()

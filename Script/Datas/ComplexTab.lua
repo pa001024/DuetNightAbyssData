@@ -1,3 +1,5 @@
+local T = {}
+T.RT_1 = {WEEK = 1}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -52,7 +54,7 @@ return ReadOnly("ComplexTab", {
     CoinId = {215},
     EntrySort = 96,
     InterfaceJumpId = 55,
-    RefreshTime = {WEEK = 1},
+    RefreshTime = T.RT_1,
     ShopEntryId = 5,
     ShopName = "UI_RougeExchangeShop_Title",
     SubTabId = 2002
@@ -77,5 +79,26 @@ return ReadOnly("ComplexTab", {
     ShopEntryId = 7,
     ShopName = "WeeklyDungeonShop",
     SubTabId = 2002
+  },
+  [8] = {
+    BackgroundIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_JumpEntry_Guild_1172_2850.T_Shop_JumpEntry_Guild_1172_2850'",
+    BackgroundVx = "Vx_Icon_Guild",
+    CoinId = {4006},
+    EntrySort = 90,
+    InterfaceJumpId = 102,
+    RefreshTime = T.RT_1,
+    ShopEntryId = 8,
+    ShopName = "UI_GuildShop",
+    SubTabId = 2001
+  },
+  [9] = {
+    BackgroundIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_JumpEntry_Appearence_1172_2850.T_Shop_JumpEntry_Appearence_1172_2850'",
+    BackgroundVx = "Vx_Icon_Appearence",
+    CoinId = {112},
+    EntrySort = 89,
+    InterfaceJumpId = 105,
+    ShopEntryId = 9,
+    ShopName = "UI_AppearenceShop",
+    SubTabId = 2001
   }
 })

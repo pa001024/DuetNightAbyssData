@@ -105,12 +105,12 @@ function M:PostInitContent(Params, PopupData, Owner)
         TicketId = self.LastTicketId
       end
     end
-    self:OnItemClicked(TicketId, true)
+    self:OnItemClicked(TicketId, true, true)
   end
   self.LastTickedItem:SetFocus()
 end
 
-function M:OnItemClicked(TicketId, bNotPlayAnim)
+function M:OnItemClicked(TicketId, bNotPlayAnim, bIgnoreStopAutoSelect)
   if self.bIsInTeam then
     self.Owner:ForbidRightBtn(false)
   end
@@ -128,9 +128,11 @@ function M:OnItemClicked(TicketId, bNotPlayAnim)
       local LastTicketId = GWorld.GameInstance:GetTicketId(TicketId)
       if not self.bIsInMultiDungeon and TicketId ~= LastTicketId then
         GWorld.GameInstance:SetTicketId(TicketId)
-        self.Owner:GetButtonBar().Btn_Yes:SetText(GText("UI_CONFIRM_SELECTION"))
-        self:RemoveTimer("OnAutoSelectCountDown")
-        self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.Collapsed)
+        if not bIgnoreStopAutoSelect then
+          self.Owner:GetButtonBar().Btn_Yes:SetText(GText("UI_CONFIRM_SELECTION"))
+          self:RemoveTimer("OnAutoSelectCountDown")
+          self.VB_CountDown:SetVisibility(UE4.ESlateVisibility.Collapsed)
+        end
       end
     else
       AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_disable", nil, nil)

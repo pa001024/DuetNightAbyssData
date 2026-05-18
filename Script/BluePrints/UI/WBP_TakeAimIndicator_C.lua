@@ -54,6 +54,7 @@ function WBP_TakeAimIndicator_C:Initialize(Initializer)
     "Bar"
   }
   self.AllCurState = {"Normal", "Reload"}
+  self.CorrectTag = {Shooting = 1, Skill = 1}
   self.BarColor = nil
   self.CurMagazineCapacity = nil
   self.AllColorIntensty = {}
@@ -67,8 +68,8 @@ function WBP_TakeAimIndicator_C:InitListenEvent()
   EventManager:AddEvent(EventID.OutOfBullet, self, self.ShowOutOfBulletTip)
   EventManager:AddEvent(EventID.FullOfMagazine, self, self.ShowFullOfMagazineTip)
   EventManager:AddEvent(EventID.OnCharForbidWeapon, self, self.HideOrShowTargetAim)
-  EventManager:AddEvent(EventID.OnEnterBulletJumpAim, self, self.ShowBulletJumpAim)
-  EventManager:AddEvent(EventID.OnQuitBulletJumpAim, self, self.HideBulletJumpAim)
+  EventManager:AddEvent(EventID.OnEnterBulletJumpAim, self, self.OnEnterBulletJumpAim)
+  EventManager:AddEvent(EventID.OnQuitBulletJumpAim, self, self.OnQuitBulletJumpAim)
 end
 
 function WBP_TakeAimIndicator_C:Init(Player)
@@ -386,10 +387,13 @@ function WBP_TakeAimIndicator_C:Destruct()
   self.UpdateAccumulateStateTimer = nil
   self.PlayReloadAnimTimer = nil
   self.LerpSetAmmoBarPercentTimer = nil
+  if IsValid(self.OwnerPlayer) and self.OwnerPlayer.CharFSMComp then
+    self.OwnerPlayer.CharFSMComp.OnAfterTagChanged:Remove(self, self.OnPlayerTagChanged)
+  end
+  self.OwnerPlayer = nil
 end
 
 function WBP_TakeAimIndicator_C:ShowBulletJumpAim()
-  self.InBulletJumpMode = true
   if self.CurPanel then
     self.CurPanel:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -404,7 +408,6 @@ function WBP_TakeAimIndicator_C:ShowBulletJumpAim()
 end
 
 function WBP_TakeAimIndicator_C:HideBulletJumpAim()
-  self.InBulletJumpMode = false
   if self.Aim_BulletJump then
     self.Aim_BulletJump:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -413,6 +416,40 @@ function WBP_TakeAimIndicator_C:HideBulletJumpAim()
   end
   if self.AmmoBarPanel then
     self.AmmoBarPanel:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  end
+end
+
+function WBP_TakeAimIndicator_C:OnEnterBulletJumpAim()
+  if not IsValid(self.OwnerPlayer) or not self.OwnerPlayer.CharFSMComp then
+    return
+  end
+  self.InBulletJumpMode = true
+  self.OwnerPlayer.CharFSMComp.OnAfterTagChanged:Add(self, self.OnPlayerTagChanged)
+  local Tag = self.OwnerPlayer:GetCharacterTag()
+  if not self.CorrectTag[Tag] then
+    self:ShowBulletJumpAim()
+  end
+end
+
+function WBP_TakeAimIndicator_C:OnQuitBulletJumpAim()
+  if not IsValid(self.OwnerPlayer) or not self.OwnerPlayer.CharFSMComp then
+    return
+  end
+  self.OwnerPlayer.CharFSMComp.OnAfterTagChanged:Remove(self, self.OnPlayerTagChanged)
+  self:HideBulletJumpAim()
+end
+
+function WBP_TakeAimIndicator_C:OnPlayerTagChanged(PlayerEid, OldTag, NewTag)
+  if not IsValid(self.OwnerPlayer) then
+    return
+  end
+  if self.OwnerPlayer.Eid ~= PlayerEid then
+    return
+  end
+  if self.CorrectTag[NewTag] then
+    self:HideBulletJumpAim()
+  else
+    self:ShowBulletJumpAim()
   end
 end
 

@@ -19,7 +19,7 @@ function M:Construct()
   self.VideoPlayer:HideSkipButton(true)
   self.VideoPlayer:BindEventToMediaPlayEnd(self, self.OnVideoPlayEnd)
   local PlatformName = UE4.UGameplayStatics.GetPlatformName()
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     EventManager:AddEvent(EventID.ApplicationWillEnterBackground, self, self.OnApplicationWillEnterBackground)
     EventManager:AddEvent(EventID.ApplicationHasEnteredForeground, self, self.OnApplicationHasEnteredForeground)
   end

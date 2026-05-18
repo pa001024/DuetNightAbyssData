@@ -608,15 +608,29 @@ function TaskUtils:QuestOpenMainMapByQuestTrack()
       return
     end
     local TaskName = DataMgr.QuestChain[Avatar.TrackingQuestChainId].QuestChainName
-    local Params = {
-      ShortText = string.format("%s <H>%s</>", GText("UI_Prompt_QuestTrans"), GText(TaskName)),
-      LeftCallbackObj = self,
-      LeftCallbackFunction = CancelDeliverTo,
-      RightCallbackObj = self,
-      RightCallbackFunction = DoDeliverTo,
-      CloseBtnCallbackObj = self,
-      CloseBtnCallbackFunction = CancelDeliverTo
-    }
+    local Params
+    local Language = CommonConst.SystemLanguage
+    if Language == CommonConst.SystemLanguages.KR then
+      Params = {
+        ShortText = string.format("<H>%s</> %s", GText(TaskName), GText("UI_Prompt_QuestTrans")),
+        LeftCallbackObj = self,
+        LeftCallbackFunction = CancelDeliverTo,
+        RightCallbackObj = self,
+        RightCallbackFunction = DoDeliverTo,
+        CloseBtnCallbackObj = self,
+        CloseBtnCallbackFunction = CancelDeliverTo
+      }
+    else
+      Params = {
+        ShortText = string.format("%s <H>%s</>", GText("UI_Prompt_QuestTrans"), GText(TaskName)),
+        LeftCallbackObj = self,
+        LeftCallbackFunction = CancelDeliverTo,
+        RightCallbackObj = self,
+        RightCallbackFunction = DoDeliverTo,
+        CloseBtnCallbackObj = self,
+        CloseBtnCallbackFunction = CancelDeliverTo
+      }
+    end
     UIManager:ShowCommonPopupUI(100160, Params)
   end
 end
@@ -1155,6 +1169,20 @@ function TaskUtils:JudgeCanTrack()
     return true
   end
   return false
+end
+
+function TaskUtils:SetBlockQuestToStart(CharId)
+  self.ChoosenCharId = CharId
+end
+
+function TaskUtils:GetChooseCharId()
+  return self.ChoosenCharId
+end
+
+function TaskUtils:GetAndClearChooseCharId()
+  local CharId = self.ChoosenCharId
+  self.ChoosenCharId = nil
+  return CharId
 end
 
 return TaskUtils

@@ -3,6 +3,7 @@ local M = {
 }
 
 function M:Construct()
+  self.GeneralSkinRandomCache = {}
 end
 
 function M:UpdatePreviewActor(ItemData, WeaponCameraOffset)
@@ -114,23 +115,32 @@ end
 function M:_GenerateSkinSeriesParams(ItemData, Avatar)
   local CharId = Avatar.Chars[Avatar.CurrentChar].CharId
   local SkinInfo = DataMgr.Skin
-  local Gender2RoleIds = Const.DefaultAttributeMaster
-  local PlayerCharId = Gender2RoleIds[Avatar.Sex]
-  local Params
-  for SkinId, Info in pairs(SkinInfo) do
-    if Info.SkinSeries == ItemData.SkinSeries and Info.CharId == CharId then
-      Params = {Type = "Char", SkinId = SkinId}
-      break
-    elseif Info.SkinSeries == ItemData.SkinSeries and Info.CharId == PlayerCharId then
-      Params = {Type = "Char", SkinId = SkinId}
-    end
-  end
-  if not Params then
+  local CandidateSkinIds = {}
+  local SkinSeries = ItemData.SkinSeries
+  if not SkinSeries then
     return nil
   end
+  for SkinId, Info in pairs(SkinInfo) do
+    if Info.SkinSeries == SkinSeries and Info.CharId == CharId then
+      ItemData.ItemType = "Skin"
+      ItemData.TypeId = SkinId
+      return {Type = "Char", SkinId = SkinId}
+    elseif Info.SkinSeries == SkinSeries then
+      table.insert(CandidateSkinIds, SkinId)
+    end
+  end
+  if 0 == #CandidateSkinIds then
+    return nil
+  end
+  self.GeneralSkinRandomCache = self.GeneralSkinRandomCache or {}
+  local RandomSkinId = self.GeneralSkinRandomCache[SkinSeries]
+  if not RandomSkinId then
+    RandomSkinId = CandidateSkinIds[math.random(1, #CandidateSkinIds)]
+    self.GeneralSkinRandomCache[SkinSeries] = RandomSkinId
+  end
   ItemData.ItemType = "Skin"
-  ItemData.TypeId = Params.SkinId
-  return Params
+  ItemData.TypeId = RandomSkinId
+  return {Type = "Char", SkinId = RandomSkinId}
 end
 
 function M:_GenerateWeaponSkinParams(ItemData)
@@ -592,6 +602,7 @@ function M:ApplySuitPreview(ItemData)
   end
   self.ActorController:HidePlayerActor(self.UIName, false)
   self:HideSingleWeapon(true)
+  self.ActorController:DestroyAllPlayerWeapons()
   local AppearanceInfo = {
     CharId = -1,
     SkinId = -1,
@@ -625,10 +636,10 @@ function M:ApplySingleRewardItem(rewardType, rewardId, AppearanceInfo)
     AppearanceInfo.SkinId = rewardId
     self:HideZoomKey(false)
   elseif "WeaponSkin" == rewardType then
-    self:HidePlayerWeapon(false)
     local WeaponData = self:CreatePreviewTargetData({Type = "Weapon", SkinId = rewardId})
     self.ActorController:ChangeWeaponModel(WeaponData)
     self.ActorController:ChangePlayerWeaponSkin(rewardId)
+    self:HidePlayerWeapon(false)
     local Tag = WeaponData:HasTag("Melee") and "Melee" or "Ranged"
     self.ActorController.DelayFrame = 30
     self.ActorController.bPlaySameMontage = true
@@ -644,6 +655,7 @@ function M:ApplySingleRewardItem(rewardType, rewardId, AppearanceInfo)
 end
 
 function M:RevertToSingleItemPreview(ItemData)
+  self:SetupDefaultCharacterModel()
   local itemType = ItemData.ItemType
   if "Skin" == itemType then
     self:RevertToSkinPreview(ItemData)
@@ -659,9 +671,11 @@ end
 function M:RevertToSkinPreview(ItemData)
   local CharId = DataMgr.Skin[ItemData.TypeId].CharId
   local CharSkinId = ItemData.TypeId
+  local SkinLevel = ItemData.SkinLevel
   local AppearanceInfo = {
     CharId = CharId,
     SkinId = CharSkinId,
+    SkinLevel = SkinLevel,
     AccessorySuit = {}
   }
   self.ActorController:ChangeCharAppearance(AppearanceInfo)
@@ -779,10 +793,18 @@ function M:HidePlayerWeapon(IsHidden)
 end
 
 function M:HideSingleWeapon(IsHidden)
-  if not UIManager(self).ShowWeapon then
+  local UIManager = UIManager(self)
+  if not UIManager then
     return
   end
-  UIManager(self).ShowWeapon:SetActorHideTag(self.UIName, IsHidden)
+  if not UIManager.ShowWeapon then
+    return
+  end
+  UIManager.ShowWeapon:SetActorHideTag(self.UIName, IsHidden)
+  if not UIManager.ShowWeaponReflection then
+    return
+  end
+  UIManager.ShowWeaponReflection:SetActorHideTag(self.UIName, IsHidden)
 end
 
 function M:HideAllPreviewActor()
@@ -855,6 +877,7 @@ function M:DestroyPreviewActor()
     self.ActorController:OnDestruct()
     self.ActorController = nil
   end
+  self.GeneralSkinRandomCache = nil
 end
 
 function M:ClosePreview()

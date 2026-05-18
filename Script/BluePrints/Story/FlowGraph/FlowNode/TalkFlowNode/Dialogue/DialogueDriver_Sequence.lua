@@ -51,12 +51,12 @@ function SequenceDriver:BindSequenceActors()
   local TalkContext = GWorld.GameInstance:GetTalkContext()
   local TalkTask = Node:TryGetTalkTask()
   local BindNpcs = TalkTask.TalkTaskData.TalkActors
-  local LevelSequence = Node.LevelSequence
+  local LevelSequence = Node:GetSequenceByGender()
   for _, NpcData in pairs(BindNpcs) do
     local UnitId = NpcData.TalkActorId
     local TalkActorData = TalkContext:GetTalkActorData(TalkTask, UnitId)
     if TalkActorData and TalkActorData.TalkActor then
-      local NpcIdTag = tostring(UnitId)
+      local NpcIdTag = tostring(NpcData.OriginTalkActorId or UnitId)
       DialogueAssets:TryCacheNpcTransform(TalkActorData.TalkActor)
       if UTalkFunctionLibrary.IsSequenceOwnTag(LevelSequence, NpcIdTag) then
         LevelSequenceActor:AddBindingByTag(NpcIdTag, TalkActorData.TalkActor, false)
@@ -71,7 +71,8 @@ end
 
 function SequenceDriver:TryStartSequence()
   local Node = self.Node
-  if not IsValid(Node.LevelSequence) then
+  local LevelSequence = Node:GetSequenceByGender()
+  if not IsValid(LevelSequence) then
     DebugPrint("WXT__DialogueDriver_Sequence:TryStartSequence", "LevelSequence invalid")
     return false
   end

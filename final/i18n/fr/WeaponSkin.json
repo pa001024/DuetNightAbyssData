@@ -66,9 +66,17 @@
   {
     "id": 3010109,
     "name": "Chant du Firmament – Espadon",
-    "desc": "",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Claymore_Bixiao",
     "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010110,
+    "name": "Le Cri – Espadon",
+    "desc": "",
+    "icon": "T_Head_Claymore_Nahan",
+    "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -120,6 +128,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010207,
+    "name": "Plume d’absolution",
+    "desc": "À la lumière de l’aube s’écrit le jugement de l’absolution.",
+    "icon": "T_Head_Sword_Shezui",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010301,
     "name": "Scherzo de l’aurore",
     "desc": "Où se cache le soleil ? Là, regarde... il danse au creux de ma paume.",
@@ -157,6 +173,22 @@
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010306,
+    "name": "Le Cri – Arc long",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Bow_Nahan01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010307,
+    "name": "Le Cri – Arc court",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Bow_Nahan02",
+    "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -216,6 +248,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010408,
+    "name": "Invitation cosmique – Arme d’hast",
+    "desc": "Écoutez l’appel éternel venu des étoiles.",
+    "icon": "T_Head_Polearm_Huanyu",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010501,
     "name": "Raz-de-marée requin",
     "desc": "Quel mauvais dessein pourrait bien avoir un adorable petit requin ?",
@@ -237,6 +277,22 @@
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Machinegun_Bixiao",
     "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010504,
+    "name": "Violon de cuivre",
+    "desc": "L’étui du violon s’ouvre, offrant à tous une mélodie mortelle tissée de cuivre.",
+    "icon": "T_Head_Machinegun_Huangtong",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010505,
+    "name": "Le Cri – Fusil d’assaut",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Machinegun_Nahan",
+    "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -320,6 +376,30 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010711,
+    "name": "Invitation cosmique – Katana",
+    "desc": "Écoutez l’appel éternel venu des étoiles.",
+    "icon": "T_Head_Katana_Huanyu",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010713,
+    "name": "Comète azurée",
+    "desc": "Une traînée d’azur fend le ciel en dispersant des fragments d’étoiles.",
+    "icon": "T_Head_Katana_Youlan",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010715,
+    "name": "Le Cri – Katana",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Katana_Nahan",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010801,
     "name": "Héritage paternel – Épée-fouet",
     "desc": "Une épée-fouet singulière, censée incarner l’autorité d’un père : ferme, formatrice... et traumatisante juste ce qu’il faut.",
@@ -360,6 +440,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3010806,
+    "name": "Invitation cosmique – Épée-fouet",
+    "desc": "Écoutez l’appel éternel venu des étoiles.",
+    "icon": "T_Head_Swordwhip_Huanyu",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3010901,
     "name": "Tout est miaou",
     "desc": "Miaou~~~",
@@ -369,10 +457,18 @@
   },
   {
     "id": 3010902,
-    "name": "",
+    "name": "Chant du Firmament – Lance-grenades",
     "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
     "icon": "T_Head_Cannon_Bixiao",
     "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3010903,
+    "name": "Le Cri – Lance-grenades",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Cannon_Nahan",
+    "rarity": 4,
     "unlock": "Disponible dans la boutique"
   },
   {
@@ -400,6 +496,14 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3011004,
+    "name": "Le Cri – Fusil à pompe",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Shotgun_Nahan",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3011101,
     "name": "Galette de chat n° 1",
     "desc": "Miaou.",
@@ -408,11 +512,43 @@
     "unlock": "Disponible dans la boutique"
   },
   {
+    "id": 3011102,
+    "name": "Chant du Firmament – Pistolet",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Pistol_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011103,
+    "name": "Le Cri – Pistolet",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Pistol_Nahan",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 3011201,
     "name": "Galette de chat n° 2",
     "desc": "Miaou miaou.",
     "icon": "T_Head_Crossbow_Maobing",
     "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011203,
+    "name": "Chant du Firmament – Doubles pistolets",
+    "desc": "Indemne de la poussière du monde, elle fend les flots d’azur sans jamais faiblir.",
+    "icon": "T_Head_Crossbow_Bixiao",
+    "rarity": 5,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 3011205,
+    "name": "Le Cri – Doubles pistolets",
+    "desc": "GRAAAAH—————— !",
+    "icon": "T_Head_Crossbow_Nahan",
+    "rarity": 4,
     "unlock": "Disponible dans la boutique"
   }
 ]

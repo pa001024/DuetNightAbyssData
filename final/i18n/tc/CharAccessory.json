@@ -680,6 +680,14 @@
     "unlock": "透過活動獲得"
   },
   {
+    "id": 10092,
+    "name": "祀煙香爐·涅白",
+    "desc": "我們究竟是在祭天，還是在祭人？",
+    "icon": "T_Fashion_Head55",
+    "rarity": 3,
+    "unlock": "透過活動獲得"
+  },
+  {
     "id": 10094,
     "name": "羽毛筆·涅白",
     "desc": "寫下屬於我們的故事。",
@@ -760,6 +768,246 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 10106,
+    "name": "野性髮飾·鉛灰",
+    "desc": "靈動、可愛、活潑、美麗……世上一切對美好的形容詞在狼耳朵的面前都會顯得黯淡無光，這就是狼耳朵那讓人無法拒絕的魔力……這台詞總感覺在哪裡說過，應該是錯覺吧。",
+    "icon": "T_Fashion_Head63_04",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10107,
+    "name": "野性髮飾·墨玉",
+    "desc": "靈動、可愛、活潑、美麗……世上一切對美好的形容詞在狼耳朵的面前都會顯得黯淡無光，這就是狼耳朵那讓人無法拒絕的魔力……這台詞總感覺在哪裡說過，應該是錯覺吧。",
+    "icon": "T_Fashion_Head63_03",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10108,
+    "name": "野性髮飾·銹紅",
+    "desc": "靈動、可愛、活潑、美麗……世上一切對美好的形容詞在狼耳朵的面前都會顯得黯淡無光，這就是狼耳朵那讓人無法拒絕的魔力……這台詞總感覺在哪裡說過，應該是錯覺吧。",
+    "icon": "T_Fashion_Head63_02",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10109,
+    "name": "野性髮飾·黛藍",
+    "desc": "靈動、可愛、活潑、美麗……世上一切對美好的形容詞在狼耳朵的面前都會顯得黯淡無光，這就是狼耳朵那讓人無法拒絕的魔力……這台詞總感覺在哪裡說過，應該是錯覺吧。",
+    "icon": "T_Fashion_Head63_01",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10110,
+    "name": "喵音髮飾·薄荷",
+    "desc": "這就是真正的貓咪音樂。",
+    "icon": "T_Fashion_Head65_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10111,
+    "name": "喵音髮飾·涅白",
+    "desc": "這就是真正的貓咪音樂。",
+    "icon": "T_Fashion_Head65_03",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10112,
+    "name": "喵音髮飾·墨玉",
+    "desc": "這就是真正的貓咪音樂。",
+    "icon": "T_Fashion_Head65_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10113,
+    "name": "喵音髮飾·銹紅",
+    "desc": "這就是真正的貓咪音樂。",
+    "icon": "T_Fashion_Head65_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10114,
+    "name": "天之痕·涅白",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10115,
+    "name": "天之痕·鎏金",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10116,
+    "name": "天之痕·銹紅",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10117,
+    "name": "天之痕·絳紫",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_04",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10118,
+    "name": "暮色緞帶·墨玉",
+    "desc": "夜幕如絲，無人可解。",
+    "icon": "T_Fashion_Head68_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10119,
+    "name": "暮色緞帶·涅白",
+    "desc": "夜幕如絲，無人可解。",
+    "icon": "T_Fashion_Head68_03",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10120,
+    "name": "暮色緞帶·焦糖",
+    "desc": "夜幕如絲，無人可解。",
+    "icon": "T_Fashion_Head68_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10121,
+    "name": "暮色緞帶·白櫻",
+    "desc": "夜幕如絲，無人可解。",
+    "icon": "T_Fashion_Head68_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10122,
+    "name": "充電中",
+    "desc": "電量提示，此為充電中。",
+    "icon": "T_Fashion_Head59_04",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10123,
+    "name": "電量充足",
+    "desc": "電量提示，此為電量充足。",
+    "icon": "T_Fashion_Head59_03",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10124,
+    "name": "電量較低",
+    "desc": "電量提示，此為電量較低。",
+    "icon": "T_Fashion_Head59_02",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10125,
+    "name": "電量告急",
+    "desc": "電量提示，此為電量告急。",
+    "icon": "T_Fashion_Head59_01",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10126,
+    "name": "路障·銹紅",
+    "desc": "此路不通。",
+    "icon": "T_Fashion_Hat14_04",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10127,
+    "name": "路障·碧綠",
+    "desc": "此路不通。",
+    "icon": "T_Fashion_Hat14_03",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10128,
+    "name": "路障·杏黃",
+    "desc": "此路不通。",
+    "icon": "T_Fashion_Hat14_02",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10129,
+    "name": "路障·鉛灰",
+    "desc": "此路不通。",
+    "icon": "T_Fashion_Hat14_01",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10130,
+    "name": "啾啾鶯",
+    "desc": "由于阿特拉西亚大陆知名童话故事《啾啾的奇妙冒险》的传播，很多人误认为啾啾莺是那本童话故事的主角。因此每本新书出版时，作者都会在书中强调，“啾啾是小鸡，啾啾莺是小鸟！”",
+    "icon": "T_Fashion_Head64",
+    "rarity": 4,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 10131,
+    "name": "施氏石獅",
+    "desc": "辟邪退灾。",
+    "icon": "T_Fashion_Head66",
+    "rarity": 4,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 10132,
+    "name": "皎皎探測裝置·其一",
+    "desc": "探險家皎皎設置的測量裝置，激活後應該可以收集她需要的數據。",
+    "icon": "T_Fashion_Head67_01",
+    "rarity": 3,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 10139,
+    "name": "节日气球·黛蓝",
+    "desc": "每逢佳節，人們便會將它們系在長椅上、門廊邊，隨著微風輕輕搖晃，投下斑駁可愛的光影。",
+    "icon": "T_Fashion_Head60_04",
+    "rarity": 3,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 10140,
+    "name": "鐵之花",
+    "desc": "將生命禁錮在鋼鐵與機械之中，永遠是煉金術師們研究的課題之一。",
+    "icon": "T_Fashion_Head62",
+    "rarity": 3,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 10149,
+    "name": "节日气球·薄荷",
+    "desc": "每逢佳節，人們便會將它們系在長椅上、門廊邊，隨著微風輕輕搖晃，投下斑駁可愛的光影。",
+    "icon": "T_Fashion_Head60_02",
+    "rarity": 3,
+    "unlock": "透過活動獲得"
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -796,6 +1044,14 @@
     "name": "俏皮律動",
     "desc": "搖搖晃晃，共舞一節俏皮的旋律。",
     "icon": "T_Fashion_Fx16",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 11007,
+    "name": "永恆花海",
+    "desc": "繁花盛放於天使墜落之地。",
+    "icon": "T_Fashion_Fx27",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   },
@@ -860,6 +1116,70 @@
     "name": "榛子嚴選",
     "desc": "雖然過程有點奇怪和混亂，但總之確實是榛子選出來的。",
     "icon": "T_Fashion_Hat08",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 12009,
+    "name": "午後雲朵",
+    "desc": "柔軟、潔白的雲朵下，藏著小憩的愜意。",
+    "icon": "T_Fashion_Hat11",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 12010,
+    "name": "初雪晨光",
+    "desc": "雪花載著晨間的歡笑，在陽光下閃閃發亮。",
+    "icon": "T_Fashion_Hat10",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 12011,
+    "name": "叛逆鉚釘",
+    "desc": "用利刺的反光在黑暗中勾勒出自己的輪廓。",
+    "icon": "T_Fashion_Hat15",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 12012,
+    "name": "沉默鳶尾·墨玉",
+    "desc": "沉默，有時比任何言語都更有分量。",
+    "icon": "T_Fashion_Hat12_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 12013,
+    "name": "沉默鳶尾·焦糖",
+    "desc": "沉默，有時比任何言語都更有分量。",
+    "icon": "T_Fashion_Hat12_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 12014,
+    "name": "沉默鳶尾·涅白",
+    "desc": "沉默，有時比任何言語都更有分量。",
+    "icon": "T_Fashion_Hat12_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 12015,
+    "name": "沉默鳶尾·鉛灰",
+    "desc": "沉默，有時比任何言語都更有分量。",
+    "icon": "T_Fashion_Hat12_03",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 12016,
+    "name": "夜闌影",
+    "desc": "一攏玄紗掩紅妝。",
+    "icon": "T_Fashion_Hat16",
     "rarity": 4,
     "unlock": "通過商店獲得"
   },
@@ -1150,6 +1470,86 @@
     "icon": "T_Fashion_Waist23_02",
     "rarity": 4,
     "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13029,
+    "name": "野性尾巴·鉛灰",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_01",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13030,
+    "name": "野性尾巴·墨玉",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_02",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13031,
+    "name": "野性尾巴·銹紅",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_03",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13032,
+    "name": "野性尾巴·黛藍",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_04",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13033,
+    "name": "暮色夢魘·墨玉",
+    "desc": "這就是真正的貓咪音樂。",
+    "icon": "T_Fashion_Back43_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13034,
+    "name": "暮色夢魘·鎏金",
+    "desc": "這就是真正的貓咪音樂。",
+    "icon": "T_Fashion_Back43_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13035,
+    "name": "暮色夢魘·碧綠",
+    "desc": "這就是真正的貓咪音樂。",
+    "icon": "T_Fashion_Back43_03",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13036,
+    "name": "暮色夢魘·白櫻",
+    "desc": "這就是真正的貓咪音樂。",
+    "icon": "T_Fashion_Back43_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 13037,
+    "name": "聖潔遺骸·鎏金",
+    "desc": "神將軀體棄於人間，化作不息的餘溫。",
+    "icon": "T_Fashion_Waist33_04",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 13039,
+    "name": "聖潔遺骸·涅白",
+    "desc": "神將軀體棄於人間，化作不息的餘溫。",
+    "icon": "T_Fashion_Waist33_02",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
   },
   {
     "id": 20001,
@@ -1581,7 +1981,7 @@
     "desc": "目標已鎖定。",
     "icon": "T_Fashion_Face24__03",
     "rarity": 5,
-    "unlock": "通過稜鏡兌換獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 20056,
@@ -1589,7 +1989,7 @@
     "desc": "目標已鎖定。",
     "icon": "T_Fashion_Face24__02",
     "rarity": 5,
-    "unlock": "通過稜鏡兌換獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 20057,
@@ -1597,7 +1997,7 @@
     "desc": "目標已鎖定。",
     "icon": "T_Fashion_Face24",
     "rarity": 5,
-    "unlock": "通過稜鏡兌換獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 20058,
@@ -1605,7 +2005,7 @@
     "desc": "目標已鎖定。",
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
-    "unlock": "通過稜鏡兌換獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 20063,
@@ -1760,6 +2160,54 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 20082,
+    "name": "聖潔光輝·涅白",
+    "desc": "神将光芒弃于人间，静待信仰的回响。",
+    "icon": "T_Fashion_Face26_04",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 20084,
+    "name": "聖潔光輝·晴藍",
+    "desc": "神将光芒弃于人间，静待信仰的回响。",
+    "icon": "T_Fashion_Face26_02",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 20086,
+    "name": "輕語面紗·墨玉",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 20087,
+    "name": "輕語面紗·涅白",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_03",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 20088,
+    "name": "輕語面紗·銹紅",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 20089,
+    "name": "輕語面紗·鎏金",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -1812,6 +2260,30 @@
     "name": "詭道符籙·鎏金",
     "desc": "符隨念動，詭道相隨。",
     "icon": "T_Fashion_Fx17_01",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 21010,
+    "name": "永恆花叢",
+    "desc": "永恆花叢",
+    "icon": "T_Fashion_Fx23",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 21011,
+    "name": "聖潔軌跡·鎏金",
+    "desc": "聖潔軌跡·鎏金",
+    "icon": "T_Fashion_Fx22",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 21012,
+    "name": "聖潔軌跡·鉛灰",
+    "desc": "聖潔軌跡·鎏金",
+    "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "透過活動獲得"
   },
@@ -2088,6 +2560,174 @@
     "unlock": "透過活動獲得"
   },
   {
+    "id": 30041,
+    "name": "夜明燈·杏黃",
+    "desc": "長夜終有盡頭，願它們照亮你回家的路。",
+    "icon": "T_Fashion_Waist22_02",
+    "rarity": 3,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 30042,
+    "name": "金囚籠·鎏金",
+    "desc": "一旦呼吸過自在的空氣，便沒有人想要重返黃金囚籠。",
+    "icon": "T_Fashion_Waist27_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30043,
+    "name": "金囚籠·涅白",
+    "desc": "一旦呼吸過自在的空氣，便沒有人想要重返黃金囚籠。",
+    "icon": "T_Fashion_Waist27_03",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30044,
+    "name": "金囚籠·墨玉",
+    "desc": "一旦呼吸過自在的空氣，便沒有人想要重返黃金囚籠。",
+    "icon": "T_Fashion_Waist27_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30045,
+    "name": "金囚籠·杏黃",
+    "desc": "一旦呼吸過自在的空氣，便沒有人想要重返黃金囚籠。",
+    "icon": "T_Fashion_Waist27_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30046,
+    "name": "糯糯香包·絳紫",
+    "desc": "糯糯香包巧，軟軟掛衣角。",
+    "icon": "T_Fashion_Waist32_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30047,
+    "name": "糯糯香包·碧綠",
+    "desc": "糯糯香包巧，軟軟掛衣角。",
+    "icon": "T_Fashion_Waist32_03",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 30048,
+    "name": "糯糯香包·焦糖",
+    "desc": "糯糯香包巧，軟軟掛衣角。",
+    "icon": "T_Fashion_Waist32_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30049,
+    "name": "糯糯香包·涅白",
+    "desc": "糯糯香包巧，軟軟掛衣角。",
+    "icon": "T_Fashion_Waist32_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30054,
+    "name": "瓶裝快樂·銹紅",
+    "desc": "炎炎夏日，一杯暢爽。",
+    "icon": "T_Fashion_Waist29_01",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30055,
+    "name": "瓶裝快樂·碧綠",
+    "desc": "炎炎夏日，一杯暢爽。",
+    "icon": "T_Fashion_Waist29_03",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30056,
+    "name": "瓶裝快樂·杏黃",
+    "desc": "炎炎夏日，一杯暢爽。",
+    "icon": "T_Fashion_Waist29_02",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30057,
+    "name": "瓶裝快樂·銹紅",
+    "desc": "炎炎夏日，一杯暢爽。",
+    "icon": "T_Fashion_Waist29_04",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30058,
+    "name": "罐裝快樂·黛藍",
+    "desc": "炎炎夏日，一杯暢爽。",
+    "icon": "T_Fashion_Waist28_04",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30059,
+    "name": "罐裝快樂·白櫻",
+    "desc": "炎炎夏日，一杯暢爽。",
+    "icon": "T_Fashion_Waist28_03",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30060,
+    "name": "罐裝快樂·碧綠",
+    "desc": "炎炎夏日，一杯暢爽。",
+    "icon": "T_Fashion_Waist28_02",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30061,
+    "name": "罐裝快樂·墨玉",
+    "desc": "炎炎夏日，一杯暢爽。",
+    "icon": "T_Fashion_Waist28_01",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30062,
+    "name": "暮色配槍·墨玉",
+    "desc": "當彈殼落地，恐懼便迎來了終結。",
+    "icon": "T_Fashion_Waist31_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30063,
+    "name": "暮色配槍·涅白",
+    "desc": "當彈殼落地，恐懼便迎來了終結。",
+    "icon": "T_Fashion_Waist31_03",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30064,
+    "name": "暮色配槍·焦糖",
+    "desc": "當彈殼落地，恐懼便迎來了終結。",
+    "icon": "T_Fashion_Waist31_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 30065,
+    "name": "暮色配槍·白櫻",
+    "desc": "當彈殼落地，恐懼便迎來了終結。",
+    "icon": "T_Fashion_Waist31_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 31001,
     "name": "勝利動作·悠遊水岸",
     "desc": "可變更勝利動作。",
@@ -2104,10 +2744,26 @@
     "unlock": "通過稜鏡兌換獲得"
   },
   {
+    "id": 31003,
+    "name": "勝利動作·極速定格",
+    "desc": "可變更勝利動作。",
+    "icon": "T_Fashion_SettlementAction_05",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
     "id": 31004,
     "name": "勝利動作·機樞幻想",
     "desc": "可變更勝利動作。",
     "icon": "T_Fashion_SettlementAction_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 31005,
+    "name": "勝利動作·罪壤",
+    "desc": "可變更勝利動作。",
+    "icon": "T_Fashion_SettlementAction_04",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   },
@@ -2504,6 +3160,14 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 40055,
+    "name": "無由生像",
+    "desc": "凝眸方現世，息念又歸塵。",
+    "icon": "T_Fashion_Back38",
+    "rarity": 4,
+    "unlock": "透過活動獲得"
+  },
+  {
     "id": 40056,
     "name": "永凍玫瑰·鎏金",
     "desc": "也許玫瑰自凍土綻放之時，被封存的記憶與諾言才會甦醒。",
@@ -2568,6 +3232,70 @@
     "unlock": "通過商店獲得"
   },
   {
+    "id": 40068,
+    "name": "糯糯背包·碧綠",
+    "desc": "糯糯香包巧，軟軟掛衣角。",
+    "icon": "T_Fashion_Back44_03",
+    "rarity": 5,
+    "unlock": "透過活動獲得"
+  },
+  {
+    "id": 40069,
+    "name": "糯糯背包·涅白",
+    "desc": "糯糯香包巧，軟軟掛衣角。",
+    "icon": "T_Fashion_Back44_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 40070,
+    "name": "糯糯背包·黛藍",
+    "desc": "糯糯香包巧，軟軟掛衣角。",
+    "icon": "T_Fashion_Back44_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 40071,
+    "name": "糯糯背包·銹紅",
+    "desc": "糯糯香包巧，軟軟掛衣角。",
+    "icon": "T_Fashion_Back44_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 40072,
+    "name": "暗潮·墨玉",
+    "desc": "夜幕之下，翻湧著吞沒一切的暗流。",
+    "icon": "T_Fashion_Back42_01",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 40073,
+    "name": "暗潮·焦糖",
+    "desc": "夜幕之下，翻湧著吞沒一切的暗流。",
+    "icon": "T_Fashion_Back42_02",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 40074,
+    "name": "暗潮·涅白",
+    "desc": "夜幕之下，翻湧著吞沒一切的暗流。",
+    "icon": "T_Fashion_Back42_04",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 40075,
+    "name": "暗潮·鉛灰",
+    "desc": "夜幕之下，翻湧著吞沒一切的暗流。",
+    "icon": "T_Fashion_Back42_03",
+    "rarity": 5,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -2592,8 +3320,16 @@
     "unlock": "通過稜鏡兌換獲得"
   },
   {
+    "id": 50004,
+    "name": "永恆石碑",
+    "desc": " ",
+    "icon": "T_Fashion_Fx25",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
     "id": 60001,
-    "name": " ",
+    "name": "永恆石碑",
     "desc": " ",
     "icon": "",
     "rarity": 5,
@@ -2636,6 +3372,14 @@
     "name": "火樹銀花·鎏金",
     "desc": "騰龍吹焰，徹夜歡歌。",
     "icon": "T_Fashion_Fx10_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 70005,
+    "name": "永恆花束·絳紫",
+    "desc": "罪壤盛放的花朵，亦可以成為永恆。",
+    "icon": "T_Fashion_Fx31_03",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   },
@@ -2740,6 +3484,30 @@
     "name": "喵喵足跡·銹紅",
     "desc": "貓腳印就在這裡，但是貓咪去了哪裡？",
     "icon": "T_Fashion_Fx19_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 70051,
+    "name": "永恆花束·白櫻",
+    "desc": "罪壤盛放的花朵，亦可以成為永恆。",
+    "icon": "T_Fashion_Fx31_04",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 70052,
+    "name": "永恆花束·銹紅",
+    "desc": "罪壤盛放的花朵，亦可以成為永恆。",
+    "icon": "T_Fashion_Fx31_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 70053,
+    "name": "永恆花束·鎏金",
+    "desc": "罪壤盛放的花朵，亦可以成為永恆。",
+    "icon": "T_Fashion_Fx31_02",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   },
@@ -2868,6 +3636,38 @@
     "name": "喵喵遊戲·黛藍",
     "desc": "旋轉，下落，真棒！",
     "icon": "T_Fashion_Fx18_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 80051,
+    "name": "天之靈·涅白",
+    "desc": "吹響號角，迎接天使的降臨。",
+    "icon": "T_Fashion_Fx28_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 80052,
+    "name": "天之靈·鎏金",
+    "desc": "吹響號角，迎接天使的降臨。",
+    "icon": "T_Fashion_Fx28_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 80053,
+    "name": "天之靈·晴藍",
+    "desc": "吹響號角，迎接天使的降臨。",
+    "icon": "T_Fashion_Fx28_04",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 80054,
+    "name": "天之靈·白櫻",
+    "desc": "吹響號角，迎接天使的降臨。",
+    "icon": "T_Fashion_Fx28_03",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   }

@@ -656,8 +656,12 @@ function M:OnGamePadDown(InKeyName)
     if not self.PersonInfoMainPage.IsEditOpen then
       self.PersonInfoMainPage:OnClickOpenDataPage()
     end
+  elseif InKeyName == UIConst.GamePadKey.RightThumb then
+    if not self.PersonInfoMainPage.IsEditOpen and self.PersonInfoMainPage.TryOpenGuildDetailByGamepad and self.PersonInfoMainPage:TryOpenGuildDetailByGamepad() then
+      return true
+    end
   elseif InKeyName == UIConst.GamePadKey.FaceButtonLeft then
-    if not self.PersonInfoMainPage.IsEditOpen then
+    if not self.PersonInfoMainPage.IsEditOpen and PersonInfoModel:IsOwener() then
       self.PersonInfoMainPage:OnClickOpenEditPage()
       if self.PersonInfoMainPage.IsEditOpen == false then
         DebugPrint("聚焦的保存的widget")
@@ -736,14 +740,18 @@ function M:FreshViewByInputDevice(bIsGamePad)
   if bIsGamePad then
     if PersonInfoModel:IsOwener() then
       self.PersonInfoMainPage.Key_Controller:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-      self.PersonInfoMainPage.Key_ControllerImg:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    else
+      self.PersonInfoMainPage.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
+    self.PersonInfoMainPage.Key_ControllerImg:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.PersonInfoMainPage.WS_Copy:SetActiveWidgetIndex(1)
+    self.PersonInfoMainPage:RefreshGuildGamepadKeyVisibility()
     self.PersonInfoMainPage:SetOriginFocus()
   else
     self.PersonInfoMainPage.Key_Controller:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.PersonInfoMainPage.Key_ControllerImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.PersonInfoMainPage.WS_Copy:SetActiveWidgetIndex(0)
+    self.PersonInfoMainPage:RefreshGuildGamepadKeyVisibility()
   end
 end
 

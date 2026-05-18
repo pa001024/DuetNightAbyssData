@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1040800,
+    "desc": "Posséder 1 Arme de calamité",
+    "target": 1,
+    "targetId": [
+      1040800
+    ],
+    "reward": [
+      1040800
+    ]
+  },
+  {
+    "id": 1040801,
+    "desc": "Posséder 1 Arme de calamité de niveau de fusion <H>1</>",
+    "target": 1,
+    "targetId": [
+      1040801
+    ],
+    "reward": [
+      1040801
+    ]
+  },
+  {
+    "id": 1040802,
+    "desc": "Posséder 1 Arme de calamité de niveau de fusion <H>2</>",
+    "target": 1,
+    "targetId": [
+      1040802
+    ],
+    "reward": [
+      1040802
+    ]
+  },
+  {
+    "id": 1040803,
+    "desc": "Posséder 1 Arme de calamité de niveau de fusion <H>3</>",
+    "target": 1,
+    "targetId": [
+      1040803
+    ],
+    "reward": [
+      1040803
+    ]
+  },
+  {
+    "id": 1040804,
+    "desc": "Posséder 1 Arme de calamité de niveau de fusion <H>4</>",
+    "target": 1,
+    "targetId": [
+      1040804
+    ],
+    "reward": [
+      1040804
+    ]
+  },
+  {
+    "id": 1040810,
+    "desc": "Terminer la quête secondaire : « L’avènement de la calamité »",
+    "target": 1,
+    "targetId": [
+      1040810
+    ],
+    "reward": [
+      1040810
+    ]
+  },
+  {
+    "id": 1040812,
+    "desc": "Terminer la quête secondaire : « L’évolution de la calamité »",
+    "target": 1,
+    "targetId": [
+      1040812
+    ],
+    "reward": [
+      1040812
+    ]
+  },
+  {
+    "id": 1040814,
+    "desc": "Terminer la quête secondaire : « Le reflux de la calamité »",
+    "target": 1,
+    "targetId": [
+      1040814
+    ],
+    "reward": [
+      1040814
+    ]
+  }
+]

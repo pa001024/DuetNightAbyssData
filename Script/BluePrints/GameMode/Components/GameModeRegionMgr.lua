@@ -215,8 +215,19 @@ function GameModeRegionMgr:HandleLevelDeliverBlackCurtainStart(IsWhite, IsFromMa
     
     UIManager:ShowCommonBlackScreen(Params)
   else
-    local UI = UIManager:LoadUINew("BlackScreenXiaobai", IsWhite)
-    UI.bUseFakeProgress = true
+    local RanLoadingData = SpecialLoadingRule:GetRanLoadingData()
+    if RanLoadingData then
+      local WidgetLoading = UIManager:CreateWidget(RanLoadingData.WBPPath)
+      local SystemUIConfig = DataMgr.SystemUI.BlackScreenXiaobai
+      WidgetLoading:AddToViewport(SystemUIConfig and SystemUIConfig.ZOrder or 105)
+      if WidgetLoading.InitLoadingData then
+        WidgetLoading:InitLoadingData(RanLoadingData, nil)
+      end
+      self.WidgetLoading = WidgetLoading
+    else
+      local UI = UIManager:LoadUINew("BlackScreenXiaobai", IsWhite)
+      UI.bUseFakeProgress = true
+    end
   end
   SceneMgrComponent:ShowOrHideAllSceneGuideIcon(false)
   local TaskIndicator = UIManager:GetUIObj("MainTaskIndicator")

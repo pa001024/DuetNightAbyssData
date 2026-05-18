@@ -47,6 +47,13 @@ return ReadOnly("RewardType", {
     RewardType = "HeadSculpture",
     UniqueType = true
   },
+  IronTicket = {
+    DungeonRewardSeq = 66,
+    DungeonRewardType = true,
+    OperationGM = true,
+    Remark = "钢铁探险门票",
+    RewardType = "IronTicket"
+  },
   Mod = {
     DungeonRewardSeq = 50,
     DungeonRewardType = true,

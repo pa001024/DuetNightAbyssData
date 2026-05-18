@@ -162,6 +162,7 @@ function M:OnLoaded(...)
   self:InitKeySetting()
   self:UpdateUI()
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "SkinPreviewIn", nil)
+  self:StopAllAnimations()
   self:PlayAnimation(self.In)
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:SetFocus()
@@ -1303,8 +1304,13 @@ function M:GetCutoffInfo(ItemId)
 end
 
 function M:InitLevelUpPreview(ItemData)
-  if ItemData.ItemType == "Skin" then
-    local IsDisplay = DataMgr.SkinUpgrade and DataMgr.SkinUpgrade[ItemData.TypeId]
+  if ItemData.ItemType == "Skin" or ItemData.ItemType == "WeaponSkin" then
+    local IsDisplay
+    if ItemData.ItemType == "Skin" then
+      IsDisplay = DataMgr.SkinUpgrade and DataMgr.SkinUpgrade[ItemData.TypeId]
+    elseif ItemData.ItemType == "WeaponSkin" then
+      IsDisplay = DataMgr.WeaponSkinUpgrade and DataMgr.WeaponSkinUpgrade[ItemData.TypeId]
+    end
     if not IsDisplay then
       self.Panel_LevelUp:SetVisibility(UIConst.VisibilityOp.Collapsed)
       return
@@ -1340,6 +1346,9 @@ function M:OnLevelUpWidgetClicked(Level)
   if LastLevelUpWidget then
     LastLevelUpWidget:PlayNormalAnimation()
   end
+  if self.CheckBox_Preview and self.CheckBox_Preview:IsVisible() then
+    self:ResetPreviewCheckBox()
+  end
   self.SelectedSkinLevel = Level
   local CurLevelUpWidget = self["WBP_Armory_Skin_LevelUp_" .. self.SelectedSkinLevel]
   if CurLevelUpWidget then
@@ -1348,7 +1357,12 @@ function M:OnLevelUpWidgetClicked(Level)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
   local SkinId = self.ShopItemData.TypeId
   self.ShopItemData.SkinLevel = Level
-  local SkinLevelUpData = DataMgr.SkinUpgrade[SkinId][Level]
+  local SkinLevelUpData
+  if self.ShopItemData.ItemType == "Skin" then
+    SkinLevelUpData = DataMgr.SkinUpgrade[SkinId][Level]
+  elseif self.ShopItemData.ItemType == "WeaponSkin" then
+    SkinLevelUpData = DataMgr.WeaponSkinUpgrade[SkinId][Level]
+  end
   if SkinLevelUpData then
     self.Panel_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Text_Undiscounted_Price:SetVisibility(ESlateVisibility.Collapsed)

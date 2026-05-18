@@ -8,6 +8,9 @@ local TeamController = require("BluePrints.UI.WBP.Team.TeamController")
 local TeamModel = TeamController:GetModel()
 local UIUtils = require("Utils.UIUtils")
 local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
+local PlayerMenuActionRegistry = require("BluePrints.UI.WBP.Chat.View.PlayerMenuActionRegistry")
+local MenuActionId = PlayerMenuActionRegistry.ActionId
+local AddGuildAction
 local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:OnTeamMainFocusChanged(bFocused, bAddFocusRecv)
@@ -110,6 +113,12 @@ function M:Construct()
     self,
     self.OnNavagationLeft
   })
+  GuildController:RegisterEvent(self, function(self, EventId, ...)
+    local Info = (...)
+    if EventId == GuildCommon.EventID.OnGetGuildInfo and self.PersonData.GuildId == Info.GuildId then
+      self:OnGetGuildFullInfo(Info)
+    end
+  end)
 end
 
 function M:HeadMenuOpenChanged(bOpen)
@@ -179,37 +188,11 @@ function M:OnAnchorGetUserMenuContent()
       if TeamModel:IsYourself(AvatarInfo.Uid) then
         PersonInfoController:OpenView()
       else
-        TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid)
+        TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid, nil, AvatarInfo)
       end
       self.Head_Anchor:Close()
       if FriendController:GetDialog(self) then
         FriendController:GetDialog(self):OnCloseBtnClicked()
-      end
-    end
-  end
-  
-  local function AddBlackList(Content, AvatarInfo)
-    if FriendModel:GetBlackListDict()[AvatarInfo.Uid] then
-      Content.Text = GText("UI_Friend_DelBlackList")
-      
-      function Content.Callback()
-        FriendController:SendCancelBlackList(AvatarInfo.Uid)
-        self.Head_Anchor:Close()
-      end
-    else
-      Content.Text = GText("UI_Friend_AddBlackList")
-      
-      function Content.Callback()
-        self.Head_Anchor:Close()
-        local Dialog = FriendController:GetDialog(self)
-        if Dialog then
-          Dialog:OnCloseBtnClicked()
-          FriendController:AddTimer(Dialog.Out:GetEndTime() + 0.05, function()
-            FriendController:OpenAddBlacklistDialog(self, AvatarInfo)
-          end)
-        else
-          FriendController:OpenAddBlacklistDialog(self, AvatarInfo)
-        end
       end
     end
   end
@@ -262,79 +245,23 @@ function M:OnAnchorGetUserMenuContent()
     end
   end
   
-  local function AccusePlayer(Content, AvatarInfo)
-    Content.Text = GText("UI_Chat_Accuse")
-    
-    function Content.Callback()
-      local Params = {
-        Nickname = AvatarInfo.Nickname,
-        UID = AvatarInfo.Uid,
-        RealUID = AvatarInfo.RealUID,
-        Level = AvatarInfo.Level,
-        TextLenMax = 50,
-        ForbidRightBtn = true,
-        DontCloseWhenRightBtnClicked = true
-      }
-      
-      function Params.HideItemTips()
-        self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
-          bHideDialogItem = true,
-          DialogItemIndex = 1,
-          bShouldPlayAnim = false
-        })
-        self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
-          bHideDialogItem = true,
-          DialogItemIndex = 2,
-          bShouldPlayAnim = false
-        })
-      end
-      
-      Params.EditTextConfig = {
-        Owner = self,
-        TextLimit = 50,
-        Events = {
-          OnTextChanged = self.OnTextChange,
-          OnTextComposing = self.OnTextComposing,
-          OnEditTextFocusReceived = function()
-            if self.bTipsShowed then
-              self.Owner:HideDialogTip(2, false)
-              self.bTipsShowed = false
-            end
-          end
-        }
-      }
-      Params.AllowNegativeAttitude = true
-      ChatController:OpenChatReportDialog(Params)
-      self.Head_Anchor:Close()
-    end
-  end
-  
   local Switch = {}
   if self.Type == FriendCommon.FriendDialogType.BlackList then
-    Switch = {AddBlackList}
+    Switch = {InitShowRecordBtn}
   elseif self.Type == FriendCommon.FriendTabType.MyFriend then
     Switch = {
       InitShowRecordBtn,
       RemarkFriend,
       StarFriend,
-      AddBlackList,
       RemoveFriend
     }
   elseif self.Type == FriendCommon.FriendTabType.RecentMatch then
-    Switch = {
-      InviteTeam,
-      InitShowRecordBtn,
-      AddBlackList,
-      AccusePlayer
-    }
+    Switch = {InviteTeam, InitShowRecordBtn}
   else
-    Switch = {
-      InviteTeam,
-      InitShowRecordBtn,
-      AddBlackList
-    }
+    Switch = {InviteTeam, InitShowRecordBtn}
   end
-  return ChatController:OpenPlayerBtnList(self, self.PersonData, Switch)
+  AddGuildAction(Switch, self.CardGuildFullInfo, self.PersonData)
+  return ChatController:OpenPlayerBtnList(self, self.PersonData, Switch, self.CardGuildFullInfo)
 end
 
 function M:OnBtnYesOrNoRelease(bYes)
@@ -561,6 +488,7 @@ end
 function M:OnListItemObjectSet_MyFriend(Content)
   self.FriendData = Content.Data
   self.PersonData = self.FriendData.Info
+  self:GetCardGuildInfo(self.PersonData.GuildId, self.PersonData.Uid, self.PersonData)
   self.Text_Name:SetText(self.FriendData.Info.Nickname)
   self:_SetRemarkName(self.FriendData.Remark)
   self:_SetHeadIcon(self.FriendData.Info)
@@ -678,6 +606,7 @@ function M:OnGiftForbidClick()
 end
 
 function M:Destruct()
+  GuildController:UnRegisterEvent(self)
   self.Button_Invite:UnBindEventOnReleased(self, self.OnBtnInviteReleased)
   self.Button_Funtion:UnBindEventOnReleased(self, self.OnBtnFunctionReleased)
   self.Button_Yes:UnBindEventOnReleased(self, self.OnBtnYesOrNoRelease)
@@ -853,6 +782,92 @@ function M:OnGamePadBDown()
     return true
   else
     return false
+  end
+end
+
+function M:WaitCardGuildInfoCallback()
+  if not self.WaitCardGuildInfo then
+    return
+  end
+  self.WaitCardGuildInfo = self.WaitCardGuildInfo - 1
+  if 0 == self.WaitCardGuildInfo then
+    self.CardGuildFullInfo.CardGuildChatOpen = self.CardGuildChatOpen
+  end
+end
+
+function M:GetCardGuildInfo(GuildId, Uid, AvatarInfo)
+  if not GuildId or 0 == GuildId then
+    return
+  end
+  if not GuildId or self.WaitCardGuildInfo and self.WaitCardGuildInfo > 0 then
+    return
+  end
+  GuildController:SendGetGuildInfo(GuildId)
+  self.WaitCardGuildInfo = 2
+  
+  local function SetInfo(OtherPlayerInfo)
+    local Avatar = GWorld:GetAvatar()
+    Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
+      if Ret ~= ErrorCode.RET_SUCCESS then
+        return
+      end
+      self.CardGuildChatOpen = IsOpen
+      self:WaitCardGuildInfoCallback()
+    end, OtherPlayerInfo.Uid or OtherPlayerInfo.Uuid)
+  end
+  
+  if AvatarInfo then
+    SetInfo(AvatarInfo)
+  else
+    local FriendData = FriendController:GetModel():GetFriendDict()[Uid]
+    if FriendData then
+      SetInfo(FriendData.Info)
+    else
+      GWorld:GetAvatar():GetOtherPlayerPersonallInfo(Uid, {Func = SetInfo})
+    end
+  end
+end
+
+function M:OnGetGuildFullInfo(Info)
+  self.CardGuildFullInfo = Info
+  self:WaitCardGuildInfoCallback()
+end
+
+function AddGuildAction(Actions, GuildInfo, AvatarInfo)
+  local IsInGuild = GuildController:GetModel():IsInGuild()
+  if not IsInGuild then
+    return
+  end
+  if not GuildInfo then
+    local ActionIds = {}
+    table.insert(ActionIds, MenuActionId.GuildInvite)
+    local Funcs = PlayerMenuActionRegistry:BuildMenuFuncList(ActionIds)
+    for _, Func in pairs(Funcs) do
+      table.insert(Actions, Func)
+    end
+    return
+  end
+  local SelfGuildInfo = GuildController:GetModel():GetCurrGuild()
+  if GuildInfo.GuildId == SelfGuildInfo.GuildId then
+    local ActionIds = {}
+    table.insert(ActionIds, MenuActionId.GuildSendPrivateChat)
+    local SelfMember = GuildController.GetGuildMember(SelfGuildInfo.Members, ChatController:GetAvatar().Uid)
+    local CurMember = GuildController.GetGuildMember(GuildInfo.Members, AvatarInfo.Uuid or AvatarInfo.Uid)
+    if not SelfMember or not CurMember then
+      local UIManager = GWorld.GameInstance:GetGameUIManager()
+      UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("踢出公会后服务器没有移除玩家公户数据！！！！！"))
+      return
+    end
+    local SelfTitle = SelfMember.Title
+    local CurTitle = CurMember.Title
+    if not (SelfTitle >= 3) or SelfTitle > CurTitle then
+    end
+    if SelfTitle > CurTitle then
+    end
+    local Funcs = PlayerMenuActionRegistry:BuildMenuFuncList(ActionIds)
+    for _, Func in pairs(Funcs) do
+      table.insert(Actions, Func)
+    end
   end
 end
 

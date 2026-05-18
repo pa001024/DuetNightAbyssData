@@ -19,6 +19,13 @@ return ReadOnly("Shop", {
     ShopUIName = "ShopActivity",
     SystemName = "AccessoryDropShop"
   },
+  AppearenceShop = {
+    MainTabId = {10010},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Appearence.WBP_Shop_BG_Appearence'",
+    ShopName = "UI_AppearenceShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "AppearenceShop"
+  },
   AutoChessShop = {
     MainTabId = {10006},
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/AutoChess/WBP_Activity_AutoChess_OverViewBG.WBP_Activity_AutoChess_OverViewBG'",
@@ -60,6 +67,13 @@ return ReadOnly("Shop", {
     ShopName = "MAIN_UI_SHOP",
     ShopUIName = "ShopMain",
     SystemName = "GiftShop"
+  },
+  GuildShop = {
+    MainTabId = {10009},
+    ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Guild.WBP_Shop_BG_Guild'",
+    ShopName = "UI_GuildShop",
+    ShopUIName = "ShopActivity",
+    SystemName = "GuildShop"
   },
   HuaxuEventShop = {
     MainTabId = {10001},

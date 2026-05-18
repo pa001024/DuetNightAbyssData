@@ -383,9 +383,29 @@ function WBP_MiniGame_Mima_P_C:InitDataInfo()
   self.InputPasswordItemList = {}
   self.CurInputPasswordIndex = 1
   self.IsLock = false
-  for i = 1, self.TotalTurn do
-    self.PasswordList[i] = self:InitPassword(i)
+  if 4 == self.GameDifficulty then
+    local FixedPasswords = self.GameDataInfo.Password
+    for i = 1, self.TotalTurn do
+      self.PasswordList[i] = self:ParseFixedPassword(FixedPasswords[i], self.PasswordLen[i])
+    end
+  else
+    for i = 1, self.TotalTurn do
+      self.PasswordList[i] = self:InitPassword(i)
+    end
   end
+end
+
+function WBP_MiniGame_Mima_P_C:ParseFixedPassword(Password, Len)
+  local CurPasswordList = {}
+  table.insert(CurPasswordList, Password)
+  local PasswordStr = tostring(Password)
+  while Len > #PasswordStr do
+    PasswordStr = "0" .. PasswordStr
+  end
+  for i = 1, #PasswordStr do
+    table.insert(CurPasswordList, tonumber(string.sub(PasswordStr, i, i)))
+  end
+  return CurPasswordList
 end
 
 function WBP_MiniGame_Mima_P_C:InitPassword(CurTurn)

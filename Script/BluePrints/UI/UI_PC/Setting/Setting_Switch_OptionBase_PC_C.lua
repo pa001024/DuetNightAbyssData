@@ -38,6 +38,9 @@ function S:Init(Parent, CacheName, CacheInfo, Content)
   if self.CacheName == "AutoBulletJumpCam" then
     ReddotManager.AddListenerEx("Setting_Control_Setting_SaveAutoBulletJumpCamBtn", self, self.RedDotChange)
   end
+  if self.CacheName == "MoveModel" then
+    ReddotManager.AddListenerEx("Setting_Control_Setting_MoveModelBtn", self, self.RedDotChange)
+  end
 end
 
 function S:SetHoverVisibility()
@@ -359,7 +362,7 @@ end
 function S:SaveVerticalSyncOptionSetting()
   local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
   GameUserSettings:SetVSyncEnabled(self.NowValue)
-  GameUserSettings:ApplySettings(true)
+  GameUserSettings:ApplySettings(false)
 end
 
 function S:SetAmbientOcclusionOldValue()
@@ -1092,6 +1095,34 @@ end
 function S:SaveShootCameraDistanceOptionSetting()
   SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
   EventManager:FireEvent(EventID.OnShootCameraDistanceOptionChanged, self.NowValue)
+end
+
+function S:SetRecordButtonOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreRecordButtonOptionSet()
+  self:SaveAutoFashionOptionSetting()
+end
+
+function S:SaveRecordButtonOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  EventManager:FireEvent(EventID.OnRecordButtonOptionChanged, self.NowValue)
+end
+
+function S:SetMoveModelOldValue()
+  self.OldValue = SettingUtils.GetEMCache(self.EMCacheName, self.EMCacheKey, self.DefaultValue)
+end
+
+function S:RestoreDefaultMoveModelOptionSet()
+  self:SaveMoveModelOptionSetting()
+end
+
+function S:SaveMoveModelOptionSetting()
+  SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue)
+  self.OldValue = self.NowValue
+  ReddotManager.DecreaseLeafNodeCount("Setting_Control_Setting_MoveModelBtn", 1)
+  EventManager:FireEvent(EventID.OnMoveModelOptionChanged, self.NowValue)
 end
 
 return S

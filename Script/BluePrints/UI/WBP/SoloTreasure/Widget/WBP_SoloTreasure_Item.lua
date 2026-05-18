@@ -84,12 +84,18 @@ function M:Init(TreasureData)
   self:SetShowBuffLabel(self.TreasureData and self.TreasureData.BuffLabelInfo)
 end
 
-function M:SetShowBuffLabel(BuffLabelInfo)
+function M:SetShowBuffLabel(BuffLabelInfo, bPlayIn)
+  if not self.bSearched then
+    self.BuffLable:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    return
+  end
   if BuffLabelInfo and IsValid(self.BuffLable) and not InventoryController.bDraging then
     self.BuffLabelInfo = BuffLabelInfo
     self.BuffLable:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
     self.BuffLable.Text_LableNum:SetText(string.format(GText("UI_Extraction_TM_44"), tostring(BuffLabelInfo.Num)))
     self.BuffLable:SetLableType(BuffLabelInfo.Quality - 1)
+    if bPlayIn then
+    end
   elseif not BuffLabelInfo and IsValid(self.BuffLable) then
     self.BuffLabelInfo = nil
     self.BuffLable:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -428,6 +434,7 @@ function M:NotifyBeginSearch(SearchEndCallback, PreSearchEndCallback)
         if self._OnSearchEnd then
           self._OnSearchEnd(self)
         end
+        self:SetShowBuffLabel(self.TreasureData and self.TreasureData.BuffLabelInfo, true)
       end
     })
     if self._OnPreSearchEnd then

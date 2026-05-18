@@ -2,6 +2,7 @@ require("UnLua")
 local SkillUtils = require("Utils.SkillUtils")
 local UpgradeUtils = require("Utils.UpgradeUtils")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local ModModel = ModController:GetModel()
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
@@ -152,11 +153,13 @@ function M:Init(Params)
     self:HideUWeaponTitleUI()
     self.Tag = Params.Tag
   end
+  self.OnlyWalnut = false
   self.Target = Params.Target
   self.Char = Params.Char
   self.IsPreviewMode = Params.IsPreviewMode
   self.IsTargetUnowned = Params.IsTargetUnowned
   self.bNeedPreviewSwitcher = Params.bNeedPreviewSwitcher
+  self.bNeedAttrSwitcher = Params.bNeedAttrSwitcher
   self.bHideUWeaponMod = Params.bHideUWeaponMod
   self.EscapeArmoryCharID = Params.EscapeArmoryCharID
   if self.IsPreviewMode and self.bNeedPreviewSwitcher or self.IsTargetUnowned then
@@ -167,6 +170,7 @@ function M:Init(Params)
         }
       }
     }
+    SwitchParams.SwitchType = "Avatar"
     if self.IsTargetUnowned then
       SwitchParams.Avatars = {
         Params.AvatarPrime,
@@ -178,6 +182,27 @@ function M:Init(Params)
       self.Btn_MaxSwitch:Init(SwitchParams)
     end
     self.Btn_MaxSwitch:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  elseif not self.IsTargetUnowned and self.bNeedAttrSwitcher then
+    local SwitchParams = {
+      KeyInfo = {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "X"}
+        },
+        bLongPress = true
+      }
+    }
+    SwitchParams.SwitchType = "Attribute"
+    
+    function SwitchParams.OnBtnClicked()
+      UIManager(self):LoadUINew("ArmoryAttrSwitch", {
+        Avatar = Avatar,
+        CharId = self.Target.CharId
+      })
+    end
+    
+    self.Btn_MaxSwitch:Init(SwitchParams)
+    self.Btn_MaxSwitch:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self:UpdateGroupSwitchReddot()
   else
     self.Btn_MaxSwitch:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
@@ -230,6 +255,33 @@ function M:UpdateTargetInfo(Target, Type, Tag)
   end
 end
 
+function M:UpdateGroupSwitchReddot()
+  if not self.bNeedAttrSwitcher or self.Type ~= "Char" then
+    return
+  end
+  local CharGroup = ArmoryUtils:GetCharGroup(self.Target.CharId)
+  if not CharGroup then
+    return
+  end
+  local CharId2Content = self.Parent and self.Parent.CharId2Content
+  if not CharId2Content then
+    return
+  end
+  local RedDotType
+  for key, CharId in pairs(CharGroup) do
+    if CharId ~= self.Target.CharId then
+      local Content = CharId2Content[CharId]
+      if Content then
+        RedDotType = rawget(Content, "RedDotType")
+        if RedDotType then
+          break
+        end
+      end
+    end
+  end
+  self.Btn_MaxSwitch:SetReddot(RedDotType)
+end
+
 function M:UpdateUnlockBtn(Target, Type, Tag)
   self.UnlockHintText = nil
   if self.IsUltra then
@@ -278,8 +330,12 @@ function M:UpdateUnlockBtn(Target, Type, Tag)
   elseif "Weapon" == Type then
     Id = Target.WeaponId
     Text = GText("UI_Weapon_Unlock")
+    local DraftIds = DataMgr.Item2DraftIdMap.Weapon[Target.WeaponId]
+    local DraftId = DraftIds and DraftIds.DraftIds and DraftIds.DraftIds[1]
+    self.OnlyWalnut = DraftId
     local ShopItemId, ShopItemData = ShopUtils:GetShopItemDataById(Target.WeaponId, CommonConst.DataType.Weapon, true)
     if ShopItemData then
+      self.OnlyWalnut = false
       local Rid = ShopItemData.PriceType
       local Resource = Avatar.Resources[Rid] or {Count = 0}
       Resources[1] = {
@@ -292,7 +348,7 @@ function M:UpdateUnlockBtn(Target, Type, Tag)
         ShopItemId = ShopItemId,
         IsShowDetails = true
       }
-    else
+    elseif not self.OnlyWalnut then
       self.UnlockHintText = GText("UI_Weapon_Locked")
       self.Text_Ultra_Hint:SetText(GText("UI_Weapon_Locked"))
       self.Panel_Hint:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
@@ -420,8 +476,11 @@ function M:UpdateAttrInfo(Target, Type)
   else
     self:InsertExcelWeaponTag(Target.CharId, self.Attrs)
     self.PosItem:Init({
+      Type = Type,
       Owner = self,
-      CharId = Target.CharId
+      PopupParams = {
+        CharId = Target.CharId
+      }
     })
     for id, value in pairs(self.Attrs) do
       if CommonUtils:ShouldDisplayAttr(id, value, self.Type, Tag, TargetId) then
@@ -664,6 +723,7 @@ function M:LoadUnlockDialog()
     Widget:AddToViewport(self.Parent:GetZOrder())
     Widget:Init({
       Type = self.Type,
+      OnlyWalnut = self.OnlyWalnut,
       TargetId = self.Target.CharId or self.Target.WeaponId,
       EscapeArmoryCharID = self.EscapeArmoryCharID,
       Parent = self.Parent,

@@ -1,12 +1,12 @@
 local TeamModel = require("BluePrints.UI.WBP.Team.TeamModel")
 local TeamCommon = require("BluePrints.UI.WBP.Team.TeamCommon")
+local InviteQueueManager = require("BluePrints.UI.Common.InviteQueueManager")
 local GlobalConstant = DataMgr.GlobalConstant
 local M = Class("BluePrints.Common.MVC.Controller")
 M.HeadUIs = {}
 
 function M:Init()
   M.Super.Init(self)
-  self.InviteRecvTimer = "Team_InviteRecvTimer"
   self.TeamRecoveryTimer = "Team_TeamRecoveryTimer"
   self.AutoResetHeadStateTimer = "Team_AutoResetHeadStateTimer"
   M.HeadUIs = {}
@@ -53,9 +53,9 @@ function M:OnAvatarStatusUpdate(OldStatus, NewStatus)
         break
       end
     end
-    if bCantAgreeInvite and TeamModel:GetBackInviteInfo() then
+    if bCantAgreeInvite then
       self:SendTeamRefuseInvite(false)
-      self:ShutDownTeamInvite()
+      InviteQueueManager:ClearType(InviteQueueManager.InviteType.Team)
     end
   end
 end
@@ -112,19 +112,6 @@ function M:OpenKickMemberDialog(AvatarInfo, ParentWidget)
   self:GetUIMgr(ParentWidget):ShowCommonPopupUI(TeamCommon.KickConfirmDialog, Params, ParentWidget)
 end
 
-function M:ShutDownTeamInvite()
-  if self:IsExistTimer(self.InviteRecvTimer) then
-    self:StopTimer(self.InviteRecvTimer)
-  end
-  self.bProcessingTeamInvite = false
-  if FriendController.bProcessingFriendReq then
-    self:AddTimer(0.1, function()
-      FriendController:SetUpFriendReqTimer(TeamCommon.LoopTimerInterval)
-    end)
-  end
-  TeamModel:CleanInviteInfo()
-end
-
 function M:SendTeamKickMember(Uid)
   self:GetAvatar():TeamKickMember(Uid)
 end
@@ -163,27 +150,15 @@ function M:RecvTeamInvite(ErrCode, Uid)
 end
 
 function M:SendTeamRefuseInvite(bAutoRefuse)
-  local InviteInfo = TeamModel:GetBackInviteInfo()
-  if not InviteInfo then
+  local InviteInfo = InviteQueueManager:GetCurrentInvite()
+  if not InviteInfo or InviteInfo.Type ~= InviteQueueManager.InviteType.Team then
     self:CheckError(ErrorCode.RET_TEAM_INVATE_NOT_EXIST, true)
     self:NotifyEvent(TeamCommon.EventId.TeamInviteFailed, ErrorCode.RET_TEAM_INVATE_NOT_EXIST)
     return
   end
   local Uid = InviteInfo.Uid
-  if self:IsExistTimer(self.InviteRecvTimer) then
-    self:StopTimer(self.InviteRecvTimer)
-  end
-  if self:TryPopInviteInfo() then
-    self:AddTimer(0.01, function()
-      self:SetUpBeInviteTimer(TeamCommon.LoopTimerInterval)
-    end, false, 0, nil, true)
-  end
   self:GetAvatar():TeamRefuseInvite(Uid, bAutoRefuse)
-end
-
-function M:TryPopInviteInfo()
-  local InviteInfo = TeamModel:PopInviteInfo()
-  return InviteInfo
+  InviteQueueManager:FinishCurrentInvite(InviteQueueManager.InviteType.Team)
 end
 
 function M:SendSetTeamOrientation(NewTeamOrientation)
@@ -204,13 +179,7 @@ function M:RecvTeamAgreeInvite(ErrCode, Uid)
     self:SendTeamRefuseInvite(false)
     return
   end
-  local InviteInfo = TeamModel:GetBackInviteInfo()
-  self:NotifyEvent(TeamCommon.EventId.TeamAgreeInvite, Uid)
-  if not InviteInfo and Uid ~= InviteInfo.Uid then
-    self:CheckError(ErrorCode.RET_TEAM_INVATE_NOT_EXIST, true)
-    self:TryPopInviteInfo()
-    return
-  end
+  InviteQueueManager:FinishCurrentInvite(InviteQueueManager.InviteType.Team)
 end
 
 function M:SendTeamLeave()
@@ -253,11 +222,24 @@ function M:RecvTeamBeInvited(InviteInfo)
   if TeamModel:IsInviteExist(InviteInfo) then
     return
   end
-  local bQueueEmpty = TeamModel.InviteRecvQueue:IsEmpty()
-  TeamModel:PushInviteInfo(InviteInfo)
-  if bQueueEmpty then
-    self:SetUpBeInviteTimer(TeamCommon.LoopTimerInterval)
-  end
+  InviteQueueManager:EnqueueInvite({
+    Type = InviteQueueManager.InviteType.Team,
+    Uid = InviteInfo.Uid,
+    Nickname = InviteInfo.Nickname,
+    Level = InviteInfo.Level,
+    HeadIconId = InviteInfo.HeadIconId,
+    HeadFrameId = InviteInfo.HeadFrameId,
+    MaxRemainTime = GlobalConstant.TeamInviteStayTime.ConstantValue,
+    OnAccept = function()
+      self:SendTeamAgreeInvite(InviteInfo.Uid)
+    end,
+    OnRefuse = function(bAutoRefuse)
+      self:SendTeamRefuseInvite(bAutoRefuse)
+    end,
+    OnTimeout = function()
+      self:SendTeamRefuseInvite(false)
+    end
+  })
 end
 
 function M:RecvTeamBeRefused(Uid)
@@ -334,7 +316,7 @@ function M:RecvTeamOnInit(Team)
     local MemberInfo = TeamData.Members[i]
     ChatController:SendMemberChangeTipsToTeam(MemberInfo, TeamCommon.EventId.TeamOnAddPlayer)
   end
-  self:ShutDownTeamInvite()
+  InviteQueueManager:ClearType(InviteQueueManager.InviteType.Team)
   self:NotifyEvent(TeamCommon.EventId.TeamOnInit, TeamModel:GetTeam())
 end
 
@@ -511,52 +493,6 @@ function M:SetUpAutoResetHeadStateTimer()
     end
     self:NotifyEvent(TeamCommon.EventId.TeamOnVoteInvalid)
   end, false, 0, self.AutoResetHeadStateTimer)
-end
-
-function M:SetUpBeInviteTimer(Interval)
-  self.bProcessingTeamInvite = true
-  local CurrInvite = TeamModel:GetBackInviteInfo()
-  local InviteView = self:GetView(GWorld.GameInstance, TeamCommon.TipUIName)
-  if not CurrInvite then
-    DebugPrint(LXYTag, "队列空了，邀请流程退出")
-    if IsValid(InviteView) then
-      InviteView:Close("TeamInviteQueue Empty")
-      DebugPrint(LXYTag, "关闭邀请UI")
-    end
-    self:ShutDownTeamInvite()
-    return
-  end
-  if FriendController.bProcessingFriendReq then
-    return
-  end
-  DebugPrint(LXYTag, "开始组队受邀请定时器")
-  if not self:GetUIMgr():GetUIObj("CommonChangeScene") then
-    if not IsValid(InviteView) then
-      DebugPrint(LXYTag, "打开邀请UI")
-      InviteView = self:OpenView(GWorld.GameInstance, TeamCommon.TipUIName, CurrInvite)
-    else
-      DebugPrint(LXYTag, "重用邀请UI")
-      InviteView:StopAllAnimations()
-      InviteView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      InviteView:Construct()
-      InviteView:InitUIInfo(TeamCommon.TipUIName, false, nil, CurrInvite)
-    end
-  end
-  local MaxRemainTime = GlobalConstant.TeamInviteStayTime.ConstantValue
-  local InviteRemainTime = MaxRemainTime
-  self:AddTimer(Interval, function()
-    InviteRemainTime = InviteRemainTime - Interval
-    if IsValid(InviteView) and not InviteView:HasFocusedDescendants() and self:IsGamepad() then
-      DebugPrint(LXYTag, WarningTag, "组队邀请UI需要抢夺聚焦！！！！！！")
-      InviteView:SetFocus()
-    end
-    if InviteRemainTime > 0 then
-      self:NotifyEvent(TeamCommon.EventId.TeamInviteWaiting, InviteRemainTime / MaxRemainTime)
-      return
-    end
-    self:StopTimer(self.InviteRecvTimer)
-    self:NotifyEvent(TeamCommon.EventId.TeamInviteWaiting, 0)
-  end, true, 0, self.InviteRecvTimer)
 end
 
 function M:SetUpDoInviteTimer(Uid, Interval)

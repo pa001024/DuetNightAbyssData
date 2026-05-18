@@ -65,6 +65,11 @@ function M:OnLoaded(...)
     return
   end
   self.EvacuationTime = GWorld.GameInstance.CombatData.EvacuationTime
+  self.GameFailReason = GWorld.GameInstance.CombatData.GameFailReason
+  if not self.IsWin and self.GameFailReason == "TimeOver" and DataMgr.SoloTreasure[self.DungeonId] then
+    self.EvacuationTime = DataMgr.SoloTreasure[self.DungeonId].GameTotalTime
+  end
+  DebugPrint("yly EvacuationTime = " .. self.EvacuationTime .. " GameFailReason = " .. self.GameFailReason)
   self:InitBag()
   self.BagId = InventoryController.InventoryModel.BagId
   self.BagCostsResourceId = DataMgr.GlobalConstant.SoloTreasureCurrent.ConstantValue

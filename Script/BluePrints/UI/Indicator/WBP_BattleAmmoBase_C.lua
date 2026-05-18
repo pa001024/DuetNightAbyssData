@@ -74,7 +74,7 @@ function WBP_BattleAmmoBase_C:SwitchOut()
 end
 
 function WBP_BattleAmmoBase_C:TryShowSelf()
-  if self.Root.AmmoBarPanel == self then
+  if self.Root.AmmoBarPanel == self and not self.Root.InBulletJumpMode then
     self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   end
 end

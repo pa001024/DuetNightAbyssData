@@ -54,7 +54,7 @@ function BP_RegionOnlineInterPersonInfoComponent_C:BtnClicked(PlayerActor, InPre
     local OtherAvatar = RegionAvatars[self.CharObjId]
     local AvatarInfo = OtherAvatar and OtherAvatar.AvatarInfo
     if AvatarInfo and AvatarInfo.Uid then
-      TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid)
+      TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid, nil, AvatarInfo)
     end
   end
 end
@@ -105,7 +105,6 @@ function BP_RegionOnlineInterPersonInfoComponent_C:InitCommonUIConfirmID(CommonU
   self:SetInteractiveDistance(Data.InteractiveRadius or self.InteractiveDistance)
   self.InteractiveAngle = Data.InteractiveAngle or self.InteractiveAngle
   self.InteractiveFaceAngle = Data.PlayerFaceAngle or self.InteractiveFaceAngle
-  self.ListPriority = Data.InteractivePriority or 0
 end
 
 return BP_RegionOnlineInterPersonInfoComponent_C

@@ -904,7 +904,7 @@ local IntSet = Class("IntSet", CustomSet)
 IntSet.KeyType = BaseTypes.Int
 local StrSet = Class("StrSet", CustomSet)
 StrSet.KeyType = BaseTypes.Str
-local CustomSetDict = Class("CustomSet", CustomDict)
+local CustomSetDict = Class("CustomSetDict", CustomDict)
 CustomSetDict.KeyType = nil
 CustomSetDict.ValueType = CustomSet
 

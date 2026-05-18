@@ -10,6 +10,7 @@ function PlayerAlongSplineMoveNode:Init()
   self.bEnableCameraSeq = false
   self.bEnableCameraBlend = false
   self.IsTriggerable = false
+  self.UseEndOverlapBox = true
   self.CanMoveReverse = false
   self.CanExitSpline = false
   self.bStartOverlap = false
@@ -34,17 +35,11 @@ function PlayerAlongSplineMoveNode:Execute(Callback)
   end
   self.bEnableCameraSeq = IsValid(self.CinemaMoveSpline.CameraSequence)
   self.bEnableCameraBlend = self.CinemaMoveSpline.bEnableCameraBlend
+  self.CinemaMoveSpline.bUseEndOverlapBox = self.UseEndOverlapBox
   self.CinemaMoveSpline.IsTriggerable = self.IsTriggerable
+  self.CinemaMoveSpline.PlayerMoveComp = self.MoveComp
   self.CinemaMoveSpline.bCanExit = self.CanExitSpline
   self.CinemaMoveSpline.Player = self.Player
-  self.CinemaMoveSpline.EndPointOverlapBox.OnComponentBeginOverlap:Add(self.Player, function(Obj, Comp, OtherActor, OtherComp)
-    if not IsValid(self.Player) then
-      return
-    end
-    if OtherComp == self.Player.CapsuleComponent then
-      Callback()
-    end
-  end)
   if self.IsTriggerable then
     if self.CinemaMoveSpline.StartPointOverlapBox:IsOverlappingComponent(self.Player.CapsuleComponent) then
       self:OnStartBoxOverlap(true)
@@ -67,10 +62,11 @@ function PlayerAlongSplineMoveNode:Execute(Callback)
     end)
   else
     self:ExecEnterLogic()
-    if self.bEnableCameraSeq then
+    if self.bEnableCameraSeq == true or self.bUseEndOverlapBox == false then
       self.CinemaMoveSpline:SetActorTickEnabled(true)
     end
   end
+  self.CinemaMoveSpline:BindOnSplineMoveFinished(Callback)
 end
 
 function PlayerAlongSplineMoveNode:OnStartBoxOverlap(bBegin)
@@ -216,13 +212,10 @@ end
 
 function PlayerAlongSplineMoveNode:Clear()
   if IsValid(self.CinemaMoveSpline) then
-    self.CinemaMoveSpline.StartPointOverlapBox.OnComponentBeginOverlap:Clear()
-    self.CinemaMoveSpline.StartPointOverlapBox.OnComponentEndOverlap:Clear()
-    self.CinemaMoveSpline.EndPointOverlapBox.OnComponentBeginOverlap:Clear()
     self.CinemaMoveSpline:SetActorTickEnabled(false)
-    self.CinemaMoveSpline.BlendCameraInitialized = false
     self.CinemaMoveSpline.IsTriggerable = false
     self.CinemaMoveSpline.bCanExit = false
+    self.CinemaMoveSpline:Clear()
     if self.bEnableCameraSeq then
       self:SequenceBlendOut()
     end

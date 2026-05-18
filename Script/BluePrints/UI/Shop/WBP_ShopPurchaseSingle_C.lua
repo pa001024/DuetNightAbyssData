@@ -22,11 +22,11 @@ function M:Construct()
   self.Text_HoldMod01:SetText(GText("UI_ModHolding_Num"))
   self.Key_Mod:CreateGamepadKey(DataMgr.KeyboardText[UIConst.GamePadKey.SpecialRight].KeyText)
   self.Key_Suit:CreateGamepadKey(DataMgr.KeyboardText[UIConst.GamePadKey.SpecialRight].KeyText)
-  self.Btn_Mod.Button_Area.OnClicked:Add(self, self.OnWalnutModDetailsClick)
+  self.Btn_Mod.Btn_Click.OnClicked:Add(self, self.OnWalnutModDetailsClick)
 end
 
 function M:Destruct()
-  self.Btn_Mod.Button_Area.OnClicked:Clear()
+  self.Btn_Mod.Btn_Click.OnClicked:Clear()
 end
 
 function M:InitContent(Params, PopupData, Owner)
@@ -284,6 +284,13 @@ function M:InitUI(ShopType)
         TextContent = GText("UI_Shop_CharWalnutLevel"),
         MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
       })
+      if ShopUtils:GetCharWeaponHasLevelMax(self.ShopItemData.ItemId) then
+        self.WS_SuitBG:SetActiveWidgetIndex(1)
+        self.Text_Suit:SetColorAndOpacity(self.MaxSuit)
+      else
+        self.WS_SuitBG:SetActiveWidgetIndex(0)
+        self.Text_Suit:SetColorAndOpacity(self.NormalSuit)
+      end
       local CharNetData
       local GradeLevel = 0
       self.Text_SuitMod:SetText(GText(CharData.CharName))
@@ -309,6 +316,13 @@ function M:InitUI(ShopType)
         TextContent = GText("UI_Shop_WeaponWalnutLevel"),
         MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
       })
+      if ShopUtils:GetCharWeaponHasLevelMax(self.ShopItemData.ItemId) then
+        self.WS_SuitBG:SetActiveWidgetIndex(1)
+        self.Text_Suit:SetColorAndOpacity(self.MaxSuit)
+      else
+        self.WS_SuitBG:SetActiveWidgetIndex(0)
+        self.Text_Suit:SetColorAndOpacity(self.NormalSuit)
+      end
       do
         local WeaponNetData
         local GradeLevel = 0
@@ -650,7 +664,17 @@ function M:UpdataModDetails(ModDataInfo, ModLevel)
   local ModAttrs = ModDataInfo.AddAttrs
   if ModAttrs then
     for _, ModAttr in ipairs(ModAttrs) do
-      local AttrConfig = DataMgr.AttrConfig[ModAttr.AttrName]
+      local AttrNameKey = ""
+      if ModAttr.Tag and ModAttr.RateZone then
+        AttrNameKey = string.format("%s_%s_%s", ModAttr.AttrName, ModAttr.Tag, ModAttr.RateZone)
+      elseif ModAttr.Tag then
+        AttrNameKey = string.format("%s_%s", ModAttr.AttrName, ModAttr.Tag)
+      elseif ModAttr.RateZone then
+        AttrNameKey = string.format("%s_%s", ModAttr.AttrName, ModAttr.RateZone)
+      else
+        AttrNameKey = ModAttr.AttrName
+      end
+      local AttrConfig = DataMgr.AttrConfig[AttrNameKey]
       if not AttrConfig then
       else
         local _, ValueStr = ArmoryUtils:GenModAttrData(ModAttr, ModLevel, AttrConfig, ModDataInfo.Id)

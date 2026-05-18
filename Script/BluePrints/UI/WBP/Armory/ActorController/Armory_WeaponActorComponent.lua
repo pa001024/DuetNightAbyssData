@@ -5,6 +5,7 @@ local M = {}
 function M:Init()
   self.WeaponCoroutineMap = {}
   self.WeaponCoroutineArray = {}
+  EventManager:AddEvent(EventID.OnWeaponGradeLevelUp, self, self.OnWeaponGradeLevelUp)
 end
 
 local function MakeUncalculatedTrans(self)
@@ -111,6 +112,47 @@ function M:ChangeWeaponModel(WeaponData, bIfNoDelay, bForceChange)
   return self:ChangePlayerWeapon(WeaponData, PlayCharacter)
 end
 
+function M:OnWeaponGradeLevelUp(Ret, WeaponUuid, CurrentGradeLevel, ConsumeWeaponUuids)
+  local Avatar = self:GetAvatar()
+  local Weapon = Avatar.Weapons[WeaponUuid]
+  if not Weapon then
+    return
+  end
+  self:ChangeWeaponFashion(Weapon)
+end
+
+function M:ChangeWeaponFashion(WeaponData, bIfNoDelay, bForceChange)
+  self:ResetActorRotation()
+  local PlayCharacter = self:GetPlayerActor()
+  return self:ChangePlayerWeaponFashion(WeaponData, PlayCharacter)
+end
+
+function M:ChangePlayerWeaponFashion(WeaponData, Player)
+  self.CurrentWeaponInfo = WeaponData
+  self.CurrentWeaponAppearanceInfo = WeaponData:DumpAppearanceInfo()
+  local WeaponTag = WeaponData:HasTag("Melee") and "Melee" or "Ranged"
+  
+  local function ChangePlayerWeaponFashionInternal(PlayCharacter)
+    if nil == PlayCharacter then
+      return
+    end
+    local Avatar = self:GetAvatar()
+    if not Avatar then
+      return
+    end
+    local WeaponInfos = AvatarUtils:GetWeaponBattleInfo(Avatar, WeaponData)
+    WeaponInfos = WeaponInfos and WeaponInfos[WeaponTag .. "Weapon"]
+    local Weapon = PlayCharacter:GetWeapon(WeaponData.WeaponId)
+    if WeaponInfos.GradeLevel > 0 then
+      Weapon.WeaponFashion:ApplyHyperWeaponMaterialEffect(WeaponInfos.GradeLevel)
+    end
+  end
+  
+  ChangePlayerWeaponFashionInternal(Player)
+  local PlayerReflection = self:GetReflectionActor(Player)
+  ChangePlayerWeaponFashionInternal(PlayerReflection)
+end
+
 function M:PlayWeaponAppearFX()
   local function _PlayWeaponAppearFX(...)
     local WeaponActor = self:GetWeaponActor()
@@ -156,6 +198,10 @@ function M:DestroyPlayerMeleeWeapon(PlayCharacter)
   self:DestroyPlayerWeapon(PlayCharacter, "Melee")
 end
 
+function M:DestroyPlayerRangedWeapon(PlayCharacter)
+  self:DestroyPlayerWeapon(PlayCharacter, "Ranged")
+end
+
 function M:DestroyPlayerWeapon(PlayCharacter, WeaponTag)
   WeaponTag = WeaponTag or "Melee"
   PlayCharacter = PlayCharacter or self.ArmoryPlayer
@@ -165,6 +211,21 @@ function M:DestroyPlayerWeapon(PlayCharacter, WeaponTag)
     PlayerWeapon:Destroy()
   end
   PlayCharacter[WeaponTag .. "Weapon"] = nil
+end
+
+function M:DestroyAllPlayerWeapons()
+  local function DestroyAllPlayerWeaponsInternal(PlayCharacter)
+    if nil == PlayCharacter then
+      return
+    end
+    self:DestroyPlayerWeapon(PlayCharacter, "Melee")
+    self:DestroyPlayerWeapon(PlayCharacter, "Ranged")
+  end
+  
+  local PlayCharacter = self:GetPlayerActor()
+  DestroyAllPlayerWeaponsInternal(PlayCharacter)
+  local PlayerReflection = self:GetReflectionActor(PlayCharacter)
+  DestroyAllPlayerWeaponsInternal(PlayerReflection)
 end
 
 function M:AddPlayerUltraWeapons(Player)
@@ -335,7 +396,9 @@ function M:OnArmoryWeaponLoaded(WeaponActor, WeaponReflection)
   CommonUtils:SetActorTickableWhenPaused(WeaponActor, true)
   self:SetAccessoriesTickableWhenPaused(WeaponActor.Accessories)
   self.ArmoryHelper:SetWeapon(self.ArmoryWeapon, self:GetReflectionActor(self.ArmoryWeapon))
-  self.ArmoryHelper:SetViewActor(self.ArmoryWeapon)
+  if self.ViewActorType == self.ViewActorTypes.SingleWeapon then
+    self.ArmoryHelper:SetViewActor(self.ArmoryWeapon)
+  end
   if WeaponReflection then
     CommonUtils:SetActorTickableWhenPaused(WeaponReflection, true)
     self:SetAccessoriesTickableWhenPaused(WeaponReflection.Accessories)
@@ -464,6 +527,10 @@ function M:Component_DestroyActors()
     self.ArmoryWeapon:SetActorHideTag(self.UIName, false)
   end
   UIManager:DestroyShowWeapon(self)
+end
+
+function M:Component_OnDestruct()
+  EventManager:RemoveEvent(EventID.OnWeaponGradeLevelUp, self)
 end
 
 return M

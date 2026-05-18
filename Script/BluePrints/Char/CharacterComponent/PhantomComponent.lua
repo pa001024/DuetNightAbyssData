@@ -68,7 +68,8 @@ function Component:CreatePhantomOnLevelTransition()
   end
   local PhantomCreateInfo = Avatar.PhantomCreateInfo
   for PhantomRoleId, CreateInfo in pairs(PhantomCreateInfo) do
-    self:ReCreatePhantom(PhantomRoleId, CreateInfo.BTIndex, CreateInfo.Info, CreateInfo.ExtraInfo, CreateInfo.Level)
+    local CurrentCharId = BattleUtils.GetCurrentCharacterAttributeCharId(PhantomRoleId)
+    self:ReCreatePhantom(CurrentCharId, CreateInfo.BTIndex, CreateInfo.Info, CreateInfo.ExtraInfo, CreateInfo.Level)
   end
 end
 

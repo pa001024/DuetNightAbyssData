@@ -127,13 +127,15 @@ function M:NotifyServerChangeToState(StateId)
   if not self.Owner then
     return
   end
-  if 8 == self.RegionDataType then
+  if 8 == self.Owner.RegionDataType then
     self:EnterState(StateId)
   else
     local function CallBack(Ret)
-      if not Ret then
+      if Ret ~= ErrorCode.RET_SUCCESS then
         GWorld.logger.error("机关切换状态 服务端验证失败， UnitId:" .. self.Owner.UnitId .. "WorldRegionEid:" .. self.Owner.WorldRegionEid .. "错误码:" .. Ret)
         
+        self.bInStateChange = false
+        self:CheckChangeStateCache()
         return
       end
       self:EnterState(StateId)

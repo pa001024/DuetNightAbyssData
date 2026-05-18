@@ -2,6 +2,7 @@ local PersonInfoModel = require("BluePrints.UI.WBP.PersonInfo.PersonInfoModel")
 local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local PersonInfoEditModel = require("BluePrints.UI.WBP.PersonInfo.Edit.PersonInfoEditModel")
 local PersonInfoDataModel = require("BluePrints.UI.WBP.PersonInfo.Data.PersonInfoDataModel")
+local GuildBaseInfo = require("BluePrints.UI.WBP.Guild.Common.GuildBaseInfo")
 local M = Class("BluePrints.Common.MVC.Controller")
 M.PageEnum = {
   MainPage = 1,
@@ -49,6 +50,50 @@ function M:OpenView(PlayerInfo, ForceServerData)
   self.MainPage:SetFocus()
   self.CurPage = M.PageEnum.MainPage
   return self.MainPage
+end
+
+function M:RefreshMainPageGuildInfo()
+  if not self.MainPage or not self.MainPage.PersonInfoMainPage then
+    return
+  end
+  local PersonInfoMainPage = self.MainPage.PersonInfoMainPage
+  if PersonInfoMainPage.RefreshGuildInfo then
+    PersonInfoMainPage:RefreshGuildInfo()
+  else
+    PersonInfoMainPage:InitGuildInfo(PersonInfoModel:GetPersonalBaseInfo())
+  end
+end
+
+function M:IsViewingOtherPlayer(PlayerUuid)
+  if nil == PlayerUuid or PersonInfoModel:IsOwener() then
+    return false
+  end
+  local OtherPersonInfo = PersonInfoModel.OtherPersonInfo
+  if type(OtherPersonInfo) ~= "table" then
+    return false
+  end
+  return tostring(OtherPersonInfo.Uuid) == tostring(PlayerUuid)
+end
+
+function M:HandleOtherPlayerGuildSimpleInfo(PlayerUuid, GuildSimpleInfo)
+  if not self:IsViewingOtherPlayer(PlayerUuid) or type(GuildSimpleInfo) ~= "table" then
+    return
+  end
+  local Info = GuildSimpleInfo
+  if Info.LogoInfo == nil and nil ~= Info.Logo then
+    Info = GuildBaseInfo.New(GuildSimpleInfo)
+  end
+  if not Info or not PersonInfoModel:ApplyOtherGuildSimpleInfo(Info) then
+    return
+  end
+  self:RefreshMainPageGuildInfo()
+end
+
+function M:HandleOpenOtherPlayerView(PlayerInfo, ForceServerData)
+  if type(PlayerInfo) ~= "table" then
+    return
+  end
+  self:OpenView(PlayerInfo, ForceServerData)
 end
 
 function M:OpenEditView(TabName, BoxIndex)

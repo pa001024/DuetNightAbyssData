@@ -13,6 +13,16 @@ T.RT_1 = {
   "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00027",
   "/Game/Maps/Levels/Chapter01/Chapter01_Main/Navmesh_Data/Chapter01_Icelake_NavMesh_00028"
 }
+T.RT_2 = {
+  [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040401_Task.Haiboliya_Chezhan_YW_IQ10040401_Task",
+  [2] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Navmesh_Data/Haiboliya_Chezhan_YW_IQ10040401_Task_Navmesh.Haiboliya_Chezhan_YW_IQ10040401_Task_Navmesh"
+}
+T.RT_3 = {
+  "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ100424_Task.Haiboliya_Chezhan_YW_IQ100424_Task"
+}
+T.RT_4 = {
+  [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ100424_Task.Haiboliya_Chezhan_YW_IQ100424_Task"
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -231,7 +241,7 @@ return ReadOnly("ArtLevelControl", {
     Id = 20,
     InTime = 0,
     LoadLevel = {
-      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Design_Data/DesignTask/Huaxu_Haojing_IQ12020122_DesignTask.Huaxu_Haojing_IQ12020122_DesignTask"
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Design_Data/Huaxu_Haojing_IQ12020122_DesignTask.Huaxu_Haojing_IQ12020122_DesignTask"
     },
     OutTime = 0,
     RegionId = 1045,
@@ -241,7 +251,7 @@ return ReadOnly("ArtLevelControl", {
     Id = 21,
     InTime = 0,
     LoadLevel = {
-      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Design_Data/DesignTask/Huaxu_Haojing_IQ12020212_DesignTask.Huaxu_Haojing_IQ12020212_DesignTask"
+      [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Design_Data/Huaxu_Haojing_IQ12020212_DesignTask.Huaxu_Haojing_IQ12020212_DesignTask"
     },
     OutTime = 0,
     RegionId = 1045,
@@ -390,6 +400,95 @@ return ReadOnly("ArtLevelControl", {
   [36] = {
     Id = 36,
     InTime = 0,
+    LoadLevel = T.RT_2,
+    OutTime = 0,
+    RegionId = 1061,
+    VarName = "IQ10040401"
+  },
+  [37] = {
+    Id = 37,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ100424_Task.Haiboliya_Chezhan_YW_IQ100424_Task",
+      [2] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040402_Task.Haiboliya_Chezhan_YW_IQ10040402_Task"
+    },
+    OutTime = 0,
+    RegionId = 1061,
+    VarName = "IQ10040402"
+  },
+  [38] = {
+    Id = 38,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040403_Task.Haiboliya_Chezhan_YW_IQ10040403_Task",
+      [2] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Navmesh_Data/Haiboliya_Chezhan_YW_IQ10040403_Task_Navmesh.Haiboliya_Chezhan_YW_IQ10040403_Task_Navmesh"
+    },
+    OutTime = 0,
+    RegionId = 1061,
+    UnLoadLevelList = {
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040402_Task.Haiboliya_Chezhan_YW_IQ10040402_Task",
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040401_Task.Haiboliya_Chezhan_YW_IQ10040401_Task",
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Navmesh_Data/Haiboliya_Chezhan_YW_IQ10040401_Task_Navmesh.Haiboliya_Chezhan_YW_IQ10040401_Task_Navmesh"
+    },
+    VarName = "IQ10040403"
+  },
+  [39] = {
+    Id = 39,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040406_Task.Haiboliya_Chezhan_YW_IQ10040406_Task"
+    },
+    OutTime = 0,
+    RegionId = 1061,
+    UnLoadLevelList = T.RT_3,
+    VarName = "IQ10040406"
+  },
+  [40] = {
+    Id = 40,
+    InTime = 0,
+    LoadLevel = T.RT_2,
+    OutTime = 0,
+    RegionId = 1061,
+    UnLoadLevelList = {
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040406_Task.Haiboliya_Chezhan_YW_IQ10040406_Task",
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Navmesh_Data/Haiboliya_Chezhan_YW_IQ10040403_Task_Navmesh.Haiboliya_Chezhan_YW_IQ10040403_Task_Navmesh",
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040403_Task.Haiboliya_Chezhan_YW_IQ10040403_Task"
+    },
+    VarName = "IQ10040424"
+  },
+  [41] = {
+    Id = 41,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040506_Task.Haiboliya_Chezhan_YW_IQ10040506_Task"
+    },
+    OutTime = 0,
+    RegionId = 1061,
+    UnLoadLevelList = T.RT_3,
+    VarName = "IQ10040506"
+  },
+  [42] = {
+    Id = 42,
+    InTime = 0,
+    LoadLevel = T.RT_4,
+    OutTime = 0,
+    RegionId = 1061,
+    UnLoadLevelList = {
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Task_Data/Haiboliya_Chezhan_YW_IQ10040506_Task.Haiboliya_Chezhan_YW_IQ10040506_Task"
+    },
+    VarName = "IQ10040514"
+  },
+  [43] = {
+    Id = 43,
+    InTime = 0,
+    LoadLevel = T.RT_4,
+    OutTime = 0,
+    RegionId = 1061,
+    VarName = "IQ10040407"
+  },
+  [44] = {
+    Id = 44,
+    InTime = 0,
     LoadLevel = {
       [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Int/Design_Data/Huaxu_Haojing_Int_IQ12020208_DesignTask.Huaxu_Haojing_Int_IQ12020208_DesignTask"
     },
@@ -397,8 +496,8 @@ return ReadOnly("ArtLevelControl", {
     RegionId = 1051,
     VarName = "Qianxing12020208"
   },
-  [37] = {
-    Id = 37,
+  [45] = {
+    Id = 45,
     InTime = 0,
     LoadLevel = {
       [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Int/Task_Data/Huaxu_Haojing_Int_IQ12020208_Task.Huaxu_Haojing_Int_IQ12020208_Task"
@@ -407,8 +506,8 @@ return ReadOnly("ArtLevelControl", {
     RegionId = 1051,
     VarName = "Int12020208"
   },
-  [38] = {
-    Id = 38,
+  [46] = {
+    Id = 46,
     InTime = 0,
     LoadLevel = {
       [1] = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Main/Task_Data/Huaxu_Haojing_IQ120202_Task04.Huaxu_Haojing_IQ120202_Task04"
@@ -416,5 +515,121 @@ return ReadOnly("ArtLevelControl", {
     OutTime = 0,
     RegionId = 1045,
     VarName = "ZhiliuA12020414"
+  },
+  [47] = {
+    Id = 47,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_Online_Task.Haiboliya_Chezhan_Online_Task"
+    },
+    OutTime = 0,
+    RegionId = 1060,
+    VarName = "Haiboliya_Chezhan_Online"
+  },
+  [48] = {
+    Id = 48,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ100402_Task.Haiboliya_Chezhan_YT_IQ100402_Task"
+    },
+    OutTime = 0,
+    RegionId = 1060,
+    VarName = "IQ10040207"
+  },
+  [49] = {
+    Id = 49,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ120206_Task.Haiboliya_Chezhan_YT_IQ120206_Task",
+      [2] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Navmesh_Data/Haiboliya_Chezhan_YT_IQ120206_Task_Navmesh.Haiboliya_Chezhan_YT_IQ120206_Task_Navmesh"
+    },
+    OutTime = 0,
+    RegionId = 1060,
+    VarName = "IQ10030702"
+  },
+  [50] = {
+    Id = 50,
+    InTime = 0,
+    OutTime = 0,
+    RegionId = 1060,
+    UnLoadLevelList = {
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ120206_Task.Haiboliya_Chezhan_YT_IQ120206_Task",
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Navmesh_Data/Haiboliya_Chezhan_YT_IQ120206_Task_Navmesh.Haiboliya_Chezhan_YT_IQ120206_Task_Navmesh",
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Navmesh_Data/Haiboliya_Chezhan_YT_IQ100403_Task_NavMesh.Haiboliya_Chezhan_YT_IQ100403_Task_NavMesh",
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ100403_Task.Haiboliya_Chezhan_YT_IQ100403_Task"
+    },
+    VarName = "CZIQ10040401"
+  },
+  [51] = {
+    Id = 51,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ100403_Task.Haiboliya_Chezhan_YT_IQ100403_Task",
+      [2] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Navmesh_Data/Haiboliya_Chezhan_YT_IQ100403_Task_NavMesh.Haiboliya_Chezhan_YT_IQ100403_Task_NavMesh"
+    },
+    OutTime = 0,
+    RegionId = 1060,
+    VarName = "IQ10040312"
+  },
+  [52] = {
+    Id = 52,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ10040510_Task.Haiboliya_Chezhan_YT_IQ10040510_Task",
+      [2] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Navmesh_Data/Haiboliya_Chezhan_YT_IQ10040510_Task_NavMesh.Haiboliya_Chezhan_YT_IQ10040510_Task_NavMesh"
+    },
+    OutTime = 0,
+    RegionId = 1060,
+    VarName = "IQ10040510"
+  },
+  [53] = {
+    Id = 53,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ10040205_Task.Haiboliya_Chezhan_YT_IQ10040205_Task"
+    },
+    OutTime = 0,
+    RegionId = 1060,
+    VarName = "IQ10040205"
+  },
+  [54] = {
+    Id = 54,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ10040204_Task.Haiboliya_Chezhan_YT_IQ10040204_Task"
+    },
+    OutTime = 0,
+    RegionId = 1060,
+    VarName = "IQ10040204"
+  },
+  [55] = {
+    Id = 55,
+    InTime = 0,
+    OutTime = 0,
+    RegionId = 1060,
+    UnLoadLevelList = {
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ10040204_Task.Haiboliya_Chezhan_YT_IQ10040204_Task"
+    },
+    VarName = "IQ10040310"
+  },
+  [56] = {
+    Id = 56,
+    InTime = 0,
+    LoadLevel = {
+      [1] = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ10040208_Task.Haiboliya_Chezhan_YT_IQ10040208_Task"
+    },
+    OutTime = 0,
+    RegionId = 1060,
+    VarName = "IQ10040208"
+  },
+  [57] = {
+    Id = 57,
+    InTime = 0,
+    OutTime = 0,
+    RegionId = 1060,
+    UnLoadLevelList = {
+      "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Task_Data/Haiboliya_Chezhan_YT_IQ10040208_Task.Haiboliya_Chezhan_YT_IQ10040208_Task"
+    },
+    VarName = "IQ10040209"
   }
 })

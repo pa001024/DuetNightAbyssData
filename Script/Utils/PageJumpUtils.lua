@@ -309,6 +309,14 @@ function PageJumpUtils:CloseFrontDialog()
       WalnutChoiceUI:Close()
     end
   end
+  local IronExpPopup = UIManager:GetUI("IronExpPopup")
+  if IronExpPopup then
+    IronExpPopup:Close()
+  end
+  local ActivityLimitTimeRewardPreview = UIManager:GetUI("ActivityLimitTimeRewardPreview")
+  if ActivityLimitTimeRewardPreview then
+    ActivityLimitTimeRewardPreview:Close()
+  end
 end
 
 function PageJumpUtils:SortAccessItem(ItemsContainer)
@@ -1248,7 +1256,8 @@ function PageJumpUtils:CreateJumpToForge(AccessItem, ItemType, ItemId, AccessTex
   local function JumpToPage()
     local PlayerAvatar = GWorld:GetAvatar()
     local AvatarDrafts = PlayerAvatar.Drafts
-    if not AvatarDrafts or not AvatarDrafts[DraftId] then
+    if (not AvatarDrafts or not AvatarDrafts[DraftId]) and not DataMgr.Draft[DraftId].NotDraftTree then
+      self:CloseFrontDialog()
       self:JumpToForgeCompendiumPathByDraftId(DraftId)
       return
     end
@@ -1714,7 +1723,7 @@ function PageJumpUtils:JumpToEventPage(CurTabIndex)
         UIManager:AddToJumpPageDeque(ActivityMain)
       else
         UIManager:PlaceJumpUIToTop(ActivityMain, "ActivityMain")
-        ActivityMain:JumpToTargetTab(TabIndex)
+        ActivityMain:JumpToTargetTabByEventTabId(TabIndex)
       end
     end
   })
@@ -2179,6 +2188,38 @@ function PageJumpUtils:SoloTreasureRepeatLevel(...)
   local UIManager = GameInstance:GetGameUIManager()
   UIManager:LoadUINew(UIName, EventId, Mode, bIsDifficult, EventDugeonId)
   return true
+end
+
+function PageJumpUtils:JumpToAsyncCombatRoomPage(CurTabIndex)
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  GameFlowUtils:AddFlow("OpenSystemUI", {
+    GWorld.GameInstance,
+    function(_, Flow)
+      local ActivityMain = UIManager:LoadUINew("ActivityMain", nil, CurTabIndex)
+      UIManager:AddToJumpPageDeque(ActivityMain)
+      local ActivityId = DataMgr.AsyncCombatEventConstant.AsyncCombat_EventId.ConstantValue
+      local PageConfigData = DataMgr.EventPortal[ActivityId]
+      if PageConfigData.JumpUIId then
+        PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId)
+      end
+      UIManager:AddFlow("ActivityMain", Flow)
+    end
+  })
+  return true
+end
+
+function PageJumpUtils:JumpToSkinPreview(ItemData, ParentWidget)
+  self:CloseFrontDialog()
+  local GameInstance = GWorld.GameInstance
+  local UIManager = GameInstance:GetGameUIManager()
+  local TargetUIPage = UIManager:GetUIObj("SkinPreview")
+  if not TargetUIPage then
+    TargetUIPage = UIManager:LoadUINew("SkinPreview", ItemData, ParentWidget)
+  else
+    UIManager:PlaceJumpUIToTop(TargetUIPage, "SkinPreview")
+    TargetUIPage:OnLoaded(ItemData, ParentWidget)
+  end
 end
 
 return PageJumpUtils

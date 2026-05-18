@@ -1,11 +1,10 @@
 local M = Class({
-  "BluePrints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidget_C"
 })
 local RewardSoundEvent = "event:/ui/common/get_award_items"
 local BigPrizeRewardSoundEvent = "event:/ui/activity/limit_gift_pool_gacha_get_award_sp_item"
 
 function M:Construct()
-  M.Super.Construct(self)
   self.List = self.List_Item
   self.NormalInAnimation = self.Normal_In
   self.SpecialInAnimation = self.Special_In
@@ -27,11 +26,9 @@ end
 
 function M:Destruct()
   self.Btn_Close.OnClicked:Remove(self, self.OnClose)
-  M.Super.Destruct(self)
 end
 
-function M:OnLoaded(...)
-  M.Super.OnLoaded(self, ...)
+function M:Init(...)
   local ItemList, DrawCount, bIsBigPrize, CloseCallback, ConvertFlags = ...
   self.ConvertFlags = ConvertFlags
   self:PopulateList(ItemList)
@@ -55,20 +52,14 @@ function M:InitRewardText(DrawCount, bIsBigPrize)
   local DrawCount = DrawCount or 0
   self.Panel_Title:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self.Panel_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.VX_WordBgGlow:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.VX_WordBg:SetVisibility(UE4.ESlateVisibility.Collapsed)
   if not bIsBigPrize or not self.Text_Title then
     return
   end
   if DrawCount <= 3 then
     self.Panel_Title:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-    self.VX_WordBgGlow:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-    self.VX_WordBg:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
     self.Text_Title:SetText(string.format(GText("UI_LimitedPrizePool_BestLuck"), DrawCount))
   elseif DrawCount <= 5 then
     self.Panel_Title:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-    self.VX_WordBgGlow:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
-    self.VX_WordBg:SetVisibility(UE4.ESlateVisibility.HitTestInvisible)
     self.Text_Title:SetText(string.format(GText("UI_LimitedPrizePool_GoodLuck"), DrawCount))
   end
   if DrawCount < 8 then
@@ -110,7 +101,7 @@ function M:PopulateList(ItemList)
     Content.Icon = ItemUtils.GetItemIconPath(Content.Id, Content.ItemType)
     Content.Rarity = ItemUtils.GetItemRarity(Content.Id, Content.ItemType)
     Content.Count = ItemData[4]
-    Content.UIName = self:GetUIConfigName()
+    Content.UIName = "LimitedPrizePoolReward"
     local bConvert = self:IsRewardConverted(ItemData)
     local bSkin = Content.ItemType == "Skin" or Content.ItemType == "WeaponSkin" or Content.ItemType == "Mount"
     Content.HandleMouseDown = bConvert or bSkin
@@ -139,8 +130,12 @@ function M:OnClose()
 end
 
 function M:OnCloseFinished()
+  local Parent = self.Parent
   self:UnbindAllFromAnimationFinished(self.CloseOutAnimation)
-  self:Close()
+  self:RemoveFromParent()
+  if IsValid(Parent) and Parent.Close then
+    Parent:Close()
+  end
   if type(self.CloseCallback) == "function" then
     self.CloseCallback()
   elseif self.CloseCallback and self.CloseCallback[1] and self.CloseCallback[2] then

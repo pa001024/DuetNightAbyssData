@@ -2045,6 +2045,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["271192074"] = {
+      CreatorId = 271192074,
+      UnitType = "Drop",
+      UnitId = 10092
+    },
     ["1191854"] = {
       CreatorId = 1191854,
       UnitType = "Npc",
@@ -4246,6 +4251,11 @@ return {
       ManualItemId = 119003,
       UnitType = "Mechanism",
       UnitId = 1807
+    },
+    ["119005"] = {
+      ManualItemId = 119005,
+      UnitType = "Mechanism",
+      UnitId = 1824
     }
   },
   Explore = {

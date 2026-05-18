@@ -6,7 +6,7 @@ function WBP_Com_CheckBox_C:Construct()
   self:SetKey("Img", "LS", nil)
 end
 
-function WBP_Com_CheckBox_C:SetKey(KeyType, KeyName, SoundFunc)
+function WBP_Com_CheckBox_C:SetKey(KeyType, KeyName, SoundFunc, bLongPress)
   self.Com_KeyImg:CreateCommonKey({
     KeyInfoList = {
       {
@@ -15,17 +15,18 @@ function WBP_Com_CheckBox_C:SetKey(KeyType, KeyName, SoundFunc)
         Text = "Text" == KeyType and KeyName or nil
       }
     },
-    SoundFunc = SoundFunc
+    SoundFunc = SoundFunc,
+    bLongPress = bLongPress
   })
 end
 
-function WBP_Com_CheckBox_C:InitGamepadKey(KeyName)
+function WBP_Com_CheckBox_C:InitGamepadKey(KeyName, bLongPress)
   if not KeyName then
     self.bShowImg = false
     self.Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     return
   end
-  self:SetKey("Img", KeyName, nil)
+  self:SetKey("Img", KeyName, nil, bLongPress)
   self.bShowImg = true
   self:RefreshBaseInfo()
 end

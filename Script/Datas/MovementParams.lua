@@ -27,5 +27,5 @@ return ReadOnly("MovementParams", {
     ParamValue = 0.2,
     SlideParam = "SideJumpAttachTime"
   },
-  Speed = {ParamValue = 500, SlideParam = "Speed"}
+  Speed = {ParamValue = 2000, SlideParam = "Speed"}
 })

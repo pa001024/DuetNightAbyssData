@@ -1,50 +1,6 @@
-local FCheckOptionConditionNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_Condition")
-local FDialogueNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_Dialogue")
-local FOptionNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_Option")
-local FStartNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_Start")
-local FEndNode = require("BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode_End")
-local FEFNode_PlayAudio = require("BluePrints.Story.Talk.TalkFlow.DelegateNodes.EFNode_PlayAudio")
+local FEFNode_PlayAudio = require("BluePrints.Story.Talk.TalkFlow.Nodes.DelegateNodes.EFNode_PlayAudio")
 local FlowUtils = require("BluePrints.Story.ExecutionFlow.ExecutionFlowUtils")
-local TalkFlowController = require("BluePrints.Story.Talk.TalkFlow.TalkFlowController")
 local M = {}
-
-function M:GetOrCreateNode(NodeType, DialogueId, TalkTask, Comps, NodeMaps, Events)
-  local Flow = TalkFlowController:GetTalkFlow()
-  local Node = self:TryGetNode(NodeType, DialogueId, NodeMaps)
-  if nil ~= Node then
-    return Node
-  end
-  if "Dialogue" == NodeType then
-    Node = FDialogueNode:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
-  elseif "Option" == NodeType then
-    Node = FOptionNode:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
-  elseif "CheckOptionCondition" == NodeType then
-    Node = FCheckOptionConditionNode:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
-  elseif "Start" == NodeType then
-    Node = FStartNode:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
-  elseif "End" == NodeType then
-    Node = FEndNode:New(nil, nil, nil, nil, Events)
-  else
-    DebugPrint("FTalkFlow:GetOrCreateNode: NodeType无效", NodeType)
-    return
-  end
-  return Node
-end
-
-function M:TryGetNode(NodeType, DialogueId, NodeMaps)
-  if not NodeMaps then
-    return
-  end
-  local NodeMap
-  if "Dialogue" == NodeType then
-    local NodeMap = NodeMaps.DialogueNodeMap
-  elseif "Option" == NodeType then
-    local NodeMap = NodeMaps.OptionNodeMap
-  elseif "CheckOptionCondition" == NodeType then
-    local NodeMap = NodeMaps.CheckConditionNodeMap
-  end
-  return NodeMap and NodeMap[DialogueId]
-end
 
 function M:CreateFlow(DialogueId, TalkTask, OnFinished)
   local DialogueData = DataMgr.Dialogue[DialogueId]
@@ -86,8 +42,8 @@ function M:CreateFlow(DialogueId, TalkTask, OnFinished)
   return Flow, ParallelNode, WaitAllNode
 end
 
-function M:PlayAudioNode(Flow, Params)
-  local PlayAudioNode = FEFNode_PlayAudio:CreateNode(Flow, Params)
+function M:PlayAudioNode(Flow, TalkTask, Params)
+  local PlayAudioNode = FEFNode_PlayAudio:CreateNode(Flow, TalkTask, Params)
   if nil == PlayAudioNode then
     return
   end

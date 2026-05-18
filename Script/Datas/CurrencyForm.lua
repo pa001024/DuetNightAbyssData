@@ -5,6 +5,11 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("CurrencyForm", {
+  [99] = {
+    IfAdd = true,
+    IfMax = false,
+    ResourceID = 99
+  },
   [100] = {
     IfAdd = true,
     IfMax = false,

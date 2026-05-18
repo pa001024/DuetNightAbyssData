@@ -727,8 +727,9 @@ class DispatchProcessor(BaseProcessor):
         if not story_path:
             return None
 
-        json_path = story_path.replace(".story", ".json")
-        json_path = json_path.replace("\\", os.sep).replace("/", os.sep)
+        json_path = self._normalize_story_path(story_path)
+        if not json_path:
+            return None
         full_path = os.path.join("out", "StoryCreator", "StoryFiles", json_path)
         if not os.path.exists(full_path):
             return None

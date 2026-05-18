@@ -182,8 +182,8 @@ function M:RecoverToPlayerActor()
   if self.LastArmoryPlayerRot then
     self:SetPlayerRotation(self.LastArmoryPlayerRot)
   end
-  if self.CurrentWeaponInfo then
-    self:ChangeWeaponModel(self.CurrentWeaponInfo, true, true)
+  if self.LastWeaponInfo then
+    self:ChangeWeaponModel(self.LastWeaponInfo, true, true)
     if self.LastWeaponAppearanceInfo then
       self:ChangeWeaponAppearance(self.LastWeaponAppearanceInfo)
     end
@@ -200,8 +200,8 @@ function M:RecoverToPlayerActor()
 end
 
 function M:RecoverToSingleWeapon()
-  if self.CurrentWeaponInfo then
-    self:ChangeWeaponModel(self.CurrentWeaponInfo, true, true)
+  if self.LastWeaponInfo then
+    self:ChangeWeaponModel(self.LastWeaponInfo, true, true)
     if self.LastWeaponAppearanceInfo then
       self:ChangeWeaponAppearance(self.LastWeaponAppearanceInfo)
     end
@@ -211,6 +211,7 @@ end
 function M:OnHelperEndViewTarget(PC)
   self.IsControled = false
   self.LastCharModelInfo = self.CurrentCharInfo
+  self.LastWeaponInfo = self.CurrentWeaponInfo
   self.LastCharAppearanceInfo = self.CurrentAppearanceInfo
   self.LastWeaponAppearanceInfo = self.CurrentWeaponAppearanceInfo
   if self.bDestructed then
@@ -515,6 +516,18 @@ function M:PlayAppearFX(FXComponent)
   end
 end
 
+function M:CancelPendingDelayFramePreview()
+  if self.LTweenHandle_PlayDisappearFX and IsValid(self.LTweenHandle_PlayDisappearFX) and IsValid(self.ViewUI) then
+    ULTweenBPLibrary.KillIfIsTweening(self.ViewUI, self.LTweenHandle_PlayDisappearFX, false)
+  end
+  self.LTweenHandle_PlayDisappearFX = nil
+  self.DelayFrame = nil
+  self.bWatingForDelayFrame = false
+  self.LastDelayCameraTags = nil
+  self.DisappearFXPlaying = false
+  self.bNoDisappearFX = false
+end
+
 function M:RealPlayMontageAndCamera(MontageTag, bShowOrHideWeapon, CameraTags)
   if nil == MontageTag then
     MontageTag, bShowOrHideWeapon = self:CalcArmoryMontageTag(self.LastMontageAndCameraType, self.LastMontageAndCameraTag, self.LastMontageAndCameraBehavior)
@@ -690,17 +703,31 @@ function M:SetArmoryCameraTag(Tag1, Tag2, Tag3, Tag4)
   end
   self.LastDelayCameraTags = nil
   local PlayerActor = self:GetPlayerActor()
+  local CameraData = self:GetCameraData()
+  local ExplicitTag4 = ""
+  local DefaultTag4 = ""
   if PlayerActor then
     Tag1 = Tag1 or ""
     Tag2 = "0" == Tag2 and "_" .. PlayerActor.PlayerAnimInstance.IdleTag or Tag2 and "" ~= Tag2 and "_" .. Tag2 or ""
     Tag3 = Tag3 and "" ~= Tag3 and "_" .. Tag3 or ""
-    Tag4 = Tag4 and "" ~= Tag4 and "_" .. Tag4
-  local Tag = Tag1 .. Tag2 .. Tag3 .. Tag4
+    ExplicitTag4 = Tag4 and "" ~= Tag4 and "_" .. Tag4 or ""
+    DefaultTag4 = "_" .. PlayerActor:GetBattleCharBodyType()
+  elseif not PlayerActor and self.ArmoryWeapon then
+    Tag1 = Tag1 or ""
+    Tag2 = Tag2 or ""
+    Tag3 = Tag3 or ""
+    ExplicitTag4 = Tag4 or ""
+  end
+  local Tag = (Tag1 or "") .. (Tag2 or "") .. (Tag3 or "") .. (ExplicitTag4 or "")
+  local Data = CameraData[Tag]
+  if not Data and "" == ExplicitTag4 and "" ~= DefaultTag4 then
+    Tag = (Tag1 or "") .. (Tag2 or "") .. (Tag3 or "") .. (DefaultTag4 or "")
+    Data = CameraData[Tag]
+  end
   DebugPrint("gmy@Armory_ActorController M:SetArmoryCameraTag111", Tag)
-  local Data = self:GetCameraData()[Tag]
   if not Data then
     Tag = "Default"
-    Data = self:GetCameraData()[Tag]
+    Data = CameraData[Tag]
   end
   local Location = FVector(Data.Location[1], Data.Location[2], Data.Location[3])
   local Rotation = FRotator(Data.Rotation[2], Data.Rotation[3], Data.Rotation[1])
@@ -790,6 +817,9 @@ function M:SetArmoryCameraTag(Tag1, Tag2, Tag3, Tag4)
     end
     self.LastApplyCameraTag = Tag
   end
+  if self.SequenceActorController then
+    self.SequenceActorController:SetArmoryCameraTag(table.unpack(self.LastCameraTags))
+  end
 end
 
 function M:FixedCameraTransTimeOnce(Time)
@@ -819,6 +849,7 @@ local SystemUI = DataMgr.SystemUI
 local CameraDataConfig = {
   [SystemUI.ArmoryMain.UIName] = DataMgr.ArmoryCameraData,
   [SystemUI.ArmoryDetail.UIName] = DataMgr.ArmoryCameraData,
+  [SystemUI.AppearanceImport.UIName] = DataMgr.ArmoryCameraData,
   [SystemUI.PersonInfoPageMain.UIName] = DataMgr.PersonalPageCameraData,
   [SystemUI.SquadMainUI.UIName] = DataMgr.SquadCameraData,
   [SystemUI.BattlePassMain.UIName] = DataMgr.BattlePassCameraData,
@@ -827,6 +858,7 @@ local CameraDataConfig = {
   [SystemUI.SkinPreview.UIName] = DataMgr.SkinPreviewCameraData,
   [SystemUI.GuildWarRank.UIName] = DataMgr.GuildWarRankCameraData,
   [SystemUI.PersonalInfoDataRanking.UIName] = DataMgr.GuildWarRankCameraData,
+  [SystemUI.AppearanceRank.UIName] = DataMgr.GuildWarRankCameraData,
   [SystemUI.ShopMain.UIName] = DataMgr.RecommendCameraData,
   [SystemUI.MountsMain.UIName] = DataMgr.MountCameraData,
   [SystemUI.ActivitySoloTreasureMain.UIName] = DataMgr.SoloTreasureCameraData
@@ -940,6 +972,7 @@ function M:TryDestroyActors()
     return
   end
   self.bActorsDestroyed = true
+  self:DestroyAllCreature()
   self:Component_DestroyActors()
   self:DestroyHelper()
   self:AfterDestroyActors()
@@ -987,6 +1020,12 @@ function M:GetViewTarget()
   return self.ArmoryHelper
 end
 
+function M:IsViewTarget()
+  if self.ViewUI then
+    return self.ViewUI:GetOwningPlayer():GetViewTarget() == self:GetViewTarget()
+  end
+end
+
 function M:SetAvatar(Avatar)
   self.Avatar = Avatar
 end
@@ -1002,10 +1041,62 @@ function M:DestroyCreature(Key)
   end
 end
 
+function M:DestroyAllCreature()
+  if self.Creatures then
+    for key, value in pairs(self.Creatures) do
+      if IsValid(value) then
+        value:DestroyEffectCreature()
+      end
+    end
+    self.Creatures = nil
+  end
+  if self.ArmoryPlayer then
+    self.ArmoryPlayer:RemoveAllEffectCreature(false)
+  end
+end
+
+function M:BindViewUI(ViewUI)
+  self.ViewUIId = self.ViewUIId + 1
+  self.ViewUIs[ViewUI] = self.ViewUIId
+end
+
+function M:UnBindViewUI(ViewUI)
+  self.ViewUIs[ViewUI] = nil
+end
+
+function M:IsUsedByUI(ViewUI)
+  return self.ViewUIs[ViewUI]
+end
+
+function M:SetCurrentViewUI(ViewUI)
+  if self.ViewUIs[ViewUI] then
+    self.ViewUI = ViewUI
+    self.UIName = self.ViewUI:GetUIConfigName()
+    DebugPrint("CY@ActorController SetCurrentViewUI", self.UIName)
+  end
+end
+
+function M:ResetCurrentViewUI()
+  local MaxId = 0
+  self.ViewUI = nil
+  for ViewUI, Id in pairs(self.ViewUIs) do
+    if Id > MaxId then
+      MaxId = Id
+      self.ViewUI = ViewUI
+    end
+  end
+  self.UIName = self.ViewUI:GetUIConfigName()
+  DebugPrint("CY@ActorController ResetCurrentViewUI", self.UIName)
+end
+
 function M:Init(Params)
   Params = Params or {}
   self.Params = Params
   self.ViewUI = Params.ViewUI
+  self.ViewUIId = 1
+  self.ViewUIs = {
+    [self.ViewUI] = self.ViewUIId
+  }
   self.IsPreviewMode = Params.IsPreviewMode
   self.EPreviewSceneType = Params.EPreviewSceneType
   self.PreviewSceneLocation = Params.PreviewSceneLocation

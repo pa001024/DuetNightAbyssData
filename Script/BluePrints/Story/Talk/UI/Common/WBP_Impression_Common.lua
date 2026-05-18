@@ -5,9 +5,9 @@ local WBP_Impression_Common = Class("BluePrints.Story.Talk.UI.BP_TalkBaseUINew_C
 local EImpressionButtonState = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").EImpressionButtonState
 local ETalkOptionType = require("BluePrints.Story.Talk.Model.TalkOptionData").ETalkOptionType
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
+local OptionList_C = require("BluePrints.Story.Talk.UI.Common.WBP_TalkSelect_Common")
 local ImpressionTypes = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").ImpressionTypes
 local ImpressionItemHideUITag = require("BluePrints.UI.UI_PC.Impression.ImpressionConst").ImpressionItemHideUITag
-local ImpressionItemNum = 5
 
 function WBP_Impression_Common:Construct()
   WBP_Impression_Common.Super.Construct(self)
@@ -41,12 +41,64 @@ function WBP_Impression_Common:SwitchBindAnimationEvents(bBind)
   self:SwitchBindExitAnimationEvents(bBind)
 end
 
+function WBP_Impression_Common:GetImpressionItemUIPath()
+  DebugPrint("Error: 未实现的函数WBP_Impression_Common:GetImpressionItemUIPath")
+  return nil
+end
+
+function WBP_Impression_Common:BuildExitSelectableConfig()
+  return {
+    Widget = self.Button_Area,
+    IsEnabled = function()
+      return self:IsExitButtonHidden()
+    end,
+    OnSelect = function()
+      self:OnExitButtonSelected(true)
+    end,
+    OnUnselect = function()
+      self:OnExitButtonSelected(false)
+    end,
+    OnPressed = function()
+      self:OnExitButtonPressed()
+    end,
+    OnReleased = function()
+      self:OnExitButtonClicked()
+    end
+  }
+end
+
+function WBP_Impression_Common:OnOptionListSelectionChanged(CurrentIndex)
+  if CurrentIndex < 0 then
+    self.SelectImpressionItemIndex = nil
+    return
+  end
+  self.SelectImpressionItemIndex = CurrentIndex + 1
+end
+
+function WBP_Impression_Common:BuildOptionListInitParams()
+  return {
+    Img_Mouse = self.Img_Mouse,
+    ScrollBox = self.ScrollBox_Items,
+    ItemUIPathName = self.ImpressionItemUIPathName,
+    ExtraSelectable = self:BuildExitSelectableConfig(),
+    OnSelectionChanged = function(CurrentIndex)
+      self:OnOptionListSelectionChanged(CurrentIndex)
+    end,
+    OnItemHovered = function(Index)
+      self:OnImpressionItemHovered(Index + 1)
+    end
+  }
+end
+
 function WBP_Impression_Common:InitData_Lua()
   DebugPrint("WBP_Impression_Common:InitData_Lua")
   self.SelectImpressionItemIndex = nil
   self.OptionMaxNum = -1
   self.bIsTextBorderHidden = true
   self.bImpressionMapVisibility = false
+  self.ImpressionItemUIPathName = self:GetImpressionItemUIPath()
+  self.OptionList = OptionList_C:New()
+  self.OptionList:Init(self, self:BuildOptionListInitParams())
 end
 
 function WBP_Impression_Common:InitTypingText()
@@ -90,95 +142,114 @@ function WBP_Impression_Common:InitGroupCost(ImpressionAreaId, Count, Cost, bCan
   return bCanCheck
 end
 
-function WBP_Impression_Common:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId, OnOptionItemClicked)
+function WBP_Impression_Common:BuildImpressionOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
   local OptionState = self:GetOptionState(OptionData, ImpressionAreaId)
   local ImpressionDone = false
-  DebugPrint("WBP_Impression_Common:InitOptions", OptionState)
-  local Avatar = GWorld:GetAvatar()
-  local OverrideType
+  DebugPrint("WBP_Impression_Common:BuildImpressionOptionItemDatas", OptionState)
+  local OptionItemDatas = {}
   local SavedOptions = OptionData.SavedOptions
   local OptionId2Idx = OptionData.OptionId2Idx
   if next(SavedOptions) ~= nil then
     ImpressionDone = true
     self.OptionMaxNum = #SavedOptions
   end
-  for i = 1, ImpressionItemNum do
-    local OptionType = OverrideType or OptionData.OptionType
-    local ImpressionItem = self:GetImpressionItem(i)
-    if not ImpressionDone then
-      local Option = OptionData.Options[i]
-      if Option then
-        local IsUsingGM = self.TalkTask.TaskData.UsingGM
-        local IsSelected = Option.bIsSelected
-        ImpressionItem:Init(self, i, TalkTriggerId, OptionState, OptionType, Option, nil, function(SpecifyFinishType)
-          self:OnOptionItemEnd(i, SpecifyFinishType)
-        end, IsUsingGM, IsSelected)
-        ImpressionItem:SetOnBeginShowCheckOrPlusUI({
+  if not ImpressionDone then
+    for i, Option in ipairs(OptionData.Options or {}) do
+      local CallbackOptionIndex = i
+      OptionItemDatas[#OptionItemDatas + 1] = {
+        ImpressionUI = self,
+        ItemIndex = #OptionItemDatas + 1,
+        TalkTriggerId = TalkTriggerId,
+        OptionState = OptionState,
+        OptionType = OptionData.OptionType,
+        Option = Option,
+        OptionStyle = self.ImpressionItemUIPathName,
+        UsingGM = self.TalkTask.TaskData.UsingGM,
+        IsSelected = Option.bIsSelected,
+        OnItemHandleEndDelegate = function(SpecifyFinishType)
+          self:OnOptionItemEnd(CallbackOptionIndex, SpecifyFinishType)
+        end,
+        OnBeginShowCheckOrPlusUIDelegate = {
           self,
           self.OnBeginShowCheckOrPlusUI
-        })
-        ImpressionItem:SetOnEndShowCheckOrPlusUI({
+        },
+        OnEndShowCheckOrPlusUIDelegate = {
           self,
           self.OnEndShowCheckOrPlusUI
-        })
-        ImpressionItem:SetOnInterruptedExit({
+        },
+        OnInterruptedExitDelegate = {
           self,
           self.StopStoryLine
-        })
-        ImpressionItem:SetOnHovered({
+        },
+        OnHoveredDelegate = {
           self,
           self.OnImpressionItemHovered
-        })
-        ImpressionItem:SetOnUnhovered({
+        },
+        OnUnhoveredDelegate = {
           self,
           self.OnImpressionItemUnhovered
-        })
-        ImpressionItem:SetOnClicked({
+        },
+        OnClickedDelegate = {
           self,
           self.OnImpressionItemClicked
-        })
-      else
-        ImpressionItem:OnNotWorking()
-      end
-    elseif i <= #SavedOptions then
-      local OptionIdx = OptionId2Idx[SavedOptions[i]]
+        }
+      }
+    end
+  else
+    for _, SavedOptionId in ipairs(SavedOptions or {}) do
+      local OptionIdx = OptionId2Idx[SavedOptionId]
       local Option = OptionData.Options[OptionIdx]
       if Option then
-        OptionType = ETalkOptionType.Normal
-        ImpressionItem:Init(self, i, TalkTriggerId, OptionState, OptionType, Option, nil, function(SpecifyFinishType)
-          self:OnOptionItemEnd(OptionIdx, SpecifyFinishType)
-        end)
-        ImpressionItem:SetOnBeginShowCheckOrPlusUI({
-          self,
-          self.OnBeginShowCheckOrPlusUI
-        })
-        ImpressionItem:SetOnEndShowCheckOrPlusUI({
-          self,
-          self.OnEndShowCheckOrPlusUI
-        })
-        ImpressionItem:SetOnInterruptedExit({
-          self,
-          self.StopStoryLine
-        })
-        ImpressionItem:SetOnHovered({
-          self,
-          self.OnImpressionItemHovered
-        })
-        ImpressionItem:SetOnUnhovered({
-          self,
-          self.OnImpressionItemUnhovered
-        })
-        ImpressionItem:SetOnClicked({
-          self,
-          self.OnImpressionItemClicked
-        })
-      else
-        ImpressionItem:OnNotWorking()
+        local CallbackOptionIndex = OptionIdx
+        OptionItemDatas[#OptionItemDatas + 1] = {
+          ImpressionUI = self,
+          ItemIndex = #OptionItemDatas + 1,
+          TalkTriggerId = TalkTriggerId,
+          OptionState = OptionState,
+          OptionType = ETalkOptionType.Normal,
+          Option = Option,
+          OptionStyle = self.ImpressionItemUIPathName,
+          UsingGM = self.TalkTask.TaskData.UsingGM,
+          IsSelected = Option.bIsSelected,
+          OnItemHandleEndDelegate = function(SpecifyFinishType)
+            self:OnOptionItemEnd(CallbackOptionIndex, SpecifyFinishType)
+          end,
+          OnBeginShowCheckOrPlusUIDelegate = {
+            self,
+            self.OnBeginShowCheckOrPlusUI
+          },
+          OnEndShowCheckOrPlusUIDelegate = {
+            self,
+            self.OnEndShowCheckOrPlusUI
+          },
+          OnInterruptedExitDelegate = {
+            self,
+            self.StopStoryLine
+          },
+          OnHoveredDelegate = {
+            self,
+            self.OnImpressionItemHovered
+          },
+          OnUnhoveredDelegate = {
+            self,
+            self.OnImpressionItemUnhovered
+          },
+          OnClickedDelegate = {
+            self,
+            self.OnImpressionItemClicked
+          }
+        }
       end
-    else
-      ImpressionItem:OnNotWorking()
     end
   end
+  self.OptionMaxNum = #OptionItemDatas
+  return OptionItemDatas
+end
+
+function WBP_Impression_Common:InitOptions(OptionData, TalkTriggerId, ImpressionAreaId, OnOptionItemClicked)
+  self.OptionList:ClearListItems()
+  local OptionItemDatas = self:BuildImpressionOptionItemDatas(OptionData, TalkTriggerId, ImpressionAreaId)
+  self.OptionList:AddItems(OptionItemDatas)
 end
 
 function WBP_Impression_Common:InitPlayKey()
@@ -303,41 +374,22 @@ end
 
 function WBP_Impression_Common:SwitchEnableImpressionItemClick(bBind)
   DebugPrint("WBP_Impression_Common:SwitchBindImpressionItemButtonEvents", bBind)
-  for i = 1, ImpressionItemNum do
-    local ImpressionItem = self:GetImpressionItem(i)
-    ImpressionItem:SwitchEnableClickEvents(bBind)
+  local ChildMaxIndex = self.ScrollBox_Items:GetChildrenCount() - 1
+  for i = 0, ChildMaxIndex do
+    local ImpressionItem = self.ScrollBox_Items:GetChildAt(i)
+    if ImpressionItem then
+      ImpressionItem:SwitchEnableClickEvents(bBind)
+    end
   end
 end
 
 function WBP_Impression_Common:SwitchEnableItemEvents(Enable)
-  self:StopListeningForInputAction("TalkOption", EInputEvent.IE_Released)
-  self:StopListeningForInputAction("TalkOption", EInputEvent.IE_Pressed)
-  if Enable then
-    self:ListenForInputAction("TalkOption", EInputEvent.IE_Pressed, true, {
-      self,
-      self.OnImpressionItemPressed
-    })
-    self:ListenForInputAction("TalkOption", EInputEvent.IE_Released, true, {
-      self,
-      self.OnImpressionItemReleased
-    })
-  end
+  self.OptionList:SwitchEnableConfirmEvents(Enable)
 end
 
 function WBP_Impression_Common:SwitchEnableMouseWheelEvents(Enable)
   DebugPrint("WBP_Impression_Common:SetMouseWheelEventEnable", Enable)
-  self:StopListeningForInputAction("TalkUpSelect", EInputEvent.IE_Pressed)
-  self:StopListeningForInputAction("TalkDownSelect", EInputEvent.IE_Pressed)
-  if Enable then
-    self:ListenForInputAction("TalkUpSelect", EInputEvent.IE_Pressed, true, {
-      self,
-      self.OnUpSelectItem
-    })
-    self:ListenForInputAction("TalkDownSelect", EInputEvent.IE_Pressed, true, {
-      self,
-      self.OnDownSelectItem
-    })
-  end
+  self.OptionList:SwitchEnableUpDownEvents(Enable)
 end
 
 function WBP_Impression_Common:SwitchEnableOptionClick(bIsEnable)
@@ -490,20 +542,11 @@ function WBP_Impression_Common:OnEndShowCheckOrPlusUI()
 end
 
 function WBP_Impression_Common:OnUpSelectItem()
-  local NewSelectImpressionItemIndex = math.max(1, self.SelectImpressionItemIndex - 1)
-  if NewSelectImpressionItemIndex ~= self.SelectImpressionItemIndex then
-    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_add", "", nil)
-  end
-  self:SetSelectImpressionItem(NewSelectImpressionItemIndex)
+  self.OptionList:UpSelectAction()
 end
 
 function WBP_Impression_Common:OnDownSelectItem()
-  local MaxNum = self.Group_Button:IsVisible() and self.OptionMaxNum + 1 or self.OptionMaxNum
-  local NewSelectImpressionItemIndex = math.min(MaxNum, self.SelectImpressionItemIndex + 1)
-  if NewSelectImpressionItemIndex ~= self.SelectImpressionItemIndex then
-    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_add", "", nil)
-  end
-  self:SetSelectImpressionItem(NewSelectImpressionItemIndex)
+  self.OptionList:DownSelectAction()
 end
 
 function WBP_Impression_Common:SwithShowExitButton(bShow)
@@ -610,12 +653,6 @@ function WBP_Impression_Common:GetOptionImpressionAreaId(OptionData)
   return ImpressionAreaId, true
 end
 
-function WBP_Impression_Common:GetImpressionItem(Index)
-  if Index then
-    return self["BP_Impression_Item_PC_" .. Index]
-  end
-end
-
 function WBP_Impression_Common:GetCurrentSelectIndex()
   return self.SelectImpressionItemIndex
 end
@@ -638,36 +675,6 @@ end
 
 function WBP_Impression_Common:IsExitButtonHidden()
   return self.Group_Button:GetVisibility() ~= ESlateVisibility.Collapsed
-end
-
-function WBP_Impression_Common:IsExitButtonIndex(i)
-  return i > self.OptionMaxNum
-end
-
-function WBP_Impression_Common:SetSelectImpressionItem(Index)
-  DebugPrint("WBP_Impression_Common:SetSelectImpressionItem", Index)
-  if self:IsExitButtonHidden() == false then
-    Index = math.min(Index, self.OptionMaxNum)
-  end
-  if self.SelectImpressionItemIndex == Index then
-    return
-  end
-  if self.SelectImpressionItemIndex then
-    if self:IsExitButtonIndex(self.SelectImpressionItemIndex) then
-      self:OnExitButtonSelected(false)
-    else
-      local Item = self:GetImpressionItem(self.SelectImpressionItemIndex)
-      Item:SetSelect(false)
-    end
-  end
-  self.SelectImpressionItemIndex = Index
-  if self:IsExitButtonIndex(self.SelectImpressionItemIndex) then
-    self:OnExitButtonSelected(true)
-  else
-    self.ScrollBox_Items:ScrollWidgetIntoView(self:GetImpressionItem(self.SelectImpressionItemIndex), true)
-    local Item = self:GetImpressionItem(self.SelectImpressionItemIndex)
-    Item:SetSelect(true)
-  end
 end
 
 function WBP_Impression_Common:SwitchShowOptionUI(bShow)
@@ -696,12 +703,7 @@ end
 
 function WBP_Impression_Common:ClearOptions()
   DebugPrint("WBP_Impression_Common:ClearOptions")
-  for i = 1, ImpressionItemNum do
-    local ImpressionItem = self:GetImpressionItem(i)
-    if ImpressionItem then
-      ImpressionItem:Clear()
-    end
-  end
+  self.OptionList:ClearListItems()
   self.SelectImpressionItemIndex = nil
 end
 
@@ -770,11 +772,6 @@ end
 
 function WBP_Impression_Common:HasWholeDialogueTypingFinished()
   return self.TypingText:IsFinished()
-end
-
-function WBP_Impression_Common:SetSelectExitButton()
-  DebugPrint("WBP_Impression_Common:SetSelectExitButton")
-  self:SetSelectImpressionItem(self.OptionMaxNum + 1)
 end
 
 function WBP_Impression_Common:OnExitButtonSelected(bIsSelect)
@@ -866,7 +863,7 @@ end
 
 function WBP_Impression_Common:OnExitButtonHovered()
   DebugPrint("WBP_Impression_Common:OnExitButtonHovered")
-  self:SetSelectExitButton()
+  self.OptionList:OnExtraHovered()
 end
 
 function WBP_Impression_Common:OnExitButtonUnhovered()
@@ -876,7 +873,6 @@ end
 function WBP_Impression_Common:PlayExitButtonHoveredPerformance()
   DebugPrint("WBP_Impression_Common:PlayExitButtonHoveredPerformance")
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_add", "", nil)
-  self:SetSelectExitButton()
   self:PlayExitButtonHoveredPerformanceByPlatform()
 end
 
@@ -912,7 +908,6 @@ function WBP_Impression_Common:StopStoryLine()
 end
 
 function WBP_Impression_Common:OnImpressionItemHovered(ItemIndex)
-  self:SetSelectImpressionItem(ItemIndex)
 end
 
 function WBP_Impression_Common:OnImpressionItemUnhovered(ItemIndex)
@@ -945,28 +940,6 @@ function WBP_Impression_Common:OnImpressionItemClicked(Item)
   end
 end
 
-function WBP_Impression_Common:OnImpressionItemPressed()
-  if self.SelectImpressionItemIndex then
-    if self.SelectImpressionItemIndex > self.OptionMaxNum then
-      self:OnExitButtonPressed()
-    else
-      local ImpressionItem = self:GetImpressionItem(self.SelectImpressionItemIndex)
-      ImpressionItem:OnPressed()
-    end
-  end
-end
-
-function WBP_Impression_Common:OnImpressionItemReleased()
-  if self.SelectImpressionItemIndex then
-    if self.SelectImpressionItemIndex > self.OptionMaxNum then
-      self:OnExitButtonClicked()
-    else
-      local ImpressionItem = self:GetImpressionItem(self.SelectImpressionItemIndex)
-      ImpressionItem:OnClicked()
-    end
-  end
-end
-
 function WBP_Impression_Common:GetCurrentImpressionItem()
   if not self.SelectImpressionItemIndex then
     return nil
@@ -974,7 +947,7 @@ function WBP_Impression_Common:GetCurrentImpressionItem()
   if self.SelectImpressionItemIndex > self.OptionMaxNum then
     return self.Button_Area
   else
-    return self:GetImpressionItem(self.SelectImpressionItemIndex)
+    return self.OptionList:GetItemByIndex(self.SelectImpressionItemIndex - 1)
   end
 end
 
@@ -999,7 +972,7 @@ function WBP_Impression_Common:OnOptionInAnimationStarted()
   self:SwitchEnableTalkClick(false)
   self:SwitchEnableAutoPlayButton(false)
   self:SwitchEnableSkipButton(false)
-  self:SetSelectImpressionItem(1)
+  self.OptionList:SetDefaultItem()
   self:SetExitButtonNormal()
   self:SwitchShowOptionUI(true)
   self:SetTipImageHidden(true)

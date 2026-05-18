@@ -66,9 +66,17 @@
   {
     "id": 3010109,
     "name": "Verdant Finale – Greatsword",
-    "desc": "",
+    "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Claymore_Bixiao",
     "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010110,
+    "name": "The Scream – Greatsword",
+    "desc": "",
+    "icon": "T_Head_Claymore_Nahan",
+    "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
@@ -120,6 +128,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3010207,
+    "name": "Plume of Absolution",
+    "desc": "By dawn's first light, merciful judgement is rendered.",
+    "icon": "T_Head_Sword_Shezui",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3010301,
     "name": "Sunrise Scherzo",
     "desc": "Where is the sun? Look — it's dancing in the palm of my hand.",
@@ -157,6 +173,22 @@
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010306,
+    "name": "The Scream – Longbow",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Bow_Nahan01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010307,
+    "name": "The Scream – Shortbow",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Bow_Nahan02",
+    "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
@@ -216,6 +248,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3010408,
+    "name": "Cosmic Invitation – Polearm",
+    "desc": "Heed the eternal summons of the stars.",
+    "icon": "T_Head_Polearm_Huanyu",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3010501,
     "name": "Fintastic Riptide",
     "desc": "What trouble could a cute little shark possibly cause?",
@@ -237,6 +277,22 @@
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Machinegun_Bixiao",
     "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010504,
+    "name": "Brass Violin",
+    "desc": "The violin case opens — Death plays its brass-toned refrain.",
+    "icon": "T_Head_Machinegun_Huangtong",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010505,
+    "name": "The Scream – Assault Rifle",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Machinegun_Nahan",
+    "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
@@ -320,6 +376,30 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3010711,
+    "name": "Cosmic Invitation – Katana",
+    "desc": "Heed the eternal summons of the stars.",
+    "icon": "T_Head_Katana_Huanyu",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010713,
+    "name": "Azure Comet",
+    "desc": "An azure arc sweeps past, scattering stardust in its wake.",
+    "icon": "T_Head_Katana_Youlan",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010715,
+    "name": "The Scream – Katana",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Katana_Nahan",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3010801,
     "name": "Tough Love – Whipblade",
     "desc": "A whipblade of unusual design, said to embody a father's love: firm, instructive, and just a little traumatising.",
@@ -360,6 +440,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3010806,
+    "name": "Cosmic Invitation – Whipblade",
+    "desc": "Heed the eternal summons of the stars.",
+    "icon": "T_Head_Swordwhip_Huanyu",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3010901,
     "name": "Checkmeow",
     "desc": "Meow~~~",
@@ -369,10 +457,18 @@
   },
   {
     "id": 3010902,
-    "name": "",
+    "name": "Verdant Finale – Grenade Launcher",
     "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
     "icon": "T_Head_Cannon_Bixiao",
     "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3010903,
+    "name": "The Scream – Grenade Launcher",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Cannon_Nahan",
+    "rarity": 4,
     "unlock": "Available at Shop"
   },
   {
@@ -400,6 +496,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3011004,
+    "name": "The Scream – Shotgun",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Shotgun_Nahan",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3011101,
     "name": "Catloaf No. 1",
     "desc": "Meow.",
@@ -408,11 +512,43 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 3011102,
+    "name": "Verdant Finale – Pistol",
+    "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
+    "icon": "T_Head_Pistol_Bixiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011103,
+    "name": "The Scream – Pistol",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Pistol_Nahan",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 3011201,
     "name": "Catloaf No. 2",
     "desc": "Meow-meow.",
     "icon": "T_Head_Crossbow_Maobing",
     "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011203,
+    "name": "Verdant Finale – Dual Pistols",
+    "desc": "Above the din, beyond the froth — a solitary cruise on an endless emerald.",
+    "icon": "T_Head_Crossbow_Bixiao",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 3011205,
+    "name": "The Scream – Dual Pistols",
+    "desc": "Graaahhhhh!",
+    "icon": "T_Head_Crossbow_Nahan",
+    "rarity": 4,
     "unlock": "Available at Shop"
   }
 ]

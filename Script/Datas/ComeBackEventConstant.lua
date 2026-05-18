@@ -11,19 +11,19 @@ return ReadOnly("ComeBackEventConstant", {
   },
   CurrentEventSchemeId = {
     ConstantName = "CurrentEventSchemeId",
-    ConstantValue = 114001
+    ConstantValue = 114002
   },
   CurrentEventTabId = {
     ConstantName = "CurrentEventTabId",
     ConstantValue = 53
   },
-  EventCD = {ConstantName = "EventCD", ConstantValue = 40},
+  EventCD = {ConstantName = "EventCD", ConstantValue = 54},
   EventDuration = {
     ConstantName = "EventDuration",
     ConstantValue = 14
   },
   OfflineInterval = {
     ConstantName = "OfflineInterval",
-    ConstantValue = 14
+    ConstantValue = 28
   }
 })

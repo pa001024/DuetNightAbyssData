@@ -79,14 +79,10 @@ end
 
 function M:ReceiveEnterState(StackAction)
   self.Super.ReceiveEnterState(self, StackAction)
-  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
-  Player:SetCanInteractiveTrigger(false)
 end
 
 function M:ReceiveExitState(StackAction)
   self.Super.ReceiveExitState(self, StackAction)
-  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
-  Player:SetCanInteractiveTrigger(true)
 end
 
 function M:InitShop(MainTabIdx, SubTabIdx)

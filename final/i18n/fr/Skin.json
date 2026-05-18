@@ -26,8 +26,8 @@
   },
   {
     "id": 1102,
-    "name": "UI_Skin_Name_1102",
-    "desc": "UI_Skin_Des_1102",
+    "name": "Tenue de Flora",
+    "desc": "芙罗拉[原皮]（待包装）",
     "icon": "T_Head_Fuluo",
     "rarity": 5,
     "charId": 1102,
@@ -35,8 +35,8 @@
     "defaultItem": {
       "HeadSculpture": [
         {
-          "id": 10001,
-          "name": "Portrait : Souvenir",
+          "id": 10022,
+          "name": "Portrait : Flora",
           "num": 1
         }
       ],
@@ -73,6 +73,15 @@
         }
       ]
     }
+  },
+  {
+    "id": 1201,
+    "name": "{nickname}的衣饰（待包装）",
+    "desc": "暗主（待包装）",
+    "icon": "T_Head_Nvzhu02",
+    "rarity": 5,
+    "charId": 1201,
+    "release": "1.4"
   },
   {
     "id": 1501,
@@ -244,7 +253,7 @@
   },
   {
     "id": 2102,
-    "name": "UI_Skin_Name_2102",
+    "name": "Tenue d’Eve",
     "desc": "UI_Skin_Des_2102",
     "icon": "T_Head_Shuimu",
     "rarity": 5,
@@ -337,8 +346,8 @@
   },
   {
     "id": 3102,
-    "name": "UI_Skin_Name_3102",
-    "desc": "UI_Skin_Des_3102",
+    "name": "Tenue d’Hilda",
+    "desc": "希尔妲[原皮]（待包装）",
     "icon": "T_Head_Xier",
     "rarity": 5,
     "charId": 3102,
@@ -687,25 +696,68 @@
   },
   {
     "id": 110201,
-    "name": "UI_Skin_Name_110201",
-    "desc": "UI_Skin_Des_110201",
-    "icon": "T_Head_Fuluo",
+    "name": "L’Absolveuse",
+    "desc": "L’ange immaculé brandit l’épée du jugement. Les coupables seront condamnés ; les innocents recevront l’absolution.",
+    "icon": "T_Head_Fuluo01",
     "rarity": 5,
     "charId": 1102,
+    "tag": "Fuluo01",
+    "release": "1.4",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 110292,
+          "name": "L’Absolveuse",
+          "num": 1
+        }
+      ],
+      "HeadSculpture": [
+        {
+          "id": 20007,
+          "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "Aiguille de lumière"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "Aiguille de lumière"
+      }
+    ]
+  },
+  {
+    "id": 120101,
+    "name": "{nickname}的衣饰（待包装）",
+    "desc": "暗主（待包装）",
+    "icon": "T_Head_Nanzhu02",
+    "rarity": 5,
+    "charId": 120101,
+    "release": "1.4"
+  },
+  {
+    "id": 150201,
+    "name": "Sept jours d’alliance : Dame Nifle",
+    "desc": "Même si les miracles ont disparu de ce monde, certains mortels acceptent encore de porter le poids de leur foi.",
+    "icon": "T_Head_Nifu01",
+    "rarity": 5,
+    "charId": 1502,
+    "tag": "Nifu01",
     "release": "1.4",
     "defaultItem": {
       "HeadSculpture": [
         {
-          "id": 10001,
-          "name": "Portrait : Souvenir",
+          "id": 20008,
+          "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
           "num": 1
-        }
-      ],
-      "Resource": [
-        {
-          "id": 110,
-          "name": "Prisme azuré",
-          "num": 40
         }
       ]
     }
@@ -795,6 +847,39 @@
     }
   },
   {
+    "id": 210101,
+    "name": "Noces des marées",
+    "desc": "Les vagues trempent l’ourlet de sa robe de voile blanc, portant jusqu’à vous son murmure : « Seule la mort pourra nous séparer. »",
+    "icon": "T_Head_Shuimu02",
+    "rarity": 5,
+    "charId": 2101,
+    "tag": "Shuimu02",
+    "release": "1.4",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 210182,
+          "name": "Noces des marées",
+          "num": 1
+        }
+      ]
+    },
+    "upgrade": [
+      {
+        "step": 2,
+        "amount": 54,
+        "currencyId": 1010,
+        "currency": "Aiguille de lumière"
+      },
+      {
+        "step": 3,
+        "amount": 72,
+        "currencyId": 1010,
+        "currency": "Aiguille de lumière"
+      }
+    ]
+  },
+  {
     "id": 210102,
     "name": "Voiles et murmures",
     "desc": "Sous des voiles superposés, un murmure confesse l’amour — et un baiser mortel scelle l’éternité.",
@@ -841,6 +926,25 @@
         {
           "id": 20004,
           "name": "Portrait : Apothicaire de Huaxu – Ondes paisibles",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 310101,
+    "name": "Sept jours d’alliance : Lynn",
+    "desc": "Même si les miracles ont disparu de ce monde, certains mortels acceptent encore de porter le poids de leur foi.",
+    "icon": "T_Head_Linen01",
+    "rarity": 5,
+    "charId": 3101,
+    "tag": "Linen01",
+    "release": "1.4",
+    "defaultItem": {
+      "HeadSculpture": [
+        {
+          "id": 20009,
+          "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
           "num": 1
         }
       ]
@@ -1012,6 +1116,24 @@
     "release": "1.3"
   },
   {
+    "id": 11010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_02",
+    "rarity": 5,
+    "charId": 1101,
+    "release": "1.4"
+  },
+  {
+    "id": 11020141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 1102,
+    "release": "1.4"
+  },
+  {
     "id": 11030010,
     "name": "Vœu de la nuit étoilée",
     "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
@@ -1064,6 +1186,114 @@
     "rarity": 5,
     "charId": 1103,
     "release": "9.9"
+  },
+  {
+    "id": 12010010,
+    "name": "Vœu de la nuit étoilée",
+    "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 1201,
+    "release": "1.0"
+  },
+  {
+    "id": 12010011,
+    "name": "Élégance de jade noir",
+    "desc": "Une allure accomplie, où l’élégance se déploie d’elle-même.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 1201,
+    "release": "1.1"
+  },
+  {
+    "id": 12010110,
+    "name": "Vœu de la nuit étoilée",
+    "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
+    "icon": "T_Skin_TP01",
+    "rarity": 5,
+    "charId": 120101,
+    "release": "1.0"
+  },
+  {
+    "id": 12010111,
+    "name": "Élégance de jade noir",
+    "desc": "Une allure accomplie, où l’élégance se déploie d’elle-même.",
+    "icon": "T_Skin_TP02",
+    "rarity": 5,
+    "charId": 120101,
+    "release": "1.1"
+  },
+  {
+    "id": 12010121,
+    "name": "Fantaisie hivernale",
+    "desc": "Pourquoi, parmi tous ces bonshommes de neige, l’un d’eux paraît-il nettement plus imposant que les autres ?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 1201,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 12010121,
+          "name": "Fantaisie hivernale",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 12010122,
+    "name": "Hier en fuite",
+    "desc": "Entre la sonnerie et les pages qui se tournent, les années s’éclipsent en silence.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 1201,
+    "release": "1.2"
+  },
+  {
+    "id": 12010131,
+    "name": "Style rebelle",
+    "desc": "Dans des nuits sans sommeil, douces comme du velours bleu, nous buvons à pleines gorgées, sifflant en filant dans la fraîcheur du vent de minuit.",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 1201,
+    "release": "1.3"
+  },
+  {
+    "id": 12010221,
+    "name": "Fantaisie hivernale",
+    "desc": "Pourquoi, parmi tous ces bonshommes de neige, l’un d’eux paraît-il nettement plus imposant que les autres ?",
+    "icon": "T_Skin_TP03",
+    "rarity": 5,
+    "charId": 120101,
+    "release": "1.2",
+    "defaultItem": {
+      "Hair": [
+        {
+          "id": 12010221,
+          "name": "Fantaisie hivernale",
+          "num": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 12010222,
+    "name": "Hier en fuite",
+    "desc": "Entre la sonnerie et les pages qui se tournent, les années s’éclipsent en silence.",
+    "icon": "T_Skin_TP04",
+    "rarity": 5,
+    "charId": 120101,
+    "release": "1.2"
+  },
+  {
+    "id": 12010231,
+    "name": "Style rebelle",
+    "desc": "Dans des nuits sans sommeil, douces comme du velours bleu, nous buvons à pleines gorgées, sifflant en filant dans la fraîcheur du vent de minuit.",
+    "icon": "T_Skin_TP05",
+    "rarity": 5,
+    "charId": 120101,
+    "release": "1.3"
   },
   {
     "id": 15010010,
@@ -1174,6 +1404,15 @@
     "release": "1.3"
   },
   {
+    "id": 15020141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 1502,
+    "release": "1.4"
+  },
+  {
     "id": 15030011,
     "name": "Élégance de jade noir",
     "desc": "Une allure accomplie, où l’élégance se déploie d’elle-même.",
@@ -1228,13 +1467,31 @@
     "release": "1.3"
   },
   {
+    "id": 15040141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 1504,
+    "release": "1.4"
+  },
+  {
     "id": 16010010,
     "name": "Vœu de la nuit étoilée",
     "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
     "icon": "T_Skin_TP01",
     "rarity": 5,
     "charId": 1601,
-    "release": "1.0"
+    "release": "1.0",
+    "defaultItem": {
+      "Skin": [
+        {
+          "id": 12010010,
+          "name": "12010010",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 16010011,
@@ -1243,7 +1500,16 @@
     "icon": "T_Skin_TP02",
     "rarity": 5,
     "charId": 1601,
-    "release": "1.1"
+    "release": "1.1",
+    "defaultItem": {
+      "Skin": [
+        {
+          "id": 12010011,
+          "name": "12010011",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 16010110,
@@ -1252,7 +1518,16 @@
     "icon": "T_Skin_TP01",
     "rarity": 5,
     "charId": 160101,
-    "release": "1.0"
+    "release": "1.0",
+    "defaultItem": {
+      "Skin": [
+        {
+          "id": 12010110,
+          "name": "12010110",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 16010111,
@@ -1261,7 +1536,16 @@
     "icon": "T_Skin_TP02",
     "rarity": 5,
     "charId": 160101,
-    "release": "1.1"
+    "release": "1.1",
+    "defaultItem": {
+      "Skin": [
+        {
+          "id": 12010111,
+          "name": "12010111",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 16010121,
@@ -1278,6 +1562,13 @@
           "name": "Fantaisie hivernale",
           "num": 1
         }
+      ],
+      "Skin": [
+        {
+          "id": 12010121,
+          "name": "12010121",
+          "num": 1
+        }
       ]
     }
   },
@@ -1288,7 +1579,16 @@
     "icon": "T_Skin_TP04",
     "rarity": 5,
     "charId": 1601,
-    "release": "1.2"
+    "release": "1.2",
+    "defaultItem": {
+      "Skin": [
+        {
+          "id": 12010122,
+          "name": "12010122",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 16010131,
@@ -1297,7 +1597,16 @@
     "icon": "T_Skin_TP05",
     "rarity": 5,
     "charId": 1601,
-    "release": "1.3"
+    "release": "1.3",
+    "defaultItem": {
+      "Skin": [
+        {
+          "id": 12010131,
+          "name": "12010131",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 16010221,
@@ -1314,6 +1623,13 @@
           "name": "Fantaisie hivernale",
           "num": 1
         }
+      ],
+      "Skin": [
+        {
+          "id": 12010221,
+          "name": "12010221",
+          "num": 1
+        }
       ]
     }
   },
@@ -1324,7 +1640,16 @@
     "icon": "T_Skin_TP04",
     "rarity": 5,
     "charId": 160101,
-    "release": "1.2"
+    "release": "1.2",
+    "defaultItem": {
+      "Skin": [
+        {
+          "id": 12010222,
+          "name": "12010222",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 16010231,
@@ -1333,7 +1658,16 @@
     "icon": "T_Skin_TP05",
     "rarity": 5,
     "charId": 160101,
-    "release": "1.3"
+    "release": "1.3",
+    "defaultItem": {
+      "Skin": [
+        {
+          "id": 12010231,
+          "name": "12010231",
+          "num": 1
+        }
+      ]
+    }
   },
   {
     "id": 18010010,
@@ -1390,6 +1724,15 @@
     "release": "1.3"
   },
   {
+    "id": 18010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 1801,
+    "release": "1.4"
+  },
+  {
     "id": 21010010,
     "name": "Vœu de la nuit étoilée",
     "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
@@ -1442,6 +1785,15 @@
     "rarity": 5,
     "charId": 2101,
     "release": "1.3"
+  },
+  {
+    "id": 21010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 2101,
+    "release": "1.4"
   },
   {
     "id": 23010010,
@@ -1543,6 +1895,15 @@
     "release": "1.3"
   },
   {
+    "id": 24010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 2401,
+    "release": "1.4"
+  },
+  {
     "id": 31010010,
     "name": "Vœu de la nuit étoilée",
     "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
@@ -1595,6 +1956,24 @@
     "rarity": 5,
     "charId": 3101,
     "release": "1.3"
+  },
+  {
+    "id": 31010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 3101,
+    "release": "1.4"
+  },
+  {
+    "id": 31020141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 3102,
+    "release": "1.4"
   },
   {
     "id": 31030010,
@@ -1705,6 +2084,15 @@
     "release": "1.3"
   },
   {
+    "id": 32010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 3201,
+    "release": "1.4"
+  },
+  {
     "id": 32020131,
     "name": "Style rebelle",
     "desc": "Dans des nuits sans sommeil, douces comme du velours bleu, nous buvons à pleines gorgées, sifflant en filant dans la fraîcheur du vent de minuit.",
@@ -1712,6 +2100,15 @@
     "rarity": 5,
     "charId": 3202,
     "release": "1.3"
+  },
+  {
+    "id": 32020141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 3202,
+    "release": "1.4"
   },
   {
     "id": 33010010,
@@ -1768,6 +2165,15 @@
     "release": "9.9"
   },
   {
+    "id": 33010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_03",
+    "rarity": 5,
+    "charId": 3301,
+    "release": "1.4"
+  },
+  {
     "id": 41010010,
     "name": "Vœu de la nuit étoilée",
     "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
@@ -1822,6 +2228,15 @@
     "release": "1.3"
   },
   {
+    "id": 41010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 4101,
+    "release": "1.4"
+  },
+  {
     "id": 41020121,
     "name": "Fantaisie hivernale",
     "desc": "Pourquoi, parmi tous ces bonshommes de neige, l’un d’eux paraît-il nettement plus imposant que les autres ?",
@@ -1856,6 +2271,15 @@
     "rarity": 5,
     "charId": 4102,
     "release": "1.3"
+  },
+  {
+    "id": 41020141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 4102,
+    "release": "1.4"
   },
   {
     "id": 42010121,
@@ -2000,6 +2424,15 @@
     "rarity": 5,
     "charId": 4301,
     "release": "1.3"
+  },
+  {
+    "id": 43010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 4301,
+    "release": "9.9"
   },
   {
     "id": 51010010,
@@ -2164,6 +2597,15 @@
     "release": "1.3"
   },
   {
+    "id": 53010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 5301,
+    "release": "1.4"
+  },
+  {
     "id": 54010010,
     "name": "Vœu de la nuit étoilée",
     "desc": "À la saison où le jour est le plus court, lorsque les clochettes résonnent, chacun confie ses vœux au ciel nocturne, les laissant s’envoler, portés par l’éclat des étoiles, vers l’avenir.",
@@ -2216,5 +2658,14 @@
     "rarity": 5,
     "charId": 5401,
     "release": "1.3"
+  },
+  {
+    "id": 54010141,
+    "name": "Évangile noir",
+    "desc": "Le péché n’a nul besoin d’une serre pour éclore ; il fleurit silencieusement au plus profond du cœur humain.",
+    "icon": "T_Pack_Common04_01",
+    "rarity": 5,
+    "charId": 5401,
+    "release": "9.9"
   }
 ]

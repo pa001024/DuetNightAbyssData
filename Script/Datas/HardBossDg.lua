@@ -57,6 +57,42 @@ T.RT_28 = {
   [3] = T.RT_27,
   [4] = T.RT_27
 }
+T.RT_29 = {
+  85190012,
+  85190023,
+  85190024
+}
+T.RT_30 = {
+  8519501,
+  8519504,
+  8519504
+}
+T.RT_31 = {
+  8519502,
+  8519505,
+  8519505
+}
+T.RT_32 = {
+  8519503,
+  8519506,
+  8519506
+}
+T.RT_33 = {
+  [1] = T.RT_30,
+  [2] = T.RT_31,
+  [3] = T.RT_31,
+  [4] = T.RT_32
+}
+T.RT_34 = {8519007}
+T.RT_35 = {8519507}
+T.RT_36 = {8519508}
+T.RT_37 = {8519509}
+T.RT_38 = {
+  [1] = T.RT_35,
+  [2] = T.RT_36,
+  [3] = T.RT_36,
+  [4] = T.RT_37
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -387,5 +423,71 @@ return ReadOnly("HardBossDg", {
     DungeonId = 50606,
     HardBossId = 6,
     PreparingAirWallStaticId = 302720003
+  },
+  [50701] = {
+    AirWallStaticId = 8519021,
+    BossStaticId = T.RT_29,
+    BossUnitId = T.RT_33,
+    CustomBossStaticId = T.RT_34,
+    CustomBossUnitId = T.RT_38,
+    DifficultyId = 1061,
+    DungeonId = 50701,
+    HardBossId = 7,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50702] = {
+    AirWallStaticId = 8519021,
+    BossStaticId = T.RT_29,
+    BossUnitId = T.RT_33,
+    CustomBossStaticId = T.RT_34,
+    CustomBossUnitId = T.RT_38,
+    DifficultyId = 1062,
+    DungeonId = 50702,
+    HardBossId = 7,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50703] = {
+    AirWallStaticId = 8519021,
+    BossStaticId = T.RT_29,
+    BossUnitId = T.RT_33,
+    CustomBossStaticId = T.RT_34,
+    CustomBossUnitId = T.RT_38,
+    DifficultyId = 1063,
+    DungeonId = 50703,
+    HardBossId = 7,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50704] = {
+    AirWallStaticId = 8519021,
+    BossStaticId = T.RT_29,
+    BossUnitId = T.RT_33,
+    CustomBossStaticId = T.RT_34,
+    CustomBossUnitId = T.RT_38,
+    DifficultyId = 1064,
+    DungeonId = 50704,
+    HardBossId = 7,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50705] = {
+    AirWallStaticId = 8519021,
+    BossStaticId = T.RT_29,
+    BossUnitId = T.RT_33,
+    CustomBossStaticId = T.RT_34,
+    CustomBossUnitId = T.RT_38,
+    DifficultyId = 1065,
+    DungeonId = 50705,
+    HardBossId = 7,
+    PreparingAirWallStaticId = 1969948
+  },
+  [50706] = {
+    AirWallStaticId = 8519021,
+    BossStaticId = T.RT_29,
+    BossUnitId = T.RT_33,
+    CustomBossStaticId = T.RT_34,
+    CustomBossUnitId = T.RT_38,
+    DifficultyId = 1066,
+    DungeonId = 50706,
+    HardBossId = 7,
+    PreparingAirWallStaticId = 1969948
   }
 })

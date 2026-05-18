@@ -281,25 +281,35 @@ T.RT_56 = {
 }
 T.RT_57 = {
   0,
+  500,
+  0
+}
+T.RT_58 = {
+  0,
   0,
   -90
 }
-T.RT_58 = {
+T.RT_59 = {
   50,
   0,
   0
 }
-T.RT_59 = {
+T.RT_60 = {
   -19.2,
   0,
   100
 }
-T.RT_60 = {
+T.RT_61 = {
   0,
   200,
   0
 }
-T.RT_61 = {
+T.RT_62 = {
+  15,
+  0,
+  0
+}
+T.RT_63 = {
   0,
   -90,
   0
@@ -1104,6 +1114,22 @@ return ReadOnly("WeaponFX", {
       SoundID = 3304,
       WeaponBlueprintId = 101,
       WeaponFXId = 3000501,
+      bTickEventWhenPaused = true
+    },
+    FallAttack_Costume_05 = {
+      ChangeColorByChar = true,
+      EffectId = 1010132,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/12ZD/NS_FallAttack_bianhua.NS_FallAttack_Bianhua",
+      FXPriorityType = 90,
+      GroupName = "FallAttack_Costume_05",
+      LocalOffset = T.RT_13,
+      LocalRotation = T.RT_1,
+      NotBlocking = true,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SoundID = 3305,
+      WeaponBlueprintId = 101,
+      WeaponFXId = 3000601,
       bTickEventWhenPaused = true
     },
     HeavyAttack_End_01 = {
@@ -1956,6 +1982,93 @@ return ReadOnly("WeaponFX", {
       WeaponFXId = 3000502,
       bTickEventWhenPaused = true
     },
+    FallAttack_Costume_05 = {
+      ChangeColorByChar = true,
+      EffectId = 1020132,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/12ZD/NS_FallAttack_bianhua.NS_FallAttack_Bianhua",
+      FXPriorityType = 90,
+      GroupName = "FallAttack_Costume_05",
+      LocalOffset = T.RT_28,
+      LocalRotation = T.RT_1,
+      NotBlocking = true,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SoundID = 3305,
+      WeaponBlueprintId = 102,
+      WeaponFXId = 3000602,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1020302_Mod02_HeavyAttack_01 = {
+      ChangeColorByChar = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/09Weapon/Polearm/NS_Polearm_Cygm01.NS_Polearm_Cygm01",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1020302_Mod02_HeavyAttack_01",
+      LocalOffset = T.RT_1,
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 102,
+      WeaponFXId = 1020165,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1020302_Mod02_HeavyAttack_02 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/09Weapon/Polearm/NS_Polearm_Cygm02.NS_Polearm_Cygm02",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1020302_Mod02_HeavyAttack_02",
+      LocalOffset = T.RT_1,
+      LocalRotation = T.RT_1,
+      Scale = T.RT_2,
+      SocketName = "hook_arm_r",
+      WeaponBlueprintId = 102,
+      WeaponFXId = 1020164,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1020302_Mod02_HeavyAttack_03 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/09Weapon/Polearm/NS_Polearm_Cygm03.NS_Polearm_Cygm03",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1020302_Mod02_HeavyAttack_03",
+      LocalOffset = T.RT_1,
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SocketName = "root",
+      WeaponBlueprintId = 102,
+      WeaponFXId = 1020166,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1020302_Mod02_HeavyAttack_04 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/09Weapon/Polearm/NS_Polearm_Cygm04.NS_Polearm_Cygm04",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1020302_Mod02_HeavyAttack_04",
+      LocalOffset = T.RT_21,
+      LocalRotation = T.RT_7,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SocketName = "root",
+      WeaponBlueprintId = 102,
+      WeaponFXId = 1020167,
+      bTickEventWhenPaused = true
+    },
+    HeavyAttack_1020302_Mod02_HeavyAttack_05 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/09Weapon/Polearm/NS_Polearm_Cygm05.NS_Polearm_Cygm05",
+      FXPriorityType = 90,
+      GroupName = "HeavyAttack_1020302_Mod02_HeavyAttack_05",
+      LocalOffset = T.RT_17,
+      LocalRotation = T.RT_1,
+      Scale = T.RT_2,
+      SocketName = "hook_arm_r",
+      WeaponBlueprintId = 102,
+      WeaponFXId = 1020168,
+      bTickEventWhenPaused = true
+    },
     HeavyAttack_EndSmoke = {
       ChangeColorByChar = true,
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Polearm/NS_Polearm_HeavyAttack_EndSmoke.NS_Polearm_HeavyAttack_EndSmoke",
@@ -1966,7 +2079,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020135,
+      WeaponFXId = 1020133,
       bTickEventWhenPaused = true
     },
     HeavyAttack_End_Trail = {
@@ -1980,7 +2093,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_2,
       SocketName = "FX_Bottom",
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020134,
+      WeaponFXId = 1020132,
       bTickEventWhenPaused = true
     },
     HeavyAttack_Spawn = {
@@ -1997,7 +2110,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020133,
+      WeaponFXId = 1020131,
       bTickEventWhenPaused = true
     },
     HeavyAttack_Start = {
@@ -2010,7 +2123,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020131,
+      WeaponFXId = 1020130,
       bTickEventWhenPaused = true
     },
     Hit = {
@@ -2114,7 +2227,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_29,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020137,
+      WeaponFXId = 1020135,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_01_Fazhen = {
@@ -2140,7 +2253,7 @@ return ReadOnly("WeaponFX", {
         1.04
       },
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020136,
+      WeaponFXId = 1020134,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_01_Smoke = {
@@ -2158,7 +2271,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_29,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020138,
+      WeaponFXId = 1020136,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_01 = {
@@ -2176,7 +2289,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_19,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020139,
+      WeaponFXId = 1020137,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_02 = {
@@ -2194,7 +2307,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_29,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020140,
+      WeaponFXId = 1020138,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_Fangkuai_01 = {
@@ -2212,7 +2325,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020146,
+      WeaponFXId = 1020144,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_Fangkuai_02 = {
@@ -2230,7 +2343,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020147,
+      WeaponFXId = 1020145,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_Fazhen_01 = {
@@ -2252,7 +2365,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_32,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020144,
+      WeaponFXId = 1020142,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_Fazhen_02 = {
@@ -2274,7 +2387,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_32,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020145,
+      WeaponFXId = 1020143,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_Smoke_01 = {
@@ -2296,7 +2409,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_33,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020141,
+      WeaponFXId = 1020139,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_Smoke_02 = {
@@ -2318,7 +2431,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_33,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020142,
+      WeaponFXId = 1020140,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_02_Smoke_03 = {
@@ -2338,7 +2451,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_2,
       SocketName = "root",
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020143,
+      WeaponFXId = 1020141,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_03_03 = {
@@ -2357,7 +2470,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_34,
       SoundID = 1020103,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020148,
+      WeaponFXId = 1020146,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_03_04 = {
@@ -2379,7 +2492,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_11,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020152,
+      WeaponFXId = 1020150,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_03_05 = {
@@ -2405,7 +2518,7 @@ return ReadOnly("WeaponFX", {
         1.69
       },
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020153,
+      WeaponFXId = 1020151,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_03_Fazhen_01 = {
@@ -2428,7 +2541,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_35,
       SoundID = 1020102,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020150,
+      WeaponFXId = 1020148,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_03_Fazhen_02 = {
@@ -2447,7 +2560,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_35,
       SoundID = 1020102,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020151,
+      WeaponFXId = 1020149,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_03_Star = {
@@ -2469,7 +2582,7 @@ return ReadOnly("WeaponFX", {
         0.1
       },
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020149,
+      WeaponFXId = 1020147,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_04 = {
@@ -2487,7 +2600,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020158,
+      WeaponFXId = 1020154,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_04_Smoke = {
@@ -2503,7 +2616,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_2,
       SocketName = "root",
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020156,
+      WeaponFXId = 1020152,
       bTickEventWhenPaused = true
     },
     Mod01_Attack_04_Star = {
@@ -2518,7 +2631,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020157,
+      WeaponFXId = 1020153,
       bTickEventWhenPaused = true
     },
     Mod01_FallAttack = {
@@ -2537,7 +2650,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020133,
+      WeaponFXId = 1020155,
       bTickEventWhenPaused = true
     },
     Mod01_HeavyAttack_Loop = {
@@ -2551,7 +2664,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_2,
       SocketName = "FX_Top",
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020131,
+      WeaponFXId = 1020158,
       bTickEventWhenPaused = true
     },
     Mod01_HeavyAttack_Spawn = {
@@ -2568,7 +2681,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020135,
+      WeaponFXId = 1020157,
       bTickEventWhenPaused = true
     },
     Mod01_HeavyAttack_Start = {
@@ -2581,7 +2694,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_18,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020134,
+      WeaponFXId = 1020156,
       bTickEventWhenPaused = true
     },
     Mod02_HeavyAttack_01 = {
@@ -2594,7 +2707,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020134,
+      WeaponFXId = 1020160,
       bTickEventWhenPaused = true
     },
     Mod02_HeavyAttack_02 = {
@@ -2608,7 +2721,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_2,
       SocketName = "hook_arm_r",
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020133,
+      WeaponFXId = 1020159,
       bTickEventWhenPaused = true
     },
     Mod02_HeavyAttack_03 = {
@@ -2623,7 +2736,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_2,
       SocketName = "root",
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020135,
+      WeaponFXId = 1020161,
       bTickEventWhenPaused = true
     },
     Mod02_HeavyAttack_04 = {
@@ -2638,7 +2751,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_29,
       SocketName = "root",
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020131,
+      WeaponFXId = 1020162,
       bTickEventWhenPaused = true
     },
     Mod02_HeavyAttack_05 = {
@@ -2652,7 +2765,7 @@ return ReadOnly("WeaponFX", {
       Scale = T.RT_2,
       SocketName = "hook_arm_r",
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020133,
+      WeaponFXId = 1020163,
       bTickEventWhenPaused = true
     },
     SlideAttack = {
@@ -2666,7 +2779,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020128,
+      WeaponFXId = 1020127,
       bTickEventWhenPaused = true
     },
     SlideAttack_Smoke = {
@@ -2680,7 +2793,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020130,
+      WeaponFXId = 1020129,
       bTickEventWhenPaused = true
     },
     SlideAttack_Wind = {
@@ -2695,7 +2808,7 @@ return ReadOnly("WeaponFX", {
       PlayByChar = true,
       Scale = T.RT_2,
       WeaponBlueprintId = 102,
-      WeaponFXId = 1020129,
+      WeaponFXId = 1020128,
       bTickEventWhenPaused = true
     }
   },
@@ -3025,6 +3138,22 @@ return ReadOnly("WeaponFX", {
       SoundID = 3304,
       WeaponBlueprintId = 103,
       WeaponFXId = 3000503,
+      bTickEventWhenPaused = true
+    },
+    FallAttack_Costume_05 = {
+      ChangeColorByChar = true,
+      EffectId = 1030132,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/12ZD/NS_FallAttack_bianhua.NS_FallAttack_Bianhua",
+      FXPriorityType = 90,
+      GroupName = "FallAttack_Costume_05",
+      LocalOffset = T.RT_37,
+      LocalRotation = T.RT_1,
+      NotBlocking = true,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SoundID = 3305,
+      WeaponBlueprintId = 103,
+      WeaponFXId = 3000603,
       bTickEventWhenPaused = true
     },
     HeavyAttack_Cast = {
@@ -4531,6 +4660,22 @@ return ReadOnly("WeaponFX", {
       WeaponFXId = 3000504,
       bTickEventWhenPaused = true
     },
+    FallAttack_Costume_05 = {
+      ChangeColorByChar = true,
+      EffectId = 1040132,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/12ZD/NS_FallAttack_bianhua.NS_FallAttack_Bianhua",
+      FXPriorityType = 90,
+      GroupName = "FallAttack_Costume_05",
+      LocalOffset = T.RT_13,
+      LocalRotation = T.RT_1,
+      NotBlocking = true,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SoundID = 3305,
+      WeaponBlueprintId = 104,
+      WeaponFXId = 3000604,
+      bTickEventWhenPaused = true
+    },
     HeavyAttack_Absorb = {
       Attach = true,
       ChangeColorByChar = true,
@@ -5631,6 +5776,22 @@ return ReadOnly("WeaponFX", {
       WeaponFXId = 3000505,
       bTickEventWhenPaused = true
     },
+    FallAttack_Costume_05 = {
+      ChangeColorByChar = true,
+      EffectId = 1050132,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/12ZD/NS_FallAttack_bianhua.NS_FallAttack_Bianhua",
+      FXPriorityType = 90,
+      GroupName = "FallAttack_Costume_05",
+      LocalOffset = T.RT_13,
+      LocalRotation = T.RT_1,
+      NotBlocking = true,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SoundID = 3305,
+      WeaponBlueprintId = 105,
+      WeaponFXId = 3000605,
+      bTickEventWhenPaused = true
+    },
     HeavyAttack_End_01 = {
       ChangeColorByChar = true,
       EffectId = 1010222,
@@ -5915,12 +6076,8 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Swordwhip/NS_Swordwhip_Runattack_Ground.NS_Swordwhip_Runattack_Ground",
       FXPriorityType = 90,
       GroupName = "Swordwhip_HeavyAttack_Ground01",
-      LocalOffset = {
-        0,
-        500,
-        0
-      },
-      LocalRotation = T.RT_57,
+      LocalOffset = T.RT_57,
+      LocalRotation = T.RT_58,
       NotReceiveDecals = true,
       PlayByChar = true,
       Scale = T.RT_2,
@@ -5939,7 +6096,7 @@ return ReadOnly("WeaponFX", {
         500,
         100
       },
-      LocalRotation = T.RT_57,
+      LocalRotation = T.RT_58,
       PlayByChar = true,
       Scale = T.RT_2,
       SoundID = 118,
@@ -5973,7 +6130,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Swordwhip/NS_Swordwhip_Runattack_xuli_02.NS_Swordwhip_Runattack_xuli_02",
       FXPriorityType = 90,
       GroupName = "Swordwhip_HeavyAttack_WP_Xuli",
-      LocalOffset = T.RT_58,
+      LocalOffset = T.RT_59,
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "root",
@@ -6004,7 +6161,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_RunAttack_KnifeSlash01.NS_Katana_RunAttack_KnifeSlash01",
       FXPriorityType = 90,
       GroupName = "Attack01_01",
-      LocalOffset = T.RT_59,
+      LocalOffset = T.RT_60,
       LocalRotation = {
         -24,
         -26.8,
@@ -6022,7 +6179,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_RunAttack_KnifeSlash01.NS_Katana_RunAttack_KnifeSlash01",
       FXPriorityType = 90,
       GroupName = "Attack01_02",
-      LocalOffset = T.RT_59,
+      LocalOffset = T.RT_60,
       LocalRotation = {
         178.2,
         6.4,
@@ -6040,7 +6197,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_RunAttack_KnifeSlash01.NS_Katana_RunAttack_KnifeSlash01",
       FXPriorityType = 90,
       GroupName = "Attack01_03",
-      LocalOffset = T.RT_59,
+      LocalOffset = T.RT_60,
       LocalRotation = {
         -160,
         -21.2,
@@ -6072,7 +6229,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_RunAttack_KnifeSlash01.NS_Katana_RunAttack_KnifeSlash01",
       FXPriorityType = 90,
       GroupName = "Attack02_01",
-      LocalOffset = T.RT_59,
+      LocalOffset = T.RT_60,
       LocalRotation = {
         0,
         0,
@@ -6090,7 +6247,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_RunAttack_KnifeSlash01.NS_Katana_RunAttack_KnifeSlash01",
       FXPriorityType = 90,
       GroupName = "Attack02_02",
-      LocalOffset = T.RT_59,
+      LocalOffset = T.RT_60,
       LocalRotation = {
         -186,
         30,
@@ -6108,7 +6265,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_RunAttack_KnifeSlash01.NS_Katana_RunAttack_KnifeSlash01",
       FXPriorityType = 90,
       GroupName = "Attack02_03",
-      LocalOffset = T.RT_59,
+      LocalOffset = T.RT_60,
       LocalRotation = {
         -9,
         34.4,
@@ -6339,6 +6496,22 @@ return ReadOnly("WeaponFX", {
       WeaponFXId = 3000506,
       bTickEventWhenPaused = true
     },
+    FallAttack_Costume_05 = {
+      ChangeColorByChar = true,
+      EffectId = 1060132,
+      FXAsset = "/Game/Asset/Effect/Niagara/Costume/12ZD/NS_FallAttack_bianhua.NS_FallAttack_Bianhua",
+      FXPriorityType = 90,
+      GroupName = "FallAttack_Costume_05",
+      LocalOffset = T.RT_13,
+      LocalRotation = T.RT_1,
+      NotBlocking = true,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SoundID = 3305,
+      WeaponBlueprintId = 106,
+      WeaponFXId = 3000606,
+      bTickEventWhenPaused = true
+    },
     HeavyAttack_Absorb = {
       Attach = true,
       ChangeColorByChar = true,
@@ -6393,7 +6566,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_HeavyAttack_DecalLaunch.NS_Katana_HeavyAttack_DecalLaunch",
       FXPriorityType = 90,
       GroupName = "HeavyAttack_DecalLaunch",
-      LocalOffset = T.RT_60,
+      LocalOffset = T.RT_61,
       LocalRotation = T.RT_1,
       PlayByChar = true,
       Scale = T.RT_2,
@@ -6421,7 +6594,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_Absorb.NS_Katana_Mod01_Absorb",
       FXPriorityType = 90,
       GroupName = "HeavyAttack_Mod01_01",
-      LocalOffset = T.RT_58,
+      LocalOffset = T.RT_59,
       LocalRotation = T.RT_7,
       Scale = T.RT_2,
       WeaponBlueprintId = 106,
@@ -6452,7 +6625,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_Smoke.NS_Katana_Mod01_Smoke",
       FXPriorityType = 90,
       GroupName = "HeavyAttack_Mod01_03",
-      LocalOffset = T.RT_60,
+      LocalOffset = T.RT_61,
       LocalRotation = T.RT_7,
       PlayByChar = true,
       Scale = T.RT_2,
@@ -6496,7 +6669,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_Flash.NS_Katana_Mod01_Flash",
       FXPriorityType = 90,
       GroupName = "HeavyAttack_Mod01_06",
-      LocalOffset = T.RT_60,
+      LocalOffset = T.RT_61,
       LocalRotation = {
         0,
         90,
@@ -6534,7 +6707,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_Decal.NS_Katana_Mod01_Decal",
       FXPriorityType = 90,
       GroupName = "HeavyAttack_Mod01_08",
-      LocalOffset = T.RT_60,
+      LocalOffset = T.RT_61,
       LocalRotation = T.RT_1,
       PlayByChar = true,
       Scale = T.RT_2,
@@ -6561,11 +6734,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Shine.NS_Katana_Shine",
       FXPriorityType = 90,
       GroupName = "HeavyAttack_Shine",
-      LocalOffset = {
-        15,
-        0,
-        0
-      },
+      LocalOffset = T.RT_62,
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       WeaponBlueprintId = 106,
@@ -6654,6 +6823,196 @@ return ReadOnly("WeaponFX", {
       WeaponFXId = 1060103,
       bTickEventWhenPaused = true
     },
+    Mod01_Attack01_Slash_01 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      EffectId = 1060211,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack01_Slash.NS_Katana_Mod01_RunAttack01_Slash",
+      FXPriorityType = 90,
+      GroupName = "Mod01_Attack01_Slash_01",
+      LocalOffset = {
+        10,
+        250,
+        120
+      },
+      LocalRotation = {
+        -5,
+        -10,
+        20
+      },
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060140,
+      bTickEventWhenPaused = true
+    },
+    Mod01_Attack01_Slash_02 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      EffectId = 1060211,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack01_Slash.NS_Katana_Mod01_RunAttack01_Slash",
+      FXPriorityType = 90,
+      GroupName = "Mod01_Attack01_Slash_02",
+      LocalOffset = {
+        -10,
+        300,
+        110
+      },
+      LocalRotation = {
+        -5,
+        15,
+        20
+      },
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060141,
+      bTickEventWhenPaused = true
+    },
+    Mod01_Attack02_Glow = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      EffectId = 1060212,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack02_Glow.NS_Katana_Mod01_RunAttack02_Glow",
+      FXPriorityType = 90,
+      GroupName = "Mod01_Attack02_Glow",
+      LocalOffset = T.RT_1,
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SocketName = "hook_arm_r",
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060143,
+      bTickEventWhenPaused = true
+    },
+    Mod01_Attack02_Slash = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      EffectId = 1060212,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack02_Slash.NS_Katana_Mod01_RunAttack02_Slash",
+      FXPriorityType = 90,
+      GroupName = "Mod01_Attack02_Slash",
+      LocalOffset = {
+        0,
+        800,
+        0
+      },
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060142,
+      bTickEventWhenPaused = true
+    },
+    Mod01_RunAttack01_Slash02_01 = {
+      ChangeColorByChar = true,
+      EffectId = 1060211,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack01_Slash02.NS_Katana_Mod01_RunAttack01_Slash02",
+      FXPriorityType = 90,
+      GroupName = "Mod01_RunAttack01_Slash02_01",
+      LocalOffset = {
+        414.64,
+        591.09,
+        197.49
+      },
+      LocalRotation = {
+        -13.08,
+        -12.82,
+        -5.64
+      },
+      PlayByChar = true,
+      Scale = {
+        1.6,
+        1.3,
+        1.3
+      },
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060146,
+      bTickEventWhenPaused = true
+    },
+    Mod01_RunAttack01_Slash_01 = {
+      ChangeColorByChar = true,
+      EffectId = 1060211,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack01_Slash.NS_Katana_Mod01_RunAttack01_Slash",
+      FXPriorityType = 90,
+      GroupName = "Mod01_RunAttack01_Slash_01",
+      LocalOffset = {
+        6.21,
+        201.14,
+        167.92
+      },
+      LocalRotation = {
+        -17.18,
+        3.2,
+        28.75
+      },
+      PlayByChar = true,
+      Scale = {
+        0.95,
+        0.95,
+        0.95
+      },
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060144,
+      bTickEventWhenPaused = true
+    },
+    Mod01_RunAttack01_Slash_02 = {
+      ChangeColorByChar = true,
+      EffectId = 1060211,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack01_Slash.NS_Katana_Mod01_RunAttack01_Slash",
+      FXPriorityType = 90,
+      GroupName = "Mod01_RunAttack01_Slash_02",
+      LocalOffset = {
+        20,
+        200,
+        220
+      },
+      LocalRotation = {
+        -29.59,
+        -19.05,
+        34.95
+      },
+      PlayByChar = true,
+      Scale = T.RT_34,
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060145,
+      bTickEventWhenPaused = true
+    },
+    Mod01_RunAttack02_Glow_01 = {
+      Attach = true,
+      ChangeColorByChar = true,
+      DetachWhenSkillEnds = true,
+      EffectId = 1060212,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack02_Glow.NS_Katana_Mod01_RunAttack02_Glow",
+      FXPriorityType = 90,
+      GroupName = "Mod01_RunAttack02_Glow_01",
+      LocalOffset = T.RT_62,
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      SocketName = "hook_arm_r",
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060148,
+      bTickEventWhenPaused = true
+    },
+    Mod01_RunAttack02_Slash_01 = {
+      ChangeColorByChar = true,
+      EffectId = 1060212,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Katana/NS_Katana_Mod01_RunAttack02_Slash01.NS_Katana_Mod01_RunAttack02_Slash01",
+      FXPriorityType = 90,
+      GroupName = "Mod01_RunAttack02_Slash_01",
+      LocalOffset = T.RT_57,
+      LocalRotation = T.RT_1,
+      PlayByChar = true,
+      Scale = T.RT_2,
+      WeaponBlueprintId = 106,
+      WeaponFXId = 1060147,
+      bTickEventWhenPaused = true
+    },
     SlideAttack = {
       ChangeColorByChar = true,
       EffectId = 1060141,
@@ -6701,7 +7060,7 @@ return ReadOnly("WeaponFX", {
       FXPriorityType = 90,
       GroupName = "Muzzle_r",
       LocalOffset = T.RT_1,
-      LocalRotation = T.RT_61,
+      LocalRotation = T.RT_63,
       Scale = T.RT_2,
       SocketName = "gunpoint_01",
       WeaponBlueprintId = 204,
@@ -6717,7 +7076,7 @@ return ReadOnly("WeaponFX", {
       FXPriorityType = 90,
       GroupName = "Muzzle_r",
       LocalOffset = T.RT_1,
-      LocalRotation = T.RT_61,
+      LocalRotation = T.RT_63,
       Scale = T.RT_2,
       SocketName = "gunpoint_01",
       WeaponBlueprintId = 205,
@@ -6844,7 +7203,7 @@ return ReadOnly("WeaponFX", {
       FXPriorityType = 90,
       GroupName = "Muzzle_l",
       LocalOffset = T.RT_1,
-      LocalRotation = T.RT_61,
+      LocalRotation = T.RT_63,
       Scale = T.RT_2,
       SocketName = "gunpoint_01",
       WeaponBlueprintId = 2021,
@@ -6860,11 +7219,43 @@ return ReadOnly("WeaponFX", {
       FXPriorityType = 90,
       GroupName = "Muzzle_r",
       LocalOffset = T.RT_1,
-      LocalRotation = T.RT_61,
+      LocalRotation = T.RT_63,
       Scale = T.RT_2,
       SocketName = "gunpoint_01",
       WeaponBlueprintId = 2022,
       WeaponFXId = 2020002,
+      bTickEventWhenPaused = true
+    }
+  },
+  [2027] = {
+    Muzzle_l = {
+      Attach = true,
+      ChangeColorByChar = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Crossbow/Leyuan/NS_Leyuan_Muzzle.NS_Leyuan_Muzzle",
+      FXPriorityType = 90,
+      GroupName = "Muzzle_l",
+      LocalOffset = T.RT_1,
+      LocalRotation = T.RT_63,
+      Scale = T.RT_2,
+      SocketName = "gunpoint_01",
+      WeaponBlueprintId = 2027,
+      WeaponFXId = 2020701,
+      bTickEventWhenPaused = true
+    }
+  },
+  [2028] = {
+    Muzzle_r = {
+      Attach = true,
+      ChangeColorByChar = true,
+      FXAsset = "/Game/Asset/Effect/Niagara/Weapon/Crossbow/Leyuan/NS_Leyuan_Muzzle.NS_Leyuan_Muzzle",
+      FXPriorityType = 90,
+      GroupName = "Muzzle_r",
+      LocalOffset = T.RT_1,
+      LocalRotation = T.RT_63,
+      Scale = T.RT_2,
+      SocketName = "gunpoint_01",
+      WeaponBlueprintId = 2028,
+      WeaponFXId = 2020702,
       bTickEventWhenPaused = true
     }
   },
@@ -6874,7 +7265,7 @@ return ReadOnly("WeaponFX", {
       FXAsset = "/Game/Asset/Effect/Niagara/Monster/Jt/NS_Jt_Tuji_Attack01_Wind.NS_Jt_Tuji_Attack01_Wind",
       FXPriorityType = 80,
       GroupName = "Attack01",
-      LocalOffset = T.RT_58,
+      LocalOffset = T.RT_59,
       LocalRotation = T.RT_1,
       Scale = T.RT_2,
       SocketName = "hitcenter",
@@ -7014,7 +7405,7 @@ return ReadOnly("WeaponFX", {
       FXPriorityType = 90,
       GroupName = "Muzzle_r",
       LocalOffset = T.RT_1,
-      LocalRotation = T.RT_61,
+      LocalRotation = T.RT_63,
       Scale = T.RT_2,
       SocketName = "gunpoint_01",
       WeaponBlueprintId = 20402,
@@ -7078,7 +7469,7 @@ return ReadOnly("WeaponFX", {
       FXPriorityType = 90,
       GroupName = "Muzzle_r",
       LocalOffset = T.RT_1,
-      LocalRotation = T.RT_61,
+      LocalRotation = T.RT_63,
       Scale = T.RT_2,
       SocketName = "gunpoint_01",
       WeaponBlueprintId = 20405,
@@ -7092,7 +7483,7 @@ return ReadOnly("WeaponFX", {
       FXPriorityType = 90,
       GroupName = "Muzzle_r_02",
       LocalOffset = T.RT_1,
-      LocalRotation = T.RT_61,
+      LocalRotation = T.RT_63,
       Scale = T.RT_2,
       SocketName = "gunpoint_01",
       WeaponBlueprintId = 20405,
@@ -7124,7 +7515,7 @@ return ReadOnly("WeaponFX", {
       FXPriorityType = 90,
       GroupName = "Muzzle_r",
       LocalOffset = T.RT_1,
-      LocalRotation = T.RT_61,
+      LocalRotation = T.RT_63,
       Scale = T.RT_2,
       SocketName = "gunpoint_01",
       WeaponBlueprintId = 20407,

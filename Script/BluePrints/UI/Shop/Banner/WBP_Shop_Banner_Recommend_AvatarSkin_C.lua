@@ -27,7 +27,7 @@ end
 
 function M:OnClickQa()
   if self.BannerTab and self.BannerTab.PreviewType == "Skin" and self.BannerTab.PreviewId then
-    UIManager(self):LoadUINew("SkinPreview", {
+    PageJumpUtils:JumpToSkinPreview({
       ItemType = "Skin",
       TypeId = self.BannerTab.PreviewId[1],
       SinglePreview = true,

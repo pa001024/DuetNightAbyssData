@@ -5,7 +5,9 @@ local M = Class({
 M._components = {
   "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_TimeTag_Comp",
   "BluePrints.UI.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_CustomTag_Comp",
-  "BluePrints.Ui.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_NewGlow_Comp"
+  "BluePrints.Ui.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_NewGlow_Comp",
+  "BluePrints.Ui.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_ModTag_Comp",
+  "BluePrints.Ui.UI_PC.Common.Common_Item.Comp.WBP_Com_Item_IncarnonRare_Comp"
 }
 
 function M:InitData(Content)
@@ -102,6 +104,8 @@ function M:InitCompView()
   self:SetInGear(self.bInGear)
   self:SetTimeTag(self.Content.TimeTagList)
   self:SetCustomTag(self.Content.bAllowCustom)
+  self:SetModTag(self.Content.bAllowModTag, self.Content.bModEquiped)
+  self:SetIncarnonRare(self.Content.bIncarnon)
   self:SetNewGlow(self.bNewGlow)
   self:SetRedDot(self.RedDotType)
 end

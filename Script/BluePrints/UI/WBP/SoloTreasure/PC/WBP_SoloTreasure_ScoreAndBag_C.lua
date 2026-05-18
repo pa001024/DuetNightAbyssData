@@ -47,11 +47,7 @@ function WBP_SoloTreasure_HudScore_C:InitWidgetUI(IsFromLottery)
 end
 
 function WBP_SoloTreasure_HudScore_C:InitDungeoObject()
-  self.ServerEntity = GWorld:GetServerEntity()
-  if not self.ServerEntity then
-    return
-  end
-  self.DungeonObject = self.ServerEntity:GetDungeonObject()
+  self.DungeonObject = GWorld:GetGameModeDungeonObject()
   if not self.DungeonObject then
     return
   end

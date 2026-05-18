@@ -51,6 +51,10 @@ function WBP_Battle_Bar_Blood_Place_PC_C:UpdateBossPlaceBlood()
   local IsRealReduceBlood = self.Hp < self.LastHp
   local CurPercent = math.clamp(self.Hp / self.MaxHp, 0, 1)
   self.HpBar:SetBarPercent(CurPercent)
+  if 0 == CurPercent then
+    self.RootWidget:SetRenderOpacity(0.0)
+    self.RootWidget:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  end
   if IsRealReduceBlood then
     self.HpBar:PlayDeduct(true)
     

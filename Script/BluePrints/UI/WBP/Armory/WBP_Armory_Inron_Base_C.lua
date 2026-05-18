@@ -13,6 +13,8 @@ M._components = {
 function M:Construct()
   self:AddDispatcher(EventID.OnCharGradeLevelUp, self, self.OnCharGradeLevelUp)
   self:AddDispatcher(EventID.OnCharExtraGradeLevelUp, self, self.OnCharExtraGradeLevelUp)
+  self:AddDispatcher(EventID.OnCharCardLevelResourcesChanged, self, self.OnCharCardLevelResourcesChanged)
+  self:AddDispatcher(EventID.OnResourcesChanged, self, self.OnResourcesChanged)
   self:AddDispatcher(EventID.OnMenuClose, self, self.OnClickBtnFullClose)
   self.UnLockedText = GText("UI_UNLOCKED")
   self.UnLockText = GText("UI_UNLOCK")
@@ -593,6 +595,86 @@ function M:OnPurchaseShopItem(Ret)
   end
 end
 
+function M:SyncCharData()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not self.Char then
+    return false
+  end
+  self.Char = Avatar.Chars[self.Char.Uuid] or self.Char
+  self.CharId = self.Char.CharId
+  self.CharGradeLevel = self.Char.GradeLevel
+  self.HasUltraGrade = self.Char:HasUltraGradeLevel()
+  self.IsExtraGradeUnlocked = self.Char:IsExtraGradeLevelUnlocked()
+  self.EffectiveGradeLevel = self.Char:GetEffectiveGradeLevel()
+  return true
+end
+
+function M:GetSelectMod(TraceId)
+  if self.IsPreviewMode then
+    return 4
+  elseif 7 == TraceId then
+    if self.IsExtraGradeUnlocked then
+      return 1
+    elseif self.CharGradeLevel < self.MaxGradeLevel then
+      return 3
+    end
+    return 2
+  elseif TraceId <= self.CharGradeLevel then
+    return 1
+  elseif TraceId == self.CharGradeLevel + 1 then
+    return 2
+  end
+  return 3
+end
+
+function M:RefreshTraceReddot()
+  if self.IsPreviewMode then
+    return
+  end
+  if self["InronItem_" .. self.CharGradeLevel + 1] and self.CharGradeLevel + 1 <= self.MaxGradeLevel then
+    self["InronItem_" .. self.CharGradeLevel + 1]:SetReddotState(self:CheckCharCanUpGradeLevel())
+  end
+  if self.InronItem_7 and self.HasUltraGrade then
+    if not self.IsExtraGradeUnlocked and self.CharGradeLevel >= self.MaxGradeLevel then
+      self.InronItem_7:SetReddotState(self:CheckCharCanUpUltraGradeLevel())
+    else
+      self.InronItem_7:SetReddotState(false)
+    end
+    self.InronItem_7:SetNewState(self:CheckUltraGradeNewState())
+  end
+end
+
+function M:RefreshCurrentTraceInfo()
+  if not self:SyncCharData() then
+    return
+  end
+  self:RefreshTraceReddot()
+  if self.SelectTraceId and -1 ~= self.SelectTraceId and self.Details then
+    self.SelectMod = self:GetSelectMod(self.SelectTraceId)
+    self.Details:UpdateDetailInfo(self.SelectTraceId, self.SelectMod)
+  end
+end
+
+function M:OnCharCardLevelResourcesChanged(ResourceId, CharId, Uuid)
+  if self.IsPreviewMode then
+    return
+  end
+  if Uuid and self.Char and Uuid ~= self.Char.Uuid then
+    return
+  end
+  if CharId and self.CharId and CharId ~= self.CharId then
+    return
+  end
+  self:RefreshCurrentTraceInfo()
+end
+
+function M:OnResourcesChanged(ResourceId)
+  if self.IsPreviewMode or not ResourceId then
+    return
+  end
+  self:RefreshCurrentTraceInfo()
+end
+
 function M:CheckCharCanUpGradeLevel()
   if self.IsPreviewMode then
     return
@@ -669,6 +751,7 @@ end
 function M:PlayInAnim()
   self.IsOutAnimPlayed = false
   self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self:RefreshCurrentTraceInfo()
   if not self.IsOpenDetails and not self.DetailsClose then
     self:StopAllAnimations()
     self:FlushAnimations()

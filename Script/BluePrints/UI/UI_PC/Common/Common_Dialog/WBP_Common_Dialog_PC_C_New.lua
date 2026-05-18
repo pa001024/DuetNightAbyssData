@@ -168,7 +168,13 @@ function WBP_Common_Dialog_PC_C:InitGamepadView(CurGamepadName)
   end
   if self.Params and self.Params.AutoFocus and self.VB_Node:GetChildrenCount() > 2 then
     local Widget = self.VB_Node:GetChildAt(1)
-    Widget:SetFocus()
+    if self.Params.AutoFocusDelayTime then
+      self:AddTimer(self.Params.AutoFocusDelayTime, function()
+        Widget:SetFocus()
+      end)
+    else
+      Widget:SetFocus()
+    end
   end
   for _, ContentWidget in pairs(self.ContentWidgetTable) do
     if ContentWidget.InitGamepadView then
@@ -328,6 +334,7 @@ function WBP_Common_Dialog_PC_C:UpdateView(PopupStyleID, Params, PopupData)
     end
     self.VB_Node:AddChild(self.Spacer_VBNode_Botton)
   end
+  self.bTipTwoLine = false
   self.Pos_Tips:ClearChildren()
   if PopupStyle.ShowTip then
     self.Pos_Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -422,6 +429,7 @@ function WBP_Common_Dialog_PC_C:UpdateView(PopupStyleID, Params, PopupData)
   if TopResources then
     local ResourceBarIcon = UIUtils.UtilsGetKeyIconPathInGamepad("RS", "Generic")
     self.TopResourcePanel:SetVisibility(UE4.ESlateVisibility.Visible)
+    self.WBP_Com_Tab_Node_ResourceBar.HostCommonDialog = self
     self.WBP_Com_Tab_Node_ResourceBar:InitResourceBar(TopResources)
     self.WBP_Com_Tab_Node_ResourceBar:SetGamePadKeyImgByPath(ResourceBarIcon)
     self.WBP_Com_Tab_Node_ResourceBar:SetLastFocusWidget(self)
@@ -494,13 +502,10 @@ function WBP_Common_Dialog_PC_C:AutofitDialog()
   else
     self.Size_Bg:SetMinDesiredWidth(DialogMinWidthNormal)
   end
-  if self.Params.FixTipHeight then
-    self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Large))
-    self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Large))
-  else
+  local HasTipWidgetVisible = false
+  if self.PopupStyle.ShowTip then
     local AllChildrend = self.Pos_Tips:GetAllChildren()
     local Length = AllChildrend:Length()
-    local HasTipWidgetVisible = false
     for i = 1, Length do
       local TipWidget = AllChildrend:GetRef(i)
       local WidgetVisibility = TipWidget:GetVisibility()
@@ -509,13 +514,26 @@ function WBP_Common_Dialog_PC_C:AutofitDialog()
         break
       end
     end
-    if self.PopupStyle.ShowTip and HasTipWidgetVisible then
-      self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Large))
-      self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Large))
+  end
+  if self.PopupStyle.ShowTip then
+    if HasTipWidgetVisible then
+      self.Pos_Tips:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     else
-      self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Normal))
-      self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Normal))
+      self.Pos_Tips:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
+  end
+  self.Spacer_VBNode_Top:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.Spacer_VBNode_Botton:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  if self.Params.FixTipHeight or self.PopupStyle.ShowTip and HasTipWidgetVisible then
+    self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Large))
+    if HasTipWidgetVisible and self.bTipTwoLine then
+      self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_XLarge))
+    else
+      self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Large))
+    end
+  else
+    self.Spacer_VBNode_Top:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Top_Y_Normal))
+    self.Spacer_VBNode_Botton:SetSize(UE4.FVector2D(0, self.Spacer_VBNode_Botton_Y_Normal))
   end
 end
 
@@ -690,7 +708,17 @@ end
 function WBP_Common_Dialog_PC_C:OnAnimationFinished(InAnimation)
   if InAnimation == self.Out then
     if IsValid(self.ParentWidget) and self.ParentWidget.bIsFocusable and not self.DontFocusParentWidget then
-      if type(self.ParentWidget.SetFocus_Lua) == "function" then
+      if self.Params.AutoFocusDelayTime then
+        self:AddTimer(self.Params.AutoFocusDelayTime, function()
+          if IsValid(self.ParentWidget) then
+            if type(self.ParentWidget.SetFocus_Lua) == "function" then
+              self.ParentWidget:SetFocus_Lua()
+            else
+              self.ParentWidget:SetFocus()
+            end
+          end
+        end)
+      elseif type(self.ParentWidget.SetFocus_Lua) == "function" then
         self.ParentWidget:SetFocus_Lua()
       else
         self.ParentWidget:SetFocus()

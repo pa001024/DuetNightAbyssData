@@ -123,5 +123,37 @@ return ReadOnly("DetectiveQuestion", {
     QuestName = "Name_200309",
     QuestionID = 2004,
     Tips = "TextMap_Inference_2004"
+  },
+  [2005] = {
+    ProbablyNeededAnswers = {
+      200501,
+      200502,
+      200503,
+      200504,
+      200505,
+      200506,
+      200507,
+      200508,
+      200509,
+      200510,
+      200511
+    },
+    QuestName = "Name_200403",
+    QuestionID = 2005,
+    Tips = "TextMap_Inference_2005"
+  },
+  [2006] = {
+    AutoClose = true,
+    ProbablyNeededAnswers = {
+      200601,
+      200602,
+      200603,
+      200604,
+      200605,
+      200606,
+      200607
+    },
+    QuestionID = 2006,
+    Tips = "TextMap_Inference_2006"
   }
 })

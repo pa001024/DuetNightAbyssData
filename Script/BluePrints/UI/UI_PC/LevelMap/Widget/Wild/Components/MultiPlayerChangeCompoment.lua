@@ -11,7 +11,7 @@ end
 function Component:ClearData()
   if self.ChallengePoints then
     for _, widget in pairs(self.ChallengePoints) do
-      widget:RemoveFromParent()
+      self:ReleasePointToPool(widget)
     end
     self.ChallengePoints = {}
   end

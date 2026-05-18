@@ -243,5 +243,45 @@ return ReadOnly("HardBossMain", {
     TeleportId = 9005,
     TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Bailong.WBP_Play_HardBoss_Title_Bailong'",
     UnlockCondition = 2057
+  },
+  [7] = {
+    AirWallStaticId = 8519021,
+    BossIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
+    CameraParam = T.RT_6,
+    CustomMonsterId = {8519507},
+    CustomMonsterStaticId = {8519007},
+    DifficultyId = {
+      1061,
+      1062,
+      1063,
+      1064,
+      1065,
+      1066
+    },
+    DisplayPriority = 7,
+    GameModePath = "/Game/AssetDesign/GameMode/HardBoss/BP_EMGameMode_HardBoss06_BossLieche.BP_EMGameMode_HardBoss06_BossLieche",
+    GuidanceTitle = 100001,
+    HardBossDes = "UI_HardBoss_Des_7",
+    HardBossId = 7,
+    HardBossName = "UI_HardBoss_Name_7",
+    MainIcon = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossImage/WBP_Play_HardBoss_Image_Lieche.WBP_Play_HardBoss_Image_Lieche'",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_Lieche_S.T_Permanent_HardBoss_Lieche_S",
+    MonsterId = {
+      8519501,
+      8519504,
+      8519504
+    },
+    MonsterStaticId = {
+      85190012,
+      85190023,
+      85190024
+    },
+    OpenTitleWidgetName = "HardBossOpenTitle_Lieche",
+    PosDisplayName = "BP_HardBoss_PlayerStart",
+    SettlementOffset = T.RT_11,
+    StorylinePath = "HardBoss/Lieche",
+    TeleportId = 9006,
+    TitleBp = "WidgetBlueprint'/Game/UI/WBP/Play/Widget/HardBoss/PlayHardBossTitle/WBP_Play_HardBoss_Title_Lieche.WBP_Play_HardBoss_Title_Lieche'",
+    UnlockCondition = 2067
   }
 })

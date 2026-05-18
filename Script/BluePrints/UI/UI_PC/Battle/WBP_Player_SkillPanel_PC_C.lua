@@ -426,7 +426,7 @@ function WBP_Player_SkillPanel_PC_C:RefreshSupportSkillIcon()
       })
     end
   end
-  if SupportSKillBaseConfig.SkillBtnDesc ~= nil then
+  if -1 == self.OwnerPlayer.ActivePropEffectId and SupportSKillBaseConfig.SkillBtnDesc ~= nil then
     self.Assist_Skill_Text:SetText(GText(SupportSKillBaseConfig.SkillBtnDesc))
   end
   self:ListenForInputAction("Skill3", UE4.EInputEvent.IE_Released, false, {
@@ -1147,15 +1147,21 @@ function WBP_Player_SkillPanel_PC_C:OnPropEffectReplaceSkill(SkillName, PropEffe
     self.Overlay_Organ:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     EMUIAnimationSubsystem:EMStopAnimation(self, self.Weapon_Normal)
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Weapon_Ban)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.SpiritualizedShort)
   elseif SkillName == ESkillName.Skill3 then
     self.Assist_Text_CD:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Assist_Bar_Skill_CD:SetPercent(0)
     self.Assist_Skill_Icon:SetRenderOpacity(1.0)
-    local ReplaceIconPath = DataMgr.PropEffect[PropEffectId].ReplaceSupportIconPath
+    local PropEffectConfig = DataMgr.PropEffect[PropEffectId]
+    local ReplaceIconPath = PropEffectConfig.ReplaceSupportIconPath
     UE.UResourceLibrary.LoadObjectAsync(self, ReplaceIconPath, {
       self,
       WBP_Player_SkillPanel_PC_C.OnSupportIconLoadFinish
     })
+    local ReplaceDesc = PropEffectConfig.ReplaceSupportSkillDesc
+    if ReplaceDesc then
+      self.Assist_Skill_Text:SetText(GText(ReplaceDesc))
+    end
   end
 end
 
@@ -1164,6 +1170,7 @@ function WBP_Player_SkillPanel_PC_C:OnPropEffectEndReplaceSkill(SkillName)
     self.Overlay_Organ:SetVisibility(ESlateVisibility.Collapsed)
     EMUIAnimationSubsystem:EMStopAnimation(self, self.Weapon_Ban)
     EMUIAnimationSubsystem:EMPlayAnimation(self, self.Weapon_Normal)
+    EMUIAnimationSubsystem:EMPlayAnimation(self, self.SpiritualizedLong)
   elseif SkillName == ESkillName.Skill3 then
     self.LastSupportSkillState = nil
     self:HandleSupportButtonState()
@@ -1171,6 +1178,12 @@ function WBP_Player_SkillPanel_PC_C:OnPropEffectEndReplaceSkill(SkillName)
       self,
       WBP_Player_SkillPanel_PC_C.OnSupportIconLoadFinish
     })
+    if self.SupportSkillId then
+      local SupportSKillBaseConfig = DataMgr.Skill[self.SupportSkillId][1][0]
+      if SupportSKillBaseConfig and SupportSKillBaseConfig.SkillBtnDesc then
+        self.Assist_Skill_Text:SetText(GText(SupportSKillBaseConfig.SkillBtnDesc))
+      end
+    end
   end
 end
 

@@ -21,7 +21,7 @@ end
 function ChangeTextToKeyInfoComponent:GetFinalContentText(ContentText)
   local strs = self:AnalyzeText(ContentText, "&")
   local final_str = ""
-  local CurrentGamepadName = ""
+  local CurrentGamepadName = "Generic"
   if self:GetGameInstance() and self:GetGameInstance().CurInputDeviceName then
     CurrentGamepadName = self:GetGameInstance().CurInputDeviceName
   end

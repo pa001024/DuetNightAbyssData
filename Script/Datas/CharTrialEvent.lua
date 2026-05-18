@@ -84,6 +84,28 @@ return ReadOnly("CharTrialEvent", {
     TrialType = "Char",
     WalnutId = 1013
   },
+  [105101020] = {
+    CharId = 1102,
+    CharTrialId = 101026,
+    ColorVarName = "Type_Dark",
+    Eventld = 105101020,
+    HideBPNode = T.RT_1,
+    InterfaceJumpId = 57,
+    TrialReward = 20000,
+    TrialType = "Char",
+    WalnutId = 1025
+  },
+  [105101021] = {
+    CharId = 3102,
+    CharTrialId = 101027,
+    ColorVarName = "Type_Fire",
+    Eventld = 105101021,
+    HideBPNode = T.RT_1,
+    InterfaceJumpId = 57,
+    TrialReward = 20000,
+    TrialType = "Char",
+    WalnutId = 1010
+  },
   [105102011] = {
     CharId = 5301,
     CharTrialId = 101012,
@@ -147,6 +169,28 @@ return ReadOnly("CharTrialEvent", {
     GachaTabId = 5,
     HideBPNode = T.RT_1,
     SkinId = 150401,
+    TrialReward = 20000,
+    TrialType = "Skin"
+  },
+  [105102022] = {
+    CharId = 1102,
+    CharTrialId = 101028,
+    ColorVarName = "Type_Dark",
+    Eventld = 105102022,
+    GachaTabId = 6,
+    HideBPNode = T.RT_1,
+    SkinId = 110201,
+    TrialReward = 20000,
+    TrialType = "Skin"
+  },
+  [105102023] = {
+    CharId = 2101,
+    CharTrialId = 101029,
+    ColorVarName = "Type_Water",
+    Eventld = 105102023,
+    GachaTabId = 6,
+    HideBPNode = T.RT_1,
+    SkinId = 210101,
     TrialReward = 20000,
     TrialType = "Skin"
   }

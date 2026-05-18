@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from pathlib import Path
 from collections import OrderedDict
@@ -91,6 +92,18 @@ class BaseProcessor:
             if len(candidates) == 1:
                 return candidates[0]
         return None
+
+    @staticmethod
+    def _normalize_story_path(story_path: Optional[str]) -> str:
+        """将 story 路径规范化为可相对拼接的文件路径。"""
+        if not isinstance(story_path, str) or not story_path:
+            return ""
+
+        json_path = story_path.replace(".story", ".json")
+        if not json_path.endswith(".json"):
+            json_path += ".json"
+        json_path = json_path.replace("\\", "/").replace("/", os.sep)
+        return json_path.lstrip(os.sep)
 
     @classmethod
     def _get_guide_point_loc_data(cls) -> Dict[str, Any]:

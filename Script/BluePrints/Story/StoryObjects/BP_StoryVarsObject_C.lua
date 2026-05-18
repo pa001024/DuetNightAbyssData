@@ -35,6 +35,8 @@ end
 
 function BP_StoryVarsObject_C:UpdateTaskQuestExtraData(InKey, InOldValue, InNewValue)
   EventManager:FireEvent(EventID.OnCalcVarChange, InKey, InOldValue, InNewValue)
+  EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic)
+  EventManager:FireEvent(EventID.OnVarCheck)
 end
 
 return BP_StoryVarsObject_C

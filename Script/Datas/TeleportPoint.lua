@@ -63,13 +63,19 @@ T.RT_7 = {
   15,
   16
 }
-T.RT_8 = {16}
-T.RT_9 = {
+T.RT_8 = {
+  5,
+  9,
+  13,
+  14
+}
+T.RT_9 = {16}
+T.RT_10 = {
   13,
   14,
   15
 }
-T.RT_10 = {
+T.RT_11 = {
   1,
   2,
   3,
@@ -83,15 +89,27 @@ T.RT_10 = {
   14,
   15
 }
-T.RT_11 = {
+T.RT_12 = {
   Big = 8,
   FloorId = 0,
-  Small = T.RT_10
+  Small = T.RT_11
 }
-T.RT_12 = {15, 16}
-T.RT_13 = {13, 14}
-T.RT_14 = {1, 5}
-T.RT_15 = {
+T.RT_13 = {
+  1,
+  2,
+  3
+}
+T.RT_14 = {15, 16}
+T.RT_15 = {13, 14}
+T.RT_16 = {
+  3,
+  4,
+  7,
+  8,
+  12
+}
+T.RT_17 = {1, 5}
+T.RT_18 = {
   3,
   4,
   7,
@@ -101,7 +119,7 @@ T.RT_15 = {
   15,
   16
 }
-T.RT_16 = {
+T.RT_19 = {
   1,
   2,
   5,
@@ -109,8 +127,8 @@ T.RT_16 = {
   9,
   13
 }
-T.RT_17 = {3, 4}
-T.RT_18 = {
+T.RT_20 = {3, 4}
+T.RT_21 = {
   1,
   2,
   5,
@@ -120,13 +138,13 @@ T.RT_18 = {
   13,
   14
 }
-T.RT_19 = {14, 15}
-T.RT_20 = {
+T.RT_22 = {14, 15}
+T.RT_23 = {
   Big = 1,
   FloorId = -1,
-  Small = T.RT_19
+  Small = T.RT_22
 }
-T.RT_21 = {
+T.RT_24 = {
   1,
   2,
   3,
@@ -144,21 +162,34 @@ T.RT_21 = {
   15,
   16
 }
-T.RT_22 = {13}
-T.RT_23 = {4}
-T.RT_24 = {
+T.RT_25 = {13}
+T.RT_26 = {4}
+T.RT_27 = {
   8,
   12,
   16
 }
-T.RT_25 = {
+T.RT_28 = {
+  1,
+  2,
+  5,
+  6,
+  7,
+  9,
+  10,
+  11,
+  13,
+  14,
+  15
+}
+T.RT_29 = {
   4,
   8,
   12,
   15,
   16
 }
-T.RT_26 = {
+T.RT_30 = {
   5,
   9,
   10,
@@ -166,36 +197,53 @@ T.RT_26 = {
   14,
   15
 }
-T.RT_27 = {
+T.RT_31 = {
   11,
   12,
   15,
   16
 }
-T.RT_28 = {
+T.RT_32 = {
+  1,
+  2,
+  3,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+}
+T.RT_33 = {
   3,
   4,
   7,
   8
 }
-T.RT_29 = {14}
-T.RT_30 = {
+T.RT_34 = {14}
+T.RT_35 = {
   Big = 1,
   FloorId = 0,
-  Small = T.RT_29
+  Small = T.RT_34
 }
-T.RT_31 = {
+T.RT_36 = {
   Big = 3,
   FloorId = 0,
-  Small = T.RT_21
+  Small = T.RT_24
 }
-T.RT_32 = {
+T.RT_37 = {
   1,
   2,
   5,
   6
 }
-T.RT_33 = {
+T.RT_38 = {
   3,
   4,
   7,
@@ -203,13 +251,13 @@ T.RT_33 = {
   11,
   12
 }
-T.RT_34 = {
+T.RT_39 = {
   4,
   8,
   12,
   16
 }
-T.RT_35 = {
+T.RT_40 = {
   1,
   2,
   5,
@@ -217,7 +265,7 @@ T.RT_35 = {
   9,
   10
 }
-T.RT_36 = {
+T.RT_41 = {
   5,
   6,
   9,
@@ -225,14 +273,31 @@ T.RT_36 = {
   13,
   14
 }
-T.RT_37 = {8, 12}
-T.RT_38 = {1}
-T.RT_39 = {
+T.RT_42 = {8, 12}
+T.RT_43 = {1}
+T.RT_44 = {
   5,
   9,
   13
 }
-T.RT_40 = {
+T.RT_45 = {
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+}
+T.RT_46 = {
   1,
   2,
   5,
@@ -247,13 +312,14 @@ T.RT_40 = {
   15,
   16
 }
-T.RT_41 = {
+T.RT_47 = {9, 13}
+T.RT_48 = {
   13,
   14,
   15,
   16
 }
-T.RT_42 = {
+T.RT_49 = {
   2,
   3,
   4,
@@ -267,35 +333,56 @@ T.RT_42 = {
   15,
   16
 }
-T.RT_43 = {4, 8}
-T.RT_44 = {
+T.RT_50 = {4, 8}
+T.RT_51 = {
   Big = 2,
   FloorId = 0,
-  Small = T.RT_21
+  Small = T.RT_24
 }
-T.RT_45 = {
+T.RT_52 = {
   9,
   13,
   14
 }
-T.RT_46 = {1, 2}
-T.RT_47 = {
+T.RT_53 = {1, 2}
+T.RT_54 = {
   12,
   15,
   16
 }
-T.RT_48 = {
+T.RT_55 = {
   1,
   2,
   5
 }
-T.RT_49 = {12, 16}
-T.RT_50 = {
+T.RT_56 = {12, 16}
+T.RT_57 = {
+  2,
+  3,
+  4,
+  6,
+  7,
+  8
+}
+T.RT_58 = {
   Big = 1,
   FloorId = 0,
-  Small = T.RT_21
+  Small = T.RT_24
 }
-T.RT_51 = {
+T.RT_59 = {
+  5,
+  6,
+  7,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+}
+T.RT_60 = {
   3,
   4,
   7,
@@ -308,7 +395,7 @@ T.RT_51 = {
   15,
   16
 }
-T.RT_52 = {
+T.RT_61 = {
   1,
   2,
   3,
@@ -322,7 +409,7 @@ T.RT_52 = {
   11,
   12
 }
-T.RT_53 = {
+T.RT_62 = {
   3,
   4,
   6,
@@ -337,7 +424,7 @@ T.RT_53 = {
   15,
   16
 }
-T.RT_54 = {
+T.RT_63 = {
   3,
   4,
   5,
@@ -353,7 +440,12 @@ T.RT_54 = {
   15,
   16
 }
-T.RT_55 = {
+T.RT_64 = {
+  Big = 39,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_65 = {
   1,
   5,
   9,
@@ -363,13 +455,18 @@ T.RT_55 = {
   14,
   15
 }
-T.RT_56 = {
+T.RT_66 = {
+  Big = 50,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_67 = {
   1,
   2,
   3,
   4
 }
-T.RT_57 = {
+T.RT_68 = {
   5,
   6,
   7,
@@ -383,39 +480,89 @@ T.RT_57 = {
   15,
   16
 }
-T.RT_58 = {
+T.RT_69 = {
   1,
   2,
   5,
   6,
   9
 }
-T.RT_59 = {
+T.RT_70 = {
+  Big = 30,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_71 = {
+  Big = 31,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_72 = {
   Big = 44,
   FloorId = 0,
-  Small = T.RT_21
+  Small = T.RT_24
 }
-T.RT_60 = {
+T.RT_73 = {
+  Big = 45,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_74 = {
+  Big = 56,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_75 = {
+  Big = 57,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_76 = {
+  Big = 58,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_77 = {
+  Big = 59,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_78 = {
   Big = 4,
   FloorId = 0,
-  Small = T.RT_21
+  Small = T.RT_24
 }
-T.RT_61 = {
+T.RT_79 = {
   Big = 22,
   FloorId = 0,
-  Small = T.RT_21
+  Small = T.RT_24
 }
-T.RT_62 = {
+T.RT_80 = {
+  Big = 34,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_81 = {
   4,
   8,
   12
 }
-T.RT_63 = {
+T.RT_82 = {
   Big = 15,
   FloorId = 0,
-  Small = T.RT_21
+  Small = T.RT_24
 }
-T.RT_64 = {
+T.RT_83 = {
+  Big = 25,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_84 = {
+  Big = 26,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_85 = {
   1,
   2,
   3,
@@ -432,7 +579,7 @@ T.RT_64 = {
   14,
   15
 }
-T.RT_65 = {
+T.RT_86 = {
   2,
   3,
   4,
@@ -448,7 +595,17 @@ T.RT_65 = {
   15,
   16
 }
-T.RT_66 = {
+T.RT_87 = {
+  Big = 47,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_88 = {
+  Big = 46,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_89 = {
   1,
   2,
   3,
@@ -459,16 +616,51 @@ T.RT_66 = {
   10,
   11
 }
-T.RT_67 = {}
-T.RT_68 = {
+T.RT_90 = {}
+T.RT_91 = {
   Big = 34,
   FloorId = 0,
-  Small = T.RT_67
+  Small = T.RT_90
 }
-T.RT_69 = {
+T.RT_92 = {
+  Big = 37,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_93 = {
   Big = 9,
   FloorId = 0,
-  Small = T.RT_21
+  Small = T.RT_24
+}
+T.RT_94 = {
+  Big = 9,
+  FloorId = 0,
+  Small = T.RT_90
+}
+T.RT_95 = {
+  Big = 29,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_96 = {
+  Big = 10,
+  FloorId = 0,
+  Small = T.RT_24
+}
+T.RT_97 = {
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  10,
+  11,
+  12,
+  15,
+  16
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -748,12 +940,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 6,
         FloorId = 0,
-        Small = {
-          5,
-          9,
-          13,
-          14
-        }
+        Small = T.RT_8
       }
     },
     Id = 1010,
@@ -773,12 +960,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 3,
         FloorId = 0,
-        Small = T.RT_8
+        Small = T.RT_9
       },
       {
         Big = 4,
         FloorId = 0,
-        Small = T.RT_9
+        Small = T.RT_10
       },
       {
         Big = 7,
@@ -793,15 +980,11 @@ return ReadOnly("TeleportPoint", {
           16
         }
       },
-      T.RT_11,
+      T.RT_12,
       {
         Big = 11,
         FloorId = 0,
-        Small = {
-          1,
-          2,
-          3
-        }
+        Small = T.RT_13
       }
     },
     Id = 1011,
@@ -820,23 +1003,17 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 1,
         FloorId = 0,
-        Small = T.RT_12
+        Small = T.RT_14
       },
       {
         Big = 2,
         FloorId = 0,
-        Small = T.RT_13
+        Small = T.RT_15
       },
       {
         Big = 3,
         FloorId = 0,
-        Small = {
-          3,
-          4,
-          7,
-          8,
-          12
-        }
+        Small = T.RT_16
       },
       {
         Big = 4,
@@ -858,7 +1035,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 5,
         FloorId = 0,
-        Small = T.RT_14
+        Small = T.RT_17
       }
     },
     Id = 1012,
@@ -877,7 +1054,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 4,
         FloorId = 0,
-        Small = T.RT_12
+        Small = T.RT_14
       },
       {
         Big = 5,
@@ -892,17 +1069,17 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 8,
         FloorId = 0,
-        Small = T.RT_15
+        Small = T.RT_18
       },
       {
         Big = 9,
         FloorId = 0,
-        Small = T.RT_16
+        Small = T.RT_19
       },
       {
         Big = 11,
         FloorId = 0,
-        Small = T.RT_17
+        Small = T.RT_20
       }
     },
     Id = 1013,
@@ -937,7 +1114,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 10,
         FloorId = 0,
-        Small = T.RT_18
+        Small = T.RT_21
       }
     },
     Id = 1014,
@@ -953,26 +1130,26 @@ return ReadOnly("TeleportPoint", {
   },
   [1015] = {
     Block = {
-      T.RT_20,
+      T.RT_23,
       {
         Big = 3,
         FloorId = -1,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 4,
         FloorId = -1,
-        Small = T.RT_22
+        Small = T.RT_25
       },
       {
         Big = 8,
         FloorId = -1,
-        Small = T.RT_23
+        Small = T.RT_26
       },
       {
         Big = 9,
         FloorId = -1,
-        Small = T.RT_14
+        Small = T.RT_17
       }
     },
     BuildingNameAndId = "Icelake_L-1",
@@ -992,7 +1169,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 4,
         FloorId = -1,
-        Small = T.RT_24
+        Small = T.RT_27
       },
       {
         Big = 5,
@@ -1016,19 +1193,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 6,
         FloorId = -1,
-        Small = {
-          1,
-          2,
-          5,
-          6,
-          7,
-          9,
-          10,
-          11,
-          13,
-          14,
-          15
-        }
+        Small = T.RT_28
       },
       {
         Big = 10,
@@ -1068,12 +1233,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 9,
         FloorId = -1,
-        Small = T.RT_25
+        Small = T.RT_29
       },
       {
         Big = 9,
         FloorId = -1,
-        Small = T.RT_26
+        Small = T.RT_30
       },
       {
         Big = 14,
@@ -1094,7 +1259,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 15,
         FloorId = -1,
-        Small = T.RT_14
+        Small = T.RT_17
       }
     },
     BuildingNameAndId = "Icelake_L-1",
@@ -1114,38 +1279,22 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 7,
         FloorId = -1,
-        Small = T.RT_27
+        Small = T.RT_31
       },
       {
         Big = 8,
         FloorId = -1,
-        Small = {
-          1,
-          2,
-          3,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
+        Small = T.RT_32
       },
       {
         Big = 9,
         FloorId = -1,
-        Small = T.RT_22
+        Small = T.RT_25
       },
       {
         Big = 12,
         FloorId = -1,
-        Small = T.RT_28
+        Small = T.RT_33
       },
       {
         Big = 13,
@@ -1163,7 +1312,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 14,
         FloorId = -1,
-        Small = T.RT_14
+        Small = T.RT_17
       }
     },
     BuildingNameAndId = "Icelake_L-1",
@@ -1180,7 +1329,7 @@ return ReadOnly("TeleportPoint", {
   },
   [1020] = {
     Block = {
-      T.RT_30,
+      T.RT_35,
       {
         Big = 2,
         FloorId = 0,
@@ -1194,16 +1343,16 @@ return ReadOnly("TeleportPoint", {
           16
         }
       },
-      T.RT_31,
+      T.RT_36,
       {
         Big = 4,
         FloorId = 0,
-        Small = T.RT_16
+        Small = T.RT_19
       },
       {
         Big = 7,
         FloorId = 0,
-        Small = T.RT_32
+        Small = T.RT_37
       }
     },
     Id = 1020,
@@ -1223,37 +1372,37 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 4,
         FloorId = 0,
-        Small = T.RT_33
+        Small = T.RT_38
       },
       {
         Big = 5,
         FloorId = 0,
-        Small = T.RT_32
+        Small = T.RT_37
       },
       {
         Big = 2,
         FloorId = -1,
-        Small = T.RT_34
+        Small = T.RT_39
       },
       {
         Big = 3,
         FloorId = -1,
-        Small = T.RT_18
+        Small = T.RT_21
       },
       {
         Big = 4,
         FloorId = -1,
-        Small = T.RT_15
+        Small = T.RT_18
       },
       {
         Big = 5,
         FloorId = -1,
-        Small = T.RT_35
+        Small = T.RT_40
       },
       {
         Big = 1,
         FloorId = -2,
-        Small = T.RT_8
+        Small = T.RT_9
       },
       {
         Big = 2,
@@ -1263,7 +1412,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 3,
         FloorId = -2,
-        Small = T.RT_15
+        Small = T.RT_18
       },
       {
         Big = 4,
@@ -1318,7 +1467,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 9,
         FloorId = 0,
-        Small = T.RT_36
+        Small = T.RT_41
       },
       {
         Big = 10,
@@ -1339,7 +1488,7 @@ return ReadOnly("TeleportPoint", {
   },
   [1031] = {
     Block = {
-      T.RT_30,
+      T.RT_35,
       {
         Big = 3,
         FloorId = 0,
@@ -1356,7 +1505,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 4,
         FloorId = 0,
-        Small = T.RT_18
+        Small = T.RT_21
       }
     },
     Id = 1031,
@@ -1376,22 +1525,22 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 2,
         FloorId = 0,
-        Small = T.RT_37
+        Small = T.RT_42
       },
       {
         Big = 3,
         FloorId = 0,
-        Small = T.RT_36
+        Small = T.RT_41
       },
       {
         Big = 6,
         FloorId = 0,
-        Small = T.RT_33
+        Small = T.RT_38
       },
       {
         Big = 7,
         FloorId = 0,
-        Small = T.RT_38
+        Small = T.RT_43
       }
     },
     Id = 1032,
@@ -1415,38 +1564,22 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 5,
         FloorId = 0,
-        Small = T.RT_39
+        Small = T.RT_44
       },
       {
         Big = 7,
         FloorId = 0,
-        Small = {
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
+        Small = T.RT_45
       },
       {
         Big = 8,
         FloorId = 0,
-        Small = T.RT_17
+        Small = T.RT_20
       },
       {
         Big = 9,
         FloorId = 0,
-        Small = T.RT_38
+        Small = T.RT_43
       }
     },
     Id = 1033,
@@ -1465,17 +1598,17 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 4,
         FloorId = 1,
-        Small = T.RT_33
+        Small = T.RT_38
       },
       {
         Big = 5,
         FloorId = 1,
-        Small = T.RT_40
+        Small = T.RT_46
       },
       {
         Big = 6,
         FloorId = 1,
-        Small = {9, 13}
+        Small = T.RT_47
       },
       {
         Big = 8,
@@ -1501,22 +1634,22 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 1,
         FloorId = 1,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 2,
         FloorId = 1,
-        Small = T.RT_36
+        Small = T.RT_41
       },
       {
         Big = 3,
         FloorId = 1,
-        Small = T.RT_42
+        Small = T.RT_49
       },
       {
         Big = 4,
         FloorId = 1,
-        Small = T.RT_35
+        Small = T.RT_40
       }
     },
     BuildingNameAndId = "Fort_L1",
@@ -1536,13 +1669,13 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 1,
         FloorId = 0,
-        Small = T.RT_43
+        Small = T.RT_50
       },
-      T.RT_44,
+      T.RT_51,
       {
         Big = 3,
         FloorId = 0,
-        Small = T.RT_45
+        Small = T.RT_52
       },
       {
         Big = 5,
@@ -1558,7 +1691,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 6,
         FloorId = 0,
-        Small = T.RT_46
+        Small = T.RT_53
       },
       {
         Big = 1,
@@ -1598,7 +1731,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 4,
         FloorId = 0,
-        Small = T.RT_47
+        Small = T.RT_54
       },
       {
         Big = 5,
@@ -1614,12 +1747,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 8,
         FloorId = 0,
-        Small = T.RT_23
+        Small = T.RT_26
       },
       {
         Big = 9,
         FloorId = 0,
-        Small = T.RT_48
+        Small = T.RT_55
       },
       {
         Big = 4,
@@ -1657,7 +1790,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 7,
         FloorId = 0,
-        Small = T.RT_49
+        Small = T.RT_56
       },
       {
         Big = 8,
@@ -1667,7 +1800,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 11,
         FloorId = 0,
-        Small = T.RT_23
+        Small = T.RT_26
       },
       {
         Big = 12,
@@ -1700,7 +1833,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 10,
         FloorId = 1,
-        Small = T.RT_14
+        Small = T.RT_17
       }
     },
     Id = 1044,
@@ -1724,7 +1857,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 10,
         FloorId = 0,
-        Small = T.RT_22
+        Small = T.RT_25
       },
       {
         Big = 13,
@@ -1759,19 +1892,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 15,
         FloorId = 0,
-        Small = {
-          2,
-          3,
-          4,
-          6,
-          7,
-          8
-        }
+        Small = T.RT_57
       },
       {
         Big = 5,
         FloorId = -1,
-        Small = T.RT_37
+        Small = T.RT_42
       }
     },
     Id = 1045,
@@ -1787,7 +1913,7 @@ return ReadOnly("TeleportPoint", {
   },
   [1050] = {
     Block = {
-      T.RT_50
+      T.RT_58
     },
     Id = 1050,
     LevelName = "BH_Thea",
@@ -1810,24 +1936,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 95,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 96,
         FloorId = 0,
-        Small = {
-          5,
-          6,
-          7,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        }
+        Small = T.RT_59
       },
       {
         Big = 97,
@@ -1842,27 +1956,27 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 108,
         FloorId = 0,
-        Small = T.RT_51
+        Small = T.RT_60
       },
       {
         Big = 109,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 110,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 111,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 112,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 116,
@@ -1880,32 +1994,32 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 117,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 118,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 119,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 120,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 124,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 125,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       }
     },
     Id = 1100,
@@ -1925,37 +2039,37 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 66,
         FloorId = 0,
-        Small = T.RT_53
+        Small = T.RT_62
       },
       {
         Big = 67,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 68,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 80,
         FloorId = 0,
-        Small = T.RT_51
+        Small = T.RT_60
       },
       {
         Big = 81,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 82,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 83,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 96,
@@ -1994,52 +2108,44 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 37,
         FloorId = 0,
-        Small = T.RT_8
+        Small = T.RT_9
       },
       {
         Big = 38,
         FloorId = 0,
-        Small = T.RT_54
+        Small = T.RT_63
       },
-      {
-        Big = 39,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_64,
       {
         Big = 40,
         FloorId = 0,
-        Small = T.RT_55
+        Small = T.RT_65
       },
       {
         Big = 49,
         FloorId = 0,
-        Small = T.RT_34
+        Small = T.RT_39
       },
-      {
-        Big = 50,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_66,
       {
         Big = 51,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 52,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 53,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       },
       {
         Big = 63,
         FloorId = 0,
-        Small = T.RT_43
+        Small = T.RT_50
       },
       {
         Big = 64,
@@ -2049,12 +2155,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 65,
         FloorId = 0,
-        Small = T.RT_56
+        Small = T.RT_67
       },
       {
         Big = 66,
         FloorId = 0,
-        Small = T.RT_46
+        Small = T.RT_53
       }
     },
     Id = 1102,
@@ -2073,7 +2179,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 63,
         FloorId = 0,
-        Small = T.RT_27
+        Small = T.RT_31
       },
       {
         Big = 64,
@@ -2083,7 +2189,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 65,
         FloorId = 0,
-        Small = T.RT_57
+        Small = T.RT_68
       },
       {
         Big = 66,
@@ -2118,7 +2224,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 80,
         FloorId = 0,
-        Small = T.RT_58
+        Small = T.RT_69
       }
     },
     Id = 1103,
@@ -2133,11 +2239,11 @@ return ReadOnly("TeleportPoint", {
   },
   [1104] = {
     Block = {
-      T.RT_20,
+      T.RT_23,
       {
         Big = 3,
         FloorId = -1,
-        Small = T.RT_13
+        Small = T.RT_15
       },
       {
         Big = 5,
@@ -2159,7 +2265,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 6,
         FloorId = -1,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 7,
@@ -2174,7 +2280,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 10,
         FloorId = -1,
-        Small = T.RT_58
+        Small = T.RT_69
       }
     },
     BuildingNameAndId = "Yanjindu_L-1",
@@ -2194,17 +2300,17 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 46,
         FloorId = 0,
-        Small = T.RT_12
+        Small = T.RT_14
       },
       {
         Big = 47,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 48,
         FloorId = 0,
-        Small = T.RT_13
+        Small = T.RT_15
       },
       {
         Big = 60,
@@ -2221,12 +2327,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 61,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 62,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       },
       {
         Big = 76,
@@ -2243,7 +2349,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 77,
         FloorId = 0,
-        Small = T.RT_48
+        Small = T.RT_55
       }
     },
     Id = 1105,
@@ -2262,7 +2368,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 19,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 29,
@@ -2276,43 +2382,31 @@ return ReadOnly("TeleportPoint", {
           16
         }
       },
-      {
-        Big = 30,
-        FloorId = 0,
-        Small = T.RT_21
-      },
-      {
-        Big = 31,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_70,
+      T.RT_71,
       {
         Big = 32,
         FloorId = 0,
-        Small = T.RT_57
+        Small = T.RT_68
       },
       {
         Big = 33,
         FloorId = 0,
-        Small = T.RT_39
+        Small = T.RT_44
       },
       {
         Big = 42,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
-      T.RT_50,
+      T.RT_58,
       {
         Big = 43,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
-      T.RT_59,
-      {
-        Big = 45,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_72,
+      T.RT_73,
       {
         Big = 46,
         FloorId = 0,
@@ -2329,28 +2423,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 55,
         FloorId = 0,
-        Small = T.RT_34
+        Small = T.RT_39
       },
-      {
-        Big = 56,
-        FloorId = 0,
-        Small = T.RT_21
-      },
-      {
-        Big = 57,
-        FloorId = 0,
-        Small = T.RT_21
-      },
-      {
-        Big = 58,
-        FloorId = 0,
-        Small = T.RT_21
-      },
-      {
-        Big = 59,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_74,
+      T.RT_75,
+      T.RT_76,
+      T.RT_77,
       {
         Big = 60,
         FloorId = 0,
@@ -2370,67 +2448,67 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 70,
         FloorId = 0,
-        Small = T.RT_34
+        Small = T.RT_39
       },
       {
         Big = 71,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 72,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 73,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 74,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 75,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       },
       {
         Big = 86,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 87,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 88,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 89,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 90,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       },
       {
         Big = 101,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 102,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       }
     },
     Id = 1106,
@@ -2446,58 +2524,54 @@ return ReadOnly("TeleportPoint", {
   },
   [1107] = {
     Block = {
-      T.RT_60,
+      T.RT_78,
       {
         Big = 5,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 11,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 12,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 13,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 14,
         FloorId = 0,
-        Small = T.RT_18
+        Small = T.RT_21
       },
       {
         Big = 21,
         FloorId = 0,
-        Small = T.RT_15
+        Small = T.RT_18
       },
-      T.RT_61,
+      T.RT_79,
       {
         Big = 23,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 24,
         FloorId = 0,
-        Small = T.RT_46
+        Small = T.RT_53
       },
       {
         Big = 33,
         FloorId = 0,
-        Small = T.RT_15
+        Small = T.RT_18
       },
-      {
-        Big = 34,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_80,
       {
         Big = 35,
         FloorId = 0,
@@ -2506,12 +2580,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 46,
         FloorId = 0,
-        Small = T.RT_62
+        Small = T.RT_81
       },
       {
         Big = 47,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 48,
@@ -2549,7 +2623,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 35,
         FloorId = 0,
-        Small = T.RT_47
+        Small = T.RT_54
       },
       {
         Big = 36,
@@ -2583,12 +2657,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 49,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       },
       {
         Big = 62,
         FloorId = 0,
-        Small = T.RT_62
+        Small = T.RT_81
       },
       {
         Big = 63,
@@ -2612,12 +2686,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 7,
         FloorId = 0,
-        Small = T.RT_47
+        Small = T.RT_54
       },
       {
         Big = 8,
         FloorId = 0,
-        Small = T.RT_45
+        Small = T.RT_52
       },
       {
         Big = 14,
@@ -2634,31 +2708,23 @@ return ReadOnly("TeleportPoint", {
           16
         }
       },
-      T.RT_63,
+      T.RT_82,
       {
         Big = 16,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 24,
         FloorId = 0,
-        Small = T.RT_54
+        Small = T.RT_63
       },
-      {
-        Big = 25,
-        FloorId = 0,
-        Small = T.RT_21
-      },
-      {
-        Big = 26,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_83,
+      T.RT_84,
       {
         Big = 35,
         FloorId = 0,
-        Small = T.RT_43
+        Small = T.RT_50
       },
       {
         Big = 36,
@@ -2679,12 +2745,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 37,
         FloorId = 0,
-        Small = T.RT_64
+        Small = T.RT_85
       },
       {
         Big = 38,
         FloorId = 0,
-        Small = T.RT_46
+        Small = T.RT_53
       }
     },
     Id = 1110,
@@ -2703,17 +2769,17 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 62,
         FloorId = 0,
-        Small = T.RT_8
+        Small = T.RT_9
       },
       {
         Big = 63,
         FloorId = 0,
-        Small = T.RT_13
+        Small = T.RT_15
       },
       {
         Big = 75,
         FloorId = 0,
-        Small = T.RT_49
+        Small = T.RT_56
       },
       {
         Big = 76,
@@ -2723,37 +2789,37 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 77,
         FloorId = 0,
-        Small = T.RT_53
+        Small = T.RT_62
       },
       {
         Big = 78,
         FloorId = 0,
-        Small = T.RT_40
+        Small = T.RT_46
       },
       {
         Big = 90,
         FloorId = 0,
-        Small = T.RT_23
+        Small = T.RT_26
       },
       {
         Big = 91,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 92,
         FloorId = 0,
-        Small = T.RT_64
+        Small = T.RT_85
       },
       {
         Big = 93,
         FloorId = 0,
-        Small = T.RT_14
+        Small = T.RT_17
       },
       {
         Big = 106,
         FloorId = 0,
-        Small = T.RT_46
+        Small = T.RT_53
       }
     },
     Id = 1111,
@@ -2783,12 +2849,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 92,
         FloorId = 0,
-        Small = T.RT_8
+        Small = T.RT_9
       },
       {
         Big = 93,
         FloorId = 0,
-        Small = T.RT_65
+        Small = T.RT_86
       },
       {
         Big = 94,
@@ -2809,17 +2875,17 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 106,
         FloorId = 0,
-        Small = T.RT_54
+        Small = T.RT_63
       },
       {
         Big = 107,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 108,
         FloorId = 0,
-        Small = T.RT_16
+        Small = T.RT_19
       }
     },
     Id = 1112,
@@ -2851,42 +2917,34 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 40,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 41,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 50,
         FloorId = 0,
-        Small = T.RT_23
+        Small = T.RT_26
       },
       {
         Big = 51,
         FloorId = 0,
-        Small = T.RT_56
+        Small = T.RT_67
       },
-      {
-        Big = 47,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_87,
       {
         Big = 45,
         FloorId = 0,
-        Small = T.RT_34
+        Small = T.RT_39
       },
-      {
-        Big = 46,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_88,
       {
         Big = 39,
         FloorId = 0,
-        Small = T.RT_8
+        Small = T.RT_9
       }
     },
     Id = 1200,
@@ -2905,12 +2963,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 40,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 41,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 34,
@@ -2928,12 +2986,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 35,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 39,
         FloorId = 0,
-        Small = T.RT_37
+        Small = T.RT_42
       }
     },
     Id = 1202,
@@ -2966,23 +3024,23 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 49,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 50,
         FloorId = 0,
-        Small = T.RT_66
+        Small = T.RT_89
       },
       {
         Big = 43,
         FloorId = 0,
-        Small = T.RT_42
+        Small = T.RT_49
       },
-      T.RT_59,
+      T.RT_72,
       {
         Big = 45,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       }
     },
     Id = 1203,
@@ -3000,63 +3058,59 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 32,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 33,
         FloorId = 0,
         Small = T.RT_6
       },
-      T.RT_68,
+      T.RT_91,
       {
         Big = 35,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       },
       {
         Big = 36,
         FloorId = 0,
-        Small = T.RT_15
+        Small = T.RT_18
       },
-      {
-        Big = 37,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_92,
       {
         Big = 38,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 39,
         FloorId = 0,
-        Small = T.RT_55
+        Small = T.RT_65
       },
       {
         Big = 40,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       },
       {
         Big = 41,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       },
       {
         Big = 42,
         FloorId = 0,
-        Small = T.RT_28
+        Small = T.RT_33
       },
       {
         Big = 43,
         FloorId = 0,
-        Small = T.RT_14
+        Small = T.RT_17
       },
       {
         Big = 30,
         FloorId = 0,
-        Small = T.RT_12
+        Small = T.RT_14
       },
       {
         Big = 31,
@@ -3117,7 +3171,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 34,
         FloorId = 0,
-        Small = T.RT_58
+        Small = T.RT_69
       }
     },
     Id = 1206,
@@ -3135,32 +3189,32 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 16,
         FloorId = 0,
-        Small = T.RT_34
+        Small = T.RT_39
       },
       {
         Big = 17,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 18,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       },
       {
         Big = 4,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 5,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 6,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
       {
         Big = 8,
@@ -3175,7 +3229,7 @@ return ReadOnly("TeleportPoint", {
           16
         }
       },
-      T.RT_69,
+      T.RT_93,
       {
         Big = 10,
         FloorId = 0,
@@ -3209,29 +3263,25 @@ return ReadOnly("TeleportPoint", {
   },
   [1208] = {
     Block = {
-      {
-        Big = 9,
-        FloorId = 0,
-        Small = T.RT_67
-      },
-      T.RT_44,
-      T.RT_31,
+      T.RT_94,
+      T.RT_51,
+      T.RT_36,
       {
         Big = 4,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 5,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 6,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
-      T.RT_50
+      T.RT_58
     },
     Id = 1208,
     LevelName = "Huaxu_Haojing_Art_2515BigObjs",
@@ -3248,7 +3298,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 24,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       },
       {
         Big = 16,
@@ -3263,7 +3313,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 23,
         FloorId = 0,
-        Small = T.RT_24
+        Small = T.RT_27
       }
     },
     Id = 1209,
@@ -3281,28 +3331,28 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 14,
         FloorId = 0,
-        Small = T.RT_41
+        Small = T.RT_48
       },
-      T.RT_61,
+      T.RT_79,
       {
         Big = 23,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       },
       {
         Big = 21,
         FloorId = 0,
-        Small = T.RT_49
+        Small = T.RT_56
       },
       {
         Big = 30,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 31,
         FloorId = 0,
-        Small = T.RT_66
+        Small = T.RT_89
       }
     },
     Id = 1210,
@@ -3320,7 +3370,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 14,
         FloorId = 0,
-        Small = T.RT_22
+        Small = T.RT_25
       },
       {
         Big = 21,
@@ -3341,15 +3391,11 @@ return ReadOnly("TeleportPoint", {
           16
         }
       },
-      {
-        Big = 29,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_95,
       {
         Big = 22,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       },
       {
         Big = 13,
@@ -3376,17 +3422,17 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 34,
         FloorId = 0,
-        Small = T.RT_28
+        Small = T.RT_33
       },
       {
         Big = 35,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       },
       {
         Big = 26,
         FloorId = 0,
-        Small = T.RT_25
+        Small = T.RT_29
       },
       {
         Big = 27,
@@ -3424,22 +3470,22 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 11,
         FloorId = 0,
-        Small = T.RT_8
+        Small = T.RT_9
       },
       {
         Big = 27,
         FloorId = 0,
-        Small = T.RT_43
+        Small = T.RT_50
       },
       {
         Big = 12,
         FloorId = 0,
-        Small = T.RT_9
+        Small = T.RT_10
       },
       {
         Big = 19,
         FloorId = 0,
-        Small = T.RT_25
+        Small = T.RT_29
       },
       {
         Big = 28,
@@ -3456,7 +3502,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 20,
         FloorId = 0,
-        Small = T.RT_10
+        Small = T.RT_11
       }
     },
     Id = 1213,
@@ -3474,7 +3520,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 18,
         FloorId = 0,
-        Small = T.RT_34
+        Small = T.RT_39
       },
       {
         Big = 19,
@@ -3484,12 +3530,12 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 10,
         FloorId = 0,
-        Small = T.RT_24
+        Small = T.RT_27
       },
       {
         Big = 11,
         FloorId = 0,
-        Small = T.RT_26
+        Small = T.RT_30
       }
     },
     Id = 1214,
@@ -3504,16 +3550,16 @@ return ReadOnly("TeleportPoint", {
   },
   [1215] = {
     Block = {
-      T.RT_11,
+      T.RT_12,
       {
         Big = 23,
         FloorId = 0,
-        Small = T.RT_56
+        Small = T.RT_67
       },
       {
         Big = 7,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 16,
@@ -3529,7 +3575,7 @@ return ReadOnly("TeleportPoint", {
           13
         }
       },
-      T.RT_63
+      T.RT_82
     },
     Id = 1215,
     LevelName = "Huaxu_Haojing_Art_2317BigObjs",
@@ -3546,38 +3592,38 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 24,
         FloorId = 0,
-        Small = T.RT_62
+        Small = T.RT_81
       },
       {
         Big = 33,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       },
-      T.RT_68,
+      T.RT_91,
       {
         Big = 18,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       },
       {
         Big = 17,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       },
       {
         Big = 16,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       },
       {
         Big = 26,
         FloorId = 0,
-        Small = T.RT_66
+        Small = T.RT_89
       },
       {
         Big = 25,
         FloorId = 0,
-        Small = T.RT_52
+        Small = T.RT_61
       }
     },
     Id = 1216,
@@ -3595,14 +3641,10 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 8,
         FloorId = 0,
-        Small = T.RT_39
+        Small = T.RT_44
       },
-      T.RT_69,
-      {
-        Big = 10,
-        FloorId = 0,
-        Small = T.RT_21
-      },
+      T.RT_93,
+      T.RT_96,
       {
         Big = 7,
         FloorId = 0,
@@ -3634,19 +3676,19 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 1,
         FloorId = 0,
-        Small = T.RT_9
+        Small = T.RT_10
       },
       {
         Big = 2,
         FloorId = 0,
-        Small = T.RT_8
+        Small = T.RT_9
       },
       {
         Big = 3,
         FloorId = 0,
-        Small = T.RT_65
+        Small = T.RT_86
       },
-      T.RT_60,
+      T.RT_78,
       {
         Big = 5,
         FloorId = 0,
@@ -3662,7 +3704,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 6,
         FloorId = 0,
-        Small = T.RT_21
+        Small = T.RT_24
       },
       {
         Big = 7,
@@ -3681,7 +3723,7 @@ return ReadOnly("TeleportPoint", {
       {
         Big = 8,
         FloorId = 0,
-        Small = T.RT_67
+        Small = T.RT_90
       }
     },
     Id = 1301,
@@ -3716,6 +3758,581 @@ return ReadOnly("TeleportPoint", {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1",
     TeleportPointPos = 1,
     TeleportPointSubRegion = 105501,
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1600] = {
+    Block = {
+      {
+        Big = 1,
+        FloorId = 0,
+        Small = T.RT_97
+      },
+      {
+        Big = 2,
+        FloorId = 0,
+        Small = T.RT_68
+      },
+      {
+        Big = 3,
+        FloorId = 0,
+        Small = {
+          5,
+          9,
+          10,
+          13,
+          14,
+          15,
+          16
+        }
+      },
+      {
+        Big = 4,
+        FloorId = 0,
+        Small = T.RT_25
+      },
+      {
+        Big = 8,
+        FloorId = 0,
+        Small = T.RT_16
+      },
+      T.RT_93,
+      T.RT_96,
+      {
+        Big = 11,
+        FloorId = 0,
+        Small = {
+          1,
+          2,
+          5,
+          6,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15,
+          16
+        }
+      },
+      {
+        Big = 12,
+        FloorId = 0,
+        Small = T.RT_15
+      },
+      {
+        Big = 17,
+        FloorId = 0,
+        Small = {
+          1,
+          2,
+          3,
+          4,
+          7,
+          8,
+          12
+        }
+      },
+      {
+        Big = 18,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 19,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 20,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 21,
+        FloorId = 0,
+        Small = T.RT_59
+      },
+      {
+        Big = 22,
+        FloorId = 0,
+        Small = T.RT_47
+      },
+      {
+        Big = 28,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      T.RT_95,
+      T.RT_70,
+      T.RT_71,
+      {
+        Big = 32,
+        FloorId = 0,
+        Small = T.RT_28
+      },
+      {
+        Big = 40,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 41,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 42,
+        FloorId = 0,
+        Small = {
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14
+        }
+      },
+      {
+        Big = 43,
+        FloorId = 0,
+        Small = {
+          1,
+          2,
+          3,
+          5,
+          6,
+          9
+        }
+      },
+      {
+        Big = 52,
+        FloorId = 0,
+        Small = T.RT_61
+      },
+      {
+        Big = 53,
+        FloorId = 0,
+        Small = T.RT_69
+      },
+      {
+        Big = 38,
+        FloorId = 0,
+        Small = T.RT_39
+      },
+      T.RT_64
+    },
+    Id = 1600,
+    IsDefault = 1,
+    LevelName = "Haiboliya_Chezhan_BHCZ",
+    MechanismPos = {3648, -730},
+    MechanismStateId = 901002,
+    StaticId = 292480057,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1",
+    TeleportPointPos = 1,
+    TeleportPointSubRegion = 106001,
+    Temples = {81701},
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1601] = {
+    Block = {
+      {
+        Big = 10,
+        FloorId = 0,
+        Small = T.RT_90
+      },
+      T.RT_94,
+      {
+        Big = 1,
+        FloorId = -3,
+        Small = T.RT_24
+      },
+      {
+        Big = 2,
+        FloorId = -3,
+        Small = T.RT_24
+      },
+      {
+        Big = 3,
+        FloorId = -3,
+        Small = T.RT_24
+      },
+      {
+        Big = 4,
+        FloorId = -3,
+        Small = T.RT_24
+      },
+      {
+        Big = 1,
+        FloorId = -2,
+        Small = T.RT_24
+      },
+      {
+        Big = 2,
+        FloorId = -2,
+        Small = T.RT_24
+      },
+      {
+        Big = 3,
+        FloorId = -2,
+        Small = T.RT_24
+      },
+      {
+        Big = 4,
+        FloorId = -2,
+        Small = T.RT_24
+      },
+      {
+        Big = 5,
+        FloorId = -2,
+        Small = T.RT_3
+      },
+      {
+        Big = 6,
+        FloorId = -2,
+        Small = T.RT_3
+      },
+      {
+        Big = 1,
+        FloorId = -1,
+        Small = T.RT_1
+      },
+      {
+        Big = 2,
+        FloorId = -1,
+        Small = T.RT_1
+      },
+      {
+        Big = 3,
+        FloorId = -1,
+        Small = T.RT_61
+      },
+      {
+        Big = 4,
+        FloorId = -1,
+        Small = T.RT_61
+      }
+    },
+    BuildingNameAndId = "Station_L-3",
+    Id = 1601,
+    IsDefault = 1,
+    LevelName = "Haiboliya_Chezhan_CZDX",
+    MechanismPos = {-6737, 6675},
+    MechanismStateId = 901002,
+    StaticId = 292890080,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2",
+    TeleportPointPos = 1,
+    TeleportPointSubRegion = 106301,
+    Temples = {81702},
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1602] = {
+    Block = {
+      {
+        Big = 1,
+        FloorId = 0,
+        Small = T.RT_49
+      },
+      T.RT_51,
+      T.RT_36,
+      T.RT_78,
+      {
+        Big = 5,
+        FloorId = 0,
+        Small = T.RT_6
+      },
+      {
+        Big = 6,
+        FloorId = 0,
+        Small = T.RT_57
+      },
+      {
+        Big = 7,
+        FloorId = 0,
+        Small = T.RT_3
+      },
+      {
+        Big = 8,
+        FloorId = 0,
+        Small = T.RT_3
+      },
+      {
+        Big = 9,
+        FloorId = 0,
+        Small = T.RT_3
+      },
+      {
+        Big = 10,
+        FloorId = 0,
+        Small = T.RT_17
+      }
+    },
+    Id = 1602,
+    LevelName = "Haiboliya_Chezhan_CZDX",
+    MechanismPos = {-17726, 5550},
+    MechanismStateId = 901002,
+    StaticId = 292890081,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3",
+    TeleportPointPos = 4,
+    TeleportPointSubRegion = 106301,
+    Temples = {81703},
+    UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
+  },
+  [1603] = {
+    Block = {
+      {
+        Big = 64,
+        FloorId = 0,
+        Small = {
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12
+        }
+      },
+      {
+        Big = 65,
+        FloorId = 0,
+        Small = {
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        }
+      },
+      {
+        Big = 66,
+        FloorId = 0,
+        Small = {
+          1,
+          2,
+          4,
+          5
+        }
+      },
+      {
+        Big = 67,
+        FloorId = 0,
+        Small = T.RT_67
+      },
+      {
+        Big = 68,
+        FloorId = 0,
+        Small = T.RT_13
+      },
+      {
+        Big = 5,
+        FloorId = 0,
+        Small = {
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        }
+      },
+      {
+        Big = 6,
+        FloorId = 0,
+        Small = T.RT_45
+      },
+      {
+        Big = 7,
+        FloorId = 0,
+        Small = T.RT_46
+      },
+      {
+        Big = 8,
+        FloorId = 0,
+        Small = T.RT_15
+      },
+      {
+        Big = 13,
+        FloorId = 0,
+        Small = {
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          11,
+          12,
+          15,
+          16
+        }
+      },
+      {
+        Big = 14,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      T.RT_82,
+      {
+        Big = 16,
+        FloorId = 0,
+        Small = T.RT_32
+      },
+      {
+        Big = 17,
+        FloorId = 0,
+        Small = T.RT_8
+      },
+      {
+        Big = 23,
+        FloorId = 0,
+        Small = {
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        }
+      },
+      {
+        Big = 24,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      T.RT_83,
+      T.RT_84,
+      {
+        Big = 27,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 33,
+        FloorId = 0,
+        Small = {
+          4,
+          8,
+          11,
+          12,
+          15,
+          16
+        }
+      },
+      T.RT_80,
+      {
+        Big = 35,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 36,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      T.RT_92,
+      {
+        Big = 38,
+        FloorId = 0,
+        Small = T.RT_11
+      },
+      {
+        Big = 44,
+        FloorId = 0,
+        Small = T.RT_18
+      },
+      T.RT_73,
+      T.RT_88,
+      T.RT_87,
+      {
+        Big = 48,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 49,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      T.RT_66,
+      {
+        Big = 51,
+        FloorId = 0,
+        Small = {
+          5,
+          6,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15,
+          16
+        }
+      },
+      {
+        Big = 54,
+        FloorId = 0,
+        Small = T.RT_50
+      },
+      {
+        Big = 55,
+        FloorId = 0,
+        Small = T.RT_97
+      },
+      T.RT_74,
+      T.RT_75,
+      T.RT_76,
+      T.RT_77,
+      {
+        Big = 60,
+        FloorId = 0,
+        Small = T.RT_24
+      },
+      {
+        Big = 61,
+        FloorId = 0,
+        Small = T.RT_85
+      },
+      {
+        Big = 62,
+        FloorId = 0,
+        Small = T.RT_20
+      },
+      {
+        Big = 63,
+        FloorId = 0,
+        Small = T.RT_67
+      }
+    },
+    Id = 1603,
+    LevelName = "Haiboliya_Chezhan_BHCZ",
+    MechanismPos = {-67579, -2776},
+    MechanismStateId = 901002,
+    StaticId = 292480060,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4",
+    TeleportPointPos = 9,
+    TeleportPointSubRegion = 106001,
     UnlockMsg = "UI_TELEPORTPOINT_UNLOCK"
   },
   [8000] = {
@@ -3859,5 +4476,12 @@ return ReadOnly("TeleportPoint", {
     TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     TeleportPointPos = 2,
     TeleportPointSubRegion = 105301
+  },
+  [9006] = {
+    Id = 9006,
+    MechanismPos = {-83218, 1628},
+    TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
+    TeleportPointPos = 10,
+    TeleportPointSubRegion = 106001
   }
 })

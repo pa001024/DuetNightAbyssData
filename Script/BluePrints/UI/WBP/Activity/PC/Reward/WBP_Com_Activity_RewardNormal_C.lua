@@ -26,6 +26,7 @@ function M:OnLoaded(...)
   if self.ConfigData.IsPacking then
     self.Btn_DesignGet:SetDefaultGamePadImg("X")
     self.Key_Check:CreateGamepadKey("View")
+    self.EMScroll_Desc:SetScrollBarVisibility(ESlateVisibility.Visible)
   end
   self.RewardContent_OneClick.Btn_OneClick:SetText(GText(ConfigData.ReceiveButtonText))
   self.RewardContent_OneClick.Btn_OneClick:SetDefaultGamePadImg("Y")
@@ -514,17 +515,17 @@ function M:InitListTabInfo()
       table.insert(SubTabList, {
         Text = GText(TabItem.Title),
         TabId = Index,
-        ShowRedDot = false,
-        SoundFunc = function()
-          AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_sort_tab", "TabClickSound", nil)
-        end
+        ShowRedDot = false
       })
     end
     self.Com_TabSub:Init({
       PlatformName = self.Platform,
       LeftKey = "A",
       RightKey = "D",
-      Tabs = SubTabList
+      Tabs = SubTabList,
+      SoundFunc = function()
+        AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_sort_tab", "TabClickSound", nil)
+      end
     })
     self.Com_TabSub:BindEventOnTabSelected(self, self.OnTabSelected)
     self.Com_TabSub:SelectTab(1)

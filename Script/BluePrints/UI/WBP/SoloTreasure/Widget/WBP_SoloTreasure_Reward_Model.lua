@@ -70,7 +70,11 @@ function SoloTreasure:MakeRewardData(EventId, IsLimit)
                 if RewardInfo.Type[1] == "CharAccessory" then
                   local AccessoryId = RewardInfo.Id[1]
                   local UIManager = GWorld.GameInstance:GetGameUIManager()
-                  UIManager:LoadUINew("ArmorySkin", {Type = "Char", AccessoryId = AccessoryId})
+                  UIManager:LoadUINew("ArmorySkin", {
+                    IsPreviewMode = true,
+                    Type = "Char",
+                    AccessoryId = AccessoryId
+                  })
                 end
                 if RewardInfo and RewardInfo.Type and RewardInfo.Type[1] and RewardInfo.Type[1] == "Pet" then
                   local PetId = RewardInfo.Id[1]
@@ -175,7 +179,11 @@ function SoloTreasure:MakeRewardData(EventId, IsLimit)
           if RewardInfo and RewardInfo.Type and RewardInfo.Type[1] and RewardInfo.Type[1] == "CharAccessory" then
             local AccessoryId = RewardInfo.Id[1]
             local UIManager = GWorld.GameInstance:GetGameUIManager()
-            UIManager:LoadUINew("ArmorySkin", {Type = "Char", AccessoryId = AccessoryId})
+            UIManager:LoadUINew("ArmorySkin", {
+              IsPreviewMode = true,
+              Type = "Char",
+              AccessoryId = AccessoryId
+            })
           end
         end
       end

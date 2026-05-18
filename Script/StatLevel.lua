@@ -204,11 +204,8 @@ function M:StatEnd(GM)
     end
   end
   local Path = UE4.UBlueprintPathsLibrary.ProjectLogDir() .. "/StatLevel_" .. UE4.UGameplayStatics.GetCurrentLevelName(GM.Player) .. "_" .. os.date("%Y.%m.%d-%H.%M.%S") .. ".txt"
-  local File = io.open(Path, "w+")
-  io.output(File)
   local FullString = "All Record Info = " .. ToString(AllStat) .. "," .. "\n" .. "MaxFrameTimeRecord = " .. ToString(MaxFrameTimeRecord) .. "," .. "\n" .. "MaxDrawCallsRecord = " .. ToString(MaxDrawCallsRecord)
-  io.write(FullString)
-  io.close(File)
+  UE4.URuntimeCommonFunctionLibrary.SaveFile(Path, FullString)
   UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self.Player, "stat unit", self.Player:GetController())
 end
 

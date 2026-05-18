@@ -17,5 +17,7 @@ return ReadOnly("RegionId2DefaultTeleportPoint", {
   [1053] = 1400,
   [1055] = 1500,
   [1057] = 1113,
+  [1060] = 1600,
+  [1063] = 1601,
   [9997] = 101
 })

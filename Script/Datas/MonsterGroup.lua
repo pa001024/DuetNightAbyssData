@@ -18,7 +18,7 @@ T.RT_16 = {UnitId = 6015001, UnitProb = 0.2}
 T.RT_17 = {UnitId = 6014001, UnitProb = 1}
 T.RT_18 = {UnitId = 6002601, UnitProb = 1}
 T.RT_19 = {UnitId = 6012601, UnitProb = 1}
-T.RT_20 = {UnitId = 6003601, UnitProb = 0.5}
+T.RT_20 = {UnitId = 6003601, UnitProb = 1}
 T.RT_21 = {UnitId = 6014601, UnitProb = 1}
 T.RT_22 = {UnitId = 6011601, UnitProb = 1}
 T.RT_23 = {UnitId = 6013601, UnitProb = 1}
@@ -50,11 +50,20 @@ T.RT_42 = {UnitId = 8003001, UnitProb = 1}
 T.RT_43 = {UnitId = 8002601, UnitProb = 1}
 T.RT_44 = {UnitId = 8001601, UnitProb = 1}
 T.RT_45 = {UnitId = 8003601, UnitProb = 1}
-T.RT_46 = {UnitId = 9001001, UnitProb = 1}
-T.RT_47 = {UnitId = 9002001, UnitProb = 1}
-T.RT_48 = {UnitId = 9007001, UnitProb = 1}
-T.RT_49 = {UnitId = 9001601, UnitProb = 1}
-T.RT_50 = {UnitId = 9002601, UnitProb = 1}
+T.RT_46 = {UnitId = 9007023, UnitProb = 1}
+T.RT_47 = {
+  [1] = T.RT_46
+}
+T.RT_48 = {UnitId = 9007024, UnitProb = 1}
+T.RT_49 = {
+  [1] = T.RT_48
+}
+T.RT_50 = {UnitId = 9001001, UnitProb = 1}
+T.RT_51 = {UnitId = 9002001, UnitProb = 1}
+T.RT_52 = {UnitId = 9007001, UnitProb = 1}
+T.RT_53 = {UnitId = 9001601, UnitProb = 1}
+T.RT_54 = {UnitId = 9002601, UnitProb = 1}
+T.RT_55 = {UnitId = 9007601, UnitProb = 1}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -459,58 +468,58 @@ return ReadOnly("MonsterGroup", {
   [9010] = {
     GroupId = 9010,
     MemberSpawnProb = {
-      [1] = T.RT_46,
-      [2] = T.RT_46,
-      [3] = T.RT_47,
-      [4] = T.RT_48
+      [1] = T.RT_50,
+      [2] = T.RT_50,
+      [3] = T.RT_51,
+      [4] = T.RT_52
     }
   },
   [9011] = {
     GroupId = 9011,
     MemberSpawnProb = {
-      [1] = T.RT_46,
-      [2] = T.RT_46,
-      [3] = T.RT_46
+      [1] = T.RT_50,
+      [2] = T.RT_50,
+      [3] = T.RT_50
     }
   },
   [9020] = {
     GroupId = 9020,
     MemberSpawnProb = {
-      [1] = T.RT_47,
-      [2] = T.RT_47,
-      [3] = T.RT_46,
-      [4] = T.RT_48
+      [1] = T.RT_51,
+      [2] = T.RT_51,
+      [3] = T.RT_50,
+      [4] = T.RT_52
     }
   },
   [9021] = {
     GroupId = 9021,
     MemberSpawnProb = {
-      [1] = T.RT_47,
-      [2] = T.RT_47,
-      [3] = T.RT_47,
-      [4] = T.RT_48
+      [1] = T.RT_51,
+      [2] = T.RT_51,
+      [3] = T.RT_51,
+      [4] = T.RT_52
     }
   },
   [9040] = {
     GroupId = 9040,
     MemberSpawnProb = {
-      [1] = T.RT_46,
-      [2] = T.RT_46,
-      [3] = T.RT_47,
-      [4] = T.RT_47,
-      [5] = T.RT_48,
+      [1] = T.RT_50,
+      [2] = T.RT_50,
+      [3] = T.RT_51,
+      [4] = T.RT_51,
+      [5] = T.RT_52,
       [6] = {UnitId = 9007001, UnitProb = 0.5}
     }
   },
   [9050] = {
     GroupId = 9050,
     MemberSpawnProb = {
-      [1] = T.RT_49,
-      [2] = T.RT_49,
-      [3] = T.RT_50,
-      [4] = T.RT_50,
-      [5] = {UnitId = 9007601, UnitProb = 1},
-      [6] = {UnitId = 9007601, UnitProb = 0.5}
+      [1] = T.RT_53,
+      [2] = T.RT_53,
+      [3] = T.RT_54,
+      [4] = T.RT_54,
+      [5] = T.RT_55,
+      [6] = T.RT_55
     }
   },
   [6001012] = {
@@ -1269,6 +1278,10 @@ return ReadOnly("MonsterGroup", {
       [1] = {UnitId = 9001024, UnitProb = 1}
     }
   },
+  [9001701] = {
+    GroupId = 9001701,
+    MemberSpawnProb = T.RT_47
+  },
   [9002011] = {
     GroupId = 9002011,
     MemberSpawnProb = {
@@ -1328,6 +1341,10 @@ return ReadOnly("MonsterGroup", {
     MemberSpawnProb = {
       [1] = {UnitId = 9002024, UnitProb = 1}
     }
+  },
+  [9002701] = {
+    GroupId = 9002701,
+    MemberSpawnProb = T.RT_49
   },
   [9003601] = {
     GroupId = 9003601,
@@ -1397,15 +1414,11 @@ return ReadOnly("MonsterGroup", {
   },
   [9007023] = {
     GroupId = 9007023,
-    MemberSpawnProb = {
-      [1] = {UnitId = 9007023, UnitProb = 1}
-    }
+    MemberSpawnProb = T.RT_47
   },
   [9007024] = {
     GroupId = 9007024,
-    MemberSpawnProb = {
-      [1] = {UnitId = 9007024, UnitProb = 1}
-    }
+    MemberSpawnProb = T.RT_49
   },
   [10005011] = {
     GroupId = 10005011,

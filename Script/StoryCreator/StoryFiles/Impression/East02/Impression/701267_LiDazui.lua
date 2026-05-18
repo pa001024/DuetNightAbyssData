@@ -3,22 +3,22 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "1775630421764549500",
+      startStory = "1778070363134591219",
       startPort = "StoryStart",
-      endStory = "1775630421764549502",
+      endStory = "1778070363134591221",
       endPort = "In"
     },
     {
-      startStory = "1775630421764549502",
+      startStory = "1778070363134591221",
       startPort = "Success",
-      endStory = "1775630421764549501",
+      endStory = "1778070363134591220",
       endPort = "StoryEnd"
     }
   },
   storyNodeData = {
-    ["1775630421764549500"] = {
+    ["1778070363134591219"] = {
       isStoryNode = true,
-      key = "1775630421764549500",
+      key = "1778070363134591219",
       type = "StoryStartNode",
       name = "StoryStart",
       pos = {x = 1014, y = 322.25},
@@ -29,9 +29,9 @@ return {
         commentData = {}
       }
     },
-    ["1775630421764549501"] = {
+    ["1778070363134591220"] = {
       isStoryNode = true,
-      key = "1775630421764549501",
+      key = "1778070363134591220",
       type = "StoryEndNode",
       name = "StoryEnd",
       pos = {x = 1795, y = 315},
@@ -42,9 +42,9 @@ return {
         commentData = {}
       }
     },
-    ["1775630421764549502"] = {
+    ["1778070363134591221"] = {
       isStoryNode = true,
-      key = "1775630421764549502",
+      key = "1778070363134591221",
       type = "StoryNode",
       name = "任务节点",
       pos = {x = 1389.6428571428573, y = 322.5123847926268},
@@ -78,48 +78,48 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "1775630421765549503",
+            startQuest = "1778070363134591222",
             startPort = "QuestStart",
-            endQuest = "1775630421765549506",
+            endQuest = "1778070363134591225",
             endPort = "In"
           },
           {
-            startQuest = "1775630421765549506",
+            startQuest = "1778070363134591225",
             startPort = "Out",
-            endQuest = "1775630421765549504",
+            endQuest = "1778070363134591223",
             endPort = "Success"
           },
           {
-            startQuest = "1775630421765549506",
+            startQuest = "1778070363134591225",
             startPort = "Fail",
-            endQuest = "1775630421765549505",
+            endQuest = "1778070363134591224",
             endPort = "Fail"
           }
         },
         nodeData = {
-          ["1775630421765549503"] = {
-            key = "1775630421765549503",
+          ["1778070363134591222"] = {
+            key = "1778070363134591222",
             type = "QuestStartNode",
             name = "QuestStart",
             pos = {x = 806, y = 316},
             propsData = {ModeType = 0}
           },
-          ["1775630421765549504"] = {
-            key = "1775630421765549504",
+          ["1778070363134591223"] = {
+            key = "1778070363134591223",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
             pos = {x = 1636, y = 252},
             propsData = {ModeType = 0}
           },
-          ["1775630421765549505"] = {
-            key = "1775630421765549505",
+          ["1778070363134591224"] = {
+            key = "1778070363134591224",
             type = "QuestFailNode",
             name = "QuestFail",
             pos = {x = 1648.0000000000002, y = 421.00000000000006},
             propsData = {}
           },
-          ["1775630421765549506"] = {
-            key = "1775630421765549506",
+          ["1778070363134591225"] = {
+            key = "1778070363134591225",
             type = "TalkNode",
             name = "对话节点",
             pos = {x = 1185.2857142857142, y = 313.99999999999994},
@@ -156,8 +156,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",

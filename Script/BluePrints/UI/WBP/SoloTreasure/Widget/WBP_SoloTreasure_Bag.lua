@@ -16,13 +16,7 @@ function M:Destruct()
 end
 
 function M:OnLoaded(...)
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
-    GWorld.logger.error("搜打撤副本内才能打开背包")
-    self.Super.Close(self)
-    return
-  end
-  self.Dungeonobject = ServerEntity:GetDungeonObject()
+  self.Dungeonobject = GWorld:GetGameModeDungeonObject()
   if not self.Dungeonobject then
     GWorld.logger.error("搜打撤副本内才能打开背包")
     self.Super.Close(self)

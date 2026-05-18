@@ -267,6 +267,23 @@ function M:ShowBackBtn(bShow)
   self.WBP_Com_Tab_P:UpdateHotKeyInfo()
 end
 
+function M:OnChatBtnListOpen(bOpen)
+  if not ChatController:IsGamepad() then
+    self.bChatBtnListOpen = false
+    return
+  end
+  self.bChatBtnListOpen = true == bOpen
+end
+
+function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if self.bChatBtnListOpen and UE4.UKismetInputLibrary.Key_IsGamepadKey(InKey) and (InKeyName == UIConst.GamePadKey.SpecialLeft or InKeyName == UIConst.GamePadKey.SpecialRight) then
+    return UE4.UWidgetBlueprintLibrary.Unhandled()
+  end
+  return M.Super.OnPreviewKeyDown(self, MyGeometry, InKeyEvent)
+end
+
 function M:OnKeyDown(MyGeometry, InKeyEvent)
   M.Super.OnKeyDown(self, MyGeometry, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)

@@ -1211,6 +1211,45 @@ return ReadOnly("RougeLikeRoom", {
     RoomWeight = 200,
     SettlementEventMainIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event16.T_Rouge_Event16'"
   },
+  [329] = {
+    ArtDataPath = "/Game/Maps/Datas/Data_Art/Ailixian/Ailixian_Rou01_Eve02_Art.Ailixian_Rou01_Eve02_Art",
+    DesignDataPath = "/Game/Maps/Datas/Data_Design/Ailixian/Ailixian_Rou01_Eve02A_Design.Ailixian_Rou01_Eve02A_Design",
+    EndPointsBase = 90,
+    EventMainIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event21.T_Rouge_Event21'",
+    EventSelect = {
+      [1] = 1151,
+      [2] = 1152,
+      [3] = 1153
+    },
+    EventStoryline = "Rogue/RouEvent_329",
+    GameModePath = "/Game/AssetDesign/GameMode/Prologue/Roug01/BP_EMGameMode_Prologue_Rou01_Eve02A.BP_EMGameMode_Prologue_Rou01_Eve02A",
+    Name = "RougeLike_RoomName_329",
+    RLArchiveSubId = 10009101,
+    RoomId = 329,
+    RoomSubType = 1,
+    RoomType = 3,
+    RoomWeight = 750,
+    SettlementEventMainIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event21.T_Rouge_Event21'"
+  },
+  [330] = {
+    ArtDataPath = "/Game/Maps/Datas/Data_Art/Ailixian/Ailixian_Rou01_Eve01_Art.Ailixian_Rou01_Eve01_Art",
+    DesignDataPath = "/Game/Maps/Datas/Data_Design/Ailixian/Ailixian_Rou01_Eve01A_Design.Ailixian_Rou01_Eve01A_Design",
+    EndPointsBase = 90,
+    EventMainIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event22.T_Rouge_Event22'",
+    EventSelect = {
+      [1] = 1156,
+      [2] = 1157
+    },
+    EventStoryline = "Rogue/RouEvent_330",
+    GameModePath = "/Game/AssetDesign/GameMode/Prologue/Roug01/BP_EMGameMode_Prologue_Rou01_Eve01A.BP_EMGameMode_Prologue_Rou01_Eve01A",
+    Name = "RougeLike_RoomName_330",
+    RLArchiveSubId = 10009201,
+    RoomId = 330,
+    RoomSubType = 1,
+    RoomType = 3,
+    RoomWeight = 500,
+    SettlementEventMainIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event22.T_Rouge_Event22'"
+  },
   [381] = {
     ArtDataPath = "/Game/Maps/Datas/Data_Art/Ailixian/Ailixian_Rou01_Bat04_Art.Ailixian_Rou01_Bat04_Art",
     DesignDataPath = "/Game/Maps/Datas/Data_Design/Ailixian/Ailixian_Rou01_Game01_Design.Ailixian_Rou01_Game01_Design",

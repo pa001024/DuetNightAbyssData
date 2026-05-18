@@ -3,7 +3,7 @@ local SettingUtils = require("Utils.SettingUtils")
 local M = Class("BluePrints.UI.UI_PC.Setting.Setting_Scroll_Option_PC_C")
 
 function M:InitSubOption(Parent, CacheName, CacheInfo, UpOption)
-  self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+  self:InitListenEvent()
   rawset(self, "Parent", Parent.Content and Parent.Content.ParentWidget.Parent or Parent)
   rawset(self, "CacheName", CacheName)
   rawset(self, "CacheInfo", CacheInfo)

@@ -385,14 +385,20 @@ function M:SortMountListForNormal(SortType)
   if SortType == CommonConst.DESC then
     table.sort(self.MountContents, function(MountA, MountB)
       if MountA.HasMount == MountB.HasMount then
-        return MountA.SortPriority > MountB.SortPriority
+        if MountA.SortPriority ~= MountB.SortPriority then
+          return MountA.SortPriority > MountB.SortPriority
+        end
+        return MountA.MountId > MountB.MountId
       end
       return MountA.HasMount
     end)
   else
     table.sort(self.MountContents, function(MountA, MountB)
       if MountA.HasMount == MountB.HasMount then
-        return MountA.SortPriority < MountB.SortPriority
+        if MountA.SortPriority ~= MountB.SortPriority then
+          return MountA.SortPriority < MountB.SortPriority
+        end
+        return MountA.MountId < MountB.MountId
       end
       return not MountA.HasMount
     end)
@@ -410,7 +416,10 @@ function M:SortMountListForRarity(SortType)
         if MountA.MountRarity ~= MountB.MountRarity then
           return MountA.MountRarity > MountB.MountRarity
         end
-        return MountA.SortPriority > MountB.SortPriority
+        if MountA.SortPriority ~= MountB.SortPriority then
+          return MountA.SortPriority > MountB.SortPriority
+        end
+        return MountA.MountId > MountB.MountId
       end
       return MountA.HasMount
     end)
@@ -420,7 +429,10 @@ function M:SortMountListForRarity(SortType)
         if MountA.MountRarity ~= MountB.MountRarity then
           return MountA.MountRarity < MountB.MountRarity
         end
-        return MountA.SortPriority < MountB.SortPriority
+        if MountA.SortPriority ~= MountB.SortPriority then
+          return MountA.SortPriority < MountB.SortPriority
+        end
+        return MountA.MountId < MountB.MountId
       end
       return not MountA.HasMount
     end)
@@ -559,8 +571,6 @@ function M:InitMountInfoUI()
     self.Text_SkinName:SetFont(self[SkinNameFont[MountConfig.MountRarity]])
   end
   self.Text_Info:SetText(GText(MountConfig.MountDes))
-  self.WBP_MountsMain_Item02.HB_Method:SetVisibility((not MountConfig.AccessKey or HasMount) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.WBP_MountsMain_Item02.Method:SetVisibility((not MountConfig.AccessKey or HasMount) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WBP_MountsMain_Item02.Panel_Message:SetVisibility(not MountConfig.UseLimitDes and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WBP_MountsMain_Item02.Text_Message:SetVisibility(not MountConfig.UseLimitDes and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WBP_MountsMain_Item02.Text_Message:SetText(GText(MountConfig.UseLimitDes))
@@ -575,6 +585,8 @@ function M:InitMountInfoUI()
   local Method = self.WBP_MountsMain_Item02.Method
   local ChildrenCount = Method:GetChildrenCount()
   local IsHideMethod = 0 == ChildrenCount or not MountConfig.AccessKey
+  self.WBP_MountsMain_Item02.HB_Method:SetVisibility((IsHideMethod or HasMount) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.WBP_MountsMain_Item02.Method:SetVisibility((IsHideMethod or HasMount) and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
   self.WBP_MountsMain_Item02.Text_Method:SetVisibility(IsHideMethod and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.SelfHitTestInvisible)
   self.AllMethodSubWidgetList = {}
   for i = 1, ChildrenCount do

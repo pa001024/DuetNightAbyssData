@@ -5,6 +5,9 @@ local GuidePointLocData = require("BluePrints.UI.TaskPanel/QuestGuidePointLocDat
 local StorylineUtils = require("StoryCreator.StoryLogic.StorylineUtils")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local WBP_Task_Main_C = require("BluePrints.UI.TaskPanel.WBP_Task_Main_C")
+local ChapMutexUtils = require("Utils.ChapMutexUtils")
+local ChapMutexQueueMgr = require("BluePrints.Story.ChapMutexQueueMgr")
+local GMVariable = require("BluePrints.UI.GMInterface.GMVariable")
 local Component = {}
 
 function Component:NotifyAvatarRegionAllReady()
@@ -22,6 +25,9 @@ function Component:EnterWorld()
   DebugPrint("QuestMgr EnterWorld")
   self.DoingQuestChainIds = {}
   self.DoingQuestIds = {}
+  self.IsChapMutexChecked = false
+  self.IsChapMutexChoosing = false
+  self.ChapMutexQueueMgr = ChapMutexQueueMgr.New(self, self.OnChapMutexQueueDrained)
 end
 
 function Component:OnLoginSuccess()
@@ -103,8 +109,43 @@ end
 function Component:OnPrintToFeiShu_Quest(ClientErrorCode, ServerErrorCode, FunctionName, QuestChainId, QuestId, ...)
 end
 
+function Component:OnChapMutexQueueDrained(bNeedTrigger)
+  self.IsChapMutexChoosing = false
+  if true == bNeedTrigger then
+    self.IsChapMutexChecked = false
+    self:TriggerQuestChain()
+    return
+  end
+  self.IsChapMutexChecked = true
+end
+
+function Component:TryHandleChapMutexUnlockOnTrigger()
+  if self.ChapMutexQueueMgr and self.ChapMutexQueueMgr:IsBusy() then
+    self.IsChapMutexChoosing = true
+    return true
+  end
+  self.IsChapMutexChoosing = false
+  if self.IsChapMutexChecked then
+    return false
+  end
+  local Group = ChapMutexUtils.BuildUnlockGroup(self)
+  self.logger.debug("TryHandleChapMutexUnlockOnTrigger GroupSize", Group and #Group or 0)
+  if not Group or #Group <= 0 then
+    self.IsChapMutexChecked = true
+    return false
+  end
+  self.ChapMutexQueueMgr:Enqueue(Group, "local_trigger")
+  self.IsChapMutexChoosing = true
+  self.ChapMutexQueueMgr:SetNeedTriggerAfterDrain(true)
+  self.ChapMutexQueueMgr:Process()
+  return true
+end
+
 function Component:TriggerQuestChain()
   if not self:CheckQuestCanStart() then
+    return
+  end
+  if self:TryHandleChapMutexUnlockOnTrigger() then
     return
   end
   local Chain
@@ -129,7 +170,7 @@ function Component:TriggerQuestChain()
       end
       EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "Quest", Chain.DoingQuestId)
       EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "Quest", Chain.DoingQuestId)
-      EventManager:FireEvent(EventID.TriggerFlexibleActive)
+      EventManager:FireEvent(EventID.TriggerFlexibleActive, "Quest")
     end
   end
 end
@@ -160,9 +201,13 @@ function Component:ServerStartQuest(Ret, QuestChainId, ClientVarParams)
   table.insert(self.DoingQuestIds, QuestChain.DoingQuestId)
   EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "Quest", QuestChain.DoingQuestId)
   EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "Quest", QuestChain.DoingQuestId)
-  EventManager:FireEvent(EventID.TriggerFlexibleActive)
+  EventManager:FireEvent(EventID.TriggerFlexibleActive, "Quest")
   local Story = GWorld.StoryMgr:GetStory(QuestChain.StoryPath)
   GameMode:TriggerQuestArtLevelChange(ClientVarParams)
+  local RegionDataMgr = GameMode:GetRegionDataMgrSubSystem()
+  if RegionDataMgr then
+    RegionDataMgr:RecoverQuestLockedDatas(QuestChainId)
+  end
   if not Story then
     local MainStoryData = DataMgr.QuestChain[QuestChainId]
     if QuestChainId and QuestChainId > 0 and nil ~= MainStoryData and MainStoryData.StoryPath ~= nil then
@@ -183,11 +228,15 @@ function Component:_OnPropChangeTrackingQuestChainId(key)
 end
 
 function Component:RealUpdateQuestChain(QuestChainId)
+  if DataMgr.QuestChain[QuestChainId] == nil then
+    DebugPrint("lkk_ RealUpdateQuestChain QuestChainId is nil ", QuestChainId)
+    return
+  end
   local QuestChain = self.QuestChains[QuestChainId]
   local Type = DataMgr.QuestChain[QuestChainId].QuestChainType
   local TypeName = CommonConst.QuestTypeName[Type]
   local NodeName = DataMgr.ReddotNode[TypeName].Name
-  if ReddotManager.GetTreeNode(NodeName) and ReddotManager.GetLeafNodeCacheDetail(NodeName)[QuestChainId] == nil then
+  if ReddotManager.GetTreeNode(NodeName) and nil == ReddotManager.GetLeafNodeCacheDetail(NodeName)[QuestChainId] then
     ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {QuestId = QuestChainId})
   end
   if not self:CheckQuestCanStart() then
@@ -238,7 +287,7 @@ function Component:QuestChainFinish(Ret, QuestChainId, RewardBox, TargetComplete
   self:HandleNotifyQuestComplete(nil, QuestChainId, TargetCompleteQuestIds)
   EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "QuestChain", QuestChainId)
   EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "QuestChain", QuestChainId)
-  EventManager:FireEvent(EventID.TriggerFlexibleActive)
+  EventManager:FireEvent(EventID.TriggerFlexibleActive, "QuestChain")
   local StoryPath = QuestChain.StoryPath
   GWorld.StoryMgr:StopStoryline(StoryPath)
   GWorld.UploadQuestChainData = true
@@ -382,7 +431,7 @@ function Component:HandleClientQuestCompleteEvent(Ret, ManualTrigger, QuestId, Q
   EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "Quest", QuestId)
   EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "Quest", QuestId)
   EventManager:FireEvent(EventID.QuestFinished, QuestId)
-  EventManager:FireEvent(EventID.TriggerFlexibleActive)
+  EventManager:FireEvent(EventID.TriggerFlexibleActive, "Quest")
   CommonUtils.RemoveValue(self.DoingQuestIds, QuestId)
   self:HandleNotifyQuestComplete(QuestId, QuestChainId, TargetCompleteQuestIds)
   local GameMode = GWorld.GameInstance:GetCurrentGameMode()
@@ -419,6 +468,14 @@ function Component:HandleNotifyQuestComplete(CompleteQuestId, QuestChainId, Targ
 end
 
 function Component:OnQuestTrigger(ServerParamTable, ManualTrigger)
+  local Avatar = GWorld:GetAvatar()
+  if GMVariable.BlockAllQuestTrigger or Avatar and Avatar.bGMBlockAllQuestTriggerOnce then
+    DebugPrint("ZJT_ OnQuestTrigger blocked by GM", ServerParamTable and ServerParamTable.TriggerType, ServerParamTable and ServerParamTable.QuestChainId, ServerParamTable and ServerParamTable.QuestId)
+    if Avatar then
+      Avatar.bGMBlockAllQuestTriggerOnce = nil
+    end
+    return
+  end
   DebugPrint("ZJT_ OnQuestTrigger  ", os.time(), ServerParamTable.TriggerType, ServerParamTable.QuestChainId, ServerParamTable.QuestId, ManualTrigger, ServerParamTable.TargetId, ServerParamTable.TargetCount, ServerParamTable.STLData, ServerParamTable.QuestDatas)
   PrintTable({
     QuestDatas = ServerParamTable.RegionQuestDatas,
@@ -819,7 +876,6 @@ function Component:NotifyQuestDeliver(DeliverId, DeliverStartIndex, IsWhite)
   if IsValid(GameMode) then
     local bIsInvitation, bIsFromMap
     local bShouldReturnAndDownloadPatch = true
-    DebugPrint("TTT:Talk:QuestMgr")
     GameMode:HandleLevelDeliver(UE4.EModeType.ModeRegion, DeliverId, DeliverStartIndex, IsWhite, bIsInvitation, bIsFromMap, bShouldReturnAndDownloadPatch)
   end
 end
@@ -1017,11 +1073,24 @@ function Component:IsStoryOptionSelected(OptionId)
   return self.SelectedKeyOption[OptionId] == true
 end
 
-function Component:GetIsSubmitComplete(SubmitId)
-  return false
+function Component:GetIsSubmitComplete(QuestChainId, SubmitId)
+  local QuestChain = self.QuestChains[QuestChainId]
+  if not QuestChain or not QuestChain:IsDoing() then
+    return false
+  end
+  local SubmitData = DataMgr.QuestTurnInItem[SubmitId]
+  if not SubmitData or not SubmitData.QuestId then
+    return false
+  end
+  if QuestChain.DoingQuestId ~= SubmitData.QuestId then
+    return false
+  end
+  return QuestChain.SubmitQuestId:HasValue(SubmitId)
 end
 
 function Component:SubmitQuestItems(SubmitId, InCallback)
+  self.logger.debug("SubmitQuestItems Begin", SubmitId)
+  
   local function Callback(Ret)
     if InCallback then
       InCallback(ErrorCode:Check(Ret))
@@ -1030,7 +1099,96 @@ function Component:SubmitQuestItems(SubmitId, InCallback)
   end
   
   self:CallServer("SubmitQuestItems", Callback, SubmitId)
-  Callback(0)
+end
+
+function Component:ShowQuestItems(ShowQuestId, TargetResourceId, InCallback)
+  self.logger.debug("ShowQuestItems Begin", ShowQuestId, TargetResourceId)
+  
+  local function Callback(Ret)
+    if InCallback then
+      InCallback(ErrorCode:Check(Ret))
+    end
+    self.logger.debug("ShowQuestItems ", Ret, ShowQuestId, TargetResourceId)
+  end
+  
+  self:CallServer("ShowQuestItems", Callback, ShowQuestId, TargetResourceId)
+end
+
+function Component:CheckQuestItemsOwned(SubmitId)
+  if not SubmitId then
+    DebugPrint("CheckQuestItemOwned: SubmitId is nil")
+    return false
+  end
+  local SubmitData = DataMgr.QuestTurnInItem[SubmitId]
+  if not SubmitData then
+    DebugPrint("CheckQuestItemOwned: SubmitData not found for SubmitId", SubmitId)
+    return false
+  end
+  if SubmitData.ItemIds then
+    for i, ItemId in ipairs(SubmitData.ItemIds) do
+      local Count = SubmitData.ItemCounts[i] or 1
+      local HasCount = self:GetResourceNum(ItemId)
+      if Count <= HasCount then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+function Component:GiveUpQuestChain(QuestChainId)
+  self.logger.debug("GiveUpQuestChain Begin", QuestChainId)
+  
+  local function Callback(Ret)
+    self.logger.debug("GiveUpQuestChain Callback ", Ret)
+    if not ErrorCode:Check(Ret) then
+      return
+    end
+    local GameMode = UGameplayStatics.GetGameMode(GWorld.GameInstance)
+    GameMode:ClearRegionActorData("QuestChainId", QuestChainId, EDestroyReason.QuestChainClear, function(Target, Key, Value)
+      return Target.QuestChainId == Value
+    end)
+    local QuestChainData = DataMgr.QuestChain[QuestChainId]
+    if QuestChainData then
+      local StoryPath = QuestChainData.StoryPath
+      GWorld.StoryMgr:StopStoryline(StoryPath)
+      GWorld.StoryMgr:RunStory(StoryPath, self.QuestChains[QuestChainId].DoingQuestId)
+    end
+    EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "GiveUpQuestChain", QuestChainId)
+    EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "GiveUpQuestChain", QuestChainId)
+    EventManager:FireEvent(EventID.TriggerFlexibleActive, "GiveUpQuestChain")
+  end
+  
+  self:CallServer("GiveUpQuestChain", Callback, QuestChainId)
+end
+
+function Component:NotifyChooseQuestChapterUnlock(NeedUnlockChapterIdList)
+  self.logger.debug("NotifyChooseQuestChapterUnlock", NeedUnlockChapterIdList and #NeedUnlockChapterIdList or 0)
+  local Added = self.ChapMutexQueueMgr and self.ChapMutexQueueMgr:Enqueue(NeedUnlockChapterIdList, "server_notify")
+  if Added then
+    self.IsChapMutexChoosing = true
+    self.ChapMutexQueueMgr:Process()
+  end
+end
+
+function Component:ChooseQuestChapterUnlock(ChapterId, InCallback)
+  self.logger.debug("ChooseQuestChapterUnlock Begin", ChapterId)
+  if not ChapterId then
+    UIManager():ShowUITip(UIConst.Tip_CommonToast, GText("UI_Consumable_NotChoose"))
+    return
+  end
+  
+  local function Callback(Ret)
+    self.logger.debug("ChooseQuestChapterUnlock Callback ", Ret, ChapterId)
+    if Ret == ErrorCode.RET_SUCCESS then
+      UIManager():ShowUITip(UIConst.Tip_CommonToast, GText("UI_Quest_ChapterSelect_Toast"))
+    end
+    if InCallback then
+      InCallback()
+    end
+  end
+  
+  self:CallServer("ChooseQuestChapterUnlock", Callback, ChapterId)
 end
 
 return Component

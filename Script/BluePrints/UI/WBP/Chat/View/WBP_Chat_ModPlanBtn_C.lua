@@ -9,6 +9,11 @@ function M:OnBtnClickInMod()
   if ChatView.IsBeginToClose then
     return
   end
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if GameState and GameState:IsInDungeon() then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_COMMONPOP_TITLE_100059"))
+    return
+  end
   local Tag
   if self.TargetType == "Weapon" then
     local BattleConf = DataMgr.BattleWeapon[self.TargetId]
@@ -44,6 +49,11 @@ function M:OnBtnClickInSkin()
   if ChatView.IsBeginToClose then
     return
   end
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if GameState and GameState:IsInDungeon() then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_COMMONPOP_TITLE_100059"))
+    return
+  end
   if IsClient(self) then
     UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
     return
@@ -54,6 +64,7 @@ function M:OnBtnClickInSkin()
     Type = self.SkinType,
     SkinId = self.SkinId,
     HairId = self.HairId,
+    IsPreviewMode = true,
     OpenPreviewDyeFromChat = true,
     Colors = self.DyePlanInfo.Colors,
     OnCloseCallback = function()

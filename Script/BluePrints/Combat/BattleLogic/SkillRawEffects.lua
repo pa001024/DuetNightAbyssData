@@ -1,6 +1,7 @@
 local SkillUtils = require("Utils.SkillUtils")
 local SettingUtils = require("Utils.SettingUtils")
 local EffectResults = require("BluePrints.Combat.BattleLogic.EffectResults")
+local CommonConst = require("CommonConst")
 local Component = {}
 
 function Component:RealExecuteOneEffect_Lua(EffectStruct, Index)
@@ -217,6 +218,82 @@ function Component:Effect_GatherTargets(EffectStruct, ParamentsTable)
   if not next(HitTargets) then
     return
   end
+  local Cfg = CommonConst.GatherTargets
+  local Now = self:GetWorld():GetTimeSeconds()
+  if not self._GatherThrottle then
+    self._GatherThrottle = {}
+  end
+  if not self._GatherPendingQueue then
+    self._GatherPendingQueue = {}
+  end
+  if not self._GatherFrameCount then
+    self._GatherFrameCount = 0
+  end
+  
+  local function DoGatherItem(Battle, Item)
+    local Target = Battle:GetEntity(Item.Eid)
+    if not Target then
+      return
+    end
+    if Item.CreatureInfo and Target.GatherToCreature then
+      Target:GatherToCreature(Item.CreatureInfo, Item.GatherPoint, Item.TargetSocketName, Item.GatherSpeed, Item.StopDistance, Item.Acceleration, Item.LocationOffset, Item.Time)
+    elseif not Item.CreatureInfo and Target.GatherToSource then
+      Target:GatherToSource(Item.Source, Item.GatherPoint, Item.TargetSocketName, Item.GatherSpeed, Item.StopDistance, Item.Acceleration, Item.LocationOffset, Item.Time)
+    end
+  end
+  
+  local function FlushGatherQueue(Battle)
+    Battle._GatherFrameCount = 0
+    while Battle._GatherFrameCount < Cfg.MaxPerFrame and #Battle._GatherPendingQueue > 0 do
+      DoGatherItem(Battle, table.remove(Battle._GatherPendingQueue, 1))
+      Battle._GatherFrameCount = Battle._GatherFrameCount + 1
+    end
+    if #Battle._GatherPendingQueue > 0 then
+      Battle:AddDelayFrameFunc(function()
+        FlushGatherQueue(Battle)
+      end, 1, "GatherTargetsFlush")
+    end
+  end
+  
+  local function EnqueueOrExecGather(Eid, CreatureInfo, Src)
+    for k, t in pairs(self._GatherThrottle) do
+      if Now - t >= Cfg.CDTime then
+        self._GatherThrottle[k] = nil
+      end
+    end
+    local LastTime = self._GatherThrottle[Eid]
+    if LastTime and Now - LastTime < Cfg.CDTime then
+      return
+    end
+    self._GatherThrottle[Eid] = Now
+    local Item = {
+      Eid = Eid,
+      CreatureInfo = CreatureInfo,
+      Source = Src,
+      GatherPoint = GatherPoint,
+      TargetSocketName = TargetSocketName,
+      GatherSpeed = GatherSpeed,
+      StopDistance = StopDistance,
+      Acceleration = Acceleration,
+      LocationOffset = LocationOffset,
+      Time = Time
+    }
+    if self._GatherFrameCount < Cfg.MaxPerFrame then
+      DoGatherItem(self, Item)
+      self._GatherFrameCount = self._GatherFrameCount + 1
+      if self._GatherFrameCount == Cfg.MaxPerFrame and #self._GatherPendingQueue > 0 then
+        self:AddDelayFrameFunc(function()
+          FlushGatherQueue(self)
+        end, 1, "GatherTargetsFlush")
+      end
+    else
+      table.insert(self._GatherPendingQueue, Item)
+      self:AddDelayFrameFunc(function()
+        FlushGatherQueue(self)
+      end, 1, "GatherTargetsFlush")
+    end
+  end
+  
   if 0 ~= EffectStruct.CreatureInfo.CreatureEid then
     local SkillCreatureConfig = DataMgr.SkillCreature[EffectStruct.CreatureInfo.CreatureId]
     if Source:IsPlayer() and SkillCreatureConfig.ClientOwner and IsDedicatedServer(self) then
@@ -224,17 +301,11 @@ function Component:Effect_GatherTargets(EffectStruct, ParamentsTable)
       return
     end
     for _, Eid in ipairs(HitTargets) do
-      local Target = self:GetEntity(Eid)
-      if Target and Target.GatherToCreature then
-        Target:GatherToCreature(EffectStruct.CreatureInfo, GatherPoint, TargetSocketName, GatherSpeed, StopDistance, Acceleration, LocationOffset, Time)
-      end
+      EnqueueOrExecGather(Eid, EffectStruct.CreatureInfo, nil)
     end
   else
     for _, Eid in ipairs(HitTargets) do
-      local Target = self:GetEntity(Eid)
-      if Target and Target.GatherToSource then
-        Target:GatherToSource(Source, GatherPoint, TargetSocketName, GatherSpeed, StopDistance, Acceleration, LocationOffset, Time)
-      end
+      EnqueueOrExecGather(Eid, nil, Source)
     end
   end
 end
@@ -381,7 +452,9 @@ function Component:Effect_SaveLoc(EffectStruct, ParamentsTable)
     TargetLocation = CommonUtils.GetFixLocation(Source, TargetLocation, FixLocationZ, FixLocationStartZ, FixLocationEndZ, "TraceScene")
   end
   Source:SetSaveLoc(TargetLocation, Tag)
-  Source.SaveLoc = TargetLocation
+  if Source.SetSaveLoc_MD_FromFVector then
+    Source:SetSaveLoc_MD_FromFVector(TargetLocation)
+  end
 end
 
 function Component:Effect_SetSelfLoc(EffectStruct, ParamentsTable)

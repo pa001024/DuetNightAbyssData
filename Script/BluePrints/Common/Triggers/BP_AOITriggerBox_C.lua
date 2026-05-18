@@ -1,5 +1,6 @@
 require("UnLua")
 local BP_AOITriggerBox_C = Class("BluePrints.Item.SceneItemBase")
+local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 
 function BP_AOITriggerBox_C:Initialize(Initializer)
   self.CallBack = nil
@@ -68,8 +69,24 @@ function BP_AOITriggerBox_C:OnActorOverlap(OtherActor, TriggerType)
       GameMode:TriggerAOIBase(TriggerEventId, self, OtherActor.Eid, TriggerType)
       if "BeginOverlap" == TriggerType then
         EventManager:FireEvent(EventID.OnEnterTriggerBox, TriggerEventId, self, OtherActor.Eid)
+        local DynamicEvents = ClientEventUtils:GetCurrentActiveDynamicEventsByTriggerId(TriggerEventId)
+        if DynamicEvents then
+          for _, DynamicEvent in pairs(DynamicEvents) do
+            if DynamicEvent and DynamicEvent.OnEnterTriggerBox then
+              DynamicEvent:OnEnterTriggerBox(TriggerEventId, self, OtherActor.Eid)
+            end
+          end
+        end
       elseif "EndOverlap" == TriggerType then
         EventManager:FireEvent(EventID.OnLeaveTriggerBox, TriggerEventId, self, OtherActor.Eid)
+        local DynamicEvents = ClientEventUtils:GetCurrentActiveDynamicEventsByTriggerId(TriggerEventId)
+        if DynamicEvents then
+          for _, DynamicEvent in pairs(DynamicEvents) do
+            if DynamicEvent and DynamicEvent.OnLeaveTriggerBox then
+              DynamicEvent:OnLeaveTriggerBox(TriggerEventId, self, OtherActor.Eid)
+            end
+          end
+        end
       end
     end
   end
@@ -151,7 +168,7 @@ function BP_AOITriggerBox_C:CheckRuleUnitId(TriggerActor, UnitId)
 end
 
 function BP_AOITriggerBox_C:CheckRuleUnitType(TriggerActor, UnitType)
-  return TriggerActor.UnitType == UnitType
+  return string.lower(TriggerActor.UnitType) == string.lower(UnitType)
 end
 
 function BP_AOITriggerBox_C:CheckRuleActorType(TriggerActor, ActorType)

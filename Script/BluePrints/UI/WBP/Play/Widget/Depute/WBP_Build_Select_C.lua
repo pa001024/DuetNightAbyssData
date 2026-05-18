@@ -59,7 +59,7 @@ function M:InitSquadData(Parent, bDisablePhantom, CurrentSquad)
   self.Parent = Parent
   self.SquadInfoList = Parent.SquadInfoList
   self.bDisablePhantom = bDisablePhantom
-  self.WS_Type:SetActiveWidgetIndex(bDisablePhantom and 1 or 0)
+  self.WS_Type:SetActiveWidgetIndex(0 == CurrentSquad and 1 or 0)
   if self.Parent.Btn_Close:GetVisibility() == ESlateVisibility.Collapsed then
     self:PlayAnimationReverse(self.ArrowFlip, 5)
     self.IsExpand = false
@@ -136,10 +136,8 @@ function M:UpdateView(SquadInfo, Index)
   self.SquadInfo = SquadInfo
   self.SquadIndex = Index
   self:SetIcon(SquadInfo)
-  if self.bDisablePhantom then
-    return
-  end
-  self.Panel_Summon:SetVisibility(0 == Index and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
+  local ShouldShowSummon = not self.bDisablePhantom and 0 == Index
+  self.Panel_Summon:SetVisibility(ShouldShowSummon and ESlateVisibility.SelfHitTestInvisible or ESlateVisibility.Collapsed)
 end
 
 function M:SetIcon(SquadInfo)

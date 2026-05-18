@@ -1,11 +1,8 @@
 require("UnLua")
-local NormalTaskNewReddotName = "JJGameTask_Normal_New"
+local JJGameModel = require("BluePrints.UI.WBP.ActivityJJGame.JJGameModel")
+local JJGameController = require("BluePrints.UI.WBP.ActivityJJGame.JJGameController")
+local NormalTaskNewReddotName = JJGameModel.NormalTaskNewReddotName
 local NormalTaskBPPath = "/Game/UI/WBP/Activity/Widget/JJGame/Normal/WBP_Activity_JJGame_NormalSubItem.WBP_Activity_JJGame_NormalSubItem"
-local TaskType = {
-  Daily = {1, 2},
-  Cycle = 3,
-  Achievement = 4
-}
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -50,36 +47,15 @@ end
 function M:UpdateTaskList()
   self.List_Task:ClearListItems()
   self.TaskContentList = {}
-  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
-  local MidTermTasks = self.MidTermGoals.Tasks or {}
-  local SortedTaskList = self:SortTaskList(MidTermTasks)
-  for i, Task in pairs(SortedTaskList) do
-    local TaskData = DataMgr.MidTermTask[Task.UniqueID]
-    if not TaskData then
-      print("TaskData is nil, Task.UniqueID = ", Task.UniqueID)
-      Utils.ScreenPrint("MidTermTask表中不存在UniqueID为" .. Task.UniqueID .. "的任务，请检查配置")
-    else
-      local TaskItem
-      if type(self.TaskConfig.TaskType) == "table" then
-        if TaskData.EnableDay ~= self.EventDay then
-        else
-          if TaskData.TaskType == self.TaskConfig.TaskType[1] then
-            TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.DailyRewardPoint_1.ConstantValue, TaskData.TaskDes)
-          elseif TaskData.TaskType == self.TaskConfig.TaskType[2] then
-            TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.DailyRewardPoint_2.ConstantValue, TaskData.TaskDes)
-          end
-          elseif TaskData.TaskType == self.TaskConfig.TaskType then
-            TaskItem = self:NewItemContent(TaskData.TaskType, TaskData.TaskId, self.MidTermConst.CycleRewardPoint.ConstantValue, TaskData.TaskDes)
-            TaskItem.MidTermTasksRecord = self._Avatar.MidTermTasksRecord[Task.UniqueID] or {}
-          end
-          if TaskItem then
-            TaskItem.TaskProp = Task.Props
-            TaskItem.TaskConfig = TaskData
-            table.insert(self.TaskContentList, TaskItem)
-            self.List_Task:AddItem(TaskItem)
-          end
-        end
-    end
+  local Model = JJGameController:RefreshModel()
+  self.MidTermGoals = Model.MidTermGoals
+  local Entries = Model:BuildNormalTaskEntries(self.TaskConfig.TaskType, self.EventDay, self.YesterdayRewardGot)
+  for _, Entry in ipairs(Entries) do
+    local TaskItem = self:NewItemContent(Entry.TaskType, Entry.Id, Entry.Point, Entry.Desc)
+    TaskItem.TaskProp = Entry.TaskProp
+    TaskItem.TaskConfig = Entry.TaskConfig
+    table.insert(self.TaskContentList, TaskItem)
+    self.List_Task:AddItem(TaskItem)
   end
   self.List_Task:RequestPlayEntriesAnim()
   self:TryIncreaceNormalTaskNewReddot()
@@ -88,7 +64,7 @@ end
 function M:OnListTaskEntryInitialized()
   if self.TaskConfig.Name == "UI_Event_MidTerm_DailyTask" then
     local FirstItem = self.List_Task:GetItemAt(0)
-    if FirstItem and FirstItem.SelfWidget then
+    if FirstItem and FirstItem.SelfWidget and IsValid(FirstItem.SelfWidget) then
       FirstItem.SelfWidget:SetFocus()
     else
       self.List_Task:SetFocus()
@@ -97,45 +73,26 @@ function M:OnListTaskEntryInitialized()
 end
 
 function M:SortTaskList(TaskList)
-  local SortedTaskList = {}
-  for k, v in pairs(TaskList) do
-    table.insert(SortedTaskList, {
-      key = tonumber(k),
-      value = v
-    })
-  end
-  table.sort(SortedTaskList, function(a, b)
-    return a.key < b.key
-  end)
-  local result = {}
-  for _, pair in ipairs(SortedTaskList) do
-    table.insert(result, pair.value)
-  end
-  return result
+  return JJGameController:RefreshModel():GetSortedTaskList(TaskList)
 end
 
 function M:TryIncreaceNormalTaskNewReddot()
+  self.HasNewTask = false
+  local Model = JJGameController:RefreshModel()
+  if TimeUtils.NowTime() > Model.EventEndTime then
+    return
+  end
   for _, TaskItem in pairs(self.TaskContentList) do
-    local CacheKey = TaskItem.TaskProp.UniqueID
+    JJGameController:TryIncreaseNormalTaskNewReddot(TaskItem.TaskProp.UniqueID)
     local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalTaskNewReddotName)
-    if CacheData and nil == CacheData[CacheKey] then
-      CacheData[CacheKey] = true
-      ReddotManager.IncreaseLeafNodeCount(NormalTaskNewReddotName)
-    end
-    if CacheData and true == CacheData[CacheKey] then
+    if CacheData and CacheData[TaskItem.TaskProp.UniqueID] == true then
       self.HasNewTask = true
     end
   end
 end
 
 function M:TryClearNormalTaskNewReddot()
-  local CacheData = ReddotManager.GetLeafNodeCacheDetail(NormalTaskNewReddotName)
-  if CacheData then
-    for key, _ in pairs(CacheData) do
-      CacheData[key] = false
-    end
-  end
-  ReddotManager.ClearLeafNodeCount(NormalTaskNewReddotName)
+  JJGameController:ClearNormalTaskNewReddot(false)
   self.HasNewTask = false
 end
 
@@ -155,7 +112,7 @@ function M:OnAchvFinished(TaskId)
     return
   end
   for _, TaskItem in pairs(self.TaskContentList) do
-    if TaskItem.SelfWidget and TaskItem.SelfWidget.OnAchvFinished then
+    if TaskItem.SelfWidget and IsValid(TaskItem.SelfWidget) and TaskItem.SelfWidget.OnAchvFinished then
       TaskItem.SelfWidget:OnAchvFinished(TaskId)
     end
   end
@@ -166,7 +123,7 @@ function M:OnMidTermTaskProgressChange(TaskId, Progress)
     return
   end
   for _, TaskItem in pairs(self.TaskContentList) do
-    if TaskItem.SelfWidget and TaskItem.SelfWidget.OnMidTermTaskProgressChange then
+    if TaskItem.SelfWidget and IsValid(TaskItem.SelfWidget) and TaskItem.SelfWidget.OnMidTermTaskProgressChange then
       TaskItem.SelfWidget:OnMidTermTaskProgressChange(TaskId, Progress)
     end
   end

@@ -17,6 +17,7 @@ Draft.__Props__ = {
   Resource = prop.getter("RedirectData", "Resource"),
   Weapon = prop.getter("RedirectData", "Weapon"),
   Mod = prop.getter("RedirectData", "Mod"),
+  IronTicket = prop.getter("RedirectData", "IronTicket"),
   StartTime = prop.prop("Int", "client save"),
   State = prop.prop("Int", "client save", 0),
   Count = prop.prop("Int", "client save", 0),
@@ -39,6 +40,7 @@ function Draft:RedirectData()
   RedirectData.Resource = self:RedirectResourceData()
   RedirectData.Weapon = self:RedirectWeaponData()
   RedirectData.Mod = self:RedirectModData()
+  RedirectData.IronTicket = self:RedirectIronTicketData()
   return RedirectData
 end
 
@@ -91,6 +93,23 @@ function Draft:RedirectModData()
     end
   end
   return Mod
+end
+
+function Draft:RedirectIronTicketData()
+  local DraftInfo = DataMgr.Draft[self.DraftId]
+  local IronTicket = {}
+  if not DraftInfo.Resource then
+    return IronTicket
+  end
+  for _, ResourceInfo in ipairs(DraftInfo.Resource) do
+    if ResourceInfo.Type and ResourceInfo.Type == CommonConst.ResourceType.IronTicket then
+      local IronTicketInfo = {}
+      IronTicketInfo.Id = ResourceInfo.Id
+      IronTicketInfo.Num = ResourceInfo.Num
+      table.insert(IronTicket, IronTicketInfo)
+    end
+  end
+  return IronTicket
 end
 
 function Draft:ReSetting()

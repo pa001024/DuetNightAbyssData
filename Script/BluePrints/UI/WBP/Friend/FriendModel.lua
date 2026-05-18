@@ -239,8 +239,10 @@ function M:_InitSortFunc()
     [3] = function(Uid1, Uid2)
       local C1 = self:GetAvatar().Chats[Uid1]
       local C2 = self:GetAvatar().Chats[Uid2]
-      if C1 and C2 and C1:GetUnreadCount() > 0 ~= (C2:GetUnreadCount() > 0) then
-        return C1:GetUnreadCount() > 0
+      local Unread1 = C1 and C1:GetUnreadCount() or 0
+      local Unread2 = C2 and C2:GetUnreadCount() or 0
+      if Unread1 ~= Unread2 then
+        return Unread1 > Unread2
       end
       local F1 = self:GetFriendDict()[Uid1]
       local F2 = self:GetFriendDict()[Uid2]

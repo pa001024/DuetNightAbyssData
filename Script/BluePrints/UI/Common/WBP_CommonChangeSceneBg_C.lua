@@ -86,6 +86,24 @@ function WBP_CommonChangeSceneBg_C:OnShowLoading()
       self.Panel_Bg:SetContent(UIManager(self):CreateWidget(Const.LoadingBgBluePrint))
     elseif not DungeonData then
       isDungeonData = false
+    elseif DungeonData.DungeonType == "AsyncCombat" then
+      local CustomPreInitInfo = GWorld.GameInstance.CustomPreInitInfo
+      if CustomPreInitInfo and CustomPreInitInfo.RoomConfId then
+        local RoomConfId = CustomPreInitInfo.RoomConfId
+        local BossIdList = DataMgr.AsyncCombat[RoomConfId].BossUnitID
+        local FinalBossId = BossIdList[#BossIdList]
+        local BossBg
+        if DataMgr.AsyncBossBg then
+          if DataMgr.AsyncBossBg[FinalBossId] then
+            BossBg = DataMgr.AsyncBossBg[FinalBossId].MainIcon
+          else
+            DebugPrint("crk@AsyncBossBg未配表，BossId", FinalBossId)
+          end
+        end
+        if BossBg then
+          self.Panel_Bg:SetContent(UIManager(self):CreateWidget(BossBg))
+        end
+      end
     elseif DungeonData.DungeonUIBG then
       self.Panel_Bg:SetContent(UIManager(self):CreateWidget(DungeonData.DungeonUIBG))
     end
@@ -103,7 +121,12 @@ function WBP_CommonChangeSceneBg_C:OnShowLoading()
         self.WidgetLoading:InitLoadingData(LoadingData, self)
       end
     else
-      self.WidgetLoading = UIManager(self):_CreateWidgetNew("ComLoadingXiaoBai")
+      local RanWidget = self:TryGetRanLoadingWidget()
+      if RanWidget then
+        self.WidgetLoading = RanWidget
+      else
+        self.WidgetLoading = UIManager(self):_CreateWidgetNew("ComLoadingXiaoBai")
+      end
     end
     local Widget = self.WidgetLoading
     self.InvitationRoot:ClearChildren()
@@ -423,6 +446,21 @@ function WBP_CommonChangeSceneBg_C:OnOutAnimationFinished()
     GWorld.GameInstance:CloseLoadingUI()
     UIManager(self):LaunchAfterLoadingMgr()
   end
+end
+
+function WBP_CommonChangeSceneBg_C:TryGetRanLoadingWidget()
+  local SelectedData = SpecialLoadingRule:GetRanLoadingData()
+  if not SelectedData then
+    return nil
+  end
+  local Widget = UIManager(self):CreateWidget(SelectedData.WBPPath)
+  if not Widget then
+    return nil
+  end
+  if Widget.InitLoadingData then
+    Widget:InitLoadingData(SelectedData, self)
+  end
+  return Widget
 end
 
 AssembleComponents(WBP_CommonChangeSceneBg_C)

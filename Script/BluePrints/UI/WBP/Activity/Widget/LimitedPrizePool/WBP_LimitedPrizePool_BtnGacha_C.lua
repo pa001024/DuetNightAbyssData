@@ -305,7 +305,7 @@ function M:RealPrizeDraw()
       if self.bIsBigPrize and CurrentRound ~= RoundNum then
         local RoundSwitch = UIManager(GWorld.GameInstance):_CreateWidgetNew("LimitedPoolRoundSwitch")
         RoundSwitch:AddToViewport(UIConst.ZORDER_ABOVE_SystemGuide)
-        RoundSwitch:Init(CurrentRoundAfterDraw, RoundNum, {
+        RoundSwitch:Init(self.EventId, CurrentRoundAfterDraw, RoundNum, {
           RoundSwitch,
           function()
             self:SetFocus()
@@ -357,7 +357,7 @@ function M:ShowReward(PrizeResult, DrawCount, Callback)
   local Parent = self.Owner
   local ZOrder = Parent and Parent.GetZOrder and Parent:GetZOrder()
   Widget:AddToViewport(ZOrder or UIConst.ZORDER_ABOVE_SystemGuide)
-  Widget:Init(RewardPool, WonIndex, bIsBigPrize, PrizeResult, DrawCount, ConvertFlags, Callback)
+  Widget:Init(RewardPool, WonIndex, bIsBigPrize, PrizeResult, DrawCount, ConvertFlags, Callback, self.EventId)
   self.Owner:SetShowRewardWidget(Widget)
 end
 

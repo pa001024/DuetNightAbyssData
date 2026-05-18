@@ -5,6 +5,26 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("ChannelInfo", {
+  [2] = {
+    AccountPrefix = "vivo",
+    ChannelId = 2,
+    DeviceType = "mobile",
+    Name = "安卓-vivo",
+    OS = "android",
+    Provider = "vivo",
+    Region = "china",
+    SDKChannelId = 3
+  },
+  [11] = {
+    AccountPrefix = "harmony",
+    ChannelId = 11,
+    DeviceType = "mobile",
+    Name = "安卓-华为",
+    OS = "android",
+    Provider = "huawei",
+    Region = "china",
+    SDKChannelId = 3
+  },
   [18] = {
     AccountPrefix = "hero",
     ChannelId = 18,
@@ -14,6 +34,16 @@ return ReadOnly("ChannelInfo", {
     Provider = "hero",
     Region = "china",
     SDKChannelId = 0
+  },
+  [23] = {
+    AccountPrefix = "xiaomi",
+    ChannelId = 23,
+    DeviceType = "mobile",
+    Name = "安卓-小米",
+    OS = "android",
+    Provider = "xiaomi",
+    Region = "china",
+    SDKChannelId = 3
   },
   [46] = {
     AccountPrefix = "bilibili",
@@ -55,6 +85,26 @@ return ReadOnly("ChannelInfo", {
     Region = "global",
     SDKChannelId = 1
   },
+  [181] = {
+    AccountPrefix = "hero",
+    ChannelId = 181,
+    DeviceType = "mobile",
+    Name = "全球SDK-华为",
+    OS = "android",
+    Provider = "hero",
+    Region = "global",
+    SDKChannelId = 1
+  },
+  [197] = {
+    AccountPrefix = "hero",
+    ChannelId = 197,
+    DeviceType = "mobile",
+    Name = "Onestore",
+    OS = "android",
+    Provider = "hero",
+    Region = "global",
+    SDKChannelId = 1
+  },
   [237] = {
     AccountPrefix = "hero",
     ChannelId = 237,
@@ -75,6 +125,26 @@ return ReadOnly("ChannelInfo", {
     Region = "global",
     SDKChannelId = 1
   },
+  [255] = {
+    AccountPrefix = "honor",
+    ChannelId = 255,
+    DeviceType = "mobile",
+    Name = "荣耀",
+    OS = "android",
+    Provider = "honor",
+    Region = "china",
+    SDKChannelId = 3
+  },
+  [268] = {
+    AccountPrefix = "hero",
+    ChannelId = 268,
+    DeviceType = "mobile",
+    Name = "全球SDK-rustore",
+    OS = "android",
+    Provider = "hero",
+    Region = "global",
+    SDKChannelId = 1
+  },
   [269] = {
     AccountPrefix = "bilibili",
     ChannelId = 269,
@@ -84,6 +154,26 @@ return ReadOnly("ChannelInfo", {
     Provider = "bilibili",
     Region = "china",
     SDKChannelId = 3
+  },
+  [270] = {
+    AccountPrefix = "harmony",
+    ChannelId = 270,
+    DeviceType = "mobile",
+    Name = "鸿蒙",
+    OS = "openharmony",
+    Provider = "harmony",
+    Region = "china",
+    SDKChannelId = 3
+  },
+  [272] = {
+    AccountPrefix = "hero",
+    ChannelId = 272,
+    DeviceType = "mobile",
+    Name = " 全球SDK-安卓-taptap",
+    OS = "android",
+    Provider = "hero",
+    Region = "global",
+    SDKChannelId = 1
   },
   [286] = {
     AccountPrefix = "hero",

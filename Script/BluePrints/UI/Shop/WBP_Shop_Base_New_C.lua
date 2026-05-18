@@ -11,8 +11,6 @@ function M:InitShop(MainTabIdx, SubTabIdx, ShopItemId, ShopType, bBanAnimation)
       PlayerController.bShowMouseCursor = false
     end
   end
-  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
-  Player:SetCanInteractiveTrigger(false)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "OpenShopMain", nil)
   if not ShopType then
     DebugPrint("ShopType缺失，ZDX_请对应系统接口负责人传入商城具体的SystemName")

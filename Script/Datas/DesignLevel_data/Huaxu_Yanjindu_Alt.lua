@@ -85,6 +85,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["2020026"] = {
+      CreatorId = 2020026,
+      UnitType = "Mechanism",
+      UnitId = 11001
+    },
     ["2020033"] = {
       CreatorId = 2020033,
       UnitType = "Mechanism",
@@ -230,6 +235,15 @@ return {
         UnitType = "Drop",
         UnitId = 2000078,
         RarelyId = 7046001
+      }
+    },
+    ["7046002"] = {
+      AutoReset = 0,
+      ["2020038"] = {
+        CreatorId = 2020038,
+        UnitType = "Drop",
+        UnitId = 90027,
+        RarelyId = 7046002
       }
     }
   },

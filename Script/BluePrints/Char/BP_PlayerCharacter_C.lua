@@ -17,6 +17,7 @@ BP_PlayerCharacter_C._components = {
   "BluePrints.Char.CharacterComponent.CameraComponent",
   "BluePrints.Char.CharacterComponent.CamPostProcessMgrComponent",
   "BluePrints.Char.CharacterComponent.AttackInputComponent",
+  "BluePrints.Char.CharacterComponent.AutoCombatInputComponent",
   "BluePrints.Char.CharacterComponent.PlayerCommonInterface",
   "BluePrints.Char.CharacterComponent.NewBDCTrackComponent",
   "BluePrints.Char.CharacterComponent.CharacterPickupUseComponent",
@@ -42,19 +43,13 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   EventManager:AddEvent(EventID.CloseLoading, self, self.AfterLoading)
   EventManager:AddEvent(EventID.OnLevelDeliverBlackCurtainEnd, self, self.AfterLoading)
   EventManager:AddEvent(EventID.OnRepBulletNum, self, self.UpdateBulletNumUI)
-  self.SpecialMountList = {
-    1004,
-    1005,
-    1006,
-    1007
-  }
-  EventManager:AddEvent(EventID.OnEnableBattleMount, self, self.OnEnableBattleMount)
-  EventManager:AddEvent(EventID.OnDisableBattleMount, self, self.OnDisableBattleMount)
   self:SetActorHideTag("login", true)
   self.DisableInputTags = TArray("")
   MiscUtils.InitializeSettings(self)
   self:RefreshTeamMemberInfo("ReceiveBeginPlay")
   if self:IsMainPlayer() then
+    EventManager:RemoveEvent(EventID.ChangeRole, self)
+    EventManager:AddEvent(EventID.ChangeRole, self, self.CheckUnreleasedCharCheat)
     EventManager:FireEvent(EventID.OnMainCharacterBeginPlay)
     local IsOpenHelperAim = EMCache:Get("IsOpenHelperAim")
     self.IsOpenHelperAim = nil == IsOpenHelperAim and true or IsOpenHelperAim
@@ -80,18 +75,7 @@ function BP_PlayerCharacter_C:ReceiveBeginPlay()
   if self.CharFSMComp then
     self.CharFSMComp.OnAfterTagChanged:Add(self, self.OnTagChange)
   end
-end
-
-function BP_PlayerCharacter_C:OnEnableBattleMount(Character)
-  if self == Character and self:IsMainPlayer() and CommonUtils.HasValue(self.SpecialMountList, self.CurrentMountId) then
-    UTalkFunctionLibrary.EnterHeadUIState(self, EHeadWidgetLocationState.SpecialAction)
-  end
-end
-
-function BP_PlayerCharacter_C:OnDisableBattleMount(Character)
-  if self == Character and self:IsMainPlayer() then
-    UTalkFunctionLibrary.LeaveHeadUIState(self, EHeadWidgetLocationState.SpecialAction)
-  end
+  self:InitAutoCombatComponent()
 end
 
 function BP_PlayerCharacter_C:TempSuyiReset()
@@ -141,6 +125,9 @@ end
 
 function BP_PlayerCharacter_C:SetGamepadFromCache()
   if not self:IsMainPlayer() then
+    return
+  end
+  if self.UIModePlatform == "Mobile" then
     return
   end
   local GamepadLayout = EMCache:Get("GamepadLayout")
@@ -432,22 +419,18 @@ end
 
 function BP_PlayerCharacter_C:CalcCurrentPlayerRegionId()
   local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   local CalcRegionId = self:GetRegionId()
-  if not (CalcRegionId and Avatar) or not Avatar:CheckCurrentSubRegion() then
+  if -1 == CalcRegionId or not Avatar:CheckCurrentSubRegion(CalcRegionId) then
     return
   end
   if Avatar.SyncReason ~= CommonConst.SyncReason.Normal then
     return
   end
-  if not Avatar:CheckCurrentSubRegion(CalcRegionId) then
-    return
-  end
-  local CurrentRegionId = Avatar.CurrentRegionId
-  if CurrentRegionId ~= CalcRegionId and -1 ~= CalcRegionId then
+  if Avatar.CurrentRegionId ~= CalcRegionId then
     if Avatar:GetSubRegionId2RegionId() ~= Avatar:GetSubRegionId2RegionId(CalcRegionId) then
-      return
-    end
-    if self:GetRegionId(self:GetLastSafeLocation()) ~= CalcRegionId then
       return
     end
     Avatar:SkipRegion(CalcRegionId)
@@ -467,20 +450,6 @@ function BP_PlayerCharacter_C:OnEnteredNewSubRegion()
     self:ChangeBackToHero()
   end
   AudioManager(self):CheckLevelSoundAndRegionId(Avatar.CurrentRegionId)
-end
-
-function BP_PlayerCharacter_C:GetRegionId(TargetLocation)
-  TargetLocation = TargetLocation or self.CurrentLocation
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  local CalcRegionId = -1
-  if not GameMode then
-    return
-  end
-  local LevelLoader = GameMode:GetLevelLoader()
-  if LevelLoader and GWorld:GetWorldRegionState() and LevelLoader.IsWorldLoader then
-    CalcRegionId = LevelLoader:GetRegionIdByLocation(TargetLocation)
-  end
-  return CalcRegionId
 end
 
 function BP_PlayerCharacter_C:StartLookAt(LookType, LookInfo)
@@ -582,6 +551,7 @@ function BP_PlayerCharacter_C:InitSceneStartUI()
     local SceneStartUI = UIManager:LoadUI(UIConst.SCENESTARTUI, "SceneStartUI", UIConst.ZORDER_FOR_DESKTOP)
     if nil ~= SceneStartUI then
       SceneStartUI:InitMainPage()
+      SceneStartUI:Hide()
     end
   end
   if not self:IsDead() then
@@ -709,6 +679,7 @@ function BP_PlayerCharacter_C:UpdateUIMode(UIMode)
     else
       CharMainUI:OnCloseOtherUI()
       CharMainUI:InitMainPage()
+      CharMainUI:Hide()
     end
   end
 end
@@ -1411,6 +1382,14 @@ function BP_PlayerCharacter_C:PickupFunctionDispatcher(UnitId, PickUpCount, Tran
       local FunctionName = "PickupTo" .. ItemInfo.UseEffectType
       if IsDedicatedServer(self) then
         if rawget(Const.SavePickupType, ItemInfo.UseEffectType) and not GWorld.bDebugServer then
+          local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+          if GameMode:CheckServerDungeonEnable() then
+            if not GameMode.EMGameState.PickupEid2ServerUniqueId:Find(PickUpEid) then
+              DebugPrint("PickUpToSave Failure:", UnitId, PickUpCount, Transform, CharacterEid, PickUpEid, bExtra)
+              return
+            end
+            GameMode.EMGameState.PickupEid2ServerUniqueId:Remove(PickUpEid)
+          end
           local DSEntity = GWorld:GetDSEntity()
           if DSEntity then
             DSEntity:PickUpToSave(FunctionName, PickUpCount, ItemInfo, UnitId, Transform, CharacterEid, bExtra)
@@ -1547,39 +1526,21 @@ function BP_PlayerCharacter_C:TryEnterSlideMech()
   if not GameState then
     return
   end
-  local PlayerLocation = self:K2_GetActorLocation()
-  local Controller = self:GetController()
-  if not Controller then
-    return
-  end
-  local CanInteractiveDis = DataMgr.MovementParams.CanInteractiveDis.ParamValue or 0
-  local CanInteractiveAngle = DataMgr.MovementParams.CanInteractiveAngle.ParamValue or 0
-  local ControlRotation = Controller:GetControlRotation()
-  local ForwardVector = UE4.UKismetMathLibrary.GetForwardVector(ControlRotation)
-  local BestMech
-  local BestDist = math.huge
   local SlideMechMap = GameState.SlideMechanismMap:ToTable()
   for Eid, SlideMech in pairs(SlideMechMap) do
-    if IsValid(SlideMech) then
-      local MechLocation = SlideMech:K2_GetActorLocation()
-      local Delta = MechLocation - PlayerLocation
-      local Distance = Delta:Size()
-      if CanInteractiveDis >= Distance then
-        local DirToMech = Delta
-        DirToMech:Normalize()
-        local DotProduct = ForwardVector:Dot(DirToMech)
-        local AngleRad = math.acos(math.clamp(DotProduct, -1, 1))
-        local AngleDeg = math.deg(AngleRad)
-        if CanInteractiveAngle >= AngleDeg and BestDist > Distance then
-          BestDist = Distance
-          BestMech = SlideMech
-        end
+    if IsValid(SlideMech) and SlideMech.bProximityPromptShowing then
+      DebugPrint("TryEnterSlideMech proximity ", SlideMech.Eid, SlideMech:GetName())
+      local Controller = self:GetController()
+      if Controller then
+        local ControlRotation = Controller:GetControlRotation()
+        SlideMech.CachedPlayerForward = UE4.UKismetMathLibrary.GetForwardVector(ControlRotation)
       end
+      SlideMech:RemoveTimer("ProximityCheck")
+      SlideMech:HideSlidePrompt()
+      SlideMech.NearbyPlayer = nil
+      SlideMech:PlayerFirstEnterSlideMech(self)
+      return
     end
-  end
-  if BestMech then
-    DebugPrint("TryEnterSlideMech ", BestMech.Eid, BestMech:GetName())
-    BestMech:PlayerFirstEnterSlideMech(self)
   end
 end
 
@@ -1598,8 +1559,14 @@ function BP_PlayerCharacter_C:BeginEnterSlideMech(MechEid)
     DebugPrint("BeginEnterSlideMech: SplineComponent not found on SlideMech")
     return
   end
-  local OriginLoc = SplineComp:GetLocationAtSplinePoint(0, ESplineCoordinateSpace.World)
-  local SplineStartLocation = SlideMech:GetClosedTransformInSpline(OriginLoc)
+  local SplineStartLocation
+  if SlideMech.CachedEntryDistance then
+    local EntryLoc = SplineComp:GetLocationAtDistanceAlongSpline(SlideMech.CachedEntryDistance, ESplineCoordinateSpace.World)
+    SplineStartLocation = SlideMech:GetClosedTransformInSpline(EntryLoc)
+  else
+    local OriginLoc = SplineComp:GetLocationAtSplinePoint(0, ESplineCoordinateSpace.World)
+    SplineStartLocation = SlideMech:GetClosedTransformInSpline(OriginLoc)
+  end
   self.SlideMechEid = MechEid
   local PlayerLocation = self:K2_GetActorLocation()
   local Direction = SplineStartLocation - PlayerLocation
@@ -1753,6 +1720,7 @@ function BP_PlayerCharacter_C:ChangeBackToHeroSlideMech()
 end
 
 function BP_PlayerCharacter_C:FirstInSlideMech()
+  self.CharacterMovement:SetMovementMode(UE4.EMovementMode.MOVE_Flying)
   self.SlideMovingRate = 1
   local AccTime = DataMgr.MovementParams.AccTime.ParamValue or 0
   if AccTime > 0 then
@@ -1771,7 +1739,25 @@ function BP_PlayerCharacter_C:FirstInSlideMech()
     if GameState then
       local SlideMech = GameState.SlideMechanismMap:FindRef(self.SlideMechEid)
       if IsValid(SlideMech) then
+        local EntryProgress = SlideMech.CachedEntryProgress
+        if EntryProgress then
+          SlideMech.CachedEntryProgress = nil
+          SlideMech.CachedEntryDistance = nil
+        end
+        if SlideMech.AllowTurn and SlideMech.CachedPlayerForward then
+          local EntryDist = (EntryProgress or 0) * SlideMech.Length
+          local Tangent = SlideMech.Spline:GetDirectionAtDistanceAlongSpline(EntryDist, ESplineCoordinateSpace.World)
+          local Dot = SlideMech.CachedPlayerForward:Dot(Tangent)
+          SlideMech.MoveDirection = Dot >= 0 and 1 or -1
+          SlideMech.CachedPlayerForward = nil
+        else
+          SlideMech.MoveDirection = 1
+          SlideMech.CachedPlayerForward = nil
+        end
         SlideMech:RealFirstInSlideMech(self)
+        if EntryProgress then
+          SlideMech.Progress = EntryProgress
+        end
         SlideMech:BeginSlideSplineMove(true)
       end
     end
@@ -1797,6 +1783,7 @@ function BP_PlayerCharacter_C:TryLeaveSlideMech()
 end
 
 function BP_PlayerCharacter_C:ReceiveEndPlay(Reason)
+  self:DeinitAutoCombatComponent()
   if self.ArmoryHelper then
     self.ArmoryHelper:DestroySelf()
   end
@@ -1968,7 +1955,7 @@ function BP_PlayerCharacter_C:UpdateBulletNumUI()
         end
       end
     end
-  end)
+  end, nil, "UpdateBulletNumUI")
 end
 
 function BP_PlayerCharacter_C:UpdateSkillUIInfo(ChangedSkills)
@@ -2053,14 +2040,8 @@ function BP_PlayerCharacter_C:TryOpenSkillUI(CharUIId, bIsOpenByBuff)
       
       if bIsOpenByBuff and CharUIInfo.TriggerBuffDelay then
         self:AddTimer_Combat(CharUIInfo.TriggerBuffDelay, function()
-          local Buffs = self.BuffManager and self.BuffManager.Buffs
-          if Buffs then
-            for _, Buff in pairs(Buffs) do
-              if Buff.BuffId == CharUIInfo.TriggerBuffId then
-                OpenUIFunctor()
-                break
-              end
-            end
+          if self.BuffManager and self.BuffManager:HasBuff(CharUIInfo.TriggerBuffId) then
+            OpenUIFunctor()
           end
         end, false, 0, nil, true)
       else
@@ -2186,39 +2167,42 @@ function BP_PlayerCharacter_C:OnPreDungeonSettlement()
 end
 
 function BP_PlayerCharacter_C:GetDungeonSettlementWinMont(ScenePlayerIndex, WeaponMeleeOrRanged, SettlementData)
-  local WinMont = "LevelFinish_Armory_Montage"
+  local WinMont = "Armory_Show_Montage"
+  local Prefix = "Armory"
   local SkinData = DataMgr.Skin[self.CurrentSkinId]
-  local ModelId
-  if nil ~= SkinData then
-    ModelId = SkinData.SkinModelId
+  local ModelWinMont
+  if nil ~= SkinData and SkinData.SettlementMontage then
+    ModelWinMont = SkinData.SettlementMontage .. "_Montage"
   end
-  local ModelWinMont = "LevelFinish_Armory_" .. ModelId .. "_Montage"
+  local DefaultSkinPrefix = "Interactive/Gesture"
   local PathExist = false
-  DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont SkinId: ", self.CurrentSkinId, "ModelId: ", ModelId, "ModelWinMont", ModelWinMont)
-  if ModelId and self:CheckLevelFinishMontagePath(ModelWinMont) then
+  DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont SkinId: ", self.CurrentSkinId, "ModelWinMont", ModelWinMont)
+  if ModelWinMont then
     WinMont = ModelWinMont
+    Prefix = DefaultSkinPrefix
     PathExist = true
-  else
-    local WeaponType = GWorld.GameInstance.ScenePlayers[ScenePlayerIndex].CurrentWeaponType or "Armory"
-    if SettlementData and SettlementData.UseDefaultMontage then
-      WeaponType = "Armory"
+  elseif not SettlementData or not SettlementData.UseDefaultMontage then
+    local WeaponType = GWorld.GameInstance.ScenePlayers[ScenePlayerIndex].CurrentWeaponType
+    if WeaponType then
+      local WeaponWinMont = "LevelFinish_" .. WeaponType .. "_Montage"
+      local WeaponPreifx = "Interactive/LevelFinish"
+      if self:CheckLevelFinishMontagePath(WeaponPreifx, WeaponWinMont) then
+        Prefix = WeaponPreifx
+        WinMont = WeaponWinMont
+        PathExist = true
+      end
+      DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont WeaponType: ", WeaponType, "WeaponMeleeOrRanged: ", WeaponMeleeOrRanged, "WeaponWinMont", WeaponWinMont)
     end
-    local WeaponWinMont = "LevelFinish_" .. WeaponType .. "_Montage"
-    if self:CheckLevelFinishMontagePath(WeaponWinMont) then
-      WinMont = WeaponWinMont
-      PathExist = true
-    end
-    DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont WeaponType: ", WeaponType, "WeaponMeleeOrRanged: ", WeaponMeleeOrRanged, "WeaponWinMont", WeaponWinMont)
   end
-  DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont WinMont: ", WinMont)
-  return WinMont, PathExist
+  DebugPrint("BP_PlayerCharacter_C:GetDungeonSettlementWinMont Prefix: ", Prefix, "WinMont: ", WinMont)
+  return Prefix, WinMont, PathExist
 end
 
 function BP_PlayerCharacter_C:OnDungeonSettlement(IsWin, Index, SettlementData)
   local PathExist = false
   if IsWin then
     local WeaponMeleeOrRanged = GWorld.GameInstance.ScenePlayers[Index].CurrentWeaponMeleeOrRanged
-    local WinMont, PathExistResult = self:GetDungeonSettlementWinMont(Index, SettlementData)
+    local Prefix, WinMont, PathExistResult = self:GetDungeonSettlementWinMont(Index, SettlementData)
     PathExist = PathExistResult
     local BattleCharTag = self:GetBattleCharBodyType()
     local CameraParam = FVector(0, 0, 0)
@@ -2237,9 +2221,9 @@ function BP_PlayerCharacter_C:OnDungeonSettlement(IsWin, Index, SettlementData)
     end
     DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement BattleCharTag", BattleCharTag, "CameraParam", CameraParam, "CameraRotationParam")
     self:PlayDungeonSettlementSimpleSkillFeature(false, false, false, false, true, true, CameraParam, CameraRotationParam)
-    self:PlayActionMontage("Interactive/LevelFinish", WinMont, {})
+    self:PlayActionMontage(Prefix, WinMont, {})
     self:SetEndPointOffset(Index, SettlementData)
-    DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement PlayActionMontage: ", WinMont)
+    DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlement PlayActionMontage: ", Prefix, WinMont)
     if WeaponMeleeOrRanged then
       self:ChangeUsingWeaponByType(WeaponMeleeOrRanged)
     end
@@ -2280,7 +2264,7 @@ function BP_PlayerCharacter_C:OnMVPSequenceFinish()
   EventManager:FireEvent(EventID.OnMVPSequenceFinish)
 end
 
-function BP_PlayerCharacter_C:CheckLevelFinishMontagePath(MontageSuffix)
+function BP_PlayerCharacter_C:CheckLevelFinishMontagePath(PathPrefix, MontageSuffix)
   local RootPath = UBlueprintPathsLibrary.ProjectContentDir()
   local ModelId = self:GetCharModelComponent():GetCurrentModelId()
   local ModelData = DataMgr.Model[ModelId]
@@ -2290,7 +2274,7 @@ function BP_PlayerCharacter_C:CheckLevelFinishMontagePath(MontageSuffix)
     return false
   end
   PlayerAnimPath = string.gsub(PlayerAnimPath, "/Game/", RootPath)
-  local MontPath = PlayerAnimPath .. "Interactive/LevelFinish/" .. Prefix .. MontageSuffix .. ".uasset"
+  local MontPath = PlayerAnimPath .. PathPrefix .. "/" .. Prefix .. MontageSuffix .. ".uasset"
   DebugPrint("CheckLevelFinishMontagePath MontPath:", MontPath)
   if UBlueprintPathsLibrary.FileExists(MontPath) then
     return true
@@ -2301,10 +2285,10 @@ end
 
 function BP_PlayerCharacter_C:OnDungeonSettlementByIndex(Index, CurrentWeaponType, CurrentWeaponMeleeOrRanged, SettlementData)
   local WeaponMeleeOrRanged = CurrentWeaponMeleeOrRanged
-  local WinMont, PathExist = self:GetDungeonSettlementWinMont(Index, WeaponMeleeOrRanged, SettlementData)
-  self:PlayActionMontage("Interactive/LevelFinish", WinMont, {})
+  local Prefix, WinMont, PathExist = self:GetDungeonSettlementWinMont(Index, WeaponMeleeOrRanged, SettlementData)
+  self:PlayActionMontage(Prefix, WinMont, {})
   self:SetEndPointOffset(Index, SettlementData)
-  DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlementByIndex PlayActionMontage: ", WinMont)
+  DebugPrint("BP_PlayerCharacter_C:OnDungeonSettlementByIndex PlayActionMontage: ", Prefix, WinMont)
   if WeaponMeleeOrRanged then
     self:ChangeUsingWeaponByType(WeaponMeleeOrRanged)
   end
@@ -2823,9 +2807,17 @@ function BP_PlayerCharacter_C:RecoverHeroInfo()
   local Avatar = GWorld:GetAvatar()
   local HeroTempInfo = self.HeroTempInfo or Avatar.HeroTempInfo
   if nil ~= HeroTempInfo then
-    local Avatar = GWorld:GetAvatar()
+    local QuestRoleID = HeroTempInfo.QuestRoleID
+    local AvatarInfo
+    if QuestRoleID and 0 ~= QuestRoleID then
+      AvatarInfo = AvatarUtils:GetBattleInfoByQuestRoleId(QuestRoleID, Avatar)
+      if AvatarInfo.RoleInfo then
+        AvatarInfo.RoleInfo.AvatarQuestRoleID = QuestRoleID
+      end
+    else
+      AvatarInfo = AvatarUtils:GetDefaultBattleInfo(Avatar)
+    end
     local PlayerController = self:GetController()
-    local AvatarInfo = AvatarUtils:GetDefaultBattleInfo(Avatar)
     AvatarInfo = AvatarUtils:UpdateBattleInfo(AvatarInfo, HeroTempInfo)
     PlayerController:SetAvatarInfo(CommonUtils.ObjId2Str(Avatar.Eid), AvatarInfo)
     self.HeroTempInfo = nil
@@ -2983,53 +2975,16 @@ function BP_PlayerCharacter_C:ForbidActiveSkills(bForbid)
   self:ForbidSkills(bForbid, Skills)
 end
 
-local bDungeonForbidSkillsByBuff = {}
-
 function BP_PlayerCharacter_C:ForbidAllSkillsByBuff(bForbid)
   DebugPrint("lgc@ ForbidAllSkillsByBuff", bForbid)
-  local DisableSkillsBuffId = 311
-  local BuffData = DataMgr.Buff[DisableSkillsBuffId]
-  if not BuffData then
-    return
-  end
-  local DisableSkills = BuffData.DisableSkills
-  local Skills = {}
-  for i, Skill in pairs(DisableSkills) do
-    Skills[i] = ESkillName[Skill]
-  end
-  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  local UIManger = GameInstance:GetGameUIManager()
-  if UIManger then
-    local Widget = UIManger:GetUIObj("BattleMain")
-    if Widget then
-      local SkillWidget = Widget.Char_Skill
-      local StateName = bForbid and "Ban" or "UnBan"
-      if SkillWidget then
-        for _, Skill in pairs(Skills) do
-          SkillWidget:ChangeSkillButtonState(Skill, StateName)
-        end
-      end
-    end
-  end
-  if not IsAuthority(self) then
-    DebugPrint("lgc@ not IsAuthority")
-    return
-  else
-    DebugPrint("lgc@ IsAuthority")
-  end
+  local DisableSkillsBuffId = Const.DungeonDisableAllSkillsBuffId
   if bForbid then
     DebugPrint("lgc@ AddBuffToTarget", DisableSkillsBuffId, self:GetName())
     Battle(self):AddBuffToTarget(self, self, DisableSkillsBuffId, -1, nil, nil)
-    bDungeonForbidSkillsByBuff[self.Eid] = true
   else
     DebugPrint("lgc@ RemoveBuffFromTarget", DisableSkillsBuffId, self:GetName())
     Battle(self):RemoveBuffFromTarget(self, self, DisableSkillsBuffId, false, -1)
-    bDungeonForbidSkillsByBuff[self.Eid] = false
   end
-end
-
-function BP_PlayerCharacter_C:IsDungeonForbidSkillsByBuff()
-  return bDungeonForbidSkillsByBuff[self.Eid]
 end
 
 function BP_PlayerCharacter_C:ForbidAllSkills(bForbid)
@@ -3607,6 +3562,32 @@ end
 function BP_PlayerCharacter_C:UpdateVirtualJoystickEnableMoveLock(bEnable)
   EMCache:Set("VirtualJoystickMoveLock", bEnable)
   UIManager(self):SetVirtualJoystickEnableMoveLock(bEnable)
+end
+
+function BP_PlayerCharacter_C:CheckUnreleasedCharCheat()
+  if 0 ~= self.AvatarQuestRoleID then
+    return
+  end
+  local CharId = self.CurrentRoleId
+  if not CharId or 0 == CharId then
+    return
+  end
+  local CharData = DataMgr.Char[CharId]
+  if not CharData then
+    return
+  end
+  if CommonUtils.IsOpenVersion(CharData.OpenVersion) then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  DebugPrint("gmy@BP_PlayerCharacter_C BP_PlayerCharacter_C:CheckUnreleasedCharCheat", CharId)
+  local JsonMsg = Json.encode({
+    CheatMsg = string.format("UnreleasedChar CharId=%d OpenVersion=%s", CharId, tostring(CharData.OpenVersion))
+  })
+  Avatar:CallServerMethod("SendCheatMsgToServer", CommonConst.MonitorCheatType.UnreleasedChar, JsonMsg)
 end
 
 AssembleComponents(BP_PlayerCharacter_C, {

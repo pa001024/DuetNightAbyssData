@@ -21,6 +21,7 @@ function ForgeDataModel:Initialize()
   if not PlayerAvatar then
     return
   end
+  self:CheckTargetDraftCache()
   local HoldDrafts = PlayerAvatar.HoldDrafts or {}
   local SeenDraftIds = EMCache:Get("SeenDraftIds", true) or {}
   for DraftId, _ in pairs(HoldDrafts) do
@@ -445,6 +446,8 @@ function ForgeDataModel:ConstructForgeItemContent(Obj, DraftInfo)
     Obj.ProductCount = PlayerAvatar:GetResourceNum(DraftInfo.ProductId)
   elseif DraftInfo.ProductType == "CharAccessory" then
     Obj.ProductCount = self:HasAccessory(DraftInfo.ProductId) and 1 or 0
+  elseif DraftInfo.ProductType == "IronTicket" then
+    Obj.ProductCount = self:HasIronTicket(DraftInfo.ProductId)
   else
     Obj.ProductCount = 0
   end
@@ -493,6 +496,19 @@ function ForgeDataModel:ConstructForgeCompendiumItemContent(Obj, DraftInfo)
   end
   
   return Obj
+end
+
+function ForgeDataModel:CheckTargetDraftCache()
+  local NewTargetDraftIds = {}
+  local TargetDraftIds = EMCache:Get("TargetDraftIds", true) or {}
+  local Avatar = GWorld:GetAvatar()
+  local ServerDrafts = Avatar.Drafts or {}
+  for DraftId, _ in pairs(TargetDraftIds) do
+    if ServerDrafts[DraftId] then
+      NewTargetDraftIds[DraftId] = true
+    end
+  end
+  EMCache:Set("TargetDraftIds", NewTargetDraftIds, true)
 end
 
 function ForgeDataModel:AddDraftToTarget(DraftId)
@@ -548,6 +564,9 @@ function ForgeDataModel:GetProductNameByTypeAndId(Type, Id)
   elseif "CharAccessory" == Type then
     local ResData = DataMgr.CharAccessory[Id]
     return ResData and ResData.Name or nil
+  elseif "IronTicket" == Type then
+    local TicketData = DataMgr.IronTicket[Id]
+    return TicketData and TicketData.Name or nil
   else
     return nil
   end
@@ -613,6 +632,17 @@ function ForgeDataModel:HasAccessory(Id)
   return false
 end
 
+function ForgeDataModel:HasIronTicket(Id)
+  local PlayerAvatar = GWorld:GetAvatar()
+  local Count = 0
+  for _, Ticket in pairs(PlayerAvatar.IronSurvivalTicket) do
+    if Id == Ticket.TicketId then
+      Count = Count + 1
+    end
+  end
+  return Count
+end
+
 function ForgeDataModel:GetDatasByFilter(Filter, SubFilter, CommonFilter)
   self:UpdateData()
   local FilterResult = {HasFilterItem = false, HasSubFilterItem = false}
@@ -647,7 +677,7 @@ function ForgeDataModel:GetCompendiumDatasByFilter(Filter)
       local ReleaseVersion = Data.ReleaseVersion
       local GlobalReleaseVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
       if ReleaseVersion and ReleaseVersion > GlobalReleaseVersion and Avatar.Drafts[Id] == nil then
-      elseif Filter and (Filter == ForgeConst.TabType.All or Filter == Data.ProductType) then
+      elseif Filter and ForgeConst.IsCompendiumFilterMatch(Filter, Data.ProductType) then
         local CompendiumInfo = {}
         CompendiumInfo.Id = Id
         if Avatar.Drafts[Id] then
@@ -927,7 +957,14 @@ function ForgeDataModel:Filter_Mod(Item, SubFilter, CommonFilter)
 end
 
 function ForgeDataModel:Filter_Resource(Item, SubFilter)
-  if Item.ProductType ~= "Resource" then
+  local IsResource = false
+  for _, Type in pairs(ForgeConst.ResourceTypes) do
+    if Item.ProductType == Type then
+      IsResource = true
+      break
+    end
+  end
+  if not IsResource then
     return {HasFilterItem = false}
   end
   if SubFilter then

@@ -16,6 +16,12 @@ function M:Construct()
   self.InputLocked = false
   self.ElapsedSec = 0
   self.TimerKey = "RecordTimer_" .. tostring(self)
+  local subsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UEMHeroUSDKSubsystem:StaticClass())
+  if subsystem then
+    self.HeroUSDKSubsystem = subsystem
+    subsystem.OnDouYinStopRecordSuccess:Add(self, self.OnDouYinStopRecordSuccess)
+    subsystem.OnDouYinStopRecordFail:Add(self, self.OnDouYinStopRecordFail)
+  end
   self:ApplyUI()
   self:PlayAnim(Anim.Normal)
 end
@@ -23,6 +29,11 @@ end
 function M:Destruct()
   self.Super.Destruct(self)
   self:StopTimer()
+  if self.HeroUSDKSubsystem then
+    self.HeroUSDKSubsystem.OnDouYinStopRecordSuccess:Remove(self, self.OnDouYinStopRecordSuccess)
+    self.HeroUSDKSubsystem.OnDouYinStopRecordFail:Remove(self, self.OnDouYinStopRecordFail)
+    self.HeroUSDKSubsystem = nil
+  end
 end
 
 function M:OnPressed()
@@ -68,6 +79,20 @@ function M:OnClicked()
   self:AddTimer(0, function()
     self.InputLocked = false
   end, false)
+end
+
+function M:OnDouYinStopRecordSuccess(_data)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if UIManager then
+    UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Saved_Album"))
+  end
+end
+
+function M:OnDouYinStopRecordFail(_data)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if UIManager then
+    UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Save_Failed"))
+  end
 end
 
 function M:DoStartRecord()

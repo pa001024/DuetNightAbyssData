@@ -361,7 +361,7 @@
     "name": "Pocket Companion's Snack",
     "desc": "After casting Geniemon Support, increases Damage Dealt by <Highlight>$1</> for <Highlight>$2</>s.",
     "simple_desc": "With Geniemon Support, increases Damage Dealt.",
-    "ip_desc": "\"Every gain comes at a cost.\" This cliché becomes intriguing in a game setting. \nThe Illusionist tosses his toy ball into the box. \"Good news or bad news first?\"",
+    "ip_desc": "As you journey onward, don't forget the brave little companions who follow you into the abyss. Crack open a treat to reward their courage!",
     "treasure_group": 1,
     "treasure_rarity": 1,
     "treasure_weight": 1000,
@@ -951,6 +951,36 @@
     "rl_archive_id": 32,
     "unlock_condition_text": "Artefact not unlocked",
     "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10220,
+    "name": "The Angels' Hymn",
+    "desc": "Increases Trace Points gained by <Highlight>50%</>.",
+    "simple_desc": "Greatly increases Trace Points gained.",
+    "ip_desc": "It is a hymn known to all, praising the merciful gods who guide lost souls. Devout followers of Elysium hum its heartrending melody in the abyss, praying for the gods to lead them from suffering to the promised land. Its gilded strains carry them into eternal slumber, still dreaming of salvation.",
+    "treasure_group": 10220,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_07.T_Rouge_Treasure_07",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        51
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 62,
+    "unlock_condition_text": "Artefact not unlocked",
+    "can_sell": 0,
     "client_build": {}
   },
   {

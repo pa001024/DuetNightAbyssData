@@ -179,6 +179,7 @@ function M:ShowChooseSuccessToast(SelectContent)
   self:SetWalnutContentRealChoice(self.RealChoice, false)
   self:SetWalnutContentRealChoice(SelectContent, true)
   self.RealChoice = SelectContent
+  self.WalnutChoiceFinish = 1
   self.Btn_Yes:SetText(GText("UI_CONFIRM_SELECTION"))
   if self.RealChoice == self.CurrentSelectContent then
     self.WidgetSwitcher_State:SetActiveWidgetIndex(1)
@@ -205,6 +206,10 @@ function M:OnPurchaseShopItem(Ret, ShopItemId, Count)
     local WalnutId = WalnutUtils:GetWalnutCacheIdByDungeonId(self.CurrentDungeonId)
     self:SelectWalnutById(WalnutId)
   end
+end
+
+function M:OnItemSelectionChange(Content)
+  self:OnListItemClicked(Content)
 end
 
 function M:OnListItemClicked(Content)
@@ -512,13 +517,13 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if IsUseKeyAndMouse then
     self:GamePadToPC()
     if self._ItemSelectionChangeBound then
-      self.List_WalnutItem.BP_OnItemSelectionChanged:Remove(self, self.OnListItemClicked)
+      self.List_WalnutItem.BP_OnItemSelectionChanged:Remove(self, self.OnItemSelectionChange)
       self._ItemSelectionChangeBound = false
     end
   else
     self:PCToGamepad()
     if not self._ItemSelectionChangeBound or self._ItemSelectionChangeBound == false then
-      self.List_WalnutItem.BP_OnItemSelectionChanged:Add(self, self.OnListItemClicked)
+      self.List_WalnutItem.BP_OnItemSelectionChanged:Add(self, self.OnItemSelectionChange)
       self._ItemSelectionChangeBound = true
     end
   end
@@ -703,7 +708,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
       IsEventHandled = true
     end
   elseif "SpaceBar" == InKeyName then
-    self:OnClickButtonYes()
+    if 1 ~= self.WalnutChoiceFinish then
+      self:OnClickButtonYes()
+    end
     IsEventHandled = true
   end
   if IsEventHandled then

@@ -68,6 +68,30 @@ return ReadOnly("QuestUI", {
     Title = "Name_100307",
     UIName = "Chapter_Transition02"
   },
+  [100400] = {
+    AudioPath = "event:/ui/common/main_quest_start_chapter3",
+    AudioPathFinal = "event:/ui/common/main_quest_start_chapter3",
+    CantoName = "Episode_03",
+    ChapterName = "UI_ChapterName_01",
+    IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Region/T_Region_Train.T_Region_Train'",
+    QuestId = 100400,
+    UIName = "ChapterUI02"
+  },
+  [100401] = {
+    AudioPath = "event:/ui/common/chapter_3_trans_clock",
+    AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
+    ChapterName = "Episode_02",
+    Params = {"24", "1"},
+    QuestId = 100401,
+    UIName = "Chapter_Transition04_02"
+  },
+  [100402] = {
+    AudioPath = "event:/ui/common/chapter_3_trans_clock",
+    AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
+    ChapterName = "Episode_02",
+    QuestId = 100402,
+    UIName = "Chapter_Transition04_02"
+  },
   [120101] = {
     AudioPath = "event:/ui/common/main_quest_start",
     AudioPathFinal = "event:/ui/common/main_quest_finish",
@@ -80,7 +104,7 @@ return ReadOnly("QuestUI", {
   [120111] = {
     AudioPath = "event:/ui/activity/feina_day_update",
     AudioPathFinal = "event:/ui/activity/feina_day_update",
-    CantoName = "1.0",
+    CantoName = "1",
     ChapterName = "Episode_Feina",
     QuestId = 120111,
     Title = "Name_120111",
@@ -89,7 +113,7 @@ return ReadOnly("QuestUI", {
   [120112] = {
     AudioPath = "event:/ui/activity/feina_day_update",
     AudioPathFinal = "event:/ui/activity/feina_day_update",
-    CantoName = "2.0",
+    CantoName = "2",
     ChapterName = "Episode_Feina",
     QuestId = 120112,
     Title = "Name_120112",
@@ -98,7 +122,7 @@ return ReadOnly("QuestUI", {
   [120113] = {
     AudioPath = "event:/ui/activity/feina_day_update",
     AudioPathFinal = "event:/ui/activity/feina_day_update",
-    CantoName = "3.0",
+    CantoName = "3",
     ChapterName = "Episode_Feina",
     QuestId = 120113,
     Title = "Name_120113",
@@ -107,7 +131,7 @@ return ReadOnly("QuestUI", {
   [120114] = {
     AudioPath = "event:/ui/activity/feina_day_update",
     AudioPathFinal = "event:/ui/activity/feina_day_update",
-    CantoName = "6.0",
+    CantoName = "6",
     ChapterName = "Episode_Feina",
     QuestId = 120114,
     Title = "Name_120114",

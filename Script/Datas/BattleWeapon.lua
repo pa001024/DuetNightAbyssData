@@ -60,452 +60,465 @@ T.RT_18 = {
   [1] = T.RT_17
 }
 T.RT_19 = {
-  AttrName = "SkillRange",
+  AttrName = "StrongValue",
   IsCharAttr = 1,
-  Rate = "#1"
+  Value = "#1"
 }
 T.RT_20 = {
   [1] = T.RT_19
 }
-T.RT_21 = {
+T.RT_21 = {"Dark"}
+T.RT_22 = {
+  AttrName = "SkillRange",
+  IsCharAttr = 1,
+  Rate = "#1"
+}
+T.RT_23 = {
+  [1] = T.RT_22
+}
+T.RT_24 = {
   2,
   102,
   22
 }
-T.RT_22 = {
+T.RT_25 = {
   1020101,
   1020102,
   1020103,
   1020104
 }
-T.RT_23 = {
+T.RT_26 = {
   SocketA = "root_Polearm_back",
   SocketB = "root_point"
 }
-T.RT_24 = {
+T.RT_27 = {
   HandHold = T.RT_7,
-  UnbindHand = T.RT_23
+  UnbindHand = T.RT_26
 }
-T.RT_25 = {
+T.RT_28 = {
   "Melee",
   "Polearm",
   "Almighty"
 }
-T.RT_26 = {
+T.RT_29 = {
   AttrName = "SkillIntensity",
   IsCharAttr = 1,
   Rate = "#1"
 }
-T.RT_27 = {
-  [1] = T.RT_26
+T.RT_30 = {
+  [1] = T.RT_29
 }
-T.RT_28 = {
+T.RT_31 = {
   2,
   102,
   23
 }
-T.RT_29 = {"Thunder"}
-T.RT_30 = {
+T.RT_32 = {"Thunder"}
+T.RT_33 = {
   2,
   102,
   21
 }
-T.RT_31 = {
+T.RT_34 = {
   SocketA = "root_Scythe_back",
   SocketB = "root_point"
 }
-T.RT_32 = {
-  HandHold = T.RT_7,
-  UnbindHand = T.RT_31
-}
-T.RT_33 = {AttrName = "CRI", Rate = "#1"}
-T.RT_34 = {
-  [1] = T.RT_33
-}
 T.RT_35 = {
+  HandHold = T.RT_7,
+  UnbindHand = T.RT_34
+}
+T.RT_36 = {AttrName = "CRI", Rate = "#1"}
+T.RT_37 = {
+  [1] = T.RT_36
+}
+T.RT_38 = {
   AttrName = "MaxHp",
   IsCharAttr = 1,
   Rate = "#1"
 }
-T.RT_36 = {
-  [1] = T.RT_35
+T.RT_39 = {
+  [1] = T.RT_38
 }
-T.RT_37 = {
+T.RT_40 = {
   2,
   103,
   23
 }
-T.RT_38 = {"Fire"}
-T.RT_39 = {
+T.RT_41 = {"Fire"}
+T.RT_42 = {
   1030101,
   1030102,
   1030103,
   1030104
 }
-T.RT_40 = {
+T.RT_43 = {
   SocketA = "root_Claymore_back",
   SocketB = "root_point"
 }
-T.RT_41 = {
+T.RT_44 = {
   HandHold = T.RT_7,
-  UnbindHand = T.RT_40
+  UnbindHand = T.RT_43
 }
-T.RT_42 = {
+T.RT_45 = {
   "Melee",
   "Claymore",
   "Almighty"
 }
-T.RT_43 = {
+T.RT_46 = {
   2,
   103,
   21
 }
-T.RT_44 = {
+T.RT_47 = {
   AttrName = "SkillSustain",
   IsCharAttr = 1,
   Rate = "#1"
 }
-T.RT_45 = {
-  [1] = T.RT_44
+T.RT_48 = {
+  [1] = T.RT_47
 }
-T.RT_46 = {
+T.RT_49 = {
   1040101,
   1040102,
   1040103,
   1040104
 }
-T.RT_47 = {
+T.RT_50 = {
   SocketA = "root_Dualblade01_back",
   SocketB = "root_point"
 }
-T.RT_48 = {
+T.RT_51 = {
   HandHold = T.RT_7,
-  UnbindHand = T.RT_47
+  UnbindHand = T.RT_50
 }
-T.RT_49 = {
+T.RT_52 = {
   "Melee",
   "Dualblade",
   "Almighty"
 }
-T.RT_50 = {SocketA = "Root", SocketB = "hook_arm_l"}
-T.RT_51 = {
+T.RT_53 = {SocketA = "Root", SocketB = "hook_arm_l"}
+T.RT_54 = {
   SocketA = "root_Dualblade02_back",
   SocketB = "root_point"
 }
-T.RT_52 = {
-  HandHold = T.RT_50,
-  UnbindHand = T.RT_51
-}
-T.RT_53 = {
-  [1] = T.RT_52
-}
-T.RT_54 = {AttrName = "CRD", Rate = "#1"}
 T.RT_55 = {
-  [1] = T.RT_54
+  HandHold = T.RT_53,
+  UnbindHand = T.RT_54
 }
 T.RT_56 = {
+  [1] = T.RT_55
+}
+T.RT_57 = {AttrName = "CRD", Rate = "#1"}
+T.RT_58 = {
+  [1] = T.RT_57
+}
+T.RT_59 = {
   2,
   104,
   22
 }
-T.RT_57 = {
+T.RT_60 = {
   2,
   105,
   22
 }
-T.RT_58 = {
+T.RT_61 = {
   1050101,
   1050102,
   1010103,
   1010104
 }
-T.RT_59 = {
+T.RT_62 = {
   SocketA = "root_Swordwhip_back",
   SocketB = "root_point"
 }
-T.RT_60 = {
+T.RT_63 = {
   HandHold = T.RT_7,
-  UnbindHand = T.RT_59
+  UnbindHand = T.RT_62
 }
-T.RT_61 = {
+T.RT_64 = {
   "Melee",
   "Swordwhip",
   "Almighty"
 }
-T.RT_62 = {
+T.RT_65 = {
+  2,
+  106,
+  21
+}
+T.RT_66 = {
   1060101,
   1060102,
   1060103,
   1060104
 }
-T.RT_63 = {
+T.RT_67 = {
   SocketA = "root_Katana01_back",
   SocketB = "root_point"
 }
-T.RT_64 = {
+T.RT_68 = {
   HandHold = T.RT_7,
-  UnbindHand = T.RT_63
+  UnbindHand = T.RT_67
 }
-T.RT_65 = {
+T.RT_69 = {
   "Melee",
   "Katana",
   "Almighty"
 }
-T.RT_66 = {
+T.RT_70 = {
   SocketA = "Root",
   SocketB = "root_hook_arm_l"
 }
-T.RT_67 = {
+T.RT_71 = {
   SocketA = "root_Katana02_back",
   SocketB = "root_point"
 }
-T.RT_68 = {
-  HandHold = T.RT_66,
-  UnbindHand = T.RT_67
-}
-T.RT_69 = {
-  [1] = T.RT_68
-}
-T.RT_70 = {1060302}
-T.RT_71 = {
-  SocketA = "Root",
-  SocketB = "hook_upperarm_l_02"
-}
 T.RT_72 = {
-  HandHold = T.RT_7,
+  HandHold = T.RT_70,
   UnbindHand = T.RT_71
 }
 T.RT_73 = {
+  [1] = T.RT_72
+}
+T.RT_74 = {1060302}
+T.RT_75 = {
+  SocketA = "Root",
+  SocketB = "hook_upperarm_l_02"
+}
+T.RT_76 = {
+  HandHold = T.RT_7,
+  UnbindHand = T.RT_75
+}
+T.RT_77 = {
   "Ultra",
   "Melee",
   "Sword",
   "Almighty"
 }
-T.RT_74 = {
+T.RT_78 = {
   GamePad = "Machinegun_02",
   Mobile = "Machinegun_02",
   PC = "Machinegun_01"
 }
-T.RT_75 = {"CRI", "CRD"}
-T.RT_76 = {
+T.RT_79 = {"CRI", "CRD"}
+T.RT_80 = {
   "Ultra",
   "Melee",
   "Ranged",
   "Abstract"
 }
-T.RT_77 = {4, 43}
-T.RT_78 = {
+T.RT_81 = {4, 43}
+T.RT_82 = {
   "Ultra",
   "Melee",
   "Claymore",
   "Almighty"
 }
-T.RT_79 = {SightUI = "Crossbow"}
-T.RT_80 = {
+T.RT_83 = {SightUI = "Crossbow"}
+T.RT_84 = {
   GamePad = "Pistol_02",
   Mobile = "Pistol_02",
   PC = "Pistol_01"
 }
-T.RT_81 = {3, 31}
-T.RT_82 = {SocketA = "butt"}
-T.RT_83 = {
+T.RT_85 = {3, 31}
+T.RT_86 = {SocketA = "butt"}
+T.RT_87 = {
   SocketA = "hook_shotgun_back",
   SocketB = "root_point"
 }
-T.RT_84 = {
+T.RT_88 = {
   HandHold = T.RT_7,
-  HandHoldIK = T.RT_82,
-  UnbindHand = T.RT_83
+  HandHoldIK = T.RT_86,
+  UnbindHand = T.RT_87
 }
-T.RT_85 = {
+T.RT_89 = {
   "Ranged",
   "Pistol",
   "Almighty"
 }
-T.RT_86 = {3, 33}
-T.RT_87 = {2019901, 2019902}
-T.RT_88 = {AttrName = "MultiShoot", Rate = "#1"}
-T.RT_89 = {
-  [1] = T.RT_88
+T.RT_90 = {3, 33}
+T.RT_91 = {2019901, 2019902}
+T.RT_92 = {AttrName = "MultiShoot", Rate = "#1"}
+T.RT_93 = {
+  [1] = T.RT_92
 }
-T.RT_90 = {3, 32}
-T.RT_91 = {
+T.RT_94 = {3, 32}
+T.RT_95 = {
   GamePad = "Crossbow_02",
   Mobile = "Crossbow_02",
   PC = "Crossbow_01"
 }
-T.RT_92 = {2020101, 2020102}
-T.RT_93 = {SocketA = "hook_back", SocketB = "root_point"}
-T.RT_94 = {
+T.RT_96 = {2020101, 2020102}
+T.RT_97 = {SocketA = "hook_back", SocketB = "root_point"}
+T.RT_98 = {
   HandHold = T.RT_7,
-  UnbindHand = T.RT_93
+  UnbindHand = T.RT_97
 }
-T.RT_95 = {
+T.RT_99 = {
   "Ranged",
   "Crossbow",
   "Almighty"
 }
-T.RT_96 = {
-  HandHold = T.RT_50,
-  UnbindHand = T.RT_93
+T.RT_100 = {
+  HandHold = T.RT_53,
+  UnbindHand = T.RT_97
 }
-T.RT_97 = {2020701, 2020702}
-T.RT_98 = {SightUI = "Cannon"}
-T.RT_99 = {
+T.RT_101 = {2020701, 2020702}
+T.RT_102 = {SightUI = "Cannon"}
+T.RT_103 = {
   3,
   33,
   34
 }
-T.RT_100 = {
+T.RT_104 = {
   SocketA = "arms_handle_b"
 }
-T.RT_101 = {
+T.RT_105 = {
   SocketA = "hook_cannon_back",
   SocketB = "root_point"
 }
-T.RT_102 = {
+T.RT_106 = {
   HandHold = T.RT_7,
-  HandHoldIK = T.RT_100,
-  UnbindHand = T.RT_101
+  HandHoldIK = T.RT_104,
+  UnbindHand = T.RT_105
 }
-T.RT_103 = {
+T.RT_107 = {
   "Ranged",
   "Cannon",
   "Almighty"
 }
-T.RT_104 = {
+T.RT_108 = {
   GamePad = "OnlyOpenAim_01",
   Mobile = "OnlyOpenAim_01",
   PC = "OnlyOpenAim_01"
 }
-T.RT_105 = {
+T.RT_109 = {
   3,
   31,
   34
 }
-T.RT_106 = {SightUI = "Shotgun"}
-T.RT_107 = {
+T.RT_110 = {SightUI = "Shotgun"}
+T.RT_111 = {
   GamePad = "Shotgun_02",
   Mobile = "Shotgun_02",
   PC = "Shotgun_01"
 }
-T.RT_108 = {
+T.RT_112 = {
   "Ranged",
   "Shotgun",
   "Almighty"
 }
-T.RT_109 = {SightUI = "Rifle"}
-T.RT_110 = {"Light"}
-T.RT_111 = {2050101, 2050102}
-T.RT_112 = {
+T.RT_113 = {SightUI = "Rifle"}
+T.RT_114 = {"Light"}
+T.RT_115 = {
   "Ranged",
   "Machinegun",
   "Almighty"
 }
-T.RT_113 = {
+T.RT_116 = {
   3,
   32,
   35
 }
-T.RT_114 = {
+T.RT_117 = {
   DiffuseBackTime = 0.2,
   DiffuseDis = 15,
   DiffuseTime = 1.5,
   SightUI = "Fire"
 }
-T.RT_115 = {
+T.RT_118 = {
   3,
   31,
   35
 }
-T.RT_116 = {
+T.RT_119 = {
   AttrName = "MagazineCapacity",
   Rate = "#1"
 }
-T.RT_117 = {
-  [1] = T.RT_116
-}
-T.RT_118 = {SightUI = "Thunder"}
-T.RT_119 = {HideMagazineBar = true, SightUI = "Crossbow"}
 T.RT_120 = {
+  [1] = T.RT_119
+}
+T.RT_121 = {SightUI = "Thunder"}
+T.RT_122 = {HideMagazineBar = true, SightUI = "Crossbow"}
+T.RT_123 = {
   "MagazineCapacity",
   "AttackSpeed_Reload"
 }
-T.RT_121 = {
+T.RT_124 = {
   SocketA = "hook_Bow_back",
   SocketB = "root_point"
 }
-T.RT_122 = {
-  HandHold = T.RT_50,
-  UnbindHand = T.RT_121
+T.RT_125 = {
+  HandHold = T.RT_53,
+  UnbindHand = T.RT_124
 }
-T.RT_123 = {
+T.RT_126 = {
   "Ranged",
   "Bow",
   "Bow02",
   "Almighty"
 }
-T.RT_124 = {SightUI = "Bow04"}
-T.RT_125 = {2060201}
-T.RT_126 = {
+T.RT_127 = {SightUI = "Bow04"}
+T.RT_128 = {2060201}
+T.RT_129 = {
   "Ranged",
   "Bow",
   "Bow01",
   "Almighty"
 }
-T.RT_127 = {5, 52}
-T.RT_128 = {
+T.RT_130 = {5, 52}
+T.RT_131 = {
   "ATK_Spike",
   "TriggerProbability",
   "AttackSpeed_Normal",
   "MultiShoot"
 }
-T.RT_129 = {
+T.RT_132 = {
   "MagazineCapacity",
   "BulletMax",
   "BulletConver",
   "AttackSpeed_Reload"
 }
-T.RT_130 = {
+T.RT_133 = {
   "Ultra",
   "Ranged",
   "Crossbow",
   "Almighty"
 }
-T.RT_131 = {SocketA = "root", SocketB = "hook_arm_l"}
-T.RT_132 = {SocketA = "root", SocketB = "root"}
-T.RT_133 = {
-  HandHold = T.RT_132
+T.RT_134 = {SocketA = "root", SocketB = "hook_arm_l"}
+T.RT_135 = {SocketA = "root", SocketB = "root"}
+T.RT_136 = {
+  HandHold = T.RT_135
 }
-T.RT_134 = {
+T.RT_137 = {
   "Mon",
   "Melee",
   "Ranged",
   "MonGun"
 }
-T.RT_135 = {
+T.RT_138 = {
   "Mon",
   "Melee",
   "MonSingle"
 }
-T.RT_136 = {
+T.RT_139 = {
   "Mon",
   "Melee",
   "MonBlade"
 }
-T.RT_137 = {
-  HandHold = T.RT_131
+T.RT_140 = {
+  HandHold = T.RT_134
 }
-T.RT_138 = {
+T.RT_141 = {
   "Mon",
   "Melee",
   "Ranged"
 }
-T.RT_139 = {
+T.RT_142 = {
   HandHold = T.RT_1,
-  HandHoldIK = T.RT_82
+  HandHoldIK = T.RT_86
 }
-T.RT_140 = {
+T.RT_143 = {
   "Mon",
   "Melee",
   "MonDual"
@@ -670,15 +683,43 @@ return ReadOnly("BattleWeapon", {
     WeaponSockets = T.RT_9,
     WeaponTag = T.RT_10
   },
+  [10107] = {
+    ATKLevelGrow = "ATKS",
+    ATK_Spike = 26,
+    AddAttrs = T.RT_20,
+    CRD = 2.4,
+    CRI = 0.24,
+    ComboHoldTime = 10,
+    MaxComboCount = 120,
+    ModApplicationType = T.RT_13,
+    ModVolume = 1,
+    PassiveEffects = {10107},
+    PassiveEffectsAttribute = T.RT_21,
+    PassiveEffectsDesc = "SKILL_10107_DESC",
+    PassiveEffectsDescValues = {
+      [1] = "$#BattleWeapon[10107].AddAttrs[1].Value*100$%",
+      [2] = "$#PassiveEffect[10107].Vars.DmgRate*100$%",
+      [3] = "$#PassiveEffect[10107].Vars.MoraleRate*100$%",
+      [4] = "$#PassiveEffect[10107].Vars.LastTime$"
+    },
+    ShowWeaponModel = true,
+    TriggerProbability = 0.15,
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Sword/BP_Sword_01.BP_Sword_01",
+    WeaponId = 10107,
+    WeaponMeshResourceId = 1010701,
+    WeaponSkillList = T.RT_6,
+    WeaponSockets = T.RT_9,
+    WeaponTag = T.RT_10
+  },
   [10201] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 21,
-    AddAttrs = T.RT_20,
+    AddAttrs = T.RT_23,
     CRD = 2.2,
     CRI = 0.22,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_21,
+    ModApplicationType = T.RT_24,
     ModVolume = 1,
     PassiveEffects = {10201},
     PassiveEffectsDesc = "SKILL_10201_DESC",
@@ -693,9 +734,9 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10201,
     WeaponMeshResourceId = 1020101,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_24,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_27,
+    WeaponTag = T.RT_28
   },
   [10202] = {
     ATKLevelGrow = "ATKS",
@@ -705,7 +746,7 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.24,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_21,
+    ModApplicationType = T.RT_24,
     ModVolume = 1,
     PassiveEffects = {10202},
     PassiveEffectsDesc = "SKILL_10202_DESC",
@@ -718,22 +759,22 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10202,
     WeaponMeshResourceId = 1020201,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_24,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_27,
+    WeaponTag = T.RT_28
   },
   [10203] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 20,
-    AddAttrs = T.RT_27,
+    AddAttrs = T.RT_30,
     CRD = 2,
     CRI = 0.3,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_28,
+    ModApplicationType = T.RT_31,
     ModVolume = 1,
     PassiveEffects = {10203},
-    PassiveEffectsAttribute = T.RT_29,
+    PassiveEffectsAttribute = T.RT_32,
     PassiveEffectsDesc = "SKILL_10203_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[10203].AddAttrs[1].Rate*100$%",
@@ -746,9 +787,9 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10203,
     WeaponMeshResourceId = 1020301,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_24,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_27,
+    WeaponTag = T.RT_28
   },
   [10204] = {
     ATKLevelGrow = "ATKS",
@@ -764,7 +805,7 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.23,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_30,
+    ModApplicationType = T.RT_33,
     ModVolume = 1,
     PassiveEffects = {10204},
     PassiveEffectsAttribute = {"Wind"},
@@ -781,9 +822,9 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10204,
     WeaponMeshResourceId = 1020401,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_32,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_35,
+    WeaponTag = T.RT_28
   },
   [10205] = {
     ATKLevelGrow = "ATKS",
@@ -792,26 +833,26 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.15,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_30,
+    ModApplicationType = T.RT_33,
     ModVolume = 1,
     ShowWeaponModel = true,
     TriggerProbability = 0.35,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10205,
     WeaponMeshResourceId = 1020501,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_32,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_35,
+    WeaponTag = T.RT_28
   },
   [10206] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 19,
-    AddAttrs = T.RT_27,
+    AddAttrs = T.RT_30,
     CRD = 2,
     CRI = 0.25,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_30,
+    ModApplicationType = T.RT_33,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_10206_DESC",
     PassiveEffectsDescValues = {
@@ -822,9 +863,9 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10206,
     WeaponMeshResourceId = 1020601,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_32,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_35,
+    WeaponTag = T.RT_28
   },
   [10207] = {
     ATKLevelGrow = "ATKS",
@@ -833,26 +874,26 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.15,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_30,
+    ModApplicationType = T.RT_33,
     ModVolume = 1,
     ShowWeaponModel = true,
     TriggerProbability = 0.35,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10207,
     WeaponMeshResourceId = 1020701,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_32,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_35,
+    WeaponTag = T.RT_28
   },
   [10208] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 21,
-    AddAttrs = T.RT_34,
+    AddAttrs = T.RT_37,
     CRD = 1.85,
     CRI = 0.2,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_28,
+    ModApplicationType = T.RT_31,
     ModVolume = 1,
     PassiveEffects = {10208},
     PassiveEffectsDesc = "SKILL_10208_DESC",
@@ -865,9 +906,9 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10208,
     WeaponMeshResourceId = 1020801,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_32,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_35,
+    WeaponTag = T.RT_28
   },
   [10209] = {
     ATKLevelGrow = "ATKS",
@@ -876,29 +917,86 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.15,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_30,
+    ModApplicationType = T.RT_33,
     ModVolume = 1,
     ShowWeaponModel = true,
     TriggerProbability = 0.35,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
     WeaponId = 10209,
     WeaponMeshResourceId = 1020901,
-    WeaponSkillList = T.RT_22,
-    WeaponSockets = T.RT_32,
-    WeaponTag = T.RT_25
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_35,
+    WeaponTag = T.RT_28
+  },
+  [10299] = {
+    ATKLevelGrow = "ATKS",
+    ATK_Psionic = 22,
+    AddAttrs = {
+      [1] = {
+        AttrName = "SkillIntensity",
+        HyperWeaponSkillTreeID = 10299004,
+        IsCharAttr = 1,
+        IsWeaponMastery = 1,
+        Rate = 0.45
+      },
+      [2] = {
+        AttrName = "ATK",
+        HyperWeaponSkillTreeID = 10299005,
+        IsCharAttr = 1,
+        IsWeaponMastery = 1,
+        Rate = 0.9
+      },
+      [3] = {
+        AttrName = "SkillRange",
+        HyperWeaponSkillTreeID = 10299008,
+        IsCharAttr = 1,
+        IsWeaponMastery = 1,
+        Rate = 0.9
+      },
+      [4] = {
+        AttrName = "StrongValue",
+        HyperWeaponSkillTreeID = 10299009,
+        IsCharAttr = 1,
+        IsWeaponMastery = 1,
+        Value = 0.35
+      }
+    },
+    CRD = 2.1,
+    CRI = 0.2,
+    ComboHoldTime = 10,
+    InitialWeaponSp = 0,
+    MaxComboCount = 120,
+    MaxWeaponSp = 100,
+    ModApplicationType = {
+      2,
+      102,
+      24
+    },
+    ModVolume = 1,
+    PassiveEffects = {10299},
+    PassiveEffectsDesc = "SKILL_Psionic_DESC",
+    PassiveEffectsWeapon = true,
+    ShowWeaponModel = true,
+    TriggerProbability = 0.3,
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
+    WeaponId = 10299,
+    WeaponMeshResourceId = 1029901,
+    WeaponSkillList = T.RT_25,
+    WeaponSockets = T.RT_35,
+    WeaponTag = T.RT_28
   },
   [10301] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 19,
-    AddAttrs = T.RT_36,
+    AddAttrs = T.RT_39,
     CRD = 2.05,
     CRI = 0.24,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_37,
+    ModApplicationType = T.RT_40,
     ModVolume = 1,
     PassiveEffects = {10301},
-    PassiveEffectsAttribute = T.RT_38,
+    PassiveEffectsAttribute = T.RT_41,
     PassiveEffectsDesc = "SKILL_10301_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[10301].AddAttrs[1].Rate*100$%",
@@ -911,19 +1009,19 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Claymore/BP_Claymore_02.BP_Claymore_02",
     WeaponId = 10301,
     WeaponMeshResourceId = 1030101,
-    WeaponSkillList = T.RT_39,
-    WeaponSockets = T.RT_41,
-    WeaponTag = T.RT_42
+    WeaponSkillList = T.RT_42,
+    WeaponSockets = T.RT_44,
+    WeaponTag = T.RT_45
   },
   [10302] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 18,
-    AddAttrs = T.RT_34,
+    AddAttrs = T.RT_37,
     CRD = 2.05,
     CRI = 0.2,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_43,
+    ModApplicationType = T.RT_46,
     ModVolume = 1,
     PassiveEffects = {10302},
     PassiveEffectsDesc = "SKILL_10302_DESC",
@@ -936,19 +1034,19 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Claymore/BP_Claymore_02.BP_Claymore_02",
     WeaponId = 10302,
     WeaponMeshResourceId = 1030201,
-    WeaponSkillList = T.RT_39,
-    WeaponSockets = T.RT_41,
-    WeaponTag = T.RT_42
+    WeaponSkillList = T.RT_42,
+    WeaponSockets = T.RT_44,
+    WeaponTag = T.RT_45
   },
   [10303] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 17,
-    AddAttrs = T.RT_45,
+    AddAttrs = T.RT_48,
     CRD = 2.1,
     CRI = 0.24,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_37,
+    ModApplicationType = T.RT_40,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_10303_DESC",
     PassiveEffectsDescValues = {
@@ -959,28 +1057,22 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Claymore/BP_Claymore_02.BP_Claymore_02",
     WeaponId = 10303,
     WeaponMeshResourceId = 1030301,
-    WeaponSkillList = T.RT_39,
-    WeaponSockets = T.RT_41,
-    WeaponTag = T.RT_42
+    WeaponSkillList = T.RT_42,
+    WeaponSockets = T.RT_44,
+    WeaponTag = T.RT_45
   },
   [10304] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 22,
-    AddAttrs = {
-      [1] = {
-        AttrName = "StrongValue",
-        IsCharAttr = 1,
-        Value = "#1"
-      }
-    },
+    AddAttrs = T.RT_20,
     CRD = 2,
     CRI = 0.2,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_43,
+    ModApplicationType = T.RT_46,
     ModVolume = 1,
     PassiveEffects = {10304},
-    PassiveEffectsAttribute = T.RT_29,
+    PassiveEffectsAttribute = T.RT_32,
     PassiveEffectsDesc = "SKILL_10304_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[10304].AddAttrs[1].Value*100$%",
@@ -993,9 +1085,9 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Claymore/BP_Claymore_02.BP_Claymore_02",
     WeaponId = 10304,
     WeaponMeshResourceId = 1030401,
-    WeaponSkillList = T.RT_39,
-    WeaponSockets = T.RT_41,
-    WeaponTag = T.RT_42
+    WeaponSkillList = T.RT_42,
+    WeaponSockets = T.RT_44,
+    WeaponTag = T.RT_45
   },
   [10305] = {
     ATKLevelGrow = "ATKS",
@@ -1005,7 +1097,7 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.18,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_37,
+    ModApplicationType = T.RT_40,
     ModVolume = 1,
     PassiveEffects = {10305},
     PassiveEffectsDesc = "SKILL_10305_DESC",
@@ -1018,9 +1110,9 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Claymore/BP_Claymore_02.BP_Claymore_02",
     WeaponId = 10305,
     WeaponMeshResourceId = 1030501,
-    WeaponSkillList = T.RT_39,
-    WeaponSockets = T.RT_41,
-    WeaponTag = T.RT_42
+    WeaponSkillList = T.RT_42,
+    WeaponSockets = T.RT_44,
+    WeaponTag = T.RT_45
   },
   [10399] = {
     ATKLevelGrow = "ATKS",
@@ -1029,16 +1121,16 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.24,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_37,
+    ModApplicationType = T.RT_40,
     ModVolume = 1,
     ShowWeaponModel = true,
     TriggerProbability = 0.2,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Claymore/BP_Claymore_02.BP_Claymore_02",
     WeaponId = 10399,
     WeaponMeshResourceId = 1030501,
-    WeaponSkillList = T.RT_39,
-    WeaponSockets = T.RT_41,
-    WeaponTag = T.RT_42
+    WeaponSkillList = T.RT_42,
+    WeaponSockets = T.RT_44,
+    WeaponTag = T.RT_45
   },
   [10401] = {
     ATKLevelGrow = "ATKS",
@@ -1066,16 +1158,16 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Dualblade/BP_Dualblade_01.BP_Dualblade_01",
     WeaponId = 10401,
     WeaponMeshResourceId = 1040101,
-    WeaponSkillList = T.RT_46,
-    WeaponSockets = T.RT_48,
-    WeaponTag = T.RT_49,
-    WipCharmsAttachRules = T.RT_53,
+    WeaponSkillList = T.RT_49,
+    WeaponSockets = T.RT_51,
+    WeaponTag = T.RT_52,
+    WipCharmsAttachRules = T.RT_56,
     WipCharmsResIds = {1040102}
   },
   [10402] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 18,
-    AddAttrs = T.RT_55,
+    AddAttrs = T.RT_58,
     CRD = 2.15,
     CRI = 0.24,
     ComboHoldTime = 10,
@@ -1097,21 +1189,21 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Dualblade/BP_Dualblade_01.BP_Dualblade_01",
     WeaponId = 10402,
     WeaponMeshResourceId = 1040201,
-    WeaponSkillList = T.RT_46,
-    WeaponSockets = T.RT_48,
-    WeaponTag = T.RT_49,
-    WipCharmsAttachRules = T.RT_53,
+    WeaponSkillList = T.RT_49,
+    WeaponSockets = T.RT_51,
+    WeaponTag = T.RT_52,
+    WipCharmsAttachRules = T.RT_56,
     WipCharmsResIds = {1040202}
   },
   [10403] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 20,
-    AddAttrs = T.RT_20,
+    AddAttrs = T.RT_23,
     CRD = 2.35,
     CRI = 0.2,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_56,
+    ModApplicationType = T.RT_59,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_10403_DESC",
     PassiveEffectsDescValues = {
@@ -1122,10 +1214,10 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Dualblade/BP_Dualblade_01.BP_Dualblade_01",
     WeaponId = 10403,
     WeaponMeshResourceId = 1040301,
-    WeaponSkillList = T.RT_46,
-    WeaponSockets = T.RT_48,
-    WeaponTag = T.RT_49,
-    WipCharmsAttachRules = T.RT_53,
+    WeaponSkillList = T.RT_49,
+    WeaponSockets = T.RT_51,
+    WeaponTag = T.RT_52,
+    WipCharmsAttachRules = T.RT_56,
     WipCharmsResIds = {1040302}
   },
   [10404] = {
@@ -1136,7 +1228,7 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.22,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_56,
+    ModApplicationType = T.RT_59,
     ModVolume = 1,
     PassiveEffects = {10404},
     PassiveEffectsDesc = "SKILL_10404_DESC",
@@ -1149,21 +1241,21 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Dualblade/BP_Dualblade_01.BP_Dualblade_01",
     WeaponId = 10404,
     WeaponMeshResourceId = 1040401,
-    WeaponSkillList = T.RT_46,
-    WeaponSockets = T.RT_48,
-    WeaponTag = T.RT_49,
-    WipCharmsAttachRules = T.RT_53,
+    WeaponSkillList = T.RT_49,
+    WeaponSockets = T.RT_51,
+    WeaponTag = T.RT_52,
+    WipCharmsAttachRules = T.RT_56,
     WipCharmsResIds = {1040402}
   },
   [10501] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 21,
-    AddAttrs = T.RT_36,
+    AddAttrs = T.RT_39,
     CRD = 2.25,
     CRI = 0.2,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_57,
+    ModApplicationType = T.RT_60,
     ModVolume = 1,
     PassiveEffects = {10501},
     PassiveEffectsDesc = "SKILL_10501_DESC",
@@ -1178,14 +1270,14 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Swordwhip/BP_Swordwhip_01.BP_Swordwhip_01",
     WeaponId = 10501,
     WeaponMeshResourceId = 1050101,
-    WeaponSkillList = T.RT_58,
-    WeaponSockets = T.RT_60,
-    WeaponTag = T.RT_61
+    WeaponSkillList = T.RT_61,
+    WeaponSockets = T.RT_63,
+    WeaponTag = T.RT_64
   },
   [10502] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 18,
-    AddAttrs = T.RT_27,
+    AddAttrs = T.RT_30,
     CRD = 2.1,
     CRI = 0.3,
     ComboHoldTime = 10,
@@ -1209,14 +1301,14 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Swordwhip/BP_Swordwhip_01.BP_Swordwhip_01",
     WeaponId = 10502,
     WeaponMeshResourceId = 1050201,
-    WeaponSkillList = T.RT_58,
-    WeaponSockets = T.RT_60,
-    WeaponTag = T.RT_61
+    WeaponSkillList = T.RT_61,
+    WeaponSockets = T.RT_63,
+    WeaponTag = T.RT_64
   },
   [10503] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 19,
-    AddAttrs = T.RT_45,
+    AddAttrs = T.RT_48,
     CRD = 2.15,
     CRI = 0.18,
     ComboHoldTime = 10,
@@ -1236,9 +1328,9 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Swordwhip/BP_Swordwhip_01.BP_Swordwhip_01",
     WeaponId = 10503,
     WeaponMeshResourceId = 1050301,
-    WeaponSkillList = T.RT_58,
-    WeaponSockets = T.RT_60,
-    WeaponTag = T.RT_61
+    WeaponSkillList = T.RT_61,
+    WeaponSockets = T.RT_63,
+    WeaponTag = T.RT_64
   },
   [10504] = {
     ATKLevelGrow = "ATKS",
@@ -1248,7 +1340,7 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.26,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_57,
+    ModApplicationType = T.RT_60,
     ModVolume = 1,
     PassiveEffects = {10504},
     PassiveEffectsDesc = "SKILL_10504_DESC",
@@ -1262,23 +1354,19 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Swordwhip/BP_Swordwhip_01.BP_Swordwhip_01",
     WeaponId = 10504,
     WeaponMeshResourceId = 1050401,
-    WeaponSkillList = T.RT_58,
-    WeaponSockets = T.RT_60,
-    WeaponTag = T.RT_61
+    WeaponSkillList = T.RT_61,
+    WeaponSockets = T.RT_63,
+    WeaponTag = T.RT_64
   },
   [10601] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 19,
-    AddAttrs = T.RT_55,
+    AddAttrs = T.RT_58,
     CRD = 2.25,
     CRI = 0.22,
     ComboHoldTime = 10,
     MaxComboCount = 120,
-    ModApplicationType = {
-      2,
-      106,
-      21
-    },
+    ModApplicationType = T.RT_65,
     ModVolume = 1,
     PassiveEffects = {10601},
     PassiveEffectsDesc = "SKILL_10601_DESC",
@@ -1291,16 +1379,16 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Katana/BP_Katana_01.BP_Katana_01",
     WeaponId = 10601,
     WeaponMeshResourceId = 1060101,
-    WeaponSkillList = T.RT_62,
-    WeaponSockets = T.RT_64,
-    WeaponTag = T.RT_65,
-    WipCharmsAttachRules = T.RT_69,
+    WeaponSkillList = T.RT_66,
+    WeaponSockets = T.RT_68,
+    WeaponTag = T.RT_69,
+    WipCharmsAttachRules = T.RT_73,
     WipCharmsResIds = {1060102}
   },
   [10602] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 17,
-    AddAttrs = T.RT_20,
+    AddAttrs = T.RT_23,
     CRD = 2.15,
     CRI = 0.23,
     ComboHoldTime = 10,
@@ -1320,10 +1408,10 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Katana/BP_Katana_01.BP_Katana_01",
     WeaponId = 10602,
     WeaponMeshResourceId = 1060201,
-    WeaponSkillList = T.RT_62,
-    WeaponSockets = T.RT_64,
-    WeaponTag = T.RT_65,
-    WipCharmsAttachRules = T.RT_69,
+    WeaponSkillList = T.RT_66,
+    WeaponSockets = T.RT_68,
+    WeaponTag = T.RT_69,
+    WipCharmsAttachRules = T.RT_73,
     WipCharmsResIds = {1060202}
   },
   [10603] = {
@@ -1352,11 +1440,40 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Katana/BP_Katana_01.BP_Katana_01",
     WeaponId = 10603,
     WeaponMeshResourceId = 1060301,
-    WeaponSkillList = T.RT_62,
-    WeaponSockets = T.RT_64,
-    WeaponTag = T.RT_65,
-    WipCharmsAttachRules = T.RT_69,
-    WipCharmsResIds = T.RT_70
+    WeaponSkillList = T.RT_66,
+    WeaponSockets = T.RT_68,
+    WeaponTag = T.RT_69,
+    WipCharmsAttachRules = T.RT_73,
+    WipCharmsResIds = T.RT_74
+  },
+  [10604] = {
+    ATKLevelGrow = "ATKS",
+    ATK_Slash = 20,
+    AddAttrs = T.RT_16,
+    CRD = 2,
+    CRI = 0.2,
+    ComboHoldTime = 10,
+    MaxComboCount = 120,
+    ModApplicationType = T.RT_65,
+    ModVolume = 1,
+    PassiveEffects = {10604},
+    PassiveEffectsDesc = "SKILL_10604_DESC",
+    PassiveEffectsDescValues = {
+      [1] = "$#BattleWeapon[10604].AddAttrs[1].Value/100$",
+      [2] = "$#Buff[10604].AddAttrs[1].Value*100$%",
+      [3] = "$#PassiveEffect[10604].Vars.LastTime$",
+      [4] = "$#Buff[10604].MaxLayer$"
+    },
+    ShowWeaponModel = true,
+    TriggerProbability = 0.26,
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Katana/BP_Katana_01.BP_Katana_01",
+    WeaponId = 10604,
+    WeaponMeshResourceId = 1060401,
+    WeaponSkillList = T.RT_66,
+    WeaponSockets = T.RT_68,
+    WeaponTag = T.RT_69,
+    WipCharmsAttachRules = T.RT_73,
+    WipCharmsResIds = {1060402}
   },
   [20101] = {
     ATKLevelGrow = "ATKS",
@@ -1368,11 +1485,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.1,
     CRI = 0.2,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_80,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_84,
     MagazineCapacity = 20,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_81,
+    ModApplicationType = T.RT_85,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_20101_DESC",
     PassiveEffectsDescValues = {
@@ -1387,8 +1504,8 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20101,
     WeaponMeshResourceId = 2010101,
     WeaponSkillList = {2010101, 2010102},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_85
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_89
   },
   [20102] = {
     ATKLevelGrow = "ATKS",
@@ -1400,11 +1517,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.3,
     CRI = 0.25,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_80,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_84,
     MagazineCapacity = 15,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_86,
+    ModApplicationType = T.RT_90,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_20102_DESC",
     PassiveEffectsDescValues = {
@@ -1417,25 +1534,25 @@ return ReadOnly("BattleWeapon", {
     WeaponHUDIcon = "Pistol_Chixing",
     WeaponId = 20102,
     WeaponMeshResourceId = 2010201,
-    WeaponSkillList = T.RT_87,
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_85
+    WeaponSkillList = T.RT_91,
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_89
   },
   [20103] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 18,
-    AddAttrs = T.RT_89,
+    AddAttrs = T.RT_93,
     BulletConver = 0.4,
     BulletInit = -1,
     BulletMax = 150,
     BulletType = 1,
     CRD = 2.05,
     CRI = 0.25,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_80,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_84,
     MagazineCapacity = 15,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PassiveEffects = {20103},
     PassiveEffectsDesc = "SKILL_20103_DESC",
@@ -1451,9 +1568,9 @@ return ReadOnly("BattleWeapon", {
     WeaponHUDIcon = "Pistol_Gaoyu",
     WeaponId = 20103,
     WeaponMeshResourceId = 2010301,
-    WeaponSkillList = T.RT_87,
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_85
+    WeaponSkillList = T.RT_91,
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_89
   },
   [20104] = {
     ATKLevelGrow = "ATKS",
@@ -1464,11 +1581,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.3,
     CRI = 0.25,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_80,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_84,
     MagazineCapacity = 15,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_86,
+    ModApplicationType = T.RT_90,
     ModVolume = 1,
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
@@ -1478,13 +1595,13 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20104,
     WeaponMeshResourceId = 2010301,
     WeaponSkillList = {2010401, 2010402},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_85
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_89
   },
   [20201] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 21,
-    AddAttrs = T.RT_27,
+    AddAttrs = T.RT_30,
     BulletConver = 0.6,
     BulletInit = -1,
     BulletMax = 150,
@@ -1492,11 +1609,11 @@ return ReadOnly("BattleWeapon", {
     CRD = 2.2,
     CRI = 0.2,
     ChildWeaponId = 20202,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_91,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_95,
     MagazineCapacity = 20,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_20201_DESC",
     PassiveEffectsDescValues = {
@@ -1509,9 +1626,9 @@ return ReadOnly("BattleWeapon", {
     WeaponHUDIcon = "Crossbow_Chixing",
     WeaponId = 20201,
     WeaponMeshResourceId = 2020101,
-    WeaponSkillList = T.RT_92,
-    WeaponSockets = T.RT_94,
-    WeaponTag = T.RT_95
+    WeaponSkillList = T.RT_96,
+    WeaponSockets = T.RT_98,
+    WeaponTag = T.RT_99
   },
   [20202] = {
     ATKLevelGrow = "ATKS",
@@ -1523,13 +1640,13 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_L.BP_Crossbow01_L",
     WeaponId = 20202,
     WeaponMeshResourceId = 2020201,
-    WeaponSockets = T.RT_96,
-    WeaponTag = T.RT_95
+    WeaponSockets = T.RT_100,
+    WeaponTag = T.RT_99
   },
   [20203] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 19,
-    AddAttrs = T.RT_45,
+    AddAttrs = T.RT_48,
     BulletConver = 0.6,
     BulletInit = -1,
     BulletMax = 150,
@@ -1537,11 +1654,11 @@ return ReadOnly("BattleWeapon", {
     CRD = 2.25,
     CRI = 0.2,
     ChildWeaponId = 20204,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_91,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_95,
     MagazineCapacity = 20,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PassiveEffects = {20203},
     PassiveEffectsDesc = "SKILL_20203_DESC",
@@ -1558,8 +1675,8 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20203,
     WeaponMeshResourceId = 2020301,
     WeaponSkillList = {2020301, 2020302},
-    WeaponSockets = T.RT_94,
-    WeaponTag = T.RT_95
+    WeaponSockets = T.RT_98,
+    WeaponTag = T.RT_99
   },
   [20204] = {
     ATKLevelGrow = "ATKS",
@@ -1571,13 +1688,13 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_L.BP_Crossbow01_L",
     WeaponId = 20204,
     WeaponMeshResourceId = 2020401,
-    WeaponSockets = T.RT_96,
-    WeaponTag = T.RT_95
+    WeaponSockets = T.RT_100,
+    WeaponTag = T.RT_99
   },
   [20205] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 18,
-    AddAttrs = T.RT_34,
+    AddAttrs = T.RT_37,
     BulletConver = 0.6,
     BulletInit = -1,
     BulletMax = 150,
@@ -1585,11 +1702,11 @@ return ReadOnly("BattleWeapon", {
     CRD = 2,
     CRI = 0.25,
     ChildWeaponId = 20206,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_91,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_95,
     MagazineCapacity = 20,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_81,
+    ModApplicationType = T.RT_85,
     ModVolume = 1,
     PassiveEffects = {20205},
     PassiveEffectsDesc = "SKILL_20205_DESC",
@@ -1606,9 +1723,9 @@ return ReadOnly("BattleWeapon", {
     WeaponHUDIcon = "Crossbow_Gaoyu",
     WeaponId = 20205,
     WeaponMeshResourceId = 2020501,
-    WeaponSkillList = T.RT_92,
-    WeaponSockets = T.RT_94,
-    WeaponTag = T.RT_95
+    WeaponSkillList = T.RT_96,
+    WeaponSockets = T.RT_98,
+    WeaponTag = T.RT_99
   },
   [20206] = {
     ATKLevelGrow = "ATKS",
@@ -1620,8 +1737,8 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_L.BP_Crossbow01_L",
     WeaponId = 20206,
     WeaponMeshResourceId = 2020601,
-    WeaponSockets = T.RT_96,
-    WeaponTag = T.RT_95
+    WeaponSockets = T.RT_100,
+    WeaponTag = T.RT_99
   },
   [20207] = {
     ATKLevelGrow = "ATKS",
@@ -1633,22 +1750,22 @@ return ReadOnly("BattleWeapon", {
     CRD = 2,
     CRI = 0.2,
     ChildWeaponId = 20208,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_91,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_95,
     MagazineCapacity = 20,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
     TriggerProbability = 0.2,
-    WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_R.BP_Crossbow01_R",
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_Leyuan_R.BP_Crossbow01_Leyuan_R",
     WeaponHUDIcon = "Crossbow_Lanse",
     WeaponId = 20207,
-    WeaponMeshResourceId = 2020301,
-    WeaponSkillList = T.RT_97,
-    WeaponSockets = T.RT_94,
-    WeaponTag = T.RT_95
+    WeaponMeshResourceId = 2020701,
+    WeaponSkillList = T.RT_101,
+    WeaponSockets = T.RT_98,
+    WeaponTag = T.RT_99
   },
   [20208] = {
     ATKLevelGrow = "ATKS",
@@ -1657,11 +1774,11 @@ return ReadOnly("BattleWeapon", {
     ModVolume = 1,
     ShowWeaponModel = true,
     TriggerProbability = 0.2,
-    WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_L.BP_Crossbow01_L",
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_Leyuan_L.BP_Crossbow01_Leyuan_L",
     WeaponId = 20208,
-    WeaponMeshResourceId = 2020401,
-    WeaponSockets = T.RT_96,
-    WeaponTag = T.RT_95
+    WeaponMeshResourceId = 2020801,
+    WeaponSockets = T.RT_100,
+    WeaponTag = T.RT_99
   },
   [20298] = {
     ATKLevelGrow = "ATKS",
@@ -1673,11 +1790,11 @@ return ReadOnly("BattleWeapon", {
     CRD = 2,
     CRI = 0.2,
     ChildWeaponId = 20299,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_91,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_95,
     MagazineCapacity = 20,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
@@ -1686,9 +1803,9 @@ return ReadOnly("BattleWeapon", {
     WeaponHUDIcon = "Crossbow_Lanse",
     WeaponId = 20298,
     WeaponMeshResourceId = 2020301,
-    WeaponSkillList = T.RT_97,
-    WeaponSockets = T.RT_94,
-    WeaponTag = T.RT_95
+    WeaponSkillList = T.RT_101,
+    WeaponSockets = T.RT_98,
+    WeaponTag = T.RT_99
   },
   [20299] = {
     ATKLevelGrow = "ATKS",
@@ -1700,8 +1817,8 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_L.BP_Crossbow01_L",
     WeaponId = 20299,
     WeaponMeshResourceId = 2020401,
-    WeaponSockets = T.RT_96,
-    WeaponTag = T.RT_95
+    WeaponSockets = T.RT_100,
+    WeaponTag = T.RT_99
   },
   [20301] = {
     ATKLevelGrow = "ATKS",
@@ -1719,10 +1836,10 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.4,
     CRI = 0.2,
-    FrontSight = T.RT_98,
+    FrontSight = T.RT_102,
     MagazineCapacity = 8,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_99,
+    ModApplicationType = T.RT_103,
     ModVolume = 1,
     PassiveEffects = {20301},
     PassiveEffectsDesc = "SKILL_20301_DESC",
@@ -1739,28 +1856,28 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20301,
     WeaponMeshResourceId = 2030101,
     WeaponSkillList = {2030201, 2030202},
-    WeaponSockets = T.RT_102,
-    WeaponTag = T.RT_103
+    WeaponSockets = T.RT_106,
+    WeaponTag = T.RT_107
   },
   [20302] = {
     ATKLevelGrow = "ATKS",
-    ATK_Slash = 15,
-    AddAttrs = T.RT_89,
-    BulletConver = 0.45,
+    ATK_Slash = 18,
+    AddAttrs = T.RT_93,
+    BulletConver = 1,
     BulletIcon = "Battle_Bullet_Cannon",
     BulletInit = -1,
-    BulletMax = 120,
+    BulletMax = 90,
     BulletType = 1,
     CRD = 2.4,
     CRI = 0.2,
-    FrontSight = T.RT_98,
-    HelpAimDict = T.RT_104,
-    MagazineCapacity = 9,
+    FrontSight = T.RT_102,
+    HelpAimDict = T.RT_108,
+    MagazineCapacity = 15,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_105,
+    ModApplicationType = T.RT_109,
     ModVolume = 1,
     PassiveEffects = {20302},
-    PassiveEffectsAttribute = T.RT_38,
+    PassiveEffectsAttribute = T.RT_41,
     PassiveEffectsDesc = "SKILL_20302_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[20302].AddAttrs[1].Rate*100$%",
@@ -1769,19 +1886,19 @@ return ReadOnly("BattleWeapon", {
       [4] = "$#Buff[20302].MaxLayer$"
     },
     ShowWeaponModel = true,
-    TriggerProbability = 0.2,
+    TriggerProbability = 0.15,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Cannon/BP_Cannon_Chiqiang.BP_Cannon_Chiqiang",
     WeaponHUDIcon = "Cannon_Chiqiang",
     WeaponId = 20302,
     WeaponMeshResourceId = 2030201,
     WeaponSkillList = {2030301, 2030302},
-    WeaponSockets = T.RT_102,
-    WeaponTag = T.RT_103
+    WeaponSockets = T.RT_106,
+    WeaponTag = T.RT_107
   },
   [20303] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 18,
-    AddAttrs = T.RT_20,
+    AddAttrs = T.RT_23,
     BulletConver = 0.35,
     BulletIcon = "Battle_Bullet_Cannon",
     BulletInit = -1,
@@ -1789,10 +1906,10 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 1.8,
     CRI = 0.2,
-    FrontSight = T.RT_98,
+    FrontSight = T.RT_102,
     MagazineCapacity = 8,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_99,
+    ModApplicationType = T.RT_103,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_20303_DESC",
     PassiveEffectsDescValues = {
@@ -1805,13 +1922,13 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20303,
     WeaponMeshResourceId = 2030301,
     WeaponSkillList = {2030101, 2030102},
-    WeaponSockets = T.RT_102,
-    WeaponTag = T.RT_103
+    WeaponSockets = T.RT_106,
+    WeaponTag = T.RT_107
   },
   [20304] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 16,
-    AddAttrs = T.RT_55,
+    AddAttrs = T.RT_58,
     BulletConver = 0.3,
     BulletIcon = "Battle_Bullet_Cannon",
     BulletInit = -1,
@@ -1819,10 +1936,10 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.15,
     CRI = 0.22,
-    FrontSight = T.RT_98,
+    FrontSight = T.RT_102,
     MagazineCapacity = 8,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_105,
+    ModApplicationType = T.RT_109,
     ModVolume = 1,
     PassiveEffects = {20304},
     PassiveEffectsDesc = "SKILL_20304_DESC",
@@ -1837,8 +1954,8 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20304,
     WeaponMeshResourceId = 2030401,
     WeaponSkillList = {2030401, 2030402},
-    WeaponSockets = T.RT_102,
-    WeaponTag = T.RT_103
+    WeaponSockets = T.RT_106,
+    WeaponTag = T.RT_107
   },
   [20305] = {
     ATKLevelGrow = "ATKS",
@@ -1851,11 +1968,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.35,
     CRI = 0.25,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_74,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_78,
     MagazineCapacity = 200,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PassiveEffects = {20305},
     PassiveEffectsDesc = "SKILL_20305_DESC",
@@ -1872,13 +1989,13 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20305,
     WeaponMeshResourceId = 2030501,
     WeaponSkillList = {2030501, 2030502},
-    WeaponSockets = T.RT_102,
-    WeaponTag = T.RT_103
+    WeaponSockets = T.RT_106,
+    WeaponTag = T.RT_107
   },
   [20401] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 18,
-    AddAttrs = T.RT_45,
+    AddAttrs = T.RT_48,
     BulletConver = 0.5,
     BulletIcon = "Battle_Bullet_Shotgun",
     BulletInit = -1,
@@ -1886,11 +2003,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 1.8,
     CRI = 0.2,
-    FrontSight = T.RT_106,
-    HelpAimDict = T.RT_107,
+    FrontSight = T.RT_110,
+    HelpAimDict = T.RT_111,
     MagazineCapacity = 6,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_20401_DESC",
     PassiveEffectsDescValues = {
@@ -1904,25 +2021,25 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20401,
     WeaponMeshResourceId = 2040101,
     WeaponSkillList = {2040101, 2040102},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_108
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_112
   },
   [20402] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 16,
-    AddAttrs = T.RT_34,
+    AddAttrs = T.RT_37,
     BulletConver = 0.25,
     BulletInit = -1,
     BulletMax = 90,
     BulletType = 1,
     CRD = 1.8,
     CRI = 0.16,
-    FrontSight = T.RT_109,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_113,
+    HelpAimDict = T.RT_108,
     IsForceEnablePhysics = true,
     MagazineCapacity = 12,
     MaxDistance = 2000,
-    ModApplicationType = T.RT_99,
+    ModApplicationType = T.RT_103,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_20402_DESC",
     PassiveEffectsDescValues = {
@@ -1939,24 +2056,24 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20402,
     WeaponMeshResourceId = 2040201,
     WeaponSkillList = {2040201, 2040202},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_108
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_112
   },
   [20403] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 17,
-    AddAttrs = T.RT_55,
+    AddAttrs = T.RT_58,
     BulletConver = 0.25,
     BulletInit = -1,
     BulletMax = 60,
     BulletType = 1,
     CRD = 2,
     CRI = 0.2,
-    FrontSight = T.RT_109,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_113,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 5,
     MaxDistance = 3500,
-    ModApplicationType = T.RT_105,
+    ModApplicationType = T.RT_109,
     ModVolume = 1,
     PassiveEffects = {20403},
     PassiveEffectsDesc = "SKILL_20403_DESC",
@@ -1971,8 +2088,8 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20403,
     WeaponMeshResourceId = 2040301,
     WeaponSkillList = {2040301, 2040302},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_108
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_112
   },
   [20405] = {
     ATKLevelGrow = "ATKS",
@@ -1985,13 +2102,13 @@ return ReadOnly("BattleWeapon", {
     CRD = 1.65,
     CRI = 0.15,
     FrontSight = {HeavyChargeId = 20405, SightUI = "Shotgun02"},
-    HelpAimDict = T.RT_104,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 12,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_99,
+    ModApplicationType = T.RT_103,
     ModVolume = 1,
     PassiveEffects = {20405},
-    PassiveEffectsAttribute = {"Dark"},
+    PassiveEffectsAttribute = T.RT_21,
     PassiveEffectsDesc = "SKILL_20405_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[20405].AddAttrs[1].Rate*100$%",
@@ -2009,13 +2126,13 @@ return ReadOnly("BattleWeapon", {
       2040502,
       2040503
     },
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_108
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_112
   },
   [20406] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 21,
-    AddAttrs = T.RT_55,
+    AddAttrs = T.RT_58,
     BulletConver = 0.15,
     BulletIcon = "Battle_Bullet_Shotgun",
     BulletInit = -1,
@@ -2023,10 +2140,10 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.5,
     CRI = 0.3,
-    FrontSight = T.RT_106,
+    FrontSight = T.RT_110,
     MagazineCapacity = 1,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_81,
+    ModApplicationType = T.RT_85,
     ModVolume = 1,
     PassiveEffects = {20406},
     PassiveEffectsDesc = "SKILL_20406_DESC",
@@ -2041,8 +2158,8 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20406,
     WeaponMeshResourceId = 2040601,
     WeaponSkillList = {2040601, 2040602},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_108
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_112
   },
   [20407] = {
     ATKLevelGrow = "ATKS",
@@ -2057,14 +2174,14 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.4,
     CRI = 0.28,
-    FrontSight = T.RT_106,
-    HelpAimDict = T.RT_107,
+    FrontSight = T.RT_110,
+    HelpAimDict = T.RT_111,
     MagazineCapacity = 9,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_86,
+    ModApplicationType = T.RT_90,
     ModVolume = 1,
     PassiveEffects = {20407},
-    PassiveEffectsAttribute = T.RT_110,
+    PassiveEffectsAttribute = T.RT_114,
     PassiveEffectsDesc = "SKILL_20407_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[20407].AddAttrs[1].Rate*100$%",
@@ -2080,24 +2197,24 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20407,
     WeaponMeshResourceId = 2040701,
     WeaponSkillList = {2040701, 2040702},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_108
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_112
   },
   [20501] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 17,
-    AddAttrs = T.RT_45,
+    AddAttrs = T.RT_48,
     BulletConver = 2,
     BulletInit = -1,
     BulletMax = 200,
     BulletType = 1,
     CRD = 2.25,
     CRI = 0.23,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_74,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_78,
     MagazineCapacity = 50,
     MaxDistance = 2800,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_20501_DESC",
     PassiveEffectsDescValues = {
@@ -2110,9 +2227,9 @@ return ReadOnly("BattleWeapon", {
     WeaponHUDIcon = "Machinegun_Chixing",
     WeaponId = 20501,
     WeaponMeshResourceId = 2050101,
-    WeaponSkillList = T.RT_111,
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSkillList = {2050101, 2050102},
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20502] = {
     ATKLevelGrow = "ATKS",
@@ -2131,13 +2248,13 @@ return ReadOnly("BattleWeapon", {
       DiffuseTime = 1,
       SightUI = "Thunder"
     },
-    HelpAimDict = T.RT_74,
+    HelpAimDict = T.RT_78,
     MagazineCapacity = 30,
     MaxDistance = 2900,
-    ModApplicationType = T.RT_113,
+    ModApplicationType = T.RT_116,
     ModVolume = 1,
     PassiveEffects = {20502},
-    PassiveEffectsAttribute = T.RT_29,
+    PassiveEffectsAttribute = T.RT_32,
     PassiveEffectsDesc = "SKILL_20502_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[20502].AddAttrs[1].Rate*100$%",
@@ -2152,8 +2269,8 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20502,
     WeaponMeshResourceId = 2050201,
     WeaponSkillList = {2050201, 2050202},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20503] = {
     ATKLevelGrow = "ATKS",
@@ -2166,11 +2283,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2,
     CRI = 0.15,
-    FrontSight = T.RT_114,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_117,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 50,
     MaxDistance = 2000,
-    ModApplicationType = T.RT_115,
+    ModApplicationType = T.RT_118,
     ModVolume = 1,
     PassiveEffects = {20503},
     PassiveEffectsDesc = "SKILL_20503_DESC",
@@ -2186,13 +2303,13 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20503,
     WeaponMeshResourceId = 2050301,
     WeaponSkillList = {2050301, 2050302},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20504] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 18,
-    AddAttrs = T.RT_89,
+    AddAttrs = T.RT_93,
     BulletConver = 1.1,
     BulletIcon = "Battle_Bullet_Laser",
     BulletInit = -1,
@@ -2200,11 +2317,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.45,
     CRI = 0.26,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_74,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_78,
     MagazineCapacity = 30,
     MaxDistance = 2000,
-    ModApplicationType = T.RT_113,
+    ModApplicationType = T.RT_116,
     ModVolume = 1,
     PassiveEffects = {20504},
     PassiveEffectsDesc = "SKILL_20504_DESC",
@@ -2221,13 +2338,13 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20504,
     WeaponMeshResourceId = 2050401,
     WeaponSkillList = {2050401, 2050402},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20505] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 18,
-    AddAttrs = T.RT_117,
+    AddAttrs = T.RT_120,
     BulletConver = 2.2,
     BulletIcon = "Battle_Bullet_Laser",
     BulletInit = -1,
@@ -2235,8 +2352,8 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.15,
     CRI = 0.24,
-    FrontSight = T.RT_118,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_121,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 25,
     MaxDistance = 2900,
     ModApplicationType = {
@@ -2261,13 +2378,13 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20505,
     WeaponMeshResourceId = 2050501,
     WeaponSkillList = {2050501, 2050502},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20506] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 16,
-    AddAttrs = T.RT_117,
+    AddAttrs = T.RT_120,
     BulletConver = 2.1,
     BulletIcon = "Battle_Bullet_Laser",
     BulletInit = -1,
@@ -2275,11 +2392,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.1,
     CRI = 0.22,
-    FrontSight = T.RT_118,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_121,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 60,
     MaxDistance = 2900,
-    ModApplicationType = T.RT_113,
+    ModApplicationType = T.RT_116,
     ModVolume = 1,
     PassiveEffects = {20506},
     PassiveEffectsDesc = "SKILL_20506_DESC",
@@ -2296,25 +2413,25 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20506,
     WeaponMeshResourceId = 2050601,
     WeaponSkillList = {2050601, 2050602},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20507] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 16,
-    AddAttrs = T.RT_55,
+    AddAttrs = T.RT_58,
     BulletConver = 0.1,
     BulletInit = -1,
     BulletMax = 10,
     BulletType = 1,
     CRD = 2.2,
     CRI = 0.22,
-    FrontSight = T.RT_119,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_122,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 2800,
-    ModApplicationType = T.RT_81,
+    ModApplicationType = T.RT_85,
     ModVolume = 1,
     PassiveEffects = {20507},
     PassiveEffectsDesc = "SKILL_20507_DESC",
@@ -2325,19 +2442,19 @@ return ReadOnly("BattleWeapon", {
     },
     ShowWeaponModel = true,
     TriggerProbability = 0.25,
-    UIHiddenAttrs = T.RT_120,
+    UIHiddenAttrs = T.RT_123,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Machinegun/BP_Machinegun.BP_Machinegun",
     WeaponHUDIcon = "Machinegun_Yinlang",
     WeaponId = 20507,
     WeaponMeshResourceId = 2050701,
     WeaponSkillList = {2050701},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20509] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 15,
-    AddAttrs = T.RT_20,
+    AddAttrs = T.RT_23,
     BulletConver = 1.5,
     BulletIcon = "Battle_Bullet_Laser",
     BulletInit = -1,
@@ -2345,14 +2462,14 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.4,
     CRI = 0.24,
-    FrontSight = T.RT_114,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_117,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 50,
     MaxDistance = 2000,
-    ModApplicationType = T.RT_115,
+    ModApplicationType = T.RT_118,
     ModVolume = 1,
     PassiveEffects = {20509},
-    PassiveEffectsAttribute = T.RT_110,
+    PassiveEffectsAttribute = T.RT_114,
     PassiveEffectsDesc = "SKILL_20509_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[20509].AddAttrs[1].Rate*100$%",
@@ -2369,28 +2486,28 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20509,
     WeaponMeshResourceId = 2050901,
     WeaponSkillList = {2050301, 2050902},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20510] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 18,
-    AddAttrs = T.RT_45,
+    AddAttrs = T.RT_48,
     BulletConver = 0.1,
     BulletInit = -1,
     BulletMax = 15,
     BulletType = 1,
     CRD = 2.2,
     CRI = 0.22,
-    FrontSight = T.RT_119,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_122,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 2800,
-    ModApplicationType = T.RT_81,
+    ModApplicationType = T.RT_85,
     ModVolume = 1,
     PassiveEffects = {20510},
-    PassiveEffectsAttribute = T.RT_110,
+    PassiveEffectsAttribute = T.RT_114,
     PassiveEffectsDesc = "SKILL_20510_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[20510].AddAttrs[1].Rate*100$%",
@@ -2400,45 +2517,57 @@ return ReadOnly("BattleWeapon", {
     },
     ShowWeaponModel = true,
     TriggerProbability = 0.33,
-    UIHiddenAttrs = T.RT_120,
+    UIHiddenAttrs = T.RT_123,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Machinegun/BP_Machinegun_Ruohua.BP_Machinegun_Ruohua",
     WeaponHUDIcon = "Machinegun_Ruohua",
     WeaponId = 20510,
     WeaponMeshResourceId = 2051001,
     WeaponSkillList = {2051001},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20511] = {
     ATKLevelGrow = "ATKS",
-    ATK_Spike = 17,
-    BulletConver = 2,
+    ATK_Smash = 18,
+    AddAttrs = {
+      [1] = {
+        AttrName = "AttackSpeed_Reload",
+        Rate = "#1"
+      }
+    },
+    BulletConver = 1.1,
     BulletInit = -1,
-    BulletMax = 100,
+    BulletMax = 60,
     BulletType = 1,
-    CRD = 2.25,
-    CRI = 0.23,
-    FrontSight = T.RT_79,
-    HelpAimDict = T.RT_74,
+    CRD = 2,
+    CRI = 0.21,
+    FrontSight = T.RT_83,
     MagazineCapacity = 15,
     MaxDistance = 2800,
     ModApplicationType = T.RT_90,
     ModVolume = 1,
+    PassiveEffects = {20511},
+    PassiveEffectsDesc = "SKILL_20511_DESC",
+    PassiveEffectsDescValues = {
+      [1] = "$#BattleWeapon[20511].AddAttrs[1].Rate*100$%",
+      [2] = "$#Buff[20511].AddAttrs[1].Value*100$%",
+      [3] = "$#PassiveEffect[20511].Vars.LastTime$"
+    },
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
     TriggerProbability = 0.3,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Machinegun/BP_Machinegun_01.BP_Machinegun_01",
     WeaponHUDIcon = "Machinegun_Chixing",
     WeaponId = 20511,
-    WeaponMeshResourceId = 2050101,
+    WeaponMeshResourceId = 2051101,
     WeaponSkillList = {2051101, 2051102},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20512] = {
     ATKLevelGrow = "ATKS",
     ATK_Spike = 20,
-    AddAttrs = T.RT_89,
+    AddAttrs = T.RT_93,
     BulletConver = 2.1,
     BulletIcon = "Battle_Bullet_Laser",
     BulletInit = -1,
@@ -2446,14 +2575,14 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2,
     CRI = 0.2,
-    FrontSight = T.RT_118,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_121,
+    HelpAimDict = T.RT_108,
     MagazineCapacity = 60,
     MaxDistance = 2900,
-    ModApplicationType = T.RT_113,
+    ModApplicationType = T.RT_116,
     ModVolume = 1,
     PassiveEffects = {20512},
-    PassiveEffectsAttribute = T.RT_38,
+    PassiveEffectsAttribute = T.RT_41,
     PassiveEffectsDesc = "SKILL_20512_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[20512].AddAttrs[1].Rate*100$%",
@@ -2468,36 +2597,62 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 20512,
     WeaponMeshResourceId = 2051201,
     WeaponSkillList = {2051201, 2051202},
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20599] = {
     ATKLevelGrow = "ATKS",
-    ATK_Psionic = 16,
-    BulletConver = 2.1,
+    ATK_Psionic = 21,
+    AddAttrs = {
+      [1] = {
+        AttrName = "SkillIntensity",
+        HyperWeaponSkillTreeID = 20599004,
+        IsCharAttr = 1,
+        IsWeaponMastery = 1,
+        Rate = 0.45
+      },
+      [2] = {
+        AttrName = "DamageRate",
+        HyperWeaponSkillTreeID = 20599005,
+        IsCharAttr = 1,
+        IsWeaponMastery = 1,
+        Rate = 0.15,
+        RateZone = "Almighty"
+      },
+      [3] = {
+        AttrName = "StrongValue",
+        HyperWeaponSkillTreeID = 20599009,
+        IsCharAttr = 1,
+        IsWeaponMastery = 1,
+        Rate = 0.35
+      }
+    },
+    BulletConver = 1.2,
     BulletInit = -1,
-    BulletMax = 150,
+    BulletMax = 120,
     BulletType = 1,
-    CRD = 2.1,
+    CRD = 2.2,
     CRI = 0.22,
-    FrontSight = T.RT_118,
-    HelpAimDict = T.RT_104,
+    FrontSight = T.RT_83,
+    HelpAimDict = T.RT_108,
     InitialWeaponSp = 0,
-    MagazineCapacity = 60,
+    MagazineCapacity = 30,
     MaxDistance = 2900,
     MaxWeaponSp = 100,
+    ModApplicationType = {3, 36},
     ModVolume = 1,
     PassiveEffects = {20599},
+    PassiveEffectsDesc = "SKILL_Psionic_DESC",
     PassiveEffectsWeapon = true,
     ShowWeaponModel = true,
-    TriggerProbability = 0.15,
+    TriggerProbability = 0.24,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Machinegun/BP_Machinegun.BP_Machinegun",
     WeaponHUDIcon = "Machinegun_Quewu",
     WeaponId = 20599,
-    WeaponMeshResourceId = 2051201,
-    WeaponSkillList = T.RT_111,
-    WeaponSockets = T.RT_84,
-    WeaponTag = T.RT_112
+    WeaponMeshResourceId = 2059901,
+    WeaponSkillList = {2059901, 2050102},
+    WeaponSockets = T.RT_88,
+    WeaponTag = T.RT_115
   },
   [20601] = {
     ATKLevelGrow = "ATKS",
@@ -2514,7 +2669,7 @@ return ReadOnly("BattleWeapon", {
     MagazineCapacity = 1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 4000,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PassiveEffects = {20601},
     PassiveEffectsDesc = "SKILL_20601_DESC",
@@ -2526,20 +2681,20 @@ return ReadOnly("BattleWeapon", {
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
     TriggerProbability = 0.2,
-    UIHiddenAttrs = T.RT_120,
+    UIHiddenAttrs = T.RT_123,
     UnconstrainedMC = 1,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Bow/BP_Bow02.BP_Bow02",
     WeaponHUDIcon = "Bow_Shashi",
     WeaponId = 20601,
     WeaponMeshResourceId = 2060101,
     WeaponSkillList = {2060101, 2060102},
-    WeaponSockets = T.RT_122,
-    WeaponTag = T.RT_123
+    WeaponSockets = T.RT_125,
+    WeaponTag = T.RT_126
   },
   [20602] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 18,
-    AddAttrs = T.RT_45,
+    AddAttrs = T.RT_48,
     BulletConver = 4.75,
     BulletIcon = "Battle_Bullet_Arrow",
     BulletInit = -1,
@@ -2547,11 +2702,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.2,
     CRI = 0.26,
-    FrontSight = T.RT_124,
+    FrontSight = T.RT_127,
     MagazineCapacity = 1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 4000,
-    ModApplicationType = T.RT_86,
+    ModApplicationType = T.RT_90,
     ModVolume = 1,
     PassiveEffects = {20602},
     PassiveEffectsDesc = "SKILL_20602_DESC",
@@ -2566,20 +2721,20 @@ return ReadOnly("BattleWeapon", {
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
     TriggerProbability = 0.2,
-    UIHiddenAttrs = T.RT_120,
+    UIHiddenAttrs = T.RT_123,
     UnconstrainedMC = 1,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Bow/BP_Bow01.BP_Bow01",
     WeaponHUDIcon = "Bow_Huguang",
     WeaponId = 20602,
     WeaponMeshResourceId = 2060201,
-    WeaponSkillList = T.RT_125,
-    WeaponSockets = T.RT_122,
-    WeaponTag = T.RT_126
+    WeaponSkillList = T.RT_128,
+    WeaponSockets = T.RT_125,
+    WeaponTag = T.RT_129
   },
   [20603] = {
     ATKLevelGrow = "ATKS",
     ATK_Slash = 15,
-    AddAttrs = T.RT_20,
+    AddAttrs = T.RT_23,
     BulletConver = 1.25,
     BulletIcon = "Battle_Bullet_Arrow",
     BulletInit = -1,
@@ -2595,10 +2750,10 @@ return ReadOnly("BattleWeapon", {
     MagazineCapacity = 1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 4000,
-    ModApplicationType = T.RT_81,
+    ModApplicationType = T.RT_85,
     ModVolume = 1,
     PassiveEffects = {20603},
-    PassiveEffectsAttribute = T.RT_110,
+    PassiveEffectsAttribute = T.RT_114,
     PassiveEffectsDesc = "SKILL_20603_DESC",
     PassiveEffectsDescValues = {
       [1] = "$#BattleWeapon[20603].AddAttrs[1].Rate*100$%",
@@ -2608,20 +2763,20 @@ return ReadOnly("BattleWeapon", {
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
     TriggerProbability = 0.3,
-    UIHiddenAttrs = T.RT_120,
+    UIHiddenAttrs = T.RT_123,
     UnconstrainedMC = 1,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Bow/BP_Bow02_Yinbu.BP_Bow02_Yinbu",
     WeaponHUDIcon = "Bow_Yinbu",
     WeaponId = 20603,
     WeaponMeshResourceId = 2060301,
     WeaponSkillList = {2060301, 2060302},
-    WeaponSockets = T.RT_122,
-    WeaponTag = T.RT_123
+    WeaponSockets = T.RT_125,
+    WeaponTag = T.RT_126
   },
   [20604] = {
     ATKLevelGrow = "ATKS",
     ATK_Smash = 19,
-    AddAttrs = T.RT_20,
+    AddAttrs = T.RT_23,
     BulletConver = 4.75,
     BulletIcon = "Battle_Bullet_Arrow",
     BulletInit = -1,
@@ -2629,11 +2784,11 @@ return ReadOnly("BattleWeapon", {
     BulletType = 1,
     CRD = 2.05,
     CRI = 0.22,
-    FrontSight = T.RT_124,
+    FrontSight = T.RT_127,
     MagazineCapacity = 1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 4000,
-    ModApplicationType = T.RT_86,
+    ModApplicationType = T.RT_90,
     ModVolume = 1,
     PassiveEffectsDesc = "SKILL_20604_DESC",
     PassiveEffectsDescValues = {
@@ -2642,15 +2797,15 @@ return ReadOnly("BattleWeapon", {
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
     TriggerProbability = 0.33,
-    UIHiddenAttrs = T.RT_120,
+    UIHiddenAttrs = T.RT_123,
     UnconstrainedMC = 1,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Bow/BP_Bow01.BP_Bow01",
     WeaponHUDIcon = "Bow_Chixing",
     WeaponId = 20604,
     WeaponMeshResourceId = 2060401,
-    WeaponSkillList = T.RT_125,
-    WeaponSockets = T.RT_122,
-    WeaponTag = T.RT_126
+    WeaponSkillList = T.RT_128,
+    WeaponSockets = T.RT_125,
+    WeaponTag = T.RT_129
   },
   [20605] = {
     ATKLevelGrow = "ATKS",
@@ -2666,20 +2821,20 @@ return ReadOnly("BattleWeapon", {
     MagazineCapacity = 1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 4000,
-    ModApplicationType = T.RT_90,
+    ModApplicationType = T.RT_94,
     ModVolume = 1,
     PlayFrontSightAnim = true,
     ShowWeaponModel = true,
     TriggerProbability = 0.2,
-    UIHiddenAttrs = T.RT_120,
+    UIHiddenAttrs = T.RT_123,
     UnconstrainedMC = 1,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Bow/BP_Bow02.BP_Bow02",
     WeaponHUDIcon = "Bow_Shashi",
     WeaponId = 20605,
     WeaponMeshResourceId = 2060101,
     WeaponSkillList = {2060501, 2060502},
-    WeaponSockets = T.RT_122,
-    WeaponTag = T.RT_123
+    WeaponSockets = T.RT_125,
+    WeaponTag = T.RT_126
   },
   [110101] = {
     ATKLevelGrow = "ATKS",
@@ -2706,8 +2861,8 @@ return ReadOnly("BattleWeapon", {
       110123,
       110124
     },
-    WeaponSockets = T.RT_72,
-    WeaponTag = T.RT_73,
+    WeaponSockets = T.RT_76,
+    WeaponTag = T.RT_77,
     WipCharmsAttachRules = {
       [1] = {
         HandHold = {
@@ -2727,13 +2882,13 @@ return ReadOnly("BattleWeapon", {
     BulletMax = -1,
     CRD = 0,
     CRI = 0,
-    HelpAimDict = T.RT_74,
+    HelpAimDict = T.RT_78,
     InheritSkillId = 110302,
     IsRealUltraWeapon = true,
     MagazineCapacity = -1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 2000,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     TriggerProbability = 0,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Sword/BP_Sword_01.BP_Sword_01",
@@ -2744,21 +2899,21 @@ return ReadOnly("BattleWeapon", {
       110324,
       110325
     },
-    WeaponSockets = T.RT_72,
-    WeaponTag = T.RT_76
+    WeaponSockets = T.RT_76,
+    WeaponTag = T.RT_80
   },
   [110302] = {
     BulletInit = -1,
     BulletMax = -1,
     CRD = 0,
     CRI = 0,
-    HelpAimDict = T.RT_74,
+    HelpAimDict = T.RT_78,
     InheritSkillId = 110302,
     IsRealUltraWeapon = true,
     MagazineCapacity = -1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 2000,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     TriggerProbability = 0,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Sword/BP_Sword_01.BP_Sword_01",
@@ -2769,8 +2924,8 @@ return ReadOnly("BattleWeapon", {
       110393,
       110325
     },
-    WeaponSockets = T.RT_72,
-    WeaponTag = T.RT_76
+    WeaponSockets = T.RT_76,
+    WeaponTag = T.RT_80
   },
   [150101] = {
     ATKLevelGrow = "ATKS",
@@ -2780,9 +2935,9 @@ return ReadOnly("BattleWeapon", {
     ComboHoldTime = 10,
     InheritSkillId = 150102,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_77,
+    ModApplicationType = T.RT_81,
     ModVolume = 1,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     TriggerProbability = 0.25,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Claymore/BP_Claymore_01.BP_Claymore_01",
@@ -2794,8 +2949,8 @@ return ReadOnly("BattleWeapon", {
       150125,
       150126
     },
-    WeaponSockets = T.RT_41,
-    WeaponTag = T.RT_78
+    WeaponSockets = T.RT_44,
+    WeaponTag = T.RT_82
   },
   [150301] = {
     InheritSkillId = 150302,
@@ -2803,7 +2958,7 @@ return ReadOnly("BattleWeapon", {
     IsRealUltraWeapon = true,
     ModVolume = 1,
     NotClearComboWhenChanged = true,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     UltraOrdinal = 1,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Sword/BP_Sword_01.BP_Sword_01",
@@ -2816,7 +2971,7 @@ return ReadOnly("BattleWeapon", {
       1503104
     },
     WeaponSockets = T.RT_9,
-    WeaponTag = T.RT_73
+    WeaponTag = T.RT_77
   },
   [150302] = {
     InheritSkillId = 150302,
@@ -2824,7 +2979,7 @@ return ReadOnly("BattleWeapon", {
     IsRealUltraWeapon = true,
     ModVolume = 1,
     NotClearComboWhenChanged = true,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     UltraOrdinal = 2,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Polearm/BP_Polearm_01.BP_Polearm_01",
@@ -2836,7 +2991,7 @@ return ReadOnly("BattleWeapon", {
       1503123,
       1503124
     },
-    WeaponSockets = T.RT_24,
+    WeaponSockets = T.RT_27,
     WeaponTag = {
       "Ultra",
       "Melee",
@@ -2850,7 +3005,7 @@ return ReadOnly("BattleWeapon", {
     IsRealUltraWeapon = true,
     ModVolume = 1,
     NotClearComboWhenChanged = true,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     UltraOrdinal = 3,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Claymore/BP_Claymore_02.BP_Claymore_02",
@@ -2862,8 +3017,8 @@ return ReadOnly("BattleWeapon", {
       1503143,
       1503144
     },
-    WeaponSockets = T.RT_41,
-    WeaponTag = T.RT_78
+    WeaponSockets = T.RT_44,
+    WeaponTag = T.RT_82
   },
   [150304] = {
     InheritSkillId = 150302,
@@ -2871,7 +3026,7 @@ return ReadOnly("BattleWeapon", {
     IsRealUltraWeapon = true,
     ModVolume = 1,
     NotClearComboWhenChanged = true,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     UltraOrdinal = 4,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Dualblade/BP_Dualblade_01.BP_Dualblade_01",
@@ -2883,14 +3038,14 @@ return ReadOnly("BattleWeapon", {
       1503163,
       1503164
     },
-    WeaponSockets = T.RT_48,
+    WeaponSockets = T.RT_51,
     WeaponTag = {
       "Ultra",
       "Melee",
       "Dualblade",
       "Almighty"
     },
-    WipCharmsAttachRules = T.RT_53,
+    WipCharmsAttachRules = T.RT_56,
     WipCharmsResIds = {150315}
   },
   [150401] = {
@@ -2910,10 +3065,10 @@ return ReadOnly("BattleWeapon", {
     MagazineCapacity = 300,
     MagazineUIType = "NoMagazine",
     MaxDistance = 2800,
-    ModApplicationType = T.RT_77,
+    ModApplicationType = T.RT_81,
     ModVolume = 1,
     PlayFrontSightAnim = true,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     SightUIMapping = {
       [150499] = "Suyi01"
@@ -2929,7 +3084,7 @@ return ReadOnly("BattleWeapon", {
         SocketA = "Root",
         SocketB = "root_hook_arm_r"
       },
-      UnbindHand = T.RT_40
+      UnbindHand = T.RT_43
     },
     WeaponSourceMap = {
       [150499] = 150497
@@ -2950,9 +3105,9 @@ return ReadOnly("BattleWeapon", {
     ComboHoldTime = 10,
     InheritSkillId = 150501,
     MaxComboCount = 120,
-    ModApplicationType = T.RT_77,
+    ModApplicationType = T.RT_81,
     ModVolume = 1,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     TriggerProbability = 0.25,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Katana/BP_Katana_01.BP_Katana_01",
@@ -2963,15 +3118,15 @@ return ReadOnly("BattleWeapon", {
       150512,
       150514
     },
-    WeaponSockets = T.RT_64,
+    WeaponSockets = T.RT_68,
     WeaponTag = {
       "Ultra",
       "Melee",
       "Katana",
       "Almighty"
     },
-    WipCharmsAttachRules = T.RT_69,
-    WipCharmsResIds = T.RT_70
+    WipCharmsAttachRules = T.RT_73,
+    WipCharmsResIds = T.RT_74
   },
   [310101] = {
     ATKLevelGrow = "ATKS",
@@ -2985,12 +3140,12 @@ return ReadOnly("BattleWeapon", {
     MagazineCapacity = -1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 2800,
-    ModApplicationType = T.RT_127,
+    ModApplicationType = T.RT_130,
     ModVolume = 1,
-    RecommendAttr = T.RT_128,
+    RecommendAttr = T.RT_131,
     ShowWeaponModel = false,
     TriggerProbability = 0.5,
-    UIHiddenAttrs = T.RT_129,
+    UIHiddenAttrs = T.RT_132,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow_Linen_R.BP_Crossbow_Linen_R",
     WeaponHUDIcon = "Linen_Hansai",
     WeaponId = 310101,
@@ -3000,7 +3155,7 @@ return ReadOnly("BattleWeapon", {
       HandHold = T.RT_1,
       UnbindHand = T.RT_7
     },
-    WeaponTag = T.RT_130
+    WeaponTag = T.RT_133
   },
   [310102] = {
     ATKLevelGrow = "ATKS",
@@ -3008,30 +3163,30 @@ return ReadOnly("BattleWeapon", {
     CRI = 0.12,
     MagazineUIType = "NoMagazine",
     ModVolume = 1,
-    RecommendAttr = T.RT_128,
+    RecommendAttr = T.RT_131,
     ShowWeaponModel = false,
     TriggerProbability = 0.5,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow_Linen_L.BP_Crossbow_Linen_L",
     WeaponId = 310102,
     WeaponMeshResourceId = 310102,
     WeaponSockets = {
-      HandHold = T.RT_131,
-      UnbindHand = T.RT_50
+      HandHold = T.RT_134,
+      UnbindHand = T.RT_53
     },
-    WeaponTag = T.RT_130
+    WeaponTag = T.RT_133
   },
   [510101] = {
     ATKLevelGrow = "ATKS",
     CRD = 0,
     CRI = 0,
     InheritSkillId = 510102,
-    RecommendAttr = T.RT_75,
+    RecommendAttr = T.RT_79,
     ShowWeaponModel = false,
     TriggerProbability = 0,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Abstract/BP_Songlu_Summon.BP_Songlu_Summon",
     WeaponId = 510101,
     WeaponSkillList = {510104, 510105},
-    WeaponSockets = T.RT_133,
+    WeaponSockets = T.RT_136,
     WeaponTag = {
       "Ultra",
       "Melee",
@@ -3060,7 +3215,7 @@ return ReadOnly("BattleWeapon", {
     MagazineCapacity = -1,
     MagazineUIType = "NoMagazine",
     MaxDistance = 2800,
-    ModApplicationType = T.RT_127,
+    ModApplicationType = T.RT_130,
     ModVolume = 1,
     PlayFrontSightAnim = true,
     RecommendAttr = {
@@ -3071,12 +3226,12 @@ return ReadOnly("BattleWeapon", {
     },
     ShowWeaponModel = false,
     TriggerProbability = 0.2,
-    UIHiddenAttrs = T.RT_129,
+    UIHiddenAttrs = T.RT_132,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Funnel/BP_Funnel.BP_Funnel",
     WeaponHUDIcon = "Saiqi_Yika",
     WeaponId = 530101,
     WeaponSkillList = {530122},
-    WeaponSockets = T.RT_133,
+    WeaponSockets = T.RT_136,
     WeaponTag = {
       "Ultra",
       "Ranged",
@@ -3098,8 +3253,8 @@ return ReadOnly("BattleWeapon", {
       540222,
       540251
     },
-    WeaponSockets = T.RT_133,
-    WeaponTag = T.RT_76
+    WeaponSockets = T.RT_136,
+    WeaponTag = T.RT_80
   },
   [600201] = {
     BulletInit = 9,
@@ -3111,7 +3266,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 600201,
     WeaponMeshResourceId = 600202,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_134
+    WeaponTag = T.RT_137
   },
   [700001] = {
     ModVolume = 1,
@@ -3120,7 +3275,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 700001,
     WeaponMeshResourceId = 700001,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_135
+    WeaponTag = T.RT_138
   },
   [700101] = {
     BulletInit = 2,
@@ -3132,7 +3287,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 700101,
     WeaponMeshResourceId = 700102,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_134
+    WeaponTag = T.RT_137
   },
   [700201] = {
     ModVolume = 1,
@@ -3141,7 +3296,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 700201,
     WeaponMeshResourceId = 700202,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_136
+    WeaponTag = T.RT_139
   },
   [700301] = {
     BulletInit = 12,
@@ -3153,7 +3308,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 700301,
     WeaponMeshResourceId = 700302,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_134
+    WeaponTag = T.RT_137
   },
   [700401] = {
     ChildWeaponId = 700402,
@@ -3171,7 +3326,7 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Monster/Melee/BP_Jt_Tuji_Shield.BP_Jt_Tuji_Shield",
     WeaponId = 700402,
     WeaponMeshResourceId = 700403,
-    WeaponSockets = T.RT_137,
+    WeaponSockets = T.RT_140,
     WeaponTag = T.RT_3
   },
   [700403] = {
@@ -3182,7 +3337,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 700403,
     WeaponMeshResourceId = 700402,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_135
+    WeaponTag = T.RT_138
   },
   [700801] = {
     ModVolume = 1,
@@ -3191,7 +3346,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 700801,
     WeaponMeshResourceId = 700802,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_136
+    WeaponTag = T.RT_139
   },
   [701001] = {
     ChildWeaponId = 701002,
@@ -3201,7 +3356,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 701001,
     WeaponMeshResourceId = 701002,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_138
+    WeaponTag = T.RT_141
   },
   [701002] = {
     ModVolume = 1,
@@ -3209,8 +3364,8 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Monster/Ranged/BP_SQ_Zhijian_WP02.BP_SQ_Zhijian_WP02",
     WeaponId = 701002,
     WeaponMeshResourceId = 701003,
-    WeaponSockets = T.RT_133,
-    WeaponTag = T.RT_138
+    WeaponSockets = T.RT_136,
+    WeaponTag = T.RT_141
   },
   [701201] = {
     ShowWeaponModel = false,
@@ -3218,7 +3373,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 701201,
     WeaponMeshResourceId = 701201,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_136
+    WeaponTag = T.RT_139
   },
   [701301] = {
     BulletInit = 12,
@@ -3230,7 +3385,26 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 701301,
     WeaponMeshResourceId = 701301,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_134
+    WeaponTag = T.RT_137
+  },
+  [701901] = {
+    ChildWeaponId = 701902,
+    ModVolume = 1,
+    ShowWeaponModel = false,
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Monster/Ranged/BP_JT_Hongshan_WP01.BP_JT_Hongshan_WP01",
+    WeaponId = 701901,
+    WeaponMeshResourceId = 701902,
+    WeaponSockets = T.RT_2,
+    WeaponTag = T.RT_137
+  },
+  [701902] = {
+    ModVolume = 1,
+    ShowWeaponModel = false,
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Monster/Ranged/BP_JT_Hongshan_WP02.BP_JT_Hongshan_WP02",
+    WeaponId = 701902,
+    WeaponMeshResourceId = 701902,
+    WeaponSockets = T.RT_140,
+    WeaponTag = T.RT_137
   },
   [800101] = {
     BulletInit = 2,
@@ -3255,7 +3429,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 800102,
     WeaponMeshResourceId = 800103,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_135
+    WeaponTag = T.RT_138
   },
   [800201] = {
     ModVolume = 1,
@@ -3335,7 +3509,7 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Monster/Ranged/BP_Boss_Shenpan_WP.BP_Boss_Shenpan_WP",
     WeaponId = 851401,
     WeaponMeshResourceId = 851402,
-    WeaponSockets = T.RT_139,
+    WeaponSockets = T.RT_142,
     WeaponTag = T.RT_3
   },
   [851701] = {
@@ -3343,7 +3517,7 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Monster/Melee/BP_Boss_Yuming.BP_Boss_Yuming",
     WeaponId = 851701,
     WeaponMeshResourceId = 851702,
-    WeaponSockets = T.RT_139,
+    WeaponSockets = T.RT_142,
     WeaponTag = T.RT_3
   },
   [852301] = {
@@ -3362,15 +3536,15 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 900101,
     WeaponMeshResourceId = 900101,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_140
+    WeaponTag = T.RT_143
   },
   [900102] = {
     ShowWeaponModel = false,
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Monster/Melee/BP_SQ_Knives02.BP_SQ_Knives02",
     WeaponId = 900102,
     WeaponMeshResourceId = 900101,
-    WeaponSockets = T.RT_137,
-    WeaponTag = T.RT_140
+    WeaponSockets = T.RT_140,
+    WeaponTag = T.RT_143
   },
   [900201] = {
     MaxDistance = 3000,
@@ -3379,7 +3553,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 900201,
     WeaponMeshResourceId = 900202,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_134
+    WeaponTag = T.RT_137
   },
   [900701] = {
     MaxDistance = 3000,
@@ -3388,7 +3562,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 900701,
     WeaponMeshResourceId = 900702,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_138
+    WeaponTag = T.RT_141
   },
   [950101] = {
     ChildWeaponId = 950102,
@@ -3398,7 +3572,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 950101,
     WeaponMeshResourceId = 950102,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_140
+    WeaponTag = T.RT_143
   },
   [950102] = {
     ModVolume = 1,
@@ -3406,8 +3580,8 @@ return ReadOnly("BattleWeapon", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Monster/Melee/BP_NE_Knives02.BP_NE_Knives02",
     WeaponId = 950102,
     WeaponMeshResourceId = 950102,
-    WeaponSockets = T.RT_137,
-    WeaponTag = T.RT_140
+    WeaponSockets = T.RT_140,
+    WeaponTag = T.RT_143
   },
   [951001] = {
     ModVolume = 1,
@@ -3416,7 +3590,7 @@ return ReadOnly("BattleWeapon", {
     WeaponId = 951001,
     WeaponMeshResourceId = 951002,
     WeaponSockets = T.RT_2,
-    WeaponTag = T.RT_135
+    WeaponTag = T.RT_138
   },
   [1000101] = {
     ModVolume = 1,

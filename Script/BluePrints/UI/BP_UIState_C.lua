@@ -524,6 +524,43 @@ end
 function BP_UIState_C:OnHide(HideTag)
 end
 
+function BP_UIState_C:HideComponentUI(HideTag)
+  if self.IsMarkToRemove then
+    return
+  end
+  if self.IgnoreHideTags and CommonUtils.HasValue(self.IgnoreHideTags, HideTag) then
+    return
+  end
+  HideTag = HideTag or UIConst.CommonHideTagName.DefaultTag
+  self.HideTags = self.HideTags or {}
+  self.HideTags[HideTag] = 1
+  local IsHidden = not IsEmptyTable(self.HideTags) or self.IsHideByNode
+  if IsHidden then
+    local Visibility = UE4.ESlateVisibility.Collapsed
+    if self:GetVisibility() ~= Visibility then
+      self:SetVisibility(Visibility)
+      self:OnHide(HideTag)
+    end
+  end
+end
+
+function BP_UIState_C:ShowComponentUI(ShowTag)
+  if self.IsMarkToRemove then
+    return
+  end
+  ShowTag = ShowTag or UIConst.CommonHideTagName.DefaultTag
+  self.HideTags = self.HideTags or {}
+  self.HideTags[ShowTag] = nil
+  local IsHidden = not IsEmptyTable(self.HideTags) or self.IsHideByNode
+  if not IsHidden then
+    local Visibility = UE4.ESlateVisibility.SelfHitTestInvisible
+    if self:GetVisibility() ~= Visibility then
+      self:SetVisibility(Visibility)
+      self:OnShow(ShowTag)
+    end
+  end
+end
+
 function BP_UIState_C:Show(ShowTag)
   if self.IsMarkToRemove then
     DebugPrint("Hy@==UIState型界面移除当帧需要Show，直接忽略", self:GetUIConfigName())

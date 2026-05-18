@@ -326,6 +326,7 @@ function ReddotManager.ClearLeafNodeCount(NodeName, bClearCacheDetail, CacheDeta
     NodeCache.Count = 0
     if bClearCacheDetail then
       NodeCache.Detail = {}
+      NodeCache.Count = 0
     end
   end
 end

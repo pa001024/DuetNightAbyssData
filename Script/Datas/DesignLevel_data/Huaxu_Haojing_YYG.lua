@@ -190,6 +190,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["2310322"] = {
+      CreatorId = 2310322,
+      UnitType = "Mechanism",
+      UnitId = 110031
+    },
     ["162310240"] = {
       CreatorId = 162310240,
       UnitType = "Mechanism",
@@ -389,11 +394,6 @@ return {
       CreatorId = 242310290,
       UnitType = "Npc",
       UnitId = 240026
-    },
-    ["2310322"] = {
-      CreatorId = 2310322,
-      UnitType = "Mechanism",
-      UnitId = 110031
     }
   },
   ManualItem = {},

@@ -1,5 +1,6 @@
 require("UnLua")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local BattleUtils = require("Utils.BattleUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -745,7 +746,7 @@ local function AddContent(self, Resource, CharId2Char)
     end
   end
   local Data = Resource:Data()
-  if Data and string.match(Data.Type, "BattleItem") then
+  if Data and string.match(Data.Type, "BattleItem") and not BattleUtils.ShouldHideCharacterAttributeSwitchPhantom(Data) then
     local Content = self:NewItemContent(Resource)
     Content.IsNew = ArmoryUtils:TryAddNewResourceReddot(Resource, Resource.ResourceId)
     if Content.IsNew then
@@ -816,13 +817,15 @@ function M:NewItemContent(ServerData)
   Obj.ResourceCount = 0
   Obj.ResourceSType = ServerData.ResourceSType or ""
   local Data = ServerData:Data()
+  local DisplayData
   if Data.Type == "InfiniteBattleItem" then
     Obj.ResourceCount = ""
     if Obj.ResourceSType == "PhantomItem" then
       Obj.IsPhantom = true
       Obj.ItemDetailsButton01EventInfo = self:CreateOpenPhantomButtonEventInfo(Obj)
       Obj.ItemDetailsButton02EventInfo = self:CreateQuickEquipButtonEventInfo(Obj)
-      local BattleCharData = DataMgr.BattleChar[Data.UseParam]
+      DisplayData = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(Data)
+      local BattleCharData = DataMgr.BattleChar[DisplayData.UseParam]
       local Element = BattleCharData and BattleCharData.Attribute
       if Element then
         local IconName = "Armory_" .. Element
@@ -848,10 +851,10 @@ function M:NewItemContent(ServerData)
   rawset(Obj, "IsEventItemt", Obj.ResourceSType == "EventItem")
   Obj.IsEquiped = false
   Obj.Rarity = Data.Rarity or 0
-  Obj.Icon = Data.Icon
+  Obj.Icon = DisplayData and DisplayData.Icon or Data.Icon
   Obj.bEnableDrag = true
   Obj.ParentWidget = self
-  Obj.CharId = Data.UseParam
+  Obj.CharId = DisplayData and DisplayData.UseParam or Data.UseParam
   Obj.MenuPlacement = EMenuPlacement.MenuPlacement_CenteredAboveAnchor
   Obj.CreateDragWidget = self.CreateDragWidget
   return Obj
@@ -913,10 +916,15 @@ function M:CreateOpenPhantomButtonEventInfo(Content)
   }
 end
 
-function M:CreateOpenMountButtonEventInfo()
+function M:CreateOpenMountButtonEventInfo(Content)
   return {
     ButtonClickCallBack = function()
-      UIManager(self):LoadUINew("MountsMain")
+      local MountId
+      if Content and Content.Id then
+        local ResourceInfo = DataMgr.Resource[Content.Id]
+        MountId = ResourceInfo and ResourceInfo.FunctionVars and ResourceInfo.FunctionVars.Id
+      end
+      UIManager(self):LoadUINew("MountsMain", MountId)
     end,
     ButtonClickPadKey = "Gamepad_FaceButton_Top",
     ButtonClickText = GText("UI_JumpMount"),
@@ -1671,7 +1679,7 @@ function M:TryOpenPreview(Content)
   ItemData.TypeId = Content.Id
   ItemData.SinglePreview = true
   ItemData.HidePurchase = true
-  UIManager(self):LoadUINew("SkinPreview", ItemData, self)
+  PageJumpUtils:JumpToSkinPreview(ItemData, self)
 end
 
 function M:Destruct()

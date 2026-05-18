@@ -192,5 +192,61 @@ return ReadOnly("TitleFrame", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
     Name = "TitleFrame_10025",
     TitleFrameID = 10025
+  },
+  [10026] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_07_5.WBP_PersonalInfo_Title_07_5'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10026",
+    TitleFrameID = 10026
+  },
+  [10027] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_07_5.WBP_PersonalInfo_Title_07_5'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10027",
+    TitleFrameID = 10027
+  },
+  [10028] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_09_1.WBP_PersonalInfo_Title_09_1'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10028",
+    TitleFrameID = 10028
+  },
+  [10029] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_09_2.WBP_PersonalInfo_Title_09_2'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10029",
+    TitleFrameID = 10029
+  },
+  [10030] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_09_3.WBP_PersonalInfo_Title_09_3'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10030",
+    TitleFrameID = 10030
+  },
+  [10031] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_09_4.WBP_PersonalInfo_Title_09_4'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10031",
+    TitleFrameID = 10031
+  },
+  [10032] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_09_5.WBP_PersonalInfo_Title_09_5'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10032",
+    TitleFrameID = 10032
+  },
+  [10033] = {
+    Des = "TitleFrame_Des",
+    FramePath = "WidgetBlueprint'/Game/UI/WBP/PersonalInfo/Widget/Title/Title/WBP_PersonalInfo_Title_08_5.WBP_PersonalInfo_Title_08_5'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Icon_Random_TitleFrame.T_Icon_Random_TitleFrame'",
+    Name = "TitleFrame_10033",
+    TitleFrameID = 10033
   }
 })

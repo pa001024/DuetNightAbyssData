@@ -501,8 +501,14 @@ function BP_CharacterBase_C:SetArmoryTag(ArmoryTag, bKeepWeapon, bHideUntilLoop)
 end
 
 function BP_CharacterBase_C:PlayShowIdleMontage(IldeTag, bHideUntilLoop)
-  local MontageFolder = DataMgr.Model[self.ModelId].MontageFolder
-  local MontagePrefix = DataMgr.Model[self.ModelId].MontagePrefix
+  local Data = DataMgr.Model[self.ModelId]
+  local MontageFolder = Data.MontageFolder
+  local MontagePrefix
+  if "Armory" == IldeTag then
+    MontagePrefix = Data.ArmoryMontagePrefix or Data.MontagePrefix
+  else
+    MontagePrefix = Data.MontagePrefix
+  end
   MontagePrefix = self:FormatPrefixWithMount(MontagePrefix)
   local MontagePath = MontageFolder .. "Armory/" .. MontagePrefix .. IldeTag .. "_Show_Montage"
   print(_G.LogTag, "PlayShowIdleMontage", MontagePath)

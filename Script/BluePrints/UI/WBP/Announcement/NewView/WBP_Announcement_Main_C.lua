@@ -1,13 +1,29 @@
 require("UnLua")
 local AnnounceModel = AnnounceController:GetModel()
 local ReddotNames = {
-  "SystemAnnouncement",
   "ActivityAnnouncement",
+  "SystemAnnouncement",
   "NewsAnnouncement"
 }
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
+
+function M:SetActiveWidgetIndexWrap(Index)
+  if 0 == Index then
+    self.WebContent:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Panel_Fail:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Com_Loading:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  elseif 1 == Index then
+    self.WebContent:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Panel_Fail:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Com_Loading:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  elseif 2 == Index then
+    self.WebContent:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Panel_Fail:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Com_Loading:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
+end
 
 function M:Construct()
   M.Super.Construct(self)
@@ -25,7 +41,7 @@ function M:Construct()
   self:SetWebContentVisible(false)
   self.Main:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Com_Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.WS_State:SetActiveWidgetIndex(0)
+  self:SetActiveWidgetIndexWrap(0)
   self.WebContent:BindUObject("widget", self, true)
   self.WebContent.OnLoadCompleted:Add(self, function()
     DebugPrint("看看公告Ios的URL:: OnLoadCompleted")
@@ -33,7 +49,7 @@ function M:Construct()
       return
     end
     self:SetLoadingVisible(false)
-    self.WS_State:SetActiveWidgetIndex(0)
+    self:SetActiveWidgetIndexWrap(0)
     if self.WebContent:GetUrl() == "about:blank" then
       return
     end
@@ -44,7 +60,7 @@ function M:Construct()
   end)
   self.WebContent.OnLoadError:Add(self, function()
     self:SetWebContentVisible(false)
-    self.WS_State:SetActiveWidgetIndex(1)
+    self:SetActiveWidgetIndexWrap(1)
     self:SetLoadingVisible(false)
     self.bWebFailed = true
   end)
@@ -54,7 +70,7 @@ function M:Construct()
       return
     end
     self:SetWebContentVisible(false)
-    self.WS_State:SetActiveWidgetIndex(2)
+    self:SetActiveWidgetIndexWrap(2)
     self:SetLoadingVisible(true)
   end)
   self.Btn_Refresh.OnClicked:Add(self, self.ClickRetry)

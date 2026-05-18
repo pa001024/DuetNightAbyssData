@@ -325,6 +325,31 @@ return ReadOnly("FishingBook", {
     FishingNoteId = 3105,
     FishingSpot = 10550101
   },
+  [3201] = {
+    FishId = 3201,
+    FishingNoteId = 3201,
+    FishingSpot = 10600101
+  },
+  [3202] = {
+    FishId = 3202,
+    FishingNoteId = 3202,
+    FishingSpot = 10600101
+  },
+  [3203] = {
+    FishId = 3203,
+    FishingNoteId = 3203,
+    FishingSpot = 10600101
+  },
+  [3204] = {
+    FishId = 3204,
+    FishingNoteId = 3204,
+    FishingSpot = 10600101
+  },
+  [3205] = {
+    FishId = 3205,
+    FishingNoteId = 3205,
+    FishingSpot = 10600101
+  },
   [110101] = {
     FishId = 110101,
     FishingNoteId = 110101,
@@ -644,5 +669,30 @@ return ReadOnly("FishingBook", {
     FishId = 310501,
     FishingNoteId = 310501,
     FishingSpot = 10550101
+  },
+  [320101] = {
+    FishId = 320101,
+    FishingNoteId = 320101,
+    FishingSpot = 10600101
+  },
+  [320201] = {
+    FishId = 320201,
+    FishingNoteId = 320201,
+    FishingSpot = 10600101
+  },
+  [320301] = {
+    FishId = 320301,
+    FishingNoteId = 320301,
+    FishingSpot = 10600101
+  },
+  [320401] = {
+    FishId = 320401,
+    FishingNoteId = 320401,
+    FishingSpot = 10600101
+  },
+  [320501] = {
+    FishId = 320501,
+    FishingNoteId = 320501,
+    FishingSpot = 10600101
   }
 })

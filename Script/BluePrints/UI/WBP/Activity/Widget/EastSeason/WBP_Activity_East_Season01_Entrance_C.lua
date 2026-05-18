@@ -11,6 +11,9 @@ end
 
 function M:InitUI()
   local QuestPhaseId = EastSeasonQuestUtils:GetQuestPhaseIdByTabId(self.EventId, self.TabId)
+  if not QuestPhaseId then
+    return
+  end
   local CompletedQuestCount, TotalQuestCount = EastSeasonQuestUtils:GetQuestPhaseInfo(self.EventId, QuestPhaseId)
   self.Text_Progress:SetText(CompletedQuestCount .. "/" .. TotalQuestCount)
   if EastSeasonQuestUtils:IsQuestPhaseCanGetReward(self.EventId, QuestPhaseId) then
@@ -23,7 +26,7 @@ function M:InitUI()
   for _, phaseData in pairs(DataMgr.CommonQuestPhase) do
     if phaseData.Index == self.TabId and phaseData.EventId == self.EventId then
       self.Text_Type:SetText(GText(phaseData.QuestPhaseName))
-      local IconTexture = LoadObject(phaseData.Icon)
+      local IconTexture = LoadObject(phaseData.EntranceIcon or phaseData.Icon)
       self.Icon_Type:SetBrushFromTexture(IconTexture)
     end
   end

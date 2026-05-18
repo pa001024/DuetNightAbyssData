@@ -172,6 +172,16 @@ return ReadOnly("RegionOnline", {
     RegionChannelSwitchCD = 5,
     SubRegionId = 105501
   },
+  [106001] = {
+    DefaultChannelNum = 2,
+    ManuaSwitchPlayerNum = 300,
+    MultiPlayerNum = 200,
+    OnlineCondition = 332,
+    Priority = 1,
+    RegionChannelName = "UI_REGION_NAME_1060",
+    RegionChannelSwitchCD = 5,
+    SubRegionId = 106001
+  },
   [999701] = {
     ManuaSwitchPlayerNum = 150,
     MaxX = 28400,

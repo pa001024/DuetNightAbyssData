@@ -164,6 +164,13 @@
     "desc2": "Voici « l’Arc-en-ciel ».\nOui, il tient dans ta paume — dissimulé dans ce petit tube brillant.\nFais-le tourner, et tu verras la forêt, les constellations, la neige qui s’étend comme un désert sans fin...\n\nBerry, {nickname}, même si nous devons encore rester cachés dans ces ruines, j’aimerais que vous puissiez, un jour, contempler un monde plus vaste, plus éclatant.\n\n— ???"
   },
   {
+    "id": 112,
+    "name": "闪烁星芒",
+    "icon": "T_Coin_SkinCollect02",
+    "rarity": 5,
+    "desc": "装饰品上的点点星光，铭刻着美与闪耀的瞬间。"
+  },
+  {
     "id": 121,
     "name": "Pass mensuel de Luno, la servante n° 1",
     "icon": "T_Read_03",
@@ -1108,8 +1115,8 @@
             -55302.52
           ],
           [
-            4222.48,
-            -76797.22
+            4181.7705,
+            -76947.875
           ],
           [
             -28387.24,
@@ -1504,6 +1511,13 @@
     "icon": "T_Resource_Abyss_LimitTime_Icon01",
     "rarity": 5,
     "desc": "Un souvenir commémoratif obtenu au théâtre, consignant les légendes et émotions de la scène. Peut être échangé contre des récompenses spéciales."
+  },
+  {
+    "id": 223,
+    "name": "Pièce stellaire",
+    "icon": "T_Resource_ActivityIcon_01",
+    "rarity": 5,
+    "desc": "Pièce commémorative scintillant comme la lumière des étoiles, pouvant être échangée contre diverses récompenses. Parez-vous-en et brillez comme une étoile."
   },
   {
     "id": 301,
@@ -3780,8 +3794,8 @@
             -55302.52
           ],
           [
-            4222.48,
-            -76797.22
+            4181.7705,
+            -76947.875
           ],
           [
             -28387.24,
@@ -4768,6 +4782,49 @@
     "icon": "T_Impression_Chaos",
     "rarity": 5,
     "desc": "Permet d’améliorer l’Impression Chaos d’un personnage à Huaxu."
+  },
+  {
+    "id": 4001,
+    "name": "Activité personnelle",
+    "icon": "T_Guild_IconActivity",
+    "rarity": 5,
+    "desc": "L’activité personnelle représente le niveau d’activité hebdomadaire d’un membre de la guilde. Participez activement aux activités de la guilde afin d’obtenir diverses récompenses."
+  },
+  {
+    "id": 4002,
+    "name": "Activité de guilde",
+    "icon": "T_Guild_IconActivity",
+    "rarity": 5,
+    "desc": "La Société archéologique de Gréniche supervise de nombreuses guildes affiliées, et l’activité de guilde constitue un indicateur important pour évaluer leurs performances récentes."
+  },
+  {
+    "id": 4003,
+    "name": "Licence de guilde",
+    "icon": "T_Guild_IconLicense",
+    "rarity": 5,
+    "desc": "Licence spéciale délivrée par la Société archéologique de Gréniche. Sa possession permet de fonder une guilde.",
+    "desc2": "« La Société archéologique de Gréniche est une organisation d’envergure présente à travers tout le continent. Derrière ses recherches académiques officielles, elle possède naturellement ses propres moyens de défense et de collecte d’informations. Considère ces ressources comme un autre investissement que je fais en toi. »\n \n— Maître Qiu"
+  },
+  {
+    "id": 4004,
+    "name": "Prestige de guilde",
+    "icon": "T_Guild_IconReputation",
+    "rarity": 5,
+    "desc": "Le prestige représente l’influence d’une guilde. Accumulez du Prestige de guilde afin d’augmenter le niveau de la guilde."
+  },
+  {
+    "id": 4005,
+    "name": "Fonds de guilde",
+    "icon": "T_Guild_IconFunds",
+    "rarity": 5,
+    "desc": "Les fonds sont essentiels au fonctionnement quotidien d’une guilde et peuvent être utilisés pour son développement."
+  },
+  {
+    "id": 4006,
+    "name": "Médailles de guilde",
+    "icon": "T_Guild_IconMedal",
+    "rarity": 5,
+    "desc": "La guilde applique les principes de récompense et de sanction de Maître Qiu : les membres actifs reçoivent des Médailles de guilde, échangeables contre diverses récompenses au sein de la guilde."
   },
   {
     "id": 10001,
@@ -6474,12 +6531,372 @@
     "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
   },
   {
+    "id": 12155,
+    "name": "囚鸟的刺羽的握柄",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的囚鸟的刺羽部件。冷兵器上最贴近使用者的部分，“趁手”，是它最实际的设计目的。",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12156,
+    "name": "囚鸟的刺羽的刀刃",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的囚鸟的刺羽部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12157,
+    "name": "圣血*太刀的握柄",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的圣血*太刀部件。冷兵器上最贴近使用者的部分，“趁手”，是它最实际的设计目的。",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12158,
+    "name": "圣血*太刀的刀刃",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的圣血*太刀部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12159,
+    "name": "圣血*太刀的饰物",
+    "icon": "T_Melee_Weapon_Part03",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的圣血*太刀部件。充分贯彻了使用者的意志，而唯有强大，才有资格在战场上彰显这份独一无二的个性。",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12160,
+    "name": "薄暮契约的枪机",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的薄暮契约部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12161,
+    "name": "薄暮契约的枪身",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的薄暮契约部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
+    "id": 12162,
+    "name": "薄暮契约的枪管",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "严格按照图纸打造的薄暮契约部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc2": "« Je sais bien que vous aimez tous vous prendre pour des artistes, mais soyons honnêtes : vous êtes une belle bande d’idiots. L’alchimie, c’est l’alchimie ; les potions, les potions ; les croquis, les croquis. À quoi bon vous torturer avec le sens de la vie ou les conséquences de vos travaux ?\nRegardez plutôt mon nouveau fusil — pas mal, hein ? »\n\n— Nisaya, Maître d’armes des Éolipyliens"
+  },
+  {
     "id": 15001,
     "name": "测试用武器原型",
-    "icon": "T_Range_Weapon_Part01",
+    "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
     "desc": "测试用武器原型",
     "desc2": "测试用武器原型"
+  },
+  {
+    "id": 15002,
+    "name": "Prototype : Conflit perpétuel",
+    "icon": "T_Weapon_Polearm_Zaie",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15003,
+    "name": "Prototype : Requiem d’épines",
+    "icon": "T_Weapon_Machinegun_Zaie",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15004,
+    "name": "Prototype : Plume sanguine",
+    "icon": "T_Weapon_Crossbow_Zaie",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15005,
+    "name": "Prototype : Nocturne – Épée",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15006,
+    "name": "Prototype : Braise souveraine",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15007,
+    "name": "Prototype : Nocturne – Épée-fouet",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15008,
+    "name": "Prototype : Nocturne – Katana",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15009,
+    "name": "Prototype : Nocturne – Lance-grenades",
+    "icon": "T_Melee_Weapon_Part01",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15010,
+    "name": "Prototype : L’Avenir en ruine",
+    "icon": "T_Melee_Weapon_Part02",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15011,
+    "name": "Prototype : Nocturne – Arc",
+    "icon": "T_Range_Weapon_Part02",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15012,
+    "name": "Prototype : Nocturne – Doubles lames",
+    "icon": "T_Range_Weapon_Part03",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15013,
+    "name": "Prototype : Nocturne – Pistolet",
+    "icon": "T_Range_Weapon_Part01",
+    "rarity": 5,
+    "desc": "L’un des prototypes légendaires à l’origine des Armes de calamité.\nSon destin fut amer comme l’absinthe, acéré comme une épée à double tranchant.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Regardez ces êtres que vous avez créés, ceux à qui le cycle des renaissances fut refusé. Ils ne peuvent triompher de la souffrance. Leurs larmes les aveuglent. Ils dérivent sur les eaux salées, chancellent dans les rues comme au cœur des cités.\nJe n’ai fait que les aider à lever la main. Vous ne les avez ni plaints, ni aimés, ni protégés. Alors je l’ai fait à votre place. En quoi ai-je eu tort ? »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15014,
+    "name": "Éveil de forge : Arme d’hast",
+    "icon": "T_Weapon_Piece_Polearm_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15015,
+    "name": "Éveil de forge : Fusil d’assaut",
+    "icon": "T_Weapon_Piece_Machinegun_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15016,
+    "name": "Éveil de forge : Doubles pistolets",
+    "icon": "T_Weapon_Piece_Crossbow_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15017,
+    "name": "Éveil de forge : Épée",
+    "icon": "T_Weapon_Piece_Sword_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15018,
+    "name": "Éveil de forge : Espadon",
+    "icon": "T_Weapon_Piece_Claymore_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15019,
+    "name": "Éveil de forge : Épée-fouet",
+    "icon": "T_Weapon_Piece_Swordwhip_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15020,
+    "name": "Éveil de forge : Katana",
+    "icon": "T_Weapon_Piece_Katana_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15021,
+    "name": "Éveil de forge : Lance-grenades",
+    "icon": "T_Weapon_Piece_Cannon_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15022,
+    "name": "Éveil de forge : Fusil à pompe",
+    "icon": "T_Weapon_Piece_Shotgun_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15023,
+    "name": "Éveil de forge : Arc",
+    "icon": "T_Weapon_Piece_Bow_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15024,
+    "name": "Éveil de forge : Doubles lames",
+    "icon": "T_Weapon_Piece_Dualblade_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15025,
+    "name": "Éveil de forge : Pistolet",
+    "icon": "T_Weapon_Piece_Pistol_Zaie",
+    "rarity": 5,
+    "desc": "Toute puissance procède d’une même source, qu’elle prenne la forme d’un outil ou d’une arme. La faux était destinée au labeur ; les armes à feu, aux feux d’artifice.\nObtenu par des moyens spéciaux. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Le Père Ask déclara : « Parce qu’ils sont incapables de vaincre la souffrance, ils en connaissent toute la cruauté. C’est pourquoi ils deviennent cruels à leur tour ; lorsqu’ils infligent le malheur aux autres, ils ne montrent aucune pitié.\nOui... Mère, j’ai eu tort. »\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15026,
+    "name": "Insigne de force",
+    "icon": "T_Resource_ZaieBadge_03",
+    "rarity": 4,
+    "desc": "Preuve obtenue en triomphant des ennemis de l’Empire Hyperboréen. La puissance suprême qu’ils convoitaient fut finalement étouffée dans le berceau de la défaite.\nPeut servir à la forge des Armes de calamité.",
+    "desc2": "Le vent glacé entaille leur chair ouverte ; la chaleur du sang jaillissant leur sert de foyer tandis qu’ils avancent en se soutenant les uns les autres.\nPlus haut encore, toujours plus haut — vers le trône de fer forgé par le pouvoir et la gloire, vers la couronne d’épines qu’ils veulent poser sur leur propre tête, quand bien même ses pointes leur transperceraient le crâne.\n \n— Iris, ménestrel errant, <I>Pourquoi se battent-ils ?</>"
+  },
+  {
+    "id": 15027,
+    "name": "Insigne de foi",
+    "icon": "T_Resource_ZaieBadge_05",
+    "rarity": 4,
+    "desc": "Preuve obtenue en triomphant des ennemis de l’Église Élyséenne. Leur foi fut brisée dans l’interminable nuit, tandis que les ascètes maudissent un soleil qui ne s’est pas encore levé.\nPeut servir à la forge des Armes de calamité.",
+    "desc2": "Le vent glacé entaille leur chair ouverte ; la chaleur du sang jaillissant leur sert de foyer tandis qu’ils avancent en se soutenant les uns les autres.\nPlus haut encore, toujours plus haut — vers le trône de fer forgé par le pouvoir et la gloire, vers la couronne d’épines qu’ils veulent poser sur leur propre tête, quand bien même ses pointes leur transperceraient le crâne.\n \n— Iris, ménestrel errant, <I>Pourquoi se battent-ils ?</>"
+  },
+  {
+    "id": 15028,
+    "name": "Insigne d’harmonie",
+    "icon": "T_Resource_ZaieBadge_04",
+    "rarity": 4,
+    "desc": "Preuve obtenue en triomphant des ennemis de Huaxu. La paix bâtie sur les cœurs des hommes et la loi n’est qu’un fragile équilibre suspendu, maintenu par d’innombrables vies à travers d’innombrables âges.\nPeut servir à la forge des Armes de calamité.",
+    "desc2": "Le vent glacé entaille leur chair ouverte ; la chaleur du sang jaillissant leur sert de foyer tandis qu’ils avancent en se soutenant les uns les autres.\nPlus haut encore, toujours plus haut — vers le trône de fer forgé par le pouvoir et la gloire, vers la couronne d’épines qu’ils veulent poser sur leur propre tête, quand bien même ses pointes leur transperceraient le crâne.\n \n— Iris, ménestrel errant, <I>Pourquoi se battent-ils ?</>"
+  },
+  {
+    "id": 15029,
+    "name": "Insigne de corruption",
+    "icon": "T_Resource_ZaieBadge_02",
+    "rarity": 4,
+    "desc": "Preuve obtenue en triomphant des Souillés. Le souvenir de votre lame fendant leur chair impure demeure encore dans votre esprit, pourtant pas une seule goutte de sang ne s’écoule de la blessure.\nPeut servir à la forge des Armes de calamité.",
+    "desc2": "Le vent glacé entaille leur chair ouverte ; la chaleur du sang jaillissant leur sert de foyer tandis qu’ils avancent en se soutenant les uns les autres.\nPlus haut encore, toujours plus haut — vers le trône de fer forgé par le pouvoir et la gloire, vers la couronne d’épines qu’ils veulent poser sur leur propre tête, quand bien même ses pointes leur transperceraient le crâne.\n \n— Iris, ménestrel errant, <I>Pourquoi se battent-ils ?</>"
+  },
+  {
+    "id": 15030,
+    "name": "Insigne d’inflexibilité",
+    "icon": "T_Resource_ZaieBadge_01",
+    "rarity": 4,
+    "desc": "Preuve obtenue en triomphant des membres des Déchus. Rejetés par le ciel et la terre, ils répondent par le massacre... mais le sang peut-il réellement devenir leur salut ?\nPeut servir à la forge des Armes de calamité.",
+    "desc2": "Le vent glacé entaille leur chair ouverte ; la chaleur du sang jaillissant leur sert de foyer tandis qu’ils avancent en se soutenant les uns les autres.\nPlus haut encore, toujours plus haut — vers le trône de fer forgé par le pouvoir et la gloire, vers la couronne d’épines qu’ils veulent poser sur leur propre tête, quand bien même ses pointes leur transperceraient le crâne.\n \n— Iris, ménestrel errant, <I>Pourquoi se battent-ils ?</>"
+  },
+  {
+    "id": 15031,
+    "name": "Cristal Hydro",
+    "icon": "T_Resource_Zaie_Ice",
+    "rarity": 4,
+    "desc": "Cristal imprégné de magie Hydro. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
+  },
+  {
+    "id": 15032,
+    "name": "Cristal Pyro",
+    "icon": "T_Resource_Zaie_Fire",
+    "rarity": 4,
+    "desc": "Cristal imprégné de magie Pyro. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
+  },
+  {
+    "id": 15033,
+    "name": "Cristal Anémo",
+    "icon": "T_Resource_Zaie_Wind",
+    "rarity": 4,
+    "desc": "Cristal imprégné de magie Anémo. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
+  },
+  {
+    "id": 15034,
+    "name": "Cristal Électro",
+    "icon": "T_Resource_Zaie_Lighting",
+    "rarity": 4,
+    "desc": "Cristal imprégné de magie Électro. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
+  },
+  {
+    "id": 15035,
+    "name": "Cristal Lumino",
+    "icon": "T_Resource_Zaie_Light",
+    "rarity": 4,
+    "desc": "Cristal imprégné de magie Lumino. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
+  },
+  {
+    "id": 15036,
+    "name": "Cristal Umbro",
+    "icon": "T_Resource_Zaie_Dark",
+    "rarity": 4,
+    "desc": "Cristal imprégné de magie Umbro. Obtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "Ask avance à travers la lamentation du crépuscule.\nSes yeux n’ont jamais été rongés par les ténèbres ; il les lève vers le ciel et offre sa dernière lumière.\nBien que son esprit soit plongé dans le tumulte, il se dissipe comme l’ombre des jours anciens.\nSes jambes agiles poursuivent la tempête, et le feu jaillit de son regard éclatant.\nSa vaste poitrine accueille la pluie, et son rugissement éclate tel le tonnerre.\nCe n’est pas une malédiction, mais le don qu’un père laissa à ses enfants.\nCar de la destruction finira par naître une vie nouvelle.\n \n— Lirico, ménestrelle errante, <I>Voyage au cœur de la Mer du Silence</>"
+  },
+  {
+    "id": 15037,
+    "name": "Cristal radieux",
+    "icon": "T_Resource_Zaie_Rainbow",
+    "rarity": 5,
+    "desc": "Cristal aux reflets chatoyants. Dans ses facettes se laisse entrevoir toute la splendeur du continent d’Atlasia, saturé de la puissante énergie de tous les attributs élémentaires.\nObtenu lors de l’Expédition abyssale. Peut servir à la fusion des Armes de calamité.",
+    "desc2": "La Mère Embla pleure. Son enfant, meurtri de la tête aux pieds, rampe dans les flammes ardentes de la fournaise et implore son pardon.\nElle veut reprendre la joie et la miséricorde jadis offertes, retirer toutes les bénédictions qui furent autrefois des grâces.\nCar le mal qu’il a commis ne saurait être absous, et les péchés qu’il porte ne peuvent être pardonnés.\nLa Mère Embla laissa tomber une larme ; glissant le long de sa joue, elle se changea en un cristal précieux.\n \n— Légende tribale d’Askard"
+  },
+  {
+    "id": 15038,
+    "name": "Compas abyssal Niv. %s",
+    "icon": "T_Resource_Coin_Zaie",
+    "rarity": 5,
+    "desc": "Suivez les traces de la calamité, cherchez le pouvoir capable de renverser le monde, et laissez le compas vous guider vers l’avant.\nPermet d’entrer en Expédition abyssale.",
+    "desc2": "Celui qui s’est lancé à la poursuite de la calamité ne peut déjà plus revenir en arrière. Depuis que cette voix séduisante s’est mise à résonner dans son esprit, ses actes sont peu à peu guidés par elle à son insu. Il ne lui reste plus qu’à avancer à tâtons dans les ténèbres.\n \n— <I>Le Mystère du Fourneau de calamité</>, roman d’aventure"
   },
   {
     "id": 19000,
@@ -7467,6 +7884,46 @@
     ],
     "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
     "desc2": "Du sud au nord, de l’est à l’ouest, la quête ne connaît pas de repos.\nVers l’ouest, les routes convergent et mènent à la cité centrale. Mais où donc se cache le trésor ? Sous l’arbre desséché, au-dessus des eaux."
+  },
+  {
+    "id": 20650,
+    "name": "百花车站·其一",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "上次谢谢你给我打掩护，谁能想到，只是打个牌的工夫，刚好赶上工头来检查了……幸亏你反应快，就是下次能不能换个理由，闹肚子拉裤裆里听起来太不体面了……总之还是多谢，今天难得摸到一把好牌，要是被工头抓回去可就冤死了。赢的钱咱也有你一份，给你放在<H>炉子边上了</>，记得去拿。"
+  },
+  {
+    "id": 20651,
+    "name": "百花车站·其二",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "想知道轻松工作的秘诀吗？那就是——定期供奉古阿特拉西亚掌管铁轨的神！只要把供品放在<H>轨道附近</>，神明大人就能听到咱们的祈祷！最近我负责的列车的故障率就下降了不少，全都是拜这位神明大人所赐！"
+  },
+  {
+    "id": 20652,
+    "name": "百花车站·其三",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "太可怕了……下车的时候发现有位乘客的钱包掉在地上，我一时鬼迷心窍，把它偷偷拿走了……结果里面竟然装着许多符咒一样的奇怪纸张，上面画着好些黑色的月亮，怪瘆人的……听说这是艾利西安的邪教还是什么的标识来着？\n我把钱包放在了<H>医务室门口</>，这样能帮到有需要的人，应该能功过相抵了吧？艾利西安的七神……还是九神来着？总之看到我没拿钱的份上请不要诅咒我啊拜托了！"
+  },
+  {
+    "id": 20653,
+    "name": "百花车站·其四",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "（从折痕判断这原本是一封精心递上的信件，不过现在却以展开的状态躺在墙角杂物中，似乎是被谁随手扔掉了……）\n\n亲爱的<H>广播员</>小姐……希望您不会觉得冒昧，但如若不能将我此刻热烈的心情传达给您，我将会为此后悔一生！\n这是我第一次来到冰湖城，站内严厉的安保措施让我不知所措，不慎迷了路。幸运的是，您如同一位从天而降的天使般降临在我面前——即便被制服遮去了大半，我依然能瞥见您那如春日的花儿一般娇艳的粉色长发，您那与紫罗兰同色的优雅眼眸更是令我沉醉。\n虽然您为我指点了出站的方向，但为了再听一次您动听的嗓音，我决定留下来等待您提到的特别广播。\n我在您的<H>工作岗位</>上留下了一份小小的赠礼，作为对您辛勤工作的慰劳。当您甜美的嗓音响起，我将在站厅为您送上最响亮的喝彩！"
+  },
+  {
+    "id": 20654,
+    "name": "百花车站·其五",
+    "icon": "T_TreasureMap_Chapter01",
+    "rarity": 4,
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "desc2": "哼，你这家伙成天就知道蹲在轨道边里看火车，你的头发都被煤灰腌入味了！\n告诉你个好消息，我把一份零花钱藏在了附近的<H>树林下</>，金额足够买下两个月的连载。怎么样，这下你总愿意起身走走了吧？趁这个机会动动你那僵硬的身体，相信我，你一定能从这个过程中感受到大自然的乐趣！"
   },
   {
     "id": 29001,
@@ -9883,6 +10340,14 @@
     "desc2": "C’est une cité florissante dressée aux confins de l’Est. Les pavillons et jardins d’eau édifiés par les anciens s’y tiennent depuis des millénaires, comme immuables, défiant l’érosion du temps. Mais les chants transmis jour après jour finissent toujours par écrire de nouveaux vers, et aux récits familiers viennent se mêler des visages inconnus. Sous les cieux, les vents se lèvent et les flots s’élèvent. Allez explorer, allez voir, allez écouter... et rendez-vous à Haojing, la cité bientôt métamorphosée.\n \n"
   },
   {
+    "id": 29007,
+    "name": "Sphère d’exploration — Givrelac",
+    "icon": "T_ExploreBadge_Beibao_Chapter01",
+    "rarity": 5,
+    "desc": "Sphères d’exploration recueillies dans tout Givrelac. Une fois un certain nombre rassemblé, vous pouvez les remettre à Luno, l’exploratrice, sur la place de Givrelac. Elles témoignent du courage, de la sagesse et de la patience dont vous avez fait preuve en chemin, et peuvent être échangées contre diverses récompenses.",
+    "desc2": "Voici Givrelac.\nAvant d’écouter les mots des autres, frappez à chaque porte, fouillez chaque recoin, parlez à chacun. Un jour, vous verrez : la cité changera, discrète et vivante, sous l’effet de vos gestes. Vous n’avez pas besoin qu’on vous la présente : vous êtes Givrelac, et Givrelac vous façonne.\nPartez — voyez, écoutez, apprivoisez cette cité encore inconnue."
+  },
+  {
     "id": 30001,
     "name": "Essence vitale",
     "icon": "T_Resource_PolarityPart01",
@@ -10231,7 +10696,7 @@
   },
   {
     "id": 41014,
-    "name": "Gel instantané",
+    "name": "Instant figé",
     "icon": "T_Resource_Gesture_CarBlack",
     "rarity": 6,
     "desc": "Après une course effrénée, savourer un instant de calme."
@@ -10252,14 +10717,14 @@
   },
   {
     "id": 41017,
-    "name": "Gel instantané – Blanc sakura",
+    "name": "Instant figé – Blanc sakura",
     "icon": "T_Resource_Gesture_CarPink",
     "rarity": 6,
     "desc": "Après une course effrénée, savourer un instant de calme."
   },
   {
     "id": 41018,
-    "name": "Gel instantané – Doré",
+    "name": "Instant figé – Doré",
     "icon": "T_Resource_Gesture_Car",
     "rarity": 6,
     "desc": "Après une course effrénée, savourer un instant de calme."
@@ -10476,17 +10941,17 @@
   },
   {
     "id": 41049,
-    "name": "RESOURCE_NAME_41049",
+    "name": "Fièvre de la fête",
     "icon": "T_Resource_Gesture_Fire",
-    "rarity": 4,
-    "desc": "RESOURCE_DESC_41049"
+    "rarity": 5,
+    "desc": "L’heure de la fête a sonné !"
   },
   {
     "id": 41050,
-    "name": "RESOURCE_NAME_41050",
+    "name": "Toupie infernale",
     "icon": "T_Resource_Gesture_Spin",
     "rarity": 4,
-    "desc": "RESOURCE_DESC_41050"
+    "desc": "La toupie tourne pour vous."
   },
   {
     "id": 41051,
@@ -10539,10 +11004,45 @@
   },
   {
     "id": 41058,
-    "name": "RESOURCE_NAME_41058",
-    "icon": "T_Resource_Gesture_Zuirang",
+    "name": "Terre du péché – Rouille",
+    "icon": "T_Resource_Gesture_Fuluo_03",
+    "rarity": 6,
+    "desc": "Les prières n’apportent aucun pardon. Seule la destruction mène à la rédemption."
+  },
+  {
+    "id": 41059,
+    "name": "Attente sur le quai",
+    "icon": "T_Resource_Gesture_07",
     "rarity": 5,
-    "desc": "RESOURCE_DESC_41058"
+    "desc": "Le sifflet retentit. Il est temps de partir."
+  },
+  {
+    "id": 41060,
+    "name": "RESOURCE_NAME_41060",
+    "icon": "T_Resource_Gesture_Dida",
+    "rarity": 5,
+    "desc": "RESOURCE_DESC_41060"
+  },
+  {
+    "id": 41061,
+    "name": "Signal de départ",
+    "icon": "T_Resource_Gesture_08",
+    "rarity": 4,
+    "desc": "Tuuut — tuuut —"
+  },
+  {
+    "id": 41062,
+    "name": "Terre du péché – Doré",
+    "icon": "T_Resource_Gesture_Fuluo_02",
+    "rarity": 6,
+    "desc": "Les prières n’apportent aucun pardon. Seule la destruction mène à la rédemption."
+  },
+  {
+    "id": 41063,
+    "name": "Terre du péché – Bleu céleste",
+    "icon": "T_Resource_Gesture_Fuluo_01",
+    "rarity": 6,
+    "desc": "Les prières n’apportent aucun pardon. Seule la destruction mène à la rédemption."
   },
   {
     "id": 42001,
@@ -10559,6 +11059,27 @@
     "rarity": 4,
     "desc": "Un dispositif mécanique quadrangulaire d’une conception aussi complexe que raffinée, forgé selon des techniques perdues de la Secte Jishu.\nSon cœur énergétique libère une puissante aspiration capable de dissiper les désastres de la Poussière-corrompue engendrés par le Fléau de Zhuyin.",
     "desc2": "« Taixu naquit aux origines du chaos primordial, sans forme ni couleur, emplissant les six directions de toute chose. Lorsque le Fléau de Zhuyin le souilla, ses impuretés se figèrent et s’abattirent, donnant naissance à la Poussière-corrompue...\nComment ? Tu voudrais que je passe les principes et que j’aille directement au mode d’emploi ? Quelle impatience... vraiment, la jeunesse manque de constance. »\n\n— Maître Gongshang, mécanicien de la Secte Jishu"
+  },
+  {
+    "id": 49989,
+    "name": "Vers les ténèbres",
+    "icon": "T_Mounts_Gesture_0701",
+    "rarity": 6,
+    "desc": "Deux ailes d’un noir absolu déchirent la nuit et s’élancent silencieusement vers une rive que même la lumière de la lune ne peut atteindre."
+  },
+  {
+    "id": 49990,
+    "name": "Nekral",
+    "icon": "T_Mounts_Gesture_0703",
+    "rarity": 6,
+    "desc": "Le voile de la nuit recouvre ciel et terre, tandis qu’un sifflement rauque résonne dans l’obscurité."
+  },
+  {
+    "id": 49991,
+    "name": "Trône de contemplation",
+    "icon": "T_Mounts_Gesture_0603",
+    "rarity": 4,
+    "desc": "J’ai entendu les appels de la loyauté et vu les étoiles se consumer."
   },
   {
     "id": 49992,
@@ -10804,7 +11325,7 @@
     "id": 110038,
     "name": "Portrait : Mademoiselle Rossignol – Ombre feuillue",
     "icon": "T_Head_Other0014",
-    "rarity": 1
+    "rarity": 4
   },
   {
     "id": 110039,
@@ -10825,6 +11346,111 @@
     "rarity": 1
   },
   {
+    "id": 110042,
+    "name": "自选形象礼箱·暗巷",
+    "icon": "T_Pack_Common04",
+    "rarity": 5,
+    "desc": "使用后可从芙罗拉，妮弗尔夫人，苏乙，菲娜，丽蓓卡，扶疏，琳恩，希尔妲，海尔法，卡米拉，黎瑟，止流，赛琪中自选一套角色形象。"
+  },
+  {
+    "id": 110043,
+    "name": "Coffret de sélection de fragments de pensée I",
+    "icon": "T_Pack_Char3In1",
+    "rarity": 5,
+    "desc": "Permet de choisir l’une des récompenses suivantes : Fragment de pensée : Rhythm ×30, Fragment de pensée : Phantasio ×30, Fragment de pensée : Rebecca ×30."
+  },
+  {
+    "id": 110045,
+    "name": "Coffre de Sceau démoniaque — Pactisant Anémo",
+    "icon": "T_Pack_RandomMod_11",
+    "rarity": 5
+  },
+  {
+    "id": 110046,
+    "name": "Coffre de Sceau démoniaque — Pactisant Pyro",
+    "icon": "T_Pack_RandomMod_16",
+    "rarity": 5
+  },
+  {
+    "id": 110047,
+    "name": "Coffre de Sceau démoniaque — Pactisant Électro",
+    "icon": "T_Pack_RandomMod_12",
+    "rarity": 5
+  },
+  {
+    "id": 110048,
+    "name": "Coffre de Sceau démoniaque — Pactisant Hydro",
+    "icon": "T_Pack_RandomMod_13",
+    "rarity": 5
+  },
+  {
+    "id": 110049,
+    "name": "Coffre de Sceau démoniaque — Pactisant Lumino",
+    "icon": "T_Pack_RandomMod_14",
+    "rarity": 5
+  },
+  {
+    "id": 110050,
+    "name": "Coffre de Sceau démoniaque — Pactisant Umbro",
+    "icon": "T_Pack_RandomMod_15",
+    "rarity": 5
+  },
+  {
+    "id": 110051,
+    "name": "Coffret surprise – Dragon ascendant",
+    "icon": "T_Pack_ModFx",
+    "rarity": 5,
+    "desc": "具体概率与数量如下：\n腾龙诀*1：2%\n排斥结晶*1：8%\n金砂*1：8%\n铜币*10000：10%\n铜币*20000：16%\n铜币*50000：26%\n铜币*100000：30%"
+  },
+  {
+    "id": 110052,
+    "name": "Coffret surprise – Violon de cuivre",
+    "icon": "T_Pack_Machinegun_Huangtong",
+    "rarity": 5,
+    "desc": "具体概率与数量如下：\n黄铜小提琴*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+  },
+  {
+    "id": 110053,
+    "name": "Coffret surprise – Invitation cosmique (Épée-fouet)",
+    "icon": "T_Pack_Swordwhip_Huanyu",
+    "rarity": 5,
+    "desc": "具体概率与数量如下：\n寰宇邀约·鞭刃*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+  },
+  {
+    "id": 110054,
+    "name": "Coffret surprise – Invitation cosmique (Katana)",
+    "icon": "T_Pack_Katana_Huanyu",
+    "rarity": 5,
+    "desc": "具体概率与数量如下：\n寰宇邀约·太刀*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+  },
+  {
+    "id": 110055,
+    "name": "Coffre surprise d’objets – Pluie de mille fils",
+    "icon": "T_Pack_RandomMod_Daily",
+    "rarity": 5,
+    "desc": "具体概率与数量如下，概率四舍五入至小数点后4位：\n月石晶胚*36：22.0507%\n月石晶胚*48：51.4517%\n月石晶胚*68：22.0507%\n月石晶胚*100：3.6751%\n月石晶胚*120：0.7350%\n月石晶胚*888：0.0368%"
+  },
+  {
+    "id": 110056,
+    "name": "晶块自选礼箱·其一",
+    "icon": "T_Pack_ZaieRes",
+    "rarity": 5
+  },
+  {
+    "id": 110057,
+    "name": "启航武器自选礼箱",
+    "icon": "T_Pack_Char_Choose",
+    "rarity": 5,
+    "desc": "使用后可从辉珀刃，枯朽，焦渴，幽鲨眼，缠结，凋零，剥离，赘生，崩解，嘶鸣，裂魂，销骨，慧谋的攻守，塞壬的拥吻，铸铁者，失乡的獠牙，不渝的梦海，红叶一滴，无序奇点，蓝色脉动，银白敕令，缄默育种者，祈请净火，烈焰孤沙，追忆的残影，流浪的蔷薇，告谕圣言，放逐怒雷，引浪小调，春玦戟，苍瑚凝碧，归墟棘轮，孤子的缚锁，告谕圣音，群星无意赦免，爆破艺术，惩戒的炼火，圣裁日，茵布拉花序，弧光百劫，蒙恩御礼，鎏金岁月，破晓赞美诗，希冀的丰稔中选择一份作为奖励。"
+  },
+  {
+    "id": 110058,
+    "name": "启航角色自选礼箱",
+    "icon": "T_Pack_Weapon_Choose",
+    "rarity": 5,
+    "desc": "使用后可从思绪片段·贝蕾妮卡*30，思绪片段·玛尔洁*30，思绪片段·兰迪*30，思绪片段·奥特赛德*30，思绪片段·达芙涅*30，思绪片段·妮弗尔夫人*30，思绪片段·丽蓓卡*30，思绪片段·琳恩*30，思绪片段·西比尔*30，思绪片段·塔比瑟*30，思绪片段·莉兹贝尔*30，思绪片段·黎瑟*30，思绪片段·海尔法*30，思绪片段·松露与榛子*30，思绪片段·耶尔与奥利弗*30，思绪片段·幻景*30，思绪片段·赛琪*30中选择一份作为奖励。"
+  },
+  {
     "id": 120001,
     "name": "Bon d’Héritage paternel",
     "icon": "T_Resource_DiscountTicket_01",
@@ -10834,6 +11460,20 @@
   {
     "id": 120002,
     "name": "Bon d’accessoires Souffle du vent",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
+  },
+  {
+    "id": 120003,
+    "name": "喵喵代金券",
+    "icon": "T_Resource_DiscountTicket_01",
+    "rarity": 5,
+    "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 680 Gemmes de Phoxène"
+  },
+  {
+    "id": 120004,
+    "name": "银星装饰代金券",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Réduction de 300 Gemmes de Phoxène pour tout achat d’au moins 480 Gemmes de Phoxène"
@@ -10858,6 +11498,14 @@
     "id": 1001103,
     "name": "Fragment de pensée : Phantasio",
     "icon": "T_CharPiece_Tuosi",
+    "rarity": 5,
+    "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
+    "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
+  },
+  {
+    "id": 1001201,
+    "name": "Fragment de pensée : Chasseur de Phoxène — Umbro",
+    "icon": "T_CharPiece_Protagonist02",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
     "desc2": "« Tu portes en toi trois vies.\nLa première est faite de souffle et de battements — c’est avec ta chair et ton sang que tu arpentes la terre et découvres le monde.\nLa deuxième est celle des liens et des attaches — ton âme s’abrite dans la chaleur d’un foyer, dans le baiser d’un être aimé, dans l’étreinte silencieuse d’un ami.\nLa troisième, enfin, est celle de la pensée et du souvenir — lorsqu’un lecteur découvre ton nom sur une page, lorsqu’un voyageur l’entend résonner dans le chant d’un ménestrel, lorsqu’un enfant puise sagesse et courage dans ton histoire... alors ta vie reprend voix dans ce monde.\nTous retournent un jour à la Mer du Silence... mais tous ne connaissent pas la mort véritable. »\n\n— Dame Nifle, Passeuse de la Mer du Silence"
@@ -10920,7 +11568,7 @@
   },
   {
     "id": 1002102,
-    "name": "Fragment de pensée : Yvaine",
+    "name": "Fragment de pensée : Eve",
     "icon": "T_Resource_Root_Star5",
     "rarity": 5,
     "desc": "Fragment de pensée extrait des sables mouvants de la mémoire. Il renferme les souvenirs d’une personne — du passé, ou peut-être de l’avenir.",
@@ -11087,6 +11735,14 @@
     "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
   },
   {
+    "id": 1011201,
+    "name": "Emblème : Chasseur de Phoxène — Umbro",
+    "icon": "T_Phantom_Nvzhu02",
+    "rarity": 5,
+    "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
+    "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
+  },
+  {
     "id": 1011501,
     "name": "Emblème : Lisbell",
     "icon": "T_Phantom_Baonu",
@@ -11144,7 +11800,7 @@
   },
   {
     "id": 1012102,
-    "name": "Emblème : Yvaine",
+    "name": "Emblème : Eve",
     "icon": "T_Phantom_Shuimu",
     "rarity": 5,
     "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
@@ -11510,7 +12166,7 @@
   },
   {
     "id": 2000012,
-    "name": "Le chef invincible de la Légion : Tome I",
+    "name": "L’Invincible Commandant de Légion I",
     "icon": "T_Read_01",
     "rarity": 3,
     "source": [
@@ -13503,6 +14159,78 @@
     "desc2": "Sur la surface du lac de Haojing, il arrive parfois que des nuées de brume se rassemblent pour prendre des formes étranges : tours, pavillons, palais, immortels ou créatures spectrales, tous visibles avec une étonnante netteté. Les gens appellent ce phénomène la Cité mirage. Certains affirment qu’il s’agit du souffle du Seigneur Dragon d’Argent ; d’autres prétendent que ce sont les Huit Immortels qui servent sous ses ordres qui en sont responsables. Les explications abondent, mais pour ma part, je n’y crois guère.\n\nJ’ai interrogé toutes les rumeurs possibles sans jamais parvenir à une conclusion certaine. J’ai alors parcouru la ville pour consulter les anciens, leur demandant comment l’on pouvait atteindre la Cité mirage. Je commençai par les bateliers, espérant qu’ils accepteraient de me conduire sur le lac afin de la rechercher. Ils se moquèrent d’abord de ma folie, mais, moyennant une récompense convenable, acceptèrent de m’accompagner à plusieurs reprises. Nous avons parcouru le lac encore et encore, sans jamais rien découvrir.\n\nJe poursuivis mes recherches chaque jour, jusqu’à épuiser toutes mes maigres économies. Quelques bateliers, pris de pitié, acceptèrent parfois de m’accompagner durant leur temps libre, mais leur enthousiasme d’autrefois avait disparu. Je ne leur en voulus point ; c’était plutôt moi qui éprouvais de la honte. Finalement, je dépensai les dernières pièces qui me restaient pour acheter un radeau de bambou, décidé à poursuivre seul la recherche de la Cité mirage.\n\nJe ne suis qu’un humble lettré, mais dans mon enfance je grimpais souvent aux collines et nageais dans les rivières avec les autres enfants du voisinage. Je ne suis donc pas entièrement dénué de vigueur, bien que mes talents s’arrêtent là. Au début, manier la perche pour diriger le radeau se révéla fort maladroit, mais à force de pratique je finis par m’y habituer.\n\nLa quête de la Cité mirage s’avéra toutefois extrêmement difficile. Au début, je tentais de mesurer les distances et de déterminer une direction précise. Plus tard, je me contentais de dériver au gré des flots dans cette immensité sans limites. Malgré tous mes efforts, je ne parvins jamais à voir la véritable forme de la Cité.\n\nAvec le temps, mon ardeur s’émoussa. Je commençai à penser que je poursuivais une illusion vaine, gaspillant mes jours et mes forces pour rien. Il m’arrivait parfois d’apercevoir une vision lointaine et de ramer vers elle avec toute mon énergie, mais dès que je m’en approchais, elle se dissipait aussitôt, disparaissant sans laisser de trace, telle la fleur du miroir et la lune dans l’eau.\n\nUn jour, une brume épaisse enveloppa Haojing, si dense que l’on ne distinguait plus personne à quelques pas. Tous tentèrent de me dissuader de sortir, craignant que je ne me perde sur le lac et n’y laisse la vie. Je soupirai alors :\n\n« À part ma vie… qu’ai-je encore à perdre ? »\n\nMes économies étaient déjà épuisées et nous survivions péniblement grâce aux travaux de couture de mon épouse. Par bonheur, nous n’avions pas d’enfants ; autrement, comment aurais-je pu me considérer comme un mari digne de ce nom ?\nJe persistai pourtant à vouloir partir. Mon épouse, en larmes, tenta de m’en empêcher :\n\n« Si tu franchis cette porte, je ne vivrai plus jamais avec toi. »\n\nMon cœur hésita un instant, mais je finis par agir avec la détermination de quelqu’un qui n’a plus rien à perdre. Je rejetai ma manche en arrière et franchis la porte.\nCe jour-là, la brume couvrait le ciel et la terre. Lorsque la perche plongeait dans l’eau, je ne pouvais même pas voir l’endroit où elle touchait la surface. Je ne pouvais guider le radeau qu’en me fiant à la sensation de mes bras.\nLe froid était plus mordant que d’ordinaire. Ma barbe se couvrit de givre ; je le dissipais d’un souffle, et il se reformait aussitôt.\n\nLa scène ne présentait rien d’extraordinaire à première vue. Peut-être y eut-il quelque chose d’étrange, mais mon esprit était trop confus pour s’en souvenir clairement. Je me rappelle seulement qu’à un moment donné, la perche ne semblait plus rencontrer l’eau du lac. La sensation était plutôt celle de fendre des nuages ou de disperser de la brume, si légère qu’elle paraissait irréelle.\nJe ne sais combien de temps je continuai à pousser le radeau. Peu à peu, la brume se dissipa.\nDevant moi apparurent alors des halos de lumière superposés, au sein desquels se dressaient de splendides pavillons et palais aux teintes écarlates, resplendissant d’un éclat surnaturel.\n\nUne joie immense m’envahit.\n\nRassemblant mes dernières forces, je poussai le radeau vers l’avant. Au moment même où mon énergie me quittait, le radeau heurta la rive. Mon cœur se calma aussitôt, comme si un énorme poids venait de tomber de ma poitrine.\n\nJe laissai le radeau derrière moi et posai le pied sur la terre ferme.\n\nSous mes pieds, le sol était aussi souple que l’eau du printemps, mais je ne m’enfonçais pas et mes chaussures ne se mouillaient pas. À chaque pas, de légères ondulations se formaient autour de moi.\n\nC’était une vision d’une étrangeté et d’une beauté indescriptibles.\n\n..."
   },
   {
+    "id": 2000118,
+    "name": "Menu des ouvriers de la Gare des Cent-Fleurs",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Une affiche imprimée retrouvée dans la zone souterraine des installations de forge de la Gare des Cent-Fleurs. Elle semble avoir été arrachée de l’endroit où elle était affichée avant d’être jetée ici sans ménagement. La personne qui l’a retirée était visiblement furieuse de son contenu : une fois dépliée, les coins portent même des traces de salive suspectes...",
+    "desc2": "Repas fournis par la Gare des Cent-Fleurs\n \nPetit-déjeuner : pain noir, eau\nDéjeuner : pommes de terre bouillies, soupe de haricots\nDîner : aucun repas supplémentaire n’est fourni. Les ouvriers travaillant jusqu’au lendemain peuvent récupérer une portion de légumes marinés auprès du poste de garde.\n \nRèglement :\n \n1) Pendant les horaires longs, le petit-déjeuner est distribué de 8 h 30 à 9 h 00. Pendant les horaires courts, il est distribué de 9 h 00 à 9 h 30. Le déjeuner est servi de 12 h 00 à 13 h 00, quel que soit l’horaire en vigueur. Tous les horaires sont déterminés selon l’horloge de la gare. Les ouvriers prenant leur poste après 6 h 00 n’ont pas droit aux repas de la journée.\n2) La distribution des repas prend fin cinq minutes avant la fin du service. À la sonnerie de reprise du travail, les portes du réfectoire sont fermées. Tout ouvrier ne retournant pas à son poste à temps recevra un avertissement. Trois avertissements entraînent un renvoi.\n3) Il est interdit de sortir de la nourriture du réfectoire, de manger pendant les heures de travail ou de rapporter des restes sur le lieu de travail.\n4) Il est interdit de refaire la queue pour obtenir davantage de nourriture. Les contrevenants devront payer leurs repas de la journée.\n5) Les enfants travailleurs n’ont pas le droit de manger assis. Les ouvriers à temps partiel ne sont pas autorisés à entrer dans le réfectoire.\n6) Toute perturbation de l’ordre dans le réfectoire est interdite, y compris, sans s’y limiter : discuter, s’évanouir, vomir, se disputer, doubler dans la file ou allaiter.\n7) Les horaires des repas sont déterminés par les sonneries. Lorsque la sonnerie préparatoire retentit, les ouvriers doivent progressivement quitter le réfectoire. Lorsque la sonnerie de reprise retentit, tous les ouvriers doivent déjà se trouver à leur poste afin que le contremaître puisse vérifier les présences.\n8) Les employés du réfectoire n’ont pas le droit de manger avant la fin du service des repas. Une fois la sonnerie préparatoire déclenchée, ils doivent cesser de manger, ranger le réfectoire et effectuer le nettoyage.\n9) Il est autorisé d’apporter sa propre nourriture, à condition qu’elle soit consommée dans le réfectoire pendant les horaires prévus et enregistrée avant l’entrée dans le réfectoire. En cas de diarrhée ou de symptômes similaires, la gare décline toute responsabilité. Toute personne voyant quelqu’un introduire de la nourriture non enregistrée peut le signaler au garde de service.\n \n ...\n \n(Je pensais qu’il ne s’agissait que d’un banal menu destiné aux ouvriers, mais la plus grande partie du document est en réalité occupée par des règles absurdes, sévères et interminables... Les conditions de travail à la Gare des Cent-Fleurs doivent être épouvantables.)"
+  },
+  {
+    "id": 2000119,
+    "name": "Avis de recrutement de la Gare des Cent-Fleurs",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Une affiche de recrutement pour l’usine placée à l’entrée de la gare. Son discours est catégorique, débordant d’enthousiasme, au point de faire vibrer le cœur de chaque jeune idéaliste qui la lit. Pourtant, quelqu’un y a dessiné un visage souriant au marqueur... sans doute une manière d’exprimer son approbation totale du message.",
+    "desc2": "Relier le sud lointain au nord glacé, unir les terres éloignées et les rêves de demain : les rails entrecroisés sillonnent les terres pleines d’espoir d’Hyperborea, tandis que les gares scintillent comme des étoiles à travers le pays. Fidèles sujets de Sa Majesté, unissons nos forces et avançons ensemble afin de bâtir de nos propres mains l’avenir du chemin de fer hyperboréen !\n \nLa Gare des Cent-Fleurs recrute chaleureusement :\n1) Des personnes travailleuses, fiables, disciplinées, de bonne conduite et pleines d’espoir\n2) Aucun prérequis concernant l’âge, le sexe, la race ou l’expérience professionnelle\n \nNous proposons :\n1) Une formation assurée par des ouvriers expérimentés comptant plus de vingt années de métier. Tout ce que vous souhaitez apprendre, vous pourrez l’apprendre ici.\n2) Un revenu parfaitement stable, versé intégralement et sans aucun retard.\n3) Des repas distribués chaque jour à heure fixe afin que chaque ouvrier puisse manger à sa faim.\n4) Une atmosphère de travail unie et conviviale. Ici, il n’existe ni supérieurs ni inférieurs, ni barrières entre les races. Dès votre arrivée, vous faites partie des nôtres. Nous accueillons chaleureusement chaque citoyen loyal envers Hyperborea.\n \nRejoignez la Gare des Cent-Fleurs et ouvrez un nouveau chapitre de votre vie. Même si vous ne pouvez pas combattre sur le champ de bataille pour la gloire de Sa Majesté, vous pouvez malgré tout mettre votre valeur au service de l’Empire. La Gare des Cent-Fleurs a besoin de vous, tout comme l’avenir d’Hyperborea.\n \nRejoignez-nous ! Pour la gloire !\n \n(Quel discours de recrutement exaltant... Quiconque le lirait serait forcément emporté par un tel enthousiasme. Les conditions promises paraissent même étonnamment avantageuses.)"
+  },
+  {
+    "id": 2000120,
+    "name": "Mon testament",
+    "icon": "T_Read_03",
+    "rarity": 3,
+    "desc": "Une simple feuille blanche couverte d’une écriture maladroite et irrégulière. La mise en page est chaotique, la ponctuation utilisée au gré de l’humeur, et les fautes d’orthographe se multiplient. On parvient malgré tout à comprendre le contenu, mais ce soi-disant testament ne contient aucune information utile ni la moindre signification — à l’image de la vie vide laissée derrière son auteur.",
+    "desc2": "Aujourd’hui, je vais écrire mon testament\nJe sais toujours pas vraiment ce qu’est un testament. J’ai entendu les grands messieurs dire ça en passant à côté de moi. Y avait un vieux qui allait mourir, et ils disaient qu’il devait écrire son testament avant de crever. J’ai pas vraiment compris ce que ça voulait dire, mais ça avait l’air important. Puis eux avaient l’air contents aussi, comme si le vieux qui mourait c’était une bonne chose. Alors avant de mourir, moi aussi je dois écrire un testament.\nJe crois même pas que j’ai l’âge d’un vieux. À l’usine, ils appellent le gardien « vieux con ». Y en a même qui appellent le chef de gare comme ça quand ils ont assez de courage. Mais personne m’a jamais appelé vieux. On m’appelle plutôt « gamin », « hé toi » ou « ce Charon-là ».\nMais ça m’empêche pas de mourir. Et ça m’empêche pas non plus d’écrire un testament.\nLe problème c’est que je sais pas quoi écrire. J’ai jamais vraiment étudié. J’sais même pas combien de temps je suis allé à l’école. Pas longtemps, je suppose. On m’a vite envoyé bosser. Y avait pas le choix. Ma mère était en train de mourir et il fallait de l’argent, alors j’ai arrêté l’école et je suis parti travailler.\nMais elle est morte quand même.\n \nAlors voilà ce que je suis : un Charon inutile. Je travaille moins bien que les autres, je sais pas parler aux gens quand ils discutent. J’ai l’impression que tout ce que je fais sert à rien... Enfin si, peut-être une chose : me faire engueuler. Les gens ont l’air de se sentir mieux après m’avoir crié dessus. Mon père surtout. Quand il boit, il me hurle dessus, puis il me frappe, puis le lendemain il vient s’excuser. Des fois j’ai l’impression qu’il le fait exprès. Il veut juste taper quelqu’un mais personne d’autre le laisse faire.\nJe me demande si quelqu’un sera triste quand je mourrai. Mon père peut-être. Il aura plus personne à frapper après ça. J’aimerais trouver une bonne façon de mourir. Une où y aurait quand même un peu d’argent à récupérer derrière. Mais j’ai pas encore trouvé. Faudrait au moins que ma mort puisse payer une bouteille à mon père, sinon je serai vraiment bon à rien. Comme le vieux dont parlaient les grands messieurs. Eux avaient l’air tellement contents qu’il crève.\n \nBon. Je m’éloigne encore du sujet. Faut quand même que je trouve une bonne manière de mourir. Mais j’en ai toujours aucune. Peut-être qu’après un moment j’aurai plus envie de mourir.\nMais c’est quand même sacrément drôle. J’ai écrit tout ça et j’arrive même pas à trouver une seule raison de continuer à vivre... Tant pis alors. Je vais mourir.\n \nBon, je crois que mon testament s’arrête ici. J’sais plus quoi écrire. Si j’arrivais à récupérer le testament du vieux, je pourrais peut-être recopier dessus pour que le mien ait l’air plus sérieux. Mais c’est évident que je pourrai pas l’avoir. Bref, ça s’arrête là. Je vais aller réfléchir à comment mourir maintenant."
+  },
+  {
+    "id": 2000121,
+    "name": "Règlement du Salon du Sifflet",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "Un document partagé entre les membres du Salon du Sifflet, recensant une série de règles de conduite complètement absurdes. Les premières pages présentent avec soin les règlements et l’organisation actuelle du groupe, dans une écriture claire et méthodique. Entre les lignes et jusque dans les marges s’entassent des déclarations manuscrites de « passion dévorante », laissées par les membres eux-mêmes.",
+    "desc2": "1) Lorsque vous vous adressez au Chef de gare Eisenbahn, l’usage des honorifiques est obligatoire.\n(Tout pour Eisenbahn !)\n(Ce commentaire est un parfait contre-exemple. Le titre complet est « Chef de gare Eisenbahn » ! Pas un mot ne doit être omis !)\n \n2) Il est interdit de mentionner toute autre personnalité que le Chef de gare Eisenbahn, y compris les vedettes de théâtre et autres célébrités.\n(*un nom rayé* est vraiment lamentable ces derniers temps. Comment peut-on jouer aussi mal et prétendre encore faire ce métier ? Le Chef de gare Eisenbahn, lui, ne me déçoit jamais.)\n(On a pourtant déjà dit qu’il était interdit de parler d’autres célébrités, non ? Qui continue encore à enfreindre les règles ? Que je découvre pas qui a écrit ça.)\n \n3) Chaque membre doit connaître par cœur la date de naissance, la taille, les mensurations et le poids du Chef de gare Eisenbahn.\n(Alerte info : le Chef de gare Eisenbahn a encore perdu un kilo. Poids actuel : 73 kg.)\n(Il a encore maigri... Ça me brise le cœur. Mais les gens autour de lui servent à quoi exactement ? Personne n’a remarqué qu’il avait autant maigri ?)\n(Il travaille beaucoup ? Ouais, surtout à fréquenter des femmes d’affaires étrangères.)\n(Toi, t’es clairement pas membre du Salon du Sifflet. Arrête un peu, ce manuel est pas fait pour toi.)\n(Ça me tue qu’il y ait encore des gens pour inventer des rumeurs amoureuses sur le Chef de gare Eisenbahn. Tout le monde sait qu’il n’a que son travail dans le cœur.)\n \n4) Les membres du Salon du Sifflet doivent s’entraider et ne jamais garder pour eux seuls des objets liés au Chef de gare Eisenbahn, tels que des étuis à cigarettes, affiches et autres produits dérivés.\n \n5) La vente de produits contrefaits liés au Chef de gare Eisenbahn est strictement interdite. Toute personne prise en faute devra en assumer les conséquences.\n \n ...\n \n54) Les membres du Salon du Sifflet doivent protéger activement la réputation du Chef de gare Eisenbahn et lutter fermement contre toute parole ou comportement visant à le nier, le diffamer, salir son image ou propager des rumeurs à son sujet. Si nécessaire, tous les moyens sont permis.\n \n(On peut leur lancer des briques ?)\n(On peut, mais c’est quand même pas très élégant. J’ai quelques contacts au Bureau de la Sécurité : écris simplement le nom ici et je m’occupe du reste.)\n \n(Je suis nouveau... Y a beaucoup trop de règles. Si j’arrive pas à tout retenir, j’ai le droit de me faire des antisèches ?)\n(Comment tu peux déjà ne pas retenir un truc aussi simple ? T’es pas un espion du groupe de théâtre d’à côté par hasard ?)"
+  },
+  {
+    "id": 2000122,
+    "name": "Rapport d’analyse des activités quotidiennes du Chef de gare Eisenbahn",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Un rapport d’observation consacré à Eisenbahn, consignant avec précision les lieux, horaires et actions observés. Rédigé dans un ton froid et méthodique, il détaille le moindre déplacement et chaque élément de son emploi du temps, comme si l’auteur était devenu une ombre le suivant partout.\nSon absence totale d’émotion contraste fortement avec l’atmosphère passionnée qui règne au sein du Salon du Sifflet, ce qui confère au document une aura étrangement suspecte.",
+    "desc2": "Rapport d’analyse des activités quotidiennes du Chef de gare Eisenbahn\n \n12 septembre — Temps clair — Zone de fret de la Gare des Cent-Fleurs\nVers 10 h 00 : aperçu dans la partie arrière de la zone de fret, accompagné de quatre gardes. Entretien avec des responsables de Givrelac. Le sujet dirigeait régulièrement son regard vers l’intérieur des wagons.\n \n25 septembre — Ciel couvert — Hall principal de la gare\n15 h 00 : apparition au niveau des portiques de contrôle sous un déguisement. Portait une casquette à long bord quadrillé ainsi qu’une paire de lunettes teintées brun foncé. Comportement jugé suspect.\n \n2 octobre — Nuageux puis dégagé — Zone de fret de la Gare des Cent-Fleurs\n1 h 40 : arrivée d’un train dont l’entrée en gare n’était pas autorisée. Sujet non aperçu, mais présence confirmée de membres de sa garde rapprochée. Incident étroitement lié à la rencontre du 12 septembre dernier.\n \n5 octobre — Temps pluvieux — Zone des matières premières de la Gare des Cent-Fleurs\nSujet non aperçu. Un marchand ivre a cependant été vu errant dans la zone, accusant quelqu’un de tromperie et de trahison. L’individu a quitté la gare peu après. Passage à tabac suspecté par la suite.\n \n27 octobre — Temps clair — Quai\nSujet aperçu en uniforme militaire officiel. A adressé salutations et courbettes aux passagers embarquant avant d’assister au départ du train. État général stable. Aucune anomalie constatée.\n \n ..."
+  },
+  {
+    "id": 2000123,
+    "name": "Registre sacré",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "Un registre à la couverture souple, qui ne contient pourtant aucune trace de revenus ou de dépenses ordinaires. Il sert avant tout de principal canal d’échange et de transaction entre les membres du Salon du Sifflet.\nLes admirateurs les plus fanatiques d’Eisenbahn le considèrent comme plus précieux que leur propre vie et le vénèrent comme un « registre sacré » qu’il serait interdit de profaner.",
+    "desc2": "Écriture soignée : Recherche affiche du 2e anniversaire du Chef de gare Eisenbahn. 50 pièces d’argent.\nÉcriture précipitée : Avec si peu, t’auras même pas celle de cette année.\nÉcriture aux lettres liées : 80 pièces d’argent, ça te va ?\nÉcriture soignée : Désolé... ça dépasse mon budget.\n \nÉcriture hésitante : Quelqu’un veut les cigarettes commémoratives d’anniversaire du Chef de gare Eisenbahn ? J’ai plus l’étui, seulement les cigarettes.\nÉcriture soignée : Ça sert à quoi d’acheter juste les cigarettes ?\nÉcriture hésitante : À fumer les mêmes que le Chef de gare Eisenbahn.\n \nÉcriture puissante et appuyée : Timbres commémoratifs du 5e anniversaire du Chef de gare Eisenbahn, édition estampée. 50 pièces d’argent. Échange en main propre demain à 15 h.\nÉcriture enfantine : « Édition estampée » ? Pff, c’est juste une contrefaçon imprimée chez toi, non ?\nÉcriture soignée : Ne souillez pas notre registre sacré avec vos idioties !\n \n ...\n \nÉcriture élégante : Le Chef de gare Eisenbahn apparaîtra demain après-midi sur le quai. Plus d’informations disponibles en échange privé.\n \nÉcriture douce : Événement photo du 10e anniversaire du Chef de gare Eisenbahn. Recherche partenaire pour prendre les photos. J’apporte l’appareil, vous prenez les clichés. Je suis vraiment nul en photo.\n \nÉcriture acérée : Récompenses de bienvenue du Chef de gare Eisenbahn disponibles. Laissez vos coordonnées si intéressé.\nÉcriture enfantine : T’as trouvé ça où ? Le président a interdit la revente de ce genre de trucs. Considère ça comme un avertissement."
+  },
+  {
+    "id": 2000124,
+    "name": "L’Invincible Chef de Gare I",
+    "icon": "T_Read_01",
+    "rarity": 3,
+    "desc": "Un roman-feuilleton au titre bâclé, relatant les aventures d’un jeune Hyperboréen sur fond de guerre entre Hyperborea et Élysium, survenue il y a plusieurs décennies. Présenté comme le pendant de <I>L’Invincible Commandant de Légion</>, il est particulièrement populaire auprès de la jeunesse impériale.",
+    "desc2": "Chapitre 189 — Cette voie ferrée sera longue\n \n« Chef de gare Leo, la capacité de transit de votre gare ne peut-elle vraiment pas être multipliée par cinq ? »\nLeo reposa la lettre du ministre des transports avant de pousser un léger soupir.\nCe n’était pas l’exigence apparemment déraisonnable des ministres qui le décourageait. Leo savait parfaitement qu’une augmentation par cinq représentait une demande à la fois raisonnable et nécessaire face à l’enlisement des combats sur le front.\n \nLe chemin de fer était le système sanguin d’Hyperborea, acheminant sans relâche ravitaillement, armement et soldats à travers tout l’Empire afin d’y faire circuler un sang neuf et brûlant.\n \nEn tant que chef de gare, Leo comprenait parfaitement que la capacité actuelle du réseau ferroviaire impérial ne suffisait plus à compenser les pertes colossales de la guerre. Sans amélioration rapide du rendement, les soldats du front risquaient bientôt de devoir combattre à mains nues faute de munitions et d’armes.\nLe courage des soldats impériaux ne reculait pas devant une telle perspective. Mais Leo, gardien des artères du transport impérial, savait qu’il avait le devoir de tout mettre en œuvre afin de réduire les sacrifices de ses compatriotes.\nLeo saisit son communicateur, élaborant déjà plusieurs plans pour améliorer l’efficacité de la gare.\n \n« Agrandissement des quais... centralisation du trafic... conversion des trains de voyageurs... »\nIl ouvrit finalement le canal de communication et attribua les tâches selon les spécialités de chacun de ses subordonnés.\n« Kate, tu as de bons contacts. Va rassembler de la main-d’œuvre ; je travaillerai avec les Éolipyliens afin de poser la nouvelle ligne. »\n« Reçu. »\n« Wolfe, tu t’y connais en mécanique. Forme une équipe de réparation d’urgence capable de dégager et réparer immédiatement les trains immobilisés sur les voies. »\n« Reçu. »\n \n...\n \nUne fois les dernières directives transmises, Leo roula une cigarette entre ses doigts avant de lever les yeux vers le sud, en direction de l’Église Élyséenne.\n« Un jour, les voies ferrées impériales atteindront la Tour d’Élysium. Les artères de l’Empire s’étendront jusque sur chaque terre des faux dieux. »\n \nLeo rangea sa cigarette puis retourna vers la gare. Une bourrasque fit claquer son manteau, sans jamais ralentir ses pas résolus.\n \n« Je fumerai cette cigarette lorsque ce jour viendra. »\n \nLeo parviendra-t-il à accomplir la mission confiée par sa hiérarchie ? La gare qu’il dirige réussira-t-elle à soutenir le front ?\nLa suite dans le prochain chapitre de <I>L’Invincible Chef de Gare</> !"
+  },
+  {
+    "id": 2000125,
+    "name": "Relevé détaillé des comptes annuels de la Gare des Cent-Fleurs de Flodia",
+    "icon": "T_Read_02",
+    "rarity": 3,
+    "desc": "Il s’agit vraisemblablement des documents conservés par Handy avant son exécution sur ordre d’Eisenbahn. Les pages sont couvertes de chiffres et de comptes complexes ; rien qu’à les parcourir donne le vertige. Reste à savoir pourquoi Handy a perdu la vie pour ce simple registre.",
+    "desc2": "Demande administrative n° 1\nEntretien quotidien de la Gare des Cent-Fleurs\nBudget : 100 000 pièces d’or\nRésultat : refusé\n \nAnnotation :\nLe budget d’entretien de l’an dernier était de 80 000 pièces d’or. Même en tenant compte du vieillissement des installations et de l’augmentation des coûts de maintenance, cette somme reste excessive. Faites quelques économies. Certains composants coûtent plus cher à entretenir qu’à remplacer. Je joins une liste ; procédez aux vérifications selon celle-ci.\n \nDemande administrative n° 2\nL’Académie d’Alchimie souhaite que la gare finance la recherche sur une nouvelle locomotive. En cas de succès, celle-ci serait prioritairement déployée à la Gare des Cent-Fleurs.\nBudget : 245 700 pièces d’or\nRésultat : budget réduit à 45 700 pièces d’or\n \nAnnotation :\nAvec un chiffre aussi précis, on croirait presque la demande sérieuse. Cela fait pourtant plusieurs années qu’ils réclament des subventions sous ce prétexte. L’an dernier, lors de ma visite au chef de gare de Dismania, j’ai appris qu’ils avaient promis exactement la même chose à toutes les grandes gares du pays. Ils essaient simplement de nous soutirer de l’argent. Mais inutile d’entrer en conflit direct avec eux ; accordez-leur simplement une somme symbolique.\n \nDemande administrative n° 3\nLe Salon du Sifflet de la gare sollicite des fonds afin d’entretenir l’image du chef de gare Eisenbahn.\nBudget : 10 000 pièces d’or\nRésultat : refusé\n \nAnnotation :\nCette organisation n’a aucun lien avec moi. Si une nouvelle demande du même genre se présente, inutile de me la transmettre ; refusez-la directement.\n \nDemande administrative n° 4\nAmélioration des conditions de travail des ouvriers de la gare\nBudget : 10 000 pièces d’or\nRésultat : augmenté à 30 000 pièces d’or\n \nAnnotation :\nRéaffectez ici les dépenses économisées sur l’entretien quotidien et poursuivez la procédure comme prévu."
+  },
+  {
+    "id": 2000126,
+    "name": "Rapport sur le détournement de l’Express Aurora",
+    "icon": "T_Read_03",
+    "rarity": 3,
+    "desc": "Un rapport d’incident si accablant que même les hauts fonctionnaires de l’Empire auraient de quoi s’arracher les cheveux en le lisant.",
+    "desc2": "Hier à neuf heures du matin, la Princesse Flodia a quitté le quai n° 1 à bord du train la Corneille en direction de la capitale impériale, Dismania.\n \nL’un des suspects, {性别:un Chasseur|une Chasseuse} de Phoxène originaire de Givrelac (identité non confirmée à ce jour), avait embarqué une heure plus tôt, à huit heures, à bord du train Rafale, lui aussi en route vers Dismania. Environ trois heures après le départ, la Corneille dépassa le train Rafale. {性别:Le Chasseur|La Chasseuse} de Phoxène profita alors de l’occasion pour sauter sur la Corneille, franchissant les défenses relativement faibles du toit du train avant de prendre la Princesse Flodia en otage et de sauter avec elle sur un autre train circulant sur une voie parallèle : l’Express Aurora.\n \nL’Express Aurora fut ensuite victime d’une prise d’otages orchestrée par Katya, surnommée le « Roi des Bêtes », l’un des dirigeants des Déchus et membre des Brumaires. À la suite de l’incident, la VIᵉ Légion stationnée dans la région de Cocytus déploya immédiatement le dirigeable Hiver éternel afin d’intervenir. Katya menaça cependant le dirigeable en utilisant la Princesse Flodia comme otage. Le dirigeable fut finalement touché par le Canon principal de l’Express Aurora contrôlé par Katya, provoquant l’embrasement de l’Arbre Céleste situé dans le sud de la région de Cocytus.\n \nPar la suite, Katya entra dans un violent affrontement avec {性别:le Chasseur|la Chasseuse} de Phoxène. Selon les estimations, le conflit aurait éclaté à propos du sort réservé à la Princesse Flodia. Katya fut ensuite exfiltrée par les Déchus, tandis que {性别:le Chasseur|la Chasseuse} de Phoxène demeure porté disparu et présumé {性别:mort|morte} dans l’explosion de la locomotive.\n \nLes pertes engendrées par cet incident sont considérables. Le dirigeable Hiver éternel s’est écrasé et la locomotive de l’Express Aurora a été entièrement détruite, sans possibilité de réparation.\n \nPar ailleurs, l’embrasement de l’Arbre Céleste a généré d’importantes quantités de poussière, condamnant durablement l’espace aérien entre la région de Cocytus et Dismania. Si les Déchus venaient à déclencher une révolte d’ampleur à ce moment précis, il deviendrait difficile de mobiliser les dirigeables impériaux pour réprimer les troubles.\n \nLa Princesse Flodia demeure actuellement introuvable. Toutefois, selon plusieurs passagers de l’Express Aurora l’ayant aperçue, elle n’aurait pas été emportée dans l’explosion de la locomotive.\n \nL’incident a causé la mort de treize civils et fait plus de quarante blessés. Le conducteur, le mécanicien ainsi que de nombreux gardes ferroviaires sont tombés en combattant les Déchus. Rendons hommage à ces héros ; l’Empire exigera le sang des Déchus en paiement de cette dette.\n \nToute gloire à l’Empereur !\n \nListe des victimes civiles (13 personnes) :\nJeff Eysen (messager de Givrelac)\nElena Horn (marchande de fourrures de Givrelac)\nCliff Miller (employé de banque de Dismania)\n..."
+  },
+  {
     "id": 3000001,
     "name": "Boîte d’étoiles en papier",
     "icon": "T_Impression_Star",
@@ -13649,6 +14377,70 @@
     "rarity": 2,
     "desc": "Plante grimpante que l’on trouve principalement dans les zones ombragées, dotée d’une grande souplesse et d’un réseau interne de fibres étroitement entremêlées. Une fois traitée, elle devient un matériau solide, durable et résistant à l’usure, utilisé dans de nombreux domaines.\nOn dit qu’elle aurait même inspiré la conception des premiers câbles.",
     "desc2": "« Aussi appelé Bois Sans-Cendre, noir de teinte, feuilles blanches comme l’os, il ressemble à du bois pourri, mais le feu le refuse. Son écorce, comestible, a un goût âpre, froid et non toxique. En décoction, deux fois par jour, il apaise les gorges enflammées et dissipe les chaleurs internes. »\n\n— Fufeng, apothicaire de Huaxu, <I>Guide des plantes médicinales</>"
+  },
+  {
+    "id": 3000018,
+    "name": "颜料【待包装】",
+    "icon": "T_Dye_01",
+    "rarity": 4,
+    "desc": "颜料的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000018"
+  },
+  {
+    "id": 3000019,
+    "name": "止痛药【待包装】",
+    "icon": "T_Guide_ChapterItem_003",
+    "rarity": 4,
+    "desc": "止痛药的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000019"
+  },
+  {
+    "id": 3000020,
+    "name": "工卡【待包装】",
+    "icon": "T_Guide_ChapterItem_0026",
+    "rarity": 4,
+    "desc": "工卡的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000020"
+  },
+  {
+    "id": 3000021,
+    "name": "支票【待包装】",
+    "icon": "T_Guide_ChapterItem_0024",
+    "rarity": 4,
+    "desc": "支票的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000021"
+  },
+  {
+    "id": 3000022,
+    "name": "止血钳【待包装】",
+    "icon": "T_Guide_ChapterItem_0037",
+    "rarity": 4,
+    "desc": "止血钳的描述【待包装】",
+    "desc2": "RESOURCE_TEXT_3000022"
+  },
+  {
+    "id": 3000023,
+    "name": "金属酒壶【待包装】",
+    "icon": "T_Guide_ChapterItem_0028",
+    "rarity": 4,
+    "desc": "金属酒壶的功能描述【待包装】",
+    "desc2": "金属酒壶的文案描述【待包装】"
+  },
+  {
+    "id": 3000024,
+    "name": "走私棉衣【待包装】",
+    "icon": "T_Guide_ChapterItem_0029",
+    "rarity": 4,
+    "desc": "走私棉衣的功能描述【待包装】",
+    "desc2": "走私棉衣的文案描述【待包装】"
+  },
+  {
+    "id": 3000025,
+    "name": "消毒剂【待包装】",
+    "icon": "T_Guide_ChapterItem_0033",
+    "rarity": 4,
+    "desc": "消毒剂的功能描述【待包装】",
+    "desc2": "消毒剂的文案描述【待包装】"
   },
   {
     "id": 4010001,
@@ -15180,7 +15972,7 @@
       }
     ],
     "desc": "Plante d’eau douce aimant le froid, surnommée « lotus d’hiver ».\nSes graines, translucides, ont l’éclat fragile et onirique de la mousse.\n\nToxique ! Hautement toxique ! Extrêmement toxique !",
-    "desc2": "« Citoyens, restez vigilants.\nNe cueillez ni ne vendez de plantes ou de champignons sauvages non identifiés.\nÉvitez notamment le champignon des neiges, communément appelé Bonnet de neige, ainsi que la Lotus d’hiver, dite Herbe-bulle. »\n\n— Rhythm Fischer, officier des Veilleurs de Givrelac"
+    "desc2": "« Citoyens, restez vigilants.\nNe cueillez ni ne vendez de plantes ou de champignons sauvages non identifiés.\nÉvitez notamment le Champignon des neiges, communément appelé Bonnet de neige, ainsi que le Lotus d’hiver, dite Herbe-bulle. »\n\n— Rhythm Fischer, officier des Veilleurs de Givrelac"
   },
   {
     "id": 4010009,
@@ -18048,6 +18840,14 @@
     "desc2": "« Hyperborea est si lointain, si froid... Là-bas, on porte sûrement des fourrures épaisses. De la soie, ils n’en ont sans doute jamais vu. Alors j’en ai envoyé pour le décor. Peut-être attirera-t-elle quelques visiteurs... enfin, j’espère ! »"
   },
   {
+    "id": 4030007,
+    "name": "Billet commémoratif",
+    "icon": "T_Icon_TheaterOnline_07",
+    "rarity": 4,
+    "desc": "Souvenir d’événement fourni par Luno au sifflet, spécialement conçu sous la forme d’un billet de train. Bien qu’il ne puisse pas être utilisé pour voyager, il contribue à l’ambiance festive de l’événement « Un Instant de Liesse : Gare des Cent-Fleurs ».",
+    "desc2": "« J’ai demandé à mon amie Gloria, qui travaille ici elle aussi, de nous aider à préparer ces billets en urgence. Alors, qu’en penses-tu ? On dirait de vrais billets, non ? J’espère qu’ils pourront eux aussi conserver un précieux souvenir pour toi, comme le feraient de véritables billets de train ! »"
+  },
+  {
     "id": 5011010,
     "name": "Pérégrin des marées",
     "icon": "T_Fish_Sea_Normal_1",
@@ -19072,6 +19872,86 @@
     "desc2": "« Sapristi... Voilà toute une vie que je pêche, et je n’avais jamais réalisé que le Requin des fonds n’était pas vraiment un requin. Peut-être qu’à l’origine on l’appelait \"poisson des sables profonds\", et qu’à force de le dire trop vite, on a fini par oublier le mot \"poisson\". Et voilà comment tout le monde s’est mis à croire que c’était un requin ! »\n\n— Un vieux pêcheur, plongé dans ses réflexions"
   },
   {
+    "id": 5032010,
+    "name": "浮草鱼",
+    "icon": "T_Fish_FreshWater_Chapter03_1",
+    "rarity": 3,
+    "desc": "广泛分布在阿特拉西亚大陆各处的知名食用鱼之一。生命力旺盛且环境适应性极强，因此常被人笑称为路边野草一样多的杂鱼。",
+    "desc2": "“你知道吗，浮草鱼虽然是很常见的淡水鱼，但你是怎么知道我刚钓上来一条100多斤的浮草鱼王啊。”\n\n——自豪的捕鱼人"
+  },
+  {
+    "id": 5032011,
+    "name": "浮草鱼·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_1_1",
+    "rarity": 3,
+    "desc": "广泛分布在阿特拉西亚大陆各处的知名食用鱼之一。生命力旺盛且环境适应性极强，因此常被人笑称为路边野草一样多的杂鱼。",
+    "desc2": "“你知道吗，浮草鱼虽然是很常见的淡水鱼，但你是怎么知道我刚钓上来一条100多斤的浮草鱼王啊。”\n\n——自豪的捕鱼人"
+  },
+  {
+    "id": 5032020,
+    "name": "嘀嘟鱼",
+    "icon": "T_Fish_FreshWater_Chapter03_2",
+    "rarity": 3,
+    "desc": "生活在百花车站附近的淡水鱼之一，不知是天性如此还是受来往的列车影响，嘀嘟鱼学会了从修长的口器中发出类似列车汽笛的“嘟嘟”声。当人们从它们的领地经过时，就能听到湖水中此起彼伏的“嘟——嘟”。",
+    "desc2": "“每次检修轨道我都得仔细分辨汽笛声到底是来自列车还是来自嘀嘟鱼，再这么干下去，我早晚得神经衰弱……”\n\n——精神紧绷的轨道维修工"
+  },
+  {
+    "id": 5032021,
+    "name": "嘀嘟鱼·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_2_1",
+    "rarity": 3,
+    "desc": "生活在百花车站附近的淡水鱼之一，不知是天性如此还是受来往的列车影响，嘀嘟鱼学会了从修长的口器中发出类似列车汽笛的“嘟嘟”声。当人们从它们的领地经过时，就能听到湖水中此起彼伏的“嘟——嘟”。",
+    "desc2": "“每次检修轨道我都得仔细分辨汽笛声到底是来自列车还是来自嘀嘟鱼，再这么干下去，我早晚得神经衰弱……”\n\n——精神紧绷的轨道维修工"
+  },
+  {
+    "id": 5032030,
+    "name": "观星鱼",
+    "icon": "T_Fish_FreshWater_Chapter03_3",
+    "rarity": 4,
+    "desc": "常见于科赛托斯行省的淡水鱼之一，无论何时都仰着它那高傲的头，哪怕做熟以后也是如此，仿佛群星之间有什么东西在呼唤它们一样。",
+    "desc2": "“到底是谁想出来在派里塞观星鱼，甚至是头朝上塞进去的？？？简直是暴殄天物、天理难容、罪大恶极！！”\n\n——愤怒的厨师长"
+  },
+  {
+    "id": 5032031,
+    "name": "观星鱼·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_3_1",
+    "rarity": 4,
+    "desc": "常见于科赛托斯行省的淡水鱼之一，无论何时都仰着它那高傲的头，哪怕做熟以后也是如此，仿佛群星之间有什么东西在呼唤它们一样。",
+    "desc2": "“到底是谁想出来在派里塞观星鱼，甚至是头朝上塞进去的？？？简直是暴殄天物、天理难容、罪大恶极！！”\n\n——愤怒的厨师长"
+  },
+  {
+    "id": 5032040,
+    "name": "球球豚",
+    "icon": "T_Fish_FreshWater_Chapter03_4",
+    "rarity": 4,
+    "desc": "生活在科赛托斯行省的河豚亚种。攻击性远低于同族，遇到捕食者时，也只是胀圆了身子，飞速滚动着逃跑。",
+    "desc2": "“烹饪前明明很可爱的，做熟以后怎么跟漏了气的皮球一样啊……”\n\n——沮丧的厨师"
+  },
+  {
+    "id": 5032041,
+    "name": "球球豚·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_4_1",
+    "rarity": 4,
+    "desc": "生活在科赛托斯行省的河豚亚种。攻击性远低于同族，遇到捕食者时，也只是胀圆了身子，飞速滚动着逃跑。",
+    "desc2": "“烹饪前明明很可爱的，做熟以后怎么跟漏了气的皮球一样啊……”\n\n——沮丧的厨师"
+  },
+  {
+    "id": 5032050,
+    "name": "铁额鲑",
+    "icon": "T_Fish_FreshWater_Chapter03_5",
+    "rarity": 5,
+    "desc": "生长迅速，体型巨大的洄游鱼，因其金属般的色泽而得名。但与其外表完全相反的是，铁额鲑的肉质十分软嫩，咬一口如同奶油在嘴里化开，无比的肥美多汁，因此常见于冰湖城各路名流的宴会之上。",
+    "desc2": "“世界各地都有水怪传说，到最后，它们往往都被证明只是生活在当地的某种生长迅速的大鱼而已，所谓的科赛托斯水怪，亦是如此。”\n\n——正在翻看都市怪谈的无名学者"
+  },
+  {
+    "id": 5032051,
+    "name": "铁额鲑·异种",
+    "icon": "T_Fish_FreshWater_Chapter03_5_1",
+    "rarity": 5,
+    "desc": "生长迅速，体型巨大的洄游鱼，因其金属般的色泽而得名。但与其外表完全相反的是，铁额鲑的肉质十分软嫩，咬一口如同奶油在嘴里化开，无比的肥美多汁，因此常见于冰湖城各路名流的宴会之上。",
+    "desc2": "“世界各地都有水怪传说，到最后，它们往往都被证明只是生活在当地的某种生长迅速的大鱼而已，所谓的科赛托斯水怪，亦是如此。”\n\n——正在翻看都市怪谈的无名学者"
+  },
+  {
     "id": 5110100,
     "name": "Canne d’entraînement",
     "icon": "T_FishingRod_Normal_1",
@@ -19778,6 +20658,15 @@
           [
             -350,
             -8710
+          ]
+        ]
+      },
+      {
+        "srId": 105301,
+        "pos": [
+          [
+            43714.61,
+            23454.56
           ]
         ]
       }
@@ -20560,6 +21449,94 @@
     "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
   },
   {
+    "id": 31013001,
+    "name": "Poussière sur la route de la capitale",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013002,
+    "name": "Splendeur de Haojing",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013003,
+    "name": "Village de Jiaolan – Échos du passé (xiao)",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013004,
+    "name": "Village de Jiaolan – Échos du passé (piano)",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013005,
+    "name": "Au-delà des montagnes",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013006,
+    "name": "Balance du noir et du blanc",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013007,
+    "name": "Destin sans cause",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013008,
+    "name": "Merveilles de Jishu",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013009,
+    "name": "Pacte noir",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013010,
+    "name": "Là où la lumière ne parvient pas",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
+    "id": 31013011,
+    "name": "Lotus né des flammes",
+    "icon": "T_Piano_Shop2",
+    "rarity": 2,
+    "desc": "Une feuille de musique dont les notes tracent une histoire, comme des pas laissés dans le sable.",
+    "desc2": "« Lorsque vos doigts effleurent les touches, les notes s’éveillent — chuchotement du vent, soupir du temps, bruissement secret des pousses nouvelles sous la terre.\nElles donnent voix aux histoires anciennes, aux vœux inachevés des héros, aux récits jamais confiés au papier.\nElles témoignent de tout ce qui a un jour existé sur cette terre. »\n\n— Lirico, la ménestrelle"
+  },
+  {
     "id": 60000041,
     "name": "Certificat d’amélioration I",
     "icon": "T_Activity_SoloTreasure_BagSign01",
@@ -20600,6 +21577,14 @@
     "icon": "T_Activity_SoloTreasure_BagSign06",
     "rarity": 5,
     "desc": "Permet de débloquer l’utilisation du Sac aux trésors correspondant."
+  },
+  {
+    "id": 101120101,
+    "name": "Emblème : Chasseur de Phoxène — Umbro",
+    "icon": "T_Phantom_Nanzhu02",
+    "rarity": 5,
+    "desc": "Emblème utilisé pour invoquer un compagnon. Il représente un soutien indéfectible au combat, un pacte de camaraderie et une promesse silencieuse.\nQuand la prière porte la pensée, l’être désiré apparaîtra à vos côtés.",
+    "desc2": "« Voici notre histoire, vieille de plus de deux millénaires : une épopée faite d’étreintes et de massacres, d’élans de ferveur et d’élans de compassion. L’Histoire, tel le ballet céleste du soleil et de la lune, s’élève et s’abaisse, éternelle et cyclique.\nDans la grande tapisserie du temps relatée dans ces pages, je ne suis qu’une simple observatrice, insignifiante comme un flocon d’Hyperborea, une feuille d’Aethyrie, une goutte des eaux de Luca ou un grain des sables de Khemet.\nEt pourtant, dans cet immense cosmos, j’espère que les flocons se rassembleront en une vaste étendue de neige, que les feuilles formeront des forêts, que les gouttes se joindront pour devenir fleuves, et que les grains s’uniront pour façonner des déserts. Car lorsque toutes les individualités se relient, l’Histoire s’incline en notre faveur. »\n\n— Comnena, conservatrice en chef de la Bibliothèque des Nuages d’Aethyrie, <I>Feuilles et Lune - Chroniques d’Atlasia</>"
   },
   {
     "id": 101160101,

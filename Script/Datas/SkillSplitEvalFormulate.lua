@@ -29,6 +29,9 @@ return ReadOnly("SkillSplitEvalFormulate", {
   ["$Source:GetInt('MagazineBulletNum_20505')$"] = function(Source, SkillLevel, Target)
     return Source:GetInt("MagazineBulletNum_20505")
   end,
+  ["$Source:GetInt('Mod2701Bullet')$"] = function(Source, SkillLevel, Target)
+    return Source:GetInt("Mod2701Bullet")
+  end,
   ["$Source:GetRootSource():GetFloat('Skill04TriggerRate')$"] = function(Source, SkillLevel, Target)
     return Source:GetRootSource():GetFloat("Skill04TriggerRate")
   end,

@@ -1,6 +1,7 @@
 local CustomTypes = require("BluePrints.Client.CustomTypes.CustomTypes")
 local ClassModule = require("NetworkEngine.Class")
 local ClassMgr = require("NetworkEngine.Common.ClassManager")
+local SerializeUtils = require("Utils.SerializeUtils")
 local RpcUtils = {}
 
 function RpcUtils.RevertArgs(Args)
@@ -51,6 +52,17 @@ function RpcUtils.LoadArg(Arg)
   else
     return Arg
   end
+end
+
+function RpcUtils.PackOfflineArgs(Args)
+  return SerializeUtils:Serialize(Args)
+end
+
+function RpcUtils.UnpackOfflineArgs(Args)
+  if type(Args) == "string" then
+    return SerializeUtils:UnSerialize(Args)
+  end
+  return Args
 end
 
 return RpcUtils

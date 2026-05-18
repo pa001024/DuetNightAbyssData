@@ -5,8 +5,8 @@ local CodeVersion = require("BluePrints.UI.WBP.Announcement.WebSource.CodeVersio
 local AnnounceCommon = {
   ContentUIStyle = {ImageOnly = 0, Default = 1},
   TabTag = {
-    System = 1,
-    Activity = 2,
+    System = 2,
+    Activity = 1,
     News = 3
   },
   ShowTag = {InLogin = 1, InGame = 2},

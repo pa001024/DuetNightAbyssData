@@ -584,7 +584,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -855,7 +857,8 @@ return {
             propsData = {
               TargetTime = 22,
               NeedLerp = false,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           },
           ["17727006077415725186"] = {
@@ -1271,6 +1274,7 @@ return {
               MoveSpeedRate = 0.35,
               ExitBlendTime = 0,
               IsTriggerable = false,
+              UseEndOverlapBox = true,
               CanMoveReverse = false
             }
           },

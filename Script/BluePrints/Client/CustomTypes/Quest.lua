@@ -9,6 +9,7 @@ local SpecialQuestData = Class("SpecialQuestData", CustomTypes.CustomAttr)
 SpecialQuestData.__Props__ = {
   SpecialQuestId = prop.prop("Int", "client save"),
   SpecialQuestState = prop.prop("Int", "client save"),
+  SubmitQuestId = prop.prop("IntList", "client save"),
   StartTime = prop.prop("Int", "client save")
 }
 
@@ -285,6 +286,8 @@ QuestChain.__Props__ = {
   State = prop.prop("Int", "client save", 0),
   DoingQuestId = prop.prop("Int", "client save"),
   CompleteQuestId = prop.prop("IntList", "client save"),
+  RewardGotQuestId = prop.prop("IntList", "client save"),
+  SubmitQuestId = prop.prop("IntList", "client save"),
   CanShow = prop.prop("Bool", "client save", false),
   QuestPicks = prop.prop("QuestPickDict", "client save"),
   QuestCoordinate = prop.prop("Coordinate", "client save"),
@@ -345,6 +348,18 @@ function QuestChain:AddCompleteQuestId(QuestId)
   self.CompleteQuestId:Append(QuestId)
 end
 
+function QuestChain:AddRewardGotQuestId(QuestId)
+  if not QuestId or type(QuestId) ~= "number" then
+    return
+  end
+  if tonumber(QuestId) <= 0 then
+    return
+  end
+  if not self.RewardGotQuestId:HasValue(QuestId) then
+    self.RewardGotQuestId:Append(QuestId)
+  end
+end
+
 function QuestChain:CheckQuestIdDoing(QuestId)
   if not self:IsFinish() and self.DoingQuestId == QuestId then
     return true
@@ -375,6 +390,10 @@ function QuestChain:IsFinish()
   return self.State == CommonConst.QuestChainState.finish
 end
 
+function QuestChain:IsStop()
+  return self.State == CommonConst.QuestChainState.stop
+end
+
 function QuestChain:Lock()
   self.State = CommonConst.QuestChainState.lock
   self.DoingQuestId = 0
@@ -389,7 +408,7 @@ function QuestChain:Unlock()
 end
 
 function QuestChain:Doing()
-  if self:IsUnlock() then
+  if self:IsUnlock() or self:IsStop() then
     self.State = CommonConst.QuestChainState.doing
     return true
   end
@@ -403,6 +422,13 @@ function QuestChain:Finish()
     return true
   end
   return false
+end
+
+function QuestChain:Stop()
+  if self:IsFinish() then
+    return false
+  end
+  self.State = CommonConst.QuestChainState.stop
 end
 
 function QuestChain:ForceToLock()
@@ -420,6 +446,10 @@ end
 function QuestChain:ForceToFinish()
   self.DoingQuestId = 0
   self.State = CommonConst.QuestChainState.finish
+end
+
+function QuestChain:ForceToStop()
+  self.State = CommonConst.QuestChainState.stop
 end
 
 FormatProperties(QuestChain)
@@ -459,6 +489,44 @@ function QuestTracking:GetCurrentQuestTracking()
 end
 
 FormatProperties(QuestTracking)
+local QuestChapter = Class("QuestChapter", CustomTypes.CustomAttr)
+QuestChapter.__Props__ = {
+  QuestChapterId = prop.prop("Int", "client save"),
+  State = prop.prop("Int", "client save", 0),
+  QuestChainId = prop.getter("Data", "QuestChainId"),
+  MEChapId = prop.getter("Data", "MEChapId")
+}
+
+function QuestChapter:Init(QuestChapterId)
+  if not QuestChapterId then
+    return
+  end
+  if not DataMgr.QuestMutualExclusion[QuestChapterId] then
+    return
+  end
+  self.QuestChapterId = QuestChapterId
+end
+
+function QuestChapter:Data()
+  return DataMgr.QuestMutualExclusion[self.QuestChapterId]
+end
+
+FormatProperties(QuestChapter)
+local QuestChapterDict = Class("QuestChapterDict", CustomTypes.CustomDict)
+QuestChapterDict.KeyType = BaseTypes.Int
+QuestChapterDict.ValueType = QuestChapter
+
+function QuestChapterDict:NewQuestChapter(QuestChapterId)
+  return QuestChapter(QuestChapterId)
+end
+
+function QuestChapterDict:GetQuestChapter(QuestChapterId)
+  if nil == self[QuestChapterId] then
+    self[QuestChapterId] = self:NewQuestChapter(QuestChapterId)
+  end
+  return self[QuestChapterId]
+end
+
 return {
   QuestChain = QuestChain,
   QuestTracking = QuestTracking,
@@ -469,5 +537,7 @@ return {
   SpecialQuestData = SpecialQuestData,
   QuestPickDict = QuestPickDict,
   QuestPickAttr = QuestPickAttr,
-  Coordinate = Coordinate
+  Coordinate = Coordinate,
+  QuestChapter = QuestChapter,
+  QuestChapterDict = QuestChapterDict
 }

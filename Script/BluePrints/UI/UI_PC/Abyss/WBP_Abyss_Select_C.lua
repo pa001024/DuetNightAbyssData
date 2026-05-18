@@ -438,6 +438,7 @@ function WBP_Abyss_Select_C:InitDetailPanels()
   end
   self.CurSlotName = ESlotName.Null
   self.DisableList = {}
+  local PlayerChanged = self:UpdatePlayerAttribute()
   for SlotName, EName in pairs(ESlotName) do
     for DungeonIndex, DungeonPanel in pairs(self.Dungeons) do
       local UnitId = self.TeamInfos[DungeonIndex][SlotName]
@@ -482,8 +483,16 @@ function WBP_Abyss_Select_C:InitDetailPanels()
     end
   end
   self:AddTimer(self.In:GetEndTime(), function()
-    self:ShowDisableItemPopUp()
-  end)
+    if next(self.DisableList) ~= nil then
+      self:ShowDisableItemPopUp(function()
+        if PlayerChanged then
+          self:ShowPlayerSwitchAttrPopup()
+        end
+      end)
+    elseif PlayerChanged then
+      self:ShowPlayerSwitchAttrPopup()
+    end
+  end, nil, nil, nil, true)
 end
 
 function WBP_Abyss_Select_C:CheckUnit(UnitId)
@@ -492,6 +501,63 @@ function WBP_Abyss_Select_C:CheckUnit(UnitId)
   else
     return UnitId ~= NullUUid
   end
+end
+
+function WBP_Abyss_Select_C:UpdatePlayerAttribute()
+  local Ret = false
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return Ret
+  end
+  local UnitId2PlayerData = DataMgr.CharacterAttributeSwitch
+  if not UnitId2PlayerData then
+    return Ret
+  end
+  local CharSlotNames = {
+    "Char",
+    "Phantom1",
+    "Phantom2"
+  }
+  for DungeonIndex, DungeonPanel in pairs(self.Dungeons) do
+    for _, SlotName in ipairs(CharSlotNames) do
+      local Uuid = self.TeamInfos[DungeonIndex][SlotName]
+      if not self:CheckUnit(Uuid) then
+      else
+        local Char = Avatar.Chars[Uuid]
+        if not Char then
+        else
+          local UnitId = Char.CharId
+          local PlayerData = UnitId2PlayerData[UnitId]
+          if not PlayerData then
+          else
+            local PlayerGroupId = PlayerData.CharGroupId
+            local ServerPlayerId = Avatar.CharacterAttributeSwitch[PlayerGroupId]
+            if UnitId ~= ServerPlayerId then
+              local NewUuid
+              for uuid, Char in pairs(Avatar.Chars) do
+                if Char.CharId == ServerPlayerId then
+                  NewUuid = uuid
+                  break
+                end
+              end
+              self.TeamInfos[DungeonIndex][SlotName] = NewUuid
+              DungeonPanel:PlayItemRemind(ESlotName[SlotName])
+              Avatar:SaveAbyssTeam(nil, self.AbyssId, self.LevelIndex, self.TeamInfos)
+              Ret = true
+            end
+          end
+        end
+      end
+    end
+  end
+  return Ret
+end
+
+function WBP_Abyss_Select_C:ShowPlayerSwitchAttrPopup()
+  local Params = {
+    Text = GText("UI_PopupText_PlayerAttrChanged")
+  }
+  UIManager(self):ShowCommonPopupUI(100355, Params, self)
 end
 
 function WBP_Abyss_Select_C:SlotSelectionChanged(SlotName, DungeonIndex)
@@ -1095,7 +1161,7 @@ function WBP_Abyss_Select_C:OnFocusReceived(MyGeometry, InFocusEvent)
   return UIUtils.Handle
 end
 
-function WBP_Abyss_Select_C:ShowDisableItemPopUp()
+function WBP_Abyss_Select_C:ShowDisableItemPopUp(Callback)
   local Avatar = GWorld:GetAvatar()
   local ItemInfo = {}
   for Index, Slots in pairs(self.DisableList) do
@@ -1134,7 +1200,12 @@ function WBP_Abyss_Select_C:ShowDisableItemPopUp()
   if #ItemInfo > 0 then
     local Params = {
       Text = GText("Abyss_PartyDelete"),
-      ItemList = ItemInfo
+      ItemList = ItemInfo,
+      OnCloseCallbackFunction = function()
+        if Callback then
+          Callback()
+        end
+      end
     }
     UIManager(self):ShowCommonPopupUI(100187, Params, self)
     Avatar:SaveAbyssTeam(nil, self.AbyssId, self.LevelIndex, self.TeamInfos)

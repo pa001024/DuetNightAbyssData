@@ -20,7 +20,7 @@ function M:Start()
     return
   end
   self.__driver = nil
-  if IsValid(self.LevelSequence) then
+  if IsValid(self:GetSequenceByGender()) then
     self.__driver = SequenceDriver.New(self)
     if not self.__driver:Start() then
       self.__driver = nil

@@ -46,5 +46,17 @@
       "10%",
       "50%"
     ]
+  },
+  {
+    "RaidBuffID": 14,
+    "RaidBuffDes": "Les personnages Umbro gagnent 10% de pénétration de tous les attributs tous les 12% points de Vigueur, jusqu’à un maximum de 50%.",
+    "RaidBuffParameter": [
+      "12%",
+      "10%",
+      "50%",
+      null,
+      "10%",
+      "50%"
+    ]
   }
 ]

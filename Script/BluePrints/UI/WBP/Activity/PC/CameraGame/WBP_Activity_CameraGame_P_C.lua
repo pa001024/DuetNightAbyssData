@@ -88,7 +88,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   self:OnFocusChanged()
 end
 
-function M:OnFocusChanged(NewState, OladState, Operation)
+function M:OnFocusChanged(NewState, OldState, Operation)
   self:UpdateKeyStyle()
   self:UpdateBottomKeyInfo()
 end

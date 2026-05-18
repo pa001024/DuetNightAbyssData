@@ -179,6 +179,8 @@ function M:EnterStuffViewMode()
   self.FocusWidgetWidget = self.Item_1
   if self.ParentWidget then
     self.ParentWidget:UpdateActivityKeyTips("CheckRewardDetailView", self.Item_1)
+    self.ParentWidget:UpdateUIStyleInPlatform(false)
+    self.ParentWidget:EnterForbiddenState()
   end
   self:OnUpdateSubUIViewStyle(false, true)
   self.IsInStuffViewMode = true
@@ -194,6 +196,8 @@ function M:LeaveStuffViewMode()
   if self.ParentWidget then
     self.ParentWidget:UpdateActivityKeyTips()
     self.ParentWidget:SetFocus()
+    self.ParentWidget:UpdateUIStyleInPlatform(true)
+    self.ParentWidget:LeaveForbiddenState()
   end
   self:OnUpdateSubUIViewStyle(true, true)
   self.IsInStuffViewMode = false

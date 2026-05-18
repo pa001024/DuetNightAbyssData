@@ -521,6 +521,74 @@ return ReadOnly("RegionGraph", {
       }
     }
   },
+  [106001] = {
+    RegionStart = {106001},
+    SubRegionStart = 106001,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          101101,
+          "TargetPoint_FromCZtoBH",
+          1
+        },
+        {
+          106301,
+          "TargetPoint_FromCZtoYLQ",
+          1
+        },
+        {
+          106301,
+          "TargetPoint_FromCZtoZZZ",
+          1
+        },
+        {
+          106301,
+          "TargetPoint_FromCZtoZZZEnd",
+          1
+        },
+        {
+          106001,
+          "TargetPoint_FromCZtoYWS",
+          1
+        },
+        {
+          106001,
+          "TargetPoint_FromYWStoCZ",
+          1
+        }
+      }
+    }
+  },
+  [106101] = {SubRegionStart = 106101},
+  [106201] = {SubRegionStart = 106201},
+  [106301] = {
+    RegionStart = {106301},
+    SubRegionStart = 106301,
+    SubRegionTarget = {
+      RegionTarget = {
+        {
+          106001,
+          "TargetPoint_FromYLQtoCZ",
+          1
+        },
+        {
+          106001,
+          "TargetPoint_FromJGQtoCZ",
+          1
+        },
+        {
+          106001,
+          "TargetPoint_FromZZZtoCZ",
+          1
+        },
+        {
+          106001,
+          "TargetPoint_FromZZZStoCZ",
+          1
+        }
+      }
+    }
+  },
   [210101] = {
     SubRegionStart = 210101,
     SubRegionTarget = {

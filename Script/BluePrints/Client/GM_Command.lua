@@ -37,8 +37,16 @@ function GM_Command:Init_Command()
     ShowFlag = "ShowFlag",
     QualityLevel = "QualityLevel",
     OpenUI = "OpenUI",
+    OpenAppearanceRank = "OpenAppearanceRank",
+    OpenAppearanceImport = "OpenAppearanceImport",
+    OAIP = "OpenAppearanceImport",
+    OpenAppearanceCollectTask = "OpenAppearanceCollectTask",
+    OGC = "OpenGuildChat",
+    OpenGuildChat = "OpenGuildChat",
     HideUI = "HideUI",
     CloseUI = "CloseUI",
+    CloseAllUI = "CloseAllUI",
+    CloseCurrentUI = "CloseCurrentUI",
     ShowGuideUI = "ShowGuideUI",
     FallAttackPoint = "FallAttackPoint",
     FallAttackPointPos = "FallAttackPointPos",
@@ -73,6 +81,7 @@ function GM_Command:Init_Command()
     DungeonDoubleCost = "DungeonDoubleCost",
     Tel = "Tel",
     FreezeWorldComposition = "FreezeWorldComposition",
+    PrintLoadedLevels = "PrintLoadedLevels",
     BreakableItemNavEnableInLower = "BreakableItemNavEnableInLower",
     PrintActorSCLoc = "PrintActorSCLoc",
     TestServerRandomCreator = "TestServerRandomCreator",
@@ -165,6 +174,7 @@ function GM_Command:Init_Command()
     AddHp = "AddHp",
     MaxES = "MaxES",
     TestGuildWarRanking = "TestGuildWarRanking",
+    TestCoopRank = "TestCoopRank",
     AddES = "AddES",
     God = "God",
     DefCoreGod = "DefCoreGod",
@@ -258,6 +268,7 @@ function GM_Command:Init_Command()
     TestStory1 = "TestStory1",
     RunStory = "RunStoryline",
     StopStory = "StopStoryline",
+    ForbidAllStory = "ForbidAllStory",
     RunQuest = "RunQuest",
     SkipQuest = "SkipQuest",
     SuccessAllQuest = "SuccessAllQuest",
@@ -312,6 +323,9 @@ function GM_Command:Init_Command()
     EnableJetRush = "EnableJetRush",
     EnableSplineMove = "EnableSplineMove",
     EnableSplatoonMove = "EnableSplatoonMove",
+    EnableAutoAttack = "EnableAutoAttack",
+    EnableAutoShoot = "EnableAutoShoot",
+    DisableAutoAttackOrShoot = "DisableAutoAttackOrShoot",
     PlayAllNiagaraArround = "PlayAllNiagaraArround",
     DestroyAllMonster = "DestroyAllMonster",
     DSVersion = "DSVersion",
@@ -399,6 +413,8 @@ function GM_Command:Init_Command()
     TouchLimitPitch = "TouchLimitPitch",
     TouchLimitYaw = "TouchLimitYaw",
     SetInvincible = "SetInvincible",
+    SetSuperArmorOn = "SetSuperArmorOn",
+    SetSuperArmorOff = "SetSuperArmorOff",
     ClearPhantoms = "ClearPhantoms",
     KillAllPhantoms = "KillAllPhantoms",
     CompleteCondition = "CompleteCondition",
@@ -445,6 +461,7 @@ function GM_Command:Init_Command()
     RemovePet = "RemovePet",
     AddPetAffix = "AddPetAffix",
     RemovePetAffix = "RemovePetAffix",
+    GetAllMount = "GetAllMount",
     PrintPlayers = "PrintPlayers",
     PrintTeammates = "PrintTeammates",
     ShowCountdownToast = "ShowCountdownToast",
@@ -532,6 +549,7 @@ function GM_Command:Init_Command()
     HideStoryUI = "HideStoryUI",
     HideEntertainmentUI = "HideEntertainmentUI",
     GetAllOptPackages = "GetAllOptPackages",
+    GetMultiOptRewards = "GetMultiOptRewards",
     Eids = "ShowEids",
     ActorSnapShot = "ActorSnapShot",
     CreateAutoChessMonster = "CreateAutoChessMonster",
@@ -553,10 +571,16 @@ function GM_Command:Init_Command()
     SetLOD = "SetLOD",
     ExportHairAnimSequence = "ExportHairAnimSequence",
     TestPlay = "TestPlay",
+    TestCoopCreate = "TestCoopCreate",
     GP = "GP",
     GenerateNpcLocation = "GenerateNpcLocation",
-    PrintAllAssetPathUnderThisPath = "PrintAllAssetPathUnderThisPath"
+    GuildInit = "GuildInit"
   }
+end
+
+function GM_Command:GuildInit()
+  local GameMode = UE.UGameplayStatics.GetGameMode(self.Player)
+  GameMode:InitGuildConstruct()
 end
 
 function GM_Command:OpenUIMainSoloTreasure(Mode)
@@ -1018,6 +1042,259 @@ function GM_Command:OpenUI(UIName, ...)
   return UIManager:LoadUI(UIConfig.resource, UIName, UIConfig.zorder)
 end
 
+local function BuildAppearanceRankMockData()
+  local Avatar = GWorld:GetAvatar()
+  local BaseUid = Avatar and Avatar.Uid or 10000001
+  local MockHeadIconStart = 10001
+  local MockHeadFrameStart = 10001
+  local SelfRankInfo = {
+    Rank = 3,
+    Uid = BaseUid,
+    Nickname = Avatar and Avatar.Nickname or "PlayerSelf",
+    Level = Avatar and Avatar.Level or 60,
+    Score = 9520,
+    HeadIconId = Avatar and Avatar.HeadIconId or 1001001,
+    HeadFrameId = Avatar and Avatar.HeadFrameId or 1002001,
+    TitleBefore = Avatar and Avatar.TitleBefore or -1,
+    TitleAfter = Avatar and Avatar.TitleAfter or -1,
+    TitleFrame = Avatar and Avatar.TitleFrame or 10001,
+    BanState = 0
+  }
+  local TopNInfo = {}
+  for i = 1, 10 do
+    TopNInfo[i] = {
+      Uid = BaseUid + i,
+      Nickname = string.format("RankUser_%02d", i),
+      Level = 20 + i,
+      Score = 12000 - i * 230,
+      HeadIconId = MockHeadIconStart + i - 1,
+      HeadFrameId = MockHeadFrameStart + i - 1,
+      TitleBefore = -1,
+      TitleAfter = -1,
+      TitleFrame = 10001,
+      BanState = 0
+    }
+  end
+  TopNInfo[3] = {
+    Uid = SelfRankInfo.Uid,
+    Nickname = SelfRankInfo.Nickname,
+    Level = SelfRankInfo.Level,
+    Score = SelfRankInfo.Score,
+    HeadIconId = SelfRankInfo.HeadIconId,
+    HeadFrameId = SelfRankInfo.HeadFrameId,
+    TitleBefore = SelfRankInfo.TitleBefore,
+    TitleAfter = SelfRankInfo.TitleAfter,
+    TitleFrame = SelfRankInfo.TitleFrame,
+    BanState = 0
+  }
+  return SelfRankInfo, TopNInfo
+end
+
+local function SafeGTextForGM(TextKey)
+  if not TextKey or "" == TextKey then
+    return ""
+  end
+  local Ok, Result = pcall(GText, TextKey)
+  if Ok and Result then
+    return Result
+  end
+  return TextKey
+end
+
+local function BuildAppearanceImportSharerInfo(Avatar)
+  return {
+    Nickname = Avatar and Avatar.Nickname or "",
+    Level = Avatar and Avatar.Level or 0,
+    HeadIconId = Avatar and Avatar.HeadIconId or 0,
+    HeadFrameId = Avatar and Avatar.HeadFrameId or 0,
+    TitleBefore = Avatar and Avatar.TitleBefore or nil,
+    TitleAfter = Avatar and Avatar.TitleAfter or nil,
+    TitleFrame = Avatar and Avatar.TitleFrame or nil
+  }
+end
+
+local function ResolveAppearanceImportTargetChar(Avatar, CharUuidOrAppearanceIndex)
+  if not Avatar or not Avatar.Chars then
+    return nil, nil
+  end
+  local TargetCharUuid = CharUuidOrAppearanceIndex
+  local TargetAppearanceIndex
+  if CharUuidOrAppearanceIndex and tonumber(CharUuidOrAppearanceIndex) then
+    TargetCharUuid = nil
+    TargetAppearanceIndex = tonumber(CharUuidOrAppearanceIndex)
+  end
+  local Char
+  if TargetCharUuid and Avatar.Chars[TargetCharUuid] then
+    Char = Avatar.Chars[TargetCharUuid]
+  end
+  if not Char and Avatar.CurrentChar and Avatar.Chars[Avatar.CurrentChar] then
+    Char = Avatar.Chars[Avatar.CurrentChar]
+  end
+  if not Char then
+    for _, Value in pairs(Avatar.Chars) do
+      Char = Value
+      break
+    end
+  end
+  return Char, TargetAppearanceIndex
+end
+
+local function BuildAppearanceImportPlanInfo(Char, Avatar, AppearanceIndex)
+  if not Char or not Avatar then
+    return nil, nil
+  end
+  local TargetAppearanceIndex = tonumber(AppearanceIndex) or Char.CurrentAppearanceIndex or 1
+  local AppearanceSuit = Char.AppearanceSuits and Char.AppearanceSuits[TargetAppearanceIndex]
+  if not AppearanceSuit then
+    return nil, nil
+  end
+  local CharData = DataMgr.Char[Char.CharId]
+  local TargetName = CharData and SafeGTextForGM(CharData.CharName) or ""
+  local PlanNameKey = AppearanceSuit.AppearanceName
+  if not PlanNameKey or "" == PlanNameKey then
+    PlanNameKey = "UI_Squad_Appearance_TITLE" .. tostring(TargetAppearanceIndex)
+  end
+  local PlanName = SafeGTextForGM(PlanNameKey)
+  return {
+    Version = 1,
+    ShareType = "CharAppearancePlan",
+    TargetType = "Char",
+    TargetId = Char.CharId,
+    TargetName = TargetName,
+    PlanIndex = TargetAppearanceIndex,
+    PlanName = PlanName,
+    DisplayText = string.format("%s - %s", TargetName, PlanName),
+    AppearanceInfo = Char:DumpAppearanceSuit(Avatar, TargetAppearanceIndex),
+    SharerInfo = BuildAppearanceImportSharerInfo(Avatar)
+  }, TargetAppearanceIndex
+end
+
+function GM_Command:OpenAppearanceRank(Mode)
+  local ModeText = tostring(Mode or "0")
+  if "1" == ModeText then
+    local SelfRankInfo, TopNInfo = BuildAppearanceRankMockData()
+    self:OpenUI("AppearanceRank", SelfRankInfo, TopNInfo)
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local AppearanceRankModel = require("BluePrints.UI.WBP.Appearance.AppearanceRankModel")
+  AppearanceRankModel:Open()
+end
+
+function GM_Command:OpenAppearanceCollectTask(EventId)
+  local DefaultEventId = 103024
+  local RealEventId = tonumber(EventId) or DefaultEventId
+  return self:OpenUI("ActivitySkinCollectTask", RealEventId)
+end
+
+function GM_Command:OpenAppearanceImport(CharUuidOrAppearanceIndex, AppearanceIndex)
+  local Avatar = self:GetClientAvatar()
+  if not Avatar then
+    ScreenPrint("打开外观导入失败：未找到 Avatar")
+    return
+  end
+  local Char, DefaultAppearanceIndex = ResolveAppearanceImportTargetChar(Avatar, CharUuidOrAppearanceIndex)
+  if not Char then
+    ScreenPrint("打开外观导入失败：未找到目标角色")
+    return
+  end
+  local AppearancePlanInfo, FinalAppearanceIndex = BuildAppearanceImportPlanInfo(Char, Avatar, tonumber(AppearanceIndex) or DefaultAppearanceIndex)
+  if not AppearancePlanInfo or not AppearancePlanInfo.AppearanceInfo then
+    ScreenPrint("打开外观导入失败：未找到可用的外观方案")
+    return
+  end
+  local AppearanceShareModel = require("BluePrints.UI.WBP.Appearance.AppearanceShareModel")
+  local CommunityCode = AppearanceShareModel.GenerateAppearanceCommunityCode(AppearancePlanInfo)
+  if not CommunityCode or "" == CommunityCode then
+    ScreenPrint("打开外观导入失败：生成分享码失败")
+    return
+  end
+  ULowEntryExtendedStandardLibrary.ClipboardSet(CommunityCode)
+  local GameInstance = self:GetGameInstance()
+  if not GameInstance then
+    ScreenPrint("打开外观导入失败：未找到 GameInstance")
+    return
+  end
+  local UIManager = GameInstance:GetGameUIManager()
+  if not UIManager then
+    ScreenPrint("打开外观导入失败：未找到 UIManager")
+    return
+  end
+  local UI = UIManager:LoadUINew("AppearanceImport", {
+    CharUuid = Char.Uuid,
+    AppearanceIndex = FinalAppearanceIndex,
+    AppearancePlanInfo = AppearancePlanInfo,
+    SourceText = CommunityCode
+  })
+  if not UI then
+    ScreenPrint("打开外观导入失败：加载界面失败")
+    return
+  end
+  DebugPrint("GM", WarningTag, string.format("打开外观导入成功：CharId=%s, PlanIndex=%s", tostring(Char.CharId), tostring(FinalAppearanceIndex)))
+end
+
+function GM_Command:OpenGuildChat(Uid)
+  local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
+  local TargetUid = tonumber(Uid)
+  if not TargetUid then
+    DebugPrint("GM", WarningTag, "OpenGuildChat: 需要 Uid 参数")
+    return
+  end
+  ChatController:OpenView(nil)
+  ChatController:SelectGuildMemberToChat(TargetUid, nil)
+end
+
+function GM_Command:OpenAppearanceImport(CharUuidOrAppearanceIndex, AppearanceIndex)
+  local Avatar = self:GetClientAvatar()
+  if not Avatar then
+    ScreenPrint("打开外观导入失败：未找到玩家 Avatar")
+    return
+  end
+  local CurrentCharUuid = Avatar.CurrentChar
+  local Char = CurrentCharUuid and Avatar.Chars and Avatar.Chars[CurrentCharUuid] or nil
+  if not Char then
+    ScreenPrint("打开外观导入失败：未找到当前出战角色")
+    return
+  end
+  local FinalAppearanceIndex = 1
+  local AppearancePlanInfo = BuildAppearanceImportPlanInfo(Char, Avatar, FinalAppearanceIndex)
+  if not AppearancePlanInfo or not AppearancePlanInfo.AppearanceInfo then
+    ScreenPrint("打开外观导入失败：当前出战角色的方案一不存在")
+    return
+  end
+  local AppearanceShareModel = require("BluePrints.UI.WBP.Appearance.AppearanceShareModel")
+  local CommunityCode = AppearanceShareModel.GenerateAppearanceCommunityCode(AppearancePlanInfo)
+  if not CommunityCode or "" == CommunityCode then
+    ScreenPrint("打开外观导入失败：方案一分享码生成失败")
+    return
+  end
+  ULowEntryExtendedStandardLibrary.ClipboardSet(CommunityCode)
+  local GameInstance = self:GetGameInstance()
+  if not GameInstance then
+    ScreenPrint("打开外观导入失败：未找到 GameInstance")
+    return
+  end
+  local UIManager = GameInstance:GetGameUIManager()
+  if not UIManager then
+    ScreenPrint("打开外观导入失败：未找到 UIManager")
+    return
+  end
+  local UI = UIManager:LoadUINew("AppearanceImport", {
+    CharUuid = Char.Uuid,
+    AppearanceIndex = FinalAppearanceIndex,
+    AppearancePlanInfo = AppearancePlanInfo,
+    SourceText = CommunityCode
+  })
+  if not UI then
+    ScreenPrint("打开外观导入失败：AppearanceImport 界面加载失败")
+    return
+  end
+  DebugPrint("GM", WarningTag, string.format("OpenAppearanceImport success: CharId=%s, PlanIndex=%s", tostring(Char.CharId), tostring(FinalAppearanceIndex)))
+end
+
 function GM_Command:HideUI(UIName, IsShow, HideTag)
   local GameInstance = self:GetGameInstance()
   local UIManager = GameInstance:GetGameUIManager()
@@ -1049,6 +1326,25 @@ function GM_Command:CloseUI(UIName)
   end
   if type(UIWidget.Close) == "function" then
     UIWidget:Close()
+  end
+end
+
+function GM_Command:CloseAllUI()
+  local GameInstance = self:GetGameInstance()
+  local UIManager = GameInstance:GetGameUIManager()
+  if UIManager and UIManager.CloseAllUI_EX then
+    UIManager:CloseAllUI_EX({}, "GM")
+  end
+end
+
+function GM_Command:CloseCurrentUI()
+  local GameInstance = self:GetGameInstance()
+  local UIManager = GameInstance:GetGameUIManager()
+  if UIManager and UIManager.GetTopUIModeUI then
+    local TopUI = UIManager:GetTopUIModeUI()
+    if TopUI and TopUI.Close then
+      TopUI:Close()
+    end
   end
 end
 
@@ -1307,6 +1603,14 @@ function GM_Command:GetOrSetRangedWeaponBulletNum(BulletNum)
     BulletNum = tonumber(BulletNum)
     self.Player.RangedWeapon:SetAttr("BulletNum", BulletNum)
   end
+end
+
+function GM_Command:SetSuperArmorOn()
+  self:ServerBattleCommand("SetSuperArmorOn", self.Player.Eid)
+end
+
+function GM_Command:SetSuperArmorOff()
+  self:ServerBattleCommand("SetSuperArmorOff", self.Player.Eid)
 end
 
 function GM_Command:ForbidDamage()
@@ -3229,6 +3533,52 @@ function GM_Command:EnableJetRush(IsJet, LimitYaw, LimiPitch)
   end
 end
 
+function GM_Command:EnableAutoAttack(TargetFilterKey, ExtraEffectId)
+  local Player = self.Player or UE4.UGameplayStatics.GetPlayerCharacter(self:GetGameInstance(), 0)
+  if not IsValid(Player) then
+    ScreenPrint("EnableAutoAttack Error: Player not found")
+    return
+  end
+  if not Player.SetAutoAttackEnabled then
+    ScreenPrint("EnableAutoAttack Error: AutoCombatInputComponent missing")
+    return
+  end
+  if TargetFilterKey and "" ~= TargetFilterKey or nil ~= ExtraEffectId then
+    ScreenPrint("EnableAutoAttack Warning: TargetFilter params are ignored in current version")
+  end
+  Player:SetAutoAttackEnabled(true)
+  ScreenPrint("EnableAutoAttack Success")
+end
+
+function GM_Command:DisableAutoAttackOrShoot()
+  local Player = self.Player or UE4.UGameplayStatics.GetPlayerCharacter(self:GetGameInstance(), 0)
+  if not IsValid(Player) then
+    ScreenPrint("DisableAutoAttackOrShoot Error: Player not found")
+    return
+  end
+  if not Player.SetAutoAttackEnabled or not Player.SetAutoShootEnabled then
+    ScreenPrint("DisableAutoAttackOrShoot Error: AutoCombatInputComponent missing")
+    return
+  end
+  Player:SetAutoAttackEnabled(false)
+  Player:SetAutoShootEnabled(false)
+  ScreenPrint("DisableAutoAttackOrShoot Success")
+end
+
+function GM_Command:EnableAutoShoot()
+  local Player = self.Player or UE4.UGameplayStatics.GetPlayerCharacter(self:GetGameInstance(), 0)
+  if not IsValid(Player) then
+    ScreenPrint("EnableAutoShoot Error: Player not found")
+    return
+  end
+  if not Player.SetAutoShootEnabled then
+    ScreenPrint("EnableAutoShoot Error: AutoCombatInputComponent missing")
+    return
+  end
+  Player:SetAutoShootEnabled(true)
+  ScreenPrint("EnableAutoShoot Success")
+end
+
 function GM_Command:EnableBuffMesh(bOn)
   local bOn = tonumber(bOn)
   if not bOn then
@@ -3560,6 +3910,7 @@ function GM_Command:ChangeSkinModel(SkinId)
     self.Player:SetCharDefaultPart()
     local CharacterFashion = self.Player.CharacterFashion
     CharacterFashion.AppearanceSuitInfo.SkinId = SkinId
+    CharacterFashion.AppearanceSuitInfo.SkinLevel = CharacterFashion.AppearanceSuitInfo.SkinLevel or 1
     if CharacterFashion then
       self.Player:InitAppearanceSuit(CharacterFashion.AppearanceSuitInfo)
     end
@@ -3577,14 +3928,16 @@ function GM_Command:ChangeCharAcc(AccessoryId, AccessoryType)
   end
 end
 
-function GM_Command:ChangeWeaponAcc(AccessoryId)
+function GM_Command:ChangeWeaponAcc(AccessoryId, AccessoryType)
+  local Data = DataMgr.WeaponAccessory[AccessoryId]
+  AccessoryType = AccessoryType or Data and Data.StanceFXType
   AccessoryId = tonumber(AccessoryId)
   if self.Player.UsingWeapon then
-    self.Player.UsingWeapon:ChangeAccessory(AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
+    self.Player.UsingWeapon:ChangeAccessory(AccessoryId, AccessoryType)
   elseif self.Player.MeleeWeapon then
-    self.Player.MeleeWeapon:ChangeAccessory(AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
+    self.Player.MeleeWeapon:ChangeAccessory(AccessoryId, AccessoryType)
   elseif self.Player.RangedWeapon then
-    self.Player.RangedWeapon:ChangeAccessory(AccessoryId, CommonConst.WeaponAccessoryTypes.Accessory)
+    self.Player.RangedWeapon:ChangeAccessory(AccessoryId, AccessoryType)
   end
 end
 
@@ -4223,6 +4576,24 @@ function GM_Command:PrintStorylinesNeedRestartInfo()
   GWorld.StoryMgr:PrintStorylinesNeedRestartInfo()
 end
 
+function GM_Command:ForbidAllStory(bForbid)
+  if not GWorld or not GWorld.StoryMgr then
+    return
+  end
+  local bShouldForbid = tonumber(bForbid)
+  if nil == bShouldForbid then
+    bShouldForbid = 1
+  end
+  if bShouldForbid > 0 then
+    GWorld.StoryMgr:DisableStory()
+    GWorld.StoryMgr:StopAllStoryline()
+    ScreenPrint("All story triggers disabled")
+  else
+    GWorld.StoryMgr:EnableStory()
+    ScreenPrint("All story triggers enabled")
+  end
+end
+
 function GM_Command:SetPlayerDilation(Dilation)
   if self.Player then
     self.Player:SetTimeDilation(tonumber(Dilation))
@@ -4631,6 +5002,42 @@ function GM_Command:FreezeWorldComposition(bFreeze)
   end
 end
 
+function GM_Command:PrintLoadedLevels()
+  local WorldCompositionSubSystem = UE4.USubsystemBlueprintLibrary.GetWorldSubsystem(self.Player, UE4.UWorldCompositionSubSystem)
+  if not WorldCompositionSubSystem then
+    DebugPrint("WorldCompositionSubSystem not found")
+    return
+  end
+  local LevelInfos = WorldCompositionSubSystem:GetAllLevelLoadingInfo()
+  local TotalCount = 0
+  local LoadedCount = 0
+  local LoadingCount = 0
+  local NotLoadedCount = 0
+  DebugPrint("========== WorldComposition Level Loading Status ==========")
+  if LevelInfos and LevelInfos:Num() > 0 then
+    local LevelCount = LevelInfos:Num()
+    for i = 1, LevelCount do
+      local LevelInfo = LevelInfos[i]
+      if LevelInfo then
+        TotalCount = TotalCount + 1
+        local StatusStr = "Unknown"
+        if 0 == LevelInfo.Status then
+          StatusStr = "NotLoaded"
+          NotLoadedCount = NotLoadedCount + 1
+        elseif 1 == LevelInfo.Status then
+          StatusStr = "Loading"
+          LoadingCount = LoadingCount + 1
+        elseif 2 == LevelInfo.Status then
+          StatusStr = "Loaded"
+          LoadedCount = LoadedCount + 1
+        end
+        DebugPrint(string.format("Level: %-40s | Status: %s", LevelInfo.LevelName, StatusStr))
+      end
+    end
+  end
+  DebugPrint(string.format("========== Summary: Loaded=%d, Loading=%d, NotLoaded=%d, Total=%d ==========", LoadedCount, LoadingCount, NotLoadedCount, TotalCount))
+end
+
 function GM_Command:BreakableItemNavEnableInLower(IsEnable)
   UE4.URuntimeCommonFunctionLibrary.EnableBreakableItemNavModifyInLower(tonumber(IsEnable) > 0)
 end
@@ -4872,17 +5279,25 @@ function GM_Command:SwitchCullModifier(TurnOn)
 end
 
 function GM_Command:I18Time(FormatID, Language)
-  Language = string.lower(Language)
-  if "cn" == Language then
-    DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.CN))
-  elseif "en" == Language then
-    DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.EN))
-  elseif "jp" == Language then
-    DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.JP))
-  elseif "kr" == Language then
-    DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.KR))
+  if not Language then
+    DebugPrint("Current I18Time: " .. GDate(FormatID))
   else
-    DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.CN))
+    Language = string.lower(Language)
+    if "cn" == Language then
+      DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.CN))
+    elseif "en" == Language then
+      DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.EN))
+    elseif "jp" == Language then
+      DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.JP))
+    elseif "kr" == Language then
+      DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.KR))
+    elseif "es" == Language then
+      DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.ES))
+    elseif "fr" == Language then
+      DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.FR))
+    else
+      DebugPrint("Current I18Time: " .. GDate(FormatID, nil, CommonConst.SystemLanguages.CN))
+    end
   end
 end
 
@@ -5388,6 +5803,10 @@ end
 
 function GM_Command:RemovePetAffix(AffixId)
   self:ServerBattleCommand("RemovePetAffix", AffixId)
+end
+
+function GM_Command:GetAllMount()
+  UE4.UKismetSystemLibrary.ExecuteConsoleCommand(self, "sgm aamd", nil)
 end
 
 function GM_Command:PrintTeammates()
@@ -6365,8 +6784,12 @@ function GM_Command:EnterTiaoPinGame()
 end
 
 function GM_Command:PinAttr(AttrName, Eid)
-  local Panel = UIManager(self.Player):LoadUI(UIConst.ATTRDEBUGPANEL, "AttrDebugPanel", UIConst.ZORDER_ABOVE_ALL)
-  Panel:AddAttrWatcher(AttrName, Eid)
+  if nil ~= Eid then
+    local Panel = UIManager(self.Player):LoadUI(UIConst.ATTRDEBUGPANEL, "AttrDebugPanel", UIConst.ZORDER_ABOVE_ALL)
+    Panel:AddAttrWatcher(AttrName, Eid)
+  end
+  local PinAttrOverHead = require("BluePrints.UI.GMInterface.PinAttrOverHead")
+  PinAttrOverHead.Toggle(self.Player, AttrName)
 end
 
 function GM_Command:ShowEids()
@@ -6556,7 +6979,7 @@ function GM_Command:NPCMoveTo(InNpcId, InSpeed, InDistance)
     local TalkActor = GameState.NpcCharacterMap:FindRef(NpcId)
     TalkActor:SetMaxWalkSpeedBase(Speed)
     TalkActor:SetNpcMovementTickEnable(true)
-    UAIBlueprintHelperLibrary.CreateMoveToProxyObject(TalkActor, TalkActor, TalkActor:K2_GetActorLocation() + TalkActor:GetActorForwardVector() * Distance)
+    UAIBlueprintHelperLibrary.CreateMoveToProxyObject(TalkActor, TalkActor, TalkActor:K2_GetActorLocation() + TalkActor:GetActorForwardVector() * Distance, nil, 0.1)
   end
 end
 
@@ -6603,6 +7026,13 @@ end
 
 function GM_Command:LJHTEST()
   EventManager:FireEvent(EventID.OnDailyRefresh)
+end
+
+function GM_Command:AYFTEST(EventName, EventDescribe, EventSuccess, EventFail)
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self.Player)
+  if GameMode then
+    GameMode:OnDungeonRandomEventUINode(EventName, EventDescribe, EventSuccess, EventFail)
+  end
 end
 
 function GM_Command:TestGraphTask()
@@ -7128,6 +7558,7 @@ function GM_Command:CompleteSystemConditionWithoutGuide()
   if not Avatar then
     return
   end
+  Avatar.bGMBlockAllQuestTriggerOnce = true
   Avatar.bGMHideUnlockPopup = true
   local GMFunctionLibrary = require("BluePrints.UI.GMInterface.GMFunctionLibrary")
   GMFunctionLibrary.ExecConsoleCommand(self:GetGameInstance(), "sgm sysu")
@@ -7760,105 +8191,194 @@ function GM_Command:TestGuildWarRanking()
   print("TestGuildWarRanking: Cached Mock Data into PersonInfoModel.DebugCachedRankData")
 end
 
-function GM_Command:PrintAllAssetPathUnderThisPath(Path)
-  if not Path or "" == Path then
-    DebugPrint("Usage: gm PrintAllAssetPathUnderThisPath <FolderPath> 例如: Asset/Effect/Niagara/ 或 /Game/Asset/Effect/Niagara/")
-    return
+function GM_Command:GetMultiOptRewards(Count)
+  local RewardBox = require("BluePrints.Client.CustomTypes.SimpleRewardBox")
+  local UIUtils = require("Utils.UIUtils")
+  Count = tonumber(Count)
+  Count = Count or 10
+  local ResourceData = DataMgr.Resource or {}
+  local Rewards = RewardBox:New()
+  local OptPackageCount = 0
+  for ResourceId, ResourceInfo in pairs(ResourceData) do
+    if 7 == ResourceInfo.MaterialClassify and ResourceInfo.UseEffectType ~= "RandomSelectPack" and ResourceInfo.UseEffectType ~= "SelectWeapon" then
+      Rewards:AddResource(ResourceId, Count)
+    end
+  end
+  local RewardTable = Rewards:Dump()
+  for _, count in pairs(RewardTable.Resources or {}) do
+    if (count or 0) > 0 then
+      OptPackageCount = OptPackageCount + 1
+    end
+  end
+  self:GetAllOptPackages(Count)
+  UIUtils.ShowGetItemPage(nil, nil, nil, RewardTable, true, nil, nil)
+  return RewardTable
+end
+
+function GM_Command:TestCoopCreate()
+  local UI = UIManager(self):LoadUINew("CoopCreate")
+  if UI then
+    UI:Init()
+  end
+end
+
+function GM_Command:TestCoopRank(RoomConfId, RoomUniId)
+  local CoopModel = require("BluePrints.UI.WBP.Activity.PC.Coop.Model.CoopModel")
+  
+  local function OpenCoopRank(SelfRankInfo, TopNInfo, RoomData)
+    local UI = UIManager(self):LoadUINew("CoopRank", SelfRankInfo, TopNInfo, RoomData)
+    if not UI and Utils.ScreenPrint then
+      Utils.ScreenPrint("TestCoopRank: Load CoopRank failed")
+    end
   end
   
-  local function to_game_path(p)
-    p = tostring(p):gsub("\\", "/")
-    p = p:gsub("^/+", "")
-    p = p:gsub("^Content/", "")
-    p = p:gsub("^Asset/", "")
-    if not p:match("^Game/") then
-      p = "Game/" .. p
-    end
-    p = "/" .. p
-    p = p:gsub("/+$", "")
-    return p
-  end
-  
-  local GamePath = to_game_path(Path)
-  local AssetRegistry = UE4.UAssetRegistryHelpers.GetAssetRegistry()
-  if not AssetRegistry then
-    DebugPrint("PrintAllAssetPathUnderThisPath: 无法获取 AssetRegistry")
-    return
-  end
-  local ok, AssetDataArray = pcall(function()
-    return AssetRegistry:GetAssetsByPath(GamePath, {}, true, false)
-  end)
-  if not ok or not AssetDataArray then
-    DebugPrint("PrintAllAssetPathUnderThisPath: GetAssetsByPath 调用失败或路径无资源 -> " .. tostring(GamePath))
-    return
-  end
-  local AssetTable
-  if type(AssetDataArray.ToTable) == "function" then
-    local ok2, t = pcall(function()
-      return AssetDataArray:ToTable()
-    end)
-    if ok2 then
-      AssetTable = t
-    end
-  elseif type(AssetDataArray) == "table" then
-    AssetTable = AssetDataArray
-  end
-  if not AssetTable then
-    DebugPrint("PrintAllAssetPathUnderThisPath: 无法把 AssetDataArray 转为 table")
-    return
-  end
-  local Result = {}
-  local Count = 0
-  for _, AssetData in ipairs(AssetTable) do
-    local ObjPath
-    if type(AssetData) == "string" then
-      ObjPath = AssetData
-    elseif AssetData.ObjectPath then
-      ObjPath = tostring(AssetData.ObjectPath)
-    elseif AssetData.ObjectPathName then
-      ObjPath = tostring(AssetData.ObjectPathName)
-    elseif AssetData.PackageName then
-      ObjPath = tostring(AssetData.PackageName)
-    elseif AssetData.PackagePath and AssetData.AssetName then
-      local pkg = tostring(AssetData.PackagePath)
-      local aname = tostring(AssetData.AssetName)
-      if "" ~= pkg and "" ~= aname then
-        ObjPath = pkg .. "." .. aname
-      else
-        ObjPath = tostring(AssetData)
+  local Avatar = GWorld:GetAvatar()
+  if nil ~= RoomConfId then
+    RoomConfId = tonumber(RoomConfId) or RoomConfId
+    RoomUniId = tonumber(RoomUniId) or RoomUniId
+    if not Avatar then
+      if Utils.ScreenPrint then
+        Utils.ScreenPrint("TestCoopRank(server): Avatar is nil")
       end
-    elseif AssetData:GetExportTextName() then
-      local ok3, name = pcall(function()
-        return AssetData:GetExportTextName()
-      end)
-      if ok3 then
-        ObjPath = tostring(name)
-      end
-    else
-      ObjPath = tostring(AssetData)
+      return
     end
-    Count = Count + 1
-    DebugPrint(ObjPath)
-    table.insert(Result, ObjPath)
+    if nil == RoomUniId then
+      if Utils.ScreenPrint then
+        Utils.ScreenPrint("TestCoopRank(server): RoomUniId is nil")
+      end
+      return
+    end
+    local RoomData = {RoomConfId = RoomConfId, RoomUniqueId = RoomUniId}
+    CoopModel:AsyncCombatGetRoomRankData(RoomData, function(SelfRankInfo, TopNInfo, RankingRoomData)
+      OpenCoopRank(SelfRankInfo, TopNInfo, RankingRoomData)
+      if Utils.ScreenPrint then
+        Utils.ScreenPrint("TestCoopRank(server): rank data received")
+      end
+    end, RoomUniId)
+    return
   end
-  DebugPrint("PrintAllAssetPathUnderThisPath: Found " .. tostring(Count) .. " assets under " .. tostring(GamePath))
+  local SerializeUtils = require("Utils.SerializeUtils")
   
-  local function escape_str(s)
-    s = tostring(s)
-    s = s:gsub("\\", "\\\\")
-    s = s:gsub("\"", "\\\"")
-    s = s:gsub("\n", "\\n")
-    return s
+  local function BuildMockSquad(RoleId1, RoleId2, RoleId3, PetId)
+    local MockSquad = {
+      AvatarInfo = {
+        CharacterInfo = {
+          RoleInfo = {RoleId = RoleId1, Level = 80}
+        },
+        PhantomInfo1 = {
+          RoleInfo = {RoleId = RoleId2, Level = 80}
+        },
+        PhantomInfo2 = {
+          RoleInfo = {RoleId = RoleId3, Level = 80}
+        }
+      },
+      CommonCombatInfo = {pet_id = PetId, pet_level = 60}
+    }
+    return SerializeUtils:Serialize(MockSquad)
   end
   
-  local lua_lines = {}
-  table.insert(lua_lines, "{")
-  for i, v in ipairs(Result) do
-    table.insert(lua_lines, string.format("    \"%s\",", escape_str(v)))
-  end
-  table.insert(lua_lines, "}")
-  local FinalLuaText = table.concat(lua_lines, "\n")
-  DebugPrint(FinalLuaText)
+  local SelfRankInfo = {
+    Rank = 2,
+    Score = 9876,
+    Uid = Avatar and Avatar.Uid,
+    Nickname = Avatar and Avatar.Nickname,
+    Level = Avatar and Avatar.Level,
+    HeadIconId = Avatar and Avatar.HeadIconId,
+    HeadFrameId = Avatar and Avatar.HeadFrameId,
+    TitleBefore = Avatar and Avatar.TitleBefore,
+    TitleAfter = Avatar and Avatar.TitleAfter,
+    TitleFrame = Avatar and Avatar.TitleFrame,
+    Squad = BuildMockSquad(5301, 1801, 2401, 4153),
+    MaxSquad = BuildMockSquad(5301, 1801, 2401, 4153),
+    IsMaster = true,
+    IsMvp = false,
+    RoomConfId = 1
+  }
+  local TopNInfo = {
+    {
+      Uid = 100001,
+      Nickname = "CoopRank_Player_1",
+      Level = 65,
+      Score = 12000,
+      HeadIconId = 1,
+      HeadFrameId = 1,
+      TitleBefore = 0,
+      TitleAfter = 0,
+      TitleFrame = 10001,
+      Squad = BuildMockSquad(2101, 1101, 2301, 4153),
+      MaxSquad = BuildMockSquad(2101, 1101, 2301, 4153),
+      IsMaster = false,
+      IsMvp = true,
+      RoomConfId = 1
+    },
+    {
+      Uid = Avatar and Avatar.Uid or 100002,
+      Nickname = Avatar and Avatar.Nickname or "CoopRank_Player_2",
+      Level = Avatar and Avatar.Level or 65,
+      Score = 9876,
+      HeadIconId = Avatar and Avatar.HeadIconId or 1,
+      HeadFrameId = Avatar and Avatar.HeadFrameId or 1,
+      TitleBefore = Avatar and Avatar.TitleBefore or 0,
+      TitleAfter = Avatar and Avatar.TitleAfter or 0,
+      TitleFrame = Avatar and Avatar.TitleFrame or 10001,
+      Squad = BuildMockSquad(5301, 1801, 2401, 4153),
+      MaxSquad = BuildMockSquad(5301, 1801, 2401, 4153),
+      IsMaster = true,
+      IsMvp = false,
+      RoomConfId = 1
+    },
+    {
+      Uid = 100003,
+      Nickname = "CoopRank_Player_3",
+      Level = 65,
+      Score = 8765,
+      HeadIconId = 1,
+      HeadFrameId = 1,
+      TitleBefore = 0,
+      TitleAfter = 0,
+      TitleFrame = 10001,
+      Squad = BuildMockSquad(1101, 2102, 5301, 4153),
+      MaxSquad = BuildMockSquad(1101, 2102, 5301, 4153),
+      IsMaster = false,
+      IsMvp = false,
+      RoomConfId = 1
+    },
+    {
+      Uid = 100004,
+      Nickname = "CoopRank_Player_4",
+      Level = 65,
+      Score = 7000,
+      HeadIconId = 1,
+      HeadFrameId = 1,
+      TitleBefore = 0,
+      TitleAfter = 0,
+      TitleFrame = 10001,
+      Squad = BuildMockSquad(1101, 2102, 5301, 4153),
+      MaxSquad = BuildMockSquad(1101, 2102, 5301, 4153),
+      IsMaster = false,
+      IsMvp = false,
+      RoomConfId = 1
+    },
+    {
+      Uid = 100005,
+      Nickname = "CoopRank_Player_5",
+      Level = 65,
+      Score = 6000,
+      HeadIconId = 1,
+      HeadFrameId = 1,
+      TitleBefore = 0,
+      TitleAfter = 0,
+      TitleFrame = 10001,
+      Squad = BuildMockSquad(1101, 2102, 5301, 4153),
+      MaxSquad = BuildMockSquad(1101, 2102, 5301, 4153),
+      IsMaster = false,
+      IsMvp = false,
+      RoomConfId = 1
+    }
+  }
+  OpenCoopRank(SelfRankInfo, TopNInfo, {
+    RoomConfId = SelfRankInfo.RoomConfId
+  })
 end
 
 return GM_Command

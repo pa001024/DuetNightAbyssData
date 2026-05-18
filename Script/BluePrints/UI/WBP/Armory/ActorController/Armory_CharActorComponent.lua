@@ -358,6 +358,11 @@ function M:CreatePlayerActor()
     return
   end
   local PlayerReflection = UIManager:CreateOrGetPlayerReflection(self.CurrentCharInfo, self:GetAvatar())
+  if PlayerReflection then
+    for key, value in pairs(PlayerReflection.CharPartMeshComponents or {}) do
+      value:SetTranslucentSortPriority(-3)
+    end
+  end
   self:SetReflectionActor(self.ArmoryPlayer, PlayerReflection)
   PlayerReflectionRefs[self] = PlayerReflection
   if not IsCharActorFistCreated and self.CurrentCharInfo then
@@ -375,7 +380,9 @@ function M:UpdatePlayerReflectionTrans()
   end
   PlayerReflection:K2_SetActorTransform(self.ArmoryPlayer:GetTransform(), false, nil, false)
   local Trans = PlayerReflection.Mesh:K2_GetComponentToWorld()
-  Trans.Scale3D.Z = -Trans.Scale3D.Z
+  if Trans.Scale3D.Z > 0 then
+    Trans.Scale3D.Z = -Trans.Scale3D.Z
+  end
   PlayerReflection.Mesh:K2_SetWorldTransform(Trans, false, nil, false)
   PlayerReflection.Mesh:SetBoundsScale(10000)
 end
@@ -482,10 +489,7 @@ function M:StopPlayerMontage(Params)
   
   StopMontage(self:GetPlayerActor())
   StopMontage(self:GetReflectionActor(self:GetPlayerActor()))
-  if self.TeleportMontagePaused then
-    self.TeleportMontagePaused = false
-    self:HidePlayerActor(self.UIName, false)
-  end
+  self:HidePlayerActor("ActorController_FX_Teleport", false)
   if not Params.DontStopSequance then
     self:StopSequence()
   end

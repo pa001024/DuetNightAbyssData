@@ -353,17 +353,6 @@ return ReadOnly("MainUI", {
     Sequence = 221,
     SystemUIName = "GlobalWebBrowser"
   },
-  [31] = {
-    EnterId = 31,
-    EscShowCondition = T.RT_1,
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Mount.T_Entrance_Mount",
-    IsReddotToEsc = true,
-    Name = "UI_Mount",
-    ReddotNode = "Mounts_Root",
-    Sequence = 185,
-    SystemUIName = "MountsMain",
-    UIUnlockRuleName = "Mount"
-  },
   [32] = {
     EnterId = 32,
     EscShowCondition = T.RT_1,
@@ -374,5 +363,40 @@ return ReadOnly("MainUI", {
     Sequence = 186,
     SystemUIName = "FameMain",
     UIUnlockRuleName = "RegionReputation"
+  },
+  [33] = {
+    ActionName = "OpenGuild",
+    EnterId = 33,
+    EscShowCondition = T.RT_1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Guild.T_Entrance_Guild",
+    IsReddotToEsc = true,
+    Name = "MAIN_UI_GUILD",
+    ReddotNode = "GuildHub",
+    Sequence = 131,
+    SystemUIName = "GuildMain",
+    UIUnlockRuleName = "OpenGuild"
+  },
+  [34] = {
+    EnterId = 34,
+    EscShowCondition = T.RT_1,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Appearance.T_Entrance_Appearance",
+    IsReddotToEsc = true,
+    Name = "MAIN_UI_AppearanceScore",
+    ReddotNode = "AppearanceMain",
+    Sequence = 85,
+    SystemUIName = "AppearanceMain",
+    UIUnlockRuleName = "AppearanceScore"
+  },
+  [35] = {
+    EnterId = 35,
+    EscShowCondition = T.RT_1,
+    EscShowType = 1,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_MonthlySignIn.T_Entrance_MonthlySignIn'",
+    IsReddotToEsc = true,
+    Name = "MAIN_UI_MONTHCHECK",
+    ReddotNode = "MonthCheck",
+    Sequence = 90,
+    SystemUIName = "MonthSignInPopMain",
+    UIUnlockRuleName = "MonthSignIn"
   }
 })

@@ -334,7 +334,7 @@ return ReadOnly("TheaterRandom", {
     Refer = "Resource",
     TalkConfigId = 51105831,
     TypeMatch = {41001},
-    Weight = 100
+    Weight = 0
   },
   [41002] = {
     RandomID = 41002,
@@ -348,7 +348,7 @@ return ReadOnly("TheaterRandom", {
     Refer = "Resource",
     TalkConfigId = 51105833,
     TypeMatch = {41003},
-    Weight = 100
+    Weight = 0
   },
   [41004] = {
     RandomID = 41004,
@@ -377,13 +377,48 @@ return ReadOnly("TheaterRandom", {
     Refer = "Resource",
     TalkConfigId = 51105837,
     TypeMatch = {41011},
-    Weight = 100
+    Weight = 0
   },
   [41013] = {
     RandomID = 41013,
     Refer = "Resource",
     TalkConfigId = 51105838,
     TypeMatch = {41013},
+    Weight = 0
+  },
+  [41028] = {
+    RandomID = 41028,
+    Refer = "Resource",
+    TalkConfigId = 51105841,
+    TypeMatch = {41028},
+    Weight = 100
+  },
+  [41048] = {
+    RandomID = 41048,
+    Refer = "Resource",
+    TalkConfigId = 51105842,
+    TypeMatch = {41048},
+    Weight = 100
+  },
+  [41052] = {
+    RandomID = 41052,
+    Refer = "Resource",
+    TalkConfigId = 51105843,
+    TypeMatch = {41052},
+    Weight = 100
+  },
+  [41053] = {
+    RandomID = 41053,
+    Refer = "Resource",
+    TalkConfigId = 51105844,
+    TypeMatch = {41053},
+    Weight = 100
+  },
+  [41057] = {
+    RandomID = 41057,
+    Refer = "Resource",
+    TalkConfigId = 51105845,
+    TypeMatch = {41057},
     Weight = 100
   }
 })

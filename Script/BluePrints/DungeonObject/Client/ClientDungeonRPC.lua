@@ -9,11 +9,7 @@ function ClientDungeonRPC:NotifyServerDungeonEvent(...)
 end
 
 function ClientDungeonRPC:NotifyGameModeDungeonEvent(...)
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
-    return
-  end
-  local DungeonObject = ServerEntity:GetDungeonObject()
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
   if not DungeonObject then
     return
   end

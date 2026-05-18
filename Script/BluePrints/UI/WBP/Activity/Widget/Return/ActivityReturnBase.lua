@@ -242,7 +242,7 @@ end
 
 function M:OnEntryItemClicked(Index)
   if 1 == Index then
-    local CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
+    local CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
     if not ReturnUtils.CanParticipateInvite(CurrentEventSchemeId) then
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("暂未开放(未配Textmap)"))
       return
@@ -278,7 +278,7 @@ function M:OnBtnRewardClick()
       self:OnComeBackGetBackReward(ErrCode, Ret)
     end, self)
   else
-    local CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
+    local CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
     assert(CurrentEventSchemeId, "lgc@CurrentEventSchemeId is nil, 需要策划检查下ComeBackEventConstant表中的CurrentEventSchemeId")
     local CurrentEventSchemeData = DataMgr.ComeBackEvent[CurrentEventSchemeId]
     if not CurrentEventSchemeData then
@@ -304,7 +304,7 @@ function M:OnComeBackGetBackReward(ErrCode, Ret)
   local CbAvatar = GWorld:GetAvatar()
   local BackRewardGot = CbAvatar and CbAvatar.ComeBacks[self.CurActivityId] and CbAvatar.ComeBacks[self.CurActivityId].BackRewardGot or 0
   if CbAvatar and CbAvatar.ComeBacks[self.CurActivityId] and 1 == BackRewardGot then
-    local CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
+    local CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
     local CurrentEventSchemeData = DataMgr.ComeBackEvent[CurrentEventSchemeId]
     if not CurrentEventSchemeData then
       return

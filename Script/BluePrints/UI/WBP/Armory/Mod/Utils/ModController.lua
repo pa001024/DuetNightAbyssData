@@ -129,8 +129,9 @@ function M:SetUICamera(Offset)
   if not IsValid(ArmoryUI) then
     return
   end
+  local ActorController = self.ActorController or ArmoryUI.ActorController
   if Offset then
-    ArmoryUI.ActorController:SetExCameraOffset(Offset)
+    ActorController:SetExCameraOffset(Offset)
   end
   local Target = ModModel:GetTarget()
   local Tag = Target:GetTypeName()
@@ -144,7 +145,11 @@ function M:SetUICamera(Offset)
   elseif Type == CommonConst.ArmoryTag.UWeapon then
     Type = CommonConst.DataType.Weapon
   end
-  ArmoryUI.ActorController:SetMontageAndCamera(Type, Tag, CommonConst.ArmoryType.Mod)
+  ActorController:SetMontageAndCamera(Type, Tag, CommonConst.ArmoryType.Mod)
+end
+
+function M:SetActorController(ActorController)
+  self.ActorController = ActorController
 end
 
 function M:GetModAttachBoneVPos()
@@ -649,7 +654,7 @@ function M:TryForceCalcSlotsCost(ExcludeModUuid, bTakeOff)
   end
 end
 
-function M:SetSelectedStuff(ModUuid, SlotId)
+function M:SetSelectedStuff(ModUuid, SlotId, bJumpList)
   local LastSelectedStuff = ModModel:GetSelectStuff()
   if LastSelectedStuff and (ModModel:IsInPolarityEditMode() or ModUuid == LastSelectedStuff.ModUuid) and SlotId == LastSelectedStuff.SlotId then
     return
@@ -660,7 +665,7 @@ function M:SetSelectedStuff(ModUuid, SlotId)
     if ModModel:IsInPolarityEditMode() then
       self:NotifyEvent(ModCommon.EventId.OnPolarityModSelectedChanged, NowSelectedStuff, LastSelectedStuff)
     else
-      self:NotifyEvent(ModCommon.EventId.OnSelectStuffChanged, NowSelectedStuff, LastSelectedStuff)
+      self:NotifyEvent(ModCommon.EventId.OnSelectStuffChanged, NowSelectedStuff, LastSelectedStuff, bJumpList)
     end
   end
 end
@@ -764,6 +769,14 @@ function M:_SyncTargetImpl(OldTarget, NewTarget, SuitIndex)
   end
   ModModel:SetTarget(NewTarget)
   return
+end
+
+function M:TriggerModAutoLock(Uuid)
+  local Mod = ModModel:GetMod(Uuid)
+  local AutoLockLevel = DataMgr.GlobalConstant.ModAutoLockLevel.ConstantValue
+  if AutoLockLevel <= Mod.Level then
+    self:GetAvatar():LockResourceInBag(CommonConst.AllType.Mod, Uuid)
+  end
 end
 
 function M:SyncTarget(TargetUuid, SuitIndex)

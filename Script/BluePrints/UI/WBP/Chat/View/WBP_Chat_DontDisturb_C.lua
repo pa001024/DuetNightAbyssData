@@ -6,6 +6,7 @@ local M = Class({
 
 function M:Construct()
   self.ChatChannelMute = GWorld:GetAvatar().ChatChannelMute
+  self.ItemHoverEnabled = nil
   self.List_Channel.OnCreateEmptyContent:Bind(self, function(self)
     return NewObject(UIUtils.GetCommonItemContentClass())
   end)
@@ -32,15 +33,17 @@ end
 function M:InitItems()
   self.Items = {}
   local ChannelDatas = DataMgr.Channel
-  for index, Data in ipairs(ChannelDatas) do
-    if index ~= ChatCommon.ChannelDef.SettlementOnline then
+  for index, Data in pairs(ChannelDatas) do
+    local ChannelType = Data.ChannelType
+    if ChannelType ~= ChatCommon.ChannelDef.SettlementOnline then
       local Content = NewObject(UIUtils.GetCommonItemContentClass())
-      Content.Enable = 1 == self.ChatChannelMute[index]
+      Content.Enable = 1 == self.ChatChannelMute[ChannelType]
       Content.ChannelName = GText(Data.Name)
-      Content.ChannelId = Data.ChannelType
+      Content.ChannelId = ChannelType
       Content.ChannelIcon = LoadObject(Data.Icon)
       Content.ClickCallback = self.UnLockSaveButton
       Content.ClickCallbackObj = self
+      Content.EnableHover = self.ItemHoverEnabled
       self.List_Channel:AddItem(Content)
       table.insert(self.Items, Content)
     end
@@ -51,12 +54,13 @@ end
 function M:Save()
   local ItemsTable = self.Items
   local Avatar = ChatModel:GetAvatar()
-  for index, value in ipairs(ItemsTable) do
-    if (value.UI.EnableNotDisturb and 1 or 0) == Avatar.ChatChannelMute[index] then
+  for _, value in ipairs(ItemsTable) do
+    local ChannelType = value.ChannelId
+    if (value.UI.EnableNotDisturb and 1 or 0) == Avatar.ChatChannelMute[ChannelType] then
     elseif value.UI.EnableNotDisturb then
-      Avatar:SetChatChannelMute(index)
+      Avatar:SetChatChannelMute(ChannelType)
     else
-      Avatar:CancelChatChannelMute(index)
+      Avatar:CancelChatChannelMute(ChannelType)
     end
   end
   UIManager(self):ShowUITip("CommonToastMain", GText("UI_PersonInfo_Saved"))
@@ -90,9 +94,9 @@ end
 
 function M:CheckIsChange()
   local bDifferent = false
-  for index, value in ipairs(self.Items) do
+  for _, value in ipairs(self.Items) do
     local UI = value.UI
-    if UI.EnableNotDisturb ~= (1 == self.ChatChannelMute[index]) then
+    if UI.EnableNotDisturb ~= (1 == self.ChatChannelMute[value.ChannelId]) then
       bDifferent = true
       break
     end
@@ -111,9 +115,10 @@ function M:LockOrUnLockSaveButton(bLock)
 end
 
 function M:SetItemEnableHover(IsEnable)
-  ScreenPrint("SetItemEnableHover" .. (IsEnable and "true" or "false"))
+  self.ItemHoverEnabled = IsEnable
   local ItemsTable = self.Items
   for index, value in ipairs(ItemsTable) do
+    value.EnableHover = IsEnable
     if value.UI then
       value.UI:SetEnableHover(IsEnable)
     end

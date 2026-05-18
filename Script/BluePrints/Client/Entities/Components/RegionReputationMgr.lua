@@ -70,6 +70,9 @@ function Component:_OnPropChangeResources(Keys, OldValue)
     if CurrentValue == OldValue then
       return
     end
+    if type(CurrentValue) ~= "number" or type(OldValue) ~= "number" then
+      return
+    end
     local CountOffset = CurrentValue - OldValue
     if not ReddotManager.GetTreeNode("EntrustFameTask") then
       ReddotManager.AddNodeEx("EntrustFameTask")
@@ -127,25 +130,17 @@ function Component:UpdateRecurringFameTaskReddot()
   if not AllRegionReputationData then
     return
   end
-  local bHasCanClaim = false
+  local CanClaimTaskCount = 0
   for ReputationId, _ in pairs(AllRegionReputationData) do
     local AllecurringQuest = RegionFameModel:GetTargetRegionAllCanClaimRecurringTasks(ReputationId)
     if AllecurringQuest and #AllecurringQuest > 0 then
-      bHasCanClaim = true
-      break
+      CanClaimTaskCount = CanClaimTaskCount + #AllecurringQuest
     end
   end
-  if bHasCanClaim then
-    local Reddot = ReddotManager.GetTreeNode("RecurringFameTask")
-    if Reddot and Reddot.Count <= 0 then
-      ReddotManager.IncreaseLeafNodeCount("RecurringFameTask", 1)
-    end
-  else
-    local Reddot = ReddotManager.GetTreeNode("RecurringFameTask")
-    if Reddot then
-      ReddotManager.ClearLeafNodeCount("RecurringFameTask", false)
-    end
+  if not ReddotManager.GetTreeNode("RecurringFameTask") then
+    ReddotManager.AddNodeEx("RecurringFameTask")
   end
+  UIUtils.SetReddotTreeLeafNodeCount("RecurringFameTask", CanClaimTaskCount)
 end
 
 function Component:UpdateEntrustFameTaskReddot()

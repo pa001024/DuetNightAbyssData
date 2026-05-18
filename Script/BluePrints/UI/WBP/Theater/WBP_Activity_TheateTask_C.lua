@@ -92,8 +92,9 @@ function M:UpdateCountdown()
     return
   end
   local RegionId = Avatar.CurrentRegionId
+  local TargetRegionId = DataMgr.GlobalConstant.TheaterRegionId and DataMgr.GlobalConstant.TheaterRegionId.ConstantValue or 0
   local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
-  if not GameState:IsInRegion() or 101901 ~= RegionId or Avatar:IsInHardBoss() then
+  if not GameState:IsInRegion() or RegionId ~= TargetRegionId or Avatar:IsInHardBoss() then
     self:Close()
   elseif Avatar:IsInHardBoss() then
     self:SetVisibility(UE4.ESlateVisibility.Collapsed)

@@ -161,7 +161,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -192,7 +194,8 @@ return {
             propsData = {
               TargetTime = 18,
               NeedLerp = false,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           }
         },

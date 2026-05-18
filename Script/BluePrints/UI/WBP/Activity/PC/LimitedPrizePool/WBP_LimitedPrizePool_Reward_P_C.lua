@@ -23,8 +23,8 @@ function M:Destruct()
   M.Super.Destruct(self)
 end
 
-function M:OnLoaded(...)
-  M.Super.OnLoaded(self, ...)
+function M:Init(...)
+  M.Super.Init(self, ...)
   self:RefreshBaseInfo()
 end
 

@@ -190,7 +190,26 @@ function MissionIndicatorManager:SetIndicatorDataBy_SubmitItemNode(InData, InNod
   InData.StaticCreatorKey = InNode.GuidePointName
 end
 
+function MissionIndicatorManager:SetIndicatorDataBy_DisplayItemNode(InData, InNode)
+  InData.GuideType = InNode.GuideType
+  InData.PointKey = InNode.GuidePointName
+  if InData.GuideType == "N" then
+    local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+    local TargetStaticCreator = GameState.StaticCreatorStringNameMap:FindRef(InNode.GuidePointName)
+    if TargetStaticCreator then
+      InData.PointKey = TargetStaticCreator.UnitId
+    end
+  end
+  InData.StaticCreatorKey = InNode.GuidePointName
+end
+
 function MissionIndicatorManager:SetIndicatorDataBy_PickUpNode(InData, InNode)
+  InData.GuideType = InNode.GuideType
+  InData.PointKey = InNode.GuidePointName
+  InData.StaticCreatorKey = InNode.GuidePointName
+end
+
+function MissionIndicatorManager:SetIndicatorDataBy_PickUpInteractiveNode(InData, InNode)
   InData.GuideType = InNode.GuideType
   InData.PointKey = InNode.GuidePointName
   InData.StaticCreatorKey = InNode.GuidePointName
@@ -494,41 +513,41 @@ function MissionIndicatorManager:TryToArrangeIndicatorBySmartPointInfo()
   local GameInstance = GWorld.GameInstance
   local UIManager = GameInstance:GetGameUIManager()
   local TempIndicators = {}
-  if not IsEmptyTable(MissionIndicatorManager.MissionIndicatorNames) then
-    for Name, _ in pairs(MissionIndicatorManager.MissionIndicatorNames) do
-      local UI = UIManager:GetUIObj(Name)
-      if UI and UI.Guide_Node.Visibility == UE4.ESlateVisibility.SelfHitTestInvisible and UI.SmartGuidePointInfo then
-        TempIndicators[Name] = UI
-      end
-    end
-  end
-  if not IsEmptyTable(MissionIndicatorManager.SpecialSideIndicatorNames) then
-    for _, Name in pairs(MissionIndicatorManager.SpecialSideIndicatorNames) do
-      local UI = UIManager:GetUIObj(Name)
-      if UI and UI.Guide_Node.Visibility == UE4.ESlateVisibility.SelfHitTestInvisible and UI.SmartGuidePointInfo then
-        TempIndicators[Name] = UI
-      end
-    end
-  end
-  if TempIndicators then
-    local CategoryCount = 0
-    for _, _ in pairs(TempIndicators) do
+  local CategoryCount = 0
+  for Name, _ in pairs(MissionIndicatorManager.MissionIndicatorNames) do
+    local UI = UIManager:GetUIObj(Name)
+    if UI and UI.Guide_Node.Visibility == UE4.ESlateVisibility.SelfHitTestInvisible and UI.SmartGuidePointInfo then
+      TempIndicators[Name] = UI
       CategoryCount = CategoryCount + 1
     end
-    local DoorDummyDistance = 200
-    local DeltaValue = DoorDummyDistance / (CategoryCount + 1)
-    local Carry = DeltaValue
-    for _, IconObj in pairs(TempIndicators) do
-      if 1 == CategoryCount then
-        IconObj.TargetOffsetOnDoor = 0
-        IconObj.IsInDoorState = false
-        return
-      end
-      IconObj.IsInDoorState = true
-      IconObj.TargetOffsetOnDoor = -(DoorDummyDistance / 2)
-      IconObj.TargetOffsetOnDoor = IconObj.TargetOffsetOnDoor + Carry
-      Carry = Carry + DeltaValue
+  end
+  for _, Name in pairs(MissionIndicatorManager.SpecialSideIndicatorNames) do
+    local UI = UIManager:GetUIObj(Name)
+    if UI and UI.Guide_Node.Visibility == UE4.ESlateVisibility.SelfHitTestInvisible and UI.SmartGuidePointInfo then
+      TempIndicators[Name] = UI
+      CategoryCount = CategoryCount + 1
     end
+  end
+  if 1 == CategoryCount or 0 == CategoryCount then
+    for _, IconObj in pairs(TempIndicators) do
+      IconObj.TargetOffsetOnDoor = 0
+      IconObj.IsInDoorState = false
+    end
+    return
+  end
+  local DoorDummyDistance = 200
+  local DeltaValue = DoorDummyDistance / (CategoryCount + 1)
+  local InitialOffset = -(DoorDummyDistance / 2)
+  local Carry = DeltaValue
+  for _, IconObj in pairs(TempIndicators) do
+    if 1 == CategoryCount then
+      IconObj.TargetOffsetOnDoor = 0
+      IconObj.IsInDoorState = false
+      return
+    end
+    IconObj.IsInDoorState = true
+    IconObj.TargetOffsetOnDoor = InitialOffset + Carry
+    Carry = Carry + DeltaValue
   end
 end
 

@@ -1,6 +1,7 @@
 require("UnLua")
 local UIUtils = require("Utils.UIUtils")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local AppearanceUtils = require("BluePrints.UI.WBP.Appearance.AppearanceUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -17,7 +18,14 @@ function M:Init(Params)
   self.bFormPersonalPage = Params.bFormPersonalPage
   self.IsTargetUnowned = Params.IsTargetUnowned
   self.IsCharacterTrialMode = Params.IsCharacterTrialMode
-  self.NoReddot = self.IsPreviewMode or self.IsTargetUnowned or self.IsCharacterTrialMode
+  self.NoReddot = true
+  if self.bFormPersonalPage then
+    self.GridPanel_Char:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    self.Btn_Appearence:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  else
+    self.GridPanel_Char:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Btn_Appearence:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
   self:InitDispatcher()
   self:ResetTarget()
   if self.Type == CommonConst.ArmoryType.Char then
@@ -33,6 +41,7 @@ function M:Init(Params)
   else
     self.WS_State:SetActiveWidgetIndex(1)
     self:InitWeaponAppearanceSuits()
+    self:CheckWeaponAppearanceBtnReddot()
     self:AddWeaponAppearanceReddotListen(self.Target.WeaponId)
   end
 end
@@ -174,8 +183,6 @@ function M:InitCharAppearanceSuits()
         return
       end
       local Params = {
-        Target = self.Target,
-        Type = self.Type,
         SkinId = SkinId,
         OnCloseCallback = self.OnSkinClosed,
         Parent = self,
@@ -220,8 +227,6 @@ function M:InitCharAppearanceSuits()
         return
       end
       local Params = {
-        Target = self.Target,
-        Type = self.Type,
         HairId = HairId,
         OnCloseCallback = self.OnSkinClosed,
         Parent = self,
@@ -261,8 +266,6 @@ function M:NewCharAccessoryItemContent(AccessoryId, AccessoryType, SkinId)
         return
       end
       local Params = {
-        Target = self.Target,
-        Type = self.Type,
         AccessoryId = AccessoryId,
         AccessoryType = AccessoryType,
         OnCloseCallback = self.OnSkinClosed,
@@ -292,7 +295,41 @@ function M:NewCharAccessoryItemContent(AccessoryId, AccessoryType, SkinId)
 end
 
 function M:OpenSkin(Params)
-  local UIConfig = DataMgr.SystemUI.ArmorySkin
+  self:OpenAppearanceMain(Params)
+end
+
+function M:OpenAppearanceMain(Params)
+  Params = Params or {}
+  local UIConfig = DataMgr.SystemUI.AppearanceMain
+  local MainTabName
+  if self.Type == CommonConst.ArmoryType.Char then
+    MainTabName = AppearanceUtils.AppearanceMainTabNames.Char
+  elseif self.Target:HasTag(CommonConst.WeaponType.MeleeWeapon) then
+    MainTabName = AppearanceUtils.AppearanceMainTabNames.Melee
+  else
+    MainTabName = AppearanceUtils.AppearanceMainTabNames.Ranged
+  end
+  Params.MainTabName = MainTabName
+  if self.Parent.ComparedMelee then
+    local MeleeUuid = self.Parent.ComparedMelee.Uuid
+    Params.MeleeWeaponUuid = type(MeleeUuid) ~= "number" and MeleeUuid
+    Params.MeleeWeaponId = self.Parent.ComparedMelee.WeaponId
+  end
+  local RangedWeaponId, RangedUuid
+  if self.Parent.ComparedRanged then
+    local RangedUuid = self.Parent.ComparedRanged.Uuid
+    Params.RangedWeaponUuid = type(RangedUuid) ~= "number" and RangedUuid
+    Params.RangedWeaponId = self.Parent.ComparedRanged.WeaponId
+  end
+  local CharId, CharUuid
+  if self.Parent.ComparedChar then
+    Params.CharId = self.Parent.ComparedChar.CharId
+    local CharUuid = self.Parent.ComparedChar.Uuid
+    Params.CharUuid = type(CharUuid) ~= "number" and CharUuid
+  end
+  Params.ActorController = self.ActorController
+  Params.IsPreviewMode = self.IsPreviewMode
+  Params.OutAnimStyle = 2
   UIManager(self):LoadUI(UIConst.LoadInConfig, UIConfig.UIName, self.Parent:GetZOrder(), Params)
 end
 
@@ -303,9 +340,9 @@ function M:OnSkinItemContentCreated(Content)
 end
 
 function M:InitWeaponAppearanceSuits()
-  local Appearacne = self.Target:GetAppearance()
+  local Appearance = self.Target:GetAppearance()
   local WeaponData = self.Target:Data()
-  local SkinId = Appearacne.SkinId
+  local SkinId = Appearance.SkinId
   if not SkinId or SkinId <= 0 then
     SkinId = self.Target.WeaponId
   end
@@ -334,8 +371,6 @@ function M:InitWeaponAppearanceSuits()
     NoState = true,
     OnClicked = function()
       local Params = {
-        Target = self.Target,
-        Type = self.Type,
         SkinId = SkinId,
         OnCloseCallback = self.OnSkinClosed,
         IsCharacterTrialMode = self.IsCharacterTrialMode,
@@ -360,15 +395,30 @@ function M:InitWeaponAppearanceSuits()
   self.NoneAccessoryIconPaths = ArmoryUtils:GetWeaponNoneAccessoryIconPaths()
   local WeaponAccessoryData
   for Widget, AccessoryType in pairs(self.AccessoryWidget2Type) do
-    local AccessoryId = Appearacne.Accessory[CommonConst.WeaponAccessoryTypeIndex[AccessoryType]] or -1
+    local AccessoryId = Appearance.Accessory[CommonConst.WeaponAccessoryTypeIndex[AccessoryType]] or -1
     WeaponAccessoryData = DataMgr.WeaponAccessory[AccessoryId]
+    if CommonConst.WeaponAccessoryTypes.Accessory ~= AccessoryType then
+      for key, value in pairs(Appearance.Accessory) do
+        if key ~= CommonConst.WeaponAccessoryTypeIndex.Accessory then
+          WeaponAccessoryData = DataMgr.WeaponAccessory[value]
+          AccessoryId = value
+          if WeaponAccessoryData then
+            for AccType, Idx in pairs(CommonConst.WeaponAccessoryTypeIndex) do
+              if key == Idx then
+                AccessoryType = AccType
+                break
+              end
+            end
+            break
+          end
+        end
+      end
+    end
     local AccessoryContent = {
       Owner = self,
       OnClicked = function()
         AudioManager(self):PlayUISound(nil, "event:/ui/common/click_mid", nil, nil)
         local Params = {
-          Target = self.Target,
-          Type = self.Type,
           AccessoryId = AccessoryId,
           AccessoryType = AccessoryType,
           OnCloseCallback = self.OnSkinClosed,
@@ -385,7 +435,7 @@ function M:InitWeaponAppearanceSuits()
       AccessoryId = AccessoryId
     }
     if not WeaponAccessoryData then
-      AccessoryContent.IconPath = self.NoneAccessoryIconPaths[AccessoryType]
+      AccessoryContent.IconPath = self.NoneAccessoryIconPaths[AccessoryType] or self.NoneAccessoryIconPaths[CommonConst.WeaponAccessoryTypes.RunAttack]
       AccessoryContent.IsNoneIcon = true
     else
       AccessoryContent.IconPath = WeaponAccessoryData.Icon
@@ -399,9 +449,15 @@ end
 function M:Construct()
   self.NoneAccessoryId = DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue
   self.EMScrollBox.OnUserScrolled:Add(self, self.OnScrollBoxScrolled)
+  self.Btn_Appearence:SetText(GText("UI_AppearanceScore_EditApp"))
+  self.Btn_Appearence:BindEventOnClicked(self, self.OnBtnClicked)
   self:AddTimer(0.2, function()
     self:OnScrollBoxScrolled(self.EMScrollBox:GetScrollOffset())
   end)
+end
+
+function M:OnBtnClicked()
+  self:OpenAppearanceMain()
 end
 
 function M:OnScrollBoxScrolled(CurrScrollOffset)
@@ -424,7 +480,21 @@ end
 function M:SwitchCharAppearanceSuits(SuitsIdx)
   self.CurrentSuitsIdx = SuitsIdx
   self:InitCharAppearanceSuits()
+  self:CheckCharAppearanceBtnReddot()
   self:AddCharAppearanceReddotListen(self.Target.CharId)
+end
+
+function M:CheckCharAppearanceBtnReddot()
+  if self.NoReddot then
+    return
+  end
+  if self.IsTargetUnowned then
+    self.Btn_Appearence:SetReddot(false)
+    return
+  end
+  if self.Parent and self.Parent.CheckCharAppearanceReddot then
+    self.Btn_Appearence:SetReddot(self.Parent:CheckCharAppearanceReddot(self.Target))
+  end
 end
 
 function M:OnSuitsItemClicked(Index)
@@ -440,12 +510,12 @@ function M:OnCharAppearanceChanged(Ret, CharUuid, AppearancIndex)
   end
   self:ResetTarget()
   self:SwitchCharAppearanceSuits(self.Target.CurrentAppearanceIndex)
-  if self.ActorController and self.ActorController.ArmoryPlayer then
+  self:PlayAnimation(self.Change)
+  if self.ActorController and self.ActorController.ArmoryPlayer and self.ActorController:IsViewTarget() then
     self.ActorController:ChangeCharAppearance(self.Target:DumpAppearanceSuit(GWorld:GetAvatar()))
     self.ActorController.DelayFrame = 30
     self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, nil, CommonConst.ArmoryTag.Appearance)
   end
-  self:PlayAnimation(self.Change)
 end
 
 function M:ResetTarget()
@@ -539,6 +609,16 @@ function M:RemoveAppearanceReddotListen()
     ReddotManager.RemoveListener(key, self)
   end
   self.AppearanceNodeNames = {}
+end
+
+function M:CheckWeaponAppearanceBtnReddot()
+  if self.IsTargetUnowned then
+    self.Btn_Appearence:SetReddot(false)
+    return
+  end
+  if self.Parent and self.Parent.CheckWeaponAppearanceReddot then
+    self.Btn_Appearence:SetReddot(self.Parent:CheckWeaponAppearanceReddot(self.Target))
+  end
 end
 
 function M:AddWeaponAppearanceReddotListen(WeaponId)

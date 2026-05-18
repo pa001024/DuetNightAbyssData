@@ -80,6 +80,9 @@ return ReadOnly("Condition2System", {
   [4190] = {
     [1] = "FriendMain"
   },
+  [4191] = {
+    [1] = "OpenGuild"
+  },
   [4200] = {
     [1] = "PhotoCameraMain"
   },
@@ -147,6 +150,18 @@ return ReadOnly("Condition2System", {
   },
   [4420] = {
     [1] = "RegionReputation"
+  },
+  [4430] = {
+    [1] = "HyperWeapon"
+  },
+  [4431] = {
+    [1] = "IronMode"
+  },
+  [4440] = {
+    [1] = "AppearanceScore"
+  },
+  [4460] = {
+    [1] = "MonthSignIn"
   },
   [8002] = {
     [1] = "Abyss"

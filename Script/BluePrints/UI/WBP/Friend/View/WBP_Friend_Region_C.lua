@@ -34,7 +34,7 @@ function M:Construct()
   self.Panel_Refresh:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Text_Title:SetVisibility(UIConst.VisibilityOp.Collapsed)
   FriendController:RegisterEvent(self, function(self, Reason, ...)
-    if Reason == FriendCommon.EventId.AddFriend then
+    if Reason == FriendCommon.EventId.AddFriendRequest then
       local Uid = (...)
       local Dict = FriendModel:GetRegionDict()
       local Data = Dict[Uid]

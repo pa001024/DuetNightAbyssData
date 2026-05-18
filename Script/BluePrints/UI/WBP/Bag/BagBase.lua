@@ -918,11 +918,13 @@ function M:OnSelectStuffItemChanged(SelectItem, bIsSelect)
   end
   if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad then
     if self.BagCurState == BagCommon.AllBagState.NormalState then
-      self:OnListSelectStuffClicked(SelectItem)
-      if 1 ~= SelectItem.GridIndex then
-        local FirstFocusSelectStuffContent = self.List_Item:GetItemAt(0)
-        if FirstFocusSelectStuffContent.IsSelect and FirstFocusSelectStuffContent.SelfWidget then
-          FirstFocusSelectStuffContent.SelfWidget:SetSelected(false)
+      if bIsSelect then
+        self:OnListSelectStuffClicked(SelectItem)
+        if 1 ~= SelectItem.GridIndex then
+          local FirstFocusSelectStuffContent = self.List_Item:GetItemAt(0)
+          if FirstFocusSelectStuffContent.IsSelect and FirstFocusSelectStuffContent.SelfWidget then
+            FirstFocusSelectStuffContent.SelfWidget:SetSelected(false)
+          end
         end
       end
     elseif self.BagCurState == BagCommon.AllBagState.ChooseSaleState or self.BagCurState == BagCommon.AllBagState.WeaponResolveState then
@@ -1475,8 +1477,10 @@ function M:ConfirmDealWithConsumableRandomBox()
   end
   local ResourceId = self.CurrentChooseInfo.ResourceId
   local ConsumeCount = self.CurrentChooseInfo.ConsumeCount or 1
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
   
   local function DealWithConsumableItemsCallback(RewardInfo)
+    self:BlockAllUIInput(false)
     UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardInfo, false, function()
     end, self, false)
     local AllItemCount = self.List_Item:GetNumItems()

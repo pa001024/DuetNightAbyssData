@@ -36,7 +36,6 @@ function ShowPopupUINode:Execute(Callback)
 end
 
 function ShowPopupUINode:Clear()
-  self.PopupId = nil
 end
 
 return ShowPopupUINode

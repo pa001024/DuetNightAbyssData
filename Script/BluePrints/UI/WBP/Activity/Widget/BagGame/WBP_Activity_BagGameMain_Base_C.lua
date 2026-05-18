@@ -637,7 +637,6 @@ function M:CloseSelf()
     self,
     self.Close
   })
-  EventManager:FireEvent(EventID.OnReturnToActivityEntry)
   self:PlayAnimation(self.Out)
   EventManager:FireEvent(EventID.OnReturnToActivityEntry)
   EventManager:FireEvent(EventID.OnActivityEntryShowVisible)

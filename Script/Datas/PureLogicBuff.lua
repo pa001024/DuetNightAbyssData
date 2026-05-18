@@ -7,204 +7,202 @@ T.RT_3 = {
   [1] = 30
 }
 T.RT_4 = {Value = 1}
-T.RT_5 = {Rate = 0.5}
-T.RT_6 = {
+T.RT_5 = {
   [1] = "Invincible"
 }
-T.RT_7 = {
+T.RT_6 = {
   [1] = 40,
   [2] = 41
 }
+T.RT_7 = {Rate = 0.5}
 T.RT_8 = {Rate = 1}
 T.RT_9 = {AttrName = "MaxES", Rate = "#1"}
 T.RT_10 = {AttrName = "DEF", Rate = "#2"}
 T.RT_11 = {AttrName = "MaxHp", Rate = "#3"}
 T.RT_12 = {
+  [1] = 41,
+  [2] = 43
+}
+T.RT_13 = {
   AttrName = "WeaponCRIModifierRate",
   Value = "#1"
 }
-T.RT_13 = {
-  [1] = T.RT_12
-}
 T.RT_14 = {
+  [1] = T.RT_13
+}
+T.RT_15 = {
   AttrName = "StrongValue",
   Value = "#1"
 }
-T.RT_15 = {
-  [1] = T.RT_14
-}
 T.RT_16 = {
+  [1] = T.RT_15
+}
+T.RT_17 = {
   AttrName = "EnmityValue",
   Value = "#1"
 }
-T.RT_17 = {
-  [1] = T.RT_16
-}
 T.RT_18 = {
+  [1] = T.RT_17
+}
+T.RT_19 = {
   AttrName = "SkillIntensity",
   Rate = "#1"
 }
-T.RT_19 = {
-  [1] = T.RT_18
-}
 T.RT_20 = {
+  [1] = T.RT_19
+}
+T.RT_21 = {
   AttrName = "SkillIntensity",
   Rate = 1
 }
-T.RT_21 = {
-  [1] = T.RT_20
+T.RT_22 = {
+  [1] = T.RT_21
 }
-T.RT_22 = {AttrName = "ATK", Rate = 1}
-T.RT_23 = {
-  [1] = T.RT_22
-}
+T.RT_23 = {AttrName = "ATK", Rate = 1}
 T.RT_24 = {
-  AttrName = "WeaponCRIModifierRate",
-  Value = 1
+  [1] = T.RT_23
 }
 T.RT_25 = {
-  [1] = 21
+  [1] = 201
 }
 T.RT_26 = {
-  AttrName = "LightDamagedRate",
-  Value = 4
+  [1] = 44
 }
 T.RT_27 = {
-  AttrName = "LightDamagedRate",
-  Value = -0.5
+  [1] = 21
 }
 T.RT_28 = {
-  AttrName = "DarkDamagedRate",
+  AttrName = "LightDamagedRate",
   Value = 4
 }
 T.RT_29 = {
-  AttrName = "DarkDamagedRate",
+  AttrName = "LightDamagedRate",
   Value = -0.5
 }
 T.RT_30 = {
-  AttrName = "WindDamagedRate",
+  AttrName = "DarkDamagedRate",
   Value = 4
 }
 T.RT_31 = {
-  AttrName = "WindDamagedRate",
+  AttrName = "DarkDamagedRate",
   Value = -0.5
 }
 T.RT_32 = {
-  AttrName = "ThunderDamagedRate",
+  AttrName = "WindDamagedRate",
   Value = 4
 }
 T.RT_33 = {
-  AttrName = "ThunderDamagedRate",
+  AttrName = "WindDamagedRate",
   Value = -0.5
 }
 T.RT_34 = {
-  AttrName = "FireDamagedRate",
+  AttrName = "ThunderDamagedRate",
   Value = 4
 }
 T.RT_35 = {
-  AttrName = "FireDamagedRate",
+  AttrName = "ThunderDamagedRate",
   Value = -0.5
 }
 T.RT_36 = {
-  AttrName = "WaterDamagedRate",
+  AttrName = "FireDamagedRate",
   Value = 4
 }
 T.RT_37 = {
-  AttrName = "WaterDamagedRate",
+  AttrName = "FireDamagedRate",
   Value = -0.5
 }
 T.RT_38 = {
+  AttrName = "WaterDamagedRate",
+  Value = 4
+}
+T.RT_39 = {
+  AttrName = "WaterDamagedRate",
+  Value = -0.5
+}
+T.RT_40 = {
   [1] = 530102
 }
-T.RT_39 = {AttrName = "ATK", Rate = 0.5}
-T.RT_40 = {
-  [1] = T.RT_39
-}
-T.RT_41 = {AttrName = "ATK", Rate = 0.4}
+T.RT_41 = {AttrName = "ATK", Rate = 0.5}
 T.RT_42 = {
   [1] = T.RT_41
 }
-T.RT_43 = {
-  [1] = 5000010
-}
+T.RT_43 = {AttrName = "ATK", Rate = 0.4}
 T.RT_44 = {
-  [1] = "Hot"
+  [1] = T.RT_43
 }
 T.RT_45 = {
+  [1] = 5000010
+}
+T.RT_46 = {
+  [1] = "Hot"
+}
+T.RT_47 = {
   AttrName = "StrongValue",
   Value = 0.15
 }
-T.RT_46 = {
-  [1] = T.RT_45
+T.RT_48 = {
+  [1] = T.RT_47
 }
-T.RT_47 = {
+T.RT_49 = {
   [1] = 420102
 }
-T.RT_48 = {
+T.RT_50 = {
   AttrName = "MaxES",
   Rate = 1,
   Stackable = 1
 }
-T.RT_49 = {
-  AttrName = "MaxHp",
-  Rate = 1,
-  Stackable = 1
-}
-T.RT_50 = {
-  AttrName = "DEF",
-  Rate = 1,
-  Stackable = 1
-}
 T.RT_51 = {
-  AttrName = "ATK",
+  AttrName = "MaxHp",
   Rate = 1,
   Stackable = 1
 }
 T.RT_52 = {
-  [1] = T.RT_51,
-  [2] = T.RT_50,
-  [3] = T.RT_49,
-  [4] = T.RT_48
+  AttrName = "DEF",
+  Rate = 1,
+  Stackable = 1
 }
 T.RT_53 = {
+  AttrName = "ATK",
+  Rate = 1,
+  Stackable = 1
+}
+T.RT_54 = {
+  [1] = T.RT_53,
+  [2] = T.RT_52,
+  [3] = T.RT_51,
+  [4] = T.RT_50
+}
+T.RT_55 = {
   AttrName = "ATK",
   Rate = 1.5,
   Stackable = 1
 }
-T.RT_54 = {
-  [1] = T.RT_53
-}
-T.RT_55 = {
-  AttrName = "MaxHp",
-  Rate = 0.3,
-  Stackable = 1
-}
 T.RT_56 = {
-  AttrName = "DEF",
-  Rate = 0.3,
-  Stackable = 1
+  [1] = T.RT_55
 }
 T.RT_57 = {
-  AttrName = "ATK",
+  AttrName = "MaxHp",
   Rate = 0.3,
   Stackable = 1
 }
 T.RT_58 = {
+  AttrName = "DEF",
+  Rate = 0.3,
+  Stackable = 1
+}
+T.RT_59 = {
+  AttrName = "ATK",
+  Rate = 0.3,
+  Stackable = 1
+}
+T.RT_60 = {
   AttrName = "ATK",
   Rate = 0.5,
   Stackable = 1
 }
-T.RT_59 = {
+T.RT_61 = {
   AttrName = "MaxHp",
   Rate = 0.9,
-  Stackable = 1
-}
-T.RT_60 = {
-  [1] = T.RT_59
-}
-T.RT_61 = {
-  AttrName = "ATK",
-  Rate = 0.2,
   Stackable = 1
 }
 T.RT_62 = {
@@ -212,183 +210,180 @@ T.RT_62 = {
 }
 T.RT_63 = {
   AttrName = "ATK",
-  Rate = 0.45,
+  Rate = 0.2,
   Stackable = 1
 }
 T.RT_64 = {
   [1] = T.RT_63
 }
 T.RT_65 = {
-  [1] = T.RT_57
+  AttrName = "ATK",
+  Rate = 0.45,
+  Stackable = 1
 }
 T.RT_66 = {
+  [1] = T.RT_65
+}
+T.RT_67 = {
+  [1] = T.RT_59
+}
+T.RT_68 = {
   AttrName = "MaxES",
   Rate = 0.4,
   Stackable = 1
 }
-T.RT_67 = {
+T.RT_69 = {
   AttrName = "DEF",
   Rate = 0.45,
   Stackable = 1
 }
-T.RT_68 = {
+T.RT_70 = {
   [1] = 11,
   [2] = 10101101
 }
-T.RT_69 = {AttrName = "ATK", Rate = "#1"}
-T.RT_70 = {
-  [1] = T.RT_69
+T.RT_71 = {AttrName = "ATK", Rate = "#1"}
+T.RT_72 = {
+  [1] = T.RT_71
 }
-T.RT_71 = {
+T.RT_73 = {
+  [1] = 206
+}
+T.RT_74 = {
   AttrName = "DamageRate",
   RateZone = "Rouge",
   Value = 0.75
 }
-T.RT_72 = {
-  [1] = T.RT_71
+T.RT_75 = {
+  [1] = T.RT_74
 }
-T.RT_73 = {AttrName = "ATK", Rate = -1.5}
-T.RT_74 = {
+T.RT_76 = {AttrName = "ATK", Rate = -1.5}
+T.RT_77 = {
+  AttrName = "WeaponCRIModifierRate",
+  Value = 1
+}
+T.RT_78 = {
   AttrName = "DamageRate",
   IndividualRateZone = 1,
   Value = -0.12
 }
-T.RT_75 = {AttrName = "ATK", Rate = 0.3}
-T.RT_76 = {
-  [1] = T.RT_75
+T.RT_79 = {
+  [1] = 10
 }
-T.RT_77 = {
+T.RT_80 = {AttrName = "ATK", Rate = 0.3}
+T.RT_81 = {
+  [1] = T.RT_80
+}
+T.RT_82 = {
   [1] = 180120
 }
-T.RT_78 = {
+T.RT_83 = {
   AttrName = "DamageRate",
   RateZone = "Normal",
   Value = "#1"
 }
-T.RT_79 = {
-  [1] = T.RT_78
+T.RT_84 = {
+  [1] = T.RT_83
 }
-T.RT_80 = {
+T.RT_85 = {
   AttrName = "TriggerProbModifierRate",
   Stackable = 1,
   Type = "Ranged",
   Value = "#2"
 }
-T.RT_81 = {
+T.RT_86 = {
   AttrName = "DamageRate",
   DamageTag = "Ranged",
   RateZone = "Normal",
   Stackable = 1,
   Value = "#1"
 }
-T.RT_82 = {
-  [1] = T.RT_81,
-  [2] = T.RT_80
+T.RT_87 = {
+  [1] = T.RT_86,
+  [2] = T.RT_85
 }
-T.RT_83 = {
+T.RT_88 = {
   AttrName = "TriggerProbModifierRate",
   Stackable = 1,
   Type = "Melee",
   Value = "#2"
 }
-T.RT_84 = {
+T.RT_89 = {
   AttrName = "DamageRate",
   DamageTag = "Melee",
   RateZone = "Normal",
   Stackable = 1,
   Value = "#1"
 }
-T.RT_85 = {
-  [1] = T.RT_84,
-  [2] = T.RT_83
+T.RT_90 = {
+  [1] = T.RT_89,
+  [2] = T.RT_88
 }
-T.RT_86 = {
+T.RT_91 = {
   [1] = 150311
 }
-T.RT_87 = {
+T.RT_92 = {
   [1] = 150312
 }
-T.RT_88 = {
+T.RT_93 = {
   AttrName = "AttackSpeedModifierRate",
   Type = "Melee",
   Value = "#1"
 }
-T.RT_89 = {
-  [1] = T.RT_88
+T.RT_94 = {
+  [1] = T.RT_93
 }
-T.RT_90 = {
+T.RT_95 = {
   [100] = 150306
 }
-T.RT_91 = {Value = -0.3}
-T.RT_92 = {
-  [150321] = T.RT_91
-}
-T.RT_93 = {
-  [100] = 150305
-}
-T.RT_94 = {
-  [150302] = T.RT_91
-}
-T.RT_95 = {Value = -30}
-T.RT_96 = {
-  [1] = 10503
-}
+T.RT_96 = {Value = -0.3}
 T.RT_97 = {
-  [1] = 10503001
+  [150321] = T.RT_96
 }
 T.RT_98 = {
-  [1] = 104
+  [100] = 150305
 }
 T.RT_99 = {
-  AttrName = "MoveSpeedAddRate",
-  Value = 1
+  [150302] = T.RT_96
 }
-T.RT_100 = {
-  [1] = T.RT_99
-}
+T.RT_100 = {Value = -30}
 T.RT_101 = {
-  AttrName = "WeaponCRDModifierRate",
-  Type = "Melee",
-  Value = "#1"
+  [1] = 110202
 }
 T.RT_102 = {
-  [1] = T.RT_101
+  [1] = 10503
 }
 T.RT_103 = {
-  AttrName = "WeaponCRIModifierRate",
-  Type = "Melee",
-  Value = "#1"
+  [1] = 10503001
 }
 T.RT_104 = {
-  [1] = T.RT_103
+  [1] = 104
 }
 T.RT_105 = {
-  AttrName = "TriggerProbModifierRate",
-  Type = "Melee",
-  Value = "#1"
+  AttrName = "MoveSpeedAddRate",
+  Value = 1
 }
 T.RT_106 = {
   [1] = T.RT_105
 }
 T.RT_107 = {
-  Interval = 3,
-  Type = "SpChange",
-  Value = "#1"
+  AttrName = "SkillSpeed",
+  Rate = 0.02,
+  Stackable = 1
 }
 T.RT_108 = {
   [1] = T.RT_107
 }
 T.RT_109 = {
-  AttrName = "DamageRate",
-  RateZone = "Almighty",
+  AttrName = "WeaponCRDModifierRate",
+  Type = "Melee",
   Value = "#1"
 }
 T.RT_110 = {
   [1] = T.RT_109
 }
 T.RT_111 = {
-  AttrName = "MultiShootModifierRate",
-  Type = "Ranged",
+  AttrName = "WeaponCRIModifierRate",
+  Type = "Melee",
   Value = "#1"
 }
 T.RT_112 = {
@@ -396,27 +391,59 @@ T.RT_112 = {
 }
 T.RT_113 = {
   AttrName = "TriggerProbModifierRate",
-  Type = "Ranged",
+  Type = "Melee",
   Value = "#1"
 }
 T.RT_114 = {
   [1] = T.RT_113
 }
 T.RT_115 = {
-  AttrName = "WeaponCRDModifierRate",
-  Type = "Ranged",
+  Interval = 3,
+  Type = "SpChange",
   Value = "#1"
 }
 T.RT_116 = {
   [1] = T.RT_115
 }
 T.RT_117 = {
-  AttrName = "WeaponCRIModifierRate",
-  Type = "Ranged",
+  AttrName = "DamageRate",
+  RateZone = "Almighty",
   Value = "#1"
 }
 T.RT_118 = {
   [1] = T.RT_117
+}
+T.RT_119 = {
+  AttrName = "MultiShootModifierRate",
+  Type = "Ranged",
+  Value = "#1"
+}
+T.RT_120 = {
+  [1] = T.RT_119
+}
+T.RT_121 = {
+  AttrName = "TriggerProbModifierRate",
+  Type = "Ranged",
+  Value = "#1"
+}
+T.RT_122 = {
+  [1] = T.RT_121
+}
+T.RT_123 = {
+  AttrName = "WeaponCRDModifierRate",
+  Type = "Ranged",
+  Value = "#1"
+}
+T.RT_124 = {
+  [1] = T.RT_123
+}
+T.RT_125 = {
+  AttrName = "WeaponCRIModifierRate",
+  Type = "Ranged",
+  Value = "#1"
+}
+T.RT_126 = {
+  [1] = T.RT_125
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -637,7 +664,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [1800] = {
-    AddAttrs = T.RT_79,
+    AddAttrs = T.RT_84,
     BuffId = 1800,
     MaxLayer = 3,
     MergeRule1 = "Personal",
@@ -686,12 +713,10 @@ return ReadOnly("PureLogicBuff", {
       [1] = {
         AttrName = "BonusDamage",
         Type = "Dark",
-        Value = 1
+        Value = "#1"
       }
     },
-    AddPassiveEffect = {
-      [1] = 201
-    },
+    AddPassiveEffect = T.RT_25,
     BuffId = 6111,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -710,14 +735,17 @@ return ReadOnly("PureLogicBuff", {
   },
   [6114] = {
     AddAttrs = {
-      [1] = T.RT_24
+      [1] = {
+        AttrName = "WeaponCRDModifierRate",
+        Value = "#1"
+      }
     },
     BuffId = 6114,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [6121] = {
-    AddAttrs = T.RT_23,
+    AddAttrs = T.RT_24,
     BuffId = 6121,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -735,13 +763,13 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [6124] = {
-    AddAttrs = T.RT_21,
+    AddAttrs = T.RT_22,
     BuffId = 6124,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [6131] = {
-    AddAttrs = T.RT_23,
+    AddAttrs = T.RT_24,
     BuffId = 6131,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -759,13 +787,13 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [6134] = {
-    AddAttrs = T.RT_21,
+    AddAttrs = T.RT_22,
     BuffId = 6134,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [6141] = {
-    AddAttrs = T.RT_19,
+    AddAttrs = T.RT_20,
     BuffId = 6141,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -783,13 +811,13 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [6144] = {
-    AddAttrs = T.RT_15,
+    AddAttrs = T.RT_16,
     BuffId = 6144,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [6151] = {
-    AddAttrs = T.RT_19,
+    AddAttrs = T.RT_20,
     BuffId = 6151,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -807,13 +835,13 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [6154] = {
-    AddAttrs = T.RT_17,
+    AddAttrs = T.RT_18,
     BuffId = 6154,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [6161] = {
-    AddAttrs = T.RT_15,
+    AddAttrs = T.RT_16,
     BuffId = 6161,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -831,7 +859,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [6164] = {
-    AddAttrs = T.RT_13,
+    AddAttrs = T.RT_14,
     BuffId = 6164,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -843,10 +871,10 @@ return ReadOnly("PureLogicBuff", {
         Value = "#1"
       }
     },
-    AddPassiveEffect = T.RT_98,
+    AddPassiveEffect = T.RT_104,
     BuffId = 10503,
-    BuffType = T.RT_96,
-    DisperseBuffType = T.RT_97,
+    BuffType = T.RT_102,
+    DisperseBuffType = T.RT_103,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -863,7 +891,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [100002] = {
-    AddAttrs = T.RT_42,
+    AddAttrs = T.RT_44,
     BuffId = 100002,
     MaxLayer = 2,
     MergeRule1 = "Global",
@@ -979,7 +1007,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [110002] = {
-    AddAttrs = T.RT_42,
+    AddAttrs = T.RT_44,
     BuffId = 110002,
     CombatConditionId = 1001,
     MaxLayer = 2,
@@ -999,7 +1027,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [110004] = {
-    AddAttrs = T.RT_40,
+    AddAttrs = T.RT_42,
     BuffId = 110004,
     CombatConditionId = 1001,
     MaxLayer = 2,
@@ -1007,19 +1035,56 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "NewFree"
   },
   [110112] = {
-    AddAttrs = T.RT_62,
+    AddAttrs = T.RT_64,
     BuffId = 110112,
     MaxLayer = 4,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
-  [110231] = {
-    AllowSkillSustainModify = true,
-    BuffId = 110231,
-    BuffType = T.RT_2,
-    MaxLayer = 42,
-    MergeRule1 = "Global",
-    MergeRule2 = "NewFree"
+  [110211] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "WeaponCRIModifierRate",
+        DamageTag = "Melee",
+        Value = 0.75
+      }
+    },
+    BuffId = 110211,
+    CombatConditionId = 71,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [110212] = {
+    BuffId = 110212,
+    BuffSpModify = {
+      [110201] = T.RT_100,
+      [110211] = T.RT_100
+    },
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [110221] = {
+    BuffId = 110221,
+    BuffType = T.RT_101,
+    LayerExtraBuff = {
+      [6] = 110222
+    },
+    MaxLayer = 12,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [110223] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "DamageRate",
+        RateZone = "Almighty",
+        Value = 0.3
+      }
+    },
+    BuffId = 110223,
+    BuffType = T.RT_101,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
   },
   [110303] = {
     AddAttrs = {
@@ -1049,6 +1114,37 @@ return ReadOnly("PureLogicBuff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
+  [120111] = {
+    BuffId = 120111,
+    ChangeWeaponNotClearCombo = true,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [120121] = {
+    BuffId = 120121,
+    HaloDatas = {
+      [1] = {
+        AuraRange = -1,
+        BuffId = 120122,
+        Camp = "Enemy"
+      },
+      [2] = {
+        AuraRange = -1,
+        BuffId = 120123,
+        Camp = "Enemy"
+      }
+    },
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [120123] = {
+    AddPassiveEffect = {
+      [1] = 120103
+    },
+    BuffId = 120123,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
   [120231] = {
     BuffId = 120231,
     BuffType = T.RT_2,
@@ -1069,7 +1165,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [150002] = {
-    AddAttrs = T.RT_42,
+    AddAttrs = T.RT_44,
     BuffId = 150002,
     CombatConditionId = 1006,
     MaxLayer = 2,
@@ -1089,7 +1185,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [150004] = {
-    AddAttrs = T.RT_40,
+    AddAttrs = T.RT_42,
     BuffId = 150004,
     CombatConditionId = 1006,
     MaxLayer = 2,
@@ -1124,19 +1220,19 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [150301] = {
-    AddAttrs = T.RT_85,
+    AddAttrs = T.RT_90,
     BuffId = 150301,
-    BuffSpModify = T.RT_94,
-    LayerExtraBuff = T.RT_93,
+    BuffSpModify = T.RT_99,
+    LayerExtraBuff = T.RT_98,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150302] = {
-    AddAttrs = T.RT_82,
+    AddAttrs = T.RT_87,
     BuffId = 150302,
-    BuffSpModify = T.RT_92,
-    LayerExtraBuff = T.RT_90,
+    BuffSpModify = T.RT_97,
+    LayerExtraBuff = T.RT_95,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
@@ -1144,7 +1240,7 @@ return ReadOnly("PureLogicBuff", {
   [150305] = {
     BuffId = 150305,
     BuffSpModify = {
-      [150302] = T.RT_95
+      [150302] = T.RT_100
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -1152,25 +1248,25 @@ return ReadOnly("PureLogicBuff", {
   [150306] = {
     BuffId = 150306,
     BuffSpModify = {
-      [150321] = T.RT_95
+      [150321] = T.RT_100
     },
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [150307] = {
-    AddAttrs = T.RT_85,
+    AddAttrs = T.RT_90,
     BuffId = 150307,
-    BuffSpModify = T.RT_94,
-    LayerExtraBuff = T.RT_93,
+    BuffSpModify = T.RT_99,
+    LayerExtraBuff = T.RT_98,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150308] = {
-    AddAttrs = T.RT_82,
+    AddAttrs = T.RT_87,
     BuffId = 150308,
-    BuffSpModify = T.RT_92,
-    LayerExtraBuff = T.RT_90,
+    BuffSpModify = T.RT_97,
+    LayerExtraBuff = T.RT_95,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
@@ -1184,16 +1280,16 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 150311,
-    BuffType = T.RT_86,
-    DisperseBuffType = T.RT_87,
+    BuffType = T.RT_91,
+    DisperseBuffType = T.RT_92,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [150312] = {
-    AddAttrs = T.RT_89,
+    AddAttrs = T.RT_94,
     BuffId = 150312,
-    BuffType = T.RT_87,
-    DisperseBuffType = T.RT_86,
+    BuffType = T.RT_92,
+    DisperseBuffType = T.RT_91,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -1390,28 +1486,28 @@ return ReadOnly("PureLogicBuff", {
     }
   },
   [150371] = {
-    AddAttrs = T.RT_85,
+    AddAttrs = T.RT_90,
     BuffId = 150371,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150372] = {
-    AddAttrs = T.RT_82,
+    AddAttrs = T.RT_87,
     BuffId = 150372,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150373] = {
-    AddAttrs = T.RT_85,
+    AddAttrs = T.RT_90,
     BuffId = 150373,
     MaxLayer = 100,
     MergeRule1 = "Personal",
     MergeRule2 = "NewFree"
   },
   [150374] = {
-    AddAttrs = T.RT_82,
+    AddAttrs = T.RT_87,
     BuffId = 150374,
     MaxLayer = 100,
     MergeRule1 = "Personal",
@@ -1458,16 +1554,14 @@ return ReadOnly("PureLogicBuff", {
         Value = "#1"
       }
     },
-    AddPassiveEffect = {
-      [1] = 206
-    },
+    AddPassiveEffect = T.RT_73,
     BuffId = 180101,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [180121] = {
     BuffId = 180121,
-    BuffType = T.RT_77,
+    BuffType = T.RT_82,
     HaloDatas = {
       [1] = {
         AllowSkillRange = 1,
@@ -1481,7 +1575,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [180123] = {
     BuffId = 180123,
-    BuffType = T.RT_77,
+    BuffType = T.RT_82,
     HaloDatas = {
       [1] = {
         AllowSkillRange = 1,
@@ -1495,7 +1589,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [180125] = {
     BuffId = 180125,
-    BuffType = T.RT_77,
+    BuffType = T.RT_82,
     HaloDatas = {
       [1] = {
         AllowSkillRange = 1,
@@ -1509,7 +1603,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [180127] = {
     BuffId = 180127,
-    BuffType = T.RT_77,
+    BuffType = T.RT_82,
     HaloDatas = {
       [1] = {
         AllowSkillRange = 1,
@@ -1549,15 +1643,13 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "NewFree"
   },
   [201021] = {
-    AddAttrs = T.RT_76,
+    AddAttrs = T.RT_81,
     BuffId = 201021,
-    BuffType = {
-      [1] = 10
-    },
+    BuffType = T.RT_79,
     DotDatas = {
       [1] = {
         BaseAttr = "MaxHp",
-        DamageTag = T.RT_44,
+        DamageTag = T.RT_46,
         DefaultHealFX = 1,
         Interval = 1,
         Rate = 0.5,
@@ -1580,7 +1672,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [210002] = {
-    AddAttrs = T.RT_42,
+    AddAttrs = T.RT_44,
     BuffId = 210002,
     CombatConditionId = 1002,
     MaxLayer = 2,
@@ -1600,7 +1692,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [210004] = {
-    AddAttrs = T.RT_40,
+    AddAttrs = T.RT_42,
     BuffId = 210004,
     CombatConditionId = 1002,
     MaxLayer = 2,
@@ -1772,7 +1864,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [310002] = {
-    AddAttrs = T.RT_42,
+    AddAttrs = T.RT_44,
     BuffId = 310002,
     CombatConditionId = 1003,
     MaxLayer = 2,
@@ -1792,7 +1884,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [310004] = {
-    AddAttrs = T.RT_40,
+    AddAttrs = T.RT_42,
     BuffId = 310004,
     CombatConditionId = 1003,
     MaxLayer = 2,
@@ -1819,27 +1911,16 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge",
     RemoveWhenSpZero = true
   },
-  [310206] = {
+  [310211] = {
     AddAttrs = {
       [1] = {
-        AttrName = "DamageRate",
-        RateZone = "Almighty",
-        Value = 0.55
+        AttrName = "MaxAvoidExecuteTimes",
+        Value = 4
       }
     },
-    AllowSkillSustainModify = true,
-    BuffId = 310206,
-    DotDatas = {
-      [1] = {
-        DotDelay = 0.5,
-        Interval = 1,
-        Type = "SpChange",
-        Value = -15
-      }
-    },
+    BuffId = 310211,
     MergeRule1 = "Personal",
-    MergeRule2 = "Merge",
-    RemoveWhenSpZero = true
+    MergeRule2 = "Merge"
   },
   [310302] = {
     BuffId = 310302,
@@ -1960,7 +2041,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [320292] = {
-    AddAttrs = T.RT_46,
+    AddAttrs = T.RT_48,
     BuffId = 320292,
     CombatConditionId = 1003,
     MaxLayer = 2,
@@ -2012,7 +2093,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [410002] = {
-    AddAttrs = T.RT_42,
+    AddAttrs = T.RT_44,
     BuffId = 410002,
     CombatConditionId = 1004,
     MaxLayer = 2,
@@ -2032,7 +2113,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [410004] = {
-    AddAttrs = T.RT_40,
+    AddAttrs = T.RT_42,
     BuffId = 410004,
     CombatConditionId = 1004,
     MaxLayer = 2,
@@ -2103,7 +2184,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [420123] = {
     BuffId = 420123,
-    BuffType = T.RT_47,
+    BuffType = T.RT_49,
     HaloDatas = {
       [1] = {
         AuraRange = -1,
@@ -2129,7 +2210,7 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 420141,
-    BuffType = T.RT_47,
+    BuffType = T.RT_49,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -2146,7 +2227,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [420192] = {
-    AddAttrs = T.RT_46,
+    AddAttrs = T.RT_48,
     BuffId = 420192,
     CombatConditionId = 1004,
     MaxLayer = 2,
@@ -2166,12 +2247,12 @@ return ReadOnly("PureLogicBuff", {
   },
   [430112] = {
     BuffId = 430112,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     DotDatas = {
       [1] = {
         BaseAttr = "MaxHp",
         Condition = 2,
-        DamageTag = T.RT_44,
+        DamageTag = T.RT_46,
         DefaultHealFX = 0,
         Interval = 1,
         Rate = 0.1,
@@ -2194,7 +2275,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [510002] = {
-    AddAttrs = T.RT_42,
+    AddAttrs = T.RT_44,
     BuffId = 510002,
     CombatConditionId = 1005,
     MaxLayer = 2,
@@ -2214,7 +2295,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [510004] = {
-    AddAttrs = T.RT_40,
+    AddAttrs = T.RT_42,
     BuffId = 510004,
     CombatConditionId = 1005,
     MaxLayer = 2,
@@ -2260,13 +2341,13 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 530113,
-    BuffType = T.RT_38,
+    BuffType = T.RT_40,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [530122] = {
     BuffId = 530122,
-    BuffType = T.RT_38,
+    BuffType = T.RT_40,
     DotDatas = {
       [1] = {
         DotDelay = 2.7,
@@ -2315,17 +2396,15 @@ return ReadOnly("PureLogicBuff", {
   },
   [700221] = {
     BuffId = 700221,
-    ForbidBuffType = {
-      [1] = 41,
-      [2] = 43
-    },
+    DisperseBuffType = T.RT_12,
+    ForbidBuffType = T.RT_12,
     ForbidCatch = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [850001] = {
     BuffId = 850001,
-    LockHp = T.RT_5,
+    LockHp = T.RT_7,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -2333,10 +2412,10 @@ return ReadOnly("PureLogicBuff", {
     BuffId = 850002,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_7,
+    ForbidBuffType = T.RT_6,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
-    SpecialEffect = T.RT_6
+    SpecialEffect = T.RT_5
   },
   [850201] = {
     BuffId = 850201,
@@ -2392,12 +2471,12 @@ return ReadOnly("PureLogicBuff", {
     BuffId = 850309,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_7,
+    ForbidBuffType = T.RT_6,
     LockHp = T.RT_8,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterTarget = true,
-    SpecialEffect = T.RT_6
+    SpecialEffect = T.RT_5
   },
   [850311] = {
     BuffId = 850311,
@@ -2421,7 +2500,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [850901] = {
     BuffId = 850901,
-    LockHp = T.RT_5,
+    LockHp = T.RT_7,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -2436,7 +2515,7 @@ return ReadOnly("PureLogicBuff", {
     BuffType = T.RT_2,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_7,
+    ForbidBuffType = T.RT_6,
     LockHp = {Rate = 0.61},
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
@@ -2471,7 +2550,7 @@ return ReadOnly("PureLogicBuff", {
     BuffType = T.RT_2,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_7,
+    ForbidBuffType = T.RT_6,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -2480,11 +2559,11 @@ return ReadOnly("PureLogicBuff", {
     BuffType = T.RT_2,
     CannotBeCutTN = true,
     CannotBeHitted = true,
-    ForbidBuffType = T.RT_7,
+    ForbidBuffType = T.RT_6,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge",
     NotEnterTarget = true,
-    SpecialEffect = T.RT_6
+    SpecialEffect = T.RT_5
   },
   [851502] = {
     BuffId = 851502,
@@ -2494,8 +2573,17 @@ return ReadOnly("PureLogicBuff", {
   },
   [851701] = {
     BuffId = 851701,
-    LockHp = T.RT_5,
+    LockHp = T.RT_7,
     MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [851907] = {
+    BuffId = 851907,
+    BuffType = {
+      [1] = 11,
+      [2] = 851907
+    },
+    MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [852501] = {
@@ -2507,6 +2595,22 @@ return ReadOnly("PureLogicBuff", {
     BuffId = 852502,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
+  },
+  [852503] = {
+    BuffId = 852503,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [852504] = {
+    BuffId = 852504,
+    BuffType = T.RT_2,
+    CannotBeCutTN = true,
+    CannotBeHitted = true,
+    ForbidBuffType = T.RT_6,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge",
+    NotEnterTarget = true,
+    SpecialEffect = T.RT_5
   },
   [900602] = {
     BuffId = 900602,
@@ -2553,6 +2657,45 @@ return ReadOnly("PureLogicBuff", {
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
+  [1029902] = {
+    AddAttrs = T.RT_108,
+    BuffId = 1029902,
+    BuffType = T.RT_79,
+    MaxLayer = 20,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [1029904] = {
+    AddAttrs = T.RT_108,
+    BuffId = 1029904,
+    BuffType = T.RT_79,
+    MaxLayer = 30,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [1029906] = {
+    BuffId = 1029906,
+    BuffType = T.RT_2,
+    HaloDatas = {
+      [1] = {
+        AuraRange = -1,
+        BuffId = 1029907,
+        Camp = "Friend",
+        Filter = "OnlySummon"
+      }
+    },
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [1029907] = {
+    AddPassiveEffect = {
+      [1] = 1029901
+    },
+    BuffId = 1029907,
+    BuffType = T.RT_2,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
   [1030111] = {
     AddAttrs = {
       [1] = {
@@ -2566,14 +2709,14 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [1030222] = {
-    AddAttrs = T.RT_100,
+    AddAttrs = T.RT_106,
     BuffId = 1030222,
     BuffType = T.RT_2,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
   [1040141] = {
-    AddAttrs = T.RT_100,
+    AddAttrs = T.RT_106,
     BuffId = 1040141,
     BuffType = T.RT_2,
     MergeRule1 = "Personal",
@@ -2602,7 +2745,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [1440001] = {
-    AddAttrs = T.RT_79,
+    AddAttrs = T.RT_84,
     BuffId = 1440001,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -2618,13 +2761,13 @@ return ReadOnly("PureLogicBuff", {
   [2010001] = {
     BuffId = 2010001,
     BuffType = T.RT_2,
-    LockHp = T.RT_5,
+    LockHp = T.RT_7,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010005] = {
     BuffId = 2010005,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     OverrideAttrs = {
@@ -2635,157 +2778,157 @@ return ReadOnly("PureLogicBuff", {
   },
   [2010012] = {
     AddAttrs = {
-      [1] = T.RT_36,
-      [2] = T.RT_35,
-      [3] = T.RT_33,
-      [4] = T.RT_31
+      [1] = T.RT_38,
+      [2] = T.RT_37,
+      [3] = T.RT_35,
+      [4] = T.RT_33
     },
     BuffId = 2010012,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Water"
   },
   [2010013] = {
     AddAttrs = {
-      [1] = T.RT_34,
-      [2] = T.RT_37,
-      [3] = T.RT_33,
-      [4] = T.RT_31
+      [1] = T.RT_36,
+      [2] = T.RT_39,
+      [3] = T.RT_35,
+      [4] = T.RT_33
     },
     BuffId = 2010013,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Fire"
   },
   [2010014] = {
     AddAttrs = {
-      [1] = T.RT_32,
-      [2] = T.RT_37,
-      [3] = T.RT_35,
-      [4] = T.RT_31
+      [1] = T.RT_34,
+      [2] = T.RT_39,
+      [3] = T.RT_37,
+      [4] = T.RT_33
     },
     BuffId = 2010014,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Thunder"
   },
   [2010015] = {
     AddAttrs = {
-      [1] = T.RT_30,
-      [2] = T.RT_37,
-      [3] = T.RT_35,
-      [4] = T.RT_33
+      [1] = T.RT_32,
+      [2] = T.RT_39,
+      [3] = T.RT_37,
+      [4] = T.RT_35
     },
     BuffId = 2010015,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Wind"
   },
   [2010016] = {
     AddAttrs = {
-      [1] = T.RT_26,
-      [2] = T.RT_29
+      [1] = T.RT_28,
+      [2] = T.RT_31
     },
     BuffId = 2010016,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Light"
   },
   [2010017] = {
     AddAttrs = {
-      [1] = T.RT_28,
-      [2] = T.RT_27
+      [1] = T.RT_30,
+      [2] = T.RT_29
     },
     BuffId = 2010017,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Dark"
   },
   [2010018] = {
     AddAttrs = {
-      [1] = T.RT_27,
-      [2] = T.RT_29
+      [1] = T.RT_29,
+      [2] = T.RT_31
     },
     BuffId = 2010018,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010019] = {
     AddAttrs = {
-      [1] = T.RT_37,
-      [2] = T.RT_35,
-      [3] = T.RT_33,
-      [4] = T.RT_31
+      [1] = T.RT_39,
+      [2] = T.RT_37,
+      [3] = T.RT_35,
+      [4] = T.RT_33
     },
     BuffId = 2010019,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010020] = {
     AddAttrs = {
-      [1] = T.RT_36,
-      [2] = T.RT_26
+      [1] = T.RT_38,
+      [2] = T.RT_28
     },
     BuffId = 2010020,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010025] = {
     AddAttrs = {
-      [1] = T.RT_36,
-      [2] = T.RT_30
+      [1] = T.RT_38,
+      [2] = T.RT_32
     },
     BuffId = 2010025,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010034] = {
     AddAttrs = {
-      [1] = T.RT_34,
-      [2] = T.RT_32
+      [1] = T.RT_36,
+      [2] = T.RT_34
     },
     BuffId = 2010034,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010035] = {
     AddAttrs = {
-      [1] = T.RT_34,
-      [2] = T.RT_30
+      [1] = T.RT_36,
+      [2] = T.RT_32
     },
     BuffId = 2010035,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010040] = {
     AddAttrs = {
-      [1] = T.RT_32,
-      [2] = T.RT_26
+      [1] = T.RT_34,
+      [2] = T.RT_28
     },
     BuffId = 2010040,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [2010051] = {
     AddAttrs = {
-      [1] = T.RT_30,
-      [2] = T.RT_28
+      [1] = T.RT_32,
+      [2] = T.RT_30
     },
     BuffId = 2010051,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -2825,8 +2968,8 @@ return ReadOnly("PureLogicBuff", {
   },
   [2011222] = {
     AddAttrs = {
-      [1] = T.RT_74,
-      [2] = T.RT_24
+      [1] = T.RT_78,
+      [2] = T.RT_77
     },
     BuffId = 2011222,
     MergeRule1 = "Global",
@@ -2834,7 +2977,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [2012112] = {
     AddAttrs = {
-      [1] = T.RT_74,
+      [1] = T.RT_78,
       [2] = {
         AttrName = "DamageRate",
         DamageTag = "Weapon",
@@ -2860,8 +3003,8 @@ return ReadOnly("PureLogicBuff", {
   },
   [2013122] = {
     AddAttrs = {
-      [1] = T.RT_20,
-      [2] = T.RT_73
+      [1] = T.RT_21,
+      [2] = T.RT_76
     },
     BuffId = 2013122,
     MergeRule1 = "Global",
@@ -2883,9 +3026,30 @@ return ReadOnly("PureLogicBuff", {
         AttrName = "MultiShootModifierRate",
         Value = 1.2
       },
-      [2] = T.RT_73
+      [2] = T.RT_76
     },
     BuffId = 2013222,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2014122] = {
+    AddAttrs = {
+      [1] = T.RT_77,
+      [2] = T.RT_76
+    },
+    BuffId = 2014122,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2014212] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "StrongValue",
+        Value = 0.9
+      },
+      [2] = T.RT_76
+    },
+    BuffId = 2014212,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -2893,6 +3057,112 @@ return ReadOnly("PureLogicBuff", {
     BuffId = 2050501,
     MaxLayer = 10,
     MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [2059902] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "DamageRate",
+        DamageTag = "HeavyAttack",
+        RateZone = "Normal",
+        Value = 3
+      }
+    },
+    BuffId = 2059902,
+    BuffType = T.RT_2,
+    MergeRule1 = "Personal",
+    MergeRule2 = "Merge"
+  },
+  [2059903] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "BonusDamage",
+        Type = "Water",
+        Value = 0.35
+      }
+    },
+    AddPassiveEffect = {
+      [1] = 202
+    },
+    BuffId = 2059903,
+    BuffType = T.RT_2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2059904] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "BonusDamage",
+        Type = "Fire",
+        Value = 0.35
+      }
+    },
+    AddPassiveEffect = {
+      [1] = 203
+    },
+    BuffId = 2059904,
+    BuffType = T.RT_2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2059905] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "BonusDamage",
+        Type = "Thunder",
+        Value = 0.35
+      }
+    },
+    AddPassiveEffect = {
+      [1] = 204
+    },
+    BuffId = 2059905,
+    BuffType = T.RT_2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2059906] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "BonusDamage",
+        Type = "Wind",
+        Value = 0.35
+      }
+    },
+    AddPassiveEffect = {
+      [1] = 205
+    },
+    BuffId = 2059906,
+    BuffType = T.RT_2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2059907] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "BonusDamage",
+        Type = "Light",
+        Value = 0.35
+      }
+    },
+    AddPassiveEffect = T.RT_73,
+    BuffId = 2059907,
+    BuffType = T.RT_2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [2059908] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "BonusDamage",
+        Type = "Dark",
+        Value = 0.35
+      }
+    },
+    AddPassiveEffect = T.RT_25,
+    BuffId = 2059908,
+    BuffType = T.RT_2,
+    MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [3010001] = {
@@ -2919,7 +3189,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020101] = {
     AddAttrs = {
-      [1] = T.RT_55
+      [1] = T.RT_57
     },
     BuffId = 4020101,
     BuffType = T.RT_2,
@@ -2929,7 +3199,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020102] = {
     AddAttrs = {
-      [1] = T.RT_67
+      [1] = T.RT_69
     },
     BuffId = 4020102,
     BuffType = T.RT_2,
@@ -2938,7 +3208,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020103] = {
-    AddAttrs = T.RT_65,
+    AddAttrs = T.RT_67,
     BuffId = 4020103,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -2947,7 +3217,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020104] = {
     AddAttrs = {
-      [1] = T.RT_66
+      [1] = T.RT_68
     },
     BuffId = 4020104,
     BuffType = T.RT_2,
@@ -2957,8 +3227,8 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020105] = {
     AddAttrs = {
-      [1] = T.RT_55,
-      [2] = T.RT_67
+      [1] = T.RT_57,
+      [2] = T.RT_69
     },
     BuffId = 4020105,
     BuffType = T.RT_2,
@@ -2968,8 +3238,8 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020106] = {
     AddAttrs = {
-      [1] = T.RT_57,
-      [2] = T.RT_67
+      [1] = T.RT_59,
+      [2] = T.RT_69
     },
     BuffId = 4020106,
     BuffType = T.RT_2,
@@ -2979,8 +3249,8 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020107] = {
     AddAttrs = {
-      [1] = T.RT_57,
-      [2] = T.RT_55
+      [1] = T.RT_59,
+      [2] = T.RT_57
     },
     BuffId = 4020107,
     BuffType = T.RT_2,
@@ -3009,8 +3279,8 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020109] = {
     AddAttrs = {
-      [1] = T.RT_57,
-      [2] = T.RT_66
+      [1] = T.RT_59,
+      [2] = T.RT_68
     },
     BuffId = 4020109,
     BuffType = T.RT_2,
@@ -3145,7 +3415,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020501] = {
-    AddAttrs = T.RT_65,
+    AddAttrs = T.RT_67,
     BuffId = 4020501,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3153,7 +3423,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020502] = {
-    AddAttrs = T.RT_64,
+    AddAttrs = T.RT_66,
     BuffId = 4020502,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3161,7 +3431,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020503] = {
-    AddAttrs = T.RT_60,
+    AddAttrs = T.RT_62,
     BuffId = 4020503,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3183,7 +3453,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020505] = {
-    AddAttrs = T.RT_64,
+    AddAttrs = T.RT_66,
     BuffId = 4020505,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3191,7 +3461,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020506] = {
-    AddAttrs = T.RT_64,
+    AddAttrs = T.RT_66,
     BuffId = 4020506,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3199,7 +3469,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020507] = {
-    AddAttrs = T.RT_64,
+    AddAttrs = T.RT_66,
     BuffId = 4020507,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3208,7 +3478,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020508] = {
     AddAttrs = {
-      [1] = T.RT_56
+      [1] = T.RT_58
     },
     BuffId = 4020508,
     BuffType = T.RT_2,
@@ -3217,7 +3487,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020509] = {
-    AddAttrs = T.RT_62,
+    AddAttrs = T.RT_64,
     BuffId = 4020509,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3225,7 +3495,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020510] = {
-    AddAttrs = T.RT_60,
+    AddAttrs = T.RT_62,
     BuffId = 4020510,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3233,7 +3503,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020511] = {
-    AddAttrs = T.RT_60,
+    AddAttrs = T.RT_62,
     BuffId = 4020511,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3241,7 +3511,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020512] = {
-    AddAttrs = T.RT_60,
+    AddAttrs = T.RT_62,
     BuffId = 4020512,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3264,7 +3534,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020514] = {
     AddAttrs = {
-      [1] = T.RT_58
+      [1] = T.RT_60
     },
     BuffId = 4020514,
     BuffType = T.RT_2,
@@ -3273,7 +3543,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020601] = {
-    AddAttrs = T.RT_52,
+    AddAttrs = T.RT_54,
     BuffId = 4020601,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3281,7 +3551,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020602] = {
-    AddAttrs = T.RT_52,
+    AddAttrs = T.RT_54,
     BuffId = 4020602,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3290,7 +3560,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020603] = {
     AddAttrs = {
-      [1] = T.RT_58,
+      [1] = T.RT_60,
       [2] = {
         AttrName = "DEF",
         Rate = 0.5,
@@ -3314,7 +3584,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020604] = {
-    AddAttrs = T.RT_52,
+    AddAttrs = T.RT_54,
     BuffId = 4020604,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3322,7 +3592,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020605] = {
-    AddAttrs = T.RT_52,
+    AddAttrs = T.RT_54,
     BuffId = 4020605,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3330,7 +3600,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020606] = {
-    AddAttrs = T.RT_52,
+    AddAttrs = T.RT_54,
     BuffId = 4020606,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3339,9 +3609,9 @@ return ReadOnly("PureLogicBuff", {
   },
   [4020607] = {
     AddAttrs = {
-      [1] = T.RT_57,
-      [2] = T.RT_56,
-      [3] = T.RT_55,
+      [1] = T.RT_59,
+      [2] = T.RT_58,
+      [3] = T.RT_57,
       [4] = {
         AttrName = "MaxES",
         Rate = 0.3,
@@ -3355,7 +3625,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020608] = {
-    AddAttrs = T.RT_54,
+    AddAttrs = T.RT_56,
     BuffId = 4020608,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3392,7 +3662,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020610] = {
-    AddAttrs = T.RT_52,
+    AddAttrs = T.RT_54,
     BuffId = 4020610,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3400,7 +3670,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020611] = {
-    AddAttrs = T.RT_54,
+    AddAttrs = T.RT_56,
     BuffId = 4020611,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3408,7 +3678,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020612] = {
-    AddAttrs = T.RT_52,
+    AddAttrs = T.RT_54,
     BuffId = 4020612,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3416,7 +3686,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [4020613] = {
-    AddAttrs = T.RT_52,
+    AddAttrs = T.RT_54,
     BuffId = 4020613,
     BuffType = T.RT_2,
     MaxLayer = 2,
@@ -3442,7 +3712,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [5000012] = {
     BuffId = 5000012,
-    BuffType = T.RT_43,
+    BuffType = T.RT_45,
     HaloDatas = {
       [1] = {
         AuraRange = 4000,
@@ -3456,7 +3726,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [5000014] = {
     BuffId = 5000014,
-    BuffType = T.RT_43,
+    BuffType = T.RT_45,
     HaloDatas = {
       [1] = {
         AuraRange = 4000,
@@ -3470,7 +3740,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [5000016] = {
     BuffId = 5000016,
-    BuffType = T.RT_43,
+    BuffType = T.RT_45,
     HaloDatas = {
       [1] = {
         AuraRange = 4000,
@@ -3504,9 +3774,44 @@ return ReadOnly("PureLogicBuff", {
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
+  [5010001] = {
+    AddAttrs = {
+      [1] = {AttrName = "ATK", Rate = 2.5},
+      [2] = {AttrName = "MaxHp", Rate = 2.5},
+      [3] = {AttrName = "MaxES", Rate = 2.5}
+    },
+    BuffId = 5010001,
+    BuffType = T.RT_2,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
+  [5010002] = {
+    AddAttrs = {
+      [1] = {
+        AttrName = "ATK",
+        Rate = 0.1,
+        Stackable = 1
+      },
+      [2] = {
+        AttrName = "MaxHp",
+        Rate = 3.5,
+        Stackable = 1
+      },
+      [3] = {
+        AttrName = "MaxES",
+        Rate = 3.5,
+        Stackable = 1
+      }
+    },
+    BuffId = 5010002,
+    BuffType = T.RT_2,
+    MaxLayer = 100,
+    MergeRule1 = "Global",
+    MergeRule2 = "Merge"
+  },
   [6000011] = {
     AddAttrs = {
-      [1] = T.RT_37
+      [1] = T.RT_39
     },
     BuffId = 6000011,
     BuffType = T.RT_2,
@@ -3521,24 +3826,24 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 6000013,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Water"
   },
   [6000014] = {
     AddAttrs = {
-      [1] = T.RT_36
+      [1] = T.RT_38
     },
     BuffId = 6000014,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Water"
   },
   [6000021] = {
     AddAttrs = {
-      [1] = T.RT_35
+      [1] = T.RT_37
     },
     BuffId = 6000021,
     BuffType = T.RT_2,
@@ -3553,24 +3858,24 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 6000023,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Fire"
   },
   [6000024] = {
     AddAttrs = {
-      [1] = T.RT_34
+      [1] = T.RT_36
     },
     BuffId = 6000024,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Fire"
   },
   [6000031] = {
     AddAttrs = {
-      [1] = T.RT_33
+      [1] = T.RT_35
     },
     BuffId = 6000031,
     BuffType = T.RT_2,
@@ -3585,24 +3890,24 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 6000033,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Thunder"
   },
   [6000034] = {
     AddAttrs = {
-      [1] = T.RT_32
+      [1] = T.RT_34
     },
     BuffId = 6000034,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Thunder"
   },
   [6000041] = {
     AddAttrs = {
-      [1] = T.RT_31
+      [1] = T.RT_33
     },
     BuffId = 6000041,
     BuffType = T.RT_2,
@@ -3617,24 +3922,24 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 6000043,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Wind"
   },
   [6000044] = {
     AddAttrs = {
-      [1] = T.RT_30
+      [1] = T.RT_32
     },
     BuffId = 6000044,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Wind"
   },
   [6000051] = {
     AddAttrs = {
-      [1] = T.RT_29
+      [1] = T.RT_31
     },
     BuffId = 6000051,
     BuffType = T.RT_2,
@@ -3661,24 +3966,24 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 6000053,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Dark"
   },
   [6000054] = {
     AddAttrs = {
-      [1] = T.RT_28
+      [1] = T.RT_30
     },
     BuffId = 6000054,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Dark"
   },
   [6000061] = {
     AddAttrs = {
-      [1] = T.RT_27
+      [1] = T.RT_29
     },
     BuffId = 6000061,
     BuffType = T.RT_2,
@@ -3705,17 +4010,17 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 6000063,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Light"
   },
   [6000064] = {
     AddAttrs = {
-      [1] = T.RT_26
+      [1] = T.RT_28
     },
     BuffId = 6000064,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
     WeaknessType = "Light"
@@ -3728,7 +4033,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [6000072] = {
     BuffId = 6000072,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -3740,7 +4045,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [6000074] = {
     BuffId = 6000074,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -3752,7 +4057,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [6000076] = {
     BuffId = 6000076,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -3764,7 +4069,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [6000078] = {
     BuffId = 6000078,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -3776,7 +4081,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [6000080] = {
     BuffId = 6000080,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -3788,7 +4093,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [6000082] = {
     BuffId = 6000082,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -3800,7 +4105,7 @@ return ReadOnly("PureLogicBuff", {
     },
     MergeRule1 = "Global",
     MergeRule2 = "Merge",
-    SpecialEffect = T.RT_6
+    SpecialEffect = T.RT_5
   },
   [6000207] = {
     BuffId = 6000207,
@@ -3812,9 +4117,8 @@ return ReadOnly("PureLogicBuff", {
   [6000208] = {
     BuffId = 6000208,
     BuffType = T.RT_2,
-    ForbidBuffType = {
-      [1] = 44
-    },
+    DisperseBuffType = T.RT_26,
+    ForbidBuffType = T.RT_26,
     ForbidCatch = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -3834,7 +4138,7 @@ return ReadOnly("PureLogicBuff", {
   },
   [10101202] = {
     BuffId = 10101202,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -3874,14 +4178,14 @@ return ReadOnly("PureLogicBuff", {
   [10102107] = {
     BattlePetCdRate = -0.3,
     BuffId = 10102107,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10102108] = {
     BattlePetCdRate = -0.5,
     BuffId = 10102108,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
@@ -3895,7 +4199,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [10102110] = {
-    AddAttrs = T.RT_76,
+    AddAttrs = T.RT_81,
     BuffId = 10102110,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
@@ -3947,7 +4251,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [10104302] = {
-    AddAttrs = T.RT_70,
+    AddAttrs = T.RT_72,
     BuffId = 10104302,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
@@ -3979,7 +4283,7 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [10105303] = {
-    AddAttrs = T.RT_13,
+    AddAttrs = T.RT_14,
     BuffId = 10105303,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
@@ -4025,84 +4329,84 @@ return ReadOnly("PureLogicBuff", {
     MergeRule2 = "Merge"
   },
   [10106101] = {
-    AddAttrs = T.RT_118,
+    AddAttrs = T.RT_126,
     BuffId = 10106101,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106102] = {
-    AddAttrs = T.RT_118,
+    AddAttrs = T.RT_126,
     BuffId = 10106102,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106103] = {
-    AddAttrs = T.RT_116,
+    AddAttrs = T.RT_124,
     BuffId = 10106103,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106104] = {
-    AddAttrs = T.RT_116,
+    AddAttrs = T.RT_124,
     BuffId = 10106104,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106105] = {
-    AddAttrs = T.RT_114,
+    AddAttrs = T.RT_122,
     BuffId = 10106105,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106106] = {
-    AddAttrs = T.RT_114,
+    AddAttrs = T.RT_122,
     BuffId = 10106106,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106107] = {
-    AddAttrs = T.RT_112,
+    AddAttrs = T.RT_120,
     BuffId = 10106107,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106108] = {
-    AddAttrs = T.RT_112,
+    AddAttrs = T.RT_120,
     BuffId = 10106108,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106110] = {
-    AddAttrs = T.RT_110,
+    AddAttrs = T.RT_118,
     BuffId = 10106110,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106111] = {
-    AddAttrs = T.RT_110,
+    AddAttrs = T.RT_118,
     BuffId = 10106111,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106112] = {
-    AddAttrs = T.RT_15,
+    AddAttrs = T.RT_16,
     BuffId = 10106112,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10106113] = {
-    AddAttrs = T.RT_15,
+    AddAttrs = T.RT_16,
     BuffId = 10106113,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
@@ -4125,96 +4429,96 @@ return ReadOnly("PureLogicBuff", {
   [10107101] = {
     BuffId = 10107101,
     BuffType = T.RT_2,
-    DotDatas = T.RT_108,
+    DotDatas = T.RT_116,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107102] = {
     BuffId = 10107102,
     BuffType = T.RT_2,
-    DotDatas = T.RT_108,
+    DotDatas = T.RT_116,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107103] = {
-    AddAttrs = T.RT_106,
+    AddAttrs = T.RT_114,
     BuffId = 10107103,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107104] = {
-    AddAttrs = T.RT_106,
+    AddAttrs = T.RT_114,
     BuffId = 10107104,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107106] = {
-    AddAttrs = T.RT_19,
+    AddAttrs = T.RT_20,
     BuffId = 10107106,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107107] = {
-    AddAttrs = T.RT_19,
+    AddAttrs = T.RT_20,
     BuffId = 10107107,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107108] = {
-    AddAttrs = T.RT_104,
+    AddAttrs = T.RT_112,
     BuffId = 10107108,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107109] = {
-    AddAttrs = T.RT_104,
+    AddAttrs = T.RT_112,
     BuffId = 10107109,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107110] = {
-    AddAttrs = T.RT_102,
+    AddAttrs = T.RT_110,
     BuffId = 10107110,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107111] = {
-    AddAttrs = T.RT_102,
+    AddAttrs = T.RT_110,
     BuffId = 10107111,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107113] = {
-    AddAttrs = T.RT_89,
+    AddAttrs = T.RT_94,
     BuffId = 10107113,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107114] = {
-    AddAttrs = T.RT_89,
+    AddAttrs = T.RT_94,
     BuffId = 10107114,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107115] = {
-    AddAttrs = T.RT_17,
+    AddAttrs = T.RT_18,
     BuffId = 10107115,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [10107116] = {
-    AddAttrs = T.RT_17,
+    AddAttrs = T.RT_18,
     BuffId = 10107116,
     BuffType = T.RT_2,
     MergeRule1 = "Global",
@@ -4257,10 +4561,10 @@ return ReadOnly("PureLogicBuff", {
         Value = "#1"
       }
     },
-    AddPassiveEffect = T.RT_98,
+    AddPassiveEffect = T.RT_104,
     BuffId = 10503001,
-    BuffType = T.RT_97,
-    DisperseBuffType = T.RT_96,
+    BuffType = T.RT_103,
+    DisperseBuffType = T.RT_102,
     MergeRule1 = "Personal",
     MergeRule2 = "Merge"
   },
@@ -4292,23 +4596,23 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 20151001,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     DeadNotRemove = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [20152001] = {
-    AddAttrs = T.RT_72,
+    AddAttrs = T.RT_75,
     BuffId = 20152001,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     DeadNotRemove = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [20153001] = {
-    AddAttrs = T.RT_72,
+    AddAttrs = T.RT_75,
     BuffId = 20153001,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     DeadNotRemove = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -4327,7 +4631,7 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 20154001,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     DeadNotRemove = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -4354,14 +4658,14 @@ return ReadOnly("PureLogicBuff", {
       }
     },
     BuffId = 20156002,
-    BuffType = T.RT_25,
+    BuffType = T.RT_27,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [30101002] = {
-    AddAttrs = T.RT_70,
+    AddAttrs = T.RT_72,
     BuffId = 30101002,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     DeadNotRemove = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
@@ -4371,15 +4675,15 @@ return ReadOnly("PureLogicBuff", {
       [1] = {AttrName = "MaxHp", Rate = "#1"}
     },
     BuffId = 30102001,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     DeadNotRemove = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"
   },
   [30102002] = {
-    AddAttrs = T.RT_70,
+    AddAttrs = T.RT_72,
     BuffId = 30102002,
-    BuffType = T.RT_68,
+    BuffType = T.RT_70,
     DeadNotRemove = true,
     MergeRule1 = "Global",
     MergeRule2 = "Merge"

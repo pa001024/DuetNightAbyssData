@@ -1,7 +1,7 @@
 require("UnLua")
 require("DataMgr")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
-local DialogueButtonListView_C = require("BluePrints.Story.Talk.UI.Common.WBP_TalkSelect_Common")
+local OptionList_C = require("BluePrints.Story.Talk.UI.Common.WBP_TalkSelect_Common")
 local WBP_Simple_Common = Class("BluePrints.Story.Talk.UI.BP_TalkBaseUINew_C")
 
 function WBP_Simple_Common:Construct()
@@ -15,8 +15,8 @@ end
 
 function WBP_Simple_Common:Tick(MyGeometry, InDeltaTime)
   WBP_Simple_Common.Super.Tick(self, MyGeometry, InDeltaTime)
-  if self.DialogueButtonListView then
-    self.DialogueButtonListView:ReceiveTick(InDeltaTime)
+  if self.OptionList then
+    self.OptionList:ReceiveTick(InDeltaTime)
   end
 end
 
@@ -252,6 +252,31 @@ function WBP_Simple_Common:ResetNormalButton()
   end
 end
 
+function WBP_Simple_Common:BuildSimpleOptionItemDatas(OptionTexts)
+  local OptionItemDatas = {}
+  for _, OptionItem in ipairs(OptionTexts or {}) do
+    table.insert(OptionItemDatas, {
+      Index = OptionItem.Index,
+      Text = OptionItem.Text,
+      bIsSelected = OptionItem.bIsSelected,
+      bCanReselect = OptionItem.bCanReselect,
+      OptionStyle = OptionItem.OptionStyle,
+      OnItemClickedDelegate = {
+        self,
+        self.OnItemClicked
+      },
+      OnItemClickStartDelegate = {
+        self,
+        self.OnItemClickedStart
+      }
+    })
+  end
+  return OptionItemDatas
+end
+
+local FirstInitTime = 0.5
+local DefaultItemUIPath = "/Game/UI/WBP/Story/Widget/WBP_Story_TalkItem.WBP_Story_TalkItem"
+
 function WBP_Simple_Common:ShowOptions(TalkTask, OptionTexts, OptionData, OnOptionItemClicked)
   DebugPrint("WBP_Simple_Common:ShowOptions")
   self:StopTypingAudio()
@@ -260,26 +285,34 @@ function WBP_Simple_Common:ShowOptions(TalkTask, OptionTexts, OptionData, OnOpti
   self:SwitchEnableTalkClick(false)
   self:SetTipImageHidden(true)
   self:TryHideLastDialoguePic()
-  self.DialogueButtonListView = DialogueButtonListView_C:New()
-  self.DialogueButtonListView:Init(self)
-  self.DialogueButtonListView:BindItemClicked(nil, function(Obj, ItemIdx)
-    self.DialogueButtonListView:UnBindItemClicked()
-    self:ResetNormalButton()
-    self:ClearOptions()
-    OnOptionItemClicked(ItemIdx)
-  end)
+  self.OnOptionClickedCallback = OnOptionItemClicked
+  self.OptionList = OptionList_C:New()
+  self.OptionList:Init(self, {
+    Img_Mouse = self.Img_Mouse,
+    ScrollBox = self.ScrollBox_Talk,
+    ItemUIPathName = DefaultItemUIPath
+  })
+  self.OptionList:SwitchEnableUpDownEvents(false)
+  self.OptionList:SwitchEnableConfirmEvents(false)
   self:SetDialogueButtonListVisibility(ESlateVisibility.Visible)
-  for i, v in ipairs(OptionTexts) do
-    local Item = NewObject(USimpleDialogueButtonItem)
-    Item.Index = v.Index
-    Item.OptionTopic = v.Text
-    Item.OptionStyle = v.OptionStyle
-    Item.bIsSelected = v.bIsSelected
-    Item.bCanReselect = v.bCanReselect
-    self.DialogueButtonListView:AddItem(Item)
+  local OptionItemDatas = self:BuildSimpleOptionItemDatas(OptionTexts)
+  self.OptionList:AddItems(OptionItemDatas)
+  self.OptionList:SetDefaultItem()
+  self.OptionList:UpdateImgMouse()
+  self:AddTimer(FirstInitTime, function()
+    if self.OptionList then
+      self.OptionList:SwitchEnableUpDownEvents(true)
+      self.OptionList:SwitchEnableConfirmEvents(true)
+    end
+  end, false, 0, "SimpleOptionEnableInput", true)
+end
+
+function WBP_Simple_Common:OnItemClicked(ItemIdx)
+  self:ResetNormalButton()
+  self:ClearOptions()
+  if self.OnOptionClickedCallback then
+    self.OnOptionClickedCallback(ItemIdx)
   end
-  self.DialogueButtonListView:SetDefaultItem()
-  self.DialogueButtonListView:UpdateImgMouse()
 end
 
 function WBP_Simple_Common:OnItemClickedStart()
@@ -298,9 +331,10 @@ end
 
 function WBP_Simple_Common:ClearOptions()
   DebugPrint("WBP_Simple_Common:ClearOptions")
-  if self.DialogueButtonListView then
-    self.DialogueButtonListView:ClearListItems()
-    self.DialogueButtonListView = nil
+  self:RemoveTimer("SimpleOptionEnableInput")
+  if self.OptionList then
+    self.OptionList:ClearListItems()
+    self.OptionList = nil
   end
   self:SetDialogueButtonListVisibility(ESlateVisibility.Collapsed)
 end

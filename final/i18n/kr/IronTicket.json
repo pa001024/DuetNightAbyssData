@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1001,
+    "name": "심층 나침반·탐험",
+    "desc": "심층 탐험 오픈에 사용된다.",
+    "func": "심층 나침반",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 100,
+    "rarity": 5,
+    "accessKey": [
+      "Forging"
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "심층 나침반·탐험",
+    "desc": "심층 탐험 오픈에 사용된다.",
+    "func": "심층 나침반",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 90,
+    "rarity": 3
+  }
+]

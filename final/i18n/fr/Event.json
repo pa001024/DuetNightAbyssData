@@ -77,11 +77,46 @@
     "endTime": 1780304400
   },
   {
+    "id": 101012,
+    "name": "Au-delà de la cage",
+    "desc": "Connectez-vous pendant 7 jours pour recevoir des récompenses",
+    "startTime": 1780279200,
+    "endTime": 1782766800
+  },
+  {
+    "id": 101013,
+    "name": "Jour de repos",
+    "desc": "Connectez-vous pendant 7 jours pour recevoir des récompenses",
+    "startTime": 1782784800,
+    "endTime": 1785142800
+  },
+  {
+    "id": 101014,
+    "name": "Cadeaux du voyageur",
+    "desc": "Connectez-vous pendant 14 jours durant l’événement pour recevoir des récompenses",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 101015,
+    "name": "Lapin blanc au pays des merveilles",
+    "desc": "Une jeune fille erre dans ce paradis. Quel conte croisera-t-elle aujourd’hui ? Connectez-vous pendant 5 jours durant l’événement pour obtenir des récompenses.",
+    "startTime": 1784772000,
+    "endTime": 1785790800
+  },
+  {
     "id": 102001,
     "name": "Huaxu — Parfums et Merveilles",
     "desc": "Huaxu, terre paisible où flotte un parfum d’encens.\nVous y êtes {性别:convié|conviée}, attendant que Zhiliu vous dévoile un paysage éthéré, à la fois immémorial et jamais vu.",
     "startTime": 1766408400,
     "endTime": 1775509200
+  },
+  {
+    "id": 102002,
+    "name": "Battement de l’Empire",
+    "desc": "La Gare des Cent-Fleurs, un édifice forgé dans le fer et le feu.\nÀ la recherche de traces de Berenica, vous pénétrez en ces lieux afin d’affronter la menace de la XIIIᵉ Légion.",
+    "startTime": 1780279200,
+    "endTime": 1785142800
   },
   {
     "id": 103001,
@@ -103,14 +138,14 @@
     "name": "Cap sur la longue nuit",
     "desc": "Terminez la quête principale « Proie et prédateur » pour obtenir vos récompenses, dont le [Fragment de pensée : L’Étranger].",
     "startTime": 1761523200,
-    "endTime": null
+    "endTime": 1775527200
   },
   {
     "id": 103004,
     "name": "Sous la pluie battante",
     "desc": "Terminez la quête principale « Les Observateurs » pour obtenir vos récompenses, dont le [Fragment de pensée : Daphne].",
     "startTime": 1761523200,
-    "endTime": null
+    "endTime": 1775527200
   },
   {
     "id": 103005,
@@ -122,7 +157,7 @@
   {
     "id": 103006,
     "name": "Jeux de l’Amitié",
-    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\n  Par exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n  \n  — Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
+    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n\n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
     "startTime": 1762135200,
     "endTime": 1763931600,
     "rule": "Terminez les Jeux réguliers préparés par Lulu, pilleuse de loot pour gagner des Points Luno.\nÀ chaque réinitialisation quotidienne du serveur, vos Collections Luno sont calculées selon vos Points. Les Points excédentaires au-delà de la limite sont convertis en Pièces à un taux fixe.\n\nChaque jour, <highlight>4</> Jeux quotidiens sont renouvelés lors de la réinitialisation du serveur. Après le décompte des Collections du jour précédent, de nouveaux Jeux deviennent disponibles.\nLes Jeux répétables peuvent être complétés plusieurs fois et ne sont pas réinitialisés quotidiennement.\n\nTerminez les Jeux de défi pour obtenir des Points de défi, échangeables contre les Collections de défi de Lulu, pilleuse de loot.\n\nLes Jeux de défi sont publiés en <highlight>2</> phases. Lulu, pilleuse de loot dévoilera de nouveaux Jeux le 5ᵉ jour après le début de l’événement."
@@ -144,7 +179,7 @@
   {
     "id": 103010,
     "name": "Le Rossignol et le Rêve multicolore",
-    "desc": "Quand un jeune rossignol quitte son nid, il découvre l’immensité du ciel, frôle les prairies douces... mais affronte aussi la pluie glacée et les vents furieux.\n  Pourtant, la fillette ne reculera plus : de son pinceau magique, elle peindra des rêves aux mille nuances.\n  Et dans ce monde dur et sans pitié, elle cherchera un coin de ciel éternellement clair, chaud comme dans les contes qui la font rêver.",
+    "desc": "Quand un jeune rossignol quitte son nid, il découvre l’immensité du ciel, frôle les prairies douces... mais affronte aussi la pluie glacée et les vents furieux.\nPourtant, la fillette ne reculera plus : de son pinceau magique, elle peindra des rêves aux mille nuances.\nEt dans ce monde dur et sans pitié, elle cherchera un coin de ciel éternellement clair, chaud comme dans les contes qui la font rêver.",
     "startTime": 1764036000,
     "endTime": null
   },
@@ -161,14 +196,14 @@
     "name": "Tumulte agité",
     "desc": "Terminez le Dédale mystique I à VI pour obtenir des récompenses, dont « Fragment de pensée : Lisbell ».",
     "startTime": 1761523200,
-    "endTime": null
+    "endTime": 1775527200
   },
   {
     "id": 103013,
     "name": "Opération ventre plein",
     "desc": "Accomplissez les quêtes secondaires « En avant, Géniemon ! » et « Tutoriel : Mandats scellés » pour obtenir des récompenses, dont « Fragment de pensée : Truffle et Filbert ».",
     "startTime": 1761523200,
-    "endTime": null
+    "endTime": 1775527200
   },
   {
     "id": 103014,
@@ -245,6 +280,28 @@
     "rule": "1) Cet événement comprend 2 manches, chacune comportant 8 récompenses. L’une d’elles est une apparence souhaitée. Une fois cette apparence obtenue dans une manche, vous recevez immédiatement toutes les récompenses restantes de cette manche. \n2) Avant le premier tissage d’une manche, vous pouvez librement modifier l’apparence souhaitée et les récompenses sélectionnées. Après un premier tissage, ces choix ne peuvent plus être modifiés pour la manche en cours. \n3) Les récompenses d’une même manche ne peuvent être obtenues qu’une seule fois. À mesure que le nombre de récompenses restantes diminue, leur probabilité d’obtention augmente proportionnellement. Une fois la manche terminée, les probabilités sont réinitialisées. \n\n Probabilités initiales d’obtention :\n Apparence de personnage : 0,08 %\n Effet de Bond Cyclonique : 0,92 %\n Accessoire dorsal – Haut : 1 %\n Accessoire de tête : 2 %\n Cadre d’avatar : 13 %\n Avatar : 13 %\n Teinture iridescente ×3 : 35 %\n Carnet de mission — Tome III ×6 : 35 % \n\n Le nombre de Fils stellaires requis augmente avec le nombre de tissages effectués. Une fois la manche terminée, le coût est réinitialisé. \n\nNombre de Fils stellaires requis par tissage :\n1er tissage : Fil stellaire ×1\n2e tissage : Fil stellaire ×3\n3e tissage : Fil stellaire ×6\n4e tissage : Fil stellaire ×10\n5e tissage : Fil stellaire ×15\n6e tissage : Fil stellaire ×20\n7e tissage : Fil stellaire ×25\n8e tissage : Fil stellaire ×30"
   },
   {
+    "id": 103022,
+    "name": "Guide de départ",
+    "desc": "Terminez les activités pour récupérer des récompenses.",
+    "startTime": 1761523200,
+    "endTime": null
+  },
+  {
+    "id": 103023,
+    "name": "Voyage en Atlasia",
+    "desc": "Invitez vos amis et explorez ensemble le continent d’Atlasia.",
+    "startTime": 1780279200,
+    "endTime": 1785142800
+  },
+  {
+    "id": 103024,
+    "name": "Fresques chatoyantes",
+    "desc": "Pendant l’événement, collectionnez certaines apparences afin d’obtenir des points et débloquer de nombreuses récompenses.",
+    "startTime": 1780279200,
+    "endTime": 1785142800,
+    "rule": "活动期间，完成外观收集列表中的收集任务以获得外观积分，消耗月石解锁后可领取丰富奖励"
+  },
+  {
     "id": 105001,
     "name": "[CBT2] Remboursement de recharge",
     "desc": "",
@@ -301,6 +358,13 @@
     "endTime": 1784754000
   },
   {
+    "id": 109003,
+    "name": "Prélude du paradis",
+    "desc": "Consultez la page de l’événement pour récupérer des récompenses.",
+    "startTime": 1784772000,
+    "endTime": 1788382800
+  },
+  {
     "id": 110001,
     "name": "Chroniques périlleuses des Wishen",
     "desc": "Pensées inachevées, vœux non exaucés... Portées par ces êtres nés du hasard, les aventures renaissent en silence.",
@@ -332,6 +396,14 @@
     "rule": "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n\n2) Durant la Phase de groupes, les escouades de Chasseurs de Phoxène obtiennent des points selon leurs performances en combat. Le meilleur score détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe atteint — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n\n3) Durant la phase de Classement suprême, les escouades obtiennent des points de classement selon leurs performances à chaque défi. Le meilleur score détermine le classement au sein du groupe. Les défis du Classement suprême nécessitent un Laissez-passer d’escouade, et chaque tentative permet d’obtenir un certain nombre de Jetons de Phoxène en fonction des points gagnés.\n\n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon le meilleur score atteint durant la phase de Classement suprême.\n\n5) Les escouades n’ayant pas participé à la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués par les paliers de score.\n\nRègles des défis :\n1) Durant les défis de la Phase de groupes, vaincre le nombre d’ennemis requis dans le temps imparti permet de réussir le défi.\n\n2) Durant les défis du Classement suprême, vaincre des ennemis de type Menace mineure inflige des dégâts supplémentaires aux ennemis de type Menace majeure. Éliminer les ennemis de type Menace majeure dans le temps imparti permet de réussir le défi.\n\n3) Lors des défis de la Phase de groupes et du Classement suprême, des points bonus sont accordés en fonction du temps restant.\n\n4) En cas d’échec, des points sont attribués à la fin du temps imparti selon un pourcentage du score estimé."
   },
   {
+    "id": 111004,
+    "name": "Sommet du Chasseur de Phoxène",
+    "desc": "La compétition est gravée dans la nature humaine. Elle a porté nos peuples, les a faits grandir et perdurer jusqu’à aujourd’hui.\nMais ici, il ne s’agit pas de la loi du plus fort. C’est une rivalité maîtrisée — un feu qui insuffle l’élan au groupe et forge les légendes.",
+    "startTime": 1783994400,
+    "endTime": 1785445200,
+    "rule": "Règles du tournoi :\n1) Le Sommet du Chasseur de Phoxène se déroule en deux phases : la Phase de groupes et le Classement suprême. À l’ouverture de l’événement, la Phase de groupes débute immédiatement.\n\n2) Durant la Phase de groupes, les escouades de Chasseurs de Phoxène obtiennent des points selon leurs performances en combat. Le meilleur score détermine leur répartition en groupes. À la fin de la phase, les récompenses sont attribuées selon le groupe atteint — pensez à les récupérer depuis la page de l’événement. Une fois la Phase de groupes terminée, le Classement suprême débute immédiatement.\n\n3) Durant la phase de Classement suprême, les escouades obtiennent des points de classement selon leurs performances à chaque défi. Le meilleur score détermine le classement au sein du groupe. Les défis du Classement suprême nécessitent un Laissez-passer d’escouade, et chaque tentative permet d’obtenir un certain nombre de Jetons de Phoxène en fonction des points gagnés.\n\n4) Les Jetons de Phoxène peuvent être échangés contre des objets dans la boutique de classement. Certains articles se débloquent selon le meilleur score atteint durant la phase de Classement suprême.\n\n5) Les escouades n’ayant pas participé à la Phase de groupes ne seront ni réparties en groupes ni classées durant le Classement suprême. Elles peuvent toutefois relever les défis du Classement suprême pour obtenir des Jetons de Phoxène et effectuer des échanges dans la boutique de classement, y compris pour les objets débloqués par les paliers de score.\n\nRègles des défis :\n1) Durant les défis de la Phase de groupes, vaincre le nombre d’ennemis requis dans le temps imparti permet de réussir le défi.\n\n2) Durant les défis du Classement suprême, vaincre des ennemis de type Menace mineure inflige des dégâts supplémentaires aux ennemis de type Menace majeure. Éliminer les ennemis de type Menace majeure dans le temps imparti permet de réussir le défi.\n\n3) Lors des défis de la Phase de groupes et du Classement suprême, des points bonus sont accordés en fonction du temps restant.\n\n4) En cas d’échec, des points sont attribués à la fin du temps imparti selon un pourcentage du score estimé."
+  },
+  {
     "id": 112001,
     "name": "Croisière étoilée",
     "desc": "Obtenez des récompenses en fonction du temps total passé dans les Zones en coop pendant l’événement",
@@ -346,6 +418,13 @@
     "endTime": 1779570000
   },
   {
+    "id": 112003,
+    "name": "Croisière étoilée",
+    "desc": "Obtenez des récompenses en fonction du temps total passé dans les Zones en coop pendant l’événement",
+    "startTime": 1783562400,
+    "endTime": 1785099600
+  },
+  {
     "id": 113001,
     "name": "Registre des trésors",
     "desc": "Obtenez des récompenses en fonction du montant total rechargé pendant l’événement",
@@ -358,6 +437,13 @@
     "desc": "Entamez votre retour et obtenez de superbes récompenses",
     "startTime": 1704081600,
     "endTime": null
+  },
+  {
+    "id": 121001,
+    "name": "Théâtre immersif",
+    "desc": "Ensemble, nous déciderons de la direction que prendra l’histoire. Plongez dans notre représentation et menons ensemble ce récit vers son dénouement parfait.",
+    "startTime": 1781748000,
+    "endTime": 1783544400
   },
   {
     "id": 1020012,
@@ -423,12 +509,82 @@
     "rule": "<Title>Règles du Théâtre immersif</>\n\n1) Le Théâtre immersif se compose de trois sections : [Représentation classique], [Représentation à l’affiche] et [Représentation immortelle]. Vous devez terminer la section précédente pour déverrouiller la suivante. La Représentation classique est un défi unique, tandis que les Représentations à l’affiche et immortelles s’alternent à chaque mise à jour. La Représentation immortelle propose des scènes permanentes, rejouables une fois les conditions requises remplies.\n\n2) Vaincre tous les ennemis dans le temps imparti permet de réussir le défi. Chaque scène rapporte des Étoiles et des Billets souvenir. Les Étoiles donnent accès à des récompenses de palier, et les Billets souvenir peuvent être échangés à la Boutique du Théâtre contre des objets exclusifs.\n\n3) Les Représentations classique et à l’affiche comportent deux manches : l’Odyssée du héros et le Retour du héros, chacune nécessitant une équipe différente. Les récompenses finales dépendent du nombre total d’Étoiles obtenues au cours des deux manches. La Représentation immortelle ne contient que l’Odyssée du héros.\n\n4) Chaque manche se divise en cinq salles à franchir successivement. Terminer toutes les salles des deux manches permet de débloquer l’acte suivant. En cas d’échec ou de dépassement de temps, la progression s’interrompt.\n\n5) Chaque scène comporte un effet spécial appelé [Résonance scénique], qui confère des bonus ou malus pendant le combat. Ajustez votre stratégie en conséquence."
   },
   {
+    "id": 1030029,
+    "name": "Théâtre immersif",
+    "desc": "Vous êtes à la fois spectateur et acteur du récit. Entrez dans votre propre scène — là où le courage affronte les plus puissants adversaires, et où la joie d’un dénouement parfait vous attend.",
+    "startTime": 1780365600,
+    "endTime": 1782784800,
+    "rule": "<Title>Règles du Théâtre immersif</>\n\n1) Le Théâtre immersif se compose de trois sections : [Représentation classique], [Représentation à l’affiche] et [Représentation immortelle]. Vous devez terminer la section précédente pour déverrouiller la suivante. La Représentation classique est un défi unique, tandis que les Représentations à l’affiche et immortelles s’alternent à chaque mise à jour. La Représentation immortelle propose des scènes permanentes, rejouables une fois les conditions requises remplies.\n\n2) Vaincre tous les ennemis dans le temps imparti permet de réussir le défi. Chaque scène rapporte des Étoiles et des Billets souvenir. Les Étoiles donnent accès à des récompenses de palier, et les Billets souvenir peuvent être échangés à la Boutique du Théâtre contre des objets exclusifs.\n\n3) Les Représentations classique et à l’affiche comportent deux manches : l’Odyssée du héros et le Retour du héros, chacune nécessitant une équipe différente. Les récompenses finales dépendent du nombre total d’Étoiles obtenues au cours des deux manches. La Représentation immortelle ne contient que l’Odyssée du héros.\n\n4) Chaque manche se divise en cinq salles à franchir successivement. Terminer toutes les salles des deux manches permet de débloquer l’acte suivant. En cas d’échec ou de dépassement de temps, la progression s’interrompt.\n\n5) Chaque scène comporte un effet spécial appelé [Résonance scénique], qui confère des bonus ou malus pendant le combat. Ajustez votre stratégie en conséquence."
+  },
+  {
+    "id": 1030030,
+    "name": "Théâtre immersif",
+    "desc": "Vous êtes à la fois spectateur et acteur du récit. Entrez dans votre propre scène — là où le courage affronte les plus puissants adversaires, et où la joie d’un dénouement parfait vous attend.",
+    "startTime": 1782784800,
+    "endTime": 1785142800,
+    "rule": "<Title>Règles du Théâtre immersif</>\n\n1) Le Théâtre immersif se compose de trois sections : [Représentation classique], [Représentation à l’affiche] et [Représentation immortelle]. Vous devez terminer la section précédente pour déverrouiller la suivante. La Représentation classique est un défi unique, tandis que les Représentations à l’affiche et immortelles s’alternent à chaque mise à jour. La Représentation immortelle propose des scènes permanentes, rejouables une fois les conditions requises remplies.\n\n2) Vaincre tous les ennemis dans le temps imparti permet de réussir le défi. Chaque scène rapporte des Étoiles et des Billets souvenir. Les Étoiles donnent accès à des récompenses de palier, et les Billets souvenir peuvent être échangés à la Boutique du Théâtre contre des objets exclusifs.\n\n3) Les Représentations classique et à l’affiche comportent deux manches : l’Odyssée du héros et le Retour du héros, chacune nécessitant une équipe différente. Les récompenses finales dépendent du nombre total d’Étoiles obtenues au cours des deux manches. La Représentation immortelle ne contient que l’Odyssée du héros.\n\n4) Chaque manche se divise en cinq salles à franchir successivement. Terminer toutes les salles des deux manches permet de débloquer l’acte suivant. En cas d’échec ou de dépassement de temps, la progression s’interrompt.\n\n5) Chaque scène comporte un effet spécial appelé [Résonance scénique], qui confère des bonus ou malus pendant le combat. Ajustez votre stratégie en conséquence."
+  },
+  {
+    "id": 1030031,
+    "name": "Théâtre immersif",
+    "desc": "Vous êtes à la fois spectateur et acteur du récit. Entrez dans votre propre scène — là où le courage affronte les plus puissants adversaires, et où la joie d’un dénouement parfait vous attend.",
+    "startTime": null,
+    "endTime": null,
+    "rule": "<Title>Règles du Théâtre immersif</>\n\n1) Le Théâtre immersif se compose de trois sections : [Représentation classique], [Représentation à l’affiche] et [Représentation immortelle]. Vous devez terminer la section précédente pour déverrouiller la suivante. La Représentation classique est un défi unique, tandis que les Représentations à l’affiche et immortelles s’alternent à chaque mise à jour. La Représentation immortelle propose des scènes permanentes, rejouables une fois les conditions requises remplies.\n\n2) Vaincre tous les ennemis dans le temps imparti permet de réussir le défi. Chaque scène rapporte des Étoiles et des Billets souvenir. Les Étoiles donnent accès à des récompenses de palier, et les Billets souvenir peuvent être échangés à la Boutique du Théâtre contre des objets exclusifs.\n\n3) Les Représentations classique et à l’affiche comportent deux manches : l’Odyssée du héros et le Retour du héros, chacune nécessitant une équipe différente. Les récompenses finales dépendent du nombre total d’Étoiles obtenues au cours des deux manches. La Représentation immortelle ne contient que l’Odyssée du héros.\n\n4) Chaque manche se divise en cinq salles à franchir successivement. Terminer toutes les salles des deux manches permet de débloquer l’acte suivant. En cas d’échec ou de dépassement de temps, la progression s’interrompt.\n\n5) Chaque scène comporte un effet spécial appelé [Résonance scénique], qui confère des bonus ou malus pendant le combat. Ajustez votre stratégie en conséquence."
+  },
+  {
     "id": 10300601,
     "name": "Jeux de l’Amitié",
-    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\n  Par exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n  \n  — Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
+    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n\n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
     "startTime": 1773367200,
     "endTime": 1774645200,
     "rule": "Terminez les Jeux réguliers préparés par Lulu, pilleuse de loot pour gagner des Points Luno.\nÀ chaque réinitialisation quotidienne du serveur, vos Collections Luno sont calculées selon vos Points. Les Points excédentaires au-delà de la limite sont convertis en Pièces à un taux fixe.\n\nChaque jour, <highlight>4</> Jeux quotidiens sont renouvelés lors de la réinitialisation du serveur. Après le décompte des Collections du jour précédent, de nouveaux Jeux deviennent disponibles.\nLes Jeux répétables peuvent être complétés plusieurs fois et ne sont pas réinitialisés quotidiennement.\n\nTerminez les Jeux de défi pour obtenir des Points de défi, échangeables contre les Collections de défi de Lulu, pilleuse de loot.\n\nLes Jeux de défi sont publiés en <highlight>2</> phases. Lulu, pilleuse de loot dévoilera de nouveaux Jeux le 5ᵉ jour après le début de l’événement."
+  },
+  {
+    "id": 10300602,
+    "name": "Jeux de l’Amitié",
+    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n\n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
+    "startTime": 1781143200,
+    "endTime": 1782421200,
+    "rule": "Terminez les Jeux réguliers préparés par Lulu, pilleuse de loot pour gagner des Points Luno.\nÀ chaque réinitialisation quotidienne du serveur, vos Collections Luno sont calculées selon vos Points. Les Points excédentaires au-delà de la limite sont convertis en Pièces à un taux fixe.\n\nChaque jour, <highlight>4</> Jeux quotidiens sont renouvelés lors de la réinitialisation du serveur. Après le décompte des Collections du jour précédent, de nouveaux Jeux deviennent disponibles.\nLes Jeux répétables peuvent être complétés plusieurs fois et ne sont pas réinitialisés quotidiennement.\n\nTerminez les Jeux de défi pour obtenir des Points de défi, échangeables contre les Collections de défi de Lulu, pilleuse de loot.\n\nLes Jeux de défi sont publiés en <highlight>2</> phases. Lulu, pilleuse de loot dévoilera de nouveaux Jeux le 5ᵉ jour après le début de l’événement."
+  },
+  {
+    "id": 10301101,
+    "name": "皎皎铁道周游",
+    "desc": "嘟嘟皎皎想要让所有人了解铁路的美妙，制造喧闹。\n于是冰湖城的其他皎皎们也一起前来帮忙，唱唱跳跳。（待包装）",
+    "startTime": 1780538400,
+    "endTime": 1782334800,
+    "rule": "<H>皎皎特别剧场活动规则</>\n1.活动开启后，可在<H>嘟嘟皎皎</>处报名参加活动。\n2.在<H>皎谊舞会</>中，跟随舞台上皎皎的指示，展示对应的<H>魔灵</>和<H>展示动作</>完成匹配，可获得奖励。展示同种类型的魔灵即可完成匹配，释放“奇迹你好箱”的技能可以完成<H>闪光你好箱</>和<H>锐意你好箱</>的匹配。\n3.在每次<H>皎谊舞会</>中，完成一次及以上的匹配，舞会结束时可以获得<H>高级奖励</>。每个账号在活动期间最多获得<H>5</>次<H>高级奖励</>，之后即使完成多次匹配，也仅能获得<H>普通奖励</>。两次<H>皎谊舞会</>的间隔为半个小时。\n4.在<H>欢聚一时</>中，交付素材达到一定进度后，会获得奖励。奖励将通过全服邮件发送。\n5.在<H>欢聚一时</>中，点击【自动添加】会依照材料品质自动加入可交付素材。\n6.在<H>欢聚一时</>中，素材交付已完成所有进度后，【自动添加】不再可用，但仍然可以手动添加并交付素材,完成任务并获取奖励。\n（待包装）"
+  },
+  {
+    "id": 10302001,
+    "name": "Souvenirs étoilés",
+    "desc": "Terminez des missions pendant l’événement pour obtenir des récompenses",
+    "startTime": 1782352800,
+    "endTime": 1783889999,
+    "rule": "1) Pendant l’événement, vous recevrez 2 cadeaux stellaires par jour, utilisables avec des Pièces stellaires.\n2) Les missions permettent d’obtenir des Pièces stellaires, échangeables contre des cadeaux ou dans la boutique stellaire.\n3) Jusqu’à 21 cadeaux stellaires peuvent être conservés ; au-delà, aucun nouveau cadeau ne sera ajouté.",
+    "boxDrop": {
+      "boxCoinId": 223,
+      "boxMaximum": 21,
+      "boxPerDay": 2,
+      "coinPerBox": 3,
+      "eventId": 10302001,
+      "rewardCount": [
+        30
+      ],
+      "rewardId": [
+        114103,
+        114104
+      ]
+    }
+  },
+  {
+    "id": 10302101,
+    "name": "祷音回廊",
+    "desc": "活动期间可获取[七日圣约]系列形象及其他外观奖励",
+    "startTime": 1782784800,
+    "endTime": 1785142800,
+    "rule": "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n3、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n4、各奖励的初始获取概率如下\n角色形象：0.08%\n螺旋飞跃特效：0.92%\n背部装饰·下：1%\n脸部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n5、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30\n"
   },
   {
     "id": 103009001,
@@ -468,6 +624,22 @@
     "desc": "Pendant l’événement, les Sceaux démoniaques ont un taux de butin accru dans les missions du Manuel des Vagabonds de la Nuit.\nDes missions temporaires de Sceaux démoniaques sont également disponibles.",
     "startTime": 1778724000,
     "endTime": 1779310800,
+    "rule": "Pendant l’événement, les missions du Manuel des Vagabonds de la Nuit accordent un bonus de Sceaux démoniaques (jusqu’à <highlight>6</> fois par jour). Ce bonus se cumule avec celui du Manuel. En lançant une mission pendant cette période, vous obtiendrez davantage de Sceaux démoniaques.\n\nChaque jour, vous pouvez tenter jusqu’à <highlight>3</> missions temporaires de Sceaux démoniaques. Les tentatives ne se cumulent pas et sont réinitialisées lors du reset quotidien.\n\nChaque mission de Sceaux démoniaques du Manuel des Vagabonds de la Nuit possède une variante temporaire où les Ordonnateurs apparaissent en grand nombre."
+  },
+  {
+    "id": 103009006,
+    "name": "Jour d’abondance",
+    "desc": "Pendant l’événement, les Sceaux démoniaques ont un taux de butin accru dans les missions du Manuel des Vagabonds de la Nuit.\nDes missions temporaires de Sceaux démoniaques sont également disponibles.",
+    "startTime": 1781143200,
+    "endTime": 1781730000,
+    "rule": "Pendant l’événement, les missions du Manuel des Vagabonds de la Nuit accordent un bonus de Sceaux démoniaques (jusqu’à <highlight>6</> fois par jour). Ce bonus se cumule avec celui du Manuel. En lançant une mission pendant cette période, vous obtiendrez davantage de Sceaux démoniaques.\n\nChaque jour, vous pouvez tenter jusqu’à <highlight>3</> missions temporaires de Sceaux démoniaques. Les tentatives ne se cumulent pas et sont réinitialisées lors du reset quotidien.\n\nChaque mission de Sceaux démoniaques du Manuel des Vagabonds de la Nuit possède une variante temporaire où les Ordonnateurs apparaissent en grand nombre."
+  },
+  {
+    "id": 103009007,
+    "name": "Jour d’abondance",
+    "desc": "Pendant l’événement, les Sceaux démoniaques ont un taux de butin accru dans les missions du Manuel des Vagabonds de la Nuit.\nDes missions temporaires de Sceaux démoniaques sont également disponibles.",
+    "startTime": 1783648800,
+    "endTime": 1784235600,
     "rule": "Pendant l’événement, les missions du Manuel des Vagabonds de la Nuit accordent un bonus de Sceaux démoniaques (jusqu’à <highlight>6</> fois par jour). Ce bonus se cumule avec celui du Manuel. En lançant une mission pendant cette période, vous obtiendrez davantage de Sceaux démoniaques.\n\nChaque jour, vous pouvez tenter jusqu’à <highlight>3</> missions temporaires de Sceaux démoniaques. Les tentatives ne se cumulent pas et sont réinitialisées lors du reset quotidien.\n\nChaque mission de Sceaux démoniaques du Manuel des Vagabonds de la Nuit possède une variante temporaire où les Ordonnateurs apparaissent en grand nombre."
   },
   {
@@ -520,6 +692,20 @@
     "endTime": 1780304400
   },
   {
+    "id": 105101020,
+    "name": "Traces dans le sable",
+    "desc": "Vous l’avez rencontrée dans le royaume du nord, entre fer et neige.\nElle dissimule ses égarements derrière sa fierté,\npourchasse ce qui doit rester secret, tout en scellant au fond d’elle ses tourments.\nAvant que ses mains immaculées ne se teintent de pourpre,\nelle a juré un serment de vie et de mort.",
+    "startTime": 1780279200,
+    "endTime": 1782766800
+  },
+  {
+    "id": 105101021,
+    "name": "Traces dans le sable",
+    "desc": "Lorsque le banquet s’apaise, lorsque les verres se taisent, lorsque la lueur des chandelles vacille d’un éclat ambigu,\nla servante soulève sa jupe et fléchit le genou avec élégance : les véritables réjouissances ne font que commencer —\nQue les balles chantent jusqu’au silence, que les masques dansent jusqu’à leur chute,\nne craignez pas le désordre final : ne laisser aucune trace est la vertu d’une servante.",
+    "startTime": 1782784800,
+    "endTime": 1785142800
+  },
+  {
     "id": 105102011,
     "name": "Quand les rêves se parent de nuit",
     "desc": "Par une nuit d’été, sous un ciel étoilé, la forêt s’anime d’une valse où se mêlent pensées sauvages et ailes de papillon... Un spectacle qu’elle n’avait jamais contemplé.",
@@ -560,5 +746,19 @@
     "desc": "À pleine puissance — Qingluan prend son envol !",
     "startTime": 1775440800,
     "endTime": 1780304400
+  },
+  {
+    "id": 105102022,
+    "name": "Vers l’autre rive",
+    "desc": "Traverser cette mer de souffrance hérissée d’épines pour atteindre l’autre rive baignée de lumière.",
+    "startTime": 1780279200,
+    "endTime": 1785142800
+  },
+  {
+    "id": 105102023,
+    "name": "Danser avec la mer",
+    "desc": "Main dans la main, dansons, et que cet instant se fige dans l’éternité.",
+    "startTime": 1780279200,
+    "endTime": 1785142800
   }
 ]

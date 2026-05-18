@@ -3,7 +3,7 @@ local M = Class()
 
 function M:ReceiveBeginPlay()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "Android" == PlatformName or "IOS" == PlatformName then
+  if "Android" == PlatformName or "IOS" == PlatformName or "OpenHarmony" == PlatformName then
     self.bMeshLodBudgetEnable = true
   else
     self.bMeshLodBudgetEnable = false
@@ -167,8 +167,46 @@ function M:SetCustomNpcFlexibShowOrHide()
           DebugPrint("QuestChain state is error:", FlexibleQuestChainId)
         end
       end
+    elseif 4 == TempFlexibleMap[i].NpcArray.EditableStructType then
+      local FuncName = TempFlexibleMap[i].NpcArray.Var.FunctionName
+      local VarName = TempFlexibleMap[i].NpcArray.Var.VarName
+      local ParamName = TempFlexibleMap[i].NpcArray.Var.ParamName
+      local ParamValue = TempFlexibleMap[i].NpcArray.Var.ParamValue
+      if self:FlexibleCheckVarFunc(FuncName, VarName, ParamName, ParamValue) then
+        SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
+        return
+      end
     end
   end
+end
+
+function M:FlexibleCheckVarFunc(FunctionName, VarName, ParamName, ParamValue)
+  if not VarName or "" == VarName then
+    return false
+  end
+  local VarInfo = DataMgr.StoryVariable[VarName]
+  if not VarInfo then
+    return true
+  end
+  local VarLogType = UE.EStoryLogType.StoryVar
+  local NewVarInfos = {}
+  if tonumber(ParamValue) then
+    NewVarInfos[ParamName] = tonumber(ParamValue)
+  else
+    NewVarInfos[ParamName] = ParamValue
+  end
+  local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
+  local Ret = StorySubsystem:ExecuteBlueprintVarFunction(FunctionName, VarName, NewVarInfos, nil, true)
+  if type(Ret) ~= "number" or 0 ~= Ret % 1 then
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "灵活显隐/生成执行出错", "函数[" .. tostring(FunctionName) .. "]的返回值不是bool类型")
+    return false
+  end
+  if 0 == Ret then
+    return false
+  elseif 1 == Ret then
+    return true
+  end
+  return true
 end
 
 function M:ActiveSetCustomNpcHideByAvatarSuitData()

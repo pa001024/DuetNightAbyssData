@@ -88,6 +88,33 @@ function M:GetRewardItem()
   end
 end
 
+function M:HasMonthCard()
+  local Avatar = self:GetAvatar()
+  if Avatar and Avatar.MonthlyCardExpireTime > TimeUtils.NowTime() and self:GetMonthCardLeftTimes() > 0 then
+    return true
+  end
+  return false
+end
+
+function M:HasGetMonthCardDailyReward()
+  local Avatar = self:GetAvatar()
+  DebugPrint("Yihan@  HasGetMonthCardDailyReward: ", Avatar.LastMonthlyCardDailyRewardTime, TimeUtils.NowTime())
+  if Avatar and Avatar.LastMonthlyCardDailyRewardTime and 0 ~= Avatar.LastMonthlyCardDailyRewardTime then
+    return TimeUtils.GetIntervalDay(Avatar.LastMonthlyCardDailyRewardTime, TimeUtils.NowTime()) < 1
+  end
+  return false
+end
+
+function M:CanGetMonthCardDailyReward()
+  if not self:HasMonthCard() then
+    return false
+  end
+  if self:HasGetMonthCardDailyReward() then
+    return false
+  end
+  return true
+end
+
 function M:GetRewardNameAndIcon(RewardInfos)
   if not RewardInfos then
     return

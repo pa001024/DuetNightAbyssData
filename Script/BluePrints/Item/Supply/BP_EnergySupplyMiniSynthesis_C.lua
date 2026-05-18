@@ -43,9 +43,10 @@ function BP_EnergySupplyMiniSynthesis_C:ChangeEnergy_Lua(ChangeValue, bFromMonst
     DebugPrint("zwk ChangeEnergy_Lua NowEnergy or MaxEnergy is nil. ", self.NowEnergy, self.MaxEnergy, self:GetName())
     return
   end
-  self.NowEnergy = self.NowEnergy + ChangeValue
-  self.NowEnergy = math.min(self.NowEnergy, self.MaxEnergy)
-  self.NowEnergy = math.max(self.NowEnergy, 0)
+  local newEnergy = self.NowEnergy + ChangeValue
+  newEnergy = math.min(newEnergy, self.MaxEnergy)
+  newEnergy = math.max(newEnergy, 0)
+  self:SetNowEnergy(newEnergy)
   if IsAuthority(self) then
     local GameMode = UE4.UGameplayStatics.GetGameMode(self)
     if GameMode and self.NowEnergy >= self.MaxEnergy then
@@ -78,7 +79,7 @@ function BP_EnergySupplyMiniSynthesis_C:SyncEnergy()
   local GameState = UE4.UGameplayStatics.GetGameState(self)
   local Energy = GameState.SynthesisNowEnergyValues:FindRef(self.Eid)
   if Energy then
-    self.NowEnergy = 0
+    self:SetNowEnergy(0)
     DebugPrint("zwk BP_EnergySupplyMiniSynthesis_C:SyncEnergy ChangeEnergy ", self.NowEnergy, self.MaxEnergy, self:GetName())
     self:ChangeEnergy(Energy, false)
   end

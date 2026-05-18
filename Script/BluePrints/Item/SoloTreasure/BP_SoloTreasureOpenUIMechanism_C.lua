@@ -9,8 +9,7 @@ function M:CommonInitInfo(Info)
   else
     self.UnlockPoint = 0
   end
-  local ServerEntity = GWorld:GetServerEntity()
-  self.DungeonObject = ServerEntity:GetDungeonObject()
+  self.DungeonObject = GWorld:GetGameModeDungeonObject()
   self.ChestInteractiveComponent:InitInteractiveComponent(self.Data.InteractiveId)
 end
 

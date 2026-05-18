@@ -53,6 +53,14 @@ return ReadOnly("WeaponBlueprintId", {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_L",
     WeaponBlueprintId = 2021
   },
+  ["/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_Leyuan_L"] = {
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_Leyuan_L",
+    WeaponBlueprintId = 2027
+  },
+  ["/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_Leyuan_R"] = {
+    WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_Leyuan_R",
+    WeaponBlueprintId = 2028
+  },
   ["/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_R"] = {
     WeaponBlueprint = "/Game/AssetDesign/Weapon/Crossbow/BP_Crossbow01_R",
     WeaponBlueprintId = 2022

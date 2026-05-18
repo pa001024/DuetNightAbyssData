@@ -155,6 +155,16 @@ function M:NewNpcInitComponent_CheckIsActiveFlexibleDestory(Object)
   return false
 end
 
+function M:NewNpcInitComponent_TryGetAvatarPetParam()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return 0, 0, false
+  end
+  local CurrentRegionId = Avatar:GetSubRegionId2RegionId()
+  local TryMaxPetRegionId = Avatar.TryMaxPetRegionId or 0
+  return CurrentRegionId, TryMaxPetRegionId, true
+end
+
 function M:NewNpcInitComponent_TrySetRandomPetShowOrHideState(Owner, RandomCreatorId, WorldRegionEid)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then

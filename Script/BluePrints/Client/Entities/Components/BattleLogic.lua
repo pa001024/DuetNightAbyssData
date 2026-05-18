@@ -146,4 +146,15 @@ function Component:OnMatchFailed(Reason)
   EventManager:FireEvent(EventID.TeamMatchCancel, Reason)
 end
 
+function Component:OnServerDungeonEnd(IsWin)
+  DebugPrint("OnServerDungeonEnd", IsWin)
+  local GameInstance = GWorld.GameInstance
+  local GameMode = UE4.UGameplayStatics.GetGameMode(GameInstance)
+  if IsWin then
+    GameMode:TriggerDungeonWin()
+  else
+    GameMode:TriggerDungeonFailed()
+  end
+end
+
 return Component

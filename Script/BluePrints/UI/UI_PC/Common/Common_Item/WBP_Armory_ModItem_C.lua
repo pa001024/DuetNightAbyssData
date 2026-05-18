@@ -45,7 +45,8 @@ function M:UpdateModItem(Content)
     ModCost = ModDataInfo.Cost
   end
   self:SetRarity(Content.Rarity)
-  self:SetIcon(ModDataInfo.Icon)
+  local Icon = ModDataInfo.Icon
+  self:SetIcon(Icon)
   self.ItemDetails_MenuAnchor:SetAllowHover(true)
   if Mod then
     if Mod:IsLock() then

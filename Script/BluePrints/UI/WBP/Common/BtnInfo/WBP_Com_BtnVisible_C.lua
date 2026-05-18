@@ -26,10 +26,14 @@ end
 function M:UpdateView()
   if self.IsActive then
     self:PlayAnimationForward(self.ON)
-    self.TargetWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self.TargetWidget then
+      self.TargetWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     self:PlayAnimationForward(self.OFF)
-    self.TargetWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.TargetWidget then
+      self.TargetWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
   end
 end
 

@@ -2,7 +2,7 @@ local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
 local EDialogueIterType = TalkUtils.EDialogueIterType
 local M = Class({
-  "BluePrints.Story.StoryIteration.StoryIterationNode"
+  "BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode"
 })
 M.NodeType = EDialogueNodeType.CheckCondition
 

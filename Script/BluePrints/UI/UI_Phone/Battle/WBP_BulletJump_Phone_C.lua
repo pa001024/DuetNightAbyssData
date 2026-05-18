@@ -9,6 +9,7 @@ M._components = {
 
 function M:Construct()
   self.OwnerPlayer = UGameplayStatics.GetPlayerCharacter(self, 0)
+  self.Btn_BulletJump:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Btn_BulletJump.OnPressed:Add(self, self.OnBtnPressed)
   self.Btn_BulletJump.OnReleased:Add(self, self.OnBtnReleased)
   self.LocalTurnSpeed_Horizontal = 4.5
@@ -19,6 +20,10 @@ function M:Construct()
 end
 
 function M:OnBtnPressed()
+  if self.OwnerPanel and self.OwnerPanel.Fly and self.OwnerPanel.Fly:CheckIsSkillFlying() then
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_Mechanism_CannotHook"))
+    return
+  end
   if self.OwnerPlayer:CheckSkillInActive(ESkillName.BulletJump) then
     return
   end
@@ -60,6 +65,10 @@ function M:StopAutoRetryTimer()
 end
 
 function M:ButtonBulletJumpDown(Index, StartPos)
+  if self.OwnerPanel and self.OwnerPanel.Fly and self.OwnerPanel.Fly:CheckIsSkillFlying() then
+    UIManager(self):ShowUITip("CommonToastMain", GText("UI_Mechanism_CannotHook"))
+    return
+  end
   if self.OwnerPlayer:CheckSkillInActive(ESkillName.BulletJump) then
     return
   end

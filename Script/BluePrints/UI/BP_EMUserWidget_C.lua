@@ -15,7 +15,7 @@ function M:_SetUpScrollBoxRStickInput(ScrollView, ScrollSpeed, bIsReserve)
 end
 
 function M:ProcessAndroidSafeZoneRule(PlatformName)
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     if not self.MainSafeZone then
       return
     end

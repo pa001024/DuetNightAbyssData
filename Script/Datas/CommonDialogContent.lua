@@ -185,6 +185,9 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Item_SelectHint.WBP_Com_Dialog_Item_SelectHint'",
     ContentId = "Item_SelectHint"
   },
+  Item_SelectHint_Double = {
+    ContentId = "Item_SelectHint_Double"
+  },
   Item_Tip1 = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Item_Tip1.WBP_Com_Dialog_Item_Tip1'",
     ContentId = "Item_Tip1"
@@ -281,9 +284,28 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Fort/WBP_Activity_BuffDialog.WBP_Activity_BuffDialog'",
     ContentId = "WBP_Activity_BuffDialog"
   },
+  WBP_Activity_Coop_BeMaster = {
+    ContentId = "WBP_Activity_Coop_BeMaster"
+  },
+  WBP_Activity_Coop_ShareChannelPopUp = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_Coop_SharePopUp.WBP_Activity_Coop_SharePopUp'",
+    ContentId = "WBP_Activity_Coop_ShareChannelPopUp"
+  },
+  WBP_Activity_LimitedPrizePool_DetailHistoryContent_Frame = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Frame/WBP_Activity_LimitedPrizePool_DetailHistoryContent_Frame.WBP_Activity_LimitedPrizePool_DetailHistoryContent_Frame'",
+    ContentId = "WBP_Activity_LimitedPrizePool_DetailHistoryContent_Frame"
+  },
   WBP_Activity_TotalRecharge_DetailHistoryContent = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/TotalRecharge/WBP_Activity_TotalRecharge_DetailHistoryContent.WBP_Activity_TotalRecharge_DetailHistoryContent'",
     ContentId = "WBP_Activity_TotalRecharge_DetailHistoryContent"
+  },
+  WBP_Appearance_Archive_FenghuaDialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/Archive/WBP_Appearance_Archive_FenghuaDialog.WBP_Appearance_Archive_FenghuaDialog’",
+    ContentId = "WBP_Appearance_Archive_FenghuaDialog"
+  },
+  WBP_Appearance_ImportDyeDialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/Import/WBP_Appearance_ImportDyeDialog.WBP_Appearance_ImportDyeDialog’",
+    ContentId = "WBP_Appearance_ImportDyeDialog"
   },
   WBP_Armory_AttrRestraintDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Unit/WBP_Armory_AttrRestraintDialog.WBP_Armory_AttrRestraintDialog'",
@@ -292,6 +314,18 @@ return ReadOnly("CommonDialogContent", {
   WBP_Armory_DefinitionDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/CharSkill/WBP_Armory_DefinitionDialog.WBP_Armory_DefinitionDialog'",
     ContentId = "WBP_Armory_DefinitionDialog"
+  },
+  WBP_Armory_Dye_Num = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Dye/WBP_Armory_DyeCostDialog.WBP_Armory_DyeCostDialog'",
+    ContentId = "WBP_Armory_Dye_Num"
+  },
+  WBP_Armory_Incarnon_ActiveDialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Incarnon/WBP_Armory_Incarnon_ActiveDialog.WBP_Armory_Incarnon_ActiveDialog’",
+    ContentId = "WBP_Armory_Incarnon_ActiveDialog"
+  },
+  WBP_Armory_Incarnon_DescDialog = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Incarnon/WBP_Armory_Incarnon_DescDialog.WBP_Armory_Incarnon_DescDialog’",
+    ContentId = "WBP_Armory_Incarnon_DescDialog"
   },
   WBP_Armory_PosInfoDialog = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Unit/WBP_Armory_PosInfoDialog.WBP_Armory_PosInfoDialog'",
@@ -349,6 +383,22 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Gift/Widget/WBP_Gift_ShopTarget_ChooseFriendContent'",
     ContentId = "WBP_Gift_ShopTarget_ChooseFriendContent"
   },
+  WBP_Guild_DialogApplyList = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Apply/WBP_Guild_DialogApplyList.WBP_Guild_DialogApplyList'",
+    ContentId = "WBP_Guild_DialogApplyList"
+  },
+  WBP_Guild_DialogDetails_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Dialog/WBP_Guild_DialogDetails.WBP_Guild_DialogDetails'",
+    ContentId = "WBP_Guild_DialogDetails_Content"
+  },
+  WBP_Guild_DialogRole_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/Dialog/WBP_Guild_DialogRole.WBP_Guild_DialogRole'",
+    ContentId = "WBP_Guild_DialogRole_Content"
+  },
+  WBP_Guild_RewardPreview_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Guild/Widget/RewardPreview/WBP_Guild_RewardPreview.WBP_Guild_RewardPreview'",
+    ContentId = "WBP_Guild_RewardPreview_Content"
+  },
   WBP_Login_OverSeaSeverContent = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Login/Widget/WBP_Login_OverSeaSeverContent.WBP_Login_OverSeaSeverContent'",
     ContentId = "WBP_Login_OverSeaSeverContent"
@@ -377,6 +427,10 @@ return ReadOnly("CommonDialogContent", {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/OverSea/WBP_Shop_Brithday'",
     ContentId = "WBP_Shop_Brithday "
   },
+  WBP_Shop_OptionalDialog_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/Optional/WBP_Shop_OptionalDialog.WBP_Shop_OptionalDialog'",
+    ContentId = "WBP_Shop_OptionalDialog_Content"
+  },
   WBP_Shop_RechargePart = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/OverSea/WBP_Shop_RechargePart'",
     ContentId = "WBP_Shop_RechargePart"
@@ -384,6 +438,14 @@ return ReadOnly("CommonDialogContent", {
   WBP_SkinPreview_Suit = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Common/Dialog/Widget/WBP_Com_Dialog_Skin.WBP_Com_Dialog_Skin'",
     ContentId = "WBP_SkinPreview_Suit"
+  },
+  WBP_Task_Conflict_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Task/Widget/WBP_Task_Conflict_Content.WBP_Task_Conflict_Content'",
+    ContentId = "WBP_Task_Conflict_Content"
+  },
+  WBP_Task_Dialog_Ticket_Content = {
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Task/Widget/WBP_Task_Dialog_Ticket.WBP_Task_Dialog_Ticket'",
+    ContentId = "WBP_Task_Dialog_Ticket_Content"
   },
   WeaponResolve = {
     BPPath = "WidgetBlueprint'/Game/UI/WBP/Bag/Widget/WBP_Bag_SellDialog.WBP_Bag_SellDialog'",

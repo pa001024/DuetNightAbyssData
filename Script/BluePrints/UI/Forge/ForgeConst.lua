@@ -105,6 +105,31 @@ ForgeConst.ReddotNodeName = {
   [ForgeConst.TabType.Resource] = "ForgeReddot_Resource",
   [ForgeConst.TabType.CharAccessory] = "ForgeReddot_CharAccessory"
 }
+ForgeConst.ResourceTypes = {"Resource", "IronTicket"}
+ForgeConst.CompendiumFilterMap = {
+  [ForgeConst.TabType.Weapon] = {"Weapon"},
+  [ForgeConst.TabType.Mod] = {"Mod"},
+  [ForgeConst.TabType.Resource] = {"Resource", "IronTicket"},
+  [ForgeConst.TabType.CharAccessory] = {
+    "CharAccessory"
+  }
+}
+
+function ForgeConst.IsCompendiumFilterMatch(Filter, ProductType)
+  if Filter == ForgeConst.TabType.All then
+    return true
+  end
+  local AcceptTypes = ForgeConst.CompendiumFilterMap[Filter]
+  if AcceptTypes then
+    for _, Type in ipairs(AcceptTypes) do
+      if ProductType == Type then
+        return true
+      end
+    end
+  end
+  return false
+end
+
 for _, STabData in pairs(ForgeSTabData) do
   ForgeConst.ReddotNodeName[STabData.Id] = "ForgeReddot_" .. STabData.ProductType
 end

@@ -9,6 +9,23 @@ local ToastTime = 15
 local ShowToastDistance = DataMgr.GlobalConstant.SurvivalProRadius.ConstantValue
 local ToastTimerName = "RealShowToast"
 local AlreadyDeleteToast = false
+
+function BP_TempleEnergySupply_C:SetNowEnergy(v)
+  v = tonumber(v)
+  self.NowEnergy = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "NowEnergy")
+end
+
+function BP_TempleEnergySupply_C:SetIsEnergyInteractive(v)
+  self.IsEnergyInteractive = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "IsEnergyInteractive")
+end
+
+function BP_TempleEnergySupply_C:SetEnergyChangeFromMonster(v)
+  self.EnergyChangeFromMonster = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "EnergyChangeFromMonster")
+end
+
 BP_TempleEnergySupply_C._components = {
   "BluePrints.Item.Components.RecoverEnergy"
 }
@@ -35,7 +52,7 @@ end
 function BP_TempleEnergySupply_C:CommonInitInfo(Info)
   BP_TempleEnergySupply_C.Super.CommonInitInfo(self, Info)
   self.InteractiveType = Const.PressInteractive
-  self.NowEnergy = self.EnergyLimit
+  self:SetNowEnergy(self.EnergyLimit)
   self.MaxEnergy = self.EnergyLimit
   self.LiquidFXNum = 0
   self.BuffNum = 0
@@ -105,7 +122,7 @@ function BP_TempleEnergySupply_C:OpenMechanism(PlayerActorEid)
     self.NowPlayerEid = PlayerActorEid
     self:ClientPlayAnim(PlayerActorEid, 0, self.Eid)
   end
-  self.IsEnergyInteractive = true
+  self:SetIsEnergyInteractive(true)
   if nil == self.EToSHandle then
     self.FXNum = 0
     self.EToSHandle = self:AddTimer(0.1, self.EnergyToSurvival, true)
@@ -122,7 +139,7 @@ function BP_TempleEnergySupply_C:CloseMechanism(Eid, IsSuccess)
     self:RemoveTimer("EnergySupplyInteractedToast")
     self.EToSHandle = nil
     self.NowPlayerEid = 0
-    self.IsEnergyInteractive = false
+    self:SetIsEnergyInteractive(false)
     self:OnCloseMechanism()
   end
   AudioManager(self):SetEventSoundParam(self, "EnergySupplyOpen", {ToEnd = 1})
@@ -138,7 +155,7 @@ function BP_TempleEnergySupply_C:ForceCloseMechanism(Eid, IsSuccess)
     self:RemoveTimer("EnergySupplyInteractedToast")
     self.EToSHandle = nil
     self.NowPlayerEid = 0
-    self.IsEnergyInteractive = false
+    self:SetIsEnergyInteractive(false)
   end
   AudioManager(self):SetEventSoundParam(self, "EnergySupplyOpen", {ToEnd = 1})
 end
@@ -347,10 +364,11 @@ function BP_TempleEnergySupply_C:OnForceEndInteractive_Lua(SurvivalValue, MaxSur
 end
 
 function BP_TempleEnergySupply_C:ChangeEnergy_Lua(ChangeValue, bFromMonster)
-  self.NowEnergy = self.NowEnergy + ChangeValue
-  self.NowEnergy = math.min(self.NowEnergy, self.MaxEnergy)
-  self.NowEnergy = math.max(self.NowEnergy, 0)
-  self.EnergyChangeFromMonster = bFromMonster
+  local newEnergy = self.NowEnergy + ChangeValue
+  newEnergy = math.min(newEnergy, self.MaxEnergy)
+  newEnergy = math.max(newEnergy, 0)
+  self:SetNowEnergy(newEnergy)
+  self:SetEnergyChangeFromMonster(bFromMonster)
   if IsStandAlone(self) then
     if ChangeValue < 0 then
       self:OnEnergyDown()

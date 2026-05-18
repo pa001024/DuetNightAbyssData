@@ -58,6 +58,16 @@ function M:Init(ItemType, ItemData, ChooseCallback, ParentWidget, ...)
     self:InitSpecialView(ItemData, ...)
   elseif ItemType == BagCommon.OptionalItemType.LimitedPrizePool then
     self:InitSpecialView(ItemData, ...)
+  elseif "IronSurvival" == ItemType then
+    self.Icon_RootStar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.WB_Star:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.WidgetSwitcher_Level:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Text_Hold:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Hold:SetText(GText("UI_Consumable_HasGot"))
+    self.Num_Hold:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    local Avatar = GWorld:GetAvatar()
+    local holdCount = Avatar and Avatar.Resources[ItemData.StuffId] and Avatar.Resources[ItemData.StuffId].Count or 0
+    self.Num_Hold:SetText(holdCount)
   end
 end
 
@@ -165,16 +175,16 @@ function M:InitSpecialView(ItemData, ...)
 end
 
 function M:OnBtnCheckClicked()
-  if self.ParentWidget then
-    self.ParentWidget:CloseDialog()
-  end
+  local BagMainPage = UIManager(self):GetUIObj("BagMain")
   if self.ItemType == BagCommon.OptionalItemType.Weapon then
-    local BagMainPage = UIManager(self):GetUIObj("BagMain")
+    if BagMainPage and self.ParentWidget then
+      self.ParentWidget:CloseDialog()
+    end
     UIManager(self):LoadUINew("ArmoryDetail", {
-      OnCloseDelegate = {
+      OnCloseDelegate = BagMainPage and {
         BagMainPage,
         BagMainPage.ReClickGoToUseConsume
-      },
+      } or nil,
       PreviewWeaponIds = {
         self.Content.StuffId
       },
@@ -185,12 +195,14 @@ function M:OnBtnCheckClicked()
       bHideWeaponAppearance = true
     })
   elseif self.ItemType == BagCommon.OptionalItemType.Avatar then
-    local BagMainPage = UIManager(self):GetUIObj("BagMain")
+    if BagMainPage and self.ParentWidget then
+      self.ParentWidget:CloseDialog()
+    end
     UIManager(self):LoadUINew("ArmoryDetail", {
-      OnCloseDelegate = {
+      OnCloseDelegate = BagMainPage and {
         BagMainPage,
         BagMainPage.ReClickGoToUseConsume
-      },
+      } or nil,
       PreviewCharIds = {
         self.Content.StuffId
       },
@@ -201,12 +213,14 @@ function M:OnBtnCheckClicked()
       bHideWeaponAppearance = true
     })
   elseif self.ItemType == BagCommon.OptionalItemType.Pet then
-    local BagMainPage = UIManager(self):GetUIObj("BagMain")
+    if BagMainPage and self.ParentWidget then
+      self.ParentWidget:CloseDialog()
+    end
     UIManager(self):LoadUINew("ArmoryDetail", {
-      OnCloseDelegate = {
+      OnCloseDelegate = BagMainPage and {
         BagMainPage,
         BagMainPage.ReClickGoToUseConsume
-      },
+      } or nil,
       PreviewPetIds = {
         self.Content.StuffId
       },
@@ -216,6 +230,14 @@ function M:OnBtnCheckClicked()
       bHideCharAppearance = true,
       bHideWeaponAppearance = true
     })
+  elseif self.ItemType == "IronSurvival" and not self.Item.ItemDetails_MenuAnchor.ItemDetailsMenuAnchor:IsOpen() then
+    local Content = {
+      ItemType = "Resource",
+      ItemId = self.Content.StuffId,
+      MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight,
+      UIName = self.Content.UIName
+    }
+    self.Item.ItemDetails_MenuAnchor:OpenItemDetailsWidget(false, Content)
   end
 end
 
@@ -243,6 +265,8 @@ function M:OnBtnChooseClicked()
   local ItemType = self.ItemType
   if self.ItemType == BagCommon.OptionalItemType.Avatar then
     ItemType = "Char"
+  elseif self.ItemType == "IronSurvival" then
+    ItemType = "Resource"
   end
   AudioManager(self):PlayItemSound(self, self.ChooseDataInfo.ChooseId, "Click", ItemType)
   return true

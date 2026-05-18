@@ -138,6 +138,16 @@ return ReadOnly("MonBattleMgrData", {
       }
     }
   },
+  [8519] = {
+    BattleGroupId = 8519,
+    SkillShareRule = {
+      {
+        Count = 1,
+        SkillCd = 7,
+        SkillId = 851924
+      }
+    }
+  },
   [8523] = {
     BattleGroupId = 8523,
     SkillShareRule = {

@@ -18,8 +18,7 @@ function SerializeUtils:ToStringEx(value)
     if IsObjId(value) then
       return self:SerializeObjId(value)
     else
-      local escaped_value = value:gsub("'", "\\'")
-      return "'" .. escaped_value .. "'"
+      return string.format("%q", value)
     end
   elseif "number" == ValueType or "boolean" == ValueType then
     return tostring(value)

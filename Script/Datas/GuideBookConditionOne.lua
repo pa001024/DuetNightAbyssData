@@ -330,7 +330,7 @@ return ReadOnly("GuideBookConditionOne", {
         FinishQuest = 12010415,
         GuideId = 97,
         GuideNoteId = 122,
-        GuideNoteTab = 5,
+        GuideNoteTab = 3,
         RewardId = 7000
       }
     },
@@ -455,6 +455,16 @@ return ReadOnly("GuideBookConditionOne", {
         FinishQuestChain = 100208,
         GuideId = 80,
         GuideNoteId = 112,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
+    [100405] = {
+      [1] = {
+        CompleteUIGuideId = 152,
+        FinishQuestChain = 100405,
+        GuideId = 152,
+        GuideNoteId = 165,
         GuideNoteTab = 5,
         RewardId = 7000
       }
@@ -597,6 +607,16 @@ return ReadOnly("GuideBookConditionOne", {
     }
   },
   MechanismTag = {
+    AppearanceScore = {
+      [1] = {
+        CompleteUIGuideId = 148,
+        GuideId = 148,
+        GuideNoteId = 161,
+        GuideNoteTab = 5,
+        MechanismTag = "AppearanceScore",
+        RewardId = 7000
+      }
+    },
     Container = {
       [1] = {
         CompleteUIGuideId = 132,
@@ -718,6 +738,16 @@ return ReadOnly("GuideBookConditionOne", {
         RewardId = 7000
       }
     },
+    HyperWeapon = {
+      [1] = {
+        CompleteUIGuideId = 149,
+        GuideId = 149,
+        GuideNoteId = 162,
+        GuideNoteTab = 5,
+        MechanismTag = "HyperWeapon",
+        RewardId = 7000
+      }
+    },
     IntDrone = {
       [1] = {
         CompleteUIGuideId = 128,
@@ -725,6 +755,16 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteId = 145,
         GuideNoteTab = 3,
         MechanismTag = "IntDrone",
+        RewardId = 7000
+      }
+    },
+    IronMode = {
+      [1] = {
+        CompleteUIGuideId = 150,
+        GuideId = 150,
+        GuideNoteId = 163,
+        GuideNoteTab = 5,
+        MechanismTag = "IronMode",
         RewardId = 7000
       }
     },
@@ -767,6 +807,24 @@ return ReadOnly("GuideBookConditionOne", {
         GuideNoteId = 150,
         GuideNoteTab = 3,
         MechanismTag = "Niudan",
+        RewardId = 7000
+      }
+    },
+    OpenGuild = {
+      [1] = {
+        CompleteUIGuideId = 151,
+        GuideId = 151,
+        GuideNoteId = 164,
+        GuideNoteTab = 5,
+        MechanismTag = "OpenGuild",
+        RewardId = 7000
+      },
+      [2] = {
+        CompleteUIGuideId = 153,
+        GuideId = 153,
+        GuideNoteId = 166,
+        GuideNoteTab = 5,
+        MechanismTag = "OpenGuild",
         RewardId = 7000
       }
     },

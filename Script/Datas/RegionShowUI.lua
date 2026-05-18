@@ -12,7 +12,7 @@ return ReadOnly("RegionShowUI", {
     TransText = "Episode_Region_None_Trans"
   },
   [100001] = {
-    AudioPath = "11.0",
+    AudioPath = "11",
     RegionShowId = 100001,
     TitleText = "Episode_02",
     TransText = "Episode_02_01"

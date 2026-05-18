@@ -21,6 +21,7 @@ FriendCommon.RequestDialogNotInput = 100086
 FriendCommon.EventId = {
   RefreshFriend = "RefreshFriend",
   AddFriend = "AddFriend",
+  AddFriendRequest = "AddFriendRequest",
   AgreeAdd = "AgreeAdd",
   RefuseAdd = "RefuseAdd",
   DeleteFriend = "DeleteFriend",

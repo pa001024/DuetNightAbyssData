@@ -64,6 +64,20 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "Announcement",
     UnlockPopupType = "Light"
   },
+  AppearanceScore = {
+    AfterUIUnlockDesc = "System_Des_AppearanceScore",
+    ConditionId = 4440,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Appearance.T_Entrance_Appearance",
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_AppearanceScore",
+      "UI_Disabled_InStoryMode"
+    },
+    UIUnlockDesc = "UI_Locked_Des_AppearanceScore",
+    UIUnlockName = "MAIN_UI_AppearanceScore",
+    UIUnlockRuleId = "AppearanceScore",
+    UnlockPopupType = "Normal"
+  },
   Archive = {
     AfterUIUnlockDesc = "System_Des_Archive",
     ConditionId = 4070,
@@ -335,6 +349,19 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "Home",
     UnlockPopupType = "Normal"
   },
+  HyperWeapon = {
+    AfterUIUnlockDesc = "System_Des_HyperWeapon",
+    ConditionId = 4430,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Tab/T_Tab_Incarnon",
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_HyperWeapon"
+    },
+    UIUnlockDesc = "UI_Locked_Des_HyperWeapon",
+    UIUnlockName = "UI_HyperWeapon",
+    UIUnlockRuleId = "HyperWeapon",
+    UnlockPopupType = "Normal"
+  },
   Invite = {
     AfterUIUnlockDesc = "System_Des_Invite_CBT3",
     ConditionId = 4060,
@@ -348,6 +375,12 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockName = "MAIN_UI_NPCSWITCH",
     UIUnlockRuleId = "Invite",
     UnlockPopupType = "Light"
+  },
+  IronMode = {
+    ConditionId = 4431,
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    UIUnlockRuleId = "IronMode"
   },
   LonzaFortressShopTab = {
     ConditionId = 322,
@@ -438,6 +471,17 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockRuleId = "ModDungeon",
     UnlockPopupType = "Light"
   },
+  MonthSignIn = {
+    ConditionId = 4460,
+    IsHideUnlockPopup = 1,
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_MonthCheck"
+    },
+    UIUnlockDesc = "UI_Locked_Des_MonthCheck",
+    UIUnlockName = "MAIN_UI_MONTHCHECK",
+    UIUnlockRuleId = "MonthSignIn"
+  },
   Mount = {
     AfterUIUnlockDesc = "System_Des_Mount",
     ConditionId = 4410,
@@ -450,6 +494,20 @@ return ReadOnly("UIUnlockRule", {
     UIUnlockDesc = "UI_Locked_Des_Mount",
     UIUnlockName = "UI_Mount",
     UIUnlockRuleId = "Mount",
+    UnlockPopupType = "Normal"
+  },
+  OpenGuild = {
+    AfterUIUnlockDesc = "System_Des_Guild",
+    ConditionId = 4191,
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Guild.T_Entrance_Guild",
+    OpenConditionId = T.RT_1,
+    OpenSystemDesc = {
+      "UI_Disabled_Des_Guild",
+      "UI_Disabled_InStoryMode"
+    },
+    UIUnlockDesc = "UI_Locked_Des_Guild",
+    UIUnlockName = "MAIN_UI_GUILD",
+    UIUnlockRuleId = "OpenGuild",
     UnlockPopupType = "Normal"
   },
   Party = {

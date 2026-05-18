@@ -387,13 +387,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_100103_1"
   },
   BP_HardBoss_PlayerStart = {
-    X = 42051.679688,
-    Y = 23464.5,
-    Z = 7416.0,
+    X = 256540.453125,
+    Y = -11249.549805,
+    Z = 856.75,
     R = 0.0,
-    SubRegionId = 105301,
+    SubRegionId = 106101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
+    TeleportPointName = ""
   },
   QuestPoint10504 = {
     X = 22284.402344,
@@ -675,13 +675,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   BP_StaticCreateActor = {
-    X = 8072.0,
-    Y = 7677.0,
-    Z = -1860.0,
+    X = -19760.0,
+    Y = 12670.0,
+    Z = -10400.0,
     R = 0.0,
-    SubRegionId = 100101,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_100101_1"
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
   },
   BP_StaticCreateActor3 = {
     X = 8.0,
@@ -2637,13 +2637,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_2"
   },
   TeleportMechanism2 = {
-    X = -34886.0,
-    Y = 6415.004883,
-    Z = -6168.0,
+    X = -3274.821045,
+    Y = 10937.149414,
+    Z = -2415.519043,
     R = 0.0,
-    SubRegionId = 101103,
+    SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_3"
   },
   Npc_10013002Bai_1180090 = {
     X = -34598.398438,
@@ -4875,7 +4875,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_100141Bai_1190026 = {
     X = -2398.525635,
@@ -5208,7 +5208,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Aier_1190083 = {
     X = -492.800293,
@@ -5226,7 +5226,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Halan_1190085 = {
     X = -5233.088379,
@@ -5253,7 +5253,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Xilin_1190094 = {
     X = -6564.270508,
@@ -5379,7 +5379,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_P105_1190110 = {
     X = -9567.5625,
@@ -5388,7 +5388,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_P101_1190111 = {
     X = -5449.404785,
@@ -5406,7 +5406,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Mading_1190115 = {
     X = -9273.013672,
@@ -5424,7 +5424,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1190121 = {
     X = -10140.0,
@@ -5676,7 +5676,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_10020047Nvzhu_1190154 = {
     X = -2424.0,
@@ -5739,7 +5739,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_QNM01Sit01_1190186 = {
     X = -8675.139648,
@@ -5748,7 +5748,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_QNF01Sit01_1190187 = {
     X = -8506.46875,
@@ -5757,7 +5757,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_ZNM03Sit01_1190184 = {
     X = -6152.512695,
@@ -6567,7 +6567,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Sana = {
     X = -2553.0,
@@ -6738,7 +6738,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_NPC_Aoerduo_1190262 = {
     X = 270.0,
@@ -6810,7 +6810,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10101105Nvzhu = {
     X = -2367.05127,
@@ -6828,7 +6828,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105801Bai = {
     X = -10366.8125,
@@ -6837,7 +6837,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105801Saiqi = {
     X = -10247.757812,
@@ -6846,7 +6846,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105817 = {
     X = -9529.208008,
@@ -6855,7 +6855,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105807 = {
     X = -10168.875977,
@@ -6864,7 +6864,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105802 = {
     X = -10139.774414,
@@ -6873,7 +6873,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P101044Bai = {
     X = -11910.339844,
@@ -6882,7 +6882,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P101044Nvzhu = {
     X = -11916.981445,
@@ -6891,7 +6891,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P101044Saiqi = {
     X = -11814.330078,
@@ -6900,7 +6900,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101058Enlike_1190266 = {
     X = -10095.898438,
@@ -6909,7 +6909,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101058Saiqi_1190269 = {
     X = -10621.113281,
@@ -6918,7 +6918,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101058Bai_1190268 = {
     X = -10868.084961,
@@ -6927,7 +6927,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101058Nvzhu_1190267 = {
     X = -10659.316406,
@@ -6936,7 +6936,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101063Aote_1190272 = {
     X = -1797.890747,
@@ -6999,7 +6999,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101044Saiqi_1190242 = {
     X = -11245.427734,
@@ -7008,7 +7008,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101044Nvzhu_1190240 = {
     X = -11866.981445,
@@ -7017,7 +7017,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101008Nvzhu_1190218 = {
     X = -10985.078125,
@@ -7026,7 +7026,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101008Bai_1190216 = {
     X = -10809.078125,
@@ -7035,7 +7035,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101008Kami_1190217 = {
     X = -10809.078125,
@@ -7044,7 +7044,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_101011Nvzhu_1190219 = {
     X = -2297.5979,
@@ -8160,7 +8160,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Gun02_1180132 = {
     X = -12676.84668,
@@ -8169,7 +8169,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Tuji02_1180134 = {
     X = -12944.132812,
@@ -9276,7 +9276,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_QuestTrigger_1190387 = {
     X = -939.385742,
@@ -9582,7 +9582,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Clue01_1190402 = {
     X = -8770.0,
@@ -9600,7 +9600,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_DynTrigger_1190404 = {
     X = -7859.0,
@@ -9780,7 +9780,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_200207 = {
     X = 4890.0,
@@ -9969,7 +9969,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_LaliChangzhu_1190520 = {
     X = -8661.5625,
@@ -9978,7 +9978,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_KaiwenChangzhu_1190512 = {
     X = -12380.0,
@@ -9987,7 +9987,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Makusi_1240127 = {
     X = -31884.224609,
@@ -10032,7 +10032,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   BP_TalkMechanism3 = {
     X = -3996.298828,
@@ -12138,7 +12138,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_QuestTrigger_1190433 = {
     X = -2369.974121,
@@ -12210,7 +12210,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1190468 = {
     X = -9574.630859,
@@ -12219,7 +12219,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_DynTrigger_1190452 = {
     X = -1899.981445,
@@ -12237,7 +12237,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_100301Clue2_1190463 = {
     X = -9972.792969,
@@ -12246,7 +12246,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_100301Clue3_1190464 = {
     X = -9893.728516,
@@ -12255,7 +12255,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_100301Clue4_1190465 = {
     X = -10378.53125,
@@ -12264,7 +12264,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_100301Clue5_1190466 = {
     X = -8798.027344,
@@ -12273,7 +12273,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Monster_Bully1_1190473 = {
     X = -4792.814453,
@@ -12327,7 +12327,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_DynQuest_Trigger_Gaokong_1190490 = {
     X = -7140.0,
@@ -12498,7 +12498,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_QuestTrigger_1190519 = {
     X = -8936.890625,
@@ -12507,7 +12507,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Gather_1190526 = {
     X = -14890.0,
@@ -12912,7 +12912,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10100601 = {
     X = -13391.833984,
@@ -12966,7 +12966,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10101201 = {
     X = -2029.251343,
@@ -12984,7 +12984,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105801Enlike = {
     X = -10095.898438,
@@ -12993,7 +12993,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105801Nvzhu2 = {
     X = -10496.317383,
@@ -13002,7 +13002,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105801Saiqi2 = {
     X = -10369.824219,
@@ -13011,7 +13011,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105801Saiqi3 = {
     X = -10211.772461,
@@ -13020,7 +13020,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10108601 = {
     X = -15482.507812,
@@ -13113,7 +13113,7 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Haer_1190443 = {
-    X = -497.27948,
+    X = -497.282898,
     Y = -8105.222656,
     Z = -2711.640137,
     R = 0.0,
@@ -13317,7 +13317,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Kaiwen_1190515 = {
     X = -9026.195312,
@@ -13326,7 +13326,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Lali_1190516 = {
     X = -8722.921875,
@@ -13335,7 +13335,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Kaiwen_1190517 = {
     X = -8956.292969,
@@ -13344,7 +13344,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_1190521 = {
     X = -9087.640625,
@@ -13353,7 +13353,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_1190522 = {
     X = -8869.339844,
@@ -13362,7 +13362,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_1190524 = {
     X = -3240.0,
@@ -14598,13 +14598,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_102101_3"
   },
   BP_NewTargetPoint = {
-    X = 18450.0,
-    Y = 5485.0,
-    Z = 3050.0,
+    X = -4660.0,
+    Y = -11770.0,
+    Z = -5080.0,
     R = 0.0,
-    SubRegionId = 105501,
+    SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_LizhanBossBattle = {
     X = 33537.019531,
@@ -16182,13 +16182,13 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101103_3"
   },
   BP_NewTargetPoint4 = {
-    X = -14650.0,
-    Y = 210.0,
-    Z = -1015.417114,
+    X = 1990.0,
+    Y = -420.0,
+    Z = -3380.0,
     R = 0.0,
-    SubRegionId = 102102,
+    SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_102102_2"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   BP_NewTargetPoint5 = {
     X = -13460.0,
@@ -18222,7 +18222,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1190645 = {
     X = -8321.944336,
@@ -18411,7 +18411,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Ptaopao2 = {
     X = -9919.136719,
@@ -18420,7 +18420,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Ptaopao3 = {
     X = -9927.407227,
@@ -18429,7 +18429,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_10108704Nvzhu_1190649 = {
     X = -15578.108398,
@@ -21426,7 +21426,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Sanxiongdi = {
     X = -26884.449219,
@@ -21750,7 +21750,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_PetGuide_1190736 = {
     X = -6215.699219,
@@ -21795,7 +21795,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_EnterSan = {
     X = -2372.372559,
@@ -21894,7 +21894,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Feina_Invite_1190742 = {
     X = -10857.0,
@@ -21903,7 +21903,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   ["180103P"] = {
     X = -10856.0,
@@ -21912,7 +21912,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P101105Aote = {
     X = -1075.404785,
@@ -21993,7 +21993,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Bai_1190745 = {
     X = -9996.083984,
@@ -22002,7 +22002,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Aote_1190746 = {
     X = -9950.436523,
@@ -22011,7 +22011,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P200031Nvzhu = {
     X = -11990.50293,
@@ -22020,7 +22020,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P200031Aote = {
     X = -11883.624023,
@@ -22029,7 +22029,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P200031Bai = {
     X = -11929.730469,
@@ -22038,7 +22038,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P200031Nvzhu2 = {
     X = -11084.616211,
@@ -22047,7 +22047,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P200031Bai2 = {
     X = -10995.494141,
@@ -22056,7 +22056,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P200031Aote2 = {
     X = -11041.487305,
@@ -22065,7 +22065,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_20021001 = {
     X = -17469.873047,
@@ -23199,7 +23199,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Dyn_1190778 = {
     X = -8172.178223,
@@ -23253,7 +23253,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190780 = {
     X = -8910.0,
@@ -23262,7 +23262,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190781 = {
     X = -10800.0,
@@ -23298,7 +23298,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Dyn_1190779 = {
     X = -9394.834961,
@@ -23307,7 +23307,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Dyn_1190783 = {
     X = -4515.862793,
@@ -23325,7 +23325,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_NPC_Dadun1_1190264 = {
     X = -8567.952148,
@@ -23388,7 +23388,7 @@ local QuestGuidePointLoc = {
     R = 4800.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Point200203_Alice = {
     X = -670.0,
@@ -23433,7 +23433,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Xueli_510076 = {
     X = -10800.0,
@@ -23631,7 +23631,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Dyn_1190800 = {
     X = -2254.568604,
@@ -23685,7 +23685,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Dyn_1190797 = {
     X = -7373.297363,
@@ -25047,7 +25047,7 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190826 = {
-    X = -202.329147,
+    X = -202.329163,
     Y = -637.790039,
     Z = -3805.743652,
     R = 0.0,
@@ -27294,7 +27294,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_CheckWoodBox2 = {
     X = -4480.491699,
@@ -33243,7 +33243,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190845 = {
     X = -11430.0,
@@ -33252,7 +33252,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190846 = {
     X = -11450.0,
@@ -33261,7 +33261,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190847 = {
     X = -11390.0,
@@ -33270,7 +33270,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190848 = {
     X = -11520.0,
@@ -33279,7 +33279,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Monster_Dyn_1240341 = {
     X = -53480.167969,
@@ -35619,7 +35619,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_CP2_AirWall_1190877 = {
     X = -10200.0,
@@ -35628,7 +35628,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_CP2_AirWall_1190878 = {
     X = -9017.088867,
@@ -35637,7 +35637,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Dyn_1190852 = {
     X = -5928.821777,
@@ -35979,7 +35979,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Mec01_1190850 = {
     X = 720.0,
@@ -38292,7 +38292,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1190914 = {
     X = -8613.317383,
@@ -38301,7 +38301,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1190915 = {
     X = -4768.740723,
@@ -39291,7 +39291,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_QusetCheck_1190919 = {
     X = -1862.196899,
@@ -39327,7 +39327,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Boy_1190928 = {
     X = -8384.770508,
@@ -39336,7 +39336,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_1190929 = {
     X = -8634.433594,
@@ -39345,7 +39345,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_SaiqiMother_1190931 = {
     X = -7993.212402,
@@ -39354,7 +39354,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_100170GeLangDe_1220105 = {
     X = 149.9375,
@@ -39426,7 +39426,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190961 = {
     X = -9260.0,
@@ -39435,7 +39435,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190962 = {
     X = -9327.845703,
@@ -39444,7 +39444,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190963 = {
     X = -9319.696289,
@@ -39453,7 +39453,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Dyn_1190959 = {
     X = -5030.248535,
@@ -40398,7 +40398,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190967 = {
     X = -9485.958008,
@@ -40407,7 +40407,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190968 = {
     X = -9555.952148,
@@ -40416,7 +40416,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1190969 = {
     X = -9585.952148,
@@ -40425,7 +40425,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   TheaObsv03 = {
     X = 23305.0,
@@ -42129,29 +42129,29 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   RespawnPoint_Phase02 = {
-    X = 22238.673828,
-    Y = 3229.507324,
-    Z = 348.630341,
+    X = 18359.113281,
+    Y = 2151.487305,
+    Z = 1988.265015,
     R = 0.0,
-    SubRegionId = 104301,
+    SubRegionId = 104401,
     FloorId = 0,
     TeleportPointName = ""
   },
   RespawnPoint_Phase03 = {
-    X = 11511.832031,
-    Y = -66.925217,
-    Z = 329.852234,
+    X = 3297.078369,
+    Y = -5254.416016,
+    Z = 1941.726074,
     R = 0.0,
-    SubRegionId = 104301,
+    SubRegionId = 104401,
     FloorId = 0,
     TeleportPointName = ""
   },
   RespawnPoint_Phase04 = {
-    X = -7968.693359,
-    Y = 6985.955566,
-    Z = 569.628479,
+    X = -17963.503906,
+    Y = 9494.756836,
+    Z = 2014.322998,
     R = 0.0,
-    SubRegionId = 104301,
+    SubRegionId = 104401,
     FloorId = 0,
     TeleportPointName = ""
   },
@@ -46545,7 +46545,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   ZhiliuTake_12000208 = {
     X = -622.655334,
@@ -47016,22 +47016,22 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_3"
   },
   NewTargetPoint12000201jingli = {
-    X = 20485.0,
-    Y = 8478.0,
-    Z = -37399.0,
+    X = -1340.311646,
+    Y = 5930.009277,
+    Z = -2841.023926,
     R = 0.0,
-    SubRegionId = 101901,
+    SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101901_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_3"
   },
   NewTargetPoint12000201zhiliu = {
-    X = 20378.027344,
-    Y = 9102.598633,
-    Z = -37386.070312,
+    X = -1340.311646,
+    Y = 6027.324707,
+    Z = -2841.023926,
     R = 0.0,
-    SubRegionId = 101901,
+    SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101901_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_3"
   },
   Monster_120002041 = {
     X = 20619.568359,
@@ -47994,7 +47994,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P100203Bai3 = {
     X = -29905.478516,
@@ -48561,7 +48561,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Fence_1_1191090 = {
     X = -9368.494141,
@@ -48570,7 +48570,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Fence_1_1191091 = {
     X = -9568.494141,
@@ -48579,7 +48579,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Fence_1_1191092 = {
     X = -9768.494141,
@@ -48588,7 +48588,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Fence_1_1191093 = {
     X = -9968.494141,
@@ -48597,7 +48597,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Fence_1_1191094 = {
     X = -10168.494141,
@@ -48606,7 +48606,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_TruckBattleAirWall_1180576 = {
     X = -28247.0625,
@@ -48624,7 +48624,7 @@ local QuestGuidePointLoc = {
     R = 2000.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_QuestTrigger_1240485 = {
     X = -42453.625,
@@ -49407,7 +49407,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Barrel_1220118 = {
     X = 922.463562,
@@ -49677,7 +49677,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191110 = {
     X = -9553.578125,
@@ -49686,7 +49686,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191111 = {
     X = -9353.578125,
@@ -49695,7 +49695,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191112 = {
     X = -9006.227539,
@@ -49704,7 +49704,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191114 = {
     X = -9352.637695,
@@ -49713,7 +49713,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191115 = {
     X = -9525.842773,
@@ -49722,7 +49722,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191116 = {
     X = -9699.047852,
@@ -49731,7 +49731,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191120 = {
     X = -9686.257812,
@@ -49830,7 +49830,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191113 = {
     X = -9179.432617,
@@ -49839,7 +49839,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Cordon_1191117 = {
     X = -9086.257812,
@@ -49902,7 +49902,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Monster_Cordon_NPC_1191126 = {
     X = -8932.167969,
@@ -49911,7 +49911,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Monster_Cordon_NPC_1191127 = {
     X = -9432.168945,
@@ -49920,7 +49920,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Monster_Cordon_NPC_1191128 = {
     X = -7517.204102,
@@ -49947,7 +49947,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   NewTargetPoint12000307StealthStart = {
     X = -5298.54248,
@@ -50334,7 +50334,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_12000305shib1_1191144 = {
     X = -9745.911133,
@@ -50343,7 +50343,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_12000305shib2_1191145 = {
     X = -9745.631836,
@@ -50352,7 +50352,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_12000305shib3_1191146 = {
     X = -9535.591797,
@@ -50361,7 +50361,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_12000305shib4_1191147 = {
     X = -9473.010742,
@@ -50370,7 +50370,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   NewTargetPoint12000207Nvzhu = {
     X = -895.689392,
@@ -50433,7 +50433,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   point12000305shib2 = {
     X = -8746.226562,
@@ -50442,7 +50442,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   point12000305shib3 = {
     X = -8893.300781,
@@ -50451,7 +50451,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   point12000305shib4 = {
     X = -8970.274414,
@@ -50460,7 +50460,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1960172 = {
     X = 20505.652344,
@@ -50559,7 +50559,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_steathendbox_1191158 = {
     X = -9568.108398,
@@ -50568,7 +50568,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_SSS_BakeDrunk_1191152 = {
     X = -1130.194336,
@@ -50649,7 +50649,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   NewTargetPointnewsteathstart5 = {
     X = -9384.481445,
@@ -50658,7 +50658,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestArea_200206_1 = {
     X = -1675.265625,
@@ -50676,7 +50676,7 @@ local QuestGuidePointLoc = {
     R = 1000.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_QuestTrigger_1191162 = {
     X = -8955.265625,
@@ -50685,7 +50685,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_SSS_EmptyNPC_1191163 = {
     X = -1130.194336,
@@ -50757,7 +50757,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1240557 = {
     X = -14692.417969,
@@ -53988,7 +53988,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191215 = {
     X = -8750.369141,
@@ -53997,7 +53997,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191216 = {
     X = -8750.369141,
@@ -54006,7 +54006,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191217 = {
     X = -8750.369141,
@@ -54015,7 +54015,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191218 = {
     X = -8610.720703,
@@ -54024,7 +54024,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191219 = {
     X = -8610.720703,
@@ -54033,7 +54033,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191220 = {
     X = -8610.720703,
@@ -54042,7 +54042,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191221 = {
     X = -8610.720703,
@@ -54051,7 +54051,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191225 = {
     X = -8619.171875,
@@ -54060,7 +54060,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191226 = {
     X = -8619.171875,
@@ -54069,7 +54069,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191227 = {
     X = -8619.171875,
@@ -54078,7 +54078,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191228 = {
     X = -8619.171875,
@@ -54087,7 +54087,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_Coin_1191232 = {
     X = -6570.579102,
@@ -54780,7 +54780,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Pan720011_1191263 = {
     X = -6775.087402,
@@ -55986,7 +55986,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_10108337Aote_1180621 = {
     X = -31407.566406,
@@ -56094,7 +56094,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   pbai = {
     X = -9683.467773,
@@ -56103,7 +56103,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   plise = {
     X = -9564.289062,
@@ -56112,7 +56112,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   pnvzhu = {
     X = -9438.193359,
@@ -56121,7 +56121,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1191293 = {
     X = -1794.626709,
@@ -56238,7 +56238,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Sushan_Invite_1191285 = {
     X = -6043.722656,
@@ -56283,7 +56283,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P1190935 = {
     X = -4207.756348,
@@ -56967,7 +56967,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P10105801Nvzhu3 = {
     X = -10265.476562,
@@ -56976,7 +56976,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_IcelakeFlower_1240659 = {
     X = -32742.560547,
@@ -57525,7 +57525,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_SSS_1191323 = {
     X = -5030.354492,
@@ -57687,7 +57687,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1191332 = {
     X = -11475.195312,
@@ -57696,7 +57696,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1191333 = {
     X = -11494.640625,
@@ -57705,7 +57705,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_1191334 = {
     X = -11384.333008,
@@ -57714,7 +57714,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Almit_SSS_1191330 = {
     X = -5429.61377,
@@ -58415,7 +58415,7 @@ local QuestGuidePointLoc = {
     Z = -5288.0,
     R = 0.0,
     SubRegionId = 101101,
-    FloorId = -1,
+    FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_3"
   },
   Mechanism_FireWork_1191338 = {
@@ -59829,7 +59829,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_1940030 = {
     X = 37842.789062,
@@ -61170,7 +61170,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   TargetPoint_cp2fixsimple47_aoteHide = {
     X = -7282.022461,
@@ -63420,7 +63420,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   ["cp2fixsimple25-26Point03"] = {
     X = -11495.0,
@@ -63429,7 +63429,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   ["cp2fixsimple25-26Point04"] = {
     X = -11420.0,
@@ -63438,7 +63438,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   ["cp2fixsimple25-26Point05"] = {
     X = -11160.0,
@@ -63447,7 +63447,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   cp2fixsimple34_aoteMove = {
     X = 272.358337,
@@ -63807,7 +63807,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_2002300501Soilder_1191515 = {
     X = -9570.000977,
@@ -63816,7 +63816,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Minigame_SSS_1191512 = {
     X = -9185.001953,
@@ -63825,7 +63825,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_TriggerBox_Feina01_1191468 = {
     X = -4703.337891,
@@ -63861,7 +63861,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_AnimalAote_Feina01_1191467 = {
     X = -3885.003174,
@@ -64266,7 +64266,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_SSS_1191513 = {
     X = -9265.003906,
@@ -64275,7 +64275,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_SSS_1191518 = {
     X = -7860.0,
@@ -64293,7 +64293,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Soilder200230_SSS_1191514 = {
     X = -9265.009766,
@@ -64302,7 +64302,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Violetta_SSS_1191508 = {
     X = -7658.972656,
@@ -64329,7 +64329,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Fane_2002300701 = {
     X = -7597.299805,
@@ -64356,7 +64356,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Questpoint_Player_20023005 = {
     X = -9415.0,
@@ -64365,7 +64365,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Questpoint_Soilder_20023002 = {
     X = -9415.0,
@@ -64374,7 +64374,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   TargetPoint_12011104TP_Feina01 = {
     X = -5070.0,
@@ -64410,7 +64410,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Pho_SSS_1191521 = {
     X = -9185.003906,
@@ -65751,7 +65751,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_AnimalNvzhu_Feina02_1191590 = {
     X = -4636.395996,
@@ -65796,7 +65796,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_AshBin03_1191591 = {
     X = -6392.496094,
@@ -65841,7 +65841,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Feina_Feina02_1191581 = {
     X = -9572.496094,
@@ -65850,7 +65850,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Feina_Feina02_1191587 = {
     X = -5145.973145,
@@ -65917,7 +65917,7 @@ local QuestGuidePointLoc = {
   },
   Mechanism_Footprint_Feina03_1191621 = {
     X = -8040.0,
-    Y = 99.976883,
+    Y = 99.976456,
     Z = -3920.0,
     R = 0.0,
     SubRegionId = 101101,
@@ -66192,7 +66192,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_David_Feina04_1191666 = {
     X = -1738.163818,
@@ -66309,7 +66309,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Feina_Feina04_1191678 = {
     X = -9593.975586,
@@ -66318,7 +66318,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Freida_Feina04_1191664 = {
     X = -1774.988403,
@@ -66453,7 +66453,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_Feina04_1191679 = {
     X = -9733.975586,
@@ -66462,7 +66462,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_Feina04_1191655 = {
     X = -1840.0,
@@ -66498,7 +66498,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Phantom_Nvzhu_Feina03_1191635 = {
     X = -8170.0,
@@ -66516,7 +66516,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   MagnusFPoint_20023205 = {
     X = -3640.0,
@@ -72837,7 +72837,7 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   Mechanism_TriggerBox_Feina01_1191779 = {
-    X = 23.469002,
+    X = 23.46917,
     Y = -11616.152344,
     Z = -4800.0,
     R = 0.0,
@@ -72981,7 +72981,7 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_David_Feina01_1191728 = {
-    X = -247.604858,
+    X = -247.604187,
     Y = -9751.638672,
     Z = -4900.0,
     R = 0.0,
@@ -73131,7 +73131,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_TriggerBox_Feina04_1191794 = {
     X = -5300.0,
@@ -73158,7 +73158,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_TriggerBox_Feina04_1191801 = {
     X = -4280.0,
@@ -73221,7 +73221,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Saiqi_Feina04_1191804 = {
     X = -4550.0,
@@ -75026,7 +75026,7 @@ local QuestGuidePointLoc = {
   Npc_12020101zhiliu_2010033 = {
     X = -107.0,
     Y = 61.0,
-    Z = 176.0,
+    Z = 246.0,
     R = 0.0,
     SubRegionId = 105602,
     FloorId = 0,
@@ -75723,7 +75723,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Aote_Feina01_1191859 = {
     X = -969.657593,
@@ -75735,7 +75735,7 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Solider_Feina02_1191858 = {
-    X = 413.314209,
+    X = 413.315186,
     Y = -1064.817749,
     Z = -3830.0,
     R = 0.0,
@@ -75768,7 +75768,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Maer_Feina02_1191850 = {
     X = 230.723145,
@@ -80790,7 +80790,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_TriggerBox_Feina02_1191879 = {
     X = -5320.0,
@@ -83985,7 +83985,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvzhu_Feina02_1191890 = {
     X = -922.495605,
@@ -84012,7 +84012,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_AshBin03_1191899 = {
     X = -4717.220215,
@@ -84039,7 +84039,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Feina03Catch = {
     X = -8179.728027,
@@ -84075,7 +84075,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Feina02fx14a = {
     X = -9904.703125,
@@ -84084,7 +84084,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Feina02fx16 = {
     X = -4719.630371,
@@ -84345,11 +84345,11 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Footprint_Feina03_1191911 = {
     X = -7970.833984,
-    Y = 688.011047,
+    Y = 688.004211,
     Z = -3920.957275,
     R = 0.0,
     SubRegionId = 101101,
@@ -84358,7 +84358,7 @@ local QuestGuidePointLoc = {
   },
   Mechanism_Footprint_Feina03_1191910 = {
     X = -8040.028809,
-    Y = -750.638977,
+    Y = -750.632141,
     Z = -4044.415527,
     R = 0.0,
     SubRegionId = 101101,
@@ -84390,7 +84390,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   P1190930Boy1 = {
     X = -8484.922852,
@@ -84399,7 +84399,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Shazhongjian_1600102 = {
     X = -64990.660156,
@@ -84462,7 +84462,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Feina04BackCity02 = {
     X = -10973.947266,
@@ -84471,7 +84471,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   QuestPoint_Feina04Walk02 = {
     X = -1037.223633,
@@ -84489,7 +84489,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Feinafx33moveto01 = {
     X = -4638.960938,
@@ -86235,7 +86235,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Feina_Feina04_1191926 = {
     X = -2147.16626,
@@ -87864,7 +87864,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_AnimalAote_Feina01_1191962 = {
     X = -5599.961914,
@@ -88047,7 +88047,7 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_TriggerBox_Feina01_1191984 = {
-    X = 23.469875,
+    X = 23.470066,
     Y = -11616.152344,
     Z = -4800.0,
     R = 0.0,
@@ -89268,7 +89268,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_FeinaBook02_1192008 = {
     X = -4662.597168,
@@ -89358,7 +89358,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_AnimalNvzhu_Feina02_1192040 = {
     X = -2114.698975,
@@ -89394,7 +89394,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_FeinaBook01_1191940 = {
     X = -1753.248169,
@@ -89421,7 +89421,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Drop_FeinaBook02_1192007 = {
     X = -4662.597168,
@@ -89493,7 +89493,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_TriggerBox_Feina02_1192013 = {
     X = -6465.934082,
@@ -89529,7 +89529,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_TriggerBox_Feina02_1192041 = {
     X = -2114.698975,
@@ -89601,7 +89601,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_BaiTX_400111_1192054 = {
     X = -10230.0,
@@ -89610,7 +89610,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Jiaoji_400111_1192055 = {
     X = -10080.0,
@@ -89619,7 +89619,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nanhai_400111_1192056 = {
     X = -10230.0,
@@ -89628,7 +89628,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Nvhai_400111_1192057 = {
     X = -10230.0,
@@ -89637,7 +89637,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_SSS_Kamila_1220201 = {
     X = 1356.4375,
@@ -89745,7 +89745,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   SavePoint_FeinaBook02 = {
     X = -4662.597168,
@@ -89781,7 +89781,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_12000201zunguide220046_1969991 = {
     X = 20590.0,
@@ -90177,7 +90177,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
   },
   Mechanism_DynTrigger_2420001 = {
     X = -9080.0,
@@ -104931,9 +104931,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   Mechanism_2350012 = {
-    X = -1820.0,
-    Y = -3900.0,
-    Z = 1455.0,
+    X = -2006.339966,
+    Y = -3769.590088,
+    Z = 1495.0,
     R = 0.0,
     SubRegionId = 105101,
     FloorId = 0,
@@ -104985,8 +104985,8 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   Mechanism_12020208qianxingqidian_2350037 = {
-    X = -3506.100098,
-    Y = -2110.550049,
+    X = -3276.100098,
+    Y = -2240.550049,
     Z = 193.339996,
     R = 0.0,
     SubRegionId = 105101,
@@ -106236,22 +106236,22 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_4"
   },
   Npc_BaiJLTalk_2110301 = {
-    X = 26467.0,
-    Y = -5035.0,
-    Z = 10683.353516,
+    X = 58327.894531,
+    Y = -23084.234375,
+    Z = 3605.129883,
     R = 0.0,
-    SubRegionId = 104110,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_4"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1"
   },
   Npc_BaiJLTalk_2110302 = {
-    X = 26482.0,
-    Y = -5113.0,
-    Z = 10683.353516,
+    X = 58387.945312,
+    Y = -23032.244141,
+    Z = 3605.129883,
     R = 0.0,
-    SubRegionId = 104110,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104101_4"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1"
   },
   MonsterGroupCen3 = {
     X = 3982.101807,
@@ -106587,9 +106587,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
   },
   Mechanism_12020315caiyao_2360038 = {
-    X = -3271.297852,
-    Y = -8859.847656,
-    Z = 9711.899414,
+    X = -3271.300049,
+    Y = -8859.849609,
+    Z = 9711.900391,
     R = 0.0,
     SubRegionId = 105201,
     FloorId = 0,
@@ -109035,9 +109035,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
   },
   Drop_12020315caiyao_242360054 = {
-    X = -3271.297852,
-    Y = -8859.847656,
-    Z = 9711.899414,
+    X = -3271.300049,
+    Y = -8859.849609,
+    Z = 9711.900391,
     R = 0.0,
     SubRegionId = 105201,
     FloorId = 0,
@@ -110205,7 +110205,7 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   ["12020208Restart"] = {
-    X = -2810.0,
+    X = -2420.0,
     Y = -2490.0,
     Z = 70.0,
     R = 0.0,
@@ -110214,9 +110214,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = ""
   },
   ["12020209teshu_242440006"] = {
-    X = 31560.0,
-    Y = -109810.0,
-    Z = 48830.0,
+    X = 31495.0,
+    Y = -109835.0,
+    Z = 48845.0,
     R = 0.0,
     SubRegionId = 104506,
     FloorId = 0,
@@ -111741,7 +111741,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Mechanism_Hook_1192003 = {
     X = -7224.0,
@@ -111777,7 +111777,7 @@ local QuestGuidePointLoc = {
     R = 0.0,
     SubRegionId = 101101,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_101102_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
   },
   Npc_Dyn_291192061 = {
     X = -6134.067871,
@@ -113492,7 +113492,7 @@ local QuestGuidePointLoc = {
   Mechanism_ExploreHook_122400105 = {
     X = 5217.439941,
     Y = -18745.710938,
-    Z = 10631.261719,
+    Z = 10631.259766,
     R = 0.0,
     SubRegionId = 104502,
     FloorId = 0,
@@ -120395,7 +120395,7 @@ local QuestGuidePointLoc = {
   Mechanism_HookConst_162370990 = {
     X = -7864.799805,
     Y = 23451.259766,
-    Z = -608.079956,
+    Z = -608.080017,
     R = 0.0,
     SubRegionId = 105301,
     FloorId = 0,
@@ -120422,7 +120422,7 @@ local QuestGuidePointLoc = {
   Mechanism_HookConst_162370981 = {
     X = -9824.799805,
     Y = 23451.259766,
-    Z = -908.079956,
+    Z = -908.080017,
     R = 0.0,
     SubRegionId = 105301,
     FloorId = 0,
@@ -120609,36 +120609,36 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
   },
   Mechanism_12020622hezi_242380003 = {
-    X = 500.0,
-    Y = 454.0,
-    Z = -39.0,
+    X = -4854.100098,
+    Y = -54.830002,
+    Z = 307.0,
     R = 0.0,
     SubRegionId = 105401,
     FloorId = 0,
     TeleportPointName = ""
   },
   Npc_12020620nvzhu_242380002 = {
-    X = 3458.0,
-    Y = 82.0,
-    Z = -97.0,
+    X = 717.0,
+    Y = 256.0,
+    Z = 255.0,
     R = 0.0,
     SubRegionId = 105401,
     FloorId = 0,
     TeleportPointName = ""
   },
   Npc_12020622ju_242380004 = {
-    X = 477.0,
-    Y = 500.0,
-    Z = -209.0,
+    X = -4995.0,
+    Y = -43.0,
+    Z = 256.0,
     R = 0.0,
     SubRegionId = 105401,
     FloorId = 0,
     TeleportPointName = ""
   },
   Npc_12020622yang_242380005 = {
-    X = 477.0,
-    Y = 500.0,
-    Z = -209.0,
+    X = -4995.0,
+    Y = -183.0,
+    Z = 256.0,
     R = 0.0,
     SubRegionId = 105401,
     FloorId = 0,
@@ -121869,8 +121869,8 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104506_1"
   },
   Phantom_12020210kezhou_242440019 = {
-    X = 31651.0,
-    Y = -109961.0,
+    X = 31716.0,
+    Y = -110001.0,
     Z = 48829.0,
     R = 0.0,
     SubRegionId = 104506,
@@ -121941,9 +121941,9 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
   },
   Drop_12020315caiyao_242360054D = {
-    X = -3271.297852,
-    Y = -8859.847656,
-    Z = 9711.899414,
+    X = -3271.300049,
+    Y = -8859.849609,
+    Z = 9711.900391,
     R = 0.0,
     SubRegionId = 105201,
     FloorId = 0,
@@ -122788,7 +122788,7 @@ local QuestGuidePointLoc = {
   },
   Npc_sysNPC_242010280 = {
     X = 58430.0,
-    Y = -23280.0,
+    Y = -23140.0,
     Z = 3601.879883,
     R = 0.0,
     SubRegionId = 104501,
@@ -122948,23 +122948,1949 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
   },
-  TargetPoint_FromInnToTop = {
-    X = 31502.039062,
-    Y = -86445.296875,
-    Z = 9240.30957,
+  Drop_2530020 = {
+    X = -31850.0,
+    Y = 0.0,
+    Z = 5040.0,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 106001,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
   },
-  TargetPoint_FromInnToYLX = {
-    X = 40233.101562,
-    Y = -50973.710938,
-    Z = 5901.859863,
+  Drop_2530021 = {
+    X = -19420.0,
+    Y = -5230.0,
+    Z = 1340.0,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 106001,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_2530027 = {
+    X = -38940.0,
+    Y = -10.0,
+    Z = 6010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Drop_GuanlishiDiaocha_2530028 = {
+    X = -16610.0,
+    Y = -1850.0,
+    Z = 2660.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_GuanlishiDiaocha_2530029 = {
+    X = -16400.0,
+    Y = -1110.0,
+    Z = 2630.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_GuanlishiDiaocha_2530030 = {
+    X = -16600.0,
+    Y = 1840.0,
+    Z = 2660.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_2290035 = {
+    X = -19160.349609,
+    Y = 6350.200195,
+    Z = -3124.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_2290036 = {
+    X = -21380.349609,
+    Y = 6510.200195,
+    Z = -3214.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_2290037 = {
+    X = -32120.890625,
+    Y = 7622.589844,
+    Z = -2984.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_2290038 = {
+    X = -15940.349609,
+    Y = 3150.199951,
+    Z = 2485.409912,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_2290074 = {
+    X = -22220.349609,
+    Y = 8780.200195,
+    Z = -2924.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_2290096 = {
+    X = -26340.349609,
+    Y = 7360.200195,
+    Z = -2814.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_2290097 = {
+    X = -26583.460938,
+    Y = -1119.800049,
+    Z = -2074.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_Arrive_2480015 = {
+    X = -900.0,
+    Y = 30.0,
+    Z = 360.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_BaozhaStart_2530031 = {
+    X = -19580.0,
+    Y = 50.0,
+    Z = 1240.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_chest_2510001 = {
+    X = -13050.0,
+    Y = 5750.0,
+    Z = -7210.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_CXQ_2490003 = {
+    X = -18662.189453,
+    Y = 14473.209961,
+    Z = -10327.950195,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_CXQ_2490004 = {
+    X = -13063.339844,
+    Y = 8902.490234,
+    Z = -9734.780273,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_CXQ_2490005 = {
+    X = -17144.259766,
+    Y = 14792.160156,
+    Z = -10240.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_DixiaQianru01_272480037 = {
+    X = -10520.0,
+    Y = 6450.0,
+    Z = -11410.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_DixiaQianruEnd_2510002 = {
+    X = -15620.0,
+    Y = 4980.0,
+    Z = -6920.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_DixiaQianruStart_2520002 = {
+    X = -6810.0,
+    Y = 6420.0,
+    Z = -11360.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_elevator_2280027 = {
+    X = -16060.349609,
+    Y = 5430.200195,
+    Z = 4285.410156,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_elevator_2280028 = {
+    X = -15940.349609,
+    Y = 4530.200195,
+    Z = -7204.589844,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_elevator_2280080 = {
+    X = -19010.369141,
+    Y = 13250.200195,
+    Z = -7204.649902,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_elevator_2280115 = {
+    X = -18860.369141,
+    Y = 12340.200195,
+    Z = -10368.820312,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_elevator_2280130 = {
+    X = -37882.480469,
+    Y = -6725.109863,
+    Z = -3925.340088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_elevator_2280131 = {
+    X = -38802.480469,
+    Y = -6595.109863,
+    Z = 2114.659912,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_elevator_2480010 = {
+    X = -4729.950195,
+    Y = -5000.040039,
+    Z = 795.349976,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_elevator_2480011 = {
+    X = -5919.950195,
+    Y = -6220.040039,
+    Z = 1795.349976,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_elevator_2480012 = {
+    X = -8529.950195,
+    Y = -5610.040039,
+    Z = 795.349976,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_elevator_2480013 = {
+    X = -8779.950195,
+    Y = -5610.040039,
+    Z = 795.349976,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_explode_2530032 = {
+    X = -18210.0,
+    Y = -4840.0,
+    Z = 2410.75,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_explode_2530033 = {
+    X = -14053.379883,
+    Y = -1130.0,
+    Z = 420.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_explode_2530034 = {
+    X = -23098.810547,
+    Y = 9499.75,
+    Z = 425.75,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Guaichao01_2530018 = {
+    X = -38520.0,
+    Y = -5190.0,
+    Z = 2340.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Guanlishi_2530014 = {
+    X = -16550.0,
+    Y = 100.0,
+    Z = 2910.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_172480032 = {
+    X = -2548.0,
+    Y = 3540.0,
+    Z = 2948.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_172480033 = {
+    X = -27980.0,
+    Y = 6490.0,
+    Z = -2530.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_hook_172480034 = {
+    X = -33750.148438,
+    Y = 5139.759766,
+    Z = -2242.080078,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_hook_172480035 = {
+    X = -30128.169922,
+    Y = -2097.98999,
+    Z = -1986.050049,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_hook_172480036 = {
+    X = -33504.808594,
+    Y = -2263.379883,
+    Z = -1785.72998,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_hook_2480031 = {
+    X = -4191.640137,
+    Y = -4610.939941,
+    Z = 4400.009766,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2530002 = {
+    X = -16340.0,
+    Y = 4900.0,
+    Z = 4500.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2530003 = {
+    X = -21190.0,
+    Y = 12840.0,
+    Z = 4950.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2530004 = {
+    X = -24340.0,
+    Y = 16824.140625,
+    Z = 4990.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2530007 = {
+    X = -25210.0,
+    Y = 19470.0,
+    Z = 3320.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2530008 = {
+    X = -18040.0,
+    Y = 10390.0,
+    Z = 4860.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2530022 = {
+    X = -27580.0,
+    Y = 16540.0,
+    Z = 4820.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2530023 = {
+    X = -30810.0,
+    Y = 16560.0,
+    Z = 4840.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2530098 = {
+    X = -31884.769531,
+    Y = -241.899994,
+    Z = 5207.740234,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2540001 = {
+    X = -22400.0,
+    Y = 8800.0,
+    Z = -3200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_hook_2480028 = {
+    X = -11170.0,
+    Y = -4510.0,
+    Z = 2590.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2480029 = {
+    X = -4930.0,
+    Y = -4510.0,
+    Z = 3700.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_2480030 = {
+    X = -7977.189941,
+    Y = -4510.0,
+    Z = 3230.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_HunluanStart_2530013 = {
+    X = -20000.0,
+    Y = 4240.0,
+    Z = 1350.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_interact_2480025 = {
+    X = -19185.550781,
+    Y = 4262.169922,
+    Z = 1104.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_interact_2530025 = {
+    X = -33500.0,
+    Y = 16570.0,
+    Z = 4370.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_Jianpiao_2480017 = {
+    X = -14240.0,
+    Y = -200.0,
+    Z = 830.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_KanuoBoss_2540002 = {
+    X = -86383.257812,
+    Y = -10779.150391,
+    Z = -114.410004,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_KaojinZhuanlie00_2530012 = {
+    X = -38540.0,
+    Y = 4180.0,
+    Z = 2320.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_KaojinZhuanlie_2530011 = {
+    X = -39010.0,
+    Y = -2730.0,
+    Z = 1670.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_LikaiGuanlishi02_2530016 = {
+    X = -17680.0,
+    Y = 4800.0,
+    Z = 2750.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_LikaiGuanlishi_2530015 = {
+    X = -15420.0,
+    Y = 1810.0,
+    Z = 2780.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Maipiao_2480016 = {
+    X = -11370.0,
+    Y = -4060.0,
+    Z = 490.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_minigame_2480001 = {
+    X = -7010.0,
+    Y = 4700.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_minigame_2480026 = {
+    X = -32132.789062,
+    Y = -9.83,
+    Z = 5112.299805,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_minigame_2520001 = {
+    X = -11780.0,
+    Y = 4000.0,
+    Z = -11450.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_monster_2510003 = {
+    X = -15620.0,
+    Y = 5380.0,
+    Z = -6920.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_monster_2530035 = {
+    X = -17737.730469,
+    Y = -4494.859863,
+    Z = 1328.599976,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_MuqiangGuizu_2480021 = {
+    X = -6280.0,
+    Y = 4060.0,
+    Z = 390.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_PanpaStart_2530036 = {
+    X = -15490.0,
+    Y = 4990.0,
+    Z = 4470.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Password_2620001 = {
+    X = -34160.0,
+    Y = 5770.0,
+    Z = -9200.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_pot_2620003 = {
+    X = -35810.0,
+    Y = 6410.0,
+    Z = -9200.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_QianruShigu_2490002 = {
+    X = -12620.0,
+    Y = 13280.0,
+    Z = -9520.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_Shidifen_2490001 = {
+    X = -62310.78125,
+    Y = -2603.429932,
+    Z = 546.830017,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Sink_2620002 = {
+    X = -35810.0,
+    Y = 5180.0,
+    Z = -9200.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_TongfengShouwei_2480022 = {
+    X = -7095.0,
+    Y = 6440.0,
+    Z = 330.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_triggerbox_2480024 = {
+    X = -30778.400391,
+    Y = 16520.369141,
+    Z = 740.340027,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_triggerbox_2530024 = {
+    X = -22778.410156,
+    Y = 10320.370117,
+    Z = 5140.339844,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_triggerbox_2530026 = {
+    X = -24358.410156,
+    Y = 16520.369141,
+    Z = 4910.339844,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_YiwushiNPC_2530009 = {
+    X = -30820.0,
+    Y = 6490.0,
+    Z = 823.039978,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_YiwushiPlayer_2530010 = {
+    X = -30930.0,
+    Y = 6500.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Zhaogong_2480019 = {
+    X = -2240.0,
+    Y = 3750.0,
+    Z = 473.040009,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_ZhuanlieClock_2530019 = {
+    X = -31190.0,
+    Y = 0.0,
+    Z = 6000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_ZZZ01_2530017 = {
+    X = -17570.0,
+    Y = 4870.0,
+    Z = -3210.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_2280065 = {
+    X = -13820.360352,
+    Y = 7580.200195,
+    Z = -12634.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280066 = {
+    X = -13820.360352,
+    Y = 7380.200195,
+    Z = -12634.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280067 = {
+    X = -13440.349609,
+    Y = 4170.200195,
+    Z = -12604.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280082 = {
+    X = -10622.570312,
+    Y = 12575.580078,
+    Z = -12024.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280083 = {
+    X = -10588.370117,
+    Y = 12669.55957,
+    Z = -12024.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280084 = {
+    X = -9236.150391,
+    Y = 11635.070312,
+    Z = -12024.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280085 = {
+    X = -9201.950195,
+    Y = 11729.040039,
+    Z = -12024.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280086 = {
+    X = -9391.419922,
+    Y = 11677.80957,
+    Z = -12024.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280087 = {
+    X = -9357.219727,
+    Y = 11771.769531,
+    Z = -12024.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2280089 = {
+    X = -10524.730469,
+    Y = 12582.530273,
+    Z = -12024.650391,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_2290059 = {
+    X = -34531.050781,
+    Y = 1090.530029,
+    Z = -2594.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_2290060 = {
+    X = -34031.058594,
+    Y = 1090.530029,
+    Z = -2594.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_2290061 = {
+    X = -34531.050781,
+    Y = 1390.530029,
+    Z = -2594.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_2290062 = {
+    X = -34331.050781,
+    Y = 1290.530029,
+    Z = -2594.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_2290063 = {
+    X = -34778.101562,
+    Y = 1278.319946,
+    Z = -2594.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290039 = {
+    X = -17011.619141,
+    Y = 6540.200195,
+    Z = -3566.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290040 = {
+    X = -16811.619141,
+    Y = 6640.200195,
+    Z = -3546.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290041 = {
+    X = -17011.619141,
+    Y = 6340.200195,
+    Z = -3566.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290042 = {
+    X = -16811.619141,
+    Y = 6440.200195,
+    Z = -3566.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290043 = {
+    X = -17041.619141,
+    Y = 6240.200195,
+    Z = -3566.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290044 = {
+    X = -28890.349609,
+    Y = 8910.209961,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290045 = {
+    X = -29190.349609,
+    Y = 8910.200195,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290046 = {
+    X = -29890.349609,
+    Y = 8910.200195,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290047 = {
+    X = -29690.349609,
+    Y = 9010.200195,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290048 = {
+    X = -28640.349609,
+    Y = 8910.200195,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290049 = {
+    X = -25663.199219,
+    Y = 6372.970215,
+    Z = -3502.360107,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290050 = {
+    X = -25775.449219,
+    Y = 6528.549805,
+    Z = -3548.159912,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290051 = {
+    X = -25853.570312,
+    Y = 6576.620117,
+    Z = -3583.550049,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290052 = {
+    X = -25908.699219,
+    Y = 6475.930176,
+    Z = -3553.75,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290053 = {
+    X = -25663.199219,
+    Y = 6522.970215,
+    Z = -3502.360107,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290054 = {
+    X = -34574.550781,
+    Y = 4916.140137,
+    Z = -3614.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290055 = {
+    X = -34433.121094,
+    Y = 4774.709961,
+    Z = -3614.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290056 = {
+    X = -34291.699219,
+    Y = 4633.290039,
+    Z = -3614.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290057 = {
+    X = -34220.988281,
+    Y = 4845.419922,
+    Z = -3614.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290058 = {
+    X = -34362.410156,
+    Y = 4986.839844,
+    Z = -3614.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290064 = {
+    X = -18504.679688,
+    Y = 4953.959961,
+    Z = 2408.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290065 = {
+    X = -18469.949219,
+    Y = 4757.0,
+    Z = 2408.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290066 = {
+    X = -18435.210938,
+    Y = 4560.029785,
+    Z = 2408.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290067 = {
+    X = -18255.619141,
+    Y = 4693.240234,
+    Z = 2408.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290068 = {
+    X = -18290.349609,
+    Y = 4890.200195,
+    Z = 2408.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290069 = {
+    X = -15290.370117,
+    Y = -449.799988,
+    Z = 2485.409912,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290070 = {
+    X = -15090.370117,
+    Y = -449.799988,
+    Z = 2485.409912,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290071 = {
+    X = -14890.360352,
+    Y = -449.809998,
+    Z = 2485.409912,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290072 = {
+    X = -14990.360352,
+    Y = -249.800003,
+    Z = 2485.409912,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290073 = {
+    X = -15190.360352,
+    Y = -249.800003,
+    Z = 2485.409912,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_2290076 = {
+    X = -24329.199219,
+    Y = 5316.060059,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290077 = {
+    X = -24359.699219,
+    Y = 4617.390137,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290078 = {
+    X = -24327.320312,
+    Y = 4763.779785,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290079 = {
+    X = -24067.070312,
+    Y = 5443.689941,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290080 = {
+    X = -24342.269531,
+    Y = 5166.620117,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290081 = {
+    X = -28176.119141,
+    Y = 5365.600098,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290082 = {
+    X = -28295.830078,
+    Y = 5694.5,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290083 = {
+    X = -28411.220703,
+    Y = 5865.339844,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290084 = {
+    X = -28359.740234,
+    Y = 5139.149902,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290085 = {
+    X = -28227.429688,
+    Y = 5506.560059,
+    Z = -3394.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290086 = {
+    X = -27082.699219,
+    Y = 3383.100098,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290087 = {
+    X = -27399.910156,
+    Y = 3235.179932,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290088 = {
+    X = -27560.050781,
+    Y = 3105.340088,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290089 = {
+    X = -26841.109375,
+    Y = 3219.909912,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290090 = {
+    X = -27218.660156,
+    Y = 3039.699951,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290091 = {
+    X = -26070.660156,
+    Y = 3153.25,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290092 = {
+    X = -26387.869141,
+    Y = 3305.330078,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290093 = {
+    X = -26548.009766,
+    Y = 3175.48999,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290094 = {
+    X = -25829.070312,
+    Y = 2980.060059,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290095 = {
+    X = -26206.609375,
+    Y = 3099.860107,
+    Z = -2994.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290098 = {
+    X = -35772.910156,
+    Y = -3847.02002,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290099 = {
+    X = -35842.019531,
+    Y = -3489.639893,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290100 = {
+    X = -35809.640625,
+    Y = -3693.25,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290101 = {
+    X = -35510.789062,
+    Y = -3719.389893,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290102 = {
+    X = -35824.589844,
+    Y = -3290.409912,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290103 = {
+    X = -25786.689453,
+    Y = -3867.540039,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290104 = {
+    X = -25819.070312,
+    Y = -3663.939941,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290105 = {
+    X = -25801.640625,
+    Y = -3464.699951,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290106 = {
+    X = -25788.570312,
+    Y = -3315.26001,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_2290107 = {
+    X = -25526.449219,
+    Y = -3187.629883,
+    Z = -2674.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_CK_2530078 = {
+    X = -18580.0,
+    Y = -4859.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530079 = {
+    X = -18580.0,
+    Y = -4669.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530080 = {
+    X = -18580.0,
+    Y = -4499.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530081 = {
+    X = -18580.0,
+    Y = -4309.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530082 = {
+    X = -18580.0,
+    Y = -4149.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530083 = {
+    X = -17800.0,
+    Y = -4159.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530084 = {
+    X = -17800.0,
+    Y = -4329.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530085 = {
+    X = -17560.0,
+    Y = -4329.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530086 = {
+    X = -17560.0,
+    Y = -4669.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530087 = {
+    X = -17560.0,
+    Y = -4839.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530088 = {
+    X = -17560.0,
+    Y = -4499.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530089 = {
+    X = -17820.0,
+    Y = -4669.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530090 = {
+    X = -17820.0,
+    Y = -4839.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530091 = {
+    X = -17820.0,
+    Y = -4499.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530092 = {
+    X = -18130.0,
+    Y = -4669.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530093 = {
+    X = -18130.0,
+    Y = -4839.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530094 = {
+    X = -18130.0,
+    Y = -4499.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530095 = {
+    X = -18130.0,
+    Y = -4159.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530096 = {
+    X = -18130.0,
+    Y = -4329.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_CK_2530097 = {
+    X = -17560.0,
+    Y = -4169.990234,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_Dianti_2510004 = {
+    X = -15150.0,
+    Y = 4870.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510005 = {
+    X = -15000.0,
+    Y = 4920.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510006 = {
+    X = -15650.0,
+    Y = 4620.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510007 = {
+    X = -15700.0,
+    Y = 4920.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510008 = {
+    X = -15850.0,
+    Y = 4720.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510009 = {
+    X = -15150.0,
+    Y = 4970.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510010 = {
+    X = -16020.0,
+    Y = 4070.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510011 = {
+    X = -16060.0,
+    Y = 4250.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510012 = {
+    X = -16008.780273,
+    Y = 5570.399902,
+    Z = -7204.839844,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_Dianti_2510013 = {
+    X = -15210.0,
+    Y = 4200.0,
+    Z = -7200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_monster_2480005 = {
+    X = -8229.919922,
+    Y = 6339.990234,
+    Z = 100.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_monster_2480006 = {
+    X = -8270.0,
+    Y = 2890.0,
+    Z = 180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_monster_2480007 = {
+    X = -7590.0,
+    Y = 2890.0,
+    Z = 180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_monster_2480008 = {
+    X = -7380.0,
+    Y = 4120.0,
+    Z = 180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_monster_2480009 = {
+    X = -4510.0,
+    Y = 4070.0,
+    Z = 180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_monster_2480014 = {
+    X = -9880.0,
+    Y = 4130.0,
+    Z = 180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_monster_2480004 = {
+    X = -7997.350098,
+    Y = 5701.0,
+    Z = 110.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Gongtou_2480020 = {
+    X = -2140.0,
+    Y = 4220.0,
+    Z = 190.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Shoupiao01_2480018 = {
+    X = -14280.0,
+    Y = -350.0,
+    Z = 620.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_DixiaQianru02_272480038 = {
+    X = -13090.0,
+    Y = 8130.0,
+    Z = -11450.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_DixiaQianru03_272480039 = {
+    X = -14400.0,
+    Y = 2110.0,
+    Z = -11340.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_DixiaQianru04_272480040 = {
+    X = -12010.0,
+    Y = 1510.0,
+    Z = -11310.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_DixiaQianru05_272480041 = {
+    X = -10890.0,
+    Y = 5850.0,
+    Z = -10120.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_DixiaQianru06_272480042 = {
+    X = -19540.0,
+    Y = 12720.0,
+    Z = -9950.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_DixiaQianru07_272480043 = {
+    X = -16210.0,
+    Y = 12760.0,
+    Z = -6920.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_DixiaQianru08_272480044 = {
+    X = -8230.0,
+    Y = 8930.0,
+    Z = -7030.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  BP_Glass01 = {
+    X = -5187.450195,
+    Y = 4679.339844,
+    Z = 770.0,
+    R = 1692.383179,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Glass02 = {
+    X = -2140.0,
+    Y = 495.230011,
+    Z = 2790.219971,
+    R = 2536.879395,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Glass03 = {
+    X = -5540.0,
+    Y = -4990.0,
+    Z = 3620.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_InterClock = {
+    X = -31850.0,
+    Y = 0.0,
+    Z = 5040.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_InterGate = {
+    X = -19420.0,
+    Y = -5230.0,
+    Z = 1340.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_ShidifenChuchang = {
+    X = -33210.0,
+    Y = -5170.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_YWSEnd = {
+    X = -31170.0,
+    Y = 6480.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_ZhuanlieStart = {
+    X = -25380.0,
+    Y = 0.0,
+    Z = 5890.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_ZLPoint01 = {
+    X = -40890.449219,
+    Y = 5547.22998,
+    Z = -8996.870117,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
   },
   Mechanism_DongguoCharge_Mo_162440023 = {
     X = 33003.0,
@@ -123001,177 +124927,6 @@ local QuestGuidePointLoc = {
     SubRegionId = 104506,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104506_1"
-  },
-  EscapePoint4 = {
-    X = 39880.0,
-    Y = -67890.0,
-    Z = 9210.0,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
-  },
-  EscapePoint5 = {
-    X = 38890.0,
-    Y = -55610.0,
-    Z = 5760.0,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
-  },
-  Mechanism_12020406hezi_mid_242310298 = {
-    X = -20321.0,
-    Y = 50933.0,
-    Z = 58743.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Mechanism_12020406heziJuque_242310291 = {
-    X = 35850.0,
-    Y = -33250.0,
-    Z = 3530.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Mechanism_bird_242310297 = {
-    X = 32270.0,
-    Y = -12470.0,
-    Z = 14878.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Mechanism_boxpintu2_162310296 = {
-    X = 32270.0,
-    Y = -12470.0,
-    Z = 15648.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Mechanism_QianjiBird01_162310292 = {
-    X = 32270.0,
-    Y = -12470.0,
-    Z = 14630.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Mechanism_QianjiBird02_162310293 = {
-    X = -16874.050781,
-    Y = 55313.390625,
-    Z = 63637.199219,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Mechanism_YYGCel_162310307 = {
-    X = -16748.169922,
-    Y = 55556.238281,
-    Z = 69611.382812,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Mon_BossJuque = {
-    X = 36030.0,
-    Y = -33355.0,
-    Z = 3540.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Npc_12020406suyi1_242310290 = {
-    X = 36300.0,
-    Y = -48360.0,
-    Z = 3590.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  _Suyi_Easy01_242310317 = {
-    X = -15750.0,
-    Y = 61640.0,
-    Z = 51750.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  _Suyi_Easy02_242310318 = {
-    X = -21230.529297,
-    Y = 56014.039062,
-    Z = 56251.871094,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  _Suyi_Easy03_242310319 = {
-    X = -10827.620117,
-    Y = 55539.238281,
-    Z = 59637.949219,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  BirdOver_Point = {
-    X = 32370.0,
-    Y = -13930.0,
-    Z = 14640.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  JuqueOver_Point = {
-    X = 36240.0,
-    Y = -34350.0,
-    Z = 3540.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  JuqueStart = {
-    X = 35970.0,
-    Y = -35750.0,
-    Z = 3600.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Maze2SL1 = {
-    X = 35910.0,
-    Y = -26800.0,
-    Z = 13300.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Maze2Start = {
-    X = 36050.0,
-    Y = -33560.0,
-    Z = 3520.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
   },
   Mechanism_QuestTrigger01_1990183 = {
     X = 32501.496094,
@@ -123443,141 +125198,6 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
   },
-  Npc_ShouShangLuren_232010297 = {
-    X = 45519.128906,
-    Y = -28513.810547,
-    Z = 2995.080078,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Npc_ShouShangLuren_232010300 = {
-    X = 45703.519531,
-    Y = -28513.810547,
-    Z = 2995.080078,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Npc_ShouShangLuren_232010301 = {
-    X = 47337.539062,
-    Y = -26966.570312,
-    Z = 2995.080078,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Npc_ShouShangLuren_232010302 = {
-    X = 47176.179688,
-    Y = -26865.720703,
-    Z = 2995.080078,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Npc_ShouShangLuren_232010303 = {
-    X = 46013.351562,
-    Y = -24615.439453,
-    Z = 3010.030029,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Npc_ShouShangLuren_232010304 = {
-    X = 46022.371094,
-    Y = -24798.5,
-    Z = 3010.030029,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Drop_12020111Xianglu_2410013D = {
-    X = 38340.0,
-    Y = -58130.0,
-    Z = 5850.0,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
-  },
-  Monster_RegionMonsterOneDay_2420244 = {
-    X = -7833.560059,
-    Y = -46651.78125,
-    Z = 4722.410156,
-    R = 0.0,
-    SubRegionId = 104504,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
-  },
-  Monster_RegionMonsterOneDay_2420245 = {
-    X = -9161.669922,
-    Y = -45963.441406,
-    Z = 4722.410156,
-    R = 0.0,
-    SubRegionId = 104504,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
-  },
-  Monster_RegionMonsterOneDay_2420246 = {
-    X = -9117.0,
-    Y = -44579.128906,
-    Z = 4722.410156,
-    R = 0.0,
-    SubRegionId = 104504,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
-  },
-  Monster_RegionMonsterOneDay_2420247 = {
-    X = -6054.72998,
-    Y = -45938.101562,
-    Z = 4722.410156,
-    R = 0.0,
-    SubRegionId = 104504,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
-  },
-  Monster_RegionMonsterOneDay_2420248 = {
-    X = -7177.669922,
-    Y = -44914.429688,
-    Z = 4722.410156,
-    R = 0.0,
-    SubRegionId = 104504,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
-  },
-  Monster_RegionMonsterOneDay_2420249 = {
-    X = -4807.350098,
-    Y = -45334.429688,
-    Z = 4722.410156,
-    R = 0.0,
-    SubRegionId = 104502,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
-  },
-  Drop_12020212back_242440020D = {
-    X = 31490.0,
-    Y = -106740.0,
-    Z = 45640.0,
-    R = 0.0,
-    SubRegionId = 104506,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104506_1"
-  },
-  Npc_Wuyou722004_292400136 = {
-    X = 11975.25293,
-    Y = -35061.582031,
-    Z = 3962.370117,
-    R = 0.0,
-    SubRegionId = 104502,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_3"
-  },
   BP_WuyouQinsheng = {
     X = 1400.0,
     Y = -70350.0,
@@ -123587,10 +125207,1450 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_4"
   },
+  TargetPoint_FromYLXToSub = {
+    X = 14339.929688,
+    Y = 3484.800049,
+    Z = 3158.219971,
+    R = 0.0,
+    SubRegionId = 105501,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1"
+  },
+  _uiguidebox_242310321 = {
+    X = 36035.0,
+    Y = -23365.0,
+    Z = 13280.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_HardBoss_Resource01 = {
+    X = 43560.0,
+    Y = 21070.0,
+    Z = 7410.0,
+    R = 0.0,
+    SubRegionId = 105301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
+  },
+  Mechanism_HardBoss_Resource02 = {
+    X = 43410.0,
+    Y = 25360.0,
+    Z = 7410.0,
+    R = 0.0,
+    SubRegionId = 105301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
+  },
+  Mechanism_HardBoss_Resource03 = {
+    X = 43430.0,
+    Y = 25390.0,
+    Z = 7400.0,
+    R = 0.0,
+    SubRegionId = 105301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
+  },
+  Mechanism_HardBoss_Resource04 = {
+    X = 43560.0,
+    Y = 21070.0,
+    Z = 7410.0,
+    R = 0.0,
+    SubRegionId = 105301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
+  },
+  Mechanism_paotai_172640002 = {
+    X = 256388.0,
+    Y = 12371.169922,
+    Z = 2150.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_172640001 = {
+    X = 256388.0,
+    Y = 12371.169922,
+    Z = 2400.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_JingYing_172640003 = {
+    X = 256710.0,
+    Y = 190.0,
+    Z = 2170.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_CheZhang_172640004 = {
+    X = 256460.0,
+    Y = -5250.0,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_CheZhang_172640005 = {
+    X = 256700.0,
+    Y = -5250.0,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_Xierda_172640013 = {
+    X = 256591.390625,
+    Y = -4225.220215,
+    Z = 850.080017,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_Xierda_172640014 = {
+    X = 256885.46875,
+    Y = -5743.939941,
+    Z = 860.080017,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_Xierda_172640015 = {
+    X = 256910.71875,
+    Y = -4970.540039,
+    Z = 860.080017,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_Xierda_172640016 = {
+    X = 256808.15625,
+    Y = -4339.209961,
+    Z = 850.080017,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_Xierda_172640017 = {
+    X = 256365.265625,
+    Y = -5642.109863,
+    Z = 870.080017,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_Xierda_172640018 = {
+    X = 256352.890625,
+    Y = -4675.27002,
+    Z = 850.080017,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_Xierda_172640019 = {
+    X = 256369.21875,
+    Y = -4871.069824,
+    Z = 870.080017,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_Baoxiangui_272480048 = {
+    X = -36130.0,
+    Y = 5590.0,
+    Z = -9020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_Ganguo_272480047 = {
+    X = -35390.0,
+    Y = 5480.0,
+    Z = -9000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_Weiyao01_272480049 = {
+    X = -35160.0,
+    Y = 6240.0,
+    Z = -9080.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_Weiyao02_272480050 = {
+    X = -34760.0,
+    Y = 6220.0,
+    Z = -9080.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_Weiyao03_272480051 = {
+    X = -34400.0,
+    Y = 5480.0,
+    Z = -9080.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_Zhixueqian_272480046 = {
+    X = -36260.0,
+    Y = 6190.0,
+    Z = -8970.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_172480053 = {
+    X = -21620.349609,
+    Y = 7280.200195,
+    Z = -2924.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_172480054 = {
+    X = -34376.609375,
+    Y = 3826.610107,
+    Z = -1749.52002,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_172480055 = {
+    X = -30176.609375,
+    Y = 126.610001,
+    Z = -1749.52002,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_Dengche_272480052 = {
+    X = -32590.0,
+    Y = 3470.0,
+    Z = 950.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_hook_172480045 = {
+    X = -40883.449219,
+    Y = 10760.900391,
+    Z = 2663.139893,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_hook_172480046 = {
+    X = -39923.449219,
+    Y = 8350.900391,
+    Z = 2913.139893,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_hook_172480051 = {
+    X = -33733.449219,
+    Y = 7720.899902,
+    Z = 2833.139893,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_triggerbox_172480052 = {
+    X = -42778.398438,
+    Y = 15300.370117,
+    Z = 840.340027,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_YWSStart_272480045 = {
+    X = -35390.0,
+    Y = 5820.0,
+    Z = -8960.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_172480047 = {
+    X = -38897.851562,
+    Y = 12314.410156,
+    Z = 2020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_172480048 = {
+    X = -38762.109375,
+    Y = 12317.900391,
+    Z = 2020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_172480049 = {
+    X = -33220.078125,
+    Y = 7070.720215,
+    Z = 740.109985,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_172480050 = {
+    X = -33364.820312,
+    Y = 7166.589844,
+    Z = 733.890015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Yisheng_272480052 = {
+    X = -35180.0,
+    Y = 5660.0,
+    Z = -9150.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_Baoxiangui = {
+    X = -36210.0,
+    Y = 5540.0,
+    Z = -8940.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_Ganguo = {
+    X = -35390.0,
+    Y = 5480.0,
+    Z = -8940.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_GotoYWS = {
+    X = -30780.0,
+    Y = 6480.0,
+    Z = 940.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_QianruEnd = {
+    X = -44608.679688,
+    Y = 17681.330078,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_Weiyao01 = {
+    X = -35160.0,
+    Y = 6240.0,
+    Z = -9050.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_Weiyao02 = {
+    X = -34770.449219,
+    Y = 6224.25,
+    Z = -9030.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_Weiyao03 = {
+    X = -34400.0,
+    Y = 5480.0,
+    Z = -9040.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_Zhixueqian = {
+    X = -36260.0,
+    Y = 6190.0,
+    Z = -8970.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dengche_272480056 = {
+    X = -32590.0,
+    Y = 3470.0,
+    Z = 950.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_XierDuice = {
+    X = -31570.0,
+    Y = -7380.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_FuluoSearch01_272640021 = {
+    X = 255950.0,
+    Y = 7200.0,
+    Z = 1000.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_FuluoSearch02_272640022 = {
+    X = 255940.0,
+    Y = 5250.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_FuluoSearch03_272640023 = {
+    X = 257300.0,
+    Y = 5480.0,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_NaYanliao_272640008 = {
+    X = 255890.0,
+    Y = -12560.0,
+    Z = -28400.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_OpenDoor_272640025 = {
+    X = 255250.0,
+    Y = 27080.0,
+    Z = 1050.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_Chabei_172640021 = {
+    X = 255440.0,
+    Y = -13390.0,
+    Z = -28367.810547,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_Chahu_172640020 = {
+    X = 254960.40625,
+    Y = -12000.910156,
+    Z = -28380.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_FuluoJiaoshe_272640028 = {
+    X = 256550.0,
+    Y = 6610.0,
+    Z = 2370.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_GetChezhang_272640006 = {
+    X = 256660.0,
+    Y = -6910.0,
+    Z = 1320.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_GetGuizu_272640005 = {
+    X = 256550.0,
+    Y = -430.0,
+    Z = 1140.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_GetPingmin_272730005 = {
+    X = 255950.0,
+    Y = 18550.0,
+    Z = 1390.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_GetPuren_272640003 = {
+    X = 256620.0,
+    Y = 6850.0,
+    Z = 1150.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_GetShouwei_272730006 = {
+    X = 256380.0,
+    Y = 11890.0,
+    Z = 1520.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_Hide_272640004 = {
+    X = 256090.0,
+    Y = 7810.0,
+    Z = 1000.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_Zhadan_172640022 = {
+    X = 256400.0,
+    Y = 7800.0,
+    Z = 904.700012,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Chezhang_272640024 = {
+    X = 256080.0,
+    Y = -6590.0,
+    Z = 910.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_DukeA_272640009 = {
+    X = 256550.0,
+    Y = 19720.0,
+    Z = 913.150024,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_DukeB_272640010 = {
+    X = 256560.0,
+    Y = 19550.0,
+    Z = 913.150024,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Fuluo_272640019 = {
+    X = 256440.0,
+    Y = 16340.0,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Fuluo_272640026 = {
+    X = 255137.296875,
+    Y = -13431.040039,
+    Z = -28444.960938,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_FuluoJiaoshe_272640027 = {
+    X = 256610.0,
+    Y = 6430.0,
+    Z = 2174.060059,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Shidifen_272640017 = {
+    X = 256670.0,
+    Y = 18030.0,
+    Z = 913.150024,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Shidifen_272640020 = {
+    X = 256150.0,
+    Y = 15010.0,
+    Z = 870.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_ShikeA_272640012 = {
+    X = 256420.0,
+    Y = 20680.0,
+    Z = 919.150024,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_ShikeB_272640011 = {
+    X = 256400.0,
+    Y = 20520.0,
+    Z = 913.150024,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Tingzhong_272640016 = {
+    X = 255500.0,
+    Y = 18750.0,
+    Z = 910.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Yinyou_272640015 = {
+    X = 255400.0,
+    Y = 18720.0,
+    Z = 913.150024,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_ZhufuA_272640018 = {
+    X = 255240.0,
+    Y = 20100.0,
+    Z = 913.150024,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_ZhufuB_272640014 = {
+    X = 255300.0,
+    Y = 19950.0,
+    Z = 910.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_OpenDoor_272640029 = {
+    X = 255270.0,
+    Y = 26810.0,
+    Z = 1130.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_FuluoSearch01 = {
+    X = 256650.0,
+    Y = 6320.0,
+    Z = 1090.0,
+    R = 1396.766968,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_FuluoSearch02 = {
+    X = 255940.0,
+    Y = 5250.0,
+    Z = 1070.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_FuluoSearch03 = {
+    X = 257300.0,
+    Y = 5480.0,
+    Z = 1080.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_GuizuBack = {
+    X = 256690.0,
+    Y = 460.0,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_NaYanliao = {
+    X = 255890.0,
+    Y = -12570.0,
+    Z = -28340.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_OpenDoorTrain = {
+    X = 255250.0,
+    Y = 27070.0,
+    Z = 1060.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_PingminBack = {
+    X = 256130.0,
+    Y = 17470.0,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_PTPre01 = {
+    X = 255870.0,
+    Y = 20180.0,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_PTStart = {
+    X = 255230.0,
+    Y = 26890.0,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_TrailnPaotaiStart = {
+    X = 256340.0,
+    Y = 12660.0,
+    Z = 2180.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_TrainPaotaiStart = {
+    X = 256340.0,
+    Y = 13040.0,
+    Z = 2180.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_XierBattle = {
+    X = 256609.296875,
+    Y = -4891.430176,
+    Z = 872.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_ZhujueBattle = {
+    X = 256720.0,
+    Y = 1330.0,
+    Z = 2170.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_ZLTalk01 = {
+    X = 255430.0,
+    Y = -10960.0,
+    Z = -28489.640625,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_Chahu_172640020 = {
+    X = 254970.40625,
+    Y = -11990.910156,
+    Z = -28350.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_Chabei_17264002 = {
+    X = 255440.0,
+    Y = -13390.0,
+    Z = -28317.810547,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_hook_172640032 = {
+    X = 256265.0,
+    Y = 14515.0,
+    Z = -66110.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_hook_172640033 = {
+    X = 255810.0,
+    Y = 20925.0,
+    Z = -66070.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_hook_172640034 = {
+    X = 256570.0,
+    Y = 8205.0,
+    Z = -66060.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_triggerbox_172640030 = {
+    X = 255400.25,
+    Y = 25658.0,
+    Z = -65675.976562,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_triggerbox_172640031 = {
+    X = 256573.0,
+    Y = 6803.459961,
+    Z = -65675.976562,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_DiaochaZhadan_272640035 = {
+    X = 255330.0,
+    Y = 20530.0,
+    Z = 970.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_DiaochaAnmen_272640036 = {
+    X = 257010.0,
+    Y = -6600.0,
+    Z = 1040.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  AirWall_BossLiecheBattleP1 = {
+    X = 256417.703125,
+    Y = -12134.379883,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  AirWall_BossLiecheBattleP2 = {
+    X = 259809.875,
+    Y = -11934.580078,
+    Z = -28517.259766,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  AirWall_BossLiecheCannonSkill09 = {
+    X = 255419.5625,
+    Y = -12073.331055,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Boss_LiecheCannon = {
+    X = 256284.3125,
+    Y = -14314.232422,
+    Z = 813.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Boss_LiecheCore = {
+    X = 259809.875,
+    Y = -11934.580078,
+    Z = -28517.259766,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Boss_LiecheHand1 = {
+    X = 255419.5625,
+    Y = -12073.331055,
+    Z = 793.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Boss_LiecheHand2 = {
+    X = 257415.84375,
+    Y = -12195.418945,
+    Z = 793.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_FuluoPianoStart = {
+    X = 256650.0,
+    Y = 1030.0,
+    Z = 884.830017,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_PianoSit = {
+    X = 256589.0,
+    Y = -144.320007,
+    Z = 1025.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_Zhujue_272640037 = {
+    X = 256390.0,
+    Y = 7930.0,
+    Z = 874.700012,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_FuluoSearch = {
+    X = 256570.0,
+    Y = 7940.0,
+    Z = 874.700012,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_Zhadan_172640022 = {
+    X = 256400.0,
+    Y = 7800.0,
+    Z = 1014.700012,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640035 = {
+    X = 256550.140625,
+    Y = -8940.0,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640036 = {
+    X = 256672.953125,
+    Y = -4251.609863,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640037 = {
+    X = 256691.640625,
+    Y = -2582.189941,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640038 = {
+    X = 256691.640625,
+    Y = 2107.810059,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640039 = {
+    X = 256691.640625,
+    Y = 3777.810059,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640040 = {
+    X = 256568.84375,
+    Y = 8466.200195,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640041 = {
+    X = 256494.953125,
+    Y = 10144.049805,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640042 = {
+    X = 256256.078125,
+    Y = 14802.669922,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640043 = {
+    X = 256172.328125,
+    Y = 16495.330078,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640044 = {
+    X = 255797.984375,
+    Y = 21135.140625,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640045 = {
+    X = 255687.34375,
+    Y = 22862.5,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_Diaocha_272640046 = {
+    X = 256970.0,
+    Y = -6610.0,
+    Z = 970.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_DiaochaZhadan_272640047 = {
+    X = 255210.0,
+    Y = 20350.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_Diaocha_272640046 = {
+    X = 256970.0,
+    Y = -6610.0,
+    Z = 1070.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_DiaochaZhadan_272640047 = {
+    X = 255700.0,
+    Y = 20050.0,
+    Z = 870.0,
+    R = 946.849426,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_PaokuStart = {
+    X = 255270.0,
+    Y = 26820.0,
+    Z = -66728.210938,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_TrainBoss01_272640048 = {
+    X = 256700.0,
+    Y = -12250.0,
+    Z = 1790.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_TrainHead_272640049 = {
+    X = 255230.0,
+    Y = -26140.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_TrainBoss02Start = {
+    X = 259800.0,
+    Y = -11090.0,
+    Z = -28520.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_GetTrainHead = {
+    X = 255630.0,
+    Y = -22380.0,
+    Z = 875.150024,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_TrainHead_272640049 = {
+    X = 255230.0,
+    Y = -26120.0,
+    Z = 1090.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_200237linghua01_1210131 = {
+    X = -237.0,
+    Y = 2799.0,
+    Z = 47.0,
+    R = 0.0,
+    SubRegionId = 210101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  EntrySeatPoint_Suyi = {
+    X = 416.316406,
+    Y = 3259.542725,
+    Z = 118.0,
+    R = 0.0,
+    SubRegionId = 210101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  EntrySeatPoint_Kami = {
+    X = 384.0,
+    Y = 3185.0,
+    Z = 118.0,
+    R = 0.0,
+    SubRegionId = 210101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_12020208qianxingqidianEXXX_242350051 = {
+    X = 1470.0,
+    Y = -2344.0,
+    Z = 1250.0,
+    R = 0.0,
+    SubRegionId = 105101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_162350047 = {
+    X = 710.0,
+    Y = 160.0,
+    Z = 1415.0,
+    R = 0.0,
+    SubRegionId = 105101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_162350048 = {
+    X = 3320.0,
+    Y = -2410.0,
+    Z = 1416.73999,
+    R = 0.0,
+    SubRegionId = 105101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_12020205jingwei3_242350049 = {
+    X = -2236.870117,
+    Y = -2663.350098,
+    Z = 91.860001,
+    R = 0.0,
+    SubRegionId = 105101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_12020205jingwei4_242350050 = {
+    X = 2317.0,
+    Y = -2216.0,
+    Z = 100.160004,
+    R = 0.0,
+    SubRegionId = 105101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_2350052 = {
+    X = -1770.069946,
+    Y = -3560.219971,
+    Z = 1495.0,
+    R = 0.0,
+    SubRegionId = 105101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  qianxingStart = {
+    X = -3470.0,
+    Y = -1870.0,
+    Z = 80.0,
+    R = 0.0,
+    SubRegionId = 105101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  XHWstart1 = {
+    X = 50031.609375,
+    Y = 33.529999,
+    Z = 0.0,
+    R = 0.0,
+    SubRegionId = 105601,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  XHWstart2 = {
+    X = 49910.710938,
+    Y = -115.889999,
+    Z = 0.0,
+    R = 0.0,
+    SubRegionId = 105601,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  XHWstart3 = {
+    X = 50011.980469,
+    Y = -70.0,
+    Z = 0.0,
+    R = 0.0,
+    SubRegionId = 105601,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_12020406hezi_mid_242310298 = {
+    X = -20321.0,
+    Y = 50933.0,
+    Z = 58743.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_12020406heziJuque_242310291 = {
+    X = 35850.0,
+    Y = -33250.0,
+    Z = 3530.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_bird_242310297 = {
+    X = 32270.0,
+    Y = -12470.0,
+    Z = 14878.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_boxpintu2_162310296 = {
+    X = 32270.0,
+    Y = -12470.0,
+    Z = 15648.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_HookPintu2_162310295 = {
+    X = 32270.0,
+    Y = -12470.0,
+    Z = 16177.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_QianjiBird01_162310292 = {
+    X = 32270.0,
+    Y = -12470.0,
+    Z = 14630.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_QianjiBird02_162310293 = {
+    X = -16874.050781,
+    Y = 55313.390625,
+    Z = 63637.199219,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mon_BossJuque = {
+    X = 36030.0,
+    Y = -33355.0,
+    Z = 3540.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Npc_12020406suyi1_242310290 = {
+    X = 36300.0,
+    Y = -48360.0,
+    Z = 3590.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BirdOver_Point = {
+    X = 32370.0,
+    Y = -13930.0,
+    Z = 14640.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  JuqueOver_Point = {
+    X = 36240.0,
+    Y = -34350.0,
+    Z = 3540.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  JuqueStart = {
+    X = 35970.0,
+    Y = -35750.0,
+    Z = 3600.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Maze2SL1 = {
+    X = 36005.0,
+    Y = -25620.0,
+    Z = 13300.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
   Mechanism_AirWallTerraPlatform_162371001 = {
-    X = 29624.15625,
+    X = 29624.160156,
     Y = 23454.5,
-    Z = 5511.874023,
+    Z = 5511.870117,
     R = 0.0,
     SubRegionId = 105301,
     FloorId = 0,
@@ -123614,14 +126674,23 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
   },
-  TargetPoint_FromYLXToSub = {
-    X = 14339.929688,
-    Y = 3484.800049,
-    Z = 3158.219971,
+  Npc_12020506kezhou_242360103 = {
+    X = 8470.0,
+    Y = -5180.0,
+    Z = 7730.0,
     R = 0.0,
-    SubRegionId = 105501,
+    SubRegionId = 105201,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
+  },
+  Npc_12020506suyi_242360104 = {
+    X = 8240.0,
+    Y = -5170.0,
+    Z = 7730.0,
+    R = 0.0,
+    SubRegionId = 105201,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
   },
   Monster_StaticMon_12020605_01_162010305 = {
     X = 44612.429688,
@@ -123929,113 +126998,122 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410340 = {
-    X = 36683.339844,
-    Y = -42391.878906,
-    Z = 3886.939941,
+  Npc_ATao_2010352 = {
+    X = 42644.96875,
+    Y = -12060.410156,
+    Z = 1622.040039,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1"
   },
-  Monster_StaticMon_12020605_03_162410341 = {
-    X = 37088.5,
-    Y = -42117.621094,
-    Z = 3885.0,
+  Npc_ChengGong_2010355 = {
+    X = 38451.179688,
+    Y = -37009.851562,
+    Z = 3507.139893,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410343 = {
-    X = 37099.558594,
-    Y = -42803.769531,
-    Z = 3886.939941,
+  Npc_HeXiangu_2010351 = {
+    X = 42536.578125,
+    Y = -12060.830078,
+    Z = 1622.040039,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1"
   },
-  Monster_StaticMon_12020605_03_162410344 = {
-    X = 36685.570312,
-    Y = -43263.660156,
-    Z = 3886.939941,
+  Npc_LiDazui_2010350 = {
+    X = 44375.550781,
+    Y = -25098.339844,
+    Z = 2990.929932,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410345 = {
-    X = 36121.660156,
-    Y = -43084.449219,
-    Z = 3904.97998,
+  Npc_OptimisticWhite_2010353 = {
+    X = 46666.617188,
+    Y = -28741.378906,
+    Z = 3090.026855,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410346 = {
-    X = 38055.480469,
-    Y = -43554.5,
-    Z = 3985.0,
+  Npc_ShouShangLuren_232010297 = {
+    X = 45519.128906,
+    Y = -28513.810547,
+    Z = 2995.080078,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410347 = {
-    X = 35253.539062,
-    Y = -42836.789062,
-    Z = 3885.0,
+  Npc_ShouShangLuren_232010300 = {
+    X = 45703.519531,
+    Y = -28513.810547,
+    Z = 2995.080078,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410348 = {
-    X = 37517.640625,
-    Y = -42953.839844,
-    Z = 3886.939941,
+  Npc_ShouShangLuren_232010301 = {
+    X = 47337.539062,
+    Y = -26966.570312,
+    Z = 2995.080078,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410349 = {
-    X = 37739.449219,
-    Y = -43091.519531,
-    Z = 3886.939941,
+  Npc_ShouShangLuren_232010302 = {
+    X = 47176.179688,
+    Y = -26865.720703,
+    Z = 2995.080078,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410350 = {
-    X = 37412.101562,
-    Y = -43420.558594,
-    Z = 3886.939941,
+  Npc_ShouShangLuren_232010303 = {
+    X = 46013.351562,
+    Y = -24615.439453,
+    Z = 3010.030029,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410351 = {
-    X = 35952.96875,
-    Y = -42248.210938,
-    Z = 3886.939941,
+  Npc_ShouShangLuren_232010304 = {
+    X = 46022.371094,
+    Y = -24798.5,
+    Z = 3010.030029,
     R = 0.0,
-    SubRegionId = 104503,
+    SubRegionId = 104501,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
   },
-  Monster_StaticMon_12020605_03_162410352 = {
-    X = 36174.328125,
-    Y = -42651.589844,
-    Z = 3886.939941,
+  Npc_YanTaiqing_2010354 = {
+    X = 45799.011719,
+    Y = -36881.019531,
+    Z = 3580.600098,
+    R = 0.0,
+    SubRegionId = 104501,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
+  },
+  Drop_12020111Xianglu_2410013D = {
+    X = 38340.0,
+    Y = -58130.0,
+    Z = 5850.0,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
   },
   Monster_EscapeMonster_162410353 = {
     X = 27895.0,
@@ -124505,205 +127583,7 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
   },
-  Mechanism_162400211 = {
-    X = 15617.0,
-    Y = -18985.0,
-    Z = 6325.0,
-    R = 0.0,
-    SubRegionId = 104502,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_3"
-  },
-  Mark2Point = {
-    X = 67918.0,
-    Y = -64128.0,
-    Z = 10557.0,
-    R = 0.0,
-    SubRegionId = 104505,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_2"
-  },
-  Mechanism_AfterBossBox_242310320 = {
-    X = -16780.0,
-    Y = 54640.0,
-    Z = 102470.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  ["12020407BossSet"] = {
-    X = -15417.0,
-    Y = 53107.0,
-    Z = 102780.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Mechanism_HardBoss_Resource01 = {
-    X = 43560.0,
-    Y = 21070.0,
-    Z = 7410.0,
-    R = 0.0,
-    SubRegionId = 105301,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
-  },
-  Mechanism_HardBoss_Resource02 = {
-    X = 43410.0,
-    Y = 25360.0,
-    Z = 7410.0,
-    R = 0.0,
-    SubRegionId = 105301,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
-  },
-  Mechanism_HardBoss_Resource03 = {
-    X = 43430.0,
-    Y = 25390.0,
-    Z = 7400.0,
-    R = 0.0,
-    SubRegionId = 105301,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
-  },
-  Mechanism_HardBoss_Resource04 = {
-    X = 43560.0,
-    Y = 21070.0,
-    Z = 7410.0,
-    R = 0.0,
-    SubRegionId = 105301,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105301_1"
-  },
-  _uiguidebox_242310321 = {
-    X = 36035.0,
-    Y = -23365.0,
-    Z = 13280.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Drop_12020511jingyuandrop_242420254 = {
-    X = -28310.0,
-    Y = -43050.0,
-    Z = 11545.0,
-    R = 0.0,
-    SubRegionId = 104504,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_3"
-  },
-  jingyuandrop = {
-    X = -28310.0,
-    Y = -43050.0,
-    Z = 11545.0,
-    R = 0.0,
-    SubRegionId = 104504,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_3"
-  },
-  Npc_12020506kezhou_242360103 = {
-    X = 8470.0,
-    Y = -5180.0,
-    Z = 7730.0,
-    R = 0.0,
-    SubRegionId = 105201,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
-  },
-  Npc_12020506suyi_242360104 = {
-    X = 8240.0,
-    Y = -5170.0,
-    Z = 7730.0,
-    R = 0.0,
-    SubRegionId = 105201,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_2"
-  },
-  TXSB4 = {
-    X = -16240.0,
-    Y = 63460.0,
-    Z = 52100.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  TXSB5 = {
-    X = -22040.0,
-    Y = 55610.0,
-    Z = 56550.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  TXSB6 = {
-    X = -9780.0,
-    Y = 55770.0,
-    Z = 59890.0,
-    R = 0.0,
-    SubRegionId = 104801,
-    FloorId = 0,
-    TeleportPointName = ""
-  },
-  Npc_ATao_2010352 = {
-    X = 42644.96875,
-    Y = -12060.410156,
-    Z = 1622.040039,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1"
-  },
-  Npc_HeXiangu_2010351 = {
-    X = 42536.578125,
-    Y = -12060.830078,
-    Z = 1622.040039,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_1"
-  },
-  Npc_LiDazui_2010350 = {
-    X = 44375.550781,
-    Y = -25098.339844,
-    Z = 2990.929932,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Npc_YanTaiqing_2010354 = {
-    X = 45799.011719,
-    Y = -36881.019531,
-    Z = 3580.600098,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Npc_ChengGong_2010355 = {
-    X = 38451.179688,
-    Y = -37009.851562,
-    Z = 3507.139893,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Npc_OptimisticWhite_2010353 = {
-    X = 46666.617188,
-    Y = -28741.378906,
-    Z = 3090.026855,
-    R = 0.0,
-    SubRegionId = 104501,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104501_3"
-  },
-  Monster_FinalMonStatic_162410441 = {
+  Monster_FinalMonStatic_162410423 = {
     X = 29140.029297,
     Y = -43995.0,
     Z = 3786.52002,
@@ -124711,6 +127591,168 @@ local QuestGuidePointLoc = {
     SubRegionId = 104503,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+  },
+  Monster_FinalMonStatic_162410460 = {
+    X = 34904.75,
+    Y = -59339.621094,
+    Z = 5187.930176,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410461 = {
+    X = 35734.75,
+    Y = -58439.621094,
+    Z = 5187.930176,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410462 = {
+    X = 35489.75,
+    Y = -59034.621094,
+    Z = 5187.930176,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410463 = {
+    X = 34684.75,
+    Y = -58434.621094,
+    Z = 5187.930176,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410464 = {
+    X = 35604.738281,
+    Y = -57774.621094,
+    Z = 5187.930176,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410465 = {
+    X = 35369.75,
+    Y = -59999.621094,
+    Z = 5187.930176,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410466 = {
+    X = 28129.75,
+    Y = -58554.621094,
+    Z = 5085.939941,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410467 = {
+    X = 27299.759766,
+    Y = -59454.621094,
+    Z = 5085.939941,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410468 = {
+    X = 27544.759766,
+    Y = -58859.609375,
+    Z = 5090.560059,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410469 = {
+    X = 28349.759766,
+    Y = -59459.621094,
+    Z = 5085.939941,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410470 = {
+    X = 27429.769531,
+    Y = -60119.621094,
+    Z = 5085.939941,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410471 = {
+    X = 27664.75,
+    Y = -57894.621094,
+    Z = 5085.939941,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  Monster_FinalMonStatic_162410472 = {
+    X = 30945.019531,
+    Y = -68910.0,
+    Z = 6187.02002,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+  },
+  Monster_FinalMonStatic_162410473 = {
+    X = 31845.019531,
+    Y = -69740.0,
+    Z = 6187.02002,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+  },
+  Monster_FinalMonStatic_162410474 = {
+    X = 31250.019531,
+    Y = -69495.0,
+    Z = 6206.379883,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+  },
+  Monster_FinalMonStatic_162410475 = {
+    X = 31850.019531,
+    Y = -68690.0,
+    Z = 6187.02002,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+  },
+  Monster_FinalMonStatic_162410476 = {
+    X = 32510.019531,
+    Y = -69609.976562,
+    Z = 6187.02002,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+  },
+  Monster_FinalMonStatic_162410477 = {
+    X = 30285.019531,
+    Y = -69375.0,
+    Z = 6187.02002,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
   },
   Monster_FinalMonStatic_162410424 = {
     X = 30945.019531,
@@ -124865,28 +127907,37 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
+  Monster_FinalMonStatic_162410441 = {
+    X = 29140.029297,
+    Y = -43995.0,
+    Z = 3786.52002,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
+  },
   Monster_FinalMonStatic_162410442 = {
-    X = 30095.021484,
-    Y = -48000.027344,
-    Z = 3985.000244,
+    X = 30095.019531,
+    Y = -48000.03125,
+    Z = 3985.0,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
   Monster_FinalMonStatic_162410443 = {
-    X = 30755.017578,
+    X = 30755.019531,
     Y = -47535.03125,
-    Z = 3985.000244,
+    Z = 3985.0,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
   Monster_FinalMonStatic_162410444 = {
-    X = 31655.025391,
-    Y = -48365.015625,
-    Z = 4017.737549,
+    X = 31655.029297,
+    Y = -48365.019531,
+    Z = 4017.73999,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
@@ -124894,7 +127945,7 @@ local QuestGuidePointLoc = {
   },
   Monster_FinalMonStatic_162410445 = {
     X = 31060.019531,
-    Y = -48120.023438,
+    Y = -48120.019531,
     Z = 3985.0,
     R = 0.0,
     SubRegionId = 104503,
@@ -124902,16 +127953,16 @@ local QuestGuidePointLoc = {
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
   Monster_FinalMonStatic_162410446 = {
-    X = 31660.025391,
+    X = 31660.029297,
     Y = -47315.03125,
-    Z = 3985.000244,
+    Z = 3985.0,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
   Monster_FinalMonStatic_162410447 = {
-    X = 32320.011719,
+    X = 32320.009766,
     Y = -48235.011719,
     Z = 3985.0,
     R = 0.0,
@@ -124976,7 +128027,7 @@ local QuestGuidePointLoc = {
   Monster_FinalMonStatic_162410454 = {
     X = 30945.009766,
     Y = -82520.0,
-    Z = 8388.456055,
+    Z = 8388.459961,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
@@ -124985,7 +128036,7 @@ local QuestGuidePointLoc = {
   Monster_FinalMonStatic_162410455 = {
     X = 31845.019531,
     Y = -83350.0,
-    Z = 8436.955078,
+    Z = 8436.959961,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
@@ -124994,7 +128045,7 @@ local QuestGuidePointLoc = {
   Monster_FinalMonStatic_162410456 = {
     X = 31250.009766,
     Y = -83105.0,
-    Z = 8388.456055,
+    Z = 8388.459961,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
@@ -125003,7 +128054,7 @@ local QuestGuidePointLoc = {
   Monster_FinalMonStatic_162410457 = {
     X = 31850.009766,
     Y = -82300.0,
-    Z = 8388.456055,
+    Z = 8388.459961,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
@@ -125012,7 +128063,7 @@ local QuestGuidePointLoc = {
   Monster_FinalMonStatic_162410458 = {
     X = 32510.009766,
     Y = -83219.992188,
-    Z = 8402.033203,
+    Z = 8402.030273,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
@@ -125021,173 +128072,119 @@ local QuestGuidePointLoc = {
   Monster_FinalMonStatic_162410459 = {
     X = 30285.009766,
     Y = -82985.0,
-    Z = 8388.456055,
+    Z = 8388.459961,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
   },
-  Monster_FinalMonStatic_162410460 = {
-    X = 34904.75,
-    Y = -59339.621094,
-    Z = 5187.927734,
+  Monster_StaticMon_12020605_03_162410340 = {
+    X = 36683.339844,
+    Y = -42391.878906,
+    Z = 3886.939941,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410461 = {
-    X = 35734.746094,
-    Y = -58439.625,
-    Z = 5187.927734,
+  Monster_StaticMon_12020605_03_162410341 = {
+    X = 37088.5,
+    Y = -42117.621094,
+    Z = 3885.0,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410462 = {
-    X = 35489.746094,
-    Y = -59034.625,
-    Z = 5187.927734,
+  Monster_StaticMon_12020605_03_162410343 = {
+    X = 37099.558594,
+    Y = -42803.769531,
+    Z = 3886.939941,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410463 = {
-    X = 34684.746094,
-    Y = -58434.621094,
-    Z = 5187.927734,
+  Monster_StaticMon_12020605_03_162410344 = {
+    X = 36685.570312,
+    Y = -43263.660156,
+    Z = 3886.939941,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410464 = {
-    X = 35604.738281,
-    Y = -57774.617188,
-    Z = 5187.927734,
+  Monster_StaticMon_12020605_03_162410345 = {
+    X = 36121.660156,
+    Y = -43084.449219,
+    Z = 3904.97998,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410465 = {
-    X = 35369.75,
-    Y = -59999.621094,
-    Z = 5187.927734,
+  Monster_StaticMon_12020605_03_162410346 = {
+    X = 38055.480469,
+    Y = -43554.5,
+    Z = 3985.0,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410466 = {
-    X = 28129.753906,
-    Y = -58554.617188,
-    Z = 5085.941406,
+  Monster_StaticMon_12020605_03_162410347 = {
+    X = 35253.539062,
+    Y = -42836.789062,
+    Z = 3885.0,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410467 = {
-    X = 27299.755859,
-    Y = -59454.617188,
-    Z = 5085.941895,
+  Monster_StaticMon_12020605_03_162410348 = {
+    X = 37517.640625,
+    Y = -42953.839844,
+    Z = 3886.939941,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410468 = {
-    X = 27544.759766,
-    Y = -58859.609375,
-    Z = 5090.560059,
+  Monster_StaticMon_12020605_03_162410349 = {
+    X = 37739.449219,
+    Y = -43091.519531,
+    Z = 3886.939941,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410469 = {
-    X = 28349.759766,
-    Y = -59459.621094,
-    Z = 5085.941895,
+  Monster_StaticMon_12020605_03_162410350 = {
+    X = 37412.101562,
+    Y = -43420.558594,
+    Z = 3886.939941,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410470 = {
-    X = 27429.771484,
-    Y = -60119.625,
-    Z = 5085.942383,
+  Monster_StaticMon_12020605_03_162410351 = {
+    X = 35952.96875,
+    Y = -42248.210938,
+    Z = 3886.939941,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
-  Monster_FinalMonStatic_162410471 = {
-    X = 27664.75,
-    Y = -57894.617188,
-    Z = 5085.94043,
+  Monster_StaticMon_12020605_03_162410352 = {
+    X = 36174.328125,
+    Y = -42651.589844,
+    Z = 3886.939941,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
-  },
-  Monster_FinalMonStatic_162410472 = {
-    X = 30945.019531,
-    Y = -68910.0,
-    Z = 6187.022461,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
-  },
-  Monster_FinalMonStatic_162410473 = {
-    X = 31845.019531,
-    Y = -69740.0,
-    Z = 6187.022461,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
-  },
-  Monster_FinalMonStatic_162410474 = {
-    X = 31250.019531,
-    Y = -69495.0,
-    Z = 6206.380859,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
-  },
-  Monster_FinalMonStatic_162410475 = {
-    X = 31850.019531,
-    Y = -68690.0,
-    Z = 6187.022461,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
-  },
-  Monster_FinalMonStatic_162410476 = {
-    X = 32510.019531,
-    Y = -69609.984375,
-    Z = 6187.022461,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
-  },
-  Monster_FinalMonStatic_162410477 = {
-    X = 30285.019531,
-    Y = -69375.0,
-    Z = 6187.022461,
-    R = 0.0,
-    SubRegionId = 104503,
-    FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
   Npc_HuaLiuqing_2410405 = {
     X = 34749.171875,
@@ -125207,6 +128204,15 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_1"
   },
+  Npc_XiangguanWhite_2410408 = {
+    X = 28150.960938,
+    Y = -57462.25,
+    Z = 5085.0,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
   Npc_XieQian_2410409 = {
     X = 32797.671875,
     Y = -40164.328125,
@@ -125225,14 +128231,905 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
   },
-  Npc_XiangguanWhite_2410408 = {
-    X = 28150.960938,
-    Y = -57462.25,
-    Z = 5085.0,
+  Drop_12020511jingyuandrop_242420254 = {
+    X = -28310.0,
+    Y = -43050.0,
+    Z = 11545.0,
+    R = 0.0,
+    SubRegionId = 104504,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_3"
+  },
+  Monster_RegionMonsterOneDay_2420244 = {
+    X = -7833.560059,
+    Y = -46651.78125,
+    Z = 4722.410156,
+    R = 0.0,
+    SubRegionId = 104504,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
+  },
+  Monster_RegionMonsterOneDay_2420245 = {
+    X = -9161.669922,
+    Y = -45963.441406,
+    Z = 4722.410156,
+    R = 0.0,
+    SubRegionId = 104504,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
+  },
+  Monster_RegionMonsterOneDay_2420246 = {
+    X = -9117.0,
+    Y = -44579.128906,
+    Z = 4722.410156,
+    R = 0.0,
+    SubRegionId = 104504,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
+  },
+  Monster_RegionMonsterOneDay_2420247 = {
+    X = -6054.72998,
+    Y = -45938.101562,
+    Z = 4722.410156,
+    R = 0.0,
+    SubRegionId = 104504,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
+  },
+  Monster_RegionMonsterOneDay_2420248 = {
+    X = -7177.669922,
+    Y = -44914.429688,
+    Z = 4722.410156,
+    R = 0.0,
+    SubRegionId = 104504,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
+  },
+  Monster_RegionMonsterOneDay_2420249 = {
+    X = -4807.350098,
+    Y = -45334.429688,
+    Z = 4722.410156,
+    R = 0.0,
+    SubRegionId = 104502,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_2"
+  },
+  Drop_12020212back_242440020D = {
+    X = 31490.0,
+    Y = -106740.0,
+    Z = 45640.0,
+    R = 0.0,
+    SubRegionId = 104506,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104506_1"
+  },
+  Mechanism_162400211 = {
+    X = 15617.0,
+    Y = -18985.0,
+    Z = 6325.0,
+    R = 0.0,
+    SubRegionId = 104502,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_3"
+  },
+  Npc_Wuyou722004_292400136 = {
+    X = 11975.25293,
+    Y = -35061.582031,
+    Z = 3962.370117,
+    R = 0.0,
+    SubRegionId = 104502,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104502_3"
+  },
+  EscapePoint4 = {
+    X = 39880.0,
+    Y = -67890.0,
+    Z = 9210.0,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+  },
+  EscapePoint5 = {
+    X = 38890.0,
+    Y = -55610.0,
+    Z = 5760.0,
     R = 0.0,
     SubRegionId = 104503,
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  TargetPoint_FromInnToTop = {
+    X = 31502.039062,
+    Y = -86445.296875,
+    Z = 9240.30957,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_2"
+  },
+  TargetPoint_FromInnToYLX = {
+    X = 40233.101562,
+    Y = -50973.710938,
+    Z = 5901.859863,
+    R = 0.0,
+    SubRegionId = 104503,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104503_3"
+  },
+  jingyuandrop = {
+    X = -28310.0,
+    Y = -43050.0,
+    Z = 11545.0,
+    R = 0.0,
+    SubRegionId = 104504,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104504_3"
+  },
+  Mark2Point = {
+    X = 67918.0,
+    Y = -64128.0,
+    Z = 10557.0,
+    R = 0.0,
+    SubRegionId = 104505,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_104505_2"
+  },
+  Mechanism_QuestTrigger_312480057 = {
+    X = -30962.869141,
+    Y = 13542.530273,
+    Z = 981.200012,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Teleport_292480057 = {
+    X = 3648.600098,
+    Y = -730.210022,
+    Z = -409.820007,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Teleport_292480058 = {
+    X = -6812.850098,
+    Y = 6204.040039,
+    Z = -11605.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -4,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_Teleport_292480059 = {
+    X = -17725.580078,
+    Y = 5550.379883,
+    Z = -3398.969971,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_Teleport_292480060 = {
+    X = -67579.132812,
+    Y = -2775.97998,
+    Z = 467.450012,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Aote_312480064 = {
+    X = -11591.280273,
+    Y = 1700.02002,
+    Z = 124.510002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Box_312480060 = {
+    X = -31069.960938,
+    Y = 12094.69043,
+    Z = 310.51001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Fuwuyuan_312480065 = {
+    X = -13312.580078,
+    Y = 4050.629883,
+    Z = 180.110001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Laofuren_312480059 = {
+    X = -35872.171875,
+    Y = 5763.689941,
+    Z = -9150.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Laofuren_312480061 = {
+    X = -30354.960938,
+    Y = 13678.990234,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_QiaocuiGongren_312480063 = {
+    X = -13069.80957,
+    Y = 7483.950195,
+    Z = -12606.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_RenzhenGongren_312480062 = {
+    X = -14488.570312,
+    Y = 7559.47998,
+    Z = -12606.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_Yisheng_312480058 = {
+    X = -35901.210938,
+    Y = 6314.459961,
+    Z = -9150.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dyn_292480066 = {
+    X = -67800.0,
+    Y = 4350.0,
+    Z = 479.799988,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Pet_Dyn_292480067 = {
+    X = -67800.0,
+    Y = 4350.0,
+    Z = 479.799988,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Pet_Dyn_292480068 = {
+    X = -67800.0,
+    Y = 4350.0,
+    Z = 479.799988,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_DynTrigger_292480098 = {
+    X = -67250.0,
+    Y = 4250.0,
+    Z = 363.220001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_DynTrigger_292480099 = {
+    X = -67250.0,
+    Y = 4250.0,
+    Z = 363.220001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480086 = {
+    X = -10650.0,
+    Y = 12600.0,
+    Z = -12000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480087 = {
+    X = -10350.0,
+    Y = 12600.0,
+    Z = -12000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480088 = {
+    X = -10500.0,
+    Y = 12800.0,
+    Z = -12000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480089 = {
+    X = -9450.0,
+    Y = 12400.0,
+    Z = -12000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480090 = {
+    X = -10740.639648,
+    Y = 11914.44043,
+    Z = -12000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480091 = {
+    X = -11235.290039,
+    Y = 12325.349609,
+    Z = -10957.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480092 = {
+    X = -10251.55957,
+    Y = 13243.099609,
+    Z = -11974.799805,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480093 = {
+    X = -10673.280273,
+    Y = 13407.870117,
+    Z = -12000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480094 = {
+    X = -10375.900391,
+    Y = 11619.980469,
+    Z = -11974.799805,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480095 = {
+    X = -9440.099609,
+    Y = 11989.820312,
+    Z = -11974.799805,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480096 = {
+    X = -11442.240234,
+    Y = 12345.219727,
+    Z = -11875.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Monster_Dyn_292480097 = {
+    X = -9492.230469,
+    Y = 13095.19043,
+    Z = -12000.280273,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_DynTrigger_292480082 = {
+    X = -7450.0,
+    Y = 0.0,
+    Z = 250.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_DynTrigger_292480083 = {
+    X = -7450.0,
+    Y = 6.18,
+    Z = 250.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Dyn_292480084 = {
+    X = -6750.0,
+    Y = 14.22,
+    Z = 163.169998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Dyn_292480085 = {
+    X = -5215.649902,
+    Y = 14.22,
+    Z = 163.169998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_DynTrigger_292480100 = {
+    X = -88514.09375,
+    Y = -11956.990234,
+    Z = -440.5,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_DynTrigger_292480101 = {
+    X = -88514.09375,
+    Y = -11956.990234,
+    Z = -440.5,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dyn_292480103 = {
+    X = -88514.09375,
+    Y = -11956.990234,
+    Z = -440.5,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dyn_292480104 = {
+    X = -88514.09375,
+    Y = -11956.990234,
+    Z = -440.5,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Dyn_292480102 = {
+    X = -88672.007812,
+    Y = -11956.990234,
+    Z = -439.690002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480105 = {
+    X = -88683.570312,
+    Y = -13138.129883,
+    Z = -403.839996,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480106 = {
+    X = -89349.023438,
+    Y = -11931.75,
+    Z = -433.709991,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480107 = {
+    X = -88600.289062,
+    Y = -11203.259766,
+    Z = -442.200012,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480108 = {
+    X = -87783.5,
+    Y = -11624.919922,
+    Z = -445.559998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480109 = {
+    X = -87765.773438,
+    Y = -12622.410156,
+    Z = -397.640015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480110 = {
+    X = -88016.65625,
+    Y = -13058.169922,
+    Z = -402.809998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480111 = {
+    X = -88975.546875,
+    Y = -11234.450195,
+    Z = -440.100006,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480112 = {
+    X = -87833.476562,
+    Y = -11319.200195,
+    Z = -451.880005,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_DynTrigger_292480120 = {
+    X = -61689.179688,
+    Y = -2144.719971,
+    Z = 773.679993,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_DynTrigger_292480121 = {
+    X = -60839.441406,
+    Y = -902.5,
+    Z = 1075.530029,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Dyn_292480114 = {
+    X = -61689.179688,
+    Y = -2144.719971,
+    Z = 342.809998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dyn_292480115 = {
+    X = -61903.710938,
+    Y = -919.909973,
+    Z = 399.709991,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dyn_292480116 = {
+    X = -61286.929688,
+    Y = -747.01001,
+    Z = 479.720001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dyn_292480117 = {
+    X = -60719.558594,
+    Y = -1055.300049,
+    Z = 490.130005,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dyn_292480118 = {
+    X = -60483.710938,
+    Y = -310.700012,
+    Z = 389.790009,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Dyn_292480119 = {
+    X = -60599.75,
+    Y = -1720.420044,
+    Z = 499.630005,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_DynTrigger_292480122 = {
+    X = -11478.30957,
+    Y = 1903.150024,
+    Z = 417.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_DynTrigger_292480123 = {
+    X = -10566.94043,
+    Y = -196.860001,
+    Z = 417.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Dyn_292480124 = {
+    X = -11605.209961,
+    Y = 1966.959961,
+    Z = 124.510002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Dyn_292480125 = {
+    X = -9854.040039,
+    Y = 2013.5,
+    Z = 160.660004,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Dyn_292480126 = {
+    X = -9180.25,
+    Y = 562.130005,
+    Z = 124.510002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Dyn_292480127 = {
+    X = -10960.889648,
+    Y = -1041.079956,
+    Z = 124.510002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_CXQ_2490003 = {
+    X = -18662.189453,
+    Y = 14473.209961,
+    Z = -10327.950195,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  BP_CXQ_2490004 = {
+    X = -13063.339844,
+    Y = 8902.490234,
+    Z = -9644.780273,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  BP_CXQ_2490005 = {
+    X = -17144.259766,
+    Y = 14792.160156,
+    Z = -10110.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  QuestSign_20040302 = {
+    X = -30818.109375,
+    Y = 6485.700195,
+    Z = 990.23999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  QuestSign_20040304 = {
+    X = -13959.80957,
+    Y = 7753.950195,
+    Z = -12186.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  BP_Dyn_TargetPoint = {
+    X = -7817.779785,
+    Y = 12.38,
+    Z = 1014.580017,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_XingShang_322480128 = {
+    X = -9200.0,
+    Y = -1780.0,
+    Z = 120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Bai_322480129 = {
+    X = -9170.0,
+    Y = -1920.0,
+    Z = 120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_TuoLan_322480130 = {
+    X = -9100.0,
+    Y = -1740.0,
+    Z = 120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Bai_322480131 = {
+    X = -13720.0,
+    Y = -1080.0,
+    Z = 420.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_GuiZu_322480132 = {
+    X = -13890.0,
+    Y = -930.0,
+    Z = 420.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_TuoLan_322480133 = {
+    X = -32200.0,
+    Y = -5410.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_TuoLan_322480134 = {
+    X = -31510.0,
+    Y = -7430.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_AoTe_322480135 = {
+    X = -31350.0,
+    Y = -6240.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Bai_322480136 = {
+    X = -32970.0,
+    Y = -6500.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_TuoLan_322480137 = {
+    X = -26290.0,
+    Y = 9170.0,
+    Z = 2110.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Photo_322480138 = {
+    X = -26480.0,
+    Y = 8920.0,
+    Z = 2250.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_Photo_322480139 = {
+    X = -32200.0,
+    Y = -5410.0,
+    Z = 2210.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_Wait_322480140 = {
+    X = -32180.0,
+    Y = -7150.0,
+    Z = 2160.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Wall_322480141 = {
+    X = -32720.0,
+    Y = -6870.0,
+    Z = 2190.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_NewTargetPoint_20040201 = {
+    X = -26290.0,
+    Y = 9020.0,
+    Z = 2110.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_NewTargetPoint_20040202 = {
+    X = -30510.0,
+    Y = 9800.0,
+    Z = 1230.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_NewTargetPoint_20040203 = {
+    X = -32180.0,
+    Y = -7160.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
   },
   Npc_LuoHan_2400213 = {
     X = 19129.439453,
@@ -125261,6 +129158,231 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_1"
   },
+  Npc_YinheSheng_2340056 = {
+    X = 19038.980469,
+    Y = -588.700012,
+    Z = 3111.149902,
+    R = 0.0,
+    SubRegionId = 105501,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1"
+  },
+  _Suyi_Easy01_242310317 = {
+    X = -15750.0,
+    Y = 61640.0,
+    Z = 51750.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  _Suyi_Easy02_242310318 = {
+    X = -21230.529297,
+    Y = 56014.039062,
+    Z = 56251.871094,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  _Suyi_Easy03_242310319 = {
+    X = -10827.620117,
+    Y = 55539.238281,
+    Z = 59637.949219,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_AfterBossBox_242310320 = {
+    X = -16780.0,
+    Y = 54640.0,
+    Z = 102470.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_JuqueRoomAirwall_2310322 = {
+    X = 31820.0,
+    Y = -33645.0,
+    Z = 4535.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  ["12020407BossSet"] = {
+    X = -15417.0,
+    Y = 53107.0,
+    Z = 102780.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Maze2Start = {
+    X = 36050.0,
+    Y = -33560.0,
+    Z = 3520.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  TXSB4 = {
+    X = -16240.0,
+    Y = 63460.0,
+    Z = 52100.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  TXSB5 = {
+    X = -22040.0,
+    Y = 55610.0,
+    Z = 56550.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  TXSB6 = {
+    X = -9780.0,
+    Y = 55770.0,
+    Z = 59890.0,
+    R = 0.0,
+    SubRegionId = 104801,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Drop_PainKiller_272480128 = {
+    X = -36240.0,
+    Y = 5540.0,
+    Z = -9030.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480143 = {
+    X = -67950.0,
+    Y = 4350.0,
+    Z = 383.200012,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480144 = {
+    X = -67650.0,
+    Y = 4350.0,
+    Z = 376.410004,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480145 = {
+    X = -67800.0,
+    Y = 4550.0,
+    Z = 386.570007,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480146 = {
+    X = -66750.0,
+    Y = 4150.0,
+    Z = 348.5,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480147 = {
+    X = -68040.640625,
+    Y = 3664.439941,
+    Z = 370.01001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480148 = {
+    X = -68535.289062,
+    Y = 4075.350098,
+    Z = 393.829987,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480149 = {
+    X = -67551.5625,
+    Y = 4993.100098,
+    Z = 404.890015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480150 = {
+    X = -67973.28125,
+    Y = 5157.870117,
+    Z = 404.230011,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480151 = {
+    X = -67675.898438,
+    Y = 3369.97998,
+    Z = 357.23999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480152 = {
+    X = -66740.101562,
+    Y = 3739.820068,
+    Z = 334.549988,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480153 = {
+    X = -68742.242188,
+    Y = 4095.219971,
+    Z = 400.269989,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Dyn_292480154 = {
+    X = -66792.226562,
+    Y = 4845.189941,
+    Z = 402.709991,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Dyn_292480142 = {
+    X = -13114.370117,
+    Y = 4796.060059,
+    Z = 180.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
   Npc_Kid_2360106 = {
     X = 1838.257812,
     Y = 3655.387451,
@@ -125270,14 +129392,5189 @@ local QuestGuidePointLoc = {
     FloorId = 0,
     TeleportPointName = "UI_TELEPORTPOINT_NAME_105201_1"
   },
-  Npc_YinheSheng_2340056 = {
-    X = 19038.980469,
-    Y = -588.700012,
-    Z = 3111.149902,
+  bhcz_lvke1 = {
+    X = -5692.870117,
+    Y = -3011.26001,
+    Z = 181.899994,
     R = 0.0,
-    SubRegionId = 105501,
+    SubRegionId = 106001,
     FloorId = 0,
-    TeleportPointName = "UI_TELEPORTPOINT_NAME_105501_1"
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke11 = {
+    X = 4209.379883,
+    Y = -182.020004,
+    Z = -368.369995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke12 = {
+    X = 1655.219971,
+    Y = -234.699997,
+    Z = -368.369995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke13 = {
+    X = -163.729996,
+    Y = -235.059998,
+    Z = 232.270004,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke14 = {
+    X = -1617.829956,
+    Y = -310.959991,
+    Z = 186.919998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke2 = {
+    X = -5852.870117,
+    Y = -3009.199951,
+    Z = 181.899994,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke21 = {
+    X = 4381.77002,
+    Y = -3.6,
+    Z = -371.839996,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke22 = {
+    X = 1690.630005,
+    Y = 30.52,
+    Z = -371.839996,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke23 = {
+    X = -368.369995,
+    Y = -124.099998,
+    Z = 194.690002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke31 = {
+    X = 4270.0,
+    Y = -360.0,
+    Z = -400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke32 = {
+    X = 2980.0,
+    Y = -360.0,
+    Z = -400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke33 = {
+    X = 2980.0,
+    Y = -629.570007,
+    Z = -400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke34 = {
+    X = 1811.52002,
+    Y = -298.630005,
+    Z = -400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke35 = {
+    X = 1551.430054,
+    Y = -288.98999,
+    Z = -400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke41 = {
+    X = -2511.370117,
+    Y = 251.160004,
+    Z = 180.110001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke42 = {
+    X = 1338.060059,
+    Y = 288.700012,
+    Z = -404.459991,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke43 = {
+    X = 4169.430176,
+    Y = 264.899994,
+    Z = -393.899994,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke51 = {
+    X = -2511.370117,
+    Y = 166.649994,
+    Z = 180.110001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke52 = {
+    X = 1335.01001,
+    Y = 277.76001,
+    Z = -394.459991,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke53 = {
+    X = 4181.830078,
+    Y = 166.649994,
+    Z = -396.880005,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke61 = {
+    X = -7692.72998,
+    Y = -3248.51001,
+    Z = 184.830002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke62 = {
+    X = -7677.819824,
+    Y = -3705.139893,
+    Z = 184.830002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke63 = {
+    X = -5959.02002,
+    Y = -3710.459961,
+    Z = 184.830002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke64 = {
+    X = -2190.209961,
+    Y = -3671.830078,
+    Z = 184.830002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke65 = {
+    X = -2174.939941,
+    Y = -923.549988,
+    Z = 184.830002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke71 = {
+    X = -14233.379883,
+    Y = -760.390015,
+    Z = 417.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke72 = {
+    X = -12904.320312,
+    Y = -760.390015,
+    Z = 417.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke73 = {
+    X = -12588.320312,
+    Y = -2108.610107,
+    Z = 417.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke74 = {
+    X = -12588.320312,
+    Y = -3652.149902,
+    Z = 180.110001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke75 = {
+    X = -8344.219727,
+    Y = -3652.149902,
+    Z = 180.110001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke81 = {
+    X = -1936.180054,
+    Y = -4069.070068,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke82 = {
+    X = -4964.129883,
+    Y = -4069.070068,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke83 = {
+    X = -7585.959961,
+    Y = -4069.070068,
+    Z = 179.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke84 = {
+    X = -8156.209961,
+    Y = -3954.459961,
+    Z = 179.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke85 = {
+    X = -8653.799805,
+    Y = -4090.419922,
+    Z = 179.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke86 = {
+    X = -12506.849609,
+    Y = -4090.419922,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke91 = {
+    X = -12166.820312,
+    Y = -3786.719971,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke92 = {
+    X = -9367.429688,
+    Y = -3786.719971,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke93 = {
+    X = -6987.240234,
+    Y = -3786.719971,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_lvke94 = {
+    X = -3802.800049,
+    Y = -3786.719971,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_weibin1 = {
+    X = -1986.890015,
+    Y = -1435.300049,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_weibin2 = {
+    X = -1986.890015,
+    Y = -3851.419922,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_weibin3 = {
+    X = -3787.620117,
+    Y = -3882.419922,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_weibin4 = {
+    X = -7916.149902,
+    Y = -3882.419922,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_weibin5 = {
+    X = -7916.149902,
+    Y = -1432.660034,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_weibin6 = {
+    X = -4022.889893,
+    Y = -1432.660034,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_weibin7 = {
+    X = -4022.889893,
+    Y = -323.619995,
+    Z = 179.860001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  bhcz_weibin8 = {
+    X = -1992.189941,
+    Y = -323.619995,
+    Z = 204.550003,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  TargetPoint_BoatEnd = {
+    X = -14385.486328,
+    Y = 9923.280273,
+    Z = 2016.910645,
+    R = 0.0,
+    SubRegionId = 104401,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_KaojinGuanlishi_272480155 = {
+    X = -16700.0,
+    Y = -220.0,
+    Z = 3250.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_KaojinGuanlishi_272480172 = {
+    X = -16700.0,
+    Y = -220.0,
+    Z = 3250.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Panpa01_2480170 = {
+    X = -18130.0,
+    Y = 11640.0,
+    Z = 4920.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Panpa02_2480171 = {
+    X = -24350.0,
+    Y = 11640.0,
+    Z = 4970.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_PanpaEnd_2480172 = {
+    X = -24730.0,
+    Y = 16620.0,
+    Z = 4470.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_ZZZ01_272480162 = {
+    X = -21780.0,
+    Y = 6530.0,
+    Z = -3010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_ZZZ02_272480163 = {
+    X = -26380.0,
+    Y = 4270.0,
+    Z = -3110.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_ZZZ03_272480164 = {
+    X = -30040.0,
+    Y = 6500.0,
+    Z = -2390.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_ZZZ04_272480165 = {
+    X = -34150.0,
+    Y = 4530.0,
+    Z = -2200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_ZZZ05_272480166 = {
+    X = -26730.0,
+    Y = -1010.0,
+    Z = -2390.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_ZZZ06_272480167 = {
+    X = -30310.0,
+    Y = -2100.0,
+    Z = -1880.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_ZZZ07_272480168 = {
+    X = -38310.0,
+    Y = -3530.0,
+    Z = -3720.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_ZZZ08_272480169 = {
+    X = -38470.0,
+    Y = -6510.0,
+    Z = -3800.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Monster_chase_272480155 = {
+    X = -18540.0,
+    Y = 5330.0,
+    Z = 2400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_272480156 = {
+    X = -18520.0,
+    Y = 4290.0,
+    Z = 2408.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_272480157 = {
+    X = -18790.0,
+    Y = 5250.0,
+    Z = 2400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_272480158 = {
+    X = -18720.0,
+    Y = 4360.0,
+    Z = 2408.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_272480159 = {
+    X = -18280.0,
+    Y = 5150.0,
+    Z = 2400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_272480160 = {
+    X = -18280.0,
+    Y = 4400.0,
+    Z = 2400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_272480161 = {
+    X = -18260.0,
+    Y = 4780.0,
+    Z = 2400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Bai_272480171 = {
+    X = -19050.0,
+    Y = -1000.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BaozhaWeibing_272480170 = {
+    X = -19300.0,
+    Y = 20.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_CangkuDiaocha_272480173 = {
+    X = -11980.0,
+    Y = -930.0,
+    Z = 420.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_CangkuDiaocha_272480174 = {
+    X = -17370.0,
+    Y = -2440.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_CangkuDiaocha_272480175 = {
+    X = -16190.0,
+    Y = 2390.0,
+    Z = 1005.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Gongtou_132480155 = {
+    X = -9082.950195,
+    Y = 2128.679932,
+    Z = 124.209999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Guizu_132480170 = {
+    X = -7900.700195,
+    Y = 547.039978,
+    Z = 226.089996,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Jiangong_132480171 = {
+    X = -8733.950195,
+    Y = 3702.679932,
+    Z = 179.800003,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_NewTargetPoint_10040108 = {
+    X = -7986.0,
+    Y = 6357.0,
+    Z = 187.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_ZZZEnd = {
+    X = -38560.0,
+    Y = -6600.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_ZZZstart = {
+    X = -17710.0,
+    Y = 5110.0,
+    Z = -3392.590088,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  BP_JumpInter = {
+    X = -33500.0,
+    Y = 16570.0,
+    Z = 4480.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_BoxGroup_172480171 = {
+    X = -5588.069824,
+    Y = 3556.699951,
+    Z = 908.640015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_BoxGroup_172480172 = {
+    X = -4804.959961,
+    Y = 3539.080078,
+    Z = 910.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_BoxGroup_172480173 = {
+    X = -4969.129883,
+    Y = 4519.470215,
+    Z = 1458.530029,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_BoxGroup_172480174 = {
+    X = -5143.180176,
+    Y = 4839.220215,
+    Z = 178.529999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_JingYing_172480170 = {
+    X = -88568.0,
+    Y = -12042.650391,
+    Z = -430.630005,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  hwq_gongren1 = {
+    X = -11054.030273,
+    Y = 8707.099609,
+    Z = -10400.299805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  hwq_gongren2 = {
+    X = -9819.860352,
+    Y = 8707.099609,
+    Z = -10400.299805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  hwq_gongren3 = {
+    X = -9819.860352,
+    Y = 10017.860352,
+    Z = -10400.299805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  hwq_gongren4 = {
+    X = -10397.94043,
+    Y = 10017.860352,
+    Z = -10400.299805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  hwq_gongren5 = {
+    X = -10397.94043,
+    Y = 9615.980469,
+    Z = -10400.299805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  hwq_gongren6 = {
+    X = -11667.070312,
+    Y = 9615.980469,
+    Z = -10599.879883,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  hwq_gongren7 = {
+    X = -11667.070312,
+    Y = 12133.94043,
+    Z = -11875.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  hwq_gongren8 = {
+    X = -10207.219727,
+    Y = 12245.910156,
+    Z = -12006.709961,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  jgq_gongchengshi1 = {
+    X = -8248.490234,
+    Y = 9102.259766,
+    Z = -7210.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  jgq_gongchengshi2 = {
+    X = -8248.490234,
+    Y = 7327.160156,
+    Z = -7210.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren1 = {
+    X = -11151.469727,
+    Y = -1.0,
+    Z = -12196.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren11 = {
+    X = -10085.290039,
+    Y = 1165.349976,
+    Z = -12196.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren12 = {
+    X = -10102.889648,
+    Y = 2461.52002,
+    Z = -12196.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren13 = {
+    X = -10292.889648,
+    Y = 2435.439941,
+    Z = -12196.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren14 = {
+    X = -10296.830078,
+    Y = 1437.630005,
+    Z = -12196.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren15 = {
+    X = -10297.929688,
+    Y = 285.48999,
+    Z = -12196.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren2 = {
+    X = -11159.69043,
+    Y = 757.849976,
+    Z = -12196.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren21 = {
+    X = -14133.900391,
+    Y = 2563.649902,
+    Z = -11604.589844,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  ylq_gongren22 = {
+    X = -15002.200195,
+    Y = 2563.649902,
+    Z = -11604.589844,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  ylq_gongren23 = {
+    X = -15002.200195,
+    Y = 3191.419922,
+    Z = -11604.589844,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  ylq_gongren24 = {
+    X = -16521.310547,
+    Y = 3203.459961,
+    Z = -12010.349609,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  ylq_gongren25 = {
+    X = -16521.310547,
+    Y = 4231.240234,
+    Z = -12010.349609,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  ylq_gongren26 = {
+    X = -16315.950195,
+    Y = 5092.430176,
+    Z = -11947.019531,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  ylq_gongren27 = {
+    X = -16413.779297,
+    Y = 5092.430176,
+    Z = -11947.019531,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  ylq_gongren3 = {
+    X = -11175.650391,
+    Y = 2526.439941,
+    Z = -12196.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  yt_fuwuyuan1 = {
+    X = -16841.619141,
+    Y = -1387.72998,
+    Z = 2510.120117,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_fuwuyuan2 = {
+    X = -16841.619141,
+    Y = -527.98999,
+    Z = 2510.120117,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_gongren1 = {
+    X = -40091.378906,
+    Y = 8945.580078,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren11 = {
+    X = -48354.519531,
+    Y = 8997.30957,
+    Z = 432.75,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren12 = {
+    X = -48354.519531,
+    Y = 9410.790039,
+    Z = 432.75,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren13 = {
+    X = -46789.199219,
+    Y = 9410.790039,
+    Z = 432.75,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren14 = {
+    X = -43060.878906,
+    Y = 9410.790039,
+    Z = 432.75,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren2 = {
+    X = -40091.378906,
+    Y = 8592.070312,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren21 = {
+    X = -48281.96875,
+    Y = 18566.960938,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren22 = {
+    X = -47646.589844,
+    Y = 18566.960938,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren23 = {
+    X = -46921.03125,
+    Y = 18270.490234,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren24 = {
+    X = -43462.921875,
+    Y = 18287.259766,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren25 = {
+    X = -43456.578125,
+    Y = 19360.580078,
+    Z = 425.109985,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren26 = {
+    X = -38603.441406,
+    Y = 19273.060547,
+    Z = 2195.340088,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren27 = {
+    X = -38603.441406,
+    Y = 18216.980469,
+    Z = 2195.340088,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren3 = {
+    X = -42581.160156,
+    Y = 8592.070312,
+    Z = 425.109985,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren31 = {
+    X = -25965.990234,
+    Y = 18173.179688,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_gongren32 = {
+    X = -25803.849609,
+    Y = 16866.390625,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_gongren33 = {
+    X = -25803.849609,
+    Y = 13417.679688,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_gongren34 = {
+    X = -25730.189453,
+    Y = 12200.269531,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_gongren4 = {
+    X = -47661.148438,
+    Y = 8640.120117,
+    Z = 425.109985,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren41 = {
+    X = -39269.871094,
+    Y = 18669.859375,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren42 = {
+    X = -37875.230469,
+    Y = 18513.640625,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren43 = {
+    X = -35916.179688,
+    Y = 18513.640625,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren44 = {
+    X = -34499.199219,
+    Y = 19060.990234,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren45 = {
+    X = -33490.71875,
+    Y = 18502.779297,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_gongren5 = {
+    X = -47661.148438,
+    Y = 8523.0,
+    Z = 425.109985,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_weibing1 = {
+    X = -38814.851562,
+    Y = 14720.139648,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_weibing2 = {
+    X = -38814.851562,
+    Y = 9049.110352,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_weibing21 = {
+    X = -43972.460938,
+    Y = -5098.180176,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_weibing22 = {
+    X = -39091.238281,
+    Y = -5098.180176,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_weibing23 = {
+    X = -31314.210938,
+    Y = -5098.180176,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_weibing24 = {
+    X = -26118.150391,
+    Y = -5098.180176,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_wibing11 = {
+    X = -44232.398438,
+    Y = 5167.660156,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_wibing12 = {
+    X = -40844.941406,
+    Y = 5167.660156,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_wibing13 = {
+    X = -34672.769531,
+    Y = 5167.660156,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_wibing14 = {
+    X = -29873.150391,
+    Y = 5167.660156,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_wibing15 = {
+    X = -26741.650391,
+    Y = 5167.660156,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_wibing16 = {
+    X = -24287.910156,
+    Y = 5167.660156,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke1 = {
+    X = -14922.519531,
+    Y = 170.089996,
+    Z = 420.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke11 = {
+    X = -23721.240234,
+    Y = -5341.240234,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke12 = {
+    X = -19694.449219,
+    Y = -5341.240234,
+    Z = 1008.890015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke13 = {
+    X = -19694.449219,
+    Y = -3096.26001,
+    Z = 1008.890015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke14 = {
+    X = -17990.419922,
+    Y = -3096.26001,
+    Z = 1008.890015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke15 = {
+    X = -17990.419922,
+    Y = -982.380005,
+    Z = 1008.890015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke16 = {
+    X = -14933.990234,
+    Y = -843.169983,
+    Z = 417.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke2 = {
+    X = -16100.75,
+    Y = 170.089996,
+    Z = 459.029999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke21 = {
+    X = -16884.150391,
+    Y = 1942.790039,
+    Z = 1005.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke22 = {
+    X = -16884.150391,
+    Y = 3279.51001,
+    Z = 1005.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke3 = {
+    X = -17518.240234,
+    Y = 170.089996,
+    Z = 1009.679993,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke31 = {
+    X = -16224.790039,
+    Y = 1935.469971,
+    Z = 1021.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke32 = {
+    X = -16224.790039,
+    Y = 2596.969971,
+    Z = 1021.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke33 = {
+    X = -16193.660156,
+    Y = 3359.570068,
+    Z = 1021.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke34 = {
+    X = -16690.439453,
+    Y = 3403.550049,
+    Z = 1021.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke35 = {
+    X = -17821.369141,
+    Y = 3351.280029,
+    Z = 1021.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke36 = {
+    X = -17871.779297,
+    Y = 1558.119995,
+    Z = 1021.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke37 = {
+    X = -17827.140625,
+    Y = -3250.159912,
+    Z = 1021.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke38 = {
+    X = -16658.220703,
+    Y = -3250.159912,
+    Z = 1021.869995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke4 = {
+    X = -18735.570312,
+    Y = 170.089996,
+    Z = 1009.690002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke41 = {
+    X = -25193.130859,
+    Y = -1073.829956,
+    Z = 720.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke42 = {
+    X = -27893.119141,
+    Y = -1079.72998,
+    Z = 720.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke5 = {
+    X = -18735.570312,
+    Y = 2964.5,
+    Z = 1009.690002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke51 = {
+    X = -32222.859375,
+    Y = 3949.97998,
+    Z = 718.940002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_youke52 = {
+    X = -31762.929688,
+    Y = 3949.97998,
+    Z = 718.940002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke6 = {
+    X = -19784.980469,
+    Y = 2964.5,
+    Z = 1009.690002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke7 = {
+    X = -19780.310547,
+    Y = 5088.919922,
+    Z = 1009.690002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke8 = {
+    X = -24023.080078,
+    Y = 5088.919922,
+    Z = 717.440002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_KaojinGuanlishi_272480176 = {
+    X = -16700.0,
+    Y = -220.0,
+    Z = 3250.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Password_272480177 = {
+    X = -36210.0,
+    Y = 5540.0,
+    Z = -9030.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_YWSTriggerbox_172480175 = {
+    X = -31290.0,
+    Y = 6500.0,
+    Z = 1240.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_ClockStart_272480178 = {
+    X = -32170.0,
+    Y = 0.0,
+    Z = 5090.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_InteractSwitch_2480025 = {
+    X = -22791.220703,
+    Y = -5730.0,
+    Z = 920.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Xierda_2480176 = {
+    X = -19266.099609,
+    Y = -518.929993,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_ClockStart = {
+    X = -31884.769531,
+    Y = -241.899994,
+    Z = 5367.740234,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_InteractSwitch_2480025 = {
+    X = -22791.220703,
+    Y = -5720.0,
+    Z = 920.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_ZZZStart_272480179 = {
+    X = -21780.0,
+    Y = 6530.0,
+    Z = -3010.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  BP_ClockInter = {
+    X = -32100.0,
+    Y = -40.0,
+    Z = 5140.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_JumpToZL_272480180 = {
+    X = -38750.0,
+    Y = -10.0,
+    Z = 6010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_XierEnd = {
+    X = -32240.0,
+    Y = -4980.0,
+    Z = 718.400024,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_GuanlishiDiaocha_2530028 = {
+    X = -16610.0,
+    Y = -1850.0,
+    Z = 2740.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_GuanlishiDiaocha_2530029 = {
+    X = -16400.0,
+    Y = -1110.0,
+    Z = 2720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_GuanlishiDiaocha_2530030 = {
+    X = -16600.0,
+    Y = 1840.0,
+    Z = 2740.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_ZZZEleEnd_272480181 = {
+    X = -38390.0,
+    Y = -7360.0,
+    Z = 2360.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_ExplosionClue_2480194 = {
+    X = -15441.0,
+    Y = -873.26001,
+    Z = 447.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_ExplosionClue_2480195 = {
+    X = -19941.0,
+    Y = 836.73999,
+    Z = 1045.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Pan720047_2480180 = {
+    X = -10921.286133,
+    Y = -4877.720703,
+    Z = 2441.679932,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Pan720048_2480181 = {
+    X = -2970.138428,
+    Y = 4930.989258,
+    Z = 700.5,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Pan720049_2480182 = {
+    X = -8075.709961,
+    Y = 9.79,
+    Z = 3818.97998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Pan720050_2480183 = {
+    X = -15869.389648,
+    Y = 8797.370117,
+    Z = -11786.19043,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_Pan720051_2480184 = {
+    X = -8966.064453,
+    Y = 17571.554688,
+    Z = -11890.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_Pan720052_2480185 = {
+    X = -12215.641602,
+    Y = 15444.375,
+    Z = -9495.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_Pan720053_2480186 = {
+    X = -19690.119141,
+    Y = 11386.259766,
+    Z = -5626.080078,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_Pan720054_2480187 = {
+    X = -7581.810059,
+    Y = 10.41,
+    Z = 342.25,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Pan720055_2480188 = {
+    X = -7602.255859,
+    Y = 5894.031738,
+    Z = 1446.949951,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Pan720056_2480189 = {
+    X = -14278.605469,
+    Y = -269.850647,
+    Z = -11494.240234,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_Pan720057_2480190 = {
+    X = -13404.929688,
+    Y = 9455.839844,
+    Z = -9160.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_Pan720058_2480191 = {
+    X = -14371.900391,
+    Y = 12705.419922,
+    Z = -6783.890137,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_Pan720059_2480192 = {
+    X = -29607.449219,
+    Y = 19486.390625,
+    Z = 1139.27002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Pan720060_2480193 = {
+    X = -11183.366211,
+    Y = 8994.708984,
+    Z = -10219.049805,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_DixiaQianruEleEnd_272480208 = {
+    X = -16870.0,
+    Y = 4860.0,
+    Z = 2630.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_QianruEleStart = {
+    X = -16439.970703,
+    Y = 4897.149902,
+    Z = -3537.219971,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Drop_Eavesdrop01_272480209 = {
+    X = -17280.0,
+    Y = 8870.0,
+    Z = 4310.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_Eavesdrop02_272480210 = {
+    X = -24420.0,
+    Y = 11910.0,
+    Z = 4800.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_PanpanStart = {
+    X = -15280.0,
+    Y = 7300.0,
+    Z = 4218.720215,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_FakeTargetClock = {
+    X = -31960.0,
+    Y = 13480.0,
+    Z = 5000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Eavesdrop01_272480209 = {
+    X = -17280.0,
+    Y = 8860.0,
+    Z = 4400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Eavesdrop02_272480210 = {
+    X = -24420.0,
+    Y = 11910.0,
+    Z = 4850.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_YWSSoldier_272480211 = {
+    X = -38440.0,
+    Y = 13620.0,
+    Z = 2300.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_YWSGousuoEnd_272480212 = {
+    X = -39830.0,
+    Y = 8250.0,
+    Z = 3000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_YWSGousuoStart_272480213 = {
+    X = -40100.0,
+    Y = 13520.0,
+    Z = 1910.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_YWSGousuoKeep_272480214 = {
+    X = -40880.0,
+    Y = 10760.0,
+    Z = 2680.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_YWSBox_272480215 = {
+    X = -37030.0,
+    Y = 7830.0,
+    Z = 2930.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_YWSSoldier = {
+    X = -38840.0,
+    Y = 12390.0,
+    Z = 2300.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_YWSFakePoint = {
+    X = -31070.0,
+    Y = 9430.0,
+    Z = 760.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_YWSBox = {
+    X = -34440.0,
+    Y = 9510.0,
+    Z = 1880.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_JumpToTrain_272480239 = {
+    X = -33490.0,
+    Y = 16600.0,
+    Z = 4440.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Storeroom_2480211 = {
+    X = -17727.730469,
+    Y = -4484.859863,
+    Z = 1328.599976,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_Jiuhu_152480254 = {
+    X = -18130.0,
+    Y = -5010.0,
+    Z = 1090.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_Mianyi_152480255 = {
+    X = -17070.0,
+    Y = -4880.0,
+    Z = 1090.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_Xiaoduji_152480256 = {
+    X = -17160.0,
+    Y = -4060.0,
+    Z = 1120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Point_ExplosionClue_01 = {
+    X = -15441.0,
+    Y = -873.26001,
+    Z = 417.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Point_ExplosionClue_02 = {
+    X = -19941.0,
+    Y = 836.73999,
+    Z = 1005.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Point_Jiuhu_10040305 = {
+    X = -18130.0,
+    Y = -5010.0,
+    Z = 1090.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Point_Mianyi_10040305 = {
+    X = -17070.0,
+    Y = -4880.0,
+    Z = 1090.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Point_Xiaoduji_10040305 = {
+    X = -17160.0,
+    Y = -4060.0,
+    Z = 1120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mech_BossQihuo_AirWall = {
+    X = -88617.4375,
+    Y = -11891.700195,
+    Z = -418.51001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mon_Boss_Qihuo = {
+    X = -88547.4375,
+    Y = -11881.700195,
+    Z = -418.51001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_YWSStair_272480257 = {
+    X = -43580.0,
+    Y = 19300.0,
+    Z = 730.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_HardBossMechanism_292480258 = {
+    X = -81424.28125,
+    Y = 1559.420044,
+    Z = 416.079987,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Pan720061_292480259 = {
+    X = -87833.125,
+    Y = 10877.125977,
+    Z = -1087.76001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Pan720062_292480260 = {
+    X = -70266.273438,
+    Y = 4715.734863,
+    Z = -773.340027,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Xierda_152480261 = {
+    X = -16140.0,
+    Y = -4500.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_Photo_312480211 = {
+    X = -3520.0,
+    Y = 5959.049805,
+    Z = -6777.290039,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Drop_WipeGlass_312480258 = {
+    X = -45731.921875,
+    Y = 19739.269531,
+    Z = 2292.370117,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_GlassTalk_272480262 = {
+    X = -4250.0,
+    Y = -4470.0,
+    Z = 3430.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_172480271 = {
+    X = -5556.660156,
+    Y = 3264.409912,
+    Z = 973.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_172480272 = {
+    X = -4956.660156,
+    Y = 4424.410156,
+    Z = 1543.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_hook_172480273 = {
+    X = -10084.0,
+    Y = -4510.0,
+    Z = 2590.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Huichen_272480261 = {
+    X = -2110.0,
+    Y = 1070.0,
+    Z = 3010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_QuestTrigger_312480199 = {
+    X = -31496.810547,
+    Y = -843.01001,
+    Z = 1077.660034,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_QuestTrigger_312480200 = {
+    X = -35143.648438,
+    Y = -814.469971,
+    Z = 913.599976,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_QuestTrigger_312480201 = {
+    X = -4052.919922,
+    Y = 6453.259766,
+    Z = -6746.319824,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_QuestTrigger_312480215 = {
+    X = -38549.089844,
+    Y = 16131.639648,
+    Z = 2669.22998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_QuestTrigger_312480270 = {
+    X = -46900.878906,
+    Y = 17950.490234,
+    Z = 1829.880005,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_SpecialQuest_312480269 = {
+    X = -46900.878906,
+    Y = 17950.490234,
+    Z = 1829.880005,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480259 = {
+    X = -45948.28125,
+    Y = 18226.25,
+    Z = 424.640015,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480260 = {
+    X = -46230.449219,
+    Y = 18352.439453,
+    Z = 424.380005,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480261 = {
+    X = -46046.171875,
+    Y = 18410.230469,
+    Z = 424.26001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480262 = {
+    X = -46456.941406,
+    Y = 18394.470703,
+    Z = 424.299988,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480263 = {
+    X = -46578.050781,
+    Y = 18112.25,
+    Z = 424.570007,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480264 = {
+    X = -46503.761719,
+    Y = 17894.189453,
+    Z = 424.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480265 = {
+    X = -46618.789062,
+    Y = 17958.960938,
+    Z = 424.350006,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480266 = {
+    X = -46544.960938,
+    Y = 17745.080078,
+    Z = 424.26001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480267 = {
+    X = -46328.171875,
+    Y = 17714.949219,
+    Z = 424.619995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_Rat_312480268 = {
+    X = -46113.890625,
+    Y = 18059.019531,
+    Z = 424.980011,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Guifu_312480198 = {
+    X = -31557.800781,
+    Y = -1009.190002,
+    Z = 720.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Guizu_312480197 = {
+    X = -31535.800781,
+    Y = -1095.910034,
+    Z = 720.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Keluoge_312480213 = {
+    X = -38419.710938,
+    Y = 16148.629883,
+    Z = 2118.129883,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Keni_312480196 = {
+    X = -31406.619141,
+    Y = -1045.98999,
+    Z = 720.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Keni_312480212 = {
+    X = -38341.398438,
+    Y = 16028.900391,
+    Z = 2118.129883,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Keni_312480257 = {
+    X = -44940.640625,
+    Y = 18742.300781,
+    Z = 423.779999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Luoliante_312480214 = {
+    X = -38467.921875,
+    Y = 16054.5,
+    Z = 2118.129883,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Office_152480274 = {
+    X = -16700.0,
+    Y = -1770.0,
+    Z = 2720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Glass0301 = {
+    X = -3790.0,
+    Y = -5140.0,
+    Z = 4250.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Glass0302 = {
+    X = -5620.0,
+    Y = -4990.0,
+    Z = 3440.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Glass0303 = {
+    X = -10810.0,
+    Y = -5000.0,
+    Z = 2470.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Jianpiaohou = {
+    X = -11350.0,
+    Y = 1850.0,
+    Z = 120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  QuestSign_20040102 = {
+    X = -3520.0,
+    Y = 5959.049805,
+    Z = -6646.790039,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  QuestSign_20040104 = {
+    X = -45731.921875,
+    Y = 19739.269531,
+    Z = 2398.209961,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  RespawnPoint_20040104 = {
+    X = -38443.859375,
+    Y = 16334.639648,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_QuestTrigger_312480275 = {
+    X = -45730.070312,
+    Y = 19489.419922,
+    Z = 2332.350098,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  QuestPoint_QihuoBossBattle = {
+    X = -88560.0,
+    Y = -11480.0,
+    Z = -398.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_QuestTrigger_312480276 = {
+    X = -6885.700195,
+    Y = 6450.828125,
+    Z = 333.240265,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_QuestTrigger_312480277 = {
+    X = -6885.700195,
+    Y = 6450.828125,
+    Z = 333.240265,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_QuestTrigger_312480278 = {
+    X = -5374.739258,
+    Y = 6450.828125,
+    Z = -11288.466797,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = -4,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_QuestTrigger_312890076 = {
+    X = -5642.310059,
+    Y = 6470.529785,
+    Z = -11262.169922,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_QuestTrigger_312890077 = {
+    X = -5246.009766,
+    Y = 6470.529785,
+    Z = 360.359985,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_Dudu_272480277 = {
+    X = -2950.0,
+    Y = -250.0,
+    Z = 120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_DuduMoveEnd_272480276 = {
+    X = -11290.0,
+    Y = -4050.0,
+    Z = 280.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Point_Teleport_10040311 = {
+    X = -20660.0,
+    Y = -4950.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_HardBossMechanism_292640050 = {
+    X = 256379.859375,
+    Y = -12200.80957,
+    Z = 823.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_TrainHead_272640049 = {
+    X = 255230.0,
+    Y = -25720.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mon_BossQihuo_Battle02 = {
+    X = 256710.0,
+    Y = 190.0,
+    Z = 2170.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Monster_Jingying_272640048 = {
+    X = 256560.0,
+    Y = -5130.0,
+    Z = 940.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640050 = {
+    X = 255520.0,
+    Y = 25190.0,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640051 = {
+    X = 256000.0,
+    Y = 19890.0,
+    Z = 870.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640052 = {
+    X = 256200.0,
+    Y = 16270.0,
+    Z = 870.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640053 = {
+    X = 256310.0,
+    Y = 13550.0,
+    Z = 870.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640054 = {
+    X = 256570.0,
+    Y = 120.0,
+    Z = 883.929993,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640055 = {
+    X = 256770.0,
+    Y = -4770.0,
+    Z = 870.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640056 = {
+    X = 256940.0,
+    Y = 1300.0,
+    Z = 2170.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640057 = {
+    X = 256640.0,
+    Y = -10490.0,
+    Z = 860.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_fuluo_272640058 = {
+    X = 255730.0,
+    Y = -22460.0,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Phantom_Fuluo_272640059 = {
+    X = 259880.0,
+    Y = -11100.0,
+    Z = -28520.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_KajiaBossPre_272640060 = {
+    X = 256470.0,
+    Y = -11360.0,
+    Z = 2200.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_ForCamera = {
+    X = 256450.0,
+    Y = -11280.0,
+    Z = 850.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_HaluojiEnd = {
+    X = 256690.0,
+    Y = -210.0,
+    Z = 2170.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Point_Teleport_10040312 = {
+    X = -39883.578125,
+    Y = -4935.75,
+    Z = 718.679993,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_TrainHead_272640061 = {
+    X = 255230.0,
+    Y = -26120.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_KajiaTalkFinal = {
+    X = 255920.0,
+    Y = -18750.0,
+    Z = 2080.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_ClosetoTrain_152480278 = {
+    X = -20650.0,
+    Y = -4950.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_Chao03QuestDe01_271192074 = {
+    X = 1800.539307,
+    Y = -427.455719,
+    Z = -3330.0,
+    R = 0.0,
+    SubRegionId = 101101,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
+  },
+  BP_Chao03QuestDe01 = {
+    X = 1800.539307,
+    Y = -427.455719,
+    Z = -3200.0,
+    R = 0.0,
+    SubRegionId = 101101,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_101101_1"
+  },
+  Mechanism_Teleport_292890080 = {
+    X = -6737.850098,
+    Y = 6675.370117,
+    Z = -11605.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_Teleport_292890081 = {
+    X = -17725.580078,
+    Y = 5550.379883,
+    Z = -3398.969971,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_QuestTrigger_312890082 = {
+    X = -11507.629883,
+    Y = 8125.72998,
+    Z = -11334.269531,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_LuoLianTe_312890083 = {
+    X = -11688.759766,
+    Y = 8075.779785,
+    Z = -11590.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_KeLuoGe_312890084 = {
+    X = -11717.55957,
+    Y = 8225.950195,
+    Z = -11590.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_Keni_312890085 = {
+    X = -11552.419922,
+    Y = 8174.990234,
+    Z = -11590.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  BP_QianruStart = {
+    X = -7320.0,
+    Y = 6470.0,
+    Z = -11605.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_TFKWeibing_272480290 = {
+    X = -7180.0,
+    Y = 6420.0,
+    Z = 120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Airwall_172480288 = {
+    X = -14494.0,
+    Y = 8.0,
+    Z = 425.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Bulaike_152480281 = {
+    X = -2802.870117,
+    Y = -1805.199951,
+    Z = 177.199997,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Bulunda_152480286 = {
+    X = -35469.300781,
+    Y = 4695.870117,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_FasionMaiden_152480283 = {
+    X = -35972.570312,
+    Y = -4145.569824,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Geluoruiya_152480285 = {
+    X = -35582.320312,
+    Y = 4695.540039,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Luowen_152480282 = {
+    X = -2798.179932,
+    Y = -1695.380005,
+    Z = 177.199997,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Luoyi_152480287 = {
+    X = -21685.0,
+    Y = 1497.23999,
+    Z = 720.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Shidisen_152480280 = {
+    X = -18746.380859,
+    Y = 3330.659912,
+    Z = 1005.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Xiaoen_152480279 = {
+    X = -13877.509766,
+    Y = 1153.97998,
+    Z = 417.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_ZhengFeishi_152480284 = {
+    X = -9834.290039,
+    Y = -4122.680176,
+    Z = 179.550003,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Phantom_XierP_272480289 = {
+    X = -39820.0,
+    Y = -5190.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_BHCZStart = {
+    X = -2280.0,
+    Y = 10.0,
+    Z = 180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_MTEnd = {
+    X = -42370.0,
+    Y = -4170.0,
+    Z = 2310.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_Panpa00_272480291 = {
+    X = -16930.0,
+    Y = 9020.0,
+    Z = 4430.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_TiaocheHook_272480292 = {
+    X = -33910.0,
+    Y = 15670.0,
+    Z = 3670.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_LookHook_272480293 = {
+    X = -33140.0,
+    Y = 16600.0,
+    Z = 4520.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_PanpaEnd_272480294 = {
+    X = -33980.0,
+    Y = 15670.0,
+    Z = 3550.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_REGotoYWS_272480295 = {
+    X = -45040.0,
+    Y = 17560.0,
+    Z = 540.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_REZZZ_272480296 = {
+    X = -17452.720703,
+    Y = 4857.620117,
+    Z = 2522.280029,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_REGotoYWS = {
+    X = -45040.0,
+    Y = 17560.0,
+    Z = 540.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_REYWS = {
+    X = -35360.0,
+    Y = 5890.0,
+    Z = -9150.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_REZZZ = {
+    X = -17342.720703,
+    Y = 4857.620117,
+    Z = 2642.280029,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_ZZZGotoYT_272890086 = {
+    X = -38200.0,
+    Y = -6770.0,
+    Z = -3880.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_QainruTiaobanEnd_272890087 = {
+    X = -12160.0,
+    Y = 14670.0,
+    Z = -9200.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  BP_ZZZGotoYT = {
+    X = -38230.0,
+    Y = -6770.0,
+    Z = -3810.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  BP_QianruPrompt01 = {
+    X = -14730.0,
+    Y = 7780.0,
+    Z = -12410.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  BP_QianruPrompt03 = {
+    X = -9010.0,
+    Y = 2440.0,
+    Z = -11240.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  BP_BP_QianruPrompt03_02 = {
+    X = -8970.0,
+    Y = 360.0,
+    Z = -11270.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  BP_QianruPrompt02 = {
+    X = -15160.0,
+    Y = 590.0,
+    Z = -11430.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_Aote_272480297 = {
+    X = -16110.0,
+    Y = -1850.0,
+    Z = 2510.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Bai_272480298 = {
+    X = -17090.0,
+    Y = -160.0,
+    Z = 2510.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_GotoYWS_272480299 = {
+    X = -30860.0,
+    Y = 6480.0,
+    Z = 840.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_272480300 = {
+    X = -35130.0,
+    Y = 5790.0,
+    Z = -8920.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_BackToQainru_272480301 = {
+    X = -8280.0,
+    Y = 5320.0,
+    Z = 510.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_BackToDX_272480302 = {
+    X = -6760.0,
+    Y = 6450.0,
+    Z = 360.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_SpecialFail = {
+    X = -19850.0,
+    Y = 650.0,
+    Z = 1000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_NoBackToQianru = {
+    X = -8242.870117,
+    Y = 3799.870117,
+    Z = 180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_NoBackToDX = {
+    X = -7400.0,
+    Y = 6400.0,
+    Z = 120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_BackToPart_272480303 = {
+    X = -9010.0,
+    Y = 1960.0,
+    Z = 420.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_NoBackToPart = {
+    X = -8140.0,
+    Y = 1500.0,
+    Z = 124.209999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Panpa01End_272480304 = {
+    X = -27490.0,
+    Y = 16540.0,
+    Z = 4970.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Panpa02End_272480305 = {
+    X = -30690.0,
+    Y = 16610.0,
+    Z = 4890.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Aisenbaen_322480304 = {
+    X = -31270.0,
+    Y = 9430.0,
+    Z = 430.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Aote_322480307 = {
+    X = -13730.0,
+    Y = -1210.0,
+    Z = 420.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Shangren_322480305 = {
+    X = -31280.0,
+    Y = 9280.0,
+    Z = 430.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_yuesuiye_322480306 = {
+    X = -31430.0,
+    Y = 9340.0,
+    Z = 430.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  HardBossPrepare_AirWall = {
+    X = 256540.453125,
+    Y = -11249.549805,
+    Z = 856.75,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640062 = {
+    X = 255687.34375,
+    Y = 22862.5,
+    Z = 890.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640063 = {
+    X = 255801.84375,
+    Y = 21144.740234,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640064 = {
+    X = 256165.875,
+    Y = 16519.039062,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640065 = {
+    X = 256260.53125,
+    Y = 14782.19043,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640066 = {
+    X = 256500.015625,
+    Y = 10208.459961,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640067 = {
+    X = 256554.21875,
+    Y = 8409.889648,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640068 = {
+    X = 256674.25,
+    Y = 3831.459961,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640069 = {
+    X = 256680.0625,
+    Y = 2081.01001,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640070 = {
+    X = 256680.0625,
+    Y = -2548.98999,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640071 = {
+    X = 256660.0625,
+    Y = -4288.470215,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_door_172640072 = {
+    X = 256539.90625,
+    Y = -8876.900391,
+    Z = 880.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ1 = {
+    X = 255620.0,
+    Y = -11519.995117,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ10 = {
+    X = 253980.0,
+    Y = -10629.995117,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ11 = {
+    X = 254870.0,
+    Y = -10629.999023,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ12 = {
+    X = 254870.0,
+    Y = -11299.999023,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ13 = {
+    X = 254870.0,
+    Y = -12039.999023,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ14 = {
+    X = 256170.0,
+    Y = -11520.001953,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ15 = {
+    X = 256170.0,
+    Y = -12130.0,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ16 = {
+    X = 256170.0,
+    Y = -12770.00293,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ17 = {
+    X = 256170.0,
+    Y = -13290.003906,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ18 = {
+    X = 255430.0,
+    Y = -13289.998047,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ19 = {
+    X = 255550.0,
+    Y = -13290.00293,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ2 = {
+    X = 255620.0,
+    Y = -12130.00293,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ20 = {
+    X = 254530.0,
+    Y = -13290.003906,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ21 = {
+    X = 254530.0,
+    Y = -12369.998047,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ22 = {
+    X = 254530.0,
+    Y = -11150.001953,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ23 = {
+    X = 254530.0,
+    Y = -10630.00293,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ24 = {
+    X = 255420.0,
+    Y = -10629.996094,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ25 = {
+    X = 255420.0,
+    Y = -11299.995117,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ26 = {
+    X = 255420.0,
+    Y = -12039.996094,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ27 = {
+    X = 255970.0,
+    Y = -13290.003906,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ28 = {
+    X = 254950.0,
+    Y = -13290.003906,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ29 = {
+    X = 254950.0,
+    Y = -12369.998047,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ3 = {
+    X = 255620.0,
+    Y = -12769.99707,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ30 = {
+    X = 254950.0,
+    Y = -11150.00293,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ31 = {
+    X = 254950.0,
+    Y = -10630.00293,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ32 = {
+    X = 255840.0,
+    Y = -10629.996094,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ33 = {
+    X = 255840.0,
+    Y = -11299.996094,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ34 = {
+    X = 255840.0,
+    Y = -12039.996094,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ4 = {
+    X = 255620.0,
+    Y = -13289.996094,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ5 = {
+    X = 254880.0,
+    Y = -13290.0,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ6 = {
+    X = 255000.0,
+    Y = -13289.99707,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ7 = {
+    X = 253980.0,
+    Y = -13289.99707,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ8 = {
+    X = 253980.0,
+    Y = -12370.000977,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  StaticCreateActor_SQ9 = {
+    X = 253980.0,
+    Y = -11149.996094,
+    Z = 853.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_Tiaoche01 = {
+    X = 255196.53125,
+    Y = 27599.699219,
+    Z = -68019.726562,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_XierStart = {
+    X = 254870.0,
+    Y = -12020.0,
+    Z = -28490.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_Hide_272640004 = {
+    X = 256090.0,
+    Y = 7810.0,
+    Z = 1050.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  BP_HideStart = {
+    X = 256670.0,
+    Y = 4290.0,
+    Z = 870.0,
+    R = 0.0,
+    SubRegionId = 106101,
+    FloorId = 0,
+    TeleportPointName = ""
+  },
+  Mechanism_Airwall_172480315 = {
+    X = -19094.0,
+    Y = 4768.0,
+    Z = 2405.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_boxtrap_172480304 = {
+    X = -34339.949219,
+    Y = 9599.379883,
+    Z = 1312.219971,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Monster_chase_172480305 = {
+    X = -15466.580078,
+    Y = -2218.840088,
+    Z = 2500.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480306 = {
+    X = -15283.830078,
+    Y = -1995.670044,
+    Z = 2500.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480307 = {
+    X = -15685.519531,
+    Y = -2197.27002,
+    Z = 2500.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480308 = {
+    X = -15197.879883,
+    Y = -2245.300049,
+    Z = 2508.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480309 = {
+    X = -15287.150391,
+    Y = -2437.47998,
+    Z = 2508.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480310 = {
+    X = -15464.150391,
+    Y = -2519.610107,
+    Z = 2508.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480311 = {
+    X = -15599.580078,
+    Y = -2446.899902,
+    Z = 2508.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480312 = {
+    X = -15688.839844,
+    Y = -2639.070068,
+    Z = 2508.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480313 = {
+    X = -15548.610352,
+    Y = -2726.649902,
+    Z = 2508.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Monster_chase_172480314 = {
+    X = -15349.19043,
+    Y = -2711.389893,
+    Z = 2508.300049,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Panpa02SetLoc_272480316 = {
+    X = -27740.0,
+    Y = 16560.0,
+    Z = 4350.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Panpa03SetLoc_272480341 = {
+    X = -30860.0,
+    Y = 16570.0,
+    Z = 4350.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_alchemist_142480336 = {
+    X = -23690.490234,
+    Y = 7793.509766,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_aomansupervisor_142480332 = {
+    X = -38540.589844,
+    Y = 18279.300781,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_sceshow_aomansupervisor_142480333 = {
+    X = -38260.578125,
+    Y = 19044.439453,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_sceshow_beitongyoung_142480331 = {
+    X = -13212.959961,
+    Y = -1162.890015,
+    Z = 417.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_buanboy_142480316 = {
+    X = -3525.679932,
+    Y = -2026.430054,
+    Z = 177.210007,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_buganworker_142480333 = {
+    X = -38946.679688,
+    Y = 18968.720703,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_sceshow_chenwengirl_142480317 = {
+    X = -3444.610107,
+    Y = -1966.089966,
+    Z = 179.960007,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_dudujiaojiao_142480330 = {
+    X = -13381.780273,
+    Y = -464.450012,
+    Z = 419.920013,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_fengchenyoung_142480328 = {
+    X = -13265.209961,
+    Y = 833.330017,
+    Z = 417.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_gaikaiolder_142480327 = {
+    X = -13153.009766,
+    Y = 924.940002,
+    Z = 417.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_gegeburubeggar_142480320 = {
+    X = -12157.709961,
+    Y = 3009.399902,
+    Z = 179.550003,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_guider_142480323 = {
+    X = -7344.600098,
+    Y = -74.440002,
+    Z = 229.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_guisuiboy_142480340 = {
+    X = -38072.351562,
+    Y = 8511.549805,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_sceshow_jiaojipassenger_142480324 = {
+    X = -5994.939941,
+    Y = 665.710022,
+    Z = 119.800003,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_jiaojipassenger_142480325 = {
+    X = -5853.859863,
+    Y = 665.710022,
+    Z = 119.800003,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_jingyanpassenger_142480319 = {
+    X = -10052.519531,
+    Y = -3519.570068,
+    Z = 179.070007,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_kasike_142480326 = {
+    X = -2840.040039,
+    Y = -4301.080078,
+    Z = 179.809998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_lansanworker_142480321 = {
+    X = -7346.069824,
+    Y = 2202.090088,
+    Z = 124.199997,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_lu_142480337 = {
+    X = -47633.230469,
+    Y = 11163.339844,
+    Z = 175.289993,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_sceshow_mengxiangkarong_142480329 = {
+    X = -3712.01001,
+    Y = -2995.840088,
+    Z = 179.550003,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_mianshengmerchant_142480334 = {
+    X = -33313.691406,
+    Y = 13582.740234,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_sceshow_qidimember_142480339 = {
+    X = -34096.929688,
+    Y = 19535.949219,
+    Z = 425.109985,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_sceshow_renzhenpolice_142480322 = {
+    X = -14326.679688,
+    Y = -306.630005,
+    Z = 419.690002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_tiaowangboy_142480338 = {
+    X = -37834.140625,
+    Y = 18954.810547,
+    Z = 2825.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_sceshow_weijupassenger_142480318 = {
+    X = -10226.400391,
+    Y = -2885.159912,
+    Z = 179.070007,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_sceshow_weika_142480335 = {
+    X = -33137.359375,
+    Y = 13582.740234,
+    Z = 425.119995,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  BP_Panpa02SetLoc = {
+    X = -27780.0,
+    Y = 16570.0,
+    Z = 4346.279785,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_Panpa03SetLoc = {
+    X = -30860.0,
+    Y = 16550.0,
+    Z = 4346.709961,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_DixiaQianruEleEnd = {
+    X = -17710.0,
+    Y = 4760.0,
+    Z = 2410.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_PanpaEndTalk = {
+    X = -16820.0,
+    Y = 4890.0,
+    Z = 2400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Phantom_XierBoss_272480344 = {
+    X = -86400.0,
+    Y = -9950.0,
+    Z = -480.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Phantom_XierChangku_272480343 = {
+    X = -17070.0,
+    Y = -4500.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Phantom_XierDiaocha_272480342 = {
+    X = -19560.0,
+    Y = -10.0,
+    Z = 1000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Drop_ExplosionClue_2480345 = {
+    X = -18621.0,
+    Y = -1983.26001,
+    Z = 1035.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_JumpToZL = {
+    X = -38750.0,
+    Y = -10.0,
+    Z = 6070.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  yt_lvke71 = {
+    X = -31270.830078,
+    Y = -5525.439941,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_lvke72 = {
+    X = -28589.890625,
+    Y = -5198.310059,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke61 = {
+    X = -26627.769531,
+    Y = -5401.370117,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke62 = {
+    X = -27836.5,
+    Y = -5401.370117,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  yt_youke63 = {
+    X = -29292.589844,
+    Y = -5401.370117,
+    Z = 2115.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Point_ExplosionClue_03 = {
+    X = -18621.0,
+    Y = -1983.26001,
+    Z = 1005.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_GotoYWS_272480348 = {
+    X = -31580.0,
+    Y = 6480.0,
+    Z = 1170.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_GotoYWSSpecial_272480349 = {
+    X = -40500.0,
+    Y = 12770.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_GotoZLSpecial_272480352 = {
+    X = -39010.0,
+    Y = -2730.0,
+    Z = 1670.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_GuanliSpecial_272480350 = {
+    X = -16750.0,
+    Y = 60.0,
+    Z = 3250.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Qianru01_272480347 = {
+    X = -8260.0,
+    Y = 3990.0,
+    Z = 620.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Qianru07Special_272480351 = {
+    X = -15870.0,
+    Y = 5700.0,
+    Z = 3660.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_StationFrontSpecial_272480346 = {
+    X = -5280.0,
+    Y = -110.0,
+    Z = 570.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_chezhanonlineddjj_332480345 = {
+    X = -6200.0,
+    Y = 20.0,
+    Z = 160.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_chezhanonlinemoling_332480346 = {
+    X = -6200.0,
+    Y = 100.0,
+    Z = 160.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_YWSEndToZL = {
+    X = -42900.0,
+    Y = -730.0,
+    Z = 2310.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_JumpToZL_272480362 = {
+    X = -38380.0,
+    Y = -10.0,
+    Z = 6010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_GotoZLSpecial_272480346 = {
+    X = -39010.0,
+    Y = -2730.0,
+    Z = 1670.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_ZLHook_272480363 = {
+    X = -38450.0,
+    Y = -780.0,
+    Z = 5570.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_ZLHook_272480364 = {
+    X = -38450.0,
+    Y = -780.0,
+    Z = 5180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BaozhaWeibing_152480365 = {
+    X = -19260.0,
+    Y = 120.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Aisenbaen_152480366 = {
+    X = -16760.0,
+    Y = -1910.0,
+    Z = 2510.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_Shidifen_152480367 = {
+    X = -62370.0,
+    Y = -2640.0,
+    Z = 340.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Kanuo_152480368 = {
+    X = -87140.0,
+    Y = -11160.0,
+    Z = -446.48999,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Afry_242480392 = {
+    X = -39980.0,
+    Y = 16020.0,
+    Z = 4700.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Aila_2480374 = {
+    X = -36880.0,
+    Y = -3660.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Aryhur_242480383 = {
+    X = -22270.0,
+    Y = 2340.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Assac_242480386 = {
+    X = -31703.779297,
+    Y = 3803.050049,
+    Z = 751.460022,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_BLAIZE_242480387 = {
+    X = -31390.0,
+    Y = 3780.0,
+    Z = 730.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Chengwuyuan_242480389 = {
+    X = -36474.671875,
+    Y = 3618.97998,
+    Z = 813.340027,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Dlic_242480395 = {
+    X = -21260.0,
+    Y = 11100.0,
+    Z = 4710.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_dominic_2480368 = {
+    X = -18020.0,
+    Y = 1970.0,
+    Z = 1000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Edwen_242480398 = {
+    X = -18100.0,
+    Y = 13630.0,
+    Z = 4710.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Felix_242480382 = {
+    X = -23400.0,
+    Y = -770.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Grace_242480380 = {
+    X = -19810.0,
+    Y = -2670.0,
+    Z = 2410.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Holy_2480371 = {
+    X = -28880.0,
+    Y = 4980.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_JIALE_242480385 = {
+    X = -42240.0,
+    Y = 1590.0,
+    Z = 2310.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_jiashi_242480388 = {
+    X = -36254.671875,
+    Y = 3498.97998,
+    Z = 813.340027,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_bhcz_kATE_2480364 = {
+    X = -29240.0,
+    Y = -4640.0,
+    Z = 730.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_kelala_2480362 = {
+    X = -28100.0,
+    Y = 5370.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_keloi_2480369 = {
+    X = -44540.0,
+    Y = 4060.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Leimi_2480370 = {
+    X = -29370.0,
+    Y = 4210.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Lier_242480401 = {
+    X = -36890.0,
+    Y = 10070.0,
+    Z = 4700.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Lio_2480372 = {
+    X = -29120.0,
+    Y = 4980.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_LUKAS_2480365 = {
+    X = -29440.0,
+    Y = -4600.0,
+    Z = 730.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Luppy_242480376 = {
+    X = -20550.0,
+    Y = -450.0,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Martin_242480399 = {
+    X = -24330.0,
+    Y = 13020.0,
+    Z = 4720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Meifu_242480394 = {
+    X = -21340.0,
+    Y = 11690.0,
+    Z = 4700.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Natasha_2480373 = {
+    X = -36610.0,
+    Y = -3680.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Noah_2480367 = {
+    X = -18000.0,
+    Y = 1770.0,
+    Z = 1000.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Nola_242480402 = {
+    X = -48350.0,
+    Y = 13510.0,
+    Z = 4690.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Osca_2480363 = {
+    X = -24400.0,
+    Y = 10720.0,
+    Z = 4710.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Owen_242480384 = {
+    X = -42170.0,
+    Y = -2840.0,
+    Z = 2310.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_peili_242480377 = {
+    X = -42840.0,
+    Y = 3900.0,
+    Z = 2310.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Philip_242480375 = {
+    X = -20570.0,
+    Y = -670.0,
+    Z = 1020.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Puren_242480379 = {
+    X = -19830.0,
+    Y = -2870.0,
+    Z = 2410.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_RUIAN_242480396 = {
+    X = -21230.0,
+    Y = 12100.0,
+    Z = 4710.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_Skula_242480378 = {
+    X = -42780.0,
+    Y = 4100.0,
+    Z = 2310.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Somi_242480381 = {
+    X = -23220.0,
+    Y = -810.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_waimai_2480366 = {
+    X = -32040.0,
+    Y = -800.0,
+    Z = 720.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Werson_242480400 = {
+    X = -36920.0,
+    Y = 10400.0,
+    Z = 4700.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Wisly_242480391 = {
+    X = -39960.0,
+    Y = 16880.0,
+    Z = 4700.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_BHCZ_Woen_242480397 = {
+    X = -18070.0,
+    Y = 14220.0,
+    Z = 4700.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Npc_BHCZ_yilaizja_242480390 = {
+    X = -35970.0,
+    Y = -4990.0,
+    Z = 2120.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  FromCZtoBH = {
+    X = 4289.549805,
+    Y = 14.47,
+    Z = -278.540009,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  FromCZtoYLQ = {
+    X = -6682.089844,
+    Y = 6467.669922,
+    Z = 346.720001,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  FromCZtoYWS = {
+    X = -30850.960938,
+    Y = 6489.22998,
+    Z = 939.409973,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  FromCZtoZZZ = {
+    X = -17395.390625,
+    Y = 4846.040039,
+    Z = 2518.47998,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  FromCZtoZZZEnd = {
+    X = -38430.308594,
+    Y = -6846.319824,
+    Z = 2237.77002,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  FromYWStoCZ = {
+    X = -36187.839844,
+    Y = 5834.859863,
+    Z = -9093.139648,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Drop_DixiaGotoYT_272890097 = {
+    X = -16090.0,
+    Y = 4890.0,
+    Z = -7050.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_airwall_172890101 = {
+    X = -15523.759766,
+    Y = 6067.189941,
+    Z = -7200.129883,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_boxtrap_172890099 = {
+    X = -9211.519531,
+    Y = 11900.679688,
+    Z = -10855.30957,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_boxtrap_172890100 = {
+    X = -10596.330078,
+    Y = 12697.040039,
+    Z = -10043.30957,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_hook_172890106 = {
+    X = -11145.540039,
+    Y = 14739.290039,
+    Z = -9011.570312,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_hook_172890107 = {
+    X = -32392.679688,
+    Y = -1487.02002,
+    Z = -2054.870117,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Mechanism_hook_172890103 = {
+    X = -9854.0,
+    Y = 16306.959961,
+    Z = -9453.480469,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_hook_172890104 = {
+    X = -10391.599609,
+    Y = 14247.269531,
+    Z = -9594.19043,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Mechanism_hook_172890105 = {
+    X = -9559.0,
+    Y = 12610.889648,
+    Z = -9400.919922,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_sceshow_babuen_142890092 = {
+    X = -16490.150391,
+    Y = 6868.299805,
+    Z = -12010.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_sceshow_buluomu_142890091 = {
+    X = -18817.460938,
+    Y = 15592.290039,
+    Z = -10500.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_sceshow_kaierwen_142890094 = {
+    X = -11689.040039,
+    Y = 274.209991,
+    Z = -11604.240234,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_sceshow_kangni_142890093 = {
+    X = -13626.200195,
+    Y = 8316.30957,
+    Z = -12610.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_sceshow_kelifude_142890095 = {
+    X = -10931.139648,
+    Y = 14727.919922,
+    Z = -12000.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  Npc_sceshow_laerfu_142890088 = {
+    X = -14572.240234,
+    Y = 10910.759766,
+    Z = -7210.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_sceshow_woerte_142890089 = {
+    X = -14983.139648,
+    Y = 12070.620117,
+    Z = -7210.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_sceshow_yinqi_142890096 = {
+    X = -18880.369141,
+    Y = 11560.110352,
+    Z = -10369.879883,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  BP_DixiaGotoYT = {
+    X = -16090.0,
+    Y = 4890.0,
+    Z = -7000.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  BP_DixiaQianru06 = {
+    X = -18840.0,
+    Y = 12750.0,
+    Z = -10370.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  BP_DixiaQianruEnd = {
+    X = -15440.0,
+    Y = 6250.0,
+    Z = -7210.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  BP_QianruShig = {
+    X = -12640.0,
+    Y = 13980.0,
+    Z = -9700.0,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -2,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  FromJGQtoCZ = {
+    X = -16195.19043,
+    Y = 4883.540039,
+    Z = -7031.169922,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -1,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  FromYLQtoCZ = {
+    X = -4886.109863,
+    Y = 6466.419922,
+    Z = 314.320007,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = -3,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_2"
+  },
+  FromZZZStoCZ = {
+    X = -17396.130859,
+    Y = 4869.819824,
+    Z = -3343.320068,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  FromZZZtoCZ = {
+    X = -38480.019531,
+    Y = -6816.810059,
+    Z = -3877.629883,
+    R = 0.0,
+    SubRegionId = 106301,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_3"
+  },
+  Npc_XingShang_322480404 = {
+    X = -7060.0,
+    Y = -4510.0,
+    Z = 180.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Phantom_Xier_152480405 = {
+    X = -88610.0,
+    Y = -11640.0,
+    Z = -450.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Mechanism_ash_172480405 = {
+    X = -2320.0,
+    Y = 2108.73999,
+    Z = 2791.439941,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_ash_172480406 = {
+    X = -1790.0,
+    Y = 312.470001,
+    Z = 2793.129883,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_ash_172480407 = {
+    X = -2472.98999,
+    Y = -1386.469971,
+    Z = 2796.320068,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_glass_172480408 = {
+    X = -8030.0,
+    Y = -5140.0,
+    Z = 8330.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_glass_172480409 = {
+    X = -8030.0,
+    Y = -5140.0,
+    Z = 8330.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_glass_172480410 = {
+    X = -8030.0,
+    Y = -5140.0,
+    Z = 8330.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_Baozhaxianchang_152480411 = {
+    X = -16340.0,
+    Y = -90.0,
+    Z = 3340.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  Mechanism_HaluojiBattle_152480412 = {
+    X = -89670.0,
+    Y = -11560.0,
+    Z = -400.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Npc_Haluoji_152480413 = {
+    X = -87270.0,
+    Y = -11020.0,
+    Z = -450.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Point_HajiluoBattle = {
+    X = -85350.0,
+    Y = -8500.0,
+    Z = -560.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_4"
+  },
+  Point_Baozhaxianchang = {
+    X = -10920.0,
+    Y = 10.0,
+    Z = 118.161682,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
+  },
+  BP_YWBack = {
+    X = -19980.0,
+    Y = -640.0,
+    Z = 1010.0,
+    R = 0.0,
+    SubRegionId = 106001,
+    FloorId = 0,
+    TeleportPointName = "UI_TELEPORTPOINT_NAME_106001_1"
   }
 }
 return QuestGuidePointLoc

@@ -79,12 +79,14 @@ function M:InitShopItem(ShopItemId)
   local Cost = ShopUtils:GetShopItemPrice(ShopItemData.ItemId)
   self.CutoffData = ShopUtils:GetShopItemCutoffData(ShopItemData.ItemId)
   self.Text_Undiscounted_Price:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.TimeState = 0
   if self.CutoffData then
     self.Text_Discount:SetText(100 - self.CutoffData.CutoffShow)
     self.Text_Undiscounted_Price:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Text_Undiscounted_Price:SetText(self.ShopItemData.Price)
     self.Panel_Discount:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     if self.CutoffData.CutoffEndTime then
+      self.TimeState = 1
       self.Panel_Time:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self:UpdateCutoffTime(self.CutoffData.CutoffEndTime)
       self:AddTimer(1, self.UpdateCutoffTime, true, 0, "RefreshCutoffTimer", true, self.CutoffData.CutoffEndTime)
@@ -99,6 +101,9 @@ function M:InitShopItem(ShopItemId)
   else
     self.Panel_Time:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  if ShopItemData.StartTime and ShopItemData.EndTime then
+    self.TimeState = 2
+  end
   self:UpdateShopItemRefreshTime(ShopItemData.RefreshTime)
   self:RefreshSoldOutInfo()
   local Rarity = DataMgr[ShopItemData.ItemType][ShopItemData.TypeId].Rarity or DataMgr[ShopItemData.ItemType][ShopItemData.TypeId][ShopItemData.ItemType .. "Rarity"]
@@ -108,7 +113,9 @@ function M:InitShopItem(ShopItemId)
   end
   local ItemContent = {}
   ItemContent.ShopItemId = ShopItemId
-  ItemContent.Icon = ItemUtils.GetItemIconPath(self.ShopItemData.TypeId, self.ShopItemData.ItemType)
+  ItemContent.TypeId = self.ShopItemData.TypeId
+  ItemContent.ItemType = self.ShopItemData.ItemType
+  ItemContent.Icon = ItemUtils.GetItemIconPath(ItemContent.TypeId, ItemContent.ItemType)
   ItemContent.Rarity = Rarity
   self.Item_Shop:Init(ItemContent)
   self.Walnut_Number:SetVisibility(ESlateVisibility.Collapsed)
@@ -151,6 +158,7 @@ function M:InitShopItem(ShopItemId)
         local NowTime = TimeUtils.NowTime()
         Node:_RefreshAShopItem(self.ShopId, Node.Cache, NowTime)
         if Node.Cache.Count > Node.Count then
+          local DeltaCount = Node.Cache.Count - Node.Count
           ReddotManager.IncreaseLeafNodeCount(NodeName, DeltaCount)
         end
       end
@@ -178,7 +186,11 @@ function M:RefreshSoldOutInfo()
   if PurchaseLimit > -1 then
     self.Group_BuyLimit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Text_Limit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.Text_Limit:SetText(GText("UI_SHOP_SHOPITEMLIMIT") .. PurchaseLimit .. "/" .. self.ShopItemData.PurchaseLimit)
+    if 2 == self.TimeState then
+      self.Text_Limit:SetText(GText("UI_SHOP_SHOPITEMLIMIT_BOTH") .. PurchaseLimit .. "/" .. self.ShopItemData.PurchaseLimit)
+    else
+      self.Text_Limit:SetText(GText("UI_SHOP_SHOPITEMLIMIT") .. PurchaseLimit .. "/" .. self.ShopItemData.PurchaseLimit)
+    end
     if 0 == PurchaseLimit or Avatar:CheckShopItemUnique(self.ShopItemData.ItemId) then
       if 0 ~= PurchaseLimit and Avatar:CheckShopItemUnique(self.ShopItemData.ItemId) then
         self.Text_SoldOut:SetText(GText("UI_SHOP_ALREADYOWNED"))
@@ -190,6 +202,10 @@ function M:RefreshSoldOutInfo()
     else
       self.Panel_SoldOut:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
+  elseif 2 == self.TimeState then
+    self.Group_BuyLimit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Limit:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Text_Limit:SetText(GText("UI_SHOP_SHOPITEMLIMIT_TIME"))
   else
     self.Group_BuyLimit:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Text_Limit:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -320,7 +336,7 @@ function M:ShowItemDetail()
     local bForbidden = not ShopUtils:CanPurchase(self.ShopItemData, self.ShopItemData.PriceType, ShopUtils:GetShopItemPrice(self.ShopItemData.ItemId))
     local CommonPopupUIID
     if UIUtils.CanOpenSkinPreview(self.ShopItemData.ItemType, self.ShopItemData.TypeId) then
-      UIManager(self):LoadUINew("SkinPreview", self.ShopItemData, self)
+      PageJumpUtils:JumpToSkinPreview(self.ShopItemData, self)
     elseif self.ShopItemData.ItemType == "Reward" and (DataMgr.Reward[ItemData.RewardId].Mode == "Fixed" or DataMgr.Reward[ItemData.RewardId].Mode == "Once") then
       if 1 == self.ShopItemData.Bg then
         UIManager(self):LoadUINew("PayGiftPopup_Yellow", self.ShopItemData, self)
@@ -383,7 +399,7 @@ function M:ShowGiftItemDetail()
   AudioManager(self):PlayItemSound(self, self.ShopItemData.TypeId, "Click", self.ShopItemData.ItemType)
   local ItemData = DataMgr[self.ShopItemData.ItemType][self.ShopItemData.TypeId]
   if UIUtils.CanOpenSkinPreview(self.ShopItemData.ItemType, self.ShopItemData.TypeId) then
-    UIManager(self):LoadUINew("SkinPreview", self.ShopItemData, self)
+    PageJumpUtils:JumpToSkinPreview(self.ShopItemData, self)
     return
   end
   local giftMain = GiftController:GetGiftMainPage()

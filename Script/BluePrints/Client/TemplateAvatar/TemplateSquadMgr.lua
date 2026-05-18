@@ -49,33 +49,20 @@ function Component:ReShapeSquadInfo(Avatar, Squad)
 end
 
 function Component:GetSquadCreateInfoByExtra(ExtraInfo)
-  self.logger.debug("GetSquadCreateInfoByExtra")
-  local ResInfo = {}
-  if self.CurrentChar then
-    ResInfo.Char = self.Chars[self.CurrentChar]
-    if ResInfo.Char then
-      ResInfo.CharModSuit = ExtraInfo.CharModSuit or ResInfo.Char.ModSuitIndex
-      ResInfo.UltraWeapons = BattleDumpUtils:GetDefaultUltraWeaponInfo(self, ResInfo.Char)
-    end
-  end
-  if self.MeleeWeapon then
-    ResInfo.MeleeWeapon = self.Weapons[self.MeleeWeapon]
-    if ResInfo.MeleeWeapon then
-      ResInfo.MeleeWeaponModSuit = ExtraInfo.MeleeWeaponModSuit or ResInfo.MeleeWeapon.ModSuitIndex
-    end
-  end
-  if self.RangedWeapon then
-    ResInfo.RangedWeapon = self.Weapons[self.RangedWeapon]
-    if ResInfo.RangedWeapon then
-      ResInfo.RangedWeaponModSuit = ExtraInfo.RangedWeaponModSuit or ResInfo.RangedWeapon.ModSuitIndex
-    end
-  end
-  ResInfo.WheelIndex = self.WheelIndex
-  ResInfo.Phantom1 = ExtraInfo.Phantom1
-  ResInfo.Phantom2 = ExtraInfo.Phantom2
-  ResInfo.PhantomWeapon1 = ExtraInfo.PhantomWeapon1
-  ResInfo.PhantomWeapon2 = ExtraInfo.PhantomWeapon2
-  ResInfo.Pet = ExtraInfo.Pet
+  local ResInfo = {
+    Char = self.CurrentChar,
+    ModSuit = ExtraInfo.CharModSuit or self.Chars[self.CurrentChar].ModSuitIndex,
+    MeleeWeapon = self.MeleeWeapon,
+    MeleeWeaponModSuit = ExtraInfo.MeleeWeaponModSuit or self.Weapons[self.MeleeWeapon].ModSuitIndex,
+    RangedWeapon = self.RangedWeapon,
+    RangedWeaponModSuit = ExtraInfo.RangedWeaponModSuit or self.Weapons[self.RangedWeapon].ModSuitIndex,
+    WheelIndex = self.WheelIndex,
+    Phantom1 = ExtraInfo.Phantom1,
+    Phantom2 = ExtraInfo.Phantom2,
+    PhantomWeapon1 = ExtraInfo.PhantomWeapon1,
+    PhantomWeapon2 = ExtraInfo.PhantomWeapon2,
+    Pet = ExtraInfo.Pet
+  }
   return ResInfo
 end
 

@@ -228,7 +228,7 @@ function WBP_Bag_Main_M_C:SetConsumeReddot()
             ClickedCount = 0,
             ShowReddot = true
           }
-        elseif BagConsumeNodeDetails[StuffData.StuffId].StuffCount ~= StuffData.StuffCount then
+        elseif BagConsumeNodeDetails[StuffData.StuffId].StuffCount < StuffData.StuffCount then
           ReddotManager.IncreaseLeafNodeCount("Bag_Consume", StuffData.StuffCount - BagConsumeNodeDetails[StuffData.StuffId].StuffCount)
           BagConsumeNodeDetails[StuffData.StuffId].StuffCount = StuffData.StuffCount
           BagConsumeNodeDetails[StuffData.StuffId].ShowReddot = true

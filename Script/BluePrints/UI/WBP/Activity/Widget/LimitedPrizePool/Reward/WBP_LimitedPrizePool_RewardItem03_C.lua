@@ -89,7 +89,7 @@ function M:OpenSelectWidget()
       ZOrder = ActiveMainUIData.ZOrder
     end
     SelectLimitedGrandPrizeUI:AddToViewport(ZOrder)
-    SelectLimitedGrandPrizeUI:Init(ItemDatas, {
+    SelectLimitedGrandPrizeUI:Init(self.Content.PoolId, ItemDatas, {
       self,
       function(_, ItemData)
         SelectLimitedGrandPrizeUI:Close()

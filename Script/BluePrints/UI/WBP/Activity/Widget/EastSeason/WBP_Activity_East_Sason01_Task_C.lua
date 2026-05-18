@@ -51,7 +51,8 @@ function M:InitUI()
         Text = GText(phaseData.QuestPhaseName),
         TabId = index,
         IconPath = phaseData.Icon,
-        SplineBP = phaseData.SplineBP
+        SplineBP = phaseData.SplineBP,
+        EntranceIconPath = phaseData.EntranceIcon
       })
       if phaseData.SplineBP and IsValid(self.Pos_Spine) then
         local NewBgWidget = UIManager(self):CreateWidget(phaseData.SplineBP)
@@ -69,6 +70,7 @@ function M:InitUI()
       end
     end
   end
+  local TitleTextmap = DataMgr.SystemUIName[self.EventId].Title
   self.Tab:Init({
     DynamicNode = {
       "Back",
@@ -100,7 +102,7 @@ function M:InitUI()
       }
     },
     StyleName = "Text",
-    TitleName = GText("Event_Title_102001"),
+    TitleName = GText(TitleTextmap),
     OwnerPanel = self,
     BackCallback = self.CloseSelf
   })
@@ -276,12 +278,18 @@ function M:InitQuestPhaseContent(TabId)
       end
     end
   end
-  local IconTexture = LoadObject(self.AllTabInfo[self.TabId].IconPath)
+  local IconTexture = LoadObject(self.AllTabInfo[self.TabId].EntranceIconPath or self.AllTabInfo[self.TabId].IconPath)
   self.Icon:SetBrushFromTexture(IconTexture)
   self:UpdateGetAllBtn()
   if 1 == TabId then
     self.Text_Tip:SetVisibility(UIConst.VisibilityOp.Visible)
+    if self.WS_Text then
+      self.WS_Text:SetActiveWidgetIndex(0)
+    end
   else
+    if self.WS_Text then
+      self.WS_Text:SetActiveWidgetIndex(1)
+    end
     self.Text_Tip:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end

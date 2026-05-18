@@ -962,6 +962,47 @@ return ReadOnly("Convert", {
     },
     SortPriority = 933
   },
+  [1069] = {
+    ConvertCost = T.RT_2,
+    ConvertNum = 3,
+    CovertId = 1069,
+    ProductId = 12155,
+    ProductNum = 1,
+    ProductType = "Resource",
+    ReleaseVersion = 100,
+    Resource = {
+      [1] = 12156
+    },
+    SortPriority = 932
+  },
+  [1070] = {
+    ConvertCost = T.RT_2,
+    ConvertNum = 3,
+    CovertId = 1070,
+    ProductId = 12157,
+    ProductNum = 1,
+    ProductType = "Resource",
+    ReleaseVersion = 100,
+    Resource = {
+      [1] = 12158,
+      [2] = 12159
+    },
+    SortPriority = 931
+  },
+  [1071] = {
+    ConvertCost = T.RT_2,
+    ConvertNum = 3,
+    CovertId = 1071,
+    ProductId = 12160,
+    ProductNum = 1,
+    ProductType = "Resource",
+    ReleaseVersion = 100,
+    Resource = {
+      [1] = 12161,
+      [2] = 12162
+    },
+    SortPriority = 930
+  },
   [9998] = {
     ConvertCost = {
       [101] = 2000

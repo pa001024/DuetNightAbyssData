@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1001,
+    "name": "深境コンパス・探検",
+    "desc": "深境探検を開始するために使用できる",
+    "func": "深境コンパス",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 100,
+    "rarity": 5,
+    "accessKey": [
+      "Forging"
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "深境コンパス・探検",
+    "desc": "深境探検を開始するために使用できる",
+    "func": "深境コンパス",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 90,
+    "rarity": 3
+  }
+]

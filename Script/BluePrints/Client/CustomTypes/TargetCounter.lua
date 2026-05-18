@@ -13,13 +13,17 @@ TargetCounter.__Props__ = {
   RewardsGot = prop.prop("Bool", "client save", false),
   CompletionValue = prop.prop("Int", "client save"),
   NoRepeatField = prop.prop("Str", "save"),
-  TargetRecords = prop.prop("Str2IntDict", "client save")
+  TargetRecords = prop.prop("Str2IntDict", "client save"),
+  ConsecutiveLoginTime = prop.prop("Int", "client save", 0),
+  ConsecutiveLoginDays = prop.prop("Int", "client save", 0)
 }
 
 function TargetCounter:Reset()
   self.Progress = 0
   self.RewardsGot = false
   self.TargetRecords = {}
+  self.ConsecutiveLoginTime = 0
+  self.ConsecutiveLoginDays = 0
   self:FixByAvatarData()
 end
 
@@ -64,6 +68,11 @@ function TargetCounter:TargetRefreshProgress(TargetId, UniqueAttr, Count)
   if not self.TargetIds[TargetId] then
     return
   end
+  local TargetExcel = DataMgr.Target[TargetId]
+  if TargetExcel and TargetExcel.TargetType == CommonConst.TargetTypeConsecutiveLoginDayTargetCounter then
+    self:ConsecutiveLogin(TargetId)
+    return
+  end
   if self.CompletionValue and self:IndividualRule(TargetId, Count) then
     Count = 1
   end
@@ -78,6 +87,24 @@ function TargetCounter:TargetRefreshProgress(TargetId, UniqueAttr, Count)
     self.TargetRecords[UniqueAttr] = TimeUtils.NowTime()
   end
   self.Progress = math.min(self.Progress + Count, self.Target)
+end
+
+function TargetCounter:ConsecutiveLogin(TargetId)
+  local TargetExcel = DataMgr.Target[TargetId]
+  local ConsecutiveLoginDay = tonumber(TargetExcel.TargetParam[1][1])
+  local now = TimeUtils.NowTime()
+  local days = TimeUtils.GetIntervalDay(self.ConsecutiveLoginTime, now)
+  if self.ConsecutiveLoginTime <= 0 then
+    self.ConsecutiveLoginDays = 1
+  elseif 1 == days then
+    self.ConsecutiveLoginDays = self.ConsecutiveLoginDays + 1
+  elseif days > 1 then
+    self.ConsecutiveLoginDays = 1
+  end
+  self.ConsecutiveLoginTime = now
+  if ConsecutiveLoginDay <= self.ConsecutiveLoginDays then
+    self.Progress = self.Target
+  end
 end
 
 function TargetCounter:CanRecvReward()
@@ -101,7 +128,7 @@ function TargetCounter:FixByAvatarData()
       self:TargetRefreshProgress(TargetId, nil, 1)
       break
     end
-    if TargetExcel and TargetExcel.TargetType == CommonConst.TargetTypeLoginDay then
+    if TargetExcel and (TargetExcel.TargetType == CommonConst.TargetTypeLoginDay or TargetExcel.TargetType == CommonConst.TargetTypeConsecutiveLoginDayTargetCounter) then
       local obj = TimeUtils.TimestampToDataObj(TimeUtils.TimestampLastClock(5))
       local Date = string.format("%d%d%d", obj.year, obj.month, obj.day)
       self.NoRepeatField = "Date"

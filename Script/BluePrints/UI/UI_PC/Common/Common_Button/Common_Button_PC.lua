@@ -13,6 +13,7 @@ function M:Construct(ChildBtn)
   rawset(self, "SoundFunc", self.PlayButtonClickSound)
   rawset(self, "ForbidSoundFunc", self.PlayForbiddenButtonPressSound)
   rawset(self, "IsForbidden", false)
+  rawset(self, "IsLocked", false)
   rawset(self, "IsPressing", false)
   rawset(self, "IsHovering", false)
   rawset(self, "TestNum", 0)
@@ -389,6 +390,40 @@ function M:ForbidBtn(IsForbid)
   elseif self.IsForbidden == true and false == IsForbid then
     self.IsForbidden = false
     self:PlayButtonUnForbidAnim()
+  end
+end
+
+function M:PlayButtonLockAnim()
+  self:StopAllAnimations()
+  self:DestroyAllAnmations()
+  self:PlayAnimation(self.Lock)
+end
+
+function M:PlayButtonUnLockAnim()
+  if self.IsHovering then
+    self:PlayButtonHoverAnim()
+  else
+    self:SwitchNormalAnimation()
+  end
+end
+
+function M:IsBtnLocked()
+  return self.IsLocked
+end
+
+function M:LockBtn(IsLock)
+  if IsLock == self.IsLocked then
+    return
+  end
+  self:UnbindAllFromAnimationFinished(self.UnHover)
+  if self.IsLocked == false and true == IsLock then
+    self.IsLocked = true
+    self.IsForbidden = true
+    self:PlayButtonLockAnim()
+  elseif self.IsLocked == true and false == IsLock then
+    self.IsLocked = false
+    self.IsForbidden = false
+    self:PlayButtonUnLockAnim()
   end
 end
 

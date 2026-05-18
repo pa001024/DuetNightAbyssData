@@ -43,6 +43,10 @@ function BP_HeadWidgetComponent_C:NeedForceInit()
   return 0 == self.StateCount
 end
 
+function BP_HeadWidgetComponent_C:SetWidgetHiddenByTag(bHidden, Tag)
+  self:SetUniformWidgetHideTag(bHidden, Tag)
+end
+
 local function CalculateBubbleTime(Text, bShortBubble)
   local Language = CommonConst.SystemLanguage
   local Size = 3.0

@@ -15,11 +15,20 @@ function M:ReceiveEnterState(StackAction)
   end
   if self.ActorController then
     local Tag = self.Target:HasTag("Melee") and "Melee" or "Ranged"
+    self.ActorController.bPlaySameMontage = true
     self.ActorController:SetMontageAndCamera(self.Type, Tag, "Appearance", "")
     self.ActorController:HidePlayerActor(self.UIName, false)
   end
   if self.CurrentTopTabIdx == self.WeaponStanceFXTabIdx and self.ComparedContent and self.ComparedContent ~= self.NoneAccessory then
     self:UpdateWeaponStanceFXInfo(self.ComparedContent)
+    local bAllowModTag = self.ComparedContent.bAllowModTag
+    if bAllowModTag and not self:IsModBtnForbidden() then
+      local bModEquiped = ModController:GetModel():HasTargetEquipedMod(self.Target.Uuid, self.ComparedContent.ModId)
+      self.ComparedContent.bModEquiped = bModEquiped
+      if self.ComparedContent.SelfWidget then
+        self.ComparedContent.SelfWidget:SetModTag(bAllowModTag, bModEquiped)
+      end
+    end
   end
 end
 
@@ -183,6 +192,7 @@ function M:InitWeaponAccessory()
   end
   self.NoneAccessory.bSelectTag = false
   self.NoneAccessory.IsSelect = false
+  self.NoneAccessory.AccessoryType = CommonConst.WeaponAccessoryTypes.Accessory
   self.CurrentContent = self.NoneAccessory
   if #self.Array_WeaponAccessoryContents <= 0 then
     self.List_Accessory:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -325,7 +335,11 @@ function M:CreateWeaponAccessoryContent(Data)
   rawset(Obj, "AccessoryType", Data.StanceFXType)
   rawset(Obj, "StanceFXTag", tonumber(Data.StanceFXTag))
   if WeaponStanceFXTag2ModId and WeaponStanceFXTag2ModId[rawget(Obj, "StanceFXTag")] then
+    Obj.bAllowModTag = true
     local ModId = next(WeaponStanceFXTag2ModId[Obj.StanceFXTag])
+    if bAllowModTag and not self:IsModBtnForbidden() then
+      Obj.bModEquiped = ModController:GetModel():HasTargetEquipedMod(self.Target.Uuid, ModId)
+    end
     rawset(Obj, "ModId", ModId)
   end
   return Obj
@@ -453,8 +467,9 @@ function M:InitWeaponStanceFX()
   end
   self.NoneAccessory.bSelectTag = false
   self.NoneAccessory.IsSelect = false
+  self.NoneAccessory.AccessoryType = nil
   self.CurrentContent = self.NoneAccessory
-  if next(self.Map_StanceFXContents) == nil then
+  if nil == next(self.Map_StanceFXContents) then
     self.List_Accessory:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self:UpdateAccessoryDetails(self.CurrentContent)
     return
@@ -626,7 +641,7 @@ function M:UpdateWeaponStanceFXInfo(Content)
     Target = self.Target,
     Type = self.Type,
     Tag = self.Target:HasTag("Melee") and "Melee" or "Ranged",
-    ForbidModBtn = self.IsPreviewMode or self.IsCharacterTrialMode or self.IsTargetUnowned,
+    ForbidModBtn = self:IsModBtnForbidden(),
     ModId = Content.ModId,
     Owner = self,
     OnModBtnClicked = self.OnModBtnClicked
@@ -634,6 +649,10 @@ function M:UpdateWeaponStanceFXInfo(Content)
   self.WBP_Armory_SkinMod:Init(Params)
   self.Mod_Title_Line:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Mod_Content:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
+function M:IsModBtnForbidden()
+  return self.IsPreviewMode or self.IsCharacterTrialMode or self.IsTargetUnowned
 end
 
 function M:OnTopTabSelected(TabWidget, Content)

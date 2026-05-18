@@ -1,5 +1,6 @@
 require("UnLua")
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
+local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
 local ChatModel = ChatController:GetModel()
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
@@ -55,7 +56,7 @@ function M:HandleChannelPlayerNum(Channel_type, Channel_list)
 end
 
 function M:BtnChangeChannelOnPressed()
-  ChatController:OpenChatChannelUI(self)
+  ChatController:OpenChatChannelUI(self, ChatCommon.ChannelDef.Region)
 end
 
 function M:Destruct()

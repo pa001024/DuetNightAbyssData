@@ -89,6 +89,7 @@ function M:Construct()
   })
   self.Text_Properties:SetText("")
   self.SiftModelId = nil
+  self.ItemDatas = nil
   self.SiftPreviewWidget = self.SiftPreview_Middle
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
   self.FocusKeyName = "LS"
@@ -194,7 +195,7 @@ function M:AfterSiftBoxClosed()
 end
 
 function M:OpenSiftBox(SiftModelId)
-  local ModSiftDatas = self:GetSiftModelData(SiftModelId)
+  local ModSiftDatas = self.ItemDatas or self:GetSiftModelData(SiftModelId)
   local Params = {
     ParentWidget = self,
     ItemDatas = ModSiftDatas,
@@ -230,6 +231,10 @@ function M:SetSiftModelId(SiftModelId)
   self.SiftModelId = SiftModelId
 end
 
+function M:SetItemDatas(itemDatas)
+  self.ItemDatas = itemDatas
+end
+
 function M:SetSiftPreviewSideWidget(bSideWidget, bRight)
   if bSideWidget then
     if bRight then
@@ -243,8 +248,8 @@ function M:SetSiftPreviewSideWidget(bSideWidget, bRight)
 end
 
 function M:ListOpenBtnClicked()
-  if not self.SiftModelId then
-    print("Error: SiftModelId is not set.")
+  if not self.SiftModelId and not self.ItemDatas then
+    print("Error: SiftModelId or ItemDatas is not set.")
     return
   end
   self:OpenSiftBox(self.SiftModelId)

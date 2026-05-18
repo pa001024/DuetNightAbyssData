@@ -1,6 +1,14 @@
 local Component = {}
 local BattleUtils = require("Utils.BattleUtils")
 local MiscUtils = require("Utils.MiscUtils")
+local QuestStateType = {Doing = 1, Success = 2}
+local TalkStateType = {
+  Compelete = 0,
+  UnCompelete = 1,
+  CheckSuccess = 2,
+  CheckFail = 3
+}
+local QuestChainStateType = {Doing = 1, Success = 2}
 
 function Component:ReceiveBeginPlay()
   self.Overridden.ReceiveBeginPlay(self)
@@ -29,10 +37,14 @@ function Component:AddStaticCreatorInfo()
     EventManager:AddEvent(EventID.TriggerFlexibleActive, self, self.TriggerFlexibleActiveStaticCreator)
     EventManager:AddEvent(EventID.ConditionComplete, self, self.TriggerFlexibleActiveStaticCreator)
     EventManager:AddEvent(EventID.OnDailyRefresh, self, self.TriggerFlexibleActiveStaticCreator)
+    EventManager:AddEvent(EventID.OnVarCheck, self, self.TriggerFlexibleActiveStaticCreator)
   end
 end
 
 function Component:TryGetFlexibleActiveResult()
+  if Const.IsOpenNpcInitOpt then
+    return self:TryGetFlexibleActiveResultOptimized()
+  end
   if self.UnitType ~= "Npc" and self.RegionDataType ~= ERegionDataType.RDT_None then
     return false, nil
   end
@@ -62,7 +74,6 @@ function Component:TryGetFlexibleActiveResult()
     local FlexibleQuestChainState = TempFlexibleMap[i].NpcActiveArray.QuestChain.QuestChainState
     if 0 == TempFlexibleMap[i].NpcActiveArray.EditableStructType then
       local QuestChainId = tonumber(string.sub(TargetQuestId, 1, 6))
-      local QuestStateType = {Doing = 1, Success = 2}
       if not Avatar.QuestChains[QuestChainId] then
       else
         local QuestChains = Avatar.QuestChains[QuestChainId]
@@ -76,12 +87,6 @@ function Component:TryGetFlexibleActiveResult()
         end
       end
     elseif 1 == TempFlexibleMap[i].NpcActiveArray.EditableStructType then
-      local TalkStateType = {
-        Compelete = 0,
-        UnCompelete = 1,
-        CheckSuccess = 2,
-        CheckFail = 3
-      }
       if TalkState == TalkStateType.Compelete then
         if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
           return true, IsActive
@@ -101,7 +106,6 @@ function Component:TryGetFlexibleActiveResult()
         end
       end
     elseif 2 == TempFlexibleMap[i].NpcActiveArray.EditableStructType then
-      local QuestChainStateType = {Doing = 1, Success = 2}
       if not Avatar.QuestChains[FlexibleQuestChainId] then
       else
         local TargetQuestChain = Avatar.QuestChains[FlexibleQuestChainId]
@@ -122,9 +126,103 @@ function Component:TryGetFlexibleActiveResult()
       if bShouldComplete == bConditionComplete then
         return true, IsActive
       end
+    elseif 4 == TempFlexibleMap[i].NpcArray.EditableStructType then
+      local FuncName = TempFlexibleMap[i].NpcActiveArray.Var.FunctionName
+      local VarName = TempFlexibleMap[i].NpcActiveArray.Var.VarName
+      local ParamName = TempFlexibleMap[i].NpcActiveArray.Var.ParamName
+      local ParamValue = TempFlexibleMap[i].NpcActiveArray.Var.ParamValue
+      if self:FlexibleCheckVarFunc(FuncName, VarName, ParamName, ParamValue) then
+        return true, IsActive
+      end
     end
   end
   return false, nil
+end
+
+function Component:TryGetFlexibleActiveResultOptimized()
+  if self.GenerateReverseFlexibleData == nil or self:GenerateReverseFlexibleData() == false then
+    return false, nil
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false, nil
+  end
+  for i = 1, self.ReverseFlexibleActiveInactive:Num() do
+    if 0 == self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.EditableStructType then
+      local TargetQuestId = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.Quest.QuestId
+      local IsActive = self.ReverseFlexibleActiveInactive:FindRef(i).IsActive
+      local TargetQuestState = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.Quest.MyQuestState
+      local QuestChainId = tonumber(string.sub(TargetQuestId, 1, 6))
+      if not Avatar.QuestChains[QuestChainId] then
+      else
+        local QuestChains = Avatar.QuestChains[QuestChainId]
+        if TargetQuestState == QuestStateType.Doing and QuestChains.DoingQuestId == TargetQuestId then
+          return true, IsActive
+        else
+          if TargetQuestState == QuestStateType.Success and QuestChains:CheckQuestIdComplete(TargetQuestId) then
+            return true, IsActive
+          else
+          end
+        end
+      end
+    elseif 1 == self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.EditableStructType then
+      local TargetTalkTriggerId = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.ImpressionTalk.TalkTriggerId
+      local TalkState = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.ImpressionTalk.TalkQuestState
+      local IsActive = self.ReverseFlexibleActiveInactive:FindRef(i).IsActive
+      if TalkState == TalkStateType.Compelete then
+        if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
+          return true, IsActive
+        end
+      elseif TalkState == TalkStateType.UnCompelete then
+        if Avatar:IsStorylineUnComplete(TargetTalkTriggerId) then
+          return true, IsActive
+        end
+      elseif TalkState == TalkStateType.CheckSuccess then
+        if Avatar:IsStorylineSuccess(TargetTalkTriggerId) then
+          return true, IsActive
+        end
+      else
+        if TalkState == TalkStateType.CheckFail and Avatar:IsStorylineFailure(TargetTalkTriggerId) then
+          return true, IsActive
+        else
+        end
+      end
+    elseif 2 == self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.EditableStructType then
+      local FlexibleQuestChainId = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.QuestChain.QuestChainId
+      local FlexibleQuestChainState = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.QuestChain.QuestChainState
+      local IsActive = self.ReverseFlexibleActiveInactive:FindRef(i).IsActive
+      if not Avatar.QuestChains[FlexibleQuestChainId] then
+      else
+        local TargetQuestChain = Avatar.QuestChains[FlexibleQuestChainId]
+        if FlexibleQuestChainState == QuestChainStateType.Doing and Avatar:IsQuestChainDoing(FlexibleQuestChainId) then
+          return true, IsActive
+        else
+          if FlexibleQuestChainState == QuestChainStateType.Success and Avatar:IsQuestChainFinished(FlexibleQuestChainId) then
+            return true, IsActive
+          else
+          end
+        end
+      end
+    elseif 3 == self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.EditableStructType then
+      local ConditionUtils = require("BluePrints.Common.ConditionUtils")
+      local TargetConditionId = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.Condition.ConditionId
+      local bShouldComplete = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.Condition.bIsComplete
+      local IsActive = self.ReverseFlexibleActiveInactive:FindRef(i).IsActive
+      local bConditionComplete = ConditionUtils.CheckCondition(Avatar, TargetConditionId)
+      if bShouldComplete == bConditionComplete then
+        return true, IsActive
+      end
+    elseif 4 == self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.EditableStructType then
+      local FuncName = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.Var.FunctionName
+      local VarName = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.Var.VarName
+      local ParamName = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.Var.ParamName
+      local ParamValue = self.ReverseFlexibleActiveInactive:FindRef(i).ReverseActiveArray.Var.ParamValue
+      local IsActive = self.ReverseFlexibleActiveInactive:FindRef(i).IsActive
+      if self:FlexibleCheckVarFunc(FuncName, VarName, ParamName, ParamValue) then
+        return true, IsActive
+      end
+    end
+  end
 end
 
 function Component:OnRegionDataAllocated_Lua(LuaTableIndex)
@@ -344,28 +442,6 @@ function Component:IsAOITriggerBox()
   return "AOITriggerBox" == RealUnitType or "AOITriggerSphere" == RealUnitType or "AOITriggerSpecialQuest" == RealUnitType or "AOITriggerCapsule" == RealUnitType
 end
 
-function Component:GetUnitLevel()
-  return self:GetUnitLevel_Lua()
-end
-
-function Component:GetUnitLevel_Lua()
-  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
-  if self.LevelAdaptDisable and GameMode:IsInRegion() then
-    return math.max(1, self.Level)
-  else
-    local MonsterCurLevel = self.Level + GameMode:GetFixedGamemodeLevel()
-    if GameMode:IsEndlessDungeon() then
-      local MonsterMaxLevel = DataMgr.GlobalConstant.MonsterLevelUpperLimit.ConstantValue
-      return math.min(MonsterMaxLevel, MonsterCurLevel)
-    elseif GameMode.EMGameState.GameModeType == "Abyss" then
-      local MonsterMaxLevel = DataMgr.GlobalConstant.AbyssMonsterLevelLimit.ConstantValue
-      return math.min(MonsterMaxLevel, MonsterCurLevel)
-    else
-      return MonsterCurLevel
-    end
-  end
-end
-
 function Component:SetNpcShowHide(QuestId)
   return self:SetNpcShowHide_Lua(QuestId)
 end
@@ -407,7 +483,6 @@ function Component:SetNpcShowHideByFlexible_Lua(Unit)
     local FlexibleQuestChainState = TempFlexibleMap[i].NpcArray.QuestChain.QuestChainState
     if 0 == TempFlexibleMap[i].NpcArray.EditableStructType then
       local QuestChainId = tonumber(string.sub(TargetQuestId, 1, 6))
-      local QuestStateType = {Doing = 1, Success = 2}
       if not Avatar.QuestChains[QuestChainId] then
       else
         local QuestChains = Avatar.QuestChains[QuestChainId]
@@ -423,12 +498,6 @@ function Component:SetNpcShowHideByFlexible_Lua(Unit)
         end
       end
     elseif 1 == TempFlexibleMap[i].NpcArray.EditableStructType then
-      local TalkStateType = {
-        Compelete = 0,
-        UnCompelete = 1,
-        CheckSuccess = 2,
-        CheckFail = 3
-      }
       if TalkState == TalkStateType.Compelete then
         if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
@@ -452,7 +521,6 @@ function Component:SetNpcShowHideByFlexible_Lua(Unit)
         end
       end
     elseif 2 == TempFlexibleMap[i].NpcArray.EditableStructType then
-      local QuestChainStateType = {Doing = 1, Success = 2}
       if not Avatar.QuestChains[FlexibleQuestChainId] then
       else
         local TargetQuestChain = Avatar.QuestChains[FlexibleQuestChainId]
@@ -467,8 +535,46 @@ function Component:SetNpcShowHideByFlexible_Lua(Unit)
           end
         end
       end
+    elseif 4 == TempFlexibleMap[i].NpcArray.EditableStructType then
+      local FuncName = TempFlexibleMap[i].NpcArray.Var.FunctionName
+      local VarName = TempFlexibleMap[i].NpcArray.Var.VarName
+      local ParamName = TempFlexibleMap[i].NpcArray.Var.ParamName
+      local ParamValue = TempFlexibleMap[i].NpcArray.Var.ParamValue
+      if self:FlexibleCheckVarFunc(FuncName, VarName, ParamName, ParamValue) then
+        SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
+        return
+      end
     end
   end
+end
+
+function Component:FlexibleCheckVarFunc(FunctionName, VarName, ParamName, ParamValue)
+  if not VarName or "" == VarName then
+    return false
+  end
+  local VarInfo = DataMgr.StoryVariable[VarName]
+  if not VarInfo then
+    return false
+  end
+  local VarLogType = UE.EStoryLogType.StoryVar
+  local NewVarInfos = {}
+  if tonumber(ParamValue) then
+    NewVarInfos[ParamName] = tonumber(ParamValue)
+  else
+    NewVarInfos[ParamName] = ParamValue
+  end
+  local StorySubsystem = UE4.USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UStorySubsystem:StaticClass())
+  local Ret = StorySubsystem:ExecuteBlueprintVarFunction(FunctionName, VarName, NewVarInfos, nil, true)
+  if type(Ret) ~= "number" or 0 ~= Ret % 1 then
+    UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, VarLogType, "灵活显隐/生成执行出错", "函数[" .. tostring(FunctionName) .. "]的返回值不是bool类型")
+    return false
+  end
+  if 0 == Ret then
+    return false
+  elseif 1 == Ret then
+    return true
+  end
+  return true
 end
 
 function Component:SetNpcFlexibShowOrHideDynamic_Lua(FlexibType, TargetId)
@@ -516,7 +622,6 @@ function Component:SetNpcFlexibShowOrHideDynamic_Lua(FlexibType, TargetId)
     local FlexibleQuestChainState = TempFlexibleMap[i].NpcArray.QuestChain.QuestChainState
     if 0 == TempFlexibleMap[i].NpcArray.EditableStructType then
       local QuestChainId = tonumber(string.sub(TargetQuestId, 1, 6))
-      local QuestStateType = {Doing = 1, Success = 2}
       if not Avatar.QuestChains[QuestChainId] then
       else
         local QuestChains = Avatar.QuestChains[QuestChainId]
@@ -532,12 +637,6 @@ function Component:SetNpcFlexibShowOrHideDynamic_Lua(FlexibType, TargetId)
         end
       end
     elseif 1 == TempFlexibleMap[i].NpcArray.EditableStructType then
-      local TalkStateType = {
-        Compelete = 0,
-        UnCompelete = 1,
-        CheckSuccess = 2,
-        CheckFail = 3
-      }
       if TalkState == TalkStateType.Compelete then
         if Avatar:IsStorylineComplete(TargetTalkTriggerId) then
           SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
@@ -561,7 +660,6 @@ function Component:SetNpcFlexibShowOrHideDynamic_Lua(FlexibType, TargetId)
         end
       end
     elseif 2 == TempFlexibleMap[i].NpcArray.EditableStructType then
-      local QuestChainStateType = {Doing = 1, Success = 2}
       if not Avatar.QuestChains[FlexibleQuestChainId] then
       else
         local TargetQuestChain = Avatar.QuestChains[FlexibleQuestChainId]
@@ -575,6 +673,15 @@ function Component:SetNpcFlexibShowOrHideDynamic_Lua(FlexibType, TargetId)
           else
           end
         end
+      end
+    elseif 4 == TempFlexibleMap[i].NpcArray.EditableStructType then
+      local FuncName = TempFlexibleMap[i].NpcArray.Var.FunctionName
+      local VarName = TempFlexibleMap[i].NpcArray.Var.VarName
+      local ParamName = TempFlexibleMap[i].NpcArray.Var.ParamName
+      local ParamValue = TempFlexibleMap[i].NpcArray.Var.ParamValue
+      if self:FlexibleCheckVarFunc(FuncName, VarName, ParamName, ParamValue) then
+        SetNpcShowOrHide(TempFlexibleMap[i].IsHide)
+        return
       end
     end
   end
@@ -639,7 +746,7 @@ function Component:SetNpcShowHide_Lua(QuestId)
   end
 end
 
-function Component:TriggerFlexibleActiveStaticCreator()
+function Component:TriggerFlexibleActiveStaticCreator(Reason)
   local GameMode = UE4.UGameplayStatics.GetGameMode(self)
   if not GameMode then
     return
@@ -663,7 +770,14 @@ function Component:TriggerFlexibleActiveStaticCreator()
   if FlexibleRet and IsActive then
     local TempArray = TArray(0)
     TempArray:Add(self.StaticCreatorId)
-    GameMode:TriggerActiveStaticCreator(TempArray, "FlexibleActiveInactive")
+    if "GiveUpQuestChain" == Reason then
+      local NpcChar = GameState.NpcMap:FindRef(self.UnitId)
+      if nil == NpcChar and GameState:IsNpcCreate(self.UnitId) == false then
+        GameMode:TriggerActiveStaticCreator(TempArray, "FlexibleActiveInactive")
+      end
+    else
+      GameMode:TriggerActiveStaticCreator(TempArray, "FlexibleActiveInactive")
+    end
   elseif FlexibleRet and not IsActive then
     for _, NpcChar in pairs(GameState.NpcMap) do
       if NpcChar.UnitId == self.UnitId and NpcChar.CreatorId and NpcChar.CreatorId == self.StaticCreatorId then
@@ -710,6 +824,7 @@ function Component:SetUpParameters(Unit)
   if 0 ~= self.FlexibleShowHide:Length() then
     EventManager:AddEvent(EventID.SetNpcShowHide, self, self.SetNpcShowHide)
     EventManager:AddEvent(EventID.SetNpcFlexibShowOrHideDynamic, self, self.SetNpcFlexibShowOrHideDynamic_Lua)
+    EventManager:AddEvent(EventID.OnVarCheck, self, self.SetNpcFlexibShowOrHideDynamic_Lua)
   end
   if Const.IsOpenNpcInitOpt == false and false == self.DefaultShowEnable and IsValid(Unit) then
     Unit:SetActorHideTag("Flexible", true)
@@ -724,6 +839,7 @@ function Component:ReceiveEndPlay()
   EventManager:RemoveEvent(EventID.TriggerFlexibleActive, self)
   EventManager:RemoveEvent(EventID.ConditionComplete, self)
   EventManager:RemoveEvent(EventID.OnDailyRefresh, self)
+  EventManager:RemoveEvent(EventID.OnVarCheck, self)
   self:RemoveStaticCreatorInfo()
 end
 

@@ -199,6 +199,180 @@
                 ]
               },
               {
+                "id": 1011103,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "전투 선율 Ⅳ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  100
+                ]
+              },
+              {
+                "id": 1011102,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "전투 선율 Ⅲ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  80
+                ]
+              },
+              {
+                "id": 1011101,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "전투 선율 Ⅱ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  60
+                ]
+              },
+              {
+                "id": 1011100,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "전투 선율 Ⅰ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  60
+                ]
+              },
+              {
+                "id": 1011123,
+                "itemType": "Resource",
+                "typeId": 10202,
+                "typeName": "도금 훈장",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 5,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  100
+                ]
+              },
+              {
+                "id": 1011122,
+                "itemType": "Resource",
+                "typeId": 10201,
+                "typeName": "백은 훈장",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  80
+                ]
+              },
+              {
+                "id": 1011121,
+                "itemType": "Resource",
+                "typeId": 10200,
+                "typeName": "흑철 훈장",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  60
+                ]
+              },
+              {
+                "id": 1011120,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "루나의 증표",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1001,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Benefit",
+                  60
+                ]
+              },
+              {
                 "id": 1011037,
                 "itemType": "Resource",
                 "typeId": 19003,
@@ -580,6 +754,190 @@
                 ]
               },
               {
+                "id": 1011107,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "전투 선율 Ⅳ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  100
+                ]
+              },
+              {
+                "id": 1011106,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "전투 선율 Ⅲ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  80
+                ]
+              },
+              {
+                "id": 1011105,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "전투 선율 Ⅱ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Chaos",
+                  60
+                ]
+              },
+              {
+                "id": 1011104,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "전투 선율 Ⅰ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  60
+                ]
+              },
+              {
+                "id": 1011127,
+                "itemType": "Resource",
+                "typeId": 10205,
+                "typeName": "계몽의 관",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 5,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  100
+                ]
+              },
+              {
+                "id": 1011126,
+                "itemType": "Resource",
+                "typeId": 10204,
+                "typeName": "전시의 눈",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  80
+                ]
+              },
+              {
+                "id": 1011125,
+                "itemType": "Resource",
+                "typeId": 10203,
+                "typeName": "침묵의 면사",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Chaos",
+                  60
+                ]
+              },
+              {
+                "id": 1011124,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "루나의 증표",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1002,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Morality",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  60
+                ]
+              },
+              {
                 "id": 1011038,
                 "itemType": "Resource",
                 "typeId": 19004,
@@ -914,6 +1272,190 @@
                   1011,
                   "Empathy",
                   40
+                ]
+              },
+              {
+                "id": 1011111,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "전투 선율 Ⅳ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  100
+                ]
+              },
+              {
+                "id": 1011110,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "전투 선율 Ⅲ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  80
+                ]
+              },
+              {
+                "id": 1011109,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "전투 선율 Ⅱ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "All",
+                  60
+                ]
+              },
+              {
+                "id": 1011108,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "전투 선율 Ⅰ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  60
+                ]
+              },
+              {
+                "id": 1011131,
+                "itemType": "Resource",
+                "typeId": 10208,
+                "typeName": "복합 약제",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 5,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  100
+                ]
+              },
+              {
+                "id": 1011130,
+                "itemType": "Resource",
+                "typeId": 10207,
+                "typeName": "정제된 약초",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  80
+                ]
+              },
+              {
+                "id": 1011129,
+                "itemType": "Resource",
+                "typeId": 10206,
+                "typeName": "푸른 향여 잎",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "All",
+                  60
+                ]
+              },
+              {
+                "id": 1011128,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "루나의 증표",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1003,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Wisdom",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  60
                 ]
               },
               {
@@ -1313,6 +1855,190 @@
                   1011,
                   "Chaos",
                   40
+                ]
+              },
+              {
+                "id": 1011115,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "전투 선율 Ⅳ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  100
+                ]
+              },
+              {
+                "id": 1011114,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "전투 선율 Ⅲ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Chaos",
+                  80
+                ]
+              },
+              {
+                "id": 1011113,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "전투 선율 Ⅱ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  80
+                ]
+              },
+              {
+                "id": 1011112,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "전투 선율 Ⅰ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  60
+                ]
+              },
+              {
+                "id": 1011135,
+                "itemType": "Resource",
+                "typeId": 10211,
+                "typeName": "반짝이는 화살통",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 5,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  100
+                ]
+              },
+              {
+                "id": 1011134,
+                "itemType": "Resource",
+                "typeId": 10210,
+                "typeName": "반짝이는 조준 장치",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "Chaos",
+                  80
+                ]
+              },
+              {
+                "id": 1011133,
+                "itemType": "Resource",
+                "typeId": 10209,
+                "typeName": "반짝이는 화살촉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Any",
+                  80
+                ]
+              },
+              {
+                "id": 1011132,
+                "itemType": "Resource",
+                "typeId": 20013,
+                "typeName": "루나의 증표",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 20,
+                "limit": 1,
+                "subTabId": 1004,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Empathy",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Morality",
+                  60
                 ]
               },
               {
@@ -1876,6 +2602,190 @@
                 ]
               },
               {
+                "id": 1011119,
+                "itemType": "Resource",
+                "typeId": 2014,
+                "typeName": "전투 선율 Ⅳ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 43,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  100
+                ]
+              },
+              {
+                "id": 1011118,
+                "itemType": "Resource",
+                "typeId": 2013,
+                "typeName": "전투 선율 Ⅲ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 3,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 42,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "All",
+                  80
+                ]
+              },
+              {
+                "id": 1011117,
+                "itemType": "Resource",
+                "typeId": 2012,
+                "typeName": "전투 선율 Ⅱ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 10,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 41,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  80
+                ]
+              },
+              {
+                "id": 1011116,
+                "itemType": "Resource",
+                "typeId": 2011,
+                "typeName": "전투 선율 Ⅰ",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 30,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 40,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  60
+                ]
+              },
+              {
+                "id": 1011139,
+                "itemType": "Resource",
+                "typeId": 10209,
+                "typeName": "반짝이는 화살촉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 50,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 33,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  120
+                ],
+                "imprCheck": [
+                  1011,
+                  "Empathy",
+                  100
+                ]
+              },
+              {
+                "id": 1011138,
+                "itemType": "Resource",
+                "typeId": 10206,
+                "typeName": "푸른 향여 잎",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 50,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 32,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  100
+                ],
+                "imprCheck": [
+                  1011,
+                  "All",
+                  80
+                ]
+              },
+              {
+                "id": 1011137,
+                "itemType": "Resource",
+                "typeId": 10203,
+                "typeName": "침묵의 면사",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 50,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 31,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  80
+                ],
+                "imprCheck": [
+                  1011,
+                  "Benefit",
+                  80
+                ]
+              },
+              {
+                "id": 1011136,
+                "itemType": "Resource",
+                "typeId": 10200,
+                "typeName": "흑철 훈장",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 50,
+                "limit": 1,
+                "subTabId": 1005,
+                "sequence": 30,
+                "unlock": [
+                  1011,
+                  "Chaos",
+                  60
+                ],
+                "imprCheck": [
+                  1011,
+                  "Wisdom",
+                  60
+                ]
+              },
+              {
                 "id": 1011034,
                 "itemType": "Resource",
                 "typeId": 19000,
@@ -2235,6 +3145,29 @@
                   "Any",
                   10
                 ]
+              },
+              {
+                "id": 1041060,
+                "itemType": "Resource",
+                "typeId": 31013001,
+                "typeName": "〈번화한 거리〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2001,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Benefit",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Any",
+                  10
+                ]
               }
             ]
           },
@@ -2482,6 +3415,29 @@
                   "Benefit",
                   10
                 ]
+              },
+              {
+                "id": 1041061,
+                "itemType": "Resource",
+                "typeId": 31013003,
+                "typeName": "〈초란의 옛 그림자·퉁소〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2002,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Morality",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Benefit",
+                  10
+                ]
               }
             ]
           },
@@ -2712,6 +3668,29 @@
                 "itemType": "Resource",
                 "typeId": 31010011,
                 "typeName": "〈교활한 토끼〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2003,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Wisdom",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Morality",
+                  10
+                ]
+              },
+              {
+                "id": 1041062,
+                "itemType": "Resource",
+                "typeId": 31013006,
+                "typeName": "〈흑백의 저울〉",
                 "price": 1,
                 "priceType": 3001,
                 "priceName": "십면 주사위",
@@ -3022,6 +4001,29 @@
                   "Wisdom",
                   10
                 ]
+              },
+              {
+                "id": 1041063,
+                "itemType": "Resource",
+                "typeId": 31013007,
+                "typeName": "〈이유 없는 인연〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2004,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Empathy",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Wisdom",
+                  10
+                ]
               }
             ]
           },
@@ -3305,6 +4307,75 @@
                 "itemType": "Resource",
                 "typeId": 31010018,
                 "typeName": "〈깨어난 기계 꼭두각시〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2005,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Chaos",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041064,
+                "itemType": "Resource",
+                "typeId": 31013008,
+                "typeName": "〈기추가 있는 세상〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2005,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Chaos",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041065,
+                "itemType": "Resource",
+                "typeId": 31013010,
+                "typeName": "〈망각의 그늘〉",
+                "price": 1,
+                "priceType": 3001,
+                "priceName": "십면 주사위",
+                "num": 1,
+                "limit": 1,
+                "subTabId": 2005,
+                "sequence": 1,
+                "unlock": [
+                  1041,
+                  "Chaos",
+                  10
+                ],
+                "imprCheck": [
+                  1041,
+                  "Empathy",
+                  10
+                ]
+              },
+              {
+                "id": 1041066,
+                "itemType": "Resource",
+                "typeId": 31013011,
+                "typeName": "〈불에서 피어난 연꽃〉",
                 "price": 1,
                 "priceType": 3001,
                 "priceName": "십면 주사위",

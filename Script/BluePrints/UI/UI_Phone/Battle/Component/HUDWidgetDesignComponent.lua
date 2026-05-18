@@ -169,7 +169,9 @@ function M:ForceShowManualAdditionNode(ManualAddWidgetList, PlanIndex)
       end
     else
       local Position
-      local ParentNode = self[ParentName]
+      local WidgetConfig = self.AllHUD_DraggableWidgetConfigData[ParentName]
+      local NodeName = WidgetConfig and WidgetConfig.HUDNodeName or ParentName
+      local ParentNode = self[ParentName] or self[NodeName]
       local Slot = ParentNode.Slot
       if Slot then
         Position = Slot:GetPosition()

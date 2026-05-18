@@ -57,6 +57,7 @@ function M:ReceiveEnterState(StackAction)
     self:OnRefreshCurrentPageAfterJump()
     self:UpdateTabRedInfoByActivityID(self.CurTabIndex)
     self:PlayAnimationForward(self.In)
+    self:JudgeNeedShowVersionView()
   end
   self.Super.ReceiveEnterState(self, StackAction)
 end
@@ -72,6 +73,7 @@ function M:Destruct()
   EventManager:RemoveEvent(EventID.OnReturnToActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnLeaveActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnActivityComplete, self)
+  self.NeedShowVersionView = nil
   self.Super.Destruct(self)
 end
 

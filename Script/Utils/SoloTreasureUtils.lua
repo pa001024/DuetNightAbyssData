@@ -178,7 +178,7 @@ function SoloTreasureUtils:GetTicketEffectTreasureList(AllItemList, TicketId)
   local tabExtractionLottery = DataMgr.ExtractionLottery[TicketId]
   if tabExtractionLottery and 1 == tabExtractionLottery.LotteryType then
     for uid, Item in pairs(AllItemList) do
-      if 0 == Item.BagIndex and self:IsRewardRoomKey(Item.Id) == false then
+      if self:IsRewardRoomKey(Item.Id) == false then
         local tabExtractionTreasure = DataMgr.ExtractionTreasure[Item.Id]
         if tabExtractionTreasure and tabExtractionTreasure.TreasureRarity == tabExtractionLottery.Param[1] then
           EffectTreasureList[Item.UniqueId] = tabExtractionLottery.EffectParam
@@ -188,7 +188,7 @@ function SoloTreasureUtils:GetTicketEffectTreasureList(AllItemList, TicketId)
   end
   if tabExtractionLottery and 2 == tabExtractionLottery.LotteryType then
     for uid, Item in pairs(AllItemList) do
-      if 0 == Item.BagIndex and self:IsRewardRoomKey(Item.Id) == false then
+      if self:IsRewardRoomKey(Item.Id) == false then
         local tabExtractionTreasure = DataMgr.ExtractionTreasure[Item.Id]
         if tabExtractionTreasure and tabExtractionTreasure.TreasureType == tabExtractionLottery.Param[1] then
           EffectTreasureList[Item.UniqueId] = tabExtractionLottery.EffectParam

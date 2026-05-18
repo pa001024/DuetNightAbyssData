@@ -55,6 +55,34 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
     self.Text_LongDescribe:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
+  if "IronTicket" == ItemType then
+    local ironTicketData = DataMgr.IronTicket[ItemId]
+    if not ironTicketData then
+      return
+    end
+    self.Text_Describe:SetVisibility(ironTicketData.FunctionDes ~= nil and ESlateVisibility.Visible or ESlateVisibility.Collapsed)
+    self.Text_LongDescribe:SetVisibility(nil ~= ironTicketData.DetailDes and ESlateVisibility.Visible or ESlateVisibility.Collapsed)
+    if ironTicketData.FunctionDes then
+      self.Text_Describe:SetText(GText(ironTicketData.FunctionDes))
+    end
+    if ironTicketData.DetailDes then
+      self.Text_LongDescribe:SetText(GText(ironTicketData.DetailDes))
+    end
+    self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Visible)
+    self.ParentWidget.Text_Hold01:SetText(GText("UI_LEVEL_NAME"))
+    local level = ironTicketData.Level or 0
+    local Avatar = GWorld:GetAvatar()
+    if Avatar and Avatar.IronSurvivalTicket then
+      for _, ticket in pairs(Avatar.IronSurvivalTicket) do
+        if ticket.Uid == UnitId then
+          level = ticket.Level or ironTicketData.Level
+          break
+        end
+      end
+    end
+    self.ParentWidget.Text_Hold02:SetText(level)
+    return
+  end
   if "CharAccessory" == ItemType or "WeaponAccessory" == ItemType then
     assert(DataMgr[ItemType][ItemId], "未找到对应配饰信息：", ItemType, ItemId)
     local CharAccessoryInfo = DataMgr[ItemType][ItemId]
@@ -86,6 +114,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
               end
             else
               UIManager(self):LoadUINew("ArmorySkin", {
+                IsPreviewMode = true,
                 Type = string.sub(ItemType, 1, string.find(ItemType, "Accessory") - 1),
                 AccessoryId = ItemId,
                 OnCloseCallback = self.JumpReturnCallBack and self.JumpReturnCallBack.CallBack
@@ -103,7 +132,16 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   if DataMgr[ItemType][ItemId] and 7 == DataMgr[ItemType][ItemId].MaterialClassify then
     local OptInfo = DataMgr[ItemType][ItemId]
     local UseEffectType = DataMgr[ItemType][ItemId].UseEffectType
-    if UseEffectType ~= CommonConst.ResUseEffectType.SelectWeapon and UseEffectType ~= CommonConst.ResUseEffectType.SelectCharacter and UseEffectType ~= CommonConst.ResUseEffectType.SelectSkin and UseEffectType ~= CommonConst.ResUseEffectType.SelectPet and UseEffectType ~= CommonConst.ResUseEffectType.SelectResource and UseEffectType ~= CommonConst.ResUseEffectType.ResourcePack then
+    local CharSkinPreview = UIManager(self):GetUI("CharSkinPreview")
+    local UIName = self.ParentWidget.Content and self.ParentWidget.Content.UIName or ""
+    local IsBanAccess = false
+    if DataMgr.SystemUI[UIName] and DataMgr.SystemUI[UIName].IsBanAccess then
+      IsBanAccess = true
+    end
+    if self.ParentWidget.Content.bNotShowAccess then
+      IsBanAccess = true
+    end
+    if not CharSkinPreview and not IsBanAccess and UseEffectType ~= CommonConst.ResUseEffectType.SelectWeapon and UseEffectType ~= CommonConst.ResUseEffectType.SelectCharacter and UseEffectType ~= CommonConst.ResUseEffectType.SelectSkin and UseEffectType ~= CommonConst.ResUseEffectType.SelectPet and UseEffectType ~= CommonConst.ResUseEffectType.SelectResource and UseEffectType ~= CommonConst.ResUseEffectType.ResourcePack then
       self.ParentWidget.Panel_Hold:SetVisibility(ESlateVisibility.Collapsed)
       local CallBack = {
         ButtonClickCallBack = function()
@@ -115,6 +153,10 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
             CommonDialogParams.ParentWidget = self
             CommonDialogParams.ResourceId = ResourceConfig.ResourceId
             CommonDialogParams.UseParam = ResourceConfig.UseParam
+            local CommonDialog = GWorld.GameInstance:GetGameUIManager():GetUIObj("CommonDialog")
+            if CommonDialog then
+              CommonDialog:OnCloseBtnClicked()
+            end
             UIManager(self):ShowCommonPopupUI(100344, CommonDialogParams, self, nil, 102)
           else
             PageJumpUtils:CloseFrontDialog()
@@ -211,7 +253,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   if ResourceInfo.ResourceSType == "GestureItem" and not UIConst.LimitPreviewResource[ResourceInfo.ResourceId] then
     local Content = {
       ButtonClickCallBack = function()
-        if self.ParentWidget and self.ParentWidget.Content and self.ParentWidget.Content.UIName and DataMgr.SystemUI[self.ParentWidget.Content.UIName].IsBanAccess then
+        if self.ParentWidget and self.ParentWidget.Content and self.ParentWidget.Content.UIName and DataMgr.SystemUI[self.ParentWidget.Content.UIName] and DataMgr.SystemUI[self.ParentWidget.Content.UIName].IsBanAccess then
           UIManager(self):ShowUITip("CommonToastMain", GText("UI_COMMONPOP_TITLE_100059"))
         else
           local CommonDialog = UIManager(self):GetUI("CommonDialog")
@@ -223,7 +265,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
           ItemData.TypeId = ItemId
           ItemData.SinglePreview = true
           ItemData.HidePurchase = true
-          UIManager(self):LoadUINew("SkinPreview", ItemData, self)
+          PageJumpUtils:JumpToSkinPreview(ItemData, self)
         end
       end,
       ButtonClickText = "UI_Preview_Title",
@@ -339,6 +381,7 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
               end
             else
               UIManager(self):LoadUINew("ArmorySkin", {
+                IsPreviewMode = true,
                 Type = string.sub(ItemType, 1, string.find(ItemType, "Accessory") - 1),
                 AccessoryId = ItemId,
                 OnCloseCallback = self.JumpReturnCallBack and self.JumpReturnCallBack.CallBack
@@ -440,7 +483,7 @@ function M:InitItemInfoInBag(ItemType, ItemId, UnitId, Content)
           ItemData.TypeId = ItemId
           ItemData.SinglePreview = true
           ItemData.HidePurchase = true
-          UIManager(self):LoadUINew("SkinPreview", ItemData, self)
+          PageJumpUtils:JumpToSkinPreview(ItemData, self)
         end
       end,
       ButtonClickText = "UI_Preview_Title",

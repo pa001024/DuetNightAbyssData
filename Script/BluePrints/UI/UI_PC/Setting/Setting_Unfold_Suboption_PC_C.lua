@@ -200,7 +200,7 @@ function M:SaveAntiAliasingQualityOptionSetting()
   SettingUtils.SaveEMCache("GameUserSettings", "AntiAliasingQuality", OptionCache)
   local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()
   GameUserSettings:SetAntiAliasingQuality(OptionCache)
-  GameUserSettings:ApplySettings(true)
+  GameUserSettings:ApplySettings(false)
 end
 
 function M:OnViewPortChanged()

@@ -62,7 +62,7 @@ function M:Construct()
       self.Com_Input:FocusInputField()
     elseif Reason == FriendCommon.EventId.RecommandCdUpdate then
       self:OnRecommandCdUpdate(...)
-    elseif Reason == FriendCommon.EventId.AddFriend then
+    elseif Reason == FriendCommon.EventId.AddFriendRequest then
       local Uid = (...)
       local Dict = {}
       if not self.bSearchState then

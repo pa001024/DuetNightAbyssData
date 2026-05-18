@@ -62,6 +62,7 @@ function GameModeLogin:InitNewPlayerLua(PlayerController, UniqueId, Options, Por
       PlayerInfo = Info.PlayerInfo
       local PlayerState = PlayerController.PlayerState:Cast(UE4.AEMPlayerState)
       PlayerState:SetPlayerId(Info.ExtraInfo.PlayerId)
+      PlayerState.IsTeamLeader = Info.ExtraInfo.IsTeamLeader
       if self.AlreadyInit then
         PlayerController:SetBornTrans()
       end
@@ -186,6 +187,29 @@ function GameModeLogin:PreInitPlayer(PlayerController, CustomInfo)
     PlayerController.PlayerState:RegisterOldBattleInfo(AvatarBattleInfo, PlayerInfo)
     print(_G.LogTag, "PreInitPlayer", PlayerInfo.HeadIconId)
     PlayerController.PlayerState:SetPlayerInfo(AvatarEid, PlayerInfo.Nickname, PlayerInfo.Level, PlayerInfo.HeadIconId, PlayerInfo.Uid)
+    local HyperWeaponIds = {}
+    local HyperSkillIds = {}
+    local CharInfo = AvatarBattleInfo
+    if CharInfo then
+      local function CollectEntries(WeaponInfo)
+        if not (WeaponInfo and WeaponInfo.WeaponId) or not WeaponInfo.HyperTalent then
+          return
+        end
+        local WeaponId = WeaponInfo.WeaponId
+        for _, Skills in pairs(WeaponInfo.HyperTalent) do
+          for _, SkillId in ipairs(Skills) do
+            HyperWeaponIds[#HyperWeaponIds + 1] = WeaponId
+            HyperSkillIds[#HyperSkillIds + 1] = SkillId
+          end
+        end
+      end
+      
+      CollectEntries(CharInfo.MeleeWeapon)
+      CollectEntries(CharInfo.RangedWeapon)
+    end
+    if #HyperSkillIds > 0 then
+      PlayerController.PlayerState:SetHyperWeaponSkillIds(HyperWeaponIds, HyperSkillIds)
+    end
   else
     AvatarBattleInfo = AvatarUtils:GetDefaultAvatarInfo()
   end

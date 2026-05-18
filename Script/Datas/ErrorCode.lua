@@ -1042,6 +1042,102 @@ return ReadOnly("ErrorCode", {
     ErrorCodeContent = "武器当前染色方案与新方案一致",
     ErrorCodeId = 3034
   },
+  [3037] = {
+    ErrorCodeContent = "当前武器不是灾厄武器",
+    ErrorCodeId = 3037
+  },
+  [3038] = {
+    ErrorCodeContent = "达到灾厄熔炼最大等级",
+    ErrorCodeId = 3038
+  },
+  [3039] = {
+    ErrorCodeContent = "当前灾厄熔炼等级未解锁",
+    ErrorCodeId = 3039
+  },
+  [3040] = {
+    ErrorCodeContent = "激活熔炼等级所需素材不足",
+    ErrorCodeId = 3040
+  },
+  [3041] = {
+    ErrorCodeContent = "达到灾厄熔炉最大等级",
+    ErrorCodeId = 3041
+  },
+  [3042] = {
+    ErrorCodeContent = "当前等级灾厄熔炉任务未完成",
+    ErrorCodeId = 3042
+  },
+  [3043] = {
+    ErrorCodeContent = "无效的潜能",
+    ErrorCodeId = 3043
+  },
+  [3044] = {
+    ErrorCodeContent = "灾厄武器不匹配",
+    ErrorCodeId = 3044
+  },
+  [3045] = {
+    ErrorCodeContent = "潜能未解锁",
+    ErrorCodeId = 3045
+  },
+  [3046] = {
+    ErrorCodeContent = "灾厄熔炉等级不足",
+    ErrorCodeId = 3046
+  },
+  [3047] = {
+    ErrorCodeContent = "激活潜能所需素材不足",
+    ErrorCodeId = 3047
+  },
+  [3048] = {
+    ErrorCodeContent = "形象升级等级有误",
+    ErrorCodeId = 3048
+  },
+  [3049] = {
+    ErrorCodeContent = "形象升级信息有误",
+    ErrorCodeId = 3049
+  },
+  [3050] = {
+    ErrorCodeContent = "不满足形象升级条件",
+    ErrorCodeId = 3050
+  },
+  [3051] = {
+    ErrorCodeContent = "形象升级所需素材不足",
+    ErrorCodeId = 3051
+  },
+  [3052] = {
+    ErrorCodeContent = "当前装备灾厄武器数量超过上限",
+    ErrorCodeId = 3052
+  },
+  [3053] = {
+    ErrorCodeContent = "灾厄熔炼等级为空",
+    ErrorCodeId = 3053
+  },
+  [3054] = {
+    ErrorCodeContent = "灾厄武器潜能重复解锁",
+    ErrorCodeId = 3054
+  },
+  [3055] = {
+    ErrorCodeContent = "无效的灾厄熔炉任务",
+    ErrorCodeId = 3055
+  },
+  [3056] = {
+    ErrorCodeContent = "灾厄熔炉任务未完成",
+    ErrorCodeId = 3056
+  },
+  [3057] = {
+    ErrorCodeContent = "灾厄熔炉任务奖励已领取",
+    ErrorCodeId = 3057
+  },
+  [3058] = {
+    ErrorCodeContent = "无效的灾厄熔炉等级奖励",
+    ErrorCodeId = 3058
+  },
+  [3059] = {
+    ErrorCodeContent = "灾厄熔炉等级奖励未解锁",
+    ErrorCodeId = 3059
+  },
+  [3060] = {
+    ErrorCodeContent = "灾厄熔炉等级奖励已领取",
+    ErrorCodeId = 3060
+  },
   [4001] = {
     ContentEN = "The Demon Wedge does not exist",
     ContentJP = "魔の楔が見つかりません",
@@ -1902,6 +1998,26 @@ return ReadOnly("ErrorCode", {
     ContentTC = "日常任務獎勵已經領取",
     ErrorCodeContent = "日常任务奖励已经领取",
     ErrorCodeId = 6046
+  },
+  [6050] = {
+    ErrorCodeContent = "提交任务配置有误",
+    ErrorCodeId = 6050
+  },
+  [6051] = {
+    ErrorCodeContent = "提交任务已完成",
+    ErrorCodeId = 6051
+  },
+  [6052] = {
+    ErrorCodeContent = "提交任务未在进行中",
+    ErrorCodeId = 6052
+  },
+  [6053] = {
+    ErrorCodeContent = "提交任务所需材料不足",
+    ErrorCodeId = 6053
+  },
+  [6054] = {
+    ErrorCodeContent = "任务对应的提交任务未完成",
+    ErrorCodeId = 6054
   },
   [7001] = {
     ContentEN = "Item status change exceeds the allowable range",
@@ -4405,37 +4521,55 @@ return ReadOnly("ErrorCode", {
   },
   [14018] = {
     ContentEN = "Coupon does not exist",
-    ContentKR = "할인권이 없습니다.",
+    ContentFR = "Bon de réduction introuvable",
+    ContentJP = "割引券が存在しません",
+    ContentKR = "쿠폰이 없습니다.",
+    ContentTC = "折扣券不存在",
     ErrorCodeContent = "折扣券不存在",
     ErrorCodeId = 14018
   },
   [14019] = {
     ContentEN = "Coupon currency type mismatch",
-    ContentKR = "할인권 유형과 화폐 유형이 매칭되지 않습니다.",
+    ContentFR = "Type de devise du bon de réduction incompatible",
+    ContentJP = "割引券の通貨タイプが一致しません",
+    ContentKR = "쿠폰 유형과 화폐 유형이 매칭되지 않습니다.",
+    ContentTC = "折扣券貨幣類型不匹配",
     ErrorCodeContent = "折扣券货币类型不匹配",
     ErrorCodeId = 14019
   },
   [14020] = {
     ContentEN = "Coupon does not apply to the selected item",
-    ContentKR = "할인권 적용 상품이 매칭되지 않습니다.",
+    ContentFR = "Ce bon de réduction ne s’applique pas à l’article sélectionné",
+    ContentJP = "割引券の対象商品が一致しません",
+    ContentKR = "쿠폰 적용 상품이 매칭되지 않습니다.",
+    ContentTC = "折扣券適用商品不匹配",
     ErrorCodeContent = "折扣券适用商品不匹配",
     ErrorCodeId = 14020
   },
   [14021] = {
     ContentEN = "Insufficient Coupons",
-    ContentKR = "할인권 수량 부족",
+    ContentFR = "Nombre de bons de réduction insuffisant",
+    ContentJP = "割引券の所持数が不足しています",
+    ContentKR = "쿠폰 수량 부족",
+    ContentTC = "折扣券數量不足",
     ErrorCodeContent = "折扣券数量不足",
     ErrorCodeId = 14021
   },
   [14022] = {
     ContentEN = "Purchase count does not meet the Coupon conditions",
-    ContentKR = "구매 수량이 할인권 사용 조건을 충족하지 않습니다.",
+    ContentFR = "Le nombre d’achats ne remplit pas les conditions du bon de réduction",
+    ContentJP = "購入回数が割引券の使用条件を満たしていません",
+    ContentKR = "구매 수량이 쿠폰 사용 조건을 충족하지 않습니다.",
+    ContentTC = "購買次數未滿足折扣券使用條件",
     ErrorCodeContent = "购买次数未满足折扣券使用条件",
     ErrorCodeId = 14022
   },
   [14023] = {
     ContentEN = "Amount does not meet the Coupon threshold",
-    ContentKR = "할인권 사용을 위한 최저 금액을 충족하지 않습니다.",
+    ContentFR = "Le montant ne remplit pas les conditions d’utilisation du bon de réduction",
+    ContentJP = "金額が割引券の利用条件を満たしていません",
+    ContentKR = "쿠폰 사용을 위한 최저 금액을 충족하지 않습니다.",
+    ContentTC = "金額未達到折扣券使用門檻",
     ErrorCodeContent = "金额未达到折扣券使用门槛",
     ErrorCodeId = 14023
   },
@@ -6044,13 +6178,19 @@ return ReadOnly("ErrorCode", {
   },
   [30016] = {
     ContentEN = "Channel is full",
+    ContentFR = "Canal complet",
+    ContentJP = "チャンネルが満員です",
     ContentKR = "채널이 가득 찼습니다.",
+    ContentTC = "頻道已滿",
     ErrorCodeContent = "频道已满",
     ErrorCodeId = 30016
   },
   [30017] = {
     ContentEN = "Switching channels too frequently",
+    ContentFR = "Changement de canal trop fréquent",
+    ContentJP = "チャンネルの切り替えが頻繁すぎます",
     ContentKR = "채널 변경이 너무 빈번합니다.",
+    ContentTC = "頻道切換頻繁",
     ErrorCodeContent = "频道切换频繁",
     ErrorCodeId = 30017
   },
@@ -7361,37 +7501,55 @@ return ReadOnly("ErrorCode", {
   },
   [52027] = {
     ContentEN = "Failed to create regional channel",
+    ContentFR = "Échec de la création du canal des zones en coop",
+    ContentJP = "エリアチャンネルの作成に失敗しました",
     ContentKR = "구역 채널 생성에 실패했습니다.",
+    ContentTC = "區域頻道創建失敗",
     ErrorCodeContent = "区域频道创建失败",
     ErrorCodeId = 52027
   },
   [52028] = {
     ContentEN = "Regional channel is full",
+    ContentFR = "Canal des zones en coop complet",
+    ContentJP = "エリアチャンネルが満員です",
     ContentKR = "구역 채널이 가득 찼습니다.",
+    ContentTC = "區域頻道已滿",
     ErrorCodeContent = "区域频道已满",
     ErrorCodeId = 52028
   },
   [52029] = {
     ContentEN = "Weapon type not displayed in co-op instances",
+    ContentFR = "Type d’arme non affiché dans les zones en coop",
+    ContentJP = "エリア連携画面では武器タイプは表示されません",
     ContentKR = "구역 멀티 차원에 무기 유형이 표시되지 않습니다.",
+    ContentTC = "區域聯機位面不顯示武器類型",
     ErrorCodeContent = "区域联机位面不显示武器类型",
     ErrorCodeId = 52029
   },
   [52030] = {
     ContentEN = "Switching channels too frequently",
+    ContentFR = "Changement de canal trop fréquent",
+    ContentJP = "チャンネルの切り替えが頻繁すぎます",
     ContentKR = "채널 변경이 너무 빈번합니다.",
+    ContentTC = "頻道切換頻繁",
     ErrorCodeContent = "频道切换频繁",
     ErrorCodeId = 52030
   },
   [52031] = {
     ContentEN = "Regional channel does not exist",
+    ContentFR = "Canal des zones en coop introuvable",
+    ContentJP = "このエリアチャンネルは存在しません",
     ContentKR = "해당 구역 채널이 존재하지 않습니다.",
+    ContentTC = "該區域頻道不存在",
     ErrorCodeContent = "该区域频道不存在",
     ErrorCodeId = 52031
   },
   [52032] = {
     ContentEN = "Already in this regional channel",
+    ContentFR = "Déjà présent dans ce canal des zones en coop",
+    ContentJP = "すでにこのエリアチャンネルにいます",
     ContentKR = "이미 해당 구역 채널에 있습니다.",
+    ContentTC = "已在該區域頻道",
     ErrorCodeContent = "已在该区域频道",
     ErrorCodeId = 52032
   },
@@ -7493,6 +7651,38 @@ return ReadOnly("ErrorCode", {
     ContentTC = "圖鑒獎勵已獲取",
     ErrorCodeContent = "图鉴奖励已获取",
     ErrorCodeId = 55003
+  },
+  [55004] = {
+    ErrorCodeContent = "华彩陈列室不存在",
+    ErrorCodeId = 55004
+  },
+  [55005] = {
+    ErrorCodeContent = "奖励信息有误",
+    ErrorCodeId = 55005
+  },
+  [55006] = {
+    ErrorCodeContent = "不满足奖励领取要求",
+    ErrorCodeId = 55006
+  },
+  [55007] = {
+    ErrorCodeContent = "奖励已领取",
+    ErrorCodeId = 55007
+  },
+  [55008] = {
+    ErrorCodeContent = "获取华彩值有误",
+    ErrorCodeId = 55008
+  },
+  [55009] = {
+    ErrorCodeContent = "奖励不存在",
+    ErrorCodeId = 55009
+  },
+  [55010] = {
+    ErrorCodeContent = "不满足奖励领取要求",
+    ErrorCodeId = 55010
+  },
+  [55011] = {
+    ErrorCodeContent = "奖励已领取",
+    ErrorCodeId = 55011
   },
   [56001] = {
     ContentEN = "Invalid or missing fishing spot parameters",
@@ -8711,7 +8901,10 @@ return ReadOnly("ErrorCode", {
   },
   [72014] = {
     ContentEN = "Event rewards cannot be claimed",
+    ContentFR = "Impossible de récupérer les récompenses de l’événement",
+    ContentJP = "このイベントでは報酬を受け取れません",
     ContentKR = "이벤트 보상을 수령할 수 없습니다.",
+    ContentTC = "活動不可領獎",
     ErrorCodeContent = "活动不可领奖",
     ErrorCodeId = 72014
   },
@@ -9284,19 +9477,28 @@ return ReadOnly("ErrorCode", {
   },
   [80014] = {
     ContentEN = "Group Rankings grouping error",
+    ContentFR = "Erreur d’attribution de la Phase de groupes",
+    ContentJP = "ランキング戦のグループ分けエラー",
     ContentKR = "예선전 그룹 배정 오류",
+    ContentTC = "排名賽分組錯誤",
     ErrorCodeContent = "排名赛分组错误",
     ErrorCodeId = 80014
   },
   [80015] = {
     ContentEN = "Failed to create group",
+    ContentFR = "Échec de l’attribution de la Phase de groupes",
+    ContentJP = "ランキング戦のグループ分けに失敗しました",
     ContentKR = "예선전 그룹 배정 실패",
+    ContentTC = "排名賽分組失敗",
     ErrorCodeContent = "排名赛分组失败",
     ErrorCodeId = 80015
   },
   [80016] = {
     ContentEN = "Ranking data error",
+    ContentFR = "Erreur de données de classement",
+    ContentJP = "ランキング戦の順位データエラー",
     ContentKR = "예선전 랭킹 데이터가 없습니다.",
+    ContentTC = "排名賽排名數據錯誤",
     ErrorCodeContent = "排名赛排名数据错误",
     ErrorCodeId = 80016
   },
@@ -10076,207 +10278,594 @@ return ReadOnly("ErrorCode", {
   },
   [92003] = {
     ContentEN = "Invalid stage ID",
+    ContentFR = "ID de niveau invalide",
+    ContentJP = "ステージIDが不正です",
     ContentKR = "스테이지 ID가 유효하지 않습니다.",
+    ContentTC = "關卡ID不合法",
     ErrorCodeContent = "关卡ID不合法",
     ErrorCodeId = 92003
   },
   [92004] = {
     ContentEN = "Invalid stage ID",
+    ContentFR = "ID de niveau invalide",
+    ContentJP = "ステージIDが不正です",
     ContentKR = "스테이지 ID가 유효하지 않습니다.",
+    ContentTC = "關卡ID不合法",
     ErrorCodeContent = "关卡ID不合法",
     ErrorCodeId = 92004
   },
   [92005] = {
     ContentEN = "Insufficient resources",
+    ContentFR = "Ressources insuffisantes",
+    ContentJP = "必要なコストが不足しています",
     ContentKR = "소요 비용 부족",
+    ContentTC = "所需費用不足",
     ErrorCodeContent = "所需费用不足",
     ErrorCodeId = 92005
   },
   [92006] = {
     ContentEN = "Event unlock conditions not met",
+    ContentFR = "Conditions de déblocage de l’événement non remplies",
+    ContentJP = "イベントの解放条件を満たしていません",
     ContentKR = "이벤트 해제 조건을 충족하지 않습니다.",
+    ContentTC = "未滿足活動解鎖條件",
     ErrorCodeContent = "未满足活动解锁条件",
     ErrorCodeId = 92006
   },
   [92007] = {
     ContentEN = "Invalid character in lineup",
+    ContentFR = "Personnage invalide dans la composition",
+    ContentJP = "編成キャラクターエラー",
     ContentKR = "라인업 캐릭터에 오류가 있습니다.",
+    ContentTC = "陣容角色錯誤",
     ErrorCodeContent = "阵容角色错误",
     ErrorCodeId = 92007
   },
   [92008] = {
     ContentEN = "Invalid weapon in lineup",
+    ContentFR = "Arme invalide dans la composition",
+    ContentJP = "編成武器エラー",
     ContentKR = "라인업 무기에 오류가 있습니다.",
+    ContentTC = "陣容武器錯誤",
     ErrorCodeContent = "阵容武器错误",
     ErrorCodeId = 92008
   },
   [92009] = {
     ContentEN = "Invalid Geniemon in lineup",
+    ContentFR = "Géniemon invalide dans la composition",
+    ContentJP = "編成ジェネモンエラー",
     ContentKR = "라인업 마령에 오류가 있습니다.",
+    ContentTC = "陣容魔靈錯誤",
     ErrorCodeContent = "阵容魔灵错误",
     ErrorCodeId = 92009
   },
   [92010] = {
     ContentEN = "Invalid Combat Partner in lineup",
+    ContentFR = "Partenaire de combat invalide dans la composition",
+    ContentJP = "編成戦友エラー",
     ContentKR = "라인업 협력 동료에 오류가 있습니다.",
+    ContentTC = "陣容協戰伙伴錯誤",
     ErrorCodeContent = "阵容协战伙伴错误",
     ErrorCodeId = 92010
   },
   [92011] = {
     ContentEN = "Invalid lineup",
+    ContentFR = "Composition invalide",
+    ContentJP = "編成エラー",
     ContentKR = "라인업에 오류가 있습니다.",
+    ContentTC = "陣容錯誤",
     ErrorCodeContent = "阵容错误",
     ErrorCodeId = 92011
   },
   [92012] = {
     ContentEN = "Invalid Treasure Pouch",
+    ContentFR = "Sac aux trésors invalide",
+    ContentJP = "お宝袋エラー",
     ContentKR = "보물 주머니가 유효하지 않습니다.",
+    ContentTC = "百寶囊不合法",
     ErrorCodeContent = "百宝囊不合法",
     ErrorCodeId = 92012
   },
   [93001] = {
     ContentEN = "Invalid event stage ID",
+    ContentFR = "ID de niveau d’événement invalide",
+    ContentJP = "無効なイベントステージIDです",
     ContentKR = "이벤트 스테이지 ID가 유효하지 않습니다.",
+    ContentTC = "無效的活動關卡id",
     ErrorCodeContent = "无效的活动关卡id",
     ErrorCodeId = 93001
   },
   [93002] = {
     ContentEN = "Event stage not unlocked",
+    ContentFR = "Niveau d’événement non débloqué",
+    ContentJP = "イベントステージ未開放",
     ContentKR = "이벤트 스테이지가 해제되지 않았습니다.",
+    ContentTC = "活動關卡未解鎖",
     ErrorCodeContent = "活动关卡未解锁",
     ErrorCodeId = 93002
   },
   [93003] = {
     ContentEN = "Invalid event reward ID",
+    ContentFR = "ID de récompense d’événement invalide",
+    ContentJP = "無効なイベント報酬IDです",
     ContentKR = "이벤트 보상 ID가 유효하지 않습니다.",
+    ContentTC = "無效的活動獎勵id",
     ErrorCodeContent = "无效的活动奖励id",
     ErrorCodeId = 93003
   },
   [93004] = {
     ContentEN = "Invalid event ID",
+    ContentFR = "ID d’événement invalide",
+    ContentJP = "無効なイベントIDです",
     ContentKR = "이벤트 ID가 유효하지 않습니다.",
+    ContentTC = "無效的活動id",
     ErrorCodeContent = "无效的活动id",
     ErrorCodeId = 93004
   },
   [93005] = {
     ContentEN = "Stage data not found",
+    ContentFR = "Données du niveau introuvables",
+    ContentJP = "ステージデータが空です",
     ContentKR = "스테이지 데이터가 비어 있습니다.",
+    ContentTC = "關卡數據為空",
     ErrorCodeContent = "关卡数据为空",
     ErrorCodeId = 93005
   },
   [93006] = {
     ContentEN = "Score requirement not met",
+    ContentFR = "Score requis non atteint",
+    ContentJP = "報酬獲得に必要なスコアを満たしていません",
     ContentKR = "보상에 필요한 평점을 충족하지 않습니다.",
+    ContentTC = "未滿足獎勵所需評分",
     ErrorCodeContent = "未满足奖励所需评分",
     ErrorCodeId = 93006
   },
   [93007] = {
     ContentEN = "Event reward already claimed",
+    ContentFR = "Récompense d’événement déjà réclamée",
+    ContentJP = "イベント報酬受取済み",
     ContentKR = "이벤트 보상을 이미 수령했습니다.",
+    ContentTC = "活動獎勵已領取",
     ErrorCodeContent = "活动奖励已领取",
     ErrorCodeId = 93007
   },
   [93008] = {
     ContentEN = "No event rewards available",
+    ContentFR = "Aucune récompense d’événement disponible",
+    ContentJP = "受け取れるイベント報酬がありません",
     ContentKR = "수령할 수 있는 이벤트 퀘스트 보상이 없습니다.",
+    ContentTC = "沒有可領取的活動獎勵",
     ErrorCodeContent = "没有可领取的活动奖励",
     ErrorCodeId = 93008
   },
   [93009] = {
     ContentEN = "Stage not completed",
+    ContentFR = "Niveau non complété",
+    ContentJP = "ステージが未クリアです",
     ContentKR = "스테이지 미완료",
+    ContentTC = "關卡未完成",
     ErrorCodeContent = "关卡未完成",
     ErrorCodeId = 93009
   },
   [93010] = {
     ContentEN = "Invalid stage score",
+    ContentFR = "Score de niveau invalide",
+    ContentJP = "ステージスコアが無効です",
     ContentKR = "스테이지 포인트가 유효하지 않습니다.",
+    ContentTC = "關卡分數無效",
     ErrorCodeContent = "关卡分数无效",
     ErrorCodeId = 93010
   },
   [93011] = {
     ContentEN = "Not within the event period",
+    ContentFR = "Hors période de l’événement",
+    ContentJP = "イベント期間外です",
     ContentKR = "이벤트 시간이 아닙니다.",
+    ContentTC = "不在活動時間內",
     ErrorCodeContent = "不在活动时间内",
     ErrorCodeId = 93011
   },
   [95001] = {
     ContentEN = "Reward pool round ended",
+    ContentFR = "Phase du lot de récompenses terminée",
+    ContentJP = "報酬プールのラウンドが終了しました",
     ContentKR = "보상풀 라운드 횟수 종료",
+    ContentTC = "獎池輪次結束",
     ErrorCodeContent = "奖池轮次结束",
     ErrorCodeId = 95001
   },
   [95002] = {
     ContentEN = "Reward pool event data not found",
+    ContentFR = "Données de l’événement du lot de récompenses introuvables",
+    ContentJP = "報酬プールのイベントデータが存在しません",
     ContentKR = "보상풀 이벤트 데이터가 존재하지 않습니다.",
+    ContentTC = "獎池活動數據不存在",
     ErrorCodeContent = "奖池活动数据不存在",
     ErrorCodeId = 95002
   },
   [95003] = {
     ContentEN = "Reward pool round data not found",
+    ContentFR = "Données de phase du lot de récompenses introuvables",
+    ContentJP = "報酬プールのラウンドデータが存在しません",
     ContentKR = "보상풀 이벤트 라운드 횟수가 존재하지 않습니다.",
+    ContentTC = "獎池輪次數據不存在",
     ErrorCodeContent = "奖池轮次数据不存在",
     ErrorCodeId = 95003
   },
   [95004] = {
     ContentEN = "Insufficient reward resources",
+    ContentFR = "Ressources de tirage insuffisantes",
+    ContentJP = "報酬プールの抽選に必要な資源が不足しています",
     ContentKR = "보상풀 뽑기 자원이 부족합니다.",
+    ContentTC = "獎池抽卡資源不足",
     ErrorCodeContent = "奖池抽卡资源不足",
     ErrorCodeId = 95004
   },
   [95005] = {
     ContentEN = "Selection not completed in gacha pool",
+    ContentFR = "Sélection non effectuée dans le lot",
+    ContentJP = "報酬プールの選択が完了していません",
     ContentKR = "커스텀 보상 선택을 완료하지 않았습니다.",
+    ContentTC = "獎池沒有完成自選",
     ErrorCodeContent = "奖池没有完成自选",
     ErrorCodeId = 95005
   },
   [95006] = {
     ContentEN = "Current reward cannot be selected",
+    ContentFR = "Cette récompense ne peut pas être sélectionnée",
+    ContentJP = "現在の報酬は選択できません",
     ContentKR = "해당 보상은 커스텀으로 선택할 수 없습니다.",
+    ContentTC = "當前獎勵不可自選",
     ErrorCodeContent = "当前奖励不可自选",
     ErrorCodeId = 95006
   },
   [95007] = {
     ContentEN = "Selected reward index does not exist",
+    ContentFR = "Index de récompense sélectionnée invalide",
+    ContentJP = "選択報酬の一覧が存在しません",
     ContentKR = "커스텀 보상 인덱스가 존재하지 않습니다.",
+    ContentTC = "自選獎勵索引不存在",
     ErrorCodeContent = "自选奖励索引不存在",
     ErrorCodeId = 95007
   },
   [95008] = {
     ContentEN = "Current reward pool does not allow selection",
+    ContentFR = "Le lot de récompenses actuel ne permet pas la sélection",
+    ContentJP = "現在の報酬プールの状態では選択できません",
     ContentKR = "현재 보상풀은 커스텀 선택이 불가능한 상태입니다.",
+    ContentTC = "當前獎池狀態不可自選",
     ErrorCodeContent = "当前奖池状态不可自选",
     ErrorCodeId = 95008
   },
   [96001] = {
     ContentEN = "Event not open",
+    ContentFR = "Événement non actif",
+    ContentJP = "イベントはまだ開始されていません",
     ContentKR = "이벤트가 오픈되지 않았습니다.",
+    ContentTC = "活動未開啟",
     ErrorCodeContent = "活动未开启",
     ErrorCodeId = 96001
   },
   [96002] = {
     ContentEN = "Insufficient Starglow Coins",
+    ContentFR = "Pièces stellaires insuffisantes",
+    ContentJP = "スターコインが不足しています",
     ContentKR = "별빛 코인 부족",
+    ContentTC = "星耀硬幣不足",
     ErrorCodeContent = "星耀硬币不足",
     ErrorCodeId = 96002
   },
   [96003] = {
     ContentEN = "No Starglow Gifts available",
+    ContentFR = "Aucun cadeau stellaire disponible",
+    ContentJP = "開封できるスターギフトがありません",
     ContentKR = "오픈 가능한 별빛 선물이 없습니다.",
+    ContentTC = "沒有可開啟的星耀贈禮",
     ErrorCodeContent = "没有可开启的星耀赠礼",
     ErrorCodeId = 96003
   },
   [96004] = {
     ContentEN = "Event data not found",
+    ContentFR = "Données de l’événement introuvables",
+    ContentJP = "イベントデータが空です",
     ContentKR = "이벤트 데이터가 비어 있습니다.",
+    ContentTC = "活動數據為空",
     ErrorCodeContent = "活动数据为空",
     ErrorCodeId = 96004
   },
   [96005] = {
     ContentEN = "Insufficient Starglow Gifts",
+    ContentFR = "Cadeaux stellaires insuffisants",
+    ContentJP = "スターギフトが不足しています",
     ContentKR = "별빛 선물이 부족합니다.",
+    ContentTC = "星耀贈禮不足",
     ErrorCodeContent = "星耀赠礼不足",
     ErrorCodeId = 96005
+  },
+  [97002] = {
+    ErrorCodeContent = "玩家已有协会",
+    ErrorCodeId = 97002
+  },
+  [97003] = {
+    ErrorCodeContent = "封禁中无法创建协会",
+    ErrorCodeId = 97003
+  },
+  [97004] = {
+    ErrorCodeContent = "等级不足，无法创建协会",
+    ErrorCodeId = 97004
+  },
+  [97005] = {
+    ErrorCodeContent = "协会名称不得为空",
+    ErrorCodeId = 97005
+  },
+  [97006] = {
+    ErrorCodeContent = "协会公告不得为空",
+    ErrorCodeId = 97006
+  },
+  [97007] = {
+    ErrorCodeContent = "协会名称过长",
+    ErrorCodeId = 97007
+  },
+  [97008] = {
+    ErrorCodeContent = "协会公告过长",
+    ErrorCodeId = 97008
+  },
+  [97009] = {
+    ErrorCodeContent = "协会名称不合法",
+    ErrorCodeId = 97009
+  },
+  [97010] = {
+    ErrorCodeContent = "协会公告不合法",
+    ErrorCodeId = 97010
+  },
+  [97011] = {
+    ErrorCodeContent = "缺少协会执照，无法创建协会",
+    ErrorCodeId = 97011
+  },
+  [97012] = {
+    ErrorCodeContent = "协会名称已被占用",
+    ErrorCodeId = 97012
+  },
+  [97013] = {
+    ErrorCodeContent = "协会徽章数据过长",
+    ErrorCodeId = 97013
+  },
+  [97014] = {
+    ErrorCodeContent = "协会创建数量已达上限",
+    ErrorCodeId = 97014
+  },
+  [97018] = {
+    ErrorCodeContent = "未加入协会",
+    ErrorCodeId = 97018
+  },
+  [97019] = {
+    ErrorCodeContent = "协会不存在",
+    ErrorCodeId = 97019
+  },
+  [97020] = {
+    ErrorCodeContent = "协会申请冷却中，剩余%s",
+    ErrorCodeId = 97020
+  },
+  [97021] = {
+    ErrorCodeContent = "协会申请冷却中，剩余%s",
+    ErrorCodeId = 97021
+  },
+  [97022] = {
+    ErrorCodeContent = "暂不可加入协会，剩余%s",
+    ErrorCodeId = 97022
+  },
+  [97023] = {
+    ErrorCodeContent = "今日申请协会次数已达上限",
+    ErrorCodeId = 97023
+  },
+  [97024] = {
+    ErrorCodeContent = "不能邀请自己",
+    ErrorCodeId = 97024
+  },
+  [97025] = {
+    ErrorCodeContent = "邀请冷却中，剩余%s",
+    ErrorCodeId = 97025
+  },
+  [97026] = {
+    ErrorCodeContent = "邀请的玩家离线中",
+    ErrorCodeId = 97026
+  },
+  [97027] = {
+    ErrorCodeContent = "无操作权限",
+    ErrorCodeId = 97027
+  },
+  [97028] = {
+    ErrorCodeContent = "请转移会长后再操作",
+    ErrorCodeId = 97028
+  },
+  [97029] = {
+    ErrorCodeContent = "职位数量已达上限",
+    ErrorCodeId = 97029
+  },
+  [97030] = {
+    ErrorCodeContent = "目标玩家数据错误",
+    ErrorCodeId = 97030
+  },
+  [97031] = {
+    ErrorCodeContent = "协会成员已满",
+    ErrorCodeId = 97031
+  },
+  [97032] = {
+    ErrorCodeContent = "协会申请列表已满",
+    ErrorCodeId = 97032
+  },
+  [97033] = {
+    ErrorCodeContent = "已提交过申请",
+    ErrorCodeId = 97033
+  },
+  [97034] = {
+    ErrorCodeContent = "目标玩家当前状态无法接受邀请",
+    ErrorCodeId = 97034
+  },
+  [97035] = {
+    ErrorCodeContent = "协会审核中",
+    ErrorCodeId = 97035
+  },
+  [97036] = {
+    ErrorCodeContent = "刷新冷却中",
+    ErrorCodeId = 97036
+  },
+  [97037] = {
+    ErrorCodeContent = "协会名称修改冷却中",
+    ErrorCodeId = 97037
+  },
+  [97038] = {
+    ErrorCodeContent = "协会徽章修改冷却中",
+    ErrorCodeId = 97038
+  },
+  [97039] = {
+    ErrorCodeContent = "编辑审核中",
+    ErrorCodeId = 97039
+  },
+  [97040] = {
+    ErrorCodeContent = "审核未通过",
+    ErrorCodeId = 97040
+  },
+  [97041] = {
+    ErrorCodeContent = "未搜索到协会",
+    ErrorCodeId = 97041
+  },
+  [97042] = {
+    ErrorCodeContent = "权限配置无效",
+    ErrorCodeId = 97042
+  },
+  [97043] = {
+    ErrorCodeContent = "操作过于频繁",
+    ErrorCodeId = 97043
+  },
+  [97044] = {
+    ErrorCodeContent = "该玩家协会功能未开启",
+    ErrorCodeId = 97044
+  },
+  [99001] = {
+    ErrorCodeContent = "联袂演绎活动未开启",
+    ErrorCodeId = 99001
+  },
+  [99002] = {
+    ErrorCodeContent = "联袂演绎活动错误",
+    ErrorCodeId = 99002
+  },
+  [99003] = {
+    ErrorCodeContent = "舞台配置错误",
+    ErrorCodeId = 99003
+  },
+  [99004] = {
+    ErrorCodeContent = "舞台不存在",
+    ErrorCodeId = 99004
+  },
+  [99005] = {
+    ErrorCodeContent = "玩家数据不存在",
+    ErrorCodeId = 99005
+  },
+  [99006] = {
+    ErrorCodeContent = "剩余次数不足",
+    ErrorCodeId = 99006
+  },
+  [99007] = {
+    ErrorCodeContent = "舞台倍率错误",
+    ErrorCodeId = 99007
+  },
+  [99008] = {
+    ErrorCodeContent = "委托手册不足",
+    ErrorCodeId = 99008
+  },
+  [99009] = {
+    ErrorCodeContent = "舞台数量达到上限",
+    ErrorCodeId = 99009
+  },
+  [99010] = {
+    ErrorCodeContent = "已经加入了该舞台",
+    ErrorCodeId = 99010
+  },
+  [99011] = {
+    ErrorCodeContent = "缺少舞台访问权限",
+    ErrorCodeId = 99011
+  },
+  [99012] = {
+    ErrorCodeContent = "舞台暂未完成",
+    ErrorCodeId = 99012
+  },
+  [99013] = {
+    ErrorCodeContent = "奖励已领取",
+    ErrorCodeId = 99013
+  },
+  [99014] = {
+    ErrorCodeContent = "舞台暂不可用",
+    ErrorCodeId = 99014
+  },
+  [99015] = {
+    ErrorCodeContent = "暂时没有加入该舞台",
+    ErrorCodeId = 99015
+  },
+  [99016] = {
+    ErrorCodeContent = "舞台已结束",
+    ErrorCodeId = 99016
+  },
+  [99017] = {
+    ErrorCodeContent = "舞台冷却中",
+    ErrorCodeId = 99017
+  },
+  [99018] = {
+    ErrorCodeContent = "舞台不存在",
+    ErrorCodeId = 99018
+  },
+  [99019] = {
+    ErrorCodeContent = "联袂演绎伤害异常",
+    ErrorCodeId = 99019
+  },
+  [99020] = {
+    ErrorCodeContent = "联袂演绎舞台仅创建者可分享",
+    ErrorCodeId = 99020
+  },
+  [100001] = {
+    ContentEN = "This Skin Collection reward requires the corresponding item to unlock",
+    ContentFR = "Cette récompense de collection d’apparences nécessite l’objet correspondant pour être débloquée",
+    ContentJP = "外見コレクション報酬を解放するには、アイテムが使用されていません",
+    ContentKR = "아이템을 사용해 외형 수집 보상을 해제하지 않았습니다.",
+    ContentTC = "外觀收集獎勵未使用道具解鎖",
+    ErrorCodeContent = "外观收集奖励未使用道具解锁",
+    ErrorCodeId = 100001
+  },
+  [100002] = {
+    ContentEN = "This reward has already been unlocked",
+    ContentFR = "Cette récompense est déjà débloquée",
+    ContentJP = "報酬がすでに解放されました。再び解放することはできません。",
+    ContentKR = "이미 보상을 해제해 중복으로 해제할 수 없습니다.",
+    ContentTC = "獎勵已經解鎖，無法重複解鎖",
+    ErrorCodeContent = "奖励已经解锁，无法重复解锁",
+    ErrorCodeId = 100002
+  },
+  [100003] = {
+    ContentEN = "Invalid reward ID",
+    ContentFR = "ID de récompense invalide",
+    ContentJP = "無効な報酬IDです",
+    ContentKR = "보상 ID 파라미터가 유효하지 않습니다.",
+    ContentTC = "獎勵Id參數無效",
+    ErrorCodeContent = "奖励Id参数无效",
+    ErrorCodeId = 100003
+  },
+  [100004] = {
+    ContentEN = "This reward has already been claimed",
+    ContentFR = "Cette récompense a déjà été récupérée",
+    ContentJP = "報酬を受取済みです",
+    ContentKR = "이미 보상을 수령했습니다.",
+    ContentTC = "獎勵已經領取過了",
+    ErrorCodeContent = "奖励已经领取过了",
+    ErrorCodeId = 100004
+  },
+  [100005] = {
+    ContentEN = "Insufficient points",
+    ContentFR = "Points insuffisants",
+    ContentJP = "ポイントが不足しています",
+    ContentKR = "포인트 부족",
+    ContentTC = "積分不足",
+    ErrorCodeContent = "积分不足",
+    ErrorCodeId = 100005
   },
   [600003] = {
     ContentEN = "Demon Wedge loadout not found",

@@ -1,8 +1,19 @@
 local RewardBox = require("BluePrints.Client.CustomTypes.SimpleRewardBox")
+local BattleUtils = require("Utils.BattleUtils")
 local Component = {}
+
+local function IsHiddenCharacterAttributeSwitchPhantom(ResourceData, ChangedCharGroupId)
+  local CharGroupId = ResourceData and BattleUtils.GetCharacterAttributeSwitchGroupId(ResourceData.UseParam)
+  return ResourceData and ResourceData.ResourceSType == "PhantomItem" and CharGroupId == ChangedCharGroupId and BattleUtils.ShouldHideCharacterAttributeSwitchPhantom(ResourceData)
+end
 
 function Component:EnterWorld()
   self.logger.debug("ZJT_ EnterWorld ResourceUseComponent ")
+  EventManager:AddEvent(EventID.OnCharacterAttributeSwitched, self, self.OnCharacterAttributeSwitched)
+end
+
+function Component:LeaveWorld()
+  EventManager:RemoveEvent(EventID.OnCharacterAttributeSwitched, self)
 end
 
 function Component:UseItemInBattle(AvatarEid, ResourceId, Info, Reason)
@@ -171,7 +182,52 @@ end
 
 function Component:ResourceUseEffectCallPhantom(ResourceInfo, PlayerCharacter, Info, Reason)
   PrintTable({ResourceUseEffectCallPhantom = Info, Reason = Reason}, 4)
-  PlayerCharacter:CreatePhantom(ResourceInfo.UseParam, 1, Info, {IsSpawnByResource = 1})
+  local Resolved = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(ResourceInfo)
+  PlayerCharacter:CreatePhantom(Resolved.UseParam, 1, Info, {IsSpawnByResource = 1})
+end
+
+function Component:OnCharacterAttributeSwitched(SwitchInfo)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local NewCharId = SwitchInfo and SwitchInfo.NewCharId
+  local ChangedCharGroupId = SwitchInfo and SwitchInfo.CharGroupId
+  if not NewCharId or not ChangedCharGroupId then
+    return
+  end
+  for Rid, Resource in pairs(Avatar.Resources) do
+    local Data = Resource:Data()
+    if IsHiddenCharacterAttributeSwitchPhantom(Data, ChangedCharGroupId) then
+      local WeaponUuid = Resource.WeaponUuid
+      if WeaponUuid and "" ~= WeaponUuid then
+        Avatar:TakeOffAssisterWeapon(Rid, WeaponUuid)
+      end
+    end
+  end
+  for WheelIndex, Wheel in ipairs(Avatar.Wheels or {}) do
+    for SlotIndex, Slot in ipairs(Wheel or {}) do
+      local ResourceId = Slot and Slot.ResourceId
+      local Resource = ResourceId and Avatar.Resources[ResourceId]
+      local Data = Resource and Resource:Data()
+      if IsHiddenCharacterAttributeSwitchPhantom(Data, ChangedCharGroupId) then
+        Avatar:TakeOffBattleWheel(WheelIndex, SlotIndex)
+      end
+    end
+  end
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if not IsValid(Player) then
+    return
+  end
+  local Phantoms = Player:GetPhantomTeammates()
+  for i = 1, Phantoms:Length() do
+    local P = Phantoms:GetRef(i)
+    local CharGroupId = BattleUtils.GetCharacterAttributeSwitchGroupId(P.CurrentRoleId)
+    if P.IsSpawnByResource and CharGroupId == ChangedCharGroupId and P.CurrentRoleId ~= NewCharId then
+      UE4.UPhantomFunctionLibrary.CancelPhantom(Player, P, EDestroyReason.PhantomChangeRole)
+      Avatar:ClearCreatePhantomInfo(P.CurrentRoleId)
+    end
+  end
 end
 
 function Component:ResourceUseEffectCancelPhantom(ResourceInfo, PlayerCharacter, Info, Reason)

@@ -48,12 +48,8 @@ function M:GetPreloadAssetPathFromLua(InObjId, PrelaodInfo)
     end
     if AppearanceSuitInfo.HairId then
       local HairData = DataMgr.Hair[AppearanceSuitInfo.HairId]
-      if HairData then
-        if HairData.LinkAccessory then
-          PrelaodInfo.AccessoryIds:Add(HairData.LinkAccessory)
-        elseif HairData.CharPartId then
-          PrelaodInfo.PartIds:Add(HairData.CharPartId)
-        end
+      if HairData and HairData.CharPartId then
+        PrelaodInfo.PartIds:Add(HairData.CharPartId)
       end
     end
   end

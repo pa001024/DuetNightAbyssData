@@ -1,6 +1,45 @@
 require("UnLua")
 local ForgeUtils = {}
 
+function ForgeUtils:HandleWeaponProduct(DraftInfo, Content)
+  local WeaponInfo = DataMgr.Weapon[DraftInfo.ProductId]
+  Content.Icon = WeaponInfo.Icon
+  Content.Rarity = WeaponInfo.WeaponRarity
+  return GText(WeaponInfo.WeaponName)
+end
+
+function ForgeUtils:HandleModProduct(DraftInfo, Content)
+  local ModInfo = DataMgr.Mod[DraftInfo.ProductId]
+  Content.Icon = ModInfo.Icon
+  Content.Rarity = ModInfo.Rarity
+  return GText(ModInfo.Name)
+end
+
+function ForgeUtils:HandleResourceProduct(DraftInfo, Content)
+  local ResInfo = DataMgr.Resource[DraftInfo.ProductId]
+  Content.Icon = ResInfo.Icon
+  Content.Rarity = ResInfo.Rarity
+  return GText(ResInfo.ResourceName)
+end
+
+function ForgeUtils:HandleCharAccessoryProduct(DraftInfo, Content)
+  local AccessoryInfo = DataMgr.CharAccessory[DraftInfo.ProductId]
+  Content.Icon = AccessoryInfo.Icon
+  Content.Rarity = AccessoryInfo.Rarity
+  return GText(AccessoryInfo.Name)
+end
+
+function ForgeUtils:HandleIronTicketProduct(DraftInfo, Content)
+  local IronTicketInfo = DataMgr.IronTicket[DraftInfo.ProductId]
+  Content.Icon = IronTicketInfo.Icon
+  Content.Rarity = IronTicketInfo.Rarity
+  return GText(IronTicketInfo.Name)
+end
+
+function ForgeUtils:HandleOtherProduct(DraftInfo, Content)
+  return ""
+end
+
 function ForgeUtils:ConstructItemContentFromResourceId(ResType, ResId)
   local ItemIcon = ItemUtils.GetItemIconPath(ResId, ResType)
   local ItemRarity = ItemUtils.GetItemRarity(ResId, ResType)
@@ -26,27 +65,9 @@ function ForgeUtils:ConstructItemContentFromDraftId(DraftId)
   }
   local ProductName = ""
   if DraftInfo then
-    if DraftInfo.ProductType == "Weapon" then
-      local WeaponInfo = DataMgr.Weapon[DraftInfo.ProductId]
-      ProductName = GText(WeaponInfo.WeaponName)
-      Content.Icon = WeaponInfo.Icon
-      Content.Rarity = WeaponInfo.WeaponRarity
-    elseif DraftInfo.ProductType == "Mod" then
-      local ModInfo = DataMgr.Mod[DraftInfo.ProductId]
-      ProductName = GText(ModInfo.Name)
-      Content.Icon = ModInfo.Icon
-      Content.Rarity = ModInfo.Rarity
-    elseif DraftInfo.ProductType == "Resource" then
-      local ResInfo = DataMgr.Resource[DraftInfo.ProductId]
-      ProductName = GText(ResInfo.ResourceName)
-      Content.Icon = ResInfo.Icon
-      Content.Rarity = ResInfo.Rarity
-    elseif DraftInfo.ProductType == "CharAccessory" then
-      local AccessoryInfo = DataMgr.CharAccessory[DraftInfo.ProductId]
-      ProductName = GText(AccessoryInfo.Name)
-      Content.Icon = AccessoryInfo.Icon
-      Content.Rarity = AccessoryInfo.Rarity
-    elseif DraftInfo.ProductType == "Other" then
+    local funcName = "Handle" .. DraftInfo.ProductType .. "Product"
+    if ForgeUtils[funcName] then
+      ProductName = ForgeUtils[funcName](self, DraftInfo, Content)
     end
     if DraftInfo.ProductNum and DraftInfo.ProductNum > 1 then
       ProductName = ProductName .. " x" .. tostring(DraftInfo.ProductNum)

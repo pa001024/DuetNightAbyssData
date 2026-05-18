@@ -267,7 +267,7 @@ return ReadOnly("RougeLikeTreasure", {
     CanSell = 1,
     Desc = "RLTreasure_Desc_10114",
     EndPoints = T.RT_1,
-    IPDesc = "RLTreasure_IPDesc_10113",
+    IPDesc = "RLTreasure_IPDesc_10114",
     Icon = "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_28.T_Rouge_Treasure_28",
     ModEquip = "Role",
     Name = "RLTreasure_Name_10114",
@@ -649,6 +649,23 @@ return ReadOnly("RougeLikeTreasure", {
     SimpleDesc = "RLTreasure_SimpleDesc_10219",
     TreasureGroup = 4,
     TreasureId = 10219,
+    TreasureRarity = 2,
+    TreasureWeight = 500,
+    UnlockConditionText = "RLTreasure_UnlockCon_Default"
+  },
+  [10220] = {
+    Desc = "RLTreasure_Desc_10220",
+    EndPoints = T.RT_2,
+    IPDesc = "RLTreasure_IPDesc_10220",
+    Icon = "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_07.T_Rouge_Treasure_07",
+    Name = "RLTreasure_Name_10220",
+    RLArchiveId = 62,
+    ServerBuild = {
+      [1] = {51}
+    },
+    SimpleDesc = "RLTreasure_SimpleDesc_10220",
+    TreasureGroup = 10220,
+    TreasureId = 10220,
     TreasureRarity = 2,
     TreasureWeight = 500,
     UnlockConditionText = "RLTreasure_UnlockCon_Default"

@@ -13,6 +13,9 @@ function M:CreateMount(MountId)
   if not MountConfig.BattleMountId then
     return
   end
+  if not Player.OriginalScale3D then
+    Player.OriginalScale3D = Player:GetActorScale3D()
+  end
   if MountConfig.MountDisplayScale then
     Player:SetActorScale3D(FVector(MountConfig.MountDisplayScale, MountConfig.MountDisplayScale, MountConfig.MountDisplayScale))
   else
@@ -30,9 +33,9 @@ function M:CreateMount(MountId)
   else
     Player:K2_SetActorLocation(Player.OriginalLocation, false, nil, false)
   end
+  self.CurRiddingMount = MountId
   Player:EnableBattleMountOnDisplay(MountConfig.BattleMountId)
   self:PlayMountMontageOnDisplay()
-  self.CurRiddingMount = MountId
   self:HidePlayerActorInternal(self:GetReflectionActor(Player), "ReflectionHideByMount", true)
   self.bEnableReflectionBeforeMount = self.bEnableReflection
   self.bEnableReflection = false
@@ -60,6 +63,7 @@ function M:PlayMountMontageOnDisplay()
     self:HidePlayerAndMount(true)
     self:PlayDisappearFX(ArmoryPlayer.FXComponent, function()
       if self.bClosed or self.bDestructed or not self.IsControled then
+        self:HidePlayerAndMount(false)
         return
       end
       self:PlayAppearFX(ArmoryPlayer.FXComponent)
@@ -79,8 +83,12 @@ function M:PlayMountMontage()
   if not Player or not Player.CurMount then
     return
   end
-  local MountId = Player.CurMount.UnitId
-  local MountConfig = DataMgr.Mount[MountId]
+  local MountId = self.CurRiddingMount
+  local MountConfig = MountId and DataMgr.Mount[MountId]
+  if not MountConfig then
+    MountId = Player.CurMount.UnitId
+    MountConfig = DataMgr.Mount[MountId]
+  end
   if not MountConfig then
     return
   end
@@ -100,12 +108,11 @@ function M:HidePlayerOnMount(IsHide)
 end
 
 function M:HidePlayerAndMount(IsHide)
-  local Player = self:GetPlayerActor()
-  if not Player or not Player.CurMount then
-    return
-  end
   self:HidePlayerActorOnDisplayMount("ActorController_HidePlayerPlayMount", IsHide)
-  Player.CurMount:SetActorHideTag("ActorController_HidePlayerPlayMount", IsHide)
+  local Player = self:GetPlayerActor()
+  if Player and Player.CurMount then
+    Player.CurMount:SetActorHideTag("ActorController_HidePlayerPlayMount", IsHide)
+  end
 end
 
 function M:HidePlayerActorOnDisplayMount(Tag, IsHidden, bDontSaveTag)
@@ -113,7 +120,11 @@ function M:HidePlayerActorOnDisplayMount(Tag, IsHidden, bDontSaveTag)
     return
   end
   if not bDontSaveTag then
-    self.PlayerActorHideTags[Tag] = IsHidden
+    if true == IsHidden then
+      self.PlayerActorHideTags[Tag] = true
+    else
+      self.PlayerActorHideTags[Tag] = nil
+    end
   end
   self.ArmoryPlayer:SetActorHideTag(Tag, IsHidden, true, false)
   self.ArmoryPlayer:HideAllEffectCreature(Tag, IsHidden)
@@ -138,18 +149,34 @@ function M:SetArmoryPlayerRotation(PlayerRot)
   return Player:K2_SetActorRotation(PlayerRot, false, nil, false)
 end
 
+function M:Component_OnClosed()
+  self:HidePlayerAndMount(false)
+  self:DestroyMount()
+end
+
 function M:DestroyMount()
   local Player = self:GetPlayerActor()
-  if not Player or not self.CurRiddingMount then
+  if not Player then
     return
   end
-  Player:DisableBattleMount(true)
+  self:HidePlayerAndMount(false)
+  if self.CurRiddingMount or Player.CurMount then
+    Player:DisableBattleMount(true)
+  end
   if Player.OriginalLocation then
     Player:K2_SetActorLocation(Player.OriginalLocation, false, nil, false)
     Player.OriginalLocation = nil
   end
+  if Player.OriginalScale3D then
+    Player:SetActorScale3D(Player.OriginalScale3D)
+    Player.OriginalScale3D = nil
+  else
+    Player:SetActorScale3D(Const.OneVector)
+  end
   self.CurRiddingMount = nil
-  self.bEnableReflection = self.bEnableReflectionBeforeMount
+  if nil ~= self.bEnableReflectionBeforeMount then
+    self.bEnableReflection = self.bEnableReflectionBeforeMount
+  end
   self:HidePlayerActorInternal(self:GetReflectionActor(Player), "ReflectionHideByMount", false)
 end
 
@@ -235,9 +262,6 @@ end
 function M:StopMountPartHighLight(PartIdx)
   local FunctionName = "SetMountTintColor" .. PartIdx
   self.ArmoryHelper:RemoveTimer(FunctionName)
-end
-
-function M:Component_DestroyActors()
 end
 
 return M

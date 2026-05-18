@@ -146,7 +146,15 @@ function M:SetWBoxUpTarget()
   end
   local prevWBox = self.OwnerItemUI:GetPrevWrapBox()
   if prevWBox then
-    local prevWBoxChildCount = prevWBox:GetChildrenCount()
+    local prevWBoxChildCount = 0
+    if prevWBox.ListReward then
+      self.OwnerItemUI.Owner.List_Selection:ScrollToStart()
+      self.OwnerItemUI.Owner.Owner:ShowGamepadShortcut(1)
+      return prevWBox:GetDesiredFocusWidget()
+    end
+    if prevWBox.GetChildrenCount then
+      prevWBoxChildCount = prevWBox:GetChildrenCount()
+    end
     if prevWBoxChildCount > 0 then
       local currentCol = (self.Index - 1) % self.ITEMS_PER_ROW
       local lastRowStartIndex = prevWBoxChildCount - prevWBoxChildCount % self.ITEMS_PER_ROW

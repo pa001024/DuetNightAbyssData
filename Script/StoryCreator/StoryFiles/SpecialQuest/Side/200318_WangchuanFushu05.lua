@@ -602,7 +602,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -662,7 +664,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -722,7 +726,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -741,7 +747,8 @@ return {
             propsData = {
               TargetTime = 10,
               NeedLerp = false,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           },
           ["1773394792840577"] = {
@@ -899,7 +906,7 @@ return {
             key = "1773394792842589",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点（NPC)",
-            pos = {x = 2145.2064150374904, y = -65.41396155427111},
+            pos = {x = 2119.1194585157514, y = -65.41396155427111},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -1027,12 +1034,12 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {
-                232010297,
-                232010300,
-                232010301,
-                232010302,
-                232010303,
-                232010304
+                232010368,
+                232010369,
+                232010370,
+                232010371,
+                232010372,
+                232010373
               }
             }
           },
@@ -1071,11 +1078,11 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
-              FreezeWorldComposition = false,
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -1319,7 +1326,7 @@ return {
             key = "1775042428855860756",
             type = "ForbidWeaponByWeaponTagNode",
             name = "禁用/启用武器节点",
-            pos = {x = 2468.2944302877854, y = 821.1339889943747},
+            pos = {x = 2500.1694302877854, y = 828.6339889943747},
             propsData = {
               WeaponTags = {"Melee", "Ranged"},
               bForbid = false,
@@ -1331,7 +1338,7 @@ return {
             key = "1775042428855860757",
             type = "ActivePlayerSkillsNode",
             name = "激活/失效 玩家技能",
-            pos = {x = 2464.8420493354047, y = 950.8753070967969},
+            pos = {x = 2504.2170493354047, y = 956.5003070967969},
             propsData = {
               PlayerId = 0,
               bActiveEnable = true,

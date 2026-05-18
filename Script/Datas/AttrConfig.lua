@@ -44,6 +44,16 @@ return ReadOnly("AttrConfig", {
     SortIndex3 = 6,
     SortIndex4 = 6
   },
+  ATK_Psionic = {
+    AttrDesc = "ATTR_DESC_ATK_Psionic",
+    Id = "ATK_Psionic",
+    Name = "Attr_ATK_Psionic_Name",
+    ShowInInspector = true,
+    SortIndex1 = 9.1,
+    SortIndex2 = 9.1,
+    SortIndex3 = 9.1,
+    SortIndex4 = 9.1
+  },
   ATK_Slash = {
     AttrDesc = "ATTR_DESC_ATK_Slash",
     Id = "ATK_Slash",
@@ -250,6 +260,36 @@ return ReadOnly("AttrConfig", {
     SortIndex3 = 9.5,
     SortIndex4 = 9.5
   },
+  DamageRate_Almighty = {
+    Id = "DamageRate_Almighty",
+    IsPercent = true,
+    Name = "Attr_DamageRate_Almighty_Name",
+    ShowInInspector = true,
+    SortIndex1 = 9.53,
+    SortIndex2 = 9.53,
+    SortIndex3 = 9.53,
+    SortIndex4 = 9.53
+  },
+  DamageRate_Skill_Almighty = {
+    Id = "DamageRate_Skill_Almighty",
+    IsPercent = true,
+    Name = "Attr_DamageRate_Skill_Almighty_Name",
+    ShowInInspector = true,
+    SortIndex1 = 9.52,
+    SortIndex2 = 9.52,
+    SortIndex3 = 9.52,
+    SortIndex4 = 9.52
+  },
+  DamageRate_Skill_Normal = {
+    Id = "DamageRate_Skill_Normal",
+    IsPercent = true,
+    Name = "Attr_DamageRate_Skill_Normal_Name",
+    ShowInInspector = true,
+    SortIndex1 = 9.51,
+    SortIndex2 = 9.51,
+    SortIndex3 = 9.51,
+    SortIndex4 = 9.51
+  },
   DamagedRate = {
     Id = "DamagedRate",
     IsPercent = true,
@@ -290,6 +330,11 @@ return ReadOnly("AttrConfig", {
     Id = "FallAttackRate",
     IsPercent = true,
     Name = "Attr_FallAttackRate_Name"
+  },
+  HeavyAttackRate = {
+    Id = "HeavyAttackRate",
+    IsPercent = true,
+    Name = "Attr_HeavyAttackRate_Name"
   },
   HitMontageRate = {
     Id = "HitMontageRate",

@@ -1,19 +1,27 @@
 local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
 local FriendModel = FriendController:GetModel()
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
-local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
+local PlayerMenuActionRegistry = require("BluePrints.UI.WBP.Chat.View.PlayerMenuActionRegistry")
+local MenuActionId = PlayerMenuActionRegistry.ActionId
 local Component = {}
+local CopyActionIds, RemoveActionById, AddGuildAction
 
-function Component:SetupAnchor(Anchor, Head, AvatarInfo, bSetUpEvent, MessageContent)
+function Component:SetupAnchor(Anchor, Head, AvatarInfo, bSetUpEvent, MessageContent, MenuConfig)
   self.HeadAnchor = Anchor
   self.Head = Head
   self._AvatarInfo = AvatarInfo
   self._bSetUpEvent = bSetUpEvent
   self._MessageContent = MessageContent
+  self._MenuConfig = MenuConfig
   if bSetUpEvent then
     self.HeadAnchor.OnGetMenuContentEvent:Bind(self, self.OnAnchorGetUserMenuContent)
     self.HeadAnchor.OnMenuOpenChanged:Add(self, self.HeadMenuOpenChanged)
   end
+end
+
+function Component:SetGuildFullInfo(GuildInfo, NotShowOpreationBtn)
+  self.GuildInfo = GuildInfo
+  self.GuildNotShowOpreationBtn = NotShowOpreationBtn
 end
 
 function Component:CleanUpAnchor()
@@ -24,54 +32,15 @@ function Component:CleanUpAnchor()
   self.HeadAnchor = nil
   self.Head = nil
   self._bSetUpEvent = false
+  self._MenuConfig = nil
+  self.GuildInfo = nil
 end
 
 function Component:OnAnchorGetUserMenuContent(Anchor)
-  local function InitShowRecordBtn(Content, AvatarInfo)
-    Content.Text = GText("UI_Chat_ShowRecord")
-    
-    function Content.Callback()
-      if AvatarInfo.Uid == GWorld:GetAvatar().Uid then
-        PersonInfoController:OpenView()
-      else
-        GWorld:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid)
-      end
-      self.HeadAnchor:Close()
-    end
-  end
-  
-  local function AddFriend(Content, AvatarInfo)
-    local TargetUid = FriendController:GetSocialUid(AvatarInfo.Uid, AvatarInfo)
-    if not FriendModel:GetFriendDict()[TargetUid] then
-      Content.Text = GText("UI_Friend_AddFriend")
-      
-      function Content.Callback()
-        FriendController:OpenAddFriendDialog(self, AvatarInfo)
-        self.HeadAnchor:Close()
-      end
-    else
-      Content.Text = GText("UI_Chat_SendMsg")
-      
-      function Content.Callback()
-        ChatController:SelectPlayerToChat(TargetUid)
-        self.HeadAnchor:Close()
-      end
-    end
-  end
-  
-  local function InviteTeam(Content, AvatarInfo)
-    Content.Text = GText("UI_Chat_InviteTeam")
-    
-    function Content.Callback()
-      TeamController:SendTeamInvite(AvatarInfo.Uid)
-      self.HeadAnchor:Close()
-    end
-  end
-  
-  local AddBlackList = FriendController:GenAddBlackListFunc(self, self.HeadAnchor)
-  local Switch = {}
+  local ActionIds = {}
   local Avatar = ChatController:GetAvatar()
-  local IsYourSelf = self._AvatarInfo.Uid == Avatar.Uid
+  local Uid = self._AvatarInfo.Uid or self._AvatarInfo.Uuid
+  local IsYourSelf = Uid == Avatar.Uid
   local InBounsScene = GWorld.GameInstance.IsInTempScene and GWorld.GameInstance:IsInTempScene()
   local IsInDungeon = GWorld:GetAvatar():IsInDungeon()
   local IsInHardBoss = GWorld:GetAvatar():IsInHardBoss()
@@ -79,79 +48,70 @@ function Component:OnAnchorGetUserMenuContent(Anchor)
   local TeamData = TeamController:GetModel():GetTeam()
   bNotInvitable = bNotInvitable or 4 == (TeamData and #TeamData.Members)
   local Channel = ChatController:GetModel():GetCurrentChannel()
-  local InviteTeamIdx
-  local ShowNegativeAttitudeOption = Channel == ChatCommon.ChannelDef.InTeam
-  local AccusePlayer = FriendController:GenAccusePlayerFunc(self, self.HeadAnchor, ShowNegativeAttitudeOption, self._MessageContent, function()
-    self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
-      bHideDialogItem = true,
-      DialogItemIndex = 1,
-      bShouldPlayAnim = false
-    })
-    self:BroadcastDialogEvent(DialogEvent.HideDialogItem, {
-      bHideDialogItem = true,
-      DialogItemIndex = 2,
-      bShouldPlayAnim = false
-    })
-  end, self.OnTextChange, self.OnTextComposing, function()
-    if self.bTipsShowed then
-      self.Owner:HideDialogTip(2, false)
-      self.bTipsShowed = false
-    end
-  end)
+  local ShouldCheckInviteTeam = false
   if IsInHardBoss then
     if InBounsScene then
-      InviteTeamIdx = 2
-      Switch = IsYourSelf and {} or {
-        AddFriend,
-        InviteTeam,
-        AddBlackList
+      ShouldCheckInviteTeam = true
+      ActionIds = IsYourSelf and {} or {
+        MenuActionId.AddFriendOrChat,
+        MenuActionId.InviteTeam
       }
     else
-      InviteTeamIdx = 3
-      Switch = IsYourSelf and {InitShowRecordBtn} or {
-        AddFriend,
-        InitShowRecordBtn,
-        InviteTeam,
-        AddBlackList
+      ShouldCheckInviteTeam = true
+      ActionIds = IsYourSelf and {
+        MenuActionId.ShowRecord
+      } or {
+        MenuActionId.AddFriendOrChat,
+        MenuActionId.ShowRecord,
+        MenuActionId.InviteTeam
       }
     end
   elseif InBounsScene or IsInDungeon then
-    InviteTeamIdx = 2
     if InBounsScene then
-      Switch = IsYourSelf and {} or {
-        AddFriend,
-        AddBlackList,
-        AccusePlayer
+      ActionIds = IsYourSelf and {} or {
+        MenuActionId.AddFriendOrChat
       }
     else
-      Switch = IsYourSelf and {} or {
-        AddFriend,
-        InviteTeam,
-        AddBlackList,
-        AccusePlayer
+      ShouldCheckInviteTeam = true
+      ActionIds = IsYourSelf and {} or {
+        MenuActionId.AddFriendOrChat,
+        MenuActionId.InviteTeam
       }
     end
   else
-    InviteTeamIdx = 3
-    Switch = IsYourSelf and {InitShowRecordBtn} or {
-      AddFriend,
-      InitShowRecordBtn,
-      InviteTeam,
-      AddBlackList
+    ShouldCheckInviteTeam = true
+    ActionIds = IsYourSelf and {
+      MenuActionId.ShowRecord
+    } or {
+      MenuActionId.AddFriendOrChat,
+      MenuActionId.ShowRecord,
+      MenuActionId.InviteTeam
     }
   end
-  if not IsYourSelf and not table.isempty(Switch) then
-    if self._MessageContent and not IsInDungeon and not InBounsScene then
-      table.insert(Switch, AccusePlayer)
-    end
-    if bNotInvitable then
-      table.remove(Switch, InviteTeamIdx)
+  if not IsYourSelf and not table.isempty(ActionIds) then
+    if bNotInvitable and ShouldCheckInviteTeam then
+      RemoveActionById(ActionIds, MenuActionId.InviteTeam)
     end
     if (Channel == ChatCommon.ChannelDef.InTeam or Channel == ChatCommon.ChannelDef.Friend) and FriendModel:GetFriendDict()[self._AvatarInfo.Uid] then
-      table.remove(Switch, 1)
+      RemoveActionById(ActionIds, MenuActionId.AddFriendOrChat)
     end
   end
-  return ChatController:OpenPlayerBtnList(self, self._AvatarInfo, Switch)
+  AddGuildAction(ActionIds, self.GuildInfo, self._AvatarInfo, self.GuildNotShowOpreationBtn)
+  local ConfigActionIds = self._MenuConfig and self._MenuConfig.VisibleActionIds
+  if "table" == type(ConfigActionIds) then
+    ActionIds = CopyActionIds(ConfigActionIds)
+  end
+  local FuncList = PlayerMenuActionRegistry:BuildMenuFuncList(ActionIds, {
+    Owner = self,
+    AvatarInfo = self._AvatarInfo,
+    MessageContent = self._MessageContent,
+    CloseMenu = function()
+      if self.HeadAnchor then
+        self.HeadAnchor:Close()
+      end
+    end
+  })
+  return ChatController:OpenPlayerBtnList(self, self._AvatarInfo, FuncList, self.GuildInfo)
 end
 
 function Component:HeadMenuOpenChanged(bOpen)
@@ -163,6 +123,65 @@ function Component:HeadMenuOpenChanged(bOpen)
   end
   if self.Head then
     self.Head:PlayNormal()
+  end
+end
+
+function CopyActionIds(ActionIds)
+  local Copied = {}
+  for _, ActionId in ipairs(ActionIds or {}) do
+    table.insert(Copied, ActionId)
+  end
+  return Copied
+end
+
+function RemoveActionById(ActionIds, TargetActionId)
+  for Idx, ActionId in ipairs(ActionIds or {}) do
+    if ActionId == TargetActionId then
+      table.remove(ActionIds, Idx)
+      return
+    end
+  end
+end
+
+function AddGuildAction(ActionIds, GuildInfo, AvatarInfo, GuildNotShowOpreationBtn)
+  local IsInGuild = GuildController:GetModel():IsInGuild()
+  if not IsInGuild then
+    return
+  end
+  if not GuildInfo then
+    table.insert(ActionIds, MenuActionId.GuildInvite)
+    return
+  end
+  local MyUid = ChatController:GetAvatar().Uid
+  local MemberUid = AvatarInfo.Uuid or AvatarInfo.Uid
+  if MyUid == MemberUid then
+    local MemberCount = #GuildInfo.Members
+    local IsMaster = MyUid == GuildInfo.OwnerUid
+    if IsMaster and 1 == MemberCount then
+      table.insert(ActionIds, MenuActionId.DissolveGuild)
+    else
+      if IsMaster then
+        GuildInfo.IsSelfMaster = IsMaster
+      end
+      table.insert(ActionIds, MenuActionId.QuitGuild)
+    end
+    return
+  end
+  local SelfGuildInfo = GuildController:GetModel():GetCurrGuild()
+  if GuildInfo.GuildId == SelfGuildInfo.GuildId then
+    table.insert(ActionIds, MenuActionId.GuildSendPrivateChat)
+    local SelfMember = GuildController.GetGuildMember(SelfGuildInfo.Members, ChatController:GetAvatar().Uid)
+    local CurMember = GuildController.GetGuildMember(GuildInfo.Members, MemberUid)
+    local SelfTitle = SelfMember.Title
+    local CurTitle = CurMember.Title
+    if not GuildNotShowOpreationBtn then
+      if SelfTitle >= 3 and SelfTitle > CurTitle then
+        table.insert(ActionIds, MenuActionId.GuildAdjustRole)
+      end
+      if SelfTitle > CurTitle then
+        table.insert(ActionIds, MenuActionId.KickOutGuildMember)
+      end
+    end
   end
 end
 

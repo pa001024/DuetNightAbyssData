@@ -106,6 +106,9 @@ function BP_PickupBase_C:OnActorReady(Info)
   if AttachActor then
     self:K2_AttachToActor(AttachActor, "", UE4.EAttachmentRule.SnapToTarget, UE4.EAttachmentRule.SnapToTarget, UE4.EAttachmentRule.SnapToTarget)
   end
+  if self:IsManualPickup() then
+    EventManager:FireEvent(EventID.OnManualPickUpReady, self)
+  end
 end
 
 function BP_PickupBase_C:OnPickedUp(Character)
@@ -208,6 +211,9 @@ function BP_PickupBase_C:HandleGetMod()
 end
 
 function BP_PickupBase_C:AddPickupBaseToCache_Lua()
+  if self.PickUpInteractiveComponent:IsLastingInteract() then
+    self.PickUpInteractiveComponent:ResetInteractive()
+  end
 end
 
 function BP_PickupBase_C:OnEMActorDestroy(DestroyReason)

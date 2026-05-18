@@ -3,6 +3,7 @@ local DynamicQuestEvent = Class("BluePrints.Common.ClientEvent.DynamicQuestEvent
 local TimeUtils = require("Utils.TimeUtils")
 local ClientEventUtils = {
   CurrentActiveDynamicEvent = {},
+  CurrentActiveDynamicEventByFailTriggerId = {},
   CurrentDoingDynamicEvent = nil,
   SpecialQuestEvents = {},
   CurrentEvent = nil
@@ -50,14 +51,24 @@ end
 
 function ClientEventUtils:GetCurrentActiveDynamicEvent(DynQuestId)
   if DynQuestId then
-    for _, value in pairs(self.CurrentActiveDynamicEvent) do
-      if value.DynamicQuestId == DynQuestId then
-        return value
+    for _, DynamicEventTable in pairs(self.CurrentActiveDynamicEvent) do
+      if DynamicEventTable and DynamicEventTable[DynQuestId] then
+        return DynamicEventTable[DynQuestId]
       end
     end
-  else
-    return self.CurrentActiveDynamicEvent
   end
+  return nil
+end
+
+function ClientEventUtils:GetCurrentActiveDynamicEventsByTriggerId(TriggerId)
+  if TriggerId then
+    if self.CurrentActiveDynamicEvent[TriggerId] then
+      return self.CurrentActiveDynamicEvent[TriggerId]
+    elseif self.CurrentActiveDynamicEventByFailTriggerId[TriggerId] then
+      return self.CurrentActiveDynamicEventByFailTriggerId[TriggerId]
+    end
+  end
+  return nil
 end
 
 function ClientEventUtils:StartDynamicEvent(...)
@@ -73,7 +84,15 @@ function ClientEventUtils:StartDynamicEvent(...)
   if Avatar and RegionId == DynamicQuestConfig.RegionId then
     DebugPrint("[动态事件]动态事件Id" .. tostring(DynamicQuestId) .. "解锁 " .. TimeUtils.TimeToHMSStr())
     local DynamicEvent = DynamicQuestEvent(...)
-    table.insert(self.CurrentActiveDynamicEvent, DynamicEvent)
+    if not self.CurrentActiveDynamicEvent[DynamicQuestConfig.TriggerBoxID] then
+      self.CurrentActiveDynamicEvent[DynamicQuestConfig.TriggerBoxID] = {}
+    end
+    if not self.CurrentActiveDynamicEventByFailTriggerId[DynamicQuestConfig.FailTriggerBoxID] then
+      self.CurrentActiveDynamicEventByFailTriggerId[DynamicQuestConfig.FailTriggerBoxID] = {}
+    end
+    self.CurrentActiveDynamicEvent[DynamicQuestConfig.TriggerBoxID][DynamicQuestId] = DynamicEvent
+    self.CurrentActiveDynamicEventByFailTriggerId[DynamicQuestConfig.FailTriggerBoxID][DynamicQuestId] = DynamicEvent
+    DebugPrint("CurrentActiveDynamicEvent", DynamicQuestConfig.TriggerBoxID)
     DynamicEvent:StartEvent()
   end
 end
@@ -94,9 +113,21 @@ function ClientEventUtils:GetCurrentDoingDynamicEvent()
 end
 
 function ClientEventUtils:ClearCurrentActiveDynamicEvent(DynQuestId)
-  for pos, value in pairs(self.CurrentActiveDynamicEvent) do
-    if value.DynamicQuestId == DynQuestId then
-      table.remove(self.CurrentActiveDynamicEvent, pos)
+  for TriggerId, DynamicEventTable in pairs(self.CurrentActiveDynamicEvent) do
+    if DynamicEventTable and DynamicEventTable[DynQuestId] then
+      DynamicEventTable[DynQuestId] = nil
+      if nil == next(DynamicEventTable) then
+        self.CurrentActiveDynamicEvent[TriggerId] = nil
+      end
+      return
+    end
+  end
+  for TriggerId, DynamicEventTable in pairs(self.CurrentActiveDynamicEventByFailTriggerId) do
+    if DynamicEventTable and DynamicEventTable[DynQuestId] then
+      DynamicEventTable[DynQuestId] = nil
+      if nil == next(DynamicEventTable) then
+        self.CurrentActiveDynamicEventByFailTriggerId[TriggerId] = nil
+      end
       return
     end
   end
@@ -141,8 +172,12 @@ function ClientEventUtils:TryPlayDelayedDynEventAnim()
 end
 
 function ClientEventUtils:ClearAllActiveDynamicEvent()
-  for _, value in pairs(self.CurrentActiveDynamicEvent) do
-    value:Destroy(false)
+  for _, DynamicEventTable in pairs(self.CurrentActiveDynamicEvent) do
+    for _, DynamicEvent in pairs(DynamicEventTable) do
+      if DynamicEvent and DynamicEvent.Destroy then
+        DynamicEvent:Destroy(false)
+      end
+    end
   end
   self.CurrentActiveDynamicEvent = {}
 end
@@ -160,8 +195,8 @@ function ClientEventUtils:ClearCurrentDoingDynamicEvent(FinishEvent, ForbidAnim)
 end
 
 function ClientEventUtils:CheckDynamicEventStarted(DynQuestId)
-  for _, value in pairs(self.CurrentActiveDynamicEvent) do
-    if value.DynamicQuestId == DynQuestId then
+  for _, DynamicEventTable in pairs(self.CurrentActiveDynamicEvent) do
+    if DynamicEventTable and DynamicEventTable[DynQuestId] then
       return true
     end
   end

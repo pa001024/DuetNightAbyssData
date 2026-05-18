@@ -35,6 +35,55 @@ function M.JumpToTaskPanelByQuestChainId(QuestChainId)
   end
 end
 
+function M.JumpToQuestChain(QuestChainTypeString, ...)
+  local Params = {
+    ...
+  }
+  local QuestChainType = tonumber(QuestChainTypeString)
+  DebugPrint("JumpToQuestChain QuestChainType ", QuestChainType)
+  if QuestChainType == Const.MainQuestChainType or QuestChainType == Const.MainActivityQuestChainType then
+    local QuestChainId = tonumber(Params[1])
+    local TargetQuestChainId = QuestChainId
+    local QuestState = M.GetQuestChainState(QuestChainId)
+    if "UnLock" == QuestState then
+      local Avatar = GWorld:GetAvatar()
+      for Id, Data in pairs(Avatar.QuestChains) do
+        local _QuestChainType = DataMgr.QuestChain[Id].QuestChainType
+        if _QuestChainType == Const.MainQuestChainType and Data:IsDoing() then
+          TargetQuestChainId = Id
+          break
+        end
+      end
+    end
+    DebugPrint("JumpToQuestChain MainQuest TargetQuestChainId", TargetQuestChainId)
+    M.JumpToTaskPanelByQuestChainId(TargetQuestChainId)
+  elseif QuestChainType >= Const.DailyQuestChainType and QuestChainType <= Const.LimTimeQuestChainType then
+    for _, QuestChainIdString in pairs(Params) do
+      local QuestChainId = tonumber(QuestChainIdString)
+      local QuestState = M.GetQuestChainState(QuestChainId)
+      if "Doing" == QuestState then
+        DebugPrint("JumpToQuestChain Not MainQuest TargetQuestChainId", QuestChainId)
+        M.JumpToTaskPanelByQuestChainId(QuestChainId)
+        break
+      end
+    end
+  end
+end
+
+function M.GetQuestChainState(QuestChainId)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return ""
+  end
+  if Avatar:IsQuestChainFinished(QuestChainId) then
+    return "Finish"
+  elseif Avatar:IsQuestChainDoing(QuestChainId) then
+    return "Doing"
+  else
+    return "UnLock"
+  end
+end
+
 function M.JumpToRegionMapByTeleportId(_TeleportId)
   local TeleportId = tonumber(_TeleportId)
   DebugPrint("JumpToRegionMapByTeleportId, TeleportId", TeleportId)

@@ -10,8 +10,8 @@ function WBP_Simple_PC:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName
   DebugPrint("WBP_Simple_PC:RefreshOpInfoByInputDevice", CurInputDevice, CurGamepadName)
   local IsGamePad = CurInputDevice == ECommonInputType.Gamepad
   self.IsGamePad = IsGamePad
-  if self.DialogueButtonListView then
-    self.DialogueButtonListView:UpdateKeyImg(IsGamePad, CurGamepadName)
+  if self.OptionList then
+    self.OptionList:UpdateKeyImg(IsGamePad, CurGamepadName)
   end
   if IsGamePad then
     self:SetFocus()
@@ -38,7 +38,7 @@ function WBP_Simple_PC:InitAutoPlay()
 end
 
 function WBP_Simple_PC:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
-  if not self.DialogueButtonListView then
+  if not self.OptionList then
     return UIUtils.Unhandled
   end
   local InKey = UE4.UKismetInputLibrary.GetKey(InAnalogInputEvent)
@@ -62,14 +62,14 @@ function WBP_Simple_PC:OnAnalogValueChanged(MyGeometry, InAnalogInputEvent)
     else
       self:CreateCDTimer()
     end
-    self.DialogueButtonListView:UpSelectAction()
+    self.OptionList:UpSelectAction()
   elseif "Gamepad_LeftStick_Down" == InKeyName then
     if self.CdTimer then
       return UIUtils.Unhandled
     else
       self:CreateCDTimer()
     end
-    self.DialogueButtonListView:DownSelectAction()
+    self.OptionList:DownSelectAction()
   end
   return UIUtils.Handled
 end
@@ -86,16 +86,16 @@ function WBP_Simple_PC:CreateCDTimer()
 end
 
 function WBP_Simple_PC:OnPreviewKeyDown(MyGeometry, InKeyEvent)
-  if not self.DialogueButtonListView then
+  if not self.OptionList then
     return UIUtils.Unhandled
   end
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local Handled = true
   if "Gamepad_DPad_Up" == InKeyName then
-    self.DialogueButtonListView:UpSelectAction()
+    self.OptionList:UpSelectAction()
   elseif "Gamepad_DPad_Down" == InKeyName then
-    self.DialogueButtonListView:DownSelectAction()
+    self.OptionList:DownSelectAction()
   end
   return UIUtils.Unhandled
 end

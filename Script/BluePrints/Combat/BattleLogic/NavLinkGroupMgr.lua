@@ -45,14 +45,6 @@ function Component:UnregisterLink(LinkToUnregister)
 end
 
 function Component:SetNavLinkState(GroupId, Enable)
-  for _, Link in ipairs(self.NavLinkGroupList) do
-    local NavLink = Link[#Link]
-    for i, v in pairs(GroupId) do
-      if NavLink.GroupId == v then
-        NavLink:ChangeLinkEnabledState(Enable)
-      end
-    end
-  end
 end
 
 return Component

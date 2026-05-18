@@ -1,16 +1,13 @@
 require("UnLua")
-local NormalTaskNewReddotName = "JJGameTask_Normal_New"
-local NormalRewardReddotName = "JJGameTask_Normal_Reward"
 local EMCache = require("EMCache.EMCache")
+local JJGameModel = require("BluePrints.UI.WBP.ActivityJJGame.JJGameModel")
+local JJGameController = require("BluePrints.UI.WBP.ActivityJJGame.JJGameController")
+local NormalTaskNewReddotName = JJGameModel.NormalTaskNewReddotName
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
 })
-local TaskType = {
-  Daily = {1, 2},
-  Cycle = 3,
-  Achievement = 4
-}
+local TaskType = JJGameModel.TaskType
 
 function M:Construct()
   self.Text_InfinityNum:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -37,6 +34,52 @@ function M:Destruct()
   ReddotManager.RemoveListener(NormalTaskNewReddotName, self)
 end
 
+function M:SyncTaskData()
+  local Model = JJGameController:RefreshModel()
+  self.MidTermGoals = Model.MidTermGoals
+  local Task = Model:GetTaskByTaskId(self.TaskId)
+  if Task then
+    self.TaskProp = Task.Props or Task.TaskProp or Task
+    if self.Content then
+      self.Content.TaskProp = self.TaskProp
+    end
+  end
+  if self.MidTermGoals and self.MidTermGoals.TaskFinishCount then
+    self.TaskFinishCount = self.MidTermGoals.TaskFinishCount[self.TaskId] or 0
+  else
+    self.TaskFinishCount = 0
+  end
+  self.Progress = self.TaskProp and (self.TaskProp.Progress or 0) or 0
+end
+
+function M:RefreshTaskState()
+  if not IsValid(self) or not self.Content then
+    return
+  end
+  self:SyncTaskData()
+  if not self.TaskProp then
+    return
+  end
+  self.Content.CanGet = false
+  local Progress = self.TaskProp.Progress or 0
+  local Target = self.TaskProp.Target or 0
+  local IsFinished = Progress >= Target
+  if self.TaskConfig and self.TaskConfig.TaskType == TaskType.Cycle and self.TaskFinishCount > 0 then
+    IsFinished = true
+  end
+  if IsFinished then
+    self.JumpUIId = nil
+    self.WS_Btn:SetActiveWidgetIndex(3)
+  elseif self.TaskConfig and self.TaskConfig.JumpUIId then
+    self.JumpUIId = self.TaskConfig.JumpUIId
+    self.WS_Btn:SetActiveWidgetIndex(1)
+  else
+    self.JumpUIId = nil
+    self.WS_Btn:SetActiveWidgetIndex(0)
+  end
+  self:UpdateGetRewardNum()
+end
+
 function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.TaskId = Content.Id
@@ -49,36 +92,8 @@ function M:OnListItemObjectSet(Content)
   self._Avatar = GWorld:GetAvatar()
   self.Text_RewardNum:SetText(Content.Point)
   self.Text_Desc:SetText(GText(Content.Desc))
-  self.MidTermGoals = self._Avatar.MidTermGoals[self.MidTermGoalEventId] or {}
-  self.TaskFinishCount = self.MidTermGoals.TaskFinishCount[self.TaskId] or 0
-  self.Progress = self.TaskProp.Progress or 0
-  if self.Progress >= self.TaskProp.Target then
-    if self.TaskProp.RewardsGot then
-      self.WS_Btn:SetActiveWidgetIndex(3)
-    else
-      self.Content.CanGet = true
-      self.WS_Btn:SetActiveWidgetIndex(2)
-    end
-  elseif Content.TaskConfig.JumpUIId then
-    self.WS_Btn:SetActiveWidgetIndex(1)
-    self.JumpUIId = Content.TaskConfig.JumpUIId
-  else
-    self.WS_Btn:SetActiveWidgetIndex(0)
-  end
   if Content.TaskType == TaskType.Cycle then
-    local TaskFinishCount = self.MidTermGoals.TaskFinishCount[self.TaskId] or 0
-    self.Text_InfinityNum:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Image_IconInfinity:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self:UpdateInfinityNum(TaskFinishCount)
-    if TaskFinishCount > 0 then
-      self.Content.CanGet = true
-      self.WS_Btn:SetActiveWidgetIndex(2)
-      if not self.YesterdayRewardGot then
-        self.Btn_CanGet.Btn_GetReward:SetForbidden(true)
-      else
-        self.Btn_CanGet.Btn_GetReward:SetForbidden(false)
-      end
-    end
   else
     local PlayReminder = EMCache:Get("MidTermReminder_" .. self.TaskId, true)
     if not PlayReminder then
@@ -95,7 +110,7 @@ function M:OnListItemObjectSet(Content)
       self.TargetId = Content.TaskConfig.TargetId[1]
     end
   end
-  self:UpdateGetRewardNum()
+  self:RefreshTaskState()
   ReddotManager.AddListenerEx(NormalTaskNewReddotName, self, self.UpdateNormalTaskNewReddot)
   if CommonUtils.GetDeviceTypeByPlatformName() == "Mobile" then
     self:PlayAnimation(self.In)
@@ -103,12 +118,14 @@ function M:OnListItemObjectSet(Content)
 end
 
 function M:BP_OnEntryReleased()
+  if self.Content then
+    self.Content.SelfWidget = nil
+  end
   ReddotManager.RemoveListener(NormalTaskNewReddotName, self)
 end
 
 function M:OnCanGetClicked()
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/wenmingboyi_normal_btn_click", nil, nil)
-  self.JJGameBase:GetTaskReward(self, self.Owner.Owner, self.TaskId)
+  self:RefreshTaskState()
 end
 
 function M:OnControllerClicked()
@@ -123,14 +140,10 @@ function M:OnControllerClicked()
 end
 
 function M:UpdateGetRewardNum()
-  local Avatar = GWorld:GetAvatar()
-  local TaskProp = self.TaskProp
-  local Progress = TaskProp.Progress or 0
-  local Target = TaskProp.Target or 0
-  local Num = tostring(Progress) .. "/" .. tostring(Target)
-  self.Text_GetRewardNum:SetText(Num)
-  self.Text_DoingNum:SetText(Num)
-  self.Text_JumpNum:SetText(Num)
+  if not IsValid(self) or not self.TaskProp then
+    return
+  end
+  JJGameController:UpdateTaskProgressTexts(self, self.TaskProp)
 end
 
 function M:UpdateInfinityNum(finishCount)
@@ -140,26 +153,25 @@ function M:UpdateInfinityNum(finishCount)
 end
 
 function M:OnJumpClicked()
-  PageJumpUtils:JumpToTargetPageByJumpId(self.JumpUIId)
+  JJGameController:JumpToTask(self.JumpUIId)
 end
 
 function M:OnAchvFinished(TaskId)
+  if not IsValid(self) then
+    return
+  end
   if TaskId == self.TaskId then
-    self.Content.CanGet = true
-    self.WS_Btn:SetActiveWidgetIndex(2)
-    DebugPrint("任务", self.TaskId, "已完成，可以领取奖励")
-    self:UpdateGetRewardNum()
-    if self.Content.TaskType == TaskType.Cycle then
-      self:AddTimer(0.1, function()
-        self:UpdateInfinityNum(self.Avatar.MidTermTasksRecord[self.TaskId].FinishCount)
-      end)
-    end
+    self:RefreshTaskState()
+    DebugPrint("任务", self.TaskId, "已完成，积分已自动领取")
   end
 end
 
 function M:OnMidTermTaskProgressChange(TaskId, Progress)
+  if not IsValid(self) then
+    return
+  end
   if TaskId == self.TaskId then
-    self:UpdateGetRewardNum()
+    self:RefreshTaskState()
   end
 end
 
@@ -178,29 +190,10 @@ function M:RefreshBaseInfo()
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
-  self.CurGamepadName = CurGamepadName
-  local IsUseGamepad = CurInputDevice == ECommonInputType.Gamepad
-  if IsUseGamepad then
-    self.Btn_Controller:SetVisibility(UIConst.VisibilityOp.Visible)
-    self:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    if self:HasAnyUserFocus() or self:HasFocusedDescendants() then
-      self:PlayAnimation(self.Hover)
-    end
-  else
-    self.Btn_Controller:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
-    self:SetVisibility(UIConst.VisibilityOp.Visible)
-    self:StopAnimation(self.Hover)
-    self:PlayAnimation(self.Normal)
-  end
-  self.CurInputDevice = CurInputDevice
+  JJGameController:RefreshTaskOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  local IsEventHandled = false
-  if "Gamepad_FaceButton_Bottom" == InKeyName then
-  end
   return UE4.UWidgetBlueprintLibrary.Unhandled()
 end
 
@@ -230,7 +223,7 @@ function M:OnRemovedFromFocusPath(InFocusEvent)
 end
 
 function M:UpdateNormalTaskNewReddot(Count)
-  if not self.TaskProp then
+  if not IsValid(self) or not self.TaskProp then
     return
   end
   local CacheKey = self.TaskProp.UniqueID or ""

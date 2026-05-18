@@ -5,14 +5,14 @@ local M = Class({
 local ChallengeRewardReddotName = "JJGameTask_Challenge_Reddot"
 
 function M:Construct()
-  self.CacheKey = "ChallengeScoreItem" .. self.Count
   self.Btn_Click.OnClicked:Add(self, self.OnClick)
-  ReddotManager.AddListenerEx(ChallengeRewardReddotName, self, self.UpdateChallengeReddot)
 end
 
 function M:Destruct()
   self.Btn_Click.OnClicked:Clear()
-  ReddotManager.RemoveListener(ChallengeRewardReddotName, self)
+  if self.CacheKey then
+    ReddotManager.RemoveListener(ChallengeRewardReddotName, self)
+  end
 end
 
 function M:Init(Params)
@@ -26,6 +26,7 @@ function M:Init(Params)
   self.Text_Score:SetText(Params.Count)
   self.MidTermConst = DataMgr.MidTermGoalConstant
   self.MidTermGoalEventId = self.MidTermConst.MidTermGoalEventId.ConstantValue
+  ReddotManager.AddListenerEx(ChallengeRewardReddotName, self, self.UpdateChallengeReddot)
 end
 
 function M:UpdateChallengeReddot(Count)

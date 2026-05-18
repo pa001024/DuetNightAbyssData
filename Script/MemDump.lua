@@ -7,11 +7,11 @@ function MemDump:GetCurrentDir()
   return path
 end
 
-MemDump.file = io.open(MemDump:GetCurrentDir() .. "/MemDump_" .. os.time() .. ".txt", "w+")
 MemDump.NextLine = "\n"
-io.output(MemDump.file)
-io.write("CurrentLuaMemory(KBytes): " .. collectgarbage("count") .. MemDump.NextLine)
-io.write("Global" .. MemDump.NextLine)
+MemDump.OutputLines = {
+  "CurrentLuaMemory(KBytes): " .. collectgarbage("count"),
+  "Global"
+}
 
 function MemDump:Dump(Table, Level)
   Level = Level or 1
@@ -27,13 +27,13 @@ function MemDump:Dump(Table, Level)
     for k, v in pairs(Table) do
       if type(v) ~= "function" then
         local out = Prefix .. "[key]" .. k .. " [value]" .. "[" .. type(v) .. "]" .. tostring(v)
-        io.write(out .. self.NextLine)
+        table.insert(self.OutputLines, out)
         if type(v) == "table" and not self:CheckTable(v) then
           self:Dump(v, Level + 1)
         end
       end
     end
-    io.write(self.NextLine)
+    table.insert(self.OutputLines, "")
     self:MarkTable(Table)
   end)
 end
@@ -54,4 +54,6 @@ function MemDump:CheckTable(Table)
 end
 
 MemDump:Dump(_G)
-io.close(MemDump.file)
+local content = table.concat(MemDump.OutputLines, MemDump.NextLine)
+local filePath = MemDump:GetCurrentDir() .. "/MemDump_" .. os.time() .. ".txt"
+UE4.URuntimeCommonFunctionLibrary.SaveFile(filePath, content)

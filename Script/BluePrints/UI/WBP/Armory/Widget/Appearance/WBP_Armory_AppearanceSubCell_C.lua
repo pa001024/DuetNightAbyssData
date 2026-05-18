@@ -36,6 +36,10 @@ function M:OnListItemObjectSet(Content)
   self:SetRarity(Content.Rarity)
   self:SetReddot(Content.IsNew)
   self.IsCharacterTrialMode = Content.IsCharacterTrialMode
+  self.IsTargetUnowned = Content.IsTargetUnowned == true
+  if Content.IsPreviewMode and Content.IsTargetUnowned == true then
+    self:RefreshUnownedState()
+  end
   self:InitButton()
 end
 
@@ -118,6 +122,12 @@ function M:InitButton()
   else
     self.Button_Area:SetIsEnabled(true)
   end
+end
+
+function M:RefreshUnownedState()
+  local IsUnowned = self.IsPreviewMode and self.IsTargetUnowned
+  self.Panel_NotHeld:SetVisibility(IsUnowned and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  self.Text_NotHeld:SetText(GText("UI_AppearanceScore_NotHold"))
 end
 
 function M:SetSelect()

@@ -80,15 +80,28 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionType = "ExploreGroup"
   },
+  FinishAbyss = {
+    ConditionLogic = "S",
+    ConditionType = "FinishAbyss"
+  },
   FollowCommunityComplete = {
     ConditionLogic = "S",
     ConditionType = "FollowCommunityComplete"
   },
+  ForgeLevel = {ConditionLogic = "S", ConditionType = "ForgeLevel"},
   GachaCount = {ConditionLogic = "S", ConditionType = "GachaCount"},
+  GuildLevelMin = {
+    ConditionLogic = "S",
+    ConditionType = "GuildLevelMin"
+  },
   HardBossComplete = {
     AutoTrigger = true,
     ConditionLogic = "S",
     ConditionType = "HardBossComplete"
+  },
+  HasModLevel = {
+    ConditionLogic = "S",
+    ConditionType = "HasModLevel"
   },
   HaveGotSoloTreasureScore = {
     ConditionLogic = "S",
@@ -106,6 +119,10 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionType = "HaveResourceSType"
   },
+  HyperCardLevel = {
+    ConditionLogic = "S",
+    ConditionType = "HyperCardLevel"
+  },
   ImprShopUnlock = {
     AutoTrigger = true,
     ConditionLogic = "S",
@@ -120,6 +137,11 @@ return ReadOnly("ConditionText", {
     AutoTrigger = true,
     ConditionLogic = "S",
     ConditionType = "InDungeon"
+  },
+  InGuild = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "InGuild"
   },
   InHardBossDifficulty = {
     AutoTrigger = true,
@@ -143,6 +165,11 @@ return ReadOnly("ConditionText", {
     ConditionType = "IsSpecialQuest"
   },
   LoginDay = {ConditionLogic = "S", ConditionType = "LoginDay"},
+  LoginEventFinish = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "LoginEventFinish"
+  },
   MechanismState = {
     AutoTrigger = true,
     ConditionLogic = "DS",
@@ -152,6 +179,10 @@ return ReadOnly("ConditionText", {
     AutoTrigger = true,
     ConditionLogic = "S",
     ConditionType = "OwnCharIdAndLevel"
+  },
+  PermRewardCollectionFinish = {
+    ConditionLogic = "S",
+    ConditionType = "PermRewardCollectionFinish"
   },
   PhaseQuestEnd = {
     ConditionLogic = "S",
@@ -231,6 +262,10 @@ return ReadOnly("ConditionText", {
     ConditionLogic = "S",
     ConditionType = "RougeLikePreRoom"
   },
+  StarterQuestFinish = {
+    ConditionLogic = "S",
+    ConditionType = "StarterQuestFinish"
+  },
   SubRegionType = {
     AutoTrigger = true,
     ConditionLogic = "S",
@@ -247,6 +282,11 @@ return ReadOnly("ConditionText", {
   TimeArrived = {
     ConditionLogic = "S",
     ConditionType = "TimeArrived"
+  },
+  TrialEventFinish = {
+    AutoTrigger = true,
+    ConditionLogic = "S",
+    ConditionType = "TrialEventFinish"
   },
   TrueQuest = {
     AutoTrigger = true,

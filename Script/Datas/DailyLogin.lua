@@ -84,5 +84,69 @@ return ReadOnly("DailyLogin", {
     EventReward = T.RT_1,
     LoginDuration = 7,
     RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Kami/WBP_Activity_SevenDayItems_Kami.WBP_Activity_SevenDayItems_Kami"
+  },
+  [101012] = {
+    EventId = 101012,
+    EventReward = T.RT_1,
+    LoginDuration = 7,
+    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Fuluo/WBP_Activity_SevenDayItems_Fuluo.WBP_Activity_SevenDayItems_Fuluo"
+  },
+  [101013] = {
+    EventId = 101013,
+    EventReward = T.RT_1,
+    LoginDuration = 7,
+    RewardBannerBP = "/Game/UI/WBP/Activity/Widget/SevenDay/Xier/WBP_Activity_SevenDayItems_Xier.WBP_Activity_SevenDayItems_Xier"
+  },
+  [101014] = {
+    BigRewardDays = {
+      {
+        [2] = 10101402
+      },
+      {
+        [3] = 10101403
+      },
+      {
+        [4] = 10101404
+      },
+      {
+        [7] = 10101407
+      },
+      {
+        [9] = 10101409
+      },
+      {
+        [11] = 10101411
+      },
+      {
+        [13] = 10101413
+      },
+      {
+        [14] = 10101414
+      }
+    },
+    EventId = 101014,
+    EventReward = {
+      10101401,
+      10101402,
+      10101403,
+      10101404,
+      10101405,
+      10101406,
+      10101407,
+      10101408,
+      10101409,
+      10101410,
+      10101411,
+      10101412,
+      10101413,
+      10101414
+    },
+    LoginDuration = 14,
+    RewardBannerBP = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/14DaySign/WBP_Activity_14DaySign_Items.WBP_Activity_14DaySign_Items'"
+  },
+  [101015] = {
+    EventId = 101015,
+    EventReward = T.RT_2,
+    LoginDuration = 5
   }
 })

@@ -1,4 +1,5 @@
 require("UnLua")
+local PageJumpUtils = PageJumpUtils or require("Utils.PageJumpUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -143,6 +144,17 @@ function M:BindEventOnClicked(obj, event)
   self.Event_OnClick = event
 end
 
+function M:TryCloseOwnerCommonDialogBeforeJumpToShop()
+  local ResourceBarHost = rawget(self, "ResourceBarHost")
+  if not ResourceBarHost then
+    return
+  end
+  local HostCommonDialog = rawget(ResourceBarHost, "HostCommonDialog")
+  if IsValid(HostCommonDialog) and type(HostCommonDialog.Close) == "function" then
+    HostCommonDialog:Close()
+  end
+end
+
 function M:OnBtnClicked()
   if self.Event_OnClick then
     self.Event_OnClick(self.Obj_OnClick)
@@ -187,6 +199,10 @@ function M:OnBtnClicked()
         }
       })
     end
+  elseif 99 == self.Id then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+    self:TryCloseOwnerCommonDialogBeforeJumpToShop()
+    PageJumpUtils:JumpToShopPage(110, 1101, nil, "Shop")
   end
 end
 

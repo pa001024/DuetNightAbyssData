@@ -46,6 +46,21 @@ function BP_FallTrigger_C:OverlapChangeNotify(bIsOverlapNow)
   EventManager:FireEvent(EventID.EdgeFalltrigerChangeOverlapState, bIsOverlapNow)
 end
 
+function BP_FallTrigger_C:CheckOverlappingPlayer()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  if not GameMode then
+    return
+  end
+  local Players = GameMode:GetAllPlayer()
+  for _, Player in pairs(Players) do
+    local CapsuleComponent = Player.CapsuleComponent
+    local IsOverlapping = self.CollisionComponent:IsOverlappingComponent(CapsuleComponent)
+    if IsOverlapping then
+      self:OnOverlapActor(Player, CapsuleComponent)
+    end
+  end
+end
+
 function BP_FallTrigger_C:VignetteBegin(Player, Component)
   self.InRange = true
   if not Player.InEdgeTimer then

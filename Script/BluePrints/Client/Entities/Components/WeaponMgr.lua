@@ -267,4 +267,77 @@ function Component:TakeOffAllWeaponMod(InCallbackInfo, WeaponUuid, ModSuitIndex)
   self:CallServer("TakeOffAllWeaponMod", Callback, WeaponUuid, ModSuitIndex)
 end
 
+function Component:WeaponHyperLevelUp(InCallback, WeaponUuid)
+  self.logger.debug("WeaponHyperLevelUp", CommonUtils.ObjId2Str(WeaponUuid))
+  
+  local function callback(Ret)
+    self.logger.debug("WeaponHyperLevelUp, Ret", Ret, CommonUtils.ObjId2Str(WeaponUuid))
+    EventManager:FireEvent(EventID.OnWeaponGradeLevelUp, Ret, WeaponUuid)
+    if Ret then
+      self:OnHyperCardLevelChanged(WeaponUuid)
+    end
+    if InCallback then
+      InCallback(Ret)
+    end
+  end
+  
+  self:CallServer("WeaponHyperLevelUp", callback, WeaponUuid)
+end
+
+function Component:OnHyperCardLevelChanged(WeaponUuid)
+  local Weapon = self.Weapons and self.Weapons[WeaponUuid]
+  if not Weapon then
+    return
+  end
+  local Character = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
+  if not Character then
+    return
+  end
+  local WeaponBase = Character:GetWeapon(Weapon.WeaponId)
+  if not WeaponBase or not WeaponBase:IsHyperWeapon() then
+    return
+  end
+  WeaponBase:Server_SetHyperWeaponLevel(Weapon.HyperCardLevel or 0)
+end
+
+function Component:WeaponForgeLevelUp(InCallback)
+  self.logger.debug("WeaponForgeLevelUp")
+  
+  local function callback(Ret, Rewards)
+    self.logger.debug("WeaponForgeLevelUp, Ret", Ret)
+    EventManager:FireEvent(EventID.OnHyperWeaponForgeLevelUp, Ret, WeaponUuid)
+    if InCallback then
+      InCallback(Ret, Rewards)
+    end
+  end
+  
+  self:CallServer("WeaponForgeLevelUp", callback)
+end
+
+function Component:WeaponForgeQuestGetReward(InCallback, QuestId)
+  self.logger.debug("WeaponForgeQuestGetReward", QuestId)
+  
+  local function callback(Ret, Rewards)
+    self.logger.debug("WeaponForgeQuestGetReward, Ret", Ret, QuestId)
+    if InCallback then
+      InCallback(Ret, Rewards)
+    end
+  end
+  
+  self:CallServer("WeaponForgeQuestGetReward", callback, QuestId)
+end
+
+function Component:WeaponUnlockHyperTalent(InCallback, WeaponUuid, TalentId)
+  self.logger.debug("WeaponUnlockHyperTalent", CommonUtils.ObjId2Str(WeaponUuid), TalentId)
+  
+  local function callback(Ret)
+    self.logger.debug("WeaponUnlockHyperTalent, Ret", Ret, CommonUtils.ObjId2Str(WeaponUuid), TalentId)
+    if InCallback then
+      InCallback(Ret)
+    end
+  end
+  
+  self:CallServer("WeaponUnlockHyperTalent", callback, WeaponUuid, TalentId)
+end
+
 return Component

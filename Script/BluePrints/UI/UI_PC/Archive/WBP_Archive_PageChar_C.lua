@@ -6,6 +6,7 @@ WBP_Archive_PageChar_C._components = {
   "BluePrints.UI.UI_PC.Common.HorizontalListViewResizeComp"
 }
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
+local NumberModel = require("BluePrints.UI.UI_PC.Archive.WBP_Archive_Number_Model")
 
 function WBP_Archive_PageChar_C:Construct()
   self.Super.Construct(self)
@@ -214,37 +215,34 @@ end
 function WBP_Archive_PageChar_C:GetCharacterData(TabId)
   local Avatar = GWorld:GetAvatar()
   local Sex = Avatar.Sex or 0
+  self.AllCharacterIds = {}
   local PlayerCharacterIds = {}
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
-  if not self.AllCharacterIds then
-    self.AllCharacterIds = {}
-    for Id, Data in pairs(DataMgr.Char) do
-      if not Data.IsNotOpen and (not Data.ReleaseVersion or CurrentVersion >= Data.ReleaseVersion) then
-        table.insert(self.AllCharacterIds, Data.CharId)
-        if Data.GenderTag and Data.GenderTag == Sex then
-          PlayerCharacterIds[Data.CharId] = 0
-        end
+  for Id, Data in pairs(DataMgr.Char) do
+    if not Data.IsNotOpen and (not Data.ReleaseVersion or CurrentVersion >= Data.ReleaseVersion) then
+      table.insert(self.AllCharacterIds, Data.CharId)
+      if Data.GenderTag and Data.GenderTag == Sex then
+        PlayerCharacterIds[Data.CharId] = 0
       end
     end
   end
   self.ListDatas = {}
   local ArchiveList = {}
   local CharsInfo = {}
+  local CurrentMainCharacterId = Const.DefaultAttributeMaster[Sex]
   if Avatar then
     ArchiveList = Avatar.Archives[self.Type].ArchiveList or {}
     CharsInfo = Avatar.Chars or {}
-  end
-  local CharId2CharInfo = {}
-  local Flag = false
-  for Uuid, CharInfo in pairs(CharsInfo) do
-    CharId2CharInfo[CharInfo.CharId] = CharInfo
-    if PlayerCharacterIds[CharInfo.CharId] then
-      Flag = true
-      PlayerCharacterIds[CharInfo.CharId] = 1
+    if Avatar.CharacterAttributeSwitch and Avatar.CharacterAttributeSwitch[Sex] then
+      CurrentMainCharacterId = Avatar.CharacterAttributeSwitch[Sex]
     end
   end
-  if not Flag then
-    PlayerCharacterIds[Const.DefaultAttributeMaster[Sex]] = 1
+  local CharId2CharInfo = {}
+  for Uuid, CharInfo in pairs(CharsInfo) do
+    CharId2CharInfo[CharInfo.CharId] = CharInfo
+  end
+  if PlayerCharacterIds[CurrentMainCharacterId] then
+    PlayerCharacterIds[CurrentMainCharacterId] = 1
   end
   for Index, Id in pairs(self.AllCharacterIds) do
     local Data = DataMgr.Char[Id]
@@ -265,11 +263,12 @@ function WBP_Archive_PageChar_C:GetCharacterData(TabId)
 end
 
 function WBP_Archive_PageChar_C:GetMeleeData(TabId)
+  local ShowHyperWeapon = NumberModel:CheckHyperWeaponCanShow()
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   if not self.AllMeleeIds then
     self.AllMeleeIds = {}
     for _, Info in pairs(DataMgr.Weapon) do
-      if not Info.IsNotOpen and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) and self:DoesWeaponHaveTag(Info.WeaponId, "Melee") then
+      if (Info.WeaponSubType ~= "Hyper" or ShowHyperWeapon) and not Info.IsNotOpen and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) and self:DoesWeaponHaveTag(Info.WeaponId, "Melee") then
         table.insert(self.AllMeleeIds, Info.WeaponId)
       end
     end
@@ -301,11 +300,12 @@ function WBP_Archive_PageChar_C:GetMeleeData(TabId)
 end
 
 function WBP_Archive_PageChar_C:GetRangedData(TabId)
+  local ShowHyperWeapon = NumberModel:CheckHyperWeaponCanShow()
   local CurrentVersion = DataMgr.GlobalConstant.CurrentVersion.ConstantValue
   if not self.AllRangedIds then
     self.AllRangedIds = {}
     for _, Info in pairs(DataMgr.Weapon) do
-      if not Info.IsNotOpen and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) and self:DoesWeaponHaveTag(Info.WeaponId, "Ranged") then
+      if (Info.WeaponSubType ~= "Hyper" or ShowHyperWeapon) and not Info.IsNotOpen and (not Info.ReleaseVersion or CurrentVersion >= Info.ReleaseVersion) and self:DoesWeaponHaveTag(Info.WeaponId, "Ranged") then
         table.insert(self.AllRangedIds, Info.WeaponId)
       end
     end

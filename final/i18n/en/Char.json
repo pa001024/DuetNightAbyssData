@@ -621,6 +621,522 @@
     ]
   },
   {
+    "id": 1102,
+    "icon": "Fuluo",
+    "名称": "Flora",
+    "版本": "1.4",
+    "别名": "Mutinous Inflorescence",
+    "出生地": "Hyperborean Empire",
+    "势力": "The Hyperborean Royal Family",
+    "生日": "04-28",
+    "中文CV": "刘雯",
+    "日文CV": "原由実",
+    "英文CV": "Rachel Hurd-Wood",
+    "韩文CV": "김가령",
+    "阵营": "The Hyperborean Empire",
+    "属性": "暗",
+    "精通": [
+      "Sword",
+      "Assault Rifle"
+    ],
+    "标签": [
+      "DPS",
+      "Weapon DMG"
+    ],
+    "基础攻击": 26,
+    "基础生命": 130,
+    "基础防御": 350,
+    "基础护盾": 130,
+    "基础神智": 180,
+    "加成": {
+      "Morale": 0.15,
+      "Weapon CRIT Chance": 0.5
+    },
+    "突破": [
+      {
+        "Coin": 4160,
+        "Filthoid Clot": 10,
+        "Rust-Etched Dagger": 5
+      },
+      {
+        "Coin": 8320,
+        "Statue Debris": 5,
+        "Obsidian Key": 7
+      },
+      {
+        "Coin": 13040,
+        "Statue Debris": 10,
+        "Obsidian Key": 15
+      },
+      {
+        "Coin": 27760,
+        "Statue Debris": 20,
+        "Tome of the Noclunism Ritual": 6
+      },
+      {
+        "Coin": 65280,
+        "Statue Debris": 40,
+        "Tome of the Noclunism Ritual": 12
+      },
+      {
+        "Coin": 194400,
+        "Statue Debris": 80,
+        "Tome of the Noclunism Ritual": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 110201,
+        "名称": "Petal Pirouette",
+        "类型": "DMG",
+        "描述": "Tap to perform [Petit Pas], dealing Umbro DMG to enemies ahead. This counts as Melee Weapon DMG and grants {int}10 stacks of [Symphony].\nHold to perform [Grand Jeté]. Release to end the skill early. Dash forward, dealing Umbro AoE DMG up to 5 times along the path. This counts as Melee Weapon DMG and grants {int}10 stacks of [Symphony].\n[Symphony] stacks up to {int}30 times. At max stacks, performing [Petit Pas] or [Grand Jeté] consumes no Sanity.",
+        "icon": "FuLuo01",
+        "实体": [
+          {
+            "id": 110212,
+            "时长": 0.25
+          },
+          {
+            "id": 110213,
+            "时长": 0.25
+          }
+        ],
+        "字段": [
+          {
+            "名称": "[Petit Pas]Sanity Cost",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Grand Jeté]DMG",
+            "值": [
+              0.24,
+              0.3,
+              0.36,
+              0.42,
+              0.48,
+              0.54,
+              0.6,
+              0.66,
+              0.72,
+              0.78,
+              0.84,
+              0.9
+            ],
+            "格式": "{%}×2",
+            "削韧": 25
+          },
+          {
+            "名称": "[Grand Jeté]DMG Radius",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Grand Jeté]Sanity Cost",
+            "影响": "技能效益",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "[Symphony]DMG",
+            "值": [
+              0.24,
+              0.3,
+              0.36,
+              0.42,
+              0.48,
+              0.54,
+              0.6,
+              0.66,
+              0.72,
+              0.78,
+              0.84,
+              0.9
+            ],
+            "格式": "{%}×5",
+            "削韧": 25
+          },
+          {
+            "名称": "[Symphony]DMG Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Symphony]DMG",
+            "值": [
+              0.18,
+              0.23,
+              0.28,
+              0.33,
+              0.38,
+              0.43,
+              0.48,
+              0.53,
+              0.58,
+              0.63,
+              0.68,
+              0.73
+            ]
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Symphony": "When a Normal Attack hits an enemy for the first time, consume 1 stack of [Symphony] to deal additional Umbro AoE DMG once in front of the character. This counts as Melee Weapon DMG.\nAfter casting [Finale], consume 5 stacks of [Symphony] to trigger additional Umbro AoE DMG 5 times around the character. This counts as Melee Weapon DMG."
+        },
+        "子技能": [
+          {
+            "id": 110211,
+            "类型": "DMG",
+            "icon": "FuLuo01",
+            "实体": [
+              {
+                "id": 110212,
+                "时长": 0.25
+              },
+              {
+                "id": 110213,
+                "时长": 0.25
+              }
+            ],
+            "名称": "Symphony"
+          }
+        ]
+      },
+      {
+        "id": 110202,
+        "名称": "Blossom Ball",
+        "类型": "Buff",
+        "描述": "Creates a [Blossom Ball] field that follows the caster. [Blossom Ball] continuously consumes Sanity, and ends when Sanity reaches 0 or when this skill is cast again. When the field ends, all [Thorns] are removed.\nWhile [Blossom Ball] is active, increases Melee Weapon CRIT DMG, grants Hitstun immunity, and triggers [Waltz] once per second.",
+        "icon": "Fuluo02_On",
+        "cd": 3,
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 20,
+            "格式": "{}"
+          },
+          {
+            "名称": "Sanity Cost per second",
+            "影响": "技能效益,技能耐久",
+            "值": 30,
+            "格式": "{}"
+          },
+          {
+            "名称": "CRIT Damage Boost",
+            "影响": "技能威力",
+            "值": 0.8
+          },
+          {
+            "名称": "[Blossom Ball] Radius",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Waltz]Path DMG",
+            "值": [
+              1.55,
+              1.9,
+              2.25,
+              2.6,
+              2.95,
+              3.3,
+              3.65,
+              4,
+              4.35,
+              4.7,
+              5.05,
+              5.4
+            ],
+            "削韧": 15
+          },
+          {
+            "名称": "[Waltz]Path DMG Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Waltz": "Consume 1 stack of [Reprise] to summon a doll at the edge of the field. The doll then dashes forward at high speed, dealing Umbro DMG to enemies in its path. This counts as Melee Weapon DMG. Gain 1 stack of [Thorns], up to 12 stacks.\nIf [Reprise] is not active, or while casting [Finale], gain 1 stack of [Reprise] instead."
+        },
+        "子技能": [
+          {
+            "id": 110221,
+            "类型": "Buff",
+            "icon": "Fuluo02_Off",
+            "cd": 3,
+            "名称": "Waltz"
+          }
+        ]
+      },
+      {
+        "id": 110203,
+        "名称": "Invitation of Blossoms",
+        "类型": "Passive",
+        "描述": "When Melee Weapon DMG dealt by the caster lands a CRIT, the target becomes a [Courtly Marionette], and the caster gains 1 stack of [Reprise], up to {int}42 stacks. This effect can grant [Reprise] only once at regular intervals.\nWhen the target has 6 or more stacks of [Thorns], the caster's Melee Weapon Charged Attack is replaced with [Finale].",
+        "icon": "FuLuo03",
+        "字段": [
+          {
+            "名称": "[Reprise] Cooldown",
+            "值": 1,
+            "格式": "{}s/Melee Weapon ATK Speed"
+          },
+          {
+            "名称": "[Courtly Marionette] Duration",
+            "影响": "技能耐久",
+            "值": 6,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[Finale]Charged Attack DMG",
+            "值": [
+              0.99,
+              1.2,
+              1.41,
+              1.62,
+              1.83,
+              2.04,
+              2.25,
+              2.46,
+              2.67,
+              2.88,
+              3.09,
+              3.3
+            ],
+            "值2": [
+              0.07,
+              0.08,
+              0.09,
+              0.1,
+              0.11,
+              0.12,
+              0.13,
+              0.14,
+              0.15,
+              0.16,
+              0.17,
+              0.18
+            ],
+            "格式": "{%}+{%}× [Thorns] Stacks",
+            "削韧": 25
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1400,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2600,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 3200,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 7300,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 9000,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 30000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 47000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 90000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 170000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "Courtly Marionette": "Units turned into [Courtly Marionettes] cannot act and are treated as being under a control effect.",
+          "Finale": "Consume all [Thorns] stacks to deal Umbro AoE DMG. The damage multiplier increases based on the number of stacks consumed. This counts as Melee Weapon DMG of a Charged Attack."
+        }
+      },
+      {
+        "id": 110204,
+        "名称": "Entranced",
+        "类型": "Passive",
+        "描述": "Each stack of [Symphony] or [Reprise] consumed restores {int}1 Sanity.",
+        "icon": "ExtraPassive"
+      },
+      {
+        "id": 110003,
+        "名称": "Scales of Justice",
+        "类型": "Support",
+        "描述": "[Available only when deployed as a Combat Partner]\n Increases ATK for self and Umbro allies.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "ATK Boost",
+            "值": 0.5
+          }
+        ]
+      }
+    ],
+    "溯源": [
+      "Casting [Petit Pas] or [Grand Jeté] grants an additional 5 stack of [Symphony]. Each stack of [Symphony] consumed grants 1 stack of [Reprise]. While [Symphony] is active, Melee Weapon CRIT Rate increases by 75%.",
+      "[Invitation of Blossoms] can now grant up to 2 stacks of [Reprise] per trigger. For every 6 stacks of [Reprise] the caster has, [Waltz]'s cooldown is reduced by 0.1s, down to a minimum of 0.5s.",
+      "[Petal Pirouette] Level +2, [Invitation of Blossoms] Level +1.",
+      "Sanity restored by [Entranced] increases to 3, and gains 2 additional Combo Points.",
+      "[Blossom Ball] Level +2, [Invitation of Blossoms] Level +1.",
+      "During [Blossom Ball], PEN stats increase by 30%. When casting [Finale], if [Thorns] is not at 12 stacks, immediately consume an equal number of [Reprise] stacks to make up the difference.\nAfter casting [Finale], immediately trigger [Waltz] 5 times. These triggers are treated as though [Reprise] is active and do not consume [Reprise]."
+    ],
+    "碎片": 1001102,
+    "专武": 10107
+  },
+  {
     "id": 1103,
     "icon": "Tuosi",
     "名称": "Phantasio",
@@ -1285,6 +1801,501 @@
       "[Presto] grants an additional 90% Morale Increase. When [Duo]'s [Immersion] is triggered, extends [Presto]'s duration by 0.2s."
     ],
     "碎片": 1001103
+  },
+  {
+    "id": 1201,
+    "icon": "Nvzhu02",
+    "名称": "主角-暗",
+    "版本": "1.0",
+    "别名": "UI_CHAR_SUBTITLE_1201",
+    "阵营": "No Affiliation",
+    "属性": "暗",
+    "精通": [
+      "Sword",
+      "Assault Rifle"
+    ],
+    "标签": [
+      "DPS",
+      "Weapon DMG"
+    ],
+    "基础攻击": 20,
+    "基础生命": 100,
+    "基础防御": 300,
+    "基础护盾": 100,
+    "基础神智": 150,
+    "加成": {
+      "ATK": 0.5,
+      "Skill Duration": 0.15
+    },
+    "突破": [
+      {
+        "Coin": 5200,
+        "Filthoid Clot": 10,
+        "Rust-Etched Dagger": 5
+      },
+      {
+        "Coin": 10400,
+        "Statue Debris": 5,
+        "Obsidian Key": 7
+      },
+      {
+        "Coin": 16300,
+        "Statue Debris": 10,
+        "Obsidian Key": 15
+      },
+      {
+        "Coin": 34700,
+        "Statue Debris": 20,
+        "Tome of the Noclunism Ritual": 6
+      },
+      {
+        "Coin": 81600,
+        "Statue Debris": 40,
+        "Tome of the Noclunism Ritual": 12
+      },
+      {
+        "Coin": 243000,
+        "Statue Debris": 80,
+        "Tome of the Noclunism Ritual": 25
+      }
+    ],
+    "技能": [
+      {
+        "id": 120101,
+        "名称": "Nightwalk",
+        "类型": "DMG",
+        "描述": "Deals Umbro DMG to nearby enemies and summons a [Tenebrous Hand]. If a [Tenebrous Hand] already exists, it attacks once, dealing Umbro AoE DMG.",
+        "icon": "AnZhu01",
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 50,
+            "格式": "{}"
+          },
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": [
+              3.6,
+              4.4,
+              5.2,
+              6,
+              6.8,
+              7.6,
+              8.4,
+              9.2,
+              10,
+              10.8,
+              11.6,
+              12.4
+            ],
+            "削韧": 50
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 3,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Tenebrous Hand] DMG",
+            "影响": "技能威力",
+            "值": [
+              9,
+              11,
+              13,
+              15,
+              17,
+              19,
+              21,
+              23,
+              25,
+              27,
+              29,
+              31
+            ],
+            "削韧": 50
+          },
+          {
+            "名称": "[Tenebrous Hand] DMG Radius",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ]
+      },
+      {
+        "id": 120102,
+        "名称": "Hymn of the Misty Sea",
+        "类型": "DMG",
+        "描述": "Deals Umbro DMG to nearby enemies, consumes HP to heal other allies, and applies [Calling] to the caster and allies.\nIf a [Tenebrous Hand] already exists, it attacks once, dealing Umbro AoE DMG. The caster and allies also gain Combo Points, then the [Tenebrous Hand] is removed.\nThis skill is unavailable below 30% HP.",
+        "icon": "AnZhu02",
+        "cd": 5,
+        "实体": [
+          {
+            "id": 120121,
+            "时长": 10,
+            "特效循环间隔": 1
+          }
+        ],
+        "字段": [
+          {
+            "名称": "Sanity Cost",
+            "影响": "技能效益",
+            "值": 100,
+            "格式": "{}"
+          },
+          {
+            "名称": "HP Drain",
+            "值": 0.12,
+            "格式": "{%}Max HP"
+          },
+          {
+            "名称": "Healing",
+            "影响": "技能威力",
+            "值": 0.06,
+            "格式": "{%}Max HP"
+          },
+          {
+            "名称": "DMG",
+            "影响": "技能威力",
+            "值": [
+              7.2,
+              8.8,
+              10.4,
+              12,
+              13.6,
+              15.2,
+              16.8,
+              18.4,
+              20,
+              21.6,
+              23.2,
+              24.8
+            ],
+            "削韧": 100
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "[Tenebrous Hand] DMG",
+            "影响": "技能威力",
+            "值": [
+              18.24,
+              22.28,
+              26.32,
+              30.36,
+              34.4,
+              38.44,
+              42.48,
+              46.52,
+              50.56,
+              54.6,
+              58.64,
+              62.68
+            ],
+            "削韧": 60
+          },
+          {
+            "名称": "[Tenebrous Hand] DMG Radius",
+            "影响": "技能范围",
+            "值": 10,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Combo Point Increase",
+            "值": 120,
+            "格式": "{}"
+          },
+          {
+            "名称": "[[Calling]]Duration",
+            "影响": "技能耐久",
+            "值": 16,
+            "格式": "{}s"
+          },
+          {
+            "名称": "[[Calling]]Additional DMG Multiplier",
+            "值": [
+              0.07,
+              0.09,
+              0.11,
+              0.13,
+              0.15,
+              0.17,
+              0.19,
+              0.21,
+              0.23,
+              0.25,
+              0.27,
+              0.29
+            ]
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ],
+        "术语解释": {
+          "[Calling]": "Deals additional Umbro Damage"
+        }
+      },
+      {
+        "id": 120103,
+        "名称": "Soul Refrain",
+        "类型": "Passive",
+        "描述": "While a [Tenebrous Hand] is present, every 8 Melee Normal Attacks cause it to attack once and restore the caster's HP. This attack deals Umbro AoE DMG and counts as Normal Attack DMG. This effect can trigger at most once every 2s.\nThe caster does not lose Combo Points when casting skills or performing Ranged Attacks, and their Combo Duration is increased.\nWhen the caster consumes Combo Points with a Charged Attack, grants Combo Points to other allies based on the amount consumed.",
+        "icon": "AnZhu03",
+        "字段": [
+          {
+            "名称": "[Tenebrous Hand] DMG",
+            "值": [
+              2.34,
+              2.85,
+              3.36,
+              3.87,
+              4.38,
+              4.89,
+              5.4,
+              5.91,
+              6.42,
+              6.93,
+              7.44,
+              7.95
+            ],
+            "削韧": 30
+          },
+          {
+            "名称": "[Tenebrous Hand] DMG Radius",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          },
+          {
+            "名称": "Healing",
+            "值": 0.12,
+            "格式": "{%}Max HP"
+          },
+          {
+            "名称": "Combo Duration Increase",
+            "值": 10,
+            "格式": "{}s"
+          },
+          {
+            "名称": "Combo Point Increase",
+            "值": 0.5
+          }
+        ],
+        "升级": [
+          {
+            "Coin": 1120,
+            "Filthoid Clot": 3,
+            "Statue Debris": 1
+          },
+          {
+            "Coin": 2080,
+            "Filthoid Clot": 6,
+            "Statue Debris": 2
+          },
+          {
+            "Coin": 2560,
+            "Filthoid Clot": 9,
+            "Statue Debris": 3,
+            "Luno Memento": 4
+          },
+          {
+            "Coin": 5840,
+            "Filthoid Clot": 15,
+            "Statue Debris": 5,
+            "Luno Memento": 6
+          },
+          {
+            "Coin": 7200,
+            "Filthoid Clot": 30,
+            "Statue Debris": 10,
+            "Luno Memento": 8
+          },
+          {
+            "Coin": 24000,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 6,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 37600,
+            "Luno Memento": 10,
+            "Filthoid Tentacle": 8,
+            "Ring of Severed Fear": 1
+          },
+          {
+            "Coin": 72000,
+            "Filthoid Polymer": 1,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          },
+          {
+            "Coin": 136000,
+            "Filthoid Polymer": 2,
+            "Ring of Severed Fear": 2,
+            "Twilight Tread": 1
+          }
+        ]
+      },
+      {
+        "id": 120104,
+        "名称": "Elegy",
+        "类型": "",
+        "描述": "Nearby enemies take increased Umbro Damage.\nWhile a [Tenebrous Hand] is present, when an enemy takes Umbro DMG from other allies, [Tenebrous Hand] also deals Umbro AoE DMG once, counting as Normal Attack DMG. This effect can trigger once every 1s.",
+        "icon": "ExtraPassive",
+        "字段": [
+          {
+            "名称": "DMG Taken Increase",
+            "值": 0.6
+          },
+          {
+            "名称": "DMG",
+            "值": 9.42,
+            "削韧": 20
+          },
+          {
+            "名称": "DMG Radius",
+            "影响": "技能范围",
+            "值": 6,
+            "格式": "{}m"
+          }
+        ]
+      },
+      {
+        "id": 100005,
+        "名称": "Edge",
+        "类型": "Support",
+        "描述": "[Available only when deployed as a Combat Partner]\n Increases Weapon DMG for self and allies.",
+        "icon": "PhantomPassive",
+        "字段": [
+          {
+            "名称": "Weapon DMG Boost",
+            "值": 0.08
+          }
+        ]
+      }
+    ],
+    "溯源": [
+      "When [Soul Refrain] causes [Tenebrous Hand] to attack, the caster gains 20 Combo Points.",
+      "When [Hymn of the Misty Sea] is cast, creates an [Umbral Prism] field with a 10-metre radius for 10s. Its area is affected by Skill Range, and its duration is affected by Skill Duration.\nEnemies within the field have Movement Speed reduced by 50% and take damage equal to 1050% of the caster's ATK once per second.",
+      "[Nightwalk] Level +2, [Soul Refrain] Level +1.",
+      "[Soul Refrain] now requires only 6 Melee Normal Attacks to cause [Tenebrous Hand] to attack.",
+      "[Hymn of the Misty Sea] Level +2, [Soul Refrain] Level +1.",
+      "When [Soul Refrain] causes [Tenebrous Hand] to attack, it attacks 3 times instead. When this occurs, the caster gains 25% PEN stats for 3s."
+    ],
+    "碎片": 1001201
   },
   {
     "id": 1501,
@@ -6537,55 +7548,33 @@
           {
             "名称": "Sanity Cost",
             "影响": "技能效益",
-            "值": 10,
+            "值": 5,
             "格式": "{}"
           },
           {
             "名称": "Sanity Cost per second",
             "影响": "技能效益,技能耐久",
-            "值": 15,
+            "值": 24,
             "格式": "{}"
           },
           {
             "名称": "DMG",
             "影响": "技能威力",
             "值": [
-              0.73,
-              0.88,
-              1.03,
-              1.18,
-              1.33,
-              1.48,
-              1.63,
-              1.78,
-              1.93,
-              2.08,
-              2.23,
-              2.38
+              2.87,
+              3.52,
+              4.17,
+              4.82,
+              5.47,
+              6.12,
+              6.77,
+              7.42,
+              8.07,
+              8.72,
+              9.37,
+              10.02
             ],
             "削韧": 33
-          },
-          {
-            "名称": "Sanity Recovery Probability",
-            "值": [
-              0.13,
-              0.16,
-              0.19,
-              0.22,
-              0.25,
-              0.28,
-              0.31,
-              0.34,
-              0.37,
-              0.4,
-              0.43,
-              0.46
-            ]
-          },
-          {
-            "名称": "Sanity Recovery",
-            "值": 5,
-            "格式": "{}"
           },
           {
             "名称": "[Hyperthermal Purgejet] Length",
@@ -6659,25 +7648,25 @@
           {
             "名称": "Sanity Cost",
             "影响": "技能效益",
-            "值": 30,
+            "值": 50,
             "格式": "{}"
           },
           {
             "名称": "DMG",
             "影响": "技能威力",
             "值": [
-              3.53,
-              4.31,
-              5.09,
-              5.87,
-              6.65,
-              7.43,
-              8.21,
-              8.99,
-              9.77,
-              10.55,
-              11.33,
-              12.11
+              10.23,
+              12.5,
+              14.77,
+              17.04,
+              19.31,
+              21.58,
+              23.85,
+              26.12,
+              28.39,
+              30.66,
+              32.93,
+              35.2
             ],
             "削韧": 33
           },
@@ -6691,18 +7680,18 @@
             "名称": "[Light Dirtexpeller] DMG",
             "影响": "技能威力",
             "值": [
-              2.29,
-              2.8,
-              3.31,
-              3.82,
-              4.33,
-              4.84,
-              5.35,
-              5.86,
-              6.37,
-              6.88,
-              7.39,
-              7.9
+              5.82,
+              7.12,
+              8.42,
+              9.72,
+              11.02,
+              12.32,
+              13.62,
+              14.92,
+              16.22,
+              17.52,
+              18.82,
+              20.12
             ],
             "削韧": 33
           },
@@ -6710,18 +7699,18 @@
             "名称": "[Heavy Dirtexpeller] DMG",
             "影响": "技能威力",
             "值": [
-              3.52,
-              4.31,
-              5.1,
-              5.89,
-              6.68,
-              7.47,
-              8.26,
-              9.05,
-              9.84,
-              10.63,
-              11.42,
-              12.21
+              8.99,
+              11,
+              13.01,
+              15.02,
+              17.03,
+              19.04,
+              21.05,
+              23.06,
+              25.07,
+              27.08,
+              29.09,
+              31.1
             ],
             "削韧": 33
           },
@@ -6907,13 +7896,14 @@
     ],
     "溯源": [
       "Increases Hilda's Dodge Attempts by 2 and the effect [Elegant Anger] grants by 30%.",
-      "Increases the length of [Hyperthermal Purgejet] by 50%.\nWhen [Hyperthermal Purgejet] deals damage, inflicts an effect to the target that increases damage taken from Hilda by 85% for 2s.",
+      "Increases the length of [Hyperthermal Purgejet] by 50%.\nWhen [Hyperthermal Purgejet] deals damage, inflicts an effect to the target that increases damage taken from Hilda by 5 for 60%s.",
       "[Pyrolytic Cleaning] Level +2; [Automatic Sanitizing] Level +1.",
-      "When using [Wholehearted Service], summons 2 additional [Light Dirtexpellers], and decreases the target's damage by 25% for 12s.",
+      "When using [Wholehearted Service], summons 2 additional [Light Dirtexpellers], and decreases the target's damage by 18% for 15s.",
       "[Wholehearted Service] Level +2; [Automatic Sanitizing] Level +1.",
-      "Increases Hilda's PEN stats by 55% during [Pyrolytic Cleaning]."
+      "Increases Hilda's PEN stats by #5 during [Pyrolytic Cleaning]."
     ],
-    "碎片": 1003102
+    "碎片": 1003102,
+    "专武": 20302
   },
   {
     "id": 3103,
@@ -7990,7 +8980,7 @@
         "id": 320201,
         "名称": "Scarlet Banquet",
         "类型": "DMG",
-        "描述": "Launches all [Sommelier's Blades], dealing Pyro DMG to nearby enemies and granting 1 stack of [Tipsy], lasting for the rest of the battle, up to 10 stacks. All [Tipsy] stacks are removed when [Scarlet Banquet] ends.\n During the skill animation, hold the Combat Skill or Melee Attack button to chain repeated casts.",
+        "描述": "Launches all [Sommelier's Blades], dealing Pyro DMG to nearby enemies and granting 1 stack of [Tipsy], lasting for the rest of the battle, up to 10 stacks. All [Tipsy] stacks are removed when [Scarlet Banquet] ends.\nDuring the skill animation, hold the Combat Skill or Melee Attack button to chain repeated casts.",
         "icon": "Kami01",
         "字段": [
           {
@@ -8360,9 +9350,9 @@
     "溯源": [
       "DMG dealt by [Sommelier's Blades] has a 30% chance to inflict 1 additional stack of [Crimson Wound].",
       "While orbited by [Sommelier's Blades], Damage Taken is reduced by 15% and Damage Dealt is increased by 55%.",
-      "[Scarlet Banquet] Level +2. [Claret Waltz] Level +1.",
+      "[Scarlet Banquet] Level +2. [Deadly Sip] Level +1.",
       "Damage from [Crimson Wound] +30%. [Sommelier's Blades] Launch Speed is increased to 25.",
-      "[Claret Waltz] Level +2. [Scarlet Banquet] Level +1.",
+      "[Claret Waltz] Level +2. [Deadly Sip] Level +1.",
       "While orbited by [Sommelier's Blades], Camilla's PEN stats increases by 45%. When [Crimson Wound] is removed, 1 additional stack is removed, dealing 1 additional instance of damage."
     ],
     "碎片": 1003202,

@@ -67,69 +67,70 @@ T.RT_19 = {
   HandHold = T.RT_17,
   UnbindHand = T.RT_18
 }
-T.RT_20 = {
+T.RT_20 = {1060221, 1060220}
+T.RT_21 = {
   110111,
   110112,
   110113,
   110114
 }
-T.RT_21 = {110312}
-T.RT_22 = {110331}
-T.RT_23 = {110332}
-T.RT_24 = {110333}
-T.RT_25 = {110334}
-T.RT_26 = {110341, 110342}
-T.RT_27 = {
+T.RT_22 = {110312}
+T.RT_23 = {110331}
+T.RT_24 = {110332}
+T.RT_25 = {110333}
+T.RT_26 = {110334}
+T.RT_27 = {110341, 110342}
+T.RT_28 = {
   150451,
   150452,
   150458,
   150436,
   150460
 }
-T.RT_28 = {
+T.RT_29 = {
   30,
   31,
   32,
   33
 }
-T.RT_29 = {160111, 160112}
-T.RT_30 = {
+T.RT_30 = {160111, 160112}
+T.RT_31 = {
   160121,
   160122,
   160123,
   160125
 }
-T.RT_31 = {2030421}
-T.RT_32 = {2050321}
-T.RT_33 = {210212}
-T.RT_34 = {210221, 210222}
-T.RT_35 = {210231}
-T.RT_36 = {310111}
-T.RT_37 = {310131}
-T.RT_38 = {
+T.RT_32 = {2030421}
+T.RT_33 = {2050321}
+T.RT_34 = {210212}
+T.RT_35 = {210221, 210222}
+T.RT_36 = {210231}
+T.RT_37 = {310111}
+T.RT_38 = {310131}
+T.RT_39 = {
   320215,
   320222,
   320223
 }
-T.RT_39 = {600209}
-T.RT_40 = {600504}
-T.RT_41 = {600506}
-T.RT_42 = {600507}
-T.RT_43 = {601609}
-T.RT_44 = {
+T.RT_40 = {600209}
+T.RT_41 = {600504}
+T.RT_42 = {600506}
+T.RT_43 = {600507}
+T.RT_44 = {601609}
+T.RT_45 = {
   700402,
   700403,
   700404,
   700405
 }
-T.RT_45 = {701001, 701004}
-T.RT_46 = {
+T.RT_46 = {701001, 701004}
+T.RT_47 = {
   800203,
   800204,
   800205
 }
-T.RT_47 = {800206, 800207}
-T.RT_48 = {
+T.RT_48 = {800206, 800207}
+T.RT_49 = {
   800203,
   800204,
   800205,
@@ -137,8 +138,8 @@ T.RT_48 = {
   800207,
   800210
 }
-T.RT_49 = {800301}
-T.RT_50 = {
+T.RT_50 = {800301}
+T.RT_51 = {
   8500111,
   8500112,
   8500113,
@@ -146,7 +147,7 @@ T.RT_50 = {
   8500115,
   8500119
 }
-T.RT_51 = {
+T.RT_52 = {
   8500121,
   8500122,
   8500123,
@@ -154,28 +155,26 @@ T.RT_51 = {
   8500125,
   8500126
 }
-T.RT_52 = {8501116}
-T.RT_53 = {8501161}
-T.RT_54 = {850206}
-T.RT_55 = {850237}
-T.RT_56 = {8502106}
-T.RT_57 = {8502137}
-T.RT_58 = {
+T.RT_53 = {850206}
+T.RT_54 = {850237}
+T.RT_55 = {8502106}
+T.RT_56 = {8502137}
+T.RT_57 = {
   850601,
   850602,
   850603
 }
-T.RT_59 = {
+T.RT_58 = {
   850601,
   850602,
   850603,
   850604
 }
-T.RT_60 = {850605, 850606}
-T.RT_61 = {850607}
-T.RT_62 = {850608}
-T.RT_63 = {850932}
-T.RT_64 = {
+T.RT_59 = {850605, 850606}
+T.RT_60 = {850607}
+T.RT_61 = {850608}
+T.RT_62 = {850932}
+T.RT_63 = {
   850920,
   850921,
   850926,
@@ -183,11 +182,11 @@ T.RT_64 = {
   850939,
   850944
 }
-T.RT_65 = {851001}
-T.RT_66 = {851002}
-T.RT_67 = {851003}
-T.RT_68 = {851048, 851049}
-T.RT_69 = {
+T.RT_64 = {851001}
+T.RT_65 = {851002}
+T.RT_66 = {851003}
+T.RT_67 = {851048, 851049}
+T.RT_68 = {
   851014,
   851015,
   851016,
@@ -195,44 +194,44 @@ T.RT_69 = {
   851025,
   851029
 }
-T.RT_70 = {851201, 851202}
-T.RT_71 = {851206}
-T.RT_72 = {
+T.RT_69 = {851201, 851202}
+T.RT_70 = {851206}
+T.RT_71 = {
   851211,
   851212,
   851213
 }
-T.RT_73 = {
+T.RT_72 = {
   851216,
   851217,
   851218
 }
-T.RT_74 = {
+T.RT_73 = {
   851221,
   851223,
   851224,
   851225
 }
-T.RT_75 = {851226, 851229}
-T.RT_76 = {851231}
-T.RT_77 = {
+T.RT_74 = {851226, 851229}
+T.RT_75 = {851231}
+T.RT_76 = {
   851236,
   851237,
   851238,
   851239
 }
-T.RT_78 = {
+T.RT_77 = {
   851241,
   851266,
   851269
 }
-T.RT_79 = {851246}
-T.RT_80 = {851254}
-T.RT_81 = {851256}
-T.RT_82 = {851261}
-T.RT_83 = {851291, 851292}
-T.RT_84 = {851503, 851530}
-T.RT_85 = {
+T.RT_78 = {851246}
+T.RT_79 = {851254}
+T.RT_80 = {851256}
+T.RT_81 = {851261}
+T.RT_82 = {851291, 851292}
+T.RT_83 = {851503, 851530}
+T.RT_84 = {
   851525,
   851528,
   851514,
@@ -241,10 +240,10 @@ T.RT_85 = {
   851534,
   851535
 }
-T.RT_86 = {851701, 851702}
-T.RT_87 = {851709, 851710}
-T.RT_88 = {851812}
-T.RT_89 = {
+T.RT_85 = {851701, 851702}
+T.RT_86 = {851709, 851710}
+T.RT_87 = {851812}
+T.RT_88 = {
   851824,
   851825,
   851826,
@@ -257,24 +256,24 @@ T.RT_89 = {
   851833,
   851834
 }
-T.RT_90 = {851921, 851924}
-T.RT_91 = {851940, 851948}
-T.RT_92 = {8523009, 8523010}
-T.RT_93 = {8523018}
-T.RT_94 = {900101}
-T.RT_95 = {900201}
-T.RT_96 = {900204}
-T.RT_97 = {900301}
-T.RT_98 = {900501}
-T.RT_99 = {900601}
-T.RT_100 = {950101}
-T.RT_101 = {950105}
-T.RT_102 = {980101}
-T.RT_103 = {980104}
-T.RT_104 = {980201}
-T.RT_105 = {980202}
-T.RT_106 = {980203}
-T.RT_107 = {980204}
+T.RT_89 = {851921, 851924}
+T.RT_90 = {851963}
+T.RT_91 = {8523009, 8523010}
+T.RT_92 = {8523018}
+T.RT_93 = {900101}
+T.RT_94 = {900201}
+T.RT_95 = {900204}
+T.RT_96 = {900301}
+T.RT_97 = {900501}
+T.RT_98 = {900601}
+T.RT_99 = {950101}
+T.RT_100 = {950105}
+T.RT_101 = {980101}
+T.RT_102 = {980104}
+T.RT_103 = {980201}
+T.RT_104 = {980202}
+T.RT_105 = {980203}
+T.RT_106 = {980204}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -296,7 +295,7 @@ return ReadOnly("SkillNode", {
     AnimPlayRate = 1,
     AnimSubPath = "Combat/Skill/",
     NodeId = 30,
-    SkillNodeEffects = T.RT_28
+    SkillNodeEffects = T.RT_29
   },
   [10011] = {
     AnimPath = "/Game/Asset/Char/Player/NPC001_Nvzhu/Animation/Montage/Combat/Skill/",
@@ -614,7 +613,7 @@ return ReadOnly("SkillNode", {
     CostSp = 20,
     DisableBlendBone = true,
     NodeId = 110111,
-    SkillNodeEffects = T.RT_20
+    SkillNodeEffects = T.RT_21
   },
   [110119] = {
     AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
@@ -622,7 +621,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Heitao_Skill01_Montage",
     DisableBlendBone = true,
     NodeId = 110119,
-    SkillNodeEffects = T.RT_20
+    SkillNodeEffects = T.RT_21
   },
   [110121] = {
     AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
@@ -754,35 +753,31 @@ return ReadOnly("SkillNode", {
     AnimPath = "/Game/Asset/Char/Player/Char016_Fuluo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
     AnimResource = "Fuluo_Skill01_Montage",
-    CostSp = 10,
+    CostSp = 30,
     DisableBlendBone = true,
     NodeId = 110211,
-    SkillNodeEffects = {
-      110212,
-      110213,
-      110231
-    }
+    SkillNodeEffects = {110211, 110213}
   },
   [110212] = {
     AnimPath = "/Game/Asset/Char/Player/Char016_Fuluo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
     AnimResource = "Fuluo_Skill01_Move_Montage",
     CanExtractZVelocity = true,
-    CostSp = 10,
+    CostSp = 30,
     DisableBlendBone = true,
     NodeId = 110212,
     SkillNodeEffects = {
-      110211,
       110212,
       110213,
-      110231
+      110217,
+      110218
     }
   },
   [110221] = {
     AnimPath = "/Game/Asset/Char/Player/Char016_Fuluo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
     AnimResource = "Fuluo_Skill02_On_Montage",
-    CostSp = 30,
+    CostSp = 20,
     DisableBlendBone = true,
     NodeId = 110221,
     SkillNodeEffects = {110221}
@@ -820,7 +815,7 @@ return ReadOnly("SkillNode", {
     CostSp = 20,
     DisableBlendBone = true,
     NodeId = 110312,
-    SkillNodeEffects = T.RT_21
+    SkillNodeEffects = T.RT_22
   },
   [110313] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Skill/",
@@ -856,7 +851,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 110332,
     NodeId = 110331,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_22
+    SkillNodeEffects = T.RT_23
   },
   [110332] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Skill/",
@@ -866,7 +861,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 110333,
     NodeId = 110332,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_23
+    SkillNodeEffects = T.RT_24
   },
   [110333] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Skill/",
@@ -877,7 +872,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 110334,
     NodeId = 110333,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_24
+    SkillNodeEffects = T.RT_25
   },
   [110334] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Skill/",
@@ -888,7 +883,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 110333,
     NodeId = 110334,
     PhantomAutoInput = 2,
-    SkillNodeEffects = T.RT_24
+    SkillNodeEffects = T.RT_25
   },
   [110335] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Skill/",
@@ -897,7 +892,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = true,
     NextNodeId = 110331,
     NodeId = 110335,
-    SkillNodeEffects = T.RT_25
+    SkillNodeEffects = T.RT_26
   },
   [110341] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Skill/",
@@ -905,7 +900,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Tuosi02_FallAttack_Montage",
     DisableBlendBone = true,
     NodeId = 110341,
-    SkillNodeEffects = T.RT_26
+    SkillNodeEffects = T.RT_27
   },
   [110351] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Skill/",
@@ -926,7 +921,7 @@ return ReadOnly("SkillNode", {
     CostSp = 20,
     DisableBlendBone = true,
     NodeId = 110391,
-    SkillNodeEffects = T.RT_21
+    SkillNodeEffects = T.RT_22
   },
   [110392] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Ch02/",
@@ -936,7 +931,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 110393,
     NodeId = 110392,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_22
+    SkillNodeEffects = T.RT_23
   },
   [110393] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Ch02/",
@@ -946,7 +941,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 110394,
     NodeId = 110393,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_23
+    SkillNodeEffects = T.RT_24
   },
   [110394] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Ch02/",
@@ -957,7 +952,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 110395,
     NodeId = 110394,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_24
+    SkillNodeEffects = T.RT_25
   },
   [110395] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Ch02/",
@@ -968,7 +963,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 110394,
     NodeId = 110395,
     PhantomAutoInput = 2,
-    SkillNodeEffects = T.RT_24
+    SkillNodeEffects = T.RT_25
   },
   [110396] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Ch02/",
@@ -977,7 +972,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = true,
     NextNodeId = 110392,
     NodeId = 110396,
-    SkillNodeEffects = T.RT_25
+    SkillNodeEffects = T.RT_26
   },
   [110397] = {
     AnimPath = "/Game/Asset/Char/Player/Char025_Tuosi/Animation/Montage/Combat/Ch02/",
@@ -985,15 +980,10 @@ return ReadOnly("SkillNode", {
     AnimResource = "Tuosi03_FallAttack_Montage",
     DisableBlendBone = true,
     NodeId = 110397,
-    SkillNodeEffects = T.RT_26
+    SkillNodeEffects = T.RT_27
   },
   [110421] = {
-    AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
-    AnimPlayRate = 1,
-    AnimResource = "2B_Skill02_Montage",
-    CanExtractZVelocity = true,
     CostSp = 1,
-    DisableBlendBone = true,
     NodeId = 110421,
     SkillNodeEffects = {
       110421,
@@ -1005,7 +995,7 @@ return ReadOnly("SkillNode", {
     AnimName = "Dark_Skill01_Montage",
     AnimPlayRate = 1,
     AnimSubPath = "Combat/Skill/",
-    CostSp = 5,
+    CostSp = 50,
     DisableBlendBone = true,
     NodeId = 120111,
     SkillNodeEffects = {
@@ -1019,7 +1009,7 @@ return ReadOnly("SkillNode", {
     AnimName = "Dark_Skill02_Montage",
     AnimPlayRate = 1,
     AnimSubPath = "Combat/Skill/",
-    CostSp = 5,
+    CostSp = 100,
     DisableBlendBone = true,
     NodeId = 120121,
     SkillNodeEffects = {
@@ -1027,26 +1017,40 @@ return ReadOnly("SkillNode", {
       120122,
       120123,
       120124,
-      120126,
-      120127
+      120126
     }
   },
   [120211] = {
     AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Falu_Skill01_On_Montage",
+    AnimResource = "Falu_Skill01_Montage",
     DisableBlendBone = true,
-    NodeId = 120211,
-    SkillNodeEffects = {120211}
+    NodeId = 120211
   },
   [120212] = {
+    AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
+    AnimPlayRate = 1,
+    AnimResource = "Falu_Skill01_On_Montage",
+    DisableBlendBone = true,
+    NodeId = 120212,
+    SkillNodeEffects = {120211}
+  },
+  [120213] = {
     AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
     AnimResource = "Falu_Skill01_Off_Montage",
     CanExtractZVelocity = true,
     DisableBlendBone = true,
-    NodeId = 120212,
+    NodeId = 120213,
     SkillNodeEffects = {120212}
+  },
+  [120214] = {
+    AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
+    AnimPlayRate = 1,
+    AnimResource = "Falu_Skill01_SP_Montage",
+    DisableBlendBone = true,
+    NodeId = 120214,
+    SkillNodeEffects = T.RT_20
   },
   [120221] = {
     AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
@@ -1054,7 +1058,11 @@ return ReadOnly("SkillNode", {
     AnimResource = "Falu_Skill02_Montage",
     DisableBlendBone = true,
     NodeId = 120221,
-    SkillNodeEffects = {120221, 120222}
+    SkillNodeEffects = {
+      120221,
+      120222,
+      120225
+    }
   },
   [120222] = {
     AnimPath = "/Game/Asset/Char/Player/Char001_Heitao_J/Animation/Montage/Combat/Skill/",
@@ -1299,7 +1307,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 150442,
     NodeId = 150441,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_27
+    SkillNodeEffects = T.RT_28
   },
   [150442] = {
     AnimPath = "/Game/Asset/Char/Player/Char032_Suyi/Animation/Montage/Combat/Skill/",
@@ -1327,14 +1335,14 @@ return ReadOnly("SkillNode", {
     NextNodeId = 150442,
     NodeId = 150443,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_27
+    SkillNodeEffects = T.RT_28
   },
   [150451] = {
     AnimPath = "/Game/Asset/Char/Player/Char032_Suyi/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
     AnimResource = "Suyi_Condemn02_Montage",
     NodeId = 150451,
-    SkillNodeEffects = T.RT_28
+    SkillNodeEffects = T.RT_29
   },
   [150511] = {
     AnimPath = "/Game/Asset/Char/Player/Char037_SpBaonu/Animation/Montage/Combat/Skill/",
@@ -1410,7 +1418,7 @@ return ReadOnly("SkillNode", {
     CostSp = 15,
     DisableBlendBone = true,
     NodeId = 160111,
-    SkillNodeEffects = T.RT_29
+    SkillNodeEffects = T.RT_30
   },
   [160112] = {
     AnimName = "Light_Skill02_Montage",
@@ -1419,7 +1427,7 @@ return ReadOnly("SkillNode", {
     CostSp = 35,
     DisableBlendBone = true,
     NodeId = 160112,
-    SkillNodeEffects = T.RT_30
+    SkillNodeEffects = T.RT_31
   },
   [160191] = {
     AnimName = "Light_Skill01_Red_Montage",
@@ -1428,7 +1436,7 @@ return ReadOnly("SkillNode", {
     CostSp = 15,
     DisableBlendBone = true,
     NodeId = 160191,
-    SkillNodeEffects = T.RT_29
+    SkillNodeEffects = T.RT_30
   },
   [160192] = {
     AnimName = "Light_Skill02_Red_Montage",
@@ -1437,7 +1445,7 @@ return ReadOnly("SkillNode", {
     CostSp = 35,
     DisableBlendBone = true,
     NodeId = 160192,
-    SkillNodeEffects = T.RT_30
+    SkillNodeEffects = T.RT_31
   },
   [180111] = {
     AnimName = "Skill01_Montage",
@@ -1539,7 +1547,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = true,
     NextNodeId = 210212,
     NodeId = 210211,
-    SkillNodeEffects = T.RT_33
+    SkillNodeEffects = T.RT_34
   },
   [210212] = {
     AnimPath = "/Game/Asset/Char/Player/Char035_Eve/Animation/Montage/Combat/Skill/",
@@ -1549,7 +1557,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = true,
     NextNodeId = 210211,
     NodeId = 210212,
-    SkillNodeEffects = T.RT_33
+    SkillNodeEffects = T.RT_34
   },
   [210213] = {
     AnimPath = "/Game/Asset/Char/Player/Char035_Eve/Animation/Summon/Montage/Combat/Skill/",
@@ -1557,7 +1565,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Eve_Summon_Soldier_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 210213,
-    SkillNodeEffects = T.RT_34
+    SkillNodeEffects = T.RT_35
   },
   [210214] = {
     AnimPath = "/Game/Asset/Char/Player/Char035_Eve/Animation/Summon/Montage/Combat/Skill/",
@@ -1565,7 +1573,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Eve_Summon_Soldier_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 210214,
-    SkillNodeEffects = T.RT_34
+    SkillNodeEffects = T.RT_35
   },
   [210215] = {
     AnimPath = "/Game/Asset/Char/Player/Char035_Eve/Animation/Summon/Montage/Combat/Skill/",
@@ -1573,7 +1581,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Eve_Summon_Rook_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 210215,
-    SkillNodeEffects = T.RT_35
+    SkillNodeEffects = T.RT_36
   },
   [210216] = {
     AnimPath = "/Game/Asset/Char/Player/Char035_Eve/Animation/Summon/Montage/Combat/Skill/",
@@ -1581,7 +1589,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Eve_Summon_Rook_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 210216,
-    SkillNodeEffects = T.RT_35
+    SkillNodeEffects = T.RT_36
   },
   [210217] = {
     AnimPath = "/Game/Asset/Char/Player/Char035_Eve/Animation/Summon/Montage/Combat/Skill/",
@@ -1691,6 +1699,27 @@ return ReadOnly("SkillNode", {
     AnimResource = "Ailiu_Summon_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 210331
+  },
+  [220111] = {
+    AnimName = "Water_Skill01_Montage",
+    AnimPlayRate = 1,
+    AnimSubPath = "Combat/Skill/",
+    CostSp = 5,
+    DisableBlendBone = true,
+    NodeId = 220111,
+    SkillNodeEffects = {
+      220111,
+      220112,
+      220113
+    }
+  },
+  [220121] = {
+    AnimName = "Water_Skill02_Montage",
+    AnimPlayRate = 1,
+    AnimSubPath = "Combat/Skill/",
+    CostSp = 5,
+    DisableBlendBone = true,
+    NodeId = 220121
   },
   [230111] = {
     AnimPath = "/Game/Asset/Char/Player/Char004_Zhangyu/Animation/Montage/Combat/Skill/",
@@ -1805,7 +1834,7 @@ return ReadOnly("SkillNode", {
     CostSp = 12,
     DisableBlendBone = true,
     NodeId = 310111,
-    SkillNodeEffects = T.RT_36
+    SkillNodeEffects = T.RT_37
   },
   [310112] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1814,7 +1843,7 @@ return ReadOnly("SkillNode", {
     CostSp = 12,
     DisableBlendBone = true,
     NodeId = 310112,
-    SkillNodeEffects = T.RT_36
+    SkillNodeEffects = T.RT_37
   },
   [310121] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1851,7 +1880,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310142,
     NodeId = 310141,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310142] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1862,7 +1891,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310143,
     NodeId = 310142,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310143] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1873,7 +1902,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310144,
     NodeId = 310143,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310144] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1884,7 +1913,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310145,
     NodeId = 310144,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310145] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1895,7 +1924,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310146,
     NodeId = 310145,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310146] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1906,7 +1935,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310147,
     NodeId = 310146,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310147] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1917,7 +1946,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310148,
     NodeId = 310147,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310148] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1928,7 +1957,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310149,
     NodeId = 310148,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310149] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1939,7 +1968,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310150,
     NodeId = 310149,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310150] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1950,7 +1979,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 310141,
     NodeId = 310150,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_37
+    SkillNodeEffects = T.RT_38
   },
   [310151] = {
     AnimPath = "/Game/Asset/Char/Player/Char011_Linen/Animation/Montage/Combat/Skill/",
@@ -1964,14 +1993,10 @@ return ReadOnly("SkillNode", {
     AnimPlayRate = 1,
     AnimResource = "Xier_Skill02_Montage",
     CanExtractZVelocity = true,
-    CostSp = 30,
+    CostSp = 50,
     DisableBlendBone = true,
     NodeId = 310211,
-    SkillNodeEffects = {
-      310202,
-      310203,
-      310205
-    }
+    SkillNodeEffects = {310203, 310205}
   },
   [310311] = {
     AnimPath = "/Game/Asset/Char/Player/Char017_Yeer/Animation/Montage/Combat/Skill/",
@@ -2049,7 +2074,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 320214,
     NodeId = 320213,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_38
+    SkillNodeEffects = T.RT_39
   },
   [320214] = {
     AnimPath = "/Game/Asset/Char/Player/Char014_Kami/Animation/Montage/Combat/Skill/",
@@ -2060,7 +2085,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 320215,
     NodeId = 320214,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_38
+    SkillNodeEffects = T.RT_39
   },
   [320215] = {
     AnimPath = "/Game/Asset/Char/Player/Char014_Kami/Animation/Montage/Combat/Skill/",
@@ -2071,7 +2096,7 @@ return ReadOnly("SkillNode", {
     NextNodeId = 320213,
     NodeId = 320215,
     PhantomAutoInput = 1,
-    SkillNodeEffects = T.RT_38
+    SkillNodeEffects = T.RT_39
   },
   [320221] = {
     AnimPath = "/Game/Asset/Char/Player/Char014_Kami/Animation/Montage/Combat/Skill/",
@@ -2390,7 +2415,7 @@ return ReadOnly("SkillNode", {
     AnimPlayRate = 1,
     AnimResource = "Songlu_Condemn02_Montage",
     NodeId = 510171,
-    SkillNodeEffects = T.RT_28
+    SkillNodeEffects = T.RT_29
   },
   [510211] = {
     AnimPath = "/Game/Asset/Char/Player/Char018_Aote/Animation/Montage/Combat/Skill/",
@@ -2464,7 +2489,7 @@ return ReadOnly("SkillNode", {
     AnimPlayRate = 1,
     AnimResource = "Saiqi_Condemn02_Montage",
     NodeId = 530151,
-    SkillNodeEffects = T.RT_28
+    SkillNodeEffects = T.RT_29
   },
   [540111] = {
     AnimPath = "/Game/Asset/Char/Player/Char026_Dafu/Animation/Montage/Combat/Skill/",
@@ -2659,7 +2684,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = false,
     NodeId = 600204,
     RootMotionRadius = 2,
-    SkillNodeEffects = T.RT_39
+    SkillNodeEffects = T.RT_40
   },
   [600205] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Youji/Animation/Montage/Combat/Skill/",
@@ -2668,7 +2693,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = false,
     NodeId = 600205,
     RootMotionRadius = 2,
-    SkillNodeEffects = T.RT_39
+    SkillNodeEffects = T.RT_40
   },
   [600211] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Youji/Animation/Montage/Combat/Skill/",
@@ -2793,7 +2818,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "GR_Longcao_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 600502,
-    SkillNodeEffects = T.RT_40
+    SkillNodeEffects = T.RT_41
   },
   [600503] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Longcao/Animation/Montage/Combat/Skill/",
@@ -2801,7 +2826,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "GR_Longcao_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 600503,
-    SkillNodeEffects = T.RT_41
+    SkillNodeEffects = T.RT_42
   },
   [600504] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Longcao/Animation/Montage/Combat/Skill/",
@@ -2809,7 +2834,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "GR_Longcao_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 600504,
-    SkillNodeEffects = T.RT_42
+    SkillNodeEffects = T.RT_43
   },
   [600505] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Longcao/Animation/Montage/Combat/Skill/",
@@ -2817,7 +2842,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "GR_Longcao_Skill04_Montage",
     DisableBlendBone = false,
     NodeId = 600505,
-    SkillNodeEffects = T.RT_40
+    SkillNodeEffects = T.RT_41
   },
   [600506] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Longcao/Animation/Montage/Combat/Skill/",
@@ -2825,7 +2850,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "GR_Longcao_Skill05_Montage",
     DisableBlendBone = false,
     NodeId = 600506,
-    SkillNodeEffects = T.RT_41
+    SkillNodeEffects = T.RT_42
   },
   [600507] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Longcao/Animation/Montage/Combat/Skill/",
@@ -2833,7 +2858,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "GR_Longcao_Skill06_Montage",
     DisableBlendBone = false,
     NodeId = 600507,
-    SkillNodeEffects = T.RT_42
+    SkillNodeEffects = T.RT_43
   },
   [600508] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Longcao/Animation/Montage/Combat/Skill/",
@@ -2841,7 +2866,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "GR_Longcao_Skill07_Montage",
     DisableBlendBone = false,
     NodeId = 600508,
-    SkillNodeEffects = T.RT_41
+    SkillNodeEffects = T.RT_42
   },
   [600572] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Longcao/Animation/Montage/Combat/Skill/",
@@ -3033,7 +3058,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = false,
     NodeId = 601604,
     RootMotionRadius = 2,
-    SkillNodeEffects = T.RT_43
+    SkillNodeEffects = T.RT_44
   },
   [601605] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Eshi/Animation/Montage/Combat/Skill/",
@@ -3042,7 +3067,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = false,
     NodeId = 601605,
     RootMotionRadius = 2,
-    SkillNodeEffects = T.RT_43
+    SkillNodeEffects = T.RT_44
   },
   [601611] = {
     AnimPath = "/Game/Asset/Char/Monster/GR_Eshi/Animation/Montage/Combat/Skill/",
@@ -3346,7 +3371,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JT_Tuji_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 700402,
-    SkillNodeEffects = T.RT_44
+    SkillNodeEffects = T.RT_45
   },
   [700403] = {
     AnimPath = "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/",
@@ -3354,7 +3379,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JT_Tuji_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 700403,
-    SkillNodeEffects = T.RT_44
+    SkillNodeEffects = T.RT_45
   },
   [700411] = {
     AnimPath = "/Game/Asset/Char/Monster/JT_Tuji/Animation/Montage/Combat/Skill/",
@@ -3540,7 +3565,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JT_Zhijian_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 701001,
-    SkillNodeEffects = T.RT_45
+    SkillNodeEffects = T.RT_46
   },
   [701002] = {
     AnimPath = "/Game/Asset/Char/Monster/JT_Zhijian/Animation/Montage/Combat/Skill/",
@@ -3548,7 +3573,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JT_Zhijian_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 701002,
-    SkillNodeEffects = T.RT_45
+    SkillNodeEffects = T.RT_46
   },
   [701003] = {
     AnimPath = "/Game/Asset/Char/Monster/JT_Zhijian/Animation/Montage/Combat/Skill/",
@@ -3704,6 +3729,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JT_Tiequan_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 701801,
+    RootMotionRadius = 4,
     SkillNodeEffects = {701801}
   },
   [701802] = {
@@ -3720,7 +3746,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JT_Tiequan_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 701803,
-    SkillNodeEffects = {701803}
+    SkillNodeEffects = {701803, 701804}
   },
   [701811] = {
     AnimPath = "/Game/Asset/Char/Monster/JT_Tiequan/Animation/Montage/Combat/Skill/",
@@ -3728,6 +3754,53 @@ return ReadOnly("SkillNode", {
     AnimResource = "JT_Tiequan_Alarm01_Montage",
     DisableBlendBone = false,
     NodeId = 701811,
+    SkillNodeEffects = T.RT_4
+  },
+  [701901] = {
+    AnimPath = "/Game/Asset/Char/Monster/JT_Hongshan/Animation/Montage/Combat/Skill/",
+    AnimPlayRate = 1,
+    AnimResource = "JT_Hongshan_Attack01_Montage",
+    DisableBlendBone = false,
+    NodeId = 701901,
+    SkillNodeEffects = {701901, 701902}
+  },
+  [701902] = {
+    AnimPath = "/Game/Asset/Char/Monster/JT_Hongshan/Animation/Montage/Combat/Skill/",
+    AnimPlayRate = 1,
+    AnimResource = "JT_Hongshan_Skill01_Montage",
+    DisableBlendBone = false,
+    NodeId = 701902,
+    SkillNodeEffects = {
+      701905,
+      701906,
+      701909,
+      701910
+    }
+  },
+  [701903] = {
+    AnimPath = "/Game/Asset/Char/Monster/JT_Hongshan/Animation/Montage/Combat/Skill/",
+    AnimPlayRate = 1,
+    AnimResource = "JT_Hongshan_Base_Attack01_Montage",
+    DisableBlendBone = false,
+    NodeId = 701903,
+    RootMotionRadius = 2,
+    SkillNodeEffects = {701913}
+  },
+  [701904] = {
+    AnimPath = "/Game/Asset/Char/Monster/JT_Hongshan/Animation/Montage/Combat/Skill/",
+    AnimPlayRate = 1,
+    AnimResource = "JT_Hongshan_Base_Attack02_Montage",
+    DisableBlendBone = false,
+    NodeId = 701904,
+    RootMotionRadius = 2,
+    SkillNodeEffects = {701914}
+  },
+  [701911] = {
+    AnimPath = "/Game/Asset/Char/Monster/JT_Hongshan/Animation/Montage/Combat/Skill/",
+    AnimPlayRate = 1,
+    AnimResource = "JT_Hongshan_Alarm01_Montage",
+    DisableBlendBone = false,
+    NodeId = 701911,
     SkillNodeEffects = T.RT_4
   },
   [800101] = {
@@ -3824,7 +3897,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Xianfeng_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 800203,
-    SkillNodeEffects = T.RT_46
+    SkillNodeEffects = T.RT_47
   },
   [800204] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Skill/",
@@ -3840,7 +3913,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Xianfeng_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 800205,
-    SkillNodeEffects = T.RT_46
+    SkillNodeEffects = T.RT_47
   },
   [800206] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Skill/",
@@ -3848,7 +3921,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Xianfeng_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 800206,
-    SkillNodeEffects = T.RT_47
+    SkillNodeEffects = T.RT_48
   },
   [800207] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Skill/",
@@ -3856,7 +3929,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Xianfeng_Skill04_Montage",
     DisableBlendBone = false,
     NodeId = 800207,
-    SkillNodeEffects = T.RT_48
+    SkillNodeEffects = T.RT_49
   },
   [800208] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Skill/",
@@ -3864,7 +3937,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Xianfeng_Skill05_Montage",
     DisableBlendBone = false,
     NodeId = 800208,
-    SkillNodeEffects = T.RT_46
+    SkillNodeEffects = T.RT_47
   },
   [800209] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Skill/",
@@ -3872,7 +3945,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Xianfeng_Skill06_Montage",
     DisableBlendBone = false,
     NodeId = 800209,
-    SkillNodeEffects = T.RT_47
+    SkillNodeEffects = T.RT_48
   },
   [800210] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Skill/",
@@ -3880,7 +3953,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Xianfeng_Skill07_Montage",
     DisableBlendBone = false,
     NodeId = 800210,
-    SkillNodeEffects = T.RT_48
+    SkillNodeEffects = T.RT_49
   },
   [800272] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Xianfeng/Animation/Montage/Combat/Skill/",
@@ -3895,7 +3968,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Shenfu_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 800301,
-    SkillNodeEffects = T.RT_49
+    SkillNodeEffects = T.RT_50
   },
   [800302] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/Combat/Skill/",
@@ -3903,7 +3976,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "JH_Shenfu_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 800302,
-    SkillNodeEffects = T.RT_49
+    SkillNodeEffects = T.RT_50
   },
   [800303] = {
     AnimPath = "/Game/Asset/Char/Monster/JH_Shenfu/Animation/Montage/Combat/Skill/",
@@ -4040,7 +4113,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Xibi_Skill01_H_Montage",
     DisableBlendBone = false,
     NodeId = 850011,
-    SkillNodeEffects = T.RT_50
+    SkillNodeEffects = T.RT_51
   },
   [850012] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss00_Xibi/Animation/Montage/Combat/Skill/Hard/",
@@ -4048,7 +4121,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Xibi_Skill02_H_Montage",
     DisableBlendBone = false,
     NodeId = 850012,
-    SkillNodeEffects = T.RT_51
+    SkillNodeEffects = T.RT_52
   },
   [850013] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss00_Xibi/Animation/Montage/Combat/Skill/Hard/",
@@ -4161,7 +4234,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Xibi_Skill11_H_Montage",
     DisableBlendBone = false,
     NodeId = 850021,
-    SkillNodeEffects = T.RT_50
+    SkillNodeEffects = T.RT_51
   },
   [850022] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss00_Xibi/Animation/Montage/Combat/Skill/Hard/",
@@ -4169,7 +4242,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Xibi_Skill12_H_Montage",
     DisableBlendBone = false,
     NodeId = 850022,
-    SkillNodeEffects = T.RT_51
+    SkillNodeEffects = T.RT_52
   },
   [850023] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss00_Xibi/Animation/Montage/Combat/Skill/Hard/",
@@ -4177,7 +4250,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Xibi_Skill13_H_Montage",
     DisableBlendBone = false,
     NodeId = 850023,
-    SkillNodeEffects = T.RT_50
+    SkillNodeEffects = T.RT_51
   },
   [850024] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss00_Xibi/Animation/Montage/Combat/Skill/Hard/",
@@ -4185,7 +4258,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Xibi_Skill14_H_Montage",
     DisableBlendBone = false,
     NodeId = 850024,
-    SkillNodeEffects = T.RT_51
+    SkillNodeEffects = T.RT_52
   },
   [850025] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss00_Xibi/Animation/Montage/Combat/Skill/Hard/",
@@ -4235,7 +4308,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Lizhan_Skill04_1_Montage",
     DisableBlendBone = false,
     NodeId = 850104,
-    SkillNodeEffects = T.RT_52
+    SkillNodeEffects = {8501116}
   },
   [850105] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/",
@@ -4297,7 +4370,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 850113,
-    SkillNodeEffects = T.RT_53
+    SkillNodeEffects = {8501161}
   },
   [850114] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss06_Lizhan/Animation/Montage/Combat/Skill/",
@@ -4337,7 +4410,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Saiqi_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 850203,
-    SkillNodeEffects = T.RT_54
+    SkillNodeEffects = T.RT_53
   },
   [850204] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/Combat/Skill/",
@@ -4417,7 +4490,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 850211,
-    SkillNodeEffects = T.RT_55
+    SkillNodeEffects = T.RT_54
   },
   [850212] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/Combat/Skill/",
@@ -4472,7 +4545,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Saiqi_Skill16_Montage",
     DisableBlendBone = false,
     NodeId = 850216,
-    SkillNodeEffects = T.RT_54
+    SkillNodeEffects = T.RT_53
   },
   [850217] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/Combat/Skill/",
@@ -4481,7 +4554,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 850217,
-    SkillNodeEffects = T.RT_55
+    SkillNodeEffects = T.RT_54
   },
   [850220] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/Combat/Skill/",
@@ -4505,7 +4578,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Saiqi_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 850222,
-    SkillNodeEffects = T.RT_56
+    SkillNodeEffects = T.RT_55
   },
   [850223] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/Combat/Skill/",
@@ -4589,7 +4662,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 850230,
-    SkillNodeEffects = T.RT_57
+    SkillNodeEffects = T.RT_56
   },
   [850231] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/Combat/Skill/",
@@ -4644,7 +4717,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Saiqi_Skill16_Montage",
     DisableBlendBone = false,
     NodeId = 850235,
-    SkillNodeEffects = T.RT_56
+    SkillNodeEffects = T.RT_55
   },
   [850236] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/Combat/Skill/",
@@ -4653,7 +4726,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 850236,
-    SkillNodeEffects = T.RT_57
+    SkillNodeEffects = T.RT_56
   },
   [850237] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss01_Saiqi01/Animation/Montage/Combat/Skill/",
@@ -5727,7 +5800,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Nvzhu_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 850601,
-    SkillNodeEffects = T.RT_58
+    SkillNodeEffects = T.RT_57
   },
   [850602] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss07_Nvzhu/Animation/Montage/Combat/Skill/",
@@ -5735,7 +5808,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Nvzhu_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 850602,
-    SkillNodeEffects = T.RT_59
+    SkillNodeEffects = T.RT_58
   },
   [850603] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss07_Nvzhu/Animation/Montage/Combat/Skill/",
@@ -5744,7 +5817,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 850603,
-    SkillNodeEffects = T.RT_60
+    SkillNodeEffects = T.RT_59
   },
   [850604] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss07_Nvzhu/Animation/Montage/Combat/Skill/",
@@ -5752,7 +5825,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Nvzhu_Skill04_Montage",
     DisableBlendBone = false,
     NodeId = 850604,
-    SkillNodeEffects = T.RT_61
+    SkillNodeEffects = T.RT_60
   },
   [850605] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss07_Nvzhu/Animation/Montage/Combat/Skill/",
@@ -5760,7 +5833,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Nvzhu_Skill05_Montage",
     DisableBlendBone = false,
     NodeId = 850605,
-    SkillNodeEffects = T.RT_62
+    SkillNodeEffects = T.RT_61
   },
   [850606] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss07_Nvzhu/Animation/Montage/Combat/Skill/",
@@ -5775,7 +5848,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Nanzhu_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 850701,
-    SkillNodeEffects = T.RT_58
+    SkillNodeEffects = T.RT_57
   },
   [850702] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss08_Nanzhu/Animation/Montage/Combat/Skill/",
@@ -5783,7 +5856,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Nanzhu_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 850702,
-    SkillNodeEffects = T.RT_59
+    SkillNodeEffects = T.RT_58
   },
   [850703] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss08_Nanzhu/Animation/Montage/Combat/Skill/",
@@ -5792,7 +5865,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 850703,
-    SkillNodeEffects = T.RT_60
+    SkillNodeEffects = T.RT_59
   },
   [850704] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss08_Nanzhu/Animation/Montage/Combat/Skill/",
@@ -5800,7 +5873,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Nanzhu_Skill04_Montage",
     DisableBlendBone = false,
     NodeId = 850704,
-    SkillNodeEffects = T.RT_61
+    SkillNodeEffects = T.RT_60
   },
   [850705] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss08_Nanzhu/Animation/Montage/Combat/Skill/",
@@ -5808,7 +5881,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Nanzhu_Skill05_Montage",
     DisableBlendBone = false,
     NodeId = 850705,
-    SkillNodeEffects = T.RT_62
+    SkillNodeEffects = T.RT_61
   },
   [850706] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss08_Nanzhu/Animation/Montage/Combat/Skill/",
@@ -5823,7 +5896,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Tuosi_Skill04_E_Montage",
     DisableBlendBone = false,
     NodeId = 850904,
-    SkillNodeEffects = T.RT_63
+    SkillNodeEffects = T.RT_62
   },
   [850911] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss09_Tuosi/Animation/Montage/Combat/Skill/Hard/",
@@ -5855,7 +5928,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Tuosi_Skill04_H_Montage",
     DisableBlendBone = false,
     NodeId = 850914,
-    SkillNodeEffects = T.RT_63
+    SkillNodeEffects = T.RT_62
   },
   [850915] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss09_Tuosi/Animation/Montage/Combat/Skill/Hard/",
@@ -5898,7 +5971,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Tuosi_Skill08_H_Montage",
     DisableBlendBone = false,
     NodeId = 850918,
-    SkillNodeEffects = T.RT_64
+    SkillNodeEffects = T.RT_63
   },
   [850919] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss09_Tuosi/Animation/Montage/Combat/Skill/Hard/",
@@ -5906,7 +5979,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Tuosi_Skill09_H_Montage",
     DisableBlendBone = false,
     NodeId = 850919,
-    SkillNodeEffects = T.RT_64
+    SkillNodeEffects = T.RT_63
   },
   [850920] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss09_Tuosi/Animation/Montage/Combat/Skill/Hard/",
@@ -5921,7 +5994,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 851001,
-    SkillNodeEffects = T.RT_65
+    SkillNodeEffects = T.RT_64
   },
   [851002] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/",
@@ -5929,7 +6002,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 851002,
-    SkillNodeEffects = T.RT_66
+    SkillNodeEffects = T.RT_65
   },
   [851003] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/",
@@ -5937,7 +6010,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 851003,
-    SkillNodeEffects = T.RT_67
+    SkillNodeEffects = T.RT_66
   },
   [851004] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/",
@@ -5961,7 +6034,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill06_Montage",
     DisableBlendBone = false,
     NodeId = 851006,
-    SkillNodeEffects = T.RT_68
+    SkillNodeEffects = T.RT_67
   },
   [851007] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/",
@@ -5969,7 +6042,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill07_Montage",
     DisableBlendBone = false,
     NodeId = 851007,
-    SkillNodeEffects = T.RT_69
+    SkillNodeEffects = T.RT_68
   },
   [851008] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/",
@@ -6015,7 +6088,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill06_H_Montage",
     DisableBlendBone = false,
     NodeId = 851011,
-    SkillNodeEffects = T.RT_68
+    SkillNodeEffects = T.RT_67
   },
   [851012] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/",
@@ -6038,7 +6111,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill07_Montage",
     DisableBlendBone = false,
     NodeId = 851014,
-    SkillNodeEffects = T.RT_69
+    SkillNodeEffects = T.RT_68
   },
   [851015] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/",
@@ -6053,7 +6126,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill01_H_Montage",
     DisableBlendBone = false,
     NodeId = 851016,
-    SkillNodeEffects = T.RT_65
+    SkillNodeEffects = T.RT_64
   },
   [851017] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/",
@@ -6061,7 +6134,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill02_H_Montage",
     DisableBlendBone = false,
     NodeId = 851017,
-    SkillNodeEffects = T.RT_66
+    SkillNodeEffects = T.RT_65
   },
   [851018] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss10_Heilong/Animation/Montage/Combat/Skill/Hard/",
@@ -6069,7 +6142,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Heilong_Skill03_H_Montage",
     DisableBlendBone = false,
     NodeId = 851018,
-    SkillNodeEffects = T.RT_67
+    SkillNodeEffects = T.RT_66
   },
   [851101] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/",
@@ -6077,7 +6150,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Bailong_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 851101,
-    SkillNodeEffects = T.RT_65
+    SkillNodeEffects = T.RT_64
   },
   [851102] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/",
@@ -6120,7 +6193,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Bailong_Skill06_Montage",
     DisableBlendBone = false,
     NodeId = 851106,
-    SkillNodeEffects = T.RT_68
+    SkillNodeEffects = T.RT_67
   },
   [851107] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss11_Bailong/Animation/Montage/Combat/Skill/",
@@ -6173,7 +6246,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 851201,
-    SkillNodeEffects = T.RT_70
+    SkillNodeEffects = T.RT_69
   },
   [851202] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6181,7 +6254,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 851202,
-    SkillNodeEffects = T.RT_71
+    SkillNodeEffects = T.RT_70
   },
   [851203] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6189,7 +6262,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 851203,
-    SkillNodeEffects = T.RT_72
+    SkillNodeEffects = T.RT_71
   },
   [851204] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6198,7 +6271,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851204,
-    SkillNodeEffects = T.RT_73
+    SkillNodeEffects = T.RT_72
   },
   [851205] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6206,7 +6279,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill05_Montage",
     DisableBlendBone = false,
     NodeId = 851205,
-    SkillNodeEffects = T.RT_74
+    SkillNodeEffects = T.RT_73
   },
   [851206] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6214,7 +6287,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill06_Montage",
     DisableBlendBone = false,
     NodeId = 851206,
-    SkillNodeEffects = T.RT_75
+    SkillNodeEffects = T.RT_74
   },
   [851207] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6223,7 +6296,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851207,
-    SkillNodeEffects = T.RT_76
+    SkillNodeEffects = T.RT_75
   },
   [851208] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6232,7 +6305,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851208,
-    SkillNodeEffects = T.RT_77
+    SkillNodeEffects = T.RT_76
   },
   [851209] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6241,7 +6314,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851209,
-    SkillNodeEffects = T.RT_78
+    SkillNodeEffects = T.RT_77
   },
   [851210] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6250,7 +6323,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851210,
-    SkillNodeEffects = T.RT_79
+    SkillNodeEffects = T.RT_78
   },
   [851211] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6259,7 +6332,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851211,
-    SkillNodeEffects = T.RT_80
+    SkillNodeEffects = T.RT_79
   },
   [851222] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6268,7 +6341,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851222,
-    SkillNodeEffects = T.RT_79
+    SkillNodeEffects = T.RT_78
   },
   [851223] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6276,7 +6349,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill02_2_Montage",
     DisableBlendBone = false,
     NodeId = 851223,
-    SkillNodeEffects = T.RT_81
+    SkillNodeEffects = T.RT_80
   },
   [851224] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6284,7 +6357,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill06_2_Montage",
     DisableBlendBone = false,
     NodeId = 851224,
-    SkillNodeEffects = T.RT_82
+    SkillNodeEffects = T.RT_81
   },
   [851225] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6293,7 +6366,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851225,
-    SkillNodeEffects = T.RT_77
+    SkillNodeEffects = T.RT_76
   },
   [851226] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6301,7 +6374,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill01_2_Montage",
     DisableBlendBone = false,
     NodeId = 851226,
-    SkillNodeEffects = T.RT_83
+    SkillNodeEffects = T.RT_82
   },
   [851227] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/",
@@ -6353,7 +6426,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill01_H_Montage",
     DisableBlendBone = false,
     NodeId = 851251,
-    SkillNodeEffects = T.RT_70
+    SkillNodeEffects = T.RT_69
   },
   [851252] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6361,7 +6434,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill02_H_Montage",
     DisableBlendBone = false,
     NodeId = 851252,
-    SkillNodeEffects = T.RT_71
+    SkillNodeEffects = T.RT_70
   },
   [851253] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6369,7 +6442,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill03_H_Montage",
     DisableBlendBone = false,
     NodeId = 851253,
-    SkillNodeEffects = T.RT_72
+    SkillNodeEffects = T.RT_71
   },
   [851254] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6378,7 +6451,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851254,
-    SkillNodeEffects = T.RT_73
+    SkillNodeEffects = T.RT_72
   },
   [851255] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6386,7 +6459,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill05_H_Montage",
     DisableBlendBone = false,
     NodeId = 851255,
-    SkillNodeEffects = T.RT_74
+    SkillNodeEffects = T.RT_73
   },
   [851256] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6394,7 +6467,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill06_H_Montage",
     DisableBlendBone = false,
     NodeId = 851256,
-    SkillNodeEffects = T.RT_75
+    SkillNodeEffects = T.RT_74
   },
   [851257] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6403,7 +6476,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851257,
-    SkillNodeEffects = T.RT_76
+    SkillNodeEffects = T.RT_75
   },
   [851258] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6412,7 +6485,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851258,
-    SkillNodeEffects = T.RT_77
+    SkillNodeEffects = T.RT_76
   },
   [851259] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6421,7 +6494,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851259,
-    SkillNodeEffects = T.RT_78
+    SkillNodeEffects = T.RT_77
   },
   [851260] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6430,7 +6503,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851260,
-    SkillNodeEffects = T.RT_79
+    SkillNodeEffects = T.RT_78
   },
   [851261] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6439,7 +6512,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851261,
-    SkillNodeEffects = T.RT_80
+    SkillNodeEffects = T.RT_79
   },
   [851272] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6448,7 +6521,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851272,
-    SkillNodeEffects = T.RT_79
+    SkillNodeEffects = T.RT_78
   },
   [851273] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6456,7 +6529,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill02_2_H_Montage",
     DisableBlendBone = false,
     NodeId = 851273,
-    SkillNodeEffects = T.RT_81
+    SkillNodeEffects = T.RT_80
   },
   [851274] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6464,7 +6537,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill06_2_H_Montage",
     DisableBlendBone = false,
     NodeId = 851274,
-    SkillNodeEffects = T.RT_82
+    SkillNodeEffects = T.RT_81
   },
   [851275] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss12_Linen/Animation/Montage/Combat/Skill/Hard/",
@@ -6472,7 +6545,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Linen_Skill01_2_H_Montage",
     DisableBlendBone = false,
     NodeId = 851275,
-    SkillNodeEffects = T.RT_83
+    SkillNodeEffects = T.RT_82
   },
   [851301] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss13_Kuxiu/Animation/Montage/Combat/Skill/",
@@ -6650,7 +6723,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Jushi_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 851503,
-    SkillNodeEffects = T.RT_84
+    SkillNodeEffects = T.RT_83
   },
   [851504] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss15_Jushi/Animation/Montage/Combat/Skill/",
@@ -6695,7 +6768,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Jushi_Skill08_Montage",
     DisableBlendBone = false,
     NodeId = 851508,
-    SkillNodeEffects = T.RT_85
+    SkillNodeEffects = T.RT_84
   },
   [851509] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss15_Jushi/Animation/Montage/Combat/Skill/",
@@ -6703,7 +6776,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Jushi_Skill09_Montage",
     DisableBlendBone = false,
     NodeId = 851509,
-    SkillNodeEffects = T.RT_84
+    SkillNodeEffects = T.RT_83
   },
   [851510] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss15_Jushi/Animation/Montage/Combat/Skill/",
@@ -6719,7 +6792,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Jushi_Skill11_Montage",
     DisableBlendBone = false,
     NodeId = 851511,
-    SkillNodeEffects = T.RT_85
+    SkillNodeEffects = T.RT_84
   },
   [851601] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss16_Fuer/Animation/Montage/Combat/Skill/",
@@ -6818,7 +6891,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Yuming_Attack_Montage",
     DisableBlendBone = false,
     NodeId = 851701,
-    SkillNodeEffects = T.RT_86
+    SkillNodeEffects = T.RT_85
   },
   [851702] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss17_Yuming/Animation/Montage/Combat/Skill/",
@@ -6826,7 +6899,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Yuming_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 851702,
-    SkillNodeEffects = T.RT_86
+    SkillNodeEffects = T.RT_85
   },
   [851703] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss17_Yuming/Animation/Montage/Combat/Skill/",
@@ -6869,7 +6942,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851706,
-    SkillNodeEffects = T.RT_87
+    SkillNodeEffects = T.RT_86
   },
   [851707] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss17_Yuming/Animation/Summon/Montage/Combat/Skill/",
@@ -6885,7 +6958,7 @@ return ReadOnly("SkillNode", {
     CanExtractZVelocity = true,
     DisableBlendBone = false,
     NodeId = 851708,
-    SkillNodeEffects = T.RT_87
+    SkillNodeEffects = T.RT_86
   },
   [851801] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss18_Juque/Animation/Montage/Combat/Skill/",
@@ -6893,7 +6966,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Juque_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 851801,
-    SkillNodeEffects = T.RT_88
+    SkillNodeEffects = T.RT_87
   },
   [851802] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss18_Juque/Animation/Montage/Combat/Skill/",
@@ -6901,7 +6974,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Juque_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 851802,
-    SkillNodeEffects = T.RT_88
+    SkillNodeEffects = T.RT_87
   },
   [851803] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss18_Juque/Animation/Montage/Combat/Skill/",
@@ -7014,7 +7087,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Juque_Skill15_Montage",
     DisableBlendBone = false,
     NodeId = 851815,
-    SkillNodeEffects = T.RT_89
+    SkillNodeEffects = T.RT_88
   },
   [851816] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss18_Juque/Animation/Montage/Combat/Skill/",
@@ -7065,7 +7138,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Juque_Skill20_Montage",
     DisableBlendBone = false,
     NodeId = 851821,
-    SkillNodeEffects = T.RT_89
+    SkillNodeEffects = T.RT_88
   },
   [851901] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
@@ -7104,12 +7177,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_LiecheCannon_Skill04_Montage",
     DisableBlendBone = false,
     NodeId = 851904,
-    SkillNodeEffects = {
-      851915,
-      851916,
-      851917,
-      851918
-    }
+    SkillNodeEffects = {851915, 851916}
   },
   [851905] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
@@ -7163,14 +7231,17 @@ return ReadOnly("SkillNode", {
     NodeId = 851910,
     SkillNodeEffects = {
       851953,
-      851954,
       851955,
-      851956,
       851915,
-      851916,
-      851917,
-      851918
+      851916
     }
+  },
+  [851911] = {
+    AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
+    AnimPlayRate = 1,
+    AnimResource = "Boss_LiecheCannon_Skill11_Montage",
+    DisableBlendBone = false,
+    NodeId = 851911
   },
   [851921] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
@@ -7237,7 +7308,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_LiecheBomb_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 851931,
-    SkillNodeEffects = T.RT_90
+    SkillNodeEffects = {851921, 851927}
   },
   [851932] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
@@ -7245,7 +7316,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_LiecheBomb_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 851932,
-    SkillNodeEffects = T.RT_90
+    SkillNodeEffects = T.RT_89
   },
   [851933] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
@@ -7253,47 +7324,46 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_LiecheBomb_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 851933,
-    SkillNodeEffects = T.RT_90
+    SkillNodeEffects = T.RT_89
   },
   [851941] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_LiecheCore_Skill01_Montage",
+    AnimResource = "Boss_LiecheMCore_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 851941,
-    SkillNodeEffects = T.RT_91
+    SkillNodeEffects = {851943}
   },
   [851942] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_LiecheCore_Skill02_Montage",
+    AnimResource = "Boss_LiecheMCore_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 851942,
-    SkillNodeEffects = {851943}
+    SkillNodeEffects = T.RT_90
   },
   [851943] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_LiecheCore_Skill03_Montage",
+    AnimResource = "Boss_LiecheMCore_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 851943,
-    SkillNodeEffects = {851963}
+    SkillNodeEffects = {851975}
   },
   [851944] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_LiecheCore_Skill04_Montage",
+    AnimResource = "Boss_LiecheSCore_Skill01_Montage",
     DisableBlendBone = false,
-    NodeId = 851944,
-    SkillNodeEffects = T.RT_91
+    NodeId = 851944
   },
   [851945] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss19_Lieche/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_LiecheCore_Skill05_Montage",
+    AnimResource = "Boss_LiecheMCore_Skill04_Montage",
     DisableBlendBone = false,
     NodeId = 851945,
-    SkillNodeEffects = {851975}
+    SkillNodeEffects = T.RT_90
   },
   [852001] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss20_Aida/Animation/Montage/Combat/Skill/",
@@ -7529,68 +7599,64 @@ return ReadOnly("SkillNode", {
     SkillNodeEffects = {8520109}
   },
   [852101] = {
-    AnimPath = "/Game/Asset/Char/Monster/Boss21_Zonghuo/Animation/Montage/Combat/Skill/",
+    AnimPath = "/Game/Asset/Char/Monster/Boss21_Qihuo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_Zonghuo_Skill01_Montage",
+    AnimResource = "Boss_Qihuo_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 852101,
     SkillNodeEffects = {8521001}
   },
   [852102] = {
-    AnimPath = "/Game/Asset/Char/Monster/Boss21_Zonghuo/Animation/Montage/Combat/Skill/",
+    AnimPath = "/Game/Asset/Char/Monster/Boss21_Qihuo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_Zonghuo_Skill02_Montage",
+    AnimResource = "Boss_Qihuo_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 852102,
-    SkillNodeEffects = {8521002}
+    SkillNodeEffects = {
+      8521014,
+      8521015,
+      8521016
+    }
   },
   [852103] = {
-    AnimPath = "/Game/Asset/Char/Monster/Boss21_Zonghuo/Animation/Montage/Combat/Skill/",
+    AnimPath = "/Game/Asset/Char/Monster/Boss21_Qihuo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_Zonghuo_Skill03_Montage",
+    AnimResource = "Boss_Qihuo_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 852103,
-    SkillNodeEffects = {
-      8521003,
-      8521004,
-      8521005
-    }
+    SkillNodeEffects = {8521009, 8521012}
   },
   [852104] = {
-    AnimPath = "/Game/Asset/Char/Monster/Boss21_Zonghuo/Animation/Montage/Combat/Skill/",
+    AnimPath = "/Game/Asset/Char/Monster/Boss21_Qihuo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_Zonghuo_Skill04_Montage",
+    AnimResource = "Boss_Qihuo_Skill04_Montage",
     DisableBlendBone = false,
     NodeId = 852104,
-    SkillNodeEffects = {
-      8521006,
-      8521007,
-      8521008
-    }
+    SkillNodeEffects = {8521006, 8521008}
   },
   [852105] = {
-    AnimPath = "/Game/Asset/Char/Monster/Boss21_Zonghuo/Animation/Montage/Combat/Skill/",
+    AnimPath = "/Game/Asset/Char/Monster/Boss21_Qihuo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_Zonghuo_Skill05_1_Montage",
+    AnimResource = "Boss_Qihuo_Skill05_Montage",
     DisableBlendBone = false,
     NodeId = 852105,
-    SkillNodeEffects = T.RT_52
+    SkillNodeEffects = {8521002, 8521019}
   },
   [852106] = {
-    AnimPath = "/Game/Asset/Char/Monster/Boss21_Zonghuo/Animation/Montage/Combat/Skill/",
+    AnimPath = "/Game/Asset/Char/Monster/Boss21_Qihuo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_Zonghuo_Skill06_Montage",
+    AnimResource = "Boss_Qihuo_Skill06_Montage",
     DisableBlendBone = false,
     NodeId = 852106,
-    SkillNodeEffects = {8521010, 8521011}
+    SkillNodeEffects = {8521003, 8521005}
   },
   [852107] = {
-    AnimPath = "/Game/Asset/Char/Monster/Boss21_Zonghuo/Animation/Montage/Combat/Skill/",
+    AnimPath = "/Game/Asset/Char/Monster/Boss21_Qihuo/Animation/Montage/Combat/Skill/",
     AnimPlayRate = 1,
-    AnimResource = "Boss_Zonghuo_Skill05_2_Montage",
+    AnimResource = "Boss_Qihuo_Skill07_Montage",
     DisableBlendBone = false,
     NodeId = 852107,
-    SkillNodeEffects = T.RT_53
+    SkillNodeEffects = {8521010, 8521018}
   },
   [852201] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss22_Tuisheng/Animation/Montage/Combat/Skill/",
@@ -7715,7 +7781,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Jishi_Skill04_Montage",
     DisableBlendBone = false,
     NodeId = 852304,
-    SkillNodeEffects = T.RT_92
+    SkillNodeEffects = T.RT_91
   },
   [852305] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss23_Jishi/Animation/Montage/Combat/Skill/",
@@ -7723,7 +7789,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Jishi_Skill05_Montage",
     DisableBlendBone = false,
     NodeId = 852305,
-    SkillNodeEffects = T.RT_92
+    SkillNodeEffects = T.RT_91
   },
   [852306] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss23_Jishi/Animation/Montage/Combat/Skill/",
@@ -7766,7 +7832,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Jishi_Sum_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 852310,
-    SkillNodeEffects = T.RT_93
+    SkillNodeEffects = T.RT_92
   },
   [852311] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss23_Jishi/Animation/Montage/Combat/Skill/",
@@ -7774,7 +7840,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Jishi_Sum_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 852311,
-    SkillNodeEffects = T.RT_93
+    SkillNodeEffects = T.RT_92
   },
   [852401] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss24_Hengmeng/Animation/Montage/Combat/Skill/",
@@ -7814,14 +7880,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Boss_Hengmeng_Skill05_Montage",
     DisableBlendBone = false,
     NodeId = 852405,
-    SkillNodeEffects = {
-      8524010,
-      8524013,
-      8524014,
-      8524015,
-      8524016,
-      8524017
-    }
+    SkillNodeEffects = {8524013}
   },
   [852406] = {
     AnimPath = "/Game/Asset/Char/Monster/Boss24_Hengmeng/Animation/Montage/Combat/Skill/",
@@ -7941,7 +8000,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Yinxie_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 900101,
-    SkillNodeEffects = T.RT_94
+    SkillNodeEffects = T.RT_93
   },
   [900102] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Yinxie/Animation/Montage/Combat/Skill/",
@@ -7949,7 +8008,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Yinxie_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 900102,
-    SkillNodeEffects = T.RT_94
+    SkillNodeEffects = T.RT_93
   },
   [900103] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Yinxie/Animation/Montage/Combat/Skill/",
@@ -7980,7 +8039,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Dufeng_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 900201,
-    SkillNodeEffects = T.RT_95
+    SkillNodeEffects = T.RT_94
   },
   [900202] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Dufeng/Animation/Montage/Combat/Skill/",
@@ -7988,7 +8047,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Dufeng_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 900202,
-    SkillNodeEffects = T.RT_95
+    SkillNodeEffects = T.RT_94
   },
   [900203] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Dufeng/Animation/Montage/Combat/Skill/",
@@ -7996,7 +8055,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Dufeng_Dual_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 900203,
-    SkillNodeEffects = T.RT_96
+    SkillNodeEffects = T.RT_95
   },
   [900204] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Dufeng/Animation/Montage/Combat/Skill/",
@@ -8004,7 +8063,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Dufeng_Dual_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 900204,
-    SkillNodeEffects = T.RT_96
+    SkillNodeEffects = T.RT_95
   },
   [900211] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Dufeng/Animation/Montage/Combat/Skill/",
@@ -8027,7 +8086,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Wanju_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 900301,
-    SkillNodeEffects = T.RT_97
+    SkillNodeEffects = T.RT_96
   },
   [900302] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Skill/",
@@ -8035,7 +8094,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Wanju_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 900302,
-    SkillNodeEffects = T.RT_97
+    SkillNodeEffects = T.RT_96
   },
   [900303] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Wanju/Animation/Montage/Combat/Skill/",
@@ -8083,7 +8142,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Baozha_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 900501,
-    SkillNodeEffects = T.RT_98
+    SkillNodeEffects = T.RT_97
   },
   [900502] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Baozha/Animation/Montage/Combat/Skill/",
@@ -8091,7 +8150,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Baozha_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 900502,
-    SkillNodeEffects = T.RT_98
+    SkillNodeEffects = T.RT_97
   },
   [900503] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Baozha/Animation/Montage/Combat/Skill/",
@@ -8123,7 +8182,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Qizha_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 900601,
-    SkillNodeEffects = T.RT_99
+    SkillNodeEffects = T.RT_98
   },
   [900602] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Qizha/Animation/Montage/Combat/Skill/",
@@ -8131,7 +8190,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "SQ_Qizha_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 900602,
-    SkillNodeEffects = T.RT_99
+    SkillNodeEffects = T.RT_98
   },
   [900603] = {
     AnimPath = "/Game/Asset/Char/Monster/SQ_Qizha/Animation/Montage/Combat/Skill/",
@@ -8302,7 +8361,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = false,
     NodeId = 950101,
     RootMotionRadius = 3,
-    SkillNodeEffects = T.RT_100
+    SkillNodeEffects = T.RT_99
   },
   [950102] = {
     AnimPath = "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/",
@@ -8311,7 +8370,7 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = false,
     NodeId = 950102,
     RootMotionRadius = 3,
-    SkillNodeEffects = T.RT_100
+    SkillNodeEffects = T.RT_99
   },
   [950103] = {
     AnimPath = "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/",
@@ -8331,7 +8390,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "NE_Villiger_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 950104,
-    SkillNodeEffects = T.RT_101
+    SkillNodeEffects = T.RT_100
   },
   [950105] = {
     AnimPath = "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/",
@@ -8339,7 +8398,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "NE_Villiger_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 950105,
-    SkillNodeEffects = T.RT_101
+    SkillNodeEffects = T.RT_100
   },
   [950106] = {
     AnimPath = "/Game/Asset/Char/Monster/NE_Villiger/Animation/Montage/Combat/Skill/",
@@ -8451,7 +8510,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Xuelang_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 980101,
-    SkillNodeEffects = T.RT_102
+    SkillNodeEffects = T.RT_101
   },
   [980102] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal01_Xuelang/Animation/Montage/Combat/Skill/",
@@ -8459,7 +8518,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Xuelang_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 980102,
-    SkillNodeEffects = T.RT_102
+    SkillNodeEffects = T.RT_101
   },
   [980103] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal01_Xuelang/Animation/Montage/Combat/Skill/",
@@ -8496,7 +8555,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_XuelangB_Attack01_Montage",
     DisableBlendBone = false,
     NodeId = 980107,
-    SkillNodeEffects = T.RT_103
+    SkillNodeEffects = T.RT_102
   },
   [980108] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal01_Xuelang/Animation/Montage/Combat/Skill/",
@@ -8504,7 +8563,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_XuelangB_Attack02_Montage",
     DisableBlendBone = false,
     NodeId = 980108,
-    SkillNodeEffects = T.RT_103
+    SkillNodeEffects = T.RT_102
   },
   [980109] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal01_Xuelang/Animation/Montage/Combat/Skill/",
@@ -8520,7 +8579,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Hongjiaolu_Attack_Montage",
     DisableBlendBone = false,
     NodeId = 980201,
-    SkillNodeEffects = T.RT_104
+    SkillNodeEffects = T.RT_103
   },
   [980202] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Animation/Montage/Combat/Skill/",
@@ -8528,7 +8587,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Hongjiaolu_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 980202,
-    SkillNodeEffects = T.RT_105
+    SkillNodeEffects = T.RT_104
   },
   [980203] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Animation/Montage/Combat/Skill/",
@@ -8536,7 +8595,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Hongjiaolu_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 980203,
-    SkillNodeEffects = T.RT_106
+    SkillNodeEffects = T.RT_105
   },
   [980204] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Animation/Montage/Combat/Skill/",
@@ -8544,7 +8603,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Hongjiaolu_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 980204,
-    SkillNodeEffects = T.RT_107
+    SkillNodeEffects = T.RT_106
   },
   [980205] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal02_Hongjiaolu/Animation/Montage/Combat/Skill/",
@@ -8666,7 +8725,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Yunzonglu_Attack_Montage",
     DisableBlendBone = false,
     NodeId = 980901,
-    SkillNodeEffects = T.RT_104
+    SkillNodeEffects = T.RT_103
   },
   [980902] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal09_Yunzong/Animation/Montage/Combat/Skill/",
@@ -8674,7 +8733,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Yunzonglu_Skill01_Montage",
     DisableBlendBone = false,
     NodeId = 980902,
-    SkillNodeEffects = T.RT_105
+    SkillNodeEffects = T.RT_104
   },
   [980903] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal09_Yunzong/Animation/Montage/Combat/Skill/",
@@ -8682,7 +8741,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Yunzonglu_Skill02_Montage",
     DisableBlendBone = false,
     NodeId = 980903,
-    SkillNodeEffects = T.RT_106
+    SkillNodeEffects = T.RT_105
   },
   [980904] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal09_Yunzong/Animation/Montage/Combat/Skill/",
@@ -8690,7 +8749,7 @@ return ReadOnly("SkillNode", {
     AnimResource = "Mon_Yunzonglu_Skill03_Montage",
     DisableBlendBone = false,
     NodeId = 980904,
-    SkillNodeEffects = T.RT_107
+    SkillNodeEffects = T.RT_106
   },
   [981001] = {
     AnimPath = "/Game/Asset/Char/Monster/Animal10_Hainiao/Animation/Montage/Combat/Skill/",
@@ -9850,7 +9909,7 @@ return ReadOnly("SkillNode", {
     ChangeHandHold = T.RT_19,
     DisableBlendBone = true,
     NodeId = 1060223,
-    SkillNodeEffects = {1060221, 1060220}
+    SkillNodeEffects = T.RT_20
   },
   [1503101] = {
     AnimPath = "/Game/Asset/Char/Player/Char030_Kezhou/Animation/Montage/Combat/Skill/",
@@ -10375,7 +10434,7 @@ return ReadOnly("SkillNode", {
     AnimSubPath = "Combat/Weapon/Cannon/",
     DisableBlendBone = true,
     NodeId = 2030421,
-    SkillNodeEffects = T.RT_31
+    SkillNodeEffects = T.RT_32
   },
   [2030511] = {
     AnimName = "Cannon03_Shooting_Montage",
@@ -10506,7 +10565,7 @@ return ReadOnly("SkillNode", {
     AnimSubPath = "Combat/Weapon/Shotgun/",
     DisableBlendBone = true,
     NodeId = 2040621,
-    SkillNodeEffects = T.RT_31
+    SkillNodeEffects = T.RT_32
   },
   [2040711] = {
     AnimName = "Shotgun01_Shooting_Montage",
@@ -10585,7 +10644,7 @@ return ReadOnly("SkillNode", {
     AnimSubPath = "Combat/Weapon/Machinegun/",
     DisableBlendBone = true,
     NodeId = 2050321,
-    SkillNodeEffects = T.RT_32
+    SkillNodeEffects = T.RT_33
   },
   [2050411] = {
     AnimName = "Machinegun04_Shooting_Montage",
@@ -10676,7 +10735,7 @@ return ReadOnly("SkillNode", {
     AnimSubPath = "Combat/Weapon/Machinegun/",
     DisableBlendBone = true,
     NodeId = 2050921,
-    SkillNodeEffects = T.RT_32
+    SkillNodeEffects = T.RT_33
   },
   [2051011] = {
     AnimName = "Machinegun01_Shooting_Montage",
@@ -10707,7 +10766,7 @@ return ReadOnly("SkillNode", {
     AnimSubPath = "Combat/Weapon/Machinegun/",
     DisableBlendBone = true,
     NodeId = 2051121,
-    SkillNodeEffects = {2051121, 2051122}
+    SkillNodeEffects = {2051121}
   },
   [2051211] = {
     AnimName = "Machinegun06_Shooting_Montage",
@@ -10731,6 +10790,18 @@ return ReadOnly("SkillNode", {
     DisableBlendBone = true,
     NodeId = 2051221,
     SkillNodeEffects = {2051221}
+  },
+  [2059911] = {
+    AnimName = "Machinegun01_Shooting_Montage",
+    AnimPlayRate = 0.5,
+    AnimSubPath = "Combat/Weapon/Machinegun/",
+    CostBullet = 1,
+    DisableBlendBone = true,
+    MontageBlendOutTime = 0,
+    NextNodeId = 2059911,
+    NodeId = 2059911,
+    PhantomPressTime = 3,
+    SkillNodeEffects = {2059915, 2059916}
   },
   [2060111] = {
     AnimName = "Bow02_Shooting_Montage",

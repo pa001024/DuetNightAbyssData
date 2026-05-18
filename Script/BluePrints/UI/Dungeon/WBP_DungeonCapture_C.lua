@@ -108,6 +108,8 @@ function WBP_DungeonCapture_C:OnLoaded(...)
   if self.ShowBulletJumpToast then
     self:AddMessageTimer()
   end
+  self.LastPlaySoundTime_Start = nil
+  self.LastLeftTimeInteger = nil
 end
 
 function WBP_DungeonCapture_C:AddMessageTimer()
@@ -132,6 +134,7 @@ function WBP_DungeonCapture_C:OnCaptureRecoveryTimeUpdated()
   if LeftTime >= 0 then
     local TimeStr = self:GetTimeStr(math.floor(LeftTime))
     self.TextBlock_LeftTime:SetText(TimeStr)
+    self:PlaySound(LeftTime, self.TurnRedTime)
     if LeftTime <= self.TurnRedTime then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.FadeInRed)
       self.TextBlock_LeftTime_1:SetText(TimeStr)
@@ -253,6 +256,7 @@ function WBP_DungeonCapture_C:UpdateTimerByHandleName()
   local RemainTime = math.max(math.floor(RawRemainTime), 0)
   local TimeStr = self:GetTimeStr(RemainTime)
   self.TextBlock_LeftTime:SetText(TimeStr)
+  self:PlaySound(RemainTime, self.CurTurnRedTime)
   if RemainTime <= self.CurTurnRedTime then
     if self.LastRemainTime and self.LastRemainTime ~= RemainTime then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.FadeInRed)
@@ -273,9 +277,10 @@ function WBP_DungeonCapture_C:CloseClientTimerByHandleName()
   self:Close()
 end
 
-function WBP_DungeonCapture_C:InitCaptureTimeUIOnHostageDead(HostagePhantomState)
+function WBP_DungeonCapture_C:InitCaptureTimeUIOnHostageDead(HostagePhantomState, MaxDyingDuration)
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Panel_time:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  self.HostageMaxDyingDuration = MaxDyingDuration or 20
   local TimeStr = self:GetTimeStr(math.floor(self.RemainingTime))
   self.TaskTitle:SetText(GText("UI_DUNGEON_DES_RESCUE_7"))
   self.TextBlock_LeftTime:SetText(TimeStr)
@@ -316,7 +321,7 @@ end
 
 function WBP_DungeonCapture_C:UpdateRemainingTimeInHostage(HostageDyingDuration)
   DebugPrint("WBP_DungeonCapture_C:UpdateRemainingTimeInHostage", HostageDyingDuration)
-  self.RemainingTime = 15 - (HostageDyingDuration or 0)
+  self.RemainingTime = self.HostageMaxDyingDuration - (HostageDyingDuration or 0)
   if self.RemainingTime >= 0 then
     local TimeStr = self:GetTimeStr(math.floor(self.RemainingTime))
     self.TextBlock_LeftTime:SetText(TimeStr)
@@ -355,6 +360,7 @@ function WBP_DungeonCapture_C:UpdateRemainingTimeInRescue()
   if self.RemainingTime >= 0 then
     local TimeStr = self:GetTimeStr(math.floor(self.RemainingTime))
     self.TextBlock_LeftTime:SetText(TimeStr)
+    self:PlaySound(self.RemainingTime, self.TurnRedTime)
     if self.RemainingTime <= self.TurnRedTime then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.FadeInRed)
       self.TextBlock_LeftTime_1:SetText(TimeStr)
@@ -375,6 +381,7 @@ function WBP_DungeonCapture_C:UpdateRemainingTime()
   if LeftTime >= 0 then
     local TimeStr = self:GetTimeStr(math.floor(LeftTime + 0.5))
     self.TextBlock_LeftTime:SetText(TimeStr)
+    self:PlaySound(LeftTime, self.TurnRedTime)
     if LeftTime <= self.TurnRedTime then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.FadeInRed)
       self.TextBlock_LeftTime_1:SetText(TimeStr)
@@ -475,6 +482,8 @@ function WBP_DungeonCapture_C:Reset(RemainTime, WarningTime, Now)
   self.StartCountDownTime = Now
   self.RemainingTime = RemainTime
   self.TurnRedTime = WarningTime
+  self.LastPlaySoundTime_Start = nil
+  self.LastLeftTimeInteger = nil
 end
 
 function WBP_DungeonCapture_C:SetTitle(Str)
@@ -484,6 +493,37 @@ end
 function WBP_DungeonCapture_C:SetTextFromGameMode(Text)
   self.TaskTitle:SetText(GText(Text))
   self.KeyToHideSelf = Text
+end
+
+function WBP_DungeonCapture_C:PlaySound(LeftTime, TurnRedTime)
+  if nil == LeftTime or nil == TurnRedTime then
+    return
+  end
+  if not self:IsPlaySound() then
+    return
+  end
+  if not self.LastLeftTimeInteger then
+    self.LastLeftTimeInteger = math.max(0, math.ceil(LeftTime))
+  end
+  local LeftTimeInteger = math.max(0, math.ceil(LeftTime))
+  DebugPrint("WBP_DungeonCapture_C:PlaySound LeftTime: ", LeftTime, " LeftTimeInteger: ", LeftTimeInteger, " TurnRedTime: ", TurnRedTime)
+  DebugPrint("WBP_DungeonCapture_C:PlaySound self.LastLeftTimeInteger: ", self.LastLeftTimeInteger, " self.LastPlaySoundTime_Start: ", self.LastPlaySoundTime_Start)
+  if TurnRedTime >= LeftTimeInteger then
+    if LeftTimeInteger < self.LastLeftTimeInteger then
+      DebugPrint("WBP_DungeonCapture_C:PlaySound TurnRedSound")
+      AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning_short_reverb", nil, nil)
+    end
+    self.LastLeftTimeInteger = LeftTimeInteger
+  elseif nil == self.LastPlaySoundTime_Start or LeftTime >= self.LastPlaySoundTime_Start then
+    DebugPrint("WBP_DungeonCapture_C:PlaySound StartSound")
+    AudioManager(self):PlayUISound(self, "event:/ui/activity/drama_challenge_progressbar_show", nil, nil)
+    self.LastPlaySoundTime_Start = LeftTime
+    self.LastLeftTimeInteger = nil
+  end
+end
+
+function WBP_DungeonCapture_C:IsPlaySound()
+  return true
 end
 
 return WBP_DungeonCapture_C

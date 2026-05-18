@@ -198,6 +198,8 @@ class RewardViewProcessor(BaseProcessor):
         elif item_type == "Reward":
             # Reward类型不需要添加名称，返回None
             return None
+        elif item_type == "IronTicket":
+            return self.get_translated_text("UI_IronTicket_Survival_Name")
         elif item_type == "Draft":
             # 特殊处理Draft类型，根据ProductType和ProductId获取产物名称
             draft_item = self.draft_data.get(str(item_id), {})
@@ -229,6 +231,10 @@ class RewardViewProcessor(BaseProcessor):
                 # 获取角色配件名称，直接使用翻译
                 product_name = self.get_translated_text(
                     f"UI_Accessory_Name_{product_id}"
+                )
+            elif product_type == "IronTicket":
+                product_name = self.get_translated_text(
+                    "UI_IronTicket_Survival_Name"
                 )
 
             # 如果无法获取产物名称，返回类型和ID

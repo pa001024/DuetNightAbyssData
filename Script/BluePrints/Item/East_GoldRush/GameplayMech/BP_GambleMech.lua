@@ -14,10 +14,7 @@ function M:CommonInitInfo(Info)
       self.Shape = TributeData.Shape
     end
   end
-  local ServerEntity = GWorld:GetServerEntity()
-  if ServerEntity then
-    self.DungeonObject = ServerEntity:GetDungeonObject()
-  end
+  self.DungeonObject = GWorld:GetGameModeDungeonObject()
   self.InteractiveContinue = false
 end
 

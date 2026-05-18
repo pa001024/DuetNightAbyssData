@@ -22,6 +22,12 @@ function WBP_Forging_MaterialReturn_PC_C:UpdateView(ResInfos)
         Content.Icon = ResourceData.Icon
         Content.Rarity = ResourceData.Rarity
       end
+    elseif ResInfo.ResType == "IronTicket" then
+      local TicketData = DataMgr.IronTicket[ResInfo.ResId]
+      if TicketData then
+        Content.Icon = TicketData.Icon
+        Content.Rarity = TicketData.Rarity
+      end
     end
   end
 end

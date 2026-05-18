@@ -138,7 +138,7 @@ return ReadOnly("TalkAction", {
     bUseIK = false
   },
   Aote_Story_Drink = {
-    ActionMontage = "Story_Drink",
+    ActionMontage = "Story_Sit_Drink",
     AnimationId = "Aote_Story_Drink",
     BlendInTime = 0,
     BlendOutTime = 0,
@@ -1346,6 +1346,33 @@ return ReadOnly("TalkAction", {
     MontageSection = "Start",
     bUseIK = false
   },
+  Crouch01_End = {
+    ActionMontage = "Story_Crouch01",
+    AnimationId = "Crouch01_End",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "End",
+    bUseIK = false
+  },
+  Crouch01_Loop = {
+    ActionMontage = "Story_Crouch01",
+    AnimationId = "Crouch01_Loop",
+    BlendInTime = 0,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop",
+    bUseIK = false
+  },
+  Crouch01_Start = {
+    ActionMontage = "Story_Crouch01",
+    AnimationId = "Crouch01_Start",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Start",
+    bUseIK = false
+  },
   Crouch_End = {
     ActionMontage = "Story_Crouch",
     AnimationId = "Crouch_End",
@@ -1523,6 +1550,22 @@ return ReadOnly("TalkAction", {
     IsSpecialAnim = false,
     MontageSection = "Start",
     bUseIK = false
+  },
+  Drawing_Loop = {
+    ActionMontage = "Story_Drawing",
+    AnimationId = "Drawing_Loop",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
+  },
+  Elegant_Loop = {
+    ActionMontage = "Story_Elegent",
+    AnimationId = "Elegant_Loop",
+    BlendInTime = 0,
+    BlendOutTime = 0,
+    IsSpecialAnim = false,
+    MontageSection = "Loop"
   },
   Emo_Daydream_End = {
     ActionMontage = "Emo_Daydream",
@@ -1898,6 +1941,16 @@ return ReadOnly("TalkAction", {
     MontageSection = "Default",
     bUseIK = false
   },
+  Gesture_Dance01 = {
+    ActionMontage = "Gesture_Dance01",
+    AnimationId = "Gesture_Dance01",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsOnceAction = true,
+    IsSpecialAnim = false,
+    MontageSection = "Default",
+    bUseIK = false
+  },
   Gesture_Fishing = {
     ActionMontage = "Gesture_Fishing",
     AnimationId = "Gesture_Fishing",
@@ -1918,9 +1971,49 @@ return ReadOnly("TalkAction", {
     MontageSection = "Default",
     bUseIK = false
   },
+  Gesture_Qitao = {
+    ActionMontage = "Gesture_Qitao",
+    AnimationId = "Gesture_Qitao",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsOnceAction = true,
+    IsSpecialAnim = false,
+    MontageSection = "Default",
+    bUseIK = false
+  },
   Gesture_Saoba = {
     ActionMontage = "Gesture_Saoba",
     AnimationId = "Gesture_Saoba",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsOnceAction = true,
+    IsSpecialAnim = false,
+    MontageSection = "Default",
+    bUseIK = false
+  },
+  Gesture_Sit_01 = {
+    ActionMontage = "Gesture_Sit_01",
+    AnimationId = "Gesture_Sit_01",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsOnceAction = true,
+    IsSpecialAnim = false,
+    MontageSection = "Default",
+    bUseIK = false
+  },
+  Gesture_Sit_02 = {
+    ActionMontage = "Gesture_Sit_02",
+    AnimationId = "Gesture_Sit_02",
+    BlendInTime = 0.2,
+    BlendOutTime = 0.2,
+    IsOnceAction = true,
+    IsSpecialAnim = false,
+    MontageSection = "Default",
+    bUseIK = false
+  },
+  Gesture_Xiaoxiong = {
+    ActionMontage = "Gesture_Xiaoxiong",
+    AnimationId = "Gesture_Xiaoxiong",
     BlendInTime = 0.2,
     BlendOutTime = 0.2,
     IsOnceAction = true,

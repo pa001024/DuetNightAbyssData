@@ -47,6 +47,7 @@ function M:InitResourceBar(Info, bShowBubble)
           ResourceBarWidget:BindEventOnMenuOpenChanged(self, self.OnMenuOpenChanged)
           self.ResourceBarWidget[WalnutId] = ResourceBarWidget
         end
+        ResourceBarWidget.ResourceBarHost = self
         local WalnutIcon = LoadObject(DataMgr.Walnut[WalnutId].Icon)
         ResourceBarWidget.Common_Item_Icon:Init({
           UIName = "BagMain",
@@ -80,6 +81,7 @@ function M:InitResourceBar(Info, bShowBubble)
           ResourceBarWidget:BindEventOnMenuOpenChanged(self, self.OnMenuOpenChanged)
           self.ResourceBarWidget[CoinId] = ResourceBarWidget
         end
+        ResourceBarWidget.ResourceBarHost = self
         local CoinIcon = LoadObject(DataMgr.Resource[CoinId].Icon)
         ResourceBarWidget.Common_Item_Icon:Init({
           UIName = "BagMain",
@@ -208,7 +210,11 @@ function M:InitGamePadTip(Params)
   if Params.bNeedLongPressInfo then
     Params.KeyInfo.bLongPress = true
     self.Tip_GamePad:CreateCommonKey(Params.KeyInfo)
-    self.Tip_GamePad:AddExecuteLogic(Params.ClickFuncObj, Params.ClickFunc)
+    if Params.bSkipGamePadExecuteLogic then
+      self.Tip_GamePad:RemoveExecuteLogic()
+    else
+      self.Tip_GamePad:AddExecuteLogic(Params.ClickFuncObj, Params.ClickFunc)
+    end
   else
     self.Tip_GamePad:CreateCommonKey(Params.KeyInfo)
   end
@@ -224,8 +230,8 @@ function M:HideTip(bHide)
   end
 end
 
-function M:OnGamePadTipPressed()
-  self.Tip_GamePad:OnButtonPressed()
+function M:OnGamePadTipPressed(bSetTimeRange, StartAtTime, EndAtTime)
+  self.Tip_GamePad:OnButtonPressed(false, bSetTimeRange, StartAtTime, EndAtTime)
 end
 
 function M:OnGamePadTipReleased()

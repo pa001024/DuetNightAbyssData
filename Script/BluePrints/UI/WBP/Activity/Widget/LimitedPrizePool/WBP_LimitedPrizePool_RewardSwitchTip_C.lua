@@ -27,10 +27,22 @@ function M:Destruct()
 end
 
 function M:Init(CurrentRoundNumber, MaxRoundNumber, OnClosed)
+  self:SetRoundInfo(CurrentRoundNumber, MaxRoundNumber)
+  self:SetOnClosed(OnClosed)
+  self:PlayRoundSwitchTip()
+end
+
+function M:SetRoundInfo(CurrentRoundNumber, MaxRoundNumber)
   self.CurrentRoundText:SetText(tostring(CurrentRoundNumber - 1))
   self.NextRoundText:SetText(tostring(CurrentRoundNumber))
   self.MaxRoundText:SetText(tostring(MaxRoundNumber))
+end
+
+function M:SetOnClosed(OnClosed)
   self.OnClosed = OnClosed
+end
+
+function M:PlayRoundSwitchTip()
   self:PlayAnimation(self.FadeInAnimation)
   AudioManager(self):PlayUISound(self, "event:/ui/activity/limit_gift_pool_round_add", nil, nil)
   self:SetFocus()

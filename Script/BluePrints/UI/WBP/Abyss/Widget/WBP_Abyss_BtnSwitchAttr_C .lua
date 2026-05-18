@@ -3,13 +3,10 @@ local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 function M:Construct()
   self:BindButtonPerformances()
   self:InitGamepadKeys()
-  self.AttributeIcons = {
-    [1] = self.Attribute_L,
-    [2] = self.Attribute_R
-  }
   self.Attribute2Idx = {}
   self.CurrentAttrIdx = -1
   self.OnClickEvent = nil
+  self.Text_Change:SetText(GText("UI_Switch_Attribute"))
 end
 
 function M:Destruct()
@@ -31,11 +28,9 @@ end
 function M:Init(Attributes)
   local Attributes = Attributes or {}
   local Attribute2Idx = {}
-  for i = 1, 2 do
+  for i = 1, #Attributes do
     local Attribute = Attributes[i]
     local CounterAttr = DataMgr.Attribute[Attribute].CounterType
-    local IconPath = DataMgr.Attribute[CounterAttr].Icon
-    self.AttributeIcons[i]:SetBrushResourceObject(LoadObject(IconPath))
     Attribute2Idx[CounterAttr] = i
   end
   self.Attribute2Idx = Attribute2Idx
@@ -46,23 +41,14 @@ function M:ChooseAttribute(AttributeName)
   if not AttributeName then
     return -1
   end
+  local IconPath = DataMgr.Attribute[AttributeName].Icon
+  self.Icon_Attribute:SetBrushResourceObject(LoadObject(IconPath))
   local AttrIdx = self.Attribute2Idx[AttributeName]
   if not AttrIdx then
     return -1
   end
   if self.CurrentAttrIdx == AttrIdx then
     return -1
-  end
-  if 1 == AttrIdx then
-    if -1 ~= self.CurrentAttrIdx then
-      self:PlayAnimationReverse(self.Switch_LtoR)
-    else
-      self:PlayAnimation(self.Select_L)
-    end
-  elseif -1 ~= self.CurrentAttrIdx then
-    self:PlayAnimation(self.Switch_LtoR)
-  else
-    self:PlayAnimation(self.Select_R)
   end
   self:PlayAnimation(self.Remind)
   self.CurrentAttrIdx = AttrIdx
@@ -150,7 +136,6 @@ end
 
 function M:PlayButtonPressAnim()
   self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
   self:PlayAnimation(self.Press)
 end
 
@@ -161,7 +146,6 @@ end
 
 function M:PlayButtonHoverAnim()
   self:StopAllAnimations()
-  self:PlayAnimation(self.Normal)
   self:PlayAnimation(self.Hover)
 end
 

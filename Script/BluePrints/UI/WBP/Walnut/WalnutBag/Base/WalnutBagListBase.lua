@@ -88,12 +88,16 @@ function M:RefreshList(bAnimation, FromSrc)
       self.List_Item:SetVisibility(UE4.ESlateVisibility.Collapsed)
     else
       self.Panel_Empty_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-      self.List_Item:SetVisibility(UE4.ESlateVisibility.Visable)
+      self.List_Item:SetVisibility(UE4.ESlateVisibility.Visible)
     end
   else
+    if 0 == self.List_Item:GetNumItems() then
+      self.Panel_Empty_Detail:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    else
+      self.Panel_Empty_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
     self.Panel_Empty_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Panel_Empty_Detail:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-    self.List_Item:SetVisibility(UE4.ESlateVisibility.Visable)
+    self.List_Item:SetVisibility(UE4.ESlateVisibility.Visible)
   end
   if self.BagSellState and self.CurSelectContent and self.CurSelectContent.Count > 0 then
   else
@@ -173,6 +177,7 @@ function M:OnListEmpty(FromSrc)
     self.Text_Empty_World_1:SetText(EnText("UI_Walnut_Not_Find"))
     self.Panel_Empty_Search:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Panel_ItemList:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Panel_Empty_Detail:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
     self.HB_Empty:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Panel_ItemList:SetVisibility(UIConst.VisibilityOp.Collapsed)

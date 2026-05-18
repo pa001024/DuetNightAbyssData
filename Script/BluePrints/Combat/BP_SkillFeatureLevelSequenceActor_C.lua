@@ -29,10 +29,11 @@ function M:IsCanPlay()
   end
   local CurrentFrame = 0
   while FrameLength > CurrentFrame do
-    local PlaybackParams = FMovieSceneSequencePlaybackParams()
-    PlaybackParams.Frame.FrameNumber.Value = MiscUtils.Int(CurrentFrame)
-    self.SequencePlayer:SetPlaybackPosition(PlaybackParams)
-    StartLocation = self.CineCameraActor:K2_GetActorLocation()
+    local CameraLocation, bHasCameraLocation = self:TryGetCameraWorldLocationAtFrame(MiscUtils.Int(CurrentFrame))
+    if not bHasCameraLocation then
+      return false
+    end
+    StartLocation = CameraLocation
     local _, bIsHit = UKismetSystemLibrary.SphereTraceSingle(self, EndLocation, StartLocation, self.TraceRadius, ETraceTypeQuery.Camera, false, IgnoreActors, TraceDebugType, nil, true)
     if bIsHit then
       return false
@@ -40,12 +41,13 @@ function M:IsCanPlay()
     CurrentFrame = CurrentFrame + 1
   end
   if not self.bUseNewSkillFeature and self.EndBlendTime > 0 then
+    local EndFrame = math.max(MiscUtils.Int(FrameLength) - 1, 0)
     local PlaybackParams = FMovieSceneSequencePlaybackParams()
-    PlaybackParams.Frame.FrameNumber.Value = FrameLength
+    PlaybackParams.Frame.FrameNumber.Value = EndFrame
     self.SequencePlayer:SetPlaybackPosition(PlaybackParams)
     self.EndBlendCamera = self:DuplicateCameraActorOnEnd()
+    self.SequencePlayer:SetPlaybackPosition(FMovieSceneSequencePlaybackParams())
   end
-  self.SequencePlayer:SetPlaybackPosition(FMovieSceneSequencePlaybackParams())
   return true
 end
 

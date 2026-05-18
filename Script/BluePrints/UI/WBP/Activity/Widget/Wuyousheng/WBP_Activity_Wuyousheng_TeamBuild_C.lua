@@ -4,6 +4,7 @@ local TimeUtils = require("Utils.TimeUtils")
 local EMCache = require("EMCache.EMCache")
 local UIUtils = require("Utils.UIUtils")
 local TeamSelectComponent = require("BluePrints.UI.UI_PC.Common.TeamSelectComponent")
+local SquadPresetUtils = require("Utils.SquadPresetUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C"
 })
@@ -424,6 +425,8 @@ function M:Enter(DungeonId)
       end
     end
   end
+  local Avatar = GWorld:GetAvatar()
+  SquadPresetUtils.FixMainPlayerInProps(Avatar, SavedSquad)
   self.TeamInfos = SavedSquad
   self.InitialSquad = SavedSquad
   self:InitWidget()

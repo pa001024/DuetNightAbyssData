@@ -15,11 +15,12 @@ function BP_AutoChess_Cube_C:ReceiveBeginPlay()
     self.OnReleased:Add(self, self._OnReleased)
   end
   if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
-    if self.OnInputTouchBegin then
-      self.OnInputTouchBegin:Add(self, self._OnInputTouchBegin)
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    if PlayerController then
+      PlayerController:AddEMOnInputTouchBegin(self, self, self._OnInputTouchBegin)
     end
-    if self.OnInputTouchEnd then
-      self.OnInputTouchEnd:Add(self, self._OnInputTouchEnd)
+    if PlayerController then
+      PlayerController:AddEMOnInputTouchEnd(self, self, self._OnInputTouchEnd)
     end
   end
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(self, 0)
@@ -222,11 +223,12 @@ end
 
 function BP_AutoChess_Cube_C:DisableCubeInteraction()
   if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
-    if self.OnInputTouchBegin then
-      self.OnInputTouchBegin:Clear()
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    if PlayerController then
+      PlayerController:ClearEMOnInputTouchBegin(self)
     end
-    if self.OnInputTouchEnd then
-      self.OnInputTouchEnd:Clear()
+    if PlayerController then
+      PlayerController:ClearEMOnInputTouchEnd(self)
     end
   end
   if self.OnClicked then

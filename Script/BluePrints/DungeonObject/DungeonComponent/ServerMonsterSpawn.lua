@@ -54,11 +54,11 @@ function ServerMonsterSpawn:OnReceiveMultiInfoRes(MultiInfoRes)
   self.InitSuccess = true
 end
 
-function ServerMonsterSpawn:SetLifeTime()
-  if self.Data.UnitSpawnLife == nil or self.Data.UnitSpawnLife <= 0 then
+function ServerMonsterSpawn:SetLifeTime(LifeTime)
+  if nil == LifeTime or LifeTime <= 0 then
     return
   end
-  self.Manager:AddTimer(self.Data.UnitSpawnLife, function()
+  self.Manager:AddTimer(LifeTime, function()
     self:TriggerDestroy(true, true)
   end, nil)
 end
@@ -91,7 +91,7 @@ function ServerMonsterSpawn:TriggerCreateMonsters()
       local MonsterInfo = self.Manager:CreateMonster(UnitId, "MonsterSpawn", self.UnitSpawnId)
       table.insert(UniqueIdsTable, MonsterInfo.UniqueId)
       table.insert(self.MonsterSpawnInfo[UnitId], MonsterInfo.UniqueId)
-      self:DebugPrint("ServerMonsterSpawn:TriggerCreateMonsters " .. tostring(MonsterInfo.UniqueId) .. " " .. tostring(i))
+      self:DebugPrint("HTYServerTest ServerMonsterSpawn:TriggerCreateMonsters " .. tostring(MonsterInfo.UniqueId) .. " " .. tostring(i))
     end
     MonsterInfos.UnitInfos[UnitId] = UniqueIdsTable
   end
@@ -151,6 +151,8 @@ function ServerMonsterSpawn:GetCreateMonsterTotalNeedNum(RealMonsterSpawnInitInf
       self:DebugPrint("ServerMonsterSpawn::GetCreateMonsterTotalNeedNum   怪物刷新检测，出现不在预期内的UnitId  UnitId: " .. tostring(UnitId) .. " MonsterSpawnId " .. tostring(self.UnitSpawnId))
     end
   end
+  local FirsetPercentFix = self.Data.FirstPercentFix or 0
+  FirstNum = math.ceil(TotalNeedNum * FirsetPercentFix / 100)
   Res[1] = TotalNeedNum
   Res[2] = FirstNum
   return Res
@@ -189,7 +191,7 @@ end
 
 function ServerMonsterSpawn:RelationCreateMonsters(Info)
   local RelationDistributedInfo = Info
-  if not #Info > 0 then
+  if 0 == #Info then
     RelationDistributedInfo = self:GetRelationCMBaseInfo()
   end
   local MonsterInfos = {}
@@ -292,7 +294,7 @@ function ServerMonsterSpawn:UpdateDetectFix(Res)
     self.MonsterSpawnTimeHandle = self.Manager:AddLoopTimer(self.RealDetectTime, self.RealDetectTime, function()
       self:DetectMonsterSpawnInfo()
     end, nil)
-    self.Manager:AddTimerHandlerToMap(self.UnisSpawnId, self.MonsterSpawnTimeHandle)
+    self.Manager:AddTimerHandlerToMap(self.UnitSpawnId, self.MonsterSpawnTimeHandle)
   end
 end
 
@@ -343,10 +345,10 @@ function ServerMonsterSpawn:TriggerResume()
 end
 
 function ServerMonsterSpawn:TriggerMonsterDead(MonsterInfo)
-  self:DebugPrint("ServerMonsterSpawn::TriggerMonsterDead RelationSpawn: " .. tostring(MonsterInfo.RelationSpawn) .. " UniqueId: " .. tostring(MonsterInfo.UniqueId) .. " UnitId: " .. tostring(MonsterInfo.UnitId))
   if nil == MonsterInfo then
     return
   end
+  self:DebugPrint("HTYServerTest ServerMonsterSpawn::TriggerMonsterDead RelationSpawn: " .. tostring(MonsterInfo.RelationSpawn) .. " UniqueId: " .. tostring(MonsterInfo.UniqueId) .. " UnitId: " .. tostring(MonsterInfo.UnitId))
   if MonsterInfo.RelationSpawn then
     local RelationSpawnInfo = self.RelationSpawnInfo[MonsterInfo.UnitId]
     if not RelationSpawnInfo then

@@ -274,9 +274,41 @@ return ReadOnly("Access", {
     AccessKey = "Text_HardMonster",
     AccessText = "Access_Monster_HardNormal"
   },
+  Text_Headicon = {
+    AccessKey = "Text_Headicon",
+    AccessText = "Text_Headicon"
+  },
+  Text_IronSurvival = {
+    AccessKey = "Text_IronSurvival",
+    AccessText = "Text_IronSurvival"
+  },
   Text_LevelReward = {
     AccessKey = "Text_LevelReward",
     AccessText = "UI_Player_Level_Reward"
+  },
+  Text_MONSTERCAMP_Diguo = {
+    AccessKey = "Text_MONSTERCAMP_Diguo",
+    AccessText = "Text_MONSTERCAMP_Diguo"
+  },
+  Text_MONSTERCAMP_Dongguo = {
+    AccessKey = "Text_MONSTERCAMP_Dongguo",
+    AccessText = "Text_MONSTERCAMP_Dongguo"
+  },
+  Text_MONSTERCAMP_Huishou = {
+    AccessKey = "Text_MONSTERCAMP_Huishou",
+    AccessText = "Text_MONSTERCAMP_Huishou"
+  },
+  Text_MONSTERCAMP_Jiaohui = {
+    AccessKey = "Text_MONSTERCAMP_Jiaohui",
+    AccessText = "Text_MONSTERCAMP_Jiaohui"
+  },
+  Text_MONSTERCAMP_Tongmeng = {
+    AccessKey = "Text_MONSTERCAMP_Tongmeng",
+    AccessText = "Text_MONSTERCAMP_Tongmeng"
+  },
+  ["Text_Mod_1.4Qiyuezhe"] = {
+    AccessKey = "Text_Mod_1.4Qiyuezhe",
+    AccessText = "Text_Mod_1.4Qiyuezhe"
   },
   Text_Monster = {
     AccessKey = "Text_Monster",
@@ -315,6 +347,14 @@ return ReadOnly("Access", {
   Text_SHOP_MAINTAB_GACHA = {
     AccessKey = "Text_SHOP_MAINTAB_GACHA",
     AccessText = "Text_SHOP_MAINTAB_GACHA"
+  },
+  Text_SellWeapon = {
+    AccessKey = "Text_SellWeapon",
+    AccessText = "Text_SellWeapon"
+  },
+  Text_Shop_HuaxuExplore = {
+    AccessKey = "Text_Shop_HuaxuExplore",
+    AccessText = "Text_HuaxuExploreShop"
   },
   Text_SoldFish = {
     AccessKey = "Text_SoldFish",

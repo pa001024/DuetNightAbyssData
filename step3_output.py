@@ -24,6 +24,7 @@ from processor.dispatch_processor import DispatchProcessor
 from processor.dyn_quest_processor import DynQuestProcessor
 from processor.quest_chain_processor import QuestChainProcessor
 from processor.quest_story_processor import QuestStoryProcessor
+from processor.forge_level_quest_processor import ForgeLevelQuestProcessor
 from processor.party_topic_processor import PartyTopicProcessor
 from processor.region_processor import RegionProcessor
 from processor.sub_region_processor import SubRegionProcessor
@@ -53,6 +54,10 @@ from processor.monster_strong_affixes_processor import MonsterStrongAffixesProce
 from processor.skin_processor import SkinProcessor
 from processor.solo_treasure_processor import SoloTreasureProcessor
 from processor.solo_treasure_gameplay_processor import SoloTreasureGamePlayProcessor
+from processor.iron_ticket_processor import IronTicketProcessor
+from processor.iron_survival_monster_spawn_processor import (
+    IronSurvivalMonsterSpawnProcessor,
+)
 from processor.extraction_treasure_bag_processor import (
     ExtractionTreasureBagProcessor,
 )
@@ -293,6 +298,7 @@ class FinalProcessor:
             "CharDataTarget": "CharacterDataTarget",
             "Event": "EventMain",
             "BackpackPuzzleItem": "PuzzleItemAttr",
+            "IronSurvivalMonsterSpawn": "MonsterSpawn",
         }
 
         # 不在这里创建共享的DataLoader实例，改为每个任务创建独立实例
@@ -321,6 +327,7 @@ class FinalProcessor:
             "DynQuest": DynQuestProcessor,
             "QuestChain": QuestChainProcessor,
             "QuestStory": QuestStoryProcessor,
+            "ForgeLevelQuest": ForgeLevelQuestProcessor,
             "PartyTopic": PartyTopicProcessor,
             "Region": RegionProcessor,
             "SubRegion": SubRegionProcessor,
@@ -356,6 +363,8 @@ class FinalProcessor:
             "RougeLikeTreasure": RougeLikeTreasureProcessor,
             "SoloTreasure": SoloTreasureProcessor,
             "SoloTreasureGamePlay": SoloTreasureGamePlayProcessor,
+            "IronTicket": IronTicketProcessor,
+            "IronSurvivalMonsterSpawn": IronSurvivalMonsterSpawnProcessor,
             "ExtractionTreasure": ExtractionTreasureProcessor,
             "ExtractionTreasureBag": ExtractionTreasureBagProcessor,
             "ExtractionTreasureMechanism": ExtractionTreasureMechanismProcessor,
@@ -425,7 +434,7 @@ class FinalProcessor:
         processed_items = processor.process_all_items(items, language)
 
         # Sort by id if applicable
-        if processed_items:
+        if isinstance(processed_items, list) and processed_items:
             processed_items.sort(key=lambda x: x.get("id", 0))
 
         # Create output directory path
@@ -485,6 +494,7 @@ if __name__ == "__main__":
         "DynQuest",
         "Resource",
         "BookSeriesArchive",
+        "ForgeLevelQuest",
         "QuestChain",
         "QuestStory",
         "PartyTopic",
@@ -505,6 +515,7 @@ if __name__ == "__main__":
         "CharAccessory",
         "WeaponAccessory",
         "WeaponSkin",
+        "HyperWeaponCardLevel",
         "Skin",
         "HeadSculpture",
         "HeadFrame",
@@ -522,6 +533,8 @@ if __name__ == "__main__":
         "RougeLikeTreasure",
         "SoloTreasure",
         "SoloTreasureGamePlay",
+        "IronTicket",
+        "IronSurvivalMonsterSpawn",
         "ExtractionTreasure",
         "ExtractionTreasureBag",
         "ExtractionTreasureMechanism",

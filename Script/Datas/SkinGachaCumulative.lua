@@ -39,5 +39,10 @@ return ReadOnly("SkinGachaCumulative", {
     GachaId = 9005,
     RewardId = T.RT_1,
     RewardTarget = T.RT_2
+  },
+  [90021] = {
+    GachaId = 90021,
+    RewardId = T.RT_1,
+    RewardTarget = T.RT_2
   }
 })

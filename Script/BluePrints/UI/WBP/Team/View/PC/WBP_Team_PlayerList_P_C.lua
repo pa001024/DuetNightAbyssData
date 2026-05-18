@@ -19,7 +19,7 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
     Params.WidgetToFocus = self
     Params.bShowMouseCursor = true
     Params.MouseLockMode = EMouseLockMode.DoNotLock
-    GameInputSubsystem:EnableInputMode(self.WidgetName or self.ConfigName, EGameInputMode.GameAndUI, Params)
+    GameInputSubsystem:EnableInputMode(self.WidgetName or self.ConfigName, EGameInputMode.UI, Params)
   end
   self:OnMenuOpenChanged(false)
   self.Key_Select:CreateSubKeyDesc({
@@ -47,7 +47,6 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
   self.Btn_Invite:SetGamePadImg("Y")
   self.Btn_Leave:SetGamePadImg("X")
   UIManager(self):GetGameInputModeSubsystem().OnInputMethodChanged:Add(self, self.OnInputDeviceChange)
-  UIManager(self):SetDisableAnalongNavigation(true)
   self.LastIsGamepad = TeamController:IsGamepad()
   self:OnInputDeviceChange()
   if TeamController:IsGamepad() then
@@ -103,31 +102,25 @@ function M:OnFocusLost()
 end
 
 function M:OnMenuOpenChanged(bOpen)
-  if not bOpen then
-    self.Key_Back:CreateSubKeyDesc({
-      Type = "Img",
-      Desc = GText("UI_BACK"),
-      KeyInfoList = {
-        {
-          Owner = self,
-          Type = "Img",
-          ImgShortPath = UIUtils.GetIconListByActionName("ShowTeamInfo")[1]
-        }
+  self.Key_Back:CreateSubKeyDesc({
+    Type = "Img",
+    Desc = GText("UI_BACK"),
+    KeyInfoList = {
+      {
+        Owner = self,
+        Type = "Img",
+        ImgShortPath = "B"
       }
-    })
+    }
+  })
+  if bOpen then
+    self.Key_Back:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Key_A:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
-    self.Key_Back:CreateSubKeyDesc({
-      Type = "Img",
-      Desc = GText("UI_BACK"),
-      KeyInfoList = {
-        {
-          Owner = self,
-          Type = "Img",
-          ImgShortPath = "B"
-        }
-      }
-    })
+    self.Key_Back:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Key_A:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
+  self._bTeamDetailOpen = bOpen
 end
 
 function M:Close()
@@ -168,7 +161,7 @@ function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
   local InputAction = DataMgr.GamepadMap.ShowTeamInfo
-  if InKeyName == "Gamepad_" .. InputAction.GamepadKey[1] then
+  if (InKeyName == "Gamepad_" .. InputAction.GamepadKey[1] or InKeyName == UIConst.GamePadKey.FaceButtonRight) and not self._bTeamDetailOpen then
     DebugPrint(DebugTag, LXYTag, "关闭TeamInfoUI")
     self:StopAnimation(self.Auto_In)
     self.GameInputModeSubsystem:SetNavigateWidgetVisibility(false)

@@ -165,10 +165,12 @@ end
 function WBP_Play_HardBoss_Root_C:RefreshListBossInfo(Index, IsFirstTime)
   if self.SelectedIndex ~= nil then
     local CurSelectBossContent = self.List_Boss:GetItemAt(math.max(self.SelectedIndex - 1, 0))
+    CurSelectBossContent.IsSelect = false
     local SubCell = CurSelectBossContent.Entry
-    SubCell.IsSelect = false
-    SubCell:StopAllAnimationsExceptIn()
-    SubCell:PlayAnimation(SubCell.Normal)
+    if SubCell then
+      SubCell:StopAllAnimationsExceptIn()
+      SubCell:PlayAnimation(SubCell.Normal)
+    end
   end
   self.SelectedIndex = Index
   local CurSelectBossContent = self.List_Boss:GetItemAt(math.max(self.SelectedIndex - 1, 0))

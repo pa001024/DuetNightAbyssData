@@ -149,6 +149,20 @@ function M:PlayAnim(PlayerId, InteractiveState, MechanismEid)
     local Point = self.PlayerAndSeat[PlayerId]
     local MontageName = self.PointMontage:Find(Point.Index) or "Gesture_Car_Interactive_Montage"
     self.ChestInteractiveComponent:OnStartInteractive(Battle(self):GetEntity(PlayerId), MontageName, MechanismEid, "Gesture")
+    local Avatar = GWorld:GetAvatar()
+    if not Avatar or not self.SynchronizeAnim then
+      return
+    end
+    local OwnerPlayer = Avatar:GetBornedChar(CommonUtils.Str2ObjId(self.SenderId))
+    OwnerPlayer = OwnerPlayer or UGameplayStatics.GetPlayerCharacter(self, 0)
+    if OwnerPlayer and OwnerPlayer.Eid ~= PlayerId then
+      local OwnerPlayerMontage = OwnerPlayer.PlayerAnimInstance:GetCurrentActiveMontage()
+      local MainPlayerMontage = Player.PlayerAnimInstance:GetCurrentActiveMontage()
+      if OwnerPlayerMontage and MainPlayerMontage then
+        local Position = OwnerPlayer.PlayerAnimInstance:Montage_GetPosition(OwnerPlayerMontage)
+        Player.PlayerAnimInstance:Montage_SetPosition(MainPlayerMontage, Position)
+      end
+    end
   end
   if 1 == InteractiveState then
   end

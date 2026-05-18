@@ -316,6 +316,16 @@ function WBP_Abyss_Select_Item_C:HighlightEmptySlots()
   end
 end
 
+function WBP_Abyss_Select_Item_C:PlayItemRemind(SlotName)
+  if not SlotName then
+    return
+  end
+  local Slot = self.Slots[SlotName]
+  if Slot then
+    Slot:PlayRemindAnim()
+  end
+end
+
 function WBP_Abyss_Select_Item_C:Find(Table, Check)
   for _, value in pairs(Table) do
     if value == Check then

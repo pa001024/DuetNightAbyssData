@@ -12,7 +12,6 @@ function M:Init()
   self.InviteRecvQueue = Deque.New()
   self.InviteSendBox = {}
   self.InviteTable = {}
-  self.CachedRecoveryTeamInfo = nil
 end
 
 function M:SetTeam(Team, bDsData)
@@ -357,6 +356,7 @@ end
 
 function M:Destory()
   self:CleanNowDungeonId()
+  self.CachedRecoveryTeamInfo = nil
   M.Super.Destory(self)
 end
 

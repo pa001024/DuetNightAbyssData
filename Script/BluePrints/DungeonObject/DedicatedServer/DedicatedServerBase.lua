@@ -26,43 +26,43 @@ function DedicatedServerBase:EndPlay()
 end
 
 function DedicatedServerBase:AddTimer(DeltaTime, Callback)
-  local Timer, Key = GameInstance:AddTimer(DeltaTime, Callback, nil, nil, nil, true)
+  local Timer, Key = self.GameInstance:AddTimer(DeltaTime, Callback, nil, nil, nil, true)
   self.DungeonTimer[Key] = Timer
   return Key
 end
 
 function DedicatedServerBase:AddLoopTimer(DelayTime, LoopTime, Callback, Handle)
-  local Timer, Key = GameInstance:AddTimer(LoopTime, Callback, true, DelayTime, Handle, true)
+  local Timer, Key = self.GameInstance:AddTimer(LoopTime, Callback, true, DelayTime, Handle, true)
   self.DungeonTimer[Key] = Timer
   return Key
 end
 
 function DedicatedServerBase:RemoveTimer(Handle)
-  GameInstance:RemoveTimer(Handle)
+  self.GameInstance:RemoveTimer(Handle)
   self.DungeonTimer[Handle] = nil
 end
 
 function DedicatedServerBase:GetTimerRemainTime(Handle)
-  return GameInstance:GetTimerRemainingTime(Handle)
+  return self.GameInstance:GetTimerRemainingTime(Handle)
 end
 
 function DedicatedServerBase:NotifyGameModeDungeonEvent(EventName, ...)
-  DSEntity:NotifyGameModeDungeonEvent(EventName, ...)
+  self.DSEntity:NotifyGameModeDungeonEvent(EventName, ...)
 end
 
 function DedicatedServerBase:NotifyServerAvatar(FuncName, AvatarEid, ...)
   local DungeonEvent = "DungeonEvent_" .. FuncName
-  DSEntity:SendAvatar(AvatarEid, DungeonEvent, ...)
+  self.DSEntity:SendAvatar(AvatarEid, DungeonEvent, ...)
 end
 
 function DedicatedServerBase:MulticastServerAvatar(FuncName, ...)
   local DungeonEvent = "DungeonEvent_" .. FuncName
-  DSEntity:ServerMulticast(DungeonEvent, ...)
+  self.DSEntity:ServerMulticast(DungeonEvent, ...)
 end
 
 function DedicatedServerBase:CallServerAvatarWithCallback(FuncName, AvatarEid, Callback, ...)
   local CallbackId = PackCallback(self, Callback)
-  DSEntity:SendAvatar(AvatarEid, FuncName, CallbackId, ...)
+  self.DSEntity:SendAvatar(AvatarEid, FuncName, CallbackId, ...)
   return CallbackId
 end
 
@@ -88,7 +88,7 @@ function DedicatedServerBase:Log(...)
 end
 
 function DedicatedServerBase:Replicated(ReplicatedType, ...)
-  DSEntity:ReplicatedDungeonObject(ReplicatedType, ...)
+  self.DSEntity:ReplicatedDungeonObject(ReplicatedType, ...)
 end
 
 function DedicatedServerBase:TriggerRewardEvent(UnitId, Reason, ExtraInfo, Callback)
@@ -101,10 +101,10 @@ function DedicatedServerBase:TriggerRewardEvent(UnitId, Reason, ExtraInfo, Callb
     CallbackId = PackCallback(self, Callback)
   end
   ExtraInfo.bAuthority = false
-  DSEntity:ServerConditionalMulticast({
+  self.DSEntity:ServerConditionalMulticast({
     [AvatarEid] = false
   }, "ServerTriggerRewardEvent", CallbackId, UnitId, Reason, ExtraInfo)
-  self.CallbackCounter[CallbackId] = CommonUtils.Size(DSEntity.AvatarInfos)
+  self.CallbackCounter[CallbackId] = CommonUtils.Size(self.DSEntity.AvatarInfos)
 end
 
 return DedicatedServerBase

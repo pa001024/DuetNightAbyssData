@@ -12,8 +12,10 @@ T.RT_10 = {300}
 T.RT_11 = {2}
 T.RT_12 = {14}
 T.RT_13 = {10}
-T.RT_14 = {250}
-T.RT_15 = {200}
+T.RT_14 = {28}
+T.RT_15 = {250}
+T.RT_16 = {200}
+T.RT_17 = {500}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -315,7 +317,7 @@ return ReadOnly("RougeLikeEventSelect", {
     SelectResultDesc = "RL_Event318_Select_2"
   },
   [1098] = {
-    BlessingAward = {28},
+    BlessingAward = T.RT_14,
     IconType = 1,
     Id = 1098,
     Name = "DialogueAward",
@@ -340,7 +342,7 @@ return ReadOnly("RougeLikeEventSelect", {
     Id = 1106,
     Name = "DialogueAward",
     SelectResultDesc = "RL_Event320_Select_1",
-    TokenAward = T.RT_14
+    TokenAward = T.RT_15
   },
   [1107] = {
     BlessingAward = T.RT_5,
@@ -379,7 +381,7 @@ return ReadOnly("RougeLikeEventSelect", {
     Id = 1117,
     Name = "DialogueAward",
     SelectResultDesc = "RL_Event322_Select_2",
-    TokenAward = T.RT_15
+    TokenAward = T.RT_16
   },
   [1121] = {
     IconType = 1,
@@ -407,14 +409,14 @@ return ReadOnly("RougeLikeEventSelect", {
     Id = 1127,
     Name = "DialogueAward",
     SelectResultDesc = "RL_Event324_Select_2",
-    TokenAward = T.RT_14
+    TokenAward = T.RT_15
   },
   [1131] = {
     IconType = 1,
     Id = 1131,
     Name = "DialogueAward",
     SelectResultDesc = "RL_Event325_Select_1",
-    TokenAward = T.RT_15
+    TokenAward = T.RT_16
   },
   [1132] = {
     BlessingAward = T.RT_2,
@@ -429,7 +431,7 @@ return ReadOnly("RougeLikeEventSelect", {
     Id = 1136,
     Name = "DialogueAward",
     SelectResultDesc = "RL_Event326_Select_1",
-    TokenAward = {500}
+    TokenAward = T.RT_17
   },
   [1137] = {
     BlessingAward = T.RT_8,
@@ -468,6 +470,41 @@ return ReadOnly("RougeLikeEventSelect", {
     Name = "DialogueAward",
     SelectResultDesc = "RL_Event328_Select_2",
     TokenAward = {1000}
+  },
+  [1151] = {
+    IconType = 1,
+    Id = 1151,
+    Name = "DialogueAward",
+    SelectResultDesc = "RL_Event329_Select_1",
+    TreasureAward = T.RT_14
+  },
+  [1152] = {
+    IconType = 1,
+    Id = 1152,
+    Name = "DialogueAward",
+    SelectResultDesc = "RL_Event329_Select_2",
+    TreasureAward = T.RT_14
+  },
+  [1153] = {
+    IconType = 1,
+    Id = 1153,
+    Name = "DialogueAward",
+    SelectResultDesc = "RL_Event329_Select_3",
+    TreasureAward = T.RT_14
+  },
+  [1156] = {
+    IconType = 1,
+    Id = 1156,
+    Name = "DialogueAward",
+    SelectResultDesc = "RL_Event330_Select_1",
+    TreasureAward = T.RT_12
+  },
+  [1157] = {
+    IconType = 1,
+    Id = 1157,
+    Name = "DialogueAward",
+    SelectResultDesc = "RL_Event330_Select_2",
+    TokenAward = T.RT_17
   },
   [2001] = {
     BlessingAward = {

@@ -10,7 +10,7 @@ end
 function Component:ClearData()
   if self.TeleportPoints then
     for _, widget in pairs(self.TeleportPoints) do
-      widget:RemoveFromParent()
+      self:ReleasePointToPool(widget)
     end
     self.TeleportPoints = {}
   end

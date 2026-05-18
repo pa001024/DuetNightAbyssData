@@ -196,7 +196,17 @@ function M:UpdataEffectDetails(ModDataInfo, ModLevel, ModServerData)
   local ModAttrs = ModDataInfo.AddAttrs
   if ModAttrs then
     for _, ModAttr in ipairs(ModAttrs) do
-      local AttrConfig = DataMgr.AttrConfig[ModAttr.AttrName]
+      local AttrNameKey = ""
+      if ModAttr.Tag and ModAttr.RateZone then
+        AttrNameKey = string.format("%s_%s_%s", ModAttr.AttrName, ModAttr.Tag, ModAttr.RateZone)
+      elseif ModAttr.Tag then
+        AttrNameKey = string.format("%s_%s", ModAttr.AttrName, ModAttr.Tag)
+      elseif ModAttr.RateZone then
+        AttrNameKey = string.format("%s_%s", ModAttr.AttrName, ModAttr.RateZone)
+      else
+        AttrNameKey = ModAttr.AttrName
+      end
+      local AttrConfig = DataMgr.AttrConfig[AttrNameKey]
       if not AttrConfig then
       else
         local _, ValueStr = ArmoryUtils:GenModAttrData(ModAttr, ModLevel, AttrConfig, ModDataInfo.Id)

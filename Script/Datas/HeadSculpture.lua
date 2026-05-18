@@ -324,6 +324,33 @@ return ReadOnly("HeadSculpture", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Suyi01.T_Head_Suyi01'",
     Name = "UI_PlayerHead_Name_20006"
   },
+  [20007] = {
+    AccessText = "UI_Accessory_Unlock_Skin",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 20007,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Fuluo01.T_Head_Fuluo01'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Fuluo01.T_Head_Fuluo01'",
+    Name = "UI_PlayerHead_Name_20006"
+  },
+  [20008] = {
+    AccessText = "UI_Accessory_Unlock_Skin",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 20008,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Nifu01.T_Head_Nifu01'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Nifu01.T_Head_Nifu01'",
+    Name = "UI_PlayerHead_Name_20006"
+  },
+  [20009] = {
+    AccessText = "UI_Accessory_Unlock_Skin",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 20009,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Suyi01.T_Head_Suyi01'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Suyi01.T_Head_Suyi01'",
+    Name = "UI_PlayerHead_Name_20006"
+  },
   [30001] = {
     AccessText = "UI_Accessory_Unlock_Impression",
     CanPreView = true,
@@ -1226,7 +1253,9 @@ return ReadOnly("HeadSculpture", {
     HeadId = 30118,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Faction_0012.T_Head_Faction_0012'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Faction_0012.T_Head_Faction_0012'",
-    Name = "UI_PlayerHead_Name_30118"
+    Name = "UI_PlayerHead_Name_30118",
+    RegainItemId = 112,
+    RegainItemNum = 20
   },
   [30119] = {
     AccessText = "UI_Accessory_Unlock_Event",
@@ -1244,7 +1273,9 @@ return ReadOnly("HeadSculpture", {
     HeadId = 30120,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Faction_0011.T_Head_Faction_0011'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Faction_0011.T_Head_Faction_0011'",
-    Name = "UI_PlayerHead_Name_30120"
+    Name = "UI_PlayerHead_Name_30120",
+    RegainItemId = 112,
+    RegainItemNum = 20
   },
   [30121] = {
     AccessText = "UI_Accessory_Unlock_FishShop",
@@ -1371,5 +1402,211 @@ return ReadOnly("HeadSculpture", {
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0038.T_Head_Other0038'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0038.T_Head_Other0038'",
     Name = "UI_PlayerHead_Name_30134"
+  },
+  [30135] = {
+    AccessText = "UI_Accessory_Unlock_BattlePass",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30135,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0035.T_Head_Art_0035'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0035.T_Head_Art_0035'",
+    Name = "UI_PlayerHead_Name_30135"
+  },
+  [30136] = {
+    AccessText = "UI_Accessory_Unlock_BattlePass",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30136,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0036.T_Head_Art_0036'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0036.T_Head_Art_0036'",
+    Name = "UI_PlayerHead_Name_30136"
+  },
+  [30137] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30137,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0030.T_Head_Art_0030'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0030.T_Head_Art_0030'",
+    Name = "UI_PlayerHead_Name_30137"
+  },
+  [30138] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30138,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0031.T_Head_Art_0031'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0031.T_Head_Art_0031'",
+    Name = "UI_PlayerHead_Name_30138"
+  },
+  [30139] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30139,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0032.T_Head_Art_0032'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0032.T_Head_Art_0032'",
+    Name = "UI_PlayerHead_Name_30139"
+  },
+  [30140] = {
+    AccessText = "UI_Accessory_Unlock_Skin",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30140,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0029.T_Head_Art_0029'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0029.T_Head_Art_0029'",
+    Name = "UI_PlayerHead_Name_30140"
+  },
+  [30141] = {
+    AccessText = "UI_Accessory_Unlock_Skin",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30141,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0037.T_Head_Art_0037'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0037.T_Head_Art_0037'",
+    Name = "UI_PlayerHead_Name_30141"
+  },
+  [30142] = {
+    AccessText = "UI_Accessory_Unlock_Skin",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30142,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0033.T_Head_Art_0033'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0033.T_Head_Art_0033'",
+    Name = "UI_PlayerHead_Name_30142"
+  },
+  [30143] = {
+    AccessText = "UI_Accessory_Unlock_Skin",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    DynamicPath = "WidgetBlueprint'/Game/UI/WBP/DynamicHead/DynamicHead/WBP_DynamicHead_Art_0034.WBP_DynamicHead_Art_0034'",
+    HeadId = 30143,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0034.T_Head_Art_0034'",
+    Name = "UI_PlayerHead_Name_30143"
+  },
+  [30144] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30144,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0038.T_Head_Other0038'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0038.T_Head_Other0038'",
+    Name = "UI_PlayerHead_Name_30144"
+  },
+  [30145] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30145,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0038.T_Head_Art_0038'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0038.T_Head_Art_0038'",
+    Name = "UI_PlayerHead_Name_30145"
+  },
+  [30146] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30146,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0018.T_Head_Art_0018'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0018.T_Head_Art_0018'",
+    Name = "UI_PlayerHead_Name_30146"
+  },
+  [30147] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30147,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0019.T_Head_Art_0019'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0019.T_Head_Art_0019'",
+    Name = "UI_PlayerHead_Name_30147"
+  },
+  [30148] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30148,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0020.T_Head_Art_0020'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0020.T_Head_Art_0020'",
+    Name = "UI_PlayerHead_Name_30148"
+  },
+  [30149] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30149,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0021.T_Head_Art_0021'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0021.T_Head_Art_0021'",
+    Name = "UI_PlayerHead_Name_30149"
+  },
+  [30150] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30150,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0022.T_Head_Art_0022'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0022.T_Head_Art_0022'",
+    Name = "UI_PlayerHead_Name_30150"
+  },
+  [30151] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30151,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0023.T_Head_Art_0023'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0023.T_Head_Art_0023'",
+    Name = "UI_PlayerHead_Name_30151"
+  },
+  [30152] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30152,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0027.T_Head_Art_0027'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0027.T_Head_Art_0027'",
+    Name = "UI_PlayerHead_Name_30152"
+  },
+  [30153] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30153,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0024.T_Head_Art_0024'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0024.T_Head_Art_0024'",
+    Name = "UI_PlayerHead_Name_30153"
+  },
+  [30154] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30154,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0025.T_Head_Art_0025'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0025.T_Head_Art_0025'",
+    Name = "UI_PlayerHead_Name_30154"
+  },
+  [30155] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    HeadId = 30155,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0026.T_Head_Art_0026'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0026.T_Head_Art_0026'",
+    Name = "UI_PlayerHead_Name_30155"
+  },
+  [40001] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    DynamicPath = "WidgetBlueprint'/Game/UI/WBP/DynamicHead/DynamicHead/WBP_DynamicHead_Art_0012.WBP_DynamicHead_Art_0012'",
+    HeadId = 40001,
+    Name = "UI_PlayerHead_Name_40001"
+  },
+  [40002] = {
+    AccessText = "UI_Accessory_Unlock_Event",
+    CanPreView = true,
+    Des = "UI_PlayerHead_Des_Common",
+    DynamicPath = "WidgetBlueprint'/Game/UI/WBP/DynamicHead/DynamicHead/WBP_DynamicHead_Art_0028.WBP_DynamicHead_Art_0028'",
+    HeadId = 40002,
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0028.T_Head_Art_0028'",
+    Name = "UI_PlayerHead_Name_40002"
   }
 })

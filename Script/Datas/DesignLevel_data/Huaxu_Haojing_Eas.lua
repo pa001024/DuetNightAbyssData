@@ -705,6 +705,36 @@ return {
       UnitType = "Npc",
       UnitId = 700401
     },
+    ["232010368"] = {
+      CreatorId = 232010368,
+      UnitType = "Npc",
+      UnitId = 700421
+    },
+    ["232010369"] = {
+      CreatorId = 232010369,
+      UnitType = "Npc",
+      UnitId = 700423
+    },
+    ["232010370"] = {
+      CreatorId = 232010370,
+      UnitType = "Npc",
+      UnitId = 700427
+    },
+    ["232010371"] = {
+      CreatorId = 232010371,
+      UnitType = "Npc",
+      UnitId = 700424
+    },
+    ["232010372"] = {
+      CreatorId = 232010372,
+      UnitType = "Npc",
+      UnitId = 700424
+    },
+    ["232010373"] = {
+      CreatorId = 232010373,
+      UnitType = "Npc",
+      UnitId = 700426
+    },
     ["232010277"] = {
       CreatorId = 232010277,
       UnitType = "Npc",
@@ -837,6 +867,15 @@ return {
         UnitType = "Mechanism",
         UnitId = 70116,
         RarelyId = 7045012
+      }
+    },
+    ["7045032"] = {
+      AutoReset = 0,
+      ["2010297"] = {
+        CreatorId = 2010297,
+        UnitType = "Mechanism",
+        UnitId = 70116,
+        RarelyId = 7045032
       }
     },
     ["7045005"] = {
@@ -1243,16 +1282,28 @@ return {
     },
     ["7045028"] = {
       AutoReset = 1,
-      ["2010134"] = {
-        CreatorId = 2010134,
+      ["2010135"] = {
+        CreatorId = 2010135,
         UnitType = "Mechanism",
-        UnitId = 1210342,
+        UnitId = 1210343,
         RarelyId = 7045028
       },
       ["2010165"] = {
         CreatorId = 2010165,
         UnitType = "Mechanism",
         UnitId = 121032,
+        RarelyId = 7045028
+      },
+      ["2010136"] = {
+        CreatorId = 2010136,
+        UnitType = "Npc",
+        UnitId = 240110,
+        RarelyId = 7045028
+      },
+      ["2010134"] = {
+        CreatorId = 2010134,
+        UnitType = "Mechanism",
+        UnitId = 1210342,
         RarelyId = 7045028
       },
       ["2010167"] = {
@@ -1279,32 +1330,11 @@ return {
         UnitId = 121035,
         RarelyId = 7045028
       },
-      ["2010136"] = {
-        CreatorId = 2010136,
-        UnitType = "Npc",
-        UnitId = 240110,
-        RarelyId = 7045028
-      },
-      ["2010135"] = {
-        CreatorId = 2010135,
-        UnitType = "Mechanism",
-        UnitId = 1210343,
-        RarelyId = 7045028
-      },
       ["2010166"] = {
         CreatorId = 2010166,
         UnitType = "Mechanism",
         UnitId = 121035,
         RarelyId = 7045028
-      }
-    },
-    ["7045032"] = {
-      AutoReset = 0,
-      ["2010297"] = {
-        CreatorId = 2010297,
-        UnitType = "Mechanism",
-        UnitId = 70116,
-        RarelyId = 7045032
       }
     }
   },

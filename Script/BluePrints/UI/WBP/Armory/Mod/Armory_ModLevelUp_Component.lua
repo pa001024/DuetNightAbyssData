@@ -138,6 +138,7 @@ function Component:NotifyOnModLevelUp(OldModUuid, NewModUuid, bTakeOff)
     self.Panel_Max:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   self.LevelUpWidget:OnLevelUpSuccess()
+  ModController:TriggerModAutoLock(NewModUuid)
 end
 
 function Component:RealCloseComp()

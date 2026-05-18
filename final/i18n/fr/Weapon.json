@@ -745,6 +745,155 @@
     ]
   },
   {
+    "id": 10107,
+    "icon": "Sword_Qiuniao",
+    "名称": "Plume affranchie",
+    "版本": "1.4",
+    "描述": "Nulle cage ne saurait retenir des ailes vouées à l’envol. Elle forgera de sa colère et de son désir des plumes acérées capables de fracasser la cage qui l’emprisonnait.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 26,
+    "暴击": 0.24,
+    "暴伤": 2.4,
+    "触发": 0.15,
+    "加成": {
+      "昂扬": 0.15
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Sel volatil endommagé": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Réactif inflammable": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Réactif inflammable": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Réactif inflammable": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Réactif inflammable": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Réactif inflammable": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Vigueur +15.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.200% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.250% × points consommés] pendant 8.0 s.",
+      "Vigueur +18.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.240% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.300% × points consommés] pendant 8.0 s.",
+      "Vigueur +21.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.280% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.350% × points consommés] pendant 8.0 s.",
+      "Vigueur +24.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.320% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.400% × points consommés] pendant 8.0 s.",
+      "Vigueur +27.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.360% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.450% × points consommés] pendant 8.0 s.",
+      "Vigueur +30.0%. Lorsque les personnages Umbro infligent des dégâts, les dégâts augmentent de 0.400% par point de Combo. Après avoir consommé des points de Combo, la valeur de Vigueur augmente de [0.500% × points consommés] pendant 8.0 s."
+    ],
+    "技能": [
+      {
+        "id": 1010101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.45,
+            "削韧": 25,
+            "延迟": 0.05,
+            "卡肉": 0.03,
+            "取消": 0.2333,
+            "连段": 0.4667
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.5,
+            "削韧": 30,
+            "延迟": 0.1,
+            "卡肉": 0.03,
+            "取消": 0.1667,
+            "连段": 0.3777
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.4,
+            "格式": "{%}×2",
+            "削韧": 30,
+            "取消": 0.4,
+            "连段": 0.612
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 0.82,
+            "削韧": 50,
+            "延迟": 0.05,
+            "卡肉": 0.07,
+            "取消": 0.6333,
+            "连段": 0.9
+          }
+        ]
+      },
+      {
+        "id": 1010102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 1.13,
+            "削韧": 73,
+            "卡肉": 0.03,
+            "取消": 1.2333
+          }
+        ]
+      },
+      {
+        "id": 1010103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque plongeante",
+            "值": 0.51,
+            "削韧": 33,
+            "取消": 1.6807
+          }
+        ]
+      },
+      {
+        "id": 1010104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque en glissade",
+            "值": 0.51,
+            "削韧": 33,
+            "卡肉": 0.1,
+            "取消": 0.4333
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10201,
     "icon": "Polearm_Sairen",
     "名称": "Baiser de la sirène",
@@ -1759,6 +1908,368 @@
     ]
   },
   {
+    "id": 10299,
+    "icon": "Polearm_Yemei",
+    "名称": "Conflit perpétuel",
+    "版本": "1.4",
+    "描述": "L’un des porteurs de cette arme était un guerrier, récompensé par le Père Ask pour sa bravoure. Il ne cessait de défier des adversaires toujours plus puissants, portant ses défis jusqu’aux terres lointaines. Son nom devint synonyme de puissance, mais peu à peu, il ne put plus supporter une vie sans combat.\nLa guerre ne connaît pas de répit. Il y trouva la mort — dans cette arène sans vainqueur. Les corps des alliés comme des ennemis furent sa rédemption, et son propre sang, son chant funèbre.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "灵能",
+    "攻击": 22,
+    "暴击": 0.2,
+    "暴伤": 2.1,
+    "触发": 0.3,
+    "加成": {
+      "技能威力": 0.45,
+      "攻击": 0.9,
+      "技能范围": 0.9,
+      "昂扬": 0.35
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Poudre de pierre": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Enduit isolant": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Lame": 2
+      },
+      {
+        "Pièce": 6900,
+        "Enduit isolant": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Lame": 1
+      },
+      {
+        "Pièce": 17000,
+        "Enduit isolant": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Lame": 2
+      },
+      {
+        "Pièce": 49000,
+        "Enduit isolant": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Lame": 4
+      },
+      {
+        "Pièce": 180000,
+        "Enduit isolant": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Lame": 8
+      }
+    ],
+    "熔炼": [
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage."
+    ],
+    "熔炉": [
+      {
+        "lv": 1,
+        "解锁": {
+          "Prototype : Conflit perpétuel": 36,
+          "Module de transfert d’affinité d’arme": 5,
+          "Insigne de force": 30,
+          "Insigne de foi": 30
+        },
+        "技能": [
+          {
+            "id": 10299002,
+            "名称": "无止·凯旋",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Chaque invocation d’un familier confère 80.0 points de calamité.",
+            "解锁": {
+              "Prototype : Conflit perpétuel": 30,
+              "Cristal Hydro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne de force": 50,
+              "Insigne de foi": 50
+            }
+          },
+          {
+            "id": 10299003,
+            "名称": "无止·溃败",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Lorsque les familiers infligent des dégâts, confère 1.0 points de calamité.",
+            "解锁": {
+              "Prototype : Conflit perpétuel": 30,
+              "Cristal Hydro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne de force": 50,
+              "Insigne de foi": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Prototype : Conflit perpétuel": 42,
+          "Cristal Hydro": 20,
+          "Élixir d’aiguisage": 6,
+          "Insigne de force": 40,
+          "Insigne de foi": 40
+        },
+        "技能": [
+          {
+            "id": 10299004,
+            "名称": "无休·强度",
+            "icon": "T_Rouge_Talent_SkillIntensityUP",
+            "加成": {
+              "Puissance de compétence": 0.45
+            },
+            "解锁": {
+              "Prototype : Conflit perpétuel": 30,
+              "Cristal Hydro": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne de force": 50,
+              "Insigne de foi": 50
+            }
+          },
+          {
+            "id": 10299005,
+            "名称": "无休·攻击",
+            "icon": "T_Rouge_Talent_ATK",
+            "加成": {
+              "ATQ": 0.9
+            },
+            "解锁": {
+              "Prototype : Conflit perpétuel": 30,
+              "Cristal Hydro": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne de force": 50,
+              "Insigne de foi": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Prototype : Conflit perpétuel": 48,
+          "Cristal Hydro": 30,
+          "Cristal radieux": 5,
+          "Module de transfert d’affinité d’arme": 6,
+          "Insigne de force": 50,
+          "Insigne de foi": 50
+        },
+        "技能": [
+          {
+            "id": 10299006,
+            "名称": "无止·僵局",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Chaque invocation d’un familier confère 1 cumul de [Invocation] pendant 10.0 s, cumulable jusqu’à 20.0 fois. Chaque nouveau cumul réinitialise la durée restante.\nChaque cumul de [Invocation] augmente la Vitesse d’attaque des familiers de 2.0%.",
+            "解锁": {
+              "Prototype : Conflit perpétuel": 30,
+              "Cristal Hydro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne de force": 50,
+              "Insigne de foi": 50
+            }
+          },
+          {
+            "id": 10299007,
+            "名称": "无止·双竭",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Tous les 100 points de calamité consommés, confère 1 cumul de [Invocation] pendant 20.0 s, cumulable jusqu’à 20.0 fois. Chaque nouveau cumul réinitialise la durée restante.\nChaque cumul de [Invocation] augmente la Vitesse d’attaque des familiers de 2.0%.\nAu début du combat, confère 10.0 cumuls de [Invocation] pendant 20.0 s.",
+            "解锁": {
+              "Prototype : Conflit perpétuel": 30,
+              "Cristal Hydro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne de force": 50,
+              "Insigne de foi": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Prototype : Conflit perpétuel": 54,
+          "Cristal Hydro": 50,
+          "Cristal radieux": 15,
+          "Élixir d’aiguisage": 6,
+          "Insigne de force": 60,
+          "Insigne de foi": 60
+        },
+        "技能": [
+          {
+            "id": 10299008,
+            "名称": "无休·范围",
+            "icon": "T_Rouge_Talent_SkillRangeUP",
+            "加成": {
+              "Portée de compétence": 0.9
+            },
+            "解锁": {
+              "Prototype : Conflit perpétuel": 30,
+              "Cristal Hydro": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne de force": 50,
+              "Insigne de foi": 50
+            }
+          },
+          {
+            "id": 10299009,
+            "名称": "无休·昂扬",
+            "icon": "T_Rouge_Talent_Morale",
+            "加成": {
+              "Vigueur": 0.35
+            },
+            "解锁": {
+              "Prototype : Conflit perpétuel": 30,
+              "Cristal Hydro": 90,
+              "Cristal radieux": 15,
+              "Élixir d’aiguisage": 4,
+              "Insigne de force": 50,
+              "Insigne de foi": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Prototype : Conflit perpétuel": 100,
+          "Cristal Hydro": 90,
+          "Cristal radieux": 20,
+          "Moule de fusion": 1,
+          "Insigne de force": 100,
+          "Insigne de foi": 100
+        },
+        "技能": [
+          {
+            "id": 10299010,
+            "名称": "无止·长鏖",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Le nombre maximal de cumuls de [Invocation] augmente jusqu’à 30.0. Chaque cumul augmente de 0.25% le pourcentage d’attributs hérités par les familiers invoqués.\nLorsque [Invocation] atteint 30.0 cumuls, confère également [Éveil] : la probabilité de déclenchement de l’arme augmente de 100.0%, le multiplicateur de dégâts de [Requiem d’adieu] augmente de 700.0% et, lorsqu’un familier meurt, un [Requiem d’adieu] supplémentaire est déclenché sans consommer de points de calamité."
+          }
+        ]
+      }
+    ],
+    "技能": [
+      {
+        "id": 1020101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.35,
+            "削韧": 20,
+            "卡肉": 0.1,
+            "取消": 0.2333,
+            "连段": 0.3
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.25,
+            "格式": "{%}×3",
+            "削韧": 15,
+            "取消": 0.4333,
+            "连段": 0.6333
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.5,
+            "削韧": 35,
+            "取消": 0.2667,
+            "连段": 0.5667
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 0.4,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.2333,
+            "连段": 0.5
+          },
+          {
+            "名称": "Dégâts du 5ᵉ coup",
+            "值": 0.75,
+            "削韧": 50,
+            "卡肉": 0.03,
+            "取消": 0.1667,
+            "连段": 0.4333
+          }
+        ]
+      },
+      {
+        "id": 1020102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 0.1,
+            "削韧": 5,
+            "取消": 1.5
+          }
+        ],
+        "实体": [
+          {
+            "id": 1020101,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 50,
+              "BoxLength": 100,
+              "BoxWidth": 200
+            },
+            "时长": 15,
+            "速度": 3000,
+            "Vars": {
+              "IsHeavyAttack": true
+            },
+            "特效循环间隔": 0.2
+          }
+        ]
+      },
+      {
+        "id": 1020103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque plongeante",
+            "值": 0.47,
+            "削韧": 30,
+            "取消": 1.6333
+          }
+        ]
+      },
+      {
+        "id": 1020104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque en glissade",
+            "值": 0.4,
+            "削韧": 26,
+            "卡肉": 0.1,
+            "取消": 0.3333
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10301,
     "icon": "Claymore_Chengjie",
     "名称": "Fureur incandescente",
@@ -2525,9 +3036,9 @@
   },
   {
     "id": 10399,
-    "icon": "Claymore_",
+    "icon": "Claymore_Yemei",
     "名称": "Espadon en acier",
-    "版本": "1.4",
+    "版本": "1.6",
     "描述": "Un espadon ordinaire, forgé dans un métal bon marché. Même s’il venait à se briser, nul n’en éprouverait le moindre regret.",
     "类型": [
       "近战",
@@ -2577,6 +3088,38 @@
       }
     ],
     "熔炼": [],
+    "熔炉": [
+      {
+        "lv": 1,
+        "解锁": {
+          "Phoxène": 5
+        }
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Phoxène": 5
+        }
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Phoxène": 5
+        }
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Phoxène": 5
+        }
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Phoxène": 5
+        }
+      }
+    ],
     "技能": [
       {
         "id": 1030101,
@@ -4394,6 +4937,164 @@
     ]
   },
   {
+    "id": 10604,
+    "icon": "Katana_Tieyu",
+    "名称": "Sanguis Sanctus – Katana",
+    "版本": "1.4",
+    "描述": "Le sang ardent finira par se tarir, mais la foi ne s’éteindra jamais.",
+    "类型": [
+      "近战",
+      "太刀"
+    ],
+    "伤害类型": "切割",
+    "攻击": 20,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.26,
+    "加成": {
+      "攻击范围": 100
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Poignée": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Poignée": 4,
+        "Composant d’arme basique : Ornement": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Poignée": 3,
+        "Composant d’arme intermédiaire : Ornement": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Poignée": 6,
+        "Composant d’arme avancé : Ornement": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Poignée": 10,
+        "Composant d’arme avancé : Ornement": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Poignée": 20,
+        "Composant d’arme avancé : Ornement": 8
+      }
+    ],
+    "熔炼": [
+      "Portée d’attaque +1.0. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 11.0% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée d’attaque +1.2. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 13.2% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée d’attaque +1.4. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 15.4% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée d’attaque +1.6. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 17.6% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée d’attaque +1.8. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 19.8% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme.",
+      "Portée d’attaque +2.0. Lorsque le Niveau de combo augmente, confère 1 cumul augmentant les dégâts d’Attaque normale de 22.0% pendant 10.0 s, cumulable jusqu’à 4.0 fois. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "id": 1060101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du 1ᵉʳ coup",
+            "值": 0.2,
+            "格式": "{%}×3",
+            "削韧": 15,
+            "取消": 0.4333,
+            "连段": 0.6333
+          },
+          {
+            "名称": "Dégâts du 2ᵉ coup",
+            "值": 0.3,
+            "格式": "{%}×4",
+            "削韧": 20,
+            "取消": 0.4667,
+            "连段": 0.7667
+          },
+          {
+            "名称": "Dégâts du 3ᵉ coup",
+            "值": 0.4,
+            "值2": 0.45,
+            "格式": "{%}×2+{%}",
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.3667,
+            "连段": 1.0667
+          },
+          {
+            "名称": "Dégâts du 4ᵉ coup",
+            "值": 0.85,
+            "削韧": 50,
+            "卡肉": 0.03,
+            "取消": 0.4333,
+            "连段": 0.8
+          }
+        ]
+      },
+      {
+        "id": 1060102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque chargée",
+            "值": 0.1,
+            "格式": "{%}×9",
+            "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          }
+        ],
+        "实体": [
+          {
+            "id": 1060121,
+            "时长": 0.9,
+            "Vars": {
+              "IsHeavyAttack": true
+            }
+          }
+        ]
+      },
+      {
+        "id": 1060103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque plongeante",
+            "值": 0.51,
+            "削韧": 33,
+            "取消": 1.6667
+          }
+        ]
+      },
+      {
+        "id": 1060104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts d’attaque en glissade",
+            "值": 0.51,
+            "削韧": 33,
+            "卡肉": 0.1,
+            "取消": 0.4535
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 20101,
     "icon": "Pistol_Wuxu",
     "名称": "Singularité entropique",
@@ -4453,12 +5154,12 @@
       }
     ],
     "熔炼": [
-      "Chance de déclenchement +75.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 50.0% de son ATQ.",
-      "Chance de déclenchement +90.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 60.0% de son ATQ.",
-      "Chance de déclenchement +105.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 70.0% de son ATQ.",
-      "Chance de déclenchement +120.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 80.0% de son ATQ.",
-      "Chance de déclenchement +135.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 90.0% de son ATQ.",
-      "Chance de déclenchement +150.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des DGT de zone équivalents à 100.0% de son ATQ."
+      "Chance de déclenchement +75.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 50.0% de son ATQ.",
+      "Chance de déclenchement +90.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 60.0% de son ATQ.",
+      "Chance de déclenchement +105.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 70.0% de son ATQ.",
+      "Chance de déclenchement +120.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 80.0% de son ATQ.",
+      "Chance de déclenchement +135.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 90.0% de son ATQ.",
+      "Chance de déclenchement +150.0%. Chaque tir avec cette arme a une probabilité (selon sa Chance de déclenchement) de tirer un projectile supplémentaire sans consommer de munitions, infligeant des Dégâts de zone équivalents à 100.0% de son ATQ."
     ],
     "技能": [
       {
@@ -5049,9 +5750,9 @@
   },
   {
     "id": 20298,
-    "icon": "Crossbow_",
+    "icon": "Crossbow_Yemei",
     "名称": "Doubles pistolets en acier",
-    "版本": "1.4",
+    "版本": "1.5",
     "描述": "Une paire de pistolets ordinaires, forgée dans un métal bon marché. Même s’ils venaient à se briser, nul n’en éprouverait le moindre regret.",
     "类型": [
       "远程",
@@ -5105,6 +5806,38 @@
       }
     ],
     "熔炼": [],
+    "熔炉": [
+      {
+        "lv": 1,
+        "解锁": {
+          "Phoxène": 5
+        }
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Phoxène": 5
+        }
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Phoxène": 5
+        }
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Phoxène": 5
+        }
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Phoxène": 5
+        }
+      }
+    ],
     "技能": [],
     "装填": 0.8116,
     "射击间隔": 0.6667
@@ -5239,13 +5972,13 @@
       "榴炮"
     ],
     "伤害类型": "切割",
-    "攻击": 15,
+    "攻击": 18,
     "暴击": 0.2,
     "暴伤": 2.4,
-    "触发": 0.2,
-    "弹匣": 9,
-    "最大弹药": 120,
-    "弹药转化率": 0.45,
+    "触发": 0.15,
+    "弹匣": 15,
+    "最大弹药": 90,
+    "弹药转化率": 1,
     "最大射程": 2800,
     "加成": {
       "多重": 0.375
@@ -5288,12 +6021,12 @@
       }
     ],
     "熔炼": [
-      "Tir multiple +37.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 12.0% pour 12.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +45.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 14.4% pour 12.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +52.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 16.8% pour 12.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +60.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 19.2% pour 12.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +67.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 21.6% pour 12.0 s, jusqu’à 4.0 cumuls.",
-      "Tir multiple +75.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et les DGT d’arme à distance de 24.0% pour 12.0 s, jusqu’à 4.0 cumuls."
+      "Tir multiple +37.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 8.0% pendant 16.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +45.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 9.6% pendant 16.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +52.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 11.2% pendant 16.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +60.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 12.8% pendant 16.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +67.5%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 14.4% pendant 16.0 s, jusqu’à 4.0 cumuls.",
+      "Tir multiple +75.0%. Lorsqu’un personnage Pyro esquive, il gagne 1 cumul augmentant les Dégâts de compétence et le Tir multiple de 16.0% pendant 16.0 s, jusqu’à 4.0 cumuls."
     ],
     "技能": [
       {
@@ -5303,20 +6036,20 @@
         "字段": [
           {
             "名称": "Dégâts d’explosion",
-            "值": 0.32,
-            "削韧": 12,
+            "值": 0.155,
+            "削韧": 10,
             "取消": 0.7692,
             "连段": 0.7622
           },
           {
             "名称": "Dégâts d’explosion — Phase 2",
-            "值": 0.32,
+            "值": 0.155,
             "取消": 0.7692,
             "连段": 0.7622
           },
           {
             "名称": "Dégâts d’explosion — Phase 3",
-            "值": 0.32,
+            "值": 0.155,
             "取消": 0.7692,
             "连段": 0.7622
           },
@@ -6134,12 +6867,12 @@
       }
     ],
     "熔炼": [
-      "ATQ du personnage +50.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +20.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +60.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +24.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +70.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +28.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +80.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +32.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +90.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +36.0% d’Efficacité de compétence pendant 15.0 s.",
-      "ATQ du personnage +100.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des DGT de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +40.0% d’Efficacité de compétence pendant 15.0 s."
+      "ATQ du personnage +50.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +20.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +60.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +24.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +70.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +28.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +80.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +32.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +90.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +36.0% d’Efficacité de compétence pendant 15.0 s.",
+      "ATQ du personnage +100.0%. Lors de la charge, tire une balle spéciale se déplaçant lentement avant d’exploser après un court délai, infligeant des Dégâts de zone. Les tirs rapides peuvent provoquer son explosion anticipée en la touchant. Lorsqu’un personnage Umbro utilise sa Compétence ultime, il obtient +40.0% d’Efficacité de compétence pendant 15.0 s."
     ],
     "技能": [
       {
@@ -7357,6 +8090,119 @@
     "射击间隔": 0.1
   },
   {
+    "id": 20511,
+    "icon": "Machinegun_Bomu",
+    "名称": "Pacte du crépuscule",
+    "版本": "1.4",
+    "描述": "Par le sang se grave le serment du crépuscule.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 18,
+    "暴击": 0.21,
+    "暴伤": 2,
+    "触发": 0.3,
+    "弹匣": 15,
+    "最大弹药": 60,
+    "弹药转化率": 1.1,
+    "最大射程": 2800,
+    "加成": {
+      "装填": 0.3
+    },
+    "突破": [
+      {
+        "Pièce": 2800,
+        "Larme vermillon": 6,
+        "Composant d’arme basique : Verrou": 2
+      },
+      {
+        "Pièce": 6100,
+        "Chaîne": 3,
+        "Composant d’arme basique : Verrou": 4,
+        "Composant d’arme basique : Armature": 2
+      },
+      {
+        "Pièce": 6900,
+        "Chaîne": 6,
+        "Composant d’arme intermédiaire : Verrou": 3,
+        "Composant d’arme intermédiaire : Armature": 1
+      },
+      {
+        "Pièce": 17000,
+        "Chaîne": 12,
+        "Composant d’arme avancé : Verrou": 6,
+        "Composant d’arme avancé : Armature": 2
+      },
+      {
+        "Pièce": 49000,
+        "Chaîne": 24,
+        "Composant d’arme avancé : Verrou": 10,
+        "Composant d’arme avancé : Armature": 4
+      },
+      {
+        "Pièce": 180000,
+        "Chaîne": 48,
+        "Composant d’arme avancé : Verrou": 20,
+        "Composant d’arme avancé : Armature": 8
+      }
+    ],
+    "熔炼": [
+      "Vitesse de rechargement +30.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 50.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Vitesse de rechargement +36.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 60.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Vitesse de rechargement +42.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 70.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Vitesse de rechargement +48.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 80.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Vitesse de rechargement +54.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 90.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme.",
+      "Vitesse de rechargement +60.0%. Après avoir rechargé, la Vitesse d’attaque augmente de 100.0% pendant 6.0 s. L’effet est annulé lors du changement d’arme."
+    ],
+    "技能": [
+      {
+        "id": 2051101,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Dégâts du projectile",
+            "值": 0.29,
+            "削韧": 10,
+            "取消": 0.1,
+            "连段": 0.1346
+          },
+          {
+            "名称": "Intervalle de tir",
+            "值": 0.15,
+            "格式": "{}tirs/s"
+          },
+          {
+            "名称": "Rayon d’explosion",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "实体": [
+          {
+            "id": 2051111,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 50,
+              "BoxLength": 50,
+              "BoxWidth": 50
+            },
+            "时长": 10,
+            "速度": 200,
+            "标签": [
+              "Bullet"
+            ],
+            "射击间隔": 0.15
+          }
+        ]
+      }
+    ],
+    "装填": 0.7674,
+    "射击间隔": 0.15
+  },
+  {
     "id": 20512,
     "icon": "Machinegun_Beizhong",
     "名称": "Braise du calice",
@@ -7448,24 +8294,28 @@
   },
   {
     "id": 20599,
-    "icon": "Machinegun_",
-    "名称": "Fusil d’assaut en acier",
+    "icon": "Machinegun_Yemei",
+    "名称": "Requiem d’épines",
     "版本": "1.4",
-    "描述": "Mitraillette façonnée selon les techniques récentes de forge et de dorure.\nUn modèle souvent recommandé par les artisans : solide, fiable et abordable — très prisé des voyageurs d’Atlasia.",
+    "描述": "L’une des porteuses de cette arme était une guérisseuse, récompensée par le Père Ask pour sa compassion. Elle faisait vibrer les cordes des émotions humaines, apaisant les cœurs troublés par les harmonies de son instrument.\nMais le monde restait envahi par d’innombrables souffrances, se propageant comme des ronces. Alors elle distilla un poison, décidée à éradiquer jusqu’aux corps mêmes qui engendraient ces tourments.\nFinalement, les cordes fragiles ne purent en supporter davantage et se brisèrent. Elle fut contrainte d’ingérer le poison qu’elle avait elle-même préparé, sombrant dans une longue nuit où ni le sommeil ni l’éveil ne lui étaient plus accessibles.",
     "类型": [
       "远程",
       "突击枪"
     ],
     "伤害类型": "灵能",
-    "攻击": 16,
+    "攻击": 21,
     "暴击": 0.22,
-    "暴伤": 2.1,
-    "触发": 0.15,
-    "弹匣": 60,
-    "最大弹药": 150,
-    "弹药转化率": 2.1,
+    "暴伤": 2.2,
+    "触发": 0.24,
+    "弹匣": 30,
+    "最大弹药": 120,
+    "弹药转化率": 1.2,
     "最大射程": 2900,
-    "加成": {},
+    "加成": {
+      "技能威力": 0.45,
+      "造成的伤害": 0.15,
+      "昂扬": 0.35
+    },
     "突破": [
       {
         "Pièce": 2800,
@@ -7503,47 +8353,242 @@
         "Composant d’arme avancé : Armature": 8
       }
     ],
-    "熔炼": [],
+    "熔炼": [
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage.",
+      "Les Potentiels d’arme peuvent être débloqués grâce à la Fusion de calamité. Un Potentiel ne prend effet que si le type d’arme correspond à l’arme de prédilection du personnage."
+    ],
+    "熔炉": [
+      {
+        "lv": 1,
+        "解锁": {
+          "Prototype : Requiem d’épines": 36,
+          "Module de transfert d’affinité d’arme": 5,
+          "Insigne d’harmonie": 30,
+          "Insigne de corruption": 30
+        },
+        "技能": [
+          {
+            "id": 20599002,
+            "名称": "荆刺·盛放",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "Au début du combat, obtient 80.0 points de calamité. Après avoir consommé des points de Combo, obtient [60.0% × quantité consommée] points de calamité.",
+            "解锁": {
+              "Prototype : Requiem d’épines": 30,
+              "Cristal Umbro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne d’harmonie": 50,
+              "Insigne de corruption": 50
+            }
+          },
+          {
+            "id": 20599003,
+            "名称": "荆刺·争妍",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "Infliger des dégâts avec une arme de mêlée confère 2.0 points de calamité. En cas de coup critique avec une arme de mêlée, confère 4.0 points de calamité supplémentaires.",
+            "解锁": {
+              "Prototype : Requiem d’épines": 30,
+              "Cristal Umbro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne d’harmonie": 50,
+              "Insigne de corruption": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Prototype : Requiem d’épines": 42,
+          "Cristal Umbro": 20,
+          "Projectile explosif": 6,
+          "Insigne d’harmonie": 40,
+          "Insigne de corruption": 40
+        },
+        "技能": [
+          {
+            "id": 20599004,
+            "名称": "绝响·强度",
+            "icon": "T_Rouge_Talent_SkillIntensityUP",
+            "加成": {
+              "Puissance de compétence": 0.45
+            },
+            "解锁": {
+              "Prototype : Requiem d’épines": 30,
+              "Cristal Umbro": 90,
+              "Cristal radieux": 15,
+              "Projectile explosif": 4,
+              "Insigne d’harmonie": 50,
+              "Insigne de corruption": 50
+            }
+          },
+          {
+            "id": 20599005,
+            "名称": "绝响·穿透",
+            "icon": "T_Rouge_Talent_AttrPenetration",
+            "加成": {
+              "Dégâts infligés": 0.15
+            },
+            "解锁": {
+              "Prototype : Requiem d’épines": 30,
+              "Cristal Umbro": 90,
+              "Cristal radieux": 15,
+              "Projectile explosif": 4,
+              "Insigne d’harmonie": 50,
+              "Insigne de corruption": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Prototype : Requiem d’épines": 48,
+          "Cristal Umbro": 30,
+          "Cristal radieux": 5,
+          "Module de transfert d’affinité d’arme": 6,
+          "Insigne d’harmonie": 50,
+          "Insigne de corruption": 50
+        },
+        "技能": [
+          {
+            "id": 20599006,
+            "名称": "荆刺·衰败",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "Tous les 120.0 points de Combo consommés, le multiplicateur de dégâts de la prochaine activation d’[Extinction] augmente de 600.0%. Les dégâts des armes de mêlée augmentent également de 30.0% pendant 3.0 s.",
+            "解锁": {
+              "Prototype : Requiem d’épines": 30,
+              "Cristal Umbro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne d’harmonie": 50,
+              "Insigne de corruption": 50
+            }
+          },
+          {
+            "id": 20599007,
+            "名称": "荆刺·凋零",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "La portée d’[Extinction] est augmentée à 6.0 m et ses dégâts déclenchent systématiquement des effets supplémentaires.",
+            "解锁": {
+              "Prototype : Requiem d’épines": 30,
+              "Cristal Umbro": 90,
+              "Cristal radieux": 15,
+              "Module de transfert d’affinité d’arme": 2,
+              "Insigne d’harmonie": 50,
+              "Insigne de corruption": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Prototype : Requiem d’épines": 54,
+          "Cristal Umbro": 50,
+          "Cristal radieux": 15,
+          "Projectile explosif": 6,
+          "Insigne d’harmonie": 60,
+          "Insigne de corruption": 60
+        },
+        "技能": [
+          {
+            "id": 20599008,
+            "名称": "绝响·追袭",
+            "icon": "T_Rouge_Talent_BonusDamage",
+            "描述": "Dégâts supplémentaires de l’attribut élémentaire +35.0%.",
+            "解锁": {
+              "Prototype : Requiem d’épines": 30,
+              "Cristal Umbro": 90,
+              "Cristal radieux": 15,
+              "Projectile explosif": 4,
+              "Insigne d’harmonie": 50,
+              "Insigne de corruption": 50
+            }
+          },
+          {
+            "id": 20599009,
+            "名称": "绝响·昂扬",
+            "icon": "T_Rouge_Talent_Morale",
+            "加成": {
+              "Vigueur": 0.35
+            },
+            "解锁": {
+              "Prototype : Requiem d’épines": 30,
+              "Cristal Umbro": 90,
+              "Cristal radieux": 15,
+              "Projectile explosif": 4,
+              "Insigne d’harmonie": 50,
+              "Insigne de corruption": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Prototype : Requiem d’épines": 100,
+          "Cristal Umbro": 90,
+          "Cristal radieux": 20,
+          "Moule de fusion": 1,
+          "Insigne d’harmonie": 100,
+          "Insigne de corruption": 100
+        },
+        "技能": [
+          {
+            "id": 20599010,
+            "名称": "荆刺·腐朽",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "Les dégâts des Attaques chargées des armes de mêlée augmentent de 300.0%. Lorsque des points de Combo sont obtenus, si la jauge est déjà pleine, l’excédent est converti en un nombre équivalent de cumuls de [Marques de fatalité] permanentes, cumulables jusqu’à 360.0.\nChaque déclenchement d’[Extinction] confère 20.0 cumuls de [Marques de fatalité]. Lorsqu’une Attaque chargée est utilisée, si les points de Combo sont insuffisants, les [Marques de fatalité] sont immédiatement consommées pour restaurer le nombre de points de Combo manquants."
+          }
+        ]
+      }
+    ],
     "技能": [
       {
-        "id": 2050101,
+        "id": 2059901,
         "名称": "射击",
         "类型": "武器伤害",
         "字段": [
           {
             "名称": "Dégâts du projectile",
-            "值": 0.16,
-            "削韧": 4,
+            "值": 0.26,
+            "削韧": 5,
             "取消": 0.1,
             "连段": 0.1346
           },
           {
             "名称": "Intervalle de tir",
-            "值": 0.1,
+            "值": 0.18,
             "格式": "{}tirs/s"
           }
         ],
         "实体": [
           {
-            "id": 2050111,
+            "id": 2059911,
             "形状": {
               "类型": "Box",
-              "BoxHeight": 1,
-              "BoxLength": 1,
-              "BoxWidth": 1
+              "BoxHeight": 10,
+              "BoxLength": 10,
+              "BoxWidth": 10
             },
-            "时长": 2,
-            "速度": 12000,
+            "时长": 3,
+            "速度": 2500,
             "标签": [
               "Bullet"
             ],
-            "射击间隔": 0.1
+            "射击间隔": 0.18
           }
         ]
       }
     ],
     "装填": 0.7674,
-    "射击间隔": 0.1
+    "射击间隔": 0.18
   },
   {
     "id": 20601,

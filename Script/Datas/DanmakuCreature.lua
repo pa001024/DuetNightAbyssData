@@ -626,16 +626,12 @@ return ReadOnly("DanmakuCreature", {
     DanmakuCreatureId = 851901,
     HitEnemy = {851905},
     HitScene = {851906},
-    MatPath = "/Game/Asset/Effect/Material/Lightning/m_electircball_yb_002.m_electircball_yb_002",
-    ScaleInfo = {
-      BeginScale = 0,
-      EndScale = 1,
-      ScaleDuration = 0.5
-    },
+    MatPath = "/Game/Asset/Effect/Material/Lightning/m_electircball_xl_001.m_electircball_xl_001",
     ShapeInfo = T.RT_6,
-    Speed = 1200,
+    Speed = 600,
     Tags = T.RT_3,
-    TimeLife = 5
+    TimeLife = 8,
+    Vars = {DanmakuScale = 0.5}
   },
   [852001] = {
     BPPath = "/Game/BluePrints/Combat/Danmaku/BP_DanmakuCreatures/BP_DanmakuCreature_BossTuosi_Skill07.BP_DanmakuCreature_BossTuosi_Skill07",

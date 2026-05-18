@@ -82,9 +82,15 @@ function Impression:InitImpression(RegionId)
   self.Chaos = 1
 end
 
+function Impression:RegionData()
+  local data = DataMgr.ImpressionRegion[self.RegionId]
+  return data
+end
+
 function Impression:AddImpressionValueByType(ImpressionType, Value)
   local CurrentValue = self[ImpressionType] + Value
-  local MaxValue = DataMgr.GlobalConstant.ImressionMax.ConstantValue
+  local data = self:RegionData()
+  local MaxValue = data and data.AxisMax or DataMgr.GlobalConstant.ImressionMax.ConstantValue
   if CurrentValue < DefaultValue then
     self[ImpressionType] = DefaultValue
   elseif CurrentValue > MaxValue then

@@ -1,4 +1,5 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local AppearanceUtils = require("BluePrints.UI.WBP.Appearance.AppearanceUtils")
 local M = {}
 local MAX_SKIN_LEVEL = 3
 
@@ -252,6 +253,27 @@ end
 function M:OnSkinContentCreated()
 end
 
+function M:BeforeSelectSkin(Content)
+  if self.Type ~= CommonConst.ArmoryType.Char then
+    return
+  end
+  local SkinId = Content.SkinId
+  local SkinData = DataMgr.Skin[SkinId]
+  if not SkinData then
+    return
+  end
+  if SkinData.AutoHair then
+    if self.SelectedHairId then
+      local Content = self.HairMap and self.HairMap[self.SelectedHairId]
+      if Content then
+        self:ChangeSelectedHairContent(Content)
+      end
+    end
+    self.SelectedHairId = SkinData.AutoHair
+    self.JumpToHairId = self.SelectedHairId
+  end
+end
+
 function M:OnCharSkinConfirmBtnClicked()
   if not self.SelectedSkinId or self.SelectedSkinId <= 0 then
     return
@@ -262,6 +284,21 @@ function M:OnCharSkinConfirmBtnClicked()
     Avatar:ChangeCharAppearanceSkin(self.Target.Uuid, self.AppearanceSuitIndex, self.SelectedSkinId)
   end
   self:ChangeCharSkinLevel()
+end
+
+function M:ClearConsumableItemReddot()
+  DebugPrint("Yihan@ ClearConsumableItemReddot", self.UseParamsInOpt.ResourceId)
+  local BagConsumeNode = ReddotManager.GetTreeNode("Bag_Consume")
+  local Avatar = GWorld:GetAvatar()
+  if BagConsumeNode and Avatar then
+    local BagConsumeNodeDetails = BagConsumeNode.Cache.Detail
+    local StuffId = self.UseParamsInOpt.ResourceId
+    if BagConsumeNodeDetails and BagConsumeNodeDetails[StuffId] then
+      BagConsumeNodeDetails[StuffId].ShowReddot = false
+      ReddotManager.DecreaseLeafNodeCount("Bag_Consume", BagConsumeNodeDetails[StuffId].StuffCount - BagConsumeNodeDetails[StuffId].ClickedCount)
+      BagConsumeNodeDetails[StuffId].ClickedCount = Avatar:GetResourceNum(StuffId)
+    end
+  end
 end
 
 function M:OnCharSkinGotoBagBtnClicked()
@@ -335,9 +372,21 @@ function M:OnCharSkinChanged(Ret, CharUuid, AppearanceIndex, SkinId)
   if self.CurrentSkinContent then
     ArmoryUtils:SetItemSelectTag(self.CurrentSkinContent, false)
   end
-  self.CurrentSkinContent = self.SkinMap[SkinId]
-  ArmoryUtils:SetItemSelectTag(self.CurrentSkinContent, true)
-  self:UpdateFunctionBtn(self.CurrentSkinContent, self.CurrentSkinContent)
+  if self.SkinMap then
+    self.CurrentSkinContent = self.SkinMap[SkinId]
+    ArmoryUtils:SetItemSelectTag(self.CurrentSkinContent, true)
+  end
+  if self.CurrentTopTabIdx == self.SkinTabIdx then
+    self:UpdateFunctionBtn(self.CurrentSkinContent, self.CurrentSkinContent)
+  end
+  local SkinData = DataMgr.Skin[SkinId]
+  if SkinData and SkinData.AutoHair and self.SelectedHairId == SkinData.AutoHair then
+    local AppearanceSuit = self.Target:GetAppearance()
+    local HairId = AppearanceSuit and AppearanceSuit.HairId
+    if HairId ~= self.SelectedHairId then
+      self:OnCharHairConfirmBtnClicked()
+    end
+  end
 end
 
 function M:InitCharHair()
@@ -438,6 +487,12 @@ function M:CreateHairContents(Target)
     ::lbl_323::
   end
   table.sort(self.HairArray, function(a, b)
+    if a.HairId == DefaultHairId then
+      return true
+    end
+    if b.HairId == DefaultHairId then
+      return false
+    end
     if a.LockType and b.LockType or not a.LockType and not b.LockType then
       return a.HairId < b.HairId
     else
@@ -517,9 +572,17 @@ function M:OnCharHairChanged(Ret, CharUuid, AppearanceIndex, HairId)
   if self.CurrentHairContent then
     ArmoryUtils:SetItemSelectTag(self.CurrentHairContent, false)
   end
-  self.CurrentHairContent = self.HairMap[HairId]
-  ArmoryUtils:SetItemSelectTag(self.CurrentHairContent, true)
-  self:UpdateFunctionBtn(self.CurrentHairContent, self.CurrentHairContent)
+  if self.HairMap then
+    self.CurrentHairContent = self.HairMap[HairId]
+    ArmoryUtils:SetItemSelectTag(self.CurrentHairContent, true)
+  end
+  if self.CurrentTopTabIdx == self.HairTabIdx then
+    self:UpdateFunctionBtn(self.CurrentHairContent, self.CurrentHairContent)
+  end
+  local SkinData = DataMgr.Skin[self.SelectedSkinId]
+  if SkinData and SkinData.AutoHair and HairId == SkinData.AutoHair and not self:IsEquipedSelectedSkin() then
+    self:OnCharSkinConfirmBtnClicked()
+  end
 end
 
 function M:OnHairItemClicked(Content)
@@ -535,14 +598,18 @@ function M:SelectHairById(HairId)
   self:SelectHairByContent(self.HairMap[HairId])
 end
 
-function M:SelectHairByContent(Content)
-  if not Content then
-    return
-  end
+function M:ChangeSelectedHairContent(Content)
   local SelectedContent = self.HairMap[self.SelectedHairId]
   ArmoryUtils:SetItemIsSelected(SelectedContent, false)
   SelectedContent = Content
   ArmoryUtils:SetItemIsSelected(SelectedContent, true)
+end
+
+function M:SelectHairByContent(Content)
+  if not Content then
+    return
+  end
+  self:ChangeSelectedHairContent(Content)
   self:UpdateHairDetails(Content)
 end
 
@@ -565,15 +632,16 @@ function M:UpdateHairDetails(Content)
   end
   self.Text_Name:SetText(Content.Name)
   self.Text_Info:SetText(Content.Text)
+  self.Num_Fenghua:SetText(AppearanceUtils.CalcAppearanceScore(CommonConst.DataType.Hair, Content.Rarity) or "")
   self.Text_SkinName_World:SetText(Content.Name_World)
-  self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  self.Group_Icon:SetVisibility(ESlateVisibility.Collapsed)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
   self.Tag_Quality:SetVisibility(ESlateVisibility.Collapsed)
   local AccessoryIconPath = ArmoryUtils:GetCharNoneAccessoryIconPaths()[CommonConst.DataType.Hair]
   if AccessoryIconPath then
     local AccessoryIcon = LoadObject(AccessoryIconPath)
     self.Image_Element:SetBrushResourceObject(AccessoryIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Group_Icon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   if Content.CharName then
     self.Text_CharName:SetText(Content.CharName)
@@ -1251,6 +1319,10 @@ function M:UpdateActorAppearance(SkinId, HairId)
   if not self.ActorController then
     return
   end
+  if self.SkipFirstUpdateMontage then
+    self.SkipFirstUpdateMontage = false
+    return
+  end
   local Avatar = ArmoryUtils:GetAvatar()
   local AppearanceSuitInfo = self.Target:DumpAppearanceSuit(Avatar, self.AppearanceSuitIndex)
   AppearanceSuitInfo.SkinId = SkinId or AppearanceSuitInfo.SkinId
@@ -1289,6 +1361,7 @@ function M:OnRightConfirmBtnClicked()
     if self.CurrentLockContent then
       if self.UseParamsInOpt then
         self:OnCharSkinGotoBagBtnClicked()
+        self:ClearConsumableItemReddot()
       else
         self:OnCharSkinGoToShopBtnClicked()
       end
@@ -1377,7 +1450,7 @@ function M:OnSkinUpgradeResourceChanged(ResourceId)
 end
 
 function M:GetOwnedSkinData(SkinId)
-  local Avatar = GWorld:GetAvatar()
+  local Avatar = ArmoryUtils:GetAvatar()
   if not Avatar or not Avatar.CommonChars then
     return
   end
@@ -1466,7 +1539,7 @@ function M:OnLevelUpWidgetClicked(Level, Skip)
       Numerator = SkinLevelUpData.UnlockAmount
     })
     self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Unequipped)
-    self.Btn_Function:SetText(GText("UI_FUNC_LEVELUP"))
+    self.Btn_Function:SetText(GText("UI_Skin_Upgrade_Name"))
     local Avatar = GWorld:GetAvatar()
     local OwnedAmount = Avatar:GetResourceNum(SkinLevelUpData.UnlockCurrency)
     if OwnedAmount < SkinLevelUpData.UnlockAmount then
@@ -1502,12 +1575,15 @@ function M:ChangeCharSkinLevel()
     if not ErrorCode:Check(Ret) then
       return
     end
-    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
-    self.Text_Desc:SetText(GText("UI_Accessory_Equipped"))
-    local SelectedContent = self.SkinMap[SkinId]
+    local SelectedContent = self.SkinMap and self.SkinMap[SkinId]
     if SelectedContent and SelectedContent.Widget then
       SelectedContent.Widget:UpdateSKinLevel(NewLevel)
     end
+    if self.CurrentTopTabIdx ~= self.SkinTabIdx then
+      return
+    end
+    self.WidgetSwitcher_BtnState:SetActiveWidgetIndex(self.BtnWidgetState.Equipped)
+    self.Text_Desc:SetText(GText("UI_Accessory_Equipped"))
   end
   
   self:BlockAllUIInput(true, "SwitchCharSkinSelectedLevel")

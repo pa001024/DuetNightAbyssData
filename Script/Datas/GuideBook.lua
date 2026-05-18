@@ -663,7 +663,7 @@ return ReadOnly("GuideBook", {
     FinishQuest = 12010415,
     GuideId = 97,
     GuideNoteId = 122,
-    GuideNoteTab = 5,
+    GuideNoteTab = 3,
     RewardId = 7000
   },
   [123] = {
@@ -963,6 +963,54 @@ return ReadOnly("GuideBook", {
     GuideNoteId = 160,
     GuideNoteTab = 3,
     MechanismTag = "DarkClouds",
+    RewardId = 7000
+  },
+  [161] = {
+    CompleteUIGuideId = 148,
+    GuideId = 148,
+    GuideNoteId = 161,
+    GuideNoteTab = 5,
+    MechanismTag = "AppearanceScore",
+    RewardId = 7000
+  },
+  [162] = {
+    CompleteUIGuideId = 149,
+    GuideId = 149,
+    GuideNoteId = 162,
+    GuideNoteTab = 5,
+    MechanismTag = "HyperWeapon",
+    RewardId = 7000
+  },
+  [163] = {
+    CompleteUIGuideId = 150,
+    GuideId = 150,
+    GuideNoteId = 163,
+    GuideNoteTab = 5,
+    MechanismTag = "IronMode",
+    RewardId = 7000
+  },
+  [164] = {
+    CompleteUIGuideId = 151,
+    GuideId = 151,
+    GuideNoteId = 164,
+    GuideNoteTab = 5,
+    MechanismTag = "OpenGuild",
+    RewardId = 7000
+  },
+  [165] = {
+    CompleteUIGuideId = 152,
+    FinishQuestChain = 100405,
+    GuideId = 152,
+    GuideNoteId = 165,
+    GuideNoteTab = 5,
+    RewardId = 7000
+  },
+  [166] = {
+    CompleteUIGuideId = 153,
+    GuideId = 153,
+    GuideNoteId = 166,
+    GuideNoteTab = 5,
+    MechanismTag = "OpenGuild",
     RewardId = 7000
   },
   [1001] = {

@@ -61,6 +61,9 @@ function M:OnLoaded(...)
   self.GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(PlayerController)
   self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.OnUpdateUIStyleByInputTypeChange)
   self:OnUpdateUIStyleByInputTypeChange(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  if self.QuestUIId == 100400 then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/main_quest_start_chapter3", "Chapter3ToEnd", nil)
+  end
 end
 
 function M:OnClick()
@@ -81,6 +84,10 @@ function M:OnClick()
 end
 
 function M:OnClose()
+  if self.QuestUIId == 100400 then
+    AudioManager(self):SetEventSoundParam(self, "Chapter3ToEnd", {ToEnd = 1})
+    AudioManager(self):StopSound(self, "Chapter3ToEnd")
+  end
   self:Close()
 end
 

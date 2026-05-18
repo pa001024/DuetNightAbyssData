@@ -4,6 +4,14 @@ local OpacityName = {
   Slide_Attack = "OpacitySideAtack",
   Slide = "OpacitySide"
 }
+
+local function GetMappedLayout(Layout)
+  if nil == Layout then
+    return 1
+  end
+  return (Layout - 1) % 2 + 1
+end
+
 Jump_Phone_C.SkillInfos = {
   [ESkillName.Slide] = {
     SkillActive = true,
@@ -54,16 +62,17 @@ function Jump_Phone_C:Construct()
 end
 
 function Jump_Phone_C:ChangeByLayout(Layout)
-  if 2 == Layout then
+  local MappedLayout = GetMappedLayout(Layout)
+  if 2 == MappedLayout then
     self.IconMaterial:SetScalarParameterValue("S_BulletJumpSplit", 1)
     self.PanelMaterial:SetScalarParameterValue("S_BulletJumpSplit", 1)
     self.PanelMaterialGuide:SetScalarParameterValue("S_BulletJumpSplit", 1)
-  elseif 1 == Layout then
+  elseif 1 == MappedLayout then
     self.IconMaterial:SetScalarParameterValue("S_BulletJumpSplit", 0)
     self.PanelMaterial:SetScalarParameterValue("S_BulletJumpSplit", 0)
     self.PanelMaterialGuide:SetScalarParameterValue("S_BulletJumpSplit", 0)
   end
-  self.CurrentLayout = Layout
+  self.CurrentLayout = MappedLayout
 end
 
 function Jump_Phone_C.ButtonJumpDown(Battle_Button_Phone, Index, StartPos)
@@ -72,7 +81,7 @@ function Jump_Phone_C.ButtonJumpDown(Battle_Button_Phone, Index, StartPos)
     return
   end
   Jump_M.CurButtonState = "Press"
-  if Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount or Jump_M.OwnerPanel.IsSuyi then
+  if Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount then
     Jump_M.OwnerPanel:TryToPlayTargetCommand("Jump", true)
   end
   Jump_M:PlayStateAnimation()
@@ -80,7 +89,7 @@ end
 
 function Jump_Phone_C.ButtonJumpMove(Battle_Button_Phone, TouchFingerCount, Index, LastPos, TotalDeltaDis, LastDeltaDis)
   local Jump_M = Battle_Button_Phone.Jump
-  if Jump_M.OwnerPlayer.CurMount or Jump_M.OwnerPanel.IsSuyi then
+  if Jump_M.OwnerPlayer.CurMount then
     return
   end
   if Jump_M.OwnerPlayer:CheckSkillInActive(ESkillName.Jump) then
@@ -130,10 +139,11 @@ function Jump_Phone_C.ButtonJumpUp(Battle_Button_Phone, Index, WidgetLocalPos, L
   end
   if FromCenterDis >= Jump_M.InnerButtonDis and not Jump_M.OwnerPlayer.CurMount and not CurRegionHasExtra then
     Jump_M:HandleStateWhenUp()
-  elseif Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount or Jump_M.OwnerPanel.IsSuyi then
+  elseif Jump_M.OwnerPlayer:IsFlying() or Jump_M.OwnerPlayer.CurMount then
     Jump_M.OwnerPanel:TryToStopTargetCommand("Jump", true)
   else
     Jump_M.OwnerPanel:TryToPlayTargetCommand("Jump", true)
+    Jump_M.OwnerPanel:TryToStopTargetCommand("Jump", true)
   end
   Jump_M.CurButtonState = "Normal"
   Jump_M:PlayStateAnimation()

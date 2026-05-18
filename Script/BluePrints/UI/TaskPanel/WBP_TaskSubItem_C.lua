@@ -7,6 +7,7 @@ local QuestRealStateEnum = {
   Lock = 0,
   Doing = 1,
   Finished = 2,
+  Block = 3,
   InProgress = -1
 }
 local QuestChainTypeEnum = {
@@ -14,7 +15,7 @@ local QuestChainTypeEnum = {
   Normal = 2,
   Side = 3
 }
-local TEXT_MAX_TASK_CONTENT_WIDTH_FR = 400
+local TEXT_MAX_TASK_CONTENT_WIDTH_FR = 280
 
 function WBP_TaskSubItem_C:Initialize(Initializer)
   self.Super.Initialize(self)
@@ -84,7 +85,7 @@ function WBP_TaskSubItem_C:RefreshTaskSubItemInfo(Content)
   self.Group_Guide_Point:SetVisibility(UE4.ESlateVisibility.Collapsed)
   if -1 == self.QuestChainId then
     self.StateSwitcher:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  elseif self.State == QuestRealStateEnum.Finished or self.State == QuestRealStateEnum.Lock then
+  elseif self.State == QuestRealStateEnum.Finished or self.State == QuestRealStateEnum.Lock or self.State == QuestRealStateEnum.Block then
     self.StateSwitcher:SetActiveWidgetIndex(self.State)
     self.StateSwitcher:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   else
@@ -114,7 +115,7 @@ function WBP_TaskSubItem_C:RefreshTaskSubItemInfo(Content)
   end
   if -1 == self.QuestChainId then
     if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
-      self.Text_TaskName:SetText(GText("Quest_ToBeContinued"))
+      self.Text_TaskName:SetTextByPixelWidth(GText("Quest_ToBeContinued"), TEXT_MAX_TASK_CONTENT_WIDTH_FR)
     else
       self.Text_TaskName:SetText(GText("Quest_ToBeContinued"))
     end
@@ -123,12 +124,12 @@ function WBP_TaskSubItem_C:RefreshTaskSubItemInfo(Content)
     local UnlockTitle = DataMgr.QuestChain[self.QuestChainId].UnlockTitle
     if self.State == QuestRealStateEnum.Lock and UnlockTitle then
       if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
-        self.Text_TaskName:SetText(GText(UnlockTitle))
+        self.Text_TaskName:SetTextByPixelWidth(GText(UnlockTitle), TEXT_MAX_TASK_CONTENT_WIDTH_FR)
       else
         self.Text_TaskName:SetText(GText(UnlockTitle))
       end
     elseif CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
-      self.Text_TaskName:SetText(self.QuestName)
+      self.Text_TaskName:SetTextByPixelWidth(self.QuestName, TEXT_MAX_TASK_CONTENT_WIDTH_FR)
     else
       self.Text_TaskName:SetText(self.QuestName)
     end
@@ -136,7 +137,7 @@ function WBP_TaskSubItem_C:RefreshTaskSubItemInfo(Content)
   if "" ~= self.QuestPosition then
     self.Text_TaskPosition:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
-      self.Text_TaskPosition:SetText(self.QuestPosition)
+      self.Text_TaskPosition:SetTextByPixelWidth(self.QuestPosition, TEXT_MAX_TASK_CONTENT_WIDTH_FR)
     else
       self.Text_TaskPosition:SetText(self.QuestPosition)
     end

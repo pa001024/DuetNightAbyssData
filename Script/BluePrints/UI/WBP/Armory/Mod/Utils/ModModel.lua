@@ -395,6 +395,15 @@ function M:GetModCountById(Id)
   return Count
 end
 
+function M:GetAnyModById(Id)
+  for _, Mod in pairs(self:GetAvatar().Mods) do
+    if Mod.ModId == Id then
+      return Mod
+    end
+  end
+  return nil
+end
+
 function M:GetSlotUIDatasWhichConflict(ModUuid)
   local Res = {}
   local Mod = self:GetMod(ModUuid)
@@ -800,24 +809,31 @@ function M:DoModSearch(Mod, SearchText)
   if string.isempty(SearchText) then
     return true
   end
-  if string.find(Mod:GetName(), SearchText) then
+  SearchText = string.lower(SearchText)
+  local ModName = string.lower(Mod:GetName())
+  if string.find(ModName, SearchText) then
     return true
   end
   local ModConf = Mod:Data()
   if ModConf.AddAttrs then
     for _, ModAttr in ipairs(ModConf.AddAttrs) do
       local AttrConfig = DataMgr.AttrConfig[ModAttr.AttrName]
-      if AttrConfig and string.find(GText(AttrConfig.Name), SearchText) then
+      local AttrName = string.lower(GText(AttrConfig.Name))
+      if AttrConfig and string.find(AttrName, SearchText) then
         return true
       end
     end
   end
-  if ModConf.PassiveEffectsDesc and string.find(GText(ModConf.PassiveEffectsDesc), SearchText) then
-    return true
+  if ModConf.PassiveEffectsDesc then
+    local ModDesc = string.lower(GText(ModConf.PassiveEffectsDesc))
+    if string.find(ModDesc, SearchText) then
+      return true
+    end
   end
   if ModConf.FilterTag then
     for _, Tag in ipairs(ModConf.FilterTag) do
-      if string.find(GText(Tag), SearchText) then
+      local Tag = string.lower(GText(Tag))
+      if string.find(Tag, SearchText) then
         return true
       end
     end
@@ -1172,7 +1188,17 @@ end
 function M:UpdateModAttrListForIntensify(Attrs, ComparedAttrs, TargetMod, InPreviewLevel)
   local ModConf = TargetMod:Data()
   for _, Attr in pairs(ModConf.AddAttrs or {}) do
-    local AttrConf = DataMgr.AttrConfig[Attr.AttrName]
+    local AttrNameKey = ""
+    if Attr.Tag and Attr.RateZone then
+      AttrNameKey = string.format("%s_%s_%s", Attr.AttrName, Attr.Tag, Attr.RateZone)
+    elseif Attr.Tag then
+      AttrNameKey = string.format("%s_%s", Attr.AttrName, Attr.Tag)
+    elseif Attr.RateZone then
+      AttrNameKey = string.format("%s_%s", Attr.AttrName, Attr.RateZone)
+    else
+      AttrNameKey = Attr.AttrName
+    end
+    local AttrConf = DataMgr.AttrConfig[AttrNameKey]
     if not AttrConf then
     else
       local OldValue, OldValStr = ArmoryUtils:GenModAttrData(Attr, TargetMod.Level, AttrConf, ModConf.Id)
@@ -1333,6 +1359,21 @@ function M:GetModFullNameByConf(ModId)
     return string.format("%s %s", GText(ModInfo.Name), GText(ModInfo.TypeName))
   end
   return GText(ModInfo.TypeName) .. GText(ModInfo.Name)
+end
+
+function M:HasTargetEquipedMod(TargetUuid, ModId)
+  local Target = self:GetAvatar().Weapons[TargetUuid]
+  Target = Target or self:GetAvatar().UWeapons[TargetUuid]
+  Target = Target or self:GetAvatar().Chars[TargetUuid]
+  for _, Slot in pairs(Target:GetModSuit()) do
+    if not string.isempty(Slot.ModEid) then
+      local Mod = self:GetMod(Slot.ModEid)
+      if Mod.ModId == ModId then
+        return true
+      end
+    end
+  end
+  return false
 end
 
 AssembleComponents(M)

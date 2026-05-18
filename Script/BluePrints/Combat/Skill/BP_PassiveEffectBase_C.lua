@@ -8,6 +8,22 @@ function BP_PassiveEffectBase_C:ReceiveBeginPlay()
   rawset(self, "BattleEvent", self.BattleEvent)
 end
 
+local function ApplyLuaFallbackVar(self, VarName, Value)
+  self[tostring(VarName)] = Value
+end
+
+function BP_PassiveEffectBase_C:InitPassiveLuaVar_Number(VarName, Value)
+  ApplyLuaFallbackVar(self, VarName, Value)
+end
+
+function BP_PassiveEffectBase_C:InitPassiveLuaVar_String(VarName, Value)
+  ApplyLuaFallbackVar(self, VarName, Value)
+end
+
+function BP_PassiveEffectBase_C:InitPassiveLuaVar_Bool(VarName, Value)
+  ApplyLuaFallbackVar(self, VarName, Value)
+end
+
 function BP_PassiveEffectBase_C:SetPassiveOwner(PassiveOwner)
   self.SavedPassiveOwner = PassiveOwner
   self:CheckInitSuccess()

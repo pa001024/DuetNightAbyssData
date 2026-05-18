@@ -3985,5 +3985,1014 @@ return ReadOnly("MidTermTask", {
     TaskDes = "MidTermGoal_Des_A2_20",
     TaskId = 601102,
     TaskType = 4
+  },
+  [602001] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 21,
+    Target = 3,
+    TargetId = T.RT_1,
+    TaskDes = "MidTermGoal_Des_0_1",
+    TaskId = 602001,
+    TaskType = 3
+  },
+  [602002] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 5,
+    TargetId = T.RT_2,
+    TaskDes = "MidTermGoal_Des_0_2",
+    TaskId = 602002,
+    TaskType = 3
+  },
+  [602003] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_3,
+    TaskDes = "MidTermGoal_Des_1_1",
+    TaskId = 602003,
+    TaskType = 1
+  },
+  [602004] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_4,
+    TaskDes = "MidTermGoal_Des_1_2",
+    TaskId = 602004,
+    TaskType = 2
+  },
+  [602005] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_1_3",
+    TaskId = 602005,
+    TaskType = 2
+  },
+  [602006] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 31,
+    Target = 3,
+    TargetId = T.RT_6,
+    TaskDes = "MidTermGoal_Des_1_4",
+    TaskId = 602006,
+    TaskType = 2
+  },
+  [602007] = {
+    EnableDay = 2,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_7,
+    TaskDes = "MidTermGoal_Des_2_1",
+    TaskId = 602007,
+    TaskType = 1
+  },
+  [602008] = {
+    EnableDay = 2,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 300,
+    TargetId = T.RT_8,
+    TaskDes = "MidTermGoal_Des_2_2",
+    TaskId = 602008,
+    TaskType = 2
+  },
+  [602009] = {
+    EnableDay = 2,
+    EventId = 10300602,
+    JumpUIId = 47,
+    Target = 1,
+    TargetId = T.RT_9,
+    TaskDes = "MidTermGoal_Des_2_3",
+    TaskId = 602009,
+    TaskType = 2
+  },
+  [602010] = {
+    EnableDay = 2,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_2_4",
+    TaskId = 602010,
+    TaskType = 2
+  },
+  [602011] = {
+    EnableDay = 3,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 1,
+    TargetId = T.RT_10,
+    TaskDes = "MidTermGoal_Des_3_1",
+    TaskId = 602011,
+    TaskType = 1
+  },
+  [602012] = {
+    EnableDay = 3,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 1,
+    TargetId = T.RT_11,
+    TaskDes = "MidTermGoal_Des_3_2",
+    TaskId = 602012,
+    TaskType = 2
+  },
+  [602013] = {
+    EnableDay = 3,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 1,
+    TargetId = T.RT_12,
+    TaskDes = "MidTermGoal_Des_3_3",
+    TaskId = 602013,
+    TaskType = 2
+  },
+  [602014] = {
+    EnableDay = 3,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 1,
+    TargetId = T.RT_13,
+    TaskDes = "MidTermGoal_Des_3_4",
+    TaskId = 602014,
+    TaskType = 2
+  },
+  [602015] = {
+    EnableDay = 4,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 5,
+    TargetId = T.RT_14,
+    TaskDes = "MidTermGoal_Des_4_1",
+    TaskId = 602015,
+    TaskType = 1
+  },
+  [602016] = {
+    EnableDay = 4,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_14,
+    TaskDes = "MidTermGoal_Des_4_2",
+    TaskId = 602016,
+    TaskType = 2
+  },
+  [602017] = {
+    EnableDay = 4,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 4,
+    TargetId = T.RT_15,
+    TaskDes = "MidTermGoal_Des_4_3",
+    TaskId = 602017,
+    TaskType = 2
+  },
+  [602018] = {
+    EnableDay = 4,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_4_4",
+    TaskId = 602018,
+    TaskType = 2
+  },
+  [602019] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 5,
+    TargetId = T.RT_16,
+    TaskDes = "MidTermGoal_Des_5_1",
+    TaskId = 602019,
+    TaskType = 1
+  },
+  [602020] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_16,
+    TaskDes = "MidTermGoal_Des_5_2",
+    TaskId = 602020,
+    TaskType = 2
+  },
+  [602021] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 31,
+    Target = 1,
+    TargetId = T.RT_6,
+    TaskDes = "MidTermGoal_Des_5_3",
+    TaskId = 602021,
+    TaskType = 2
+  },
+  [602022] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_5_4",
+    TaskId = 602022,
+    TaskType = 2
+  },
+  [602023] = {
+    EnableDay = 6,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 5,
+    TargetId = T.RT_17,
+    TaskDes = "MidTermGoal_Des_6_1",
+    TaskId = 602023,
+    TaskType = 1
+  },
+  [602024] = {
+    EnableDay = 6,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_17,
+    TaskDes = "MidTermGoal_Des_6_2",
+    TaskId = 602024,
+    TaskType = 2
+  },
+  [602025] = {
+    EnableDay = 6,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 4,
+    TargetId = T.RT_18,
+    TaskDes = "MidTermGoal_Des_6_3",
+    TaskId = 602025,
+    TaskType = 2
+  },
+  [602026] = {
+    EnableDay = 6,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_6_4",
+    TaskId = 602026,
+    TaskType = 2
+  },
+  [602027] = {
+    EnableDay = 7,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 5,
+    TargetId = T.RT_19,
+    TaskDes = "MidTermGoal_Des_7_1",
+    TaskId = 602027,
+    TaskType = 1
+  },
+  [602028] = {
+    EnableDay = 7,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_19,
+    TaskDes = "MidTermGoal_Des_7_2",
+    TaskId = 602028,
+    TaskType = 2
+  },
+  [602029] = {
+    EnableDay = 7,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_20,
+    TaskDes = "MidTermGoal_Des_7_3",
+    TaskId = 602029,
+    TaskType = 2
+  },
+  [602030] = {
+    EnableDay = 7,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_7_4",
+    TaskId = 602030,
+    TaskType = 2
+  },
+  [602031] = {
+    EnableDay = 8,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_3,
+    TaskDes = "MidTermGoal_Des_1_1",
+    TaskId = 602031,
+    TaskType = 1
+  },
+  [602032] = {
+    EnableDay = 8,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_4,
+    TaskDes = "MidTermGoal_Des_1_2",
+    TaskId = 602032,
+    TaskType = 2
+  },
+  [602033] = {
+    EnableDay = 8,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_1_3",
+    TaskId = 602033,
+    TaskType = 2
+  },
+  [602034] = {
+    EnableDay = 8,
+    EventId = 10300602,
+    JumpUIId = 31,
+    Target = 3,
+    TargetId = T.RT_6,
+    TaskDes = "MidTermGoal_Des_1_4",
+    TaskId = 602034,
+    TaskType = 2
+  },
+  [602035] = {
+    EnableDay = 9,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_7,
+    TaskDes = "MidTermGoal_Des_2_1",
+    TaskId = 602035,
+    TaskType = 1
+  },
+  [602036] = {
+    EnableDay = 9,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 300,
+    TargetId = T.RT_8,
+    TaskDes = "MidTermGoal_Des_2_2",
+    TaskId = 602036,
+    TaskType = 2
+  },
+  [602037] = {
+    EnableDay = 9,
+    EventId = 10300602,
+    JumpUIId = 47,
+    Target = 1,
+    TargetId = T.RT_9,
+    TaskDes = "MidTermGoal_Des_2_3",
+    TaskId = 602037,
+    TaskType = 2
+  },
+  [602038] = {
+    EnableDay = 9,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_2_4",
+    TaskId = 602038,
+    TaskType = 2
+  },
+  [602039] = {
+    EnableDay = 10,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 1,
+    TargetId = T.RT_10,
+    TaskDes = "MidTermGoal_Des_3_1",
+    TaskId = 602039,
+    TaskType = 1
+  },
+  [602040] = {
+    EnableDay = 10,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 1,
+    TargetId = T.RT_11,
+    TaskDes = "MidTermGoal_Des_3_2",
+    TaskId = 602040,
+    TaskType = 2
+  },
+  [602041] = {
+    EnableDay = 10,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 1,
+    TargetId = T.RT_12,
+    TaskDes = "MidTermGoal_Des_3_3",
+    TaskId = 602041,
+    TaskType = 2
+  },
+  [602042] = {
+    EnableDay = 10,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 1,
+    TargetId = T.RT_13,
+    TaskDes = "MidTermGoal_Des_3_4",
+    TaskId = 602042,
+    TaskType = 2
+  },
+  [602043] = {
+    EnableDay = 11,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 5,
+    TargetId = T.RT_14,
+    TaskDes = "MidTermGoal_Des_4_1",
+    TaskId = 602043,
+    TaskType = 1
+  },
+  [602044] = {
+    EnableDay = 11,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_14,
+    TaskDes = "MidTermGoal_Des_4_2",
+    TaskId = 602044,
+    TaskType = 2
+  },
+  [602045] = {
+    EnableDay = 11,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 4,
+    TargetId = T.RT_15,
+    TaskDes = "MidTermGoal_Des_4_3",
+    TaskId = 602045,
+    TaskType = 2
+  },
+  [602046] = {
+    EnableDay = 11,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_4_4",
+    TaskId = 602046,
+    TaskType = 2
+  },
+  [602047] = {
+    EnableDay = 12,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 5,
+    TargetId = T.RT_16,
+    TaskDes = "MidTermGoal_Des_5_1",
+    TaskId = 602047,
+    TaskType = 1
+  },
+  [602048] = {
+    EnableDay = 12,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_16,
+    TaskDes = "MidTermGoal_Des_5_2",
+    TaskId = 602048,
+    TaskType = 2
+  },
+  [602049] = {
+    EnableDay = 12,
+    EventId = 10300602,
+    JumpUIId = 31,
+    Target = 1,
+    TargetId = T.RT_6,
+    TaskDes = "MidTermGoal_Des_5_3",
+    TaskId = 602049,
+    TaskType = 2
+  },
+  [602050] = {
+    EnableDay = 12,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_5_4",
+    TaskId = 602050,
+    TaskType = 2
+  },
+  [602051] = {
+    EnableDay = 13,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 5,
+    TargetId = T.RT_17,
+    TaskDes = "MidTermGoal_Des_6_1",
+    TaskId = 602051,
+    TaskType = 1
+  },
+  [602052] = {
+    EnableDay = 13,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_17,
+    TaskDes = "MidTermGoal_Des_6_2",
+    TaskId = 602052,
+    TaskType = 2
+  },
+  [602053] = {
+    EnableDay = 13,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 4,
+    TargetId = T.RT_18,
+    TaskDes = "MidTermGoal_Des_6_3",
+    TaskId = 602053,
+    TaskType = 2
+  },
+  [602054] = {
+    EnableDay = 13,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_6_4",
+    TaskId = 602054,
+    TaskType = 2
+  },
+  [602055] = {
+    EnableDay = 14,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 5,
+    TargetId = T.RT_19,
+    TaskDes = "MidTermGoal_Des_7_1",
+    TaskId = 602055,
+    TaskType = 1
+  },
+  [602056] = {
+    EnableDay = 14,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_19,
+    TaskDes = "MidTermGoal_Des_7_2",
+    TaskId = 602056,
+    TaskType = 2
+  },
+  [602057] = {
+    EnableDay = 14,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_20,
+    TaskDes = "MidTermGoal_Des_7_3",
+    TaskId = 602057,
+    TaskType = 2
+  },
+  [602058] = {
+    EnableDay = 14,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_7_4",
+    TaskId = 602058,
+    TaskType = 2
+  },
+  [602059] = {
+    EnableDay = 15,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_3,
+    TaskDes = "MidTermGoal_Des_1_1",
+    TaskId = 602059,
+    TaskType = 1
+  },
+  [602060] = {
+    EnableDay = 15,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_4,
+    TaskDes = "MidTermGoal_Des_1_2",
+    TaskId = 602060,
+    TaskType = 2
+  },
+  [602061] = {
+    EnableDay = 15,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_1_3",
+    TaskId = 602061,
+    TaskType = 2
+  },
+  [602062] = {
+    EnableDay = 15,
+    EventId = 10300602,
+    JumpUIId = 31,
+    Target = 3,
+    TargetId = T.RT_6,
+    TaskDes = "MidTermGoal_Des_1_4",
+    TaskId = 602062,
+    TaskType = 2
+  },
+  [602063] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 22,
+    Target = 3,
+    TargetId = T.RT_27,
+    TaskDes = "MidTermGoal_Des_A1_1",
+    TaskId = 602063,
+    TaskType = 4
+  },
+  [602064] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 22,
+    Target = 5,
+    TargetId = T.RT_27,
+    TaskDes = "MidTermGoal_Des_A1_2",
+    TaskId = 602064,
+    TaskType = 4
+  },
+  [602065] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 22,
+    Target = 7,
+    TargetId = T.RT_27,
+    TaskDes = "MidTermGoal_Des_A1_3",
+    TaskId = 602065,
+    TaskType = 4
+  },
+  [602066] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 22,
+    Target = 10,
+    TargetId = T.RT_27,
+    TaskDes = "MidTermGoal_Des_A1_4",
+    TaskId = 602066,
+    TaskType = 4
+  },
+  [602067] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 30,
+    TargetId = T.RT_2,
+    TaskDes = "MidTermGoal_Des_A1_5",
+    TaskId = 602067,
+    TaskType = 4
+  },
+  [602068] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 50,
+    TargetId = T.RT_2,
+    TaskDes = "MidTermGoal_Des_A1_6",
+    TaskId = 602068,
+    TaskType = 4
+  },
+  [602069] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 20,
+    Target = 70,
+    TargetId = T.RT_2,
+    TaskDes = "MidTermGoal_Des_A1_7",
+    TaskId = 602069,
+    TaskType = 4
+  },
+  [602070] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 21,
+    Target = 10,
+    TargetId = T.RT_1,
+    TaskDes = "MidTermGoal_Des_A1_8",
+    TaskId = 602070,
+    TaskType = 4
+  },
+  [602071] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 21,
+    Target = 30,
+    TargetId = T.RT_1,
+    TaskDes = "MidTermGoal_Des_A1_9",
+    TaskId = 602071,
+    TaskType = 4
+  },
+  [602072] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 21,
+    Target = 50,
+    TargetId = T.RT_1,
+    TaskDes = "MidTermGoal_Des_A1_10",
+    TaskId = 602072,
+    TaskType = 4
+  },
+  [602073] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 21,
+    Target = 70,
+    TargetId = T.RT_1,
+    TaskDes = "MidTermGoal_Des_A1_11",
+    TaskId = 602073,
+    TaskType = 4
+  },
+  [602074] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    JumpUIId = 21,
+    Target = 100,
+    TargetId = T.RT_1,
+    TaskDes = "MidTermGoal_Des_A1_12",
+    TaskId = 602074,
+    TaskType = 4
+  },
+  [602075] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    Target = 50000,
+    TargetId = T.RT_21,
+    TaskDes = "MidTermGoal_Des_A1_13",
+    TaskId = 602075,
+    TaskType = 4
+  },
+  [602076] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    Target = 100000,
+    TargetId = T.RT_21,
+    TaskDes = "MidTermGoal_Des_A1_14",
+    TaskId = 602076,
+    TaskType = 4
+  },
+  [602077] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    Target = 200000,
+    TargetId = T.RT_21,
+    TaskDes = "MidTermGoal_Des_A1_15",
+    TaskId = 602077,
+    TaskType = 4
+  },
+  [602078] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    Target = 500000,
+    TargetId = T.RT_21,
+    TaskDes = "MidTermGoal_Des_A1_16",
+    TaskId = 602078,
+    TaskType = 4
+  },
+  [602079] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    Target = 5000,
+    TargetId = T.RT_22,
+    TaskDes = "MidTermGoal_Des_A1_17",
+    TaskId = 602079,
+    TaskType = 4
+  },
+  [602080] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    Target = 7000,
+    TargetId = T.RT_22,
+    TaskDes = "MidTermGoal_Des_A1_18",
+    TaskId = 602080,
+    TaskType = 4
+  },
+  [602081] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    Target = 10000,
+    TargetId = T.RT_22,
+    TaskDes = "MidTermGoal_Des_A1_19",
+    TaskId = 602081,
+    TaskType = 4
+  },
+  [602082] = {
+    EnableDay = 1,
+    EventId = 10300602,
+    Target = 15000,
+    TargetId = T.RT_22,
+    TaskDes = "MidTermGoal_Des_A1_20",
+    TaskId = 602082,
+    TaskType = 4
+  },
+  [602083] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    Target = 5,
+    TargetId = T.RT_25,
+    TaskDes = "MidTermGoal_Des_A2_1",
+    TaskId = 602083,
+    TaskType = 4
+  },
+  [602084] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    Target = 15,
+    TargetId = T.RT_25,
+    TaskDes = "MidTermGoal_Des_A2_2",
+    TaskId = 602084,
+    TaskType = 4
+  },
+  [602085] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    Target = 20,
+    TargetId = T.RT_25,
+    TaskDes = "MidTermGoal_Des_A2_3",
+    TaskId = 602085,
+    TaskType = 4
+  },
+  [602086] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 20,
+    TargetId = T.RT_4,
+    TaskDes = "MidTermGoal_Des_A2_4",
+    TaskId = 602086,
+    TaskType = 4
+  },
+  [602087] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 30,
+    TargetId = T.RT_4,
+    TaskDes = "MidTermGoal_Des_A2_5",
+    TaskId = 602087,
+    TaskType = 4
+  },
+  [602088] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 50,
+    TargetId = T.RT_4,
+    TaskDes = "MidTermGoal_Des_A2_6",
+    TaskId = 602088,
+    TaskType = 4
+  },
+  [602089] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 70,
+    TargetId = T.RT_4,
+    TaskDes = "MidTermGoal_Des_A2_7",
+    TaskId = 602089,
+    TaskType = 4
+  },
+  [602090] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 100,
+    TargetId = T.RT_4,
+    TaskDes = "MidTermGoal_Des_A2_8",
+    TaskId = 602090,
+    TaskType = 4
+  },
+  [602091] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 10,
+    TargetId = T.RT_3,
+    TaskDes = "MidTermGoal_Des_A2_9",
+    TaskId = 602091,
+    TaskType = 4
+  },
+  [602092] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 15,
+    TargetId = T.RT_3,
+    TaskDes = "MidTermGoal_Des_A2_10",
+    TaskId = 602092,
+    TaskType = 4
+  },
+  [602093] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 20,
+    TargetId = T.RT_3,
+    TaskDes = "MidTermGoal_Des_A2_11",
+    TaskId = 602093,
+    TaskType = 4
+  },
+  [602094] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 10,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_A2_12",
+    TaskId = 602094,
+    TaskType = 4
+  },
+  [602095] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 15,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_A2_13",
+    TaskId = 602095,
+    TaskType = 4
+  },
+  [602096] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 20,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_A2_14",
+    TaskId = 602096,
+    TaskType = 4
+  },
+  [602097] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 30,
+    TargetId = T.RT_5,
+    TaskDes = "MidTermGoal_Des_A2_15",
+    TaskId = 602097,
+    TaskType = 4
+  },
+  [602098] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 100000,
+    TargetId = T.RT_28,
+    TaskDes = "MidTermGoal_Des_A2_16",
+    TaskId = 602098,
+    TaskType = 4
+  },
+  [602099] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 200000,
+    TargetId = T.RT_28,
+    TaskDes = "MidTermGoal_Des_A2_17",
+    TaskId = 602099,
+    TaskType = 4
+  },
+  [602100] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1000,
+    TargetId = T.RT_8,
+    TaskDes = "MidTermGoal_Des_A2_18",
+    TaskId = 602100,
+    TaskType = 4
+  },
+  [602101] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 1500,
+    TargetId = T.RT_8,
+    TaskDes = "MidTermGoal_Des_A2_19",
+    TaskId = 602101,
+    TaskType = 4
+  },
+  [602102] = {
+    EnableDay = 5,
+    EventId = 10300602,
+    JumpUIId = 19,
+    Target = 2000,
+    TargetId = T.RT_8,
+    TaskDes = "MidTermGoal_Des_A2_20",
+    TaskId = 602102,
+    TaskType = 4
   }
 })

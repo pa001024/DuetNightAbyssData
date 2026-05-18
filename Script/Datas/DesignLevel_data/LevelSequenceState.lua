@@ -591,6 +591,19 @@ return {
           SequenceState = {1}
         }
       }
+    },
+    {
+      RegionId = 106301,
+      SequenceStateRecorder = {
+        {
+          RecorderId = 1,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 2,
+          SequenceState = {1, 2}
+        }
+      }
     }
   }
 }

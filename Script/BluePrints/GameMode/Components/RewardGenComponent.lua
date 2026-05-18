@@ -9,6 +9,35 @@ local ForceLogicRewardReason = {
   [CommonConst.RewardReason.PickUp] = true
 }
 
+local function BuildRewardDropDatasMapForCpp(LuaDatas)
+  local Map = TMap(0, UE4.FRewardDropRegionRows)
+  if not LuaDatas or next(LuaDatas) == nil then
+    return Map
+  end
+  for ItemId, Pack in pairs(LuaDatas) do
+    if type(Pack) == "table" then
+      ItemId = tonumber(ItemId) or ItemId
+      local RowsSource = nil ~= Pack.Rows and Pack.Rows or Pack
+      local PackCpp = UE4.FRewardDropRegionRows()
+      local RowsArr = UE4.TArray(UE4.FRewardDropRegionRow)
+      for _, LuaRow in ipairs(RowsSource) do
+        if type(LuaRow) == "table" then
+          local Row = UE4.FRewardDropRegionRow()
+          Row.WorldRegionEid = LuaRow.WorldRegionEid
+          Row.SubRegionId = tonumber(LuaRow.SubRegionId) or 0
+          Row.RarelyId = tonumber(LuaRow.RarelyId) or 0
+          Row.QuestChainId = tonumber(LuaRow.QuestChainId) or 0
+          Row.RegionDataType = tonumber(LuaRow.RegionDataType) or 0
+          RowsArr:Add(Row)
+        end
+      end
+      PackCpp.Rows = RowsArr
+      Map:Add(ItemId, PackCpp)
+    end
+  end
+  return Map
+end
+
 function Component:InitRewardParams()
   self.RewardPerFrame = 20
   self.CacheFrontIndex = 1
@@ -166,11 +195,11 @@ end
 
 function Component:ResolveRewardsInBattle(Rewards, Reason, Transform, ExtraInfo, OtherParams)
   DebugPrint("ResolveRewardsInBattle", Reason, Transform)
-  self:ResolveExpInBattle(Rewards, Reason, ExtraInfo, OtherParams)
+  self:ResolveExpInBattle(Rewards, OtherParams)
   self:HandleRewardDrop(rawget(Rewards, "Drops"), Reason, Transform, ExtraInfo, OtherParams)
 end
 
-function Component:ResolveExpInBattle(Rewards, Reason, ExtraInfo, OtherParams)
+function Component:ResolveExpInBattle(Rewards, OtherParams)
   if not OtherParams then
     return
   end
@@ -180,7 +209,7 @@ function Component:ResolveExpInBattle(Rewards, Reason, ExtraInfo, OtherParams)
     DebugPrint("ResolveExpInBattle no Character", Avatar)
     return
   end
-  self:GetExpMap(Character, Rewards, Reason, ExtraInfo)
+  self:GetExpMap(Character, Rewards)
   self:HandleExpInBattle()
   self.ExpMap:Clear()
 end
@@ -199,54 +228,27 @@ function Component:HandleRewardDrop(Drops, Reason, Transform, ExtraInfo, OtherPa
     return
   end
   OtherParams = OtherParams or {}
-  local GameState = self.EMGameState
-  local LevelId = self:GetItemLevelId(Transform.Translation)
-  
-  local function CreateDrop(DropId, Count, bExtra, CreateIndex)
-    DebugPrint("HandleRewardDrop in Dungeon1111", DropId, Count)
-    if self.LevelGameMode.DropRule[DropId] then
-      return
-    end
-    DebugPrint("HandleRewardDrop in Dungeon2222", DropId, Count)
-    if IsStandAlone(self) then
-      if self:IsInRegion() then
-        DebugPrint("ZJT_ 111111111111111 DropId ,Count ", DropId, bExtra, CreateIndex)
-        GameState.EventMgr:RealSpawnRewards_Region(DropId, Count, Transform, Reason, ExtraInfo, bExtra, CreateIndex, OtherParams.RewardDropDatas)
-      else
-        DebugPrint("HandleRewardDrop in Dungeon", DropId, Count)
-        GameState.EventMgr:RealSpawnRewards_Normal(DropId, Count, Transform, Reason, ExtraInfo, bExtra)
-      end
-    elseif IsDedicatedServer(self) then
-      if ItemUtils:IsServerCreate(DropId) then
-        GameState.EventMgr:RealSpawnRewards_Normal(DropId, Count, Transform, Reason, ExtraInfo, bExtra)
-      else
-        print(_G.LogTag, "CreateDrop For Player", DropId)
-        local Avatar = OtherParams.Avatar or ""
-        self:PickupToSpecPlayer(DropId, Count, Avatar, Reason, Transform, LevelId, bExtra)
-        self.bNeedNotifyClientCreateDrop = true
-      end
-    end
+  ExtraInfo = ExtraInfo or {}
+  local Params = UE4.FHandleRewardDropParams()
+  Params.Reason = Reason
+  Params.Transform = Transform
+  Params.AvatarEidStr = tostring(OtherParams.Avatar or "")
+  Params.ParentEid = ExtraInfo.ParentEid or 0
+  Params.WorldRegionEid = ExtraInfo.WorldRegionEid
+  Params.RegionDataType = ExtraInfo.RegionDataType or ERegionDataType.RDT_None
+  Params.bMultiWave = ExtraInfo.MultiWave == true and self:IsInDungeon()
+  Params.RewardDropDatas = BuildRewardDropDatasMapForCpp(OtherParams.RewardDropDatas)
+  local DropsArray = UE4.TArray(UE4.FDropEntry)
+  for DropId, DropCountTable in pairs(Drops) do
+    DropId = tonumber(DropId)
+    local Entry = UE4.FDropEntry()
+    Entry.DropId = DropId
+    Entry.ExtraCount = RewardBox:FindCountByTag(DropCountTable, "Extra")
+    Entry.NormalCount = RewardBox:FindCountByTag(DropCountTable, "Normal")
+    DropsArray:Add(Entry)
   end
-  
-  if ExtraInfo and ExtraInfo.MultiWave and self:IsInDungeon() then
-    local Mechanism = Battle(self):GetEntity(ExtraInfo.ParentEid)
-    print(_G.LogTag, "HandleCreateDrop For Player", OtherParams.Avatar)
-    Mechanism:MultiWaveCreateDrop(Drops, CreateDrop, OtherParams.Avatar)
-  else
-    for DropId, DropCountTable in pairs(Drops) do
-      DropId = tonumber(DropId)
-      local ExtraCount = RewardBox:FindCountByTag(DropCountTable, "Extra")
-      local CreateIndex = 0
-      if ExtraCount > 0 then
-        CreateIndex = ExtraCount
-        CreateDrop(DropId, ExtraCount, true, 0)
-      end
-      local OtherCount = RewardBox:FindCountByTag(DropCountTable, "Normal")
-      if OtherCount > 0 then
-        CreateDrop(DropId, OtherCount, false, CreateIndex)
-      end
-    end
-  end
+  Params.Drops = DropsArray
+  self.Overridden.HandleRewardDrop(self, Params)
 end
 
 function Component:TriggerGenerateRewardForMonsterDeath(UnitId, Transform, UniqueSign, KillerEid, bKilledByPlayer, WeaponType, Level, IsSummonMonster, MonEid, DamageCauserLocation, UniqueId, CreatorType, CreatorId, RelationSpawn, DeathReason, IsFallTrigger, bCreateByUnitButNoSummon)
@@ -308,6 +310,19 @@ end
 function Component:FlushRewards()
   DebugPrint("FlushRewards")
   self:TickGenReward(0)
+end
+
+function Component:UploadLevelOnMonsterDead(Level, SpawnId, DungeonId, Dynamic)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  Avatar:CallServerMethod("OnDungeonMonsterDead", {
+    MonsterLevel = Level,
+    MonsterSpawnId = SpawnId,
+    DungeonId = DungeonId,
+    bDynamic = Dynamic
+  })
 end
 
 return Component

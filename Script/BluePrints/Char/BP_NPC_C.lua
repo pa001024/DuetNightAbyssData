@@ -115,7 +115,11 @@ function BP_NPC_C:ResetDynamicsWithCurrentMontageSection(InNewMontageName, InNew
 end
 
 function BP_NPC_C:CheckCanPart()
-  return true
+  if self:IsPetNpc() then
+    return false
+  else
+    return true
+  end
 end
 
 function BP_NPC_C:StartTalkContext(TalkId, PlayerActor)
@@ -935,17 +939,22 @@ function BP_NPC_C:PreEnterStory(OnFinished, bCacheMeshMaterials, bPauseBT)
   end
   self:AddTimer(0.01, function()
     self.NativeMeshTickOptions = {}
-    self.NativeInSetShadow = {}
     local SKMeshComps = self:K2_GetComponentsByClass(USkeletalMeshComponent):ToTable()
     for _, SKMeshComp in pairs(SKMeshComps) do
       if IsValid(SKMeshComp) then
         self.NativeMeshTickOptions[SKMeshComp] = SKMeshComp.VisibilityBasedAnimTickOption
         SKMeshComp.VisibilityBasedAnimTickOption = EVisibilityBasedAnimTickOption.AlwaysTickPoseAndRefreshBones
-        self.NativeInSetShadow[SKMeshComp] = SKMeshComp.bCastInsetShadow
-        SKMeshComp:SetCastInsetShadow(true)
       end
     end
   end)
+  self.NativeInSetShadow = {}
+  local SKMeshComps = self:K2_GetComponentsByClass(USkeletalMeshComponent):ToTable()
+  for _, SKMeshComp in pairs(SKMeshComps) do
+    if IsValid(SKMeshComp) then
+      self.NativeInSetShadow[SKMeshComp] = SKMeshComp.bCastInsetShadow
+      SKMeshComp:SetCastInsetShadow(true)
+    end
+  end
   if bPauseBT and self.StopBT then
     self:StopBT("Talk")
   end
@@ -1152,9 +1161,18 @@ function BP_NPC_C:EnableImpressionWidget(bEnable)
 end
 
 function BP_NPC_C:EnableNameWidget(bEnable)
-  local NpcData = DataMgr[self.UnitType][self.UnitId]
-  local Name = NpcData and NpcData.UnitName or ""
-  self:EnableHeadWidget("Name", bEnable, GText(Name))
+  if not bEnable then
+    self:EnableHeadWidget("Name", false)
+    return
+  end
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  local IsHidden = GameState and GameState:IsNpcNameHidden(self.UnitId)
+  if IsHidden then
+    self:EnableHeadWidget("Name", false)
+    return
+  end
+  local Name = GameState and GameState:GetNpcName(self.UnitId)
+  self:EnableHeadWidget("Name", true, GText(Name))
 end
 
 function BP_NPC_C:EnableBubbleWidget(bEnable, Content, Style)

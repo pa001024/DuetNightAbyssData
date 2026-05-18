@@ -2,6 +2,7 @@ local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local TimeUtils = require("Utils.TimeUtils")
 local EMCache = require("EMCache.EMCache")
 local UIUtils = require("Utils.UIUtils")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local WBP_Abyss_Lineup_C = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
@@ -674,6 +675,9 @@ function WBP_Abyss_Lineup_C:OnListItemClicked(Content)
       local CurContent = self[Type .. "ItemContentsMap"][CurrentUuid]
       self.CurDungeonPanel:UpdateSlot(self.CurSlotName, Content)
       self.Dungeons[OtherSlotInfo.DungeonIndex]:UpdateSlot(OtherSlotInfo.SlotName, CurContent)
+      local bHasHyperConflict = false
+      bHasHyperConflict = self:TryResolveHyperWeaponConflict(self.CurDungeonPanel, self.CurSlotName) or bHasHyperConflict
+      bHasHyperConflict = self:TryResolveHyperWeaponConflict(self.Dungeons[OtherSlotInfo.DungeonIndex], OtherSlotInfo.SlotName) or bHasHyperConflict
       local PreIndex = Content.TeamIdx
       local PreChar = Content.TeamCharId
       self:CallFunctionByName(self.CurSlotType .. "Main_OnListItemClicked", Content)
@@ -687,6 +691,7 @@ function WBP_Abyss_Lineup_C:OnListItemClicked(Content)
     end
   end
   self:CallFunctionByName(self.CurSlotType .. "Main_OnListItemClicked", Content)
+  self:TryResolveHyperWeaponConflict(self.CurDungeonPanel, self.CurSlotName)
 end
 
 function WBP_Abyss_Lineup_C:IsChar()
@@ -956,6 +961,61 @@ end
 
 function WBP_Abyss_Lineup_C:GetModType(SlotName)
   return self.SlotType2DataType[self.SlotName2Type[SlotName]]
+end
+
+function WBP_Abyss_Lineup_C:IsHyperWeaponByUuid(Uuid)
+  if not Uuid then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar or not Avatar.Weapons then
+    return false
+  end
+  local Weapon = Avatar.Weapons[Uuid]
+  if not Weapon or not Weapon.WeaponId then
+    return false
+  end
+  return HyperWeaponUtils.IsHyperWeapon(Weapon.WeaponId)
+end
+
+function WBP_Abyss_Lineup_C:GetPairMainWeaponSlot(SlotName)
+  if SlotName == self.ESlotName.MeleeWeapon then
+    return self.ESlotName.RangedWeapon
+  end
+  if SlotName == self.ESlotName.RangedWeapon then
+    return self.ESlotName.MeleeWeapon
+  end
+  return nil
+end
+
+function WBP_Abyss_Lineup_C:TryResolveHyperWeaponConflict(DungeonPanel, EquippedSlotName)
+  if not DungeonPanel then
+    return false
+  end
+  local OtherSlotName = self:GetPairMainWeaponSlot(EquippedSlotName)
+  if not OtherSlotName then
+    return false
+  end
+  local EquippedUuid = DungeonPanel:GetCurrentUuid(EquippedSlotName)
+  if not self:IsHyperWeaponByUuid(EquippedUuid) then
+    return false
+  end
+  local OtherUuid = DungeonPanel:GetCurrentUuid(OtherSlotName)
+  if not self:IsHyperWeaponByUuid(OtherUuid) then
+    return false
+  end
+  local OtherType = self.SlotName2Type[OtherSlotName]
+  local OtherContent = self[OtherType .. "ItemContentsMap"] and self[OtherType .. "ItemContentsMap"][OtherUuid]
+  DungeonPanel:ClearSlot(OtherSlotName)
+  if self["Current" .. OtherType .. "Uuid"] == OtherUuid then
+    self["Current" .. OtherType .. "Uuid"] = nil
+  end
+  if self[OtherType .. "Main_CurContent"] == OtherContent then
+    self[OtherType .. "Main_CurContent"] = nil
+  end
+  self:SetContentIsChosen(OtherContent, false)
+  UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText("UI_HyperWeapon_CannotEquipAtSameTime"))
+  return true
 end
 
 function WBP_Abyss_Lineup_C:InitListenEvent()

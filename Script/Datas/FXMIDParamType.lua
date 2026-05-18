@@ -13,6 +13,10 @@ return ReadOnly("FXMIDParamType", {
   },
   Light = {AbnormalIndex = 8, ParamType = "Light"},
   ShuimuDot = {AbnormalIndex = 10, ParamType = "ShuimuDot"},
+  ShuimuDot_210189 = {
+    AbnormalIndex = 11,
+    ParamType = "ShuimuDot_210189"
+  },
   StunBlind = {AbnormalIndex = 7, ParamType = "StunBlind"},
   StunFire = {AbnormalIndex = 6, ParamType = "StunFire"},
   StunParalysis = {

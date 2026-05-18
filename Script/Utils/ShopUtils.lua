@@ -786,7 +786,7 @@ function M:ShowPurchaseDialog(ItemType, ItemId, ShopType, UIName)
     local bForbidden = not ShopUtils:CanPurchase(ShopItemData, ShopItemData.PriceType, ShopUtils:GetShopItemPrice(ShopItemData.ItemId))
     local CommonPopupUIID
     if UIUtils.CanOpenSkinPreview(ShopItemData.ItemType, ShopItemData.TypeId) then
-      UIManager(self):LoadUINew("SkinPreview", ShopItemData, self)
+      PageJumpUtils:JumpToSkinPreview(ShopItemData, self)
     elseif ShopItemData.ItemType == "Reward" and (DataMgr.Reward[ItemData.RewardId].Mode == "Fixed" or DataMgr.Reward[ItemData.RewardId].Mode == "Once") then
       if 1 == ShopItemData.Bg then
         UIManager(self):LoadUINew("PayGiftPopup_Yellow", ShopItemData, self)

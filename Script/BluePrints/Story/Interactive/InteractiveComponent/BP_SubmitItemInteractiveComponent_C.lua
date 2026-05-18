@@ -1,6 +1,8 @@
 local M = Class("BluePrints.Story.Interactive.InteractiveComponent.BP_InteractiveBaseComponent_C")
 local LuaConst = require("EMLuaConst")
-local PopupId = 100301
+local SubmitPopupId = 100301
+local DisplayPopupIdOwned = 100353
+local DisplayPopupIdNotOwned = 100354
 
 function M:BtnPressed(PlayerActor)
   local Owner = self:GetOwner()
@@ -11,8 +13,10 @@ function M:BtnPressed(PlayerActor)
   self:OpenSubmitUI(self.SubmitId)
 end
 
-function M:SetSubmitId(SubmitId)
+function M:InitSubmitComp(SubmitId, bIsDisplay, bDifferential)
   self.SubmitId = SubmitId
+  self.bIsDisplay = bIsDisplay
+  self.bDifferential = bDifferential
 end
 
 function M:BindSuccessCallback(SuccessCallback)
@@ -37,15 +41,29 @@ function M:OpenSubmitUI(SubmitId)
   local Params = {
     SubmitId = SubmitId,
     ItemList = {},
-    OnSubmitConfirmed = function(Res)
+    OnSubmitConfirmed = function(Res, ItemIdx)
       if Res and self.SuccessCallback then
-        self.SuccessCallback()
+        self.SuccessCallback(ItemIdx)
       end
     end,
-    DontCloseWhenRightBtnClicked = true,
-    ShortText = GText("UI_SubmitItem_Confirm"),
     LargeSizeItem = true
   }
+  local PopupId = SubmitPopupId
+  local Avatar = GWorld:GetAvatar()
+  if self.bIsDisplay then
+    Params.bDifferential = self.bDifferential
+    if not Avatar then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("UI_Toast_NetDelay"))
+    end
+    if Avatar and Avatar:CheckQuestItemsOwned(SubmitId) then
+      PopupId = DisplayPopupIdOwned
+      Params.DontCloseWhenRightBtnClicked = true
+    else
+      PopupId = DisplayPopupIdNotOwned
+    end
+  else
+    Params.ShortText = GText("UI_SubmitItem_Confirm")
+  end
   UIManager(self):ShowCommonPopupUI(PopupId, Params)
 end
 

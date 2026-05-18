@@ -277,6 +277,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ConfirmCodeMailId",
     ConstantValue = 10010
   },
+  CoopSettlementExitTime = {
+    ConstantName = "CoopSettlementExitTime",
+    ConstantValue = 120
+  },
   CostRecovery = {
     ConstantName = "CostRecovery",
     ConstantValue = 6
@@ -291,7 +295,7 @@ return ReadOnly("GlobalConstant", {
   },
   CurrentVersion = {
     ConstantName = "CurrentVersion",
-    ConstantValue = 130
+    ConstantValue = 140
   },
   Daily_Goal_RandomTaskNum = {
     ConstantName = "Daily_Goal_RandomTaskNum",
@@ -417,6 +421,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "EntertainmentCameraBlendSeconds",
     ConstantValue = 1.5
   },
+  EscortEliteDisThreshold = {
+    ConstantName = "EscortEliteDisThreshold",
+    ConstantValue = 5000
+  },
   ExcavMaxNum = {
     ConstantName = "ExcavMaxNum",
     ConstantValue = 4
@@ -464,6 +472,10 @@ return ReadOnly("GlobalConstant", {
   FrameAddBuffInDungeon = {
     ConstantName = "FrameAddBuffInDungeon",
     ConstantValue = 1
+  },
+  FreeSimpleActorRadius = {
+    ConstantName = "FreeSimpleActorRadius",
+    ConstantValue = 120
   },
   FriendApplyDuration = {
     ConstantName = "FriendApplyDuration",
@@ -524,6 +536,126 @@ return ReadOnly("GlobalConstant", {
   GuideGachaId = {
     ConstantName = "GuideGachaId",
     ConstantValue = 9998
+  },
+  GuildApplyCoolDownH = {
+    ConstantName = "GuildApplyCoolDownH",
+    ConstantValue = 24
+  },
+  GuildApplyCoolDownWhenRejectH = {
+    ConstantName = "GuildApplyCoolDownWhenRejectH",
+    ConstantValue = 48
+  },
+  GuildApplyMaxCount = {
+    ConstantName = "GuildApplyMaxCount",
+    ConstantValue = 150
+  },
+  GuildCreateItemId = {
+    ConstantName = "GuildCreateItemId",
+    ConstantValue = 4003
+  },
+  GuildDeclMaxLen = {
+    ConstantName = "GuildDeclMaxLen",
+    ConstantValue = 64
+  },
+  GuildDissolveTime = {
+    ConstantName = "GuildDissolveTime",
+    ConstantValue = 3
+  },
+  GuildDynamicNum = {
+    ConstantName = "GuildDynamicNum",
+    ConstantValue = 100
+  },
+  GuildEXPMax = {
+    ConstantName = "GuildEXPMax",
+    ConstantValue = 400000
+  },
+  GuildExpFactor = {
+    ConstantName = "GuildExpFactor",
+    ConstantValue = 1
+  },
+  GuildInviteCoolDownS = {
+    ConstantName = "GuildInviteCoolDownS",
+    ConstantValue = 3
+  },
+  GuildJoinMemberMail = {
+    ConstantName = "GuildJoinMemberMail",
+    ConstantValue = 10083
+  },
+  GuildKickMemberMail = {
+    ConstantName = "GuildKickMemberMail",
+    ConstantValue = 10080
+  },
+  GuildListApplyMax = {
+    ConstantName = "GuildListApplyMax",
+    ConstantValue = 20
+  },
+  GuildListExpireH = {
+    ConstantName = "GuildListExpireH",
+    ConstantValue = 24
+  },
+  GuildListMaxCount = {
+    ConstantName = "GuildListMaxCount",
+    ConstantValue = 50
+  },
+  GuildListMinRefreshSec = {
+    ConstantName = "GuildListMinRefreshSec",
+    ConstantValue = 2
+  },
+  GuildMessageCacheDuration = {
+    ConstantName = "GuildMessageCacheDuration",
+    ConstantValue = 72
+  },
+  GuildMessageCacheMax = {
+    ConstantName = "GuildMessageCacheMax",
+    ConstantValue = 8
+  },
+  GuildNameEditCoolDownDay = {
+    ConstantName = "GuildNameEditCoolDownDay",
+    ConstantValue = 90
+  },
+  GuildNameMaxLen = {
+    ConstantName = "GuildNameMaxLen",
+    ConstantValue = 14
+  },
+  GuildQuitLowLevelCoolDownM = {
+    ConstantName = "GuildQuitLowLevelCoolDownM",
+    ConstantValue = 10
+  },
+  GuildQuitProtectLevel = {
+    ConstantName = "GuildQuitProtectLevel",
+    ConstantValue = 46
+  },
+  GuildQuitRejoinCoolDownH = {
+    ConstantName = "GuildQuitRejoinCoolDownH",
+    ConstantValue = 2
+  },
+  GuildRecallTime = {
+    ConstantName = "GuildRecallTime",
+    ConstantValue = 14
+  },
+  GuildRecallWarningTime = {
+    ConstantName = "GuildRecallWarningTime",
+    ConstantValue = 3
+  },
+  GuildRecruitmentMaxLen = {
+    ConstantName = "GuildRecruitmentMaxLen",
+    ConstantValue = 30
+  },
+  GuildRecruitmentMessageCD = {
+    ConstantName = "GuildRecruitmentMessageCD",
+    ConstantValue = 60
+  },
+  GuildSetTitleMail = {
+    ConstantName = "GuildSetTitleMail",
+    ConstantValue = 10082
+  },
+  GuildShopInterFaceJumpID = {
+    ConstantName = "GuildShopInterFaceJumpID",
+    ConstantValue = 102
+  },
+  GuildStepDownTitleMail = {
+    ConstantName = "GuildStepDownTitleMail",
+    ConstantValue = 10081
   },
   HairColorPart = {
     ConstantName = "HairColorPart",
@@ -603,6 +735,10 @@ return ReadOnly("GlobalConstant", {
   InviteRejectTime = {
     ConstantName = "InviteRejectTime",
     ConstantValue = 5
+  },
+  IronSurvivalMonsterLevelLimit = {
+    ConstantName = "IronSurvivalMonsterLevelLimit",
+    ConstantValue = 240
   },
   ItemIDPetFoodLV1 = {
     ConstantName = "ItemIDPetFoodLV1",
@@ -684,6 +820,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "MiniProgramMailId_2",
     ConstantValue = 10057
   },
+  ModAutoLockLevel = {
+    ConstantName = "ModAutoLockLevel",
+    ConstantValue = 5
+  },
   ModH5MailId = {
     ConstantName = "ModH5MailId",
     ConstantValue = 10059
@@ -735,6 +875,10 @@ return ReadOnly("GlobalConstant", {
   OfficialEventMailId = {
     ConstantName = "OfficialEventMailId",
     ConstantValue = 10055
+  },
+  OldModGuideBookArchiveRewardMailId = {
+    ConstantName = "OldModGuideBookArchiveRewardMailId",
+    ConstantValue = 10078
   },
   OutdateActivityMailTemplate = {
     ConstantName = "OutdateActivityMailTemplate",
@@ -920,6 +1064,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "ReviewDialogueMax",
     ConstantValue = 50
   },
+  RougeProBondPlayers = {
+    ConstantName = "RougeProBondPlayers",
+    ConstantValue = 4
+  },
   ScriptPunishMail = {
     ConstantName = "ScriptPunishMail",
     ConstantValue = 10071
@@ -991,7 +1139,7 @@ return ReadOnly("GlobalConstant", {
   },
   StarMailMaxSave = {
     ConstantName = "StarMailMaxSave",
-    ConstantValue = 10
+    ConstantValue = 50
   },
   StoryInteractiveBlendInTime = {
     ConstantName = "StoryInteractiveBlendInTime",
@@ -1080,6 +1228,10 @@ return ReadOnly("GlobalConstant", {
   TeleportPressTime = {
     ConstantName = "TeleportPressTime",
     ConstantValue = 1.5
+  },
+  TheaterRegionId = {
+    ConstantName = "TheaterRegionId",
+    ConstantValue = 106001
   },
   TicketSelectTime = {
     ConstantName = "TicketSelectTime",

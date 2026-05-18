@@ -194,39 +194,47 @@ function ActivityUtils.CheckComeBackEventIsOpen(EventID)
 end
 
 function ActivityUtils.GetCurrentAllActivity()
-  local AllActivityTabIdx, InvaildEventIdList = {}, {}
+  if not ActivityUtils.InvaildEventIds then
+    ActivityUtils.InvaildEventIds = {}
+  end
+  local AllActivityTabIdx = {}
   for key, TabConfigInfo in pairs(DataMgr.EventTab) do
     if type(TabConfigInfo.EventId) == "table" then
-      local EventConfigData = DataMgr.EventMain[TabConfigInfo.EventId[1]]
-      if ActivityUtils.IsComeBackEvent(TabConfigInfo.EventId[1]) then
-        if ActivityUtils.CheckComeBackEventIsOpen(TabConfigInfo.EventId[1]) then
+      local FirstEventId = TabConfigInfo.EventId[1]
+      local EventConfigData = DataMgr.EventMain[FirstEventId]
+      if ActivityUtils.InvaildEventIds[FirstEventId] then
+      elseif ActivityUtils.IsComeBackEvent(FirstEventId) then
+        if ActivityUtils.CheckComeBackEventIsOpen(FirstEventId) then
           table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
         else
           for _, InvalidEventId in ipairs(TabConfigInfo.EventId) do
-            table.insert(InvaildEventIdList, InvalidEventId)
+            ActivityUtils.InvaildEventIds[InvalidEventId] = 1
           end
         end
-      elseif ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId[1], EventConfigData, true, "GameEvent") then
+      elseif ActivityUtils.CheckEventIsOpen(FirstEventId, EventConfigData, true, "GameEvent") then
         table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
       else
         for _, InvalidEventId in ipairs(TabConfigInfo.EventId) do
-          table.insert(InvaildEventIdList, InvalidEventId)
+          ActivityUtils.InvaildEventIds[InvalidEventId] = 1
         end
       end
     else
       local EventConfigData = DataMgr.EventMain[TabConfigInfo.EventId]
-      if ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId, EventConfigData, true, "GameEvent") then
+      if ActivityUtils.InvaildEventIds[TabConfigInfo.EventId] then
+      elseif ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId, EventConfigData, true, "GameEvent") then
         table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
       else
-        table.insert(InvaildEventIdList, TabConfigInfo.EventId)
+        ActivityUtils.InvaildEventIds[TabConfigInfo.EventId] = 1
       end
     end
   end
   table.sort(AllActivityTabIdx, function(Data1, Data2)
-    if DataMgr.EventTab[Data1].Sequence == DataMgr.EventTab[Data2].Sequence then
-      return DataMgr.EventTab[Data1].EventTabId < DataMgr.EventTab[Data2].EventTabId
+    local Conf1 = DataMgr.EventTab[Data1]
+    local Conf2 = DataMgr.EventTab[Data2]
+    if Conf1.Sequence == Conf2.Sequence then
+      return Conf1.EventTabId < Conf2.EventTabId
     else
-      return DataMgr.EventTab[Data1].Sequence > DataMgr.EventTab[Data2].Sequence
+      return Conf1.Sequence > Conf2.Sequence
     end
   end)
   local AllActivityID = {}
@@ -240,8 +248,14 @@ function ActivityUtils.GetCurrentAllActivity()
       })
     end
   end
-  for index, InvalidCheckEventId in ipairs(InvaildEventIdList) do
-    ActivityUtils.TryClearActivityReddotCommon(InvalidCheckEventId)
+  if not ActivityUtils._ProcessedInvaildEventIds then
+    ActivityUtils._ProcessedInvaildEventIds = {}
+  end
+  for InvalidCheckEventId, _ in pairs(ActivityUtils.InvaildEventIds) do
+    if not ActivityUtils._ProcessedInvaildEventIds[InvalidCheckEventId] then
+      ActivityUtils.TryClearActivityReddotCommon(InvalidCheckEventId)
+      ActivityUtils._ProcessedInvaildEventIds[InvalidCheckEventId] = 1
+    end
   end
   return AllActivityID, AllActivityTabIdx
 end
@@ -509,36 +523,49 @@ function ActivityUtils.RefreshLeftTime(TargetUI, TargetTimeUI, bCheckNextDayFive
   local RemainActivityTimeDict, ActivityTimeCount = UIUtils.GetLeftTimeStrStyle2(ActivityEndTime)
   local IsActivityTimeOut = 0 == ActivityTimeCount
   local bActuallyEnd = false
+  if not TargetUI.IsComplete or TargetUI.CachedCompleteRemoveEndActivityId ~= TargetUI.CurActivityId then
+    TargetUI.CachedCompleteRemoveEndActivityId = TargetUI.CurActivityId
+    TargetUI.CachedCompleteRemoveEndTime = nil
+  end
   if TargetUI.IsComplete and bCheckNextDayFiveStamp then
-    local NextDayFiveStamp = TimeUtils.TimestampNextClock(5)
-    if nil == ActivityEndTime then
-      ActivityEndTime = NextDayFiveStamp
+    if not TargetUI.CachedCompleteRemoveEndTime then
+      local NextDayFiveStamp = TimeUtils.TimestampNextClock(5)
+      if nil == ActivityEndTime then
+        TargetUI.CachedCompleteRemoveEndTime = NextDayFiveStamp
+      else
+        TargetUI.CachedCompleteRemoveEndTime = math.min(NextDayFiveStamp, ActivityEndTime)
+      end
     end
-    local minStamp = math.min(NextDayFiveStamp, ActivityEndTime)
-    RemainActivityTimeDict = UIUtils.GetLeftTimeStrStyle2(minStamp)
+    RemainActivityTimeDict, ActivityTimeCount = UIUtils.GetLeftTimeStrStyle2(TargetUI.CachedCompleteRemoveEndTime)
     ActivityUtils.SetLeftTimeView(TargetTimeUI, false, false, RemainActivityTimeDict, true)
-    return
-  end
-  if IsActivityTimeOut and not RewardEndTime then
-    if TargetTimeUI and not ActivityEndTime then
-      TargetTimeUI:SetForeverTimeText(GText("UI_GameEvent_EventTimeRemain"))
-    else
-      ActivityUtils.SetLeftTimeView(TargetTimeUI, false, false, RemainActivityTimeDict)
+    if 0 == ActivityTimeCount then
+      IsActivityTimeOut = true
       bActuallyEnd = true
-    end
-    TargetUI:RemoveTimer("RefreshLeftTime")
-  elseif IsActivityTimeOut and RewardEndTime then
-    local RemainRewardTimeDict, RewardTimeCount = UIUtils.GetLeftTimeStrStyle2(RewardEndTime)
-    ActivityUtils.SetLeftTimeView(TargetTimeUI, false, true, RemainRewardTimeDict)
-    if 0 == RewardTimeCount then
       TargetUI:RemoveTimer("RefreshLeftTime")
-      bActuallyEnd = true
+    else
+      do return end
+      if IsActivityTimeOut and not RewardEndTime then
+        if TargetTimeUI and not ActivityEndTime then
+          TargetTimeUI:SetForeverTimeText(GText("UI_GameEvent_EventTimeRemain"))
+        else
+          ActivityUtils.SetLeftTimeView(TargetTimeUI, false, false, RemainActivityTimeDict)
+          bActuallyEnd = true
+        end
+        TargetUI:RemoveTimer("RefreshLeftTime")
+      elseif IsActivityTimeOut and RewardEndTime then
+        local RemainRewardTimeDict, RewardTimeCount = UIUtils.GetLeftTimeStrStyle2(RewardEndTime)
+        ActivityUtils.SetLeftTimeView(TargetTimeUI, false, true, RemainRewardTimeDict)
+        if 0 == RewardTimeCount then
+          TargetUI:RemoveTimer("RefreshLeftTime")
+          bActuallyEnd = true
+        end
+      else
+        ActivityUtils.SetLeftTimeView(TargetTimeUI, false, false, RemainActivityTimeDict)
+      end
+      if PermanenEventTime and PermanenEventTime <= NowTime then
+        TargetTimeUI:SetForeverTimeText(GText("UI_GameEvent_EventTimeRemain"))
+      end
     end
-  else
-    ActivityUtils.SetLeftTimeView(TargetTimeUI, false, false, RemainActivityTimeDict)
-  end
-  if PermanenEventTime and PermanenEventTime <= NowTime then
-    TargetTimeUI:SetForeverTimeText(GText("UI_GameEvent_EventTimeRemain"))
   end
   if bActuallyEnd and TargetUI.ParentWidget and TargetUI.ParentTabId == TargetUI.ParentWidget.CurTabId and TargetUI.ParentWidget.GenerateAllDataInfo then
     TargetUI.ParentWidget.NeedJumpToTabId = nil

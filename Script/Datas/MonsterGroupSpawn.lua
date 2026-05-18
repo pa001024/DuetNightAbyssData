@@ -18,26 +18,17 @@ T.RT_11 = {
   0,
   0,
   0,
-  0,
   0
 }
 T.RT_12 = {
   2,
   2,
   2,
-  2,
-  0
+  2
 }
 T.RT_13 = {200, 2000}
-T.RT_14 = {
-  2,
-  2,
-  2,
-  2,
-  1
-}
-T.RT_15 = {800, 2000}
-T.RT_16 = {
+T.RT_14 = {800, 2000}
+T.RT_15 = {
   0,
   0,
   0,
@@ -45,7 +36,7 @@ T.RT_16 = {
   0,
   0
 }
-T.RT_17 = {
+T.RT_16 = {
   3,
   3,
   1,
@@ -53,16 +44,16 @@ T.RT_17 = {
   3,
   1
 }
-T.RT_18 = {1200, 2000}
+T.RT_17 = {1200, 2000}
+T.RT_18 = {
+  2,
+  2,
+  1,
+  2,
+  2,
+  1
+}
 T.RT_19 = {
-  2,
-  2,
-  1,
-  2,
-  2,
-  1
-}
-T.RT_20 = {
   6012,
   6022,
   6023,
@@ -70,14 +61,21 @@ T.RT_20 = {
   8021,
   8022
 }
-T.RT_21 = {0, 2000}
-T.RT_22 = {
+T.RT_20 = {0, 2000}
+T.RT_21 = {
   6012,
   6022,
   6023,
   7012,
   7023,
   7024
+}
+T.RT_22 = {
+  0,
+  0,
+  0,
+  0,
+  0
 }
 T.RT_23 = {
   3,
@@ -109,142 +107,136 @@ T.RT_26 = {
 }
 T.RT_27 = {1, 1}
 T.RT_28 = {
-  0,
-  0,
-  0,
-  0
-}
-T.RT_29 = {
   2,
   1,
   1,
   1
 }
-T.RT_30 = {200, 3000}
-T.RT_31 = {
+T.RT_29 = {200, 3000}
+T.RT_30 = {
   6010,
   6011,
   6020,
   6021
 }
-T.RT_32 = {
+T.RT_31 = {
   2,
   1,
   2,
   1
 }
-T.RT_33 = {1200, 3000}
+T.RT_32 = {1200, 3000}
+T.RT_33 = {
+  2,
+  1,
+  2,
+  1,
+  1
+}
 T.RT_34 = {
-  2,
-  1,
-  2,
-  1,
-  1
-}
-T.RT_35 = {
   0,
   0,
   0
 }
-T.RT_36 = {
+T.RT_35 = {
   2,
+  1,
+  1
+}
+T.RT_36 = {
+  3,
   1,
   1
 }
 T.RT_37 = {
-  3,
-  1,
-  1
-}
-T.RT_38 = {
   2,
   1,
   1,
   0
 }
-T.RT_39 = {
+T.RT_38 = {
   3,
   2,
   2,
   1
 }
-T.RT_40 = {600, 2000}
-T.RT_41 = {400, 3000}
-T.RT_42 = {
+T.RT_39 = {600, 2000}
+T.RT_40 = {400, 3000}
+T.RT_41 = {
   6050,
   6051,
   6052
 }
-T.RT_43 = {
+T.RT_42 = {
   7010,
   7020,
   7022
 }
-T.RT_44 = {
+T.RT_43 = {
   2,
   2,
   1
 }
-T.RT_45 = {
+T.RT_44 = {
   1,
   3,
   1
 }
-T.RT_46 = {
+T.RT_45 = {
   7010,
   7020,
   7022,
   6010
 }
-T.RT_47 = {
+T.RT_46 = {
   2,
+  2,
+  1,
+  1
+}
+T.RT_47 = {
+  1,
   2,
   1,
   1
 }
 T.RT_48 = {
-  1,
-  2,
-  1,
-  1
-}
-T.RT_49 = {
   2,
   1,
   2
 }
-T.RT_50 = {
+T.RT_49 = {
   2,
   3,
   1
 }
-T.RT_51 = {
+T.RT_50 = {
   1,
   2,
   2
 }
-T.RT_52 = {
+T.RT_51 = {
   1,
   1,
   2
 }
-T.RT_53 = {
+T.RT_52 = {
   6040,
   6042,
   8040
 }
-T.RT_54 = {
+T.RT_53 = {
   6050,
   6052,
   8050
 }
-T.RT_55 = {
+T.RT_54 = {
   6040,
   6042,
   9040
 }
-T.RT_56 = {600, 3000}
-T.RT_57 = {
+T.RT_55 = {600, 3000}
+T.RT_56 = {
   6050,
   6052,
   9050
@@ -285,29 +277,40 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupSpawnId = 2,
     GroupThreshold = 20,
     GroupUnitSpawnCenterRange = T.RT_13,
-    GroupWeight = T.RT_14,
+    GroupWeight = T.RT_12,
     MonsterGroupIds = {
       7010,
       7011,
       7020,
-      7021,
-      7030
+      7021
     }
   },
   [3] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 2,
     GroupInitUnitSpawnCenterRange = T.RT_10,
-    GroupLevel = T.RT_11,
+    GroupLevel = T.RT_22,
     GroupLimit = 30,
-    GroupNumber = T.RT_12,
+    GroupNumber = {
+      2,
+      2,
+      2,
+      2,
+      0
+    },
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 4,
     GroupSpawnId = 3,
     GroupThreshold = 20,
     GroupUnitSpawnCenterRange = T.RT_13,
-    GroupWeight = T.RT_14,
+    GroupWeight = {
+      2,
+      2,
+      2,
+      2,
+      1
+    },
     MonsterGroupIds = T.RT_26
   },
   [4] = {
@@ -372,60 +375,60 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupDetectDelayTime = 0,
     GroupDetectTime = 1,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_28,
+    GroupLevel = T.RT_11,
     GroupLimit = 35,
-    GroupNumber = T.RT_29,
+    GroupNumber = T.RT_28,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60037,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_29,
-    MonsterGroupIds = T.RT_31
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_28,
+    MonsterGroupIds = T.RT_30
   },
   [60055] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 50,
-    GroupNumber = T.RT_32,
+    GroupNumber = T.RT_31,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60055,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_32,
-    MonsterGroupIds = T.RT_31
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_31,
+    MonsterGroupIds = T.RT_30
   },
   [60073] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 50,
-    GroupNumber = T.RT_32,
+    GroupNumber = T.RT_31,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60073,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
+    GroupUnitSpawnCenterRange = T.RT_32,
     GroupWeight = {
       1,
       1,
       3,
       1
     },
-    MonsterGroupIds = T.RT_31
+    MonsterGroupIds = T.RT_30
   },
   [60137] = {
     GroupDetectDelayTime = 0,
     GroupDetectTime = 1,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_11,
+    GroupLevel = T.RT_22,
     GroupLimit = 35,
     GroupNumber = {
       2,
@@ -439,7 +442,7 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupReplenishInterval = 1,
     GroupSpawnId = 60137,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
+    GroupUnitSpawnCenterRange = T.RT_29,
     GroupWeight = {
       3,
       1,
@@ -452,32 +455,32 @@ return ReadOnly("MonsterGroupSpawn", {
   [60155] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_11,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_22,
     GroupLimit = 50,
-    GroupNumber = T.RT_34,
+    GroupNumber = T.RT_33,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60155,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_34,
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_33,
     MonsterGroupIds = T.RT_26
   },
   [60173] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_11,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_22,
     GroupLimit = 50,
-    GroupNumber = T.RT_34,
+    GroupNumber = T.RT_33,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60173,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
+    GroupUnitSpawnCenterRange = T.RT_32,
     GroupWeight = {
       1,
       1,
@@ -491,16 +494,16 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_35,
+    GroupLevel = T.RT_34,
     GroupLimit = 35,
-    GroupNumber = T.RT_36,
+    GroupNumber = T.RT_35,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60200,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_37,
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_36,
     MonsterGroupIds = {
       6040,
       6041,
@@ -510,17 +513,17 @@ return ReadOnly("MonsterGroupSpawn", {
   [60201] = {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 40,
-    GroupNumber = T.RT_38,
+    GroupNumber = T.RT_37,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60201,
     GroupThreshold = 35,
     GroupUnitSpawnCenterRange = T.RT_4,
-    GroupWeight = T.RT_39,
+    GroupWeight = T.RT_38,
     MonsterGroupIds = {
       6040,
       6041,
@@ -532,16 +535,16 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_35,
+    GroupLevel = T.RT_34,
     GroupLimit = 35,
-    GroupNumber = T.RT_36,
+    GroupNumber = T.RT_35,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60202,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_37,
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_36,
     MonsterGroupIds = {
       6043,
       6041,
@@ -551,17 +554,17 @@ return ReadOnly("MonsterGroupSpawn", {
   [60203] = {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 40,
-    GroupNumber = T.RT_38,
+    GroupNumber = T.RT_37,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60203,
     GroupThreshold = 35,
     GroupUnitSpawnCenterRange = T.RT_4,
-    GroupWeight = T.RT_39,
+    GroupWeight = T.RT_38,
     MonsterGroupIds = {
       6043,
       6041,
@@ -572,129 +575,129 @@ return ReadOnly("MonsterGroupSpawn", {
   [60501] = {
     GroupDetectDelayTime = 1,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_40,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_39,
+    GroupLevel = T.RT_34,
     GroupLimit = 40,
-    GroupNumber = T.RT_36,
+    GroupNumber = T.RT_35,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60501,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_41,
-    GroupWeight = T.RT_37,
-    MonsterGroupIds = T.RT_42
+    GroupUnitSpawnCenterRange = T.RT_40,
+    GroupWeight = T.RT_36,
+    MonsterGroupIds = T.RT_41
   },
   [60502] = {
     GroupDetectDelayTime = 1,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_40,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_39,
+    GroupLevel = T.RT_34,
     GroupLimit = 30,
-    GroupNumber = T.RT_36,
+    GroupNumber = T.RT_35,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 60502,
     GroupThreshold = 25,
-    GroupUnitSpawnCenterRange = T.RT_41,
-    GroupWeight = T.RT_37,
-    MonsterGroupIds = T.RT_42
+    GroupUnitSpawnCenterRange = T.RT_40,
+    GroupWeight = T.RT_36,
+    MonsterGroupIds = T.RT_41
   },
   [70037] = {
     GroupDetectDelayTime = 0,
     GroupDetectTime = 1,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_35,
+    GroupLevel = T.RT_34,
     GroupLimit = 35,
-    GroupNumber = T.RT_36,
+    GroupNumber = T.RT_35,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 70037,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_36,
-    MonsterGroupIds = T.RT_43
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_35,
+    MonsterGroupIds = T.RT_42
   },
   [70055] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_34,
     GroupLimit = 50,
-    GroupNumber = T.RT_44,
+    GroupNumber = T.RT_43,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 70055,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_44,
-    MonsterGroupIds = T.RT_43
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_43,
+    MonsterGroupIds = T.RT_42
   },
   [70073] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_34,
     GroupLimit = 50,
-    GroupNumber = T.RT_45,
+    GroupNumber = T.RT_44,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 70073,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_45,
-    MonsterGroupIds = T.RT_43
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_44,
+    MonsterGroupIds = T.RT_42
   },
   [70137] = {
     GroupDetectDelayTime = 0,
     GroupDetectTime = 1,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_28,
+    GroupLevel = T.RT_11,
     GroupLimit = 35,
-    GroupNumber = T.RT_29,
+    GroupNumber = T.RT_28,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 70137,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_29,
-    MonsterGroupIds = T.RT_46
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_28,
+    MonsterGroupIds = T.RT_45
   },
   [70155] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 50,
-    GroupNumber = T.RT_47,
+    GroupNumber = T.RT_46,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 70155,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_48,
-    MonsterGroupIds = T.RT_46
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_47,
+    MonsterGroupIds = T.RT_45
   },
   [70173] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 50,
-    GroupNumber = T.RT_47,
+    GroupNumber = T.RT_46,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 70173,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_48,
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_47,
     MonsterGroupIds = {
       7010,
       7020,
@@ -714,15 +717,15 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupReplenishInterval = 1,
     GroupSpawnId = 70200,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
+    GroupUnitSpawnCenterRange = T.RT_29,
     GroupWeight = {2, 1},
     MonsterGroupIds = {7040, 7041}
   },
   [70201] = {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 40,
     GroupNumber = {
       2,
@@ -753,16 +756,16 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupDetectDelayTime = 0,
     GroupDetectTime = 1,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_35,
+    GroupLevel = T.RT_34,
     GroupLimit = 35,
-    GroupNumber = T.RT_49,
+    GroupNumber = T.RT_48,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 80037,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_49,
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_48,
     MonsterGroupIds = {
       8010,
       8020,
@@ -772,17 +775,17 @@ return ReadOnly("MonsterGroupSpawn", {
   [80055] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 50,
-    GroupNumber = T.RT_47,
+    GroupNumber = T.RT_46,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 80055,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_47,
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_46,
     MonsterGroupIds = {
       8010,
       8020,
@@ -793,17 +796,17 @@ return ReadOnly("MonsterGroupSpawn", {
   [80073] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_34,
     GroupLimit = 50,
-    GroupNumber = T.RT_50,
+    GroupNumber = T.RT_49,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 80073,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_51,
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_50,
     MonsterGroupIds = {
       8010,
       8020,
@@ -814,80 +817,80 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_35,
+    GroupLevel = T.RT_34,
     GroupLimit = 35,
-    GroupNumber = T.RT_52,
+    GroupNumber = T.RT_51,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 80200,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_52,
-    MonsterGroupIds = T.RT_53
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_51,
+    MonsterGroupIds = T.RT_52
   },
   [80201] = {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_34,
     GroupLimit = 40,
-    GroupNumber = T.RT_52,
+    GroupNumber = T.RT_51,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 80201,
     GroupThreshold = 35,
     GroupUnitSpawnCenterRange = T.RT_4,
-    GroupWeight = T.RT_52,
-    MonsterGroupIds = T.RT_53
+    GroupWeight = T.RT_51,
+    MonsterGroupIds = T.RT_52
   },
   [80501] = {
     GroupDetectDelayTime = 1,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_40,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_39,
+    GroupLevel = T.RT_34,
     GroupLimit = 40,
-    GroupNumber = T.RT_52,
+    GroupNumber = T.RT_51,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 80501,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_41,
-    GroupWeight = T.RT_52,
-    MonsterGroupIds = T.RT_54
+    GroupUnitSpawnCenterRange = T.RT_40,
+    GroupWeight = T.RT_51,
+    MonsterGroupIds = T.RT_53
   },
   [80502] = {
     GroupDetectDelayTime = 1,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_40,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_39,
+    GroupLevel = T.RT_34,
     GroupLimit = 30,
-    GroupNumber = T.RT_52,
+    GroupNumber = T.RT_51,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 80502,
     GroupThreshold = 25,
-    GroupUnitSpawnCenterRange = T.RT_41,
-    GroupWeight = T.RT_52,
-    MonsterGroupIds = T.RT_54
+    GroupUnitSpawnCenterRange = T.RT_40,
+    GroupWeight = T.RT_51,
+    MonsterGroupIds = T.RT_53
   },
   [90037] = {
     GroupDetectDelayTime = 0,
     GroupDetectTime = 1,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_35,
+    GroupLevel = T.RT_34,
     GroupLimit = 35,
-    GroupNumber = T.RT_49,
+    GroupNumber = T.RT_48,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 90037,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_49,
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_48,
     MonsterGroupIds = {
       9010,
       9020,
@@ -897,17 +900,17 @@ return ReadOnly("MonsterGroupSpawn", {
   [90055] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_28,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_11,
     GroupLimit = 50,
-    GroupNumber = T.RT_47,
+    GroupNumber = T.RT_46,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 90055,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_47,
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_46,
     MonsterGroupIds = {
       9010,
       9020,
@@ -918,17 +921,17 @@ return ReadOnly("MonsterGroupSpawn", {
   [90073] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_34,
     GroupLimit = 50,
-    GroupNumber = T.RT_50,
+    GroupNumber = T.RT_49,
     GroupRadius = 500,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 90073,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_33,
-    GroupWeight = T.RT_51,
+    GroupUnitSpawnCenterRange = T.RT_32,
+    GroupWeight = T.RT_50,
     MonsterGroupIds = {
       9010,
       9020,
@@ -939,135 +942,135 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
     GroupInitUnitSpawnCenterRange = T.RT_13,
-    GroupLevel = T.RT_35,
+    GroupLevel = T.RT_34,
     GroupLimit = 35,
-    GroupNumber = T.RT_52,
+    GroupNumber = T.RT_51,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 90200,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_30,
-    GroupWeight = T.RT_52,
-    MonsterGroupIds = T.RT_55
+    GroupUnitSpawnCenterRange = T.RT_29,
+    GroupWeight = T.RT_51,
+    MonsterGroupIds = T.RT_54
   },
   [90201] = {
     GroupDetectDelayTime = 2,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_18,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_17,
+    GroupLevel = T.RT_34,
     GroupLimit = 40,
-    GroupNumber = T.RT_52,
+    GroupNumber = T.RT_51,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 90201,
     GroupThreshold = 35,
     GroupUnitSpawnCenterRange = T.RT_4,
-    GroupWeight = T.RT_52,
-    MonsterGroupIds = T.RT_55
+    GroupWeight = T.RT_51,
+    MonsterGroupIds = T.RT_54
   },
   [90501] = {
     GroupDetectDelayTime = 1,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_40,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_39,
+    GroupLevel = T.RT_34,
     GroupLimit = 40,
-    GroupNumber = T.RT_52,
+    GroupNumber = T.RT_51,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 90501,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_56,
-    GroupWeight = T.RT_52,
-    MonsterGroupIds = T.RT_57
+    GroupUnitSpawnCenterRange = T.RT_55,
+    GroupWeight = T.RT_51,
+    MonsterGroupIds = T.RT_56
   },
   [90502] = {
     GroupDetectDelayTime = 1,
     GroupDetectTime = 0.5,
-    GroupInitUnitSpawnCenterRange = T.RT_40,
-    GroupLevel = T.RT_35,
+    GroupInitUnitSpawnCenterRange = T.RT_39,
+    GroupLevel = T.RT_34,
     GroupLimit = 30,
-    GroupNumber = T.RT_52,
+    GroupNumber = T.RT_51,
     GroupRadius = 800,
     GroupRangeZ = 500,
     GroupReplenishInterval = 1,
     GroupSpawnId = 90502,
     GroupThreshold = 25,
-    GroupUnitSpawnCenterRange = T.RT_56,
-    GroupWeight = T.RT_52,
-    MonsterGroupIds = T.RT_57
+    GroupUnitSpawnCenterRange = T.RT_55,
+    GroupWeight = T.RT_51,
+    MonsterGroupIds = T.RT_56
   },
   [2200101] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_15,
-    GroupLevel = T.RT_16,
+    GroupInitUnitSpawnCenterRange = T.RT_14,
+    GroupLevel = T.RT_15,
     GroupLimit = 50,
-    GroupNumber = T.RT_17,
+    GroupNumber = T.RT_16,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200101,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_18,
-    GroupWeight = T.RT_19,
-    MonsterGroupIds = T.RT_20
+    GroupUnitSpawnCenterRange = T.RT_17,
+    GroupWeight = T.RT_18,
+    MonsterGroupIds = T.RT_19
   },
   [2200102] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_21,
-    GroupLevel = T.RT_16,
+    GroupInitUnitSpawnCenterRange = T.RT_20,
+    GroupLevel = T.RT_15,
     GroupLimit = 50,
-    GroupNumber = T.RT_17,
+    GroupNumber = T.RT_16,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200102,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_21,
-    GroupWeight = T.RT_19,
-    MonsterGroupIds = T.RT_20
+    GroupUnitSpawnCenterRange = T.RT_20,
+    GroupWeight = T.RT_18,
+    MonsterGroupIds = T.RT_19
   },
   [2200201] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_15,
-    GroupLevel = T.RT_16,
+    GroupInitUnitSpawnCenterRange = T.RT_14,
+    GroupLevel = T.RT_15,
     GroupLimit = 50,
-    GroupNumber = T.RT_17,
+    GroupNumber = T.RT_16,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200201,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_18,
-    GroupWeight = T.RT_19,
-    MonsterGroupIds = T.RT_22
+    GroupUnitSpawnCenterRange = T.RT_17,
+    GroupWeight = T.RT_18,
+    MonsterGroupIds = T.RT_21
   },
   [2200202] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_21,
-    GroupLevel = T.RT_16,
+    GroupInitUnitSpawnCenterRange = T.RT_20,
+    GroupLevel = T.RT_15,
     GroupLimit = 50,
-    GroupNumber = T.RT_17,
+    GroupNumber = T.RT_16,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200202,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_21,
-    GroupWeight = T.RT_19,
-    MonsterGroupIds = T.RT_22
+    GroupUnitSpawnCenterRange = T.RT_20,
+    GroupWeight = T.RT_18,
+    MonsterGroupIds = T.RT_21
   },
   [2200301] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
     GroupInitUnitSpawnCenterRange = {800, 1200},
-    GroupLevel = T.RT_11,
+    GroupLevel = T.RT_22,
     GroupLimit = 50,
     GroupNumber = T.RT_23,
     GroupRadius = 600,
@@ -1075,15 +1078,15 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200301,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_18,
+    GroupUnitSpawnCenterRange = T.RT_17,
     GroupWeight = T.RT_24,
     MonsterGroupIds = T.RT_25
   },
   [2200302] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_21,
-    GroupLevel = T.RT_11,
+    GroupInitUnitSpawnCenterRange = T.RT_20,
+    GroupLevel = T.RT_22,
     GroupLimit = 50,
     GroupNumber = T.RT_23,
     GroupRadius = 600,
@@ -1091,79 +1094,79 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200302,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_21,
+    GroupUnitSpawnCenterRange = T.RT_20,
     GroupWeight = T.RT_24,
     MonsterGroupIds = T.RT_25
   },
   [2200401] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_15,
-    GroupLevel = T.RT_16,
+    GroupInitUnitSpawnCenterRange = T.RT_14,
+    GroupLevel = T.RT_15,
     GroupLimit = 50,
-    GroupNumber = T.RT_17,
+    GroupNumber = T.RT_16,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200401,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_18,
-    GroupWeight = T.RT_19,
-    MonsterGroupIds = T.RT_22
+    GroupUnitSpawnCenterRange = T.RT_17,
+    GroupWeight = T.RT_18,
+    MonsterGroupIds = T.RT_21
   },
   [2200402] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_21,
-    GroupLevel = T.RT_16,
+    GroupInitUnitSpawnCenterRange = T.RT_20,
+    GroupLevel = T.RT_15,
     GroupLimit = 50,
-    GroupNumber = T.RT_17,
+    GroupNumber = T.RT_16,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200402,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_21,
-    GroupWeight = T.RT_19,
-    MonsterGroupIds = T.RT_22
+    GroupUnitSpawnCenterRange = T.RT_20,
+    GroupWeight = T.RT_18,
+    MonsterGroupIds = T.RT_21
   },
   [2200501] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_15,
-    GroupLevel = T.RT_16,
+    GroupInitUnitSpawnCenterRange = T.RT_14,
+    GroupLevel = T.RT_15,
     GroupLimit = 50,
-    GroupNumber = T.RT_17,
+    GroupNumber = T.RT_16,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200501,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_18,
-    GroupWeight = T.RT_19,
-    MonsterGroupIds = T.RT_20
+    GroupUnitSpawnCenterRange = T.RT_17,
+    GroupWeight = T.RT_18,
+    MonsterGroupIds = T.RT_19
   },
   [2200502] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_21,
-    GroupLevel = T.RT_16,
+    GroupInitUnitSpawnCenterRange = T.RT_20,
+    GroupLevel = T.RT_15,
     GroupLimit = 50,
-    GroupNumber = T.RT_17,
+    GroupNumber = T.RT_16,
     GroupRadius = 600,
     GroupRangeZ = 500,
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200502,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_21,
-    GroupWeight = T.RT_19,
-    MonsterGroupIds = T.RT_20
+    GroupUnitSpawnCenterRange = T.RT_20,
+    GroupWeight = T.RT_18,
+    MonsterGroupIds = T.RT_19
   },
   [2200601] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_15,
-    GroupLevel = T.RT_11,
+    GroupInitUnitSpawnCenterRange = T.RT_14,
+    GroupLevel = T.RT_22,
     GroupLimit = 50,
     GroupNumber = T.RT_23,
     GroupRadius = 600,
@@ -1171,15 +1174,15 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200601,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_18,
+    GroupUnitSpawnCenterRange = T.RT_17,
     GroupWeight = T.RT_24,
     MonsterGroupIds = T.RT_25
   },
   [2200602] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_21,
-    GroupLevel = T.RT_11,
+    GroupInitUnitSpawnCenterRange = T.RT_20,
+    GroupLevel = T.RT_22,
     GroupLimit = 50,
     GroupNumber = T.RT_23,
     GroupRadius = 600,
@@ -1187,15 +1190,15 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200602,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_21,
+    GroupUnitSpawnCenterRange = T.RT_20,
     GroupWeight = T.RT_24,
     MonsterGroupIds = T.RT_25
   },
   [2200701] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_15,
-    GroupLevel = T.RT_11,
+    GroupInitUnitSpawnCenterRange = T.RT_14,
+    GroupLevel = T.RT_22,
     GroupLimit = 50,
     GroupNumber = T.RT_23,
     GroupRadius = 600,
@@ -1203,15 +1206,15 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200701,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_18,
+    GroupUnitSpawnCenterRange = T.RT_17,
     GroupWeight = T.RT_24,
     MonsterGroupIds = T.RT_25
   },
   [2200702] = {
     GroupDetectDelayTime = 3,
     GroupDetectTime = 1,
-    GroupInitUnitSpawnCenterRange = T.RT_21,
-    GroupLevel = T.RT_11,
+    GroupInitUnitSpawnCenterRange = T.RT_20,
+    GroupLevel = T.RT_22,
     GroupLimit = 50,
     GroupNumber = T.RT_23,
     GroupRadius = 600,
@@ -1219,7 +1222,7 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupReplenishInterval = 0.5,
     GroupSpawnId = 2200702,
     GroupThreshold = 30,
-    GroupUnitSpawnCenterRange = T.RT_21,
+    GroupUnitSpawnCenterRange = T.RT_20,
     GroupWeight = T.RT_24,
     MonsterGroupIds = T.RT_25
   },
@@ -3382,6 +3385,23 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupWeight = T.RT_6,
     MonsterGroupIds = {9001024}
   },
+  [9001701] = {
+    CloseGroupReplenish = true,
+    GroupDetectDelayTime = 0,
+    GroupDetectTime = 0,
+    GroupInitUnitSpawnCenterRange = T.RT_4,
+    GroupLevel = T.RT_5,
+    GroupLimit = 60,
+    GroupNumber = T.RT_6,
+    GroupRadius = 300,
+    GroupRangeZ = 500,
+    GroupReplenishInterval = 0,
+    GroupSpawnId = 9001701,
+    GroupThreshold = 10,
+    GroupUnitSpawnCenterRange = T.RT_7,
+    GroupWeight = T.RT_6,
+    MonsterGroupIds = {9001701}
+  },
   [9002011] = {
     CloseGroupReplenish = true,
     GroupDetectDelayTime = 0,
@@ -3551,6 +3571,23 @@ return ReadOnly("MonsterGroupSpawn", {
     GroupUnitSpawnCenterRange = T.RT_7,
     GroupWeight = T.RT_6,
     MonsterGroupIds = {9002024}
+  },
+  [9002701] = {
+    CloseGroupReplenish = true,
+    GroupDetectDelayTime = 0,
+    GroupDetectTime = 0,
+    GroupInitUnitSpawnCenterRange = T.RT_4,
+    GroupLevel = T.RT_5,
+    GroupLimit = 60,
+    GroupNumber = T.RT_6,
+    GroupRadius = 300,
+    GroupRangeZ = 500,
+    GroupReplenishInterval = 0,
+    GroupSpawnId = 9002701,
+    GroupThreshold = 10,
+    GroupUnitSpawnCenterRange = T.RT_7,
+    GroupWeight = T.RT_6,
+    MonsterGroupIds = {9002701}
   },
   [9007011] = {
     CloseGroupReplenish = true,

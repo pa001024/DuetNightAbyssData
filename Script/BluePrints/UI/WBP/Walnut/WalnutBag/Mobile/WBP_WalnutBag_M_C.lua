@@ -315,7 +315,7 @@ function M:CheckIsCanSellWalnut()
   if not self.SellUnlocked then
     self.Btn_Sell:SetVisibility(UE4.ESlateVisibility.Collapsed)
   else
-    self.Btn_Sell:SetVisibility(UE4.ESlateVisibility.Visable)
+    self.Btn_Sell:SetVisibility(UE4.ESlateVisibility.Visible)
   end
 end
 

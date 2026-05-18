@@ -517,7 +517,6 @@ function TalkTaskBase_C:CreateComponents()
 end
 
 function TalkTaskBase_C:OnTalkStart(TalkTaskData)
-  self.TalkContext:OnTalkStart(self)
   if TalkTaskData.bHideMonsters then
     self.HideAllMonstersComponent = FHideAllMonstersComponent:New()
   end
@@ -551,7 +550,6 @@ function TalkTaskBase_C:SetOutport()
 end
 
 function TalkTaskBase_C:OnTalkEnd()
-  self.TalkContext:OnTalkEnd()
 end
 
 function TalkTaskBase_C:ProcessShowHide(bIsBegin)

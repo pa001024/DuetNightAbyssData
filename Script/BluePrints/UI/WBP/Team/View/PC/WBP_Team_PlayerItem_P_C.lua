@@ -5,6 +5,7 @@ local M = Class({
 
 function M:Construct()
   M.Super.Construct(self)
+  self.HeadAnchor = self.Head_Anchor
   UIManager(self):GetGameInputModeSubsystem().OnInputMethodChanged:Add(self, self.OnInputDeviceChange)
   self:SetNavigationRuleBase(EUINavigation.Left, EUINavigationRule.Stop)
   self:SetNavigationRuleBase(EUINavigation.Right, EUINavigationRule.Stop)
@@ -36,7 +37,7 @@ function M:OnMenuOpenChanged(bOpen)
     return
   end
   self.Button_Area:SetChecked(false)
-  self.Owner:SetFocus()
+  self:SetFocus()
   self.Owner.bOpenBtnList = false
   self.Owner.OpenedUid = nil
 end

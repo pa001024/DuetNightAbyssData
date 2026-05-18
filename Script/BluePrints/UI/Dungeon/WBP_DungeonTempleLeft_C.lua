@@ -8,7 +8,7 @@ end
 
 function M:AddTaskToOverlay(BattleMainUI)
   self.Super.AddTaskToOverlay(self, BattleMainUI)
-  BattleMainUI.SizeBox_Map:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  BattleMainUI.Battle_Map:SwitchMapState(true)
 end
 
 function M:InitListenEvent()

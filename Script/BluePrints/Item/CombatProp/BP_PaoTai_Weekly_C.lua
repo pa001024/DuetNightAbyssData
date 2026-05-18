@@ -4,11 +4,16 @@ local M = Class({
 
 function M:CommonInitInfo(Info)
   M.Super.CommonInitInfo(self, Info)
-  self.bCanTriggerGameMode = true
+  self:SetbCanTriggerGameMode(true)
 end
 
 function M:GetCanTriggerGameMode()
   return self.bCanTriggerGameMode
+end
+
+function M:SetbCanTriggerGameMode(v)
+  self.bCanTriggerGameMode = v
+  UE4.UNetPushModelHelpers.MarkPropertyDirty(self, "bCanTriggerGameMode")
 end
 
 function M:OnEnterState(NowStateId)
@@ -17,7 +22,7 @@ function M:OnEnterState(NowStateId)
     local GameState = UE4.UGameplayStatics.GetGameState(self)
     GameState.DefBaseMap:Remove(self.Eid)
     GameState.HatredCombatProp:Remove(self.Eid)
-    self.bCanTriggerGameMode = false
+    self:SetbCanTriggerGameMode(false)
   end
 end
 

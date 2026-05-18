@@ -1,8 +1,13 @@
 require("UnLua")
 local M = Class("BluePrints.UI.WBP.Armory.Appearance.WBP_Armory_Appearance_Base_C")
+M._components = {
+  "BluePrints.UI.KeyInputComponent"
+}
 
 function M:Construct()
   M.Super.Construct(self)
+  self:ClearAllKeyEvents()
+  self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnFaceButtonTopKeyDown)
 end
 
 function M:Init(Params)
@@ -133,4 +138,15 @@ function M:OnSkinItemContentCreated(Content)
   end
 end
 
+function M:OnParentKeyDown(MyGeometry, InKeyEvent)
+  return self:ProcessOnKeyDown(MyGeometry, InKeyEvent)
+end
+
+function M:OnFaceButtonTopKeyDown()
+  if self.Btn_Appearence:IsVisible() then
+    self:OnBtnClicked()
+  end
+end
+
+AssembleComponents(M)
 return M

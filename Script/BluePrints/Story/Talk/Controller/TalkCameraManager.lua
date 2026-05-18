@@ -12,6 +12,7 @@ local ECameraFocusMethod = {
   [3] = "Disable",
   [4] = "MAX"
 }
+local DefaultFilmbackPrestName = "16:9 Digital Film"
 local FeishuErrorTitle = "对话相机错误"
 local TalkCameraManager_C = {}
 
@@ -214,15 +215,15 @@ function TalkCameraManager_C:_StartCameraBreathe_FinalCameraConfig(CameraInfo, F
   self.ToFinalCameraBlendFuntion = ECameraBlendFunc[CameraBlendCurve]
   self.Stage = Stage
   self.FinalCameraBlendCallback = FinalCameraBlendCallback
-  local Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture
+  local Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName
   if CameraInfo then
-    Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture = self:RetrieveCameraViewInfo(CameraInfo, self.Stage:GetTransform())
+    Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName = self:RetrieveCameraViewInfo(CameraInfo, self.Stage:GetTransform())
   else
-    Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture = self:GetCurrentCameraInfo()
+    Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName = self:GetCurrentCameraInfo()
   end
-  self.StartCameraInfo = UE4.UTalkFunctionLibrary.MakeCameraBlendViewInfo(Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture)
-  Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture = self:RetrieveCameraViewInfo(FinalCameraInfo, self.Stage:GetTransform())
-  self.EndCameraInfo = UE4.UTalkFunctionLibrary.MakeCameraBlendViewInfo(Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture)
+  self.StartCameraInfo = UE4.UTalkFunctionLibrary.MakeCameraBlendViewInfo(Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName)
+  Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName = self:RetrieveCameraViewInfo(FinalCameraInfo, self.Stage:GetTransform())
+  self.EndCameraInfo = UE4.UTalkFunctionLibrary.MakeCameraBlendViewInfo(Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName)
   if 0 == self.TotalTranslationTime then
     self:ReceiveTick(0)
   end
@@ -509,7 +510,8 @@ function TalkCameraManager_C:GetCurrentCameraInfo()
   local FocusMethod = CineCamera.FocusSettings and CineCamera.FocusSettings.FocusMethod
   FocusMethod = FocusMethod and ECameraFocusMethod[FocusMethod] or "Disable"
   local CurrentAperture = CineCamera.CurrentAperture
-  return Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture
+  local FilmbackPrestName = CineCamera:GetFilmbackPresetName()
+  return Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName
 end
 
 function TalkCameraManager_C:GetCineCamera()
@@ -553,7 +555,8 @@ function TalkCameraManager_C:RetrieveCameraViewInfo(CameraInfo, AnchorTrans)
   local ConstraintAspectRadio = "true" == List[9] and true or false
   local FocusMethod = List[10]
   local CurrentAperture = tonumber(List[11])
-  return Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture
+  local FilmbackPrestName = List[12]
+  return Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName
 end
 
 function TalkCameraManager_C:GetDefaultCameraViewInfo()
@@ -563,7 +566,8 @@ function TalkCameraManager_C:GetDefaultCameraViewInfo()
   local ConstraintAspectRadio = false
   local FocusMethod = "Disable"
   local CurrentAperture = 0
-  return Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture
+  local FilmbackPrestName = DefaultFilmbackPrestName
+  return Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName
 end
 
 function TalkCameraManager_C:MakeSequenceCamera()
@@ -582,7 +586,7 @@ end
 function TalkCameraManager_C:GetFixedCamera(CameraInfo, Stage, bUseDefaultIfCameraInfoIsNil, bUseDebugStage)
   bUseDefaultIfCameraInfoIsNil = bUseDefaultIfCameraInfoIsNil or false
   local CineCamera = self:GetCineCamera()
-  local Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture
+  local Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName
   if nil == CameraInfo and bUseDefaultIfCameraInfoIsNil then
     if UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self.TalkContext) then
       ScreenPrint("镜头未配置，使用默认镜头配置！")
@@ -599,16 +603,16 @@ function TalkCameraManager_C:GetFixedCamera(CameraInfo, Stage, bUseDefaultIfCame
     UStoryLogUtils.PrintToFeiShu(GWorld.GameInstance, UE.EStoryLogType.Talk, FeishuErrorTitle, Message)
   else
     if Stage then
-      Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture = self:RetrieveCameraViewInfo(CameraInfo, Stage:GetTransform())
+      Trans, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName = self:RetrieveCameraViewInfo(CameraInfo, Stage:GetTransform())
     elseif bUseDebugStage then
       local PlayerCameraManager = UE4.UGameplayStatics.GetPlayerCameraManager(GWorld.GameInstance, 0)
       local Loc = PlayerCameraManager:GetCameraLocation()
       local Rot = PlayerCameraManager:GetCameraRotation()
       Trans = FTransform(Loc, Rot)
-      FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture = 27, 100000, false, 0, 2.8
+      FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName = 27, 100000, false, 0, 2.8, DefaultFilmbackPrestName
     end
     CineCamera:K2_SetActorTransform(Trans, false, nil, false)
-    UTalkFunctionLibrary.UpdateCameraSettingFromConfig(CineCamera, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, self.PlayerAspectRatio)
+    UTalkFunctionLibrary.UpdateCameraSettingFromConfig(CineCamera, FocalLength, FocusDis, ConstraintAspectRadio, FocusMethod, CurrentAperture, FilmbackPrestName, self.PlayerAspectRatio)
     self:MarkCameraIsConfigured(self:GetCameraComponent(CineCamera), true)
     local Config = {
       ConstraintAspectRadio = ConstraintAspectRadio,

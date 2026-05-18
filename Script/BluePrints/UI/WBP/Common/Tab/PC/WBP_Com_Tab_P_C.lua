@@ -1,5 +1,6 @@
 require("UnLua")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
+local ReportButtonBPPath = "/Game/UI/WBP/Guild/Widget/WBP_Guild_Tab_BtnReport.WBP_Guild_Tab_BtnReport"
 local TabSelectStateEnum = {SelectTab = 1, SelectResource = 2}
 
 function M:Construct()
@@ -27,6 +28,8 @@ function M:Init(ConfigData, NotPlayInAnim)
   self.TitleName = ConfigData.TitleName
   self.OverridenTopResouces = ConfigData.OverridenTopResouces
   self.PopupInfoId = ConfigData.PopupInfoId
+  self.ReportPopupInfoId = ConfigData.ReportPopupInfoId
+  self.ReportPopupParams = ConfigData.ReportPopupParams
   self.ClickSoundFunc = ConfigData.SoundFunc or self.PlayClickSound
   self.HoverSoundFunc = ConfigData.HoverSoundFunc
   self.SoundFuncReceiverObj = ConfigData.SoundFuncReceiver or self
@@ -94,21 +97,9 @@ end
 function M:FillWithBaseInfo()
   local ResourceBarIcon = UIUtils.UtilsGetKeyIconPathInGamepad("RS", "Generic")
   self.WBP_Com_Tab_ResourceBar:SetGamePadKeyImgByPath(ResourceBarIcon)
-  self.WBP_Com_Tab_ResourceBar:SetLastFocusWidget(self.LastFocusWidget)
-  self.WBP_Com_Tab_ResourceBar:SetGetReplyOnBack(self.GetReplyOnBack)
-  local bAllowForbid = self.ConfigData.bAllowKeyForbid
   local PopupInfoHotKeyImg = UIConst.GamePadImgKey[self.ConfigData.PopupInfoHotKey] or "Menu"
-  self.WBP_Com_Tab_ResourceBar:InitGamePadTip({
-    KeyInfo = {
-      KeyInfoList = {
-        {Type = "Img", ImgShortPath = PopupInfoHotKeyImg}
-      },
-      Desc = GText("UI_GACHA_DESDETAIL"),
-      bAllowForbid = bAllowForbid
-    },
-    ClickFuncObj = self,
-    ClickFunc = self.OnInfoClick
-  })
+  self:InitPopupTipWidget(self.WBP_Com_Tab_ResourceBar, PopupInfoHotKeyImg, self.OnInfoClick)
+  local bAllowForbid = self.ConfigData.bAllowKeyForbid
   self.Left_PC:CreateCommonKey({
     KeyInfoList = {
       {
@@ -147,6 +138,35 @@ function M:FillWithBaseInfo()
   })
 end
 
+function M:InitPopupTipWidget(TipWidget, PopupInfoHotKeyImg, ClickFunc, TipConfig)
+  if not IsValid(TipWidget) then
+    return
+  end
+  if type(TipWidget.SetLastFocusWidget) == "function" then
+    TipWidget:SetLastFocusWidget(self.LastFocusWidget)
+  end
+  if "function" == type(TipWidget.SetGetReplyOnBack) then
+    TipWidget:SetGetReplyOnBack(self.GetReplyOnBack)
+  end
+  if "function" == type(TipWidget.InitGamePadTip) then
+    local bAllowForbid = self.ConfigData.bAllowKeyForbid
+    TipConfig = TipConfig or {}
+    TipWidget:InitGamePadTip({
+      KeyInfo = {
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = PopupInfoHotKeyImg}
+        },
+        Desc = TipConfig.Desc or GText("UI_GACHA_DESDETAIL"),
+        bAllowForbid = bAllowForbid
+      },
+      ClickFuncObj = self,
+      ClickFunc = ClickFunc,
+      bNeedLongPressInfo = TipConfig.bNeedLongPressInfo,
+      bSkipGamePadExecuteLogic = TipConfig.bSkipGamePadExecuteLogic
+    })
+  end
+end
+
 function M:OverrideTopResource(OverridenTopResouces, bIsRequestRefresh)
   self.OverridenTopResouces = OverridenTopResouces
   if bIsRequestRefresh then
@@ -163,7 +183,8 @@ function M:ResetDynamicNode()
     Panel_Key = {
       ParentWidget = "Com_KeyTips",
       NeedRemoveChild = true
-    }
+    },
+    Pos_Report = {NeedRemoveChild = true}
   }
   for k, v in pairs(DynamicNodeName) do
     if v.ParentWidget ~= nil then
@@ -226,6 +247,8 @@ function M:ResetDynamicNode()
         self.Com_KeyTips.Panel_Key:AddChild(BottomKeyWidget)
       end
       self.Com_KeyTips.Panel_Key:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    elseif "Report" == v then
+      self:UpdateReportButton()
     end
   end
   local SystemUIConfig = DataMgr.SystemUI[self.OwnerPanel.ConfigName or self.OwnerPanel.WidgetName] or {}
@@ -254,6 +277,14 @@ function M:SetPopupInfoId(PopupInfoId, IsNeedRefresh)
   end
 end
 
+function M:SetReportPopupInfoId(ReportPopupInfoId, IsNeedRefresh)
+  self.ReportPopupInfoId = ReportPopupInfoId
+  if IsNeedRefresh then
+    self:UpdateReportButton()
+    self:UpdateTopRightTips()
+  end
+end
+
 function M:UpdateInfoBySelectTabItem(TabWidget)
   self:UpdateTopRightTips()
 end
@@ -277,25 +308,90 @@ function M:UpdateTopTitle(TitleName)
 end
 
 function M:UpdateTopRightTips()
-  local function RealUpdateTopRightTips()
-    if self.PopupInfoId ~= nil or type(self.InfoCallback) == "function" then
-      if self.CurInputDeviceType == ECommonInputType.Gamepad then
-        self.WBP_Com_Tab_ResourceBar:SwitchTipStyle(1)
-      elseif self.CurInputDeviceType == ECommonInputType.MouseAndKeyboard then
-        self.WBP_Com_Tab_ResourceBar:SwitchTipStyle(0)
-      end
-      self.WBP_Com_Tab_ResourceBar:HideTip(false)
-    else
-      self.WBP_Com_Tab_ResourceBar:HideTip(true)
-    end
-  end
-  
   if self.PopupInfoId == nil and nil ~= self.OwnerPanel and type(self.OwnerPanel.GetUIConfigName) == "function" then
     local UIConfigName = self.OwnerPanel:GetUIConfigName()
     local SystemUIConfig = DataMgr.SystemUI[UIConfigName] or {}
     self.PopupInfoId = SystemUIConfig.PopupInfoId
   end
-  RealUpdateTopRightTips()
+  self:UpdatePopupTipWidget(self.WBP_Com_Tab_ResourceBar, self.PopupInfoId, self.InfoCallback)
+  self:UpdatePopupTipWidget(self.ReportWidget, self.ReportPopupInfoId)
+end
+
+function M:UpdatePopupTipWidget(TipWidget, PopupInfoId, Callback)
+  if not IsValid(TipWidget) then
+    return
+  end
+  if nil ~= PopupInfoId or type(Callback) == "function" then
+    if "function" == type(TipWidget.SwitchTipStyle) and self.CurInputDeviceType == ECommonInputType.Gamepad then
+      TipWidget:SwitchTipStyle(1)
+    elseif "function" == type(TipWidget.SwitchTipStyle) and self.CurInputDeviceType == ECommonInputType.MouseAndKeyboard then
+      TipWidget:SwitchTipStyle(0)
+    end
+    if "function" == type(TipWidget.HideTip) then
+      TipWidget:HideTip(false)
+    end
+  elseif "function" == type(TipWidget.HideTip) then
+    TipWidget:HideTip(true)
+  end
+end
+
+function M:UpdateReportButton()
+  if self.Pos_Report == nil then
+    return
+  end
+  self.Pos_Report:ClearChildren()
+  if nil == self.ReportPopupInfoId then
+    self.Pos_Report:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  if not IsValid(self.ReportWidget) then
+    self.ReportWidget = UIManager(self):CreateWidget(ReportButtonBPPath, false)
+  end
+  if IsValid(self.ReportWidget) then
+    self:InitPopupTipWidget(self.ReportWidget, "Menu", self.OnReportClick, {
+      Desc = GText("RoleMenu_Report"),
+      bNeedLongPressInfo = true,
+      bSkipGamePadExecuteLogic = true
+    })
+    self.Pos_Report:AddChild(self.ReportWidget)
+    self.Pos_Report:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self:UpdatePopupTipWidget(self.ReportWidget, self.ReportPopupInfoId)
+  else
+    self.Pos_Report:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:IsReportGamePadTipAvailable()
+  if not (self.ReportPopupInfoId ~= nil and IsValid(self.ReportWidget)) or nil == self.Pos_Report then
+    return false
+  end
+  return self.Pos_Report:GetVisibility() ~= UIConst.VisibilityOp.Collapsed
+end
+
+function M:OnReportGamePadTipPressed(bSetTimeRange, StartAtTime, EndAtTime)
+  if not self:IsReportGamePadTipAvailable() then
+    return false
+  end
+  if type(self.ReportWidget.OnGamePadTipPressed) ~= "function" then
+    return false
+  end
+  self.ReportWidget:OnGamePadTipPressed(bSetTimeRange, StartAtTime, EndAtTime)
+  return true
+end
+
+function M:OnReportGamePadTipReleased()
+  if not self:IsReportGamePadTipAvailable() then
+    return false
+  end
+  if type(self.ReportWidget.OnGamePadTipReleased) ~= "function" then
+    return false
+  end
+  self.ReportWidget:OnGamePadTipReleased()
+  return true
+end
+
+function M:GetReportGamePadTipLongPressDuration()
+  return 1
 end
 
 function M:UpdateHotKeyInfo(CurGamepadName)
@@ -493,20 +589,40 @@ function M:OnReturnClick()
 end
 
 function M:OnInfoClick()
+  self:OpenPopupById(self.PopupInfoId, self.InfoCallback)
+end
+
+function M:OnReportClick()
+  local PopupParams = {}
+  if type(self.ReportPopupParams) == "table" then
+    for k, v in pairs(self.ReportPopupParams) do
+      PopupParams[k] = v
+    end
+  end
+  self:OpenPopupById(self.ReportPopupInfoId, nil, PopupParams)
+end
+
+function M:OpenPopupById(PopupInfoId, Callback, PopupParams)
   if TeamController:IsTeamPopupBarOpenInGamepad() then
     return
   end
-  if self.PopupInfoId ~= nil then
-    local Params = {
-      RightCallbackFunction = function()
-        if type(self.InfoCallback) == "function" then
-          self.InfoCallback(self.OwnerPanel)
-        end
+  if nil ~= PopupInfoId then
+    local Params = {}
+    if type(PopupParams) == "table" then
+      for k, v in pairs(PopupParams) do
+        Params[k] = v
       end
-    }
-    UIManager(self):ShowCommonPopupUI(self.PopupInfoId, Params)
-  elseif type(self.InfoCallback) == "function" then
-    self.InfoCallback(self.OwnerPanel)
+    end
+    
+    function Params.RightCallbackFunction()
+      if type(Callback) == "function" then
+        Callback(self.OwnerPanel)
+      end
+    end
+    
+    UIManager(self):ShowCommonPopupUI(PopupInfoId, Params)
+  elseif type(Callback) == "function" then
+    Callback(self.OwnerPanel)
   end
 end
 

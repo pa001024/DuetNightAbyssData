@@ -189,11 +189,15 @@ function WBP_Build_List_C:Init(Parent, Params)
   self.CurFilterItem = nil
   if self.AllItemContents then
     for index, value in ipairs(self.AllItemContents) do
-      value.OnFocusReceivedEvent = {
-        Obj = self,
-        Callback = self.OnFocusReceivedEvent
-      }
-      table.insert(self.FilteredContents, value)
+      local Avatar = GWorld:GetAvatar()
+      local MainPlayerCharId = AvatarUtils:GetMainPlayerCharacterAttributeCharId(Avatar)
+      if not AvatarUtils:IsCharacterAttributeSwitchSameGroup(MainPlayerCharId, value.UnitId) or MainPlayerCharId == value.UnitId then
+        value.OnFocusReceivedEvent = {
+          Obj = self,
+          Callback = self.OnFocusReceivedEvent
+        }
+        table.insert(self.FilteredContents, value)
+      end
     end
   end
   self.FilterContentObj_All = nil

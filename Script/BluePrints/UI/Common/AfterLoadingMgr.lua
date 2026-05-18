@@ -115,12 +115,17 @@ StateImpl.JumpToRogueMain = State:New("JumpToRogueMain", {
           PageJumpUtils:JumpToMonsterRush(CurTabIndex, EventId, DungeonId)
         elseif ExitDungeonInfo.Type == "AutoChess" then
           PageJumpUtils:JumpToAutoChessMain()
-        elseif ExitDungeonInfo.Type == "SoloTreasure" and 1 == ExitDungeonInfo.Mode then
-          local EventId = ExitDungeonInfo.EventId
-          local Mode = ExitDungeonInfo.Mode
-          local bIsDifficulty = ExitDungeonInfo.bIsDifficulty
-          local EventDungeonId = ExitDungeonInfo.EventDungeonId
-          PageJumpUtils:SoloTreasureRepeatLevel(EventId, Mode, bIsDifficulty, EventDungeonId)
+        elseif ExitDungeonInfo.Type == "SoloTreasure" then
+          if 1 == ExitDungeonInfo.Mode then
+            local EventId = ExitDungeonInfo.EventId
+            local Mode = ExitDungeonInfo.Mode
+            local bIsDifficulty = ExitDungeonInfo.bIsDifficulty
+            local EventDungeonId = ExitDungeonInfo.EventDungeonId
+            PageJumpUtils:SoloTreasureRepeatLevel(EventId, Mode, bIsDifficulty, EventDungeonId)
+          end
+        elseif ExitDungeonInfo.Type == "AsyncCombat" then
+          local CurTabIndex = ExitDungeonInfo.CurTabIndex
+          PageJumpUtils:JumpToAsyncCombatRoomPage(CurTabIndex)
         end
       end
     end

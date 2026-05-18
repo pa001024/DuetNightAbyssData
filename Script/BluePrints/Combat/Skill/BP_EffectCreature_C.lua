@@ -1,10 +1,7 @@
 local EMCache = require("EMCache.EMCache")
-local Const = require("Const")
 local BP_EffectCreature_C = Class("BluePrints.Common.TimerMgr")
 
 function BP_EffectCreature_C:ReceiveBeginPlay()
-  self.HideTags = {}
-  self:ApplyImmersionModelHideTag()
 end
 
 function BP_EffectCreature_C:OnBeginPlay()
@@ -12,12 +9,29 @@ function BP_EffectCreature_C:OnBeginPlay()
 end
 
 function BP_EffectCreature_C:Active()
+  self.HideTags = {}
   self.IsDestroy = false
   self:HideEffectCreatureByTag("Active", false)
   self:SetActorTickEnabled(true)
   local IsLooping = self.SkeletalMesh.AnimationData and self.SkeletalMesh.AnimationData.bSavedLooping or false
   self.SkeletalMesh:Play(IsLooping)
   self:RefreshEffectAnimation()
+end
+
+function BP_EffectCreature_C:TriggerCharTinColor()
+  local Owner = self:GetOwner()
+  if not Owner then
+    return
+  end
+  local CharFashion = Owner.CharacterFashion
+  if not CharFashion then
+    return
+  end
+  local CharTinColorMap = CharFashion.CharTinColorMap
+  if not CharTinColorMap then
+    return
+  end
+  self:OnSkinLeveupTin(CharTinColorMap)
 end
 
 function BP_EffectCreature_C:PlayCreateSe()
@@ -34,19 +48,24 @@ function BP_EffectCreature_C:DestroyEffectCreature()
   if EffectCreatureData.DelayDestroyTime then
     self:BeginDelayDestroy()
     self.IsDestroy = true
-    self:AddTimer(EffectCreatureData.DelayDestroyTime, function()
+    local SkillSpeed = self.SkillSpeed
+    if EffectCreatureData.ForbidAnimAccelerate then
+      SkillSpeed = 1
+    end
+    local ShouleUseRealTime = self:GetTickableWhenPaused()
+    self:AddTimer(EffectCreatureData.DelayDestroyTime / SkillSpeed, function()
       self:RealDestroyCreature()
-    end, false, 0, "BeginDelayDestroy")
+    end, false, 0, "BeginDelayDestroy", ShouleUseRealTime)
   else
     self:RealDestroyCreature()
   end
 end
 
-function BP_EffectCreature_C:RealDestroyCreature()
+function BP_EffectCreature_C:RealDestroyCreature(ForceDestroy)
   local EffectCreatureData = DataMgr.EffectCreature[self.EffectCreatureId]
   self:DeActive()
   local Owner = self:GetOwner()
-  if EffectCreatureData.EnterPool then
+  if not ForceDestroy and EffectCreatureData.EnterPool then
     Owner:RecycleEffectCreature(self)
   else
     self:K2_DestroyActor()
@@ -66,20 +85,12 @@ function BP_EffectCreature_C:DeActive()
 end
 
 function BP_EffectCreature_C:ReceiveEndPlay(EndPlayReason)
-  if not self.IsDestroy then
-    self.IsDestroy = true
-    local Owner = self:GetOwner()
-    if Owner then
-      Owner:AddOrRemoveEffectCreature(self, false)
-    end
-    self:OnDeActive()
-  end
   self:RemoveTimer("BeginDelayDestroy")
   self.Overridden.ReceiveEndPlay(self, EndPlayReason)
 end
 
 function BP_EffectCreature_C:GetRealEffectCreatureId()
-  return 0 ~= self.ReplaceSkinEffectCreatureId and self.ReplaceSkinEffectCreatureId or self.EffectCreatureId
+  return self.ReplaceSkinEffectCreatureId ~= self.EffectCreatureId and self.ReplaceSkinEffectCreatureId or self.EffectCreatureId
 end
 
 function BP_EffectCreature_C:ReplaceSkeletalMesh(EffectCreatureMesh, ModelId)
@@ -91,6 +102,10 @@ function BP_EffectCreature_C:ReplaceSkeletalMesh(EffectCreatureMesh, ModelId)
       IsResetAnim = false
     end
     self.SkeletalMesh:SetSkeletalMesh(EffectCreatureMesh, IsResetAnim)
+    if EffectCreatureConfig.MeshResourceIdByCreator then
+      self.MeshResourceList = UE4.URuntimeCommonFunctionLibrary.CreateMeshCompForActor(self, self:GetOwner(), self.SkeletalMesh)
+      self.MeshResourceList:Add(self.SkeletalMesh)
+    end
   end
   if ModelId then
     if DataMgr.Model[ModelId].ModelScale then
@@ -147,13 +162,21 @@ function BP_EffectCreature_C:InheritPreAnimation(AnimPosition)
         function(self, EffectCreatureAnim)
           self.SkeletalMesh:PlayAnimation(EffectCreatureAnim, true)
           self.SkeletalMesh:SetPosition(AnimPosition, false)
-          self.SkeletalMesh:SetPlayRate(self.SkillSpeed)
+          local SkillSpeed = self.SkillSpeed
+          if EffectCreatureConfig.ForbidAnimAccelerate then
+            SkillSpeed = 1
+          end
+          self.SkeletalMesh:SetPlayRate(SkillSpeed)
         end
       })
     else
       self.SkeletalMesh:PlayAnimation(AnimationAsset, true)
       self.SkeletalMesh:SetPosition(AnimPosition, false)
-      self.SkeletalMesh:SetPlayRate(self.SkillSpeed)
+      local SkillSpeed = self.SkillSpeed
+      if EffectCreatureConfig.ForbidAnimAccelerate then
+        SkillSpeed = 1
+      end
+      self.SkeletalMesh:SetPlayRate(SkillSpeed)
     end
   end
 end
@@ -263,6 +286,8 @@ end
 
 function BP_EffectCreature_C:OnResourceReady()
   self.Overridden.OnResourceReady(self)
+  print(_G.LogTag, "PlayEffectCreatureAnimationPlayEffectCreatureAnimation")
+  self:TriggerCharTinColor()
   self:SetPetEffectCreatureFX()
 end
 
@@ -271,10 +296,15 @@ function BP_EffectCreature_C:RefreshEffectAnimation()
     return
   end
   local Owner = self:GetOwner()
+  local EffectCreatureData = DataMgr.EffectCreature[self.EffectCreatureId]
+  local SkillSpeed = self.SkillSpeed
+  if EffectCreatureData.ForbidAnimAccelerate then
+    SkillSpeed = 1
+  end
   local Interval = Owner.SumDeltaSeconds - self.LoadTime
-  Interval = Interval * self.SkillSpeed
+  Interval = Interval * SkillSpeed
   self.SkeletalMesh:SetPosition(Interval, false)
-  self.SkeletalMesh:SetPlayRate(self.SkillSpeed)
+  self.SkeletalMesh:SetPlayRate(SkillSpeed)
 end
 
 function BP_EffectCreature_C:UpdateTickableWhenPaused()
@@ -302,16 +332,6 @@ function BP_EffectCreature_C:HideEffectCreatureByTag(HideTag, IsHide)
   end
   self.IsHide = Num > 0
   self:SetActorHiddenInGame(self.IsHide)
-end
-
-function BP_EffectCreature_C:ApplyImmersionModelHideTag()
-  local Player = GWorld and GWorld:GetMainPlayer()
-  if not (Player and Player.IsImmersionModel) then
-    return
-  end
-  if Const and Const.ImmersionModelHideTag then
-    self:HideEffectCreatureByTag(Const.ImmersionModelHideTag, true)
-  end
 end
 
 return BP_EffectCreature_C

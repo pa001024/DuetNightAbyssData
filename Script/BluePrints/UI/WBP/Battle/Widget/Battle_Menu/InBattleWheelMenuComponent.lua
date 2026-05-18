@@ -1,5 +1,6 @@
 require("UnLua")
 local CommonUtils = require("Utils.CommonUtils")
+local BattleUtils = require("Utils.BattleUtils")
 local InBattleWheelMenuModel = require("BluePrints.UI.WBP.Battle.Widget.Battle_Menu.InBattleWheelMenuModel")
 local Component = {}
 local WHEEL_STATE_SELECTING = 0
@@ -36,6 +37,9 @@ function Component:ResetPanel()
 end
 
 function Component:OnLoaded()
+  if self:IsClosing() then
+    return
+  end
   if self.QuestBattleWheelID then
     WHEEL_DISPLAY_COUNT = 4
   else
@@ -78,8 +82,8 @@ function Component:InitSlots()
   else
     self.WheelIndex = Avatar.WheelIndex or 1
   end
-  local CurrentWheel = Avatar.Wheels[self.WheelIndex]
   self.Slots = {}
+  self.SlotIconKey = self.SlotIconKey or {}
   for Index = 1, WHEEL_BAG_CAPACITY do
     local Slot = self:DisplaySlotIndex2WheelSlot(Index)
     local Resource
@@ -87,25 +91,30 @@ function Component:InitSlots()
       Resource = Avatar.Resources[Slot.ResourceId]
     end
     local IconAnimationBP = Resource and Resource:Data().IconAnimationBP
-    if IconAnimationBP then
-      local PropSp = UIManager(self):CreateWidget(IconAnimationBP, false)
-      if PropSp then
-        self["Prop_" .. Index]:RemoveChild(self["Prop_Icon" .. Index])
-        rawset(self, "Prop_Icon" .. Index, PropSp)
-        self["Prop_" .. Index]:AddChild(self["Prop_Icon" .. Index])
+    local IconKey = IconAnimationBP or Prop_Icon_Path
+    if self.SlotIconKey[Index] ~= IconKey then
+      if IconAnimationBP then
+        local PropSp = UIManager(self):CreateWidget(IconAnimationBP, false)
+        if PropSp then
+          self["Prop_" .. Index]:RemoveChild(self["Prop_Icon" .. Index])
+          self["Prop_" .. Index]:AddChild(PropSp)
+          rawset(self, "Prop_Icon" .. Index, PropSp)
+        end
+      else
+        local Prop = UIManager(self):CreateWidget(Prop_Icon_Path, false)
+        if Prop then
+          self["Prop_" .. Index]:RemoveChild(self["Prop_Icon" .. Index])
+          self["Prop_" .. Index]:AddChild(Prop)
+          rawset(self, "Prop_Icon" .. Index, Prop)
+        end
       end
-    else
-      local Prop = UIManager(self):CreateWidget(Prop_Icon_Path, false)
-      if Prop then
-        self["Prop_" .. Index]:RemoveChild(self["Prop_Icon" .. Index])
-        rawset(self, "Prop_Icon" .. Index, Prop)
-        self["Prop_" .. Index]:AddChild(self["Prop_Icon" .. Index])
-      end
+      self.SlotIconKey[Index] = IconKey
     end
     local IconWidget = self["Prop_Icon" .. Index]
     if IconWidget and Resource then
       local bCanUse = self:CheckResourceCanUse(Resource.ResourceId)
-      IconWidget:SetIconByPath(Resource.Icon)
+      local DisplayData = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(Resource:Data())
+      IconWidget:SetIconByPath(DisplayData.Icon)
       IconWidget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       IconWidget:SetIconState(bCanUse)
       self:SetIconCountText(IconWidget, Resource, Slot)
@@ -302,7 +311,7 @@ function Component:SetIconCountText(IconWidget, Resource, Slot)
       if ResData then
         local ResourceSType = ResData.ResourceSType
         if "PhantomItem" == ResourceSType then
-          local CharId = Resource.UseParam
+          local CharId = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(ResData).UseParam
           if CharId then
             local Avatar = GWorld:GetAvatar()
             if Avatar and Avatar.Chars then
@@ -310,6 +319,7 @@ function Component:SetIconCountText(IconWidget, Resource, Slot)
                 if CharInfo.CharId == CharId then
                   local LevelText = GText("UI_LEVEL_NAME") .. CharInfo.Level
                   IconWidget:SetCount(LevelText)
+                  break
                 end
               end
             end
@@ -331,9 +341,10 @@ function Component:CheckResourceCanUse(ResourceId)
   if not IsValid(Player) then
     return false
   end
-  local CombatConditionIDs = DataMgr.Resource[ResourceId].CombatConditionID or {}
-  local CombatConditionParams = DataMgr.Resource[ResourceId].CombatConditionParams or {}
-  local ToastIds = DataMgr.Resource[ResourceId].CombatConditionToast or {}
+  local Resolved = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(DataMgr.Resource[ResourceId])
+  local CombatConditionIDs = Resolved.CombatConditionID or {}
+  local CombatConditionParams = Resolved.CombatConditionParams or {}
+  local ToastIds = Resolved.CombatConditionToast or {}
   for Index, CombatConditionID in ipairs(CombatConditionIDs) do
     DebugPrint("gmy@InBattleWheelMenuComponent Component:CheckResourceCanUse", CombatConditionID)
     if CombatConditionID then
@@ -496,7 +507,8 @@ function Component:RefreshCenterTitle(CurrentSlot)
       if Avatar then
         local ResourceItem = Avatar.Resources[SelectingSlot.ResourceId]
         self:SetWheelMiddleStyle(WHEEL_STATE_SELECTING)
-        self.Text_Tips:SetText(GText(ResourceItem.ResourceName))
+        local DisplayData = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(ResourceItem:Data())
+        self.Text_Tips:SetText(GText(DisplayData.ResourceName))
         return
       end
     end

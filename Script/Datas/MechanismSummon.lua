@@ -357,22 +357,6 @@ return ReadOnly("MechanismSummon", {
     UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Boss_Robot__Creature02.BP_Boss_Robot__Creature02",
     UnitId = 851802
   },
-  [851901] = {
-    UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Boss_Lieche_Skill07_Field01.BP_Boss_Lieche_Skill07_Field01",
-    UnitId = 851901
-  },
-  [851902] = {
-    UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Boss_Lieche_Skill04_Field01.BP_Boss_Lieche_Skill04_Field01",
-    UnitId = 851902
-  },
-  [851903] = {
-    UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Boss_LiecheCore_Skill02_Field01.BP_Boss_LiecheCore_Skill02_Field01",
-    UnitId = 851903
-  },
-  [851904] = {
-    UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Boss_LiecheCore_Skill05_Field01.BP_Boss_LiecheCore_Skill05_Field01",
-    UnitId = 851904
-  },
   [900001] = {
     BattleRoleId = 39005,
     UnitBPPath = "/Game/BluePrints/Combat/MechanismSummon/Monster/BP_Bomb_Field.BP_Bomb_Field",

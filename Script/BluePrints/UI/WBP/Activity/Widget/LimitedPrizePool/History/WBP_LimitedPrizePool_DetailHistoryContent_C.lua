@@ -35,8 +35,7 @@ end
 function M:Destruct()
 end
 
-function M:InitContent(Params, PopupData, Owner)
-  self.Super.InitContent(self, Params, PopupData, Owner)
+function M:ApplyInitContent(Params)
   self.PoolId = Params.PoolId
   self.RecordList = self:GenerateServerAdaptationRewardList(Params.PoolId)
   self.PageCount = math.ceil(#self.RecordList / self.PerPageRecordCount)
@@ -50,18 +49,18 @@ function M:InitContent(Params, PopupData, Owner)
   end
 end
 
-function M:InitGamepadView()
+function M:ApplyGamepadView()
   self.PageUpKeySwitcher:SetActiveWidgetIndex(1)
   self.PageDownKeySwitcher:SetActiveWidgetIndex(1)
   self:SetFocus()
 end
 
-function M:InitKeyboardView()
+function M:ApplyKeyboardView()
   self.PageUpKeySwitcher:SetActiveWidgetIndex(0)
   self.PageDownKeySwitcher:SetActiveWidgetIndex(0)
 end
 
-function M:OnContentKeyDown(MyGeometry, InKeyEvent)
+function M:HandleContentKeyDown(MyGeometry, InKeyEvent)
   local Key = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local KeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(Key)
   local bHandled = false

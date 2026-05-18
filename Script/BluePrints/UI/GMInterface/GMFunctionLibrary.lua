@@ -139,6 +139,10 @@ function GMFunctionLibrary.SwitchIgnoreGiftShopFriendLimit(WorldContext, IsEnabl
   return IsEnable
 end
 
+function GMFunctionLibrary.SwitchBlockAllQuestTrigger(WorldContext, IsEnable)
+  return IsEnable
+end
+
 function GMFunctionLibrary.ClearToughness(WorldContext, IsEnable)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(WorldContext, 0)
   if IsEnable then
@@ -216,8 +220,11 @@ function GMFunctionLibrary.DoShowUIOnly(WorldContext, UIName)
 end
 
 function GMFunctionLibrary.SetPlayerSuperArmor(WorldContext, IsEnable)
-  local Player = UE4.UGameplayStatics.GetPlayerCharacter(WorldContext, 0)
-  Player:SetSuperArmor(IsEnable, "GM")
+  if IsEnable then
+    GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm SetSuperArmorOn")
+  else
+    GMFunctionLibrary.ExecConsoleCommand(WorldContext, "gm SetSuperArmorOff")
+  end
 end
 
 function GMFunctionLibrary.SetTakeRecorderCapture(WorldContext, IsEnable)
@@ -945,6 +952,10 @@ function GMFunctionLibrary.GetAllPet(WorldContext)
   for PetId, value in pairs(DataMgr.Pet) do
     GMFunctionLibrary.ExecConsoleCommand(WorldContext, "sgm PetAdd " .. PetId)
   end
+end
+
+function GMFunctionLibrary.GetAllMount(WorldContext)
+  GMFunctionLibrary.ExecConsoleCommand(WorldContext, "sgm aamd")
 end
 
 function GMFunctionLibrary.OpenPreviewArmory(WorldContext)

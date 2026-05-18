@@ -28,6 +28,28 @@ function M:Init(Info)
   else
     self.WBP_Com_Tab_ResourceBar:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  self:InitVersionInfo()
+end
+
+function M:InitVersionInfo()
+  self.Btn_RewardPreview.Button_Area.OnClicked:Clear()
+  self.Btn_RewardPreview.Button_Area.OnClicked:Add(self, self.OnRewardPreviewClick)
+  self.Btn_RewardPreview.Button_Area.OnPressed:Clear()
+  self.Btn_RewardPreview.Button_Area.OnPressed:Add(self, self.OnRewardPreviewPressed)
+  self.Btn_RewardPreview.Text_Button:SetText(GText("UI_Event_Btn_RewardCollection"))
+  self:RefreshLimitRewardPreviewNewReddot()
+end
+
+function M:RefreshLimitRewardPreviewNewReddot()
+  self.Btn_RewardPreview:RefreshVersionNewReddot()
+end
+
+function M:OnRewardPreviewPressed()
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/drama_gift_btn_click", nil, nil)
+end
+
+function M:OnRewardPreviewClick()
+  UIManager(self):LoadUINew("ActivityLimitTimeRewardPreview")
 end
 
 function M:OnReturnClick()

@@ -152,7 +152,6 @@ function WBP_ForgeMain_C:OnLoaded(...)
   self:CheckScrollbarVisibility(self.ForgeContent:GetNumItems())
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   Player:SetActorHideTag("Forge", true)
-  Player:SetCanInteractiveTrigger(false)
   self:SwitchCamera(true)
   local Avatar = GWorld:GetAvatar()
   local IsHome = Avatar:CheckSubRegionType(nil, CommonConst.SubRegionType.Home)
@@ -1906,10 +1905,6 @@ end
 function WBP_ForgeMain_C:Destruct()
   AudioManager(self):StopSystemUIBGM("ForgeMain")
   self.RemoveTimer(self.RefreshTimer)
-  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-  if Player then
-    Player:SetCanInteractiveTrigger(true)
-  end
   self:EnableTickWhenPaused(false)
   self.Super.Destruct(self)
 end

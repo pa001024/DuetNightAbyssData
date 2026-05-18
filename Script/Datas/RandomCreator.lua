@@ -2494,6 +2494,51 @@ return ReadOnly("RandomCreator", {
     RuleType = 1,
     UnitType = "Mechanism"
   },
+  [8030101] = {
+    Count = 8,
+    NotOverLap = 1,
+    RandomId = 8030101,
+    RandomInfos = T.RT_96,
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Mechanism"
+  },
+  [8030102] = {
+    Count = 10,
+    NotOverLap = 1,
+    RandomId = 8030102,
+    RandomInfos = T.RT_94,
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Mechanism"
+  },
+  [8030104] = {
+    Count = 10,
+    NotOverLap = 1,
+    RandomId = 8030104,
+    RandomInfos = T.RT_81,
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Mechanism"
+  },
+  [8030105] = {
+    Count = 8,
+    NotOverLap = 1,
+    RandomId = 8030105,
+    RandomInfos = T.RT_90,
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Mechanism"
+  },
+  [8030201] = {
+    Count = 12,
+    NotOverLap = 1,
+    RandomId = 8030201,
+    RandomInfos = T.RT_96,
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Mechanism"
+  },
   [9010101] = {
     Count = 2,
     NotOverLap = 1,
@@ -3148,6 +3193,136 @@ return ReadOnly("RandomCreator", {
       [9] = T.RT_194,
       [10] = T.RT_207
     },
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Pet"
+  },
+  [9060101] = {
+    Count = 2,
+    NotOverLap = 1,
+    RandomId = 9060101,
+    RandomInfos = {
+      [1] = T.RT_153,
+      [2] = T.RT_154,
+      [3] = T.RT_155,
+      [4] = T.RT_156,
+      [5] = T.RT_157,
+      [6] = T.RT_158,
+      [7] = T.RT_164,
+      [8] = T.RT_165,
+      [9] = T.RT_166,
+      [10] = T.RT_159,
+      [11] = T.RT_160,
+      [12] = T.RT_161,
+      [13] = T.RT_162,
+      [14] = T.RT_163
+    },
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Pet"
+  },
+  [9060102] = {
+    Count = 3,
+    NotOverLap = 1,
+    RandomId = 9060102,
+    RandomInfos = {
+      [1] = T.RT_175,
+      [2] = T.RT_176,
+      [3] = T.RT_177,
+      [4] = T.RT_178,
+      [5] = T.RT_179,
+      [6] = T.RT_180,
+      [7] = T.RT_181,
+      [8] = T.RT_182,
+      [9] = T.RT_183,
+      [10] = T.RT_164,
+      [11] = T.RT_165,
+      [12] = T.RT_166,
+      [13] = T.RT_159,
+      [14] = T.RT_160,
+      [15] = T.RT_161
+    },
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Pet"
+  },
+  [9060103] = {
+    Count = 3,
+    NotOverLap = 1,
+    RandomId = 9060103,
+    RandomInfos = {
+      [1] = T.RT_122,
+      [2] = T.RT_123,
+      [3] = T.RT_124,
+      [4] = T.RT_125,
+      [5] = T.RT_126,
+      [6] = T.RT_127,
+      [7] = T.RT_164,
+      [8] = T.RT_165,
+      [9] = T.RT_166,
+      [10] = T.RT_159,
+      [11] = T.RT_160,
+      [12] = T.RT_161,
+      [13] = T.RT_162,
+      [14] = T.RT_163
+    },
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Pet"
+  },
+  [9060104] = {
+    Count = 3,
+    NotOverLap = 1,
+    RandomId = 9060104,
+    RandomInfos = {
+      [1] = T.RT_139,
+      [2] = T.RT_140,
+      [3] = T.RT_141,
+      [4] = T.RT_142,
+      [5] = T.RT_143,
+      [6] = T.RT_144,
+      [7] = T.RT_164,
+      [8] = T.RT_165,
+      [9] = T.RT_166,
+      [10] = T.RT_159,
+      [11] = T.RT_160,
+      [12] = T.RT_161,
+      [13] = T.RT_162,
+      [14] = T.RT_163
+    },
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Pet"
+  },
+  [9060105] = {
+    Count = 2,
+    NotOverLap = 1,
+    RandomId = 9060105,
+    RandomInfos = {
+      [1] = T.RT_168,
+      [2] = T.RT_169,
+      [3] = T.RT_170,
+      [4] = T.RT_171,
+      [5] = T.RT_172,
+      [6] = T.RT_173,
+      [7] = T.RT_164,
+      [8] = T.RT_165,
+      [9] = T.RT_166,
+      [10] = T.RT_159,
+      [11] = T.RT_160,
+      [12] = T.RT_161,
+      [13] = T.RT_162,
+      [14] = T.RT_163
+    },
+    RegionDataType = 6,
+    RuleType = 1,
+    UnitType = "Pet"
+  },
+  [9060106] = {
+    Count = 2,
+    NotOverLap = 1,
+    RandomId = 9060106,
+    RandomInfos = T.RT_167,
     RegionDataType = 6,
     RuleType = 1,
     UnitType = "Pet"

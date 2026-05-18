@@ -24,7 +24,11 @@ function M:InitView(AccessDropConfig, AccessoryDrop, IsRefresh)
       self:PlayAnimation(self.Bubble_In)
     end
     self.Text_Bubble:SetText(GText("Event_FreeAppearance_tips12"))
-    self.Panel_Bubble:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if self:IsShopSoldOut() then
+      self.Panel_Bubble:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    else
+      self.Panel_Bubble:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
   else
     if self.Panel_Bubble:GetVisibility() == ESlateVisibility.SelfHitTestInvisible then
       self:PlayAnimation(self.Bubble_Out)
@@ -99,6 +103,36 @@ function M:SetGamePadVisibility(Op)
     end
   end
   self.Key_Controller:SetVisibility(Op)
+end
+
+function M:IsShopSoldOut()
+  local Avatar = GWorld:GetAvatar()
+  local PageConfigData = DataMgr.EventPortal[self.EventId]
+  local SubTabId = DataMgr.InterfaceJump[PageConfigData.EventShop].JumpParameter3
+  SubTabId = tonumber(SubTabId)
+  local ShopDataList = {}
+  for ShopItemId, ShopData in pairs(DataMgr.ShopItem) do
+    if ShopData.SubTabId == SubTabId and ShopUtils:GetShopItemCanShow(ShopItemId) then
+      table.insert(ShopDataList, ShopData)
+    end
+  end
+  local NotSoldOutList, LimitLevelList = {}, {}
+  for _, ShopData in pairs(ShopDataList) do
+    local PurchaseLimit = ShopUtils:GetShopItemPurchaseLimit(ShopData.ItemId)
+    if 0 == PurchaseLimit or Avatar:CheckShopItemUnique(ShopData.ItemId) then
+    else
+      local NeedLevel = ShopData.UnlockLevel or 0
+      if NeedLevel > Avatar.Level then
+        table.insert(LimitLevelList, ShopData)
+      else
+        table.insert(NotSoldOutList, ShopData)
+      end
+    end
+  end
+  if next(NotSoldOutList) or next(LimitLevelList) then
+    return false
+  end
+  return true
 end
 
 return M

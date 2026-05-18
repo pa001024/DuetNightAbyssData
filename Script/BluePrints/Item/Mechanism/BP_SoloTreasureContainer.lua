@@ -5,10 +5,7 @@ function BP_SoloTreasureContainer:GetShowTagNew()
     return false
   end
   if not self.DungeonObject then
-    local ServerEntity = GWorld:GetServerEntity()
-    if ServerEntity then
-      self.DungeonObject = ServerEntity:GetDungeonObject()
-    end
+    self.DungeonObject = GWorld:GetGameModeDungeonObject()
   end
   if self.DungeonObject then
     local MechanismEntity = self.DungeonObject:GetCachedMechanismInfo(self.ServerUniqueId)
@@ -32,17 +29,11 @@ end
 
 function BP_SoloTreasureContainer:OpenMechanism(PlayerId)
   DebugPrint("gmy@BP_SoloTreasureContainer BP_SoloTreasureContainer:OpenMechanism", PlayerId, "ServerUniqueId", self.ServerUniqueId)
-  local ServerEntity = GWorld:GetServerEntity()
-  if ServerEntity then
-    local DungeonObject = ServerEntity:GetDungeonObject()
-    if DungeonObject then
-      local MechanismEntity = DungeonObject:GetCachedMechanismInfo(self.ServerUniqueId)
-      if MechanismEntity then
-        DebugPrint("gmy@BP_SoloTreasureContainer BP_SoloTreasureContainer:OpenMechanism", MechanismEntity.OpenTimeStamp)
-        if MechanismEntity.OpenTimeStamp and -1 == MechanismEntity.OpenTimeStamp then
-          self:OnFirstTimeOpen(PlayerId, MechanismEntity)
-        end
-      end
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
+  if DungeonObject then
+    local MechanismEntity = DungeonObject:GetCachedMechanismInfo(self.ServerUniqueId)
+    if MechanismEntity and MechanismEntity.OpenTimeStamp and -1 == MechanismEntity.OpenTimeStamp then
+      self:OnFirstTimeOpen(PlayerId, MechanismEntity)
     end
   end
   self:RealOpenMechanism()

@@ -1,4 +1,5 @@
 local BaseDungeonObject = DungeonClass.Class()
+local DungeonObjectConst = require("BluePrints.DungeonObject.DungeonObjectConst")
 BaseDungeonObject.__Name__ = "BaseDungeonObject"
 BaseDungeonObject.__Component__ = {
   "BluePrints.DungeonObject.DungeonObjectRPC"
@@ -57,7 +58,7 @@ end
 
 function BaseDungeonObject:DungeonFinish(IsWin, Eid)
   local CustomInfoFunc = self.CustomFinishInfo
-  local CustomInfo = CustomInfoFunc and CustomInfoFunc(self) or {}
+  local CustomInfo = CustomInfoFunc and CustomInfoFunc(self, Eid, IsWin) or {}
   self:NotifyServerAvatar("DungeonFinish", Eid, IsWin, CustomInfo)
 end
 

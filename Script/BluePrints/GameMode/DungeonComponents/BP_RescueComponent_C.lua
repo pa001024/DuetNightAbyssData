@@ -146,6 +146,7 @@ function BP_RescueComponent_C:OnHostageDie(Hostage)
   if Hostage.Eid == self:GetHostageEid() then
     DebugPrint("RescueComponent: 人质死亡！")
     self.GameMode:TriggerGameModeEvent("OnHostageDieBP")
+    self.GameMode:RemoveDungeonEvent("HostageDyingCountDown")
     self.GameMode:TriggerDungeonFailed()
   end
 end

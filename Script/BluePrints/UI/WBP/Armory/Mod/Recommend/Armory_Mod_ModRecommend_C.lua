@@ -62,6 +62,7 @@ function WBP_Armory_ModRecommend_C:SetData(Params)
   self.Text_Avatar:SetText(Params.TargetName)
   local Target = ModModel:GetTarget()
   if self.CurTargetUuid == Target.Uuid then
+    self:RefreshDataOwned()
     self:RefreshData()
   else
     self:InitRankModData(Params.RankModData, Params.UserCount)
@@ -89,7 +90,7 @@ function WBP_Armory_ModRecommend_C:RefreshData()
       RecommendModInfo.IsEquipped = false
       for _, Mod in pairs(ModModel:GetAvatar().Mods) do
         if Mod.ModId == RecommendModInfo.ModId then
-          RecommendModInfo.IsEquipped = RecommendModInfo.IsEquipped and RecommendModInfo.IsEquipped or ModModel:IsModIdEquiped(RecommendModInfo.ModId)
+          RecommendModInfo.IsEquipped = ModModel:IsModIdEquiped(RecommendModInfo.ModId)
         end
       end
       if RecommendModInfo.IsEquipped then
@@ -344,6 +345,35 @@ function WBP_Armory_ModRecommend_C:InitRecommendModInfoList(ModInfoList)
       end
     end
     table.insert(self.RecommendModInfoList, CurModInfo)
+  end
+end
+
+function WBP_Armory_ModRecommend_C:RefreshDataOwned()
+  for _, ModInfo in pairs(self.RecommendModInfoList) do
+    if ModInfo.ModId == 51331 then
+      local Test = 1
+    end
+    for _, Mod in pairs(ModModel:GetAvatar().Mods) do
+      if Mod.ModId == 51331 then
+        local Test = 1
+      end
+      if Mod.ModId == ModInfo.ModId then
+        ModInfo.Owned = true
+        if ModInfo.ModId == 51331 then
+          local Test = 1
+        end
+        local Has = false
+        for _, OwnedModInfo in pairs(self.OwnedRecommendModInfoList) do
+          if OwnedModInfo.ModId == Mod.ModId then
+            Has = true
+          end
+        end
+        if not Has then
+          table.insert(self.OwnedRecommendModInfoList, ModInfo)
+        end
+        break
+      end
+    end
   end
 end
 

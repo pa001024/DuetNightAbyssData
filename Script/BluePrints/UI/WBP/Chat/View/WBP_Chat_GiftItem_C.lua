@@ -127,6 +127,11 @@ function M:FindRecvGiftState()
 end
 
 function M:OnGiftBtnClicked()
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if GameState and GameState:IsInDungeon() then
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_COMMONPOP_TITLE_100059"))
+    return
+  end
   ChatController:GetView():Close()
   UIUtils.OpenSystem(10, false, self.MailId)
 end

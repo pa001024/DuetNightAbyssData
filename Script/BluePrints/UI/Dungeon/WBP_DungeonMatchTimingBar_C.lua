@@ -40,7 +40,7 @@ function M:Initialize(Initializer)
 end
 
 function M:OnLoaded(...)
-  local DungeonId, EnterState, bIsMatch = ...
+  local DungeonId, EnterState, bIsMatch, CustomLevel = ...
   self.DungeonId = DungeonId
   local DungeonData = DataMgr.Dungeon[self.DungeonId]
   assert(DungeonData, "副本ID错误" .. tostring(self.DungeonId))
@@ -101,6 +101,9 @@ function M:OnLoaded(...)
   end
   DebugPrint("gmy@WBP_DungeonMatchTimingBar_C M:OnLoaded", DungeonId)
   local TitleLevelText = DungeonNameOnly or TypeTitle or ""
+  if CustomLevel and "" ~= CustomLevel then
+    LevelTitle = GText("BATTLE_UI_BLOOD_LV") .. tostring(CustomLevel)
+  end
   local TypeLabel
   if DungeonData.IsWalnutDungeon then
     TypeLabel = GText("UI_DUNGEONWALNUT")

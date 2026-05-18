@@ -47,7 +47,7 @@ return {
       key = "177210469637636114512",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1288, y = 298},
+      pos = {x = 1294, y = 298},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -163,6 +163,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51158209,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -190,8 +191,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "branch",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -239,6 +242,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 51158224,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -266,8 +270,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -302,8 +308,7 @@ return {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 701266,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OverrideFailBlend = false

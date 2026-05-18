@@ -1,5 +1,4 @@
 local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueIterType
-local TalkFlowUTils = require("BluePrints.Story.Talk.TalkFlow.TalkFlowUTils")
 local M = Class()
 
 function M:New(DialogueId, TalkTask, Comps, NodeMaps, Events)
@@ -89,7 +88,7 @@ function M:GenerateNextNodes()
 end
 
 function M:CreateNextNode(NodeType, DialogueId)
-  return TalkFlowUTils:GetOrCreateNode(NodeType, DialogueId, self.TalkTask, self.Comps, self.NodeMaps, self.Events)
+  return self.NodeMaps:GetOrCreateNode(NodeType, DialogueId)
 end
 
 function M:SetOutPort(OutPortName, IterNode)

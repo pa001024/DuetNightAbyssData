@@ -227,12 +227,18 @@ function Component:RegionActorUpdate(TargetActor, NewSubRegionId, NewLevelName, 
   }
   if CommonUtils.HasValue(NoStorageRegionDataType, TargetActor.RegionDataType) then
     DebugPrint("RegionLog:  Actor更新属性,当前类型为：" .. TargetActor.RegionDataType .. "  不做任何处理, WorldRegionEid:" .. tostring(TargetActor.WorldRegionEid))
+    if CB then
+      CB(ErrorCode.RET_SUCCESS)
+    end
     return
   end
   local GameMode = UE4.UGameplayStatics.GetGameMode(GWorld.GameInstance)
   local Ret, UnitRegionData = self:AvatarUpdateUnitRegionData(TargetActor, NewSubRegionId, NewLevelName)
   if not self:CheckRegionErrorCode(Ret) then
     DebugPrint("RegionLog:  Actor更新属性,当前类型为：" .. TargetActor.RegionDataType .. "  WorldRegionEid:" .. tostring(TargetActor.WorldRegionEid) .. "    更新数据失败，Ret：" .. Ret)
+    if CB then
+      CB(ErrorCode.RET_SUCCESS)
+    end
     return
   end
   
@@ -247,6 +253,9 @@ function Component:RegionActorUpdate(TargetActor, NewSubRegionId, NewLevelName, 
   end
   
   if self.CombineAdd and self:TryUpdateCombineRegionData(TargetActor, StateTable) then
+    if CB then
+      CB(ErrorCode.RET_SUCCESS)
+    end
     return
   end
   self:CallServer("UpdateRegionActorData", callback, TargetActor.WorldRegionEid, NewSubRegionId, TargetActor.RegionDataType, StateTable, NewLevelName)

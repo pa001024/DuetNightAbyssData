@@ -531,7 +531,7 @@
   },
   {
     "id": 200202,
-    "名称": "Foe of Hyperborea Ⅰ",
+    "名称": "Foe of Hyperborea Ⅱ",
     "分类": "Beyond Numbers",
     "品质": 2,
     "描述": "Defeat 1500 enemies from the Hyperborean Legion",
@@ -3243,6 +3243,17 @@
     }
   },
   {
+    "id": 1013801,
+    "名称": "藏宝图嗅觉·百花车站",
+    "分类": "Wish List",
+    "品质": 1,
+    "描述": "集齐百花车站所有遗落的纸张",
+    "版本": "1.4",
+    "奖励": {
+      "Secret Letter Clue": 2
+    }
+  },
+  {
     "id": 1020101,
     "名称": "Beware of the Consumerism Trap Ⅰ",
     "分类": "Wish List",
@@ -5363,6 +5374,18 @@
     }
   },
   {
+    "id": 17002013,
+    "名称": "A Quiet Sojourn: Hilda",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "Go to Ripples of Talk at the Sanctuary and finish Sojourns of the Pages of Time: Hilda",
+    "版本": "1.4",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Hilda's": 1
+    }
+  },
+  {
     "id": 17002014,
     "名称": "A Quiet Sojourn: Yale and Oliver",
     "分类": "Joyful Days",
@@ -5521,6 +5544,18 @@
     }
   },
   {
+    "id": 17002027,
+    "名称": "停驻光阴·芙罗拉",
+    "分类": "Joyful Days",
+    "品质": 1,
+    "描述": "于休憩之所“点滴”处完整阅读芙罗拉的光阴集故事",
+    "版本": "1.4",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: 芙罗拉的": 1
+    }
+  },
+  {
     "id": 17003001,
     "名称": "A Little Get-Together: Berenica",
     "分类": "Joyful Days",
@@ -5650,6 +5685,18 @@
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Lynn": 1
+    }
+  },
+  {
+    "id": 17003013,
+    "名称": "A Little Get-Together: Hilda",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "Invite Hilda to the Sanctuary and talk to her once",
+    "版本": "1.4",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: Hilda": 1
     }
   },
   {
@@ -5808,6 +5855,18 @@
     "奖励": {
       "Secret Letter Clue": 1,
       "Title: Daphne": 1
+    }
+  },
+  {
+    "id": 17003027,
+    "名称": "休憩一刻·芙罗拉",
+    "分类": "Joyful Days",
+    "品质": 2,
+    "描述": "于休憩之所邀请芙罗拉入驻并对话一次",
+    "版本": "1.4",
+    "奖励": {
+      "Secret Letter Clue": 1,
+      "Title: 芙罗拉": 1
     }
   },
   {
@@ -6254,8 +6313,19 @@
     "名称": "Stray Birds: Haojing",
     "分类": "Hello, World",
     "品质": 2,
-    "描述": "Summon the Oneiric Avian Spirit to record 15 Mistwharf location(s)",
+    "描述": "Record 15 Avian Towers in Haojing",
     "版本": "1.3",
+    "奖励": {
+      "Secret Letter Clue": 2
+    }
+  },
+  {
+    "id": 52000801,
+    "名称": "飞鸟集·百花车站",
+    "分类": "Hello, World",
+    "品质": 2,
+    "描述": "呼唤梦中的灵鸟记录4个“百花车站”的地点",
+    "版本": "1.4",
     "奖励": {
       "Secret Letter Clue": 2
     }

@@ -925,6 +925,16 @@ function WBP_Setting_PC_C:CheckIsUCloudHide(OptionId)
   return false
 end
 
+function WBP_Setting_PC_C:IsNonHeroChannel()
+  if self._IsNonHeroChannel ~= nil then
+    return self._IsNonHeroChannel
+  end
+  local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
+  local ChannelInfo = DataMgr.ChannelInfo[ChannelId]
+  self._IsNonHeroChannel = nil ~= ChannelInfo and ChannelInfo.AccountPrefix ~= "hero"
+  return self._IsNonHeroChannel
+end
+
 function WBP_Setting_PC_C:CheckIsExamineDistribution(OptionId)
   local OptionList = {
     CustomerService = true,
@@ -934,9 +944,9 @@ function WBP_Setting_PC_C:CheckIsExamineDistribution(OptionId)
   if OptionList[OptionId] and AHotUpdateGameMode.IsExamineDistribution() then
     return true
   elseif "CustomerService" == OptionId then
-    if HeroUSDKSubsystem(self):IsBilibili() then
-      return true
-    end
+    return self:IsNonHeroChannel()
+  elseif "LogOffAccount" == OptionId then
+    return self:IsNonHeroChannel()
   else
     return false
   end
@@ -1010,10 +1020,6 @@ function WBP_Setting_PC_C:OnTabSelected(TabWidget, NeedInit)
   end
   self.CurrentTab = TabWidget.Idx
   self.CurrentWidget = TabWidget
-  if self.EmptySettingUI then
-    self.ScrollBox_Option:RemoveChild(self.EmptySettingUI)
-    self.EmptySettingUI = nil
-  end
   self.ScrollBox_Option:ScrollToStart()
   local IsInit = false
   if nil == self.SettingUIs[self.CurrentTab] then
@@ -1029,7 +1035,7 @@ function WBP_Setting_PC_C:OnTabSelected(TabWidget, NeedInit)
     end
     IsInit = true
   end
-  if nil ~= NeedInit then
+  if type(NeedInit) == "boolean" then
     IsInit = NeedInit
   end
   for i, j in pairs(self.SettingUIs) do
@@ -1055,6 +1061,8 @@ function WBP_Setting_PC_C:OnTabSelected(TabWidget, NeedInit)
     CanvasSlot:SetPadding(FMargin(0, 0, 0, 0))
     self.EmptySettingUI = SettingUI
     self.EmptySettingUI:PlayInAnim()
+  else
+    UE4.UUIFunctionLibrary.MoveChildUScrollBox(self.ScrollBox_Option, self.EmptySettingUI, self.ScrollBox_Option:GetChildrenCount() - 1)
   end
   self:UpdateEmptyGridCount()
   if self.CommonTabInfo[self.CurrentTab].TabName == "Key" then

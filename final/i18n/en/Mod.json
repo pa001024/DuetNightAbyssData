@@ -2783,29 +2783,44 @@
     "id": 41715,
     "icon": "FeatheredSnake01_Black",
     "名称": "Eternity",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "Feathered Serpent's ",
     "品质": "紫",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Characters",
-    "技能耐久": 1.0,
+    "技能耐久": 0.36,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track D are equipped."
   },
   {
     "id": 41716,
     "icon": "FeatheredSnake01_Black",
     "名称": "Morale",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "Feathered Serpent's ",
     "品质": "紫",
     "极性": "V",
     "属性": "Umbro",
-    "耐受": 15,
+    "耐受": 12,
     "类型": "Characters",
-    "昂扬": 1.0,
-    "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track V are equipped."
+    "昂扬": 0.36,
+    "效果": "This effect applies only if every equipped Demon Wedge is unique."
+  },
+  {
+    "id": 41717,
+    "icon": "Mephisto01_Black",
+    "名称": "Morale·Volition",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "O",
+    "属性": "Umbro",
+    "耐受": 21,
+    "类型": "Characters",
+    "昂扬": 0.15,
+    "技能威力": 0.3,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
     "id": 41721,
@@ -2896,6 +2911,20 @@
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track V are equipped."
   },
   {
+    "id": 41727,
+    "icon": "Mephisto01_Blue",
+    "名称": "Volition·Awakening",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "A",
+    "属性": "Hydro",
+    "耐受": 25,
+    "类型": "Characters",
+    "技能威力": 0.3,
+    "效果": "Damage dealt by summons is increased by 30.0%. At +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
     "id": 41731,
     "icon": "Mephisto01_Red",
     "名称": "Blaze·Standfast",
@@ -2982,6 +3011,20 @@
     "类型": "Characters",
     "技能范围": 1.0,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track O are equipped."
+  },
+  {
+    "id": 41737,
+    "icon": "Mephisto01_Red",
+    "名称": "Volition",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "O",
+    "属性": "Pyro",
+    "耐受": 25,
+    "类型": "Characters",
+    "技能威力": 0.6,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
     "id": 41741,
@@ -3072,6 +3115,21 @@
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track D are equipped."
   },
   {
+    "id": 41747,
+    "icon": "Mephisto01_Purple",
+    "名称": "Morale·Refinement",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "V",
+    "属性": "Electro",
+    "耐受": 21,
+    "类型": "Characters",
+    "昂扬": 0.15,
+    "造成的伤害": 0.15,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
     "id": 41751,
     "icon": "Mephisto01_Green",
     "名称": "Blaze·Standfast",
@@ -3160,6 +3218,21 @@
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track O are equipped."
   },
   {
+    "id": 41757,
+    "icon": "Mephisto01_Green",
+    "名称": "Resolve·Volition",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "D",
+    "属性": "Anemo",
+    "耐受": 22,
+    "类型": "Characters",
+    "背水": 0.054,
+    "技能威力": 0.3,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
     "id": 41761,
     "icon": "Mephisto01_Orange",
     "名称": "Scorch",
@@ -3245,6 +3318,21 @@
     "类型": "Characters",
     "技能威力": 0.48,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track V are equipped."
+  },
+  {
+    "id": 41767,
+    "icon": "Mephisto01_Orange",
+    "名称": "Volition·Refinement",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "紫",
+    "极性": "V",
+    "属性": "Lumino",
+    "耐受": 25,
+    "类型": "Characters",
+    "技能威力": 0.3,
+    "造成的伤害": 0.15,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
     "id": 41801,
@@ -3772,6 +3860,42 @@
     "耐受": 14,
     "类型": "Melee Weapons",
     "触发倍率": 0.8
+  },
+  {
+    "id": 42701,
+    "icon": "Fenrir01",
+    "名称": "Maraud",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "A",
+    "耐受": 15,
+    "类型": "Melee Weapons",
+    "效果": "Defeating an enemy at or below your character's level grants ammo equal to your ranged weapon's Max Ammo and loads it immediately."
+  },
+  {
+    "id": 42702,
+    "icon": "Fenrir01",
+    "名称": "Pursuit",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 15,
+    "类型": "Melee Weapons",
+    "效果": "Defeating an enemy at or below your character's level grants 120 Combo Points."
+  },
+  {
+    "id": 42703,
+    "icon": "Fenrir01",
+    "名称": "Subdue",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "D",
+    "耐受": 15,
+    "类型": "Melee Weapons",
+    "效果": "Damage dealt to enemies at or below your level is always a CRIT and triggers bonus effects."
   },
   {
     "id": 43001,
@@ -5376,29 +5500,53 @@
     "id": 51715,
     "icon": "FeatheredSnake01_Black",
     "名称": "Eternity",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "Feathered Serpent's ",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Characters",
-    "技能耐久": 1.0,
+    "消耗": [
+      51715
+    ],
+    "技能耐久": 0.66,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track D are equipped."
   },
   {
     "id": 51716,
     "icon": "FeatheredSnake01_Black",
     "名称": "Morale",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "Feathered Serpent's ",
     "品质": "金",
     "极性": "V",
     "属性": "Umbro",
-    "耐受": 15,
+    "耐受": 22,
     "类型": "Characters",
-    "昂扬": 1.0,
-    "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track V are equipped."
+    "消耗": [
+      51716
+    ],
+    "昂扬": 0.66,
+    "效果": "This effect applies only if every equipped Demon Wedge is unique."
+  },
+  {
+    "id": 51717,
+    "icon": "Mephisto01_Black",
+    "名称": "Morale·Volition",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "O",
+    "属性": "Umbro",
+    "耐受": 23,
+    "类型": "Characters",
+    "消耗": [
+      51717
+    ],
+    "昂扬": 0.275,
+    "技能威力": 0.55,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
     "id": 51721,
@@ -5501,6 +5649,23 @@
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track V are equipped."
   },
   {
+    "id": 51727,
+    "icon": "Mephisto01_Blue",
+    "名称": "Volition·Awakening",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "A",
+    "属性": "Hydro",
+    "耐受": 28,
+    "类型": "Characters",
+    "消耗": [
+      51727
+    ],
+    "技能威力": 0.55,
+    "效果": "Damage dealt by summons is increased by 55.0%. At +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
     "id": 51731,
     "icon": "Mephisto01_Red",
     "名称": "Blaze·Standfast",
@@ -5599,6 +5764,23 @@
     "类型": "Characters",
     "技能范围": 1.0,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track O are equipped."
+  },
+  {
+    "id": 51737,
+    "icon": "Mephisto01_Red",
+    "名称": "Volition",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "O",
+    "属性": "Pyro",
+    "耐受": 28,
+    "类型": "Characters",
+    "消耗": [
+      51737
+    ],
+    "技能威力": 1.1,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
     "id": 51741,
@@ -5707,6 +5889,24 @@
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track D are equipped."
   },
   {
+    "id": 51747,
+    "icon": "Mephisto01_Purple",
+    "名称": "Morale·Refinement",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "V",
+    "属性": "Electro",
+    "耐受": 23,
+    "类型": "Characters",
+    "消耗": [
+      51747
+    ],
+    "昂扬": 0.275,
+    "造成的伤害": 0.275,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
     "id": 51751,
     "icon": "Mephisto01_Green",
     "名称": "Blaze·Standfast",
@@ -5813,6 +6013,24 @@
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track O are equipped."
   },
   {
+    "id": 51757,
+    "icon": "Mephisto01_Green",
+    "名称": "Resolve·Volition",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "D",
+    "属性": "Anemo",
+    "耐受": 24,
+    "类型": "Characters",
+    "消耗": [
+      51757
+    ],
+    "背水": 0.099,
+    "技能威力": 0.55,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
+  },
+  {
     "id": 51761,
     "icon": "Mephisto01_Orange",
     "名称": "Scorch",
@@ -5916,6 +6134,24 @@
     ],
     "技能威力": 0.88,
     "效果": "The element effect activates only when at least 4 Demon Wedges aligned to Track V are equipped."
+  },
+  {
+    "id": 51767,
+    "icon": "Mephisto01_Orange",
+    "名称": "Volition·Refinement",
+    "版本": "1.4",
+    "系列": "Covenanter's ",
+    "品质": "金",
+    "极性": "V",
+    "属性": "Lumino",
+    "耐受": 28,
+    "类型": "Characters",
+    "消耗": [
+      51767
+    ],
+    "技能威力": 0.55,
+    "造成的伤害": 0.275,
+    "效果": "Once upgraded to +5.0, this Demon Wedge can be equipped in multiples."
   },
   {
     "id": 51801,
@@ -6328,6 +6564,54 @@
     "触发": 0.99
   },
   {
+    "id": 52010,
+    "icon": "Cerberus01",
+    "名称": "Focus·Celerity",
+    "版本": "1.4",
+    "系列": "Cerberus's ",
+    "品质": "金",
+    "极性": "A",
+    "耐受": 27,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52010
+    ],
+    "暴击": 1.21,
+    "攻速": 0.44
+  },
+  {
+    "id": 52011,
+    "icon": "Cerberus01",
+    "名称": "Rage·Momentum",
+    "版本": "1.4",
+    "系列": "Cerberus's ",
+    "品质": "金",
+    "极性": "D",
+    "耐受": 29,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52011
+    ],
+    "暴伤": 1.21,
+    "蓄力攻击伤害": 0.33
+  },
+  {
+    "id": 52012,
+    "icon": "Cerberus01",
+    "名称": "Impetus·Dropshot",
+    "版本": "1.4",
+    "系列": "Cerberus's ",
+    "品质": "金",
+    "极性": "D",
+    "耐受": 30,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52012
+    ],
+    "攻击": 1.65,
+    "下落攻击伤害": 0.33
+  },
+  {
     "id": 52101,
     "icon": "Cerberus01",
     "名称": "Edge",
@@ -6374,6 +6658,39 @@
     ],
     "限定": "震荡",
     "物理": 0.99
+  },
+  {
+    "id": 52203,
+    "icon": "Fenrir01",
+    "名称": "Continuity·Trammel",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "O",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52203
+    ],
+    "连击持续时间": 11,
+    "触发": 1.65
+  },
+  {
+    "id": 52204,
+    "icon": "Fenrir01",
+    "名称": "Fortune·Threshold",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "O",
+    "耐受": 22,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52204
+    ],
+    "额外连击": 1,
+    "攻击范围": 2.2,
+    "效果": "When gaining Combo Point through attacking, there is a 100.0% chance to gain 1 additional Combo Point."
   },
   {
     "id": 53001,
@@ -6954,73 +7271,73 @@
     "id": 56111,
     "icon": "Changeling01_Black",
     "名称": "Huntdown",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "Changeling's ",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Characters",
     "消耗": [
       56111
     ],
     "减伤": 0.3,
-    "效果": "Grants +100.0% additional Umbro Damage when Skill Duration is ≥ 150.0%."
+    "效果": "When Morale is ≥ 60.0%, grants +66.0% additional Umbro Damage."
   },
   {
     "id": 56112,
     "icon": "Siren01_Black",
     "名称": "Wings·Inspo·Huntdown",
-    "版本": "99.9",
+    "版本": "1.4",
     "系列": "Siren's ",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Characters",
     "消耗": [
       56112
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Grants +100.0% additional Umbro Damage when Skill Duration is ≥ 150.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "When Morale is ≥ 60.0%, grants +66.0% additional Umbro Damage."
   },
   {
     "id": 56113,
     "icon": "Changeling01_Black",
-    "名称": "Focus",
-    "版本": "99.9",
+    "名称": "Rage",
+    "版本": "1.4",
     "系列": "Changeling's ",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 29,
+    "耐受": 25,
     "类型": "Characters",
     "消耗": [
       56113
     ],
     "减伤": 0.3,
-    "效果": "Grants +100.0% CRIT Chance to self and allies when Skill Duration is ≥ 150.0%."
+    "效果": "Grants +99.0% CRIT Damage to self and allies when Skill Duration is ≥ 180.0%."
   },
   {
     "id": 56114,
     "icon": "Siren01_Black",
-    "名称": "Wings·Inspo·Focus",
-    "版本": "99.9",
+    "名称": "Wings·Inspo·Rage",
+    "版本": "1.4",
     "系列": "Siren's ",
     "品质": "金",
     "极性": "D",
     "属性": "Umbro",
-    "耐受": 29,
+    "耐受": 45,
     "类型": "Characters",
     "消耗": [
       56114
     ],
-    "神智": 1.0,
-    "技能效益": 1.0,
-    "减伤": 0.3,
-    "效果": "Grants +100.0% CRIT Chance to self and allies when Skill Duration is ≥ 150.0%."
+    "神智": 1.65,
+    "技能效益": 0.44,
+    "减伤": 0.5,
+    "效果": "Grants +99.0% CRIT Damage to self and allies when Skill Duration is ≥ 180.0%."
   },
   {
     "id": 56121,
@@ -7953,6 +8270,44 @@
     }
   },
   {
+    "id": 106002,
+    "icon": "Fenrir01",
+    "名称": "Dazzling Radiance",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "紫",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "攻速": 0.2,
+    "效果": "Upgrades Katana Normal Attack to unleash a flurry of slashes at enemies ahead. Deals double the damage of the standard attack.",
+    "技能替换": {
+      "1060101": {
+        "id": 1060201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.25,
+            "格式": "{%}×2",
+            "削韧": 10,
+            "取消": 0.4333,
+            "连段": 1
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.385,
+            "格式": "{%}×3",
+            "削韧": 12,
+            "取消": 0.4333,
+            "连段": 1.3
+          }
+        ]
+      }
+    }
+  },
+  {
     "id": 150401,
     "icon": "Suyi",
     "名称": " Tracking Mode",
@@ -7968,6 +8323,134 @@
     ],
     "技能威力": 0.55,
     "效果": "Causes ranged attacks in [Starfall Mode] to fire homing projectiles."
+  },
+  {
+    "id": 201001,
+    "icon": "Fenrir01",
+    "名称": "Whirl of Illusion",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52001,
+      52008
+    ],
+    "攻速": 0.2,
+    "效果": "Upgrades the Sword Normal Attack. Deals 200.0% more damage than the standard attack.",
+    "技能替换": {
+      "1010101": {
+        "id": 1010201,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.65,
+            "削韧": 20,
+            "卡肉": 0.03,
+            "取消": 0.2,
+            "连段": 0.3
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.85,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.2,
+            "连段": 0.3
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.55,
+            "格式": "{%}×4",
+            "削韧": 25,
+            "取消": 0.2667,
+            "连段": 0.6
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 1.2,
+            "削韧": 40,
+            "卡肉": 0.1,
+            "取消": 0.6333,
+            "连段": 1.1333
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 202001,
+    "icon": "Fenrir01",
+    "名称": "Puncture Cascade",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52001,
+      52008
+    ],
+    "暴伤": 0.5,
+    "效果": "Upgrades the Polearm Charged Attack to throw 5 polearms forward. Deals 200.0% more damage than the standard attack.",
+    "技能替换": {
+      "1020102": {
+        "id": 1020202,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.3,
+            "削韧": 10,
+            "取消": 1.5
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 202002,
+    "icon": "Fenrir01",
+    "名称": "Shockwave Echo",
+    "版本": "1.4",
+    "系列": "Fenrir's ",
+    "品质": "金",
+    "极性": "V",
+    "耐受": 25,
+    "类型": "Melee Weapons",
+    "消耗": [
+      52001,
+      52008
+    ],
+    "暴击": 0.4,
+    "效果": "Upgrades the Polearm Plunging Attack to trigger a larger shockwave on impact. Deals 200.0% more damage than the standard attack.",
+    "技能替换": {
+      "1020103": {
+        "id": 1020203,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 0.47,
+            "削韧": 15,
+            "取消": 1.7
+          },
+          {
+            "名称": "Plunge 2-Hit DMG",
+            "值": 0.63,
+            "削韧": 20,
+            "取消": 1.7
+          }
+        ]
+      }
+    }
   },
   {
     "id": 202003,

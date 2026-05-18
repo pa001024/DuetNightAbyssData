@@ -245,10 +245,8 @@ function M:ExceptionInterruptTaskBySTL(Key)
   end
   DebugPrint("TS:ExceptionInterruptTaskBySTL", TalkTask, Key)
   TalkTask:OnExceptionInterruptedBySTL()
-  if TalkTask:GetBasicTalkType() ~= ETalkType.Guide then
-    self:MoveTaskState(TalkTask, ETaskState.Finished)
-    self:ClearRefs(TalkTask)
-  end
+  self:MoveTaskState(TalkTask, ETaskState.Finished)
+  self:ClearRefs(TalkTask)
   self:TryFireLeaveStoryEvent()
 end
 
@@ -875,21 +873,46 @@ function M:GetNpcPlayDialogueCallback(NpcId)
   end
 end
 
-function M:SetNiagaraComponentIgnorePause(NiagaraComponent, bIgnorePause)
-  if not IsValid(NiagaraComponent) then
+function M:SetupSequenceNpc(LevelSequenceActor)
+  if not IsValid(LevelSequenceActor) then
     return
   end
-  local IgnorePauseValue = 0
-  if bIgnorePause then
-    IgnorePauseValue = 1
+  local Sequence = LevelSequenceActor:GetSequence()
+  if not IsValid(Sequence) then
+    return
   end
-  NiagaraComponent:SetVariableFloat("IgnoreGamePause", IgnorePauseValue)
-  NiagaraComponent:SetTickableWhenPaused(bIgnorePause)
-  local bNativeAutoDestroy = NiagaraComponent.bAutoDestroy
-  NiagaraComponent:SetAutoDestroy(false)
-  NiagaraComponent:SetForceSolo(bIgnorePause)
-  NiagaraComponent:SetAutoDestroy(bNativeAutoDestroy)
-  NiagaraComponent:Activate(true)
+  local Tags = UE4.TArray(UE4.FName)
+  UTalkSequenceFunctionLibrary.GetLevelSequenceTags(Sequence, Tags)
+  local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
+  if not IsValid(GameState) then
+    return
+  end
+  for _, Tag in pairs(Tags) do
+    local NpdId = tonumber(Tag)
+    local NpcData = DataMgr.Npc[NpdId]
+    if NpcData then
+      local Context = UE4.AEventMgr.CreateUnitContext()
+      Context.UnitType = "Npc"
+      Context.UnitId = NpdId
+      Context.IntParams:Add("Level", GameState.GameModeLevel)
+      Context.BoolParams:Add("InStory", true)
+      Context.IntParams:Add("RegionDataType", 0)
+      Context.OnUnitInitCreateReadyDynamic:Add(self, function(_, NewNpc)
+        NewNpc:PreEnterStory(nil, true, true)
+        NewNpc:EnableSkeletalMeshActorRules(true)
+        LevelSequenceActor:AddBindingByTag(Tag, NewNpc, false)
+        LevelSequenceActor.SequencePlayer.OnFinished:Add(LevelSequenceActor, function()
+          if not IsValid(NewNpc) then
+            return
+          end
+          LevelSequenceActor:RemoveBindingByTag(Tag, NewNpc)
+          NewNpc:EnableSkeletalMeshActorRules(false)
+          NewNpc:PreExitStory(nil, false, false)
+        end)
+      end)
+      GameState.EventMgr:CreateUnitNew(Context, true)
+    end
+  end
 end
 
 return M

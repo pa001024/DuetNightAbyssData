@@ -513,7 +513,7 @@ function M:PCToGamepad()
   self.Btn_Start.Controller:SetVisibility(UE4.ESlateVisibility.Visible)
   self.Reward.Controller:SetVisibility(UE4.ESlateVisibility.Visible)
   if self.EMScrollBox_0 then
-    self.EMScrollBox_0:SetScrollBarVisibility(ESlateVisibility.Visable)
+    self.EMScrollBox_0:SetScrollBarVisibility(ESlateVisibility.Visible)
     self.EMScrollBox_0:SetControlScrollbarInside(false)
   end
 end

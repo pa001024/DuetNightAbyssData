@@ -35,7 +35,7 @@ end
 
 function M:BtnClicked()
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
-  UIManager(self):LoadUINew("SkinPreview", {
+  PageJumpUtils:JumpToSkinPreview({
     ItemType = "Skin",
     TypeId = self.SkinId,
     SinglePreview = true,

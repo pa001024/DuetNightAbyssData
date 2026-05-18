@@ -7,8 +7,28 @@ function S:Construct()
   self.GameInputModeSubsystem = UIManager(self):GetGameInputModeSubsystem()
 end
 
+function S:InitListenEvent()
+  if self.bInputMethodEventBound then
+    return
+  end
+  if IsValid(self.GameInputModeSubsystem) then
+    self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+    self.bInputMethodEventBound = true
+  end
+end
+
+function S:ClearListenEvent()
+  if not self.bInputMethodEventBound then
+    return
+  end
+  if IsValid(self.GameInputModeSubsystem) then
+    self.GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.RefreshOpInfoByInputDevice)
+  end
+  self.bInputMethodEventBound = false
+end
+
 function S:Init(Parent, CacheName, CacheInfo)
-  self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+  self:InitListenEvent()
   rawset(self, "Parent", Parent.Content and Parent.Content.ParentWidget.Parent or Parent)
   rawset(self, "CacheName", CacheName)
   rawset(self, "CacheInfo", CacheInfo)
@@ -362,6 +382,10 @@ end
 
 function S:SaveCameraShakeRangeOptionSetting()
   SettingUtils.SaveEMCache(self.EMCacheName, self.EMCacheKey, self.NowValue / self.ScrollMappingScale)
+end
+
+function S:Destruct()
+  self:ClearListenEvent()
 end
 
 return S

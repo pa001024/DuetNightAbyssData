@@ -9,8 +9,6 @@ function WBP_Play_HardBoss_Item_C:BP_OnEntryReleased()
 end
 
 function WBP_Play_HardBoss_Item_C:Initialize(Initializer)
-  self.IsSelected = false
-  self.Parent = nil
 end
 
 function WBP_Play_HardBoss_Item_C:OnListItemObjectSet(Content)
@@ -32,6 +30,11 @@ function WBP_Play_HardBoss_Item_C:OnListItemObjectSet(Content)
   self.Text_BossName:SetText(GText(Text))
   self.Image_Boss:SetBrushFromTexture(HeadSculpture)
   self:UpdateReddot()
+  if self.Content.IsSelect then
+    self:PlayAnimation(self.Click)
+  else
+    self:PlayAnimation(self.Normal)
+  end
   if 0 == self.Content.Index - 1 then
     self.Content.Parent:TrySelectFirstTime(self)
   end
@@ -49,7 +52,7 @@ function WBP_Play_HardBoss_Item_C:OnCellClickedWithoutSound(IsFirstTime, DoNotPl
 end
 
 function WBP_Play_HardBoss_Item_C:SelectCell(IsFirstTime, DoNotPlaySound)
-  if self.IsSelect then
+  if self.Content.IsSelect then
     return
   end
   if not DoNotPlaySound then
@@ -65,14 +68,14 @@ function WBP_Play_HardBoss_Item_C:SelectCell(IsFirstTime, DoNotPlaySound)
     self.New:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
   if not self:IsAnimationPlaying(self.Click) then
-    self.IsSelect = true
+    self.Content.IsSelect = true
     self.Content.Parent:RefreshListBossInfo(self.Content.Index, IsFirstTime)
     self:PlayAnimation(self.Click)
   end
 end
 
 function WBP_Play_HardBoss_Item_C:OnCellHovered()
-  if self.IsSelect then
+  if self.Content.IsSelect then
     return
   end
   if not self:IsAnimationPlaying(self.Click) then
@@ -82,7 +85,7 @@ function WBP_Play_HardBoss_Item_C:OnCellHovered()
 end
 
 function WBP_Play_HardBoss_Item_C:OnCellUnhovered()
-  if self.IsSelect then
+  if self.Content.IsSelect then
     return
   end
   if not self:IsAnimationPlaying(self.Click) then
@@ -93,14 +96,14 @@ function WBP_Play_HardBoss_Item_C:OnCellUnhovered()
 end
 
 function WBP_Play_HardBoss_Item_C:OnCellPressed()
-  if self.IsSelect then
+  if self.Content.IsSelect then
     return
   end
   self:PlayAnimation(self.Press)
 end
 
 function WBP_Play_HardBoss_Item_C:OnCellReleased()
-  if self.IsSelect then
+  if self.Content.IsSelect then
     return
   end
   self:StopAnimation(self.Press)

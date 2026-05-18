@@ -89,10 +89,7 @@ function M:StatEnd(GM)
   end
   StrOutput = StrOutput .. StrLine .. "Max" .. StrLine .. StrTmpMax
   local Path = UE4.UBlueprintPathsLibrary.ProfilingDir() .. "/ParticlePerf/StatFX_" .. os.date("%Y.%m.%d-%H.%M.%S") .. ".csv"
-  local File = io.open(Path, "w+")
-  io.output(File)
-  io.write(StrOutput)
-  io.close(File)
+  UE4.URuntimeCommonFunctionLibrary.SaveFile(Path, StrOutput)
 end
 
 return M

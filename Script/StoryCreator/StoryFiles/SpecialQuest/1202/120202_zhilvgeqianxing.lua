@@ -292,6 +292,48 @@ return {
             startPort = "Out",
             endQuest = "17749537778331814",
             endPort = "In"
+          },
+          {
+            startQuest = "17679482268141452964",
+            startPort = "Out",
+            endQuest = "17786613642351403",
+            endPort = "In"
+          },
+          {
+            startQuest = "17786613642351403",
+            startPort = "Out",
+            endQuest = "17679482268141452961",
+            endPort = "In"
+          },
+          {
+            startQuest = "17786613642351403",
+            startPort = "Out",
+            endQuest = "17734756419622913",
+            endPort = "Stop"
+          },
+          {
+            startQuest = "17786613642351403",
+            startPort = "Out",
+            endQuest = "17679482268141452962",
+            endPort = "Stop"
+          },
+          {
+            startQuest = "17786613642351403",
+            startPort = "Out",
+            endQuest = "17734757679253929",
+            endPort = "Stop"
+          },
+          {
+            startQuest = "17786613642351403",
+            startPort = "Out",
+            endQuest = "17734760626024506",
+            endPort = "Stop"
+          },
+          {
+            startQuest = "17786613642351403",
+            startPort = "Out",
+            endQuest = "1772955225325561",
+            endPort = "Stop"
           }
         },
         nodeData = {
@@ -313,7 +355,7 @@ return {
             key = "176215893740582",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2066.5, y = 986.5},
+            pos = {x = 1913.2857142857142, y = 1301.5},
             propsData = {}
           },
           ["1762159580231684952"] = {
@@ -327,7 +369,7 @@ return {
             key = "17679480334801451924",
             type = "BossBattleFinishNode",
             name = "收消息",
-            pos = {x = 1415.333333333333, y = 836.3888888888889},
+            pos = {x = 1262.1190476190473, y = 1151.388888888889},
             propsData = {
               SendMessage = "",
               FinishCondition = "ZhilvStealth_Fail"
@@ -337,21 +379,21 @@ return {
             key = "17679480406991452140",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1440.7112350146676, y = 1014.0423511398341},
+            pos = {x = 1287.4969493003819, y = 1329.042351139834},
             propsData = {}
           },
           ["17679480476231452366"] = {
             key = "17679480476231452366",
             type = "SpecialQuestFailNode",
             name = "特殊任务主动失败",
-            pos = {x = 1749.043904924737, y = 840.9634037714129},
+            pos = {x = 1595.8296192104513, y = 1155.963403771413},
             propsData = {}
           },
           ["17679482268141452961"] = {
             key = "17679482268141452961",
             type = "GoToNode",
             name = "潜行终点",
-            pos = {x = 2670.472458477528, y = 285.69524454057824},
+            pos = {x = 2707.672458477528, y = 368.49524454057826},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2010043,
@@ -739,6 +781,18 @@ return {
               bResetCamera = true,
               bForceAsyncLoading = false,
               IsWhite = false
+            }
+          },
+          ["17786613642351403"] = {
+            key = "17786613642351403",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 1969.4124052451543, y = 630.6398633091366},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 242350053,
+              GuideType = "N",
+              GuidePointName = ""
             }
           }
         },

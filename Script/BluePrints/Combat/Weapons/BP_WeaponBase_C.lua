@@ -15,8 +15,6 @@ BP_WeaponBase_C._components = {
 function BP_WeaponBase_C:ReceiveBeginPlay()
   self.Overridden.ReceiveBeginPlay(self)
   self.ForbidTag = {}
-  self.AccessoryAuName_Accessory = nil
-  self.AccessoryAuName_RunAttack = nil
 end
 
 function BP_WeaponBase_C:OnRep_ServerBornInfo()
@@ -59,6 +57,9 @@ end
 
 function BP_WeaponBase_C:InitWeaponAppearance(AppearanceInfo)
   self.AppearanceInfo = AppearanceInfo
+  if AppearanceInfo then
+    self.HyperWeaponLevel = AppearanceInfo.GradeLevel
+  end
   self:InitWeaponSkin(AppearanceInfo and AppearanceInfo.SkinId)
   if self.bIsShow then
     return
@@ -74,10 +75,61 @@ function BP_WeaponBase_C:Lua_InitShowWeaponAppearance()
     self:ChangeAccessory(AccessorySuit[AccessoryTypeIdx], AccessoryType)
   end
   EventManager:FireEvent(EventID.OnShowWeaponLoadFinished, self)
+  self:InitHyperWeaponMaterialEffect()
+end
+
+function BP_WeaponBase_C:InitHyperWeaponMaterialEffect()
+  if not self:IsHyperWeapon() then
+    return
+  end
+  if self.HyperWeaponLevel and self.HyperWeaponLevel > 0 then
+    if self.WeaponFashion then
+      self.WeaponFashion:ApplyHyperWeaponMaterialEffect(self.HyperWeaponLevel)
+    end
+    return
+  end
+  local Owner = self:GetWeaponOwner()
+  if Owner and Owner.FromOtherWorld and not Owner.FromArmory then
+    local InfoForInit = Owner.InfoForInit
+    if InfoForInit then
+      local MeleeInfo = InfoForInit.MeleeWeapon
+      local RangedInfo = InfoForInit.RangedWeapon
+      local HyperCardLevel = 0
+      if MeleeInfo and MeleeInfo.WeaponId == self.WeaponId then
+        HyperCardLevel = MeleeInfo.HyperCardLevel or 0
+      elseif RangedInfo and RangedInfo.WeaponId == self.WeaponId then
+        HyperCardLevel = RangedInfo.HyperCardLevel or 0
+      end
+      if HyperCardLevel >= 0 and self.WeaponFashion then
+        self.WeaponFashion:ApplyHyperWeaponMaterialEffect(HyperCardLevel)
+      end
+    end
+    return
+  end
+  local Character = self:GetWeaponOwner()
+  if not Character then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  for _, Weapon in pairs(Avatar.Weapons or {}) do
+    if Weapon.WeaponId == self.WeaponId then
+      if self.WeaponFashion then
+        self.WeaponFashion:ApplyHyperWeaponMaterialEffect(Weapon.HyperCardLevel or 0)
+      end
+      return
+    end
+  end
 end
 
 function BP_WeaponBase_C:InitWeaponSkin(SkinId)
   self:InitWeaponSkinImpl(SkinId, self.bIsShow)
+end
+
+function BP_WeaponBase_C:OnWeaponFashion(HyperCardLevel)
+  self.WeaponFashion:ApplyHyperWeaponMaterialEffect(HyperCardLevel or 0)
 end
 
 function BP_WeaponBase_C:InitWeaponColor(Colors)
@@ -128,11 +180,14 @@ end
 
 function BP_WeaponBase_C:ChangeAccessory(AccessoryId, AccessoryType)
   local Data = DataMgr.WeaponAccessory[AccessoryId]
+  if Data and Data.AuSplice then
+    self:SetWeaponAu(AccessoryType, Data.AuSplice)
+  else
+    self:RemoveWeaponAu(AccessoryType)
+  end
   if AccessoryType == CommonConst.WeaponAccessoryTypes.Accessory then
     self:DetachWeaponSuit()
     if nil == Data then
-      self.AccessoryAuName_Accessory = nil
-      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
       return
     end
     local Offsets = Data.Offset or {
@@ -143,28 +198,7 @@ function BP_WeaponBase_C:ChangeAccessory(AccessoryId, AccessoryType)
     local Offset = FTransform(FRotator(0, 0, 0):ToQuat(), FVector(Offsets[1] or 0, Offsets[2] or 0, Offsets[3] or 0))
     self:AttachWeaponSuit(Data.AccessorySocket, Data.ModelPath, Offset, Data.NiagaraPath, Data.SocketName)
     self:ChangeWPSuitLook(Data.ChangeColor or 1)
-    if Data.AuSplice then
-      self.AccessoryAuName_Accessory = Data.AuSplice
-      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
-    else
-      self.AccessoryAuName_Accessory = nil
-      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
-    end
     return
-  end
-  if AccessoryType == CommonConst.WeaponAccessoryTypes.RunAttack then
-    if nil == Data then
-      self.AccessoryAuName_RunAttack = nil
-      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
-      return
-    end
-    if Data.AuSplice then
-      self.AccessoryAuName_RunAttack = Data.AuSplice
-      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
-    else
-      self.AccessoryAuName_RunAttack = nil
-      self.AccessoryAuName = self.AccessoryAuName_Accessory or self.AccessoryAuName_RunAttack or ""
-    end
   end
   if nil == Data then
     return
@@ -350,24 +384,22 @@ function BP_WeaponBase_C:IsHyperWeapon()
 end
 
 function BP_WeaponBase_C:IsHyperWeaponSkillActivated(HyperWeaponSkillId)
-  if not self:IsHyperWeapon() then
-    return false
-  end
-  local Avatar = GWorld:GetAvatar()
-  local HyperWeaponUid
-  local _ServerMeleeWeapon = Avatar and Avatar.Weapons[Avatar.MeleeWeapon]
-  if _ServerMeleeWeapon and _ServerMeleeWeapon.WeaponId == self.WeaponId then
-    HyperWeaponUid = Avatar.MeleeWeapon
-  else
-    local _ServerRangedWeapon = Avatar and Avatar.Weapons[Avatar.RangedWeapon]
-    if _ServerRangedWeapon and _ServerRangedWeapon.WeaponId == self.WeaponId then
-      HyperWeaponUid = Avatar.RangedWeapon
+  if UE4.URuntimeCommonFunctionLibrary.IsPlayInEditor(self) then
+    if Const.bEditorUnlockAllHyperWeaponSkills then
+      return true
+    end
+    local OverrideList = self.EditorHyperWeaponActivatedSkillIds
+    if OverrideList and OverrideList:Num() > 0 then
+      for i = 1, OverrideList:Num() do
+        local OverrideSkillId = OverrideList:Get(i)
+        if OverrideSkillId == HyperWeaponSkillId then
+          return true
+        end
+      end
+      return false
     end
   end
-  if not HyperWeaponUid then
-    return false
-  end
-  return HyperWeaponUtils.IsHyperWeaponSkillActivated(HyperWeaponUid, HyperWeaponSkillId)
+  return HyperWeaponUtils.IsHyperWeaponSkillActivated(self.WeaponId, HyperWeaponSkillId)
 end
 
 AssembleComponents(BP_WeaponBase_C)

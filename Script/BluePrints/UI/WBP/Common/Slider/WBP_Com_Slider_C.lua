@@ -23,6 +23,7 @@ function M:Construct()
 end
 
 function M:Destruct()
+  self.Binded = false
   self:ClearListenEvent()
   M.Super.Destruct(self)
 end
@@ -277,6 +278,9 @@ function M:SliderUseGamePadStyle(UseGamePadStyle)
 end
 
 function M:BindAllClickAction()
+  if self.Binded then
+    return
+  end
   self.Btn_Min:BindEventOnPressed(self, self.OnMinusKeyDown)
   self.Btn_Min:BindEventOnReleased(self, self.OnMinusKeyUp)
   self.Btn_Add:BindEventOnPressed(self, self.OnAddKeyDown)
@@ -284,6 +288,7 @@ function M:BindAllClickAction()
   self.Slider.OnValueChanged:Add(self, self.OnSliderValueChanged)
   self.Slider.OnMouseCaptureBegin:Add(self, self.OnSelectedSlider)
   self.Slider.OnMouseCaptureEnd:Add(self, self.OnUnSelectedSlider)
+  self.Binded = true
   if self.Btn_Mini then
     self.Btn_Mini:BindEventOnPressed(self, self.OnMiniKeyDown)
     

@@ -96,6 +96,9 @@ function QuestStartNode:Clear()
   if self.FairyLandStaticCreatorId and 0 ~= self.FairyLandStaticCreatorId then
     GWorld.StoryMgr:UnbindStaticCreatorActorEventByType(self.FairyLandStaticCreatorId, EActorEventType.OnCreated)
   end
+  if self.StoryGuidePointName ~= "" then
+    self:TriggerShowOrCloseMissionIndicator(false)
+  end
 end
 
 function QuestStartNode:TriggerShowOrCloseMissionIndicator(IsShow)

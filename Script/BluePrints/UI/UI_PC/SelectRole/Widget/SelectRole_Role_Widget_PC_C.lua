@@ -226,7 +226,9 @@ function M:OnClickButtonNext()
   end
   if self.RootPage.DeviceInPc then
     self.RootPage.Key_Observe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.RootPage.Key_Observe:ChangeText(GText("UI_BACK"))
     self.RootPage.Key_Back:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.RootPage.Key_Back:ChangeText(GText("UI_BACK"))
   end
   self.RootPage:ChangeWidget("SelectName")
 end
@@ -261,16 +263,16 @@ function M:Handle_KeyEventOnGamePad(InKeyName)
   elseif "Gamepad_LeftShoulder" == InKeyName then
     if self.NowState == StateEventIndex.WholeBody or self.NowState == StateEventIndex.Enter then
       self.RootPage:OnClickButtonFullBody()
-      self:OnClickButtonMale()
+      self:OnClickButtonFemale()
+    elseif self.NowState == StateEventIndex.Male then
+      self:OnClickButtonFemale()
     end
   elseif "Gamepad_RightShoulder" == InKeyName then
     if self.NowState == StateEventIndex.WholeBody or self.NowState == StateEventIndex.Enter then
       self.RootPage:OnClickButtonFullBody()
-      self:OnClickButtonFemale()
+      self:OnClickButtonMale()
     elseif self.NowState == StateEventIndex.Female then
       self:OnClickButtonMale()
-    elseif self.NowState == StateEventIndex.Male then
-      self:OnClickButtonFemale()
     end
   end
   return true

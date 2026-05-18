@@ -461,8 +461,8 @@ function Component:AddResource()
     local needNumLimit
     if self.NeedNum and self.NeedNum[PlusContent.Id] then
       local NeedNum = self.NeedNum[PlusContent.Id]
-      local isThirdStageUnlimited = 3 == self.CurStep and 3 == self.SelectedIndex
-      if not isThirdStageUnlimited then
+      local NeedNumConstraint = self:NeedNumConstraint(PlusContent.Id)
+      if NeedNumConstraint then
         needNumLimit = NeedNum - CurContent.Count
         if needNumLimit < 0 then
           needNumLimit = 0

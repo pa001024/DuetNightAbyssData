@@ -3,10 +3,12 @@ local Component = {}
 
 function Component:EnterWorld()
   CharModel:Init(self)
+  self._CharacterAttributeSwitchMapCache = self:_CopyCharacterAttributeSwitchMap(self.CharacterAttributeSwitch)
 end
 
 function Component:LeaveWorld()
   CharModel:Destory()
+  self._CharacterAttributeSwitchMapCache = nil
 end
 
 function Component:GetCharUuidByCharId(CharId)
@@ -422,6 +424,91 @@ function Component:CheckAlternativeChar(InCallback)
   end
   
   self:CallServer("CheckAlternativeChar", callback)
+end
+
+function Component:_CopyCharacterAttributeSwitchMap(SourceMap)
+  local TargetMap = {}
+  for CharGroupId, CharId in pairs(SourceMap or {}) do
+    TargetMap[CharGroupId] = CharId
+  end
+  return TargetMap
+end
+
+function Component:_BuildCharacterAttributeSwitchInfos(OldMap)
+  local Infos = {}
+  local CurrentMap = self.CharacterAttributeSwitch or {}
+  local HandledGroups = {}
+  for CharGroupId, OldCharId in pairs(OldMap or {}) do
+    local NewCharId = CurrentMap[CharGroupId]
+    if OldCharId ~= NewCharId then
+      local OldCfg = OldCharId and DataMgr.CharacterAttributeSwitch[OldCharId] or nil
+      local NewCfg = NewCharId and DataMgr.CharacterAttributeSwitch[NewCharId] or nil
+      table.insert(Infos, {
+        CharGroupId = CharGroupId,
+        OldCharId = OldCharId,
+        NewCharId = NewCharId,
+        OldCharAttribute = OldCfg and OldCfg.CharAttribute or nil,
+        NewCharAttribute = NewCfg and NewCfg.CharAttribute or nil,
+        CurrentMapping = CurrentMap
+      })
+      HandledGroups[CharGroupId] = true
+    end
+  end
+  for CharGroupId, NewCharId in pairs(CurrentMap) do
+    if not HandledGroups[CharGroupId] and (OldMap or {})[CharGroupId] ~= NewCharId then
+      local OldCharId = (OldMap or {})[CharGroupId]
+      local OldCfg = OldCharId and DataMgr.CharacterAttributeSwitch[OldCharId] or nil
+      local NewCfg = NewCharId and DataMgr.CharacterAttributeSwitch[NewCharId] or nil
+      table.insert(Infos, {
+        CharGroupId = CharGroupId,
+        OldCharId = OldCharId,
+        NewCharId = NewCharId,
+        OldCharAttribute = OldCfg and OldCfg.CharAttribute or nil,
+        NewCharAttribute = NewCfg and NewCfg.CharAttribute or nil,
+        CurrentMapping = CurrentMap
+      })
+    end
+  end
+  return Infos
+end
+
+function Component:_DispatchCharacterAttributeSwitchEvents(OldMap)
+  local SwitchInfos = self:_BuildCharacterAttributeSwitchInfos(OldMap)
+  for _, SwitchInfo in ipairs(SwitchInfos) do
+    self.logger.info(string.format("OnCharacterAttributeSwitched CharGroupId(%s) OldCharId(%s) NewCharId(%s)", tostring(SwitchInfo.CharGroupId), tostring(SwitchInfo.OldCharId), tostring(SwitchInfo.NewCharId)))
+    EventManager:FireEvent(EventID.OnCharacterAttributeSwitched, SwitchInfo)
+  end
+end
+
+function Component:SwitchCharacterAttribute(NewCharId)
+  local OldCharId = AvatarUtils:GetCurrentCharIdByCharId(self, NewCharId)
+  
+  local function callback(ret)
+    self:OnSwitchCharacterAttribute(ret, NewCharId, OldCharId)
+  end
+  
+  self:CallServer("SwitchCharacterAttribute", callback, NewCharId)
+end
+
+function Component:OnSwitchCharacterAttribute(ret, NewCharId, OldCharId)
+  self.logger.debug("SwitchCharacterAttribute ret:" .. ret)
+  for CharGroupId, CharId in pairs(self.CharacterAttributeSwitch or {}) do
+    self.logger.info(string.format("SwitchCharacterAttribute CharGroupId(%s) CharId(%s)", tostring(CharGroupId), tostring(CharId)))
+  end
+  if ret ~= ErrorCode.RET_SUCCESS then
+    self.logger.info("SwitchCharacterAttribute failed", ret)
+  end
+  EventManager:FireEvent(EventID.OnCharAttributeSwitched, ret, NewCharId, OldCharId)
+end
+
+function Component:_OnPropChangeCharacterAttributeSwitch(Keys)
+  local OldMap = self._CharacterAttributeSwitchMapCache
+  if not OldMap then
+    self._CharacterAttributeSwitchMapCache = self:_CopyCharacterAttributeSwitchMap(self.CharacterAttributeSwitch)
+    return
+  end
+  self:_DispatchCharacterAttributeSwitchEvents(OldMap)
+  self._CharacterAttributeSwitchMapCache = self:_CopyCharacterAttributeSwitchMap(self.CharacterAttributeSwitch)
 end
 
 return Component

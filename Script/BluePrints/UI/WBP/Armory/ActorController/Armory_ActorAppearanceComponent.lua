@@ -79,7 +79,11 @@ function M:ChangeCharHair(HariId)
   
   ChangeCharHairInternal(self.ArmoryPlayer)
   ChangeCharHairInternal(self:GetReflectionActor(self.ArmoryPlayer))
-  self:ChangeCharAccessory(self.CurrentAppearanceInfo.AccessorySuit[CommonConst.NewCharAccessoryTypes.Hat], "Hat")
+  local HatId = self.CurrentAppearanceInfo.AccessorySuit[CommonConst.NewCharAccessoryTypes.Hat]
+  local HatType = "Hat"
+  local CustomParams = self.CurrentAppearanceInfo.AccessoryCustomParams[HatId]
+  local Trans = CustomParams and CommonUtils.UnSerializeAccessoryCustomParams(CustomParams, HatType)
+  self:ChangeCharAccessory(HatId, HatType, Trans)
   self:ChangeCharSkinColor(self.CurrentAppearanceInfo.Colors)
   self:ChangeCharHairColor(self.CurrentAppearanceInfo.HairColors)
 end
@@ -121,7 +125,7 @@ function M:ChangeCharSkinColor(Colors)
     if not CharacterFashion then
       return
     end
-    PlayerCharacter.CharacterFashion:RefreshUncoloredSkinColors(Colors)
+    PlayerCharacter.CharacterFashion:InitSkinColors(Colors)
   end
   
   ChangeCharSkinColorInternal(self.ArmoryPlayer)
@@ -204,10 +208,8 @@ M[ShowFXAccessoryPrefix .. CommonConst.CharAccessoryTypes.FX_Footprint] = functi
   end
   
   PlayEffect(Player)
-  PlayEffect(self:GetReflectionActor(Player))
   self.ArmoryHelper:AddTimer(1, function()
     PlayEffect(Player)
-    PlayEffect(self:GetReflectionActor(Player))
   end, true, 0, "PlayFootprintFXLoop", true)
 end
 M[ShowFXAccessoryPrefix .. CommonConst.CharAccessoryTypes.FX_Teleport] = function(self, Player, AccessoryId, AccessoryType)
@@ -235,20 +237,18 @@ M[ShowFXAccessoryPrefix .. CommonConst.CharAccessoryTypes.FX_Teleport] = functio
     OnNotifyBegin = function()
       PauseMontage(Player)
       PauseMontage(PlayerReflection)
-      self:HidePlayerActor(self.UIName, true)
+      self:HidePlayerActor("ActorController_FX_Teleport", true)
       self.PlayerMontageTimerKeys.PlayTeleportMontage = true
-      self.TeleportMontagePaused = true
       self.ArmoryHelper:AddTimer(1, function()
         PlayTeleport(Player)
         PlayTeleport(PlayerReflection)
         Player:PlayActionMontage("Interactive/MechInteractive", MontagePath, {}, false, true, false)
         Player.PlayerAnimInstance:Montage_JumpToSection("End")
-        self:HidePlayerActor(self.UIName, false)
-        self.TeleportMontagePaused = false
+        self:HidePlayerActor("ActorController_FX_Teleport", false)
       end, false, 0.0, "PlayTeleportMontage", true)
     end,
     OnInterrupted = function()
-      self:HidePlayerActor(self.UIName, false)
+      self:HidePlayerActor("ActorController_FX_Teleport", false)
     end
   }, false, true, true)
   if PlayerReflection then
@@ -313,16 +313,17 @@ local function PlaySequenceByAccessoryId(self, Params)
   if Player.MVPSequenceActor then
     local SequencePlayer = Player.MVPSequenceActor:GetSequencePlayer()
     if SequencePlayer then
+      Player.CharacterFashion:InitSkinLevelUpVisEffect()
       SequencePlayer:PlayLooping()
       if SequencePlayer.OnLoop then
         SequencePlayer.OnLoop:Clear()
         SequencePlayer.OnLoop:Add(self.ViewUI, function()
           Player:PlayDungeonSettlementMVPMontage(MontagePath)
         end)
+        return true
       end
     end
   end
-  return true
 end
 
 local function PlaySequenceByPath(self, Params)
@@ -350,6 +351,7 @@ local function PlaySequenceInternal(self, Params)
   self.SequenceInfo = Params
   self.IsPlayingSequence = true
   local IsPlayed = false
+  self:SetGamePauseIfNeed(false)
   if Params.AccessoryId then
     IsPlayed = PlaySequenceByAccessoryId(self, Params)
   elseif Params.SequencePath then
@@ -411,14 +413,13 @@ function M:ReplaySequence()
   end
 end
 
-local function StopSequenceInternal(self, KeepVar)
+local function StopSequenceInternal(self)
   self.ArmoryHelper:RemoveTimer("DelayUnpauseGame")
   local Player = self.SequenceInfo.Player
   self.LastSequenceInfo = self.SequenceInfo
   self.SequenceInfo = nil
   self.IsPlayingSequence = false
   Player:StopMontage()
-  Player:StopMVPSequence()
   if self.BeforeSequenceLocation then
     Player:K2_SetActorLocation(self.BeforeSequenceLocation, false, nil, false)
     self.BeforeSequenceLocation = nil
@@ -427,9 +428,11 @@ local function StopSequenceInternal(self, KeepVar)
     Player:K2_SetActorRotation(self.BeforeSequenceRotation, false, nil, true)
     self.BeforeSequenceRotation = nil
   end
+  Player:StopMVPSequence()
   if Player and IsValid(Player.MVPSequenceActor) then
     Player.MVPSequenceActor:K2_DestroyActor()
   end
+  Player.CharacterFashion:InitSkinLevelUpVisEffect(Player.CurrentSkinId)
   self:SetGamePauseIfNeed(true)
 end
 
@@ -511,7 +514,7 @@ end
 
 function M:AfterSequenceActorControllerEndViewTarget()
   local TopStackUI = UIManager(self.ViewUI):GetWidgetObjInTopStack()
-  if TopStackUI ~= self.ViewUI and not self:IsSequencePaused() then
+  if not self:IsUsedByUI(TopStackUI) and not self:IsSequencePaused() then
     self:StopSequence()
   end
 end
@@ -563,6 +566,20 @@ function M:SetCharAccessoryOffset(AccessoryId, AccessoryType, Scale, Location, R
   if Scale then
     Trans.Scale3D = Scale
   end
+  local Rot = Trans.Rotation:ToRotator()
+  self.CurrentAppearanceInfo.AccessoryCustomParams[AccessoryId] = SerializeUtils:Serialize({
+    Position = {
+      X = Trans.Translation.X,
+      Y = Trans.Translation.Y,
+      Z = Trans.Translation.Z
+    },
+    Rotation = {
+      Pitch = Rot.Pitch,
+      Yaw = Rot.Yaw,
+      Roll = Rot.Roll
+    },
+    Scale = Trans.Scale3D.X
+  })
   local OriginTrans = self.ArmoryPlayer.CharacterFashion:GetAccessoryOriginOffset(AccessoryId)
   Trans = OriginTrans * Trans
   
@@ -711,6 +728,7 @@ function M:ChangeWeaponSkin(SkinId)
       else
         WeaponActor:InitWeaponSkin(SkinId)
       end
+      WeaponActor:OnWeaponFashion(self.CurrentWeaponAppearanceInfo.HyperCardLevel)
       WeaponActor:OnWeaponReady()
     end
     

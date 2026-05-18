@@ -2213,7 +2213,7 @@
   },
   {
     "id": 1116,
-    "name": "Notes on the Mirage (Ⅱ)",
+    "name": "Mirage Musings (Ⅱ)",
     "desc": "A book set down by a man of letters surnamed Shen. Its authenticity cannot be verified, but it remains an entertaining read. Much of the text has been lost to time. This is Part Ⅱ.",
     "icon": "T_Read_East01",
     "res": [
@@ -2279,6 +2279,179 @@
           21880.88,
           -42970.92
         ]
+      }
+    ]
+  },
+  {
+    "id": 1118,
+    "name": "Bloomfield Station Workers' Menu",
+    "desc": "A printed poster found in the underground ironworks beneath Bloomfield Station. It appears to have been ripped down from wherever it was originally posted and tossed aside. Whoever removed it was clearly furious about its contents; when unfolded, even the corners are flecked with something that looks suspiciously like spit...",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000118,
+        "type": "Drop",
+        "text": "Meals Provided at Bloomfield Station\n\nBreakfast: black bread, water\nLunch: boiled potatoes, bean soup\nDinner: no additional meal provided. Workers assigned to overnight duty may collect one portion of pickled vegetables from the gatehouse.\n\nNotice\n\n1. Under the Long Schedule, breakfast is distributed from 8:30 to 9:00. Under the Short Schedule, breakfast is distributed from 9:00 to 9:30. Lunch is served from 12:00 to 13:00 under both schedules. All times are determined by station clocks. Workers who report for duty after 6:00 are not entitled to meals that day.\n2. Meal collection closes five minutes before the end of the meal period. Workers arriving after that time will not be served. When the work bell sounds, the canteen gates will be closed. Any worker who fails to return to their post on time will receive one demerit. Three demerits will result in dismissal.\n3. Food may not be taken out of the canteen. Eating while on duty is prohibited. Unfinished food may not be taken back to the workplace.\n4. Rejoining the queue to collect additional food is prohibited. Offenders will be charged that day's meal fee.\n5. Child labourers may not eat while seated. Part-time workers are not authorised to enter the canteen.\n6. Disruption of order in the canteen is prohibited, including, but not limited to: chatting, fainting, vomiting, quarrelling, queue-jumping, and breastfeeding.\n7. Meal periods are determined by the bells. When the warning bell sounds, workers must begin leaving the canteen. When the work bell sounds, all workers must already be at their assigned posts for attendance inspection by the foreman.\n8. Workers may not begin eating until food distribution has ended. Note: once the warning bell sounds, workers must stop eating, return their trays and utensils, and clean their places before leaving.\n9. Workers may bring their own food, provided it is consumed in the canteen during the designated meal period. All food must be registered before entry into the canteen. In the event of diarrhoea or similar symptoms, the Station accepts no responsibility. Anyone who sees another worker bring in unregistered food may report them to the guard on duty.\n\n...\n\n(I thought this was just an ordinary workers' menu, but there's barely anything about the food. Most of the poster is taken up by cruel, pointless rules... Working conditions at Bloomfield Station must be appalling.)",
+        "srId": 106301
+      }
+    ]
+  },
+  {
+    "id": 1119,
+    "name": "Bloomfield Station Recruitment Notice",
+    "desc": "A factory recruitment poster displayed at the station entrance. Its claims are emphatic, its tone fervent — enough to stir the blood of any young reader. Strangely, someone has scrawled a smiley face across it... perhaps in wholehearted approval of its message.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000119,
+        "type": "Drop",
+        "text": "Linking the far south to the distant north, bridging distance and dreams — our criss-crossing railways span the land, and our stations shine like stars across the vast expanse of Hyperborea. Loyal subjects of His Majesty, let us stand as one, march forward hand in hand, and forge the future of the Hyperborean railways with our own hands!\nBloomfield Station warmly welcomes all who meet the following requirements:\n1. Hardworking, dependable, disciplined, of good character, and eager to build a better future\n2. No restrictions on age, gender, race, or previous work experience\n\nWhat we offer:\n1. Guidance from veteran workers with more than twenty years of experience. Whatever you wish to learn, you can learn here.\n2. A most stable wage, paid in full and never late.\n3. Daily meals provided on schedule, so every hardworking labourer is kept well fed.\n4. A united and friendly workplace. Here, rank and race are left at the door. From the moment you arrive, you are one of us. We welcome every citizen loyal to Hyperborea.\n\nJoin Bloomfield Station and begin a new chapter in your life. Even if you cannot fight for His Majesty's glory on the battlefield, you may still prove your worth here. Bloomfield Station needs you. So too does the future of Hyperborea.\nJoin us! Join the glorious cause!\n\n(What a stirring piece of recruitment propaganda... Anyone reading it would surely be swept up in its fervour. The terms it promises even sound rather appealing.)",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1120,
+    "name": "My Will",
+    "desc": "A plain sheet of white paper. The writing is crooked and uneven, the lines slanting across the page with no proper order. Punctuation appears only here and there, wherever the writer happened to remember it. Wrong words and misspellings appear throughout. You can still make out what it says, but as a will, it contains no instructions worth carrying out — only a rambling account of a life that seems to have left nothing behind.",
+    "icon": "T_Read_03",
+    "res": [
+      {
+        "id": 2000120,
+        "type": "Drop",
+        "text": "Today I am going to write my will\nI still dont really know what a will is. I heard the fine lords saying it when they walked past. There was an old man dying and they said he had to write his will before he went. I didnt understand it much, but it sounded like something fancy. They all sounded happy too, like the old man dying and writing his will was a good thing. So before I die I ought to write a will too\nI am probly not even old enough for that. At the ironworks they call the gate man that old bastard. Some people even call the stationmaster that when they got enough guts. But nobody ever called me old. They call me kid, oi you, or that Charon there\nBut that dont stop me dying. And it dont stop me writing a will neither\nOnly I still havent thought what to write. I never had much schooling. I dont know how long I was in school for. Not long I guess. I got sent out to work soon enough. There was no other way. My ma was dying then and she needed money so I stopped going to school and went to work\nBut she died in the end anyway\nSo thats me, a useless Karon. I am bad at working and bad at talking when people talk to me. I think maybe I am no use at all... No, not no use. I am good for getting yelled at. Maybe people feel better after they yell at me. My dad does. When he drinks he yells at me, then he hits me, then the next day he says sory to me. Sometimes I think he does it on purpose. He just wants to hit somebody and nobody else will let him\nI keep thinking if anyone will be sad after I die. I guess my dad will. He wont have anyone to hit after that. I need a good way to die. One where there is still some money after. But I havent thought of one yet. I hope my dying can at least buy my dad a bottle of wine, or else I really am too useless. I wish I could die like that old man the fine lords were talking about. They all sounded so happy, like the old man dying was a good thing\nAlright. I went off again. I have to think of a good way to die. But I still havent thought of one. Maybe if I wait a bit I wont want to die any more\nBut its so f***ing funny. I wrote all this and I still cant think of one thing I want to live for... Forget it then. I will just die\nAlright that is all for my will. I dont know what else to write. If I could get that old mans will maybe I could copy it and make mine look better. But I cant get it obviously. Anyway that is all. I am going to think how to do it now",
+        "srId": 106301
+      }
+    ]
+  },
+  {
+    "id": 1121,
+    "name": "Steamwhistle Salon Code of Conduct",
+    "desc": "A shared document circulated among members of the Steamwhistle Salon, containing a series of thoroughly absurd rules of conduct. The first few pages are neatly written and clearly structured, setting out the Salon's existing rules and internal systems. Between the lines and across the margins, handwritten notes have been crammed into every spare inch — fervent, almost fanatical declarations of devotion to their beloved Stationmaster.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000121,
+        "type": "Drop",
+        "text": "1. When addressing His Honour, Stationmaster Eisenbahn, members must use the proper honorific in full.\n(All hail Stationmaster Eisenbahn!)\n(That right there is a textbook mistake. The full form is \"His Honour, Stationmaster Eisenbahn\"! Not a single word may be omitted!)\n\n2. All attention must remain on His Honour, Stationmaster Eisenbahn. Members are not to bring up other public figures, including opera stars, stage actors, and the like.\n(*a name scratched out* has been an embarrassment lately. How can someone act that badly and still call themselves a professional? Unlike His Honour, Stationmaster Eisenbahn — he never lets us down.)\n(Didn't we have a rule about not mentioning other public figures? Why is this one still breaking the rules? Don't let me find out who wrote this.)\n\n3. Memorise His Honour, Stationmaster Eisenbahn's birthday, height, body measurements, and weight.\n(Latest update — His Honour, Stationmaster Eisenbahn, has lost another kilo. Current weight: 73 kg.)\n(He's lost weight again from working so hard... Breaks my heart. What are the people around him even doing? How did no one notice?)\n(Working hard? Entertaining foreign businesswomen, more like!)\n(Found the anti. Get out. This handbook is for Salon members only.)\n(Lol. People are actually spreading romance rumours about His Honour? Everyone knows there's room in his heart only for work.)\n\n4. Members of the Steamwhistle Salon must support one another and must not hoard memorabilia connected to His Honour, Stationmaster Eisenbahn, including cigarette cases, posters, and similar items.\n\n5. The sale of unauthorised merchandise featuring His Honour, Stationmaster Eisenbahn, is strictly forbidden. Offenders will bear all consequences.\n\n...\n\n54. Members must actively safeguard the reputation of His Honour, Stationmaster Eisenbahn, and firmly oppose all attempts to belittle him, smear his name, slander him, or spread malicious rumours. If necessary, extreme measures may be employed.\n\n(So... throwing bricks is allowed?)\n(You could, but that's terribly ungentlemanly. I have connections at the Security Bureau — write the name here and I'll take care of them.)\n\n(I'm new... there are way too many rules. If I can't memorise them all, can I write cheat notes?)\n(How can you fail to remember this little? What are you, a plant from a rival fan club?)",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1122,
+    "name": "Daily Activity Report: His Honour, Stationmaster Eisenbahn",
+    "desc": "An activity report concerning Eisenbahn, with precise records of times, locations, and observed activities. Written in a detached, clinical tone, it records his movements and routines in exhaustive detail — as if the author were a shadow trailing a few steps behind him.\nIts complete lack of personal feeling stands in stark contrast to the usual fervour of the Steamwhistle Salon, giving the document an oddly suspicious quality.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000122,
+        "type": "Drop",
+        "text": "Daily Activity Report: His Honour, Stationmaster Eisenbahn\n\n12 September, Clear — Bloomfield Station Freight Yard\nApprox. 10:00 — Subject observed in the mid-rear section of the freight yard. Accompanied by four guards. Engaged in conversation with officials from Icelake. Subject repeatedly directed his gaze into the interiors of freight carriages.\n\n25 September, Overcast — Station Concourse\n15:00 — Subject appeared at the ticket gate in disguise. Wearing a checked cap with a long peak and brown-tinted sunglasses. Behaviour deemed suspicious.\n\n2 October, Cloudy, Clearing Later — Bloomfield Station Freight Yard\n01:40 — An unauthorised train entered the station. Subject not sighted. Members of his personal guard were present. Incident confirmed to be closely connected to the meeting on 12 September.\n\n5 October, Rain — Bloomfield Station Materials Yard\nSubject not sighted. An intoxicated merchant was observed loitering in the area, alleging deception and betrayal in connection with a transaction. The individual later left the station. Violent assault suspected thereafter.\n\n27 October, Clear — Platform\nSubject appeared in full military uniform. Offered formal greetings to boarding passengers and remained on site to see the train off. Presentation stable. No abnormalities observed.\n\n...",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1123,
+    "name": "The Sacred Ledger",
+    "desc": "A soft-bound ledger containing no ordinary income or expenditure records. Instead, it serves as the Steamwhistle Salon's main channel for exchanging and trading merchandise related to their beloved idol, Stationmaster Eisenbahn.\nTo those who worship Eisenbahn with near-fanatical devotion, the ledger is more precious than their own lives — a \"Sacred Ledger\" not to be defiled.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000123,
+        "type": "Drop",
+        "text": "In a neat hand: Looking to buy His Honour, Stationmaster Eisenbahn's 2nd Anniversary Poster. 50 silver.\nIn a hasty hand: That little for a 2nd Anniversary? You couldn't even get this year's poster for that.\nIn a cramped, cursive hand: 80 silver. Deal or no deal?\nIn a neat hand: Sorry... that's more than I'm willing to pay.\n\nIn a broken, uneven hand: Anyone want His Honour, Stationmaster Eisenbahn's Birthday Commemorative Cigarettes? No cigarette pack, just the cigarettes.\nIn a neat hand: What's the point of buying just the cigarettes?\nIn a broken, uneven hand: You can smoke the same kind as His Honour, Stationmaster Eisenbahn.\n\nIn a bold, forceful hand: His Honour, Stationmaster Eisenbahn's 5th Anniversary Commemorative Stamp, rubbing edition. 50 silver. Trade in person tomorrow at 15:00.\nIn a childish hand: \"Rubbing edition\"? Yeah, right. Isn't that just a knock-off you made yourself?\nIn a neat hand: Do not defile the Sacred Ledger. Keep this nonsense out of it!\n\n...\nIn an elegant hand: His Honour, Stationmaster Eisenbahn will appear on the platform tomorrow afternoon. Further details available by private trade.\n\nIn a light, rounded hand: His Honour, Stationmaster Eisenbahn's 10th Anniversary Photography Event. Looking for a partner. I'll bring the camera; you take the photo. I'm a terrible photographer.\n\nIn a sharp, angular hand: His Honour, Stationmaster Eisenbahn's newcomer welcome event souvenir available. Leave contact details if interested.\nIn a childish hand: Where did you even get those? The chairman said no reselling. Consider this a warning.",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1124,
+    "name": "The Invincible Stationmaster",
+    "desc": "A serial novel with a sloppy title, set against the backdrop of the decades-old war between Hyperborea and Elysium, centring on the adventures of a Hyperborean boy. Published as a companion title to The Invincible Legion Chief, it is a favourite among the Empire's youth.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000124,
+        "type": "Drop",
+        "name": "The Invincible Stationmaster: Volume Ⅰ",
+        "text": "Chapter 189: The Rails Will Stretch Ever Farther\n\n\"Stationmaster Leo, is there truly no way to increase this station's capacity fivefold?\"\nLeo set down the Minister of Transport's letter and let out a quiet sigh.\nIt was not the minister's seemingly unreasonable demand that weighed on him. Leo knew all too well that, with the front lines mired in bitter fighting, a fivefold increase was not merely reasonable. It was necessary.\nThe railways were the veins of Hyperborea. Through them flowed supplies, weapons, equipment, and legionaries bound for every corner of the Empire, carrying hot lifeblood through its body without pause.\nAs stationmaster, Leo knew better than anyone that the Empire's current rail capacity was nowhere near enough to meet the needs of the front. Without a dramatic increase in efficiency, the soldiers fighting there might soon find themselves short of guns and ammunition, forced to charge the enemy with nothing but their fists.\nHyperborean soldiers would remain brave and unyielding even then. But Leo, entrusted with the Empire's transport lifeline, knew it was his duty to do everything in his power to spare his countrymen at the front needless sacrifice.\nHe picked up his communicator, his mind already racing through ways to improve the station's efficiency.\n\"Expand the station... centralise dispatch... refit passenger trains for military freight...\"\nHe opened a channel and began assigning tasks to his subordinates according to their strengths.\n\"Kate, you have the contacts. Gather every available hand you can find. I'll bring in engineers from the Aeolipile, and together we'll lay the new tracks.\"\n\"Understood.\"\n\"Wolfe, you know machinery. Put together an emergency repair crew. If a train breaks down, I want it dragged off the track and repaired immediately.\"\n\"Understood.\"\n...\nOnce all the tasks had been assigned, Leo rolled a cigarette and gazed south, towards the Elysian Church.\n\"One day, I will see the Empire's railways laid all the way to the Tower of Elysium. I will see the Empire's veins reach every last inch of the false god's lands.\"\nLeo tucked the cigarette away, turned, and strode back towards the station. A fierce wind swept past, snapping his greatcoat behind him, but his stride never faltered.\n\"I'll save this cigarette for that day.\"\n\nCan Leo carry out his superiors' order? Can his station bear the burden of sustaining the front? The saga continues in the next instalment of The Invincible Stationmaster.",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1125,
+    "name": "Flodia Bloomfield Station Annual Accounts Ledger",
+    "desc": "A ledger apparently left in the station's left-luggage office by Handy, who was later executed on Eisenbahn's orders. Packed with figures and complex entries, it is enough to make your head spin at a glance. What remains unclear is why it was enough to cost Handy his life.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000125,
+        "type": "Read",
+        "text": "Request Ⅰ\nRoutine Maintenance of Bloomfield Station\nBudget: 100,000 gold coins\nDecision: Denied\nNotes: Last year's maintenance budget was 80,000 gold coins. Some increase is justified given the station's age, but this is still far too much. Keep your spending under control. Some parts now cost more to maintain than to replace. I have a list here — inspect them accordingly.\n\nRequest Ⅱ\nThe Alchemy Academy has requested funding from the station for the development of its newest locomotive. If successful, it will be put into service at Bloomfield Station first.\nBudget: 245,700 gold coins\nDecision: Reduced budget approved — 45,700 gold coins\nNotes: All those odd figures make it seem convincing, don't they? They requested sponsorship from us under the same pretext a few years ago. Then last year, when I visited the stationmaster in Dismania, I learned they had made the same promise to every station of any real size. They are simply trying to squeeze money out of us. Still, we cannot afford an open confrontation with them. Give them a token sum and close the matter.\n\nRequest Ⅲ\nThe Steamwhistle Salon requests funding for activities promoting Stationmaster Eisenbahn's public image.\nBudget: 10,000 gold coins\nDecision: Denied\nNotes: This organisation has nothing to do with me. If they submit another request, do not bring it to my desk. Reject it outright.\n\nRequest Ⅳ\nImprovement of labour conditions for station workers\nBudget: 10,000 gold coins\nDecision: Increased to 30,000 gold coins\nDirective: Redirect the amount cut from routine maintenance to this project. Proceed under the usual arrangements. Full authorisation granted."
+      }
+    ]
+  },
+  {
+    "id": 1126,
+    "name": "Aurora Express Hijacking Incident Report",
+    "desc": "A report alarming enough to give officials across the Empire a collective headache.",
+    "icon": "T_Read_03",
+    "res": [
+      {
+        "id": 2000126,
+        "type": "Drop",
+        "text": "The incident occurred at 09:00 yesterday morning. Princess Flodia departed from Platform Ⅰ aboard the Jackdaw, bound for the Imperial Capital, Dismania.\nOne of the perpetrators, an Icelake Phoxhunter whose identity has yet to be confirmed, had boarded the Gale at 08:00, also bound for Dismania. Roughly three hours after departure, the Jackdaw overtook the Gale. The Phoxhunter seized the opportunity to leap aboard the Jackdaw. Taking advantage of the relatively light guard presence on the roof, they entered the carriage from above, seized Princess Flodia, and jumped with her onto the Aurora Express, another train travelling on an adjacent track.\n\nThe Aurora Express was then hijacked by Katya of the Hazering, one of the leaders of the Forsakens, known by the codename \"Beast-King\". After the hijacking began, the 6th Legion stationed in the Cocytus Region immediately dispatched the airship Deepwinter in response. Katya used Princess Flodia as a hostage to prevent the airship from engaging. She later used the Aurora Express's main cannon to strike Deepwinter, and the blast also ignited a Heaventree in southern Cocytus.\nA violent confrontation then broke out between Katya and the Phoxhunter, presumably over what was to be done with Princess Flodia. Katya was later extracted by members of the Forsakens. The Phoxhunter's whereabouts remain unknown, and they are presumed to have been killed in the locomotive explosion.\n\nThe incident caused significant losses. The airship Deepwinter crashed, and the Aurora Express's locomotive was wrecked beyond repair.\nIn addition, dense airborne particulates released by the burning Heaventree will render the airspace between Cocytus and Dismania impassable for a considerable period. Should the Forsakens launch a large-scale uprising during this time, the Empire will have difficulty redeploying airships from across its territory to suppress the unrest.\nPrincess Flodia's current whereabouts are unknown. However, according to passengers aboard the Aurora Express who saw her during the incident, she does not appear to have been caught in the locomotive explosion.\n\nThe incident resulted in the deaths of more than a dozen civilians, with over forty others injured. The conductor, driver, and many train guards were killed in action while resisting the Forsakens. We honour these brave souls. The Empire will see the demons of the Forsakens pay blood for blood.\nAll glory to our Emperor!\n\nAttachment: Civilian Victims, 13 Total\nJeff Eysen — Icelake courier\nElena Horn — Icelake fur merchant\nCliff Miller — Dismania bank clerk\n...",
+        "srId": 101107,
+        "pos": [
+          358,
+          -1796
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1127,
+    "name": "遗落的纸张·百花车站",
+    "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
+    "icon": "T_TreasureMap_Chapter01",
+    "res": [
+      {
+        "id": 20650,
+        "type": "Drop",
+        "name": "百花车站·其一",
+        "text": "上次谢谢你给我打掩护，谁能想到，只是打个牌的工夫，刚好赶上工头来检查了……幸亏你反应快，就是下次能不能换个理由，闹肚子拉裤裆里听起来太不体面了……总之还是多谢，今天难得摸到一把好牌，要是被工头抓回去可就冤死了。赢的钱咱也有你一份，给你放在<H>炉子边上了</>，记得去拿。",
+        "srId": 106301
+      },
+      {
+        "id": 20651,
+        "type": "Drop",
+        "name": "百花车站·其二",
+        "text": "想知道轻松工作的秘诀吗？那就是——定期供奉古阿特拉西亚掌管铁轨的神！只要把供品放在<H>轨道附近</>，神明大人就能听到咱们的祈祷！最近我负责的列车的故障率就下降了不少，全都是拜这位神明大人所赐！",
+        "srId": 106301
+      },
+      {
+        "id": 20652,
+        "type": "Drop",
+        "name": "百花车站·其三",
+        "text": "太可怕了……下车的时候发现有位乘客的钱包掉在地上，我一时鬼迷心窍，把它偷偷拿走了……结果里面竟然装着许多符咒一样的奇怪纸张，上面画着好些黑色的月亮，怪瘆人的……听说这是艾利西安的邪教还是什么的标识来着？\n我把钱包放在了<H>医务室门口</>，这样能帮到有需要的人，应该能功过相抵了吧？艾利西安的七神……还是九神来着？总之看到我没拿钱的份上请不要诅咒我啊拜托了！",
+        "srId": 106001
+      },
+      {
+        "id": 20653,
+        "type": "Drop",
+        "name": "百花车站·其四",
+        "text": "（从折痕判断这原本是一封精心递上的信件，不过现在却以展开的状态躺在墙角杂物中，似乎是被谁随手扔掉了……）\n\n亲爱的<H>广播员</>小姐……希望您不会觉得冒昧，但如若不能将我此刻热烈的心情传达给您，我将会为此后悔一生！\n这是我第一次来到冰湖城，站内严厉的安保措施让我不知所措，不慎迷了路。幸运的是，您如同一位从天而降的天使般降临在我面前——即便被制服遮去了大半，我依然能瞥见您那如春日的花儿一般娇艳的粉色长发，您那与紫罗兰同色的优雅眼眸更是令我沉醉。\n虽然您为我指点了出站的方向，但为了再听一次您动听的嗓音，我决定留下来等待您提到的特别广播。\n我在您的<H>工作岗位</>上留下了一份小小的赠礼，作为对您辛勤工作的慰劳。当您甜美的嗓音响起，我将在站厅为您送上最响亮的喝彩！",
+        "srId": 106001
+      },
+      {
+        "id": 20654,
+        "type": "Drop",
+        "name": "百花车站·其五",
+        "text": "哼，你这家伙成天就知道蹲在轨道边里看火车，你的头发都被煤灰腌入味了！\n告诉你个好消息，我把一份零花钱藏在了附近的<H>树林下</>，金额足够买下两个月的连载。怎么样，这下你总愿意起身走走了吧？趁这个机会动动你那僵硬的身体，相信我，你一定能从这个过程中感受到大自然的乐趣！",
+        "srId": 106001
       }
     ]
   }

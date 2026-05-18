@@ -52,7 +52,11 @@ function AprilFoolDayRewardModel:SetRewardParams()
             if RewardInfo and RewardInfo.Type and RewardInfo.Type[1] and RewardInfo.Type[1] == "CharAccessory" then
               local AccessoryId = RewardInfo.Id[1]
               local UIManager = GWorld.GameInstance:GetGameUIManager()
-              UIManager:LoadUINew("ArmorySkin", {Type = "Char", AccessoryId = AccessoryId})
+              UIManager:LoadUINew("ArmorySkin", {
+                Type = "Char",
+                AccessoryId = AccessoryId,
+                IsPreviewMode = true
+              })
             end
           end
         end,

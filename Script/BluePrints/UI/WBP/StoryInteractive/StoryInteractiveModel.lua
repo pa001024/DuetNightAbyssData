@@ -200,11 +200,8 @@ function M:HasAnyInteractive(NpcId)
 end
 
 function M:GetInteractiveName(NpcId)
-  local NpcData = DataMgr.Npc[NpcId]
-  if not NpcData then
-    return
-  end
-  local Name = NpcData.UnitName
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  local Name = GameState and GameState:GetNpcName(NpcId)
   local InteractiveInfos = self:GetNpcStorylineInteractives(NpcId)
   local Count = SimpleTableCount(InteractiveInfos)
   if Count > 1 then

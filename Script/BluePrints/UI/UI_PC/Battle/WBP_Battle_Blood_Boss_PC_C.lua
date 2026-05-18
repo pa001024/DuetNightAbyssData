@@ -19,9 +19,17 @@ function WBP_Battle_Blood_Boss_PC_C:InitBossUI(Owner, IsBossInPart, BossUIType)
   self.IsBossInPart = IsBossInPart
   self.BossUIType = BossUIType
   self:K2_SetBuffsOwner(self.Owner)
+  self.DelayInitBossBloodUI_FailCount = 0
   
   local function DoInit()
     if not self.Owner or not self.Owner.BillboardComponent then
+      self.DelayInitBossBloodUI_FailCount = self.DelayInitBossBloodUI_FailCount + 1
+      DebugPrint("WBP_Battle_Blood_Boss_PC_C InitBossUI: DoInit failed ", self.DelayInitBossBloodUI_FailCount, " times.")
+      if not self.Owner then
+        DebugPrint("self.Owner is nil")
+      elseif not self.Owner.BillboardComponent then
+        DebugPrint("self.Owner.BillboardComponent is nil")
+      end
       return
     end
     self:RemoveTimer("DelayInitBossBloodUI")
@@ -31,6 +39,8 @@ function WBP_Battle_Blood_Boss_PC_C:InitBossUI(Owner, IsBossInPart, BossUIType)
       self.Owner.BillboardComponent.bNeedUpdateBossUI = true
     end
     self.InitSuccess = true
+    DebugPrint("WBP_Battle_Blood_Boss_PC_C InitBossUI: DoInit Success after failed ", self.DelayInitBossBloodUI_FailCount, " times.")
+    self.DelayInitBossBloodUI_FailCount = 0
   end
   
   if not self.Owner.BillboardComponent and IsClient(self) then
@@ -520,7 +530,7 @@ function WBP_Battle_Blood_Boss_PC_C:ShowPanelTip()
     return
   end
   self:SetPanelTipVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  EMUIAnimationSubsystem:EMPlayAnimation(self, self.TakeDown)
+  self:PlayAnimation(self.TakeDown)
   AudioManager(self):PlayUISound(self, "event:/ui/common/boss_shied_bar_loop", "BossShiedBarLoop", nil)
   if self.NowTN / self.MaxTN < 0.7 then
     self:PlayAnimation(self.Loop, 0, 0)
@@ -794,14 +804,6 @@ function WBP_Battle_Blood_Boss_PC_C:ShowBossBillboard(Message)
   self.Boss_Part:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
 
-function WBP_Battle_Blood_Boss_PC_C:CloseBossBlood()
-  self:Close()
-end
-
-function WBP_Battle_Blood_Boss_PC_C:OutHideTag()
-  self:AddTimer(self.BossTickTime, self.ResetBossToughness, false, 0, "ResetBossToughness")
-end
-
 function WBP_Battle_Blood_Boss_PC_C:SetProgressbarSegmentNum(Target, SegmentNum)
   if not Target then
     return
@@ -918,22 +920,6 @@ function WBP_Battle_Blood_Boss_PC_C:UnLoadSelf()
   end
 end
 
-function WBP_Battle_Blood_Boss_PC_C:SetEquipartition(PromptTime, ExecuteTime, NewPercent, bReduce, bConsiderTimeDilation)
-  if self.HpBar then
-    self.HpBar:SetEquipartition(PromptTime, ExecuteTime, NewPercent, bReduce, bConsiderTimeDilation, self.Owner)
-  end
-end
-
-function WBP_Battle_Blood_Boss_PC_C:InterruptEquipartition()
-  local Res = true
-  if self.HpBar then
-    Res = self.HpBar:InterruptEquipartition(self.Owner)
-  end
-  if not Res then
-    return
-  end
-end
-
 function WBP_Battle_Blood_Boss_PC_C:SetBossRecoverInfo(PromptTime, ExecuteTime, Percent)
   if self.HpBar then
     self:UpdateBossInvincibleState(true, "BossRecover")
@@ -955,12 +941,6 @@ function WBP_Battle_Blood_Boss_PC_C:InterruptBossRecover()
   end
   if not Res then
     return
-  end
-end
-
-function WBP_Battle_Blood_Boss_PC_C:UpdateEquipartitionInfo(NewPercent, bReduce)
-  if self.HpBar then
-    self.HpBar:UpdateEquipartitionInfo(NewPercent, bReduce)
   end
 end
 

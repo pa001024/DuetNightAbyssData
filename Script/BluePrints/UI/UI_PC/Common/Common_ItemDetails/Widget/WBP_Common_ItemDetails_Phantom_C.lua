@@ -1,10 +1,11 @@
 require("UnLua")
+local BattleUtils = require("Utils.BattleUtils")
 local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:InitItemInfo(ItemType, ItemId, UnitId)
   local PlayerAvatar = GWorld:GetAvatar()
   self.ParentWidget.Text_Phantom:SetText(GText("UI_Shadow_Name"))
-  local PhantomInfo = DataMgr.Resource[ItemId]
+  local PhantomInfo = BattleUtils.ResolveCharacterAttributeSwitchPhantomData(DataMgr.Resource[ItemId])
   if PhantomInfo and PhantomInfo.FunctionDes then
     self.Text_Describe:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     self.Text_Describe:SetText(GText(PhantomInfo.FunctionDes))
@@ -13,7 +14,7 @@ function M:InitItemInfo(ItemType, ItemId, UnitId)
   end
   local Level
   for _, v in pairs(PlayerAvatar.Chars) do
-    if v.CharId == DataMgr.Resource[ItemId].UseParam then
+    if v.CharId == PhantomInfo.UseParam then
       Level = v.Level
     end
   end

@@ -12,7 +12,7 @@ end
 
 function SubmitItemNode:Execute(Callback)
   local Avatar = GWorld:GetAvatar()
-  if Avatar and Avatar:GetIsSubmitComplete(self.SubmitId) then
+  if Avatar and Avatar:GetIsSubmitComplete(self.Context.QuestChainId, self.SubmitId) then
     Callback()
     return
   end
@@ -61,8 +61,8 @@ function SubmitItemNode:MountSubmitComponentToActor(Actor, Callback)
     return
   end
   if Actor.SubmitItemInteractiveComponent then
-    if Actor.SubmitItemInteractiveComponent.SetSubmitId then
-      Actor.SubmitItemInteractiveComponent:SetSubmitId(self.SubmitId)
+    if Actor.SubmitItemInteractiveComponent.InitSubmitComp then
+      Actor.SubmitItemInteractiveComponent:InitSubmitComp(self.SubmitId, false)
     end
     return
   end
@@ -85,7 +85,7 @@ function SubmitItemNode:MountSubmitComponentToActor(Actor, Callback)
       end
       if IsValid(Component) then
         Component:InitCommonUIConfirmID(self.InteractionId)
-        Component:SetSubmitId(self.SubmitId)
+        Component:InitSubmitComp(self.SubmitId, false)
         Component:BindSuccessCallback(Callback)
         Actor.SubmitItemInteractiveComponent = Component
       end
@@ -129,12 +129,6 @@ function SubmitItemNode:ClearGuide()
   if self.bGuideUIEnable then
     MissionIndicatorManager:ReactiveMissionIndicatorByNode(self)
   end
-end
-
-function SubmitItemNode:OnCancelTrack()
-end
-
-function SubmitItemNode:OnChooseTrack()
 end
 
 return SubmitItemNode

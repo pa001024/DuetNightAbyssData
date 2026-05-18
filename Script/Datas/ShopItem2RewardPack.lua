@@ -74,13 +74,16 @@ T.RT_15 = {
   [2] = T.RT_13
 }
 T.RT_16 = {
+  ShopItemId = 160169,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12175
+}
+T.RT_17 = {
   ShopItemId = 160164,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12152
-}
-T.RT_17 = {
-  [1] = T.RT_16
 }
 T.RT_18 = {
   ShopItemId = 160218,
@@ -95,240 +98,368 @@ T.RT_19 = {
   TypeId = 12061
 }
 T.RT_20 = {
+  ShopItemId = 160189,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12198
+}
+T.RT_21 = {
+  ShopItemId = 160191,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12200
+}
+T.RT_22 = {
+  ShopItemId = 160192,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12201
+}
+T.RT_23 = {
+  ShopItemId = 160193,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12202
+}
+T.RT_24 = {
   ShopItemId = 160226,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12153
 }
-T.RT_21 = {
+T.RT_25 = {
+  ShopItemId = 160173,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12184
+}
+T.RT_26 = {
   ShopItemId = 160213,
   ShopType = "Shop",
   SubTabId = 1605,
   TypeId = 12056
 }
-T.RT_22 = {
+T.RT_27 = {
   ShopItemId = 160212,
   ShopType = "Shop",
   SubTabId = 1605,
   TypeId = 12055
 }
-T.RT_23 = {
+T.RT_28 = {
+  ShopItemId = 160168,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12174
+}
+T.RT_29 = {
+  ShopItemId = 160167,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12173
+}
+T.RT_30 = {
+  ShopItemId = 160166,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12172
+}
+T.RT_31 = {
+  ShopItemId = 160165,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12171
+}
+T.RT_32 = {
   ShopItemId = 160210,
   ShopType = "Shop",
   SubTabId = 1605,
   TypeId = 12049
 }
-T.RT_24 = {
+T.RT_33 = {
   ShopItemId = 160211,
   ShopType = "Shop",
   SubTabId = 1605,
   TypeId = 12050
 }
-T.RT_25 = {
-  [1] = T.RT_24,
-  [2] = T.RT_23
+T.RT_34 = {
+  [1] = T.RT_33,
+  [2] = T.RT_32
 }
-T.RT_26 = {
+T.RT_35 = {
   ShopItemId = 160208,
   ShopType = "Shop",
   SubTabId = 1605,
   TypeId = 12047
 }
-T.RT_27 = {
+T.RT_36 = {
   ShopItemId = 160209,
   ShopType = "Shop",
   SubTabId = 1605,
   TypeId = 12048
 }
-T.RT_28 = {
-  [1] = T.RT_27,
-  [2] = T.RT_26
+T.RT_37 = {
+  [1] = T.RT_36,
+  [2] = T.RT_35
 }
-T.RT_29 = {
+T.RT_38 = {
+  ShopItemId = 160172,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12183
+}
+T.RT_39 = {
+  ShopItemId = 160171,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12182
+}
+T.RT_40 = {
+  ShopItemId = 160170,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12181
+}
+T.RT_41 = {
+  [1] = T.RT_40,
+  [2] = T.RT_39,
+  [3] = T.RT_38
+}
+T.RT_42 = {
+  ShopItemId = 160188,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12197
+}
+T.RT_43 = {
+  [1] = T.RT_42
+}
+T.RT_44 = {
   ShopItemId = 160163,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12168
 }
-T.RT_30 = {
-  [1] = T.RT_29
+T.RT_45 = {
+  [1] = T.RT_44
 }
-T.RT_31 = {
+T.RT_46 = {
   ShopItemId = 160147,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12144
 }
-T.RT_32 = {
-  [1] = T.RT_31
+T.RT_47 = {
+  [1] = T.RT_46
 }
-T.RT_33 = {
+T.RT_48 = {
   ShopItemId = 160146,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12143
 }
-T.RT_34 = {
-  [1] = T.RT_33
+T.RT_49 = {
+  [1] = T.RT_48
 }
-T.RT_35 = {
+T.RT_50 = {
   ShopItemId = 160125,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12121
 }
-T.RT_36 = {
-  [1] = T.RT_35
+T.RT_51 = {
+  [1] = T.RT_50
 }
-T.RT_37 = {
+T.RT_52 = {
   ShopItemId = 160107,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12023
 }
-T.RT_38 = {
-  [1] = T.RT_37
+T.RT_53 = {
+  [1] = T.RT_52
 }
-T.RT_39 = {
+T.RT_54 = {
+  ShopItemId = 160175,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12186
+}
+T.RT_55 = {
   ShopItemId = 160152,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12158
 }
-T.RT_40 = {
+T.RT_56 = {
   ShopItemId = 160151,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12157
 }
-T.RT_41 = {
+T.RT_57 = {
   ShopItemId = 160150,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12156
 }
-T.RT_42 = {
+T.RT_58 = {
   ShopItemId = 160149,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12155
 }
-T.RT_43 = {
+T.RT_59 = {
   ShopItemId = 160144,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12127
 }
-T.RT_44 = {
+T.RT_60 = {
   ShopItemId = 160142,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12125
 }
-T.RT_45 = {
+T.RT_61 = {
   ShopItemId = 160141,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12124
 }
-T.RT_46 = {
+T.RT_62 = {
+  ShopItemId = 160178,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12189
+}
+T.RT_63 = {
+  ShopItemId = 160177,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12188
+}
+T.RT_64 = {
+  ShopItemId = 160176,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12187
+}
+T.RT_65 = {
   ShopItemId = 160140,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12123
 }
-T.RT_47 = {
+T.RT_66 = {
   ShopItemId = 160128,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12130
 }
-T.RT_48 = {
+T.RT_67 = {
   ShopItemId = 160127,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12129
 }
-T.RT_49 = {
+T.RT_68 = {
   ShopItemId = 160114,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12112
 }
-T.RT_50 = {
+T.RT_69 = {
   ShopItemId = 160113,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12111
 }
-T.RT_51 = {
+T.RT_70 = {
+  ShopItemId = 160181,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12192
+}
+T.RT_71 = {
+  ShopItemId = 160180,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12191
+}
+T.RT_72 = {
   ShopItemId = 160103,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12103
 }
-T.RT_52 = {
+T.RT_73 = {
+  ShopItemId = 160174,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12185
+}
+T.RT_74 = {
   ShopItemId = 160155,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12161
 }
-T.RT_53 = {
+T.RT_75 = {
   ShopItemId = 160154,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12160
 }
-T.RT_54 = {
+T.RT_76 = {
   ShopItemId = 160148,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12154
 }
-T.RT_55 = {
+T.RT_77 = {
   ShopItemId = 160143,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12126
 }
-T.RT_56 = {
+T.RT_78 = {
   ShopItemId = 160102,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12102
 }
-T.RT_57 = {
+T.RT_79 = {
+  ShopItemId = 160190,
+  ShopType = "Shop",
+  SubTabId = 1601,
+  TypeId = 12199
+}
+T.RT_80 = {
   ShopItemId = 160110,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12026
 }
-T.RT_58 = {
+T.RT_81 = {
   ShopItemId = 160109,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12025
 }
-T.RT_59 = {
+T.RT_82 = {
   ShopItemId = 160108,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12024
 }
-T.RT_60 = {
-  [1] = T.RT_37,
-  [2] = T.RT_59,
-  [3] = T.RT_58,
-  [4] = T.RT_57
-}
-T.RT_61 = {
+T.RT_83 = {
   ShopItemId = 160145,
   ShopType = "Shop",
   SubTabId = 1601,
   TypeId = 12142
 }
-T.RT_62 = {
-  [1] = T.RT_61
+T.RT_84 = {
+  [1] = T.RT_83
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -340,90 +471,110 @@ return ReadOnly("ShopItem2RewardPack", {
   Char = T.RT_1,
   CharAccessory = {
     [10019] = {
-      [1] = T.RT_57
+      [1] = T.RT_80
     },
-    [10049] = T.RT_36,
-    [10067] = T.RT_62,
+    [10049] = T.RT_51,
+    [10067] = T.RT_84,
     [10072] = {
-      [1] = T.RT_55
+      [1] = T.RT_77
     },
-    [10080] = T.RT_32,
-    [10096] = T.RT_30,
-    [12124] = T.RT_34,
+    [10080] = T.RT_47,
+    [10096] = T.RT_45,
+    [12014] = T.RT_43,
+    [12124] = T.RT_49,
     [13001] = {
-      [1] = T.RT_43
-    },
-    [13022] = {
-      [1] = T.RT_42
-    },
-    [20001] = T.RT_38,
-    [20041] = T.RT_36,
-    [20057] = {
-      [1] = T.RT_54
-    },
-    [30008] = {
-      [1] = T.RT_58
-    },
-    [30019] = T.RT_36,
-    [30031] = T.RT_62,
-    [30035] = T.RT_30,
-    [40007] = {
       [1] = T.RT_59
     },
-    [40009] = T.RT_36,
-    [40033] = T.RT_62,
-    [40052] = T.RT_32
+    [13022] = {
+      [1] = T.RT_58
+    },
+    [20001] = T.RT_53,
+    [20041] = T.RT_51,
+    [20057] = {
+      [1] = T.RT_76
+    },
+    [20086] = {
+      [1] = T.RT_73
+    },
+    [30008] = {
+      [1] = T.RT_81
+    },
+    [30019] = T.RT_51,
+    [30031] = T.RT_84,
+    [30035] = T.RT_45,
+    [30044] = {
+      [1] = T.RT_54
+    },
+    [40007] = {
+      [1] = T.RT_82
+    },
+    [40009] = T.RT_51,
+    [40033] = T.RT_84,
+    [40052] = T.RT_47,
+    [40074] = T.RT_43
   },
   Draft = T.RT_1,
   Drop = T.RT_1,
   Hair = T.RT_1,
   HeadFrame = {
-    [10023] = T.RT_62,
-    [10029] = T.RT_30
+    [10023] = T.RT_84,
+    [10029] = T.RT_45,
+    [10039] = T.RT_43
   },
   HeadSculpture = T.RT_1,
+  IronTicket = T.RT_1,
   Mod = T.RT_1,
   Mount = T.RT_1,
   Pet = T.RT_1,
   Resource = {
+    [100] = {
+      [1] = T.RT_79,
+      [2] = T.RT_20
+    },
     [101] = {
-      [1] = T.RT_56,
-      [2] = T.RT_51,
-      [3] = T.RT_50,
-      [4] = T.RT_49,
-      [5] = T.RT_48,
-      [6] = T.RT_47,
-      [7] = T.RT_46,
-      [8] = T.RT_45,
-      [9] = T.RT_44,
-      [10] = T.RT_55,
-      [11] = T.RT_54,
-      [12] = T.RT_41,
-      [13] = T.RT_40,
-      [14] = T.RT_39,
-      [15] = T.RT_53,
-      [16] = T.RT_52,
-      [17] = {
-        ShopItemId = 160217,
-        ShopType = "Shop",
-        SubTabId = 1605,
-        TypeId = 12060
-      },
-      [18] = T.RT_19,
-      [19] = {
+      [1] = T.RT_78,
+      [2] = T.RT_72,
+      [3] = T.RT_69,
+      [4] = T.RT_68,
+      [5] = T.RT_67,
+      [6] = T.RT_66,
+      [7] = T.RT_65,
+      [8] = T.RT_61,
+      [9] = T.RT_60,
+      [10] = T.RT_77,
+      [11] = T.RT_76,
+      [12] = T.RT_57,
+      [13] = T.RT_56,
+      [14] = T.RT_55,
+      [15] = T.RT_75,
+      [16] = T.RT_74,
+      [17] = T.RT_73,
+      [18] = T.RT_64,
+      [19] = T.RT_63,
+      [20] = T.RT_62,
+      [21] = T.RT_71,
+      [22] = T.RT_70,
+      [23] = T.RT_19,
+      [24] = {
         ShopItemId = 160223,
         ShopType = "Shop",
         SubTabId = 1604,
         TypeId = 12062
       },
-      [20] = {
+      [25] = {
+        ShopItemId = 160217,
+        ShopType = "Shop",
+        SubTabId = 1605,
+        TypeId = 12060
+      },
+      [26] = T.RT_18,
+      [27] = {
         ShopItemId = 160219,
         ShopType = "Shop",
         SubTabId = 1604,
         TypeId = 12062
       },
-      [21] = T.RT_18,
-      [22] = {
+      [28] = {
         ShopItemId = 160216,
         ShopType = "Shop",
         SubTabId = 1605,
@@ -431,35 +582,39 @@ return ReadOnly("ShopItem2RewardPack", {
       }
     },
     [102] = {
-      [1] = T.RT_46,
-      [2] = T.RT_45,
-      [3] = T.RT_44,
-      [4] = T.RT_43,
-      [5] = T.RT_42,
-      [6] = T.RT_41,
-      [7] = T.RT_40,
-      [8] = T.RT_39,
-      [9] = {
+      [1] = T.RT_65,
+      [2] = T.RT_61,
+      [3] = T.RT_60,
+      [4] = T.RT_59,
+      [5] = T.RT_58,
+      [6] = T.RT_57,
+      [7] = T.RT_56,
+      [8] = T.RT_55,
+      [9] = T.RT_54,
+      [10] = T.RT_64,
+      [11] = T.RT_63,
+      [12] = T.RT_62,
+      [13] = {
         ShopItemId = 160220,
         ShopType = "Shop",
         SubTabId = 1604,
         TypeId = 12063
       },
-      [10] = T.RT_19,
-      [11] = {
+      [14] = T.RT_19,
+      [15] = T.RT_18,
+      [16] = {
         ShopItemId = 160224,
         ShopType = "Shop",
         SubTabId = 1604,
         TypeId = 12063
       },
-      [12] = T.RT_18,
-      [13] = {
+      [17] = {
         ShopItemId = 160207,
         ShopType = "Shop",
         SubTabId = 1605,
         TypeId = 12046
       },
-      [14] = {
+      [18] = {
         ShopItemId = 160206,
         ShopType = "Shop",
         SubTabId = 1605,
@@ -483,20 +638,40 @@ return ReadOnly("ShopItem2RewardPack", {
       }
     },
     [207] = {
-      [1] = T.RT_22
+      [1] = T.RT_31,
+      [2] = T.RT_30,
+      [3] = T.RT_29,
+      [4] = T.RT_28,
+      [5] = T.RT_27
     },
     [208] = {
-      [1] = T.RT_21,
-      [2] = T.RT_22
+      [1] = T.RT_26,
+      [2] = T.RT_27
     },
     [209] = {
-      [1] = T.RT_21
+      [1] = T.RT_26
     },
     [211] = {
-      [1] = T.RT_20
+      [1] = T.RT_25,
+      [2] = T.RT_24,
+      [3] = T.RT_23,
+      [4] = T.RT_22,
+      [5] = T.RT_21
     },
-    [1001] = T.RT_60,
-    [1003] = T.RT_60,
+    [1001] = {
+      [1] = T.RT_52,
+      [2] = T.RT_82,
+      [3] = T.RT_81,
+      [4] = T.RT_80
+    },
+    [1003] = {
+      [1] = T.RT_52,
+      [2] = T.RT_82,
+      [3] = T.RT_81,
+      [4] = T.RT_80,
+      [5] = T.RT_79,
+      [6] = T.RT_20
+    },
     [1004] = {
       [1] = {
         ShopItemId = 160101,
@@ -504,8 +679,8 @@ return ReadOnly("ShopItem2RewardPack", {
         SubTabId = 1601,
         TypeId = 12101
       },
-      [2] = T.RT_56,
-      [3] = T.RT_51,
+      [2] = T.RT_78,
+      [3] = T.RT_72,
       [4] = {
         ShopItemId = 160104,
         ShopType = "Shop",
@@ -530,8 +705,8 @@ return ReadOnly("ShopItem2RewardPack", {
         SubTabId = 1601,
         TypeId = 12110
       },
-      [8] = T.RT_50,
-      [9] = T.RT_49,
+      [8] = T.RT_69,
+      [9] = T.RT_68,
       [10] = {
         ShopItemId = 160115,
         ShopType = "Shop",
@@ -556,8 +731,8 @@ return ReadOnly("ShopItem2RewardPack", {
         SubTabId = 1601,
         TypeId = 12128
       },
-      [14] = T.RT_48,
-      [15] = T.RT_47,
+      [14] = T.RT_67,
+      [15] = T.RT_66,
       [16] = {
         ShopItemId = 160129,
         ShopType = "Shop",
@@ -576,31 +751,57 @@ return ReadOnly("ShopItem2RewardPack", {
         SubTabId = 1601,
         TypeId = 12133
       },
-      [19] = T.RT_46,
-      [20] = T.RT_45,
-      [21] = T.RT_44,
-      [22] = T.RT_55,
-      [23] = T.RT_43,
-      [24] = T.RT_54,
-      [25] = T.RT_42,
-      [26] = T.RT_41,
-      [27] = T.RT_40,
-      [28] = T.RT_39,
+      [19] = T.RT_65,
+      [20] = T.RT_61,
+      [21] = T.RT_60,
+      [22] = T.RT_77,
+      [23] = T.RT_59,
+      [24] = T.RT_76,
+      [25] = T.RT_58,
+      [26] = T.RT_57,
+      [27] = T.RT_56,
+      [28] = T.RT_55,
       [29] = {
         ShopItemId = 160153,
         ShopType = "Shop",
         SubTabId = 1601,
         TypeId = 12159
       },
-      [30] = T.RT_53,
-      [31] = T.RT_52,
-      [32] = T.RT_20
+      [30] = T.RT_75,
+      [31] = T.RT_74,
+      [32] = T.RT_25,
+      [33] = T.RT_73,
+      [34] = T.RT_54,
+      [35] = T.RT_64,
+      [36] = T.RT_63,
+      [37] = T.RT_62,
+      [38] = {
+        ShopItemId = 160179,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12190
+      },
+      [39] = T.RT_71,
+      [40] = T.RT_70,
+      [41] = T.RT_24
+    },
+    [1006] = {
+      [1] = T.RT_79
+    },
+    [1009] = {
+      [1] = T.RT_23,
+      [2] = T.RT_22,
+      [3] = T.RT_21
+    },
+    [3007] = {
+      [1] = T.RT_20
     },
     [3016] = {
       [1] = T.RT_19,
       [2] = T.RT_18
     },
-    [20008] = T.RT_28,
+    [15037] = T.RT_41,
+    [20008] = T.RT_37,
     [20013] = {
       [1] = {
         ShopItemId = 160221,
@@ -625,11 +826,14 @@ return ReadOnly("ShopItem2RewardPack", {
         ShopType = "Shop",
         SubTabId = 1605,
         TypeId = 12043
-      }
+      },
+      [5] = T.RT_23,
+      [6] = T.RT_22,
+      [7] = T.RT_21
     },
-    [20023] = T.RT_28,
-    [20027] = T.RT_25,
-    [20028] = T.RT_25,
+    [20023] = T.RT_37,
+    [20027] = T.RT_34,
+    [20028] = T.RT_34,
     [30102] = {
       [1] = {
         ShopItemId = 160309,
@@ -686,9 +890,12 @@ return ReadOnly("ShopItem2RewardPack", {
         TypeId = 12042
       }
     },
-    [41042] = T.RT_17,
-    [110001] = T.RT_38,
-    [110006] = T.RT_36,
+    [41042] = {
+      [1] = T.RT_17,
+      [2] = T.RT_16
+    },
+    [110001] = T.RT_53,
+    [110006] = T.RT_51,
     [110014] = {
       [1] = {
         ShopItemId = 160215,
@@ -703,10 +910,49 @@ return ReadOnly("ShopItem2RewardPack", {
         TypeId = 12057
       }
     },
-    [110015] = T.RT_34,
-    [110016] = T.RT_32,
-    [110017] = T.RT_30,
-    [110018] = T.RT_17,
+    [110015] = T.RT_49,
+    [110016] = T.RT_47,
+    [110017] = T.RT_45,
+    [110018] = {
+      [1] = T.RT_17
+    },
+    [110042] = T.RT_43,
+    [110051] = {
+      [1] = T.RT_31
+    },
+    [110052] = {
+      [1] = T.RT_30
+    },
+    [110053] = {
+      [1] = T.RT_29
+    },
+    [110054] = {
+      [1] = T.RT_28
+    },
+    [110055] = {
+      [1] = T.RT_16
+    },
+    [110056] = T.RT_41,
+    [1001102] = {
+      [1] = {
+        ShopItemId = 160182,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12193
+      },
+      [2] = {
+        ShopItemId = 160183,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12193
+      },
+      [3] = {
+        ShopItemId = 160184,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12193
+      }
+    },
     [1001503] = {
       [1] = {
         ShopItemId = 160122,
@@ -765,6 +1011,26 @@ return ReadOnly("ShopItem2RewardPack", {
         ShopType = "Shop",
         SubTabId = 1601,
         TypeId = 12119
+      }
+    },
+    [1003102] = {
+      [1] = {
+        ShopItemId = 160185,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12194
+      },
+      [2] = {
+        ShopItemId = 160186,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12194
+      },
+      [3] = {
+        ShopItemId = 160187,
+        ShopType = "Shop",
+        SubTabId = 1601,
+        TypeId = 12194
       }
     },
     [1003202] = {

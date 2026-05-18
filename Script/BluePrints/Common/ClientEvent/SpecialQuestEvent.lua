@@ -253,7 +253,6 @@ end
 function SpecialQuestEvent:RealFinishEvent(Result)
   DebugPrint("gyy@RealFinishSpecialQuestEvent ", self.SpecialQuestId)
   self:EndInteractive()
-  TalkSubsystem():InterruptAllLightTask()
   self:ExecuteFinishNodeCallback(Result)
   self:Destroy(Result)
   self:InitPlayerOnFinish()

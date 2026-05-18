@@ -10,17 +10,39 @@ end
 function Menu_Portrait_PC_C:OnLoaded(...)
 end
 
-function Menu_Portrait_PC_C:SetImage(Path, Id, IsHeadFrame)
+function Menu_Portrait_PC_C:SetImage(Path, Id, IsHeadFrame, IsDynamic)
+  if -1 == Id or nil == Id then
+    self.Img_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Panel_DynamicFrame:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.DynamicHead:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Icon_Empty:SetVisibility(UIConst.VisibilityOp.Visible)
+    return
+  end
   if nil == Path then
     Path = "/Game/UI/Texture/Dynamic/Atlas/Entrance/T_Entrance_Armory.T_Entrance_Armory"
   end
-  local ImageResource = LoadObject(Path)
-  if nil ~= ImageResource then
-    local Material = self.Img_Item:GetDynamicMaterial()
+  if IsDynamic then
+    self.Img_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local NewWidget = UIManager(self):CreateWidget(Path, true)
     if self.IsHeadFrame then
-      self.Img_Item:SetBrushResourceObject(ImageResource)
+      self.DynamicFrame:SetContent(NewWidget)
+      self.Panel_DynamicFrame:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     else
-      Material:SetTextureParameterValue("IconMap", ImageResource)
+      self.DynamicHead:SetContent(NewWidget)
+      self.DynamicHead:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+  else
+    self.Panel_DynamicFrame:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.DynamicHead:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local ImageResource = LoadObject(Path)
+    if nil ~= ImageResource then
+      self.Img_Item:SetVisibility(UIConst.VisibilityOp.Visible)
+      local Material = self.Img_Item:GetDynamicMaterial()
+      if self.IsHeadFrame then
+        self.Img_Item:SetBrushResourceObject(ImageResource)
+      else
+        Material:SetTextureParameterValue("IconMap", ImageResource)
+      end
     end
   end
   self.Icon_Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -86,7 +108,7 @@ function Menu_Portrait_PC_C:OnListItemObjectSet(Content)
   if -1 == Content.PortraitId then
     self.Img_Item:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
-  self:SetImage(Content.PortraitPath, Content.PortraitId, Content.IsHeadFrame)
+  self:SetImage(Content.PortraitPath, Content.PortraitId, Content.IsHeadFrame, Content.IsDynamic)
   if Content.IsHeadFrame then
     self:AddReddotListener("PortraitFrame", self.OnPortraitFrameReddotChange)
   else

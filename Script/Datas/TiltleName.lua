@@ -473,6 +473,10 @@ return ReadOnly("TiltleName", {
     TextMapContent = "直视神明的",
     TextMapId = "Title_10117"
   },
+  [10118] = {
+    TextMapContent = "芙罗拉的",
+    TextMapId = "Title_10118"
+  },
   [20001] = {
     TextMapContent = "力量",
     TextMapId = "Title_20001"
@@ -864,5 +868,13 @@ return ReadOnly("TiltleName", {
   [20098] = {
     TextMapContent = "姑奶奶",
     TextMapId = "Title_20098"
+  },
+  [20099] = {
+    TextMapContent = "火车王",
+    TextMapId = "Title_20099"
+  },
+  [20100] = {
+    TextMapContent = "芙罗拉",
+    TextMapId = "Title_20100"
   }
 })

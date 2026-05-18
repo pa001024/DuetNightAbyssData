@@ -107,7 +107,10 @@ function ServerMonsterSpawnManager:RealDestroyMonsterSpawn(UnitSpawnId)
 end
 
 function ServerMonsterSpawnManager:DungeonMonsterDead(MonsterInfo)
-  print("ServerMonsterSpawnManager:DungeonMonsterDead", MonsterInfo.CreatorId)
+  print("HTYServerTest111 ServerMonsterSpawnManager:DungeonMonsterDead", MonsterInfo.CreatorId, MonsterInfo.CreatorType, MonsterInfo.UnitId, MonsterInfo.UniqueId)
+  if MonsterInfo.CreatorType ~= "MonsterSpawn" then
+    return
+  end
   local MonsterSpawn = self.MonsterSpawnMap[MonsterInfo.CreatorId]
   if not MonsterSpawn then
     return

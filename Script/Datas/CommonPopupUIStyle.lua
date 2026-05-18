@@ -47,6 +47,10 @@ T.RT_15 = {
   [2] = "Item_Currency"
 }
 T.RT_16 = {
+  [1] = "Short_Text",
+  [2] = "WBP_Task_Dialog_Ticket_Content"
+}
+T.RT_17 = {
   [1] = "Item_Tip3",
   [2] = "Item_Tip2",
   [3] = "Item_Tip1"
@@ -131,6 +135,44 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     StyleId = "Announcement_new",
     UseTabTitle = true
+  },
+  Appearance_Archive_FenghuaDialog = {
+    ShowContent = {
+      [1] = "WBP_Appearance_Archive_FenghuaDialog"
+    },
+    StyleId = "Appearance_Archive_FenghuaDialog"
+  },
+  Appearance_ImportDyeDialog = {
+    ShowContent = {
+      [1] = "WBP_Appearance_ImportDyeDialog"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_1,
+    StyleId = "Appearance_ImportDyeDialog"
+  },
+  Armory_Dye_Num = {
+    ShowContent = {
+      [1] = "WBP_Armory_Dye_Num"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    StyleId = "Armory_Dye_Num"
+  },
+  Armory_Incarnon_ActiveDialog = {
+    ShowContent = {
+      [1] = "WBP_Armory_Incarnon_ActiveDialog"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_3,
+    StyleId = "Armory_Incarnon_ActiveDialog"
+  },
+  Armory_Incarnon_DescDialog = {
+    ShowContent = {
+      [1] = "WBP_Armory_Incarnon_DescDialog"
+    },
+    StyleId = "Armory_Incarnon_DescDialog"
   },
   Armory_Mod_Import_Dialog = {
     ShowContent = {
@@ -231,6 +273,13 @@ return ReadOnly("CommonPopupUIStyle", {
       [1] = "Item_SelectHint"
     },
     StyleId = "CheckDefault"
+  },
+  Com_Confirm_Item_Greytips = {
+    ShowContent = T.RT_4,
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_1,
+    StyleId = "Com_Confirm_Item_Greytips"
   },
   CombatData = {
     ShowContent = {
@@ -468,6 +517,13 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     StyleId = "Gift_ShopTarget_ChooseFriendContent"
   },
+  Guild_Information = {
+    BigSize = true,
+    ShowContent = {
+      [1] = "WBP_Guild_DialogApplyList"
+    },
+    StyleId = "Guild_Information"
+  },
   Impression_Shop_Confirm = {
     ShowContent = T.RT_4,
     ShowLeftButton = 1,
@@ -481,6 +537,13 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowRightButton = 1,
     ShowTip = T.RT_5,
     StyleId = "Impression_Shop_Confirm_1"
+  },
+  Input_WithTips1 = {
+    ShowContent = T.RT_7,
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_1,
+    StyleId = "Input_WithTips1"
   },
   Invitation_Exchange = {
     ShowContent = {
@@ -526,7 +589,7 @@ return ReadOnly("CommonPopupUIStyle", {
   LimitedPrizePool_DetailHistory = {
     BigSize = true,
     ShowContent = {
-      [1] = "LimitedPrizePool_DetailHistoryContent"
+      [1] = "WBP_Activity_LimitedPrizePool_DetailHistoryContent_Frame"
     },
     StyleId = "LimitedPrizePool_DetailHistory"
   },
@@ -666,6 +729,13 @@ return ReadOnly("CommonPopupUIStyle", {
     },
     StyleId = "Setting_EnhanceLog"
   },
+  ShareChannelPopUp = {
+    ShowContent = {
+      [1] = "WBP_Activity_Coop_ShareChannelPopUp"
+    },
+    StyleId = "ShareChannelPopUp",
+    UseTabTitle = true
+  },
   Shop_BuyPackagePart_1 = {
     ShowContent = T.RT_13,
     ShowLeftButton = 1,
@@ -747,6 +817,13 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_2,
     StyleId = "ShortTextDefault_4"
   },
+  ShortTextDefault_RedTips = {
+    ShowContent = T.RT_2,
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_3,
+    StyleId = "ShortTextDefault_RedTips"
+  },
   SkinPreview_Suit = {
     ShowContent = {
       [1] = "WBP_SkinPreview_Suit"
@@ -807,6 +884,26 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowTip = T.RT_5,
     StyleId = "WBP_Forging_ExchangePart"
   },
+  WBP_Guild_DialogDetails = {
+    ShowContent = {
+      [1] = "WBP_Guild_DialogDetails_Content"
+    },
+    StyleId = "WBP_Guild_DialogDetails"
+  },
+  WBP_Guild_DialogRole = {
+    ShowContent = {
+      [1] = "WBP_Guild_DialogRole_Content"
+    },
+    ShowLeftButton = 1,
+    ShowRightButton = 2,
+    StyleId = "WBP_Guild_DialogRole"
+  },
+  WBP_Guild_RewardPreview = {
+    ShowContent = {
+      [1] = "WBP_Guild_RewardPreview_Content"
+    },
+    StyleId = "WBP_Guild_RewardPreview"
+  },
   WBP_Login_OverSeaSever = {
     ShowContent = {
       [1] = "WBP_Login_OverSeaSeverContent"
@@ -831,6 +928,33 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowRightButton = 2,
     StyleId = "WBP_Set_MultipleLangContent_Dialog"
   },
+  WBP_Shop_OptionalDialog = {
+    ShowContent = {
+      [1] = "WBP_Shop_OptionalDialog_Content"
+    },
+    ShowTip = T.RT_1,
+    StyleId = "WBP_Shop_OptionalDialog"
+  },
+  WBP_Task_Conflict = {
+    ShowContent = {
+      [1] = "WBP_Task_Conflict_Content"
+    },
+    ShowRightButton = 2,
+    ShowTip = T.RT_8,
+    StyleId = "WBP_Task_Conflict"
+  },
+  WBP_Task_Dialog_Ticket_1 = {
+    ShowContent = T.RT_16,
+    ShowLeftButton = 1,
+    ShowRightButton = 1,
+    ShowTip = T.RT_3,
+    StyleId = "WBP_Task_Dialog_Ticket_1"
+  },
+  WBP_Task_Dialog_Ticket_2 = {
+    ShowContent = T.RT_16,
+    ShowRightButton = 1,
+    StyleId = "WBP_Task_Dialog_Ticket_2"
+  },
   WeaponResolveDialog = {
     ShowContent = {
       [1] = "WeaponResolve"
@@ -850,14 +974,14 @@ return ReadOnly("CommonPopupUIStyle", {
     ShowContent = T.RT_7,
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_16,
+    ShowTip = T.RT_17,
     StyleId = "common_dialog_input"
   },
   common_dialog_input_LayoutCustom = {
     ShowContent = T.RT_7,
     ShowLeftButton = 1,
     ShowRightButton = 2,
-    ShowTip = T.RT_16,
+    ShowTip = T.RT_17,
     StyleId = "common_dialog_input_LayoutCustom"
   },
   common_dialog_input_red = {

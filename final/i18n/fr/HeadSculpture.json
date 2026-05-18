@@ -216,6 +216,24 @@
     "icon": "T_Head_Suyi01"
   },
   {
+    "id": 20007,
+    "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Fuluo01"
+  },
+  {
+    "id": 20008,
+    "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Nifu01"
+  },
+  {
+    "id": 20009,
+    "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Suyi01"
+  },
+  {
     "id": 30001,
     "name": "Hébétude I",
     "desc": "Utilisable comme avatar.",
@@ -763,19 +781,19 @@
   },
   {
     "id": 30092,
-    "name": "Avatar : Gel instantané",
+    "name": "Avatar : Instant figé",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Icon_Head_0018"
   },
   {
     "id": 30093,
-    "name": "Avatar : Gel instantané – Doré",
+    "name": "Avatar : Instant figé – Doré",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Icon_Head_0017"
   },
   {
     "id": 30094,
-    "name": "Avatar : Gel instantané – Blanc sakura",
+    "name": "Avatar : Instant figé – Blanc sakura",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Icon_Head_0016"
   },
@@ -1018,5 +1036,143 @@
     "name": "Chroniques du temps",
     "desc": "Utilisable comme avatar.",
     "icon": "T_Head_Other0038"
+  },
+  {
+    "id": 30135,
+    "name": "冬日幻想",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0035"
+  },
+  {
+    "id": 30136,
+    "name": "铁匠困惑",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0036"
+  },
+  {
+    "id": 30137,
+    "name": "罪壤·晴蓝",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0030"
+  },
+  {
+    "id": 30138,
+    "name": "罪壤·鎏金",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0031"
+  },
+  {
+    "id": 30139,
+    "name": "罪壤·锈红",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0032"
+  },
+  {
+    "id": 30140,
+    "name": "祷音回廊·墨玉",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0029"
+  },
+  {
+    "id": 30141,
+    "name": "祷音回廊·黛蓝",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0037"
+  },
+  {
+    "id": 30142,
+    "name": "夜帷",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0033"
+  },
+  {
+    "id": 30143,
+    "name": "驶入夜幕",
+    "desc": "Utilisable comme avatar.",
+    "icon": ""
+  },
+  {
+    "id": 30144,
+    "name": "皎皎铁道周游",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Other0038"
+  },
+  {
+    "id": 30145,
+    "name": "银星奔流",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0038"
+  },
+  {
+    "id": 30146,
+    "name": "百花公主的肖像·专注",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0018"
+  },
+  {
+    "id": 30147,
+    "name": "舞会人偶",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0019"
+  },
+  {
+    "id": 30148,
+    "name": "利刃与玫瑰",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0020"
+  },
+  {
+    "id": 30149,
+    "name": "完美女仆的肖像·专注",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0021"
+  },
+  {
+    "id": 30150,
+    "name": "百花公主的肖像·思索",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0022"
+  },
+  {
+    "id": 30151,
+    "name": "关不住的飞鸟",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0023"
+  },
+  {
+    "id": 30152,
+    "name": "华彩殿堂",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0027"
+  },
+  {
+    "id": 30153,
+    "name": "金翎鸟",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0024"
+  },
+  {
+    "id": 30154,
+    "name": "践踏",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0025"
+  },
+  {
+    "id": 30155,
+    "name": "游击秽兽·溃散",
+    "desc": "Utilisable comme avatar.",
+    "icon": "T_Head_Art_0026"
+  },
+  {
+    "id": 40001,
+    "name": "诡异的光·闪烁",
+    "desc": "Utilisable comme avatar.",
+    "icon": ""
+  },
+  {
+    "id": 40002,
+    "name": "华彩殿堂·闪烁",
+    "desc": "Utilisable comme avatar.",
+    "icon": ""
   }
 ]

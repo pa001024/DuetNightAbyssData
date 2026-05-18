@@ -1,6 +1,7 @@
 require("UnLua")
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
+local AppearanceUtils = require("BluePrints.UI.WBP.Appearance.AppearanceUtils")
 local M = Class("BluePrints.UI.BP_UIState_C")
 M._components = {
   "BluePrints.UI.WBP.Armory.MainComponent.Armory_PointerInputComponent",
@@ -67,6 +68,8 @@ function M:Construct()
     Equipped = 1,
     Locked = 2
   })
+  self.Num_Fenghua:SetText(0)
+  self.Text_Fenghua:SetText(GText("UI_AppearanceScore_ScoreName"))
   self.Text_Show:SetText(GText("UI_Controller_Check"))
   rawset(self, "NoneAccessoryId", DataMgr.GlobalConstant.EmptyCharAccessoryID.ConstantValue)
   self.Btn_Dye:BindEventOnClicked(self, self.OnDyeBtnClicked)
@@ -179,7 +182,7 @@ end
 
 function M:OnBackgroundClicked()
   if self.bSelfHidden then
-    self:OnHideUIKeyDown()
+    return self:OnHideUIKeyDown()
   end
 end
 
@@ -228,7 +231,11 @@ function M:OnSkinItemClicked(Content)
   if Content == SelectedContent then
     return
   end
+  self:BeforeSelectSkin(Content)
   self:SelectSkinByContent(Content)
+end
+
+function M:BeforeSelectSkin(Content)
 end
 
 function M:OnSkinListSelectionChanged(Content, IsSelected)
@@ -251,6 +258,7 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self.Type = Params.Type
   self.OnCloseCallback = Params.OnCloseCallback
   self.Parent = Params.Parent
+  self.ParentActorController = Params.ActorController
   self.IsTargetUnowned = Params.IsTargetUnowned
   self.IsCharacterTrialMode = Params.IsCharacterTrialMode
   self.IsPreviewMode = Params.IsPreviewMode
@@ -258,13 +266,9 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, Params)
   self.OpenPreviewDyeFromChat = Params.OpenPreviewDyeFromChat
   self.OpenPreviewDyeFromShopItem = Params.OpenPreviewDyeFromShopItem
   self.OpenPreviewDyeFromChatColors = Params.Colors
-  if self.Parent and self.Parent.ActorController then
-    self.ActorController = self.Parent.ActorController
-    self.ActorController.ViewUI = self
-  end
   self:CreateTabConfig()
   self.UIName = self:GetUIConfigName()
-  if not self.ActorController then
+  if not self.ParentActorController then
     self.InAnimStyle = 1
   end
   if not self.InAnimStyle then
@@ -331,23 +335,45 @@ function M:CreateTabConfig()
   self:OnTabConfigCreated(self.TabConfig)
 end
 
-function M:Init(Params)
-  if not self.ActorController then
+function M:CreateActorController(Params)
+  if self.IsPreviewMode then
     self.IsPreviewMode = true
-    self.Target = self:CreatePreviewTargetData(Params)
-    Params.Target = self.Target
+    Params.Target = self.Target or self:CreatePreviewTargetData(Params)
+    self.Target = Params.Target
     Params.EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon
     Params.ViewUI = self
     self.ActorController = self:CreatePreviewActor(Params)
     self.ActorController:OnOpened()
-    self.TabConfig.Tabs = nil
-    self.TabConfig.LeftKey = nil
-    self.TabConfig.RightKey = nil
+  elseif self.ParentActorController then
+    self.ActorController = self.ParentActorController
+    self.ActorController:BindViewUI(self)
+    self.ActorController:SetCurrentViewUI(self)
+    self.SkipFirstUpdateMontage = true
+  else
+    local InitParams = {
+      ViewUI = self,
+      EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
+      bNeedEndCamera = false
+    }
+    if Params.Type == "Char" then
+      InitParams.Char = Params.Char or Params.Target
+    else
+      InitParams.Weapon = Params.Weapon or Params.Target
+    end
+    self.ActorController = ActorController:New(InitParams)
+    self.ActorController:OnOpened()
   end
+end
+
+function M:Init(Params)
+  self:CreateActorController(Params)
   if self.IsPreviewMode or self.IsCharacterTrialMode then
     self.TabConfig.DynamicNode = {"Back", "BottomKey"}
   end
   if self.IsPreviewMode then
+    self.TabConfig.Tabs = nil
+    self.TabConfig.LeftKey = nil
+    self.TabConfig.RightKey = nil
     self.WidgetSwitcher_BtnState:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.WidgetSwitcher_State:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
@@ -536,20 +562,21 @@ function M:UpdateSkinDetails(Content)
   end
   self.Text_Name:SetText(Content.Name)
   self.Text_Info:SetText(Content.Text)
+  self.Num_Fenghua:SetText(AppearanceUtils.CalcAppearanceScore(Content.ItemType, Content.Rarity) or "")
   self.Text_SkinName_World:SetText(Content.Name_World)
-  self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  self.Group_Icon:SetVisibility(ESlateVisibility.Collapsed)
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
   self.Tag_Quality:SetVisibility(ESlateVisibility.Collapsed)
   if Content.ElementType then
     local IconName = "Armory_" .. Content.ElementType
     local AttributeIcon = LoadObject("/Game/UI/Texture/Dynamic/Atlas/Armory/T_" .. IconName .. ".T_" .. IconName)
     self.Image_Element:SetBrushResourceObject(AttributeIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Group_Icon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   if Content.WeaponTypeIcon then
     local TagIcon = LoadObject(Content.WeaponTypeIcon)
     self.Image_Element:SetBrushResourceObject(TagIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Group_Icon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   if Content.CharName then
     self.Text_CharName:SetText(Content.CharName)
@@ -685,13 +712,11 @@ function M:UpdateFunctionBtn(Content, CurrentContent)
       self.Btn_Package_Open:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Btn_Package_Open:BindEventOnClicked(self, self.OnRightConfirmBtnClicked)
       self.RightConfirmBtnFunc = self.OnRightConfirmBtnClicked
-      if CurGoToShopState == GoToShopState.CanGoToShop then
-        self.Btn_Package_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-        self.Btn_Package_Buy:SetText(GText("UI_Skin_GotoBuy"))
-        self.Btn_Package_Buy:ForbidBtn(false)
-        self.Btn_Package_Buy:BindEventOnClicked(self, self.OnLeftConfirmBtnClicked)
-        self.LeftConfirmBtnFunc = self.OnLeftConfirmBtnClicked
-      end
+      self.Btn_Package_Buy:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Btn_Package_Buy:SetText(GText("UI_Skin_GotoBuy"))
+      self.Btn_Package_Buy:ForbidBtn(false)
+      self.Btn_Package_Buy:BindEventOnClicked(self, self.OnLeftConfirmBtnClicked)
+      self.LeftConfirmBtnFunc = self.OnLeftConfirmBtnClicked
     elseif CurGoToShopState == GoToShopState.CanGoToShop then
       self.Btn_Function:SetText(GText("UI_Skin_GotoBuy"))
       self.Btn_Function:ForbidBtn(false)
@@ -955,10 +980,12 @@ function M:UpdateAccessoryDetails(Content)
   if self.Type == CommonConst.ArmoryType.Char then
     Data = DataMgr.CharAccessory[Content.AccessoryId] or DataMgr.CharPartMesh[Content.AccessoryId]
     self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap[Data.AccessoryType] or ""))
+    self.Num_Fenghua:SetText(AppearanceUtils.CalcAppearanceScore(CommonConst.DataType.CharAccessory, Data.Rarity) or "")
   else
     Data = DataMgr.WeaponAccessory[Content.AccessoryId]
     self.Text_CharName:SetText(GText(UIConst.AccessoryTypeTextMap.WeaponAccessory))
     self:UpdateWeaponStanceFXInfo(Content)
+    self.Num_Fenghua:SetText(AppearanceUtils.CalcAppearanceScore(CommonConst.DataType.WeaponAccessory, Data.Rarity) or "")
   end
   self:UpdateAccessoryVideo(Data)
   if Data.Rarity and self.NameFont[Data.Rarity] and self[self.NameFont[Data.Rarity]] then
@@ -968,13 +995,13 @@ function M:UpdateAccessoryDetails(Content)
   self.Text_Info:SetText(GText(Data.Des))
   self.Text_SkinName_World:SetText(EnText(Data.Name))
   self.Text_Char_None:SetVisibility(ESlateVisibility.Collapsed)
-  self.Image_Element:SetVisibility(ESlateVisibility.Collapsed)
+  self.Group_Icon:SetVisibility(ESlateVisibility.Collapsed)
   self.Tag_Quality:SetVisibility(ESlateVisibility.Collapsed)
   local AccessoryIconPath = ArmoryUtils:GetCharNoneAccessoryIconPaths()[Data.AccessoryType]
   if AccessoryIconPath then
     local AccessoryIcon = LoadObject(AccessoryIconPath)
     self.Image_Element:SetBrushResourceObject(AccessoryIcon)
-    self.Image_Element:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.Group_Icon:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
   end
   if Data.Rarity then
     self.Tag_Quality:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
@@ -1023,6 +1050,7 @@ function M:OnBuyBtnClicked()
       }
     },
     ShowParentTabCoin = true,
+    SingleItemNotInteractive = true,
     RightCallbackObj = self,
     RightCallbackFunction = self.PurchaseAccessory
   }, self)
@@ -1078,7 +1106,7 @@ function M:InitAccessoryListCommon()
   local FilteredContents = {}
   for i = 1, Len do
     local Content = self.BP_AccessoryContents[i]
-    if Content.AccessoryId and Content.AccessoryType == Tab.AccessoryType and Content.AccessoryId ~= self.NoneAccessory.Id and (not Content.IsHide or self.IsPreviewMode) then
+    if Content.AccessoryId and (Content.AccessoryType == Tab.AccessoryType or self.Type == "Weapon" and Content.AccessoryType ~= CommonConst.WeaponAccessoryTypes.Accessory) and Content.AccessoryId ~= self.NoneAccessory.Id and (not Content.IsHide or self.IsPreviewMode) then
       table.insert(FilteredContents, Content)
     end
   end
@@ -1114,13 +1142,25 @@ end
 
 function M:OnModBtnClicked()
   if self.Type == CommonConst.ArmoryType.Weapon then
-    ModController:OpenView(ModCommon.ArmoryMod, self.Type, self.Target:HasTag("Melee") and "Melee" or "Ranged", {
+    ModController:SetActorController(self.ActorController)
+    local ModView = ModController:OpenView(ModCommon.ArmoryMod, self.Type, self.Target:HasTag("Melee") and "Melee" or "Ranged", {
       self.Target.Uuid
     }, nil, {
       Func = function()
+        ModController:SetActorController(self.ActorController)
         self:SetFocus()
       end
     }, ModCommon.MainUICase.Normal)
+    local PendingSelectMod = ModController:GetModel():GetAnyModById(self.ComparedContent.ModId)
+    if PendingSelectMod then
+      self:AddTimer(1, function()
+        ModController:SetSelectedStuff(PendingSelectMod.Uuid, nil, true)
+        local Content = ModView:GetContentBySelectStuff()
+        if IsValid(Content.UI) then
+          Content.UI:SetFocus()
+        end
+      end)
+    end
   end
 end
 
@@ -1320,11 +1360,6 @@ end
 function M:PlayOutAnim()
   self:StopAnimation(self.In)
   self:PlayAnimation(self.Out)
-  if self.Parent then
-    self.ActorController.ViewUI = self.Parent
-  end
-  if not self.IsPreviewMode or self.ActorController then
-  end
   AudioManager(self):SetEventSoundParam(self, "SkinOpen", {ToEnd = 1})
   self:BlockAllUIInput(true, "SP_DisplayOnly")
 end
@@ -1345,13 +1380,17 @@ function M:RealClose()
 end
 
 function M:Destruct()
+  ModController:SetActorController(nil)
   if self.ActorController then
-    if self.Parent then
-      self.ActorController.ViewUI = self.Parent
-    end
     self.ActorController:HidePlayerActor(self.UIName, false)
-    self.ActorController:UpdateCameraPPSetting()
-    self.ActorController:TryDestroySequenceActorController()
+    if self.ActorController ~= self.ParentActorController then
+      self.ActorController:UpdateCameraPPSetting()
+      self.ActorController:OnDestruct()
+    end
+    if self.ParentActorController then
+      self.ActorController:UnBindViewUI(self)
+    end
+    self.ActorController:ResetCurrentViewUI()
   end
   self:RemoveTimer("DelayInit")
   if IsValid(self.ComBgSwitch) then

@@ -62,7 +62,6 @@ function WBP_NpcSwitchMain_PC_C:Reset()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   self.PlayerCurrentTag = Player:GetCharacterTag()
   Player:SetActorHideTag("Npc", true)
-  Player:SetCanInteractiveTrigger(false)
   self.Platform = CommonUtils.GetDeviceTypeByPlatformName(self)
   self.CommonTabInfo = {}
   for key, TabInfo in pairs(DataMgr.ShowNpcTab) do
@@ -1054,7 +1053,6 @@ function WBP_NpcSwitchMain_PC_C:CloseMain()
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   controller:SetViewTargetWithBlend(Player, 0, UE4.EViewTargetBlendFunction.VTBlend_Linear, 0, false)
   Player:SetActorHideTag("Npc", false)
-  Player:SetCanInteractiveTrigger(true)
   self.SpecialEffectActor:K2_DestroyActor()
   self:PlayOutAnim()
 end

@@ -125,17 +125,17 @@ T.RT_57 = {ExploreGroupId = 7013101}
 T.RT_58 = {
   ExploreGroupComp = T.RT_57
 }
-T.RT_59 = {QuestChainId = 990103}
-T.RT_60 = {
-  QuestChainFinish = T.RT_59
+T.RT_59 = {QuestChainId = 110109}
+T.RT_60 = {QuestChainId = 100306}
+T.RT_61 = {
+  QuestChainUnFinish = T.RT_60
 }
-T.RT_61 = {QuestChainId = 110109}
-T.RT_62 = {QuestChainId = 100306}
-T.RT_63 = {
-  QuestChainUnFinish = T.RT_62
+T.RT_62 = {
+  QuestChainFinish = T.RT_60
 }
+T.RT_63 = {QuestChainId = 990103}
 T.RT_64 = {
-  QuestChainFinish = T.RT_62
+  QuestChainFinish = T.RT_63
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -518,6 +518,26 @@ return ReadOnly("TalkTrigger", {
   [20705] = {
     DialogueId = 60160005,
     TalkTriggerId = 20705,
+    TalkType = "UnimportGuide"
+  },
+  [20706] = {
+    DialogueId = 60160006,
+    TalkTriggerId = 20706,
+    TalkType = "UnimportGuide"
+  },
+  [20707] = {
+    DialogueId = 60160007,
+    TalkTriggerId = 20707,
+    TalkType = "UnimportGuide"
+  },
+  [20708] = {
+    DialogueId = 60160008,
+    TalkTriggerId = 20708,
+    TalkType = "UnimportGuide"
+  },
+  [20709] = {
+    DialogueId = 60160009,
+    TalkTriggerId = 20709,
     TalkType = "UnimportGuide"
   },
   [20801] = {
@@ -2281,6 +2301,53 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 510164,
     Type = "Impression"
   },
+  [510165] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701283_Xiaoen",
+    TalkId = 510165,
+    TalkTriggerId = 510165,
+    Type = "Impression"
+  },
+  [510166] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701284_Shidisen",
+    TalkId = 510166,
+    TalkTriggerId = 510166,
+    Type = "Impression"
+  },
+  [510167] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701285_Bulaike",
+    TalkId = 510167,
+    TalkTriggerId = 510167,
+    Type = "Impression"
+  },
+  [510168] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701287_FasionMaiden",
+    TalkId = 510168,
+    TalkTriggerId = 510168,
+    Type = "Impression"
+  },
+  [510169] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701288_ZhengFeishi",
+    TalkId = 510169,
+    TalkTriggerId = 510169,
+    Type = "Impression"
+  },
+  [510170] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701289_Luoyi",
+    TalkId = 510170,
+    TalkTriggerId = 510170,
+    Type = "Impression"
+  },
+  [510171] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701290_Geluoruiya",
+    TalkId = 510171,
+    TalkTriggerId = 510171,
+    Type = "Impression"
+  },
+  [510172] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701291_Keni_Bubble",
+    TalkId = 510172,
+    TalkTriggerId = 510172
+  },
   [511010] = {
     StoryLinePath = "BubbleTalk/51101001.story",
     TalkId = 511010,
@@ -3184,6 +3251,321 @@ return ReadOnly("TalkTrigger", {
     TalkId = 511751,
     TalkTriggerId = 511751
   },
+  [512037] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512037.story",
+    TalkId = 512037,
+    TalkTriggerId = 512037
+  },
+  [512038] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512038.story",
+    TalkId = 512038,
+    TalkTriggerId = 512038,
+    Type = "Impression"
+  },
+  [512039] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512039.story",
+    TalkId = 512039,
+    TalkTriggerId = 512039
+  },
+  [512040] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512040.story",
+    TalkId = 512340,
+    TalkTriggerId = 512040
+  },
+  [512041] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512041.story",
+    TalkId = 512041,
+    TalkTriggerId = 512041
+  },
+  [512042] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512042.story",
+    TalkId = 512042,
+    TalkTriggerId = 512042,
+    Type = "Impression"
+  },
+  [512043] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512043.story",
+    TalkId = 512043,
+    TalkTriggerId = 512043
+  },
+  [512044] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512044.story",
+    TalkId = 512044,
+    TalkTriggerId = 512044,
+    Type = "Impression"
+  },
+  [512045] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512045.story",
+    TalkId = 512045,
+    TalkTriggerId = 512045
+  },
+  [512046] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512046.story",
+    TalkId = 512046,
+    TalkTriggerId = 512046
+  },
+  [512047] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512047.story",
+    TalkId = 512047,
+    TalkTriggerId = 512047
+  },
+  [512048] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512048.story",
+    TalkId = 512048,
+    TalkTriggerId = 512048
+  },
+  [512049] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512049.story",
+    TalkId = 512049,
+    TalkTriggerId = 512049,
+    Type = "Impression"
+  },
+  [512050] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512050.story",
+    TalkId = 512050,
+    TalkTriggerId = 512050
+  },
+  [512051] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512051.story",
+    TalkId = 512051,
+    TalkTriggerId = 512051
+  },
+  [512052] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512052.story",
+    TalkId = 512052,
+    TalkTriggerId = 512052
+  },
+  [512053] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512053.story",
+    TalkId = 512053,
+    TalkTriggerId = 512053
+  },
+  [512054] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512054.story",
+    TalkId = 512054,
+    TalkTriggerId = 512054
+  },
+  [512055] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512055.story",
+    TalkId = 512055,
+    TalkTriggerId = 512055
+  },
+  [512056] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512056.story",
+    TalkId = 512056,
+    TalkTriggerId = 512056
+  },
+  [512057] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512057.story",
+    TalkId = 512057,
+    TalkTriggerId = 512057
+  },
+  [512058] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512058.story",
+    TalkId = 512058,
+    TalkTriggerId = 512058
+  },
+  [512059] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512059.story",
+    TalkId = 512059,
+    TalkTriggerId = 512059
+  },
+  [512060] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512060.story",
+    TalkId = 512060,
+    TalkTriggerId = 512060
+  },
+  [512061] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512061.story",
+    TalkId = 512061,
+    TalkTriggerId = 512061
+  },
+  [512062] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512062.story",
+    TalkId = 512062,
+    TalkTriggerId = 512062
+  },
+  [512063] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512063.story",
+    TalkId = 512063,
+    TalkTriggerId = 512063
+  },
+  [512064] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512064.story",
+    TalkId = 512064,
+    TalkTriggerId = 512064
+  },
+  [512065] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512065.story",
+    TalkId = 512065,
+    TalkTriggerId = 512065
+  },
+  [512066] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512066.story",
+    TalkId = 512066,
+    TalkTriggerId = 512066
+  },
+  [512067] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512067.story",
+    TalkId = 512067,
+    TalkTriggerId = 512067
+  },
+  [512068] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512068.story",
+    TalkId = 512068,
+    TalkTriggerId = 512068,
+    Type = "气泡"
+  },
+  [512069] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512069.story",
+    TalkId = 512069,
+    TalkTriggerId = 512069,
+    Type = "气泡"
+  },
+  [512070] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512070.story",
+    TalkId = 512070,
+    TalkTriggerId = 512070,
+    Type = "气泡"
+  },
+  [512071] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512071.story",
+    TalkId = 512071,
+    TalkTriggerId = 512071,
+    Type = "气泡"
+  },
+  [512072] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512072.story",
+    TalkId = 512072,
+    TalkTriggerId = 512072,
+    Type = "气泡"
+  },
+  [512073] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512073.story",
+    TalkId = 512073,
+    TalkTriggerId = 512073,
+    Type = "气泡"
+  },
+  [512074] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512074.story",
+    TalkId = 512074,
+    TalkTriggerId = 512074,
+    Type = "气泡"
+  },
+  [512075] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512075.story",
+    TalkId = 512075,
+    TalkTriggerId = 512075,
+    Type = "气泡"
+  },
+  [512076] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512076.story",
+    TalkId = 512076,
+    TalkTriggerId = 512076,
+    Type = "气泡"
+  },
+  [512077] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512077.story",
+    TalkId = 512077,
+    TalkTriggerId = 512077,
+    Type = "气泡"
+  },
+  [512078] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512078.story",
+    TalkId = 512078,
+    TalkTriggerId = 512078,
+    Type = "气泡"
+  },
+  [512079] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512079.story",
+    TalkId = 512079,
+    TalkTriggerId = 512079,
+    Type = "气泡"
+  },
+  [512080] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512080.story",
+    TalkId = 512080,
+    TalkTriggerId = 512080,
+    Type = "气泡"
+  },
+  [512081] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512081.story",
+    TalkId = 512081,
+    TalkTriggerId = 512081,
+    Type = "气泡"
+  },
+  [512082] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512082.story",
+    TalkId = 512082,
+    TalkTriggerId = 512082,
+    Type = "气泡"
+  },
+  [512083] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512083.story",
+    TalkId = 512083,
+    TalkTriggerId = 512083,
+    Type = "气泡"
+  },
+  [512084] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512084.story",
+    TalkId = 512084,
+    TalkTriggerId = 512084,
+    Type = "气泡"
+  },
+  [512085] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512085.story",
+    TalkId = 512085,
+    TalkTriggerId = 512085,
+    Type = "气泡"
+  },
+  [512086] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512086.story",
+    TalkId = 512086,
+    TalkTriggerId = 512086,
+    Type = "气泡"
+  },
+  [512087] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512087.story",
+    TalkId = 512087,
+    TalkTriggerId = 512087,
+    Type = "气泡"
+  },
+  [512088] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512088.story",
+    TalkId = 512088,
+    TalkTriggerId = 512088,
+    Type = "气泡"
+  },
+  [512089] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512089.story",
+    TalkId = 512089,
+    TalkTriggerId = 512089,
+    Type = "气泡"
+  },
+  [512090] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512090.story",
+    TalkId = 512090,
+    TalkTriggerId = 512090,
+    Type = "气泡"
+  },
+  [512091] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512091.story",
+    TalkId = 512091,
+    TalkTriggerId = 512091,
+    Type = "气泡"
+  },
+  [512092] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512092.story",
+    TalkId = 512092,
+    TalkTriggerId = 512092,
+    Type = "气泡"
+  },
+  [512093] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512093.story",
+    TalkId = 512093,
+    TalkTriggerId = 512093,
+    Type = "气泡"
+  },
   [600101] = {
     DialogueId = 60010101,
     TalkTriggerId = 600101,
@@ -3744,6 +4126,16 @@ return ReadOnly("TalkTrigger", {
   [603001] = {
     DialogueId = 60300101,
     TalkTriggerId = 603001,
+    TalkType = "Guide"
+  },
+  [603002] = {
+    DialogueId = 60300102,
+    TalkTriggerId = 603002,
+    TalkType = "Guide"
+  },
+  [603003] = {
+    DialogueId = 60300103,
+    TalkTriggerId = 603003,
     TalkType = "Guide"
   },
   [608001] = {
@@ -4455,6 +4847,91 @@ return ReadOnly("TalkTrigger", {
     TalkId = 720046,
     TalkTriggerId = 720046
   },
+  [720047] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720047,
+    TalkTriggerId = 720047
+  },
+  [720048] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720048,
+    TalkTriggerId = 720048
+  },
+  [720049] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720049,
+    TalkTriggerId = 720049
+  },
+  [720050] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720050,
+    TalkTriggerId = 720050
+  },
+  [720051] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720051,
+    TalkTriggerId = 720051
+  },
+  [720052] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720052,
+    TalkTriggerId = 720052
+  },
+  [720053] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720053,
+    TalkTriggerId = 720053
+  },
+  [720054] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720054,
+    TalkTriggerId = 720054
+  },
+  [720055] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720055,
+    TalkTriggerId = 720055
+  },
+  [720056] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720056,
+    TalkTriggerId = 720056
+  },
+  [720057] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720057,
+    TalkTriggerId = 720057
+  },
+  [720058] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720058,
+    TalkTriggerId = 720058
+  },
+  [720059] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720059,
+    TalkTriggerId = 720059
+  },
+  [720060] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720060,
+    TalkTriggerId = 720060
+  },
+  [720061] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720061,
+    TalkTriggerId = 720061
+  },
+  [720062] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720062,
+    TalkTriggerId = 720062
+  },
+  [720063] = {
+    StoryLinePath = "Explore/A_PanTalk_Chezhan.story",
+    TalkId = 720063,
+    TalkTriggerId = 720063
+  },
   [721001] = {
     StoryLinePath = "Explore/A_WuyouTalk_Yanjindu.story",
     TalkId = 721001,
@@ -4846,8 +5323,9 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 901301
   },
   [901401] = {
-    TalkTriggerId = 901401,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/901401_Xier.story",
+    TalkId = 901401,
+    TalkTriggerId = 901401
   },
   [901501] = {
     StoryLinePath = "TalkGossip/901501_Feina.story",
@@ -4914,6 +5392,11 @@ return ReadOnly("TalkTrigger", {
     TalkId = 903101,
     TalkTriggerId = 903101
   },
+  [903201] = {
+    StoryLinePath = "TalkGossip/903201_Fuluo.story",
+    TalkId = 903201,
+    TalkTriggerId = 903201
+  },
   [910101] = {
     StoryLinePath = "TalkGossip/LongIdleBubble/HeitaoIdleBubble.story",
     TalkId = 910101,
@@ -4970,8 +5453,9 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 910111
   },
   [910112] = {
-    TalkTriggerId = 910112,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/LongIdleBubble/XierIdleBubble.story",
+    TalkId = 910112,
+    TalkTriggerId = 910112
   },
   [910113] = {
     StoryLinePath = "TalkGossip/LongIdleBubble/FeinaIdleBubble.story",
@@ -5038,9 +5522,14 @@ return ReadOnly("TalkTrigger", {
     TalkId = 910125,
     TalkTriggerId = 910125
   },
+  [910126] = {
+    StoryLinePath = "TalkGossip/LongIdleBubble/FuluoIdleBubble.story",
+    TalkId = 910126,
+    TalkTriggerId = 910126
+  },
   [920101] = {
     TalkTriggerId = 920101,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920102] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/HeitaoSonglu.story",
@@ -5069,7 +5558,7 @@ return ReadOnly("TalkTrigger", {
   },
   [920107] = {
     TalkTriggerId = 920107,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920108] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/ZhangyuHaier.story",
@@ -5138,11 +5627,11 @@ return ReadOnly("TalkTrigger", {
   },
   [920121] = {
     TalkTriggerId = 920121,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920122] = {
     TalkTriggerId = 920122,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920123] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/XibiAote.story",
@@ -5215,16 +5704,19 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920136
   },
   [920137] = {
-    TalkTriggerId = 920137,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/XierSaiqi.story",
+    TalkId = 920137,
+    TalkTriggerId = 920137
   },
   [920138] = {
-    TalkTriggerId = 920138,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/XierBaonu.story",
+    TalkId = 920138,
+    TalkTriggerId = 920138
   },
   [920139] = {
-    TalkTriggerId = 920139,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/XierMaer.story",
+    TalkId = 920139,
+    TalkTriggerId = 920139
   },
   [920140] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/FeinaAote.story",
@@ -5243,7 +5735,7 @@ return ReadOnly("TalkTrigger", {
   },
   [920143] = {
     TalkTriggerId = 920143,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920144] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/AoteFeina.story",
@@ -5262,11 +5754,12 @@ return ReadOnly("TalkTrigger", {
   },
   [920147] = {
     TalkTriggerId = 920147,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920148] = {
-    TalkTriggerId = 920148,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/MaerXier.story",
+    TalkId = 920148,
+    TalkTriggerId = 920148
   },
   [920149] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/MaerFeina.story",
@@ -5335,7 +5828,7 @@ return ReadOnly("TalkTrigger", {
   },
   [920162] = {
     TalkTriggerId = 920162,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920163] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/TuosiZhangyu.story",
@@ -5344,11 +5837,12 @@ return ReadOnly("TalkTrigger", {
   },
   [920164] = {
     TalkTriggerId = 920164,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920165] = {
-    TalkTriggerId = 920165,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/LiseXier.story",
+    TalkId = 920165,
+    TalkTriggerId = 920165
   },
   [920166] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/LiseLandi.story",
@@ -5357,7 +5851,7 @@ return ReadOnly("TalkTrigger", {
   },
   [920167] = {
     TalkTriggerId = 920167,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920168] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/NifuAote.story",
@@ -5371,11 +5865,11 @@ return ReadOnly("TalkTrigger", {
   },
   [920170] = {
     TalkTriggerId = 920170,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920171] = {
     TalkTriggerId = 920171,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920172] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/ZhiliuShuimu.story",
@@ -5393,8 +5887,9 @@ return ReadOnly("TalkTrigger", {
     TalkTriggerId = 920174
   },
   [920175] = {
-    TalkTriggerId = 920175,
-    TriggerCondition = T.RT_60
+    StoryLinePath = "TalkGossip/EasterEggBubble/KezhouXier.story",
+    TalkId = 920175,
+    TalkTriggerId = 920175
   },
   [920176] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/KezhouYuming.story",
@@ -5408,7 +5903,7 @@ return ReadOnly("TalkTrigger", {
   },
   [920178] = {
     TalkTriggerId = 920178,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920179] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/BaonuZhangyu.story",
@@ -5422,7 +5917,7 @@ return ReadOnly("TalkTrigger", {
   },
   [920181] = {
     TalkTriggerId = 920181,
-    TriggerCondition = T.RT_60
+    TriggerCondition = T.RT_64
   },
   [920182] = {
     StoryLinePath = "TalkGossip/EasterEggBubble/SuyiShuimu.story",
@@ -5453,6 +5948,21 @@ return ReadOnly("TalkTrigger", {
     StoryLinePath = "TalkGossip/EasterEggBubble/KamiAote.story",
     TalkId = 920187,
     TalkTriggerId = 920187
+  },
+  [920188] = {
+    StoryLinePath = "TalkGossip/EasterEggBubble/FuluoXier.story",
+    TalkId = 920188,
+    TalkTriggerId = 920188
+  },
+  [920189] = {
+    StoryLinePath = "TalkGossip/EasterEggBubble/FuluoAote.story",
+    TalkId = 920189,
+    TalkTriggerId = 920189
+  },
+  [920190] = {
+    StoryLinePath = "TalkGossip/EasterEggBubble/FuluoXibi.story",
+    TalkId = 920190,
+    TalkTriggerId = 920190
   },
   [5010713] = {
     StoryLinePath = "Impression\\East02\\Inn_Gossip\\501071_Bubble.story",
@@ -6691,6 +7201,239 @@ return ReadOnly("TalkTrigger", {
     TalkId = 5117513,
     TalkTriggerId = 5117513
   },
+  [5120382] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512038.story",
+    TalkId = 5120382,
+    TalkTriggerId = 5120382,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 512038}
+    }
+  },
+  [5120422] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512042.story",
+    TalkId = 5120422,
+    TalkTriggerId = 5120422,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 512042}
+    }
+  },
+  [5120442] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512044.story",
+    TalkId = 5120442,
+    TalkTriggerId = 5120442,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 512044}
+    }
+  },
+  [5120492] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512049.story",
+    TalkId = 5120492,
+    TalkTriggerId = 5120492,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 512049}
+    }
+  },
+  [5120592] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120592.story",
+    TalkId = 5120592,
+    TalkTriggerId = 5120592
+  },
+  [5120602] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120602.story",
+    TalkId = 5120602,
+    TalkTriggerId = 5120602
+  },
+  [5120612] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120612.story",
+    TalkId = 5120612,
+    TalkTriggerId = 5120612
+  },
+  [5120622] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120622.story",
+    TalkId = 5120622,
+    TalkTriggerId = 5120622
+  },
+  [5120632] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120632.story",
+    TalkId = 5120632,
+    TalkTriggerId = 5120632
+  },
+  [5120642] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120642.story",
+    TalkId = 5120642,
+    TalkTriggerId = 5120642
+  },
+  [5120652] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120652.story",
+    TalkId = 5120652,
+    TalkTriggerId = 5120652
+  },
+  [5120662] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120662.story",
+    TalkId = 5120662,
+    TalkTriggerId = 5120662
+  },
+  [5120672] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120672.story",
+    TalkId = 5120672,
+    TalkTriggerId = 5120672
+  },
+  [5120682] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120682.story",
+    TalkId = 5120682,
+    TalkTriggerId = 5120682,
+    Type = "对话"
+  },
+  [5120692] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120692.story",
+    TalkId = 5120692,
+    TalkTriggerId = 5120692,
+    Type = "对话"
+  },
+  [5120702] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120702.story",
+    TalkId = 5120702,
+    TalkTriggerId = 5120702,
+    Type = "对话"
+  },
+  [5120712] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120712.story",
+    TalkId = 5120712,
+    TalkTriggerId = 5120712,
+    Type = "对话"
+  },
+  [5120722] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120722.story",
+    TalkId = 5120722,
+    TalkTriggerId = 5120722,
+    Type = "对话"
+  },
+  [5120732] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120732.story",
+    TalkId = 5120732,
+    TalkTriggerId = 5120732,
+    Type = "对话"
+  },
+  [5120742] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120742.story",
+    TalkId = 5120742,
+    TalkTriggerId = 5120742,
+    Type = "对话"
+  },
+  [5120752] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120752.story",
+    TalkId = 5120752,
+    TalkTriggerId = 5120752,
+    Type = "对话"
+  },
+  [5120762] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120762.story",
+    TalkId = 5120762,
+    TalkTriggerId = 5120762,
+    Type = "对话"
+  },
+  [5120772] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120772.story",
+    TalkId = 5120772,
+    TalkTriggerId = 5120772,
+    Type = "对话"
+  },
+  [5120782] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120782.story",
+    TalkId = 5120782,
+    TalkTriggerId = 5120782,
+    Type = "对话"
+  },
+  [5120792] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120792.story",
+    TalkId = 5120792,
+    TalkTriggerId = 5120792,
+    Type = "对话"
+  },
+  [5120802] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120802.story",
+    TalkId = 5120802,
+    TalkTriggerId = 5120802,
+    Type = "对话"
+  },
+  [5120812] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120812.story",
+    TalkId = 5120812,
+    TalkTriggerId = 5120812,
+    Type = "对话"
+  },
+  [5120822] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120822.story",
+    TalkId = 5120822,
+    TalkTriggerId = 5120822,
+    Type = "对话"
+  },
+  [5120832] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120832.story",
+    TalkId = 5120832,
+    TalkTriggerId = 5120832,
+    Type = "对话"
+  },
+  [5120842] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120842.story",
+    TalkId = 5120842,
+    TalkTriggerId = 5120842,
+    Type = "对话"
+  },
+  [5120852] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120852.story",
+    TalkId = 5120852,
+    TalkTriggerId = 5120852,
+    Type = "对话"
+  },
+  [5120862] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120862.story",
+    TalkId = 5120862,
+    TalkTriggerId = 5120862,
+    Type = "对话"
+  },
+  [5120872] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120872.story",
+    TalkId = 5120872,
+    TalkTriggerId = 5120872,
+    Type = "对话"
+  },
+  [5120882] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120882.story",
+    TalkId = 5120882,
+    TalkTriggerId = 5120882,
+    Type = "对话"
+  },
+  [5120892] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120892.story",
+    TalkId = 5120892,
+    TalkTriggerId = 5120892,
+    Type = "对话"
+  },
+  [5120902] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120902.story",
+    TalkId = 5120902,
+    TalkTriggerId = 5120902,
+    Type = "对话"
+  },
+  [5120912] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120912.story",
+    TalkId = 5120912,
+    TalkTriggerId = 5120912,
+    Type = "对话"
+  },
+  [5120922] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120922.story",
+    TalkId = 5120922,
+    TalkTriggerId = 5120922,
+    Type = "对话"
+  },
+  [5120932] = {
+    StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120932.story",
+    TalkId = 5120932,
+    TalkTriggerId = 5120932,
+    Type = "对话"
+  },
   [7001581] = {
     StoryLinePath = "Observe/East01.story",
     TalkId = 7001581,
@@ -6885,7 +7628,7 @@ return ReadOnly("TalkTrigger", {
     TalkId = 9022011,
     TalkTriggerId = 9022011,
     TriggerCondition = {
-      QuestChainUnFinish = T.RT_61
+      QuestChainUnFinish = T.RT_59
     }
   },
   [9022012] = {
@@ -6893,32 +7636,32 @@ return ReadOnly("TalkTrigger", {
     TalkId = 9022012,
     TalkTriggerId = 9022012,
     TriggerCondition = {
-      QuestChainFinish = T.RT_61
+      QuestChainFinish = T.RT_59
     }
   },
   [9023011] = {
     StoryLinePath = "TalkGossip/902301_Tuosi_B4Ch02.story",
     TalkId = 9023011,
     TalkTriggerId = 9023011,
-    TriggerCondition = T.RT_63
+    TriggerCondition = T.RT_61
   },
   [9023012] = {
     StoryLinePath = "TalkGossip/902301_Tuosi_AFTCh02.story",
     TalkId = 9023012,
     TalkTriggerId = 9023012,
-    TriggerCondition = T.RT_64
+    TriggerCondition = T.RT_62
   },
   [9024011] = {
     StoryLinePath = "TalkGossip/902401_Lise_B4Ch02.story",
     TalkId = 9024011,
     TalkTriggerId = 9024011,
-    TriggerCondition = T.RT_63
+    TriggerCondition = T.RT_61
   },
   [9024012] = {
     StoryLinePath = "TalkGossip/902401_Lise_AFTCh02.story",
     TalkId = 9024012,
     TalkTriggerId = 9024012,
-    TriggerCondition = T.RT_64
+    TriggerCondition = T.RT_62
   },
   [10010104] = {
     StoryLinePath = "Common/10010104.story",
@@ -7161,6 +7904,45 @@ return ReadOnly("TalkTrigger", {
     TalkId = 51016401,
     TalkTriggerId = 51016401
   },
+  [51016501] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701283_Xiaoen_Bubble",
+    TalkId = 51016501,
+    TalkTriggerId = 51016501
+  },
+  [51016601] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701284_Shidisen_Bubble",
+    TalkId = 51016601,
+    TalkTriggerId = 51016601
+  },
+  [51016602] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701284_Shidisen_2",
+    TalkId = 51016602,
+    TalkTriggerId = 51016602,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510166}
+    }
+  },
+  [51016701] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701285_Bulaike_Bubble",
+    TalkId = 51016701,
+    TalkTriggerId = 51016701
+  },
+  [51016801] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701287_FasionMaiden_2",
+    TalkId = 51016801,
+    TalkTriggerId = 51016801,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510168}
+    }
+  },
+  [51017101] = {
+    StoryLinePath = "Impression/Chapter03/Impression/701290_Geluoruiya_2",
+    TalkId = 51017101,
+    TalkTriggerId = 51017101,
+    TriggerCondition = {
+      ImprComp = {TalkTriggerId = 510171}
+    }
+  },
   [51105801] = {
     StoryLinePath = "ActiveQuest/ActiveThea/Gossip/51105801.story",
     TalkId = 51105801,
@@ -7360,6 +8142,31 @@ return ReadOnly("TalkTrigger", {
     StoryLinePath = "ActiveQuest/ActiveThea/Gossip/51105840.story",
     TalkId = 51105840,
     TalkTriggerId = 51105840
+  },
+  [51105841] = {
+    StoryLinePath = "ActiveQuest/ActiveThea/Gossip/51105841.story",
+    TalkId = 51105841,
+    TalkTriggerId = 51105841
+  },
+  [51105842] = {
+    StoryLinePath = "ActiveQuest/ActiveThea/Gossip/51105842.story",
+    TalkId = 51105842,
+    TalkTriggerId = 51105842
+  },
+  [51105843] = {
+    StoryLinePath = "ActiveQuest/ActiveThea/Gossip/51105843.story",
+    TalkId = 51105843,
+    TalkTriggerId = 51105843
+  },
+  [51105844] = {
+    StoryLinePath = "ActiveQuest/ActiveThea/Gossip/51105844.story",
+    TalkId = 51105844,
+    TalkTriggerId = 51105844
+  },
+  [51105845] = {
+    StoryLinePath = "ActiveQuest/ActiveThea/Gossip/51105845.story",
+    TalkId = 51105845,
+    TalkTriggerId = 51105845
   },
   [74114700] = {
     StoryLinePath = "QuestTest/FacialTest.story",
@@ -8091,66 +8898,6 @@ return ReadOnly("TalkTrigger", {
   [80004259] = {
     StoryLinePath = "Dungeon\\EventFeina\\EventFeina_Guide_03.story",
     TalkTriggerId = 80004259
-  },
-  [84000101] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000101,
-    TalkTriggerId = 84000101
-  },
-  [84000103] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000103,
-    TalkTriggerId = 84000103
-  },
-  [84000201] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000201,
-    TalkTriggerId = 84000201
-  },
-  [84000203] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000203,
-    TalkTriggerId = 84000203
-  },
-  [84000301] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000301,
-    TalkTriggerId = 84000301
-  },
-  [84000303] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000303,
-    TalkTriggerId = 84000303
-  },
-  [84000401] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000401,
-    TalkTriggerId = 84000401
-  },
-  [84000403] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000403,
-    TalkTriggerId = 84000403
-  },
-  [84000501] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000501,
-    TalkTriggerId = 84000501
-  },
-  [84000503] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000503,
-    TalkTriggerId = 84000503
-  },
-  [84000601] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000601,
-    TalkTriggerId = 84000601
-  },
-  [84000603] = {
-    StoryLinePath = "Explore/Haojing_Qizi.story",
-    TalkId = 84000603,
-    TalkTriggerId = 84000603
   },
   [88888801] = {
     StoryLinePath = "Explore/Home_Cat.story",

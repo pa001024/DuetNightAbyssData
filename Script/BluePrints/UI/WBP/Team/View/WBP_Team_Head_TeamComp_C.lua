@@ -108,7 +108,7 @@ function Component:OnGetMenuContentComp(Anchor)
       if TeamModel:IsYourself(AvatarInfo.Uid) then
         PersonInfoController:OpenView()
       else
-        TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid)
+        TeamController:GetAvatar():CheckOtherPlayerPersonallInfo(AvatarInfo.Uid, nil, AvatarInfo)
       end
       self.Head_Anchor:Close()
     end

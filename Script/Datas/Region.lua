@@ -1,6 +1,7 @@
 local T = {}
 T.RT_1 = {0.5, 1.25}
 T.RT_2 = {0.3, 1}
+T.RT_3 = {-44610, 5350}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -10,6 +11,7 @@ end
 return ReadOnly("Region", {
   [1001] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
       100101,
       100102,
@@ -31,6 +33,7 @@ return ReadOnly("Region", {
   },
   [1011] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
       101101,
       101103,
@@ -57,6 +60,7 @@ return ReadOnly("Region", {
   },
   [1013] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
       101301,
       101303,
@@ -86,6 +90,7 @@ return ReadOnly("Region", {
   },
   [1017] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
       101701,
       101702,
@@ -105,6 +110,7 @@ return ReadOnly("Region", {
   },
   [1019] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     CloseBlock = true,
     IsRandom = {101901},
     RegionId = 1019,
@@ -118,6 +124,7 @@ return ReadOnly("Region", {
   },
   [1021] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {
       102101,
       102102,
@@ -154,7 +161,7 @@ return ReadOnly("Region", {
   },
   [1041] = {
     AlertDisable = true,
-    IsBlackBg = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {
       104102,
       104103,
@@ -201,7 +208,7 @@ return ReadOnly("Region", {
   },
   [1045] = {
     AlertDisable = true,
-    IsBlackBg = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     IsRandom = {
       104501,
       104502,
@@ -246,6 +253,7 @@ return ReadOnly("Region", {
   },
   [1049] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     IsRandom = {104901},
     RegionId = 1049,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Off/Huaxu_Yanjindu_Off_Main",
@@ -264,6 +272,7 @@ return ReadOnly("Region", {
   },
   [1051] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     IsRandom = {105101},
     RegionId = 1051,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Int/Huaxu_Haojing_Int_Main",
@@ -274,7 +283,7 @@ return ReadOnly("Region", {
   },
   [1052] = {
     AlertDisable = true,
-    IsBlackBg = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     IsRandom = {105201},
     RegionId = 1052,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_Reb/Huaxu_Haojing_Reb_Main",
@@ -287,8 +296,8 @@ return ReadOnly("Region", {
   },
   [1053] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     CloseBlock = true,
-    IsBlackBg = true,
     IsRandom = {105301},
     RegionId = 1053,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_TRLM/Huaxu_Haojing_TRLM_Main",
@@ -309,8 +318,8 @@ return ReadOnly("Region", {
   },
   [1055] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_EastSeason02.WBP_Map_BG_EastSeason02'",
     CloseBlock = true,
-    IsBlackBg = true,
     IsRandom = {105501},
     RegionId = 1055,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_YLX/Huaxu_Haojing_YLX_Main",
@@ -329,8 +338,8 @@ return ReadOnly("Region", {
     RegionName = "UI_REGION_NAME_1056"
   },
   [1057] = {
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_Black.WBP_Map_BG_Black'",
     CloseBlock = true,
-    IsBlackBg = true,
     IsRandom = {105701},
     RegionId = 1057,
     RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Yanjindu_Alt/Huaxu_Yanjindu_Alt_Main",
@@ -358,28 +367,47 @@ return ReadOnly("Region", {
     RegionType = "Main"
   },
   [1060] = {
-    IsRandom = {
-      106001,
-      106002,
-      106003,
-      106004,
-      106005,
-      106006,
-      106007,
-      106008
-    },
+    AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
+    IsRandom = {106001},
+    RegionDispCondition = 100405,
     RegionId = 1060,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/Haiboliya_Chezhan_Main",
+    RegionMapId = 205,
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/Chapter03/WBP_Map_Reg_Chapter03_Station_AG.WBP_Map_Reg_Chapter03_Station_AG",
+    RegionMapImageCenter = T.RT_3,
     RegionMapWheelScale = T.RT_1,
-    RegionName = "第三章火车站",
+    RegionName = "UI_REGION_NAME_1060",
     RegionType = "Main"
   },
   [1061] = {
     IsRandom = {106101},
     RegionId = 1061,
     RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/Haiboliya_Chezhan_YW_Main",
+    RegionMapId = 205,
     RegionMapWheelScale = T.RT_1,
-    RegionName = "第三章野外",
+    RegionName = "UI_REGION_NAME_1061",
+    RegionType = "Main"
+  },
+  [1062] = {
+    IsRandom = {106201},
+    RegionId = 1062,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_MT/Haiboliya_Chezhan_MT_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "UI_REGION_NAME_1062",
+    RegionType = "Main"
+  },
+  [1063] = {
+    AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
+    IsRandom = {106301},
+    RegionId = 1063,
+    RegionMapFile = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_CZDX/Haiboliya_Chezhan_CZDX_Main",
+    RegionMapId = 206,
+    RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/Chapter03/WBP_Map_Reg_Chapter03_Station_UG.WBP_Map_Reg_Chapter03_Station_UG",
+    RegionMapImageCenter = T.RT_3,
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "UI_SUBREGION_NAME_106003",
     RegionType = "Main"
   },
   [1070] = {
@@ -438,6 +466,14 @@ return ReadOnly("Region", {
     RegionName = "EX02-新村庄-Boss战",
     RegionType = "Main"
   },
+  [1081] = {
+    IsRandom = {108101},
+    RegionId = 1081,
+    RegionMapFile = "/Game/Maps/Levels/Ailixian/Ailixian_LLKXDY_Main/Ailixian_LLKXDY_Main",
+    RegionMapWheelScale = T.RT_1,
+    RegionName = "艾利西安-莉莉寇修道院",
+    RegionType = "Main"
+  },
   [2001] = {
     IsRandom = {200101},
     RegionId = 2001,
@@ -448,6 +484,7 @@ return ReadOnly("Region", {
   },
   [2101] = {
     AlertDisable = true,
+    BgBlueprintPath = "WidgetBlueprint'/Game/UI/WBP/Map/Widget/MapBG/WBP_Map_BG_White.WBP_Map_BG_White'",
     IsRandom = {210101},
     RegionId = 2101,
     RegionJsonFile = "/Game/Script/Datas/Houdini_data/Chapter01/Main/Chapter01_HomeBase",
@@ -456,6 +493,12 @@ return ReadOnly("Region", {
     RegionMapWheelScale = T.RT_1,
     RegionName = "UI_REGION_NAME_2101",
     RegionType = "Main"
+  },
+  [3001] = {
+    IsRandom = {300101},
+    RegionId = 3001,
+    RegionMapFile = "/Game/Maps/Levels/Special/Guild_Main/Guild_Main",
+    RegionName = "UI_REGION_NAME_3001"
   },
   [9997] = {
     IsRandom = {999701},

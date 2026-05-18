@@ -149,6 +149,30 @@ function M:ClearAllFunc()
   self.IsSelected = false
 end
 
+function M:ClearPointData()
+  self.IsSelected = false
+  EventManager:RemoveEvent(EventID.OnDeliveryMeshanismOpen, self)
+  EventManager:RemoveEvent(EventID.ConditionComplete, self)
+  self:StopAllAnimations()
+  self.Data = nil
+  self.Parent = nil
+  self.ClickFunction = nil
+  self.HoverFunction = nil
+  self.UnoverFunction = nil
+  self.PointWidgetName = nil
+  self.NewMarkTag = nil
+  self.HardBossId = nil
+  self.IsOpen = nil
+  self.FloorId = nil
+  if self.VisibilityTag then
+    self.VisibilityTag:Clear()
+  end
+  self.Top:SetVisibility(ESlateVisibility.Collapsed)
+  self.Bottom:SetVisibility(ESlateVisibility.Collapsed)
+  self.Finish:SetVisibility(ESlateVisibility.Collapsed)
+  self.Img_Point:SetRenderScale(UKismetMathLibrary.Vector2D_One())
+end
+
 function M:ReInitTeleportPoint(Data)
   self.Data = Data
   EventManager:AddEvent(EventID.OnDeliveryMeshanismOpen, self, self.OnDeliveryMeshanismOpen)

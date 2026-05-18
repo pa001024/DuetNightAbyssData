@@ -82,6 +82,7 @@ function Skill:GetMaxLevel()
   if SkillLevelUpInfo then
     return #SkillLevelUpInfo + 1
   end
+  return 1
 end
 
 function Skill:GetLevelUpItems()

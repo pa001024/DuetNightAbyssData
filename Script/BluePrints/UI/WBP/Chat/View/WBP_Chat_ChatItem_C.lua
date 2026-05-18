@@ -20,6 +20,12 @@ function M:Construct()
   self.Head_AnchorLeft.OnMenuOpenChanged:Add(self, self.HeadMenuOpenChanged)
   self.Head_AnchorRight.OnGetMenuContentEvent:Bind(self, self.OnAnchorGetUserMenuContent)
   self.Head_AnchorRight.OnMenuOpenChanged:Add(self, self.HeadMenuOpenChanged)
+  GuildController:RegisterEvent(self, function(self, EventId, ...)
+    local Info = (...)
+    if EventId == GuildCommon.EventID.OnGetGuildInfo and self.WaitGuildId == Info.GuildId then
+      self:OnGetGuildFullInfo(Info)
+    end
+  end)
 end
 
 function M:Destruct()
@@ -28,6 +34,7 @@ function M:Destruct()
   self.Head_AnchorRight.OnGetMenuContentEvent:Unbind()
   self.Head_AnchorRight.OnMenuOpenChanged:Remove(self, self.HeadMenuOpenChanged)
   self:CleanUpAnchor()
+  GuildController:UnRegisterEvent(self)
 end
 
 function M:BP_OnEntryReleased()
@@ -78,8 +85,11 @@ function M:OnListItemObjectSet_Other(Content)
   self.ImageBg = self.Image_LeftDialogBG
   self.Switcher = self.WidgetSwitcher_Bubble_L
   self.ModPlan = self.Bubble_ModPlan_L
+  self.AppearancePlanBubble = self.AppearancePlanBubble_L
   self.GiftItem = self.Chat_GiftItemLeft
+  self.ChatCardCoop = self.ChatCardCoop_L
   self.TitleWidget = self.TitleLeft
+  self.GuildInvite = self.GuildInvite_L
   self:InitSelectMask(self.Image_LeftControllerLight)
   self:_SetUpChatContent(self.MsgWrap)
 end
@@ -105,8 +115,11 @@ function M:OnListItemObjectSet_Self(Content)
   self.ImageBg = self.Image_RightDialogBG
   self.Switcher = self.WidgetSwitcher_Bubble_R
   self.ModPlan = self.Bubble_ModPlan_R
+  self.AppearancePlanBubble = self.AppearancePlanBubble_R
   self.GiftItem = self.Chat_GiftItemRight
+  self.ChatCardCoop = self.ChatCardCoop_R
   self.TitleWidget = self.TitleRight
+  self.GuildInvite = self.GuildInvite_R
   self:InitSelectMask(self.Image_RightControllerLight)
   self:_SetUpChatContent(self.MsgWrap)
 end
@@ -140,17 +153,20 @@ end
 
 function M:_SetUpChatContent(MsgWrap)
   local Message = MsgWrap.Message
-  self.Head:SetHoldUp(true)
-  self.Head:BindOnClickEvent(function()
-    self.HeadAnchor:Open(true)
-  end)
   local AvatarInfo = Message.Sender
   local MessageContent = Message
   if Message.Sender.Uid == ChatController:GetAvatar().Uid then
     AvatarInfo = ChatController:GetAvatar()
   elseif ChatModel:GetCurrentFriendUid() and ChatModel:GetCurrentChannel() == ChatCommon.ChannelDef.Friend then
-    AvatarInfo = FriendController:GetModel():GetFriendDict()[ChatModel:GetCurrentFriendUid()].Info
+    local FriendData = FriendController:GetModel():GetFriendDict()[ChatModel:GetCurrentFriendUid()]
+    if FriendData and FriendData.Info then
+      AvatarInfo = FriendData.Info
+    end
   end
+  self.Head:SetHoldUp(true)
+  self.Head:BindOnClickEvent(function()
+    self:GetCardGuildInfo(AvatarInfo.GuildId, AvatarInfo.Uid, AvatarInfo)
+  end)
   self:SetupAnchor(self.HeadAnchor, self.Head, AvatarInfo, false, MessageContent)
   self.Head:SetHeadIconById(AvatarInfo.HeadIconId)
   self.Head:SetHeadFrame(AvatarInfo.HeadFrameId)
@@ -161,6 +177,8 @@ function M:_SetUpChatContent(MsgWrap)
   end
   self:_ParseEmoji(MsgWrap)
   self:_ParseModSuitInfo(MsgWrap)
+  self:_ParseAsyncCombatShareInfo(MsgWrap)
+  self:_ParseGuildInviteInfo(MsgWrap)
   self:_UpdateHeadClickableState()
 end
 
@@ -169,6 +187,23 @@ function M:_ShowNormalContent(Content)
   self.TextDialog:SetVisibility(UIConst.VisibilityOp.Visible)
   self.TextDialog:SetText(Content)
   self.TextDialog:SetWrapTextAt(self.Owner:CalcWrapTextAt())
+end
+
+function M:_ParseGuildInviteInfo(MsgWrap)
+  local GuildRecruitInfo = MsgWrap.GuildRecruitInfo
+  if GuildRecruitInfo then
+    local isFromOther = self.Switcher == self.WidgetSwitcher_Bubble_L
+    self.Switcher:SetActiveWidgetIndex(isFromOther and 3 or 5)
+    self.GuildInvite:InitGuildInviteItem(GuildRecruitInfo, isFromOther)
+  end
+end
+
+function M:_SetBubbleWidget(Widget, FallbackIndex)
+  if Widget and self.Switcher and self.Switcher.SetActiveWidget then
+    self.Switcher:SetActiveWidget(Widget)
+  elseif nil ~= FallbackIndex then
+    self.Switcher:SetActiveWidgetIndex(FallbackIndex)
+  end
 end
 
 function M:_ParseEmoji(MsgWrap)
@@ -186,18 +221,18 @@ function M:_ParseEmoji(MsgWrap)
       local EmojiWidth = EmojiHeight
       local Deco = self.TextDialog.InstanceDecorators:GetRef(1)
       if not IsValid(Deco) then
-        Utils.Traceback(ErrorTag, "找蓝图看看，聊天气泡文本框的富文本装饰器丢失")
+        Utils.Traceback(ErrorTag, "鎵捐摑鍥剧湅鐪嬶紝鑱婂ぉ姘旀场鏂囨湰妗嗙殑瀵屾枃鏈楗板櫒涓㈠け")
         return
       end
       local TableRow = FRichImageRow()
       local Res = UDataTableFunctionLibrary.GetDataTableRowFromName(Deco.ImageSet, EmojiInfo.Id, TableRow)
       if not Res then
-        Utils.Traceback(ErrorTag, "找策划看看，表情包富文本的DataTable找不到这个Key :" .. EmojiInfo.Id)
+        Utils.Traceback(ErrorTag, "鎵剧瓥鍒掔湅鐪嬶紝琛ㄦ儏鍖呭瘜鏂囨湰鐨凞ataTable鎵句笉鍒拌繖涓狵ey :" .. EmojiInfo.Id)
         return
       end
       local Img = TableRow.Brush.ResourceObject
       if not IsValid(Img) then
-        Utils.Traceback(ErrorTag, "找策划看看，表情包富文本的DataTable没有配置表情贴图，Key :" .. EmojiInfo.Id)
+        Utils.Traceback(ErrorTag, "鎵剧瓥鍒掔湅鐪嬶紝琛ㄦ儏鍖呭瘜鏂囨湰鐨凞ataTable娌℃湁閰嶇疆琛ㄦ儏璐村浘锛孠ey :" .. EmojiInfo.Id)
         return
       end
       local Scale = Img:Blueprint_GetSizeX() / Img:Blueprint_GetSizeY()
@@ -220,22 +255,45 @@ function M:_ParseEmoji(MsgWrap)
 end
 
 function M:_ParseModSuitInfo(MsgWrap)
-  self.Switcher:SetActiveWidgetIndex(0)
+  self:_SetBubbleWidget(self.TextDialog:GetParent(), 0)
   local ModSuitInfo = MsgWrap.ModSuitInfo
   local DyePlanInfo = MsgWrap.DyePlanInfo
   local GiftInfo = MsgWrap.GiftInfo
+  local AppearancePlanInfo = MsgWrap.AppearancePlanInfo
   if ModSuitInfo then
-    self.Switcher:SetActiveWidgetIndex(1)
+    self:_SetBubbleWidget(self.ModPlan, 1)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
     self.ModPlan:InitMod(ModSuitInfo, bSelfMsg, MsgWrap.Message.Sender.Nickname)
   elseif DyePlanInfo then
-    self.Switcher:SetActiveWidgetIndex(1)
+    self:_SetBubbleWidget(self.ModPlan, 1)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
     self.ModPlan:InitDye(DyePlanInfo, bSelfMsg)
-  elseif MsgWrap.GiftInfo then
-    self.Switcher:SetActiveWidgetIndex(2)
+  elseif AppearancePlanInfo then
+    local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
+    if self.AppearancePlanBubble and self.AppearancePlanBubble.InitAppearancePlan then
+      self:_SetBubbleWidget(self.AppearancePlanBubble, 0)
+      self.AppearancePlanBubble:InitAppearancePlan(AppearancePlanInfo, bSelfMsg, MsgWrap.Message.Sender.Nickname)
+    else
+      self:_SetBubbleWidget(self.TextDialog:GetParent(), 0)
+      self:_ShowNormalContent(ChatController:ParseAppearancePlanText(MsgWrap) or MsgWrap.Message.Content)
+    end
+  elseif GiftInfo then
+    self:_SetBubbleWidget(self.GiftItem, 2)
     local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
     self.GiftItem:InitChatGiftItem(GiftInfo, bSelfMsg)
+  end
+end
+
+function M:_ParseAsyncCombatShareInfo(MsgWrap)
+  local AsyncCombatRoomInfo = MsgWrap.AsyncCombatRoomInfo
+  if AsyncCombatRoomInfo then
+    if self.Switcher == self.WidgetSwitcher_Bubble_L then
+      self:_SetBubbleWidget(self.ChatCardCoop, 4)
+    else
+      self:_SetBubbleWidget(self.ChatCardCoop, 3)
+    end
+    local bSelfMsg = self.MsgWrap.MsgType == ChatCommon.MsgType.Self
+    self.ChatCardCoop:InitCoopChatCard(AsyncCombatRoomInfo, bSelfMsg)
   end
 end
 
@@ -259,6 +317,43 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   return UWidgetBlueprintLibrary.UnHandled()
 end
 
+function M:IsShowCheckPlan(InKeyName)
+  local MsgWrap = self.MsgWrap
+  if not MsgWrap then
+    return false
+  end
+  return MsgWrap.ModSuitInfo or MsgWrap.DyePlanInfo or MsgWrap.AppearancePlanInfo or MsgWrap.GuildRecruitInfo
+end
+
+function M:OnCheckPlanGamePadDown()
+  local IsEventHandled = false
+  if self.IsOpen or self.Owner.FocusStateType ~= ChatFocusType.SelectChat then
+    return IsEventHandled
+  end
+  if self.MsgWrap.ModSuitInfo then
+    if self.ModPlan and self.ModPlan.OnBtnClickInMod then
+      self.ModPlan:OnBtnClickInMod()
+    end
+    IsEventHandled = true
+  elseif self.MsgWrap.DyePlanInfo then
+    if self.ModPlan and self.ModPlan.OnBtnClickInSkin then
+      self.ModPlan:OnBtnClickInSkin()
+    end
+    IsEventHandled = true
+  elseif self.MsgWrap.AppearancePlanInfo then
+    if self.AppearancePlanBubble and self.AppearancePlanBubble.OnBtnClick then
+      self.AppearancePlanBubble:OnBtnClick()
+    end
+    IsEventHandled = true
+  elseif self.MsgWrap.GuildRecruitInfo then
+    if self.GuildInvite and self.GuildInvite.OnClickBtnOpenGuildDetail then
+      self.GuildInvite:OnClickBtnOpenGuildDetail()
+    end
+    IsEventHandled = true
+  end
+  return IsEventHandled
+end
+
 function M:OnGamePadDown(InKeyName)
   local IsEventHandled = false
   if InKeyName == Const.GamepadFaceButtonRight then
@@ -274,8 +369,10 @@ function M:OnGamePadDown(InKeyName)
       self.Head:BtnAreaOnHovered()
       IsEventHandled = true
     end
-  elseif InKeyName == Const.GamepadFaceButtonLeft and not self.IsOpen and self.Owner.FocusStateType == ChatFocusType.SelectChat and self.MsgWrap.ModSuitInfo then
-    self.ModPlan:OnBtnClick(0)
+  elseif InKeyName == Const.GamepadFaceButtonLeft then
+    IsEventHandled = self:OnCheckPlanGamePadDown()
+  elseif InKeyName == Const.GamepadFaceButtonUp and not self.IsOpen and self.Owner.FocusStateType == ChatFocusType.SelectChat and self.MsgWrap.GuildRecruitInfo then
+    self.GuildInvite:OnClickBtnGuild()
     IsEventHandled = true
   end
   return IsEventHandled
@@ -287,6 +384,8 @@ function M:SelectMessage(IsSelect)
   end
   local Visibility = IsSelect and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed
   self.SelectMask:SetVisibility(Visibility)
+  self.GuildInvite.Key_Controller:SetVisibility(Visibility)
+  self.GuildInvite.Key_Name:SetVisibility(Visibility)
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
@@ -313,6 +412,10 @@ end
 function M:OnHeadMenuOpenChanged(bOpen)
   self.IsOpen = bOpen
   self.Owner:UpdateUIStyleInPlatform()
+  if bOpen or UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
+    return
+  end
+  self:SetFocus()
 end
 
 function M:OnCreateChatItem(Owner, Content)
@@ -352,6 +455,53 @@ function M:OnNavigateDown()
     end
   end
   return self
+end
+
+function M:WaitCardGuildInfoCallback()
+  self.WaitCardGuildInfo = self.WaitCardGuildInfo - 1
+  if 0 == self.WaitCardGuildInfo then
+    if self.CardGuildFullInfo then
+      self.CardGuildFullInfo.CardGuildChatOpen = self.CardGuildChatOpen
+      self:SetGuildFullInfo(self.CardGuildFullInfo, true)
+    else
+      self:SetGuildFullInfo(nil, true)
+    end
+    self.WaitGuildId = nil
+    self.HeadAnchor:Open(true)
+    self.Owner:BlockAllUIInput(false)
+  end
+end
+
+function M:GetCardGuildInfo(GuildId, Uid, AvatarInfo)
+  self.WaitCardGuildInfo = 2
+  self.Owner:BlockAllUIInput(true, "SP_DisplayOnly")
+  self.CardGuildFullInfo = nil
+  self.WaitGuildId = nil
+  local Avatar = ChatController:GetAvatar()
+  Avatar:QueryGuildMemberInfo(function(Ret, MemberInfos)
+    if not IsValid(self) then
+      return
+    end
+    local Info = MemberInfos[Uid]
+    Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
+      if Ret ~= ErrorCode.RET_SUCCESS then
+        return
+      end
+      self.CardGuildChatOpen = IsOpen
+      self:WaitCardGuildInfoCallback()
+    end, Info.Uid)
+    if Info.GuildId and 0 ~= Info.GuildId then
+      self.WaitGuildId = Info.GuildId
+      GuildController:SendGetGuildInfo(Info.GuildId)
+    else
+      self:WaitCardGuildInfoCallback()
+    end
+  end, {Uid})
+end
+
+function M:OnGetGuildFullInfo(Info)
+  self.CardGuildFullInfo = Info
+  self:WaitCardGuildInfoCallback()
 end
 
 AssembleComponents(M)

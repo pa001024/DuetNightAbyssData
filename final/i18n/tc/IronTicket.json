@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1001,
+    "name": "深境羅盤·探險",
+    "desc": "用於開啟深境探險",
+    "func": "深境羅盤",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 100,
+    "rarity": 5,
+    "accessKey": [
+      "Forging"
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "深境羅盤·探險",
+    "desc": "用於開啟深境探險",
+    "func": "深境羅盤",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 90,
+    "rarity": 3
+  }
+]

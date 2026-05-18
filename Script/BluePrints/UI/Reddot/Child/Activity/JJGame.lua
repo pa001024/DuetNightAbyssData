@@ -45,7 +45,18 @@ function ReddotTreeNode_JJGame:_Judge(ActivityID)
       end
     end
   end
-  self:ClearJJGameReddot()
+  if not allRewardsClaimed then
+    local MidTermAchvScores = MidTermGoals.AchvScores or 0
+    local MidTermAchvProgressRewarded = MidTermGoals.AchvProgressRewarded or {}
+    for Count in pairs(DataMgr.AchievementPrize) do
+      if Count <= MidTermAchvScores and 1 ~= MidTermAchvProgressRewarded[Count] then
+        return true
+      end
+    end
+  end
+  if self:IsAllChildrenEmpty() then
+    self:ClearJJGameReddot()
+  end
   return false
 end
 
@@ -61,17 +72,48 @@ end
 function ReddotTreeNode_JJGame:OnInitNodeCache(NodeCache)
   ReddotTreeNode_JJGame.Super.OnInitNodeCache(self, NodeCache)
   ReddotManager.AddListenerEx("Acti_JJGame", self, self.OnJJGameReddotChange)
-  local NormalRewardNode = ReddotManager.GetTreeNode(NormalRewardReddotName)
-  local ChallengeRewardNode = ReddotManager.GetTreeNode(ChallengeRewardReddotName)
-  local NormalRewardCount = NormalRewardNode and NormalRewardNode.Count or 0
-  local ChallengeRewardCount = ChallengeRewardNode and ChallengeRewardNode.Count or 0
-  if 0 == NormalRewardCount and 0 == ChallengeRewardCount and self.Count and self.Count > 0 then
+  ReddotManager.AddListenerEx(NormalRewardReddotName, self, self.OnChildReddotChange)
+  ReddotManager.AddListenerEx(ChallengeRewardReddotName, self, self.OnChildReddotChange)
+  ReddotManager.AddListenerEx(NormalTaskNewReddotName, self, self.OnChildReddotChange)
+  ReddotManager.AddListenerEx(ChallengeTaskNewReddotName, self, self.OnChildReddotChange)
+  if self:IsAllChildrenEmpty() and self.Count and self.Count > 0 then
     self:ClearJJGameReddot()
   end
 end
 
 function ReddotTreeNode_JJGame:OnDisposeNode()
   ReddotManager.RemoveListener("Acti_JJGame", self)
+  ReddotManager.RemoveListener(NormalRewardReddotName, self)
+  ReddotManager.RemoveListener(ChallengeRewardReddotName, self)
+  ReddotManager.RemoveListener(NormalTaskNewReddotName, self)
+  ReddotManager.RemoveListener(ChallengeTaskNewReddotName, self)
+end
+
+function ReddotTreeNode_JJGame:IsAllChildrenEmpty()
+  local nodeNames = {
+    NormalRewardReddotName,
+    ChallengeRewardReddotName,
+    NormalTaskNewReddotName,
+    ChallengeTaskNewReddotName
+  }
+  for _, name in ipairs(nodeNames) do
+    local node = ReddotManager.GetTreeNode(name)
+    if node and node.Count and node.Count > 0 then
+      return false
+    end
+  end
+  return true
+end
+
+function ReddotTreeNode_JJGame:OnChildReddotChange(Count, RdType, RdName)
+  if self:IsAllChildrenEmpty() then
+    if self.Count and self.Count > 0 then
+      self:ClearJJGameReddot()
+    end
+  else
+    local MidTermGoalEventId = DataMgr.MidTermGoalConstant.MidTermGoalEventId.ConstantValue
+    self:OnRefreshNodeData(MidTermGoalEventId)
+  end
 end
 
 function ReddotTreeNode_JJGame:OnJJGameReddotChange(Count, RdType, RdName)

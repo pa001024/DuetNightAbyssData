@@ -7,8 +7,10 @@ function SplineMoveStartNode:Init()
   self.bEnableCameraSeq = false
   self.bEnableCameraBlend = false
   self.IsTriggerable = false
+  self.UseEndOverlapBox = true
   self.CanMoveReverse = false
   self.CanExitSpline = false
+  self.GuideCameraToStart = true
   self.bStartOverlap = false
   self.StopAtEndPoint = false
 end
@@ -23,7 +25,7 @@ function SplineMoveStartNode:Start(Context)
     return
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GameInstance, 0)
-  local Res = CinemaMoveSpline:SplineInit(Player, self.WalkType, self.MoveSpeedRate, self.CanMoveReverse, self.CanExitSpline, self.IsTriggerable, self.StopAtEndPoint)
+  local Res = CinemaMoveSpline:SplineInit(Player, self.WalkType, self.MoveSpeedRate, self.CanMoveReverse, self.CanExitSpline, self.IsTriggerable, self.StopAtEndPoint, self.UseEndOverlapBox, self.GuideCameraToStart)
   if not Res then
     self:Finish()
     return

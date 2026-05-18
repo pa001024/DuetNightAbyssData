@@ -21,6 +21,10 @@ return ReadOnly("TheaterConstant", {
     ConstantName = "AutoPutMax_5",
     ConstantValue = 0
   },
+  AutoRepairInterval = {
+    ConstantName = "AutoRepairInterval",
+    ConstantValue = 1800
+  },
   EndGameTalkConfigId = {
     ConstantName = "EndGameTalkConfigId",
     ConstantValue = 51105840
@@ -40,12 +44,12 @@ return ReadOnly("TheaterConstant", {
   },
   NpcbCreatorID = {
     ConstantName = "NpcbCreatorID",
-    ConstantValue = 1969996
+    ConstantValue = 332480345
   },
   PerformNum = {ConstantName = "PerformNum", ConstantValue = 5},
   PetCreatorID = {
     ConstantName = "PetCreatorID",
-    ConstantValue = 1968001
+    ConstantValue = 332480346
   },
   Reward1 = {ConstantName = "Reward1", ConstantValue = 110504},
   Reward2 = {ConstantName = "Reward2", ConstantValue = 110505},
@@ -85,44 +89,48 @@ return ReadOnly("TheaterConstant", {
     ConstantName = "TheaterPerformResultDelay",
     ConstantValue = 2
   },
+  TheaterRegionId = {
+    ConstantName = "TheaterRegionId",
+    ConstantValue = 106001
+  },
   UniqueMail1 = {
     ConstantName = "UniqueMail1",
-    ConstantValue = 10062
+    ConstantValue = 10084
   },
   UniqueMail2 = {
     ConstantName = "UniqueMail2",
-    ConstantValue = 10063
+    ConstantValue = 9999999
   },
   UniqueMail3 = {
     ConstantName = "UniqueMail3",
-    ConstantValue = 10064
+    ConstantValue = 9999999
   },
   UniqueMail4 = {
     ConstantName = "UniqueMail4",
-    ConstantValue = 10065
+    ConstantValue = 9999999
   },
   UniqueMail5 = {
     ConstantName = "UniqueMail5",
-    ConstantValue = 10066
+    ConstantValue = 9999999
   },
   UniqueResource1 = {
     ConstantName = "UniqueResource1",
-    ConstantValue = 4030002
+    ConstantValue = 4030007
   },
   UniqueResource2 = {
     ConstantName = "UniqueResource2",
-    ConstantValue = 4030003
+    ConstantValue = 9999999
   },
   UniqueResource3 = {
     ConstantName = "UniqueResource3",
-    ConstantValue = 4030004
+    ConstantValue = 9999999
   },
   UniqueResource4 = {
     ConstantName = "UniqueResource4",
-    ConstantValue = 4030005
+    ConstantValue = 9999999
   },
   UniqueResource5 = {
     ConstantName = "UniqueResource5",
-    ConstantValue = 4030006
+    ConstantValue = 9999999
   }
 })

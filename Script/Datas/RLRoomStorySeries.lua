@@ -275,6 +275,24 @@ return ReadOnly("RLRoomStorySeries", {
     SeriesMainIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event20.T_Rouge_Event20'",
     SeriesName = "Event_SERIES_100081"
   },
+  [10009101] = {
+    EventName = "RougeLike_RoomName_329",
+    RLArchiveSeriesId = 100091,
+    RLArchiveSubId = 10009101,
+    RLArchiveSubIdSort = 1,
+    RLArchiveType = 1,
+    SeriesMainIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event21.T_Rouge_Event21'",
+    SeriesName = "RougeLike_RoomName_329"
+  },
+  [10009201] = {
+    EventName = "RougeLike_RoomName_330",
+    RLArchiveSeriesId = 100092,
+    RLArchiveSubId = 10009201,
+    RLArchiveSubIdSort = 1,
+    RLArchiveType = 1,
+    SeriesMainIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event22.T_Rouge_Event22'",
+    SeriesName = "RougeLike_RoomName_330"
+  },
   [20000101] = {
     EventName = "StoryEvent_SeasonFirst01",
     RLArchiveSeriesId = 200001,

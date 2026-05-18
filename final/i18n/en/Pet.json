@@ -3462,7 +3462,7 @@
     "经验": 100,
     "主动": {
       "id": 426,
-      "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to nearby enemies, and grants +{%} Lumino additional DMG to self and allies for {}s.",
+      "描述": "Deals Lumino DMG equal to {%} of the main character's ATK to nearby enemies, and grants +{%} Lumino additional Damage to self and allies for {}s.",
       "值": [
         [
           11.7,

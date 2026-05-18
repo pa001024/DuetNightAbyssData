@@ -23,7 +23,7 @@ function M:InitVariable()
 end
 
 function M:OnPressed()
-  self.OwnerPanel:TryToPlayTargetCommand("Reload", true)
+  self.OwnerPanel:TryToPlayTargetCommand("ChargeBullet", true)
   self:OnPressed_Presentation()
 end
 

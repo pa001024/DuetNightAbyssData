@@ -120,7 +120,7 @@ function M:OnLoaded(...)
     end
   end
   if self.Params.Type == "SelectWeaponAccessory" then
-    self.Tab_Change:SetVisibility(ESlateVisibility.Visable)
+    self.Tab_Change:SetVisibility(ESlateVisibility.Visible)
   else
     self.Tab_Change:SetVisibility(ESlateVisibility.Collapsed)
   end
@@ -460,17 +460,35 @@ function M:BuildRoleItemContents()
     SelectedContent.IsSelect = true
     self.CurRoleContent = SelectedContent
   end
+  if self.Params.NewTable then
+    self:InitReddotTable()
+  end
   if self.RoleItemContentsArray then
     for _, Content in ipairs(self.RoleItemContentsArray) do
-      Content.RedDotType = nil
+      if self.ReddotTable and self.ReddotTable[Content.SortSkinId] then
+        Content.RedDotType = UIConst.RedDotType.CommonRedDot
+      else
+        Content.RedDotType = nil
+      end
     end
+  end
+end
+
+function M:InitReddotTable()
+  self.ReddotTable = {}
+  for _, SkinId in pairs(self.Params.NewTable) do
+    self.ReddotTable[SkinId] = 1
   end
 end
 
 function M:OnRoleListEntryInitialized(_Content, _Widget)
   local Content, Widget = _Content, _Widget
   if Content then
-    Content.RedDotType = nil
+    if Content.RedDotType then
+      return
+    else
+      Content.RedDotType = nil
+    end
   end
   if Widget then
     if Widget.SetReddot then
@@ -501,6 +519,12 @@ function M:OnRoleListItemClicked(Content)
   Content.IsSelect = true
   if Content.Widget and Content.Widget.SetIsSelected then
     Content.Widget:SetIsSelected(true)
+  end
+  if Content.Widget and Content.Widget.SetReddot then
+    Content.Widget:SetReddot(nil)
+    Content.RedDotType = nil
+  else
+    Content.RedDotType = nil
   end
   self.CurRoleContent = Content
   self:UpdatePreviewSkinActorForContent(Content)
@@ -533,6 +557,9 @@ function M:Close()
   DebugPrint("gmy@@@WBP_CharSkinPreview_C M:Close111")
   if self.BehaviorType == M.PreviewBehaviorType.BattlePassPreview then
     EventManager:FireEvent(EventID.BattlePassSkinClose)
+  end
+  if self.Params and self.Params.CloseCallback then
+    self.Params.CloseCallback(nil, nil, self.IsUseOpt)
   end
 end
 
@@ -1360,6 +1387,10 @@ end
 
 function M:OnConfirmClicked()
   local ConfirmId
+  local CommonDialog = UIManager(self):GetUI("CommonDialog")
+  if CommonDialog then
+    CommonDialog:Close()
+  end
   if self.Params.Type == "SelectGeneralSkin" then
     local Content = self.CurRoleContent
     local CharId = Content.UnitId
@@ -1716,30 +1747,20 @@ function M:DoApplySkinOptReward(Content)
   local function OnFinish(ErrCode)
     DebugPrint("WBP_CharSkinPreview_C DoApplySkinOptReward 回调成功", ErrCode, ResourceId, SkinId, ChooseIndex, bHasSkin)
     if ErrCode == ErrorCode.RET_SUCCESS then
-      local BagMainPage = UIManager(self):GetUIObj("BagMain")
-      if BagMainPage then
-        BagMainPage:AddTimer(0.3, function()
-          if bHasSkin then
-            local RegainItemId = DataMgr.Skin[SkinId].RegainItemId
-            local RegainItemNum = DataMgr.Skin[SkinId].RegainItemNum
-            UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
-          else
-            UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
-          end
-        end)
-      else
-        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
-        if ArmorySkinPage then
-          ArmorySkinPage:AddTimer(0.3, function()
-            UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
-          end)
+      self:AddTimer(0.3, function()
+        if bHasSkin then
+          local RegainItemId = DataMgr.Skin[SkinId].RegainItemId
+          local RegainItemNum = DataMgr.Skin[SkinId].RegainItemNum
+          UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
+        else
+          UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
         end
-      end
+      end)
     end
-    self:Close()
   end
   
   Avatar:UseOptResourceInBag(ResourceId, OptIdxList, OnFinish)
+  self.IsUseOpt = true
   self:Close()
 end
 
@@ -1780,30 +1801,20 @@ function M:DoApplyWeaponSkinOptReward(Content)
   local function OnFinish(ErrCode)
     DebugPrint("WBP_CharSkinPreview_C DoApplyWeaponSkinOptReward 回调成功", ErrCode, ResourceId, SkinId, ChooseIndex, bHasSkin)
     if ErrCode == ErrorCode.RET_SUCCESS then
-      local BagMainPage = UIManager(self):GetUIObj("BagMain")
-      if BagMainPage then
-        BagMainPage:AddTimer(0.3, function()
-          if bHasSkin then
-            local RegainItemId = DataMgr.WeaponSkin[SkinId].RegainItemId
-            local RegainItemNum = DataMgr.WeaponSkin[SkinId].RegainItemNum
-            UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
-          else
-            UIUtils.ShowGetItemPage("WeaponSkin", SkinId, 1, nil, nil, nil, nil, true, true)
-          end
-        end)
-      else
-        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
-        if ArmorySkinPage then
-          ArmorySkinPage:AddTimer(0.3, function()
-            UIUtils.ShowGetItemPage("WeaponSkin", SkinId, 1, nil, nil, nil, nil, true, true)
-          end)
+      self:AddTimer(0.3, function()
+        if bHasSkin then
+          local RegainItemId = DataMgr.WeaponSkin[SkinId].RegainItemId
+          local RegainItemNum = DataMgr.WeaponSkin[SkinId].RegainItemNum
+          UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
+        else
+          UIUtils.ShowGetItemPage("WeaponSkin", SkinId, 1, nil, nil, nil, nil, true, true)
         end
-      end
+      end)
     end
-    self:Close()
   end
   
   Avatar:UseOptResourceInBag(ResourceId, OptIdxList, OnFinish)
+  self.IsUseOpt = true
   self:Close()
 end
 
@@ -1844,30 +1855,20 @@ function M:DoApplyCharSkinOptReward(Content)
   local function OnFinish(ErrCode)
     DebugPrint("WBP_CharSkinPreview_C DoApplyWeaponSkinOptReward 回调成功", ErrCode, ResourceId, SkinId, ChooseIndex, bHasSkin)
     if ErrCode == ErrorCode.RET_SUCCESS then
-      local BagMainPage = UIManager(self):GetUIObj("BagMain")
-      if BagMainPage then
-        BagMainPage:AddTimer(0, function()
-          if bHasSkin then
-            local RegainItemId = DataMgr.Skin[SkinId].RegainItemId
-            local RegainItemNum = DataMgr.Skin[SkinId].RegainItemNum
-            UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
-          else
-            UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
-          end
-        end)
-      else
-        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
-        if ArmorySkinPage then
-          ArmorySkinPage:AddTimer(0.3, function()
-            UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
-          end)
+      self:AddTimer(0.3, function()
+        if bHasSkin then
+          local RegainItemId = DataMgr.Skin[SkinId].RegainItemId
+          local RegainItemNum = DataMgr.Skin[SkinId].RegainItemNum
+          UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
+        else
+          UIUtils.ShowGetItemPage("Skin", SkinId, 1, nil, nil, nil, nil, true, true)
         end
-      end
+      end)
     end
-    self:Close()
   end
   
   Avatar:UseOptResourceInBag(ResourceId, OptIdxList, OnFinish)
+  self.IsUseOpt = true
   self:Close()
 end
 
@@ -1909,30 +1910,20 @@ function M:DoApplyAccessoryOptReward(Content)
   local function OnFinish(ErrCode)
     DebugPrint("WBP_CharSkinPreview_C DoApplyWeaponSkinOptReward 回调成功", ErrCode, ResourceId, SkinId, ChooseIndex, bHasSkin)
     if ErrCode == ErrorCode.RET_SUCCESS then
-      local BagMainPage = UIManager(self):GetUIObj("BagMain")
-      if BagMainPage then
-        BagMainPage:AddTimer(0.3, function()
-          if bHasSkin then
-            local RegainItemId = DataMgr[Type][SkinId].RegainItemId
-            local RegainItemNum = DataMgr[Type][SkinId].RegainItemNum
-            UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
-          else
-            UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
-          end
-        end)
-      else
-        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
-        if ArmorySkinPage then
-          ArmorySkinPage:AddTimer(0.3, function()
-            UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
-          end)
+      self:AddTimer(0.3, function()
+        if bHasSkin then
+          local RegainItemId = DataMgr[Type][SkinId].RegainItemId
+          local RegainItemNum = DataMgr[Type][SkinId].RegainItemNum
+          UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
+        else
+          UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
         end
-      end
+      end)
     end
-    self:Close()
   end
   
   Avatar:UseOptResourceInBag(ResourceId, OptIdxList, OnFinish)
+  self.IsUseOpt = true
   self:Close()
 end
 
@@ -1974,30 +1965,20 @@ function M:DoApplyGestureOptReward(Content)
   local function OnFinish(ErrCode)
     DebugPrint("WBP_CharSkinPreview_C DoApplyWeaponSkinOptReward 回调成功", ErrCode, ResourceId, SkinId, ChooseIndex, bHasSkin)
     if ErrCode == ErrorCode.RET_SUCCESS then
-      local BagMainPage = UIManager(self):GetUIObj("BagMain")
-      if BagMainPage then
-        BagMainPage:AddTimer(0.3, function()
-          if bHasSkin then
-            local RegainItemId = DataMgr[Type][SkinId].RegainItemId
-            local RegainItemNum = DataMgr[Type][SkinId].RegainItemNum
-            UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
-          else
-            UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
-          end
-        end)
-      else
-        local ArmorySkinPage = UIManager(self):GetUIObj("ArmorySkin")
-        if ArmorySkinPage then
-          ArmorySkinPage:AddTimer(0.3, function()
-            UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
-          end)
+      self:AddTimer(0.3, function()
+        if bHasSkin then
+          local RegainItemId = DataMgr[Type][SkinId].RegainItemId
+          local RegainItemNum = DataMgr[Type][SkinId].RegainItemNum
+          UIUtils.ShowGetItemPage(CommonConst.ItemType.Resource, RegainItemId, RegainItemNum, nil, nil, nil, nil, true, true)
+        else
+          UIUtils.ShowGetItemPage(Type, SkinId, 1, nil, nil, nil, nil, true, true)
         end
-      end
+      end)
     end
-    self:Close()
   end
   
   Avatar:UseOptResourceInBag(ResourceId, OptIdxList, OnFinish)
+  self.IsUseOpt = true
   self:Close()
 end
 

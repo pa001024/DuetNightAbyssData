@@ -3,6 +3,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   SkillPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_CharSkill_M.WBP_Battle_CharSkill_M_C'",
     WidgetName = "Skill",
+    HUDNodeName = "Skill",
     TextMapContent = "UI_CustomLayout_WidgetName30",
     InnerActiveSlateName = {
       {
@@ -19,6 +20,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   AtkMeleePos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AtkMelee_M.WBP_Battle_AtkMelee_M_C'",
     WidgetName = "AtkMelee",
+    HUDNodeName = "AtkMelee",
     TextMapContent = "UI_CustomLayout_WidgetName27",
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_AtkMeleePos"
@@ -26,6 +28,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   AtkRangedPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AtkRanged_M.WBP_Battle_AtkRanged_M_C'",
     WidgetName = "AtkRanged",
+    HUDNodeName = "AtkRanged",
     TextMapContent = "UI_CustomLayout_WidgetName24",
     InnerActiveSlateName = "Image_Main",
     MaskNodeName = "Image_AtkRangedPos"
@@ -33,6 +36,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   AtkRangedPosLeft = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AtkRangedLeft_M.WBP_Battle_AtkRangedLeft_M_C'",
     WidgetName = "AtkRangedLeft",
+    HUDNodeName = "AtkRangedLeft",
     TextMapContent = "UI_CustomLayout_WidgetName19",
     InnerActiveSlateName = {
       "Btn_AtkRange",
@@ -43,6 +47,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   JumpPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Jump_M.WBP_Battle_Jump_M_C'",
     WidgetName = "Jump",
+    HUDNodeName = "Jump",
     TextMapContent = "UI_CustomLayout_WidgetName31",
     InnerActiveSlateName = "Image_Main",
     MaskNodeName = "Image_JumpPos"
@@ -50,6 +55,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   BulletJumpPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_BulletJump_M.WBP_Battle_BulletJump_M_C'",
     WidgetName = "BulletJump01",
+    HUDNodeName = "BulletJump",
     TextMapContent = "UI_CustomLayout_WidgetName23",
     InnerActiveSlateName = "Btn_BulletJump",
     MaskNodeName = "Image_BulletJumpPos"
@@ -57,6 +63,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   BulletJumpPosLeft = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_BulletJump_M.WBP_Battle_BulletJump_M_C'",
     WidgetName = "BulletJump02",
+    HUDNodeName = "BulletJumpLeft",
     TextMapContent = "UI_CustomLayout_WidgetName18",
     InnerActiveSlateName = "Btn_BulletJump",
     MaskNodeName = "Image_BulletJumpPosLeft"
@@ -64,6 +71,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   DodgePos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Dodge_M.WBP_Battle_Dodge_M_C'",
     WidgetName = "Dodge",
+    HUDNodeName = "Dodge",
     TextMapContent = "UI_CustomLayout_WidgetName26",
     InnerActiveSlateName = {
       "Button_Area",
@@ -74,9 +82,18 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
       "Image_Dodgetype02"
     }
   },
+  FlyPos = {
+    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Fly.WBP_Battle_Fly_C'",
+    WidgetName = "Fly",
+    HUDNodeName = "Fly",
+    TextMapContent = "UI_CustomLayout_WidgetName37",
+    InnerActiveSlateName = "Button_Area",
+    MaskNodeName = "Image_FlyPos"
+  },
   BulletPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Bullet_M.WBP_Battle_Bullet_M_C'",
     WidgetName = "Bullet",
+    HUDNodeName = "Bullet",
     TextMapContent = "UI_CustomLayout_WidgetName25",
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_BulletPos"
@@ -84,6 +101,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   BattleMenuPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_BattleMenuBtn_M.WBP_BattleMenuBtn_M_C'",
     WidgetName = "Battle_Menu",
+    HUDNodeName = "Battle_Menu",
     TextMapContent = "UI_CustomLayout_WidgetName22",
     InnerActiveSlateName = {
       "Image_Menu",
@@ -94,6 +112,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   SupportSkillPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_SupportSkill_M.WBP_Battle_SupportSkill_M_C'",
     WidgetName = "SupportSkill",
+    HUDNodeName = "SupportSkill",
     TextMapContent = "UI_CustomLayout_WidgetName28",
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_SupportSkillPos"
@@ -108,6 +127,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   AimLockedPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AimLocked_M.WBP_Battle_AimLocked_M_C'",
     WidgetName = "AimLocked",
+    HUDNodeName = "AimLocked",
     TextMapContent = "UI_CustomLayout_WidgetName29",
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_AimLockedPos"
@@ -115,6 +135,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   SquatPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Squat_M.WBP_Battle_Squat_M_C'",
     WidgetName = "Squat",
+    HUDNodeName = "Squat",
     TextMapContent = "UI_CustomLayout_WidgetName17",
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_SquatPos"
@@ -122,13 +143,31 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   WalkPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_Walk_M.WBP_Battle_Walk_M_C'",
     WidgetName = "Walk",
+    HUDNodeName = "Walk",
     TextMapContent = "UI_CustomLayout_WidgetName16",
     InnerActiveSlateName = "Button_Area",
     MaskNodeName = "Image_WalkPos"
   },
+  AutoBattlePos = {
+    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AutoBattle_M.WBP_Battle_AutoBattle_M_C'",
+    WidgetName = "AutoBattle",
+    HUDNodeName = "AutoBattle",
+    TextMapContent = "UI_CustomLayout_WidgetName36",
+    InnerActiveSlateName = "Button_Area",
+    MaskNodeName = "Image_AutoBattlePos"
+  },
+  AutoRemotePos = {
+    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_AutoRemote_M.WBP_Battle_AutoRemote_M_C'",
+    WidgetName = "AutoRemote",
+    HUDNodeName = "AutoRemote",
+    TextMapContent = "UI_CustomLayout_WidgetName35",
+    InnerActiveSlateName = "Button_Area",
+    MaskNodeName = "Image_AutoRemotePos"
+  },
   BattleCancelLeftPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_BulletCancel_M.WBP_Battle_BulletCancel_M_C'",
     WidgetName = "CancelLeft",
+    HUDNodeName = "BulletJumpCancelLeft",
     TextMapContent = "UI_CustomLayout_WidgetName14",
     InnerActiveSlateName = "Btn_Cancel",
     MaskNodeName = "Image_CancelPosLeft"
@@ -136,6 +175,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   BattleCancelRightPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_BulletCancel_M.WBP_Battle_BulletCancel_M_C'",
     WidgetName = "CancelRight",
+    HUDNodeName = "BulletJumpCancelRight",
     TextMapContent = "UI_CustomLayout_WidgetName15",
     InnerActiveSlateName = "Btn_Cancel",
     MaskNodeName = "Image_CancelPosRight"
@@ -143,6 +183,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   SlideTacklePos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_SlideTackle_M.WBP_Battle_SlideTackle_M_C'",
     WidgetName = "SlideTackle",
+    HUDNodeName = "Slide",
     TextMapContent = "UI_CustomLayout_WidgetName32",
     InnerActiveSlateName = {
       "Image_Hotspot",
@@ -154,6 +195,7 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
   SlidingSlashPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_Battle_SlidingSlash_M.WBP_Battle_SlidingSlash_M_C'",
     WidgetName = "SlidingSlash",
+    HUDNodeName = "SlideAttack",
     TextMapContent = "UI_CustomLayout_WidgetName33",
     InnerActiveSlateName = {
       "Image_Hotspot",
@@ -205,6 +247,13 @@ BattleHUDCommonConst.DesignBaseConfigInHUD = {
     MaskNodeName = "Img_SpSkillPos",
     bNeedAddWorldPos = true
   },
+  SpiritualizedPos = {
+    WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_SettingCustomSpiritualized_M.WBP_SettingCustomSpiritualized_M_C'",
+    WidgetName = "Spiritualized",
+    TextMapContent = "UI_CustomLayout_WidgetName34",
+    InnerActiveSlateName = "BtnSpSkill",
+    MaskNodeName = "Img_SpiritualizedPos"
+  },
   BloodPos = {
     WidgetClass = "WidgetBlueprint'/Game/UI/WBP/Battle/Mobile/Unit/WBP_SettingCustomBlood_M.WBP_SettingCustomBlood_M_C'",
     WidgetName = "Blood",
@@ -241,12 +290,16 @@ BattleHUDCommonConst.ExtraNodeConfigInHUD = {
     DefaultLayoutIndex = 4
   },
   Team = {SettingNodeName = "TeamPos", DefaultLayoutIndex = 5},
-  HUD_Bar = {SettingNodeName = "BloodPos", DefaultLayoutIndex = 6}
+  HUD_Bar = {SettingNodeName = "BloodPos", DefaultLayoutIndex = 6},
+  Pos_Spiritualized = {
+    SettingNodeName = "SpiritualizedPos",
+    DefaultLayoutIndex = 7
+  }
 }
 BattleHUDCommonConst.AllHasRelativeNodeWidgetList = {"MovePos"}
 BattleHUDCommonConst.ManualAdditionConfigInHUD = {
   SlideTackle = {
-    NodeIdx = 1,
+    NodeIdx = 2,
     LayoutInHUDPosName = "SlideTacklePos",
     EffectWidgetName = "Jump",
     ShowText = GText("UI_CustomLayout_WidgetName32"),
@@ -254,7 +307,7 @@ BattleHUDCommonConst.ManualAdditionConfigInHUD = {
     DefaultDesignScale = 1.0
   },
   SlidingSlash = {
-    NodeIdx = 2,
+    NodeIdx = 1,
     LayoutInHUDPosName = "SlidingSlashPos",
     EffectWidgetName = "Jump",
     ShowText = GText("UI_CustomLayout_WidgetName33"),

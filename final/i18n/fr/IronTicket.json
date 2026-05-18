@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1001,
+    "name": "Compas abyssal : Expédition",
+    "desc": "Utilisé pour lancer une Expédition abyssale",
+    "func": "Compas abyssal",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 100,
+    "rarity": 5,
+    "accessKey": [
+      "Forging"
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "Compas abyssal : Expédition",
+    "desc": "Utilisé pour lancer une Expédition abyssale",
+    "func": "Compas abyssal",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 90,
+    "rarity": 3
+  }
+]

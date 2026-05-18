@@ -78,7 +78,7 @@ function Component:OnBagItemLockedOrUnlocked(OpAction, ErrCode, ...)
   if not ErrorCode:Check(ErrCode) then
     return
   end
-  if "StateChange" == OpAction then
+  if "StateChange" == OpAction and self.ItemDetailsContent then
     self.ItemDetailsContent.IsLocked = not self.ItemDetailsContent.IsLocked
     if self.ItemDetailsContent.SelfWidget then
       if self.ItemDetailsContent.IsLocked then
@@ -90,9 +90,14 @@ function Component:OnBagItemLockedOrUnlocked(OpAction, ErrCode, ...)
       end
     end
     if self.ItemDetailsWidget then
-      local TipsId = self.ItemDetailsContent.IsLocked and 7006 or 7007
-      self.SetTipLockAfterRPCBackFunc(self.ItemDetailsContent.IsLocked)
-      UIManager(self):ShowError(TipsId, nil, UIConst.Tip_CommonToast)
+      if self.SetTipLockAfterRPCBackFunc then
+        self.SetTipLockAfterRPCBackFunc(self.ItemDetailsContent.IsLocked)
+      end
+      if self.ItemDetailsContent.IsLocked then
+        ModController:ShowToast(GText("UI_Toast_Mod_AutoLock"))
+      else
+        UIManager(self):ShowError(7007, nil, UIConst.Tip_CommonToast)
+      end
     end
   end
 end
@@ -481,6 +486,7 @@ function Component:NotifyOnModCardLevelUp(ModUuid, Comsumers)
     self.Panel_Limit:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   self.EnhanceWidget:OnLevelUpSuccess()
+  ModController:TriggerModAutoLock(ModUuid)
 end
 
 function Component:OnLevelUpSuccessFinishedCallback()

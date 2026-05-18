@@ -95,6 +95,50 @@ return ReadOnly("PartyTopic", {
     PartyTopicReward = 7053,
     PartyTopicTalkId = "Invite/Heitao_110104.story"
   },
+  [110201] = {
+    MemoryDescription = "PartyReward_Description_110201",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Fuluo_1.T_Entertainment_Fuluo_1'",
+    MemoryName = "PartyReward_Name_110201",
+    PartyTopicConsume = T.RT_1,
+    PartyTopicDescription = "PartyTopic_Description_110201",
+    PartyTopicId = 110201,
+    PartyTopicName = "PartyTopic_Name_110201",
+    PartyTopicReward = 7050,
+    PartyTopicTalkId = "Invite/Fuluo_110201.story"
+  },
+  [110202] = {
+    MemoryDescription = "PartyReward_Description_110202",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Fuluo_2.T_Entertainment_Fuluo_2'",
+    MemoryName = "PartyReward_Name_110202",
+    PartyTopicConsume = T.RT_2,
+    PartyTopicDescription = "PartyTopic_Description_110202",
+    PartyTopicId = 110202,
+    PartyTopicName = "PartyTopic_Name_110202",
+    PartyTopicReward = 7051,
+    PartyTopicTalkId = "Invite/Fuluo_110202.story"
+  },
+  [110203] = {
+    MemoryDescription = "PartyReward_Description_110203",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Fuluo_3.T_Entertainment_Fuluo_3'",
+    MemoryName = "PartyReward_Name_110203",
+    PartyTopicConsume = T.RT_3,
+    PartyTopicDescription = "PartyTopic_Description_110203",
+    PartyTopicId = 110203,
+    PartyTopicName = "PartyTopic_Name_110203",
+    PartyTopicReward = 7052,
+    PartyTopicTalkId = "Invite/Fuluo_110203.story"
+  },
+  [110204] = {
+    MemoryDescription = "PartyReward_Description_110204",
+    MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Fuluo_4.T_Entertainment_Fuluo_4'",
+    MemoryName = "PartyReward_Name_110204",
+    PartyTopicConsume = T.RT_4,
+    PartyTopicDescription = "PartyTopic_Description_110204",
+    PartyTopicId = 110204,
+    PartyTopicName = "PartyTopic_Name_110204",
+    PartyTopicReward = 7053,
+    PartyTopicTalkId = "Invite/Fuluo_110204.story"
+  },
   [110301] = {
     MemoryDescription = "PartyReward_Description_110301",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Tuosi_1.T_Entertainment_Tuosi_1'",

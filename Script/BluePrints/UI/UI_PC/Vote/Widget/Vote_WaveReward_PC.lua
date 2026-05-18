@@ -33,7 +33,7 @@ function M:InitLeave(DefenceWave, CurrentDungeonProgress)
   end
 end
 
-function M:InitRewardList(CurrentDungeonProgress, RewardId, IsContinue)
+function M:InitRewardList(CurrentDungeonProgress, RewardId, IsContinue, IsIronSurvival)
   self:SetWaveText(CurrentDungeonProgress)
   local Reward = DataMgr.Reward[RewardId]
   if not Reward then
@@ -52,27 +52,125 @@ function M:InitRewardList(CurrentDungeonProgress, RewardId, IsContinue)
     if not CachedDungeonProgressRewards[CurrentDungeonProgress] then
       return
     end
+    PrintTable(CachedDungeonProgressRewards[CurrentDungeonProgress], 5)
     local WalnutTag = tostring(RewardBox:GetTag("Walnut"))
     for ItemType, Rewards in pairs(CachedDungeonProgressRewards[CurrentDungeonProgress]) do
-      for ItemId, ItemTable in pairs(Rewards) do
-        local RealType = string.gsub(ItemType, "s$", "")
-        local WalnutNum = RewardBox:FindCountByTag(ItemTable, "Walnut")
-        local ExtraNum = RewardBox:FindCountByTag(ItemTable, "Extra")
-        local NormalNum = RewardBox:FindCountByTag(ItemTable, "Normal")
-        local FirstNum = RewardBox:FindCountByTag(ItemTable, "First")
-        self:CreateOneReward("Walnut", RealType, ItemId, WalnutNum, ListItemNums)
-        self:CreateOneReward("Normal", RealType, ItemId, NormalNum, ListItemNums)
-        self:CreateOneReward("Extra", RealType, ItemId, ExtraNum, ListItemNums)
-        self:CreateOneReward("First", RealType, ItemId, FirstNum, ListItemNums)
+      if "IronTickets" == ItemType then
+        self:CreateIronSurvivalRewards(CachedDungeonProgressRewards[CurrentDungeonProgress], ListItemNums)
+      else
+        for ItemId, ItemTable in pairs(Rewards) do
+          local RealType = string.gsub(ItemType, "s$", "")
+          local WalnutNum = RewardBox:FindCountByTag(ItemTable, "Walnut")
+          local ExtraNum = RewardBox:FindCountByTag(ItemTable, "Extra")
+          local NormalNum = RewardBox:FindCountByTag(ItemTable, "Normal")
+          local FirstNum = RewardBox:FindCountByTag(ItemTable, "First")
+          self:CreateOneReward("Walnut", RealType, ItemId, WalnutNum, ListItemNums)
+          self:CreateOneReward("Normal", RealType, ItemId, NormalNum, ListItemNums)
+          self:CreateOneReward("Extra", RealType, ItemId, ExtraNum, ListItemNums)
+          self:CreateOneReward("First", RealType, ItemId, FirstNum, ListItemNums)
+        end
       end
     end
   else
     self:ReadRewardInfo(Reward, ListItemNums)
+    if IsIronSurvival then
+      self:ReadIronSurvivalExtraReward(ListItemNums)
+    end
   end
   if self.ResourceNum < 5 then
     self.RewardList:SetEmptyGridItemCount(math.max(0, 5 - self.ResourceNum))
     for i = self.ResourceNum + 1, 5 do
       local Content = self:NewItemContent(nil, 0, nil, nil, ListItemNums <= self.ResourceNum)
+    end
+  end
+end
+
+function M:CreateIronSurvivalRewards(RewardsTable, ListItemNums)
+  if not RewardsTable.Special or not RewardsTable.Special.IronTicket then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local IronTicketRewardUid2TicketId = {}
+  for _, Uid in pairs(RewardsTable.Special.IronTicket) do
+    if Avatar.IronSurvivalTicket then
+      for _, ticket in pairs(Avatar.IronSurvivalTicket) do
+        if ticket.Uid == Uid then
+          IronTicketRewardUid2TicketId[Uid] = ticket.TicketId
+          break
+        end
+      end
+    end
+  end
+  PrintTable(IronTicketRewardUid2TicketId, 2)
+  for Uid, TicketId in pairs(IronTicketRewardUid2TicketId) do
+    local Content = self:NewItemContent("IronTicket", TicketId, 1, nil, ListItemNums <= self.ResourceNum, Uid)
+    if Content then
+      self.ResourceNum = self.ResourceNum + 1
+      self.RewardContentList[self.ResourceNum] = Content
+    end
+  end
+end
+
+function M:ReadIronSurvivalExtraReward(ListItemNums)
+  if not self.DisplayGameLevel then
+    return
+  end
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  local DungeonId = GameState.DungeonId
+  local IronSurvivalInfo = DataMgr.IronSurvivalDungeon[DungeonId]
+  if not IronSurvivalInfo then
+    return
+  end
+  local DisplayRewardIds = {}
+  for LevelThresh, RewardId in pairs(IronSurvivalInfo.IronRoundsRewardView or {}) do
+    if LevelThresh <= self.DisplayGameLevel then
+      table.insert(DisplayRewardIds, RewardId)
+    end
+  end
+  local IronSurvivalRewardInfo = {}
+  for _, RewardId in pairs(DisplayRewardIds) do
+    local Reward = DataMgr.RewardView[RewardId]
+    if Reward then
+      self:IronSurvivalGenerateReadRewardInfo(Reward, IronSurvivalRewardInfo)
+    end
+  end
+  local DungeonDoubleCost = 1
+  local DungeonId = GWorld.GameInstance:GetCurrentDungeonId() or 90401
+  if Avatar and Avatar.bDungeonDoubleCost and not DataMgr.Dungeon[DungeonId].IsWalnutDungeon then
+    DungeonDoubleCost = 2
+  end
+  for Type, _ in pairs(IronSurvivalRewardInfo) do
+    for Id, Info in pairs(_) do
+      local Content = self:NewItemContent(Info.Type, Info.Id, Info.Count * DungeonDoubleCost, nil, ListItemNums <= self.ResourceNum)
+      if Content then
+        self.ResourceNum = self.ResourceNum + 1
+        self.RewardContentList[self.ResourceNum] = Content
+      end
+    end
+  end
+end
+
+function M:IronSurvivalGenerateReadRewardInfo(Reward, RewardInfo)
+  for i, ItemId in ipairs(Reward.Id) do
+    local ItemType = Reward.Type[i]
+    if not RewardInfo[ItemType] then
+      RewardInfo[ItemType] = {}
+    end
+    local InTableCount = 0
+    if Reward.Quantity and Reward.Quantity[i] then
+      InTableCount = Reward.Quantity[i][1]
+    end
+    if not RewardInfo[ItemType][ItemId] then
+      RewardInfo[ItemType][ItemId] = {
+        Type = ItemType,
+        Id = ItemId,
+        Count = InTableCount
+      }
+    else
+      RewardInfo[ItemType][ItemId].Count = RewardInfo[ItemType][ItemId].Count + InTableCount
     end
   end
 end
@@ -146,7 +244,7 @@ function M:ReadRewardInfo(Reward, ListItemNums)
   end
 end
 
-function M:NewItemContent(ItemType, ItemId, Count, BonusType, NeedAdd, IsExtra)
+function M:NewItemContent(ItemType, ItemId, Count, BonusType, NeedAdd, Uid)
   if 0 == ItemId then
     local Obj
     if NeedAdd then
@@ -175,7 +273,9 @@ function M:NewItemContent(ItemType, ItemId, Count, BonusType, NeedAdd, IsExtra)
   Obj.Id = ItemId
   Obj.Rarity = ItemData.Rarity or ItemData.WeaponRarity or 1
   Obj.Icon = ItemData.Icon
-  Obj.Count = Count
+  if Count > 0 then
+    Obj.Count = Count
+  end
   Obj.IsShowDetails = true
   Obj.UIName = "Vote"
   Obj.OnMenuOpenChangedEvents = {
@@ -191,6 +291,9 @@ function M:NewItemContent(ItemType, ItemId, Count, BonusType, NeedAdd, IsExtra)
     Callback = self.OnRemovedFromFocusPathEvent
   }
   Obj.BonusType = BonusType
+  if Uid then
+    Obj.Uuid = Uid
+  end
   if NeedAdd then
     self.RewardList:AddItem(Obj)
   else
@@ -236,8 +339,22 @@ function M:OnListItemObjectSet(Content)
     self:InitLeave(Content.DefenceWave, Content.CurrentDungeonProgress)
   end
   self.RewardList:ClearListItems()
-  self:InitRewardList(Content.CurrentDungeonProgress, Content.RewardId, Content.Type == "Continue")
+  if Content.IsIronSurvival then
+    self:InitIronSurvivalPanel(Content.DefenceWave, Content.CurrentDungeonProgress)
+  end
+  self:InitRewardList(Content.CurrentDungeonProgress, Content.RewardId, Content.Type == "Continue", Content.IsIronSurvival)
   self:PlayAnimation(self.In)
+end
+
+function M:InitIronSurvivalPanel(BaseDungeonProgress, DisplayDungeonProgress)
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  local DungeonId = GameState.DungeonId
+  self.WS_Wave:SetActiveWidgetIndex(1)
+  local Diff = DisplayDungeonProgress - BaseDungeonProgress
+  local BaseGameLevel = GameState.GameModeLevel
+  local FixLevel = DataMgr.Dungeon[DungeonId] and DataMgr.Dungeon[DungeonId].DungeonFixLevel or 0
+  self.DisplayGameLevel = Diff * FixLevel + BaseGameLevel
+  self.Text_LvNum:SetText(self.DisplayGameLevel)
 end
 
 function M:PlayAnimationPanelIn()

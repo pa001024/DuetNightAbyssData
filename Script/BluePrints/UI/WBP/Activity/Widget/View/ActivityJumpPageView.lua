@@ -8,7 +8,8 @@ local NotNeedShowButtonActivityId = {
   [103015] = true
 }
 local NeedShowButtonActivityIdByTabName = {
-  [103016] = true
+  [103016] = true,
+  [121001] = true
 }
 
 function M:PlayFadeIn()
@@ -75,7 +76,13 @@ function M:RefreshPageStaticView(ActivityConfigData, PageConfigData, InfoClickFu
     return Content
   end)
   self.List_Reward:ClearListItems()
-  local PreViewReward, RewardContentList = PageConfigData.RewardPreview, {}
+  local PreViewReward
+  if ActivityUtils.CheckIsPermanentEvent(ActivityConfigData.EventId) then
+    PreViewReward = PageConfigData.PermanentRewardPreview or PageConfigData.RewardPreview
+  else
+    PreViewReward = PageConfigData.RewardPreview
+  end
+  local RewardContentList = {}
   if nil == PreViewReward then
     self.Group_RewardView:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else

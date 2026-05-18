@@ -8,6 +8,7 @@ return ReadOnly("SkillSplitEval", {
   SkillEffects = {
     [32] = true,
     [33] = true,
+    [2701] = true,
     [150213] = true,
     [150214] = true,
     [150224] = true,

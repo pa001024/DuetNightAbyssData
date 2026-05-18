@@ -6,7 +6,8 @@ local WBP_TaskListItem_C = Class("BluePrints.UI.BP_UIState_C")
 local QuestStateEnum = {
   DOING = 1,
   COMPLETED = 2,
-  LOCK = 3
+  LOCK = 3,
+  BLOCK = 4
 }
 local QuestChainTypeEnum = {
   Main = 1,
@@ -156,6 +157,13 @@ function WBP_TaskListItem_C:RefreshListItemInfo(Content)
     if not UnlockConditionId then
       QuestState = QuestStateEnum.DOING
     end
+    local QuestChapters = Avatar.QuestChapters
+    if DataMgr.QuestChainId2ChapId[self.QuestChainId] and Avatar then
+      local QuestChapterId = DataMgr.QuestChainId2ChapId[self.QuestChainId]
+      if QuestChapters[QuestChapterId] and QuestChapters[QuestChapterId].State == CommonConst.QuestChapterState.Lock then
+        QuestState = QuestStateEnum.BLOCK
+      end
+    end
     local CurrentTime = TimeUtils.NowTime()
     local StartTime = DataMgr.QuestChain[self.QuestChainId].StartTime
     local ShowTime = DataMgr.QuestChain[self.QuestChainId].ShowTime
@@ -243,6 +251,8 @@ function WBP_TaskListItem_C:PreCreateSubItemContent(State, QuestChainId, QuestId
     Content.IsNew = false
   elseif State == QuestStateEnum.LOCK then
     Content.State = 0
+  elseif State == QuestStateEnum.BLOCK then
+    Content.State = 3
   end
   return TaskUtils:CreateSubItemContent(Content)
 end

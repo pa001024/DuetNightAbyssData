@@ -2,6 +2,7 @@ require("UnLua")
 local M = Class("BluePrints.UI.BP_EMDungeonWidget_C")
 local UpdateTickTime = 0.5
 local LowHpPercent = 0.5
+local LowHpTriggerThreshold = 0.3
 
 function M:InitDungeonWidget(HostageEid)
   M.Super.InitDungeonWidget(self)
@@ -10,6 +11,8 @@ function M:InitDungeonWidget(HostageEid)
   self.LastShield = nil
   self.LastHpPercent = 1.0
   self.LowHpPercent = LowHpPercent
+  self.bLowHpUIOpened = false
+  self.IsHide = false
   rawset(self, "NormalColor", FLinearColor(0.274677, 0.637597, 0.341915, 1.0))
   rawset(self, "CriticalColor", FLinearColor(0.63, 0, 0, 1.0))
   local BattleMainUI = UIManager(self):GetUIObj("BattleMain")
@@ -121,6 +124,32 @@ function M:UpdateTargetInfo()
   self.LastHp = NewHp
   self.LastHpPercent = NewHpPercent
   self:SetBloodAndShieldNum(NewHp, NewShield, NewHpPercent)
+  self:CheckLowHpUI(CurTargetActor, NewHp, NewHpPercent)
+end
+
+function M:CheckLowHpUI(CurTargetActor, NewHp, NewHpPercent)
+  local UIMgr = UIManager(self)
+  if not IsValid(CurTargetActor) or NewHp and NewHp <= 0 then
+    if self.bLowHpUIOpened then
+      UIMgr:UnLoadUINew("DefenseLowHealth")
+      self.bLowHpUIOpened = false
+      self.LowHealthUIRef = nil
+    end
+    return
+  end
+  if NewHpPercent <= LowHpTriggerThreshold and not self.IsHide then
+    if not self.bLowHpUIOpened then
+      UIMgr:LoadUINew("DefenseLowHealth", self.HostageEid, "hostage")
+      self.bLowHpUIOpened = true
+      self.LowHealthUIRef = UIMgr:GetUIObj("DefenseLowHealth")
+    elseif self.LowHealthUIRef and self.LowHealthUIRef.SetHealthText then
+      self.LowHealthUIRef:SetHealthText()
+    end
+  elseif self.bLowHpUIOpened then
+    UIMgr:UnLoadUINew("DefenseLowHealth")
+    self.bLowHpUIOpened = false
+    self.LowHealthUIRef = nil
+  end
 end
 
 function M:SetBloodAndShieldNum(NewHp, NewShield, HpPercent)
@@ -172,6 +201,25 @@ function M:LoadShieldBar()
   local CanvasSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.SizeBox_Shield)
   local Size = CanvasSlot:GetSize()
   self.ShieldBar = self:LoadSubWidget(self.SizeBox_Shield, "ShieldBar", Size.X, Size.Y)
+end
+
+function M:Destruct()
+  self:OnHideUI()
+  if M.Super and M.Super.Destruct then
+    M.Super.Destruct(self)
+  end
+end
+
+function M:OnHideUI()
+  if self.bLowHpUIOpened then
+    local UIMgr = UIManager(self)
+    if UIMgr and UIMgr:GetUIObj("DefenseLowHealth") then
+      UIMgr:UnLoadUINew("DefenseLowHealth")
+    end
+    self.bLowHpUIOpened = false
+    self.LowHealthUIRef = nil
+    self.IsHide = true
+  end
 end
 
 return M

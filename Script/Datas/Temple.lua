@@ -65,6 +65,11 @@ T.RT_14 = {
   40,
   60
 }
+T.RT_15 = {
+  0,
+  10,
+  15
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -593,11 +598,7 @@ return ReadOnly("Temple", {
   },
   [81701] = {
     DungeonId = 81701,
-    RatingRange = {
-      20,
-      40,
-      80
-    },
+    RatingRange = T.RT_14,
     RewardId = T.RT_13,
     SucRule = "Score",
     UIHideCombo = 1,
@@ -613,7 +614,51 @@ return ReadOnly("Temple", {
   },
   [81703] = {
     DungeonId = 81703,
-    RatingRange = T.RT_14,
+    RatingRange = {
+      30,
+      50,
+      90
+    },
+    RewardId = T.RT_13,
+    SucRule = "Score",
+    UIHideCombo = 1,
+    UIHideFailCond = 1
+  },
+  [81801] = {
+    DungeonId = 81801,
+    RatingRange = T.RT_5,
+    RewardId = T.RT_13,
+    SucRule = "CountDown",
+    UIHideCombo = 1,
+    UIHideFailCond = 1
+  },
+  [81802] = {
+    DungeonId = 81802,
+    RatingRange = T.RT_5,
+    RewardId = T.RT_13,
+    SucRule = "CountDown",
+    UIHideCombo = 1,
+    UIHideFailCond = 1
+  },
+  [81901] = {
+    DungeonId = 81901,
+    RatingRange = T.RT_15,
+    RewardId = T.RT_13,
+    SucRule = "Score",
+    UIHideCombo = 1,
+    UIHideFailCond = 1
+  },
+  [81902] = {
+    DungeonId = 81902,
+    RatingRange = T.RT_15,
+    RewardId = T.RT_13,
+    SucRule = "Score",
+    UIHideCombo = 1,
+    UIHideFailCond = 1
+  },
+  [81903] = {
+    DungeonId = 81903,
+    RatingRange = T.RT_15,
     RewardId = T.RT_13,
     SucRule = "Score",
     UIHideCombo = 1,

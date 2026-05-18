@@ -762,94 +762,122 @@ return ReadOnly("SubRegion", {
     SyncPlayerInfo = 1
   },
   [106001] = {
-    FlyLicense = -1,
+    FlyLicense = 1001,
     RegionId = 1060,
-    SubRegionDes = "测试区域",
+    SubRegionDes = "UI_SUBREGION_NAME_106001",
     SubRegionId = 106001,
     SubRegionLevel = "Haiboliya_Chezhan_BHCZ",
-    SubRegionName = "测试区域",
+    SubRegionName = "UI_SUBREGION_NAME_106001",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1,
+    TODSetting = true
+  },
+  [106002] = {
+    FlyLicense = -1,
+    SubRegionId = 106002,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
+  },
+  [106003] = {
+    FlyLicense = -1,
+    SubRegionId = 106003,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
+  },
+  [106004] = {
+    FlyLicense = -1,
+    SubRegionId = 106004,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
+  },
+  [106005] = {
+    FlyLicense = -1,
+    SubRegionId = 106005,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
+  },
+  [106006] = {
+    FlyLicense = -1,
+    SubRegionId = 106006,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
+  },
+  [106007] = {
+    FlyLicense = -1,
+    SubRegionId = 106007,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
+  },
+  [106008] = {
+    FlyLicense = -1,
+    SubRegionId = 106008,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
+  },
+  [106101] = {
+    DefaultQuestPoint = "-81348.843750,1508.510010,540.579956",
+    FlyLicense = -1,
+    NotShowInRegionMap = true,
+    RegionId = 1061,
+    SubRegionDes = "UI_SUBREGION_NAME_106101",
+    SubRegionId = 106101,
+    SubRegionLevel = "Haiboliya_Chezhan_YW01",
+    SubRegionName = "UI_SUBREGION_NAME_106101",
     SubRegionType = "field",
     SwitchPlayer = "Player",
     SyncPlayerInfo = 1
   },
-  [106002] = {
+  [106201] = {
     FlyLicense = -1,
-    RegionId = 1060,
-    SubRegionDes = "测试区域",
-    SubRegionId = 106002,
-    SubRegionLevel = "Haiboliya_Chezhan_YLQ",
-    SubRegionName = "测试区域",
+    RegionId = 1062,
+    SubRegionDes = "UI_SUBREGION_NAME_106201",
+    SubRegionId = 106201,
+    SubRegionLevel = "Haiboliya_Chezhan_MT",
+    SubRegionName = "UI_SUBREGION_NAME_106201",
     SubRegionType = "field",
+    SwitchPlayer = "Player",
     SyncPlayerInfo = 1
   },
-  [106003] = {
-    FlyLicense = -1,
-    RegionId = 1060,
-    SubRegionDes = "测试区域",
-    SubRegionId = 106003,
-    SubRegionLevel = "Haiboliya_Chezhan_HWQ",
-    SubRegionName = "测试区域",
+  [106301] = {
+    RegionId = 1063,
+    SubRegionDes = "UI_SUBREGION_NAME_106002",
+    SubRegionId = 106301,
+    SubRegionLevel = "Haiboliya_Chezhan_CZDX",
+    SubRegionName = "UI_SUBREGION_NAME_106002",
     SubRegionType = "field",
+    SwitchPlayer = "Player",
     SyncPlayerInfo = 1
   },
-  [106004] = {
+  [106302] = {
     FlyLicense = -1,
-    RegionId = 1060,
-    SubRegionDes = "测试区域",
-    SubRegionId = 106004,
-    SubRegionLevel = "Haiboliya_Chezhan_JGQ",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
+    SubRegionId = 106302,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
   },
-  [106005] = {
+  [106303] = {
     FlyLicense = -1,
-    RegionId = 1060,
-    SubRegionDes = "测试区域",
-    SubRegionId = 106005,
-    SubRegionLevel = "Haiboliya_Chezhan_CXQ",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
+    SubRegionId = 106303,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
   },
-  [106006] = {
+  [106304] = {
     FlyLicense = -1,
-    RegionId = 1060,
-    SubRegionDes = "测试区域",
-    SubRegionId = 106006,
-    SubRegionLevel = "Haiboliya_Chezhan_YT",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
+    SubRegionId = 106304,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
   },
-  [106007] = {
+  [106305] = {
     FlyLicense = -1,
-    RegionId = 1060,
-    SubRegionDes = "测试区域",
-    SubRegionId = 106007,
-    SubRegionLevel = "Haiboliya_Chezhan_ZZZ",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
+    SubRegionId = 106305,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
   },
-  [106008] = {
-    RegionId = 1060,
-    SubRegionDes = "测试区域",
-    SubRegionId = 106008,
-    SubRegionLevel = "Haiboliya_Chezhan_YWS",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
-  },
-  [106101] = {
+  [106306] = {
     FlyLicense = -1,
-    RegionId = 1061,
-    SubRegionDes = "测试区域",
-    SubRegionId = 106101,
-    SubRegionLevel = "Haiboliya_Chezhan_YW01",
-    SubRegionName = "测试区域",
-    SubRegionType = "field",
-    SyncPlayerInfo = 1
+    SubRegionId = 106306,
+    SubRegionLevel = "TestData01",
+    SubRegionName = "保持跟上线版本数据一致"
   },
   [107001] = {
     FlyLicense = -1,
@@ -928,6 +956,17 @@ return ReadOnly("SubRegion", {
     SwitchPlayer = "EXPlayer",
     SyncPlayerInfo = 1
   },
+  [108101] = {
+    FlyLicense = -1,
+    RegionId = 1081,
+    SubRegionDes = "测试区域",
+    SubRegionId = 108101,
+    SubRegionLevel = "Ailixian_LLKXDY",
+    SubRegionName = "测试区域",
+    SubRegionType = "field",
+    SwitchPlayer = "Player",
+    SyncPlayerInfo = 1
+  },
   [200101] = {
     FlyLicense = -1,
     RegionId = 2001,
@@ -950,6 +989,16 @@ return ReadOnly("SubRegion", {
     SubRegionType = "home",
     SwitchPlayer = "Player",
     TODSetting = true
+  },
+  [300101] = {
+    FlyLicense = 1001,
+    RegionId = 3001,
+    SubRegionDes = "UI_SUBREGION_DES_300101",
+    SubRegionId = 300101,
+    SubRegionLevel = "Guild",
+    SubRegionName = "UI_SUBREGION_NAME_300101",
+    SubRegionType = "guild",
+    SyncPlayerInfo = 1
   },
   [999701] = {
     FlyLicense = -1,

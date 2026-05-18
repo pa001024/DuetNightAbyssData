@@ -7,6 +7,8 @@ function M:InitContent(Params, PopupData, Owner)
   self.Super.InitContent(self, Params, PopupData, Owner)
   self.Owner = Owner
   self.Owner.bShoulFocusToLastFocusedWidget = false
+  self.TargetChannelType = Params and Params.TargetChannelType or ChatModel:GetCurrentChannel()
+  self.PendingSwitchInfo = nil
   self.SelectType = "Search"
   ChatController:SetIsEnterChannelContent(true)
   self:InitCommonUI()
@@ -22,13 +24,38 @@ function M:InitContent(Params, PopupData, Owner)
     end
   end)
   EventManager:AddEvent(EventID.OnChannelIndexSelect, self, self.SelectChannelIndex)
-  EventManager:AddEvent(EventID.OnSendChannelIndexSelect, self, self.OnSendChannelIndexSelect)
+end
+
+function M:IsPendingSwitchMatched(ErrCode, ChannelType, ChannelIndex, online_type)
+  local PendingSwitchInfo = self.PendingSwitchInfo
+  if not PendingSwitchInfo then
+    return false
+  end
+  if PendingSwitchInfo.ChannelType ~= ChannelType then
+    return false
+  end
+  if 0 ~= ErrCode then
+    return true
+  end
+  if PendingSwitchInfo.ChannelIndex and PendingSwitchInfo.ChannelIndex ~= ChannelIndex then
+    return false
+  end
+  if PendingSwitchInfo.OnlineType and PendingSwitchInfo.OnlineType ~= online_type then
+    return false
+  end
+  return true
 end
 
 function M:HandleSwitchChannelIndex(ErrCode, ChannelType, ChannelIndex, online_type)
+  if not self:IsPendingSwitchMatched(ErrCode, ChannelType, ChannelIndex, online_type) then
+    return
+  end
+  local PendingSwitchInfo = self.PendingSwitchInfo
+  self.PendingSwitchInfo = nil
   if 0 ~= ErrCode then
     return
   end
+  local NotifyChannelType = PendingSwitchInfo.NotifyChannelType or ChannelType
   self:RemoveTimer("ChannelSwitchSuccess")
   self:AddTimer(0.1, function()
     UIManager(self):ShowUITip(UIConst.Tip_CommonTop, GText("ChannelSwitchSuccess"))
@@ -40,7 +67,14 @@ function M:HandleSwitchChannelIndex(ErrCode, ChannelType, ChannelIndex, online_t
   else
     Text = string.format(GText("SwitchedToChannel"), string.format(GText("WorldChannelWithParam"), ChannelIndex))
   end
-  ChatController:RecvUpdateChannelIndexChatToWorld(Text, ChannelType)
+  local DedupKey = table.concat({
+    "SwitchChannelIndex",
+    tostring(NotifyChannelType),
+    tostring(ChannelType),
+    tostring(ChannelIndex),
+    tostring(online_type or "")
+  }, "|")
+  ChatController:RecvUpdateChannelIndexChatToWorld(Text, NotifyChannelType, DedupKey)
   EventManager:FireEvent(EventID.OnSelectChannelSuccess, ChannelType, ChannelIndex, online_type)
 end
 
@@ -66,7 +100,8 @@ function M:FilterInput(Input)
 end
 
 function M:SelectChannelIndex(SelectIndex)
-  if not SelectIndex or SelectIndex == ChatModel:GetChannelIndex(ChatModel:GetCurrentChannel()) then
+  local TargetChannelType = self.TargetChannelType or ChatModel:GetCurrentChannel()
+  if not SelectIndex or SelectIndex == ChatModel:GetChannelIndex(TargetChannelType) then
     self.Owner:ForbidRightBtn(true)
   else
     self.Owner:ForbidRightBtn(false)
@@ -78,10 +113,27 @@ function M:OnSendChannelIndexSelect()
   if not Avatar then
     return
   end
+  local SelectChannelIndex = ChatModel:GetSelectChannelIndex()
+  if not SelectChannelIndex then
+    return
+  end
+  local TargetChannelType = self.TargetChannelType or ChatModel:GetCurrentChannel()
   if ChatModel:IsInRegionOnlineChannelType() then
-    Avatar:ActiveSwitchToRegionOnlineChannel(ChatModel:GetRegionId(), ChatModel:GetSelectChannelIndex())
+    local RegionId = ChatModel:GetRegionId()
+    self.PendingSwitchInfo = {
+      ChannelType = ChatCommon.ChannelDef.Region,
+      NotifyChannelType = ChatCommon.ChannelDef.Region,
+      ChannelIndex = SelectChannelIndex,
+      OnlineType = RegionId
+    }
+    Avatar:ActiveSwitchToRegionOnlineChannel(RegionId, SelectChannelIndex)
   else
-    Avatar:RequestEnterWorldOneChannel(ChatModel:GetCurrentChannel(), ChatModel:GetSelectChannelIndex())
+    self.PendingSwitchInfo = {
+      ChannelType = TargetChannelType,
+      NotifyChannelType = TargetChannelType,
+      ChannelIndex = SelectChannelIndex
+    }
+    Avatar:RequestEnterWorldOneChannel(TargetChannelType, SelectChannelIndex)
   end
 end
 
@@ -185,9 +237,9 @@ function M:Destruct()
   if IsValid(self.Owner) then
     self.Owner.bShoulFocusToLastFocusedWidget = true
   end
+  self.PendingSwitchInfo = nil
   self:RemoveTimer("ChannelSwitchSuccess")
   EventManager:RemoveEvent(EventID.OnChannelIndexSelect, self)
-  EventManager:RemoveEvent(EventID.OnSendChannelIndexSelect, self)
   ChatController:UnRegisterEvent(self)
   ChatController:SetIsEnterChannelContent(false)
   ChatModel:SetSelectChannelIndex()

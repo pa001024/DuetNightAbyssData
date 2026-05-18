@@ -18,12 +18,7 @@ function M:Init(InitParams)
   self.Text_Details03:SetText(GText("UI_Extraction_BattleScoreDescription"))
   self.Text_Details04:SetText(GText("UI_Extraction_TreasureScore"))
   self.Text_Details05:SetText(GText("UI_Extraction_TreasureScoreDescription"))
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
-    self:CloseSelf()
-    return
-  end
-  self.Dungeonobject = ServerEntity:GetDungeonObject()
+  self.Dungeonobject = GWorld:GetGameModeDungeonObject()
   if not self.Dungeonobject then
     self:CloseSelf()
     return

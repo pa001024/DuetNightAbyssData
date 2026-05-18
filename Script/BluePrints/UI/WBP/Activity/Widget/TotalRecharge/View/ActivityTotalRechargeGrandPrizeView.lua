@@ -64,7 +64,7 @@ function M:OnBtnClicked()
   Content.ItemType = self.Content.LastRewardTypeId
   Content.SinglePreview = true
   Content.HidePurchase = true
-  UIManager(self):LoadUINew("SkinPreview", Content, self.ParentWidget)
+  PageJumpUtils:JumpToSkinPreview(Content, self.ParentWidget)
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
 end
 

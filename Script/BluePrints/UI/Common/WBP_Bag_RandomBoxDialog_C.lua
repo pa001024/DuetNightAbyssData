@@ -105,6 +105,12 @@ function M:UpdateOpenCount()
   self.Num_Exchange:SetText(GText(tostring(self.CurrentCount)))
 end
 
+function M:PackageData()
+  local PackageInfo = {}
+  PackageInfo.Count = self.CurrentCount
+  return PackageInfo
+end
+
 function M:ChangeCountClickCallback()
   local ConsumeInfo = {
     ResourceId = self.Params.ResourceId,

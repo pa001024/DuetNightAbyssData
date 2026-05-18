@@ -1,6 +1,14 @@
 local T = {}
-T.RT_1 = {"Shop_Main"}
-T.RT_2 = {
+T.RT_1 = {
+  "Text_SHOP_MAINTAB_GACHA"
+}
+T.RT_2 = {"Shop_Main"}
+T.RT_3 = {
+  0,
+  0,
+  5
+}
+T.RT_4 = {
   10,
   0,
   -30
@@ -36,9 +44,7 @@ return ReadOnly("Mount", {
     SortPriority = 97
   },
   [1001] = {
-    AccessKey = {
-      "Text_SHOP_MAINTAB_GACHA"
-    },
+    AccessKey = T.RT_1,
     AnimPath = "/Game/Asset/Char/Mount/Mnt002_Zhuyin/Animation/Montage/Interactive/Mnt002_Zhuyin_System_Idle_Montage.Mnt002_Zhuyin_System_Idle_Montage",
     BattleMountId = 1001,
     CameraName = "Char_Mount_ZhuYin",
@@ -58,7 +64,7 @@ return ReadOnly("Mount", {
     SortPriority = 100
   },
   [1002] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_2,
     AnimPath = "/Game/Asset/Char/Mount/Mnt003_Yinyi/Animation/Montage/Interactive/Mnt003_Yinyi_System_Idle_Montage.Mnt003_Yinyi_System_Idle_Montage",
     BattleMountId = 1002,
     CameraName = "Char_Mount_Motor",
@@ -67,11 +73,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0003.T_Mounts_0003",
     MountId = 1002,
-    MountLocOffset = {
-      0,
-      0,
-      5
-    },
+    MountLocOffset = T.RT_3,
     MountName = "RESOURCE_NAME_49997",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0003.T_Icon_Mounts_0003",
@@ -79,7 +81,7 @@ return ReadOnly("Mount", {
     SortPriority = 99
   },
   [1003] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_2,
     AnimPath = "/Game/Asset/Char/Mount/Mnt004_Zhenzi/Animation/Montage/Interactive/Mnt004_Zhenzi_System_Idle_Montage.Mnt004_Zhenzi_System_Idle_Montage",
     BattleMountId = 1003,
     CameraName = "Char_Mount_ZhenZi",
@@ -100,7 +102,7 @@ return ReadOnly("Mount", {
     SortPriority = 98
   },
   [1004] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_2,
     AnimPath = "/Game/Asset/Char/Mount/Mnt005_Taixu/Animation/Montage/Interactive/Mnt005_Taixu_System_Idle_Montage.Mnt005_Taixu_System_Idle_Montage",
     BattleMountId = 1004,
     CameraName = "Char_Mount_Taixu",
@@ -109,7 +111,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0005.T_Mounts_0005",
     MountId = 1004,
-    MountLocOffset = T.RT_2,
+    MountLocOffset = T.RT_4,
     MountName = "RESOURCE_NAME_49995",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0005.T_Icon_Mounts_0005",
@@ -128,7 +130,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0006.T_Mounts_0006",
     MountId = 1005,
-    MountLocOffset = T.RT_2,
+    MountLocOffset = T.RT_4,
     MountName = "RESOURCE_NAME_49992",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0006.T_Icon_Mounts_0006",
@@ -136,7 +138,7 @@ return ReadOnly("Mount", {
     SortPriority = 101
   },
   [1006] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_2,
     AnimPath = "/Game/Asset/Char/Mount/Mnt005_Taixu/Animation/Montage/Interactive/Mnt005_Taixu_System_Idle_Montage.Mnt005_Taixu_System_Idle_Montage",
     BattleMountId = 1006,
     CameraName = "Char_Mount_Taixu",
@@ -145,7 +147,7 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0008.T_Mounts_0008",
     MountId = 1006,
-    MountLocOffset = T.RT_2,
+    MountLocOffset = T.RT_4,
     MountName = "RESOURCE_NAME_49994",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0008.T_Icon_Mounts_0008",
@@ -153,7 +155,7 @@ return ReadOnly("Mount", {
     SortPriority = 101
   },
   [1007] = {
-    AccessKey = T.RT_1,
+    AccessKey = T.RT_2,
     AnimPath = "/Game/Asset/Char/Mount/Mnt005_Taixu/Animation/Montage/Interactive/Mnt005_Taixu_System_Idle_Montage.Mnt005_Taixu_System_Idle_Montage",
     BattleMountId = 1007,
     CameraName = "Char_Mount_Taixu",
@@ -162,11 +164,68 @@ return ReadOnly("Mount", {
     MountDisplayScale = 0.5,
     MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0007.T_Mounts_0007",
     MountId = 1007,
-    MountLocOffset = T.RT_2,
+    MountLocOffset = T.RT_4,
     MountName = "RESOURCE_NAME_49993",
     MountRarity = 5,
     ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0007.T_Icon_Mounts_0007",
     ResourceId = 49992,
     SortPriority = 101
+  },
+  [1008] = {
+    AccessKey = T.RT_2,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt007_Chensi/Animation/Montage/Interactive/Mnt007_Chensi_System_Idle_Montage.Mnt007_Chensi_System_Idle_Montage",
+    BattleMountId = 1008,
+    CameraName = "Char_Mount_Chensi",
+    FlyLicense = 1,
+    MountDes = "RESOURCE_DESC_49991",
+    MountDisplayScale = 0.6,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0009.T_Mounts_0009",
+    MountId = 1008,
+    MountLocOffset = T.RT_3,
+    MountName = "RESOURCE_NAME_49991",
+    MountRarity = 4,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0009.T_Icon_Mounts_0009",
+    ResourceId = 49991,
+    SortPriority = 98
+  },
+  [1009] = {
+    AccessKey = T.RT_1,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt006_Yewei/Animation/Montage/Interactive/Mnt006_Yewei_System_Idle_Montage.Mnt006_Yewei_System_Idle_Montage",
+    BattleMountId = 1009,
+    CameraName = "Char_Mount_Yewei",
+    MountDes = "RESOURCE_DESC_49990",
+    MountDisplayScale = 0.5,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0011.T_Mounts_0011",
+    MountId = 1009,
+    MountLocOffset = {
+      0,
+      0,
+      -10
+    },
+    MountName = "RESOURCE_NAME_49990",
+    MountRarity = 6,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0011.T_Icon_Mounts_0011",
+    ResourceId = 49990,
+    SortPriority = 103
+  },
+  [1010] = {
+    AccessKey = T.RT_1,
+    AnimPath = "/Game/Asset/Char/Mount/Mnt008_Shiru/Animation/Montage/Interactive/Mnt008_Shiru_System_Idle_Montage.Mnt008_Shiru_System_Idle_Montage",
+    BattleMountId = 1010,
+    CameraName = "Char_Mount_Shiru",
+    MountDes = "RESOURCE_DESC_49989",
+    MountDisplayScale = 0.6,
+    MountIcon = "/Game/UI/Texture/Dynamic/Image/Mounts/T_Mounts_0010.T_Mounts_0010",
+    MountId = 1010,
+    MountLocOffset = {
+      -40,
+      0,
+      -30
+    },
+    MountName = "RESOURCE_NAME_49989",
+    MountRarity = 6,
+    ResourceIcon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Mounts/T_Icon_Mounts_0010.T_Icon_Mounts_0010",
+    ResourceId = 49989,
+    SortPriority = 103
   }
 })

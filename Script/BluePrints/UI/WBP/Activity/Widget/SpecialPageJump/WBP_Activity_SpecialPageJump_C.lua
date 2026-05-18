@@ -255,6 +255,8 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
     local ActivityMain = UIManager(self):GetUIObj("ActivityMain")
     if ActivityMain then
       ActivityMain:UpdateActivityKeyTips("CheckRewardDetailView")
+      ActivityMain:UpdateUIStyleInPlatform(false)
+      ActivityMain:EnterForbiddenState()
     end
     IsEventHandled = true
   elseif InKeyName == UIConst.GamePadKey.FaceButtonBottom and self.IsSelectItem == false then
@@ -269,6 +271,8 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
     if ActivityMain then
       ActivityMain.List_Tab:SetFocus()
       ActivityMain:UpdateActivityKeyTips("nil")
+      ActivityMain:UpdateUIStyleInPlatform(true)
+      ActivityMain:LeaveForbiddenState()
     end
     self.Btn_Goto:SetGamePadVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Key_RewardTitle:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)

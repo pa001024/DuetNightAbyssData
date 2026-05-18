@@ -32,11 +32,7 @@ function InventoryController:Init(Params)
   end
   self.InventoryModel = InventoryModel
   self.InventoryModel:Init(Params)
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
-    return
-  end
-  self.Dungeonobject = ServerEntity:GetDungeonObject()
+  self.Dungeonobject = GWorld:GetGameModeDungeonObject()
   if not self.Dungeonobject then
     return
   end
@@ -187,7 +183,6 @@ function InventoryController:Destory()
   InventoryModel:Destory()
   self.bInit = false
   self.bServerInit = false
-  self._TreasureIconCache = nil
   self._SacrificePocketName = nil
 end
 

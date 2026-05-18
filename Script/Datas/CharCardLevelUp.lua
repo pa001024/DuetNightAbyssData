@@ -137,6 +137,50 @@ return ReadOnly("CharCardLevelUp", {
       RoleId = 1103
     }
   },
+  [1201] = {
+    [0] = {
+      CardLevel = 0,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 1201
+    },
+    [1] = {
+      CardLevel = 1,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 1201
+    },
+    [2] = {
+      CardLevel = 2,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 1201
+    },
+    [3] = {
+      CardLevel = 3,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 1201
+    },
+    [4] = {
+      CardLevel = 4,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 1201
+    },
+    [5] = {
+      CardLevel = 5,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 1201
+    }
+  },
   [1501] = {
     [0] = {
       CardLevel = 0,
@@ -1191,6 +1235,50 @@ return ReadOnly("CharCardLevelUp", {
       ResourceId1 = 1005401,
       ResourceNum1 = 30,
       RoleId = 5401
+    }
+  },
+  [120101] = {
+    [0] = {
+      CardLevel = 0,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 120101
+    },
+    [1] = {
+      CardLevel = 1,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 120101
+    },
+    [2] = {
+      CardLevel = 2,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 120101
+    },
+    [3] = {
+      CardLevel = 3,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 120101
+    },
+    [4] = {
+      CardLevel = 4,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 120101
+    },
+    [5] = {
+      CardLevel = 5,
+      CollectRewardExp = 250,
+      ResourceId1 = 1001201,
+      ResourceNum1 = 30,
+      RoleId = 120101
     }
   },
   [160101] = {

@@ -8,7 +8,7 @@ local function Trim(input)
   return (string.gsub(input, "^%s*(.-)%s*$", "%1"))
 end
 
-function Component:EnterWorld()
+function Component:_OnLoginSuccess()
   ChatController:Init()
   self.InWorldChatChannel = {}
   self.InWorldChatChannel[CommonConst.ChatChannel.Help] = false
@@ -39,6 +39,9 @@ end
 function Component:RequestEnterWorldChannel(channel_type)
   self.logger.debug("RequestEnterWorldChannel: " .. channel_type)
   if self.InWorldChatChannel[channel_type] then
+    return
+  end
+  if channel_type == CommonConst.ChatChannel.TeamUp then
     return
   end
   self:CallServerMethod("RequestEnterWorldChannel", channel_type, -1)
@@ -191,12 +194,12 @@ function Component:HandleChatRequest(message)
   ChatController:HandleChatMessage(message)
 end
 
-function Component:ReadChat(uid)
+function Component:ReadChat(uid, SubTabType)
   local function callback(ret)
     if not ChatController:CheckError(ret, true) then
       return
     end
-    ChatController:RecvChatNewMsgRead(uid)
+    ChatController:RecvChatNewMsgRead(uid, SubTabType)
   end
   
   self:CallServer("ReadChat", callback, uid)
@@ -376,6 +379,26 @@ function Component:SendModSuitToWorld(InCallbackInfo, channel_type, tag, eid, mo
   end
   
   self:CallServer("SendModSuitToWorld", callback, channel_type, tag, eid, mod_suit_index)
+end
+
+function Component:SendAsyncCombatRoomToWorld(InCallbackInfo, channel_type, room_uid)
+  local function callback(Ret)
+    self.logger.debug("SendAsyncCombatRoomToWorld: ErrorCode: " .. Ret)
+    
+    InCallbackInfo.Func(InCallbackInfo.Obj, Ret, channel_type, room_uid)
+  end
+  
+  self:CallServer("SendAsyncCombatRoomToWorld", callback, channel_type, room_uid)
+end
+
+function Component:SendAsyncCombatRoomToPlayer(InCallbackInfo, player_uid, room_uid)
+  local function callback(Ret)
+    self.logger.debug("SendAsyncCombatRoomToPlayer: ErrorCode: " .. Ret)
+    
+    InCallbackInfo.Func(InCallbackInfo.Obj, Ret, player_uid, room_uid)
+  end
+  
+  self:CallServer("SendAsyncCombatRoomToPlayer", callback, player_uid, room_uid)
 end
 
 function Component:SetChatChannelMute(channel_type)

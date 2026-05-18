@@ -1608,6 +1608,53 @@
     "rl_archive_sub_id": 10002001
   },
   {
+    "id": 329,
+    "name": "月亮墜落千次",
+    "room_type": 3,
+    "room_sub_type": 1,
+    "room_weight": 750,
+    "room_condition": [],
+    "blessing_award": 0,
+    "token_award": 0,
+    "end_points_base": 90,
+    "end_points_extras": 0,
+    "art_data_path": "/Game/Maps/Datas/Data_Art/Ailixian/Ailixian_Rou01_Eve02_Art.Ailixian_Rou01_Eve02_Art",
+    "design_data_path": "/Game/Maps/Datas/Data_Design/Ailixian/Ailixian_Rou01_Eve02A_Design.Ailixian_Rou01_Eve02A_Design",
+    "game_mode_path": "/Game/AssetDesign/GameMode/Prologue/Roug01/BP_EMGameMode_Prologue_Rou01_Eve02A.BP_EMGameMode_Prologue_Rou01_Eve02A",
+    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event21.T_Rouge_Event21'",
+    "settlement_event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event21.T_Rouge_Event21'",
+    "event_select": [
+      1151,
+      1152,
+      1153
+    ],
+    "event_storyline": "Rogue/RouEvent_329",
+    "rl_archive_sub_id": 10009101
+  },
+  {
+    "id": 330,
+    "name": "海霧搖籃曲",
+    "room_type": 3,
+    "room_sub_type": 1,
+    "room_weight": 500,
+    "room_condition": [],
+    "blessing_award": 0,
+    "token_award": 0,
+    "end_points_base": 90,
+    "end_points_extras": 0,
+    "art_data_path": "/Game/Maps/Datas/Data_Art/Ailixian/Ailixian_Rou01_Eve01_Art.Ailixian_Rou01_Eve01_Art",
+    "design_data_path": "/Game/Maps/Datas/Data_Design/Ailixian/Ailixian_Rou01_Eve01A_Design.Ailixian_Rou01_Eve01A_Design",
+    "game_mode_path": "/Game/AssetDesign/GameMode/Prologue/Roug01/BP_EMGameMode_Prologue_Rou01_Eve01A.BP_EMGameMode_Prologue_Rou01_Eve01A",
+    "event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Event22.T_Rouge_Event22'",
+    "settlement_event_main_icon": "Texture2D'/Game/UI/Texture/Dynamic/Image/RougeLike/Event_Thumbnail/T_Rouge_Event22.T_Rouge_Event22'",
+    "event_select": [
+      1156,
+      1157
+    ],
+    "event_storyline": "Rogue/RouEvent_330",
+    "rl_archive_sub_id": 10009201
+  },
+  {
     "id": 381,
     "name": "遊戲時間到！",
     "room_type": 3,

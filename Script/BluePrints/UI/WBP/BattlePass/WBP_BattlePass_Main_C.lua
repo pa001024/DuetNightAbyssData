@@ -15,6 +15,8 @@ function WBP_BattlePass_Main_C:Construct()
   BattlePassController:SetModelData("BPRewardTyppe", BattlePassController:GetModelData("BattlePassInfo").BPRewardTyppe)
   BattlePassController:SetModelData("TargetSkinId", nil)
   BattlePassController:SetModelData("AccessoryId", nil)
+  BattlePassController:SetModelData("WeaponSkinId", nil)
+  BattlePassController:SetModelData("WeaponTag", nil)
   self.CurWidget = nil
   self.AllTabInfo = {}
   self.Index2TabId = {}
@@ -428,8 +430,14 @@ function WBP_BattlePass_Main_C:SetPreviewActor()
         end
       end
       self.BattlePass_Book:InitSkinOrAccessoryInfo()
+    elseif BattlePassController:GetModelData("BPRewardTyppe") == "WeaponSkin" then
+      GetCurrentCharAccessory = true
+      BattlePassController:SetModelData("TargetSkinId", SkinId)
+      BattlePassController:SetModelData("WeaponSkinId", BattlePassController:GetModelData("BattlePassInfo").WeaponSkinId)
+      self.BattlePass_Book:InitSkinOrAccessoryInfo()
     elseif BattlePassController:GetModelData("BPRewardTyppe") == "Accessory" then
       GetCurrentCharAccessory = true
+      BattlePassController:SetModelData("TargetSkinId", SkinId)
       BattlePassController:SetModelData("AccessoryId", BattlePassController:GetModelData("BattlePassInfo").AccessoryId)
       self.BattlePass_Book:InitSkinOrAccessoryInfo()
     else
@@ -479,6 +487,16 @@ function WBP_BattlePass_Main_C:SetPreviewActor()
     BattlePassController:SetModelData("ActorController", self:CreatePreviewActor(Params))
     BattlePassController:GetModelData("ActorController"):OnOpened()
     BattlePassController:GetModel():AddModelDataRefCount("ActorController")
+    if BattlePassController:GetModelData("WeaponSkinId") then
+      local Params = {
+        Type = "Weapon",
+        SkinId = BattlePassController:GetModelData("WeaponSkinId")
+      }
+      local TargetWeapon = self:CreatePreviewTargetData(Params)
+      local WeaponTag = TargetWeapon:HasTag("Melee") and "Melee" or "Ranged"
+      BattlePassController:SetModelData("WeaponTag", WeaponTag)
+      BattlePassController:GetModelData("ActorController"):ChangeWeaponModel(TargetWeapon, true, true)
+    end
     self:HidePlayerFXAccessory(false)
     self:AddRefreshPetTimer()
     self:SetCameraAnim()
@@ -486,10 +504,13 @@ function WBP_BattlePass_Main_C:SetPreviewActor()
 end
 
 function WBP_BattlePass_Main_C:SetCameraAnim()
-  if BattlePassController:GetModelData("AccessoryId") then
-    BattlePassController:GetModelData("ActorController"):SetMontageAndCamera("Char", nil, "Accessory_Reward")
-  else
+  if BattlePassController:GetModelData("BPRewardTyppe") == "Skin" then
     BattlePassController:GetModelData("ActorController"):SetMontageAndCamera("Char", nil, "Skin_Reward")
+  elseif BattlePassController:GetModelData("BPRewardTyppe") == "WeaponSkin" then
+    BattlePassController:GetModelData("ActorController"):SetMontageAndCamera("Weapon", BattlePassController:GetModelData("WeaponTag"))
+    BattlePassController:GetModelData("ActorController"):SetArmoryCameraTag("Char", nil, "Skin_Reward")
+  elseif BattlePassController:GetModelData("BPRewardTyppe") == "Accessory" then
+    BattlePassController:GetModelData("ActorController"):SetMontageAndCamera("Char", nil, "Accessory_Reward")
   end
 end
 
@@ -606,10 +627,18 @@ function WBP_BattlePass_Main_C:JumpToDetail()
       Type = "BattlePassPreview",
       SkinId = BattlePassController:GetModelData("TargetSkinId")
     })
+  elseif BattlePassController:GetModelData("BPRewardTyppe") == "WeaponSkin" and BattlePassController:GetModelData("WeaponSkinId") then
+    PageJumpUtils:JumpToSkinPreview({
+      ItemType = "WeaponSkin",
+      TypeId = BattlePassController:GetModelData("WeaponSkinId"),
+      SinglePreview = true,
+      HidePurchase = true
+    })
   elseif BattlePassController:GetModelData("BPRewardTyppe") == "Accessory" and BattlePassController:GetModelData("AccessoryId") then
     UIManager(self):LoadUINew("ArmorySkin", {
       Type = "Char",
-      AccessoryId = BattlePassController:GetModelData("AccessoryId")
+      AccessoryId = BattlePassController:GetModelData("AccessoryId"),
+      IsPreviewMode = true
     })
   end
 end

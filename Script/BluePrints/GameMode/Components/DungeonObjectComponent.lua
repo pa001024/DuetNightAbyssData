@@ -14,11 +14,7 @@ function DungeonObjectComponent:InitDungeonObject(DungeonId)
     return
   end
   local DungeonType = DungeonInfo.DungeonType
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
-    return
-  end
-  local DungeonObject = ServerEntity:GetDungeonObject()
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
   if not DungeonObject then
     return
   end
@@ -50,12 +46,7 @@ function DungeonObjectComponent:NotifyServerDungeonEvent(EventName, ...)
     return
   end
   DebugPrint("DungeonObjectComponent:NotifyServerDungeonEvent, EventName: ", EventName)
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
-    DebugPrint("NotifyServerDungeonEvent 服务器实体不存在")
-    return
-  end
-  local DungeonObject = ServerEntity:GetDungeonObject()
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
   if not DungeonObject then
     DebugPrint("NotifyServerDungeonEvent DungeonObject不存在")
     return
@@ -68,12 +59,7 @@ function DungeonObjectComponent:NotifyServerDungeonEventWithCallback(Callback, E
     return
   end
   DebugPrint("DungeonObjectComponent:NotifyServerDungeonEventWithCallback, EventName: ", EventName)
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
-    DebugPrint("DungeonObjectComponent:NotifyServerDungeonEventWithCallback 服务器实体不存在")
-    return
-  end
-  local DungeonObject = ServerEntity:GetDungeonObject()
+  local DungeonObject = GWorld:GetGameModeDungeonObject()
   if not DungeonObject then
     DebugPrint("DungeonObjectComponent:NotifyServerDungeonEventWithCallback DungeonObject不存在")
     return
@@ -90,6 +76,14 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent(EventName, ...)
   if self[FunName] then
     self[FunName](self, ...)
   end
+end
+
+function DungeonObjectComponent:IsServerControlGameLevel()
+  if self.IsServerControlGameModeLevel == nil then
+    local GameModeType = self.EMGameState.GameModeType
+    self.IsServerControlGameModeLevel = CommonConst.ServerControlGameLevelType[GameModeType] or false
+  end
+  return self.IsServerControlGameModeLevel
 end
 
 function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ServerActiveStaticCreator(Infos)
@@ -249,7 +243,7 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_CreatDrop(DropRes, 
     else
       DebugPrint("CreateDrop For Player", DropId)
       local Avatar = OtherParams.Avatar or ""
-      self:PickupToSpecPlayer(DropId, Count, Avatar, DropRes.Reason, Transform, LevelId, bExtra)
+      self:PickupToSpecPlayer(DropId, Count, Avatar, DropRes.Reason, Transform, LevelId, UniqueIds, bExtra)
       self.bNeedNotifyClientCreateDrop = true
     end
   end
@@ -266,6 +260,11 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_CreatDrop(DropRes, 
       CreateDrop(DropId, OtherCount, false, Info.UniqueIds)
     end
   end
+end
+
+function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_ResolveExp(Exps, OtherParams)
+  local ExpsReward = {Exps = Exps}
+  self:ResolveExpInBattle(ExpsReward, OtherParams)
 end
 
 function DungeonObjectComponent:NotifyServerMonsterDead(cb, MonsterInfo)
@@ -361,6 +360,38 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_OnServerGameEnd(IsW
     self:TriggerDungeonWin()
   else
     self:TriggerDungeonFailed()
+  end
+end
+
+function DungeonObjectComponent:NotifyServerPlayerEnd(IsWin, AvatarEids, GameEndReason, Cb)
+  if not self:CheckServerDungeonEnable() then
+    return
+  end
+  DebugPrint("BP_EMGameMode_C:NotifyServerPlayerEnd IsWin:", IsWin, "AvatarEids", table.concat(AvatarEids, ", "), " GameEndReason:", GameEndReason)
+  self.ServerPlayerEndCb = Cb
+  self:NotifyServerDungeonEvent("TriggerPlayerEnd", IsWin, AvatarEids, GameEndReason)
+end
+
+function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_OnServerPlayerEnd(IsWin, AvatarEids, GameEndReason)
+  if not self:CheckServerDungeonEnable() then
+    return
+  end
+  DebugPrint("BP_EMGameMode_C:OnServerPlayerEnd IsWin:", IsWin, "AvatarEids", table.concat(AvatarEids, ", "), " GameEndReason:", GameEndReason)
+  if IsWin then
+    local Eids = {}
+    for _, AvatarEid in pairs(AvatarEids) do
+      local Eid = self:GetPlayerEidByAvatarEidStr(AvatarEid)
+      if Eid then
+        table.insert(Eids, Eid)
+      end
+    end
+    self:TriggerPlayerWin(AvatarEids, Eids)
+  else
+    self:TriggerPlayerFailed(AvatarEids)
+  end
+  if self.ServerPlayerEndCb then
+    self.ServerPlayerEndCb(IsWin, AvatarEids, GameEndReason)
+    self.ServerPlayerEndCb = nil
   end
 end
 

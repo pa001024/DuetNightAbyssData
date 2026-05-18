@@ -108,7 +108,6 @@ function BP_RegionOnlineInterAddFriendComponent_C:InitCommonUIConfirmID(CommonUI
   self:SetInteractiveDistance(Data.InteractiveRadius or self.InteractiveDistance)
   self.InteractiveAngle = Data.InteractiveAngle or self.InteractiveAngle
   self.InteractiveFaceAngle = Data.PlayerFaceAngle or self.InteractiveFaceAngle
-  self.ListPriority = Data.InteractivePriority or 0
 end
 
 return BP_RegionOnlineInterAddFriendComponent_C

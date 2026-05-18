@@ -15,6 +15,34 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("MessageGroup", {
+  [14001] = {
+    MessageGroupId = 14001,
+    MessageList = {900419}
+  },
+  [14002] = {
+    MessageGroupId = 14002,
+    MessageList = {900420}
+  },
+  [14003] = {
+    MessageGroupId = 14003,
+    MessageList = {900421}
+  },
+  [14004] = {
+    MessageGroupId = 14004,
+    MessageList = {900422}
+  },
+  [14005] = {
+    MessageGroupId = 14005,
+    MessageList = {900423}
+  },
+  [14006] = {
+    MessageGroupId = 14006,
+    MessageList = {900424}
+  },
+  [14007] = {
+    MessageGroupId = 14007,
+    MessageList = {900425}
+  },
   [10410201] = {
     MessageGroupId = 10410201,
     MessageList = {900107, 900224}

@@ -1,5 +1,6 @@
 require("UnLua")
 local ReturnActivityController = require("BluePrints.UI.WBP.Activity.Widget.Return.ReturnActivityController")
+local ReturnUtils = require("Blueprints.UI.WBP.Activity.Widget.Return.ReturnUtils")
 local M = Class({
   "BluePrints.UI.BP_UIState_C",
   "BluePrints.Common.TimerMgr"
@@ -48,7 +49,7 @@ function M:OnLoaded(...)
 end
 
 function M:InitRewardList()
-  self.CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
+  self.CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
   assert(self.CurrentEventSchemeId, "lgc@CurrentEventSchemeId is nil, 需要策划检查下ComeBackEventConstant表中的CurrentEventSchemeId")
   self.CurrentEventSchemeData = DataMgr.ComeBackEvent[self.CurrentEventSchemeId]
   if not self.CurrentEventSchemeData then

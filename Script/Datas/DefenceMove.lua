@@ -1,13 +1,13 @@
 local T = {}
 T.RT_1 = {0, 0}
-T.RT_2 = {311}
-T.RT_3 = {312}
-T.RT_4 = {313}
-T.RT_5 = {314}
-T.RT_6 = {315}
-T.RT_7 = {316}
-T.RT_8 = {317}
-T.RT_9 = {318}
+T.RT_2 = {313}
+T.RT_3 = {314}
+T.RT_4 = {317}
+T.RT_5 = {318}
+T.RT_6 = {311}
+T.RT_7 = {312}
+T.RT_8 = {315}
+T.RT_9 = {316}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -22,12 +22,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90161,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90161, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -39,12 +39,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90162,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90162, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -56,12 +56,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90163,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_4,
+      [1] = T.RT_2,
       [2] = {90163, 314},
-      [3] = T.RT_4,
-      [4] = T.RT_5,
-      [5] = T.RT_4,
-      [6] = T.RT_5
+      [3] = T.RT_2,
+      [4] = T.RT_3,
+      [5] = T.RT_2,
+      [6] = T.RT_3
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -73,12 +73,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90164,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_4,
+      [1] = T.RT_2,
       [2] = {90164, 314},
-      [3] = T.RT_4,
-      [4] = T.RT_5,
-      [5] = T.RT_4,
-      [6] = T.RT_5
+      [3] = T.RT_2,
+      [4] = T.RT_3,
+      [5] = T.RT_2,
+      [6] = T.RT_3
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -90,12 +90,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90165,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_4,
+      [1] = T.RT_2,
       [2] = {90165, 314},
-      [3] = T.RT_4,
-      [4] = T.RT_5,
-      [5] = T.RT_4,
-      [6] = T.RT_5
+      [3] = T.RT_2,
+      [4] = T.RT_3,
+      [5] = T.RT_2,
+      [6] = T.RT_3
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -107,12 +107,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90166,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_4,
+      [1] = T.RT_2,
       [2] = {90166, 314},
-      [3] = T.RT_4,
-      [4] = T.RT_5,
-      [5] = T.RT_4,
-      [6] = T.RT_5
+      [3] = T.RT_2,
+      [4] = T.RT_3,
+      [5] = T.RT_2,
+      [6] = T.RT_3
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -124,12 +124,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90167,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90167, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -141,12 +141,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90168,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90168, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -158,12 +158,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90169,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_4,
+      [1] = T.RT_2,
       [2] = {90169, 314},
-      [3] = T.RT_4,
-      [4] = T.RT_5,
-      [5] = T.RT_4,
-      [6] = T.RT_5
+      [3] = T.RT_2,
+      [4] = T.RT_3,
+      [5] = T.RT_2,
+      [6] = T.RT_3
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -175,12 +175,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90170,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_4,
+      [1] = T.RT_2,
       [2] = {90170, 314},
-      [3] = T.RT_4,
-      [4] = T.RT_5,
-      [5] = T.RT_4,
-      [6] = T.RT_5
+      [3] = T.RT_2,
+      [4] = T.RT_3,
+      [5] = T.RT_2,
+      [6] = T.RT_3
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -192,16 +192,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90171,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         90171,
         901710,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -213,16 +213,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90172,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         90172,
         901720,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -234,16 +234,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90173,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         90173,
         901730,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -255,16 +255,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90174,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         90174,
         901740,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -276,16 +276,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90175,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_8,
+      [1] = T.RT_4,
       [2] = {
         90175,
         901750,
         318
       },
-      [3] = T.RT_8,
-      [4] = T.RT_9,
-      [5] = T.RT_8,
-      [6] = T.RT_9
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -297,16 +297,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90176,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_8,
+      [1] = T.RT_4,
       [2] = {
         90176,
         901760,
         318
       },
-      [3] = T.RT_8,
-      [4] = T.RT_9,
-      [5] = T.RT_8,
-      [6] = T.RT_9
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -318,16 +318,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90177,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_8,
+      [1] = T.RT_4,
       [2] = {
         90177,
         901770,
         318
       },
-      [3] = T.RT_8,
-      [4] = T.RT_9,
-      [5] = T.RT_8,
-      [6] = T.RT_9
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -339,16 +339,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90178,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_8,
+      [1] = T.RT_4,
       [2] = {
         90178,
         901780,
         318
       },
-      [3] = T.RT_8,
-      [4] = T.RT_9,
-      [5] = T.RT_8,
-      [6] = T.RT_9
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -360,12 +360,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90180,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90180, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -377,12 +377,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90181,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90181, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -394,12 +394,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90182,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90182, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -411,12 +411,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90183,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90183, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -428,12 +428,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90184,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90184, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -445,12 +445,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90185,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90185, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -462,12 +462,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90186,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90186, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -479,12 +479,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90187,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90187, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -496,12 +496,12 @@ return ReadOnly("DefenceMove", {
     DungeonId = 90188,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_2,
+      [1] = T.RT_6,
       [2] = {90188, 312},
-      [3] = T.RT_2,
-      [4] = T.RT_3,
-      [5] = T.RT_2,
-      [6] = T.RT_3
+      [3] = T.RT_6,
+      [4] = T.RT_7,
+      [5] = T.RT_6,
+      [6] = T.RT_7
     },
     MonsterTotalBaseNum = 50,
     WavesPerStage = 2
@@ -513,16 +513,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91201,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_8,
+      [1] = T.RT_4,
       [2] = {
         91201,
         912010,
         318
       },
-      [3] = T.RT_8,
-      [4] = T.RT_9,
-      [5] = T.RT_8,
-      [6] = T.RT_9
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -534,16 +534,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91202,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_8,
+      [1] = T.RT_4,
       [2] = {
         91202,
         912020,
         318
       },
-      [3] = T.RT_8,
-      [4] = T.RT_9,
-      [5] = T.RT_8,
-      [6] = T.RT_9
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -555,16 +555,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91251,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91251,
         912510,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -576,16 +576,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91252,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91252,
         912520,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -597,16 +597,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91253,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91253,
         912530,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -618,16 +618,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91254,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91254,
         912540,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -639,16 +639,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91255,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91255,
         912550,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -660,16 +660,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91256,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91256,
         912560,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -681,16 +681,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91257,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91257,
         912570,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -702,16 +702,16 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91258,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91258,
         912580,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2
@@ -723,16 +723,54 @@ return ReadOnly("DefenceMove", {
     DungeonId = 91259,
     EnsureGuideTime = 180,
     MonsterSpawnId = {
-      [1] = T.RT_6,
+      [1] = T.RT_8,
       [2] = {
         91259,
         912590,
         316
       },
-      [3] = T.RT_6,
-      [4] = T.RT_7,
-      [5] = T.RT_6,
-      [6] = T.RT_7
+      [3] = T.RT_8,
+      [4] = T.RT_9,
+      [5] = T.RT_8,
+      [6] = T.RT_9
+    },
+    MonsterTotalBaseNum = 100,
+    WavesPerStage = 2
+  },
+  [614001] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 614001,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_2,
+      [2] = {614001, 314},
+      [3] = T.RT_2,
+      [4] = T.RT_3,
+      [5] = T.RT_2,
+      [6] = T.RT_3
+    },
+    MonsterTotalBaseNum = 50,
+    WavesPerStage = 2
+  },
+  [614101] = {
+    ButcherMonsterId = 8501002,
+    ButcherMonsterSpawnMinWave = 10,
+    ButcherMonsterSpawnProbability = T.RT_1,
+    DungeonId = 614101,
+    EnsureGuideTime = 180,
+    MonsterSpawnId = {
+      [1] = T.RT_4,
+      [2] = {
+        614101,
+        6141010,
+        318
+      },
+      [3] = T.RT_4,
+      [4] = T.RT_5,
+      [5] = T.RT_4,
+      [6] = T.RT_5
     },
     MonsterTotalBaseNum = 100,
     WavesPerStage = 2

@@ -668,27 +668,26 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 210024,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1014,15 +1013,16 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1284,6 +1284,7 @@ return {
               IsNpcNode = false,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 10010101,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -1312,8 +1313,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1943,27 +1946,26 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 100001,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 },
                 {
                   TalkActorType = "Npc",
                   TalkActorId = 210025,
-                  TalkActorVisible = true,
-                  AroundPlayer = false
+                  TalkActorVisible = true
                 }
               },
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -2517,12 +2519,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "175913480343324111",
-            startPort = "true",
-            endQuest = "1750058340457585183",
-            endPort = "In"
-          },
-          {
             startQuest = "1750058340457585185",
             startPort = "Out",
             endQuest = "176397499207928839830",
@@ -2556,18 +2552,6 @@ return {
             startQuest = "1750058340457585188",
             startPort = "Out",
             endQuest = "1750058340457585187",
-            endPort = "In"
-          },
-          {
-            startQuest = "175913480343324111",
-            startPort = "true",
-            endQuest = "17646589856053186043",
-            endPort = "In"
-          },
-          {
-            startQuest = "175913480343324111",
-            startPort = "true",
-            endQuest = "176518501105112830443",
             endPort = "In"
           },
           {
@@ -2622,6 +2606,42 @@ return {
             startQuest = "17660466959935142372",
             startPort = "Out",
             endQuest = "176528691680435309950",
+            endPort = "In"
+          },
+          {
+            startQuest = "175913480343324111",
+            startPort = "true",
+            endQuest = "17775380191032893",
+            endPort = "In"
+          },
+          {
+            startQuest = "17775380191032893",
+            startPort = "Fail",
+            endQuest = "176518501105112830443",
+            endPort = "In"
+          },
+          {
+            startQuest = "17775380191032893",
+            startPort = "Fail",
+            endQuest = "1750058340457585183",
+            endPort = "In"
+          },
+          {
+            startQuest = "17775380191032893",
+            startPort = "Fail",
+            endQuest = "17646589856053186043",
+            endPort = "In"
+          },
+          {
+            startQuest = "17775380191032893",
+            startPort = "Success",
+            endQuest = "17775396189638080",
+            endPort = "In"
+          },
+          {
+            startQuest = "17775396189638080",
+            startPort = "Out",
+            endQuest = "176518620642416665828",
             endPort = "In"
           }
         },
@@ -2780,7 +2800,7 @@ return {
             key = "1750058340457585183",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = -193.3676140424988, y = 178.1463110684698},
+            pos = {x = -75.62568000749825, y = 157.17856939100398},
             propsData = {
               NewDescription = "Description_Nai01_03_01",
               NewDetail = "",
@@ -2909,14 +2929,14 @@ return {
             key = "17646589856053186043",
             type = "ShowGuideMainNode",
             name = "显示图文引导",
-            pos = {x = -199.36025535982836, y = -262.1144808549476},
+            pos = {x = -41.29574117585504, y = -0.8241614896039664},
             propsData = {GuideId = 100}
           },
           ["176518501105112830443"] = {
             key = "176518501105112830443",
             type = "SendMessageNode",
             name = "发送消息-UnlockWinbell02",
-            pos = {x = -204.56219805735662, y = 347.2436974789913},
+            pos = {x = -130.3686505832467, y = 281.1146660346759},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "UnlockWinbell02",
@@ -2978,6 +2998,28 @@ return {
               bActiveEnable = true,
               ActiveType = "Lock",
               SkillNameList = {"BulletJump", "Skill3"}
+            }
+          },
+          ["17775380191032893"] = {
+            key = "17775380191032893",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = -539.940771123198, y = 27.1707636181535},
+            propsData = {ConditionId = 1201041701}
+          },
+          ["17775396189638080"] = {
+            key = "17775396189638080",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 1573.7571505263331, y = -256.9799792435317},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "TargetPoint_LeaveNai01",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = false,
+              bForceAsyncLoading = false,
+              IsWhite = false
             }
           }
         },

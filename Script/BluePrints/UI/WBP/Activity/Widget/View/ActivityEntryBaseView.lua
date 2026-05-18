@@ -203,6 +203,44 @@ function M:JumpToTargetTab(SelectTabIndex)
   end
 end
 
+function M:JumpToTargetTabByEventTabId(EventTabId)
+  if nil == EventTabId then
+    return
+  end
+  local AllItemCount = self.List_Tab:GetNumItems()
+  local TargetIndex0, TargetContent
+  for i = 0, AllItemCount - 1 do
+    local ItemObj = self.List_Tab:GetItemAt(i)
+    if ItemObj then
+      local Sel = ItemObj.TabId == EventTabId
+      ItemObj.IsSelected = Sel
+      if ItemObj.UI then
+        ItemObj.UI:SetIsSelected(Sel)
+      end
+      if Sel and nil ~= ItemObj.TabId then
+        TargetIndex0 = i
+        TargetContent = ItemObj
+      end
+    end
+  end
+  if nil ~= TargetContent then
+    self.List_Tab:BP_ScrollItemIntoView(TargetContent)
+    self.List_Tab:SetSelectedIndex(TargetIndex0)
+    self:AddTimer(0.05, function()
+      if not self or not self.List_Tab then
+        return
+      end
+      local Cnt = self.List_Tab:GetNumItems()
+      for j = 0, Cnt - 1 do
+        local Obj = self.List_Tab:GetItemAt(j)
+        if Obj and Obj.UI then
+          Obj.UI:SetIsSelected(Obj.TabId == EventTabId)
+        end
+      end
+    end)
+  end
+end
+
 function M:ShowContentView(IsEmpty, IsInMobileMode)
   if IsInMobileMode then
     if IsEmpty then

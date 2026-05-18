@@ -5,6 +5,7 @@ local M = Class("BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentB
 
 function M:InitContent(Params, PopupData, Owner)
   M.Super.InitContent(self, Params, PopupData, Owner)
+  self.PackageKey = "OptionalAvatar"
   self.OptionalItemsList = Params.OptionalItemsList
   self.ChooseCallbackFunction = Params.ChooseCallbackFunction
   self.FunctionCallbackObj = Params.FunctionCallbackObj
@@ -248,6 +249,13 @@ function M:CloseDialog()
   if self.Owner then
     self.Owner:Close()
   end
+end
+
+function M:PackageData()
+  local PackageInfo = {}
+  PackageInfo.Count = 0
+  PackageInfo.SelectedId = self.CurrentChooseInfo and self.CurrentChooseInfo.ChooseId
+  return PackageInfo
 end
 
 function M:GetCurrentHoverItem()

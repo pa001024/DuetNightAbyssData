@@ -211,5 +211,67 @@
     "desc": "Flickering moonlight cradles a quiet dream.",
     "icon": "T_Head_Frame28",
     "access": "Available at Shop"
+  },
+  {
+    "id": 10034,
+    "name": "UI_HeadFrame_Name_10034",
+    "desc": "UI_HeadFrame_Des_10034",
+    "icon": ""
+  },
+  {
+    "id": 10035,
+    "name": "蓝蔷薇",
+    "desc": "刺破牢笼的蔷薇。",
+    "icon": "T_Head_Frame36",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10036,
+    "name": "清扫整备",
+    "desc": "整装待发，清扫开始。",
+    "icon": "T_Head_Frame37",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10037,
+    "name": "七日圣约·墨玉",
+    "desc": "聆听祂的誓言。",
+    "icon": "T_Head_Frame34",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10038,
+    "name": "七日圣约·锈红",
+    "desc": "聆听祂的誓言。",
+    "icon": "T_Head_Frame33",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10039,
+    "name": "黑色礼节",
+    "desc": "在黑暗之中，就要拥有黑暗的礼节。",
+    "icon": "T_Head_Frame38",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10040,
+    "name": "华彩殿堂",
+    "desc": "欢迎步入，华彩殿堂。",
+    "icon": "T_Head_Frame35",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10041,
+    "name": "华彩殿堂·闪烁",
+    "desc": "欢迎步入，华彩殿堂。",
+    "icon": "",
+    "access": "Available at Shop"
+  },
+  {
+    "id": 10042,
+    "name": "尖叫",
+    "desc": "嘎啊—————",
+    "icon": "T_Head_Frame32",
+    "access": "Available at Shop"
   }
 ]

@@ -99,4 +99,20 @@ function Component:ExitSojourns(PartyId, Level, HandleCallback)
   self:CallServer("ExitSojourns", Callback, PartyId, Level)
 end
 
+function Component:StartCutSceneReview()
+  local function Callback(Ret)
+    self.logger.debug("StartCutSceneReview Callback", Ret)
+  end
+  
+  self:CallServer("StartCutSceneReview", Callback)
+end
+
+function Component:ExitCutSceneReview()
+  local function Callback(Ret)
+    self.logger.debug("ExitCutSceneReview Callback", Ret)
+  end
+  
+  self:CallServer("ExitCutSceneReview", Callback)
+end
+
 return Component

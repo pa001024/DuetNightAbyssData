@@ -283,7 +283,7 @@
     "id": 12111,
     "icon": "Melee",
     "n": "Allegro féroce : Âge de gloire",
-    "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il obtient 60% de Vigueur, pendant 18 s.",
+    "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il obtient 60% de Vigueur pendant 18 s.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },
@@ -323,7 +323,7 @@
     "id": 13111,
     "icon": "Common",
     "n": "Allegro féroce : Appel de la gloire",
-    "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il gagne 15% de Vigueur pendant 12 s, cumulable jusqu’à 5 fois.",
+    "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il gagne +15% de Vigueur pendant 12 s, cumulable jusqu’à 5 fois.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },
@@ -355,7 +355,7 @@
     "id": 13211,
     "icon": "Skill",
     "n": "Allegro féroce : Quête de l’horizon",
-    "d": "Chaque tranche cumulée de 300 de Lucidité consommée par un allié confère 1 cumul de Dégâts infligés +50% pendant 24 s, jusqu’à un maximum de 1 cumuls.",
+    "d": "Chaque tranche cumulée de 300 de Lucidité consommée par un allié confère 1 cumul augmentant les Dégâts infligés de 50% pendant 24 s, jusqu’à 1 cumuls.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },
@@ -381,6 +381,54 @@
     "n": "Adagio coordonné : Tempête à la dérive",
     "d": "L’ATQ des alliés diminue de 150%, mais leur Tir multiple augmente de 120%.",
     "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 14111,
+    "icon": "Melee",
+    "n": "Andante furioso : Rage ardente",
+    "d": "Tous les 1 coups critiques infligés par un allié confèrent un cumul de +5% d’ATQ pendant 12 s, jusqu’à 30 cumuls.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 14121,
+    "icon": "Skill",
+    "n": "Allegro féroce : Appel au combat",
+    "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il gagne un cumul augmentant les dégâts infligés de 10% pendant 18 s, cumulable jusqu’à 5 fois.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 14122,
+    "icon": "Exchange",
+    "n": "Adagio coordonné : Adieux résolus",
+    "d": "L’ATQ des alliés diminue de 150%, mais leur Taux CRIT augmente de 100%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 14211,
+    "icon": "Skill",
+    "n": "Allegro féroce : Quête de l’horizon",
+    "d": "Chaque tranche cumulée de 20 de Lucidité consommée par un allié confère 1 cumul augmentant les Dégâts infligés de 10% pendant 18 s, jusqu’à 5 cumuls.",
+    "t": 1,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 14212,
+    "icon": "Exchange",
+    "n": "Adagio coordonné : Adieux grandioses",
+    "d": "L’ATQ des alliés diminue de 150%, mais leur Vigueur augmente de 90%.",
+    "t": 2,
+    "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
+  },
+  {
+    "id": 14221,
+    "icon": "Skill",
+    "n": "Allegro féroce : Appel à la victoire",
+    "d": "Lorsqu’un allié utilise une Compétence de combat ou une Compétence ultime, il gagne un cumul augmentant la Puissance de compétence de 30% pendant 18 s, cumulable jusqu’à 5 fois.",
+    "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   }
 ]

@@ -32,6 +32,9 @@ function HardBossComponent:InitHardBoss(BossBattleId, DifficultyId)
   self.LevelGameMode.BossBattleInfo.GameModePath = BossInfo.GameModePath
   self.LevelGameMode.BossBattleInfo.StorylinePath = BossInfo.StorylinePath
   self.LevelGameMode.BossBattleInfo.MonsterId = BossInfo.MonsterId
+  self.LevelGameMode.BossBattleInfo.CustomBossStaticCreatorId = BossInfo.CustomMonsterStaticId or {}
+  self.LevelGameMode.BossBattleInfo.CustomMonsterId = BossInfo.CustomMonsterId or {}
+  self.LevelGameMode.BossBattleInfo.DifficultyLevel = DifficultyLevel
   self.LevelGameMode.BossBattleInfo.HardBossBTRunning = false
   GWorld.StoryMgr:Clear()
   self.LevelGameMode:DestroyAllMonsterSpawn()
@@ -227,6 +230,28 @@ function HardBossComponent:HardBossSetPhantomBTEnable(RunEnable)
       end
     end
   end
+end
+
+function HardBossComponent:ActiveCustomBossCreator(Index)
+  if self:IsInDungeon() then
+    self.LevelGameMode:TriggerDungeonComponentFun("ActiveCustomBossCreator", Index)
+    return
+  end
+  local CreatorId = self.LevelGameMode.BossBattleInfo.CustomBossStaticCreatorId[Index]
+  local UnitId = self.LevelGameMode.BossBattleInfo.CustomMonsterId[Index]
+  if not CreatorId or not UnitId then
+    return
+  end
+  local DifficultyLevel = self.LevelGameMode.BossBattleInfo.DifficultyLevel
+  local BossCreator = self.LevelGameMode.EMGameState.StaticCreatorMap:Find(CreatorId)
+  if not IsValid(BossCreator) then
+    return
+  end
+  local CreatorIds = TArray(0)
+  CreatorIds:Add(CreatorId)
+  BossCreator.UnitId = UnitId
+  BossCreator.Level = DifficultyLevel - self.LevelGameMode:GetGameModeLevel()
+  self.LevelGameMode:TriggerActiveStaticCreator(CreatorIds, "HardBossCustomBoss")
 end
 
 return HardBossComponent

@@ -23,7 +23,9 @@ AvatarInfo.__Props__ = {
   TitleFrame = prop.prop("Int", "client save"),
   IsOnline = prop.prop("Bool", "client save", false),
   IsInDungeon = prop.prop("Bool", "client save", false),
-  IsInSpecialQuest = prop.prop("Bool", "client save", false)
+  IsInSpecialQuest = prop.prop("Bool", "client save", false),
+  GuildId = prop.prop("Int", "client save", 0),
+  GuildSimpleInfo = prop.prop("Dict", "client", nil)
 }
 
 function AvatarInfo:Init(Uid, Infos)

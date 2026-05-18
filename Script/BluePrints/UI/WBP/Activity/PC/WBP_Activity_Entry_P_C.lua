@@ -60,8 +60,9 @@ end
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   self.CurInputDevice = CurInputDevice
   self.CurGamepadName = CurGamepadName
+  self:UpdateUIStyleInPlatform(CurInputDevice == ECommonInputType.Gamepad)
   if CurInputDevice == ECommonInputType.Gamepad then
-    if not self:HasFocusedDescendants() and not self:HasAnyUserFocus() then
+    if not self:HasFocusedDescendants() or not self:HasAnyUserFocus() then
       return
     end
     if self.CurFocusWidgetItem then
@@ -70,7 +71,6 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
       self.List_Tab:SetFocus()
     end
   end
-  self:UpdateUIStyleInPlatform(CurInputDevice == ECommonInputType.Gamepad)
 end
 
 function M:InitListenEvent()
@@ -82,6 +82,7 @@ function M:ReceiveEnterState(StackAction)
   if 1 == StackAction then
     self:OnRefreshCurrentPageAfterJump()
     self:UpdateActivityKeyTips()
+    self:JudgeNeedShowVersionView()
   end
   self.Super.ReceiveEnterState(self, StackAction)
   local CurrentActivePage = self.AllCurrentActivityPage[self.CurTabId]
@@ -104,6 +105,7 @@ function M:Destruct()
   EventManager:RemoveEvent(EventID.OnReturnToActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnLeaveActivityEntry, self)
   EventManager:RemoveEvent(EventID.OnActivityComplete, self)
+  self.NeedShowVersionView = nil
   self.Super.Destruct(self)
 end
 
@@ -130,18 +132,24 @@ function M:UpdateUIStyleInPlatform(IsUseGamePad)
     end
     self:UpdateActivityKeyTips(CurFocusWidgetName, CurFocusWidgetItem)
   end
+  self:UpdateCommonWidgetsStyleInPlatform(IsUseGamePad)
+  if self.EventTypeTab then
+    self.EventTypeTab:UpdateUIStyleInPlatform(IsUseGamePad)
+  end
+end
+
+function M:UpdateCommonWidgetsStyleInPlatform(IsUseGamePad)
   if IsUseGamePad then
     self.EventTypeTab.Key_Left:CreateGamepadKey(UIConst.GamePadImgKey.LeftShoulder)
     self.EventTypeTab.Key_Left:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.EventTypeTab.Key_Right:CreateGamepadKey(UIConst.GamePadImgKey.RightShoulder)
     self.EventTypeTab.Key_Right:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Activity_Tab.Btn_RewardPreview.Key_GamePad:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   else
     self.EventTypeTab.Key_Left:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.EventTypeTab.Key_Right:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Com_KeyTips:SetVisibility(UIConst.VisibilityOp.Visible)
-  end
-  if self.EventTypeTab then
-    self.EventTypeTab:UpdateUIStyleInPlatform(IsUseGamePad)
+    self.Activity_Tab.Btn_RewardPreview.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 
@@ -239,8 +247,20 @@ function M:OnPreviewKeyDown(MyGeometry, InKeyEvent)
   if not IsEventHandled and self.CurrentActiveBg and self.CurrentActiveBg.HandleKeyDownInBg then
     IsEventHandled = self.CurrentActiveBg:HandleKeyDownInBg(MyGeometry, InKeyEvent)
   end
+  if self.IsEnterForbiddenState then
+    if "Gamepad_DPad_Left" == InKeyName then
+      return UE4.UWidgetBlueprintLibrary.UnHandled()
+    end
+    if "Gamepad_LeftShoulder" == InKeyName or "Gamepad_RightShoulder" == InKeyName then
+      return UE4.UWidgetBlueprintLibrary.Handled()
+    end
+  end
   if not IsEventHandled and not self.EventTypeTab:IsForbidden() then
     IsEventHandled = self.EventTypeTab:Handle_KeyEventOnGamePad(InKeyName)
+  end
+  if "Gamepad_DPad_Left" == InKeyName then
+    self.Activity_Tab:OnRewardPreviewClick()
+    IsEventHandled = true
   end
   if IsEventHandled then
     return UE4.UWidgetBlueprintLibrary.Handled()
@@ -273,6 +293,14 @@ end
 
 function M:OnActivityEntryShowVisible()
   self:SetUIVisibilityTag(UIConst.CommonHideTagName.UIStackChange, false)
+end
+
+function M:EnterForbiddenState()
+  self.IsEnterForbiddenState = true
+end
+
+function M:LeaveForbiddenState()
+  self.IsEnterForbiddenState = false
 end
 
 AssembleComponents(M)

@@ -121,10 +121,7 @@ function StatMonster:StatEnd(GM)
   end
   StrOutput = StrOutput .. StrLine .. "Max" .. StrLine .. StrTmpMax
   local Path = UE4.UBlueprintPathsLibrary.ProjectLogDir() .. "/StatMonster" .. os.date("%Y.%m.%d-%H.%M.%S") .. ".txt"
-  local File = io.open(Path, "w+")
-  io.output(File)
-  io.write(StrOutput)
-  io.close(File)
+  UE4.URuntimeCommonFunctionLibrary.SaveFile(Path, StrOutput)
   TmpPlayer = nil
 end
 
@@ -158,10 +155,7 @@ function StatMonster:StatMemRecord()
     end
   end
   local Path = UE4.UBlueprintPathsLibrary.ProjectLogDir() .. "/StatMonsterMem" .. os.date("%Y.%m.%d-%H.%M.%S") .. ".txt"
-  local File = io.open(Path, "w+")
-  io.output(File)
-  io.write(StrOutput)
-  io.close(File)
+  UE4.URuntimeCommonFunctionLibrary.SaveFile(Path, StrOutput)
   TmpPlayer = nil
 end
 

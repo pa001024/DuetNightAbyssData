@@ -361,7 +361,7 @@
     "name": "袖珍旅伴的干粮",
     "desc": "释放魔灵支援后，自身造成的伤害提高<Highlight>$1</>，持续<Highlight>$2</>秒。",
     "simple_desc": "释放魔灵支援后，伤害提高。",
-    "ip_desc": "“一切收获皆有代价”——早就听厌了的这句教诲，从游戏的视角重新审视之后，又变得有趣起来。\n魔术师将他的玩具球扔进盒子，“好消息和坏消息，你要先听哪一个？”",
+    "ip_desc": "在前行时，也别忘了那些陪你进入深渊的勇敢的小旅伴们。开一个罐头，犒劳一下它们吧！",
     "treasure_group": 1,
     "treasure_rarity": 1,
     "treasure_weight": 1000,
@@ -951,6 +951,36 @@
     "rl_archive_id": 32,
     "unlock_condition_text": "遗物尚未解锁",
     "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10220,
+    "name": "纯洁天使的圣音",
+    "desc": "行迹获取量提高<Highlight>50%</>。",
+    "simple_desc": "行迹获取量较大幅提高。",
+    "ip_desc": "那是一首人尽皆知的颂歌，歌颂为迷途之人指引方向的慈悲诸神。虔诚的艾利西安信徒们在深渊中哼唱破碎的旋律，祈求神明引领他们脱离苦难，前往应许的众天之天。金色的旋律流淌，他们在幸福的期盼中永远阖上了双眼。",
+    "treasure_group": 10220,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_07.T_Rouge_Treasure_07",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        51
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 62,
+    "unlock_condition_text": "遗物尚未解锁",
+    "can_sell": 0,
     "client_build": {}
   },
   {

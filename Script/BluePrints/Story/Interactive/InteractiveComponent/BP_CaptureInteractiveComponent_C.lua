@@ -71,7 +71,7 @@ function BP_CaptureInteractiveComponent_C:StartInteractive(PlayerActor)
       end
     end
     self.Capturing = true
-    self.bPressed = true
+    rawset(self, "bPressed", true)
     if not AudioManager(self):IsSoundPlaying(nil, "CaptureSound") then
       AudioManager(self):PlayUISound(nil, "event:/ui/common/catch_hud_process", "CaptureSound", nil)
     end

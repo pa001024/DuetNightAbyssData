@@ -4,7 +4,7 @@ local InventoryCommonConst = require("BluePrints.UI.WBP.SoloTreasure.Widget.Inve
 local SoloTreasureUtils = require("BluePrints.UI.WBP.SoloTreasure.Widget.SoloTreasureUtils")
 local EMCache = require("EMCache.EMCache")
 local SACRIFICE_CONFIRM_POPUP_ID = 100341
-local SACRIFICE_SKIP_CONFIRM_KEY = "SoloTreasure_Sacrifice_SkipConfirm"
+local SACRIFICE_SKIP_CONFIRM_KEY = "SoloTreasureSacrificeSkipConfirm"
 local GAMBLE_MECH_STATE_TRIBUTE_CANCLE = 1310693
 local GAMBLE_MECH_STATE_TRIBUTE_SUCCESS = 1310694
 local M = Class({
@@ -31,7 +31,7 @@ function M:Init(InitParams)
   if not ServerEntity then
     return
   end
-  self.Dungeonobject = ServerEntity:GetDungeonObject()
+  self.Dungeonobject = ServerEntity:GetGameModeDungeonObject()
   if not self.Dungeonobject then
     return
   end
@@ -175,7 +175,7 @@ function M:TryConfirmSacrifice()
     UIManager(self):ShowUITip("CommonToastMain", GText("UI_Extraction_TM_10"))
     return
   end
-  if EMCache:Get(SACRIFICE_SKIP_CONFIRM_KEY, true) then
+  if EMCache:Get(SACRIFICE_SKIP_CONFIRM_KEY) then
     self:OnSacrificeConfirm()
     return
   end
@@ -184,7 +184,7 @@ function M:TryConfirmSacrifice()
     RightCallbackFunction = function(_, Data)
       self:OnSacrificeOverlayOpen(false)
       if Data and Data.SelectHint and Data.SelectHint.IsSelected then
-        EMCache:Set(SACRIFICE_SKIP_CONFIRM_KEY, true, true)
+        EMCache:Set(SACRIFICE_SKIP_CONFIRM_KEY, true)
       end
       self:OnSacrificeConfirm()
     end,
@@ -392,11 +392,9 @@ function M:OnSacrificeOverlayOpen(bOpen)
   if bOpen and self.Parent and self.Parent.GamepadDetailHideKey then
     self.Parent:GamepadDetailHideKey(true)
   end
-  self:AddDelayFrameFunc(function()
-    if self.Parent and self.Parent.UpdateComTab then
-      self.Parent:UpdateComTab(bOpen and "SacrificePopup" or "Normal")
-    end
-  end, 10)
+  if self.Parent and self.Parent.UpdateComTab then
+    self.Parent:UpdateComTab(bOpen and "SacrificePopup" or "Normal")
+  end
 end
 
 function M:CloseSelf()

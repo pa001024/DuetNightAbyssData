@@ -85,5 +85,19 @@ return ReadOnly("DetectiveResult", {
     QuestionID = 2004,
     ResultDetail = "{\"QuestionSucc\"}",
     ResultTips = "TextMap_ResultTips_20040101"
+  },
+  [20050101] = {
+    Answers = {200511},
+    InferenceResultID = 20050101,
+    QuestionID = 2005,
+    ResultDetail = "{\"QuestionSucc\"}",
+    ResultTips = "TextMap_ResultTips_20050101"
+  },
+  [20060101] = {
+    Answers = {200607},
+    InferenceResultID = 20060101,
+    QuestionID = 2006,
+    ResultDetail = "{\"QuestionSucc\"}",
+    ResultTips = "TextMap_ResultTips_20060101"
   }
 })

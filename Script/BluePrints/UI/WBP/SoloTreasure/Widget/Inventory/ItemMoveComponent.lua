@@ -756,13 +756,7 @@ function Component:CreateTreasureDataToPocket(TargetPocketData, TargetTreasureDa
   if TargetPocketData.bRecycle then
     Width, Height = 1, 1
   end
-  if not self._TreasureIconCache then
-    self._TreasureIconCache = {}
-  end
-  if not self._TreasureIconCache[TreasureId] then
-    self._TreasureIconCache[TreasureId] = TreasureInfo.Icon and LoadObject(TreasureInfo.Icon) or LoadObject("/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_Other_Mod.T_Coin_Other_Mod")
-  end
-  local Texture = self._TreasureIconCache[TreasureId]
+  local Texture = TreasureInfo.Icon and LoadObject(TreasureInfo.Icon) or LoadObject("/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_Other_Mod.T_Coin_Other_Mod")
   local TreasureData = {
     TreasureId = TreasureId,
     UUid = UUid or self:GetNewUUid(),
@@ -801,6 +795,12 @@ function Component:CreateTreasureDataToPocket(TargetPocketData, TargetTreasureDa
       local TreasureWidget = TargetPocketData.Pocket:CreateIconItem(TreasureData.Size, TreasureData.Texture, TreasureData.Position)
       if TreasureWidget then
         TreasureWidget:Init(TreasureData)
+        if TreasureData.bNotSearched and TargetPocketData.Pocket.bMechanism then
+          table.insert(TargetPocketData.Pocket._SearchQueue, TreasureWidget)
+          if not TargetPocketData.Pocket.bSearchingActive then
+            TargetPocketData.Pocket:NotifyBeginSearch()
+          end
+        end
       end
     end
     EventManager:FireEvent(EventID.OnTreasureItemDrop, MoveData)

@@ -55,6 +55,9 @@ function M:CheckHasDailyTalkReward(NpcId)
 end
 
 function M:RegisterNpc(NpcId, InteractiveComponent)
+  if not NpcId then
+    return
+  end
   if not self.DailyTalkNpc then
     return
   end

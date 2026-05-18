@@ -28,11 +28,13 @@ function M:ResetInfo()
   self.Overridden.ResetInfo(self)
   self:K2_SetActorLocation(self.LocDown, false, nil, false)
   self:ChangeState("Manual", 0, self.InitStateId)
+  self.InRangeMonsters = {}
 end
 
 function M:OnMonsterIn(OtherActor)
-  if OtherActor and OtherActor.IsPureMonster and OtherActor:IsPureMonster() and self:CheckMonsterValid(OtherActor.UnitId) then
+  if OtherActor and OtherActor.IsPureMonster and OtherActor:IsPureMonster() and self:CheckMonsterValid(OtherActor.UnitId) and not OtherActor:IsDead() then
     self.InRangeMonsters[OtherActor.Eid] = OtherActor
+    DebugPrint("zwkkk 添加怪物", OtherActor:GetName(), OtherActor.Eid)
     if not self.HasMonsterInRange and self.StateId ~= self.UpToDownStateId then
       self.HasMonsterInRange = true
       self:OnMonsterInRangeChange()
@@ -66,6 +68,7 @@ function M:CheckMonInRange()
   if Actors:Length() > 0 then
     for i = 1, Actors:Length() do
       if Actors[i].IsPureMonster and Actors[i]:IsPureMonster() and self:CheckMonsterValid(Actors[i].UnitId) and not Actors[i]:IsDead() then
+        DebugPrint("zwkkk 重新添加怪物", Actors[i]:GetName(), Actors[i].Eid)
         self.InRangeMonsters[Actors[i].Eid] = Actors[i]
         self.HasMonsterInRange = true
       end
@@ -91,11 +94,27 @@ function M:AddMonsterBuff()
   if not self.InRangeMonsters then
     return
   end
+  local MonsterNum = 0
   for i, v in pairs(self.InRangeMonsters) do
     if v and not v:IsDead() then
       v:SetVector("CageCenterLoc", self.Center)
       Battle(self):AddBuffToTarget(self, v, self.BuffId, -1, nil, nil)
+      MonsterNum = MonsterNum + 1
     end
+  end
+  if MonsterNum > 0 then
+    self.Stage = 1 + self.StageSpecial
+    if MonsterNum >= 4 then
+      self.Stage = 3 + self.StageSpecial
+    elseif MonsterNum > 1 then
+      self.Stage = 2 + self.StageSpecial
+    end
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    if GameMode then
+      GameMode:GetDungeonComponent():TriggerGetCageStage(self.ManualItemId, self.Stage)
+    end
+  else
+    self.Stage = 0
   end
 end
 
@@ -104,18 +123,43 @@ function M:ChangeSmelt(IsEnterDown)
 end
 
 function M:OnTempleSmeltChangeBlue(ManualId)
-  if ManualId ~= self.TransMechanId then
-    return
-  end
-  self:AddTimer(self.MonsterDeadDelay, function()
-    for i, v in pairs(self.InRangeMonsters) do
-      if v and not v:IsDead() then
-        local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+end
+
+function M:KillMonsterInRange()
+  local MonsterNum = 0
+  local TotalGold = 0
+  for i, v in pairs(self.InRangeMonsters) do
+    if v and not v:IsDead() then
+      local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+      if GameMode then
         GameMode:GetDungeonComponent():OnCageMonsterDead(v, self.ManualItemId)
-        Battle(self):BattleOnDead(v.Eid, v.Eid, 0, EDeathReason.NoReason)
       end
+      MonsterNum = MonsterNum + 1
+      local GoldNum = self.UnitToGoldNum:Find(v.UnitId)
+      if GoldNum then
+        TotalGold = TotalGold + GoldNum
+      end
+      DebugPrint("zwkkk 即将杀死怪物 ", v:GetName(), v.Eid)
+      Battle(self):BattleOnDead(v.Eid, v.Eid, 0, EDeathReason.NoReason)
     end
-  end, false, 0)
+  end
+  if MonsterNum > 0 then
+    self.Stage = 1 + self.StageSpecial
+    if MonsterNum >= 4 then
+      self.Stage = 3 + self.StageSpecial
+    elseif MonsterNum > 1 then
+      self.Stage = 2 + self.StageSpecial
+    end
+    TotalGold = TotalGold * self.Stage
+    local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+    if GameMode then
+      GameMode:GetDungeonComponent():TriggerSpawnCoin(self.ManualItemId, TotalGold)
+    end
+  else
+    self.Stage = 0
+  end
+  DebugPrint("zwkkk 完全重置 Stage", self.Stage)
+  self.InRangeMonsters = {}
 end
 
 function M:OnNoticeCageUp(ManualId)

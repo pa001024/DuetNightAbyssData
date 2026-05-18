@@ -31,6 +31,7 @@ function M:InitContent(Params, PopupData, Owner)
   self.bNeedCheckStringSensitive = EditTextConfig.bNeedCheckStringSensitive
   self.OnCheckStringSensitive = EditTextConfig.OnCheckStringSensitive
   self.bNotAllowEmpty = EditTextConfig.bNotAllowEmpty
+  self.DialogRightBtnCallBack = Params.DialogRightBtnCallback
   Params.OwnerDialog = Owner
   if Params.IsMultiLine then
     self.WS_Input:SetActiveWidgetIndex(0)
@@ -51,6 +52,12 @@ end
 
 function M:OnDialogRightBtnClicked()
   local Str = self:GetText()
+  if self.DialogRightBtnCallBack then
+    local IsValid = self.DialogRightBtnCallBack(Str)
+    if not IsValid then
+      return
+    end
+  end
   if self.bNotAllowEmpty then
     local TrimStr = string.trim(Str)
     if "" == TrimStr then

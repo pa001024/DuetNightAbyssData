@@ -66,9 +66,17 @@
   {
     "id": 3010109,
     "name": "푸른 하늘의 노래·대검",
-    "desc": "",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
     "icon": "T_Head_Claymore_Bixiao",
     "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010110,
+    "name": "절규·대검",
+    "desc": "",
+    "icon": "T_Head_Claymore_Nahan",
+    "rarity": 4,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -120,6 +128,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010207,
+    "name": "용서의 광륜",
+    "desc": "새벽의 빛으로, 용서의 심판을 써 내려간다.",
+    "icon": "T_Head_Sword_Shezui",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010301,
     "name": "태양의 급보",
     "desc": "태양아, 태양아 어디에 있니? 태양은 우리의 손안에 있어.",
@@ -157,6 +173,22 @@
     "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
     "icon": "T_Head_Bow_Bixiao",
     "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010306,
+    "name": "절규·장궁",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Bow_Nahan01",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010307,
+    "name": "절규·단궁",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Bow_Nahan02",
+    "rarity": 4,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -216,6 +248,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010408,
+    "name": "온 세상의 부름·장병기",
+    "desc": "별들로부터 전해져 오는 태고의 부름에 귀를 기울여라.",
+    "icon": "T_Head_Polearm_Huanyu",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010501,
     "name": "상어 회오리",
     "desc": "아기 상어는 아무런 악의도 없답니다.",
@@ -237,6 +277,22 @@
     "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
     "icon": "T_Head_Machinegun_Bixiao",
     "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010504,
+    "name": "황동 바이올린",
+    "desc": "바이올린 케이스를 열어, 여러분께 황동이 자아내는 죽음의 선율을 선사해 드리죠.",
+    "icon": "T_Head_Machinegun_Huangtong",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010505,
+    "name": "절규·돌격소총",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Machinegun_Nahan",
+    "rarity": 4,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -320,6 +376,30 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010711,
+    "name": "온 세상의 부름·대도",
+    "desc": "별들로부터 전해져 오는 태고의 부름에 귀를 기울여라.",
+    "icon": "T_Head_Katana_Huanyu",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010713,
+    "name": "쪽빛 별",
+    "desc": "짙푸른 궤적이 별의 파편을 흩뿌린다.",
+    "icon": "T_Head_Katana_Youlan",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010715,
+    "name": "절규·대도",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Katana_Nahan",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010801,
     "name": "선조의 그늘·\n칼날 채찍",
     "desc": "다소 특이한 칼날 채찍. 아버지의 채찍... 아니, 아버지의 사랑을 상징한다.",
@@ -360,6 +440,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3010806,
+    "name": "온 세상의 부름·칼날 채찍",
+    "desc": "별들로부터 전해져 오는 태고의 부름에 귀를 기울여라.",
+    "icon": "T_Head_Swordwhip_Huanyu",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3010901,
     "name": "탄도는 고정이다옹",
     "desc": "냐옹~~~",
@@ -369,10 +457,18 @@
   },
   {
     "id": 3010902,
-    "name": "",
+    "name": "푸른 하늘의 노래·핸드 캐논",
     "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
     "icon": "T_Head_Cannon_Bixiao",
     "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3010903,
+    "name": "절규·핸드 캐논",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Cannon_Nahan",
+    "rarity": 4,
     "unlock": "상점을 통해 획득"
   },
   {
@@ -400,6 +496,14 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3011004,
+    "name": "절규·산탄총",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Shotgun_Nahan",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3011101,
     "name": "애옹빵 1호",
     "desc": "냐옹.",
@@ -408,11 +512,43 @@
     "unlock": "상점을 통해 획득"
   },
   {
+    "id": 3011102,
+    "name": "푸른 하늘의 노래·권총",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Pistol_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011103,
+    "name": "절규·권총",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Pistol_Nahan",
+    "rarity": 4,
+    "unlock": "상점을 통해 획득"
+  },
+  {
     "id": 3011201,
     "name": "애옹빵 2호",
     "desc": "냐옹냐옹.",
     "icon": "T_Head_Crossbow_Maobing",
     "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011203,
+    "name": "푸른 하늘의 노래·쌍권총",
+    "desc": "때묻지 않은 짙푸른 물결 너머 그곳.",
+    "icon": "T_Head_Crossbow_Bixiao",
+    "rarity": 5,
+    "unlock": "상점을 통해 획득"
+  },
+  {
+    "id": 3011205,
+    "name": "절규·쌍권총",
+    "desc": "꾸아악——————!",
+    "icon": "T_Head_Crossbow_Nahan",
+    "rarity": 4,
     "unlock": "상점을 통해 획득"
   }
 ]

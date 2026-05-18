@@ -123,6 +123,16 @@ return ReadOnly("CombatCondition", {
     Id = 16,
     Not = true
   },
+  [18] = {
+    ConditionVars = {Key = "Skill1"},
+    FuncName = "Press_Attack",
+    Id = 18
+  },
+  [19] = {
+    ConditionVars = {Key = "Skill2"},
+    FuncName = "Press_Attack",
+    Id = 19
+  },
   [20] = {FuncName = "Is_In_Air", Id = 20},
   [21] = {
     FuncName = "Is_In_Air",
@@ -710,21 +720,22 @@ return ReadOnly("CombatCondition", {
   },
   [110201] = {
     ConditionVars = {
-      BuffId = 110232,
-      CompareBaseInt = 6,
-      CompareLogic = "Less"
+      BuffId = 110201,
+      CompareBaseInt = 5,
+      CompareLogic = "NotLess"
     },
     FuncName = "Check_Buff_Layer",
     Id = 110201
   },
-  [110211] = {
-    ConditionVars = {
-      BuffId = 110232,
-      CompareBaseInt = 1,
-      CompareLogic = "NotLess"
-    },
-    FuncName = "Check_Buff_Layer",
-    Id = 110211
+  [110202] = {
+    ConditionVars = {BuffId = 110202},
+    FuncName = "Check_Buff",
+    Id = 110202
+  },
+  [110299] = {
+    ConditionVars = {CompareBaseInt = 110299},
+    FuncName = "Check_Model",
+    Id = 110299
   },
   [110301] = {
     ConditionVars = T.RT_4,
@@ -1717,6 +1728,14 @@ return ReadOnly("CombatCondition", {
   [851901] = {
     FuncName = "BossLieche_DieInBeingFixedState",
     Id = 851901
+  },
+  [851902] = {
+    FuncName = "BossLiecheBomb_DieSuicide",
+    Id = 851902
+  },
+  [851903] = {
+    FuncName = "BossLieche_InStage4",
+    Id = 851903
   },
   [852001] = {
     ConditionVars = {HpPercent = 0.8},

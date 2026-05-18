@@ -111,6 +111,15 @@ return ReadOnly("HitMontageData", {
     HitMontageId = "BossLianhuo",
     LightHitMontage = {"LightHit"}
   },
+  BossLiecheBomb = {
+    ConditionHitMontage = {
+      [851902] = "BurstDie"
+    },
+    DeadDissolveTime = 1,
+    DeadMontage = T.RT_2,
+    HitAddtiveDuration = 0.46,
+    HitMontageId = "BossLiecheBomb"
+  },
   BossLiecheHand = {
     ConditionHitMontage = {
       [851901] = "BreakIdleDie"

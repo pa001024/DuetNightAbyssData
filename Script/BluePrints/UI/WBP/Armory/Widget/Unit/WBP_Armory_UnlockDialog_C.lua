@@ -126,6 +126,7 @@ function M:Init(Params)
   self:PlayInAnim()
   Params = Params or {}
   rawset(self, "Type", Params.Type)
+  rawset(self, "OnlyWalnut", Params.OnlyWalnut)
   rawset(self, "TargetId", Params.TargetId)
   rawset(self, "EscapeArmoryCharID", Params.EscapeArmoryCharID)
   rawset(self, "Parent", Params.Parent)
@@ -228,16 +229,20 @@ end
 
 function M:UpdateResourceBar()
   local Info = {}
-  if self.WalnutData then
+  if not self.OnlyWalnut then
+    if self.WalnutData then
+      table.insert(Info, {
+        WalnutId = self.WalnutData.WalnutId,
+        Type = "Walnut",
+        OnlyWalnut = self.OnlyWalnut
+      })
+    end
     table.insert(Info, {
-      WalnutId = self.WalnutData.WalnutId,
-      Type = "Walnut"
+      CoinId = CommonConst.Coins.Coin4,
+      Type = "Resource",
+      OnlyWalnut = self.OnlyWalnut
     })
   end
-  table.insert(Info, {
-    CoinId = CommonConst.Coins.Coin4,
-    Type = "Resource"
-  })
   self.Node_ResourceBar:InitResourceBar(Info)
   self.Node_ResourceBar:BindEvents(self, {
     OnAddedToFocusPath = self.OnResourceBarAddedToFocusPath
@@ -281,7 +286,7 @@ function M:InitTabs()
   elseif self.Type == CommonConst.DataType.Weapon then
     self.Tabs[1].Text = GText("UI_Armory_WeaponGetByForge")
     self.WS_Type:SetActiveWidgetIndex(1)
-    if rawget(self, "WalnutData") then
+    if rawget(self, "WalnutData") or self.OnlyWalnut then
       self.Tabs[1].IconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Armory/T_Armory_Unlock_ForgeIcon.T_Armory_Unlock_ForgeIcon'"
     end
   end
@@ -291,6 +296,11 @@ end
 
 function M:CreateJumpToJumpToWalnutFunc()
   local WalnutIds
+  if self.OnlyWalnut then
+    self.UnlockItem_2.WS_State:SetActiveWidgetIndex(1)
+  else
+    self.UnlockItem_2.WS_State:SetActiveWidgetIndex(0)
+  end
   if self.Type == CommonConst.DataType.Char then
     local Data = DataMgr.Char[self.TargetId]
     local CardRid = Data and Data.CharPieceId

@@ -11,8 +11,10 @@ local QuestRealStateEnum = {
   Lock = 0,
   Doing = 1,
   Finished = 2,
+  Block = 3,
   InProgress = -1
 }
+local BtnStateEnum = {Track = 0, Block = 1}
 local ConstQuestTabData = {}
 
 function WBP_Task_Main:Initialize(Initializer)
@@ -525,6 +527,17 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
     return
   end
   local Info = TaskUtils:GetQuestDetail(QuestChainId, QuestId)
+  local QuestChapters = Avatar.QuestChapters
+  local CharpterId = DataMgr.QuestChainId2ChapId[QuestChainId]
+  local MEChapId
+  if CharpterId and DataMgr.QuestMutualExclusion[CharpterId] then
+    MEChapId = DataMgr.QuestMutualExclusion[CharpterId].MEChapId
+  end
+  if QuestWidget.State == QuestRealStateEnum.Block then
+    self.bCurrentQuestBlock = true
+  else
+    self.bCurrentQuestBlock = false
+  end
   if not Info then
     return
   end
@@ -658,6 +671,45 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
         ConditionWidget:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
       end
     end
+  elseif QuestWidget.State == QuestRealStateEnum.Block and MEChapId then
+    self.RootWidget.Group_Title_UnlockTask:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.RootWidget.VB_UnlockCondition:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    self.RootWidget.Text_UnlockTask:SetText(GText("UI_QUESTPANEL_CONDITION_PAUSE"))
+    for _, ChapId in pairs(MEChapId) do
+      if QuestChapters[ChapId] and QuestChapters[ChapId].State ~= CommonConst.QuestChapterState.NoneStart then
+        local QuestChains = DataMgr.QuestMutualExclusion[ChapId].QuestChainId
+        if QuestChains then
+          local IsUnLock = QuestChapters[ChapId].State == CommonConst.QuestChapterState.Finish
+          local ShowQuestChainId
+          if IsUnLock then
+            ShowQuestChainId = QuestChains[#QuestChains]
+          else
+            local ShowFinal = true
+            for k, ChainId in pairs(QuestChains) do
+              if Avatar.QuestChains[ChainId] and Avatar.QuestChains[ChainId]:IsDoing() then
+                ShowFinal = false
+                ShowQuestChainId = ChainId
+                break
+              end
+            end
+            if ShowFinal then
+              ShowQuestChainId = QuestChains[#QuestChains]
+            end
+          end
+          local Type = "Block"
+          local ConditionWidget = self:CreateWidgetNew("TaskUnlockCondition")
+          ConditionWidget:Init(IsUnLock, self)
+          ConditionWidget:SetConditionText(Type, IsUnLock, ShowQuestChainId)
+          local NewType = "QuestChain"
+          if self["ConditionJump" .. NewType] and not IsUnLock then
+            ConditionWidget.CanClick = true
+            ConditionWidget:BindEventOnClicked(self, self["ConditionJump" .. NewType], ShowQuestChainId)
+          end
+          self.RootWidget.VB_UnlockCondition:AddChildToVerticalBox(ConditionWidget)
+          ConditionWidget:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+        end
+      end
+    end
   else
     self.RootWidget.Group_Title_UnlockTask:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.RootWidget.VB_UnlockCondition:SetVisibility(UE4.ESlateVisibility.Collapsed)
@@ -710,6 +762,13 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
     end
     self.IsForbiddenButton = true
     self:SetTrackButtonText(false)
+  elseif QuestWidget.State == QuestRealStateEnum.Block then
+    self.RootWidget.Common_Button_Text_PC:ForbidBtn(true)
+    if not self.IsForbiddenButton then
+      self.RootWidget.Common_Button_Text_PC:PlayAnimation(self.RootWidget.Common_Button_Text_PC.Btn_Forbidden)
+    end
+    self.IsForbiddenButton = true
+    self:SetBlockButtonText()
   else
     self.RootWidget.Common_Button_Text_PC:ForbidBtn(false)
     if self.IsForbiddenButton then
@@ -721,6 +780,7 @@ function WBP_Task_Main:ShowQuestDetailInfo(QuestWidget)
   if self.TrackingQuestId == QuestChainId and not self.CurTrackingQuest then
     self.CurTrackingQuest = self.CurSelectQuest
   end
+  self.bNeedBlock = QuestWidget.State == QuestRealStateEnum.Block
   local bCanGiveUp = DataMgr.QuestChain[QuestChainId].bCanGiveUp
   self:SetGiveUpButton(bCanGiveUp)
   if DataMgr.QuestChain[QuestChainId] and DataMgr.QuestChain[QuestChainId].QuestChainType == Const.LimTimeQuestChainType then
@@ -830,6 +890,9 @@ function WBP_Task_Main:OnKeyDown(MyGeometry, InKeyEvent)
     end
   elseif "Gamepad_FaceButton_Left" == KeyName then
     if self.IsTaskEmpty == true then
+      return
+    end
+    if self.bCurrentQuestBlock then
       return
     end
     if self.RootWidget.ListView_Rewards:HasFocusedDescendants() then
@@ -1113,6 +1176,9 @@ function WBP_Task_Main:InitTrackingButton()
   self:SetTrackButtonText(self.TrackingQuestId ~= nil)
   self.RootWidget.Common_Button_Text_PC:BindEventOnClicked(self, self.OnTrackButtonClicked)
   self.RootWidget.Common_Button_Text_PC:BindForbidStateExecuteEvent(self, function()
+    if self.bCurrentQuestBlock then
+      return
+    end
     UIManager(self):ShowUITip("CommonToastMain", GText("UI_QUEST_TRACK_LOCK"), 1.5)
     return
   end)
@@ -1212,6 +1278,7 @@ function WBP_Task_Main:OnClickJumpBtn()
 end
 
 function WBP_Task_Main:SetTrackButtonText(IsTracking)
+  self.RootWidget.WS_Btn:SetActiveWidgetIndex(BtnStateEnum.Track)
   if IsTracking then
     self.RootWidget.Common_Button_Text_PC:SetText(GText("UI_QUEST_STOPTRACK"))
     self.RootWidget.Group_Jump:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
@@ -1229,6 +1296,16 @@ function WBP_Task_Main:SetTrackButtonText(IsTracking)
       self.RootWidget.Key_Map:SetVisibility(UE4.ESlateVisibility.Collapsed)
       self.RootWidget.Function_Jump:SetVisibility(UE4.ESlateVisibility.Collapsed)
     end
+  end
+end
+
+function WBP_Task_Main:SetBlockButtonText()
+  self.RootWidget.WS_Btn:SetActiveWidgetIndex(BtnStateEnum.Block)
+  self.RootWidget.Text_Stop:SetText(GText("UI_QUESTPANEL_BUTTON_PAUSE"))
+  self.RootWidget.Group_Jump:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  if self.UsingGamepad then
+    self.RootWidget.Key_Map:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.RootWidget.Function_Jump:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -1742,6 +1819,9 @@ function WBP_Task_Main:IsShowGamePad(IsShow)
     end
   end
   self:SetTrackButtonText(self.TrackingQuestId == self.CurSelectId)
+  if self.bNeedBlock then
+    self:SetBlockButtonText()
+  end
   local SelectedQuestChain = DataMgr.QuestChain[self.CurSelectId]
   if not SelectedQuestChain then
     return
@@ -1817,9 +1897,16 @@ function WBP_Task_Main:OnClickGiveUpBtn()
 end
 
 function WBP_Task_Main:HandleCancelGiveUpTask()
+  self:AddTimer(0.3, function()
+    self:SetFocusOnTrackWidget(self.CurSelectId)
+  end, false, 0, "GiveUpTaskRefocusDelay")
 end
 
 function WBP_Task_Main:HandleConfirmGiveUpTask()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   local UIManagerInstance
   UIManagerInstance = UIManager(self)
   if not UIManagerInstance then
@@ -1835,13 +1922,12 @@ function WBP_Task_Main:HandleConfirmGiveUpTask()
     return
   end
   if self.CurSelectQuest.QuestChainId == self.TrackingQuestId then
+    Avatar:CancelQuestTracking(self.TrackingQuestId)
     self.CurSelectQuest:CancelTracking()
     self.TrackingQuestId = nil
     self.CurTrackingQuest = nil
   end
-  if not GWorld then
-    return
-  end
+  Avatar:GiveUpQuestChain(self.CurSelectQuest.QuestChainId)
   local StoryPath = QuestChainInfo.StoryPath
   if not StoryPath then
     return
@@ -1849,30 +1935,66 @@ function WBP_Task_Main:HandleConfirmGiveUpTask()
   if GWorld.StoryMgr:IsRunningStoryline(QuestChainInfo.StoryPath) then
     GWorld.StoryMgr:StopStoryline(StoryPath, false)
   end
-  local OldQuestChainId = self.CurSelectQuest.QuestChainId
-  local ListItemToRemove
-  for _, ListItem in pairs(self.RootWidget.List_Task:GetListItems():ToTable()) do
-    if ListItem.QuestChainId == OldQuestChainId then
-      ListItemToRemove = ListItem
+  local ItemToRemove
+  local ListItems = self.RootWidget.List_Task:GetListItems()
+  for _, ListItem in pairs(ListItems) do
+    if ListItem.QuestChainId == self.CurSelectQuest.QuestChainId then
+      ItemToRemove = ListItem
       break
     end
   end
-  if ListItemToRemove then
-    self.RootWidget.List_Task:RemoveItem(ListItemToRemove)
-  end
-  if self.TrackingQuestId and self:IsInTab(self.TrackingQuestId, self.CurTabId) then
-    self.CurSelectId = self.TrackingQuestId
-  elseif self.RootWidget.List_Task.ListItems:Num() >= 1 then
-    for _, ListItem in pairs(self.RootWidget.List_Task:GetListItems():ToTable()) do
-      self.CurSelectId = ListItem.QuestChainId
+  local FirstItem
+  for _, ListItem in pairs(ListItems) do
+    if ListItem and ItemToRemove and ListItem.QuestChainId ~= ItemToRemove.QuestChainId then
+      FirstItem = ListItem
+      break
     end
   end
-  for _, ListItem in pairs(self.RootWidget.List_Task:GetListItems():ToTable()) do
-    if ListItem.QuestChainId == self.CurSelectId then
-      self.CurSelectQuest = ListItem
+  self.CurSelectId = FirstItem and FirstItem.QuestChainId or nil
+  if ItemToRemove then
+    self.RootWidget.List_Task:RemoveItem(ItemToRemove)
+  end
+  local FirstItemWidget
+  local DisplayedEntryWidgets = self.RootWidget.List_Task:GetDisplayedEntryWidgets()
+  for _, Widget in pairs(DisplayedEntryWidgets) do
+    if FirstItem and Widget.QuestChainId == FirstItem.QuestChainId then
+      FirstItemWidget = Widget
+      break
     end
   end
-  self:ScrollToSelectedWidget(self.CurSelectId)
+  if FirstItem then
+    if not FirstItemWidget then
+      self.RootWidget.List_Task:BP_NavigateToItem(FirstItem)
+      self.RootWidget.List_Task:BP_SetSelectedItem(FirstItem)
+    elseif FirstItem.UI then
+      FirstItem.UI.Task_SubItem:SelectQuestProactively()
+    end
+  end
+  local TaskItemUIs = self.RootWidget.List_Task:GetDisplayedEntryWidgets()
+  if nil == TaskItemUIs or TaskItemUIs:Num() - 1 <= 0 then
+    self:InitDetailInfo()
+    self.CurSelectQuest = nil
+    self.Group_Jump:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.Group_Giveup:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  local NewTaskItemUIs = TArray(UWidget)
+  for _, TaskItemUI in pairs(TaskItemUIs) do
+    local Item = TaskItemUI.Content
+    if Item.QuestChainId ~= OldQuestChainId then
+      NewTaskItemUIs:Add(Item.UI)
+    end
+  end
+  local TaskMaxCount = UIUtils.GetListViewContentMaxCount(self.RootWidget.List_Task, NewTaskItemUIs)
+  local AllChainList = self.RootWidget.List_Task.ListItems:ToTable()
+  if TaskMaxCount <= #AllChainList then
+    self.RootWidget.List_Task:SetScrollbarVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  else
+    self.RootWidget.List_Task:SetScrollbarVisibility(UE4.ESlateVisibility.Collapsed)
+  end
+  if self.RootWidget.Tab_Change then
+    self.RootWidget:PlayAnimation(self.RootWidget.Tab_Change)
+  end
 end
 
 return WBP_Task_Main

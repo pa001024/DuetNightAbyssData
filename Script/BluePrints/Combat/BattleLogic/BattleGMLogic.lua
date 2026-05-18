@@ -573,6 +573,18 @@ function Component:GM_RemovePet()
   Player:ServerRemoveBattlePet()
 end
 
+function Component:GM_SetSuperArmorOn(Eid)
+  local Target = self:GetEntity(Eid)
+  assert(Target, self:ShowEidError(Eid))
+  Target:SetSuperArmor(true, "GM")
+end
+
+function Component:GM_SetSuperArmorOff(Eid)
+  local Target = self:GetEntity(Eid)
+  assert(Target, self:ShowEidError(Eid))
+  Target:SetSuperArmor(false, "GM")
+end
+
 function Component:GM_ForbidDamage(_ForbidDamage)
   require("EMLuaConst").bForbidDamage = _ForbidDamage
 end

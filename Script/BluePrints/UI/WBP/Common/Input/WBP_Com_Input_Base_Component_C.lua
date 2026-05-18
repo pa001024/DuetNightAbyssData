@@ -84,6 +84,11 @@ function M:SetGamePadKey(FocusKeyName, PasteKeyName)
   self:UpdateGamePadFocusKey()
 end
 
+function M:SetIsShowGamPadKey(IsShow)
+  self.IsShowGamPadKey = IsShow
+  self:UpdateBtns()
+end
+
 function M:BindEvent(Events)
   Events = Events or {}
   self.OnTextChanged = Events.OnTextChanged
@@ -211,6 +216,10 @@ end
 
 function M:PasteText()
   self:OnPasteBtnClicked()
+end
+
+function M:DeleteText()
+  self:OnDeleteBtnClicked()
 end
 
 function M:ChangeKeyByInputDevice(InputDevice)

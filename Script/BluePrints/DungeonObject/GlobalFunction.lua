@@ -35,6 +35,7 @@ GlobalFunction.EventID = EventID
 GlobalFunction.EventManager = EventManager
 GlobalFunction.GWorld = GWorld
 GlobalFunction.ErrorCode = ErrorCode
+GlobalFunction.ConditionUtils = ConditionUtils
 setmetatable(GlobalFunction, {
   __newindex = function(t, k, v)
     GlobalFunction.print("不允许在关卡服务器代码里设置全局变量: " .. tostring(k) .. " = " .. tostring(v))

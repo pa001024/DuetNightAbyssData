@@ -66,6 +66,7 @@ Const.InvincibleBuffId = 301
 Const.SynthesisSpeedUpBuffId = 5000301
 Const.MuteBuffId = 859900
 Const.BossInvincibleBuffId = 6000212
+Const.DungeonDisableAllSkillsBuffId = 311
 Const.Forward = 0
 Const.Right = 1
 Const.Left = 2
@@ -311,7 +312,14 @@ Const.StatePause = 5
 Const.StateEnd = 6
 Const.ExitStateAlert = 7
 Const.StateBattleProgress = 99
-Const.ProgressRecoverDungeonType = {Rouge = true}
+Const.ProgressRecoverDungeonType = {
+  Survival = true,
+  SurvivalPro = true,
+  SurvivalMini = true,
+  Defence = true,
+  Excavation = true,
+  Rouge = true
+}
 Const.DungeonErrorType = {
   DungeonGame = "拼接关玩法",
   StaticCreator = "静态刷新点",
@@ -925,11 +933,22 @@ Const.CampType = {
   Hostile = ECampName.Hostile
 }
 Const.EnableCreateUnitLog = false
+Const.IsOpenCNPCForceShow = true
+Const.IsOpenCNPCGenPriority = true
+Const.IsOpenFlexibleCppOpt = true
 Const.IsOpenNpcInitOpt = true
 Const.IsOpenNpcGetBattleCharTag = true
 Const.IsNpcUseNavFixPawnLoc = false
-Const.IsOpenCustomNPCCategory = false
+Const.IsOpenCustomNPCCategory = true
 Const.IsOpenEscortNPCPhantomOpt = true
+Const.IsOpenCustomNPCDisableCollision = true
+Const.IsOpenEXStationCNPCSignifance = true
+Const.IsOpenNpcLoadBTAsync = false
+Const.IsOpenNpcGetPatrolTrigger = true
+Const.CNPCOptimizeSpecialLevelName = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/UEDPIE_0_Haiboliya_Chezhan_Main"
+Const.CNPCOptimizeSpecialLevelName1 = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_Main/UEDPIE_0_Haiboliya_Chezhan_Main"
+Const.CNPCOptimizeSpecialLevelName2 = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_CZDX/UEDPIE_0_Haiboliya_Chezhan_CZDX_Main"
+Const.CNPCOptimizeSpecialLevelName3 = "/Game/Maps/Levels/Haiboliya/Haiboliya_Chezhan_YW/UEDPIE_0_Haiboliya_Chezhan_YW_Main"
 Const.EnableFXOptimization = true
 Const.ToughnessTimeDilation = 0.33
 Const.ToughnessShowBloodTip = 0.4
@@ -988,6 +1007,12 @@ Const.DefenceGameToastType = {
   Fail = 3,
   Success = 4
 }
+Const.GatherAreaShapeEnum = {Box = 1, Sphere = 2}
+Const.AreaOccupyEnum = {
+  None = 0,
+  Box1 = 1,
+  Box2 = 2
+}
 Const.bOverrideHLODDistance = false
 Const.HLODDistanceDefault = {
   [0] = 12000,
@@ -1035,7 +1060,7 @@ Const.WCDungeonUnloadSmall = true
 Const.WCDungeonDistanceRatio = 0.7
 Const.WCDungeonLevelProxyDistanceRatio = 0.7
 Const.CanUnloadNavMeshLevel = true
-Const.HuaxuFoliagePC = {
+Const.NewFoliageRulePC = {
   High = {
     "_TypH",
     "_TypM",
@@ -1044,10 +1069,15 @@ Const.HuaxuFoliagePC = {
   Mid = {"_TypM", "_TypL_DenH"},
   Low = {"_TypM", "_TypL_DenM"}
 }
-Const.HuaxuFoliagePhone = {
+Const.NewFoliageRulePhone = {
   High = {"_TypM", "_TypL_DenM"},
   Mid = {"_TypM", "_TypL_DenL"},
   Low = {"_TypL_DenL"}
+}
+Const.OldFoliageRuleMap = {
+  "Chapter01_Icelake",
+  "Chapter01_Won",
+  "Prologue_"
 }
 Const.SimulateMovementDebugPlatform = ""
 Const.CheckDungeonMonId = false
@@ -1078,6 +1108,7 @@ Const.NPCDeadCache_Andriod = true
 Const.LowMemoryDeviceNPCOptimize = true
 Const.OnlineNPCCreateOptimize = true
 Const.CNPCDelHide = true
+Const.bCustomNPCMoveBalanceTick = true
 Const.EnableCacheSummonID = {
   [2] = 210101,
   [3] = 230101,
@@ -1232,6 +1263,7 @@ Const.WCDungeonAirBoxUnitId = 11002
 Const.TempleInteractiveCount = 100
 Const.ScriptDetectionCheckType = {OnMouse = "OnMouse", OnKeyboard = "OnKeyboard"}
 Const.bOutAirWallBoxCheckRangeVisualDebug = false
+Const.bOutAirWallBoxCheckEnable = false
 Const.PCScalabilityLevelNum = {
   [0] = 6,
   [1] = 7,
@@ -1253,8 +1285,16 @@ Const.MobileScalabilityLevelNum = {
     [2] = 8,
     [3] = 8,
     [4] = 8
+  },
+  OpenHarmony = {
+    [0] = 8,
+    [1] = 8,
+    [2] = 8,
+    [3] = 8,
+    [4] = 8
   }
 }
 Const.bTakePhotoAddWatermark = false
 Const.SynthesisCheckResetPointTime = 10
+Const.bEditorUnlockAllHyperWeaponSkills = false
 return Const

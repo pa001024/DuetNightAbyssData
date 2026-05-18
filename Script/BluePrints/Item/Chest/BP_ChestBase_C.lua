@@ -22,7 +22,8 @@ end
 
 function BP_ChestBase_C:OnActorReady(Info)
   BP_ChestBase_C.Super.OnActorReady(self, Info)
-  if self.OpenState and self.NeedDestroy then
+  local GameState = UGameplayStatics.GetGameState(self)
+  if self.NeedDestroy and (self.OpenState or self.StateId == 701003 and GameState:IsInRegion()) then
     self:EMActorDestroy(EDestroyReason.MechanismDead)
   end
 end
@@ -139,6 +140,14 @@ function BP_ChestBase_C:RealCreateDrop(RealWave, DropsTable, AvatarEidStr, Timer
   if RealWave < self.CurrentWave[AvatarEidStr] then
     self:RemoveTimer(TimerKey)
   end
+end
+
+function BP_ChestBase_C:GetChestRewardWave()
+  return self.RewardWave or 1
+end
+
+function BP_ChestBase_C:GetChestRewardTime()
+  return self.RewardTime or 0
 end
 
 function BP_ChestBase_C:GetWaveCount(DropsTable)

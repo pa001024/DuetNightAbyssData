@@ -85,9 +85,14 @@ function Account:SdkLogin()
   }
   local IsGlobalSDk = HeroUSDKUtils.IsGlobalSDK()
   if not IsGlobalSDk then
-    BDC_Info.oaid = HeroUSDKSubsystem.Oaid
+    BDC_Info.oaid = HeroUSDKSubsystem:GetOaid()
   else
     BDC_Info.gaid = HeroUSDKSubsystem:GetGaid()
+  end
+  local PlatformName = UGameplayStatics.GetPlatformName()
+  if "OpenHarmony" == PlatformName then
+    BDC_Info.odid = HeroUSDKSubsystem:GetBDCOdid()
+    BDC_Info.aaid = HeroUSDKSubsystem:GetBDCAaid()
   end
   PrintTable({ClientInfo = ClientInfo}, 2)
   PrintTable({SdkInfo = SdkInfo}, 2)
@@ -146,7 +151,12 @@ function Account:QuickLogin(account_name, password)
   }
   local IsGlobalSDk = HeroUSDKUtils.IsGlobalSDK()
   if not IsGlobalSDk then
-    BDC_Info.oaid = HeroUSDKSubsystem.Oaid
+    BDC_Info.oaid = HeroUSDKSubsystem:GetOaid()
+  end
+  local PlatformName = UGameplayStatics.GetPlatformName()
+  if "OpenHarmony" == PlatformName then
+    BDC_Info.odid = HeroUSDKSubsystem:GetBDCOdid()
+    BDC_Info.aaid = HeroUSDKSubsystem:GetBDCAaid()
   end
   local TestSdkInfo = {ChannelId = ChannelId}
   PrintTable({ClientInfo = ClientInfo}, 2)

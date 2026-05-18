@@ -151,6 +151,15 @@ function Component:UpdateDungeonProgress(DataTable)
   self:CallServerMethod("UpdateDungeonProgress", self:GetSerializedProgressData(DataTable))
 end
 
+function Component:SyncToServerDungeonMessage(MessageName, tbl)
+  self:CallServerMethod("SyncToServerDungeonMessage", MessageName, tbl)
+end
+
+function Component:SyncToClientDungeonMessage(MessageName, tbl)
+  DebugPrint("SyncToClientDungeonMessage", MessageName, tbl)
+  EventManager:FireEvent(EventID.OnRepClientDungeonMessage, MessageName, tbl)
+end
+
 function Component:ContinueDungeonSettlement(BattleInfo, Callback, TicketId, SquadId)
   if self:IsInDungeon() then
     self:EnterDungeon(BattleInfo, nil, Callback, TicketId, SquadId)

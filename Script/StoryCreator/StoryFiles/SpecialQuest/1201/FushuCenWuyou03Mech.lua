@@ -96,12 +96,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17636483013634656172",
-            startPort = "QuestStart",
-            endQuest = "17636483013634656177",
-            endPort = "In"
-          },
-          {
             startQuest = "17636482758084058363",
             startPort = "Out",
             endQuest = "17638965447307892564",
@@ -186,12 +180,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17636483013634656172",
-            startPort = "QuestStart",
-            endQuest = "1764839845941642033",
-            endPort = "In"
-          },
-          {
             startQuest = "1764839845941642033",
             startPort = "Out",
             endQuest = "17638963174207890175",
@@ -232,6 +220,30 @@ return {
             startPort = "Out",
             endQuest = "17636482758084058369",
             endPort = "In"
+          },
+          {
+            startQuest = "17636483013634656172",
+            startPort = "QuestStart",
+            endQuest = "17761580538525646",
+            endPort = "In"
+          },
+          {
+            startQuest = "17761580538525646",
+            startPort = "Fail",
+            endQuest = "17636483013634656177",
+            endPort = "In"
+          },
+          {
+            startQuest = "17761580538525646",
+            startPort = "Fail",
+            endQuest = "1764839845941642033",
+            endPort = "In"
+          },
+          {
+            startQuest = "17761580538525646",
+            startPort = "Success",
+            endQuest = "176467096822021624952",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -268,7 +280,7 @@ return {
             key = "17636482758084058360",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 2328.7945267679083, y = 266.5232962804352},
+            pos = {x = 2225.6695267679083, y = 270.2732962804352},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2050056,
@@ -393,7 +405,7 @@ return {
             key = "17636483013634656172",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 701.0714285714286, y = 301.07142857142856},
+            pos = {x = 317.5, y = 554.625},
             propsData = {ModeType = 0}
           },
           ["17636483013634656173"] = {
@@ -407,7 +419,7 @@ return {
             key = "17636483013634656174",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1918.5714285714284, y = 785.7142857142858},
+            pos = {x = 1676.4285714285713, y = 880.0000000000001},
             propsData = {}
           },
           ["17636483013634656175"] = {
@@ -421,7 +433,7 @@ return {
             key = "17636483013634656176",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1051.3258145363404, y = 753.9949874686716},
+            pos = {x = 809.1829573934833, y = 848.280701754386},
             propsData = {}
           },
           ["17636483013634656177"] = {
@@ -456,7 +468,7 @@ return {
             key = "17636483013634656179",
             type = "ChangeStaticCreatorNode",
             name = "销毁扶疏魅影",
-            pos = {x = 1597.523809523809, y = 774.9047619047618},
+            pos = {x = 1355.3809523809518, y = 869.1904761904761},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -481,6 +493,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 12014902,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -508,8 +521,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -522,7 +537,7 @@ return {
             key = "17638963174207890175",
             type = "ChangeStaticCreatorNode",
             name = "生成石碑",
-            pos = {x = 1267.5410048458743, y = 286.0903553641138},
+            pos = {x = 1338.920315190702, y = 289.1938036399759},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -582,14 +597,14 @@ return {
             key = "176467096822021624952",
             type = "WaitOfTimeNode",
             name = "延迟等待",
-            pos = {x = 2614, y = 302},
+            pos = {x = 2610.25, y = 287},
             propsData = {WaitTime = 3}
           },
           ["1764839845941642033"] = {
             key = "1764839845941642033",
             type = "SendMessageNode",
             name = "通知香气植物激活",
-            pos = {x = 1003.19040247678, y = 293.8978328173376},
+            pos = {x = 1108.7076438560905, y = 294.9323155759583},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "StartFushuCenWuyou03Mech",
@@ -600,12 +615,19 @@ return {
             key = "1764839916736642769",
             type = "SendMessageNode",
             name = "通知香气植物重置",
-            pos = {x = 1321.425696594427, y = 763.5882352941177},
+            pos = {x = 1079.28283945157, y = 857.873949579832},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "FailFushuCenWuyou03Mech",
               UnitId = -1
             }
+          },
+          ["17761580538525646"] = {
+            key = "17761580538525646",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 782.5928571428572, y = 515.7},
+            propsData = {ConditionId = 1201040502}
           }
         },
         commentData = {

@@ -120,9 +120,7 @@ end
 
 function DataMgr.GetData(filename)
   local pro_path = UE4.UKismetSystemLibrary.GetProjectContentDirectory()
-  local file = io.open(pro_path .. "../Datas/" .. filename .. ".json", "r")
-  local info = file:read("*a")
-  file:close()
+  local info = UE4.URuntimeCommonFunctionLibrary.LoadFile(pro_path .. "../Datas/" .. filename .. ".json")
   local json = require("rapidjson")
   local res = json.decode(info)
   return res

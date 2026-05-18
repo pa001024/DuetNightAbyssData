@@ -161,620 +161,630 @@ T.RT_47 = {
   Strength = 50,
   WindMotorType = "Omni"
 }
-T.RT_48 = {true}
-T.RT_49 = {110413}
-T.RT_50 = {
+T.RT_48 = {110216}
+T.RT_49 = {true}
+T.RT_50 = {110413}
+T.RT_51 = {
   Height = 80,
   Radius = 50,
   ShapeType = "Cylinder"
 }
-T.RT_51 = {
+T.RT_52 = {
   Height = 80,
   Radius = 100,
   ShapeType = "Cylinder"
 }
-T.RT_52 = {110442}
-T.RT_53 = {120125}
-T.RT_54 = {150218}
-T.RT_55 = {
+T.RT_53 = {110442}
+T.RT_54 = {120125}
+T.RT_55 = {120135}
+T.RT_56 = {150218}
+T.RT_57 = {
   BoxHeight = 500,
   BoxLength = 200,
   BoxWidth = 200,
   ShapeType = "Box"
 }
-T.RT_56 = {150217}
-T.RT_57 = {150326, 150329}
-T.RT_58 = {
+T.RT_58 = {150217}
+T.RT_59 = {150326, 150329}
+T.RT_60 = {
   1,
   0,
   0
 }
-T.RT_59 = {Radius = 10, ShapeType = "Sphere"}
-T.RT_60 = {
+T.RT_61 = {Radius = 10, ShapeType = "Sphere"}
+T.RT_62 = {
   BoxHeight = 10,
   BoxLength = 10,
   BoxWidth = 10,
   ShapeType = "Box"
 }
-T.RT_61 = {
+T.RT_63 = {
   Radius = 2,
   Strength = 20,
   WindMotorType = "Omni"
 }
-T.RT_62 = {
+T.RT_64 = {
   true,
   false,
   false
 }
-T.RT_63 = {
+T.RT_65 = {
   BoxHeight = 200,
   BoxLength = 300,
   BoxWidth = 1250,
   ShapeType = "Box"
 }
-T.RT_64 = {
+T.RT_66 = {
   SpawnSocket = "root_hook_arm_r",
   UseLocation = "Char"
 }
-T.RT_65 = {DefaultLocation = 1250}
-T.RT_66 = {150427}
-T.RT_67 = {150428}
-T.RT_68 = {Radius = 15, ShapeType = "Sphere"}
-T.RT_69 = {150533}
-T.RT_70 = {
+T.RT_67 = {DefaultLocation = 1250}
+T.RT_68 = {150427}
+T.RT_69 = {150428}
+T.RT_70 = {Radius = 15, ShapeType = "Sphere"}
+T.RT_71 = {150533}
+T.RT_72 = {
   BoxHeight = 50,
   BoxLength = 500,
   BoxWidth = 200,
   ShapeType = "Box"
 }
-T.RT_71 = {SpawnSocket = "hook_arm_r", UseLocation = "Weapon"}
-T.RT_72 = {150534}
-T.RT_73 = {
+T.RT_73 = {SpawnSocket = "hook_arm_r", UseLocation = "Weapon"}
+T.RT_74 = {150534}
+T.RT_75 = {
   BoxHeight = 100,
   BoxLength = 500,
   BoxWidth = 200,
   ShapeType = "Box"
 }
-T.RT_74 = {160113}
-T.RT_75 = {
+T.RT_76 = {160113}
+T.RT_77 = {
   BoxHeight = 40,
   BoxLength = 500,
   BoxWidth = 200,
   ShapeType = "Box"
 }
-T.RT_76 = {
+T.RT_78 = {
   Radius = 1,
   Strength = 50,
   WindMotorType = "Omni"
 }
-T.RT_77 = {160124}
-T.RT_78 = {18015}
-T.RT_79 = {0.92, 1}
-T.RT_80 = {
+T.RT_79 = {160124}
+T.RT_80 = {18015}
+T.RT_81 = {0.92, 1}
+T.RT_82 = {
   Ecc = 0.96,
-  EccRange = T.RT_79,
+  EccRange = T.RT_81,
   K = 0.5,
   Length = 2000
 }
-T.RT_81 = {Radius = 20, ShapeType = "Sphere"}
-T.RT_82 = {
+T.RT_83 = {Radius = 20, ShapeType = "Sphere"}
+T.RT_84 = {
   EffectCreatureId = 18011,
   SpawnSocket = "root",
   UseLocation = "EffectCreature"
 }
-T.RT_83 = {18016}
-T.RT_84 = {18017}
-T.RT_85 = {20114}
-T.RT_86 = {Radius = 30, ShapeType = "Sphere"}
-T.RT_87 = {
+T.RT_85 = {18016}
+T.RT_86 = {18017}
+T.RT_87 = {20114}
+T.RT_88 = {Radius = 30, ShapeType = "Sphere"}
+T.RT_89 = {
   SpawnSocket = "lowerarmpendant_left01_a",
   UseLocation = "Char"
 }
-T.RT_88 = {
+T.RT_90 = {
   5,
   0,
   90
 }
-T.RT_89 = {
+T.RT_91 = {
   "Bullet",
   "PauseInvisible"
 }
-T.RT_90 = {
+T.RT_92 = {
   BoxHeight = 15,
   BoxLength = 15,
   BoxWidth = 15,
   ShapeType = "Box"
 }
-T.RT_91 = {201350012}
-T.RT_92 = {2020113}
-T.RT_93 = {2020114}
-T.RT_94 = {
+T.RT_93 = {201350012}
+T.RT_94 = {2020113}
+T.RT_95 = {2020114}
+T.RT_96 = {
   SpawnSocket = "gunpoint_01",
   UseLocation = "ChildWeapon"
 }
-T.RT_95 = {2020313}
-T.RT_96 = {
+T.RT_97 = {2020313}
+T.RT_98 = {
   2,
   0,
   2
 }
-T.RT_97 = {2020314}
-T.RT_98 = {2020713}
-T.RT_99 = {2020714}
-T.RT_100 = {2030412, 2030413}
-T.RT_101 = {2030414}
-T.RT_102 = {2030416}
-T.RT_103 = {
+T.RT_99 = {2020314}
+T.RT_100 = {2020713}
+T.RT_101 = {2020714}
+T.RT_102 = {2030412, 2030413}
+T.RT_103 = {2030414}
+T.RT_104 = {2030416}
+T.RT_105 = {
   BoxHeight = 150,
   BoxLength = 50,
   BoxWidth = 150,
   ShapeType = "Box"
 }
-T.RT_104 = {10}
-T.RT_105 = {Means = "Permanent", Range = 10}
-T.RT_106 = {
+T.RT_106 = {10}
+T.RT_107 = {Means = "Permanent", Range = 10}
+T.RT_108 = {
   0,
   1,
   0
 }
-T.RT_107 = {
+T.RT_109 = {
   BoxHeight = 5,
   BoxLength = 5,
   BoxWidth = 5,
   ShapeType = "Box"
 }
-T.RT_108 = {
+T.RT_110 = {
   BoxHeight = 1,
   BoxLength = 1,
   BoxWidth = 1,
   ShapeType = "Box"
 }
-T.RT_109 = {2050517}
-T.RT_110 = {
+T.RT_111 = {2050517}
+T.RT_112 = {
   -1,
   -1,
   1
 }
-T.RT_111 = {
+T.RT_113 = {
   BoxHeight = 50,
   BoxLength = 50,
   BoxWidth = 50,
   ShapeType = "Box"
 }
-T.RT_112 = {2060113}
-T.RT_113 = {"Bullet"}
-T.RT_114 = {2069913}
-T.RT_115 = {210232}
-T.RT_116 = {TypeId = 30401}
-T.RT_117 = {TypeId = 30402}
-T.RT_118 = {TypeId = 30407}
-T.RT_119 = {
-  BoxHeight = 30,
-  BoxLength = 30,
-  BoxWidth = 30,
-  ShapeType = "Box"
-}
-T.RT_120 = {330125}
-T.RT_121 = {
-  Interval = 2,
-  SkillEffects = T.RT_120
-}
-T.RT_122 = {330126}
-T.RT_123 = {401010006}
-T.RT_124 = {401010007}
-T.RT_125 = {401020004}
-T.RT_126 = {401020005}
-T.RT_127 = {401020007}
-T.RT_128 = {401020002}
-T.RT_129 = {401020012}
-T.RT_130 = {401020014}
-T.RT_131 = {401020028}
-T.RT_132 = {401020030}
-T.RT_133 = {401020032}
-T.RT_134 = {26}
-T.RT_135 = {
-  Interval = 0.25,
-  SkillEffects = T.RT_134
-}
-T.RT_136 = {
+T.RT_114 = {2060113}
+T.RT_115 = {"Bullet"}
+T.RT_116 = {2069913}
+T.RT_117 = {210232}
+T.RT_118 = {
   BoxHeight = 150,
   BoxLength = 250,
   BoxWidth = 250,
   ShapeType = "Box"
 }
-T.RT_137 = {410243}
+T.RT_119 = {TypeId = 30401}
+T.RT_120 = {TypeId = 30402}
+T.RT_121 = {TypeId = 30407}
+T.RT_122 = {
+  BoxHeight = 30,
+  BoxLength = 30,
+  BoxWidth = 30,
+  ShapeType = "Box"
+}
+T.RT_123 = {330125}
+T.RT_124 = {
+  Interval = 2,
+  SkillEffects = T.RT_123
+}
+T.RT_125 = {330126}
+T.RT_126 = {401010006}
+T.RT_127 = {401010007}
+T.RT_128 = {401020004}
+T.RT_129 = {401020005}
+T.RT_130 = {401020007}
+T.RT_131 = {401020002}
+T.RT_132 = {401020012}
+T.RT_133 = {401020014}
+T.RT_134 = {401020028}
+T.RT_135 = {401020030}
+T.RT_136 = {401020032}
+T.RT_137 = {26}
 T.RT_138 = {
+  Interval = 0.25,
+  SkillEffects = T.RT_137
+}
+T.RT_139 = {410243}
+T.RT_140 = {
   Height = 1000,
   Radius = 2000,
   ShapeType = "Cylinder"
 }
-T.RT_139 = {RotType = 1}
-T.RT_140 = {SpawnSocket = "Root", UseLocation = "Pet"}
-T.RT_141 = {
+T.RT_141 = {RotType = 1}
+T.RT_142 = {SpawnSocket = "Root", UseLocation = "Pet"}
+T.RT_143 = {
   Height = 600,
   Radius = 600,
   ShapeType = "Cylinder"
 }
-T.RT_142 = {500000309}
-T.RT_143 = {530127}
-T.RT_144 = {SpawnSocket = "Mouth", UseLocation = "Char"}
-T.RT_145 = {600104}
-T.RT_146 = {Z = true}
-T.RT_147 = {Means = "Permanent", Range = 300}
-T.RT_148 = {600204}
-T.RT_149 = {600206}
-T.RT_150 = {
+T.RT_144 = {500000309}
+T.RT_145 = {530127}
+T.RT_146 = {SpawnSocket = "Mouth", UseLocation = "Char"}
+T.RT_147 = {600104}
+T.RT_148 = {Z = true}
+T.RT_149 = {Means = "Permanent", Range = 300}
+T.RT_150 = {600204}
+T.RT_151 = {600206}
+T.RT_152 = {
   BoxHeight = 10,
   BoxLength = 10,
   BoxWidth = 20,
   ShapeType = "Box"
 }
-T.RT_151 = {
+T.RT_153 = {
   SpawnSocket = "ExpressionSocket",
   UseLocation = "Char"
 }
-T.RT_152 = {Means = "Permanent", Range = 200}
-T.RT_153 = {
+T.RT_154 = {Means = "Permanent", Range = 200}
+T.RT_155 = {
   SpawnSocket = "hair_black01_g",
   UseLocation = "Char"
 }
-T.RT_154 = {Means = "Permanent", Range = 130}
-T.RT_155 = {600602}
-T.RT_156 = {600603}
-T.RT_157 = {
+T.RT_156 = {Means = "Permanent", Range = 130}
+T.RT_157 = {600602}
+T.RT_158 = {600603}
+T.RT_159 = {
   SpawnSocket = "headpendant_front01_a",
   UseLocation = "Char"
 }
-T.RT_158 = {OutsideRadius = 400, Time = 2.6}
-T.RT_159 = {601204}
-T.RT_160 = {601303}
-T.RT_161 = {601604}
-T.RT_162 = {601606}
-T.RT_163 = {601704}
-T.RT_164 = {
+T.RT_160 = {OutsideRadius = 400, Time = 2.6}
+T.RT_161 = {601204}
+T.RT_162 = {601303}
+T.RT_163 = {601604}
+T.RT_164 = {601606}
+T.RT_165 = {601704}
+T.RT_166 = {
   EffectCreatureId = 6021,
   SpawnSocket = "Root",
   UseLocation = "EffectCreature"
 }
-T.RT_165 = {60302}
-T.RT_166 = {
+T.RT_167 = {60302}
+T.RT_168 = {
   BoxHeight = 5,
   BoxLength = 5,
   BoxWidth = 10,
   ShapeType = "Box"
 }
-T.RT_167 = {
+T.RT_169 = {
   SpawnSocket = "Weapon_Fire",
   UseLocation = "Char"
 }
-T.RT_168 = {700304}
-T.RT_169 = {
+T.RT_170 = {700304}
+T.RT_171 = {
   SpawnSocket = "middle_03_l",
   UseLocation = "Char"
 }
-T.RT_170 = {
+T.RT_172 = {
   "Grenade",
   "PauseRemovable"
 }
-T.RT_171 = {
+T.RT_173 = {
   PreFXColorIndex = 0,
   PreFXRadius = 400,
   PreFXTime = 1.2
 }
-T.RT_172 = {700803}
-T.RT_173 = {SpawnSocket = "hook_arm_l", UseLocation = "Char"}
-T.RT_174 = {
+T.RT_174 = {700803}
+T.RT_175 = {SpawnSocket = "hook_arm_l", UseLocation = "Char"}
+T.RT_176 = {
   SpawnSocket = "wing_left01_d2",
   UseLocation = "Char"
 }
-T.RT_175 = {700815}
-T.RT_176 = {Means = "Permanent", Range = 100}
-T.RT_177 = {701007}
-T.RT_178 = {701005}
-T.RT_179 = {701006}
-T.RT_180 = {701305}
-T.RT_181 = {800104}
-T.RT_182 = {
+T.RT_177 = {700815}
+T.RT_178 = {Means = "Permanent", Range = 100}
+T.RT_179 = {701007}
+T.RT_180 = {701005}
+T.RT_181 = {701006}
+T.RT_182 = {701305}
+T.RT_183 = {701903}
+T.RT_184 = {701904}
+T.RT_185 = {701907}
+T.RT_186 = {701908}
+T.RT_187 = {701911}
+T.RT_188 = {701912}
+T.RT_189 = {800104}
+T.RT_190 = {
   BoxHeight = 800,
   BoxLength = 120,
   BoxWidth = 120,
   ShapeType = "Box"
 }
-T.RT_183 = {Radius = 40, ShapeType = "Sphere"}
-T.RT_184 = {Means = "Permanent", Range = 600}
-T.RT_185 = {850217}
-T.RT_186 = {
+T.RT_191 = {Radius = 40, ShapeType = "Sphere"}
+T.RT_192 = {Means = "Permanent", Range = 600}
+T.RT_193 = {850217}
+T.RT_194 = {
   BoxHeight = 20,
   BoxLength = 180,
   BoxWidth = 180,
   ShapeType = "Box"
 }
-T.RT_187 = {Vector = 550}
-T.RT_188 = {
+T.RT_195 = {Vector = 550}
+T.RT_196 = {
   BoxHeight = 500,
   BoxLength = 150,
   BoxWidth = 150,
   ShapeType = "Box"
 }
-T.RT_189 = {Means = "Temporary", Range = 50}
-T.RT_190 = {
+T.RT_197 = {Means = "Temporary", Range = 50}
+T.RT_198 = {
   BoxHeight = 20,
   BoxLength = 300,
   BoxWidth = 200,
   ShapeType = "Box"
 }
-T.RT_191 = {850223}
-T.RT_192 = {Radius = 340, ShapeType = "Sphere"}
-T.RT_193 = {850230}
-T.RT_194 = {SpawnSocket = "Root", UseLocation = "Target"}
-T.RT_195 = {8502123}
-T.RT_196 = {Means = "Temporary", Range = 200}
-T.RT_197 = {
+T.RT_199 = {850223}
+T.RT_200 = {Radius = 340, ShapeType = "Sphere"}
+T.RT_201 = {850230}
+T.RT_202 = {SpawnSocket = "Root", UseLocation = "Target"}
+T.RT_203 = {8502123}
+T.RT_204 = {Means = "Temporary", Range = 200}
+T.RT_205 = {
   DamageInterval = 1,
   SkillEffectId1 = 8502120,
   SkillEffectId2 = 8502161
 }
-T.RT_198 = {850306}
-T.RT_199 = {Radius = 600, ShapeType = "Sphere"}
-T.RT_200 = {
+T.RT_206 = {850306}
+T.RT_207 = {Radius = 600, ShapeType = "Sphere"}
+T.RT_208 = {
   BoxHeight = 800,
   BoxLength = 200,
   BoxWidth = 200,
   ShapeType = "Box"
 }
-T.RT_201 = {SavedLocTag = 1}
-T.RT_202 = {8503148}
-T.RT_203 = {850342}
-T.RT_204 = {8503158}
-T.RT_205 = {Radius = 150, ShapeType = "Sphere"}
-T.RT_206 = {SavedLocTag = 2}
-T.RT_207 = {SavedLocTag = 3}
-T.RT_208 = {SavedLocTag = 4}
-T.RT_209 = {SpawnSocket = "Head", UseLocation = "Char"}
-T.RT_210 = {8503158, 8503219}
-T.RT_211 = {850406}
-T.RT_212 = {Radius = 80, ShapeType = "Sphere"}
-T.RT_213 = {850511}
-T.RT_214 = {8505118}
-T.RT_215 = {850534}
-T.RT_216 = {850543}
-T.RT_217 = {850548}
-T.RT_218 = {
+T.RT_209 = {SavedLocTag = 1}
+T.RT_210 = {8503148}
+T.RT_211 = {850342}
+T.RT_212 = {Radius = 150, ShapeType = "Sphere"}
+T.RT_213 = {SavedLocTag = 2}
+T.RT_214 = {SavedLocTag = 3}
+T.RT_215 = {SavedLocTag = 4}
+T.RT_216 = {SpawnSocket = "Head", UseLocation = "Char"}
+T.RT_217 = {8503158, 8503219}
+T.RT_218 = {850406}
+T.RT_219 = {Radius = 80, ShapeType = "Sphere"}
+T.RT_220 = {850511}
+T.RT_221 = {8505118}
+T.RT_222 = {850534}
+T.RT_223 = {850543}
+T.RT_224 = {850548}
+T.RT_225 = {
   BoxHeight = 800,
   BoxLength = 300,
   BoxWidth = 300,
   ShapeType = "Box"
 }
-T.RT_219 = {8505125}
-T.RT_220 = {8505147}
-T.RT_221 = {8505128}
-T.RT_222 = {8505160}
-T.RT_223 = {851004}
-T.RT_224 = {851007}
-T.RT_225 = {Radius = 3000, ShapeType = "Sphere"}
-T.RT_226 = {851008}
-T.RT_227 = {851020}
-T.RT_228 = {851023}
-T.RT_229 = {Radius = 350, ShapeType = "Sphere"}
-T.RT_230 = {851026}
-T.RT_231 = {Radius = 2000, ShapeType = "Sphere"}
-T.RT_232 = {Yaw = 180}
-T.RT_233 = {Yaw = 90}
-T.RT_234 = {Yaw = 0}
-T.RT_235 = {Yaw = 270}
-T.RT_236 = {851052}
-T.RT_237 = {851053}
-T.RT_238 = {851106}
-T.RT_239 = {851107}
-T.RT_240 = {851214}
-T.RT_241 = {851215}
-T.RT_242 = {
+T.RT_226 = {8505125}
+T.RT_227 = {8505147}
+T.RT_228 = {8505128}
+T.RT_229 = {8505160}
+T.RT_230 = {851004}
+T.RT_231 = {851007}
+T.RT_232 = {Radius = 3000, ShapeType = "Sphere"}
+T.RT_233 = {851008}
+T.RT_234 = {851020}
+T.RT_235 = {851023}
+T.RT_236 = {Radius = 350, ShapeType = "Sphere"}
+T.RT_237 = {851026}
+T.RT_238 = {Radius = 2000, ShapeType = "Sphere"}
+T.RT_239 = {Yaw = 180}
+T.RT_240 = {Yaw = 90}
+T.RT_241 = {Yaw = 0}
+T.RT_242 = {Yaw = 270}
+T.RT_243 = {851052}
+T.RT_244 = {851053}
+T.RT_245 = {851106}
+T.RT_246 = {851107}
+T.RT_247 = {851214}
+T.RT_248 = {851215}
+T.RT_249 = {
   SpawnSocket = "Gunpoint_R_01",
   UseLocation = "Char"
 }
-T.RT_243 = {Means = "Permanent", Range = 500}
-T.RT_244 = {
+T.RT_250 = {Means = "Permanent", Range = 500}
+T.RT_251 = {
   SpawnSocket = "Gunpoint_R_06",
   UseLocation = "Char"
 }
-T.RT_245 = {
+T.RT_252 = {
   SpawnSocket = "Gunpoint_R_03",
   UseLocation = "Char"
 }
-T.RT_246 = {
+T.RT_253 = {
   SpawnSocket = "Gunpoint_L_01",
   UseLocation = "Char"
 }
-T.RT_247 = {
+T.RT_254 = {
   SpawnSocket = "Gunpoint_L_06",
   UseLocation = "Char"
 }
-T.RT_248 = {
+T.RT_255 = {
   SpawnSocket = "Gunpoint_L_03",
   UseLocation = "Char"
 }
-T.RT_249 = {851252}
-T.RT_250 = {851253}
-T.RT_251 = {
+T.RT_256 = {851252}
+T.RT_257 = {851253}
+T.RT_258 = {
   SpawnSocket = "Gunpoint_L_07",
   UseLocation = "Char"
 }
-T.RT_252 = {
+T.RT_259 = {
   SpawnSocket = "Gunpoint_L_04",
   UseLocation = "Char"
 }
-T.RT_253 = {
+T.RT_260 = {
   SpawnSocket = "Gunpoint_L_02",
   UseLocation = "Char"
 }
-T.RT_254 = {
+T.RT_261 = {
   SpawnSocket = "Gunpoint_R_02",
   UseLocation = "Char"
 }
-T.RT_255 = {
+T.RT_262 = {
   SpawnSocket = "Gunpoint_R_04",
   UseLocation = "Char"
 }
-T.RT_256 = {
+T.RT_263 = {
   SpawnSocket = "Gunpoint_R_07",
   UseLocation = "Char"
 }
-T.RT_257 = {851276}
-T.RT_258 = {
+T.RT_264 = {851276}
+T.RT_265 = {
   SpawnSocket = "Gunpoint_R_05",
   UseLocation = "Char"
 }
-T.RT_259 = {
+T.RT_266 = {
   SpawnSocket = "Gunpoint_L_05",
   UseLocation = "Char"
 }
-T.RT_260 = {8512914}
-T.RT_261 = {8512915}
-T.RT_262 = {
+T.RT_267 = {8512914}
+T.RT_268 = {8512915}
+T.RT_269 = {
   BoxHeight = 200,
   BoxLength = 160,
   BoxWidth = 160,
   ShapeType = "Box"
 }
-T.RT_263 = {851307}
-T.RT_264 = {851315}
-T.RT_265 = {851316}
-T.RT_266 = {851317, 851318}
-T.RT_267 = {851318, 851319}
-T.RT_268 = {851411}
-T.RT_269 = {
+T.RT_270 = {851307}
+T.RT_271 = {851315}
+T.RT_272 = {851316}
+T.RT_273 = {851317, 851318}
+T.RT_274 = {851318, 851319}
+T.RT_275 = {851411}
+T.RT_276 = {
   BoxHeight = 20,
   BoxLength = 20,
   BoxWidth = 100,
   ShapeType = "Box"
 }
-T.RT_270 = {
+T.RT_277 = {
   SpawnSocket = "spinependant03_right01_b",
   UseLocation = "Char"
 }
-T.RT_271 = {
+T.RT_278 = {
   SpawnSocket = "spinependant03_left01_b",
   UseLocation = "Char"
 }
-T.RT_272 = {851513}
-T.RT_273 = {851516}
-T.RT_274 = {
+T.RT_279 = {851513}
+T.RT_280 = {851516}
+T.RT_281 = {
   SpawnSocket = "ShoulderLaserL1",
   UseLocation = "Char"
 }
-T.RT_275 = {Type = 2}
-T.RT_276 = {
+T.RT_282 = {Type = 2}
+T.RT_283 = {
   SpawnSocket = "ShoulderLaserL2",
   UseLocation = "Char"
 }
-T.RT_277 = {
+T.RT_284 = {
   SpawnSocket = "ShoulderLaserR1",
   UseLocation = "Char"
 }
-T.RT_278 = {Type = 1}
-T.RT_279 = {
+T.RT_285 = {Type = 1}
+T.RT_286 = {
   SpawnSocket = "ShoulderLaserR2",
   UseLocation = "Char"
 }
-T.RT_280 = {
+T.RT_287 = {
   SpawnSocket = "RightArm_slot",
   UseLocation = "Char"
 }
-T.RT_281 = {Radius = 800, ShapeType = "Sphere"}
-T.RT_282 = {851712}
-T.RT_283 = {851807}
-T.RT_284 = {
+T.RT_288 = {Radius = 800, ShapeType = "Sphere"}
+T.RT_289 = {851712}
+T.RT_290 = {851807}
+T.RT_291 = {
   BoxHeight = 15,
   BoxLength = 30,
   BoxWidth = 15,
   ShapeType = "Box"
 }
-T.RT_285 = {851816}
-T.RT_286 = {851820}
-T.RT_287 = {851857}
-T.RT_288 = {Radius = 500, ShapeType = "Sphere"}
-T.RT_289 = {851835}
-T.RT_290 = {851854}
-T.RT_291 = {
+T.RT_292 = {851816}
+T.RT_293 = {851820}
+T.RT_294 = {851857}
+T.RT_295 = {Radius = 500, ShapeType = "Sphere"}
+T.RT_296 = {851835}
+T.RT_297 = {851854}
+T.RT_298 = {
   BoxHeight = 200,
   BoxLength = 1000,
   BoxWidth = 235,
   ShapeType = "Box"
 }
-T.RT_292 = {SpawnSocket = "hand_r", UseLocation = "Char"}
-T.RT_293 = {SpawnSocket = "hand_l", UseLocation = "Char"}
-T.RT_294 = {851858}
-T.RT_295 = {851910}
-T.RT_296 = {851914}
-T.RT_297 = {
-  BoxHeight = 400,
-  BoxLength = 330,
-  BoxWidth = 200,
-  ShapeType = "Box"
+T.RT_299 = {SpawnSocket = "hand_r", UseLocation = "Char"}
+T.RT_300 = {SpawnSocket = "hand_l", UseLocation = "Char"}
+T.RT_301 = {851858}
+T.RT_302 = {
+  SpawnSocket = "root_Part04",
+  UseLocation = "Char"
 }
-T.RT_298 = {851988}
-T.RT_299 = {852004}
-T.RT_300 = {Speed = 7500}
-T.RT_301 = {
+T.RT_303 = {851914}
+T.RT_304 = {851988}
+T.RT_305 = {852004}
+T.RT_306 = {Speed = 7500}
+T.RT_307 = {
   BoxHeight = 250,
   BoxLength = 175,
   BoxWidth = 1000,
   ShapeType = "Box"
 }
-T.RT_302 = {
+T.RT_308 = {
   BoxHeight = 1000,
   BoxLength = 250,
   BoxWidth = 1250,
   ShapeType = "Box"
 }
-T.RT_303 = {Speed = 7500, WarningTime = 0.5}
-T.RT_304 = {852048}
-T.RT_305 = {
+T.RT_309 = {Speed = 7500, WarningTime = 0.5}
+T.RT_310 = {852048}
+T.RT_311 = {
   BoxHeight = 250,
   BoxLength = 250,
   BoxWidth = 1000,
   ShapeType = "Box"
 }
-T.RT_306 = {8521007}
-T.RT_307 = {8523008}
-T.RT_308 = {
+T.RT_312 = {8521017}
+T.RT_313 = {8523008}
+T.RT_314 = {
   BoxHeight = 100,
   BoxLength = 40,
   BoxWidth = 150,
   ShapeType = "Box"
 }
-T.RT_309 = {8524002}
-T.RT_310 = {8524003}
-T.RT_311 = {
+T.RT_315 = {8524002}
+T.RT_316 = {8524003}
+T.RT_317 = {
   BoxHeight = 40,
   BoxLength = 40,
   BoxWidth = 80,
   ShapeType = "Box"
 }
-T.RT_312 = {8524020}
-T.RT_313 = {
+T.RT_318 = {8524020}
+T.RT_319 = {852549}
+T.RT_320 = {
   "ExplodeBullet"
 }
-T.RT_314 = {900081}
-T.RT_315 = {90022}
-T.RT_316 = {90023}
-T.RT_317 = {900403}
-T.RT_318 = {900404}
-T.RT_319 = {900407}
-T.RT_320 = {900503}
-T.RT_321 = {
+T.RT_321 = {900081}
+T.RT_322 = {90022}
+T.RT_323 = {90023}
+T.RT_324 = {
+  90035,
+  90038,
+  90037
+}
+T.RT_325 = {900403}
+T.RT_326 = {900404}
+T.RT_327 = {900407}
+T.RT_328 = {900503}
+T.RT_329 = {
   BoxHeight = 70,
   BoxLength = 70,
   BoxWidth = 30,
   ShapeType = "Box"
 }
-T.RT_322 = {900708}
-T.RT_323 = {
+T.RT_330 = {900708}
+T.RT_331 = {
   SpawnSocket = "rootpendant_right01_a",
   UseLocation = "Char"
 }
-T.RT_324 = {MaxSpeedRate = 1.5}
-T.RT_325 = {950007}
+T.RT_332 = {MaxSpeedRate = 1.5}
+T.RT_333 = {950007}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -842,13 +852,13 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 10301003,
     CreatureId = 18011,
-    DestroyEffects = T.RT_78,
+    DestroyEffects = T.RT_80,
     EnterPool = true,
     HitEnemy = {18018},
-    HitScene = T.RT_78,
-    ParabolaInfo = T.RT_80,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_82,
+    HitScene = T.RT_80,
+    ParabolaInfo = T.RT_82,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_84,
     Speed = 1500,
     Tags = T.RT_14,
     TimeLife = 2
@@ -857,13 +867,13 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 10301001,
     CreatureId = 18012,
-    DestroyEffects = T.RT_83,
+    DestroyEffects = T.RT_85,
     EnterPool = true,
     HitEnemy = {18019},
-    HitScene = T.RT_83,
-    ParabolaInfo = T.RT_80,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_82,
+    HitScene = T.RT_85,
+    ParabolaInfo = T.RT_82,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_84,
     Speed = 1500,
     Tags = T.RT_14,
     TimeLife = 2
@@ -872,13 +882,13 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 10301002,
     CreatureId = 18013,
-    DestroyEffects = T.RT_84,
+    DestroyEffects = T.RT_86,
     EnterPool = true,
     HitEnemy = {18020},
-    HitScene = T.RT_84,
-    ParabolaInfo = T.RT_80,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_82,
+    HitScene = T.RT_86,
+    ParabolaInfo = T.RT_82,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_84,
     Speed = 1500,
     Tags = T.RT_14,
     TimeLife = 2
@@ -887,11 +897,11 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 20101,
     CreatureId = 20101,
-    DestroyEffects = T.RT_85,
+    DestroyEffects = T.RT_87,
     EnterPool = true,
-    HitScene = T.RT_85,
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_87,
+    HitScene = T.RT_87,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_89,
     Speed = 2000,
     Tags = T.RT_17,
     TimeLife = 0.35
@@ -900,11 +910,11 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 20101,
     CreatureId = 20102,
-    DestroyEffects = T.RT_85,
+    DestroyEffects = T.RT_87,
     EnterPool = true,
-    HitScene = T.RT_85,
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_87,
+    HitScene = T.RT_87,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_89,
     Speed = 2000,
     Tags = T.RT_17,
     TimeLife = 0.35
@@ -913,11 +923,11 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 20101,
     CreatureId = 20103,
-    DestroyEffects = T.RT_85,
+    DestroyEffects = T.RT_87,
     EnterPool = true,
-    HitScene = T.RT_85,
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_87,
+    HitScene = T.RT_87,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_89,
     Speed = 2000,
     Tags = T.RT_17,
     TimeLife = 0.35
@@ -1068,7 +1078,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     Speed = 0,
     TimeLife = 100,
-    Vars = T.RT_116
+    Vars = T.RT_119
   },
   [30417] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_BossOnline_ColorCreature.BP_BossOnline_ColorCreature",
@@ -1077,7 +1087,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     Speed = 0,
     TimeLife = 100,
-    Vars = T.RT_117
+    Vars = T.RT_120
   },
   [30418] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_BossOnline_ColorCreature.BP_BossOnline_ColorCreature",
@@ -1086,7 +1096,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     Speed = 0,
     TimeLife = 100,
-    Vars = T.RT_118
+    Vars = T.RT_121
   },
   [30419] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_BossOnline_ColorLessCreature.BP_BossOnline_ColorLessCreature",
@@ -1095,7 +1105,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     Speed = 0,
     TimeLife = 15,
-    Vars = T.RT_116
+    Vars = T.RT_119
   },
   [30420] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_BossOnline_ColorLessCreature.BP_BossOnline_ColorLessCreature",
@@ -1104,7 +1114,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     Speed = 0,
     TimeLife = 15,
-    Vars = T.RT_117
+    Vars = T.RT_120
   },
   [30421] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_BossOnline_ColorLessCreature.BP_BossOnline_ColorLessCreature",
@@ -1113,7 +1123,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     Speed = 0,
     TimeLife = 15,
-    Vars = T.RT_118
+    Vars = T.RT_121
   },
   [30422] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_DelayExecuteSkillEffect.BP_Common_DelayExecuteSkillEffect",
@@ -1154,8 +1164,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 41700,
     GravityCoefficient = 4,
     RealDestroyEffects = {41701},
-    ShapeInfo = T.RT_60,
-    SpawnSocket = T.RT_140,
+    ShapeInfo = T.RT_62,
+    SpawnSocket = T.RT_142,
     Speed = 1500,
     Tags = T.RT_17,
     TimeLife = 0.5
@@ -1197,7 +1207,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 60200,
     HitEnemy = {60201},
     ShapeInfo = T.RT_21,
-    SpawnSocket = T.RT_164,
+    SpawnSocket = T.RT_166,
     Speed = 1,
     Tags = T.RT_14,
     TimeLife = 3
@@ -1209,7 +1219,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 60202,
     HitEnemy = {60203},
     ShapeInfo = T.RT_21,
-    SpawnSocket = T.RT_164,
+    SpawnSocket = T.RT_166,
     Speed = 1,
     Tags = T.RT_14,
     TimeLife = 3
@@ -1228,10 +1238,10 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     BulletFXID = 6031,
     CreatureId = 60301,
-    HitEnemy = T.RT_165,
+    HitEnemy = T.RT_167,
     RefreshTargetParam = 0.2,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_50,
+    ShapeInfo = T.RT_51,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 4.9
@@ -1250,10 +1260,10 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     BulletFXID = 6033,
     CreatureId = 60303,
-    HitEnemy = T.RT_165,
+    HitEnemy = T.RT_167,
     RefreshTargetParam = 0.2,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_51,
+    ShapeInfo = T.RT_52,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 4.9
@@ -1264,8 +1274,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 60500,
     DestroyEffects = {60501},
     GravityCoefficient = 4,
-    ShapeInfo = T.RT_60,
-    SpawnSocket = T.RT_140,
+    ShapeInfo = T.RT_62,
+    SpawnSocket = T.RT_142,
     Speed = 1500,
     Tags = T.RT_17,
     TimeLife = 0.5
@@ -1276,8 +1286,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 60600,
     DestroyEffects = {60601},
     GravityCoefficient = 5.5,
-    ShapeInfo = T.RT_60,
-    SpawnSocket = T.RT_140,
+    ShapeInfo = T.RT_62,
+    SpawnSocket = T.RT_142,
     Speed = 2000,
     Tags = T.RT_17,
     TimeLife = 0.5
@@ -1289,7 +1299,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 90001,
     HitEnemy = {90002},
     HitScene = {90003},
-    ShapeInfo = T.RT_107,
+    ShapeInfo = T.RT_109,
     Speed = 5000,
     Tags = T.RT_17,
     TimeLife = 5
@@ -1301,7 +1311,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 90002,
     HitEnemy = {90005},
     HitScene = {90006},
-    ShapeInfo = T.RT_108,
+    ShapeInfo = T.RT_110,
     Speed = 15000,
     Tags = T.RT_17,
     TimeLife = 5
@@ -1313,7 +1323,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 90011,
     HitEnemy = {90012},
     HitScene = {90013},
-    ShapeInfo = T.RT_107,
+    ShapeInfo = T.RT_109,
     Speed = 5000,
     Tags = T.RT_17,
     TimeLife = 5
@@ -1325,7 +1335,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 90012,
     HitEnemy = {90015},
     HitScene = {90016},
-    ShapeInfo = T.RT_108,
+    ShapeInfo = T.RT_110,
     Speed = 15000,
     Tags = T.RT_17,
     TimeLife = 5
@@ -1336,9 +1346,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 90005,
     ClientOwner = true,
     CreatureId = 90021,
-    HitEnemy = T.RT_315,
-    HitScene = T.RT_316,
-    ShapeInfo = T.RT_107,
+    HitEnemy = T.RT_322,
+    HitScene = T.RT_323,
+    ShapeInfo = T.RT_109,
     Speed = 5000,
     Tags = T.RT_17,
     TimeLife = 5
@@ -1349,12 +1359,48 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 90005,
     ClientOwner = true,
     CreatureId = 90022,
-    HitEnemy = T.RT_315,
-    HitScene = T.RT_316,
-    ShapeInfo = T.RT_107,
+    HitEnemy = T.RT_322,
+    HitScene = T.RT_323,
+    ShapeInfo = T.RT_109,
     Speed = 5000,
     Tags = T.RT_17,
     TimeLife = 5
+  },
+  [90031] = {
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Mechanism/BP_Mechanism_Paotai_YW.BP_Mechanism_Paotai_YW",
+    BoundCount = 1,
+    BulletFXID = 90001,
+    CreatureId = 90031,
+    HitEnemy = {90032},
+    HitScene = {90033},
+    ShapeInfo = T.RT_109,
+    Speed = 5000,
+    Tags = T.RT_17,
+    TimeLife = 5
+  },
+  [90032] = {
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Mechanism/BP_Mechanism_Paotai_YW.BP_Mechanism_Paotai_YW",
+    BoundCount = 1,
+    BulletFXID = 90001,
+    CreatureId = 90032,
+    DestroyEffects = T.RT_324,
+    HitEnemy = T.RT_324,
+    HitScene = {90036, 90038},
+    ShapeInfo = T.RT_15,
+    Speed = 2000,
+    Tags = T.RT_17,
+    TimeLife = 1
+  },
+  [90033] = {
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Mechanism/BP_Mechanism_Paotai_YW01.BP_Mechanism_Paotai_YW01",
+    BoundCount = 1,
+    BulletFXID = 90008,
+    CreatureId = 90033,
+    HitEnemy = {90039},
+    ShapeInfo = T.RT_15,
+    Speed = 4000,
+    Tags = T.RT_17,
+    TimeLife = 3
   },
   [110141] = {
     AllowAttackRangeModify = T.RT_45,
@@ -1446,21 +1492,87 @@ return ReadOnly("SkillCreature", {
     UseBulletCreature = true,
     WindInfo = T.RT_47
   },
+  [110201] = {
+    BoundCount = -1,
+    ClientOwner = true,
+    CreatureId = 110201,
+    DelayDestroyTime = 0.72,
+    DestroyEffects = T.RT_48,
+    DirectionOnSocket = true,
+    EffectCreatureID = 110215,
+    EnterPool = true,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 0.28
+  },
   [110202] = {
-    AllowAttackRangeModify = T.RT_48,
-    AllowSkillRangeModify = T.RT_48,
-    AttackRangeType = "Normal",
+    AllowSkillRangeModify = T.RT_49,
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Fuluo_DollAttack.BP_Fuluo_DollAttack",
     BoundCount = -1,
+    ClientOwner = true,
     CreatureId = 110202,
     EffectCreatureID = 110202,
     EnterPool = true,
-    FixedBornRotation = true,
     HitEnemy = {110242},
     ShapeInfo = T.RT_33,
     Speed = 0,
     Tags = T.RT_14,
-    TimeLife = 2
+    TimeLife = 1
+  },
+  [110211] = {
+    BoundCount = -1,
+    ClientOwner = true,
+    CreatureId = 110211,
+    DelayDestroyTime = 0.72,
+    DestroyEffects = T.RT_48,
+    DirectionOnSocket = true,
+    EffectCreatureID = 110216,
+    EnterPool = true,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 0.28
+  },
+  [110212] = {
+    BoundCount = -1,
+    CreatureId = 110212,
+    DelayDestroyTime = 0.75,
+    DirectionOnSocket = true,
+    EffectCreatureID = 110213,
+    EnterPool = true,
+    ServerOwner = true,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 0.25
+  },
+  [110213] = {
+    BoundCount = -1,
+    CreatureId = 110213,
+    DelayDestroyTime = 0.75,
+    DirectionOnSocket = true,
+    EffectCreatureID = 110214,
+    EnterPool = true,
+    ServerOwner = true,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 0.25
+  },
+  [110214] = {
+    BoundCount = -1,
+    ClientOwner = true,
+    CreatureId = 110214,
+    DelayDestroyTime = 0.75,
+    DestroyEffects = T.RT_48,
+    DirectionOnSocket = true,
+    EffectCreatureID = 110217,
+    EnterPool = true,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 0.25
   },
   [110301] = {
     AttachOwner = T.RT_3,
@@ -1492,10 +1604,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 110401,
     CreatureId = 110402,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_49,
+    HitEnemy = T.RT_50,
     RefreshTargetParam = 0.2,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_50,
+    ShapeInfo = T.RT_51,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 2.95
@@ -1516,10 +1628,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 110402,
     CreatureId = 110404,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_49,
+    HitEnemy = T.RT_50,
     RefreshTargetParam = 0.2,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_51,
+    ShapeInfo = T.RT_52,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 2.95
@@ -1540,10 +1652,10 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 110441,
     CreatureId = 110421,
-    DestroyEffects = T.RT_52,
+    DestroyEffects = T.RT_53,
     DirectionOnSocket = true,
     GravityCoefficient = 4,
-    HitScene = T.RT_52,
+    HitScene = T.RT_53,
     SpawnSocket = T.RT_34,
     Speed = 2000,
     Tags = T.RT_14,
@@ -1563,45 +1675,78 @@ return ReadOnly("SkillCreature", {
     Tags = T.RT_14,
     TimeLife = 3
   },
-  [120112] = {
-    BoundCount = -1,
-    CreatureEffects = {120114},
-    CreatureId = 120112,
-    FixedBornRotation = true,
-    SpawnSocket = T.RT_34,
-    Speed = 0,
-    Tags = T.RT_14,
-    TimeLife = 0.3
-  },
   [120121] = {
     BoundCount = -1,
-    BulletFXID = 10104102,
-    CreatureEffects = T.RT_53,
+    BulletFXID = 120112,
+    CreatureEffects = T.RT_54,
     CreatureId = 120121,
     FixBySkillSustain = true,
     FixedBornRotation = true,
     LoopExecuteSkillEffects = {
       Interval = 1,
-      SkillEffects = T.RT_53
+      SkillEffects = T.RT_54
     },
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 10
   },
   [120131] = {
+    AttachOwner = T.RT_3,
     BoundCount = -1,
-    BulletFXID = 120131,
-    CreatureEffects = {120134},
+    CreatureEffects = {120137},
     CreatureId = 120131,
+    DestroyWithCreator = 1,
+    DirectionOnSocket = true,
+    EffectCreatureID = 120122,
     FixedBornRotation = true,
-    SpawnSocket = {
-      EffectCreatureId = 121,
-      SpawnSocket = "Root",
-      UseLocation = "EffectCreature"
-    },
+    RealDestroyEffects = T.RT_55,
+    SpawnSocket = T.RT_34,
     Speed = 0,
     Tags = T.RT_14,
-    TimeLife = 1
+    TimeLife = 1.3
+  },
+  [120132] = {
+    AttachOwner = T.RT_3,
+    BoundCount = -1,
+    CreatureEffects = {120138},
+    CreatureId = 120132,
+    DestroyWithCreator = 1,
+    DirectionOnSocket = true,
+    EffectCreatureID = 120123,
+    FixedBornRotation = true,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 0.72
+  },
+  [120133] = {
+    AttachOwner = T.RT_3,
+    BoundCount = -1,
+    CreatureEffects = {120139},
+    CreatureId = 120133,
+    DestroyWithCreator = 1,
+    DirectionOnSocket = true,
+    EffectCreatureID = 120124,
+    FixedBornRotation = true,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 0.79
+  },
+  [120134] = {
+    AttachOwner = T.RT_3,
+    BoundCount = -1,
+    CreatureEffects = {120140},
+    CreatureId = 120134,
+    DestroyWithCreator = 1,
+    DirectionOnSocket = true,
+    EffectCreatureID = 120125,
+    FixedBornRotation = true,
+    RealDestroyEffects = T.RT_55,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 1.16
   },
   [120211] = {
     AttachOwner = T.RT_3,
@@ -1645,8 +1790,8 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     EnterPool = true,
     FixedBornRotation = true,
-    RealDestroyEffects = T.RT_54,
-    ShapeInfo = T.RT_55,
+    RealDestroyEffects = T.RT_56,
+    ShapeInfo = T.RT_57,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 1
@@ -1659,8 +1804,8 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     EnterPool = true,
     FixedBornRotation = true,
-    RealDestroyEffects = T.RT_56,
-    ShapeInfo = T.RT_55,
+    RealDestroyEffects = T.RT_58,
+    ShapeInfo = T.RT_57,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 1
@@ -1673,8 +1818,8 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     EnterPool = true,
     FixedBornRotation = true,
-    RealDestroyEffects = T.RT_54,
-    ShapeInfo = T.RT_55,
+    RealDestroyEffects = T.RT_56,
+    ShapeInfo = T.RT_57,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 1
@@ -1687,8 +1832,8 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     EnterPool = true,
     FixedBornRotation = true,
-    RealDestroyEffects = T.RT_56,
-    ShapeInfo = T.RT_55,
+    RealDestroyEffects = T.RT_58,
+    ShapeInfo = T.RT_57,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 1
@@ -1713,7 +1858,7 @@ return ReadOnly("SkillCreature", {
     DontDestroyExceptLife = true,
     EnterPool = true,
     HitOthers = T.RT_13,
-    HitScene = T.RT_57,
+    HitScene = T.RT_59,
     IsNotDestroyInFall = true,
     Speed = 12000,
     Tags = T.RT_14,
@@ -1728,7 +1873,7 @@ return ReadOnly("SkillCreature", {
     DontDestroyExceptLife = true,
     EnterPool = true,
     HitOthers = T.RT_13,
-    HitScene = T.RT_57,
+    HitScene = T.RT_59,
     IsNotDestroyInFall = true,
     Speed = 12000,
     Tags = T.RT_14,
@@ -1758,7 +1903,7 @@ return ReadOnly("SkillCreature", {
     DontDestroyExceptLife = true,
     EnterPool = true,
     HitOthers = T.RT_13,
-    HitScene = T.RT_57,
+    HitScene = T.RT_59,
     IsNotDestroyInFall = true,
     Speed = 12000,
     Tags = T.RT_14,
@@ -1800,10 +1945,10 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {150345},
     HitEnemyIgnore = 1,
-    HitOthers = T.RT_58,
+    HitOthers = T.RT_60,
     RefreshTargetParam = 1,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = -1
@@ -1923,11 +2068,11 @@ return ReadOnly("SkillCreature", {
       Loop = 1,
       SkillEffects = {150446}
     },
-    ShapeInfo = T.RT_60,
+    ShapeInfo = T.RT_62,
     Speed = 8000,
     Tags = T.RT_14,
     TimeLife = 1.2,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [150404] = {
     BoundCount = -1,
@@ -1935,60 +2080,52 @@ return ReadOnly("SkillCreature", {
     CreatureId = 150404,
     DestroyWithCreator = 1,
     RealDestroyEffects = {150445},
-    ShapeInfo = T.RT_60,
+    ShapeInfo = T.RT_62,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 0.5,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [150405] = {
-    AllowSkillRangeModify = T.RT_62,
+    AllowSkillRangeModify = T.RT_64,
     AttachOwner = T.RT_3,
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Suyi_Skill02_Creature_02.BP_Suyi_Skill02_Creature_02",
     BoundCount = -1,
     ClientOwner = true,
+    CloseTickOpt = true,
     CreatureId = 150405,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
     FixedBornRotation = true,
     HitEnemy = {150455},
-    HitOthers = {
-      0,
-      0,
-      1
-    },
-    ShapeInfo = T.RT_63,
-    SpawnSocket = T.RT_64,
+    ShapeInfo = T.RT_65,
+    SpawnSocket = T.RT_66,
     Speed = 0,
     Tags = T.RT_14,
     TickCollision = true,
     TimeLife = -1,
-    Vars = T.RT_65,
+    Vars = T.RT_67,
     WindInfo = T.RT_35
   },
   [150406] = {
-    AllowSkillRangeModify = T.RT_62,
+    AllowSkillRangeModify = T.RT_64,
     AttachOwner = T.RT_3,
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Suyi_Skill02_Creature_02.BP_Suyi_Skill02_Creature_02",
     BoundCount = -1,
     ClientOwner = true,
+    CloseTickOpt = true,
     CreatureId = 150406,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
     FixedBornRotation = true,
     HitEnemy = {150456},
-    HitOthers = {
-      0,
-      0,
-      1
-    },
-    ShapeInfo = T.RT_63,
-    SpawnSocket = T.RT_64,
+    ShapeInfo = T.RT_65,
+    SpawnSocket = T.RT_66,
     Speed = 0,
     Tags = T.RT_14,
     TickCollision = true,
     TimeLife = -1,
-    Vars = T.RT_65,
+    Vars = T.RT_67,
     WindInfo = T.RT_35
   },
   [150407] = {
@@ -2009,10 +2146,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 150421,
     DestroyWithCreator = 1,
     EffectCreatureID = 150413,
-    HitEnemy = T.RT_66,
-    HitScene = T.RT_66,
+    HitEnemy = T.RT_68,
+    HitScene = T.RT_68,
     RealDestroyEffects = {150429},
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     Speed = 3000,
     Tags = T.RT_14,
     TimeLife = 3,
@@ -2026,9 +2163,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 150422,
     DestroyWithCreator = 1,
     EffectCreatureID = 150415,
-    HitEnemy = T.RT_67,
-    HitScene = T.RT_67,
-    ShapeInfo = T.RT_68,
+    HitEnemy = T.RT_69,
+    HitScene = T.RT_69,
+    ShapeInfo = T.RT_70,
     Speed = 3000,
     Tags = T.RT_14,
     TimeLife = 3,
@@ -2040,11 +2177,11 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 150441,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_60,
+    ShapeInfo = T.RT_62,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 0.5,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [150501] = {
     AllowAttackRangeModify = T.RT_45,
@@ -2055,9 +2192,9 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 150501,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_69,
-    ShapeInfo = T.RT_70,
-    SpawnSocket = T.RT_71,
+    HitEnemy = T.RT_71,
+    ShapeInfo = T.RT_72,
+    SpawnSocket = T.RT_73,
     Speed = 3500,
     Tags = T.RT_14,
     TimeLife = 2,
@@ -2072,9 +2209,9 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 150502,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_72,
-    ShapeInfo = T.RT_73,
-    SpawnSocket = T.RT_71,
+    HitEnemy = T.RT_74,
+    ShapeInfo = T.RT_75,
+    SpawnSocket = T.RT_73,
     Speed = 3500,
     Tags = T.RT_14,
     TimeLife = 2,
@@ -2130,8 +2267,8 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 150511,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_69,
-    ShapeInfo = T.RT_70,
+    HitEnemy = T.RT_71,
+    ShapeInfo = T.RT_72,
     SpawnSocket = {
       EffectCreatureId = 150511,
       SpawnSocket = "hook_arm_r",
@@ -2151,8 +2288,8 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 150521,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_72,
-    ShapeInfo = T.RT_73,
+    HitEnemy = T.RT_74,
+    ShapeInfo = T.RT_75,
     SpawnSocket = {
       EffectCreatureId = 150512,
       SpawnSocket = "hook_arm_r",
@@ -2169,13 +2306,13 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 160101,
     CreatureId = 160101,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_74,
-    ShapeInfo = T.RT_75,
+    HitEnemy = T.RT_76,
+    ShapeInfo = T.RT_77,
     SpawnSocket = T.RT_28,
     Speed = 3500,
     Tags = T.RT_14,
     TimeLife = 2,
-    WindInfo = T.RT_76
+    WindInfo = T.RT_78
   },
   [160102] = {
     AllowSkillRangeModify = T.RT_45,
@@ -2183,26 +2320,26 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 160102,
     CreatureId = 160102,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_74,
-    ShapeInfo = T.RT_75,
+    HitEnemy = T.RT_76,
+    ShapeInfo = T.RT_77,
     SpawnSocket = T.RT_28,
     Speed = 3500,
     Tags = T.RT_14,
     TimeLife = 2,
-    WindInfo = T.RT_76
+    WindInfo = T.RT_78
   },
   [160103] = {
-    AllowSkillRangeModify = T.RT_48,
+    AllowSkillRangeModify = T.RT_49,
     BoundCount = -1,
     BulletFXID = 160123,
-    CreatureEffects = T.RT_77,
+    CreatureEffects = T.RT_79,
     CreatureId = 160103,
     DestroyWithCreator = 1,
     FixBySkillSustain = true,
     FixedBornRotation = true,
     LoopExecuteSkillEffects = {
       Interval = 1,
-      SkillEffects = T.RT_77
+      SkillEffects = T.RT_79
     },
     SpawnSocket = T.RT_34,
     Speed = 0,
@@ -2213,13 +2350,25 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 20101,
     CreatureId = 210201,
-    DestroyEffects = T.RT_85,
-    HitEnemy = T.RT_115,
-    HitScene = T.RT_115,
-    SpawnSocket = T.RT_87,
+    DestroyEffects = T.RT_87,
+    HitEnemy = T.RT_117,
+    HitScene = T.RT_117,
+    SpawnSocket = T.RT_89,
     Speed = 5000,
     Tags = T.RT_17,
     TimeLife = 3
+  },
+  [220101] = {
+    AttachOwner = T.RT_3,
+    BoundCount = 1,
+    CreatureId = 220101,
+    DestroyWithCreator = 1,
+    HitEnemy = {220111},
+    ShapeInfo = T.RT_118,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 0.6
   },
   [310201] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Xier_Creature_Passive.BP_Xier_Creature_Passive",
@@ -2229,7 +2378,7 @@ return ReadOnly("SkillCreature", {
     HitEnemy = {310212},
     ShapeInfo = T.RT_25,
     Speed = 3000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 2
   },
   [310202] = {
@@ -2240,7 +2389,7 @@ return ReadOnly("SkillCreature", {
     HitEnemy = {310218},
     ShapeInfo = T.RT_25,
     Speed = 3000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 2
   },
   [320202] = {
@@ -2290,16 +2439,17 @@ return ReadOnly("SkillCreature", {
   [330111] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Maer_Skill02_01.BP_Maer_Skill02_01",
     BoundCount = -1,
+    ClientOwner = true,
     CreatureId = 330111,
     DestroyWithCreator = 1,
-    HitOthers = T.RT_96,
+    HitOthers = T.RT_98,
     RealDestroyEffects = {
       330123,
       330127,
       330128,
       330129
     },
-    ShapeInfo = T.RT_119,
+    ShapeInfo = T.RT_122,
     SpawnSocket = T.RT_19,
     Speed = 2000,
     Tags = T.RT_14,
@@ -2308,11 +2458,12 @@ return ReadOnly("SkillCreature", {
   [330112] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Maer_Skill02_02.BP_Maer_Skill02_02",
     BoundCount = 0,
+    ClientOwner = true,
     CreatureId = 330112,
     DelayDestroyTime = 1,
     IsNotDestroyInFall = true,
-    LoopExecuteSkillEffects = T.RT_121,
-    ShapeInfo = T.RT_119,
+    LoopExecuteSkillEffects = T.RT_124,
+    ShapeInfo = T.RT_122,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 10
@@ -2320,8 +2471,8 @@ return ReadOnly("SkillCreature", {
   [330113] = {
     BoundCount = 0,
     CreatureId = 330113,
-    DestroyEffects = T.RT_122,
-    ShapeInfo = T.RT_119,
+    DestroyEffects = T.RT_125,
+    ShapeInfo = T.RT_122,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 0.25
@@ -2329,8 +2480,8 @@ return ReadOnly("SkillCreature", {
   [330114] = {
     BoundCount = 0,
     CreatureId = 330114,
-    DestroyEffects = T.RT_122,
-    ShapeInfo = T.RT_119,
+    DestroyEffects = T.RT_125,
+    ShapeInfo = T.RT_122,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 0.5
@@ -2338,11 +2489,12 @@ return ReadOnly("SkillCreature", {
   [330115] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Maer_Skill02_02.BP_Maer_Skill02_02",
     BoundCount = 0,
+    ClientOwner = true,
     CreatureId = 330115,
     DelayDestroyTime = 1,
     IsNotDestroyInFall = true,
-    LoopExecuteSkillEffects = T.RT_121,
-    ShapeInfo = T.RT_119,
+    LoopExecuteSkillEffects = T.RT_124,
+    ShapeInfo = T.RT_122,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 20
@@ -2354,8 +2506,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 410101,
     DestroyWithCreator = 1,
     HitEnemy = {410114},
-    LoopExecuteSkillEffects = T.RT_135,
-    ShapeInfo = T.RT_136,
+    LoopExecuteSkillEffects = T.RT_138,
+    ShapeInfo = T.RT_118,
     Speed = 0,
     TickCollision = true,
     TimeLife = -1,
@@ -2368,8 +2520,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 410102,
     DestroyWithCreator = 1,
     HitEnemy = {410115},
-    LoopExecuteSkillEffects = T.RT_135,
-    ShapeInfo = T.RT_136,
+    LoopExecuteSkillEffects = T.RT_138,
+    ShapeInfo = T.RT_118,
     Speed = 0,
     TickCollision = true,
     TimeLife = -1,
@@ -2439,7 +2591,7 @@ return ReadOnly("SkillCreature", {
       AllowSkillSpeed = 1,
       Interval = 3.09,
       Loop = 0,
-      SkillEffects = T.RT_137
+      SkillEffects = T.RT_139
     },
     Speed = 0,
     Tags = T.RT_14,
@@ -2455,7 +2607,7 @@ return ReadOnly("SkillCreature", {
       AllowSkillSpeed = 1,
       Interval = 3.75,
       Loop = 0,
-      SkillEffects = T.RT_137
+      SkillEffects = T.RT_139
     },
     Speed = 0,
     Tags = T.RT_14,
@@ -2483,7 +2635,7 @@ return ReadOnly("SkillCreature", {
     TimeLife = 7
   },
   [410225] = {
-    AllowSkillRangeModify = T.RT_48,
+    AllowSkillRangeModify = T.RT_49,
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Zhiliu_Skill02_TD.BP_Zhiliu_Skill02_TD",
     BoundCount = -1,
     BulletFXID = 410212,
@@ -2493,7 +2645,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     FixedMoveRotation = true,
     IsNotDestroyInFall = true,
-    ShapeInfo = T.RT_138,
+    ShapeInfo = T.RT_140,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 24
@@ -2538,11 +2690,11 @@ return ReadOnly("SkillCreature", {
     DontDestroyExceptLife = true,
     FixedMoveRotation = true,
     HitScene = {410235},
-    ShapeInfo = T.RT_81,
+    ShapeInfo = T.RT_83,
     Speed = 0.01,
     Tags = T.RT_14,
     TimeLife = 5,
-    Vars = T.RT_139
+    Vars = T.RT_141
   },
   [410231] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Zhiliu_Skill02_Common.BP_Zhiliu_Skill02_Common",
@@ -2562,7 +2714,7 @@ return ReadOnly("SkillCreature", {
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 5,
-    Vars = T.RT_139
+    Vars = T.RT_141
   },
   [410232] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Zhiliu_Skill02_TT.BP_Zhiliu_Skill02_TT",
@@ -2574,7 +2726,7 @@ return ReadOnly("SkillCreature", {
     TimeLife = 5
   },
   [410233] = {
-    AllowSkillRangeModify = T.RT_48,
+    AllowSkillRangeModify = T.RT_49,
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Zhiliu_Skill02_Common.BP_Zhiliu_Skill02_Common",
     BoundCount = -1,
     BulletFXID = 410228,
@@ -2587,7 +2739,7 @@ return ReadOnly("SkillCreature", {
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 5,
-    Vars = T.RT_139
+    Vars = T.RT_141
   },
   [410240] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Zhiliu_Skill02_TD_Direct_W.BP_Zhiliu_Skill02_TD_Direct_W",
@@ -2638,7 +2790,7 @@ return ReadOnly("SkillCreature", {
     TimeLife = 7
   },
   [410245] = {
-    AllowSkillRangeModify = T.RT_48,
+    AllowSkillRangeModify = T.RT_49,
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Zhiliu_Skill02_TD.BP_Zhiliu_Skill02_TD",
     BoundCount = -1,
     BulletFXID = 410222,
@@ -2647,7 +2799,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     FixedMoveRotation = true,
     IsNotDestroyInFall = true,
-    ShapeInfo = T.RT_138,
+    ShapeInfo = T.RT_140,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = -1,
@@ -2690,7 +2842,7 @@ return ReadOnly("SkillCreature", {
       },
       StartAtStopMove = 1
     },
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     SpawnSocket = T.RT_19,
     Speed = 5000,
     Tags = T.RT_14,
@@ -2739,7 +2891,7 @@ return ReadOnly("SkillCreature", {
     WindInfo = T.RT_39
   },
   [430113] = {
-    AllowSkillRangeModify = T.RT_48,
+    AllowSkillRangeModify = T.RT_49,
     BoundCount = -1,
     CreatureId = 430113,
     DestroyWithCreator = 1,
@@ -2750,13 +2902,13 @@ return ReadOnly("SkillCreature", {
       Loop = 1,
       SkillEffects = {430115}
     },
-    ShapeInfo = T.RT_141,
+    ShapeInfo = T.RT_143,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 10
   },
   [430114] = {
-    AllowSkillRangeModify = T.RT_48,
+    AllowSkillRangeModify = T.RT_49,
     BoundCount = -1,
     CreatureId = 430114,
     DestroyWithCreator = 1,
@@ -2767,7 +2919,7 @@ return ReadOnly("SkillCreature", {
       Loop = 1,
       SkillEffects = {430119}
     },
-    ShapeInfo = T.RT_141,
+    ShapeInfo = T.RT_143,
     Speed = 0,
     Tags = T.RT_14,
     TimeLife = 10
@@ -2801,7 +2953,7 @@ return ReadOnly("SkillCreature", {
     HitEnemy = {510126, 510127},
     RefreshTargetParam = 1,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_136,
+    ShapeInfo = T.RT_118,
     Speed = 0,
     TickCollision = true,
     TimeLife = -1,
@@ -2886,7 +3038,7 @@ return ReadOnly("SkillCreature", {
     TimeLife = 3
   },
   [530121] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 530105,
     ClientOwner = true,
@@ -2896,7 +3048,7 @@ return ReadOnly("SkillCreature", {
     HitScene = {530125},
     ShapeInfo = T.RT_21,
     Speed = 10000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 1,
     UnAttachBulletFXID = 530104,
     UseBulletCreature = true
@@ -2906,11 +3058,11 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 530105,
     ClientOwner = true,
     CreatureId = 530122,
-    HitEnemy = T.RT_143,
-    HitScene = T.RT_143,
+    HitEnemy = T.RT_145,
+    HitScene = T.RT_145,
     ShapeInfo = T.RT_21,
     Speed = 10000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 1,
     UnAttachBulletFXID = 530104,
     UseBulletCreature = true
@@ -2919,16 +3071,16 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 600102,
     CreatureId = 600101,
-    HitEnemy = T.RT_145,
-    HitScene = T.RT_145,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_144,
+    HitEnemy = T.RT_147,
+    HitScene = T.RT_147,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_146,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 10,
-    TraceAxisLock = T.RT_146,
+    TraceAxisLock = T.RT_148,
     TraceDelay = 0.1,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 50000
   },
   [600201] = {
@@ -2936,9 +3088,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 600201,
     CreatureId = 600201,
     EnterPool = true,
-    HitEnemy = T.RT_148,
-    HitScene = T.RT_149,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_150,
+    HitScene = T.RT_151,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -2950,9 +3102,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 600201,
     CreatureId = 600202,
     EnterPool = true,
-    HitEnemy = T.RT_148,
-    HitScene = T.RT_149,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_150,
+    HitScene = T.RT_151,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -2964,9 +3116,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 600201,
     CreatureId = 600203,
     EnterPool = true,
-    HitEnemy = T.RT_148,
-    HitScene = T.RT_149,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_150,
+    HitScene = T.RT_151,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -2978,9 +3130,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 600201,
     CreatureId = 600204,
     EnterPool = true,
-    HitEnemy = T.RT_148,
-    HitScene = T.RT_149,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_150,
+    HitScene = T.RT_151,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -2992,9 +3144,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 600201,
     CreatureId = 600205,
     EnterPool = true,
-    HitEnemy = T.RT_148,
-    HitScene = T.RT_149,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_150,
+    HitScene = T.RT_151,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3008,7 +3160,7 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {600205},
     HitScene = {600207},
-    ShapeInfo = T.RT_150,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 5000,
     Tags = T.RT_2,
@@ -3022,13 +3174,13 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {600305},
     HitScene = {600306},
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_151,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_153,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 10,
     TraceDelay = 0.3,
-    TraceRange = T.RT_152,
+    TraceRange = T.RT_154,
     TraceSpeed = 18000,
     UseBulletCreature = true
   },
@@ -3050,13 +3202,13 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {600502},
     HitScene = {600503},
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_153,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_155,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 10,
     TraceDelay = 0.01,
-    TraceRange = T.RT_154,
+    TraceRange = T.RT_156,
     TraceSpeed = 2500,
     UseBulletCreature = true
   },
@@ -3069,7 +3221,7 @@ return ReadOnly("SkillCreature", {
     GravityCoefficient = 0.2,
     GravityFactor = 9999,
     ShapeInfo = T.RT_7,
-    SpawnSocket = T.RT_153,
+    SpawnSocket = T.RT_155,
     Speed = 1500,
     Tags = T.RT_8,
     TimeLife = 2.2,
@@ -3080,15 +3232,15 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 600601,
     CreatureId = 600601,
     EnterPool = true,
-    HitEnemy = T.RT_155,
-    HitScene = T.RT_156,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_157,
+    HitScene = T.RT_158,
+    ShapeInfo = T.RT_152,
     SpawnSocket = {SpawnSocket = "thumb_02_l", UseLocation = "Char"},
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 500,
     UseBulletCreature = true
   },
@@ -3097,15 +3249,15 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 600601,
     CreatureId = 600602,
     EnterPool = true,
-    HitEnemy = T.RT_155,
-    HitScene = T.RT_156,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_157,
+    HitScene = T.RT_158,
+    ShapeInfo = T.RT_152,
     SpawnSocket = {SpawnSocket = "thumb_02_r", UseLocation = "Char"},
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 500,
     UseBulletCreature = true
   },
@@ -3134,8 +3286,8 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 1,
     HitEnemy = {600702},
     HitScene = {600703},
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_157,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_159,
     Speed = 800,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -3151,8 +3303,8 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 1,
     HitEnemy = {600707},
     HitScene = {600708},
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_157,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_159,
     Speed = 800,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -3162,7 +3314,7 @@ return ReadOnly("SkillCreature", {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_PlaySkillPreFXCircle.BP_Common_PlaySkillPreFXCircle",
     CreatureId = 600703,
     Tags = T.RT_8,
-    Vars = T.RT_158
+    Vars = T.RT_160
   },
   [601201] = {
     BoundCount = 1,
@@ -3170,8 +3322,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 601201,
     EnterPool = true,
     HitEnemy = {601203},
-    HitScene = T.RT_159,
-    ShapeInfo = T.RT_150,
+    HitScene = T.RT_161,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 1500,
     Tags = T.RT_2,
@@ -3184,8 +3336,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 601202,
     EnterPool = true,
     HitEnemy = {601206},
-    HitScene = T.RT_159,
-    ShapeInfo = T.RT_150,
+    HitScene = T.RT_161,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 1500,
     Tags = T.RT_2,
@@ -3197,10 +3349,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 601301,
     CollisionDelayTime = 1,
     CreatureId = 601301,
-    DestroyEffects = T.RT_160,
-    HitEnemy = T.RT_160,
+    DestroyEffects = T.RT_162,
+    HitEnemy = T.RT_162,
     ShapeInfo = T.RT_26,
-    SpawnSocket = T.RT_151,
+    SpawnSocket = T.RT_153,
     Speed = 0,
     Tags = T.RT_2,
     TimeLife = 3
@@ -3215,8 +3367,8 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 1,
     HitEnemy = {601502},
     HitScene = {601503},
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_157,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_159,
     Speed = 800,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -3232,8 +3384,8 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 1,
     HitEnemy = {601507},
     HitScene = {601508},
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_157,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_159,
     Speed = 800,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -3243,16 +3395,16 @@ return ReadOnly("SkillCreature", {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_PlaySkillPreFXCircle.BP_Common_PlaySkillPreFXCircle",
     CreatureId = 601503,
     Tags = T.RT_8,
-    Vars = T.RT_158
+    Vars = T.RT_160
   },
   [601601] = {
     BoundCount = 1,
     BulletFXID = 601601,
     CreatureId = 601601,
     EnterPool = true,
-    HitEnemy = T.RT_161,
-    HitScene = T.RT_162,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_163,
+    HitScene = T.RT_164,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3264,9 +3416,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 601601,
     CreatureId = 601602,
     EnterPool = true,
-    HitEnemy = T.RT_161,
-    HitScene = T.RT_162,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_163,
+    HitScene = T.RT_164,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3278,9 +3430,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 601601,
     CreatureId = 601603,
     EnterPool = true,
-    HitEnemy = T.RT_161,
-    HitScene = T.RT_162,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_163,
+    HitScene = T.RT_164,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3292,9 +3444,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 601601,
     CreatureId = 601604,
     EnterPool = true,
-    HitEnemy = T.RT_161,
-    HitScene = T.RT_162,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_163,
+    HitScene = T.RT_164,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3306,9 +3458,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 601601,
     CreatureId = 601605,
     EnterPool = true,
-    HitEnemy = T.RT_161,
-    HitScene = T.RT_162,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_163,
+    HitScene = T.RT_164,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3322,7 +3474,7 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {601605},
     HitScene = {601607},
-    ShapeInfo = T.RT_150,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 5000,
     Tags = T.RT_2,
@@ -3333,16 +3485,16 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 601702,
     CreatureId = 601701,
-    HitEnemy = T.RT_163,
-    HitScene = T.RT_163,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_144,
+    HitEnemy = T.RT_165,
+    HitScene = T.RT_165,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_146,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 10,
-    TraceAxisLock = T.RT_146,
+    TraceAxisLock = T.RT_148,
     TraceDelay = 0.1,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 50000
   },
   [700101] = {
@@ -3352,7 +3504,7 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {700103},
     HitScene = {700104},
-    ShapeInfo = T.RT_150,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 6000,
     Tags = T.RT_2,
@@ -3366,8 +3518,8 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {700302},
     HitScene = {700312},
-    ShapeInfo = T.RT_166,
-    SpawnSocket = T.RT_167,
+    ShapeInfo = T.RT_168,
+    SpawnSocket = T.RT_169,
     Speed = 4000,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -3384,15 +3536,15 @@ return ReadOnly("SkillCreature", {
     GravityAdapt = true,
     GravityCoefficient = 1.7,
     GravityFactor = 1,
-    HitEnemy = T.RT_168,
-    HitScene = T.RT_168,
+    HitEnemy = T.RT_170,
+    HitScene = T.RT_170,
     ScenceBound = 4,
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_169,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_171,
     Speed = 1400,
-    Tags = T.RT_170,
+    Tags = T.RT_172,
     TimeLife = 10,
-    Vars = T.RT_171
+    Vars = T.RT_173
   },
   [700303] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_7Ranger_Grenade.BP_7Ranger_Grenade",
@@ -3405,15 +3557,15 @@ return ReadOnly("SkillCreature", {
     GravityAdapt = true,
     GravityCoefficient = 1.8,
     GravityFactor = 1,
-    HitEnemy = T.RT_168,
-    HitScene = T.RT_168,
+    HitEnemy = T.RT_170,
+    HitScene = T.RT_170,
     ScenceBound = 4,
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_169,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_171,
     Speed = 1000,
-    Tags = T.RT_170,
+    Tags = T.RT_172,
     TimeLife = 10,
-    Vars = T.RT_171
+    Vars = T.RT_173
   },
   [700321] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Capture_LandMine.BP_Capture_LandMine",
@@ -3426,8 +3578,8 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 2,
     ScenceBound = 20,
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_169,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_171,
     Speed = 500,
     TimeLife = 10,
     Vars = {
@@ -3457,10 +3609,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 700801,
     CreatureId = 700801,
     EnterPool = true,
-    HitEnemy = T.RT_172,
-    HitScene = T.RT_172,
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_173,
+    HitEnemy = T.RT_174,
+    HitScene = T.RT_174,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_175,
     Speed = 2000,
     Tags = T.RT_2,
     TimeLife = 3,
@@ -3476,8 +3628,8 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 1,
     HitEnemy = {700808},
     HitScene = {700807},
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_174,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_176,
     Speed = 1200,
     Tags = T.RT_2,
     TimeLife = 3,
@@ -3488,10 +3640,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 700801,
     CreatureId = 700803,
     EnterPool = true,
-    HitEnemy = T.RT_175,
-    HitScene = T.RT_175,
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_173,
+    HitEnemy = T.RT_177,
+    HitScene = T.RT_177,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_175,
     Speed = 2000,
     Tags = T.RT_2,
     TimeLife = 3,
@@ -3518,22 +3670,22 @@ return ReadOnly("SkillCreature", {
     CreatureId = 701001,
     HitEnemy = {701002},
     HitScene = {701003},
-    ShapeInfo = T.RT_81,
+    ShapeInfo = T.RT_83,
     SpawnSocket = T.RT_16,
     Speed = 1600,
     Tags = T.RT_2,
     TimeLife = 5,
-    TraceRange = T.RT_176,
+    TraceRange = T.RT_178,
     TraceSpeed = 150
   },
   [701002] = {
     BoundCount = 1,
     BulletFXID = 701003,
     CreatureId = 701002,
-    DestroyEffects = T.RT_177,
-    HitEnemy = T.RT_178,
-    HitScene = T.RT_179,
-    ShapeInfo = T.RT_68,
+    DestroyEffects = T.RT_179,
+    HitEnemy = T.RT_180,
+    HitScene = T.RT_181,
+    ShapeInfo = T.RT_70,
     SpawnSocket = {
       SpawnSocket = "Zhijian_Part01L",
       UseLocation = "ChildWeapon"
@@ -3547,10 +3699,10 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 701003,
     CreatureId = 701003,
-    DestroyEffects = T.RT_177,
-    HitEnemy = T.RT_178,
-    HitScene = T.RT_179,
-    ShapeInfo = T.RT_68,
+    DestroyEffects = T.RT_179,
+    HitEnemy = T.RT_180,
+    HitScene = T.RT_181,
+    ShapeInfo = T.RT_70,
     SpawnSocket = {
       SpawnSocket = "Zhijian_Part01R",
       UseLocation = "ChildWeapon"
@@ -3567,8 +3719,8 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {701302},
     HitScene = {701303},
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_167,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_169,
     Speed = 1000,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -3585,16 +3737,16 @@ return ReadOnly("SkillCreature", {
     GravityAdapt = true,
     GravityCoefficient = 1.7,
     GravityFactor = 1,
-    HitEnemy = T.RT_180,
-    HitOthers = T.RT_58,
-    HitScene = T.RT_180,
+    HitEnemy = T.RT_182,
+    HitOthers = T.RT_60,
+    HitScene = T.RT_182,
     ScenceBound = 4,
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_169,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_171,
     Speed = 1400,
-    Tags = T.RT_170,
+    Tags = T.RT_172,
     TimeLife = 10,
-    Vars = T.RT_171
+    Vars = T.RT_173
   },
   [701401] = {
     AttachOwner = T.RT_3,
@@ -3618,7 +3770,7 @@ return ReadOnly("SkillCreature", {
     HitEnemy = {701503},
     HitScene = {701504},
     ShapeInfo = {Radius = 8, ShapeType = "Sphere"},
-    SpawnSocket = T.RT_157,
+    SpawnSocket = T.RT_159,
     Speed = 2000,
     Tags = T.RT_2,
     TimeLife = 3,
@@ -3631,13 +3783,13 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {701508},
     HitScene = {701509},
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_157,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_159,
     Speed = 2000,
     Tags = T.RT_2,
     TimeLife = 3,
     TraceDelay = 0.1,
-    TraceRange = T.RT_152,
+    TraceRange = T.RT_154,
     TraceSpeed = 500,
     UseBulletCreature = true
   },
@@ -3645,7 +3797,7 @@ return ReadOnly("SkillCreature", {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_PlaySkillPreFXCircle.BP_Common_PlaySkillPreFXCircle",
     CreatureId = 701503,
     Tags = T.RT_8,
-    Vars = T.RT_158
+    Vars = T.RT_160
   },
   [701504] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_PlaySkillPreFXCircle.BP_Common_PlaySkillPreFXCircle",
@@ -3667,14 +3819,86 @@ return ReadOnly("SkillCreature", {
     Tags = T.RT_8,
     TimeLife = 1
   },
+  [701901] = {
+    BoundCount = 1,
+    BulletFXID = 701901,
+    CreatureId = 701901,
+    HitEnemy = T.RT_183,
+    HitScene = T.RT_184,
+    ShapeInfo = T.RT_168,
+    SpawnSocket = T.RT_16,
+    Speed = 4000,
+    Tags = T.RT_2,
+    TimeLife = 10
+  },
+  [701902] = {
+    BoundCount = 1,
+    BulletFXID = 701901,
+    CreatureId = 701902,
+    HitEnemy = T.RT_183,
+    HitScene = T.RT_184,
+    ShapeInfo = T.RT_168,
+    SpawnSocket = T.RT_96,
+    Speed = 4000,
+    Tags = T.RT_2,
+    TimeLife = 10
+  },
+  [701903] = {
+    BoundCount = 1,
+    BulletFXID = 701903,
+    CreatureId = 701903,
+    HitEnemy = T.RT_185,
+    HitScene = T.RT_186,
+    ShapeInfo = T.RT_168,
+    SpawnSocket = T.RT_16,
+    Speed = 4000,
+    Tags = T.RT_2,
+    TimeLife = 10
+  },
+  [701904] = {
+    BoundCount = 1,
+    BulletFXID = 701903,
+    CreatureId = 701904,
+    HitEnemy = T.RT_185,
+    HitScene = T.RT_186,
+    ShapeInfo = T.RT_168,
+    SpawnSocket = T.RT_96,
+    Speed = 4000,
+    Tags = T.RT_2,
+    TimeLife = 10
+  },
+  [701905] = {
+    BoundCount = 1,
+    BulletFXID = 701905,
+    CreatureId = 701905,
+    HitEnemy = T.RT_187,
+    HitScene = T.RT_188,
+    ShapeInfo = T.RT_168,
+    SpawnSocket = T.RT_16,
+    Speed = 4000,
+    Tags = T.RT_2,
+    TimeLife = 10
+  },
+  [701906] = {
+    BoundCount = 1,
+    BulletFXID = 701905,
+    CreatureId = 701906,
+    HitEnemy = T.RT_187,
+    HitScene = T.RT_188,
+    ShapeInfo = T.RT_168,
+    SpawnSocket = T.RT_96,
+    Speed = 4000,
+    Tags = T.RT_2,
+    TimeLife = 10
+  },
   [800101] = {
     BoundCount = 1,
     BulletFXID = 800101,
     CreatureId = 800101,
     EnterPool = true,
     HitEnemy = {800103},
-    HitScene = T.RT_181,
-    ShapeInfo = T.RT_150,
+    HitScene = T.RT_189,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3687,8 +3911,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 800102,
     EnterPool = true,
     HitEnemy = {800108},
-    HitScene = T.RT_181,
-    ShapeInfo = T.RT_150,
+    HitScene = T.RT_189,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3702,7 +3926,7 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {800302},
     HitScene = {800303},
-    ShapeInfo = T.RT_150,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 1500,
     Tags = T.RT_2,
@@ -3763,7 +3987,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850041,
     DestroyWithCreator = 1,
     HitEnemy = {850042},
-    ShapeInfo = T.RT_182,
+    ShapeInfo = T.RT_190,
     SpawnSocket = T.RT_34,
     Speed = 1000,
     Tags = T.RT_8,
@@ -3776,7 +4000,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850042,
     DestroyWithCreator = 1,
     HitEnemy = {8500142},
-    ShapeInfo = T.RT_182,
+    ShapeInfo = T.RT_190,
     SpawnSocket = T.RT_34,
     Speed = 600,
     Tags = T.RT_8,
@@ -3790,7 +4014,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     HitEnemy = {8501112},
     HitScene = {8501113},
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     SpawnSocket = {
       SpawnSocket = "Skill03Fire",
       UseLocation = "Char"
@@ -3799,7 +4023,7 @@ return ReadOnly("SkillCreature", {
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.03,
-    TraceRange = T.RT_184,
+    TraceRange = T.RT_192,
     TraceSpeed = 7500
   },
   [850102] = {
@@ -3809,7 +4033,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     HitEnemy = {8501122},
     HitScene = {8501123},
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     SpawnSocket = T.RT_34,
     Speed = 3500,
     Tags = T.RT_2,
@@ -3836,7 +4060,7 @@ return ReadOnly("SkillCreature", {
     HitEnemy = {8501148},
     HitScene = {8501149},
     ParabolaDelay = 1,
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 300,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -3846,22 +4070,22 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     BulletFXID = 850203,
     CreatureId = 850201,
-    HitEnemy = T.RT_185,
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_174,
+    HitEnemy = T.RT_193,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_176,
     Speed = 2000,
     Tags = T.RT_2,
     TimeLife = 3,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 130
   },
   [850202] = {
     BoundCount = -1,
     BulletFXID = 850203,
     CreatureId = 850202,
-    HitEnemy = T.RT_185,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_193,
+    ShapeInfo = T.RT_88,
     SpawnSocket = {
       SpawnSocket = "wing_left01_e3",
       UseLocation = "Char"
@@ -3870,15 +4094,15 @@ return ReadOnly("SkillCreature", {
     Tags = T.RT_2,
     TimeLife = 3,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 130
   },
   [850204] = {
     BoundCount = -1,
     BulletFXID = 850203,
     CreatureId = 850204,
-    HitEnemy = T.RT_185,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_193,
+    ShapeInfo = T.RT_88,
     SpawnSocket = {
       SpawnSocket = "wing_right01_d2",
       UseLocation = "Char"
@@ -3887,15 +4111,15 @@ return ReadOnly("SkillCreature", {
     Tags = T.RT_2,
     TimeLife = 3,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 130
   },
   [850205] = {
     BoundCount = -1,
     BulletFXID = 850203,
     CreatureId = 850205,
-    HitEnemy = T.RT_185,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_193,
+    ShapeInfo = T.RT_88,
     SpawnSocket = {
       SpawnSocket = "wing_right01_e3",
       UseLocation = "Char"
@@ -3904,7 +4128,7 @@ return ReadOnly("SkillCreature", {
     Tags = T.RT_2,
     TimeLife = 3,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 130
   },
   [850207] = {
@@ -3913,8 +4137,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850201,
     CreatureId = 850207,
     HitEnemy = {850205},
-    ShapeInfo = T.RT_186,
-    SpawnSocket = T.RT_167,
+    ShapeInfo = T.RT_194,
+    SpawnSocket = T.RT_169,
     Speed = 2000,
     Tags = T.RT_2,
     TimeLife = 2.2
@@ -3930,7 +4154,7 @@ return ReadOnly("SkillCreature", {
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3,
-    Vars = T.RT_187
+    Vars = T.RT_195
   },
   [850209] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Saiqi_Skill07_Bullet.BP_Saiqi_Skill07_Bullet",
@@ -3939,14 +4163,14 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850209,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_188,
+    ShapeInfo = T.RT_196,
     SpawnSocket = T.RT_34,
     Speed = 300,
     Tags = T.RT_8,
     TimeLife = 20,
-    TraceAxisLock = T.RT_146,
+    TraceAxisLock = T.RT_148,
     TraceDelay = 0.5,
-    TraceRange = T.RT_189,
+    TraceRange = T.RT_197,
     TraceSpeed = 600,
     Vars = {
       DamageInterval = 1,
@@ -3960,8 +4184,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850202,
     CreatureId = 850210,
     HitEnemy = {850207},
-    ShapeInfo = T.RT_190,
-    SpawnSocket = T.RT_167,
+    ShapeInfo = T.RT_198,
+    SpawnSocket = T.RT_169,
     Speed = 2000,
     Tags = T.RT_2,
     TimeLife = 2
@@ -3974,9 +4198,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850211,
     DelayDestroyTime = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_191,
-    HitScene = T.RT_191,
-    ShapeInfo = T.RT_192,
+    HitEnemy = T.RT_199,
+    HitScene = T.RT_199,
+    ShapeInfo = T.RT_200,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 1.5
@@ -3986,10 +4210,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850206,
     CreatureId = 850212,
     FixedBornRotation = true,
-    HitEnemy = T.RT_193,
-    HitScene = T.RT_193,
+    HitEnemy = T.RT_201,
+    HitScene = T.RT_201,
     ShapeInfo = T.RT_33,
-    SpawnSocket = T.RT_194,
+    SpawnSocket = T.RT_202,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3
@@ -3999,9 +4223,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850207,
     CreatureId = 850213,
     FixedBornRotation = true,
-    HitEnemy = T.RT_195,
-    HitScene = T.RT_195,
-    ShapeInfo = T.RT_192,
+    HitEnemy = T.RT_203,
+    HitScene = T.RT_203,
+    ShapeInfo = T.RT_200,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 1.5
@@ -4011,7 +4235,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850203,
     CreatureId = 850214,
     HitEnemy = {8502148},
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     SpawnSocket = T.RT_34,
     Speed = 3500,
     Tags = T.RT_8,
@@ -4024,16 +4248,16 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850218,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_188,
+    ShapeInfo = T.RT_196,
     SpawnSocket = T.RT_34,
     Speed = 400,
     Tags = T.RT_8,
     TimeLife = -1,
-    TraceAxisLock = T.RT_146,
+    TraceAxisLock = T.RT_148,
     TraceDelay = 0.5,
-    TraceRange = T.RT_196,
+    TraceRange = T.RT_204,
     TraceSpeed = 500,
-    Vars = T.RT_197
+    Vars = T.RT_205
   },
   [850219] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Saiqi_Skill07_Bullet.BP_Saiqi_Skill07_Bullet",
@@ -4060,7 +4284,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850220,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_188,
+    ShapeInfo = T.RT_196,
     SpawnSocket = T.RT_34,
     Speed = 520,
     Tags = T.RT_8,
@@ -4078,7 +4302,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850221,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_188,
+    ShapeInfo = T.RT_196,
     SpawnSocket = T.RT_34,
     Speed = 520,
     Tags = T.RT_8,
@@ -4096,16 +4320,16 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850222,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_188,
+    ShapeInfo = T.RT_196,
     SpawnSocket = T.RT_34,
     Speed = 520,
     Tags = T.RT_8,
     TimeLife = -1,
-    TraceAxisLock = T.RT_146,
+    TraceAxisLock = T.RT_148,
     TraceDelay = 0.5,
-    TraceRange = T.RT_196,
+    TraceRange = T.RT_204,
     TraceSpeed = 500,
-    Vars = T.RT_197
+    Vars = T.RT_205
   },
   [850223] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Saiqi_Skill23_Bullet.BP_Saiqi_Skill23_Bullet",
@@ -4114,7 +4338,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850223,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_188,
+    ShapeInfo = T.RT_196,
     SpawnSocket = T.RT_34,
     Speed = 520,
     Tags = T.RT_8,
@@ -4144,8 +4368,8 @@ return ReadOnly("SkillCreature", {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_6Baotu_CollisionCheck.BP_6Baotu_CollisionCheck",
     BoundCount = -1,
     CreatureId = 850301,
-    HitEnemy = T.RT_198,
-    ShapeInfo = T.RT_199,
+    HitEnemy = T.RT_206,
+    ShapeInfo = T.RT_207,
     SpawnSocket = T.RT_34,
     Speed = 0,
     TimeLife = 3
@@ -4160,7 +4384,7 @@ return ReadOnly("SkillCreature", {
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_187
+    Vars = T.RT_195
   },
   [850303] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Shijingzhe_Boom.BP_Boss_Shijingzhe_Boom",
@@ -4169,11 +4393,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850303,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_200,
+    ShapeInfo = T.RT_208,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
-    Vars = T.RT_201
+    Vars = T.RT_209
   },
   [850304] = {
     BoundCount = 1,
@@ -4181,8 +4405,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850304,
     DestroyWithCreator = 1,
     HitEnemy = {850310},
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_167,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_169,
     Speed = 2000,
     Tags = T.RT_8,
     TimeLife = 3
@@ -4192,7 +4416,7 @@ return ReadOnly("SkillCreature", {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_6Baotu_CollisionCheck.BP_6Baotu_CollisionCheck",
     BoundCount = -1,
     CreatureId = 850305,
-    HitEnemy = T.RT_198,
+    HitEnemy = T.RT_206,
     ShapeInfo = {Radius = 700, ShapeType = "Sphere"},
     SpawnSocket = T.RT_34,
     Speed = 0,
@@ -4202,15 +4426,15 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 850305,
     CreatureId = 850306,
-    HitEnemy = T.RT_202,
-    HitScene = T.RT_203,
-    ShapeInfo = T.RT_183,
+    HitEnemy = T.RT_210,
+    HitScene = T.RT_211,
+    ShapeInfo = T.RT_191,
     SpawnSocket = T.RT_34,
     Speed = 1750,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.03,
-    TraceRange = T.RT_184,
+    TraceRange = T.RT_192,
     TraceSpeed = 7500
   },
   [850307] = {
@@ -4218,7 +4442,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850302,
     CreatureId = 850307,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_204,
+    HitEnemy = {8503158},
     ShapeInfo = {
       BoxHeight = 400,
       BoxLength = 300,
@@ -4238,7 +4462,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850308,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_205,
+    ShapeInfo = T.RT_212,
     SpawnSocket = {
       SpawnSocket = "shawl_right01_b",
       UseLocation = "Char"
@@ -4260,7 +4484,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850309,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_205,
+    ShapeInfo = T.RT_212,
     SpawnSocket = {
       SpawnSocket = "shawl_left01_b",
       UseLocation = "Char"
@@ -4282,7 +4506,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850310,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_205,
+    ShapeInfo = T.RT_212,
     SpawnSocket = {
       SpawnSocket = "calf_right01_b",
       UseLocation = "Char"
@@ -4304,7 +4528,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850311,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_205,
+    ShapeInfo = T.RT_212,
     SpawnSocket = {
       SpawnSocket = "calf_left01_b",
       UseLocation = "Char"
@@ -4324,11 +4548,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850312,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
-    Vars = T.RT_201
+    Vars = T.RT_209
   },
   [850313] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Shijingzhe_Boom.BP_Boss_Shijingzhe_Boom",
@@ -4337,11 +4561,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850313,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_200,
+    ShapeInfo = T.RT_208,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
-    Vars = T.RT_206
+    Vars = T.RT_213
   },
   [850314] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Shijingzhe_Boom.BP_Boss_Shijingzhe_Boom",
@@ -4350,11 +4574,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850314,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_200,
+    ShapeInfo = T.RT_208,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
-    Vars = T.RT_207
+    Vars = T.RT_214
   },
   [850315] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Shijingzhe_Boom.BP_Boss_Shijingzhe_Boom",
@@ -4363,11 +4587,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850315,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_200,
+    ShapeInfo = T.RT_208,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
-    Vars = T.RT_208
+    Vars = T.RT_215
   },
   [850316] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Shijingzhe_Skill15.BP_Shijingzhe_Skill15",
@@ -4375,10 +4599,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850305,
     CreatureId = 850316,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_202,
-    HitScene = T.RT_203,
-    ShapeInfo = T.RT_183,
-    SpawnSocket = T.RT_209,
+    HitEnemy = T.RT_210,
+    HitScene = T.RT_211,
+    ShapeInfo = T.RT_191,
+    SpawnSocket = T.RT_216,
     Speed = 3000,
     Tags = T.RT_2,
     TimeLife = 5
@@ -4389,11 +4613,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850317,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
-    Vars = T.RT_206
+    Vars = T.RT_213
   },
   [850318] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Shijingzhe_Boom_2.BP_Boss_Shijingzhe_Boom_2",
@@ -4401,11 +4625,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850318,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
-    Vars = T.RT_207
+    Vars = T.RT_214
   },
   [850319] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Shijingzhe_Boom_2.BP_Boss_Shijingzhe_Boom_2",
@@ -4413,11 +4637,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850319,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
-    Vars = T.RT_208
+    Vars = T.RT_215
   },
   [850320] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Shijingzhe_Boom_2.BP_Boss_Shijingzhe_Boom_2",
@@ -4425,7 +4649,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850320,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
@@ -4437,7 +4661,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850321,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
@@ -4449,7 +4673,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850322,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
@@ -4461,7 +4685,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850323,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 20,
@@ -4473,8 +4697,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850305,
     CreatureId = 850324,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_202,
-    HitScene = T.RT_203,
+    HitEnemy = T.RT_210,
+    HitScene = T.RT_211,
     ShapeInfo = T.RT_18,
     SpawnSocket = T.RT_34,
     Speed = 1500,
@@ -4487,9 +4711,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850302,
     CreatureId = 850325,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_210,
-    HitOthers = T.RT_58,
-    ShapeInfo = T.RT_205,
+    HitEnemy = T.RT_217,
+    HitOthers = T.RT_60,
+    ShapeInfo = T.RT_212,
     SpawnSocket = T.RT_34,
     Speed = 1000,
     Tags = T.RT_8,
@@ -4503,7 +4727,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850326,
     DestroyWithCreator = 1,
     HitEnemy = {8503211, 8503212},
-    HitOthers = T.RT_58,
+    HitOthers = T.RT_60,
     ShapeInfo = {
       BoxHeight = 800,
       BoxLength = 300,
@@ -4530,9 +4754,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850302,
     CreatureId = 850328,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_210,
-    HitOthers = T.RT_58,
-    ShapeInfo = T.RT_205,
+    HitEnemy = T.RT_217,
+    HitOthers = T.RT_60,
+    ShapeInfo = T.RT_212,
     SpawnSocket = T.RT_34,
     Speed = 1000,
     Tags = T.RT_8,
@@ -4545,9 +4769,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850302,
     CreatureId = 850329,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_210,
-    HitOthers = T.RT_58,
-    ShapeInfo = T.RT_205,
+    HitEnemy = T.RT_217,
+    HitOthers = T.RT_60,
+    ShapeInfo = T.RT_212,
     SpawnSocket = T.RT_34,
     Speed = 1000,
     Tags = T.RT_8,
@@ -4559,8 +4783,8 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     BulletFXID = 850402,
     CreatureId = 850401,
-    ShapeInfo = T.RT_186,
-    SpawnSocket = T.RT_167,
+    ShapeInfo = T.RT_194,
+    SpawnSocket = T.RT_169,
     Speed = 2000,
     Tags = T.RT_8,
     TimeLife = 6
@@ -4569,13 +4793,13 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 850405,
     CreatureId = 850402,
-    HitEnemy = T.RT_211,
-    HitScene = T.RT_211,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_218,
+    HitScene = T.RT_218,
+    ShapeInfo = T.RT_88,
     Speed = 1200,
     Tags = T.RT_8,
     TimeLife = 4,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 100
   },
   [850403] = {
@@ -4583,8 +4807,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850404,
     CreatureId = 850403,
     HitEnemy = {850415},
-    ShapeInfo = T.RT_190,
-    SpawnSocket = T.RT_167,
+    ShapeInfo = T.RT_198,
+    SpawnSocket = T.RT_169,
     Speed = 2000,
     Tags = T.RT_8,
     TimeLife = 2
@@ -4596,7 +4820,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850404,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_188,
+    ShapeInfo = T.RT_196,
     SpawnSocket = T.RT_34,
     Speed = 0,
     Tags = {
@@ -4612,7 +4836,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850403,
     CreatureId = 850405,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_186,
+    ShapeInfo = T.RT_194,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 4
@@ -4620,7 +4844,7 @@ return ReadOnly("SkillCreature", {
   [850406] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Saiqi02_Skill28_Bullet.BP_Boss_Saiqi02_Skill28_Bullet",
     CreatureId = 850406,
-    ShapeInfo = T.RT_212,
+    ShapeInfo = T.RT_219,
     Speed = 300,
     Tags = T.RT_8,
     TimeLife = 10
@@ -4630,21 +4854,21 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850408,
     CreatureId = 850407,
     HitEnemy = {850466},
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 2000,
     Tags = T.RT_8,
     TimeLife = 3,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 130
   },
   [850408] = {
     BoundCount = 1,
     BulletFXID = 850405,
     CreatureId = 850408,
-    HitEnemy = T.RT_211,
-    HitScene = T.RT_211,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_218,
+    HitScene = T.RT_218,
+    ShapeInfo = T.RT_88,
     Speed = 1200,
     Tags = T.RT_8,
     TimeLife = 4
@@ -4654,7 +4878,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 850409,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 10
@@ -4705,13 +4929,13 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     BulletFXID = 850509,
     CreatureId = 850501,
-    HitEnemy = T.RT_213,
-    HitScene = T.RT_213,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_220,
+    HitScene = T.RT_220,
+    ShapeInfo = T.RT_88,
     Speed = 3000,
     Tags = T.RT_8,
     TimeLife = 3,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 5000
   },
   [850502] = {
@@ -4721,9 +4945,9 @@ return ReadOnly("SkillCreature", {
     CollisionDelayTime = 2,
     CreatureId = 850502,
     FixedBornRotation = true,
-    HitEnemy = T.RT_214,
-    HitScene = T.RT_214,
-    ShapeInfo = T.RT_192,
+    HitEnemy = T.RT_221,
+    HitScene = T.RT_221,
+    ShapeInfo = T.RT_200,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3
@@ -4765,7 +4989,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 850505,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 5
@@ -4776,10 +5000,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850506,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_215,
-    HitScene = T.RT_215,
+    HitEnemy = T.RT_222,
+    HitScene = T.RT_222,
     ServerOwner = true,
-    ShapeInfo = T.RT_192,
+    ShapeInfo = T.RT_200,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3
@@ -4794,7 +5018,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     HitEnemy = {850540},
     HitScene = {850541},
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 0,
     Tags = T.RT_2,
     TimeLife = 3
@@ -4806,10 +5030,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850508,
     DelayDestroyTime = 3,
     FixedBornRotation = true,
-    HitEnemy = T.RT_216,
-    HitScene = T.RT_216,
+    HitEnemy = T.RT_223,
+    HitScene = T.RT_223,
     ServerOwner = true,
-    ShapeInfo = T.RT_192,
+    ShapeInfo = T.RT_200,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 1.5
@@ -4821,9 +5045,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850509,
     DelayPlayFX = 0.6,
     FixedBornRotation = true,
-    HitEnemy = T.RT_217,
-    HitScene = T.RT_217,
-    ShapeInfo = T.RT_218,
+    HitEnemy = T.RT_224,
+    HitScene = T.RT_224,
+    ShapeInfo = T.RT_225,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2.1
@@ -4833,7 +5057,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 850510,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 5,
@@ -4845,7 +5069,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850509,
     CreatureId = 850511,
     HitScene = {8505159},
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 3000,
     Tags = T.RT_8,
     TimeLife = 3
@@ -4868,9 +5092,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850508,
     CollisionDelayTime = 2,
     CreatureId = 850513,
-    HitEnemy = T.RT_219,
-    HitScene = T.RT_219,
-    ShapeInfo = T.RT_192,
+    HitEnemy = T.RT_226,
+    HitScene = T.RT_226,
+    ShapeInfo = T.RT_200,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3
@@ -4882,9 +5106,9 @@ return ReadOnly("SkillCreature", {
     CollisionDelayTime = 0.6,
     CreatureId = 850514,
     DelayPlayFX = 0.6,
-    HitEnemy = T.RT_220,
-    HitScene = T.RT_220,
-    ShapeInfo = T.RT_218,
+    HitEnemy = T.RT_227,
+    HitScene = T.RT_227,
+    ShapeInfo = T.RT_225,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2.1
@@ -4896,9 +5120,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850515,
     DelayDestroyTime = 3,
     FixedBornRotation = true,
-    HitEnemy = T.RT_221,
-    HitScene = T.RT_221,
-    ShapeInfo = T.RT_192,
+    HitEnemy = T.RT_228,
+    HitScene = T.RT_228,
+    ShapeInfo = T.RT_200,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 1.5
@@ -4920,9 +5144,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 850517,
     DelayDestroyTime = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_222,
-    HitScene = T.RT_222,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_229,
+    HitScene = T.RT_229,
+    ShapeInfo = T.RT_88,
     Speed = 0,
     Tags = T.RT_2,
     TimeLife = 3
@@ -5015,9 +5239,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850501,
     CreatureId = 851001,
     FixedBornRotation = true,
-    HitEnemy = T.RT_223,
-    HitScene = T.RT_223,
-    ShapeInfo = T.RT_199,
+    HitEnemy = T.RT_230,
+    HitScene = T.RT_230,
+    ShapeInfo = T.RT_207,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2
@@ -5029,9 +5253,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851002,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_224,
-    HitScene = T.RT_224,
-    ShapeInfo = T.RT_225,
+    HitEnemy = T.RT_231,
+    HitScene = T.RT_231,
+    ShapeInfo = T.RT_232,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3
@@ -5043,9 +5267,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851003,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_226,
-    HitScene = T.RT_226,
-    ShapeInfo = T.RT_225,
+    HitEnemy = T.RT_233,
+    HitScene = T.RT_233,
+    ShapeInfo = T.RT_232,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3
@@ -5058,14 +5282,14 @@ return ReadOnly("SkillCreature", {
     DelayDestroyTime = 1.3,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_188,
+    ShapeInfo = T.RT_196,
     SpawnSocket = T.RT_34,
     Speed = 350,
     Tags = T.RT_8,
     TimeLife = 15,
-    TraceAxisLock = T.RT_146,
+    TraceAxisLock = T.RT_148,
     TraceDelay = 2,
-    TraceRange = T.RT_189,
+    TraceRange = T.RT_197,
     TraceSpeed = 600
   },
   [851005] = {
@@ -5074,11 +5298,11 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 851009,
     CollisionDelayTime = 1.3,
     CreatureId = 851005,
-    DelayDestroyTime = 1.5,
+    DelayDestroyTime = 1,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_227,
-    HitScene = T.RT_227,
+    HitEnemy = T.RT_234,
+    HitScene = T.RT_234,
     ShapeInfo = T.RT_33,
     Speed = 0,
     Tags = T.RT_8,
@@ -5093,9 +5317,9 @@ return ReadOnly("SkillCreature", {
     DelayDestroyTime = 3,
     DelayPlayFX = 1.3,
     FixedBornRotation = true,
-    HitEnemy = T.RT_228,
-    HitScene = T.RT_228,
-    ShapeInfo = T.RT_199,
+    HitEnemy = T.RT_235,
+    HitScene = T.RT_235,
+    ShapeInfo = T.RT_207,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 1.5,
@@ -5111,7 +5335,7 @@ return ReadOnly("SkillCreature", {
     HitEnemy = {851032},
     RefreshTargetParam = 0.5,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_229,
+    ShapeInfo = T.RT_236,
     SpawnSocket = T.RT_34,
     Speed = 520,
     Tags = T.RT_8,
@@ -5129,13 +5353,13 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851008,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_230,
-    HitScene = T.RT_230,
-    ShapeInfo = T.RT_231,
+    HitEnemy = T.RT_237,
+    HitScene = T.RT_237,
+    ShapeInfo = T.RT_238,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2,
-    Vars = T.RT_232
+    Vars = T.RT_239
   },
   [851009] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Heilong_Skill08.BP_Boss_Heilong_Skill08",
@@ -5144,13 +5368,13 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851009,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_230,
-    HitScene = T.RT_230,
-    ShapeInfo = T.RT_231,
+    HitEnemy = T.RT_237,
+    HitScene = T.RT_237,
+    ShapeInfo = T.RT_238,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2,
-    Vars = T.RT_233
+    Vars = T.RT_240
   },
   [851010] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Heilong_Skill08.BP_Boss_Heilong_Skill08",
@@ -5159,13 +5383,13 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851010,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_230,
-    HitScene = T.RT_230,
-    ShapeInfo = T.RT_231,
+    HitEnemy = T.RT_237,
+    HitScene = T.RT_237,
+    ShapeInfo = T.RT_238,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2,
-    Vars = T.RT_234
+    Vars = T.RT_241
   },
   [851011] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Heilong_Skill08.BP_Boss_Heilong_Skill08",
@@ -5174,13 +5398,13 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851011,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_230,
-    HitScene = T.RT_230,
-    ShapeInfo = T.RT_231,
+    HitEnemy = T.RT_237,
+    HitScene = T.RT_237,
+    ShapeInfo = T.RT_238,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2,
-    Vars = T.RT_235
+    Vars = T.RT_242
   },
   [851012] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_ShockWave.BP_Common_ShockWave",
@@ -5199,7 +5423,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 851015,
     CreatureId = 851013,
-    ShapeInfo = T.RT_229,
+    ShapeInfo = T.RT_236,
     Speed = 2500,
     Tags = T.RT_8,
     TimeLife = 1,
@@ -5212,9 +5436,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851014,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_236,
-    HitScene = T.RT_236,
-    ShapeInfo = T.RT_225,
+    HitEnemy = T.RT_243,
+    HitScene = T.RT_243,
+    ShapeInfo = T.RT_232,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3
@@ -5226,9 +5450,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851015,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_237,
-    HitScene = T.RT_237,
-    ShapeInfo = T.RT_225,
+    HitEnemy = T.RT_244,
+    HitScene = T.RT_244,
+    ShapeInfo = T.RT_232,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3
@@ -5241,7 +5465,7 @@ return ReadOnly("SkillCreature", {
     DelayPlayFX = 30,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_225,
+    ShapeInfo = T.RT_232,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 31
@@ -5253,7 +5477,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851101,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_225,
+    ShapeInfo = T.RT_232,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3,
@@ -5266,7 +5490,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851102,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_225,
+    ShapeInfo = T.RT_232,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3,
@@ -5279,13 +5503,13 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851103,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_230,
-    HitScene = T.RT_230,
-    ShapeInfo = T.RT_231,
+    HitEnemy = T.RT_237,
+    HitScene = T.RT_237,
+    ShapeInfo = T.RT_238,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2,
-    Vars = T.RT_234
+    Vars = T.RT_241
   },
   [851104] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Bailong_Skill08.BP_Boss_Bailong_Skill08",
@@ -5294,13 +5518,13 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851104,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_230,
-    HitScene = T.RT_230,
-    ShapeInfo = T.RT_231,
+    HitEnemy = T.RT_237,
+    HitScene = T.RT_237,
+    ShapeInfo = T.RT_238,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2,
-    Vars = T.RT_235
+    Vars = T.RT_242
   },
   [851105] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Bailong_Skill08.BP_Boss_Bailong_Skill08",
@@ -5309,13 +5533,13 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851105,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_230,
-    HitScene = T.RT_230,
-    ShapeInfo = T.RT_231,
+    HitEnemy = T.RT_237,
+    HitScene = T.RT_237,
+    ShapeInfo = T.RT_238,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2,
-    Vars = T.RT_232
+    Vars = T.RT_239
   },
   [851106] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Bailong_Skill08.BP_Boss_Bailong_Skill08",
@@ -5324,21 +5548,21 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851106,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_230,
-    HitScene = T.RT_230,
-    ShapeInfo = T.RT_231,
+    HitEnemy = T.RT_237,
+    HitScene = T.RT_237,
+    ShapeInfo = T.RT_238,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2,
-    Vars = T.RT_233
+    Vars = T.RT_240
   },
   [851107] = {
     BoundCount = 1,
     CreatureId = 851107,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_238,
-    HitScene = T.RT_238,
+    HitEnemy = T.RT_245,
+    HitScene = T.RT_245,
     ShapeInfo = T.RT_33,
     Speed = 0,
     Tags = T.RT_8,
@@ -5348,8 +5572,8 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     CreatureId = 851108,
     FixedBornRotation = true,
-    HitEnemy = T.RT_239,
-    HitScene = T.RT_239,
+    HitEnemy = T.RT_246,
+    HitScene = T.RT_246,
     ShapeInfo = T.RT_33,
     Speed = 0,
     Tags = T.RT_8,
@@ -5359,7 +5583,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 851102,
     CreatureId = 851109,
-    ShapeInfo = T.RT_229,
+    ShapeInfo = T.RT_236,
     Speed = 2500,
     Tags = T.RT_8,
     TimeLife = 1,
@@ -5384,15 +5608,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851202,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_242,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_249,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [851203] = {
@@ -5401,15 +5625,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851203,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_244,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_251,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [851204] = {
@@ -5418,15 +5642,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851204,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_245,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_252,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [851205] = {
@@ -5435,15 +5659,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851205,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_246,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_253,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [851206] = {
@@ -5452,15 +5676,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851206,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_247,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_254,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [851207] = {
@@ -5469,15 +5693,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851207,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_248,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_255,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [851208] = {
@@ -5522,7 +5746,7 @@ return ReadOnly("SkillCreature", {
     DelayDestroyTime = 0.7,
     DestroyWithCreator = 1,
     HitOthers = T.RT_41,
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     Speed = 0,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5533,10 +5757,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 851206,
     CreatureId = 851212,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_242,
+    SpawnSocket = T.RT_249,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5580,10 +5804,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851216,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_242,
+    SpawnSocket = T.RT_249,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5595,10 +5819,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851217,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_245,
+    SpawnSocket = T.RT_252,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5610,10 +5834,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851218,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_244,
+    SpawnSocket = T.RT_251,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5625,10 +5849,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851219,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_251,
+    SpawnSocket = T.RT_258,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5640,10 +5864,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851220,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_252,
+    SpawnSocket = T.RT_259,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5655,10 +5879,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851221,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_253,
+    SpawnSocket = T.RT_260,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5670,10 +5894,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851222,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_254,
+    SpawnSocket = T.RT_261,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5685,10 +5909,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851223,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_255,
+    SpawnSocket = T.RT_262,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5700,10 +5924,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851224,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_256,
+    SpawnSocket = T.RT_263,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5715,10 +5939,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851225,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_247,
+    SpawnSocket = T.RT_254,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5730,10 +5954,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851226,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_248,
+    SpawnSocket = T.RT_255,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5745,10 +5969,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851227,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_249,
-    HitScene = T.RT_250,
+    HitEnemy = T.RT_256,
+    HitScene = T.RT_257,
     ShapeInfo = T.RT_18,
-    SpawnSocket = T.RT_246,
+    SpawnSocket = T.RT_253,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5
@@ -5759,15 +5983,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851228,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_257,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_258,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_264,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_265,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [851229] = {
@@ -5776,15 +6000,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851229,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_257,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_259,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_264,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_266,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [851230] = {
@@ -5809,15 +6033,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851231,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_242,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_249,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851232] = {
@@ -5826,15 +6050,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851232,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_245,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_252,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851233] = {
@@ -5843,15 +6067,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851233,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_244,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_251,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851234] = {
@@ -5860,15 +6084,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851234,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_251,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_258,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851235] = {
@@ -5877,15 +6101,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851235,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_252,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_259,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851236] = {
@@ -5894,15 +6118,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851236,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_253,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_260,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851237] = {
@@ -5911,15 +6135,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851237,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_254,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_261,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851238] = {
@@ -5928,15 +6152,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851238,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_255,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_262,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851239] = {
@@ -5945,15 +6169,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851239,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_256,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_263,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851240] = {
@@ -5962,15 +6186,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851240,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_247,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_254,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851241] = {
@@ -5979,15 +6203,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851241,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_248,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_255,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851242] = {
@@ -5996,15 +6220,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851242,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_246,
+    HitEnemy = T.RT_247,
+    HitScene = T.RT_248,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_253,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [851301] = {
@@ -6013,7 +6237,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851301,
     DestroyWithCreator = 1,
     HitEnemy = {851304},
-    ShapeInfo = T.RT_262,
+    ShapeInfo = T.RT_269,
     SpawnSocket = T.RT_34,
     Speed = 0,
     Tags = T.RT_8,
@@ -6026,7 +6250,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851302,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_263,
+    HitEnemy = T.RT_270,
     SpawnSocket = T.RT_34,
     Speed = 0,
     Tags = T.RT_8,
@@ -6039,12 +6263,12 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     HitEnemy = {851309},
     HitScene = {851310},
-    ShapeInfo = T.RT_81,
+    ShapeInfo = T.RT_83,
     Speed = 1200,
     Tags = T.RT_2,
     TimeLife = 10,
     TraceDelay = 0.2,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 550
   },
   [851304] = {
@@ -6055,13 +6279,13 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     HitEnemy = {851312},
     HitScene = {851313},
-    ShapeInfo = T.RT_81,
+    ShapeInfo = T.RT_83,
     SpawnSocket = {SpawnSocket = "pelvis", UseLocation = "Char"},
     Speed = 1000,
     Tags = T.RT_2,
     TimeLife = 10,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 650
   },
   [851305] = {
@@ -6071,8 +6295,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851305,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_264,
-    HitScene = T.RT_265,
+    HitEnemy = T.RT_271,
+    HitScene = T.RT_272,
     ShapeInfo = T.RT_7,
     Speed = 0,
     Tags = T.RT_8,
@@ -6086,8 +6310,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851306,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_264,
-    HitScene = T.RT_265,
+    HitEnemy = T.RT_271,
+    HitScene = T.RT_272,
     ShapeInfo = T.RT_7,
     Speed = 0,
     Tags = T.RT_8,
@@ -6101,8 +6325,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851307,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_264,
-    HitScene = T.RT_265,
+    HitEnemy = T.RT_271,
+    HitScene = T.RT_272,
     ShapeInfo = T.RT_7,
     Speed = 0,
     Tags = T.RT_8,
@@ -6116,8 +6340,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851308,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_264,
-    HitScene = T.RT_265,
+    HitEnemy = T.RT_271,
+    HitScene = T.RT_272,
     ShapeInfo = T.RT_7,
     Speed = 0,
     Tags = T.RT_8,
@@ -6131,8 +6355,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851309,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_264,
-    HitScene = T.RT_265,
+    HitEnemy = T.RT_271,
+    HitScene = T.RT_272,
     ShapeInfo = T.RT_7,
     Speed = 0,
     Tags = T.RT_8,
@@ -6150,8 +6374,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851310,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_264,
-    HitScene = T.RT_265,
+    HitEnemy = T.RT_271,
+    HitScene = T.RT_272,
     ShapeInfo = T.RT_7,
     Speed = 0,
     Tags = T.RT_8,
@@ -6169,8 +6393,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851311,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_264,
-    HitScene = T.RT_265,
+    HitEnemy = T.RT_271,
+    HitScene = T.RT_272,
     ShapeInfo = T.RT_7,
     Speed = 0,
     Tags = T.RT_8,
@@ -6197,8 +6421,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851313,
     DestroyWithCreator = 1,
     GravityCoefficient = 2,
-    HitEnemy = T.RT_266,
-    HitScene = T.RT_267,
+    HitEnemy = T.RT_273,
+    HitScene = T.RT_274,
     ShapeInfo = T.RT_7,
     Speed = 5000,
     Tags = T.RT_8,
@@ -6210,8 +6434,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851314,
     DestroyWithCreator = 1,
     GravityCoefficient = 2,
-    HitEnemy = T.RT_266,
-    HitScene = T.RT_267,
+    HitEnemy = T.RT_273,
+    HitScene = T.RT_274,
     ShapeInfo = T.RT_7,
     Speed = 5000,
     Tags = T.RT_8,
@@ -6224,7 +6448,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851315,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_263,
+    HitEnemy = T.RT_270,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3.5
@@ -6235,7 +6459,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851401,
     HitEnemy = {851402},
     HitScene = {851403},
-    ShapeInfo = T.RT_150,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_16,
     Speed = 3500,
     Tags = T.RT_2,
@@ -6247,10 +6471,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 851407,
     CreatureId = 851402,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_268,
-    HitScene = T.RT_268,
-    ShapeInfo = T.RT_269,
-    SpawnSocket = T.RT_270,
+    HitEnemy = T.RT_275,
+    HitScene = T.RT_275,
+    ShapeInfo = T.RT_276,
+    SpawnSocket = T.RT_277,
     Speed = 4200,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -6263,10 +6487,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 851407,
     CreatureId = 851403,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_268,
-    HitScene = T.RT_268,
-    ShapeInfo = T.RT_269,
-    SpawnSocket = T.RT_271,
+    HitEnemy = T.RT_275,
+    HitScene = T.RT_275,
+    ShapeInfo = T.RT_276,
+    SpawnSocket = T.RT_278,
     Speed = 4200,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -6367,10 +6591,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 851407,
     CreatureId = 851411,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_268,
-    HitScene = T.RT_268,
-    ShapeInfo = T.RT_269,
-    SpawnSocket = T.RT_270,
+    HitEnemy = T.RT_275,
+    HitScene = T.RT_275,
+    ShapeInfo = T.RT_276,
+    SpawnSocket = T.RT_277,
     Speed = 4200,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -6383,10 +6607,10 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 851407,
     CreatureId = 851412,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_268,
-    HitScene = T.RT_268,
-    ShapeInfo = T.RT_269,
-    SpawnSocket = T.RT_271,
+    HitEnemy = T.RT_275,
+    HitScene = T.RT_275,
+    ShapeInfo = T.RT_276,
+    SpawnSocket = T.RT_278,
     Speed = 4200,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -6401,7 +6625,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     HitEnemy = {851505},
     HitScene = {851506},
-    ShapeInfo = T.RT_81,
+    ShapeInfo = T.RT_83,
     Speed = 1200,
     Tags = T.RT_2,
     TimeLife = 8
@@ -6413,15 +6637,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851502,
     DestroyWithCreator = 1,
     GravityCoefficient = 0.2,
-    HitEnemy = T.RT_272,
-    HitScene = T.RT_272,
-    ShapeInfo = T.RT_183,
+    HitEnemy = T.RT_279,
+    HitScene = T.RT_279,
+    ShapeInfo = T.RT_191,
     SpawnSocket = T.RT_34,
     Speed = 3500,
     Tags = T.RT_8,
     TimeLife = 5,
     TraceDelay = 0.5,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 150
   },
   [851503] = {
@@ -6436,16 +6660,16 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 851505,
     CreatureId = 851504,
-    DestroyEffects = T.RT_273,
+    DestroyEffects = T.RT_280,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_273,
-    HitScene = T.RT_273,
+    HitEnemy = T.RT_280,
+    HitScene = T.RT_280,
     ShapeInfo = T.RT_26,
     SpawnSocket = T.RT_34,
     Speed = 1000,
     Tags = T.RT_8,
     TimeLife = 3,
-    TraceRange = T.RT_147,
+    TraceRange = T.RT_149,
     TraceSpeed = 400,
     Vars = {ExecuteOnLifeEnd = "true"}
   },
@@ -6456,10 +6680,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851505,
     DelayDestroyTime = 1,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_274,
+    SpawnSocket = T.RT_281,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_275
+    Vars = T.RT_282
   },
   [851506] = {
     AttachOwner = T.RT_3,
@@ -6468,10 +6692,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851506,
     DelayDestroyTime = 1,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_276,
+    SpawnSocket = T.RT_283,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_275
+    Vars = T.RT_282
   },
   [851507] = {
     AttachOwner = T.RT_3,
@@ -6480,10 +6704,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851507,
     DelayDestroyTime = 1,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_277,
+    SpawnSocket = T.RT_284,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_278
+    Vars = T.RT_285
   },
   [851508] = {
     AttachOwner = T.RT_3,
@@ -6492,10 +6716,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851508,
     DelayDestroyTime = 1,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_279,
+    SpawnSocket = T.RT_286,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_278
+    Vars = T.RT_285
   },
   [851509] = {
     AttachOwner = T.RT_3,
@@ -6504,10 +6728,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851509,
     DelayDestroyTime = 1,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_274,
+    SpawnSocket = T.RT_281,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_278
+    Vars = T.RT_285
   },
   [851510] = {
     AttachOwner = T.RT_3,
@@ -6516,10 +6740,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851510,
     DelayDestroyTime = 1,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_276,
+    SpawnSocket = T.RT_283,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_278
+    Vars = T.RT_285
   },
   [851511] = {
     AttachOwner = T.RT_3,
@@ -6528,10 +6752,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851511,
     DelayDestroyTime = 1,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_277,
+    SpawnSocket = T.RT_284,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_275
+    Vars = T.RT_282
   },
   [851512] = {
     AttachOwner = T.RT_3,
@@ -6540,10 +6764,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851512,
     DelayDestroyTime = 1,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_279,
+    SpawnSocket = T.RT_286,
     Tags = T.RT_8,
     TimeLife = 5,
-    Vars = T.RT_275
+    Vars = T.RT_282
   },
   [851513] = {
     AttachOwner = T.RT_3,
@@ -6574,8 +6798,8 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {851608},
     HitScene = {851609},
-    ShapeInfo = T.RT_150,
-    SpawnSocket = T.RT_280,
+    ShapeInfo = T.RT_152,
+    SpawnSocket = T.RT_287,
     Speed = 3500,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -6592,8 +6816,8 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 2,
     HitEnemy = {851612},
     HitScene = {851613},
-    ShapeInfo = T.RT_212,
-    SpawnSocket = T.RT_280,
+    ShapeInfo = T.RT_219,
+    SpawnSocket = T.RT_287,
     Speed = 1600,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -6609,7 +6833,7 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 100,
     HitEnemy = {851614},
     HitScene = {851615},
-    ShapeInfo = T.RT_183,
+    ShapeInfo = T.RT_191,
     Speed = 800,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -6625,7 +6849,7 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 100,
     HitEnemy = {851619},
     HitScene = {851620},
-    ShapeInfo = T.RT_205,
+    ShapeInfo = T.RT_212,
     Speed = 3000,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -6679,7 +6903,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedBornRotation = true,
     FixedMoveRotation = true,
-    SpawnSocket = T.RT_280,
+    SpawnSocket = T.RT_287,
     Tags = T.RT_8,
     TimeLife = 2
   },
@@ -6691,7 +6915,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     FixedMoveRotation = true,
     HitEnemy = {851651},
-    ShapeInfo = T.RT_281,
+    ShapeInfo = T.RT_288,
     SpawnSocket = T.RT_34,
     Speed = 0,
     TimeLife = 2
@@ -6718,7 +6942,7 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     FixedMoveRotation = true,
     HitEnemy = {851654},
-    ShapeInfo = T.RT_281,
+    ShapeInfo = T.RT_288,
     SpawnSocket = T.RT_34,
     Speed = 0,
     TimeLife = 2
@@ -6729,8 +6953,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851701,
     DestroyWithCreator = 1,
     DontDestroyExceptLife = true,
-    HitEnemy = T.RT_282,
-    ShapeInfo = T.RT_262,
+    HitEnemy = T.RT_289,
+    ShapeInfo = T.RT_269,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 2
@@ -6744,8 +6968,8 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     DontDestroyExceptLife = true,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_282,
-    ShapeInfo = T.RT_262,
+    HitEnemy = T.RT_289,
+    ShapeInfo = T.RT_269,
     SpawnSocket = T.RT_34,
     Speed = 800,
     Tags = T.RT_8,
@@ -6758,10 +6982,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851801,
     DontDestroyExceptLife = true,
     EnterPool = true,
-    HitEnemy = T.RT_283,
-    HitScene = T.RT_283,
-    ShapeInfo = T.RT_284,
-    SpawnSocket = T.RT_174,
+    HitEnemy = T.RT_290,
+    HitScene = T.RT_290,
+    ShapeInfo = T.RT_291,
+    SpawnSocket = T.RT_176,
     Speed = 0,
     Tags = T.RT_2,
     TimeLife = 1.16,
@@ -6775,9 +6999,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851802,
     DontDestroyExceptLife = true,
     EnterPool = true,
-    HitEnemy = T.RT_283,
+    HitEnemy = T.RT_290,
     ShapeInfo = {Radius = 140, ShapeType = "Sphere"},
-    SpawnSocket = T.RT_174,
+    SpawnSocket = T.RT_176,
     Speed = 0,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -6790,10 +7014,10 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851803,
     DontDestroyExceptLife = true,
     EnterPool = true,
-    HitEnemy = T.RT_283,
-    HitScene = T.RT_283,
-    ShapeInfo = T.RT_284,
-    SpawnSocket = T.RT_174,
+    HitEnemy = T.RT_290,
+    HitScene = T.RT_290,
+    ShapeInfo = T.RT_291,
+    SpawnSocket = T.RT_176,
     Speed = 0,
     Tags = T.RT_2,
     TimeLife = 1.2,
@@ -6808,10 +7032,10 @@ return ReadOnly("SkillCreature", {
     GravityAdapt = true,
     GravityCoefficient = 1.5,
     GravityFactor = 1,
-    HitEnemy = T.RT_285,
-    HitScene = T.RT_285,
-    ShapeInfo = T.RT_86,
-    SpawnSocket = T.RT_174,
+    HitEnemy = T.RT_292,
+    HitScene = T.RT_292,
+    ShapeInfo = T.RT_88,
+    SpawnSocket = T.RT_176,
     Speed = 1200,
     Tags = T.RT_2,
     TimeLife = 3,
@@ -6824,8 +7048,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851805,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_286,
-    HitScene = T.RT_286,
+    HitEnemy = T.RT_293,
+    HitScene = T.RT_293,
     ShapeInfo = T.RT_32,
     Speed = 0,
     Tags = T.RT_2,
@@ -6841,9 +7065,9 @@ return ReadOnly("SkillCreature", {
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_287,
-    HitScene = T.RT_287,
-    ShapeInfo = T.RT_288,
+    HitEnemy = T.RT_294,
+    HitScene = T.RT_294,
+    ShapeInfo = T.RT_295,
     Speed = 0.1,
     TickCollision = true,
     TimeLife = 3
@@ -6853,9 +7077,9 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 851807,
     DontDestroyExceptLife = true,
-    HitEnemy = T.RT_289,
-    ShapeInfo = T.RT_288,
-    SpawnSocket = T.RT_174,
+    HitEnemy = T.RT_296,
+    ShapeInfo = T.RT_295,
+    SpawnSocket = T.RT_176,
     Speed = 0,
     Tags = T.RT_2,
     TickCollision = true,
@@ -6870,9 +7094,9 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedBornRotation = true,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_290,
-    ShapeInfo = T.RT_291,
-    SpawnSocket = T.RT_292,
+    HitEnemy = T.RT_297,
+    ShapeInfo = T.RT_298,
+    SpawnSocket = T.RT_299,
     Speed = 0,
     Tags = T.RT_2,
     TickCollision = true,
@@ -6887,9 +7111,9 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedBornRotation = true,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_290,
-    ShapeInfo = T.RT_291,
-    SpawnSocket = T.RT_293,
+    HitEnemy = T.RT_297,
+    ShapeInfo = T.RT_298,
+    SpawnSocket = T.RT_300,
     Speed = 0,
     Tags = T.RT_2,
     TickCollision = true,
@@ -6900,9 +7124,9 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     CollisionDelayTime = 1.3,
     CreatureId = 851810,
-    HitEnemy = T.RT_286,
-    HitScene = T.RT_286,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_293,
+    HitScene = T.RT_293,
+    ShapeInfo = T.RT_88,
     Speed = 0,
     Tags = T.RT_2,
     TickCollision = true,
@@ -6914,9 +7138,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 851802,
     CreatureId = 851811,
     DontDestroyExceptLife = true,
-    HitEnemy = T.RT_289,
-    ShapeInfo = T.RT_288,
-    SpawnSocket = T.RT_174,
+    HitEnemy = T.RT_296,
+    ShapeInfo = T.RT_295,
+    SpawnSocket = T.RT_176,
     Speed = 0,
     Tags = T.RT_2,
     TickCollision = true,
@@ -6934,8 +7158,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851812,
     DontDestroyExceptLife = true,
     FixedBornRotation = true,
-    HitEnemy = T.RT_294,
-    HitScene = T.RT_294,
+    HitEnemy = T.RT_301,
+    HitScene = T.RT_301,
     ShapeInfo = {
       BoxHeight = 300,
       BoxLength = 1000,
@@ -6953,101 +7177,68 @@ return ReadOnly("SkillCreature", {
     CreatureId = 851813,
     DontDestroyExceptLife = false,
     FixedBornRotation = true,
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 0,
     Tags = T.RT_2,
     TickCollision = true,
     TimeLife = 3
   },
   [851901] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill01Laser.BP_Boss_LiecheCannon_Skill01Laser",
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill02Laser.BP_Boss_LiecheCannon_Skill02Laser",
     CreatureId = 851901,
     DestroyWithCreator = 1,
+    SpawnSocket = T.RT_302,
     TimeLife = 10
   },
   [851902] = {
-    BoundCount = 1,
-    BulletFXID = 851302,
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_USkill02Laser.BP_Boss_LiecheCannon_USkill02Laser",
     CreatureId = 851902,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_295,
-    HitScene = T.RT_295,
-    ShapeInfo = T.RT_81,
-    Speed = 600,
-    Tags = T.RT_113,
-    TimeLife = 10,
-    TraceDelay = 0.2,
-    TraceRange = T.RT_147,
-    TraceSpeed = 200
+    SpawnSocket = {
+      SpawnSocket = "cannon_laserroot1",
+      UseLocation = "Char"
+    },
+    TimeLife = 10
   },
   [851903] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Lieche_Skill01Gear.BP_Boss_Lieche_Skill01Gear",
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill03Gear.BP_Boss_LiecheCannon_Skill03Gear",
     BoundCount = -1,
     CreatureId = 851903,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_296,
+    HitEnemy = T.RT_303,
     ShapeInfo = {
-      BoxHeight = 200,
+      BoxHeight = 300,
+      BoxLength = 330,
+      BoxWidth = 300,
+      ShapeType = "Box"
+    },
+    Speed = 1,
+    TimeLife = 4.3
+  },
+  [851904] = {
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_USkill02Laser.BP_Boss_LiecheCannon_USkill02Laser",
+    CreatureId = 851904,
+    DestroyWithCreator = 1,
+    SpawnSocket = {
+      SpawnSocket = "cannon_laserroot2",
+      UseLocation = "Char"
+    },
+    TimeLife = 10
+  },
+  [851906] = {
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill04Gear_Hor.BP_Boss_LiecheCannon_Skill04Gear_Hor",
+    BoundCount = -1,
+    CreatureId = 851906,
+    DestroyWithCreator = 1,
+    HitEnemy = T.RT_303,
+    ShapeInfo = {
+      BoxHeight = 400,
       BoxLength = 330,
       BoxWidth = 200,
       ShapeType = "Box"
     },
     Speed = 1,
-    TimeLife = 10
-  },
-  [851906] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Lieche_Skill01Gear_Hor.BP_Boss_Lieche_Skill01Gear_Hor",
-    BoundCount = -1,
-    CreatureId = 851906,
-    DestroyWithCreator = 1,
-    HitEnemy = T.RT_296,
-    ShapeInfo = T.RT_297,
-    Speed = 1,
-    TimeLife = 10,
-    Vars = {PointId = 201, Speed = 600}
-  },
-  [851907] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Lieche_Skill01Gear_Hor.BP_Boss_Lieche_Skill01Gear_Hor",
-    BoundCount = -1,
-    CreatureId = 851907,
-    DestroyWithCreator = 1,
-    HitEnemy = T.RT_296,
-    ShapeInfo = T.RT_297,
-    Speed = 1,
-    TimeLife = 10,
-    Vars = {PointId = 207, Speed = 600}
-  },
-  [851908] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_PlaySkillPreFXRectangle.BP_Common_PlaySkillPreFXRectangle",
-    CreatureId = 851908,
-    DestroyWithCreator = 1,
-    FixedBornRotation = true,
-    Speed = 0,
-    TimeLife = 10,
-    Vars = {
-      PointId = 201,
-      SetRotation = true,
-      Time = 1,
-      Type = 2,
-      X = 660,
-      Y = 2000
-    }
-  },
-  [851909] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_PlaySkillPreFXRectangle.BP_Common_PlaySkillPreFXRectangle",
-    CreatureId = 851909,
-    DestroyWithCreator = 1,
-    FixedBornRotation = true,
-    Speed = 0,
-    TimeLife = 10,
-    Vars = {
-      PointId = 207,
-      SetRotation = true,
-      Time = 1,
-      Type = 2,
-      X = 660,
-      Y = 2000
-    }
+    TimeLife = 8.25
   },
   [851910] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Lieche_WarningAndExecute.BP_Boss_Lieche_WarningAndExecute",
@@ -7056,11 +7247,16 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedBornRotation = true,
     Speed = 0,
-    TimeLife = 10,
-    Vars = {SkillEffectId = 851920}
+    TimeLife = 5,
+    Vars = {
+      ColorIndex = 0,
+      Radius = 400,
+      SkillEffectId = 851920,
+      Time = 1
+    }
   },
   [851912] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Lieche_Skill07AttachBurst.BP_Boss_Lieche_Skill07AttachBurst",
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill09AttachBurst.BP_Boss_LiecheCannon_Skill09AttachBurst",
     CreatureId = 851912,
     DestroyWithCreator = 1,
     TimeLife = 10
@@ -7079,26 +7275,15 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedBornRotation = true,
     Speed = 0,
-    TimeLife = 10
-  },
-  [851915] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_PlaySkillPreFXRectangle.BP_Common_PlaySkillPreFXRectangle",
-    CreatureId = 851915,
-    DestroyWithCreator = 1,
-    FixedBornRotation = true,
-    Speed = 0,
     TimeLife = 10,
     Vars = {
-      PointId = 103,
-      SetRotation = true,
-      Time = 1,
-      Type = 2,
-      X = 660,
-      Y = 4000
+      Radius = 400,
+      SkillEffectId = 851930,
+      Time = 1
     }
   },
   [851916] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCore_Skill01Laser.BP_Boss_LiecheCore_Skill01Laser",
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheMCore_USkill01Laser.BP_Boss_LiecheMCore_USkill01Laser",
     CreatureId = 851916,
     DestroyWithCreator = 1,
     TimeLife = 10
@@ -7107,29 +7292,26 @@ return ReadOnly("SkillCreature", {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_DelayExecuteSkillEffect.BP_Common_DelayExecuteSkillEffect",
     CreatureId = 851917,
     DestroyWithCreator = 1,
-    TimeLife = 10,
+    TimeLife = 5,
     Vars = {Delay = 2, SkillEffectId = 851944}
   },
   [851918] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCore_Skill01Laser2.BP_Boss_LiecheCore_Skill01Laser2",
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheMCore_USkill02Laser.BP_Boss_LiecheMCore_USkill02Laser",
     CreatureId = 851918,
     DestroyWithCreator = 1,
     TimeLife = 10
   },
+  [851919] = {
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheMCore_Skill03Field.BP_Boss_LiecheMCore_Skill03Field",
+    CreatureId = 851919,
+    DestroyWithCreator = 1,
+    TimeLife = 5
+  },
   [851920] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Common_PlaySkillPreFXRectangle.BP_Common_PlaySkillPreFXRectangle",
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheMCore_Skill01Field.BP_Boss_LiecheMCore_Skill01Field",
     CreatureId = 851920,
     DestroyWithCreator = 1,
-    Speed = 0,
-    TimeLife = 10,
-    Vars = {
-      PointId = 104,
-      SetRotation = true,
-      Time = 1,
-      Type = 2,
-      X = 660,
-      Y = 4000
-    }
+    TimeLife = 5
   },
   [851921] = {
     AttachOwner = T.RT_3,
@@ -7151,44 +7333,57 @@ return ReadOnly("SkillCreature", {
   },
   [851922] = {
     BoundCount = 1,
-    BulletFXID = 851302,
+    BulletFXID = 851912,
     CreatureId = 851922,
     DestroyWithCreator = 1,
     GravityAdapt = true,
-    GravityCoefficient = 2,
-    GravityFactor = 10,
-    HitEnemy = T.RT_298,
-    HitScene = T.RT_298,
-    ShapeInfo = T.RT_81,
+    GravityCoefficient = 0.6,
+    GravityFactor = 9999,
+    HitEnemy = T.RT_304,
+    HitScene = T.RT_304,
+    ShapeInfo = T.RT_83,
     SpawnSocket = {
       SpawnSocket = "Hand_OpenFire",
       UseLocation = "Char"
     },
-    Speed = 3000,
-    Tags = T.RT_113,
+    Speed = 750,
+    Tags = T.RT_115,
     TimeLife = 10
   },
   [851923] = {
     BoundCount = -1,
-    BulletFXID = 600102,
+    BulletFXID = 851914,
     CreatureId = 851923,
     DestroyWithCreator = 1,
+    GravityAdapt = true,
     GravityCoefficient = 2,
-    SpawnSocket = {
-      SpawnSocket = "root_Part04",
-      UseLocation = "Char"
-    },
+    GravityFactor = 9999,
+    SpawnSocket = T.RT_302,
     Speed = 3000,
-    TimeLife = 3
+    TimeLife = 2
   },
   [851924] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill01.BP_Boss_LiecheCannon_Skill01",
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill01Bullet.BP_Boss_LiecheCannon_Skill01Bullet",
     BoundCount = -1,
-    BulletFXID = 600102,
+    BulletFXID = 851916,
     CreatureId = 851924,
     DestroyWithCreator = 1,
     Speed = 0,
-    TimeLife = 5
+    TimeLife = 2.5
+  },
+  [851925] = {
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill06Acc.BP_Boss_LiecheCannon_Skill06Acc",
+    CreatureId = 851925,
+    DestroyWithCreator = 1,
+    Speed = 0,
+    TimeLife = 10
+  },
+  [851926] = {
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_LiecheCannon_Skill09Field.BP_Boss_LiecheCannon_Skill09Field",
+    CreatureId = 851926,
+    DestroyWithCreator = 1,
+    Speed = 0,
+    TimeLife = 60
   },
   [852001] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill01Box01.BP_Boss_Aida_Skill01Box01",
@@ -7197,7 +7392,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852001,
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_299,
+    HitEnemy = T.RT_305,
     ShapeInfo = {
       BoxHeight = 1000,
       BoxLength = 700,
@@ -7206,7 +7401,7 @@ return ReadOnly("SkillCreature", {
     },
     Speed = 1,
     TimeLife = 10,
-    Vars = T.RT_300
+    Vars = T.RT_306
   },
   [852002] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill01Box02.BP_Boss_Aida_Skill01Box02",
@@ -7215,7 +7410,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852002,
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_299,
+    HitEnemy = T.RT_305,
     ShapeInfo = {
       BoxHeight = 500,
       BoxLength = 350,
@@ -7224,7 +7419,7 @@ return ReadOnly("SkillCreature", {
     },
     Speed = 1,
     TimeLife = 10,
-    Vars = T.RT_300
+    Vars = T.RT_306
   },
   [852003] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill01Box03.BP_Boss_Aida_Skill01Box03",
@@ -7233,7 +7428,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852003,
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_299,
+    HitEnemy = T.RT_305,
     ShapeInfo = {
       BoxHeight = 1000,
       BoxLength = 175,
@@ -7242,7 +7437,7 @@ return ReadOnly("SkillCreature", {
     },
     Speed = 1,
     TimeLife = 10,
-    Vars = T.RT_300
+    Vars = T.RT_306
   },
   [852004] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill01Box04.BP_Boss_Aida_Skill01Box04",
@@ -7251,7 +7446,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852004,
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_299,
+    HitEnemy = T.RT_305,
     ShapeInfo = {
       BoxHeight = 500,
       BoxLength = 500,
@@ -7260,7 +7455,7 @@ return ReadOnly("SkillCreature", {
     },
     Speed = 1,
     TimeLife = 10,
-    Vars = T.RT_300
+    Vars = T.RT_306
   },
   [852005] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill01Box05.BP_Boss_Aida_Skill01Box05",
@@ -7269,11 +7464,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852005,
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_299,
-    ShapeInfo = T.RT_301,
+    HitEnemy = T.RT_305,
+    ShapeInfo = T.RT_307,
     Speed = 1,
     TimeLife = 10,
-    Vars = T.RT_300
+    Vars = T.RT_306
   },
   [852006] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill01Box06.BP_Boss_Aida_Skill01Box06",
@@ -7282,11 +7477,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852006,
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_299,
-    ShapeInfo = T.RT_301,
+    HitEnemy = T.RT_305,
+    ShapeInfo = T.RT_307,
     Speed = 1,
     TimeLife = 10,
-    Vars = T.RT_300
+    Vars = T.RT_306
   },
   [852007] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill03AttachBurst.BP_Boss_Aida_Skill03AttachBurst",
@@ -7305,7 +7500,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
     HitEnemy = {852011},
-    ShapeInfo = T.RT_302,
+    ShapeInfo = T.RT_308,
     Speed = 1,
     TimeLife = 10
   },
@@ -7366,7 +7561,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
     HitEnemy = {852031},
-    ShapeInfo = T.RT_302,
+    ShapeInfo = T.RT_308,
     Speed = 1,
     TimeLife = 10
   },
@@ -7389,10 +7584,10 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     FixedMoveRotation = true,
     HitEnemy = {852034},
-    ShapeInfo = T.RT_301,
+    ShapeInfo = T.RT_307,
     Speed = 1,
     TimeLife = 10,
-    Vars = T.RT_303
+    Vars = T.RT_309
   },
   [852017] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill10SP1.BP_Boss_Aida_Skill10SP1",
@@ -7401,8 +7596,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852017,
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_304,
-    ShapeInfo = T.RT_305,
+    HitEnemy = T.RT_310,
+    ShapeInfo = T.RT_311,
     Speed = 1,
     TimeLife = 10,
     Vars = {Speed = 7500, WarningTime = 1.5}
@@ -7464,11 +7659,11 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852023,
     DestroyWithCreator = 1,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_304,
-    ShapeInfo = T.RT_305,
+    HitEnemy = T.RT_310,
+    ShapeInfo = T.RT_311,
     Speed = 1,
     TimeLife = 10,
-    Vars = T.RT_303
+    Vars = T.RT_309
   },
   [852024] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/Boss_Aida/BP_Boss_Aida_Skill10Field.BP_Boss_Aida_Skill10Field",
@@ -7621,47 +7816,95 @@ return ReadOnly("SkillCreature", {
     Speed = 1000,
     TimeLife = 3,
     TraceDelay = 0.3,
-    TraceRange = T.RT_152,
+    TraceRange = T.RT_154,
     TraceSpeed = 400
   },
   [852101] = {
     BoundCount = 1,
-    BulletFXID = 900501,
+    BulletFXID = 852108,
     CreatureId = 852101,
+    DestroyWithCreator = 1,
     FixedBornRotation = true,
     RealDestroyEffects = {8521004},
-    ShapeInfo = T.RT_212,
+    ShapeInfo = T.RT_219,
     Speed = 0,
-    Tags = T.RT_2,
-    TimeLife = 2
+    Tags = T.RT_8,
+    TimeLife = 0.6
   },
   [852102] = {
     BoundCount = 1,
-    BulletFXID = 851206,
+    BulletFXID = 852104,
     CreatureId = 852102,
-    HitEnemy = T.RT_306,
-    HitScene = T.RT_306,
-    ShapeInfo = T.RT_212,
-    Speed = 1500,
+    DestroyWithCreator = 1,
+    HitEnemy = {8521007},
+    ShapeInfo = T.RT_219,
+    SpawnSocket = T.RT_300,
+    Speed = 3000,
     Tags = T.RT_2,
     TimeLife = 4
   },
   [852103] = {
     BoundCount = 1,
-    BulletFXID = 900501,
+    BulletFXID = 852106,
     CreatureId = 852103,
+    DestroyWithCreator = 1,
     FixedBornRotation = true,
     HitEnemy = {8521011},
-    ShapeInfo = T.RT_212,
+    ShapeInfo = T.RT_219,
     Speed = 0,
-    Tags = T.RT_2,
+    Tags = T.RT_8,
     TimeLife = 6
+  },
+  [852104] = {
+    AttachOwner = T.RT_3,
+    BoundCount = -1,
+    CreatureId = 852104,
+    DestroyWithCreator = 1,
+    HitEnemy = {8521013},
+    ShapeInfo = {Radius = 85, ShapeType = "Sphere"},
+    Speed = 0,
+    Tags = T.RT_8,
+    TickCollision = true,
+    TimeLife = 0.17
+  },
+  [852105] = {
+    BoundCount = -1,
+    BulletFXID = 852101,
+    CreatureId = 852105,
+    DestroyWithCreator = 1,
+    HitEnemy = T.RT_312,
+    ShapeInfo = T.RT_46,
+    Speed = 2500,
+    Tags = T.RT_2,
+    TimeLife = 4
+  },
+  [852106] = {
+    BoundCount = -1,
+    BulletFXID = 852102,
+    CreatureId = 852106,
+    DestroyWithCreator = 1,
+    HitEnemy = T.RT_312,
+    ShapeInfo = T.RT_46,
+    Speed = 2500,
+    Tags = T.RT_2,
+    TimeLife = 4
+  },
+  [852107] = {
+    BoundCount = -1,
+    BulletFXID = 852103,
+    CreatureId = 852107,
+    DestroyWithCreator = 1,
+    HitEnemy = T.RT_312,
+    ShapeInfo = T.RT_46,
+    Speed = 2500,
+    Tags = T.RT_2,
+    TimeLife = 4
   },
   [852201] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Tuisheng_Skill02Laser.BP_Boss_Tuisheng_Skill02Laser",
     CreatureId = 852201,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_292,
+    SpawnSocket = T.RT_299,
     TimeLife = 10
   },
   [852202] = {
@@ -7671,8 +7914,8 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     HitEnemy = {8522009},
     HitScene = {8522010},
-    ShapeInfo = T.RT_111,
-    SpawnSocket = T.RT_293,
+    ShapeInfo = T.RT_113,
+    SpawnSocket = T.RT_300,
     Speed = 3500,
     TimeLife = 10
   },
@@ -7687,7 +7930,7 @@ return ReadOnly("SkillCreature", {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Tuisheng_Skill05Laser.BP_Boss_Tuisheng_Skill05Laser",
     CreatureId = 852204,
     DestroyWithCreator = 1,
-    SpawnSocket = T.RT_293,
+    SpawnSocket = T.RT_300,
     TimeLife = 10
   },
   [852205] = {
@@ -7707,7 +7950,7 @@ return ReadOnly("SkillCreature", {
       BoxWidth = 25,
       ShapeType = "Box"
     },
-    SpawnSocket = T.RT_292,
+    SpawnSocket = T.RT_299,
     Speed = 2500,
     TimeLife = 10
   },
@@ -7753,7 +7996,7 @@ return ReadOnly("SkillCreature", {
     AttachOwner = T.RT_3,
     BoundCount = -1,
     CreatureId = 852301,
-    HitEnemy = T.RT_307,
+    HitEnemy = T.RT_313,
     ShapeInfo = T.RT_4,
     Speed = 0,
     TimeLife = 1
@@ -7777,7 +8020,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 852304,
     HitEnemy = {8523032},
-    ShapeInfo = T.RT_308,
+    ShapeInfo = T.RT_314,
     Speed = 0,
     TimeLife = 1
   },
@@ -7796,8 +8039,8 @@ return ReadOnly("SkillCreature", {
     AttachOwner = T.RT_3,
     BoundCount = -1,
     CreatureId = 852310,
-    HitEnemy = T.RT_307,
-    ShapeInfo = T.RT_308,
+    HitEnemy = T.RT_313,
+    ShapeInfo = T.RT_314,
     Speed = 0,
     TimeLife = 1
   },
@@ -7807,9 +8050,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 852401,
     CreatureId = 852401,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_309,
-    HitScene = T.RT_310,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_315,
+    HitScene = T.RT_316,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_1,
     Speed = 500,
     Tags = T.RT_2,
@@ -7822,9 +8065,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 852401,
     CreatureId = 852402,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_309,
-    HitScene = T.RT_310,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_315,
+    HitScene = T.RT_316,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_1,
     Speed = 500,
     Tags = T.RT_2,
@@ -7836,15 +8079,15 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 852401,
     CreatureId = 852403,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_309,
-    HitScene = T.RT_310,
-    ShapeInfo = T.RT_150,
+    HitEnemy = T.RT_315,
+    HitScene = T.RT_316,
+    ShapeInfo = T.RT_152,
     SpawnSocket = T.RT_1,
     Speed = 500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0,
-    TraceRange = T.RT_152,
+    TraceRange = T.RT_154,
     TraceSpeed = 280
   },
   [852404] = {
@@ -7853,7 +8096,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 852403,
     CreatureId = 852404,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_311,
+    ShapeInfo = T.RT_317,
     Speed = 0,
     TimeLife = 3
   },
@@ -7863,7 +8106,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 852404,
     CreatureId = 852405,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_150,
+    ShapeInfo = T.RT_152,
     Speed = 0,
     TimeLife = 4
   },
@@ -7874,8 +8117,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     HitEnemy = {8524011},
     HitScene = {8524012},
-    ShapeInfo = T.RT_212,
-    SpawnSocket = T.RT_34,
+    ShapeInfo = T.RT_219,
     Speed = 2000,
     Tags = T.RT_2,
     TimeLife = 5
@@ -7888,7 +8130,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedBornRotation = true,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_312,
+    HitEnemy = T.RT_318,
     ShapeInfo = T.RT_7,
     TimeLife = 5,
     Vars = {CanRotate = false}
@@ -7898,7 +8140,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 852408,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_199,
+    ShapeInfo = T.RT_207,
     Speed = 0,
     TimeLife = 999
   },
@@ -7908,7 +8150,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 852403,
     CreatureId = 852409,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_311,
+    ShapeInfo = T.RT_317,
     Speed = 0,
     TimeLife = 4
   },
@@ -7918,7 +8160,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 852403,
     CreatureId = 852410,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_311,
+    ShapeInfo = T.RT_317,
     Speed = 0,
     TimeLife = 5
   },
@@ -7928,7 +8170,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 852403,
     CreatureId = 852411,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_311,
+    ShapeInfo = T.RT_317,
     Speed = 0,
     TimeLife = 6
   },
@@ -7940,7 +8182,7 @@ return ReadOnly("SkillCreature", {
     DestroyWithCreator = 1,
     FixedBornRotation = true,
     FixedMoveRotation = true,
-    HitEnemy = T.RT_312,
+    HitEnemy = T.RT_318,
     ShapeInfo = T.RT_7,
     TimeLife = 5,
     Vars = {CanRotate = true}
@@ -7950,40 +8192,119 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 852413,
     DestroyWithCreator = 1,
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     SpawnSocket = T.RT_34,
     Speed = 0,
     TimeLife = 2.3
+  },
+  [852414] = {
+    AttachOwner = T.RT_3,
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Hengmeng_Skill05_Muzzle.BP_Boss_Hengmeng_Skill05_Muzzle",
+    BoundCount = 1,
+    BreakCount = 2,
+    CreatureId = 852414,
+    DestroyWithCreator = 1,
+    FixedBornRotation = true,
+    ShapeInfo = T.RT_26,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    TimeLife = 0.673
+  },
+  [852415] = {
+    AttachOwner = T.RT_3,
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Hengmeng_Skill05_Muzzle.BP_Boss_Hengmeng_Skill05_Muzzle",
+    BoundCount = 1,
+    BreakCount = 2,
+    CreatureId = 852415,
+    DestroyWithCreator = 1,
+    FixedBornRotation = true,
+    ShapeInfo = T.RT_26,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    TimeLife = 1.183
+  },
+  [852416] = {
+    AttachOwner = T.RT_3,
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Hengmeng_Skill05_Muzzle.BP_Boss_Hengmeng_Skill05_Muzzle",
+    BoundCount = 1,
+    BreakCount = 2,
+    CreatureId = 852416,
+    DestroyWithCreator = 1,
+    FixedBornRotation = true,
+    ShapeInfo = T.RT_26,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    TimeLife = 1.668
+  },
+  [852417] = {
+    AttachOwner = T.RT_3,
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Hengmeng_Skill05_Muzzle.BP_Boss_Hengmeng_Skill05_Muzzle",
+    BoundCount = 1,
+    BreakCount = 2,
+    CreatureId = 852417,
+    DestroyWithCreator = 1,
+    FixedBornRotation = true,
+    ShapeInfo = T.RT_26,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    TimeLife = 2.158
+  },
+  [852418] = {
+    AttachOwner = T.RT_3,
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Hengmeng_Skill05_Muzzle.BP_Boss_Hengmeng_Skill05_Muzzle",
+    BoundCount = 1,
+    BreakCount = 2,
+    CreatureId = 852418,
+    DestroyWithCreator = 1,
+    FixedBornRotation = true,
+    ShapeInfo = T.RT_26,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    TimeLife = 2.664
+  },
+  [852419] = {
+    AttachOwner = T.RT_3,
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Hengmeng_Skill05_Muzzle.BP_Boss_Hengmeng_Skill05_Muzzle",
+    BoundCount = 1,
+    BreakCount = 2,
+    CreatureId = 852419,
+    DestroyWithCreator = 1,
+    FixedBornRotation = true,
+    ShapeInfo = T.RT_26,
+    SpawnSocket = T.RT_34,
+    Speed = 0,
+    TimeLife = 3.156
   },
   [852501] = {
     BoundCount = 1,
     BulletFXID = 851206,
     CreatureId = 852501,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_240,
-    HitScene = T.RT_241,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_209,
+    HitEnemy = {852512},
+    HitScene = {852513},
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_216,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [852502] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Yidai_Skill03.BP_Boss_Yidai_Skill03",
     BoundCount = 1,
-    CollisionDelayTime = 1.7,
+    CollisionDelayTime = 2.6,
     CreatureId = 852502,
+    DelayDestroyTime = 1.5,
     DestroyWithCreator = 1,
     DontDestroyExceptLife = true,
     HitScene = {852523},
     ServerOwner = true,
-    ShapeInfo = T.RT_192,
+    ShapeInfo = T.RT_200,
     Speed = 0,
     Tags = T.RT_8,
-    TimeLife = 3
+    TimeLife = 4
   },
   [852503] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Kuxiu_ShockWave.BP_Boss_Kuxiu_ShockWave",
@@ -7992,7 +8313,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852503,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_263,
+    HitEnemy = T.RT_270,
     SpawnSocket = T.RT_34,
     Speed = 0,
     Tags = T.RT_8,
@@ -8021,7 +8342,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850302,
     CreatureId = 852506,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_204,
+    HitEnemy = T.RT_319,
     ShapeInfo = {Radius = 450, ShapeType = "Sphere"},
     SpawnSocket = T.RT_34,
     Speed = 3000,
@@ -8033,7 +8354,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 850302,
     CreatureId = 852507,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_204,
+    HitEnemy = T.RT_319,
     ShapeInfo = T.RT_23,
     SpawnSocket = T.RT_34,
     Speed = 2000,
@@ -8076,9 +8397,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 10106101,
     CreatureId = 852511,
     DestroyWithCreator = 1,
-    HitOthers = T.RT_106,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_209,
+    HitOthers = T.RT_108,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_216,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 13,
@@ -8090,9 +8411,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 10106101,
     CreatureId = 852512,
     DestroyWithCreator = 1,
-    HitOthers = T.RT_106,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_209,
+    HitOthers = T.RT_108,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_216,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 13,
@@ -8104,9 +8425,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 10106101,
     CreatureId = 852513,
     DestroyWithCreator = 1,
-    HitOthers = T.RT_106,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_209,
+    HitOthers = T.RT_108,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_216,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 13,
@@ -8118,9 +8439,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 900501,
     CreatureId = 852514,
     DestroyWithCreator = 1,
-    HitOthers = T.RT_106,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_209,
+    HitOthers = T.RT_108,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_216,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 15,
@@ -8132,9 +8453,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 900501,
     CreatureId = 852515,
     DestroyWithCreator = 1,
-    HitOthers = T.RT_106,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_209,
+    HitOthers = T.RT_108,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_216,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 15,
@@ -8146,9 +8467,9 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 900501,
     CreatureId = 852516,
     DestroyWithCreator = 1,
-    HitOthers = T.RT_106,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_209,
+    HitOthers = T.RT_108,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_216,
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 15,
@@ -8168,12 +8489,11 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     BulletFXID = 852502,
     CreatureId = 852518,
-    DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitOthers = T.RT_106,
+    HitFriend = {852569},
     Speed = 0,
     Tags = T.RT_8,
-    TimeLife = 3.5
+    TimeLife = 3
   },
   [852519] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Yidai_Skill10_ShockWave2.BP_Boss_Yidai_Skill10_ShockWave2",
@@ -8182,11 +8502,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 852519,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitOthers = {
-      1,
-      1,
-      0
-    },
+    HitEnemy = {852571},
+    HitFriend = {852572},
     Speed = 0,
     Tags = T.RT_8,
     TimeLife = 3.5
@@ -8200,10 +8517,10 @@ return ReadOnly("SkillCreature", {
     GravityCoefficient = 1,
     GravityFactor = 7,
     HitScene = {900016},
-    ShapeInfo = T.RT_212,
-    SpawnSocket = T.RT_194,
+    ShapeInfo = T.RT_219,
+    SpawnSocket = T.RT_202,
     Speed = 0.1,
-    Tags = T.RT_313,
+    Tags = T.RT_320,
     TimeLife = 3
   },
   [900002] = {
@@ -8215,11 +8532,11 @@ return ReadOnly("SkillCreature", {
     DelayPlayFX = 0.9,
     DestroyWithCreator = 1,
     DontDestroyExceptLife = true,
-    HitEnemy = T.RT_314,
-    HitScene = T.RT_314,
+    HitEnemy = T.RT_321,
+    HitScene = T.RT_321,
     ShapeInfo = {Radius = 200, ShapeType = "Sphere"},
     Speed = 0,
-    Tags = T.RT_313,
+    Tags = T.RT_320,
     TimeLife = 3
   },
   [900061] = {
@@ -8229,9 +8546,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 900061,
     HitEnemy = {900062},
     HitScene = {900063},
-    ShapeInfo = T.RT_166,
+    ShapeInfo = T.RT_168,
     Speed = 4000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 5
   },
   [900071] = {
@@ -8247,7 +8564,7 @@ return ReadOnly("SkillCreature", {
     EnterPool = true,
     HitEnemy = {900202},
     HitScene = {900203},
-    ShapeInfo = T.RT_150,
+    ShapeInfo = T.RT_152,
     SpawnSocket = {SpawnSocket = "arrow01", UseLocation = "Weapon"},
     Speed = 3500,
     Tags = T.RT_2,
@@ -8261,9 +8578,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 900401,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_317,
-    HitScene = T.RT_318,
-    ShapeInfo = T.RT_81,
+    HitEnemy = T.RT_325,
+    HitScene = T.RT_326,
+    ShapeInfo = T.RT_83,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -8280,9 +8597,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 900402,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_317,
-    HitScene = T.RT_318,
-    ShapeInfo = T.RT_81,
+    HitEnemy = T.RT_325,
+    HitScene = T.RT_326,
+    ShapeInfo = T.RT_83,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -8299,9 +8616,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 900403,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_317,
-    HitScene = T.RT_318,
-    ShapeInfo = T.RT_81,
+    HitEnemy = T.RT_325,
+    HitScene = T.RT_326,
+    ShapeInfo = T.RT_83,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -8318,9 +8635,9 @@ return ReadOnly("SkillCreature", {
     CreatureId = 900404,
     DestroyWithCreator = 1,
     FixedBornRotation = true,
-    HitEnemy = T.RT_317,
-    HitScene = T.RT_318,
-    ShapeInfo = T.RT_81,
+    HitEnemy = T.RT_325,
+    HitScene = T.RT_326,
+    ShapeInfo = T.RT_83,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 10,
@@ -8337,9 +8654,9 @@ return ReadOnly("SkillCreature", {
     GravityAdapt = true,
     GravityCoefficient = 1.5,
     GravityFactor = 1,
-    HitEnemy = T.RT_319,
-    HitScene = T.RT_319,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_327,
+    HitScene = T.RT_327,
+    ShapeInfo = T.RT_88,
     SpawnSocket = {SpawnSocket = "Petal06_a", UseLocation = "Char"},
     Speed = 1200,
     Tags = T.RT_2,
@@ -8352,9 +8669,9 @@ return ReadOnly("SkillCreature", {
     GravityAdapt = true,
     GravityCoefficient = 1,
     GravityFactor = 1000,
-    HitEnemy = T.RT_320,
-    HitScene = T.RT_320,
-    ShapeInfo = T.RT_59,
+    HitEnemy = T.RT_328,
+    HitScene = T.RT_328,
+    ShapeInfo = T.RT_61,
     SpawnSocket = T.RT_19,
     Speed = 900,
     Tags = T.RT_8,
@@ -8365,7 +8682,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 900601,
     HitEnemy = {900606},
-    ShapeInfo = T.RT_321,
+    ShapeInfo = T.RT_329,
     Speed = 0,
     TimeLife = 2
   },
@@ -8374,7 +8691,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     CreatureId = 900602,
     HitEnemy = {900613},
-    ShapeInfo = T.RT_321,
+    ShapeInfo = T.RT_329,
     Speed = 0,
     TimeLife = 2
   },
@@ -8384,21 +8701,21 @@ return ReadOnly("SkillCreature", {
     CreatureId = 900701,
     HitEnemy = {900702},
     HitScene = {900703},
-    ShapeInfo = T.RT_81,
+    ShapeInfo = T.RT_83,
     SpawnSocket = T.RT_16,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 10,
-    TraceRange = T.RT_154,
+    TraceRange = T.RT_156,
     TraceSpeed = 500
   },
   [900702] = {
     BoundCount = 1,
     BulletFXID = 900703,
     CreatureId = 900702,
-    DestroyEffects = T.RT_322,
-    HitEnemy = T.RT_322,
-    HitScene = T.RT_322,
+    DestroyEffects = T.RT_330,
+    HitEnemy = T.RT_330,
+    HitScene = T.RT_330,
     ShapeInfo = {Radius = 25, ShapeType = "Sphere"},
     SpawnSocket = T.RT_16,
     Speed = 700,
@@ -8415,12 +8732,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950002},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950002] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_Treasure.BP_NE_Dajie_Treasure",
@@ -8431,12 +8748,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950006},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950003] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_Treasure.BP_NE_Dajie_Treasure",
@@ -8446,13 +8763,13 @@ return ReadOnly("SkillCreature", {
     FixedBornRotation = true,
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
-    HitScene = T.RT_325,
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    HitScene = T.RT_333,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950004] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_Treasure.BP_NE_Dajie_Treasure",
@@ -8463,12 +8780,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950008},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950005] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_Treasure.BP_NE_Dajie_Treasure",
@@ -8479,12 +8796,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950009},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950006] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_Treasure02.BP_NE_Dajie_Treasure02",
@@ -8495,9 +8812,9 @@ return ReadOnly("SkillCreature", {
     GravityAdapt = true,
     GravityCoefficient = 2,
     GravityFactor = 9999,
-    HitScene = T.RT_325,
+    HitScene = T.RT_333,
     ScenceBound = 5,
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     SpawnSocket = T.RT_19,
     Speed = 2000,
     Tags = T.RT_8,
@@ -8512,12 +8829,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950014},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950008] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_Treasure.BP_NE_Dajie_Treasure",
@@ -8528,12 +8845,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950015},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950009] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_Treasure.BP_NE_Dajie_Treasure",
@@ -8544,12 +8861,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950016},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950010] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_Treasure.BP_NE_Dajie_Treasure",
@@ -8560,12 +8877,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950017},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950011] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Dajie_TemBomb.BP_NE_Dajie_TemBomb",
@@ -8576,12 +8893,12 @@ return ReadOnly("SkillCreature", {
     FixedMoveRotation = true,
     GravityCoefficient = 1.5,
     HitScene = {950020},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_323,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_331,
     Speed = 800,
     Tags = T.RT_8,
     TimeLife = 10,
-    Vars = T.RT_324
+    Vars = T.RT_332
   },
   [950101] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Haer_Creature01.BP_NE_Haer_Creature01",
@@ -8593,7 +8910,7 @@ return ReadOnly("SkillCreature", {
     GravityFactor = 9999,
     HitEnemy = {950106},
     HitScene = {950107},
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     SpawnSocket = T.RT_19,
     Speed = 1300,
     Tags = T.RT_8,
@@ -8604,7 +8921,7 @@ return ReadOnly("SkillCreature", {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Monster/BP_NE_Haer_Creature02.BP_NE_Haer_Creature02",
     BoundCount = -1,
     CreatureId = 950102,
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     SpawnSocket = T.RT_19,
     Speed = 0,
     Tags = T.RT_8,
@@ -8616,13 +8933,13 @@ return ReadOnly("SkillCreature", {
     CreatureId = 950401,
     HitEnemy = {950402},
     HitScene = {950403},
-    ShapeInfo = T.RT_81,
+    ShapeInfo = T.RT_83,
     SpawnSocket = T.RT_12,
     Speed = 1200,
     Tags = T.RT_2,
     TimeLife = 10,
     TraceDelay = 0.1,
-    TraceRange = T.RT_176,
+    TraceRange = T.RT_178,
     TraceSpeed = 250
   },
   [980301] = {
@@ -9005,6 +9322,26 @@ return ReadOnly("SkillCreature", {
     TimeLife = -1,
     WindInfo = T.RT_35
   },
+  [1029901] = {
+    BoundCount = -1,
+    CreatureEffects = {1029903},
+    CreatureId = 1029901,
+    EnterPool = true,
+    FixedBornRotation = true,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 1
+  },
+  [1029902] = {
+    BoundCount = -1,
+    CreatureEffects = {1029904},
+    CreatureId = 1029902,
+    EnterPool = true,
+    FixedBornRotation = true,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 1
+  },
   [1030201] = {
     AllowAttackRangeModify = T.RT_36,
     AttackRangeType = "Normal",
@@ -9225,7 +9562,7 @@ return ReadOnly("SkillCreature", {
     Vars = T.RT_20
   },
   [2010111] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2010111,
     ClientOwner = true,
@@ -9238,12 +9575,12 @@ return ReadOnly("SkillCreature", {
     ShapeInfo = T.RT_15,
     SpawnSocket = T.RT_16,
     Speed = 13500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 3,
     UseBulletCreature = true
   },
   [2010121] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2010112,
     ClientOwner = true,
@@ -9256,12 +9593,12 @@ return ReadOnly("SkillCreature", {
     ShapeInfo = T.RT_15,
     SpawnSocket = T.RT_16,
     Speed = 13500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 3,
     UseBulletCreature = true
   },
   [2010411] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2020101,
     ClientOwner = true,
@@ -9275,7 +9612,7 @@ return ReadOnly("SkillCreature", {
     ShapeInfo = T.RT_15,
     SpawnSocket = T.RT_16,
     Speed = 15000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 3,
     UseBulletCreature = true
   },
@@ -9283,7 +9620,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 2040301,
     CreatureId = 2010412,
     RealDestroyEffects = {2010415, 2010416},
-    ShapeInfo = T.RT_90,
+    ShapeInfo = T.RT_92,
     Speed = 0,
     Tags = T.RT_17,
     TimeLife = 0.05
@@ -9292,13 +9629,13 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 2040301,
     CreatureId = 2010413,
     RealDestroyEffects = {2010417},
-    ShapeInfo = T.RT_90,
+    ShapeInfo = T.RT_92,
     Speed = 0,
     Tags = T.RT_17,
     TimeLife = 0.5
   },
   [2019911] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2020101,
     ClientOwner = true,
@@ -9311,12 +9648,12 @@ return ReadOnly("SkillCreature", {
     ShapeInfo = T.RT_15,
     SpawnSocket = T.RT_16,
     Speed = 15000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 0.8,
     UseBulletCreature = true
   },
   [2020111] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2020101,
     ClientOwner = true,
@@ -9324,17 +9661,17 @@ return ReadOnly("SkillCreature", {
     EffectMultiple = true,
     EnterPool = true,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_92,
-    HitScene = T.RT_93,
+    HitEnemy = T.RT_94,
+    HitScene = T.RT_95,
     ShapeInfo = T.RT_15,
     SpawnSocket = T.RT_16,
     Speed = 15000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 0.8,
     UseBulletCreature = true
   },
   [2020112] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2020101,
     ClientOwner = true,
@@ -9342,89 +9679,89 @@ return ReadOnly("SkillCreature", {
     EffectMultiple = true,
     EnterPool = true,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_92,
-    HitScene = T.RT_93,
+    HitEnemy = T.RT_94,
+    HitScene = T.RT_95,
     ShapeInfo = T.RT_15,
-    SpawnSocket = T.RT_94,
+    SpawnSocket = T.RT_96,
     Speed = 15000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 0.8,
     UseBulletCreature = true
   },
   [2020311] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Crossbow_20203.BP_Crossbow_20203",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 2,
     BulletFXID = 2020301,
     ClientOwner = true,
     CreatureId = 2020311,
     EffectMultiple = true,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_95,
-    HitOthers = T.RT_96,
-    HitScene = T.RT_97,
+    HitEnemy = T.RT_97,
+    HitOthers = T.RT_98,
+    HitScene = T.RT_99,
     RayCrossSceneCount = 1,
     SpawnSocket = T.RT_16,
     Speed = 6500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 3
   },
   [2020312] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Crossbow_20203.BP_Crossbow_20203",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 2,
     BulletFXID = 2020301,
     ClientOwner = true,
     CreatureId = 2020312,
     EffectMultiple = true,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_95,
-    HitOthers = T.RT_96,
-    HitScene = T.RT_97,
+    HitEnemy = T.RT_97,
+    HitOthers = T.RT_98,
+    HitScene = T.RT_99,
     RayCrossSceneCount = 1,
-    SpawnSocket = T.RT_94,
+    SpawnSocket = T.RT_96,
     Speed = 6500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 3
   },
   [2020711] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Crossbow_20207.BP_Crossbow_20207",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 14,
     BulletFXID = 2020701,
     ClientOwner = true,
     CreatureId = 2020711,
     EffectMultiple = true,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_98,
-    HitOthers = T.RT_96,
-    HitScene = T.RT_99,
+    HitEnemy = T.RT_100,
+    HitOthers = T.RT_98,
+    HitScene = T.RT_101,
     RayCrossSceneCount = 1,
     RefreshTargetParam = 0.1,
     RefreshTargetRule = 1,
     SpawnSocket = T.RT_16,
     Speed = 6500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = -1
   },
   [2020712] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Crossbow_20207.BP_Crossbow_20207",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 14,
     BulletFXID = 2020701,
     ClientOwner = true,
     CreatureId = 2020712,
     EffectMultiple = true,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_98,
-    HitOthers = T.RT_96,
-    HitScene = T.RT_99,
+    HitEnemy = T.RT_100,
+    HitOthers = T.RT_98,
+    HitScene = T.RT_101,
     RayCrossSceneCount = 1,
     RefreshTargetParam = 0.1,
     RefreshTargetRule = 1,
-    SpawnSocket = T.RT_94,
+    SpawnSocket = T.RT_96,
     Speed = 6500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = -1
   },
   [2030111] = {
@@ -9462,7 +9799,7 @@ return ReadOnly("SkillCreature", {
       2030214,
       2030215
     },
-    HitOthers = T.RT_96,
+    HitOthers = T.RT_98,
     HitScene = {
       2030213,
       2030214,
@@ -9582,8 +9919,8 @@ return ReadOnly("SkillCreature", {
     EffectMultiple = true,
     EnterPool = true,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_100,
-    HitScene = T.RT_100,
+    HitEnemy = T.RT_102,
+    HitScene = T.RT_102,
     ShapeInfo = T.RT_30,
     SpawnSocket = T.RT_16,
     Speed = 2000,
@@ -9597,12 +9934,12 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 2030402,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_101,
+    HitEnemy = T.RT_103,
     HitOthers = T.RT_24,
-    RealDestroyEffects = T.RT_102,
+    RealDestroyEffects = T.RT_104,
     RefreshTargetParam = 0.3,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_103,
+    ShapeInfo = T.RT_105,
     Speed = 1000,
     Tags = T.RT_17,
     TimeLife = 8,
@@ -9614,19 +9951,19 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 2030403,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_101,
+    HitEnemy = T.RT_103,
     HitOthers = T.RT_24,
-    RealDestroyEffects = T.RT_102,
+    RealDestroyEffects = T.RT_104,
     RefreshTargetParam = 0.3,
     RefreshTargetRule = 1,
-    ShapeInfo = T.RT_103,
+    ShapeInfo = T.RT_105,
     Speed = 1000,
     Tags = T.RT_17,
     TimeLife = 8,
     WindInfo = T.RT_35
   },
   [2030511] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2030501,
     ClientOwner = true,
@@ -9639,12 +9976,12 @@ return ReadOnly("SkillCreature", {
     ShapeInfo = T.RT_15,
     SpawnSocket = T.RT_16,
     Speed = 12000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 2,
     UseBulletCreature = true
   },
   [2040111] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2040103,
     ClientOwner = true,
@@ -9662,7 +9999,7 @@ return ReadOnly("SkillCreature", {
     },
     SpawnSocket = T.RT_16,
     Speed = 15000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 0.8,
     UseBulletCreature = true
   },
@@ -9673,17 +10010,17 @@ return ReadOnly("SkillCreature", {
     CreatureId = 2040211,
     DontDestroyExceptLife = true,
     FixSpeedByWeapon = true,
-    HitEnemy = T.RT_104,
+    HitEnemy = T.RT_106,
     HitOthers = {
       2,
       2,
       2
     },
-    HitScene = T.RT_104,
+    HitScene = T.RT_106,
     RayCrossSceneCount = 1,
     RealDestroyEffects = {2040213},
     ServerOwner = true,
-    ShapeInfo = T.RT_60,
+    ShapeInfo = T.RT_62,
     SpawnSocket = T.RT_16,
     Speed = 2000,
     Tags = T.RT_17,
@@ -9699,18 +10036,18 @@ return ReadOnly("SkillCreature", {
     FixSpeedByWeapon = true,
     HitEnemy = {2040313, 2040315},
     HitScene = {2040314, 2040315},
-    ShapeInfo = T.RT_90,
+    ShapeInfo = T.RT_92,
     SpawnSocket = T.RT_16,
     Speed = 1400,
     Tags = T.RT_17,
     TimeLife = 8,
     TraceDelay = 0.11,
-    TraceRange = T.RT_105,
+    TraceRange = T.RT_107,
     TraceSpeed = 200
   },
   [2040511] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Shotgun_20405_NormalBullet.BP_Shotgun_20405_NormalBullet",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = -1,
     BulletFXID = 2040502,
     CreatureId = 2040511,
@@ -9725,7 +10062,7 @@ return ReadOnly("SkillCreature", {
     },
     SpawnSocket = T.RT_16,
     Speed = 3500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 5
   },
   [2040512] = {
@@ -9735,7 +10072,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 2040512,
     EffectMultiple = true,
     HitEnemy = {2040515},
-    HitOthers = T.RT_106,
+    HitOthers = T.RT_108,
     RealDestroyEffects = {2040518, 2040519},
     RefreshTargetParam = 1,
     RefreshTargetRule = 1,
@@ -9781,7 +10118,7 @@ return ReadOnly("SkillCreature", {
     FixSpeedByWeapon = true,
     HitEnemy = {2040615},
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_107,
+    ShapeInfo = T.RT_109,
     Speed = 1000,
     Tags = T.RT_17,
     TimeLife = 3
@@ -9795,17 +10132,17 @@ return ReadOnly("SkillCreature", {
     FixSpeedByWeapon = true,
     HitEnemy = {2040712},
     HitScene = {2040713},
-    ShapeInfo = T.RT_90,
+    ShapeInfo = T.RT_92,
     SpawnSocket = T.RT_16,
     Speed = 3000,
     Tags = T.RT_17,
     TimeLife = 3,
     TraceDelay = 0.11,
-    TraceRange = T.RT_105,
+    TraceRange = T.RT_107,
     TraceSpeed = 200
   },
   [2050111] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2050101,
     ClientOwner = true,
@@ -9815,24 +10152,24 @@ return ReadOnly("SkillCreature", {
     FixSpeedByWeapon = true,
     HitEnemy = {2050113},
     HitScene = {2050114},
-    ShapeInfo = T.RT_108,
+    ShapeInfo = T.RT_110,
     SpawnSocket = T.RT_16,
     Speed = 12000,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 2,
     UseBulletCreature = true
   },
   [2050511] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2050101,
     ClientOwner = true,
     CreatureId = 2050511,
     EffectMultiple = true,
     EnterPool = true,
-    HitEnemy = T.RT_109,
+    HitEnemy = T.RT_111,
     HitOthers = T.RT_41,
-    HitScene = T.RT_109,
+    HitScene = T.RT_111,
     ShapeInfo = T.RT_15,
     SpawnSocket = T.RT_16,
     Speed = 12000,
@@ -9846,7 +10183,7 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 2050701,
     FixSpeedByWeapon = true,
-    HitBountCount = T.RT_110,
+    HitBountCount = T.RT_112,
     HitEnemy = {2050713},
     HitScene = {2050714, 2050721},
     LoopExecuteSkillEffects = {
@@ -9856,10 +10193,10 @@ return ReadOnly("SkillCreature", {
     },
     RealDestroyEffects = {2050722},
     RefreshTargetRule = 2,
-    ShapeInfo = T.RT_90,
+    ShapeInfo = T.RT_92,
     SpawnSocket = T.RT_16,
     Speed = 2500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 5
   },
   [2051001] = {
@@ -9869,7 +10206,7 @@ return ReadOnly("SkillCreature", {
     ClientOwner = true,
     CreatureId = 2051001,
     FixSpeedByWeapon = true,
-    HitBountCount = T.RT_110,
+    HitBountCount = T.RT_112,
     HitEnemy = {2051013},
     HitScene = {2051014, 2051021},
     LoopExecuteSkillEffects = {
@@ -9879,37 +10216,94 @@ return ReadOnly("SkillCreature", {
     },
     RealDestroyEffects = {2051022},
     RefreshTargetRule = 2,
-    ShapeInfo = T.RT_90,
+    ShapeInfo = T.RT_92,
     SpawnSocket = T.RT_16,
     Speed = 3500,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 5
   },
   [2051111] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Machinegun_20511_Creature.BP_Machinegun_20511_Creature",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2051101,
-    ClientOwner = true,
     CollisionDelayTime = 10,
     CreatureId = 2051111,
     EffectMultiple = true,
     EnterPool = true,
     FixSpeedByWeapon = true,
-    HitOthers = T.RT_58,
-    ShapeInfo = T.RT_111,
+    HitOthers = T.RT_60,
+    ShapeInfo = T.RT_113,
     SpawnSocket = T.RT_16,
     Speed = 200,
-    Tags = T.RT_89,
+    Tags = T.RT_91,
     TimeLife = 10,
     TraceDelay = 0.1,
-    TraceRange = T.RT_105,
+    TraceRange = T.RT_107,
     TraceSpeed = 100,
+    UseBulletCreature = true
+  },
+  [2059901] = {
+    BoundCount = -1,
+    CreatureEffects = {2059905},
+    CreatureId = 2059901,
+    EnterPool = true,
+    FixedBornRotation = true,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 1
+  },
+  [2059902] = {
+    BoundCount = -1,
+    CreatureEffects = {2059906},
+    CreatureId = 2059902,
+    EnterPool = true,
+    FixedBornRotation = true,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 1
+  },
+  [2059903] = {
+    BoundCount = -1,
+    CreatureEffects = {2059907},
+    CreatureId = 2059903,
+    EnterPool = true,
+    FixedBornRotation = true,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 1
+  },
+  [2059904] = {
+    BoundCount = -1,
+    CreatureEffects = {2059908},
+    CreatureId = 2059904,
+    EnterPool = true,
+    FixedBornRotation = true,
+    Speed = 0,
+    Tags = T.RT_14,
+    TimeLife = 1
+  },
+  [2059911] = {
+    BornLocationOffset = T.RT_90,
+    BoundCount = -1,
+    BulletFXID = 2059904,
+    ClientOwner = true,
+    CreatureId = 2059911,
+    EffectMultiple = true,
+    EnterPool = true,
+    FixSpeedByWeapon = true,
+    HitEnemy = {2059913},
+    HitScene = {2059914},
+    ShapeInfo = T.RT_62,
+    SpawnSocket = T.RT_16,
+    Speed = 2500,
+    Tags = T.RT_91,
+    TimeLife = 3,
     UseBulletCreature = true
   },
   [2060111] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Bow_20601.BP_Bow_20601",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2060101,
     ClientOwner = true,
@@ -9918,19 +10312,19 @@ return ReadOnly("SkillCreature", {
     FixSpeedByWeapon = true,
     GravityCoefficient = 1,
     HitEnemy = {2060112},
-    HitScene = T.RT_112,
+    HitScene = T.RT_114,
     ParabolaDelay = 0.6,
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_60,
+    ShapeInfo = T.RT_62,
     SpawnSocket = T.RT_28,
     Speed = 4000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 20,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [2060121] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Bow_20601.BP_Bow_20601",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 3,
     BulletFXID = 2060111,
     ClientOwner = true,
@@ -9941,13 +10335,13 @@ return ReadOnly("SkillCreature", {
     GravityCoefficient = 1,
     HitEnemy = {2060122},
     HitOthers = T.RT_27,
-    HitScene = T.RT_112,
+    HitScene = T.RT_114,
     ParabolaDelay = 0.8,
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_111,
+    ShapeInfo = T.RT_113,
     SpawnSocket = T.RT_28,
     Speed = 5000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 20,
     WindInfo = {
       Radius = 2.5,
@@ -9957,7 +10351,7 @@ return ReadOnly("SkillCreature", {
   },
   [2060131] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Bow_20601.BP_Bow_20601",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 5,
     BulletFXID = 2060112,
     ClientOwner = true,
@@ -9968,18 +10362,18 @@ return ReadOnly("SkillCreature", {
     GravityCoefficient = 1,
     HitEnemy = {2060132},
     HitOthers = T.RT_27,
-    HitScene = T.RT_112,
+    HitScene = T.RT_114,
     ParabolaDelay = 1.5,
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_111,
+    ShapeInfo = T.RT_113,
     SpawnSocket = T.RT_28,
     Speed = 6000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 20,
     WindInfo = T.RT_35
   },
   [2060211] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2060201,
     ClientOwner = true,
@@ -9992,16 +10386,16 @@ return ReadOnly("SkillCreature", {
     HitScene = {2060214},
     ParabolaDelay = 1.5,
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_60,
+    ShapeInfo = T.RT_62,
     SpawnSocket = T.RT_28,
     Speed = 4000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 20,
     UseBulletCreature = true,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [2060311] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = -1,
     BulletFXID = 2060302,
     ClientOwner = true,
@@ -10009,18 +10403,18 @@ return ReadOnly("SkillCreature", {
     EffectMultiple = true,
     FixSpeedByWeapon = true,
     HitEnemy = {2060316},
-    HitOthers = T.RT_58,
-    ShapeInfo = T.RT_60,
+    HitOthers = T.RT_60,
+    ShapeInfo = T.RT_62,
     SpawnSocket = T.RT_28,
     Speed = 8000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 5,
     UseBulletCreature = true,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [2060312] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Bow_20603_Creature.BP_Bow_20603_Creature",
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = -1,
     BulletFXID = 2060302,
     ClientOwner = true,
@@ -10028,16 +10422,16 @@ return ReadOnly("SkillCreature", {
     EffectMultiple = true,
     FixSpeedByWeapon = true,
     HitEnemy = {2060318},
-    HitOthers = T.RT_58,
-    ShapeInfo = T.RT_60,
+    HitOthers = T.RT_60,
+    ShapeInfo = T.RT_62,
     SpawnSocket = T.RT_28,
     Speed = 8000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 20,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [2060511] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2060101,
     ClientOwner = true,
@@ -10050,16 +10444,16 @@ return ReadOnly("SkillCreature", {
     HitScene = {2060513},
     ParabolaDelay = 0.6,
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_60,
+    ShapeInfo = T.RT_62,
     SpawnSocket = T.RT_28,
     Speed = 4000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 5,
     UseBulletCreature = true,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [2060521] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2060111,
     ClientOwner = true,
@@ -10072,16 +10466,16 @@ return ReadOnly("SkillCreature", {
     HitScene = {2060523},
     ParabolaDelay = 1.2,
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_111,
+    ShapeInfo = T.RT_113,
     SpawnSocket = T.RT_28,
     Speed = 9000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 5,
     UseBulletCreature = true,
     WindInfo = T.RT_35
   },
   [2069911] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 1,
     BulletFXID = 2060101,
     ClientOwner = true,
@@ -10091,19 +10485,19 @@ return ReadOnly("SkillCreature", {
     FixSpeedByWeapon = true,
     GravityCoefficient = 1,
     HitEnemy = {2069912},
-    HitScene = T.RT_114,
+    HitScene = T.RT_116,
     ParabolaDelay = 0.6,
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_60,
+    ShapeInfo = T.RT_62,
     SpawnSocket = T.RT_28,
     Speed = 4000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 20,
     UseBulletCreature = true,
-    WindInfo = T.RT_61
+    WindInfo = T.RT_63
   },
   [2069921] = {
-    BornLocationOffset = T.RT_88,
+    BornLocationOffset = T.RT_90,
     BoundCount = 3,
     BulletFXID = 2060111,
     ClientOwner = true,
@@ -10113,13 +10507,13 @@ return ReadOnly("SkillCreature", {
     FixSpeedByWeapon = true,
     GravityCoefficient = 1,
     HitEnemy = {2069922},
-    HitScene = T.RT_114,
+    HitScene = T.RT_116,
     ParabolaDelay = 0.8,
     RayCrossSceneCount = 1,
-    ShapeInfo = T.RT_111,
+    ShapeInfo = T.RT_113,
     SpawnSocket = T.RT_28,
     Speed = 5000,
-    Tags = T.RT_113,
+    Tags = T.RT_115,
     TimeLife = 20,
     UseBulletCreature = true,
     WindInfo = T.RT_35
@@ -10142,9 +10536,9 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 90002,
     CreatureId = 4010102,
-    HitEnemy = T.RT_123,
-    HitScene = T.RT_124,
-    ShapeInfo = T.RT_108,
+    HitEnemy = T.RT_126,
+    HitScene = T.RT_127,
+    ShapeInfo = T.RT_110,
     Speed = 15000,
     Tags = T.RT_17,
     TimeLife = 5
@@ -10154,9 +10548,9 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 90002,
     CreatureId = 4010103,
-    HitEnemy = T.RT_123,
-    HitScene = T.RT_124,
-    ShapeInfo = T.RT_108,
+    HitEnemy = T.RT_126,
+    HitScene = T.RT_127,
+    ShapeInfo = T.RT_110,
     Speed = 15000,
     Tags = T.RT_17,
     TimeLife = 5,
@@ -10178,9 +10572,9 @@ return ReadOnly("SkillCreature", {
     BoundCount = 2,
     BulletFXID = 90002,
     CreatureId = 4010105,
-    HitEnemy = T.RT_125,
-    HitOthers = T.RT_96,
-    HitScene = T.RT_126,
+    HitEnemy = T.RT_128,
+    HitOthers = T.RT_98,
+    HitScene = T.RT_129,
     RefreshTargetParam = 0.1,
     RefreshTargetRule = 1,
     Speed = 15000,
@@ -10193,8 +10587,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 90002,
     CreatureId = 4010106,
     HitEnemy = {401020006},
-    HitOthers = T.RT_96,
-    HitScene = T.RT_127,
+    HitOthers = T.RT_98,
+    HitScene = T.RT_130,
     RefreshTargetParam = 0.1,
     RefreshTargetRule = 1,
     Speed = 15000,
@@ -10207,8 +10601,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 90001,
     CreatureId = 4010201,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_128,
-    HitScene = T.RT_128,
+    HitEnemy = T.RT_131,
+    HitScene = T.RT_131,
     ShapeInfo = T.RT_25,
     Speed = 5000,
     Tags = T.RT_17,
@@ -10219,9 +10613,9 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 90002,
     CreatureId = 4010202,
-    HitEnemy = T.RT_126,
-    HitScene = T.RT_125,
-    ShapeInfo = T.RT_108,
+    HitEnemy = T.RT_129,
+    HitScene = T.RT_128,
+    ShapeInfo = T.RT_110,
     Speed = 25000,
     Tags = T.RT_17,
     TimeLife = 3
@@ -10232,8 +10626,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 90002,
     CreatureId = 4010203,
     HitEnemy = {401020008},
-    HitScene = T.RT_127,
-    ShapeInfo = T.RT_108,
+    HitScene = T.RT_130,
+    ShapeInfo = T.RT_110,
     Speed = 25000,
     Tags = T.RT_17,
     TimeLife = 3
@@ -10244,8 +10638,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 40101001,
     CreatureId = 4010204,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_129,
-    HitScene = T.RT_129,
+    HitEnemy = T.RT_132,
+    HitScene = T.RT_132,
     ShapeInfo = T.RT_25,
     Speed = 5000,
     Tags = T.RT_17,
@@ -10257,8 +10651,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 40101002,
     CreatureId = 4010205,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_130,
-    HitScene = T.RT_130,
+    HitEnemy = T.RT_133,
+    HitScene = T.RT_133,
     ShapeInfo = T.RT_25,
     Speed = 5000,
     Tags = T.RT_17,
@@ -10270,8 +10664,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 90001,
     CreatureId = 4010206,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_131,
-    HitScene = T.RT_131,
+    HitEnemy = T.RT_134,
+    HitScene = T.RT_134,
     ShapeInfo = T.RT_25,
     Speed = 5000,
     Tags = T.RT_17,
@@ -10283,8 +10677,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 40101001,
     CreatureId = 4010207,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_132,
-    HitScene = T.RT_132,
+    HitEnemy = T.RT_135,
+    HitScene = T.RT_135,
     ShapeInfo = T.RT_25,
     Speed = 5000,
     Tags = T.RT_17,
@@ -10296,8 +10690,8 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 40101002,
     CreatureId = 4010208,
     DestroyWithCreator = 1,
-    HitEnemy = T.RT_133,
-    HitScene = T.RT_133,
+    HitEnemy = T.RT_136,
+    HitScene = T.RT_136,
     ShapeInfo = T.RT_25,
     Speed = 5000,
     Tags = T.RT_17,
@@ -10322,7 +10716,7 @@ return ReadOnly("SkillCreature", {
     CreatureId = 4200101,
     HitEnemy = {4200107},
     HitScene = {4200108},
-    ShapeInfo = T.RT_107,
+    ShapeInfo = T.RT_109,
     Speed = 8000,
     Tags = T.RT_17,
     TimeLife = 5
@@ -10333,15 +10727,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512902,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_242,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_249,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [8512903] = {
@@ -10350,15 +10744,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512903,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_244,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_251,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [8512904] = {
@@ -10367,15 +10761,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512904,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_245,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_252,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [8512905] = {
@@ -10384,15 +10778,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512905,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_246,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_253,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [8512906] = {
@@ -10401,15 +10795,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512906,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_247,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_254,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [8512907] = {
@@ -10418,15 +10812,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512907,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_248,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_255,
     Speed = 1800,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [8512908] = {
@@ -10445,15 +10839,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512928,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_258,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_265,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [8512929] = {
@@ -10462,15 +10856,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512929,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_259,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_266,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.2,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1000
   },
   [8512931] = {
@@ -10479,15 +10873,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512931,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_242,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_249,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512932] = {
@@ -10496,15 +10890,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512932,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_245,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_252,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512933] = {
@@ -10513,15 +10907,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512933,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_244,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_251,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512934] = {
@@ -10530,15 +10924,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512934,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_251,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_258,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512935] = {
@@ -10547,15 +10941,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512935,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_252,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_259,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512936] = {
@@ -10564,15 +10958,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512936,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_253,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_260,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512937] = {
@@ -10581,15 +10975,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512937,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_254,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_261,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512938] = {
@@ -10598,15 +10992,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512938,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_255,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_262,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512939] = {
@@ -10615,15 +11009,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512939,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_256,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_263,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512940] = {
@@ -10632,15 +11026,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512940,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_247,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_254,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512941] = {
@@ -10649,15 +11043,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512941,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_248,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_255,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [8512942] = {
@@ -10666,15 +11060,15 @@ return ReadOnly("SkillCreature", {
     CreatureId = 8512942,
     DestroyWithCreator = 1,
     DirectionOnSocket = true,
-    HitEnemy = T.RT_260,
-    HitScene = T.RT_261,
-    ShapeInfo = T.RT_81,
-    SpawnSocket = T.RT_246,
+    HitEnemy = T.RT_267,
+    HitScene = T.RT_268,
+    ShapeInfo = T.RT_83,
+    SpawnSocket = T.RT_253,
     Speed = 2500,
     Tags = T.RT_2,
     TimeLife = 5,
     TraceDelay = 0.1,
-    TraceRange = T.RT_243,
+    TraceRange = T.RT_250,
     TraceSpeed = 1500
   },
   [10105102] = {
@@ -10780,11 +11174,11 @@ return ReadOnly("SkillCreature", {
   },
   [20135001] = {
     BoundCount = -1,
-    CreatureEffects = T.RT_91,
+    CreatureEffects = T.RT_93,
     CreatureId = 20135001,
     LoopExecuteSkillEffects = {
       Interval = 0.4,
-      SkillEffects = T.RT_91
+      SkillEffects = T.RT_93
     },
     SpawnSocket = T.RT_34,
     Speed = 1000,
@@ -10807,8 +11201,8 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 10106102,
     CreatureId = 500000301,
-    HitEnemy = T.RT_142,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_144,
+    ShapeInfo = T.RT_88,
     SpawnSocket = {
       EffectCreatureId = 5000303,
       SpawnSocket = "Root",
@@ -10822,8 +11216,8 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 10106102,
     CreatureId = 500000302,
-    HitEnemy = T.RT_142,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_144,
+    ShapeInfo = T.RT_88,
     SpawnSocket = {
       EffectCreatureId = 5000304,
       SpawnSocket = "Root",
@@ -10837,8 +11231,8 @@ return ReadOnly("SkillCreature", {
     BoundCount = 1,
     BulletFXID = 10106102,
     CreatureId = 500000303,
-    HitEnemy = T.RT_142,
-    ShapeInfo = T.RT_86,
+    HitEnemy = T.RT_144,
+    ShapeInfo = T.RT_88,
     SpawnSocket = {
       EffectCreatureId = 5000305,
       SpawnSocket = "Root",
@@ -10854,7 +11248,7 @@ return ReadOnly("SkillCreature", {
     BulletFXID = 500000305,
     CreatureId = 500000305,
     HitEnemy = {500000306},
-    ShapeInfo = T.RT_86,
+    ShapeInfo = T.RT_88,
     Speed = 2000,
     Tags = T.RT_8,
     TimeLife = 8
@@ -10877,8 +11271,8 @@ return ReadOnly("SkillCreature", {
     CreatureId = 600000101,
     HitEnemy = {600000102},
     HitScene = {600000104},
-    ShapeInfo = T.RT_59,
-    SpawnSocket = T.RT_144,
+    ShapeInfo = T.RT_61,
+    SpawnSocket = T.RT_146,
     Speed = 1500,
     Tags = T.RT_2,
     TimeLife = 5,
@@ -10907,7 +11301,7 @@ return ReadOnly("SkillCreature", {
     BoundCount = -1,
     BulletFXID = 600001101,
     CreatureId = 600001101,
-    ShapeInfo = T.RT_59,
+    ShapeInfo = T.RT_61,
     SpawnSocket = {SpawnSocket = "spine_03", UseLocation = "Char"},
     Speed = 0,
     Tags = T.RT_8,

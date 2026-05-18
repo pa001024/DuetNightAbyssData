@@ -15,7 +15,7 @@ function WBP_Battle_FortItem_M_C:OnBtnPressed()
     if not EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Disable) then
       EMUIAnimationSubsystem:EMPlayAnimation(self, self.Disable)
     end
-    if 2 == self.Index then
+    if self.IsHotItem then
       UIManager(self):ShowUITip_BattleCommonTop(UIConst.Tip_CommonTop, "TOAST_OverHeating")
     end
   else
@@ -38,19 +38,22 @@ function WBP_Battle_FortItem_M_C:OnBtnReleased()
   end
 end
 
-function WBP_Battle_FortItem_M_C:InitItem_PaoTai(SkillName, Skill, OwnerPlayer, Index, Root)
+function WBP_Battle_FortItem_M_C:InitItem_PaoTaiPre()
   self.Text_CDPaoTai = self.Text_CD
   self.ProgressBar_CDPaoTai = self.ProgressBar_CD
   self.OverHeating_CDPaoTai = self.ProgressBar_CD_Overload
   self.Icon_SkillPaoTai = self.Icon_Skill
   self.CDFinishAnimation_PaoTai = self.Click
   EMUIAnimationSubsystem:EMPlayAnimation(self, self.CDFinishAnimation_PaoTai)
-  if 1 == Index then
+end
+
+function WBP_Battle_FortItem_M_C:InitItem_PaoTai(SkillName, Skill, OwnerPlayer, Index, Root)
+  if not self.IsHotItem then
     self.OverHeating_CDPaoTai:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.OverHeating_CDPaoTai:SetRenderOpacity(0)
     self.ProgressBar_CDPaoTai:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.ProgressBar_CDPaoTai:SetRenderOpacity(1.0)
-  elseif 2 == Index then
+  else
     self.OverHeating_CDPaoTai:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.OverHeating_CDPaoTai:SetRenderOpacity(1.0)
     self.ProgressBar_CDPaoTai:SetVisibility(UE4.ESlateVisibility.Collapsed)

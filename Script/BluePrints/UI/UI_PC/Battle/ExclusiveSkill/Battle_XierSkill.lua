@@ -75,6 +75,12 @@ function M:UpdateProgress(Remaining, Max)
     local Percent = math.max(Remaining / Max, 0)
     self.Progress_Xier:SetPercent(Percent)
     self.Num_Xier:SetText(string.format("%.0f", Remaining))
+    self.Text_Time:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  elseif 0 == Remaining or -1 == Remaining then
+    local Percent = 1
+    self.Progress_Xier:SetPercent(Percent)
+    self.Num_Xier:SetText(GText("INFINITY_SYMBOL"))
+    self.Text_Time:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 

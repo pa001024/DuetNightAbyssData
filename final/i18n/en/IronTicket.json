@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1001,
+    "name": "Abyssal Compass: Expedition",
+    "desc": "Used to start an Abyss Expedition",
+    "func": "Abyssal Compass",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 100,
+    "rarity": 5,
+    "accessKey": [
+      "Forging"
+    ]
+  },
+  {
+    "id": 1002,
+    "name": "Abyssal Compass: Expedition",
+    "desc": "Used to start an Abyss Expedition",
+    "func": "Abyssal Compass",
+    "icon": "T_Resource_Coin_Zaie",
+    "level": 90,
+    "rarity": 3
+  }
+]

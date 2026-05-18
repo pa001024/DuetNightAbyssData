@@ -25,6 +25,13 @@ function M:InitHardBossDgComponent()
   self.BossStaticCreatorId = HardBossInfo.BossStaticId
   self.AirWallStaticCreatorId = HardBossInfo.AirWallStaticId
   self.PreparingAirWallStaticId = HardBossInfo.PreparingAirWallStaticId
+  self.CustomBossStaticCreatorIds = HardBossInfo.CustomBossStaticId or {}
+  self.CustomBossUnitIds = HardBossInfo.CustomBossUnitId or {
+    [1] = {},
+    [2] = {},
+    [3] = {},
+    [4] = {}
+  }
   self.NowBossUnitIds = {}
   self.BossEids = {}
   self:RegisterGameModeEvents()
@@ -58,6 +65,24 @@ function M:SpawnMainActors()
   end
   CreatorIds:Add(self.PreparingAirWallStaticId)
   self.GameMode:TriggerActiveStaticCreator(CreatorIds, "HardBossMain")
+end
+
+function M:ActiveCustomBossCreator(Index)
+  local CreatorId = self.CustomBossStaticCreatorIds[Index]
+  local PlayerNum = self.GameMode:GetTargetPlayerNum()
+  PlayerNum = math.clamp(PlayerNum, 1, #self.CustomBossUnitIds)
+  local UnitId = self.CustomBossUnitIds[PlayerNum][Index]
+  if not CreatorId or not UnitId then
+    return
+  end
+  local BossCreator = self.GameMode.EMGameState.StaticCreatorMap:Find(CreatorId)
+  if not IsValid(BossCreator) then
+    return
+  end
+  local CreatorIds = TArray(0)
+  CreatorIds:Add(CreatorId)
+  BossCreator.UnitId = UnitId
+  self.GameMode:TriggerActiveStaticCreator(CreatorIds, "HardBossCustomBoss")
 end
 
 function M:OnStaticCreatorEvent(EventName, Eid, UnitId, UnitType, CreatorId)

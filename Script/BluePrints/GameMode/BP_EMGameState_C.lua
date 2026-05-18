@@ -226,12 +226,12 @@ end
 
 function BP_EMGameState_C:OnNpcLoaded_Lua(NpcId, NpcCharacter)
   local T = self:GetNpcInfoAsyncCallbackTable(NpcId)
+  self:EmptyNpcInfoAsyncCallbackTable(NpcId)
   for _, cb in pairs(T) do
     if cb then
       cb(NpcCharacter)
     end
   end
-  self:EmptyNpcInfoAsyncCallbackTable(NpcId)
 end
 
 function BP_EMGameState_C:AddNpcInfo_Lua(NpcCharacter)
@@ -513,14 +513,32 @@ function BP_EMGameState_C:DealDungeonVoteResult()
   DebugPrint("Vote::: BattleNum :" .. BattleNum .. "  ExitNum:" .. #AvatarEids)
   self.VoteValues:Clear()
   UMapSyncHelper.SyncMap(self, "VoteValues")
-  if 0 ~= #AvatarEids then
-    GameMode:TriggerPlayerWin(AvatarEids, PlayerEids)
-  end
-  if 0 == BattleNum then
-    DebugPrint("Vote::: BattleNum = 0 ,触发副本结算")
-    GameMode:TriggerDungeonOnEnd(true)
+  if GameMode:CheckServerDungeonEnable() then
+    local function cb(IsWin, AvatarEids, GameEndReason)
+      if 0 == BattleNum then
+        DebugPrint("Vote::: BattleNum = 0 ,触发副本结算")
+        
+        GameMode:TriggerDungeonOnEnd(true)
+      else
+        GameMode:ExecuteNextStepOfDungeonVote()
+      end
+    end
+    
+    if 0 ~= #AvatarEids then
+      GameMode:NotifyServerPlayerEnd(true, AvatarEids, "Vote", cb)
+    else
+      cb()
+    end
   else
-    GameMode:ExecuteNextStepOfDungeonVote()
+    if 0 ~= #AvatarEids then
+      GameMode:TriggerPlayerWin(AvatarEids, PlayerEids)
+    end
+    if 0 == BattleNum then
+      DebugPrint("Vote::: BattleNum = 0 ,触发副本结算")
+      GameMode:TriggerDungeonOnEnd(true)
+    else
+      GameMode:ExecuteNextStepOfDungeonVote()
+    end
   end
 end
 
@@ -1289,6 +1307,79 @@ function BP_EMGameState_C:TriggerClientEvent(FuncName)
       Traceback(ErrorTag, err, false)
     end
   })
+end
+
+function BP_EMGameState_C:GetNpcName(NpcId)
+  if not NpcId or NpcId <= 0 then
+    return nil
+  end
+  if self.CustomNpcNameMap and self.CustomNpcNameMap[NpcId] then
+    local Override = self.CustomNpcNameMap[NpcId]
+    if Override.CustomNameTextMapId and Override.CustomNameTextMapId ~= "" then
+      return Override.CustomNameTextMapId
+    end
+  end
+  local NpcData = DataMgr.Npc[NpcId]
+  return NpcData and NpcData.UnitName or nil
+end
+
+function BP_EMGameState_C:IsNpcNameHidden(NpcId)
+  if not NpcId or NpcId <= 0 then
+    return false
+  end
+  if self.CustomNpcNameMap and self.CustomNpcNameMap[NpcId] then
+    local Override = self.CustomNpcNameMap[NpcId]
+    if Override.bHideName then
+      return true
+    end
+  end
+  return false
+end
+
+function BP_EMGameState_C:SetNpcNameOverride(NpcId, bHideName, CustomNameTextMapId)
+  if not self.CustomNpcNameMap then
+    self.CustomNpcNameMap = {}
+  end
+  if not self.NeedRefreshNpcName then
+    self.NeedRefreshNpcName = {}
+  end
+  if not self.NeedRefreshNpcName[NpcId] then
+    local OldCustomNpcName = self.CustomNpcNameMap[NpcId] or {}
+    self.NeedRefreshNpcName[NpcId] = self:AddTimer(0.01, function()
+      self.NeedRefreshNpcName[NpcId] = nil
+      local NowCustomNpcName = self.CustomNpcNameMap[NpcId] or {}
+      if OldCustomNpcName.bHideName ~= NowCustomNpcName.bHideName or OldCustomNpcName.CustomNameTextMapId ~= NowCustomNpcName.CustomNameTextMapId then
+        self:RefreshNpcNameDisplay(NpcId)
+      end
+    end)
+  end
+  if not bHideName and not CustomNameTextMapId then
+    self.CustomNpcNameMap[NpcId] = nil
+    return
+  end
+  self.CustomNpcNameMap[NpcId] = {bHideName = bHideName, CustomNameTextMapId = CustomNameTextMapId}
+end
+
+function BP_EMGameState_C:RemoveNpcNameOverride(NpcId)
+  if not self.CustomNpcNameMap then
+    return
+  end
+  self:SetNpcNameOverride(NpcId, nil, nil)
+end
+
+function BP_EMGameState_C:RefreshNpcNameDisplay(NpcId)
+  local NPC = self:GetNpcInfo(NpcId)
+  if not IsValid(NPC) then
+    return
+  end
+  NPC:EnableNameWidget(false)
+  local TalkComponent = NPC:GetTalkInteractiveComponent()
+  if not IsValid(TalkComponent) then
+    return
+  end
+  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
+  TalkComponent:RefreshDisplayName(Player, true)
+  TalkComponent:RefreshInteractiveName()
 end
 
 AssembleComponents(BP_EMGameState_C)

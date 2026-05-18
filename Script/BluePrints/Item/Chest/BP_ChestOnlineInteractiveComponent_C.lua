@@ -17,7 +17,8 @@ function M:StartInteractive(PlayerActor)
     end
     print(_G.LogTag, "LXZ RequestChangeRegionOnlineItemState")
     if self.InteractiveIdx then
-      Avatar:RequestChangeRegionOnlineItemState(Avatar.CurrentOnlineType, Owner.UnitId, CommonUtils.Str2ObjId(Owner.SenderId), self.InteractiveIdx, Owner.StateId)
+      local bInMobile = CommonUtils.GetRuntimePlatform(self) == "Mobile"
+      Avatar:RequestChangeRegionOnlineItemState(Avatar.CurrentOnlineType, Owner.UnitId, CommonUtils.Str2ObjId(Owner.SenderId), self.InteractiveIdx, Owner.StateId, Owner.BpBorn, bInMobile)
     end
   end
 end
@@ -31,7 +32,8 @@ function M:EndInteractive(PlayerActor, ReasonId)
   print(_G.LogTag, "LXZ EndInteractive")
   if self.InteractiveIdx then
     print(_G.LogTag, "LXZ EndInteractive111")
-    Avatar:RequestLeaveRegionOnlineItem(Avatar.CurrentOnlineType, Owner.UnitId, CommonUtils.Str2ObjId(Owner.SenderId), self.InteractiveIdx)
+    local bInMobile = CommonUtils.GetRuntimePlatform(self) == "Mobile"
+    Avatar:RequestLeaveRegionOnlineItem(Avatar.CurrentOnlineType, Owner.UnitId, CommonUtils.Str2ObjId(Owner.SenderId), self.InteractiveIdx, bInMobile)
   end
 end
 

@@ -6,8 +6,21 @@ ReturnUtils.ReddotTaskNewKey = "ComeBackTaskNew"
 ReturnUtils.ReddotTaskQuestKey = "ComeBackTaskQuest"
 ReturnUtils.ReddotTaskRewardKey = "ComeBackTaskReward"
 
+function ReturnUtils.GetCurrentEventSchemeId()
+  local CurrentEventId = DataMgr.ComeBackEventConstant.CurrentEventId.ConstantValue
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return nil
+  end
+  local CurComeBackData = Avatar.ComeBacks[CurrentEventId] or nil
+  if not Avatar then
+    return nil
+  end
+  return CurComeBackData.EventSchemeId
+end
+
 function ReturnUtils.CanParticipateInvite()
-  local CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
+  local CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
   local InviteEventSchemeId = DataMgr.ComeBackEvent[CurrentEventSchemeId].InviteEventSchemeId
   if not InviteEventSchemeId then
     return false
@@ -26,7 +39,7 @@ function ReturnUtils.CanParticipateInvite()
 end
 
 function ReturnUtils.GetSevenDayRewardRealLoginData()
-  local CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
+  local CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
   local CurrentEventSchemeData = DataMgr.ComeBackEvent[CurrentEventSchemeId]
   local EventLoginId = CurrentEventSchemeData.EventLoginId
   if not EventLoginId then
@@ -73,7 +86,7 @@ function ReturnUtils.GetSevenDayRewardValidIndex()
 end
 
 function ReturnUtils.ShowReturnActiGetItemPage(AllValidIndex, TargetWidget)
-  local CurrentEventSchemeId = DataMgr.ComeBackEventConstant.CurrentEventSchemeId.ConstantValue
+  local CurrentEventSchemeId = ReturnUtils.GetCurrentEventSchemeId()
   assert(CurrentEventSchemeId, "lgc@CurrentEventSchemeId is nil, 需要策划检查下ComeBackEventConstant表中的CurrentEventSchemeId")
   local CurrentEventSchemeData = DataMgr.ComeBackEvent[CurrentEventSchemeId]
   if not CurrentEventSchemeData then

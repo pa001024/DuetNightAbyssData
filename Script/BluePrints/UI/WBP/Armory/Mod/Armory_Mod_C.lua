@@ -33,6 +33,12 @@ local function OnItemMouseButtonUpEvent(ArmoryMod, Content, MouseEvent)
       return
     end
     ModController:SetSelectedStuff(Content.Uuid, nil)
+    if Content.IsNew and ModController:IsMobile() then
+      ArmoryUtils:SetReddotRead(Content, true)
+      if IsValid(Content.UI) then
+        Content.UI:DisableReddot()
+      end
+    end
   end
 end
 
@@ -508,6 +514,7 @@ end
 
 function M:ReceiveEnterState(StackAction)
   M.Super.ReceiveEnterState(self, StackAction)
+  self.IsReceiveEnterState = true
   if ModModel:IsInPolarityEditMode() then
     self:ShowTabResourceBar(true)
     if self.PolarityEditWidget then
@@ -604,9 +611,12 @@ function M:OnModLockChanged(OpAction, ErrCode, Uuid)
         Content.UI:SetLock(Mod:IsLock() and 1 or 0)
       end
     end
+    if Mod:IsLock() then
+      ModController:ShowToast(GText("UI_Toast_Mod_AutoLock"))
+    else
+      UIManager(self):ShowError(7007, nil, UIConst.Tip_CommonToast)
+    end
     if self.ItemDetailsWidget.Btn_Locked:IsBtnForbidden() then
-      local TipsId = Content.IsLocked and 7006 or 7007
-      UIManager(self):ShowError(TipsId, nil, UIConst.Tip_CommonToast)
       self.ItemDetailsWidget.Btn_Locked:ForbidBtn(false)
     end
   end
@@ -863,6 +873,11 @@ function M:SetUpModList(bAnim)
   if nil == bAnim then
     bAnim = true
   end
+  if self.IsReceiveEnterState then
+    self.IsReceiveEnterState = false
+    self:SyncTarget(self.CurTargetTabContent)
+    ModModel:FilterModsOfTarget()
+  end
   ModController:SetSelectedStuff(nil, nil)
   ModModel:SortMods()
   self.List_Select_Mod:ScrollToTop()
@@ -1054,7 +1069,7 @@ function M:NotifyOnPendingEditSlotPolarity(SlotId)
   self:SetModCostPreview(ModModel.PolarityEditModeData.SuitCost)
 end
 
-function M:NotifyOnSelectStuffChanged(SelectedStuff, LastSelectedStuff)
+function M:NotifyOnSelectStuffChanged(SelectedStuff, LastSelectedStuff, bJumpList)
   if LastSelectedStuff then
     if LastSelectedStuff:IsSlot() then
       local ModSlotUI = self.ModSlotUIs[LastSelectedStuff.SlotId]
@@ -1075,7 +1090,10 @@ function M:NotifyOnSelectStuffChanged(SelectedStuff, LastSelectedStuff)
     local CurrMod = ModModel:GetCurrSelectMod()
     self:ShowModDetailPanel(CurrMod, SelectedStuff.SlotId)
     self:ShowLevelUpBtn(true)
-    self:DoModItemSelected(CurrMod.Uuid, true)
+    if SelectedStuff.SlotId then
+      bJumpList = false
+    end
+    self:DoModItemSelected(CurrMod.Uuid, true, bJumpList)
   end
 end
 
@@ -1495,13 +1513,16 @@ function M:GetSearchText()
   return self.Com_Search:GetText()
 end
 
-function M:DoModItemSelected(ModUuid, bSelected)
+function M:DoModItemSelected(ModUuid, bSelected, bJumpList)
   local SelectedContent = self:GetContentByUuid(ModUuid)
   if SelectedContent then
     SelectedContent.IsSelected = bSelected
     if IsValid(SelectedContent.UI) then
       SelectedContent.UI:SetIsSelected(bSelected)
     end
+  end
+  if bJumpList then
+    self.List_Select_Mod:BP_ScrollItemIntoView(SelectedContent)
   end
 end
 

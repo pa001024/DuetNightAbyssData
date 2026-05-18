@@ -65,6 +65,11 @@ return {
       UnitType = "Drop",
       UnitId = 11227
     },
+    ["1210131"] = {
+      CreatorId = 1210131,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["1220010101"] = {
       CreatorId = 1220010101,
       UnitType = "Npc",
@@ -131,6 +136,11 @@ return {
       ManualItemId = 1219999,
       UnitType = "Mechanism",
       UnitId = 18
+    },
+    ["121001"] = {
+      ManualItemId = 121001,
+      UnitType = "Mechanism",
+      UnitId = 150011
     }
   },
   Explore = {},

@@ -10,7 +10,7 @@ end
 function Component:ClearData()
   if self.SoloTreasurePoints then
     for _, widget in pairs(self.SoloTreasurePoints) do
-      widget:RemoveFromParent()
+      self:ReleasePointToPool(widget)
     end
     self.SoloTreasurePoints = {}
   end
@@ -211,6 +211,7 @@ function Component:OnMechanismAdd(RegionData)
     local CreateData = {}
     CreateData.Icon = self.SoloTreasureMechanismUnitId[RegionData.UnitId].Icon
     CreateData.Id = Id
+    CreateData.Name = self.SoloTreasureMechanismUnitId[RegionData.UnitId].Name
     Point:InitAsRegionPoint(self, CreateData, self.OnSoloTreasureIconClick, self.OnSoloTreasureIconHover, self.OnSoloTreasureIconUnhover)
     local position = self:TransformWorldLocToUILoc(RegionData.Loc.X, RegionData.Loc.Y)
     Point:SetRenderTranslation(position)

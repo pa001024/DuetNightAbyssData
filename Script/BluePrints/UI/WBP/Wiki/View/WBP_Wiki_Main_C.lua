@@ -496,6 +496,9 @@ function M:UpdateEntryWidgetSelectedStyle(EntryWidget)
 end
 
 function M:OnEntrySelected(selectedCell)
+  if self.CurrentSelectedCell and self.CurrentSelectedCell.EntryId == selectedCell.EntryId then
+    return
+  end
   if self.CurrentSelectedCell and self.CurrentSelectedCell.EntryId ~= selectedCell.EntryId and IsValid(self.CurrentSelectedCell) then
     self.CurrentSelectedCell:OnCellUnSelect()
   end
@@ -530,7 +533,11 @@ function M:OpenDescPage(selectedCell)
   end
   self:UpdateDescContent(entryTexts, self.ListText)
   self:UpdateAssociatedEntry(entryData)
-  self:UpdateDescScroll()
+  local KEY = "WikiDescScrollCheck"
+  self:RemoveTimer(KEY)
+  self:AddTimer(0.1, function()
+    self:UpdateDescScroll()
+  end, false, 0, KEY)
 end
 
 function M:ShowEmptyDescContent()

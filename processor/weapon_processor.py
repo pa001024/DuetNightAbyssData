@@ -19,6 +19,12 @@ class WeaponProcessor(BaseProcessor):
         self.weapon_break_data = data_loader.load_json("WeaponBreak.json")
         self.battle_weapon_data = data_loader.load_json("BattleWeapon.json")
         self.weapon_card_level_data = data_loader.load_json("WeaponCardLevel.json")
+        self.hyper_weapon_card_level_data = data_loader.load_json(
+            "HyperWeaponCardLevel.json"
+        )
+        self.hyper_weapon_skill_tree_data = data_loader.load_json(
+            "HyperWeaponSkillTree.json"
+        )
         self.attribute_data = data_loader.load_json("Attribute.json")
         self.skill_effects_data = data_loader.load_json("SkillEffects.json")
         self.skill_node_data = data_loader.load_json("SkillNode.json")
@@ -57,6 +63,9 @@ class WeaponProcessor(BaseProcessor):
                 "熔炼": self._process_smelting(battle_weapon, weapon_id),
             }
         )
+        furnace = self._process_furnace(weapon_id, battle_weapon)
+        if furnace:
+            processed["熔炉"] = furnace
         try:
             skills, reload_value, shooting_interval = self._process_skills(
                 battle_weapon, weapon_id
@@ -784,6 +793,173 @@ class WeaponProcessor(BaseProcessor):
             break_info.append(stage_materials)
 
         return break_info
+
+    def _process_furnace(self, weapon_id, battle_weapon=None):
+        """处理武器熔炉数据。"""
+        card_level_rows = self.hyper_weapon_card_level_data.get(str(weapon_id), [])
+        if not card_level_rows:
+            card_level_rows = self.hyper_weapon_card_level_data.get(weapon_id, [])
+        if not isinstance(card_level_rows, list):
+            card_level_rows = []
+
+        if not card_level_rows:
+            return []
+
+        skill_tree_rows = []
+        for skill_id, skill_tree in self.hyper_weapon_skill_tree_data.items():
+            if not isinstance(skill_tree, dict):
+                continue
+            if skill_tree.get("WeaponId") != weapon_id:
+                continue
+            if skill_tree.get("WeaponCardLevel", 0) <= 0:
+                continue
+            skill_tree_rows.append((skill_id, skill_tree))
+
+        skill_tree_rows.sort(
+            key=lambda item: (
+                item[1].get("WeaponCardLevel", 0),
+                item[1].get("SkillIndex", 0),
+                item[1].get("WeaponSkillId", 0),
+            )
+        )
+
+        furnace_rows = []
+        for card_level_row in card_level_rows:
+            if not isinstance(card_level_row, dict):
+                continue
+
+            level = card_level_row.get("WeaponCardLevel", 0)
+            if level <= 0:
+                continue
+
+            row = {
+                "lv": level,
+                "解锁": self._build_resource_map(
+                    card_level_row.get("ResourceId", []),
+                    card_level_row.get("ResourceNum", []),
+                ),
+            }
+
+            level_skills = []
+            for skill_id, skill_tree in skill_tree_rows:
+                if skill_tree.get("WeaponCardLevel", 0) != level:
+                    continue
+
+                skill_row = {
+                    "id": skill_tree.get("WeaponSkillId", skill_id),
+                    "名称": self.get_translated_text(
+                        skill_tree.get("WeaponSkillName", "")
+                    ),
+                    "icon": self._extract_icon_name(skill_tree.get("SkillIcon", "")),
+                }
+                skill_desc = self._build_hyper_weapon_skill_desc(skill_tree, weapon_id)
+                if skill_desc:
+                    skill_row["描述"] = skill_desc
+
+                skill_addon = self._build_hyper_weapon_skill_addon(
+                    battle_weapon, skill_tree.get("WeaponSkillId", 0)
+                )
+                if skill_addon:
+                    skill_row["加成"] = skill_addon
+
+                unlock_map = self._build_resource_map(
+                    skill_tree.get("ResourceId", []),
+                    skill_tree.get("ResourceNum", []),
+                )
+                if unlock_map:
+                    skill_row["解锁"] = unlock_map
+
+                level_skills.append(skill_row)
+
+            if level_skills:
+                row["技能"] = level_skills
+
+            furnace_rows.append(row)
+
+        return furnace_rows
+
+    def _build_resource_map(self, resource_ids, resource_nums):
+        """将资源 id/num 列表转换成突破同款字典。"""
+        if not isinstance(resource_ids, list) or not isinstance(resource_nums, list):
+            return {}
+
+        resource_map = {}
+        for idx, resource_id in enumerate(resource_ids):
+            if idx >= len(resource_nums):
+                continue
+            resource_name = self.data_loader.get_resource_name(resource_id)
+            if not resource_name:
+                resource_name = str(resource_id)
+            resource_map[resource_name] = resource_nums[idx]
+        return resource_map
+
+    def _build_hyper_weapon_skill_desc(self, skill_tree, weapon_id):
+        """按 SkillDescParameter 计算灾厄熔炉技能描述。"""
+        if not isinstance(skill_tree, dict):
+            return ""
+
+        desc_key = skill_tree.get("SkillDescription", "")
+        if not desc_key:
+            return ""
+
+        desc = self.get_translated_text(desc_key) or desc_key
+        params = skill_tree.get("SkillDescParameter", [])
+        if not isinstance(params, list) or not params:
+            return desc.replace("<H>", "").replace("</>", "")
+
+        for idx, desc_value in enumerate(params, start=1):
+            if desc_value is None:
+                continue
+            preprocessed_desc_value = self.preprocess_expression(desc_value)
+            calculated_value = self._parse_single_desc_value(
+                preprocessed_desc_value, weapon_id, 1, "BattleWeapon", True
+            )
+            desc = desc.replace(f"#{idx}", str(calculated_value))
+
+        return self._format_float_templates(desc).replace("<H>", "").replace(
+            "</>", ""
+        )
+
+    def _build_hyper_weapon_skill_addon(self, battle_weapon, skill_tree_id):
+        """按 HyperWeaponSkillTreeID 反查技能加成。"""
+        if not isinstance(battle_weapon, dict) or not skill_tree_id:
+            return {}
+
+        add_attrs = battle_weapon.get("AddAttrs", [])
+        if not isinstance(add_attrs, list) or not add_attrs:
+            return {}
+
+        rst = {}
+        for attr in add_attrs:
+            if not isinstance(attr, dict):
+                continue
+            if attr.get("HyperWeaponSkillTreeID") != skill_tree_id:
+                continue
+
+            attr_name = attr.get("AttrName", "")
+            attr_config = self.attr_config.get(attr_name, {})
+            attr_name_key = attr_config.get("Name", "")
+            if not attr_name_key:
+                continue
+            fkey = self.get_translated_text(attr_name_key)
+            fkeymap = {
+                "武器暴击率": "暴击",
+                "武器多重射击": "多重",
+            }
+            fkey = fkeymap.get(fkey, fkey)
+            rst[fkey] = self.round_value(attr.get("Rate") or attr.get("Value", 0))
+        return rst
+
+    def _extract_icon_name(self, icon_value):
+        """从图标路径中提取短名，和其他技能图标保持一致。"""
+        if not icon_value:
+            return ""
+
+        match = re.search(r"(T_[^./']+)", icon_value)
+        if match:
+            return match.group(1)
+
+        return ""
 
     def _process_smelting(self, battle_weapon, weapon_id):
         """处理武器熔炼数据，计算各等级的技能描述"""

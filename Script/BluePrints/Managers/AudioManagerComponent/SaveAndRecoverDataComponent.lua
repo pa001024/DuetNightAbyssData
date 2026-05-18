@@ -1,6 +1,13 @@
 local EMCache = require("EMCache.EMCache")
 local Component = {}
 
+function Component:ApplyParamAfterLoad()
+  if IsDedicatedServer(self) then
+    return
+  end
+  self:RecoverVolumeData()
+end
+
 function Component:ReadSeGlobalParameters()
   Component.GlobalParams = {}
   Component.GlobalParams.VoHitHeavyDmg = DataMgr.SeGlobalParameter.VoHitHeavyDmg.SeGlobalValue

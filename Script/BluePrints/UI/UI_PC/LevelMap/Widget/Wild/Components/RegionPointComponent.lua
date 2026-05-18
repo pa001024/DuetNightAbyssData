@@ -10,7 +10,7 @@ end
 function Component:ClearData()
   if self.RegionPoints then
     for _, widget in pairs(self.RegionPoints) do
-      widget:RemoveFromParent()
+      self:ReleasePointToPool(widget)
     end
     self.RegionPoints = {}
   end
@@ -57,10 +57,15 @@ function Component:InitRegionPoint(CoroutineIndex)
     return
   end
   local TrackingId = self:GetTrackingId(CommonConst.RegionMapTrackingType.RegionPoint)
+  local SubRegion2Points = {}
+  for _, RegionPointData in pairs(DataMgr.RegionPoint) do
+    SubRegion2Points[RegionPointData.SubRegion] = SubRegion2Points[RegionPointData.SubRegion] or {}
+    table.insert(SubRegion2Points[RegionPointData.SubRegion], RegionPointData)
+  end
   for _, subRegionID in pairs(self.RegionData.IsRandom) do
     local transferDatas = {}
-    for _, RegionPointData in pairs(DataMgr.RegionPoint) do
-      if RegionPointData.SubRegion == subRegionID then
+    if SubRegion2Points[subRegionID] then
+      for _, RegionPointData in pairs(SubRegion2Points[subRegionID]) do
         transferDatas[RegionPointData.Id] = RegionPointData
         local floorId
         if RegionPointData.BuildingNameAndId then

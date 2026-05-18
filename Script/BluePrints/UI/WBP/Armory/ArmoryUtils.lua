@@ -1,6 +1,7 @@
 require("UnLua")
 local SkillUtils = require("Utils.SkillUtils")
 local UpgradeUtils = require("Utils.UpgradeUtils")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local Utils = require("Utils")
 local CharCom = require("BluePrints.Client.CustomTypes.Character")
 local CharacterCommon = require("BluePrints.Client.CustomTypes.CharacterCommon")
@@ -21,6 +22,7 @@ M.ArmorySubTabNames = {
   Attribute = "Attribute",
   Skill = CommonConst.ArmoryTag.Skill,
   Grade = CommonConst.ArmoryTag.Grade,
+  HyperGrade = CommonConst.ArmoryTag.HyperGrade,
   Appearance = "Appearance",
   Files = "Files",
   Entry = "Entry"
@@ -81,6 +83,9 @@ function M:NewCharOrWeaponItemContent(Target, Type, Tag, bNotReddot, ReddotFrom)
   Obj.IsLocked = Target.IsLock and Target:IsLock()
   Obj.LockType = Obj.IsLocked and 1 or 0
   Obj.SortPriority = Target:Data().SortPriority or 0
+  if "Weapon" == Type then
+    Obj.bIncarnon = HyperWeaponUtils.IsHyperWeapon(Target.WeaponId)
+  end
   return Obj
 end
 
@@ -897,31 +902,48 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
     if CacheDetail then
       for key, _ in pairs(CacheDetail) do
         key = tonumber(key)
-        if nil == AccessoryIds[key] or key == DefaultAcceesories[AccessoryType] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.CharAccessory, key) then
+        local Data = DataMgr.CharAccessory[key]
+        if nil == AccessoryIds[key] or nil == Data or Data.AccessoryType ~= AccessoryType or key == DefaultAcceesories[AccessoryType] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.CharAccessory, key) then
           M:SetItemReddotRead({
             ItemType = CommonConst.DataType.CharAccessory,
-            AccessoryId = key
+            AccessoryId = key,
+            AccessoryType = AccessoryType
           }, true, true, true)
         end
       end
     end
   end
+  local NewCharAppearanceChildNodes = {}
   for _, CommonChar in pairs(Avatar.CommonChars) do
     CreateOneCharAppearanceReddotInfos(CommonChar.CharId)
+    local CharId = CommonChar.CharId
+    local SkinNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
+    NewCharAppearanceChildNodes[SkinNodeName] = 1
+    local HairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+    NewCharAppearanceChildNodes[HairNodeName] = 1
+    for AccessoryType, _ in pairs(CommonConst.NewCharAccessoryTypes) do
+      local AccessoryNodeName = CommonConst.DataType.CharAccessory .. AccessoryType
+      NewCharAppearanceChildNodes[AccessoryNodeName] = 1
+    end
+  end
+  local CommonHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+  NewCharAppearanceChildNodes[CommonHairNodeName] = 1
+  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+  if not ReddotManager.GetTreeNode(LeafNodeName) then
+    ReddotManager.AddNode(LeafNodeName, nil, 1)
+  end
+  if not IsEmptyTable(NewCharAppearanceChildNodes) then
+    ReddotManager.AddNode("NewCharAppearance", NewCharAppearanceChildNodes)
   end
   local AllCommonCharHairs = Avatar.CommonCharHairs
   for HairId, Hair in pairs(AllCommonCharHairs) do
     M:TryAddNewCharHairReddot(HairId)
   end
-  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
-  if not ReddotManager.GetTreeNode(LeafNodeName) then
-    ReddotManager.AddNode(LeafNodeName, nil, 1)
-  end
   local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(LeafNodeName)
   if CacheDetail then
     for key, _ in pairs(CacheDetail) do
       key = tonumber(key)
-      if nil == AllCommonCharHairs[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.Hair, key) then
+      if nil == AllCommonCharHairs[key] or nil == DataMgr.Hair[key] or not CommonUtils.IsCurrentTimeRealease(CommonConst.DataType.Hair, key) then
         M:SetItemReddotRead({
           ItemType = CommonConst.DataType.Hair,
           HairId = key
@@ -992,6 +1014,27 @@ function ReddotCreateFunctions.CreateWeaponAppearanceReddotInfos(M)
         end
       end
     end
+  end
+  local NewMeleeAppearanceChildNodes = {}
+  local NewRangedAppearanceChildNodes = {}
+  for WeaponId, value in pairs(DataMgr.Weapon) do
+    if value.SkinApplicationType then
+      for _, ApplicationType in ipairs(value.SkinApplicationType) do
+        local ContrastData = DataMgr.WeaponTypeContrast[ApplicationType]
+        local LeafNodeName = CommonConst.DataType.WeaponSkin .. ApplicationType
+        if ContrastData and ContrastData.WeaponTagfilter == "MeleeType" then
+          NewMeleeAppearanceChildNodes[LeafNodeName] = 1
+        elseif ContrastData and ContrastData.WeaponTagfilter == "RangedType" then
+          NewRangedAppearanceChildNodes[LeafNodeName] = 1
+        end
+      end
+    end
+  end
+  if not IsEmptyTable(NewMeleeAppearanceChildNodes) then
+    ReddotManager.AddNode("NewMeleeAppearance", NewMeleeAppearanceChildNodes)
+  end
+  if not IsEmptyTable(NewRangedAppearanceChildNodes) then
+    ReddotManager.AddNode("NewRangedAppearance", NewRangedAppearanceChildNodes)
   end
 end
 
@@ -1228,7 +1271,7 @@ local SetReddotReadFunctions = {
     if not Data then
       return
     end
-    local NodeNamePre = CommonConst.DataType.CharAccessory .. Data.AccessoryType
+    local NodeNamePre = CommonConst.DataType.CharAccessory .. (Content.AccessoryType or Data.AccessoryType)
     for _, SkinId in ipairs(Data.Skin or {""}) do
       local NodeName = NodeNamePre .. SkinId
       M:_SetReddotReadCommon(AccessoryId, NodeName)
@@ -1391,6 +1434,8 @@ function M:TryAddNewModReddot(Mod, ModId)
     ModId = Mod.ModId
   end
   self:TryAddNewModBookReddot(Mod, ModId)
+  local Avatar = GWorld:GetAvatar()
+  Avatar:RefreshModArchiveReddot()
   local NodeName = CommonConst.DataType.Mod .. Mod.ApplicationType
   return M:_TryAddNewReddotCommon(ModId, NodeName)
 end
@@ -2035,6 +2080,7 @@ local function _CreateDummyAvatarPrime(DummyAvatar, _Params)
       _AddCharToDummyAvatar(DummyAvatar, Char, CharId)
     end
   end
+  DummyAvatar.WeaponForgeLevel = 0
   if _Params.WeaponIds then
     for i, WeaponId in ipairs(_Params.WeaponIds) do
       local Weapon = _DummyAvatarCreateWeapon(_NextUuid(), WeaponId, Level, 1)
@@ -2088,6 +2134,7 @@ local function _CreateDummyAvatarMax(DummyAvatar, _Params)
       _AddCharToDummyAvatar(DummyAvatar, Char, CharId)
     end
   end
+  DummyAvatar.WeaponForgeLevel = 5
   if _Params.WeaponIds then
     for i, WeaponId in ipairs(_Params.WeaponIds) do
       Level = DataMgr.Weapon[WeaponId].WeaponMaxLevel
@@ -2098,10 +2145,19 @@ local function _CreateDummyAvatarMax(DummyAvatar, _Params)
       if _Params.RangedWeapon == WeaponId then
         DummyAvatar.RangedWeapon = Weapon.Uuid
       end
-      local WeaponCardLevelData = DataMgr.WeaponCardLevel[WeaponId]
-      local CardLevelMax = WeaponCardLevelData and WeaponCardLevelData.CardLevelMax
-      if CardLevelMax then
-        Weapon:SetGradeLevel(false, CardLevelMax)
+      if HyperWeaponUtils.IsHyperWeapon(WeaponId) then
+        local CardLevelMax = HyperWeaponUtils.GetMaxForgeLevel(WeaponId)
+        Weapon:SetHyperCardLevel(CardLevelMax)
+        Weapon.HyperTalent = {}
+        for Level = 1, CardLevelMax do
+          Weapon.HyperTalent[i] = HyperWeaponUtils.GetTalents(WeaponId, Level)
+        end
+      else
+        local WeaponCardLevelData = DataMgr.WeaponCardLevel[WeaponId]
+        local CardLevelMax = WeaponCardLevelData and WeaponCardLevelData.CardLevelMax
+        if CardLevelMax then
+          Weapon:SetGradeLevel(false, CardLevelMax)
+        end
       end
       _AddWeaponToDummyAvatar(DummyAvatar, Weapon, WeaponId)
     end
@@ -2222,6 +2278,8 @@ function M._CreateDummyAvatarCustom(DummyAvatar, _Params)
         CommonChar:AddSkin(AppearanceSuit.SkinId)
         local Skin = CommonChar:GetSkin(AppearanceSuit.SkinId)
         if Skin then
+          Skin.Level = AppearanceSuit.SkinLevel or Skin.Level or 1
+          Skin.SelectedLevel = AppearanceSuit.SkinLevel or Skin.SelectedLevel or 1
           local CurrentPlanIndex = Skin.CurrentPlanIndex or 1
           for i, value in pairs(AppearanceSuit.Colors or {}) do
             if Skin.Colors[CurrentPlanIndex] then
@@ -2260,6 +2318,7 @@ function M._CreateDummyAvatarCustom(DummyAvatar, _Params)
       end
     end
   end
+  DummyAvatar.WeaponForgeLevel = _Params.WeaponForgeLevel or 0
   for i, WeaponInfo in ipairs(_Params.WeaponInfos or {}) do
     local Weapon = _DummyAvatarCreateWeapon(_NextUuid(), WeaponInfo.WeaponId, WeaponInfo.Level, 1, WeaponInfo.ModSuitIndex)
     if _Params.MeleeWeapon == WeaponInfo then
@@ -2270,7 +2329,9 @@ function M._CreateDummyAvatarCustom(DummyAvatar, _Params)
     end
     Weapon.Exp = WeaponInfo.Exp
     Weapon.GradeLevel = WeaponInfo.GradeLevel
+    Weapon.HyperCardLevel = WeaponInfo.HyperCardLevel
     Weapon.EnhanceLevel = WeaponInfo.EnhanceLevel
+    Weapon.HyperTalent = WeaponInfo.HyperTalent
     local AppearanceInfo = WeaponInfo.AppearanceInfo or {
       Colors = {},
       AccessoryId = -1
@@ -2687,12 +2748,14 @@ function M:CreateSkinLevelUpReddot()
   if self.IsPreviewMode then
     return
   end
+  local CharSkinLevelUpChildNodes = {}
   for SkinId, _ in pairs(DataMgr.SkinUpgrade) do
     local CharId = DataMgr.Skin[SkinId] and DataMgr.Skin[SkinId].CharId
     local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
+    CharSkinLevelUpChildNodes[NodeName] = 1
     if ReddotManager.GetTreeNode(NodeName) then
     else
-      ReddotManager.AddNodeEx(NodeName)
+      ReddotManager.AddNodeEx(NodeName, nil, 1)
       local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
       if not CacheDetail or next(CacheDetail) then
       else
@@ -2704,6 +2767,9 @@ function M:CreateSkinLevelUpReddot()
         end
       end
     end
+  end
+  if not IsEmptyTable(CharSkinLevelUpChildNodes) then
+    ReddotManager.AddNode("CharSkinLevelUp", CharSkinLevelUpChildNodes)
   end
 end
 
@@ -2790,6 +2856,49 @@ function M:GetWeaponStanceFXTag2ModId(WeaponId)
   if rawget(self, "WeaponStanceFXTag2ModId") and self.WeaponStanceFXTag2ModId[WeaponId] then
     return self.WeaponStanceFXTag2ModId[WeaponId]
   end
+end
+
+function M:GetCharGroup(CharId)
+  local Data = DataMgr.CharacterAttributeSwitch[CharId]
+  local CharGroupId = Data and Data.CharGroupId
+  if not CharGroupId then
+    return
+  end
+  self.Attribute2CharId = self.Attribute2CharId or {}
+  if self.Attribute2CharId[CharGroupId] then
+    return self.Attribute2CharId[CharGroupId]
+  end
+  self.Attribute2CharId[CharGroupId] = self.Attribute2CharId[CharGroupId] or {}
+  for key, value in pairs(DataMgr.CharacterAttributeSwitch) do
+    if CharGroupId == value.CharGroupId and value.CharAttribute then
+      self.Attribute2CharId[CharGroupId][value.CharAttribute] = value.CharId
+    end
+  end
+  return self.Attribute2CharId[CharGroupId]
+end
+
+function M:IsHyperWeaponUnlocked()
+  local UIUnlockRule = DataMgr.UIUnlockRule
+  local UIUnlockRuleId = UIUnlockRule.HyperWeapon.UIUnlockRuleId
+  local bUnlocked = false
+  local Avatar = self:GetAvatar()
+  if Avatar and Avatar.CheckUIUnlocked then
+    bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
+  end
+  return bUnlocked
+end
+
+function M:IsShowHyperWeapon(WeaponTag)
+  if WeaponTag ~= CommonConst.ArmoryTag.Melee and WeaponTag ~= CommonConst.ArmoryTag.Ranged then
+    return false
+  end
+  local Avatar = GWorld:GetAvatar()
+  for _, Weapon in pairs(Avatar.Weapons) do
+    if HyperWeaponUtils.IsHyperWeapon(Weapon.WeaponId) then
+      return true
+    end
+  end
+  return self:IsHyperWeaponUnlocked()
 end
 
 return M

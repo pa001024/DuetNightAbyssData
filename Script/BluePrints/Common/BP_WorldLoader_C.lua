@@ -152,10 +152,7 @@ function M:InitLevelInfo(StreamLevels)
         }
       end
     elseif bIsGameplayLevel or bIsHomeLevel then
-      local Avatar = GWorld:GetAvatar()
-      if Avatar and Avatar.CurrentRegionId ~= 105301 then
-        self:InithomeLevel2IDInfo(streamLevel, temp, "_Gameplay")
-      end
+      self:InithomeLevel2IDInfo(streamLevel, temp, "_Gameplay")
     end
   end
   if CommonUtils.IsEmpty(self.homeLevel2ID) then

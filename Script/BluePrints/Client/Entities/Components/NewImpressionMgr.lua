@@ -27,7 +27,7 @@ function Component:ImpressionCheckByEnumId_New(DialogueChain, CurrentDialogueId,
     end
     EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "Impression", TalkTriggerId)
     EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "Impression", TalkTriggerId)
-    EventManager:FireEvent(EventID.TriggerFlexibleActive)
+    EventManager:FireEvent(EventID.TriggerFlexibleActive, "Impression")
   end
   
   if UsingGM then
@@ -73,7 +73,7 @@ function Component:SetTalkTriggerComplete_New(TalkTriggerId, ClientDelegate)
     self.logger.info("ZJT_ 11111111111111111111 SetTalkTriggerComplete_New ", Ret, TalkTriggerId)
     EventManager:FireEvent(EventID.SetNpcFlexibShowOrHideDynamic, "Impression", TalkTriggerId)
     EventManager:FireEvent(EventID.SetCustomNpcFlexibShowOrHideDynamic, "Impression", TalkTriggerId)
-    EventManager:FireEvent(EventID.TriggerFlexibleActive)
+    EventManager:FireEvent(EventID.TriggerFlexibleActive, "Impression")
     if ErrorCode:Check(Ret) then
       EventManager:FireEvent(EventID.OnImprTalkTriggerComplete, TalkTriggerId)
       local TalkTriggerInfo = DataMgr.TalkTrigger[TalkTriggerId]

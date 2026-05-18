@@ -361,7 +361,7 @@
     "name": "꼬마 길동무의 군량미",
     "desc": "마령 지원 시전 후, 자신이 입히는 대미지가 <Highlight>$1</> 상승한다. 지속 시간 <Highlight>$2</>초.",
     "simple_desc": "마령 지원 시전 후, 대미지 상승",
-    "ip_desc": "\"모든 수확에는 대가가 따른다.\" 지겹도록 들었던 이 가르침이, 게임 시각으로 재조명되면서 다시 흥미로워지기 시작했다.\n마술사는 자신의 장난감 공을 상자에 던져 넣으며 말했다. \"좋은 소식과 나쁜 소식이 있는데, 어느 걸 먼저 들으실래요?\"",
+    "ip_desc": "앞으로 나아갈 때, 당신과 함께 용감하게 심연에 걸어 들어간 길동무를 잊어서는 안 된다. 통조림을 따서 그들의 노고를 위로해 주자!",
     "treasure_group": 1,
     "treasure_rarity": 1,
     "treasure_weight": 1000,
@@ -951,6 +951,36 @@
     "rl_archive_id": 32,
     "unlock_condition_text": "유물 미해제",
     "can_sell": 1,
+    "client_build": {}
+  },
+  {
+    "id": 10220,
+    "name": "순결한 천사의 성음",
+    "desc": "행적 획득량이 <Highlight>50%</> 상승한다.",
+    "simple_desc": "행적 획득량이 대폭 상승한다.",
+    "ip_desc": "그것은 길을 잃은 자를 인도하는 자비로운 신들을 찬양하는 송가로, 세상에 모르는 이가 없다. 경건한 엘리시안 신자들은 심연에서 조각난 선율을 흥얼거리며, 신들이 그들을 인도해, 고난에서 약속의 하늘로 데려가 주기를 기도한다. 금빛 선율이 흐르고, 그들은 행복한 기대 속에서 영원히 눈을 감는다.",
+    "treasure_group": 10220,
+    "treasure_rarity": 2,
+    "treasure_weight": 500,
+    "max_level": 0,
+    "mod_equip": "",
+    "treasure_mod": 0,
+    "icon": "/Game/UI/Texture/Dynamic/Image/RougeLike/T_Rouge_Treasure_07.T_Rouge_Treasure_07",
+    "end_points": [
+      20
+    ],
+    "shop_prices": 0,
+    "shop_weight": 0,
+    "room_condition": [],
+    "server_build": [
+      [
+        51
+      ]
+    ],
+    "server_build_value": [],
+    "rl_archive_id": 62,
+    "unlock_condition_text": "유물 미해제",
+    "can_sell": 0,
     "client_build": {}
   },
   {

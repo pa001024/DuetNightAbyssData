@@ -29,6 +29,7 @@ function M:OnLoaded(...)
   self.Btn_Conquer_Huaxu.SoundFunc = self.ButtonClickSoundFunc
   self.Btn_Gift_Huaxu.SoundFunc = self.ButtonClickSoundFunc
   self:InitRegionTab()
+  self:InitLicenseUI()
   ReddotManager.AddListenerEx(self.UIName, self, self.OnFameMainReddotChange)
   ReddotManager.AddListenerEx(self.UIName, self, self.FameMainTabReddotChange)
   ReddotManager.AddListenerEx("RecurringFameTask", self, self.OnFameMainReddotChange)
@@ -37,6 +38,42 @@ function M:OnLoaded(...)
   ReddotManager.AddListenerEx("EntrustFameTask", self, self.FameMainTabReddotChange)
   EventManager:AddEvent(EventID.RegionReputationsChange, self, self.RefreshUI)
   AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "Fame_Main", nil)
+end
+
+function M:InitLicenseUI()
+  self.Mounts_License.Btn_Area.OnClicked:Add(self, self.OnLicenseBtn_OnClicked)
+  self:AddDispatcher(EventID.OnGetLicense, self, self.OnGetLicense)
+  self.Mounts_License.Text_License:SetText(GText("UI_Mount_FlyLicense"))
+  self.Mounts_License.Text_Area:SetText(GText("UI_Mount_FlyLicense_Activated"))
+  self.Mounts_License.Key_License:CreateCommonKey({
+    KeyInfoList = {
+      {Type = "Img", ImgShortPath = "Menu"}
+    }
+  })
+  self:InitLicenseRedDot()
+end
+
+function M:OnGetLicense()
+  self:InitLicenseRedDot()
+end
+
+function M:OnLicenseBtn_OnClicked()
+  UIManager(self):LoadUINew("MountLicense")
+end
+
+function M:InitLicenseRedDot()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  self.Mounts_License.Num_Now:SetText(CommonUtils.TableLength(Avatar.MountFlyLicenses))
+  local Count = 0
+  for i, v in pairs(DataMgr.FlyLicense) do
+    Count = Count + 1
+  end
+  self.Mounts_License.Num_Total:SetText(Count)
+  local RedDot = ReddotManager.GetTreeNode("MountLicense_Item")
+  self.Mounts_License.Reddot:SetVisibility(RedDot and RedDot.Count > 0 and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
 end
 
 function M:UpdateRefreshTime(RegionTabId)
@@ -401,7 +438,10 @@ function M:OnGamePadDown(InKeyName)
     self:CloseSelf()
     IsEventHandled = true
   end
-  if "Gamepad_LeftShoulder" == InKeyName or "Gamepad_RightShoulder" == InKeyName then
+  if "Gamepad_Special_Right" == InKeyName then
+    self:OnLicenseBtn_OnClicked()
+    IsEventHandled = true
+  elseif "Gamepad_LeftShoulder" == InKeyName or "Gamepad_RightShoulder" == InKeyName then
     if self.Com_Tab then
       self.Com_Tab:Handle_KeyEventOnGamePad(InKeyName)
       IsEventHandled = true
@@ -437,6 +477,7 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
     self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Gift_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Fame_Progress.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.Collapsed)
     return
   end
   if IsUseKeyAndMouse then
@@ -445,6 +486,7 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
     self.Btn_Gift.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Conquer_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Btn_Gift_Huaxu.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.Collapsed)
   else
     self.Fame_Progress.WBP_Com_KeyImg:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     self.Fame_Progress.WBP_Com_KeyImg:CreateCommonKey({
@@ -476,6 +518,7 @@ function M:UpdateUIStyleInPlatform(IsUseKeyAndMouse)
         {Type = "Img", ImgShortPath = "Y"}
       }
     })
+    self.Mounts_License.Key_License:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   end
 end
 

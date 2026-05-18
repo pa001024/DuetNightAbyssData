@@ -336,7 +336,7 @@ function M:OnGamePadButtonDown(InKeyName)
         self.WidgetList[self.FocusIndex]:SetFocus()
       end
       self.FocusMode = 2
-      self:UpdateActivityKeyTips("CheckRewardView")
+      self:UpdateActivityKeyTips()
       return true
     end
     return false
@@ -546,7 +546,7 @@ function M:SwitchToRewardViewMode()
     self.FocusWidget = self.WidgetList[1]
     self.FocusIndex = 1
     self.FocusMode = 2
-    self:UpdateActivityKeyTips("CheckRewardView")
+    self:UpdateActivityKeyTips()
     self.TrainingLevel_RewardBtn.Key_GetAll:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end

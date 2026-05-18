@@ -1,4 +1,6 @@
 local json = require("rapidjson")
+local AppearanceShareModel = require("BluePrints.UI.WBP.Appearance.AppearanceShareModel")
+local IsSharerInfoEmpty, BuildSharerInfoFromSender
 local MessageWrap = {
   __index = {
     Message = nil,
@@ -41,9 +43,23 @@ local MessageWrap = {
       elseif string.startswith(Content, ChatCommon.DyePlanCopyHeader) then
         local JsonStr = string.sub(Content, #ChatCommon.DyePlanCopyHeader + 1)
         self.DyePlanInfo = json.decode(JsonStr)
+      elseif string.startswith(Content, ChatCommon.AppearancePlanCopyHeader) then
+        self.AppearancePlanInfo = AppearanceShareModel.ParseAppearanceShareMsg(Content)
+        if self.AppearancePlanInfo and IsSharerInfoEmpty(self.AppearancePlanInfo.SharerInfo) then
+          local FallbackSharerInfo = BuildSharerInfoFromSender(self.Message and self.Message.Sender)
+          if FallbackSharerInfo and not IsSharerInfoEmpty(FallbackSharerInfo) then
+            self.AppearancePlanInfo.SharerInfo = FallbackSharerInfo
+          end
+        end
       elseif string.startswith(Content, ChatCommon.GiftCopyHeader) then
         local JsonStr = string.sub(Content, #ChatCommon.GiftCopyHeader + 1)
         self.GiftInfo = json.decode(JsonStr)
+      elseif string.startswith(Content, ChatCommon.AsyncCombatRoomCopyHeader) then
+        local JsonStr = string.sub(Content, #ChatCommon.AsyncCombatRoomCopyHeader + 1)
+        self.AsyncCombatRoomInfo = json.decode(JsonStr)
+      elseif string.startswith(Content, ChatCommon.GuildRecruitHeader) then
+        local JsonStr = string.sub(Content, #ChatCommon.GuildRecruitHeader + 1)
+        self.GuildRecruitInfo = json.decode(JsonStr)
       end
     end,
     IsSticker = function(self)
@@ -125,7 +141,6 @@ local MessageList = {
           }, ChatCommon.MsgType.Time)
           table.insert(self.ViewList, TimeMsgWrap)
         end
-      elseif MsgWrap.MsgType == ChatCommon.MsgType.System then
       end
       table.insert(self.ViewList, MsgWrap)
       return TimeMsgWrap, MsgWrap
@@ -152,7 +167,7 @@ local MessageList = {
       end
       for _, Message in ipairs(Chat.Messages) do
         Message.ChannelType = ChatCommon.ChannelDef.Friend
-        if Message.Sender.Uid == GWorld:GetAvatar().Uid then
+        if Message.Type ~= CommonConst.MESSAGE_TYPE_SYSTEM and Message.Sender and Message.Sender.Uid == GWorld:GetAvatar().Uid then
           Message.Type = CommonConst.MESSAGE_TYPE_SELF
         end
         self:AddMessage(Message, true)
@@ -175,4 +190,27 @@ local MessageList = {
     return NewObj
   end
 }
+
+function IsSharerInfoEmpty(SharerInfo)
+  if type(SharerInfo) ~= "table" then
+    return true
+  end
+  return (SharerInfo.Nickname or "") == "" and (tonumber(SharerInfo.Level) or 0) <= 0 and (tonumber(SharerInfo.HeadIconId) or 0) <= 0 and (tonumber(SharerInfo.HeadFrameId) or 0) <= 0 and SharerInfo.TitleBefore == nil and nil == SharerInfo.TitleAfter and nil == SharerInfo.TitleFrame
+end
+
+function BuildSharerInfoFromSender(Sender)
+  if type(Sender) ~= "table" then
+    return nil
+  end
+  return {
+    Nickname = Sender.Nickname or "",
+    Level = tonumber(Sender.Level) or 0,
+    HeadIconId = tonumber(Sender.HeadIconId) or 0,
+    HeadFrameId = tonumber(Sender.HeadFrameId) or 0,
+    TitleBefore = Sender.TitleBefore,
+    TitleAfter = Sender.TitleAfter,
+    TitleFrame = Sender.TitleFrame
+  }
+end
+
 return {MessageWrap = MessageWrap, MessageList = MessageList}

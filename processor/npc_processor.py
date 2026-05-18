@@ -242,10 +242,9 @@ class NpcProcessor(BaseProcessor):
     def load_story_file(self, story_path):
         """加载故事文件。"""
         try:
-            json_path = story_path.replace(".story", ".json")
-            json_path = json_path.replace("\\", os.sep).replace("/", os.sep)
-            if not json_path.endswith(".json"):
-                json_path += ".json"
+            json_path = self._normalize_story_path(story_path)
+            if not json_path:
+                return None
             full_path = os.path.join(self.story_files_base_path, json_path)
 
             if not os.path.exists(full_path):

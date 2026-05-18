@@ -7,24 +7,45 @@ local WBP_ImpressionItem_Common = Class({
   "BluePrints.Common.TimerMgr"
 })
 
-function WBP_ImpressionItem_Common:InitUIData_Lua(ImpressionUI, ItemIndex, TalkTriggerId, OptionType, Option, OptionState, OnItemHandleEndDelegate, bIsSelected)
+local function ParseInitParams(Params)
+  local InitParams = Params or {}
+  return {
+    ImpressionUI = InitParams.ImpressionUI,
+    ItemIndex = InitParams.ItemIndex,
+    TalkTriggerId = InitParams.TalkTriggerId,
+    OptionState = InitParams.OptionState,
+    OptionType = InitParams.OptionType,
+    Option = InitParams.Option,
+    OnItemHandleEndDelegate = InitParams.OnItemHandleEndDelegate,
+    UsingGM = InitParams.UsingGM,
+    IsSelected = InitParams.IsSelected == true,
+    OnBeginShowCheckOrPlusUIDelegate = InitParams.OnBeginShowCheckOrPlusUIDelegate,
+    OnEndShowCheckOrPlusUIDelegate = InitParams.OnEndShowCheckOrPlusUIDelegate,
+    OnInterruptedExitDelegate = InitParams.OnInterruptedExitDelegate,
+    OnHoveredDelegate = InitParams.OnHoveredDelegate,
+    OnUnhoveredDelegate = InitParams.OnUnhoveredDelegate,
+    OnClickedDelegate = InitParams.OnClickedDelegate
+  }
+end
+
+function WBP_ImpressionItem_Common:InitUIData_Lua(InitParams)
   self.OnBeginShowCheckOrPlusUIEvent = nil
   self.OnEndShowCheckOrPlusUIEvent = nil
   self.OnClickedEvent = nil
-  self.ImpressionUI = ImpressionUI
-  self.ItemIndex = ItemIndex
-  self.TalkTriggerId = TalkTriggerId
-  self.OptionType = OptionType
-  self.Option = Option
-  self.OnItemHandleEndDelegate = OnItemHandleEndDelegate
+  self.ImpressionUI = InitParams.ImpressionUI
+  self.ItemIndex = InitParams.ItemIndex
+  self.TalkTriggerId = InitParams.TalkTriggerId
+  self.OptionType = InitParams.OptionType
+  self.Option = InitParams.Option
+  self.OnItemHandleEndDelegate = InitParams.OnItemHandleEndDelegate
   self.CheckType = ""
   self.CheckValue = -1
   self.PlusType = ""
   self.PlusValue = -1
   self.SuccRate = -1
   self.bIsHandled = false
-  self.bIsSelected = bIsSelected
-  self:SetState(OptionState)
+  self.bIsSelected = InitParams.IsSelected
+  self:SetState(InitParams.OptionState)
 end
 
 function WBP_ImpressionItem_Common:SwitchBindAnimationEvents(bBind)
@@ -75,14 +96,21 @@ function WBP_ImpressionItem_Common:SwitchBindButtonEvents(bBind)
   end
 end
 
-function WBP_ImpressionItem_Common:Init(ImpressionUI, ItemIndex, TalkTriggerId, OptionState, OptionType, Option, bInMobile, OnItemHandleEndDelegate, UsingGM, bIsSelected)
+function WBP_ImpressionItem_Common:Init(Params)
   DebugPrint("WBP_ImpressionItem_Common:Init", self)
-  self:InitUIData_Lua(ImpressionUI, ItemIndex, TalkTriggerId, OptionType, Option, OptionState, OnItemHandleEndDelegate, bIsSelected)
-  self.UsingGM = UsingGM
+  local InitParams = ParseInitParams(Params)
+  self:InitUIData_Lua(InitParams)
+  self.UsingGM = InitParams.UsingGM
+  self:SetOnBeginShowCheckOrPlusUI(InitParams.OnBeginShowCheckOrPlusUIDelegate)
+  self:SetOnEndShowCheckOrPlusUI(InitParams.OnEndShowCheckOrPlusUIDelegate)
+  self:SetOnInterruptedExit(InitParams.OnInterruptedExitDelegate)
+  self:SetOnHovered(InitParams.OnHoveredDelegate)
+  self:SetOnUnhovered(InitParams.OnUnhoveredDelegate)
+  self:SetOnClicked(InitParams.OnClickedDelegate)
   self:InitImpressionData()
   self:InitVisibility()
   self:InitImgIcon()
-  self:InitTexts(Option)
+  self:InitTexts(InitParams.Option)
   self:AdaptPlatform()
   self:SwitchBindAnimationEvents(true)
   self:DisplayOption()
@@ -168,6 +196,14 @@ function WBP_ImpressionItem_Common:SetSelect(bIsSelect)
     AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_add", nil, nil)
   end
   self:OnSelectedByPlatform(bIsSelect)
+end
+
+function WBP_ImpressionItem_Common:OnSelectItem()
+  self:SetSelect(true)
+end
+
+function WBP_ImpressionItem_Common:OnUnselectItem()
+  self:SetSelect(false)
 end
 
 function WBP_ImpressionItem_Common:SetState(NewState)

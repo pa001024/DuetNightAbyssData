@@ -144,7 +144,7 @@ end
 function SettingUtils.InitMobileResolution(GameOverallPerformance)
   local MobileResolutionList
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     MobileResolutionList = {
       [1] = {
         80,
@@ -288,7 +288,7 @@ function SettingUtils.GetUpValueByValueType(UpOptionValue)
 end
 
 function SettingUtils.IsOpenRayTracing()
-  return UE4.URuntimeCommonFunctionLibrary.GetRayTracingConfigEnabled() and UE4.URuntimeCommonFunctionLibrary.GetRayTracingEnabled()
+  return UE4.URuntimeCommonFunctionLibrary.GetRayTracingConfigEnabled()
 end
 
 function SettingUtils.ResetMobileResolution()
@@ -300,7 +300,7 @@ function SettingUtils.ResetMobileResolution()
   else
     if rawget(SettingUtils, "DefaultMobileResolution") == nil then
       local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(GWorld.GameInstance)
-      if "Android" == PlatformName then
+      if "Android" == PlatformName or "OpenHarmony" == PlatformName then
         rawset(SettingUtils, "DefaultMobileResolution", {
           [0] = {
             80,

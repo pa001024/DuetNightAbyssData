@@ -175,7 +175,7 @@ return ReadOnly("GalleryRule", {
     GalleryRuleId = 7009001,
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Jt_Zhiren.T_Head_Jt_Zhiren",
     PreferredMonsterId = 7009001,
-    Priority = 20021
+    Priority = 20031
   },
   [7010001] = {
     DescriptionDetail = "Mon_DesDetail_7010001",
@@ -229,8 +229,15 @@ return ReadOnly("GalleryRule", {
   [7018001] = {
     DescriptionDetail = "Mon_DesDetail_7018001",
     GalleryRuleId = 7018001,
-    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Zhiyan.T_Head_JT_Zhiyan",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Tiequan.T_Head_JT_Tiequan",
     PreferredMonsterId = 7018001,
+    Priority = 21031
+  },
+  [7019001] = {
+    DescriptionDetail = "Mon_DesDetail_7019001",
+    GalleryRuleId = 7019001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_JT_Hongshan.T_Head_JT_Hongshan",
+    PreferredMonsterId = 7019001,
     Priority = 21561
   },
   [8001001] = {
@@ -370,7 +377,7 @@ return ReadOnly("GalleryRule", {
     DescriptionDetail = "Mon_DesDetail_8519001",
     DisableTrainingGround = true,
     GalleryRuleId = 8519001,
-    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Lieche.T_Head_Boss_Lieche",
     PreferredMonsterId = 8519003,
     Priority = 19
   },
@@ -381,6 +388,14 @@ return ReadOnly("GalleryRule", {
     MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Empty.T_Head_Empty",
     PreferredMonsterId = 8520001,
     Priority = 20
+  },
+  [8521001] = {
+    DescriptionDetail = "Mon_DesDetail_8521001",
+    DisableTrainingGround = true,
+    GalleryRuleId = 8521001,
+    MonsterIcon = "/Game/UI/Texture/Dynamic/Image/Head/Monster/T_Head_Boss_Qihuo.T_Head_Boss_Qihuo",
+    PreferredMonsterId = 8521001,
+    Priority = 21
   },
   [8522001] = {
     DescriptionDetail = "Mon_DesDetail_8522001",

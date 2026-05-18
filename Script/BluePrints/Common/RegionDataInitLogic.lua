@@ -23,6 +23,7 @@ function M:ClearServerRegionData()
   self.DataLibrary.LogHelper.bIsRegionLogEnabled = self.IsRegionLogEnabled
   self.RegionDataAddCallback = {}
   self.RegionDataUpdateCallback = {}
+  self.QuestIdLocked = {}
 end
 
 function M:MakeManualItemIdMap()
@@ -83,6 +84,9 @@ end
 function M:InitSSDataFromServer(RegionBaseData)
   self:InitSubRegionInfoByData(RegionBaseData)
   if RegionBaseData.ManualItemId ~= nil and RegionBaseData.ManualItemId > 0 then
+    return
+  end
+  if self:CheckQuestLocked(RegionBaseData) then
     return
   end
   if RegionBaseData.IsDead and self:CheckRegionDataNeedDead(RegionBaseData) then
@@ -243,6 +247,40 @@ function M:InitSSDataFromServer_Raw_Lua(LuaTableIndex, UnitType, UnitId, Locatio
   self.LastState = nil
   self.LastBornLocation = nil
   self.DataPool:GetRegionEntityDataNoCopy(LuaTableIndex)
+end
+
+function M:CheckQuestLocked(RegionBaseData)
+  if not RegionBaseData.QuestChainId or RegionBaseData.QuestChainId <= 0 then
+    return false
+  end
+  if not self.QuestIdLocked[RegionBaseData.QuestChainId] then
+    self.QuestIdLocked[RegionBaseData.QuestChainId] = {}
+    self.QuestIdLocked[RegionBaseData.QuestChainId].Datas = {}
+    local ChapterId = DataMgr.QuestChainId2ChapId[RegionBaseData.QuestChainId]
+    local Avatar = GWorld:GetAvatar()
+    if Avatar and ChapterId then
+      self.QuestIdLocked[RegionBaseData.QuestChainId].LockState = Avatar.QuestChapters[ChapterId] and Avatar.QuestChapters[ChapterId].State == CommonConst.QuestChapterState.Lock
+    end
+  end
+  local IsLocked = self.QuestIdLocked[RegionBaseData.QuestChainId].LockState
+  if IsLocked then
+    table.insert(self.QuestIdLocked[RegionBaseData.QuestChainId].Datas, RegionBaseData)
+    DebugPrint("InitSSDataFromServer But Quest Is Locked:", RegionBaseData.WorldRegionEid, RegionBaseData.QuestChainId)
+  end
+  return IsLocked
+end
+
+function M:RecoverQuestLockedDatas(QuestChainId)
+  local QuestChainData = self.QuestIdLocked[QuestChainId]
+  if not (QuestChainData and QuestChainData.LockState) or not QuestChainData.Datas then
+    return
+  end
+  QuestChainData.LockState = false
+  for _, Data in pairs(QuestChainData.Datas) do
+    DebugPrint("RecoverQuestLockedDatas:", Data.WorldRegionEid, QuestChainId)
+    self:InitSSDataFromServer(Data)
+  end
+  QuestChainData.Datas = {}
 end
 
 function M:InitCacheByPrepareRegion()

@@ -40,13 +40,14 @@ function M:Destruct()
   AudioManager(self):SetEventSoundParam(self, GachaShowSoundKey, {ToEnd = 1})
 end
 
-function M:ApplyInitData(WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback)
+function M:ApplyInitData(WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback, EventId)
   self.TargetDisplayIndex = WonIndex
   self.bIsBigPrize = bIsBigPrize
   self.AcquiredList = AcquiredList
   self.DrawCount = DrawCount
   self.ConvertFlags = ConvertFlags
   self.InCallback = InCallback
+  self.EventId = EventId
 end
 
 function M:PlayInThenStartDraw()
@@ -62,14 +63,15 @@ function M:PlayInThenStartDraw()
         return
       end
       self:UnbindInAnimationFinished()
+      self:SetFocus()
       self:StartDrawAnimation()
     end
   })
   self:PlayAnimation(self.In)
 end
 
-function M:Init(RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback)
-  self:ApplyInitData(WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback)
+function M:Init(RewardPool, WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback, EventId)
+  self:ApplyInitData(WonIndex, bIsBigPrize, AcquiredList, DrawCount, ConvertFlags, InCallback, EventId)
   self.Panel_Toast:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ClearTimers()
   self:PopulateList(RewardPool)
@@ -279,9 +281,13 @@ end
 
 function M:ShowResult()
   if self.AcquiredList and #self.AcquiredList > 0 then
-    local ResultWidget = UIManager(self):LoadUINew("LimitedPrizePoolReward", self.AcquiredList, self.DrawCount, self.bIsBigPrize, self.InCallback, self.ConvertFlags)
+    local ResultWidget = UIManager(self):LoadUINew("LimitedPrizePoolReward", self.AcquiredList, self.DrawCount, self.bIsBigPrize, self.InCallback, self.ConvertFlags, self.EventId)
   end
-  self:RemoveFromParent()
+  if IsValid(self.Parent) and self.Parent.RemoveFromParent then
+    self.Parent:RemoveFromParent()
+  else
+    self:RemoveFromParent()
+  end
 end
 
 function M:SkipToResult()

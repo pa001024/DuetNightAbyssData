@@ -1375,11 +1375,6 @@ return {
       UnitType = "Mechanism",
       UnitId = 49500
     },
-    ["1720763"] = {
-      CreatorId = 1720763,
-      UnitType = "Mechanism",
-      UnitId = 1
-    },
     ["1720770"] = {
       CreatorId = 1720770,
       UnitType = "Mechanism",
@@ -1656,11 +1651,6 @@ return {
       ManualItemId = 172037,
       UnitType = "Mechanism",
       UnitId = 39021
-    },
-    ["1720001"] = {
-      ManualItemId = 1720001,
-      UnitType = "Mechanism",
-      UnitId = 10411
     },
     ["1720003"] = {
       ManualItemId = 1720003,

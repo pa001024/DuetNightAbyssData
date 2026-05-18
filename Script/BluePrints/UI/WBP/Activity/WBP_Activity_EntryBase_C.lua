@@ -247,6 +247,7 @@ function M:ActivityItemClick(TabWidget)
   ActivityUtils.TrySubActivityReddotCommon("New", ActivityId)
   self:UpdateTabRedInfoByActivityID(ActivityInfoIndex, ActivityId)
   self.Activity_Tab:Init(self:GetTopTabInfoByActivityId(ActivityId))
+  self.Activity_Tab:RefreshLimitRewardPreviewNewReddot()
 end
 
 function M:GenerateActivityPage(ActivityId, ActivityInfo, ActivityConfigData, TabId)
@@ -901,6 +902,12 @@ function M:GetTopTabInfoByActivityId(ActivityId)
     TopTabInfo.OverridenTopResouces = CoinBarInfo
   end
   return TopTabInfo
+end
+
+function M:JudgeNeedShowVersionView()
+  if self.NeedShowVersionView then
+    UIManager(self):LoadUINew("ActivityLimitTimeRewardPreview")
+  end
 end
 
 return M

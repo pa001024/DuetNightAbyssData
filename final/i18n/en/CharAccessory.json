@@ -680,6 +680,14 @@
     "unlock": "Available from events"
   },
   {
+    "id": 10092,
+    "name": "Ritual Censer: Opaque White",
+    "desc": "Are we making offerings to Heaven... or to ourselves?",
+    "icon": "T_Fashion_Head55",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
     "id": 10094,
     "name": "Quill: Opaque White",
     "desc": "Let's write a story of our own.",
@@ -760,6 +768,246 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 10106,
+    "name": "Wolfy Headpiece: Leaden Grey",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these wolfy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
+    "icon": "T_Fashion_Head63_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10107,
+    "name": "Wolfy Headpiece: Dark Jade",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these wolfy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
+    "icon": "T_Fashion_Head63_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10108,
+    "name": "Wolfy Headpiece: Rust Red",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these wolfy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
+    "icon": "T_Fashion_Head63_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10109,
+    "name": "Wolfy Headpiece: Azure",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of these wolfy ears. Hang on... why does that sound weirdly familiar? Must be my imagination.",
+    "icon": "T_Fashion_Head63_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10110,
+    "name": "Meowbeat Headpiece: Mint",
+    "desc": "Now this is real cat music.",
+    "icon": "T_Fashion_Head65_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10111,
+    "name": "Meowbeat Headpiece: Opaque White",
+    "desc": "Now this is real cat music.",
+    "icon": "T_Fashion_Head65_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10112,
+    "name": "Meowbeat Headpiece: Dark Jade",
+    "desc": "Now this is real cat music.",
+    "icon": "T_Fashion_Head65_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10113,
+    "name": "Meowbeat Headpiece: Rust Red",
+    "desc": "Now this is real cat music.",
+    "icon": "T_Fashion_Head65_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10114,
+    "name": "Ethereal Aureola: Opaque White",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10115,
+    "name": "Ethereal Aureola: Gilt",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10116,
+    "name": "Ethereal Aureola: Rust Red",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10117,
+    "name": "Ethereal Aureola: Violet",
+    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "icon": "T_Fashion_Head61_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 10118,
+    "name": "Twilight Ribbon: Dark Jade",
+    "desc": "Night falls in silken folds, and none can escape its weave.",
+    "icon": "T_Fashion_Head68_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10119,
+    "name": "Twilight Ribbon: Opaque White",
+    "desc": "Night falls in silken folds, and none can escape its weave.",
+    "icon": "T_Fashion_Head68_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10120,
+    "name": "Twilight Ribbon: Caramel",
+    "desc": "Night falls in silken folds, and none can escape its weave.",
+    "icon": "T_Fashion_Head68_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10121,
+    "name": "Twilight Ribbon: White Sakura",
+    "desc": "Night falls in silken folds, and none can escape its weave.",
+    "icon": "T_Fashion_Head68_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10122,
+    "name": "Charging",
+    "desc": "Battery status: charging.",
+    "icon": "T_Fashion_Head59_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10123,
+    "name": "Fully Charged",
+    "desc": "Battery status: full.",
+    "icon": "T_Fashion_Head59_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10124,
+    "name": "Low Battery",
+    "desc": "Battery status: low.",
+    "icon": "T_Fashion_Head59_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10125,
+    "name": "Critical Battery",
+    "desc": "Battery status: critical.",
+    "icon": "T_Fashion_Head59_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10126,
+    "name": "Roadblock: Rust Red",
+    "desc": "Road closed.",
+    "icon": "T_Fashion_Hat14_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10127,
+    "name": "Roadblock: Emerald Green",
+    "desc": "Road closed.",
+    "icon": "T_Fashion_Hat14_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10128,
+    "name": "Roadblock: Apricot",
+    "desc": "Road closed.",
+    "icon": "T_Fashion_Hat14_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10129,
+    "name": "Roadblock: Leaden Grey",
+    "desc": "Road closed.",
+    "icon": "T_Fashion_Hat14_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 10130,
+    "name": "Chirrup Warbler",
+    "desc": "由于阿特拉西亚大陆知名童话故事《啾啾的奇妙冒险》的传播，很多人误认为啾啾莺是那本童话故事的主角。因此每本新书出版时，作者都会在书中强调，“啾啾是小鸡，啾啾莺是小鸟！”",
+    "icon": "T_Fashion_Head64",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10131,
+    "name": "Stoney Stare",
+    "desc": "辟邪退灾。",
+    "icon": "T_Fashion_Head66",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10132,
+    "name": "Luno's Device (Ⅰ)",
+    "desc": "One of Lunoxplorer's surveying devices. Once activated, it begins gathering the data she needs.",
+    "icon": "T_Fashion_Head67_01",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10139,
+    "name": "节日气球·黛蓝",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head60_04",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10140,
+    "name": "Ironbloom",
+    "desc": "Binding life within steel and machinery has always been one of alchemy's enduring pursuits.",
+    "icon": "T_Fashion_Head62",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 10149,
+    "name": "节日气球·薄荷",
+    "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
+    "icon": "T_Fashion_Head60_02",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
     "id": 11001,
     "name": "UI_Accessory_Name_11001",
     "desc": "UI_Accessory_Desc_11001",
@@ -796,6 +1044,14 @@
     "name": "Bouncy Glide",
     "desc": "Swaying to and fro, we dance to a merry tune.",
     "icon": "T_Fashion_Fx16",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 11007,
+    "name": "Everbloom Expanse",
+    "desc": "Flowers bloom where angels once fell.",
+    "icon": "T_Fashion_Fx27",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -860,6 +1116,70 @@
     "name": "Filbert's Pick",
     "desc": "The process was a mess, but Filbert did choose it in the end.",
     "icon": "T_Fashion_Hat08",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12009,
+    "name": "Cloudy Afternoon",
+    "desc": "Beneath soft white clouds lies the comfort of a quiet nap.",
+    "icon": "T_Fashion_Hat11",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12010,
+    "name": "First Snowlight",
+    "desc": "Snowflakes glimmer in the sunlight, touched by the laughter of morning.",
+    "icon": "T_Fashion_Hat10",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12011,
+    "name": "Rebel Studs",
+    "desc": "In the dark, sharp studs catch the light, carving out their silhouette.",
+    "icon": "T_Fashion_Hat15",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12012,
+    "name": "Hushed Iris: Dark Jade",
+    "desc": "Silence can carry more weight than words.",
+    "icon": "T_Fashion_Hat12_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12013,
+    "name": "Hushed Iris: Caramel",
+    "desc": "Silence can carry more weight than words.",
+    "icon": "T_Fashion_Hat12_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12014,
+    "name": "Hushed Iris: Opaque White",
+    "desc": "Silence can carry more weight than words.",
+    "icon": "T_Fashion_Hat12_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12015,
+    "name": "Hushed Iris: Leaden Grey",
+    "desc": "Silence can carry more weight than words.",
+    "icon": "T_Fashion_Hat12_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 12016,
+    "name": "Nocturne Veil",
+    "desc": "A veil of black gauze falls over her finery.",
+    "icon": "T_Fashion_Hat16",
     "rarity": 4,
     "unlock": "Available at Shop"
   },
@@ -1150,6 +1470,86 @@
     "icon": "T_Fashion_Waist23_02",
     "rarity": 4,
     "unlock": "Available at Shop"
+  },
+  {
+    "id": 13029,
+    "name": "Wolfy Tail: Leaden Grey",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13030,
+    "name": "Wolfy Tail: Dark Jade",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13031,
+    "name": "Wolfy Tail: Rust Red",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13032,
+    "name": "Wolfy Tail: Azure",
+    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "icon": "T_Fashion_Waist30_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13033,
+    "name": "Twilight Nightmare: Dark Jade",
+    "desc": "Now this is real cat music.",
+    "icon": "T_Fashion_Back43_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13034,
+    "name": "Twilight Nightmare: Gilt",
+    "desc": "Now this is real cat music.",
+    "icon": "T_Fashion_Back43_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13035,
+    "name": "Twilight Nightmare: Emerald Green",
+    "desc": "Now this is real cat music.",
+    "icon": "T_Fashion_Back43_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13036,
+    "name": "Twilight Nightmare: White Sakura",
+    "desc": "Now this is real cat music.",
+    "icon": "T_Fashion_Back43_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 13037,
+    "name": "Sacred Remains: Gilt",
+    "desc": "The divine form was left to the mortal world, a warmth beyond fading.",
+    "icon": "T_Fashion_Waist33_04",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 13039,
+    "name": "Sacred Remains: Opaque White",
+    "desc": "The divine form was left to the mortal world, a warmth beyond fading.",
+    "icon": "T_Fashion_Waist33_02",
+    "rarity": 5,
+    "unlock": "Available from events"
   },
   {
     "id": 20001,
@@ -1581,7 +1981,7 @@
     "desc": "Target locked.",
     "icon": "T_Fashion_Face24__03",
     "rarity": 5,
-    "unlock": "Available through Prism Exchange"
+    "unlock": "Available at Shop"
   },
   {
     "id": 20056,
@@ -1589,7 +1989,7 @@
     "desc": "Target locked.",
     "icon": "T_Fashion_Face24__02",
     "rarity": 5,
-    "unlock": "Available through Prism Exchange"
+    "unlock": "Available at Shop"
   },
   {
     "id": 20057,
@@ -1597,7 +1997,7 @@
     "desc": "Target locked.",
     "icon": "T_Fashion_Face24",
     "rarity": 5,
-    "unlock": "Available through Prism Exchange"
+    "unlock": "Available at Shop"
   },
   {
     "id": 20058,
@@ -1605,7 +2005,7 @@
     "desc": "Target locked.",
     "icon": "T_Fashion_Face24__01",
     "rarity": 5,
-    "unlock": "Available through Prism Exchange"
+    "unlock": "Available at Shop"
   },
   {
     "id": 20063,
@@ -1760,6 +2160,54 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 20082,
+    "name": "Sacred Radiance: Opaque White",
+    "desc": "神将光芒弃于人间，静待信仰的回响。",
+    "icon": "T_Fashion_Face26_04",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 20084,
+    "name": "Sacred Radiance: Celeste",
+    "desc": "神将光芒弃于人间，静待信仰的回响。",
+    "icon": "T_Fashion_Face26_02",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 20086,
+    "name": "Whisperveil: Dark Jade",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20087,
+    "name": "Whisperveil: Opaque White",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20088,
+    "name": "Whisperveil: Rust Red",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 20089,
+    "name": "Whisperveil: Gilt",
+    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "icon": "T_Fashion_Face25_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 21001,
     "name": "UI_Accessory_Name_21001",
     "desc": "UI_Accessory_Desc_21001",
@@ -1812,6 +2260,30 @@
     "name": "Eldritch Talisman: Gilt",
     "desc": "With but a thought, the talisman stirs, and eldritch power answers.",
     "icon": "T_Fashion_Fx17_01",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 21010,
+    "name": "Everbloom Flurry",
+    "desc": "Everbloom Flurry",
+    "icon": "T_Fashion_Fx23",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 21011,
+    "name": "Sacred Wake: Gilt",
+    "desc": "Sacred Wake: Gilt",
+    "icon": "T_Fashion_Fx22",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 21012,
+    "name": "Sacred Wake: Leaden Grey",
+    "desc": "Sacred Wake: Gilt",
+    "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "Available from events"
   },
@@ -1921,7 +2393,7 @@
   },
   {
     "id": 30020,
-    "name": "Celestial Scepter: Glit",
+    "name": "Celestial Scepter: Gilt",
     "desc": "Hold the authority of the heavens in your very hand.",
     "icon": "T_Fashion_Waist15",
     "rarity": 5,
@@ -2088,6 +2560,174 @@
     "unlock": "Available from events"
   },
   {
+    "id": 30041,
+    "name": "Nightglow Lantern: Apricot",
+    "desc": "Even the longest night will end. May its light guide you home.",
+    "icon": "T_Fashion_Waist22_02",
+    "rarity": 3,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 30042,
+    "name": "Gilded Cage: Gilt",
+    "desc": "Once you've tasted freedom, going back to a gilded cage becomes unbearable.",
+    "icon": "T_Fashion_Waist27_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30043,
+    "name": "Gilded Cage: Opaque White",
+    "desc": "Once you've tasted freedom, going back to a gilded cage becomes unbearable.",
+    "icon": "T_Fashion_Waist27_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30044,
+    "name": "Gilded Cage: Dark Jade",
+    "desc": "Once you've tasted freedom, going back to a gilded cage becomes unbearable.",
+    "icon": "T_Fashion_Waist27_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30045,
+    "name": "Gilded Cage: Apricot",
+    "desc": "Once you've tasted freedom, going back to a gilded cage becomes unbearable.",
+    "icon": "T_Fashion_Waist27_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30046,
+    "name": "Squishy Sachet: Violet",
+    "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
+    "icon": "T_Fashion_Waist32_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30047,
+    "name": "Squishy Sachet: Emerald Green",
+    "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
+    "icon": "T_Fashion_Waist32_03",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 30048,
+    "name": "Squishy Sachet: Caramel",
+    "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
+    "icon": "T_Fashion_Waist32_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30049,
+    "name": "Squishy Sachet: Opaque White",
+    "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
+    "icon": "T_Fashion_Waist32_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30054,
+    "name": "Bottled Joy: Rust Red",
+    "desc": "A refreshing sip for the sweltering summer heat.",
+    "icon": "T_Fashion_Waist29_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30055,
+    "name": "Bottled Joy: Emerald Green",
+    "desc": "A refreshing sip for the sweltering summer heat.",
+    "icon": "T_Fashion_Waist29_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30056,
+    "name": "Bottled Joy: Apricot",
+    "desc": "A refreshing sip for the sweltering summer heat.",
+    "icon": "T_Fashion_Waist29_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30057,
+    "name": "Bottled Joy: Rust Red",
+    "desc": "A refreshing sip for the sweltering summer heat.",
+    "icon": "T_Fashion_Waist29_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30058,
+    "name": "Canned Joy: Azure",
+    "desc": "A refreshing sip for the sweltering summer heat.",
+    "icon": "T_Fashion_Waist28_04",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30059,
+    "name": "Canned Joy: White Sakura",
+    "desc": "A refreshing sip for the sweltering summer heat.",
+    "icon": "T_Fashion_Waist28_03",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30060,
+    "name": "Canned Joy: Emerald Green",
+    "desc": "A refreshing sip for the sweltering summer heat.",
+    "icon": "T_Fashion_Waist28_02",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30061,
+    "name": "Canned Joy: Dark Jade",
+    "desc": "A refreshing sip for the sweltering summer heat.",
+    "icon": "T_Fashion_Waist28_01",
+    "rarity": 4,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30062,
+    "name": "Twilight Sidearm: Dark Jade",
+    "desc": "When the shell casing hits the ground, fear meets its end.",
+    "icon": "T_Fashion_Waist31_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30063,
+    "name": "Twilight Sidearm: Opaque White",
+    "desc": "When the shell casing hits the ground, fear meets its end.",
+    "icon": "T_Fashion_Waist31_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30064,
+    "name": "Twilight Sidearm: Caramel",
+    "desc": "When the shell casing hits the ground, fear meets its end.",
+    "icon": "T_Fashion_Waist31_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 30065,
+    "name": "Twilight Sidearm: White Sakura",
+    "desc": "When the shell casing hits the ground, fear meets its end.",
+    "icon": "T_Fashion_Waist31_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 31001,
     "name": "Victory Posture: Shore Leisure",
     "desc": "Changes your Victory Posture.",
@@ -2104,10 +2744,26 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 31003,
+    "name": "Victory Posture – Snapfreeze",
+    "desc": "Changes your Victory Posture.",
+    "icon": "T_Fashion_SettlementAction_05",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
     "id": 31004,
     "name": "Victory Posture: Jishu Phantasia",
     "desc": "Changes your Victory Posture.",
     "icon": "T_Fashion_SettlementAction_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 31005,
+    "name": "Victory Posture: Miserere Ground",
+    "desc": "Changes your Victory Posture.",
+    "icon": "T_Fashion_SettlementAction_04",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -2504,6 +3160,14 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 40055,
+    "name": "Wishen Effigy",
+    "desc": "It is born beneath a lingering gaze, and returns to dust when thought falls still.",
+    "icon": "T_Fashion_Back38",
+    "rarity": 4,
+    "unlock": "Available from events"
+  },
+  {
     "id": 40056,
     "name": "Everfrost Rose: Gilt",
     "desc": "Perhaps when a rose blooms from frozen earth, buried memories and forgotten vows will stir once more.",
@@ -2568,6 +3232,70 @@
     "unlock": "Available at Shop"
   },
   {
+    "id": 40068,
+    "name": "Squishy Backpack: Emerald Green",
+    "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
+    "icon": "T_Fashion_Back44_03",
+    "rarity": 5,
+    "unlock": "Available from events"
+  },
+  {
+    "id": 40069,
+    "name": "Squishy Backpack: Opaque White",
+    "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
+    "icon": "T_Fashion_Back44_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40070,
+    "name": "Squishy Backpack: Azure",
+    "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
+    "icon": "T_Fashion_Back44_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40071,
+    "name": "Squishy Backpack: Rust Red",
+    "desc": "A dainty little sachet, soft and plump, dangling lightly at your hem.",
+    "icon": "T_Fashion_Back44_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40072,
+    "name": "Darktide: Dark Jade",
+    "desc": "Beneath the night, dark currents surge, ready to swallow everything whole.",
+    "icon": "T_Fashion_Back42_01",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40073,
+    "name": "Darktide: Caramel",
+    "desc": "Beneath the night, dark currents surge, ready to swallow everything whole.",
+    "icon": "T_Fashion_Back42_02",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40074,
+    "name": "Darktide: Opaque White",
+    "desc": "Beneath the night, dark currents surge, ready to swallow everything whole.",
+    "icon": "T_Fashion_Back42_04",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
+    "id": 40075,
+    "name": "Darktide: Leaden Grey",
+    "desc": "Beneath the night, dark currents surge, ready to swallow everything whole.",
+    "icon": "T_Fashion_Back42_03",
+    "rarity": 5,
+    "unlock": "Available at Shop"
+  },
+  {
     "id": 50001,
     "name": "",
     "desc": "",
@@ -2592,8 +3320,16 @@
     "unlock": "Available through Prism Exchange"
   },
   {
+    "id": 50004,
+    "name": "Eternal Stele",
+    "desc": " ",
+    "icon": "T_Fashion_Fx25",
+    "rarity": 4,
+    "unlock": ""
+  },
+  {
     "id": 60001,
-    "name": " ",
+    "name": "Eternal Stele",
     "desc": " ",
     "icon": "",
     "rarity": 5,
@@ -2636,6 +3372,14 @@
     "name": "Flare Blossom: Gilt",
     "desc": "A loong soars and breathes fire; our songs carry on through the night.",
     "icon": "T_Fashion_Fx10_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70005,
+    "name": "Floral Eternity: Violet",
+    "desc": "Even flowers born from cursed soil may bloom forever.",
+    "icon": "T_Fashion_Fx31_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -2740,6 +3484,30 @@
     "name": "Pixel Paws: Rust Red",
     "desc": "The pawprints are right here... so where did the cat go?",
     "icon": "T_Fashion_Fx19_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70051,
+    "name": "Floral Eternity: White Sakura",
+    "desc": "Even flowers born from cursed soil may bloom forever.",
+    "icon": "T_Fashion_Fx31_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70052,
+    "name": "Floral Eternity: Rust Red",
+    "desc": "Even flowers born from cursed soil may bloom forever.",
+    "icon": "T_Fashion_Fx31_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 70053,
+    "name": "Floral Eternity: Gilt",
+    "desc": "Even flowers born from cursed soil may bloom forever.",
+    "icon": "T_Fashion_Fx31_02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   },
@@ -2868,6 +3636,38 @@
     "name": "Pixel Kitty: Azure",
     "desc": "Turn around, get down — perfect!",
     "icon": "T_Fashion_Fx18_03",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80051,
+    "name": "Ethereal Sprite: Opaque White",
+    "desc": "Sound the horn, and welcome the angels' descent.",
+    "icon": "T_Fashion_Fx28_01",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80052,
+    "name": "Ethereal Sprite: Gilt",
+    "desc": "Sound the horn, and welcome the angels' descent.",
+    "icon": "T_Fashion_Fx28_02",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80053,
+    "name": "Ethereal Sprite: Celeste",
+    "desc": "Sound the horn, and welcome the angels' descent.",
+    "icon": "T_Fashion_Fx28_04",
+    "rarity": 5,
+    "unlock": "Available through Prism Exchange"
+  },
+  {
+    "id": 80054,
+    "name": "Ethereal Sprite: White Sakura",
+    "desc": "Sound the horn, and welcome the angels' descent.",
+    "icon": "T_Fashion_Fx28_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
   }

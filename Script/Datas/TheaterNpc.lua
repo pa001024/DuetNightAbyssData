@@ -34,5 +34,10 @@ return ReadOnly("TheaterNpc", {
     EndTime = LocalTimeProxy(1768769700),
     NPCID = 900019,
     StartTime = LocalTimeProxy(1768337700)
+  },
+  [900053] = {
+    EndTime = LocalTimeProxy(1782334800),
+    NPCID = 900053,
+    StartTime = LocalTimeProxy(1780538400)
   }
 })

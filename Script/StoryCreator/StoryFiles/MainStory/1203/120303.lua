@@ -52,7 +52,7 @@ return {
       key = "17637158223841369283",
       type = "StoryEndNode",
       name = "StoryEnd",
-      pos = {x = 1654.9875776397516, y = 522.6273291925468},
+      pos = {x = 1647.2253398775138, y = 512.2427138079315},
       propsData = {},
       questNodeData = {
         lineData = {},
@@ -185,7 +185,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -227,7 +229,8 @@ return {
             propsData = {
               TargetTime = 12,
               NeedLerp = false,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           },
           ["17737464602273038306"] = {
@@ -429,7 +432,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -467,6 +472,7 @@ return {
               DelayShowGuideTime = 0,
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = false,
               FirstDialogueId = 12060740,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
@@ -494,8 +500,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               TalkActors = {},
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "Player",
@@ -544,7 +552,8 @@ return {
             propsData = {
               TargetTime = 12,
               NeedLerp = false,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
           },
           ["17738245472027821701"] = {
@@ -599,7 +608,7 @@ return {
       key = "17637247125282739150",
       type = "StoryNode",
       name = "找苏乙",
-      pos = {x = 1088.555332114918, y = 508.2307804234439},
+      pos = {x = 1088.555332114918, y = 509.2652631820646},
       propsData = {
         QuestId = 12030303,
         QuestDescriptionComment = "",
@@ -630,12 +639,6 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17637247125282739155",
-            startPort = "QuestStart",
-            endQuest = "176535459913915033592",
-            endPort = "In"
-          },
-          {
             startQuest = "176535459913915033592",
             startPort = "Out",
             endQuest = "17637247125282739159",
@@ -654,6 +657,18 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "17773422423206238",
+            startPort = "Out",
+            endQuest = "17772910215624939",
+            endPort = "In"
+          },
+          {
+            startQuest = "17637247125282739155",
+            startPort = "QuestStart",
+            endQuest = "176535459913915033592",
+            endPort = "In"
+          },
+          {
             startQuest = "17747656158591278223",
             startPort = "Out",
             endQuest = "17637247125282739156",
@@ -665,28 +680,28 @@ return {
             key = "17637247125282739155",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 801.6666666666666, y = 289.1666666666667},
+            pos = {x = 529.0590382035705, y = 426.8565867033524},
             propsData = {ModeType = 0}
           },
           ["17637247125282739156"] = {
             key = "17637247125282739156",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2246.850932189407, y = 312.4057361271517},
+            pos = {x = 1939.5818323297835, y = 410.15783696748787},
             propsData = {ModeType = 0}
           },
           ["17637247125282739157"] = {
             key = "17637247125282739157",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1940, y = 532.9666666666667},
+            pos = {x = 2001.125365375262, y = 247.00524535091705},
             propsData = {}
           },
           ["17637247125282739159"] = {
             key = "17637247125282739159",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1387.8559576888263, y = 291.38859612394197},
+            pos = {x = 1107.682044645348, y = 403.4972917761159},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -725,7 +740,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -740,7 +757,7 @@ return {
             key = "176535459913915033592",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1091.75, y = 302.25},
+            pos = {x = 811.5760869565217, y = 414.358695652174},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -754,7 +771,7 @@ return {
             key = "176535461372615033944",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1671.75, y = 303.4999999999999},
+            pos = {x = 1391.5760869565217, y = 415.60869565217376},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = true,
@@ -768,11 +785,30 @@ return {
             key = "17747656158591278223",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 1941.1151960784316, y = 307.7156862745098},
+            pos = {x = 1660.9412830349534, y = 419.8243819266837},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
+            }
+          },
+          ["17772910215624939"] = {
+            key = "17772910215624939",
+            type = "WaitingSpecialQuestStartAndFinishNode",
+            name = "等待特殊任务开始并完成",
+            pos = {x = 1202.5360130374677, y = 89.92446543528686},
+            propsData = {SpecialConfigId = 12030303, BlackScreenImmediately = false}
+          },
+          ["17773422423206238"] = {
+            key = "17773422423206238",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 919.4375000000001, y = 95.99999999999994},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 132410057,
+              GuideType = "M",
+              GuidePointName = "Mechanism_1203020101_132410057"
             }
           }
         },
@@ -784,7 +820,7 @@ return {
       key = "17637248930082740535",
       type = "StoryNode",
       name = "救小安",
-      pos = {x = 1363.1354297666264, y = 515.2306764084656},
+      pos = {x = 1362.4817356346712, y = 502.1043200062471},
       propsData = {
         QuestId = 12030304,
         QuestDescriptionComment = "",
@@ -815,22 +851,10 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17637248930082740540",
-            startPort = "QuestStart",
-            endQuest = "17637248930082740545",
-            endPort = "In"
-          },
-          {
             startQuest = "17637248930082740545",
             startPort = "Out",
             endQuest = "17637249891592741847",
             endPort = "In"
-          },
-          {
-            startQuest = "176535467032316082857",
-            startPort = "Out",
-            endQuest = "17637248930082740541",
-            endPort = "Success"
           },
           {
             startQuest = "17637251430322743814",
@@ -873,6 +897,36 @@ return {
             startPort = "Out",
             endQuest = "17637251430322743814",
             endPort = "In"
+          },
+          {
+            startQuest = "17637248930082740540",
+            startPort = "QuestStart",
+            endQuest = "17774337394611979",
+            endPort = "In"
+          },
+          {
+            startQuest = "17774337394611979",
+            startPort = "Out",
+            endQuest = "17774337531472404",
+            endPort = "In"
+          },
+          {
+            startQuest = "17774337531472404",
+            startPort = "Success",
+            endQuest = "17637248930082740541",
+            endPort = "Success"
+          },
+          {
+            startQuest = "17774337531472404",
+            startPort = "Fail",
+            endQuest = "17637248930082740542",
+            endPort = "Fail"
+          },
+          {
+            startQuest = "17774337531472404",
+            startPort = "PassiveFail",
+            endQuest = "17637248930082740542",
+            endPort = "Fail"
           }
         },
         nodeData = {
@@ -880,21 +934,21 @@ return {
             key = "17637248930082740540",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 801.6666666666666, y = 289.1666666666667},
+            pos = {x = 1279.5588235294115, y = -309.37499999999994},
             propsData = {ModeType = 0}
           },
           ["17637248930082740541"] = {
             key = "17637248930082740541",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3201.1509321894077, y = 297.5390694604851},
+            pos = {x = 2123.699951797251, y = -347.85308740226014},
             propsData = {ModeType = 0}
           },
           ["17637248930082740542"] = {
             key = "17637248930082740542",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2804.9444444444443, y = 727.9722222222223},
+            pos = {x = 2128.081699346405, y = -227.41993464052285},
             propsData = {}
           },
           ["17637248930082740544"] = {
@@ -1010,7 +1064,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1090,12 +1146,32 @@ return {
             key = "177267878571812264394",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = 1403.2719298245615, y = 450.36184210526324},
+            pos = {x = 1163.2719298245615, y = 830.9868421052632},
             propsData = {
               TargetTime = 12,
               NeedLerp = true,
-              LerpTime = 0
+              LerpTime = 0,
+              StopTimeElapse = false
             }
+          },
+          ["17774337394611979"] = {
+            key = "17774337394611979",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 1561.590557275542, y = -311.6393188854489},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 132420051,
+              GuideType = "M",
+              GuidePointName = "Mechanism_1203030301_132420051"
+            }
+          },
+          ["17774337531472404"] = {
+            key = "17774337531472404",
+            type = "WaitingSpecialQuestStartAndFinishNode",
+            name = "等待特殊任务开始并完成",
+            pos = {x = 1838.1043601651188, y = -313.92518059855524},
+            propsData = {SpecialConfigId = 12030303, BlackScreenImmediately = false}
           }
         },
         commentData = {}

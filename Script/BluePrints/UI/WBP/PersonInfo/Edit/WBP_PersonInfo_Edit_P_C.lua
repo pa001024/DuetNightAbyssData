@@ -22,8 +22,8 @@ function M:Construct()
       {Type = "Text", Text = "D"}
     }
   })
-  self.Key_Controller_L:SetImage("LT")
-  self.Key_Controller_R:SetImage("RT")
+  self.Key_Controller_L:SetImage("Img", "LT")
+  self.Key_Controller_R:SetImage("Img", "RT")
   self.Key_R:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   self.Btn_Cancel:SetGamePadImg("B")
   self.Btn_Confirm:SetGamePadImg("X")

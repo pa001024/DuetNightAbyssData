@@ -3,6 +3,12 @@ T.RT_1 = {
   [1] = "vo_gain"
 }
 T.RT_2 = {
+  [1] = "vo_gain_02"
+}
+T.RT_3 = {
+  [1] = "vo_gain_01"
+}
+T.RT_4 = {
   [1] = "vo_gain_1"
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
@@ -19,6 +25,27 @@ return ReadOnly("CharVoice2Gacha", {
         VoiceRes = T.RT_1,
         VoiceText = {
           [1] = "voice_ch_char_Heitao_vo_gain"
+        }
+      }
+    }
+  },
+  [1102] = {
+    [1] = {
+      [1] = {
+        VoiceId = 11006,
+        VoiceRes = T.RT_3,
+        VoiceText = {
+          [1] = "voice_ch_char_Fuluo_vo_gain_01"
+        }
+      },
+      [2] = {
+        GachaVoiceCondition = {
+          [1] = 100405
+        },
+        VoiceId = 11007,
+        VoiceRes = T.RT_2,
+        VoiceText = {
+          [1] = "voice_ch_char_Fuluo_vo_gain_02"
         }
       }
     }
@@ -115,7 +142,7 @@ return ReadOnly("CharVoice2Gacha", {
     [1] = {
       [1] = {
         VoiceId = 10263,
-        VoiceRes = T.RT_2,
+        VoiceRes = T.RT_4,
         VoiceText = {
           [1] = "voice_ch_char_Baiheng_vo_gain_1"
         }
@@ -181,7 +208,7 @@ return ReadOnly("CharVoice2Gacha", {
     [1] = {
       [1] = {
         VoiceId = 10409,
-        VoiceRes = T.RT_2,
+        VoiceRes = T.RT_4,
         VoiceText = {
           [1] = "voice_ch_char_Maer_vo_gain_1"
         }
@@ -206,9 +233,7 @@ return ReadOnly("CharVoice2Gacha", {
     [1] = {
       [1] = {
         VoiceId = 10614,
-        VoiceRes = {
-          [1] = "vo_gain_01"
-        },
+        VoiceRes = T.RT_3,
         VoiceText = {
           [1] = "voice_ch_char_Lise_vo_gain_01"
         }
@@ -220,9 +245,7 @@ return ReadOnly("CharVoice2Gacha", {
           [1] = 100307
         },
         VoiceId = 10615,
-        VoiceRes = {
-          [1] = "vo_gain_02"
-        },
+        VoiceRes = T.RT_2,
         VoiceText = {
           [1] = "voice_ch_char_Lise_vo_gain_02"
         }

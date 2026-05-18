@@ -62,14 +62,17 @@ end
 
 function M:OnPatchFinished(bFrist)
   if IsDedicatedServer(self) then
-    if bFrist then
-      local EMLuaConst = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UEMLuaConst)
-      if EMLuaConst then
-        EMLuaConst:RefreshVars()
-      end
-    end
-    return
+    self:OnPatchFinishedDS(bFrist)
+  else
+    self:OnPatchFinishedClient(bFrist)
   end
+  self:OnPatchFinishedCommon(bFrist)
+end
+
+function M:OnPatchFinishedDS(bFrist)
+end
+
+function M:OnPatchFinishedClient(bFrist)
   if bFrist then
     ReddotManager._Close()
     ReddotManager._Init()
@@ -89,6 +92,15 @@ function M:OnPatchFinished(bFrist)
     if RegionDataMgrSubSystem then
       RegionDataMgrSubSystem:Initialize_Lua()
     end
+  end
+  local LoginMainPage = GWorld.GameInstance:GetGameUIManager():GetUIObj("LoginMainPage")
+  if LoginMainPage then
+    LoginMainPage:OnPatchFinished(bFrist)
+  end
+end
+
+function M:OnPatchFinishedCommon(bFrist)
+  if bFrist then
     local EMLuaConst = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(self, UEMLuaConst)
     if EMLuaConst then
       EMLuaConst:RefreshVars()
@@ -102,10 +114,6 @@ function M:OnPatchFinished(bFrist)
         end
       end
     end
-  end
-  local LoginMainPage = GWorld.GameInstance:GetGameUIManager():GetUIObj("LoginMainPage")
-  if LoginMainPage then
-    LoginMainPage:OnPatchFinished(bFrist)
   end
 end
 

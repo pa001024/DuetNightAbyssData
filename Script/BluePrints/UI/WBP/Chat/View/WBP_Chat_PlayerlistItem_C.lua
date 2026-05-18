@@ -2,6 +2,7 @@ require("UnLua")
 local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local ChatModel = ChatController:GetModel()
 local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
+local EMCache = require("EMCache.EMCache")
 local M = Class("BluePrints.UI.BP_EMUserWidget_C")
 M._components = {
   "BluePrints.UI.WBP.Chat.View.HeadAnchorComp"
@@ -50,10 +51,16 @@ function M:BP_OnEntryReleased()
   self:CleanUpAnchor()
 end
 
-function M:AddReddotListen(Uid)
+function M:AddReddotListen(Uid, bGuild)
   self:RemoveReddotListen()
-  self.ReddotName = ChatCommon.ReddotNamePre .. Uid
-  ReddotManager.AddListener(self.ReddotName, self, function(self, Count)
+  if not Uid then
+    self.ReddotName = nil
+    self.Common_Subsize_Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  local SubTabType = bGuild and ChatCommon.SubTabType.Guild or ChatCommon.SubTabType.Friend
+  self.ReddotName = ChatModel:GetPrivateChatParentName(SubTabType) .. tostring(Uid)
+  ReddotManager.AddListenerEx(self.ReddotName, self, function(self, Count)
     if Count > 0 then
       self.Common_Subsize_Reddot_Num:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
       if Count >= ChatCommon.ReddotMaxCount then
@@ -63,7 +70,7 @@ function M:AddReddotListen(Uid)
     else
       self.Common_Subsize_Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
-  end, nil, true)
+  end, nil, 1, EReddotType.Num)
 end
 
 function M:RemoveReddotListen()
@@ -71,6 +78,7 @@ function M:RemoveReddotListen()
     return
   end
   ReddotManager.RemoveListener(self.ReddotName, self)
+  self.ReddotName = nil
 end
 
 function M:AddEventListen()
@@ -157,14 +165,18 @@ function M:UnSelect()
   self.Content.bSelected = false
 end
 
-function M:Select()
+function M:Select(bSkipInputAreaState)
   if not self.Content.Data then
     return
+  end
+  if nil == bSkipInputAreaState and self.Owner then
+    local Uid = self.Content and self.Content.Data and self.Content.Data.Uid
+    bSkipInputAreaState = self.Owner._bGuildPrivateListRefreshing or self.Owner._GuildPrivateInitSelectedUid == Uid
   end
   self:StopAllBtnAnim()
   self:PlayAnimation(self.Click)
   self.Text_PlayerName:SetColorAndOpacity(self.PlayerNameSelect)
-  self.Owner:OnPlayerListUISelected(self.Content)
+  self.Owner:OnPlayerListUISelected(self.Content, bSkipInputAreaState)
   self.Content.bSelected = true
 end
 
@@ -174,6 +186,21 @@ function M:OnListItemObjectSet(Content)
   self.Content = Content
   self.IsEnter = Content.IsSelect
   self:SetNavigationRuleBase(EUINavigation.Down, Content.IsStopNavDown and EUINavigationRule.Stop or EUINavigationRule.Escape)
+  if Content.IsGuild then
+    self:OnListItemObjectSet_Guild()
+    if self.Content.bSelected then
+      local Uid = self.Content.Data and self.Content.Data.Uid
+      local bSkipInputAreaState = self.Owner and (self.Owner._bGuildPrivateListRefreshing or self.Owner._GuildPrivateInitSelectedUid == Uid)
+      self:Select(bSkipInputAreaState)
+    else
+      self:UnSelect()
+    end
+    self:_UpdateHeadClickableState()
+    if self.Button_Area then
+      self.Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
+    end
+    return
+  end
   local CurrChannel = ChatModel:GetCurrentChannel()
   local Switch = {
     [ChatCommon.ChannelDef.InTeam] = self.OnListItemObjectSet_InTeam,
@@ -232,6 +259,71 @@ function M:OnListItemObjectSet_Friend()
   self:_SetOnlineState(FriendData.Info)
   self:SetupAnchor(self.Head_Anchor, self.WBP_Com_ItemHead, FriendData.Info, true)
   self:AddReddotListen(FriendData.Info.Uid)
+  if self.Group_Close then
+    self.Group_Close:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:OnListItemObjectSet_Guild()
+  local Data = self.Content.Data or {}
+  local Uid = Data.Uid
+  local Info = Data.Info
+  local Nickname = Info and Info.Nickname or tostring(Uid)
+  self.Text_PlayerName:SetText(Nickname)
+  self:_SetEmptyState(false)
+  self:_SetStar(nil)
+  local bHasHeadIcon = Info and Info.HeadIconId
+  if bHasHeadIcon then
+    if self.Num_Level and Info.Level then
+      self.Num_Level:SetText(Info.Level)
+    elseif self.Num_Level then
+      self.Num_Level:SetText("")
+    end
+    self:_SetHeadIcon(Info.HeadIconId)
+    self.WBP_Com_ItemHead:SetHeadFrame(Info.HeadFrameId)
+    self:_SetGuildOnlineState(Info)
+    self:SetupAnchor(self.Head_Anchor, self.WBP_Com_ItemHead, Info, true)
+  else
+    if self.Num_Level then
+      self.Num_Level:SetText("")
+    end
+    self.WBP_Com_ItemHead:SetHeadIconEmpty(true)
+    self.WBP_Com_ItemHead:SetHeadFrame(nil)
+    if self.Group_OnlineState then
+      self.Group_OnlineState:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if self.Group_TeamPlayerNum then
+      self.Group_TeamPlayerNum:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
+  self:AddReddotListen(Uid, true)
+  if self.Group_Close then
+    self.Group_Close:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Btn_Close.OnClicked:Clear()
+    self.Btn_Close.OnClicked:Add(self, self._OnDeleteClicked)
+  end
+end
+
+function M:_OnDeleteClicked()
+  local Uid = self.Content and self.Content.Data and self.Content.Data.Uid
+  if not Uid then
+    return
+  end
+  if EMCache:Get(ChatCommon.GuildSkipDelConfirmKey, true) == true then
+    ChatController:DeleteGuildChat(Uid)
+    return
+  end
+  local Params = {
+    RightCallbackFunction = function(_, Data)
+      if Data and Data.SelectHint and Data.SelectHint.IsSelected then
+        EMCache:Set(ChatCommon.GuildSkipDelConfirmKey, true, true)
+      end
+      ChatController:DeleteGuildChat(Uid)
+    end,
+    LeftCallbackFunction = function()
+    end
+  }
+  UIManager(self):ShowCommonPopupUI(ChatCommon.GuildDeleteConfirmDialog, Params, self)
 end
 
 function M:_SetStar(bStar)
@@ -280,6 +372,20 @@ function M:_SetEmptyState(bIsEmpty)
     self.Group_Level:SetVisibility(UIConst.VisibilityOp.Visible)
     self.Group_Empty:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Common_Subsize_Reddot_Num:SetVisibility(UIConst.VisibilityOp.Visible)
+  end
+end
+
+function M:_SetGuildOnlineState(AvatarInfo)
+  self.Group_TeamPlayerNum:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Group_OnlineState:SetVisibility(UIConst.VisibilityOp.Visible)
+  if AvatarInfo and AvatarInfo.IsOnline then
+    self.Text_OnlineState:SetText(GText("UI_Friend_Online"))
+    self.Text_OnlineState:SetColorAndOpacity(self.PlayerOnline)
+    self.Image_StatePoint:SetColorAndOpacity(self.PlayerOnline.SpecifiedColor)
+  else
+    self.Text_OnlineState:SetText(GText("UI_Friend_State_Offline"))
+    self.Text_OnlineState:SetColorAndOpacity(self.PlayerOffline)
+    self.Image_StatePoint:SetColorAndOpacity(self.PlayerOffline.SpecifiedColor)
   end
 end
 
@@ -361,6 +467,10 @@ end
 function M:OnHeadMenuOpenChanged(bOpen)
   self.IsOpen = bOpen
   self.Owner:UpdateUIStyleInPlatform()
+  if bOpen or UIUtils.UtilsGetCurrentInputType() ~= ECommonInputType.Gamepad then
+    return
+  end
+  self:SetFocus()
 end
 
 AssembleComponents(M)

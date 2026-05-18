@@ -10,6 +10,7 @@ local M = Class("BluePrints.UI.BP_UIState_C")
 function M:UpdateArgs(Params)
   DebugPrint("gmy@WBP_Battle_Menu_P_C M:UpdateArgs", Params)
   self:InitEvents()
+  self.Battle_Menu.Owner = self
   self.Battle_Menu:UpdateArgs(Params)
 end
 

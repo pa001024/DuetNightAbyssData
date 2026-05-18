@@ -753,6 +753,8 @@ function AvatarUtils:GetPlayerPersonalInfoChar(Avatar, FromDb)
         local Appearance = {
           SkinId = SkinId,
           HairId = HairId,
+          SkinLevel = CharSkin.Level or 1,
+          SkinSelectedLevel = CharSkin.SelectedLevel or 1,
           Accessory = AppearanceSuit and AppearanceSuit.Accessory or {},
           CurrentPlanIndex = CharSkin.CurrentPlanIndex or 1
         }
@@ -875,12 +877,26 @@ function AvatarUtils:GetPlayerPersonalInfoWeapon(Avatar, FromDb)
           EnhanceLevel = Weapon.EnhanceLevel or 0,
           GradeLevel = Weapon.GradeLevel or 0,
           Appearance = Appearance,
-          ModSuit = ModSuitInfo
+          ModSuit = ModSuitInfo,
+          HyperCardLevel = Weapon.HyperCardLevel or 0,
+          HyperTalent = self:DumpPlayerPersonalInfoWeaponHyperTalent(Weapon, FromDb)
         }
       end
     end
   end
   return PlayerPersonalInfoWeapon
+end
+
+function AvatarUtils:DumpPlayerPersonalInfoWeaponHyperTalent(Weapon, FromDb)
+  local HyperTalent = {}
+  for CardLevel, Talents in pairs(Weapon.HyperTalent or {}) do
+    local TalentList = {}
+    for TalentId, _ in pairs(Talents) do
+      table.insert(TalentList, tonumber(TalentId) or TalentId)
+    end
+    HyperTalent[tonumber(CardLevel) or CardLevel] = TalentList
+  end
+  return HyperTalent
 end
 
 function AvatarUtils:GetAbyssSeasonMaxProgress(Avatar, FromDb)
@@ -1291,6 +1307,36 @@ function AvatarUtils:GetRaidSeasonsRecord(Avatar, FromDb)
     end
   end
   return Ret
+end
+
+function AvatarUtils:GetCurrentCharIdByGroupId(Avatar, GroupId)
+  GroupId = GroupId or Avatar.Sex
+  local CharacterAttributeSwitch = Avatar.CharacterAttributeSwitch
+  if GroupId and CharacterAttributeSwitch then
+    return CharacterAttributeSwitch[GroupId]
+  end
+  return -1
+end
+
+function AvatarUtils:GetCurrentCharIdByCharId(Avatar, CharId)
+  local CharGroupId = DataMgr.CharacterAttributeSwitch[CharId].CharGroupId
+  if CharGroupId then
+    return AvatarUtils:GetCurrentCharIdByGroupId(Avatar, CharGroupId)
+  end
+  return -1
+end
+
+function AvatarUtils:GetMainPlayerCharacterAttributeCharId(Avatar)
+  local Sex = Avatar.Sex
+  local CharacterAttributeSwitch = Avatar.CharacterAttributeSwitch
+  if Sex and CharacterAttributeSwitch then
+    return CharacterAttributeSwitch[Sex]
+  end
+  return -1
+end
+
+function AvatarUtils:IsCharacterAttributeSwitchSameGroup(CharId_1, CharId_2)
+  return DataMgr.CharacterAttributeSwitch[CharId_1] and DataMgr.CharacterAttributeSwitch[CharId_2] and DataMgr.CharacterAttributeSwitch[CharId_1].CharGroupId == DataMgr.CharacterAttributeSwitch[CharId_2].CharGroupId
 end
 
 return AvatarUtils

@@ -34,6 +34,7 @@ function M:Init(Params)
     self.SubBagIndex = Params.SubBagIndex or 0
   elseif self.bMechanism then
     self.MechanismUid = Params.MechanismUid or 0
+    self.PocketData.MechanismUid = self.MechanismUid
   end
   self:CreateBagItem()
   local AllGrids = self.WrapBoxBag:GetAllChildren():ToTable()
@@ -69,6 +70,10 @@ function M:Init(Params)
   for _, TreasureData in pairs(SearchTreasureDatas) do
     local TreasureWidget
     if TreasureData then
+      if not TreasureData.Texture or not IsValid(TreasureData.Texture) then
+        local TreasureInfo = DataMgr.ExtractionTreasure[TreasureData.TreasureId]
+        TreasureData.Texture = TreasureInfo and TreasureInfo.Icon and LoadObject(TreasureInfo.Icon)
+      end
       TreasureWidget = self:CreateIconItem(TreasureData.Size, TreasureData.Texture, TreasureData.Position)
       if TreasureWidget then
         TreasureWidget:Init(TreasureData)

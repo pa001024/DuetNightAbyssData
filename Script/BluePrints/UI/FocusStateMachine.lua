@@ -56,17 +56,17 @@ function FSM:NativePeak()
 end
 
 function FSM:NativePop()
-  local OladState = self._StateDeque:PopBack() or self:GetInvalidState()
-  local OldStateName = OladState.Name
-  if not self._SupportNilState and (nil == OladState or nil == OldStateName) then
+  local OldState = self._StateDeque:PopBack() or self:GetInvalidState()
+  local OldStateName = OldState.Name
+  if not self._SupportNilState and (nil == OldState or nil == OldStateName) then
     DebugPrint("Warning: FSM Pop Nil State!")
   end
   local NewState = self._StateDeque:Back() or self:GetInvalidState()
   local NewStateName = NewState.Name
   if OldStateName ~= NewStateName then
-    OnStateChanged(self, NewState, OladState, self.Operation.Pop)
+    OnStateChanged(self, NewState, OldState, self.Operation.Pop)
   end
-  return OladState
+  return OldState
 end
 
 function FSM:Peak()
@@ -85,18 +85,18 @@ function FSM:Pop()
   if self._StateDeque:Size() <= 0 then
     return self:GetInvalidState()
   end
-  local OladState = self._StateDeque:PopBack() or self:GetInvalidState()
-  local OldStateName = OladState.Name
-  local IsValidState = CheckIsStateValid(self, OladState)
+  local OldState = self._StateDeque:PopBack() or self:GetInvalidState()
+  local OldStateName = OldState.Name
+  local IsValidState = CheckIsStateValid(self, OldState)
   if not IsValidState then
     PopUntilValidRecursion(self)
   end
   local NewState = self._StateDeque:Back() or self:GetInvalidState()
   local NewStateName = NewState.Name
   if OldStateName ~= NewStateName then
-    OnStateChanged(self, NewState, OladState, self.Operation.Pop)
+    OnStateChanged(self, NewState, OldState, self.Operation.Pop)
   end
-  return OladState or self:GetInvalidState()
+  return OldState or self:GetInvalidState()
 end
 
 function OnStateChanged(self, NewState, OldState, Operation)

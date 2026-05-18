@@ -3,6 +3,8 @@ local ChatController = require("BluePrints.UI.WBP.Chat.ChatController")
 local FriendController = require("BluePrints.UI.WBP.Friend.FriendController")
 local FriendCommon = require("BluePrints.UI.WBP.Friend.FriendCommon")
 local ChatCommon = require("BluePrints.UI.WBP.Chat.ChatCommon")
+local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
+local GuildModel = require("BluePrints.UI.WBP.Guild.Model.GuildModel")
 local ChatModel = ChatController:GetModel()
 local FriendModel = FriendController:GetModel()
 local M = Class("BluePrints.UI.BP_UIState_C")
@@ -12,6 +14,7 @@ function M:Construct()
   self.bBtnDragPressed = false
   self.bBtnTabPressed = false
   self.CurrSelectPlayer = nil
+  self._SubTabVisualState = {}
   self.MinWidth = self.Group_Panel.MinDesiredWidth
   self.MinHeight = self.Group_Panel.MinDesiredHeight
   self.Text_NewMassageDesc:SetText(GText("UI_Chat_BackToBottom"))
@@ -74,6 +77,92 @@ function M:Construct()
   self.CurrExtraPanelName = ""
   self.MaxScrollOffset = 0
   self:InitChatChannelUI()
+  self:_InitDMSubTab()
+  self:_InitGuildPermissionSwitch()
+end
+
+function M:_InitDMSubTab()
+  if self.SubTab_Friend and self.SubTab_Friend.Btn_Click then
+    self.SubTab_Friend.Text_Channel:SetText(GText("ChatFriendTab_1"))
+    self.SubTab_Friend.Btn_Click.OnHovered:Add(self, self.OnSubTabHovered_Friend)
+    self.SubTab_Friend.Btn_Click.OnUnhovered:Add(self, self.OnSubTabUnhovered_Friend)
+    self.SubTab_Friend.Btn_Click.OnPressed:Add(self, self.OnSubTabPressed_Friend)
+    self.SubTab_Friend.Btn_Click.OnReleased:Add(self, self.OnSubTabReleased_Friend)
+    self.SubTab_Friend.Btn_Click.OnClicked:Add(self, self.OnSubTabClicked_Friend)
+  end
+  if self.SubTab_Guild and self.SubTab_Guild.Btn_Click then
+    self.SubTab_Guild.Text_Channel:SetText(GText("UI_DirectMessage"))
+    self.SubTab_Guild.Btn_Click.OnHovered:Add(self, self.OnSubTabHovered_Guild)
+    self.SubTab_Guild.Btn_Click.OnUnhovered:Add(self, self.OnSubTabUnhovered_Guild)
+    self.SubTab_Guild.Btn_Click.OnPressed:Add(self, self.OnSubTabPressed_Guild)
+    self.SubTab_Guild.Btn_Click.OnReleased:Add(self, self.OnSubTabReleased_Guild)
+    self.SubTab_Guild.Btn_Click.OnClicked:Add(self, self.OnSubTabClicked_Guild)
+  end
+  if self.Btn_Empty_02 then
+    self.Btn_Empty_02.OnClicked:Add(self, self._OnBtnEmpty02Clicked)
+  end
+  self:_BindSubTabReddot(self.SubTab_Friend, ChatModel:GetPrivateChatParentName(ChatCommon.SubTabType.Friend))
+  self:_BindSubTabReddot(self.SubTab_Guild, ChatModel:GetPrivateChatParentName(ChatCommon.SubTabType.Guild))
+end
+
+function M:_SetSubTabReddotNum(SubTab, Count)
+  if not SubTab then
+    return
+  end
+  local ReddotWidget = SubTab.Reddot or SubTab.Reddot_Num
+  if not ReddotWidget then
+    return
+  end
+  local RedNum = tonumber(Count) or 0
+  local Display = RedNum > 0 and (RedNum >= ChatCommon.ReddotMaxCount and ChatCommon.ReddotMaxCount .. "+" or RedNum) or 0
+  if RedNum > 0 then
+    ReddotWidget:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+    if ReddotWidget.SetNum then
+      ReddotWidget:SetNum(Display)
+    end
+  else
+    ReddotWidget:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+end
+
+function M:_OnBtnEmpty02Clicked()
+  local SubTab = ChatModel:GetCurrentSubTab()
+  if SubTab == ChatCommon.SubTabType.Guild then
+    local View = GuildController:OpenGuildJoinView()
+    if not View then
+      ChatController:ShowToast(GText("UI_GuildSystemLocked"))
+    end
+  else
+    local View = FriendController:OpenView(self, FriendCommon.FriendTabType.AddFriend)
+    if not IsValid(View) then
+      ChatController:ShowToast(GText("UI_Chat_CannotOpenFriend"))
+    end
+  end
+  self:Close()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
+end
+
+function M:_BindSubTabReddot(SubTab, NodeName)
+  if not SubTab then
+    return
+  end
+  if not ReddotManager.GetTreeNode(NodeName) then
+    return
+  end
+  ReddotManager.AddListener(NodeName, SubTab, function(Self, Count)
+    self:_SetSubTabReddotNum(Self, Count)
+  end)
+  self:_SetSubTabReddotNum(SubTab, ReddotManager.GetTreeNode(NodeName):GetNodeCount())
+end
+
+function M:_UnbindSubTabReddot(SubTab, NodeName)
+  if not SubTab then
+    return
+  end
+  if not ReddotManager.GetTreeNode(NodeName) then
+    return
+  end
+  ReddotManager.RemoveListener(NodeName, SubTab)
 end
 
 function M:UpdateText_ChatChannel()
@@ -95,6 +184,11 @@ function M:InitChatChannelUI()
   ChatController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == ChatCommon.EventID.RecvChannelPlayerNum or EventId == ChatCommon.EventID.EnterChatChannel or EventId == ChatCommon.EventID.RecvAllChatChannel then
       self:HandleChannelPlayerNum()
+    elseif EventId == ChatCommon.EventID.GuildChannelSnapshotRefreshed then
+      local ChannelType = (...)
+      if self.CurrChannel == (ChannelType or ChatCommon.ChannelDef.InGuild) then
+        self:_SetUpChatMsgList()
+      end
     end
   end)
   EventManager:AddEvent(EventID.OnSelectChannelSuccess, self, self.OnSelectChannelSuccess)
@@ -122,7 +216,7 @@ function M:HandleChannelPlayerNum(Channel_type, Channel_list)
 end
 
 function M:BtnChangeChannelOnPressed()
-  ChatController:OpenChatChannelUI(self)
+  ChatController:OpenChatChannelUI(self, self.CurrChannel)
 end
 
 function M:_Stop_SetUpChatMsgListTimer()
@@ -173,6 +267,9 @@ function M:BtnEmptyOnClicked()
     if not IsValid(View) then
       ChatController:ShowToast(GText("UI_Chat_CannotOpenFriend"))
     end
+    self:Close()
+  elseif self.CurrChannel == ChatCommon.ChannelDef.InGuild then
+    GuildController:OpenView(self, "GuildMain")
     self:Close()
   end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
@@ -292,10 +389,17 @@ function M:_SendChatMsg(MsgText)
     ChatController:SendChatToWorld(self.CurrChannel, MsgText)
   elseif self.CurrChannel == ChatCommon.ChannelDef.Region then
     ChatController:SendChatToWorld(self.CurrChannel, MsgText)
+  elseif self.CurrChannel == ChatCommon.ChannelDef.InGuild then
+    ChatController:SendChatToGuild(MsgText)
   elseif self.CurrChannel == ChatCommon.ChannelDef.InTeam then
     ChatController:SendChatToTeam(MsgText)
   elseif self.CurrChannel == ChatCommon.ChannelDef.Friend then
-    ChatController:SendChatToPlayer(ChatModel:GetCurrentFriendUid(), MsgText)
+    local ReceiverUid = ChatModel:GetCurrentFriendUid()
+    if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+      ChatController:SendChatToGuildMember(ReceiverUid, MsgText)
+    else
+      ChatController:SendChatToPlayer(ReceiverUid, MsgText)
+    end
   elseif self.CurrChannel == ChatCommon.ChannelDef.SettlementOnline then
     ChatController:SendChatToSettlementOnline(MsgText)
   end
@@ -361,17 +465,25 @@ function M:OnTabSelected_TeamUp(TabWidget, TabItemInfo)
 end
 
 function M:OnTabSelected_Friend(TabWidget, TabItemInfo)
+  self:_SetUpDMChannelLayout(ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild)
+  FriendController:SendRequest(FriendCommon.EventId.RefreshFriend)
+end
+
+function M:_SetUpDMChannelLayout(bKeepBottomState)
   self.Group_ChatEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.Collapsed)
-  self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  self.Text_DialogEmptyText:SetText(GText("UI_Chat_SelectAFriend"))
+  self.Text_DialogEmptyText:SetText(self:_GetCurrentDialogEmptyText())
   self.WS_Dialoglist:SetActiveWidgetIndex(1)
   self.Text_PlayerListTitle:SetText(GText("UI_Friend_MyFriend"))
+  self.Text_Permission:SetText(GText("UI_AllowPrivateChat"))
   self.List_Player:ClearListItems()
   self.Btn_Sent:SetForbidden()
-  FriendController:SendRequest(FriendCommon.EventId.RefreshFriend)
+  if not bKeepBottomState then
+    self._GuildPrivateInitSelectedUid = nil
+    self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
@@ -405,8 +517,24 @@ function M:OnTabSelected_SettlementOnline(TabWidget, TabItemInfo)
   end
 end
 
-function M:OnTabSelected_League(TabWidget, TabItemInfo)
-  self:_SetUpFullEmpty(GText("UI_Chat_LeagueEmpty"), GText("UI_Chat_GotoLeague"))
+local TODO_GUILD_SKIP_INGUILD_CHECK = false
+
+function M:OnTabSelected_InGuild(TabWidget, TabItemInfo)
+  local Avatar = GWorld:GetAvatar()
+  local UIUnlockRuleId = DataMgr.UIUnlockRule.OpenGuild.UIUnlockRuleId
+  local bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
+  local bInGuild = GuildModel:IsInGuild()
+  if not TODO_GUILD_SKIP_INGUILD_CHECK and not bUnlocked then
+    self:_SetUpFullEmpty(GText("UI_GuildSystemLocked"))
+  elseif not TODO_GUILD_SKIP_INGUILD_CHECK and not bInGuild then
+    self:_SetUpFullEmpty(GText("UI_NotInGuild"), GText("UI_GoToJoin"))
+  else
+    self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    ChatController:SendRequestEnterChatChannel()
+    self:_SetUpBtnSentState()
+    self:_SetUpChatMsgList()
+  end
   self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
@@ -469,6 +597,134 @@ function M:_SetUpBtnSentState()
   end
 end
 
+function M:_HandleChatSendFailed()
+  self.Com_Input:SetText("")
+  self:_SetUpBtnSentState()
+end
+
+function M:_RestoreDMInputArea()
+  self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+end
+
+function M:_RestoreGuildPrivateInputArea()
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+    return
+  end
+  if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+    return
+  end
+  self:_RestoreDMInputArea()
+  self:_SetUpBtnSentState()
+end
+
+function M:_GetGuildPrivateDisabledStateTipFlag(Uid)
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+    return nil
+  end
+  if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+    return nil
+  end
+  Uid = Uid or ChatModel:GetCurrentFriendUid()
+  if not Uid then
+    return nil
+  end
+  local OwnerUid = ChatController:GetAvatar() and ChatController:GetAvatar().Uid or 0
+  if ChatModel:GetGuildPrivateLocalSystemTip(Uid, ChatCommon.GuildPrivateLeftGuildTipFlag, OwnerUid) then
+    return ChatCommon.GuildPrivateLeftGuildTipFlag
+  end
+  if ChatModel:GetGuildPrivateLocalSystemTip(Uid, ChatCommon.GuildPrivateDisabledTipFlag, OwnerUid) then
+    return ChatCommon.GuildPrivateDisabledTipFlag
+  end
+  return nil
+end
+
+function M:_IsGuildPrivateInputDisabled(Uid)
+  return self:_GetGuildPrivateDisabledStateTipFlag(Uid) ~= nil
+end
+
+function M:_GetCurrentDialogEmptyText()
+  return GText("UI_Chat_NoChatHistory")
+end
+
+function M:_SetGuildPrivateInputDisabledArea()
+  self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Btn_Sent:SetForbidden()
+end
+
+function M:_ApplyGuildPrivateInputAreaState(Uid, bQueryRemote)
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+    return false
+  end
+  if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+    return false
+  end
+  if not Uid then
+    return false
+  end
+  local bInGuild = GuildModel:IsInCurrGuild(Uid)
+  local TipFlag = self:_GetGuildPrivateDisabledStateTipFlag(Uid)
+  if not bInGuild then
+    self:_SetGuildPrivateInputDisabledArea()
+    ChatController:CheckGuildPrivateTargetState(Uid)
+    return false
+  end
+  if TipFlag then
+    self:_SetGuildPrivateInputDisabledArea()
+    if bQueryRemote or TipFlag == ChatCommon.GuildPrivateLeftGuildTipFlag then
+      ChatController:CheckGuildPrivateTargetState(Uid)
+    end
+    return false
+  end
+  self:_RestoreGuildPrivateInputArea()
+  if bQueryRemote then
+    ChatController:CheckGuildPrivateTargetState(Uid)
+  end
+  return true
+end
+
+function M:_HandleGuildPrivateTargetDisabled(Uid, TimeWrap, MsgWrap, bNeedRebuild)
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+    return
+  end
+  if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+    return
+  end
+  if ChatModel:GetCurrentFriendUid() ~= Uid then
+    return
+  end
+  self:_SetGuildPrivateInputDisabledArea()
+  if bNeedRebuild then
+    self:_SetUpChatMsgList()
+  else
+    if TimeWrap then
+      self:_AddNewMsgToListView(TimeWrap)
+    end
+    if MsgWrap then
+      self:_AddNewMsgToListView(MsgWrap)
+    end
+  end
+end
+
+function M:_HandleGuildPrivateTargetLeftGuild(Uid, TimeWrap, MsgWrap, bNeedRebuild)
+  self:_HandleGuildPrivateTargetDisabled(Uid, TimeWrap, MsgWrap, bNeedRebuild)
+end
+
+function M:_HandleGuildPrivateTargetEnabled(Uid)
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+    return
+  end
+  if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+    return
+  end
+  if ChatModel:GetCurrentFriendUid() ~= Uid then
+    return
+  end
+  self:_RestoreGuildPrivateInputArea()
+  self:_SetUpChatMsgList()
+end
+
 function M:_SetUpMsgCache()
   local MsgCache = ChatModel:GetChannelMsgCache()
   self.Com_Input:SetText(MsgCache)
@@ -520,7 +776,8 @@ function M:_AddNewMsgToListView(MsgWrap)
   self.List_Dialog:AddItem(Content)
 end
 
-function M:OnPlayerListUISelected(Content)
+function M:OnPlayerListUISelected(Content, bSkipInputAreaState)
+  bSkipInputAreaState = bSkipInputAreaState or self._bGuildPrivateListRefreshing
   if self.CurrSelectPlayer and Content ~= self.CurrSelectPlayer then
     self.CurrSelectPlayer.bSelected = false
     if IsValid(self.CurrSelectPlayer.UI) then
@@ -530,17 +787,43 @@ function M:OnPlayerListUISelected(Content)
   local OldSelectPlayer = self.CurrSelectPlayer
   self.CurrSelectPlayer = Content
   local LastFriendUid = ChatModel:GetCurrentFriendUid()
+  local bGuildPrivateTargetDisabled = false
+  if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild and Content.Data and Content.Data.Uid then
+    local Uid = Content.Data.Uid
+    if not GuildModel:IsInCurrGuild(Uid) then
+      bGuildPrivateTargetDisabled = true
+    else
+      bGuildPrivateTargetDisabled = self:_GetGuildPrivateDisabledStateTipFlag(Uid) ~= nil
+    end
+  end
   if OldSelectPlayer ~= self.CurrSelectPlayer and self.CurrChannel ~= ChatCommon.ChannelDef.InTeam then
     if LastFriendUid then
       ChatModel:SetChannelMsgCache(self.Com_Input:GetText())
     end
     ChatModel:SetCurrentFriendUid(Content.Data.Uid)
-    self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    if not bSkipInputAreaState then
+      if bGuildPrivateTargetDisabled then
+        self:_SetGuildPrivateInputDisabledArea()
+      else
+        self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      end
+    end
     self:_SetUpChatMsgList()
     self:_SetUpMsgCache()
-    if self.CurInputDeviceType ~= ECommonInputType.Gamepad then
+    if not bSkipInputAreaState and self.CurInputDeviceType ~= ECommonInputType.Gamepad then
       self.Com_Input:FocusInputField()
+    end
+  end
+  if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild and Content.Data and Content.Data.Uid then
+    local bInputEnabled = self:_ApplyGuildPrivateInputAreaState(Content.Data.Uid, true)
+    if not bInputEnabled and self.CurInputDeviceType ~= ECommonInputType.Gamepad then
+      self.Com_Input.Text_Input:BP_SetClearKeyboardFocusOnCommit(false)
+    elseif bSkipInputAreaState and self.CurInputDeviceType ~= ECommonInputType.Gamepad then
+      self.Com_Input:FocusInputField()
+    end
+    if self._GuildPrivateInitSelectedUid == Content.Data.Uid then
+      self._GuildPrivateInitSelectedUid = nil
     end
   end
   if self.IsOpenHead or self.CurrChannel == ChatCommon.ChannelDef.Friend then
@@ -606,6 +889,8 @@ function M:HandleEnterChatChannel(ErrCode, ChannelType)
       self:_SetUpFullEmpty(GText("UI_Chat_NotInOnlineRegion"))
     elseif self.CurrChannel == ChatCommon.ChannelDef.SettlementOnline then
       self:_SetUpFullEmpty(GText("UI_Chat_SettlementOnlineEmpty"))
+    elseif self.CurrChannel == ChatCommon.ChannelDef.InGuild then
+      self:_SetUpFullEmpty(GText("UI_Chat_LeagueEmpty"), GText("UI_Chat_GotoLeague"))
     end
     return false
   end
@@ -637,7 +922,7 @@ function M:HandleRefreshFriend(ErrCode)
   local FriendChannel = ChatCommon.ChannelDef.Friend
   self:_AddReddotListenInner(ChatCommon.ChannelNames[FriendChannel], FriendChannel)
   if self.CurrChannel == ChatCommon.ChannelDef.Friend then
-    self:_HandleRefreshFriendInPrivateChannel()
+    self:_RefreshSubTab()
   elseif self.CurrChannel == ChatCommon.ChannelDef.TeamUp then
     self:_HandleRefreshFriendInOpenChannel()
   elseif self.CurrChannel == ChatCommon.ChannelDef.Public then
@@ -663,6 +948,9 @@ function M:Destruct()
   FriendController:UnRegisterEvent(self)
   TeamController:UnRegisterEvent(self)
   self:RemoveReddotListen()
+  self:_UnbindSubTabReddot(self.SubTab_Friend, ChatModel:GetPrivateChatParentName(ChatCommon.SubTabType.Friend))
+  self:_UnbindSubTabReddot(self.SubTab_Guild, ChatModel:GetPrivateChatParentName(ChatCommon.SubTabType.Guild))
+  self:_UnInitDMSubTab()
   self.Btn_Empty.OnClicked:Remove(self, self.BtnEmptyOnClicked)
   self.Btn_NewMessage.OnClicked:Remove(self, self.BtnNewMsgOnClicked)
   self.Btn_Face:UnBindEventOnReleased(self, self.BtnFaceOnReleased)
@@ -676,6 +964,29 @@ function M:Destruct()
   self.Btn_QuickReply:UnBindEventOnPressed(self, self.BtnQuickReplyOnPressed)
   self.BackgroundBlur_50:SetBlurStrength(self.OriginBlurStrength)
   M.Super.Destruct(self)
+end
+
+function M:_UnInitDMSubTab()
+  if self.SubTab_Friend and self.SubTab_Friend.Btn_Click then
+    self.SubTab_Friend.Btn_Click.OnHovered:Remove(self, self.OnSubTabHovered_Friend)
+    self.SubTab_Friend.Btn_Click.OnUnhovered:Remove(self, self.OnSubTabUnhovered_Friend)
+    self.SubTab_Friend.Btn_Click.OnPressed:Remove(self, self.OnSubTabPressed_Friend)
+    self.SubTab_Friend.Btn_Click.OnReleased:Remove(self, self.OnSubTabReleased_Friend)
+    self.SubTab_Friend.Btn_Click.OnClicked:Remove(self, self.OnSubTabClicked_Friend)
+    if self.SubTab_Friend.UnHover then
+      self.SubTab_Friend:UnbindAllFromAnimationFinished(self.SubTab_Friend.UnHover)
+    end
+  end
+  if self.SubTab_Guild and self.SubTab_Guild.Btn_Click then
+    self.SubTab_Guild.Btn_Click.OnHovered:Remove(self, self.OnSubTabHovered_Guild)
+    self.SubTab_Guild.Btn_Click.OnUnhovered:Remove(self, self.OnSubTabUnhovered_Guild)
+    self.SubTab_Guild.Btn_Click.OnPressed:Remove(self, self.OnSubTabPressed_Guild)
+    self.SubTab_Guild.Btn_Click.OnReleased:Remove(self, self.OnSubTabReleased_Guild)
+    self.SubTab_Guild.Btn_Click.OnClicked:Remove(self, self.OnSubTabClicked_Guild)
+    if self.SubTab_Guild.UnHover then
+      self.SubTab_Guild:UnbindAllFromAnimationFinished(self.SubTab_Guild.UnHover)
+    end
+  end
 end
 
 function M:_HandleRefreshFriendInPrivateChannel()
@@ -692,6 +1003,15 @@ function M:_HandleRefreshFriendInPrivateChannel()
     end
   end
   self.List_Player:ClearListItems()
+  self.Text_PlayerNum:SetText(string.format("%d/%d", NowCount, TotalCount))
+  if 0 == NowCount then
+    local CurrentPlatform = CommonUtils.GetDeviceTypeByPlatformName(self)
+    local ShowEmptyText = "PC" == CurrentPlatform and GText("UI_Friend_NoAnyFriend") or GText("UI_Friend_AddBeforeChat")
+    self:_ShowDMPlayerListEmpty(ShowEmptyText, "Friend", self:_GetCurrentDialogEmptyText())
+    self:_SetGuildPrivateInputDisabledArea()
+    return
+  end
+  self:_ShowDMPlayerListNormal(self:_GetCurrentDialogEmptyText())
   for i, Value in ipairs(FriendList) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.Owner = self
@@ -706,13 +1026,6 @@ function M:_HandleRefreshFriendInPrivateChannel()
   if SelectedPlayerIndex then
     self.List_Player:ScrollIndexIntoView(SelectedPlayerIndex + 1)
   end
-  self.Text_PlayerNum:SetText(string.format("%d/%d", NowCount, TotalCount))
-  if 0 == NowCount then
-    local CurrentPlatform = CommonUtils.GetDeviceTypeByPlatformName(self)
-    local ShowEmptyText = "PC" == CurrentPlatform and GText("UI_Friend_NoAnyFriend") or GText("UI_Friend_AddBeforeChat")
-    self:_SetUpFullEmpty(ShowEmptyText, GText("UI_Friend_GoToAdd"))
-    return
-  end
   self.Com_Input:SetText("")
 end
 
@@ -721,6 +1034,598 @@ function M:_HandleRefreshFriendInOpenChannel()
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:_SetUpChatMsgList()
   self:_SetUpMsgCache()
+end
+
+function M:_UpdateGuildPrivatePlayerItem(Uid)
+  if not Uid or not self.List_Player then
+    return
+  end
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+    return
+  end
+  if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+    return
+  end
+  local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+  local RawInfo = GuildList and GuildList[Uid]
+  local Info = self:_ResolveGuildPeerInfo(Uid, RawInfo)
+  if not Info then
+    self:_QueryGuildPeerInfo(Uid)
+  end
+  local ItemList = self.List_Player:GetListItems()
+  local bShouldSelect = ChatModel:GetCurrentFriendUid() == Uid
+  for i = 1, ItemList:Num() do
+    local Item = ItemList:Get(i)
+    if Item and Item.Data and Item.Data.Uid == Uid then
+      Item.Data = Item.Data or {}
+      Item.Data.Uid = Uid
+      Item.Data.Info = Info or Item.Data.Info or {
+        Uid = Uid,
+        Nickname = tostring(Uid)
+      }
+      if bShouldSelect and not Item.bSelected then
+        Item.bSelected = true
+      end
+      if IsValid(Item.UI) then
+        Item.UI:OnListItemObjectSet(Item)
+      end
+      self.SelectedPlayerIndex = Item.bSelected and i - 1 or self.SelectedPlayerIndex
+      if bShouldSelect then
+        self.List_Player:ScrollIndexIntoView(i)
+      end
+      return
+    end
+  end
+  local Content = NewObject(UIUtils.GetCommonItemContentClass())
+  Content.Owner = self
+  Content.Data = {
+    Uid = Uid,
+    Info = Info or {
+      Uid = Uid,
+      Nickname = tostring(Uid)
+    }
+  }
+  Content.IsGuild = true
+  local bHadItems = ItemList:Num() > 0
+  if not bHadItems then
+    ChatModel:SetCurrentFriendUid(Uid)
+    bShouldSelect = true
+  end
+  if bShouldSelect then
+    Content.bSelected = true
+    self.SelectedPlayerIndex = ItemList:Num()
+    self:_ShowDMPlayerListNormal(self:_GetCurrentDialogEmptyText())
+  end
+  self.List_Player:AddItem(Content)
+  if Content.bSelected then
+    self.CurrSelectPlayer = Content
+    self:_ApplyGuildPrivateInputAreaState(Uid, false)
+    self.List_Player:ScrollIndexIntoView(self.SelectedPlayerIndex + 1)
+  end
+end
+
+function M:_RefreshSubTab()
+  if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+    self:_HandleRefreshGuildInPrivateChannel()
+  else
+    self:_HandleRefreshFriendInPrivateChannel()
+  end
+  self:_RefreshGuildPermissionVisibility()
+  if self.UpdateUIStyleInPlatform then
+    self:UpdateUIStyleInPlatform()
+  end
+  self:AddDelayFrameFunc(function()
+    self:_SyncSubTabSelectedState(ChatModel:GetCurrentSubTab())
+  end, 1, "SyncChatSubTabSelectedState")
+end
+
+function M:_InitGuildPermissionSwitch()
+  if not self.Group_Permission or not self.SwitchCheckBox_Permission then
+    return
+  end
+  if self._GuildPermissionBound then
+    return
+  end
+  self._GuildPermissionBound = true
+  local Avatar = ChatController:GetAvatar()
+  local bOpen = Avatar and Avatar.GuildChatOpen
+  if nil == bOpen then
+    bOpen = true
+  end
+  self.SwitchCheckBox_Permission:SetChecked(bOpen, false)
+  self.SwitchCheckBox_Permission:AddEventOnCheckStateChanged(self, self._OnGuildPermissionToggle)
+end
+
+function M:_RefreshGuildPermissionVisibility()
+  if not self.Group_Permission then
+    return
+  end
+  local bFriendChannel = self.CurrChannel == ChatCommon.ChannelDef.Friend
+  local bGuildSubTab = ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild
+  local Avatar = ChatController:GetAvatar()
+  local UIUnlockRuleId = DataMgr.UIUnlockRule.OpenGuild.UIUnlockRuleId
+  local bUnlocked = Avatar and Avatar:CheckUIUnlocked(UIUnlockRuleId)
+  local bInGuild = GuildModel:IsInGuild()
+  local bShow = bFriendChannel and bGuildSubTab and bUnlocked and bInGuild
+  self.Group_Permission:SetVisibility(bShow and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+  if bShow and self.SwitchCheckBox_Permission then
+    local bOpen = Avatar.GuildChatOpen
+    if nil == bOpen then
+      bOpen = true
+    end
+    self.SwitchCheckBox_Permission:SetChecked(bOpen, false)
+  end
+end
+
+function M:_OnGuildPermissionToggle(bChecked)
+  if bChecked then
+    ChatController:SetGuildChatPermission(true)
+    return
+  end
+  local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+  local bHasActiveChat = next(GuildList or {}) ~= nil
+  if not bHasActiveChat then
+    ChatController:SetGuildChatPermission(false)
+    return
+  end
+  local Params = {
+    RightCallbackFunction = function()
+      ChatController:SetGuildChatPermission(false)
+    end,
+    LeftCallbackFunction = function()
+      if self.SwitchCheckBox_Permission then
+        self.SwitchCheckBox_Permission:SetChecked(true, false)
+      end
+    end
+  }
+  UIManager(self):ShowCommonPopupUI(ChatCommon.GuildPermissionCloseDialog, Params, self)
+end
+
+function M:_SetSubTabSelectedState(SubTabWidget, bSelected)
+  if not SubTabWidget then
+    return
+  end
+  local Anim = bSelected and SubTabWidget.Select or SubTabWidget.Normal
+  if not Anim then
+    return
+  end
+  local SubTabType = SubTabWidget == self.SubTab_Friend and ChatCommon.SubTabType.Friend or SubTabWidget == self.SubTab_Guild and ChatCommon.SubTabType.Guild
+  if SubTabType then
+    local State = self._SubTabVisualState[SubTabType]
+    if State then
+      State.Hovered = false
+      State.Pressing = false
+    end
+  end
+  if SubTabWidget.StopAllAnimations then
+    SubTabWidget:StopAllAnimations()
+  end
+  SubTabWidget:PlayAnimation(Anim)
+end
+
+function M:_SyncSubTabSelectedState(SubTab)
+  self:_SetSubTabSelectedState(self.SubTab_Friend, SubTab == ChatCommon.SubTabType.Friend)
+  self:_SetSubTabSelectedState(self.SubTab_Guild, SubTab == ChatCommon.SubTabType.Guild)
+end
+
+function M:_GetSubTabWidgetByType(SubTabType)
+  if SubTabType == ChatCommon.SubTabType.Friend then
+    return self.SubTab_Friend
+  elseif SubTabType == ChatCommon.SubTabType.Guild then
+    return self.SubTab_Guild
+  end
+end
+
+function M:_GetSubTabVisualState(SubTabType)
+  self._SubTabVisualState = self._SubTabVisualState or {}
+  local State = self._SubTabVisualState[SubTabType]
+  if not State then
+    State = {Hovered = false, Pressing = false}
+    self._SubTabVisualState[SubTabType] = State
+  end
+  return State
+end
+
+function M:_IsSubTabSelected(SubTabType)
+  return ChatModel:GetCurrentSubTab() == SubTabType
+end
+
+function M:_PlaySubTabAnimation(SubTabWidget, Anim)
+  if not SubTabWidget or not Anim then
+    return
+  end
+  if SubTabWidget.StopAllAnimations then
+    SubTabWidget:StopAllAnimations()
+  end
+  SubTabWidget:PlayAnimation(Anim)
+end
+
+function M:_PlaySubTabUnHover(SubTabType)
+  local SubTabWidget = self:_GetSubTabWidgetByType(SubTabType)
+  if not SubTabWidget then
+    return
+  end
+  if not SubTabWidget.UnHover then
+    self:_PlaySubTabAnimation(SubTabWidget, SubTabWidget.Normal)
+    return
+  end
+  if SubTabWidget.UnHover then
+    SubTabWidget:UnbindAllFromAnimationFinished(SubTabWidget.UnHover)
+    SubTabWidget:BindToAnimationFinished(SubTabWidget.UnHover, {
+      self,
+      function()
+        local State = self:_GetSubTabVisualState(SubTabType)
+        if self:_IsSubTabSelected(SubTabType) or State.Hovered or State.Pressing then
+          return
+        end
+        local CurrentWidget = self:_GetSubTabWidgetByType(SubTabType)
+        if CurrentWidget and CurrentWidget.Normal then
+          self:_PlaySubTabAnimation(CurrentWidget, CurrentWidget.Normal)
+        end
+      end
+    })
+  end
+  self:_PlaySubTabAnimation(SubTabWidget, SubTabWidget.UnHover)
+end
+
+function M:_OnSubTabHovered(SubTabType)
+  if self:_IsSubTabSelected(SubTabType) then
+    return
+  end
+  local State = self:_GetSubTabVisualState(SubTabType)
+  State.Hovered = true
+  local SubTabWidget = self:_GetSubTabWidgetByType(SubTabType)
+  if not SubTabWidget then
+    return
+  end
+  if SubTabWidget.UnHover then
+    SubTabWidget:UnbindAllFromAnimationFinished(SubTabWidget.UnHover)
+  end
+  self:_PlaySubTabAnimation(SubTabWidget, SubTabWidget.Hover)
+end
+
+function M:_OnSubTabUnhovered(SubTabType)
+  if self:_IsSubTabSelected(SubTabType) then
+    return
+  end
+  local State = self:_GetSubTabVisualState(SubTabType)
+  State.Hovered = false
+  local SubTabWidget = self:_GetSubTabWidgetByType(SubTabType)
+  if not SubTabWidget or State.Pressing then
+    return
+  end
+  self:_PlaySubTabUnHover(SubTabType)
+end
+
+function M:_OnSubTabPressed(SubTabType)
+  if self:_IsSubTabSelected(SubTabType) then
+    return
+  end
+  local State = self:_GetSubTabVisualState(SubTabType)
+  State.Pressing = true
+  local SubTabWidget = self:_GetSubTabWidgetByType(SubTabType)
+  if not SubTabWidget then
+    return
+  end
+  if SubTabWidget.UnHover then
+    SubTabWidget:UnbindAllFromAnimationFinished(SubTabWidget.UnHover)
+  end
+  self:_PlaySubTabAnimation(SubTabWidget, SubTabWidget.Press)
+end
+
+function M:_OnSubTabReleased(SubTabType)
+  if self:_IsSubTabSelected(SubTabType) then
+    return
+  end
+  local State = self:_GetSubTabVisualState(SubTabType)
+  State.Pressing = false
+  local SubTabWidget = self:_GetSubTabWidgetByType(SubTabType)
+  if not SubTabWidget then
+    return
+  end
+  if SubTabWidget.UnHover then
+    SubTabWidget:UnbindAllFromAnimationFinished(SubTabWidget.UnHover)
+  end
+  if State.Hovered then
+    self:_PlaySubTabAnimation(SubTabWidget, SubTabWidget.Hover)
+  else
+    self:_PlaySubTabUnHover(SubTabType)
+  end
+end
+
+function M:_PlaySubTabClick(SubTabType)
+  if self:_IsSubTabSelected(SubTabType) then
+    return
+  end
+  local State = self:_GetSubTabVisualState(SubTabType)
+  State.Hovered = false
+  State.Pressing = false
+  local SubTabWidget = self:_GetSubTabWidgetByType(SubTabType)
+  if not SubTabWidget or not SubTabWidget.Click then
+    return
+  end
+  if SubTabWidget.UnHover then
+    SubTabWidget:UnbindAllFromAnimationFinished(SubTabWidget.UnHover)
+  end
+  self:_PlaySubTabAnimation(SubTabWidget, SubTabWidget.Click)
+end
+
+function M:OnSubTabHovered_Friend()
+  self:_OnSubTabHovered(ChatCommon.SubTabType.Friend)
+end
+
+function M:OnSubTabUnhovered_Friend()
+  self:_OnSubTabUnhovered(ChatCommon.SubTabType.Friend)
+end
+
+function M:OnSubTabPressed_Friend()
+  self:_OnSubTabPressed(ChatCommon.SubTabType.Friend)
+end
+
+function M:OnSubTabReleased_Friend()
+  self:_OnSubTabReleased(ChatCommon.SubTabType.Friend)
+end
+
+function M:OnSubTabHovered_Guild()
+  self:_OnSubTabHovered(ChatCommon.SubTabType.Guild)
+end
+
+function M:OnSubTabUnhovered_Guild()
+  self:_OnSubTabUnhovered(ChatCommon.SubTabType.Guild)
+end
+
+function M:OnSubTabPressed_Guild()
+  self:_OnSubTabPressed(ChatCommon.SubTabType.Guild)
+end
+
+function M:OnSubTabReleased_Guild()
+  self:_OnSubTabReleased(ChatCommon.SubTabType.Guild)
+end
+
+function M:OnSubTabClicked_Friend()
+  if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Friend then
+    return
+  end
+  self:_PlaySubTabClick(ChatCommon.SubTabType.Friend)
+  ChatModel:SetCurrentSubTab(ChatCommon.SubTabType.Friend)
+  ChatModel:SetCurrentFriendUid(nil)
+  self.CurrSelectPlayer = nil
+  self:_SetUpDMChannelLayout()
+  self:_RefreshSubTab()
+end
+
+function M:OnSubTabClicked_Guild()
+  if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+    return
+  end
+  self:_PlaySubTabClick(ChatCommon.SubTabType.Guild)
+  ChatModel:SetCurrentSubTab(ChatCommon.SubTabType.Guild)
+  ChatModel:SetCurrentFriendUid(nil)
+  self.CurrSelectPlayer = nil
+  self:_SetUpDMChannelLayout(true)
+  self:_RefreshSubTab()
+end
+
+function M:_HandleRefreshGuildInPrivateChannel(Uid)
+  if Uid then
+    self:_UpdateGuildPrivatePlayerItem(Uid)
+    return
+  end
+  self.List_Player:ClearListItems()
+  self.Btn_Sent:SetForbidden()
+  local Avatar = GWorld:GetAvatar()
+  local UIUnlockRule = DataMgr.UIUnlockRule
+  local UIUnlockRuleId = UIUnlockRule.OpenGuild.UIUnlockRuleId
+  local bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
+  if not bUnlocked then
+    self:_SetGuildPrivateInputDisabledArea()
+    self:_ShowDMPlayerListEmpty(GText("UI_GuildSystemLocked"), nil, GText("UI_GuildSystemLocked"))
+    return
+  end
+  if not GuildModel:IsInGuild() then
+    self:_SetGuildPrivateInputDisabledArea()
+    self:_ShowDMPlayerListEmpty(GText("UI_NoPrivateChats"), "Guild", GText("UI_JoinGuildToChat"))
+    return
+  end
+  local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+  local Uids = {}
+  for Uid, _ in pairs(GuildList or {}) do
+    Uids[#Uids + 1] = Uid
+  end
+  if 0 == #Uids then
+    local bGuildChatOpen = Avatar.GuildChatOpen ~= false
+    local DialogEmptyText = not bGuildChatOpen and GText("UI_PrivateChatNotAllowed") or GText("UI_CanChatWithGuildMembers")
+    self:_SetGuildPrivateInputDisabledArea()
+    self:_ShowDMPlayerListEmpty(GText("UI_NoPrivateChats"), nil, DialogEmptyText)
+    return
+  end
+  self:_ShowDMPlayerListNormal(self:_GetCurrentDialogEmptyText())
+  table.sort(Uids)
+  local PreselectUid = ChatModel:GetCurrentFriendUid()
+  if not PreselectUid or not GuildList[PreselectUid] then
+    PreselectUid = Uids[1]
+  end
+  if PreselectUid then
+    self:_ApplyGuildPrivateInputAreaState(PreselectUid, false)
+  end
+  self._GuildPrivateInitSelectedUid = PreselectUid
+  local bOldGuildPrivateListRefreshing = self._bGuildPrivateListRefreshing
+  self._bGuildPrivateListRefreshing = true
+  local SelectedIdx, SelectedUid
+  for i, Uid in ipairs(Uids) do
+    local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    Content.Owner = self
+    local Info = self:_ResolveGuildPeerInfo(Uid, GuildList[Uid])
+    Content.Data = {
+      Uid = Uid,
+      Info = Info or {
+        Uid = Uid,
+        Nickname = tostring(Uid)
+      }
+    }
+    Content.IsGuild = true
+    if ChatModel:GetCurrentFriendUid() == Uid then
+      SelectedIdx = i
+      SelectedUid = Uid
+      Content.bSelected = true
+    end
+    self.List_Player:AddItem(Content)
+  end
+  if not SelectedIdx then
+    SelectedIdx = 1
+    SelectedUid = Uids[SelectedIdx]
+    local FirstItem = self.List_Player:GetListItems():Get(1)
+    if FirstItem and IsValid(FirstItem.UI) and FirstItem.UI.Select then
+      FirstItem.UI:Select()
+    elseif FirstItem then
+      FirstItem.bSelected = true
+    end
+  end
+  self._bGuildPrivateListRefreshing = bOldGuildPrivateListRefreshing
+  self.SelectedPlayerIndex = SelectedIdx - 1
+  self.Com_Input:SetText("")
+  if SelectedUid then
+    self:_ApplyGuildPrivateInputAreaState(SelectedUid, false)
+  end
+  self.List_Player:ScrollIndexIntoView(SelectedIdx)
+  self:_RefreshGuildPrivatePeerInfos(Uids)
+end
+
+function M:_ResolveGuildPeerInfo(Uid, Raw)
+  if type(Raw) == "table" then
+    return Raw
+  end
+  return nil
+end
+
+function M:_IsValidGuildMemberQueryInfo(Info)
+  if type(Info) ~= "table" then
+    return false
+  end
+  local Nickname = Info.Nickname or Info.Name
+  if Nickname and "" ~= Nickname then
+    return true
+  end
+  if Info.Level and Info.Level > 0 then
+    return true
+  end
+  if Info.GuildId and Info.GuildId > 0 then
+    return true
+  end
+  return false
+end
+
+function M:_RefreshGuildPrivatePeerInfos(Uids)
+  if not Uids or 0 == #Uids then
+    return
+  end
+  local Avatar = ChatController:GetAvatar()
+  if not Avatar or not Avatar.QueryGuildMemberInfo then
+    for _, Uid in ipairs(Uids) do
+      self:_QueryGuildPeerInfo(Uid)
+    end
+    return
+  end
+  self._GuildPeerInfoBatchSerial = (self._GuildPeerInfoBatchSerial or 0) + 1
+  local BatchSerial = self._GuildPeerInfoBatchSerial
+  Avatar:QueryGuildMemberInfo(function(Ret, MemberInfos)
+    if not IsValid(self) or BatchSerial ~= self._GuildPeerInfoBatchSerial then
+      return
+    end
+    local FallbackUids = {}
+    if Ret == ErrorCode.RET_SUCCESS and type(MemberInfos) == "table" then
+      for _, Uid in ipairs(Uids) do
+        local Info = MemberInfos[Uid] or MemberInfos[tostring(Uid)]
+        if self:_IsValidGuildMemberQueryInfo(Info) then
+          if ChatModel:RegisterGuildUid(Uid, Info) then
+            self:_UpdateGuildPrivatePlayerItem(Uid)
+          end
+        else
+          FallbackUids[#FallbackUids + 1] = Uid
+        end
+      end
+    else
+      FallbackUids = Uids
+    end
+    for _, Uid in ipairs(FallbackUids) do
+      self:_QueryGuildPeerInfo(Uid)
+    end
+  end, Uids)
+end
+
+function M:_QueryGuildPeerInfo(Uid)
+  if not Uid then
+    return
+  end
+  self._GuildPeerInfoQuerying = self._GuildPeerInfoQuerying or {}
+  if self._GuildPeerInfoQuerying[Uid] then
+    return
+  end
+  local Avatar = ChatController:GetAvatar()
+  if not Avatar or not Avatar.GetOtherPlayerPersonallInfo then
+    return
+  end
+  self._GuildPeerInfoQuerying[Uid] = true
+  Avatar:GetOtherPlayerPersonallInfo(Uid, {
+    Func = function(PlayerInfo)
+      if self._GuildPeerInfoQuerying then
+        self._GuildPeerInfoQuerying[Uid] = nil
+      end
+      if not IsValid(self) or type(PlayerInfo) ~= "table" then
+        return
+      end
+      ChatModel:RegisterGuildUid(Uid, PlayerInfo)
+      if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+        self:_HandleRefreshGuildInPrivateChannel(Uid)
+      end
+    end
+  })
+end
+
+function M:_ShowDMPlayerListEmpty(EmptyText, CTAType, DialogEmptyText)
+  if self.WS_PlayerList then
+    self.WS_PlayerList:SetActiveWidgetIndex(1)
+    if self.Text_ChatTabListEmpty then
+      self.Text_ChatTabListEmpty:SetText(EmptyText)
+    end
+    local Op = ("Guild" == CTAType or "Friend" == CTAType) and "SelfHitTestInvisible" or "Collapsed"
+    if self.Panel_Add_02 then
+      self.Panel_Add_02:SetVisibility(UIConst.VisibilityOp[Op])
+    end
+    if self.Btn_Empty_02 then
+      self.Btn_Empty_02:SetVisibility("Collapsed" == Op and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.Visible)
+    end
+    if self.Text_Recruit_02 then
+      self.Text_Recruit_02:SetVisibility("Collapsed" == Op and UIConst.VisibilityOp.Collapsed or UIConst.VisibilityOp.HitTestInvisible)
+      if "Guild" == CTAType then
+        self.Text_Recruit_02:SetText(GText("UI_GoToJoin"))
+      elseif "Friend" == CTAType then
+        self.Text_Recruit_02:SetText(GText("UI_Friend_GoToAdd"))
+      end
+    end
+  end
+  if DialogEmptyText and self.Text_DialogEmptyText then
+    self.Text_DialogEmptyText:SetText(DialogEmptyText)
+  end
+  if self.WS_Dialoglist then
+    self.WS_Dialoglist:SetActiveWidgetIndex(1)
+  end
+end
+
+function M:_ShowDMPlayerListNormal(DialogEmptyText)
+  if self.WS_PlayerList then
+    self.WS_PlayerList:SetActiveWidgetIndex(0)
+  end
+  if self.Panel_Add_02 then
+    self.Panel_Add_02:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if self.Btn_Empty_02 then
+    self.Btn_Empty_02:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  if DialogEmptyText and self.Text_DialogEmptyText then
+    self.Text_DialogEmptyText:SetText(DialogEmptyText)
+  end
 end
 
 function M:_HandleRefreshTeamMateInTeamChannel()

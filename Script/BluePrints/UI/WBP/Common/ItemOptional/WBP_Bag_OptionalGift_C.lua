@@ -158,6 +158,12 @@ function M:CloseDialog()
   end
 end
 
+function M:PackageData()
+  local PackageInfo = {}
+  PackageInfo.Count = self.CurrentCount
+  return PackageInfo
+end
+
 function M:GetCurrentHoverItem()
   local TargetWidget
   local AllChildren = self.WB_Avatar:GetAllChildren()

@@ -1,10 +1,10 @@
-local TalkFlowUTils = require("BluePrints.Story.Talk.TalkFlow.TalkFlowUTils")
+local TalkFlowUtils = require("BluePrints.Story.Talk.TalkFlow.TalkFlowUtils")
 local ReviewUtils = require("BluePrints.UI.WBP.StoryReview.StoryReviewUtils")
 local TalkUtils = require("BluePrints.Story.Talk.View.TalkUtils")
 local EDialogueNodeType = TalkUtils.EDialogueNodeType
 local EDialogueIterType = TalkUtils.EDialogueIterType
 local M = Class({
-  "BluePrints.Story.StoryIteration.StoryIterationNode"
+  "BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode"
 })
 M.NodeType = EDialogueNodeType.Dialogue
 
@@ -12,12 +12,14 @@ function M:BuildNode(DialogueId, Comps)
   rawset(self, "DialogueRecordComponent", Comps.RecordComp)
   rawset(self, "DialogueWikiComponent", Comps.WikiComp)
   M.Super.BuildNode(self, DialogueId, Comps)
-  self:CreateSubFlow(DialogueId)
+  self.bStoped = false
 end
 
 function M:CreateSubFlow(DialogueId)
-  local SubFlow, ParallelNode, WaitAllNode = TalkFlowUTils:CreateFlow(DialogueId, self.TalkTask, function()
-    self:Iterate(EDialogueIterType.Out)
+  local SubFlow, ParallelNode, WaitAllNode = TalkFlowUtils:CreateFlow(DialogueId, self.TalkTask, function()
+    if not self.bStoped then
+      self:Iterate(EDialogueIterType.Out)
+    end
     self.SubFlow = nil
   end)
   self.SubFlow = SubFlow
@@ -29,6 +31,7 @@ end
 function M:CreateNodeData(DialogueId)
   local Dialogue = DataMgr.Dialogue[DialogueId]
   self.Dialogue = Dialogue
+  self.DialogueId = DialogueId
   self.NextOptions = Dialogue.NextOptions
   self.NextDialogue = Dialogue.NextDialogue
   self.FinalDialogue = Dialogue.FinalDialogueId
@@ -42,7 +45,7 @@ end
 
 function M:GenerateNextNodes()
   if self.NextDialogue and self.NextOptions then
-    local DialogueId = self.Dialogue.DialogueId
+    local DialogueId = self.DialogueId
     local NextNode = self:CreateNextNode("CheckOptionCondition", DialogueId)
     self:SetOutPort(EDialogueIterType.Out, NextNode)
     return
@@ -52,7 +55,7 @@ function M:GenerateNextNodes()
     local NextNode = self:CreateNextNode("Dialogue", DialogueId)
     self:SetOutPort(EDialogueIterType.Out, NextNode)
   elseif self.NextOptions then
-    local DialogueId = self.Dialogue.DialogueId
+    local DialogueId = self.DialogueId
     local NextOptionNode = self:CreateNextNode("Option", DialogueId)
     self:SetOutPort(EDialogueIterType.Out, NextOptionNode)
   elseif self.FinalDialogue then
@@ -80,7 +83,18 @@ function M:Enter(bSkip)
 end
 
 function M:Execute(bSkip)
-  self.TalkTask:PlayDialogue(nil, bSkip)
+  if self.bStoped then
+    return
+  end
+  self:CreateSubFlow(self.DialogueId)
+  if self.SubFlow then
+    self.SubFlow:Start()
+    if bSkip then
+      self.SubFlow:Skip()
+    end
+  else
+    self:Iterate(EDialogueIterType.Out)
+  end
 end
 
 function M:Pause()
@@ -92,6 +106,13 @@ end
 function M:Resume()
   if self.SubFlow then
     self.SubFlow:Resume()
+  end
+end
+
+function M:Stop()
+  self.bStoped = true
+  if self.SubFlow then
+    self.SubFlow:Stop()
   end
 end
 

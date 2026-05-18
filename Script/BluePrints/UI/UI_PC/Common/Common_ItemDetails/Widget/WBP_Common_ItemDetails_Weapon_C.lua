@@ -2,6 +2,7 @@ require("UnLua")
 local SkillUtils = require("Utils.SkillUtils")
 local CommonUtils = require("Utils.CommonUtils")
 local WeaponUtils = require("BluePrints.Client.CustomTypes.Weapon")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local ModModel = ModController:GetModel()
 local M = Class()
 
@@ -53,12 +54,20 @@ function M:InitItemInfo(ItemType, ItemId, UnitId, Content)
   local WeaponTypeName = self:GetWeaponTypeName(ItemId)
   self.Text_SubTitle:SetText(WeaponTypeName)
   self:UpdateAttrInfo(ItemId)
-  local PassiveSkillDesc = SkillUtils.CalcWeaponPassiveEffectsDesc(WeaponServerData or BattleWeaponData)
-  if nil ~= PassiveSkillDesc and "" ~= PassiveSkillDesc then
+  local bHyperWeapon = HyperWeaponUtils.IsHyperWeapon(WeaponData.WeaponId)
+  if bHyperWeapon then
+    local Talents = HyperWeaponUtils.GetTalents(WeaponData.WeaponId, 0)
+    local TalentDesc = HyperWeaponUtils.GetSkillDesc(Talents[1])
     self.Text_SkillEffect:SetVisibility(ESlateVisibility.Visible)
-    self.Text_SkillEffect:SetText(PassiveSkillDesc)
+    self.Text_SkillEffect:SetText(TalentDesc)
   else
-    self.Text_SkillEffect:SetVisibility(ESlateVisibility.Collapsed)
+    local PassiveSkillDesc = SkillUtils.CalcWeaponPassiveEffectsDesc(WeaponServerData or BattleWeaponData)
+    if nil ~= PassiveSkillDesc and "" ~= PassiveSkillDesc then
+      self.Text_SkillEffect:SetVisibility(ESlateVisibility.Visible)
+      self.Text_SkillEffect:SetText(PassiveSkillDesc)
+    else
+      self.Text_SkillEffect:SetVisibility(ESlateVisibility.Collapsed)
+    end
   end
 end
 

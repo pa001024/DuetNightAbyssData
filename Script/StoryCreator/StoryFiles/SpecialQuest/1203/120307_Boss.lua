@@ -170,15 +170,45 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17743492683362471",
-            startPort = "Out",
-            endQuest = "1774423867834877113",
-            endPort = "In"
-          },
-          {
             startQuest = "1774423867834877113",
             startPort = "Out",
             endQuest = "17724344171765541343",
+            endPort = "In"
+          },
+          {
+            startQuest = "17743492683362471",
+            startPort = "Out",
+            endQuest = "1777361675226928666",
+            endPort = "In"
+          },
+          {
+            startQuest = "17743492683362471",
+            startPort = "Out",
+            endQuest = "17773617782671855344",
+            endPort = "In"
+          },
+          {
+            startQuest = "177243576210813454455",
+            startPort = "Out",
+            endQuest = "17780592214301772",
+            endPort = "In"
+          },
+          {
+            startQuest = "17780592214301772",
+            startPort = "Out",
+            endQuest = "1777360782359998",
+            endPort = "In"
+          },
+          {
+            startQuest = "17780592214301772",
+            startPort = "Out",
+            endQuest = "17773610334681729",
+            endPort = "In"
+          },
+          {
+            startQuest = "1777361675226928666",
+            startPort = "Out",
+            endQuest = "1774423867834877113",
             endPort = "In"
           }
         },
@@ -214,7 +244,7 @@ return {
             key = "17724344171765541343",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3369.395294700762, y = 275.6412914444902},
+            pos = {x = 3684.395294700762, y = 286.05795811115684},
             propsData = {}
           },
           ["17724344680625541497"] = {
@@ -265,7 +295,7 @@ return {
             key = "177243563093111868600",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 1920.4945917192917, y = 54.76630094043878},
+            pos = {x = 2401.7445917192917, y = -35.23369905956123},
             propsData = {QuestRoleId = 0, IsPlayFX = false}
           },
           ["177243571895212661688"] = {
@@ -291,7 +321,7 @@ return {
             key = "1772518991877563",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 2608.6570916211936, y = 266.91048010913573},
+            pos = {x = 2559.3713773354793, y = 271.19619439485},
             propsData = {
               VarName = "FengxiangBossFinish",
               VarValue = 1
@@ -331,7 +361,7 @@ return {
             key = "17727067132822627",
             type = "BossBattleFinishNode",
             name = "BOSS战开始",
-            pos = {x = 2039.7670645685348, y = 276.02425663183396},
+            pos = {x = 2003.3384931399635, y = 276.02425663183396},
             propsData = {
               SendMessage = "BossBattle02",
               FinishCondition = ""
@@ -341,7 +371,7 @@ return {
             key = "17727067132822628",
             type = "BossBattleFinishNode",
             name = "BOSS战成功",
-            pos = {x = 2320.6954703758847, y = 269.88739431085185},
+            pos = {x = 2290.6954703758847, y = 269.88739431085185},
             propsData = {
               SendMessage = "",
               FinishCondition = "BossJuque02_StoryEnd"
@@ -351,7 +381,7 @@ return {
             key = "17727067717123772",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1734.231267472209, y = 278.348272105169},
+            pos = {x = 1719.231267472209, y = 278.348272105169},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -382,10 +412,10 @@ return {
                 {
                   TalkActorType = "Player",
                   TalkActorId = 0,
-                  TalkActorVisible = false,
-                  AroundPlayer = false
+                  TalkActorVisible = false
                 }
               },
+              bLockHighestLOD = false,
               FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -396,7 +426,7 @@ return {
             key = "17743492683362471",
             type = "StandAloneBlackScreenNode",
             name = "独立黑屏节点",
-            pos = {x = 2846.1250000000005, y = 281.23214285714283},
+            pos = {x = 2839.696428571429, y = 283.375},
             propsData = {
               FadeInSeconds = 0,
               FadeOutSeconds = 0,
@@ -425,12 +455,71 @@ return {
             key = "1774423867834877113",
             type = "PlayOrStopBGMNode",
             name = "BGM节点",
-            pos = {x = 3105.948045028288, y = 286.0561425943376},
+            pos = {x = 3403.448045028288, y = 282.7228092610043},
             propsData = {
               SoundStateType = 3,
               SoundPriority = 0,
               SoundType = 0
             }
+          },
+          ["1777360782359998"] = {
+            key = "1777360782359998",
+            type = "SetPhantomStatusNode",
+            name = "设置魅影Buff",
+            pos = {x = 1998.0460526315792, y = -31.500000000000135},
+            propsData = {
+              PhantomRoleId = 1504,
+              BuffList = {
+                {
+                  Id = 903,
+                  LastTime = -1,
+                  Value = -1
+                }
+              }
+            }
+          },
+          ["17773610334681729"] = {
+            key = "17773610334681729",
+            type = "SetPhantomStatusNode",
+            name = "设置魅影Buff",
+            pos = {x = 1994.296052631579, y = 90.99999999999991},
+            propsData = {
+              PhantomRoleId = 2301,
+              BuffList = {
+                {
+                  Id = 903,
+                  LastTime = -1,
+                  Value = -1
+                }
+              }
+            }
+          },
+          ["1777361675226928666"] = {
+            key = "1777361675226928666",
+            type = "RemovePhantomBuffsNode",
+            name = "移除魅影Buff",
+            pos = {x = 3124.7505980861247, y = 285.50909090909084},
+            propsData = {
+              PhantomRoleId = 1504,
+              RemoveBuffs = {903}
+            }
+          },
+          ["17773617782671855344"] = {
+            key = "17773617782671855344",
+            type = "RemovePhantomBuffsNode",
+            name = "移除魅影Buff",
+            pos = {x = 3125.5960526315794, y = 415.82727272727277},
+            propsData = {
+              PhantomRoleId = 2301,
+              RemoveBuffs = {903}
+            }
+          },
+          ["17780592214301772"] = {
+            key = "17780592214301772",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 1694.5, y = 73.67857142857122},
+            propsData = {WaitTime = 2}
           }
         },
         commentData = {}

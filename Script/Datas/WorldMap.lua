@@ -26,7 +26,9 @@ return ReadOnly("WorldMap", {
       201,
       202,
       203,
-      204
+      204,
+      205,
+      206
     },
     WorldMapUnlockCondition = 26
   },

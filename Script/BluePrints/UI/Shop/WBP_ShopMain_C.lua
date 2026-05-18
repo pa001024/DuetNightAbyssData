@@ -113,7 +113,15 @@ function M:ReceiveExitState(StackAction)
   if 0 == StackAction and self:IsHasVideo() and self.bPlayVideoBG then
     self:StopVideoBGWithDelay(0.5)
   end
-  self:HideAllPreviewActor()
+  if 0 == StackAction then
+    local SkinPreview = UIManager(self):GetUIObj("SkinPreview")
+    local CharSkinPreview = UIManager(self):GetUIObj("CharSkinPreview")
+    local ArmoryDetail = UIManager(self):GetUIObj("ArmoryDetail")
+    local ArmorySkin = UIManager(self):GetUIObj("ArmorySkin")
+    if SkinPreview or CharSkinPreview or ArmoryDetail or ArmorySkin then
+      self:HideAllPreviewActor()
+    end
+  end
 end
 
 function M:Construct()
@@ -183,6 +191,21 @@ function M:RefreshShop()
       self:RefreshSubTabData(self.CurSubTabMap)
       self.bNeedRefreshShop = false
     end, false, 0, "RefreshShop", true)
+  end
+end
+
+function M:JumpToSubTabById(MainTabId, SubTabId)
+  if not self.MainTabs or not self.SubTabMapIdx then
+    self:InitShopTabInfo(MainTabId, SubTabId)
+    return
+  end
+  local MainIdx = self.MainTabs[MainTabId]
+  if MainIdx then
+    self.ShopTab:SelectTab(MainIdx)
+    local SubIdx = self.SubTabMapIdx[SubTabId]
+    if SubIdx and self.Common_Toggle_TabGroup_PC then
+      self.Common_Toggle_TabGroup_PC:SelectTab(SubIdx)
+    end
   end
 end
 
@@ -427,6 +450,7 @@ function M:RefreshSubTabData(SubTabData)
   self.Group_RecommendAnchor:SetVisibility(ESlateVisibility.Collapsed)
   if self.Common_Tab and self.Common_Tab.WBP_Com_Tab_ResourceBar then
     self.Common_Tab.WBP_Com_Tab_ResourceBar:SetLastFocusWidget(self.List_Item)
+    self.Common_Tab:SetResourceAddVisibleByResocurceId(99, SubTabData.SubTabId ~= 1101 and SubTabData.SubTabId ~= 1500)
   end
   if SubTabData.TabType == "Banner" then
     self:PlayAnimationReverse(self.Change)
@@ -1080,10 +1104,6 @@ function M:OnAnimationFinished(InAnimation)
 end
 
 function M:Destruct()
-  local Player = UGameplayStatics.GetPlayerCharacter(self, 0)
-  if Player then
-    Player:SetCanInteractiveTrigger(true)
-  end
   AudioManager(self):StopSystemUIBGM(self.ShopType)
   self:HorizontalListViewResize_TearDown()
   self.Group_RecommendAnchor:ClearChildren()

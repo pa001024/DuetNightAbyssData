@@ -30,8 +30,8 @@ function BP_TcpConnection_C:InitSuccessLua()
   end
 end
 
-function BP_TcpConnection_C:CreateEntity(entity_type, entity_id, info, use_protoattr)
-  DebugNetPrint("CreateEntity ", entity_type, use_protoattr)
+function BP_TcpConnection_C:CreateEntity(entity_type, entity_id, info, proto_content)
+  DebugNetPrint("CreateEntity ", entity_type)
   local entity = GWorld.EntityManager:GetEntity(entity_id)
   if not entity then
     if "Avatar" == entity_type then
@@ -45,7 +45,7 @@ function BP_TcpConnection_C:CreateEntity(entity_type, entity_id, info, use_proto
   end
   if entity then
     DebugPrint("InitFromDict before", os.time())
-    entity:InitFromDict(info, use_protoattr)
+    entity:InitFromDict(info, proto_content)
     DebugPrint("InitFromDict after", os.time())
     entity:CreateSuccess()
   end

@@ -109,5 +109,40 @@ return ReadOnly("ChatReportType", {
     TabId = 3,
     Text = "UI_COMMONPOP_TEXT_100090_7",
     TypeId = 0
+  },
+  [16] = {
+    Id = "Tab4_Harass",
+    Index = 16,
+    TabId = 0,
+    Text = "UI_COMMONPOP_TEXT_100090_14",
+    TypeId = 3
+  },
+  [17] = {
+    Id = "Tab4_RealLifeThreat",
+    Index = 17,
+    TabId = 0,
+    Text = "UI_COMMONPOP_TEXT_100090_15",
+    TypeId = 3
+  },
+  [18] = {
+    Id = "Tab4_OffensiveLanguage",
+    Index = 18,
+    TabId = 0,
+    Text = "UI_COMMONPOP_TEXT_100090_16",
+    TypeId = 3
+  },
+  [19] = {
+    Id = "Tab4_CheatAD",
+    Index = 19,
+    TabId = 0,
+    Text = "UI_COMMONPOP_TEXT_100090_17",
+    TypeId = 3
+  },
+  [20] = {
+    Id = "Tab4_Others",
+    Index = 20,
+    TabId = 0,
+    Text = "UI_COMMONPOP_TEXT_100090_7",
+    TypeId = 3
   }
 })

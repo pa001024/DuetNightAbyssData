@@ -46,7 +46,6 @@ end
 function MechanismDungeonLogic:OnNotifyServerDungeonEvent_MechanismGiveReward(EventInfo)
   self:DungeonRewardEvent(EventInfo)
   self:NotifyGameModeDungeonEvent("MechanismGiveReward", EventInfo)
-  return bGiveRewardSuccess
 end
 
 DungeonClass.AssembleComponents(MechanismDungeonLogic)

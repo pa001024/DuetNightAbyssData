@@ -3243,6 +3243,17 @@
     }
   },
   {
+    "id": 1013801,
+    "名称": "藏宝图嗅觉·百花车站",
+    "分类": "Liste de souhaits",
+    "品质": 1,
+    "描述": "集齐百花车站所有遗落的纸张",
+    "版本": "1.4",
+    "奖励": {
+      "Indice de Mandat scellé": 2
+    }
+  },
+  {
     "id": 1020101,
     "名称": "L’argent n’achète pas tout I",
     "分类": "Liste de souhaits",
@@ -5363,6 +5374,18 @@
     }
   },
   {
+    "id": 17002013,
+    "名称": "Instants figés : Hilda",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "Lire intégralement l’Anthologie du temps de Hilda dans les Fragments de mémoire du Sanctuaire.",
+    "版本": "1.4",
+    "奖励": {
+      "Indice de Mandat scellé": 1,
+      "Title: d’Hilda": 1
+    }
+  },
+  {
     "id": 17002014,
     "名称": "Instants figés : Yale et Oliver",
     "分类": "Joyeux moments",
@@ -5521,6 +5544,18 @@
     }
   },
   {
+    "id": 17002027,
+    "名称": "停驻光阴·芙罗拉",
+    "分类": "Joyeux moments",
+    "品质": 1,
+    "描述": "于休憩之所“点滴”处完整阅读芙罗拉的光阴集故事",
+    "版本": "1.4",
+    "奖励": {
+      "Indice de Mandat scellé": 1,
+      "Title: 芙罗拉的": 1
+    }
+  },
+  {
     "id": 17003001,
     "名称": "Un moment de répit : Berenica",
     "分类": "Joyeux moments",
@@ -5650,6 +5685,18 @@
     "奖励": {
       "Indice de Mandat scellé": 1,
       "Title: Lynn": 1
+    }
+  },
+  {
+    "id": 17003013,
+    "名称": "Un moment de répit : Hilda",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "Inviter Hilda au Sanctuaire et lui parler une fois",
+    "版本": "1.4",
+    "奖励": {
+      "Indice de Mandat scellé": 1,
+      "Title: Hilda": 1
     }
   },
   {
@@ -5808,6 +5855,18 @@
     "奖励": {
       "Indice de Mandat scellé": 1,
       "Title: Daphne": 1
+    }
+  },
+  {
+    "id": 17003027,
+    "名称": "休憩一刻·芙罗拉",
+    "分类": "Joyeux moments",
+    "品质": 2,
+    "描述": "于休憩之所邀请芙罗拉入驻并对话一次",
+    "版本": "1.4",
+    "奖励": {
+      "Indice de Mandat scellé": 1,
+      "Title: 芙罗拉": 1
     }
   },
   {
@@ -6254,8 +6313,19 @@
     "名称": "Oiseaux errants — Haojing",
     "分类": "Découverte du monde",
     "品质": 2,
-    "描述": "Enregistrer 15 positions à Port-des-Brumes grâce à l’Oiseau onirique",
+    "描述": "Enregistrer 15 positions à Haojing grâce à l’Oiseau onirique",
     "版本": "1.3",
+    "奖励": {
+      "Indice de Mandat scellé": 2
+    }
+  },
+  {
+    "id": 52000801,
+    "名称": "飞鸟集·百花车站",
+    "分类": "Découverte du monde",
+    "品质": 2,
+    "描述": "呼唤梦中的灵鸟记录4个“百花车站”的地点",
+    "版本": "1.4",
     "奖励": {
       "Indice de Mandat scellé": 2
     }

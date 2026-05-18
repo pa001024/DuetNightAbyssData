@@ -559,10 +559,17 @@ function M:RefreshChangeFocusItemOnGamePad()
 end
 
 function M:Destruct()
+  self:StopAllAudios()
+  M.Super.Destruct(self)
   if self.Callback then
     self.Callback()
   end
-  M.Super.Destruct(self)
+end
+
+function M:StopAllAudios()
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+  AudioManager(self):StopSound(PlayerController, Const.ReviewSoundKey)
+  AudioManager(self):SetEventSoundParam(nil, Const.DialogueEffectSoundKey, {voice_effect_type = 0})
 end
 
 function M:Close()

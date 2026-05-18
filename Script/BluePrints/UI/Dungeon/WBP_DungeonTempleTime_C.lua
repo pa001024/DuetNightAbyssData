@@ -20,12 +20,17 @@ function M:InitTempleTimeUIOnShowDownTime()
   self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
 
-function M:InitTempleDelayTimeUI(Title, Time, RedCountdownTime)
+function M:InitTempleDelayTimeUI(Title, Time, RedCountdownTime, TitleParam1, TitleParam2)
   self.RemainingTime = Time
   self.RedCountdownTime = RedCountdownTime
   self.AlreadyRed = false
   local TimeStr = self:GetTimeStr(math.floor(self.RemainingTime))
-  self.Text_TempleTimeTitle:SetText(GText(Title))
+  if TitleParam1 and TitleParam2 and (-1 ~= TitleParam1 or -1 ~= TitleParam2) then
+    local Text = string.format(GText(Title), TitleParam1, TitleParam2)
+    self.Text_TempleTimeTitle:SetText(Text)
+  else
+    self.Text_TempleTimeTitle:SetText(GText(Title))
+  end
   self.Text_Time:SetText(TimeStr)
   self:AddTimer(1, self.UpdateRemainingTimeInTemple, true, 0, "TempleDelayTimer", false)
   if RedCountdownTime < Time then

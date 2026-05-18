@@ -5,6 +5,7 @@ local CommonUtils = require("Utils.CommonUtils")
 local msgpack = require("msgpack_core")
 local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils")
 local MiscUtils = require("Utils.MiscUtils")
+local DungeonObjectConst = require("BluePrints.DungeonObject.DungeonObjectConst")
 local BP_EMGameMode_C = Class({
   "BluePrints.Common.TimerMgr",
   "BluePrints.GameMode.Components.AIBattleMgr",
@@ -46,6 +47,10 @@ function BP_EMGameMode_C:InitGameModeInfo(DungeonId)
     self.bBlock = false
   end
   self.BattleAvatars = {}
+end
+
+function BP_EMGameMode_C:ShouldSkipDropByRule(DropId)
+  return self.LevelGameMode and self.LevelGameMode.DropRule and self.LevelGameMode.DropRule[DropId] == true
 end
 
 function BP_EMGameMode_C:SetGameModeBaseInfo(DungeonId)
@@ -160,6 +165,21 @@ function BP_EMGameMode_C:NewAuthorityGameMode_BeginPlay_Lua()
   self:AIBattleMgrReceiveBeginPlay()
   self:BindTalkSubsystem()
   self.GameModeIndex = GWorld:AddGameMode(self)
+end
+
+function BP_EMGameMode_C:TryCreateDungeonObject()
+  self.DungeonObject = GWorld:GetGameModeDungeonObject()
+  if self.DungeonObject then
+    local ActorClassPath = self.DungeonObject:GetActorClassPath()
+    if ActorClassPath then
+      local ActorClass = LoadClass(ActorClassPath)
+      self:CreateDungeonObject(ActorClass)
+    else
+      self:CreateDungeonObject()
+    end
+  else
+    DebugPrint("TryCreateDungeonObject: DungeonObject不存在")
+  end
 end
 
 function BP_EMGameMode_C:ReceiveEndPlay(EndPlayReason)
@@ -326,6 +346,16 @@ function BP_EMGameMode_C:RegionOnInit()
     end
     if not self.EMGameState:RegionNeedPreCreateUnit() then
       self:GetRegionDataMgrSubSystem():OnInitRecoverRegionData(false)
+    end
+    if self:GetWCSubSystem() then
+      self:GetWCSubSystem():UpdateCustomNPCForcedShow()
+    end
+    if self:GetNPCCreateSubSystem() then
+      self:GetNPCCreateSubSystem():SetCurrentLevelName()
+    end
+    local UnitBudgetMgr = USubsystemBlueprintLibrary.GetGameInstanceSubsystem(GWorld.GameInstance, UE4.UUnitBudgetAllocatorSubsystem)
+    if UnitBudgetMgr and UnitBudgetMgr:CheckIsInSpecialLevel() then
+      UnitBudgetMgr.bEnableUnitHiddenOptimization = false
     end
   end
 end
@@ -1113,7 +1143,7 @@ function BP_EMGameMode_C:GetHLODDistance(ScalabilityLevel)
   end
   local Distance = 5000
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     Distance = Const.HLODDistanceAndroid[ScalabilityLevel] or Distance
   else
     Distance = Const.HLODDistanceDefault[ScalabilityLevel] or Distance
@@ -1384,16 +1414,6 @@ function BP_EMGameMode_C:BpOnTimerEnd_SelectTicket()
   self.EMGameState:DealDungeonTicketResult()
 end
 
-function BP_EMGameMode_C:IsEndlessDungeon()
-  if self.IsDungeonTypeEndless == nil then
-    local DungeonInfo = DataMgr.Dungeon[self.DungeonId]
-    if DungeonInfo then
-      self.IsDungeonTypeEndless = DungeonInfo.DungeonWinMode == CommonConst.DungeonWinMode.Endless
-    end
-  end
-  return self.IsDungeonTypeEndless
-end
-
 function BP_EMGameMode_C:DungeonFinish_OnPlayerRealDead(AvatarEids)
   local Avatar = GWorld:GetAvatar()
   if Avatar and Avatar:IsInRougeLike() then
@@ -1533,11 +1553,52 @@ function BP_EMGameMode_C:TriggerPlayerFinish(IsWin, AvatarEids, PlayerEndReason)
     if GWorld.bDebugServer then
       return
     end
+    local IsInterrupt = self:CheckCustomPlayerFinishLogic(IsWin, AvatarEids, PlayerEndReason)
+    if IsInterrupt then
+      DebugPrint("TriggerPlayerFinish Interruptted", IsWin, AvatarEids, PlayerEndReason)
+      return
+    end
     local DSEntity = GWorld:GetDSEntity()
     if DSEntity then
       DSEntity:BattleFinish(IsWin, AvatarEids, PlayerEndReason)
     end
   end
+end
+
+function BP_EMGameMode_C:CheckCustomPlayerFinishLogic(IsWin, AvatarEids, PlayerEndReason)
+  if self.EMGameState.GameModeType ~= "IronSurvival" then
+    return false
+  end
+  local HasTeamLeader = self:HasTeamLeaderByAvatarEids(AvatarEids)
+  if HasTeamLeader then
+    if "Vote" == PlayerEndReason then
+      self:NotifyServerGameEnd(true, "Vote")
+    else
+      self:NotifyServerGameEnd(false, "TeamLeaderLeave")
+    end
+  else
+    return false
+  end
+end
+
+function BP_EMGameMode_C:HasTeamLeaderByAvatarEids(AvatarEids)
+  if type(AvatarEids) == "table" then
+    for _, AvatarEid in pairs(AvatarEids) do
+      if self:IsTeamLeaderByAvatarEid(AvatarEid) then
+        return true
+      end
+    end
+  else
+    return self:IsTeamLeaderByAvatarEid(AvatarEids)
+  end
+end
+
+function BP_EMGameMode_C:IsTeamLeaderByAvatarEid(AvatarEid)
+  local PlayerState = UE4.URuntimeCommonFunctionLibrary.GetPlayerStateByAvatarEid(GWorld.GameInstance, AvatarEid)
+  if not PlayerState then
+    return false
+  end
+  return PlayerState.IsTeamLeader or false
 end
 
 function BP_EMGameMode_C:SendTimeDistCheatalert(PlayerChar, DungeonSpendTime, DungeonMoveDistance, MonitorType, SubId, DisThresh, TimeThresh)
@@ -1642,7 +1703,10 @@ function BP_EMGameMode_C:NotifyClientGameEnd(IsWin, AvatarEids, PlayerEndReason)
         DebugPrint("StartAndEndPoint AllSuccess UpdatePlayerCharacterEndPointInfo")
       end
       local MyPawn = Controller:GetMyPawn()
-      if IsStandAlone(self) then
+      if not MyPawn then
+        DebugPrint("MyPawn is Not Exist")
+        GWorld:DSBLog("Info", "NotifyClientGameEnd MyPawn Not Exist!!!", "GameMode")
+      elseif IsStandAlone(self) then
         DebugPrint("StartAndEndPoint AllSuccess NotifyClientGameEnd_Lua")
         Controller:NotifyClientGameEnd_Lua(IsWin, self:GetScenePlayersInfo(MyPawn), PlayerEndReason)
       else
@@ -1666,6 +1730,11 @@ function BP_EMGameMode_C:NotifyClientGameEnd(IsWin, AvatarEids, PlayerEndReason)
       end
       DebugPrint("StartAndEndPoint PartSuccess NotifyClientGameEnd")
       local MyPawn = Controller:GetMyPawn()
+      if not MyPawn then
+        DebugPrint("MyPawn is Not Exist")
+        GWorld:DSBLog("Info", "NotifyClientGameEnd MyPawn Not Exist!!! AvatarEid: " .. tostring(AvatarEid), "GameMode")
+        return
+      end
       self:NotifyClientFightAttributeData(MyPawn)
       Controller:NotifyClientGameEnd(IsWin, self:GetScenePlayersInfo(MyPawn), PlayerEndReason)
     end
@@ -1862,6 +1931,9 @@ function BP_EMGameMode_C:ChangeFallTriggersActive(FallTriggerIds, Active)
     for j, FallTrigger in pairs(self.EMGameState.FallTriggersArray) do
       if FallTrigger.FallTriggerId == FallTriggerId then
         FallTrigger.Active = Active
+        if Active then
+          FallTrigger:CheckOverlappingPlayer()
+        end
       end
     end
   end
@@ -2163,6 +2235,11 @@ end
 function BP_EMGameMode_C:UpdatePlayerCharacterEndPointInfo(PlayerControllerIndex, PlayerController)
   PlayerController = PlayerController or UE4.UGameplayStatics.GetPlayerController(PlayerControllerIndex)
   local PlayerCharacter = PlayerController:GetMyPawn()
+  if not PlayerCharacter then
+    DebugPrint("UpdatePlayerCharacterEndPointInfo PlayerCharacter is Not Exist !!!")
+    GWorld:DSBLog("Info", "UpdatePlayerCharacterEndPointInfo PlayerCharacter is Not Exist !!!", "GameMode")
+    return
+  end
   local EndPointActor = self.EMGameState.EndPointActor
   if not IsValid(EndPointActor) then
     DebugPrint("StartAndEndPoint No End EndPoint")
@@ -2312,8 +2389,8 @@ function BP_EMGameMode_C:GetMonsterCustomLoc(Monster)
   else
     local CheckInfo = FPointCheckInfo()
     CheckInfo:SetCheckInfo(1000, 5000, true, true, true)
-    local ResLoc = self.FixedMonsterSpawn:GetSpawnPointLocations(PlayerTarget, CheckInfo)
-    if 0 == #ResLoc then
+    local ResLoc = self.FixedMonsterSpawn:GetDefaultSpawnPointLocations(PlayerTarget, CheckInfo)
+    if 0 == ResLoc:Num() then
       return FVector(0, 0, 0)
     end
     return ResLoc[1]
@@ -2434,6 +2511,35 @@ function BP_EMGameMode_C:GetPetCreatorNearestToFirstPlayer(PetCreatorInfos)
     end
   end
   return NearestCreator
+end
+
+function BP_EMGameMode_C:OnDungeonRandomEventUINode(EventName, EventDescribe, EventSuccess, EventFail)
+  self.EMGameState:SetDungeonRandomEventName(EventName)
+  self.EMGameState:SetDungeonRandomEventDescribe(EventDescribe)
+  self.EMGameState:SetDungeonRandomEventSuccess(EventSuccess)
+  self.EMGameState:SetDungeonRandomEventFail(EventFail)
+  self.LevelGameMode:AddDungeonEvent("OnDungeonRandomEventUINode")
+end
+
+function BP_EMGameMode_C:ShowDungeonRandomEventProgress(EventName, EventDescribe, EventSuccess, EventFail)
+  self.EMGameState:SetDungeonRandomEventName(EventName)
+  self.EMGameState:SetDungeonRandomEventDescribe(EventDescribe)
+  self.EMGameState:SetDungeonRandomEventSuccess(EventSuccess)
+  self.EMGameState:SetDungeonRandomEventFail(EventFail)
+  self.LevelGameMode:AddDungeonEvent("ShowDungeonRandomEventProgress")
+end
+
+function BP_EMGameMode_C:HideDungeonRandomEventProgress(Success)
+  self.EMGameState:SetDungeonEventSuccess(Success)
+  self.EMGameState:SetDungeonEventFail(not Success)
+  self.LevelGameMode:RemoveDungeonEvent("OnDungeonRandomEventUINode")
+  self.LevelGameMode:RemoveDungeonEvent("ShowDungeonRandomEventProgress")
+end
+
+function BP_EMGameMode_C:UpdateDungeonRandomEventProgress(TotalVal, CurVal)
+  if IsStandAlone(self) then
+    self.EMGameState:UpdateDungeonRandomEventProgress(TotalVal, CurVal)
+  end
 end
 
 function BP_EMGameMode_C:ShowPetDefenseDynamicEvent(EventName, EventDescribe, EventSuccess, EventFail)
@@ -2923,6 +3029,15 @@ end
 
 function BP_EMGameMode_C:GetNextSynthesis2Loc(Hostage)
   return self:TriggerDungeonComponentFun("GetNextHostageLoc")
+end
+
+function BP_EMGameMode_C:ShowBattlePerformanceUI(FinishEventName)
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local UIManager = GameInstance:GetGameUIManager()
+  if nil == UIManager then
+    return
+  end
+  UIManager:LoadUINew("BattlePerformance", FinishEventName)
 end
 
 AssembleComponents(BP_EMGameMode_C)

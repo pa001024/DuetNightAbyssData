@@ -211,11 +211,8 @@ function EMCache:_RealSaveCache(Cache, bUseUUID)
     if #FileContent > MaxFileSize then
       GWorld.logger.error(string.format("缓存内容超过2M了，太大的缓存怀疑是有写入泄漏，查一下到底哪里有写入泄漏\n有问题的缓存文件: %s", ExtraPath))
     end
-    local file = io.open(ExtraPath, "w")
-    if file then
-      file:write(FileContent)
-      file:close()
-    else
+    local ok = UE4.URuntimeCommonFunctionLibrary.SaveFile(ExtraPath, FileContent)
+    if not ok then
       DebugPrint(ErrorTag, "本地缓存名文保存失败，放弃保存明文", ExtraPath)
     end
   end

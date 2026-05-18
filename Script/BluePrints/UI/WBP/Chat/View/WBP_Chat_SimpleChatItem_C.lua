@@ -5,6 +5,7 @@ local M = Class({
   "BluePrints.Common.TimerMgr",
   "BluePrints.UI.BP_EMUserWidget_C"
 })
+local SimpleChatTextEdgeReserve = 2
 
 function M:OnListItemObjectSet(Content)
   if not GWorld.NetworkMgr:CheckIsConnected(true) then
@@ -22,6 +23,33 @@ function M:BP_OnEntryReleased()
   self.Content.UI = nil
 end
 
+function M:GetChatBubbleTargetWidth()
+  local RootWidth = 0
+  if self.SizeBox_Root then
+    RootWidth = self.SizeBox_Root.WidthOverride or 0
+    if RootWidth <= 0 and self.SizeBox_Root.GetDesiredSize then
+      RootWidth = self.SizeBox_Root:GetDesiredSize().X or 0
+    end
+  end
+  local DialogWidth = RootWidth
+  if self.SizeBox_Dialog then
+    local DialogSlot = UWidgetLayoutLibrary.SlotAsOverlaySlot(self.SizeBox_Dialog)
+    if DialogSlot then
+      local Padding = DialogSlot.Padding
+      DialogWidth = DialogWidth - Padding.Left - Padding.Right
+    end
+  end
+  local SingleWidth = RootWidth
+  if self.Text_DialogSingle then
+    local SingleSlot = UWidgetLayoutLibrary.SlotAsOverlaySlot(self.Text_DialogSingle)
+    if SingleSlot then
+      local Padding = SingleSlot.Padding
+      SingleWidth = SingleWidth - Padding.Left - Padding.Right
+    end
+  end
+  return math.max(math.min(DialogWidth, SingleWidth) - SimpleChatTextEdgeReserve, 0)
+end
+
 function M:Open(MsgWrap, bSound)
   local ChannelName = ChatController:ParseChannelHeader(MsgWrap)
   local Spacker, RawSpacker = ChatController:ParseSpeakerHeader(MsgWrap)
@@ -34,15 +62,29 @@ function M:Open(MsgWrap, bSound)
   if DyePlanContent then
     Content = DyePlanContent
   end
+  local AppearancePlanContent = ChatController:ParseAppearancePlanText(MsgWrap)
+  if AppearancePlanContent then
+    Content = AppearancePlanContent
+  end
+  local AsyncCombatRoomInfoContent = ChatController:ParseAsyncCombatRoomInfoText(MsgWrap)
+  if AsyncCombatRoomInfoContent then
+    Content = AsyncCombatRoomInfoContent
+  end
+  local GuildRecruitContent = ChatController:ParseGuildRecruitText(MsgWrap)
+  if nil ~= GuildRecruitContent then
+    Content = GuildRecruitContent
+  end
   local RawContent = ChannelName .. RawSpacker .. Content
   local RawContentTable = StringUtils.Utf8ToTable(RawContent)
   local HalfLength = #RawContentTable
   local LeftHalf, RightHalf = nil, RawContentTable
   self.SizeBox_Dialog:SetVisibility(UIConst.VisibilityOp.Visible)
   self.Text_DialogSingle:SetVisibility(UIConst.VisibilityOp.Visible)
+  if self.Text_DialogSingle and self.Text_DialogSingle.SetWrapTextAt then
+    self.Text_DialogSingle:SetWrapTextAt(0)
+  end
   self:SetRenderOpacity(0)
-  local Padding = UWidgetLayoutLibrary.SlotAsOverlaySlot(self.SizeBox_Dialog).Padding
-  local TargetLineWidth = self.SizeBox_Root.WidthOverride - Padding.Left - Padding.Right
+  local TargetLineWidth = self:GetChatBubbleTargetWidth()
   self.Text_DialogSingle:SetText(RawContent)
   local _, Key = self:AddTimer(0.01, function()
     self.Text_DialogSingle:ForceLayoutPrepass()
@@ -67,6 +109,9 @@ function M:Open(MsgWrap, bSound)
         self.Text_Dialog.DefaultTextStyleOverride.OverflowPolicy = ETextOverflowPolicy.Ellipsis
         self.Text_Dialog:SetDefaultTextStyle(self.Text_Dialog.DefaultTextStyleOverride)
       end
+      if self.Text_Dialog and self.Text_Dialog.SetWrapTextAt then
+        self.Text_Dialog:SetWrapTextAt(TargetLineWidth)
+      end
       self.Text_Dialog:SetText(ChannelName .. Spacker .. Content)
       self:RemoveTicker()
       return
@@ -78,6 +123,9 @@ function M:Open(MsgWrap, bSound)
     elseif NowLineWidth < TargetLineWidth and HalfLength > 0 then
       if not RightHalf or not LeftHalf then
         self.SizeBox_Dialog:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        if self.Text_DialogSingle and self.Text_DialogSingle.SetWrapTextAt then
+          self.Text_DialogSingle:SetWrapTextAt(0)
+        end
         self.Text_DialogSingle:SetText(ChannelName .. Spacker .. Content)
         self:RemoveTicker()
         return
@@ -90,6 +138,9 @@ function M:Open(MsgWrap, bSound)
       end
     end
     RawContent = table.concat(RawContentTable)
+    if self.Text_Dialog and self.Text_Dialog.SetWrapTextAt then
+      self.Text_Dialog:SetWrapTextAt(TargetLineWidth)
+    end
     self.Text_DialogSingle:SetText(RawContent)
   end, true, 0, nil, true)
   self._TickForTextSize = Key

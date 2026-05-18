@@ -4,6 +4,7 @@ local M = Class("BluePrints.Common.TimerMgr")
 function M:ReceiveBeginPlay()
   self.Overridden.ReceiveBeginPlay(self)
   self.PlayEndSequence = {}
+  self.NpcActors = {}
   local GameMode = UGameplayStatics.GetGameMode(self)
   if GameMode then
     GameMode.LevelSequenceStateRecorders:Add(self.SubRegionId, self)
@@ -14,6 +15,9 @@ end
 function M:Active()
   self:ClearBinding()
   local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   for UniqueId, Recorder in pairs(Avatar.LevelSequenceStateRecorder) do
     if Recorder.RegionId == self.SubRegionId then
       if Recorder.PlayState == ELevelSequenceRuntimeState.ERunning then
@@ -29,6 +33,7 @@ function M:Active()
 end
 
 function M:PlaySequence_Lua(Id, State, LevelSequenceActor, PlayToEnd, ForceFromStart)
+  self:SetupSequenceNpc(LevelSequenceActor, Id)
   self.PlayEndSequence[Id] = nil
   local LableFrom, LableTo
   if State.IsRevrse then
@@ -108,6 +113,9 @@ end
 
 function M:ReportLevelSequenceState(RecroderId, StateId, State)
   local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
   for UniqueId, Recorder in pairs(Avatar.LevelSequenceStateRecorder) do
     if Recorder.RegionId == self.SubRegionId and Recorder.RecorderId == RecroderId then
       if Recorder.SequenceState == StateId and Recorder.PlayState == State then
@@ -155,6 +163,50 @@ function M:ClearBinding()
     end
   end
   self.BindingCreator = {}
+end
+
+function M:SetupSequenceNpc(LevelSequenceActor, SequenceId)
+  if not IsValid(LevelSequenceActor) then
+    return
+  end
+  local Sequence = LevelSequenceActor:GetSequence()
+  if not IsValid(Sequence) then
+    return
+  end
+  local Tags = UE4.TArray(UE4.FName)
+  UTalkSequenceFunctionLibrary.GetLevelSequenceTags(Sequence, Tags)
+  local GameState = UE4.URuntimeCommonFunctionLibrary.GetCurrentGameState(self)
+  if not IsValid(GameState) then
+    return
+  end
+  for _, Tag in pairs(Tags) do
+    local NpdId = tonumber(Tag)
+    local NpcData = DataMgr.Npc[NpdId]
+    if NpcData and (not self.NpcActors[SequenceId] or not self.NpcActors[SequenceId][NpdId]) then
+      local Context = UE4.AEventMgr.CreateUnitContext()
+      Context.UnitType = "Npc"
+      Context.UnitId = NpdId
+      Context.IntParams:Add("Level", GameState.GameModeLevel)
+      Context.BoolParams:Add("InStory", true)
+      Context.IntParams:Add("RegionDataType", 0)
+      Context.OnUnitInitCreateReadyDynamic:Add(self, function(_, NewNpc)
+        self.NpcActors[SequenceId] = self.NpcActors[SequenceId] or {}
+        self.NpcActors[SequenceId][NpdId] = NewNpc
+        NewNpc:PreEnterStory(nil, true, true)
+        NewNpc:EnableSkeletalMeshActorRules(true)
+        LevelSequenceActor:AddBindingByTag(Tag, NewNpc, false)
+        LevelSequenceActor.SequencePlayer.OnFinished:Add(LevelSequenceActor, function()
+          if not IsValid(NewNpc) then
+            return
+          end
+          LevelSequenceActor:RemoveBindingByTag(Tag, NewNpc)
+          NewNpc:EnableSkeletalMeshActorRules(false)
+          NewNpc:PreExitStory(nil, false, false)
+        end)
+      end)
+      GameState.EventMgr:CreateUnitNew(Context, true)
+    end
+  end
 end
 
 return M

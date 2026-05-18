@@ -189,7 +189,6 @@ function Component:AuthorityPreInitInfo(Info)
   self:ClearSkill()
   self:ClearAttrs()
   self:ServerResourceDisableBattleMount(true)
-  UTalkFunctionLibrary.LeaveHeadUIState(self, EHeadWidgetLocationState.SpecialAction)
 end
 
 function Component:ClientPreInitInfo(Info)
@@ -582,17 +581,7 @@ function Component:ClientInitInfo(Info)
 end
 
 function Component:FormatWeaponInfo(TempWeapon, DumpWeaponInfo)
-  TempWeapon.SlotData = {}
-  TempWeapon.ModData = {}
-  TempWeapon.ModPassives = nil
-  TempWeapon.SkillInfos = nil
-  TempWeapon.ReplaceAttrs = nil
-  TempWeapon.EnhanceLevel = DumpWeaponInfo.EnhanceLevel or 0
-  TempWeapon.WeaponId = DumpWeaponInfo.WeaponId or 0
-  TempWeapon.GradeLevel = DumpWeaponInfo.GradeLevel or 0
-  TempWeapon.AppearanceInfo = DumpWeaponInfo
-  TempWeapon.AppearanceInfo.EnhanceLevel = nil
-  TempWeapon.AppearanceInfo.GradeLevel = nil
+  Utils.FormatWeaponInfo(TempWeapon, DumpWeaponInfo)
 end
 
 function Component:ClientPlayEnterMontage()
@@ -765,7 +754,7 @@ function Component:OnCharacterReady(Info)
     self:SetPlayerInfo(Info)
   end
   self.InfoForInit.ChangeRole = true
-  if self.IsMainPlayer and self:IsMainPlayer() then
+  if IsDedicatedServer(self) or self.IsMainPlayer and self:IsMainPlayer() then
     self:CheckAndApplyDungeonForbidSkills()
   end
 end
@@ -775,36 +764,29 @@ function Component:CheckAndApplyDungeonForbidSkills()
   if not self.ForbidAllSkillsByBuff then
     return
   end
-  
-  local function UnforbidAllSkillsByBuff()
-    if self.IsDungeonForbidSkillsByBuff and self:IsDungeonForbidSkillsByBuff() then
-      self:ForbidAllSkillsByBuff(false)
-    end
-  end
-  
   local DungeonId = GWorld.GameInstance:GetCurrentDungeonId()
   if GWorld.GameInstance:IsNullDungeonId(DungeonId) then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills NullDungeonId")
-    UnforbidAllSkillsByBuff()
+    self:ForbidAllSkillsByBuff(false)
     return
   end
   local DungeonData = DataMgr.Dungeon[DungeonId]
   if not DungeonData then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not DungeonData")
-    UnforbidAllSkillsByBuff()
+    self:ForbidAllSkillsByBuff(false)
     return
   end
   local FbdRule = DungeonData.FbdRule
   if not FbdRule then
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not FbdRule")
-    UnforbidAllSkillsByBuff()
+    self:ForbidAllSkillsByBuff(false)
     return
   end
   if FbdRule.NoSkill and 0 ~= FbdRule.NoSkill and self.ForbidAllSkillsByBuff then
     self:ForbidAllSkillsByBuff(true)
   else
     DebugPrint("lgc@ CheckAndApplyDungeonForbidSkills not FbdRule.NoSkill")
-    UnforbidAllSkillsByBuff()
+    self:ForbidAllSkillsByBuff(false)
   end
 end
 

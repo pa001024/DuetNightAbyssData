@@ -8,10 +8,17 @@ local FilePath = UKismetSystemLibrary.GetProjectSavedDirectory() .. "HighResScre
 local AlbumName = GText("ScreenShot_FolderName")
 local DateTimeStr = ULowEntryExtendedStandardLibrary.DateTime_ToString(UKismetMathLibrary.Now("%Y.%m.%d-%H.%M.%S"))
 local FileName = "Screenshot-" .. DateTimeStr .. ".png"
+local DisableShareImgChannelSet = {
+  [255] = true,
+  [11] = true,
+  [2] = true,
+  [23] = true,
+  [270] = true
+}
 
 function M:Construct()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     FilePath = UE4.URuntimeCommonFunctionLibrary.ConvertRelativePathToFull(UE4.UBlueprintPathsLibrary.ProjectSavedDir() .. "HighResScreenshots/")
   elseif "IOS" == PlatformName then
     FilePath = UE4.URuntimeCommonFunctionLibrary.GetProjectSavedPath() .. "HighResScreenshots/"
@@ -158,6 +165,13 @@ function M:SharedInit()
     return
   end
   if UUCloudGameInstanceSubsystem.IsCloudGame() then
+    self.VB_SNS:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.VB_SNS_Other:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    self.SNS_Link:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  local ChannelId = HeroUSDKSubsystem(self):GetChannelId()
+  if DisableShareImgChannelSet[ChannelId] then
     self.VB_SNS:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.VB_SNS_Other:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.SNS_Link:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -314,10 +328,17 @@ function M:TrySaveScreenshot()
   if not UE4.UBlueprintFileUtilsBPLibrary.DirectoryExists(FilePath) then
     UE4.UBlueprintFileUtilsBPLibrary.MakeDirectory(FilePath)
   end
-  local NumberOfFreeBytes = UE4.URuntimeCommonFunctionLibrary.GetDiskTotalAndFreeSpace(FilePath)
-  NumberOfFreeBytes = NumberOfFreeBytes * 8.0 / 1024.0 / 1024.0
-  if NumberOfFreeBytes < DataMgr.GlobalConstant.CameraMinMemory.ConstantValue and not UUCloudGameInstanceSubsystem.IsCloudGame() then
+  local bMemoryEnough = true
+  local Platform = UE4.UUIFunctionLibrary.GetDevicePlatformName()
+  if "OpenHarmony" ~= Platform then
+    local NumberOfFreeBytes = UE4.URuntimeCommonFunctionLibrary.GetDiskTotalAndFreeSpace(FilePath)
+    NumberOfFreeBytes = NumberOfFreeBytes * 8.0 / 1024.0 / 1024.0
+    bMemoryEnough = NumberOfFreeBytes >= DataMgr.GlobalConstant.CameraMinMemory.ConstantValue
+    DebugPrint("@gulinan ScreenShot memory: " .. NumberOfFreeBytes .. "   FilePath: " .. FilePath)
+  end
+  if not bMemoryEnough and not UUCloudGameInstanceSubsystem.IsCloudGame() then
     UIManager(self):ShowUITip(UIConst.Tip_CommonWarning, string.format(GText("UI_CameraSystem_NoMemory")), 1)
+    DebugPrint("@gulinan ScreenShot memory not enough")
     return
   end
   self:SaveScreenshotImp()
@@ -410,7 +431,7 @@ function M:SaveScreenshotImp()
     self:SaveScreenshotToLocal()
   end
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "Android" == PlatformName or "IOS" == PlatformName then
+  if "Android" == PlatformName or "IOS" == PlatformName or "OpenHarmony" == PlatformName then
     self.HeroUSDKSubsystem:RequestSaveToAlbum(FilePath .. FileName, AlbumName)
   end
   self.bSaved = true

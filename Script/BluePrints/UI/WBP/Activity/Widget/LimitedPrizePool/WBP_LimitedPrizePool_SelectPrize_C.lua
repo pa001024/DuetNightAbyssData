@@ -130,14 +130,6 @@ function M:Close()
   end
 end
 
-function M:BindConfirmSelection(OnConfirmSelection)
-  self.OnConfirmSelection = OnConfirmSelection
-end
-
-function M:UnbindConfirmSelection()
-  self.OnConfirmSelection = nil
-end
-
 function M:HandlePrizeItemSelectedChanged(PrizeItem)
   if not IsValid(PrizeItem) then
     return
@@ -178,9 +170,9 @@ function M:HandlePrizeItemViewDetails(PrizeItem)
     self:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
     PrizeItem:SetFocus()
   end)
-  UIManager(self):LoadUINew(SkinPreviewUIName, {
-    TypeId = Prize.Id,
+  PageJumpUtils:JumpToSkinPreview({
     ItemType = Prize.Type,
+    TypeId = Prize.Id,
     SinglePreview = true,
     HidePurchase = true
   })

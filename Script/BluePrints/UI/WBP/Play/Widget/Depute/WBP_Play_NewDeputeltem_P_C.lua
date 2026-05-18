@@ -1,6 +1,7 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_UIState_C"
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
 })
 local TypeSort = {
   Char = 1,
@@ -12,7 +13,6 @@ local TypeSort = {
 }
 
 function M:Construct()
-  M.Super.Construct(self)
   self:AddInputMethodChangedListen()
   self.IsPC = CommonUtils.GetDeviceTypeByPlatformName(self) == "PC"
   self.Panel_DeputeLevelItem:SetRenderOpacity(0)
@@ -35,7 +35,9 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
     return
   end
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
-  self.Parent.DeputeTab:UpdateUIStyleInPlatform(not IsUseKeyAndMouse)
+  if self.Parent and self.Parent.DeputeTab then
+    self.Parent.DeputeTab:UpdateUIStyleInPlatform(not IsUseKeyAndMouse)
+  end
   local StyleOfPlay = UIManager(self):GetUIObj("StyleOfPlay")
   if StyleOfPlay and StyleOfPlay.ComTab and StyleOfPlay.ComTab.Group_Chat and StyleOfPlay.ComTab.Group_Chat:GetChildAt(0) then
     StyleOfPlay.ComTab.Group_Chat:GetChildAt(0).bOpen = true
@@ -51,11 +53,19 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
       self.bIsHovered = false
     end
   end
-  self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end
 
 function M:OnListItemObjectSet(Content)
   self.Content = Content
+  if Content.IsEmpty then
+    if IsValid(self.WS_Item) then
+      self.WS_Item:SetActiveWidgetIndex(1)
+    end
+    return
+  end
+  if IsValid(self.WS_Item) then
+    self.WS_Item:SetActiveWidgetIndex(0)
+  end
   self.ChapterId = Content.ChapterId
   self.Parent = Content.Parent
   self:InitItemContent()
@@ -79,11 +89,15 @@ function M:InitItemContent()
   if PageJumpUtils:CheckDungeonCondition(ChapterData.Condition) then
     self.IsUnLocked = false
     self:PlayAnimation(self.Normal)
-    self.Group_Lock:SetVisibility(ESlateVisibility.Collapsed)
+    if IsValid(self.Group_Lock) then
+      self.Group_Lock:SetVisibility(ESlateVisibility.Collapsed)
+    end
   else
     self.IsUnLocked = true
     self:PlayAnimation(self.Lock)
-    self.Group_Lock:SetVisibility(ESlateVisibility.Visible)
+    if IsValid(self.Group_Lock) then
+      self.Group_Lock:SetVisibility(ESlateVisibility.Visible)
+    end
   end
   self:RefreshRewardInfoList(ChapterData.RewardViewId)
 end
@@ -189,7 +203,7 @@ function M:OnClicked()
   end
   local ChapterData = DataMgr.SelectDungeon[self.ChapterId]
   if ChapterData and PageJumpUtils:CheckDungeonCondition(ChapterData.Condition, true) then
-    if not self.Parent.Root:IsAnimationPlaying(self.Parent.Root.Out) and not self:IsAnimationPlaying(self.Click) then
+    if self.Parent and self.Parent.Root and not self.Parent.Root:IsAnimationPlaying(self.Parent.Root.Out) and not self:IsAnimationPlaying(self.Click) then
       local Item = UIManager(self):GetUIObj("StyleOfPlay")
       Item.IsOpenSelectLevel = true
       self.Clicked = true
@@ -363,6 +377,18 @@ function M:OnGamePadDown(InKeyName)
         break
       end
     end
+  elseif "Gamepad_FaceButton_Top" == InKeyName then
+    local hasRewardFocus = false
+    for i = 1, 3 do
+      if self["Item" .. i]:HasFocusedDescendants() or self["Item" .. i]:HasAnyUserFocus() then
+        hasRewardFocus = true
+        break
+      end
+    end
+    if not hasRewardFocus and self.Parent and self.Parent.RegularUI then
+      self.Parent.RegularUI.Iron_SwitchTab:OnClicked()
+      IsEventHandled = true
+    end
   else
     for i = 1, 3 do
       if self["Item" .. i]:HasFocusedDescendants() or self["Item" .. i]:HasAnyUserFocus() then
@@ -383,6 +409,7 @@ function M:UpdatKeyDisplay(FocusTypeName)
     return
   end
   self.FocusTypeName = FocusTypeName
+  local SwitchTab = self.Parent and self.Parent.RegularUI and self.Parent.RegularUI.Iron_SwitchTab
   if "RewardWidget" == FocusTypeName then
     local BottomKeyInfo = {
       {
@@ -401,7 +428,7 @@ function M:UpdatKeyDisplay(FocusTypeName)
           {
             Type = "Text",
             Text = "Esc",
-            ClickCallback = self.Parent.CloseSelf,
+            ClickCallback = self.Parent and self.Parent.CloseSelf,
             Owner = self
           }
         },
@@ -415,12 +442,17 @@ function M:UpdatKeyDisplay(FocusTypeName)
         Desc = GText("UI_BACK")
       }
     }
+    if SwitchTab then
+      SwitchTab.Key_01:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
     self.Com_Show:SetVisibility(ESlateVisibility.Collapsed)
     StyleOfPlay.ComTab.Left_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     StyleOfPlay.ComTab.Right_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.KeyImg_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     StyleOfPlay.ComTab.WBP_Com_Tab_ResourceBar.Tip_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.Parent.DeputeTab:UpdateUIStyleInPlatform(false)
+    if self.Parent and self.Parent.DeputeTab then
+      self.Parent.DeputeTab:UpdateUIStyleInPlatform(false)
+    end
     if StyleOfPlay.ComTab and StyleOfPlay.ComTab.Group_Chat and StyleOfPlay.ComTab.Group_Chat:GetChildAt(0) then
       StyleOfPlay.ComTab.Group_Chat:GetChildAt(0).bOpen = false
       StyleOfPlay.ComTab.Group_Chat:GetChildAt(0):HideWSKey(false)
@@ -445,7 +477,7 @@ function M:UpdatKeyDisplay(FocusTypeName)
           {
             Type = "Text",
             Text = "Esc",
-            ClickCallback = self.Parent.CloseSelf,
+            ClickCallback = self.Parent and self.Parent.CloseSelf,
             Owner = self
           }
         },
@@ -474,6 +506,14 @@ function M:UpdatKeyDisplay(FocusTypeName)
       StyleOfPlay.ComTab.Group_Chat:GetChildAt(0):HideWSKey(true)
     end
     StyleOfPlay.TeamHeadUI.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Visible)
+    if SwitchTab then
+      SwitchTab.Key_01:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+      SwitchTab.Key_01:CreateCommonKey({
+        KeyInfoList = {
+          {Type = "Img", ImgShortPath = "Y"}
+        }
+      })
+    end
     if self.Parent and self.Parent.DeputeTab then
       local bIsOther = "SelfWidget" ~= FocusTypeName
       self.Parent.DeputeTab:UpdateUIStyleInPlatform(true, bIsOther)
@@ -489,9 +529,14 @@ function M:UpdatKeyDisplay(FocusTypeName)
       StyleOfPlay.ComTab.Group_Chat:GetChildAt(0).bOpen = false
       StyleOfPlay.ComTab.Group_Chat:GetChildAt(0):HideWSKey(false)
     end
+    if SwitchTab then
+      SwitchTab.Key_01:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
     StyleOfPlay.TeamHeadUI.Key_GamePad:SetVisibility(UE4.ESlateVisibility.Collapsed)
     self.Com_Show:SetVisibility(ESlateVisibility.Collapsed)
-    self.Parent.DeputeTab:UpdateUIStyleInPlatform(false)
+    if self.Parent and self.Parent.DeputeTab then
+      self.Parent.DeputeTab:UpdateUIStyleInPlatform(false)
+    end
     StyleOfPlay:UpdateOtherPageTab(BottomKeyInfo)
   end
 end

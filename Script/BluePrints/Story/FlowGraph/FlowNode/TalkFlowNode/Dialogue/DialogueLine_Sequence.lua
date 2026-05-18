@@ -77,10 +77,10 @@ function DialogueLine_Sequence:Enter(PrevDialogueId)
     DebugPrint("WXT__DialogueLine_Sequence:Enter", "SequencePlayer invalid", self.DialogueId)
     return false
   end
+  DebugPrint("WXT__DialogueLine_Sequence:Enter", self.DialogueId, "Prev", PrevDialogueId)
+  local DialogueFlowGraphComponent = self.Node:TryGetFlowGraphComponent()
+  DialogueFlowGraphComponent:ForceCompleteDialogue(PrevDialogueId)
   if PrevDialogueId then
-    DebugPrint("WXT__DialogueLine_Sequence:Enter", self.DialogueId, "Prev", PrevDialogueId)
-    local DialogueFlowGraphComponent = self.Node:TryGetFlowGraphComponent()
-    DialogueFlowGraphComponent:ForceCompleteDialogue(PrevDialogueId)
     Node.SequencePlayer:TryStopDialogueId(PrevDialogueId)
   end
   return Node.SequencePlayer:TryPlayToDialogueId(self.DialogueId) == true
@@ -90,6 +90,7 @@ function DialogueLine_Sequence:Play(Section)
   local Node = self.Node
   local DialogueFlowGraphComponent = Node:TryGetFlowGraphComponent()
   local DialogueRecordComponent = Node:TryGetRecordComponent()
+  local DialogueWikiComponent = Node:TryGetWikiComponent()
   local FlowDialogue = FFlowDialogue.New(self.DialogueData, self.DialogueSetting, Section)
   FlowDialogue:BindOnForceCompleteDialogue(function(Id)
     self:OnDialogueForceToEnd(Id)
@@ -103,6 +104,9 @@ function DialogueLine_Sequence:Play(Section)
   FlowDialogue:SetForbiddenDSL(true)
   FlowDialogue:SetWaitAsyncTag(true)
   FlowDialogue:SetOverrideDuration()
+  if DialogueWikiComponent then
+    DialogueWikiComponent:AddListenWikiIdByDialogueId(self.DialogueId)
+  end
   DialogueFlowGraphComponent:PlayDialogue(FlowDialogue)
   DialogueRecordComponent:OnDialogueRecord(self.DialogueId, DataMgr.Dialogue[self.DialogueId])
   Node:TriggerNormalOutput(self.DialogueId)

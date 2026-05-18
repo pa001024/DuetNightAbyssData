@@ -2,6 +2,8 @@ require("UnLua")
 local PersonInfoCommon = require("BluePrints.UI.WBP.PersonInfo.PersonInfoCommon")
 local PersonInfoController = require("BluePrints.UI.WBP.PersonInfo.PersonInfoController")
 local ActorController = require("BluePrints.UI.WBP.Armory.ActorController.Armory_ActorController")
+local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
+local GuildLogoInfo = require("BluePrints.UI.WBP.Guild.Common.GuildLogoInfo")
 local PersonInfoModel = PersonInfoController:GetModel()
 local M = Class({})
 M._components = {
@@ -46,6 +48,7 @@ function M:InitBaseView(Personid)
   self.Text_Empty:SetText(GText("UI_Menu_Sign_None"))
   self.Com_ItemHead:SetHeadIconById(HeadIconId, false)
   self.Com_ItemHead:SetHeadFrame(HeadFrameId)
+  self:InitGuildInfo(PersonalBaseInfo)
   if "" ~= PlayerSignature then
     self.Switcher_Input:SetActiveWidgetIndex(1)
     self.Text_Input:SetText(PlayerSignature)
@@ -167,10 +170,16 @@ function M:InitDisplayBoxView(IsChanegeModel)
         self[ItemName .. i]:PlayAnimation(self[ItemName .. i].Normal)
         self[ItemName .. i].Button_Area:SetVisibility(UIConst.VisibilityOp.Visible)
         self[ItemName .. i].Com_Item:SetAdd(false)
+        self[ItemName .. i].Button_Area:SetIsEnabled(true)
       else
         self[ItemName .. i].Button_Area:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
         self[ItemName .. i]:PlayAnimation(self[ItemName .. i].Forbidden)
         self[ItemName .. i]:StopAllAnimations()
+        if PersonInfoModel:IsOwener() then
+          self[ItemName .. i].Button_Area:SetIsEnabled(true)
+        else
+          self[ItemName .. i].Button_Area:SetIsEnabled(false)
+        end
       end
     end
     if -1 ~= self.SelectCharIndex and -1 ~= self[index] then
@@ -228,11 +237,13 @@ function M:GetDetialPageClickFunc(Item, i, string, bIsWeapon)
     Callback = function()
       local CharInfos = {}
       local WeaponInfos = {}
+      local WeaponForgeLevel = 0
       local SelectedTargetIndex = i
       if false == bIsWeapon then
         CharInfos = PersonInfoModel:GetDisplayCharInfos()
       else
         WeaponInfos = PersonInfoModel:GetDisplayWeaponInfos()
+        WeaponForgeLevel = PersonInfoModel:GetAvatarForgeLevel()
       end
       if nil == CharInfos and nil == WeaponInfos then
         return
@@ -246,6 +257,7 @@ function M:GetDetialPageClickFunc(Item, i, string, bIsWeapon)
       UIManager(self):LoadUINew("ArmoryDetail", {
         PreviewCharInfos = CharInfos,
         PreviewWeaponInfos = WeaponInfos,
+        WeaponForgeLevel = WeaponForgeLevel,
         EPreviewSceneType = CommonConst.EPreviewSceneType.PreviewCommon,
         bHideCharFiles = true,
         bHideBoxBtn = true,
@@ -400,7 +412,7 @@ function M:ChangeWeaponView()
 end
 
 function M:OnClickChangeSelectChar(index)
-  ScreenPrint("OnClickChangeSelectChar")
+  RedPrint("OnClickChangeSelectChar")
   self["AvatarItem_" .. self.SelectCharIndex].Button_Area:SetForbidden(false)
   self:CancelSelectChar(self.SelectCharIndex)
   self.SelectCharIndex = index
@@ -514,12 +526,40 @@ function M:OnMouseCaptureLost()
   self:OnPointerCaptureLost()
 end
 
+local function GetFirstValidDisplayFocusWidget(View)
+  local ItemPrefixes = {
+    "AvatarItem_",
+    "WeaponItem_"
+  }
+  for _, Prefix in ipairs(ItemPrefixes) do
+    for Index = 1, 3 do
+      local Item = View[Prefix .. Index]
+      local ComItem = Item and Item.Com_Item
+      local Content = ComItem and ComItem.Content
+      if ComItem and Content and 0 ~= Content.Id and -1 ~= Content.Id then
+        return ComItem
+      end
+    end
+  end
+  return nil
+end
+
 function M:SetOriginFocus()
+  local FirstAvatarWidget = self.AvatarItem_1 and self.AvatarItem_1.Com_Item
+  local FirstAvatarContent = FirstAvatarWidget and FirstAvatarWidget.Content
+  local FirstWeaponWidget = self.WeaponItem_1 and self.WeaponItem_1.Com_Item
+  local FirstWeaponContent = FirstWeaponWidget and FirstWeaponWidget.Content
+  local FocusWidget
+  if FirstAvatarContent and 0 ~= FirstAvatarContent.Id and -1 ~= FirstAvatarContent.Id then
+    FocusWidget = FirstAvatarWidget
+  elseif FirstWeaponContent and 0 ~= FirstWeaponContent.Id and -1 ~= FirstWeaponContent.Id then
+    FocusWidget = FirstWeaponWidget
+  end
   DebugPrint("聚焦到起点")
   if not PersonInfoModel:IsOwener() then
     PersonInfoController.MainPage:SetFocus()
-    if 1 ~= self.AvatarItem_1.Com_Item.Id then
-      self.AvatarItem_1.Com_Item:SetFocus()
+    if FocusWidget then
+      FocusWidget:SetFocus()
     end
     return
   end
@@ -529,7 +569,13 @@ function M:SetOriginFocus()
     if self.FreshFocusLeaveEditListView then
       self:FreshFocusLeaveEditListView()
     end
-    self.AvatarItem_1.Com_Item:SetFocus()
+    if FirstAvatarWidget then
+      FirstAvatarWidget:SetFocus()
+    elseif FocusWidget then
+      FocusWidget:SetFocus()
+    else
+      PersonInfoController.MainPage:SetFocus()
+    end
   end
 end
 
@@ -576,6 +622,72 @@ function M:RemoveReddotListener(ReddotNodeName)
     ReddotManager.RemoveListener(ReddotNodeName, self)
     self.ListenedReddot = false
   end
+end
+
+local function SetGuildDisplayVisibility(View, bVisible)
+  local LogoVisibility = bVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed
+  local TextVisibility = bVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed
+  View.GuildInfo:SetVisibility(bVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.HitTestInvisible)
+  View.GuildInfo.WS_Type:SetActiveWidgetIndex(bVisible and 0 or 1)
+  View.GuildInfo.Text_Empty:SetText(GText("RoleDisplay_Guild_1"))
+  View.GuildInfo.Logo:SetVisibility(LogoVisibility)
+  View.GuildInfo.Text_GuildName:SetVisibility(TextVisibility)
+end
+
+function M:RefreshGuildGamepadKeyVisibility()
+  local RootPage = PersonInfoController.MainPage
+  local bIsGamepad = RootPage and RootPage.CurInputDeviceType == ECommonInputType.Gamepad
+  local bCanOpenGuildDetail = (tonumber(self.GuildDetailGuildId) or 0) > 0
+  self.GuildInfo.Key_Controller:SetVisibility(bIsGamepad and bCanOpenGuildDetail and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed)
+end
+
+function M:CanOpenGuildDetailByGamepad()
+  return (tonumber(self.GuildDetailGuildId) or 0) > 0
+end
+
+function M:TryOpenGuildDetailByGamepad()
+  if not self:CanOpenGuildDetailByGamepad() then
+    return false
+  end
+  GuildController:OpenGuildDetailPopup(self, self.GuildDetailGuildId)
+  return true
+end
+
+function M:InitGuildInfo(PersonalBaseInfo)
+  local GuildSimpleInfo = type(PersonalBaseInfo.GuildSimpleInfo) == "table" and PersonalBaseInfo.GuildSimpleInfo or nil
+  local GuildId = tonumber(GuildSimpleInfo and (GuildSimpleInfo.GuildId or GuildSimpleInfo.GuildID or GuildSimpleInfo.Id) or PersonalBaseInfo.GuildId or PersonalBaseInfo.GuildID or 0) or 0
+  local GuildName = GuildSimpleInfo and (GuildSimpleInfo.Name or GuildSimpleInfo.GuildName) or PersonalBaseInfo.GuildName or ""
+  local GuildLogo = GuildSimpleInfo and (GuildSimpleInfo.LogoInfo or GuildSimpleInfo.Logo or GuildSimpleInfo.GuildLogoInfo or GuildSimpleInfo.GuildLogo) or PersonalBaseInfo.GuildLogoInfo or PersonalBaseInfo.GuildLogo
+  local ParsedGuildLogo = GuildLogoInfo.Parse(GuildLogo)
+  if GuildId <= 0 or not ParsedGuildLogo then
+    self.GuildDetailGuildId = 0
+    SetGuildDisplayVisibility(self, false)
+    self:RefreshGuildGamepadKeyVisibility()
+    return
+  end
+  self.GuildInfo.Text_GuildName:SetText("" ~= GuildName and GuildName or GText("RoleDisplay_Guild_1"))
+  self.GuildInfo.Logo:Init(ParsedGuildLogo)
+  self.GuildInfo.Key_Controller:CreateCommonKey({
+    KeyInfoList = {
+      {
+        Type = "Img",
+        ImgShortPath = UIConst.GamePadImgKey.RightThumb
+      }
+    }
+  })
+  self.GuildDetailGuildId = GuildId
+  if not self.bGuildEntryBound then
+    self.bGuildEntryBound = true
+    self.GuildInfo.Btn_Guild.OnClicked:Add(self, function()
+      GuildController:OpenGuildDetailPopup(self, self.GuildDetailGuildId)
+    end)
+  end
+  SetGuildDisplayVisibility(self, true)
+  self:RefreshGuildGamepadKeyVisibility()
+end
+
+function M:RefreshGuildInfo()
+  self:InitGuildInfo(PersonInfoModel:GetPersonalBaseInfo())
 end
 
 AssembleComponents(M)

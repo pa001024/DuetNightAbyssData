@@ -1,6 +1,7 @@
 local FriendModel = require("BluePrints.UI.WBP.Friend.FriendModel")
 local FriendCommon = require("BluePrints.UI.WBP.Friend.FriendCommon")
 local CommonUtils = require("Utils.CommonUtils")
+local InviteQueueManager = require("BluePrints.UI.Common.InviteQueueManager")
 local M = Class("BluePrints.Common.MVC.Controller")
 
 function M:Init()
@@ -78,7 +79,7 @@ function M:OpenAddFriendDialog(WorldContext, AvatarInfo)
         return
       end
       local TargetUid = self:GetSocialUid(AvatarInfo.Uid, AvatarInfo)
-      self:SendRequest(FriendCommon.EventId.AddFriend, TargetUid, (...), AvatarInfo)
+      self:SendRequest(FriendCommon.EventId.AddFriendRequest, TargetUid, (...), AvatarInfo)
     end,
     EditTextConfig = {Owner = self, IsMultiLine = false}
   }
@@ -122,15 +123,6 @@ function M:RecvResponse(Reason, ...)
   end
 end
 
-function M:SendAddFriend(TargetUid, Message, AvatarInfo)
-  Message = Message or GText("UI_Friend_ReDef")
-  if not TargetUid then
-    self:CheckError(ErrorCode.RET_FRIEND_UID_NOT_EXIST, true)
-    return
-  end
-  self:GetAvatar():FriendSendAddRequest(TargetUid, Message)
-end
-
 function M:RecvRefreshMatchFriend(ErrCode, ...)
   if not self:CheckError(ErrCode, true) then
     return
@@ -142,19 +134,27 @@ function M:SendRefreshMatchFriend()
   self:GetAvatar():RefreshRecentMatchedFriend()
 end
 
-function M:RecvAddFriend(ErrCode, ...)
+function M:SendAddFriendRequest(TargetUid, Message, AvatarInfo)
+  Message = Message or GText("UI_Friend_ReDef")
+  if not TargetUid then
+    self:CheckError(ErrorCode.RET_FRIEND_UID_NOT_EXIST, true)
+    return
+  end
+  self:GetAvatar():FriendSendAddRequest(TargetUid, Message)
+end
+
+function M:RecvAddFriendRequest(ErrCode, ...)
   local Uid, bToast = ...
   if nil == bToast then
     bToast = true
   end
-  ChatController:GetModel():AddFriendReddotNode(Uid, true)
   if not self:CheckError(ErrCode, true) then
     return
   end
   if bToast then
     self:ShowToast(GText("UI_Toast_Friend_AddRequestSend"))
   end
-  self:NotifyEvent(FriendCommon.EventId.AddFriend, Uid)
+  self:NotifyEvent(FriendCommon.EventId.AddFriendRequest, Uid)
 end
 
 function M:SendRefreshFriend()
@@ -183,6 +183,7 @@ end
 function M:RecvAgreeAdd(ErrCode, ...)
   local Uid, Coroutine = ...
   if not Coroutine then
+    InviteQueueManager:FinishCurrentInvite(InviteQueueManager.InviteType.Friend)
     self:NotifyEvent(FriendCommon.EventId.UnblockUI)
   else
     coroutine.resume(Coroutine, ErrCode)
@@ -194,27 +195,13 @@ function M:RecvAgreeAdd(ErrCode, ...)
     end
     return
   end
-  self:TryProcessNextFriendReq(Uid)
   self:GetModel():RemoveLastRequests(Uid)
   local FriendName = self:GetModel():GetFriendDict()[Uid].Info.Nickname
   self:ShowToast(string.format(GText("UI_Toast_Friend_PassRequest"), FriendName))
   self:NotifyEvent(FriendCommon.EventId.AgreeAdd, false, Uid)
 end
 
-function M:TryProcessNextFriendReq(Uid)
-  local PopReq = FriendModel:PopFriendReqInfo()
-  if PopReq and PopReq.Uid == Uid then
-    if self:IsExistTimer(self.ReqRecvTimer) then
-      self:StopTimer(self.ReqRecvTimer)
-    end
-    self:AddTimer(0.01, function()
-      self:SetUpFriendReqTimer(TeamCommon.LoopTimerInterval)
-    end)
-  end
-end
-
 function M:SendRefuseAdd(Uid, Coroutine)
-  self:TryProcessNextFriendReq(Uid)
   local FriendName = self:GetModel():GetRequestRecvBox()[Uid].Info.Nickname
   self:GetAvatar():FriendRefuseAddRequest(Uid, FriendName, Coroutine)
 end
@@ -222,6 +209,7 @@ end
 function M:RecvRefuseAdd(ErrCode, ...)
   local Uid, FriendName, Coroutine = ...
   if not Coroutine then
+    InviteQueueManager:FinishCurrentInvite(InviteQueueManager.InviteType.Friend)
     self:NotifyEvent(FriendCommon.EventId.UnblockUI)
   else
     coroutine.resume(Coroutine, ErrCode)
@@ -248,12 +236,20 @@ function M:RecvDeleteFriend(ErrCode, ...)
     return
   end
   local Uid, FriendName = ...
-  ChatController:SendChatNewMsgRead(Uid)
-  ChatController:GetModel():ReadChannelMessage(ChatCommon.ChannelDef.Friend, Uid)
+  ChatController:SendChatNewMsgRead(Uid, ChatCommon.SubTabType.Friend)
   if FriendName then
     self:ShowToast(string.format(GText("UI_Toast_Friend_DeleteSuccess"), FriendName))
   end
   self:NotifyEvent(FriendCommon.EventId.DeleteFriend, false, Uid)
+end
+
+function M:RecvAddFriend(ErrCode, ...)
+  local Uid = (...)
+  if not self:CheckError(ErrCode, true) then
+    return
+  end
+  ChatController:GetModel():AddPrivateChatReddotNode(Uid, ChatCommon.SubTabType.Friend, true)
+  self:NotifyEvent(FriendCommon.EventId.AddFriend, Uid)
 end
 
 function M:SendSetRemark(Uid, Remark)
@@ -325,7 +321,7 @@ function M:RecvAddBlackList(ErrCode, ...)
     return
   end
   local Uid, FriendName = ...
-  ChatController:GetModel():ClearReddotCount(ChatCommon.ChannelDef.Friend, Uid)
+  ChatController:GetModel():ClearReddotCount(ChatCommon.ChannelDef.Friend, Uid, ChatCommon.SubTabType.Friend)
   ChatController:GetModel():SetCurrentFriendUid(nil)
   self:ShowToast(string.format(GText("UI_Toast_Friend_AddBlcakListSuccess"), FriendName))
   self:NotifyEvent(FriendCommon.EventId.AddBlackList, false, Uid)
@@ -438,8 +434,25 @@ function M:RecvNewFriendRequestReceiveBox(Keys)
     local FriendReq = FriendModel:GetRequestRecvBox()[ReqUid]
     if FriendReq then
       FriendReq.Info.Remark = FriendReq.Remark
-      FriendModel:PushFriendReqInfo(FriendReq.Info)
-      self:SetUpFriendReqTimer(TeamCommon.LoopTimerInterval)
+      InviteQueueManager:EnqueueInvite({
+        Type = InviteQueueManager.InviteType.Friend,
+        Uid = FriendReq.Info.Uid,
+        Nickname = FriendReq.Info.Nickname,
+        Level = FriendReq.Info.Level,
+        HeadIconId = FriendReq.Info.HeadIconId,
+        HeadFrameId = FriendReq.Info.HeadFrameId,
+        Remark = FriendReq.Info.Remark,
+        MaxRemainTime = FriendCommon.TipsMaxRemainTime,
+        OnAccept = function()
+          self:SendAgreeAdd(FriendReq.Info.Uid)
+        end,
+        OnRefuse = function()
+          self:SendRefuseAdd(FriendReq.Info.Uid)
+        end,
+        OnTimeout = function()
+          self:SendRefuseAdd(FriendReq.Info.Uid)
+        end
+      })
     end
   end
 end
@@ -460,65 +473,6 @@ function M:StartRefreshRecommandTimer()
     self:NotifyEvent(FriendCommon.EventId.RecommandCdUpdate, false, Percent)
   end, true, 0, nil, true)
   self.RefreshRecommandTimer = Timer
-end
-
-function M:SetUpFriendReqTimer(Interval)
-  self.bProcessingFriendReq = true
-  local CurrReq = FriendModel:GetBackFriendReqInfo()
-  local FriendView = M.Super.GetView(self, GWorld.GameInstance, FriendCommon.TipUIName)
-  if not CurrReq then
-    DebugPrint(LXYTag, "SetUpFriendReqTimer，队列空了，好友申请流程退出")
-    if IsValid(FriendView) then
-      FriendView:Close("FriendReqQueue Empty")
-      DebugPrint(LXYTag, "SetUpFriendReqTimer::关闭申请UI")
-    end
-    self:ShutDownFriendReqTip()
-    return
-  end
-  if TeamController.bProcessingTeamInvite then
-    return
-  end
-  DebugPrint(LXYTag, "开始好友申请定时器")
-  if not self:GetUIMgr():GetUIObj("CommonChangeScene") then
-    if not IsValid(FriendView) then
-      DebugPrint(LXYTag, "打开好友申请UI")
-      FriendView = M.Super.OpenView(self, GWorld.GameInstance, FriendCommon.TipUIName, CurrReq, true)
-    else
-      DebugPrint(LXYTag, "重用好友申请UI")
-      FriendView:StopAllAnimations()
-      FriendView:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-      FriendView:Construct()
-      FriendView:InitUIInfo(FriendCommon.TipUIName, false, nil, CurrReq, true)
-    end
-  end
-  local MaxRemainTime = FriendCommon.TipsMaxRemainTime
-  local FriendReqRemainTime = MaxRemainTime
-  self:AddTimer(Interval, function()
-    FriendReqRemainTime = FriendReqRemainTime - Interval
-    if IsValid(FriendView) and not FriendView:HasFocusedDescendants() and self:IsGamepad() then
-      DebugPrint(LXYTag, WarningTag, "好友申请UI需要抢夺聚焦！！！！！！")
-      FriendView:SetFocus()
-    end
-    if FriendReqRemainTime > 0 then
-      TeamController:NotifyEvent(TeamCommon.EventId.TeamInviteWaiting, FriendReqRemainTime / MaxRemainTime)
-      return
-    end
-    self:StopTimer(self.ReqRecvTimer)
-    TeamController:NotifyEvent(TeamCommon.EventId.TeamInviteWaiting, 0)
-  end, true, 0, self.ReqRecvTimer)
-end
-
-function M:ShutDownFriendReqTip()
-  if self:IsExistTimer(self.ReqRecvTimer) then
-    self:StopTimer(self.ReqRecvTimer)
-  end
-  self.bProcessingFriendReq = false
-  if TeamController.bProcessingTeamInvite then
-    self:AddTimer(0.1, function()
-      TeamController:SetUpBeInviteTimer(TeamCommon.LoopTimerInterval)
-    end)
-  end
-  FriendModel:ClearFriendReqInfo()
 end
 
 function M:GenAddBlackListFunc(Widget, HeadAnchor)

@@ -17,8 +17,9 @@ end
 
 function Component:ClearData()
   if self.MarkTable then
-    for _, mark in pairs(self.MarkTable) do
-      mark:RemoveFromParent()
+    for uuid, mark in pairs(self.MarkTable) do
+      mark.SelectWidget = self.SelectWidgetTable[uuid]
+      self:ReleasePointToPool(mark)
     end
     self.MarkTable = {}
   end
@@ -80,9 +81,9 @@ function Component:TryDeleteTempMarkAndClose()
     self.MarkPanel:Close(self.TempMark == nil)
   end
   if self.TempMark then
-    self.TempMark:RemoveFromParent()
+    self.TempMark.SelectWidget = self.SelectWidgetTable[self.CurrentMarkUuid]
+    self:ReleasePointToPool(self.TempMark)
     self.TempMark = nil
-    self.SelectWidgetTable[self.CurrentMarkUuid]:RemoveFromParent()
     self.SelectWidgetTable[self.CurrentMarkUuid] = nil
     self.CurrentMarkUuid = nil
     self.CurrentMarkData = {}
@@ -101,7 +102,9 @@ function Component:DeleteMark()
         self:RemoveTrack(mark)
         self.MarkTable[uuid] = nil
         self.MarkData[uuid] = nil
-        mark:RemoveFromParent()
+        mark.SelectWidget = self.SelectWidgetTable[uuid]
+        self:ReleasePointToPool(mark)
+        self.SelectWidgetTable[uuid] = nil
         self.MarkCount = self.MarkCount - 1
         if self.CurrentSelectPoint == mark then
           self.CurrentSelectPoint = nil
@@ -341,10 +344,12 @@ function Component:UpdateMapMark(RegionId, MarkUuid, MarkData)
       end
     end
   elseif self.MarkTable[MarkUuid] then
+    self.MarkTable[MarkUuid].SelectWidget = self.SelectWidgetTable[MarkUuid]
+    self:ReleasePointToPool(self.MarkTable[MarkUuid])
     self:RemovePoint(self.MarkTable[MarkUuid])
-    self.MarkTable[MarkUuid]:RemoveFromParent()
     self.MarkTable[MarkUuid] = nil
     self.MarkData[MarkUuid] = nil
+    self.SelectWidgetTable[MarkUuid] = nil
   end
 end
 

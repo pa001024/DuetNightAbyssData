@@ -18,5 +18,19 @@ return ReadOnly("BoxDrop", {
       [1] = 114100,
       [2] = 114101
     }
+  },
+  [10302001] = {
+    BoxCoinId = 223,
+    BoxMaximum = 21,
+    BoxPerDay = 2,
+    CoinPerBox = 3,
+    EventId = 10302001,
+    RewardCount = {
+      [1] = 30
+    },
+    RewardId = {
+      [1] = 114103,
+      [2] = 114104
+    }
   }
 })

@@ -83,6 +83,9 @@ function M:CheckBuffCondition()
   if not self.BuffType then
     return false
   end
+  if 6 == self.Rarity then
+    return false
+  end
   if 1 == self.BuffType then
     return self.Rarity == self.BuffParam1
   elseif 2 == self.BuffType then

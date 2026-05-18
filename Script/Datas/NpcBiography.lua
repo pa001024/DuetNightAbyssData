@@ -612,5 +612,32 @@ return ReadOnly("NpcBiography", {
     NpcInformation = "NpcBiography_Information_HeyinSheng",
     NpcName = "UI_CMNpc_Haojing_Name_YinheSheng",
     ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [106401] = {
+    ConditionId = 1155,
+    DispConditionId = 1155,
+    NpcAge = "30",
+    NpcBiographyId = 106401,
+    NpcInformation = "NpcBiography_Information_Shidisen",
+    NpcName = "UI_CMNpc_Chezhan_Name_Shidisen",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [106501] = {
+    ConditionId = 1156,
+    DispConditionId = 1156,
+    NpcAge = "20",
+    NpcBiographyId = 106501,
+    NpcInformation = "NpcBiography_Information_FasionMaiden",
+    NpcName = "UI_CMNpc_Chezhan_Name_FasionMaiden",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
+  },
+  [106601] = {
+    ConditionId = 1157,
+    DispConditionId = 1157,
+    NpcAge = "30",
+    NpcBiographyId = 106601,
+    NpcInformation = "NpcBiography_Information_Geluoruiya",
+    NpcName = "UI_CMNpc_Chezhan_Name_Geluoruiya",
+    ProbeFailedTip = "NpcBiography_ProbeFailedTip1"
   }
 })

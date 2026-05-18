@@ -5,6 +5,7 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C",
   "BluePrints.Common.TimerMgr"
 })
+local ReportButtonBPPath = "/Game/UI/WBP/Guild/Widget/WBP_Guild_Tab_BtnReport.WBP_Guild_Tab_BtnReport"
 
 function M:Construct()
   self.SoundFunc = self.PlayClickSound
@@ -34,6 +35,8 @@ function M:Init(ConfigData, NotPlayInAnim)
   self.SubTitleName = ConfigData.SubTitleName
   self.OverridenTopResouces = ConfigData.OverridenTopResouces
   self.PopupInfoId = ConfigData.PopupInfoId
+  self.ReportPopupInfoId = ConfigData.ReportPopupInfoId
+  self.ReportPopupParams = ConfigData.ReportPopupParams
   self.SoundFunc = ConfigData.SoundFunc or self.PlayClickSound
   self.SoundFuncReceiver = ConfigData.SoundFuncReceiver or self
   self.DeviceTypeByPlatformName = ConfigData.PlatformName or CommonUtils.GetDeviceTypeByPlatformName(self)
@@ -76,7 +79,8 @@ end
 
 function M:ResetDynamicNode()
   local DynamicNodeName = {
-    Panel_ResourceBar = {NeedRemoveChild = true}
+    Panel_ResourceBar = {NeedRemoveChild = true},
+    Pos_Report = {NeedRemoveChild = true}
   }
   for k, v in pairs(DynamicNodeName) do
     if nil ~= self[k] then
@@ -124,6 +128,8 @@ function M:ResetDynamicNode()
       else
         self.Panel_ResourceBar:SetVisibility(UIConst.VisibilityOp.Collapsed)
       end
+    elseif "Report" == v then
+      self:UpdateReportButton()
     end
   end
   local SystemUIConfig = DataMgr.SystemUI[self.OwnerPanel.ConfigName or self.OwnerPanel.WidgetName] or {}
@@ -155,6 +161,13 @@ function M:SetPopupInfoId(PopupInfoId, IsNeedRefresh)
   self.PopupInfoId = PopupInfoId
   if IsNeedRefresh then
     self:UpdateTopRightTips()
+  end
+end
+
+function M:SetReportPopupInfoId(ReportPopupInfoId, IsNeedRefresh)
+  self.ReportPopupInfoId = ReportPopupInfoId
+  if IsNeedRefresh then
+    self:UpdateReportButton()
   end
 end
 
@@ -190,6 +203,50 @@ function M:UpdateTopRightTips()
     self.PopupInfoId = SystemUIConfig.PopupInfoId
   end
   RealUpdateTopRightTips()
+end
+
+function M:UpdateReportButton()
+  if self.Pos_Report == nil then
+    return
+  end
+  self.Pos_Report:ClearChildren()
+  if nil == self.ReportPopupInfoId then
+    self.Pos_Report:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    return
+  end
+  if not IsValid(self.ReportWidget) then
+    self.ReportWidget = UIManager(self):CreateWidget(ReportButtonBPPath, false)
+  end
+  if IsValid(self.ReportWidget) then
+    if type(self.ReportWidget.InitGamePadTip) == "function" then
+      self.ReportWidget:InitGamePadTip({
+        KeyInfo = {
+          KeyInfoList = {
+            {Type = "Img", ImgShortPath = "Menu"}
+          },
+          Desc = GText("RoleMenu_Report")
+        },
+        ClickFuncObj = self,
+        ClickFunc = self.OnReportClick
+      })
+    elseif nil ~= self.ReportWidget.Tip_PC and nil ~= self.ReportWidget.Tip_PC.Button_Area then
+      self.ReportWidget.Tip_PC.Button_Area.OnClicked:Clear()
+      self.ReportWidget.Tip_PC.Button_Area.OnClicked:Add(self, self.OnReportClick)
+    elseif nil ~= self.ReportWidget.Button_Area then
+      self.ReportWidget.Button_Area.OnClicked:Clear()
+      self.ReportWidget.Button_Area.OnClicked:Add(self, self.OnReportClick)
+    end
+    if "function" == type(self.ReportWidget.HideTip) then
+      self.ReportWidget:HideTip(false)
+    end
+    if "function" == type(self.ReportWidget.SwitchTipStyle) then
+      self.ReportWidget:SwitchTipStyle(0)
+    end
+    self.Pos_Report:AddChild(self.ReportWidget)
+    self.Pos_Report:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.Pos_Report:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:UpdateTopTitle(TitleName)
@@ -295,17 +352,37 @@ function M:OnReturnClick()
 end
 
 function M:OnInfoClick()
-  if self.PopupInfoId ~= nil then
-    local Params = {
-      RightCallbackFunction = function()
-        if type(self.InfoCallback) == "function" then
-          self.InfoCallback(self.OwnerPanel)
-        end
+  self:OpenPopupById(self.PopupInfoId, self.InfoCallback)
+end
+
+function M:OnReportClick()
+  local PopupParams = {}
+  if type(self.ReportPopupParams) == "table" then
+    for k, v in pairs(self.ReportPopupParams) do
+      PopupParams[k] = v
+    end
+  end
+  self:OpenPopupById(self.ReportPopupInfoId, nil, PopupParams)
+end
+
+function M:OpenPopupById(PopupInfoId, Callback, PopupParams)
+  if nil ~= PopupInfoId then
+    local Params = {}
+    if type(PopupParams) == "table" then
+      for k, v in pairs(PopupParams) do
+        Params[k] = v
       end
-    }
-    UIManager(self):ShowCommonPopupUI(self.PopupInfoId, Params)
-  elseif type(self.InfoCallback) == "function" then
-    self.InfoCallback(self.OwnerPanel)
+    end
+    
+    function Params.RightCallbackFunction()
+      if type(Callback) == "function" then
+        Callback(self.OwnerPanel)
+      end
+    end
+    
+    UIManager(self):ShowCommonPopupUI(PopupInfoId, Params)
+  elseif type(Callback) == "function" then
+    Callback(self.OwnerPanel)
   end
 end
 
@@ -582,6 +659,14 @@ function M:HideLimitedResourceBubbleAfterDelay(ResourceBarWidget, DelayTime)
 end
 
 function M:UpdateSingleBottomKeyInfo(SubKeyIndex, SingleKeyInfo)
+end
+
+function M:SetResourceAddVisibleByResocurceId(ResourceId, bVisible)
+  self.WBP_Com_Tab_ResourceBar:SetResourceBarVisibility(ResourceId, bVisible)
+end
+
+function M:SetResourceAddVisibleByIndex(Index, bVisible)
+  self.WBP_Com_Tab_ResourceBar:SetResourceBarVisibilityByIndex(Index, bVisible)
 end
 
 return M

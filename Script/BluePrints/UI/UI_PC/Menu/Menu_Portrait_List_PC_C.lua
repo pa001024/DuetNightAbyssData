@@ -1,5 +1,4 @@
 require("UnLua")
-local uiconst = require("BluePrints.UI.UIConst")
 local Menu_Portrait_List_PC_C = Class({
   "BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentBase"
 })
@@ -143,30 +142,69 @@ function Menu_Portrait_List_PC_C:SetCurPortrait()
 end
 
 function Menu_Portrait_List_PC_C:SetHeadFrameInfo(Id)
-  if -1 == Id then
-    self.Text_RoleName:SetText(GText("UI_HeadFrame_Empty"))
-    self.Head_Frame:SetVisibility(uiconst.VisibilityOp.Collapsed)
-  else
-    local Path = DataMgr.HeadFrame[Id].SmallIcon
-    local Name = GText(DataMgr.HeadFrame[Id].Name)
-    local ImageResource = LoadObject(Path)
-    if nil ~= ImageResource then
-      self.Head_Frame:SetBrushResourceObject(ImageResource)
+  local IsDynamic = false
+  local Data = DataMgr.HeadFrame[Id]
+  if Data and Data.DynamicPath then
+    IsDynamic = true
+  end
+  if IsDynamic then
+    self.DynamicFrame:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Head_Frame:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local Data = DataMgr.HeadFrame[Id]
+    if Data and Data.DynamicPath then
+      local NewWidget = UIManager(self):CreateWidget(Data.DynamicPath, true)
+      if NewWidget then
+        self.DynamicFrame:SetContent(NewWidget)
+      end
     end
+  else
+    self.DynamicFrame:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if -1 == Id then
+      self.Text_RoleName:SetText(GText("UI_HeadFrame_Empty"))
+      self.Head_Frame:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    else
+      local Path = DataMgr.HeadFrame[Id].SmallIcon
+      local ImageResource = LoadObject(Path)
+      if nil ~= ImageResource then
+        self.Head_Frame:SetBrushResourceObject(ImageResource)
+      end
+      self.Head_Frame:SetVisibility(UIConst.VisibilityOp.Visible)
+    end
+  end
+  if -1 ~= Id then
+    local Name = GText(DataMgr.HeadFrame[Id].Name)
     if self.IsHeadFrame then
       self.Text_RoleName:SetText(Name)
     end
-    self.Head_Frame:SetVisibility(uiconst.VisibilityOp.Visible)
   end
 end
 
-function Menu_Portrait_List_PC_C:SetPortraitInfo(Id)
-  local Path = DataMgr.HeadSculpture[Id].HeadPath
+function Menu_Portrait_List_PC_C:SetPortraitInfo(Id, IsDynamic)
+  local IsDynamic = false
+  local Data = DataMgr.HeadSculpture[Id]
+  if Data and Data.DynamicPath then
+    IsDynamic = true
+  end
   local Name = GText(DataMgr.HeadSculpture[Id].Name)
-  local ImageResource = LoadObject(Path)
-  if nil ~= ImageResource then
-    local NpcMaterial = self.Icon_Head:GetDynamicMaterial()
-    NpcMaterial:SetTextureParameterValue("IconMap", ImageResource)
+  if IsDynamic then
+    self.DynamicHead:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.Icon_Head:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local Data = DataMgr.HeadSculpture[Id]
+    if Data and Data.DynamicPath then
+      local Widget = UIManager(self):CreateWidget(Data.DynamicPath)
+      if Widget then
+        self.DynamicHead:SetContent(Widget)
+      end
+    end
+  else
+    self.Icon_Head:SetVisibility(UIConst.VisibilityOp.Visible)
+    self.DynamicHead:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    local Path = DataMgr.HeadSculpture[Id].HeadPath
+    local ImageResource = LoadObject(Path)
+    if nil ~= ImageResource then
+      local NpcMaterial = self.Icon_Head:GetDynamicMaterial()
+      NpcMaterial:SetTextureParameterValue("IconMap", ImageResource)
+    end
   end
   if not self.IsHeadFrame then
     self.Text_RoleName:SetText(Name)
@@ -325,6 +363,10 @@ function Menu_Portrait_List_PC_C:InitPortrait()
       MenuContent.PortraitPath = Value.SmallIcon
       MenuContent.PortraitId = Value.FrameID
       MenuContent.IsHeadFrame = true
+      if Value.DynamicPath then
+        MenuContent.PortraitPath = Value.DynamicPath
+        MenuContent.IsDynamic = true
+      end
       MenuContent.AccessText = GText(Value.AccessText)
       if not UnlockedHeadFrameIcon[Value.FrameID] then
         MenuContent.IsLocked = true
@@ -364,6 +406,10 @@ function Menu_Portrait_List_PC_C:InitPortrait()
       MenuContent.AccessText = GText(Value.AccessText)
       if not UnlockedHeadIcon[Value.HeadId] then
         MenuContent.IsLocked = true
+      end
+      if Value.DynamicPath then
+        MenuContent.PortraitPath = Value.DynamicPath
+        MenuContent.IsDynamic = true
       end
       local NeedAdd = true
       if MenuContent.IsLocked and not Value.CanPreView then

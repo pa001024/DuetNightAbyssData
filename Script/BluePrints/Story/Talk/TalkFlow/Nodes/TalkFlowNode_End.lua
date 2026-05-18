@@ -1,6 +1,6 @@
 local EDialogueNodeType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueNodeType
 local M = Class({
-  "BluePrints.Story.StoryIteration.StoryIterationNode"
+  "BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode"
 })
 M.NodeType = EDialogueNodeType.End
 

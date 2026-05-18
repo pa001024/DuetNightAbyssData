@@ -9,6 +9,7 @@ end
 
 function M:OnActorReady(Info)
   M.Super.OnActorReady(self, Info)
+  print(_G.LogTag, "LXZ OnActorReady", self:GetName(), self.IsActive)
   if not self.IsActive then
     self:DeActive()
   end
@@ -19,6 +20,7 @@ function M:ActiveOnServer()
 end
 
 function M:DeActive()
+  print(_G.LogTag, "LXZ HideMechanism", self:GetName())
   self:HideMechanism(false, "Condition", not self.HiddenOnDeActive)
   self.CombatClientEffectComponent:OnDeactiveEffect()
 end

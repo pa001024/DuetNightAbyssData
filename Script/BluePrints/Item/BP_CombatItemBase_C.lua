@@ -328,6 +328,7 @@ function BP_CombatItemBase_C:ServerUpdateRegionStateId(NewStateId, CallBack)
     return
   end
   if not self.RegionData or self.RegionData.StateId == nil then
+    CallBack(0)
     return
   end
   local NewRegionData = self.RegionData

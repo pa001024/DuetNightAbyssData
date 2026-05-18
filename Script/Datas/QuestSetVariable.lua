@@ -3,27 +3,31 @@ T.RT_1 = {Name = "IQ1002", Value = 1}
 T.RT_2 = {
   [1] = T.RT_1
 }
-T.RT_3 = {Name = "AltStart", Value = 1}
+T.RT_3 = {Name = "IQ10040510", Value = 1}
 T.RT_4 = {
   [1] = T.RT_3
 }
-T.RT_5 = {
+T.RT_5 = {Name = "AltStart", Value = 1}
+T.RT_6 = {
+  [1] = T.RT_5
+}
+T.RT_7 = {
   Name = "FengxiangBoss",
   Value = 1
 }
-T.RT_6 = {
+T.RT_8 = {
   Name = "ZhiliuA12020414",
   Value = 1
 }
-T.RT_7 = {
-  [1] = T.RT_6
+T.RT_9 = {
+  [1] = T.RT_8
 }
-T.RT_8 = {
+T.RT_10 = {
   Name = "ZhiliuA12020414",
   Value = 0
 }
-T.RT_9 = {
-  [1] = T.RT_8
+T.RT_11 = {
+  [1] = T.RT_10
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -124,6 +128,186 @@ return ReadOnly("QuestSetVariable", {
         [1] = {Name = "IQ10030601", Value = 0}
       },
       QuestId = 10030601,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040116] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10030702", Value = 1}
+      },
+      QuestId = 10040116,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040202] = {
+    Success = {
+      Info = T.RT_4,
+      QuestId = 10040202,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040204] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040204", Value = 1}
+      },
+      QuestId = 10040204,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040205] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040205", Value = 1}
+      },
+      QuestId = 10040205,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040206] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040205", Value = 0}
+      },
+      QuestId = 10040206,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040207] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040207", Value = 1}
+      },
+      QuestId = 10040207,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040208] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ10040208", Value = 1}
+      },
+      QuestId = 10040208,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [10040209] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040209", Value = 1}
+      },
+      QuestId = 10040209,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040308] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040207", Value = 0}
+      },
+      QuestId = 10040308,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040310] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040310", Value = 1}
+      },
+      QuestId = 10040310,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040312] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040312", Value = 1}
+      },
+      QuestId = 10040312,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040401] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040401", Value = 1},
+        [2] = {
+          Name = "CZIQ10040401",
+          Value = 1
+        }
+      },
+      QuestId = 10040401,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040402] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040402", Value = 1}
+      },
+      QuestId = 10040402,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040403] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040403", Value = 1}
+      },
+      QuestId = 10040403,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040406] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ10040406", Value = 1}
+      },
+      QuestId = 10040406,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [10040407] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040407", Value = 1}
+      },
+      QuestId = 10040407,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040424] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040424", Value = 1}
+      },
+      QuestId = 10040424,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040506] = {
+    Start = {
+      Info = {
+        [1] = {Name = "IQ10040506", Value = 1}
+      },
+      QuestId = 10040506,
+      QuestStartorSuccess = "Start"
+    }
+  },
+  [10040510] = {
+    Success = {
+      Info = T.RT_4,
+      QuestId = 10040510,
+      QuestStartorSuccess = "Success"
+    }
+  },
+  [10040514] = {
+    Success = {
+      Info = {
+        [1] = {Name = "IQ10040514", Value = 1}
+      },
+      QuestId = 10040514,
       QuestStartorSuccess = "Success"
     }
   },
@@ -339,7 +523,7 @@ return ReadOnly("QuestSetVariable", {
   },
   [12010602] = {
     Success = {
-      Info = T.RT_4,
+      Info = T.RT_6,
       QuestId = 12010602,
       QuestStartorSuccess = "Success"
     }
@@ -371,7 +555,7 @@ return ReadOnly("QuestSetVariable", {
       QuestStartorSuccess = "Start"
     },
     Success = {
-      Info = T.RT_4,
+      Info = T.RT_6,
       QuestId = 12010606,
       QuestStartorSuccess = "Success"
     }
@@ -384,7 +568,7 @@ return ReadOnly("QuestSetVariable", {
           Value = 1
         },
         [2] = {Name = "IQ120315", Value = 0},
-        [3] = T.RT_5
+        [3] = T.RT_7
       },
       QuestId = 12020101,
       QuestStartorSuccess = "Start"
@@ -474,12 +658,12 @@ return ReadOnly("QuestSetVariable", {
   },
   [12020414] = {
     Start = {
-      Info = T.RT_7,
+      Info = T.RT_9,
       QuestId = 12020414,
       QuestStartorSuccess = "Start"
     },
     Success = {
-      Info = T.RT_9,
+      Info = T.RT_11,
       QuestId = 12020414,
       QuestStartorSuccess = "Success"
     }
@@ -519,12 +703,12 @@ return ReadOnly("QuestSetVariable", {
   },
   [12020612] = {
     Start = {
-      Info = T.RT_7,
+      Info = T.RT_9,
       QuestId = 12020612,
       QuestStartorSuccess = "Start"
     },
     Success = {
-      Info = T.RT_9,
+      Info = T.RT_11,
       QuestId = 12020612,
       QuestStartorSuccess = "Success"
     }
@@ -545,7 +729,7 @@ return ReadOnly("QuestSetVariable", {
           Name = "FengxiangBaoming",
           Value = 1
         },
-        [2] = T.RT_5
+        [2] = T.RT_7
       },
       QuestId = 12030101,
       QuestStartorSuccess = "Start"

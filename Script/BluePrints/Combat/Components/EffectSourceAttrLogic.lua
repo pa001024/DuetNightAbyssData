@@ -35,6 +35,9 @@ function Component:GetTableAttrNames_Lua()
     "TNRecoverTimeB",
     "TNRecoverTimeZ",
     "BossTNToZeroRecoverSpeed",
+    "InitialWeaponSp",
+    "MaxWeaponSp",
+    "SecondaryResource",
     "TriggerProbability",
     "MultiShoot",
     "BulletSpeed",
@@ -65,9 +68,14 @@ function Component:SetReplaceAttrs(ReplaceAttrs)
     local ModAddValue = (ReplaceAttrs.ModAddValues or {})[AttrName]
     self:FillReplaceAttr(AttrName, CardValue, CardLevelValue, ModRateValue, ModAddValue, FromSkynet)
   end
+  local ModModMultiplier = ReplaceAttrs.ModMultiplier or {}
+  self:FillModMultipliers(ModModMultiplier)
 end
 
 function Component:SetTableAttr(ReplaceAttrs)
+  if not self:K2_GetAttributesSet() then
+    return
+  end
   self:SetTableAttrCpp()
   if ReplaceAttrs then
     self:SetReplaceAttrs(ReplaceAttrs)

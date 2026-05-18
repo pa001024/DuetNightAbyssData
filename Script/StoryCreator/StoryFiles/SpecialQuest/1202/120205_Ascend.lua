@@ -342,7 +342,8 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               TalkActors = {},
-              FreezeWorldComposition = false,
+              bLockHighestLOD = false,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
@@ -385,7 +386,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -433,7 +436,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1055,7 +1060,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1370,12 +1377,6 @@ return {
             startQuest = "17703478490224620893",
             startPort = "Out",
             endQuest = "17736644095867615255",
-            endPort = "In"
-          },
-          {
-            startQuest = "17703478490224620893",
-            startPort = "Out",
-            endQuest = "1774273968426849292",
             endPort = "In"
           },
           {
@@ -1701,6 +1702,12 @@ return {
             startPort = "Out",
             endQuest = "17703468652371540735",
             endPort = "In"
+          },
+          {
+            startQuest = "17735723255943025",
+            startPort = "Out",
+            endQuest = "1774273968426849292",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1776,7 +1783,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
+              bLockNpcSpawn = false,
               OptionType = "normal",
+              bLockHighestLOD = false,
               FreezeWorldComposition = false,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1810,6 +1819,7 @@ return {
               MoveSpeedRate = 0.35,
               ExitBlendTime = 2,
               IsTriggerable = true,
+              UseEndOverlapBox = false,
               CanMoveReverse = true,
               CanExitSpline = true
             }
@@ -2033,7 +2043,7 @@ return {
             key = "1774273968426849292",
             type = "ChangeStaticCreatorNode",
             name = "生成空气墙",
-            pos = {x = 2738.692388837513, y = 6.5425906483534675},
+            pos = {x = 2890.1209602660847, y = 1575.1140192197822},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,

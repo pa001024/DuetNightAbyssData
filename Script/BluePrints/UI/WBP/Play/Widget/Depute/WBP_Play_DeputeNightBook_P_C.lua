@@ -26,6 +26,23 @@ function M:Construct()
   self.Btn_More.Btn_Click.OnClicked:Add(self, self.OpenRewardDetails)
   self:AddDispatcher(EventID.NightBookSpecialRightUp, self, self.OnNightBookSpecialRightUp)
   self:AddDispatcher(EventID.DoubleModSwitchTab, self, self.OnDoubleModSwitchTab)
+  self.DoubleMod_SwitchTab:SetConfig({
+    CacheKey = "Is_DoubleMod_SwitchTab",
+    EventId = EventID.DoubleModSwitchTab,
+    TextOn = "UI_Event_ModDrop_Challenge",
+    TextOff = "UI_Event_ModDrop_Normal",
+    TipText = "UI_Event_ModDrop_Bubble",
+    OnQueryShowTip = function()
+      local Avatar = GWorld:GetAvatar()
+      return nil ~= Avatar and Avatar.DoubleModDropFirst
+    end,
+    OnTipDismissed = function()
+      local Avatar = GWorld:GetAvatar()
+      if Avatar then
+        Avatar:SetDoubleModDropFirst()
+      end
+    end
+  })
   self:AddDispatcher(EventID.OnActivityTimeOpen, self, self.OnActivityTimeOpen)
   self:AddDispatcher(EventID.OnActivityTimeOpenClose, self, self.OnActivityTimeOpenClose)
   self:AddInputMethodChangedListen()

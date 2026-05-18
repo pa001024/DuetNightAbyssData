@@ -1,5 +1,10 @@
 return {
   StaticCreator = {
+    ["2430064"] = {
+      CreatorId = 2430064,
+      UnitType = "Drop",
+      UnitId = 11076
+    },
     ["2010018"] = {
       CreatorId = 2010018,
       UnitType = "Mechanism",
@@ -584,6 +589,8 @@ return {
     }
   },
   Explore = {
+    ["7073026"] = {},
+    ["7073001"] = {},
     ["7073005"] = {
       AutoReset = 0,
       ["2430074"] = {
@@ -931,9 +938,7 @@ return {
         UnitId = 705066,
         RarelyId = 7073028
       }
-    },
-    ["7073001"] = {},
-    ["7073026"] = {}
+    }
   },
   RandomRule = {
     ["9050401"] = {RandomRuleId = 9050401},

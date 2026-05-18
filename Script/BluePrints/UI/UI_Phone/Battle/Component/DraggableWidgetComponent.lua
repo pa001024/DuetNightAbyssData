@@ -37,7 +37,8 @@ end
 function M:GetSelectWidgetMaskWidget()
   local TargetMaskWidget
   if type(self.MaskNodeName) == "table" then
-    local TargetMaskWidgetName = self.MaskNodeName[self.CurEditPlanIndex]
+    local MappedPlanIndex = self:_GetMappedPlanIndex(self.CurEditPlanIndex)
+    local TargetMaskWidgetName = self.MaskNodeName[MappedPlanIndex]
     if nil ~= TargetMaskWidgetName then
       TargetMaskWidget = self.OwnerWidget[TargetMaskWidgetName]
     end
@@ -45,6 +46,13 @@ function M:GetSelectWidgetMaskWidget()
     TargetMaskWidget = self.OwnerWidget[self.MaskNodeName]
   end
   return TargetMaskWidget
+end
+
+function M:_GetMappedPlanIndex(EditPlanIndex)
+  if nil == EditPlanIndex then
+    return 1
+  end
+  return (EditPlanIndex - 1) % 2 + 1
 end
 
 function M:GetSelectWidgetTextMapContent()

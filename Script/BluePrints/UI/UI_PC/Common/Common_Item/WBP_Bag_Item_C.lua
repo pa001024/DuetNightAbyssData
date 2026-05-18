@@ -40,6 +40,17 @@ end
 
 function M:InitCompView()
   M.Super.InitCompView(self)
+  if self.ItemType == "IronTicket" or self.Content.bIronExpTicket then
+    if self.Content.bShowNotHaveStyle then
+      self:SetShadow(true)
+      self:SetName("UI_BattlePass_PetHasnotGot")
+    else
+      self:CheckAndSetVisibility(self.CountWidget, UIConst.VisibilityOp.Collapsed)
+      self:SetLevel(self.Content.Level)
+    end
+    self:PlayFadeInAnim()
+    return
+  end
   if self.ItemType == "EmptyGrid" then
     self:CheckAndSetVisibility(self.CountWidget, UIConst.VisibilityOp.Collapsed)
     self:CheckAndSetVisibility(self.LevelWidget, UIConst.VisibilityOp.Collapsed)

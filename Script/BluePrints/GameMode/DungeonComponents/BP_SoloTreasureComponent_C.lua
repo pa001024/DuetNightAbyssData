@@ -67,10 +67,20 @@ end
 
 function M:OnDungeonWin(Reason)
   self.GameMode:NotifyServerGameEnd(true, Reason)
+  self:OnSetGameFailReason("")
 end
 
 function M:OnDungeonFailed(Reason)
   self.GameMode:NotifyServerGameEnd(false, Reason)
+  self:OnSetGameFailReason(Reason)
+end
+
+function M:OnSetGameFailReason(Reason)
+  self.GameFailReason = Reason
+end
+
+function M:OnGetGameFailReason()
+  return self.GameFailReason or ""
 end
 
 function M:OnUpdateCountDown()

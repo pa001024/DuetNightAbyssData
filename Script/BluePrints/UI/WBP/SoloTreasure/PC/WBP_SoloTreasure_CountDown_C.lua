@@ -3,6 +3,23 @@ local WBP_SoloTreasure_CountDown_C = Class({
   "BluePrints.UI.BP_UIState_C"
 })
 
+function WBP_SoloTreasure_CountDown_C:Destruct()
+  local UIBattleMain = UIManager(self):GetUI("BattleMain")
+  if UIBattleMain then
+    UIBattleMain.Btn_Task:SetVisibility(ESlateVisibility.Visible)
+    UIBattleMain.Pos_TaskBar:SetVisibility(ESlateVisibility.Visible)
+    if UIBattleMain.Group_ChatEntry then
+      UIBattleMain.Group_ChatEntry:SetVisibility(ESlateVisibility.Visible)
+    end
+    if UIBattleMain.Pos_OnlineAction then
+      UIBattleMain.Pos_OnlineAction:SetVisibility(ESlateVisibility.Visible)
+    end
+    if UIBattleMain.Chat_Entry then
+      UIBattleMain.Chat_Entry:SetVisibility(ESlateVisibility.Visible)
+    end
+  end
+end
+
 function WBP_SoloTreasure_CountDown_C:InitUIInfo(Name, IsInUIMode, EventList, ...)
   self.Super.InitUIInfo(self, Name, IsInUIMode, EventList, ...)
   self.IsFromLanguageChange = (...)

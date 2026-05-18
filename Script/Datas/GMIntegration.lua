@@ -159,22 +159,24 @@ return ReadOnly("GMIntegration", {
   },
   ChangeAbyss131 = {
     GMCommands = {
-      [1] = "sgm settime 2026 04 10 10 00 00",
+      [1] = "sgm settime 2026 06 10 10 00 00",
       [2] = "gm SystemCommonUnlock",
-      [3] = "sgm CompleteCondition 8002",
-      [4] = "sgm SetAbyssLevelProgress 1312 50 5"
+      [3] = "sgm CompleteCondition 4220",
+      [4] = "sgm CompleteCondition 8002",
+      [5] = "sgm SetAbyssLevelProgress 1402 50 5"
     },
-    GMDisplayName = "私服切换大秘境1.3上半",
+    GMDisplayName = "私服切换大秘境1.4上半",
     GMIntegrationName = "ChangeAbyss131"
   },
   ChangeAbyss132 = {
     GMCommands = {
-      [1] = "sgm settime 2026 05 10 10 00 00",
+      [1] = "sgm settime 2026 07 10 10 00 00",
       [2] = "gm SystemCommonUnlock",
-      [3] = "sgm CompleteCondition 8002",
-      [4] = "sgm SetAbyssLevelProgress 1314 50 5"
+      [3] = "sgm CompleteCondition 4220",
+      [4] = "sgm CompleteCondition 8002",
+      [5] = "sgm SetAbyssLevelProgress 1404 50 5"
     },
-    GMDisplayName = "私服切换大秘境1.3下半",
+    GMDisplayName = "私服切换大秘境1.4下半",
     GMIntegrationName = "ChangeAbyss132"
   },
   ChapterUIEast01End = {
@@ -468,9 +470,9 @@ return ReadOnly("GMIntegration", {
       [2] = "gm FSG 2038",
       [3] = "gm FSG 2055",
       [4] = "gm FSG 2015",
-      [5] = "sgm tct2",
-      [8] = "sgm tct2",
-      [9] = "sgm tct2"
+      [5] = "sgm qcf 100102",
+      [6] = "sgm qcf 100103",
+      [7] = "sgm qc 10020107"
     },
     GMDisplayName = "提前完成第一章",
     GMIntegrationName = "FakeQuest1002",
@@ -580,9 +582,23 @@ return ReadOnly("GMIntegration", {
       [2] = "gm skipregion 1 104501 1",
       [3] = "sgm aths 103014 120000"
     },
-    GMDisplayName = "奉香大典任务",
+    GMDisplayName = "开始奉香大典任务",
     GMIntegrationName = "FengxiangStoryStart",
     GMTab = "任务"
+  },
+  FinishAllForgeLevelQuest = {
+    GMCommands = {
+      [1] = "sgm FinishTarget 1040800 1",
+      [2] = "sgm FinishTarget 1040810 1",
+      [3] = "sgm FinishTarget 1040801 1",
+      [4] = "sgm FinishTarget 1040802 1",
+      [5] = "sgm FinishTarget 1040812 1",
+      [6] = "sgm FinishTarget 1040803 1",
+      [7] = "sgm FinishTarget 1040804 1",
+      [8] = "sgm FinishTarget 1040814 1"
+    },
+    GMDisplayName = "解锁所有熔炉等级任务",
+    GMIntegrationName = "FinishAllForgeLevelQuest"
   },
   FinishAllStarterQuest = {
     GMCommands = {
@@ -1054,6 +1070,11 @@ return ReadOnly("GMIntegration", {
       [2] = "sgm tct2",
       [3] = "sgm tct2",
       [4] = "sgm tct2",
+      [5] = "sgm tct2",
+      [6] = "sgm tct2",
+      [7] = "sgm tct2",
+      [8] = "sgm tct2",
+      [9] = "sgm tct2",
       [10] = "sgm tct2"
     },
     GMDisplayName = "联机时长增加10分钟",
@@ -1065,6 +1086,11 @@ return ReadOnly("GMIntegration", {
       [2] = "sgm tct2",
       [3] = "sgm tct2",
       [4] = "sgm tct2",
+      [5] = "sgm tct2",
+      [6] = "sgm tct2",
+      [7] = "sgm tct2",
+      [8] = "sgm tct2",
+      [9] = "sgm tct2",
       [10] = "sgm tct2",
       [11] = "sgm tct2",
       [12] = "sgm tct2",
@@ -1354,19 +1380,21 @@ return ReadOnly("GMIntegration", {
   UnlockAbyss131 = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "sgm CompleteCondition 8002",
-      [3] = "sgm SetAbyssLevelProgress 1312 50 5"
+      [2] = "sgm CompleteCondition 4220",
+      [3] = "sgm CompleteCondition 8002",
+      [4] = "sgm SetAbyssLevelProgress 1402 50 5"
     },
-    GMDisplayName = "新号解锁大秘境1.3上半",
+    GMDisplayName = "新号解锁大秘境1.4上半",
     GMIntegrationName = "UnlockAbyss131"
   },
   UnlockAbyss132 = {
     GMCommands = {
       [1] = "gm SystemCommonUnlock",
-      [2] = "sgm CompleteCondition 8002",
-      [3] = "sgm SetAbyssLevelProgress 1314 50 5"
+      [2] = "sgm CompleteCondition 4220",
+      [3] = "sgm CompleteCondition 8002",
+      [4] = "sgm SetAbyssLevelProgress 1404 50 5"
     },
-    GMDisplayName = "新号解锁大秘境1.3下半",
+    GMDisplayName = "新号解锁大秘境1.4下半",
     GMIntegrationName = "UnlockAbyss132"
   },
   UnlockAllSoloTreasureRepeatDungeon = {
@@ -1455,6 +1483,43 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "YumingBoss",
     GMTab = "任务"
   },
+  ZZZTopPlayer = {
+    GMCommands = {
+      [1] = "gm CompleteSystemConditionWithoutGuide",
+      [2] = "sgm CompleteCondition 4220",
+      [3] = "sgm CompleteCondition 4431",
+      [4] = "sgm aac",
+      [5] = "sgm macml",
+      [6] = "sgm macgml",
+      [7] = "sgm macsml",
+      [8] = "sgm aaw",
+      [9] = "sgm mawml",
+      [10] = "Sgm UnlockForgeLevel 5",
+      [11] = "sgm mawgml",
+      [12] = "sgm PetAdd 4211",
+      [13] = "sgm PetAdd 4221",
+      [14] = "sgm PetAdd 4231",
+      [15] = "sgm PetAdd 4241",
+      [16] = "sgm PetAdd 4251",
+      [17] = "sgm PetAdd 4261",
+      [18] = "sgm  GetAllPetEntry",
+      [19] = "sgm  GetAllPetEntry",
+      [20] = "sgm  GetAllPetEntry",
+      [21] = "sgm  GetAllPetEntry",
+      [22] = "sgm  GetAllPetEntry",
+      [23] = "sgm  GetAllPetEntry",
+      [24] = "sgm aar",
+      [25] = "sgm ar 101 10000000000",
+      [26] = "sgm ar 2001 99999999",
+      [27] = "sgm aam 10",
+      [28] = "sgm aam 10",
+      [29] = "sgm aam 10",
+      [30] = "sgm aam 10"
+    },
+    GMDisplayName = "成为大佬",
+    GMIntegrationName = "ZZZTopPlayer",
+    GMTab = "战斗"
+  },
   alch = {
     GMCommands = {
       [1] = "gm skipregion 1 103201 1"
@@ -1463,6 +1528,17 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "alch",
     GMTab = "场景"
   },
+  anxiangxinglu = {
+    GMCommands = {
+      [1] = "sgm qcf 120206",
+      [2] = "sgm sl 47",
+      [3] = "gm SuccessAllSystemGuide",
+      [4] = "gm SystemCommonUnlock"
+    },
+    GMDisplayName = "【第三章】暗巷行路",
+    GMIntegrationName = "anxiangxinglu",
+    GMTab = "任务"
+  },
   bainianchun = {
     GMCommands = {
       [1] = "gm skipregion 1 104110 1"
@@ -1470,6 +1546,32 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "百年春",
     GMIntegrationName = "bainianchun",
     GMTab = "场景"
+  },
+  baozhaanyanjiu = {
+    GMCommands = {
+      [1] = "sgm qcf 100402",
+      [2] = "gm SystemCommonUnlock",
+      [3] = "gm SuccessAllSystemGuide",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106001 1",
+      [6] = "gm SystemCommonUnlock"
+    },
+    GMDisplayName = "【第三章】爆炸案研究",
+    GMIntegrationName = "baozhaanyanjiu",
+    GMTab = "任务"
+  },
+  cangkuzhandou = {
+    GMCommands = {
+      [1] = "gm SuccessAllSystemGuide",
+      [2] = "sgm sl 47",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm skipregion 1 106001 1",
+      [5] = "sgm qcf 100402",
+      [6] = "sgm stq 10040305"
+    },
+    GMDisplayName = "【第三章】仓库战斗",
+    GMIntegrationName = "cangkuzhandou",
+    GMTab = "任务"
   },
   ch021 = {
     GMCommands = {
@@ -1605,6 +1707,46 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "潮声岩穴",
     GMIntegrationName = "chaosheng",
     GMTab = "场景"
+  },
+  chezhang = {
+    GMCommands = {
+      [1] = "gm SuccessAllSystemGuide",
+      [2] = "sgm sl 47",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm skipregion 1 106101 1",
+      [5] = "sgm qcf 100403",
+      [6] = "sgm stq 10040418"
+    },
+    GMDisplayName = "【第三章】车长车厢战斗",
+    GMIntegrationName = "chezhang",
+    GMTab = "任务"
+  },
+  dixiapaoku = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106001 1",
+      [6] = "sgm qcf 100401",
+      [7] = "sgm stq 10040204"
+    },
+    GMDisplayName = "【第三章】地下跑酷",
+    GMIntegrationName = "dixiapaoku",
+    GMTab = "任务"
+  },
+  dixiaqianru = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "sgm qcf 120206",
+      [3] = "sgm sl 47",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106001 1",
+      [6] = "sgm stq 10040104"
+    },
+    GMDisplayName = "【第三章】地下潜入",
+    GMIntegrationName = "dixiaqianru",
+    GMTab = "任务"
   },
   dongjiao = {
     GMCommands = {
@@ -1867,6 +2009,32 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "flow",
     GMTab = "场景"
   },
+  gotoYWS = {
+    GMCommands = {
+      [1] = "gm SuccessAllSystemGuide",
+      [2] = "sgm sl 47",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm skipregion 1 106001 1",
+      [5] = "sgm qcf 100401",
+      [6] = "sgm stq 10040208"
+    },
+    GMDisplayName = "【第三章】前往医务室",
+    GMIntegrationName = "gotoYWS",
+    GMTab = "任务"
+  },
+  guanlishi = {
+    GMCommands = {
+      [1] = "gm SuccessAllSystemGuide",
+      [2] = "sgm sl 47",
+      [3] = "gm UnlockRegionTeleport 1",
+      [4] = "gm skipregion 1 106001 1",
+      [5] = "sgm qcf 100401",
+      [6] = "sgm stq 10040213"
+    },
+    GMDisplayName = "【第三章】管理室",
+    GMIntegrationName = "guanlishi",
+    GMTab = "任务"
+  },
   guaxiang = {
     GMCommands = {
       [1] = "gm skipregion 1 105601 1"
@@ -1874,6 +2042,34 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "止流卦象房间",
     GMIntegrationName = "guaxiang",
     GMTab = "场景"
+  },
+  haluoji01 = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "sgm qcf 100402",
+      [5] = "sgm stq 10040309",
+      [6] = "gm skipregion 1 106001 1",
+      [7] = "gm UnlockRegionTeleport 1"
+    },
+    GMDisplayName = "【第三章】哈洛吉Boss战01",
+    GMIntegrationName = "haluoji01",
+    GMTab = "任务"
+  },
+  haluoji02 = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106101 1",
+      [6] = "sgm qcf 100404",
+      [7] = "sgm stq 10040501"
+    },
+    GMDisplayName = "【第三章】哈洛吉Boss战02",
+    GMIntegrationName = "haluoji02",
+    GMTab = "任务"
   },
   haojing = {
     GMCommands = {
@@ -1892,6 +2088,20 @@ return ReadOnly("GMIntegration", {
       [5] = "gm TestTrackingQuest 100205"
     },
     GMIntegrationName = "ht"
+  },
+  hunluanchezhan = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106001 1",
+      [6] = "sgm qcf 100401",
+      [7] = "sgm stq 10040205"
+    },
+    GMDisplayName = "【第三章】混乱车站",
+    GMIntegrationName = "hunluanchezhan",
+    GMTab = "任务"
   },
   icelake = {
     GMCommands = {
@@ -1936,6 +2146,19 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "jiaolan",
     GMTab = "场景"
   },
+  jiguangkuaicheshangdemimi = {
+    GMCommands = {
+      [1] = "sgm qcf 100403",
+      [2] = "gm SystemCommonUnlock",
+      [3] = "gm SuccessAllSystemGuide",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106001 1",
+      [6] = "gm SystemCommonUnlock"
+    },
+    GMDisplayName = "【第三章】极光快车上的秘密",
+    GMIntegrationName = "jiguangkuaicheshangdemimi",
+    GMTab = "任务"
+  },
   jitan = {
     GMCommands = {
       [1] = "gm skipregion 1 104101 1"
@@ -1951,6 +2174,34 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "潜龙居",
     GMIntegrationName = "julong",
     GMTab = "场景"
+  },
+  kajiaboss01 = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106101 1",
+      [6] = "sgm qcf 100404",
+      [7] = "sgm stq 10040502"
+    },
+    GMDisplayName = "【第三章】卡嘉Boss战一阶段",
+    GMIntegrationName = "kajiaboss01",
+    GMTab = "任务"
+  },
+  kajiaboss02 = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106101 1",
+      [6] = "sgm qcf 100404",
+      [7] = "sgm stq 10040503"
+    },
+    GMDisplayName = "【第三章】卡嘉Boss战二阶段",
+    GMIntegrationName = "kajiaboss02",
+    GMTab = "任务"
   },
   kk = {
     GMCommands = {
@@ -2040,6 +2291,33 @@ return ReadOnly("GMIntegration", {
     GMDisplayName = "奥特赛德家",
     GMIntegrationName = "outside",
     GMTab = "场景"
+  },
+  panpa = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm UnlockRegionTeleport 1",
+      [6] = "gm skipregion 1 106001 1",
+      [7] = "sgm qcf 100401"
+    },
+    GMDisplayName = "【第三章】攀爬",
+    GMIntegrationName = "panpa",
+    GMTab = "任务"
+  },
+  paotaifeiting = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "gm skipregion 1 106101 1",
+      [5] = "sgm qcf 100404",
+      [6] = "gm UnlockRegionTeleport 1"
+    },
+    GMDisplayName = "【第三章】炮台飞艇",
+    GMIntegrationName = "paotaifeiting",
+    GMTab = "任务"
   },
   pool = {
     GMCommands = {
@@ -2200,6 +2478,32 @@ return ReadOnly("GMIntegration", {
     GMIntegrationName = "thea",
     GMTab = "场景"
   },
+  tiaochepaoku = {
+    GMCommands = {
+      [1] = "gm SystemCommonUnlock",
+      [2] = "gm SuccessAllSystemGuide",
+      [3] = "sgm sl 47",
+      [4] = "sgm qcf 100403",
+      [5] = "sgm stq 10040402",
+      [7] = "gm UnlockRegionTeleport 1"
+    },
+    GMDisplayName = "【第三章】跳车跑酷",
+    GMIntegrationName = "tiaochepaoku",
+    GMTab = "任务"
+  },
+  tiedaoxianshangdeyinmou = {
+    GMCommands = {
+      [1] = "sgm qcf 100401",
+      [2] = "gm SystemCommonUnlock",
+      [3] = "gm SuccessAllSystemGuide",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106001 1",
+      [6] = "gm SystemCommonUnlock"
+    },
+    GMDisplayName = "【第三章】铁道线上的阴谋",
+    GMIntegrationName = "tiedaoxianshangdeyinmou",
+    GMTab = "任务"
+  },
   tingya = {
     GMCommands = {
       [1] = "gm skipregion 1 104102 1"
@@ -2218,12 +2522,7 @@ return ReadOnly("GMIntegration", {
   },
   train = {
     GMCommands = {
-      [1] = "gm enterdungeon 900001",
-      [5] = "sgm tct2",
-      [6] = "sgm tct2",
-      [7] = "sgm tct2",
-      [8] = "sgm tct2",
-      [9] = "sgm tct2"
+      [1] = "gm enterdungeon 900001"
     },
     GMDisplayName = "梦境训练场",
     GMIntegrationName = "train",
@@ -2330,13 +2629,24 @@ return ReadOnly("GMIntegration", {
   },
   wuyousheng = {
     GMCommands = {
-      [1] = "gm skipregion 1 105501 1",
-      [6] = "sgm qcf 100103",
-      [7] = "sgm qc 10020107"
+      [1] = "gm skipregion 1 105501 1"
     },
     GMDisplayName = "无由生聚集地",
     GMIntegrationName = "wuyousheng",
     GMTab = "场景"
+  },
+  xianyirendexian = {
+    GMCommands = {
+      [1] = "sgm qcf 100404",
+      [2] = "gm SystemCommonUnlock",
+      [3] = "gm SuccessAllSystemGuide",
+      [4] = "gm UnlockRegionTeleport 1",
+      [5] = "gm skipregion 1 106101 1",
+      [6] = "gm SystemCommonUnlock"
+    },
+    GMDisplayName = "【第三章】嫌疑人的现身",
+    GMIntegrationName = "xianyirendexian",
+    GMTab = "任务"
   },
   yanyin = {
     GMCommands = {
@@ -2364,10 +2674,7 @@ return ReadOnly("GMIntegration", {
   },
   zhilvge = {
     GMCommands = {
-      [1] = "gm skipregion 1 105101 1",
-      [5] = "sgm qcf 100102",
-      [6] = "sgm tct2",
-      [7] = "sgm tct2"
+      [1] = "gm skipregion 1 105101 1"
     },
     GMDisplayName = "执律阁室内",
     GMIntegrationName = "zhilvge",

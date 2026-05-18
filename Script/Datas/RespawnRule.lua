@@ -17,6 +17,18 @@ return ReadOnly("RespawnRule", {
     RecoverUI = "BattleResurgence",
     RuleId = "Abyss"
   },
+  AsyncCombat = {
+    DelayTime = 1.8,
+    DissolveAfterDead = false,
+    DyingDuration = 20,
+    NotModify = true,
+    PhantomRecoverSpeed = 0,
+    PhantomRecoverTimes = 0,
+    PlayerRecoverSpeed = 0,
+    PlayerRecoverTimes = 0,
+    RecoverUI = "BattleResurgence",
+    RuleId = "AsyncCombat"
+  },
   CommonRegion = {
     DelayTime = 1.8,
     DissolveAfterDead = true,

@@ -1,4 +1,5 @@
 local ActivityUtils = require("Blueprints.UI.WBP.Activity.ActivityUtils")
+local JJGameController = require("BluePrints.UI.WBP.ActivityJJGame.JJGameController")
 local Component = {}
 local NormalRewardReddotName = "JJGameTask_Normal_Reddot"
 local ChallengeRewardReddotName = "JJGameTask_Challenge_Reddot"
@@ -8,6 +9,14 @@ local TaskType = {
   Cycle = 3,
   Achievement = 4
 }
+
+function Component:_OnLoginSuccess()
+  JJGameController:Init()
+end
+
+function Component:LeaveWorld()
+  JJGameController:Destory()
+end
 
 function Component:MidTermGetScoresRewards(InCallBack)
   self.logger.info("MidTermGetScoresRewards")
@@ -92,21 +101,19 @@ function Component:UpdateJJGameReddot(TaskId)
   local Task = self.MidTermGoals[MidTermGoalEventId].Tasks[TaskId]
   if Task then
     local TaskData = DataMgr.MidTermTask[Task.UniqueID]
+    local EventData = DataMgr.EventMain[MidTermGoalEventId]
+    local currentTime = TimeUtils.NowTime()
     if TaskData and TaskData.TaskType == TaskType.Achievement then
-      local MidTermGoalEventId = DataMgr.MidTermGoalConstant.MidTermGoalEventId.ConstantValue
-      local EventStartTime = DataMgr.EventMain[MidTermGoalEventId].EventStartTime
-      local currentTime = TimeUtils.NowTime()
-      local intervalDays = TimeUtils.GetIntervalDay(EventStartTime, currentTime)
+      local intervalDays = TimeUtils.GetIntervalDay(EventData.EventStartTime, currentTime)
       local calculatedEventDay = intervalDays + 1
-      if calculatedEventDay >= TaskData.EnableDay then
+      if calculatedEventDay >= TaskData.EnableDay and currentTime < EventData.EventEndTime then
         self:TryIncreaceChallengeTaskRewardReddot(TaskId)
       end
-    else
-      local EventEndTime = DataMgr.EventMain[MidTermGoalEventId].EventEndTime
-      if EventEndTime > TimeUtils.NowTime() then
-        self:TryIncreaceNormalRewardReddot(TaskId)
-      end
     end
+  end
+  local ActiNode = ReddotManager.GetTreeNode("Acti_JJGame")
+  if ActiNode and ActiNode.OnRefreshNodeData then
+    ActiNode:OnRefreshNodeData(MidTermGoalEventId)
   end
 end
 

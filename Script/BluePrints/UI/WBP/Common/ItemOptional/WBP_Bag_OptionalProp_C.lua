@@ -145,6 +145,12 @@ function M:CloseDialog()
   end
 end
 
+function M:PackageData()
+  local PackageInfo = {}
+  PackageInfo.Count = self.CurrentCount
+  return PackageInfo
+end
+
 function M:RefreshDialogTip()
   local Funds = {}
   Funds[1] = {}

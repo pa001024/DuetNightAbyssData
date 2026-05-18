@@ -160,6 +160,8 @@ end
 
 function BP_SeatBase_C:ForceCloseMechanism(PlayerActorEid, IsSuccess)
   local Player = Battle(self):GetEntity(PlayerActorEid)
+  local MainPlayer = UGameplayStatics.GetPlayerCharacter(self, 0)
+  local IsMainPlayer = Player.Eid == MainPlayer.Eid
   if IsMainPlayer then
     Player.OnInteractiveDelegate:Remove(self.ChestInteractiveComponent, self.ChestInteractiveComponent.EndInteractive)
   end

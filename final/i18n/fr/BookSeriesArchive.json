@@ -473,7 +473,7 @@
       {
         "id": 2000012,
         "type": "Drop",
-        "name": "Le chef invincible de la Légion : Tome I",
+        "name": "L’Invincible Commandant de Légion I",
         "text": "Chapitre 226 — Combat acharné ! Le Tourbillon embrasé brise la Flèche divine !\n\nLes vagues de la Légion s’abattirent contre la lumière d’Élysium. À chaque incantation de l’Émissaire Céleste, un pilier de lumière transperçait la terre et renversait des dizaines de soldats valeureux, mêlant leurs cris au grondement des explosions. La lumière consumait le sol, soulevant des cendres rouges qui tourbillonnaient comme un orage de braises.\n\n« <H>À mort les dieux !</> » hurlaient les soldats, emplissant chaque brèche de leurs corps avant même que la poussière ne retombe. \nChaque rayon abattu, chaque vie fauchée, ravivait leur serment : aucune lumière sacrée corrompue ne saurait briser la volonté de la Légion.\n\nPourtant, même la marée la plus déchaînée finit par se briser sur un barrage. Les rangs s’amenuisaient, les pertes grimpaient — froides, implacables.\n\nQuand une nouvelle colonne de lumière s’abattit, un homme s’avança au premier rang. Il leva son arme et cria : « <H>Toute gloire à l’Empereur !</> »\n\nLa lueur engloutit sa voix. Les soldats se turent, sachant qu’un autre héros venait de tomber. Ils n’avaient qu’un choix : suivre ses pas, et frapper à leur tour — muets, mais animés de la même ferveur.\n\nMais cette fois, le corps du héros ne s’écrasa pas. Il reposait dans les bras d’un jeune homme qui tendait la main vers la lumière — le Commandant de Légion, Leo.\n\nÀ sa vue, le tumulte redoubla. Tous savaient que le sort de la bataille reposait entre ses mains.\n\n« Commandant, derrière vous ! »\n\nPlusieurs rayons s’abattirent sur lui, mais Leo ne broncha pas. Il déposa doucement le soldat, leva un doigt, et la lumière se dissipa en milliers d’éclats, fondus dans la fumée. Un mouvement à peine perceptible — et le feu des cuirassés faucha les cieux, abattant l’Émissaire Céleste.\n\nAlors Leo s’avança, lentement. La digue se rompit à sa suite, et sa voix résonna sur tout le champ de bataille :\n\n« Pardonnez-moi... je suis arrivé trop tard. »\n\nPuis, levant son arme vers la tour sacrée :\n\n« <H>C’en est fini ! Sortez donc de vos tours, dieux corrompus !</> »\n\nLe récit s’interrompt ici. L’Émissaire Céleste parviendra-t-il à repousser la volonté de la Légion ? Leo réussira-t-il à faire choir les dieux de leur trône ?\nLa suite dans le prochain numéro de L’Invincible Commandant de Légion.",
         "srId": 101101,
         "pos": [
@@ -2278,6 +2278,179 @@
           21880.88,
           -42970.92
         ]
+      }
+    ]
+  },
+  {
+    "id": 1118,
+    "name": "Menu des ouvriers de la Gare des Cent-Fleurs",
+    "desc": "Une affiche imprimée retrouvée dans la zone souterraine des installations de forge de la Gare des Cent-Fleurs. Elle semble avoir été arrachée de l’endroit où elle était affichée avant d’être jetée ici sans ménagement. La personne qui l’a retirée était visiblement furieuse de son contenu : une fois dépliée, les coins portent même des traces de salive suspectes...",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000118,
+        "type": "Drop",
+        "text": "Repas fournis par la Gare des Cent-Fleurs\n \nPetit-déjeuner : pain noir, eau\nDéjeuner : pommes de terre bouillies, soupe de haricots\nDîner : aucun repas supplémentaire n’est fourni. Les ouvriers travaillant jusqu’au lendemain peuvent récupérer une portion de légumes marinés auprès du poste de garde.\n \nRèglement :\n \n1) Pendant les horaires longs, le petit-déjeuner est distribué de 8 h 30 à 9 h 00. Pendant les horaires courts, il est distribué de 9 h 00 à 9 h 30. Le déjeuner est servi de 12 h 00 à 13 h 00, quel que soit l’horaire en vigueur. Tous les horaires sont déterminés selon l’horloge de la gare. Les ouvriers prenant leur poste après 6 h 00 n’ont pas droit aux repas de la journée.\n2) La distribution des repas prend fin cinq minutes avant la fin du service. À la sonnerie de reprise du travail, les portes du réfectoire sont fermées. Tout ouvrier ne retournant pas à son poste à temps recevra un avertissement. Trois avertissements entraînent un renvoi.\n3) Il est interdit de sortir de la nourriture du réfectoire, de manger pendant les heures de travail ou de rapporter des restes sur le lieu de travail.\n4) Il est interdit de refaire la queue pour obtenir davantage de nourriture. Les contrevenants devront payer leurs repas de la journée.\n5) Les enfants travailleurs n’ont pas le droit de manger assis. Les ouvriers à temps partiel ne sont pas autorisés à entrer dans le réfectoire.\n6) Toute perturbation de l’ordre dans le réfectoire est interdite, y compris, sans s’y limiter : discuter, s’évanouir, vomir, se disputer, doubler dans la file ou allaiter.\n7) Les horaires des repas sont déterminés par les sonneries. Lorsque la sonnerie préparatoire retentit, les ouvriers doivent progressivement quitter le réfectoire. Lorsque la sonnerie de reprise retentit, tous les ouvriers doivent déjà se trouver à leur poste afin que le contremaître puisse vérifier les présences.\n8) Les employés du réfectoire n’ont pas le droit de manger avant la fin du service des repas. Une fois la sonnerie préparatoire déclenchée, ils doivent cesser de manger, ranger le réfectoire et effectuer le nettoyage.\n9) Il est autorisé d’apporter sa propre nourriture, à condition qu’elle soit consommée dans le réfectoire pendant les horaires prévus et enregistrée avant l’entrée dans le réfectoire. En cas de diarrhée ou de symptômes similaires, la gare décline toute responsabilité. Toute personne voyant quelqu’un introduire de la nourriture non enregistrée peut le signaler au garde de service.\n \n ...\n \n(Je pensais qu’il ne s’agissait que d’un banal menu destiné aux ouvriers, mais la plus grande partie du document est en réalité occupée par des règles absurdes, sévères et interminables... Les conditions de travail à la Gare des Cent-Fleurs doivent être épouvantables.)",
+        "srId": 106301
+      }
+    ]
+  },
+  {
+    "id": 1119,
+    "name": "Avis de recrutement de la Gare des Cent-Fleurs",
+    "desc": "Une affiche de recrutement pour l’usine placée à l’entrée de la gare. Son discours est catégorique, débordant d’enthousiasme, au point de faire vibrer le cœur de chaque jeune idéaliste qui la lit. Pourtant, quelqu’un y a dessiné un visage souriant au marqueur... sans doute une manière d’exprimer son approbation totale du message.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000119,
+        "type": "Drop",
+        "text": "Relier le sud lointain au nord glacé, unir les terres éloignées et les rêves de demain : les rails entrecroisés sillonnent les terres pleines d’espoir d’Hyperborea, tandis que les gares scintillent comme des étoiles à travers le pays. Fidèles sujets de Sa Majesté, unissons nos forces et avançons ensemble afin de bâtir de nos propres mains l’avenir du chemin de fer hyperboréen !\n \nLa Gare des Cent-Fleurs recrute chaleureusement :\n1) Des personnes travailleuses, fiables, disciplinées, de bonne conduite et pleines d’espoir\n2) Aucun prérequis concernant l’âge, le sexe, la race ou l’expérience professionnelle\n \nNous proposons :\n1) Une formation assurée par des ouvriers expérimentés comptant plus de vingt années de métier. Tout ce que vous souhaitez apprendre, vous pourrez l’apprendre ici.\n2) Un revenu parfaitement stable, versé intégralement et sans aucun retard.\n3) Des repas distribués chaque jour à heure fixe afin que chaque ouvrier puisse manger à sa faim.\n4) Une atmosphère de travail unie et conviviale. Ici, il n’existe ni supérieurs ni inférieurs, ni barrières entre les races. Dès votre arrivée, vous faites partie des nôtres. Nous accueillons chaleureusement chaque citoyen loyal envers Hyperborea.\n \nRejoignez la Gare des Cent-Fleurs et ouvrez un nouveau chapitre de votre vie. Même si vous ne pouvez pas combattre sur le champ de bataille pour la gloire de Sa Majesté, vous pouvez malgré tout mettre votre valeur au service de l’Empire. La Gare des Cent-Fleurs a besoin de vous, tout comme l’avenir d’Hyperborea.\n \nRejoignez-nous ! Pour la gloire !\n \n(Quel discours de recrutement exaltant... Quiconque le lirait serait forcément emporté par un tel enthousiasme. Les conditions promises paraissent même étonnamment avantageuses.)",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1120,
+    "name": "Mon testament",
+    "desc": "Une simple feuille blanche couverte d’une écriture maladroite et irrégulière. La mise en page est chaotique, la ponctuation utilisée au gré de l’humeur, et les fautes d’orthographe se multiplient. On parvient malgré tout à comprendre le contenu, mais ce soi-disant testament ne contient aucune information utile ni la moindre signification — à l’image de la vie vide laissée derrière son auteur.",
+    "icon": "T_Read_03",
+    "res": [
+      {
+        "id": 2000120,
+        "type": "Drop",
+        "text": "Aujourd’hui, je vais écrire mon testament\nJe sais toujours pas vraiment ce qu’est un testament. J’ai entendu les grands messieurs dire ça en passant à côté de moi. Y avait un vieux qui allait mourir, et ils disaient qu’il devait écrire son testament avant de crever. J’ai pas vraiment compris ce que ça voulait dire, mais ça avait l’air important. Puis eux avaient l’air contents aussi, comme si le vieux qui mourait c’était une bonne chose. Alors avant de mourir, moi aussi je dois écrire un testament.\nJe crois même pas que j’ai l’âge d’un vieux. À l’usine, ils appellent le gardien « vieux con ». Y en a même qui appellent le chef de gare comme ça quand ils ont assez de courage. Mais personne m’a jamais appelé vieux. On m’appelle plutôt « gamin », « hé toi » ou « ce Charon-là ».\nMais ça m’empêche pas de mourir. Et ça m’empêche pas non plus d’écrire un testament.\nLe problème c’est que je sais pas quoi écrire. J’ai jamais vraiment étudié. J’sais même pas combien de temps je suis allé à l’école. Pas longtemps, je suppose. On m’a vite envoyé bosser. Y avait pas le choix. Ma mère était en train de mourir et il fallait de l’argent, alors j’ai arrêté l’école et je suis parti travailler.\nMais elle est morte quand même.\n \nAlors voilà ce que je suis : un Charon inutile. Je travaille moins bien que les autres, je sais pas parler aux gens quand ils discutent. J’ai l’impression que tout ce que je fais sert à rien... Enfin si, peut-être une chose : me faire engueuler. Les gens ont l’air de se sentir mieux après m’avoir crié dessus. Mon père surtout. Quand il boit, il me hurle dessus, puis il me frappe, puis le lendemain il vient s’excuser. Des fois j’ai l’impression qu’il le fait exprès. Il veut juste taper quelqu’un mais personne d’autre le laisse faire.\nJe me demande si quelqu’un sera triste quand je mourrai. Mon père peut-être. Il aura plus personne à frapper après ça. J’aimerais trouver une bonne façon de mourir. Une où y aurait quand même un peu d’argent à récupérer derrière. Mais j’ai pas encore trouvé. Faudrait au moins que ma mort puisse payer une bouteille à mon père, sinon je serai vraiment bon à rien. Comme le vieux dont parlaient les grands messieurs. Eux avaient l’air tellement contents qu’il crève.\n \nBon. Je m’éloigne encore du sujet. Faut quand même que je trouve une bonne manière de mourir. Mais j’en ai toujours aucune. Peut-être qu’après un moment j’aurai plus envie de mourir.\nMais c’est quand même sacrément drôle. J’ai écrit tout ça et j’arrive même pas à trouver une seule raison de continuer à vivre... Tant pis alors. Je vais mourir.\n \nBon, je crois que mon testament s’arrête ici. J’sais plus quoi écrire. Si j’arrivais à récupérer le testament du vieux, je pourrais peut-être recopier dessus pour que le mien ait l’air plus sérieux. Mais c’est évident que je pourrai pas l’avoir. Bref, ça s’arrête là. Je vais aller réfléchir à comment mourir maintenant.",
+        "srId": 106301
+      }
+    ]
+  },
+  {
+    "id": 1121,
+    "name": "Règlement du Salon du Sifflet",
+    "desc": "Un document partagé entre les membres du Salon du Sifflet, recensant une série de règles de conduite complètement absurdes. Les premières pages présentent avec soin les règlements et l’organisation actuelle du groupe, dans une écriture claire et méthodique. Entre les lignes et jusque dans les marges s’entassent des déclarations manuscrites de « passion dévorante », laissées par les membres eux-mêmes.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000121,
+        "type": "Drop",
+        "text": "1) Lorsque vous vous adressez au Chef de gare Eisenbahn, l’usage des honorifiques est obligatoire.\n(Tout pour Eisenbahn !)\n(Ce commentaire est un parfait contre-exemple. Le titre complet est « Chef de gare Eisenbahn » ! Pas un mot ne doit être omis !)\n \n2) Il est interdit de mentionner toute autre personnalité que le Chef de gare Eisenbahn, y compris les vedettes de théâtre et autres célébrités.\n(*un nom rayé* est vraiment lamentable ces derniers temps. Comment peut-on jouer aussi mal et prétendre encore faire ce métier ? Le Chef de gare Eisenbahn, lui, ne me déçoit jamais.)\n(On a pourtant déjà dit qu’il était interdit de parler d’autres célébrités, non ? Qui continue encore à enfreindre les règles ? Que je découvre pas qui a écrit ça.)\n \n3) Chaque membre doit connaître par cœur la date de naissance, la taille, les mensurations et le poids du Chef de gare Eisenbahn.\n(Alerte info : le Chef de gare Eisenbahn a encore perdu un kilo. Poids actuel : 73 kg.)\n(Il a encore maigri... Ça me brise le cœur. Mais les gens autour de lui servent à quoi exactement ? Personne n’a remarqué qu’il avait autant maigri ?)\n(Il travaille beaucoup ? Ouais, surtout à fréquenter des femmes d’affaires étrangères.)\n(Toi, t’es clairement pas membre du Salon du Sifflet. Arrête un peu, ce manuel est pas fait pour toi.)\n(Ça me tue qu’il y ait encore des gens pour inventer des rumeurs amoureuses sur le Chef de gare Eisenbahn. Tout le monde sait qu’il n’a que son travail dans le cœur.)\n \n4) Les membres du Salon du Sifflet doivent s’entraider et ne jamais garder pour eux seuls des objets liés au Chef de gare Eisenbahn, tels que des étuis à cigarettes, affiches et autres produits dérivés.\n \n5) La vente de produits contrefaits liés au Chef de gare Eisenbahn est strictement interdite. Toute personne prise en faute devra en assumer les conséquences.\n \n ...\n \n54) Les membres du Salon du Sifflet doivent protéger activement la réputation du Chef de gare Eisenbahn et lutter fermement contre toute parole ou comportement visant à le nier, le diffamer, salir son image ou propager des rumeurs à son sujet. Si nécessaire, tous les moyens sont permis.\n \n(On peut leur lancer des briques ?)\n(On peut, mais c’est quand même pas très élégant. J’ai quelques contacts au Bureau de la Sécurité : écris simplement le nom ici et je m’occupe du reste.)\n \n(Je suis nouveau... Y a beaucoup trop de règles. Si j’arrive pas à tout retenir, j’ai le droit de me faire des antisèches ?)\n(Comment tu peux déjà ne pas retenir un truc aussi simple ? T’es pas un espion du groupe de théâtre d’à côté par hasard ?)",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1122,
+    "name": "Rapport d’analyse des activités quotidiennes du Chef de gare Eisenbahn",
+    "desc": "Un rapport d’observation consacré à Eisenbahn, consignant avec précision les lieux, horaires et actions observés. Rédigé dans un ton froid et méthodique, il détaille le moindre déplacement et chaque élément de son emploi du temps, comme si l’auteur était devenu une ombre le suivant partout.\nSon absence totale d’émotion contraste fortement avec l’atmosphère passionnée qui règne au sein du Salon du Sifflet, ce qui confère au document une aura étrangement suspecte.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000122,
+        "type": "Drop",
+        "text": "Rapport d’analyse des activités quotidiennes du Chef de gare Eisenbahn\n \n12 septembre — Temps clair — Zone de fret de la Gare des Cent-Fleurs\nVers 10 h 00 : aperçu dans la partie arrière de la zone de fret, accompagné de quatre gardes. Entretien avec des responsables de Givrelac. Le sujet dirigeait régulièrement son regard vers l’intérieur des wagons.\n \n25 septembre — Ciel couvert — Hall principal de la gare\n15 h 00 : apparition au niveau des portiques de contrôle sous un déguisement. Portait une casquette à long bord quadrillé ainsi qu’une paire de lunettes teintées brun foncé. Comportement jugé suspect.\n \n2 octobre — Nuageux puis dégagé — Zone de fret de la Gare des Cent-Fleurs\n1 h 40 : arrivée d’un train dont l’entrée en gare n’était pas autorisée. Sujet non aperçu, mais présence confirmée de membres de sa garde rapprochée. Incident étroitement lié à la rencontre du 12 septembre dernier.\n \n5 octobre — Temps pluvieux — Zone des matières premières de la Gare des Cent-Fleurs\nSujet non aperçu. Un marchand ivre a cependant été vu errant dans la zone, accusant quelqu’un de tromperie et de trahison. L’individu a quitté la gare peu après. Passage à tabac suspecté par la suite.\n \n27 octobre — Temps clair — Quai\nSujet aperçu en uniforme militaire officiel. A adressé salutations et courbettes aux passagers embarquant avant d’assister au départ du train. État général stable. Aucune anomalie constatée.\n \n ...",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1123,
+    "name": "Registre sacré",
+    "desc": "Un registre à la couverture souple, qui ne contient pourtant aucune trace de revenus ou de dépenses ordinaires. Il sert avant tout de principal canal d’échange et de transaction entre les membres du Salon du Sifflet.\nLes admirateurs les plus fanatiques d’Eisenbahn le considèrent comme plus précieux que leur propre vie et le vénèrent comme un « registre sacré » qu’il serait interdit de profaner.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000123,
+        "type": "Drop",
+        "text": "Écriture soignée : Recherche affiche du 2e anniversaire du Chef de gare Eisenbahn. 50 pièces d’argent.\nÉcriture précipitée : Avec si peu, t’auras même pas celle de cette année.\nÉcriture aux lettres liées : 80 pièces d’argent, ça te va ?\nÉcriture soignée : Désolé... ça dépasse mon budget.\n \nÉcriture hésitante : Quelqu’un veut les cigarettes commémoratives d’anniversaire du Chef de gare Eisenbahn ? J’ai plus l’étui, seulement les cigarettes.\nÉcriture soignée : Ça sert à quoi d’acheter juste les cigarettes ?\nÉcriture hésitante : À fumer les mêmes que le Chef de gare Eisenbahn.\n \nÉcriture puissante et appuyée : Timbres commémoratifs du 5e anniversaire du Chef de gare Eisenbahn, édition estampée. 50 pièces d’argent. Échange en main propre demain à 15 h.\nÉcriture enfantine : « Édition estampée » ? Pff, c’est juste une contrefaçon imprimée chez toi, non ?\nÉcriture soignée : Ne souillez pas notre registre sacré avec vos idioties !\n \n ...\n \nÉcriture élégante : Le Chef de gare Eisenbahn apparaîtra demain après-midi sur le quai. Plus d’informations disponibles en échange privé.\n \nÉcriture douce : Événement photo du 10e anniversaire du Chef de gare Eisenbahn. Recherche partenaire pour prendre les photos. J’apporte l’appareil, vous prenez les clichés. Je suis vraiment nul en photo.\n \nÉcriture acérée : Récompenses de bienvenue du Chef de gare Eisenbahn disponibles. Laissez vos coordonnées si intéressé.\nÉcriture enfantine : T’as trouvé ça où ? Le président a interdit la revente de ce genre de trucs. Considère ça comme un avertissement.",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1124,
+    "name": "L’Invincible Chef de Gare",
+    "desc": "Un roman-feuilleton au titre bâclé, relatant les aventures d’un jeune Hyperboréen sur fond de guerre entre Hyperborea et Élysium, survenue il y a plusieurs décennies. Présenté comme le pendant de <I>L’Invincible Commandant de Légion</>, il est particulièrement populaire auprès de la jeunesse impériale.",
+    "icon": "T_Read_01",
+    "res": [
+      {
+        "id": 2000124,
+        "type": "Drop",
+        "name": "L’Invincible Chef de Gare I",
+        "text": "Chapitre 189 — Cette voie ferrée sera longue\n \n« Chef de gare Leo, la capacité de transit de votre gare ne peut-elle vraiment pas être multipliée par cinq ? »\nLeo reposa la lettre du ministre des transports avant de pousser un léger soupir.\nCe n’était pas l’exigence apparemment déraisonnable des ministres qui le décourageait. Leo savait parfaitement qu’une augmentation par cinq représentait une demande à la fois raisonnable et nécessaire face à l’enlisement des combats sur le front.\n \nLe chemin de fer était le système sanguin d’Hyperborea, acheminant sans relâche ravitaillement, armement et soldats à travers tout l’Empire afin d’y faire circuler un sang neuf et brûlant.\n \nEn tant que chef de gare, Leo comprenait parfaitement que la capacité actuelle du réseau ferroviaire impérial ne suffisait plus à compenser les pertes colossales de la guerre. Sans amélioration rapide du rendement, les soldats du front risquaient bientôt de devoir combattre à mains nues faute de munitions et d’armes.\nLe courage des soldats impériaux ne reculait pas devant une telle perspective. Mais Leo, gardien des artères du transport impérial, savait qu’il avait le devoir de tout mettre en œuvre afin de réduire les sacrifices de ses compatriotes.\nLeo saisit son communicateur, élaborant déjà plusieurs plans pour améliorer l’efficacité de la gare.\n \n« Agrandissement des quais... centralisation du trafic... conversion des trains de voyageurs... »\nIl ouvrit finalement le canal de communication et attribua les tâches selon les spécialités de chacun de ses subordonnés.\n« Kate, tu as de bons contacts. Va rassembler de la main-d’œuvre ; je travaillerai avec les Éolipyliens afin de poser la nouvelle ligne. »\n« Reçu. »\n« Wolfe, tu t’y connais en mécanique. Forme une équipe de réparation d’urgence capable de dégager et réparer immédiatement les trains immobilisés sur les voies. »\n« Reçu. »\n \n...\n \nUne fois les dernières directives transmises, Leo roula une cigarette entre ses doigts avant de lever les yeux vers le sud, en direction de l’Église Élyséenne.\n« Un jour, les voies ferrées impériales atteindront la Tour d’Élysium. Les artères de l’Empire s’étendront jusque sur chaque terre des faux dieux. »\n \nLeo rangea sa cigarette puis retourna vers la gare. Une bourrasque fit claquer son manteau, sans jamais ralentir ses pas résolus.\n \n« Je fumerai cette cigarette lorsque ce jour viendra. »\n \nLeo parviendra-t-il à accomplir la mission confiée par sa hiérarchie ? La gare qu’il dirige réussira-t-elle à soutenir le front ?\nLa suite dans le prochain chapitre de <I>L’Invincible Chef de Gare</> !",
+        "srId": 106001
+      }
+    ]
+  },
+  {
+    "id": 1125,
+    "name": "Relevé détaillé des comptes annuels de la Gare des Cent-Fleurs de Flodia",
+    "desc": "Il s’agit vraisemblablement des documents conservés par Handy avant son exécution sur ordre d’Eisenbahn. Les pages sont couvertes de chiffres et de comptes complexes ; rien qu’à les parcourir donne le vertige. Reste à savoir pourquoi Handy a perdu la vie pour ce simple registre.",
+    "icon": "T_Read_02",
+    "res": [
+      {
+        "id": 2000125,
+        "type": "Read",
+        "text": "Demande administrative n° 1\nEntretien quotidien de la Gare des Cent-Fleurs\nBudget : 100 000 pièces d’or\nRésultat : refusé\n \nAnnotation :\nLe budget d’entretien de l’an dernier était de 80 000 pièces d’or. Même en tenant compte du vieillissement des installations et de l’augmentation des coûts de maintenance, cette somme reste excessive. Faites quelques économies. Certains composants coûtent plus cher à entretenir qu’à remplacer. Je joins une liste ; procédez aux vérifications selon celle-ci.\n \nDemande administrative n° 2\nL’Académie d’Alchimie souhaite que la gare finance la recherche sur une nouvelle locomotive. En cas de succès, celle-ci serait prioritairement déployée à la Gare des Cent-Fleurs.\nBudget : 245 700 pièces d’or\nRésultat : budget réduit à 45 700 pièces d’or\n \nAnnotation :\nAvec un chiffre aussi précis, on croirait presque la demande sérieuse. Cela fait pourtant plusieurs années qu’ils réclament des subventions sous ce prétexte. L’an dernier, lors de ma visite au chef de gare de Dismania, j’ai appris qu’ils avaient promis exactement la même chose à toutes les grandes gares du pays. Ils essaient simplement de nous soutirer de l’argent. Mais inutile d’entrer en conflit direct avec eux ; accordez-leur simplement une somme symbolique.\n \nDemande administrative n° 3\nLe Salon du Sifflet de la gare sollicite des fonds afin d’entretenir l’image du chef de gare Eisenbahn.\nBudget : 10 000 pièces d’or\nRésultat : refusé\n \nAnnotation :\nCette organisation n’a aucun lien avec moi. Si une nouvelle demande du même genre se présente, inutile de me la transmettre ; refusez-la directement.\n \nDemande administrative n° 4\nAmélioration des conditions de travail des ouvriers de la gare\nBudget : 10 000 pièces d’or\nRésultat : augmenté à 30 000 pièces d’or\n \nAnnotation :\nRéaffectez ici les dépenses économisées sur l’entretien quotidien et poursuivez la procédure comme prévu."
+      }
+    ]
+  },
+  {
+    "id": 1126,
+    "name": "Rapport sur le détournement de l’Express Aurora",
+    "desc": "Un rapport d’incident si accablant que même les hauts fonctionnaires de l’Empire auraient de quoi s’arracher les cheveux en le lisant.",
+    "icon": "T_Read_03",
+    "res": [
+      {
+        "id": 2000126,
+        "type": "Drop",
+        "text": "Hier à neuf heures du matin, la Princesse Flodia a quitté le quai n° 1 à bord du train la Corneille en direction de la capitale impériale, Dismania.\n \nL’un des suspects, {性别:un Chasseur|une Chasseuse} de Phoxène originaire de Givrelac (identité non confirmée à ce jour), avait embarqué une heure plus tôt, à huit heures, à bord du train Rafale, lui aussi en route vers Dismania. Environ trois heures après le départ, la Corneille dépassa le train Rafale. {性别:Le Chasseur|La Chasseuse} de Phoxène profita alors de l’occasion pour sauter sur la Corneille, franchissant les défenses relativement faibles du toit du train avant de prendre la Princesse Flodia en otage et de sauter avec elle sur un autre train circulant sur une voie parallèle : l’Express Aurora.\n \nL’Express Aurora fut ensuite victime d’une prise d’otages orchestrée par Katya, surnommée le « Roi des Bêtes », l’un des dirigeants des Déchus et membre des Brumaires. À la suite de l’incident, la VIᵉ Légion stationnée dans la région de Cocytus déploya immédiatement le dirigeable Hiver éternel afin d’intervenir. Katya menaça cependant le dirigeable en utilisant la Princesse Flodia comme otage. Le dirigeable fut finalement touché par le Canon principal de l’Express Aurora contrôlé par Katya, provoquant l’embrasement de l’Arbre Céleste situé dans le sud de la région de Cocytus.\n \nPar la suite, Katya entra dans un violent affrontement avec {性别:le Chasseur|la Chasseuse} de Phoxène. Selon les estimations, le conflit aurait éclaté à propos du sort réservé à la Princesse Flodia. Katya fut ensuite exfiltrée par les Déchus, tandis que {性别:le Chasseur|la Chasseuse} de Phoxène demeure porté disparu et présumé {性别:mort|morte} dans l’explosion de la locomotive.\n \nLes pertes engendrées par cet incident sont considérables. Le dirigeable Hiver éternel s’est écrasé et la locomotive de l’Express Aurora a été entièrement détruite, sans possibilité de réparation.\n \nPar ailleurs, l’embrasement de l’Arbre Céleste a généré d’importantes quantités de poussière, condamnant durablement l’espace aérien entre la région de Cocytus et Dismania. Si les Déchus venaient à déclencher une révolte d’ampleur à ce moment précis, il deviendrait difficile de mobiliser les dirigeables impériaux pour réprimer les troubles.\n \nLa Princesse Flodia demeure actuellement introuvable. Toutefois, selon plusieurs passagers de l’Express Aurora l’ayant aperçue, elle n’aurait pas été emportée dans l’explosion de la locomotive.\n \nL’incident a causé la mort de treize civils et fait plus de quarante blessés. Le conducteur, le mécanicien ainsi que de nombreux gardes ferroviaires sont tombés en combattant les Déchus. Rendons hommage à ces héros ; l’Empire exigera le sang des Déchus en paiement de cette dette.\n \nToute gloire à l’Empereur !\n \nListe des victimes civiles (13 personnes) :\nJeff Eysen (messager de Givrelac)\nElena Horn (marchande de fourrures de Givrelac)\nCliff Miller (employé de banque de Dismania)\n...",
+        "srId": 101107,
+        "pos": [
+          358,
+          -1796
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1127,
+    "name": "遗落的纸张·百花车站",
+    "desc": "Une collection de feuillets énigmatiques trouvés au hasard de vos pérégrinations.\nCertains sont de délicats rouleaux de parchemin, d’autres encore portent l’odeur fraîche d’une encre à peine sèche ; quelques-uns ne sont que des lambeaux arrachés à la hâte d’un vieux carnet.\nOrdonnées ou illisibles, détaillées ou brouillonnes, toutes partagent pourtant un même trait manifeste : chacune indique, à sa manière, l’emplacement d’un \"trésor\".",
+    "icon": "T_TreasureMap_Chapter01",
+    "res": [
+      {
+        "id": 20650,
+        "type": "Drop",
+        "name": "百花车站·其一",
+        "text": "上次谢谢你给我打掩护，谁能想到，只是打个牌的工夫，刚好赶上工头来检查了……幸亏你反应快，就是下次能不能换个理由，闹肚子拉裤裆里听起来太不体面了……总之还是多谢，今天难得摸到一把好牌，要是被工头抓回去可就冤死了。赢的钱咱也有你一份，给你放在<H>炉子边上了</>，记得去拿。",
+        "srId": 106301
+      },
+      {
+        "id": 20651,
+        "type": "Drop",
+        "name": "百花车站·其二",
+        "text": "想知道轻松工作的秘诀吗？那就是——定期供奉古阿特拉西亚掌管铁轨的神！只要把供品放在<H>轨道附近</>，神明大人就能听到咱们的祈祷！最近我负责的列车的故障率就下降了不少，全都是拜这位神明大人所赐！",
+        "srId": 106301
+      },
+      {
+        "id": 20652,
+        "type": "Drop",
+        "name": "百花车站·其三",
+        "text": "太可怕了……下车的时候发现有位乘客的钱包掉在地上，我一时鬼迷心窍，把它偷偷拿走了……结果里面竟然装着许多符咒一样的奇怪纸张，上面画着好些黑色的月亮，怪瘆人的……听说这是艾利西安的邪教还是什么的标识来着？\n我把钱包放在了<H>医务室门口</>，这样能帮到有需要的人，应该能功过相抵了吧？艾利西安的七神……还是九神来着？总之看到我没拿钱的份上请不要诅咒我啊拜托了！",
+        "srId": 106001
+      },
+      {
+        "id": 20653,
+        "type": "Drop",
+        "name": "百花车站·其四",
+        "text": "（从折痕判断这原本是一封精心递上的信件，不过现在却以展开的状态躺在墙角杂物中，似乎是被谁随手扔掉了……）\n\n亲爱的<H>广播员</>小姐……希望您不会觉得冒昧，但如若不能将我此刻热烈的心情传达给您，我将会为此后悔一生！\n这是我第一次来到冰湖城，站内严厉的安保措施让我不知所措，不慎迷了路。幸运的是，您如同一位从天而降的天使般降临在我面前——即便被制服遮去了大半，我依然能瞥见您那如春日的花儿一般娇艳的粉色长发，您那与紫罗兰同色的优雅眼眸更是令我沉醉。\n虽然您为我指点了出站的方向，但为了再听一次您动听的嗓音，我决定留下来等待您提到的特别广播。\n我在您的<H>工作岗位</>上留下了一份小小的赠礼，作为对您辛勤工作的慰劳。当您甜美的嗓音响起，我将在站厅为您送上最响亮的喝彩！",
+        "srId": 106001
+      },
+      {
+        "id": 20654,
+        "type": "Drop",
+        "name": "百花车站·其五",
+        "text": "哼，你这家伙成天就知道蹲在轨道边里看火车，你的头发都被煤灰腌入味了！\n告诉你个好消息，我把一份零花钱藏在了附近的<H>树林下</>，金额足够买下两个月的连载。怎么样，这下你总愿意起身走走了吧？趁这个机会动动你那僵硬的身体，相信我，你一定能从这个过程中感受到大自然的乐趣！",
+        "srId": 106001
       }
     ]
   }

@@ -36,11 +36,8 @@ function M:OnUpdateUIStyleByInputTypeChange(InputType, DeviceName)
 end
 
 function M:RefreshNpcName()
-  local NpcData = DataMgr.Npc[self.NpcId]
-  local NpcName
-  if NpcData then
-    NpcName = NpcData.UnitName
-  end
+  local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  local NpcName = GameState and GameState:GetNpcName(self.NpcId)
   self.NpcNameText:SetText(GText(NpcName))
 end
 
@@ -53,11 +50,6 @@ function M:RefreshInteractiveItem()
   self.ScrollBox_Interactive:ClearChildren()
   self.InteractiveInfos = Model:GetNpcTalkInteractives(self.NpcId)
   self.InteractiveItems = {}
-  local NpcData = DataMgr.Npc[self.NpcId]
-  local NpcName
-  if NpcData then
-    NpcName = NpcData.UnitName
-  end
   for Index, InteractiveInfo in ipairs(self.InteractiveInfos) do
     local InteractiveItem = UIManager(self):_CreateWidgetNew("StoryInteractiveItem")
     local ShowName = InteractiveInfo.NpcNodeInteractiveName

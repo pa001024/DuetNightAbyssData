@@ -35,11 +35,10 @@ function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
 end
 
 function M:GetMechanismInfo()
-  local ServerEntity = GWorld:GetServerEntity()
-  if not ServerEntity then
+  self.DungeonObject = GWorld:GetGameModeDungeonObject()
+  if not self.DungeonObject then
     return
   end
-  self.DungeonObject = ServerEntity:GetDungeonObject()
   self.ActivatedTicketId = self.DungeonObject.SoloTreasureTicketId
   local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
   if not PlayerController then

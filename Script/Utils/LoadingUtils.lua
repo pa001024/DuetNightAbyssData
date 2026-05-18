@@ -82,6 +82,18 @@ function LoadingCondition:QuestFinish(Params)
   return RtnRes
 end
 
+local function WeightedRandom(Pool, TotalWeight)
+  local Rand = math.random(1, TotalWeight)
+  local Accumulated = 0
+  for _, Entry in ipairs(Pool) do
+    Accumulated = Accumulated + Entry.Weight
+    if Rand <= Accumulated then
+      return Entry.LoadingData
+    end
+  end
+  return nil
+end
+
 local SpecialLoadingRule = {}
 
 function SpecialLoadingRule:CheckRegionCondition(Region, LastRegion, Rule, bIsCrossRegion)
@@ -142,6 +154,37 @@ function SpecialLoadingRule:GetLoadingBpPath(bIsCrossRegion)
       end
     end
   end
+end
+
+function SpecialLoadingRule:GetRanLoadingData()
+  local RanLoadingBGTable = DataMgr.RanLoadingBG
+  if not RanLoadingBGTable then
+    return nil
+  end
+  local CurrentVersionConst = DataMgr.GlobalConstant and DataMgr.GlobalConstant.CurrentVersion
+  local CurrentVersion = CurrentVersionConst and CurrentVersionConst.ConstantValue
+  local NoVersionPool, NoVersionWeight = {}, 0
+  local VersionPool, VersionWeight = {}, 0
+  for _, v in pairs(RanLoadingBGTable) do
+    local RegionLoadingData = DataMgr.RegionLoading[v.LoadingId]
+    if RegionLoadingData and RegionLoadingData.WBPPath then
+      local w = v.Weight or 0
+      if not v.CurrentVersion or v.CurrentVersion == "" then
+        table.insert(NoVersionPool, {LoadingData = RegionLoadingData, Weight = w})
+        NoVersionWeight = NoVersionWeight + w
+      elseif v.CurrentVersion == CurrentVersion then
+        table.insert(VersionPool, {LoadingData = RegionLoadingData, Weight = w})
+        VersionWeight = VersionWeight + w
+      end
+    end
+  end
+  if #NoVersionPool > 0 and NoVersionWeight > 0 then
+    return WeightedRandom(NoVersionPool, NoVersionWeight)
+  end
+  if #VersionPool > 0 and VersionWeight > 0 then
+    return WeightedRandom(VersionPool, VersionWeight)
+  end
+  return nil
 end
 
 return SpecialLoadingRule

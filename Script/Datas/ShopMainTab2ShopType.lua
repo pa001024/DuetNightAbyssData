@@ -29,6 +29,8 @@ return ReadOnly("ShopMainTab2ShopType", {
   [10006] = "AutoChessShop",
   [10007] = "SoloTreasureShop",
   [10008] = "AccessoryDropShop",
+  [10009] = "GuildShop",
+  [10010] = "AppearenceShop",
   [90001] = "GiftShop",
   [90002] = "GiftShop",
   [90003] = "GiftShop"

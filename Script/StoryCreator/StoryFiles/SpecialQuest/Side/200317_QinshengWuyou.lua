@@ -80,12 +80,6 @@ return {
           {
             startQuest = "17730566204248379144",
             startPort = "QuestStart",
-            endQuest = "17730566204248379147",
-            endPort = "In"
-          },
-          {
-            startQuest = "17730566204248379144",
-            startPort = "QuestStart",
             endQuest = "17730566438238379933",
             endPort = "In"
           },
@@ -94,12 +88,6 @@ return {
             startPort = "Out",
             endQuest = "17730566204248379146",
             endPort = "Fail"
-          },
-          {
-            startQuest = "17730566204248379144",
-            startPort = "QuestStart",
-            endQuest = "17739884963495699",
-            endPort = "In"
           },
           {
             startQuest = "17739884963495699",
@@ -136,6 +124,30 @@ return {
             startPort = "Out",
             endQuest = "17730566351758379723",
             endPort = "In"
+          },
+          {
+            startQuest = "17730566204248379144",
+            startPort = "QuestStart",
+            endQuest = "1778840236349632",
+            endPort = "In"
+          },
+          {
+            startQuest = "1778840236349632",
+            startPort = "Fail",
+            endQuest = "17739884963495699",
+            endPort = "In"
+          },
+          {
+            startQuest = "1778840236349632",
+            startPort = "Fail",
+            endQuest = "17730566204248379147",
+            endPort = "In"
+          },
+          {
+            startQuest = "1778840236349632",
+            startPort = "Success",
+            endQuest = "17730566351758379723",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -143,14 +155,14 @@ return {
             key = "17730566204248379144",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 887, y = 489.5},
+            pos = {x = 651.7368421052631, y = 484.7631578947368},
             propsData = {ModeType = 0}
           },
           ["17730566204248379145"] = {
             key = "17730566204248379145",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3427, y = 447},
+            pos = {x = 2218.842105263158, y = 774.8947368421052},
             propsData = {ModeType = 0}
           },
           ["17730566204248379146"] = {
@@ -214,7 +226,7 @@ return {
             key = "17730566351758379723",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3155.428571428571, y = 506.4642857142858},
+            pos = {x = 1822.0952380952376, y = 588.1309523809524},
             propsData = {}
           },
           ["17730566438238379933"] = {
@@ -228,7 +240,7 @@ return {
             key = "17739884963495699",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 1304.2727272727277, y = 419.2045454545455},
+            pos = {x = 1330.359683794467, y = 428.3349802371542},
             propsData = {
               CreateType = "StaticCreator",
               CreateId = 2420166,
@@ -262,6 +274,13 @@ return {
               IsGuideEnable = false,
               GuidePointName = ""
             }
+          },
+          ["1778840236349632"] = {
+            key = "1778840236349632",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 857.4057971014495, y = 415.2147215865752},
+            propsData = {ConditionId = 7072038}
           }
         },
         commentData = {}

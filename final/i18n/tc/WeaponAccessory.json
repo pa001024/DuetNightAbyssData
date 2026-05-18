@@ -285,7 +285,7 @@
     "desc": "以雲霄為線，令每一次揮舞都閃動著點點青光。",
     "icon": "T_Fashion_Weapon38_02",
     "rarity": 5,
-    "unlock": "透過活動獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 10037,
@@ -293,7 +293,7 @@
     "desc": "以雲霄為線，令每一次揮舞都閃動著點點青光。",
     "icon": "T_Fashion_Weapon38_01",
     "rarity": 5,
-    "unlock": "透過活動獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 10038,
@@ -301,7 +301,7 @@
     "desc": "以雲霄為線，令每一次揮舞都閃動著點點青光。",
     "icon": "T_Fashion_Weapon38_03",
     "rarity": 5,
-    "unlock": "透過活動獲得"
+    "unlock": "通過商店獲得"
   },
   {
     "id": 10039,
@@ -352,10 +352,98 @@
     "unlock": "通過稜鏡兌換獲得"
   },
   {
+    "id": 10045,
+    "name": "天之淚·銹紅",
+    "desc": "聖潔的光輝，包裹著凝結的悲憫。",
+    "icon": "T_Fashion_Weapon41_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10046,
+    "name": "天之淚·絳紫",
+    "desc": "聖潔的光輝，包裹著凝結的悲憫。",
+    "icon": "T_Fashion_Weapon41_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10047,
+    "name": "天之淚·晴藍",
+    "desc": "聖潔的光輝，包裹著凝結的悲憫。",
+    "icon": "T_Fashion_Weapon41_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10048,
+    "name": "永恆花·銹紅",
+    "desc": "芳華終是剎那，死亡才是永恆。",
+    "icon": "T_Fashion_Weapon40_03",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10049,
+    "name": "永恆花·白櫻",
+    "desc": "芳華終是剎那，死亡才是永恆。",
+    "icon": "T_Fashion_Weapon40_02",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10050,
+    "name": "永恆花·墨玉",
+    "desc": "芳華終是剎那，死亡才是永恆。",
+    "icon": "T_Fashion_Weapon40_01",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 10051,
+    "name": "憤怒的小鴨·涅白",
+    "desc": "咻——嘎！！！",
+    "icon": "T_Fashion_Weapon42_04",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10052,
+    "name": "憤怒的小鴨·杏黃",
+    "desc": "咻——嘎！！！",
+    "icon": "T_Fashion_Weapon42_03",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10053,
+    "name": "憤怒的小鴨·碧綠",
+    "desc": "咻——嘎！！！",
+    "icon": "T_Fashion_Weapon42_02",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
+    "id": 10054,
+    "name": "憤怒的小鴨·焦糖",
+    "desc": "咻——嘎！！！",
+    "icon": "T_Fashion_Weapon42_01",
+    "rarity": 4,
+    "unlock": "通過商店獲得"
+  },
+  {
     "id": 20001,
     "name": "爆裂塗鴉",
     "desc": "適用於招式魔之楔咆哮切割。",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "通過稜鏡兌換獲得"
+  },
+  {
+    "id": 30001,
+    "name": "騰龍訣",
+    "desc": "適用於招式魔之楔騰龍訣。",
+    "icon": "T_Fashion_Fx21",
     "rarity": 5,
     "unlock": "通過稜鏡兌換獲得"
   }

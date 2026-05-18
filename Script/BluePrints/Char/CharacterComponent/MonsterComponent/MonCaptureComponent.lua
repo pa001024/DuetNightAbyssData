@@ -69,7 +69,8 @@ function Component:OpenMechanism(PlayerId)
   self:MonsterCaptureStart(PlayerId)
   GameMode:PauseTimer("CaptureLimitTimer", true)
   GameMode:TriggerDungeonComponentFun("PauseCaptureRecoveryTimer")
-  if self.InteractiveComponent.InteractiveParam.AutoRotate then
+  local InteractiveParam = rawget(self.InteractiveComponent, "InteractiveParam")
+  if InteractiveParam and InteractiveParam.AutoRotate then
     local Player = Battle(self):GetEntity(PlayerId)
     Player:RotateToInteractiveTarget(self.Eid)
   end

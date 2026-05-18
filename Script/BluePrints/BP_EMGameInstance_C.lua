@@ -58,7 +58,7 @@ function BP_EMGameInstance_C:_FontOptimizeSetting()
   UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.MaxFontAtlasPagesBeforeFlush 2")
   UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.MaxFontNonAtlasTexturesBeforeFlush 4")
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.Font.AsyncLazyLoad 1")
     UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.Font.RemoveLastNoUseFontFace 1")
     UKismetSystemLibrary.ExecuteConsoleCommand(self, "Slate.Font.ForcePreserveFontFaceCount 6")
@@ -475,17 +475,13 @@ function BP_EMGameInstance_C:RecordCombatData()
     self.CombatData.PhantomNum = Player:GetPhantomAttrInfos() and Player:GetPhantomAttrInfos():Num() or 0
     self.GameEndTime = TimeUtils.NowTime()
     self:FillTempTeamInfo(GameState, Player)
-    local ServerEntity = GWorld:GetServerEntity()
-    if not ServerEntity then
-      DebugPrint("ServerEntity get nil")
-      return
-    end
-    local DungeonObject = ServerEntity:GetDungeonObject()
+    local DungeonObject = GWorld:GetGameModeDungeonObject()
     if not DungeonObject then
       DebugPrint("DungeonObject get nil")
       return
     end
     self.CombatData.EvacuationTime = DungeonObject.EvacuationTime or 0
+    self.CombatData.GameFailReason = GameMode:TriggerDungeonComponentFun("OnGetGameFailReason") or ""
   end
   PrintTable(self.CombatData, 5)
 end
@@ -770,11 +766,18 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
     local IsWin = table.unpack(LogicServerInfo)
     local DungeonId = self:GetCurrentDungeonId()
     local DungeonData = DataMgr.Dungeon[DungeonId]
-    local ForcePlayWinMontage = IsWin
-    if DungeonData and DungeonData.ForcePlayWinMontage then
-      ForcePlayWinMontage = true
+    local IsPlayWinMontage = IsWin
+    local DoMvp = IsWin
+    if DungeonData then
+      if 1 == DungeonData.PlayMontageType then
+        IsPlayWinMontage = true
+      elseif 2 == DungeonData.PlayMontageType then
+        IsPlayWinMontage = false
+      end
+      if DungeonData.IsDisableMvp then
+        DoMvp = false
+      end
     end
-    local DoMvp = IsWin and (not Avatar or not Avatar:IsInRougeLike()) and (not CurDungeonType or CurDungeonType ~= CommonConst.DungeonType.Abyss and CurDungeonType ~= CommonConst.DungeonType.Party) and (not DataMgr.Dungeon[CurrentDungeonId] or not DataMgr.Dungeon[CurrentDungeonId].IsGameEventDungeon) and "SoloTreasure" ~= CurDungeonType
     self:CalculateMVP()
     if DoMvp and nil == self.MVPInfo.MVPFolder then
       DoMvp = false
@@ -796,7 +799,7 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
         end
         self:AddTimer(0.5, function()
           UIManager:HideCommonBlackScreen("BlackScreenMVP")
-          self:PlayerDungeonSettlement(ForcePlayWinMontage)
+          self:PlayerDungeonSettlement(IsPlayWinMontage)
           if Avatar and Avatar:IsInRougeLike() then
             UIManager:LoadUINew("RougeSettlement", LogicServerInfo)
           elseif CurDungeonType and CurDungeonType == CommonConst.DungeonType.Abyss then
@@ -805,6 +808,8 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
             self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
           elseif 80401 == CurrentDungeonId then
             self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
+          elseif CurDungeonType == CommonConst.DungeonType.AsyncCombat then
+            UIManager:LoadUINew("CoopSettlement", LogicServerInfo)
           else
             UIManager:LoadUINew("DungeonSettlement", LogicServerInfo, self.DungeonIdCache, self.CombatData)
           end
@@ -817,6 +822,8 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
         self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
       elseif 80401 == CurrentDungeonId then
         self:LoadGameEventSettlementUI(CurrentDungeonId, CurDungeonType, LogicServerInfo)
+      elseif CurDungeonType == CommonConst.DungeonType.AsyncCombat then
+        UIManager:LoadUINew("CoopSettlement", LogicServerInfo)
       elseif "SoloTreasure" == CurDungeonType then
         local IsSoloWin = false
         if LogicServerInfo then
@@ -853,6 +860,9 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
     if GameState and GameState.GameModeType == "SoloTreasure" then
       bSkipOutAnim = true
     end
+    if GameState and GameState.GameModeType == "AsyncCombat" then
+      bSkipOutAnim = true
+    end
     local BlackUI = UIManager:GetUI("DungeonBlackScreen")
     if not DoMvp then
       BlackUI:FadeOut(OnBlackOutFinished, bSkipOutAnim)
@@ -876,9 +886,9 @@ function BP_EMGameInstance_C:TryDungeonSettlement()
         GameState:OnWCDungeonSettlement()
       end
     end
-    self:PrePlayerDungeonSettlement(ForcePlayWinMontage)
+    self:PrePlayerDungeonSettlement(IsPlayWinMontage)
     if not DoMvp then
-      self:PlayerDungeonSettlement(ForcePlayWinMontage)
+      self:PlayerDungeonSettlement(IsPlayWinMontage)
     else
       local PreviewSceneType = CommonConst.EPreviewSceneType.PreviewMVP
       local Path = CommonConst.PreviewScenePaths[PreviewSceneType]
@@ -1636,6 +1646,12 @@ end
 
 function BP_EMGameInstance_C:TriggerAllNpcPauseAndHide(NewTag)
   DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: start")
+  local IsNoneTag = "None" == NewTag
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not GameState then
+    return
+  end
+  local Player
   
   local function PlayHideActorEffect(Actor)
     if Actor.FXComponent then
@@ -1644,74 +1660,70 @@ function BP_EMGameInstance_C:TriggerAllNpcPauseAndHide(NewTag)
     if Actor.FXComponent then
       Actor.FXComponent:PlayEffectByIDParams(302, {bTickEvenWhenPaused = true, NotAttached = true})
     else
-      local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
-      local Location = Actor:K2_GetActorLocation()
-      Player.FXComponent:PlayEffectByIDParams(302, {
-        UseAbsoluteLocation = true,
-        Location = {
-          Location.X,
-          Location.Y,
-          Location.Z
-        },
-        bTickEvenWhenPaused = true
-      })
+      if not Player then
+        Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+      end
+      if Player and Player.FXComponent then
+        local Location = Actor:K2_GetActorLocation()
+        Player.FXComponent:PlayEffectByIDParams(302, {
+          UseAbsoluteLocation = true,
+          Location = {
+            Location.X,
+            Location.Y,
+            Location.Z
+          },
+          bTickEvenWhenPaused = true
+        })
+      end
     end
   end
   
-  local CurGameMode = UE4.UGameplayStatics.GetGameMode(self)
-  local CurGameInstance = UE4.UGameplayStatics.GetGameInstance(self)
-  if not CurGameMode or not CurGameInstance then
-    return
-  end
-  local GameState = UE4.UGameplayStatics.GetGameState(self)
   local NpcCharacterMap = GameState.NpcCharacterMap:ToTable()
-  for _, Npc in pairs(NpcCharacterMap) do
-    local NpcData = DataMgr.Npc[Npc.UnitId]
-    if nil ~= NpcData then
-      if nil ~= NpcData.GlobalGameUITagList then
-        for _, value in pairs(NpcData.GlobalGameUITagList) do
-          if value == NewTag then
-            Npc:TriggerNpcGlobalTimeDilation(true)
-            Npc:SetActorHideTag("GlobalTimeDilation", false, false, true)
-            goto lbl_82
+  local NpcDataTable = DataMgr.Npc
+  if IsNoneTag then
+    for _, Npc in pairs(NpcCharacterMap) do
+      Npc:SetActorHideTag("GlobalTimeDilation", false, false, true)
+      DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: " .. NewTag .. " Npc: " .. Npc:GetName() .. " IsHidden: " .. tostring(Npc.bHidden))
+    end
+  else
+    for _, Npc in pairs(NpcCharacterMap) do
+      local NpcData = NpcDataTable[Npc.UnitId]
+      if nil ~= NpcData then
+        local TagList = NpcData.GlobalGameUITagList
+        if nil ~= TagList then
+          for _, value in pairs(TagList) do
+            if value == NewTag then
+              Npc:TriggerNpcGlobalTimeDilation(true)
+              Npc:SetActorHideTag("GlobalTimeDilation", false, false, true)
+              goto lbl_101
+            end
           end
         end
       end
-      if (not Npc.HideTags or 0 == Npc.HideTags:Num()) and "None" ~= NewTag then
+      if not Npc.HideTags or 0 == Npc.HideTags:Num() then
         Npc:TriggerNpcGlobalTimeDilation(true)
         PlayHideActorEffect(Npc)
       end
       Npc:SetActorHideTag("GlobalTimeDilation", true, false, true)
-      ::lbl_82::
-      if "None" == NewTag then
-        Npc:SetActorHideTag("GlobalTimeDilation", false, false, true)
-      end
-    end
-    local NpcName = Npc:GetName()
-    local IsHidden = Npc.bHidden
-    if IsHidden then
-      DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: " .. NewTag .. " Npc: " .. NpcName .. " IsHidden: " .. "true")
-    else
-      DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: " .. NewTag .. " Npc: " .. NpcName .. " IsHidden: " .. "false")
+      ::lbl_101::
+      DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: " .. NewTag .. " Npc: " .. Npc:GetName() .. " IsHidden: " .. tostring(Npc.bHidden))
     end
   end
   local CustomNpcs = GameState.CustomNpcSet:ToTable()
-  for _, CustomNpc in pairs(CustomNpcs) do
-    if (not CustomNpc.HideTags or 0 == CustomNpc.HideTags:Num()) and "None" ~= NewTag then
-      PlayHideActorEffect(CustomNpc)
-    end
-    CustomNpc:SetCustomNpcHideTag("GlobalTimeDilation", true)
-    CustomNpc:SetCollisionDisableTag("GlobalTimeDilation", true)
-    if "None" == NewTag then
+  if IsNoneTag then
+    for _, CustomNpc in pairs(CustomNpcs) do
       CustomNpc:SetCustomNpcHideTag("GlobalTimeDilation", false)
       CustomNpc:SetCollisionDisableTag("GlobalTimeDilation", false)
+      DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: " .. NewTag .. " Npc: " .. CustomNpc:GetName() .. " IsHidden: " .. tostring(CustomNpc.bHidden))
     end
-    local NpcName = CustomNpc:GetName()
-    local IsHidden = CustomNpc.bHidden
-    if IsHidden then
-      DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: " .. NewTag .. " Npc: " .. NpcName .. " IsHidden: " .. "true")
-    else
-      DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: " .. NewTag .. " Npc: " .. NpcName .. " IsHidden: " .. "false")
+  else
+    for _, CustomNpc in pairs(CustomNpcs) do
+      if not CustomNpc.HideTags or 0 == CustomNpc.HideTags:Num() then
+        PlayHideActorEffect(CustomNpc)
+      end
+      CustomNpc:SetCustomNpcHideTag("GlobalTimeDilation", true)
+      CustomNpc:SetCollisionDisableTag("GlobalTimeDilation", true)
+      DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: " .. NewTag .. " Npc: " .. CustomNpc:GetName() .. " IsHidden: " .. tostring(CustomNpc.bHidden))
     end
   end
   DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: end")
@@ -1899,7 +1911,9 @@ function BP_EMGameInstance_C:InitGameSystemLanguage()
         en = "EN",
         ko = "KR",
         ja = "JP",
-        fr = "FR"
+        de = "DE",
+        fr = "FR",
+        es = "ES"
       }
       local ChineseLanguageMapping = {
         cn = "CN",
@@ -2859,7 +2873,7 @@ function BP_EMGameInstance_C:UpdatePostProcessMaterial()
   local NeedClose = WorldSettings and WorldSettings.bClosePostProcessMaterial
   if NeedClose then
     local PlatformName = UGameplayStatics.GetPlatformName()
-    local IsPhone = self:GetUseMapPhoneInPC() or "IOS" == PlatformName or "Android" == PlatformName
+    local IsPhone = self:GetUseMapPhoneInPC() or "IOS" == PlatformName or "Android" == PlatformName or "OpenHarmony" == PlatformName
     local IsLowScalabilityLevel = self:GetGameplayScalabilityLevel() <= 1
     local IsLowMemoryDevice = self:IsLowMemoryDevice()
     if IsPhone and (IsLowScalabilityLevel or IsLowMemoryDevice) then
@@ -2884,7 +2898,7 @@ function BP_EMGameInstance_C:SetDynamicResolution(Tag, bEnable)
     return
   end
   if not rawget(self, "DynamicResolution") then
-    if "Android" == PlatformName then
+    if "Android" == PlatformName or "OpenHarmony" == PlatformName then
       rawset(self, "DynamicResolution", {
         [1] = {
           100,

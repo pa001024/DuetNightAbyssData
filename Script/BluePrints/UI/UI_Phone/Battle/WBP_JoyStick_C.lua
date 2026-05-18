@@ -14,7 +14,9 @@ function WBP_JoyStick_C:Construct()
   EventManager:AddEvent(EventID.OnSwitchMobileHUDLayout, self, self.OnSwitchMobileHUDLayout)
   EventManager:AddEvent(EventID.OnMobileHudPlanChanged, self, self.UpdateMobileLayoutInfoByServerData)
   EventManager:AddEvent(EventID.GameViewportSizeChanged, self, self.UpdateMobileLayoutInfo)
+  EventManager:AddEvent(EventID.OnMoveModelOptionChanged, self, self.UpdateMoveModel)
   self:UpdateMobileLayoutInfo()
+  self:UpdateMoveModel()
   self:AddTimer(0.3, function()
     self:UpdateMobileLayoutInfo()
     if not self.IsHide then
@@ -33,6 +35,7 @@ function WBP_JoyStick_C:Destruct()
   EventManager:RemoveEvent(EventID.OnSwitchMobileHUDLayout, self)
   EventManager:RemoveEvent(EventID.OnMobileHudPlanChanged, self)
   EventManager:RemoveEvent(EventID.GameViewportSizeChanged, self)
+  EventManager:RemoveEvent(EventID.OnMoveModelOptionChanged, self)
 end
 
 function WBP_JoyStick_C:Init()
@@ -197,6 +200,22 @@ function WBP_JoyStick_C:RecoverOriginalPosition()
     local CanvasSlot = UWidgetLayoutLibrary.SlotAsCanvasSlot(self.JoystickMoveNode)
     CanvasSlot:SetPosition(self.JoystickMoveNodePosition)
   end
+end
+
+function WBP_JoyStick_C:UpdateMoveModel(NewValue)
+  local CachedMoveModel = NewValue
+  if nil == CachedMoveModel then
+    CachedMoveModel = EMCache:Get("MoveModel")
+  end
+  if nil == CachedMoveModel then
+    local DefaultValueString = DataMgr.Option.MoveModel.DefaultValueM
+    local DefaultValue = "True" == DefaultValueString and true or false
+    EMCache:Set("MoveModel", DefaultValue)
+    CachedMoveModel = DefaultValue
+  end
+  local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
+  local UIManager = GameInstance:GetGameUIManager()
+  UIManager:SetVirtualJoystickIsStable(not CachedMoveModel)
 end
 
 return WBP_JoyStick_C

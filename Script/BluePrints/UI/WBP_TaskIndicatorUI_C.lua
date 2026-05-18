@@ -551,7 +551,6 @@ function WBP_TaskIndicatorUI_C:ChangePointStyle(IsOpenSmartGuide)
 end
 
 function WBP_TaskIndicatorUI_C:SetSmarPointInfoByQuestRegionId()
-  DebugPrint("SetSmarPointInfoByQuestRegionId start===")
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
@@ -563,13 +562,10 @@ function WBP_TaskIndicatorUI_C:SetSmarPointInfoByQuestRegionId()
   else
     self.IsInTaskRegion = true
   end
-  EventManager:FireEvent(EventID.UpdateMiniMap, self:GetName(), "Task", "ChangeRegion")
-  local CurTrackingQuestChaindId = Avatar.TrackingQuestChainId
-  if Avatar.QuestChains[CurTrackingQuestChaindId] then
-    local TrackingQuestId = Avatar.QuestChains[CurTrackingQuestChaindId].DoingQuestId
-    DebugPrint("CurTrackQuestChain:", CurTrackingQuestChaindId, "CurTrackDoingQuestId", TrackingQuestId)
+  if self.CurGuideChainId == self.AvatarTrackingId then
+    EventManager:FireEvent(EventID.UpdateMiniMap, self:GetName(), "Task", "ChangeRegion")
+    MissionIndicatorManager:TryToArrangeIndicatorBySmartPointInfo()
   end
-  MissionIndicatorManager:TryToArrangeIndicatorBySmartPointInfo()
   if self.SmartGuidePointInfo == nil and self.GuideInfoCache.PointOrStaticCreatorName then
     local SourceTarget = self:TryToFindGuidePointTarget(self.GuideInfoCache.PointOrStaticCreatorName)
     if nil == SourceTarget then
@@ -578,10 +574,6 @@ function WBP_TaskIndicatorUI_C:SetSmarPointInfoByQuestRegionId()
   elseif self.SmartGuidePointInfo ~= nil then
     self:Show("ExistTarget")
   end
-  DebugPrint("TargetPointName:", self.TargetPointName)
-  DebugPrint("TargePosition:", self.TargetPointPos)
-  DebugPrint("TaskRegionId:", self.TaskRegionId, "PlayerRegionId:", self.PlayerRegionId)
-  DebugPrint("SetSmarPointInfoByQuestRegionId end===")
 end
 
 function WBP_TaskIndicatorUI_C:ChangeAvatarTrackingQuestChainId(InMissionNpcGuideMaps)

@@ -6,7 +6,9 @@ local ClientEventUtils = require("BluePrints.Common.ClientEvent.ClientEventUtils
 local BattleHUDCommonConst = require("BluePrints.UI.UI_Phone.Battle.BattleHUDCommonConst")
 local TaskUtils = require("BluePrints.UI.TaskPanel.TaskUtils")
 local AllPlayerBloodState = require("BluePrints.UI.BloodBar.BloodBarUtils").AllBloodState
+local CoopUtils = require("BluePrints.UI.WBP.Activity.PC.Coop.CoopUtils")
 local EMCache = require("EMCache.EMCache")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local WBP_Battle_C = Class("BluePrints.UI.BP_UIState_C")
 WBP_Battle_C._components = {
   "BluePrints.UI.WBP.Chat.View.WBP_Battle_C_ChatComp",
@@ -137,6 +139,18 @@ function WBP_Battle_C:OnLoaded(...)
   self:AddDispatcher(EventID.OnSettingSystemLanguageChanged, self, self.OnGameLanguageChanged)
   self:AddDispatcher(EventID.OnMobileHudPlanChanged, self, self.UpdateMobileLayoutInfoByServerData)
   self:AddDispatcher(EventID.OnTeleportReady, self, self.TeleportReady)
+  self:AddDispatcher(EventID.OnSwitchWeapon, self, self.RefreshSpiritualized)
+  self:AddDispatcher(EventID.OnSelectWeapon, self, self.RefreshSpiritualized)
+  self:AddDispatcher(EventID.UpdateMainPlayerWeaponSp, self, function(self, NowWeaponSp, OldWeaponSp, OwnerActor)
+    self:RefreshSpiritualized({CurrentWeaponSp = NowWeaponSp})
+  end)
+  self:AddDispatcher(EventID.UpdateMainPlayerMaxWeaponSp, self, function(self, NowMaxWeaponSp, OldMaxWeaponSp, OwnerActor)
+    self:RefreshSpiritualized({MaxWeaponSp = NowMaxWeaponSp})
+  end)
+  self:AddDispatcher(EventID.UpdateMainPlayerSecondaryResource, self, function(self, NowSecondaryResource, OldSecondaryResource, OwnerActor)
+    self:RefreshSpiritualized({CurrentSecondaryCount = NowSecondaryResource})
+  end)
+  self:AddDispatcher(EventID.OnRepClientDungeonMessage, self, self.RepClientDungeonMessage)
   local NodeName = DataMgr.ReddotNode.Quest.Name
   local Avatar = GWorld:GetAvatar()
   if Avatar then
@@ -192,7 +206,11 @@ function WBP_Battle_C:OnLoaded(...)
   self.Pos_Rouge_CountDown:ClearChildren()
   self.Pos_TempleRight:ClearChildren()
   self.Pos_SoloTreasure_Score:ClearChildren()
+  if self.Pos_Spiritualized then
+    self.Pos_Spiritualized:ClearChildren()
+  end
   self.TeammateEidSet = {}
+  self.Pos_Coop:ClearChildren()
   self:HidePlayerDeadUI()
   self:InitKeyTip()
   self:HideDynamicEventUI()
@@ -200,6 +218,7 @@ function WBP_Battle_C:OnLoaded(...)
   self.Btn_Task.IsBtnTask = true
   self:InitGameJumpWord()
   self:CheckTheaterEventState()
+  self:InitAsyncCombatHUD()
   self:UpdateMobileLayoutInfoByServerData("Update")
 end
 
@@ -273,6 +292,7 @@ function WBP_Battle_C:InitWithMainCharacter()
     end
   end, false)
   self:InitDataPhone()
+  self:RefreshSpiritualized()
   return true
 end
 
@@ -412,6 +432,8 @@ function WBP_Battle_C:InitKeyTip()
   elseif GameState.GameModeType == "Trial" then
     self:InitTrailKeyTip()
     self.bInTrial = true
+  elseif GameState.GameModeType == "AsyncCombat" then
+    self:InitAsyncCombatKeyTip()
   else
     self:UnInitTrainingKeyTip()
     self:UnInitTrialKeyTip()
@@ -674,13 +696,13 @@ function WBP_Battle_C:ShowCountDown(Widget, Count, bShowZeroText)
   Widget:InitTempleCountDown(Count, bShowZeroText)
 end
 
-function WBP_Battle_C:OnTempleDelayStart(Duration, Title, RedCountdownTime)
-  DebugPrint("zwk OnTempleDelayStart", Duration, Title, RedCountdownTime)
+function WBP_Battle_C:OnTempleDelayStart(Duration, Title, RedCountdownTime, TitleParam1, TitleParam2)
+  DebugPrint("zwk OnTempleDelayStart", Duration, Title, RedCountdownTime, TitleParam1, TitleParam2)
   self.Pos_TempleTime:ClearChildren()
   self.CurDelayUI = self:CreateWidgetNew("DungeonTempleTime")
   self.Pos_TempleTime:AddChild(self.CurDelayUI)
   self.Pos_TempleTime:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  self.CurDelayUI:InitTempleDelayTimeUI(Title, Duration, RedCountdownTime)
+  self.CurDelayUI:InitTempleDelayTimeUI(Title, Duration, RedCountdownTime, TitleParam1, TitleParam2)
 end
 
 function WBP_Battle_C:OnTempleDelayEnd()
@@ -748,6 +770,12 @@ function WBP_Battle_C:Destruct()
   self:RemoveTrainingRightKeyListeners()
   self:RemoveTrialRightKeyListeners()
   self:RemoveRougeKeyListeners()
+  if self:IsExistTimer(self.SpiritualizedThrottleTimer) then
+    self:RemoveTimer(self.SpiritualizedThrottleTimer)
+    self.SpiritualizedThrottleTimer = nil
+  end
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  self:UnbindSecondaryBuffDelegates(Player)
   local NodeName = DataMgr.ReddotNode.Quest.NodeName
   ReddotManager.RemoveListener(NodeName, self)
   WBP_Battle_C.Super.Destruct(self)
@@ -1571,22 +1599,7 @@ function WBP_Battle_C:OnSwitchRole(CharUuid)
       Item.SelfWidget:UpdateArmoryIcon()
     end
   end
-  local PlayerAvatar = GWorld:GetAvatar()
-  local PlayerCharData = PlayerAvatar.Chars[CharUuid]
-  if PlayerCharData then
-    local PlayerCharId = PlayerCharData.CharId
-    if 1504 == PlayerCharId then
-      self:DealWithServerDataForManualAdditionNode(PlayerAvatar, CommonUtils.GetDeviceTypeByPlatformName(self) == "PC", true)
-      local LayoutPlanIndex = PlayerAvatar:GetCurrentMobileHudPlanIndex()
-      if 2 ~= LayoutPlanIndex then
-        PlayerAvatar:SwitchMobileHudPlan(2)
-      end
-      DebugPrint("HUDWidgetDesignComponent:OnSwitchRole PlayerMainRoleId 切换到了苏乙角色，强制设置一下自定义布局方案之中的外显逻辑")
-    else
-      self:DealWithServerDataForManualAdditionNode(PlayerAvatar, CommonUtils.GetDeviceTypeByPlatformName(self) == "PC", false)
-      DebugPrint("HUDWidgetDesignComponent:OnSwitchRole PlayerMainRoleId 切换到了其他角色，自定义布局外显逻辑去除")
-    end
-  end
+  self:RefreshSpiritualized()
 end
 
 function WBP_Battle_C:DealWithServerDataForManualAdditionNode(PlayerAvatar, bIsInPCPlatform, bShow)
@@ -1693,20 +1706,18 @@ function WBP_Battle_C:TryRecoverUI()
     self:SetVisibility(UIConst.VisibilityOp.Collapsed)
     return false
   end
-  if self:CheckPlayInOutSystems() then
-    return false
-  end
-  self:PlayInAnim()
-  self:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-  return true
+  return self:PlayInAnim()
 end
 
 function WBP_Battle_C:PlayInAnim()
   if self:CheckPlayInOutSystems() then
-    return
+    return false
   end
   DebugPrint("-----Jzn---主界面 in-------")
   self:SetUIVisibilityTag("PlayBattleAni", false)
+  if self:IsHide() then
+    return false
+  end
   self:UnbindAllFromAnimationFinished(self.In)
   
   local function ShowSelf()
@@ -1715,12 +1726,14 @@ function WBP_Battle_C:PlayInAnim()
   
   self:BindToAnimationFinished(self.In, {self, ShowSelf})
   self:StopAnimation(self.Out)
+  self:SetUIVisibilityTag("PlayOutAnimFinished", false)
   self:PlayAnimation(self.In)
   self.IsPlayOutAnim = false
   local Widget = self.Pos_Instruction_Mod:GetChildAt(0)
   if Widget and Widget:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
     Widget:TryGetReward()
   end
+  return true
 end
 
 function WBP_Battle_C:_RefreshEscReddot()
@@ -1784,7 +1797,7 @@ function WBP_Battle_C:PlayOutAnim(Obj, Func, SystemUIName)
   
   local function HideSelf()
     self.IsPlayOutAnim = false
-    self:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    self:SetUIVisibilityTag("PlayOutAnimFinished", true)
   end
   
   self:BindToAnimationFinished(self.Out, {self, HideSelf})
@@ -2268,6 +2281,8 @@ function WBP_Battle_C:EMAfterInitialize()
   self.Platform = CommonUtils.GetDeviceTypeByPlatformName(GWorld.GameInstance)
   if self.Platform == CommonConst.CLIENT_DEVICE_TYPE.MOBILE then
     if UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.MOBILE].UI_WRAPPING_WITH_INVALIDBOX then
+      self:ArrangeSingleWidgetWithInvalidBox(self.Battery, "CustomInvalidationBox_Battery")
+      self:ArrangeSingleWidgetWithInvalidBox(self.HB_UID, "CustomInvalidationBox_UID")
     end
     if UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.MOBILE].UI_WRAPPING_WITH_RETAINERBOX then
       if self:CheckOptimizeSwitch_ForTaskBar() then
@@ -2277,16 +2292,23 @@ function WBP_Battle_C:EMAfterInitialize()
       self:ArrangeSingleWidgetWithRetainerBox(self.Char_Skill, "CustomRetainerBox_Skill", 1, 3)
       self:ArrangeSingleWidgetWithRetainerBox(self.Pos_Entry, "CustomRetainerBox_Entry", 3, 15)
     end
-  elseif self.Platform == CommonConst.CLIENT_DEVICE_TYPE.PC and UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.PC].UI_WRAPPING_WITH_RETAINERBOX then
-    self:ArrangeSingleWidgetWithRetainerBox(self.Pos_Drops, "CustomRetainerBox_CommonDrops", 1, 10)
-    self:ArrangeSingleWidgetWithRetainerBox(self.Pos_SpecialDrops, "CustomRetainerBox_SpecialDrops", 5, 10)
-    self:ArrangeSingleWidgetWithRetainerBox(self.Char_Skill, "CustomRetainerBox_Skill", 2, 10)
+  elseif self.Platform == CommonConst.CLIENT_DEVICE_TYPE.PC then
+    if UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.PC].UI_WRAPPING_WITH_INVALIDBOX then
+      self:ArrangeSingleWidgetWithInvalidBox(self.Dialogue_Boss, "CustomInvalidationBox_DialogueBoss")
+      self:ArrangeSingleWidgetWithInvalidBox(self.Buff, "CustomInvalidationBox_Buff")
+      self:ArrangeSingleWidgetWithInvalidBox(self.HB_UID, "CustomInvalidationBox_UID")
+    end
+    if UIConst.OptimizeSwitch[CommonConst.CLIENT_DEVICE_TYPE.PC].UI_WRAPPING_WITH_RETAINERBOX then
+      self:ArrangeSingleWidgetWithRetainerBox(self.Pos_Drops, "CustomRetainerBox_CommonDrops", 1, 10)
+      self:ArrangeSingleWidgetWithRetainerBox(self.Pos_SpecialDrops, "CustomRetainerBox_SpecialDrops", 5, 10)
+      self:ArrangeSingleWidgetWithRetainerBox(self.Char_Skill, "CustomRetainerBox_Skill", 2, 10)
+    end
   end
 end
 
 function WBP_Battle_C:CheckOptimizeSwitch_ForTaskBar()
   local PlatformName = UE4.UUIFunctionLibrary.GetDevicePlatformName(self)
-  if "Android" == PlatformName then
+  if "Android" == PlatformName or "OpenHarmony" == PlatformName then
     return false
   end
   local IsShippingPackage = UE4.UKismetSystemLibrary.IsPackagedForDistribution()
@@ -2420,6 +2442,7 @@ function WBP_Battle_C:TheaterJoinPerformGame()
   Avatar:TheaterPerformStateGet(Cb)
   self.TheaterTaskTime = UIManager(self):LoadUINew("TheaterTaskTime")
   self.Task:AddChild(self.TheaterTaskTime)
+  self.Task:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.TheaterTaskTime.IsInit = true
   self.TheaterTaskTime:InitUI()
   self.JoinTheaterGame = true
@@ -2432,6 +2455,7 @@ function WBP_Battle_C:TheaterJoinPerformGameFail()
   DebugPrint("ayff test 加入剧院表演失败，显示失败UI time")
   self.TheaterTaskTime = UIManager(self):LoadUINew("TheaterTaskTime")
   self.Task:AddChild(self.TheaterTaskTime)
+  self.Task:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.TheaterTaskTime.IsInit = true
   self.TheaterTaskTime:InitFailUI()
 end
@@ -2472,7 +2496,8 @@ function WBP_Battle_C:TheaterPerformGameStart(EventId, PerformList, ReStart)
       end
       local GameState = UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
       local RegionId = Avatar.CurrentRegionId
-      if not GameState:IsInRegion() or 101901 ~= RegionId or Avatar:IsInHardBoss() then
+      local TargetRegionId = DataMgr.GlobalConstant.TheaterRegionId and DataMgr.GlobalConstant.TheaterRegionId.ConstantValue or 0
+      if not GameState:IsInRegion() or RegionId ~= TargetRegionId or Avatar:IsInHardBoss() then
         DebugPrint("ayff test 当前不在剧院区域 RegionId:", RegionId)
         return
       end
@@ -2501,7 +2526,7 @@ function WBP_Battle_C:TeleportReady(IsEnd)
     TaskBar:SetTeleportBubble(true)
     self.IsShowingTeleportUI = true
     if TaskBar.Platform == "Mobile" then
-      TaskBar.WBP_Btn_Tips3:SetVisibility(UE4.ESlateVisibility.Visable)
+      TaskBar.WBP_Btn_Tips3:SetVisibility(UE4.ESlateVisibility.Visible)
       TaskBar.WBP_Btn_Tips3.Text_Button:SetText(GText("DUNGEON_TELEPORT"))
       TaskBar.WBP_Btn_Tips3.Button_Area.OnClicked:Clear()
       
@@ -2687,6 +2712,495 @@ function WBP_Battle_C:_GetMappedPlanIndex(EditPlanIndex)
     return 1
   end
   return (EditPlanIndex - 1) % 2 + 1
+end
+
+function WBP_Battle_C:InitAsyncCombatHUD()
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local GameState = UE4.UGameplayStatics.GetGameState(self)
+  if not GameMode or not GameState then
+    DebugPrint("clx: WBP_Battle_C:InitAsyncCombatHUD 获取GameMode或GameState失败")
+    return
+  end
+  if GameState.GameModeType ~= "AsyncCombat" then
+    DebugPrint("clx: WBP_Battle_C:InitAsyncCombatHUD 当前模式不是AsyncCombat")
+    self:CleanAsyncCombatHUD()
+    return
+  end
+  if not self.AsyncCombatComponent then
+    self.AsyncCombatComponent = GameMode:GetDungeonComponent()
+  end
+  self.SizeBox_Map:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Pos_TaskBar:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.RepClientDungeonMessageInterval = 5
+  self:InitAsyncCombatHUDCommon()
+  local Platform = CommonUtils:GetDeviceTypeByPlatformName(self)
+  if "PC" == Platform then
+    self:InitAsyncCombatHUDPC()
+  else
+    self:InitAsyncCombatHUDMobile()
+  end
+end
+
+function WBP_Battle_C:GetHudRankingAll()
+  local RankingWidget = self.Pos_Coop:GetChildAt(0)
+  return RankingWidget
+end
+
+function WBP_Battle_C:CreateHudRankingAllPC()
+  local RankingWidget = self:GetHudRankingAll()
+  if not RankingWidget then
+    local HudRankingAllBPPath_PC = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/Coop/WBP_Activity_Coop_HudRankingAll_P.WBP_Activity_Coop_HudRankingAll_P'"
+    RankingWidget = UIManager(self):CreateWidget(HudRankingAllBPPath_PC)
+    if not RankingWidget then
+      DebugPrint("clx: WBP_Battle_C:CreateHudRankingAllPC 创建WBP_Activity_Coop_HudRankingAll_P失败")
+      return RankingWidget
+    end
+    RankingWidget:AddToBattleMain("Pos_Coop", "Overlay")
+  end
+  return RankingWidget
+end
+
+function WBP_Battle_C:CreateHudRankingAllMobile()
+  local RankingWidget = self:GetHudRankingAll()
+  if not RankingWidget then
+    local HudRankingAllBPPath_Mobile = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/Coop/WBP_Activity_Coop_HudRankingAll_M.WBP_Activity_Coop_HudRankingAll_M'"
+    RankingWidget = UIManager(self):CreateWidget(HudRankingAllBPPath_Mobile)
+    if not RankingWidget then
+      DebugPrint("clx: WBP_Battle_C:CreateHudRankingAllMobile 创建WBP_Activity_Coop_HudRankingAll_M_C失败")
+      return RankingWidget
+    end
+    RankingWidget:AddToBattleMain("Pos_Coop", "Overlay")
+  end
+  return RankingWidget
+end
+
+function WBP_Battle_C:GetHudScore()
+  local HudScore = self.Pos_GuildWarScore:GetChildAt(0)
+  return HudScore
+end
+
+function WBP_Battle_C:CreateHudScore()
+  local HudScore = self:GetHudScore()
+  if not HudScore then
+    local HudScoreBPPath = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/Coop/WBP_Activity_Coop_HudScore.WBP_Activity_Coop_HudScore'"
+    HudScore = UIManager(self):CreateWidget(HudScoreBPPath)
+    if not HudScore then
+      DebugPrint("clx: WBP_Battle_C:InitAsyncCombatHUD 创建WBP_Activity_Coop_HudScore失败")
+      return HudScore
+    end
+    HudScore:AddToBattleMain("Pos_GuildWarScore", "SizeBox")
+  end
+  return HudScore
+end
+
+function WBP_Battle_C:InitAsyncCombatHUDMobile()
+  local RankingWidget = self:GetHudRankingAll()
+  RankingWidget = RankingWidget or self:CreateHudRankingAllMobile()
+  if not RankingWidget then
+    return
+  end
+  RankingWidget.Button.OnClicked:Clear()
+  RankingWidget.Button.OnClicked:Add(self, self.ExpandAndCollapseRanking)
+  RankingWidget.Image_68:SetRenderTransformAngle(90)
+end
+
+function WBP_Battle_C:InitAsyncCombatHUDCommon()
+  local RankingWidget = self:GetHudRankingAll()
+  if not RankingWidget then
+    local Platform = CommonUtils:GetDeviceTypeByPlatformName(self)
+    if "PC" == Platform then
+      RankingWidget = self:CreateHudRankingAllPC()
+    else
+      RankingWidget = self:CreateHudRankingAllMobile()
+    end
+  end
+  if not RankingWidget then
+    return
+  end
+  RankingWidget.TextRound:SetText(GText("UI_AsyncCombat_StageNumber") .. " " .. 1)
+  RankingWidget.TextTitle:SetText(GText("AsyncCombatDebuffTitle"))
+  local HudScore = self:GetHudScore()
+  HudScore = HudScore or self:CreateHudScore()
+  if not HudScore then
+    return
+  end
+  HudScore.WBP_Com_Time.Text_TimeDesc:SetText(GText("UI_AsyncCombat_EndInTime"))
+  local GameMode = UE4.UGameplayStatics.GetGameMode(self)
+  local CustomPreInitInfo = GameMode and GameMode.PreInitInfo
+  local CreateTime = TimeUtils.NowTime()
+  if CustomPreInitInfo then
+    CreateTime = CustomPreInitInfo.CreateTime
+  end
+  local RoomDuration = DataMgr.AsyncCombatEventConstant.AsyncCombat_RoomDuration.ConstantValue * 60 or 86400
+  local EndTime = CreateTime + RoomDuration
+  HudScore:SetupCountDown(EndTime)
+  HudScore.Text_ScoreTitle01:SetText(GText("UI_AsyncCombat_ChallengeProgress2"))
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  
+  local function RequestRoomInfo()
+    Avatar:SyncToServerDungeonMessage(CommonConst.DungeonSyncMsg.AsyncCombatQueryState, {Type = "Room"})
+  end
+  
+  RequestRoomInfo()
+  self:AddTimer(self.RepClientDungeonMessageInterval, RequestRoomInfo, true, 0, "RequestRoomInfo")
+end
+
+function WBP_Battle_C:InitAsyncCombatHUDPC()
+  local RankingWidget = self:GetHudRankingAll()
+  RankingWidget = RankingWidget or self:CreateHudRankingAllPC()
+  if not RankingWidget then
+    return
+  end
+  self:InitAsyncCombatKeyTip()
+  self:StopListeningForInputAction("GamepadOpenSystem", EInputEvent.IE_Pressed)
+  self:StopListeningForInputAction("GamepadOpenSystem", EInputEvent.IE_Released)
+  self:ListenForInputAction("GamepadOpenSystem", EInputEvent.IE_Pressed, false, {
+    self,
+    self.ExpandAndCollapseRanking
+  })
+  
+  local function ResetHandlingExpandAndCollapse()
+    if self.HandlingExpandAndCollapse then
+      self.HandlingExpandAndCollapse = false
+    end
+  end
+  
+  self:ListenForInputAction("GamepadOpenSystem", EInputEvent.IE_Released, false, {self, ResetHandlingExpandAndCollapse})
+  self:ListenForInputAction("SwitchMovement", EInputEvent.IE_Pressed, false, {
+    self,
+    self.ExpandAndCollapseRanking
+  })
+  self:ListenForInputAction("SwitchMovement", EInputEvent.IE_Released, false, {self, ResetHandlingExpandAndCollapse})
+  RankingWidget.Com_KeyImg:AddExecuteLogic(self, self.ExpandAndCollapseRanking)
+  RankingWidget.Com_KeyText:AddExecuteLogic(self, self.ExpandAndCollapseRanking)
+  RankingWidget.TextKey:SetText(GText("UI_AsyncCombat_Expand"))
+end
+
+function WBP_Battle_C:InitAsyncCombatKeyTip()
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if Player.UIModePlatform ~= "PC" then
+    return
+  end
+  local RankingWidget = self:GetHudRankingAll()
+  if not RankingWidget then
+    return
+  end
+  local CurInputDeviceType = UIUtils.UtilsGetCurrentInputType()
+  if CurInputDeviceType == UE4.ECommonInputType.Gamepad then
+    RankingWidget.Ws_Key:SetActiveWidgetIndex(0)
+    local KeyIcons = UIUtils.GetIconListByActionName("GamepadOpenSystem")
+    RankingWidget.Com_KeyImg:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Img",
+          ImgShortPath = KeyIcons[1]
+        }
+      }
+    })
+  else
+    RankingWidget.Ws_Key:SetActiveWidgetIndex(1)
+    RankingWidget.Com_KeyText:CreateCommonKey({
+      KeyInfoList = {
+        {Type = "Text", Text = "K"}
+      }
+    })
+  end
+end
+
+function WBP_Battle_C:RepClientDungeonMessage(MessageName, tbl)
+  if MessageName == CommonConst.DungeonSyncMsg.AsyncCombatRoomStateUpdate then
+    local RankingWidget = self:GetHudRankingAll()
+    if not RankingWidget then
+      return
+    end
+    
+    local function Comp(Left, Right)
+      return Left.Damage > Right.Damage
+    end
+    
+    table.sort(tbl.MemberDamageList, Comp)
+    RankingWidget.TextRound:SetText(GText("UI_AsyncCombat_StageNumber") .. " " .. tbl.CurStep)
+    if self.AsyncCombatComponent then
+      local GTextDebuffTitle = CoopUtils.GetGTextDebuffTitle(self.AsyncCombatComponent)
+      if GTextDebuffTitle then
+        RankingWidget.TextTitle:SetText(GTextDebuffTitle)
+      end
+    end
+    RankingWidget.TextRanking:SetText(GText("UI_AsyncCombat_ContributionRank"))
+    RankingWidget:SetMemberDamageList(tbl.MemberDamageList)
+    RankingWidget:UpdateListRanking()
+    local HUDScore = self:GetHudScore()
+    if not HUDScore then
+      return
+    end
+    local OldProgress = tonumber(HUDScore.Text_Score_Now:GetText())
+    if OldProgress and OldProgress < tbl.Progress then
+      HUDScore:PlayAnimation(HUDScore.Up)
+    end
+    HUDScore.Text_Score_Now:SetText(tostring(tbl.Progress))
+  elseif "BossCreated" == MessageName then
+    local CurRound = self.AsyncCombatComponent and self.AsyncCombatComponent.BossCurStep or GWorld.GameInstance[CommonConst.DungeonSyncMsg.AsyncCombatRoomStateUpdate].CurStep or 1
+    UIManager(self):LoadUINew("CoopHudTips01", {CurRound = CurRound})
+  end
+  GWorld.GameInstance[MessageName] = tbl
+end
+
+function WBP_Battle_C:ExpandAndCollapseRanking()
+  if self.HandlingExpandAndCollapse then
+    return
+  end
+  self.HandlingExpandAndCollapse = true
+  local RankingWidget = self:GetHudRankingAll()
+  if not RankingWidget then
+    return
+  end
+  if RankingWidget.bNotShowExpansionTip then
+    return
+  end
+  if RankingWidget.Expanded then
+    RankingWidget.Expanded = false
+  else
+    RankingWidget.Expanded = true
+  end
+  RankingWidget:UpdateListRanking()
+  RankingWidget:PlayAnimation(RankingWidget.Change)
+  if RankingWidget.UpdateTextKey then
+    RankingWidget:UpdateTextKey()
+  else
+    local RenderTransformAngle = RankingWidget.Image_68:GetRenderTransformAngle()
+    RankingWidget.Image_68:SetRenderTransformAngle(-RenderTransformAngle)
+  end
+end
+
+function WBP_Battle_C:CleanAsyncCombatHUD()
+  GWorld.GameInstance[CommonConst.DungeonSyncMsg.AsyncCombatRoomStateUpdate] = nil
+  GWorld.GameInstance.BossBg = nil
+end
+
+function WBP_Battle_C:OnSecondaryBuffChanged()
+  self:RefreshSpiritualized({})
+end
+
+function WBP_Battle_C:UnbindSecondaryBuffDelegates(Player)
+  if not (Player and Player.BuffManager) or not self.SecondaryResourceBuffIds then
+    return
+  end
+  for _, BuffId in ipairs(self.SecondaryResourceBuffIds) do
+    Player.BuffManager:BP_UnbindOnBuffAdded(BuffId, {
+      self,
+      self.OnSecondaryBuffChanged
+    })
+    Player.BuffManager:BP_UnbindOnBuffRemoved(BuffId, {
+      self,
+      self.OnSecondaryBuffChanged
+    })
+    Player.BuffManager:BP_UnbindOnBuffRefreshed(BuffId, {
+      self,
+      self.OnSecondaryBuffChanged
+    })
+  end
+  self.SecondaryResourceBuffIds = nil
+  self.SecondaryResourceBuffUIId = nil
+end
+
+function WBP_Battle_C:BindSecondaryBuffDelegates(Player, BuffUIId)
+  if not (Player and Player.BuffManager) or not BuffUIId then
+    return
+  end
+  local BuffUIInfo = DataMgr.BattleCharBuffUI[BuffUIId]
+  if not BuffUIInfo then
+    return
+  end
+  self.SecondaryResourceBuffUIId = BuffUIId
+  self.SecondaryResourceBuffIds = {}
+  for _, BuffId in pairs(BuffUIInfo.BuffId or {}) do
+    table.insert(self.SecondaryResourceBuffIds, BuffId)
+    Player.BuffManager:BP_BindOnBuffAdded(BuffId, {
+      self,
+      self.OnSecondaryBuffChanged
+    })
+    Player.BuffManager:BP_BindOnBuffRemoved(BuffId, {
+      self,
+      self.OnSecondaryBuffChanged
+    })
+    Player.BuffManager:BP_BindOnBuffRefreshed(BuffId, {
+      self,
+      self.OnSecondaryBuffChanged
+    })
+  end
+end
+
+function WBP_Battle_C:RefreshSpiritualized(content)
+  self.PendingSpiritualizedContent = content or {}
+  if self:IsExistTimer(self.SpiritualizedThrottleTimer) then
+    return
+  end
+  self.SpiritualizedThrottleTimer = self:AddTimer(0.1, function()
+    self.SpiritualizedThrottleTimer = nil
+    self:_DoRefreshSpiritualized(self.PendingSpiritualizedContent)
+    self.PendingSpiritualizedContent = nil
+  end, false)
+end
+
+function WBP_Battle_C:_DoRefreshSpiritualized(content)
+  content = content or {}
+  DebugPrint("lgc@_DoRefreshSpiritualized")
+  
+  local function GetWidget()
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+      return self:GetOrAddWidget("BattleSpiritualized", self.Pos_Spiritualized)
+    else
+      if self.Char_Skill then
+        return self.Char_Skill.Spiritualized
+      end
+      return nil
+    end
+  end
+  
+  local function Show()
+    if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" and self.Char_Skill and self.Char_Skill.Overlay_Spiritualized and self.Char_Skill.Overlay_Spiritualized:GetVisibility() ~= UE4.ESlateVisibility.SelfHitTestInvisible then
+      self.Char_Skill.Overlay_Spiritualized:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    end
+  end
+  
+  local function Hide()
+    if CommonUtils.GetDeviceTypeByPlatformName(self) == "Mobile" then
+      self.Pos_Spiritualized:ClearChildren()
+    elseif self.Char_Skill and self.Char_Skill.Overlay_Spiritualized and self.Char_Skill.Overlay_Spiritualized:GetVisibility() ~= UE4.ESlateVisibility.Collapsed then
+      self.Char_Skill.Overlay_Spiritualized:SetVisibility(UE4.ESlateVisibility.Collapsed)
+    end
+  end
+  
+  local function CalcSecondaryResourceConfig(WeaponId)
+    if not WeaponId then
+      return false, nil
+    end
+    local HyperWeapon = HyperWeaponUtils.GetCurHyperWeapon(WeaponId)
+    local ActivatedTalentIds = {}
+    if not HyperWeapon or not HyperWeapon.HyperTalent then
+      local PC = UE4 and UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+      local PS = PC and PC.PlayerState
+      if not PS or not PS.HyperWeaponSkillIds then
+        return false, nil
+      end
+      local SkillEntries = PS.HyperWeaponSkillIds:ToTable()
+      for _, Entry in ipairs(SkillEntries or {}) do
+        table.insert(ActivatedTalentIds, Entry.SkillId)
+      end
+    else
+      for _, TalentArray in pairs(HyperWeapon.HyperTalent) do
+        for TalentId1, TalentId2 in pairs(TalentArray) do
+          table.insert(ActivatedTalentIds, TalentId1)
+          table.insert(ActivatedTalentIds, TalentId2)
+        end
+      end
+    end
+    table.sort(ActivatedTalentIds, function(a, b)
+      return b < a
+    end)
+    for _, TalentId in ipairs(ActivatedTalentIds) do
+      local TalentInfo = DataMgr.HyperWeaponSkillTree[TalentId]
+      if TalentInfo and TalentInfo.bShowSecondaryResource then
+        local BuffUIId = TalentInfo.SecondaryResourceBuffID
+        return true, BuffUIId
+      end
+    end
+    return false, nil
+  end
+  
+  local function GetBuffBasedSecondaryCount(Player, BuffUIId)
+    if not Player or not BuffUIId then
+      return 0
+    end
+    local BuffUIInfo = DataMgr.BattleCharBuffUI[BuffUIId]
+    if not BuffUIInfo then
+      return 0
+    end
+    local BuffIdSet = {}
+    for _, BuffId in pairs(BuffUIInfo.BuffId or {}) do
+      BuffIdSet[BuffId] = true
+    end
+    local BuffManager = Player.BuffManager
+    if not BuffManager or not BuffManager.Buffs then
+      return 0
+    end
+    for _, Buff in pairs(BuffManager.Buffs) do
+      if IsValid(Buff) and BuffIdSet[Buff.BuffId] then
+        if BuffUIInfo.Type == "Layer" then
+          return Buff.Layer or 0
+        elseif BuffUIInfo.Type == "LastTime" then
+          return math.floor(Buff.LastTime or 0)
+        end
+      end
+    end
+    return 0
+  end
+  
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+  if not IsValid(Player) then
+    if self.SecondaryResourceBuffUIId then
+      self.SecondaryResourceBuffIds = nil
+      self.SecondaryResourceBuffUIId = nil
+    end
+    Hide()
+    return
+  end
+  local CurrentWeapon
+  local CurrentWeapons = {}
+  local WeaponId = content.WeaponId
+  if not WeaponId then
+    CurrentWeapons[1] = Player.MeleeWeapon
+    CurrentWeapons[2] = Player.RangedWeapon
+  end
+  for i = 1, #CurrentWeapons do
+    local Weapon = CurrentWeapons[i]
+    if Weapon and HyperWeaponUtils.IsHyperWeapon(Weapon.WeaponId) then
+      CurrentWeapon = Weapon
+      break
+    end
+  end
+  if not CurrentWeapon then
+    self:UnbindSecondaryBuffDelegates(Player)
+    Hide()
+    return
+  end
+  local Spiritualized = GetWidget()
+  if not Spiritualized then
+    return
+  end
+  if not Spiritualized.OwnerPanel then
+    Spiritualized:Init(self)
+  end
+  Show()
+  local CurrentWeaponSp = content.CurrentWeaponSp
+  if nil == CurrentWeaponSp then
+    CurrentWeaponSp = Player:GetAttr("WeaponSp") or 0
+  end
+  local MaxWeaponSp = content.MaxWeaponSp
+  if nil == MaxWeaponSp then
+    MaxWeaponSp = Player:GetAttr("MaxWeaponSp") or 0
+  end
+  local HasSecondaryResource = content.HasSecondaryResource
+  local BuffUIId
+  if nil == HasSecondaryResource then
+    HasSecondaryResource, BuffUIId = CalcSecondaryResourceConfig(CurrentWeapon.WeaponId)
+  end
+  if BuffUIId and self.SecondaryResourceBuffUIId ~= BuffUIId then
+    self:UnbindSecondaryBuffDelegates(Player)
+    self:BindSecondaryBuffDelegates(Player, BuffUIId)
+  elseif not BuffUIId and self.SecondaryResourceBuffUIId then
+    self:UnbindSecondaryBuffDelegates(Player)
+  end
+  local CurrentSecondaryCount = content.CurrentSecondaryCount
+  if BuffUIId then
+    CurrentSecondaryCount = GetBuffBasedSecondaryCount(Player, BuffUIId)
+  elseif nil == CurrentSecondaryCount then
+    CurrentSecondaryCount = Player:GetAttr("SecondaryResource") or 0
+  end
+  Spiritualized:Refresh(CurrentWeaponSp, MaxWeaponSp, CurrentSecondaryCount, HasSecondaryResource, CurrentWeapon)
 end
 
 AssembleComponents(WBP_Battle_C)

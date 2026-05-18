@@ -1491,6 +1491,10 @@ function BP_SceneManagerComponent_C:AddMinimapDoor(Door)
   table.insert(self.MinimapDoorArray, Door)
 end
 
+function BP_SceneManagerComponent_C:SetGatherArea(GatherArea)
+  self.GatherArea = GatherArea
+end
+
 function BP_SceneManagerComponent_C:DelaySetFullScreen_Lua(Resolution, WindowMode)
   self:AddTimer(0.1, function()
     local GameUserSettings = UE4.UGameUserSettings:GetGameUserSettings()

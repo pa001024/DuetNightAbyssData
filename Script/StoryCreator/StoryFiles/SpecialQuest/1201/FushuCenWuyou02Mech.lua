@@ -102,12 +102,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17636468173221274559",
-            startPort = "QuestStart",
-            endQuest = "17636468173221274578",
-            endPort = "In"
-          },
-          {
             startQuest = "17636468173221274571",
             startPort = "Out",
             endQuest = "17638942748624463013",
@@ -228,12 +222,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17636468173221274559",
-            startPort = "QuestStart",
-            endQuest = "17650317882305103400",
-            endPort = "In"
-          },
-          {
             startQuest = "17650317882305103400",
             startPort = "Out",
             endQuest = "17648396493033332",
@@ -250,6 +238,30 @@ return {
             startPort = "Out",
             endQuest = "17636468173221274561",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17636468173221274559",
+            startPort = "QuestStart",
+            endQuest = "17761493362105481707",
+            endPort = "In"
+          },
+          {
+            startQuest = "17761493362105481707",
+            startPort = "Fail",
+            endQuest = "17650317882305103400",
+            endPort = "In"
+          },
+          {
+            startQuest = "17761493362105481707",
+            startPort = "Fail",
+            endQuest = "17636468173221274578",
+            endPort = "In"
+          },
+          {
+            startQuest = "17761493362105481707",
+            startPort = "Success",
+            endQuest = "17636468173221274576",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -257,7 +269,7 @@ return {
             key = "17636468173221274559",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 118.13157894736838, y = 272.36842105263156},
+            pos = {x = -205.5526315789474, y = 242.36842105263156},
             propsData = {ModeType = 0}
           },
           ["17636468173221274560"] = {
@@ -271,7 +283,7 @@ return {
             key = "17636468173221274561",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2238.5714285714284, y = 769.4642857142858},
+            pos = {x = 2188.5714285714284, y = 1206.9642857142858},
             propsData = {}
           },
           ["17636468173221274562"] = {
@@ -445,21 +457,21 @@ return {
             key = "17636468173221274576",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3232.6926406926405, y = 287.33333333333337},
+            pos = {x = 3199.6926406926405, y = 425.33333333333337},
             propsData = {}
           },
           ["17636468173221274577"] = {
             key = "17636468173221274577",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1276.4761904761901, y = 735.4047619047619},
+            pos = {x = 1226.4761904761901, y = 1172.904761904762},
             propsData = {}
           },
           ["17636468173221274578"] = {
             key = "17636468173221274578",
             type = "ChangeStaticCreatorNode",
             name = "扶疏魅影",
-            pos = {x = 1156.6619047619047, y = -94.47380952380952},
+            pos = {x = 679.8197994987468, y = -263.42117794486217},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -487,7 +499,7 @@ return {
             key = "17636468173221274580",
             type = "ChangeStaticCreatorNode",
             name = "销毁扶疏魅影",
-            pos = {x = 1888.833333333333, y = 760.6190476190475},
+            pos = {x = 1838.833333333333, y = 1198.1190476190475},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -574,7 +586,7 @@ return {
             key = "17648396384852949",
             type = "SendMessageNode",
             name = "通知香气植物重置",
-            pos = {x = 1570.7271671826625, y = 758.3088235294117},
+            pos = {x = 1520.7271671826625, y = 1195.8088235294117},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "FailFushuCenWuyou02Mech",
@@ -596,7 +608,7 @@ return {
             key = "17650317882305103400",
             type = "ChangeStaticCreatorNode",
             name = "生成石头",
-            pos = {x = 602.4812030075191, y = 284.8599215429878},
+            pos = {x = 642.4812030075191, y = 262.6376993207656},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -610,7 +622,7 @@ return {
             key = "17650318109115104002",
             type = "ChangeStaticCreatorNode",
             name = "销毁石头",
-            pos = {x = 1892.5898986596928, y = 936.7729650212486},
+            pos = {x = 1842.5898986596928, y = 1374.2729650212486},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = false,
@@ -619,16 +631,16 @@ return {
               NewTargetPointName = "",
               StaticCreatorIdList = {2050021}
             }
+          },
+          ["17761493362105481707"] = {
+            key = "17761493362105481707",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 291.6784482758624, y = 407.03517846340003},
+            propsData = {ConditionId = 1201040501}
           }
         },
-        commentData = {
-          ["17638959400537203559"] = {
-            key = "17638959400537203559",
-            name = "Input Commment...",
-            position = {x = 1534.431179327918, y = 677.0685419652815},
-            size = {width = 295, height = 233.33333333333334}
-          }
-        }
+        commentData = {}
       }
     }
   },

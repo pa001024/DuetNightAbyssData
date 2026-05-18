@@ -110,6 +110,7 @@ function WBP_BattleMap_C:Construct()
   self:InitFloorBox()
   self:InitPointPool()
   self:InitMinimapDoor()
+  self:InitKeyInfo(false)
   if self.bNewMaterial then
     self:AddTimer(0.01, function()
       self.InMapWidth = USlateBlueprintLibrary.GetLocalSize(self.RetainerBox_101:GetCachedGeometry())
@@ -235,25 +236,132 @@ function WBP_BattleMap_C:InitMapWidth()
   self.DoorArrowMaterial:SetScalarParameterValue("PanelSizeY", self.MapWidth.Y)
 end
 
+function WBP_BattleMap_C:OnUnfoldMapOutAnimFinished()
+  self:PlayAnimation(self.CollapsedMap)
+  self.UnfoldMap:SetVisibility(ESlateVisibility.Collapsed)
+  if self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Touch then
+    self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  else
+    self:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.WS_Type:SetActiveWidgetIndex(0)
+  end
+  self.IsAnimating = false
+end
+
+function WBP_BattleMap_C:OnUnfoldMapInAnimFinished()
+  if not (not self.IsMobile and self.WS_Controller and self.UnfoldMap) or not self.UnfoldMap.WSPanel then
+    self.IsAnimating = false
+    return
+  end
+  if not self.WS_Controller_OriginParent then
+    self.WS_Controller_OriginParent = self.WS_Controller:GetParent()
+    local originSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.WS_Controller)
+    if originSlot then
+      self.WS_Controller_OriginAnchors = originSlot:GetAnchors()
+      self.WS_Controller_OriginAlignment = originSlot:GetAlignment()
+      self.WS_Controller_OriginPosition = originSlot:GetPosition()
+      self.WS_Controller_OriginSize = originSlot:GetSize()
+      self.WS_Controller_OriginZOrder = originSlot:GetZOrder()
+    end
+  end
+  self.WS_Controller:RemoveFromParent()
+  self.UnfoldMap.WSPanel:AddChild(self.WS_Controller)
+  local newSlot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.WS_Controller)
+  if newSlot then
+    newSlot:SetAlignment(FVector2D(0.5, 0))
+  end
+  self.IsAnimating = false
+end
+
+function WBP_BattleMap_C:RestoreWSControllerPosition()
+  if self.IsMobile or not self.WS_Controller then
+    return
+  end
+  if not self.WS_Controller_OriginParent then
+    return
+  end
+  self.WS_Controller:RemoveFromParent()
+  self.WS_Controller_OriginParent:AddChild(self.WS_Controller)
+  local slot = UE4.UWidgetLayoutLibrary.SlotAsCanvasSlot(self.WS_Controller)
+  if slot then
+    if self.WS_Controller_OriginAnchors then
+      slot:SetAnchors(self.WS_Controller_OriginAnchors)
+    end
+    if self.WS_Controller_OriginAlignment then
+      slot:SetAlignment(self.WS_Controller_OriginAlignment)
+    end
+    if self.WS_Controller_OriginPosition then
+      slot:SetPosition(self.WS_Controller_OriginPosition)
+    end
+    if self.WS_Controller_OriginSize then
+      slot:SetSize(self.WS_Controller_OriginSize)
+    end
+    if self.WS_Controller_OriginZOrder then
+      slot:SetZOrder(self.WS_Controller_OriginZOrder)
+    end
+  end
+end
+
 function WBP_BattleMap_C:ChangeEvent()
+  DebugPrint("yly WBP_BattleMap_C:ChangeEvent: self.IsOpen =", self.IsOpen, "self.IsMobile = ", self.IsMobile)
   if self.IsOpen then
     self.RetainerBox_101:SetVisibility(ESlateVisibility.Collapsed)
-    self.Battle.Map_Img:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    if self.IsMobile then
+      self:SetRenderOpacity(0)
+    else
+      self:SetRenderOpacity(1)
+      self.WS_Type:SetActiveWidgetIndex(1)
+    end
+    self.UnfoldMap = UIManager(self):GetUIObj("BattleMapUnFold")
+    if not self.UnfoldMap then
+      self.UnfoldMap = UIManager(self):LoadUINew("BattleMapUnFold")
+      self.UnfoldMap:UnbindFromAnimationFinished(self.UnfoldMap.In, {
+        self,
+        self.OnUnfoldMapInAnimFinished
+      })
+      self.UnfoldMap:BindToAnimationFinished(self.UnfoldMap.In, {
+        self,
+        self.OnUnfoldMapInAnimFinished
+      })
+      self.UnfoldMap:UnbindFromAnimationFinished(self.UnfoldMap.Out, {
+        self,
+        self.OnUnfoldMapOutAnimFinished
+      })
+      self.UnfoldMap:BindToAnimationFinished(self.UnfoldMap.Out, {
+        self,
+        self.OnUnfoldMapOutAnimFinished
+      })
+      if self.UnfoldMap.Btn_Close then
+        self.UnfoldMap.Btn_Close.Btn_Close.OnClicked:Add(self, self.OnClickClose)
+      end
+    end
+    self.UnfoldMap:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.UnfoldMap.Map_Img:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+    self.UnfoldMap.Map_Img:AddChild(self.Panel_Root)
+    self.UnfoldMap.Map_Out:AddChild(self.TracePanel)
+    self.UnfoldMap.Map_Out:AddChild(self.GamerPanel)
     if self.WildMap then
       self.WildMap:RemoveFromParent()
       self.WildMap = nil
     end
-    self.Battle.Map_Img:AddChild(self.Panel_Root)
-    self.Battle.Map_Out:AddChild(self.TracePanel)
-    self.Battle.Map_Out:AddChild(self.GamerPanel)
-    self.Battle:PlayAnimation(self.Battle.ShowMap)
+    self:PlayAnimation(self.ShowMap)
+    self.UnfoldMap:PlayAnimation(self.UnfoldMap.In)
     self:AdjustSlot(self.Panel_Root.Slot)
     self:AdjustSlot(self.TracePanel.Slot)
     self:AdjustSlot(self.GamerPanel.Slot)
     self.MiniMapRad = 320
+    self:InitKeyInfo(true)
   else
     self.RetainerBox_101:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    self.Battle.Map_Img:SetVisibility(ESlateVisibility.Collapsed)
+    if self.UnfoldMap then
+      self.Panel_Root:RemoveFromParent()
+      self.TracePanel:RemoveFromParent()
+      self.GamerPanel:RemoveFromParent()
+      self.UnfoldMap.Map_Img:SetVisibility(ESlateVisibility.Collapsed)
+      self.UnfoldMap:PlayAnimation(self.UnfoldMap.Out)
+      self:RestoreWSControllerPosition()
+    end
+    self:SetRenderOpacity(1)
     if self.WildMap then
       self.WildMap:RemoveFromParent()
       self.WildMap = nil
@@ -263,9 +371,9 @@ function WBP_BattleMap_C:ChangeEvent()
     self.Panel_Map:AddChild(self.GamerPanel)
     self:AdjustSlot(self.TracePanel.Slot)
     self:AdjustSlot(self.GamerPanel.Slot)
-    self.Battle:PlayAnimation(self.Battle.CollapsedMap)
     self:SetVisibility(0)
     self.MiniMapRad = 135
+    self:InitKeyInfo(false)
   end
   if self.DungeonData then
     for Id, Data in pairs(DataMgr.Region) do
@@ -468,32 +576,24 @@ function WBP_BattleMap_C:OnClickRealOpen()
   if self.DungeonData and (self.DungeonData.DungeonType == "Temple" or self.DungeonData.bHideBatttleMap) then
     return
   end
-  if self.IsOpen == true or self.IsMobile then
+  if self.IsOpen == true then
     return
   end
   self.IsOpen = true
   self.IsAnimating = true
-  if self.Common_Key_Hud_PC then
-    self.Common_Key_Hud_PC:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  end
   self.MapPanel:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Btn_Open:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ChangeEvent()
   self.BG:SetVisibility(UE4.ESlateVisibility.Hidden)
-  self.IsAnimating = false
   self.Btn_Close:SetVisibility(UE4.ESlateVisibility.Visible)
 end
 
 function WBP_BattleMap_C:OnClickClose()
   self.IsOpen = false
   self.IsAnimating = true
-  if self.Common_Key_Hud_PC and self.HudKeyShow then
-    self.Common_Key_Hud_PC:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
-  end
   self.MapPanel:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
   self.Btn_Close:SetVisibility(UE4.ESlateVisibility.Collapsed)
   self:ChangeEvent()
-  self.IsAnimating = false
   self.Btn_Open:SetVisibility(UE4.ESlateVisibility.Visible)
   self.BG:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
 end
@@ -955,31 +1055,59 @@ function WBP_BattleMap_C:OnKeyDown(MyGeometry, InKeyEvent)
   return UWidgetBlueprintLibrary.Unhandled()
 end
 
+function WBP_BattleMap_C:InitKeyInfo(IsMapUnfolded)
+  local DescTxt = GText("UI_CTL_Expand")
+  if IsMapUnfolded then
+    DescTxt = GText("UI_CTL_Fold")
+  end
+  if self.Controller_UnFold then
+    local keyName = CommonUtils:GetActionMappingKeyName("OpenMap", true)
+    self.Controller_UnFold:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Text",
+          ImgShortPath = CommonUtils:GetKeyText(keyName)
+        }
+      },
+      Desc = DescTxt
+    })
+  end
+  if self.Key_UnFold then
+    local keyName = CommonUtils:GetActionMappingKeyName("OpenMap", false)
+    self.Key_UnFold:CreateCommonKey({
+      KeyInfoList = {
+        {
+          Type = "Text",
+          ImgShortPath = CommonUtils:GetKeyText(keyName)
+        }
+      },
+      Desc = DescTxt
+    })
+  end
+end
+
 function WBP_BattleMap_C:OnChangeKeyBoardSet()
   local platformName = UGameplayStatics.GetPlatformName()
+  DebugPrint("yly WBP_BattleMap_C:OnChangeKeyBoardSet GetPlatformName = ", platformName)
   local IsTemple = self.DungeonData and self.DungeonData.DungeonType == "Temple"
   local IsGamepad = self.GameInputModeSubsystem:GetCurrentInputType() == ECommonInputType.Gamepad
   self.HudKeyShow = "Windows" == platformName and not IsTemple and IsGamepad
-  if self.Common_Key_Hud_PC and self.HudKeyShow then
-    local keyName = CommonUtils:GetActionMappingKeyName("OpenMap", true)
-    self.Common_Key_Hud_PC:CreateCommonKey({
-      KeyInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = CommonUtils:GetKeyText(keyName)
-        }
-      }
-    })
-  end
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return
   end
   local unlocked = Avatar:CheckUIUnlocked("Map")
-  if unlocked and self.HudKeyShow then
-    self.Common_Key_Hud_PC:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
+  local IsInDungeon = self.DungeonData ~= nil
+  DebugPrint("yly WBP_BattleMap_C:OnChangeKeyBoardSet self.IsMobile = ", self.IsMobile)
+  if unlocked and "Windows" == platformName and not IsTemple and IsInDungeon and not self.IsMobile then
+    self.WS_Controller:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+    if IsGamepad then
+      self.WS_Controller:SetActiveWidgetIndex(1)
+    else
+      self.WS_Controller:SetActiveWidgetIndex(0)
+    end
   else
-    self.Common_Key_Hud_PC:SetVisibility(ESlateVisibility.Collapsed)
+    self.WS_Controller:SetVisibility(UE4.ESlateVisibility.Collapsed)
   end
 end
 
@@ -1298,13 +1426,13 @@ function WBP_BattleMap_C:InOrOutEdgeState(bIn)
   self.bEdgeState = bIn
   if bIn then
     if not self:IsAnimationPlaying(self.EdgeWarnings_In) then
-      self:StopAnimation(self.EdgeWarnings_Out)
-      self:PlayAnimation(self.EdgeWarnings_In)
+      EMUIAnimationSubsystem:EMStopAnimation(self, self.EdgeWarnings_Out)
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.EdgeWarnings_In)
     end
   else
     if not self:IsAnimationPlaying(self.EdgeWarnings_Out) then
-      self:StopAnimation(self.EdgeWarnings_In)
-      self:PlayAnimation(self.EdgeWarnings_Out)
+      EMUIAnimationSubsystem:EMStopAnimation(self, self.EdgeWarnings_In)
+      EMUIAnimationSubsystem:EMPlayAnimation(self, self.EdgeWarnings_Out)
     end
     self:RemoveTimer("BattleMapCheckEdgeTimer")
     self:AddTimer(0.2, function()
@@ -1516,6 +1644,14 @@ end
 function WBP_BattleMap_C:ForceUpdatePlayerCurrentLevelId()
   self.Player:UpdateCurrentLevelId()
   self.bForceUpdatePlayerCurrentLevelId = true
+end
+
+function WBP_BattleMap_C:SwitchMapState(bEmpty)
+  if bEmpty then
+    self.WS_Type:SetActiveWidgetIndex(1)
+  else
+    self.WS_Type:SetActiveWidgetIndex(0)
+  end
 end
 
 AssembleComponents(WBP_BattleMap_C)

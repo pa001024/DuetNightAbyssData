@@ -43,6 +43,7 @@ function Component:OnBtnCheckClicked()
       self.ParentWidget:CloseDialog()
     end
     UIManager(self):LoadUINew("ArmorySkin", {
+      IsPreviewMode = true,
       Type = "Char",
       SkinId = self.Content.StuffId,
       OnCloseCallback = function()
@@ -56,6 +57,7 @@ function Component:OnBtnCheckClicked()
       self.ParentWidget:CloseDialog()
     end
     UIManager(self):LoadUINew("ArmorySkin", {
+      IsPreviewMode = true,
       Type = "Char",
       AccessoryId = self.Content.StuffId,
       OnCloseCallback = function()
@@ -69,6 +71,7 @@ function Component:OnBtnCheckClicked()
       self.ParentWidget:CloseDialog()
     end
     UIManager(self):LoadUINew("ArmorySkin", {
+      IsPreviewMode = true,
       Type = "Weapon",
       SkinId = self.Content.StuffId,
       OnCloseCallback = function()
@@ -82,6 +85,7 @@ function Component:OnBtnCheckClicked()
       self.ParentWidget:CloseDialog()
     end
     UIManager(self):LoadUINew("ArmorySkin", {
+      IsPreviewMode = true,
       Type = "Weapon",
       AccessoryId = self.Content.StuffId,
       OnCloseCallback = function()

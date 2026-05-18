@@ -286,12 +286,24 @@ return ReadOnly("DanmakuTemplate", {
     Type = 851801
   },
   [851901] = {
-    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLiecheCannon_Skill0201.BP_Danmaku_BossLiecheCannon_Skill0201",
-    Type = 851901
+    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLiecheCannon_USkill0101.BP_Danmaku_BossLiecheCannon_USkill0101",
+    Type = 851901,
+    Vars = {BPTime = 6, DanmakuRoot = 1}
   },
   [851902] = {
-    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLiecheCannon_Skill0202.BP_Danmaku_BossLiecheCannon_Skill0202",
-    Type = 851902
+    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLiecheCannon_USkill0101.BP_Danmaku_BossLiecheCannon_USkill0101",
+    Type = 851902,
+    Vars = {BPTime = 6, DanmakuRoot = 2}
+  },
+  [851903] = {
+    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLiecheCannon_USkill0101.BP_Danmaku_BossLiecheCannon_USkill0101",
+    Type = 851903,
+    Vars = {BPTime = 6, DanmakuRoot = 3}
+  },
+  [851904] = {
+    BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLiecheCannon_USkill0101.BP_Danmaku_BossLiecheCannon_USkill0101",
+    Type = 851904,
+    Vars = {BPTime = 6, DanmakuRoot = 4}
   },
   [852001] = {
     BPPath = "/Game/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossAida_Skill1301.BP_Danmaku_BossAida_Skill1301",

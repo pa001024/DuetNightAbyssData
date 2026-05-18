@@ -1533,12 +1533,16 @@ function BP_UIManagerComponent_C:CloseResidentUI(PopUIName)
   if self:CheckIsExistPopUpWidget() then
     if nil ~= PopUIName then
       self.PopUpUIWidgetRecord[PopUIName] = 1
+      local BattleMainPage = self:GetUIObj("BattleMain")
+      if BattleMainPage then
+        BattleMainPage:AddPlayInOutSystems(PopUIName)
+      end
     end
     return
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if Player then
-    Player:SetCanInteractiveTrigger(false)
+    Player:SetCanInteractiveTrigger(false, UIConst.CommonHideTagName.UIPopUp)
   end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local SceneMgrComponent = GameInstance:GetSceneManager()
@@ -1586,7 +1590,7 @@ function BP_UIManagerComponent_C:OpenResidentUI(PopUIName)
   end
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
   if Player then
-    Player:SetCanInteractiveTrigger(true)
+    Player:SetCanInteractiveTrigger(true, UIConst.CommonHideTagName.UIPopUp)
   end
   local GameInstance = UE4.UGameplayStatics.GetGameInstance(self)
   local SceneMgrComponent = GameInstance:GetSceneManager()
@@ -1697,7 +1701,7 @@ function BP_UIManagerComponent_C:ShowDisconnectUIConfirm(PopupId, IsStopGame, Pa
     
     EventManager:FireEvent(EventID.OnToggleDisconnectUI, true)
     PopupUI:ShowPopup(PopupId, Params)
-    local StorySubsystem = UEMCommonInputSubsystem.Get(self)
+    local StorySubsystem = UEMUIInputSubsystem.Get(self)
     if StorySubsystem then
       StorySubsystem:ClearUIInputBlock()
     end
@@ -1973,6 +1977,27 @@ function BP_UIManagerComponent_C:ShowUITip(TipType, TipContent, LastTime, IsWait
     local ExcavationToast = self:CreateWidget(UIConst.EXCAVATIONDUNGEONTEXTFLOAT, false)
     UITipList.VerticalBox_Toast:AddChildToVerticalBox(ExcavationToast)
     ExcavationToast:OnLoaded(LastTime, TipContent, ExtraData.Level, ExtraData.OrderText)
+  elseif TipType == UIConst.Tip_AsyncCombat then
+    local UITipList = self:GetUI("CommonTopToastList")
+    if nil == UITipList then
+      UITipList = self:LoadUINew("CommonTopToastList", TipContent, LastTime)
+    elseif UITipList:IsHide() then
+      UITipList:ClearAllHideTags()
+      UITipList:Show()
+    end
+    local NextTipsIndex = UITipList:AddAndUpdateCurrentUITips()
+    RunAsyncTask(self, TipContent .. tostring(NextTipsIndex), function(CoroutineObj)
+      local UITopTip = self:CreateWidgetAsync(DataMgr.WidgetUI.CommonToastItem.UIName, CoroutineObj)
+      if nil ~= UITopTip then
+        UITopTip:SetNeedPaintDeferred(self.IsMenuAnchorOpen and not self:IsInHUDShowMode())
+        UITipList:AddNewUITips(UITopTip)
+        UITopTip:OnLoaded(TipContent, LastTime)
+        if ExtraData.Color then
+          UITopTip:ChangeFlashColor(ExtraData.Color)
+        end
+        AudioManager(self):PlayUISound(UITopTip, "event:/ui/common/toast_normal", nil, nil)
+      end
+    end)
   end
 end
 
@@ -2225,6 +2250,9 @@ function BP_UIManagerComponent_C:CreateOrGetPlayerReflection(Char, InAvatar)
   local IsCreated = false
   if not self.PlayerReflection or not self.PlayerReflection:IsValid() then
     self.PlayerReflection = CreateArmoryPlayerActor(self, Char, InAvatar)
+    if self.PlayerReflection and self.PlayerReflection.FXComponent then
+      self.PlayerReflection.FXComponent:DisableComponent(true)
+    end
     IsCreated = true
   end
   return self.PlayerReflection, IsCreated
@@ -2897,7 +2925,13 @@ function BP_UIManagerComponent_C:PrivateHideAllComponentUI(IsHide, Tag, CompName
           WidgetComp:SetWidgetHiddenByTag(IsHide, Tag)
         elseif Widget then
           if IsHide then
-            Widget:Hide(Tag)
+            if "function" == type(Widget.HideComponentUI) then
+              Widget:HideComponentUI(Tag)
+            else
+              Widget:Hide(Tag)
+            end
+          elseif "function" == type(Widget.ShowComponentUI) then
+            Widget:ShowComponentUI(Tag)
           else
             Widget:Show(Tag)
           end
@@ -2908,22 +2942,32 @@ function BP_UIManagerComponent_C:PrivateHideAllComponentUI(IsHide, Tag, CompName
 end
 
 function BP_UIManagerComponent_C:HideAllComponentUI(IsHide, Tag, CompName)
+  local CompNameKey = CompName
+  if nil == CompNameKey or "" == CompNameKey then
+    CompNameKey = ""
+  end
+  local HideWidgetComponentTags = self.HideWidgetComponentTags or {}
+  self.HideWidgetComponentTags = HideWidgetComponentTags
+  local CompHideTags = self.HideWidgetComponentTags[Tag] or {}
+  self.HideWidgetComponentTags[Tag] = CompHideTags
+  if IsHide then
+    if CompHideTags[CompNameKey] then
+      EventManager:FireEvent(EventID.OnHideAllComponentUI, IsHide, Tag)
+      return
+    end
+  elseif nil == CompHideTags[CompNameKey] then
+    EventManager:FireEvent(EventID.OnHideAllComponentUI, IsHide, Tag)
+    return
+  end
   if "Billboard" == CompName or nil == CompName then
     DebugPrint("BP_UIManagerComponent_C:HideAllComponentUI SetIsForbidenShowBloodUI", IsHide, Tag)
     UE4.UMainBar.SetIsForbidenShowBloodUI(IsHide)
   end
   self:PrivateHideAllComponentUI(IsHide, Tag, CompName, self.WidgetComponentList)
-  local HideWidgetComponentTags = self.HideWidgetComponentTags or {}
-  self.HideWidgetComponentTags = HideWidgetComponentTags
-  if nil == CompName or "" == CompName then
-    CompName = ""
-  end
-  local CompHideTags = self.HideWidgetComponentTags[Tag] or {}
-  self.HideWidgetComponentTags[Tag] = CompHideTags
   if IsHide then
-    CompHideTags[CompName] = true
+    CompHideTags[CompNameKey] = true
   else
-    CompHideTags[CompName] = nil
+    CompHideTags[CompNameKey] = nil
   end
   EventManager:FireEvent(EventID.OnHideAllComponentUI, IsHide, Tag)
 end
@@ -3026,6 +3070,8 @@ function BP_UIManagerComponent_C:LoadBossSkillTipsUI(BossSkillToastId)
   local UIName
   if "common" == TipsStyle then
     UIName = "BossSkillToast"
+  elseif "bossliechecommon" == TipsStyle then
+    UIName = "ToastTrainBossSkill"
   else
     UIName = "SpecialBossSkillToast"
   end

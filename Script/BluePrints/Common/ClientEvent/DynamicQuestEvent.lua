@@ -19,8 +19,6 @@ function DynamicQuestEvent:OnStartEvent(...)
   if Avatar then
     self.DynQuest = Avatar.DynamicQuests[self.DynamicQuestId]
   end
-  EventManager:AddEvent(EventID.OnEnterTriggerBox, self, self.OnEnterTriggerBox)
-  EventManager:AddEvent(EventID.OnLeaveTriggerBox, self, self.OnLeaveTriggerBox)
   self:ActivateTrigger()
 end
 
@@ -222,8 +220,6 @@ end
 
 function DynamicQuestEvent:Destroy(Result, Info)
   EventManager:RemoveEvent(EventID.OnDynamicQuestFail, self)
-  EventManager:RemoveEvent(EventID.OnEnterTriggerBox, self)
-  EventManager:RemoveEvent(EventID.OnLeaveTriggerBox, self)
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(GWorld.GameInstance, 0)
   if self.LeaveTriggerTimerKey and Player:IsExistTimer(self.LeaveTriggerTimerKey) then
     Player:RemoveTimer(self.LeaveTriggerTimerKey)

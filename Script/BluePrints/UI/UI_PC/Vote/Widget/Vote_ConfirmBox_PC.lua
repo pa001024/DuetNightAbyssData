@@ -144,7 +144,7 @@ function M:GetAllRewardsList(MaxProgress)
       Idx = Idx % #DungeonRewardArray + 1
       if self.Type == "Continue" then
         local RealWave = i
-        self:GetRewardsList(i == DefenceWave + 1, "Continue", i, DungeonRewardArray[(RealWave - 1) % #DungeonRewardArray + 1])
+        self:GetRewardsList(i == DefenceWave + 1, "Continue", i, DungeonRewardArray[(RealWave - 1) % #DungeonRewardArray + 1], DefenceWave)
       end
     else
       self:GetRewardsList(false, "Continue", DefenceWave + 1 - i, -1, DefenceWave)
@@ -160,6 +160,7 @@ function M:GetRewardsList(IsCurrentWave, Type, CurrentDungeonProgress, RewardId,
   Obj.CurrentDungeonProgress = CurrentDungeonProgress
   Obj.RewardId = RewardId
   Obj.DefenceWave = DefenceWave
+  Obj.IsIronSurvival = self.VoteMain.IsType_IronSurvival
   if "Continue" == Type then
     self.Box_Continue:AddItem(Obj)
   else

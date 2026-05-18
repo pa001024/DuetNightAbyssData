@@ -2,7 +2,7 @@ local ETalkNodeFinishType = require("StoryCreator.StoryLogic.StorylineUtils").ET
 local EDialogueNodeType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueNodeType
 local EDialogueIterType = require("BluePrints.Story.Talk.View.TalkUtils").EDialogueIterType
 local M = Class({
-  "BluePrints.Story.StoryIteration.StoryIterationNode"
+  "BluePrints.Story.Talk.TalkFlow.Nodes.TalkFlowNode"
 })
 M.NodeType = EDialogueNodeType.Option
 

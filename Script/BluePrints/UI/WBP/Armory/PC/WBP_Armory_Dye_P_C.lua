@@ -673,7 +673,7 @@ function M:OnModifyPlanParams(Params)
   end
 end
 
-function M:OnFocusStateChanged(NewState, OladState)
+function M:OnFocusStateChanged(NewState, OldState)
   if NewState then
     self:OnFocusChanged()
   end

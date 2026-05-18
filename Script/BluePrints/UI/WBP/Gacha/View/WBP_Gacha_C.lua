@@ -429,6 +429,7 @@ function M:RefreshCumulativeDrawReward()
   self.ExchangeBtn.Btn_Click.OnClicked:Clear()
   self.ExchangeBtnCanClick = false
   if DataMgr.SkinGachaCumulative[GachaData.GachaId] then
+    self.ExchangeBtn:StopAllAnimations()
     self.HB_Exchange:SetVisibility(ESlateVisibility.Visible)
     local RewardId, NeedCount, LastReward = GachaModel:GetSkinGachaCurrentCumulativeInfo(self.CurrentGachaId)
     if RewardId then

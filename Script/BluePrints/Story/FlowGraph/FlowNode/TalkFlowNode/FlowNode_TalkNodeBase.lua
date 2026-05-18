@@ -18,4 +18,9 @@ function M:TryGetRecordComponent()
   return TalkTask.DialogueRecordComponent
 end
 
+function M:TryGetWikiComponent()
+  local TalkTask = self:TryGetTalkTask()
+  return TalkTask.DialogueWikiComponent
+end
+
 return M

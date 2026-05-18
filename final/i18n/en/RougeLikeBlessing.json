@@ -34,7 +34,7 @@
   {
     "id": 102,
     "name": "Chain Blade",
-    "desc": "Increases Melee Weapon Trigge Probability by <Highlight>#1</>.",
+    "desc": "Increases Melee Weapon Trigger Probability by <Highlight>#1</>.",
     "simple_desc": "Increases Melee Weapon <Highlight>Trigger Probability</>.",
     "blessing_group": 1,
     "blessing_rarity": 1,

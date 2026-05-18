@@ -1,7 +1,7 @@
 local TeamController = require("BluePrints.UI.WBP.Team.TeamController")
 local Component = {}
 
-function Component:EnterWorld()
+function Component:_OnLoginSuccess()
   TeamController:Init()
 end
 
@@ -166,8 +166,8 @@ function Component:TeamBattleEvent(EventName, ...)
   end
 end
 
-function Component:TeamBattleEvent_StartVote(DungeonId, bMatch)
-  DebugPrint("gmy@Component:TeamBattleEvent_StartVote", DungeonId)
+function Component:TeamBattleEvent_StartVote(DungeonId, bMatch, EventParams)
+  DebugPrint("gmy@Component:TeamBattleEvent_StartVote", DungeonId, EventParams)
   local Avatar = GWorld:GetAvatar()
   assert(Avatar, "Avatar is nil")
   local Model = TeamController and TeamController.GetModel and TeamController:GetModel() or nil
@@ -192,7 +192,8 @@ function Component:TeamBattleEvent_StartVote(DungeonId, bMatch)
     if Panel and Panel.bClosing then
       UIManager(self):UnLoadUINew("DungeonMatchTimingBar")
     end
-    UIManager(self):LoadUINew("DungeonMatchTimingBar", DungeonId, Const.DUNGEON_MATCH_BAR_STATE.TEAMMATE_CONFIRMING, bMatch)
+    local ticketLevel = EventParams and EventParams.IronTicketLevel or 0
+    UIManager(self):LoadUINew("DungeonMatchTimingBar", DungeonId, Const.DUNGEON_MATCH_BAR_STATE.TEAMMATE_CONFIRMING, bMatch, 0 ~= ticketLevel and ticketLevel or nil)
     TeamController:RecvTeamOnVoteStart(DungeonId)
   else
     assert(false, "Not in team")

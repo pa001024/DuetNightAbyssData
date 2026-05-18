@@ -1,4 +1,5 @@
 local TalkOptionData_C = require("BluePrints.Story.Talk.Model.TalkOptionData").TalkOptionData_C
+local ETalkCategory = {None = "None", Cutscene = "Cutscene"}
 
 local function GetSequence(SequencePath)
   local Sequence = UE4.LoadObject(SequencePath)
@@ -32,7 +33,7 @@ local function GetSequence(SequencePath)
   return nil
 end
 
-local function AddExternTalkactors(TalkNodeData, ExternTalkActors, bUseExternActors)
+local function AddExternTalkactors(TalkNodeData, ExternTalkActors, bUseExternActors, FlowAsset)
   local TalkActors = {}
   local NativeTalkActors = {}
   if bUseExternActors then
@@ -59,6 +60,14 @@ local function AddExternTalkactors(TalkNodeData, ExternTalkActors, bUseExternAct
         table.insert(TalkActors, TalkActor)
       end
     end
+  end
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar and UTalkEditorFunctionLibrary then
+    for _, TalkActor in pairs(TalkActors) do
+      TalkActor.OriginTalkActorId = TalkActor.TalkActorId
+      TalkActor.TalkActorId = UTalkEditorFunctionLibrary.GetEditorNpcIdByGender(TalkActor.TalkActorId, FlowAsset)
+    end
+    UTalkEditorFunctionLibrary.InitVoiceGender(FlowAsset)
   end
   TalkNodeData.TalkActors = TalkActors
 end
@@ -201,7 +210,7 @@ function CommonTalkTaskData_C.New(TalkNodeData)
       Obj.FlowAsset = TS:CreateFlowTalkTask(TalkNodeData.FlowAssetPath, UE4.LoadObject(TalkNodeData.FlowAssetPath))
       Obj.FirstDialogueId = Obj.FlowAsset:GetFirstDialogueId()
       local TalkActors = Obj.FlowAsset:GetTalkActorData()
-      AddExternTalkactors(Obj, TalkActors, Obj.bUseFlowAssetActors)
+      AddExternTalkactors(Obj, TalkActors, Obj.bUseFlowAssetActors, Obj.FlowAsset)
     end
   end
   if Obj.BasicTalkType == "Black" then
@@ -224,6 +233,9 @@ function CommonTalkTaskData_C.New(TalkNodeData)
     Obj.BeginFadeOutTime = TalkNodeData.StartFadeOutTime
     Obj.ScreenEffectDurationSeconds = TalkNodeData.StartScreenEffectDuration
     Obj.FinishFadeInTime = TalkNodeData.FinishFadeInTime
+  end
+  if Obj.BasicTalkType == "Cinematic" or IsValid(Obj.FlowAsset) and Obj.FlowAsset:IsCutsceneFlow() then
+    Obj.TalkCategory = ETalkCategory.Cutscene
   end
   return Obj
 end

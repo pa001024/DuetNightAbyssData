@@ -745,6 +745,155 @@
     ]
   },
   {
+    "id": 10107,
+    "icon": "Sword_Qiuniao",
+    "名称": "Chainbreak Pinion",
+    "版本": "1.4",
+    "描述": "No cage can hold wings born for flight. From fury and longing, she will shape barbed plumes sharp enough to shear through iron.",
+    "类型": [
+      "近战",
+      "单手剑"
+    ],
+    "伤害类型": "贯穿",
+    "攻击": 26,
+    "暴击": 0.24,
+    "暴伤": 2.4,
+    "触发": 0.15,
+    "加成": {
+      "昂扬": 0.15
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Damaged Sal Volatile": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Fuel Reagent": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Fuel Reagent": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Fuel Reagent": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Fuel Reagent": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Fuel Reagent": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
+    "熔炼": [
+      "Morale +15.0%. When an Umbro character deals damage, Damage Dealt increases by 0.200% for each Combo Point. After Combo Points are consumed, Morale increases by [0.250% × Combo Points consumed] for 8.0s.",
+      "Morale +18.0%. When an Umbro character deals damage, Damage Dealt increases by 0.240% for each Combo Point. After Combo Points are consumed, Morale increases by [0.300% × Combo Points consumed] for 8.0s.",
+      "Morale +21.0%. When an Umbro character deals damage, Damage Dealt increases by 0.280% for each Combo Point. After Combo Points are consumed, Morale increases by [0.350% × Combo Points consumed] for 8.0s.",
+      "Morale +24.0%. When an Umbro character deals damage, Damage Dealt increases by 0.320% for each Combo Point. After Combo Points are consumed, Morale increases by [0.400% × Combo Points consumed] for 8.0s.",
+      "Morale +27.0%. When an Umbro character deals damage, Damage Dealt increases by 0.360% for each Combo Point. After Combo Points are consumed, Morale increases by [0.450% × Combo Points consumed] for 8.0s.",
+      "Morale +30.0%. When an Umbro character deals damage, Damage Dealt increases by 0.400% for each Combo Point. After Combo Points are consumed, Morale increases by [0.500% × Combo Points consumed] for 8.0s."
+    ],
+    "技能": [
+      {
+        "id": 1010101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.45,
+            "削韧": 25,
+            "延迟": 0.05,
+            "卡肉": 0.03,
+            "取消": 0.2333,
+            "连段": 0.4667
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.5,
+            "削韧": 30,
+            "延迟": 0.1,
+            "卡肉": 0.03,
+            "取消": 0.1667,
+            "连段": 0.3777
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.4,
+            "格式": "{%}×2",
+            "削韧": 30,
+            "取消": 0.4,
+            "连段": 0.612
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 0.82,
+            "削韧": 50,
+            "延迟": 0.05,
+            "卡肉": 0.07,
+            "取消": 0.6333,
+            "连段": 0.9
+          }
+        ]
+      },
+      {
+        "id": 1010102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 1.13,
+            "削韧": 73,
+            "卡肉": 0.03,
+            "取消": 1.2333
+          }
+        ]
+      },
+      {
+        "id": 1010103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 0.51,
+            "削韧": 33,
+            "取消": 1.6807
+          }
+        ]
+      },
+      {
+        "id": 1010104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 0.51,
+            "削韧": 33,
+            "卡肉": 0.1,
+            "取消": 0.4333
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10201,
     "icon": "Polearm_Sairen",
     "名称": "Siren's Kiss",
@@ -1759,6 +1908,368 @@
     ]
   },
   {
+    "id": 10299,
+    "icon": "Polearm_Yemei",
+    "名称": "Perpetual Strife",
+    "版本": "1.4",
+    "描述": "One who bore this weapon was a warrior, granted it by Father Ask in honour of his valour. He sought ever mightier foes, sending challenge after challenge to distant lands. His name became a byword for strength, until at last he could no longer live without battle.\nWar granted him no release. He fell within it — an arena without victor or end. The bodies of friend and foe alike became his salvation, and his own blood his final elegy.",
+    "类型": [
+      "近战",
+      "长柄"
+    ],
+    "伤害类型": "灵能",
+    "攻击": 22,
+    "暴击": 0.2,
+    "暴伤": 2.1,
+    "触发": 0.3,
+    "加成": {
+      "技能威力": 0.45,
+      "攻击": 0.9,
+      "技能范围": 0.9,
+      "昂扬": 0.35
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Stone Powder": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Insulation Coating": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 6900,
+        "Insulation Coating": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Blade": 1
+      },
+      {
+        "Coin": 17000,
+        "Insulation Coating": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Blade": 2
+      },
+      {
+        "Coin": 49000,
+        "Insulation Coating": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Blade": 4
+      },
+      {
+        "Coin": 180000,
+        "Insulation Coating": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Blade": 8
+      }
+    ],
+    "熔炼": [
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type."
+    ],
+    "熔炉": [
+      {
+        "lv": 1,
+        "解锁": {
+          "Prototype: Perpetual Strife": 36,
+          "Weapon Track-Shift Module": 5,
+          "Emblem of Strength": 30,
+          "Emblem of Faith": 30
+        },
+        "技能": [
+          {
+            "id": 10299002,
+            "名称": "无止·凯旋",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Gain 80.0 Calamity each time a Summon is brought onto the field.",
+            "解锁": {
+              "Prototype: Perpetual Strife": 30,
+              "Hydro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Strength": 50,
+              "Emblem of Faith": 50
+            }
+          },
+          {
+            "id": 10299003,
+            "名称": "无止·溃败",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Gain 1.0 Calamity when a Summon deals damage.",
+            "解锁": {
+              "Prototype: Perpetual Strife": 30,
+              "Hydro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Strength": 50,
+              "Emblem of Faith": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Prototype: Perpetual Strife": 42,
+          "Hydro Crystal": 20,
+          "Sharpening Potion": 6,
+          "Emblem of Strength": 40,
+          "Emblem of Faith": 40
+        },
+        "技能": [
+          {
+            "id": 10299004,
+            "名称": "无休·强度",
+            "icon": "T_Rouge_Talent_SkillIntensityUP",
+            "加成": {
+              "Skill Intensity": 0.45
+            },
+            "解锁": {
+              "Prototype: Perpetual Strife": 30,
+              "Hydro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Strength": 50,
+              "Emblem of Faith": 50
+            }
+          },
+          {
+            "id": 10299005,
+            "名称": "无休·攻击",
+            "icon": "T_Rouge_Talent_ATK",
+            "加成": {
+              "ATK": 0.9
+            },
+            "解锁": {
+              "Prototype: Perpetual Strife": 30,
+              "Hydro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Strength": 50,
+              "Emblem of Faith": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Prototype: Perpetual Strife": 48,
+          "Hydro Crystal": 30,
+          "Radiant Crystal": 5,
+          "Weapon Track-Shift Module": 6,
+          "Emblem of Strength": 50,
+          "Emblem of Faith": 50
+        },
+        "技能": [
+          {
+            "id": 10299006,
+            "名称": "无止·僵局",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Gain 1 stack of [Invocation] for 10.0s each time a Summon is brought onto the field, up to 20.0 stacks. The remaining time of the effect is refreshed with each new stack gained. Each stack of [Invocation] increases Summon Attack Speed by 2.0%.",
+            "解锁": {
+              "Prototype: Perpetual Strife": 30,
+              "Hydro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Strength": 50,
+              "Emblem of Faith": 50
+            }
+          },
+          {
+            "id": 10299007,
+            "名称": "无止·双竭",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "For every 100 Calamity consumed, gain 1 stack of [Invocation] for 20.0s, up to 20.0 stacks. The remaining time of the effect is refreshed with each new stack gained. Each stack of [Invocation] increases Summon Attack Speed by 2.0%. At the start of battle, gain 10.0 stacks of [Invocation] for 20.0s.",
+            "解锁": {
+              "Prototype: Perpetual Strife": 30,
+              "Hydro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Strength": 50,
+              "Emblem of Faith": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Prototype: Perpetual Strife": 54,
+          "Hydro Crystal": 50,
+          "Radiant Crystal": 15,
+          "Sharpening Potion": 6,
+          "Emblem of Strength": 60,
+          "Emblem of Faith": 60
+        },
+        "技能": [
+          {
+            "id": 10299008,
+            "名称": "无休·范围",
+            "icon": "T_Rouge_Talent_SkillRangeUP",
+            "加成": {
+              "Skill Range": 0.9
+            },
+            "解锁": {
+              "Prototype: Perpetual Strife": 30,
+              "Hydro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Strength": 50,
+              "Emblem of Faith": 50
+            }
+          },
+          {
+            "id": 10299009,
+            "名称": "无休·昂扬",
+            "icon": "T_Rouge_Talent_Morale",
+            "加成": {
+              "Morale": 0.35
+            },
+            "解锁": {
+              "Prototype: Perpetual Strife": 30,
+              "Hydro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Sharpening Potion": 4,
+              "Emblem of Strength": 50,
+              "Emblem of Faith": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Prototype: Perpetual Strife": 100,
+          "Hydro Crystal": 90,
+          "Radiant Crystal": 20,
+          "Recasting Mould": 1,
+          "Emblem of Strength": 100,
+          "Emblem of Faith": 100
+        },
+        "技能": [
+          {
+            "id": 10299010,
+            "名称": "无止·长鏖",
+            "icon": "T_Rouge_Talent_Machinegun_Zaie",
+            "描述": "Increases max [Invocation] stacks to 30.0. Each stack increases your Summons' inherited attribute percentage by 0.25%.\nAt 30.0 stacks of [Invocation], additionally gain [Awakening]: Weapon Trigger Probability increases by 100.0%, [Parting Requiem]'s damage multiplier increases by 700.0%, and when a Summon dies, an additional [Parting Requiem] is triggered without consuming Calamity."
+          }
+        ]
+      }
+    ],
+    "技能": [
+      {
+        "id": 1020101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.35,
+            "削韧": 20,
+            "卡肉": 0.1,
+            "取消": 0.2333,
+            "连段": 0.3
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.25,
+            "格式": "{%}×3",
+            "削韧": 15,
+            "取消": 0.4333,
+            "连段": 0.6333
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.5,
+            "削韧": 35,
+            "取消": 0.2667,
+            "连段": 0.5667
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 0.4,
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.2333,
+            "连段": 0.5
+          },
+          {
+            "名称": "5-Hit DMG",
+            "值": 0.75,
+            "削韧": 50,
+            "卡肉": 0.03,
+            "取消": 0.1667,
+            "连段": 0.4333
+          }
+        ]
+      },
+      {
+        "id": 1020102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.1,
+            "削韧": 5,
+            "取消": 1.5
+          }
+        ],
+        "实体": [
+          {
+            "id": 1020101,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 50,
+              "BoxLength": 100,
+              "BoxWidth": 200
+            },
+            "时长": 15,
+            "速度": 3000,
+            "Vars": {
+              "IsHeavyAttack": true
+            },
+            "特效循环间隔": 0.2
+          }
+        ]
+      },
+      {
+        "id": 1020103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 0.47,
+            "削韧": 30,
+            "取消": 1.6333
+          }
+        ]
+      },
+      {
+        "id": 1020104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 0.4,
+            "削韧": 26,
+            "卡肉": 0.1,
+            "取消": 0.3333
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 10301,
     "icon": "Claymore_Chengjie",
     "名称": "Punitive Inferno",
@@ -2525,9 +3036,9 @@
   },
   {
     "id": 10399,
-    "icon": "Claymore_",
+    "icon": "Claymore_Yemei",
     "名称": "Metal Greatsword",
-    "版本": "1.4",
+    "版本": "1.6",
     "描述": "Ordinary greatsword. Crafted from the cheapest metal, so there's no shame if it breaks.",
     "类型": [
       "近战",
@@ -2577,6 +3088,38 @@
       }
     ],
     "熔炼": [],
+    "熔炉": [
+      {
+        "lv": 1,
+        "解锁": {
+          "Phoxene": 5
+        }
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Phoxene": 5
+        }
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Phoxene": 5
+        }
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Phoxene": 5
+        }
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Phoxene": 5
+        }
+      }
+    ],
     "技能": [
       {
         "id": 1030101,
@@ -4394,6 +4937,164 @@
     ]
   },
   {
+    "id": 10604,
+    "icon": "Katana_Tieyu",
+    "名称": "Sanguis Sanctus – Katana",
+    "版本": "1.4",
+    "描述": "Blood runs dry. Conviction does not.",
+    "类型": [
+      "近战",
+      "太刀"
+    ],
+    "伤害类型": "切割",
+    "攻击": 20,
+    "暴击": 0.2,
+    "暴伤": 2,
+    "触发": 0.26,
+    "加成": {
+      "攻击范围": 100
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Grip": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Grip": 4,
+        "Basic Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Grip": 3,
+        "Intermediate Weapon Component: Decoration": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Grip": 6,
+        "Advanced Weapon Component: Decoration": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Grip": 10,
+        "Advanced Weapon Component: Decoration": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Grip": 20,
+        "Advanced Weapon Component: Decoration": 8
+      }
+    ],
+    "熔炼": [
+      "ATK Range +1.0. When Combo Level increases, grants 1 stack of +11.0% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
+      "ATK Range +1.2. When Combo Level increases, grants 1 stack of +13.2% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
+      "ATK Range +1.4. When Combo Level increases, grants 1 stack of +15.4% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
+      "ATK Range +1.6. When Combo Level increases, grants 1 stack of +17.6% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
+      "ATK Range +1.8. When Combo Level increases, grants 1 stack of +19.8% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons.",
+      "ATK Range +2.0. When Combo Level increases, grants 1 stack of +22.0% Normal Attack DMG for 10.0s, up to 4.0  stacks. This effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "id": 1060101,
+        "名称": "普通攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "1-Hit DMG",
+            "值": 0.2,
+            "格式": "{%}×3",
+            "削韧": 15,
+            "取消": 0.4333,
+            "连段": 0.6333
+          },
+          {
+            "名称": "2-Hit DMG",
+            "值": 0.3,
+            "格式": "{%}×4",
+            "削韧": 20,
+            "取消": 0.4667,
+            "连段": 0.7667
+          },
+          {
+            "名称": "3-Hit DMG",
+            "值": 0.4,
+            "值2": 0.45,
+            "格式": "{%}×2+{%}",
+            "削韧": 25,
+            "卡肉": 0.03,
+            "取消": 0.3667,
+            "连段": 1.0667
+          },
+          {
+            "名称": "4-Hit DMG",
+            "值": 0.85,
+            "削韧": 50,
+            "卡肉": 0.03,
+            "取消": 0.4333,
+            "连段": 0.8
+          }
+        ]
+      },
+      {
+        "id": 1060102,
+        "名称": "蓄力攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Charged Attack DMG",
+            "值": 0.1,
+            "格式": "{%}×9",
+            "削韧": 8,
+            "卡肉": 0.03,
+            "取消": 1.9
+          }
+        ],
+        "实体": [
+          {
+            "id": 1060121,
+            "时长": 0.9,
+            "Vars": {
+              "IsHeavyAttack": true
+            }
+          }
+        ]
+      },
+      {
+        "id": 1060103,
+        "名称": "下落攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Plunge DMG",
+            "值": 0.51,
+            "削韧": 33,
+            "取消": 1.6667
+          }
+        ]
+      },
+      {
+        "id": 1060104,
+        "名称": "滑行攻击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Sliding Attack DMG",
+            "值": 0.51,
+            "削韧": 33,
+            "卡肉": 0.1,
+            "取消": 0.4535
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 20101,
     "icon": "Pistol_Wuxu",
     "名称": "Entropic Singularity",
@@ -5049,9 +5750,9 @@
   },
   {
     "id": 20298,
-    "icon": "Crossbow_",
+    "icon": "Crossbow_Yemei",
     "名称": "Metal Dual Pistols",
-    "版本": "1.4",
+    "版本": "1.5",
     "描述": "Ordinary dual pistols. It's made from the cheapest metal, so there's no shame if it breaks.",
     "类型": [
       "远程",
@@ -5105,6 +5806,38 @@
       }
     ],
     "熔炼": [],
+    "熔炉": [
+      {
+        "lv": 1,
+        "解锁": {
+          "Phoxene": 5
+        }
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Phoxene": 5
+        }
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Phoxene": 5
+        }
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Phoxene": 5
+        }
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Phoxene": 5
+        }
+      }
+    ],
     "技能": [],
     "装填": 0.8116,
     "射击间隔": 0.6667
@@ -5239,13 +5972,13 @@
       "榴炮"
     ],
     "伤害类型": "切割",
-    "攻击": 15,
+    "攻击": 18,
     "暴击": 0.2,
     "暴伤": 2.4,
-    "触发": 0.2,
-    "弹匣": 9,
-    "最大弹药": 120,
-    "弹药转化率": 0.45,
+    "触发": 0.15,
+    "弹匣": 15,
+    "最大弹药": 90,
+    "弹药转化率": 1,
     "最大射程": 2800,
     "加成": {
       "多重": 0.375
@@ -5288,12 +6021,12 @@
       }
     ],
     "熔炼": [
-      "Multishot +37.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 12.0% for 12.0s, up to 4.0 stacks.",
-      "Multishot +45.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 14.4% for 12.0s, up to 4.0 stacks.",
-      "Multishot +52.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 16.8% for 12.0s, up to 4.0 stacks.",
-      "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 19.2% for 12.0s, up to 4.0 stacks.",
-      "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 21.6% for 12.0s, up to 4.0 stacks.",
-      "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack that increases Skill DMG and Ranged Weapon DMG by 24.0% for 12.0s, up to 4.0 stacks."
+      "Multishot +37.5%. When a Pyro character performs a Dodge, grants 1 stack of +8.0% Skill DMG and +8.0% Multishot for 16.0s, up to 4.0 stacks.",
+      "Multishot +45.0%. When a Pyro character performs a Dodge, grants 1 stack of +9.6% Skill DMG and +9.6% Multishot for 16.0s, up to 4.0 stacks.",
+      "Multishot +52.5%. When a Pyro character performs a Dodge, grants 1 stack of +11.2% Skill DMG and +11.2% Multishot for 16.0s, up to 4.0 stacks.",
+      "Multishot +60.0%. When a Pyro character performs a Dodge, grants 1 stack of +12.8% Skill DMG and +12.8% Multishot for 16.0s, up to 4.0 stacks.",
+      "Multishot +67.5%. When a Pyro character performs a Dodge, grants 1 stack of +14.4% Skill DMG and +14.4% Multishot for 16.0s, up to 4.0 stacks.",
+      "Multishot +75.0%. When a Pyro character performs a Dodge, grants 1 stack of +16.0% Skill DMG and +16.0% Multishot for 16.0s, up to 4.0 stacks."
     ],
     "技能": [
       {
@@ -5303,20 +6036,20 @@
         "字段": [
           {
             "名称": "Explosion DMG",
-            "值": 0.32,
-            "削韧": 12,
+            "值": 0.155,
+            "削韧": 10,
             "取消": 0.7692,
             "连段": 0.7622
           },
           {
             "名称": "Explosion DMG - Phase 2",
-            "值": 0.32,
+            "值": 0.155,
             "取消": 0.7692,
             "连段": 0.7622
           },
           {
             "名称": "Explosion DMG - Phase 3",
-            "值": 0.32,
+            "值": 0.155,
             "取消": 0.7692,
             "连段": 0.7622
           },
@@ -7357,6 +8090,119 @@
     "射击间隔": 0.1
   },
   {
+    "id": 20511,
+    "icon": "Machinegun_Bomu",
+    "名称": "Gloam Oath",
+    "版本": "1.4",
+    "描述": "In blood is engraved the oath of dusk.",
+    "类型": [
+      "远程",
+      "突击枪"
+    ],
+    "伤害类型": "震荡",
+    "攻击": 18,
+    "暴击": 0.21,
+    "暴伤": 2,
+    "触发": 0.3,
+    "弹匣": 15,
+    "最大弹药": 60,
+    "弹药转化率": 1.1,
+    "最大射程": 2800,
+    "加成": {
+      "装填": 0.3
+    },
+    "突破": [
+      {
+        "Coin": 2800,
+        "Vermilion Teardrop": 6,
+        "Basic Weapon Component: Bolt": 2
+      },
+      {
+        "Coin": 6100,
+        "Chain": 3,
+        "Basic Weapon Component: Bolt": 4,
+        "Basic Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 6900,
+        "Chain": 6,
+        "Intermediate Weapon Component: Bolt": 3,
+        "Intermediate Weapon Component: Frame": 1
+      },
+      {
+        "Coin": 17000,
+        "Chain": 12,
+        "Advanced Weapon Component: Bolt": 6,
+        "Advanced Weapon Component: Frame": 2
+      },
+      {
+        "Coin": 49000,
+        "Chain": 24,
+        "Advanced Weapon Component: Bolt": 10,
+        "Advanced Weapon Component: Frame": 4
+      },
+      {
+        "Coin": 180000,
+        "Chain": 48,
+        "Advanced Weapon Component: Bolt": 20,
+        "Advanced Weapon Component: Frame": 8
+      }
+    ],
+    "熔炼": [
+      "Reload Speed +30.0%. After reloading, ATK Speed increases by 50.0% for 6.0s. This effect is removed when switching weapons.",
+      "Reload Speed +36.0%. After reloading, ATK Speed increases by 60.0% for 6.0s. This effect is removed when switching weapons.",
+      "Reload Speed +42.0%. After reloading, ATK Speed increases by 70.0% for 6.0s. This effect is removed when switching weapons.",
+      "Reload Speed +48.0%. After reloading, ATK Speed increases by 80.0% for 6.0s. This effect is removed when switching weapons.",
+      "Reload Speed +54.0%. After reloading, ATK Speed increases by 90.0% for 6.0s. This effect is removed when switching weapons.",
+      "Reload Speed +60.0%. After reloading, ATK Speed increases by 100.0% for 6.0s. This effect is removed when switching weapons."
+    ],
+    "技能": [
+      {
+        "id": 2051101,
+        "名称": "射击",
+        "类型": "武器伤害",
+        "字段": [
+          {
+            "名称": "Projectile DMG",
+            "值": 0.29,
+            "削韧": 10,
+            "取消": 0.1,
+            "连段": 0.1346
+          },
+          {
+            "名称": "Firing Interval",
+            "值": 0.15,
+            "格式": "{}shots/s"
+          },
+          {
+            "名称": "Explosion Radius",
+            "值": 3,
+            "格式": "{}m"
+          }
+        ],
+        "实体": [
+          {
+            "id": 2051111,
+            "形状": {
+              "类型": "Box",
+              "BoxHeight": 50,
+              "BoxLength": 50,
+              "BoxWidth": 50
+            },
+            "时长": 10,
+            "速度": 200,
+            "标签": [
+              "Bullet"
+            ],
+            "射击间隔": 0.15
+          }
+        ]
+      }
+    ],
+    "装填": 0.7674,
+    "射击间隔": 0.15
+  },
+  {
     "id": 20512,
     "icon": "Machinegun_Beizhong",
     "名称": "Dregs of Glimmer",
@@ -7448,24 +8294,28 @@
   },
   {
     "id": 20599,
-    "icon": "Machinegun_",
-    "名称": "Metal Assault Rifle",
+    "icon": "Machinegun_Yemei",
+    "名称": "Thorned Requiem",
     "版本": "1.4",
-    "描述": "A machine gun crafted using the latest smelting and gilding techniques. This model is a top recommendation from blacksmiths. Its perfect balance of quality and affordability has made it a popular choice among travellers across Atlasia.",
+    "描述": "One who bore this weapon was a healer, granted it by Father Ask in honour of her compassion. She could touch the strings of the heart, soothing unrest through the music of her own instrument.\nYet suffering still overran the world, knotting it like briars. And so she distilled a poison, hoping to cleanse the world of the flesh from which such pain was born.\nIn the end, those fragile strings could bear no more, and snapped. She was made to drink the poison she herself had brewed, and sank into a long night in which she could neither sleep nor wake.",
     "类型": [
       "远程",
       "突击枪"
     ],
     "伤害类型": "灵能",
-    "攻击": 16,
+    "攻击": 21,
     "暴击": 0.22,
-    "暴伤": 2.1,
-    "触发": 0.15,
-    "弹匣": 60,
-    "最大弹药": 150,
-    "弹药转化率": 2.1,
+    "暴伤": 2.2,
+    "触发": 0.24,
+    "弹匣": 30,
+    "最大弹药": 120,
+    "弹药转化率": 1.2,
     "最大射程": 2900,
-    "加成": {},
+    "加成": {
+      "技能威力": 0.45,
+      "造成的伤害": 0.15,
+      "昂扬": 0.35
+    },
     "突破": [
       {
         "Coin": 2800,
@@ -7503,47 +8353,242 @@
         "Advanced Weapon Component: Frame": 8
       }
     ],
-    "熔炼": [],
+    "熔炼": [
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type.",
+      "Weapon Potentials can be unlocked through Calamity Smelting. A Potential only takes effect if the character's weapon proficiency matches this weapon's type."
+    ],
+    "熔炉": [
+      {
+        "lv": 1,
+        "解锁": {
+          "Prototype: Thorned Requiem": 36,
+          "Weapon Track-Shift Module": 5,
+          "Emblem of Harmony": 30,
+          "Emblem of Corruption": 30
+        },
+        "技能": [
+          {
+            "id": 20599002,
+            "名称": "荆刺·盛放",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "Gain 80.0 Calamity at the start of battle. Each time Combo Points are consumed, gain [60.0%×Combo Points consumed] Calamity.",
+            "解锁": {
+              "Prototype: Thorned Requiem": 30,
+              "Umbro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Harmony": 50,
+              "Emblem of Corruption": 50
+            }
+          },
+          {
+            "id": 20599003,
+            "名称": "荆刺·争妍",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "Dealing damage with a melee weapon grants 2.0 Calamity. If this instance of damage is critical, grants an additional 4.0 Calamity.",
+            "解锁": {
+              "Prototype: Thorned Requiem": 30,
+              "Umbro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Harmony": 50,
+              "Emblem of Corruption": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 2,
+        "解锁": {
+          "Prototype: Thorned Requiem": 42,
+          "Umbro Crystal": 20,
+          "Projectile": 6,
+          "Emblem of Harmony": 40,
+          "Emblem of Corruption": 40
+        },
+        "技能": [
+          {
+            "id": 20599004,
+            "名称": "绝响·强度",
+            "icon": "T_Rouge_Talent_SkillIntensityUP",
+            "加成": {
+              "Skill Intensity": 0.45
+            },
+            "解锁": {
+              "Prototype: Thorned Requiem": 30,
+              "Umbro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Projectile": 4,
+              "Emblem of Harmony": 50,
+              "Emblem of Corruption": 50
+            }
+          },
+          {
+            "id": 20599005,
+            "名称": "绝响·穿透",
+            "icon": "T_Rouge_Talent_AttrPenetration",
+            "加成": {
+              "Damage Dealt": 0.15
+            },
+            "解锁": {
+              "Prototype: Thorned Requiem": 30,
+              "Umbro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Projectile": 4,
+              "Emblem of Harmony": 50,
+              "Emblem of Corruption": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 3,
+        "解锁": {
+          "Prototype: Thorned Requiem": 48,
+          "Umbro Crystal": 30,
+          "Radiant Crystal": 5,
+          "Weapon Track-Shift Module": 6,
+          "Emblem of Harmony": 50,
+          "Emblem of Corruption": 50
+        },
+        "技能": [
+          {
+            "id": 20599006,
+            "名称": "荆刺·衰败",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "For every 120.0 Combo Points consumed, the damage multiplier of the next [Oblivion] increases by 600.0%, and melee weapon damage increases by 30.0% for 3.0s.",
+            "解锁": {
+              "Prototype: Thorned Requiem": 30,
+              "Umbro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Harmony": 50,
+              "Emblem of Corruption": 50
+            }
+          },
+          {
+            "id": 20599007,
+            "名称": "荆刺·凋零",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "Increases [Oblivion] radius by 6.0 m and its damage is guaranteed to trigger bonus effects.",
+            "解锁": {
+              "Prototype: Thorned Requiem": 30,
+              "Umbro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Weapon Track-Shift Module": 2,
+              "Emblem of Harmony": 50,
+              "Emblem of Corruption": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 4,
+        "解锁": {
+          "Prototype: Thorned Requiem": 54,
+          "Umbro Crystal": 50,
+          "Radiant Crystal": 15,
+          "Projectile": 6,
+          "Emblem of Harmony": 60,
+          "Emblem of Corruption": 60
+        },
+        "技能": [
+          {
+            "id": 20599008,
+            "名称": "绝响·追袭",
+            "icon": "T_Rouge_Talent_BonusDamage",
+            "描述": "The character's own element deals +35.0% additional damage.",
+            "解锁": {
+              "Prototype: Thorned Requiem": 30,
+              "Umbro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Projectile": 4,
+              "Emblem of Harmony": 50,
+              "Emblem of Corruption": 50
+            }
+          },
+          {
+            "id": 20599009,
+            "名称": "绝响·昂扬",
+            "icon": "T_Rouge_Talent_Morale",
+            "加成": {
+              "Morale": 0.35
+            },
+            "解锁": {
+              "Prototype: Thorned Requiem": 30,
+              "Umbro Crystal": 90,
+              "Radiant Crystal": 15,
+              "Projectile": 4,
+              "Emblem of Harmony": 50,
+              "Emblem of Corruption": 50
+            }
+          }
+        ]
+      },
+      {
+        "lv": 5,
+        "解锁": {
+          "Prototype: Thorned Requiem": 100,
+          "Umbro Crystal": 90,
+          "Radiant Crystal": 20,
+          "Recasting Mould": 1,
+          "Emblem of Harmony": 100,
+          "Emblem of Corruption": 100
+        },
+        "技能": [
+          {
+            "id": 20599010,
+            "名称": "荆刺·腐朽",
+            "icon": "T_Rouge_Talent_Polearm_Zaie",
+            "描述": "Melee Weapon Charged Attacks deal 300.0% more damage.\nWhen Combo Points are at max, the excess is stored as the same stacks of [Doom Sigils], up to 360.0. Each time [Oblivion] is triggered, gain 20.0 stacks of [Doom Sigil].\nWhen using a Charged Attack, if Combo Points are below max, consume an equal number of [Doom Sigils] to raise Combo Points to the max."
+          }
+        ]
+      }
+    ],
     "技能": [
       {
-        "id": 2050101,
+        "id": 2059901,
         "名称": "射击",
         "类型": "武器伤害",
         "字段": [
           {
             "名称": "Projectile DMG",
-            "值": 0.16,
-            "削韧": 4,
+            "值": 0.26,
+            "削韧": 5,
             "取消": 0.1,
             "连段": 0.1346
           },
           {
             "名称": "Firing Interval",
-            "值": 0.1,
+            "值": 0.18,
             "格式": "{}shots/s"
           }
         ],
         "实体": [
           {
-            "id": 2050111,
+            "id": 2059911,
             "形状": {
               "类型": "Box",
-              "BoxHeight": 1,
-              "BoxLength": 1,
-              "BoxWidth": 1
+              "BoxHeight": 10,
+              "BoxLength": 10,
+              "BoxWidth": 10
             },
-            "时长": 2,
-            "速度": 12000,
+            "时长": 3,
+            "速度": 2500,
             "标签": [
               "Bullet"
             ],
-            "射击间隔": 0.1
+            "射击间隔": 0.18
           }
         ]
       }
     ],
     "装填": 0.7674,
-    "射击间隔": 0.1
+    "射击间隔": 0.18
   },
   {
     "id": 20601,

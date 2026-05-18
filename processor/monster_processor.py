@@ -206,6 +206,7 @@ class MonsterProcessor(BaseProcessor):
             "SurvivalMini.json",
             "SurvivalMiniPro.json",
             "SurvivalPro.json",
+            "IronSurvival.json",
             "Excavation.json",
             "ExtermPro.json",
             "Exterminate.json",
@@ -217,7 +218,7 @@ class MonsterProcessor(BaseProcessor):
             file_data = data_loader.load_json(file_name)
             for item in file_data.values():
                 dungeon_id = item.get("DungeonId")
-                if dungeon_id and dungeon_id not in dungeon_spawn_source_map:
+                if dungeon_id:
                     dungeon_spawn_source_map[dungeon_id] = item
 
         for dungeon_id, dungeon_info in dungeon_data.items():
@@ -244,6 +245,9 @@ class MonsterProcessor(BaseProcessor):
             )
             self._append_spawn_rule_waves(
                 spawn_rule_waves, spawn_source.get("MonsterSpawnIds")
+            )
+            self._append_spawn_rule_waves(
+                spawn_rule_waves, spawn_source.get("StrongLoopSpawnId")
             )
             self._append_spawn_rule_waves(
                 spawn_rule_waves, spawn_source.get("OnInitSpawnRule")

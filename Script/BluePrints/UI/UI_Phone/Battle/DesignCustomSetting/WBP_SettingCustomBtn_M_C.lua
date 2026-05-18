@@ -159,6 +159,7 @@ function M:InitConfigData()
     local ModifyValue = {
       WidgetObj = SubWidgetObj,
       WidgetName = value.WidgetName,
+      HUDNodeName = value.HUDNodeName,
       TextMapContent = value.TextMapContent,
       InnerActiveSlateName = value.InnerActiveSlateName,
       MaskNodeName = value.MaskNodeName,

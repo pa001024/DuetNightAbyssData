@@ -5,6 +5,10 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("BuffOnlyAttrs", {
+  CollisionLevel = {
+    ActiveRule = false,
+    ID = "CollisionLevel"
+  },
   FakeHpRate = {ActiveRule = false, ID = "FakeHpRate"},
   MaxDamagedValue = {
     ActiveRule = false,

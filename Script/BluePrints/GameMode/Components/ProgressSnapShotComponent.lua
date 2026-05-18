@@ -220,7 +220,7 @@ function ProgressSnapShotComponent:GenerateProgressData(CurStage)
   local DungeonEventData = {}
   for i = 1, self.EMGameState.DungeonEvent:Num() do
     local Event = self.EMGameState.DungeonEvent:GetValueByIdx(i - 1)
-    if "ShowPetDefenseDynamicEvent" ~= Event and "ShowPetDefenseProgress" ~= Event then
+    if "ShowPetDefenseDynamicEvent" ~= Event and "ShowPetDefenseProgress" ~= Event and "OnDungeonRandomEventUINode" ~= Event and "ShowDungeonRandomEventProgress" ~= Event then
       DungeonEventData[i] = Event
     end
   end

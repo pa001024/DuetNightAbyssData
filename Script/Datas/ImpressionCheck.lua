@@ -1350,5 +1350,235 @@ return ReadOnly("ImpressionCheck", {
     RegionId = 1041,
     RewardId = 7070,
     WisdomCheck = 40
+  },
+  [1152] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 50,
+    ImprCheckId = 1152,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1153] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 50,
+    ImprCheckId = 1153,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1154] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1154,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    RewardId = 7070,
+    WisdomCheck = 50
+  },
+  [1155] = {
+    BenefitCheck = 0,
+    ChaosCheck = 50,
+    EmpathyCheck = 0,
+    ImprCheckId = 1155,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1156] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 50,
+    ImprCheckId = 1156,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    RewardId = 7070,
+    WisdomCheck = 0
+  },
+  [1157] = {
+    BenefitCheck = 140,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1157,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1158] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1158,
+    MoralityCheck = 140,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1159] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1159,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 140
+  },
+  [1160] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 140,
+    ImprCheckId = 1160,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1161] = {
+    BenefitCheck = 0,
+    ChaosCheck = 140,
+    EmpathyCheck = 0,
+    ImprCheckId = 1161,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1162] = {
+    BenefitCheck = 160,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1162,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1163] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1163,
+    MoralityCheck = 160,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1164] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1164,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 160
+  },
+  [1165] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 160,
+    ImprCheckId = 1165,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1166] = {
+    BenefitCheck = 0,
+    ChaosCheck = 160,
+    EmpathyCheck = 0,
+    ImprCheckId = 1166,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1167] = {
+    BenefitCheck = 180,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1167,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1168] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1168,
+    MoralityCheck = 180,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1169] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1169,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 180
+  },
+  [1170] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 180,
+    ImprCheckId = 1170,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1171] = {
+    BenefitCheck = 0,
+    ChaosCheck = 180,
+    EmpathyCheck = 0,
+    ImprCheckId = 1171,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1172] = {
+    BenefitCheck = 200,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1172,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1173] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1173,
+    MoralityCheck = 200,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1174] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 0,
+    ImprCheckId = 1174,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 200
+  },
+  [1175] = {
+    BenefitCheck = 0,
+    ChaosCheck = 0,
+    EmpathyCheck = 200,
+    ImprCheckId = 1175,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
+  },
+  [1176] = {
+    BenefitCheck = 0,
+    ChaosCheck = 200,
+    EmpathyCheck = 0,
+    ImprCheckId = 1176,
+    MoralityCheck = 0,
+    RegionId = 1011,
+    WisdomCheck = 0
   }
 })

@@ -285,7 +285,7 @@
     "desc": "Tissé des hauteurs célestes, chaque mouvement fait scintiller une lueur azurée.",
     "icon": "T_Fashion_Weapon38_02",
     "rarity": 5,
-    "unlock": "Disponible via les événements"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10037,
@@ -293,7 +293,7 @@
     "desc": "Tissé des hauteurs célestes, chaque mouvement fait scintiller une lueur azurée.",
     "icon": "T_Fashion_Weapon38_01",
     "rarity": 5,
-    "unlock": "Disponible via les événements"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10038,
@@ -301,7 +301,7 @@
     "desc": "Tissé des hauteurs célestes, chaque mouvement fait scintiller une lueur azurée.",
     "icon": "T_Fashion_Weapon38_03",
     "rarity": 5,
-    "unlock": "Disponible via les événements"
+    "unlock": "Disponible dans la boutique"
   },
   {
     "id": 10039,
@@ -352,10 +352,98 @@
     "unlock": "Disponible via l’échange de Prismes"
   },
   {
+    "id": 10045,
+    "name": "Larme céleste – Rouille",
+    "desc": "Une radiance sacrée enveloppe une compassion figée en cristal.",
+    "icon": "T_Fashion_Weapon41_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10046,
+    "name": "Larme céleste – Pourpre profond",
+    "desc": "Une radiance sacrée enveloppe une compassion figée en cristal.",
+    "icon": "T_Fashion_Weapon41_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10047,
+    "name": "Larme céleste – Bleu céleste",
+    "desc": "Une radiance sacrée enveloppe une compassion figée en cristal.",
+    "icon": "T_Fashion_Weapon41_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10048,
+    "name": "Lycoris éternels – Rouille",
+    "desc": "Toute beauté est éphémère. Seule la mort demeure.",
+    "icon": "T_Fashion_Weapon40_03",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10049,
+    "name": "Lycoris éternels – Blanc sakura",
+    "desc": "Toute beauté est éphémère. Seule la mort demeure.",
+    "icon": "T_Fashion_Weapon40_02",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10050,
+    "name": "Lycoris éternels – Jade noir",
+    "desc": "Toute beauté est éphémère. Seule la mort demeure.",
+    "icon": "T_Fashion_Weapon40_01",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 10051,
+    "name": "Caneton grognon – Blanc ivoire",
+    "desc": "Fiuu— ! Couac !",
+    "icon": "T_Fashion_Weapon42_04",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10052,
+    "name": "Caneton grognon – Jaune abricot",
+    "desc": "Fiuu— ! Couac !",
+    "icon": "T_Fashion_Weapon42_03",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10053,
+    "name": "Caneton grognon – Émeraude",
+    "desc": "Fiuu— ! Couac !",
+    "icon": "T_Fashion_Weapon42_02",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
+    "id": 10054,
+    "name": "Caneton grognon – Caramel",
+    "desc": "Fiuu— ! Couac !",
+    "icon": "T_Fashion_Weapon42_01",
+    "rarity": 4,
+    "unlock": "Disponible dans la boutique"
+  },
+  {
     "id": 20001,
     "name": "Graffiti détonant",
-    "desc": "Utilisable avec Variante d’attaque — Sceau démoniaque : Entaille rugissante",
+    "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Entaille rugissante",
     "icon": "T_Fashion_Fx20",
+    "rarity": 5,
+    "unlock": "Disponible via l’échange de Prismes"
+  },
+  {
+    "id": 30001,
+    "name": "Dragon ascendant",
+    "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Dragon ascendant",
+    "icon": "T_Fashion_Fx21",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
   }

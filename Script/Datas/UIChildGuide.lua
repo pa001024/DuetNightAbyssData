@@ -4505,6 +4505,174 @@ return ReadOnly("UIChildGuide", {
     GuideTitle = "MAINUIGUIDE_TITLE_YuBo_1",
     GuideType = "ImageText"
   },
+  [14801] = {
+    ChildGuideId = 14801,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_Appearance_1",
+        PC = "UIGuide_Appearance_1",
+        Phone = "UIGuide_Appearance_1"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_Appearance_1",
+    GuideType = "ImageText"
+  },
+  [14802] = {
+    ChildGuideId = 14802,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_Appearance_2",
+        PC = "UIGuide_Appearance_2",
+        Phone = "UIGuide_Appearance_2"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_Appearance_1",
+    GuideType = "ImageText"
+  },
+  [14803] = {
+    ChildGuideId = 14803,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_Appearance_3",
+        PC = "UIGuide_Appearance_3",
+        Phone = "UIGuide_Appearance_3"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_Appearance_1",
+    GuideType = "ImageText"
+  },
+  [14901] = {
+    ChildGuideId = 14901,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_Hyper_1",
+        PC = "UIGuide_Hyper_1",
+        Phone = "UIGuide_Hyper_1"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_Hyper_1",
+    GuideType = "ImageText"
+  },
+  [14902] = {
+    ChildGuideId = 14902,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_Hyper_2",
+        PC = "UIGuide_Hyper_2",
+        Phone = "UIGuide_Hyper_2"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_Hyper_1",
+    GuideType = "ImageText"
+  },
+  [14903] = {
+    ChildGuideId = 14903,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_Hyper_3",
+        PC = "UIGuide_Hyper_3",
+        Phone = "UIGuide_Hyper_3"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_Hyper_1",
+    GuideType = "ImageText"
+  },
+  [15001] = {
+    ChildGuideId = 15001,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_IronExp_1",
+        PC = "UIGuide_IronExp_1",
+        Phone = "UIGuide_IronExp_1"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_IronExp_1",
+    GuideType = "ImageText"
+  },
+  [15002] = {
+    ChildGuideId = 15002,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_IronExp_2",
+        PC = "UIGuide_IronExp_2",
+        Phone = "UIGuide_IronExp_2"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_IronExp_1",
+    GuideType = "ImageText"
+  },
+  [15003] = {
+    ChildGuideId = 15003,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_IronExp_3",
+        PC = "UIGuide_IronExp_3",
+        Phone = "UIGuide_IronExp_3"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_IronExp_1",
+    GuideType = "ImageText"
+  },
+  [15101] = {
+    ChildGuideId = 15101,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_GuildQuest_1",
+        PC = "UIGuide_GuildQuest_1",
+        Phone = "UIGuide_GuildQuest_1"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_GuildQuest_1",
+    GuideType = "ImageText"
+  },
+  [15102] = {
+    ChildGuideId = 15102,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_GuildQuest_2",
+        PC = "UIGuide_GuildQuest_2",
+        Phone = "UIGuide_GuildQuest_2"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_GuildQuest_1",
+    GuideType = "ImageText"
+  },
+  [15201] = {
+    ChildGuideId = 15201,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_ChangeElem_1",
+        PC = "UIGuide_ChangeElem_1",
+        Phone = "UIGuide_ChangeElem_1"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_ChangeElem_1",
+    GuideType = "ImageText"
+  },
+  [15301] = {
+    ChildGuideId = 15301,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_GuildChat_1",
+        PC = "UIGuide_GuildChat_1",
+        Phone = "UIGuide_GuildChat_1"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_GuildChat_1",
+    GuideType = "ImageText"
+  },
+  [15302] = {
+    ChildGuideId = 15302,
+    GuideInfo1 = {
+      GuideContent = {
+        GamePad = "UIGuide_GuildChat_2",
+        PC = "UIGuide_GuildChat_2",
+        Phone = "UIGuide_GuildChat_2"
+      }
+    },
+    GuideTitle = "MAINUIGUIDE_TITLE_GuildChat_1",
+    GuideType = "ImageText"
+  },
   [100101] = {
     ChildGuideId = 100101,
     GuideInfo1 = {

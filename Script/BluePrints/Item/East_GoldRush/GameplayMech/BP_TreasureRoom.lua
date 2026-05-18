@@ -12,10 +12,7 @@ function M:CommonInitInfo(Info)
   if self.TreasureId then
     self.KeyID = DataMgr.ExtractionTreasureRewardRoom[self.TreasureId] and DataMgr.ExtractionTreasureRewardRoom[self.TreasureId].KeyID or 0
   end
-  local ServerEntity = GWorld:GetServerEntity()
-  if ServerEntity then
-    self.DungeonObject = ServerEntity:GetDungeonObject()
-  end
+  self.DungeonObject = GWorld:GetGameModeDungeonObject()
   self.CanExeuteOpenSuccess = true
 end
 

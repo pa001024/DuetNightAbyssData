@@ -105,23 +105,19 @@ function M:PlayPlayerMontage(MontageId, Callback)
   end
   local Avatar = GWorld:GetAvatar()
   if Avatar and Avatar.IsInRegionOnline then
-    if not EndFish then
-      local FishingSpotCreatorId = 0
-      if self.FishingSpot then
-        if self.FishingSpot.BpBorn then
-          FishingSpotCreatorId = self.FishingSpot.ManualItemId
-        else
-          FishingSpotCreatorId = self.FishingSpot.CreatorID
-        end
+    local FishingSpotCreatorId = 0
+    if self.FishingSpot then
+      if self.FishingSpot.BpBorn then
+        FishingSpotCreatorId = self.FishingSpot.ManualItemId
+      else
+        FishingSpotCreatorId = self.FishingSpot.CreatorID
       end
-      Avatar:SwitchOnlineState(Avatar.CurrentOnlineType, CommonConst.OnlineState.UseFish, {
-        FishId = MontageId,
-        FishingRodId = self.FishingRodId,
-        CreatorId = self.FishingSpotCreatorId
-      })
-    else
-      Avatar:SwitchOnlineState(Avatar.CurrentOnlineType, CommonConst.OnlineState.Normal, {})
     end
+    Avatar:SwitchOnlineState(Avatar.CurrentOnlineType, CommonConst.OnlineState.UseFish, {
+      FishId = MontageId,
+      FishingRodId = self.FishingRodId,
+      CreatorId = self.FishingSpotCreatorId
+    })
   end
 end
 
