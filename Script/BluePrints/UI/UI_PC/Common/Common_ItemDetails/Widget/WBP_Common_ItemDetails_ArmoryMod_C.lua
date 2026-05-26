@@ -269,6 +269,9 @@ function M:UpdateAttrList()
   end
   self.Panel_Preview:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   local ModMainView = ModController:GetView(self)
+  if not ModMainView then
+    return
+  end
   local SelectStuff = ModModel:GetSelectStuff()
   if SelectStuff:IsSlot() then
     self.Text_Preview:SetText(GText("UI_Mod_TakeOffPreview"))

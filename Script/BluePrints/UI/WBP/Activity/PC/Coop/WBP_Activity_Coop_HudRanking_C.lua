@@ -44,7 +44,7 @@ function M:UpdateDisplay()
     Contribution = 1
   end
   local ContributionPercent = Contribution * 100
-  self.TextNum:SetText(string.format("%.1f", ContributionPercent) .. "%")
+  self.TextNum:SetText(CommonUtils.FormatNumInFrench(string.format("%.1f", ContributionPercent) .. "%"))
   self.TextRankingNum:SetText(tostring(self.RankingNum))
   self.Filled:SetPercent(Contribution)
   self.TextTeamName:SetText(self.Content.Name or "mamba")

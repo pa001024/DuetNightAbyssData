@@ -6,6 +6,7 @@ local M = Class({
 })
 local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildController")
 local GuildCommon = require("BluePrints.UI.WBP.Guild.Common.GuildCommon")
+local GuildPermissionUtils = require("BluePrints.UI.WBP.Guild.Common.GuildPermissionUtils")
 local EditPermissionConfig = {
   OnClickEditGuildName = "ModifyNameEmblem",
   OnClickEditGuildDeclaration = "ModifyDeclaration",
@@ -41,7 +42,6 @@ function M:Construct()
     GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
   end
   self:RefreshOpInfoByInputDevice()
-  self:InitEditList()
   self:SetEditPanelVisible(false)
   self:InitNavigation()
   self.Btn_Edit.Key_GamePad:CreateCommonKey({
@@ -104,12 +104,8 @@ function M:InitView(ParentWidget, GuildInfo)
   self.Text_TotalNum:SetText(tostring(TotalNum))
   self.Text_ActivityDesc:SetText(GText("UI_GuildActivity"))
   self.Text_Activity:SetText(tostring(self.CurrGuildInfo.ActivityLevel or 0))
-  local Avatar = GWorld:GetAvatar()
-  local MemberInfo = GuildController:GetModel():GetCurrMember(Avatar.Uid)
-  if MemberInfo.Title and MemberInfo.Title <= 2 then
-    self.Btn_Edit:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  end
   self.Btn_Edit:SetText(GText("UI_EditGuildInfo"))
+  self:InitBtnEdit()
   self.Logo:Init(self.CurrGuildInfo.LogoInfo)
   GuildController:SendGetGuildInfo(self.CurrGuildInfo.GuildId, false)
 end
@@ -137,6 +133,18 @@ function M:GetGuildFullInfo(Info)
   self.Text_TotalNum:SetText(tostring(TotalNum))
   self.Text_Activity:SetText(tostring(self.CurrGuildInfo.ActivityLevel or 0))
   self.Logo:Init(self.CurrGuildInfo.LogoInfo)
+  self:InitBtnEdit()
+end
+
+function M:InitBtnEdit()
+  local Avatar = GWorld:GetAvatar()
+  local MemberInfo = GuildController:GetModel():GetCurrMember(Avatar.Uid)
+  if MemberInfo.Title and MemberInfo.Title <= 2 then
+    self.Btn_Edit:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  else
+    self.Btn_Edit:SetVisibility(UE4.ESlateVisibility.SelfHitTestInvisible)
+  end
+  self:InitEditList()
 end
 
 function M:OnBtnEditClicked()
@@ -169,6 +177,11 @@ function M:InitEditList()
   if not (self.List_Edit and self.List_Edit.ClearListItems) or not self.List_Edit.AddItem then
     return
   end
+  for _, Content in pairs(self.List_Edit:GetListItems()) do
+    if Content and Content.SelfWidget then
+      Content.SelfWidget:UnBindEventOnClickedByObj(Content.ParentWidget)
+    end
+  end
   self.List_Edit:ClearListItems()
   local ListConfig = {
     {
@@ -187,7 +200,8 @@ function M:InitEditList()
       PermissionField = "ModifyNameEmblem"
     }
   }
-  local CooldownDaysLeft = self:GetGuildNameCooldownDaysLeft(self.CurrGuildInfo)
+  local NameCooldownDaysLeft = self:GetGuildNameCooldownDaysLeft(self.CurrGuildInfo)
+  local LogoCooldownDaysLeft = self:GetGuildLogoCooldownDaysLeft(self.CurrGuildInfo)
   for i = 1, #ListConfig do
     local MenuContent = NewObject(UIUtils.GetCommonItemContentClass())
     local ItemConfig = ListConfig[i]
@@ -195,7 +209,7 @@ function M:InitEditList()
     MenuContent.Text = ItemConfig.Text
     MenuContent.ParentWidget = self
     MenuContent.FunctionName = ItemConfig.OnClickFunction
-    MenuContent.IsForbid = ItemConfig.Text == "UI_EditGuildName" and CooldownDaysLeft > 0 or self:HasEditPermission(ItemConfig.PermissionField) == false
+    MenuContent.IsForbid = ItemConfig.Text == "UI_EditGuildName" and NameCooldownDaysLeft > 0 or ItemConfig.Text == "UI_EditGuildBanner" and LogoCooldownDaysLeft > 0 or self:HasEditPermission(ItemConfig.PermissionField) == false
     MenuContent.bGamepadIconVisible = false
     
     function MenuContent.OnClickFunction()
@@ -231,12 +245,11 @@ function M:HasEditPermission(PermissionField)
     return false
   end
   local MemberInfo = GuildController:GetModel():GetCurrMember(Avatar.Uid)
-  local TitleId = MemberInfo and MemberInfo.Title
-  local TitleCfg = TitleId and DataMgr.GuildTitle[TitleId]
-  if not TitleCfg then
-    return false
+  local IsPermitted = GuildPermissionUtils.GetEffectivePermission(self.CurrGuildInfo.ClosedPermission, MemberInfo.Title, PermissionField)
+  if "ModifyDeclaration" == PermissionField then
+    self.ParentWidget:RefreshEditIntroAuthority(IsPermitted)
   end
-  return 1 == TitleCfg[PermissionField]
+  return IsPermitted
 end
 
 function M:OnListBtnClicked(Content)
@@ -265,7 +278,11 @@ function M:OnListBtnForbiddenClicked(Content)
   elseif Content.FunctionName == "OnClickEditGuildDeclaration" then
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_NoEditPermission"))
   elseif Content.FunctionName == "OnClickEditGuildBanner" then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_NoEditPermission"))
+    if self:HasEditPermission(EditPermissionConfig[Content.FunctionName]) == false then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_NoEditPermission"))
+    else
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("GuildLogaChangeCD"), tostring(DataMgr.GlobalConstant.GuildLogoEditCoolDownDay and DataMgr.GlobalConstant.GuildLogoEditCoolDownDay.ConstantValue or 3)))
+    end
   end
   return
 end
@@ -345,6 +362,7 @@ end
 function M:OnGuildEditLogoSucceed(Ret)
   self.CurrGuildInfo = GuildController:GetModel():GetCurrGuild()
   self.Logo:Init(self.CurrGuildInfo.LogoInfo)
+  self:InitEditList()
 end
 
 function M:GetGuildNameCooldownDaysLeft(GuildInfo)
@@ -365,6 +383,30 @@ function M:GetGuildNameCooldownDaysLeft(GuildInfo)
   local CooldownSeconds = CooldownDay * 24 * 60 * 60
   local NowTime = TimeUtils and TimeUtils.NowTime and TimeUtils.NowTime() or os.time()
   local RemainSeconds = LastNameEditTime + CooldownSeconds - NowTime
+  if RemainSeconds <= 0 then
+    return 0
+  end
+  return math.ceil(RemainSeconds / 86400)
+end
+
+function M:GetGuildLogoCooldownDaysLeft(GuildInfo)
+  if not GuildInfo then
+    GuildInfo = GuildController:GetModel():GetCurrGuild()
+    if not GuildInfo then
+      return 0
+    end
+  end
+  local LastLogoEditTime = tonumber(GuildInfo.LastLogoEditTime) or 0
+  if LastLogoEditTime <= 0 then
+    return 0
+  end
+  if LastLogoEditTime > 9999999999 then
+    LastLogoEditTime = math.floor(LastLogoEditTime / 1000)
+  end
+  local CooldownDay = DataMgr.GlobalConstant.GuildLogoEditCoolDownDay and DataMgr.GlobalConstant.GuildLogoEditCoolDownDay.ConstantValue or 3
+  local CooldownSeconds = CooldownDay * 24 * 60 * 60
+  local NowTime = TimeUtils and TimeUtils.NowTime and TimeUtils.NowTime() or os.time()
+  local RemainSeconds = LastLogoEditTime + CooldownSeconds - NowTime
   if RemainSeconds <= 0 then
     return 0
   end
@@ -501,6 +543,7 @@ end
 function M:Copy()
   UE.UUIFunctionLibrary.ClipboardCopy(self.Text_ID:GetText())
   UIManager(self):ShowUITip("CommonToastMain", GText("UI_GuildIDCopied"))
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)

@@ -169,6 +169,7 @@ return ReadOnly("HeadSculpture", {
   },
   [10020] = {
     AccessText = "UI_Accessory_Unlock_Char",
+    CanPreView = true,
     Des = "UI_PlayerHead_Des_10020",
     HeadId = 10020,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Xier.T_Head_Xier'",
@@ -186,6 +187,7 @@ return ReadOnly("HeadSculpture", {
   },
   [10022] = {
     AccessText = "UI_Accessory_Unlock_Char",
+    CanPreView = true,
     Des = "UI_PlayerHead_Des_10022",
     HeadId = 10022,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Fuluo.T_Head_Fuluo'",
@@ -331,25 +333,25 @@ return ReadOnly("HeadSculpture", {
     HeadId = 20007,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Fuluo01.T_Head_Fuluo01'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Fuluo01.T_Head_Fuluo01'",
-    Name = "UI_PlayerHead_Name_20006"
+    Name = "UI_PlayerHead_Name_20007"
   },
   [20008] = {
-    AccessText = "UI_Accessory_Unlock_Skin",
+    AccessText = "UI_Accessory_Unlock_Event",
     CanPreView = true,
     Des = "UI_PlayerHead_Des_Common",
     HeadId = 20008,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Nifu01.T_Head_Nifu01'",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Nifu01.T_Head_Nifu01'",
-    Name = "UI_PlayerHead_Name_20006"
+    Name = "UI_PlayerHead_Name_20008"
   },
   [20009] = {
-    AccessText = "UI_Accessory_Unlock_Skin",
+    AccessText = "UI_Accessory_Unlock_Event",
     CanPreView = true,
     Des = "UI_PlayerHead_Des_Common",
     HeadId = 20009,
-    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Suyi01.T_Head_Suyi01'",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Suyi01.T_Head_Suyi01'",
-    Name = "UI_PlayerHead_Name_20006"
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Linen01.T_Head_Linen01'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar/T_Head_Linen01.T_Head_Linen01'",
+    Name = "UI_PlayerHead_Name_20009"
   },
   [30001] = {
     AccessText = "UI_Accessory_Unlock_Impression",
@@ -1449,8 +1451,7 @@ return ReadOnly("HeadSculpture", {
     Name = "UI_PlayerHead_Name_30139"
   },
   [30140] = {
-    AccessText = "UI_Accessory_Unlock_Skin",
-    CanPreView = true,
+    AccessText = "UI_Accessory_Unlock_Event",
     Des = "UI_PlayerHead_Des_Common",
     HeadId = 30140,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0029.T_Head_Art_0029'",
@@ -1458,8 +1459,7 @@ return ReadOnly("HeadSculpture", {
     Name = "UI_PlayerHead_Name_30140"
   },
   [30141] = {
-    AccessText = "UI_Accessory_Unlock_Skin",
-    CanPreView = true,
+    AccessText = "UI_Accessory_Unlock_Event",
     Des = "UI_PlayerHead_Des_Common",
     HeadId = 30141,
     HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0037.T_Head_Art_0037'",
@@ -1481,7 +1481,6 @@ return ReadOnly("HeadSculpture", {
     Des = "UI_PlayerHead_Des_Common",
     DynamicPath = "WidgetBlueprint'/Game/UI/WBP/DynamicHead/DynamicHead/WBP_DynamicHead_Art_0034.WBP_DynamicHead_Art_0034'",
     HeadId = 30143,
-    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0034.T_Head_Art_0034'",
     Name = "UI_PlayerHead_Name_30143"
   },
   [30144] = {
@@ -1489,8 +1488,8 @@ return ReadOnly("HeadSculpture", {
     CanPreView = true,
     Des = "UI_PlayerHead_Des_Common",
     HeadId = 30144,
-    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0038.T_Head_Other0038'",
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Other0038.T_Head_Other0038'",
+    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Theater01.T_Head_Theater01'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Theater01.T_Head_Theater01'",
     Name = "UI_PlayerHead_Name_30144"
   },
   [30145] = {
@@ -1606,7 +1605,6 @@ return ReadOnly("HeadSculpture", {
     Des = "UI_PlayerHead_Des_Common",
     DynamicPath = "WidgetBlueprint'/Game/UI/WBP/DynamicHead/DynamicHead/WBP_DynamicHead_Art_0028.WBP_DynamicHead_Art_0028'",
     HeadId = 40002,
-    HeadPath = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Art_0028.T_Head_Art_0028'",
     Name = "UI_PlayerHead_Name_40002"
   }
 })

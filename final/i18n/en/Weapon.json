@@ -755,7 +755,7 @@
       "单手剑"
     ],
     "伤害类型": "贯穿",
-    "攻击": 26,
+    "攻击": 25,
     "暴击": 0.24,
     "暴伤": 2.4,
     "触发": 0.15,
@@ -1985,7 +1985,7 @@
         "技能": [
           {
             "id": 10299002,
-            "名称": "无止·凯旋",
+            "名称": "Ceaseless – Triumph",
             "icon": "T_Rouge_Talent_Machinegun_Zaie",
             "描述": "Gain 80.0 Calamity each time a Summon is brought onto the field.",
             "解锁": {
@@ -1999,7 +1999,7 @@
           },
           {
             "id": 10299003,
-            "名称": "无止·溃败",
+            "名称": "Ceaseless – Crush",
             "icon": "T_Rouge_Talent_Machinegun_Zaie",
             "描述": "Gain 1.0 Calamity when a Summon deals damage.",
             "解锁": {
@@ -2025,7 +2025,7 @@
         "技能": [
           {
             "id": 10299004,
-            "名称": "无休·强度",
+            "名称": "Relentless – Intensity",
             "icon": "T_Rouge_Talent_SkillIntensityUP",
             "加成": {
               "Skill Intensity": 0.45
@@ -2041,7 +2041,7 @@
           },
           {
             "id": 10299005,
-            "名称": "无休·攻击",
+            "名称": "Relentless – Assault",
             "icon": "T_Rouge_Talent_ATK",
             "加成": {
               "ATK": 0.9
@@ -2070,7 +2070,7 @@
         "技能": [
           {
             "id": 10299006,
-            "名称": "无止·僵局",
+            "名称": "Ceaseless – Stalemate",
             "icon": "T_Rouge_Talent_Machinegun_Zaie",
             "描述": "Gain 1 stack of [Invocation] for 10.0s each time a Summon is brought onto the field, up to 20.0 stacks. The remaining time of the effect is refreshed with each new stack gained. Each stack of [Invocation] increases Summon Attack Speed by 2.0%.",
             "解锁": {
@@ -2084,9 +2084,9 @@
           },
           {
             "id": 10299007,
-            "名称": "无止·双竭",
+            "名称": "Ceaseless – Exhaustion",
             "icon": "T_Rouge_Talent_Machinegun_Zaie",
-            "描述": "For every 100 Calamity consumed, gain 1 stack of [Invocation] for 20.0s, up to 20.0 stacks. The remaining time of the effect is refreshed with each new stack gained. Each stack of [Invocation] increases Summon Attack Speed by 2.0%. At the start of battle, gain 10.0 stacks of [Invocation] for 20.0s.",
+            "描述": "For every 100 Calamity consumed, gain 1 stack of [Invocation] for 10.0s, up to 20.0 stacks. The remaining time of the effect is refreshed with each new stack gained. Each stack of [Invocation] increases Summon Attack Speed by 2.0%. At the start of battle, gain 20.0 stacks of [Invocation] for 20.0s.",
             "解锁": {
               "Prototype: Perpetual Strife": 30,
               "Hydro Crystal": 90,
@@ -2111,7 +2111,7 @@
         "技能": [
           {
             "id": 10299008,
-            "名称": "无休·范围",
+            "名称": "Relentless – Range",
             "icon": "T_Rouge_Talent_SkillRangeUP",
             "加成": {
               "Skill Range": 0.9
@@ -2127,7 +2127,7 @@
           },
           {
             "id": 10299009,
-            "名称": "无休·昂扬",
+            "名称": "Relentless – Morale",
             "icon": "T_Rouge_Talent_Morale",
             "加成": {
               "Morale": 0.35
@@ -2156,7 +2156,7 @@
         "技能": [
           {
             "id": 10299010,
-            "名称": "无止·长鏖",
+            "名称": "Ceaseless – Lingering Clash",
             "icon": "T_Rouge_Talent_Machinegun_Zaie",
             "描述": "Increases max [Invocation] stacks to 30.0. Each stack increases your Summons' inherited attribute percentage by 0.25%.\nAt 30.0 stacks of [Invocation], additionally gain [Awakening]: Weapon Trigger Probability increases by 100.0%, [Parting Requiem]'s damage multiplier increases by 700.0%, and when a Summon dies, an additional [Parting Requiem] is triggered without consuming Calamity."
           }
@@ -8373,7 +8373,7 @@
         "技能": [
           {
             "id": 20599002,
-            "名称": "荆刺·盛放",
+            "名称": "Thorn – Full Bloom",
             "icon": "T_Rouge_Talent_Polearm_Zaie",
             "描述": "Gain 80.0 Calamity at the start of battle. Each time Combo Points are consumed, gain [60.0%×Combo Points consumed] Calamity.",
             "解锁": {
@@ -8387,7 +8387,7 @@
           },
           {
             "id": 20599003,
-            "名称": "荆刺·争妍",
+            "名称": "Thorn – Floral Rivalry",
             "icon": "T_Rouge_Talent_Polearm_Zaie",
             "描述": "Dealing damage with a melee weapon grants 2.0 Calamity. If this instance of damage is critical, grants an additional 4.0 Calamity.",
             "解锁": {
@@ -8413,7 +8413,7 @@
         "技能": [
           {
             "id": 20599004,
-            "名称": "绝响·强度",
+            "名称": "Requiem – Intensity",
             "icon": "T_Rouge_Talent_SkillIntensityUP",
             "加成": {
               "Skill Intensity": 0.45
@@ -8429,7 +8429,7 @@
           },
           {
             "id": 20599005,
-            "名称": "绝响·穿透",
+            "名称": "Requiem – Penetration",
             "icon": "T_Rouge_Talent_AttrPenetration",
             "加成": {
               "Damage Dealt": 0.15
@@ -8458,7 +8458,7 @@
         "技能": [
           {
             "id": 20599006,
-            "名称": "荆刺·衰败",
+            "名称": "Thorn – Decay",
             "icon": "T_Rouge_Talent_Polearm_Zaie",
             "描述": "For every 120.0 Combo Points consumed, the damage multiplier of the next [Oblivion] increases by 600.0%, and melee weapon damage increases by 30.0% for 3.0s.",
             "解锁": {
@@ -8472,7 +8472,7 @@
           },
           {
             "id": 20599007,
-            "名称": "荆刺·凋零",
+            "名称": "Thorn – Withering",
             "icon": "T_Rouge_Talent_Polearm_Zaie",
             "描述": "Increases [Oblivion] radius by 6.0 m and its damage is guaranteed to trigger bonus effects.",
             "解锁": {
@@ -8499,7 +8499,7 @@
         "技能": [
           {
             "id": 20599008,
-            "名称": "绝响·追袭",
+            "名称": "Requiem – Huntdown",
             "icon": "T_Rouge_Talent_BonusDamage",
             "描述": "The character's own element deals +35.0% additional damage.",
             "解锁": {
@@ -8513,7 +8513,7 @@
           },
           {
             "id": 20599009,
-            "名称": "绝响·昂扬",
+            "名称": "Requiem – Morale",
             "icon": "T_Rouge_Talent_Morale",
             "加成": {
               "Morale": 0.35
@@ -8542,7 +8542,7 @@
         "技能": [
           {
             "id": 20599010,
-            "名称": "荆刺·腐朽",
+            "名称": "Thorn – Wilt",
             "icon": "T_Rouge_Talent_Polearm_Zaie",
             "描述": "Melee Weapon Charged Attacks deal 300.0% more damage.\nWhen Combo Points are at max, the excess is stored as the same stacks of [Doom Sigils], up to 360.0. Each time [Oblivion] is triggered, gain 20.0 stacks of [Doom Sigil].\nWhen using a Charged Attack, if Combo Points are below max, consume an equal number of [Doom Sigils] to raise Combo Points to the max."
           }

@@ -47,11 +47,11 @@ return {
       key = "177874151835511686898",
       type = "StoryNode",
       name = "希尔妲战斗",
-      pos = {x = 1412, y = 166},
+      pos = {x = 1412, y = 164},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040405_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -222,7 +222,10 @@ return {
                 172640016,
                 172640017,
                 172640018,
-                172640019
+                172640019,
+                172640153,
+                172640154,
+                172640155
               }
             }
           },
@@ -230,10 +233,10 @@ return {
             key = "177874151835511686908",
             type = "KillMonsterNode",
             name = "击杀怪物",
-            pos = {x = 1740.774829497016, y = 314.88190985776447},
+            pos = {x = 1738.774829497016, y = 314.88190985776447},
             propsData = {
               KillMonsterType = "Id",
-              MonsterNeedNums = 7,
+              MonsterNeedNums = 10,
               IsShow = false,
               GuideType = "P",
               GuideName = "",
@@ -245,7 +248,10 @@ return {
                 172640016,
                 172640017,
                 172640018,
-                172640019
+                172640019,
+                172640153,
+                172640154,
+                172640155
               }
             }
           },
@@ -269,10 +275,10 @@ return {
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
-              HideNpcs = false,
+              HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
-              HideMechanismsFX = false,
+              HideMechanismsFX = true,
               ShowSkipButton = true,
               ShowAutoPlayButton = true,
               ShowReviewButton = true,

@@ -16,7 +16,7 @@ local DrawCurveSpeed = {
 }
 local ResultShowDelay = 0.8
 local ResultAnimStartDelay = 0.6
-local GachaShowSoundEvent = "event:/ui/activity/limit_gift_pool_gacha_show"
+local GachaShowSoundEvent = "event:/ui/activity/limit_gift_pool_gacha_show_xiunv"
 local GachaShowSoundKey = "LimitedPrizePoolGachaShow"
 local RollSingleSoundEvent = "event:/ui/activity/limit_gift_pool_gacha_roll_single"
 local RollSingleEndSoundEvent = "event:/ui/activity/limit_gift_pool_gacha_roll_single_end"

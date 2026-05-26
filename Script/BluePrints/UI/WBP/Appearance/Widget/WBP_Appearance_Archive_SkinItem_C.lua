@@ -82,7 +82,7 @@ end
 
 function M:SetRarity(Rarity)
   local TempRarity = Rarity
-  if not TempRarity or TempRarity < 0 or TempRarity > 5 then
+  if not TempRarity or TempRarity < 0 or TempRarity > 6 then
     TempRarity = 0
   end
   local FontMaterial = self.Text_Name:GetDynamicFontMaterial()
@@ -90,6 +90,10 @@ function M:SetRarity(Rarity)
     FontMaterial:SetTextureParameterValue("IconTex", self["Quality_" .. TempRarity])
   else
     FontMaterial:SetTextureParameterValue("IconTex", self.Quality_0)
+  end
+  local ImgMat = self.Image_Item:GetDynamicMaterial()
+  if ImgMat and self["MainTex_" .. TempRarity] then
+    ImgMat:SetTextureParameterValue("MainTex", self["MainTex_" .. TempRarity])
   end
 end
 

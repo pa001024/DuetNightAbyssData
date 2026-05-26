@@ -432,7 +432,7 @@ return ReadOnly("QuestChain", {
       [10040201] = "BP_DixiaQianruEleEnd",
       [10040202] = "BP_QianruEnd",
       [10040203] = "BP_YWSEndToZL",
-      [10040205] = "BP_DixiaQianruEleEnd",
+      [10040205] = "BP_ZZZstart",
       [10040209] = "BP_YWSEnd",
       [10040210] = "BP_MTEnd"
     },
@@ -1692,7 +1692,6 @@ return ReadOnly("QuestChain", {
     Episode = "Name_200237",
     EpisodeName = "Name_200237",
     IfAutoStart = true,
-    IsShowWindow = true,
     MainStoryUnlockMessage = "Textmap_UnlockTitle",
     QuestChainId = 200237,
     QuestChainName = "Name_200237",
@@ -1700,12 +1699,9 @@ return ReadOnly("QuestChain", {
     QuestChainType = 4,
     QuestDescription = "Description_200237_1",
     QuestDetail = "Content_200237_1",
-    QuestNpcId = 900001,
     ShowCondition = 20023701,
-    SpecialQuestDisplayName = "Npc_Bai_Duanzao",
     StoryPath = "SpecialSideStory/2002/200237_Linghua01.story",
-    UnlockCondition = 20023701,
-    bCanGiveUp = true
+    UnlockCondition = 20023701
   },
   [200238] = {
     ChapterName = "UI_ChapterName_01",

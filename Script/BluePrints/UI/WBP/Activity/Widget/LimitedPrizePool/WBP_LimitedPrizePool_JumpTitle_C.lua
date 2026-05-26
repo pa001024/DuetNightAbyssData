@@ -9,6 +9,7 @@ function M:Construct()
   self.DescSwitcher = self.WS_TextDesc
   self.BlackDesc = self.Text_ActivityDesc
   self.WhiteDesc = self.Text_ActivityDesc_White
+  self.FadeInAnimation = self.In
   self.bTimeOut = false
   self:SetInputType(UIUtils.UtilsGetCurrentInputType(), UIUtils.UtilsGetCurrentGamepadName())
   self:ListenInputTypeChanged()
@@ -43,6 +44,10 @@ function M:SetInputType(NewInputType, NewGamepadName)
   else
     self:UpdateUIStyleInPlatform(false)
   end
+end
+
+function M:FadeIn()
+  self:PlayAnimation(self.FadeInAnimation)
 end
 
 function M:SetTitle(Text)

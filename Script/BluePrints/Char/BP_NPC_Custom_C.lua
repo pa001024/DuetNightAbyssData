@@ -263,4 +263,14 @@ function M:EnableNameWidget(bEnable, Name)
   self:EnableHeadWidget("Name", bEnable, GText(Name))
 end
 
+function M:ResetNpcAfterParamChanged()
+  self.Overridden.ResetNpcAfterParamChanged(self)
+  local Mesh = self.Mesh
+  if Mesh and Mesh.AnimScriptInstance and not Mesh.AnimScriptInstance.CurrentAsset and Mesh.AnimationData.AnimToPlay and Mesh.AnimationMode == UE4.EAnimationMode.AnimationSingleNode and self.AnimationParam.LoopMode == UE4.ECustomNpcAnimationLoopMode.None then
+    Mesh:SetAnimation(Mesh.AnimationData.AnimToPlay)
+    Mesh:OverrideAnimationData(Mesh.AnimationData.AnimToPlay)
+    Mesh:Play(true)
+  end
+end
+
 return M

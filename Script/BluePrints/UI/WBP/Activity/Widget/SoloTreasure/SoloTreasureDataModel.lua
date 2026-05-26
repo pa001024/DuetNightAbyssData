@@ -263,7 +263,7 @@ function SoloTreasureDataModel:Init()
 end
 
 function SoloTreasureDataModel:InitReddotTree()
-  if self.bReddotTreeInited then
+  if self.bReddotTreeInited and ReddotManager.GetTreeNode("Acti_SoloTreasureTab") then
     return
   end
   self.bReddotTreeInited = true
@@ -436,6 +436,7 @@ function SoloTreasureDataModel:MarkShopEntryRead()
   end
   self:SetShopEntryRead(EventId, true)
   ReddotManager.ClearLeafNodeCount("SoloTreasure_Shop_New")
+  EMCache:SaveUser(false)
 end
 
 function SoloTreasureDataModel:MarkLimitRewardEntryRead()
@@ -444,6 +445,7 @@ function SoloTreasureDataModel:MarkLimitRewardEntryRead()
     return
   end
   self:SetLimitRewardEntryRead(EventId, true)
+  EMCache:SaveUser(false)
   ReddotManager.ClearLeafNodeCount("SoloTreasure_LimitReward_New")
 end
 
@@ -453,6 +455,7 @@ function SoloTreasureDataModel:MarkPermanentRewardEntryRead()
     return
   end
   self:SetPermanentRewardEntryRead(EventId, true)
+  EMCache:SaveUser(false)
   ReddotManager.ClearLeafNodeCount("SoloTreasure_PermanentReward_New")
 end
 

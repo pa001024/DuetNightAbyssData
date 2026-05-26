@@ -14,6 +14,8 @@ function M:InitBaseView()
   self:InitPageView()
   self:BindButtonEvent()
   self:PlayAnimationIn()
+  EventManager:AddEvent(MonthSignInCommon.EventId.PlayGetAnimation, self, self.TryPlayGetAnimationFromItem)
+  EventManager:AddEvent(MonthSignInCommon.EventId.RefreshInNextDay, self, self.NotifyDayRefresh)
 end
 
 function M:BindButtonEvent()
@@ -139,15 +141,6 @@ function M:UpdateMonthCardRewardInfo()
   end
 end
 
-function M:OnGetMonthCardReward(Content)
-  DebugPrint("Yihan@ OnGetMonthCardReward: ", Content)
-  local Avatar = GWorld:GetAvatar()
-  local IsHasMonthCard = MonthCardModel:HasMonthCard()
-  local IsGetDailyReward = MonthCardModel:HasGetMonthCardDailyReward()
-  if not (Avatar and IsHasMonthCard) or not IsGetDailyReward then
-  end
-end
-
 function M:OnMenuOpenChange(IsOpen)
   if IsOpen then
     self.Panel_Key:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -158,8 +151,8 @@ end
 
 function M:UpdateMonthSignInRewardInfo()
   self.List:ClearListItems()
-  local CurYear = tonumber(os.date("%Y"))
-  local CurMonth = tonumber(os.date("%m"))
+  local CurYear = MonthSignInModel:GetTodayYear()
+  local CurMonth = MonthSignInModel:GetTodayMonth()
   local TemplateId = DataMgr.MonthlyCheckConf[CurYear][CurMonth].MonthlyCheckId
   local SignInReward = DataMgr.MonthlyCheck[TemplateId]
   DebugPrint("Yihan@ OnGetMonthSignInReward: ", #SignInReward, CurYear, CurMonth)
@@ -168,24 +161,24 @@ function M:UpdateMonthSignInRewardInfo()
     local RewardId = SignInReward[index].CheckReward
     local RewardData = DataMgr.Reward[RewardId]
     local ResourceData = DataMgr.Resource[RewardData.Id[1]]
-    DebugPrint("Yihan@ OnGetMonthSignInReward: ", RewardData, ResourceData, RewardData.Id[1], RewardData.Count[1][1])
+    Content.RewardId = RewardId
     Content.Id = RewardData.Id[1]
     Content.ItemType = RewardData.Type[1]
     Content.Rarity = ResourceData.Rarity
     Content.Icon = ResourceData.Icon
     Content.bIsImportant = SignInReward[index].IsImportant
     Content.ParentWidget = self
+    Content.Index = index
     Content.IsShowDetails = true
     Content.TextDate = SignInReward[index].CheckCount
     Content.Count = RewardData.Count[1][1]
     Content.NotInteractive = true
     Content.HandleMouseDown = true
     Content.bIsGet = MonthSignInModel:IsGetSignRewardByDay(Content.TextDate)
-    if index == MonthSignInModel:GetTodaySignInDay() and not Content.bIsGet then
-      self.GetRewardTimer = self:AddTimer(0.6, function()
-        self:OnGetMonthSignInReward(Content)
-        self:RemoveTimer("TimeToGetMonthSignInReward")
-      end, false, 0, "TimeToGetMonthSignInReward")
+    if index == MonthSignInModel:GetTodaySignInDay() then
+      Content.bIsCanGet = true
+    else
+      Content.bIsCanGet = false
     end
     Content.bIsResetFocus = true
     self.List:AddItem(Content)
@@ -193,44 +186,58 @@ function M:UpdateMonthSignInRewardInfo()
   self.List:RequestPlayEntriesAnim()
 end
 
-function M:OnGetMonthSignInReward(Content)
-  DebugPrint("Yihan@ OnGetMonthSignInReward: ", Content.TextDate, MonthSignInModel:IsTodaySigned())
+function M:TryPlayGetAnimationFromItem()
+  DebugPrint("Yihan@ PlayGetAnimation :bIsInGetAnimation", self.bIsInGetAnimation)
+  if self.bIsInGetAnimation then
+    return
+  end
+  local Item = self.List:GetItemAt(MonthSignInModel:GetTodaySignInDay() - 1)
   local Avatar = GWorld:GetAvatar()
-  if Avatar then
-    Avatar:MonthlyCheckGetReward(Content.TextDate, function(ret, RewardList)
-      if ErrorCode:Check(ret) then
-        self:PlayGetAnimation(Content, RewardList)
-      end
-    end)
+  local IsPopUp = MonthSignInModel:IsPopUpMonthSignInReward()
+  DebugPrint("Yihan@ PlayGetAnimation ", Item, Item.UI, IsPopUp)
+  if Item and Item.UI and IsPopUp then
+    self:PlayGetAnimation(Item, Item.UI)
   end
 end
 
-function M:PlayGetAnimation(Content, RewardList)
+function M:PlayGetAnimation(Item, Widget)
+  DebugPrint("Yihan@ PlayGetAnimation ", Item, Widget)
   if self.bIsInGetAnimation then
     return
   end
   self.bIsInGetAnimation = true
-  local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List, self.List:GetIndexForItem(Content))
-  DebugPrint("Yihan@ PlayGetAnimation ", CurWidget)
-  if CurWidget then
-    CurWidget:PlayAnimation(CurWidget.GetNow)
+  local Avatar = GWorld:GetAvatar()
+  Widget:PlayAnimation(Widget.GetNow)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/month_signin_daily_gift_in", nil, nil)
+  local IsHasMonthCard = MonthCardModel:HasMonthCard()
+  if IsHasMonthCard then
+    local PreMonthCardGetRewardTime = EMCache:Get("PreMonthCardGetRewardTime", true)
+    local CurTimestamp = TimeUtils.NowTime()
+    if not PreMonthCardGetRewardTime then
+      self:PlayAnimation(self.GetNew)
+      EMCache:Set("PreMonthCardGetRewardTime", CurTimestamp, true)
+    elseif 0 ~= TimeUtils.GetIntervalDay(CurTimestamp, PreMonthCardGetRewardTime) then
+      EMCache:Set("PreMonthCardGetRewardTime", CurTimestamp, true)
+      self:PlayAnimation(self.GetNew)
+    end
   end
   self:AddTimer(1.0, function()
-    self:ShowGetItemPage(RewardList)
-    Content.bIsGet = true
-    Content.bIsCanGet = false
+    self:ShowGetItemPage(Item)
+    Item.bIsGet = true
     self:UpdateCumulativeRewardInfo()
     self.bIsInGetAnimation = false
-    self:IsShowTextDoneAndSwitchBtn()
+    Widget:SetIsReceived()
     self:RemoveTimer("TimeToShowGetItemUI")
   end, false, 0, "TimeToShowGetItemUI")
 end
 
-function M:ShowGetItemPage(RewardList)
-  DebugPrint("Yihan@ ShowGetItemPage", RewardList, #RewardList)
-  UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardList, false, function()
+function M:ShowGetItemPage(Content)
+  DebugPrint("Yihan@ ShowGetItemPage", Content)
+  local RewardToShow = MonthSignInModel:MergeRewardIds(Content.RewardId)
+  UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardToShow, false, function()
     local Item = self.List:GetItemAt(MonthSignInModel:GetTodaySignInDay() - 1)
-    Item.SelfWidget:SetFocus()
+    self:IsShowTextDoneAndSwitchBtn()
+    Item.UI:SetFocus()
   end, self, true)
 end
 
@@ -243,8 +250,8 @@ function M:UpdateCumulativeRewardInfo()
   DebugPrint("Yihan@ UpdateCumulativeRewardInfo")
   ReddotManager.ClearLeafNodeCount(MonthSignInCommon.ReddotName, true)
   self.ListCumulative:ClearListItems()
-  local CurYear = tonumber(os.date("%Y"))
-  local CurMonth = tonumber(os.date("%m"))
+  local CurYear = MonthSignInModel:GetTodayYear()
+  local CurMonth = MonthSignInModel:GetTodayMonth()
   local TemplateId = DataMgr.MonthlyCheckConf[CurYear][CurMonth].TotalCheckId
   local CumulativeReward = DataMgr.TotalCheck[TemplateId]
   self.NeedNavigateTo = #CumulativeReward - 1 or 0
@@ -325,7 +332,7 @@ end
 
 function M:OnBuyBtnClicked()
   DebugPrint("Yihan@ OnBuyBtnClicked: ", MonthCardModel:GetNowMonthCard(), MonthCardModel:IsMonthCardCanPurchase())
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large_crystal", nil, nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_special", nil, nil)
   if not MonthCardModel:GetNowMonthCard() and not MonthCardModel:IsMonthCardCanPurchase() then
     self:OnBuyBtnClickedForbid()
     return
@@ -344,6 +351,7 @@ function M:OnBuyBtnClickedForbid()
 end
 
 function M:OnSwitchBtnClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/confirm_click", nil, nil)
   DebugPrint("Yihan@ OnSwitchBtnClicked: ", self.NowCard)
   if self.IsInSwitching then
     return
@@ -351,9 +359,11 @@ function M:OnSwitchBtnClicked()
   self.IsInSwitching = true
   if 1 == self.NowCard then
     self:PlayAnimation(self.Card02_In)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/month_signin_trans_to_keep_page", nil, nil)
     self.NowCard = 2
   else
     self:PlayAnimation(self.Card02_Out)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/month_signin_trans_to_normal_page", nil, nil)
     self.NowCard = 1
   end
   self.BtnSwitch.Ws_Icon:SetActiveWidgetIndex(self.NowCard - 1)
@@ -363,47 +373,47 @@ function M:OnSwitchBtnHovered()
 end
 
 function M:RefreshPageView()
-  self:UpdateStaticWidget()
-  self:UpdateMonthardPurchased()
-  self:UpdatePrice()
-  self:UpdatePurchaseState()
-  self:UpdateMonthCardSaleTime()
-  self.Btn_Info.Btn_Click:SetChecked(false)
-  self.Btn_CardRefresh.Btn_Click:SetChecked(false)
-  self.HandleAKeyDown = nil
+  if 1 ~= self.NowCard then
+    self.bIsInRefresh = true
+    self:OnSwitchBtnClicked()
+    self:AddTimer(0.88, function()
+      self:InitPageView()
+      self.bIsInRefresh = false
+      self:RemoveTimer("RefreshPageView")
+    end, false, 0, "RefreshPageView")
+  else
+    self:InitPageView()
+  end
 end
 
-function M:NotifyTimeTick()
-end
-
-function M:NotifyMonthCardRefresh()
+function M:NotifyDayRefresh()
+  DebugPrint("Yihan@ NotifyDayRefresh123123123123: ")
   self:RefreshPageView()
-end
-
-function M:NotifyPurchasedRefresh()
-  self:UpdateMonthardPurchased()
-end
-
-function M:NotifyPurchaseStateRefresh()
+  if UIUtils.IsGamepadInput() then
+    self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  else
+    self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
 end
 
 function M:OnViewClose()
   self:UnBindReddotTreeEvents()
-  if self.GetRewardTimer then
-    self:RemoveTimer(self.GetRewardTimer)
-  end
+  EventManager:RemoveEvent(MonthSignInCommon.EventId.PlayGetAnimation, self)
+  EventManager:RemoveEvent(MonthSignInCommon.EventId.RefreshInNextDay, self)
   self:PlayAnimationOut()
 end
 
 function M:PlayAnimationIn()
   DebugPrint("Yihan@ PlayAnimationIn: ")
   self:PlayAnimation(self.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/month_signin_show", "MonthSignInPop", nil)
   self:PlayAnimation(self.SwitchBtn_In)
   self.IsInAnimation = true
 end
 
 function M:PlayAnimationOut()
   self:PlayAnimation(self.Out)
+  AudioManager(self):SetEventSoundParam(self, "MonthSignInPop", {ToEnd = 1})
 end
 
 function M:OnAnimationFinished(InAnimation)

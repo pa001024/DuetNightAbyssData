@@ -67,7 +67,7 @@ return ReadOnly("FakeQuest", {
     },
     PopUITitle = "UI_SPECIALPOP_TEXT_TITLE_1",
     QuestId = 10020108,
-    SystemUIId = "101.0",
+    SystemUIId = "101",
     UnLockTeleportPoint = {
       1010,
       1011,

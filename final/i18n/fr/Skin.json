@@ -36,7 +36,7 @@
       "HeadSculpture": [
         {
           "id": 10022,
-          "name": "Portrait : Flora",
+          "name": "Portrait : Princesse des Cent-Fleurs",
           "num": 1
         }
       ],
@@ -714,7 +714,7 @@
       "HeadSculpture": [
         {
           "id": 20007,
-          "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
+          "name": "Portrait : Princesse des Cent-Fleurs – Grâce",
           "num": 1
         }
       ]
@@ -745,7 +745,7 @@
   },
   {
     "id": 150201,
-    "name": "Sept jours d’alliance : Dame Nifle",
+    "name": "Sept jours d’alliance — Dame Nifle",
     "desc": "Même si les miracles ont disparu de ce monde, certains mortels acceptent encore de porter le poids de leur foi.",
     "icon": "T_Head_Nifu01",
     "rarity": 5,
@@ -756,7 +756,7 @@
       "HeadSculpture": [
         {
           "id": 20008,
-          "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
+          "name": "Portrait : Passeuse de la Mer du Silence – Prières",
           "num": 1
         }
       ]
@@ -944,7 +944,7 @@
       "HeadSculpture": [
         {
           "id": 20009,
-          "name": "Portrait : Demoiselle Jishu – Ciel dégagé",
+          "name": "Portrait : La renonçante – Prières",
           "num": 1
         }
       ]

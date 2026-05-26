@@ -44,7 +44,7 @@ local function CloseMenu(Context)
 end
 
 local function BuildShowRecord(Context)
-  return function(Content, AvatarInfo)
+  return function(Content, AvatarInfo, GuildFullInfo)
     Content.Text = GText("UI_Chat_ShowRecord")
     
     function Content.Callback()
@@ -52,7 +52,7 @@ local function BuildShowRecord(Context)
       if Uid == GWorld:GetAvatar().Uid then
         PersonInfoController:OpenView()
       else
-        GWorld:GetAvatar():CheckOtherPlayerPersonallInfo(Uid, nil, AvatarInfo)
+        GWorld:GetAvatar():CheckOtherPlayerPersonallInfo(Uid, nil, AvatarInfo, GuildFullInfo)
       end
       CloseMenu(Context)
     end
@@ -156,7 +156,7 @@ local function KickOutGuildMember(Context)
 end
 
 local function GuildInvite(Context)
-  return function(Content, AvatarInfo, GuildFullInfo)
+  return function(Content, AvatarInfo, GuildFullInfo, ClickCallback)
     Content.Text = GText("InviteToGuild")
     
     function Content.Callback()
@@ -168,6 +168,9 @@ local function GuildInvite(Context)
       if AvatarInfo.IsInDungeon then
         UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("PlayerInDungeon"))
         return
+      end
+      if ClickCallback then
+        ClickCallback()
       end
       GuildController:SendInviteJoinGuild(AvatarInfo.Uid or AvatarInfo.Uuid)
     end

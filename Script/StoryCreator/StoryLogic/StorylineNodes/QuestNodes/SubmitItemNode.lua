@@ -12,7 +12,13 @@ end
 
 function SubmitItemNode:Execute(Callback)
   local Avatar = GWorld:GetAvatar()
-  if Avatar and Avatar:GetIsSubmitComplete(self.Context.QuestChainId, self.SubmitId) then
+  local SpecialQuestId = self:GetPayload("SpecialQuestId")
+  if SpecialQuestId and 0 ~= SpecialQuestId then
+    if Avatar and Avatar:GetIsSpecialQuestSubmitComplete(SpecialQuestId, self.SubmitId) then
+      Callback()
+      return
+    end
+  elseif Avatar and Avatar:GetIsSubmitComplete(self.Context.QuestChainId, self.SubmitId) then
     Callback()
     return
   end

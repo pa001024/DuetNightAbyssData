@@ -69,7 +69,7 @@ return {
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
         IsBacktrack = false,
-        SubRegionId = 106101,
+        SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
@@ -108,12 +108,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177772053087715887759",
-            startPort = "Out",
-            endQuest = "177772053087715887763",
-            endPort = "In"
-          },
-          {
             startQuest = "177772053087715887754",
             startPort = "QuestStart",
             endQuest = "177772184824025234657",
@@ -144,9 +138,69 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "177772053087715887759",
+            startPort = "Out",
+            endQuest = "17788440692621930548",
+            endPort = "In"
+          },
+          {
+            startQuest = "17788440692621930548",
+            startPort = "Out",
+            endQuest = "17788445597502895439",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772053087715887761",
+            startPort = "Out",
+            endQuest = "17795211629842903298",
+            endPort = "In"
+          },
+          {
+            startQuest = "17788445597502895439",
+            startPort = "Out",
+            endQuest = "17795211687542903557",
+            endPort = "In"
+          },
+          {
+            startQuest = "17795211687542903557",
+            startPort = "Out",
+            endQuest = "177772053087715887763",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772184824025234657",
+            startPort = "Out",
+            endQuest = "177969843358442584971",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969843358442584971",
+            startPort = "Out",
+            endQuest = "177969843555342585070",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772053087715887757",
+            startPort = "Out",
+            endQuest = "177969861933443552924",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969861933443552924",
+            startPort = "Out",
+            endQuest = "177969863473044520369",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772053087715887760",
+            startPort = "Out",
+            endQuest = "177969865796344520572",
+            endPort = "In"
+          },
+          {
             startQuest = "177772053087715887754",
             startPort = "QuestStart",
-            endQuest = "177772191166226168807",
+            endQuest = "177970738134071155648",
             endPort = "In"
           }
         },
@@ -162,7 +216,7 @@ return {
             key = "177772053087715887755",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3217.3909423909417, y = 338.28071928071927},
+            pos = {x = 3444.0576090576083, y = 338.28071928071927},
             propsData = {ModeType = 0}
           },
           ["177772053087715887756"] = {
@@ -176,7 +230,7 @@ return {
             key = "177772053087715887757",
             type = "TalkNode",
             name = "过场-卡嘉最后一击后跳车",
-            pos = {x = 952.1030317920239, y = 304.3880944077622},
+            pos = {x = 919.245888934881, y = 307.24523726490503},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -190,7 +244,7 @@ return {
               ShowSkipButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
-              PauseGameGlobal = true,
+              PauseGameGlobal = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -226,7 +280,7 @@ return {
             key = "177772053087715887759",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 2231.5808558753197, y = 345.31007403566383},
+            pos = {x = 2071.061921793973, y = 348.50782999639307},
             propsData = {
               SendMessage = "",
               FinishCondition = "TrainBoss02Success"
@@ -301,7 +355,7 @@ return {
             key = "177772053087715887762",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 1786, y = 519.5714285714284},
+            pos = {x = 1712.1150070126228, y = 592.9094369865758},
             propsData = {
               IsCreate = true,
               IsClearOtherPhantom = true,
@@ -313,7 +367,7 @@ return {
             key = "177772053087715887763",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 2498, y = 371.57142857142856},
+            pos = {x = 2893.232974910394, y = 419.6359447004608},
             propsData = {
               IsCreate = false,
               IsClearOtherPhantom = true,
@@ -347,15 +401,134 @@ return {
             key = "177772190469426168609",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2814.6666666666665, y = 334.66666666666674},
+            pos = {x = 3144.6666666666665, y = 312.4444444444445},
             propsData = {}
           },
-          ["177772191166226168807"] = {
-            key = "177772191166226168807",
+          ["17788440692621930548"] = {
+            key = "17788440692621930548",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 2287.5917608961086, y = 360.5706853532939},
+            propsData = {
+              IsNpcNode = false,
+              FirstDialogueId = 100499404,
+              FlowAssetPath = "",
+              TalkType = "Guide",
+              bIsStandalone = true,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
+              OverrideFailBlend = false
+            }
+          },
+          ["17788445597502895439"] = {
+            key = "17788445597502895439",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 2540.8781036635182, y = 405.8322501870889},
+            propsData = {WaitTime = 10}
+          },
+          ["17795211629842903298"] = {
+            key = "17795211629842903298",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1795.75067724038, y = 150.80161943319837},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0171_combat_lieche_loop.0171_combat_lieche_loop'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {106101},
+              ClientRelatedRegionId = {},
+              bStoreToServer = false
+            }
+          },
+          ["17795211687542903557"] = {
+            key = "17795211687542903557",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2725.75067724038, y = 544.2631578947368},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["177969843358442584971"] = {
+            key = "177969843358442584971",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 894.1428571428569, y = 27.613445378151205},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["177969843555342585070"] = {
+            key = "177969843555342585070",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1141.285714285714, y = -68.10084033613458},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["177969861933443552924"] = {
+            key = "177969861933443552924",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1182.7142857142853, y = 110.47058823529403},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["177969863473044520369"] = {
+            key = "177969863473044520369",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1475.4571428571426, y = 109.67058823529393},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt03/0080_story_the_abandoned_theme.0080_story_the_abandoned_theme'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["177969865796344520572"] = {
+            key = "177969865796344520572",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1386.6571428571424, y = 505.6705882352941},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["177970738134071155648"] = {
+            key = "177970738134071155648",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 676.5714285714286, y = 93.47619047619047},
-            propsData = {QuestRoleId = 16010201, IsPlayFX = false}
+            pos = {x = 502.2883295194506, y = -117.9725400457666},
+            propsData = {QuestRoleId = 11020201, IsPlayFX = false}
           }
         },
         commentData = {}

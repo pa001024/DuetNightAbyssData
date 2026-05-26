@@ -51,25 +51,41 @@ function Component:AddMainTabReddotListen()
     end
   end
   
-  self:AddMeleeReddotListen(function(self, Count)
+  local function MeleeReddotFunc(self, Count)
     local NewNode = ReddotManager.GetTreeNode(CommonConst.WeaponType.MeleeWeapon)
     local RewardNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.MeleeReward.Name)
+    local ForgeRewardNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.MeleeHyperWeaponForgeReward.Name)
     local IsNew = NewNode.Count > 0
-    local IsRed = RewardNode.Count > 0
+    local IsRed = RewardNode.Count > 0 or ForgeRewardNode.Count > 0
     WeaponReddotFunc(ArmoryUtils.ArmoryMainTabNames.Melee, IsNew, IsRed)
     if self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Melee then
       self:UpdateBoxReddotView(IsNew, IsRed)
     end
-  end)
-  self:AddRangedReddotListen(function(self, Count)
+  end
+  
+  local function RangedReddotFunc(self, Count)
     local NewNode = ReddotManager.GetTreeNode(CommonConst.WeaponType.RangedWeapon)
     local RewardNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.RangedReward.Name)
+    local ForgeRewardNode = ReddotManager.GetTreeNode(DataMgr.ReddotNode.RangedHyperWeaponForgeReward.Name)
     local IsNew = NewNode.Count > 0
-    local IsRed = RewardNode.Count > 0
+    local IsRed = RewardNode.Count > 0 or ForgeRewardNode.Count > 0
     WeaponReddotFunc(ArmoryUtils.ArmoryMainTabNames.Ranged, IsNew, IsRed)
     if self.CurMainTab.Name == ArmoryUtils.ArmoryMainTabNames.Ranged then
       self:UpdateBoxReddotView(IsNew, IsRed)
     end
+  end
+  
+  self:AddMainTabWeaponHyperGradeReddotListen(function(self, Count)
+    RangedReddotFunc(self, Count)
+    MeleeReddotFunc(self, Count)
+  end)
+  self:AddMeleeReddotListen(function(self, Count)
+    MeleeReddotFunc(self, Count)
+    RangedReddotFunc(self, Count)
+  end)
+  self:AddRangedReddotListen(function(self, Count)
+    RangedReddotFunc(self, Count)
+    MeleeReddotFunc(self, Count)
   end)
   self:AddBattleItemReddotListen(function(self, Count)
     self:MainTabReddotFunc(ArmoryUtils.ArmoryMainTabNames.BattleWheel, Count > 0)
@@ -237,10 +253,9 @@ function Component:AddSubTabReddotListen()
     self:AddWeaponAttributeReddotListen(function(Count)
       self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Attribute)
     end, self[self.ComparedWeaponName].WeaponId, WeaponType)
-    self:AddWeaponAppearanceReddotListen(function(self, Count)
-      local Res = ArmoryUtils:GetWeaponAppearanceReddotCount(self[self.ComparedWeaponName].WeaponId)
-      self:SubTabReddotFunc(ArmoryUtils.ArmorySubTabNames.Appearance, Res.TotalCount > 0)
-    end, self[self.ComparedWeaponName].WeaponId)
+    self:AddSubTabWeaponHyperGradeReddotListen(function(Count)
+      self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.HyperGrade)
+    end, self[self.ComparedWeaponName].WeaponId, WeaponType)
   end
 end
 
@@ -254,6 +269,7 @@ function Component:RemoveMainTabReddotListen()
   self:RemoveCharReddotListen()
   self:RemoveNewCharReddotListen()
   self:RemoveNewUltraGradeCharReddotListen()
+  self:RemoveMainTabWeaponHyperGradeReddotListen()
   self:RemoveMeleeReddotListen()
   self:RemoveRangedReddotListen()
   self:RemoveBattleItemReddotListen()
@@ -267,8 +283,8 @@ function Component:RemoveSubTabReddotListen()
     return
   end
   self:RemoveCharAttributeReddotListen()
-  self:RemoveCharAppearanceReddotListen()
   self:RemoveWeaponAttributeReddotListen()
+  self:RemoveSubTabWeaponHyperGradeReddotListen()
   self:RemoveWeaponAppearanceReddotListen()
   self:RemoveCharRedordReddotListen()
   self:RemoveCharSkillReddotListen()
@@ -503,66 +519,6 @@ function Component:RemoveCharGradeReddotListen()
   end
 end
 
-function Component:AddCharAppearanceReddotListen(Callback, CharId)
-  if self.IsPreviewMode or self.NoReddot then
-    return
-  end
-  self:RemoveCharAppearanceReddotListen()
-  local NodeName = CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Appearance .. CharId
-  if not self.CharAppearanceNodeNames then
-    self.CharAppearanceNodeNames = {}
-  end
-  local Avatar = GWorld:GetAvatar()
-  local CommonChar = Avatar.CommonChars[CharId]
-  local LeafNodes = {}
-  for _, Type in pairs(CommonConst.CharAccessoryTypes) do
-    if Type ~= CommonConst.CharAccessoryTypes.MVP then
-      local LeafNodeName = CommonConst.DataType.CharAccessory .. Type
-      LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
-      for key, Skin in pairs(CommonChar.OwnedSkins) do
-        LeafNodeName = LeafNodeName .. Skin.SkinId
-        LeafNodes[LeafNodeName] = ReddotManager.GetTreeNode(LeafNodeName) and 1 or nil
-      end
-    end
-  end
-  if not self.CharAppearanceNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
-    ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
-    self.CharAppearanceNodeNames[NodeName] = 1
-  end
-  NodeName = CommonConst.DataType.CharAccessory .. CommonConst.CharAccessoryTypes.MVP
-  if ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
-    self.CharAppearanceNodeNames[NodeName] = 1
-  end
-  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
-  if ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
-    self.CharAppearanceNodeNames[NodeName] = 1
-  end
-  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
-  if ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
-    self.CharAppearanceNodeNames[NodeName] = 1
-  end
-  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
-  if ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
-    self.CharAppearanceNodeNames[NodeName] = 1
-  end
-  NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
-  if ReddotManager.GetTreeNode(NodeName) then
-    ReddotManager.AddListener(NodeName, self, Callback, nil, true)
-    self.CharAppearanceNodeNames[NodeName] = 1
-  end
-end
-
-function Component:RemoveCharAppearanceReddotListen()
-  if self.IsPreviewMode or self.NoReddot then
-    return
-  end
-  self:_RemoveReddotListenerCommon(CommonConst.DataType.Char .. ArmoryUtils.ArmorySubTabNames.Appearance)
-end
-
 function Component:AddWeaponAttributeReddotListen(Callback, WeaponId, WeaponType)
   if self.IsPreviewMode or self.NoReddot then
     return
@@ -588,6 +544,58 @@ function Component:RemoveWeaponAttributeReddotListen()
     return
   end
   self:_RemoveReddotListenerCommon(CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.Appearance)
+end
+
+function Component:AddSubTabWeaponHyperGradeReddotListen(Callback, WeaponId, WeaponType)
+  if self.IsPreviewMode or self.NoReddot then
+    return
+  end
+  self:RemoveSubTabWeaponHyperGradeReddotListen()
+  WeaponType = WeaponType or ""
+  self.SubTabWeaponHyperGradeNodeNames = self.SubTabWeaponHyperGradeNodeNames or {}
+  local NodeName = CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.HyperGrade .. "SubTab"
+  local LeafNodes = {}
+  if WeaponType == CommonConst.WeaponType.MeleeWeapon then
+    LeafNodes[DataMgr.ReddotNode.MeleeHyperWeaponForgeReward.Name] = ReddotManager.GetTreeNode(DataMgr.ReddotNode.MeleeHyperWeaponForgeReward.Name) and 1 or nil
+  elseif WeaponType == CommonConst.WeaponType.RangedWeapon then
+    LeafNodes[DataMgr.ReddotNode.RangedHyperWeaponForgeReward.Name] = ReddotManager.GetTreeNode(DataMgr.ReddotNode.RangedHyperWeaponForgeReward.Name) and 1 or nil
+  end
+  if not self.SubTabWeaponHyperGradeNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
+    ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
+    self.SubTabWeaponHyperGradeNodeNames[NodeName] = 1
+  end
+end
+
+function Component:RemoveSubTabWeaponHyperGradeReddotListen()
+  if self.IsPreviewMode or self.NoReddot then
+    return
+  end
+  self:_RemoveReddotListenerCommon(CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.HyperGrade .. "SubTab")
+end
+
+function Component:AddMainTabWeaponHyperGradeReddotListen(Callback)
+  if self.IsPreviewMode or self.NoReddot then
+    return
+  end
+  self:RemoveMainTabWeaponHyperGradeReddotListen()
+  local LeafNodes = {}
+  local MeleeReddotName = DataMgr.ReddotNode.MeleeHyperWeaponForgeReward.Name
+  LeafNodes[MeleeReddotName] = ReddotManager.GetTreeNode(MeleeReddotName) and 1 or nil
+  local RangedReddotName = DataMgr.ReddotNode.RangedHyperWeaponForgeReward.Name
+  LeafNodes[RangedReddotName] = ReddotManager.GetTreeNode(RangedReddotName) and 1 or nil
+  self.MainTabWeaponHyperGradeNodeNames = self.MainTabWeaponHyperGradeNodeNames or {}
+  local NodeName = CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.HyperGrade .. "MainTab"
+  if not self.MainTabWeaponHyperGradeNodeNames[NodeName] and not IsEmptyTable(LeafNodes) then
+    ReddotManager.AddListener(NodeName, self, Callback, LeafNodes)
+    self.MainTabWeaponHyperGradeNodeNames[NodeName] = 1
+  end
+end
+
+function Component:RemoveMainTabWeaponHyperGradeReddotListen()
+  if self.IsPreviewMode or self.NoReddot then
+    return
+  end
+  self:_RemoveReddotListenerCommon(CommonConst.DataType.Weapon .. ArmoryUtils.ArmorySubTabNames.HyperGrade .. "MainTab")
 end
 
 function Component:AddWeaponAppearanceReddotListen(Callback, WeaponId)
@@ -690,7 +698,7 @@ function Component:RemoveMeleeReddotListen()
   if self.IsPreviewMode or self.NoReddot then
     return
   end
-  self:_RemoveReddotListenerCommon(CommonConst.WeaponType.MeleeWeapon .. "MainTab")
+  self:_RemoveReddotListenerCommon(CommonConst.WeaponType.MeleeWeapon)
 end
 
 function Component:AddRangedReddotListen(Callback)
@@ -715,7 +723,7 @@ function Component:RemoveRangedReddotListen()
   if self.IsPreviewMode or self.NoReddot then
     return
   end
-  self:_RemoveReddotListenerCommon(CommonConst.WeaponType.RangedWeapon .. "MainTab")
+  self:_RemoveReddotListenerCommon(CommonConst.WeaponType.RangedWeapon)
 end
 
 function Component:_GetModReddotNodeName(Target)

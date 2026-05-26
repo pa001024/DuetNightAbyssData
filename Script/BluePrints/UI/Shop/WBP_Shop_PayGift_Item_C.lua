@@ -1,6 +1,7 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.UI.BP_EMUserWidget_C"
+  "BluePrints.UI.BP_EMUserWidget_C",
+  "BluePrints.UI.Shop.WBP_ShopItem_ReddotComp"
 })
 
 function M:Construct()
@@ -82,26 +83,7 @@ function M:InitPayGiftItemInfo(ShopItemData)
     ClearRdCb = self.OnClearReddot
   })
   self.ShopId = ShopItemData.ItemId
-  self:EMShowReddot(false, EReddotType.New)
-  local ShopTabConf = DataMgr.ShopTabSub[ShopItemData.SubTabId]
-  local NodeName = ShopTabConf and ShopTabConf.ReddotNode
-  if NodeName then
-    local Node = ReddotManager.GetTreeNode(NodeName)
-    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-    if CacheDetail and CacheDetail[self.ShopId] and CacheDetail[self.ShopId] ~= Const.ShopCacheReason.Read then
-      if Node then
-        self:EMShowReddot(true, Node.ReddotType)
-      else
-        self:EMShowReddot(true, EReddotType.New)
-      end
-    elseif not CacheDetail[self.ShopId] then
-      local NowTime = TimeUtils.NowTime()
-      Node:_RefreshAShopItem(self.ShopId, Node.Cache, NowTime)
-      if Node.Cache.Count > Node.Count then
-        ReddotManager.IncreaseLeafNodeCount(NodeName, DeltaCount)
-      end
-    end
-  end
+  self:UpdateReddotCommon(ShopItemData)
 end
 
 function M:OnClearReddot()
@@ -109,13 +91,7 @@ function M:OnClearReddot()
 end
 
 function M:OnSubItemClick()
-  local ShopTabConf = DataMgr.ShopTabSub[self.ItemData.SubTabId]
-  local NodeName = ShopTabConf and ShopTabConf.ReddotNode
-  if NodeName and ReddotManager.DecreaseLeafNodeCount(ShopTabConf.ReddotNode, 1, {
-    ShopItemId = self.ShopId
-  }) then
-    self:EMShowReddot(false, EReddotType.New)
-  end
+  self:DecreaseReddotCommon()
 end
 
 return M

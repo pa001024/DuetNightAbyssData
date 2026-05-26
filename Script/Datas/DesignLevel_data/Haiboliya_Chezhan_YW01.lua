@@ -3,7 +3,7 @@ return {
     ["272640073"] = {
       CreatorId = 272640073,
       UnitType = "Drop",
-      UnitId = 10076
+      UnitId = 10075
     },
     ["272640046"] = {
       CreatorId = 272640046,
@@ -54,6 +54,11 @@ return {
       CreatorId = 272640077,
       UnitType = "Drop",
       UnitId = 10100
+    },
+    ["172640006"] = {
+      CreatorId = 172640006,
+      UnitType = "Mechanism",
+      UnitId = 11002
     },
     ["172640001"] = {
       CreatorId = 172640001,
@@ -155,6 +160,11 @@ return {
       UnitType = "Mechanism",
       UnitId = 1
     },
+    ["272640150"] = {
+      CreatorId = 272640150,
+      UnitType = "Mechanism",
+      UnitId = 1
+    },
     ["292640050"] = {
       CreatorId = 292640050,
       UnitType = "Mechanism",
@@ -164,6 +174,36 @@ return {
       CreatorId = 272640004,
       UnitType = "Drop",
       UnitId = 10098
+    },
+    ["172640145"] = {
+      CreatorId = 172640145,
+      UnitType = "Mechanism",
+      UnitId = 14
+    },
+    ["172640146"] = {
+      CreatorId = 172640146,
+      UnitType = "Mechanism",
+      UnitId = 14
+    },
+    ["172640147"] = {
+      CreatorId = 172640147,
+      UnitType = "Mechanism",
+      UnitId = 14
+    },
+    ["172640148"] = {
+      CreatorId = 172640148,
+      UnitType = "Mechanism",
+      UnitId = 14
+    },
+    ["172640143"] = {
+      CreatorId = 172640143,
+      UnitType = "Mechanism",
+      UnitId = 14
+    },
+    ["172640144"] = {
+      CreatorId = 172640144,
+      UnitType = "Mechanism",
+      UnitId = 14
     },
     ["272640060"] = {
       CreatorId = 272640060,
@@ -200,15 +240,20 @@ return {
       UnitType = "Mechanism",
       UnitId = 495036
     },
+    ["172640003"] = {
+      CreatorId = 172640003,
+      UnitType = "Monster",
+      UnitId = 8521001
+    },
     ["172640004"] = {
       CreatorId = 172640004,
       UnitType = "Monster",
-      UnitId = 9006001
+      UnitId = 9005001
     },
     ["172640005"] = {
       CreatorId = 172640005,
       UnitType = "Monster",
-      UnitId = 9006001
+      UnitId = 9005001
     },
     ["272640048"] = {
       CreatorId = 272640048,
@@ -218,7 +263,7 @@ return {
     ["172640095"] = {
       CreatorId = 172640095,
       UnitType = "Monster",
-      UnitId = 7015051
+      UnitId = 7016001
     },
     ["172640096"] = {
       CreatorId = 172640096,
@@ -233,7 +278,7 @@ return {
     ["172640098"] = {
       CreatorId = 172640098,
       UnitType = "Monster",
-      UnitId = 7015051
+      UnitId = 7016001
     },
     ["172640099"] = {
       CreatorId = 172640099,
@@ -293,7 +338,7 @@ return {
     ["172640125"] = {
       CreatorId = 172640125,
       UnitType = "Monster",
-      UnitId = 7015051
+      UnitId = 7016001
     },
     ["172640126"] = {
       CreatorId = 172640126,
@@ -308,7 +353,7 @@ return {
     ["172640128"] = {
       CreatorId = 172640128,
       UnitType = "Monster",
-      UnitId = 7015051
+      UnitId = 7016001
     },
     ["172640129"] = {
       CreatorId = 172640129,
@@ -373,7 +418,7 @@ return {
     ["172640080"] = {
       CreatorId = 172640080,
       UnitType = "Monster",
-      UnitId = 7015051
+      UnitId = 7016001
     },
     ["172640081"] = {
       CreatorId = 172640081,
@@ -388,7 +433,7 @@ return {
     ["172640083"] = {
       CreatorId = 172640083,
       UnitType = "Monster",
-      UnitId = 7015051
+      UnitId = 7016001
     },
     ["172640084"] = {
       CreatorId = 172640084,
@@ -480,6 +525,21 @@ return {
       UnitType = "Monster",
       UnitId = 7009001
     },
+    ["172640153"] = {
+      CreatorId = 172640153,
+      UnitType = "Monster",
+      UnitId = 7002001
+    },
+    ["172640154"] = {
+      CreatorId = 172640154,
+      UnitType = "Monster",
+      UnitId = 7001001
+    },
+    ["172640155"] = {
+      CreatorId = 172640155,
+      UnitType = "Monster",
+      UnitId = 7002001
+    },
     ["272640024"] = {
       CreatorId = 272640024,
       UnitType = "Npc",
@@ -524,6 +584,11 @@ return {
       CreatorId = 272640037,
       UnitType = "Npc",
       UnitId = 100001
+    },
+    ["272640151"] = {
+      CreatorId = 272640151,
+      UnitType = "Npc",
+      UnitId = 100002
     },
     ["272640050"] = {
       CreatorId = 272640050,
@@ -574,13 +639,183 @@ return {
       CreatorId = 272640059,
       UnitType = "Phantom",
       UnitId = 0
+    },
+    ["272640152"] = {
+      CreatorId = 272640152,
+      UnitType = "Phantom",
+      UnitId = 0
     }
   },
   ManualItem = {
+    ["264036"] = {
+      ManualItemId = 264036,
+      UnitType = "Mechanism",
+      UnitId = 161012
+    },
+    ["264037"] = {
+      ManualItemId = 264037,
+      UnitType = "Mechanism",
+      UnitId = 161012
+    },
+    ["264038"] = {
+      ManualItemId = 264038,
+      UnitType = "Mechanism",
+      UnitId = 161012
+    },
+    ["264039"] = {
+      ManualItemId = 264039,
+      UnitType = "Mechanism",
+      UnitId = 161012
+    },
     ["264016"] = {
       ManualItemId = 264016,
       UnitType = "Mechanism",
       UnitId = 161010
+    },
+    ["264015"] = {
+      ManualItemId = 264015,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264005"] = {
+      ManualItemId = 264005,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264006"] = {
+      ManualItemId = 264006,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264007"] = {
+      ManualItemId = 264007,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264008"] = {
+      ManualItemId = 264008,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264009"] = {
+      ManualItemId = 264009,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264010"] = {
+      ManualItemId = 264010,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264011"] = {
+      ManualItemId = 264011,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264012"] = {
+      ManualItemId = 264012,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264013"] = {
+      ManualItemId = 264013,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264014"] = {
+      ManualItemId = 264014,
+      UnitType = "Mechanism",
+      UnitId = 10416
+    },
+    ["264018"] = {
+      ManualItemId = 264018,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264019"] = {
+      ManualItemId = 264019,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264020"] = {
+      ManualItemId = 264020,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264021"] = {
+      ManualItemId = 264021,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264022"] = {
+      ManualItemId = 264022,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264023"] = {
+      ManualItemId = 264023,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264024"] = {
+      ManualItemId = 264024,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264025"] = {
+      ManualItemId = 264025,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264026"] = {
+      ManualItemId = 264026,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264027"] = {
+      ManualItemId = 264027,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264028"] = {
+      ManualItemId = 264028,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264029"] = {
+      ManualItemId = 264029,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264030"] = {
+      ManualItemId = 264030,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264031"] = {
+      ManualItemId = 264031,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264032"] = {
+      ManualItemId = 264032,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264033"] = {
+      ManualItemId = 264033,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264034"] = {
+      ManualItemId = 264034,
+      UnitType = "Mechanism",
+      UnitId = 161011
+    },
+    ["264035"] = {
+      ManualItemId = 264035,
+      UnitType = "Mechanism",
+      UnitId = 161011
     },
     ["264002"] = {
       ManualItemId = 264002,

@@ -5060,7 +5060,7 @@
         "id": 12157,
         "type": "Resource",
         "count": 1,
-        "name": "圣血*太刀的握柄"
+        "name": "Sanguis Sanctus – Katana : Poignée"
       },
       {
         "id": 30002,
@@ -5072,13 +5072,13 @@
         "id": 12158,
         "type": "Resource",
         "count": 1,
-        "name": "圣血*太刀的刀刃"
+        "name": "Sanguis Sanctus – Katana : Lame"
       },
       {
         "id": 12159,
         "type": "Resource",
         "count": 1,
-        "name": "圣血*太刀的饰物"
+        "name": "Sanguis Sanctus – Katana : Ornement"
       },
       {
         "id": 211,
@@ -5120,7 +5120,7 @@
         "id": 12155,
         "type": "Resource",
         "count": 1,
-        "name": "囚鸟的刺羽的握柄"
+        "name": "Plume affranchie : Poignée"
       },
       {
         "id": 30002,
@@ -5132,7 +5132,7 @@
         "id": 12156,
         "type": "Resource",
         "count": 1,
-        "name": "囚鸟的刺羽的刀刃"
+        "name": "Plume affranchie : Lame"
       },
       {
         "id": 211,
@@ -5180,7 +5180,7 @@
         "id": 12160,
         "type": "Resource",
         "count": 1,
-        "name": "薄暮契约的枪机"
+        "name": "Pacte du crépuscule : Verrou"
       },
       {
         "id": 30002,
@@ -5192,13 +5192,13 @@
         "id": 12161,
         "type": "Resource",
         "count": 1,
-        "name": "薄暮契约的枪身"
+        "name": "Pacte du crépuscule : Armature"
       },
       {
         "id": 12162,
         "type": "Resource",
         "count": 1,
-        "name": "薄暮契约的枪管"
+        "name": "Pacte du crépuscule : Canon"
       },
       {
         "id": 211,
@@ -10801,7 +10801,7 @@
   },
   {
     "id": 156141,
-    "名称": "密函：换生灵之决断",
+    "名称": "Mandat scellé : Décision du Métamorphe",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -10861,7 +10861,7 @@
   },
   {
     "id": 156142,
-    "名称": "密函：海妖之羽翼·鼓舞·决断",
+    "名称": "Mandat scellé : Ailes de Sirène · Inspiration · Décision",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -10921,7 +10921,7 @@
   },
   {
     "id": 156143,
-    "名称": "密函：换生灵之昂扬",
+    "名称": "Mandat scellé : Vigueur du Métamorphe",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -10981,7 +10981,7 @@
   },
   {
     "id": 156144,
-    "名称": "密函：海妖之羽翼·鼓舞·昂扬",
+    "名称": "Mandat scellé : Ailes de Sirène · Inspiration · Vigueur",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -11281,7 +11281,7 @@
   },
   {
     "id": 156161,
-    "名称": "密函：换生灵之昂扬",
+    "名称": "Mandat scellé : Vigueur du Métamorphe",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -11341,7 +11341,7 @@
   },
   {
     "id": 156162,
-    "名称": "密函：海妖之羽翼·鼓舞·昂扬",
+    "名称": "Mandat scellé : Ailes de Sirène · Inspiration · Vigueur",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -11401,7 +11401,7 @@
   },
   {
     "id": 156163,
-    "名称": "密函：换生灵之专注",
+    "名称": "Mandat scellé : Concentration du Métamorphe",
     "获取途径": [
       "副本",
       "委托密函商店",
@@ -11461,7 +11461,7 @@
   },
   {
     "id": 156164,
-    "名称": "密函：海妖之羽翼·鼓舞·专注",
+    "名称": "Mandat scellé : Ailes de Sirène · Inspiration · Concentration",
     "获取途径": [
       "副本",
       "委托密函商店",

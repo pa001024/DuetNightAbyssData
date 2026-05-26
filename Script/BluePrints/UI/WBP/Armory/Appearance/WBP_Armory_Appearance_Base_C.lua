@@ -612,6 +612,9 @@ function M:RemoveAppearanceReddotListen()
 end
 
 function M:CheckWeaponAppearanceBtnReddot()
+  if self.NoReddot then
+    return
+  end
   if self.IsTargetUnowned then
     self.Btn_Appearence:SetReddot(false)
     return

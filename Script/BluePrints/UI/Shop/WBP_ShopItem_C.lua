@@ -1,7 +1,10 @@
 require("UnLua")
 local TimeUtils = require("Utils.TimeUtils")
 local HeroUSDKUtils = require("Utils.HeroUSDKUtils")
-local M = Class("BluePrints.UI.Shop.WBP_Shop_Item_Base_C")
+local M = Class({
+  "BluePrints.UI.Shop.WBP_Shop_Item_Base_C",
+  "BluePrints.UI.Shop.WBP_ShopItem_ReddotComp"
+})
 
 function M:Destruct()
   self:CleanTimer()
@@ -149,20 +152,7 @@ function M:InitShopItem(ShopItemId)
       self.Lock.Text_Lock:SetText(GText("RaidDungeon_Shop_UnlockPoint") .. ShopItemData.UnlockRaidPoint)
       self.Lock:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
     end
-    local ShopTabConf = DataMgr.ShopTabSub[self.ShopItemData.SubTabId]
-    local NodeName = ShopTabConf and ShopTabConf.ReddotNode
-    if NodeName then
-      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-      if not CacheDetail[self.ShopId] then
-        local Node = ReddotManager.GetTreeNode(NodeName)
-        local NowTime = TimeUtils.NowTime()
-        Node:_RefreshAShopItem(self.ShopId, Node.Cache, NowTime)
-        if Node.Cache.Count > Node.Count then
-          local DeltaCount = Node.Cache.Count - Node.Count
-          ReddotManager.IncreaseLeafNodeCount(NodeName, DeltaCount)
-        end
-      end
-    end
+    self:UpdateReddotCommon(ShopItemData)
   end
 end
 
@@ -434,13 +424,7 @@ function M:OnBtnPressed()
   end
   self.StartPressTime = os.clock()
   self.Item_Shop:PlayAnimation(self.Item_Shop.Press)
-  local ShopTabConf = DataMgr.ShopTabSub[self.ShopItemData.SubTabId]
-  local NodeName = ShopTabConf and ShopTabConf.ReddotNode
-  if NodeName and not self.IsFree and not self.bNewShopItem and ReddotManager.DecreaseLeafNodeCount(ShopTabConf.ReddotNode, 1, {
-    ShopItemId = self.ShopId
-  }) then
-    self:EMShowReddot(false, EReddotType.New)
-  end
+  self:DecreaseReddotCommon()
 end
 
 function M:OnBtnReleased()

@@ -483,17 +483,18 @@ function M:GetCardGuildInfo(GuildId, Uid, AvatarInfo)
       return
     end
     local Info = MemberInfos[Uid]
-    Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
-      if Ret ~= ErrorCode.RET_SUCCESS then
-        return
-      end
-      self.CardGuildChatOpen = IsOpen
-      self:WaitCardGuildInfoCallback()
-    end, Info.Uid)
     if Info.GuildId and 0 ~= Info.GuildId then
       self.WaitGuildId = Info.GuildId
       GuildController:SendGetGuildInfo(Info.GuildId)
+      Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
+        if Ret ~= ErrorCode.RET_SUCCESS then
+          return
+        end
+        self.CardGuildChatOpen = IsOpen
+        self:WaitCardGuildInfoCallback()
+      end, Info.Uid)
     else
+      self:WaitCardGuildInfoCallback()
       self:WaitCardGuildInfoCallback()
     end
   end, {Uid})

@@ -45,18 +45,12 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Mechanism",
+        StoryGuidePointName = "Mechanism_BaozhaStart_2530031",
         JumpId = 0
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "1778240632154955044",
-            startPort = "QuestStart",
-            endQuest = "1778240632154955051",
-            endPort = "In"
-          },
           {
             startQuest = "1778240632154955044",
             startPort = "QuestStart",
@@ -212,6 +206,30 @@ return {
             startPort = "Out",
             endQuest = "1778240632154955046",
             endPort = "Fail"
+          },
+          {
+            startQuest = "1778240632154955044",
+            startPort = "QuestStart",
+            endQuest = "177891730092074850727",
+            endPort = "Input"
+          },
+          {
+            startQuest = "1778240632154955052",
+            startPort = "Out",
+            endQuest = "17793339255071027",
+            endPort = "In"
+          },
+          {
+            startQuest = "1778240632154955044",
+            startPort = "QuestStart",
+            endQuest = "17794202296051219",
+            endPort = "In"
+          },
+          {
+            startQuest = "17794202296051219",
+            startPort = "Out",
+            endQuest = "1778240632154955051",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -219,21 +237,21 @@ return {
             key = "1778240632154955044",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = -677.9717948717949, y = 298.5444444444445},
+            pos = {x = -1105.7495726495727, y = 301.8777777777778},
             propsData = {ModeType = 0}
           },
           ["1778240632154955045"] = {
             key = "1778240632154955045",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2711.9952380952377, y = 395.4571428571428},
+            pos = {x = 2719.2366174055824, y = 348.90541871921175},
             propsData = {ModeType = 0}
           },
           ["1778240632154955046"] = {
             key = "1778240632154955046",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 163.88235294117737, y = 1170.1176470588234},
+            pos = {x = 131.88235294117737, y = 1162.1176470588234},
             propsData = {}
           },
           ["1778240632154955047"] = {
@@ -413,7 +431,7 @@ return {
             key = "1778240632154955054",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 2182.579522454142, y = 323.0534313725489},
+            pos = {x = 2183.6140052127625, y = 323.0534313725489},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "YTEXplodeSuccess",
@@ -486,7 +504,7 @@ return {
             key = "1778240632155955060",
             type = "HasDetectiveResultNode",
             name = "检测是否获取过推理结果",
-            pos = {x = 1906.6622549019612, y = 319.41323529411756},
+            pos = {x = 1906.6622549019612, y = 322.51668356997965},
             propsData = {
               ResultIds = {20060101}
             }
@@ -525,7 +543,7 @@ return {
             key = "17782408255212862632",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2464.948555211558, y = 325.61239495798316},
+            pos = {x = 2461.845106935696, y = 326.64687771660385},
             propsData = {}
           },
           ["17783047267342866249"] = {
@@ -639,8 +657,41 @@ return {
             key = "1778749936972974464",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = -142.35923677771484, y = 1155.0181796038573},
+            pos = {x = -308.35923677771484, y = 1147.0181796038573},
             propsData = {}
+          },
+          ["177891730092074850727"] = {
+            key = "177891730092074850727",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = -351, y = -173.6666666666666},
+            propsData = {
+              TargetTime = 18,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["17793339255071027"] = {
+            key = "17793339255071027",
+            type = "UpdateTaskBarAndTaskMainNode",
+            name = "更新任务目标节点",
+            pos = {x = 1898.6484702029168, y = 148.0102399012564},
+            propsData = {
+              NewDescription = "Content_10040302_02",
+              NewDetail = "",
+              SubTaskTargetIndex = 0
+            }
+          },
+          ["17794202296051219"] = {
+            key = "17794202296051219",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = -639.2651515151509, y = 297.99999999999994},
+            propsData = {
+              VarName = "First10040302",
+              VarValue = 1
+            }
           }
         },
         commentData = {}

@@ -30,15 +30,29 @@ function Component:ClearAllReddot()
 end
 
 function Component:InvokeGuildTaskReddotUpdate()
-  for QuestId, _ in pairs(self:GetAvatar().CommonQuestActivity[GuildCommon.GuildDummyEventId]) do
+  local bAllDailyNotComplete = true
+  local bAllWeeklyNotComplete = true
+  for QuestId, Quest in pairs(self:GetAvatar().CommonQuestActivity[GuildCommon.GuildDummyEventId]) do
     local QuestConf = DataMgr.CommonQuestDetail[QuestId]
     if QuestConf.QuestType == CommonConst.CommonQuestType.Daily then
       self:TryAddReddotCount("GuildDailyTask", {QuestId = QuestId})
       self:TrySubReddotCount("GuildDailyTask", {QuestId = QuestId})
+      if Quest:IsComplete() then
+        bAllDailyNotComplete = false
+      end
     elseif QuestConf.QuestType == CommonConst.CommonQuestType.Weekly then
       self:TryAddReddotCount("GuildWeekTask", {QuestId = QuestId})
       self:TrySubReddotCount("GuildWeekTask", {QuestId = QuestId})
+      if Quest:IsComplete() then
+        bAllWeeklyNotComplete = false
+      end
     end
+  end
+  if bAllDailyNotComplete then
+    self:TryClearReddotCount("GuildDailyTask")
+  end
+  if bAllWeeklyNotComplete then
+    self:TryClearReddotCount("GuildWeekTask")
   end
 end
 

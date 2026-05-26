@@ -103,7 +103,7 @@ end
 
 function M:SetRarity(Rarity)
   local TempRarity = Rarity
-  if not TempRarity or TempRarity < 0 or TempRarity > 5 then
+  if not TempRarity or TempRarity < 0 or TempRarity > 6 then
     TempRarity = 0
   end
   local FontMaterial = self.Text_Name:GetDynamicFontMaterial()

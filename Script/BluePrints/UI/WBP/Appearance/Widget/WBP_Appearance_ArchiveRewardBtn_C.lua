@@ -14,11 +14,18 @@ function M:Construct()
   self.OnClickedObj = nil
   self.OnClickedFunc = nil
   self.Btn_Area.OnClicked:Add(self, self.OnCellClicked)
+  self.New:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  if not ReddotManager.GetTreeNode("AppearanceFenghuaReward") then
+    ReddotManager.AddNodeEx("AppearanceFenghuaReward")
+  end
+  ReddotManager.AddListenerEx("AppearanceFenghuaReward", self, self.RefreshRewardReddot)
 end
 
 function M:Destruct()
   self.OnClickedObj = nil
   self.OnClickedFunc = nil
+  ReddotManager.RemoveListener("AppearanceFenghuaReward", self)
 end
 
 function M:BindEventOnClicked(Obj, Func)
@@ -27,6 +34,7 @@ function M:BindEventOnClicked(Obj, Func)
 end
 
 function M:OnCellClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/theater_online_stage_btn_click", nil, nil)
   if self.OnClickedObj and self.OnClickedFunc then
     self.OnClickedFunc(self.OnClickedObj)
   end
@@ -74,6 +82,15 @@ function M:OnCellReleased()
   if not self.IsHovering then
     self:StopAllAnimations()
     self:PlayAnimation(self.Normal)
+  end
+end
+
+function M:RefreshRewardReddot()
+  local Node = ReddotManager.GetTreeNode("AppearanceFenghuaReward")
+  if Node.Count > 0 then
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+  else
+    self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
 

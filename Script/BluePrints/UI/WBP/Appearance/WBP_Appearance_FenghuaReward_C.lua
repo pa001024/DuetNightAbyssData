@@ -9,6 +9,7 @@ function M:Construct()
   self.CurNum = 0
   self.MaxNum = 0
   self.Btn_Reward:BindEventOnClicked(self, self.GetAllRewards)
+  self.Btn_Reward:BindEventOnClicked(self, self.PlayButtonClickSound)
   self.Btn_Reward:SetText(GText("UI_AppearanceScore_RewardGetAll"))
   self.Text_Progress:SetText(GText("UI_AppearanceScore_RewardTotalStatus"))
   self.Text_Progress:SetText(GText("UI_AppearanceScore_RewardTotalStatus"))
@@ -211,6 +212,7 @@ function M:GetReward(Content)
       self:InitList()
       self:InitProgress()
       self:InitArchiveReward()
+      self:RefreshReddotInfo()
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardReturn, false, function()
         self:NavigateToFirstDisplayedItem(self.List_Task)
       end, self)
@@ -230,6 +232,7 @@ function M:GetAllRewards()
       self:InitList()
       self:InitProgress()
       self:InitArchiveReward()
+      self:RefreshReddotInfo()
       UIUtils.ShowGetItemPageAndOpenBagIfNeeded(nil, nil, nil, RewardReturn, false, function()
         self:NavigateToFirstDisplayedItem(self.List_Task)
       end, self)
@@ -291,6 +294,8 @@ function M:PlayInAnim()
   if self:IsAnimationPlaying(self.In) then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "FenghuaRewardOpenSound", nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/skin_collecting_score_page_in", nil, nil)
   self:PlayAnimationForward(self.In)
 end
 
@@ -298,6 +303,7 @@ function M:PlayOutAnim()
   if self:IsAnimationPlaying(self.Out) then
     return
   end
+  AudioManager(self):SetEventSoundParam(self, "FenghuaRewardOpenSound", {ToEnd = 1})
   if self.Out then
     self:PlayAnimationForward(self.Out)
   else
@@ -492,6 +498,30 @@ function M:UpdateBottomKeyInfo_ViewMode()
     }
     self.Com_Tab:UpdateBottomKeyInfo(BottomKeyInfo)
   end
+end
+
+function M:RefreshReddotInfo()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    if not ReddotManager.GetTreeNode("AppearanceFenghuaReward") then
+      ReddotManager.AddNode("AppearanceFenghuaReward")
+    end
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("AppearanceFenghuaReward")
+    local DecreaseNum = 0
+    for ScoreTarget, _ in pairs(CacheDetail) do
+      if Avatar.AppearanceScoreRewards and Avatar.AppearanceScoreRewards[ScoreTarget] then
+        CacheDetail[ScoreTarget] = nil
+        DecreaseNum = DecreaseNum + 1
+      end
+    end
+    if DecreaseNum > 0 then
+      ReddotManager.DecreaseLeafNodeCount("AppearanceFenghuaReward", DecreaseNum)
+    end
+  end
+end
+
+function M:PlayButtonClickSound()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_normal", nil, nil)
 end
 
 return M

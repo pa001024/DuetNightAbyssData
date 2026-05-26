@@ -33,5 +33,6 @@ return ReadOnly("ShopMainTab2ShopType", {
   [10010] = "AppearenceShop",
   [90001] = "GiftShop",
   [90002] = "GiftShop",
-  [90003] = "GiftShop"
+  [90003] = "GiftShop",
+  [90004] = "GiftShop"
 })

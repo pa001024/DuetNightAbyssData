@@ -64,6 +64,7 @@ function M:OnClick()
   self.IsSelect = true
   self:SetIsSelect(true)
   self.Content.CellCallbackInfo.Func(self.Content.CellCallbackInfo.Obj, self.Content)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_checkbox_check", nil, nil)
 end
 
 function M:SetIsSelect(IsShow)

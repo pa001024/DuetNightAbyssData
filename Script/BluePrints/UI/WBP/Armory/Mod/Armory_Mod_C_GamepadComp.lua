@@ -356,8 +356,12 @@ function Component:SetCanRectGamepadVisible(Visible)
     self.Mod_Plan.Key_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Common_PolarityList_PC.Key_LT:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Common_PolarityList_PC.Key_RT:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    if self.Key_FocusList_GamePad then
+      self.Key_FocusList_GamePad:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if self.Key_Search then
+      self.Key_Search:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
     self.Btn_EditPolarity:SetGamePadVisibility(UIConst.VisibilityOp.Collapsed)
   end
 end
@@ -551,7 +555,7 @@ function Component:SetModListHighlight(Widget)
   else
     for i = 1, 9 do
       local mod = self["Mod_" .. i]
-      if not mod.SlotUIData:InState(ModCommon.SlotState.Lock) then
+      if mod.SlotUIData and not mod.SlotUIData:InState(ModCommon.SlotState.Lock) then
         mod.Image_Remind:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       end
     end
@@ -627,7 +631,9 @@ function Component:HandleGamepadModSlotSelection(SlotUIData)
     ModModel:SetGamePadSelectedStuff(SlotUIData.ModEid, SlotUIData.SlotId)
     local Item = self.List_Select_Mod:GetItemAt(0)
     self.List_Select_Mod:BP_SetSelectedItem(Item)
-    Item.UI:SetFocus()
+    if IsValid(Item.UI) then
+      Item.UI:SetFocus()
+    end
     self:EnterGamepadSelectionMode()
     self.LastFocusedItemBeforeSelection = self["Mod_" .. SlotUIData.SlotId]
     self.IsSelectModToItem = true

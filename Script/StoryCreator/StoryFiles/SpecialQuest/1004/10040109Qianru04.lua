@@ -69,7 +69,7 @@ return {
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
         IsBacktrack = false,
-        SubRegionId = 106301,
+        SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
@@ -214,6 +214,12 @@ return {
             startPort = "QuestStart",
             endQuest = "177796886281910292026",
             endPort = "In"
+          },
+          {
+            startQuest = "177796886281410292015",
+            startPort = "QuestStart",
+            endQuest = "1779710151431615",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -327,7 +333,7 @@ return {
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
-              HideNpcs = false,
+              HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
               HideMechanismsFX = false,
@@ -582,6 +588,16 @@ return {
             name = "成功完成特殊任务",
             pos = {x = 2668.5089143312834, y = 1093.710042150832},
             propsData = {}
+          },
+          ["1779710151431615"] = {
+            key = "1779710151431615",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 100.94736842105283, y = 594.6666666666667},
+            propsData = {
+              VarName = "FirstStateQianru10040104",
+              VarValue = 1
+            }
           }
         },
         commentData = {}

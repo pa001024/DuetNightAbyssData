@@ -303,7 +303,7 @@
   },
   {
     "id": 6002301,
-    "n": "Souillé errant — Pourriture cramoisie, Morsure de givre et Gardien",
+    "n": "Souillé errant — Tempête électrique, Morsure de givre et Gardien",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -772,7 +772,7 @@
   },
   {
     "id": 6012301,
-    "n": "Souillé errant II — Pourriture cramoisie, Morsure de givre et Gardien",
+    "n": "Souillé errant II — Tempête électrique, Morsure de givre et Gardien",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -886,7 +886,7 @@
   },
   {
     "id": 6013301,
-    "n": "Souillé flottant II — Pourriture cramoisie, Représailles et Gardien",
+    "n": "Souillé flottant II — Flétrissure, Représailles et Gardien",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1086,7 +1086,7 @@
   },
   {
     "id": 6015301,
-    "n": "复仇·爆破·残火 芳烬秽兽",
+    "n": "Souillé cendre-fleur — Représailles, Déflagration et Feu résiduel",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1311,7 +1311,7 @@
   },
   {
     "id": 6016301,
-    "n": "转雷·凛霜·守护 萼蚀秽兽",
+    "n": "Souillé calice-flétri — Tempête électrique, Morsure de givre et Gardien",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1460,7 +1460,7 @@
   },
   {
     "id": 6017301,
-    "n": "舍身·枯萎·爆破 魁蕊秽兽",
+    "n": "Souillé stigmate — Sacrifice, Flétrissure et Déflagration",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1482,7 +1482,7 @@
   },
   {
     "id": 6017302,
-    "n": "侵蚀·霜狱·守护 魁蕊秽兽",
+    "n": "Souillé stigmate — Corrosion, Geôle de givre et Gardien",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1670,7 +1670,7 @@
   },
   {
     "id": 7001301,
-    "n": "Soldat sniper —Pourriture cramoisie, Flétrissure et Morsure de givre",
+    "n": "Soldat sniper —Éclair foudroyant, Flétrissure et Morsure de givre",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1873,7 +1873,7 @@
   },
   {
     "id": 7002301,
-    "n": "Soldat brise-lames — Flétrissure, Gardien et Pourriture cramoisie",
+    "n": "Soldat brise-lames — Sacrifice, Flétrissure et Gardien",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2060,7 +2060,7 @@
   },
   {
     "id": 7003301,
-    "n": "Soldat expéditionnaire — Spectre, Tempête électrique et Geôle de givre",
+    "n": "Soldat expéditionnaire — Tempête électrique, Geôle de givre et Gardien",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2270,7 +2270,7 @@
   },
   {
     "id": 7008301,
-    "n": "Sergent d’élite — Bain de sang, Spectre et Représailles",
+    "n": "Sergent d’élite — Représailles, Déflagration et Feu résiduel",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 12,
@@ -2327,7 +2327,7 @@
   },
   {
     "id": 7009301,
-    "n": "Tyran miséricordieux — Bain de sang, Feu résiduel et Geôle de givre",
+    "n": "Tyran miséricordieux — Déflagration, Feu résiduel et Geôle de givre",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2440,7 +2440,7 @@
   },
   {
     "id": 7011301,
-    "n": "Soldat sniper II — Pourriture cramoisie, Flétrissure et Morsure de givre",
+    "n": "Soldat sniper II — Éclair foudroyant, Flétrissure et Morsure de givre",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2513,7 +2513,7 @@
   },
   {
     "id": 7012301,
-    "n": "Soldat brise-lames II — Flétrissure, Gardien et Pourriture cramoisie",
+    "n": "Soldat brise-lames II — Sacrifice, Flétrissure et Gardien",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2569,7 +2569,7 @@
   },
   {
     "id": 7013301,
-    "n": "Soldat expéditionnaire II — Spectre, Tempête électrique et Geôle de givre",
+    "n": "Soldat expéditionnaire II — Tempête électrique, Geôle de givre et Gardien",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 5.56,
@@ -3067,7 +3067,7 @@
   },
   {
     "id": 8002301,
-    "n": "Sentinelle bénie — Spectre, Éclair foudroyant et Sacrifice",
+    "n": "Sentinelle bénie — Éclair foudroyant, Sacrifice et Représailles",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 13.1,
@@ -4232,7 +4232,7 @@
   },
   {
     "id": 9001301,
-    "n": "Lame de l’Essaim — Bain de sang, Déflagration et Feu résiduel",
+    "n": "Lame de l’Essaim — Déflagration, Feu résiduel et Gardien",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4383,7 +4383,7 @@
   },
   {
     "id": 9002301,
-    "n": "Flèche de l’Essaim — Spectre, Tempête électrique et Pourriture cramoisie",
+    "n": "Flèche de l’Essaim — Tempête électrique, Éclair foudroyant et Flétrissure",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 5.56,
@@ -4478,7 +4478,7 @@
   },
   {
     "id": 9003301,
-    "n": "Machinateur — Bain de sang, Déflagration et Gardien",
+    "n": "Machinateur — Déflagration, Geôle de givre et Gardien",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4536,7 +4536,7 @@
   },
   {
     "id": 9005301,
-    "n": "Détoniste — Spectre, Éclair foudroyant et Feu résiduel",
+    "n": "Détoniste — Éclair foudroyant, Feu résiduel et Geôle de givre",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4594,7 +4594,7 @@
   },
   {
     "id": 9006301,
-    "n": "Dévoyeur — Bain de sang, Spectre et Morsure de givre",
+    "n": "Dévoyeur — Sacrifice, Représailles et Morsure de givre",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 12,
@@ -4708,7 +4708,7 @@
   },
   {
     "id": 9007301,
-    "n": "Espion de l’Essaim — Bain de sang, Tempête électrique et Morsure de givre",
+    "n": "Espion de l’Essaim — Tempête électrique, Flétrissure et Morsure de givre",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -4998,7 +4998,7 @@
   },
   {
     "id": 10001301,
-    "n": "Garde de Yingtian — Éclair foudroyant, Corrosion et Pourriture cramoisie",
+    "n": "Garde de Yingtian — Éclair foudroyant, Corrosion et Flétrissure",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,
@@ -5039,7 +5039,7 @@
   },
   {
     "id": 10002301,
-    "n": "Magistrat de Yingtian — Bain de sang, Corrosion et Feu résiduel",
+    "n": "Magistrat de Yingtian — Éclair foudroyant, Corrosion et Feu résiduel",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 24,
@@ -5117,7 +5117,7 @@
   },
   {
     "id": 10003301,
-    "n": "枯萎·残火·霜狱 玄色狴犴",
+    "n": "Bi’an obscur — Flétrissure, Feu résiduel et Geôle de givre",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,
@@ -5193,7 +5193,7 @@
   },
   {
     "id": 10004301,
-    "n": "枯萎·残火·霜狱 狴犴",
+    "n": "Bi’an — Flétrissure, Feu résiduel et Geôle de givre",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,

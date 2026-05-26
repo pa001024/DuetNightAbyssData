@@ -1472,7 +1472,7 @@ function BP_EMGameMode_C:TriggerExitDungeon(IsWin)
   self.LevelGameMode:TriggerDungeFinish(IsWin)
 end
 
-function BP_EMGameMode_C:TriggerPlayerWin(AvatarEids, PlayerEids)
+function BP_EMGameMode_C:TriggerPlayerWin(AvatarEids, PlayerEids, PlayerEndReason)
   DebugPrint("BP_EMGameMode_C:TriggerPlayerWin 玩家成功 撤离")
   if self:IsDungeonInSettlement() then
     return
@@ -1482,10 +1482,10 @@ function BP_EMGameMode_C:TriggerPlayerWin(AvatarEids, PlayerEids)
     self:TriggerDungeonOnEnd(true)
   end
   self:TriggerUploadDungeonAchievement(PlayerEids)
-  self.LevelGameMode:TriggerPlayerFinish(true, AvatarEids)
+  self.LevelGameMode:TriggerPlayerFinish(true, AvatarEids, PlayerEndReason)
 end
 
-function BP_EMGameMode_C:TriggerPlayerFailed(AvatarEids)
+function BP_EMGameMode_C:TriggerPlayerFailed(AvatarEids, PlayerEndReason)
   DebugPrint("BP_EMGameMode_C:TriggerPlayerFailed 玩家失败 撤离")
   if self:IsDungeonInSettlement() then
     return
@@ -1494,7 +1494,7 @@ function BP_EMGameMode_C:TriggerPlayerFailed(AvatarEids)
     self:TriggerBattleAchievementUploadOnDungeonEnd(false)
     self:TriggerDungeonOnEnd(false)
   end
-  self.LevelGameMode:TriggerPlayerFinish(false, AvatarEids)
+  self.LevelGameMode:TriggerPlayerFinish(false, AvatarEids, PlayerEndReason)
 end
 
 function BP_EMGameMode_C:ForceFinishPlayerByFailed(AvatarEids, PlayerEndReason)
@@ -1538,7 +1538,7 @@ end
 
 function BP_EMGameMode_C:TriggerPlayerFinish(IsWin, AvatarEids, PlayerEndReason)
   GWorld:DSBLog("Info", "TriggerPlayerFinish IsWin:" .. tostring(IsWin), "GameMode")
-  DebugPrint("TriggerPlayerFinish 玩家结算，结算状态：", IsWin)
+  DebugPrint("TriggerPlayerFinish 玩家结算，结算状态：", IsWin, PlayerEndReason)
   if IsStandAlone(self) or MiscUtils.IsListenServer(self) then
     local Avatar = GWorld:GetAvatar()
     if Avatar then
@@ -1556,6 +1556,7 @@ function BP_EMGameMode_C:TriggerPlayerFinish(IsWin, AvatarEids, PlayerEndReason)
     local IsInterrupt = self:CheckCustomPlayerFinishLogic(IsWin, AvatarEids, PlayerEndReason)
     if IsInterrupt then
       DebugPrint("TriggerPlayerFinish Interruptted", IsWin, AvatarEids, PlayerEndReason)
+      GWorld:DSBLog("Info", "TriggerPlayerFinish Interruptted " .. tostring(IsWin) .. " " .. tostring(PlayerEndReason), "GameMode")
       return
     end
     local DSEntity = GWorld:GetDSEntity()
@@ -1576,6 +1577,7 @@ function BP_EMGameMode_C:CheckCustomPlayerFinishLogic(IsWin, AvatarEids, PlayerE
     else
       self:NotifyServerGameEnd(false, "TeamLeaderLeave")
     end
+    return true
   else
     return false
   end
@@ -1594,11 +1596,9 @@ function BP_EMGameMode_C:HasTeamLeaderByAvatarEids(AvatarEids)
 end
 
 function BP_EMGameMode_C:IsTeamLeaderByAvatarEid(AvatarEid)
-  local PlayerState = UE4.URuntimeCommonFunctionLibrary.GetPlayerStateByAvatarEid(GWorld.GameInstance, AvatarEid)
-  if not PlayerState then
-    return false
-  end
-  return PlayerState.IsTeamLeader or false
+  local IsTeamLeader = self.TicketLeaderAvatarEid == AvatarEid
+  DebugPrint("IsTeamLeaderByAvatarEid", IsTeamLeader)
+  return IsTeamLeader
 end
 
 function BP_EMGameMode_C:SendTimeDistCheatalert(PlayerChar, DungeonSpendTime, DungeonMoveDistance, MonitorType, SubId, DisThresh, TimeThresh)

@@ -31,7 +31,22 @@ ActivityUtils.Id2ReddotNodeName = {
   [103005] = "ZhiliuReward",
   [103006] = "MidTermGoal"
 }
-local AccessoryDropActivityIds = {103020}
+
+function ActivityUtils.CheckEventIsExpired(ActivityId)
+  local MainConfigInfo = DataMgr.EventMain[ActivityId]
+  if not MainConfigInfo then
+    return false
+  end
+  local EndTime = MainConfigInfo.EventEndTime
+  if not EndTime then
+    return false
+  end
+  if ActivityUtils.CheckIsPermanentEvent(ActivityId) then
+    return false
+  end
+  local NowTime = TimeUtils.NowTime()
+  return NowTime > EndTime:GetTime()
+end
 
 function ActivityUtils.CheckEventIsInActiveTime(EventID, EventMainExcel)
   local NowTime = TimeUtils.NowTime()
@@ -87,6 +102,9 @@ function ActivityUtils.CheckEventIsOpen(EventID, EventMainExcel, IsUseRewardTime
     return false
   end
   if not Avatar.ActivityTimeOpen then
+    return false
+  end
+  if not EventMainExcel.EventExamReview and Avatar.IsCurrentServerExamine then
     return false
   end
   local bServerActivityTimeOpen
@@ -208,14 +226,18 @@ function ActivityUtils.GetCurrentAllActivity()
           table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
         else
           for _, InvalidEventId in ipairs(TabConfigInfo.EventId) do
-            ActivityUtils.InvaildEventIds[InvalidEventId] = 1
+            if ActivityUtils.CheckEventIsExpired(InvalidEventId) then
+              ActivityUtils.InvaildEventIds[InvalidEventId] = 1
+            end
           end
         end
       elseif ActivityUtils.CheckEventIsOpen(FirstEventId, EventConfigData, true, "GameEvent") then
         table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
       else
         for _, InvalidEventId in ipairs(TabConfigInfo.EventId) do
-          ActivityUtils.InvaildEventIds[InvalidEventId] = 1
+          if ActivityUtils.CheckEventIsExpired(InvalidEventId) then
+            ActivityUtils.InvaildEventIds[InvalidEventId] = 1
+          end
         end
       end
     else
@@ -223,7 +245,7 @@ function ActivityUtils.GetCurrentAllActivity()
       if ActivityUtils.InvaildEventIds[TabConfigInfo.EventId] then
       elseif ActivityUtils.CheckEventIsOpen(TabConfigInfo.EventId, EventConfigData, true, "GameEvent") then
         table.insert(AllActivityTabIdx, TabConfigInfo.EventTabId)
-      else
+      elseif ActivityUtils.CheckEventIsExpired(TabConfigInfo.EventId) then
         ActivityUtils.InvaildEventIds[TabConfigInfo.EventId] = 1
       end
     end
@@ -623,6 +645,7 @@ function ActivityUtils.SetUpJustifyOfJap(TextBlock1, TextBlock2)
 end
 
 function ActivityUtils.IsAccessoryDropActivity(ActivityId)
+  local AccessoryDropActivityIds = ActivityCommon.AccessoryDropActivityIds
   for _, Id in pairs(AccessoryDropActivityIds) do
     if Id == ActivityId then
       return true

@@ -102,14 +102,17 @@ function M:ReleasedSelectAction()
 end
 
 function M:CloseExecuteItem(DefeatedCharacter)
-  if not self.ExecuteItems or not self.ExecuteItems[DefeatedCharacter] then
+  local Widget = self.ExecuteItems and self.ExecuteItems[DefeatedCharacter]
+  if not Widget then
     return
   end
-  self.ExecuteItems[DefeatedCharacter]:StopAllAnimations()
-  self.ExecuteItems[DefeatedCharacter]:ChangeUIDefeatedState(false)
-  self.ExecuteItems[DefeatedCharacter]:HideExecuteItem()
-  table.insert(self.RecycleExecuteItem, self.ExecuteItems[DefeatedCharacter])
+  Widget.IsForcedClosed = true
+  Widget:StopAllAnimations()
+  Widget:ChangeUIDefeatedState(false)
+  Widget:HideExecuteItem()
+  table.insert(self.RecycleExecuteItem, Widget)
   self.ExecuteItems[DefeatedCharacter] = nil
+  Widget.IsForcedClosed = false
   local Count = CommonUtils.TableLength(self.ExecuteItems)
   if 0 == Count then
     self:Close()

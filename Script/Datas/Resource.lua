@@ -5744,16 +5744,16 @@ return ReadOnly("Resource", {
   },
   [15001] = {
     AccessKey = T.RT_21,
-    DetailDes = "测试用武器原型",
+    DetailDes = "RESOURCE_DESC_HYPERWEAPONPROTOTYPE",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
-    FunctionDes = "测试用武器原型",
+    FunctionDes = "RESOURCE_FUNCTION_HYPERWEAPON",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Range_Weapon_Part03.T_Range_Weapon_Part03",
-    IpDes = "测试用武器原型",
+    IpDes = "RESOURCE_TEXT_HYPERWEAPONPROTOTYPE",
     MaterialClassify = 3,
     Rarity = 5,
     ResourceId = 15001,
-    ResourceName = "测试用武器原型",
+    ResourceName = "RESOURCE_FUNCTION_HYPERWEAPON",
     ResourceSType = "Material",
     ResourceToCoinType = 101,
     ResourceValue = -1,
@@ -7953,21 +7953,6 @@ return ReadOnly("Resource", {
     Rarity = 5,
     ResourceId = 29006,
     ResourceName = "RESOURCE_NAME_29006",
-    ResourceValue = -1,
-    Sound = "SOUND_ITEM_NORMAL",
-    Type = "Rare"
-  },
-  [29007] = {
-    DetailDes = "RESOURCE_DESC_29002",
-    ExcludeCollect = true,
-    ExcludeCollectServer = true,
-    FunctionDes = "RESOURCE_FUNCTION_29001",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_ExploreBadge_Beibao_Chapter01.T_ExploreBadge_Beibao_Chapter01",
-    IpDes = "RESOURCE_TEXT_29002",
-    MaterialClassify = 3,
-    Rarity = 5,
-    ResourceId = 29007,
-    ResourceName = "RESOURCE_NAME_29002",
     ResourceValue = -1,
     Sound = "SOUND_ITEM_NORMAL",
     Type = "Rare"
@@ -10758,6 +10743,7 @@ return ReadOnly("Resource", {
     UseParam = 12180
   },
   [110056] = {
+    DetailDes = "RESOURCE_DESC_110056",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_FUNCTION_110056",
@@ -10835,7 +10821,7 @@ return ReadOnly("Resource", {
     UseEffectType = "ShopItemVoucher"
   },
   [120003] = {
-    DetailDes = "RESOURCE_DESC_VOUCHER_1",
+    DetailDes = "RESOURCE_DESC_VOUCHER_3",
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     FunctionDes = "RESOURCE_FUNCTION_VOUCHER_3",
@@ -14732,7 +14718,8 @@ return ReadOnly("Resource", {
     AccessKey = {
       "Text_Collecting_Prologue03",
       "Text_Collecting_Icelake02",
-      "Text_Collecting_Icelake03"
+      "Text_Collecting_Icelake03",
+      "Text_Collecting_BHCZ"
     },
     DetailDes = "RESOURCE_DESC_4010002",
     ExcludeCollect = true,
@@ -14772,7 +14759,8 @@ return ReadOnly("Resource", {
   },
   [4010004] = {
     AccessKey = {
-      "Text_Collecting_Sew"
+      "Text_Collecting_Sew",
+      "Text_Collecting_BHCZ"
     },
     DetailDes = "RESOURCE_DESC_4010004",
     ExcludeCollect = true,
@@ -14793,7 +14781,9 @@ return ReadOnly("Resource", {
   [4010005] = {
     AccessKey = {
       "Text_Collecting_Icelake02",
-      "Text_Collecting_EX01"
+      "Text_Collecting_EX01",
+      "Text_Collecting_BHCZ",
+      "Text_Collecting_CZDX"
     },
     DetailDes = "RESOURCE_DESC_4010005",
     ExcludeCollect = true,
@@ -14870,7 +14860,8 @@ return ReadOnly("Resource", {
   },
   [4010009] = {
     AccessKey = {
-      "Text_Collecting_EX01"
+      "Text_Collecting_EX01",
+      "Text_Collecting_CZDX"
     },
     DetailDes = "RESOURCE_DESC_4010009",
     ExcludeCollect = true,

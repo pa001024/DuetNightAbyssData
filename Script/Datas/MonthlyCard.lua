@@ -184,5 +184,29 @@ return ReadOnly("MonthlyCard", {
     GoodsId = "com.hero.dna.Pay_107",
     Name = "RESOURCE_NAME_121",
     UniqueReward = 82030
+  },
+  [10016] = {
+    BeginTime = LocalTimeProxy(1782334800),
+    BuyReward = 70001,
+    BuyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard02.T_Resource_MonthCard02'",
+    CardID = 10016,
+    DailyReward = 70002,
+    DailyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard01.T_Resource_MonthCard01'",
+    EndTime = LocalTimeProxy(1784926800),
+    GoodsId = "com.hero.dna.Pay_107",
+    Name = "RESOURCE_NAME_121",
+    UniqueReward = 82035
+  },
+  [10017] = {
+    BeginTime = LocalTimeProxy(1784926800),
+    BuyReward = 70001,
+    BuyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard02.T_Resource_MonthCard02'",
+    CardID = 10017,
+    DailyReward = 70002,
+    DailyRewardIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Resource_MonthCard01.T_Resource_MonthCard01'",
+    EndTime = LocalTimeProxy(1787518800),
+    GoodsId = "com.hero.dna.Pay_107",
+    Name = "RESOURCE_NAME_121",
+    UniqueReward = 82036
   }
 })

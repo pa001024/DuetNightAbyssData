@@ -163,7 +163,7 @@ function M:OnFaceButtonLeftKeyDown()
 end
 
 function M:OnGamepad_FaceButton_Left_LongPressStart()
-  if self.IsTargetUnowned or self.bNeedAttrSwitcher then
+  if self.IsTargetUnowned or not self.bNeedAttrSwitcher then
     return
   end
   if not self.Btn_MaxSwitch:IsVisible() then
@@ -173,7 +173,7 @@ function M:OnGamepad_FaceButton_Left_LongPressStart()
 end
 
 function M:OnGamepad_FaceButton_Left_LongPressEnd()
-  if self.IsTargetUnowned or self.bNeedAttrSwitcher then
+  if self.IsTargetUnowned or not self.bNeedAttrSwitcher then
     return
   end
   if not self.Btn_MaxSwitch:IsVisible() then
@@ -183,7 +183,7 @@ function M:OnGamepad_FaceButton_Left_LongPressEnd()
 end
 
 function M:OnGamepad_FaceButton_Left_LongPressCancel()
-  if self.IsTargetUnowned or self.bNeedAttrSwitcher then
+  if self.IsTargetUnowned or not self.bNeedAttrSwitcher then
     return
   end
   if not self.Btn_MaxSwitch:IsVisible() then

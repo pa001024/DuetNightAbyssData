@@ -101,6 +101,9 @@ function M:OnButtonHitClicked()
 end
 
 function M:OnBtnAutoClicked()
+  if self.ListWidgets == nil or self.ListWidgets[1] == nil then
+    return
+  end
   local bAutoSelect = true
   local Content = self.ListWidgets[1].Content
   if Content and Content.Count and Content.Count > 0 then

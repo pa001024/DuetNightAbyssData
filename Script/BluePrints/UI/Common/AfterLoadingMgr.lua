@@ -215,7 +215,7 @@ StateImpl.OpenForcePopup = State:New("OpenForcePopup", {
         ReturnActivityController.DisplayReturnWelcomBannerCache = nil
         ReturnActivityController:TryDisplayReturnWelcomBanner()
       end
-      MonthCardController:TryPopUpCacheReward()
+      MonthSignInController:TryPopUpMonthSignIn()
       UIManager(PlayerCharacter):TryShowPlayerLevelUpInfo({
         CurLevel = Avatar.Level,
         ShowProgresBar = false

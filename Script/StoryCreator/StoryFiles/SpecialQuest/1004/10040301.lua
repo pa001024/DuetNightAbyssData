@@ -84,69 +84,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17782391587721288356",
-            startPort = "Out",
-            endQuest = "17782391587731288359",
-            endPort = "Branch_2"
-          },
-          {
-            startQuest = "17782391587721288357",
-            startPort = "Out",
-            endQuest = "17782391587731288359",
-            endPort = "Branch_1"
-          },
-          {
-            startQuest = "17782391587721288355",
-            startPort = "Out",
-            endQuest = "17782391587731288361",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782391587721288355",
-            startPort = "Out",
-            endQuest = "17782391587731288358",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782391587731288358",
-            startPort = "Out",
-            endQuest = "17782391587721288357",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782391587731288358",
-            startPort = "Out",
-            endQuest = "17782391587721288356",
-            endPort = "In"
-          },
-          {
             startQuest = "17782391587721288352",
             startPort = "QuestStart",
             endQuest = "17782391587731288363",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782391587731288361",
-            startPort = "Out",
-            endQuest = "17782391587731288362",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782391587731288359",
-            startPort = "Out",
-            endQuest = "17782391587731288364",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782391587721288352",
-            startPort = "QuestStart",
-            endQuest = "17782391587731288365",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782391587731288365",
-            startPort = "Out",
-            endQuest = "17782391587721288355",
             endPort = "In"
           },
           {
@@ -178,6 +118,42 @@ return {
             startPort = "Out",
             endQuest = "17782391587721288354",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17782391587721288352",
+            startPort = "QuestStart",
+            endQuest = "177891722234473885575",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17782391587721288352",
+            startPort = "QuestStart",
+            endQuest = "17782391587731288362",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782391587721288352",
+            startPort = "QuestStart",
+            endQuest = "17791877754942280",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782391587721288352",
+            startPort = "QuestStart",
+            endQuest = "17782391587721288357",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782391587721288352",
+            startPort = "QuestStart",
+            endQuest = "17782391587721288356",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782391587721288357",
+            startPort = "Out",
+            endQuest = "17782391587731288364",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -206,33 +182,21 @@ return {
             key = "17782391587721288354",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1057.0000000000002, y = 1012},
+            pos = {x = 892.6000000000003, y = 880},
             propsData = {}
-          },
-          ["17782391587721288355"] = {
-            key = "17782391587721288355",
-            type = "GoToNode",
-            name = "前往爆炸现场",
-            pos = {x = 552.7084520335836, y = 125.55865631281553},
-            propsData = {
-              GuideUIEnable = true,
-              StaticCreatorId = 2530031,
-              GuideType = "M",
-              GuidePointName = "Mechanism_BaozhaStart_2530031"
-            }
           },
           ["17782391587721288356"] = {
             key = "17782391587721288356",
             type = "TalkNode",
             name = "（可选）和希尔妲对话",
-            pos = {x = 1204.773476702509, y = 202.20010129343927},
+            pos = {x = 1036.1449052739376, y = -45.05704156370359},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "UI_Npc_Name_Xier",
               NpcId = 100403,
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               GuideType = "N",
-              GuidePointName = "Npc_Xierda_2480176",
+              GuidePointName = "",
               DelayShowGuideTime = 0,
               bUseFlowAssetActors = true,
               IsPlayerTurnToNPC = true,
@@ -241,7 +205,7 @@ return {
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10049901_23.10049901_23'",
               TalkType = "FreeSimple",
-              BlendInTime = 2,
+              BlendInTime = 0,
               BlendOutTime = 0,
               InType = "FadeIn",
               OutType = "FadeOut",
@@ -281,7 +245,7 @@ return {
             key = "17782391587721288357",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1203.523567221637, y = 35.444285439469084},
+            pos = {x = 1034.9521386502083, y = 118.30142829661196},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -292,7 +256,7 @@ return {
               DelayShowGuideTime = 0,
               bUseFlowAssetActors = false,
               IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
+              IsNPCTurnToPlayer = false,
               AllowSurroundDialogue = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10042901.10042901'",
@@ -339,59 +303,6 @@ return {
               OverrideFailBlend = false
             }
           },
-          ["17782391587731288358"] = {
-            key = "17782391587731288358",
-            type = "BranchQuestStartNode",
-            name = "子任务开始节点",
-            pos = {x = 836.5472105877772, y = 137.3999065676006},
-            propsData = {
-              AllQuestOptions = {
-                {
-                  IsNeedFinish = true,
-                  BranchQuestName = "Content_10040301_01_02",
-                  TargetBranchQuestKey = ""
-                },
-                {
-                  IsNeedFinish = false,
-                  BranchQuestName = "Content_10040301_01_01",
-                  TargetBranchQuestKey = ""
-                }
-              },
-              IsSetCountInfo = false,
-              IsDifftation = false,
-              AllDiffGuideOptions = {
-                {
-                  OptionElements = {
-                    {
-                      TargetIndicatorKey = "176493378386320787291",
-                      IsShowOptional = false
-                    }
-                  }
-                },
-                {
-                  OptionElements = {
-                    {
-                      TargetIndicatorKey = "176526811857818836816",
-                      IsShowOptional = true
-                    }
-                  }
-                }
-              }
-            }
-          },
-          ["17782391587731288359"] = {
-            key = "17782391587731288359",
-            type = "CheckBranchQuestFinishedNode",
-            name = "子任务结束节点",
-            pos = {x = 1576.0595724350615, y = 108.95016116729403},
-            propsData = {
-              InputBranchQuestNumber = 2,
-              BranchQuestFinishOptions = {
-                {IsNeedFinish = true},
-                {IsNeedFinish = false}
-              }
-            }
-          },
           ["17782391587731288360"] = {
             key = "17782391587731288360",
             type = "ChangeStaticCreatorNode",
@@ -406,23 +317,11 @@ return {
               StaticCreatorIdList = {272480170, 152480365}
             }
           },
-          ["17782391587731288361"] = {
-            key = "17782391587731288361",
-            type = "CreatePhantomNode",
-            name = "召唤/销毁剧情魅影",
-            pos = {x = 845.463157894737, y = 392.6697368421053},
-            propsData = {
-              IsCreate = false,
-              IsClearOtherPhantom = false,
-              IsSync = false,
-              StaticCreatorIdList = {272480289}
-            }
-          },
           ["17782391587731288362"] = {
             key = "17782391587731288362",
             type = "ChangeStaticCreatorNode",
-            name = "生成/销毁节点",
-            pos = {x = 1321.866606170599, y = 396.2697368421052},
+            name = "放出希尔妲",
+            pos = {x = 274.26660617059883, y = -140.1302631578949},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -436,7 +335,7 @@ return {
             key = "17782391587731288363",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 278.88288969550314, y = 391.6308479532164},
+            pos = {x = 295.68288969550315, y = 584.8308479532164},
             propsData = {
               IsCreate = true,
               IsClearOtherPhantom = false,
@@ -458,33 +357,18 @@ return {
               StaticCreatorIdList = {2480176}
             }
           },
-          ["17782391587731288365"] = {
-            key = "17782391587731288365",
-            type = "AsyncSetActorLocationAndRotationNode",
-            name = "设置玩家到芙罗拉专列外",
-            pos = {x = 276.98126483317054, y = 116.01556261343003},
-            propsData = {
-              UnitId = 0,
-              NewTargetPointName = "Point_Teleport_10040312",
-              FadeIn = false,
-              FadeOut = false,
-              bResetCamera = true,
-              bForceAsyncLoading = true,
-              IsWhite = false
-            }
-          },
           ["17782391587731288366"] = {
             key = "17782391587731288366",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 278.5432999920612, y = 262.3776315789473},
+            pos = {x = 291.74329999206117, y = 451.9776315789473},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["17787396609742069"] = {
             key = "17787396609742069",
             type = "AtmosphereNpcHideNode",
             name = "隐藏氛围",
-            pos = {x = 279.62701126217075, y = -143.2967381689516},
+            pos = {x = 273.62701126217075, y = -316.0967381689516},
             propsData = {
               IsHide = true,
               AtmosphereTagList = {"Story_YT", "Story_BHCZ"}
@@ -494,8 +378,31 @@ return {
             key = "1778749680743829",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 674.6428571428569, y = 999.7499999999995},
+            pos = {x = 332.6428571428568, y = 852.1499999999995},
             propsData = {}
+          },
+          ["177891722234473885575"] = {
+            key = "177891722234473885575",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 266.4, y = -474.6},
+            propsData = {
+              TargetTime = 18,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["17791877754942280"] = {
+            key = "17791877754942280",
+            type = "UpdateTaskBarAndTaskMainNode",
+            name = "更新任务目标节点",
+            pos = {x = 291.1167048054916, y = 330.80000000000024},
+            propsData = {
+              NewDescription = "Content_10040301_01_02",
+              NewDetail = "",
+              SubTaskTargetIndex = 0
+            }
           }
         },
         commentData = {}

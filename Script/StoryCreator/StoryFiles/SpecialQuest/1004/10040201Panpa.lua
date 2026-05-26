@@ -75,7 +75,7 @@ return {
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
         IsBacktrack = false,
-        SubRegionId = 106001,
+        SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
@@ -444,12 +444,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177803882172418714551",
-            startPort = "Out",
-            endQuest = "177763193532864183809",
-            endPort = "Success"
-          },
-          {
             startQuest = "177763193532964183818",
             startPort = "Out",
             endQuest = "17786742601131466344",
@@ -472,6 +466,18 @@ return {
             startPort = "Out",
             endQuest = "17786743160951467360",
             endPort = "In"
+          },
+          {
+            startQuest = "177803882172418714551",
+            startPort = "Out",
+            endQuest = "17796941733397738930",
+            endPort = "In"
+          },
+          {
+            startQuest = "17796941733397738930",
+            startPort = "Out",
+            endQuest = "177763193532864183809",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -1042,10 +1048,10 @@ return {
             name = "设置TOD",
             pos = {x = -1225.5362095022003, y = -83.34249426663241},
             propsData = {
-              TargetTime = 15,
+              TargetTime = 16,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = true
             }
           },
           ["1777696331245107995350"] = {
@@ -1433,6 +1439,17 @@ return {
               NewTargetPointName = "",
               StaticCreatorIdList = {2530023}
             }
+          },
+          ["17796941733397738930"] = {
+            key = "17796941733397738930",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 4249.1578947368425, y = 933.2631578947369},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}
@@ -1476,18 +1493,6 @@ return {
           {
             startQuest = "17782485178191432275",
             startPort = "QuestStart",
-            endQuest = "17782485231261432511",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782485231261432511",
-            startPort = "Out",
-            endQuest = "17782485387591432990",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782485178191432275",
-            startPort = "QuestStart",
             endQuest = "17782485440481433117",
             endPort = "In"
           },
@@ -1496,6 +1501,24 @@ return {
             startPort = "Out",
             endQuest = "17782485178191432281",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17782485178191432275",
+            startPort = "QuestStart",
+            endQuest = "17796942820968705976",
+            endPort = "In"
+          },
+          {
+            startQuest = "17796942820968705976",
+            startPort = "Out",
+            endQuest = "17782485231261432511",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782485231261432511",
+            startPort = "Out",
+            endQuest = "17782485387591432990",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1503,14 +1526,14 @@ return {
             key = "17782485178191432275",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 568.1818181818181, y = 289.09090909090907},
             propsData = {ModeType = 0}
           },
           ["17782485178191432278"] = {
             key = "17782485178191432278",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1926, y = 264},
+            pos = {x = 2295.5454545454545, y = 281.72727272727275},
             propsData = {ModeType = 0}
           },
           ["17782485178191432281"] = {
@@ -1524,7 +1547,7 @@ return {
             key = "17782485231261432511",
             type = "TalkNode",
             name = "站桩过场 -落入火车",
-            pos = {x = 1300, y = 257.99999999999994},
+            pos = {x = 1298.695652173913, y = 257.99999999999994},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1574,7 +1597,7 @@ return {
             key = "17782485387591432990",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 1694, y = 252},
+            pos = {x = 2054, y = 231.54545454545453},
             propsData = {}
           },
           ["17782485440481433117"] = {
@@ -1583,6 +1606,23 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 1454, y = 454},
             propsData = {}
+          },
+          ["17796942820968705976"] = {
+            key = "17796942820968705976",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1019.7272727272726, y = 258.6842105263157},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
           }
         },
         commentData = {}

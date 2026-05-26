@@ -9,6 +9,7 @@ end
 
 function M:OnCellClick(bIsChecked)
   self.Content.ClickCallbackInfo.Func(self.Content.ClickCallbackInfo.Obj, self)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
 end
 
 function M:OnListItemObjectSet(Content)
@@ -20,14 +21,19 @@ function M:OnListItemObjectSet(Content)
     self.Btn_Click.OnHovered:Add(self, self.OnHovered)
   end
   if Content.bSelected then
-    self.Btn_Click:SetChecked(true)
+    self:SetSelected(true)
   else
-    self.Btn_Click:SetChecked(false)
+    self:SetSelected(false)
   end
 end
 
 function M:SetSelected(bIsChecked)
-  self.Btn_Click:SetChecked(bIsChecked)
+  if bIsChecked then
+    self.Btn_Click:SetChecked(bIsChecked)
+  else
+    self.Btn_Click:SetChecked(bIsChecked)
+    self:PlayAnimation(self.Normal)
+  end
 end
 
 function M:OnHovered()
@@ -35,7 +41,7 @@ function M:OnHovered()
     return
   end
   self.Content.bSelected = true
-  self.Btn_Click:SetChecked(true)
+  self:SetSelected(true)
   self.Content.ClickCallbackInfo.Func(self.Content.ClickCallbackInfo.Obj, self)
 end
 
@@ -47,8 +53,16 @@ function M:OnSelected(bIsChecked)
   self.Content.bSelected = bIsChecked
   if bIsChecked then
     self.Content.Parent:OnSelected(self.Content)
-  elseif self.Content.Parent and self.Content.Parent.CurrentSelectedContent == self.Content then
-    self:SetSelected(true)
+    self.Btn_Click:SetIsEnabled(false)
+  else
+    local IsSelected = false
+    if self.Content.Parent and self.Content.Parent.CurrentSelectedContent == self.Content then
+      IsSelected = true
+      self:SetSelected(true)
+    end
+    if not IsSelected then
+      self.Btn_Click:SetIsEnabled(true)
+    end
   end
 end
 

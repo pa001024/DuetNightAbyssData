@@ -69,6 +69,32 @@ function Component:InitGameSetting()
   self:CheckActionMappingWithAvatar()
 end
 
+local function ResolveAxisActionName(AxisName, Scale)
+  local AxisMap = DataMgr.AxisName2ActionName[AxisName]
+  if not AxisMap then
+    return nil
+  end
+  local ScaleStr = tostring(Scale)
+  local ActionName = AxisMap[ScaleStr]
+  if ActionName then
+    return ActionName
+  end
+  local ScaleNum = tonumber(ScaleStr)
+  if not ScaleNum then
+    return nil
+  end
+  local ScaleInt = math.floor(ScaleNum)
+  ActionName = AxisMap[tostring(ScaleInt)]
+  if ActionName then
+    return ActionName
+  end
+  ActionName = AxisMap[string.format("%.1f", ScaleNum)]
+  if ActionName then
+    return ActionName
+  end
+  return nil
+end
+
 function Component:CheckActionMappingAdd()
   local InputSetting = UE4.UInputSettings.GetInputSettings()
   local ActionMappings = InputSetting.ActionMappings:ToTable()
@@ -86,8 +112,7 @@ function Component:CheckActionMappingAdd()
     local Res = string.find(v.Key.KeyName, "Gamepad")
     local Res2 = string.find(v.AxisName, "Talk")
     if nil == Res2 and nil == Res and DataMgr.AxisName2ActionName[v.AxisName] then
-      local Scale = tostring(v.Scale)
-      local ActionName = DataMgr.AxisName2ActionName[v.AxisName][Scale]
+      local ActionName = ResolveAxisActionName(v.AxisName, v.Scale)
       if ActionName then
         EngineActionMappings[ActionName] = v
       end
@@ -100,7 +125,7 @@ function Component:CheckActionMappingAdd()
         local Scale = tonumber(Data.Scale)
         local NewEngineMapping = UE4.FInputAxisKeyMapping()
         NewEngineMapping.Key = UE4.EKeys[Data.Key]
-        NewEngineMapping.ActionName = Data.AxisActionName
+        NewEngineMapping.AxisName = Data.AxisActionName
         NewEngineMapping.Scale = Scale
         InputSetting:AddAxisMapping(NewEngineMapping)
       else
@@ -131,8 +156,7 @@ function Component:CheckActionMappingWithAvatar()
     local Res = string.find(v.Key.KeyName, "Gamepad")
     local Res2 = string.find(v.AxisName, "Talk")
     if nil == Res2 and nil == Res and DataMgr.AxisName2ActionName[v.AxisName] then
-      local Scale = tostring(v.Scale)
-      local ActionName = DataMgr.AxisName2ActionName[v.AxisName][Scale]
+      local ActionName = ResolveAxisActionName(v.AxisName, v.Scale)
       if ActionName then
         EngineActionMappings[ActionName] = v
       end

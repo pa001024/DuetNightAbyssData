@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040404_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -117,12 +117,6 @@ return {
             startQuest = "17787400372049740482",
             startPort = "Out",
             endQuest = "17787400372059740488",
-            endPort = "In"
-          },
-          {
-            startQuest = "17787400372049740484",
-            startPort = "Out",
-            endQuest = "17787400372049740482",
             endPort = "In"
           },
           {
@@ -244,6 +238,36 @@ return {
             startPort = "Out",
             endQuest = "17787400909369741958",
             endPort = "In"
+          },
+          {
+            startQuest = "17787400372049740484",
+            startPort = "Out",
+            endQuest = "177936825125766240518",
+            endPort = "In"
+          },
+          {
+            startQuest = "177936825125766240518",
+            startPort = "Success",
+            endQuest = "17787400372049740485",
+            endPort = "In"
+          },
+          {
+            startQuest = "177936825125766240518",
+            startPort = "Fail",
+            endQuest = "17787400372049740482",
+            endPort = "In"
+          },
+          {
+            startQuest = "177936825125766240518",
+            startPort = "Success",
+            endQuest = "17787400372059740488",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787400372049740476",
+            startPort = "QuestStart",
+            endQuest = "17795207159622903847",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -352,7 +376,7 @@ return {
             key = "17787400372049740485",
             type = "SubmitItemNode",
             name = "提交物品",
-            pos = {x = 939.47893340779, y = 1309.3209549071619},
+            pos = {x = 976.97893340779, y = 1279.3209549071619},
             propsData = {
               AssociatedObjectType = "Npc",
               AssociatedObjectId = 100404,
@@ -414,7 +438,7 @@ return {
             key = "17787400372069740490",
             type = "TalkNode",
             name = "与芙罗拉交谈开车2",
-            pos = {x = 719.1706336295558, y = 1051.0645782970769},
+            pos = {x = 411.9706336295558, y = 1089.464578297077},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 10049995,
@@ -528,7 +552,7 @@ return {
             key = "17787400372069740498",
             type = "CameraControlNode",
             name = "镜头控制节点",
-            pos = {x = -204.37980769230762, y = 127.09615384615394},
+            pos = {x = -245.91826923076917, y = 34.78846153846162},
             propsData = {
               Duration = 3,
               CameraName = "StoryEast01Nai01",
@@ -607,6 +631,30 @@ return {
             name = "成功完成特殊任务",
             pos = {x = 2524.318181818183, y = 1487.1572447160681},
             propsData = {}
+          },
+          ["177936825125766240518"] = {
+            key = "177936825125766240518",
+            type = "ConditionNode",
+            name = "条件节点",
+            pos = {x = 711.8000000000002, y = 1039.857142857143},
+            propsData = {ConditionId = 1004040406}
+          },
+          ["17795207159622903847"] = {
+            key = "17795207159622903847",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = -180.15325326847073, y = 223.08509316770176},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0167_story_fuluo_theme.0167_story_fuluo_theme'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
           }
         },
         commentData = {}

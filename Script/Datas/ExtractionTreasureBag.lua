@@ -11,7 +11,7 @@ end
 return ReadOnly("ExtractionTreasureBag", {
   [1] = {
     BagID = 1,
-    Desc = "24.0",
+    Desc = "24",
     Name = "SoloTreasure_Backpack01",
     Price = 0,
     Shape = {
@@ -23,7 +23,7 @@ return ReadOnly("ExtractionTreasureBag", {
   },
   [2] = {
     BagID = 2,
-    Desc = "35.0",
+    Desc = "35",
     EventUnlockCondition = 10301417,
     Name = "SoloTreasure_Backpack02",
     Price = 800,
@@ -38,7 +38,7 @@ return ReadOnly("ExtractionTreasureBag", {
   },
   [3] = {
     BagID = 3,
-    Desc = "45.0",
+    Desc = "45",
     EventUnlockCondition = 10301418,
     Name = "SoloTreasure_Backpack03",
     Price = 4000,
@@ -53,7 +53,7 @@ return ReadOnly("ExtractionTreasureBag", {
   },
   [4] = {
     BagID = 4,
-    Desc = "55.0",
+    Desc = "55",
     EventUnlockCondition = 10301419,
     Name = "SoloTreasure_Backpack04",
     Price = 10000,
@@ -69,7 +69,7 @@ return ReadOnly("ExtractionTreasureBag", {
   },
   [5] = {
     BagID = 5,
-    Desc = "60.0",
+    Desc = "60",
     EventUnlockCondition = 10301420,
     Name = "SoloTreasure_Backpack05",
     Price = 30000,
@@ -81,7 +81,7 @@ return ReadOnly("ExtractionTreasureBag", {
   },
   [6] = {
     BagID = 6,
-    Desc = "70.0",
+    Desc = "70",
     EventUnlockCondition = 10301421,
     Name = "SoloTreasure_Backpack06",
     Price = 150000,

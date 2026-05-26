@@ -21,7 +21,7 @@ return ReadOnly("BoxDrop", {
   },
   [10302001] = {
     BoxCoinId = 223,
-    BoxMaximum = 21,
+    BoxMaximum = 38,
     BoxPerDay = 2,
     CoinPerBox = 3,
     EventId = 10302001,

@@ -8,15 +8,17 @@ function M:OnLoaded(...)
   self.ChapterName, self.CantoName, self.Title, self.AudioPath, self.Func = ...
 end
 
-function M:Construct()
+function M:Transition04_02(QuestUIId)
   self.Text_SubTitle01:SetText(GText("UI_Chapter03_Transition01"))
   self.Text_SubTitle02:SetText(GText("UI_Chapter03_Transition02"))
-  local QuestConfig = DataMgr.QuestUI[100401]
+  local QuestConfig = DataMgr.QuestUI[QuestUIId or 100401]
   self.Text_Title:SetText(GText(QuestConfig.ChapterName))
   local Params = QuestConfig.Params
   local Hours = tonumber(Params[1])
   self.Text_SubTitle_Num:SetText(GText(Params[1]))
-  self.Panel_HourHand:SetRenderTransformAngle(Hours * 30)
+  local PointCircle = math.floor(Hours / 12)
+  local PointCount = 12 - Hours % 12
+  self.Panel_HourHand:SetRenderTransformAngle(PointCount * 30 + PointCircle * 360)
   self:PlayInAnim()
   AudioManager(self):PlayUISound(self, "event:/ui/common/chapter_3_trans_clock", "TransClockToEnd", nil)
 end

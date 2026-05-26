@@ -7,6 +7,7 @@ local GuildController = require("BluePrints.UI.WBP.Guild.Controller.GuildControl
 local GuildModel = require("BluePrints.UI.WBP.Guild.Model.GuildModel")
 local ChatModel = ChatController:GetModel()
 local FriendModel = FriendController:GetModel()
+local OffSetOfScroll = 75
 local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:Construct()
@@ -49,7 +50,7 @@ function M:Construct()
       if self.bDialogListRefreshed then
         local NewMsgCount = ChatModel:GetChannelUnreadCount()
         local Visibility = NewMsgCount > 0 and "SelfHitTestInvisible" or "Collapsed"
-        if self.SB_Dialog:GetScrollOffset() + 50 >= self.MaxScrollOffset then
+        if self.SB_Dialog:GetScrollOffset() + OffSetOfScroll >= self.MaxScrollOffset then
           Visibility = "Collapsed"
           ChatController:SendChatNewMsgRead()
         end
@@ -65,7 +66,7 @@ function M:Construct()
   self.SB_Dialog.OnUserScrolled:Add(self, function(self, CurrScrollOffset)
     if CurrScrollOffset >= self.SB_Dialog:GetScrollOffsetOfEnd() then
       self:BtnNewMsgOnClicked(true)
-    elseif CurrScrollOffset + 50 < self.MaxScrollOffset then
+    elseif CurrScrollOffset + OffSetOfScroll < self.MaxScrollOffset then
       self.Group_NewMessage:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
   end)
@@ -187,7 +188,11 @@ function M:InitChatChannelUI()
     elseif EventId == ChatCommon.EventID.GuildChannelSnapshotRefreshed then
       local ChannelType = (...)
       if self.CurrChannel == (ChannelType or ChatCommon.ChannelDef.InGuild) then
-        self:_SetUpChatMsgList()
+        if self.CurrChannel == ChatCommon.ChannelDef.InGuild then
+          self:OnTabSelected_InGuild()
+        else
+          self:_SetUpChatMsgList()
+        end
       end
     end
   end)
@@ -227,6 +232,21 @@ function M:_Stop_SetUpChatMsgListTimer()
   end
 end
 
+function M:_CreateSetUpChatMsgListContext()
+  return {
+    Channel = self.CurrChannel,
+    SubTab = ChatModel:GetCurrentSubTab(),
+    FriendUid = ChatModel:GetCurrentFriendUid()
+  }
+end
+
+function M:_IsSetUpChatMsgListContextCurrent(Context)
+  if not Context then
+    return true
+  end
+  return Context.Channel == self.CurrChannel and Context.SubTab == ChatModel:GetCurrentSubTab() and Context.FriendUid == ChatModel:GetCurrentFriendUid()
+end
+
 function M:_SetUpChatMsgList()
   self:_Stop_SetUpChatMsgListTimer()
   self.bDialogListRefreshed = false
@@ -239,7 +259,8 @@ function M:_SetUpChatMsgList()
   self.SB_Dialog:ScrollToStart()
   self.SB_Dialog:DisableDrag(true)
   self.SB_Dialog:SetRenderOpacity(0)
-  local _, TimerKey = self:AddTimer(0.01, self._SetUpChatMsgListTimerCallback, true, 0, nil, true, MsgList)
+  local Context = self:_CreateSetUpChatMsgListContext()
+  local _, TimerKey = self:AddTimer(0.01, self._SetUpChatMsgListTimerCallback, true, 0, nil, true, MsgList, Context)
   self._SetUpChatMsgListTimer = TimerKey
   if CommonUtils.GetDeviceTypeByPlatformName(self) ~= "Mobile" then
     self._ChatItemList = {}
@@ -458,6 +479,7 @@ function M:OnExtraPanelClose()
 end
 
 function M:OnTabSelected_TeamUp(TabWidget, TabItemInfo)
+  self:_SetUpPublicChannelLayout()
   if self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.TeamUp) then
     self:_SetUpBtnSentState()
     self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -469,7 +491,15 @@ function M:OnTabSelected_Friend(TabWidget, TabItemInfo)
   FriendController:SendRequest(FriendCommon.EventId.RefreshFriend)
 end
 
+function M:_SetDMSubTabVisible(bVisible)
+  local Visibility = bVisible and UIConst.VisibilityOp.SelfHitTestInvisible or UIConst.VisibilityOp.Collapsed
+  if self.Group_TabChannel then
+    self.Group_TabChannel:SetVisibility(Visibility)
+  end
+end
+
 function M:_SetUpDMChannelLayout(bKeepBottomState)
+  self:_SetDMSubTabVisible(true)
   self.Group_ChatEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
@@ -487,7 +517,60 @@ function M:_SetUpDMChannelLayout(bKeepBottomState)
   self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
+function M:_SetUpPublicChannelLayout()
+  self:_SetDMSubTabVisible(false)
+  if self.WS_PlayerList then
+    self.WS_PlayerList:SetActiveWidgetIndex(0)
+  end
+  if self.Group_PlayerList then
+    self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  if self.List_Player then
+    self.List_Player:ClearListItems()
+  end
+  if self.Key_PlayerListTitle then
+    self.Key_PlayerListTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self.CurrSelectPlayer = nil
+  self.SelectedPlayerIndex = nil
+  if self.SetFocusStateType and self.FocusStateType == ChatCommon.ChatFocusType.PlayerList then
+    self:SetFocusStateType(ChatCommon.ChatFocusType.Default)
+  end
+end
+
+function M:_SetUpInTeamChannelLayout(bHasTeam)
+  self:_SetDMSubTabVisible(false)
+  if self.WS_PlayerList then
+    self.WS_PlayerList:SetActiveWidgetIndex(0)
+  end
+  self.CurrSelectPlayer = nil
+  self.SelectedPlayerIndex = nil
+  if bHasTeam and self.RefreshTeamMemberListInPC then
+    if self.Group_PlayerList then
+      self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+    end
+    if self.Text_PlayerListTitle then
+      self.Text_PlayerListTitle:SetText(GText("UI_Chat_TeammateList"))
+    end
+    self:RefreshTeamMemberListInPC()
+  else
+    if self.Group_PlayerList then
+      self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+    if self.List_Player then
+      self.List_Player:ClearListItems()
+    end
+    if self.Key_PlayerListTitle then
+      self.Key_PlayerListTitle:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    end
+  end
+  if self.SetFocusStateType and self.FocusStateType == ChatCommon.ChatFocusType.PlayerList then
+    self:SetFocusStateType(ChatCommon.ChatFocusType.Default)
+  end
+end
+
 function M:OnTabSelected_Public(TabWidget, TabItemInfo)
+  self:_SetUpPublicChannelLayout()
   if self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Public) then
     self:_SetUpBtnSentState()
     self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Visible)
@@ -498,6 +581,7 @@ function M:OnTabSelected_Public(TabWidget, TabItemInfo)
 end
 
 function M:OnTabSelected_Region(TabWidget, TabItemInfo)
+  self:_SetUpPublicChannelLayout()
   if self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.Region) then
     self:_SetUpBtnSentState()
     self:UpdateText_ChatChannel()
@@ -510,6 +594,7 @@ function M:OnTabSelected_Region(TabWidget, TabItemInfo)
 end
 
 function M:OnTabSelected_SettlementOnline(TabWidget, TabItemInfo)
+  self:_SetUpPublicChannelLayout()
   if self:HandleEnterChatChannel(ErrorCode.RET_SUCCESS, ChatCommon.ChannelDef.SettlementOnline) then
     self:_SetUpBtnSentState()
     self:_SetUpChatMsgList()
@@ -520,6 +605,7 @@ end
 local TODO_GUILD_SKIP_INGUILD_CHECK = false
 
 function M:OnTabSelected_InGuild(TabWidget, TabItemInfo)
+  self:_SetUpPublicChannelLayout()
   local Avatar = GWorld:GetAvatar()
   local UIUnlockRuleId = DataMgr.UIUnlockRule.OpenGuild.UIUnlockRuleId
   local bUnlocked = Avatar:CheckUIUnlocked(UIUnlockRuleId)
@@ -527,7 +613,7 @@ function M:OnTabSelected_InGuild(TabWidget, TabItemInfo)
   if not TODO_GUILD_SKIP_INGUILD_CHECK and not bUnlocked then
     self:_SetUpFullEmpty(GText("UI_GuildSystemLocked"))
   elseif not TODO_GUILD_SKIP_INGUILD_CHECK and not bInGuild then
-    self:_SetUpFullEmpty(GText("UI_NotInGuild"), GText("UI_GoToJoin"))
+    self:_SetUpFullEmpty(GText("UI_NotInGuild"))
   else
     self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -539,14 +625,9 @@ function M:OnTabSelected_InGuild(TabWidget, TabItemInfo)
 end
 
 function M:OnTabSelected_InTeam(TabWidget, TabItemInfo)
-  local CurrentPlatform = CommonUtils.GetDeviceTypeByPlatformName(self)
-  if "PC" == CurrentPlatform then
-    self.Text_PlayerListTitle:SetText(GText("UI_Chat_TeammateList"))
-    self.Group_PlayerList:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    self.List_Player:ClearListItems()
-  end
   local TeamData = TeamController:GetModel():GetTeam()
   local TeamNumber = nil == TeamData and 0 or #TeamData.Members
+  self:_SetUpInTeamChannelLayout(TeamNumber > 0)
   if 0 == TeamNumber then
     self:_SetUpFullEmpty(GText("UI_Chat_NoTeam"), GText("UI_Chat_GotoTeamUp"))
   else
@@ -554,6 +635,8 @@ function M:OnTabSelected_InTeam(TabWidget, TabItemInfo)
     self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
     ChatController:SendRequestEnterChatChannel()
     self:_SetUpBtnSentState()
+    self:_SetUpChatMsgList()
+    self:_SetUpMsgCache()
   end
   self.Group_Channel:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
@@ -835,9 +918,15 @@ function M:HandleChatMsgRecv(TimeWrap, MsgWrap)
   if self.CurrChannel == ChatCommon.ChannelDef.Friend and not ChatModel:GetCurrentFriendUid() then
     return
   end
+  local NewBtnVisible = self.Group_NewMessage:IsVisible()
   AudioManager(self):PlayUISound(self, "event:/ui/common/team_msg_pop", nil, nil)
   self:_AddNewMsgToListView(TimeWrap)
   self:_AddNewMsgToListView(MsgWrap)
+  if not NewBtnVisible then
+    self:AddTimer(0.01, function()
+      self:_AutoScrollToEnd()
+    end)
+  end
 end
 
 function M:HandleChatMsgSent(TimeWrap, MsgWrap)
@@ -1030,6 +1119,7 @@ function M:_HandleRefreshFriendInPrivateChannel()
 end
 
 function M:_HandleRefreshFriendInOpenChannel()
+  self:_SetUpPublicChannelLayout()
   self.Group_ChatEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:_SetUpChatMsgList()
@@ -1071,7 +1161,11 @@ function M:_UpdateGuildPrivatePlayerItem(Uid)
       end
       self.SelectedPlayerIndex = Item.bSelected and i - 1 or self.SelectedPlayerIndex
       if bShouldSelect then
-        self.List_Player:ScrollIndexIntoView(i)
+        self:_ScrollGuildPrivatePlayerItem(i, Item)
+        if not IsValid(Item.UI) then
+          self._PendingGuildPrivateScrollUid = Uid
+          self:_ScheduleGuildPrivatePlayerScrollRetry(Uid, 0)
+        end
       end
       return
     end
@@ -1100,13 +1194,107 @@ function M:_UpdateGuildPrivatePlayerItem(Uid)
   if Content.bSelected then
     self.CurrSelectPlayer = Content
     self:_ApplyGuildPrivateInputAreaState(Uid, false)
-    self.List_Player:ScrollIndexIntoView(self.SelectedPlayerIndex + 1)
+    self:_ScrollGuildPrivatePlayerItem(self.SelectedPlayerIndex + 1, Content)
+    if not IsValid(Content.UI) then
+      self._PendingGuildPrivateScrollUid = Uid
+      self:_ScheduleGuildPrivatePlayerScrollRetry(Uid, 0)
+    end
   end
+end
+
+function M:_ScrollGuildPrivatePlayerItem(Index, Item)
+  if not (self.List_Player and Index) or not Item then
+    return
+  end
+  if self.List_Player.BP_ScrollItemIntoView then
+    self.List_Player:BP_ScrollItemIntoView(Item)
+  else
+    self.List_Player:ScrollIndexIntoView(Index - 1)
+  end
+end
+
+function M:_ScheduleGuildPrivatePlayerScrollRetry(Uid, RetryCount)
+  if not Uid then
+    return
+  end
+  RetryCount = RetryCount or 0
+  if RetryCount >= 3 then
+    return
+  end
+  self:AddDelayFrameFunc(function()
+    if not self or not self.List_Player then
+      return
+    end
+    if self._PendingGuildPrivateScrollUid ~= Uid then
+      return
+    end
+    self:_ScrollToGuildPrivatePlayerItem(Uid, false, RetryCount + 1)
+  end, 1, "ScrollGuildPrivatePlayerItem")
+end
+
+function M:_ScrollToGuildPrivatePlayerItem(Uid, bAllowCreate, RetryCount)
+  if not Uid then
+    return false
+  end
+  if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+    return false
+  end
+  self._PendingGuildPrivateScrollUid = Uid
+  ChatModel:SetCurrentFriendUid(Uid)
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend or not self.List_Player then
+    return false
+  end
+  
+  local function FindItem()
+    local ItemList = self.List_Player:GetListItems()
+    if not ItemList then
+      return nil, nil
+    end
+    for i = 1, ItemList:Num() do
+      local Item = ItemList:Get(i)
+      if Item and Item.Data and Item.Data.Uid == Uid then
+        return i, Item
+      end
+    end
+    return nil, nil
+  end
+  
+  local Index, Item = FindItem()
+  if not Item and false ~= bAllowCreate then
+    self:_UpdateGuildPrivatePlayerItem(Uid)
+    Index, Item = FindItem()
+  end
+  if not Index or not Item then
+    return false
+  end
+  self.SelectedPlayerIndex = Index - 1
+  if not Item.bSelected then
+    Item.bSelected = true
+  end
+  if IsValid(Item.UI) and Item.UI.Select then
+    Item.UI:Select(true)
+  else
+    self:OnPlayerListUISelected(Item, true)
+  end
+  self:_ScrollGuildPrivatePlayerItem(Index, Item)
+  if IsValid(Item.UI) or (RetryCount or 0) >= 3 then
+    self._PendingGuildPrivateScrollUid = nil
+  else
+    self:_ScheduleGuildPrivatePlayerScrollRetry(Uid, RetryCount or 0)
+  end
+  return true
 end
 
 function M:_RefreshSubTab()
   if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+    local PendingGuildPrivateScrollUid = self._PendingGuildPrivateScrollUid
+    if PendingGuildPrivateScrollUid then
+      ChatModel:SetCurrentFriendUid(PendingGuildPrivateScrollUid)
+    end
     self:_HandleRefreshGuildInPrivateChannel()
+    if PendingGuildPrivateScrollUid then
+      self:_ScrollToGuildPrivatePlayerItem(PendingGuildPrivateScrollUid, false)
+    end
   else
     self:_HandleRefreshFriendInPrivateChannel()
   end
@@ -1161,6 +1349,15 @@ function M:_OnGuildPermissionToggle(bChecked)
   if bChecked then
     ChatController:SetGuildChatPermission(true)
     return
+  end
+  if ChatModel.SyncGuildUidListWithChatDatas then
+    local KeepUid = ChatModel:GetCurrentFriendUid()
+    local KeepInfo
+    local OldGuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+    if KeepUid and OldGuildList then
+      KeepInfo = OldGuildList[KeepUid]
+    end
+    ChatModel:SyncGuildUidListWithChatDatas(KeepUid, KeepInfo)
   end
   local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
   local bHasActiveChat = next(GuildList or {}) ~= nil
@@ -1383,6 +1580,7 @@ function M:OnSubTabReleased_Guild()
 end
 
 function M:OnSubTabClicked_Friend()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", "", nil)
   if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Friend then
     return
   end
@@ -1395,6 +1593,7 @@ function M:OnSubTabClicked_Friend()
 end
 
 function M:OnSubTabClicked_Guild()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", "", nil)
   if ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
     return
   end
@@ -1406,7 +1605,7 @@ function M:OnSubTabClicked_Guild()
   self:_RefreshSubTab()
 end
 
-function M:_HandleRefreshGuildInPrivateChannel(Uid)
+function M:_HandleRefreshGuildInPrivateChannel(Uid, bSkipPeerInfoRefresh)
   if Uid then
     self:_UpdateGuildPrivatePlayerItem(Uid)
     return
@@ -1424,14 +1623,20 @@ function M:_HandleRefreshGuildInPrivateChannel(Uid)
   end
   if not GuildModel:IsInGuild() then
     self:_SetGuildPrivateInputDisabledArea()
-    self:_ShowDMPlayerListEmpty(GText("UI_NoPrivateChats"), "Guild", GText("UI_JoinGuildToChat"))
+    self:_ShowDMPlayerListEmpty(GText("UI_NoPrivateChats"), nil, GText("UI_JoinGuildToChat"))
     return
   end
-  local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
-  local Uids = {}
-  for Uid, _ in pairs(GuildList or {}) do
-    Uids[#Uids + 1] = Uid
+  if ChatModel.SyncGuildUidListWithChatDatas then
+    local KeepUid = ChatModel:GetCurrentFriendUid()
+    local KeepInfo
+    local OldGuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+    if KeepUid and OldGuildList then
+      KeepInfo = OldGuildList[KeepUid]
+    end
+    ChatModel:SyncGuildUidListWithChatDatas(KeepUid, KeepInfo)
   end
+  local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+  local Uids = self:_GetSortedGuildPrivateUids(GuildList)
   if 0 == #Uids then
     local bGuildChatOpen = Avatar.GuildChatOpen ~= false
     local DialogEmptyText = not bGuildChatOpen and GText("UI_PrivateChatNotAllowed") or GText("UI_CanChatWithGuildMembers")
@@ -1440,7 +1645,6 @@ function M:_HandleRefreshGuildInPrivateChannel(Uid)
     return
   end
   self:_ShowDMPlayerListNormal(self:_GetCurrentDialogEmptyText())
-  table.sort(Uids)
   local PreselectUid = ChatModel:GetCurrentFriendUid()
   if not PreselectUid or not GuildList[PreselectUid] then
     PreselectUid = Uids[1]
@@ -1487,8 +1691,55 @@ function M:_HandleRefreshGuildInPrivateChannel(Uid)
   if SelectedUid then
     self:_ApplyGuildPrivateInputAreaState(SelectedUid, false)
   end
-  self.List_Player:ScrollIndexIntoView(SelectedIdx)
-  self:_RefreshGuildPrivatePeerInfos(Uids)
+  self:_ScrollGuildPrivatePlayerItem(SelectedIdx, self.List_Player:GetListItems():Get(SelectedIdx))
+  if not bSkipPeerInfoRefresh then
+    self:_RefreshGuildPrivatePeerInfos(Uids)
+  end
+end
+
+function M:_GetSortedGuildPrivateUids(GuildList)
+  local OnlineUids = {}
+  local OfflineUids = {}
+  local AddedUids = {}
+  
+  local function AddUid(Uid)
+    if not (Uid and not AddedUids[Uid] and GuildList) or nil == GuildList[Uid] then
+      return
+    end
+    AddedUids[Uid] = true
+    local Info = self:_ResolveGuildPeerInfo(Uid, GuildList[Uid])
+    if Info and true == Info.IsOnline then
+      OnlineUids[#OnlineUids + 1] = Uid
+    else
+      OfflineUids[#OfflineUids + 1] = Uid
+    end
+  end
+  
+  local GuildUidOrder = ChatModel.GetGuildUidOrder and ChatModel:GetGuildUidOrder() or {}
+  for _, Uid in ipairs(GuildUidOrder) do
+    AddUid(Uid)
+  end
+  for Uid, _ in pairs(GuildList or {}) do
+    AddUid(Uid)
+  end
+  for _, Uid in ipairs(OfflineUids) do
+    OnlineUids[#OnlineUids + 1] = Uid
+  end
+  return OnlineUids
+end
+
+function M:_HandleGuildPrivateInfoChanged(Uid, bWasOnline, bIsOnline)
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend then
+    return
+  end
+  if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+    return
+  end
+  if true == bWasOnline ~= (true == bIsOnline) then
+    self:_HandleRefreshGuildInPrivateChannel(nil, true)
+  else
+    self:_UpdateGuildPrivatePlayerItem(Uid)
+  end
 end
 
 function M:_ResolveGuildPeerInfo(Uid, Raw)
@@ -1533,12 +1784,24 @@ function M:_RefreshGuildPrivatePeerInfos(Uids)
       return
     end
     local FallbackUids = {}
+    local ChangedUids = {}
+    local bNeedRebuildList = false
     if Ret == ErrorCode.RET_SUCCESS and type(MemberInfos) == "table" then
       for _, Uid in ipairs(Uids) do
         local Info = MemberInfos[Uid] or MemberInfos[tostring(Uid)]
         if self:_IsValidGuildMemberQueryInfo(Info) then
+          local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+          local OldInfo = self:_ResolveGuildPeerInfo(Uid, GuildList and GuildList[Uid])
+          local bWasOnline = OldInfo and OldInfo.IsOnline == true or false
           if ChatModel:RegisterGuildUid(Uid, Info) then
-            self:_UpdateGuildPrivatePlayerItem(Uid)
+            local NewGuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+            local NewInfo = self:_ResolveGuildPeerInfo(Uid, NewGuildList and NewGuildList[Uid])
+            local bIsOnline = NewInfo and NewInfo.IsOnline == true or false
+            if bWasOnline ~= bIsOnline then
+              bNeedRebuildList = true
+            else
+              ChangedUids[#ChangedUids + 1] = Uid
+            end
           end
         else
           FallbackUids[#FallbackUids + 1] = Uid
@@ -1546,6 +1809,15 @@ function M:_RefreshGuildPrivatePeerInfos(Uids)
       end
     else
       FallbackUids = Uids
+    end
+    if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+      if bNeedRebuildList then
+        self:_HandleRefreshGuildInPrivateChannel(nil, true)
+      else
+        for _, Uid in ipairs(ChangedUids) do
+          self:_UpdateGuildPrivatePlayerItem(Uid)
+        end
+      end
     end
     for _, Uid in ipairs(FallbackUids) do
       self:_QueryGuildPeerInfo(Uid)
@@ -1574,9 +1846,19 @@ function M:_QueryGuildPeerInfo(Uid)
       if not IsValid(self) or type(PlayerInfo) ~= "table" then
         return
       end
-      ChatModel:RegisterGuildUid(Uid, PlayerInfo)
+      local GuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+      local OldInfo = self:_ResolveGuildPeerInfo(Uid, GuildList and GuildList[Uid])
+      local bWasOnline = OldInfo and OldInfo.IsOnline == true or false
+      local bChanged = ChatModel:RegisterGuildUid(Uid, PlayerInfo)
       if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
-        self:_HandleRefreshGuildInPrivateChannel(Uid)
+        if bChanged then
+          local NewGuildList = ChatModel.GetGuildUidList and ChatModel:GetGuildUidList() or nil
+          local NewInfo = self:_ResolveGuildPeerInfo(Uid, NewGuildList and NewGuildList[Uid])
+          local bIsOnline = NewInfo and NewInfo.IsOnline == true or false
+          self:_HandleGuildPrivateInfoChanged(Uid, bWasOnline, bIsOnline)
+        else
+          self:_UpdateGuildPrivatePlayerItem(Uid)
+        end
       end
     end
   })
@@ -1629,15 +1911,15 @@ function M:_ShowDMPlayerListNormal(DialogEmptyText)
 end
 
 function M:_HandleRefreshTeamMateInTeamChannel()
-  local CurrentPlatform = CommonUtils.GetDeviceTypeByPlatformName(self)
-  if "PC" == CurrentPlatform then
-    local NowCount = self:RefreshTeamMemberListInPC()
-    if 0 == NowCount then
-      self:_SetUpFullEmpty(GText("UI_Chat_NoTeam"), GText("UI_Chat_GotoTeamUp"))
-      return
-    end
-    self.Com_Input:SetText("")
+  local TeamData = TeamController:GetModel():GetTeam()
+  local TeamNumber = nil == TeamData and 0 or #TeamData.Members
+  self:_SetUpInTeamChannelLayout(TeamNumber > 0)
+  if 0 == TeamNumber then
+    self:_SetUpFullEmpty(GText("UI_Chat_NoTeam"), GText("UI_Chat_GotoTeamUp"))
+    return
   end
+  self.Group_BottomNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_ChatEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_ChatNormal:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self:_SetUpChatMsgList()

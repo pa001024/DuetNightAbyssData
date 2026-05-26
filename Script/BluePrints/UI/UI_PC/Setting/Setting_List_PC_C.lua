@@ -537,6 +537,32 @@ function S:AddKeyOptionContentItem(KeyTable)
   self.List_Options:SetScrollbarVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
+local function ResolveAxisActionName(AxisName, Scale)
+  local AxisMap = DataMgr.AxisName2ActionName[AxisName]
+  if not AxisMap then
+    return nil
+  end
+  local ScaleStr = tostring(Scale)
+  local ActionName = AxisMap[ScaleStr]
+  if ActionName then
+    return ActionName
+  end
+  local ScaleNum = tonumber(ScaleStr)
+  if not ScaleNum then
+    return nil
+  end
+  local ScaleInt = math.floor(ScaleNum)
+  ActionName = AxisMap[tostring(ScaleInt)]
+  if ActionName then
+    return ActionName
+  end
+  ActionName = AxisMap[string.format("%.1f", ScaleNum)]
+  if ActionName then
+    return ActionName
+  end
+  return nil
+end
+
 function S:GetEngineActionMapping()
   self.InputSetting = UE4.UInputSettings.GetInputSettings()
   local ActionMappings = self.InputSetting.ActionMappings:ToTable()
@@ -557,8 +583,7 @@ function S:GetEngineActionMapping()
     local Res = string.find(v.Key.KeyName, "Gamepad")
     local Res2 = string.find(v.AxisName, "Talk")
     if nil == Res2 and nil == Res and DataMgr.AxisName2ActionName[v.AxisName] then
-      local Scale = tostring(v.Scale)
-      local ActionName = DataMgr.AxisName2ActionName[v.AxisName][Scale]
+      local ActionName = ResolveAxisActionName(v.AxisName, v.Scale)
       if ActionName then
         self.OldActionMappings[ActionName] = v
         self.AllActionMappingKey[ActionName] = v.Key.KeyName
@@ -830,16 +855,18 @@ function S:OnUpdateEngineActionMapping(Ret, ActionMapping)
   if ErrorCode:Check(Ret) then
     local AddActionList = {}
     for ActionName, KeyName in pairs(ActionMapping) do
-      if self.OldActionMappings[ActionName].Key.KeyName ~= KeyName then
+      local OldActionMapping = self.OldActionMappings and self.OldActionMappings[ActionName] or nil
+      if not (OldActionMapping and OldActionMapping.Key) or not OldActionMapping.Key.KeyName then
+      elseif OldActionMapping.Key.KeyName ~= KeyName then
         local ActionInfo = DataMgr.KeyboardMap[ActionName]
         if ActionInfo and ActionInfo.AxisActionName then
           local NewKey = UE4.EKeys[KeyName]
           if NewKey then
-            self.InputSetting:RemoveAxisMapping(self.OldActionMappings[ActionName])
+            self.InputSetting:RemoveAxisMapping(OldActionMapping)
             local Scale = tonumber(ActionInfo.Scale)
-            self.OldActionMappings[ActionName].Key = NewKey
-            self.OldActionMappings[ActionName].Scale = Scale
-            table.insert(AddActionList, self.OldActionMappings[ActionName])
+            OldActionMapping.Key = NewKey
+            OldActionMapping.Scale = Scale
+            table.insert(AddActionList, OldActionMapping)
             HeroUSDKSubsystem():UploadTrackLog_Lua("key_bindings", {
               key_bindings_info = {key_name = ActionName, key_binding = KeyName}
             })
@@ -847,9 +874,9 @@ function S:OnUpdateEngineActionMapping(Ret, ActionMapping)
         else
           local NewKey = UE4.EKeys[KeyName]
           if NewKey then
-            self.InputSetting:RemoveActionMapping(self.OldActionMappings[ActionName])
-            self.OldActionMappings[ActionName].Key = NewKey
-            self.InputSetting:AddActionMapping(self.OldActionMappings[ActionName])
+            self.InputSetting:RemoveActionMapping(OldActionMapping)
+            OldActionMapping.Key = NewKey
+            self.InputSetting:AddActionMapping(OldActionMapping)
             self.InputSetting:SaveKeyMappings()
             HeroUSDKSubsystem():UploadTrackLog_Lua("key_bindings", {
               key_bindings_info = {key_name = ActionName, key_binding = KeyName}

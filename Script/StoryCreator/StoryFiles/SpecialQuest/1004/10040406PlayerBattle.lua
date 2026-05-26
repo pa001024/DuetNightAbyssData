@@ -47,11 +47,11 @@ return {
       key = "177874504266413632388",
       type = "StoryNode",
       name = "玩家视角",
-      pos = {x = 1447.9999999999998, y = 298},
+      pos = {x = 1445.9999999999998, y = 297.0344827586207},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040406_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -132,7 +132,19 @@ return {
             endPort = "Fail"
           },
           {
+            startQuest = "177874504266413632400",
+            startPort = "Out",
+            endQuest = "177969628728015478056",
+            endPort = "In"
+          },
+          {
             startQuest = "177874504266413632401",
+            startPort = "Out",
+            endQuest = "177969629519415478179",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969629519415478179",
             startPort = "Out",
             endQuest = "177874520492713633669",
             endPort = "In"
@@ -323,6 +335,34 @@ return {
             name = "成功完成特殊任务",
             pos = {x = 2965.6666666666665, y = 377.6666666666665},
             propsData = {}
+          },
+          ["177969628728015478056"] = {
+            key = "177969628728015478056",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2549.70634898036, y = 167.08628009380138},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0165_story_xier_theme.0165_story_xier_theme'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["177969629519415478179"] = {
+            key = "177969629519415478179",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2888.1678874418985, y = 176.31704932457055},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}

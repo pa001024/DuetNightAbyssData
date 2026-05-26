@@ -1,4 +1,5 @@
 require("UnLua")
+local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
 local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local M = Class({
   "BluePrints.UI.UI_PC.Common.Common_Dialog.Common_Dialog_ContentBase"
@@ -46,7 +47,7 @@ function M:GetItemContents()
     return self.ItemContents
   end
   self.ItemContents = {}
-  local Avatar = GWorld:GetAvatar()
+  local Avatar = ArmoryUtils:GetAvatar()
   local WeaponInfo = Avatar.Weapons[self.WeaponUuid]
   local HyperTalent = WeaponInfo and WeaponInfo.HyperTalent
   for TalentId, Info in pairs(DataMgr.HyperWeaponSkillTree) do
@@ -54,11 +55,7 @@ function M:GetItemContents()
       local Content = {}
       Content.WeaponCardLevel = Info.WeaponCardLevel
       Content.SkillIndex = Info.SkillIndex or 0
-      Content.IsLocked = true
-      local CardTaltents = HyperTalent and HyperTalent[Info.WeaponCardLevel]
-      if CardTaltents and CardTaltents[TalentId] then
-        Content.IsLocked = false
-      end
+      Content.IsLocked = self:IsTargetTalentLocked(HyperTalent, Info.WeaponCardLevel, TalentId)
       Content.Name = HyperWeaponUtils.GetTalentName(TalentId)
       Content.Desc = HyperWeaponUtils.GetSkillDesc(TalentId)
       table.insert(self.ItemContents, Content)
@@ -72,6 +69,19 @@ function M:GetItemContents()
     end
   end)
   return self.ItemContents
+end
+
+function M:IsTargetTalentLocked(HyperTalent, WeaponCardLevel, TargetId)
+  if not HyperTalent then
+    return true
+  end
+  local CardTaltents = HyperTalent[WeaponCardLevel] or {}
+  for IdA, IdB in pairs(CardTaltents) do
+    if IdA == TargetId or IdB == TargetId then
+      return false
+    end
+  end
+  return true
 end
 
 function M:OnContentAnalogValueChanged(MyGeometry, InAnalogInputEvent)

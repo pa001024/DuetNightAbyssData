@@ -214,7 +214,6 @@ end
 
 function M:OnListItemClicked(Content)
   if 1 == self.WalnutChoiceFinish then
-    return
   end
   if self.CheckIsAutoModeTimer and self.CurrentSelectContent and self.CurrentSelectContent.Id ~= Content.Id then
     self:RemoveTimer(self.CheckIsAutoModeTimer)

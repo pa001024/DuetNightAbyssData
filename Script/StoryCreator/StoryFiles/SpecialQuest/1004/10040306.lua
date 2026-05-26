@@ -21,9 +21,9 @@ return {
       key = "17782425578054770724",
       type = "StoryNode",
       name = "引爆炸弹战斗节点",
-      pos = {x = 1113.4857142857145, y = 95.42857142857154},
+      pos = {x = 1109.2, y = 64.39408866995086},
       propsData = {
-        QuestId = 10040306,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040306_01",
         QuestDeatil = "Description_10040306_01",
@@ -45,8 +45,8 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Mechanism",
+        StoryGuidePointName = "Mechanism_Storeroom_2480211",
         JumpId = 0
       },
       questNodeData = {
@@ -60,19 +60,7 @@ return {
           {
             startQuest = "17782425578054770729",
             startPort = "QuestStart",
-            endQuest = "17782425578054770732",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782425578054770729",
-            startPort = "QuestStart",
             endQuest = "17782425578054770734",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782425578054770733",
-            startPort = "Out",
-            endQuest = "17782425775454771195",
             endPort = "In"
           },
           {
@@ -104,6 +92,48 @@ return {
             startPort = "Out",
             endQuest = "17782425578054770731",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17782425578054770729",
+            startPort = "QuestStart",
+            endQuest = "177891737792077745592",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17782425578054770729",
+            startPort = "QuestStart",
+            endQuest = "1779189029526135220167",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782425578054770733",
+            startPort = "Out",
+            endQuest = "1779189043780135220498",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779189043780135220498",
+            startPort = "Out",
+            endQuest = "1779189053935135220770",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779189053935135220770",
+            startPort = "Out",
+            endQuest = "17782425775454771195",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782425578054770729",
+            startPort = "QuestStart",
+            endQuest = "1779420671975751",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779420671975751",
+            startPort = "Out",
+            endQuest = "17782425578054770732",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -111,14 +141,14 @@ return {
             key = "17782425578054770729",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 220.90263691683566, y = 341.8116792996691},
+            pos = {x = -258.0259345117358, y = 350.38310787109765},
             propsData = {ModeType = 0}
           },
           ["17782425578054770730"] = {
             key = "17782425578054770730",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1702.7219980097304, y = 400.7100287483415},
+            pos = {x = 1981.144937077831, y = 344.79605025371785},
             propsData = {ModeType = 0}
           },
           ["17782425578054770731"] = {
@@ -214,7 +244,7 @@ return {
             key = "17782425775454771195",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 1264, y = 356},
+            pos = {x = 1734.0000000000002, y = 348.22222222222223},
             propsData = {}
           },
           ["17783048049114774482"] = {
@@ -252,6 +282,63 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 581.1546456527274, y = 825.7221841457774},
             propsData = {}
+          },
+          ["177891737792077745592"] = {
+            key = "177891737792077745592",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 594.8, y = 690.325},
+            propsData = {
+              TargetTime = 18,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["1779189029526135220167"] = {
+            key = "1779189029526135220167",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 593.187134502924, y = -10.138157894736793},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {172480414}
+            }
+          },
+          ["1779189043780135220498"] = {
+            key = "1779189043780135220498",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 1225.4093567251462, y = 349.86184210526324},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {172480414}
+            }
+          },
+          ["1779189053935135220770"] = {
+            key = "1779189053935135220770",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 1489.6801900584796, y = 334.30628654970764},
+            propsData = {WaitTime = 5}
+          },
+          ["1779420671975751"] = {
+            key = "1779420671975751",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 320.6148459383753, y = 340.2857142857142},
+            propsData = {
+              VarName = "First10040306",
+              VarValue = 1
+            }
           }
         },
         commentData = {}
@@ -262,7 +349,7 @@ return {
       key = "17782426112415580940",
       type = "StoryStartNode",
       name = "StoryStart",
-      pos = {x = 816.8, y = 98.39999999999998},
+      pos = {x = 795.3714285714285, y = 91.97142857142856},
       propsData = {QuestChainId = 0},
       questNodeData = {
         lineData = {},
@@ -275,7 +362,7 @@ return {
       key = "17782426112415580941",
       type = "StoryEndNode",
       name = "StoryEnd",
-      pos = {x = 1459.0668510551877, y = 100.46607697013386},
+      pos = {x = 1409.7811367694735, y = 96.18036268441956},
       propsData = {},
       questNodeData = {
         lineData = {},

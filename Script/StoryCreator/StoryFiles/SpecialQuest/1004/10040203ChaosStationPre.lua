@@ -47,7 +47,7 @@ return {
       key = "177847742045518822132",
       type = "StoryNode",
       name = "靠近芙罗拉专列",
-      pos = {x = 1264.5901894639396, y = 281.48688937837017},
+      pos = {x = 1266.1691368323607, y = 283.0658367467912},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -84,24 +84,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177847742045618822137",
-            startPort = "Out",
-            endQuest = "177847742045618822139",
-            endPort = "In"
-          },
-          {
-            startQuest = "177847742045618822139",
-            startPort = "Out",
-            endQuest = "177847742045618822138",
-            endPort = "In"
-          },
-          {
-            startQuest = "177847742045618822137",
-            startPort = "Fail",
-            endQuest = "177847742045518822135",
-            endPort = "Fail"
-          },
-          {
             startQuest = "177847742045518822133",
             startPort = "QuestStart",
             endQuest = "177847742045618822140",
@@ -122,11 +104,65 @@ return {
           {
             startQuest = "177847742045518822133",
             startPort = "QuestStart",
+            endQuest = "177891693187769540108",
+            endPort = "Input"
+          },
+          {
+            startQuest = "177847742045618822137",
+            startPort = "Fail",
+            endQuest = "1779163564102749",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779163564102749",
+            startPort = "Out",
+            endQuest = "177847742045518822135",
+            endPort = "Fail"
+          },
+          {
+            startQuest = "177847742045518822133",
+            startPort = "QuestStart",
+            endQuest = "17795244169351102",
+            endPort = "In"
+          },
+          {
+            startQuest = "17795244169351102",
+            startPort = "true",
+            endQuest = "177847742045618822137",
+            endPort = "In"
+          },
+          {
+            startQuest = "17795244169351102",
+            startPort = "false",
             endQuest = "177847742045618822136",
             endPort = "In"
           },
           {
+            startQuest = "177847742045618822137",
+            startPort = "Out",
+            endQuest = "177969448552911607484",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969448552911607484",
+            startPort = "Out",
+            endQuest = "177847742045618822139",
+            endPort = "In"
+          },
+          {
+            startQuest = "177847742045618822139",
+            startPort = "Out",
+            endQuest = "177847742045618822138",
+            endPort = "In"
+          },
+          {
             startQuest = "177847742045618822138",
+            startPort = "Out",
+            endQuest = "1779712658731970205",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779712658731970205",
             startPort = "Out",
             endQuest = "17784740019714854835",
             endPort = "In"
@@ -137,7 +173,7 @@ return {
             key = "17784740019714854835",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2803.425696594427, y = 292.5961042311664},
+            pos = {x = 3004.425696594427, y = 295.5961042311664},
             propsData = {}
           },
           ["177847742045518822133"] = {
@@ -158,14 +194,14 @@ return {
             key = "177847742045518822135",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2034.229691876751, y = 752.7608543417365},
+            pos = {x = 2076.229691876751, y = 706.2608543417365},
             propsData = {}
           },
           ["177847742045618822136"] = {
             key = "177847742045618822136",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 725.9016233292326, y = 237.6991402019865},
+            pos = {x = 708.9451015901021, y = 347.26435759329087},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 2530011,
@@ -177,7 +213,7 @@ return {
             key = "177847742045618822137",
             type = "TalkNode",
             name = "初遇史蒂芬",
-            pos = {x = 1571.6108038408527, y = 248.13977802647258},
+            pos = {x = 1124.1364955404574, y = 282.85321676165046},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -227,13 +263,13 @@ return {
             key = "177847742045618822138",
             type = "TalkNode",
             name = "与史蒂芬对话",
-            pos = {x = 2402.761904761905, y = 330.095238095238},
+            pos = {x = 2436.3934837092734, y = 311.4636591478696},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
-              FirstDialogueId = 10041443,
+              FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10041901.10041901'",
-              TalkType = "FixSimple",
+              TalkType = "QuestImpression",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -277,11 +313,11 @@ return {
             key = "177847742045618822139",
             type = "TalkNode",
             name = "站桩过场-帮助史蒂芬",
-            pos = {x = 2054.7781385281387, y = 276.1645021645021},
+            pos = {x = 2054.7781385281387, y = 274.8008658008657},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
-              FirstDialogueId = 10010101,
+              FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/Chapter03_Fix_SEQ_04.Chapter03_Fix_SEQ_04'",
               TalkType = "FixSimple",
               TalkStageName = "",
@@ -327,7 +363,7 @@ return {
             key = "177847742045618822140",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 751.0709586466165, y = 6.79801777170205},
+            pos = {x = 723.6796542987904, y = -134.07154744568928},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["177847742045618822141"] = {
@@ -336,6 +372,71 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 1271.4857313738894, y = 685.2525632262475},
             propsData = {}
+          },
+          ["177891693187769540108"] = {
+            key = "177891693187769540108",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 10, y = -58},
+            propsData = {
+              TargetTime = 16,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["1779163564102749"] = {
+            key = "1779163564102749",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1664.9543226381459, y = 533.9226827094471},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "Fail",
+              UnitId = -1
+            }
+          },
+          ["17795244169351102"] = {
+            key = "17795244169351102",
+            type = "ExecuteBlueprintFunctionCheckVarNode",
+            name = "执行变量检测函数",
+            pos = {x = 395.13043478260846, y = 267.8012422360248},
+            propsData = {
+              FunctionName = "Equal",
+              VarName = "FirstStateChaosPre100402",
+              Duration = 0,
+              VarInfos = {
+                {VarName = "Value", VarValue = "2"}
+              }
+            }
+          },
+          ["177969448552911607484"] = {
+            key = "177969448552911607484",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1700.4210526315787, y = 271.5541795665634},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
+          },
+          ["1779712658731970205"] = {
+            key = "1779712658731970205",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2728.5, y = 300},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}

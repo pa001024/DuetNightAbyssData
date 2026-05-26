@@ -1,4 +1,4 @@
-local DedicatedServerBase = DungeonClass.Class("BluePrints.DungeonObject.BaseDungeonObject")
+local DedicatedServerBase = DungeonClass.Class()
 
 function DedicatedServerBase:BeginPlay()
   print("DedicatedServerBase BeginPlay")

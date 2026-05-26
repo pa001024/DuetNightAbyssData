@@ -4,6 +4,7 @@ local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
 local PageJumpUtils = require("Utils.PageJumpUtils")
 local RewardBox = require("BluePrints.Client.CustomTypes.SimpleRewardBox")
 local RewardUtils = require("Utils.RewardUtils")
+local RewardListUtils = require("BluePrints.UI.WBP.Activity.PC.SkinCollect.SkinCollectRewardListUtils")
 local UIUtils = require("Utils.UIUtils")
 local ShopUtils = require("Utils.ShopUtils")
 local M = Class({
@@ -11,9 +12,9 @@ local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 local BaseName = "BluePrints.UI.WBP.Activity.PC.SkinCollect.WBP_Activity_SkinCollect_Base_C"
-local SKIN_COLLECT_ITEM_BP_PATH = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/SkinCollect/CollectItem/WBP_Activity_SkinCollect_Item.WBP_Activity_SkinCollect_Item'"
 local REWARD_LIST_FOCUS_TIMER = "SkinCollectRewardListFocus"
 local REWARD_LIST_REFRESH_TIMER = "SkinCollectRewardListRefresh"
+local REWARD_LIST_ADJUST_TIMER = "SkinCollectRewardListAdjust"
 
 local function GetWidgetRectInTargetSpace(Widget, TargetWidget)
   if not (Widget and TargetWidget and Widget.GetCachedGeometry) or not TargetWidget.GetCachedGeometry then
@@ -34,6 +35,16 @@ local function GetWidgetRectInTargetSpace(Widget, TargetWidget)
     Left = localPos.X,
     Right = localPos.X + localSize.X
   }
+end
+
+local function ResolveRewardListEntryWidget(ListContainer, RewardIndex, RewardWidget)
+  if ListContainer and IsValid(ListContainer) and RewardIndex and RewardIndex > 0 and UE4.URuntimeCommonFunctionLibrary and UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem then
+    local entryWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(ListContainer, RewardIndex - 1)
+    if entryWidget and IsValid(entryWidget) then
+      return entryWidget
+    end
+  end
+  return RewardWidget
 end
 
 function M:Initialize(Initializer)
@@ -61,6 +72,7 @@ end
 function M:RemoveRewardListTimers()
   self:RemoveTimer(REWARD_LIST_FOCUS_TIMER)
   self:RemoveTimer(REWARD_LIST_REFRESH_TIMER)
+  self:RemoveTimer(REWARD_LIST_ADJUST_TIMER)
 end
 
 function M:InitPage(ActivityId, ParentTabId, AllActivityId, ParentWidget)
@@ -219,40 +231,11 @@ function M:GetRewardListContainer()
   table.insert(candidates, self.ListItem)
   table.insert(candidates, self.ScrollList)
   for _, widget in ipairs(candidates) do
-    if widget and IsValid(widget) then
-      if widget.AddItem and widget.ClearListItems then
-        return "ListView", widget
-      end
-      if widget.AddChild and widget.ClearChildren and widget.ScrollWidgetIntoView then
-        return "ScrollBox", widget
-      end
+    if widget and IsValid(widget) and widget.AddItem and widget.ClearListItems then
+      return "ListView", widget
     end
   end
   return nil, nil
-end
-
-function M:GetFocusedRewardIndex()
-  if self.RewardItemContents and self.RewardItemWidgets then
-    for index, _ in ipairs(self.RewardItemContents) do
-      local widget = self.RewardItemWidgets[index]
-      if widget and IsValid(widget) then
-        local hasFocus = false
-        if widget.HasAnyUserFocus and widget:HasAnyUserFocus() then
-          hasFocus = true
-        elseif widget.HasFocusedDescendants and widget:HasFocusedDescendants() then
-          hasFocus = true
-        end
-        if hasFocus then
-          self.LastFocusedRewardIndex = index
-          return index
-        end
-      end
-    end
-  end
-  if self.LastFocusedRewardIndex and self.RewardItemContents and self.RewardItemContents[self.LastFocusedRewardIndex] then
-    return self.LastFocusedRewardIndex
-  end
-  return self.DefaultRewardIndex or 1
 end
 
 function M:GetCurrentRewardSelectedContent()
@@ -270,52 +253,19 @@ function M:GetCurrentRewardSelectedContent()
     end
     return nil
   end
-  if not self.RewardItemContents or 0 == #self.RewardItemContents then
-    return nil
-  end
-  local focusedIndex = self:GetFocusedRewardIndex()
-  return self.RewardItemContents[focusedIndex]
+  return nil
 end
 
 function M:GetCurrentRewardSelectedWidget()
   local containerType, listContainer = self:GetRewardListContainer()
   if "ListView" == containerType and listContainer then
-    local focusedIndex = self:GetFocusedRewardIndex()
+    local focusedIndex = self.LastFocusedRewardIndex or self.DefaultRewardIndex or 1
     if UE4.URuntimeCommonFunctionLibrary and UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem then
       return UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(listContainer, focusedIndex - 1)
     end
     return nil
   end
-  if not self.RewardItemWidgets then
-    return nil
-  end
-  local focusedIndex = self:GetFocusedRewardIndex()
-  return self.RewardItemWidgets[focusedIndex]
-end
-
-function M:GetFirstVisibleRewardIndex()
-  local containerType, listContainer = self:GetRewardListContainer()
-  if not ("ScrollBox" == containerType and listContainer) or not self.RewardItemWidgets then
-    return nil
-  end
-  local containerGeometry = listContainer.GetCachedGeometry and listContainer:GetCachedGeometry()
-  if not containerGeometry then
-    return nil
-  end
-  local containerSize = UE4.USlateBlueprintLibrary.GetLocalSize(containerGeometry)
-  if not containerSize or containerSize.X <= 0 then
-    return nil
-  end
-  local bestIndex
-  local bestLeft = math.huge
-  for index, widget in ipairs(self.RewardItemWidgets) do
-    local rect = GetWidgetRectInTargetSpace(widget, listContainer)
-    if rect and rect.Right > 0 and rect.Left < containerSize.X and bestLeft > rect.Left then
-      bestLeft = rect.Left
-      bestIndex = index
-    end
-  end
-  return bestIndex
+  return nil
 end
 
 local function GetRewardItemFocusTarget(rewardWidget)
@@ -337,51 +287,6 @@ local function GetRewardItemFocusTarget(rewardWidget)
   return rewardWidget
 end
 
-local function ScrollRewardWidgetIntoSafeView(scrollBox, targetWidget)
-  if not (scrollBox and targetWidget and IsValid(scrollBox)) or not IsValid(targetWidget) then
-    return false
-  end
-  if not (scrollBox.GetCachedGeometry and scrollBox.GetScrollOffset) or not scrollBox.SetScrollOffset then
-    return false
-  end
-  local containerGeometry = scrollBox:GetCachedGeometry()
-  if not containerGeometry then
-    return false
-  end
-  local containerSize = UE4.USlateBlueprintLibrary.GetLocalSize(containerGeometry)
-  if not containerSize or containerSize.X <= 0 then
-    return false
-  end
-  local rect = GetWidgetRectInTargetSpace(targetWidget, scrollBox)
-  if not rect then
-    return false
-  end
-  local currentOffset = scrollBox:GetScrollOffset() or 0
-  local safePadding = math.min(24, math.max(containerSize.X * 0.08, 0))
-  local safeLeft = safePadding
-  local safeRight = containerSize.X - safePadding
-  if safeLeft >= safeRight then
-    safeLeft = 0
-    safeRight = containerSize.X
-  end
-  local targetOffset = currentOffset
-  if safeLeft > rect.Left then
-    targetOffset = currentOffset - (safeLeft - rect.Left)
-  elseif safeRight < rect.Right then
-    targetOffset = currentOffset + (rect.Right - safeRight)
-  else
-    return true
-  end
-  if scrollBox.GetScrollOffsetOfEnd then
-    local endOffset = scrollBox:GetScrollOffsetOfEnd() or 0
-    targetOffset = math.max(math.min(targetOffset, endOffset), 0)
-  else
-    targetOffset = math.max(targetOffset, 0)
-  end
-  scrollBox:SetScrollOffset(targetOffset)
-  return true
-end
-
 function M:FocusRewardItemByIndex(rewardIndex)
   if not rewardIndex or rewardIndex <= 0 then
     return false
@@ -392,73 +297,49 @@ function M:FocusRewardItemByIndex(rewardIndex)
   end
   self.LastFocusedRewardIndex = rewardIndex
   self:RemoveTimer(REWARD_LIST_REFRESH_TIMER)
-  if "ListView" == containerType then
-    local targetIndex = rewardIndex - 1
-    local targetContent = self.RewardItemContents and self.RewardItemContents[rewardIndex]
-    local refreshSerial = self.RewardListRefreshSerial
-    if listContainer.ScrollIndexIntoView then
-      listContainer:ScrollIndexIntoView(targetIndex)
-    end
-    if listContainer.NavigateToIndex then
-      listContainer:NavigateToIndex(targetIndex)
-    end
-    if listContainer.SetSelectedIndex then
-      listContainer:SetSelectedIndex(targetIndex)
-    end
-    if listContainer.SetFocus then
-      listContainer:SetFocus()
-    end
-    if self.GameInputModeSubsystem and UE4.URuntimeCommonFunctionLibrary and UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem then
-      self:RemoveTimer(REWARD_LIST_FOCUS_TIMER)
-      self:AddTimer(0.01, function()
-        if refreshSerial ~= self.RewardListRefreshSerial then
-          return
-        end
-        local curContainerType, curContainer = self:GetRewardListContainer()
-        if "ListView" ~= curContainerType or curContainer ~= listContainer or not IsValid(curContainer) then
-          return
-        end
-        if targetContent and self.RewardItemContents and self.RewardItemContents[rewardIndex] ~= targetContent then
-          return
-        end
-        local entryWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(listContainer, targetIndex)
-        if entryWidget and IsValid(entryWidget) then
-          if entryWidget.SetListFocusGamepadHintVisible then
-            entryWidget:SetListFocusGamepadHintVisible(self.IsInListFocus == true and true ~= self.IsRewardTipsOpen)
-          end
-          local focusTarget = GetRewardItemFocusTarget(entryWidget)
-          if focusTarget then
-            self.GameInputModeSubsystem:SetTargetUIFocusWidget(focusTarget)
-            if focusTarget.SetFocus then
-              focusTarget:SetFocus()
-            end
-          end
-        elseif listContainer.SetFocus then
-          listContainer:SetFocus()
-        end
-      end, false, 0, REWARD_LIST_FOCUS_TIMER, true)
-    elseif listContainer.SetFocus then
-      listContainer:SetFocus()
-    end
-    return true
-  end
-  local targetWidget = self.RewardItemWidgets and self.RewardItemWidgets[rewardIndex]
-  if not targetWidget or not IsValid(targetWidget) then
+  if "ListView" ~= containerType then
     return false
   end
-  if targetWidget.SetListFocusGamepadHintVisible then
-    targetWidget:SetListFocusGamepadHintVisible(self.IsInListFocus == true and true ~= self.IsRewardTipsOpen)
+  local targetIndex = rewardIndex - 1
+  local targetContent = self.RewardItemContents and self.RewardItemContents[rewardIndex]
+  local refreshSerial = self.RewardListRefreshSerial
+  if listContainer.NavigateToIndex then
+    listContainer:NavigateToIndex(targetIndex)
   end
-  if not ScrollRewardWidgetIntoSafeView(listContainer, targetWidget) and listContainer.ScrollWidgetIntoView then
-    if EDescendantScrollDestination then
-      listContainer:ScrollWidgetIntoView(targetWidget, true, EDescendantScrollDestination.Center)
-    else
-      listContainer:ScrollWidgetIntoView(targetWidget, true)
-    end
+  if listContainer.SetSelectedIndex then
+    listContainer:SetSelectedIndex(targetIndex)
   end
-  local focusTarget = GetRewardItemFocusTarget(targetWidget)
-  if focusTarget and focusTarget.SetFocus then
-    focusTarget:SetFocus()
+  if self.GameInputModeSubsystem and UE4.URuntimeCommonFunctionLibrary and UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem then
+    self:RemoveTimer(REWARD_LIST_FOCUS_TIMER)
+    self:AddTimer(0.01, function()
+      if refreshSerial ~= self.RewardListRefreshSerial then
+        return
+      end
+      local curContainerType, curContainer = self:GetRewardListContainer()
+      if "ListView" ~= curContainerType or curContainer ~= listContainer or not IsValid(curContainer) then
+        return
+      end
+      if targetContent and self.RewardItemContents and self.RewardItemContents[rewardIndex] ~= targetContent then
+        return
+      end
+      local entryWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(listContainer, targetIndex)
+      if entryWidget and IsValid(entryWidget) then
+        if entryWidget.SetListFocusGamepadHintVisible then
+          entryWidget:SetListFocusGamepadHintVisible(self.IsInListFocus == true and true ~= self.IsRewardTipsOpen)
+        end
+        local focusTarget = GetRewardItemFocusTarget(entryWidget)
+        if focusTarget then
+          self.GameInputModeSubsystem:SetTargetUIFocusWidget(focusTarget)
+          if focusTarget.SetFocus then
+            focusTarget:SetFocus()
+          end
+        end
+      elseif listContainer.SetFocus then
+        listContainer:SetFocus()
+      end
+    end, false, 0, REWARD_LIST_FOCUS_TIMER, true)
+  elseif listContainer.SetFocus then
+    listContainer:SetFocus()
   end
   return true
 end
@@ -466,6 +347,35 @@ end
 function M:OnRewardItemFocused(rewardIndex, rewardWidget)
   if rewardIndex and rewardIndex > 0 then
     self.LastFocusedRewardIndex = rewardIndex
+  end
+  local containerType, listContainer = self:GetRewardListContainer()
+  if "ListView" == containerType and listContainer and IsValid(listContainer) then
+    self:RemoveTimer(REWARD_LIST_ADJUST_TIMER)
+    self:AddTimer(0.01, function()
+      if rewardIndex ~= self.LastFocusedRewardIndex then
+        return
+      end
+      local curContainerType, curContainer = self:GetRewardListContainer()
+      if "ListView" ~= curContainerType or curContainer ~= listContainer or not IsValid(curContainer) then
+        return
+      end
+      local debugWidget = ResolveRewardListEntryWidget(curContainer, rewardIndex, rewardWidget)
+      if debugWidget and IsValid(debugWidget) and curContainer.SetScrollOffset then
+        local rect = GetWidgetRectInTargetSpace(debugWidget, curContainer)
+        local listGeometry = curContainer.GetCachedGeometry and curContainer:GetCachedGeometry() or nil
+        local listSize = listGeometry and UE4.USlateBlueprintLibrary.GetLocalSize(listGeometry) or nil
+        if rect and listSize then
+          local itemWidth = rect.Right - rect.Left
+          local overflow = rect.Right - listSize.X
+          if overflow > 1.0 then
+            local currentOffset = curContainer.GetScrollOffset and curContainer:GetScrollOffset() or 0
+            local endOffset = curContainer.GetScrollOffsetOfEnd and curContainer:GetScrollOffsetOfEnd() or currentOffset
+            local targetOffset = RewardListUtils.CalcTailOverflowScrollOffset(currentOffset, endOffset, listSize.X, overflow)
+            curContainer:SetScrollOffset(targetOffset)
+          end
+        end
+      end
+    end, false, 0, REWARD_LIST_ADJUST_TIMER, true)
   end
   if rewardWidget and rewardWidget.SetListFocusGamepadHintVisible then
     rewardWidget:SetListFocusGamepadHintVisible(self.IsInListFocus == true and true ~= self.IsRewardTipsOpen)
@@ -478,7 +388,7 @@ end
 function M:OnRewardTipsOpenChanged(bIsOpen, rewardWidget)
   self.IsRewardTipsOpen = true == bIsOpen
   if type(self.RefreshResourceBarGamepadKey) == "function" then
-    self:RefreshResourceBarGamepadKey(self.IsRewardTipsOpen)
+    self:RefreshResourceBarGamepadKey(self.IsRewardTipsOpen or true == self.IsInListFocus)
   end
   if rewardWidget and rewardWidget.SetListFocusGamepadHintVisible then
     rewardWidget:SetListFocusGamepadHintVisible(true == self.IsInListFocus and self.IsRewardTipsOpen ~= true)
@@ -529,11 +439,8 @@ function M:RefreshItemList(Avatar, bPlayUnlockAnim)
   local closestIndex = 1
   local closestDist = math.huge
   self.RewardItemContents = {}
-  self.RewardItemWidgets = {}
   if "ListView" == containerType then
     listContainer:ClearListItems()
-  else
-    listContainer:ClearChildren()
   end
   for i, target in ipairs(pointsTarget) do
     local rewardIds = self:GetRewardIdsForIndex(pointsReward, i)
@@ -553,19 +460,7 @@ function M:RefreshItemList(Avatar, bPlayUnlockAnim)
     Content.bPlayUnlockAnim = true == bPlayUnlockAnim
     Content.ParentWidget = self
     self.RewardItemContents[i] = Content
-    if "ListView" == containerType then
-      listContainer:AddItem(Content)
-    else
-      local itemWidget = UIManager(self):CreateWidget(SKIN_COLLECT_ITEM_BP_PATH)
-      if itemWidget then
-        Content.SelfWidget = itemWidget
-        listContainer:AddChild(itemWidget)
-        if itemWidget.OnListItemObjectSet then
-          itemWidget:OnListItemObjectSet(Content)
-        end
-        self.RewardItemWidgets[i] = itemWidget
-      end
-    end
+    listContainer:AddItem(Content)
     local dist = math.abs(currentScore - target)
     if closestDist > dist then
       closestDist = dist
@@ -583,30 +478,42 @@ function M:RefreshItemList(Avatar, bPlayUnlockAnim)
     if not (curContainerType and curContainer) or not IsValid(curContainer) then
       return
     end
-    if "ListView" == curContainerType then
-      if targetContent and self.RewardItemContents and self.RewardItemContents[closestIndex] ~= targetContent then
-        return
-      end
-      local scrollToIndex = math.max((closestIndex or 1) - 1, 0)
-      if curContainer.ScrollIndexIntoView then
-        curContainer:ScrollIndexIntoView(scrollToIndex)
-      end
-      if curContainer.SetSelectedIndex then
-        curContainer:SetSelectedIndex(scrollToIndex)
-      end
+    if "ListView" ~= curContainerType then
       return
     end
     if targetContent and self.RewardItemContents and self.RewardItemContents[closestIndex] ~= targetContent then
       return
     end
-    local targetWidget = self.RewardItemWidgets and self.RewardItemWidgets[closestIndex]
-    if targetWidget and IsValid(targetWidget) and curContainer.ScrollWidgetIntoView then
-      if EDescendantScrollDestination then
-        curContainer:ScrollWidgetIntoView(targetWidget, true, EDescendantScrollDestination.Center)
-      else
-        curContainer:ScrollWidgetIntoView(targetWidget, true)
-      end
+    local scrollToIndex = math.max((closestIndex or 1) - 1, 0)
+    if curContainer.SetSelectedIndex then
+      curContainer:SetSelectedIndex(scrollToIndex)
     end
+    if curContainer.ScrollIndexIntoView then
+      curContainer:ScrollIndexIntoView(scrollToIndex)
+    end
+    self:AddTimer(0, function()
+      if not self or refreshSerial ~= self.RewardListRefreshSerial then
+        return
+      end
+      local finalContainerType, finalContainer = self:GetRewardListContainer()
+      if not ("ListView" == finalContainerType and finalContainer) or not IsValid(finalContainer) then
+        return
+      end
+      if targetContent and self.RewardItemContents and self.RewardItemContents[closestIndex] ~= targetContent then
+        return
+      end
+      if not UE4.URuntimeCommonFunctionLibrary or not UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem then
+        return
+      end
+      local targetWidget = UE4.URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(finalContainer, scrollToIndex)
+      if targetWidget and IsValid(targetWidget) and finalContainer.ScrollWidgetIntoView then
+        if EDescendantScrollDestination then
+          finalContainer:ScrollWidgetIntoView(targetWidget, true, EDescendantScrollDestination.Center)
+        else
+          finalContainer:ScrollWidgetIntoView(targetWidget, true)
+        end
+      end
+    end, false, 0, REWARD_LIST_REFRESH_TIMER, true)
   end, false, 0, REWARD_LIST_REFRESH_TIMER, true)
 end
 
@@ -1034,7 +941,7 @@ function M:OnClickUnlock()
       self:OpenMoonStoneRecharge(unlockCost, currentUnlockCount)
     end
   end
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/feina_gift_day_sort_btn_click", nil, nil)
 end
 
 function M:ShowUnlockConfirmDialog()
@@ -1146,7 +1053,7 @@ function M:OnClickClaimAll()
     return
   end
   self:ReqClaimAllReward()
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_normal", nil, nil)
 end
 
 function M:OnClickSkinTask()
@@ -1155,7 +1062,7 @@ function M:OnClickSkinTask()
     return
   end
   PageJumpUtils:JumpToTargetPageByJumpId(PageConfigData.JumpUIId, self.CurActivityId)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/confirm_click", nil, nil)
 end
 
 function M:GetPlayerResourceCount(Avatar)
@@ -1335,7 +1242,14 @@ function M:TryClaimRewardByIndex(rewardIndex)
     self:SyncClaimableReddot(curAvatar)
     self:ShowClaimRewardPopup(curAvatar, rewardIndex)
   end, self.CurActivityId, rewardIndex)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+  local rewardIds = self:GetRewardIdsForIndex(self.RewardConfigData.PointsReward, rewardIndex)
+  local firstRewardId = rewardIds and rewardIds[1]
+  local rewardInfo = firstRewardId and DataMgr.Reward and DataMgr.Reward[firstRewardId]
+  if rewardInfo and rewardInfo.Id and rewardInfo.Id[1] then
+    AudioManager(self):PlayItemSound(self, rewardInfo.Id[1], "Click", rewardInfo.Type and rewardInfo.Type[1] or nil)
+  else
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
+  end
   return true
 end
 
@@ -1347,6 +1261,7 @@ function M:OnUnlockSuccess()
     self:RefreshClaimAllBtnState(nil)
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/item_unlock_refresh", nil, nil)
   self:RefreshItemList(Avatar, true)
   self:RefreshUnlockBtnState(Avatar)
   self:RefreshClaimAllBtnState(Avatar)

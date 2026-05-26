@@ -1,4 +1,5 @@
 local ArmoryUtils = require("BluePrints.UI.WBP.Armory.ArmoryUtils")
+local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local M = Class()
 local _WeaponMap = {}
 local _WeaponSkinMap = {}
@@ -211,6 +212,26 @@ function M:IsWeaponHasReward(WeaponId)
   return false
 end
 
+function M:IsMeleeWeaponHasForgeReward()
+  local HasOwnedMeleeWeapon = HyperWeaponUtils.HasOwnedHyperWeapon("Melee")
+  if HasOwnedMeleeWeapon then
+    return HyperWeaponUtils.HasAnyForgeRewards(1, 5)
+  end
+  return false
+end
+
+function M:IsRangedWeaponHasForgeReward()
+  local HasOwnedRangedWeapon = HyperWeaponUtils.HasOwnedHyperWeapon("Ranged")
+  if HasOwnedRangedWeapon then
+    return HyperWeaponUtils.HasAnyForgeRewards(1, 5)
+  end
+  return false
+end
+
+function M:IsWeaponHasForgeReward()
+  return self:IsMeleeWeaponHasForgeReward() or self:IsRangedWeaponHasForgeReward()
+end
+
 function M:GetWeaponRewardInfo()
   return _WeaponReward
 end
@@ -253,6 +274,42 @@ function M:OnPropChangeStoredCollectReward(Strings)
   end
 end
 
+function M:_UpdateForgeRewardRedDot()
+  local HasReward = self:IsWeaponHasForgeReward()
+  if HasReward then
+    ArmoryUtils:TryAddMeleeWeaponForgeRewardReddot()
+    ArmoryUtils:TryAddRangedWeaponForgeRewardReddot()
+  else
+    ArmoryUtils:TryClearMeleeWeaponForgeRewardReddot()
+    ArmoryUtils:TryClearRangedWeaponForgeRewardReddot()
+  end
+  EventManager:FireEvent(EventID.OnHyperWeaponForgeQuestRewardGot)
+end
+
+function M:OnPropChangeWeaponForgeLevelRewardGot(ForgeLevel)
+  self:_UpdateForgeRewardRedDot()
+end
+
+function M:OnPropChangeWeaponForgeQuests(QuestId)
+  self:_UpdateForgeRewardRedDot()
+end
+
+function M:OnNewHyperWeaponObtained(Uuid, WeaponId)
+  if not HyperWeaponUtils.IsHyperWeapon(WeaponId) then
+    return
+  end
+  ArmoryUtils:TryAddMeleeWeaponForgeRewardReddot()
+  ArmoryUtils:TryAddRangedWeaponForgeRewardReddot()
+end
+
+function M:OnHyperWeaponDeleted(Uuid, WeaponId)
+  if not HyperWeaponUtils.IsHyperWeapon(WeaponId) then
+    return
+  end
+  ArmoryUtils:TryClearMeleeWeaponForgeRewardReddot()
+  ArmoryUtils:TryClearRangedWeaponForgeRewardReddot()
+end
+
 function M:OnNewWeaponObtained(Uuid)
   if not self.Inited then
     return
@@ -271,6 +328,7 @@ function M:OnNewWeaponObtained(Uuid)
       end
       ArmoryUtils:TryAddWeaponRewardReddot(Weapon.WeaponId)
     end
+    self:OnNewHyperWeaponObtained(Uuid, Weapon.WeaponId)
   end
   EventManager:FireEvent(EventID.OnNewWeaponObtained, Uuid)
 end
@@ -301,6 +359,7 @@ function M:OnWeaponDeleted(Uuid)
         ArmoryUtils:_SetReddotReadCommon(WeaponId, DataMgr.ReddotNode.RangedReward.Name, true)
       end
     end
+    self:OnHyperWeaponDeleted(Uuid, WeaponId)
   end
   EventManager:FireEvent(EventID.OnWeaponDeleted, Uuid)
 end

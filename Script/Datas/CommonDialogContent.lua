@@ -300,11 +300,11 @@ return ReadOnly("CommonDialogContent", {
     ContentId = "WBP_Activity_TotalRecharge_DetailHistoryContent"
   },
   WBP_Appearance_Archive_FenghuaDialog = {
-    BPPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/Archive/WBP_Appearance_Archive_FenghuaDialog.WBP_Appearance_Archive_FenghuaDialog’",
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/Archive/WBP_Appearance_Archive_FenghuaDialog.WBP_Appearance_Archive_FenghuaDialog'",
     ContentId = "WBP_Appearance_Archive_FenghuaDialog"
   },
   WBP_Appearance_ImportDyeDialog = {
-    BPPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/Import/WBP_Appearance_ImportDyeDialog.WBP_Appearance_ImportDyeDialog’",
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Appearance/Widget/Import/WBP_Appearance_ImportDyeDialog.WBP_Appearance_ImportDyeDialog'",
     ContentId = "WBP_Appearance_ImportDyeDialog"
   },
   WBP_Armory_AttrRestraintDialog = {
@@ -320,11 +320,11 @@ return ReadOnly("CommonDialogContent", {
     ContentId = "WBP_Armory_Dye_Num"
   },
   WBP_Armory_Incarnon_ActiveDialog = {
-    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Incarnon/WBP_Armory_Incarnon_ActiveDialog.WBP_Armory_Incarnon_ActiveDialog’",
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Incarnon/WBP_Armory_Incarnon_ActiveDialog.WBP_Armory_Incarnon_ActiveDialog'",
     ContentId = "WBP_Armory_Incarnon_ActiveDialog"
   },
   WBP_Armory_Incarnon_DescDialog = {
-    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Incarnon/WBP_Armory_Incarnon_DescDialog.WBP_Armory_Incarnon_DescDialog’",
+    BPPath = "WidgetBlueprint'/Game/UI/WBP/Armory/Widget/Incarnon/WBP_Armory_Incarnon_DescDialog.WBP_Armory_Incarnon_DescDialog'",
     ContentId = "WBP_Armory_Incarnon_DescDialog"
   },
   WBP_Armory_PosInfoDialog = {

@@ -685,7 +685,7 @@ return ReadOnly("BattleWeapon", {
   },
   [10107] = {
     ATKLevelGrow = "ATKS",
-    ATK_Spike = 26,
+    ATK_Spike = 25,
     AddAttrs = T.RT_20,
     CRD = 2.4,
     CRI = 0.24,
@@ -2616,15 +2616,15 @@ return ReadOnly("BattleWeapon", {
         HyperWeaponSkillTreeID = 20599005,
         IsCharAttr = 1,
         IsWeaponMastery = 1,
-        Rate = 0.15,
-        RateZone = "Almighty"
+        RateZone = "Almighty",
+        Value = 0.15
       },
       [3] = {
         AttrName = "StrongValue",
         HyperWeaponSkillTreeID = 20599009,
         IsCharAttr = 1,
         IsWeaponMastery = 1,
-        Rate = 0.35
+        Value = 0.35
       }
     },
     BulletConver = 1.2,

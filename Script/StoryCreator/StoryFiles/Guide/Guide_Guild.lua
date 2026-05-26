@@ -313,7 +313,7 @@ return {
               DelayTime = 0,
               IsForceClick = false,
               IsControlPlayer = false,
-              IsTimePause = true,
+              IsTimePause = false,
               IsShowCursor = true,
               HighLightUIPath = "GuildMain.Anchor:1",
               UICompName = "GuildList",

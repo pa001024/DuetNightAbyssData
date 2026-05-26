@@ -59,22 +59,6 @@ return ReadOnly("StoryVariable", {
     VarName = "BossRe10020708"
   },
   BoxSide = {IsGlobal = true, VarName = "BoxSide"},
-  CZIQ10040401 = {
-    IsGlobal = true,
-    VarName = "CZIQ10040401"
-  },
-  Chapter03_10040305_01 = {
-    IsGlobal = true,
-    VarName = "Chapter03_10040305_01"
-  },
-  Chapter03_10040305_02 = {
-    IsGlobal = true,
-    VarName = "Chapter03_10040305_02"
-  },
-  Chapter03_10040305_03 = {
-    IsGlobal = true,
-    VarName = "Chapter03_10040305_03"
-  },
   CuoShi200305 = {
     IsGlobal = true,
     VarName = "CuoShi200305"
@@ -365,6 +349,38 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "FinishSelectGender"
   },
+  First10040301 = {
+    IsGlobal = true,
+    VarName = "First10040301"
+  },
+  First10040302 = {
+    IsGlobal = true,
+    VarName = "First10040302"
+  },
+  First10040303 = {
+    IsGlobal = true,
+    VarName = "First10040303"
+  },
+  First10040305 = {
+    IsGlobal = true,
+    VarName = "First10040305"
+  },
+  First10040306 = {
+    IsGlobal = true,
+    VarName = "First10040306"
+  },
+  First10040307 = {
+    IsGlobal = true,
+    VarName = "First10040307"
+  },
+  First10040308 = {
+    IsGlobal = true,
+    VarName = "First10040308"
+  },
+  First10040313 = {
+    IsGlobal = true,
+    VarName = "First10040313"
+  },
   First10040410FuluoTalk = {
     IsGlobal = true,
     VarName = "First10040410FuluoTalk"
@@ -499,6 +515,10 @@ return ReadOnly("StoryVariable", {
     IsGlobal = true,
     VarName = "FushuHosWalk02"
   },
+  Glace5120792 = {
+    IsGlobal = true,
+    VarName = "Glace5120792"
+  },
   GlassFirst10040106 = {
     IsGlobal = true,
     VarName = "GlassFirst10040106"
@@ -535,18 +555,14 @@ return ReadOnly("StoryVariable", {
   IQ10040205 = {IsGlobal = true, VarName = "IQ10040205"},
   IQ10040207 = {IsGlobal = true, VarName = "IQ10040207"},
   IQ10040208 = {IsGlobal = true, VarName = "IQ10040208"},
-  IQ10040209 = {IsGlobal = true, VarName = "IQ10040209"},
-  IQ10040310 = {IsGlobal = true, VarName = "IQ10040310"},
   IQ10040312 = {IsGlobal = true, VarName = "IQ10040312"},
   IQ10040401 = {IsGlobal = true, VarName = "IQ10040401"},
   IQ10040402 = {IsGlobal = true, VarName = "IQ10040402"},
   IQ10040403 = {IsGlobal = true, VarName = "IQ10040403"},
   IQ10040406 = {IsGlobal = true, VarName = "IQ10040406"},
-  IQ10040407 = {IsGlobal = true, VarName = "IQ10040407"},
   IQ10040424 = {IsGlobal = true, VarName = "IQ10040424"},
   IQ10040506 = {IsGlobal = true, VarName = "IQ10040506"},
   IQ10040510 = {IsGlobal = true, VarName = "IQ10040510"},
-  IQ10040514 = {IsGlobal = true, VarName = "IQ10040514"},
   IQ110103 = {IsGlobal = true, VarName = "IQ110103"},
   IQ110107 = {IsGlobal = true, VarName = "IQ110107"},
   IQ12010307 = {IsGlobal = true, VarName = "IQ12010307"},
@@ -615,6 +631,10 @@ return ReadOnly("StoryVariable", {
   NengYuanNPC110105 = {
     IsGlobal = true,
     VarName = "NengYuanNPC110105"
+  },
+  Noah5120712 = {
+    IsGlobal = true,
+    VarName = "Noah5120712"
   },
   PaotaiStage110105 = {
     IsGlobal = true,
@@ -791,6 +811,10 @@ return ReadOnly("StoryVariable", {
   Scenpc_512056 = {
     IsGlobal = true,
     VarName = "Scenpc_512056"
+  },
+  Scenpc_512057 = {
+    IsGlobal = true,
+    VarName = "Scenpc_512057"
   },
   Scenpc_512307 = {
     IsGlobal = true,

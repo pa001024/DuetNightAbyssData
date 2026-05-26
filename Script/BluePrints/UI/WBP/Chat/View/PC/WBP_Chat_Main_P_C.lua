@@ -90,7 +90,9 @@ function M:Construct()
       self:HandleSelectPlayerToChat(Uid)
     elseif EventId == ChatCommon.EventID.SelectGuildMemberToChat then
       local Uid = (...)
-      self:HandleSelectPlayerToChat(Uid)
+      if Uid then
+        self:HandleSelectPlayerToChat(Uid)
+      end
     elseif EventId == ChatCommon.EventID.RefreshGuildPlayerList then
       local Uid = (...)
       if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
@@ -162,6 +164,7 @@ function M:Destruct()
   self.Btn_DragLT.OnMouseButtonDownEvent:Unbind()
   self.Btn_Reset.OnClicked:Remove(self, self.BtnResetOnClicked)
   self.Btn_Min:UnBindEventOnReleased(self, self.BtnMinOnReleased)
+  self.GameInputModeSubsystem:SetNavigateWidgetOpacity(1)
   M.Super.Destruct(self)
 end
 
@@ -336,6 +339,7 @@ function M:_AddReddotListenInner(ChannelName, ChannelType)
 end
 
 function M:ResetUI()
+  self:_Stop_SetUpChatMsgListTimer()
   self.CurrSelectPlayer = nil
   self.Group_NewMessage:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -371,7 +375,11 @@ function M:RefreshTeamMemberListInPC()
   return NowCount
 end
 
-function M:_SetUpChatMsgListTimerCallback(MsgList)
+function M:_SetUpChatMsgListTimerCallback(MsgList, Context)
+  if not self:_IsSetUpChatMsgListContextCurrent(Context) then
+    self:_Stop_SetUpChatMsgListTimer()
+    return
+  end
   if self._SetUpChatMsgListIndex == #MsgList then
     self:_Stop_SetUpChatMsgListTimer()
     if 0 == #MsgList then
@@ -417,6 +425,7 @@ function M:HandleSelectPlayerToChat(Uid)
   self._bSelectedPlayerToChat = true
   self:SelectTabByChannelType(ChatCommon.ChannelDef.Friend)
   self._bSelectedPlayerToChat = false
+  self:_ScrollToGuildPrivatePlayerItem(Uid, true)
 end
 
 function M:FreshGamePadView()
@@ -427,9 +436,20 @@ function M:FreshMouseAndKeyboardView()
   self.Btn_DontDisturb.Key_Text:SetVisibility(UIConst.VisibilityOp.Collapsed)
 end
 
+function M:_IsFaceMenuInputActive()
+  if not self.IsOpenMenu then
+    return false
+  end
+  local ChatEmoji = DataMgr.WidgetUI.ChatEmoji.UIName
+  return self.CurrExtraPanelName == ChatEmoji or self.FocusStateType == ChatFocusType.ChatFace or self.IsOpenMenuFace == true or self.CurrExtraPanel and self.CurrExtraPanel.ViewName == ChatEmoji
+end
+
 function M:OnPreviewKeyDown(MyGeo, InKeyEvent)
   local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
   local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if self:_IsFaceMenuInputActive() and (InKeyName == Const.GamepadLeftTrigger or InKeyName == Const.GamepadRightTrigger) then
+    return Unhandled
+  end
   if self.PreViewKeyTable == nil then
     self.PreViewKeyTable = {
       [UIConst.GamePadKey.DPadDown] = function()
@@ -544,8 +564,9 @@ end
 function M:OnRefreshTeamChannelInfo(bIsOverallRefresh)
   if bIsOverallRefresh then
     self:OnTabSelected_InTeam()
+    return
   end
-  self:RefreshTeamMemberListInPC()
+  self:_HandleRefreshTeamMateInTeamChannel()
 end
 
 function M:OnMouseButtonUp(MyGeometry, InMouseEvent)
@@ -690,8 +711,8 @@ function M:InitGamepadKeyTable(InKeyName)
         self.CurrSelectPlayer.UI:_OnDeleteClicked()
         return true
       end
-      if self.CurrChannel == ChatCommon.ChannelDef.InTeam and self.Key_PlayerListTitle:IsVisible() then
-        self:RefreshFocusWidget(ChatFocusType.PlayerList)
+      if self.CurrChannel == ChatCommon.ChannelDef.InTeam and self.Key_PlayerListTitle:IsVisible() and self.List_Player:GetNumItems() > 0 then
+        self:SetPlayerListFocus()
         return true
       end
       if self.Key_ChangeChannel:IsVisible() and (self.CurrChannel == ChatCommon.ChannelDef.Public or self.CurrChannel == ChatCommon.ChannelDef.Region and ChatModel:IsInRegionOnline()) then
@@ -712,11 +733,9 @@ function M:InitGamepadKeyTable(InKeyName)
     end,
     [Const.GamepadFaceButtonRight] = function()
       local RefreshFocusState
-      local IsFriend = self.CurrChannel == ChatCommon.ChannelDef.Friend
+      local IsPlayerListChannel = self.CurrChannel == ChatCommon.ChannelDef.Friend or self.CurrChannel == ChatCommon.ChannelDef.InTeam
       if self.FocusStateType == ChatFocusType.SelectChat then
-        RefreshFocusState = IsFriend and ChatFocusType.PlayerList or ChatFocusType.ScrollBox
-      elseif self.CurrChannel == ChatCommon.ChannelDef.InTeam and self.FocusStateType == ChatFocusType.PlayerList then
-        RefreshFocusState = ChatFocusType.ScrollBox
+        RefreshFocusState = IsPlayerListChannel and ChatFocusType.PlayerList or ChatFocusType.ScrollBox
       end
       if RefreshFocusState then
         self:RefreshFocusWidget(RefreshFocusState)
@@ -742,9 +761,13 @@ function M:OnGamePadDown(InKeyName)
   if self.Com_Input.IsShowGamPadKey then
     if InKeyName == Const.GamepadFaceButtonLeft then
       if self.Group_ChatEmpty:IsVisible() then
-        self:BtnEmptyOnClicked()
+        if self.CurrChannel ~= ChatCommon.ChannelDef.InGuild then
+          self:BtnEmptyOnClicked()
+        end
       elseif self.CurrChannel == ChatCommon.ChannelDef.Friend and self.Panel_Add_02 and self.Panel_Add_02:IsVisible() and self.Btn_Empty_02 then
-        self.Btn_Empty_02.OnClicked:Broadcast()
+        if ChatModel:GetCurrentSubTab() ~= ChatCommon.SubTabType.Guild then
+          self.Btn_Empty_02.OnClicked:Broadcast()
+        end
       else
         self:RefreshFocusWidget(ChatFocusType.InputField)
       end
@@ -789,7 +812,7 @@ end
 
 function M:CheckIsOpenHeadBtnList()
   local IsOpenHead = false
-  if self.CurrSelectPlayer then
+  if self.CurrSelectPlayer and IsValid(self.CurrSelectPlayer.UI) then
     IsOpenHead = self.CurrSelectPlayer.UI.IsOpen
   end
   if not IsOpenHead and self.CurrSelectChatItem then
@@ -822,6 +845,9 @@ function M:RefreshUIPlayerItem()
     return
   end
   local UI = self.CurrSelectPlayer.UI
+  if not IsValid(UI) then
+    return
+  end
   local IsGamepad = self.CurInputDeviceType == ECommonInputType.Gamepad and self.FocusStateType == ChatFocusType.PlayerList
   UI:RefreshSelect(IsGamepad)
 end
@@ -900,7 +926,7 @@ function M:UpdateUIStyleInPlatform()
         Desc = GText("UI_CTL_PlayerOptions"),
         bLongPress = false
       })
-      if self.CurrSelectPlayer and self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
+      if self.CurrSelectPlayer and self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild and IsValid(self.CurrSelectPlayer.UI) and self.CurrSelectPlayer.UI._OnDeleteClicked then
         table.insert(BottomKeyInfo, {
           KeyInfoList = {
             {
@@ -1036,17 +1062,13 @@ function M:UpdateUIStyleInPlatform()
   end
   if BottomKeyVisibilty == UIConst.VisibilityOp.Visible then
     self.Com_Input:SetGamePadKey("X", "RS")
-    if self.FocusStateType ~= ChatFocusType.PlayerList or self.CurrChannel ~= ChatCommon.ChannelDef.InTeam then
-      self:FreshGamePadView()
-    else
-      self:FreshMouseAndKeyboardView()
-    end
+    self:FreshGamePadView()
   else
     self.Com_Input:SetGamePadKey()
     self:FreshMouseAndKeyboardView()
   end
-  local IsShowPlayerListKey = TeamController:IsGamepad() and self.CurrChannel == ChatCommon.ChannelDef.InTeam and self.FocusStateType ~= ChatFocusType.PlayerList and (self.IsOpenMenuFace or not self.IsOpenMenu)
-  self.Key_PlayerListTitle:SetVisibility(IsShowPlayerListKey and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
+  local bShowTeamPlayerListKey = IsGamepad and self.CurrChannel == ChatCommon.ChannelDef.InTeam and self.List_Player:GetNumItems() > 0 and self.FocusStateType ~= ChatFocusType.PlayerList
+  self.Key_PlayerListTitle:SetVisibility(bShowTeamPlayerListKey and UIConst.VisibilityOp.Visible or UIConst.VisibilityOp.Collapsed)
   self.Group_FaceKey:SetVisibility(BottomKeyVisibilty)
   self.Group_QuickReplyKey:SetVisibility(BottomKeyVisibilty)
   self.Btn_Sent.Key_Text:SetVisibility(BottomKeyVisibilty)
@@ -1246,7 +1268,8 @@ function M:InitDefaultFocusWidget(EventType, EventId)
   self.IsDelayInitFocus = true
   self:AddTimer(0.1, function()
     self.IsDelayInitFocus = false
-    if self.CurrChannel == ChatCommon.ChannelDef.Friend and self.List_Player:GetNumItems() > 0 then
+    local IsPlayerListChannel = self.CurrChannel == ChatCommon.ChannelDef.Friend or self.CurrChannel == ChatCommon.ChannelDef.InTeam
+    if IsPlayerListChannel and self.List_Player:GetNumItems() > 0 then
       self:SetPlayerListFocus()
     elseif self.CanSelectChat then
       self:SetScrollBoxFocus()
@@ -1281,6 +1304,9 @@ function M:SetFocusStateType(FocusStateType)
 end
 
 function M:SetPlayerListFocus()
+  if self.CurrChannel ~= ChatCommon.ChannelDef.Friend and self.CurrChannel ~= ChatCommon.ChannelDef.InTeam then
+    return
+  end
   if self.FocusStateType == ChatFocusType.Default then
     if self:HasAnyFocus() then
       self.List_Player:SetFocus()
@@ -1366,7 +1392,11 @@ function M:BP_GetDesiredFocusTarget()
     self.GameInputModeSubsystem:SetNavigateWidgetOpacity(0)
     return self.Com_MidKeyTips
   end
-  if FocusStateType == ChatFocusType.PlayerList or self.CurrChannel == ChatCommon.ChannelDef.Friend then
+  local IsPlayerListChannel = self.CurrChannel == ChatCommon.ChannelDef.Friend or self.CurrChannel == ChatCommon.ChannelDef.InTeam
+  if FocusStateType == ChatFocusType.PlayerList and IsPlayerListChannel then
+    return self.List_Player
+  end
+  if self.CurrChannel == ChatCommon.ChannelDef.Friend then
     return self.List_Player
   end
   if FocusStateType == ChatFocusType.SelectChat then

@@ -29179,7 +29179,7 @@ return ReadOnly("Monster", {
     UnitName = "Mon_Name_8519004"
   },
   [8519005] = {
-    AlertId = 10,
+    AlertId = 105,
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheBomb_NormalLink.BT_Boss_LiecheBomb_NormalLink",
     BattleRoleId = 8519005,
     BloodUIParmas = T.RT_101,
@@ -29200,7 +29200,7 @@ return ReadOnly("Monster", {
     UnitName = "Mon_Name_8519005"
   },
   [8519006] = {
-    AlertId = 10,
+    AlertId = 105,
     BT = "/Game/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheBomb_NormalLink.BT_Boss_LiecheBomb_NormalLink",
     BattleRoleId = 8519006,
     BloodUIParmas = T.RT_101,
@@ -29800,6 +29800,7 @@ return ReadOnly("Monster", {
     BT = "/Game/AssetDesign/AI/Monster/Boss_21_Zonghuo/BT_Boss_Zonghuo.BT_Boss_Zonghuo",
     BattleRoleId = 8521001,
     BloodUIParmas = T.RT_53,
+    BossPenalize = T.RT_54,
     BossUIValues = T.RT_59,
     CameraLockOnBones = T.RT_60,
     Camp = "Monster",

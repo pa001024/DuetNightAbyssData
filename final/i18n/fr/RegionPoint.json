@@ -268,7 +268,7 @@
   },
   {
     "id": 2015,
-    "name": "站前穹顶（待包装）",
+    "name": "Dôme d’entrée",
     "icon": "T_Gp_Station",
     "pos": [
       1831,
@@ -308,7 +308,7 @@
   },
   {
     "id": 2017,
-    "name": "锻铁厂下层（待包装）",
+    "name": "Niveau inférieur des installations de forge",
     "icon": "T_Gp_Leave",
     "pos": [
       -6503,
@@ -328,7 +328,7 @@
   },
   {
     "id": 2018,
-    "name": "锻铁厂上层（待包装）",
+    "name": "Niveau supérieur des installations de forge",
     "icon": "T_Gp_Leave",
     "pos": [
       -16222,
@@ -348,7 +348,7 @@
   },
   {
     "id": 2019,
-    "name": "地下轨道（待包装）",
+    "name": "Voies souterraines",
     "icon": "T_Gp_Leave",
     "pos": [
       -17163,
@@ -368,7 +368,7 @@
   },
   {
     "id": 2020,
-    "name": "站厅（待包装）",
+    "name": "Hall de la gare",
     "icon": "T_Gp_Leave",
     "pos": [
       -38472,
@@ -388,7 +388,7 @@
   },
   {
     "id": 2021,
-    "name": "站前穹顶（待包装）",
+    "name": "Dôme d’entrée",
     "icon": "T_Gp_Leave",
     "pos": [
       -4983,
@@ -408,7 +408,7 @@
   },
   {
     "id": 2022,
-    "name": "站前穹顶（待包装）",
+    "name": "Dôme d’entrée",
     "icon": "T_Gp_Leave",
     "pos": [
       -17332,
@@ -428,7 +428,7 @@
   },
   {
     "id": 2023,
-    "name": "UI_SUBREGION_NAME_106305",
+    "name": "Voies souterraines",
     "icon": "T_Gp_Leave",
     "pos": [
       -38432,
@@ -502,7 +502,7 @@
   },
   {
     "id": 2504,
-    "name": "集结",
+    "name": "Rassemblement",
     "icon": "T_Gp_Gathering",
     "pos": [
       -7950,
@@ -1222,7 +1222,7 @@
   },
   {
     "id": 2854,
-    "name": "百花车站钓鱼点",
+    "name": "Point de pêche : Gare des Cent-Fleurs",
     "icon": "T_Gp_Angling",
     "pos": [
       -79430,

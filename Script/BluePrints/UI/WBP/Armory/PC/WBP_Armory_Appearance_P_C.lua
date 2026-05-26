@@ -8,6 +8,7 @@ function M:Construct()
   M.Super.Construct(self)
   self:ClearAllKeyEvents()
   self:AddKeyDownEvent(UIConst.GamePadKey.FaceButtonTop, self.OnFaceButtonTopKeyDown)
+  self:AddKeyDownEvent(Const.GamepadRightThumbstick, self.OnRightThumbstickKeyDown)
 end
 
 function M:Init(Params)
@@ -106,14 +107,6 @@ function M:OnRemovedFromFocusPath()
   end
 end
 
-function M:OnParentKeyDown(MyGeometry, InKeyEvent)
-  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
-  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
-  if InKeyName == Const.GamepadRightThumbstick and self.Plan_Char:IsVisible() then
-    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.Plan_Char), true
-  end
-end
-
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
   if 0 == self.WS_State:GetActiveWidgetIndex() then
     return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.CurrentFocusedWidget or self.Char_Skin)
@@ -145,6 +138,12 @@ end
 function M:OnFaceButtonTopKeyDown()
   if self.Btn_Appearence:IsVisible() then
     self:OnBtnClicked()
+  end
+end
+
+function M:OnRightThumbstickKeyDown()
+  if self.Plan_Char:IsVisible() then
+    return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.Plan_Char), true
   end
 end
 

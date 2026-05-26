@@ -42,6 +42,7 @@ end
 
 function M:InitContent(Content)
   self.Parent = Content.Parent
+  self.WeaponId = Content.WeaponId
   self.WeaponUuid = Content.WeaponUuid
   self.CardLevel = Content.CardLevel
   self.TalentId = Content.TalentId
@@ -52,6 +53,7 @@ function M:InitContent(Content)
   self.RootWidget = self.CallbackObj
   self.Avatar = ArmoryUtils:GetAvatar()
   self.IsPreviewMode = Content.IsPreviewMode
+  self.SkipClickSound = Content.SkipClickSound
   self.AddToFocusPathObj = Content.AddToFocusPathObj
   self.AddToFocusPathCallback = Content.AddToFocusPathCallback
   self:InitIcon()
@@ -87,9 +89,26 @@ function M:InitAnimationState()
   elseif self.TalentState == StateEnum.Activated then
     AniName = self.UnLock
   end
-  if AniName then
-    self:PlayAnimation(AniName)
+  if not AniName then
+    return
   end
+  self:StopAllAnimations()
+  self:PlayAnimation(AniName)
+  if AniName == self.Act then
+    self.IsAnimationActPlaying = true
+  else
+    self.IsAnimationActPlaying = false
+  end
+end
+
+function M:PlayLineAnimation(Index, AniName)
+  local WidgetName = "Line_Incarnon_" .. Index
+  local LineWidget = self[WidgetName]
+  if not LineWidget or not LineWidget[AniName] then
+    return
+  end
+  LineWidget:StopAllAnimations()
+  LineWidget:PlayAnimation(LineWidget[AniName])
 end
 
 function M:InitLineState()
@@ -102,15 +121,29 @@ function M:InitLineState()
       return
     end
   end
-  if self.TalentState == StateEnum.Activated then
-    LineWidget01:PlayAnimation(LineWidget01.UnLocked)
-    if 0 == self.CardLevel then
-      LineWidget02:PlayAnimation(LineWidget02.UnLocked)
+  
+  local function SetLineAnimation(NextTalentId, NextIndex)
+    local NextTalentState = HyperWeaponUtils.GetTalentState(self.Avatar, self.WeaponUuid, NextTalentId, self.IsPreviewMode)
+    if NextTalentState == StateEnum.Activated and self.TalentState == StateEnum.Activated then
+      LineWidget01:PlayAnimation(LineWidget01.UnLocked)
+      if 0 == self.CardLevel and 2 == NextIndex then
+        LineWidget02:PlayAnimation(LineWidget02.UnLocked)
+      end
+    else
+      LineWidget01:PlayAnimation(LineWidget01.Locked)
+      if 0 == self.CardLevel then
+        LineWidget02:PlayAnimation(LineWidget02.Locked)
+      end
     end
-  else
-    LineWidget01:PlayAnimation(LineWidget01.Locked)
-    if 0 == self.CardLevel then
-      LineWidget02:PlayAnimation(LineWidget02.Locked)
+  end
+  
+  local NextLevelTalents = HyperWeaponUtils.GetTalents(self.WeaponId, self.CardLevel + 1)
+  for Index, NextTalentId in pairs(NextLevelTalents) do
+    local Info = DataMgr.HyperWeaponSkillTree[NextTalentId]
+    for _, ConditionId in pairs(Info.UnlockCondition) do
+      if ConditionId == self.TalentId then
+        SetLineAnimation(NextTalentId, Index)
+      end
     end
   end
   local AngleInfo = AngleTable[self.CardLevel]
@@ -158,44 +191,25 @@ function M:UnlockTalent(FinishedObj, FinishedCallback)
   if RootWidget then
     RootWidget:BlockAllUIInput(true)
   end
+  self:StopAllAnimations()
   self:PlayAnimation(self.Unlock_In)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/skin_upgrade", nil, nil)
-end
-
-function M:ActiveTalent()
-  self:InitTalentState()
-  if self.TalentState == StateEnum.Activated then
-    return
-  end
-  local RootWidget = self.CallbackObj
-  
-  local function OnActiveFinished()
-    local LineWidget01 = self.Line_Incarnon_1
-    local LineWidget02 = self.Line_Incarnon_2
-    if not self.IsMaxCardLevel then
-      LineWidget01:PlayAnimation(LineWidget01.UnLock_In)
-      if 0 == self.CardLevel then
-        LineWidget02:PlayAnimation(LineWidget02.UnLock_In)
-      end
-    end
-    self:PlayNormalAnimation()
-    self:UnbindAllFromAnimationFinished(self.Act_In)
-    if RootWidget then
-      RootWidget:BlockAllUIInput(false)
-    end
-  end
-  
-  self:InitAnimationState()
-  self:BindToAnimationFinished(self.Act_In, {self, OnActiveFinished})
-  if RootWidget then
-    RootWidget:BlockAllUIInput(true)
-  end
-  self:PlayAnimation(self.Act_In)
   AudioManager(self):PlayUISound(self, "event:/ui/common/skin_upgrade", nil, nil)
 end
 
 function M:IsStopProcessEvent()
   return self.StopProcess
+end
+
+function M:PlayActInAnimation()
+  self:InitTalentState()
+  if self.TalentState == StateEnum.UnlockedActivatable then
+    if self.IsAnimationActPlaying then
+      return
+    end
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Act_In)
+    self.IsAnimationActPlaying = true
+  end
 end
 
 function M:PlayNormalAnimation()
@@ -216,6 +230,15 @@ function M:OnButtonClicked()
   end
   if self.CallbackObj and self.ClickCallback and type(self.ClickCallback) == "function" then
     self.ClickCallback(self.CallbackObj, self, self.TalentId)
+  end
+  if not self.SkipClickSound then
+    if self.TalentState == StateEnum.Locked then
+      AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_disable", nil, nil)
+    elseif self.TalentState == StateEnum.Activated then
+      AudioManager(self):PlayUISound(self, "event:/ui/armory/suyuan_point_click_unlock", nil, nil)
+    else
+      AudioManager(self):PlayUISound(self, "event:/ui/armory/suyuan_point_click", nil, nil)
+    end
   end
 end
 

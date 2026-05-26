@@ -297,14 +297,14 @@
       },
       {
         "id": 90280301,
-        "content": "Indeed. My mother chose it. She wished: \"Let the blossoms of spring remain unending, and the golden hours stay forever warm.\" A beautiful wish… one I have failed to fulfill.",
+        "content": "Indeed. My mother chose it. She wished: \"Let the blossoms of spring remain unending, and the golden hours stay forever warm.\" A beautiful wish... one I have failed to fulfill.",
         "voice": "char/Fuluo/vo_topic_03_1",
         "npc": 81102,
         "next": 90280302
       },
       {
         "id": 90280401,
-        "content": "Why ask? It is but a dreary tale, long stretches of loneliness, and little else.\nNostalgic, slightly sad",
+        "content": "Why ask? It is but a dreary tale, long stretches of loneliness, and little else.",
         "voice": "char/Fuluo/vo_topic_04_1",
         "npc": 81102,
         "next": 90280402
@@ -373,7 +373,7 @@
       },
       {
         "id": 90280303,
-        "content": "Then your kindness brings me warmth.Thank you.",
+        "content": "Then your kindness brings me warmth. Thank you.",
         "voice": "char/Fuluo/vo_topic_03_2",
         "npc": 81102,
         "options": [
@@ -390,7 +390,7 @@
       },
       {
         "id": 90280403,
-        "content": "That is true, at least by day. But... I wonder whether you can truly understand it.\nTo be surrounded at all hours, hands kissed, blessings murmured with reverence , and conversations of poetry, of plays, of the flowers in the garden...",
+        "content": "That is true, at least by day. But... I wonder whether you can truly understand it.\nTo be surrounded at all hours, hands kissed, blessings murmured with reverence, and conversations of poetry, of plays, of the flowers in the garden...",
         "voice": "char/Fuluo/vo_topic_04_2",
         "npc": 81102,
         "next": 90280404
@@ -414,7 +414,7 @@
       },
       {
         "id": 90280104,
-        "content": "Heh… Every noblewoman has, at some point, lamented such tedious formalities to her maid. Only to be reminded that society is her battlefield — and the smallest lapse may stain her family's name.",
+        "content": "Heh... Every noblewoman has, at some point, lamented such tedious formalities to her maid. Only to be reminded that society is her battlefield — and the smallest lapse may stain her family's name.",
         "voice": "char/Fuluo/vo_topic_01_3",
         "npc": 81102,
         "next": 90280105
@@ -459,7 +459,7 @@
       },
       {
         "id": 90280406,
-        "content": "At night, I would return to that high tower. Only moon kept me company. Two solitary souls, adrift in the silence of darkness. In most time. I simply watched it flowing slowly toward the far edge of the sky.",
+        "content": "At night, I would return to that high tower. Only the moon kept me company. Two solitary souls, adrift in the silence of darkness. For the most part, I simply watched it flowing slowly toward the far edge of the sky.",
         "voice": "char/Fuluo/vo_topic_04_5",
         "npc": 81102,
         "next": 90280407
@@ -7430,13 +7430,13 @@
   },
   {
     "id": 100443,
-    "name": "车站工人",
+    "name": "Station Worker",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 100444,
-    "name": "哈洛吉",
+    "name": "Halogi",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -7448,7 +7448,7 @@
   },
   {
     "id": 100446,
-    "name": "UI_Npc_Name_Shenmiren",
+    "name": "神秘人",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -7641,6 +7641,12 @@
   {
     "id": 100478,
     "name": "Soldier",
+    "camp": "NPC",
+    "type": "Normal"
+  },
+  {
+    "id": 100479,
+    "name": "Noble",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -22359,7 +22365,7 @@
   },
   {
     "id": 700501,
-    "name": "克拉拉",
+    "name": "Clara",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -22378,17 +22384,28 @@
         "id": 51201003,
         "content": "Welcome to Loaf & Love Bakery. What can I get for you today? Fresh from the oven: our Berry Jam Cream Loaf. Even Stationmaster Eisenbahn swears by it. Care to take a look?",
         "npc": 700501,
-        "next": 51201004
-      },
-      {
-        "id": 51201004,
-        "content": "(Show her the chequebook.)",
-        "next": 51201005
+        "options": [
+          {
+            "id": 51201004,
+            "content": "(Show her the chequebook.)",
+            "next": 51201005
+          },
+          {
+            "id": 51201018,
+            "content": "(Show her your work pass.)",
+            "next": 51201019
+          }
+        ]
       },
       {
         "id": 51201005,
         "content": "(For a moment, the woman in front of you seems caught off guard by the money in your hand. But she quickly regains her composure.)",
         "next": 51201006
+      },
+      {
+        "id": 51201019,
+        "content": "(The moment she sees your worker pass, she seems to understand at once. Her whole manner turns more casual.)",
+        "next": 51201020
       },
       {
         "id": 51201006,
@@ -22397,10 +22414,33 @@
         "next": 51201007
       },
       {
+        "id": 51201020,
+        "content": "You're new, aren't you? Haven't seen you around before. What we've got out front is for passengers. Come round the back at supper time.",
+        "npc": 700501,
+        "next": 51201021
+      },
+      {
         "id": 51201007,
         "content": "We do not often get nobles coming in to buy bread themselves. And the amounts written on those cheques are rather... substantial. You could buy out the whole shop and still have money left to spare.",
         "npc": 700501,
         "next": 51201008
+      },
+      {
+        "id": 51201021,
+        "content": "We sell the black bread off cheap near closing. Get here in time and you might still get some. Leave it too late, and it'll all be gone — and don't come moaning to me when that happens.",
+        "npc": 700501,
+        "options": [
+          {
+            "id": 51201022,
+            "content": "Does everyone here just eat black bread?",
+            "next": 51201023
+          },
+          {
+            "id": 51201025,
+            "content": "All right. I will come back at supper time.",
+            "next": 51201026
+          }
+        ]
       },
       {
         "id": 51201008,
@@ -22409,15 +22449,44 @@
         "next": 51201009
       },
       {
+        "id": 51201023,
+        "content": "What kind of question is that? Didn't the old hand showing you round teach you any better? Or are you only here part-time?",
+        "npc": 700501,
+        "next": 51201024
+      },
+      {
+        "id": 51201026,
+        "content": "Good {性别：boy|girl}. Call me Miss Clara like a good lamb, and I might save you some of the leftover filling from today's berry cream loaf.",
+        "npc": 700501,
+        "next": 51201027
+      },
+      {
         "id": 51201009,
         "content": "We are only a small shop. We don't take cheques here. Even if we did, we'd have to take them into the inner city and have them verified at the trade guild first.",
         "npc": 700501,
-        "next": 51201010
+        "options": [
+          {
+            "id": 51201010,
+            "content": "So you will not sell to me?",
+            "next": 51201011
+          },
+          {
+            "id": 51201013,
+            "content": "What do you mean, nobles don't usually buy bread themselves?",
+            "next": 51201014
+          }
+        ]
       },
       {
-        "id": 51201010,
-        "content": "So you will not sell to me?",
-        "next": 51201011
+        "id": 51201024,
+        "content": "Station hands don't earn much round here. If you've got something to fill your belly, you don't complain. That's how it is.",
+        "npc": 700501
+      },
+      {
+        "id": 51201027,
+        "content": "And if you butter me up a little more, I might even toast you some of the crusts those rich nobles leave behind. Nice and crisp, they are.",
+        "npc": 700501,
+        "next": 51201028
       },
       {
         "id": 51201011,
@@ -22426,27 +22495,32 @@
         "next": 51201012
       },
       {
-        "id": 51201012,
-        "content": "And thank you for stopping by. We would be delighted to see you again.",
-        "npc": 700501,
-        "next": 51201013
-      },
-      {
-        "id": 51201013,
-        "content": "What do you mean, nobles don't usually buy bread themselves?",
-        "next": 51201014
-      },
-      {
         "id": 51201014,
         "content": "Most nobles think it beneath them to queue up and shop in person. Usually they send a servant instead. Though perhaps you came out on your own today, or sent yours off on some other errand?",
         "npc": 700501,
         "next": 51201015
       },
       {
+        "id": 51201028,
+        "content": "Thank you, but I should be going.",
+        "npc": 100001,
+        "next": 51201029
+      },
+      {
+        "id": 51201012,
+        "content": "And thank you for stopping by. We would be delighted to see you again.",
+        "npc": 700501
+      },
+      {
         "id": 51201015,
         "content": "Why not wait for your servant to come back, then send them over with some smaller change for the bread?",
         "npc": 700501,
         "next": 51201016
+      },
+      {
+        "id": 51201029,
+        "content": "Oh dear~ Did I lay it on a bit too thick and scare you off? Never mind. We'll be seeing each other again, so... see you around, sweetie~",
+        "npc": 700501
       },
       {
         "id": 51201016,
@@ -22457,74 +22531,6 @@
       {
         "id": 51201017,
         "content": "And thank you for stopping by. We would be delighted to see you again.",
-        "npc": 700501,
-        "next": 51201018
-      },
-      {
-        "id": 51201018,
-        "content": "(Show her your work pass.)",
-        "next": 51201019
-      },
-      {
-        "id": 51201019,
-        "content": "(The moment she sees your worker pass, she seems to understand at once. Her whole manner turns more casual.)",
-        "next": 51201020
-      },
-      {
-        "id": 51201020,
-        "content": "You're new, aren't you? Haven't seen you around before. What we've got out front is for passengers. Come round the back at supper time.",
-        "npc": 700501,
-        "next": 51201021
-      },
-      {
-        "id": 51201021,
-        "content": "We sell the black bread off cheap near closing. Get here in time and you might still get some. Leave it too late, and it'll all be gone — and don't come moaning to me when that happens.",
-        "npc": 700501,
-        "next": 51201022
-      },
-      {
-        "id": 51201022,
-        "content": "Does everyone here just eat black bread?",
-        "next": 51201023
-      },
-      {
-        "id": 51201023,
-        "content": "What kind of question is that? Didn't the old hand showing you round teach you any better? Or are you only here part-time?",
-        "npc": 700501,
-        "next": 51201024
-      },
-      {
-        "id": 51201024,
-        "content": "Station hands don't earn much round here. If you've got something to fill your belly, you don't complain. That's how it is.",
-        "npc": 700501,
-        "next": 51201025
-      },
-      {
-        "id": 51201025,
-        "content": "All right. I will come back at supper time.",
-        "next": 51201026
-      },
-      {
-        "id": 51201026,
-        "content": "Good {性别：boy|girl}. Call me Miss Clara like a good lamb, and I might save you some of the leftover filling from today's berry cream loaf.",
-        "npc": 700501,
-        "next": 51201027
-      },
-      {
-        "id": 51201027,
-        "content": "And if you butter me up a little more, I might even toast you some of the crusts those rich nobles leave behind. Nice and crisp, they are.",
-        "npc": 700501,
-        "next": 51201028
-      },
-      {
-        "id": 51201028,
-        "content": "Thank you, but I should be going.",
-        "npc": 100001,
-        "next": 51201029
-      },
-      {
-        "id": 51201029,
-        "content": "Oh dear~ Did I lay it on a bit too thick and scare you off? Never mind. We'll be seeing each other again, so... see you around, sweetie~",
         "npc": 700501
       },
       {
@@ -22541,13 +22547,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700502,
-    "name": "卡特",
+    "name": "Carter",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -22622,13 +22629,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700503,
-    "name": "卢卡斯",
+    "name": "Lucas",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -22643,93 +22651,291 @@
         "npc": 701325
       },
       {
-        "id": 51201802,
-        "content": "I'm telling you, that woman is a complete fraud. Livia wrote in her letters that she looked like Violetta, the great opera star, but when I finally saw her...",
-        "npc": 700514,
-        "next": 51201803
+        "id": 51201902,
+        "content": "Ah, those smooth, flawless rails... more exquisite than the curve of the finest dancer's shoulders in the whole city! Just look at her... that engine, that frame, those gleaming windows. Perfect. Utterly perfect.",
+        "npc": 700503,
+        "next": 51201903
       },
       {
-        "id": 51201803,
-        "content": "Really? Isn't she that precious pen pal you've been mooning over for months? The one you kept swearing was as beautiful and talented as the brightest star on the opera stage?",
-        "npc": 700515,
-        "next": 51201804
+        "id": 51201903,
+        "content": "143.5 centimetres. That's all that stands between two rails. But the road that runs before them? Endless. And along that narrow, endless strip of steel rolls the thunder of the train... and half my life with it.",
+        "npc": 700503,
+        "next": 51201904
       },
       {
-        "id": 51201804,
-        "content": "Keep making fun of me and I'll tell your father you skipped your internship at the trade guild and followed me all the way to Icelake.",
-        "npc": 700514,
-        "next": 51201805
+        "id": 51201904,
+        "content": "I've always believed there's nothing in this world to rival a train for strength and beauty. My idiot friends were always telling me to stop staring at trains and go look at pretty girls instead, so one day they dragged me off to a dance hall in the city to watch the dancers.",
+        "npc": 700503,
+        "next": 51201905
       },
       {
-        "id": 51201805,
-        "content": "Hey! So that's how you repay me? It's freezing out here, and I only came because I was worried about you.",
-        "npc": 700515,
-        "next": 51201806
+        "id": 51201905,
+        "content": "Didn't make the slightest difference. In my eyes, the train was still lovelier. She runs... and one day, she'll gather me into her iron bosom and sing me to sleep with that clatter and clang. Dancers grow old. Trains don't. I love trains, and trains love me.",
+        "npc": 700503,
+        "next": 51201906
       },
       {
-        "id": 51201806,
-        "content": "You came to laugh at me, that's what you came for.",
-        "npc": 700514,
-        "next": 51201807
+        "id": 51201906,
+        "content": "I want to stay in their embrace forever, there between those rails set 143.5 centimetres apart... even if I get scorched.",
+        "npc": 700503,
+        "options": [
+          {
+            "id": 51201907,
+            "content": "More likely crushed before you ever get burned.",
+            "next": 51201908
+          }
+        ]
       },
       {
-        "id": 51201807,
-        "content": "Fine. Then I came to laugh at you. So where is this Miss Livia you've been writing to all this time?",
-        "npc": 700515,
-        "next": 51201808
+        "id": 51201908,
+        "content": "That would be bliss! To be pinned beneath her... I can't even imagine it. Even if I died that very instant, I'd go with the most contented smile on my face!",
+        "npc": 700503,
+        "next": 51201909
       },
       {
-        "id": 51201808,
-        "content": "\"Oh, Philip, you are love itself. Roses never fade before you. You alone are spring in full bloom, the everlasting glory of summer. And when I press my ardent lips to yours...\"",
-        "npc": 700515,
-        "next": 51201809
+        "id": 51201909,
+        "content": "You really would die if you ended up under \"her,\" though...",
+        "npc": 100001,
+        "next": 51201910
       },
       {
-        "id": 51201809,
-        "content": "Ruby! You read my letters!?",
-        "npc": 700514,
-        "next": 51201810
+        "id": 51201910,
+        "content": "Hey! I'm serious. I buy a platform ticket every single day because I want to die here in this station, with the love of my life. What could be more romantic than that?",
+        "npc": 700503,
+        "options": [
+          {
+            "id": 51201911,
+            "content": "I don't get it.",
+            "next": 51201912
+          },
+          {
+            "id": 51201913,
+            "content": "I get it.",
+            "next": 51201914
+          }
+        ]
       },
       {
-        "id": 51201810,
-        "content": "Well, all letters pass through the guild. I only opened them to make sure there wasn't some kind of explosive or corrosive powder tucked inside. I couldn't exactly risk anything happening to that \"devastatingly handsome face of yours\".",
-        "npc": 700515,
-        "next": 51201811
+        "id": 51201912,
+        "content": "Of course you don't. You're not a rail fanatic like me. I've spent my whole life loving trains. If one day I could really step aboard... walk through her carriages... run my hand over the fittings... see how she's put together...",
+        "npc": 700503,
+        "next": 51201916
       },
       {
-        "id": 51201811,
-        "content": "Ruby!!!",
-        "npc": 700514,
-        "next": 51201812
+        "id": 51201914,
+        "content": "No, you don't. You're not a rail fanatic like me. How could you possibly understand?",
+        "npc": 700503,
+        "next": 51201915
       },
       {
-        "id": 51201812,
-        "content": "All right, all right, I'm sorry. So what are you going to do about that dazzling pen pal of yours who was supposed to look like Violetta?",
-        "npc": 700515,
-        "next": 51201813
+        "id": 51201916,
+        "content": "I can't even think about it... I'd probably faint from sheer happiness...",
+        "npc": 700503,
+        "options": [
+          {
+            "id": 51201917,
+            "content": "(Show him the chequebook.)",
+            "next": 51201918
+          },
+          {
+            "id": 51201933,
+            "content": "(Show him your work pass.)",
+            "next": 51201934
+          }
+        ]
       },
       {
-        "id": 51201813,
-        "content": "Don't you dare put her in the same league as Miss Violetta! I'm done believing a word she says. You have no idea... she was actually... I can't even bring myself to say it... She wasn't even a...",
-        "npc": 700514,
-        "next": 51201814
+        "id": 51201915,
+        "content": "I've spent my whole life loving trains. If one day I could really step aboard... walk through her carriages... run my hand over the fittings... see how she's put together...",
+        "npc": 700503,
+        "next": 51201916
       },
       {
-        "id": 51201814,
-        "content": "See? That's exactly why you shouldn't trust just anyone. You'd be much better off with someone you've known for years — me. I'm the only girl who's right for y—",
-        "npc": 700515,
-        "next": 51201815
+        "id": 51201918,
+        "content": "(You take out your chequebook and give it a little wave in front of him.)",
+        "next": 51201919
       },
       {
-        "id": 51201815,
-        "content": "In your dreams! Even if you were the last woman on earth, I'd still say no. So do yourself a favour and give it up. Whatever absurd idea you have in your head about the two of us should have died the day you stuffed my goldfish into my duvet and smothered it.",
-        "npc": 700514,
-        "next": 51201816
+        "id": 51201934,
+        "content": "(You take out your work pass and give it a little wave in front of him.)",
+        "next": 51201935
       },
       {
-        "id": 51201816,
-        "content": "I was a child. I didn't know any better... I'd never do something like that now. Philip? Where are you going? Hey!",
-        "npc": 700515
+        "id": 51201919,
+        "content": "What's this...? That much money!? Who are you, walking around with that kind of money?",
+        "npc": 700503,
+        "next": 51201920
+      },
+      {
+        "id": 51201935,
+        "content": "What's that? It's got the Bloomfield Station emblem on it. You work here?",
+        "npc": 700503,
+        "next": 51201936
+      },
+      {
+        "id": 51201920,
+        "content": "Don't tell me you're the stationmaster. Or some highborn noble from the Imperial Capital?",
+        "npc": 700503,
+        "options": [
+          {
+            "id": 51201921,
+            "content": "I'm the one paying for your train ride.",
+            "next": 51201922
+          }
+        ]
+      },
+      {
+        "id": 51201936,
+        "content": "More than that. I work on the train itself.",
+        "npc": 100001,
+        "next": 51201937
+      },
+      {
+        "id": 51201922,
+        "content": "Wh—What!? You mean it? You're not having me on, are you? You'd really buy me a ticket?",
+        "npc": 700503,
+        "next": 51201923
+      },
+      {
+        "id": 51201937,
+        "content": "Oh! Good heavens... you work inside the train? Then you get to see the carriage interiors every day, don't you? Have you ever been to the engine room? I've heard there's a huge Phoxene power core in there, all awash in blue light when the train is running. It must be magnificent...",
+        "npc": 700503,
+        "next": 51201938
+      },
+      {
+        "id": 51201923,
+        "content": "Good heavens! How did I get this lucky? I never dreamed something this wonderful would happen to me!",
+        "npc": 700503,
+        "next": 51201924
+      },
+      {
+        "id": 51201938,
+        "content": "No lover's eyes could be lovelier than that... I'd drown in them gladly. Ah, what I wouldn't give to see it with my own eyes.",
+        "npc": 700503,
+        "next": 51201939
+      },
+      {
+        "id": 51201924,
+        "content": "Let's just say your \"love\" for trains moved me.",
+        "npc": 100001,
+        "next": 51201925
+      },
+      {
+        "id": 51201939,
+        "content": "I could show you the parts of the train I'm allowed to access.",
+        "npc": 100001,
+        "next": 51201940
+      },
+      {
+        "id": 51201925,
+        "content": "{性别：Sir|Ma'am}, do you have any idea what this means to me? I'll remember this kindness for the rest of my life. I come here every day, and never once did I dream I'd be given a chance like this. I'd be just like those rich gentlemen... stepping into the carriage... lowering myself into one of those seats...",
+        "npc": 700503,
+        "next": 51201926
+      },
+      {
+        "id": 51201940,
+        "content": "Wait... you mean... inside the train!?",
+        "npc": 700503,
+        "next": 51201941
+      },
+      {
+        "id": 51201926,
+        "content": "Oh — and one more thing, {性别：sir|ma'am}... could you possibly get me a return ticket as well? I still have to come back to Icelake for work, so I can't be away long. A few days at most.",
+        "npc": 700503,
+        "next": 51201927
+      },
+      {
+        "id": 51201941,
+        "content": "I can't take you to the engine room, though.",
+        "npc": 100001,
+        "next": 51201942
+      },
+      {
+        "id": 51201927,
+        "content": "If I miss too many shifts, that rotten boss of mine will dock my wages, and then I won't be able to keep buying platform tickets to come and see her every day.",
+        "npc": 700503,
+        "next": 51201928
+      },
+      {
+        "id": 51201942,
+        "content": "Good heavens...",
+        "npc": 700503,
+        "next": 51201943
+      },
+      {
+        "id": 51201928,
+        "content": "You're already getting to ride the train for real. Why would you still need platform tickets?",
+        "npc": 100001,
+        "next": 51201929
+      },
+      {
+        "id": 51201943,
+        "content": "What, is that still not enough for you?",
+        "npc": 100001,
+        "next": 51201944
+      },
+      {
+        "id": 51201929,
+        "content": "Of course I would! Who wouldn't want to see the love of their life every day? Even after we've known true closeness, I'd still have to come and give her my good-morning kiss.",
+        "npc": 700503,
+        "next": 51201930
+      },
+      {
+        "id": 51201944,
+        "content": "Not enough? I'm ecstatic! I never dreamed I'd get a chance like this. You know, I tried to get a job here once, but that rotten bastard of a boss of mine got to them first and made sure they wouldn't hire me.",
+        "npc": 700503,
+        "next": 51201945
+      },
+      {
+        "id": 51201930,
+        "content": "Right... take the cheque and buy the ticket yourself.",
+        "npc": 100001,
+        "next": 51201931
+      },
+      {
+        "id": 51201945,
+        "content": "He told them I was a madman. Said if they let me in, I'd do something crazy. Hmph. Look at me. Do I seem like the sort of man who'd do that?",
+        "npc": 700503,
+        "next": 51201946
+      },
+      {
+        "id": 51201931,
+        "content": "Thank you, {性别：sir|ma'am}! I'm truly grateful for your kindness!",
+        "npc": 700503,
+        "next": 51201932
+      },
+      {
+        "id": 51201946,
+        "content": "Well... you're not exactly helping your case.",
+        "npc": 100001,
+        "next": 51201947
+      },
+      {
+        "id": 51201932,
+        "content": "(The man hurries off, all but skipping with delight.)"
+      },
+      {
+        "id": 51201947,
+        "content": "I swear, I'd only look. Well... perhaps run a hand over the seats a little. And of course, if I were allowed to throw my arms around that beautiful power core...",
+        "npc": 700503,
+        "next": 51201948
+      },
+      {
+        "id": 51201948,
+        "content": "Oh! It's too much... I might faint just thinking about it.",
+        "npc": 700503,
+        "next": 51201949
+      },
+      {
+        "id": 51201949,
+        "content": "On second thought... forget it. I take it back. You really are crazy.",
+        "npc": 100001,
+        "next": 51201950
+      },
+      {
+        "id": 51201950,
+        "content": "Wait, don't do this to me! Please... you can't do that... You can't give me hope and then snatch it away. That's cruel!",
+        "npc": 700503
       },
       {
         "id": 51205615,
@@ -22745,13 +22951,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700504,
-    "name": "外送皎皎",
+    "name": "Lunodeliverer",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -22770,12 +22977,18 @@
         "id": 51201203,
         "content": "Wait... Hey! You there, Phoxhunter! Remember me? Long time no see!",
         "npc": 700504,
-        "next": 51201204
-      },
-      {
-        "id": 51201204,
-        "content": "Who are you?",
-        "next": 51201205
+        "options": [
+          {
+            "id": 51201204,
+            "content": "Who are you?",
+            "next": 51201205
+          },
+          {
+            "id": 51201207,
+            "content": "Lunodeliverer!",
+            "next": 51201208
+          }
+        ]
       },
       {
         "id": 51201205,
@@ -22784,18 +22997,13 @@
         "next": 51201206
       },
       {
-        "id": 51201206,
+        "id": 51201208,
         "content": "I spotted you from miles away and thought I had to be seeing things. But no, it really is you — the nice Phoxhunter who always helps me out.",
         "npc": 700504,
-        "next": 51201207
+        "next": 51201209
       },
       {
-        "id": 51201207,
-        "content": "Lunodeliverer!",
-        "next": 51201208
-      },
-      {
-        "id": 51201208,
+        "id": 51201206,
         "content": "I spotted you from miles away and thought I had to be seeing things. But no, it really is you — the nice Phoxhunter who always helps me out.",
         "npc": 700504,
         "next": 51201209
@@ -22804,12 +23012,18 @@
         "id": 51201209,
         "content": "I hadn't seen you in ages. I thought you'd already left Icelake. Never thought I'd run into you here.",
         "npc": 700504,
-        "next": 51201210
-      },
-      {
-        "id": 51201210,
-        "content": "(Show her the chequebook.)",
-        "next": 51201211
+        "options": [
+          {
+            "id": 51201210,
+            "content": "(Show her the chequebook.)",
+            "next": 51201211
+          },
+          {
+            "id": 51201223,
+            "content": "(Show her your work pass.)",
+            "next": 51201224
+          }
+        ]
       },
       {
         "id": 51201211,
@@ -22818,79 +23032,16 @@
         "next": 51201212
       },
       {
-        "id": 51201212,
-        "content": "So that's why I haven't seen you around lately. You went off somewhere else to make your fortune, didn't you? Was it the inner city? Or...",
-        "npc": 700504,
-        "next": 51201213
-      },
-      {
-        "id": 51201213,
-        "content": "Oh! I know — since you're at the station, you must've just come back from the Imperial Capital, right? Big cities really do mean bigger chances to make money... I wonder if I'll ever get to see one myself someday.",
-        "npc": 700504,
-        "next": 51201214
-      },
-      {
-        "id": 51201214,
-        "content": "I did go somewhere else.",
-        "next": 51201215
-      },
-      {
-        "id": 51201215,
-        "content": "I did go somewhere else, but not to Hyperborea's imperial capital. I was lucky enough to visit Huaxu not long ago.",
-        "npc": 100001,
-        "next": 51201216
-      },
-      {
-        "id": 51201216,
-        "content": "Hua... xu... That sounds kind of familiar. Is that where those Starweavers are from? Must be really far away...",
-        "npc": 700504,
-        "next": 51201217
-      },
-      {
-        "id": 51201217,
-        "content": "It is. I took a commission from a Huaxu merchant who was visiting Icelake. Now that it's done, I've come back.",
-        "npc": 100001,
-        "next": 51201218
-      },
-      {
-        "id": 51201218,
-        "content": "Must've been a really big job. Kinda like the order I've got right now... Ah, no, I can't stand here chatting! I've gotta find the person who placed it, or this order's going to time out!",
-        "npc": 700504,
-        "next": 51201219
-      },
-      {
-        "id": 51201219,
-        "content": "What are you doing at the station?",
-        "next": 51201220
-      },
-      {
-        "id": 51201220,
-        "content": "I picked up a special order today. I'm meant to deliver it inside Bloomfield Station to a nobleman called Elijah, but I've already been round the place several times and still can't find anyone by that name...",
-        "npc": 700504,
-        "next": 51201221
-      },
-      {
-        "id": 51201221,
-        "content": "Could he still be on the train? Maybe he hasn't arrived yet.",
-        "npc": 100001,
-        "next": 51201222
-      },
-      {
-        "id": 51201222,
-        "content": "Mm... yeah, maybe! Then I'll wait a little longer. If he signs for it as soon as he gets here, I might still make it in time, right?",
-        "npc": 700504,
-        "next": 51201223
-      },
-      {
-        "id": 51201223,
-        "content": "(Show her your work pass.)",
-        "next": 51201224
-      },
-      {
         "id": 51201224,
         "content": "Oh! So you changed jobs and started working at Bloomfield Station!",
         "npc": 700504,
         "next": 51201225
+      },
+      {
+        "id": 51201212,
+        "content": "So that's why I haven't seen you around lately. You went off somewhere else to make your fortune, didn't you? Was it the inner city? Or...",
+        "npc": 700504,
+        "next": 51201213
       },
       {
         "id": 51201225,
@@ -22899,15 +23050,50 @@
         "next": 51201226
       },
       {
+        "id": 51201213,
+        "content": "Oh! I know — since you're at the station, you must've just come back from the Imperial Capital, right? Big cities really do mean bigger chances to make money... I wonder if I'll ever get to see one myself someday.",
+        "npc": 700504,
+        "options": [
+          {
+            "id": 51201214,
+            "content": "I did go somewhere else.",
+            "next": 51201215
+          },
+          {
+            "id": 51201219,
+            "content": "What are you doing at the station?",
+            "next": 51201220
+          }
+        ]
+      },
+      {
         "id": 51201226,
         "content": "So, how've you been lately? Without you helping me with deliveries, I've had way more orders go overdue. Like the one I've got right now...",
         "npc": 700504,
-        "next": 51201227
+        "options": [
+          {
+            "id": 51201227,
+            "content": "I've been all right.",
+            "next": 51201228
+          },
+          {
+            "id": 51201231,
+            "content": "Here making a delivery?",
+            "next": 51201232
+          }
+        ]
       },
       {
-        "id": 51201227,
-        "content": "I've been all right.",
-        "next": 51201228
+        "id": 51201215,
+        "content": "I did go somewhere else, but not to Hyperborea's imperial capital. I was lucky enough to visit Huaxu not long ago.",
+        "npc": 100001,
+        "next": 51201216
+      },
+      {
+        "id": 51201220,
+        "content": "I picked up a special order today. I'm meant to deliver it inside Bloomfield Station to a nobleman called Reid, but I've already been round the place several times and still can't find anyone by that name...",
+        "npc": 700504,
+        "next": 51201221
       },
       {
         "id": 51201228,
@@ -22916,33 +23102,51 @@
         "next": 51201229
       },
       {
-        "id": 51201229,
-        "content": "I knew it. Being a Phoxhunter just isn't that safe. If you want, why not come do deliveries with me? You're fast — you could probably even take the priority orders.",
-        "npc": 700504,
-        "next": 51201230
-      },
-      {
-        "id": 51201230,
-        "content": "Thanks, but I'm all right.",
-        "npc": 100001,
-        "next": 51201231
-      },
-      {
-        "id": 51201231,
-        "content": "Here making a delivery?",
-        "next": 51201232
-      },
-      {
         "id": 51201232,
         "content": "Well, I'm Lunodeliverer. What else would I be here for?",
         "npc": 700504,
         "next": 51201233
       },
       {
+        "id": 51201216,
+        "content": "Hua... xu... That sounds kind of familiar. Is that where those Starweavers are from? Must be really far away...",
+        "npc": 700504,
+        "next": 51201217
+      },
+      {
+        "id": 51201221,
+        "content": "Could he still be on the train? Maybe he hasn't arrived yet.",
+        "npc": 100001,
+        "next": 51201222
+      },
+      {
+        "id": 51201229,
+        "content": "I knew it. Being a Phoxhunter just isn't that safe. If you want, why not come do deliveries with me? You're fast — you could probably even take the priority orders.",
+        "npc": 700504,
+        "next": 51201230
+      },
+      {
         "id": 51201233,
-        "content": "I picked up a special order today. It's meant for a nobleman called Elijah somewhere inside Bloomfield Station, but I've already looked all over the place and still can't find anyone by that name...",
+        "content": "I picked up a special order today. It's meant for a nobleman called Reid somewhere inside Bloomfield Station, but I've already looked all over the place and still can't find anyone by that name...",
         "npc": 700504,
         "next": 51201234
+      },
+      {
+        "id": 51201217,
+        "content": "It is. I took a commission from a Huaxu merchant who was visiting Icelake. Now that it's done, I've come back.",
+        "npc": 100001,
+        "next": 51201218
+      },
+      {
+        "id": 51201222,
+        "content": "Mm... yeah, maybe! Then I'll wait a little longer. If he signs for it as soon as he gets here, I might still make it in time, right?",
+        "npc": 700504,
+        "next": 51201237
+      },
+      {
+        "id": 51201230,
+        "content": "Thanks, but I'm all right.",
+        "npc": 100001
       },
       {
         "id": 51201234,
@@ -22951,27 +23155,32 @@
         "next": 51201235
       },
       {
+        "id": 51201218,
+        "content": "Must've been a really big job. Kinda like the order I've got right now... Ah, no, I can't stand here chatting! I've gotta find the person who placed it, or this order's going to time out!",
+        "npc": 700504
+      },
+      {
+        "id": 51201237,
+        "content": "All right, I'd better get going. I still need to ask around and find this Reid. Maybe I can still get the order to him before it goes overdue.",
+        "npc": 700504,
+        "next": 51201238
+      },
+      {
         "id": 51201235,
         "content": "Don't worry. If this nobleman couldn't be bothered to leave a proper pickup location or show up on time, that's his problem, not yours.",
         "npc": 100001,
         "next": 51201236
       },
       {
+        "id": 51201238,
+        "content": "See you around, Phoxhunter!",
+        "npc": 700504
+      },
+      {
         "id": 51201236,
         "content": "Exactly! That's what I think too. Who orders food and doesn't leave a proper address? However you look at it, this isn't my fault.",
         "npc": 700504,
         "next": 51201237
-      },
-      {
-        "id": 51201237,
-        "content": "All right, I'd better get going. I still need to ask around and find this Elijah. Maybe I can still get the order to him before it goes overdue.",
-        "npc": 700504,
-        "next": 51201238
-      },
-      {
-        "id": 51201238,
-        "content": "See you around, Phoxhunter!",
-        "npc": 700504
       },
       {
         "id": 51205615,
@@ -22987,13 +23196,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700505,
-    "name": "诺亚",
+    "name": "Noah",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -23029,23 +23239,30 @@
         "id": 51201305,
         "content": "Who cares? You play along while the deal's still on, and once it's done, they can all sink into Lamenting Lake for all I care.",
         "npc": 700505,
-        "next": 51201306
-      },
-      {
-        "id": 51201306,
-        "content": "So this is what you say about your business partners behind their backs?",
-        "next": 51201307
+        "options": [
+          {
+            "id": 51201306,
+            "content": "So this is what you say about your business partners behind their backs?",
+            "next": 51201307
+          }
+        ]
       },
       {
         "id": 51201307,
         "content": "And who are you supposed to be? Tch. Another Charon, I see.",
         "npc": 700505,
-        "next": 51201308
-      },
-      {
-        "id": 51201308,
-        "content": "(Show him the chequebook.)",
-        "next": 51201309
+        "options": [
+          {
+            "id": 51201308,
+            "content": "(Show him the chequebook.)",
+            "next": 51201309
+          },
+          {
+            "id": 51201327,
+            "content": "(Show them your work pass)",
+            "next": 51201328
+          }
+        ]
       },
       {
         "id": 51201309,
@@ -23054,111 +23271,16 @@
         "next": 51201310
       },
       {
-        "id": 51201310,
-        "content": "Whoa! Ah... no offence meant. He has an unfortunate tendency to speak out of turn. Allow me to apologise on his behalf. May I ask which merchant house you represent?",
-        "npc": 700506,
-        "next": 51201311
-      },
-      {
-        "id": 51201311,
-        "content": "What is this...? Whoa... You carry that kind of money on you? Who exactly are you?",
-        "npc": 700505,
-        "next": 51201312
-      },
-      {
-        "id": 51201312,
-        "content": "Just someone who couldn't stomach listening to the two of you for another second.",
-        "npc": 100001,
-        "next": 51201313
-      },
-      {
-        "id": 51201313,
-        "content": "(He shoots the other man a frantic look and jabs him hard in the side.) Quite right. Our apologies.",
-        "npc": 700506,
-        "next": 51201314
-      },
-      {
-        "id": 51201314,
-        "content": "Ah, yes! Terribly sorry. You must be... ah... some important merchant? Or perhaps a wealthy client? Were you here to discuss business with us?",
-        "npc": 700505,
-        "next": 51201315
-      },
-      {
-        "id": 51201315,
-        "content": "Allow me to introduce myself. I deal in Phoxichor here in Icelake, supplying clients across a wide range of trades. As you just heard, I also have business dealings in Huaxu, and—",
-        "npc": 700505,
-        "next": 51201316
-      },
-      {
-        "id": 51201316,
-        "content": "I'm not interested in doing business with people who insult their partners behind their backs.",
-        "npc": 100001,
-        "next": 51201317
-      },
-      {
-        "id": 51201317,
-        "content": "Ah... please forgive me. I spoke out of turn. How about this — I'll slap myself. Would that make you feel better?",
-        "npc": 700505,
-        "next": 51201318
-      },
-      {
-        "id": 51201318,
-        "content": "Fine. Do it.",
-        "next": 51201319
-      },
-      {
-        "id": 51201319,
-        "content": "(The man raises a hand and lightly pats his own cheek. Calling it a slap would be generous. It was closer to a caress.)",
-        "next": 51201320
-      },
-      {
-        "id": 51201320,
-        "content": "What was that supposed to be? Are you messing with me?",
-        "npc": 100001,
-        "next": 51201321
-      },
-      {
-        "id": 51201321,
-        "content": "You idiot! Don't try to fob our honoured guest off with that. If you won't do it properly, I will.",
-        "npc": 700506,
-        "next": 51201322
-      },
-      {
-        "id": 51201322,
-        "content": "(Before the man can even react, Dominic swings his hand and slaps him hard across the face.)",
-        "next": 51201323
-      },
-      {
-        "id": 51201323,
-        "content": "No. Let me.",
-        "next": 51201324
-      },
-      {
-        "id": 51201324,
-        "content": "(Before the man can even react, you raise your hand and slap him hard across the face.)",
-        "next": 51201325
-      },
-      {
-        "id": 51201325,
-        "content": "(The man clutches his cheek and stares at you in disbelief.)",
-        "next": 51201326
-      },
-      {
-        "id": 51201326,
-        "content": "Nope. That didn't help. I'm still not in the mood to talk to you. Maybe next time.",
-        "npc": 100001,
-        "next": 51201327
-      },
-      {
-        "id": 51201327,
-        "content": "(Show them your work pass)",
-        "next": 51201328
-      },
-      {
         "id": 51201328,
         "content": "Out of the way. I'm here to clear out the trash.",
         "npc": 100001,
         "next": 51201329
+      },
+      {
+        "id": 51201310,
+        "content": "Whoa! Ah... no offence meant. He has an unfortunate tendency to speak out of turn. Allow me to apologise on his behalf. May I ask which merchant house you represent?",
+        "npc": 700506,
+        "next": 51201311
       },
       {
         "id": 51201329,
@@ -23167,15 +23289,33 @@
         "next": 51201330
       },
       {
+        "id": 51201311,
+        "content": "What is this...? Whoa... You carry that kind of money on you? Who exactly are you?",
+        "npc": 700505,
+        "next": 51201312
+      },
+      {
         "id": 51201330,
         "content": "Forget it. Just let {性别：him|her} through and be done with it.",
         "npc": 700506,
         "next": 51201331
       },
       {
+        "id": 51201312,
+        "content": "Just someone who couldn't stomach listening to the two of you for another second.",
+        "npc": 100001,
+        "next": 51201313
+      },
+      {
         "id": 51201331,
         "content": "(You snatch up a mop left nearby by a cleaner and, with all your strength, sweep it hard across the floor at their feet.)",
         "next": 51201332
+      },
+      {
+        "id": 51201313,
+        "content": "(He shoots the other man a frantic look and jabs him hard in the side.) Quite right. Our apologies.",
+        "npc": 700506,
+        "next": 51201314
       },
       {
         "id": 51201332,
@@ -23184,10 +23324,22 @@
         "next": 51201333
       },
       {
+        "id": 51201314,
+        "content": "Ah, yes! Terribly sorry. You must be... ah... some important merchant? Or perhaps a wealthy client? Were you here to discuss business with us?",
+        "npc": 700505,
+        "next": 51201315
+      },
+      {
         "id": 51201333,
         "content": "My foot! That's going to bruise!",
         "npc": 700506,
         "next": 51201334
+      },
+      {
+        "id": 51201315,
+        "content": "Allow me to introduce myself. I deal in Phoxichor here in Icelake, supplying clients across a wide range of trades. As you just heard, I also have business dealings in Huaxu, and—",
+        "npc": 700505,
+        "next": 51201316
       },
       {
         "id": 51201334,
@@ -23196,26 +23348,50 @@
         "next": 51201335
       },
       {
+        "id": 51201316,
+        "content": "I'm not interested in doing business with people who insult their partners behind their backs.",
+        "npc": 100001,
+        "next": 51201317
+      },
+      {
         "id": 51201335,
         "content": "Are you calling us trash?",
         "npc": 700506,
-        "next": 51201336
+        "options": [
+          {
+            "id": 51201336,
+            "content": "My name's Eisenbahn. Feel free to file a complaint.",
+            "next": 51201337
+          },
+          {
+            "id": 51201338,
+            "content": "(Pretend not to hear.)",
+            "next": 51201339
+          }
+        ]
       },
       {
-        "id": 51201336,
-        "content": "My name's Eisenbahn. Feel free to file a complaint.",
-        "next": 51201337
+        "id": 51201317,
+        "content": "Ah... please forgive me. I spoke out of turn. How about this — I'll slap myself. Would that make you feel better?",
+        "npc": 700505,
+        "options": [
+          {
+            "id": 51201318,
+            "content": "Fine. Do it.",
+            "next": 51201319
+          },
+          {
+            "id": 51201323,
+            "content": "No. Let me.",
+            "next": 51201324
+          }
+        ]
       },
       {
         "id": 51201337,
         "content": "Fine! Eisenbahn, is it? We'll make sure you lose this job!",
         "npc": 700505,
-        "next": 51201338
-      },
-      {
-        "id": 51201338,
-        "content": "(Pretend not to hear.)",
-        "next": 51201339
+        "next": 51201340
       },
       {
         "id": 51201339,
@@ -23224,8 +23400,45 @@
         "next": 51201340
       },
       {
+        "id": 51201319,
+        "content": "(The man raises a hand and lightly pats his own cheek. Calling it a slap would be generous. It was closer to a caress.)",
+        "next": 51201320
+      },
+      {
+        "id": 51201324,
+        "content": "(Before the man can even react, you raise your hand and slap him hard across the face.)",
+        "next": 51201325
+      },
+      {
         "id": 51201340,
         "content": "(You keep driving the mop into their legs until they finally can't take it anymore and run off yelping.)"
+      },
+      {
+        "id": 51201320,
+        "content": "What was that supposed to be? Are you messing with me?",
+        "npc": 100001,
+        "next": 51201321
+      },
+      {
+        "id": 51201325,
+        "content": "(The man clutches his cheek and stares at you in disbelief.)",
+        "next": 51201326
+      },
+      {
+        "id": 51201321,
+        "content": "You idiot! Don't try to fob our honoured guest off with that. If you won't do it properly, I will.",
+        "npc": 700506,
+        "next": 51201322
+      },
+      {
+        "id": 51201326,
+        "content": "Nope. That didn't help. I'm still not in the mood to talk to you. Maybe next time.",
+        "npc": 100001
+      },
+      {
+        "id": 51201322,
+        "content": "(Before the man can even react, Dominic swings his hand and slaps him hard across the face.)",
+        "next": 51201326
       },
       {
         "id": 51205615,
@@ -23241,13 +23454,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700506,
-    "name": "多米尼克",
+    "name": "Dominic",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -23259,7 +23473,7 @@
   },
   {
     "id": 700508,
-    "name": "克洛伊",
+    "name": "Chloe",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -23284,12 +23498,18 @@
         "id": 51201404,
         "content": "Honestly, if I had any choice in the matter, I'd much rather be back in my dorm at the Academy, curled up by the fire with a cup of hot chocolate, gazing out the window...",
         "npc": 700508,
-        "next": 51201405
-      },
-      {
-        "id": 51201405,
-        "content": "(Show her the chequebook.)",
-        "next": 51201406
+        "options": [
+          {
+            "id": 51201405,
+            "content": "(Show her the chequebook.)",
+            "next": 51201406
+          },
+          {
+            "id": 51201421,
+            "content": "(Show her your work pass.)",
+            "next": 51201422
+          }
+        ]
       },
       {
         "id": 51201406,
@@ -23298,15 +23518,44 @@
         "next": 51201407
       },
       {
+        "id": 51201422,
+        "content": "Hello.",
+        "npc": 100001,
+        "next": 51201423
+      },
+      {
         "id": 51201407,
         "content": "...Um, hello. Why are you waving that at me all of a sudden? Are you from the Alchemy Academy too?",
         "npc": 700508,
-        "next": 51201408
+        "options": [
+          {
+            "id": 51201408,
+            "content": "Yes.",
+            "next": 51201409
+          },
+          {
+            "id": 51201414,
+            "content": "No.",
+            "next": 51201415
+          }
+        ]
       },
       {
-        "id": 51201408,
-        "content": "Yes.",
-        "next": 51201409
+        "id": 51201423,
+        "content": "A station hand? Ugh... what do you want? You're not about to ask me for money, are you?",
+        "npc": 700508,
+        "options": [
+          {
+            "id": 51201424,
+            "content": "Yes.",
+            "next": 51201425
+          },
+          {
+            "id": 51201430,
+            "content": "No.",
+            "next": 51201431
+          }
+        ]
       },
       {
         "id": 51201409,
@@ -23315,91 +23564,10 @@
         "next": 51201410
       },
       {
-        "id": 51201410,
-        "content": "But my advisor told me I was the only one they sent... Ah, never mind. More importantly, where were you while I was out gathering materials?",
-        "npc": 700508,
-        "next": 51201411
-      },
-      {
-        "id": 51201411,
-        "content": "And where were you while I was brewing cold-resistance tonic? Don't tell me you spent the whole time flaunting your money and enjoying yourself in the inner city.",
-        "npc": 700508,
-        "next": 51201412
-      },
-      {
-        "id": 51201412,
-        "content": "You've got the wrong idea.",
-        "npc": 100001,
-        "next": 51201413
-      },
-      {
-        "id": 51201413,
-        "content": "Whatever excuse you've got, you weren't here for any of the actual work, and I'm not covering for you when we get back. So no, waving a chequebook at me won't do. It doesn't even begin to make up for what I've been through out here... or for the chilblains I've ended up with!",
-        "npc": 700508,
-        "next": 51201414
-      },
-      {
-        "id": 51201414,
-        "content": "No.",
-        "next": 51201415
-      },
-      {
         "id": 51201415,
         "content": "Then what was that supposed to be? Wait... are you some noble from the capital with a secret crush on me? Did you follow me all the way to Icelake just to turn up now and surprise me?",
         "npc": 700508,
         "next": 51201416
-      },
-      {
-        "id": 51201416,
-        "content": "I think you've been watching too many melodramas.",
-        "npc": 100001,
-        "next": 51201417
-      },
-      {
-        "id": 51201417,
-        "content": "Naturally. I'm a regular at the opera, after all. But really, who are you? And why were you waving those cheques at me?",
-        "npc": 700508,
-        "next": 51201418
-      },
-      {
-        "id": 51201418,
-        "content": "The amounts on them are certainly impressive, but I'm the eldest daughter of the Kimberleys, you know. One of those would barely cover a month's allowance, so it's hardly enough to impress me.",
-        "npc": 700508,
-        "next": 51201419
-      },
-      {
-        "id": 51201419,
-        "content": "I just wanted to see how you'd react.",
-        "npc": 100001,
-        "next": 51201420
-      },
-      {
-        "id": 51201420,
-        "content": "Ugh... you're weird. I need to catch my train. Bye.",
-        "npc": 700508,
-        "next": 51201421
-      },
-      {
-        "id": 51201421,
-        "content": "(Show her your work pass.)",
-        "next": 51201422
-      },
-      {
-        "id": 51201422,
-        "content": "Hello.",
-        "npc": 100001,
-        "next": 51201423
-      },
-      {
-        "id": 51201423,
-        "content": "A station hand? Ugh... what do you want? You're not about to ask me for money, are you?",
-        "npc": 700508,
-        "next": 51201424
-      },
-      {
-        "id": 51201424,
-        "content": "Yes.",
-        "next": 51201425
       },
       {
         "id": 51201425,
@@ -23408,38 +23576,28 @@
         "next": 51201426
       },
       {
-        "id": 51201426,
-        "content": "Tch... dressed in little more than rags in weather like this... you certainly look poor enough.",
-        "npc": 700508,
-        "next": 51201427
-      },
-      {
-        "id": 51201427,
-        "content": "Fine. I suppose, as the eldest daughter of the Kimberleys, I can spare a little. Not that I brought much spending money with me for this field assignment.",
-        "npc": 700508,
-        "next": 51201428
-      },
-      {
-        "id": 51201428,
-        "content": "Here. Take it. Go and buy yourself something decent before you freeze.",
-        "npc": 700508,
-        "next": 51201429
-      },
-      {
-        "id": 51201429,
-        "content": "(You received 1,000 copper coins.)",
-        "next": 51201430
-      },
-      {
-        "id": 51201430,
-        "content": "No.",
-        "next": 51201431
-      },
-      {
         "id": 51201431,
         "content": "What about me says \"beggar\"?",
         "npc": 100001,
         "next": 51201432
+      },
+      {
+        "id": 51201410,
+        "content": "But my advisor told me I was the only one they sent... Ah, never mind. More importantly, where were you while I was out gathering materials?",
+        "npc": 700508,
+        "next": 51201411
+      },
+      {
+        "id": 51201416,
+        "content": "I think you've been watching too many melodramas.",
+        "npc": 100001,
+        "next": 51201417
+      },
+      {
+        "id": 51201426,
+        "content": "Tch... dressed in little more than rags in weather like this... you certainly look poor enough.",
+        "npc": 700508,
+        "next": 51201427
       },
       {
         "id": 51201432,
@@ -23448,27 +23606,79 @@
         "next": 51201433
       },
       {
+        "id": 51201411,
+        "content": "And where were you while I was brewing cold-resistance tonic? Don't tell me you spent the whole time flaunting your money and enjoying yourself in the inner city.",
+        "npc": 700508,
+        "next": 51201412
+      },
+      {
+        "id": 51201417,
+        "content": "Naturally. I'm a regular at the opera, after all. But really, who are you? And why were you waving those cheques at me?",
+        "npc": 700508,
+        "next": 51201418
+      },
+      {
+        "id": 51201427,
+        "content": "Fine. I suppose, as the eldest daughter of the Kimberleys, I can spare a little. Not that I brought much spending money with me for this field assignment.",
+        "npc": 700508,
+        "next": 51201428
+      },
+      {
         "id": 51201433,
         "content": "From what I've seen in the two weeks I've been here, that's what most Charons in the outer city look like. Still, you really don't feel the cold, do you? Look at me. I've only been here a short while and I've already got chilblains!",
         "npc": 700508,
         "next": 51201434
       },
       {
+        "id": 51201412,
+        "content": "You've got the wrong idea.",
+        "npc": 100001,
+        "next": 51201413
+      },
+      {
+        "id": 51201418,
+        "content": "The amounts on them are certainly impressive, but I'm the eldest daughter of the Kimberleys, you know. One of those would barely cover a month's allowance, so it's hardly enough to impress me.",
+        "npc": 700508,
+        "next": 51201419
+      },
+      {
+        "id": 51201428,
+        "content": "Here. Take it. Go and buy yourself something decent before you freeze.",
+        "npc": 700508
+      },
+      {
         "id": 51201434,
         "content": "When I get back, I'm asking my advisor for something to treat them. They'd better not leave marks, or all the hand care I do three times a week will have been for nothing.",
         "npc": 700508,
-        "next": 51201435
+        "options": [
+          {
+            "id": 51201435,
+            "content": "If coming here is such a pain, why bother?",
+            "next": 51201436
+          }
+        ]
       },
       {
-        "id": 51201435,
-        "content": "If coming here is such a pain, why bother?",
-        "next": 51201436
+        "id": 51201413,
+        "content": "Whatever excuse you've got, you weren't here for any of the actual work, and I'm not covering for you when we get back. So no, waving a chequebook at me won't do. It doesn't even begin to make up for what I've been through out here... or for the chilblains I've ended up with!",
+        "npc": 700508
+      },
+      {
+        "id": 51201419,
+        "content": "I just wanted to see how you'd react.",
+        "npc": 100001,
+        "next": 51201420
       },
       {
         "id": 51201436,
         "content": "Ugh, don't get me started. Just my luck! Of all the places I could've been sent for field practice, I got Icelake. And we weren't even allowed to bring attendants. These past two weeks have practically been survival training.",
         "npc": 700508,
         "next": 51201437
+      },
+      {
+        "id": 51201420,
+        "content": "Ugh... you're weird. I need to catch my train. Bye.",
+        "npc": 700508
       },
       {
         "id": 51201437,
@@ -23501,13 +23711,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700509,
-    "name": "雷米",
+    "name": "Remi",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -23526,12 +23737,13 @@
         "id": 51201503,
         "content": "Don't come any closer. Just leave me to the shadows. A body like mine belongs rotting in the gutter... not sitting here like this.",
         "npc": 700509,
-        "next": 51201504
-      },
-      {
-        "id": 51201504,
-        "content": "What happened?",
-        "next": 51201505
+        "options": [
+          {
+            "id": 51201504,
+            "content": "What happened?",
+            "next": 51201505
+          }
+        ]
       },
       {
         "id": 51201505,
@@ -23555,17 +23767,28 @@
         "id": 51201508,
         "content": "I'm going there. I'm going to look that bastard in the eye and ask him, \"I treated you like my own brother — and this is what I get!?\"",
         "npc": 700509,
-        "next": 51201509
-      },
-      {
-        "id": 51201509,
-        "content": "(Show him the chequebook.)",
-        "next": 51201510
+        "options": [
+          {
+            "id": 51201509,
+            "content": "(Show him the chequebook.)",
+            "next": 51201510
+          },
+          {
+            "id": 51201523,
+            "content": "(Show him your work pass.)",
+            "next": 51201524
+          }
+        ]
       },
       {
         "id": 51201510,
         "content": "(He's so drunk his eyes are nearly glazed over. But the moment he catches sight of the chequebook in your hand, he forces them into focus, and a spark comes back into them.)",
         "next": 51201511
+      },
+      {
+        "id": 51201524,
+        "content": "(He's so drunk his eyes are nearly glazed over. But the moment he catches sight of the work pass in your hand, he squints at it and rubs his eyes hard.)",
+        "next": 51201525
       },
       {
         "id": 51201511,
@@ -23574,84 +23797,16 @@
         "next": 51201512
       },
       {
-        "id": 51201512,
-        "content": "Ha... haha... please, {性别：sir|miss}, don't mock me. That can't possibly be for me, can it? That much money... haha... no... I know better than to dream...",
-        "npc": 700509,
-        "next": 51201513
-      },
-      {
-        "id": 51201513,
-        "content": "Actually... {性别：sir|miss}, if you gave that to me, I could turn it into more once I reached the Imperial Capital.",
-        "npc": 700509,
-        "next": 51201514
-      },
-      {
-        "id": 51201514,
-        "content": "I could track that bastard down and get my money back. There are opportunities everywhere in the Imperial Capital. I can start over. I can make you far more than that.",
-        "npc": 700509,
-        "next": 51201515
-      },
-      {
-        "id": 51201515,
-        "content": "Would you invest in me, {性别：sir|miss}? I've got nothing left to offer but my heart... and the will to make that bastard pay!",
-        "npc": 700509,
-        "next": 51201516
-      },
-      {
-        "id": 51201516,
-        "content": "(Tear out a cheque and hand it to him)",
-        "next": 51201517
-      },
-      {
-        "id": 51201517,
-        "content": "I'll be waiting to see what you make of it.",
-        "npc": 100001,
-        "next": 51201518
-      },
-      {
-        "id": 51201518,
-        "content": "Hahaha!!! I won't let you down, {性别：sir|miss}! I'll make you even more than this, I swear it!",
-        "npc": 700509,
-        "next": 51201519
-      },
-      {
-        "id": 51201519,
-        "content": "(Put the chequebook away)",
-        "next": 51201520
-      },
-      {
-        "id": 51201520,
-        "content": "Just letting you have a look.",
-        "npc": 100001,
-        "next": 51201521
-      },
-      {
-        "id": 51201521,
-        "content": "What!? You bastard! To hell with you! Ah... what have I done to deserve this? Why, when I'd already lost all hope, would fate send you here just to humiliate me!?",
-        "npc": 700509,
-        "next": 51201522
-      },
-      {
-        "id": 51201522,
-        "content": "No! It's all gone... all of it. In the end, all I've got left is this bottle... and this ticket!",
-        "npc": 700509,
-        "next": 51201523
-      },
-      {
-        "id": 51201523,
-        "content": "(Show him your work pass.)",
-        "next": 51201524
-      },
-      {
-        "id": 51201524,
-        "content": "(He's so drunk his eyes are nearly glazed over. But the moment he catches sight of the work pass in your hand, he squints at it and rubs his eyes hard.)",
-        "next": 51201525
-      },
-      {
         "id": 51201525,
         "content": "What, is that supposed to be funny? You trying to say I've fallen so low I'm no better than some Charon day labourer at the station? Is that it?",
         "npc": 700509,
         "next": 51201526
+      },
+      {
+        "id": 51201512,
+        "content": "Ha... haha... please, {性别：sir|miss}, don't mock me. That can't possibly be for me, can it? That much money... haha... no... I know better than to dream...",
+        "npc": 700509,
+        "next": 51201513
       },
       {
         "id": 51201526,
@@ -23660,21 +23815,56 @@
         "next": 51201527
       },
       {
+        "id": 51201513,
+        "content": "Actually... {性别：sir|miss}, if you gave that to me, I could turn it into more once I reached the Imperial Capital.",
+        "npc": 700509,
+        "next": 51201514
+      },
+      {
         "id": 51201527,
         "content": "Even now, down on my luck, I can still afford a train ticket to the Imperial Capital. And I'm drinking a bottle that costs more than you make in a month!",
         "npc": 700509,
         "next": 51201528
       },
       {
+        "id": 51201514,
+        "content": "I could track that bastard down and get my money back. There are opportunities everywhere in the Imperial Capital. I can start over. I can make you far more than that.",
+        "npc": 700509,
+        "next": 51201515
+      },
+      {
         "id": 51201528,
         "content": "And you? You'll be stuck here your whole life, shovelling ash out of boilers and polishing the glass up on the ceilings!",
         "npc": 700509,
-        "next": 51201529
+        "options": [
+          {
+            "id": 51201529,
+            "content": "(Argue with him)",
+            "next": 51201530
+          },
+          {
+            "id": 51201532,
+            "content": "(Play along)",
+            "next": 51201533
+          }
+        ]
       },
       {
-        "id": 51201529,
-        "content": "(Argue with him)",
-        "next": 51201530
+        "id": 51201515,
+        "content": "Would you invest in me, {性别：sir|miss}? I've got nothing left to offer but my heart... and the will to make that bastard pay!",
+        "npc": 700509,
+        "options": [
+          {
+            "id": 51201516,
+            "content": "(Tear out a cheque and hand it to him)",
+            "next": 51201517
+          },
+          {
+            "id": 51201519,
+            "content": "(Put the chequebook away)",
+            "next": 51201520
+          }
+        ]
       },
       {
         "id": 51201530,
@@ -23683,21 +23873,27 @@
         "next": 51201531
       },
       {
-        "id": 51201531,
-        "content": "You... you bastard! No... I'll get my money back, I know I will! Everything I had is waiting for me in the Imperial Capital! Just you wait... once I get it all back and make it back to Icelake, we'll see who's doing better then!",
-        "npc": 700509,
-        "next": 51201532
-      },
-      {
-        "id": 51201532,
-        "content": "(Play along)",
-        "next": 51201533
-      },
-      {
         "id": 51201533,
         "content": "Right. So which bridge in the Imperial Capital are you planning to sleep under?",
         "npc": 100001,
         "next": 51201534
+      },
+      {
+        "id": 51201517,
+        "content": "I'll be waiting to see what you make of it.",
+        "npc": 100001,
+        "next": 51201518
+      },
+      {
+        "id": 51201520,
+        "content": "Just letting you have a look.",
+        "npc": 100001,
+        "next": 51201521
+      },
+      {
+        "id": 51201531,
+        "content": "You... you bastard! No... I'll get my money back, I know I will! Everything I had is waiting for me in the Imperial Capital! Just you wait... once I get it all back and make it back to Icelake, we'll see who's doing better then!",
+        "npc": 700509
       },
       {
         "id": 51201534,
@@ -23706,8 +23902,24 @@
         "next": 51201535
       },
       {
+        "id": 51201518,
+        "content": "Hahaha!!! I won't let you down, {性别：sir|miss}! I'll make you even more than this, I swear it!",
+        "npc": 700509
+      },
+      {
+        "id": 51201521,
+        "content": "What!? You bastard! To hell with you! Ah... what have I done to deserve this? Why, when I'd already lost all hope, would fate send you here just to humiliate me!?",
+        "npc": 700509,
+        "next": 51201522
+      },
+      {
         "id": 51201535,
         "content": "And once I do, I'll bring my wife and children there. I'll buy a nice house with a garden, and get my wife a handsome husky to walk around the city every day.",
+        "npc": 700509
+      },
+      {
+        "id": 51201522,
+        "content": "No! It's all gone... all of it. In the end, all I've got left is this bottle... and this ticket!",
         "npc": 700509
       },
       {
@@ -23724,13 +23936,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700510,
-    "name": "利奥",
+    "name": "Leo",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -23817,19 +24030,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700511,
-    "name": "霍莉",
+    "name": "Holly",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700512,
-    "name": "艾拉",
+    "name": "Ella",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -23934,19 +24148,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700513,
-    "name": "娜塔莎",
+    "name": "Natasha",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700514,
-    "name": "菲利普",
+    "name": "Philip",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -24063,19 +24278,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700515,
-    "name": "露比",
+    "name": "Ruby",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700516,
-    "name": "佩里",
+    "name": "Perry",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -24134,7 +24350,7 @@
       },
       {
         "id": 51202010,
-        "content": "Oh, shut up, Marcus. You're impossible.",
+        "content": "Oh, shut up, Scylla. You're impossible.",
         "npc": 700516,
         "next": 51202011
       },
@@ -24163,19 +24379,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700517,
-    "name": "斯库拉",
+    "name": "Scylla",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700518,
-    "name": "格蕾丝",
+    "name": "Grace",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -24229,23 +24446,24 @@
         "id": 51202109,
         "content": "Something like the train itself... a fine name, one that speaks of hope and tomorrow. Hmm... what should it be?",
         "npc": 700518,
-        "next": 51202110
-      },
-      {
-        "id": 51202110,
-        "content": "Train.",
-        "next": 51202111
+        "options": [
+          {
+            "id": 51202110,
+            "content": "Train.",
+            "next": 51202111
+          },
+          {
+            "id": 51202112,
+            "content": "Steam. It suits a child born on a train.",
+            "next": 51202113
+          }
+        ]
       },
       {
         "id": 51202111,
         "content": "Train...? Isn't that a little too plain?",
         "npc": 700518,
-        "next": 51202112
-      },
-      {
-        "id": 51202112,
-        "content": "Steam. It suits a child born on a train.",
-        "next": 51202113
+        "next": 51202114
       },
       {
         "id": 51202113,
@@ -24257,12 +24475,18 @@
         "id": 51202114,
         "content": "Thank you for the suggestion. Though... who are you, exactly?",
         "npc": 700518,
-        "next": 51202115
-      },
-      {
-        "id": 51202115,
-        "content": "(Show her the chequebook.)",
-        "next": 51202116
+        "options": [
+          {
+            "id": 51202115,
+            "content": "(Show her the chequebook.)",
+            "next": 51202116
+          },
+          {
+            "id": 51202129,
+            "content": "(Show her your work pass.)",
+            "next": 51202130
+          }
+        ]
       },
       {
         "id": 51202116,
@@ -24271,21 +24495,44 @@
         "next": 51202117
       },
       {
+        "id": 51202130,
+        "content": "Are you with the railway? Is something the matter?",
+        "npc": 700518,
+        "next": 51202131
+      },
+      {
         "id": 51202117,
         "content": "You seem to be a wealthy {性别：gentleman|lady}. Are you waving cheques at me to celebrate my child's birth?",
         "npc": 700518,
         "next": 51202118
       },
       {
+        "id": 51202131,
+        "content": "No. I only wished to congratulate you and your child.",
+        "npc": 100001,
+        "next": 51202132
+      },
+      {
         "id": 51202118,
         "content": "Or... is this meant as a gift?",
         "npc": 700518,
-        "next": 51202119
+        "options": [
+          {
+            "id": 51202119,
+            "content": "(Tear out a cheque and hand it to her.)",
+            "next": 51202120
+          },
+          {
+            "id": 51202126,
+            "content": "(Put the chequebook away.)",
+            "next": 51202127
+          }
+        ]
       },
       {
-        "id": 51202119,
-        "content": "(Tear out a cheque and hand it to her.)",
-        "next": 51202120
+        "id": 51202132,
+        "content": "Thank you. Your kindness is the first gift he has received in this world.",
+        "npc": 700518
       },
       {
         "id": 51202120,
@@ -24294,10 +24541,20 @@
         "next": 51202121
       },
       {
+        "id": 51202127,
+        "content": "Madam, perhaps we should go back inside. It would be better not to linger here. One never knows what sort of people may be about...",
+        "npc": 700519,
+        "next": 51202128
+      },
+      {
         "id": 51202121,
         "content": "I confess, I am rather at a loss as to what to make of you. Is there something you want from me? I'm only an ordinary woman. I have nothing to offer you, and the child's father is only a humble merchant.",
         "npc": 700518,
         "next": 51202122
+      },
+      {
+        "id": 51202128,
+        "content": "(The two of them hurry away, eyeing you with quiet suspicion.)"
       },
       {
         "id": 51202122,
@@ -24320,45 +24577,6 @@
       {
         "id": 51202125,
         "content": "Thank you again for your gift. We will remember your kindness.",
-        "npc": 700518,
-        "next": 51202126
-      },
-      {
-        "id": 51202126,
-        "content": "(Put the chequebook away.)",
-        "next": 51202127
-      },
-      {
-        "id": 51202127,
-        "content": "Madam, perhaps we should go back inside. It would be better not to linger here. One never knows what sort of people may be about...",
-        "npc": 700519,
-        "next": 51202128
-      },
-      {
-        "id": 51202128,
-        "content": "(The two of them hurry away, eyeing you with quiet suspicion.)",
-        "next": 51202129
-      },
-      {
-        "id": 51202129,
-        "content": "(Show her your work pass.)",
-        "next": 51202130
-      },
-      {
-        "id": 51202130,
-        "content": "Are you with the railway? Is something the matter?",
-        "npc": 700518,
-        "next": 51202131
-      },
-      {
-        "id": 51202131,
-        "content": "No. I only wished to congratulate you and your child.",
-        "npc": 100001,
-        "next": 51202132
-      },
-      {
-        "id": 51202132,
-        "content": "Thank you. Your kindness is the first gift he has received in this world.",
         "npc": 700518
       },
       {
@@ -24375,19 +24593,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700519,
-    "name": "仆人",
+    "name": "Servant",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700520,
-    "name": "费利克斯",
+    "name": "Felix",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -24452,23 +24671,30 @@
       {
         "id": 51202210,
         "content": "(The argument is going nowhere, so you step in.)",
-        "next": 51202211
-      },
-      {
-        "id": 51202211,
-        "content": "What's going on here?",
-        "next": 51202212
+        "options": [
+          {
+            "id": 51202211,
+            "content": "What's going on here?",
+            "next": 51202212
+          }
+        ]
       },
       {
         "id": 51202212,
         "content": "An unreasonable man causing a scene, nothing more... Though who might you be?",
         "npc": 700520,
-        "next": 51202213
-      },
-      {
-        "id": 51202213,
-        "content": "(Show him the chequebook.)",
-        "next": 51202214
+        "options": [
+          {
+            "id": 51202213,
+            "content": "(Show him the chequebook.)",
+            "next": 51202214
+          },
+          {
+            "id": 51202235,
+            "content": "(Show him your work pass.)",
+            "next": 51202236
+          }
+        ]
       },
       {
         "id": 51202214,
@@ -24477,129 +24703,15 @@
         "next": 51202215
       },
       {
-        "id": 51202215,
-        "content": "(The young inspector's eyelids twitch. His lips part, as though to speak, but after a moment he thinks better of it.)",
-        "next": 51202216
-      },
-      {
-        "id": 51202216,
-        "content": "Please, {性别：sir|madam}, you must help me. My father was one of Hyperborea's most loyal soldiers. He served in the Legions all his life, until illness took him not long ago.",
-        "npc": 700521,
-        "next": 51202217
-      },
-      {
-        "id": 51202217,
-        "content": "In our family, we bury our dead back home. I spent everything I had on a ticket to take him home, but this rotten bastard won't let him board!",
-        "npc": 700521,
-        "next": 51202218
-      },
-      {
-        "id": 51202218,
-        "content": "That is not what I said. I said he could board if you bought him a ticket. You are the one refusing to cooperate.",
-        "npc": 700520,
-        "next": 51202219
-      },
-      {
-        "id": 51202219,
-        "content": "I spent every last coin on my own fare! It was my father's death benefit from the Empire!",
-        "npc": 700521,
-        "next": 51202220
-      },
-      {
-        "id": 51202220,
-        "content": "Then I'm afraid there is nothing I can do. Rules are rules.",
-        "npc": 700520,
-        "next": 51202221
-      },
-      {
-        "id": 51202221,
-        "content": "You look like a wealthy merchant... or perhaps one of those Laurelled Charons. Either way, I'm only doing my job. And if you were boarding this train yourself, I'm sure you wouldn't care to travel with an unticketed corpse.",
-        "npc": 700520,
-        "next": 51202222
-      },
-      {
-        "id": 51202222,
-        "content": "Actually, I wouldn't mind.",
-        "next": 51202223
-      },
-      {
-        "id": 51202223,
-        "content": "(You tear a cheque from the book and hand it to Leon.)",
-        "next": 51202224
-      },
-      {
-        "id": 51202224,
-        "content": "Here. Buy your father a ticket — and use the change to slap him across the face.",
-        "npc": 100001,
-        "next": 51202225
-      },
-      {
-        "id": 51202225,
-        "content": "Thank you, kind {性别：sir|madam}! My family will never forget this. My father, too, would have been grateful.",
-        "npc": 700521,
-        "next": 51202226
-      },
-      {
-        "id": 51202226,
-        "content": "You're welcome. Goodbye.",
-        "npc": 100001,
-        "next": 51202227
-      },
-      {
-        "id": 51202227,
-        "content": "I wouldn't mind. Though maybe someone else will.",
-        "next": 51202228
-      },
-      {
-        "id": 51202228,
-        "content": "(You tear several cheques from the book and hand them to Leon.)",
-        "next": 51202229
-      },
-      {
-        "id": 51202229,
-        "content": "Here. Book an entire carriage for your father. That should settle it, shouldn't it, officer?",
-        "npc": 100001,
-        "next": 51202230
-      },
-      {
-        "id": 51202230,
-        "content": "Tch... throwing money about like a jumped-up fool, all for a corpse. More money than sense.",
-        "npc": 700520,
-        "next": 51202231
-      },
-      {
-        "id": 51202231,
-        "content": "Felix, is it? While you're sorting out the tickets, Leon, make sure you leave a complaint with the station office too. That shouldn't be too difficult.",
-        "npc": 100001,
-        "next": 51202232
-      },
-      {
-        "id": 51202232,
-        "content": "Oh, gladly! I'll make sure everyone there hates him as much as I do!",
-        "npc": 700521,
-        "next": 51202233
-      },
-      {
-        "id": 51202233,
-        "content": "Good. Best of luck, Felix.",
-        "npc": 100001,
-        "next": 51202234
-      },
-      {
-        "id": 51202234,
-        "content": "(As you walk away, you catch the colour draining from his face, though he still tries to hold himself together. The sight leaves you smiling.)",
-        "next": 51202235
-      },
-      {
-        "id": 51202235,
-        "content": "(Show him your work pass.)",
-        "next": 51202236
-      },
-      {
         "id": 51202236,
         "content": "Tell me what's going on.",
         "npc": 100001,
         "next": 51202237
+      },
+      {
+        "id": 51202215,
+        "content": "(The young inspector's eyelids twitch. His lips part, as though to speak, but after a moment he thinks better of it.)",
+        "next": 51202216
       },
       {
         "id": 51202237,
@@ -24608,10 +24720,22 @@
         "next": 51202238
       },
       {
+        "id": 51202216,
+        "content": "Please, {性别：sir|madam}, you must help me. My father was one of Hyperborea's most loyal soldiers. He served in the Legions all his life, until illness took him not long ago.",
+        "npc": 700521,
+        "next": 51202217
+      },
+      {
         "id": 51202238,
         "content": "We both work here. No need to make this harder than it has to be.",
         "npc": 100001,
         "next": 51202239
+      },
+      {
+        "id": 51202217,
+        "content": "In our family, we bury our dead back home. I spent everything I had on a ticket to take him home, but this rotten bastard won't let him board!",
+        "npc": 700521,
+        "next": 51202218
       },
       {
         "id": 51202239,
@@ -24620,10 +24744,22 @@
         "next": 51202240
       },
       {
+        "id": 51202218,
+        "content": "That is not what I said. I said he could board if you bought him a ticket. You are the one refusing to cooperate.",
+        "npc": 700520,
+        "next": 51202219
+      },
+      {
         "id": 51202240,
         "content": "Excuse me... can you help me? My father was one of Hyperborea's most loyal soldiers. He served in the Legions all his life, until illness took him not long ago.",
         "npc": 700521,
         "next": 51202241
+      },
+      {
+        "id": 51202219,
+        "content": "I spent every last coin on my own fare! It was my father's death benefit from the Empire!",
+        "npc": 700521,
+        "next": 51202220
       },
       {
         "id": 51202241,
@@ -24632,15 +24768,44 @@
         "next": 51202242
       },
       {
+        "id": 51202220,
+        "content": "Then I'm afraid there is nothing I can do. Rules are rules.",
+        "npc": 700520,
+        "next": 51202221
+      },
+      {
         "id": 51202242,
         "content": "Those are the rules. I'm doing my job. Stay out of it. If this reaches the wrong ears, neither of us will come out of it well.",
         "npc": 700520,
-        "next": 51202243
+        "options": [
+          {
+            "id": 51202243,
+            "content": "Since we're talking about the rules...",
+            "next": 51202244
+          },
+          {
+            "id": 51202251,
+            "content": "There might be another way.",
+            "next": 51202252
+          }
+        ]
       },
       {
-        "id": 51202243,
-        "content": "Since we're talking about the rules...",
-        "next": 51202244
+        "id": 51202221,
+        "content": "You look like a wealthy merchant... or perhaps one of those Laurelled Charons. Either way, I'm only doing my job. And if you were boarding this train yourself, I'm sure you wouldn't care to travel with an unticketed corpse.",
+        "npc": 700520,
+        "options": [
+          {
+            "id": 51202222,
+            "content": "Actually, I wouldn't mind.",
+            "next": 51202223
+          },
+          {
+            "id": 51202227,
+            "content": "I wouldn't mind. Though maybe someone else will.",
+            "next": 51202228
+          }
+        ]
       },
       {
         "id": 51202244,
@@ -24649,51 +24814,26 @@
         "next": 51202245
       },
       {
-        "id": 51202245,
-        "content": "Not in writing, no. But anyone with a shred of sense knows better than to try something like this. If he brings a corpse on board, how do you think the other passengers are going to react?",
-        "npc": 700520,
-        "next": 51202246
-      },
-      {
-        "id": 51202246,
-        "content": "That's for them to worry about after he boards. And if anyone does complain, it still won't be your problem. You call me meddling, but you're the one making an unnecessary fuss.",
-        "npc": 100001,
-        "next": 51202247
-      },
-      {
-        "id": 51202247,
-        "content": "If the conductor finds out, he'll be thrown off at the next stop anyway!",
-        "npc": 700520,
-        "next": 51202248
-      },
-      {
-        "id": 51202248,
-        "content": "That still isn't a reason to stop him boarding in the first place.",
-        "npc": 100001,
-        "next": 51202249
-      },
-      {
-        "id": 51202249,
-        "content": "Exactly! Just let me board, and I'll take responsibility for the rest!",
-        "npc": 700521,
-        "next": 51202250
-      },
-      {
-        "id": 51202250,
-        "content": "Ugh! You're both out of your minds. Fine. Do what you like. Just leave my name out of it when this goes wrong.",
-        "npc": 700520,
-        "next": 51202251
-      },
-      {
-        "id": 51202251,
-        "content": "There might be another way.",
-        "next": 51202252
-      },
-      {
         "id": 51202252,
         "content": "A train's got more than passenger carriages. If your father can't go in one of those, try another compartment.",
         "npc": 100001,
         "next": 51202253
+      },
+      {
+        "id": 51202223,
+        "content": "(You tear a cheque from the book and hand it to Leon.)",
+        "next": 51202224
+      },
+      {
+        "id": 51202228,
+        "content": "(You tear several cheques from the book and hand them to Leon.)",
+        "next": 51202229
+      },
+      {
+        "id": 51202245,
+        "content": "Not in writing, no. But anyone with a shred of sense knows better than to try something like this. If he brings a corpse on board, how do you think the other passengers are going to react?",
+        "npc": 700520,
+        "next": 51202246
       },
       {
         "id": 51202253,
@@ -24702,10 +24842,46 @@
         "next": 51202254
       },
       {
+        "id": 51202224,
+        "content": "Here. Buy your father a ticket — and use the change to slap him across the face.",
+        "npc": 100001,
+        "next": 51202225
+      },
+      {
+        "id": 51202229,
+        "content": "Here. Book an entire carriage for your father. That should settle it, shouldn't it, officer?",
+        "npc": 100001,
+        "next": 51202230
+      },
+      {
+        "id": 51202246,
+        "content": "That's for them to worry about after he boards. And if anyone does complain, it still won't be your problem. You call me meddling, but you're the one making an unnecessary fuss.",
+        "npc": 100001,
+        "next": 51202247
+      },
+      {
         "id": 51202254,
         "content": "But my father isn't freight! He's my family... That doesn't change just because he's gone!",
         "npc": 700521,
         "next": 51202255
+      },
+      {
+        "id": 51202225,
+        "content": "Thank you, kind {性别：sir|madam}! My family will never forget this. My father, too, would have been grateful.",
+        "npc": 700521,
+        "next": 51202226
+      },
+      {
+        "id": 51202230,
+        "content": "Tch... throwing money about like a jumped-up fool, all for a corpse. More money than sense.",
+        "npc": 700520,
+        "next": 51202231
+      },
+      {
+        "id": 51202247,
+        "content": "If the conductor finds out, he'll be thrown off at the next stop anyway!",
+        "npc": 700520,
+        "next": 51202248
       },
       {
         "id": 51202255,
@@ -24714,10 +24890,39 @@
         "next": 51202256
       },
       {
+        "id": 51202226,
+        "content": "You're welcome. Goodbye.",
+        "npc": 100001
+      },
+      {
+        "id": 51202231,
+        "content": "Felix, is it? While you're sorting out the tickets, Leon, make sure you leave a complaint with the station office too. That shouldn't be too difficult.",
+        "npc": 100001,
+        "next": 51202232
+      },
+      {
+        "id": 51202248,
+        "content": "That still isn't a reason to stop him boarding in the first place.",
+        "npc": 100001,
+        "next": 51202249
+      },
+      {
         "id": 51202256,
         "content": "Set a chair in there for him, or make up a seat with a few sacks. That should solve the problem.",
         "npc": 100001,
         "next": 51202257
+      },
+      {
+        "id": 51202232,
+        "content": "Oh, gladly! I'll make sure everyone there hates him as much as I do!",
+        "npc": 700521,
+        "next": 51202233
+      },
+      {
+        "id": 51202249,
+        "content": "Exactly! Just let me board, and I'll take responsibility for the rest!",
+        "npc": 700521,
+        "next": 51202250
       },
       {
         "id": 51202257,
@@ -24726,10 +24931,25 @@
         "next": 51202258
       },
       {
+        "id": 51202233,
+        "content": "Good. Best of luck, Felix.",
+        "npc": 100001,
+        "next": 51202234
+      },
+      {
+        "id": 51202250,
+        "content": "Ugh! You're both out of your minds. Fine. Do what you like. Just leave my name out of it when this goes wrong.",
+        "npc": 700520
+      },
+      {
         "id": 51202258,
         "content": "Mm-hm.",
         "npc": 100001,
         "next": 51202259
+      },
+      {
+        "id": 51202234,
+        "content": "(As you walk away, you catch the colour draining from his face, though he still tries to hold himself together. The sight leaves you smiling.)"
       },
       {
         "id": 51202259,
@@ -24756,19 +24976,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700521,
-    "name": "索米",
+    "name": "Somi",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700522,
-    "name": "亚瑟",
+    "name": "Arthur",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -24798,12 +25019,14 @@
       {
         "id": 51202305,
         "content": "???",
-        "next": 51202306
-      },
-      {
-        "id": 51202306,
-        "content": "What are you doing?",
-        "next": 51202307
+        "npc": 100001,
+        "options": [
+          {
+            "id": 51202306,
+            "content": "What are you doing?",
+            "next": 51202307
+          }
+        ]
       },
       {
         "id": 51202307,
@@ -24827,12 +25050,18 @@
         "id": 51202310,
         "content": "That place holds everything I've ever dreamed of: poetry, new horizons, hope, possibility... Just saying it out loud is enough to set my heart racing.",
         "npc": 700522,
-        "next": 51202311
-      },
-      {
-        "id": 51202311,
-        "content": "Fair enough.",
-        "next": 51202312
+        "options": [
+          {
+            "id": 51202311,
+            "content": "Fair enough.",
+            "next": 51202312
+          },
+          {
+            "id": 51202317,
+            "content": "Seriously?",
+            "next": 51202318
+          }
+        ]
       },
       {
         "id": 51202312,
@@ -24841,16 +25070,33 @@
         "next": 51202313
       },
       {
+        "id": 51202318,
+        "content": "You don't think so? Then perhaps we simply see things differently. But if you're setting out on a journey, shouldn't you do so with a little more spirit than that?",
+        "npc": 700522,
+        "next": 51202319
+      },
+      {
         "id": 51202313,
         "content": "Something like that...",
         "npc": 100001,
         "next": 51202314
       },
       {
+        "id": 51202319,
+        "content": "I just don't think you need to be that dramatic about it...",
+        "npc": 100001,
+        "next": 51202320
+      },
+      {
         "id": 51202314,
         "content": "Wonderful! Trust me, you'll find your happiness. I can tell already — you're not meant for an ordinary life.",
         "npc": 700522,
         "next": 51202315
+      },
+      {
+        "id": 51202320,
+        "content": "Is that so? Then I suppose there's no point in us talking any further.",
+        "npc": 700522
       },
       {
         "id": 51202315,
@@ -24861,29 +25107,6 @@
       {
         "id": 51202316,
         "content": "Then go on without fear! May the whistle sound for your departure, and may the Empire's engines carry you ever onward across the frozen plains!",
-        "npc": 700522,
-        "next": 51202317
-      },
-      {
-        "id": 51202317,
-        "content": "Seriously?",
-        "next": 51202318
-      },
-      {
-        "id": 51202318,
-        "content": "You don't think so? Then perhaps we simply see things differently. But if you're setting out on a journey, shouldn't you do so with a little more spirit than that?",
-        "npc": 700522,
-        "next": 51202319
-      },
-      {
-        "id": 51202319,
-        "content": "I just don't think you need to be that dramatic about it...",
-        "npc": 100001,
-        "next": 51202320
-      },
-      {
-        "id": 51202320,
-        "content": "Is that so? Then I suppose there's no point in us talking any further.",
         "npc": 700522
       },
       {
@@ -24900,13 +25123,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700523,
-    "name": "欧文·普莱斯",
+    "name": "Owen Price",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -24924,12 +25148,18 @@
         "id": 51202402,
         "content": "Owen Price, station guard at Bloomfield Station, at your service. How can I help you today?",
         "npc": 700523,
-        "next": 51202403
-      },
-      {
-        "id": 51202403,
-        "content": "(Show him the chequebook.)",
-        "next": 51202404
+        "options": [
+          {
+            "id": 51202403,
+            "content": "(Show him the chequebook.)",
+            "next": 51202404
+          },
+          {
+            "id": 51202421,
+            "content": "(Show him your work pass.)",
+            "next": 51202422
+          }
+        ]
       },
       {
         "id": 51202404,
@@ -24938,107 +25168,15 @@
         "next": 51202405
       },
       {
-        "id": 51202405,
-        "content": "(A flicker of surprise crosses the guard's face, then vanishes as quickly as it came.)",
-        "next": 51202406
-      },
-      {
-        "id": 51202406,
-        "content": "I see... then you must be somebody important. How may I help you?",
-        "npc": 700523,
-        "next": 51202407
-      },
-      {
-        "id": 51202407,
-        "content": "Tell me about yourself.",
-        "next": 51202408
-      },
-      {
-        "id": 51202408,
-        "content": "Owen Price, station guard at Bloomfield Station. My parents are gone, so these days it's just me and my younger brother. We're just ordinary station hands — hardly worth mentioning next to someone like you.",
-        "npc": 700523,
-        "next": 51202409
-      },
-      {
-        "id": 51202409,
-        "content": "That said... I was named Employee of the Year last year. So I suppose that's something.",
-        "npc": 700523,
-        "next": 51202410
-      },
-      {
-        "id": 51202410,
-        "content": "What do you do here?",
-        "next": 51202411
-      },
-      {
-        "id": 51202411,
-        "content": "Nothing too complicated. I stand watch, help people with what they need, and greet travellers with a smile.",
-        "npc": 700523,
-        "next": 51202412
-      },
-      {
-        "id": 51202412,
-        "content": "Some people say there's no point smiling at passers-by. Most won't even look your way. As they say, even warmth freezes over in Icelake.",
-        "npc": 700523,
-        "next": 51202413
-      },
-      {
-        "id": 51202413,
-        "content": "But I don't see it that way. It's part of the job. And if a smile or a kind word can make someone's day a little easier, that's good enough for me.",
-        "npc": 700523,
-        "next": 51202414
-      },
-      {
-        "id": 51202414,
-        "content": "You're a good man.",
-        "npc": 100001,
-        "next": 51202415
-      },
-      {
-        "id": 51202415,
-        "content": "Thank you. Funny... that's almost exactly what the girl who turned me down said.",
-        "npc": 700523,
-        "next": 51202416
-      },
-      {
-        "id": 51202416,
-        "content": "What do you think of the stationmaster?",
-        "next": 51202417
-      },
-      {
-        "id": 51202417,
-        "content": "Stationmaster Eisenbahn? He's a man I truly respect, and a real role model to me. Bloomfield Station runs as well as it does because of him.",
-        "npc": 700523,
-        "next": 51202418
-      },
-      {
-        "id": 51202418,
-        "content": "He's kind, too. My brother couldn't find work anywhere, so someone told me to ask the stationmaster. Said he might take him on for my sake.",
-        "npc": 700523,
-        "next": 51202419
-      },
-      {
-        "id": 51202419,
-        "content": "I thought they were joking, but he agreed to take him on. The pay isn't much, but at least my brother's got honest work now instead of idling his days away. That's more than enough for me.",
-        "npc": 700523,
-        "next": 51202420
-      },
-      {
-        "id": 51202420,
-        "content": "I've heard people say all sorts about him, good and bad. But as far as I'm concerned, he's a truly good man, and the best stationmaster Bloomfield could ask for.",
-        "npc": 700523,
-        "next": 51202421
-      },
-      {
-        "id": 51202421,
-        "content": "(Show him your work pass.)",
-        "next": 51202422
-      },
-      {
         "id": 51202422,
         "content": "Relax. Just a routine staff inspection.",
         "npc": 100001,
         "next": 51202423
+      },
+      {
+        "id": 51202405,
+        "content": "(A flicker of surprise crosses the guard's face, then vanishes as quickly as it came.)",
+        "next": 51202406
       },
       {
         "id": 51202423,
@@ -25047,21 +25185,89 @@
         "next": 51202424
       },
       {
+        "id": 51202406,
+        "content": "I see... then you must be somebody important. How may I help you?",
+        "npc": 700523,
+        "options": [
+          {
+            "id": 51202407,
+            "content": "Tell me about yourself.",
+            "next": 51202408
+          },
+          {
+            "id": 51202410,
+            "content": "What do you do here?",
+            "next": 51202411
+          },
+          {
+            "id": 51202416,
+            "content": "What do you think of the stationmaster?",
+            "next": 51202417
+          }
+        ]
+      },
+      {
         "id": 51202424,
         "content": "That's right.",
         "npc": 100001,
         "next": 51202425
       },
       {
+        "id": 51202408,
+        "content": "Owen Price, station guard at Bloomfield Station. My parents are gone, so these days it's just me and my younger brother. We're just ordinary station hands — hardly worth mentioning next to someone like you.",
+        "npc": 700523,
+        "next": 51202409
+      },
+      {
+        "id": 51202411,
+        "content": "Nothing too complicated. I stand watch, help people with what they need, and greet travellers with a smile.",
+        "npc": 700523,
+        "next": 51202412
+      },
+      {
+        "id": 51202417,
+        "content": "Stationmaster Eisenbahn? He's a man I truly respect, and a real role model to me. Bloomfield Station runs as well as it does because of him.",
+        "npc": 700523,
+        "next": 51202418
+      },
+      {
         "id": 51202425,
         "content": "Understood. Please, go ahead. I won't let you down.",
         "npc": 700523,
-        "next": 51202426
+        "options": [
+          {
+            "id": 51202426,
+            "content": "Tell me about yourself.",
+            "next": 51202427
+          },
+          {
+            "id": 51202429,
+            "content": "Do you ever get difficult passengers?",
+            "next": 51202430
+          },
+          {
+            "id": 51202432,
+            "content": "What do you think of the stationmaster?",
+            "next": 51202433
+          }
+        ]
       },
       {
-        "id": 51202426,
-        "content": "Tell me about yourself.",
-        "next": 51202427
+        "id": 51202409,
+        "content": "That said... I was named Employee of the Year last year. So I suppose that's something.",
+        "npc": 700523
+      },
+      {
+        "id": 51202412,
+        "content": "Some people say there's no point smiling at passers-by. Most won't even look your way. As they say, even warmth freezes over in Icelake.",
+        "npc": 700523,
+        "next": 51202413
+      },
+      {
+        "id": 51202418,
+        "content": "He's kind, too. My brother couldn't find work anywhere, so someone told me to ask the stationmaster. Said he might take him on for my sake.",
+        "npc": 700523,
+        "next": 51202419
       },
       {
         "id": 51202427,
@@ -25070,32 +25276,10 @@
         "next": 51202428
       },
       {
-        "id": 51202428,
-        "content": "I was named Employee of the Year last year. I'm proud of that. Means the work I do here counts for something.",
-        "npc": 700523,
-        "next": 51202429
-      },
-      {
-        "id": 51202429,
-        "content": "Do you ever get difficult passengers?",
-        "next": 51202430
-      },
-      {
         "id": 51202430,
         "content": "Difficult? Not in my book. If a passenger asks for help, then they've every right to ask. It's my job to do what I can.",
         "npc": 700523,
         "next": 51202431
-      },
-      {
-        "id": 51202431,
-        "content": "As they say, even warmth freezes over in Icelake. Well then — I'll just have to be the one who keeps it from freezing.",
-        "npc": 700523,
-        "next": 51202432
-      },
-      {
-        "id": 51202432,
-        "content": "What do you think of the stationmaster?",
-        "next": 51202433
       },
       {
         "id": 51202433,
@@ -25104,16 +25288,54 @@
         "next": 51202434
       },
       {
+        "id": 51202413,
+        "content": "But I don't see it that way. It's part of the job. And if a smile or a kind word can make someone's day a little easier, that's good enough for me.",
+        "npc": 700523,
+        "next": 51202414
+      },
+      {
+        "id": 51202419,
+        "content": "I thought they were joking, but he agreed to take him on. The pay isn't much, but at least my brother's got honest work now instead of idling his days away. That's more than enough for me.",
+        "npc": 700523,
+        "next": 51202420
+      },
+      {
+        "id": 51202428,
+        "content": "I was named Employee of the Year last year. I'm proud of that. Means the work I do here counts for something.",
+        "npc": 700523
+      },
+      {
+        "id": 51202431,
+        "content": "As they say, even warmth freezes over in Icelake. Well then — I'll just have to be the one who keeps it from freezing.",
+        "npc": 700523
+      },
+      {
         "id": 51202434,
         "content": "Ask anyone here, and they'll tell you the same: Stationmaster Eisenbahn is first-rate at what he does, and as decent a man as you'll ever meet.",
         "npc": 700523,
         "next": 51202435
       },
       {
+        "id": 51202414,
+        "content": "You're a good man.",
+        "npc": 100001,
+        "next": 51202415
+      },
+      {
+        "id": 51202420,
+        "content": "I've heard people say all sorts about him, good and bad. But as far as I'm concerned, he's a truly good man, and the best stationmaster Bloomfield could ask for.",
+        "npc": 700523
+      },
+      {
         "id": 51202435,
         "content": "Goodbye.",
         "npc": 100001,
         "next": 51202436
+      },
+      {
+        "id": 51202415,
+        "content": "Thank you. Funny... that's almost exactly what the girl who turned me down said.",
+        "npc": 700523
       },
       {
         "id": 51202436,
@@ -25134,13 +25356,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700524,
-    "name": "迦勒·普莱斯",
+    "name": "Caleb Price",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -25153,12 +25376,13 @@
         "id": 51202502,
         "content": "Zzz... Ngh... mm...? Huh? What is it?",
         "npc": 700524,
-        "next": 51202503
-      },
-      {
-        "id": 51202503,
-        "content": "Why are you sleeping on the job?",
-        "next": 51202504
+        "options": [
+          {
+            "id": 51202503,
+            "content": "Why are you sleeping on the job?",
+            "next": 51202504
+          }
+        ]
       },
       {
         "id": 51202504,
@@ -25170,12 +25394,18 @@
         "id": 51202505,
         "content": "And who are you, exactly? Mind your own business.",
         "npc": 700524,
-        "next": 51202506
-      },
-      {
-        "id": 51202506,
-        "content": "(Show him the chequebook.)",
-        "next": 51202507
+        "options": [
+          {
+            "id": 51202506,
+            "content": "(Show him the chequebook.)",
+            "next": 51202507
+          },
+          {
+            "id": 51202519,
+            "content": "(Show him your work pass.)",
+            "next": 51202520
+          }
+        ]
       },
       {
         "id": 51202507,
@@ -25184,15 +25414,32 @@
         "next": 51202508
       },
       {
+        "id": 51202520,
+        "content": "Just a routine staff inspection.",
+        "npc": 100001,
+        "next": 51202521
+      },
+      {
         "id": 51202508,
         "content": "Go on, spare me a little, yeah? Then maybe I wouldn't have to rot out here on this miserable post, watching these idiots strut past like they own the whole station.",
         "npc": 700524,
-        "next": 51202509
+        "options": [
+          {
+            "id": 51202509,
+            "content": "Sounds like you really hate your job.",
+            "next": 51202510
+          },
+          {
+            "id": 51202513,
+            "content": "And why should I give you money?",
+            "next": 51202514
+          }
+        ]
       },
       {
-        "id": 51202509,
-        "content": "Sounds like you really hate your job.",
-        "next": 51202510
+        "id": 51202521,
+        "content": "(Before you can put your work pass away, he snatches it from your hand, glances at it, then tosses it back with a scoff.)",
+        "next": 51202522
       },
       {
         "id": 51202510,
@@ -25201,67 +25448,10 @@
         "next": 51202511
       },
       {
-        "id": 51202511,
-        "content": "I used to drift around Icelake. Nick a drink off one bloke, scrounge a bite off another. Easy life, more or less. Then my idiot brother had to drag me into this job.",
-        "npc": 700524,
-        "next": 51202512
-      },
-      {
-        "id": 51202512,
-        "content": "Now I'm stuck here all day like some bloody signpost. I'm sick to death of it.",
-        "npc": 700524,
-        "next": 51202513
-      },
-      {
-        "id": 51202513,
-        "content": "And why should I give you money?",
-        "next": 51202514
-      },
-      {
         "id": 51202514,
         "content": "Now that's a bit cold. You just don't know me yet. Spend a little more time around me and you'll see I've got real talent. Think of it as an investment.",
         "npc": 700524,
         "next": 51202515
-      },
-      {
-        "id": 51202515,
-        "content": "Your talent being asleep on the job?",
-        "npc": 100001,
-        "next": 51202516
-      },
-      {
-        "id": 51202516,
-        "content": "Alright, fair enough. We got off on the wrong foot. But give it a bit of time, yeah? Stick around and you'll see I've got more going for me than you think.",
-        "npc": 700524,
-        "next": 51202517
-      },
-      {
-        "id": 51202517,
-        "content": "Sounds like a load of rubbish. I'll pass.",
-        "npc": 100001,
-        "next": 51202518
-      },
-      {
-        "id": 51202518,
-        "content": "Aw, don't go. At least give me a proper chance to sell myself.",
-        "npc": 700524,
-        "next": 51202519
-      },
-      {
-        "id": 51202519,
-        "content": "(Show him your work pass.)",
-        "next": 51202520
-      },
-      {
-        "id": 51202520,
-        "content": "Just a routine staff inspection.",
-        "npc": 100001,
-        "next": 51202521
-      },
-      {
-        "id": 51202521,
-        "content": "(Before you can put your work pass away, he snatches it from your hand, glances at it, then tosses it back with a scoff.)",
-        "next": 51202522
       },
       {
         "id": 51202522,
@@ -25270,15 +25460,45 @@
         "next": 51202523
       },
       {
+        "id": 51202511,
+        "content": "I used to drift around Icelake. Nick a drink off one bloke, scrounge a bite off another. Easy life, more or less. Then my idiot brother had to drag me into this job.",
+        "npc": 700524,
+        "next": 51202512
+      },
+      {
+        "id": 51202515,
+        "content": "Your talent being asleep on the job?",
+        "npc": 100001,
+        "next": 51202516
+      },
+      {
         "id": 51202523,
         "content": "So what is this, then? You're either bored out of your skull or sniffing around for information. Go on, then. Ask.",
         "npc": 700524,
-        "next": 51202524
+        "options": [
+          {
+            "id": 51202524,
+            "content": "Tell me about yourself.",
+            "next": 51202525
+          },
+          {
+            "id": 51202530,
+            "content": "How did someone like you even get this job?",
+            "next": 51202531
+          }
+        ]
       },
       {
-        "id": 51202524,
-        "content": "Tell me about yourself.",
-        "next": 51202525
+        "id": 51202512,
+        "content": "Now I'm stuck here all day like some bloody signpost. I'm sick to death of it.",
+        "npc": 700524,
+        "next": 51202517
+      },
+      {
+        "id": 51202516,
+        "content": "Alright, fair enough. We got off on the wrong foot. But give it a bit of time, yeah? Stick around and you'll see I've got more going for me than you think.",
+        "npc": 700524,
+        "next": 51202517
       },
       {
         "id": 51202525,
@@ -25287,39 +25507,22 @@
         "next": 51202526
       },
       {
-        "id": 51202526,
-        "content": "Alright. I should go.",
-        "npc": 100001,
-        "next": 51202527
-      },
-      {
-        "id": 51202527,
-        "content": "Hey, come on. I'm only messing with you. It's dead boring up here. Having someone to talk to beats staring into space.",
-        "npc": 700524,
-        "next": 51202528
-      },
-      {
-        "id": 51202528,
-        "content": "Well, this look should give you a clue. I'm a guard. Parents are gone. Got an idiot older brother who dragged me into this dead-end job. Now I stand here all day watching people come and go, keeping an eye on nothing, because nobody ever causes trouble here anyway.",
-        "npc": 700524,
-        "next": 51202529
-      },
-      {
-        "id": 51202529,
-        "content": "Honestly, it's dull as hell. I liked my old life better in Icelake. I'd lie if I had to, cheat if it paid, scrounge whatever I could. Anything to get by. Sure, some days all that \"hard work\" got me nowhere and I went home hungry... but at least no two days were ever the same. Sometimes life even threw something interesting my way. Not this same miserable routine day after day.",
-        "npc": 700524,
-        "next": 51202530
-      },
-      {
-        "id": 51202530,
-        "content": "How did someone like you even get this job?",
-        "next": 51202531
-      },
-      {
         "id": 51202531,
         "content": "Oi. Watch it. I used to be somebody, you know. Ask around Icelake about the younger Price boy — my name used to make people nervous.",
         "npc": 700524,
         "next": 51202532
+      },
+      {
+        "id": 51202517,
+        "content": "Sounds like a load of rubbish. I'll pass.",
+        "npc": 100001,
+        "next": 51202518
+      },
+      {
+        "id": 51202526,
+        "content": "Alright. I should go.",
+        "npc": 100001,
+        "next": 51202527
       },
       {
         "id": 51202532,
@@ -25328,16 +25531,38 @@
         "next": 51202533
       },
       {
+        "id": 51202518,
+        "content": "Aw, don't go. At least give me a proper chance to sell myself.",
+        "npc": 700524
+      },
+      {
+        "id": 51202527,
+        "content": "Hey, come on. I'm only messing with you. It's dead boring up here. Having someone to talk to beats staring into space.",
+        "npc": 700524,
+        "next": 51202528
+      },
+      {
         "id": 51202533,
         "content": "A while back, I... got into a bit of trouble. Ended up in jail. My brother bailed me out, then decided he had to keep an eye on me or I'd land myself right back in there. So he went to hand in his notice.",
         "npc": 700524,
         "next": 51202534
       },
       {
+        "id": 51202528,
+        "content": "Well, this look should give you a clue. I'm a guard. Parents are gone. Got an idiot older brother who dragged me into this dead-end job. Now I stand here all day watching people come and go, keeping an eye on nothing, because nobody ever causes trouble here anyway.",
+        "npc": 700524,
+        "next": 51202529
+      },
+      {
         "id": 51202534,
         "content": "And Eisenbahn, not wanting to lose a cheap, hardworking fool like him, took me on as well. Course, I don't get paid.",
         "npc": 700524,
         "next": 51202535
+      },
+      {
+        "id": 51202529,
+        "content": "Honestly, it's dull as hell. I liked my old life better in Icelake. I'd lie if I had to, cheat if it paid, scrounge whatever I could. Anything to get by. Sure, some days all that \"hard work\" got me nowhere and I went home hungry... but at least no two days were ever the same. Sometimes life even threw something interesting my way. Not this same miserable routine day after day.",
+        "npc": 700524
       },
       {
         "id": 51202535,
@@ -25349,13 +25574,13 @@
         "id": 51202536,
         "content": "That's right. Not a coin. I'm not here because they need me to keep my brother from leaving. That's all I am.",
         "npc": 700524,
-        "next": 51202537
-      },
-      {
-        "id": 51202537,
-        "content": "Goodbye.",
-        "npc": 100001,
-        "next": 51202538
+        "options": [
+          {
+            "id": 51202537,
+            "content": "Goodbye.",
+            "next": 51202538
+          }
+        ]
       },
       {
         "id": 51202538,
@@ -25376,13 +25601,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700525,
-    "name": "艾萨克",
+    "name": "Isaac",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -25446,19 +25672,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700526,
-    "name": "布莱兹",
+    "name": "Blaise",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700527,
-    "name": "驾驶员",
+    "name": "Driver",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -25500,23 +25727,40 @@
         "id": 51202807,
         "content": "Bloody useless... less than an hour till departure, and they're still short on Phoxichor. If they haven't got enough hands, then make them work overtime. What, am I supposed to sit here and wait for them?",
         "npc": 700527,
-        "next": 51202808
-      },
-      {
-        "id": 51202808,
-        "content": "Your attitude stinks.",
-        "next": 51202809
+        "options": [
+          {
+            "id": 51202808,
+            "content": "Your attitude stinks.",
+            "next": 51202809
+          },
+          {
+            "id": 51202818,
+            "content": "...",
+            "next": 51202819
+          }
+        ]
       },
       {
         "id": 51202809,
         "content": "And who exactly are you to lecture me? Do you know who you're talking to? I'm the driver of this train. Waste my time, and you waste the time of everyone aboard.",
         "npc": 700527,
-        "next": 51202810
+        "options": [
+          {
+            "id": 51202810,
+            "content": "Fine, you've got a point.",
+            "next": 51202811
+          },
+          {
+            "id": 51202813,
+            "content": "It's not just your time — it's everyone's.",
+            "next": 51202814
+          }
+        ]
       },
       {
-        "id": 51202810,
-        "content": "Fine, you've got a point.",
-        "next": 51202811
+        "id": 51202819,
+        "content": "Tch... this wretched weather's getting on my nerves. I'm heading to the smoking room for a cigarette.",
+        "npc": 700527
       },
       {
         "id": 51202811,
@@ -25525,21 +25769,15 @@
         "next": 51202812
       },
       {
-        "id": 51202812,
-        "content": "As for the commoners... they'd probably welcome a delay. Gives them longer to sit there leeching warmth from the heated carriage.",
-        "npc": 700527,
-        "next": 51202813
-      },
-      {
-        "id": 51202813,
-        "content": "It's not just your time — it's everyone's.",
-        "next": 51202814
-      },
-      {
         "id": 51202814,
         "content": "And what, I'm somehow not included in \"everyone\"? What sort of idiotic argument is that?",
         "npc": 700527,
         "next": 51202815
+      },
+      {
+        "id": 51202812,
+        "content": "As for the commoners... they'd probably welcome a delay. Gives them longer to sit there leeching warmth from the heated carriage.",
+        "npc": 700527
       },
       {
         "id": 51202815,
@@ -25556,17 +25794,6 @@
       {
         "id": 51202817,
         "content": "I'm looking at the bigger picture. So what if I'm blunt? Getting this train out on time is what matters. Understood, kid?",
-        "npc": 700527,
-        "next": 51202818
-      },
-      {
-        "id": 51202818,
-        "content": "...",
-        "next": 51202819
-      },
-      {
-        "id": 51202819,
-        "content": "Tch... this wretched weather's getting on my nerves. I'm heading to the smoking room for a cigarette.",
         "npc": 700527
       },
       {
@@ -25583,19 +25810,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700528,
-    "name": "谨慎的乘务员",
+    "name": "Cautious attendant",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700529,
-    "name": "伊莱贾",
+    "name": "Elijah",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -25619,12 +25847,13 @@
         "id": 51202904,
         "content": "Why are you staring at my shoes like that? Do they... look strange?",
         "npc": 700529,
-        "next": 51202905
-      },
-      {
-        "id": 51202905,
-        "content": "Your shoes...",
-        "next": 51202906
+        "options": [
+          {
+            "id": 51202905,
+            "content": "Your shoes...",
+            "next": 51202906
+          }
+        ]
       },
       {
         "id": 51202906,
@@ -25653,12 +25882,13 @@
         "id": 51202910,
         "content": "Ordinary shoes are far too heavy. If you want to move with a grand stride, they only weigh you down. So the finest designers simply did away with the soles altogether and let the air take their place.",
         "npc": 700529,
-        "next": 51202911
-      },
-      {
-        "id": 51202911,
-        "content": "Then why were you complaining about your legs just now?",
-        "next": 51202912
+        "options": [
+          {
+            "id": 51202911,
+            "content": "Then why were you complaining about your legs just now?",
+            "next": 51202912
+          }
+        ]
       },
       {
         "id": 51202912,
@@ -25700,12 +25930,13 @@
         "id": 51202918,
         "content": "...Now then. What is it you want? You should know your words are rather insulting to a man of my station. As a commoner, you would do well to mind your tongue around a noble such as myself.",
         "npc": 700529,
-        "next": 51202919
-      },
-      {
-        "id": 51202919,
-        "content": "(Show him the chequebook.)",
-        "next": 51202920
+        "options": [
+          {
+            "id": 51202919,
+            "content": "(Show him the chequebook.)",
+            "next": 51202920
+          }
+        ]
       },
       {
         "id": 51202920,
@@ -25756,13 +25987,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700530,
-    "name": "奥斯卡",
+    "name": "Oscar",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -25792,12 +26024,18 @@
         "id": 51203004,
         "content": "Wah—! Who are you? How did you get up here?",
         "npc": 700530,
-        "next": 51203005
-      },
-      {
-        "id": 51203005,
-        "content": "(Show him the chequebook.)",
-        "next": 51203006
+        "options": [
+          {
+            "id": 51203005,
+            "content": "(Show him the chequebook.)",
+            "next": 51203006
+          },
+          {
+            "id": 51203008,
+            "content": "(Show him your work pass.)",
+            "next": 51203009
+          }
+        ]
       },
       {
         "id": 51203006,
@@ -25806,32 +26044,32 @@
         "next": 51203007
       },
       {
-        "id": 51203007,
-        "content": "Are you a traveller? You really shouldn't be up here. It's dangerous. If you slip, you could get hurt. You should head back down.",
-        "npc": 700530,
-        "next": 51203008
-      },
-      {
-        "id": 51203008,
-        "content": "(Show him your work pass.)",
-        "next": 51203009
-      },
-      {
         "id": 51203009,
         "content": "Oh, you're new? That's strange... they don't usually put people your age on ceiling-cleaning duty.",
         "npc": 700530,
         "next": 51203010
       },
       {
+        "id": 51203007,
+        "content": "Are you a traveller? You really shouldn't be up here. It's dangerous. If you slip, you could get hurt. You should head back down.",
+        "npc": 700530
+      },
+      {
         "id": 51203010,
         "content": "Hi, I'm Oscar. I've been working at the station for about a year and a half. If there's anything you're not sure about, you can ask me.",
         "npc": 700530,
-        "next": 51203011
-      },
-      {
-        "id": 51203011,
-        "content": "You mentioned an attendance bonus.",
-        "next": 51203012
+        "options": [
+          {
+            "id": 51203011,
+            "content": "You mentioned an attendance bonus.",
+            "next": 51203012
+          },
+          {
+            "id": 51203014,
+            "content": "You said you miss home.",
+            "next": 51203015
+          }
+        ]
       },
       {
         "id": 51203012,
@@ -25840,21 +26078,15 @@
         "next": 51203013
       },
       {
-        "id": 51203013,
-        "content": "Honestly... it's really tiring. If you live too far away, there's no way you'll make it in time. That's why I moved into the station.",
-        "npc": 700530,
-        "next": 51203014
-      },
-      {
-        "id": 51203014,
-        "content": "You said you miss home.",
-        "next": 51203015
-      },
-      {
         "id": 51203015,
         "content": "Mm... yeah... it's just, work keeps me busy all the time. And if I don't put in the hours, I hardly earn anything. So I had to move out.",
         "npc": 700530,
         "next": 51203016
+      },
+      {
+        "id": 51203013,
+        "content": "Honestly... it's really tiring. If you live too far away, there's no way you'll make it in time. That's why I moved into the station.",
+        "npc": 700530
       },
       {
         "id": 51203016,
@@ -25887,13 +26119,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700531,
-    "name": "韦斯利",
+    "name": "Wesley",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -25976,12 +26209,18 @@
         "id": 51203114,
         "content": "...Actually, no. You're too big for it.",
         "npc": 700531,
-        "next": 51203115
-      },
-      {
-        "id": 51203115,
-        "content": "(Show him the chequebook.)",
-        "next": 51203116
+        "options": [
+          {
+            "id": 51203115,
+            "content": "(Show him the chequebook.)",
+            "next": 51203116
+          },
+          {
+            "id": 51203118,
+            "content": "(Show him your work pass.)",
+            "next": 51203119
+          }
+        ]
       },
       {
         "id": 51203116,
@@ -25990,21 +26229,15 @@
         "next": 51203117
       },
       {
-        "id": 51203117,
-        "content": "So you must be someone important. People like that don't usually come up somewhere dangerous. For your own sake, you'd better head back down.",
-        "npc": 700531,
-        "next": 51203118
-      },
-      {
-        "id": 51203118,
-        "content": "(Show him your work pass.)",
-        "next": 51203119
-      },
-      {
         "id": 51203119,
         "content": "Oh? Another one sneaking off for a break, huh? Go loaf around somewhere else. We're putting up a swing. No time to talk.",
         "npc": 700531,
         "next": 51203120
+      },
+      {
+        "id": 51203117,
+        "content": "So you must be someone important. People like that don't usually come up somewhere dangerous. For your own sake, you'd better head back down.",
+        "npc": 700531
       },
       {
         "id": 51203120,
@@ -26022,12 +26255,18 @@
         "id": 51203122,
         "content": "We're too young to drink, and if we try gambling, the adults just cheat us and take our money. So when life gets too hard... we use a swing.",
         "npc": 700531,
-        "next": 51203123
-      },
-      {
-        "id": 51203123,
-        "content": "That's dangerous.",
-        "next": 51203124
+        "options": [
+          {
+            "id": 51203123,
+            "content": "That's dangerous.",
+            "next": 51203124
+          },
+          {
+            "id": 51203127,
+            "content": "Clever idea.",
+            "next": 51203128
+          }
+        ]
       },
       {
         "id": 51203124,
@@ -26036,33 +26275,27 @@
         "next": 51203125
       },
       {
-        "id": 51203125,
-        "content": "What if you fall?",
-        "npc": 100001,
-        "next": 51203126
-      },
-      {
-        "id": 51203126,
-        "content": "We won't. I might be small, but I'm strong. Even if the rope snapped, I'd hang on and climb right back up.",
-        "npc": 700531,
-        "next": 51203127
-      },
-      {
-        "id": 51203127,
-        "content": "Clever idea.",
-        "next": 51203128
-      },
-      {
         "id": 51203128,
         "content": "Mhm! We tried loads of places, and this one's the best. Grown-ups never look up. They've got no idea what they're missing.",
         "npc": 700531,
         "next": 51203129
       },
       {
+        "id": 51203125,
+        "content": "What if you fall?",
+        "npc": 100001,
+        "next": 51203126
+      },
+      {
         "id": 51203129,
         "content": "Though every now and then, someone like you comes up here to skive off. Just so you know, if you tell on us, we can tell your foreman on you too.",
         "npc": 700531,
         "next": 51203130
+      },
+      {
+        "id": 51203126,
+        "content": "We won't. I might be small, but I'm strong. Even if the rope snapped, I'd hang on and climb right back up.",
+        "npc": 700531
       },
       {
         "id": 51203130,
@@ -26089,19 +26322,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700532,
-    "name": "艾弗瑞",
+    "name": "Avery",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700533,
-    "name": "诺拉",
+    "name": "Nora",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -26142,34 +26376,35 @@
         "id": 51203206,
         "content": "So you noticed~ Yes, I was talking to my friend. Did you want to ask me something?",
         "npc": 700533,
-        "next": 51203207
-      },
-      {
-        "id": 51203207,
-        "content": "Yes.",
-        "next": 51203208
+        "options": [
+          {
+            "id": 51203207,
+            "content": "Yes.",
+            "next": 51203208
+          }
+        ]
       },
       {
         "id": 51203208,
         "content": "Mm, most people do. So what is it? Are you going to laugh at me? Or say there's something wrong with me?",
         "npc": 700533,
-        "next": 51203209
-      },
-      {
-        "id": 51203209,
-        "content": "Has someone said that to you before?",
-        "next": 51203210
+        "options": [
+          {
+            "id": 51203209,
+            "content": "Has someone said that to you before?",
+            "next": 51203210
+          },
+          {
+            "id": 51203211,
+            "content": "What were you talking about?",
+            "next": 51203212
+          }
+        ]
       },
       {
         "id": 51203210,
         "content": "You're the curious type... but we're not friends, so I'd rather not talk about it.",
-        "npc": 700533,
-        "next": 51203211
-      },
-      {
-        "id": 51203211,
-        "content": "What were you talking about?",
-        "next": 51203212
+        "npc": 700533
       },
       {
         "id": 51203212,
@@ -26181,23 +26416,23 @@
         "id": 51203213,
         "content": "I told her to try the fruit on the trees instead. But she said people always pick the good ones, and the bad ones just rot where they fall...",
         "npc": 700533,
-        "next": 51203214
-      },
-      {
-        "id": 51203214,
-        "content": "That's quite an interesting conversation.",
-        "next": 51203215
+        "options": [
+          {
+            "id": 51203214,
+            "content": "That's quite an interesting conversation.",
+            "next": 51203215
+          },
+          {
+            "id": 51203216,
+            "content": "Uh...",
+            "next": 51203217
+          }
+        ]
       },
       {
         "id": 51203215,
         "content": "Thank you... I thought you'd think I was strange, like everyone else.",
-        "npc": 700533,
-        "next": 51203216
-      },
-      {
-        "id": 51203216,
-        "content": "Uh...",
-        "next": 51203217
+        "npc": 700533
       },
       {
         "id": 51203217,
@@ -26218,13 +26453,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700534,
-    "name": "梅芙",
+    "name": "Maeve",
     "camp": "NPC",
     "type": "Normal",
     "talks": [
@@ -26312,25 +26548,26 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700535,
-    "name": "德里克",
+    "name": "Derek",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700536,
-    "name": "瑞安",
+    "name": "Ryan",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700537,
-    "name": "沃恩",
+    "name": "Vaughn",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -26423,19 +26660,20 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700538,
-    "name": "埃德文",
+    "name": "Edwin",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 700539,
-    "name": "马丁",
+    "name": "Martin",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -26465,12 +26703,18 @@
         "id": 51203504,
         "content": "Oi. Who the hell are you? What're you doing up here?",
         "npc": 700539,
-        "next": 51203505
-      },
-      {
-        "id": 51203505,
-        "content": "(Show him the chequebook.)",
-        "next": 51203506
+        "options": [
+          {
+            "id": 51203505,
+            "content": "(Show him the chequebook.)",
+            "next": 51203506
+          },
+          {
+            "id": 51203517,
+            "content": "(Show him your work pass.)",
+            "next": 51203518
+          }
+        ]
       },
       {
         "id": 51203506,
@@ -26479,10 +26723,33 @@
         "next": 51203507
       },
       {
+        "id": 51203518,
+        "content": "Right. One of the station lot, then.",
+        "npc": 700539,
+        "next": 51203519
+      },
+      {
         "id": 51203507,
         "content": "What're you doing up here? Come to have a chat with the big scary terrorist, have you?",
         "npc": 700539,
         "next": 51203508
+      },
+      {
+        "id": 51203519,
+        "content": "If you're up here skiving, find your own spot. There's ways things are done, whether anyone says 'em or not. Keep out of other people's corners. And don't go chatting up strangers like an idiot.",
+        "npc": 700539,
+        "options": [
+          {
+            "id": 51203520,
+            "content": "What were you just saying?",
+            "next": 51203521
+          },
+          {
+            "id": 51203522,
+            "content": "What do you mean, take some rich bastard down with you?",
+            "next": 51203523
+          }
+        ]
       },
       {
         "id": 51203508,
@@ -26491,83 +26758,9 @@
         "next": 51203509
       },
       {
-        "id": 51203509,
-        "content": "Course I do. Soon as you start thinking about killing strangers, they call you a terrorist, don't they?",
-        "npc": 700539,
-        "next": 51203510
-      },
-      {
-        "id": 51203510,
-        "content": "So what's that for, then? You saw some poor bastard up here about to jump, and suddenly your conscience started acting up? Thought you'd wave a few cheques at me and feel good about yourself?",
-        "npc": 700539,
-        "next": 51203511
-      },
-      {
-        "id": 51203511,
-        "content": "Yes.",
-        "next": 51203512
-      },
-      {
-        "id": 51203512,
-        "content": "Oh, f*** off! I don't need your charity! Always swanning about like you're better than the rest of us, chucking scraps to slum kids like that makes you a bloody saviour.",
-        "npc": 700539,
-        "next": 51203513
-      },
-      {
-        "id": 51203513,
-        "content": "What, you think we're dogs? Shake a bit of grub at us and we'll come crawling over to lick your boots? Go to hell! And you'd better pray you're not the one I land on when I do jump.",
-        "npc": 700539,
-        "next": 51203514
-      },
-      {
-        "id": 51203514,
-        "content": "No.",
-        "next": 51203515
-      },
-      {
-        "id": 51203515,
-        "content": "Oh? Well, at least you're not a hypocrite. I'm not some pathetic git who comes slobbering at your boots for a handout. You could give the whole chequebook to me and I'd rip it up and chuck it over the side. Hah.",
-        "npc": 700539,
-        "next": 51203516
-      },
-      {
-        "id": 51203516,
-        "content": "...Well. Not this time. Make that much of a scene and they'll spot this little bolt-hole. Then where am I supposed to skive off to?",
-        "npc": 700539,
-        "next": 51203517
-      },
-      {
-        "id": 51203517,
-        "content": "(Show him your work pass.)",
-        "next": 51203518
-      },
-      {
-        "id": 51203518,
-        "content": "Right. One of the station lot, then.",
-        "npc": 700539,
-        "next": 51203519
-      },
-      {
-        "id": 51203519,
-        "content": "If you're up here skiving, find your own spot. There's ways things are done, whether anyone says 'em or not. Keep out of other people's corners. And don't go chatting up strangers like an idiot.",
-        "npc": 700539,
-        "next": 51203520
-      },
-      {
-        "id": 51203520,
-        "content": "What were you just saying?",
-        "next": 51203521
-      },
-      {
         "id": 51203521,
         "content": "Huh? What, are you thick? I said f*** off and find somewhere else to skive.",
-        "npc": 700539,
-        "next": 51203522
-      },
-      {
-        "id": 51203522,
-        "content": "What do you mean, take some rich bastard down with you?",
-        "next": 51203523
+        "npc": 700539
       },
       {
         "id": 51203523,
@@ -26576,10 +26769,33 @@
         "next": 51203524
       },
       {
+        "id": 51203509,
+        "content": "Course I do. Soon as you start thinking about killing strangers, they call you a terrorist, don't they?",
+        "npc": 700539,
+        "next": 51203510
+      },
+      {
         "id": 51203524,
         "content": "People like us... every bloody day's the same. About the only thing we've got to look forward to is some bastard up top taking pity on us and chucking down a few crumbs now and then. Other than that, we just sit there and watch the days crawl by.",
         "npc": 700539,
         "next": 51203525
+      },
+      {
+        "id": 51203510,
+        "content": "So what's that for, then? You saw some poor bastard up here about to jump, and suddenly your conscience started acting up? Thought you'd wave a few cheques at me and feel good about yourself?",
+        "npc": 700539,
+        "options": [
+          {
+            "id": 51203511,
+            "content": "Yes.",
+            "next": 51203512
+          },
+          {
+            "id": 51203514,
+            "content": "No.",
+            "next": 51203515
+          }
+        ]
       },
       {
         "id": 51203525,
@@ -26588,26 +26804,48 @@
         "next": 51203526
       },
       {
+        "id": 51203512,
+        "content": "Oh, f*** off! I don't need your charity! Always swanning about like you're better than the rest of us, chucking scraps to slum kids like that makes you a bloody saviour.",
+        "npc": 700539,
+        "next": 51203513
+      },
+      {
+        "id": 51203515,
+        "content": "Oh? Well, at least you're not a hypocrite. I'm not some pathetic git who comes slobbering at your boots for a handout. You could give the whole chequebook to me and I'd rip it up and chuck it over the side. Hah.",
+        "npc": 700539,
+        "next": 51203516
+      },
+      {
         "id": 51203526,
         "content": "So if that's all there is waiting for you... ought to at least make a bit of a dent before you go, shouldn't you?",
         "npc": 700539,
-        "next": 51203527
+        "options": [
+          {
+            "id": 51203527,
+            "content": "You've got a point.",
+            "next": 51203528
+          },
+          {
+            "id": 51203529,
+            "content": "That's nonsense.",
+            "next": 51203530
+          }
+        ]
       },
       {
-        "id": 51203527,
-        "content": "You've got a point.",
-        "next": 51203528
+        "id": 51203513,
+        "content": "What, you think we're dogs? Shake a bit of grub at us and we'll come crawling over to lick your boots? Go to hell! And you'd better pray you're not the one I land on when I do jump.",
+        "npc": 700539
+      },
+      {
+        "id": 51203516,
+        "content": "...Well. Not this time. Make that much of a scene and they'll spot this little bolt-hole. Then where am I supposed to skive off to?",
+        "npc": 700539
       },
       {
         "id": 51203528,
         "content": "Heh. Don't get many who see it that way. Still... not today. I'm not that far gone. Give it time. Once I've had my fill of living on scraps, maybe I'll make a proper mess of something.",
-        "npc": 700539,
-        "next": 51203529
-      },
-      {
-        "id": 51203529,
-        "content": "That's nonsense.",
-        "next": 51203530
+        "npc": 700539
       },
       {
         "id": 51203530,
@@ -26628,13 +26866,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700540,
-    "name": "威尔逊",
+    "name": "Wilson",
     "camp": "NPC",
     "type": "Normal",
     "srId": 106001,
@@ -26715,13 +26954,14 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
   {
     "id": 700541,
-    "name": "里埃尔",
+    "name": "Riel",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -39180,7 +39420,7 @@
       },
       {
         "id": 51160802,
-        "content": "Interested in Xiangqi too, are you?",
+        "content": "Interested in Go too, are you?",
         "npc": 701156,
         "options": [
           {
@@ -39197,17 +39437,17 @@
       },
       {
         "id": 51160805,
-        "content": "Take a look at the board. Black's up a pawn but down an elephant. Red's two chariots are working well together, but they still haven't managed to break through Black's cannons. What do you reckon — who's got the better game from here?",
+        "content": "Looking at the current board, white is falling back to defend while black keeps pressing forward. The situation is tense. Who do you reckon will come out on top?",
         "npc": 701156,
         "options": [
           {
             "id": 51160806,
-            "content": "Black wins.",
+            "content": "Black wins, white loses.",
             "next": 51160807
           },
           {
             "id": 51160808,
-            "content": "Red wins.",
+            "content": "White wins, black loses.",
             "next": 51160809
           },
           {
@@ -39219,12 +39459,12 @@
       },
       {
         "id": 51160807,
-        "content": "Perhaps. If Black moves the horse from four to six, then brings the cannon from eight to six, both of Red's chariots come under threat. If Red moves a chariot, the horse falls; saves the horse, Red loses the initiative.",
+        "content": "Indeed. If black uses offense as defense, probes for weaknesses, and reduces white's territory — as long as white makes one mistake in a move, it wouldn't be hard for black to seize the win.",
         "npc": 701156
       },
       {
         "id": 51160809,
-        "content": "Red could play chariot four to six. If Black captures, then chariot eight to six follows at once. If Black sidesteps instead, he loses the cannon and gives up the initiative.",
+        "content": "If white holds onto the secured territory and compresses black's outward influence, as long as no mistakes are made... with the current advantage in solid points, white most likely wins.",
         "npc": 701156
       },
       {
@@ -41406,7 +41646,7 @@
       },
       {
         "id": 51167003,
-        "content": "I suppose you're right. This is Haojing. Even crooks wouldn't be bold enough to pull a stunt right under Agent Loong's nose.",
+        "content": "I suppose you're right. This is Haojing. Even crooks wouldn't be bold enough to pull a stunt right under Lord Agent's nose.",
         "npc": 701179,
         "next": 51167004
       },
@@ -44754,7 +44994,7 @@
       },
       {
         "id": 51170602,
-        "content": "And without concrete things to embody it, your so-called \"Principle\" is nothing but a castle in the air. We must observe the Reflections before we can deduce the Principle!",
+        "content": "Rubbish. This \"Principle\" is invisible and intangible. One can only perceive it by examining the Diversity of Reflections — by looking at actual events.",
         "next": 51170603
       },
       {
@@ -54882,7 +55122,7 @@
       },
       {
         "id": 51019036,
-        "content": "嗯……我一定会看到人人都能坐上火车的那天的。那时候的发车最小间隔是多久呢？我先算一算……",
+        "content": "Hm... I know I'll live to see the day when anyone can afford a train ticket. By then, what would the departure intervals need to be...? Let me work it out...",
         "npc": 701290
       }
     ]
@@ -55572,7 +55812,8 @@
           },
           {
             "id": 51204310,
-            "content": "So what exactly are these \"top ten sights\"?"
+            "content": "So what exactly are these \"top ten sights\"?",
+            "next": 51204311
           }
         ]
       },
@@ -55598,10 +55839,27 @@
         "npc": 701298
       },
       {
+        "id": 51204311,
+        "content": "The platforms, the nobles' carriages, the locomotive, the processing quarter, and the materials yard.",
+        "npc": 701298,
+        "options": [
+          {
+            "id": 51204312,
+            "content": "That's only five.",
+            "next": 51204313
+          }
+        ]
+      },
+      {
         "id": 51204321,
         "content": "Even if you fancied crawling right under the train to have a look at the wheels and rails yourself, I'd be delighted to accompany you. Though... I don't see a servant with you. If you should happen to need a little extra assistance, I'd be more than happy to offer it.",
         "npc": 701298,
         "next": 51204322
+      },
+      {
+        "id": 51204313,
+        "content": "Oh, nobody expects the \"Top Ten Sights\" to literally be ten. It's just a slogan. No need to get hung up on the number.",
+        "npc": 701298
       },
       {
         "id": 51204322,
@@ -55617,6 +55875,7 @@
       {
         "id": 51204324,
         "content": "You again? I didn't see you with the tour group the other day. Don't tell me you couldn't even come up with one silver coin.",
+        "npc": 701298,
         "next": 51204325
       },
       {
@@ -55944,7 +56203,7 @@
       {
         "id": 51204706,
         "content": "Why do you want to join them?",
-        "npc": 701304,
+        "npc": 100001,
         "next": 51204707
       },
       {
@@ -56036,7 +56295,8 @@
       {
         "id": 51204806,
         "content": "I think so too... it has to be... Otherwise... Philip would never have treated me that way... He has such a gentle heart...",
-        "npc": 701305
+        "npc": 701305,
+        "next": 51204810
       },
       {
         "id": 51204808,
@@ -56045,16 +56305,16 @@
         "next": 51204809
       },
       {
-        "id": 51204809,
-        "content": "He finally decided to come and see me... but then...",
-        "npc": 701305,
-        "next": 51204810
-      },
-      {
         "id": 51204810,
         "content": "I admit... I may have left out one tiny detail about my gender... but Philip is so kind, so pure... he shouldn't have cared about something like that...",
         "npc": 701305,
         "next": 51204811
+      },
+      {
+        "id": 51204809,
+        "content": "He finally decided to come and see me... but then...",
+        "npc": 701305,
+        "next": 51204810
       },
       {
         "id": 51204811,
@@ -56540,6 +56800,12 @@
       {
         "id": 51205412,
         "content": "They said someone was hurt and needed help, and that it was urgent. But no one's come to fetch me... Wait, was this a scam?",
+        "npc": 701312,
+        "next": 51205413
+      },
+      {
+        "id": 51205413,
+        "content": "...Then again, what kind of scam pays that much up front? No... I'll wait a little longer.",
         "npc": 701312
       }
     ]
@@ -56626,8 +56892,8 @@
     "type": "Normal",
     "srId": 106001,
     "pos": [
-      -37834,
-      18955
+      -38047,
+      17463
     ],
     "talks": [
       {
@@ -56737,7 +57003,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -56837,7 +57104,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -56937,7 +57205,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -57070,7 +57339,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -57197,7 +57467,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -57318,7 +57589,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -57464,7 +57736,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -57585,7 +57858,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -57684,7 +57958,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -57821,7 +58096,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -57932,7 +58208,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -58105,7 +58382,8 @@
       },
       {
         "id": 51205617,
-        "content": "You think you know better than me just because you're older... Lafe, I hate you!"
+        "content": "You think you know better than me just because you're older... Lafe, I hate you!",
+        "npc": 701314
       }
     ]
   },
@@ -58803,7 +59081,7 @@
   },
   {
     "id": 790090,
-    "name": "“协奏曲”",
+    "name": "\"Concerto\"",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -59448,13 +59726,13 @@
   },
   {
     "id": 818095,
-    "name": "焦急的旅客",
+    "name": "Anxious Passenger",
     "camp": "NPC",
     "type": "Normal"
   },
   {
     "id": 818096,
-    "name": "工作人员",
+    "name": "Attendant",
     "camp": "NPC",
     "type": "Normal"
   },
@@ -60106,7 +60384,8 @@
     "id": 900053,
     "name": "Lunotoot",
     "camp": "NPC",
-    "type": "Normal"
+    "type": "Normal",
+    "icon": "Theater01"
   },
   {
     "id": 910001,

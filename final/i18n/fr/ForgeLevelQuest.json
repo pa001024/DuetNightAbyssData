@@ -56,7 +56,7 @@
   },
   {
     "id": 1040810,
-    "desc": "Terminer la quête secondaire : « L’avènement de la calamité »",
+    "desc": "Terminer la quête secondaire : « Forge d’arme de calamité I »",
     "target": 1,
     "targetId": [
       1040810
@@ -67,7 +67,7 @@
   },
   {
     "id": 1040812,
-    "desc": "Terminer la quête secondaire : « L’évolution de la calamité »",
+    "desc": "Terminer la quête secondaire : « Forge d’arme de calamité II »",
     "target": 1,
     "targetId": [
       1040812
@@ -78,7 +78,7 @@
   },
   {
     "id": 1040814,
-    "desc": "Terminer la quête secondaire : « Le reflux de la calamité »",
+    "desc": "Terminer la quête secondaire : « Forge d’arme de calamité III »",
     "target": 1,
     "targetId": [
       1040814

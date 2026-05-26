@@ -72,8 +72,12 @@ function M:ShareWithChannel()
   local function Func(Obj, Ret, ChannelType, RoomUid)
     DebugPrint("clx: WBP_Activity_Coop_ShareChannelItem_C:ShareWithChannel " .. "Ret: " .. Ret .. "ChannelType: " .. ChannelType .. "RoomUid: " .. RoomUid)
     if ErrorCode:Check(Ret) then
-      ChatController:RecvChatToWorld(ChannelType, MsgText)
       UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_AsyncCombat_Sharesuccessful")
+      self.Owner.bShareClick = true
+      if ChannelType == ChatCommon.ChannelDef.InGuild then
+        return
+      end
+      ChatController:RecvChatToWorld(ChannelType, MsgText)
     end
   end
   
@@ -82,19 +86,7 @@ function M:ShareWithChannel()
   if not Avatar then
     return
   end
-  if self.CurChannel == ChatCommon.ChannelDef.TeamUp then
-    Avatar:SendAsyncCombatRoomToWorld(CallbackInfo, self.CurChannel, self.RoomUid)
-    self.Owner.bShareToOpen = true
-  elseif self.CurChannel == ChatCommon.ChannelDef.Public then
-    Avatar:SendAsyncCombatRoomToWorld(CallbackInfo, self.CurChannel, self.RoomUid)
-    self.Owner.bShareToOpen = true
-  elseif self.CurChannel == ChatCommon.ChannelDef.Region then
-    Avatar:SendAsyncCombatRoomToWorld(CallbackInfo, self.CurChannel, self.RoomUid)
-    self.Owner.bShareToOpen = true
-  elseif self.CurChannel == ChatCommon.ChannelDef.InGuild then
-    Avatar:SendAsyncCombatRoomToWorld(CallbackInfo, self.CurChannel, self.RoomUid)
-    self.bShareToGuild = true
-  end
+  Avatar:SendAsyncCombatRoomToWorld(CallbackInfo, self.CurChannel, self.RoomUid)
 end
 
 function M:HandleGamepadClick()

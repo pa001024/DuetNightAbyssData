@@ -89,7 +89,7 @@ return {
         QuestDescriptionComment = "站台旁看见尸体",
         SubRegionId = 106001,
         StoryGuideType = "Npc",
-        StoryGuidePointName = "Npc_Box_312480060",
+        StoryGuidePointName = "",
         bIsPlayBlackScreenOnComplete = true,
         SubRegionIdList = {}
       },
@@ -513,8 +513,8 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Npc",
-        StoryGuidePointName = "Npc_Yisheng_312480058",
+        StoryGuideType = "Point",
+        StoryGuidePointName = "BP_GotoYWS",
         JumpId = 0
       },
       questNodeData = {
@@ -538,12 +538,6 @@ return {
             endPort = "Input"
           },
           {
-            startQuest = "177556001595122569001",
-            startPort = "Out",
-            endQuest = "17753788810506622093",
-            endPort = "In"
-          },
-          {
             startQuest = "17752926222601301",
             startPort = "QuestStart",
             endQuest = "177556001595122569001",
@@ -554,6 +548,60 @@ return {
             startPort = "Out",
             endQuest = "17752926222601302",
             endPort = "Success"
+          },
+          {
+            startQuest = "177556001595122569001",
+            startPort = "Out",
+            endQuest = "17792011482141452553",
+            endPort = "In"
+          },
+          {
+            startQuest = "17792021937692909174",
+            startPort = "Out",
+            endQuest = "17792021937692909175",
+            endPort = "In"
+          },
+          {
+            startQuest = "17792021937702909177",
+            startPort = "Out",
+            endQuest = "17792021937692909174",
+            endPort = "In"
+          },
+          {
+            startQuest = "17792021937692909175",
+            startPort = "Out",
+            endQuest = "17792021937702909176",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17792011482141452553",
+            startPort = "Out",
+            endQuest = "17792021937702909177",
+            endPort = "In"
+          },
+          {
+            startQuest = "17792021937702909178",
+            startPort = "Out",
+            endQuest = "17792011482141452553",
+            endPort = "In"
+          },
+          {
+            startQuest = "177556001595122569001",
+            startPort = "Out",
+            endQuest = "17753788810506622093",
+            endPort = "In"
+          },
+          {
+            startQuest = "17792021937702909176",
+            startPort = "BeginOverlap",
+            endQuest = "17792806933744347706",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17792021937702909176",
+            startPort = "EndOverlap",
+            endQuest = "17792021937702909178",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -561,7 +609,7 @@ return {
             key = "17752926222601301",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 687.7142905150951, y = 335.9999994550433},
+            pos = {x = 109.50917550632786, y = 353.9487169941181},
             propsData = {ModeType = 0}
           },
           ["17752926222601302"] = {
@@ -582,12 +630,12 @@ return {
             key = "17753788810506622093",
             type = "TalkNode",
             name = "医生对话",
-            pos = {x = 1351.7209413114786, y = 350.1395359978024},
+            pos = {x = 1275.963366721548, y = 381.9577173255732},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
               NpcId = 700411,
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               GuideType = "N",
               GuidePointName = "Npc_Yisheng_312480058",
               DelayShowGuideTime = 0,
@@ -727,7 +775,7 @@ return {
             key = "177556001595122569001",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 1055.6009684004462, y = 340.71684652678874},
+            pos = {x = 368.421496904439, y = 357.3835128130725},
             propsData = {
               ActiveEnable = true,
               EnableBlackScreenSync = false,
@@ -736,6 +784,80 @@ return {
               NewTargetPointName = "Npc_Yisheng_312480058",
               StaticCreatorIdList = {312480058}
             }
+          },
+          ["17792011482141452553"] = {
+            key = "17792011482141452553",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 660.0433113722141, y = 122.36363848391326},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "BP_GotoYWS"
+            }
+          },
+          ["17792021937692909174"] = {
+            key = "17792021937692909174",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 983.6049990379536, y = -391.2142778751447},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "BP_GotoYWS"
+            }
+          },
+          ["17792021937692909175"] = {
+            key = "17792021937692909175",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 1368.5677858901217, y = -359.11357578797265},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "N",
+              GuideName = "Npc_Yisheng_312480058"
+            }
+          },
+          ["17792021937702909176"] = {
+            key = "17792021937702909176",
+            type = "CollisionBoxNode",
+            name = "进入/离开判定盒节点",
+            pos = {x = 1734.7855746287523, y = -318.79478810058094},
+            propsData = {StaticCreatorId = 312480416}
+          },
+          ["17792021937702909177"] = {
+            key = "17792021937702909177",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 662.2049438966235, y = -365.5689792275682},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 312480415,
+              GuideType = "N",
+              GuidePointName = ""
+            }
+          },
+          ["17792021937702909178"] = {
+            key = "17792021937702909178",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2106.3523904333965, y = -215.0427959399354},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "N",
+              GuideName = "Npc_Yisheng_312480058"
+            }
+          },
+          ["17792806933744347706"] = {
+            key = "17792806933744347706",
+            type = "TestPrintNode",
+            name = "测试打印",
+            pos = {x = 2151.121694436225, y = -421.3271739209589},
+            propsData = {Text = "In"}
           }
         },
         commentData = {}
@@ -1582,6 +1704,54 @@ return {
             startPort = "Out",
             endQuest = "17755506832576636752",
             endPort = "Success"
+          },
+          {
+            startQuest = "177933237345510142587",
+            startPort = "Out",
+            endQuest = "177933237345510142588",
+            endPort = "In"
+          },
+          {
+            startQuest = "177933237345510142590",
+            startPort = "Out",
+            endQuest = "177933237345510142587",
+            endPort = "In"
+          },
+          {
+            startQuest = "177933237345510142588",
+            startPort = "Out",
+            endQuest = "177933237345510142589",
+            endPort = "Input"
+          },
+          {
+            startQuest = "177933237345510142586",
+            startPort = "Out",
+            endQuest = "177933237345510142590",
+            endPort = "In"
+          },
+          {
+            startQuest = "177933237345610142591",
+            startPort = "Out",
+            endQuest = "177933237345510142586",
+            endPort = "In"
+          },
+          {
+            startQuest = "177933237345510142589",
+            startPort = "BeginOverlap",
+            endQuest = "177933237345610142592",
+            endPort = "Input"
+          },
+          {
+            startQuest = "177933237345510142589",
+            startPort = "EndOverlap",
+            endQuest = "177933237345610142591",
+            endPort = "In"
+          },
+          {
+            startQuest = "177556226938131862845",
+            startPort = "Out",
+            endQuest = "177933237345510142586",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1615,7 +1785,7 @@ return {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
               NpcId = 700410,
-              GuideUIEnable = true,
+              GuideUIEnable = false,
               GuideType = "N",
               GuidePointName = "Npc_Laofuren_312480059",
               DelayShowGuideTime = 0,
@@ -1689,6 +1859,80 @@ return {
               NewTargetPointName = "",
               StaticCreatorIdList = {312480059, 312480058}
             }
+          },
+          ["177933237345510142586"] = {
+            key = "177933237345510142586",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 1766.4608084679944, y = 229.84540620243607},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "BP_GotoYWS"
+            }
+          },
+          ["177933237345510142587"] = {
+            key = "177933237345510142587",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2090.022496133734, y = -283.7325101566219},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "BP_GotoYWS"
+            }
+          },
+          ["177933237345510142588"] = {
+            key = "177933237345510142588",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2474.985282985902, y = -253.63180806944985},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "N",
+              GuideName = "Npc_Laofuren_312480059"
+            }
+          },
+          ["177933237345510142589"] = {
+            key = "177933237345510142589",
+            type = "CollisionBoxNode",
+            name = "进入/离开判定盒节点",
+            pos = {x = 2841.2030717245325, y = -211.31302038205814},
+            propsData = {StaticCreatorId = 312480416}
+          },
+          ["177933237345510142590"] = {
+            key = "177933237345510142590",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 1768.6224409924039, y = -258.0872115090454},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 312480415,
+              GuideType = "N",
+              GuidePointName = ""
+            }
+          },
+          ["177933237345610142591"] = {
+            key = "177933237345610142591",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 3214.769887529177, y = -107.56102822141258},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "N",
+              GuideName = "Npc_Laofuren_312480059"
+            }
+          },
+          ["177933237345610142592"] = {
+            key = "177933237345610142592",
+            type = "TestPrintNode",
+            name = "测试打印",
+            pos = {x = 3257.539191532005, y = -313.8454062024361},
+            propsData = {Text = "In"}
           }
         },
         commentData = {}

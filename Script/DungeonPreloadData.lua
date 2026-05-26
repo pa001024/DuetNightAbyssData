@@ -32,6 +32,41 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
+    RT_10 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6011001] = 8,
+        [6012001] = 7,
+        [6016001] = 15,
+        [6016018] = 1,
+        [10005001] = 20
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_11 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001011] = 1,
+        [6011001] = 8,
+        [6012001] = 7,
+        [6016001] = 15,
+        [10005001] = 20,
+        [10005017] = 1
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_12 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6002011] = 1,
+        [6011001] = 8,
+        [6012001] = 7,
+        [6016001] = 15,
+        [6016018] = 1,
+        [10005001] = 20
+      },
+      OnlineCoefficient = 1.0
+    },
     RT_2 = {
       FixedMonster = {
         [6002011] = 1,
@@ -141,6 +176,17 @@ local T = {
         [6016001] = 15,
         [6016015] = 1,
         [10005001] = 20
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_9 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6011001] = 8,
+        [6012001] = 7,
+        [6016001] = 15,
+        [10005001] = 20,
+        [10005017] = 1
       },
       OnlineCoefficient = 1.0
     }
@@ -566,6 +612,33 @@ local T = {
         [9007019] = 1
       },
       OnlineCoefficient = 2.0
+    },
+    RT_38 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001001] = 10,
+        [6002001] = 8,
+        [6012001] = 7,
+        [8001001] = 10,
+        [8002001] = 11,
+        [8003001] = 4,
+        [9007021] = 1
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_39 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001001] = 10,
+        [6002001] = 8,
+        [6012001] = 7,
+        [6013015] = 1,
+        [8001001] = 10,
+        [8002001] = 11,
+        [8003001] = 4,
+        [9007021] = 1
+      },
+      OnlineCoefficient = 1.0
     },
     RT_4 = {
       FixedMonster = {},
@@ -1773,6 +1846,87 @@ local T = {
       },
       OnlineCoefficient = 2.0
     },
+    RT_80 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7018001] = 10,
+        [7018020] = 1,
+        [7019001] = 4
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_81 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7018001] = 10,
+        [7019001] = 4,
+        [7019016] = 1
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_82 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7018001] = 10,
+        [7018014] = 1,
+        [7019001] = 4
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_83 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6002015] = 1,
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7018001] = 10,
+        [7018020] = 1,
+        [7019001] = 4
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_84 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6013017] = 1,
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7018001] = 10,
+        [7019001] = 4,
+        [7019016] = 1
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_85 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001012] = 1,
+        [7001001] = 15,
+        [7009001] = 3,
+        [7012001] = 9,
+        [7013001] = 9,
+        [7018001] = 10,
+        [7018014] = 1,
+        [7019001] = 4
+      },
+      OnlineCoefficient = 1.0
+    },
     RT_9 = {
       FixedMonster = {},
       MonsterSpawn = {
@@ -1858,7 +2012,6 @@ local T = {
       MonsterSpawn = {
         [6001301] = 1,
         [6002301] = 1,
-        [6003001] = 3,
         [6004001] = 2,
         [6004301] = 1,
         [6004302] = 1,
@@ -2291,6 +2444,60 @@ local T = {
         [6016001] = 10,
         [6017001] = 8,
         [10005013] = 1
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_13 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [7003001] = 6,
+        [7012001] = 9,
+        [7013001] = 5,
+        [7014001] = 2,
+        [7018001] = 8,
+        [7018013] = 1,
+        [7019001] = 10
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_14 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [7003001] = 6,
+        [7012001] = 9,
+        [7013001] = 5,
+        [7014001] = 2,
+        [7018001] = 8,
+        [7019001] = 10,
+        [7019013] = 1
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_15 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6001012] = 1,
+        [7003001] = 6,
+        [7012001] = 9,
+        [7013001] = 5,
+        [7014001] = 2,
+        [7018001] = 8,
+        [7018013] = 1,
+        [7019001] = 10
+      },
+      OnlineCoefficient = 1.0
+    },
+    RT_16 = {
+      FixedMonster = {},
+      MonsterSpawn = {
+        [6002015] = 1,
+        [7003001] = 6,
+        [7012001] = 9,
+        [7013001] = 5,
+        [7014001] = 2,
+        [7018001] = 8,
+        [7019001] = 10,
+        [7019013] = 1
       },
       OnlineCoefficient = 1.0
     },
@@ -2912,21 +3119,21 @@ local ReadOnly = {
   [91604] = T.IronSurvival.RT_1,
   [91605] = T.IronSurvival.RT_1,
   [91606] = T.IronSurvival.RT_1,
-  [614001] = T.DefenceMove.RT_10,
-  [614002] = T.ExtermPro.RT_35,
-  [614003] = T.ExtermPro.RT_36,
-  [614004] = T.ExtermPro.RT_37,
-  [614005] = T.SurvivalMiniPro.RT_6,
-  [614006] = T.SurvivalMiniPro.RT_7,
-  [614007] = T.Defence.RT_4,
-  [614008] = T.Defence.RT_5,
-  [614101] = T.DefenceMove.RT_28,
-  [614102] = T.ExtermPro.RT_77,
-  [614103] = T.ExtermPro.RT_78,
-  [614104] = T.ExtermPro.RT_79,
-  [614105] = T.SurvivalMiniPro.RT_11,
-  [614106] = T.SurvivalMiniPro.RT_12,
-  [614107] = T.Defence.RT_7,
-  [614108] = T.Defence.RT_8
+  [614001] = T.DefenceMove.RT_38,
+  [614002] = T.ExtermPro.RT_80,
+  [614003] = T.ExtermPro.RT_81,
+  [614004] = T.ExtermPro.RT_82,
+  [614005] = T.SurvivalMiniPro.RT_13,
+  [614006] = T.SurvivalMiniPro.RT_14,
+  [614007] = T.Defence.RT_9,
+  [614008] = T.Defence.RT_10,
+  [614101] = T.DefenceMove.RT_39,
+  [614102] = T.ExtermPro.RT_83,
+  [614103] = T.ExtermPro.RT_84,
+  [614104] = T.ExtermPro.RT_85,
+  [614105] = T.SurvivalMiniPro.RT_15,
+  [614106] = T.SurvivalMiniPro.RT_16,
+  [614107] = T.Defence.RT_11,
+  [614108] = T.Defence.RT_12
 }
 return ReadOnly

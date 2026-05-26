@@ -9,6 +9,7 @@ M._components = {
 
 function M:Construct()
   M.Super.Construct(self)
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "AppearanceRankingOpen", nil)
   self:PlayAnimation(self.In)
 end
 
@@ -23,6 +24,7 @@ function M:CloseSelf()
   if self:IsAnimationPlaying(self.In) then
     return
   end
+  AudioManager(self):SetEventSoundParam(self, "AppearanceRankingOpen", {ToEnd = 1})
   self:PlayAnimation(self.Out)
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   self:AddTimer(0.2, function()

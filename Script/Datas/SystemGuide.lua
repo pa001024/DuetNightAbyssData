@@ -977,5 +977,16 @@ return ReadOnly("SystemGuide", {
     IsInRegion = 1,
     OpenInterface = "GuildMain",
     SysGuideId = 2115
+  },
+  [2116] = {
+    ConditionCheck = 4450,
+    GuideChannel = "SystemGuideWithoutUI",
+    GuideEnd = 0,
+    GuideStart = 0,
+    GuideStoryline = "Guide/Guide_ChangeElem.story",
+    IsInRegion = 1,
+    OpenInterface = "BattleMain",
+    PlayerInControl = 1,
+    SysGuideId = 2116
   }
 })

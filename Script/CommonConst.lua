@@ -1157,7 +1157,8 @@ local CommonConst = {
     "GuildId",
     "GuildSimpleInfo",
     "GuildActivityLevel",
-    "AvatarStatus"
+    "AvatarStatus",
+    "GuildChatOpen"
   },
   RMN2GiftQuota = 10,
   GIFT_MAIL_CONTENT_MAX_LEN = 500,

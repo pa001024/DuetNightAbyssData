@@ -22,8 +22,10 @@ function M:PlayCheckSwitchToggle(checked)
     return
   end
   if checked then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_checkbox_check", nil, nil)
     self:PlayAnimation(self.Check_Switch)
   else
+    AudioManager(self):PlayUISound(self, "event:/ui/common/click_checkbox_uncheck", nil, nil)
     self:PlayAnimation(self.Check_Normal)
   end
 end

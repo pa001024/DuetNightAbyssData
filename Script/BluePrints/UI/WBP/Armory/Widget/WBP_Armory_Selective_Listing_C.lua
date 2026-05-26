@@ -427,7 +427,7 @@ function M:Destruct()
 end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
-  return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.TileView_Select_Role)
+  return UWidgetBlueprintLibrary.SetUserFocus(UWidgetBlueprintLibrary.Handled(), self.LastFocusList or self.TileView_Select_Role)
 end
 
 function M:GetItemAt(Index)

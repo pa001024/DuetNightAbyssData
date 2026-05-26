@@ -63,6 +63,7 @@ function M:RefreshInfo()
 end
 
 function M:OnCellClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
   if self.Type == "Skin" or self.Type == "WeaponSkin" then
     UIManager(self):LoadUINew("AppearanceArchivePageSkin", self.EntranceId, self.Type, self.Info)
   else

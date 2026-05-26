@@ -442,9 +442,9 @@
   {
     "id": 30001,
     "name": "Soaring Loong",
-    "desc": "For use with the Soaring Loong Demon Wedge.",
+    "desc": "Used for Move-Variant Demon Wedge: Piercing Ascent",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "Available through Prism Exchange"
+    "unlock": "Available at Shop"
   }
 ]

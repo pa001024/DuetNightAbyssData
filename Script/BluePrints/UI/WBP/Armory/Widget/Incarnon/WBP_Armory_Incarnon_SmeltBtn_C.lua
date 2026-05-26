@@ -27,6 +27,7 @@ function M:OnBtnClicked()
   if self.CallbackObj and self.CallbackFunc then
     self.CallbackFunc(self.CallbackObj)
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
 end
 
 function M:SetReddotVisible(Value)

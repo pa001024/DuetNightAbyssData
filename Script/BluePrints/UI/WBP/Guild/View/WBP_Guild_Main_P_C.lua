@@ -367,7 +367,7 @@ function M:OnTabItemSelected_InGuild(TabWidget, Tab)
       self.GuildInfoPage:SetVisibility(UIConst.VisibilityOp.Visible)
       self.GuildInfoPage:RefreshUIInfo()
     end
-    self.GuildInfoPage:PlayAnimation(self.GuildInfoPage.In)
+    self.GuildInfoPage:PlayInAnim()
     if self.GuildMember then
       self.GuildMember:SetVisibility(UIConst.VisibilityOp.Collapsed)
     end
@@ -410,6 +410,8 @@ function M:OnTabItemSelected_NotInGuild(TabWidget, Tab)
       Slot:SetVerticalAlignment(EVerticalAlignment.VAlign_Fill)
       GuildJoin.ParentWidget = self
       self.GuildJoin = GuildJoin
+      self.GuildJoin:PlayAnimation(self.GuildJoin.In)
+      AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "GuildJoinToEnd", nil)
     end
     self.GuildJoin:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.GuildJoin:SetData(self.AllGuildList)
@@ -426,6 +428,7 @@ function M:OnTabItemSelected_NotInGuild(TabWidget, Tab)
       GuildCreate.ParentWidget = self
       self.GuildCreate = GuildCreate
     end
+    AudioManager(self):PlayUISound(self, "event:/ui/common/association_flag_in", nil, nil)
     self.GuildCreate:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     self.GuildCreate:SetData()
     self.GuildCreate:SetDefaultFocus()
@@ -458,8 +461,11 @@ function M:InitEntrance()
     local Content_Shop = {
       Text = GText("UI_GuildShop"),
       OnBtnClick = function()
+        AudioManager(self):PlayUISound(self, "event:/ui/activity/type_btn_click", nil, nil)
         local GuildShopId = DataMgr.GlobalConstant.GuildShopInterFaceJumpID and DataMgr.GlobalConstant.GuildShopInterFaceJumpID.ConstantValue or 102
-        PageJumpUtils:JumpToTargetPageByJumpId(GuildShopId)
+        self:AddTimer(0.01, function()
+          PageJumpUtils:JumpToTargetPageByJumpId(GuildShopId)
+        end)
       end,
       Owner = self
     }
@@ -467,6 +473,7 @@ function M:InitEntrance()
     local Content_Visit = {
       Text = GText("UI_VisitGuild"),
       OnBtnClick = function()
+        AudioManager(self):PlayUISound(self, "event:/ui/activity/type_btn_click", nil, nil)
         UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_GuildSystemNotAvailable"))
       end,
       Owner = self
@@ -498,6 +505,8 @@ function M:Close()
     OutCount = OutCount + 1
     self.GuildJoin:BindToAnimationFinished(self.GuildJoin.Out, function()
       CloseFunc()
+      AudioManager(self):SetEventSoundParam(self, "GuildJoinToEnd", {ToEnd = 1})
+      AudioManager(self):StopSound(self, "GuildJoinToEnd")
     end)
     self.GuildJoin:PlayAnimation(self.GuildJoin.Out)
   end

@@ -1095,10 +1095,10 @@ return {
             key = "177816829143610467336",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 854.3817960833977, y = 464.19919618228965},
+            pos = {x = 744.3817960833977, y = 385.44919618228965},
             propsData = {
               IsNpcNode = false,
-              FirstDialogueId = 100410601,
+              FirstDialogueId = 10041601,
               FlowAssetPath = "",
               TalkType = "Guide",
               bIsStandalone = true,

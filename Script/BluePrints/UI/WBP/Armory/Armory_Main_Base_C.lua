@@ -1074,9 +1074,10 @@ function M:CreateConstInfos()
     end,
     CheckReddot = function(Params)
       local Weapon = Params.Weapon or self[self.ComparedWeaponName]
-      local CardLevelMax = HyperWeaponUtils.GetMaxForgeLevel(Weapon.WeaponId)
-      local HasAnyForgeRewards = HyperWeaponUtils.HasForgeLevelCanGetReward(1, CardLevelMax)
-      return false, HasAnyForgeRewards
+      local HasOwnedWeapon = HyperWeaponUtils.HasOwnedWeapon(Weapon.Uuid)
+      local MaxForgeLevel = HyperWeaponUtils.GetMaxForgeLevel(Weapon.WeaponId)
+      local HasAnyForgeRewards = HyperWeaponUtils.HasAnyForgeRewards(1, MaxForgeLevel)
+      return false, HasOwnedWeapon and HasAnyForgeRewards
     end
   }
   self.WeaponAppearanceSubTab = {

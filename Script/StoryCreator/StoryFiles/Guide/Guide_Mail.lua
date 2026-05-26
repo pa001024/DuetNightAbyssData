@@ -47,7 +47,7 @@ return {
       key = "1756032377236372514",
       type = "StoryNode",
       name = "任务节点",
-      pos = {x = 1274, y = 268},
+      pos = {x = 1274, y = 266.3870967940411},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -263,7 +263,7 @@ return {
               IsControlPlayer = false,
               IsTimePause = true,
               IsShowCursor = true,
-              HighLightUIPath = "MenuWorld.WB_Entrance:2",
+              HighLightUIPath = "MenuWorld.WB_Entrance:3",
               UICompName = "Button_Area",
               GamePadWidgetName = "",
               IsAutoClick = false,

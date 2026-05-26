@@ -47,7 +47,7 @@ return {
       key = "177772045534914953102",
       type = "StoryNode",
       name = "卡嘉Boss战一阶段",
-      pos = {x = 1640, y = 271.99999999999994},
+      pos = {x = 1634, y = 271.99999999999994},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -69,7 +69,7 @@ return {
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
         IsBacktrack = false,
-        SubRegionId = 106101,
+        SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
@@ -120,12 +120,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177772045534914953121",
-            startPort = "Out",
-            endQuest = "177772045534914953110",
-            endPort = "In"
-          },
-          {
             startQuest = "177772045534914953107",
             startPort = "QuestStart",
             endQuest = "177772155220222432681",
@@ -150,12 +144,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177772045534914953111",
-            startPort = "Out",
-            endQuest = "177772045534914953115",
-            endPort = "In"
-          },
-          {
             startQuest = "177772045534914953110",
             startPort = "Out",
             endQuest = "177883237185551202859",
@@ -171,6 +159,42 @@ return {
             startQuest = "177883241517551203582",
             startPort = "Out",
             endQuest = "177772156256222433039",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772045534914953121",
+            startPort = "Out",
+            endQuest = "177969833157741615706",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969833157741615706",
+            startPort = "Out",
+            endQuest = "177969834552341616074",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772045534914953111",
+            startPort = "Out",
+            endQuest = "177772045534914953115",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772045534914953110",
+            startPort = "Out",
+            endQuest = "177969835122441616312",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969835122441616312",
+            startPort = "Out",
+            endQuest = "17795210722591935845",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969834552341616074",
+            startPort = "Out",
+            endQuest = "177772045534914953110",
             endPort = "In"
           }
         },
@@ -200,7 +224,7 @@ return {
             key = "177772045534914953110",
             type = "TalkNode",
             name = "过场-Boss战出场",
-            pos = {x = 1697.3158624396372, y = 271.3891395582639},
+            pos = {x = 1553.3158624396372, y = 182.38913955826388},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -214,7 +238,7 @@ return {
               ShowSkipButton = true,
               ShowReviewButton = true,
               ShowWikiButton = true,
-              PauseGameGlobal = true,
+              PauseGameGlobal = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -250,7 +274,7 @@ return {
             key = "177772045534914953112",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1999.348468379446, y = -73.41590909090903},
+            pos = {x = 1903.5792376102154, y = -91.87744755244749},
             propsData = {
               NewDescription = "Content_10040505_02",
               NewDetail = "",
@@ -261,7 +285,7 @@ return {
             key = "177772045534914953115",
             type = "BossBattleFinishNode",
             name = "播完UI消息",
-            pos = {x = 2453.776424263613, y = 347.7757543210885},
+            pos = {x = 2568.0071934943826, y = 342.00652355185775},
             propsData = {
               SendMessage = "",
               FinishCondition = "TrainBoss01AndUISuccess"
@@ -326,7 +350,7 @@ return {
             key = "177772045534914953121",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1542.4657531030603, y = 69.60258944569136},
+            pos = {x = 1449.4657531030603, y = 48.602589445691365},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -345,7 +369,7 @@ return {
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
-              HideMechanismsFX = false,
+              HideMechanismsFX = true,
               ShowSkipButton = true,
               ShowAutoPlayButton = true,
               ShowReviewButton = true,
@@ -414,6 +438,62 @@ return {
             name = "恢复角色",
             pos = {x = 3135.0087719298244, y = 286.3157609933925},
             propsData = {}
+          },
+          ["17795210722591935845"] = {
+            key = "17795210722591935845",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2428.5974358974363, y = 9.812179487179321},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0171_combat_lieche_loop.0171_combat_lieche_loop'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["177969833157741615706"] = {
+            key = "177969833157741615706",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1578.7864635364633, y = -197.76541221935963},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["177969834552341616074"] = {
+            key = "177969834552341616074",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1869.1654845154844, y = -230.5304471843947},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0171_combat_lieche_intro.0171_combat_lieche_intro'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["177969835122441616312"] = {
+            key = "177969835122441616312",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2075.703946053946, y = 3.700322046374609},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}

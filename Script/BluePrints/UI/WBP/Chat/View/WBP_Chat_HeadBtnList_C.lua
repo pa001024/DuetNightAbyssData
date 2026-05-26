@@ -336,7 +336,9 @@ local function InitMenuList(SelfWidget, FuncList, AvatarInfo, GuildInfo)
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.Owner = SelfWidget
     Content.ForceHideGamepadKey = true
-    Func(Content, AvatarInfo, GuildInfo)
+    Func(Content, AvatarInfo, GuildInfo, function()
+      CloseHeadAnchor(SelfWidget.Owner)
+    end)
     SelfWidget.List_Btn:AddItem(Content)
   end
 end
@@ -397,6 +399,7 @@ function M:OnKeyUp(MyGeometry, InKeyEvent)
 end
 
 function M:OpenGuildDetailPopup()
+  AudioManager(self):PlayUISound(nil, "event:/ui/common/click_btn_small", nil, nil)
   GuildController:OpenGuildDetailPopup(self, self.GuildDetailGuildId)
   CloseHeadAnchor(self.Owner)
 end

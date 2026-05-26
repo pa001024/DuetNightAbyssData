@@ -13,7 +13,6 @@ function M:Construct()
 end
 
 function M:SetData(AllGuildList)
-  self:PlayAnimation(self.In)
   self.GuildList:SetData(AllGuildList, {
     Func = self.SetGuildInfo,
     Obj = self
@@ -33,8 +32,9 @@ function M:SetGuildInfo(GuildData)
 end
 
 function M:ApplyJoinGuildComplete(bInvited)
-  if 0 == bInvited then
+  if 2 == bInvited then
     self.GuildList:UpdateJoinGuildItem(self.GuildInfo.GuildData)
+    self.GuildInfo:JoinSuccessful()
   end
 end
 
@@ -61,11 +61,7 @@ function M:SetListFocus()
     self.ParentWidget:SetFocus()
   else
     local List = self.GuildList.List_Guild
-    local Item = List:GetItemAt(0)
-    List:NavigateToIndex(0)
-    if Item.SelfWidget then
-      Item.SelfWidget:SetFocus()
-    end
+    List:SetFocus()
   end
 end
 

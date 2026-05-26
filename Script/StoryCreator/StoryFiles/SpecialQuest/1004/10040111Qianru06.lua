@@ -106,6 +106,12 @@ return {
             startPort = "QuestStart",
             endQuest = "177815740932125596719",
             endPort = "In"
+          },
+          {
+            startQuest = "177796899678912164285",
+            startPort = "QuestStart",
+            endQuest = "1779718543146279",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -165,6 +171,16 @@ return {
               MontageName = "",
               bFocusEnable = false,
               SequencePath = ""
+            }
+          },
+          ["1779718543146279"] = {
+            key = "1779718543146279",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 129.4021767705981, y = 136.542624042624},
+            propsData = {
+              VarName = "FirstStateQianru10040106",
+              VarValue = 1
             }
           }
         },

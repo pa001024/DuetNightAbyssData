@@ -689,39 +689,39 @@ local Data = {
           TextMapId = "Access_Collecting_EX01"
         },
         Access_Collecting_East01 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Primavera Eterna",
+          ContentDE = "Trouvé à Port-des-Brumes — Éternel Printemps",
           TextMapId = "Access_Collecting_East01"
         },
         Access_Collecting_East02 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Caverna de Mareas",
+          ContentDE = "Trouvé à Port-des-Brumes — Chant-des-Marées",
           TextMapId = "Access_Collecting_East02"
         },
         Access_Collecting_East03 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Mar de Polvo",
+          ContentDE = "Trouvé à Port-des-Brumes — Mer de Poussière",
           TextMapId = "Access_Collecting_East03"
         },
         Access_Collecting_East04 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Muelle Estelar",
+          ContentDE = "Trouvé à Port-des-Brumes — Quai-aux-Étoiles",
           TextMapId = "Access_Collecting_East04"
         },
         Access_Collecting_East05 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Orilla de Juncos",
+          ContentDE = "Trouvé à Port-des-Brumes — Baie des Roseaux-Pâles",
           TextMapId = "Access_Collecting_East05"
         },
         Access_Collecting_East06 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Pabellón de lo Efímero",
+          ContentDE = "Trouvé à Port-des-Brumes — Pavillon de l’Éphémère",
           TextMapId = "Access_Collecting_East06"
         },
         Access_Collecting_East07 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Mercado Velado",
+          ContentDE = "Trouvé à Port-des-Brumes — Marché Voilé",
           TextMapId = "Access_Collecting_East07"
         },
         Access_Collecting_East08 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Barranco del Crepúsculo",
+          ContentDE = "Trouvé à Port-des-Brumes — Ravin du Clair-Obscur",
           TextMapId = "Access_Collecting_East08"
         },
         Access_Collecting_East09 = {
-          ContentDE = "Recolectar en el Puerto de las Brumas — Descanso de la Hoja",
+          ContentDE = "Trouvé à Port-des-Brumes — Repos de la Lame",
           TextMapId = "Access_Collecting_East09"
         },
         Access_Collecting_Icelake01 = {

@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040418_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -178,6 +178,36 @@ return {
             startPort = "Out",
             endQuest = "177874842771626293795",
             endPort = "Fail"
+          },
+          {
+            startQuest = "177874842771626293802",
+            startPort = "Out",
+            endQuest = "1779177616458967129",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874842771626293802",
+            startPort = "Out",
+            endQuest = "177936853367868175358",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874842771626293800",
+            startPort = "Out",
+            endQuest = "177936854184268175620",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874842771626293800",
+            startPort = "Out",
+            endQuest = "1779520877667607",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779520877667607",
+            startPort = "Out",
+            endQuest = "1779697034679969208",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -403,7 +433,6 @@ return {
               ActiveType = "Lock",
               SkillNameList = {
                 "Attack",
-                "Jump",
                 "Slide",
                 "BulletJump",
                 "Fire",
@@ -464,8 +493,76 @@ return {
             key = "177874845067426294502",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 773.1578947368419, y = 708.736842105263},
+            pos = {x = 763.5578947368418, y = 845.5368421052631},
             propsData = {}
+          },
+          ["1779177616458967129"] = {
+            key = "1779177616458967129",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 1008.6833333333336, y = 629.1166666666668},
+            propsData = {
+              IsNpcNode = false,
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 10010101,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10049901_46.10049901_46'",
+              TalkType = "Guide",
+              bIsStandalone = true,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
+              OverrideFailBlend = false
+            }
+          },
+          ["177936853367868175358"] = {
+            key = "177936853367868175358",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1072.7058823529412, y = -109.17647058823528},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "YWPianoLightStart",
+              UnitId = -1
+            }
+          },
+          ["177936854184268175620"] = {
+            key = "177936854184268175620",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1879.7850267379679, y = 591.1222065859836},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "YWPianoLightClose",
+              UnitId = -1
+            }
+          },
+          ["1779520877667607"] = {
+            key = "1779520877667607",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1847.392145135566, y = 259.1477272727273},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["1779697034679969208"] = {
+            key = "1779697034679969208",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2135.508243255921, y = 249.56602863568816},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0170_story_fuluo_play_piano.0170_story_fuluo_play_piano'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
           }
         },
         commentData = {}

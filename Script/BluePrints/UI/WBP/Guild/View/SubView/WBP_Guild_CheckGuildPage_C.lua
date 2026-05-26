@@ -5,6 +5,7 @@ local M = Class({
 
 function M:Construct()
   self.Btn_Close.OnClicked:Add(self, self.Close)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/title_setting_panel_expand", "CheckGuildPagekToEnd", nil)
 end
 
 function M:InitUIInfo(Name, IsInUIMode, EventList, ...)
@@ -57,6 +58,8 @@ function M:Close()
     end
   })
   self:PlayAnimation(self.Out)
+  AudioManager(self):SetEventSoundParam(self, "CheckGuildPagekToEnd", {ToEnd = 1})
+  AudioManager(self):StopSound(self, "CheckGuildPagekToEnd")
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)
@@ -65,6 +68,9 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
   local IsHandled = false
   IsHandled = self.GuildInfo:OnContentKeyDown(MyGeometry, InKeyEvent)
   if not IsHandled and InKeyName == UIConst.GamePadKey.FaceButtonRight then
+    self:Close()
+    IsHandled = true
+  elseif "Escape" == InKeyName then
     self:Close()
     IsHandled = true
   end

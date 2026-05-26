@@ -40,7 +40,7 @@ return {
       key = "1777954020873934759",
       type = "StoryEndNode",
       name = "StoryEnd",
-      pos = {x = 1813.1034482758619, y = 323.7931034482759},
+      pos = {x = 1603.1034482758619, y = 295.45977011494256},
       propsData = {},
       questNodeData = {
         lineData = {},
@@ -53,9 +53,9 @@ return {
       key = "1777954121343934836",
       type = "StoryNode",
       name = "买票",
-      pos = {x = 1148.5189054332739, y = 269.90896723184653},
+      pos = {x = 965.0978528016949, y = 269.90896723184653},
       propsData = {
-        QuestId = 10040103,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040103_01",
         QuestDeatil = "Description_10040103_01",
@@ -132,27 +132,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "1777954121347934847",
-            startPort = "QuestStart",
-            endQuest = "1777954463631936705",
-            endPort = "In"
-          },
-          {
-            startQuest = "1777954463631936705",
-            startPort = "true",
-            endQuest = "1777954121351934860",
-            endPort = "In"
-          },
-          {
             startQuest = "1777954463631936705",
             startPort = "true",
             endQuest = "1777954121350934857",
-            endPort = "In"
-          },
-          {
-            startQuest = "1777954121350934856",
-            startPort = "Out",
-            endQuest = "1777954121349934854",
             endPort = "In"
           },
           {
@@ -198,15 +180,33 @@ return {
             endPort = "Success"
           },
           {
+            startQuest = "1777954121347934847",
+            startPort = "QuestStart",
+            endQuest = "17791717965442104",
+            endPort = "In"
+          },
+          {
+            startQuest = "17791718053662432",
+            startPort = "Out",
+            endQuest = "1777954121349934854",
+            endPort = "In"
+          },
+          {
+            startQuest = "1777954463631936705",
+            startPort = "true",
+            endQuest = "1777954121351934860",
+            endPort = "In"
+          },
+          {
             startQuest = "1777954121351934860",
             startPort = "Out",
-            endQuest = "1777954121350934856",
+            endQuest = "17791718053662432",
             endPort = "In"
           },
           {
             startQuest = "1777954121347934847",
             startPort = "QuestStart",
-            endQuest = "17788488152885801242",
+            endQuest = "1777954463631936705",
             endPort = "In"
           }
         },
@@ -215,7 +215,7 @@ return {
             key = "1777954121347934847",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = -406.9318181818183, y = 319.65909090909093},
+            pos = {x = -451.2500000000001, y = 230.56818181818184},
             propsData = {ModeType = 0}
           },
           ["1777954121347934848"] = {
@@ -398,7 +398,7 @@ return {
             key = "1777954121349934854",
             type = "SendMessageNode",
             name = "激活嘟嘟皎皎AI",
-            pos = {x = 912.8179723502304, y = -87.39339477726574},
+            pos = {x = 626.0179723502304, y = 21.806605222734262},
             propsData = {
               MessageType = "BehaviorTree",
               MessageContent = "BaiLCStartMove",
@@ -415,20 +415,6 @@ return {
               StaticCreatorId = 272480276,
               GuideType = "M",
               GuidePointName = ""
-            }
-          },
-          ["1777954121350934856"] = {
-            key = "1777954121350934856",
-            type = "ChangeStaticCreatorNode",
-            name = "生成/销毁节点",
-            pos = {x = 509.46984480110183, y = -91.32365978058755},
-            propsData = {
-              ActiveEnable = true,
-              EnableBlackScreenSync = true,
-              EnableFadeIn = false,
-              EnableFadeOut = true,
-              NewTargetPointName = "",
-              StaticCreatorIdList = {272480277}
             }
           },
           ["1777954121350934857"] = {
@@ -459,7 +445,7 @@ return {
             key = "1777954121350934859",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 890.3321098849071, y = 161.90056672068815},
+            pos = {x = 917.6048371576344, y = 213.71874853886996},
             propsData = {
               IsNpcNode = false,
               FirstDialogueId = 10049901,
@@ -476,7 +462,7 @@ return {
             key = "1777954121351934860",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 420.2440028154421, y = 212.04429368732204},
+            pos = {x = 348.62344945575836, y = 231.72808815372522},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_BHCZStart",
@@ -491,7 +477,7 @@ return {
             key = "1777954121351934861",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = -18.770507916411457, y = -155.8763413717511},
+            pos = {x = -47.406871552775094, y = -319.5127050081147},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["1777954163523936403"] = {
@@ -505,7 +491,7 @@ return {
             key = "1777954463631936705",
             type = "ExecuteBlueprintFunctionCheckVarNode",
             name = "执行变量检测函数",
-            pos = {x = 57.58393471532504, y = 335.8820672702129},
+            pos = {x = 69.12239625378658, y = 312.8051441932898},
             propsData = {
               FunctionName = "Equal",
               VarName = "StateBuyTicket100401",
@@ -534,7 +520,7 @@ return {
               TargetTime = 13,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = true
             }
           },
           ["17784685906481439138"] = {
@@ -551,14 +537,28 @@ return {
               StaticCreatorIdList = {272480277}
             }
           },
-          ["17788488152885801242"] = {
-            key = "17788488152885801242",
+          ["17791717965442104"] = {
+            key = "17791717965442104",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 53.999999999999886, y = -33.75000000000006},
+            pos = {x = 50.42928705281652, y = 3.9653875536228966},
             propsData = {
               VarName = "FirstStatBuyTicket100401",
               VarValue = 1
+            }
+          },
+          ["17791718053662432"] = {
+            key = "17791718053662432",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 636.2593265785081, y = 139.67685000421588},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = true,
+              EnableFadeIn = false,
+              EnableFadeOut = true,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {272480277}
             }
           }
         },
@@ -570,9 +570,9 @@ return {
       key = "1777954121343934837",
       type = "StoryNode",
       name = "检票",
-      pos = {x = 1437.8259221529331, y = 292.29792931987765},
+      pos = {x = 1284.4925888195999, y = 263.96459598654434},
       propsData = {
-        QuestId = 10040104,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040104_01",
         QuestDeatil = "Description_10040104_01",
@@ -653,6 +653,12 @@ return {
             startPort = "Out",
             endQuest = "1777954121358934922",
             endPort = "Fail"
+          },
+          {
+            startQuest = "1777954121358934920",
+            startPort = "QuestStart",
+            endQuest = "1779177063519970097",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -841,6 +847,18 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 927.0494752623687, y = 816.3988005997002},
             propsData = {}
+          },
+          ["1779177063519970097"] = {
+            key = "1779177063519970097",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 1062, y = 164},
+            propsData = {
+              TargetTime = 13,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
           }
         },
         commentData = {}

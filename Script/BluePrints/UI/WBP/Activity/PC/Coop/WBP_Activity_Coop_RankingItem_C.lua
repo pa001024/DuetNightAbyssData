@@ -210,6 +210,9 @@ end
 function M:InitPlayerPoint()
   local Score = self.RankInfo.Score
   if Score then
+    if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+      Score = CommonUtils.FormatNumInFrench(tostring(Score))
+    end
     self.Text_Score:SetText(Score)
   else
     self.Text_Score:SetText("--")

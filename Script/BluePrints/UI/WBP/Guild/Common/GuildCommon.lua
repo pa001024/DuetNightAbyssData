@@ -14,7 +14,6 @@ local GuildCommon = {
   CheckGuildPage = "CheckGuildPage",
   RequestJoinCD = DataMgr.GlobalConstant.GuildApplyCoolDownH.ConstantValue * 3600,
   RejectedJoinCD = DataMgr.GlobalConstant.GuildApplyCoolDownWhenRejectH.ConstantValue * 3600,
-  QuitGuildCD = DataMgr.GlobalConstant.GuildQuitRejoinCoolDownH.ConstantValue * 3600,
   InviteJoinCD = DataMgr.GlobalConstant.GuildInviteCoolDownS.ConstantValue * 60
 }
 GuildCommon.MaxActivityPoint = 0

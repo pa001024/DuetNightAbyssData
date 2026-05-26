@@ -47,7 +47,7 @@ return {
       key = "17779687813878422375",
       type = "StoryNode",
       name = "潜入特殊任务二阶段",
-      pos = {x = 1362.2608695652175, y = 309.91304347826076},
+      pos = {x = 1362.2608695652175, y = 307.91304347826076},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
@@ -180,24 +180,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17779687813908422410",
-            startPort = "Out",
-            endQuest = "17779687813908422409",
-            endPort = "In"
-          },
-          {
-            startQuest = "17779687813908422410",
-            startPort = "Out",
-            endQuest = "17779687813908422408",
-            endPort = "In"
-          },
-          {
-            startQuest = "17779687813908422410",
-            startPort = "Out",
-            endQuest = "17779687813908422411",
-            endPort = "In"
-          },
-          {
             startQuest = "17779687813908422412",
             startPort = "Out",
             endQuest = "17779687813908422413",
@@ -273,6 +255,30 @@ return {
             startQuest = "17779687813908422408",
             startPort = "Out",
             endQuest = "17779688107488423389",
+            endPort = "In"
+          },
+          {
+            startQuest = "177927702418425156545",
+            startPort = "Out",
+            endQuest = "17779687813908422409",
+            endPort = "In"
+          },
+          {
+            startQuest = "17779687813908422410",
+            startPort = "Out",
+            endQuest = "177927702418425156545",
+            endPort = "In"
+          },
+          {
+            startQuest = "177927702418425156545",
+            startPort = "Out",
+            endQuest = "17779687813908422411",
+            endPort = "In"
+          },
+          {
+            startQuest = "177927702418425156545",
+            startPort = "Out",
+            endQuest = "17779687813908422408",
             endPort = "In"
           }
         },
@@ -463,7 +469,7 @@ return {
               IsShow = false,
               bOpenRangeEffect = false,
               GuideType = "P",
-              GuideName = "BP_BP_QianruPrompt02_02"
+              GuideName = "BP_QianruPrompt02"
             }
           },
           ["17779687813898422398"] = {
@@ -586,7 +592,7 @@ return {
             key = "17779687813908422408",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 4202.566937835128, y = 305.8289472825068},
+            pos = {x = 4273.619569414075, y = 241.09210517724364},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 272890087,
@@ -598,7 +604,7 @@ return {
             key = "17779687813908422409",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3831.5771923565962, y = -54.276426686489},
+            pos = {x = 3964.2087713039646, y = -89.01326879175217},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -616,7 +622,7 @@ return {
             key = "17779687813908422410",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 3386.6793143058544, y = 339.2215007386822},
+            pos = {x = 3315.626682726907, y = 124.48465863341906},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 272480041,
@@ -628,7 +634,7 @@ return {
             key = "17779687813908422411",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 3910.272941975914, y = 152.25275680631643},
+            pos = {x = 4260.799257765388, y = 60.67380943789537},
             propsData = {
               NewDescription = "Content_10040109_05",
               NewDetail = "",
@@ -670,7 +676,7 @@ return {
             key = "17779687813908422415",
             type = "WaitingMechanismEnterStateNode",
             name = "等待机关进入状态",
-            pos = {x = 3822.6538943568667, y = 425.1098996634592},
+            pos = {x = 3623.7065259358137, y = 543.5309522950381},
             propsData = {
               CreateType = "ManualItem",
               CreateId = 228021,
@@ -683,7 +689,7 @@ return {
             key = "17779687813908422416",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 4228.653894356867, y = 527.9670425206021},
+            pos = {x = 4127.601262777919, y = 535.8617793627075},
             propsData = {
               NewDescription = "Content_10040109_01",
               NewDetail = "",
@@ -703,6 +709,18 @@ return {
             name = "成功完成特殊任务",
             pos = {x = 4572.861236034797, y = 271.20475333919495},
             propsData = {}
+          },
+          ["177927702418425156545"] = {
+            key = "177927702418425156545",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 3706.5263157894733, y = 144.10526315789474},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 272890116,
+              GuideType = "M",
+              GuidePointName = "Mechanism_QiaobanGuide_272890116"
+            }
           }
         },
         commentData = {}

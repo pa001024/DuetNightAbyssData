@@ -395,7 +395,9 @@ function WBP_Forging_Convert_PopUp_Choose_C:OnChoosedMaterialClicked(Content, In
       print("hzq OnChoosedMaterialClicked end ")
       ContentItem.ClickedCount = ContentItem.ClickedCount - 1
       local CurWidget = URuntimeCommonFunctionLibrary.GetEntryWidgetFromItem(self.List_Item, self.List_Item:GetIndexForItem(ContentItem))
-      CurWidget:UpdateChoosedCount(ContentItem.ClickedCount)
+      if CurWidget then
+        CurWidget:UpdateChoosedCount(ContentItem.ClickedCount)
+      end
     end
   end
   if UIUtils.IsGamepadInput() then

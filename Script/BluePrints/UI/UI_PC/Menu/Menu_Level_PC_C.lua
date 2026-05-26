@@ -747,8 +747,9 @@ function Menu_Level_PC_C:CalcIncrsExps(NowExps, RoleName)
       end
       local OldBattleInfo = self.PlayerState:GetOldBattleInfo(k)
       local SumMaxExp = 0
-      if CurrentLevel > OldBattleInfo.Level then
-        for I = OldBattleInfo.Level, CurrentLevel - 1 do
+      local OldLevel = math.max(1, OldBattleInfo.Level or 1)
+      if CurrentLevel > OldLevel then
+        for I = OldLevel, CurrentLevel - 1 do
           SumMaxExp = SumMaxExp + self:GetRoleLevelMaxExp(k, I)
         end
       end

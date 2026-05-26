@@ -226,10 +226,14 @@ return ReadOnly("Hair", {
     Sound = "SOUND_ITEM_NORMAL"
   },
   [3102] = {
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Xier.T_Icon_Xier'",
     CharId = 3102,
+    CharPartId = 310202,
     ExcludeCollect = true,
     ExcludeCollectServer = true,
     HairId = 3102,
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Xier.T_Icon_Xier'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Xier.T_Icon_Xier'",
     Rarity = 0,
     ReleaseVersion = 140,
     Sound = "SOUND_ITEM_NORMAL"
@@ -541,13 +545,13 @@ return ReadOnly("Hair", {
     Sound = "SOUND_ITEM_NORMAL"
   },
   [110292] = {
-    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Fuluo.T_Icon_Fuluo'",
+    BigIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fuluo_01.T_Fashion_Fuluo_01'",
     CharId = 1102,
     CharPartId = 110292,
     ExcludeCollect = true,
     HairId = 110292,
-    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Fuluo.T_Icon_Fuluo'",
-    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Avatar_Icon/T_Icon_Fuluo.T_Icon_Fuluo'",
+    Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fuluo_01.T_Fashion_Fuluo_01'",
+    LongIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fuluo_01.T_Fashion_Fuluo_01'",
     Name = "UI_Skin_Name_110201",
     Rarity = 5,
     ReleaseVersion = 100,

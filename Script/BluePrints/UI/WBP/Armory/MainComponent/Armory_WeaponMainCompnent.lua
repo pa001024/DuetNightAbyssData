@@ -13,6 +13,7 @@ function M:ComponentInitDispatcher()
   self:AddDispatcher(EventID.OnNewWeaponObtained, self, self.OnNewWeaponObtained)
   self:AddDispatcher(EventID.OnWeaponDeleted, self, self.OnWeaponDeleted)
   self:AddDispatcher(EventID.OnWeaponRewardStateChanged, self, self.OnWeaponRewardStateChanged)
+  self:AddDispatcher(EventID.OnHyperWeaponForgeQuestRewardGot, self, self.OnHyperWeaponForgeRewradChanged)
 end
 
 function M:Construct()
@@ -1042,6 +1043,25 @@ function M:OnWeaponRewardStateChanged(WeaponId)
     ArmoryUtils:UpdateContentRetDotType(value)
     if value == self[self.CmpContentName] then
       self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.Attribute)
+    end
+  end
+end
+
+function M:OnHyperWeaponForgeRewradChanged()
+  if self.IsPreviewMode then
+    return
+  end
+  local Contents = self[self.WeaponTag .. "Hyper" .. "ItemContentsArray"]
+  if not Contents then
+    return
+  end
+  local Avatar = GWorld:GetAvatar()
+  local HasWeaponForgeReward = Avatar:IsWeaponHasForgeReward()
+  for _, Content in pairs(Contents) do
+    Content.HasWeaponForgeReward = HasWeaponForgeReward
+    ArmoryUtils:UpdateContentRetDotType(Content)
+    if Content == self[self.CmpContentName] then
+      self:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.HyperGrade)
     end
   end
 end

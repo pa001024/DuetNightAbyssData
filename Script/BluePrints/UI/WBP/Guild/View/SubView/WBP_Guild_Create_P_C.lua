@@ -1,5 +1,4 @@
 require("UnLua")
-local UIManager = GWorld.GameInstance:GetGameUIManager()
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -15,18 +14,21 @@ function M:Construct()
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGuildCreateNameDuplicate then
       local Text = ErrorCode:GetText(ErrorCode.RET_GUILD_CREATE_NAME_DUPLICATE)
+      AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
       self.Input_Name:ShowTips(Text, 1, 2)
     end
   end)
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGuildCreateNameInvalid then
       local Text = ErrorCode:GetText(ErrorCode.RET_GUILD_CREATE_NAME_INVALID)
+      AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
       self.Input_Name:ShowTips(Text, 1, 2)
     end
   end)
   GuildController:RegisterEvent(self, function(self, EventId, ...)
     if EventId == GuildCommon.EventID.OnGuildCreateDescInvalid then
       local Text = ErrorCode:GetText(ErrorCode.RET_GUILD_CREATE_DECL_INVALID)
+      AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
       self.Input_Intro:ShowTips(Text, 1, 2)
     end
   end)
@@ -46,6 +48,9 @@ function M:Construct()
         else
           self.Btn_Create:SetState(true)
         end
+      end,
+      OnTextLengthExceedLimit = function(Owner, Text)
+        AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
       end
     },
     TextLimit = GuildCommon.GuildNameMaxLen,
@@ -68,6 +73,9 @@ function M:Construct()
         else
           self.Btn_Create:SetState(true)
         end
+      end,
+      OnTextLengthExceedLimit = function(Owner, Text)
+        AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
       end
     },
     TextLimit = GuildCommon.GuildDeclMaxLen,
@@ -123,22 +131,27 @@ function M:OpenEditLogoView()
 end
 
 function M:CreateConfirm()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_mid", nil, nil)
   if not self.Btn_Create.IsEnough then
     local ResourceName = GText(DataMgr.Resource[GuildCommon.GuildCreateItemId].ResourceName)
+    local UIManager = GWorld.GameInstance:GetGameUIManager()
     UIManager:ShowUITip(UIConst.Tip_CommonToast, string.format(GText("UI_ItemInsufficient"), ResourceName))
     return
   end
   local GuildName = self.Input_Name:GetText()
   local GuildIntro = self.Input_Intro:GetText()
   if "" == GuildName then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
     self.Input_Name:ShowTips(GText("GuildCreateFillName"), 2, 2)
     return
   end
   if "" == GuildIntro then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
     self.Input_Intro:ShowTips(GText("GuildCreateFillDecl"), 2, 2)
     return
   end
   if self:IsAllDigits(GuildName) then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/countdown_warning", nil, nil)
     self.Input_Name:ShowTips(GText("GuildNameNoPureNumber"), 1, 2)
     return
   end
@@ -149,6 +162,7 @@ function M:CreateConfirm()
     end,
     ShortText = string.format(GText("UI_ConfirmGuildCreation"), GuildName)
   }
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
   UIManager:ShowCommonPopupUI(GuildCommon.GuildComfirmDialog, Params)
 end
 
@@ -157,6 +171,7 @@ function M:IsAllDigits(str)
 end
 
 function M:CreateGuildSuccessful()
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
   UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_GuildCreated"))
 end
 

@@ -315,6 +315,7 @@ function M:CreatePlayerActor()
   local IsCharActorFistCreated
   self.ArmoryPlayer, IsCharActorFistCreated = UIManager:CreateOrGetArmoryPlayerActor(self.CurrentCharInfo, self:GetAvatar())
   PlayerActorRefs[self] = self.ArmoryPlayer
+  self:UpdateAudioListener()
   self:ClearPlayerHideTag(self.ArmoryPlayer)
   local Params = {}
   local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)

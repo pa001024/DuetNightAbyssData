@@ -1074,9 +1074,7 @@ return ReadOnly("ShopBannerTab", {
     ShowRemainTime = true,
     StartTime = LocalTimeProxy(1780279200),
     SwitchTime = 5,
-    Text1 = "UI_Skin_Name_0131",
-    Text2 = "UI_Banner_GeneralTips",
-    Text2EntryText = "UI_Banner_GeneralTipsEntry"
+    Text1 = "UI_Skin_Name_110201"
   },
   [401] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_0048.T_Shop_Recommend_0048'",
@@ -1152,6 +1150,7 @@ return ReadOnly("ShopBannerTab", {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_S_0017.T_Shop_Recommend_S_0017'",
     Bp = "WBP_Shop_Recommend_Common",
     DisplayId = 3010711,
+    DisplayText = "UI_Banner_Pack_All",
     DisplayType = "WeaponSkin",
     EndTime = LocalTimeProxy(1781748000),
     Id = 405,
@@ -1167,6 +1166,7 @@ return ReadOnly("ShopBannerTab", {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_S_0013.T_Shop_Recommend_S_0013'",
     Bp = "WBP_Shop_Recommend_Common",
     DisplayId = 3010504,
+    DisplayText = "UI_Banner_Pack_All",
     DisplayType = "WeaponSkin",
     EndTime = LocalTimeProxy(1782784800),
     Id = 406,
@@ -1238,7 +1238,7 @@ return ReadOnly("ShopBannerTab", {
     EndTime = LocalTimeProxy(1782784800),
     Id = 410,
     ItemIds = {1208008},
-    MarkText = "UI_Banner_Tab_Sale111",
+    MarkText = "UI_Banner_Tab_Sale141",
     Sequence = 146,
     ShowRemainTime = true,
     StartTime = LocalTimeProxy(1780279200),
@@ -1278,7 +1278,7 @@ return ReadOnly("ShopBannerTab", {
   [413] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_0056.T_Shop_Recommend_0056'",
     Bp = "WBP_Shop_Recommend_Common",
-    DisplayId = 30054,
+    DisplayId = 30057,
     DisplayType = "CharAccessory",
     EndTime = LocalTimeProxy(1782784800),
     Id = 413,
@@ -1287,7 +1287,7 @@ return ReadOnly("ShopBannerTab", {
     Sequence = 149,
     ShowRemainTime = true,
     StartTime = LocalTimeProxy(1781748000),
-    Text1 = "UI_Accessory_Name_30054",
+    Text1 = "UI_Accessory_Name_30057",
     Text1Sub = "UI_Char_Accessory"
   },
   [414] = {
@@ -1377,11 +1377,12 @@ return ReadOnly("ShopBannerTab", {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_S_0012.T_Shop_Recommend_S_0012'",
     Bp = "WBP_Shop_Recommend_Common",
     DisplayId = 3010806,
+    DisplayText = "UI_Banner_Pack_All",
     DisplayType = "WeaponSkin",
     EndTime = LocalTimeProxy(1785142800),
     Id = 453,
     ItemIds = {160167},
-    MarkText = "UI_Banner_Tab_NewMount",
+    MarkText = "UI_Banner_Tab_New",
     ShortTabSequence = 1,
     ShowRemainTime = true,
     StartTime = LocalTimeProxy(1782784800),
@@ -1391,7 +1392,7 @@ return ReadOnly("ShopBannerTab", {
   [454] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_S_0016.T_Shop_Recommend_S_0016'",
     Bp = "WBP_Shop_Recommend_Common",
-    DisplayId = 3010715,
+    DisplayId = 3010505,
     DisplayType = "WeaponSkin",
     EndTime = LocalTimeProxy(1784167200),
     Id = 454,
@@ -1406,6 +1407,8 @@ return ReadOnly("ShopBannerTab", {
   [455] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_S_0015.T_Shop_Recommend_S_0015'",
     Bp = "WBP_Shop_Recommend_Common",
+    DisplayId = 10120,
+    DisplayType = "CharAccessory",
     EndTime = LocalTimeProxy(1785142800),
     Id = 455,
     ItemIds = {120429},
@@ -1413,7 +1416,8 @@ return ReadOnly("ShopBannerTab", {
     ShortTabSequence = 2,
     ShowRemainTime = true,
     StartTime = LocalTimeProxy(1784167200),
-    Text1 = "UI_BannerName_1404S"
+    Text1 = "UI_BannerName_1404S",
+    Text1Sub = "UI_Char_Accessory"
   },
   [456] = {
     BannerIcon = "Texture2D'/Game/UI/Texture/Dynamic/Image/Shop/T_Shop_Recommend_S_0011.T_Shop_Recommend_S_0011'",

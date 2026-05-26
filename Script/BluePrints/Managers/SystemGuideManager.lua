@@ -119,6 +119,9 @@ function SystemGuideManager:ClearSystemGuideData()
   self.GuideQueue = {}
   self.IsGuideStoryRunning = false
   self.RunningId = -1
+  self.IsUIOnly = nil
+  self.OnBecomeView = false
+  self.Avatar = nil
   local EMCache = require("EMCache.EMCache")
   EMCache:Remove("GuideSkip", true)
 end
@@ -798,12 +801,32 @@ end
 
 function SystemGuideManager:OnBecomeViewTarget()
   self.OnBecomeView = true
-  self:SetInputModeEvent(self.IsUIOnly)
+  self:SetInputModeEvent(self:GetCurrentIsUIOnly())
 end
 
 function SystemGuideManager:OnEndViewTarget()
   self.OnBecomeView = false
-  self:SetInputModeEvent(self.IsUIOnly)
+  self:SetInputModeEvent(self:GetCurrentIsUIOnly())
+end
+
+function SystemGuideManager:GetCurrentIsUIOnly()
+  local CurMode = self:GetCurrentInputMode()
+  if nil == CurMode then
+    return self.IsUIOnly == true
+  end
+  DebugPrint("SystemGuide GetCurrentIsUIOnly CurMode:", CurMode)
+  if "UIOnly" == CurMode then
+    return true
+  end
+  return false
+end
+
+function SystemGuideManager:GetCurrentInputMode()
+  local GameInputModeSubsystem = UGameInputModeSubsystem.GetGameInputModeSubsystem(GWorld.GameInstance)
+  if not GameInputModeSubsystem then
+    return nil
+  end
+  return GameInputModeSubsystem:GetCurrentInputMode()
 end
 
 function SystemGuideManager:SetInputModeEvent(IsUIOnly)
@@ -879,7 +902,7 @@ function SystemGuideManager:RunStory(Data)
   local GuideId = Data.SysGuideId
   DebugPrint("RunStory,GuideId:" .. GuideId)
   if 1 == DataMgr.SystemGuide[GuideId].PlayerInControl then
-    local CurMode = UE4.URuntimeCommonFunctionLibrary.GetInputMode(GWorld.GameInstance:GetWorld())
+    local CurMode = self:GetCurrentInputMode()
     DebugPrint("GuideId:", GuideId, "CurMode:", CurMode, "PlayerInControl Systemguide RunStory")
     if "UIOnly" == CurMode then
       DebugPrint("GuideId:", GuideId, "CurMode:", CurMode, "PlayerInControl Systemguide RunStory Error ")

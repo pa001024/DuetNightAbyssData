@@ -20,4 +20,15 @@ function ReddotTreeNode_IActivityBase:OnIncreaseJudge(AddValue, CacheDetailChang
   return true
 end
 
+function ReddotTreeNode_IActivityBase:InitNodeCache()
+  self:OnInitNodeCache(self.Cache)
+  if self.Cache.Count > 0 then
+    self.bIgnoreJudge = false
+    self:IncreaseCount(self.Cache.Count)
+  else
+    self.Cache.Count = 0
+    self.Count = 0
+  end
+end
+
 return ReddotTreeNode_IActivityBase

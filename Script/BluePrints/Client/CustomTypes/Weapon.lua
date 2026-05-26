@@ -456,7 +456,8 @@ function Weapon:BattleDump(Avatar, ExtraInfo)
     ModData = AvatarUtils:DumpModData(ExtraInfo),
     SlotData = ExtraInfo.SlotData,
     ModSuitIndex = ExtraInfo.ModSuit,
-    HyperTalent = self:DumpHyperTalent()
+    HyperTalent = self:DumpHyperTalent(),
+    HyperCardLevel = self.HyperCardLevel
   }
   return result
 end

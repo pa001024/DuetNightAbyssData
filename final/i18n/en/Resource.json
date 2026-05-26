@@ -165,10 +165,10 @@
   },
   {
     "id": 112,
-    "name": "闪烁星芒",
+    "name": "Starglint",
     "icon": "T_Coin_SkinCollect02",
     "rarity": 5,
-    "desc": "装饰品上的点点星光，铭刻着美与闪耀的瞬间。"
+    "desc": "A glint of starlight on a trinket, capturing a fleeting moment of brilliance."
   },
   {
     "id": 121,
@@ -1409,6 +1409,314 @@
         ]
       },
       {
+        "srId": 106001,
+        "rewardId": 3015,
+        "pos": [
+          [
+            -36190.95,
+            13923.2
+          ],
+          [
+            -38450.18,
+            11619.51
+          ],
+          [
+            -25692.8,
+            19633.92
+          ],
+          [
+            -48125.87,
+            8311.51
+          ],
+          [
+            -24930.95,
+            7573.36
+          ],
+          [
+            -16428.29,
+            19056.66
+          ],
+          [
+            -4.8,
+            4.97
+          ],
+          [
+            -1648.14,
+            4350.33
+          ],
+          [
+            -9.24,
+            -0.09
+          ],
+          [
+            -17564.89,
+            4054.35
+          ],
+          [
+            -20904.3,
+            2444.08
+          ],
+          [
+            -34966.29,
+            -4094.6
+          ],
+          [
+            -81156.21,
+            1774.9
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3016,
+        "pos": [
+          [
+            -6713.57,
+            4668.77
+          ],
+          [
+            -15881.32,
+            -4852.77
+          ],
+          [
+            -10357.18,
+            6227.07
+          ],
+          [
+            -13646.92,
+            -3552.11
+          ],
+          [
+            -15693.57,
+            9078.77
+          ],
+          [
+            -72730.16,
+            1510.59
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3018,
+        "pos": [
+          [
+            -4333.64,
+            2293.58
+          ],
+          [
+            -21617.42,
+            -3994.8
+          ],
+          [
+            -19042.74,
+            8115.42
+          ],
+          [
+            -10759.95,
+            -4674.02
+          ],
+          [
+            -37617.84,
+            -6654.77
+          ],
+          [
+            -24666.55,
+            17447.57
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3019,
+        "pos": [
+          [
+            -2689.4,
+            -12572.08
+          ],
+          [
+            1671.69,
+            7062.29
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3015,
+        "pos": [
+          [
+            -16534.73,
+            7582.13
+          ],
+          [
+            -13008.18,
+            2429.98
+          ],
+          [
+            -9340.45,
+            1678.69
+          ],
+          [
+            -9673.42,
+            7662.51
+          ],
+          [
+            -8547.28,
+            10093.9
+          ],
+          [
+            -8042.84,
+            12158.07
+          ],
+          [
+            -11571.93,
+            12268.88
+          ],
+          [
+            -17745.21,
+            17392.53
+          ],
+          [
+            -12623.71,
+            9680.32
+          ],
+          [
+            -18980.76,
+            7635.16
+          ],
+          [
+            -18741.57,
+            11370.9
+          ],
+          [
+            -16847.82,
+            12804.09
+          ],
+          [
+            23.33,
+            -26.83
+          ],
+          [
+            -11600.81,
+            10252.35
+          ],
+          [
+            4.15,
+            -9.85
+          ],
+          [
+            -19901,
+            5722.76
+          ],
+          [
+            -14256.94,
+            5842.11
+          ],
+          [
+            -3630,
+            6060
+          ],
+          [
+            -3610.04,
+            6057.38
+          ],
+          [
+            -13188.16,
+            10579.84
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3016,
+        "pos": [
+          [
+            -3600.46,
+            6037.42
+          ],
+          [
+            0,
+            32.93
+          ],
+          [
+            -11493.29,
+            7893.41
+          ],
+          [
+            -16446.13,
+            5671.27
+          ],
+          [
+            -11497.66,
+            14139.75
+          ],
+          [
+            -8096.9,
+            14963.94
+          ],
+          [
+            -12178.79,
+            16500.55
+          ],
+          [
+            -9293.09,
+            10988.63
+          ],
+          [
+            -17387.62,
+            10975.07
+          ],
+          [
+            -8812.93,
+            758.35
+          ],
+          [
+            -39283.39,
+            -6565.73
+          ],
+          [
+            -11498.45,
+            6339.03
+          ],
+          [
+            -7281.46,
+            5410.08
+          ],
+          [
+            -15827.85,
+            1837.31
+          ],
+          [
+            -19463.76,
+            13862.21
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3018,
+        "pos": [
+          [
+            -8878.94,
+            15134.5
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3019,
+        "pos": [
+          [
+            4876.9,
+            -7126.87
+          ],
+          [
+            -6083.51,
+            258.92
+          ]
+        ]
+      },
+      {
         "srId": 101103,
         "pos": [
           [
@@ -1606,6 +1914,34 @@
           [
             -4513.375,
             -3257.4932
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3019,
+        "pos": [
+          [
+            -2689.4,
+            -12572.08
+          ],
+          [
+            1671.69,
+            7062.29
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3019,
+        "pos": [
+          [
+            4876.9,
+            -7126.87
+          ],
+          [
+            -6083.51,
+            258.92
           ]
         ]
       }
@@ -4106,6 +4442,342 @@
             637.3
           ]
         ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3015,
+        "pos": [
+          [
+            -36190.95,
+            13923.2
+          ],
+          [
+            -38450.18,
+            11619.51
+          ],
+          [
+            -25692.8,
+            19633.92
+          ],
+          [
+            -48125.87,
+            8311.51
+          ],
+          [
+            -24930.95,
+            7573.36
+          ],
+          [
+            -16428.29,
+            19056.66
+          ],
+          [
+            -4.8,
+            4.97
+          ],
+          [
+            -1648.14,
+            4350.33
+          ],
+          [
+            -9.24,
+            -0.09
+          ],
+          [
+            -17564.89,
+            4054.35
+          ],
+          [
+            -20904.3,
+            2444.08
+          ],
+          [
+            -34966.29,
+            -4094.6
+          ],
+          [
+            -81156.21,
+            1774.9
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3016,
+        "pos": [
+          [
+            -6713.57,
+            4668.77
+          ],
+          [
+            -15881.32,
+            -4852.77
+          ],
+          [
+            -10357.18,
+            6227.07
+          ],
+          [
+            -13646.92,
+            -3552.11
+          ],
+          [
+            -15693.57,
+            9078.77
+          ],
+          [
+            -72730.16,
+            1510.59
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3018,
+        "pos": [
+          [
+            -4333.64,
+            2293.58
+          ],
+          [
+            -21617.42,
+            -3994.8
+          ],
+          [
+            -19042.74,
+            8115.42
+          ],
+          [
+            -10759.95,
+            -4674.02
+          ],
+          [
+            -37617.84,
+            -6654.77
+          ],
+          [
+            -24666.55,
+            17447.57
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3019,
+        "pos": [
+          [
+            -2689.4,
+            -12572.08
+          ],
+          [
+            1671.69,
+            7062.29
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3100,
+        "pos": [
+          [
+            -7400,
+            6260
+          ],
+          [
+            730,
+            0
+          ],
+          [
+            -26353.24,
+            13485.5
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3200,
+        "pos": [
+          [
+            2184.56,
+            -9576.67
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3015,
+        "pos": [
+          [
+            -16534.73,
+            7582.13
+          ],
+          [
+            -13008.18,
+            2429.98
+          ],
+          [
+            -9340.45,
+            1678.69
+          ],
+          [
+            -9673.42,
+            7662.51
+          ],
+          [
+            -8547.28,
+            10093.9
+          ],
+          [
+            -8042.84,
+            12158.07
+          ],
+          [
+            -11571.93,
+            12268.88
+          ],
+          [
+            -17745.21,
+            17392.53
+          ],
+          [
+            -12623.71,
+            9680.32
+          ],
+          [
+            -18980.76,
+            7635.16
+          ],
+          [
+            -18741.57,
+            11370.9
+          ],
+          [
+            -16847.82,
+            12804.09
+          ],
+          [
+            23.33,
+            -26.83
+          ],
+          [
+            -11600.81,
+            10252.35
+          ],
+          [
+            4.15,
+            -9.85
+          ],
+          [
+            -19901,
+            5722.76
+          ],
+          [
+            -14256.94,
+            5842.11
+          ],
+          [
+            -3630,
+            6060
+          ],
+          [
+            -3610.04,
+            6057.38
+          ],
+          [
+            -13188.16,
+            10579.84
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3016,
+        "pos": [
+          [
+            -3600.46,
+            6037.42
+          ],
+          [
+            0,
+            32.93
+          ],
+          [
+            -11493.29,
+            7893.41
+          ],
+          [
+            -16446.13,
+            5671.27
+          ],
+          [
+            -11497.66,
+            14139.75
+          ],
+          [
+            -8096.9,
+            14963.94
+          ],
+          [
+            -12178.79,
+            16500.55
+          ],
+          [
+            -9293.09,
+            10988.63
+          ],
+          [
+            -17387.62,
+            10975.07
+          ],
+          [
+            -8812.93,
+            758.35
+          ],
+          [
+            -39283.39,
+            -6565.73
+          ],
+          [
+            -11498.45,
+            6339.03
+          ],
+          [
+            -7281.46,
+            5410.08
+          ],
+          [
+            -15827.85,
+            1837.31
+          ],
+          [
+            -19463.76,
+            13862.21
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3018,
+        "pos": [
+          [
+            -8878.94,
+            15134.5
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3019,
+        "pos": [
+          [
+            4876.9,
+            -7126.87
+          ],
+          [
+            -6083.51,
+            258.92
+          ]
+        ]
       }
     ],
     "desc": "It's the testament to your journey through thick and thin, the echoes of your laughter and tears, and the essence of your hard-earned wisdom — remember? You are neither frail nor alone.",
@@ -4167,6 +4839,23 @@
           [
             -86.99707,
             40.996094
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            126.45,
+            145.21
+          ],
+          [
+            82.23,
+            -130.43
+          ],
+          [
+            -206.33,
+            -33.04
           ]
         ]
       }
@@ -4308,6 +4997,43 @@
           [
             -2.644531,
             -35.70117
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -56.91,
+            -179.5
+          ],
+          [
+            -432.22,
+            13.49
+          ],
+          [
+            -138.77,
+            227.57
+          ],
+          [
+            15.98,
+            -320.08
+          ],
+          [
+            261.52,
+            17.62
+          ],
+          [
+            -435.51,
+            -336.57
+          ],
+          [
+            -166.05,
+            317.8
+          ],
+          [
+            -504.1,
+            76.13
           ]
         ]
       }
@@ -4592,6 +5318,46 @@
             -18315.69
           ]
         ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3018,
+        "pos": [
+          [
+            -4333.64,
+            2293.58
+          ],
+          [
+            -21617.42,
+            -3994.8
+          ],
+          [
+            -19042.74,
+            8115.42
+          ],
+          [
+            -10759.95,
+            -4674.02
+          ],
+          [
+            -37617.84,
+            -6654.77
+          ],
+          [
+            -24666.55,
+            17447.57
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3018,
+        "pos": [
+          [
+            -8878.94,
+            15134.5
+          ]
+        ]
       }
     ],
     "desc": "A treat favoured by Geniemons, can be used to feed them.\nTrue to its name, if these creatures could speak, they would surely exclaim, \"Yum!\"",
@@ -4650,6 +5416,34 @@
           [
             -4513.375,
             -3257.4932
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 3019,
+        "pos": [
+          [
+            -2689.4,
+            -12572.08
+          ],
+          [
+            1671.69,
+            7062.29
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 3019,
+        "pos": [
+          [
+            4876.9,
+            -7126.87
+          ],
+          [
+            -6083.51,
+            258.92
           ]
         ]
       }
@@ -5159,7 +5953,7 @@
     "name": "Basic Weapon Component: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 2,
-    "desc": "Crafted with precision from the blueprint of a basic weapon component. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of a basic weapon component. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5167,7 +5961,7 @@
     "name": "Intermediate Weapon Component: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 3,
-    "desc": "Crafted with precision from the blueprint of an intermediate weapon component. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of an intermediate weapon component. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5175,7 +5969,7 @@
     "name": "Advanced Weapon Component: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 4,
-    "desc": "Crafted with precision from the blueprint of an advanced weapon component. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of an advanced weapon component. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5303,7 +6097,7 @@
     "name": "Ingenious Tactics: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Ingenious Tactics. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Ingenious Tactics. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5471,7 +6265,7 @@
     "name": "Siren's Kiss: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Siren's Kiss. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Siren's Kiss. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5487,7 +6281,7 @@
     "name": "Venial Sinscales: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Venial Sinscales. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Venial Sinscales. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5503,7 +6297,7 @@
     "name": "Undying Oneiros: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Undying Oneiros. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Undying Oneiros. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5615,7 +6409,7 @@
     "name": "Shackle of Lonewolf: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Shackle of Lonewolf. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Shackle of Lonewolf. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5631,7 +6425,7 @@
     "name": "Punitive Inferno: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Punitive Inferno. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Punitive Inferno. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5647,7 +6441,7 @@
     "name": "Exiled Fangs: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Exiled Fangs. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Exiled Fangs. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5719,7 +6513,7 @@
     "name": "Elpides Abound: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Elpides Abound. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Elpides Abound. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5735,7 +6529,7 @@
     "name": "Eternal Farewell: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Eternal Farewell. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Eternal Farewell. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5751,7 +6545,7 @@
     "name": "Halcyon Gracefall: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Halcyon Gracefall. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Halcyon Gracefall. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5839,7 +6633,7 @@
     "name": "Blade Amberglow: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Blade Amberglow. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Blade Amberglow. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5855,7 +6649,7 @@
     "name": "Remanent Reminiscence: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Remanent Reminiscence. As the component closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Remanent Reminiscence. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5871,7 +6665,7 @@
     "name": "Vernal Jade Halberd: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Vernal Jade Halberd. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Vernal Jade Halberd. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5887,7 +6681,7 @@
     "name": "Ironforger: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Ironforger. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Ironforger. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -5951,7 +6745,7 @@
     "name": "Aureate Yore: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "Crafted with precision from the blueprint of Aureate Yore. As the part closest to the wielder, the essence of its design is to ensure optimal \"handiness.\"",
+    "desc": "Crafted with precision from the blueprint of Aureate Yore. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"He is advancing,\nHe is advancing!\nI hear his thunderous steps resound,\nI hear the Sword of Torrent scrape on the ground!\nHe shall claim the lives of the unjust,\nNo one here can escape the tempest!\nNone can resist death's looming tonight,\nNor wrest the sword from his grasp so tight!\"\n\n— Excerpt from Le Rhapsodie de Torrent, by Alexandre Thomas, a mourning faction playwright"
   },
   {
@@ -6532,75 +7326,75 @@
   },
   {
     "id": 12155,
-    "name": "囚鸟的刺羽的握柄",
+    "name": "Chainbreak Pinion: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的囚鸟的刺羽部件。冷兵器上最贴近使用者的部分，“趁手”，是它最实际的设计目的。",
+    "desc": "Crafted with precision from the blueprint of Chainbreak Pinion. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12156,
-    "name": "囚鸟的刺羽的刀刃",
+    "name": "Chainbreak Pinion: Blade",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的囚鸟的刺羽部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
+    "desc": "Crafted with precision from the blueprint of Chainbreak Pinion. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12157,
-    "name": "圣血*太刀的握柄",
+    "name": "Sanguis Sanctus – Katana: Grip",
     "icon": "T_Melee_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的圣血*太刀部件。冷兵器上最贴近使用者的部分，“趁手”，是它最实际的设计目的。",
+    "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Katana. As the component closest to the wielder, the essence of its design is to ensure optimal handling.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12158,
-    "name": "圣血*太刀的刀刃",
+    "name": "Sanguis Sanctus – Katana: Blade",
     "icon": "T_Melee_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的圣血*太刀部件。无论刀刃是曲是直，是轻是重，它的锋芒都只为战斗而生。",
+    "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Katana. Whether the blade is curved or straight, light or heavy, its edge is honed exclusively for battle.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12159,
-    "name": "圣血*太刀的饰物",
+    "name": "Sanguis Sanctus – Katana: Decoration",
     "icon": "T_Melee_Weapon_Part03",
     "rarity": 5,
-    "desc": "严格按照图纸打造的圣血*太刀部件。充分贯彻了使用者的意志，而唯有强大，才有资格在战场上彰显这份独一无二的个性。",
+    "desc": "Crafted with precision from the blueprint of Sanguis Sanctus – Katana. It embodies the wielder's will — only the strong are entitled to showcase their unique individuality on the battlefield.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12160,
-    "name": "薄暮契约的枪机",
+    "name": "Gloam Oath: Bolt",
     "icon": "T_Range_Weapon_Part02",
     "rarity": 5,
-    "desc": "严格按照图纸打造的薄暮契约部件。一旦扣下扳机，子弹就不会回头——就如同人下定决心的那一瞬。",
+    "desc": "Crafted with precision from the blueprint of Gloam Oath. There is no turning back once the trigger is pulled, much like the commitment that seals a decisive moment.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12161,
-    "name": "薄暮契约的枪身",
+    "name": "Gloam Oath: Frame",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "严格按照图纸打造的薄暮契约部件。由钢铁打造，足够坚硬。当子弹打空，也是一件趁手的钝器或投掷物。",
+    "desc": "Crafted with precision from the blueprint of Gloam Oath. Sturdy and robust, it doubles effectively as a blunt instrument or a throwable weapon when out of bullets.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 12162,
-    "name": "薄暮契约的枪管",
+    "name": "Gloam Oath: Barrel",
     "icon": "T_Range_Weapon_Part01",
     "rarity": 5,
-    "desc": "严格按照图纸打造的薄暮契约部件。子弹从这里倾泄而出，每到此时，枪管与战士的心同样滚烫。",
+    "desc": "Crafted with precision from the blueprint of Gloam Oath. Bullets burst forth from here, as both the barrel and the warrior's heart blaze with unrelenting fervour.",
     "desc2": "\"I know everyone here likes to think of themselves as artists, but seriously, you're all a bunch of morons. What you do is simply alchemy, medicine, or drawing. What's the point of obsessing over the meaning of life or the consequences of your work? Check out this new gun I made — awesome, right?\"\n\n— Nisaya, Weapon Master of The Aeolipile"
   },
   {
     "id": 15001,
-    "name": "测试用武器原型",
+    "name": "Used to craft and upgrade Calamity Weapons",
     "icon": "T_Range_Weapon_Part03",
     "rarity": 5,
-    "desc": "测试用武器原型",
-    "desc2": "测试用武器原型"
+    "desc": "One of the legendary prototypes said to have given rise to the Calamity Weapons.\nBut in the end he is bitter as wormwood, sharp as a two-edged sword.\nAcquired through special means. Can be used as smelting material for Calamity Weapons.",
+    "desc2": "Father Ask said: \"Look upon those you created — those denied rebirth. They cannot rise above suffering. Their tears blind them. They are cast adrift upon the briny waters, reeling through streets and cities alike.\nI merely helped them raise their hands. You showed them no pity, no love, no care. So I did so in your stead. What, then, was wrong with that?\"\n\n— A tribal legend from Askard"
   },
   {
     "id": 15002,
@@ -7887,43 +8681,98 @@
   },
   {
     "id": 20650,
-    "name": "百花车站·其一",
+    "name": "Bloomfield Station: Ⅰ",
     "icon": "T_TreasureMap_Chapter01",
     "rarity": 4,
+    "source": [
+      {
+        "srId": 106301,
+        "pos": [
+          [
+            -8031.85,
+            6791.59
+          ]
+        ]
+      }
+    ],
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "上次谢谢你给我打掩护，谁能想到，只是打个牌的工夫，刚好赶上工头来检查了……幸亏你反应快，就是下次能不能换个理由，闹肚子拉裤裆里听起来太不体面了……总之还是多谢，今天难得摸到一把好牌，要是被工头抓回去可就冤死了。赢的钱咱也有你一份，给你放在<H>炉子边上了</>，记得去拿。"
+    "desc2": "Thanks for covering for me the other day. Who'd have thought the foreman would show up right when we were having a quick game? Good job you're quick. Just... next time, come up with a better excuse, will you? \"Running to the loo\" is fine, but all that about... messy trousers? Bit much, mate. Anyway, cheers for that. I finally got a decent hand today — would've been gutted if the foreman had dragged me back. Your share of the winnings is <H>by the stove</>. Don't forget to grab it."
   },
   {
     "id": 20651,
-    "name": "百花车站·其二",
+    "name": "Bloomfield Station: Ⅱ",
     "icon": "T_TreasureMap_Chapter01",
     "rarity": 4,
+    "source": [
+      {
+        "srId": 106301,
+        "pos": [
+          [
+            -18965.48,
+            16382.38
+          ]
+        ]
+      }
+    ],
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "想知道轻松工作的秘诀吗？那就是——定期供奉古阿特拉西亚掌管铁轨的神！只要把供品放在<H>轨道附近</>，神明大人就能听到咱们的祈祷！最近我负责的列车的故障率就下降了不少，全都是拜这位神明大人所赐！"
+    "desc2": "Do you want to know the secret to an easier day's work? It's simple — make regular offerings to the ancient god of the rails of Atlasia! Just leave your offerings <H>by the tracks</>, and the great god will hear our prayers! The breakdown rate of the train I look after has dropped a lot recently — all thanks to this almighty god!"
   },
   {
     "id": 20652,
-    "name": "百花车站·其三",
+    "name": "Bloomfield Station: Ⅲ",
     "icon": "T_TreasureMap_Chapter01",
     "rarity": 4,
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -28074.23,
+            19450.85
+          ]
+        ]
+      }
+    ],
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "太可怕了……下车的时候发现有位乘客的钱包掉在地上，我一时鬼迷心窍，把它偷偷拿走了……结果里面竟然装着许多符咒一样的奇怪纸张，上面画着好些黑色的月亮，怪瘆人的……听说这是艾利西安的邪教还是什么的标识来着？\n我把钱包放在了<H>医务室门口</>，这样能帮到有需要的人，应该能功过相抵了吧？艾利西安的七神……还是九神来着？总之看到我没拿钱的份上请不要诅咒我啊拜托了！"
+    "desc2": "This is awful... When I got off the train, I noticed a passenger's wallet lying on the floor. For a moment, I lost my head and quietly took it. But when I opened it, it was full of strange papers that looked like charms, covered in drawings of black moons. Absolutely creepy. I heard those are the symbol of some kind of cult from Elysian Church or something?\nI've left the wallet <H>by the infirmary door</>. Hopefully, that'll help someone in need and make up for what I did. The Great Seven of Elysian Church? Or was it nine? Whichever it is, please don't curse me — I didn't take the money! I beg you!"
   },
   {
     "id": 20653,
-    "name": "百花车站·其四",
+    "name": "Bloomfield Station: Ⅳ",
     "icon": "T_TreasureMap_Chapter01",
     "rarity": 4,
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -18680.1,
+            -4951.5
+          ]
+        ]
+      }
+    ],
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "（从折痕判断这原本是一封精心递上的信件，不过现在却以展开的状态躺在墙角杂物中，似乎是被谁随手扔掉了……）\n\n亲爱的<H>广播员</>小姐……希望您不会觉得冒昧，但如若不能将我此刻热烈的心情传达给您，我将会为此后悔一生！\n这是我第一次来到冰湖城，站内严厉的安保措施让我不知所措，不慎迷了路。幸运的是，您如同一位从天而降的天使般降临在我面前——即便被制服遮去了大半，我依然能瞥见您那如春日的花儿一般娇艳的粉色长发，您那与紫罗兰同色的优雅眼眸更是令我沉醉。\n虽然您为我指点了出站的方向，但为了再听一次您动听的嗓音，我决定留下来等待您提到的特别广播。\n我在您的<H>工作岗位</>上留下了一份小小的赠礼，作为对您辛勤工作的慰劳。当您甜美的嗓音响起，我将在站厅为您送上最响亮的喝彩！"
+    "desc2": "(From the creases, this appears to have once been a carefully written letter, but now it lies unfolded among the clutter by the wall, as if someone carelessly tossed it aside...)\n\nDear Miss <H>Broadcaster</>... I hope this is not too forward, but if I fail to convey the fervour of my heart to you, I would regret it for the rest of my life!\nThis is my first time in Icelake. The strict security at the station left me at a loss, and I unfortunately lost my way. Luckily, you appeared before me like an angel descending from heaven — even though most of you is hidden behind your uniform, I can still catch a glimpse of your pink hair, as radiant as spring blossoms, and your violet eyes, which have utterly enchanted me.\nAlthough you already pointed me toward the exit, I have decided to stay and wait for the special broadcast you mentioned, just to hear your lovely voice once more.\nI have left a small gift at your <H>workplace</> as a token of gratitude for your hard work. When your sweet voice fills the station, I will be in the hall, cheering louder than anyone for you!"
   },
   {
     "id": 20654,
-    "name": "百花车站·其五",
+    "name": "Bloomfield Station: Ⅴ",
     "icon": "T_TreasureMap_Chapter01",
     "rarity": 4,
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -81587.19,
+            1696.7
+          ]
+        ]
+      }
+    ],
     "desc": "A collection of enigmatic pages discovered by chance. Some are delicate scrolls of fine parchment; others, freshly printed sheets with ink still crisp and dark. A few are no more than torn scraps from half-used notebooks. Whether neatly penned or barely legible, they all share one thing in common — each contains a hint pointing to the whereabouts of a hidden treasure.",
-    "desc2": "哼，你这家伙成天就知道蹲在轨道边里看火车，你的头发都被煤灰腌入味了！\n告诉你个好消息，我把一份零花钱藏在了附近的<H>树林下</>，金额足够买下两个月的连载。怎么样，这下你总愿意起身走走了吧？趁这个机会动动你那僵硬的身体，相信我，你一定能从这个过程中感受到大自然的乐趣！"
+    "desc2": "Tch, you’re always just squatting by the tracks watching trains. Your hair smells like coal dust now, you know that?\nGot some good news for you: I’ve hidden some of my pocket money under the trees nearby. Enough to buy two months' worth of your favourite serial. How about that? Reckon you’ll finally get off your backside and take a walk now? Use the chance to stretch those stiff legs. Trust me, you might actually find there’s more to life than locomotives. Nature’s not bad once you give it a go!"
   },
   {
     "id": 29001,
@@ -8216,6 +9065,88 @@
           [
             23396,
             9697
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -32191.96,
+            29.25
+          ],
+          [
+            -42580.45,
+            -74.91
+          ],
+          [
+            -74361.72,
+            -349.67
+          ],
+          [
+            -81051.7,
+            -714.06
+          ],
+          [
+            -72770.88,
+            -4938.71
+          ],
+          [
+            -8375.92,
+            7265.36
+          ],
+          [
+            -35461.59,
+            17591.25
+          ],
+          [
+            -22583.55,
+            9356.61
+          ],
+          [
+            -7783.49,
+            12.23
+          ],
+          [
+            -92943.03,
+            -11479.04
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "pos": [
+          [
+            -28212.74,
+            6145.58
+          ],
+          [
+            -11099.21,
+            9093.08
+          ],
+          [
+            -15294.38,
+            6.74
+          ],
+          [
+            -11218.91,
+            7865.98
+          ],
+          [
+            -9895.13,
+            16746.22
+          ],
+          [
+            -19021.72,
+            11656.63
+          ],
+          [
+            -13302.02,
+            8885.15
+          ],
+          [
+            -16478.33,
+            7438.48
           ]
         ]
       }
@@ -10340,14 +11271,6 @@
     "desc2": "In the Far East stands a great city, where pavilions and waterside halls raised by ancient hands have endured unchanged for a thousand years, as though they might stand until sea and stone are worn away.\n\nYet even songs passed down through the ages will one day find a new verse, and familiar tales will welcome new faces. Beneath the vault of heaven, the winds are rising and the tides beginning to turn.\n\nGo forth to explore, to witness, and to listen in Haojing, a city soon to be made anew."
   },
   {
-    "id": 29007,
-    "name": "Advensphere: Icelake",
-    "icon": "T_ExploreBadge_Beibao_Chapter01",
-    "rarity": 5,
-    "desc": "Tokens said to lie scattered across Icelake. They stand as proof of courage, wisdom, and patience — virtues forged through the trials of adventure. Gather enough and present them to the Lunoxplorer in Icelake's town square to earn valuable rewards.",
-    "desc2": "This is Icelake.\nBefore others define it for you, knock on every door. Search every hidden corner. Speak to every soul. And in time, you'll see the city changing — quietly, subtly — because of you. No introductions are needed. Icelake is you, and you it.\nStep beyond — to witness, to listen, to become one with a city still waiting to be known."
-  },
-  {
     "id": 30001,
     "name": "Essence Gelatin",
     "icon": "T_Resource_PolarityPart01",
@@ -11128,7 +12051,7 @@
     "name": "Mecha-Taihao",
     "icon": "T_Mounts_Gesture_0101",
     "rarity": 6,
-    "desc": "A mechanised aerial craft built by Master Gongshang, modelled after Lord Argent. There's only one in all Huaxu, kept as a prized showpiece in Gongshang's workshop. Thankfully, he only built one. If replicas of Taihao ever filled the skies, the Ministry of Rites would come knocking in outrage. Yet Master Gongshang remains unmoved, set on mass-producing it all the same. Good luck to him.\nFly Speed ＋50%. No Reputation Perk is required to pilot this vehicle."
+    "desc": "A mechanised aerial craft built by Master Gongshang, modelled after Lord Argent. There's only one in all Huaxu, kept as a prized showpiece in Gongshang's workshop. Thankfully, he only built one. If replicas of Taihao ever filled the skies, the Ministry of Rites would come knocking in outrage. Yet Master Gongshang remains unmoved, set on mass-producing it all the same. Good luck to him.\nFly Speed ＋50%. No Reputation Perk is required to pilot this mount."
   },
   {
     "id": 49999,
@@ -11347,10 +12270,10 @@
   },
   {
     "id": 110042,
-    "name": "自选形象礼箱·暗巷",
+    "name": "Character Skin Selection – Dusky",
     "icon": "T_Pack_Common04",
     "rarity": 5,
-    "desc": "使用后可从芙罗拉，妮弗尔夫人，苏乙，菲娜，丽蓓卡，扶疏，琳恩，希尔妲，海尔法，卡米拉，黎瑟，止流，赛琪中自选一套角色形象。"
+    "desc": "Grants a character skin from: Flora, Lady Nifle, Su Yi, Fina, Rebecca, Fushu, Lynn, Hilda, Hellfire, Camilla, Rhythm, Zhiliu, and Psyche."
   },
   {
     "id": 110043,
@@ -11400,55 +12323,56 @@
     "name": "Soaring Loong Surprise Chest",
     "icon": "T_Pack_ModFx",
     "rarity": 5,
-    "desc": "具体概率与数量如下：\n腾龙诀*1：2%\n排斥结晶*1：8%\n金砂*1：8%\n铜币*10000：10%\n铜币*20000：16%\n铜币*50000：26%\n铜币*100000：30%"
+    "desc": "Possible rewards and drop rates:\n\nSoaring Loong ×1: 2%\nRepulsive Crystal ×1: 8%\nGold Sand ×1: 8%\nCoins ×10,000: 10%\nCoins ×20,000: 16%\nCoins ×50,000: 26%\nCoins ×100,000: 30%"
   },
   {
     "id": 110052,
     "name": "Brass Violin Surprise Chest",
     "icon": "T_Pack_Machinegun_Huangtong",
     "rarity": 5,
-    "desc": "具体概率与数量如下：\n黄铜小提琴*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+    "desc": "Possible rewards and drop rates:\n\nBrass Violin ×1: 3%\nRepulsive Crystal ×1: 10%\nGold Sand ×1: 10%\nCoins ×10,000: 10%\nCoins ×20,000: 13%\nCoins ×50,000: 23%\nCoins ×100,000: 30%"
   },
   {
     "id": 110053,
     "name": "[Cosmic Invitation – Whipblade] Surprise Chest",
     "icon": "T_Pack_Swordwhip_Huanyu",
     "rarity": 5,
-    "desc": "具体概率与数量如下：\n寰宇邀约·鞭刃*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+    "desc": "Possible rewards and drop rates:\n\nCosmic Invitation – Whipblade ×1: 3%\nRepulsive Crystal ×1: 10%\nGold Sand ×1: 10%\nCoins ×10,000: 10%\nCoins ×20,000: 13%\nCoins ×50,000: 23%\nCoins ×100,000: 30%"
   },
   {
     "id": 110054,
     "name": "[Cosmic Invitation – Katana] Surprise Chest",
     "icon": "T_Pack_Katana_Huanyu",
     "rarity": 5,
-    "desc": "具体概率与数量如下：\n寰宇邀约·太刀*1：3%\n排斥结晶*1：10%\n金砂*1：10%\n铜币*10000：10%\n铜币*20000：13%\n铜币*50000：23%\n铜币*100000：30%"
+    "desc": "Possible rewards and drop rates:\n\nCosmic Invitation – Katana ×1: 3%\nRepulsive Crystal ×1: 10%\nGold Sand ×1: 10%\nCoins ×10,000: 10%\nCoins ×20,000: 13%\nCoins ×50,000: 23%\nCoins ×100,000: 30%"
   },
   {
     "id": 110055,
     "name": "Silkrain Surprise Item Chest",
     "icon": "T_Pack_RandomMod_Daily",
     "rarity": 5,
-    "desc": "具体概率与数量如下，概率四舍五入至小数点后4位：\n月石晶胚*36：22.0507%\n月石晶胚*48：51.4517%\n月石晶胚*68：22.0507%\n月石晶胚*100：3.6751%\n月石晶胚*120：0.7350%\n月石晶胚*888：0.0368%"
+    "desc": "Possible rewards and drop rates. Rates are rounded to four decimal places:\n\nPhoxene Plumule ×36: 22.0507%\nPhoxene Plumule ×48: 51.4517%\nPhoxene Plumule ×68: 22.0507%\nPhoxene Plumule ×100: 3.6751%\nPhoxene Plumule ×120: 0.7350%\nPhoxene Plumule ×888: 0.0368%"
   },
   {
     "id": 110056,
-    "name": "晶块自选礼箱·其一",
+    "name": "Crystal Selection Chest Ⅰ",
     "icon": "T_Pack_ZaieRes",
-    "rarity": 5
+    "rarity": 5,
+    "desc": "Grants a material from Umbro Crystal or Hydro Crystal."
   },
   {
     "id": 110057,
-    "name": "启航武器自选礼箱",
+    "name": "Beginner Weapon Selection Chest",
     "icon": "T_Pack_Char_Choose",
     "rarity": 5,
-    "desc": "使用后可从辉珀刃，枯朽，焦渴，幽鲨眼，缠结，凋零，剥离，赘生，崩解，嘶鸣，裂魂，销骨，慧谋的攻守，塞壬的拥吻，铸铁者，失乡的獠牙，不渝的梦海，红叶一滴，无序奇点，蓝色脉动，银白敕令，缄默育种者，祈请净火，烈焰孤沙，追忆的残影，流浪的蔷薇，告谕圣言，放逐怒雷，引浪小调，春玦戟，苍瑚凝碧，归墟棘轮，孤子的缚锁，告谕圣音，群星无意赦免，爆破艺术，惩戒的炼火，圣裁日，茵布拉花序，弧光百劫，蒙恩御礼，鎏金岁月，破晓赞美诗，希冀的丰稔中选择一份作为奖励。"
+    "desc": "Grants a weapon from: Blade Amberglow, Wanewraith, Pyrothirst, Fathomless Sharkgaze, Tetherlash, Withershade, Rendhusk, Excresduo, Destructo, Screamshot, Soulrend, Osteobreaker, Ingenious Tactics, Siren's Kiss, Ironforger, Exiled Fangs, Undying Oneiros, Momiji Itteki, Entropic Singularity, Bluecurrent Pulse, Silverwhite Edict, Silent Sower, Flamme De Epuration, Searing Sandwhisper, Remanent Reminiscence, Wandering Rose, Sacrosanct Decree, Exiled Thunderwyrm, Submerged Serenade, Vernal Jade Halberd, Viridis Reefs, Guixu Ratchet, Shackle of Lonewolf, Sacrosanct Chorus, Stellar Finality, Blast Artistry, Punitive Inferno, Day of Sacred Verdict, Embla Inflorescence, Arclight Apocalypses, Sacred Favour, Aureate Yore, Daybreak Hymn, or Elpides Abound."
   },
   {
     "id": 110058,
-    "name": "启航角色自选礼箱",
+    "name": "Beginner Character Selection Chest",
     "icon": "T_Pack_Weapon_Choose",
     "rarity": 5,
-    "desc": "使用后可从思绪片段·贝蕾妮卡*30，思绪片段·玛尔洁*30，思绪片段·兰迪*30，思绪片段·奥特赛德*30，思绪片段·达芙涅*30，思绪片段·妮弗尔夫人*30，思绪片段·丽蓓卡*30，思绪片段·琳恩*30，思绪片段·西比尔*30，思绪片段·塔比瑟*30，思绪片段·莉兹贝尔*30，思绪片段·黎瑟*30，思绪片段·海尔法*30，思绪片段·松露与榛子*30，思绪片段·耶尔与奥利弗*30，思绪片段·幻景*30，思绪片段·赛琪*30中选择一份作为奖励。"
+    "desc": "Grants one of the following rewards: Thought: Berenica ×30, Thought: Margie ×30, Thought: Randy ×30, Thought: Outsider ×30, Thought: Daphne ×30, Thought: Lady Nifle ×30, Thought: Rebecca ×30, Thought: Lynn ×30, Thought: Sibylle ×30, Thought: Tabethe ×30, Thought: Lisbell ×30, Thought: Rhythm ×30, Thought: Hellfire ×30, Thought: Truffle and Filbert ×30, Thought: Yale and Oliver ×30, Thought: Phantasio ×30, or Thought: Psyche ×30."
   },
   {
     "id": 120001,
@@ -11466,14 +12390,14 @@
   },
   {
     "id": 120003,
-    "name": "喵喵代金券",
+    "name": "Meow Coupon",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
-    "desc": "Spend Phoxene Plumule ×680 to save Phoxene Plumule ×300"
+    "desc": "Spend 680 Phoxene Plumules to save 360"
   },
   {
     "id": 120004,
-    "name": "银星装饰代金券",
+    "name": "Silverstar Accessory Coupon",
     "icon": "T_Resource_DiscountTicket_01",
     "rarity": 5,
     "desc": "Spend Phoxene Plumule ×480 to save Phoxene Plumule ×300"
@@ -14163,6 +15087,17 @@
     "name": "Bloomfield Station Workers' Menu",
     "icon": "T_Read_02",
     "rarity": 3,
+    "source": [
+      {
+        "srId": 106301,
+        "pos": [
+          [
+            -13737.28,
+            13537.73
+          ]
+        ]
+      }
+    ],
     "desc": "A printed poster found in the underground ironworks beneath Bloomfield Station. It appears to have been ripped down from wherever it was originally posted and tossed aside. Whoever removed it was clearly furious about its contents; when unfolded, even the corners are flecked with something that looks suspiciously like spit...",
     "desc2": "Meals Provided at Bloomfield Station\n\nBreakfast: black bread, water\nLunch: boiled potatoes, bean soup\nDinner: no additional meal provided. Workers assigned to overnight duty may collect one portion of pickled vegetables from the gatehouse.\n\nNotice\n\n1. Under the Long Schedule, breakfast is distributed from 8:30 to 9:00. Under the Short Schedule, breakfast is distributed from 9:00 to 9:30. Lunch is served from 12:00 to 13:00 under both schedules. All times are determined by station clocks. Workers who report for duty after 6:00 are not entitled to meals that day.\n2. Meal collection closes five minutes before the end of the meal period. Workers arriving after that time will not be served. When the work bell sounds, the canteen gates will be closed. Any worker who fails to return to their post on time will receive one demerit. Three demerits will result in dismissal.\n3. Food may not be taken out of the canteen. Eating while on duty is prohibited. Unfinished food may not be taken back to the workplace.\n4. Rejoining the queue to collect additional food is prohibited. Offenders will be charged that day's meal fee.\n5. Child labourers may not eat while seated. Part-time workers are not authorised to enter the canteen.\n6. Disruption of order in the canteen is prohibited, including, but not limited to: chatting, fainting, vomiting, quarrelling, queue-jumping, and breastfeeding.\n7. Meal periods are determined by the bells. When the warning bell sounds, workers must begin leaving the canteen. When the work bell sounds, all workers must already be at their assigned posts for attendance inspection by the foreman.\n8. Workers may not begin eating until food distribution has ended. Note: once the warning bell sounds, workers must stop eating, return their trays and utensils, and clean their places before leaving.\n9. Workers may bring their own food, provided it is consumed in the canteen during the designated meal period. All food must be registered before entry into the canteen. In the event of diarrhoea or similar symptoms, the Station accepts no responsibility. Anyone who sees another worker bring in unregistered food may report them to the guard on duty.\n\n...\n\n(I thought this was just an ordinary workers' menu, but there's barely anything about the food. Most of the poster is taken up by cruel, pointless rules... Working conditions at Bloomfield Station must be appalling.)"
   },
@@ -14171,6 +15106,17 @@
     "name": "Bloomfield Station Recruitment Notice",
     "icon": "T_Read_02",
     "rarity": 3,
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -7518.49,
+            4718.36
+          ]
+        ]
+      }
+    ],
     "desc": "A factory recruitment poster displayed at the station entrance. Its claims are emphatic, its tone fervent — enough to stir the blood of any young reader. Strangely, someone has scrawled a smiley face across it... perhaps in wholehearted approval of its message.",
     "desc2": "Linking the far south to the distant north, bridging distance and dreams — our criss-crossing railways span the land, and our stations shine like stars across the vast expanse of Hyperborea. Loyal subjects of His Majesty, let us stand as one, march forward hand in hand, and forge the future of the Hyperborean railways with our own hands!\nBloomfield Station warmly welcomes all who meet the following requirements:\n1. Hardworking, dependable, disciplined, of good character, and eager to build a better future\n2. No restrictions on age, gender, race, or previous work experience\n\nWhat we offer:\n1. Guidance from veteran workers with more than twenty years of experience. Whatever you wish to learn, you can learn here.\n2. A most stable wage, paid in full and never late.\n3. Daily meals provided on schedule, so every hardworking labourer is kept well fed.\n4. A united and friendly workplace. Here, rank and race are left at the door. From the moment you arrive, you are one of us. We welcome every citizen loyal to Hyperborea.\n\nJoin Bloomfield Station and begin a new chapter in your life. Even if you cannot fight for His Majesty's glory on the battlefield, you may still prove your worth here. Bloomfield Station needs you. So too does the future of Hyperborea.\nJoin us! Join the glorious cause!\n\n(What a stirring piece of recruitment propaganda... Anyone reading it would surely be swept up in its fervour. The terms it promises even sound rather appealing.)"
   },
@@ -14179,6 +15125,17 @@
     "name": "My Will",
     "icon": "T_Read_03",
     "rarity": 3,
+    "source": [
+      {
+        "srId": 106301,
+        "pos": [
+          [
+            -18625.87,
+            11308.58
+          ]
+        ]
+      }
+    ],
     "desc": "A plain sheet of white paper. The writing is crooked and uneven, the lines slanting across the page with no proper order. Punctuation appears only here and there, wherever the writer happened to remember it. Wrong words and misspellings appear throughout. You can still make out what it says, but as a will, it contains no instructions worth carrying out — only a rambling account of a life that seems to have left nothing behind.",
     "desc2": "Today I am going to write my will\nI still dont really know what a will is. I heard the fine lords saying it when they walked past. There was an old man dying and they said he had to write his will before he went. I didnt understand it much, but it sounded like something fancy. They all sounded happy too, like the old man dying and writing his will was a good thing. So before I die I ought to write a will too\nI am probly not even old enough for that. At the ironworks they call the gate man that old bastard. Some people even call the stationmaster that when they got enough guts. But nobody ever called me old. They call me kid, oi you, or that Charon there\nBut that dont stop me dying. And it dont stop me writing a will neither\nOnly I still havent thought what to write. I never had much schooling. I dont know how long I was in school for. Not long I guess. I got sent out to work soon enough. There was no other way. My ma was dying then and she needed money so I stopped going to school and went to work\nBut she died in the end anyway\nSo thats me, a useless Karon. I am bad at working and bad at talking when people talk to me. I think maybe I am no use at all... No, not no use. I am good for getting yelled at. Maybe people feel better after they yell at me. My dad does. When he drinks he yells at me, then he hits me, then the next day he says sory to me. Sometimes I think he does it on purpose. He just wants to hit somebody and nobody else will let him\nI keep thinking if anyone will be sad after I die. I guess my dad will. He wont have anyone to hit after that. I need a good way to die. One where there is still some money after. But I havent thought of one yet. I hope my dying can at least buy my dad a bottle of wine, or else I really am too useless. I wish I could die like that old man the fine lords were talking about. They all sounded so happy, like the old man dying was a good thing\nAlright. I went off again. I have to think of a good way to die. But I still havent thought of one. Maybe if I wait a bit I wont want to die any more\nBut its so f***ing funny. I wrote all this and I still cant think of one thing I want to live for... Forget it then. I will just die\nAlright that is all for my will. I dont know what else to write. If I could get that old mans will maybe I could copy it and make mine look better. But I cant get it obviously. Anyway that is all. I am going to think how to do it now"
   },
@@ -14187,6 +15144,17 @@
     "name": "Steamwhistle Salon Code of Conduct",
     "icon": "T_Read_01",
     "rarity": 3,
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -33068.59,
+            -7173.86
+          ]
+        ]
+      }
+    ],
     "desc": "A shared document circulated among members of the Steamwhistle Salon, containing a series of thoroughly absurd rules of conduct. The first few pages are neatly written and clearly structured, setting out the Salon's existing rules and internal systems. Between the lines and across the margins, handwritten notes have been crammed into every spare inch — fervent, almost fanatical declarations of devotion to their beloved Stationmaster.",
     "desc2": "1. When addressing His Honour, Stationmaster Eisenbahn, members must use the proper honorific in full.\n(All hail Stationmaster Eisenbahn!)\n(That right there is a textbook mistake. The full form is \"His Honour, Stationmaster Eisenbahn\"! Not a single word may be omitted!)\n\n2. All attention must remain on His Honour, Stationmaster Eisenbahn. Members are not to bring up other public figures, including opera stars, stage actors, and the like.\n(*a name scratched out* has been an embarrassment lately. How can someone act that badly and still call themselves a professional? Unlike His Honour, Stationmaster Eisenbahn — he never lets us down.)\n(Didn't we have a rule about not mentioning other public figures? Why is this one still breaking the rules? Don't let me find out who wrote this.)\n\n3. Memorise His Honour, Stationmaster Eisenbahn's birthday, height, body measurements, and weight.\n(Latest update — His Honour, Stationmaster Eisenbahn, has lost another kilo. Current weight: 73 kg.)\n(He's lost weight again from working so hard... Breaks my heart. What are the people around him even doing? How did no one notice?)\n(Working hard? Entertaining foreign businesswomen, more like!)\n(Found the anti. Get out. This handbook is for Salon members only.)\n(Lol. People are actually spreading romance rumours about His Honour? Everyone knows there's room in his heart only for work.)\n\n4. Members of the Steamwhistle Salon must support one another and must not hoard memorabilia connected to His Honour, Stationmaster Eisenbahn, including cigarette cases, posters, and similar items.\n\n5. The sale of unauthorised merchandise featuring His Honour, Stationmaster Eisenbahn, is strictly forbidden. Offenders will bear all consequences.\n\n...\n\n54. Members must actively safeguard the reputation of His Honour, Stationmaster Eisenbahn, and firmly oppose all attempts to belittle him, smear his name, slander him, or spread malicious rumours. If necessary, extreme measures may be employed.\n\n(So... throwing bricks is allowed?)\n(You could, but that's terribly ungentlemanly. I have connections at the Security Bureau — write the name here and I'll take care of them.)\n\n(I'm new... there are way too many rules. If I can't memorise them all, can I write cheat notes?)\n(How can you fail to remember this little? What are you, a plant from a rival fan club?)"
   },
@@ -14195,6 +15163,17 @@
     "name": "Daily Activity Report: His Honour, Stationmaster Eisenbahn",
     "icon": "T_Read_02",
     "rarity": 3,
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -31347.24,
+            -6530.47
+          ]
+        ]
+      }
+    ],
     "desc": "An activity report concerning Eisenbahn, with precise records of times, locations, and observed activities. Written in a detached, clinical tone, it records his movements and routines in exhaustive detail — as if the author were a shadow trailing a few steps behind him.\nIts complete lack of personal feeling stands in stark contrast to the usual fervour of the Steamwhistle Salon, giving the document an oddly suspicious quality.",
     "desc2": "Daily Activity Report: His Honour, Stationmaster Eisenbahn\n\n12 September, Clear — Bloomfield Station Freight Yard\nApprox. 10:00 — Subject observed in the mid-rear section of the freight yard. Accompanied by four guards. Engaged in conversation with officials from Icelake. Subject repeatedly directed his gaze into the interiors of freight carriages.\n\n25 September, Overcast — Station Concourse\n15:00 — Subject appeared at the ticket gate in disguise. Wearing a checked cap with a long peak and brown-tinted sunglasses. Behaviour deemed suspicious.\n\n2 October, Cloudy, Clearing Later — Bloomfield Station Freight Yard\n01:40 — An unauthorised train entered the station. Subject not sighted. Members of his personal guard were present. Incident confirmed to be closely connected to the meeting on 12 September.\n\n5 October, Rain — Bloomfield Station Materials Yard\nSubject not sighted. An intoxicated merchant was observed loitering in the area, alleging deception and betrayal in connection with a transaction. The individual later left the station. Violent assault suspected thereafter.\n\n27 October, Clear — Platform\nSubject appeared in full military uniform. Offered formal greetings to boarding passengers and remained on site to see the train off. Presentation stable. No abnormalities observed.\n\n..."
   },
@@ -14203,6 +15182,17 @@
     "name": "The Sacred Ledger",
     "icon": "T_Read_01",
     "rarity": 3,
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -17909.99,
+            -4026.95
+          ]
+        ]
+      }
+    ],
     "desc": "A soft-bound ledger containing no ordinary income or expenditure records. Instead, it serves as the Steamwhistle Salon's main channel for exchanging and trading merchandise related to their beloved idol, Stationmaster Eisenbahn.\nTo those who worship Eisenbahn with near-fanatical devotion, the ledger is more precious than their own lives — a \"Sacred Ledger\" not to be defiled.",
     "desc2": "In a neat hand: Looking to buy His Honour, Stationmaster Eisenbahn's 2nd Anniversary Poster. 50 silver.\nIn a hasty hand: That little for a 2nd Anniversary? You couldn't even get this year's poster for that.\nIn a cramped, cursive hand: 80 silver. Deal or no deal?\nIn a neat hand: Sorry... that's more than I'm willing to pay.\n\nIn a broken, uneven hand: Anyone want His Honour, Stationmaster Eisenbahn's Birthday Commemorative Cigarettes? No cigarette pack, just the cigarettes.\nIn a neat hand: What's the point of buying just the cigarettes?\nIn a broken, uneven hand: You can smoke the same kind as His Honour, Stationmaster Eisenbahn.\n\nIn a bold, forceful hand: His Honour, Stationmaster Eisenbahn's 5th Anniversary Commemorative Stamp, rubbing edition. 50 silver. Trade in person tomorrow at 15:00.\nIn a childish hand: \"Rubbing edition\"? Yeah, right. Isn't that just a knock-off you made yourself?\nIn a neat hand: Do not defile the Sacred Ledger. Keep this nonsense out of it!\n\n...\nIn an elegant hand: His Honour, Stationmaster Eisenbahn will appear on the platform tomorrow afternoon. Further details available by private trade.\n\nIn a light, rounded hand: His Honour, Stationmaster Eisenbahn's 10th Anniversary Photography Event. Looking for a partner. I'll bring the camera; you take the photo. I'm a terrible photographer.\n\nIn a sharp, angular hand: His Honour, Stationmaster Eisenbahn's newcomer welcome event souvenir available. Leave contact details if interested.\nIn a childish hand: Where did you even get those? The chairman said no reselling. Consider this a warning."
   },
@@ -14211,6 +15201,17 @@
     "name": "The Invincible Stationmaster: Volume Ⅰ",
     "icon": "T_Read_01",
     "rarity": 3,
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -46435.62,
+            18575.69
+          ]
+        ]
+      }
+    ],
     "desc": "A serial novel with a sloppy title, set against the backdrop of the decades-old war between Hyperborea and Elysium, centring on the adventures of a Hyperborean boy. Published as a companion title to The Invincible Legion Chief, it is a favourite among the Empire's youth.",
     "desc2": "Chapter 189: The Rails Will Stretch Ever Farther\n\n\"Stationmaster Leo, is there truly no way to increase this station's capacity fivefold?\"\nLeo set down the Minister of Transport's letter and let out a quiet sigh.\nIt was not the minister's seemingly unreasonable demand that weighed on him. Leo knew all too well that, with the front lines mired in bitter fighting, a fivefold increase was not merely reasonable. It was necessary.\nThe railways were the veins of Hyperborea. Through them flowed supplies, weapons, equipment, and legionaries bound for every corner of the Empire, carrying hot lifeblood through its body without pause.\nAs stationmaster, Leo knew better than anyone that the Empire's current rail capacity was nowhere near enough to meet the needs of the front. Without a dramatic increase in efficiency, the soldiers fighting there might soon find themselves short of guns and ammunition, forced to charge the enemy with nothing but their fists.\nHyperborean soldiers would remain brave and unyielding even then. But Leo, entrusted with the Empire's transport lifeline, knew it was his duty to do everything in his power to spare his countrymen at the front needless sacrifice.\nHe picked up his communicator, his mind already racing through ways to improve the station's efficiency.\n\"Expand the station... centralise dispatch... refit passenger trains for military freight...\"\nHe opened a channel and began assigning tasks to his subordinates according to their strengths.\n\"Kate, you have the contacts. Gather every available hand you can find. I'll bring in engineers from the Aeolipile, and together we'll lay the new tracks.\"\n\"Understood.\"\n\"Wolfe, you know machinery. Put together an emergency repair crew. If a train breaks down, I want it dragged off the track and repaired immediately.\"\n\"Understood.\"\n...\nOnce all the tasks had been assigned, Leo rolled a cigarette and gazed south, towards the Elysian Church.\n\"One day, I will see the Empire's railways laid all the way to the Tower of Elysium. I will see the Empire's veins reach every last inch of the false god's lands.\"\nLeo tucked the cigarette away, turned, and strode back towards the station. A fierce wind swept past, snapping his greatcoat behind him, but his stride never faltered.\n\"I'll save this cigarette for that day.\"\n\nCan Leo carry out his superiors' order? Can his station bear the burden of sustaining the front? The saga continues in the next instalment of The Invincible Stationmaster."
   },
@@ -14380,67 +15381,133 @@
   },
   {
     "id": 3000018,
-    "name": "颜料【待包装】",
+    "name": "White Pigment",
     "icon": "T_Dye_01",
     "rarity": 4,
-    "desc": "颜料的描述【待包装】",
-    "desc2": "RESOURCE_TEXT_3000018"
+    "source": [
+      {
+        "srId": 106101,
+        "pos": [
+          [
+            255890,
+            -12560
+          ]
+        ]
+      }
+    ],
+    "desc": "A kind of pigment suitable for oil painting.",
+    "desc2": "A kind of pigment perfect for painting starry skies."
   },
   {
     "id": 3000019,
-    "name": "止痛药【待包装】",
+    "name": "Painkiller",
     "icon": "T_Guide_ChapterItem_003",
     "rarity": 4,
-    "desc": "止痛药的描述【待包装】",
-    "desc2": "RESOURCE_TEXT_3000019"
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -36240,
+            5540
+          ]
+        ]
+      }
+    ],
+    "desc": "Painkiller stored in a safe.",
+    "desc2": "Painkiller, a favourite among wounded soldiers. Highly addictive, so it's usually kept under tight lock and key."
   },
   {
     "id": 3000020,
-    "name": "工卡【待包装】",
+    "name": "Station Work Pass",
     "icon": "T_Guide_ChapterItem_0026",
     "rarity": 4,
-    "desc": "工卡的描述【待包装】",
-    "desc2": "RESOURCE_TEXT_3000020"
+    "desc": "A stack crew work pass.",
+    "desc2": "A stack crew's work pass from Bloomfield Station, with a sketch that doesn't quite look like the owner. Show it to anyone, and they'll immediately believe you're a simple, honest worker."
   },
   {
     "id": 3000021,
-    "name": "支票【待包装】",
+    "name": "A Pile of Cheques",
     "icon": "T_Guide_ChapterItem_0024",
     "rarity": 4,
-    "desc": "支票的描述【待包装】",
-    "desc2": "RESOURCE_TEXT_3000021"
+    "desc": "A pile of cheques, each worth five gold coins.",
+    "desc2": "Just a stack of paper, but somehow it looks golden. Show it to anyone, and they'll think you're either a generous soul or a rich fool with more money than sense."
   },
   {
     "id": 3000022,
-    "name": "止血钳【待包装】",
+    "name": "Haemostat",
     "icon": "T_Guide_ChapterItem_0037",
     "rarity": 4,
-    "desc": "止血钳的描述【待包装】",
-    "desc2": "RESOURCE_TEXT_3000022"
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -36260,
+            6190
+          ]
+        ]
+      }
+    ],
+    "desc": "Surgical haemostat.",
+    "desc2": "Surgical haemostatic forceps — they look like scissors, but you'd better not clamp down too hard during surgery, or the patient might die. No need to worry, though — the doctor holding them won't be the one dying."
   },
   {
     "id": 3000023,
-    "name": "金属酒壶【待包装】",
+    "name": "Confiscated Alcohol Flask",
     "icon": "T_Guide_ChapterItem_0028",
     "rarity": 4,
-    "desc": "金属酒壶的功能描述【待包装】",
-    "desc2": "金属酒壶的文案描述【待包装】"
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -18130,
+            -5010
+          ]
+        ]
+      }
+    ],
+    "desc": "A squat metal flask.",
+    "desc2": "A flask that should be full of liquor, but now it's empty — just a hollow shell. Who knows where the liquor ended up."
   },
   {
     "id": 3000024,
-    "name": "走私棉衣【待包装】",
+    "name": "Smuggled Padded Coats",
     "icon": "T_Guide_ChapterItem_0029",
     "rarity": 4,
-    "desc": "走私棉衣的功能描述【待包装】",
-    "desc2": "走私棉衣的文案描述【待包装】"
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -17070,
+            -4880
+          ]
+        ]
+      }
+    ],
+    "desc": "Smuggled cotton coats with half the cotton already hollowed out.",
+    "desc2": "Everyone knows that cotton is highly flammable and a raw material for explosives."
   },
   {
     "id": 3000025,
-    "name": "消毒剂【待包装】",
+    "name": "Acidic Alchemical Solution",
     "icon": "T_Guide_ChapterItem_0033",
     "rarity": 4,
-    "desc": "消毒剂的功能描述【待包装】",
-    "desc2": "消毒剂的文案描述【待包装】"
+    "source": [
+      {
+        "srId": 106001,
+        "pos": [
+          [
+            -17160,
+            -4060
+          ]
+        ]
+      }
+    ],
+    "desc": "A potion commonly used by alchemists, with a pungent, acidic smell.",
+    "desc2": "An acidic alchemy potion, corrosive and extremely dangerous. No one in their right mind would try to bring this on a train — unless they meant to."
   },
   {
     "id": 4010001,
@@ -14731,6 +15798,64 @@
           [
             -30985.484,
             -820.29236
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 4010002,
+        "pos": [
+          [
+            -49170.67,
+            3498.0723
+          ],
+          [
+            -48517.918,
+            3498.0723
+          ],
+          [
+            -57749.605,
+            3459.0674
+          ],
+          [
+            -58648.44,
+            3540.7754
+          ],
+          [
+            -60100.465,
+            3348.0042
+          ],
+          [
+            -56192.37,
+            -3445.545
+          ],
+          [
+            -55842.652,
+            -3466.3545
+          ],
+          [
+            -62932.24,
+            -1462.6595
+          ],
+          [
+            -62941.023,
+            -2013.5815
+          ],
+          [
+            -63410.06,
+            -2121.7998
+          ],
+          [
+            -63727.684,
+            -2572.6257
+          ],
+          [
+            -69337.58,
+            3983.4736
+          ],
+          [
+            -69254.766,
+            3733.2917
           ]
         ]
       }
@@ -15081,6 +16206,80 @@
             1683.2451
           ]
         ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 4010004,
+        "pos": [
+          [
+            -56.91,
+            -179.5
+          ],
+          [
+            -432.22,
+            13.49
+          ],
+          [
+            -138.77,
+            227.57
+          ],
+          [
+            15.98,
+            -320.08
+          ],
+          [
+            261.52,
+            17.62
+          ],
+          [
+            -435.51,
+            -336.57
+          ],
+          [
+            -166.05,
+            317.8
+          ],
+          [
+            -504.1,
+            76.13
+          ],
+          [
+            -81171.43,
+            -4632.275
+          ],
+          [
+            -81240.92,
+            -5597.8125
+          ],
+          [
+            -81318.5,
+            -5604.4404
+          ],
+          [
+            -81311.84,
+            -5493.006
+          ],
+          [
+            -81560.3,
+            -6482.172
+          ],
+          [
+            -81835.16,
+            -6840.4487
+          ],
+          [
+            -75494.85,
+            -6222.557
+          ],
+          [
+            -75638.59,
+            -6293.0527
+          ],
+          [
+            -75081.68,
+            -6988.1147
+          ]
+        ]
       }
     ],
     "desc": "A type of fungus capable of surviving in extreme cold. Its appearance often leads people to mistake it for a pile of unmelted snow. Its toxins can cause hallucinations if ingested, and in severe cases, can be life-threatening.\n\nDO NOT EAT! DO NOT EAT! DO NOT EAT!",
@@ -15293,6 +16492,214 @@
           [
             -13672.153,
             -5641.961
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 4010009,
+        "pos": [
+          [
+            -9860.22,
+            7260.3687
+          ],
+          [
+            -5561.6094,
+            4276.481
+          ],
+          [
+            -5672.1206,
+            4276.072
+          ],
+          [
+            -5898.8066,
+            3112.6055
+          ],
+          [
+            -4108.9023,
+            3348.9949
+          ],
+          [
+            -4547.51,
+            3095.9006
+          ],
+          [
+            -4230.3296,
+            3352.0542
+          ],
+          [
+            -3747.7983,
+            3812.5952
+          ],
+          [
+            -5913.8325,
+            3388.6482
+          ]
+        ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 4010010,
+        "pos": [
+          [
+            -9860.22,
+            7260.3687
+          ],
+          [
+            -5561.6094,
+            4276.481
+          ],
+          [
+            -5672.1206,
+            4276.072
+          ],
+          [
+            -5898.8066,
+            3112.6055
+          ],
+          [
+            -4108.9023,
+            3348.9949
+          ],
+          [
+            -4547.51,
+            3095.9006
+          ],
+          [
+            -4230.3296,
+            3352.0542
+          ],
+          [
+            -3747.7983,
+            3812.5952
+          ],
+          [
+            -5913.8325,
+            3388.6482
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 4010009,
+        "pos": [
+          [
+            -15176.178,
+            5362.702
+          ],
+          [
+            -15176.178,
+            5479.0884
+          ],
+          [
+            -15537.749,
+            13520.377
+          ],
+          [
+            -16162.431,
+            12536.786
+          ],
+          [
+            -15650.148,
+            13520.377
+          ],
+          [
+            -19005.166,
+            14453.383
+          ],
+          [
+            -19005.166,
+            14325.665
+          ],
+          [
+            -8821.2295,
+            16663.92
+          ],
+          [
+            -8821.2295,
+            16540.307
+          ],
+          [
+            -14813.48,
+            6907.396
+          ],
+          [
+            -14813.48,
+            7044.279
+          ],
+          [
+            -35205.832,
+            5117.3027
+          ],
+          [
+            -35060.39,
+            3947.3364
+          ],
+          [
+            -33564.83,
+            3646.3926
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 4010010,
+        "pos": [
+          [
+            -15176.178,
+            5362.702
+          ],
+          [
+            -15176.178,
+            5479.0884
+          ],
+          [
+            -15537.749,
+            13520.377
+          ],
+          [
+            -16162.431,
+            12536.786
+          ],
+          [
+            -15650.148,
+            13520.377
+          ],
+          [
+            -19005.166,
+            14453.383
+          ],
+          [
+            -19005.166,
+            14325.665
+          ],
+          [
+            -8821.2295,
+            16663.92
+          ],
+          [
+            -8821.2295,
+            16540.307
+          ],
+          [
+            -14813.48,
+            6907.396
+          ],
+          [
+            -14813.48,
+            7044.279
+          ],
+          [
+            -35205.832,
+            5117.3027
+          ],
+          [
+            -35060.39,
+            3947.3364
+          ],
+          [
+            -33564.83,
+            3646.3926
           ]
         ]
       }
@@ -15969,6 +17376,24 @@
             33387.68
           ]
         ]
+      },
+      {
+        "srId": 106001,
+        "rewardId": 4010008,
+        "pos": [
+          [
+            126.45,
+            145.21
+          ],
+          [
+            82.23,
+            -130.43
+          ],
+          [
+            -206.33,
+            -33.04
+          ]
+        ]
       }
     ],
     "desc": "This cold-loving freshwater plant is known as the \"winter lotus.\" Its seeds are transparent and as dreamy and fragile as foam.\n\nIT'S TOXIC! HIGHLY TOXIC! EXTREMELY TOXIC!",
@@ -16225,6 +17650,100 @@
           [
             2253.0605,
             11646.974
+          ]
+        ]
+      },
+      {
+        "srId": 106301,
+        "rewardId": 4010011,
+        "pos": [
+          [
+            45.36,
+            -77.08
+          ],
+          [
+            -548.44,
+            -611.43
+          ],
+          [
+            53.68,
+            -1267.27
+          ],
+          [
+            -559.21,
+            -1574.04
+          ],
+          [
+            333.56,
+            521.16
+          ],
+          [
+            -356.08,
+            348.81
+          ],
+          [
+            -47.65,
+            -316.95
+          ],
+          [
+            -214.63,
+            229.34
+          ],
+          [
+            350.67,
+            270.72
+          ],
+          [
+            205.89,
+            -210.14
+          ],
+          [
+            -15913.373,
+            3776.4128
+          ],
+          [
+            -15850.264,
+            3776.4128
+          ],
+          [
+            -11095.433,
+            11147.531
+          ],
+          [
+            -11745.812,
+            10853.345
+          ],
+          [
+            -11745.812,
+            10807.671
+          ],
+          [
+            -12876.944,
+            10257.205
+          ],
+          [
+            -13164.147,
+            10933.511
+          ],
+          [
+            -13164.147,
+            10988
+          ],
+          [
+            -17183.492,
+            11642.467
+          ],
+          [
+            -17185.834,
+            11557.327
+          ],
+          [
+            -37554.055,
+            -6155.184
+          ],
+          [
+            -37554.055,
+            -6226.0547
           ]
         ]
       }
@@ -19873,83 +21392,83 @@
   },
   {
     "id": 5032010,
-    "name": "浮草鱼",
+    "name": "Weedcarp",
     "icon": "T_Fish_FreshWater_Chapter03_1",
     "rarity": 3,
-    "desc": "广泛分布在阿特拉西亚大陆各处的知名食用鱼之一。生命力旺盛且环境适应性极强，因此常被人笑称为路边野草一样多的杂鱼。",
-    "desc2": "“你知道吗，浮草鱼虽然是很常见的淡水鱼，但你是怎么知道我刚钓上来一条100多斤的浮草鱼王啊。”\n\n——自豪的捕鱼人"
+    "desc": "A familiar food fish found all across Atlasia. Hardy and highly adaptable, it is often jokingly called \"the weed of the waterways.\"",
+    "desc2": "\"Everyone knows Weedcarp are everywhere. Speaking of which, did I ever tell you about the monster Weedcarp I hauled in? Weighed over a hundred pounds, that one did!\"\n\n— A proud fisherman"
   },
   {
     "id": 5032011,
-    "name": "浮草鱼·异种",
+    "name": "Weedcarp Variant",
     "icon": "T_Fish_FreshWater_Chapter03_1_1",
     "rarity": 3,
-    "desc": "广泛分布在阿特拉西亚大陆各处的知名食用鱼之一。生命力旺盛且环境适应性极强，因此常被人笑称为路边野草一样多的杂鱼。",
-    "desc2": "“你知道吗，浮草鱼虽然是很常见的淡水鱼，但你是怎么知道我刚钓上来一条100多斤的浮草鱼王啊。”\n\n——自豪的捕鱼人"
+    "desc": "A familiar food fish found all across Atlasia. Hardy and highly adaptable, it is often jokingly called \"the weed of the waterways.\"",
+    "desc2": "\"Everyone knows Weedcarp are everywhere. Speaking of which, did I ever tell you about the monster Weedcarp I hauled in? Weighed over a hundred pounds, that one did!\"\n\n— A proud fisherman"
   },
   {
     "id": 5032020,
-    "name": "嘀嘟鱼",
+    "name": "Tootfish",
     "icon": "T_Fish_FreshWater_Chapter03_2",
     "rarity": 3,
-    "desc": "生活在百花车站附近的淡水鱼之一，不知是天性如此还是受来往的列车影响，嘀嘟鱼学会了从修长的口器中发出类似列车汽笛的“嘟嘟”声。当人们从它们的领地经过时，就能听到湖水中此起彼伏的“嘟——嘟”。",
-    "desc2": "“每次检修轨道我都得仔细分辨汽笛声到底是来自列车还是来自嘀嘟鱼，再这么干下去，我早晚得神经衰弱……”\n\n——精神紧绷的轨道维修工"
+    "desc": "A freshwater fish found near Bloomfield Station. Whether by instinct or from years of mimicking passing trains, Tootfish can produce a clear \"toot-toot\" through their long, tube-like mouths. When travellers pass through their territory, the lake answers in rippling waves of \"toot-toot.\"",
+    "desc2": "\"Every time I inspect the tracks, I have to figure out whether that whistle came from a train or a Tootfish... At this rate, I'm going to lose my mind!\"\n\n— A frazzled track maintenance mechanic"
   },
   {
     "id": 5032021,
-    "name": "嘀嘟鱼·异种",
+    "name": "Tootfish Variant",
     "icon": "T_Fish_FreshWater_Chapter03_2_1",
     "rarity": 3,
-    "desc": "生活在百花车站附近的淡水鱼之一，不知是天性如此还是受来往的列车影响，嘀嘟鱼学会了从修长的口器中发出类似列车汽笛的“嘟嘟”声。当人们从它们的领地经过时，就能听到湖水中此起彼伏的“嘟——嘟”。",
-    "desc2": "“每次检修轨道我都得仔细分辨汽笛声到底是来自列车还是来自嘀嘟鱼，再这么干下去，我早晚得神经衰弱……”\n\n——精神紧绷的轨道维修工"
+    "desc": "A freshwater fish found near Bloomfield Station. Whether by instinct or from years of mimicking passing trains, Tootfish can produce a clear \"toot-toot\" through their long, tube-like mouths. When travellers pass through their territory, the lake answers in rippling waves of \"toot-toot.\"",
+    "desc2": "\"Every time I inspect the tracks, I have to figure out whether that whistle came from a train or a Tootfish... At this rate, I'm going to lose my mind!\"\n\n— A frazzled track maintenance mechanic"
   },
   {
     "id": 5032030,
-    "name": "观星鱼",
+    "name": "Stargazer",
     "icon": "T_Fish_FreshWater_Chapter03_3",
     "rarity": 4,
-    "desc": "常见于科赛托斯行省的淡水鱼之一，无论何时都仰着它那高傲的头，哪怕做熟以后也是如此，仿佛群星之间有什么东西在呼唤它们一样。",
-    "desc2": "“到底是谁想出来在派里塞观星鱼，甚至是头朝上塞进去的？？？简直是暴殄天物、天理难容、罪大恶极！！”\n\n——愤怒的厨师长"
+    "desc": "A freshwater fish commonly found in Cocytus. It keeps its head tilted proudly skyward at all times — even after being cooked and served at the dinner table, as though something among the stars were calling to it.",
+    "desc2": "\"Who in their right mind decided to bake Stargazers into a pie with their heads sticking out!? It's a waste of good pastry, an insult to cuisine, and a crime against nature!\"\n\n— An outraged chef"
   },
   {
     "id": 5032031,
-    "name": "观星鱼·异种",
+    "name": "Stargazer Variant",
     "icon": "T_Fish_FreshWater_Chapter03_3_1",
     "rarity": 4,
-    "desc": "常见于科赛托斯行省的淡水鱼之一，无论何时都仰着它那高傲的头，哪怕做熟以后也是如此，仿佛群星之间有什么东西在呼唤它们一样。",
-    "desc2": "“到底是谁想出来在派里塞观星鱼，甚至是头朝上塞进去的？？？简直是暴殄天物、天理难容、罪大恶极！！”\n\n——愤怒的厨师长"
+    "desc": "A freshwater fish commonly found in Cocytus. It keeps its head tilted proudly skyward at all times — even after being cooked and served at the dinner table, as though something among the stars were calling to it.",
+    "desc2": "\"Who in their right mind decided to bake Stargazers into a pie with their heads sticking out!? It's a waste of good pastry, an insult to cuisine, and a crime against nature!\"\n\n— An outraged chef"
   },
   {
     "id": 5032040,
-    "name": "球球豚",
+    "name": "Pufferball",
     "icon": "T_Fish_FreshWater_Chapter03_4",
     "rarity": 4,
-    "desc": "生活在科赛托斯行省的河豚亚种。攻击性远低于同族，遇到捕食者时，也只是胀圆了身子，飞速滚动着逃跑。",
-    "desc2": "“烹饪前明明很可爱的，做熟以后怎么跟漏了气的皮球一样啊……”\n\n——沮丧的厨师"
+    "desc": "A pufferfish subspecies found in Cocytus. Much less aggressive than its relatives, it simply inflates and rolls away at high speed when threatened.",
+    "desc2": "\"They're adorable before they go in the pot... so how do they come out looking like a sad, deflated balloon?\"\n\n— A frustrated cook"
   },
   {
     "id": 5032041,
-    "name": "球球豚·异种",
+    "name": "Pufferball Variant",
     "icon": "T_Fish_FreshWater_Chapter03_4_1",
     "rarity": 4,
-    "desc": "生活在科赛托斯行省的河豚亚种。攻击性远低于同族，遇到捕食者时，也只是胀圆了身子，飞速滚动着逃跑。",
-    "desc2": "“烹饪前明明很可爱的，做熟以后怎么跟漏了气的皮球一样啊……”\n\n——沮丧的厨师"
+    "desc": "A pufferfish subspecies found in Cocytus. Much less aggressive than its relatives, it simply inflates and rolls away at high speed when threatened.",
+    "desc2": "\"They're adorable before they go in the pot... so how do they come out looking like a sad, deflated balloon?\"\n\n— A frustrated cook"
   },
   {
     "id": 5032050,
-    "name": "铁额鲑",
+    "name": "Ironhead Salmon",
     "icon": "T_Fish_FreshWater_Chapter03_5",
     "rarity": 5,
-    "desc": "生长迅速，体型巨大的洄游鱼，因其金属般的色泽而得名。但与其外表完全相反的是，铁额鲑的肉质十分软嫩，咬一口如同奶油在嘴里化开，无比的肥美多汁，因此常见于冰湖城各路名流的宴会之上。",
-    "desc2": "“世界各地都有水怪传说，到最后，它们往往都被证明只是生活在当地的某种生长迅速的大鱼而已，所谓的科赛托斯水怪，亦是如此。”\n\n——正在翻看都市怪谈的无名学者"
+    "desc": "A fast-growing migratory fish of enormous size, named for its metallic sheen. In sharp contrast to its imposing appearance, Ironhead Salmon has exceptionally soft, tender flesh that melts in the mouth like butter. Rich, juicy, and deeply flavourful, it is a common sight at banquets held by Icelake's elite.",
+    "desc2": "\"Lake monster legends exist all over the world. More often than not, they turn out to be nothing more than some fast-growing local fish. The so-called Cocytus Monster is no exception.\"\n\n— An unnamed scholar, leafing through a collection of eerie folktales"
   },
   {
     "id": 5032051,
-    "name": "铁额鲑·异种",
+    "name": "Ironhead Salmon Variant",
     "icon": "T_Fish_FreshWater_Chapter03_5_1",
     "rarity": 5,
-    "desc": "生长迅速，体型巨大的洄游鱼，因其金属般的色泽而得名。但与其外表完全相反的是，铁额鲑的肉质十分软嫩，咬一口如同奶油在嘴里化开，无比的肥美多汁，因此常见于冰湖城各路名流的宴会之上。",
-    "desc2": "“世界各地都有水怪传说，到最后，它们往往都被证明只是生活在当地的某种生长迅速的大鱼而已，所谓的科赛托斯水怪，亦是如此。”\n\n——正在翻看都市怪谈的无名学者"
+    "desc": "A fast-growing migratory fish of enormous size, named for its metallic sheen. In sharp contrast to its imposing appearance, Ironhead Salmon has exceptionally soft, tender flesh that melts in the mouth like butter. Rich, juicy, and deeply flavourful, it is a common sight at banquets held by Icelake's elite.",
+    "desc2": "\"Lake monster legends exist all over the world. More often than not, they turn out to be nothing more than some fast-growing local fish. The so-called Cocytus Monster is no exception.\"\n\n— An unnamed scholar, leafing through a collection of eerie folktales"
   },
   {
     "id": 5110100,
@@ -20694,6 +22213,15 @@
           [
             -1970,
             -12090
+          ]
+        ]
+      },
+      {
+        "srId": 106101,
+        "pos": [
+          [
+            256379.86,
+            -12200.81
           ]
         ]
       }

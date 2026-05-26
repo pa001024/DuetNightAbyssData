@@ -10,8 +10,7 @@ function M:Initialize()
   self.ChannelItems = {}
   self.FriendList = {}
   self.FriendListItemObjectSetNum = 0
-  self.bShareToOpen = false
-  self.bShareToGuild = false
+  self.bShareClick = false
 end
 
 function M:InitContent(Params, PopupData, Owner)
@@ -38,7 +37,7 @@ end
 
 function M:Destruct()
   if self.ShareCallback and self.ShareCallbackObj then
-    self.ShareCallback(self.ShareCallbackObj, self.bShareToOpen, self.bShareToGuild)
+    self.ShareCallback(self.ShareCallbackObj, self.bShareClick)
   end
 end
 

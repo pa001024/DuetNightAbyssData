@@ -526,6 +526,7 @@ function WBP_DungeonSurviveFloat_C:OnSpecialMonsterDead(Eid)
   self.SpecialMonsterAliveCount = self.SpecialMonsterAliveCount - 1
   if 0 == self.SpecialMonsterAliveCount then
     self.bShouldContinueAnim = false
+    self:ConditionalPlayAnimation()
     self:StopSpecialMonsterGuideLoop()
   end
 end

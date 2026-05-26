@@ -47,11 +47,11 @@ return {
       key = "17787396290488766039",
       type = "StoryNode",
       name = "开始行动",
-      pos = {x = 1686, y = 266.00000000000006},
+      pos = {x = 1688, y = 266.00000000000006},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040403_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -102,39 +102,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17787396290498766051",
-            startPort = "Out",
-            endQuest = "17787396290498766050",
-            endPort = "In"
-          },
-          {
-            startQuest = "17787396290498766049",
-            startPort = "Out",
-            endQuest = "17787396290498766056",
-            endPort = "In"
-          },
-          {
             startQuest = "17787396290498766047",
             startPort = "Out",
             endQuest = "17787396290498766053",
-            endPort = "In"
-          },
-          {
-            startQuest = "17787396290498766053",
-            startPort = "Out",
-            endQuest = "17787396290498766048",
-            endPort = "In"
-          },
-          {
-            startQuest = "17787396290498766044",
-            startPort = "QuestStart",
-            endQuest = "17787396290498766058",
-            endPort = "In"
-          },
-          {
-            startQuest = "17787396290498766058",
-            startPort = "Out",
-            endQuest = "17787396290498766059",
             endPort = "In"
           },
           {
@@ -156,12 +126,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17787396290498766057",
-            startPort = "Out",
-            endQuest = "17787396290508766062",
-            endPort = "In"
-          },
-          {
             startQuest = "17787396290498766050",
             startPort = "Out",
             endQuest = "17787398497178767690",
@@ -178,6 +142,60 @@ return {
             startPort = "Out",
             endQuest = "17787396290498766046",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17787396290498766049",
+            startPort = "Out",
+            endQuest = "1779174461849129897606",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787396290498766051",
+            startPort = "Out",
+            endQuest = "1779174466140129897722",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787396290498766044",
+            startPort = "QuestStart",
+            endQuest = "17787396290508766062",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787396290498766053",
+            startPort = "Out",
+            endQuest = "17791959507321932039",
+            endPort = "In"
+          },
+          {
+            startQuest = "17791959507321932039",
+            startPort = "Out",
+            endQuest = "17787396290498766048",
+            endPort = "In"
+          },
+          {
+            startQuest = "17792776313994836679",
+            startPort = "Out",
+            endQuest = "17787396290498766050",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787396290498766051",
+            startPort = "Out",
+            endQuest = "17792776313994836679",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787396290498766057",
+            startPort = "Out",
+            endQuest = "17792778567845802168",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787396290498766048",
+            startPort = "Out",
+            endQuest = "177969574517932420899",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -192,7 +210,7 @@ return {
             key = "17787396290498766045",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 3617.7825441346313, y = 640.4924643439844},
+            pos = {x = 3916.017838252278, y = 591.080699638102},
             propsData = {ModeType = 0}
           },
           ["17787396290498766046"] = {
@@ -206,7 +224,7 @@ return {
             key = "17787396290498766047",
             type = "GoToNode",
             name = "前往车尾",
-            pos = {x = 1193.0454545454545, y = 298.45454545454544},
+            pos = {x = 1194.2954545454545, y = 352.20454545454544},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 272640029,
@@ -245,7 +263,13 @@ return {
               EndNewTargetPointName = "BP_PaokuStart",
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
-              TalkActors = {},
+              TalkActors = {
+                {
+                  TalkActorType = "Player",
+                  TalkActorId = 0,
+                  TalkActorVisible = false
+                }
+              },
               bLockHighestLOD = false,
               FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
@@ -268,17 +292,18 @@ return {
             key = "17787396290498766050",
             type = "TalkNode",
             name = "过场-跳车",
-            pos = {x = 3039.389102702276, y = 563.7996768661125},
+            pos = {x = 3272.3302791728643, y = 567.3290886308183},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
               TalkStageName = "",
               ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0104/Ver0104_SC112/SQ_Ver0104_SC112",
+              BlendInTime = 0,
               BlendOutTime = 0,
-              InType = "BlendIn",
+              InType = "FadeIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
-              ShowSkipButton = true,
+              ShowSkipButton = false,
               ShowReviewButton = true,
               ShowWikiButton = true,
               PauseGameGlobal = true,
@@ -306,7 +331,7 @@ return {
             key = "17787396290498766051",
             type = "BossBattleFinishNode",
             name = "跳车完成",
-            pos = {x = 2731.416066125345, y = 589.2278904905602},
+            pos = {x = 2736.2160661253447, y = 576.0278904905601},
             propsData = {
               SendMessage = "",
               FinishCondition = "FirstJumpSuccess"
@@ -350,23 +375,11 @@ return {
               SubTaskTargetIndex = 0
             }
           },
-          ["17787396290498766056"] = {
-            key = "17787396290498766056",
-            type = "GoToNode",
-            name = "前往",
-            pos = {x = 2768.6457917741754, y = 221.69152603517253},
-            propsData = {
-              GuideUIEnable = true,
-              StaticCreatorId = 172640031,
-              GuideType = "M",
-              GuidePointName = "Mechanism_triggerbox_172640031"
-            }
-          },
           ["17787396290498766057"] = {
             key = "17787396290498766057",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 855.3941871724764, y = 325.06688193838846},
+            pos = {x = 855.3941871724764, y = 323.06688193838846},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_Tiaoche01Start",
@@ -377,40 +390,18 @@ return {
               IsWhite = false
             }
           },
-          ["17787396290498766058"] = {
-            key = "17787396290498766058",
-            type = "SendMessageNode",
-            name = "发送消息",
-            pos = {x = 857.2440191387558, y = 29.779904306220086},
-            propsData = {
-              MessageType = "GameMode",
-              MessageContent = "OpenGate02Behind",
-              UnitId = -1
-            }
-          },
-          ["17787396290498766059"] = {
-            key = "17787396290498766059",
-            type = "SendMessageNode",
-            name = "发送消息",
-            pos = {x = 1182.1961722488038, y = 20.593301435406698},
-            propsData = {
-              MessageType = "GameMode",
-              MessageContent = "OpenGate01Front",
-              UnitId = -1
-            }
-          },
           ["17787396290508766060"] = {
             key = "17787396290508766060",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 882.5958579604095, y = 592.0574162679426},
+            pos = {x = 917.8958579604096, y = 679.9574162679426},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["17787396290508766062"] = {
             key = "17787396290508766062",
             type = "AtmosphereNpcHideNode",
             name = "氛围NPC显示/隐藏节点",
-            pos = {x = 1241.621384619316, y = 618.4057261704593},
+            pos = {x = 905.3713846193159, y = 519.6557261704593},
             propsData = {
               IsHide = true,
               AtmosphereTagList = {"Story_HXQ"}
@@ -420,7 +411,7 @@ return {
             key = "17787398497178767690",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3407.995215311005, y = 597.7987012987014},
+            pos = {x = 3573.121265731173, y = 504.26928953399556},
             propsData = {}
           },
           ["17787398595318767994"] = {
@@ -429,6 +420,81 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 973.1706539074962, y = 832.7460697197541},
             propsData = {}
+          },
+          ["1779174461849129897606"] = {
+            key = "1779174461849129897606",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 2769.689270035045, y = 346.67413473082456},
+            propsData = {
+              IsShow = true,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "BP_Tiaoche01End"
+            }
+          },
+          ["1779174466140129897722"] = {
+            key = "1779174466140129897722",
+            type = "ShowOrHideTaskIndicatorNode",
+            name = "显示/隐藏任务指引点节点",
+            pos = {x = 3022.489270035045, y = 395.8741347308246},
+            propsData = {
+              IsShow = false,
+              bOpenRangeEffect = false,
+              GuideType = "P",
+              GuideName = "BP_Tiaoche01End"
+            }
+          },
+          ["17791959507321932039"] = {
+            key = "17791959507321932039",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 1777.0682372491328, y = 270.82815094000995},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "BP_Tiaoche01",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = true,
+              bForceAsyncLoading = true,
+              IsWhite = false
+            }
+          },
+          ["17792776313994836679"] = {
+            key = "17792776313994836679",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 3002.8911764705886, y = 581.1852941176471},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "BP_Tiaoche01Start",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = true,
+              bForceAsyncLoading = true,
+              IsWhite = false
+            }
+          },
+          ["17792778567845802168"] = {
+            key = "17792778567845802168",
+            type = "AtmosphereNpcHideNode",
+            name = "氛围NPC显示/隐藏节点",
+            pos = {x = 1199.2911764705877, y = 189.98529411764704},
+            propsData = {
+              IsHide = true,
+              AtmosphereTagList = {"Story_HXQ"}
+            }
+          },
+          ["177969574517932420899"] = {
+            key = "177969574517932420899",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2383.0175824175826, y = 707.4285714285716},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}

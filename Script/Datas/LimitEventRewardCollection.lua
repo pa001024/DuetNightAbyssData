@@ -54,6 +54,11 @@ return ReadOnly("LimitEventRewardCollection", {
     RewardId = 1030112,
     ShowVersion = T.RT_1
   },
+  [103024] = {
+    EventId = 103024,
+    RewardId = 10302400,
+    ShowVersion = T.RT_1
+  },
   [109003] = {
     EventId = 109003,
     RewardId = 109003,

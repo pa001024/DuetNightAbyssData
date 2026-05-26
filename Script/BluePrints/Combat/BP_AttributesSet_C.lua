@@ -54,6 +54,9 @@ function BP_AttributesSet_C:OnAttrChanged_Lua(AttrName, OldValue, NewValue)
   end
 end
 
+function BP_AttributesSet_C:OnAttrChanged_Lua_MaxAvoidExecuteTimes()
+end
+
 function BP_AttributesSet_C:InitLuaOnAttrChangedArray()
   for Name, Value in pairs(getmetatable(self)) do
     local AttrName = string.match(Name, "OnAttrChanged_Lua_(.+)")

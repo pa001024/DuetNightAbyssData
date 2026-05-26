@@ -866,7 +866,7 @@ return ReadOnly("UIGuide", {
     MainGuideTitle = "MAINUIGUIDE_TITLE_GuildQuest_1"
   },
   [152] = {
-    ChildGuideId = {15201},
+    ChildGuideId = {15201, 15202},
     GuideId = 152,
     MainGuideTitle = "MAINUIGUIDE_TITLE_ChangeElem_1"
   },
@@ -874,6 +874,11 @@ return ReadOnly("UIGuide", {
     ChildGuideId = {15301, 15302},
     GuideId = 153,
     MainGuideTitle = "MAINUIGUIDE_TITLE_GuildChat_1"
+  },
+  [154] = {
+    ChildGuideId = {15401},
+    GuideId = 154,
+    MainGuideTitle = "MAINUIGUIDE_TITLE_Conveyor_1"
   },
   [1001] = {
     ChildGuideId = {

@@ -656,6 +656,7 @@ function M:UpdateMouseGamePadImage(CurGamepadName)
   end
   self.Slider_Controller.WidgetStyle.NormalThumbImage.ResourceObject = Img
   self.Slider_Controller.WidgetStyle.DisabledThumbImage.ResourceObject = Img
+  self.Slider_Controller.WidgetStyle.HoveredThumbImage.ResourceObject = Img
 end
 
 function M:Handle_KeyDownEventOnGamePad(InKeyName)

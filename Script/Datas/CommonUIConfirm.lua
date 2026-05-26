@@ -2451,6 +2451,13 @@ return ReadOnly("CommonUIConfirm", {
     InteractiveRadius = 150,
     QuestInteractiveType = 1
   },
+  [100137] = {
+    ConfirmText = "DROP_QuestPlay_20040202",
+    Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Survey",
+    Id = 100137,
+    InteractiveRadius = 150,
+    QuestInteractiveType = 1
+  },
   [118001] = {
     ConfirmText = "UI_PickupExplore1",
     Icon = "/Game/UI/Texture/Dynamic/Atlas/Interactive/T_Interactive_Pick",

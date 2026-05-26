@@ -27,6 +27,9 @@ local GAMEPAD_ANALOG_DIRECTION_EPSILON = 0.16
 local GAMEPAD_ANALOG_AXIS_DOMINANCE_MARGIN = 0.18
 local GAMEPAD_ANALOG_REPEAT_TIME = 0.25
 local GAMEPAD_ANALOG_NATIVE_FOCUS_SUPPRESS_DELAY = 0.25
+local TASK_POPUP_SHOW_SOUND = "event:/ui/common/role_trial_level_panel_show"
+local TASK_POPUP_SHOW_SOUND_NAME = "SkinCollectTaskPopupShow"
+local TASK_TYPE_TOGGLE_SOUND = "event:/ui/activity/feina_chapter_select_btn_click"
 
 local function GetCloseButton(Widget)
   if Widget and Widget.Btn_Close and Widget.Btn_Close.OnClicked then
@@ -495,6 +498,7 @@ end
 function M:OnLoaded(EventId)
   self.bIsFocusable = true
   self.CurActivityId = NormalizeEventId(EventId)
+  self:PlayTaskPopupShowSound()
   self:StopNativeUINavigation()
   self:AddDispatcher(EventID.OnAppearanceCollectEventChanged, self, self.OnAppearanceCollectEventChanged)
   self:BindBtnEvent()
@@ -562,6 +566,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputType, CurGamepadName)
 end
 
 function M:OnDestroyed()
+  self:EndTaskPopupShowSound()
   self:RemoveTimer(POPUP_SET_FOCUS_TIMER)
   self:RemoveTimer(GAMEPAD_INIT_FOCUS_TIMER)
   self:RemoveTimer(TASK_TYPE_ENTER_BATCH_TIMER)
@@ -625,10 +630,23 @@ function M:OnCloseClicked()
   self:Close()
 end
 
+function M:PlayTaskPopupShowSound()
+  AudioManager(self):PlayUISound(self, TASK_POPUP_SHOW_SOUND, TASK_POPUP_SHOW_SOUND_NAME, nil)
+end
+
+function M:EndTaskPopupShowSound()
+  AudioManager(self):SetEventSoundParam(self, TASK_POPUP_SHOW_SOUND_NAME, {ToEnd = 1})
+end
+
+function M:PlayTaskTypeToggleSound()
+  AudioManager(self):PlayUISound(self, TASK_TYPE_TOGGLE_SOUND, nil, nil)
+end
+
 function M:Close()
   if self.bClosingWithOutAnim then
     return
   end
+  self:EndTaskPopupShowSound()
   self:PlaySkinCollectBgAnimation("Bg_Out")
   self:NotifyReturnToActivityEntryIfNeeded()
   if self.Out then
@@ -1673,6 +1691,7 @@ function M:OnTaskTypeItemClicked(TaskTypeItem)
   if not TaskTypeItem then
     return
   end
+  self:PlayTaskTypeToggleSound()
   if self.CurrentExpandedTaskTypeItem == TaskTypeItem then
     local ShouldExpand = not TaskTypeItem.IsDetailExpanded
     TaskTypeItem:SetDetailExpanded(ShouldExpand)

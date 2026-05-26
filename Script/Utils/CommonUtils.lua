@@ -68,7 +68,11 @@ function CommonUtils.Str2ObjId(ObjIdStr)
   if not CommonUtils.IsObjIdStr(ObjIdStr) then
     return ""
   end
-  return bson.str2objectid(string.sub(ObjIdStr, 11, 34))
+  local ObjIdHex = string.sub(ObjIdStr, 11, 34)
+  if bson.str2objectid then
+    return bson.str2objectid(ObjIdHex)
+  end
+  return bson.objectid(ObjIdHex)
 end
 
 function CommonUtils.Split(str, reps)

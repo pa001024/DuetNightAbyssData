@@ -1006,7 +1006,6 @@ return ReadOnly("PayGoods", {
   },
   ["com.hero.dna.Pay_HuanyuBianrenLuckyPack"] = {
     GoodsId = "com.hero.dna.Pay_HuanyuBianrenLuckyPack",
-    ItemId = 160167,
     PriceCNY = 3,
     PriceEUR = 0.49,
     PriceGBP = 0.49,
@@ -1019,7 +1018,6 @@ return ReadOnly("PayGoods", {
   },
   ["com.hero.dna.Pay_HuanyuTaidaoLuckyPack"] = {
     GoodsId = "com.hero.dna.Pay_HuanyuTaidaoLuckyPack",
-    ItemId = 160168,
     PriceCNY = 3,
     PriceEUR = 0.49,
     PriceGBP = 0.49,
@@ -1301,7 +1299,6 @@ return ReadOnly("PayGoods", {
   },
   ["com.hero.dna.Pay_TenglongjueLuckyPack"] = {
     GoodsId = "com.hero.dna.Pay_TenglongjueLuckyPack",
-    ItemId = 160165,
     PriceCNY = 6,
     PriceEUR = 0.99,
     PriceGBP = 0.99,
@@ -1470,7 +1467,6 @@ return ReadOnly("PayGoods", {
   },
   ["com.hero.dna.Pay_ViolenLuckyPack"] = {
     GoodsId = "com.hero.dna.Pay_ViolenLuckyPack",
-    ItemId = 160166,
     PriceCNY = 3,
     PriceEUR = 0.49,
     PriceGBP = 0.49,

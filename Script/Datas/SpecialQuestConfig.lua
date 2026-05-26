@@ -1672,11 +1672,11 @@ return ReadOnly("SpecialQuestConfig", {
   [10040401] = {
     BuffId = T.RT_1,
     FailCustomEvent = "Fail",
-    QuestChainId = 100403,
+    QuestChainId = 100404,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 10040401,
     StoryPath = "SpecialQuest\\1004\\10040401Dengche.story",
-    SubRegionIds = T.RT_7,
+    SubRegionIds = T.RT_6,
     TalkTriggerId = 1001,
     UniversalConfigId = 10040401
   },
@@ -1880,7 +1880,7 @@ return ReadOnly("SpecialQuestConfig", {
   },
   [10040501] = {
     BuffId = T.RT_1,
-    FailCustomEvent = "Fail",
+    FailCustomEvent = "YWPaotaiQuestFail",
     QuestChainId = 100405,
     QuestFailTalkTriggerId = 1002,
     SpecialConfigId = 10040501,

@@ -83,15 +83,17 @@ function M:Init(Params)
   end
   self.MainModel:SetSelectedWeaponContent(CurContent)
   self:InitWeaponList()
-  self:OnSelectedWeaponContentChanged()
+  self.bFirstInit = true
 end
 
 function M:OnSelectedWeaponContentChanged()
-  self:UpdateRightBottomInfo()
-  self:InitWeaponAppearanceSuits()
   self.ActorController:ChangeWeaponModel(self.MainModel:GetSelectedWeapon())
   self.ActorController:ResetActorRotation()
+  self.ActorController.bPlaySameMontage = true
   self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Weapon, self.Tag, CommonConst.ArmoryTag.Appearance, "")
+  self:UpdateRightBottomInfo()
+  self:InitWeaponAppearanceSuits()
+  self.List_Weapon:BP_ScrollItemIntoView(self.MainModel:GetSelectedWeaponContent())
 end
 
 function M:InitWeaponAppearanceSuits()
@@ -120,11 +122,21 @@ function M:OnTabChangeToOther()
 end
 
 function M:OnTabChangeToSelf()
+  self.FSM:Clear()
   self:PlayInAnim()
-  self.ActorController:ChangeWeaponModel(self.MainModel:GetSelectedWeapon())
-  self.ActorController:ResetActorRotation()
-  self.ActorController.bPlaySameMontage = true
-  self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Weapon, self.Tag, CommonConst.ArmoryTag.Appearance, "")
+  
+  local function InitActor()
+    self:OnSelectedWeaponContentChanged()
+  end
+  
+  if self.bFirstInit then
+    self.bFirstInit = false
+    self:AddTimer(0.03, function()
+      InitActor()
+    end, false, 0, "FirstInitActor")
+  else
+    InitActor()
+  end
   self:OnFocusChanged()
 end
 
@@ -180,7 +192,7 @@ end
 
 function M:OnListItemClicked(Content)
   if Content == self.MainModel:GetSelectedWeaponContent() then
-    if UIUtils.IsGamepadInput() and self.IsInFocusPath then
+    if UIUtils.IsGamepadInput() and self.IsInFocusPath and not self.IsListExpanded then
       self.List_Appearance:SetFocus()
     end
     return
@@ -235,8 +247,8 @@ function M:InitKeySetting()
 end
 
 function M:OnFaceButtonRightKeyDown()
-  self.FSM:Pop()
   if self.FSM:Peak().Name ~= FocusStates.List then
+    self.FSM:Pop()
     return UWidgetBlueprintLibrary.SetUserFocus(UE4.UWidgetBlueprintLibrary.Handled(), self:GetDesiredFocusTarget()), true
   end
 end
@@ -256,8 +268,6 @@ function M:InitNavigationRules()
       local State = self.FSM:Peak()
       local Content
       if State.Name == FocusStates.List then
-        Content = State.Content
-      else
         Content = self.MainModel:GetSelectedWeaponContent()
       end
       self.List_Weapon:BP_SetSelectedItem(Content)
@@ -273,7 +283,7 @@ end
 function M:IsFocusStateValid(State)
   local StateName = State.Name
   if StateName == FocusStates.List then
-    return self.List_Weapon:GetIndexForItem(State.Content) >= 0
+    return self.List_Weapon:GetIndexForItem(self.MainModel:GetSelectedWeaponContent()) >= 0
   end
   return IsValid(State.Widget) and State.Widget:IsVisible()
 end
@@ -281,7 +291,7 @@ end
 function M:IsFocusStateValidAndHasFocus(State)
   local StateName = State.Name
   if StateName == FocusStates.List then
-    return self.List_Weapon:GetIndexForItem(State.Content) >= 0 and self.List_Weapon:HasFocusedDescendants()
+    return self.List_Weapon:GetIndexForItem(self.MainModel:GetSelectedWeaponContent()) >= 0 and self.List_Weapon:HasFocusedDescendants()
   end
   return IsValid(State.Widget) and UIUtils.HasAnyFocus(State.Widget)
 end
@@ -295,15 +305,18 @@ end
 function M:GetDesiredFocusTarget()
   local State = self.FSM:Peak()
   local StateName = State.Name
-  if StateName == FocusStates.List and self.List_Weapon:GetIndexForItem(State.Content) >= 0 then
-    self.List_Weapon:BP_SetSelectedItem(State.Content)
-    self.List_Weapon:BP_NavigateToItem(State.Content)
+  local Content = self.MainModel:GetSelectedWeaponContent()
+  if StateName == FocusStates.List and self.List_Weapon:GetIndexForItem(Content) >= 0 then
+    self.List_Weapon:BP_SetSelectedItem(Content)
+    self.List_Weapon:BP_NavigateToItem(Content)
+    if Content.Widget then
+      return Content.Widget
+    end
     return self.List_Weapon
   end
   if State.Widget then
     return State.Widget
   end
-  local Content = self.MainModel:GetSelectedWeaponContent()
   self.List_Weapon:BP_SetSelectedItem(Content)
   self.List_Weapon:BP_NavigateToItem(Content)
   if Content.Widget then
@@ -321,12 +334,14 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:OnListItemAddedToFocusPath(Content)
+  if self.IsListExpanded then
+    return
+  end
   if self.FSM:Peak().Name ~= FocusStates.List then
     self.FSM:Clear()
   end
   self.FSM:Push({
     Name = FocusStates.List,
-    Content = Content,
     Widget = self.List_Weapon
   })
 end

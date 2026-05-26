@@ -47,9 +47,9 @@ return {
       key = "17779554846552812215",
       type = "StoryNode",
       name = "监工贵族",
-      pos = {x = 1474, y = 276},
+      pos = {x = 1475.4285714285713, y = 277.42857142857144},
       propsData = {
-        QuestId = 10040150,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040107_02",
         QuestDeatil = "Description_10040107_01",
@@ -71,8 +71,8 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Npc",
+        StoryGuidePointName = "Npc_Jiangong_132480171",
         JumpId = 0
       },
       questNodeData = {
@@ -158,7 +158,7 @@ return {
             key = "17779554846562812223",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1291.0492857638167, y = 336.2463742622073},
+            pos = {x = 1291.0492857638167, y = 338.1213742622073},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -265,12 +265,12 @@ return {
             key = "17779778099485613856",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = 1170, y = 990},
+            pos = {x = 861, y = 870},
             propsData = {
               TargetTime = 15,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = true
             }
           },
           ["177797952445911226521"] = {

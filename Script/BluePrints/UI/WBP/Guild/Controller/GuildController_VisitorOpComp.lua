@@ -21,11 +21,6 @@ function Component:OnGuildIdChanged(GuildId)
 end
 
 function Component:SendRequestJoinGuild(GuildId, bInvited)
-  if true == bInvited then
-    bInvited = 1
-  else
-    bInvited = 0
-  end
   self:GetAvatar():RequestJoinGuild(nil, GuildId, bInvited)
 end
 
@@ -36,8 +31,14 @@ function Component:RecvRequestJoinGuild(SrcParams, Ret)
     InviteQueueManager:FinishCurrentInvite(InviteQueueManager.InviteType.Guild)
     if 1 == bInvited then
       local UIManager = GWorld.GameInstance:GetGameUIManager()
-      UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("AlreadyInThisGuild"))
-    else
+      UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("GuildSuccessJoin_2"))
+      local Timer = self:AddTimer(0.5, function()
+        if Avatar.GuildId and 0 ~= Avatar.GuildId then
+          local Avatar = self:GetAvatar()
+          UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("AlreadyInThisGuild"))
+        end
+      end, nil, nil, nil, true)
+    elseif 0 == bInvited then
       local UIManager = GWorld.GameInstance:GetGameUIManager()
       UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_ApplicationAlreadySent"))
     end
@@ -51,8 +52,16 @@ function Component:RecvRequestJoinGuild(SrcParams, Ret)
     Param = UIUtils.GetLeftTimeStrStyle1(RequestJoinTime + GuildCommon.RejectedJoinCD, TimeUtils.NowTime())
   elseif Ret == ErrorCode.RET_GUILD_QUIT_GUILD_CD then
     local Avatar = GWorld:GetAvatar()
+    local CD
+    if Avatar.LastQuitGuildLevel < DataMgr.GlobalConstant.GuildQuitProtectLevel.ConstantValue then
+      CD = DataMgr.GlobalConstant.GuildQuitLowLevelCoolDownM.ConstantValue
+      CD = CD * 60
+    else
+      CD = DataMgr.GlobalConstant.GuildQuitRejoinCoolDownH.ConstantValue
+      CD = CD * 3600
+    end
     local RequestJoinTime = Avatar.LastQuitGuildTime
-    Param = UIUtils.GetLeftTimeStrStyle1(RequestJoinTime + GuildCommon.QuitGuildCD, TimeUtils.NowTime())
+    Param = UIUtils.GetLeftTimeStrStyle1(RequestJoinTime + CD, TimeUtils.NowTime())
   end
   self:RecvParam(Ret, GuildCommon.EventID.OnRequestJoinGuild, Param, bInvited)
 end
@@ -61,10 +70,35 @@ function Component:SendRequestJoinGuildBatch(GuildIds)
   self:GetAvatar():RequestJoinGuildBatch(nil, GuildIds)
 end
 
-function Component:RecvRequestJoinGuildBatch(SrcParams, Ret)
+function Component:RecvRequestJoinGuildBatch(SrcParams, Ret, SucceedList, FailList)
   if Ret == ErrorCode.RET_SUCCESS then
-    local UIManager = GWorld.GameInstance:GetGameUIManager()
-    UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_ApplicationAlreadySent"))
+    local HasShowTip = false
+    if 0 == #SucceedList then
+      local Avatar = GWorld:GetAvatar()
+      if Avatar.LastQuitGuildLevel and 0 ~= Avatar.LastQuitGuildLevel and Avatar.LastQuitGuildTime and 0 ~= Avatar.LastQuitGuildTime then
+        local CD
+        if Avatar.LastQuitGuildLevel < DataMgr.GlobalConstant.GuildQuitProtectLevel.ConstantValue then
+          CD = DataMgr.GlobalConstant.GuildQuitLowLevelCoolDownM.ConstantValue
+          CD = CD * 60
+        else
+          CD = DataMgr.GlobalConstant.GuildQuitRejoinCoolDownH.ConstantValue
+          CD = CD * 3600
+        end
+        local RequestJoinTime = Avatar.LastQuitGuildTime
+        local EndTime = RequestJoinTime + CD
+        if EndTime > TimeUtils.NowTime() then
+          local Param = UIUtils.GetLeftTimeStrStyle1(EndTime, TimeUtils.NowTime())
+          local ErrorText = ErrorCode:GetText(ErrorCode.RET_GUILD_QUIT_GUILD_CD)
+          local Tip = string.format(ErrorText, Param)
+          UIManager():ShowUITip(UIConst.Tip_CommonToast, Tip)
+          HasShowTip = true
+        end
+      end
+    end
+    if not HasShowTip then
+      local UIManager = GWorld.GameInstance:GetGameUIManager()
+      UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_ApplicationAlreadySent"))
+    end
   end
   self:RecvCommon(Ret, GuildCommon.EventID.OnRequestJoinGuildBatch)
 end
@@ -91,10 +125,10 @@ function Component:SendGuildGetList()
   if NowTime - self.GetGuildIdListTimestamp > GuildCommon.GuildIdListRefreshSec then
     self:GetAvatar():GuildGetList(nil)
     self.GetGuildIdListTimestamp = NowTime
-    return false
+    return true
   else
     self:RecvGuildGetList(nil, ErrorCode.RET_SUCCESS, self:GetModel().SortedGuildList, self:GetModel().FriendGuildList)
-    return true
+    return false
   end
 end
 
@@ -215,8 +249,11 @@ function Component:RecvGuildQuestGetReward(SrcParams, Ret, Rewards)
 end
 
 function Component:RecvNotifyInvitedJoinGuild(SrcParams, GuildId, InviterInfo)
+  local Avatar = GWorld:GetAvatar()
+  
   local function Callback()
     InviteQueueManager:FinishCurrentInvite(InviteQueueManager.InviteType.Guild)
+    Avatar:GuildReplyJoinInvite(nil, GuildId, false)
   end
   
   InviteQueueManager:EnqueueInvite({
@@ -230,7 +267,8 @@ function Component:RecvNotifyInvitedJoinGuild(SrcParams, GuildId, InviterInfo)
     GuildId = InviterInfo.GuildId,
     GuildName = InviterInfo.GuildSimpleInfo.Name,
     OnAccept = function()
-      self:SendRequestJoinGuild(GuildId, true)
+      self:SendRequestJoinGuild(GuildId, 1)
+      Avatar:GuildReplyJoinInvite(nil, GuildId, true)
     end,
     OnRefuse = Callback,
     OnTimeout = Callback
@@ -254,7 +292,17 @@ function Component:RecvQueryGuildMemberInfo(SrcParams, Ret, MemberInfos)
     end
     return CurrGuild.Members
   end)
-  self:RecvCommon(nil, GuildCommon.EventID.OnQueryGuildMemberInfo, CurrGuild.Members)
+  self:RecvCommon(nil, GuildCommon.EventID.OnQueryGuildMemberInfo, CurrGuild and CurrGuild.Members or nil)
+end
+
+function Component:RecvNotifyGuildJoinInviteReply(ErrCode, InviteeUid, GuildId, IsAccept, InvitedName)
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if IsAccept then
+    UIManager:ShowUITip(UIConst.Tip_CommonToast, string.format(GText("UI_MemberJoinedGuild"), InvitedName))
+  else
+    UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("GuildRefuseInvit"))
+  end
+  self:RecvCommon(ErrCode)
 end
 
 function Component:RecvNotifyInviteFailed(SrcParams, Uid, ErrCode)

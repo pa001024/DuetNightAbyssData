@@ -74,8 +74,8 @@ return ReadOnly("QuestTurnInItem", {
     ItemIds = {
       [1] = 3000018
     },
-    QuestId = 10040404,
-    QuestTurnInItemId = 10040404
+    QuestTurnInItemId = 10040404,
+    SpecialQuestId = 10040404
   },
   [20023801] = {
     ItemCounts = {

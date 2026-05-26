@@ -39,6 +39,8 @@ ActivityCommon.NeedRefreshInNextDay = {
 ActivityCommon.GlobalPakForbidTabId = {
   [105001] = 1
 }
+ActivityCommon.AccessoryDropActivityIds = {103020, 10302001}
+ActivityCommon.AccessoryDropResources = {221, 223}
 
 function ActivityCommon.GenerateAllRewardIds(RewardIds)
   local RewardType, RewardList = DataMgr.RewardType, {}

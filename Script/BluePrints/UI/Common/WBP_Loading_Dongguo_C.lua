@@ -134,6 +134,7 @@ end
 
 function WBP_Loading_Dongguo_C:InitTitle(TitleBp, TitleTrans)
   if not TitleBp then
+    self.Group_Title:SetVisibility(ESlateVisibility.Collapsed)
     return
   end
   local SystemLanguageSurfix = {CN = 1, Other = 2}

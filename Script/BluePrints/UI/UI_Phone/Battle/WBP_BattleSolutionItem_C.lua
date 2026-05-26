@@ -1,4 +1,5 @@
 require("UnLua")
+local SerializeUtils = require("Utils.SerializeUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
@@ -93,6 +94,10 @@ function M:ChangePlanName(Name)
     return
   end
   PlanData.HudPlanName = Name
+  self.PlanName = Name
+  if Avatar.MobileHudPlans and Avatar.MobileHudPlans[self.Index] ~= nil then
+    Avatar.MobileHudPlans[self.Index] = SerializeUtils:Serialize(PlanData)
+  end
   EventManager:FireEvent(EventID.OnUpdateMobileHudPlanName, self.Index, Name)
   Avatar:UpdateMobileHudPlan(self.Index, PlanData, true)
 end

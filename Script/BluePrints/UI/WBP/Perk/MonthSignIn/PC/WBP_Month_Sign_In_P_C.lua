@@ -99,6 +99,9 @@ function M:Construct()
     self.WBP_Com_KeyImg:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.KeyReward:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  local CurTimestamp = TimeUtils.NowTime()
+  DebugPrint("Yihan@ CurTimestamp", CurTimestamp)
+  EMCache:Set("PreLoadingTime", CurTimestamp, true)
 end
 
 function M:OnEnterState_MonthCard()
@@ -254,6 +257,14 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
   return false
 end
 
+function M:OnFocusReceived(MyGeometry, InFocusEvent)
+  if UIUtils.IsGamepadInput() then
+    self.List:NavigateToIndex(MonthSignInModel:GetTodaySignInDay() - 1)
+    self:ResetDynamicNode()
+  end
+  return UIUtils.Handled
+end
+
 function M:OnReturnKeyDown()
   if UIUtils.IsKeyboardInput() then
     self:Close()
@@ -275,13 +286,11 @@ function M:Close()
   if self.WaitFocusTimer then
     self:RemoveTimer(self.WaitFocusTimer)
   end
-  if self.bIsInGetAnimation or self.IsInAnimation then
+  if self.bIsInGetAnimation or self.IsInAnimation or self.bIsInRefresh then
     return
   end
-  if MonthSignInModel:IsTodaySigned() then
-    M.Super.Close(self)
-    self:OnViewClose()
-  end
+  M.Super.Close(self)
+  self:OnViewClose()
 end
 
 return M

@@ -140,6 +140,12 @@ return {
           {
             startQuest = "1749108843746917339",
             startPort = "Out",
+            endQuest = "17791032872072403",
+            endPort = "In"
+          },
+          {
+            startQuest = "17791032872072403",
+            startPort = "Out",
             endQuest = "1749003505043201",
             endPort = "Success"
           }
@@ -149,14 +155,14 @@ return {
             key = "1749003505043194",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800.9655172413793, y = 266.5},
+            pos = {x = 812.3448275862069, y = 269.6034482758621},
             propsData = {ModeType = 0}
           },
           ["1749003505043201"] = {
             key = "1749003505043201",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 1683.482718894009, y = 266.71082949308754},
+            pos = {x = 1671.0689257905606, y = 276.02117432067377},
             propsData = {ModeType = 0}
           },
           ["1749003505043208"] = {
@@ -221,6 +227,13 @@ return {
               NormalOptions = {},
               OverrideFailBlend = false
             }
+          },
+          ["17791032872072403"] = {
+            key = "17791032872072403",
+            type = "OpenChapterUINode",
+            name = "打开章节开始UI",
+            pos = {x = 1399.763242623123, y = 275.96465449458674},
+            propsData = {ChapterUIId = 100400, UIType = "Start"}
           }
         },
         commentData = {}
@@ -231,19 +244,19 @@ return {
       key = "177735135088643042965",
       type = "StoryNode",
       name = "任务前往车站",
-      pos = {x = 1098.5891019729452, y = 30.123773373273735},
+      pos = {x = 1098.3266019729451, y = 30.123773373273735},
       propsData = {
         QuestId = 10040116,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040102_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040102_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
         bIsStartQuest = false,
         bIsEndQuest = false,
         bIsNotifyGameMode = true,
-        bIsStartChapter = true,
+        bIsStartChapter = false,
         bIsEndChapter = false,
         bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
@@ -257,8 +270,7 @@ return {
         SubRegionIdList = {106001},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_Chao03QuestDe01",
-        JumpId = 0,
-        QuestUIId = 0
+        JumpId = 0
       },
       questNodeData = {
         lineData = {
@@ -359,7 +371,7 @@ return {
             key = "177743256136615097",
             type = "TalkNode",
             name = "无缝车站全景",
-            pos = {x = 1259.4674858379547, y = 574.3487510215492},
+            pos = {x = 1284.8521012225701, y = 567.4256740984723},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -375,7 +387,7 @@ return {
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
-              HideNpcs = false,
+              HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
               HideMechanismsFX = true,
@@ -392,10 +404,10 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              bLockNpcSpawn = false,
+              bLockNpcSpawn = true,
               OptionType = "normal",
-              bLockHighestLOD = false,
-              FreezeWorldComposition = false,
+              bLockHighestLOD = true,
+              FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               bNpcActionKeepIn = false,
@@ -536,7 +548,7 @@ return {
               TargetTime = 13,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = true
             }
           }
         },
@@ -548,22 +560,22 @@ return {
       key = "1777954611255473002",
       type = "StoryNode",
       name = "买票特殊任务",
-      pos = {x = 1367.6218247915579, y = 41.011969491685846},
+      pos = {x = 1375.803642973376, y = 30.10287858259494},
       propsData = {
         QuestId = 10040103,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040103_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040103_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
         bIsStartQuest = false,
         bIsEndQuest = false,
         bIsNotifyGameMode = true,
-        bIsStartChapter = false,
+        bIsStartChapter = true,
         bIsEndChapter = false,
         bIsPlayBlackScreenOnComplete = true,
-        bIsPlayBlackScreenOnFail = false,
+        bIsPlayBlackScreenOnFail = true,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
         bUseQuestCoordinate = false,
@@ -574,7 +586,8 @@ return {
         SubRegionIdList = {},
         StoryGuideType = "Npc",
         StoryGuidePointName = "Npc_Dudu_272480277",
-        JumpId = 0
+        JumpId = 0,
+        QuestUIId = 100401
       },
       questNodeData = {
         lineData = {
@@ -624,6 +637,12 @@ return {
             startQuest = "17779549726283274245",
             startPort = "Out",
             endQuest = "1777954620726473235",
+            endPort = "In"
+          },
+          {
+            startQuest = "1777954634844473549",
+            startPort = "true",
+            endQuest = "177969954140155171026",
             endPort = "In"
           },
           {
@@ -759,6 +778,16 @@ return {
               NewTargetPointName = "",
               StaticCreatorIdList = {272480277}
             }
+          },
+          ["177969954140155171026"] = {
+            key = "177969954140155171026",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 1009.1764260249552, y = 12.671078431372592},
+            propsData = {
+              VarName = "FirstStatBuyTicket100401",
+              VarValue = 1
+            }
           }
         },
         commentData = {}
@@ -769,12 +798,12 @@ return {
       key = "17779550387664674845",
       type = "StoryNode",
       name = "打工特殊任务",
-      pos = {x = 690.1612020809348, y = 210.83942675664304},
+      pos = {x = 819.2521111718439, y = 209.02124493846122},
       propsData = {
         QuestId = 10040104,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040105_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040105_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -819,12 +848,6 @@ return {
           },
           {
             startQuest = "177797467419914528946",
-            startPort = "true",
-            endQuest = "177797467419914528950",
-            endPort = "In"
-          },
-          {
-            startQuest = "177797467419914528946",
             startPort = "false",
             endQuest = "177797467419914528947",
             endPort = "In"
@@ -839,12 +862,6 @@ return {
             startQuest = "177797467419914528948",
             startPort = "False",
             endQuest = "177797467419914528949",
-            endPort = "In"
-          },
-          {
-            startQuest = "177797467419914528950",
-            startPort = "Out",
-            endQuest = "17779557175624676602",
             endPort = "In"
           },
           {
@@ -863,6 +880,18 @@ return {
             startQuest = "177797467419914528948",
             startPort = "True",
             endQuest = "17779557175624676602",
+            endPort = "In"
+          },
+          {
+            startQuest = "177797467419914528946",
+            startPort = "true",
+            endQuest = "17779557175624676602",
+            endPort = "In"
+          },
+          {
+            startQuest = "177797467419914528946",
+            startPort = "true",
+            endQuest = "177970147860257593284",
             endPort = "In"
           }
         },
@@ -892,8 +921,8 @@ return {
             key = "17779557175624676602",
             type = "WaitingSpecialQuestStartAndFinishNode",
             name = "等待特殊任务开始并完成",
-            pos = {x = 1557.1764705882354, y = 282.70588235294116},
-            propsData = {SpecialConfigId = 10040104, BlackScreenImmediately = false}
+            pos = {x = 1468.4808184143224, y = 317.923273657289},
+            propsData = {SpecialConfigId = 10040104, BlackScreenImmediately = true}
           },
           ["177797467419914528946"] = {
             key = "177797467419914528946",
@@ -943,11 +972,11 @@ return {
               IsWhite = false
             }
           },
-          ["177797467419914528950"] = {
-            key = "177797467419914528950",
+          ["177970147860257593284"] = {
+            key = "177970147860257593284",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 1288.3940174963645, y = 331.91675563759156},
+            pos = {x = 1501.897219332917, y = 56.684820747521016},
             propsData = {
               VarName = "FirstPartTime100401",
               VarValue = 1
@@ -962,12 +991,12 @@ return {
       key = "17779557518084677875",
       type = "StoryNode",
       name = "地下潜入特殊任务01",
-      pos = {x = 994.8047462746597, y = 209.3230805009336},
+      pos = {x = 1100.2592917292052, y = 207.50489868275176},
       propsData = {
         QuestId = 10040106,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040107_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040108_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1166,7 +1195,7 @@ return {
         QuestId = 10040107,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040109_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040109_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1222,12 +1251,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17779700929216109473",
-            startPort = "Out",
-            endQuest = "17779700560646108692",
-            endPort = "In"
-          },
-          {
             startQuest = "17779700929216109475",
             startPort = "False",
             endQuest = "17779700929216109476",
@@ -1255,6 +1278,12 @@ return {
             startQuest = "17779700560646108692",
             startPort = "PassiveFail",
             endQuest = "17779700929216109476",
+            endPort = "In"
+          },
+          {
+            startQuest = "17779700929216109472",
+            startPort = "true",
+            endQuest = "17779700560646108692",
             endPort = "In"
           }
         },
@@ -1284,7 +1313,7 @@ return {
             key = "17779700560646108692",
             type = "WaitingSpecialQuestStartAndFinishNode",
             name = "等待特殊任务开始并完成",
-            pos = {x = 1487.6, y = 392.25882352941176},
+            pos = {x = 1489.6, y = 392.25882352941176},
             propsData = {SpecialConfigId = 10040107, BlackScreenImmediately = true}
           },
           ["17779700929216109472"] = {
@@ -1305,7 +1334,7 @@ return {
             key = "17779700929216109473",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 1095.5867059696031, y = 348.4118764646435},
+            pos = {x = 1111.5867059696031, y = 210.4118764646435},
             propsData = {
               VarName = "FirstStateQianru10040102",
               VarValue = 1
@@ -1354,12 +1383,12 @@ return {
       key = "17779702080536110413",
       type = "StoryNode",
       name = "地下潜入特殊任务04",
-      pos = {x = 1106.1051415121676, y = 375.2890578342186},
+      pos = {x = 1111.3992591592264, y = 375.2890578342186},
       propsData = {
         QuestId = 10040109,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040109_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040109_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1368,7 +1397,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1400,12 +1429,6 @@ return {
             startQuest = "17779702080536110418",
             startPort = "QuestStart",
             endQuest = "17779702080536110422",
-            endPort = "In"
-          },
-          {
-            startQuest = "17779702080536110423",
-            startPort = "Out",
-            endQuest = "17779702080536110421",
             endPort = "In"
           },
           {
@@ -1449,6 +1472,12 @@ return {
             startPort = "PassiveFail",
             endQuest = "17779702080536110420",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17779702080536110422",
+            startPort = "true",
+            endQuest = "17779702080536110421",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1498,7 +1527,7 @@ return {
             key = "17779702080536110423",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 1086.886705969603, y = 366.4118764646435},
+            pos = {x = 1090.886705969603, y = 226.4118764646435},
             propsData = {
               VarName = "FirstStateQianru10040104",
               VarValue = 1
@@ -1552,7 +1581,7 @@ return {
         QuestId = 10040110,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040109_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040109_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1561,7 +1590,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1614,12 +1643,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17779702093136110515",
-            startPort = "Out",
-            endQuest = "17779702093136110513",
-            endPort = "In"
-          },
-          {
             startQuest = "17779702093136110517",
             startPort = "True",
             endQuest = "17779702093136110513",
@@ -1641,6 +1664,12 @@ return {
             startQuest = "17779702093136110513",
             startPort = "Fail",
             endQuest = "17779702093136110518",
+            endPort = "In"
+          },
+          {
+            startQuest = "17779702093136110514",
+            startPort = "true",
+            endQuest = "17779702093136110513",
             endPort = "In"
           }
         },
@@ -1670,7 +1699,7 @@ return {
             key = "17779702093136110513",
             type = "WaitingSpecialQuestStartAndFinishNode",
             name = "等待特殊任务开始并完成",
-            pos = {x = 1364, y = 428},
+            pos = {x = 1372, y = 428},
             propsData = {SpecialConfigId = 10040110, BlackScreenImmediately = true}
           },
           ["17779702093136110514"] = {
@@ -1691,7 +1720,7 @@ return {
             key = "17779702093136110515",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 1094.386705969603, y = 366.4118764646435},
+            pos = {x = 1138.386705969603, y = 130.4118764646435},
             propsData = {
               VarName = "FirstStateQianru10040105",
               VarValue = 1
@@ -1745,7 +1774,7 @@ return {
         QuestId = 10040111,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040109_03",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040109_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1807,12 +1836,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "17779702098376110580",
-            startPort = "Out",
-            endQuest = "17779702098376110578",
-            endPort = "In"
-          },
-          {
             startQuest = "17779702098376110582",
             startPort = "True",
             endQuest = "17779702098376110578",
@@ -1834,6 +1857,12 @@ return {
             startQuest = "17779702098376110578",
             startPort = "Fail",
             endQuest = "17779702098376110583",
+            endPort = "In"
+          },
+          {
+            startQuest = "17779702098376110579",
+            startPort = "true",
+            endQuest = "17779702098376110578",
             endPort = "In"
           }
         },
@@ -1890,7 +1919,7 @@ return {
             key = "17779702098376110580",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 878.2713213542183, y = 356.8349533877204},
+            pos = {x = 881.8713213542184, y = 182.8349533877204},
             propsData = {
               VarName = "FirstStateQianru10040106",
               VarValue = 1
@@ -1944,7 +1973,7 @@ return {
         QuestId = 10040112,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040109_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040109_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,

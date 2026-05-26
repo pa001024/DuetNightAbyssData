@@ -3413,158 +3413,132 @@ return ReadOnly("TalkTrigger", {
   [512068] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512068.story",
     TalkId = 512068,
-    TalkTriggerId = 512068,
-    Type = "气泡"
+    TalkTriggerId = 512068
   },
   [512069] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512069.story",
     TalkId = 512069,
-    TalkTriggerId = 512069,
-    Type = "气泡"
+    TalkTriggerId = 512069
   },
   [512070] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512070.story",
     TalkId = 512070,
-    TalkTriggerId = 512070,
-    Type = "气泡"
+    TalkTriggerId = 512070
   },
   [512071] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512071.story",
     TalkId = 512071,
-    TalkTriggerId = 512071,
-    Type = "气泡"
+    TalkTriggerId = 512071
   },
   [512072] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512072.story",
     TalkId = 512072,
-    TalkTriggerId = 512072,
-    Type = "气泡"
+    TalkTriggerId = 512072
   },
   [512073] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512073.story",
     TalkId = 512073,
-    TalkTriggerId = 512073,
-    Type = "气泡"
+    TalkTriggerId = 512073
   },
   [512074] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512074.story",
     TalkId = 512074,
-    TalkTriggerId = 512074,
-    Type = "气泡"
+    TalkTriggerId = 512074
   },
   [512075] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512075.story",
     TalkId = 512075,
-    TalkTriggerId = 512075,
-    Type = "气泡"
+    TalkTriggerId = 512075
   },
   [512076] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512076.story",
     TalkId = 512076,
-    TalkTriggerId = 512076,
-    Type = "气泡"
+    TalkTriggerId = 512076
   },
   [512077] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512077.story",
     TalkId = 512077,
-    TalkTriggerId = 512077,
-    Type = "气泡"
+    TalkTriggerId = 512077
   },
   [512078] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512078.story",
     TalkId = 512078,
-    TalkTriggerId = 512078,
-    Type = "气泡"
+    TalkTriggerId = 512078
   },
   [512079] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512079.story",
     TalkId = 512079,
-    TalkTriggerId = 512079,
-    Type = "气泡"
+    TalkTriggerId = 512079
   },
   [512080] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512080.story",
     TalkId = 512080,
-    TalkTriggerId = 512080,
-    Type = "气泡"
+    TalkTriggerId = 512080
   },
   [512081] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512081.story",
     TalkId = 512081,
-    TalkTriggerId = 512081,
-    Type = "气泡"
+    TalkTriggerId = 512081
   },
   [512082] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512082.story",
     TalkId = 512082,
-    TalkTriggerId = 512082,
-    Type = "气泡"
+    TalkTriggerId = 512082
   },
   [512083] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512083.story",
     TalkId = 512083,
-    TalkTriggerId = 512083,
-    Type = "气泡"
+    TalkTriggerId = 512083
   },
   [512084] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512084.story",
     TalkId = 512084,
-    TalkTriggerId = 512084,
-    Type = "气泡"
+    TalkTriggerId = 512084
   },
   [512085] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512085.story",
     TalkId = 512085,
-    TalkTriggerId = 512085,
-    Type = "气泡"
+    TalkTriggerId = 512085
   },
   [512086] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512086.story",
     TalkId = 512086,
-    TalkTriggerId = 512086,
-    Type = "气泡"
+    TalkTriggerId = 512086
   },
   [512087] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512087.story",
     TalkId = 512087,
-    TalkTriggerId = 512087,
-    Type = "气泡"
+    TalkTriggerId = 512087
   },
   [512088] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512088.story",
     TalkId = 512088,
-    TalkTriggerId = 512088,
-    Type = "气泡"
+    TalkTriggerId = 512088
   },
   [512089] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512089.story",
     TalkId = 512089,
-    TalkTriggerId = 512089,
-    Type = "气泡"
+    TalkTriggerId = 512089
   },
   [512090] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512090.story",
     TalkId = 512090,
-    TalkTriggerId = 512090,
-    Type = "气泡"
+    TalkTriggerId = 512090
   },
   [512091] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512091.story",
     TalkId = 512091,
-    TalkTriggerId = 512091,
-    Type = "气泡"
+    TalkTriggerId = 512091
   },
   [512092] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512092.story",
     TalkId = 512092,
-    TalkTriggerId = 512092,
-    Type = "气泡"
+    TalkTriggerId = 512092
   },
   [512093] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\512093.story",
     TalkId = 512093,
-    TalkTriggerId = 512093,
-    Type = "气泡"
+    TalkTriggerId = 512093
   },
   [600101] = {
     DialogueId = 60010101,
@@ -7281,158 +7255,132 @@ return ReadOnly("TalkTrigger", {
   [5120682] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120682.story",
     TalkId = 5120682,
-    TalkTriggerId = 5120682,
-    Type = "对话"
+    TalkTriggerId = 5120682
   },
   [5120692] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120692.story",
     TalkId = 5120692,
-    TalkTriggerId = 5120692,
-    Type = "对话"
+    TalkTriggerId = 5120692
   },
   [5120702] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120702.story",
     TalkId = 5120702,
-    TalkTriggerId = 5120702,
-    Type = "对话"
+    TalkTriggerId = 5120702
   },
   [5120712] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120712.story",
     TalkId = 5120712,
-    TalkTriggerId = 5120712,
-    Type = "对话"
+    TalkTriggerId = 5120712
   },
   [5120722] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120722.story",
     TalkId = 5120722,
-    TalkTriggerId = 5120722,
-    Type = "对话"
+    TalkTriggerId = 5120722
   },
   [5120732] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120732.story",
     TalkId = 5120732,
-    TalkTriggerId = 5120732,
-    Type = "对话"
+    TalkTriggerId = 5120732
   },
   [5120742] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120742.story",
     TalkId = 5120742,
-    TalkTriggerId = 5120742,
-    Type = "对话"
+    TalkTriggerId = 5120742
   },
   [5120752] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120752.story",
     TalkId = 5120752,
-    TalkTriggerId = 5120752,
-    Type = "对话"
+    TalkTriggerId = 5120752
   },
   [5120762] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120762.story",
     TalkId = 5120762,
-    TalkTriggerId = 5120762,
-    Type = "对话"
+    TalkTriggerId = 5120762
   },
   [5120772] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120772.story",
     TalkId = 5120772,
-    TalkTriggerId = 5120772,
-    Type = "对话"
+    TalkTriggerId = 5120772
   },
   [5120782] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120782.story",
     TalkId = 5120782,
-    TalkTriggerId = 5120782,
-    Type = "对话"
+    TalkTriggerId = 5120782
   },
   [5120792] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120792.story",
     TalkId = 5120792,
-    TalkTriggerId = 5120792,
-    Type = "对话"
+    TalkTriggerId = 5120792
   },
   [5120802] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120802.story",
     TalkId = 5120802,
-    TalkTriggerId = 5120802,
-    Type = "对话"
+    TalkTriggerId = 5120802
   },
   [5120812] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120812.story",
     TalkId = 5120812,
-    TalkTriggerId = 5120812,
-    Type = "对话"
+    TalkTriggerId = 5120812
   },
   [5120822] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120822.story",
     TalkId = 5120822,
-    TalkTriggerId = 5120822,
-    Type = "对话"
+    TalkTriggerId = 5120822
   },
   [5120832] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120832.story",
     TalkId = 5120832,
-    TalkTriggerId = 5120832,
-    Type = "对话"
+    TalkTriggerId = 5120832
   },
   [5120842] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120842.story",
     TalkId = 5120842,
-    TalkTriggerId = 5120842,
-    Type = "对话"
+    TalkTriggerId = 5120842
   },
   [5120852] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120852.story",
     TalkId = 5120852,
-    TalkTriggerId = 5120852,
-    Type = "对话"
+    TalkTriggerId = 5120852
   },
   [5120862] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120862.story",
     TalkId = 5120862,
-    TalkTriggerId = 5120862,
-    Type = "对话"
+    TalkTriggerId = 5120862
   },
   [5120872] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120872.story",
     TalkId = 5120872,
-    TalkTriggerId = 5120872,
-    Type = "对话"
+    TalkTriggerId = 5120872
   },
   [5120882] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120882.story",
     TalkId = 5120882,
-    TalkTriggerId = 5120882,
-    Type = "对话"
+    TalkTriggerId = 5120882
   },
   [5120892] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120892.story",
     TalkId = 5120892,
-    TalkTriggerId = 5120892,
-    Type = "对话"
+    TalkTriggerId = 5120892
   },
   [5120902] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120902.story",
     TalkId = 5120902,
-    TalkTriggerId = 5120902,
-    Type = "对话"
+    TalkTriggerId = 5120902
   },
   [5120912] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120912.story",
     TalkId = 5120912,
-    TalkTriggerId = 5120912,
-    Type = "对话"
+    TalkTriggerId = 5120912
   },
   [5120922] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120922.story",
     TalkId = 5120922,
-    TalkTriggerId = 5120922,
-    Type = "对话"
+    TalkTriggerId = 5120922
   },
   [5120932] = {
     StoryLinePath = "\\Impression\\Chapter03\\Impression\\Sceshow\\5120932.story",
     TalkId = 5120932,
-    TalkTriggerId = 5120932,
-    Type = "对话"
+    TalkTriggerId = 5120932
   },
   [7001581] = {
     StoryLinePath = "Observe/East01.story",

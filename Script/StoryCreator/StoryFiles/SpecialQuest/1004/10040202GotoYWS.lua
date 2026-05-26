@@ -52,7 +52,7 @@ return {
         QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "",
-        QuestDeatil = "Description_10040203_01",
+        QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -69,7 +69,7 @@ return {
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
         IsBacktrack = false,
-        SubRegionId = 106001,
+        SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
@@ -243,6 +243,12 @@ return {
             startQuest = "17788366365549770959",
             startPort = "Out",
             endQuest = "177763198455465114867",
+            endPort = "In"
+          },
+          {
+            startQuest = "177763198455065114853",
+            startPort = "QuestStart",
+            endQuest = "1779525397764571",
             endPort = "In"
           }
         },
@@ -463,7 +469,7 @@ return {
             key = "177763415123077239618",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 656.0387788504729, y = 712.5958178534261},
+            pos = {x = 719.196673587315, y = 867.3326599586892},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["177763423414578171162"] = {
@@ -491,12 +497,12 @@ return {
             key = "177771978534612154038",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = 540.6666666666666, y = 112.33333333333333},
+            pos = {x = 284.8771929824561, y = 83.91228070175438},
             propsData = {
               TargetTime = 16,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = true
             }
           },
           ["177805338173925271718"] = {
@@ -604,6 +610,16 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {172480304}
+            }
+          },
+          ["1779525397764571"] = {
+            key = "1779525397764571",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 884.9473684210527, y = -127.26315789473688},
+            propsData = {
+              VarName = "FirstStateGotoYWS100402",
+              VarValue = 1
             }
           }
         },

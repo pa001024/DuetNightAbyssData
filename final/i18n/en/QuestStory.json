@@ -17393,8 +17393,8 @@
     "quests": [
       {
         "id": 10040101,
-        "name": "前往酒馆与卡米拉聊聊【待包装】",
-        "desc": "和奥哥们在酒馆汇合【待包装】",
+        "name": "Head to The Asphodel",
+        "desc": "According to Rhythm, there are five days left until the Legion's prison train departs.  We need to make a plan in the Asphodel.",
         "nodes": [
           {
             "id": "1749108843746917339",
@@ -17492,19 +17492,19 @@
               {
                 "id": 10040116,
                 "content": "One month from now, the 13th Legion will be relocating a high-value prisoner by train from Icelake to Dismania, the imperial capital. The 6th Legion's been ordered to assist with the transport.",
-                "voice": "story/1004/100401/19226688",
+                "voice": "story/1003/100375/1920BCA0",
                 "npc": 100304
               },
               {
                 "id": 10040117,
                 "content": "The prisoner's identity is classified as top secret. All I know is that she's currently receiving treatment in the inner city under maximum security. But someone caught a glimpse of her back — <H>a young woman in her early twenties</>, dressed in black.",
-                "voice": "story/1004/100401/192266B2",
+                "voice": "story/1003/100375/1920BCCA",
                 "npc": 100304
               },
               {
                 "id": 10040118,
                 "content": "That matches what you've told me about Berenica. If it really is her, then <H>the train departing in a month</> might be your only chance.",
-                "voice": "story/1004/100401/192266DC",
+                "voice": "story/1003/100375/1920BCF4",
                 "npc": 100304
               },
               {
@@ -17545,7 +17545,7 @@
               },
               {
                 "id": 10040125,
-                "content": "N—Not just that! I've done loads of other stuff too — listening to the radio, reading, gathering intel, all of it! As for the fighting part... well, those two can handle that.",
+                "content": "N—Not just that! I've done tons of other stuff too — listening to the radio, reading, gathering intel, all of it! As for the fighting part... well, those two can handle that.",
                 "voice": "story/1004/100401/19226802",
                 "npc": 100402
               },
@@ -17653,7 +17653,7 @@
               },
               {
                 "id": 10040144,
-                "content": "Since I knew you'd be heading to the station for intel, I've been keeping an ear out whenever my regulars bring it up — especially the lads who work down there. They always come in for a pint late at night.",
+                "content": "Since I knew you'd be heading to the station for intel, I've been keeping an ear out whenever my regulars bring it up — especially the boys who work down there. They always come in for a drink late at night.",
                 "voice": "story/1004/100401/19226B20",
                 "npc": 200003
               },
@@ -17693,8 +17693,8 @@
       },
       {
         "id": 10040103,
-        "name": "跟随嘟嘟皎皎前往售票窗【待包装】",
-        "desc": "",
+        "name": "Follow Lunotoot",
+        "desc": "The station is huge, but luckily, the enthusiastic Lunotoot is here to show us around. Follow Lunotoot and buy a ticket as she guides you.",
         "nodes": [
           {
             "id": "1777954708543474617",
@@ -17718,43 +17718,43 @@
       },
       {
         "id": 10040104,
-        "name": "向工人询问打工的事情【待包装】",
-        "desc": ""
+        "name": "Prepare to apply for work",
+        "desc": "Because of the incident, station security is tighter. There's no way to get in directly. We'll have to find another way. Maybe disguising ourselves as workers could work."
       },
       {
         "id": 10040106,
-        "name": "向招聘的工人回复【待包装】",
-        "desc": ""
+        "name": "Report back to the recruiter",
+        "desc": "Prepare to enter the Ironworks and infiltrate the station."
       },
       {
         "id": 10040107,
-        "name": "深入地下工厂【待包装】",
-        "desc": ""
+        "name": "Go deeper into the Ironworks",
+        "desc": "Continue along the Ironworks assembly line."
       },
       {
         "id": 10040109,
-        "name": "深入地下工厂【待包装】",
-        "desc": ""
+        "name": "Go deeper into the Ironworks",
+        "desc": "Continue along the Ironworks assembly line."
       },
       {
         "id": 10040110,
-        "name": "深入地下工厂【待包装】",
-        "desc": ""
+        "name": "Go deeper into the Ironworks",
+        "desc": "Continue along the Ironworks assembly line."
       },
       {
         "id": 10040111,
-        "name": "启动电梯【待包装】",
-        "desc": ""
+        "name": "Use the lift to reach the concourse",
+        "desc": "Continue along the Ironworks assembly line."
       },
       {
         "id": 10040112,
-        "name": "深入地下工厂【待包装】",
-        "desc": ""
+        "name": "Go deeper into the Ironworks",
+        "desc": "Continue along the Ironworks assembly line."
       },
       {
         "id": 10040116,
-        "name": "前往百花车站【待包装】",
-        "desc": "",
+        "name": "Head to Bloomfield Station",
+        "desc": "The plan is ready. Head to Bloomfield Station now!",
         "nodes": [
           {
             "id": "177743256136615097",
@@ -18016,7 +18016,7 @@
               },
               {
                 "id": 10040318,
-                "content": "That's honestly tempting. If I were a train enthusiast, I'd want to work here too.",
+                "content": "Honestly that's tempting. If I were a train enthusiast, I'd want to work here too.",
                 "voice": "story/1004/100403/192287AC",
                 "npc": 100001
               },
@@ -18061,38 +18061,43 @@
     "quests": [
       {
         "id": 10040201,
-        "name": "从钢架上潜入【待包装】",
-        "desc": ""
+        "name": "Follow the path along the station rooftop",
+        "desc": "We've reached the rooftop of Bloomfield Station. Move along the roof beams and look for a way down."
       },
       {
         "id": 10040202,
-        "name": "前往医务室【待包装】",
-        "desc": ""
+        "name": "Head to the infirmary",
+        "desc": "The train is full of soldiers returning from the front line, heading to the infirmary for treatment. Maybe we can follow them to the infirmary and get more information."
       },
       {
         "id": 10040203,
-        "name": "靠近专列【待包装】",
-        "desc": "准备接近专列【待包装】"
+        "name": "Approach the 13th Legion special train",
+        "desc": "The 13th Legion's special train is over on Platform 1. Let's head over and take a look."
       },
       {
         "id": 10040204,
-        "name": "前往车站管理室【待包装】",
-        "desc": ""
+        "name": "Head to the station office",
+        "desc": "A woman claiming to be Hilda blocked the way and warned us off. We had no choice but to retreat for now. Before leaving, we could check out the station office Stéphane mentioned."
       },
       {
         "id": 10040205,
-        "name": "跟随神秘女子的脚步【待包装】",
-        "desc": ""
+        "name": "Follow Hilda",
+        "desc": "We reached the lift, only to run into Eisenbahn, the stationmaster. He suspects we caused the explosion.\nJust then, Hilda — whom we met on top of the Jackdaw — appeared and held off Eisenbahn's men. Follow Hilda."
       },
       {
         "id": 10040206,
-        "name": "跟随神秘女子的脚步【待包装】",
-        "desc": "",
+        "name": "Follow Hilda",
+        "desc": "We reached the lift, only to run into Eisenbahn, the stationmaster. He suspects we caused the explosion.\nJust then, Hilda — whom we met on top of the Jackdaw — appeared and held off Eisenbahn's men. Follow Hilda.",
         "nodes": [
           {
             "id": "177763795417816773252",
             "type": "TalkNode",
             "name": "希尔妲救场",
+            "srId": 106001,
+            "pos": [
+              -16550,
+              100
+            ],
             "dialogues": [
               {
                 "id": 10010101,
@@ -18106,8 +18111,8 @@
       },
       {
         "id": 10040207,
-        "name": "乘坐电梯【待包装】",
-        "desc": "",
+        "name": "Follow Hilda to escape the encirclement of soldiers",
+        "desc": "We reached the lift, only to run into Eisenbahn, the stationmaster. He suspects we caused the explosion.\nJust then, Hilda — whom we met on top of the Jackdaw — appeared and held off Eisenbahn's men. Follow Hilda.",
         "nodes": [
           {
             "id": "177763795518716773324",
@@ -18616,8 +18621,8 @@
       },
       {
         "id": 10040208,
-        "name": "从钢架上潜入【待包装】",
-        "desc": "开始从钢架潜入【待包装】",
+        "name": "Follow the path along the station rooftop",
+        "desc": "The train is full of soldiers returning from the front line, heading to the infirmary for treatment. Maybe we can follow them to the infirmary and get more information.",
         "nodes": [
           {
             "id": "177763815767418173763",
@@ -18649,7 +18654,7 @@
               },
               {
                 "id": 10041404,
-                "content": "Nuh-uh! I—I wasn't scared! That wasn't even that high!",
+                "content": "Nuh-uh! I—I wasn't scared! It wasn't even that high!",
                 "voice": "story/1004/100414/192339D8",
                 "npc": 100402
               },
@@ -18725,7 +18730,7 @@
               },
               {
                 "id": 10041415,
-                "content": "Madam! I'm Lunomedic. These two are my assistants. We came in with the train — onboard med team. Kept an eye on the wounded during the run.",
+                "content": "Sir! I'm Lunomedic. These two are my assistants. We came in with the train — onboard med team. Kept an eye on the wounded during the run.",
                 "voice": "story/1004/100414/19233BA6",
                 "npc": 100402
               },
@@ -18755,7 +18760,7 @@
               },
               {
                 "id": 10041420,
-                "content": "Huh? Ah— yes, madam! I've warned them: if it's not your business, don't stick your nose in. You hear me?",
+                "content": "Huh? Ah— yes, sir! I've warned them: if it's not your business, don't stick your nose in. You hear me?",
                 "voice": "story/1004/100414/19233C78",
                 "npc": 100402
               },
@@ -18799,12 +18804,15 @@
                 "id": 10041427,
                 "content": "Nah, it's nothing. I always show up when it matters.",
                 "voice": "story/1004/100414/19233D9E",
-                "npc": 100402
-              },
-              {
-                "id": 10041428,
-                "content": "Nice work, Lunomedic.",
-                "voice": "story/1004/100414/19233DC8"
+                "npc": 100402,
+                "options": [
+                  {
+                    "id": 10041428,
+                    "content": "Nice work, Lunomedic.",
+                    "voice": "story/1004/100414/19233DC8",
+                    "next": 10041429
+                  }
+                ]
               },
               {
                 "id": 10041429,
@@ -18824,23 +18832,28 @@
       },
       {
         "id": 10040209,
-        "name": "前往医务室【待包装】",
-        "desc": ""
+        "name": "Head to the infirmary",
+        "desc": "The military medic in the infirmary is very busy. We won't get any information until the work is done. Let the medic finish the work first."
       },
       {
         "id": 10040210,
-        "name": "靠近专列【待包装】",
-        "desc": "准备接近专列【待包装】"
+        "name": "Approach the 13th Legion special train",
+        "desc": "The Jackdaw is heavily guarded. We need to find a way to break through the defenses and get closer.\nStéphane gave us a tip: the train's security is weakest when the guards change shifts. We can act then."
       },
       {
         "id": 10040213,
-        "name": "开始行动【待包装】",
-        "desc": "",
+        "name": "Prepare to create a distraction",
+        "desc": "A woman claiming to be Hilda blocked the way and warned us off. We had no choice but to retreat for now. Before leaving, we could check out the station office Stéphane mentioned.",
         "nodes": [
           {
             "id": "177763838346920967014",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -39010,
+              -2730
+            ],
             "next": [
               "177763838346920967016"
             ],
@@ -18971,6 +18984,11 @@
             "id": "177763838346920967016",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -39010,
+              -2730
+            ],
             "dialogues": [
               {
                 "id": 10042101,
@@ -19008,12 +19026,18 @@
       },
       {
         "id": 10040214,
-        "name": "",
+        "name": "Head to the infirmary",
+        "desc": "The military medic in the infirmary is very busy. We won't get any information until the work is done. Let the medic finish the work first.",
         "nodes": [
           {
             "id": "17785865970492439804",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -31170,
+              6480
+            ],
             "next": [
               "17785866089802439845"
             ],
@@ -19098,7 +19122,7 @@
               },
               {
                 "id": 10041615,
-                "content": "Huh. Unless our debtor was actually a woman in a bloke's clothes.",
+                "content": "Huh. Unless our debtor was actually a woman in men's clothing.",
                 "voice": "story/1004/100416/19235C76",
                 "npc": 100401
               },
@@ -19150,10 +19174,15 @@
             "id": "17785866089802439845",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -31170,
+              6480
+            ],
             "dialogues": [
               {
                 "id": 10041701,
-                "content": "Outsider, what was all that back there? Since when are we looking for some tall bloke? Berenica's a girl.",
+                "content": "Outsider, what was all that back there? Since when are we looking for some tall guy? Berenica's a girl.",
                 "voice": "story/1004/100417/19236A92",
                 "npc": 100402
               },
@@ -19228,48 +19257,174 @@
     "quests": [
       {
         "id": 10040301,
-        "name": "前往爆炸现场【待包装】",
-        "desc": "你与希尔妲开始调查爆炸事件【待包装】"
+        "name": "Prepare to head to the explosion site",
+        "desc": "Just as Eisenbahn had us surrounded, a Legion overseer on the Jackdaw spoke up in our favor. Although Outsider was detained, we earned the chance to investigate the explosion and clear our name.\nHead to the blast site and start looking for the culprit."
       },
       {
         "id": 10040302,
-        "name": "调查爆炸现场【待包装】",
-        "desc": "你与希尔妲开始调查爆炸事件【待包装】"
+        "name": "Collect useful clues",
+        "desc": "Reach the explosion site and begin the investigation."
       },
       {
         "id": 10040303,
-        "name": "和士兵交谈【待包装】",
-        "desc": "你有了一些调查成果【待包装】"
+        "name": "Draw a conclusion",
+        "desc": "Speak with the soldier"
+      },
+      {
+        "id": 10040304,
+        "name": "Head to the storehouse to investigate the confiscated items",
+        "desc": "Head to the storehouse to look for confiscated items.",
+        "nodes": [
+          {
+            "id": "17791782148921450765",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -19580,
+              50
+            ],
+            "dialogues": [
+              {
+                "id": 10043501,
+                "content": "Put those together and you can make a device — enough to bring down a wall.",
+                "voice": "story/1004/100435/192491E2",
+                "npc": 100403
+              },
+              {
+                "id": 10043502,
+                "content": "What? With just that?",
+                "voice": "story/1004/100435/1924920C",
+                "npc": 100001
+              },
+              {
+                "id": 10043503,
+                "content": "Yes. A very crude one, but workable.",
+                "voice": "story/1004/100435/19249236",
+                "npc": 100403
+              },
+              {
+                "id": 10043504,
+                "content": "Cotton looks harmless — just coat stuffing. In the army, it's different. Soak it in an acidic solution and it becomes highly flammable. It can serve as a primer.",
+                "voice": "story/1004/100435/19249260",
+                "npc": 100403
+              },
+              {
+                "id": 10043505,
+                "content": "Pack treated cotton into a metal container, drill a vent, fit a fuse... and you've got a bomb.",
+                "voice": "story/1004/100435/1924928A",
+                "npc": 100403
+              },
+              {
+                "id": 10043506,
+                "content": "Whoever planned this knew exactly what they were doing. Each item alone is ordinary contraband — nothing that would raise an alarm. But the moment security confiscates them, they do the hard part for you. Everything ends up in the same room.",
+                "voice": "story/1004/100435/192492B4",
+                "npc": 100403
+              },
+              {
+                "id": 10043507,
+                "content": "...You're frighteningly good at this. With your help, we finally have a lead. So I'll ask again: are you really just a maid?",
+                "voice": "story/1004/100435/192492DE",
+                "npc": 100001
+              },
+              {
+                "id": 10043508,
+                "content": "Of course. I've simply around Her Ladyship long enough to pick up a few military basics. In any case, this tells us something.",
+                "voice": "story/1004/100435/19249308",
+                "npc": 100403
+              },
+              {
+                "id": 10043509,
+                "content": "Only someone on the inside would think to pull a stunt like this. Which means we don't have to comb the concourse blindly.",
+                "voice": "story/1004/100435/19249332",
+                "npc": 100403
+              },
+              {
+                "id": 10043510,
+                "content": "One of the guards mentioned there's a storehouse keeper assigned here. Maybe we can ask if they've seen anything.",
+                "voice": "story/1004/100435/1924935C",
+                "npc": 100001
+              },
+              {
+                "id": 10043511,
+                "content": "I remember. But we haven't seen a soul since we walked in. I expected we'd at least be stopped and questioned at the door.",
+                "voice": "story/1004/100435/19249386",
+                "npc": 100403
+              },
+              {
+                "id": 10043512,
+                "content": "Maybe they're doing the rounds. I'll give them a shout.",
+                "voice": "story/1004/100435/192493B0",
+                "npc": 100001
+              },
+              {
+                "id": 10043513,
+                "content": "Hello? Anyone there?",
+                "voice": "story/1004/100435/192493DA",
+                "npc": 100001
+              },
+              {
+                "id": 10043514,
+                "content": "For the love of... keep it down. I'm not deaf. I heard you lot rabbiting on about bombs the moment you walked in. Eisenbahn sent you, did he?",
+                "voice": "story/1004/100435/19249404",
+                "npc": 100419
+              },
+              {
+                "id": 10043515,
+                "content": "Well? What is it? Make it quick. Then get out of my sight.",
+                "voice": "story/1004/100435/1924942E",
+                "npc": 100419
+              },
+              {
+                "id": 10043516,
+                "content": "Hang on... you're not one of ours. I know the faces round here. Never seen you before.",
+                "voice": "story/1004/100435/19249458",
+                "npc": 100419
+              },
+              {
+                "id": 10043517,
+                "content": "How'd you get in? Security! Intruders!",
+                "voice": "story/1004/100435/19249482",
+                "npc": 100419
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 10040305,
-        "name": "前往仓库【待包装】",
-        "desc": "你们决定前往仓库调查【待包装】"
+        "name": "Head to the storehouse to investigate the confiscated items",
+        "desc": "Head to the storehouse to look for confiscated items."
       },
       {
         "id": 10040306,
-        "name": "与希尔妲交谈【待包装】",
-        "desc": "你们在仓库里发现了一些线索【待包装】"
+        "name": "Use the contraband to make a bomb",
+        "desc": "Head to the storehouse to look for confiscated items."
       },
       {
         "id": 10040307,
-        "name": "向车站的工作人员调查管理员的风评【待包装】",
-        "desc": "你们决定引蛇出洞【待包装】"
+        "name": "Investigate the storehouse keeper's reputation",
+        "desc": "To find the suspicious person who entered the storehouse, the station broadcast announced that the storehouse manager was the culprit. This should pressure the real culprit into trying to shift the blame onto him.\nWhile we wait for the results, let's look into the storehouse manager's reputation."
       },
       {
         "id": 10040308,
-        "name": "前往站长办公室【待包装】",
-        "desc": "开始下一步【待包装】"
+        "name": "Ask Eisenbahn about the investigation progress",
+        "desc": "To find the suspicious person who entered the storehouse, the station broadcast announced that the storehouse manager was the culprit. This should pressure the real culprit into trying to shift the blame onto him.\nWhile we wait for the results, let's look into the storehouse manager's reputation."
       },
       {
         "id": 10040309,
-        "name": "前往员工区寻找史蒂芬【待包装】",
-        "desc": "Description_10040309_01",
+        "name": "Look for Stéphane",
+        "desc": "Out of nowhere, Carnot — whom we met at the Ironworks — defends the storehouse manager, but in doing so, reveals that he knows about the bomb being assembled — something an outsider shouldn't be aware of. Carnot is now the prime suspect. Find Stéphane and ask where Carnot is.",
         "nodes": [
           {
             "id": "17785008164492494",
             "type": "TalkNode",
             "name": "史蒂芬对话",
+            "srId": 106001,
+            "pos": [
+              -62370,
+              -2640
+            ],
             "dialogues": [
               {
                 "id": 10044401,
@@ -19363,7 +19518,7 @@
               },
               {
                 "id": 10044416,
-                "content": "Ever since that man first came round, Dad's been off. A few days later I saw him tucked away where nobody goes, fiddling with cotton wadding, trying to make it blow up. I asked what he was doing. He said he was just having a go at making fireworks...",
+                "content": "Ever since that man first came around, Dad's been off. A few days later I saw him tucked away where nobody goes, fiddling with cotton wadding, trying to make it blow up. I asked what he was doing. He said he was just having a go at making fireworks...",
                 "voice": "story/1004/100444/19252800",
                 "npc": 100415
               },
@@ -19427,23 +19582,42 @@
       },
       {
         "id": 10040310,
-        "name": "前往碰头点寻找卡诺【待包装】",
-        "desc": "Description_10040310_01"
+        "name": "Move forward to look for Carnot",
+        "desc": "It looks like Carnot is with some Forsakens members. Get over there and see what's going on.",
+        "nodes": [
+          {
+            "id": "17793556454072901591",
+            "type": "TalkNode",
+            "name": "史蒂芬可选对话",
+            "srId": 106001,
+            "pos": [
+              -87180,
+              -10870
+            ],
+            "dialogues": [
+              {
+                "id": 100499503,
+                "content": "唉……爸爸，你为什么要这么做……",
+                "npc": 100415
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 10040311,
-        "name": "回到站长办公室【待包装】",
-        "desc": "仓库里的炸药引发了混乱【待包装】"
+        "name": "Report to Eisenbahn",
+        "desc": "You successfully captured the Forsaken members. Now, report back to Eisenbahn. The station bombing case is closed!"
       },
       {
         "id": 10040312,
-        "name": "回复监军大人【待包装】",
-        "desc": "Description_10040312_01"
+        "name": "Return to find the overseer on the Jackdaw",
+        "desc": "Outsider is free again. It's time to get back on track and investigate the mystery prisoner on the Jackdaw.\nReturn to the overseer on the Jackdaw."
       },
       {
         "id": 10040313,
-        "name": "与艾森巴恩对话【待包装】",
-        "desc": "Description_10040313_01"
+        "name": "Talk to the storehouse keeper",
+        "desc": "As we're dealing with the difficult storehouse keeper, Eisenbahn arrives after receiving a report from his men. Talk to him."
       }
     ]
   },
@@ -19452,13 +19626,13 @@
     "quests": [
       {
         "id": 10040401,
-        "name": "前往登车【待包装】",
-        "desc": ""
+        "name": "Follow the overseer into the carriage",
+        "desc": "Flora, who until now had no connection to the Empire, has now asked us to help her escape. Prepare to board the train and begin the plan."
       },
       {
         "id": 10040402,
-        "name": "前往登车【待包装】",
-        "desc": "",
+        "name": "Follow the overseer into the carriage",
+        "desc": "Last night, the Phoxhunter team came up with a detailed plan to rescue Flora. Before we execute it, let's go over the steps.",
         "nodes": [
           {
             "id": "17677045255279100768",
@@ -19506,33 +19680,38 @@
       },
       {
         "id": 10040403,
-        "name": "前往车尾【待包装】",
-        "desc": ""
+        "name": "Head to the back of the train to get on the roof",
+        "desc": "Head to the back of the train to get on the roof."
       },
       {
         "id": 10040404,
-        "name": "泡茶【待包装】",
-        "desc": ""
+        "name": "Prepare tea and refreshments for Flora",
+        "desc": "Even though the escape plan is about to start, Miss Flora is still focused on her painting.\nPrepare some tea and refreshments for her."
       },
       {
         "id": 10040405,
-        "name": "击晕军团士兵【待包装】",
-        "desc": ""
+        "name": "Prepare to help Flora leave",
+        "desc": "Knock out the Legion soldiers and prepare to help Miss Flora escape."
       },
       {
         "id": 10040406,
-        "name": "突破军团士兵的包围【待包装】",
-        "desc": ""
+        "name": "Prepare to rescue Flora",
+        "desc": "We've made it onto the Jackdaw, but there are still some soldiers on the roof. Take them out and prepare to rescue Flora."
       },
       {
         "id": 10040407,
-        "name": "突破军团士兵的包围【待包装】",
-        "desc": "",
+        "name": "Prepare to rescue Flora",
+        "desc": "Together with Flora, we jumped off the Jackdaw and used the grappling hook to land on the Aurora. But inside the \"Rat Tin\", we ran into some unfriendly passengers. Luckily, Stéphane showed up to help.\nFollow Stéphane to the regular carriage.",
         "nodes": [
           {
             "id": "176778347795010204954",
             "type": "TalkNode",
             "name": "老鼠罐头对话",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "dialogues": [
               {
                 "id": 10046101,
@@ -19572,13 +19751,13 @@
               },
               {
                 "id": 10046107,
-                "content": "What, you've never heard it? The Rat Tin's the very last carriage: cheapest ticket, roughest ride. No service. No tables. No seats, unless you count the floor. We're packed in like rats in a tin. That's why they call it that.",
+                "content": "What, you've never heard of it? The Rat Tin's the very last carriage: cheapest ticket, roughest ride. No service. No tables. No seats, unless you count the floor. We're packed in like rats in a tin. That's why they call it that.",
                 "voice": "story/1004/100461/19263D6E",
                 "npc": 100426
               },
               {
                 "id": 10046108,
-                "content": "And you two... you don't look like you've ever had to go hungry. Her especially. Little miss fancy. Those clothes are probably worth more than my life. When I saw someone climbing down from the roof, I figured it was some desperate poor sod risking their neck for a free ride.",
+                "content": "And you two... you don't look like you've ever had to go hungry. Her especially. Little miss fancy. Those clothes are probably worth more than my life. When I saw somebody climbing down from the roof, I figured it was some desperate poor sod risking their neck for a free ride.",
                 "voice": "story/1004/100461/19263D98",
                 "npc": 100426
               },
@@ -19746,73 +19925,73 @@
       },
       {
         "id": 10040408,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Follow Stéphane to the regular carriage",
+        "desc": "We've reached the regular carriage. It's bustling with lively passengers. Have a chat with them to lighten the mood."
       },
       {
         "id": 10040409,
-        "name": "观察普通车厢的乘客【待包装】",
-        "desc": ""
+        "name": "Chat with the passengers in regular carriage",
+        "desc": "Talk to Stéphane and prepare to head to the front of the train."
       },
       {
         "id": 10040410,
-        "name": "与芙罗拉交谈【待包装】",
-        "desc": ""
+        "name": "Ask Flora what she thinks",
+        "desc": "So Stéphane is still worried about Carnot on this train. He helped us out back in the \"Rat Tin\", so let's help him in return. Talk to Flora about what to do."
       },
       {
         "id": 10040411,
-        "name": "与史蒂芬交谈【待包装】",
-        "desc": ""
+        "name": "Speak with Stéphane",
+        "desc": "Talk to Stéphane and prepare to head to the front of the train."
       },
       {
         "id": 10040413,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Head to the back of the train to get on the roof",
+        "desc": "To help Stéphane, you start moving toward the front of the train."
       },
       {
         "id": 10040414,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Head to the back of the train to get on the roof",
+        "desc": "To help Stéphane, you start moving toward the front of the train."
       },
       {
         "id": 10040415,
-        "name": "找地方躲藏【待包装】",
-        "desc": ""
+        "name": "Hide your tracks to avoid being detected",
+        "desc": "Something seems wrong with the servants in the servants' carriage! We need to hide and listen in."
       },
       {
         "id": 10040416,
-        "name": "寻找拆弹工具【待包装】",
-        "desc": ""
+        "name": "Find tools to defuse the bomb",
+        "desc": "The Forsakens are here again, and with bombs. This time, they're targeting this train itself. Can't let them succeed.\nFind tools and try to defuse the bomb."
       },
       {
         "id": 10040417,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Head to the back of the train to get on the roof",
+        "desc": "To figure out the Forsaken's goal, keep moving forward until you reach the first-class carriage."
       },
       {
         "id": 10040418,
-        "name": "走向钢琴【待包装】",
-        "desc": ""
+        "name": "Walk to the piano to prove your identity as a \"pianist\"",
+        "desc": "You've reached the first-class carriage. The other passengers are looking at you with suspicion. You need to prove you belong here.\nWalk to the piano and prove you're a \"pianist\"."
       },
       {
         "id": 10040419,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Head to the back of the train to get on the roof",
+        "desc": "To figure out the Forsaken's goal, keep moving forward until you reach the first-class carriage."
       },
       {
         "id": 10040420,
-        "name": "调查血腥味的来源【待包装】",
-        "desc": ""
+        "name": "Investigate the conductor's carriage",
+        "desc": "The train conductor is dead. Investigate the area for any clues."
       },
       {
         "id": 10040421,
-        "name": "调查声音的来源【待包装】",
-        "desc": ""
+        "name": "Investigate the noise in the carriage",
+        "desc": "The conductor sent out a distress signal before he died. Just then, you hear a noise. Investigate it."
       },
       {
         "id": 10040422,
-        "name": "穿越列车【待包装】",
-        "desc": "",
+        "name": "Head to the back of the train to get on the roof",
+        "desc": "Even though the escape plan is about to start, Miss Flora is still focused on her painting.\nPrepare some tea and refreshments for her.",
         "nodes": [
           {
             "id": "17733847824543892952",
@@ -19826,7 +20005,7 @@
             "dialogues": [
               {
                 "id": 10045601,
-                "content": "Finally. Getting out of Icelake at last. Oof... it's freezing. I swear I've shrunk a size in this cold. Feels like my bones are going to crack.",
+                "content": "Finally. Getting out of Icelake at last. Oof... it's freezing. I swear I've shrunk a size in this cold. Feels like my bones are gonna crack.",
                 "voice": "story/1004/100456/1925EA6A",
                 "npc": 100408
               },
@@ -19838,7 +20017,7 @@
               },
               {
                 "id": 10045603,
-                "content": "Yes, sir... but look at them. Calm as anything. Feels like nothing's going to happen, doesn't it?",
+                "content": "Yes, sir... but look at them. Calm as anything. Feels like nothing's gonna happen, doesn't it?",
                 "voice": "story/1004/100456/1925EABE",
                 "npc": 100408
               },
@@ -19854,8 +20033,8 @@
       },
       {
         "id": 10040423,
-        "name": "将颜料交给芙罗拉【待包装】",
-        "desc": "",
+        "name": "Give the paint to Flora",
+        "desc": "Even though the escape plan is about to start, Miss Flora is still focused on her painting.\nPrepare some tea and refreshments for her.",
         "nodes": [
           {
             "id": "17733852121786481894",
@@ -19945,18 +20124,23 @@
       },
       {
         "id": 10040424,
-        "name": "突破军团士兵的包围【待包装】",
-        "desc": ""
+        "name": "Prepare to rescue Flora",
+        "desc": "Lead Flora away from the Jackdaw and jump to freedom!"
       },
       {
         "id": 10040426,
-        "name": "按照众人推测的位置寻找炸弹【待包装】",
-        "desc": "",
+        "name": "Defuse the bombs on the train",
+        "desc": "The train has been hijacked. A Forsakens member calling herself Katya has planted bombs all over the train. Flora is trying to reason with Katya. While she's doing that, defuse the bombs.",
         "nodes": [
           {
             "id": "177364904417822135541",
             "type": "TalkNode",
             "name": "飞艇出场",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "next": [
               "177364906021122135839"
             ],
@@ -19973,6 +20157,11 @@
             "id": "177364906021122135839",
             "type": "TalkNode",
             "name": "飞艇出场后",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "dialogues": [
               {
                 "id": 10048201,
@@ -19999,7 +20188,7 @@
               },
               {
                 "id": 10048205,
-                "content": "The Empire will not accept your demands. This is the only answer you'll get.",
+                "content": "The Empire will not accept your demands. This is the only answer you will get.",
                 "voice": "story/1004/100482/192795A2"
               },
               {
@@ -20086,13 +20275,18 @@
       },
       {
         "id": 10040427,
-        "name": "按照众人推测的位置寻找炸弹【待包装】",
-        "desc": "",
+        "name": "Defuse the bombs on the train",
+        "desc": "The train has been hijacked. A Forsakens member calling herself Katya has planted bombs all over the train. Flora is trying to reason with Katya. While she's doing that, defuse the bombs.",
         "nodes": [
           {
             "id": "17739985394261316133",
             "type": "TalkNode",
             "name": "芙罗拉交涉前",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "next": [
               "176854530181715415"
             ],
@@ -20247,6 +20441,11 @@
             "id": "176854530181715415",
             "type": "TalkNode",
             "name": "芙罗拉交涉",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "next": [
               "176854533174515872"
             ],
@@ -20341,12 +20540,17 @@
             "id": "176854533174515872",
             "type": "TalkNode",
             "name": "主角出场后",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "dialogues": [
               {
                 "id": 10048101,
                 "content": "Washed out or not... look at those robes.",
                 "voice": "story/1004/100481/19278492",
-                "npc": 100433
+                "npc": 100434
               },
               {
                 "id": 10048102,
@@ -20449,8 +20653,8 @@
       },
       {
         "id": 10040428,
-        "name": "按照众人推测的位置寻找炸弹【待包装】",
-        "desc": ""
+        "name": "Defuse the bombs on the train",
+        "desc": "The train has been hijacked. A Forsakens member calling herself Katya has planted bombs all over the train. Flora is trying to reason with Katya. While she's doing that, defuse the bombs."
       }
     ]
   },
@@ -20459,22 +20663,45 @@
     "quests": [
       {
         "id": 10040501,
-        "name": "启动炮台【待包装】",
-        "desc": ""
+        "name": "Operate the cannon to fend off the airship's attacks",
+        "desc": "Even though we stopped Katya, the distress signal the conductor sent out has drawn in Legion airships. They want to destroy the train and everyone on it.\nUse the turret on the train to stop the airships."
+      },
+      {
+        "id": 10040502,
+        "name": "Listen to Flora",
+        "desc": "The airship cannons have stopped."
+      },
+      {
+        "id": 10040503,
+        "name": "Stop Katya",
+        "desc": "Katya has taken control of the train's main cannon and is firing at the airships. We need to stop her.\nDefeat the Aurora Express's main cannon."
+      },
+      {
+        "id": 10040504,
+        "name": "Stop the out-of-control engine",
+        "desc": "Katya has been defeated and flees, but the train won't stop. It's going into overdrive. You need to get to the locomotive and find a way to stop it.\nTry to enter the cab and stop the train."
+      },
+      {
+        "id": 10040506,
+        "name": "Get to the locomotive and find a way to stop the train",
+        "desc": "Katya has been defeated and flees, but the train won't stop. It's going into overdrive. You need to get to the locomotive and find a way to stop it.\nTry to enter the cab and stop the train."
       },
       {
         "id": 10040507,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "What is this place... ?",
+        "desc": "What is this place... the Misty Sea? Look around and see.",
         "nodes": [
           {
             "id": "17685517578223352629",
             "type": "TalkNode",
             "name": "对话节点",
-            "srId": 106001,
+            "srId": 106101,
             "pos": [
-              -19850,
-              650
+              256340,
+              12660
+            ],
+            "next": [
+              "1779001647323103332703"
             ],
             "dialogues": [
               {
@@ -20513,84 +20740,264 @@
                 "npc": 100402
               }
             ]
+          },
+          {
+            "id": "1779001647323103332703",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
+            "next": [
+              "1779001654274103332962"
+            ],
+            "dialogues": [
+              {
+                "id": 10049007,
+                "content": "Breaking news. Earlier today, the Forsakens seized the Aurora Express on the southern edge of the Cocytus Region. An Imperial airship moved in to intervene. The hijackers responded by firing the train-mounted cannon.",
+                "voice": "story/1004/100490/19281936"
+              },
+              {
+                "id": 10049008,
+                "content": "The airship was hit and detonated near a massive Heaventree, setting it alight. This is the second Heaventree fire reported this year. The 6th Legion has dispatched additional units. All Aurora Express passengers remain unaccounted for. Their condition is unknown.",
+                "voice": "story/1004/100490/19281960"
+              },
+              {
+                "id": 10049009,
+                "content": "...",
+                "voice": "story/1004/100490/1928198A",
+                "npc": 200003
+              },
+              {
+                "id": 10049010,
+                "content": "Ma'am? Is my Tales of Icelake ready?",
+                "voice": "story/1004/100490/192819B4",
+                "npc": 100414
+              },
+              {
+                "id": 10049011,
+                "content": "My friend and I are heading out today, so we wanted something that tastes like Icelake. Something to remember this place by.",
+                "voice": "story/1004/100490/192819DE",
+                "npc": 100414
+              },
+              {
+                "id": 10049012,
+                "content": "...Ma'am?",
+                "voice": "story/1004/100490/19281A08",
+                "npc": 100414
+              },
+              {
+                "id": 10049013,
+                "content": "Yeah. Coming up.",
+                "voice": "story/1004/100490/19281A32",
+                "npc": 200003
+              },
+              {
+                "id": 10049014,
+                "content": "You'll make it... you have to. You said you'd been through worse.",
+                "voice": "story/1004/100490/19281A5C",
+                "npc": 200003
+              }
+            ]
+          },
+          {
+            "id": "1779001654274103332962",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
+            "next": [
+              "1779001654274103332963"
+            ],
+            "dialogues": [
+              {
+                "id": 10049015,
+                "content": "Her Highness was sitting right there a moment ago. What do you mean, \"vanished\"? What is this, some cheap detective novel?",
+                "voice": "story/1004/100490/19281A86",
+                "npc": 100424
+              },
+              {
+                "id": 10049016,
+                "content": "In detective novels, they call that a locked-room mystery, sir.",
+                "voice": "story/1004/100490/19281AB0",
+                "npc": 100403
+              },
+              {
+                "id": 10049017,
+                "content": "Did I ask you for a book report? Search the train. Find Princess Flodia. Tear the Jackdaw apart bolt by bolt if you have to.",
+                "voice": "story/1004/100490/19281ADA",
+                "npc": 100424
+              },
+              {
+                "id": 10049018,
+                "content": "Yes, sir.",
+                "voice": "story/1004/100490/19281B04",
+                "npc": 100403
+              }
+            ]
+          },
+          {
+            "id": "1779001654274103332963",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
+            "next": [
+              "1779001654274103332964"
+            ],
+            "dialogues": [
+              {
+                "id": 10049019,
+                "content": "...All clear.",
+                "voice": "story/1004/100490/19281B2E",
+                "npc": 100403
+              },
+              {
+                "id": 10049020,
+                "content": "Flora... {nickname}... I hope you're both alright.",
+                "voice": "story/1004/100490/19281B58",
+                "npc": 100403
+              }
+            ]
+          },
+          {
+            "id": "1779001654274103332964",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
+            "dialogues": [
+              {
+                "id": 10049021,
+                "content": "Is it true you and {性别：he|she} made some kind of pact, so you can sense {性别：him|her}? Is there really magic like that?",
+                "voice": "story/1004/100490/19281B82",
+                "npc": 100415
+              },
+              {
+                "id": 10049022,
+                "content": "Yes.",
+                "voice": "story/1004/100490/19281BAC",
+                "npc": 100404
+              },
+              {
+                "id": 10049023,
+                "content": "...Ah—!",
+                "voice": "story/1004/100490/19281BD6",
+                "npc": 100404
+              },
+              {
+                "id": 10049024,
+                "content": "That's it, isn't it? You felt something about {性别：him|her}!?",
+                "voice": "story/1004/100490/19281C00",
+                "npc": 100415
+              },
+              {
+                "id": 10049025,
+                "content": "...I did.",
+                "voice": "story/1004/100490/19281C2A",
+                "npc": 100404
+              },
+              {
+                "id": 10049026,
+                "content": "{性别：He|She}... is dead.",
+                "voice": "story/1004/100490/19281C54",
+                "npc": 100404
+              }
+            ]
           }
         ]
       },
       {
         "id": 10040508,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "What is this place... ?",
+        "desc": "What is this place... the Misty Sea? Look around and see.",
         "nodes": [
           {
             "id": "17739990786883938430",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106201,
+            "pos": [
+              -60,
+              30
+            ],
             "dialogues": [
               {
                 "id": 10049101,
                 "content": "(Is this... the Misty Sea? I always thought it was a myth.)",
                 "voice": "story/1004/100491/192828A2",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049102,
                 "content": "(So I really did die. Doesn't feel so bad. Just... lighter. And it doesn't hurt as much as I thought it would.)",
                 "voice": "story/1004/100491/192828CC",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049103,
                 "content": "(...Only thing is, I've got too much left undone.)",
                 "voice": "story/1004/100491/192828F6",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049104,
                 "content": "(So what now?)",
                 "voice": "story/1004/100491/19282920",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049105,
                 "content": "(Do I just keep going? There's no end to this place... or do I do what the myths say and keep on until I reach the far shore?)",
                 "voice": "story/1004/100491/1928294A",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049106,
                 "content": "(If the Charon tales are true, there should be a goddess waiting here. And a ferrywoman... but I don't see anyone. Off duty, is she?)",
                 "voice": "story/1004/100491/19282974",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049107,
                 "content": "(Fine. I'll do it myself. If I call the goddess's name, someone has to answer... otherwise this Misty Sea is a little too empty.)",
                 "voice": "story/1004/100491/1928299E",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049108,
                 "content": "(What was that creator-goddess's name again? Something that starts with \"Em\", I think...)",
                 "voice": "story/1004/100491/192829C8",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049109,
                 "content": "(Oh. <H>Embla</>.)",
                 "voice": "story/1004/100491/192829F2",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049110,
                 "content": "Embla? Embla!",
                 "voice": "story/1004/100491/19282A1C",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049111,
                 "content": "No one? Seriously? What is this — do you have to queue for the afterlife now?",
                 "voice": "story/1004/100491/19282A46",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049112,
@@ -20602,7 +21009,7 @@
                 "id": 10049113,
                 "content": "Who's there?",
                 "voice": "story/1004/100491/19282A9A",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049114,
@@ -20614,13 +21021,13 @@
                 "id": 10049115,
                 "content": "...Flora!? You're dead too!?",
                 "voice": "story/1004/100491/19282AEE",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049116,
                 "content": "How— then Stéphane... and everyone else... are they...? Don't tell me I still failed, after everything...",
                 "voice": "story/1004/100491/19282B18",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049117,
@@ -20632,7 +21039,7 @@
                 "id": 10049118,
                 "content": "What do you mean?",
                 "voice": "story/1004/100491/19282B6C",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049119,
@@ -20644,13 +21051,13 @@
                 "id": 10049120,
                 "content": "The pact...? You mean the one we made on the train?",
                 "voice": "story/1004/100491/19282BC0",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049121,
                 "content": "Wait... so it wasn't just words? It really lets you reach me after I die?",
                 "voice": "story/1004/100491/19282BEA",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049122,
@@ -20680,7 +21087,7 @@
                 "id": 10049126,
                 "content": "I'm sorry...",
                 "voice": "story/1004/100491/19282CBC",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049127,
@@ -20704,7 +21111,7 @@
                 "id": 10049130,
                 "content": "For what?",
                 "voice": "story/1004/100491/19282D64",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049131,
@@ -20716,13 +21123,13 @@
                 "id": 10049132,
                 "content": "Alright.",
                 "voice": "story/1004/100491/19282DB8",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049133,
                 "content": "Though... you're a bit chattier than the Flora I know.",
                 "voice": "story/1004/100491/19282DE2",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049134,
@@ -20746,25 +21153,25 @@
                 "id": 10049137,
                 "content": "\"Beautiful and unfeeling.\" That fits. But I'd put it another way:",
                 "voice": "story/1004/100491/19282E8A",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049138,
                 "content": "It's the world where people are still waiting for me.",
                 "voice": "story/1004/100491/19282EB4",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049139,
                 "content": "This world isn't something you can sum up in a couple of words. It can be brutal — brutal enough to throw me into the Misty Sea.",
                 "voice": "story/1004/100491/19282EDE",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049140,
                 "content": "But it's also made of people who care about me. And for them... I have to go back.",
                 "voice": "story/1004/100491/19282F08",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049141,
@@ -20776,7 +21183,7 @@
                 "id": 10049142,
                 "content": "What about you? What are you going to do next?",
                 "voice": "story/1004/100491/19282F5C",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049143,
@@ -20800,7 +21207,7 @@
                 "id": 10049146,
                 "content": "Revenge?",
                 "voice": "story/1004/100491/19283004",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049147,
@@ -20854,7 +21261,7 @@
                 "id": 10049155,
                 "content": "You don't remember? I became that a long time ago.",
                 "voice": "story/1004/100491/1928317E",
-                "npc": 100001,
+                "npc": 1001,
                 "next": 100499190
               }
             ]
@@ -20863,13 +21270,18 @@
       },
       {
         "id": 10040509,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "What is this place... ?",
+        "desc": "What is this place... the Misty Sea? Look around and see.",
         "nodes": [
           {
             "id": "17739992114523939815",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
             "dialogues": [
               {
                 "id": 10049301,
@@ -20973,13 +21385,18 @@
       },
       {
         "id": 10040510,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "What is this place... ?",
+        "desc": "What is this place... the Misty Sea? Look around and see.",
         "nodes": [
           {
             "id": "17739990553773937968",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
             "dialogues": [
               {
                 "id": 10049801,
@@ -21005,13 +21422,18 @@
       },
       {
         "id": 10040511,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "What is this place... ?",
+        "desc": "What is this place... the Misty Sea? Look around and see.",
         "nodes": [
           {
             "id": "17739991462953938790",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -19850,
+              650
+            ],
             "dialogues": [
               {
                 "id": 10049201,
@@ -21072,174 +21494,13 @@
       },
       {
         "id": 10040512,
-        "name": "？？？【待包装】",
-        "desc": "",
-        "nodes": [
-          {
-            "id": "17740021794786559034",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "next": [
-              "17740021794796559035"
-            ],
-            "dialogues": [
-              {
-                "id": 10049015,
-                "content": "Her Highness was sitting right there a moment ago. What do you mean, \"vanished\"? What is this, some cheap detective novel?",
-                "voice": "story/1004/100490/19281A86",
-                "npc": 100424
-              },
-              {
-                "id": 10049016,
-                "content": "In detective novels, they call that a locked-room mystery, sir.",
-                "voice": "story/1004/100490/19281AB0",
-                "npc": 100403
-              },
-              {
-                "id": 10049017,
-                "content": "Did I ask you for a book report? Search the train. Find Princess Flodia. Tear the Jackdaw apart bolt by bolt if you have to.",
-                "voice": "story/1004/100490/19281ADA",
-                "npc": 100424
-              },
-              {
-                "id": 10049018,
-                "content": "Yes, sir.",
-                "voice": "story/1004/100490/19281B04",
-                "npc": 100403
-              }
-            ]
-          },
-          {
-            "id": "17740021794796559035",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "next": [
-              "17740021794796559036"
-            ],
-            "dialogues": [
-              {
-                "id": 10049019,
-                "content": "...All clear.",
-                "voice": "story/1004/100490/19281B2E",
-                "npc": 100403
-              },
-              {
-                "id": 10049020,
-                "content": "Flora... {nickname}... I hope you're both alright.",
-                "voice": "story/1004/100490/19281B58",
-                "npc": 100415
-              }
-            ]
-          },
-          {
-            "id": "17740021794796559036",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "dialogues": [
-              {
-                "id": 10049021,
-                "content": "Is it true you and {性别：him|her} made some kind of pact, so you can sense {性别：him|her}? Is there really magic like that?",
-                "voice": "story/1004/100490/19281B82",
-                "npc": 100404
-              },
-              {
-                "id": 10049022,
-                "content": "Yes.",
-                "voice": "story/1004/100490/19281BAC",
-                "npc": 100404
-              },
-              {
-                "id": 10049023,
-                "content": "...Ah—!",
-                "voice": "story/1004/100490/19281BD6",
-                "npc": 100415
-              },
-              {
-                "id": 10049024,
-                "content": "That's it, isn't it? You felt something about {性别：him|her}!?",
-                "voice": "story/1004/100490/19281C00",
-                "npc": 100404
-              },
-              {
-                "id": 10049025,
-                "content": "...I did.",
-                "voice": "story/1004/100490/19281C2A",
-                "npc": 100404
-              },
-              {
-                "id": 10049026,
-                "content": "{性别：He|She}... is dead.",
-                "voice": "story/1004/100490/19281C54",
-                "npc": 100001
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 10040513,
-        "name": "？？？【待包装】",
-        "desc": "",
-        "nodes": [
-          {
-            "id": "17740021315026558336",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "dialogues": [
-              {
-                "id": 10049007,
-                "content": "Breaking news. Earlier today, the Forsakens seized the Aurora Express on the southern edge of the Cocytus Region. An Imperial airship moved in to intervene. The hijackers responded by firing the train-mounted cannon.",
-                "voice": "story/1004/100490/19281936"
-              },
-              {
-                "id": 10049008,
-                "content": "The airship was hit and detonated near a massive Heaventree, setting it alight. This is the second Heaventree fire reported this year. The 6th Legion has dispatched additional units. All Aurora Express passengers remain unaccounted for. Their condition is unknown.",
-                "voice": "story/1004/100490/19281960"
-              },
-              {
-                "id": 10049009,
-                "content": "...",
-                "voice": "story/1004/100490/1928198A",
-                "npc": 200003
-              },
-              {
-                "id": 10049010,
-                "content": "Ma'am? Is my Tales of Icelake ready?",
-                "voice": "story/1004/100490/192819B4",
-                "npc": 100414
-              },
-              {
-                "id": 10049011,
-                "content": "My friend and I are heading out today, so we wanted something that tastes like Icelake. Something to remember this place by.",
-                "voice": "story/1004/100490/192819DE",
-                "npc": 100414
-              },
-              {
-                "id": 10049012,
-                "content": "...Ma'am?",
-                "voice": "story/1004/100490/19281A08",
-                "npc": 100414
-              },
-              {
-                "id": 10049013,
-                "content": "Yeah. Coming up.",
-                "voice": "story/1004/100490/19281A32",
-                "npc": 200003
-              },
-              {
-                "id": 10049014,
-                "content": "You'll make it... you have to. You said you'd been through worse.",
-                "voice": "story/1004/100490/19281A5C",
-                "npc": 200003
-              }
-            ]
-          }
-        ]
+        "name": "What is this place... ?",
+        "desc": "What is this place... the Misty Sea? Look around and see."
       },
       {
         "id": 10040514,
-        "name": "前往车头【待包装】",
-        "desc": ""
+        "name": "Get to the locomotive and find a way to stop the train",
+        "desc": "Katya has been defeated and flees, but the train won't stop. It's going into overdrive. You need to get to the locomotive and find a way to stop it.\nTry to enter the cab and stop the train."
       }
     ]
   },
@@ -77118,22 +77379,6 @@
     "id": 200237,
     "quests": [
       {
-        "id": 20023700,
-        "name": "",
-        "nodes": [
-          {
-            "id": "17766704000502756088",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "srId": 210101,
-            "pos": [
-              -383,
-              2829
-            ]
-          }
-        ]
-      },
-      {
         "id": 20023701,
         "name": "Return to the Sanctuary",
         "desc": "It's been several days since you left Icelake. Now that you're back, you should stop by the Sanctuary... But where's Snow?",
@@ -77364,7 +77609,7 @@
       {
         "id": 20023702,
         "name": "Complete the Trial",
-        "desc": "Clear Floor 12 of Abyss Expedition once and amplify any Golden-tier Demon Wedge to Level 10."
+        "desc": "Clear Floor 12 of Immersive Theatre once and amplify any Golden-tier Demon Wedge to Level 10."
       }
     ]
   },
@@ -77390,7 +77635,7 @@
       {
         "id": 20023801,
         "name": "Submit materials to Lunosmith",
-        "desc": "Submit ×100 each of [Emblem of Strength], [Emblem of Faith], [Emblem of Harmony], [Emblem of Corruption], and [Emblem of Rebellion]"
+        "desc": "Submit ×30 each of [Emblem of Strength], [Emblem of Faith], [Emblem of Harmony], [Emblem of Corruption], and [Emblem of Rebellion]"
       },
       {
         "id": 20023802,
@@ -77452,7 +77697,7 @@
       {
         "id": 20024001,
         "name": "Submit materials to Lunosmith",
-        "desc": "Submit ×1 [Prismatic Crystal]"
+        "desc": "Submit ×1 [Radiant Crystal]"
       },
       {
         "id": 20024002,
@@ -89455,7 +89700,7 @@
               },
               {
                 "id": 51200029,
-                "content": "(The \"poor\" boy had slipped away at some point without anyone noticing.)"
+                "content": "(The \"poor\" boy had slipped away at some point without anyone noticing, so all you can do is take your leave.)"
               }
             ]
           },
@@ -89681,7 +89926,7 @@
                   },
                   {
                     "id": 51200069,
-                    "content": "Come on, son. Let's get you some ice cream. But first, give daddy every coin you've swindled today.",
+                    "content": "We can't be your parents.",
                     "next": 51200072,
                     "impr": [
                       1011,
@@ -89693,7 +89938,7 @@
               },
               {
                 "id": 51200070,
-                "content": "L—Little Minion...? What are you saying? Have you lost your mind!?",
+                "content": "Come on, son. Let's get you some ice cream. But first, give daddy every coin you've swindled today.",
                 "npc": 100001,
                 "next": 51200071
               },
@@ -89705,7 +89950,7 @@
               },
               {
                 "id": 51200071,
-                "content": "We can't be your parents.",
+                "content": "L—Little Minion...? What are you saying? Have you lost your mind!?",
                 "npc": 200002,
                 "next": 51200073
               },
@@ -90618,8 +90863,8 @@
       },
       {
         "id": 20040201,
-        "name": "出于一些目的，你决定买下这个盒子。",
-        "desc": "行商向你们展示了一种奇怪的盒子，看起来年代已久……你们不仅有些怀疑，这么小的盒子里面，真的会有宝贝吗？",
+        "name": "For your own reasons, you decide to buy the cigarette pack.",
+        "desc": "The merchant shows you a strange, antique-looking cigarette pack. You cannot help wondering whether something so small could really contain any treasure.",
         "nodes": [
           {
             "id": "1775201272468889320",
@@ -90702,7 +90947,7 @@
               },
               {
                 "id": 51200420,
-                "content": "Have you, now? Even better. Then I can already tell there are a few pieces here you won't want to miss.",
+                "content": "Have you, now? Even better. Then there are some things here you definitely won't want to miss. It's just... these pieces are rare, and there's always someone after them. So if you don't mind, please follow me — somewhere quieter to talk.",
                 "npc": 700397
               }
             ]
@@ -90722,7 +90967,7 @@
             "dialogues": [
               {
                 "id": 51200722,
-                "content": "到这里就可以了。诸位，请看，这就是我要向你们展示的宝物……",
+                "content": "Right here will do. Now, everyone, take a look. This is the treasure I wanted to show you...",
                 "npc": 700397,
                 "next": 51200421
               },
@@ -91003,8 +91248,8 @@
       },
       {
         "id": 20040202,
-        "name": "先拆开盒子看看里面有什么吧。",
-        "desc": "你们花了大价钱买下了行商的盒子。白左看右看，不相信大价钱只卖下了一个普通的盒子，准备用一些特殊手段探索盒子的秘密，却被一位路人制止了。",
+        "name": "Open the cigarette pack and see what is inside.",
+        "desc": "You pay a hefty sum for the cigarette pack. Snow turns it over in her hands, unable to believe you spent so much on an ordinary pack. Just as she is about to resort to rather unorthodox methods to uncover its secret, a passer-by stops her.",
         "nodes": [
           {
             "id": "1775201542836892051",
@@ -91181,8 +91426,8 @@
       },
       {
         "id": 20040203,
-        "name": "热心的路人想要买下盒子，问问他出价多少。",
-        "desc": "路人名叫托兰，自称是“懂行”的汽笛沙龙成员，提议向你们购买这枚纸盒。听见他的报价，你们意识到自己被骗了。愤怒的白连忙喊上奥特赛德去追行商。",
+        "name": "A helpful passer-by wants to buy the cigarette pack. Ask how much he is offering.",
+        "desc": "The passer-by introduces himself as Toran, a member of the Steamwhistle Salon who claims to know a thing or two about such objects, and offers to buy the cigarette pack from you. When you hear his offer, you realise you have been ripped off. Furious, Snow grabs Outsider and tears off after the merchant.",
         "nodes": [
           {
             "id": "17752033189461774989",
@@ -91586,8 +91831,8 @@
       },
       {
         "id": 20040204,
-        "name": "和白与奥特赛德复述事情的经过。",
-        "desc": "白和奥特赛德没有追到狡猾的行商。你向他们讲起了方才从托兰口中了解到的信息，准备深入汽笛沙龙调查。恰巧一位贵族听到了你们的谈话。",
+        "name": "Tell Snow and Outsider what happened.",
+        "desc": "Snow and Outsider fail to catch the slippery merchant. You tell them what Toran just told you, and the group prepares to look further into the Steamwhistle Salon. Just then, a young nobleman happens to overhear your conversation.",
         "nodes": [
           {
             "id": "17752060277942663916",
@@ -91819,8 +92064,8 @@
       },
       {
         "id": 20040205,
-        "name": "前往汽笛沙龙所在的贵族休息室。",
-        "desc": "你们按照计划前往了汽笛沙龙，准备深入调查关于“艾森巴恩过大的个人名气”的事情。托兰在此处等候已久。",
+        "name": "Head to the nobles' lounge where the Steamwhistle Salon meets.",
+        "desc": "As planned, you head to the Steamwhistle Salon to investigate the matter of Eisenbahn's outsized personal fame. Toran has been waiting for you there.",
         "nodes": [
           {
             "id": "17752073161012668681",
@@ -92014,8 +92259,8 @@
       },
       {
         "id": 20040206,
-        "name": "进入贵族休息室。",
-        "desc": "你们进入了汽笛沙龙。汽笛沙龙的会长西顿亲切地接待了你们，邀请你们参加汽笛沙龙近期举办的摄影比赛，并引此作为新人考核。",
+        "name": "Enter the lounge.",
+        "desc": "You enter the Steamwhistle Salon, where its chairman, Seaton, gives you a warm welcome. He invites you to take part in the Salon's upcoming photography contest, which will also serve as a trial for newcomers like yourselves.",
         "nodes": [
           {
             "id": "17752184943203562417",
@@ -92067,7 +92312,7 @@
               },
               {
                 "id": 51200605,
-                "content": "I didn't realise {性别：him|her} would be bringing servants too...",
+                "content": "I didn't realise {性别：he|she} would be bringing servants too...",
                 "npc": 700398,
                 "next": 51200606
               },
@@ -92163,7 +92408,7 @@
             "srId": 106001,
             "pos": [
               -31350,
-              -6240
+              -6190
             ],
             "next": [
               "17752186450093564395"
@@ -92188,8 +92433,8 @@
             "name": "与白对话",
             "srId": 106001,
             "pos": [
-              -32970,
-              -6500
+              -32980,
+              -6530
             ],
             "dialogues": [
               {
@@ -92209,8 +92454,8 @@
       },
       {
         "id": 20040207,
-        "name": "寻找负责人托兰，了解摄影比赛的流程。",
-        "desc": "你向负责人托兰，询问了关于摄影比赛的安排和流程。",
+        "name": "Find Toran and ask him about the photography contest.",
+        "desc": "You ask Toran, the person in charge, about the arrangements and procedures for the photography contest.",
         "nodes": [
           {
             "id": "17752191977874448559",
@@ -92300,8 +92545,8 @@
       },
       {
         "id": 20040208,
-        "name": "在车站里找到合适的地方大拍特拍！",
-        "desc": "你和托兰前往火车站拍照，托兰为你传授了一些拍照技巧。起初一切顺利，你们在指定地点拍摄到了艾森巴恩的身影，托兰显得异常激动。",
+        "name": "Find a good spot in the station and start taking photos.",
+        "desc": "You and Toran head into the station to take photos, and he teaches you a few useful techniques along the way. At first, everything goes smoothly: you capture several shots of Eisenbahn from the designated locations, and Toran grows visibly excited.",
         "nodes": [
           {
             "id": "17752211349384450874",
@@ -92603,7 +92848,7 @@
             "dialogues": [
               {
                 "id": 51200713,
-                "content": "洗照片吗？没问题，你稍等一下。",
+                "content": "Need your photo developed? No problem. Just give me a moment.",
                 "npc": 700398
               }
             ]
@@ -92623,7 +92868,7 @@
             "dialogues": [
               {
                 "id": 51200714,
-                "content": "托兰接过胶卷，神色恹恹地走了。不多时，他就捧着一张照片回来了。"
+                "content": "Toran took the film and walked off with a sour look. Before long, he returned with a photo in hand."
               }
             ]
           },
@@ -92639,12 +92884,12 @@
             "dialogues": [
               {
                 "id": 51200715,
-                "content": "洗好了，你要看看照片吗？",
+                "content": "It's ready. Want to take a look?",
                 "npc": 700398,
                 "options": [
                   {
                     "id": 51200716,
-                    "content": "查看照片",
+                    "content": "View the photo",
                     "next": 51200717
                   }
                 ]
@@ -92655,8 +92900,8 @@
       },
       {
         "id": 20040209,
-        "name": "等待比赛的结果出炉。",
-        "desc": "摄影比赛的结果还需要一段时间，不过不会太久。事情已经交给托兰，你只需要等待。",
+        "name": "Wait for the results.",
+        "desc": "The results will take a little while, though not too long. Toran is handling everything, so all you need to do is wait.",
         "nodes": [
           {
             "id": "17752221153064457064",
@@ -92673,7 +92918,7 @@
             "dialogues": [
               {
                 "id": 51200680,
-                "content": "There you are! I've been looking everywhere for you. Your photograph won!",
+                "content": "There you are! I never thought your photograph would win first place...",
                 "npc": 700398,
                 "next": 51200681
               },
@@ -92776,7 +93021,7 @@
             "srId": 106001,
             "pos": [
               -31350,
-              -6240
+              -6190
             ],
             "next": [
               "17752222400044458317"
@@ -92867,8 +93112,8 @@
             "name": "与白对话",
             "srId": 106001,
             "pos": [
-              -32970,
-              -6500
+              -32980,
+              -6530
             ],
             "dialogues": [
               {
@@ -92925,18 +93170,13 @@
             "id": "17753787900495297986",
             "type": "TalkNode",
             "name": "前置对话",
-            "srId": 106001,
-            "pos": [
-              -31070,
-              12095
-            ],
             "next": [
               "177555419366314603047"
             ],
             "dialogues": [
               {
                 "id": 51200801,
-                "content": "This should be the freight yard. Doesn't look like much goes on over here. Let's have a quick look around, then head back to the passenger platforms. Don't forget why we're here: the mysterious prisoner.",
+                "content": "This should be the freight yard. Doesn't look like much goes on over here. Let's have a quick look around, then head back to the passenger platforms. There's not much left to investigate here anyway.",
                 "npc": 700409,
                 "next": 51200802
               },
@@ -92948,7 +93188,7 @@
               },
               {
                 "id": 51200803,
-                "content": "So maybe they're using the same trick... sneaking that mysterious prisoner out through the freight yard because no one would think to look here!",
+                "content": "So I'm thinking, maybe there's some important clue hidden here in the freight yard!",
                 "npc": 200002,
                 "next": 51200804
               },
@@ -92960,7 +93200,7 @@
               },
               {
                 "id": 51200805,
-                "content": "What are you babbling about? If they were moving someone out, they'd need a train. And unless you've spotted one hiding in thin air, this place is empty.",
+                "content": "What are you babbling about? Look around — it's completely empty. There's hardly a soul in sight and nowhere to even begin.",
                 "npc": 700409,
                 "next": 51200806
               },
@@ -93016,11 +93256,6 @@
             "id": "177555419366314603047",
             "type": "TalkNode",
             "name": "老奶出现",
-            "srId": 106001,
-            "pos": [
-              -31070,
-              12095
-            ],
             "dialogues": [
               {
                 "id": 51200814,
@@ -93542,8 +93777,8 @@
             "name": "黑屏",
             "srId": 106001,
             "pos": [
-              -35901,
-              6314
+              -30780,
+              6480
             ],
             "next": [
               "177537943619910598294"
@@ -93566,8 +93801,8 @@
             "name": "医生对话",
             "srId": 106001,
             "pos": [
-              -35901,
-              6314
+              -30780,
+              6480
             ],
             "next": [
               "17753789376446623047"
@@ -93688,8 +93923,8 @@
             "name": "开启推理线索",
             "srId": 106001,
             "pos": [
-              -35901,
-              6314
+              -30780,
+              6480
             ],
             "answers": [
               {

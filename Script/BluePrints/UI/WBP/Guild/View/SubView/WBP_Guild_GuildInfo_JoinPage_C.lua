@@ -1,10 +1,11 @@
 require("UnLua")
-local UIManager = GWorld.GameInstance:GetGameUIManager()
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:Destruct()
+  self.Head_Anchor_President.OnMenuOpenChanged:Remove(self, self.PresidentHeadMenuOpenChanged)
+  self.Head_Anchor_Vice.OnMenuOpenChanged:Remove(self, self.ViceHeadMenuOpenChanged)
   GuildController:UnRegisterEvent(self)
 end
 
@@ -131,17 +132,30 @@ end
 
 function M:BindPresident(PlayerInfo)
   self.Head_President:HeadIconSetupAnchor(self.Head_Anchor_President, PlayerInfo, self.GuildFullInfo)
+  self.Head_Anchor_President.OnMenuOpenChanged:Add(self, self.PresidentHeadMenuOpenChanged)
+end
+
+function M:PresidentHeadMenuOpenChanged()
+  self.Head_President:SetFocus()
 end
 
 function M:BindVice(PlayerInfo)
   self.Head_Vice:HeadIconSetupAnchor(self.Head_Anchor_Vice, PlayerInfo, self.GuildFullInfo)
+  self.Head_Anchor_Vice.OnMenuOpenChanged:Add(self, self.ViceHeadMenuOpenChanged)
+end
+
+function M:ViceHeadMenuOpenChanged()
+  self.Head_Vice:SetFocus()
 end
 
 function M:SetPresidentInfo(OtherUid, HeadIcon, TextName, TextNumLevel, BindFunc)
   local function SetInfo(OtherPlayerInfo)
+    if not IsValid(self) then
+      return
+    end
+    local UIManager = GWorld.GameInstance:GetGameUIManager()
     if self.MainView == "GuildMain" then
       local GuildMain = UIManager:GetUIObj("GuildMain")
-      
       if not GuildMain then
         return
       end
@@ -176,6 +190,7 @@ function M:SetPresidentInfo(OtherUid, HeadIcon, TextName, TextNumLevel, BindFunc
 end
 
 function M:Report()
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
   UIManager:ShowCommonPopupUI(100090, {
     GuildName = self.GuildFullInfo.Name,
     GuildId = self.GuildFullInfo.GuildId,
@@ -188,19 +203,23 @@ end
 
 function M:Copy()
   UE.UUIFunctionLibrary.ClipboardCopy(self.Text_ID:GetText())
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
   UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_GuildIDCopied"))
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
 end
 
 function M:Territory()
-  UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_FunctionNotAvailable"))
+  UIManager():ShowUITip(UIConst.Tip_CommonToast, GText("UI_FunctionNotAvailable"))
 end
 
 function M:ApplyJoinGuild()
   if not GWorld:GetAvatar():CheckUIUnlocked("OpenGuild") then
+    local UIManager = GWorld.GameInstance:GetGameUIManager()
     UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_Locked_Des_Guild"))
     return
   end
-  GuildController:SendRequestJoinGuild(self.GuildData.GuildId)
+  GuildController:SendRequestJoinGuild(self.GuildData.GuildId, 2)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/confirm_click", nil, nil)
 end
 
 function M:RefreshDeviceUI()
@@ -321,6 +340,15 @@ function M:ShowAllGamePadIcon()
   self.Btn_Territory:SetGamepadIconVisibility(true)
   self.Btn_Apply:SetGamepadIconVisibility(true)
   self:RefreshDeviceUI()
+end
+
+function M:JoinSuccessful()
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
+  if self.GuildData.AutoAgreeJoinRequest then
+    UIManager:ShowUITip(UIConst.Tip_CommonToast, string.format(GText("GuildSuccessJoin"), self.GuildFullInfo.Name))
+  else
+    UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_ApplicationAlreadySent"))
+  end
 end
 
 return M

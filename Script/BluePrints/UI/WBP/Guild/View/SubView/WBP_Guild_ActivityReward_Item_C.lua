@@ -38,6 +38,7 @@ function M:Setup(Idx, RequiredActiveness, ActivityLevel, bGot)
 end
 
 function M:OnClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm_positive", nil, nil)
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
     return

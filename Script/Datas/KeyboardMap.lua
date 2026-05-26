@@ -12,7 +12,7 @@ return ReadOnly("KeyboardMap", {
     CanChanged = true,
     IsShowInSetting = true,
     Key = "A",
-    Scale = "-1.0",
+    Scale = "-1",
     SortId = 34
   },
   ActiveGuide = {
@@ -82,7 +82,7 @@ return ReadOnly("KeyboardMap", {
     CanChanged = true,
     IsShowInSetting = true,
     Key = "D",
-    Scale = "1.0",
+    Scale = "1",
     SortId = 36
   },
   DownSelect = {
@@ -287,7 +287,7 @@ return ReadOnly("KeyboardMap", {
     CanChanged = true,
     IsShowInSetting = true,
     Key = "S",
-    Scale = "-1.0",
+    Scale = "-1",
     SortId = 35
   },
   ShowCursor = {
@@ -484,7 +484,7 @@ return ReadOnly("KeyboardMap", {
     CanChanged = true,
     IsShowInSetting = true,
     Key = "W",
-    Scale = "1.0",
+    Scale = "1",
     SortId = 33
   }
 })

@@ -387,7 +387,7 @@
     "id": 14111,
     "icon": "Melee",
     "n": "Andante furioso : Rage ardente",
-    "d": "Tous les 1 coups critiques infligés par un allié confèrent un cumul de +5% d’ATQ pendant 12 s, jusqu’à 30 cumuls.",
+    "d": "Chaque coup critique infligé par un allié confère un cumul de +5% d’ATQ pendant 12 s, jusqu’à 30 cumuls.",
     "t": 1,
     "tip": "Prend effet au début de la Représentation à l’affiche – Acte II"
   },

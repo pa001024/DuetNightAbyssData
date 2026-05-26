@@ -488,6 +488,7 @@ end
 
 function M:PlayInAnim()
   self:PlayAnimation(self.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/common_page_in", nil, nil)
 end
 
 function M:PlayOutAnim()
@@ -543,7 +544,10 @@ function M:OnBtnMoreMenuOpenChanged(bIsOpen)
     self:InitEnsureBackBottomKeyInfo()
   else
     self:InitBaseBottomKeyInfo()
-    self:FocusToMemberList(true)
+    local CommonDialog = UIManager(self):GetUIObj("CommonDialog")
+    if not CommonDialog then
+      self:FocusToMemberList(true)
+    end
   end
 end
 

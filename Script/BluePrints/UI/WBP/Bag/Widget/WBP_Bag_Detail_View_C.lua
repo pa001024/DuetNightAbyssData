@@ -246,7 +246,7 @@ function WBP_Bag_Detail_View_C:RefreshInfoWithWeapon(PlayerAvatar, StuffServerDa
 end
 
 function WBP_Bag_Detail_View_C:RefreshInfoWithMod(PlayerAvatar, StuffServerData, StuffConfigData)
-  self.Text_ItemName:SetText(StuffServerData:GetName(ModInfo))
+  self.Text_ItemName:SetText(StuffServerData:GetName())
   local StuffLevel = StuffServerData.Level or 1
   self.Text_Polarity01:SetText(GText(StuffConfigData.FunctionDes))
   self.Text_Polarity02:SetText(tostring(StuffServerData.Cost))

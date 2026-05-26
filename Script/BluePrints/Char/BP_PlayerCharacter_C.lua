@@ -2040,7 +2040,7 @@ function BP_PlayerCharacter_C:TryOpenSkillUI(CharUIId, bIsOpenByBuff)
       
       if bIsOpenByBuff and CharUIInfo.TriggerBuffDelay then
         self:AddTimer_Combat(CharUIInfo.TriggerBuffDelay, function()
-          if self.BuffManager and self.BuffManager:HasBuff(CharUIInfo.TriggerBuffId) then
+          if self.BuffManager and self.BuffManager:HasBuff(CharUIInfo.TriggerBuffId, false) then
             OpenUIFunctor()
           end
         end, false, 0, nil, true)
@@ -2253,6 +2253,13 @@ end
 
 function BP_PlayerCharacter_C:PlayDungeonSettlementMVPSequence(FolderPath, Offset)
   local SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/" .. FolderPath .. "/Sequence/" .. FolderPath .. "_MVPShow_Cam." .. FolderPath .. "_MVPShow_Cam"
+  if CommonUtils.GetRuntimePlatform(self) == "Mobile" then
+    if string.find(SequencePath, "Jisu_") then
+      SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/Jisu/Sequence/Jisu_MVPShow_Cam_Mobile.Jisu_MVPShow_Cam_Mobile"
+    elseif string.find(SequencePath, "Zuirang_") then
+      SequencePath = "/Game/Asset/Char/Player/Common/MVPShow/Zuirang/Sequence/Zuirang_MVPShow_Cam_Mobile.Zuirang_MVPShow_Cam_Mobile"
+    end
+  end
   self:PlayMVPSequence(SequencePath, Offset)
 end
 

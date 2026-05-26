@@ -13,6 +13,7 @@ function M:Construct()
   self.Btn_Yes:BindEventOnClicked(self, self.OnSaveClicked)
   self.Btn_Yes:BindForbidStateExecuteEvent(self, self.OnSaveClickedForbidden)
   self.Btn_Close:BindEventOnClicked(self, self.OnBtnCloseClicked)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/title_setting_panel_expand", "GuildPermission", nil)
 end
 
 function M:Destruct()
@@ -461,6 +462,7 @@ function M:OnCloseClicked()
 end
 
 function M:CloseDialog()
+  AudioManager(self):SetEventSoundParam(self, "GuildPermission", {ToEnd = 1})
   self:PlayAnimation(self.Out)
 end
 

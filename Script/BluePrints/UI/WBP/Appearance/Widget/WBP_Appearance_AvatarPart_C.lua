@@ -55,9 +55,10 @@ function M:Init(Params)
   self.Type = CommonConst.ArmoryType.Char
   self.MainModel = self.Parent.MainModel
   self.ActorController = self.Parent.ActorController
+  self.bFirstInit = true
   self:InitCharList()
-  self:OnSelectedCharContentChanged()
   self:InitEntranceBtn()
+  self:OnSelectedCharContentChanged()
 end
 
 function M:OnSelectedCharContentChanged()
@@ -65,8 +66,7 @@ function M:OnSelectedCharContentChanged()
   self:InitCharAppearanceSuits()
   self:UpdateAppearancePlan()
   self.ActorController:ChangeCharModel(self.MainModel:GetSelectedChar())
-  self.ActorController:ResetActorRotation()
-  self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, nil, CommonConst.ArmoryTag.Appearance)
+  self.List_Avatar:BP_ScrollItemIntoView(self.MainModel:GetSelectedCharContent())
 end
 
 function M:InitCharAppearanceSuits()
@@ -239,11 +239,25 @@ function M:OnTabChangeToOther()
   self:PlayOutAnim()
 end
 
-function M:OnTabChangeToSelf(JumpParams)
-  self:PlayInAnim()
+function M:UpdateMontage()
   self.ActorController:ResetActorRotation()
   self.ActorController.bPlaySameMontage = true
   self.ActorController:SetMontageAndCamera(CommonConst.ArmoryType.Char, nil, CommonConst.ArmoryTag.Appearance)
+end
+
+function M:OnTabChangeToSelf(JumpParams)
+  self.FSM:Clear()
+  self:PlayInAnim()
+  if self.bFirstInit then
+    self.bFirstInit = false
+    self.ActorController:HidePlayerActor(self.ActorController.UIName, true)
+    self:AddTimer(0.03, function()
+      self.ActorController:HidePlayerActor(self.ActorController.UIName, false)
+      self:UpdateMontage()
+    end, false, 0, "FirstInitActor")
+  else
+    self:UpdateMontage()
+  end
   self:OnFocusChanged()
 end
 
@@ -359,7 +373,7 @@ function M:OnCharAppearanceChanged(Ret, CharUuid, AppearanceIndex)
     return
   end
   if self.ActorController and self.ActorController.ArmoryPlayer then
-    local AppearanceSuit = SelectedChar.DumpAppearanceSuit and SelectedChar:DumpAppearanceSuit(GWorld:GetAvatar()) or nil
+    local AppearanceSuit = SelectedChar.DumpAppearanceSuit and SelectedChar:DumpAppearanceSuit(GWorld:GetAvatar(), AppearanceIndex) or nil
     if AppearanceSuit then
       self.ActorController:ChangeCharAppearance(AppearanceSuit)
       self.ActorController.DelayFrame = 30
@@ -379,6 +393,7 @@ function M:OnListItemClicked(Content)
   end
   self.MainModel:SetSelectedCharContent(Content)
   self:OnSelectedCharContentChanged()
+  self:UpdateMontage()
 end
 
 function M:OnListItemSelectionChanged(Content, IsSelected)
@@ -603,6 +618,7 @@ end
 
 function M:OnFocusChanged(NewState, OldState, Operation)
   self:InitKeySetting()
+  self:UpdatePanelKeyVisibility()
   local BottomKeyInfo = self:CopyParentBottomKeyInfo()
   self:UpdateBottomKeyInfo(BottomKeyInfo)
 end
@@ -636,6 +652,9 @@ function M:OnFocusReceived(MyGeometry, InFocusEvent)
 end
 
 function M:OnListItemAddedToFocusPath(Content)
+  if self.IsListExpanded then
+    return
+  end
   if self.FSM:Peak().Name ~= FocusStates.List then
     self.FSM:Clear()
   end
@@ -686,11 +705,17 @@ function M:AddCharListReddotListen()
   end
   for _, CommonChar in pairs(Avatar.CommonChars) do
     local CharId = CommonChar.CharId
-    local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
-    if ReddotManager.GetTreeNode(NodeName) then
-      ReddotManager.AddListener(NodeName, self, ListenerFunc, nil, true)
-      self.CharListReddotNodeNames[NodeName] = 1
-      self.NodeName2CharId[NodeName] = CharId
+    local SkinNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
+    if ReddotManager.GetTreeNode(SkinNodeName) then
+      ReddotManager.AddListener(SkinNodeName, self, ListenerFunc, nil, true)
+      self.CharListReddotNodeNames[SkinNodeName] = 1
+      self.NodeName2CharId[SkinNodeName] = CharId
+    end
+    local HairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+    if ReddotManager.GetTreeNode(HairNodeName) then
+      ReddotManager.AddListener(HairNodeName, self, ListenerFunc, nil, true)
+      self.CharListReddotNodeNames[HairNodeName] = 1
+      self.NodeName2CharId[HairNodeName] = CharId
     end
     local LevelUpNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
     if ReddotManager.GetTreeNode(LevelUpNodeName) then
@@ -728,7 +753,7 @@ function M:AddArchiveReddotListen()
     return
   end
   self:RemoveArchiveReddotListen()
-  local NodeName = "AppearanceArchiveReward"
+  local NodeName = "AppearanceEntrance"
   if not ReddotManager.GetTreeNode(NodeName) then
     return
   end
@@ -748,7 +773,7 @@ function M:RemoveArchiveReddotListen()
 end
 
 function M:UpdateArchiveReddot()
-  local Node = ReddotManager.GetTreeNode("AppearanceArchiveReward")
+  local Node = ReddotManager.GetTreeNode("AppearanceEntrance")
   local bVisible = Node and Node.Count > 0 or false
   self.Entrance_Archive:SetReddotVisible(bVisible)
 end

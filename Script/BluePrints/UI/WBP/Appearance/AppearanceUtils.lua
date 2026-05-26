@@ -26,6 +26,9 @@ function M.GetCharAppearanceReddot(CharId)
   local SkinNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
   local SkinNode = ReddotManager.GetTreeNode(SkinNodeName)
   HasNewSkin = SkinNode and SkinNode.Count > 0 or false
+  local CharHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  local CharHairNode = ReddotManager.GetTreeNode(CharHairNodeName)
+  HasNewSkin = HasNewSkin or CharHairNode and CharHairNode.Count > 0 or false
   local SkinLevelUpNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
   local SkinLevelUpNode = ReddotManager.GetTreeNode(SkinLevelUpNodeName)
   HasUpgradeableSkin = SkinLevelUpNode and SkinLevelUpNode.Count > 0 or false
@@ -76,7 +79,7 @@ function M.GetCharTabReddot()
   HasNewAppearance = NewCharAppearanceNode and NewCharAppearanceNode.Count > 0 or false
   local CharSkinLevelUpNode = ReddotManager.GetTreeNode("CharSkinLevelUp")
   HasUpgradeableSkin = CharSkinLevelUpNode and CharSkinLevelUpNode.Count > 0 or false
-  local ArchiveRewardNode = ReddotManager.GetTreeNode("AppearanceArchiveReward")
+  local ArchiveRewardNode = ReddotManager.GetTreeNode("AppearanceEntrance")
   HasArchiveReward = ArchiveRewardNode and ArchiveRewardNode.Count > 0 or false
   local IsNew = HasNewAppearance
   local IsCommon = HasUpgradeableSkin or HasArchiveReward

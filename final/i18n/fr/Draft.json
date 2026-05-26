@@ -8207,13 +8207,13 @@
       },
       {
         "id": 12155,
-        "n": "囚鸟的刺羽的握柄",
+        "n": "Plume affranchie : Poignée",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12156,
-        "n": "囚鸟的刺羽的刀刃",
+        "n": "Plume affranchie : Lame",
         "c": 1,
         "t": "Resource"
       }
@@ -9011,19 +9011,19 @@
       },
       {
         "id": 12157,
-        "n": "圣血*太刀的握柄",
+        "n": "Sanguis Sanctus – Katana : Poignée",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12158,
-        "n": "圣血*太刀的刀刃",
+        "n": "Sanguis Sanctus – Katana : Lame",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12159,
-        "n": "圣血*太刀的饰物",
+        "n": "Sanguis Sanctus – Katana : Ornement",
         "c": 1,
         "t": "Resource"
       }
@@ -10013,19 +10013,19 @@
       },
       {
         "id": 12160,
-        "n": "薄暮契约的枪机",
+        "n": "Pacte du crépuscule : Verrou",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12161,
-        "n": "薄暮契约的枪身",
+        "n": "Pacte du crépuscule : Armature",
         "c": 1,
         "t": "Resource"
       },
       {
         "id": 12162,
-        "n": "薄暮契约的枪管",
+        "n": "Pacte du crépuscule : Canon",
         "c": 1,
         "t": "Resource"
       }

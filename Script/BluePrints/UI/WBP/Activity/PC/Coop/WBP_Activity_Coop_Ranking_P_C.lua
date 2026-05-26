@@ -88,7 +88,7 @@ function M:OnKeyDown(MyGeometry, InKeyEvent)
     if "Gamepad_FaceButton_Right" == InKeyName then
       self:CloseSelf()
     elseif "Gamepad_LeftThumbstick" == InKeyName then
-      self:OnMyselfButtonClicked()
+      self:OnMyselfSelected()
     end
   elseif "Escape" == InKeyName then
     self:CloseSelf()

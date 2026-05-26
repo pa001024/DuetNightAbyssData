@@ -85,26 +85,6 @@ return ReadOnly("ChannelInfo", {
     Region = "global",
     SDKChannelId = 1
   },
-  [181] = {
-    AccountPrefix = "hero",
-    ChannelId = 181,
-    DeviceType = "mobile",
-    Name = "全球SDK-华为",
-    OS = "android",
-    Provider = "hero",
-    Region = "global",
-    SDKChannelId = 1
-  },
-  [197] = {
-    AccountPrefix = "hero",
-    ChannelId = 197,
-    DeviceType = "mobile",
-    Name = "Onestore",
-    OS = "android",
-    Provider = "hero",
-    Region = "global",
-    SDKChannelId = 1
-  },
   [237] = {
     AccountPrefix = "hero",
     ChannelId = 237,
@@ -135,16 +115,6 @@ return ReadOnly("ChannelInfo", {
     Region = "china",
     SDKChannelId = 3
   },
-  [268] = {
-    AccountPrefix = "hero",
-    ChannelId = 268,
-    DeviceType = "mobile",
-    Name = "全球SDK-rustore",
-    OS = "android",
-    Provider = "hero",
-    Region = "global",
-    SDKChannelId = 1
-  },
   [269] = {
     AccountPrefix = "bilibili",
     ChannelId = 269,
@@ -164,16 +134,6 @@ return ReadOnly("ChannelInfo", {
     Provider = "harmony",
     Region = "china",
     SDKChannelId = 3
-  },
-  [272] = {
-    AccountPrefix = "hero",
-    ChannelId = 272,
-    DeviceType = "mobile",
-    Name = " 全球SDK-安卓-taptap",
-    OS = "android",
-    Provider = "hero",
-    Region = "global",
-    SDKChannelId = 1
   },
   [286] = {
     AccountPrefix = "hero",

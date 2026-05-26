@@ -94,6 +94,22 @@ local function MergePlayerInfoFromAvatarInfo(PlayerInfo, AvatarInfo, PlayerUuid)
   NormalizePlayerGuildInfo(PlayerInfo)
 end
 
+local function MergePlayerInfoFromGuildInfo(PlayerInfo, GuildInfo)
+  if type(PlayerInfo) ~= "table" or type(GuildInfo) ~= "table" then
+    return
+  end
+  local GuildSimpleInfo = NormalizeGuildSimpleInfo(GuildInfo)
+  if not GuildSimpleInfo then
+    return
+  end
+  PlayerInfo.GuildSimpleInfo = GuildSimpleInfo
+  PlayerInfo.GuildId = GuildSimpleInfo.GuildId
+  PlayerInfo.GuildName = GuildSimpleInfo.Name
+  PlayerInfo.GuildLogoInfo = GuildSimpleInfo.LogoInfo
+  PlayerInfo.GuildLogo = GuildSimpleInfo.Logo
+  NormalizePlayerGuildInfo(PlayerInfo)
+end
+
 local function TryRequestOtherGuildSimpleInfo(Avatar, PlayerInfo, PlayerUuid)
   if not Avatar or type(PlayerInfo) ~= "table" or nil == PlayerUuid then
     return
@@ -242,7 +258,7 @@ function Component:UpdateWeaponDisplay(Callback, Index, Id, ModPlan)
   self:CallServer("UpdateWeaponDisplay", cb, Index, Id, ModPlan)
 end
 
-function Component:CheckOtherPlayerPersonallInfo(PlayerUuid, bForceUsedServerData, AvatarInfo)
+function Component:CheckOtherPlayerPersonallInfo(PlayerUuid, bForceUsedServerData, AvatarInfo, GuildInfo)
   self.logger.debug("CheckOtherPlayerPersonallInfo Begin", PlayerUuid)
   if not PlayerUuid then
     DebugPrint("CheckOtherPlayerPersonallInfo Invalid arguments")
@@ -256,6 +272,7 @@ function Component:CheckOtherPlayerPersonallInfo(PlayerUuid, bForceUsedServerDat
     end
     PlayerInfo.Uuid = PlayerUuid
     MergePlayerInfoFromAvatarInfo(PlayerInfo, AvatarInfo, PlayerUuid)
+    MergePlayerInfoFromGuildInfo(PlayerInfo, GuildInfo)
     TryRequestOtherGuildSimpleInfo(self, PlayerInfo, PlayerUuid)
     PersonInfoController:HandleOpenOtherPlayerView(PlayerInfo, bForceUsedServerData)
     DebugPrint("yklua Had Received Server Open PersonInfo")

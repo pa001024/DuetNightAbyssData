@@ -45,24 +45,12 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Mechanism",
+        StoryGuidePointName = "Mechanism_ClosetoTrain_152480278",
         JumpId = 0
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "177824401290111462358",
-            startPort = "QuestStart",
-            endQuest = "177824401290211462361",
-            endPort = "In"
-          },
-          {
-            startQuest = "177824401290211462361",
-            startPort = "Out",
-            endQuest = "177824401290211462362",
-            endPort = "In"
-          },
           {
             startQuest = "177824401290211462364",
             startPort = "Out",
@@ -73,18 +61,6 @@ return {
             startQuest = "177824401290211462365",
             startPort = "Out",
             endQuest = "177824401290211462366",
-            endPort = "In"
-          },
-          {
-            startQuest = "177824401290211462366",
-            startPort = "Out",
-            endQuest = "177824401290211462367",
-            endPort = "In"
-          },
-          {
-            startQuest = "177824401290211462367",
-            startPort = "Out",
-            endQuest = "177824401290211462368",
             endPort = "In"
           },
           {
@@ -100,21 +76,9 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177824401290211462362",
-            startPort = "Out",
-            endQuest = "17784881786571467308",
-            endPort = "In"
-          },
-          {
             startQuest = "17784881786571467308",
             startPort = "Out",
             endQuest = "177824401290211462364",
-            endPort = "In"
-          },
-          {
-            startQuest = "177824401290211462368",
-            startPort = "Out",
-            endQuest = "177824401290211462370",
             endPort = "In"
           },
           {
@@ -128,6 +92,78 @@ return {
             startPort = "Out",
             endQuest = "177824401290211462360",
             endPort = "Fail"
+          },
+          {
+            startQuest = "177824401290111462358",
+            startPort = "QuestStart",
+            endQuest = "177891759800483534938",
+            endPort = "Input"
+          },
+          {
+            startQuest = "177824401290211462366",
+            startPort = "Out",
+            endQuest = "177969557527513543008",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969557527513543008",
+            startPort = "Out",
+            endQuest = "177824401290211462367",
+            endPort = "In"
+          },
+          {
+            startQuest = "177824401290211462367",
+            startPort = "Out",
+            endQuest = "177969558325413543288",
+            endPort = "In"
+          },
+          {
+            startQuest = "177824401290111462358",
+            startPort = "QuestStart",
+            endQuest = "177971701269910172502",
+            endPort = "In"
+          },
+          {
+            startQuest = "177971701269910172502",
+            startPort = "Out",
+            endQuest = "177824401290211462362",
+            endPort = "In"
+          },
+          {
+            startQuest = "177824401290211462362",
+            startPort = "Out",
+            endQuest = "177971704451610172816",
+            endPort = "In"
+          },
+          {
+            startQuest = "177971704451610172816",
+            startPort = "Out",
+            endQuest = "177969555969913542774",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969555969913542774",
+            startPort = "Out",
+            endQuest = "17784881786571467308",
+            endPort = "In"
+          },
+          {
+            startQuest = "177824401290211462368",
+            startPort = "Out",
+            endQuest = "177971712698411141831",
+            endPort = "In"
+          },
+          {
+            startQuest = "177971712698411141831",
+            startPort = "Out",
+            endQuest = "177824401290211462370",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969558325413543288",
+            startPort = "Out",
+            endQuest = "177824401290211462368",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -156,7 +192,7 @@ return {
             key = "177824401290211462361",
             type = "GoToNode",
             name = "靠近列车",
-            pos = {x = 800.9137931034483, y = 291.3275862068965},
+            pos = {x = 826.8228840125391, y = -125.94514106583078},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 152480278,
@@ -168,7 +204,7 @@ return {
             key = "177824401290211462362",
             type = "TalkNode",
             name = "站长又出场",
-            pos = {x = 1123.1310344827587, y = 344.3724137931034},
+            pos = {x = 1128.455709807434, y = 314.11267353336314},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -333,7 +369,7 @@ return {
             key = "177824401290211462367",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "传送出车厢",
-            pos = {x = 2623.95, y = 354.74999999999994},
+            pos = {x = 2781.6116379310342, y = 355.33189655172407},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "Point_Teleport_10040312",
@@ -348,7 +384,7 @@ return {
             key = "177824401290211462368",
             type = "TalkNode",
             name = "芙罗拉看月亮前",
-            pos = {x = 2990.5, y = 388.35},
+            pos = {x = 3129.2389162561576, y = 390.24162561576355},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -467,6 +503,102 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 828.6741486068108, y = 662.8822239422086},
             propsData = {}
+          },
+          ["177891759800483534938"] = {
+            key = "177891759800483534938",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 827.8181818181818, y = 115.0909090909091},
+            propsData = {
+              TargetTime = 20,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["177969555969913542774"] = {
+            key = "177969555969913542774",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1738.654024767802, y = 175.07279227480484},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0167_story_fuluo_theme.0167_story_fuluo_theme'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
+          },
+          ["177969557527513543008"] = {
+            key = "177969557527513543008",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2599.4945420091817, y = 191.98011986101173},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["177969558325413543288"] = {
+            key = "177969558325413543288",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3011.154024767802, y = 170.38529227480484},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
+          },
+          ["177971701269910172502"] = {
+            key = "177971701269910172502",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 904.9229323308273, y = 309.23402255639104},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
+          },
+          ["177971704451610172816"] = {
+            key = "177971704451610172816",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1413.494360902256, y = 87.80545112781977},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["177971712698411141831"] = {
+            key = "177971712698411141831",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3368.966798790454, y = 307.93541144528},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}

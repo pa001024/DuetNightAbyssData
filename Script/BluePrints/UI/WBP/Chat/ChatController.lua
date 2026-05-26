@@ -921,6 +921,7 @@ function M:ClearGuildChatMessages()
   self._GuildDynamicNicknameQuerying = {}
   self._GuildDynamicNicknameFailed = {}
   self._GuildChannelSnapshotState = nil
+  self:NotifyEvent(ChatCommon.EventID.GuildChannelSnapshotRefreshed, ChatCommon.ChannelDef.InGuild)
 end
 
 function M:LoadGuildChatHistory(Messages)
@@ -1124,6 +1125,18 @@ function M:SendChatToGuildMember(Uid, ContentText)
   if not Uid or not ContentText then
     return
   end
+  local ModContent = self:TryParseMyModSuitInfo(ContentText)
+  if ModContent then
+    ContentText = ModContent
+  end
+  local DyeShareContent = self:TryParseMyDyePlanInfo(ContentText)
+  if DyeShareContent and not ModContent then
+    ContentText = DyeShareContent
+  end
+  local AppearanceShareContent = self:TryParseMyAppearancePlanInfo(ContentText)
+  if AppearanceShareContent and not ModContent and not DyeShareContent then
+    ContentText = AppearanceShareContent
+  end
   local Avatar = self:GetAvatar()
   local OwnerUid = Avatar and Avatar.Uid or 0
   if not GuildModel:IsInCurrGuild(Uid) then
@@ -1162,20 +1175,66 @@ function M:SendChatToGuildMember(Uid, ContentText)
   end, Uid)
 end
 
+function M:_RemoveLocalGuildPrivateChat(Uid)
+  Uid = tonumber(Uid) or 0
+  if Uid <= 0 then
+    return
+  end
+  local Avatar = self:GetAvatar()
+  if not Avatar or type(Avatar.GuildChats) ~= "table" then
+    return
+  end
+  Avatar.GuildChats[Uid] = nil
+  Avatar.GuildChats[tostring(Uid)] = nil
+end
+
 function M:SetGuildChatPermission(bAllow)
   local Avatar = self:GetAvatar()
   local bNewValue = bAllow and true or false
   Avatar:SetGuildChatOpen(nil, bNewValue)
   Avatar.GuildChatOpen = bNewValue
   self:NotifyEvent(ChatCommon.EventID.RefreshGuildMemberChatStatus)
+  local bNotifyPlayerList = true
   if not bNewValue then
     local Model = self:GetModel()
+    local Uids = {}
     for Uid, _ in pairs(Model:GetGuildUidList()) do
-      Avatar:ClearGuildPrivateChat(nil, Uid)
+      Uids[#Uids + 1] = Uid
     end
-    Model:ClearAllGuildUids()
+    if #Uids > 0 then
+      bNotifyPlayerList = false
+      local RemainCount = #Uids
+      
+      local function OnClearDone(ClearUid, Ret)
+        if self:CheckError(Ret, true) then
+          self:_RemoveLocalGuildPrivateChat(ClearUid)
+          Model:UnregisterGuildUid(ClearUid)
+          if Model:GetCurrentFriendUid() == ClearUid then
+            Model:SetCurrentFriendUid(nil)
+          end
+        end
+        RemainCount = RemainCount - 1
+        if RemainCount <= 0 then
+          if Model.SyncGuildUidListWithChatDatas then
+            Model:SyncGuildUidListWithChatDatas()
+          end
+          self:NotifyEvent(ChatCommon.EventID.RefreshGuildPlayerList)
+        end
+      end
+      
+      for _, Uid in ipairs(Uids) do
+        local ClearUid = Uid
+        Avatar:ClearGuildPrivateChat(function(Ret)
+          OnClearDone(ClearUid, Ret)
+        end, ClearUid)
+      end
+    else
+      Model:ClearAllGuildUids()
+    end
   end
-  self:NotifyEvent(ChatCommon.EventID.RefreshGuildPlayerList)
+  if bNotifyPlayerList then
+    self:NotifyEvent(ChatCommon.EventID.RefreshGuildPlayerList)
+  end
   UIManager(GWorld.GameInstance):ShowUITip(UIConst.Tip_CommonToast, GText(bNewValue and "UI_PrivateChatEnabled" or "UI_PrivateChatDisabled"))
 end
 
@@ -1319,7 +1378,7 @@ function M:HandleChatMessage(Message)
       if Message.Type == CommonConst.MESSAGE_TYPE_SELF then
         bGuildChatChanged = ChatModel:RegisterGuildUid(OtherUid, nil)
       else
-        bGuildChatChanged = ChatModel:RegisterGuildUid(OtherUid, Message.Sender)
+        bGuildChatChanged = ChatModel:RegisterGuildUid(OtherUid, Message.Sender, true)
       end
       if bGuildChatChanged then
         self:NotifyEvent(ChatCommon.EventID.RefreshGuildPlayerList, OtherUid)
@@ -1418,14 +1477,17 @@ function M:DeleteGuildChat(Uid)
     return
   end
   self:GetAvatar():ClearGuildPrivateChat(function(Ret)
-    self:GetModel():ReadChannelMessage(ChatCommon.ChannelDef.Friend, Uid, ChatCommon.SubTabType.Guild)
+    if not self:CheckError(Ret, true) then
+      return
+    end
+    self:_RemoveLocalGuildPrivateChat(Uid)
+    local Model = self:GetModel()
+    Model:UnregisterGuildUid(Uid)
+    if Model:GetCurrentFriendUid() == Uid then
+      Model:SetCurrentFriendUid(nil)
+    end
+    self:NotifyEvent(ChatCommon.EventID.RefreshGuildPlayerList)
   end, Uid)
-  local Model = self:GetModel()
-  Model:UnregisterGuildUid(Uid)
-  if Model:GetCurrentFriendUid() == Uid then
-    Model:SetCurrentFriendUid(nil)
-  end
-  self:NotifyEvent(ChatCommon.EventID.SelectGuildMemberToChat, nil)
 end
 
 function M:OnGuildLeave()
@@ -1616,8 +1678,9 @@ function M:ParseChannelHeader(MsgWrap)
   if ChannelType == ChatCommon.ChannelDef.Friend and Message.IsGuildPrivate then
     NameKey = "UI_SendPrivateMessage"
   end
-  local Name = string.format("<%s>[%s]</>", RichText, GText(NameKey))
-  return Name
+  local RawName = string.format("[%s]", GText(NameKey))
+  local Name = string.format("<%s>%s</>", RichText, RawName)
+  return Name, RawName
 end
 
 function M:ParseSpeakerHeader(MsgWrap)
@@ -1651,12 +1714,6 @@ function M:ParseSpeakerHeader(MsgWrap)
     ChatCommon.Spliter
   })
   return Spacker, RawSpacker
-end
-
-function M:GetRawContent(MsgWrap)
-  local Spacker, RawSpacker = self:ParseSpeakerHeader(MsgWrap)
-  local Content = self:ParseEmojiToText(MsgWrap)
-  return RawSpacker .. Content
 end
 
 function M:ParseModSuitText(MsgWrap)

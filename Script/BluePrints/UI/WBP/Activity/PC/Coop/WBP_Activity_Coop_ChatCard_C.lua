@@ -83,6 +83,8 @@ function M:OnClicked()
       if ChatMain then
         ChatMain:Close()
       end
+    elseif ErrCode == ErrorCode.RET_ASYNCCOMBAT_NOT_OPEN then
+      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, "UI_GameEvent_EventEnd")
     end
   end
   

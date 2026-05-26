@@ -77,7 +77,7 @@ function M:InitGetItemInfo(ShopItemType, ShopItemId, Count, PurchaseRewards)
           if type(ItemCount) == "number" then
             count = ItemCount
           end
-          self.RewardList[ItemId] = {
+          self.RewardList[string.format("%s,%s", ItemType, ItemId)] = {
             TableName = ItemType,
             ItemCount = count,
             Rarity = RewardInfo[ItemId].Rarity or RewardInfo[ItemId][ItemType .. "Rarity"]
@@ -87,7 +87,8 @@ function M:InitGetItemInfo(ShopItemType, ShopItemId, Count, PurchaseRewards)
     end
     self.RewardInfoList = {}
     for key, Value in pairs(self.RewardList) do
-      table.insert(self.RewardInfoList, {ItemId = key, ItemInfo = Value})
+      local ItemId = tonumber(string.split(key, ",")[2])
+      table.insert(self.RewardInfoList, {ItemId = ItemId, ItemInfo = Value})
     end
     table.sort(self.RewardInfoList, function(A, B)
       local RarityA = A.ItemInfo.Rarity or 1
@@ -166,7 +167,8 @@ end
 function M:InitOptRewardsInfo()
   local OptRewards = {}
   local OptCount = 0
-  for ItemId, Info in pairs(self.RewardList) do
+  for key, Info in pairs(self.RewardList) do
+    local ItemId = tonumber(string.split(key, ",")[2])
     local ResourceInfo = DataMgr.Resource[ItemId]
     if ResourceInfo and 7 == ResourceInfo.MaterialClassify then
       table.insert(OptRewards, {
@@ -763,6 +765,14 @@ function M:NewItemContent(ItemType, ItemId, Count)
   Obj.Rarity = ItemUtils.GetItemRarity(ItemId, ItemType)
   if "HeadSculpture" == ItemType then
     Obj.Icon = ItemData.HeadPath
+    if not Obj.Icon then
+      Obj.Icon = ItemData.DynamicPath
+    end
+  elseif "HeadFrame" == ItemType then
+    Obj.Icon = ItemData.Icon
+    if not Obj.Icon then
+      Obj.Icon = ItemData.DynamicPath
+    end
   else
     Obj.Icon = ItemUtils.GetItemIconPath(ItemId, ItemType)
   end
@@ -840,11 +850,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     else
       self.Panel_Key:SetVisibility(ESlateVisibility.Collapsed)
     end
-    if self.NotShowTextTip then
-      self.Text_Tip:SetVisibility(ESlateVisibility.Collapsed)
-    else
-      self.Text_Tip:SetVisibility(ESlateVisibility.SelfHitTestInvisible)
-    end
+    self.Text_Tip:SetVisibility(ESlateVisibility.Collapsed)
   end
 end
 

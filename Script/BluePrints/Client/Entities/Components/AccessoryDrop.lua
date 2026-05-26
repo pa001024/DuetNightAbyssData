@@ -9,38 +9,60 @@ function Component:LeaveWorld()
 end
 
 function Component:CheckReddot()
-  local EventId = 103020
+  local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
+  local EventIds = ActivityCommon.AccessoryDropActivityIds
   local PlayerAvatar = self
-  local AccessoryDrop = PlayerAvatar.AccessoryDrops[EventId]
+  local AccessoryDrop, CurEventId
+  for _, EventId in pairs(EventIds) do
+    AccessoryDrop = PlayerAvatar.AccessoryDrops[EventId]
+    if AccessoryDrop then
+      CurEventId = EventId
+      break
+    end
+  end
   if not AccessoryDrop then
     return
   end
-  local AccessDropConfig = DataMgr.BoxDrop[EventId]
+  local AccessDropConfig = DataMgr.BoxDrop[CurEventId]
   local BoxCoin = GWorld:GetAvatar().Resources[AccessDropConfig.BoxCoinId]
   local OwnBoxCoinAmount = BoxCoin and BoxCoin.Count or 0
   local CoinPerBox = AccessDropConfig.CoinPerBox
   local BoxCount = OwnBoxCoinAmount > 0 and math.floor(OwnBoxCoinAmount / CoinPerBox) or 0
   local TodayCanOpenBoxCount = BoxCount > AccessoryDrop.CurDropBoxNum and AccessoryDrop.CurDropBoxNum or BoxCount
+  local RedDotName = DataMgr.EventMain[CurEventId].ReddotNode
   if TodayCanOpenBoxCount > 0 then
-    ReddotManager.IncreaseLeafNodeCount("Acti_AccessoryDrop01", 1, {CacheKey = "Red", EventId = EventId})
+    ReddotManager.IncreaseLeafNodeCount(RedDotName, 1, {CacheKey = "Red", EventId = CurEventId})
   else
-    ReddotManager.DecreaseLeafNodeCount("Acti_AccessoryDrop01", 1, {CacheKey = "Red", EventId = EventId})
+    ReddotManager.DecreaseLeafNodeCount(RedDotName, 1, {CacheKey = "Red", EventId = CurEventId})
   end
-  DebugPrint("hzq Component:_OnLoginSuccess()")
 end
 
 function Component:_OnLoginSuccess()
 end
 
 function Component:_OnPropChangeAccessoryDrops(keys)
-  if CommonUtils.Size(keys) > 0 and 103020 == keys[1] then
-    self:CheckReddot()
+  if CommonUtils.Size(keys) > 0 then
+    local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
+    local EventIds = ActivityCommon.AccessoryDropActivityIds
+    for _, EventId in pairs(EventIds) do
+      if keys[1] == EventId then
+        self:CheckReddot()
+        break
+      end
+    end
   end
 end
 
 function Component:_OnPropChangeResources(keys)
-  if CommonUtils.Size(keys) > 0 and 221 == keys[1] then
-    self:CheckReddot()
+  if CommonUtils.Size(keys) > 0 then
+    local ActivityCommon = require("BluePrints.UI.WBP.Activity.ActivityCommon")
+    local Resources = ActivityCommon.AccessoryDropResources
+    for _, ResourceId in pairs(Resources) do
+      if keys[1] == ResourceId then
+        self:CheckReddot()
+        break
+      end
+    end
   end
 end
 

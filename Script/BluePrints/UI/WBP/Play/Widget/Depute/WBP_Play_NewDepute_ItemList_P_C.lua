@@ -23,12 +23,18 @@ function M:Construct()
     end
   })
   self:AddDispatcher(EventID.IronSurvivalSwitchTab, self, self.OnIronSwitchTab)
-  self.Text_Qa:SetText(GText("UI_DUNGEON_MODE_IRONMODE"))
-  self.Btn_Qa:BindEventOnClicked(self, self.OnOpenDeputeQaPopup)
+  if self.Text_Qa then
+    self.Text_Qa:SetText(GText("UI_DUNGEON_MODE_IRONMODE"))
+  end
+  if self.Btn_Qa then
+    self.Btn_Qa:BindEventOnClicked(self, self.OnOpenDeputeQaPopup)
+  end
   self:AddDispatcher(EventID.NightBookSpecialRightUp, self, self.OnGamepadMenuPressed)
   local IsGamepad = UIUtils.UtilsGetCurrentInputType() == ECommonInputType.Gamepad
-  self.WS_Qa:SetActiveWidgetIndex(IsGamepad and 1 or 0)
-  if IsGamepad then
+  if self.WS_Qa then
+    self.WS_Qa:SetActiveWidgetIndex(IsGamepad and 1 or 0)
+  end
+  if IsGamepad and self.Key_Qa then
     self.Key_Qa:CreateCommonKey({
       KeyInfoList = {
         {
@@ -131,25 +137,33 @@ end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, _)
   if CurInputDevice == ECommonInputType.Touch then
-    self.WS_Qa:SetActiveWidgetIndex(0)
+    if self.WS_Qa then
+      self.WS_Qa:SetActiveWidgetIndex(0)
+    end
     return
   end
   local IsUseKeyAndMouse = CurInputDevice == ECommonInputType.MouseAndKeyboard
   if IsUseKeyAndMouse then
     self.Iron_SwitchTab.Key_01:SetVisibility(UE4.ESlateVisibility.Collapsed)
-    self.WS_Qa:SetActiveWidgetIndex(0)
+    if self.WS_Qa then
+      self.WS_Qa:SetActiveWidgetIndex(0)
+    end
     return
   else
-    self.WS_Qa:SetActiveWidgetIndex(1)
-    self.Key_Qa:CreateCommonKey({
-      KeyInfoList = {
-        {
-          Type = "Img",
-          ImgShortPath = "Menu",
-          Owner = self
+    if self.WS_Qa then
+      self.WS_Qa:SetActiveWidgetIndex(1)
+    end
+    if self.Key_Qa then
+      self.Key_Qa:CreateCommonKey({
+        KeyInfoList = {
+          {
+            Type = "Img",
+            ImgShortPath = "Menu",
+            Owner = self
+          }
         }
-      }
-    })
+      })
+    end
     local IsOn = EMCache:Get("Is_IronSurvival_SwitchTab", true) or false
     local ActiveList = IsOn and self.List_IronExp or self.List_Depute
     if self:HasFocusedDescendants() or self:HasAnyUserFocus() then

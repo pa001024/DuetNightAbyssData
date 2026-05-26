@@ -303,7 +303,7 @@
   },
   {
     "id": 6002301,
-    "n": "Guerrilla Filthoid - Decay & Frostbite & Guard",
+    "n": "Guerrilla Filthoid – Thunderstorm, Frostbite & Guard",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -772,7 +772,7 @@
   },
   {
     "id": 6012301,
-    "n": "Guerrilla Filthoid Ⅱ - Decay & Frostbite & Guard",
+    "n": "Guerrilla Filthoid Ⅱ – Thunderstorm, Frostbite & Guard",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -886,7 +886,7 @@
   },
   {
     "id": 6013301,
-    "n": "Floating Filthoid Ⅱ - Decay & Revenge & Guard",
+    "n": "Floating Filthoid Ⅱ – Wither, Revenge & Guard",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1086,7 +1086,7 @@
   },
   {
     "id": 6015301,
-    "n": "复仇·爆破·残火 芳烬秽兽",
+    "n": "Ashblossom Filthoid – Revenge & Blast & Glimmer ",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1311,7 +1311,7 @@
   },
   {
     "id": 6016301,
-    "n": "转雷·凛霜·守护 萼蚀秽兽",
+    "n": "Blightcalyx Filthoid – Thunderstorm, Frostbite & Guard",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1460,7 +1460,7 @@
   },
   {
     "id": 6017301,
-    "n": "舍身·枯萎·爆破 魁蕊秽兽",
+    "n": "Stigma Filthoid – Sacrifice & Wither & Blast",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1482,7 +1482,7 @@
   },
   {
     "id": 6017302,
-    "n": "侵蚀·霜狱·守护 魁蕊秽兽",
+    "n": "Stigma Filthoid – Corrosion, Icehell & Guard",
     "t": "Elite_Monster",
     "f": 1,
     "atk": 11,
@@ -1670,7 +1670,7 @@
   },
   {
     "id": 7001301,
-    "n": "Sniper Private - Decay & Wither & Frostbite",
+    "n": "Sniper Private – Thunderbolt, Wither & Frostbite",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -1873,7 +1873,7 @@
   },
   {
     "id": 7002301,
-    "n": "Cleaver Private - Wither & Guard & Decay ",
+    "n": "Cleaver Private – Sacrifice, Wither & Guard",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2060,7 +2060,7 @@
   },
   {
     "id": 7003301,
-    "n": "Expedition Private - Phantom & Thunderstorm & Icehell",
+    "n": "Expedition Private – Thunderstorm, Icehell & Guard",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2270,7 +2270,7 @@
   },
   {
     "id": 7008301,
-    "n": "Elite Sergeant - Bloodbath & Phantom & Revenge",
+    "n": "Elite Sergeant – Revenge, Blast & Glimmer",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 12,
@@ -2327,7 +2327,7 @@
   },
   {
     "id": 7009301,
-    "n": "Benevolent Tyrant - Bloodbath & Glimmer & Icehell ",
+    "n": "Benevolent Tyrant – Blast, Glimmer & Icehell",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2440,7 +2440,7 @@
   },
   {
     "id": 7011301,
-    "n": "Sniper Private Ⅱ - Decay & Wither & Frostbite",
+    "n": "Sniper Private Ⅱ – Thunderbolt, Wither & Frostbite",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 11,
@@ -2513,7 +2513,7 @@
   },
   {
     "id": 7012301,
-    "n": "Cleaver Private Ⅱ - Wither & Guard & Decay",
+    "n": "Cleaver Private Ⅱ – Sacrifice, Wither & Guard",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 20,
@@ -2569,7 +2569,7 @@
   },
   {
     "id": 7013301,
-    "n": "Expedition Private Ⅱ - Phantom & Thunderstorm & Icehell",
+    "n": "Expedition Private Ⅱ – Thunderstorm, Icehell & Guard",
     "t": "Elite_Monster",
     "f": 2,
     "atk": 5.56,
@@ -3067,7 +3067,7 @@
   },
   {
     "id": 8002301,
-    "n": "Blessed Vanguard - Sacrifice & Phantom & Thunderbolt",
+    "n": "Blessed Vanguard – Thunderbolt, Sacrifice & Revenge",
     "t": "Elite_Monster",
     "f": 4,
     "atk": 13.1,
@@ -4232,7 +4232,7 @@
   },
   {
     "id": 9001301,
-    "n": "Wildswarm's Sword - Bloodbath & Blast & Glimmer",
+    "n": "Wildswarm's Sword – Blast, Glimmer & Guard",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4383,7 +4383,7 @@
   },
   {
     "id": 9002301,
-    "n": "Wildswarm's Arrow - Phantom & Thunderstorm & Decay",
+    "n": "Wildswarm's Arrow – Thunderstorm, Thunderbolt & Wither",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 5.56,
@@ -4478,7 +4478,7 @@
   },
   {
     "id": 9003301,
-    "n": "\"Toymaker\" - Bloodbath & Blast & Guard",
+    "n": "\"Toymaker\" – Blast, Icehell & Guard",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4536,7 +4536,7 @@
   },
   {
     "id": 9005301,
-    "n": "\"Bombaholic\" - Phantom & Thunderbolt & Glimmer",
+    "n": "\"Bombaholic\" – Thunderbolt, Glimmer & Icehell",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 20,
@@ -4594,7 +4594,7 @@
   },
   {
     "id": 9006301,
-    "n": "\"Deceiver\" - Bloodbath & Phantom & Frostbite",
+    "n": "\"Deceiver\" – Sacrifice, Revenge & Frostbite",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 12,
@@ -4708,7 +4708,7 @@
   },
   {
     "id": 9007301,
-    "n": "Wildswarm's Agent - Bloodbath & Thunderstorm & Frostbite",
+    "n": "Wildswarm's Agent – Thunderstorm, Wither & Frostbite",
     "t": "Elite_Monster",
     "f": 3,
     "atk": 11,
@@ -4998,7 +4998,7 @@
   },
   {
     "id": 10001301,
-    "n": "Guard of Yingtian – Thunderbolt, Corrosion & Decay",
+    "n": "Guard of Yingtian – Thunderbolt, Corrosion & Wither",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,
@@ -5039,7 +5039,7 @@
   },
   {
     "id": 10002301,
-    "n": "Magistrate of Yingtian – Bloodbath, Corrosion & Glimmer",
+    "n": "Magistrate of Yingtian – Thunderbolt, Corrosion & Glimmer",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 24,
@@ -5117,7 +5117,7 @@
   },
   {
     "id": 10003301,
-    "n": "枯萎·残火·霜狱 玄色狴犴",
+    "n": "Sable Bi'an – Wither, Glimmer & Icehell",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,
@@ -5193,7 +5193,7 @@
   },
   {
     "id": 10004301,
-    "n": "枯萎·残火·霜狱 狴犴",
+    "n": "Bi'an – Wither, Glimmer & Icehell",
     "t": "Elite_Monster",
     "f": 5,
     "atk": 20,

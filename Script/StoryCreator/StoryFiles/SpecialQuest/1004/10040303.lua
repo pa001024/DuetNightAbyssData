@@ -21,9 +21,9 @@ return {
       key = "17782406896791908005",
       type = "StoryNode",
       name = "回复士兵",
-      pos = {x = 1118.9499999999998, y = 98.5166666666666},
+      pos = {x = 1120.1999999999998, y = 98.5166666666666},
       propsData = {
-        QuestId = 10040303,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040303_01",
         QuestDeatil = "Description_10040303_01",
@@ -45,8 +45,8 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Mechanism",
+        StoryGuidePointName = "Mechanism_BaozhaStart_2530031",
         JumpId = 0
       },
       questNodeData = {
@@ -85,12 +85,6 @@ return {
             startQuest = "17782406896801908015",
             startPort = "Out",
             endQuest = "17782407078531908581",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782406896791908010",
-            startPort = "QuestStart",
-            endQuest = "177829688024327172764",
             endPort = "In"
           },
           {
@@ -134,6 +128,24 @@ return {
             startPort = "Out",
             endQuest = "17782406896791908012",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17782406896791908010",
+            startPort = "QuestStart",
+            endQuest = "177891733028075815695",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17782406896791908010",
+            startPort = "QuestStart",
+            endQuest = "1779420511115680",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779420511115680",
+            startPort = "Out",
+            endQuest = "177829688024327172764",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -141,7 +153,7 @@ return {
             key = "17782406896791908010",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 284.0739130434782, y = 401.3776397515528},
+            pos = {x = -10.156856187291025, y = 381.7622551361682},
             propsData = {ModeType = 0}
           },
           ["17782406896791908011"] = {
@@ -173,7 +185,7 @@ return {
               DelayShowGuideTime = 0,
               bUseFlowAssetActors = true,
               IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
+              IsNPCTurnToPlayer = false,
               AllowSurroundDialogue = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10043201.10043201'",
@@ -217,7 +229,7 @@ return {
             key = "17782406896801908014",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1593.75974025974, y = 403.92857142857144},
+            pos = {x = 1591.35974025974, y = 403.92857142857144},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -273,7 +285,7 @@ return {
             key = "17782406896801908015",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1975.5064935064931, y = 395.4058441558442},
+            pos = {x = 1880.7064935064932, y = 397.80584415584417},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -282,15 +294,15 @@ return {
               GuideType = "N",
               GuidePointName = "Npc_BaozhaWeibing_272480170",
               DelayShowGuideTime = 0,
-              bUseFlowAssetActors = false,
+              bUseFlowAssetActors = true,
               IsPlayerTurnToNPC = true,
-              IsNPCTurnToPlayer = true,
-              AllowSurroundDialogue = false,
-              FirstDialogueId = 10042828,
+              IsNPCTurnToPlayer = false,
+              AllowSurroundDialogue = true,
+              FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10043401.10043401'",
               TalkType = "FreeSimple",
-              BlendInTime = 1,
-              BlendOutTime = 1,
+              BlendInTime = 0,
+              BlendOutTime = 0,
               InType = "BlendIn",
               OutType = "BlendOut",
               BlendEaseExp = 2,
@@ -314,7 +326,6 @@ return {
               RestoreStand = false,
               PauseNpcBT = true,
               bLockNpcSpawn = false,
-              TalkActors = {},
               OptionType = "normal",
               bLockHighestLOD = false,
               FreezeWorldComposition = false,
@@ -372,7 +383,7 @@ return {
             key = "17782406896801908020",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1862.1102941176468, y = 20.874999999999993},
+            pos = {x = 1862.1102941176468, y = 19.674999999999994},
             propsData = {
               NewDescription = "Content_10040303_03",
               NewDetail = "",
@@ -440,6 +451,28 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 627.7642016136601, y = 811.7093586238323},
             propsData = {}
+          },
+          ["177891733028075815695"] = {
+            key = "177891733028075815695",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 583.6764705882351, y = -339.1764705882353},
+            propsData = {
+              TargetTime = 18,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["1779420511115680"] = {
+            key = "1779420511115680",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 374.32692307692304, y = 393.0000000000001},
+            propsData = {
+              VarName = "First10040303",
+              VarValue = 1
+            }
           }
         },
         commentData = {}

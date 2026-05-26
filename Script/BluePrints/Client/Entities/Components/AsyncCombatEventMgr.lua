@@ -155,8 +155,8 @@ function Component:RefreshAsyncCombatNew()
   if not AsyncCombatCreateBtnCickTime then
     ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
   else
-    local TimeCheck = TimeUtils.IsTimestampInCurrentWeek(AsyncCombatCreateBtnCickTime or 0)
-    if false == TimeCheck then
+    local TimeCheck = TimeUtils.IsTimestampFromPreviousWeek(AsyncCombatCreateBtnCickTime or 0)
+    if true == TimeCheck then
       ReddotManager.IncreaseLeafNodeCount(NodeName, 1, {CacheKey = "New"})
     end
   end

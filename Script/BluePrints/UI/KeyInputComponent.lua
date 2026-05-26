@@ -114,8 +114,12 @@ function M:ProcessOnKeyDown(MyGeometry, InKeyEvent)
         if self.IsKeyDown[InKeyName] then
           self.IsLongPressing[InKeyName] = true
           self:AddTimer(LongPressEvent.Duration - Const.ShortPressThreshold, function()
-            if self.IsLongPressing[InKeyName] and LongPressEvent.EndCB and self:IsVisible() then
-              LongPressEvent.EndCB(self)
+            if self.IsLongPressing[InKeyName] then
+              self.IsKeyDown[InKeyName] = false
+              self.IsLongPressing[InKeyName] = false
+              if LongPressEvent.EndCB and self:IsVisible() then
+                LongPressEvent.EndCB(self)
+              end
             end
           end, false, 0, TimerKey .. "End")
           if LongPressEvent.StartCB then

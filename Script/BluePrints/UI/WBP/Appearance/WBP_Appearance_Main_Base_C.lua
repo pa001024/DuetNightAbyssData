@@ -216,11 +216,15 @@ function M:OnMainTabSelected(TabWidget, TabContent)
   Widget:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   Widget:OnTabChangeToSelf()
   Widget:SetFocus()
-  local JumpParams = self.JumpParams
-  self.JumpParams = nil
-  if JumpParams then
-    Widget:JumpLogic(JumpParams)
-  end
+  self:BlockAllUIInput(true, "WaitForTabWidgetInit")
+  self:AddTimer(0.1, function()
+    self:BlockAllUIInput(false, "WaitForTabWidgetInit")
+    local JumpParams = self.JumpParams
+    self.JumpParams = nil
+    if JumpParams then
+      Widget:JumpLogic(JumpParams)
+    end
+  end, false, 0, "WaitForTabWidgetInit")
 end
 
 function M:GetOrCreateMainWidget(TabContent)
@@ -377,7 +381,7 @@ function M:AddMainTabReddotListen()
   local NodeNames = {
     "NewCharAppearance",
     "CharSkinLevelUp",
-    "AppearanceArchiveReward",
+    "AppearanceEntrance",
     "NewMeleeAppearance",
     "NewRangedAppearance"
   }

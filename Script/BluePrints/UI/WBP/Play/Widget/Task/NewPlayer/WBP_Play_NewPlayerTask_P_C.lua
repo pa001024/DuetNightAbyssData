@@ -118,6 +118,9 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if CurInputDevice == ECommonInputType.Gamepad and UIUtils.HasAnyFocus(self) and not UIUtils.HasAnyFocus(self.List_Task) then
     self.List_Task:SetFocus()
   end
+  if not UIUtils.HasAnyFocus(self) then
+    return
+  end
   self:UpdateUIStyleInPlatform()
   self.Super.RefreshOpInfoByInputDevice(self, CurInputDevice, CurGamepadName)
 end

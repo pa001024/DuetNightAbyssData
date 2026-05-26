@@ -91,6 +91,9 @@ end
 
 function M:GetView(WorldContext, UIName)
   UIName = UIName or self.CurrUIName
+  if not UIName then
+    return
+  end
   return M.Super.GetView(self, WorldContext, UIName)
 end
 

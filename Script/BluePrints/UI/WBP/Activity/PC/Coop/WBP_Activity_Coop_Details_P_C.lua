@@ -132,6 +132,12 @@ function M:IconInit()
 end
 
 function M:AttributesInit()
+  self.RoomPermission = {}
+  for key, value in pairs(self.RoomData.Permission) do
+    if type(value) == "number" and value > 0 then
+      self.RoomPermission[value] = true
+    end
+  end
   local StateNum = 0
   local Permission = CommonConst.AsyncCombatRoomPermission
   self.DetailsTag01:SetVisibility(ESlateVisibility.Collapsed)
@@ -515,8 +521,10 @@ function M:UpdateRoomInfo()
     return
   end
   CoopModel:AsyncGetMemberRoomInfo(function(Err, RoomData)
-    self.RoomData = RoomData
-    self:OnRoomInfoChange()
+    if RoomData then
+      self.RoomData = RoomData
+      self:OnRoomInfoChange()
+    end
   end, self.RoomData.RoomUniqueId)
 end
 
@@ -785,7 +793,7 @@ function M:HandleJoinRoomRetCode(RetCode, ...)
     end
     return false
   elseif RetCode == ErrorCode.RET_ASYNCCOMBAT_NO_ROOM_ACCESS then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_RoomPrivateShare"))
+    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_ConditionNotMet"))
     return false
   else
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AsyncCombat_ConditionNotMet"))
@@ -883,6 +891,7 @@ function M:OnRoomInfoChange()
     self:RewardListInit()
   end
   self:SetProgress()
+  self:AttributesInit()
 end
 
 function M:ItemMenuAnchorChanged(bIsOpen)
@@ -975,28 +984,20 @@ end
 
 function M:SetProgress()
   local CurProgress = self.RoomData.Progress
-  self.TextProgressNum:SetText(CurProgress .. "%")
+  local CurProgressStr = CommonUtils.FormatNumInFrench(tostring(CurProgress))
+  self.TextProgressNum:SetText(CurProgressStr .. "%")
   self.Bar_Progress:SetPercent(CurProgress / 100)
   local RemainContribution = 100 - CurProgress
-  self.TextRemainingNum:SetText(RemainContribution .. "%")
-  self.MyContribution = self.GetNeedNumber(self.RoomData.Damage * 100 / self.RoomData.TotalHp)
-  self.TextMyNum:SetText(self.MyContribution .. "%")
+  local RemainContributionStr = CommonUtils.FormatNumInFrench(tostring(RemainContribution))
+  self.TextRemainingNum:SetText(RemainContributionStr .. "%")
+  self.MyContribution = math.floor(self.RoomData.Damage * 1000 / self.RoomData.TotalHp) / 10
+  local MyContributionStr = CommonUtils.FormatNumInFrench(tostring(self.MyContribution))
+  self.TextMyNum:SetText(MyContributionStr .. "%")
 end
 
-function M:ShareCallback(bShareToOpen, bShareToGuild)
-  local Permission = CommonConst.AsyncCombatRoomPermission
-  if bShareToOpen then
-    self.RoomPermission[Permission.Public] = true
-    self:AttributesInit()
-  end
-  if bShareToGuild then
-    if self.RoomPermission[Permission.Public] == true then
-      return
-    end
-    if not self.RoomPermission[Permission.GuildVisible] then
-      self.RoomPermission[Permission.GuildVisible] = true
-      self:AttributesInit()
-    end
+function M:ShareCallback(bShareClick)
+  if bShareClick then
+    self:UpdateRoomInfo()
   end
 end
 

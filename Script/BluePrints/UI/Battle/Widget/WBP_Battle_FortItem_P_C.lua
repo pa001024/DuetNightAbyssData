@@ -8,12 +8,11 @@ function WBP_Battle_FortItem_P_C:InitItem_PaoTaiPre()
   self.OverHeating_CDPaoTai = self.OverHeating_CD
   self.Icon_SkillPaoTai = self.Icon_Skill
   self.CDFinishAnimation_PaoTai = self.Cannon_Complete
-  self.OverHeating_CDPaoTai:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  self.Energy:SetVisibility(UE4.ESlateVisibility.Collapsed)
-  EMUIAnimationSubsystem:EMPlayAnimation(self, self.CDFinishAnimation_PaoTai)
   if EMUIAnimationSubsystem:EMAnimationIsPlaying(self, self.Skill_Complete) then
     EMUIAnimationSubsystem:EMStopAnimation(self, self.Skill_Complete)
   end
+  self.OverHeating_CDPaoTai:SetVisibility(UE4.ESlateVisibility.Collapsed)
+  self.Energy:SetVisibility(UE4.ESlateVisibility.Collapsed)
   EMUIAnimationSubsystem:EMPlayAnimation(self, self.CDFinishAnimation_PaoTai)
 end
 

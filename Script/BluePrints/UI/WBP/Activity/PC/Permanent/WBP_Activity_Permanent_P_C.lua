@@ -355,6 +355,9 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
 end
 
 function M:OnUpdateSubUIViewStyle(IsUseGamePad, bIsWithButton)
+  if not self:HasFocusedDescendants() and not self:HasAnyUserFocus() then
+    return
+  end
   self:ResetGamePadState()
   self:UpdateParentActivityKeyTips(nil, nil, true)
 end

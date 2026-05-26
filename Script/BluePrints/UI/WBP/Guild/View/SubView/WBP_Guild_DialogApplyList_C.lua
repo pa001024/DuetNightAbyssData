@@ -24,7 +24,6 @@ function M:Construct()
       self:_OnJoinRequestsListMutated()
     end
   end)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/sub_panel_expand", "GuildRequestDialog", nil)
   self:AddInputMethodChangedListen()
   self:AddTimer(0.2, function()
     if (self.ListDatas == nil or 0 == #self.ListDatas) and self.GameInputModeSubsystem then
@@ -326,8 +325,18 @@ function M:OnBtnYesOrNoRelease(bYes)
     return
   end
   if bYes then
-    GuildController:SendGuildAgreeJoinRequest(uids)
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("GuildAcceptAllApplication"))
+    local function Callback(retCode, NotOnlineTable)
+      if retCode ~= ErrorCode.RET_SUCCESS then
+        return
+      end
+      if 0 == #NotOnlineTable then
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("GuildAcceptAllApplication"))
+      else
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("GuildJoinConfirmData"))
+      end
+    end
+    
+    GuildController:SendGuildAgreeJoinRequest(uids, Callback)
   else
     GuildController:SendGuildRejectJoinRequest(uids)
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("GuildRejectAllApplication"))
@@ -485,11 +494,6 @@ function M:RefreshNavigationRule()
     self.MyListView:SetFocus()
   end
   self.IsMyListEmpty = false
-end
-
-function M:Close()
-  AudioManager(self):SetEventSoundParam(self, "GuildRequestDialog", {ToEnd = 1})
-  M.Super.Close(self)
 end
 
 function M:Destruct()

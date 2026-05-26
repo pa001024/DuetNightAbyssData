@@ -22,9 +22,6 @@ T.RT_20 = {ImprPlusId = 1204}
 T.RT_21 = {ImprPlusId = 1205}
 T.RT_22 = {ImprPlusId = 1203}
 T.RT_23 = {ImprPlusId = 1202}
-T.RT_24 = {ImprCheckId = 1010}
-T.RT_25 = {ImprCheckId = 1008}
-T.RT_26 = {ImprCheckId = 1006}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -85,23 +82,27 @@ return ReadOnly("DialogueServerUseData", {
   [10040809] = T.RT_2,
   [10041406] = T.RT_5,
   [10041407] = T.RT_6,
-  [10041918] = T.RT_7,
-  [10041919] = T.RT_6,
+  [10041918] = T.RT_6,
+  [10041919] = T.RT_7,
+  [10042410] = T.RT_5,
+  [10042411] = T.RT_1,
   [10042707] = T.RT_1,
   [10042708] = T.RT_2,
   [10042709] = T.RT_7,
   [10043605] = T.RT_7,
   [10043606] = T.RT_2,
   [10043607] = T.RT_6,
+  [10044606] = T.RT_6,
+  [10044607] = T.RT_2,
   [10046111] = T.RT_1,
   [10046112] = T.RT_2,
   [10046113] = T.RT_7,
   [10047209] = T.RT_5,
   [10047210] = T.RT_2,
   [10047211] = T.RT_1,
-  [10049413] = T.RT_25,
-  [10049414] = T.RT_24,
-  [10049415] = T.RT_26,
+  [10049413] = T.RT_1,
+  [10049414] = T.RT_5,
+  [10049415] = T.RT_2,
   [10108304] = T.RT_2,
   [10108305] = T.RT_7,
   [10108329] = T.RT_7,
@@ -715,7 +716,7 @@ return ReadOnly("DialogueServerUseData", {
   [510009102] = T.RT_4,
   [510009103] = T.RT_9,
   [510010071] = {ImprCheckId = 1005},
-  [510010072] = T.RT_26,
+  [510010072] = {ImprCheckId = 1006},
   [510010181] = T.RT_10,
   [510010182] = T.RT_8,
   [510010183] = T.RT_11,
@@ -727,9 +728,9 @@ return ReadOnly("DialogueServerUseData", {
   [510012043] = T.RT_11,
   [510013011] = T.RT_8,
   [510013012] = T.RT_9,
-  [510013041] = T.RT_25,
+  [510013041] = {ImprCheckId = 1008},
   [510013042] = {ImprCheckId = 1009},
-  [510013043] = T.RT_24,
+  [510013043] = {ImprCheckId = 1010},
   [510013231] = T.RT_8,
   [510013232] = T.RT_9,
   [510014021] = T.RT_10,

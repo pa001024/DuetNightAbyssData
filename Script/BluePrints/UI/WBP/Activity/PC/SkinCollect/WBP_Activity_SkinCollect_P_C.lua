@@ -26,6 +26,17 @@ local function IsGamepadInputActive()
   return UIUtils and UIUtils.IsGamepadInput and UIUtils.IsGamepadInput()
 end
 
+local function IsResourceBarFocused(parentWidget)
+  local resourceBar = parentWidget and parentWidget.Activity_Tab and parentWidget.Activity_Tab.WBP_Com_Tab_ResourceBar
+  if not resourceBar then
+    return false
+  end
+  if resourceBar.IsHasFocusedDescendants then
+    return resourceBar:IsHasFocusedDescendants()
+  end
+  return resourceBar.bHasFocusedDescendants == true
+end
+
 function M:SetResourceBarGamepadKeyHidden(isHidden)
   self:RefreshResourceBarGamepadKey(isHidden)
 end
@@ -70,7 +81,7 @@ end
 
 function M:RefreshGamepadActionButtonHints()
   local isGamepad = IsGamepadInputActive()
-  local canShowActionOnButtons = isGamepad and not self.IsInListFocus and not self.IsRewardTipsOpen
+  local canShowActionOnButtons = isGamepad and not self.IsInListFocus and not self.IsRewardTipsOpen and not IsResourceBarFocused(self.ParentWidget)
   self:RefreshRuleButtonGamepadHint(canShowActionOnButtons)
   if self.Btn_Confirm then
     if self.Btn_Confirm.SetDefaultGamePadImg then
@@ -238,18 +249,23 @@ function M:Handle_KeyDownOnGamePad(InKeyName)
       end
       return self:LeaveListFocus()
     end
-  elseif InKeyName == Key.LeftThumb then
-    return self:EnterListFocus()
-  elseif InKeyName == Key.FaceButtonTop then
-    if self.IsUnlocked then
-      self:OnClickClaimAll()
-    else
-      self:OnClickUnlock()
+  else
+    if IsResourceBarFocused(self.ParentWidget) then
+      return false
     end
-    return true
-  elseif InKeyName == Key.FaceButtonBottom then
-    self:OnClickSkinTask()
-    return true
+    if InKeyName == Key.LeftThumb then
+      return self:EnterListFocus()
+    elseif InKeyName == Key.FaceButtonTop then
+      if self.IsUnlocked then
+        self:OnClickClaimAll()
+      else
+        self:OnClickUnlock()
+      end
+      return true
+    elseif InKeyName == Key.FaceButtonBottom then
+      self:OnClickSkinTask()
+      return true
+    end
   end
   return false
 end

@@ -1297,4 +1297,14 @@ Const.MobileScalabilityLevelNum = {
 Const.bTakePhotoAddWatermark = false
 Const.SynthesisCheckResetPointTime = 10
 Const.bEditorUnlockAllHyperWeaponSkills = false
+Const.EnableDisableFixLocationAndPushMonUnitIds = {
+  8519001,
+  8519002,
+  8519501,
+  8519502,
+  8519503,
+  8519504,
+  8519505,
+  8519506
+}
 return Const

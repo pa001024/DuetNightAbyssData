@@ -215,6 +215,7 @@ end
 
 function M:PreConstruct(InDesignTime)
   self.Overridden.PreConstruct(self, InDesignTime)
+  self.Com_Search.EditableText_Search:BP_SetClearKeyboardFocusOnCommit(false)
   if self.IsAbyss then
     self.List_Role.EntryWidgetClass = LoadClass("/Game/UI/WBP/Abyss/Widget/Unit/WBP_Abyss_TabItem.WBP_Abyss_TabItem")
   end
@@ -1515,6 +1516,7 @@ end
 
 function M:DoModItemSelected(ModUuid, bSelected, bJumpList)
   local SelectedContent = self:GetContentByUuid(ModUuid)
+  local bListUnprepared = false
   if SelectedContent then
     SelectedContent.IsSelected = bSelected
     if IsValid(SelectedContent.UI) then
@@ -2192,23 +2194,26 @@ function M:ShowRecommendView(Data, UserCount)
     self.RecommendView:SetData(Params)
     self.RecommendView:SetRecommendFocus()
   end
+  self:CloseModDetailPanel()
   ModModel:SetRecommendView(true)
   self:SetCanRectGamepadVisible(false)
   self:PlayAnimation(self.Recommend_In)
-  self.Tab_Mod:UpdateBottomKeyInfo({
-    {
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "X"}
+  if not UIUtils.IsMobileInput() then
+    self.Tab_Mod:UpdateBottomKeyInfo({
+      {
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "X"}
+        },
+        Desc = GText("UI_Controller_CheckDetails")
       },
-      Desc = GText("UI_Controller_CheckDetails")
-    },
-    {
-      GamePadInfoList = {
-        {Type = "Img", ImgShortPath = "B"}
-      },
-      Desc = GText("UI_CTL_CloseModList")
-    }
-  })
+      {
+        GamePadInfoList = {
+          {Type = "Img", ImgShortPath = "B"}
+        },
+        Desc = GText("UI_CTL_CloseModList")
+      }
+    })
+  end
   AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", nil, nil)
 end
 
@@ -2251,7 +2256,9 @@ function M:OnRecommendViewHide()
   end
   self:SetRecommendBtnState()
   self:PlayAnimation(self.Recommend_Out)
-  self.Tab_Mod:UpdateBottomKeyInfo(self.BottomKeyInfo)
+  if not UIUtils.IsMobileInput() then
+    self.Tab_Mod:UpdateBottomKeyInfo(self.BottomKeyInfo)
+  end
 end
 
 function M:SetRecommendBtnState()

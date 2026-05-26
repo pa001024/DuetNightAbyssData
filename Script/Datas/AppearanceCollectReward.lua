@@ -31,15 +31,15 @@ return ReadOnly("AppearanceCollectReward", {
       [9] = 360009
     },
     PointsTarget = {
-      [1] = 1,
-      [2] = 10,
-      [3] = 20,
-      [4] = 30,
-      [5] = 40,
-      [6] = 50,
-      [7] = 60,
-      [8] = 70,
-      [9] = 80
+      [1] = 10,
+      [2] = 100,
+      [3] = 300,
+      [4] = 600,
+      [5] = 1000,
+      [6] = 1500,
+      [7] = 2200,
+      [8] = 3000,
+      [9] = 4000
     },
     TokenIcon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_Coin_SkinCollect.T_Coin_SkinCollect'",
     UnlockItemCount = 900,

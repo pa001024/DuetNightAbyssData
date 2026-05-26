@@ -21,6 +21,7 @@ function M:InitContent(Content)
   self.RootWidget = self.CallbackObj
   self.Avatar = ArmoryUtils:GetAvatar()
   self.IsPreviewMode = Content.IsPreviewMode
+  self.SkipClickSound = Content.SkipClickSound
   self.AddToFocusPathObj = Content.AddToFocusPathObj
   self.TalentWidgetFocusPathCallback = Content.TalentWidgetFocusPathCallback
   self.Btn_Aera:InitContent({
@@ -54,6 +55,7 @@ function M:InitTalentWidgets()
       local Content = {}
       Content.Parent = self
       Content.IsPreviewMode = self.IsPreviewMode
+      Content.WeaponId = self.WeaponId
       Content.WeaponUuid = self.WeaponUuid
       Content.TalentId = TalentId
       Content.CallbackObj = self.CallbackObj
@@ -62,6 +64,7 @@ function M:InitTalentWidgets()
       Content.MaxCardLevel = self.MaxCardLevel
       Content.AddToFocusPathObj = self.AddToFocusPathObj
       Content.AddToFocusPathCallback = self.TalentWidgetFocusPathCallback
+      Content.SkipClickSound = self.SkipClickSound
       table.insert(TalentContents, Content)
     end
   end
@@ -107,6 +110,7 @@ function M:InitAnimationState()
     AniName = self.UnLocked
   end
   if AniName then
+    self:StopAllAnimations()
     self:PlayAnimation(AniName)
   end
 end
@@ -133,26 +137,8 @@ function M:UnlockCardLevel(FinishedObj, FinishedCallback)
   if RootWidget then
     RootWidget:BlockAllUIInput(true)
   end
+  self:StopAllAnimations()
   self:PlayAnimation(self.Unlock_In)
-  AudioManager(self):PlayUISound(self, "event:/ui/common/skin_upgrade", nil, nil)
-end
-
-function M:ActiveCardLevel()
-  self:InitCardState()
-  if self.CardState == StateEnum.Activated then
-    return
-  end
-  
-  local function OnActiveFinished()
-    self:PlayNormalAnimation()
-    self:UnbindAllFromAnimationFinished(self.Act_In)
-    self:BlockAllUIInput(false)
-  end
-  
-  self:InitAnimationState()
-  self:BindToAnimationFinished(self.Act_In, {self, OnActiveFinished})
-  self:BlockAllUIInput(true)
-  self:PlayAnimation(self.Act_In)
   AudioManager(self):PlayUISound(self, "event:/ui/common/skin_upgrade", nil, nil)
 end
 
@@ -166,6 +152,14 @@ end
 
 function M:IsStopProcessEvent()
   return self.StopProcess
+end
+
+function M:PlayActInAnimation()
+  self:InitCardState()
+  if self.CardState == StateEnum.UnlockedActivatable then
+    self:StopAllAnimations()
+    self:PlayAnimation(self.Act_In)
+  end
 end
 
 function M:PlayNormalAnimation()
@@ -187,7 +181,17 @@ function M:OnCardLevelButtonClicked()
   if self.CallbackObj and self.CardLevelCallback and type(self.CardLevelCallback) == "function" then
     self.CardLevelCallback(self.CallbackObj, self, self.CardLevel)
   end
+  self:StopAllAnimations()
   self:PlayAnimation(self.Click)
+  if not self.SkipClickSound then
+    if self.CardState == StateEnum.Locked then
+      AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_disable", nil, nil)
+    elseif self.CardState == StateEnum.Activated then
+      AudioManager(self):PlayUISound(self, "event:/ui/armory/suyuan_point_click_unlock", nil, nil)
+    else
+      AudioManager(self):PlayUISound(self, "event:/ui/armory/suyuan_point_click", nil, nil)
+    end
+  end
 end
 
 function M:OnButonHovered()

@@ -242,8 +242,8 @@ function Component:NotifyInviteFailed(Uid, ErrCode)
   DispatchGuildController("NotifyInviteFailed", nil, Uid, ErrCode)
 end
 
-function Component:NotifyGuildJoinInviteReply(InviteeUid, GuildId, IsAccept, InviteeName)
-  DispatchGuildController("NotifyGuildJoinInviteReply", nil, InviteeUid, GuildId, IsAccept and true or false, InviteeName or "")
+function Component:NotifyGuildJoinInviteReply(InviteeUid, GuildId, IsAccept, InvitedName)
+  DispatchGuildController("NotifyGuildJoinInviteReply", nil, InviteeUid, GuildId, IsAccept and true or false, InvitedName or "")
 end
 
 function Component:NotifyGuildRecvNewJoinRequest(RequestInfo)

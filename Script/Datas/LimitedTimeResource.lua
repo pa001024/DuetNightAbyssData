@@ -200,7 +200,7 @@ return ReadOnly("LimitedTimeResource", {
     [1] = {
       EndTime = LocalTimeProxy(1780304400),
       LimitedTimeId = 1,
-      MailRemindId = 10071,
+      MailRemindId = 10077,
       ResourceId = 120001
     }
   },
@@ -208,7 +208,7 @@ return ReadOnly("LimitedTimeResource", {
     [1] = {
       EndTime = LocalTimeProxy(1780304400),
       LimitedTimeId = 1,
-      MailRemindId = 10071,
+      MailRemindId = 10077,
       ResourceId = 120002
     }
   },
@@ -216,7 +216,7 @@ return ReadOnly("LimitedTimeResource", {
     [1] = {
       EndTime = LocalTimeProxy(1785142800),
       LimitedTimeId = 1,
-      MailRemindId = 10071,
+      MailRemindId = 10077,
       ResourceId = 120003
     }
   },
@@ -224,7 +224,7 @@ return ReadOnly("LimitedTimeResource", {
     [1] = {
       EndTime = LocalTimeProxy(1785142800),
       LimitedTimeId = 1,
-      MailRemindId = 10071,
+      MailRemindId = 10077,
       ResourceId = 120004
     }
   },

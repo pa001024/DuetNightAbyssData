@@ -813,7 +813,7 @@ return ReadOnly("EventTab", {
     EventTabIcon = "/Game/UI/Texture/Dynamic/Image/Activity/T_Activity_Tab_Sign_AccessoryDrop.T_Activity_Tab_Sign_AccessoryDrop",
     EventTabId = 93,
     EventTabName = "Event_Title_103020",
-    ReddotNode = "Acti_AccessoryDrop01",
+    ReddotNode = "Acti_AccessoryDrop02",
     Sequence = 1403
   },
   [94] = {

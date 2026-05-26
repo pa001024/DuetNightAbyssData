@@ -163,6 +163,8 @@ function M:PlayInAnim()
   if self:IsAnimationPlaying(self.In) then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "AppearanceArchiveOpenSound", nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/skin_collecting_page_in", nil, nil)
   self:PlayAnimationForward(self.In)
 end
 
@@ -170,6 +172,7 @@ function M:PlayOutAnim()
   if self:IsAnimationPlaying(self.Out) then
     return
   end
+  AudioManager(self):SetEventSoundParam(self, "AppearanceArchiveOpenSound", {ToEnd = 1})
   if self.Out then
     self:PlayAnimationForward(self.Out)
   else

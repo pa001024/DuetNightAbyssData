@@ -222,6 +222,8 @@ function M:UpdateWeaponGradeLevelButtonState()
     self.Text_Level:SetText(GText("UI_WeaponStrength_Level") .. "Max")
     self:SetMaxLevelBg(true)
     self.Parent.SubWidget:SetMaxLevelBg(true)
+    self.Parent:ShowRemoveBtn(false)
+    self.Parent:ShowChooseBtn(false)
   else
     if self.IsPreviewMode then
       self.Preview:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)

@@ -834,7 +834,7 @@
   {
     "id": 10114,
     "name": "Ethereal Aureola: Opaque White",
-    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "desc": "A painless scar, bearing the mercy of the divine.",
     "icon": "T_Fashion_Head61_02",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -842,7 +842,7 @@
   {
     "id": 10115,
     "name": "Ethereal Aureola: Gilt",
-    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "desc": "A painless scar, bearing the mercy of the divine.",
     "icon": "T_Fashion_Head61_01",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -850,7 +850,7 @@
   {
     "id": 10116,
     "name": "Ethereal Aureola: Rust Red",
-    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "desc": "A painless scar, bearing the mercy of the divine.",
     "icon": "T_Fashion_Head61_03",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -858,7 +858,7 @@
   {
     "id": 10117,
     "name": "Ethereal Aureola: Violet",
-    "desc": "无痛的伤痕，铭刻着神祇的慈悲。",
+    "desc": "A painless scar, bearing the mercy of the divine.",
     "icon": "T_Fashion_Head61_04",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -962,7 +962,7 @@
   {
     "id": 10130,
     "name": "Chirrup Warbler",
-    "desc": "由于阿特拉西亚大陆知名童话故事《啾啾的奇妙冒险》的传播，很多人误认为啾啾莺是那本童话故事的主角。因此每本新书出版时，作者都会在书中强调，“啾啾是小鸡，啾啾莺是小鸟！”",
+    "desc": "Thanks to the popularity of the Atlasian fairy tale JoeJoe's Bizarre Adventure, many readers have become convinced that JoeJoe must be a Chirrup Warbler, simply because \"JoeJoe\" sounds so much like the bird's call. As a result, every new edition now includes an increasingly desperate clarification from the author: \"JoeJoe is a chick, not a Chirrup Warbler!\"",
     "icon": "T_Fashion_Head64",
     "rarity": 4,
     "unlock": "Available from events"
@@ -970,7 +970,7 @@
   {
     "id": 10131,
     "name": "Stoney Stare",
-    "desc": "辟邪退灾。",
+    "desc": "Wards off evil and misfortune.",
     "icon": "T_Fashion_Head66",
     "rarity": 4,
     "unlock": "Available from events"
@@ -985,7 +985,7 @@
   },
   {
     "id": 10139,
-    "name": "节日气球·黛蓝",
+    "name": "Festival Balloon: Azure",
     "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
     "icon": "T_Fashion_Head60_04",
     "rarity": 3,
@@ -1001,7 +1001,7 @@
   },
   {
     "id": 10149,
-    "name": "节日气球·薄荷",
+    "name": "Festival Balloon: Mint",
     "desc": "During festivals, people tie them to benches and porch eaves, where they sway gently in the breeze and cast soft, dappled light.",
     "icon": "T_Fashion_Head60_02",
     "rarity": 3,
@@ -1474,7 +1474,7 @@
   {
     "id": 13029,
     "name": "Wolfy Tail: Leaden Grey",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a wolfy tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Waist30_01",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -1482,7 +1482,7 @@
   {
     "id": 13030,
     "name": "Wolfy Tail: Dark Jade",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a wolfy tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Waist30_02",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -1490,7 +1490,7 @@
   {
     "id": 13031,
     "name": "Wolfy Tail: Rust Red",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a wolfy tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Waist30_03",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -1498,7 +1498,7 @@
   {
     "id": 13032,
     "name": "Wolfy Tail: Azure",
-    "desc": "灵动、可爱、活泼、美丽……世上一切对美好的形容词在狼尾巴的面前都会显得黯淡无光，这就是狼尾巴那让人无法拒绝的魔力……这台词总感觉在哪里说过，应该是错觉吧。",
+    "desc": "Vivacious, adorable, lively, beautiful... No words in the world can do justice to the irresistible allure of a wolfy tail. Hang on... why does that sound weirdly familiar? Must be my imagination.",
     "icon": "T_Fashion_Waist30_04",
     "rarity": 4,
     "unlock": "Available at Shop"
@@ -1506,7 +1506,7 @@
   {
     "id": 13033,
     "name": "Twilight Nightmare: Dark Jade",
-    "desc": "Now this is real cat music.",
+    "desc": "When the last glow burns away, fear takes form in the fading light.",
     "icon": "T_Fashion_Back43_01",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -1514,7 +1514,7 @@
   {
     "id": 13034,
     "name": "Twilight Nightmare: Gilt",
-    "desc": "Now this is real cat music.",
+    "desc": "When the last glow burns away, fear takes form in the fading light.",
     "icon": "T_Fashion_Back43_04",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -1522,7 +1522,7 @@
   {
     "id": 13035,
     "name": "Twilight Nightmare: Emerald Green",
-    "desc": "Now this is real cat music.",
+    "desc": "When the last glow burns away, fear takes form in the fading light.",
     "icon": "T_Fashion_Back43_03",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -1530,7 +1530,7 @@
   {
     "id": 13036,
     "name": "Twilight Nightmare: White Sakura",
-    "desc": "Now this is real cat music.",
+    "desc": "When the last glow burns away, fear takes form in the fading light.",
     "icon": "T_Fashion_Back43_02",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -2162,7 +2162,7 @@
   {
     "id": 20082,
     "name": "Sacred Radiance: Opaque White",
-    "desc": "神将光芒弃于人间，静待信仰的回响。",
+    "desc": "The deity casts its light among mortals, waiting for faith to answer.",
     "icon": "T_Fashion_Face26_04",
     "rarity": 5,
     "unlock": "Available from events"
@@ -2170,7 +2170,7 @@
   {
     "id": 20084,
     "name": "Sacred Radiance: Celeste",
-    "desc": "神将光芒弃于人间，静待信仰的回响。",
+    "desc": "The deity casts its light among mortals, waiting for faith to answer.",
     "icon": "T_Fashion_Face26_02",
     "rarity": 5,
     "unlock": "Available from events"
@@ -2178,7 +2178,7 @@
   {
     "id": 20086,
     "name": "Whisperveil: Dark Jade",
-    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "desc": "Shh... Best not look beneath the veil.",
     "icon": "T_Fashion_Face25_04",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -2186,7 +2186,7 @@
   {
     "id": 20087,
     "name": "Whisperveil: Opaque White",
-    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "desc": "Shh... Best not look beneath the veil.",
     "icon": "T_Fashion_Face25_03",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -2194,7 +2194,7 @@
   {
     "id": 20088,
     "name": "Whisperveil: Rust Red",
-    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "desc": "Shh... Best not look beneath the veil.",
     "icon": "T_Fashion_Face25_02",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -2202,7 +2202,7 @@
   {
     "id": 20089,
     "name": "Whisperveil: Gilt",
-    "desc": "嘘，不要窥探面纱之下的秘密。",
+    "desc": "Shh... Best not look beneath the veil.",
     "icon": "T_Fashion_Face25_01",
     "rarity": 5,
     "unlock": "Available at Shop"
@@ -2266,7 +2266,7 @@
   {
     "id": 21010,
     "name": "Everbloom Flurry",
-    "desc": "Everbloom Flurry",
+    "desc": "A crimson tide surging from the other shore.",
     "icon": "T_Fashion_Fx23",
     "rarity": 5,
     "unlock": "Available through Prism Exchange"
@@ -2274,7 +2274,7 @@
   {
     "id": 21011,
     "name": "Sacred Wake: Gilt",
-    "desc": "Sacred Wake: Gilt",
+    "desc": "Stardust and fallen feathers scatter behind — embers left behind as faith drifts through the world.",
     "icon": "T_Fashion_Fx22",
     "rarity": 5,
     "unlock": "Available from events"
@@ -2282,7 +2282,7 @@
   {
     "id": 21012,
     "name": "Sacred Wake: Leaden Grey",
-    "desc": "Sacred Wake: Gilt",
+    "desc": "Stardust and fallen feathers scatter behind — embers left behind as faith drifts through the world.",
     "icon": "T_Fashion_Fx24",
     "rarity": 5,
     "unlock": "Available from events"
@@ -2657,7 +2657,7 @@
   },
   {
     "id": 30057,
-    "name": "Bottled Joy: Rust Red",
+    "name": "Bottled Joy: Dark Jade",
     "desc": "A refreshing sip for the sweltering summer heat.",
     "icon": "T_Fashion_Waist29_04",
     "rarity": 4,

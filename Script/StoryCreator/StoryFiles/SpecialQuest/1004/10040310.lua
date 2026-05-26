@@ -21,9 +21,9 @@ return {
       key = "17782435125899548978",
       type = "StoryNode",
       name = "神弃者boss战",
-      pos = {x = 1035.4857142857143, y = 87.02857142857157},
+      pos = {x = 1035.4857142857143, y = 85.77857142857157},
       propsData = {
-        QuestId = 10040310,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040310_01",
         QuestDeatil = "Description_10040310_01",
@@ -45,8 +45,8 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Npc",
+        StoryGuidePointName = "Npc_Kanuo_152480368",
         JumpId = 0
       },
       questNodeData = {
@@ -90,12 +90,6 @@ return {
           {
             startQuest = "17782435125899548983",
             startPort = "QuestStart",
-            endQuest = "17782435125899548990",
-            endPort = "In"
-          },
-          {
-            startQuest = "17782435125899548983",
-            startPort = "QuestStart",
             endQuest = "177875047920110697597",
             endPort = "In"
           },
@@ -116,6 +110,36 @@ return {
             startPort = "Out",
             endQuest = "17787573783441978",
             endPort = "In"
+          },
+          {
+            startQuest = "17782435125899548983",
+            startPort = "QuestStart",
+            endQuest = "177891747346681605088",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17782435125899548983",
+            startPort = "QuestStart",
+            endQuest = "17792819589533865663",
+            endPort = "In"
+          },
+          {
+            startQuest = "17792819589533865663",
+            startPort = "Out",
+            endQuest = "17782435125899548990",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782435125899548990",
+            startPort = "Out",
+            endQuest = "17795206183041936545",
+            endPort = "In"
+          },
+          {
+            startQuest = "17782435125899548988",
+            startPort = "Out",
+            endQuest = "17795206367611936867",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -123,7 +147,7 @@ return {
             key = "17782435125899548983",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 875.4515050167224, y = 284.6488294314381},
+            pos = {x = 373.19344050059334, y = 290.45528104434135},
             propsData = {ModeType = 0}
           },
           ["17782435125899548984"] = {
@@ -137,14 +161,14 @@ return {
             key = "17782435125899548985",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1479.3333333333333, y = 658.3333333333333},
+            pos = {x = 1378.4583333333333, y = 647.4958333333333},
             propsData = {}
           },
           ["17782435125899548987"] = {
             key = "17782435125899548987",
             type = "SendMessageNode",
             name = "开始精英战",
-            pos = {x = 1484.25, y = 293.75},
+            pos = {x = 1484.25, y = 279.35},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "ZZZBossStart",
@@ -155,7 +179,7 @@ return {
             key = "17782435125899548988",
             type = "BossBattleFinishNode",
             name = "完成BOSS战阶段",
-            pos = {x = 1792.7845420521971, y = 294.7201949652307},
+            pos = {x = 1790.384542052197, y = 280.3201949652307},
             propsData = {
               SendMessage = "",
               FinishCondition = "ZZZBossSuccess"
@@ -165,13 +189,13 @@ return {
             key = "17782435125899548989",
             type = "TalkNode",
             name = "boss战后对话",
-            pos = {x = 2083.784542052197, y = 301.7201949652307},
+            pos = {x = 2076.5845420521973, y = 281.3201949652307},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
               FirstDialogueId = 10010101,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10044601.10044601'",
-              TalkType = "FixSimple",
+              TalkType = "QuestImpression",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,
@@ -265,7 +289,7 @@ return {
             key = "17782435125899548991",
             type = "UpdateTaskBarAndTaskMainNode",
             name = "更新任务目标节点",
-            pos = {x = 1474.2837528604118, y = 121.11441647597252},
+            pos = {x = 1485.0837528604118, y = 165.51441647597252},
             propsData = {
               NewDescription = "Content_10040310_02",
               NewDetail = "",
@@ -283,21 +307,21 @@ return {
             key = "17783048979629543873",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 1164.5384615384617, y = 119.53846153846149},
+            pos = {x = 1142.2803970223326, y = 20.05459057071954},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["177875047920110697597"] = {
             key = "177875047920110697597",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1168.5857843137255, y = 455.32843137254906},
+            pos = {x = 1033.4950585072738, y = 548.0562539531943},
             propsData = {}
           },
           ["17787573698991751"] = {
             key = "17787573698991751",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 1486, y = 468.00000000000006},
+            pos = {x = 1484.8, y = 447.6000000000001},
             propsData = {
               IsCreate = true,
               IsClearOtherPhantom = false,
@@ -309,12 +333,70 @@ return {
             key = "17787573783441978",
             type = "CreatePhantomNode",
             name = "召唤/销毁剧情魅影",
-            pos = {x = 2080, y = 464.00000000000006},
+            pos = {x = 2080, y = 426.80000000000007},
             propsData = {
               IsCreate = false,
               IsClearOtherPhantom = false,
               IsSync = false,
               StaticCreatorIdList = {152480405}
+            }
+          },
+          ["177891747346681605088"] = {
+            key = "177891747346681605088",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 1165.4, y = -81.70000000000005},
+            propsData = {
+              TargetTime = 19,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["17792819589533865663"] = {
+            key = "17792819589533865663",
+            type = "ChangeStaticCreatorNode",
+            name = "销毁NPC的哈洛吉卡诺史蒂芬",
+            pos = {x = 883.899888765295, y = 286.59043381535065},
+            propsData = {
+              ActiveEnable = false,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {
+                152480367,
+                152480368,
+                152480413
+              }
+            }
+          },
+          ["17795206183041936545"] = {
+            key = "17795206183041936545",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1477.2428194025108, y = 11.814682876546044},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0168_boss_haluoji.0168_boss_haluoji'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
+          },
+          ["17795206367611936867"] = {
+            key = "17795206367611936867",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2053.4124622596537, y = 84.21852903039223},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

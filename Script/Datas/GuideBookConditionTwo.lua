@@ -711,6 +711,15 @@ return ReadOnly("GuideBookConditionTwo", {
         RewardId = 7000
       }
     },
+    [154] = {
+      [1] = {
+        CompleteUIGuideId = 154,
+        GuideId = 154,
+        GuideNoteId = 167,
+        GuideNoteTab = 5,
+        RewardId = 7000
+      }
+    },
     [1001] = {
       [1] = {
         CompleteUIGuideId = 1001,

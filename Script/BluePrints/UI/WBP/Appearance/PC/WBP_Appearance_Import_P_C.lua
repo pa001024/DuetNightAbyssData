@@ -291,7 +291,7 @@ function M:OnImportClicked()
     RedPrint("[外观导入] 点击导入中止：导入模型为空")
     return
   end
-  if not self.Model:CanStartImport() then
+  if not self.Model:CanApplyImport() then
     RedPrint("[外观导入] 点击导入被拦截：" .. tostring(self.Model:GetWarningText()))
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, self.Model:GetWarningText() ~= "" and self.Model:GetWarningText() or GText("UI_COMMONPOP_TITLE_100059"))
     return
@@ -315,7 +315,10 @@ function M:ExecuteImport()
       self:CloseImportWindow()
       UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_AppearanceScore_ImportCompleteToast"))
     else
-      UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("UI_COMMONPOP_TITLE_100059"))
+      local WarningText = self.Model and self.Model:GetWarningText() or ""
+      if "" ~= WarningText then
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, WarningText)
+      end
     end
   end)
 end

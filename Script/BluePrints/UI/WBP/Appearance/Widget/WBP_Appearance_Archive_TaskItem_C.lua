@@ -72,6 +72,7 @@ function M:OnListItemObjectSet(Content)
 end
 
 function M:OnClickedBtn()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_normal", nil, nil)
   if self.Content and self.Content.ReceiveCallBackObj and self.Content.ReceiveCallBackFunc then
     self.Content.ReceiveCallBackFunc(self.Content.ReceiveCallBackObj, self.Content)
   end

@@ -7,7 +7,7 @@ end
 return ReadOnly("CharacterData", {
   [1101] = {
     CharBirth = "UI_CHAR_BIRTH_1101",
-    CharBirthday = "45292.0",
+    CharBirthday = "45292",
     CharForce = "UI_CHAR_FORCE_1101",
     CharId = 1101,
     CharName = "UI_CHAR_NAME_1101",
@@ -19,7 +19,7 @@ return ReadOnly("CharacterData", {
   },
   [1102] = {
     CharBirth = "UI_CHAR_BIRTH_1102",
-    CharBirthday = "46140.0",
+    CharBirthday = "46140",
     CharForce = "UI_CHAR_FORCE_1102",
     CharId = 1102,
     CharName = "UI_CHAR_NAME_1102",
@@ -31,7 +31,7 @@ return ReadOnly("CharacterData", {
   },
   [1103] = {
     CharBirth = "UI_CHAR_BIRTH_1103",
-    CharBirthday = "45939.0",
+    CharBirthday = "45939",
     CharForce = "UI_CHAR_FORCE_1103",
     CharId = 1103,
     CharName = "UI_CHAR_NAME_1103",
@@ -43,7 +43,7 @@ return ReadOnly("CharacterData", {
   },
   [1501] = {
     CharBirth = "UI_CHAR_BIRTH_1501",
-    CharBirthday = "45877.0",
+    CharBirthday = "45877",
     CharForce = "UI_CHAR_FORCE_1501",
     CharId = 1501,
     CharName = "UI_CHAR_NAME_1501",
@@ -55,7 +55,7 @@ return ReadOnly("CharacterData", {
   },
   [1502] = {
     CharBirth = "UI_CHAR_BIRTH_1502",
-    CharBirthday = "45351.0",
+    CharBirthday = "45351",
     CharForce = "UI_CHAR_FORCE_1502",
     CharId = 1502,
     CharName = "UI_CHAR_NAME_1502",
@@ -67,7 +67,7 @@ return ReadOnly("CharacterData", {
   },
   [1503] = {
     CharBirth = "UI_CHAR_BIRTH_1503",
-    CharBirthday = "45962.0",
+    CharBirthday = "45962",
     CharForce = "UI_CHAR_FORCE_1503",
     CharId = 1503,
     CharName = "UI_CHAR_NAME_1503",
@@ -79,7 +79,7 @@ return ReadOnly("CharacterData", {
   },
   [1504] = {
     CharBirth = "UI_CHAR_BIRTH_1504",
-    CharBirthday = "46274.0",
+    CharBirthday = "46274",
     CharForce = "UI_CHAR_FORCE_1504",
     CharId = 1504,
     CharName = "UI_CHAR_NAME_1504",
@@ -91,7 +91,7 @@ return ReadOnly("CharacterData", {
   },
   [1801] = {
     CharBirth = "UI_CHAR_BIRTH_1801",
-    CharBirthday = "45384.0",
+    CharBirthday = "45384",
     CharForce = "UI_CHAR_FORCE_1801",
     CharId = 1801,
     CharName = "UI_CHAR_NAME_1801",
@@ -103,7 +103,7 @@ return ReadOnly("CharacterData", {
   },
   [2101] = {
     CharBirth = "UI_CHAR_BIRTH_2101",
-    CharBirthday = "45371.0",
+    CharBirthday = "45371",
     CharForce = "UI_CHAR_FORCE_2101",
     CharId = 2101,
     CharName = "UI_CHAR_NAME_2101",
@@ -115,7 +115,7 @@ return ReadOnly("CharacterData", {
   },
   [2301] = {
     CharBirth = "UI_CHAR_BIRTH_2301",
-    CharBirthday = "45636.0",
+    CharBirthday = "45636",
     CharForce = "UI_CHAR_FORCE_2301",
     CharId = 2301,
     CharName = "UI_CHAR_NAME_2301",
@@ -127,7 +127,7 @@ return ReadOnly("CharacterData", {
   },
   [2401] = {
     CharBirth = "UI_CHAR_BIRTH_2401",
-    CharBirthday = "45536.0",
+    CharBirthday = "45536",
     CharForce = "UI_CHAR_FORCE_2401",
     CharId = 2401,
     CharName = "UI_CHAR_NAME_2401",
@@ -139,7 +139,7 @@ return ReadOnly("CharacterData", {
   },
   [3101] = {
     CharBirth = "UI_CHAR_BIRTH_3101",
-    CharBirthday = "45399.0",
+    CharBirthday = "45399",
     CharForce = "UI_CHAR_FORCE_3101",
     CharId = 3101,
     CharName = "UI_CHAR_NAME_3101",
@@ -151,7 +151,7 @@ return ReadOnly("CharacterData", {
   },
   [3102] = {
     CharBirth = "UI_CHAR_BIRTH_3102",
-    CharBirthday = "45493.0",
+    CharBirthday = "45493",
     CharForce = "UI_CHAR_FORCE_3102",
     CharId = 3102,
     CharName = "UI_CHAR_NAME_3102",
@@ -163,7 +163,7 @@ return ReadOnly("CharacterData", {
   },
   [3103] = {
     CharBirth = "UI_CHAR_BIRTH_3103",
-    CharBirthday = "45647.0",
+    CharBirthday = "45647",
     CharForce = "UI_CHAR_FORCE_3103",
     CharId = 3103,
     CharName = "UI_CHAR_NAME_3103",
@@ -175,7 +175,7 @@ return ReadOnly("CharacterData", {
   },
   [3201] = {
     CharBirth = "UI_CHAR_BIRTH_3201",
-    CharBirthday = "45522.0",
+    CharBirthday = "45522",
     CharForce = "UI_CHAR_FORCE_3201",
     CharId = 3201,
     CharName = "UI_CHAR_NAME_3201",
@@ -187,7 +187,7 @@ return ReadOnly("CharacterData", {
   },
   [3202] = {
     CharBirth = "UI_CHAR_BIRTH_3202",
-    CharBirthday = "46347.0",
+    CharBirthday = "46347",
     CharForce = "UI_CHAR_FORCE_3202",
     CharId = 3202,
     CharName = "UI_CHAR_NAME_3202",
@@ -199,7 +199,7 @@ return ReadOnly("CharacterData", {
   },
   [3301] = {
     CharBirth = "UI_CHAR_BIRTH_3301",
-    CharBirthday = "45555.0",
+    CharBirthday = "45555",
     CharForce = "UI_CHAR_FORCE_3301",
     CharId = 3301,
     CharName = "UI_CHAR_NAME_3301",
@@ -211,7 +211,7 @@ return ReadOnly("CharacterData", {
   },
   [4101] = {
     CharBirth = "UI_CHAR_BIRTH_4101",
-    CharBirthday = "45888.0",
+    CharBirthday = "45888",
     CharForce = "UI_CHAR_FORCE_4101",
     CharId = 4101,
     CharName = "UI_CHAR_NAME_4101",
@@ -223,7 +223,7 @@ return ReadOnly("CharacterData", {
   },
   [4102] = {
     CharBirth = "UI_CHAR_BIRTH_4102",
-    CharBirthday = "46010.0",
+    CharBirthday = "46010",
     CharForce = "UI_CHAR_FORCE_4102",
     CharId = 4102,
     CharName = "UI_CHAR_NAME_4102",
@@ -235,7 +235,7 @@ return ReadOnly("CharacterData", {
   },
   [4201] = {
     CharBirth = "UI_CHAR_BIRTH_4201",
-    CharBirthday = "45607.0",
+    CharBirthday = "45607",
     CharForce = "UI_CHAR_FORCE_4201",
     CharId = 4201,
     CharName = "UI_CHAR_NAME_4201",
@@ -247,7 +247,7 @@ return ReadOnly("CharacterData", {
   },
   [4202] = {
     CharBirth = "UI_CHAR_BIRTH_4202",
-    CharBirthday = "45365.0",
+    CharBirthday = "45365",
     CharForce = "UI_CHAR_FORCE_4202",
     CharId = 4202,
     CharName = "UI_CHAR_NAME_4202",
@@ -259,7 +259,7 @@ return ReadOnly("CharacterData", {
   },
   [4301] = {
     CharBirth = "UI_CHAR_BIRTH_4301",
-    CharBirthday = "45540.0",
+    CharBirthday = "45540",
     CharForce = "UI_CHAR_FORCE_4301",
     CharId = 4301,
     CharName = "UI_CHAR_NAME_4301",
@@ -271,7 +271,7 @@ return ReadOnly("CharacterData", {
   },
   [5101] = {
     CharBirth = "UI_CHAR_BIRTH_5101",
-    CharBirthday = "45444.0",
+    CharBirthday = "45444",
     CharForce = "UI_CHAR_FORCE_5101",
     CharId = 5101,
     CharName = "UI_CHAR_NAME_5101",
@@ -283,7 +283,7 @@ return ReadOnly("CharacterData", {
   },
   [5102] = {
     CharBirth = "UI_CHAR_BIRTH_5102",
-    CharBirthday = "45748.0",
+    CharBirthday = "45748",
     CharForce = "UI_CHAR_FORCE_5102",
     CharId = 5102,
     CharName = "UI_CHAR_NAME_5102",
@@ -295,7 +295,7 @@ return ReadOnly("CharacterData", {
   },
   [5301] = {
     CharBirth = "UI_CHAR_BIRTH_5301",
-    CharBirthday = "45465.0",
+    CharBirthday = "45465",
     CharForce = "UI_CHAR_FORCE_5301",
     CharId = 5301,
     CharName = "UI_CHAR_NAME_5301",
@@ -307,7 +307,7 @@ return ReadOnly("CharacterData", {
   },
   [5401] = {
     CharBirth = "UI_CHAR_BIRTH_5401",
-    CharBirthday = "45785.0",
+    CharBirthday = "45785",
     CharForce = "UI_CHAR_FORCE_5401",
     CharId = 5401,
     CharName = "UI_CHAR_NAME_5401",

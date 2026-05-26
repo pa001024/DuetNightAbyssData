@@ -607,7 +607,14 @@ function Component:RefreshOpInfoByInputDeviceComp(CurInputDevice, CurGamepadName
       end
     end
     self:ShowCheckBtn(false)
-    self:ShowChooseBtn(true)
+    local bIsMaxGradeLevel = self.TargetWeapon and self.TargetWeapon.GradeLevel >= self.MaxGradeLevel
+    if bIsMaxGradeLevel then
+      self:ShowChooseBtn(false)
+      self:ShowRemoveBtn(false)
+    else
+      self:ShowChooseBtn(true)
+      self:ShowRemoveBtn(true)
+    end
   end
 end
 

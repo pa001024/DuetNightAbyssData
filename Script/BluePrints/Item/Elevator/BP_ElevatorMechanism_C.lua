@@ -293,6 +293,9 @@ function BP_ElevatorMechanism_C:CheckChildrenStateOpen()
   if not self.ElevatorTopChildActor and not self.ElevatorBottomChildActor then
     return true
   end
+  if self.ElevatorBottomChildActor and self.ElevatorTopChildActor and 1 ~= self.CurrentElevatorState and self.ElevatorBottomChildActor.StateId ~= self.StateInteractiveId and self.ElevatorTopChildActor.StateId ~= self.StateInteractiveId then
+    return true
+  end
   if self.ElevatorTopChildActor and 2 == self.CurrentElevatorState then
     return self.ElevatorTopChildActor.StateId == self.StateInteractiveId
   end

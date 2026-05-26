@@ -1013,6 +1013,13 @@ return ReadOnly("GuideBook", {
     MechanismTag = "OpenGuild",
     RewardId = 7000
   },
+  [167] = {
+    CompleteUIGuideId = 154,
+    GuideId = 154,
+    GuideNoteId = 167,
+    GuideNoteTab = 5,
+    RewardId = 7000
+  },
   [1001] = {
     CompleteUIGuideId = 10011,
     GuideId = 10011,

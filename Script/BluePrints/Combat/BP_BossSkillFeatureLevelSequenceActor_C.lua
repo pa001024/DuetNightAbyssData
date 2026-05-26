@@ -8,7 +8,7 @@ function M:IsCanPlay()
   if 0 == self.SkillFeatureBuffId then
     return true
   end
-  local HasBuff = Player.BuffManager:HasBuff(self.SkillFeatureBuffId)
+  local HasBuff = Player.BuffManager:HasBuff(self.SkillFeatureBuffId, false)
   return HasBuff
 end
 

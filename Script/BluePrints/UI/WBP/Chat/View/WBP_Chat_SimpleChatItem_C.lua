@@ -98,17 +98,6 @@ function M:Open(MsgWrap, bSound)
       local InsertPos = string.len(table.concat(Splited))
       Content = Content:insert(InsertPos, "\n")
       self.Text_DialogSingle:SetVisibility(UIConst.VisibilityOp.Collapsed)
-      if not self.Text_Dialog.DefaultTextStyleOverride.OverflowPolicy then
-        local SpackerRawTable = StringUtils.Utf8ToTable(RawSpacker)
-        local ContentRawTable = StringUtils.Utf8ToTable(Content)
-        if #SpackerRawTable + #ContentRawTable > self.MaxTextCount then
-          Content = table.concat(ContentRawTable, "", 1, self.MaxTextCount - #SpackerRawTable) .. "..."
-        end
-      else
-        self.Text_Dialog.bOverrideAccessibleDefaults = true
-        self.Text_Dialog.DefaultTextStyleOverride.OverflowPolicy = ETextOverflowPolicy.Ellipsis
-        self.Text_Dialog:SetDefaultTextStyle(self.Text_Dialog.DefaultTextStyleOverride)
-      end
       if self.Text_Dialog and self.Text_Dialog.SetWrapTextAt then
         self.Text_Dialog:SetWrapTextAt(TargetLineWidth)
       end

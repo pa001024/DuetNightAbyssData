@@ -528,32 +528,22 @@ return ReadOnly("RegionGraph", {
       RegionTarget = {
         {
           101101,
-          "TargetPoint_FromCZtoBH",
+          "FromCZtoBH",
           1
         },
         {
           106301,
-          "TargetPoint_FromCZtoYLQ",
+          "FromCZtoYLQ",
           1
         },
         {
           106301,
-          "TargetPoint_FromCZtoZZZ",
+          "FromCZtoZZZ",
           1
         },
         {
           106301,
-          "TargetPoint_FromCZtoZZZEnd",
-          1
-        },
-        {
-          106001,
-          "TargetPoint_FromCZtoYWS",
-          1
-        },
-        {
-          106001,
-          "TargetPoint_FromYWStoCZ",
+          "FromCZtoZZZEnd",
           1
         }
       }
@@ -568,22 +558,22 @@ return ReadOnly("RegionGraph", {
       RegionTarget = {
         {
           106001,
-          "TargetPoint_FromYLQtoCZ",
+          "FromYLQtoCZ",
           1
         },
         {
           106001,
-          "TargetPoint_FromJGQtoCZ",
+          "FromJGQtoCZ",
           1
         },
         {
           106001,
-          "TargetPoint_FromZZZtoCZ",
+          "FromZZZtoCZ",
           1
         },
         {
           106001,
-          "TargetPoint_FromZZZStoCZ",
+          "FromZZZStoCZ",
           1
         }
       }

@@ -17,21 +17,21 @@ return ReadOnly("CombatMonitor", {
     MonitorType = "Time",
     ServerMark = true,
     SubId = {"Capture"},
-    Value = 15
+    Value = 10
   },
   [3] = {
     MonitorId = 3,
     MonitorType = "Time",
     ServerMark = true,
     SubId = {"Sabotage"},
-    Value = 15
+    Value = 5
   },
   [4] = {
     MonitorId = 4,
     MonitorType = "Time",
     ServerMark = true,
     SubId = {"Rescue"},
-    Value = 15
+    Value = 10
   },
   [5] = {
     MonitorId = 5,
@@ -40,7 +40,7 @@ return ReadOnly("CombatMonitor", {
     SubId = {
       "Exterminate"
     },
-    Value = 10
+    Value = 5
   },
   [6] = {
     MonitorId = 6,

@@ -137,10 +137,11 @@ function WBP_Activity_Coop_ListRoomItem_C:RefreshWsBtnState()
     self.Ws_Btn:SetActiveWidgetIndex(1)
     self.TextState:SetText(GText("UI_AsyncCombat_RemainProgress"))
     local LastProgress = 100 - RoomData.Progress
+    local LastProgressStr = CommonUtils.FormatNumInFrench(tostring(LastProgress))
     if LastProgress <= 10 then
-      self.TextNum:SetText("<Highlight>" .. LastProgress .. "%</>")
+      self.TextNum:SetText("<Highlight>" .. LastProgressStr .. "%</>")
     else
-      self.TextNum:SetText(LastProgress .. "%")
+      self.TextNum:SetText(LastProgressStr .. "%")
     end
   end
 end

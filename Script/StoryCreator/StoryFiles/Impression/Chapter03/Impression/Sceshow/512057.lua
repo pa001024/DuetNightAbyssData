@@ -86,6 +86,12 @@ return {
           {
             startQuest = "177806724630232485115",
             startPort = "Out",
+            endQuest = "177806724630232485118",
+            endPort = "In"
+          },
+          {
+            startQuest = "177806724630232485118",
+            startPort = "Out",
             endQuest = "177806724630232485113",
             endPort = "Success"
           }
@@ -228,7 +234,7 @@ return {
             key = "177806724630232485118",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 1694.3333333333333, y = 252.33333333333334},
+            pos = {x = 1969.0701754385964, y = 216.01754385964912},
             propsData = {
               VarName = "Scenpc_512057",
               VarValue = 2

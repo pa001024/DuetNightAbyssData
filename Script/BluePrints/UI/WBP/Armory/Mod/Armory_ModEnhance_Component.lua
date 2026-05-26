@@ -486,7 +486,9 @@ function Component:NotifyOnModCardLevelUp(ModUuid, Comsumers)
     self.Panel_Limit:SetVisibility(UIConst.VisibilityOp.Visible)
   end
   self.EnhanceWidget:OnLevelUpSuccess()
-  ModController:TriggerModAutoLock(ModUuid)
+  if not self.Target:IsLock() then
+    ModController:TriggerModAutoLock(ModUuid)
+  end
 end
 
 function Component:OnLevelUpSuccessFinishedCallback()

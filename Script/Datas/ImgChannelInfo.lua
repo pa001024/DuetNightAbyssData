@@ -20,10 +20,25 @@ return ReadOnly("ImgChannelInfo", {
     Name = "TapTap-安卓",
     Provider = "TapTap"
   },
+  [181] = {
+    ImgChannelId = 181,
+    Name = "全球SDK-华为",
+    Provider = "hero"
+  },
+  [197] = {
+    ImgChannelId = 197,
+    Name = "Onestore",
+    Provider = "hero"
+  },
   [259] = {
     ImgChannelId = 259,
     Name = "官方官网PC",
     Provider = "Hero"
+  },
+  [272] = {
+    ImgChannelId = 272,
+    Name = "全球SDK-rustore",
+    Provider = "hero"
   },
   [287] = {
     ImgChannelId = 287,

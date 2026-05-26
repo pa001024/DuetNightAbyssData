@@ -55,7 +55,11 @@ function M:Init()
           local Type = {}
           if AppearanceSubTabInfo.SubType then
             for _, Name in pairs(AppearanceSubTabInfo.SubType) do
-              Type[Name] = 1
+              if type(Name) == "string" and string.match(Name, "^%d+$") ~= nil then
+                Type[tonumber(Name)] = 1
+              else
+                Type[Name] = 1
+              end
             end
           end
           local Data = DataMgr[AppearanceSubTabInfo.ParentIndex]

@@ -59,6 +59,32 @@ function Component:IsWeaponHasReward(WeaponId)
   return WeaponModel:IsWeaponHasReward(WeaponId)
 end
 
+function Component:IsWeaponHasForgeReward()
+  return WeaponModel:IsWeaponHasForgeReward()
+end
+
+function Component:IsMeleeWeaponHasForgeReward()
+  return WeaponModel:IsMeleeWeaponHasForgeReward()
+end
+
+function Component:IsRangedWeaponHasForgeReward()
+  return WeaponModel:IsRangedWeaponHasForgeReward()
+end
+
+function Component:_OnPropChangeWeaponForgeLevelRewardGot(ForgeTable)
+  local ForgeLevel = ForgeTable and ForgeTable[1]
+  if ForgeLevel > 0 then
+    WeaponModel:OnPropChangeWeaponForgeLevelRewardGot(ForgeLevel)
+  end
+end
+
+function Component:_OnPropChangeWeaponForgeQuests(QuestIdTable)
+  local QuestId = QuestIdTable and QuestIdTable[1]
+  if QuestId then
+    WeaponModel:OnPropChangeWeaponForgeQuests(QuestId)
+  end
+end
+
 function Component:GetWeaponCountById(WeaponId)
   return WeaponModel:GetWeaponCount(WeaponId)
 end
@@ -305,7 +331,7 @@ function Component:WeaponForgeLevelUp(InCallback)
   
   local function callback(Ret, Rewards)
     self.logger.debug("WeaponForgeLevelUp, Ret", Ret)
-    EventManager:FireEvent(EventID.OnHyperWeaponForgeLevelUp, Ret, WeaponUuid)
+    EventManager:FireEvent(EventID.OnHyperWeaponForgeLevelUp, Ret)
     if InCallback then
       InCallback(Ret, Rewards)
     end

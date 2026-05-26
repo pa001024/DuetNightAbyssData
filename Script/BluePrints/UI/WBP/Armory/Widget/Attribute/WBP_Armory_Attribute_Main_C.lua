@@ -65,6 +65,7 @@ function M:Init(Params)
 end
 
 function M:OnAttrBtnClick(Content)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", "", nil)
   ArmoryUtils:SetContentIsSelected(self.SelectedContent, false)
   self.SelectedContent = Content
   ArmoryUtils:SetContentIsSelected(Content, true)
@@ -98,6 +99,7 @@ function M:OnBtnClick()
   if self.Btn.Btn:GetForbidden() then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/common/role_prop_change_click_confirm", "", nil)
   local Avatar = GWorld:GetAvatar()
   self.Parent:BlockAllUIInput(true)
   Avatar:SwitchCharacterAttribute(self.SelectedContent.CharId)

@@ -7541,7 +7541,7 @@
         "id": 310201,
         "名称": "Nettoyage thermique",
         "类型": "Dégâts",
-        "描述": "Ordonne à tous les [Crassinators] de tourner autour d’Hilda en tirant continuellement des [Rayon incinérateur]. Pendant leur activation, la durée des [Crassinators légers] est mise en pause.\nLes [Rayons incinérateurs] infligent des Dégâts Pyro aux ennemis balayés. Tant que les rayons sont actifs, vaincre un ennemi donne à Hilda une chance de restaurer de la Lucidité.",
+        "描述": "Ordonne à tous les [Crassinators] de tourner continuellement autour d’Hilda tout en projetant des [Rayons incinérateurs]. Les [Rayons incinérateurs] infligent des Dégâts Pyro aux ennemis balayés.",
         "icon": "Xier01",
         "cd": 1,
         "字段": [
@@ -7877,7 +7877,7 @@
         "id": 310204,
         "名称": "Multitâche",
         "类型": "Passive",
-        "描述": "Les [Crassinators] ont une chance de tirer 1 projectile supplémentaire.\nLa probabilité est égale à : 30 % + 20 % × Taux de Tir multiple de l’arme à distance d’Hilda.\nAugmente aussi les dégâts des [Rayons incinérateurs] selon la même formule.",
+        "描述": "Les [Crassinators] ont une chance de tirer 1 projectile supplémentaire.\nLa probabilité est égale à : 30 % + 20 % × Taux de Tir multiple de l’arme à distance d’Hilda.\nAugmente également les dégâts des [Rayons incinérateurs] selon la même formule, jusqu’à un maximum de {int}100%.",
         "icon": "ExtraPassive"
       },
       {
@@ -7895,12 +7895,12 @@
       }
     ],
     "溯源": [
-      "Nombre d’esquives +2. [Colère raffinée] voit son efficacité augmentée de 30 %.",
-      "La portée des [Rayons incinérateurs] augmente de 50 %. Lorsqu’ils infligent des dégâts, la cible subit +5 de dégâts provenant d’Hilda pendant 60% s.",
+      "Nombre d’esquives +4. [Colère raffinée] voit son efficacité augmentée de 30 %.",
+      "La portée des [Rayons incinérateurs] augmente de 50 %. Lorsqu’un ennemi est vaincu, Hilda obtient +18% de dégâts infligés pendant 15 s, cumulable jusqu’à 5 fois.",
       "[Nettoyage thermique] niveau +2 ; [Service automatique] niveau +1.",
-      "L’utilisation de [Dévotion armée] invoque 2 [Crassinators légers] supplémentaires et réduit les dégâts infligés par la cible de 18% pendant 15 s.",
+      "L’utilisation de [Dévotion armée] invoque 2 [Crassinators légers] supplémentaires. La durée des [Crassinators légers] devient illimitée.",
       "[Dévotion armée] niveau +2 ; [Service automatique] niveau +1.",
-      "Pendant [Nettoyage thermique], la Pénétration (tous attributs) d’Hilda est augmentée de #5."
+      "Pendant [Nettoyage thermique], la Pénétration (tous attributs) d’Hilda augmente de 60%."
     ],
     "碎片": 1003102,
     "专武": 20302

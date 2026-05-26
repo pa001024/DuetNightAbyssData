@@ -41,7 +41,7 @@ function M:SetCameraStartTrans(StartTransform, FOV, Player)
   self.EnableCameraScrolling = false
   self:CalcCircle()
   self.Camera:K2_SetWorldTransform(StartTransform, false, nil, false)
-  self:OnCameraRotated()
+  self:CallBP_OnCameraRotated()
   self:OnCameraZoom()
   local CurRot = self.Player and self.Player:K2_GetActorRotation() or self.EndRot
   self:SetOriginalRotation(CurRot)
@@ -191,7 +191,7 @@ function M:Move(CompleteFunc, Ease)
       lerpRot.Yaw = self.StartRot.Yaw + yawRotateRate * value * Duration
     end
     self.Camera:K2_SetWorldLocationAndRotation(temp, lerpRot, false, nil, false)
-    self:OnCameraRotated()
+    self:CallBP_OnCameraRotated()
     self:OnCameraZoom()
   end
   
@@ -222,6 +222,12 @@ function M:Move(CompleteFunc, Ease)
   })
   if self.LTweenHandle_Scroll and IsValid(self.LTweenHandle_Scroll) then
     ULTweenBPLibrary.KillIfIsTweening(self, self.LTweenHandle_Scroll, true)
+  end
+end
+
+function M:CallBP_OnCameraRotated()
+  if self.bIsViewTarget then
+    self:OnCameraRotated()
   end
 end
 
@@ -642,12 +648,14 @@ function M:DestroySelf()
 end
 
 function M:K2_OnEndViewTarget(PC)
+  self.bIsViewTarget = false
   if self._OnEndViewTarget then
     self._OnEndViewTarget(self.ViewTargetEventObj, PC)
   end
 end
 
 function M:K2_OnBecomeViewTarget(PC)
+  self.bIsViewTarget = true
   if self._OnBecomeViewTarget then
     self._OnBecomeViewTarget(self.ViewTargetEventObj, PC)
   end

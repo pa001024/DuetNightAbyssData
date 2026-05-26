@@ -181,8 +181,8 @@ function GuildWarUtils.HasShopReddot()
   end
   local ShowReddot = false
   pcall(function()
-    local MaxRaidScore = GuildWarUtils.IsPreRaidTime() and RaidSeasons.MaxPreRaidScore or RaidSeasons.MaxRaidScore
-    MaxRaidScore = tonumber(MaxRaidScore) or 0
+    local MaxRaidScore = RaidSeasons.MaxRaidScore or 0
+    MaxRaidScore = tonumber(MaxRaidScore)
     local SubTabId = GuildWarUtils.GetShopSubTabId(RaidSeasons.Shop)
     for ShopItemId, ShopData in pairs(DataMgr.ShopItem) do
       if ShopData.SubTabId == SubTabId and ShopUtils:GetShopItemCanShow(ShopItemId) then

@@ -368,7 +368,7 @@ return ReadOnly("ShopTabSub", {
     MainTabId = 10008,
     SubName = "Event_FreeAppearance_tittle01",
     SubTabId = 100081,
-    TabCoin = {221},
+    TabCoin = {223},
     TabType = "Normal"
   },
   [100091] = {

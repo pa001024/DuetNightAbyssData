@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040408_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -352,7 +352,7 @@ return {
             key = "177874559521114606174",
             type = "ForbidWeaponByWeaponTagNode",
             name = "禁用/启用武器节点",
-            pos = {x = 2039.7231392955648, y = -131.49317428812267},
+            pos = {x = 2042.3318349477388, y = -132.79752211420964},
             propsData = {
               WeaponTags = {"Melee"},
               bForbid = true,
@@ -371,7 +371,6 @@ return {
               ActiveType = "Lock",
               SkillNameList = {
                 "Attack",
-                "Jump",
                 "Slide",
                 "BulletJump",
                 "Fire",

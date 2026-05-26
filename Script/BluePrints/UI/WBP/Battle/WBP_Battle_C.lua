@@ -2406,7 +2406,8 @@ end
 
 function WBP_Battle_C:CheckTheaterEventState()
   local Avatar = GWorld:GetAvatar()
-  if not Avatar or Avatar.CurrentRegionId ~= 101901 then
+  local TargetRegionId = DataMgr.GlobalConstant.TheaterRegionId and DataMgr.GlobalConstant.TheaterRegionId.ConstantValue or 0
+  if not Avatar or Avatar.CurrentRegionId ~= TargetRegionId then
     return
   end
   
@@ -2940,7 +2941,7 @@ function WBP_Battle_C:RepClientDungeonMessage(MessageName, tbl)
     if OldProgress and OldProgress < tbl.Progress then
       HUDScore:PlayAnimation(HUDScore.Up)
     end
-    HUDScore.Text_Score_Now:SetText(tostring(tbl.Progress))
+    HUDScore.Text_Score_Now:SetText(CommonUtils.FormatNumInFrench(tostring(tbl.Progress)))
   elseif "BossCreated" == MessageName then
     local CurRound = self.AsyncCombatComponent and self.AsyncCombatComponent.BossCurStep or GWorld.GameInstance[CommonConst.DungeonSyncMsg.AsyncCombatRoomStateUpdate].CurStep or 1
     UIManager(self):LoadUINew("CoopHudTips01", {CurRound = CurRound})

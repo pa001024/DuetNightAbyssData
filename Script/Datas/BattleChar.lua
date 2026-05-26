@@ -1977,7 +1977,7 @@ return ReadOnly("BattleChar", {
     Attribute = "Fire",
     BTMotionParams = T.RT_1,
     BattleCharBuffUI = 3102,
-    BattleCharDetailTag = 0,
+    BattleCharDetailTag = 1,
     BattleCharTag = T.RT_35,
     CapsuleInfo = T.RT_36,
     CharAddonAttr = {

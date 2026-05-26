@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040415_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -299,7 +299,7 @@ return {
               ActiveEnable = false,
               EnableBlackScreenSync = true,
               EnableFadeIn = false,
-              EnableFadeOut = true,
+              EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {272640075}
             }

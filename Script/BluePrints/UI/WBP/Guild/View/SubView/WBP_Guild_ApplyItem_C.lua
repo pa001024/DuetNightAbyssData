@@ -163,10 +163,39 @@ function M:OnBtnYesOrNoRelease(bYes)
     return
   end
   if bYes then
-    UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("GuildAcceptApplication"), self.Nickname))
-    GuildController:SendGuildAgreeJoinRequest({
-      self._Uid
-    })
+    local ApplicantUid = self._Uid
+    local Avatar = GuildController:GetAvatar()
+    if not Avatar then
+      return
+    end
+    Avatar:QueryGuildMemberInfo(function(Ret, MemberInfos)
+      if Ret ~= ErrorCode.RET_SUCCESS then
+        return
+      end
+      local Info = MemberInfos and (MemberInfos[ApplicantUid] or MemberInfos[tonumber(ApplicantUid)] or MemberInfos[tostring(ApplicantUid)])
+      if Info and Info.GuildId and 0 ~= Info.GuildId then
+        UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("GuildApprovalFailed"))
+        GuildController:SendGuildAgreeJoinRequest({
+          self._Uid
+        })
+        return
+      end
+      
+      local function Callback(retCode, NotOnlineTable)
+        if retCode ~= ErrorCode.RET_SUCCESS then
+          return
+        end
+        if 0 == #NotOnlineTable then
+          UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("GuildAcceptApplication"), self.Nickname))
+        else
+          UIManager(self):ShowUITip(UIConst.Tip_CommonToast, GText("GuildJoinConfirmData"))
+        end
+      end
+      
+      GuildController:SendGuildAgreeJoinRequest({
+        self._Uid
+      }, Callback)
+    end, {ApplicantUid})
   else
     UIManager(self):ShowUITip(UIConst.Tip_CommonToast, string.format(GText("GuildRejectApplication"), self.Nickname))
     GuildController:SendGuildRejectJoinRequest({

@@ -10,5 +10,8 @@ return ReadOnly("SpecialQuestId2QuestSubmitId", {
   },
   [10040305] = {
     [1] = 10040305
+  },
+  [10040404] = {
+    [1] = 10040404
   }
 })

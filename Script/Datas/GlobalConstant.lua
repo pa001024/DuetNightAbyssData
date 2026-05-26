@@ -601,6 +601,10 @@ return ReadOnly("GlobalConstant", {
     ConstantName = "GuildListMinRefreshSec",
     ConstantValue = 2
   },
+  GuildLogoEditCoolDownDay = {
+    ConstantName = "GuildLogoEditCoolDownDay",
+    ConstantValue = 3
+  },
   GuildMessageCacheDuration = {
     ConstantName = "GuildMessageCacheDuration",
     ConstantValue = 72
@@ -710,7 +714,7 @@ return ReadOnly("GlobalConstant", {
   },
   InvitationActivityEventId = {
     ConstantName = "InvitationActivityEventId",
-    ConstantValue = 103019
+    ConstantValue = 103023
   },
   InvitationGuideId = {
     ConstantName = "InvitationGuideId",

@@ -80,7 +80,7 @@ function M:Construct()
   FriendController:OverrideButtonSound(self.Button_No, "event:/ui/common/click_btn_cancel", nil)
   self.Button_No:BindEventOnReleased(self, self.OnBtnYesOrNoRelease, false)
   self.Head_Friend:BindOnClickEvent(function()
-    self.Head_Anchor:Open(true)
+    self:GetCardGuildInfo(self.PersonData.GuildId, self.PersonData.Uid, self.PersonData)
   end)
   self.Button_Gift:BindEventOnClicked(self, self.OnBtnGiftClick)
   self.Button_Gift:BindForbidStateExecuteEvent(self, self.OnGiftForbidClick)
@@ -351,6 +351,7 @@ function M:OnBtnInviteReleased_BlackList()
 end
 
 function M:OnListItemObjectSet(Content)
+  self.Owner = Content.Owner
   self:ResetUI()
   Content.UI = self
   self.Type = Content.Type
@@ -488,7 +489,6 @@ end
 function M:OnListItemObjectSet_MyFriend(Content)
   self.FriendData = Content.Data
   self.PersonData = self.FriendData.Info
-  self:GetCardGuildInfo(self.PersonData.GuildId, self.PersonData.Uid, self.PersonData)
   self.Text_Name:SetText(self.FriendData.Info.Nickname)
   self:_SetRemarkName(self.FriendData.Remark)
   self:_SetHeadIcon(self.FriendData.Info)
@@ -791,41 +791,44 @@ function M:WaitCardGuildInfoCallback()
   end
   self.WaitCardGuildInfo = self.WaitCardGuildInfo - 1
   if 0 == self.WaitCardGuildInfo then
-    self.CardGuildFullInfo.CardGuildChatOpen = self.CardGuildChatOpen
+    if self.CardGuildFullInfo then
+      self.CardGuildFullInfo.CardGuildChatOpen = self.CardGuildChatOpen
+    else
+      self.CardGuildFullInfo = nil
+      self.CardGuildChatOpen = nil
+    end
+    self.WaitGuildId = nil
+    self.Head_Anchor:Open(true)
+    self.Owner:BlockAllUIInput(false)
   end
 end
 
 function M:GetCardGuildInfo(GuildId, Uid, AvatarInfo)
-  if not GuildId or 0 == GuildId then
-    return
-  end
-  if not GuildId or self.WaitCardGuildInfo and self.WaitCardGuildInfo > 0 then
-    return
-  end
-  GuildController:SendGetGuildInfo(GuildId)
   self.WaitCardGuildInfo = 2
-  
-  local function SetInfo(OtherPlayerInfo)
-    local Avatar = GWorld:GetAvatar()
-    Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
-      if Ret ~= ErrorCode.RET_SUCCESS then
-        return
-      end
-      self.CardGuildChatOpen = IsOpen
-      self:WaitCardGuildInfoCallback()
-    end, OtherPlayerInfo.Uid or OtherPlayerInfo.Uuid)
-  end
-  
-  if AvatarInfo then
-    SetInfo(AvatarInfo)
-  else
-    local FriendData = FriendController:GetModel():GetFriendDict()[Uid]
-    if FriendData then
-      SetInfo(FriendData.Info)
-    else
-      GWorld:GetAvatar():GetOtherPlayerPersonallInfo(Uid, {Func = SetInfo})
+  self.Owner:BlockAllUIInput(true, "SP_DisplayOnly")
+  self.CardGuildFullInfo = nil
+  self.WaitGuildId = nil
+  local Avatar = ChatController:GetAvatar()
+  Avatar:QueryGuildMemberInfo(function(Ret, MemberInfos)
+    if not IsValid(self) then
+      return
     end
-  end
+    local Info = MemberInfos[Uid]
+    if Info.GuildId and 0 ~= Info.GuildId then
+      self.WaitGuildId = Info.GuildId
+      GuildController:SendGetGuildInfo(Info.GuildId)
+      Avatar:QueryGuildChatOpen(function(Ret, IsOpen)
+        if Ret ~= ErrorCode.RET_SUCCESS then
+          return
+        end
+        self.CardGuildChatOpen = IsOpen
+        self:WaitCardGuildInfoCallback()
+      end, Info.Uid)
+    else
+      self:WaitCardGuildInfoCallback()
+      self:WaitCardGuildInfoCallback()
+    end
+  end, {Uid})
 end
 
 function M:OnGetGuildFullInfo(Info)

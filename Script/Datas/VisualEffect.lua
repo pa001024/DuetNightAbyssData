@@ -4066,7 +4066,8 @@ return ReadOnly("VisualEffect", {
     EffectId = 90007,
     EffectParam = T.RT_193,
     EffectPath = "/Game/Asset/Effect/Niagara/Monster/A_Common/NS_Paotai_Explo03_01.NS_Paotai_Explo03_01",
-    FXPriorityType = 90
+    FXPriorityType = 90,
+    SoundID = 2042
   },
   [90008] = {
     EffectId = 90008,
@@ -4078,7 +4079,8 @@ return ReadOnly("VisualEffect", {
     EffectId = 90009,
     EffectParam = T.RT_221,
     EffectPath = "/Game/Asset/Effect/Niagara/Monster/A_Common/NS_Paotai_Explo03_01.NS_Paotai_Explo03_01",
-    FXPriorityType = 90
+    FXPriorityType = 90,
+    SoundID = 2044
   },
   [110101] = {
     DeactiveParam = "DeadTime",
@@ -9954,32 +9956,38 @@ return ReadOnly("VisualEffect", {
   [851902] = {
     EffectId = 851902,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheCannon_Skill05_Explode.NS_Boss_LiecheCannon_Skill05_Explode",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851916
   },
   [851903] = {
     EffectId = 851903,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheCannon_Skill09_Explode.NS_Boss_LiecheCannon_Skill09_Explode",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851925
   },
   [851904] = {
     EffectId = 851904,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheCannon_Skill09_Explode04.NS_Boss_LiecheCannon_Skill09_Explode04",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851929
   },
   [851905] = {
     EffectId = 851905,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheCannon_Skill09_BumbBurst.NS_Boss_LiecheCannon_Skill09_BumbBurst",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851928
   },
   [851906] = {
     EffectId = 851906,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheCannon_Skill09_Burst.NS_Boss_LiecheCannon_Skill09_Burst",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851930
   },
   [851907] = {
     EffectId = 851907,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_LieMCore_CoreSkill02.NS_LieMCore_CoreSkill02",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851936
   },
   [851908] = {
     EffectId = 851908,
@@ -10002,7 +10010,8 @@ return ReadOnly("VisualEffect", {
     },
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheHand_Skill06_Explode_L.NS_Boss_LiecheHand_Skill06_Explode_L",
     FXPriorityType = 100,
-    PlayLocation = T.RT_51
+    PlayLocation = T.RT_51,
+    SoundID = 851903
   },
   [851910] = {
     EffectId = 851910,
@@ -10016,7 +10025,8 @@ return ReadOnly("VisualEffect", {
     },
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheHand_Skill06_Explode.NS_Boss_LiecheHand_Skill06_Explode",
     FXPriorityType = 100,
-    PlayLocation = T.RT_51
+    PlayLocation = T.RT_51,
+    SoundID = 851903
   },
   [851911] = {
     EffectId = 851911,
@@ -10030,17 +10040,20 @@ return ReadOnly("VisualEffect", {
     },
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheHand_Skill06_Explode_L.NS_Boss_LiecheHand_Skill06_Explode_L",
     FXPriorityType = 100,
-    PlayLocation = T.RT_51
+    PlayLocation = T.RT_51,
+    SoundID = 851903
   },
   [851912] = {
     EffectId = 851912,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheHand_Skill05_Bulle.NS_Boss_LiecheHand_Skill05_Bulle",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851909
   },
   [851913] = {
     EffectId = 851913,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheHand_Skill05_Explode.NS_Boss_LiecheHand_Skill05_Explode",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851901
   },
   [851914] = {
     EffectId = 851914,
@@ -10050,17 +10063,20 @@ return ReadOnly("VisualEffect", {
   [851915] = {
     EffectId = 851915,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheCannon_Skill01_Burst.NS_Boss_LiecheCannon_Skill01_Burst",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851906
   },
   [851916] = {
     EffectId = 851916,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheCannon_Skill01_Hint.NS_Boss_LiecheCannon_Skill01_Hint",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851905
   },
   [851917] = {
     EffectId = 851917,
     EffectPath = "/Game/Asset/Effect/Niagara/Boss/LiechHand/NS_Boss_LiecheCannon_Skill05_Explode.NS_Boss_LiecheCannon_Skill05_Explode",
-    FXPriorityType = 100
+    FXPriorityType = 100,
+    SoundID = 851916
   },
   [852101] = {
     EffectId = 852101,
@@ -10093,11 +10109,11 @@ return ReadOnly("VisualEffect", {
   },
   [852104] = {
     EffectId = 852104,
-    EffectPath = "/Game/Asset/Effect/Niagara/Boss/Qihuo/Skill04/NS_Boss_Qihuozhe_Skill04_01.NS_Boss_Qihuozhe_Skill04_01"
+    EffectPath = "/Game/Asset/Effect/Niagara/Boss/Qihuo/Skill04/NS_Qihuo_Feibiao.NS_Qihuo_Feibiao"
   },
   [852105] = {
     EffectId = 852105,
-    EffectPath = "/Game/Asset/Effect/Niagara/Boss/Qihuo/Skill04/NS_Boss_Qihuozhe_Skill04_03.NS_Boss_Qihuozhe_Skill04_03"
+    EffectPath = "/Game/Asset/Effect/Niagara/Boss/Qihuo/Skill04/NS_Qihuo_Hit.NS_Qihuo_Hit"
   },
   [852106] = {
     DeactiveParam = "DeadTime",

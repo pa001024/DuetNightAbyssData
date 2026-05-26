@@ -8,11 +8,14 @@ function StoryNode:Start(Context, NodeId)
   if self.bIsStartChapter and self.QuestUIId and 0 ~= self.QuestUIId and nil == Cache then
     local UIInfo = DataMgr.QuestUI[self.QuestUIId]
     EMCache:Set(tonumber(self.Data.key), 1, true)
-    UIManager(GWorld.GameInstance):LoadUINew(UIInfo.UIName, UIInfo.ChapterName, UIInfo.CantoName, UIInfo.Title, UIInfo.AudioPath, function()
+    local Obj = UIManager(GWorld.GameInstance):LoadUINew(UIInfo.UIName, UIInfo.ChapterName, UIInfo.CantoName, UIInfo.Title, UIInfo.AudioPath, function()
       if self.Questline then
         self.Questline:StartQuest(NodeId)
       end
     end)
+    if Obj and Obj.Transition04_02 then
+      Obj:Transition04_02(self.QuestUIId)
+    end
   else
     self.Questline:StartQuest(NodeId)
   end

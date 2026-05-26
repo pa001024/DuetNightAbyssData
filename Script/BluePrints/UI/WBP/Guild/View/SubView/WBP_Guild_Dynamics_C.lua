@@ -142,13 +142,13 @@ function M:SetLockedTabNavigation()
   for i, Valid in ipairs(ValidEntries) do
     if Valid.Entry.SetNavigationRule then
       if 1 == #ValidEntries then
-        Valid.Entry:SetNavigationRule(UE4.EUINavigation.Up, UE4.EUINavigationRule.Stop)
-        Valid.Entry:SetNavigationRule(UE4.EUINavigation.Down, UE4.EUINavigationRule.Stop)
+        Valid.Entry:SetNavigationRuleBase(UE4.EUINavigation.Up, UE4.EUINavigationRule.Stop)
+        Valid.Entry:SetNavigationRuleBase(UE4.EUINavigation.Down, UE4.EUINavigationRule.Stop)
       else
         local PrevEntry = ValidEntries[1 == i and #ValidEntries or i - 1].Entry
-        Valid.Entry:SetNavigationRule(UE4.EUINavigation.Up, UE4.EUINavigationRule.Explicit, PrevEntry)
+        Valid.Entry:SetNavigationRuleExplicit(UE4.EUINavigation.Up, PrevEntry)
         local NextEntry = ValidEntries[i == #ValidEntries and 1 or i + 1].Entry
-        Valid.Entry:SetNavigationRule(UE4.EUINavigation.Down, UE4.EUINavigationRule.Explicit, NextEntry)
+        Valid.Entry:SetNavigationRuleExplicit(UE4.EUINavigation.Down, NextEntry)
       end
     end
   end
@@ -339,7 +339,7 @@ function M:FormatMessageText(MessageData)
     if "GuildCreateSuccess" == RawMsgType then
       return Template
     elseif "ChangeGuildName" == RawMsgType then
-      return SafeStringFormat(Template, tostring(FormatText.NewName or FormatText.OldName or ""))
+      return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.EditorUid))
     elseif "ChangedDecl" == RawMsgType then
       return SafeStringFormat(Template, self:GetMemberDisplayName(FormatText.EditorUid))
     elseif "ChangedLogo" == RawMsgType then

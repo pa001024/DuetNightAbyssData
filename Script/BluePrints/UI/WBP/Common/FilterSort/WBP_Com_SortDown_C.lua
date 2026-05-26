@@ -125,7 +125,9 @@ function M:OnBtn_Filter_List_Unhovered()
 end
 
 function M:ListOpenBtnClicked(bForce)
-  if not self.Btn_Filter_List:IsHovered() and not bForce then
+  local IsCloudGame = UE4.UUCloudGameInstanceSubsystem.IsCloudGame()
+  local IsPCCloudGame = UE4.UUCloudGameInstanceSubsystem.IsPCCloudGame()
+  if (not IsCloudGame or IsPCCloudGame) and not self.Btn_Filter_List:IsHovered() and not bForce then
     return
   end
   self:StopAnimation(self.Hover)

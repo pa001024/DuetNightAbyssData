@@ -143,6 +143,7 @@ function M:ShareWithFriend()
   local function Func(Obj, Ret, player_uid, room_uid)
     DebugPrint("clx: WBP_Activity_Coop_ShareChannelItem_C:ShareWithFriend " .. "Ret: " .. Ret .. "player_uid: " .. player_uid .. "room_uid: " .. room_uid)
     if ErrorCode:Check(Ret) then
+      self.Owner.bShareClick = true
       UIManager(self):ShowUITip(UIConst.Tip_CommonTop, "UI_AsyncCombat_Sharesuccessful")
     end
   end

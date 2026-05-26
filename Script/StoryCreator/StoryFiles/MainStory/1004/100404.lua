@@ -197,19 +197,19 @@ return {
       key = "17676920206638364047",
       type = "StoryNode",
       name = "登车",
-      pos = {x = 776.8821384104531, y = 307.85751567087505},
+      pos = {x = 782.8821384104531, y = 306.35751567087505},
       propsData = {
         QuestId = 10040401,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040401_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040401_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
         bIsStartQuest = true,
         bIsEndQuest = false,
         bIsNotifyGameMode = true,
-        bIsStartChapter = false,
+        bIsStartChapter = true,
         bIsEndChapter = false,
         bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
@@ -217,15 +217,14 @@ return {
         ResurgencePoint = "",
         bUseQuestCoordinate = false,
         bDeadTriggerQuestFail = false,
-        IsFairyLand = true,
+        IsFairyLand = false,
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
         StoryGuidePointName = "Mechanism_Dengche_272480056",
         JumpId = 0,
-        FairyLandStaticCreatorId = 0,
-        FairyLandDeliverIndex = 1
+        QuestUIId = 100407
       },
       questNodeData = {
         lineData = {
@@ -237,24 +236,24 @@ return {
           },
           {
             startQuest = "17787395266251472417",
-            startPort = "Fail",
-            endQuest = "177875907314744347545",
-            endPort = "In"
-          },
-          {
-            startQuest = "17787395266251472417",
-            startPort = "PassiveFail",
-            endQuest = "177875907314744347545",
-            endPort = "In"
-          },
-          {
-            startQuest = "17787395266251472417",
             startPort = "Success",
             endQuest = "17676920206638364051",
             endPort = "Success"
           },
           {
-            startQuest = "177875907314744347545",
+            startQuest = "17787395266251472417",
+            startPort = "Fail",
+            endQuest = "177936784130363825354",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787395266251472417",
+            startPort = "PassiveFail",
+            endQuest = "177936784130363825354",
+            endPort = "In"
+          },
+          {
+            startQuest = "177936784130363825354",
             startPort = "Out",
             endQuest = "17676920206638364054",
             endPort = "Fail"
@@ -295,18 +294,15 @@ return {
             pos = {x = 1371.4258373205741, y = 171.21531100478455},
             propsData = {SpecialConfigId = 10040401, BlackScreenImmediately = true}
           },
-          ["177875907314744347545"] = {
-            key = "177875907314744347545",
-            type = "AsyncSetActorLocationAndRotationNode",
-            name = "异步设置玩家位置旋转",
-            pos = {x = 1678.0707735247206, y = 311.7087320574162},
+          ["177936784130363825354"] = {
+            key = "177936784130363825354",
+            type = "SkipRegionNode",
+            name = "跨区域传送设置玩家位置",
+            pos = {x = 1678.698202180161, y = 357.3017388385437},
             propsData = {
-              UnitId = 0,
-              NewTargetPointName = "BP_YWBack",
-              FadeIn = false,
-              FadeOut = false,
-              bResetCamera = true,
-              bForceAsyncLoading = true,
+              ModeType = 1,
+              Id = 210101,
+              StartIndex = 1,
               IsWhite = false
             }
           }
@@ -319,12 +315,12 @@ return {
       key = "17677044055089100192",
       type = "StoryNode",
       name = "平民车厢内",
-      pos = {x = 1192.7221878388966, y = 297.78153015001743},
+      pos = {x = 1201.7221878388966, y = 297.78153015001743},
       propsData = {
         QuestId = 10040402,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040401_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040402_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -466,12 +462,12 @@ return {
       key = "17677045351519101074",
       type = "StoryNode",
       name = "开始行动",
-      pos = {x = 1649.5041444890117, y = 340.88016758427517},
+      pos = {x = 1622.0041444890117, y = 305.88016758427517},
       propsData = {
         QuestId = 10040403,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040403_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040403_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -579,12 +575,12 @@ return {
       key = "176776893806210194941",
       type = "StoryNode",
       name = "希尔妲流程",
-      pos = {x = 938.9978673938774, y = 583.7522258362083},
+      pos = {x = 941.3978673938774, y = 583.7522258362083},
       propsData = {
         QuestId = 10040404,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040404_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040422_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -593,7 +589,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -632,20 +628,20 @@ return {
           {
             startQuest = "17787401200694391129",
             startPort = "Success",
-            endQuest = "176776893806210194948",
-            endPort = "Fail"
+            endQuest = "176776893806210194945",
+            endPort = "Success"
           },
           {
             startQuest = "17787400820564390709",
             startPort = "Out",
-            endQuest = "177875845291139945679",
+            endQuest = "1779187432316130871476",
             endPort = "In"
           },
           {
-            startQuest = "177875845291139945679",
+            startQuest = "1779187432316130871476",
             startPort = "Out",
-            endQuest = "176776893806210194945",
-            endPort = "Success"
+            endQuest = "176776893806210194948",
+            endPort = "Fail"
           }
         },
         nodeData = {
@@ -660,14 +656,14 @@ return {
             key = "176776893806210194945",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 967.1088811903375, y = 546.0472326861782},
+            pos = {x = 405.8588811903374, y = 327.2972326861781},
             propsData = {ModeType = 0}
           },
           ["176776893806210194948"] = {
             key = "176776893806210194948",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 510.3007518796999, y = 336.1654135338347},
+            pos = {x = 821.5507518796999, y = 529.9154135338347},
             propsData = {}
           },
           ["17787400820564390709"] = {
@@ -681,21 +677,18 @@ return {
             key = "17787401200694391129",
             type = "WaitingSpecialQuestStartAndFinishNode",
             name = "等待特殊任务开始并完成",
-            pos = {x = -98.18019480519456, y = 326.1335156072005},
-            propsData = {SpecialConfigId = 10040401, BlackScreenImmediately = true}
+            pos = {x = -99.43019480519456, y = 342.3835156072005},
+            propsData = {SpecialConfigId = 10040404, BlackScreenImmediately = true}
           },
-          ["177875845291139945679"] = {
-            key = "177875845291139945679",
-            type = "AsyncSetActorLocationAndRotationNode",
-            name = "异步设置玩家位置旋转",
-            pos = {x = 537.2631578947368, y = 534.4210526315788},
+          ["1779187432316130871476"] = {
+            key = "1779187432316130871476",
+            type = "SkipRegionNode",
+            name = "跨区域传送设置玩家位置",
+            pos = {x = 508, y = 522},
             propsData = {
-              UnitId = 0,
-              NewTargetPointName = "BP_YWBack",
-              FadeIn = false,
-              FadeOut = false,
-              bResetCamera = true,
-              bForceAsyncLoading = true,
+              ModeType = 1,
+              Id = 106001,
+              StartIndex = 1,
               IsWhite = false
             }
           }
@@ -708,12 +701,12 @@ return {
       key = "176777032781810198960",
       type = "StoryNode",
       name = "希尔妲战斗",
-      pos = {x = 1513.6924201529466, y = 580.5818070818074},
+      pos = {x = 1520.0971820577086, y = 580.1532356532359},
       propsData = {
         QuestId = 10040405,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040405_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040405_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -733,7 +726,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -826,7 +819,7 @@ return {
         QuestId = 10040406,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040406_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040406_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -846,7 +839,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -934,12 +927,12 @@ return {
       key = "176777803505410204177",
       type = "StoryNode",
       name = "抵达平民列车",
-      pos = {x = 2582.450432973459, y = 586.3830891330892},
+      pos = {x = 2602.450432973459, y = 587.4942002442004},
       propsData = {
         QuestId = 10040407,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040406_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040407_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -948,7 +941,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -959,7 +952,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -1050,10 +1043,10 @@ return {
               bUseFlowAssetActors = true,
               FirstDialogueId = 10010101,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10046101.10046101'",
-              TalkType = "FixSimple",
+              TalkType = "QuestImpression",
               TalkStageName = "",
               BlendInTime = 0,
-              BlendOutTime = 2,
+              BlendOutTime = 0,
               InType = "FadeIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
@@ -1132,12 +1125,12 @@ return {
       key = "176778351307810205586",
       type = "StoryNode",
       name = "前往普通车厢",
-      pos = {x = 1169.4751804034486, y = 806.7146999583044},
+      pos = {x = 1167.9751804034486, y = 808.2146999583044},
       propsData = {
         QuestId = 10040408,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040408_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040408_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1146,7 +1139,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1157,19 +1150,13 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "176778351307810205587",
-            startPort = "QuestStart",
-            endQuest = "177874562929911686919",
-            endPort = "In"
-          },
           {
             startQuest = "177874562929911686919",
             startPort = "Success",
@@ -1199,6 +1186,24 @@ return {
             startPort = "Out",
             endQuest = "176778351307910205593",
             endPort = "Fail"
+          },
+          {
+            startQuest = "176778351307810205587",
+            startPort = "QuestStart",
+            endQuest = "177970699772366799680",
+            endPort = "In"
+          },
+          {
+            startQuest = "177970699772366799680",
+            startPort = "Out",
+            endQuest = "177969673256533392057",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969673256533392057",
+            startPort = "Out",
+            endQuest = "177874562929911686919",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1206,7 +1211,7 @@ return {
             key = "176778351307810205587",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 801.9450980392157, y = 285.29411764705884},
+            pos = {x = 769.0879551820728, y = 285.29411764705884},
             propsData = {ModeType = 0}
           },
           ["176778351307810205590"] = {
@@ -1248,6 +1253,34 @@ return {
               StartIndex = 1,
               IsWhite = false
             }
+          },
+          ["177969673256533392057"] = {
+            key = "177969673256533392057",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1385.6467405143874, y = 43.10033104150756},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0161_scene_train_station.0161_scene_train_station'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["177970699772366799680"] = {
+            key = "177970699772366799680",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1041.3496240601505, y = 54.781954887218035},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}
@@ -1263,7 +1296,7 @@ return {
         QuestId = 10040409,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040409_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040411_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1283,7 +1316,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -1347,7 +1380,7 @@ return {
             key = "177874613498113147996",
             type = "WaitingSpecialQuestStartAndFinishNode",
             name = "等待特殊任务开始并完成",
-            pos = {x = 609.6666666666667, y = 223.0000000000001},
+            pos = {x = 611.3333333333334, y = 221.33333333333346},
             propsData = {SpecialConfigId = 10040409, BlackScreenImmediately = true}
           },
           ["177875913798544349747"] = {
@@ -1371,12 +1404,12 @@ return {
       key = "176778550565810210051",
       type = "StoryNode",
       name = "与芙罗拉交谈",
-      pos = {x = 1828.7352839812518, y = 793.2777175310073},
+      pos = {x = 1830.2352839812518, y = 793.2777175310073},
       propsData = {
         QuestId = 10040410,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040410_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040410_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1396,7 +1429,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -1489,7 +1522,7 @@ return {
         QuestId = 10040411,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040409_02",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040411_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1498,7 +1531,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1509,7 +1542,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -1597,12 +1630,12 @@ return {
       key = "176778625965610213270",
       type = "StoryNode",
       name = "前往守卫车厢",
-      pos = {x = 1798.007082632083, y = 971.2328497525866},
+      pos = {x = 1798.007082632083, y = 972.1703497525866},
       propsData = {
         QuestId = 10040413,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040408_01",
-        QuestDeatil = "",
+        QuestDescription = "Content_10040403_03",
+        QuestDeatil = "Description_10040413_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1611,7 +1644,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -1622,19 +1655,13 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "176778625965610213271",
-            startPort = "QuestStart",
-            endQuest = "177874699079416069080",
-            endPort = "In"
-          },
           {
             startQuest = "177874699079416069080",
             startPort = "Success",
@@ -1658,6 +1685,18 @@ return {
             startPort = "Out",
             endQuest = "176778625965610213277",
             endPort = "Fail"
+          },
+          {
+            startQuest = "176778625965610213271",
+            startPort = "QuestStart",
+            endQuest = "177969676346234842642",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969676346234842642",
+            startPort = "Out",
+            endQuest = "177874699079416069080",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -1700,6 +1739,17 @@ return {
               StartIndex = 1,
               IsWhite = false
             }
+          },
+          ["177969676346234842642"] = {
+            key = "177969676346234842642",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1452, y = 108},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}
@@ -1714,8 +1764,8 @@ return {
       propsData = {
         QuestId = 10040414,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040408_01",
-        QuestDeatil = "",
+        QuestDescription = "Content_10040403_03",
+        QuestDeatil = "Description_10040413_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1735,7 +1785,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -1828,7 +1878,7 @@ return {
         QuestId = 10040415,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040415_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040415_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1848,7 +1898,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -1936,12 +1986,12 @@ return {
       key = "17684456530463185",
       type = "StoryNode",
       name = "芙罗拉寻找剪刀",
-      pos = {x = 2720.3831467764962, y = 954.6912294546886},
+      pos = {x = 2721.8831467764962, y = 954.6912294546886},
       propsData = {
         QuestId = 10040416,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040416_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040416_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -1961,7 +2011,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -2066,8 +2116,8 @@ return {
       propsData = {
         QuestId = 10040417,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040408_01",
-        QuestDeatil = "",
+        QuestDescription = "Content_10040403_03",
+        QuestDeatil = "Description_10040414_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -2087,7 +2137,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -2180,7 +2230,7 @@ return {
         QuestId = 10040418,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040418_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040418_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -2200,7 +2250,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -2226,16 +2276,16 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177495601301026267273",
-            startPort = "Out",
-            endQuest = "177874850781820453118",
-            endPort = "In"
-          },
-          {
             startQuest = "177874849385920452580",
             startPort = "Success",
             endQuest = "17684469557387674",
             endPort = "Success"
+          },
+          {
+            startQuest = "177874850781820453118",
+            startPort = "Out",
+            endQuest = "177875921161744352348",
+            endPort = "In"
           },
           {
             startQuest = "177875921161744352348",
@@ -2244,9 +2294,15 @@ return {
             endPort = "Fail"
           },
           {
-            startQuest = "177874850781820453118",
+            startQuest = "177495601301026267273",
             startPort = "Out",
-            endQuest = "177875921161744352348",
+            endQuest = "177936866751373008529",
+            endPort = "In"
+          },
+          {
+            startQuest = "177936866751373008529",
+            startPort = "Out",
+            endQuest = "177874850781820453118",
             endPort = "In"
           }
         },
@@ -2269,7 +2325,7 @@ return {
             key = "17684469557387677",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2056.7368421052633, y = 535.8947368421052},
+            pos = {x = 2225.308270676692, y = 527.3233082706766},
             propsData = {}
           },
           ["177495601301026267273"] = {
@@ -2290,19 +2346,30 @@ return {
             key = "177874850781820453118",
             type = "CameraControlClearNode",
             name = "镜头恢复",
-            pos = {x = 1443.8947368421054, y = 466.21052631578954},
+            pos = {x = 1618.1804511278199, y = 476.21052631578954},
             propsData = {Duration = 0}
           },
           ["177875921161744352348"] = {
             key = "177875921161744352348",
             type = "SkipRegionNode",
             name = "跨区域传送设置玩家位置",
-            pos = {x = 1722.578947368421, y = 440.72727272727275},
+            pos = {x = 1736.8646616541353, y = 455.012987012987},
             propsData = {
               ModeType = 1,
               Id = 106001,
               StartIndex = 1,
               IsWhite = false
+            }
+          },
+          ["177936866751373008529"] = {
+            key = "177936866751373008529",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1370, y = 626.2857142857142},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "YWPianoLightClose",
+              UnitId = -1
             }
           }
         },
@@ -2318,8 +2385,8 @@ return {
       propsData = {
         QuestId = 10040419,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040408_01",
-        QuestDeatil = "",
+        QuestDescription = "Content_10040403_03",
+        QuestDeatil = "Description_10040414_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -2328,7 +2395,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -2339,7 +2406,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -2432,7 +2499,7 @@ return {
         QuestId = 10040420,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040420_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040420_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -2452,7 +2519,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -2545,7 +2612,7 @@ return {
         QuestId = 10040421,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040421_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040421_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -2565,7 +2632,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -2658,7 +2725,7 @@ return {
         QuestId = 10040427,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040423_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040423_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -2667,7 +2734,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = true,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -2678,7 +2745,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -2968,7 +3035,7 @@ return {
         QuestId = 10040422,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040403_03",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040422_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -2985,7 +3052,7 @@ return {
         bDeadTriggerQuestFail = false,
         IsFairyLand = true,
         IsBacktrack = false,
-        SubRegionId = 1061010,
+        SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "BP_ZLTalk01",
@@ -3127,12 +3194,12 @@ return {
       key = "17733852121776481875",
       type = "StoryNode",
       name = "希尔妲流程后对话",
-      pos = {x = 1210.1355617595489, y = 595.7953322040278},
+      pos = {x = 1237.6010790009282, y = 591.2953322040278},
       propsData = {
         QuestId = 10040423,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040404_04",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040422_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -3172,7 +3239,19 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "17733852121776481880",
+            startPort = "QuestStart",
+            endQuest = "17795207468333872443",
+            endPort = "In"
+          },
+          {
             startQuest = "177536826332348860808",
+            startPort = "Out",
+            endQuest = "17795207501623872609",
+            endPort = "In"
+          },
+          {
+            startQuest = "17795207501623872609",
             startPort = "Out",
             endQuest = "17733852121776481881",
             endPort = "Success"
@@ -3190,7 +3269,7 @@ return {
             key = "17733852121776481881",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2498.033613445378, y = 1034.2689075630253},
+            pos = {x = 2640.033613445378, y = 1028.935574229692},
             propsData = {ModeType = 0}
           },
           ["17733852121776481882"] = {
@@ -3254,7 +3333,7 @@ return {
             key = "177536826332348860808",
             type = "ChangeStaticCreatorNode",
             name = "生成/销毁节点",
-            pos = {x = 2201.4157066052226, y = 1048.5049923195081},
+            pos = {x = 2135.4157066052226, y = 1007.8383256528415},
             propsData = {
               ActiveEnable = false,
               EnableBlackScreenSync = true,
@@ -3262,6 +3341,34 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {272640026}
+            }
+          },
+          ["17795207468333872443"] = {
+            key = "17795207468333872443",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1873.908602150538, y = 844.512676404873},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0167_story_fuluo_theme.0167_story_fuluo_theme'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {},
+              bStoreToServer = false
+            }
+          },
+          ["17795207501623872609"] = {
+            key = "17795207501623872609",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2381.2419354838703, y = 1013.8460097382061},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },
@@ -3278,7 +3385,7 @@ return {
         QuestId = 10040428,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040423_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040423_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -3287,7 +3394,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -3298,7 +3405,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -3386,12 +3493,12 @@ return {
       key = "177364900966622134813",
       type = "StoryNode",
       name = "飞艇出场",
-      pos = {x = 1466.0265484586603, y = 1764.9944421715186},
+      pos = {x = 1469.0265484586603, y = 1763.4944421715186},
       propsData = {
         QuestId = 10040426,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040423_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040423_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -3400,7 +3507,7 @@ return {
         bIsNotifyGameMode = true,
         bIsStartChapter = false,
         bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
+        bIsPlayBlackScreenOnComplete = true,
         bIsPlayBlackScreenOnFail = false,
         bIsDynamicEvent = false,
         ResurgencePoint = "",
@@ -3411,7 +3518,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -3434,6 +3541,18 @@ return {
             startQuest = "177364904417822135541",
             startPort = "Out",
             endQuest = "177364906021122135839",
+            endPort = "In"
+          },
+          {
+            startQuest = "177364900966722134814",
+            startPort = "QuestStart",
+            endQuest = "177969784794636293646",
+            endPort = "In"
+          },
+          {
+            startQuest = "177969784794636293646",
+            startPort = "Out",
+            endQuest = "177969785361036293785",
             endPort = "In"
           }
         },
@@ -3558,6 +3677,30 @@ return {
               NormalOptions = {},
               OverrideFailBlend = false
             }
+          },
+          ["177969784794636293646"] = {
+            key = "177969784794636293646",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 1178.870813397129, y = 507.1729323308271},
+            propsData = {WaitTime = 3}
+          },
+          ["177969785361036293785"] = {
+            key = "177969785361036293785",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1463.870813397129, y = 552.1729323308272},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/cbt01/0008_combat_zhuizhuzhan.0008_combat_zhuizhuzhan'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
           }
         },
         commentData = {}
@@ -3568,12 +3711,12 @@ return {
       key = "177451402999412082",
       type = "StoryNode",
       name = "第二次跳车",
-      pos = {x = 2296.588571524255, y = 596.7717570931552},
+      pos = {x = 2296.588571524255, y = 595.7372743345345},
       propsData = {
         QuestId = 10040424,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040406_01",
-        QuestDeatil = "",
+        QuestDeatil = "Description_10040424_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -3593,7 +3736,7 @@ return {
         SubRegionId = 106101,
         SubRegionIdList = {},
         StoryGuideType = "Point",
-        StoryGuidePointName = "106101",
+        StoryGuidePointName = "BP_ZLTalk01",
         JumpId = 0,
         FairyLandStaticCreatorId = 0,
         FairyLandDeliverIndex = 1
@@ -3601,22 +3744,28 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "177451402999412083",
-            startPort = "QuestStart",
-            endQuest = "177451403108812170",
-            endPort = "In"
-          },
-          {
             startQuest = "177451403108812170",
             startPort = "Out",
             endQuest = "177451402999412086",
             endPort = "Success"
           },
           {
-            startQuest = "177451403108812170",
-            startPort = "Fail",
-            endQuest = "177451402999412086",
-            endPort = "Success"
+            startQuest = "177451402999412083",
+            startPort = "QuestStart",
+            endQuest = "177936431689957541899",
+            endPort = "Input"
+          },
+          {
+            startQuest = "177936431689957541899",
+            startPort = "Out",
+            endQuest = "17796902324701937413",
+            endPort = "In"
+          },
+          {
+            startQuest = "17796902324701937413",
+            startPort = "Out",
+            endQuest = "177451403108812170",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -3624,7 +3773,7 @@ return {
             key = "177451402999412083",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 800, y = 300},
+            pos = {x = 339, y = 268},
             propsData = {ModeType = 0}
           },
           ["177451402999412086"] = {
@@ -3649,17 +3798,17 @@ return {
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
-              TalkStageName = "",
+              TalkStageName = "SQ_Ver0104_SC014",
               ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0104/Ver0104_SC014/SQ_Ver0104_SC014",
               BlendInTime = 0,
               BlendOutTime = 0,
               InType = "FadeIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
-              ShowSkipButton = true,
+              ShowSkipButton = false,
               ShowReviewButton = true,
               ShowWikiButton = true,
-              PauseGameGlobal = true,
+              PauseGameGlobal = false,
               HideNpcs = false,
               HideMonsters = true,
               HideAllBattleEntity = true,
@@ -3678,6 +3827,33 @@ return {
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
               OverrideFailBlend = false
+            }
+          },
+          ["177936431689957541899"] = {
+            key = "177936431689957541899",
+            type = "StandAloneBlackScreenNode",
+            name = "独立黑屏节点",
+            pos = {x = 698.4285714285716, y = 293.76190476190476},
+            propsData = {
+              FadeInSeconds = 0,
+              FadeOutSeconds = 0,
+              DurationSeconds = 2,
+              IsStandAlone = false
+            }
+          },
+          ["17796902324701937413"] = {
+            key = "17796902324701937413",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 999.5, y = 284.75000000000006},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "BP_ZLTalk01",
+              FadeIn = false,
+              FadeOut = false,
+              bResetCamera = true,
+              bForceAsyncLoading = true,
+              IsWhite = false
             }
           }
         },

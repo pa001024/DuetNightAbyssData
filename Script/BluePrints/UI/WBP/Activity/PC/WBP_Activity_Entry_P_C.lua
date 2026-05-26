@@ -52,9 +52,19 @@ function M:OnLoaded(...)
     self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
   self.Activity_Tab.WBP_Com_Tab_ResourceBar:SetGetReplyOnBack(function()
-    self:UpdateUIStyleInPlatform(true)
-    self.Com_KeyTips:SetVisibility(UIConst.VisibilityOp.Visible)
+    self:OnResourceBarBackToPage()
   end)
+end
+
+function M:OnResourceBarBackToPage()
+  self:UpdateUIStyleInPlatform(true)
+  self.Com_KeyTips:SetVisibility(UIConst.VisibilityOp.Visible)
+  self:AddDelayFrameFunc(function()
+    local currentActivePage = self.AllCurrentActivityPage and self.AllCurrentActivityPage[self.CurTabId]
+    if currentActivePage and type(currentActivePage.NotifyGamepadActionHintsChanged) == "function" then
+      currentActivePage:NotifyGamepadActionHintsChanged()
+    end
+  end, 1, "ActivityEntry_ResourceBarBackRefresh")
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)

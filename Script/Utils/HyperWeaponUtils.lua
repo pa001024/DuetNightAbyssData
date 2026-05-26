@@ -21,44 +21,21 @@ function HyperWeaponUtils.IsHyperWeaponSkillActivated(WeaponId, HyperWeaponSkill
     return true
   end
   local Avatar = GWorld and GWorld:GetAvatar()
-  local GameState = UE4 and UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
+  local GameState = UE4 and UE4.UGameplayStatics.GetGameState(GWorld and GWorld.GameInstance)
   local HyperWeapon = HyperWeaponUtils.GetCurHyperWeapon(WeaponId)
-  if GameState and GameState:IsInDungeon() then
-    if not HyperWeapon and (not Avatar or not Avatar.AvatarBattleInfo) then
-      local PC = UE4 and UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
-      local PS = PC and PC.PlayerState
-      if not PS then
-        return false
-      end
-      for _, Entry in ipairs(PS.HyperWeaponSkillIds or {}) do
-        if Entry.SkillId == HyperWeaponSkillId then
-          return true
-        end
-      end
+  if GameState and GameState:IsInDungeon() and not HyperWeapon then
+    local PC = UE4 and UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    local PS = PC and PC.PlayerState
+    if not PS or not PS.HyperWeaponSkillIds then
       return false
-    else
-      local function IsSkillActivated(Weapon)
-        if not Weapon or not Weapon.HyperTalent then
-          return false
-        end
-        local SkillInfo = DataMgr.HyperWeaponSkillTree[HyperWeaponSkillId]
-        if not SkillInfo then
-          return false
-        end
-        local LevelTalents = Weapon.HyperTalent[SkillInfo.WeaponCardLevel]
-        for _, SkillId in ipairs(LevelTalents or {}) do
-          if SkillId == HyperWeaponSkillId then
-            return true
-          end
-        end
-        return false
-      end
-      
-      if not HyperWeapon then
-        return false
-      end
-      return IsSkillActivated(HyperWeapon)
     end
+    local SkillEntries = PS.HyperWeaponSkillIds:ToTable()
+    for _, Entry in ipairs(SkillEntries or {}) do
+      if Entry.SkillId == HyperWeaponSkillId then
+        return true
+      end
+    end
+    return false
   else
     if not HyperWeapon then
       return false
@@ -115,31 +92,14 @@ function HyperWeaponUtils.IsHyperWeaponSkillActivatedByUid(HyperWeaponUid, Hyper
 end
 
 function HyperWeaponUtils.GetCurHyperWeapon(WeaponId)
-  local Avatar = GWorld:GetAvatar()
+  local Avatar = GWorld and GWorld:GetAvatar()
   if not Avatar then
     return nil
   end
-  local GameState = UE4 and UE4.UGameplayStatics.GetGameState(GWorld.GameInstance)
   local HyperWeapon
-  if GameState and GameState:IsInDungeon() then
-    local _ServerMeleeWeapon = Avatar and Avatar.AvatarBattleInfo and Avatar.AvatarBattleInfo.CharacterInfo and Avatar.AvatarBattleInfo.CharacterInfo.MeleeWeapon
-    if _ServerMeleeWeapon and _ServerMeleeWeapon.WeaponId == WeaponId then
-      HyperWeapon = _ServerMeleeWeapon
-    else
-      local _ServerRangedWeapon = Avatar and Avatar.AvatarBattleInfo and Avatar.AvatarBattleInfo.CharacterInfo and Avatar.AvatarBattleInfo.CharacterInfo.RangedWeapon
-      if _ServerRangedWeapon and _ServerRangedWeapon.WeaponId == WeaponId then
-        HyperWeapon = _ServerRangedWeapon
-      end
-    end
-  else
-    local _ServerMeleeWeapon = Avatar and Avatar.Weapons[Avatar.MeleeWeapon]
-    if _ServerMeleeWeapon and _ServerMeleeWeapon.WeaponId == WeaponId then
-      HyperWeapon = _ServerMeleeWeapon
-    else
-      local _ServerRangedWeapon = Avatar and Avatar.Weapons[Avatar.RangedWeapon]
-      if _ServerRangedWeapon and _ServerRangedWeapon.WeaponId == WeaponId then
-        HyperWeapon = _ServerRangedWeapon
-      end
+  for _, Weapon in pairs(Avatar.Weapons or {}) do
+    if Weapon.WeaponId == WeaponId then
+      HyperWeapon = Weapon
     end
   end
   if not (HyperWeapon and HyperWeapon.WeaponId) or not HyperWeaponUtils.IsHyperWeapon(HyperWeapon.WeaponId) then
@@ -148,8 +108,10 @@ function HyperWeaponUtils.GetCurHyperWeapon(WeaponId)
   return HyperWeapon
 end
 
-function HyperWeaponUtils.GetHyperWeaponCurTalentCount(WeaponUuid)
-  local Avatar = GWorld:GetAvatar()
+function HyperWeaponUtils.GetHyperWeaponCurTalentCount(Avatar, WeaponUuid)
+  if not Avatar then
+    return 0
+  end
   local WeaponInfo = Avatar.Weapons[WeaponUuid]
   if not WeaponInfo or not WeaponInfo.HyperTalent then
     return 0
@@ -250,7 +212,7 @@ function HyperWeaponUtils.GetTalentState(Avatar, WeaponUuid, TalentId, IsPreview
   local LastServerTalents = WeaponInfo.HyperTalent[LastCardLevel]
   if not LastServerTalents or LastServerTalents:IsEmpty() then
     return TalentState.Locked
-  else
+  elseif not IsPreviewMode then
     local LastTalentUnlocked = false
     for _, ConditionId in pairs(TalentStaticData.UnlockCondition) do
       if LastServerTalents[ConditionId] then
@@ -264,14 +226,14 @@ function HyperWeaponUtils.GetTalentState(Avatar, WeaponUuid, TalentId, IsPreview
   end
   local ServerTalents = WeaponInfo.HyperTalent[WeaponCardLevel]
   if ServerTalents then
-    for Id, _ in pairs(ServerTalents) do
-      if Id == TalentId then
+    for Id1, Id2 in pairs(ServerTalents) do
+      if Id1 == TalentId or Id2 == TalentId then
         return TalentState.Activated
       end
     end
   end
   if IsPreviewMode then
-    return CardState.UnlockedInactive
+    return TalentState.UnlockedInactive
   end
   local bCanActivateForFree = nil == ServerTalents or ServerTalents:IsEmpty()
   if bCanActivateForFree then
@@ -416,6 +378,33 @@ function HyperWeaponUtils.HasForgeQuestCanGetReward(ForgeLevel)
     end
   end
   return false
+end
+
+function HyperWeaponUtils.HasOwnedHyperWeapon(WeaponTag)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  for _, Weapon in pairs(Avatar.Weapons) do
+    if HyperWeaponUtils.IsHyperWeapon(Weapon.WeaponId) then
+      if not WeaponTag then
+        return true
+      end
+      if Weapon:HasTag(WeaponTag) then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+function HyperWeaponUtils.HasOwnedWeapon(WeaponUuid)
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return false
+  end
+  local Weapon = Avatar.Weapons[WeaponUuid]
+  return nil ~= Weapon
 end
 
 return HyperWeaponUtils

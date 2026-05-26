@@ -32,6 +32,12 @@ function M:OnLoaded(...)
     DebugPrint("yly WBP_Activity_Coop_Settlement_P_C OnLoaded: self.RoomSettleInfo is nil")
     return
   end
+  self.bEventEnd = self.RoomSettleInfo.bEventEnd
+  if self.bEventEnd then
+    DebugPrint("yly WBP_Activity_Coop_Settlement_P_C OnLoaded: self.bEventEnd is true")
+    self:ShowEventEndUI()
+    return
+  end
   self.bAllPassed = self.RoomSettleInfo.bAllPassed
   self.CurRound = self.RoomSettleInfo.CurRound
   self.TotalRound = #DataMgr.AsyncCombat[self.RoomSettleInfo.RoomConfId].BossUnitID
@@ -60,6 +66,22 @@ function M:OnFailInAnimationStarted()
   AudioManager(self):PlayUISound(nil, "event:/ui/activity/lianmeiyanyi_level_finish", nil, nil)
 end
 
+function M:ShowEventEndUI()
+  self.Ws_Text_Progress:SetActiveWidgetIndex(0)
+  self.TextProgressDone:SetText(GText("UI_AsyncCombat_ChallengeEnd2"))
+  self.VX_WordGlow6:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.TextEnd:SetText(GText("UI_AsyncCombat_ChallengeEnd2"))
+  self.TextLevel:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.VerticalBox_0:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.TextFail:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.TextWait:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.BtnExit.TextCreate:SetText(GText("UI_AsyncCombat_LeaveStage"))
+  self.BtnExit.Btn.OnClicked:Add(self, self.ExitCoopSettlement)
+  self.BtnExit.Btn.AudioEventPath = "event:/ui/activity/lianmeiyanyi_btn_common_click"
+  self:InitExitCountDown()
+  self:PlayAnimation(self.Fail_In)
+end
+
 function M:InitUIContent()
   if self.bAllPassed then
     self.Ws_Text_Progress:SetActiveWidgetIndex(0)
@@ -72,9 +94,11 @@ function M:InitUIContent()
     self.VX_WordGlow6:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
   self.TextEnd:SetText(GText("UI_AsyncCombat_ChallengeEnd2"))
+  self.TextLevel:SetVisibility(UIConst.VisibilityOp.Visible)
   local CurStageText = string.format(GText("UI_AsyncCombat_SettleCurrentStages"), self.CurRound)
   local TotalStageText = string.format(GText("UI_AsyncCombat_SettleTotalStages"), self.TotalRound)
   self.TextLevel:SetText(CurStageText .. "/" .. TotalStageText)
+  self.VerticalBox_0:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
   self.TextNow:SetText(GText("UI_AsyncCombat_CurrentContribution"))
   local text = self:FormatPercent(self.CurDevote)
   self.TextNum:SetText(text)
@@ -89,6 +113,7 @@ function M:InitUIContent()
   else
     self.Ws_Tag:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  self.TextFail:SetVisibility(UIConst.VisibilityOp.Visible)
   self.TextFail:SetText(GText("UI_AsyncCombat_ContributionNotEnough"))
   self.BtnExit.TextCreate:SetText(GText("UI_AsyncCombat_LeaveStage"))
   self.BtnExit.Btn.OnClicked:Add(self, self.ExitCoopSettlement)
@@ -130,21 +155,12 @@ function M:OnExitDungeonFinished()
   if self:IsAnimationPlaying(self.Out) or self:IsAnimationPlaying(self.Fail_Out) then
     return
   end
-  if self.bAllPassed then
-    self:UnbindAllFromAnimationFinished(self.Out)
-    self:BindToAnimationFinished(self.Out, {
-      self,
-      self.OnOutAnimationFinished
-    })
-    self:PlayAnimation(self.Out)
-  else
-    self:UnbindAllFromAnimationFinished(self.Fail_Out)
-    self:BindToAnimationFinished(self.Fail_Out, {
-      self,
-      self.OnOutAnimationFinished
-    })
-    self:PlayAnimation(self.Fail_Out)
-  end
+  self:UnbindAllFromAnimationFinished(self.Out)
+  self:BindToAnimationFinished(self.Out, {
+    self,
+    self.OnOutAnimationFinished
+  })
+  self:PlayAnimation(self.Out)
 end
 
 function M:OnOutAnimationFinished()
@@ -227,7 +243,6 @@ function M:InitRewardsUI()
       end
     else
       self.Reward01:SetVisibility(UIConst.VisibilityOp.Visible)
-      self.Image_722:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Reward02.TextReward:SetText(GText("UI_AsyncCombat_MVPBonus2"))
       if bSatisfyBaseDevote then
         local DeltaDevote = self.MVPDevote - self.CurDevote
@@ -235,6 +250,7 @@ function M:InitRewardsUI()
         self.Reward01.TextDone:SetText(GText("UI_AsyncCombat_MetRequirement"))
         self.Reward02.TextDone:SetText(string.format(GText("UI_AsyncCombat_NeedMoreContribution"), DeltaPercentText))
         self.Reward02:SetVisibility(UIConst.VisibilityOp.Visible)
+        self.Image_722:SetVisibility(UIConst.VisibilityOp.Visible)
         self.Reward01:PlayAnimation(self.Reward01.Done)
         self.Reward02:PlayAnimation(self.Reward02.Lock)
       else
@@ -242,6 +258,7 @@ function M:InitRewardsUI()
         local DeltaPercentText = self:FormatPercent(DeltaDevote)
         self.Reward01.TextDone:SetText(string.format(GText("UI_AsyncCombat_NeedMoreContribution"), DeltaPercentText))
         self.Reward02:SetVisibility(UIConst.VisibilityOp.Collapsed)
+        self.Image_722:SetVisibility(UIConst.VisibilityOp.Collapsed)
         self.Reward01:PlayAnimation(self.Reward01.Lock)
         self.Reward02:PlayAnimation(self.Reward02.Lock)
       end
@@ -259,6 +276,9 @@ function M:FormatPercent(Percent)
   local percent = (Percent or 0) / 100
   local text = string.format("%.1f", percent)
   text = text:gsub("%.0$", "")
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    text = CommonUtils.FormatNumInFrench(text)
+  end
   return text
 end
 

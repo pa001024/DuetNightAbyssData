@@ -6,7 +6,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("DyeScore", {
   [1] = {
-    MaxScore = 100,
+    MaxScore = 60,
     ResourceId = {
       30101,
       30102,
@@ -29,6 +29,6 @@ return ReadOnly("DyeScore", {
       30119
     },
     ScoreId = 1,
-    ScorePerUse = 10
+    ScorePerUse = 12
   }
 })

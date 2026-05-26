@@ -157,7 +157,7 @@
   {
     "id": 103006,
     "name": "Jeux de l’Amitié",
-    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n\n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
+    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n  \n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
     "startTime": 1762135200,
     "endTime": 1763931600,
     "rule": "Terminez les Jeux réguliers préparés par Lulu, pilleuse de loot pour gagner des Points Luno.\nÀ chaque réinitialisation quotidienne du serveur, vos Collections Luno sont calculées selon vos Points. Les Points excédentaires au-delà de la limite sont convertis en Pièces à un taux fixe.\n\nChaque jour, <highlight>4</> Jeux quotidiens sont renouvelés lors de la réinitialisation du serveur. Après le décompte des Collections du jour précédent, de nouveaux Jeux deviennent disponibles.\nLes Jeux répétables peuvent être complétés plusieurs fois et ne sont pas réinitialisés quotidiennement.\n\nTerminez les Jeux de défi pour obtenir des Points de défi, échangeables contre les Collections de défi de Lulu, pilleuse de loot.\n\nLes Jeux de défi sont publiés en <highlight>2</> phases. Lulu, pilleuse de loot dévoilera de nouveaux Jeux le 5ᵉ jour après le début de l’événement."
@@ -189,7 +189,7 @@
     "desc": "Lorsque la Fête de la Chandelle d’Argent s’acheva dans une succession d’incidents imprévus, une nouvelle ombre s’abattit sur Givrelac.\nEn cet instant critique, encore empreint d’incertitude, celle qui se proclame le Roi Démon de la Lumière fit alors son apparition !",
     "startTime": 1766628000,
     "endTime": 1768856400,
-    "rule": "<H>Règles de l’événement du Théâtre Spécial des Luno</>\n\n1) Après avoir terminé la quête « <H>Théâtre Spécial des Luno</> », vous pouvez vous inscrire à l’événement auprès de la Directrice Putsch au <H>Théâtre Galea</>.\n2) Lors du <H>Bal de Luno</>, suivez les instructions de Luno sur scène et présentez le <H>Géniemon</> ainsi que la <H>posture</> correspondants afin de réussir l’association et obtenir des récompenses. Présenter un Géniemon du même type suffit à valider l’association. Déclencher la compétence du <H>Poto Carta mystique</> permet également de valider l’association du <H>Poto Carta ardent</> et du <H>Poto Carta mystique</>.\n3) Lors de chaque <H>Bal de Luno</>, réussir au moins une association permet d’obtenir une <H>récompense avancée</> à la fin du bal. Chaque compte peut obtenir jusqu’à <H>5</> <H>récompenses avancées</> pendant la durée de l’événement. Au-delà, même en réussissant plusieurs associations, seules des <H>récompenses ordinaires</> seront attribuées. L’intervalle entre deux <H>Bals de Luno</> est de trente minutes.\n4) Lors d’<H>Un Instant de Liesse</>, des récompenses sont accordées une fois qu’un certain seuil de progression dans la remise de matériaux est atteint. Les récompenses seront envoyées par courrier à l’ensemble des joueurs.\n5) Lors d’<H>Un Instant de Liesse</>, cliquer sur [Ajout automatique] ajoute automatiquement les matériaux livrables en fonction de leur qualité.\n6) Lors d’<H>Un Instant de Liesse</>, une fois l’ensemble des paliers de remise de matériaux complétés, la fonction [Ajout automatique] devient indisponible. Il reste toutefois possible d’ajouter manuellement des matériaux, de les remettre, d’achever les quêtes et d’obtenir les récompenses."
+    "rule": "<H>Règles de l’événement du Théâtre Spécial des Luno</>\n \n1) Après avoir terminé la quête « <H>Théâtre Spécial des Luno</> », vous pouvez vous inscrire à l’événement auprès de la Directrice Putsch au <H>Théâtre Galea</>.\n2) Lors du <H>Bal de Luno</>, suivez les instructions de Luno sur scène et présentez le <H>Géniemon</> ainsi que la <H>posture</> correspondants afin de réussir l’association et obtenir des récompenses. Présenter un Géniemon du même type suffit à valider l’association. Déclencher la compétence du <H>Poto Carta mystique</> permet également de valider l’association du <H>Poto Carta ardent</> et du <H>Poto Carta mystique</>.\n3) Lors de chaque <H>Bal de Luno</>, réussir au moins une association permet d’obtenir une <H>récompense avancée</> à la fin du bal. Chaque compte peut obtenir jusqu’à <H>5</> <H>récompenses avancées</> pendant la durée de l’événement. Au-delà, même en réussissant plusieurs associations, seules des <H>récompenses ordinaires</> seront attribuées. L’intervalle entre deux <H>Bals de Luno</> est de trente minutes.\n4) Lors d’<H>Un Instant de Liesse : Gare des Cent-Fleurs</>, des récompenses sont accordées une fois qu’un certain seuil de progression dans la remise de matériaux est atteint. Les récompenses seront envoyées par courrier à l’ensemble des joueurs.\n5) Lors d’<H>Un Instant de Liesse : Gare des Cent-Fleurs</>, cliquer sur [Ajout automatique] ajoute automatiquement les matériaux livrables en fonction de leur qualité.\n6) Lors d’<H>Un Instant de Liesse : Gare des Cent-Fleurs</>, une fois l’ensemble des paliers de remise de matériaux complétés, la fonction [Ajout automatique] devient indisponible. Il reste toutefois possible d’ajouter manuellement des matériaux, de les remettre, d’achever les quêtes et d’obtenir les récompenses."
   },
   {
     "id": 103012,
@@ -255,7 +255,7 @@
     "desc": "Terminez des missions pendant l’événement pour obtenir des récompenses",
     "startTime": 1777514400,
     "endTime": 1779051599,
-    "rule": "1) Pendant l’événement, vous recevrez 2 cadeaux stellaires par jour, utilisables avec des Pièces stellaires.\n2) Les missions permettent d’obtenir des Pièces stellaires, échangeables contre des cadeaux ou dans la boutique stellaire.\n3) Jusqu’à 21 cadeaux stellaires peuvent être conservés ; au-delà, aucun nouveau cadeau ne sera ajouté.",
+    "rule": "1) Pendant l’événement, vous recevrez 2 cadeaux stellaires par jour, utilisables avec des Pièces stellaires.\n2) Les missions permettent d’obtenir des Pièces stellaires, échangeables contre des cadeaux ou dans la boutique stellaire.",
     "boxDrop": {
       "boxCoinId": 221,
       "boxMaximum": 21,
@@ -277,7 +277,7 @@
     "desc": "Pendant l’événement, vous pouvez obtenir des apparences de la série « Murmures indicibles » ainsi que d’autres récompenses cosmétiques",
     "startTime": 1777946400,
     "endTime": 1780304400,
-    "rule": "1) Cet événement comprend 2 manches, chacune comportant 8 récompenses. L’une d’elles est une apparence souhaitée. Une fois cette apparence obtenue dans une manche, vous recevez immédiatement toutes les récompenses restantes de cette manche. \n2) Avant le premier tissage d’une manche, vous pouvez librement modifier l’apparence souhaitée et les récompenses sélectionnées. Après un premier tissage, ces choix ne peuvent plus être modifiés pour la manche en cours. \n3) Les récompenses d’une même manche ne peuvent être obtenues qu’une seule fois. À mesure que le nombre de récompenses restantes diminue, leur probabilité d’obtention augmente proportionnellement. Une fois la manche terminée, les probabilités sont réinitialisées. \n\n Probabilités initiales d’obtention :\n Apparence de personnage : 0,08 %\n Effet de Bond Cyclonique : 0,92 %\n Accessoire dorsal – Haut : 1 %\n Accessoire de tête : 2 %\n Cadre d’avatar : 13 %\n Avatar : 13 %\n Teinture iridescente ×3 : 35 %\n Carnet de mission — Tome III ×6 : 35 % \n\n Le nombre de Fils stellaires requis augmente avec le nombre de tissages effectués. Une fois la manche terminée, le coût est réinitialisé. \n\nNombre de Fils stellaires requis par tissage :\n1er tissage : Fil stellaire ×1\n2e tissage : Fil stellaire ×3\n3e tissage : Fil stellaire ×6\n4e tissage : Fil stellaire ×10\n5e tissage : Fil stellaire ×15\n6e tissage : Fil stellaire ×20\n7e tissage : Fil stellaire ×25\n8e tissage : Fil stellaire ×30"
+    "rule": "1) Cet événement comprend 2 manches, chacune comportant 8 récompenses. L’une d’elles est une apparence souhaitée. Une fois cette apparence obtenue dans une manche, vous recevez immédiatement toutes les récompenses restantes de cette manche.\n2) Avant le premier tissage d’une manche, vous pouvez librement modifier l’apparence souhaitée et les récompenses sélectionnées. Après un premier tissage, ces choix ne peuvent plus être modifiés pour la manche en cours.\n3) Les récompenses d’une même manche ne peuvent être obtenues qu’une seule fois. À mesure que le nombre de récompenses restantes diminue, leur probabilité d’obtention augmente proportionnellement. Une fois la manche terminée, les probabilités sont réinitialisées.\n\n4) Probabilités initiales d’obtention :\nApparence de personnage : 0,08 %\nEffet de Bond Cyclonique : 0,92 %\nAccessoire dorsal – Haut : 1 %\nAccessoire de tête : 2 %\nCadre d’avatar : 13 %\nAvatar : 13 %\nTeinture iridescente ×3 : 35 %\nCarnet de mission — Tome III ×6 : 35 %\n\n5) Le nombre de Fils stellaires requis augmente avec le nombre de tissages effectués. Une fois la manche terminée, le coût est réinitialisé.\n\nNombre de Fils stellaires requis par tissage :\n1er tissage : Fil stellaire ×1\n2e tissage : Fil stellaire ×3\n3e tissage : Fil stellaire ×6\n4e tissage : Fil stellaire ×10\n5e tissage : Fil stellaire ×15\n6e tissage : Fil stellaire ×20\n7e tissage : Fil stellaire ×25\n8e tissage : Fil stellaire ×30"
   },
   {
     "id": 103022,
@@ -299,7 +299,7 @@
     "desc": "Pendant l’événement, collectionnez certaines apparences afin d’obtenir des points et débloquer de nombreuses récompenses.",
     "startTime": 1780279200,
     "endTime": 1785142800,
-    "rule": "活动期间，完成外观收集列表中的收集任务以获得外观积分，消耗月石解锁后可领取丰富奖励"
+    "rule": "Accomplissez les tâches de collection de la liste d’apparences afin d’obtenir des points d’apparence. Débloquez les récompenses avec des Phoxènes afin d’obtenir de précieuses récompenses."
   },
   {
     "id": 105001,
@@ -422,7 +422,7 @@
     "name": "Croisière étoilée",
     "desc": "Obtenez des récompenses en fonction du temps total passé dans les Zones en coop pendant l’événement",
     "startTime": 1783562400,
-    "endTime": 1785099600
+    "endTime": 1785142800
   },
   {
     "id": 113001,
@@ -535,7 +535,7 @@
   {
     "id": 10300601,
     "name": "Jeux de l’Amitié",
-    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n\n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
+    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n  \n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
     "startTime": 1773367200,
     "endTime": 1774645200,
     "rule": "Terminez les Jeux réguliers préparés par Lulu, pilleuse de loot pour gagner des Points Luno.\nÀ chaque réinitialisation quotidienne du serveur, vos Collections Luno sont calculées selon vos Points. Les Points excédentaires au-delà de la limite sont convertis en Pièces à un taux fixe.\n\nChaque jour, <highlight>4</> Jeux quotidiens sont renouvelés lors de la réinitialisation du serveur. Après le décompte des Collections du jour précédent, de nouveaux Jeux deviennent disponibles.\nLes Jeux répétables peuvent être complétés plusieurs fois et ne sont pas réinitialisés quotidiennement.\n\nTerminez les Jeux de défi pour obtenir des Points de défi, échangeables contre les Collections de défi de Lulu, pilleuse de loot.\n\nLes Jeux de défi sont publiés en <highlight>2</> phases. Lulu, pilleuse de loot dévoilera de nouveaux Jeux le 5ᵉ jour après le début de l’événement."
@@ -543,18 +543,18 @@
   {
     "id": 10300602,
     "name": "Jeux de l’Amitié",
-    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n\n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
+    "desc": "« H-hé, attends ! ATTENDS ! Cette fois, réglons ça... poliment, d’accord !?\nPar exemple... un pari ! Si tu réussis ce petit défi, je te donne tout le butin ! »\n  \n— Lulu, pilleuse de loot, recroquevillée au sol, suppliant qu’on l’épargne.",
     "startTime": 1781143200,
     "endTime": 1782421200,
     "rule": "Terminez les Jeux réguliers préparés par Lulu, pilleuse de loot pour gagner des Points Luno.\nÀ chaque réinitialisation quotidienne du serveur, vos Collections Luno sont calculées selon vos Points. Les Points excédentaires au-delà de la limite sont convertis en Pièces à un taux fixe.\n\nChaque jour, <highlight>4</> Jeux quotidiens sont renouvelés lors de la réinitialisation du serveur. Après le décompte des Collections du jour précédent, de nouveaux Jeux deviennent disponibles.\nLes Jeux répétables peuvent être complétés plusieurs fois et ne sont pas réinitialisés quotidiennement.\n\nTerminez les Jeux de défi pour obtenir des Points de défi, échangeables contre les Collections de défi de Lulu, pilleuse de loot.\n\nLes Jeux de défi sont publiés en <highlight>2</> phases. Lulu, pilleuse de loot dévoilera de nouveaux Jeux le 5ᵉ jour après le début de l’événement."
   },
   {
     "id": 10301101,
-    "name": "皎皎铁道周游",
-    "desc": "嘟嘟皎皎想要让所有人了解铁路的美妙，制造喧闹。\n于是冰湖城的其他皎皎们也一起前来帮忙，唱唱跳跳。（待包装）",
+    "name": "Périple ferroviaire de Luno",
+    "desc": "Luno, au sifflet souhaite faire découvrir à tous les merveilles du chemin de fer. Elle reproduit donc l’animation autrefois organisée par les Luno au Théâtre Galea, chantant et dansant sous le dôme d’entrée.",
     "startTime": 1780538400,
     "endTime": 1782334800,
-    "rule": "<H>皎皎特别剧场活动规则</>\n1.活动开启后，可在<H>嘟嘟皎皎</>处报名参加活动。\n2.在<H>皎谊舞会</>中，跟随舞台上皎皎的指示，展示对应的<H>魔灵</>和<H>展示动作</>完成匹配，可获得奖励。展示同种类型的魔灵即可完成匹配，释放“奇迹你好箱”的技能可以完成<H>闪光你好箱</>和<H>锐意你好箱</>的匹配。\n3.在每次<H>皎谊舞会</>中，完成一次及以上的匹配，舞会结束时可以获得<H>高级奖励</>。每个账号在活动期间最多获得<H>5</>次<H>高级奖励</>，之后即使完成多次匹配，也仅能获得<H>普通奖励</>。两次<H>皎谊舞会</>的间隔为半个小时。\n4.在<H>欢聚一时</>中，交付素材达到一定进度后，会获得奖励。奖励将通过全服邮件发送。\n5.在<H>欢聚一时</>中，点击【自动添加】会依照材料品质自动加入可交付素材。\n6.在<H>欢聚一时</>中，素材交付已完成所有进度后，【自动添加】不再可用，但仍然可以手动添加并交付素材,完成任务并获取奖励。\n（待包装）"
+    "rule": "<H>Règles de l’événement du Théâtre Spécial des Luno</>\n \n1) Une fois l’événement ouvert, vous pouvez vous inscrire auprès de <H>Luno, au sifflet</> à la <H>Gare des Cent-Fleurs</>.\n2) Lors du <H>Bal de Luno</>, suivez les instructions de Luno sur scène et présentez le <H>Géniemon</> ainsi que la <H>posture</> correspondants afin de réussir l’association et obtenir des récompenses. Présenter un Géniemon du même type suffit à valider l’association. Déclencher la compétence du <H>Poto Carta mystique</> permet également de valider l’association du <H>Poto Carta ardent</> et du <H>Poto Carta mystique</>.\n3) Lors de chaque <H>Bal de Luno</>, réussir au moins une association permet d’obtenir une <H>récompense avancée</> à la fin du bal. Chaque compte peut obtenir jusqu’à <H>5</> <H>récompenses avancées</> pendant la durée de l’événement. Au-delà, même en réussissant plusieurs associations, seules des <H>récompenses ordinaires</> seront attribuées. L’intervalle entre deux <H>Bals de Luno</> est de trente minutes.\n4) Lors d’<H>Un Instant de Liesse : Gare des Cent-Fleurs</>, des récompenses sont accordées une fois qu’un certain seuil de progression dans la remise de matériaux est atteint. Les récompenses seront envoyées par courrier à l’ensemble des joueurs.\n5) Lors d’<H>Un Instant de Liesse : Gare des Cent-Fleurs</>, cliquer sur [Ajout automatique] ajoute automatiquement les matériaux livrables en fonction de leur qualité.\n6) Lors d’<H>Un Instant de Liesse : Gare des Cent-Fleurs</>, une fois l’ensemble des paliers de remise de matériaux complétés, la fonction [Ajout automatique] devient indisponible. Il reste toutefois possible d’ajouter manuellement des matériaux, de les remettre, d’achever les quêtes et d’obtenir les récompenses."
   },
   {
     "id": 10302001,
@@ -562,10 +562,10 @@
     "desc": "Terminez des missions pendant l’événement pour obtenir des récompenses",
     "startTime": 1782352800,
     "endTime": 1783889999,
-    "rule": "1) Pendant l’événement, vous recevrez 2 cadeaux stellaires par jour, utilisables avec des Pièces stellaires.\n2) Les missions permettent d’obtenir des Pièces stellaires, échangeables contre des cadeaux ou dans la boutique stellaire.\n3) Jusqu’à 21 cadeaux stellaires peuvent être conservés ; au-delà, aucun nouveau cadeau ne sera ajouté.",
+    "rule": "1) Pendant l’événement, vous recevrez 2 cadeaux stellaires par jour, utilisables avec des Pièces stellaires.\n2) Les missions permettent d’obtenir des Pièces stellaires, échangeables contre des cadeaux ou dans la boutique stellaire.",
     "boxDrop": {
       "boxCoinId": 223,
-      "boxMaximum": 21,
+      "boxMaximum": 38,
       "boxPerDay": 2,
       "coinPerBox": 3,
       "eventId": 10302001,
@@ -580,11 +580,11 @@
   },
   {
     "id": 10302101,
-    "name": "祷音回廊",
-    "desc": "活动期间可获取[七日圣约]系列形象及其他外观奖励",
+    "name": "Cloître des prières ",
+    "desc": "Pendant l’événement, vous pouvez obtenir des apparences de la série « Sept jours d’alliance » ainsi que d’autres récompenses cosmétiques.",
     "startTime": 1782784800,
     "endTime": 1785142800,
-    "rule": "1、本次活动共有2轮奖励，每轮各包含8个奖励，其中1个奖励为心意外观，每轮获得心意外观后，将直接获取本轮次的所有奖励\n2、在开始一个轮次的首次编织前，可自由调整该轮的心意外观和自选奖励。在该轮次进行1次编织后，将无法修改本轮的心意外观和自选奖励\n3、同一轮次中的奖励不会重复获取，剩余奖励的获取概率将随着本轮奖励数量的减少而等比例提高。完成本轮编织后，奖励获取概率将恢复至初始状态\n4、各奖励的初始获取概率如下\n角色形象：0.08%\n螺旋飞跃特效：0.92%\n背部装饰·下：1%\n脸部装饰：2%\n头像框：13%\n头像：13%\n虹彩染剂*3：35%\n委托手册·三*6：35%\n5、编织所消耗的星辉丝线会随着编织次数增加而增多，完成本轮编织后，星辉丝线的消耗数量将恢复至初始状态\n每次编织所需的星辉丝线数量如下\n第1次编织：星辉丝线*1\n第2次编织：星辉丝线*3\n第3次编织：星辉丝线*6\n第4次编织：星辉丝线*10\n第5次编织：星辉丝线*15\n第6次编织：星辉丝线*20\n第7次编织：星辉丝线*25\n第8次编织：星辉丝线*30\n"
+    "rule": "1) Cet événement comprend 2 manches, chacune comportant 8 récompenses. L’une d’elles est une apparence souhaitée. Une fois cette apparence obtenue dans une manche, vous recevez immédiatement toutes les récompenses restantes de cette manche.\n2) Avant le premier tissage d’une manche, vous pouvez librement modifier l’apparence souhaitée et les récompenses sélectionnées. Après un premier tissage, ces choix ne peuvent plus être modifiés pour la manche en cours.\n3) Les récompenses d’une même manche ne peuvent être obtenues qu’une seule fois. À mesure que le nombre de récompenses restantes diminue, leur probabilité d’obtention augmente proportionnellement. Une fois la manche terminée, les probabilités sont réinitialisées.\n \n4) Probabilités initiales d’obtention :\nApparence de personnage : 0,08 %\nEffet de Bond Cyclonique : 0,92 %\nAccessoire dorsal – Bas : 1 %\nAccessoire de visage : 2 %\nCadre d’avatar : 13 %\nAvatar : 13 %\nTeinture iridescente ×3 : 35 %\nCarnet de mission — Tome III ×6 : 35 %\n \n5) Le nombre de Fils stellaires requis augmente avec le nombre de tissages effectués. Une fois la manche terminée, le coût est réinitialisé.\n \nNombre de Fils stellaires requis par tissage :\n1er tissage : Fil stellaire ×1\n2e tissage : Fil stellaire ×3\n3e tissage : Fil stellaire ×6\n4e tissage : Fil stellaire ×10\n5e tissage : Fil stellaire ×15\n6e tissage : Fil stellaire ×20\n7e tissage : Fil stellaire ×25\n8e tissage : Fil stellaire ×30"
   },
   {
     "id": 103009001,

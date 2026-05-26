@@ -81,6 +81,9 @@ function M:OnLoaded(...)
   self:InitRankInfoTopN(self.TopNInfo)
   self:InitRankInfoSelf(self.SelfRankInfo)
   self:InitView()
+  if IsValid(self.GameInputModeSubsystem) then
+    self:RefreshOpInfoByInputDevice(self.GameInputModeSubsystem:GetCurrentInputType(), self.GameInputModeSubsystem:GetCurrentGamepadName())
+  end
 end
 
 function M:Construct()
@@ -90,6 +93,7 @@ function M:Construct()
     local CurInputDevice = self.GameInputModeSubsystem:GetCurrentInputType()
     self.IsGamePad = CurInputDevice == ECommonInputType.Gamepad
     self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
+    self:RefreshOpInfoByInputDevice(CurInputDevice, self.GameInputModeSubsystem:GetCurrentGamepadName())
   end
 end
 
@@ -105,11 +109,16 @@ function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
   if WasGamePad ~= self.IsGamePad then
     self:ClearRankItemVisualState()
   end
-  if self:IsRankItemSelectable() and self.IsGamePad and UIUtils.HasAnyFocus(self) then
-    if self.LastClickedItem and self.LastClickedItem.RankInfo then
-      self.List_Ranking:NavigateToIndex(self.LastClickedItem.RankInfo.RankNum - 1)
-    elseif self.ValidItemNum and self.ValidItemNum > 0 then
-      self.List_Ranking:NavigateToIndex(0)
+  if self:IsRankItemSelectable() and self.IsGamePad then
+    if self.List_Ranking and not UIUtils.HasAnyFocus(self) then
+      self.List_Ranking:SetFocus()
+    end
+    if self.List_Ranking and UIUtils.HasAnyFocus(self) then
+      if self.LastClickedItem and self.LastClickedItem.RankInfo then
+        self.List_Ranking:NavigateToIndex(self.LastClickedItem.RankInfo.RankNum - 1)
+      elseif self.ValidItemNum and self.ValidItemNum > 0 then
+        self.List_Ranking:NavigateToIndex(0)
+      end
     end
   end
 end

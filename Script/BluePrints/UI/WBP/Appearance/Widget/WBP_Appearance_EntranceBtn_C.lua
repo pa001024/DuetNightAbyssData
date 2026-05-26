@@ -9,6 +9,7 @@ function M:Init(Params)
 end
 
 function M:OnBtnClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_mid", "", nil)
   if self.Params.OnBtnClicked then
     self.Params.OnBtnClicked(self.Params.Owner)
   end

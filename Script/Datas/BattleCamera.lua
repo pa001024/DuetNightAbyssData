@@ -1,7 +1,7 @@
 local T = {}
-T.RT_1 = {"10.0"}
-T.RT_2 = {"3.0"}
-T.RT_3 = {"1.0"}
+T.RT_1 = {"10"}
+T.RT_2 = {"3"}
+T.RT_3 = {"1"}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -15,7 +15,7 @@ return ReadOnly("BattleCamera", {
   },
   CameraFadeAngleStart = {
     ParamentName = "CameraFadeAngleStart",
-    ParamentValue = {"30.0"}
+    ParamentValue = {"30"}
   },
   CameraPitchLimitMax = {
     ParamentName = "CameraPitchLimitMax",
@@ -31,7 +31,7 @@ return ReadOnly("BattleCamera", {
   },
   LeaveCollisionSpeed = {
     ParamentName = "LeaveCollisionSpeed",
-    ParamentValue = {"2.0"}
+    ParamentValue = {"2"}
   },
   ResetPitchMaxSpeed = {
     ParamentName = "ResetPitchMaxSpeed",
@@ -39,7 +39,7 @@ return ReadOnly("BattleCamera", {
   },
   ResetSocketOffsetMaxSpeed = {
     ParamentName = "ResetSocketOffsetMaxSpeed",
-    ParamentValue = {"4.0"}
+    ParamentValue = {"4"}
   },
   ResetSpringArmMaxSpeed = {
     ParamentName = "ResetSpringArmMaxSpeed",

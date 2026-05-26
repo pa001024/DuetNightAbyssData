@@ -396,6 +396,12 @@ return ReadOnly("AssetPathSplitRules", {
     ModelId = 600202,
     MontageSuffixList = T.RT_1
   },
+  [600203] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 600203,
+    MontageSuffixList = T.RT_1
+  },
   [600301] = {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
@@ -474,6 +480,18 @@ return ReadOnly("AssetPathSplitRules", {
     ModelId = 700102,
     MontageSuffixList = T.RT_1
   },
+  [700103] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 700103,
+    MontageSuffixList = T.RT_1
+  },
+  [700104] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 700104,
+    MontageSuffixList = T.RT_1
+  },
   [700201] = {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
@@ -490,6 +508,18 @@ return ReadOnly("AssetPathSplitRules", {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
     ModelId = 700203,
+    MontageSuffixList = T.RT_1
+  },
+  [700204] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 700204,
+    MontageSuffixList = T.RT_1
+  },
+  [700205] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 700205,
     MontageSuffixList = T.RT_1
   },
   [700301] = {
@@ -570,6 +600,30 @@ return ReadOnly("AssetPathSplitRules", {
     ModelId = 700803,
     MontageSuffixList = T.RT_1
   },
+  [700901] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 700901,
+    MontageSuffixList = T.RT_1
+  },
+  [701001] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701001,
+    MontageSuffixList = T.RT_1
+  },
+  [701002] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701002,
+    MontageSuffixList = T.RT_1
+  },
+  [701003] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701003,
+    MontageSuffixList = T.RT_1
+  },
   [701201] = {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
@@ -582,6 +636,48 @@ return ReadOnly("AssetPathSplitRules", {
     ModelId = 701301,
     MontageSuffixList = T.RT_1
   },
+  [701501] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701501,
+    MontageSuffixList = T.RT_1
+  },
+  [701502] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701502,
+    MontageSuffixList = T.RT_1
+  },
+  [701601] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701601,
+    MontageSuffixList = T.RT_1
+  },
+  [701701] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701701,
+    MontageSuffixList = T.RT_1
+  },
+  [701801] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701801,
+    MontageSuffixList = T.RT_1
+  },
+  [701901] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701901,
+    MontageSuffixList = T.RT_1
+  },
+  [701902] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 701902,
+    MontageSuffixList = T.RT_1
+  },
   [800101] = {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
@@ -592,6 +688,12 @@ return ReadOnly("AssetPathSplitRules", {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
     ModelId = 800102,
+    MontageSuffixList = T.RT_1
+  },
+  [800103] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 800103,
     MontageSuffixList = T.RT_1
   },
   [800201] = {
@@ -732,6 +834,12 @@ return ReadOnly("AssetPathSplitRules", {
     ModelId = 900201,
     MontageSuffixList = T.RT_1
   },
+  [900202] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 900202,
+    MontageSuffixList = T.RT_1
+  },
   [900301] = {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
@@ -754,6 +862,18 @@ return ReadOnly("AssetPathSplitRules", {
     IsPreloadMesh = true,
     IsPreloadWeapon = true,
     ModelId = 900601,
+    MontageSuffixList = T.RT_1
+  },
+  [900701] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 900701,
+    MontageSuffixList = T.RT_1
+  },
+  [900702] = {
+    IsPreloadMesh = true,
+    IsPreloadWeapon = true,
+    ModelId = 900702,
     MontageSuffixList = T.RT_1
   },
   [950001] = {

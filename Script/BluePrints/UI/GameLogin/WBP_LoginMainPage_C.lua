@@ -202,6 +202,11 @@ function WBP_GameStartMainPage_C:Construct()
   elseif "IOS" == PlatformName then
     self.Text_Device:SetText("iOS_")
     self:LoginIOSGameCenter()
+  elseif "OpenHarmony" == PlatformName then
+    self.Text_Device:SetText("OpenHarmony_")
+    self.MediaPlayer.OnEndReached:Add(self, function()
+      self.MediaPlayer:Reopen()
+    end)
   end
   self.Text_Product:SetText("Product_")
   self.Text_Version:SetText(TotalVersionNumber)

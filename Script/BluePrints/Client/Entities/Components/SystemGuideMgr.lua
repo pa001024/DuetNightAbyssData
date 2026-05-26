@@ -16,4 +16,9 @@ function Component:OnGMFinishSystemGuide(SystemGuideId, RewardReturn)
   SystemGuideManager:FinishSystemGuideEvent(SystemGuideId)
 end
 
+function Component:LeaveWorld()
+  SystemGuideManager:RemoveSystemGuideEvents()
+  SystemGuideManager:ClearSystemGuideData()
+end
+
 return Component

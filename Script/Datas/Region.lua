@@ -333,7 +333,7 @@ return ReadOnly("Region", {
   [1056] = {
     IsRandom = {105601, 105602},
     RegionId = 1056,
-    RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_ZhiLiuHJ/Huaxu_Haojing_ZhiliuHJ_Main",
+    RegionMapFile = "/Game/Maps/Levels/Huaxu/Huaxu_Haojing_ZhiliuHJ/Huaxu_Haojing_ZhiliuHJ_Main",
     RegionMapWheelScale = T.RT_1,
     RegionName = "UI_REGION_NAME_1056"
   },
@@ -407,7 +407,7 @@ return ReadOnly("Region", {
     RegionMapImage = "/Game/UI/WBP/Map/Widget/RegionMap/Chapter03/WBP_Map_Reg_Chapter03_Station_UG.WBP_Map_Reg_Chapter03_Station_UG",
     RegionMapImageCenter = T.RT_3,
     RegionMapWheelScale = T.RT_1,
-    RegionName = "UI_SUBREGION_NAME_106003",
+    RegionName = "UI_REGION_NAME_1063",
     RegionType = "Main"
   },
   [1070] = {

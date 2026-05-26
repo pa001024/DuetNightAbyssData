@@ -99,6 +99,7 @@ function M:OnListItemObjectSet(Content)
     self.Btn_Reward:UnBindEventOnClickedByObj(self)
     if ConfigData.ReceiveCallBack then
       self.Btn_Reward:BindEventOnClicked(self, function()
+        AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_normal", nil, nil)
         ConfigData.ReceiveCallBack(self, Content)
       end)
     end
@@ -107,6 +108,7 @@ function M:OnListItemObjectSet(Content)
     self.Btn_Goto:UnBindEventOnClickedByObj(self)
     if ConfigData.GotoCallBack then
       self.Btn_Goto:BindEventOnClicked(self, function()
+        AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm", nil, nil)
         ConfigData.GotoCallBack(self, Content)
       end)
     end

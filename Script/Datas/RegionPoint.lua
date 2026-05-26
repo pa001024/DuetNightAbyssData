@@ -301,7 +301,7 @@ return ReadOnly("RegionPoint", {
     Icon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Leave.T_Gp_Leave",
     Id = 2023,
     ManualItemId = 248028,
-    Name = "UI_SUBREGION_NAME_106305",
+    Name = "UI_SUBREGION_NAME_106005",
     Pos = {-38432, -6902},
     SubRegion = 106001,
     TargetSubRegion = T.RT_6,

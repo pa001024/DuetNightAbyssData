@@ -7,7 +7,6 @@ function M:Init()
   self.bInited = true
   self.bTipIgnoreBattle = false
   self.Platform = CommonUtils.GetDeviceTypeByPlatformName(GWorld.GameInstance)
-  GWorld.GameInstance:BindGamepadEvent()
   self.IsDestroied = nil
   self.TimerKeys = {}
 end
@@ -23,7 +22,6 @@ function M:Destory()
   end
   self:GetModel():Destory()
   self._Model = nil
-  GWorld.GameInstance:UnBindGamepadEvent()
   self.IsDestroied = true
 end
 
@@ -225,11 +223,11 @@ function M:IsPC()
 end
 
 function M:IsGamepad()
-  return GWorld.GameInstance.CurInputDeviceType == ECommonInputType.Gamepad
+  return self:GetUIMgr():GetGameInputModeSubsystem():GetCurrentInputType() == ECommonInputType.Gamepad
 end
 
 function M:GetInputDeviceName()
-  return GWorld.GameInstance.CurInputDeviceName
+  return self:GetUIMgr():GetGameInputModeSubsystem():GetCurrentGamepadName()
 end
 
 function M:IsMobile()

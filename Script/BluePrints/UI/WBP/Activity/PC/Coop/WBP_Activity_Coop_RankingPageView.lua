@@ -23,6 +23,8 @@ function M:Construct()
     self.GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.RefreshOpInfoByInputDevice)
   end
   self.Avatar = GWorld:GetAvatar()
+  self.IsMyselfButtonHovered = false
+  self.IsMyselfClickAnimating = false
   self.List_Ranking.OnCreateEmptyContent:Bind(self, function()
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
     Content.Empty = true
@@ -197,9 +199,25 @@ function M:InitRankInfoSelf(SelfRankInfo)
   }
   self.SelfItemData = ItemData
   self.Ranking_Myself:OnListItemObjectSet(ItemData)
-  self.Ranking_Myself.Button_Myself.OnPressed:Add(self, self.OnMyselfButtonPressed)
-  self.Ranking_Myself.Button_Myself.OnClicked:Add(self, self.OnMyselfButtonClicked)
-  self.Ranking_Myself.Button_Myself.OnHovered:Add(self, self.OnMyselfButtonHovered)
+  local Button = self.Ranking_Myself.Button_Myself
+  Button.OnPressed:Remove(self, self.OnMyselfButtonPressed)
+  Button.OnClicked:Remove(self, self.OnMyselfButtonClicked)
+  Button.OnHovered:Remove(self, self.OnMyselfButtonHovered)
+  Button.OnUnhovered:Remove(self, self.OnMyselfButtonUnhovered)
+  Button.OnPressed:Add(self, self.OnMyselfButtonPressed)
+  Button.OnClicked:Add(self, self.OnMyselfButtonClicked)
+  Button.OnHovered:Add(self, self.OnMyselfButtonHovered)
+  Button.OnUnhovered:Add(self, self.OnMyselfButtonUnhovered)
+  if self.Ranking_Myself.Click then
+    self.Ranking_Myself:UnbindFromAnimationFinished(self.Ranking_Myself.Click, {
+      self,
+      self.OnMyselfClickAnimationFinished
+    })
+    self.Ranking_Myself:BindToAnimationFinished(self.Ranking_Myself.Click, {
+      self,
+      self.OnMyselfClickAnimationFinished
+    })
+  end
 end
 
 function M:GetMaxScoreSquad(SquadSnapShot)
@@ -248,10 +266,39 @@ function M:GetMaxScoreSquad(SquadSnapShot)
   return RoleInfo, PetInfo
 end
 
-function M:OnMyselfButtonClicked()
-  if self.IsGamePad then
-    self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Click)
+function M:StopMyselfStateAnimations()
+  local Widget = self.Ranking_Myself
+  if not Widget then
+    return
   end
+  if Widget.Normal then
+    Widget:StopAnimation(Widget.Normal)
+  end
+  if Widget.Hover then
+    Widget:StopAnimation(Widget.Hover)
+  end
+  if Widget.UnHover then
+    Widget:StopAnimation(Widget.UnHover)
+  end
+  if Widget.Press then
+    Widget:StopAnimation(Widget.Press)
+  end
+end
+
+function M:PlayMyselfIdleAnimation()
+  if not self.Ranking_Myself then
+    return
+  end
+  if self.IsMyselfButtonHovered and self.Ranking_Myself.Hover then
+    self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Hover)
+  elseif self.Ranking_Myself.UnHover then
+    self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.UnHover)
+  elseif self.Ranking_Myself.Normal then
+    self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Normal)
+  end
+end
+
+function M:OnMyselfSelected()
   local SelfRankNum = self.SelfItemData.RankInfo.RankNum
   if SelfRankNum and SelfRankNum >= 1 then
     if self.LastClickedItem and self.LastClickedItem.RankInfo.RankNum ~= SelfRankNum then
@@ -265,18 +312,53 @@ function M:OnMyselfButtonClicked()
   end
 end
 
+function M:OnMyselfButtonClicked()
+  if self.IsGamePad then
+    return
+  end
+  self.IsMyselfClickAnimating = true
+  self:StopMyselfStateAnimations()
+  self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Click)
+  self:OnMyselfSelected()
+end
+
 function M:OnMyselfButtonPressed()
-  if not self.IsGamePad then
+  if self.IsGamePad then
     return
   end
 end
 
 function M:OnMyselfButtonHovered()
-  if not self.IsGamePad then
+  if self.IsGamePad then
     return
   end
-  self.Ranking_Myself:StopAnimation(self.Ranking_Myself.UnHover)
-  self.Ranking_Myself:PlayAnimation(self.Ranking_Myself.Hover)
+  self.IsMyselfButtonHovered = true
+  if self.IsMyselfClickAnimating then
+    return
+  end
+  self:StopMyselfStateAnimations()
+  self:PlayMyselfIdleAnimation()
+end
+
+function M:OnMyselfButtonUnhovered()
+  if self.IsGamePad then
+    return
+  end
+  self.IsMyselfButtonHovered = false
+  if self.IsMyselfClickAnimating then
+    return
+  end
+  self:StopMyselfStateAnimations()
+  self:PlayMyselfIdleAnimation()
+end
+
+function M:OnMyselfClickAnimationFinished()
+  if self.IsGamePad then
+    return
+  end
+  self.IsMyselfClickAnimating = false
+  self:StopMyselfStateAnimations()
+  self:PlayMyselfIdleAnimation()
 end
 
 function M:OnListRankItemIsHoveredChanged(Item, IsHovered)

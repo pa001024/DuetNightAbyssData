@@ -85,7 +85,7 @@ function M:AddTopTabReddotListen()
   if self.Type ~= CommonConst.ArmoryType.Char then
     return
   end
-  self:AddCharAppearanceReddotListen(self.UpdateTopTabReddot, self.Target.CharId)
+  self:AddCharAppearanceRedDotListen(self.UpdateTopTabReddot, self.Target.CharId, true)
 end
 
 local function SetTopTabReddot(self, TabIdx, IsNew, IsNormal)
@@ -146,7 +146,7 @@ function M:RemoveTopTabReddotListen()
   if self.NoReddot then
     return
   end
-  self:RemoveCharAppearanceReddotListen()
+  self:RemoveCharAppearanceRedDotListen()
 end
 
 function M:InitCharSkin()
@@ -1319,10 +1319,6 @@ function M:UpdateActorAppearance(SkinId, HairId)
   if not self.ActorController then
     return
   end
-  if self.SkipFirstUpdateMontage then
-    self.SkipFirstUpdateMontage = false
-    return
-  end
   local Avatar = ArmoryUtils:GetAvatar()
   local AppearanceSuitInfo = self.Target:DumpAppearanceSuit(Avatar, self.AppearanceSuitIndex)
   AppearanceSuitInfo.SkinId = SkinId or AppearanceSuitInfo.SkinId
@@ -1715,6 +1711,9 @@ function M:RefreshLevelUpReddot()
 end
 
 function M:Destruct()
+  if self.ActorController then
+    self.ActorController:TryDestroySequenceActorController()
+  end
   self:RemoveAccessoryTabReddotListen()
 end
 

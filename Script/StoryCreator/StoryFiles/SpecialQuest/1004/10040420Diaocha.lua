@@ -47,11 +47,11 @@ return {
       key = "177874874322828244503",
       type = "StoryNode",
       name = "调查车长车厢",
-      pos = {x = 1374, y = 274},
+      pos = {x = 1378, y = 274},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040420_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -273,7 +273,7 @@ return {
             pos = {x = 1085.2813283208018, y = 293.05200501253137},
             propsData = {
               StaticCreatorId = 272640073,
-              UnitId = 10076,
+              UnitId = 10075,
               bGuideUIEnable = true,
               GuidePointName = "BP_ChezhangDie",
               LongPressTime = 4,
@@ -286,8 +286,8 @@ return {
             key = "177874875326928244870",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 743.421052631579, y = 543.5},
-            propsData = {QuestRoleId = 0, IsPlayFX = false}
+            pos = {x = 356.9504643962849, y = 506.44117647058823},
+            propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["177874897984128245165"] = {
             key = "177874897984128245165",
@@ -300,7 +300,7 @@ return {
             key = "177874898799428245418",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 801.921052631579, y = 764},
+            pos = {x = 401.3328173374613, y = 794},
             propsData = {}
           },
           ["177875538085837994325"] = {

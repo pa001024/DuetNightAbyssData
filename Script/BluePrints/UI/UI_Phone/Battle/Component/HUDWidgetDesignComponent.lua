@@ -272,7 +272,8 @@ function M:SetRootLayoutNode(RootLayoutNode)
 end
 
 function M:ResetToDefaultLayout()
-  self:ResetBtnStateInDefault(math.max(0, self.EditPlanIndex - 1))
+  local MappedPlanIndex = self:_GetMappedPlanIndex(self.EditPlanIndex)
+  self:ResetBtnStateInDefault(math.max(0, MappedPlanIndex - 1))
   self:ResetRelativeNodeStateInDefault()
 end
 

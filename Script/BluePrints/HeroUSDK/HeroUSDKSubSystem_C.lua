@@ -453,6 +453,10 @@ function HeroUSDKSubSystem_C:EMHeroSDKSwitchAccount()
     DebugPrint("HeroUSDKSubSystem_C HeroSDKLogout")
     self:HeroSDKLogout()
   else
+    if "IOS" == Platform then
+      DebugPrint("EMHeroSDKSwitchAccount IOS HeroSDKLogout")
+      self:HeroSDKLogout()
+    end
     DebugPrint("HeroUSDKSubSystem_C HeroSDKSwitchAccount")
     self:HeroSDKSwitchAccount()
   end

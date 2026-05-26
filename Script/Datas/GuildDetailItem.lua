@@ -12,5 +12,13 @@ return ReadOnly("GuildDetailItem", {
   GuildTitel_2 = {
     Describe = "GuildDescribe_2",
     ItemTitle = "GuildTitel_2"
+  },
+  GuildTitel_3 = {
+    Describe = "GuildDescribe_3",
+    ItemTitle = "GuildTitel_3"
+  },
+  GuildTitel_4 = {
+    Describe = "GuildDescribe_4",
+    ItemTitle = "GuildTitel_4"
   }
 })

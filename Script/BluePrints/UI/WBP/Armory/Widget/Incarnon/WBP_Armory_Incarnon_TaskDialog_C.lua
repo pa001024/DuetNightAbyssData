@@ -5,6 +5,7 @@ local M = Class("BluePrints.UI.BP_UIState_C")
 
 function M:Construct()
   self:PlayAnimation(self.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/mozhixia_open", "IncarnonTaskOpen", nil)
   self:BindToAnimationFinished(self.Out, {
     self,
     self.CloseSelf
@@ -18,11 +19,13 @@ function M:Construct()
   self.Text_Empty:SetText(GText("UI_HyperWeapon_ForgeLevelTaskPhaseLock"))
   self.Btn_Left:BindEventOnClicked(self, function()
     if self.TargetLevel > 1 then
+      AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", "IncarnonTaskSwitch", nil)
       self:SwitchToTagetPage(self.TargetLevel - 1)
     end
   end)
   self.Btn_Right:BindEventOnClicked(self, function()
     if self.TargetLevel < self.MaxLevel then
+      AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", "IncarnonTaskSwitch", nil)
       self:SwitchToTagetPage(self.TargetLevel + 1)
     end
   end)
@@ -114,17 +117,13 @@ function M:OnLoaded(...)
   self.WeaponId = Params and Params.WeaponId
   self.Avatar = GWorld:GetAvatar()
   self:InitPage()
-  self:SetFocus()
-  if UIUtils.IsGamepadInput() then
-    self:RefreshOpInfoByInputDevice(ECommonInputType.Gamepad)
-  else
-    self:RefreshOpInfoByInputDevice()
-  end
+  self.WB_Task:GetChildAt(0):SetFocus()
 end
 
 function M:InitPage()
   self:InitForgeLevel()
   self:SwitchToTagetPage(self.TargetLevel)
+  self:ResetDynamicNode()
 end
 
 function M:InitForgeLevel()
@@ -153,6 +152,7 @@ function M:SwitchToTagetPage(Level)
     else
       self:PlayAnimation(self.Card_Switch_Left)
     end
+    AudioManager(self):PlayUISound(self, "event:/ui/common/mozhixia_page_change", nil, nil)
     self:AddTimer(0.2, function()
       self:RefreshAllInfo()
     end)
@@ -392,6 +392,7 @@ function M:OnForgeLevelRewardClidked()
       return
     end
     UIManager(self):LoadUINew("GetItemPage", nil, nil, nil, Rewards, nil, self, true)
+    self.bIsInItemChooseState = false
     self:InitPage()
   end
   
@@ -423,6 +424,7 @@ function M:PlayOutAnimation()
   if self.CloseCallback then
     self.CloseCallback(self.CallbackObj)
   end
+  AudioManager(self):SetEventSoundParam(self, "IncarnonTaskOpen", {ToEnd = 1})
 end
 
 function M:CloseSelf()
@@ -540,14 +542,12 @@ function M:OnReturnKeyDown()
   return true
 end
 
-function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
   DebugPrint("Yihan@ RefreshOpInfoByInputDevice", CurInputDevice)
   if CurInputDevice == ECommonInputType.Gamepad then
     self.Btn_Reward:SetGamePadImg("Y")
     self:InitGamepadView()
-    self:NavigateToFirstTask()
   else
-    self:SetFocus()
     self:InitKeyboardView()
   end
   self:UpdateLeftAndRightIcon()

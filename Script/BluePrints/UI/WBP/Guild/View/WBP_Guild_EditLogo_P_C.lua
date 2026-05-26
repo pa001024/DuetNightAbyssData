@@ -5,6 +5,7 @@ local M = Class({
 })
 
 function M:Construct()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/association_flag_in", nil, nil)
   self:BindToAnimationFinished(self.Tab_Refresh, {
     self,
     function()

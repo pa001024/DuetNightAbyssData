@@ -2364,6 +2364,20 @@ return ReadOnly("Drop", {
     ShowRarityEffect = false,
     UnitBPPath = "/Game/AssetDesign/Item/Pickups/Empty_Pickup.Empty_Pickup"
   },
+  [10101] = {
+    CreateMode = "client",
+    DropId = 10101,
+    DropMaxNum = 1,
+    IconShowCondition = T.RT_1,
+    InteractiveId = 100137,
+    IsBanGravity = true,
+    IsBanProjectile = true,
+    NotResDrop = true,
+    PickType = "Manual",
+    Rarity = 1,
+    ShowRarityEffect = false,
+    UnitBPPath = "/Game/AssetDesign/Item/Pickups/Empty_Pickup.Empty_Pickup"
+  },
   [11001] = {
     CreateMode = "client",
     DropId = 11001,
@@ -5886,25 +5900,6 @@ return ReadOnly("Drop", {
     UnitBPPath = "/Game/AssetDesign/Item/Pickups/Explore_Badge_Haojing.Explore_Badge_Haojing",
     UseEffectType = "GetResource",
     UseParam = 29006,
-    UseParam2 = T.RT_13
-  },
-  [29007] = {
-    CreateMode = "client",
-    DropId = 29007,
-    DropMaxNum = 99,
-    DropName = "RESOURCE_NAME_29002",
-    Icon = "/Game/UI/Texture/Dynamic/Atlas/Prop/Item/T_ExploreBadge_Beibao_Chapter01.T_ExploreBadge_Beibao_Chapter01",
-    IconShowCondition = T.RT_1,
-    IsBanGravity = true,
-    IsBanProjectile = true,
-    ModelId = 947,
-    PickType = "Auto",
-    PickUpAudioPath = 12,
-    Rarity = 5,
-    ShowRarityEffect = false,
-    UnitBPPath = "/Game/AssetDesign/Item/Pickups/Explore_Badge_Chapter01.Explore_Badge_Chapter01",
-    UseEffectType = "GetResource",
-    UseParam = 29007,
     UseParam2 = T.RT_13
   },
   [30001] = {

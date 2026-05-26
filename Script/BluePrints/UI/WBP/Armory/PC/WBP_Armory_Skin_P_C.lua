@@ -238,11 +238,7 @@ function M:OnUpdateUIStyleByInputTypeChange(CurInputDevice, CurGamepadName)
     return
   end
   self.IsGamepadInput = CurInputDevice == ECommonInputType.Gamepad
-  self:SetIsDealWithVirtualAccept(false)
   if self.IsGamepadInput then
-    if rawget(self, "bAccessoryCustomOpened") then
-      self:SetIsDealWithVirtualAccept(true)
-    end
     self.Key_Show:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Panel_Key_Dye:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
     self.Panel_Key_Custom:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)

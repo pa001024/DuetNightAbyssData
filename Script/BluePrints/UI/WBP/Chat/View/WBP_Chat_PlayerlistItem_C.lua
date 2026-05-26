@@ -228,8 +228,15 @@ end
 function M:OnListItemObjectSet_InTeam()
   local TeamData = self.Content.Data
   local Index = self.Content.Index
+  self:RemoveReddotListen()
+  self:RemoveEventListen()
+  self:CleanUpAnchor()
+  if self.Group_Close then
+    self.Group_Close:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
   if nil == TeamData then
     self:_SetEmptyState(true)
+    self.Common_Subsize_Reddot_Num:SetVisibility(UIConst.VisibilityOp.Collapsed)
     return
   end
   local Name = TeamData.Nickname
@@ -305,6 +312,7 @@ function M:OnListItemObjectSet_Guild()
 end
 
 function M:_OnDeleteClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_cancel", "", nil)
   local Uid = self.Content and self.Content.Data and self.Content.Data.Uid
   if not Uid then
     return

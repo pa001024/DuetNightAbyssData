@@ -15,9 +15,9 @@ function M:OnListItemObjectSet(Content)
     self.Btn_Click.OnHovered:Add(self, self.OnHovered)
   end
   if Content.bSelected then
-    self.Btn_Click:SetChecked(true)
+    self:SetSelected(true)
   else
-    self.Btn_Click:SetChecked(false)
+    self:SetSelected(false)
   end
   self:InitData(Content)
 end
@@ -31,7 +31,7 @@ function M:OnHovered()
   end
   self.Content.bSelected = true
   self:OnClicked()
-  self.Btn_Click:SetChecked(true)
+  self:SetSelected(true)
 end
 
 function M:OnSelected(bIsChecked)
@@ -42,13 +42,26 @@ function M:OnSelected(bIsChecked)
   self.Content.bSelected = bIsChecked
   if bIsChecked then
     self.Content.Parent:OnIconSelected(self.Content)
-  elseif self.Content.Parent.CurrentIconSelectedContent == self.Content then
-    self:SetSelected(true)
+    self.Btn_Click:SetIsEnabled(false)
+  else
+    local IsSelected = false
+    if self.Content.Parent.CurrentIconSelectedContent == self.Content then
+      IsSelected = true
+      self:SetSelected(true)
+    end
+    if not IsSelected then
+      self.Btn_Click:SetIsEnabled(true)
+    end
   end
 end
 
 function M:SetSelected(bIsChecked)
-  self.Btn_Click:SetChecked(bIsChecked)
+  if bIsChecked then
+    self.Btn_Click:SetChecked(bIsChecked)
+  else
+    self.Btn_Click:SetChecked(bIsChecked)
+    self:PlayAnimation(self.Normal)
+  end
 end
 
 function M:InitData(Content)
@@ -76,6 +89,7 @@ end
 function M:OnClicked()
   local IconId = self.Content.LogoID or self.Content.FlagID
   self.Content.EditCallbackInfo.Func(self.Content.EditCallbackInfo.Obj, 3, IconId)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_large_crystal", nil, nil)
 end
 
 function M:OnKeyDown(MyGeometry, InKeyEvent)

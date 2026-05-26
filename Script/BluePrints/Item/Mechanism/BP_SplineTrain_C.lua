@@ -1,6 +1,6 @@
 require("UnLua")
 local M = Class({
-  "BluePrints.Item.BP_CombatItemBase_C"
+  "BluePrints/Item/CombatProp/BP_CombatPropBase_C"
 })
 
 function M:CommonInitInfo(Info)
@@ -12,9 +12,13 @@ function M:CommonInitInfo(Info)
     self.IsMoving = false
   end
   self:InitTrainMeshes()
+  self:ResetTrain()
+  self.LoopResetTimerHandle = nil
+end
+
+function M:ResetTrain()
   self:InitStartDistance()
   self:UpdateTrainPosition()
-  self.LoopResetTimerHandle = nil
 end
 
 function M:ClearLoopResetTimer()
@@ -232,6 +236,10 @@ function M:OnFallTriggerOverlap(Comp, OtherActor, OtherComp)
     return
   end
   if OtherActor.IsCharacter and OtherActor:IsCharacter() then
+    if self.SkillEffect and self.SkillEffect > 0 then
+      DebugPrint("zwkkk OnFallTriggerOverlap SkillEffect", self.SkillEffect)
+      self.Super.PropUseSkill(self, self.SkillEffect, OtherActor)
+    end
     local DefaultEnable = self.DefaultEnable or false
     local DefaultTransform = Comp:K2_GetComponentToWorld()
     if DefaultEnable then
@@ -240,7 +248,7 @@ function M:OnFallTriggerOverlap(Comp, OtherActor, OtherComp)
         DefaultTransform = NearestComp:K2_GetComponentToWorld()
       end
     end
-    GameMode:TriggerFallingCallable(OtherActor, DefaultTransform, 10000, DefaultEnable, self)
+    GameMode:TriggerFallingCallable(OtherActor, DefaultTransform, 10000, DefaultEnable)
   elseif OtherActor.TriggerFallingCallable then
     OtherActor:TriggerFallingCallable()
   end

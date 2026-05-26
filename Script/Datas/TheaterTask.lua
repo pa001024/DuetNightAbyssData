@@ -6,7 +6,7 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
 end
 return ReadOnly("TheaterTask", {
   [1] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_1",
     IsDaily = true,
     RewardId = 110507,
@@ -16,7 +16,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 1
   },
   [2] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_2",
     IsDaily = true,
     RewardId = 110508,
@@ -26,7 +26,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 2
   },
   [3] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_3",
     IsDaily = true,
     RewardId = 110509,
@@ -36,8 +36,8 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 3
   },
   [4] = {
-    ConditionID = 8029,
-    Des = "Target_Theater_4",
+    ConditionID = 8044,
+    Des = "Target_Theater_14",
     IsDaily = true,
     RewardId = 110510,
     RewardViewId = 1030094,
@@ -64,7 +64,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 4
   },
   [5] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_5",
     IsDaily = true,
     RewardId = 110507,
@@ -74,7 +74,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 5
   },
   [6] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_6",
     IsDaily = true,
     RewardId = 110508,
@@ -84,7 +84,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 6
   },
   [7] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_7",
     IsDaily = true,
     RewardId = 110509,
@@ -94,7 +94,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 7
   },
   [8] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_8",
     IsDaily = true,
     RewardId = 110510,
@@ -104,7 +104,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 8
   },
   [9] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_9",
     IsDaily = true,
     RewardId = 110511,
@@ -114,7 +114,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 9
   },
   [10] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_10",
     RewardId = 110512,
     RewardViewId = 1030096,
@@ -123,7 +123,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 10
   },
   [11] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_11",
     RewardId = 110513,
     RewardViewId = 1030097,
@@ -132,7 +132,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 11
   },
   [12] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_12",
     RewardId = 110514,
     RewardViewId = 1030098,
@@ -141,7 +141,7 @@ return ReadOnly("TheaterTask", {
     TheaterTaskID = 12
   },
   [13] = {
-    ConditionID = 8029,
+    ConditionID = 8044,
     Des = "Target_Theater_13",
     RewardId = 110515,
     RewardViewId = 1030099,

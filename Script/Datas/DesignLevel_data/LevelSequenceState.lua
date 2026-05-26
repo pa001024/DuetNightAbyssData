@@ -588,7 +588,20 @@ return {
       SequenceStateRecorder = {
         {
           RecorderId = 1,
-          SequenceState = {1}
+          SequenceState = {1, 2}
+        }
+      }
+    },
+    {
+      RegionId = 106101,
+      SequenceStateRecorder = {
+        {
+          RecorderId = 1,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 2,
+          SequenceState = {1, 2}
         }
       }
     },
@@ -601,6 +614,18 @@ return {
         },
         {
           RecorderId = 2,
+          SequenceState = {1, 2}
+        },
+        {
+          RecorderId = 3,
+          SequenceState = {1}
+        },
+        {
+          RecorderId = 4,
+          SequenceState = {1}
+        },
+        {
+          RecorderId = 5,
           SequenceState = {1, 2}
         }
       }

@@ -52,7 +52,7 @@ return {
         QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040109_04",
-        QuestDeatil = "Description_10040112_01",
+        QuestDeatil = "Description_10040109_01",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
         RecommendLevel = -1,
@@ -124,6 +124,18 @@ return {
             startPort = "Out",
             endQuest = "177796908032114036388",
             endPort = "In"
+          },
+          {
+            startQuest = "177796908032114036382",
+            startPort = "QuestStart",
+            endQuest = "177891678093566645318",
+            endPort = "Input"
+          },
+          {
+            startQuest = "177796908032114036382",
+            startPort = "QuestStart",
+            endQuest = "1779718823633504",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -145,7 +157,7 @@ return {
             key = "177796908032114036384",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 751.8529411764705, y = 835.7058823529412},
+            pos = {x = 586.200767263427, y = 857.8797953964195},
             propsData = {}
           },
           ["177796908032114036385"] = {
@@ -264,14 +276,14 @@ return {
             key = "177796909267414036820",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 56.090909090909065, y = 162.09090909090907},
+            pos = {x = 135.65612648221344, y = 77.30830039525688},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["177796910298514037058"] = {
             key = "177796910298514037058",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 318, y = 838},
+            pos = {x = -22.434782608695684, y = 834.0869565217391},
             propsData = {}
           },
           ["177796911099414037322"] = {
@@ -285,7 +297,7 @@ return {
             key = "177815760192757725113",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "异步设置玩家位置旋转",
-            pos = {x = 255.71052631578937, y = 518.2870813397129},
+            pos = {x = 252.37719298245602, y = 514.9537480063796},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "BP_PanpaEndTalk",
@@ -294,6 +306,35 @@ return {
               bResetCamera = true,
               bForceAsyncLoading = true,
               IsWhite = false
+            }
+          },
+          ["177891678093566645318"] = {
+            key = "177891678093566645318",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = -210.52183447749826, y = 174.1067887109076},
+            propsData = {
+              TargetTime = 16,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["1779718823633504"] = {
+            key = "1779718823633504",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 295.79166666666646, y = 306.54166666666663},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0162_story_jazz_sneak_into.0162_story_jazz_sneak_into'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
             }
           }
         },

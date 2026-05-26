@@ -12,6 +12,7 @@ function M:Construct()
   self.Text_Talent:SetText(GText("UI_Armory_HyperPassive"))
   self.Text_SmeltLimit:SetText(GText("UI_Armory_CurrentMaxForgeLevl"))
   self:AddDispatcher(EventID.OnHyperWeaponForgeLevelUp, self, self.OnHyperWeaponForgeLevelUp)
+  self:AddDispatcher(EventID.OnHyperWeaponForgeQuestRewardGot, self, self.OnHyperWeaponForgeRewradChanged)
 end
 
 function M:Init(Params)
@@ -24,6 +25,7 @@ function M:Init(Params)
   self.Avatar = ArmoryUtils:GetAvatar()
   self.MaxForgeLevel = HyperWeaponUtils.GetMaxForgeLevel(self.WeaponId)
   self.MaxCardLevel = self.MaxForgeLevel
+  self.HasGotWeapon = self.Avatar.Weapons[self.WeaponUuid] ~= nil
   self:InitWeaponForge()
   self:InitWeaponCardProgress()
   self:InitWeaponCardAndTalent()
@@ -41,6 +43,10 @@ function M:OnHyperWeaponForgeLevelUp()
       Widget:InitAnimationState()
     end
   end
+end
+
+function M:OnHyperWeaponForgeRewradChanged()
+  self:RefreshAllReddot()
 end
 
 function M:InitWeaponForge()
@@ -96,6 +102,10 @@ end
 
 function M:InitWeaponCardAndTalent()
   local MaxTalentCount = HyperWeaponUtils.GetMaxForgeLevel(self.WeaponId)
+  local SkipClickSound = true
+  if self.Params.SkipClickSound ~= nil then
+    SkipClickSound = self.Params.SkipClickSound
+  end
   for CardLevel = 0, MaxTalentCount do
     local Widget = self:GetCardLevelWidget(CardLevel)
     if Widget then
@@ -118,13 +128,14 @@ function M:InitWeaponCardAndTalent()
       Content.AddToFocusPathObj = self
       Content.LevelWidgetFocusPathCallback = self.OnLevelWidgetAddToFocusPath
       Content.TalentWidgetFocusPathCallback = self.OnTalentWidgetAddToFocusPath
+      Content.SkipClickSound = SkipClickSound
       Widget:InitContent(Content)
     end
   end
 end
 
 function M:InitTalentProgress()
-  local CurTalentCount = HyperWeaponUtils.GetHyperWeaponCurTalentCount(self.WeaponUuid)
+  local CurTalentCount = HyperWeaponUtils.GetHyperWeaponCurTalentCount(self.Avatar, self.WeaponUuid)
   local MaxTalentCount = HyperWeaponUtils.GetHyperWeaponMaxTalentCount(self.WeaponId)
   self.Num_Talent_Now:SetText(CurTalentCount)
   self.Num_Talent_Max:SetText(MaxTalentCount)
@@ -197,6 +208,10 @@ function M:RefreshAllReddot()
   end
   if self.Parent and self.Parent.UpdateSubTabReddotCommon then
     self.Parent:UpdateSubTabReddotCommon(ArmoryUtils.ArmorySubTabNames.HyperGrade)
+  end
+  if not self.HasGotWeapon then
+    self.Btn_SmeltLevel:SetReddotVisible(false)
+    return
   end
   local HasAnyForgeRewards = HyperWeaponUtils.HasAnyForgeRewards(1, self.MaxForgeLevel)
   self.Btn_SmeltLevel:SetReddotVisible(HasAnyForgeRewards)

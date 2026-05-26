@@ -4479,7 +4479,7 @@ return ReadOnly("TeleportPoint", {
   },
   [9006] = {
     Id = 9006,
-    MechanismPos = {-83218, 1628},
+    MechanismPos = {-35538, -3201},
     TeleportPointIcon = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_Boss.T_Gp_Boss",
     TeleportPointPos = 10,
     TeleportPointSubRegion = 106001

@@ -5,6 +5,7 @@ local M = {}
 local NotNeedShowButtonActivityId = {
   [103011] = true,
   [103020] = true,
+  [10302001] = true,
   [103015] = true
 }
 local NeedShowButtonActivityIdByTabName = {

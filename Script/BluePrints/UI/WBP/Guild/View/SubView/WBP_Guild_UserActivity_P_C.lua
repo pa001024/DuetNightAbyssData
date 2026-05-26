@@ -135,6 +135,7 @@ end
 
 function M:OnBtnClick()
   UIManager(self):LoadUINew("GuildReward")
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/large_btn_click", nil, nil)
 end
 
 function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)

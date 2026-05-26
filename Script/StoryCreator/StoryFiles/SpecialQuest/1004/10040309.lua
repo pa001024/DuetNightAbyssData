@@ -23,7 +23,7 @@ return {
       name = "寻找史蒂芬",
       pos = {x = 1031.8857142857144, y = 81.02857142857155},
       propsData = {
-        QuestId = 10040309,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040309_01",
         QuestDeatil = "Description_10040309_01",
@@ -45,8 +45,8 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Npc",
+        StoryGuidePointName = "Npc_Shidifen_152480367",
         JumpId = 0
       },
       questNodeData = {
@@ -86,6 +86,12 @@ return {
             startPort = "Out",
             endQuest = "17782434346838593034",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17782434346838593032",
+            startPort = "QuestStart",
+            endQuest = "177891744848180640207",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -192,6 +198,18 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 1143.8067354214418, y = 705.7774017262407},
             propsData = {}
+          },
+          ["177891744848180640207"] = {
+            key = "177891744848180640207",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 1156, y = 567.5},
+            propsData = {
+              TargetTime = 19,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
           }
         },
         commentData = {}

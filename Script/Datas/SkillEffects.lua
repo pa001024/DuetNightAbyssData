@@ -954,618 +954,619 @@ T.RT_212 = {
   Function = "Damage",
   Rate = "#1"
 }
-T.RT_213 = {
+T.RT_213 = {Function = "PlaySE", SEId = 110204}
+T.RT_214 = {
   FXId = 110203,
   Function = "PlayFX",
   MaxHitFXNum = 3
 }
-T.RT_214 = {
+T.RT_215 = {
   0,
   250,
   80
 }
-T.RT_215 = {
+T.RT_216 = {
   BuffId = 110231,
   Condition = 71,
   Function = "AddBuff",
   LastTime = -1
 }
-T.RT_216 = {
+T.RT_217 = {
   0,
   750,
   0
 }
-T.RT_217 = {
+T.RT_218 = {
   Function = "PlayFX",
   MaxHitFXNum = 8,
   WeaponFXGroupName = "Hit1"
 }
-T.RT_218 = {FXId = 21, Function = "PlayFX"}
-T.RT_219 = {
+T.RT_219 = {FXId = 21, Function = "PlayFX"}
+T.RT_220 = {
   CreatureId = 110301,
   Function = "CreateSkillCreature"
 }
-T.RT_220 = {
+T.RT_221 = {
   Function = "ExecutePassiveFunction",
   FunctionName = "Skill1AddMsp2",
   PassiveEffectId = 110301
 }
-T.RT_221 = {
+T.RT_222 = {
   BaseAttr = "ATK_Char",
   DamageTag = T.RT_40,
   Function = "Damage",
   Rate = "#1"
 }
-T.RT_222 = {
+T.RT_223 = {
   BossValue = 21,
   CauseHit = "LightHit_Tuosi",
   Function = "CutToughness",
   Value = 25
 }
-T.RT_223 = {Function = "PlaySE", SEId = 110306}
-T.RT_224 = {
+T.RT_224 = {Function = "PlaySE", SEId = 110306}
+T.RT_225 = {
   "TuosiCombo",
   "Skill",
   "Skill2"
 }
-T.RT_225 = {
+T.RT_226 = {
   BaseAttr = "ATK_Char",
-  DamageTag = T.RT_224,
+  DamageTag = T.RT_225,
   Function = "Damage",
   Rate = "#1"
 }
-T.RT_226 = {
+T.RT_227 = {
   FXId = 110341,
   Function = "PlayFX",
   MaxHitFXNum = 5
 }
-T.RT_227 = {
+T.RT_228 = {
   "TuosiFinish",
   "Skill",
   "Skill2"
 }
-T.RT_228 = {
+T.RT_229 = {
   BaseAttr = "ATK_Char",
-  DamageTag = T.RT_227,
+  DamageTag = T.RT_228,
   Function = "Damage",
   Rate = "#1"
 }
-T.RT_229 = {"hit0"}
-T.RT_230 = {FXId = 110311, Function = "PlayFX"}
-T.RT_231 = {
+T.RT_230 = {"hit0"}
+T.RT_231 = {FXId = 110311, Function = "PlayFX"}
+T.RT_232 = {
   BaseAttr = "ATK_Char",
   DamageTag = T.RT_189,
   Function = "Damage",
   Rate = 1
 }
-T.RT_232 = {
-  [1] = T.RT_231
+T.RT_233 = {
+  [1] = T.RT_232
 }
-T.RT_233 = {BuffId = 110411, Function = "RemoveBuff"}
-T.RT_234 = {
+T.RT_234 = {BuffId = 110411, Function = "RemoveBuff"}
+T.RT_235 = {
   0,
   400,
   0
 }
-T.RT_235 = {
+T.RT_236 = {
   CreatureId = 110411,
   Function = "CreateSkillCreature",
-  Location = T.RT_234
+  Location = T.RT_235
 }
-T.RT_236 = {Function = "AddSp", SpChange = 25}
-T.RT_237 = {
-  [1] = T.RT_236,
+T.RT_237 = {Function = "AddSp", SpChange = 25}
+T.RT_238 = {
+  [1] = T.RT_237,
   [2] = T.RT_93
 }
-T.RT_238 = {Function = "PlaySE", SEId = 120101}
-T.RT_239 = {
+T.RT_239 = {Function = "PlaySE", SEId = 120101}
+T.RT_240 = {
   BuffId = 120102,
   Function = "AddBuff",
   LastTime = 16
 }
-T.RT_240 = {
+T.RT_241 = {
   "Weapon",
   "Melee",
   "Attack"
 }
-T.RT_241 = {120134}
-T.RT_242 = {
+T.RT_242 = {120134}
+T.RT_243 = {
   100,
   0,
   200
 }
-T.RT_243 = {
+T.RT_244 = {
   0,
   200,
   0
 }
-T.RT_244 = {Function = "PlaySE", SEId = 150106}
-T.RT_245 = {Function = "PlaySE", SEId = 150107}
-T.RT_246 = {
+T.RT_245 = {Function = "PlaySE", SEId = 150106}
+T.RT_246 = {Function = "PlaySE", SEId = 150107}
+T.RT_247 = {
   BaseAttr = "ATK_Ultra",
   DamageTag = T.RT_60,
   Function = "Damage",
   Rate = "#1"
 }
-T.RT_247 = {"Skill"}
-T.RT_248 = {
+T.RT_248 = {"Skill"}
+T.RT_249 = {
   BaseAttr = "ATK_Char",
-  DamageTag = T.RT_247,
+  DamageTag = T.RT_248,
   Function = "Damage",
   Rate = "#1"
 }
-T.RT_249 = {
+T.RT_250 = {
   Delay = 0.15,
   FXId = 25,
   Function = "PlayFX"
 }
-T.RT_250 = {
+T.RT_251 = {
   Condition = 100,
   Delay = 0.15,
   Dilation = 0,
   Duration = 0.05,
   Function = "HitStop"
 }
-T.RT_251 = {"Mod"}
-T.RT_252 = {
+T.RT_252 = {"Mod"}
+T.RT_253 = {
   CauseHit = "HitFly_XY400Z600",
   Function = "CutToughness",
   Value = 15
 }
-T.RT_253 = {
+T.RT_254 = {
   Delay = 0.05,
   FXId = 25,
   Function = "PlayFX"
 }
-T.RT_254 = {Function = "PlaySE", SEId = 850294}
-T.RT_255 = {
+T.RT_255 = {Function = "PlaySE", SEId = 850294}
+T.RT_256 = {
   0,
   1000,
   -90
 }
-T.RT_256 = {
+T.RT_257 = {
   BossValue = 150,
   CauseHit = "HitDown",
   Function = "CutToughness",
   Value = 100
 }
-T.RT_257 = {
+T.RT_258 = {
   Falloff = 0.1,
   Function = "CameraShake",
   IsSceneCameraShake = true,
   OuterRadius = 2000,
   ShakeClass = "BP_CS_Xibi_Skill01"
 }
-T.RT_258 = {
+T.RT_259 = {
   BuffId = 150211,
   Condition = 72,
   Function = "AddBuff",
   LastTime = 3
 }
-T.RT_259 = {
+T.RT_260 = {
   BuffId = 150215,
   Function = "AddBuff",
   LastTime = 3
 }
-T.RT_260 = {Function = "PlaySE", SEId = 150205}
-T.RT_261 = {
+T.RT_261 = {Function = "PlaySE", SEId = 150205}
+T.RT_262 = {
   "Skill",
   "Skill1",
   "NifuDark"
 }
-T.RT_262 = {
+T.RT_263 = {
   BaseAttr = "ATK_Char",
-  DamageTag = T.RT_261,
+  DamageTag = T.RT_262,
   DamageType = "Dark",
   Function = "Damage",
   Rate = "#1",
   TriggerProbability = "$Source:GetRootSource():GetFloat('Skill04TriggerRate')$"
 }
-T.RT_263 = {
+T.RT_264 = {
   BuffId = 150212,
   Condition = 72,
   Function = "AddBuff",
   LastTime = 3
 }
-T.RT_264 = {
+T.RT_265 = {
   BuffId = 150214,
   Function = "AddBuff",
   LastTime = 3
 }
-T.RT_265 = {Function = "PlaySE", SEId = 401}
-T.RT_266 = {FXId = 150314, Function = "PlayFX"}
-T.RT_267 = {Function = "PlaySE", SEId = 150308}
-T.RT_268 = {
+T.RT_266 = {Function = "PlaySE", SEId = 401}
+T.RT_267 = {FXId = 150314, Function = "PlayFX"}
+T.RT_268 = {Function = "PlaySE", SEId = 150308}
+T.RT_269 = {
   BuffId = 150327,
   Condition = 74,
   Function = "AddBuff",
   LastTime = 25
 }
-T.RT_269 = {
+T.RT_270 = {
   BuffId = 150320,
   Function = "AddBuff",
   LastTime = -1
 }
-T.RT_270 = {
+T.RT_271 = {
   BossValue = 100,
   CauseHit = "HitFly_XY0Z500",
   Function = "CutToughness",
   Value = 30
 }
-T.RT_271 = {
+T.RT_272 = {
   Function = "PlaySE",
   MeleeHitLevel = "Light",
   SEId = 104
 }
-T.RT_272 = {
+T.RT_273 = {
   Condition = 100,
   Dilation = 0.1,
   Duration = 0.03,
   Function = "HitStop"
 }
-T.RT_273 = {
+T.RT_274 = {
   CauseHit = "LightHit_50_F",
   Function = "CutToughness",
   Value = 60
 }
-T.RT_274 = {
+T.RT_275 = {
   [1] = T.RT_84,
-  [2] = T.RT_272,
-  [3] = T.RT_273,
+  [2] = T.RT_273,
+  [3] = T.RT_274,
   [4] = T.RT_48
 }
-T.RT_275 = {FXId = 1020202, Function = "PlayFX"}
-T.RT_276 = {
+T.RT_276 = {FXId = 1020202, Function = "PlayFX"}
+T.RT_277 = {
   CauseHit = "HitFly_XY400Z600",
   Function = "CutToughness",
   Value = 50
 }
-T.RT_277 = {
+T.RT_278 = {
   [1] = T.RT_142,
   [2] = T.RT_38,
-  [3] = T.RT_276,
+  [3] = T.RT_277,
   [4] = T.RT_58,
   [5] = T.RT_71
 }
-T.RT_278 = {
+T.RT_279 = {
   [1] = T.RT_183,
   [2] = T.RT_175,
   [3] = T.RT_125,
   [4] = T.RT_78,
   [5] = T.RT_48
 }
-T.RT_279 = {
+T.RT_280 = {
   [1] = T.RT_84,
   [2] = T.RT_38,
   [3] = T.RT_46,
-  [4] = T.RT_271
+  [4] = T.RT_272
 }
-T.RT_280 = {
+T.RT_281 = {
   -110,
   90,
   0
 }
-T.RT_281 = {
+T.RT_282 = {
   Function = "PlayFX",
-  FxRotator = T.RT_280,
+  FxRotator = T.RT_281,
   IsFaceToChar = true,
   WeaponFXGroupName = "Hit"
 }
-T.RT_282 = {
+T.RT_283 = {
   170,
   90,
   0
 }
-T.RT_283 = {
+T.RT_284 = {
   Function = "PlayFX",
-  FxRotator = T.RT_282,
+  FxRotator = T.RT_283,
   IsFaceToChar = true,
   WeaponFXGroupName = "Hit"
 }
-T.RT_284 = {
+T.RT_285 = {
   CauseHit = "HitFly_XY400Z300",
   Function = "CutToughness",
   Value = 80
 }
-T.RT_285 = {
+T.RT_286 = {
   Function = "PlayFX",
   FxRotator = T.RT_166,
   IsFaceToChar = true,
   WeaponFXGroupName = "Hit"
 }
-T.RT_286 = {
+T.RT_287 = {
   Function = "ExecuteClientPassiveFunction",
   FunctionName = "EndJetRush"
 }
-T.RT_287 = {
+T.RT_288 = {
   Condition = 100,
   Dilation = 0,
   Duration = 0.02,
   Function = "HitStop"
 }
-T.RT_288 = {1}
-T.RT_289 = {
+T.RT_289 = {1}
+T.RT_290 = {
   Function = "ExecuteClientPassiveFunction",
   FunctionName = "SwitchMontage"
 }
-T.RT_290 = {
+T.RT_291 = {
   ClientSkillLogicId = 150402,
   Function = "ExecuteClientSkillLogicFunction",
   FunctionName = "SetShootLoc"
 }
-T.RT_291 = {
+T.RT_292 = {
   "Skill",
   "Skill2",
   "SuyiWeapon"
 }
-T.RT_292 = {
+T.RT_293 = {
   BaseAttr = "ATK_Char",
-  DamageTag = T.RT_291,
+  DamageTag = T.RT_292,
   Function = "Damage",
   Rate = "#1"
 }
-T.RT_293 = {
+T.RT_294 = {
   BossValue = 100,
   CauseHit = "HitFly_XY0Z500",
   Function = "CutToughness",
   Value = 20
 }
-T.RT_294 = {
+T.RT_295 = {
   FXId = 2051005,
   Function = "PlayFX",
   IsAttached = true
 }
-T.RT_295 = {
+T.RT_296 = {
   Function = "BeginAccumulate"
 }
-T.RT_296 = {
+T.RT_297 = {
   ClientSkillLogicId = 150401,
   Function = "ExecuteClientSkillLogicFunction",
   FunctionName = "EndShoot"
 }
-T.RT_297 = {
+T.RT_298 = {
   Function = "ExecutePassiveFunction",
   FunctionName = "ConsumeSkill02AttackBullet",
   PassiveEffectId = 150401
 }
-T.RT_298 = {
-  [1] = T.RT_297
+T.RT_299 = {
+  [1] = T.RT_298
 }
-T.RT_299 = {Function = "PlaySE", SEId = 150415}
-T.RT_300 = {
+T.RT_300 = {Function = "PlaySE", SEId = 150415}
+T.RT_301 = {
   Mud = 64,
   Sand = 63,
   Snow = 62,
   Water = 61
 }
-T.RT_301 = {
+T.RT_302 = {
   FXId = 54,
   Function = "PlayFX",
   NormalToHit = true,
   Overlap = true,
-  ReplaceFXId = T.RT_300
+  ReplaceFXId = T.RT_301
 }
-T.RT_302 = {
+T.RT_303 = {
   Mud = 0,
   Sand = 0,
   Snow = 0,
   Water = 0
 }
-T.RT_303 = {
+T.RT_304 = {
   Function = "ExecutePassiveFunction",
   FunctionName = "GradeAutoShoot",
   PassiveEffectId = 150401
 }
-T.RT_304 = {
+T.RT_305 = {
   BaseAttr = "ATK_Ultra",
   DamageTag = T.RT_44,
   Function = "Damage",
   Rate = 1
 }
-T.RT_305 = {
-  [1] = T.RT_304
-}
 T.RT_306 = {
+  [1] = T.RT_305
+}
+T.RT_307 = {
   CauseHit = "HitFly_XY500Z300",
   Function = "CutToughness",
   Value = 30
 }
-T.RT_307 = {
+T.RT_308 = {
   "Melee",
   "Weapon",
   "Attack",
   "NoCombo"
 }
-T.RT_308 = {
+T.RT_309 = {
   BaseAttr = "ATK_Ultra",
-  DamageTag = T.RT_307,
+  DamageTag = T.RT_308,
   Function = "Damage",
   Rate = 1
 }
-T.RT_309 = {
+T.RT_310 = {
   0,
   300,
   -90
 }
-T.RT_310 = {
-  [1] = T.RT_304,
+T.RT_311 = {
+  [1] = T.RT_305,
   [2] = T.RT_62
 }
-T.RT_311 = {
+T.RT_312 = {
   -5,
   90,
   0
 }
-T.RT_312 = {
+T.RT_313 = {
   Function = "PlayFX",
-  FxRotator = T.RT_311,
+  FxRotator = T.RT_312,
   IsFaceToChar = true,
   WeaponFXGroupName = "Hit"
 }
-T.RT_313 = {Function = "PlaySE", SEId = 850272}
-T.RT_314 = {
+T.RT_314 = {Function = "PlaySE", SEId = 850272}
+T.RT_315 = {
   BaseAttr = "ATK_Char",
-  DamageTag = T.RT_251,
+  DamageTag = T.RT_252,
   DamageType = "Fire",
   Function = "Damage",
   Rate = 2.56
 }
-T.RT_315 = {
+T.RT_316 = {
   Delay = 0.05,
   FXId = 22,
   Function = "PlayFX"
 }
-T.RT_316 = {Function = "PlaySE", SEId = 850282}
-T.RT_317 = {
+T.RT_317 = {Function = "PlaySE", SEId = 850282}
+T.RT_318 = {
   0,
   0,
   -45
 }
-T.RT_318 = {
+T.RT_319 = {
   0,
   0,
   45
 }
-T.RT_319 = {
+T.RT_320 = {
   BuffId = 180113,
   Function = "AddBuff",
   LastTime = 12
 }
-T.RT_320 = {
+T.RT_321 = {
   Function = "ExecutePassiveFunction",
   FunctionName = "Skill1AddBuff",
   PassiveEffectId = 180101
 }
-T.RT_321 = {
+T.RT_322 = {
   BossValue = 56,
   CauseHit = "LightHit",
   Function = "CutToughness",
   Value = 65
 }
-T.RT_322 = {
+T.RT_323 = {
   BaseChar = "Self",
   Function = "PlaySE",
   SEId = 18010
 }
-T.RT_323 = {
+T.RT_324 = {
   BuffType = 180130,
   Function = "ChangeBuffTypeLastTime",
   IsExpand = false,
   LastTimeValue = 12
 }
-T.RT_324 = {
+T.RT_325 = {
   "FeinaColorRed"
 }
-T.RT_325 = {
-  DamageTag = T.RT_324,
+T.RT_326 = {
+  DamageTag = T.RT_325,
   Function = "Damage",
   Value = 1
 }
-T.RT_326 = {
+T.RT_327 = {
   FXId = 10301031,
   Function = "PlayFX",
   NormalToHit = true,
   Overlap = true
 }
-T.RT_327 = {
-  [1] = T.RT_325,
-  [2] = T.RT_326
-}
 T.RT_328 = {
-  "FeinaColorBlue"
+  [1] = T.RT_326,
+  [2] = T.RT_327
 }
 T.RT_329 = {
-  DamageTag = T.RT_328,
+  "FeinaColorBlue"
+}
+T.RT_330 = {
+  DamageTag = T.RT_329,
   Function = "Damage",
   Value = 1
 }
-T.RT_330 = {
+T.RT_331 = {
   FXId = 10301011,
   Function = "PlayFX",
   NormalToHit = true,
   Overlap = true
 }
-T.RT_331 = {
-  [1] = T.RT_329,
-  [2] = T.RT_330
-}
 T.RT_332 = {
-  "FeinaColorGreen"
+  [1] = T.RT_330,
+  [2] = T.RT_331
 }
 T.RT_333 = {
-  DamageTag = T.RT_332,
+  "FeinaColorGreen"
+}
+T.RT_334 = {
+  DamageTag = T.RT_333,
   Function = "Damage",
   Value = 1
 }
-T.RT_334 = {
+T.RT_335 = {
   FXId = 10301021,
   Function = "PlayFX",
   NormalToHit = true,
   Overlap = true
 }
-T.RT_335 = {
-  [1] = T.RT_333,
-  [2] = T.RT_334
+T.RT_336 = {
+  [1] = T.RT_334,
+  [2] = T.RT_335
 }
-T.RT_336 = {"Ranged", "Weapon"}
-T.RT_337 = {
+T.RT_337 = {"Ranged", "Weapon"}
+T.RT_338 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = 0.71
 }
-T.RT_338 = {
+T.RT_339 = {
   CauseHit = "RangedWeapon_Common",
   Function = "CutToughness",
   Value = 12
 }
-T.RT_339 = {Function = "PlaySE", SEId = 103}
-T.RT_340 = {
+T.RT_340 = {Function = "PlaySE", SEId = 103}
+T.RT_341 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = "#1"
 }
-T.RT_341 = {Function = "PlaySE", SEId = 2010104}
-T.RT_342 = {
+T.RT_342 = {Function = "PlaySE", SEId = 2010104}
+T.RT_343 = {
   Falloff = 0.1,
   Function = "CameraShake",
   IsSceneCameraShake = true,
   OuterRadius = 1500,
   ShakeClass = "BP_CS_Wuxu_Hit"
 }
-T.RT_343 = {
+T.RT_344 = {
   Function = "PlaySE",
   SEId = 2010101,
   SceneSe = true
 }
-T.RT_344 = {
+T.RT_345 = {
   0,
   0,
   -10
 }
-T.RT_345 = {Function = "AddSp", SpChange = 15}
-T.RT_346 = {
-  [1] = T.RT_345
-}
+T.RT_346 = {Function = "AddSp", SpChange = 15}
 T.RT_347 = {
+  [1] = T.RT_346
+}
+T.RT_348 = {
   FXId = 2019901,
   Function = "PlayFX",
   IsAttached = true
 }
-T.RT_348 = {
+T.RT_349 = {
   FXId = 42,
   Function = "PlayFX",
   Overlap = true
 }
-T.RT_349 = {
+T.RT_350 = {
   FXId = 52,
   Function = "PlayFX",
   NormalToHit = true,
   Overlap = true,
-  ReplaceFXId = T.RT_300
+  ReplaceFXId = T.RT_301
 }
-T.RT_350 = {
+T.RT_351 = {
   FXId = 2020106,
   Function = "PlayFX",
   IsAttached = true,
@@ -1573,201 +1574,196 @@ T.RT_350 = {
   NormalToHit = true,
   Overlap = true,
   RefinedOverlap = true,
-  ReplaceFXId = T.RT_302
+  ReplaceFXId = T.RT_303
 }
-T.RT_351 = {
+T.RT_352 = {
   Function = "PlaySE",
   SEId = 103,
   SceneSe = true
 }
-T.RT_352 = {
-  [1] = T.RT_349,
-  [2] = T.RT_350,
-  [3] = T.RT_351
-}
 T.RT_353 = {
+  [1] = T.RT_350,
+  [2] = T.RT_351,
+  [3] = T.RT_352
+}
+T.RT_354 = {
   BaseAttr = "ATK",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = 1
 }
-T.RT_354 = {
+T.RT_355 = {
   BaseAttr = "ATK",
   Function = "Damage",
   Rate = 10
 }
-T.RT_355 = {
+T.RT_356 = {
   0,
   -45,
   0
 }
-T.RT_356 = {
+T.RT_357 = {
   0,
   135,
   0
 }
-T.RT_357 = {
+T.RT_358 = {
   0,
   -135,
   0
 }
-T.RT_358 = {
+T.RT_359 = {
   CreatureId = 20132001,
   Delay = 0.05,
   Function = "CreateSkillCreature"
 }
-T.RT_359 = {
+T.RT_360 = {
   CreatureId = 20132001,
   Delay = 0.1,
   Function = "CreateSkillCreature"
 }
-T.RT_360 = {
-  [1] = T.RT_358,
-  [2] = T.RT_358,
-  [3] = T.RT_358,
-  [4] = T.RT_359,
-  [5] = T.RT_359,
-  [6] = T.RT_359
+T.RT_361 = {
+  [1] = T.RT_359,
+  [2] = T.RT_359,
+  [3] = T.RT_359,
+  [4] = T.RT_360,
+  [5] = T.RT_360,
+  [6] = T.RT_360
 }
-T.RT_361 = {FXId = 530103, Function = "PlayFX"}
-T.RT_362 = {"RouT103"}
-T.RT_363 = {
+T.RT_362 = {FXId = 530103, Function = "PlayFX"}
+T.RT_363 = {"RouT103"}
+T.RT_364 = {
   BaseAttr = "ATK_Char",
-  DamageTag = T.RT_362,
+  DamageTag = T.RT_363,
   DamageType = "TrueDamage",
   Function = "Damage",
   Rate = 1
 }
-T.RT_364 = {
-  [1] = T.RT_363
-}
 T.RT_365 = {
+  [1] = T.RT_364
+}
+T.RT_366 = {
   BaseChar = "Self",
   ConsumeAmount = 1,
   Function = "ConsumeBullet"
 }
-T.RT_366 = {
+T.RT_367 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = 0.47
 }
-T.RT_367 = {
+T.RT_368 = {
   CauseHit = "RangedWeapon_Common",
   Function = "CutToughness",
   Value = 8
 }
-T.RT_368 = {
-  [1] = T.RT_366,
-  [2] = T.RT_184,
-  [3] = T.RT_367
-}
 T.RT_369 = {
+  [1] = T.RT_367,
+  [2] = T.RT_184,
+  [3] = T.RT_368
+}
+T.RT_370 = {
   FXId = 51,
   Function = "PlayFX",
   NormalToHit = true,
   Overlap = true,
-  ReplaceFXId = T.RT_300
-}
-T.RT_370 = {
-  [1] = T.RT_369
+  ReplaceFXId = T.RT_301
 }
 T.RT_371 = {
+  [1] = T.RT_370
+}
+T.RT_372 = {
   "Ranged",
   "Weapon",
   "Explode"
 }
-T.RT_372 = {
+T.RT_373 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_371,
+  DamageTag = T.RT_372,
   Function = "Damage",
   Rate = 0.95
 }
-T.RT_373 = {
+T.RT_374 = {
   CauseHit = "HitFly_Force_Common",
   Function = "CutToughness",
   Value = 40
 }
-T.RT_374 = {
+T.RT_375 = {
   Falloff = 0.2,
   Function = "CameraShake",
   IsSceneCameraShake = true,
   OuterRadius = 1500,
   ShakeClass = "BP_CS_Cannon_Hit"
 }
-T.RT_375 = {
+T.RT_376 = {
   [1] = T.RT_107
 }
-T.RT_376 = {
+T.RT_377 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_371,
+  DamageTag = T.RT_372,
   Function = "Damage",
   Rate = 0.8
 }
-T.RT_377 = {
+T.RT_378 = {
   CauseHit = "HitFly_Force_Common",
   Function = "CutToughness",
   Value = 30
 }
-T.RT_378 = {Function = "PlaySE", SEId = 2030204}
-T.RT_379 = {
+T.RT_379 = {Function = "PlaySE", SEId = 2030204}
+T.RT_380 = {
   Function = "PlaySE",
   SEId = 2030201,
   SceneSe = true
 }
-T.RT_380 = {
+T.RT_381 = {
   1,
   1,
   0
 }
-T.RT_381 = {-20, 20}
-T.RT_382 = {0, 20}
-T.RT_383 = {-400, 400}
-T.RT_384 = {750, 750}
-T.RT_385 = {
-  AttackRangeBulletModify = T.RT_380,
+T.RT_382 = {-20, 20}
+T.RT_383 = {0, 20}
+T.RT_384 = {-400, 400}
+T.RT_385 = {750, 750}
+T.RT_386 = {
+  AttackRangeBulletModify = T.RT_381,
   CreatureId = 2030212,
   Function = "CreateSkillCreature",
   Horizontally = true,
-  RandomOffsetX = T.RT_381,
-  RandomOffsetY = T.RT_381,
-  RandomOffsetZ = T.RT_382,
-  RandomVelocityX = T.RT_383,
-  RandomVelocityY = T.RT_383,
-  RandomVelocityZ = T.RT_384
+  RandomOffsetX = T.RT_382,
+  RandomOffsetY = T.RT_382,
+  RandomOffsetZ = T.RT_383,
+  RandomVelocityX = T.RT_384,
+  RandomVelocityY = T.RT_384,
+  RandomVelocityZ = T.RT_385
 }
-T.RT_386 = {
-  AttackRangeBulletModify = T.RT_380,
+T.RT_387 = {
+  AttackRangeBulletModify = T.RT_381,
   CreatureId = 2030212,
   Delay = 0.1,
   Function = "CreateSkillCreature",
   Horizontally = true,
-  RandomOffsetX = T.RT_381,
-  RandomOffsetY = T.RT_381,
-  RandomOffsetZ = T.RT_382,
-  RandomVelocityX = T.RT_383,
-  RandomVelocityY = T.RT_383,
-  RandomVelocityZ = T.RT_384
+  RandomOffsetX = T.RT_382,
+  RandomOffsetY = T.RT_382,
+  RandomOffsetZ = T.RT_383,
+  RandomVelocityX = T.RT_384,
+  RandomVelocityY = T.RT_384,
+  RandomVelocityZ = T.RT_385
 }
-T.RT_387 = {
+T.RT_388 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_371,
+  DamageTag = T.RT_372,
   Function = "Damage",
   Rate = 0.15
 }
-T.RT_388 = {
+T.RT_389 = {
   CauseHit = "HitFly_Force_Common",
   Function = "CutToughness",
   Value = 8
 }
-T.RT_389 = {
-  Function = "PlaySE",
-  SEId = 2030203,
-  SceneSe = true
-}
 T.RT_390 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_371,
+  DamageTag = T.RT_372,
   Function = "Damage",
   Rate = 0.155
 }
@@ -1791,7 +1787,7 @@ T.RT_394 = {
 }
 T.RT_395 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_371,
+  DamageTag = T.RT_372,
   Delay = 0.6,
   Function = "Damage",
   Rate = 0.155
@@ -1842,7 +1838,7 @@ T.RT_407 = {
 }
 T.RT_408 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_371,
+  DamageTag = T.RT_372,
   Function = "Damage",
   Rate = 1.39
 }
@@ -1881,7 +1877,7 @@ T.RT_416 = {
 }
 T.RT_417 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_371,
+  DamageTag = T.RT_372,
   Function = "Damage",
   Rate = 0.21
 }
@@ -2016,7 +2012,7 @@ T.RT_446 = {FXId = 2050604, Function = "PlayFX"}
 T.RT_447 = {Function = "PlaySE", SEId = 2050603}
 T.RT_448 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = 0.06
 }
@@ -2068,7 +2064,7 @@ T.RT_459 = {
 }
 T.RT_460 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = 0.35
 }
@@ -2096,7 +2092,7 @@ T.RT_465 = {
   [1] = T.RT_460,
   [2] = T.RT_461,
   [3] = T.RT_463,
-  [4] = T.RT_367,
+  [4] = T.RT_368,
   [5] = T.RT_464
 }
 T.RT_466 = {
@@ -2117,7 +2113,7 @@ T.RT_468 = {
   RandomRotation = T.RT_467
 }
 T.RT_469 = {
-  [1] = T.RT_349,
+  [1] = T.RT_350,
   [2] = T.RT_466,
   [3] = T.RT_468
 }
@@ -2128,7 +2124,7 @@ T.RT_470 = {
 }
 T.RT_471 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = 0.6
 }
@@ -2177,12 +2173,12 @@ T.RT_479 = {
 }
 T.RT_480 = {
   BaseAttr = "ATK_Ranged",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = 0.18
 }
 T.RT_481 = {
-  [1] = T.RT_349,
+  [1] = T.RT_350,
   [2] = T.RT_466,
   [3] = T.RT_468,
   [4] = T.RT_118
@@ -2366,7 +2362,7 @@ T.RT_530 = {
   Value = 33
 }
 T.RT_531 = {
-  [1] = T.RT_248,
+  [1] = T.RT_249,
   [2] = T.RT_530,
   [3] = T.RT_529,
   [4] = T.RT_115,
@@ -2451,7 +2447,7 @@ T.RT_546 = {
   BaseChar = "Target",
   CreateWithoutTarget = false,
   CreatureId = 330103,
-  DefaultLocationOffset = T.RT_309,
+  DefaultLocationOffset = T.RT_310,
   Function = "CreateSkillCreature"
 }
 T.RT_547 = {
@@ -2651,7 +2647,7 @@ T.RT_584 = {
   IsAttached = true
 }
 T.RT_585 = {
-  [1] = T.RT_221,
+  [1] = T.RT_222,
   [2] = T.RT_582,
   [3] = T.RT_119
 }
@@ -2700,7 +2696,7 @@ T.RT_595 = {
 }
 T.RT_596 = {Function = "PlaySE", SEId = 410210}
 T.RT_597 = {
-  [1] = T.RT_221,
+  [1] = T.RT_222,
   [2] = T.RT_594,
   [3] = T.RT_595,
   [4] = T.RT_596
@@ -2798,7 +2794,7 @@ T.RT_617 = {
 }
 T.RT_618 = {
   BaseAttr = "MaxHp",
-  DamageTag = T.RT_247,
+  DamageTag = T.RT_248,
   DamageType = "Thunder",
   Function = "Damage",
   Rate = "#1",
@@ -2956,7 +2952,7 @@ T.RT_647 = {
 }
 T.RT_648 = {
   BaseAttr = "ATK_Ultra",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = "#1"
 }
@@ -3283,7 +3279,7 @@ T.RT_726 = {
 }
 T.RT_727 = {
   [1] = T.RT_726,
-  [2] = T.RT_284,
+  [2] = T.RT_285,
   [3] = T.RT_601
 }
 T.RT_728 = {
@@ -3426,7 +3422,7 @@ T.RT_758 = {
   [1] = T.RT_757
 }
 T.RT_759 = {
-  [1] = T.RT_354,
+  [1] = T.RT_355,
   [2] = T.RT_10,
   [3] = T.RT_747
 }
@@ -3919,7 +3915,7 @@ T.RT_874 = {
 T.RT_875 = {
   [1] = T.RT_684,
   [2] = T.RT_764,
-  [3] = T.RT_312,
+  [3] = T.RT_313,
   [4] = T.RT_862
 }
 T.RT_876 = {
@@ -4046,7 +4042,7 @@ T.RT_906 = {
 T.RT_907 = {
   [1] = T.RT_789,
   [2] = T.RT_764,
-  [3] = T.RT_313
+  [3] = T.RT_314
 }
 T.RT_908 = {
   [1] = T.RT_904
@@ -4065,7 +4061,7 @@ T.RT_910 = {
 }
 T.RT_911 = {
   [1] = T.RT_622,
-  [2] = T.RT_316
+  [2] = T.RT_317
 }
 T.RT_912 = {
   [1] = T.RT_574
@@ -4115,12 +4111,12 @@ T.RT_923 = {
 T.RT_924 = {
   [1] = T.RT_622,
   [2] = T.RT_681,
-  [3] = T.RT_254
+  [3] = T.RT_255
 }
 T.RT_925 = {
   [1] = T.RT_684,
   [2] = T.RT_763,
-  [3] = T.RT_254
+  [3] = T.RT_255
 }
 T.RT_926 = {"hit12"}
 T.RT_927 = {
@@ -5249,7 +5245,7 @@ T.RT_1190 = {
 }
 T.RT_1191 = {
   BaseAttr = "ATK",
-  DamageTag = T.RT_336,
+  DamageTag = T.RT_337,
   Function = "Damage",
   Rate = 0.6
 }
@@ -5591,9 +5587,10 @@ T.RT_1263 = {
   CauseHit = "HitFly_XY0Z800",
   Function = "CutToughness"
 }
-T.RT_1264 = {MaxHp = 0.03}
-T.RT_1265 = {
-  AttrRates = T.RT_1264,
+T.RT_1264 = {Function = "PlaySE", SEId = 851908}
+T.RT_1265 = {MaxHp = 0.03}
+T.RT_1266 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5601,8 +5598,8 @@ T.RT_1265 = {
   UnitType = "Monster",
   UseBattlePointId = 85193202
 }
-T.RT_1266 = {
-  AttrRates = T.RT_1264,
+T.RT_1267 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5610,8 +5607,8 @@ T.RT_1266 = {
   UnitType = "Monster",
   UseBattlePointId = 85193204
 }
-T.RT_1267 = {
-  AttrRates = T.RT_1264,
+T.RT_1268 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5619,8 +5616,8 @@ T.RT_1267 = {
   UnitType = "Monster",
   UseBattlePointId = 85193206
 }
-T.RT_1268 = {
-  AttrRates = T.RT_1264,
+T.RT_1269 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5628,8 +5625,8 @@ T.RT_1268 = {
   UnitType = "Monster",
   UseBattlePointId = 85193203
 }
-T.RT_1269 = {
-  AttrRates = T.RT_1264,
+T.RT_1270 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5637,8 +5634,8 @@ T.RT_1269 = {
   UnitType = "Monster",
   UseBattlePointId = 85193205
 }
-T.RT_1270 = {
-  AttrRates = T.RT_1264,
+T.RT_1271 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5646,8 +5643,8 @@ T.RT_1270 = {
   UnitType = "Monster",
   UseBattlePointId = 85193207
 }
-T.RT_1271 = {
-  AttrRates = T.RT_1264,
+T.RT_1272 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5655,8 +5652,8 @@ T.RT_1271 = {
   UnitType = "Monster",
   UseBattlePointId = 85193208
 }
-T.RT_1272 = {
-  AttrRates = T.RT_1264,
+T.RT_1273 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5664,8 +5661,8 @@ T.RT_1272 = {
   UnitType = "Monster",
   UseBattlePointId = 85193210
 }
-T.RT_1273 = {
-  AttrRates = T.RT_1264,
+T.RT_1274 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5673,8 +5670,8 @@ T.RT_1273 = {
   UnitType = "Monster",
   UseBattlePointId = 85193201
 }
-T.RT_1274 = {
-  AttrRates = T.RT_1264,
+T.RT_1275 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5682,23 +5679,26 @@ T.RT_1274 = {
   UnitType = "Monster",
   UseBattlePointId = 85193209
 }
-T.RT_1275 = {FXId = 900406, Function = "PlayFX"}
-T.RT_1276 = {
+T.RT_1276 = {FXId = 900406, Function = "PlayFX"}
+T.RT_1277 = {
   CreatureId = 851903,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85190303,
   UseBattlePointRotation = 1
 }
-T.RT_1277 = {
+T.RT_1278 = {Function = "PlaySE", SEId = 851935}
+T.RT_1279 = {
   [1] = T.RT_22,
-  [2] = T.RT_10
+  [2] = T.RT_10,
+  [3] = T.RT_1278
 }
-T.RT_1278 = {
+T.RT_1280 = {Function = "PlaySE", SEId = 851917}
+T.RT_1281 = {
   [1] = T.RT_704
 }
-T.RT_1279 = {MaxHp = 0.02}
-T.RT_1280 = {
-  AttrRates = T.RT_1279,
+T.RT_1282 = {MaxHp = 0.02}
+T.RT_1283 = {
+  AttrRates = T.RT_1282,
   Function = "CreateUnit",
   MaxSummonCount = 2,
   SingleSummonCount = 1,
@@ -5706,8 +5706,8 @@ T.RT_1280 = {
   UnitType = "Monster",
   UseBattlePointId = 85191701
 }
-T.RT_1281 = {
-  AttrRates = T.RT_1279,
+T.RT_1284 = {
+  AttrRates = T.RT_1282,
   Function = "CreateUnit",
   MaxSummonCount = 2,
   SingleSummonCount = 1,
@@ -5715,16 +5715,12 @@ T.RT_1281 = {
   UnitType = "Monster",
   UseBattlePointId = 85191702
 }
-T.RT_1282 = {
+T.RT_1285 = {
   CauseHit = "HitFly_XY0Z300",
   Function = "CutToughness"
 }
-T.RT_1283 = {
-  [1] = T.RT_622,
-  [2] = T.RT_1282
-}
-T.RT_1284 = {
-  AttrRates = T.RT_1279,
+T.RT_1286 = {
+  AttrRates = T.RT_1282,
   Function = "CreateUnit",
   MaxSummonCount = 2,
   SingleSummonCount = 1,
@@ -5732,14 +5728,14 @@ T.RT_1284 = {
   UnitType = "Monster",
   UseBattlePointId = 85191703
 }
-T.RT_1285 = {
+T.RT_1287 = {
   CreatureId = 851903,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85190403,
   UseBattlePointRotation = 1
 }
-T.RT_1286 = {
-  AttrRates = T.RT_1264,
+T.RT_1288 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5747,8 +5743,8 @@ T.RT_1286 = {
   UnitType = "Monster",
   UseBattlePointId = 85193210
 }
-T.RT_1287 = {
-  AttrRates = T.RT_1264,
+T.RT_1289 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5756,8 +5752,8 @@ T.RT_1287 = {
   UnitType = "Monster",
   UseBattlePointId = 85193201
 }
-T.RT_1288 = {
-  AttrRates = T.RT_1264,
+T.RT_1290 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5765,8 +5761,8 @@ T.RT_1288 = {
   UnitType = "Monster",
   UseBattlePointId = 85193203
 }
-T.RT_1289 = {
-  AttrRates = T.RT_1264,
+T.RT_1291 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5774,8 +5770,8 @@ T.RT_1289 = {
   UnitType = "Monster",
   UseBattlePointId = 85193205
 }
-T.RT_1290 = {
-  AttrRates = T.RT_1264,
+T.RT_1292 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5783,8 +5779,8 @@ T.RT_1290 = {
   UnitType = "Monster",
   UseBattlePointId = 85193207
 }
-T.RT_1291 = {
-  AttrRates = T.RT_1264,
+T.RT_1293 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5792,8 +5788,8 @@ T.RT_1291 = {
   UnitType = "Monster",
   UseBattlePointId = 85193208
 }
-T.RT_1292 = {
-  AttrRates = T.RT_1264,
+T.RT_1294 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5801,8 +5797,8 @@ T.RT_1292 = {
   UnitType = "Monster",
   UseBattlePointId = 85193209
 }
-T.RT_1293 = {
-  AttrRates = T.RT_1264,
+T.RT_1295 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5810,8 +5806,8 @@ T.RT_1293 = {
   UnitType = "Monster",
   UseBattlePointId = 85193202
 }
-T.RT_1294 = {
-  AttrRates = T.RT_1264,
+T.RT_1296 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5819,8 +5815,8 @@ T.RT_1294 = {
   UnitType = "Monster",
   UseBattlePointId = 85193204
 }
-T.RT_1295 = {
-  AttrRates = T.RT_1264,
+T.RT_1297 = {
+  AttrRates = T.RT_1265,
   Function = "CreateUnit",
   MaxSummonCount = 9,
   SingleSummonCount = 1,
@@ -5828,99 +5824,105 @@ T.RT_1295 = {
   UnitType = "Monster",
   UseBattlePointId = 85193206
 }
-T.RT_1296 = {
+T.RT_1298 = {Function = "PlaySE", SEId = 851940}
+T.RT_1299 = {
   [1] = T.RT_16,
   [2] = T.RT_10,
-  [3] = T.RT_823
-}
-T.RT_1297 = {
-  [1] = T.RT_792
-}
-T.RT_1298 = {
-  [1] = T.RT_3,
-  [2] = T.RT_17
-}
-T.RT_1299 = {
-  [1] = T.RT_731,
-  [2] = T.RT_1263
+  [3] = T.RT_823,
+  [4] = T.RT_1298
 }
 T.RT_1300 = {
+  [1] = T.RT_792,
+  [2] = T.RT_1264
+}
+T.RT_1301 = {
+  [1] = T.RT_3,
+  [2] = T.RT_17,
+  [3] = T.RT_1264
+}
+T.RT_1302 = {Function = "PlaySE", SEId = 851904}
+T.RT_1303 = {
+  [1] = T.RT_731,
+  [2] = T.RT_1263,
+  [3] = T.RT_1302
+}
+T.RT_1304 = {
   [1] = T.RT_3,
   [2] = T.RT_1263
 }
-T.RT_1301 = {
+T.RT_1305 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200502,
   UseBattlePointRotation = 1
 }
-T.RT_1302 = {
+T.RT_1306 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200520,
   UseBattlePointRotation = 1
 }
-T.RT_1303 = {
+T.RT_1307 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200503,
   UseBattlePointRotation = 1
 }
-T.RT_1304 = {
+T.RT_1308 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200504,
   UseBattlePointRotation = 1
 }
-T.RT_1305 = {
+T.RT_1309 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200505,
   UseBattlePointRotation = 1
 }
-T.RT_1306 = {
+T.RT_1310 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200506,
   UseBattlePointRotation = 1
 }
-T.RT_1307 = {
+T.RT_1311 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200508,
   UseBattlePointRotation = 1
 }
-T.RT_1308 = {
+T.RT_1312 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200509,
   UseBattlePointRotation = 1
 }
-T.RT_1309 = {
+T.RT_1313 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200510,
   UseBattlePointRotation = 1
 }
-T.RT_1310 = {
+T.RT_1314 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200507,
   UseBattlePointRotation = 1
 }
-T.RT_1311 = {
+T.RT_1315 = {
   [1] = T.RT_3
 }
-T.RT_1312 = {
+T.RT_1316 = {
   BattlePointID = 85200801,
   Function = "SetSelfLoc",
   TargetCenterLoc = "BattlePoint",
   UseBattlePointRotation = 1
 }
-T.RT_1313 = {
-  [1] = T.RT_1312
+T.RT_1317 = {
+  [1] = T.RT_1316
 }
-T.RT_1314 = {
+T.RT_1318 = {
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5928,7 +5930,7 @@ T.RT_1314 = {
   UnitType = "Monster",
   UseSaveLoc = "85200902"
 }
-T.RT_1315 = {
+T.RT_1319 = {
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5936,7 +5938,7 @@ T.RT_1315 = {
   UnitType = "Monster",
   UseSaveLoc = "85200903"
 }
-T.RT_1316 = {
+T.RT_1320 = {
   Function = "CreateUnit",
   MaxSummonCount = 3,
   SingleSummonCount = 1,
@@ -5944,457 +5946,457 @@ T.RT_1316 = {
   UnitType = "Monster",
   UseSaveLoc = "85200901"
 }
-T.RT_1317 = {
+T.RT_1321 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200802,
   UseBattlePointRotation = 1
 }
-T.RT_1318 = {
+T.RT_1322 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200820,
   UseBattlePointRotation = 1
 }
-T.RT_1319 = {
+T.RT_1323 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200803,
   UseBattlePointRotation = 1
 }
-T.RT_1320 = {
+T.RT_1324 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200804,
   UseBattlePointRotation = 1
 }
-T.RT_1321 = {
+T.RT_1325 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200805,
   UseBattlePointRotation = 1
 }
-T.RT_1322 = {
+T.RT_1326 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200806,
   UseBattlePointRotation = 1
 }
-T.RT_1323 = {
+T.RT_1327 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200808,
   UseBattlePointRotation = 1
 }
-T.RT_1324 = {
+T.RT_1328 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200809,
   UseBattlePointRotation = 1
 }
-T.RT_1325 = {
+T.RT_1329 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200810,
   UseBattlePointRotation = 1
 }
-T.RT_1326 = {
+T.RT_1330 = {
   CreatureId = 852008,
   Function = "CreateSkillCreature",
   UseBattlePointID = 85200807,
   UseBattlePointRotation = 1
 }
-T.RT_1327 = {Function = "PlaySE", SEId = 852101}
-T.RT_1328 = {
+T.RT_1331 = {Function = "PlaySE", SEId = 852101}
+T.RT_1332 = {
   [1] = T.RT_16,
   [2] = T.RT_764,
-  [3] = T.RT_1327
+  [3] = T.RT_1331
 }
-T.RT_1329 = {
+T.RT_1333 = {
   0,
   0,
   -130
 }
-T.RT_1330 = {
+T.RT_1334 = {
   0,
   0,
   -120
 }
-T.RT_1331 = {
+T.RT_1335 = {
   CauseHit = "HitFly_XY300Z800",
   Function = "CutToughness"
 }
-T.RT_1332 = {
+T.RT_1336 = {
   Function = "SpawnDrop",
   UnitId = 1052,
   UnitType = "Drop"
 }
-T.RT_1333 = {
+T.RT_1337 = {
   Function = "SpawnDrop",
   UnitId = 1053,
   UnitType = "Drop"
 }
-T.RT_1334 = {Function = "PlaySE", SEId = 852201}
-T.RT_1335 = {
+T.RT_1338 = {Function = "PlaySE", SEId = 852201}
+T.RT_1339 = {
   [1] = T.RT_16,
   [2] = T.RT_10,
   [3] = T.RT_661,
-  [4] = T.RT_1334
+  [4] = T.RT_1338
 }
-T.RT_1336 = {Function = "PlaySE", SEId = 852207}
-T.RT_1337 = {Function = "PlaySE", SEId = 852203}
-T.RT_1338 = {FXId = 852203, Function = "PlayFX"}
-T.RT_1339 = {Function = "PlaySE", SEId = 852214}
-T.RT_1340 = {Function = "PlaySE", SEId = 852216}
-T.RT_1341 = {
+T.RT_1340 = {Function = "PlaySE", SEId = 852207}
+T.RT_1341 = {Function = "PlaySE", SEId = 852203}
+T.RT_1342 = {FXId = 852203, Function = "PlayFX"}
+T.RT_1343 = {Function = "PlaySE", SEId = 852214}
+T.RT_1344 = {Function = "PlaySE", SEId = 852216}
+T.RT_1345 = {
   [1] = T.RT_3,
-  [2] = T.RT_1331
+  [2] = T.RT_1335
 }
-T.RT_1342 = {
+T.RT_1346 = {
   [1] = T.RT_7,
   [2] = T.RT_4,
-  [3] = T.RT_1331
+  [3] = T.RT_1335
 }
-T.RT_1343 = {
+T.RT_1347 = {
   FXId = 852402,
   Function = "PlayFX",
   Overlap = true
 }
-T.RT_1344 = {
+T.RT_1348 = {
   [1] = T.RT_33,
-  [2] = T.RT_1343
+  [2] = T.RT_1347
 }
-T.RT_1345 = {
+T.RT_1349 = {
   Function = "EffectFunction",
   FunctionName = "Mon_BossHengmeng_Skill03GetLoc"
 }
-T.RT_1346 = {
+T.RT_1350 = {
   0,
   0,
   400
 }
-T.RT_1347 = {
+T.RT_1351 = {
   CreatureId = 852404,
   Function = "CreateSkillCreature",
-  Location = T.RT_1346,
+  Location = T.RT_1350,
   UseSaveLoc = "Skill03Loc1"
 }
-T.RT_1348 = {
+T.RT_1352 = {
   [1] = T.RT_3,
-  [2] = T.RT_1343,
-  [3] = T.RT_1331
+  [2] = T.RT_1347,
+  [3] = T.RT_1335
 }
-T.RT_1349 = {MaxHp = 0.05}
-T.RT_1350 = {
+T.RT_1353 = {MaxHp = 0.05}
+T.RT_1354 = {
   BuffId = 852501,
   Function = "AddBuff",
   LastTime = 5
 }
-T.RT_1351 = {
-  [1] = T.RT_1350
+T.RT_1355 = {
+  [1] = T.RT_1354
 }
-T.RT_1352 = {
+T.RT_1356 = {
   BuffId = 852502,
   Function = "AddBuff",
   LastTime = 5
 }
-T.RT_1353 = {
-  [1] = T.RT_1352
+T.RT_1357 = {
+  [1] = T.RT_1356
 }
-T.RT_1354 = {
+T.RT_1358 = {
   [1] = T.RT_790,
   [2] = T.RT_1177,
   [3] = T.RT_1178
 }
-T.RT_1355 = {
+T.RT_1359 = {
   BaseAttr = "ATK",
   Function = "Damage",
   Rate = 1000
 }
-T.RT_1356 = {
-  CreatureId = 852505,
-  Function = "CreateSkillCreature",
-  UseBattlePointID = 5,
-  UseBattlePointRotation = 1
-}
-T.RT_1357 = {
-  CreatureId = 852505,
-  Function = "CreateSkillCreature",
-  UseBattlePointID = 14,
-  UseBattlePointRotation = 1
-}
-T.RT_1358 = {
-  CreatureId = 852506,
-  Function = "CreateSkillCreature",
-  UseBattlePointID = 5,
-  UseBattlePointRotation = 1
-}
-T.RT_1359 = {
-  CreatureId = 852506,
-  Function = "CreateSkillCreature",
-  UseBattlePointID = 14,
-  UseBattlePointRotation = 1
-}
 T.RT_1360 = {
+  CreatureId = 852505,
+  Function = "CreateSkillCreature",
+  UseBattlePointID = 5,
+  UseBattlePointRotation = 1
+}
+T.RT_1361 = {
+  CreatureId = 852505,
+  Function = "CreateSkillCreature",
+  UseBattlePointID = 14,
+  UseBattlePointRotation = 1
+}
+T.RT_1362 = {
+  CreatureId = 852506,
+  Function = "CreateSkillCreature",
+  UseBattlePointID = 5,
+  UseBattlePointRotation = 1
+}
+T.RT_1363 = {
+  CreatureId = 852506,
+  Function = "CreateSkillCreature",
+  UseBattlePointID = 14,
+  UseBattlePointRotation = 1
+}
+T.RT_1364 = {
   CauseHit = "HitFly_XY600Z1000",
   Function = "CutToughness",
   Value = 150
 }
-T.RT_1361 = {
+T.RT_1365 = {
   0,
   0,
   1900
 }
-T.RT_1362 = {
+T.RT_1366 = {
   CreatureId = 900001,
   Function = "CreateSkillCreature",
-  Location = T.RT_1361,
+  Location = T.RT_1365,
   UseSaveLoc = ""
 }
-T.RT_1363 = {
+T.RT_1367 = {
   BaseAttr = "ATK",
   Function = "Damage",
   Rate = 0.01
 }
-T.RT_1364 = {
+T.RT_1368 = {
   BaseAttr = "MaxHp",
   BaseChar = "Target",
   DamageType = "Default",
   Function = "Damage",
   Rate = 0.05
 }
-T.RT_1365 = {
+T.RT_1369 = {
   BuffId = 5000020,
   Function = "AddBuff",
   LastTime = 1.3
 }
-T.RT_1366 = {
+T.RT_1370 = {
   BaseAttr = "MaxHp",
   BaseChar = "Target",
   DamageType = "TrueDamage",
   Function = "Damage",
   Rate = 0.35
 }
-T.RT_1367 = {
+T.RT_1371 = {
   BaseChar = "Target",
   FXId = 900074,
   Function = "PlayFX",
   IsAttached = true
 }
-T.RT_1368 = {
+T.RT_1372 = {
   CauseHit = "LightHit",
   Function = "CutToughness",
   Value = 300
 }
-T.RT_1369 = {
+T.RT_1373 = {
   BaseAttr = "ATK",
   DamageType = "TrueDamage",
   Function = "Damage",
   Rate = 10
 }
-T.RT_1370 = {
+T.RT_1374 = {
   CauseHit = "HitFly_XY800Z1000",
   Function = "CutToughness",
   Value = 300
 }
-T.RT_1371 = {
-  [1] = T.RT_1363
+T.RT_1375 = {
+  [1] = T.RT_1367
 }
-T.RT_1372 = {Function = "PlaySE", SEId = 111}
-T.RT_1373 = {
+T.RT_1376 = {Function = "PlaySE", SEId = 111}
+T.RT_1377 = {
   FXId = 900062,
   Function = "PlayFX",
   Overlap = true
 }
-T.RT_1374 = {
+T.RT_1378 = {
   BaseAttr = "ATK",
   Function = "Damage",
   Rate = 0,
   Value = 1
 }
-T.RT_1375 = {
+T.RT_1379 = {
   CauseHit = "HitFly_XY600Z1000",
   Function = "CutToughness"
 }
-T.RT_1376 = {
-  [1] = T.RT_1374,
-  [2] = T.RT_1375
+T.RT_1380 = {
+  [1] = T.RT_1378,
+  [2] = T.RT_1379
 }
-T.RT_1377 = {
+T.RT_1381 = {
   CauseHit = "HitFly_XY600Z1000",
   Function = "CutToughness",
   Value = 500
 }
-T.RT_1378 = {
+T.RT_1382 = {
   CauseHit = "Hitfly_Laser",
   Function = "CutToughness",
   Value = 100
 }
-T.RT_1379 = {
+T.RT_1383 = {
   BaseAttr = "ATK",
   Function = "Damage",
   Rate = 1.65
 }
-T.RT_1380 = {Function = "PlaySE", SEId = 900101}
-T.RT_1381 = {
+T.RT_1384 = {Function = "PlaySE", SEId = 900101}
+T.RT_1385 = {
   DamageType = "TrueDamage",
   Function = "Damage",
   Value = 200
 }
-T.RT_1382 = {
+T.RT_1386 = {
   CreatureId = 90012,
   Function = "CreateSkillCreature"
 }
-T.RT_1383 = {
-  [1] = T.RT_1382,
+T.RT_1387 = {
+  [1] = T.RT_1386,
   [2] = T.RT_97,
   [3] = T.RT_556
 }
-T.RT_1384 = {Function = "PlaySE", SEId = 900201}
-T.RT_1385 = {
+T.RT_1388 = {Function = "PlaySE", SEId = 900201}
+T.RT_1389 = {
   "WeeklyPaoTai"
 }
-T.RT_1386 = {
-  DamageTag = T.RT_1385,
+T.RT_1390 = {
+  DamageTag = T.RT_1389,
   DamageType = "Default",
   Function = "Damage",
   Rate = 1.1
 }
-T.RT_1387 = {
+T.RT_1391 = {
   Function = "PlaySE",
   MeleeHitLevel = "light",
   SEId = 502
 }
-T.RT_1388 = {
+T.RT_1392 = {
   [1] = T.RT_23,
   [2] = T.RT_661,
   [3] = T.RT_39,
-  [4] = T.RT_1387
+  [4] = T.RT_1391
 }
-T.RT_1389 = {FXId = 90009, Function = "PlayFX"}
-T.RT_1390 = {
+T.RT_1393 = {FXId = 90009, Function = "PlayFX"}
+T.RT_1394 = {
   [1] = T.RT_760,
-  [2] = T.RT_1389,
+  [2] = T.RT_1393,
   [3] = T.RT_559,
   [4] = T.RT_182
 }
-T.RT_1391 = {
+T.RT_1395 = {
   BaseAttr = "ATK",
   DamageType = "TrueDamage",
   Function = "Damage",
   Rate = 0.25
 }
-T.RT_1392 = {
+T.RT_1396 = {
   AttackRangeBulletModify = T.RT_200,
   CreatureId = 90033,
   Function = "CreateSkillCreature",
   Horizontally = true,
-  RandomOffsetX = T.RT_381,
-  RandomOffsetY = T.RT_381,
-  RandomOffsetZ = T.RT_382,
-  RandomVelocityX = T.RT_383,
-  RandomVelocityY = T.RT_383,
-  RandomVelocityZ = T.RT_384
+  RandomOffsetX = T.RT_382,
+  RandomOffsetY = T.RT_382,
+  RandomOffsetZ = T.RT_383,
+  RandomVelocityX = T.RT_384,
+  RandomVelocityY = T.RT_384,
+  RandomVelocityZ = T.RT_385
 }
-T.RT_1393 = {
+T.RT_1397 = {
   Function = "PlaySE",
   MeleeHitLevel = "light",
   SEId = 504
 }
-T.RT_1394 = {
+T.RT_1398 = {
   CreatureId = 900701,
   Function = "CreateSkillCreature"
 }
-T.RT_1395 = {
-  [1] = T.RT_1394
+T.RT_1399 = {
+  [1] = T.RT_1398
 }
-T.RT_1396 = {
+T.RT_1400 = {
   FXId = 900702,
   Function = "PlayFX",
   Overlap = true
 }
-T.RT_1397 = {Function = "PlaySE", SEId = 900701}
-T.RT_1398 = {
+T.RT_1401 = {Function = "PlaySE", SEId = 900701}
+T.RT_1402 = {
   [1] = T.RT_3,
-  [2] = T.RT_1396,
-  [3] = T.RT_1397
+  [2] = T.RT_1400,
+  [3] = T.RT_1401
 }
-T.RT_1399 = {
+T.RT_1403 = {
   FXId = 900702,
   Function = "PlayFX",
   NormalToHit = true,
   Overlap = true
 }
-T.RT_1400 = {
-  [1] = T.RT_1399
+T.RT_1404 = {
+  [1] = T.RT_1403
 }
-T.RT_1401 = {
+T.RT_1405 = {
   CreatureId = 950004,
   Function = "CreateSkillCreature",
   Location = T.RT_416
 }
-T.RT_1402 = {
+T.RT_1406 = {
   CreatureId = 950011,
   Function = "CreateSkillCreature",
   Location = T.RT_416
 }
-T.RT_1403 = {Function = "PlaySE", SEId = 950102}
-T.RT_1404 = {
+T.RT_1407 = {Function = "PlaySE", SEId = 950102}
+T.RT_1408 = {
   [1] = T.RT_16,
   [2] = T.RT_4,
-  [3] = T.RT_1403
+  [3] = T.RT_1407
 }
-T.RT_1405 = {
+T.RT_1409 = {
   CauseHit = "HitFly_XY200Z300",
   Function = "CutToughness",
   Value = 1
 }
-T.RT_1406 = {
+T.RT_1410 = {
   [1] = T.RT_3,
-  [2] = T.RT_1405
+  [2] = T.RT_1409
 }
-T.RT_1407 = {
+T.RT_1411 = {
   CauseHit = "LightHit",
   Function = "CutToughness",
   Value = 1
 }
-T.RT_1408 = {Function = "PlaySE", SEId = 950701}
-T.RT_1409 = {
-  [1] = T.RT_3,
-  [2] = T.RT_4,
-  [3] = T.RT_1408
-}
-T.RT_1410 = {Function = "PlaySE", SEId = 951001}
-T.RT_1411 = {
-  [1] = T.RT_3,
-  [2] = T.RT_4,
-  [3] = T.RT_1410
-}
-T.RT_1412 = {Function = "PlaySE", SEId = 980101}
+T.RT_1412 = {Function = "PlaySE", SEId = 950701}
 T.RT_1413 = {
-  [1] = T.RT_16,
-  [2] = T.RT_10,
+  [1] = T.RT_3,
+  [2] = T.RT_4,
   [3] = T.RT_1412
 }
-T.RT_1414 = {Function = "PlaySE", SEId = 980201}
+T.RT_1414 = {Function = "PlaySE", SEId = 951001}
 T.RT_1415 = {
+  [1] = T.RT_3,
+  [2] = T.RT_4,
+  [3] = T.RT_1414
+}
+T.RT_1416 = {Function = "PlaySE", SEId = 980101}
+T.RT_1417 = {
+  [1] = T.RT_16,
+  [2] = T.RT_10,
+  [3] = T.RT_1416
+}
+T.RT_1418 = {Function = "PlaySE", SEId = 980201}
+T.RT_1419 = {
   [1] = T.RT_660,
   [2] = T.RT_1119,
-  [3] = T.RT_1414
+  [3] = T.RT_1418
 }
-T.RT_1416 = {
+T.RT_1420 = {
   [1] = T.RT_660,
   [2] = T.RT_1158,
-  [3] = T.RT_1414
+  [3] = T.RT_1418
 }
-T.RT_1417 = {Function = "PlaySE", SEId = 980301}
-T.RT_1418 = {
+T.RT_1421 = {Function = "PlaySE", SEId = 980301}
+T.RT_1422 = {
   BuffId = 980501,
   Function = "AddBuff",
   LastTime = -1
 }
-T.RT_1419 = {
-  [1] = T.RT_1418
+T.RT_1423 = {
+  [1] = T.RT_1422
 }
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
@@ -6451,7 +6453,7 @@ return ReadOnly("SkillEffects", {
   },
   [12] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_237,
+    TaskEffects = T.RT_238,
     TaskId = 12
   },
   [13] = {
@@ -6494,7 +6496,7 @@ return ReadOnly("SkillEffects", {
   [23] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_365
+      [1] = T.RT_366
     },
     TaskId = 23
   },
@@ -6725,20 +6727,20 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Char",
-        DamageTag = T.RT_251,
+        DamageTag = T.RT_252,
         DamageType = "Wind",
         Function = "Damage",
         Rate = 2.56
       },
-      [2] = T.RT_252,
-      [3] = T.RT_253,
+      [2] = T.RT_253,
+      [3] = T.RT_254,
       [4] = {
         Delay = 0.05,
         Dilation = 0,
         Duration = 0.03,
         Function = "HitStop"
       },
-      [5] = T.RT_254
+      [5] = T.RT_255
     },
     TaskId = 1502
   },
@@ -6747,7 +6749,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Char",
-        DamageTag = T.RT_251,
+        DamageTag = T.RT_252,
         DamageType = "Smash",
         Function = "Damage",
         Rate = 1.28
@@ -6763,9 +6765,9 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 45
       },
-      [4] = T.RT_249,
-      [5] = T.RT_250,
-      [6] = T.RT_313
+      [4] = T.RT_250,
+      [5] = T.RT_251,
+      [6] = T.RT_314
     },
     TaskId = 1513
   },
@@ -6882,7 +6884,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Char",
-        DamageTag = T.RT_251,
+        DamageTag = T.RT_252,
         DamageType = "Smash",
         Function = "Damage",
         Rate = "#1"
@@ -7030,7 +7032,7 @@ return ReadOnly("SkillEffects", {
         Distance = 2000,
         Function = "CreateSkillCreature"
       },
-      [2] = T.RT_322
+      [2] = T.RT_323
     },
     TaskId = 18012
   },
@@ -7043,7 +7045,7 @@ return ReadOnly("SkillEffects", {
         Distance = 2000,
         Function = "CreateSkillCreature"
       },
-      [2] = T.RT_322
+      [2] = T.RT_323
     },
     TaskId = 18013
   },
@@ -7056,38 +7058,38 @@ return ReadOnly("SkillEffects", {
         Distance = 2000,
         Function = "CreateSkillCreature"
       },
-      [2] = T.RT_322
+      [2] = T.RT_323
     },
     TaskId = 18014
   },
   [18015] = {
     TargetFilter = "Char_Sphere_Small",
-    TaskEffects = T.RT_327,
+    TaskEffects = T.RT_328,
     TaskId = 18015
   },
   [18016] = {
     TargetFilter = "Char_Sphere_Small",
-    TaskEffects = T.RT_331,
+    TaskEffects = T.RT_332,
     TaskId = 18016
   },
   [18017] = {
     TargetFilter = "Char_Sphere_Small",
-    TaskEffects = T.RT_335,
+    TaskEffects = T.RT_336,
     TaskId = 18017
   },
   [18018] = {
     TargetFilter = "Char_Sphere_Small",
-    TaskEffects = T.RT_327,
+    TaskEffects = T.RT_328,
     TaskId = 18018
   },
   [18019] = {
     TargetFilter = "Char_Sphere_Small",
-    TaskEffects = T.RT_331,
+    TaskEffects = T.RT_332,
     TaskId = 18019
   },
   [18020] = {
     TargetFilter = "Char_Sphere_Small",
-    TaskEffects = T.RT_335,
+    TaskEffects = T.RT_336,
     TaskId = 18020
   },
   [20111] = {
@@ -7134,14 +7136,14 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Middle",
     TaskEffects = {
-      [1] = T.RT_354,
+      [1] = T.RT_355,
       [2] = {
         BuffId = 201001,
         Function = "AddBuff",
         LastTime = 8
       },
       [3] = {FXId = 20102, Function = "PlayFX"},
-      [4] = T.RT_306
+      [4] = T.RT_307
     },
     TaskId = 20114
   },
@@ -8868,7 +8870,7 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = "#1"
       },
-      [2] = T.RT_284,
+      [2] = T.RT_285,
       [3] = T.RT_601
     },
     TaskId = 41701
@@ -9167,7 +9169,7 @@ return ReadOnly("SkillEffects", {
   },
   [60105] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_346,
+    TaskEffects = T.RT_347,
     TaskId = 60105
   },
   [60200] = {
@@ -9249,7 +9251,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_716,
-      [2] = T.RT_252,
+      [2] = T.RT_253,
       [3] = {Function = "PlaySE", SEId = 628}
     },
     TaskId = 60302
@@ -9486,7 +9488,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_large",
     TaskEffects = {
-      [1] = T.RT_1381,
+      [1] = T.RT_1385,
       [2] = T.RT_558,
       [3] = T.RT_559,
       [4] = T.RT_182
@@ -9497,7 +9499,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_large",
     TaskEffects = {
-      [1] = T.RT_1381,
+      [1] = T.RT_1385,
       [2] = T.RT_560,
       [3] = T.RT_559,
       [4] = T.RT_182
@@ -9505,7 +9507,7 @@ return ReadOnly("SkillEffects", {
     TaskId = 90013
   },
   [90014] = {
-    TaskEffects = T.RT_1383,
+    TaskEffects = T.RT_1387,
     TaskId = 90014
   },
   [90015] = {
@@ -9556,7 +9558,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_large",
     TaskEffects = {
-      [1] = T.RT_1386,
+      [1] = T.RT_1390,
       [2] = {
         FXId = 90006,
         Function = "PlayFX",
@@ -9571,7 +9573,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_large",
     TaskEffects = {
-      [1] = T.RT_1386,
+      [1] = T.RT_1390,
       [2] = {
         FXId = 90006,
         Function = "PlayFX",
@@ -9584,14 +9586,14 @@ return ReadOnly("SkillEffects", {
     TaskId = 90023
   },
   [90024] = {
-    TaskEffects = T.RT_1383,
+    TaskEffects = T.RT_1387,
     TaskId = 90024
   },
   [90025] = {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = {
-        DamageTag = T.RT_1385,
+        DamageTag = T.RT_1389,
         DamageType = "Default",
         Function = "Damage",
         Rate = 0.175
@@ -9631,13 +9633,13 @@ return ReadOnly("SkillEffects", {
   [90032] = {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
-    TaskEffects = T.RT_1390,
+    TaskEffects = T.RT_1394,
     TaskId = 90032
   },
   [90033] = {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
-    TaskEffects = T.RT_1390,
+    TaskEffects = T.RT_1394,
     TaskId = 90033
   },
   [90034] = {
@@ -9647,7 +9649,12 @@ return ReadOnly("SkillEffects", {
         Function = "CreateSkillCreature"
       },
       [2] = T.RT_71,
-      [3] = T.RT_97
+      [3] = T.RT_97,
+      [4] = {
+        BaseChar = "Self",
+        Function = "PlaySE",
+        SEId = 2041
+      }
     },
     TaskId = 90034
   },
@@ -9655,12 +9662,10 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_1391,
-      [2] = T.RT_377,
+      [1] = T.RT_1395,
+      [2] = T.RT_378,
       [3] = T.RT_182,
-      [4] = T.RT_378,
-      [5] = T.RT_374,
-      [6] = T.RT_379
+      [4] = T.RT_375
     },
     TaskId = 90035
   },
@@ -9668,17 +9673,16 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_1391,
+      [1] = T.RT_1395,
       [2] = {
         FXId = 90007,
         Function = "PlayFX",
         NormalToHit = true,
         Overlap = true
       },
-      [3] = T.RT_377,
+      [3] = T.RT_378,
       [4] = T.RT_182,
-      [5] = T.RT_374,
-      [6] = T.RT_379
+      [5] = T.RT_375
     },
     TaskId = 90036
   },
@@ -9692,8 +9696,13 @@ return ReadOnly("SkillEffects", {
   [90038] = {
     TargetFilter = "Char_Sphere_Xlarge",
     TaskEffects = {
-      [1] = T.RT_1392,
-      [2] = T.RT_1392
+      [1] = T.RT_1396,
+      [2] = T.RT_1396,
+      [3] = {
+        Function = "PlaySE",
+        SEId = 2043,
+        SceneSe = true
+      }
     },
     TaskId = 90038
   },
@@ -9701,12 +9710,10 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_1391,
-      [2] = T.RT_1389,
-      [3] = T.RT_388,
-      [4] = T.RT_182,
-      [5] = T.RT_378,
-      [6] = T.RT_389
+      [1] = T.RT_1395,
+      [2] = T.RT_1393,
+      [3] = T.RT_389,
+      [4] = T.RT_182
     },
     TaskId = 90039
   },
@@ -10116,7 +10123,8 @@ return ReadOnly("SkillEffects", {
         FXId = 110203,
         Function = "PlayFX",
         MaxHitFXNum = 8
-      }
+      },
+      [5] = T.RT_213
     },
     TaskId = 110211
   },
@@ -10133,7 +10141,8 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 25
       },
-      [3] = T.RT_213
+      [3] = T.RT_214,
+      [4] = {Function = "PlaySE", SEId = 110205}
     },
     TaskId = 110212
   },
@@ -10163,9 +10172,10 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 110201,
         Function = "CreateSkillCreature",
-        Location = T.RT_214
+        Location = T.RT_215
       },
-      [2] = T.RT_215
+      [2] = T.RT_216,
+      [3] = T.RT_213
     },
     TaskId = 110214
   },
@@ -10175,9 +10185,10 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 110211,
         Function = "CreateSkillCreature",
-        Location = T.RT_214
+        Location = T.RT_215
       },
-      [2] = T.RT_215
+      [2] = T.RT_216,
+      [3] = T.RT_213
     },
     TaskId = 110215
   },
@@ -10188,7 +10199,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small",
     TaskEffects = {
       [1] = T.RT_212,
-      [2] = T.RT_213
+      [2] = T.RT_214,
+      [3] = T.RT_213
     },
     TaskId = 110216
   },
@@ -10198,7 +10210,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 110212,
         Function = "CreateSkillCreature",
-        Location = T.RT_216
+        Location = T.RT_217
       }
     },
     TaskId = 110217
@@ -10209,7 +10221,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 110213,
         Function = "CreateSkillCreature",
-        Location = T.RT_216
+        Location = T.RT_217
       }
     },
     TaskId = 110218
@@ -10339,14 +10351,15 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 25
       },
-      [3] = T.RT_217,
+      [3] = T.RT_218,
       [4] = {
         CanBeScaled = true,
         Condition = 110201,
         Delay = 0.5,
         FXId = 110204,
         Function = "PlayFX"
-      }
+      },
+      [5] = T.RT_213
     },
     TaskId = 110251
   },
@@ -10467,7 +10480,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 25
       },
-      [3] = T.RT_218,
+      [3] = T.RT_219,
       [4] = {
         BuffCount = 5,
         BuffId = 110301,
@@ -10492,8 +10505,8 @@ return ReadOnly("SkillEffects", {
         Function = "AddBuff",
         LastTime = 5
       },
-      [2] = T.RT_219,
-      [3] = T.RT_220
+      [2] = T.RT_220,
+      [3] = T.RT_221
     },
     TaskId = 110312
   },
@@ -10524,7 +10537,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 25
       },
-      [3] = T.RT_218,
+      [3] = T.RT_219,
       [4] = {Function = "PlaySE", SEId = 110305}
     },
     TaskId = 110314
@@ -10538,8 +10551,8 @@ return ReadOnly("SkillEffects", {
         Function = "AddBuff",
         LastTime = 5
       },
-      [2] = T.RT_219,
-      [3] = T.RT_220
+      [2] = T.RT_220,
+      [3] = T.RT_221
     },
     TaskId = 110315
   },
@@ -10614,7 +10627,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle240",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         FXId = 110304,
         Function = "PlayFX",
@@ -10626,9 +10639,9 @@ return ReadOnly("SkillEffects", {
         IsFaceToChar = true,
         MaxHitFXNum = 3
       },
-      [3] = T.RT_222,
+      [3] = T.RT_223,
       [4] = T.RT_71,
-      [5] = T.RT_223
+      [5] = T.RT_224
     },
     TaskId = 110331
   },
@@ -10638,7 +10651,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle240",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         FXId = 110304,
         Function = "PlayFX",
@@ -10646,9 +10659,9 @@ return ReadOnly("SkillEffects", {
         IsFaceToChar = true,
         MaxHitFXNum = 3
       },
-      [3] = T.RT_222,
+      [3] = T.RT_223,
       [4] = T.RT_71,
-      [5] = T.RT_223
+      [5] = T.RT_224
     },
     TaskId = 110332
   },
@@ -10658,8 +10671,8 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle240",
     TaskEffects = {
-      [1] = T.RT_225,
-      [2] = T.RT_226,
+      [1] = T.RT_226,
+      [2] = T.RT_227,
       [3] = {
         BossValue = 14,
         CauseHit = "LightHit_Tuosi",
@@ -10674,7 +10687,7 @@ return ReadOnly("SkillEffects", {
         FunctionName = "AddMspOnHit",
         PassiveEffectId = 110301
       },
-      [6] = T.RT_223
+      [6] = T.RT_224
     },
     TaskId = 110333
   },
@@ -10684,8 +10697,8 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle240",
     TaskEffects = {
-      [1] = T.RT_228,
-      [2] = T.RT_226,
+      [1] = T.RT_229,
+      [2] = T.RT_227,
       [3] = {
         BossValue = 49,
         CauseHit = "HitFly_XY800Z400_F",
@@ -10698,7 +10711,7 @@ return ReadOnly("SkillEffects", {
     TaskId = 110334
   },
   [110341] = {
-    NotifyName = T.RT_229,
+    NotifyName = T.RT_230,
     TargetFilter = "Self",
     TaskEffects = T.RT_67,
     TaskId = 110341
@@ -10709,8 +10722,8 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_228,
-      [2] = T.RT_226,
+      [1] = T.RT_229,
+      [2] = T.RT_227,
       [3] = {
         BossValue = 49,
         CauseHit = "HitFly_XY300Z800",
@@ -10795,7 +10808,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_225,
+      [1] = T.RT_226,
       [2] = {
         BossValue = 17,
         CauseHit = "LightHit",
@@ -10824,7 +10837,7 @@ return ReadOnly("SkillEffects", {
   [110356] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_230,
+      [1] = T.RT_231,
       [2] = {
         Function = "PlaySE",
         SEId = 110310,
@@ -10836,7 +10849,7 @@ return ReadOnly("SkillEffects", {
   [110357] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_230
+      [1] = T.RT_231
     },
     TaskId = 110357
   },
@@ -10861,7 +10874,7 @@ return ReadOnly("SkillEffects", {
   },
   [110413] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_232,
+    TaskEffects = T.RT_233,
     TaskId = 110413
   },
   [110414] = {
@@ -10883,7 +10896,7 @@ return ReadOnly("SkillEffects", {
         CreatureId = 110403,
         Function = "CreateSkillCreature"
       },
-      [2] = T.RT_233
+      [2] = T.RT_234
     },
     TaskId = 110415
   },
@@ -10950,13 +10963,13 @@ return ReadOnly("SkillEffects", {
   [110431] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_235
+      [1] = T.RT_236
     },
     TaskId = 110431
   },
   [110432] = {
     TargetFilter = "Char_Cylinder_Middle",
-    TaskEffects = T.RT_232,
+    TaskEffects = T.RT_233,
     TaskId = 110432
   },
   [110433] = {
@@ -10974,7 +10987,7 @@ return ReadOnly("SkillEffects", {
   [110434] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_235,
+      [1] = T.RT_236,
       [2] = {
         CreatureId = 110411,
         Function = "CreateSkillCreature",
@@ -10993,7 +11006,7 @@ return ReadOnly("SkillEffects", {
           0
         }
       },
-      [4] = T.RT_233
+      [4] = T.RT_234
     },
     TaskId = 110434
   },
@@ -11049,7 +11062,7 @@ return ReadOnly("SkillEffects", {
   [110444] = {
     TargetFilter = "Char_Sphere_Middle",
     TaskEffects = {
-      [1] = T.RT_231,
+      [1] = T.RT_232,
       [2] = {
         Function = "GatherTargets",
         GatherSpeed = 1000,
@@ -11117,7 +11130,7 @@ return ReadOnly("SkillEffects", {
         Value = 50
       },
       [3] = {FXId = 120102, Function = "PlayFX"},
-      [4] = T.RT_238
+      [4] = T.RT_239
     },
     TaskId = 120113
   },
@@ -11142,7 +11155,7 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = 0.12
       },
-      [2] = T.RT_239
+      [2] = T.RT_240
     },
     TaskId = 120121
   },
@@ -11156,7 +11169,7 @@ return ReadOnly("SkillEffects", {
         Function = "Heal",
         Rate = 0.06
       },
-      [2] = T.RT_239
+      [2] = T.RT_240
     },
     TaskId = 120122
   },
@@ -11165,7 +11178,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_9,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 60,
         CauseHit = "HitFly_XY500Z300",
@@ -11174,7 +11187,7 @@ return ReadOnly("SkillEffects", {
       },
       [3] = {FXId = 120111, Function = "PlayFX"},
       [4] = {FXId = 120114, Function = "PlayFX"},
-      [5] = T.RT_238
+      [5] = T.RT_239
     },
     TaskId = 120123
   },
@@ -11205,7 +11218,7 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = 10.5
       },
-      [3] = T.RT_238
+      [3] = T.RT_239
     },
     TaskId = 120125
   },
@@ -11225,14 +11238,14 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 60,
         CauseHit = "HitFly_XY500Z300",
         Function = "CutToughness",
         Value = 60
       },
-      [3] = T.RT_238
+      [3] = T.RT_239
     },
     TaskId = 120128
   },
@@ -11316,7 +11329,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Melee",
-        DamageTag = T.RT_240,
+        DamageTag = T.RT_241,
         Function = "Damage",
         Rate = "#1"
       },
@@ -11326,7 +11339,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 30
       },
-      [3] = T.RT_238
+      [3] = T.RT_239
     },
     TaskId = 120134
   },
@@ -11355,7 +11368,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         Delay = 0.5,
-        EffectIds = T.RT_241,
+        EffectIds = T.RT_242,
         Function = "Executeskilleffect",
         Skill = 120103
       }
@@ -11367,7 +11380,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         Delay = 0.33,
-        EffectIds = T.RT_241,
+        EffectIds = T.RT_242,
         Function = "Executeskilleffect",
         Skill = 120103
       }
@@ -11379,7 +11392,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         Delay = 0.44,
-        EffectIds = T.RT_241,
+        EffectIds = T.RT_242,
         Function = "Executeskilleffect",
         Skill = 120103
       }
@@ -11391,7 +11404,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         Delay = 0.48,
-        EffectIds = T.RT_241,
+        EffectIds = T.RT_242,
         Function = "Executeskilleffect",
         Skill = 120103
       }
@@ -11404,7 +11417,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Melee",
-        DamageTag = T.RT_240,
+        DamageTag = T.RT_241,
         Function = "Damage",
         Rate = 9.42
       },
@@ -11414,7 +11427,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 20
       },
-      [3] = T.RT_238
+      [3] = T.RT_239
     },
     TaskId = 120141
   },
@@ -11481,11 +11494,11 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_231,
+      [1] = T.RT_232,
       [2] = {
         Function = "GatherTargets",
         GatherSpeed = 2000,
-        LocationOffset = T.RT_242,
+        LocationOffset = T.RT_243,
         StopDistance = 100
       }
     },
@@ -11558,7 +11571,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 120221,
         Function = "CreateSkillCreature",
-        Location = T.RT_243
+        Location = T.RT_244
       }
     },
     TaskId = 120223
@@ -11608,7 +11621,7 @@ return ReadOnly("SkillEffects", {
         Value = 15
       },
       [3] = T.RT_62,
-      [4] = T.RT_244
+      [4] = T.RT_245
     },
     TaskId = 150111
   },
@@ -11624,9 +11637,9 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 80
       },
-      [3] = T.RT_217,
+      [3] = T.RT_218,
       [4] = T.RT_64,
-      [5] = T.RT_245
+      [5] = T.RT_246
     },
     TaskId = 150112
   },
@@ -11663,14 +11676,14 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Large240_InAir",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 50,
         CauseHit = "HitFly_XY800Z600_F",
         Function = "CutToughness",
         Value = 30
       },
-      [3] = T.RT_245
+      [3] = T.RT_246
     },
     TaskId = 150123
   },
@@ -11688,7 +11701,7 @@ return ReadOnly("SkillEffects", {
       },
       [3] = T.RT_154,
       [4] = T.RT_155,
-      [5] = T.RT_244
+      [5] = T.RT_245
     },
     TaskId = 150131
   },
@@ -11706,7 +11719,7 @@ return ReadOnly("SkillEffects", {
       },
       [3] = T.RT_88,
       [4] = T.RT_155,
-      [5] = T.RT_245
+      [5] = T.RT_246
     },
     TaskId = 150132
   },
@@ -11729,7 +11742,7 @@ return ReadOnly("SkillEffects", {
         Duration = 0.05,
         Function = "HitStop"
       },
-      [5] = T.RT_244
+      [5] = T.RT_245
     },
     TaskId = 150133
   },
@@ -11753,7 +11766,7 @@ return ReadOnly("SkillEffects", {
         WeaponFXGroupName = "Hit"
       },
       [4] = T.RT_155,
-      [5] = T.RT_245
+      [5] = T.RT_246
     },
     TaskId = 150134
   },
@@ -11781,7 +11794,7 @@ return ReadOnly("SkillEffects", {
         Duration = 0.07,
         Function = "HitStop"
       },
-      [5] = T.RT_245
+      [5] = T.RT_246
     },
     TaskId = 150135
   },
@@ -11790,7 +11803,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_12,
     TargetFilter = "Char_Rectangle_Middle",
     TaskEffects = {
-      [1] = T.RT_246,
+      [1] = T.RT_247,
       [2] = {
         Function = "ExecutePassiveFunction",
         FunctionName = "ClearComboCount",
@@ -11809,7 +11822,7 @@ return ReadOnly("SkillEffects", {
         Value = 80
       },
       [5] = T.RT_57,
-      [6] = T.RT_245
+      [6] = T.RT_246
     },
     TaskId = 150141
   },
@@ -11858,7 +11871,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_13,
     TargetFilter = "Char_Cylinder_Small240",
     TaskEffects = {
-      [1] = T.RT_246,
+      [1] = T.RT_247,
       [2] = {
         BossValue = 50,
         CauseHit = "HitFly_XY200Z500_F",
@@ -11873,7 +11886,7 @@ return ReadOnly("SkillEffects", {
         WeaponFXGroupName = "Hit"
       },
       [4] = T.RT_155,
-      [5] = T.RT_245
+      [5] = T.RT_246
     },
     TaskId = 150145
   },
@@ -11881,7 +11894,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_248,
+      [1] = T.RT_249,
       [2] = {FXId = 150101, Function = "PlayFX"},
       [3] = {
         CauseHit = "LightHit",
@@ -11889,9 +11902,9 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 45
       },
-      [4] = T.RT_249,
-      [5] = T.RT_250,
-      [6] = T.RT_244,
+      [4] = T.RT_250,
+      [5] = T.RT_251,
+      [6] = T.RT_245,
       [7] = {
         FeedbackPath = "FE_Light_R_Big",
         Function = "PlayForceFeedback",
@@ -11941,14 +11954,14 @@ return ReadOnly("SkillEffects", {
         BaseChar = "Target",
         Condition = 150202,
         CreatureId = 150202,
-        DefaultLocationOffset = T.RT_255,
+        DefaultLocationOffset = T.RT_256,
         Function = "CreateSkillCreature"
       },
       [2] = {
         BaseChar = "Target",
         Condition = 150204,
         CreatureId = 150204,
-        DefaultLocationOffset = T.RT_255,
+        DefaultLocationOffset = T.RT_256,
         Function = "CreateSkillCreature"
       }
     },
@@ -11971,16 +11984,16 @@ return ReadOnly("SkillEffects", {
         Rate = "#1",
         TriggerProbability = "$Source:GetRootSource():GetFloat('Skill04TriggerRate')$"
       },
-      [2] = T.RT_256,
-      [3] = T.RT_257,
+      [2] = T.RT_257,
+      [3] = T.RT_258,
       [4] = {
         CanBeScaled = true,
         FXId = 150201,
         Function = "PlayFX"
       },
-      [5] = T.RT_258,
-      [6] = T.RT_259,
-      [7] = T.RT_260
+      [5] = T.RT_259,
+      [6] = T.RT_260,
+      [7] = T.RT_261
     },
     TaskId = 150213
   },
@@ -11989,22 +12002,22 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_262,
+      [1] = T.RT_263,
       [2] = {
         BossValue = 150,
         CauseHit = "HitFly_XY0Z500",
         Function = "CutToughness",
         Value = 100
       },
-      [3] = T.RT_257,
+      [3] = T.RT_258,
       [4] = {
         CanBeScaled = true,
         FXId = 150202,
         Function = "PlayFX"
       },
-      [5] = T.RT_263,
-      [6] = T.RT_264,
-      [7] = T.RT_260
+      [5] = T.RT_264,
+      [6] = T.RT_265,
+      [7] = T.RT_261
     },
     TaskId = 150214
   },
@@ -12098,12 +12111,12 @@ return ReadOnly("SkillEffects", {
         Rate = "#1",
         TriggerProbability = "$Source:GetRootSource():GetFloat('Skill04TriggerRate')$"
       },
-      [2] = T.RT_256,
-      [3] = T.RT_257,
+      [2] = T.RT_257,
+      [3] = T.RT_258,
       [4] = {FXId = 150203, Function = "PlayFX"},
-      [5] = T.RT_263,
-      [6] = T.RT_259,
-      [7] = T.RT_260
+      [5] = T.RT_264,
+      [6] = T.RT_260,
+      [7] = T.RT_261
     },
     TaskId = 150224
   },
@@ -12112,7 +12125,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_262,
+      [1] = T.RT_263,
       [2] = {
         Function = "GatherTargets",
         GatherSpeed = 2000,
@@ -12123,11 +12136,11 @@ return ReadOnly("SkillEffects", {
         },
         StopDistance = 50
       },
-      [3] = T.RT_257,
+      [3] = T.RT_258,
       [4] = {FXId = 150204, Function = "PlayFX"},
-      [5] = T.RT_258,
-      [6] = T.RT_264,
-      [7] = T.RT_260
+      [5] = T.RT_259,
+      [6] = T.RT_265,
+      [7] = T.RT_261
     },
     TaskId = 150225
   },
@@ -12149,7 +12162,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         BaseChar = "Target",
         CreatureId = 150202,
-        DefaultLocationOffset = T.RT_255,
+        DefaultLocationOffset = T.RT_256,
         Function = "CreateSkillCreature"
       }
     },
@@ -12173,7 +12186,7 @@ return ReadOnly("SkillEffects", {
         FXId = 150313,
         Function = "PlayFX"
       },
-      [4] = T.RT_265,
+      [4] = T.RT_266,
       [5] = {
         BaseChar = "Target",
         Function = "PlaySE",
@@ -12207,7 +12220,7 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = "#3"
       },
-      [4] = T.RT_266,
+      [4] = T.RT_267,
       [5] = {
         Delay = 0.2,
         FXId = 150314,
@@ -12219,7 +12232,7 @@ return ReadOnly("SkillEffects", {
         Function = "PlayFX"
       },
       [7] = {FXId = 150315, Function = "PlayFX"},
-      [8] = T.RT_267,
+      [8] = T.RT_268,
       [9] = {
         Delay = 0.2,
         Function = "PlaySE",
@@ -12562,8 +12575,8 @@ return ReadOnly("SkillEffects", {
         UnitId = 150302,
         UnitType = "MechanismSummon"
       },
-      [3] = T.RT_268,
-      [4] = T.RT_269
+      [3] = T.RT_269,
+      [4] = T.RT_270
     },
     TaskId = 150325
   },
@@ -12572,8 +12585,8 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Middle",
     TaskEffects = {
-      [1] = T.RT_221,
-      [2] = T.RT_270,
+      [1] = T.RT_222,
+      [2] = T.RT_271,
       [3] = {
         CorrectDirection = true,
         FXId = 150307,
@@ -12581,8 +12594,8 @@ return ReadOnly("SkillEffects", {
         IsAttached = true,
         NormalToHit = true
       },
-      [4] = T.RT_266,
-      [5] = T.RT_271
+      [4] = T.RT_267,
+      [5] = T.RT_272
     },
     TaskId = 150326
   },
@@ -12591,8 +12604,8 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Middle",
     TaskEffects = {
-      [1] = T.RT_221,
-      [2] = T.RT_270,
+      [1] = T.RT_222,
+      [2] = T.RT_271,
       [3] = {
         CorrectDirection = true,
         FXId = 150309,
@@ -12600,8 +12613,8 @@ return ReadOnly("SkillEffects", {
         IsAttached = true,
         NormalToHit = true
       },
-      [4] = T.RT_266,
-      [5] = T.RT_271
+      [4] = T.RT_267,
+      [5] = T.RT_272
     },
     TaskId = 150327
   },
@@ -12632,7 +12645,7 @@ return ReadOnly("SkillEffects", {
     EffectExecuteTiming = "Enter",
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_269
+      [1] = T.RT_270
     },
     TaskId = 150331
   },
@@ -12677,7 +12690,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Small",
-    TaskEffects = T.RT_274,
+    TaskEffects = T.RT_275,
     TaskId = 150335
   },
   [150336] = {
@@ -12687,9 +12700,9 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small",
     TaskEffects = {
       [1] = T.RT_84,
-      [2] = T.RT_272,
-      [3] = T.RT_273,
-      [4] = T.RT_271
+      [2] = T.RT_273,
+      [3] = T.RT_274,
+      [4] = T.RT_272
     },
     TaskId = 150336
   },
@@ -12698,7 +12711,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Small",
-    TaskEffects = T.RT_274,
+    TaskEffects = T.RT_275,
     TaskId = 150337
   },
   [150338] = {
@@ -12708,8 +12721,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small",
     TaskEffects = {
       [1] = T.RT_84,
-      [2] = T.RT_272,
-      [3] = T.RT_273,
+      [2] = T.RT_273,
+      [3] = T.RT_274,
       [4] = T.RT_173
     },
     TaskId = 150338
@@ -12724,7 +12737,7 @@ return ReadOnly("SkillEffects", {
       [4] = {BuffId = 150323, Function = "RemoveBuff"},
       [5] = {BuffId = 150324, Function = "RemoveBuff"},
       [6] = {BuffId = 150325, Function = "RemoveBuff"},
-      [7] = T.RT_268
+      [7] = T.RT_269
     },
     TaskId = 150340
   },
@@ -12800,14 +12813,14 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 100,
         CauseHit = "RangedWeapon_Common",
         Function = "CutToughness",
         Value = 100
       },
-      [3] = T.RT_266,
+      [3] = T.RT_267,
       [4] = {
         CanBeScaled = true,
         FXId = 150324,
@@ -12869,7 +12882,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 10
       },
-      [3] = T.RT_267,
+      [3] = T.RT_268,
       [4] = {FXId = 150326, Function = "PlayFX"}
     },
     TaskId = 150345
@@ -12894,7 +12907,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_84,
       [2] = T.RT_175,
       [3] = T.RT_170,
-      [4] = T.RT_272,
+      [4] = T.RT_273,
       [5] = T.RT_48
     },
     TaskId = 150351
@@ -12921,7 +12934,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 20
       },
-      [4] = T.RT_272,
+      [4] = T.RT_273,
       [5] = T.RT_48
     },
     TaskId = 150352
@@ -12944,7 +12957,7 @@ return ReadOnly("SkillEffects", {
         WeaponFXGroupName = "Hit"
       },
       [3] = T.RT_85,
-      [4] = T.RT_272,
+      [4] = T.RT_273,
       [5] = T.RT_48
     },
     TaskId = 150353
@@ -12971,7 +12984,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_84,
-      [2] = T.RT_275,
+      [2] = T.RT_276,
       [3] = T.RT_187,
       [4] = T.RT_48,
       [5] = T.RT_115
@@ -13008,7 +13021,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle",
-    TaskEffects = T.RT_277,
+    TaskEffects = T.RT_278,
     TaskId = 150358
   },
   [150359] = {
@@ -13016,7 +13029,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Small",
-    TaskEffects = T.RT_278,
+    TaskEffects = T.RT_279,
     TaskId = 150359
   },
   [150361] = {
@@ -13029,7 +13042,7 @@ return ReadOnly("SkillEffects", {
       [2] = T.RT_38,
       [3] = T.RT_125,
       [4] = T.RT_126,
-      [5] = T.RT_271
+      [5] = T.RT_272
     },
     TaskId = 150361
   },
@@ -13038,7 +13051,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Small",
-    TaskEffects = T.RT_279,
+    TaskEffects = T.RT_280,
     TaskId = 150362
   },
   [150363] = {
@@ -13062,7 +13075,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Small",
-    TaskEffects = T.RT_279,
+    TaskEffects = T.RT_280,
     TaskId = 150364
   },
   [150365] = {
@@ -13075,7 +13088,7 @@ return ReadOnly("SkillEffects", {
       [2] = T.RT_38,
       [3] = T.RT_89,
       [4] = T.RT_64,
-      [5] = T.RT_271
+      [5] = T.RT_272
     },
     TaskId = 150365
   },
@@ -13085,9 +13098,9 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_84,
-      [2] = T.RT_275,
+      [2] = T.RT_276,
       [3] = T.RT_187,
-      [4] = T.RT_271,
+      [4] = T.RT_272,
       [5] = T.RT_115
     },
     TaskId = 150366
@@ -13131,7 +13144,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_140,
-      [2] = T.RT_275,
+      [2] = T.RT_276,
       [3] = T.RT_108,
       [4] = T.RT_48,
       [5] = T.RT_115
@@ -13190,7 +13203,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Small",
-    TaskEffects = T.RT_278,
+    TaskEffects = T.RT_279,
     TaskId = 150373
   },
   [150381] = {
@@ -13214,7 +13227,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small180",
     TaskEffects = {
       [1] = T.RT_84,
-      [2] = T.RT_281,
+      [2] = T.RT_282,
       [3] = T.RT_185,
       [4] = T.RT_155,
       [5] = T.RT_48
@@ -13228,7 +13241,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small240",
     TaskEffects = {
       [1] = T.RT_84,
-      [2] = T.RT_283,
+      [2] = T.RT_284,
       [3] = {
         CauseHit = "LightHit_100_F",
         Function = "CutToughness",
@@ -13247,7 +13260,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_84,
       [2] = T.RT_38,
-      [3] = T.RT_284,
+      [3] = T.RT_285,
       [4] = T.RT_155,
       [5] = T.RT_48
     },
@@ -13297,7 +13310,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle",
-    TaskEffects = T.RT_277,
+    TaskEffects = T.RT_278,
     TaskId = 150388
   },
   [150389] = {
@@ -13307,7 +13320,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small",
     TaskEffects = {
       [1] = T.RT_183,
-      [2] = T.RT_285,
+      [2] = T.RT_286,
       [3] = {
         CauseHit = "HitFly_XY600Z400_F",
         Function = "CutToughness",
@@ -13338,7 +13351,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small180",
     TaskEffects = {
       [1] = T.RT_84,
-      [2] = T.RT_281,
+      [2] = T.RT_282,
       [3] = T.RT_135,
       [4] = T.RT_173
     },
@@ -13351,7 +13364,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small240",
     TaskEffects = {
       [1] = T.RT_84,
-      [2] = T.RT_283,
+      [2] = T.RT_284,
       [3] = {
         CauseHit = "HitFly_XY200Z300_B",
         Delay = 0.1,
@@ -13430,7 +13443,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_142,
       [2] = T.RT_38,
-      [3] = T.RT_276,
+      [3] = T.RT_277,
       [4] = T.RT_71,
       [5] = T.RT_58
     },
@@ -13443,7 +13456,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Small",
     TaskEffects = {
       [1] = T.RT_183,
-      [2] = T.RT_285,
+      [2] = T.RT_286,
       [3] = T.RT_125,
       [4] = T.RT_64,
       [5] = T.RT_58
@@ -13474,7 +13487,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_286,
+      [1] = T.RT_287,
       [2] = {
         CreatureId = 150401,
         Function = "RemoveSkillCreature"
@@ -13489,7 +13502,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_190,
       [2] = T.RT_101,
       [3] = T.RT_119,
-      [4] = T.RT_287,
+      [4] = T.RT_288,
       [5] = {Function = "PlaySE", SEId = 150419}
     },
     TaskId = 150414
@@ -13519,13 +13532,13 @@ return ReadOnly("SkillEffects", {
       [2] = {
         Function = "AddBullet",
         TotalBullet = 1,
-        UltraWeapon = T.RT_288,
+        UltraWeapon = T.RT_289,
         Value = 300
       },
       [3] = {
         Function = "AddBullet",
         TotalBullet = 1,
-        UltraWeapon = T.RT_288,
+        UltraWeapon = T.RT_289,
         Value = "$Source:GetInt('AddSkill02BulletNum')$"
       },
       [4] = T.RT_123,
@@ -13561,7 +13574,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {BuffId = 150401, Function = "RemoveBuff"},
       [2] = {BuffId = 150424, Function = "RemoveBuff"},
-      [3] = T.RT_286,
+      [3] = T.RT_287,
       [4] = {
         Function = "ExecuteClientPassiveFunction",
         FunctionName = "Skill02OffNoAction"
@@ -13733,14 +13746,14 @@ return ReadOnly("SkillEffects", {
         Function = "EndLoopShoot",
         LoopShootId = 150431
       },
-      [2] = T.RT_289
+      [2] = T.RT_290
     },
     TaskId = 150432
   },
   [150433] = {
     TargetFilter = "ShootingTargets",
     TaskEffects = {
-      [1] = T.RT_290,
+      [1] = T.RT_291,
       [2] = {
         CreatureId = 150402,
         Direction = "Camera",
@@ -13762,13 +13775,13 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_292,
+      [1] = T.RT_293,
       [2] = {
         CanBeScaled = true,
         FXId = 150422,
         Function = "PlayFX"
       },
-      [3] = T.RT_293,
+      [3] = T.RT_294,
       [4] = T.RT_182
     },
     TaskId = 150434
@@ -13778,7 +13791,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_292,
+      [1] = T.RT_293,
       [2] = {
         CanBeScaled = true,
         FXId = 150422,
@@ -13787,7 +13800,7 @@ return ReadOnly("SkillEffects", {
         Overlap = true,
         RandomRotation = T.RT_122
       },
-      [3] = T.RT_293,
+      [3] = T.RT_294,
       [4] = T.RT_182
     },
     TaskId = 150435
@@ -13815,7 +13828,7 @@ return ReadOnly("SkillEffects", {
   [150441] = {
     TargetFilter = "ShootingTargets",
     TaskEffects = {
-      [1] = T.RT_290,
+      [1] = T.RT_291,
       [2] = {
         AimSkeletal = "hit1",
         CreatureId = 150403,
@@ -13823,7 +13836,7 @@ return ReadOnly("SkillEffects", {
         Function = "CreateSkillCreature",
         UseSaveLoc = "SuyiShoot"
       },
-      [3] = T.RT_294,
+      [3] = T.RT_295,
       [4] = T.RT_71,
       [5] = T.RT_123,
       [6] = {
@@ -13852,7 +13865,7 @@ return ReadOnly("SkillEffects", {
         LoopShootId = 150402,
         SkillEffect = {150441, 150436}
       },
-      [3] = T.RT_295
+      [3] = T.RT_296
     },
     TaskId = 150442
   },
@@ -13868,8 +13881,8 @@ return ReadOnly("SkillEffects", {
         Function = "EndLoopShoot",
         LoopShootId = 150402
       },
-      [3] = T.RT_296,
-      [4] = T.RT_289
+      [3] = T.RT_297,
+      [4] = T.RT_290
     },
     TaskId = 150443
   },
@@ -13888,8 +13901,8 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "Char_Cylinder_Small",
     TaskEffects = {
-      [1] = T.RT_292,
-      [2] = T.RT_293,
+      [1] = T.RT_293,
+      [2] = T.RT_294,
       [3] = {
         CanBeScaled = true,
         FXId = 150432,
@@ -13917,14 +13930,14 @@ return ReadOnly("SkillEffects", {
     EffectExecuteTiming = "Leave",
     TargetFilter = "ShootingTargets",
     TaskEffects = {
-      [1] = T.RT_296
+      [1] = T.RT_297
     },
     TaskId = 150447
   },
   [150451] = {
     EffectExecuteTiming = "Enter",
     TargetFilter = "Self",
-    TaskEffects = T.RT_298,
+    TaskEffects = T.RT_299,
     TaskId = 150451
   },
   [150452] = {
@@ -13941,7 +13954,7 @@ return ReadOnly("SkillEffects", {
   [150453] = {
     EffectExecuteTiming = "Enter",
     TargetFilter = "Self",
-    TaskEffects = T.RT_298,
+    TaskEffects = T.RT_299,
     TaskId = 150453
   },
   [150454] = {
@@ -13959,7 +13972,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_292,
+      [1] = T.RT_293,
       [2] = T.RT_184,
       [3] = {
         BossValue = 100,
@@ -13968,7 +13981,7 @@ return ReadOnly("SkillEffects", {
         Value = 100
       },
       [4] = T.RT_115,
-      [5] = T.RT_299
+      [5] = T.RT_300
     },
     TaskId = 150455
   },
@@ -13976,7 +13989,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_292,
+      [1] = T.RT_293,
       [2] = T.RT_184,
       [3] = {
         BossValue = 100,
@@ -13985,14 +13998,14 @@ return ReadOnly("SkillEffects", {
         Value = 100
       },
       [4] = T.RT_115,
-      [5] = T.RT_299
+      [5] = T.RT_300
     },
     TaskId = 150456
   },
   [150457] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_301,
+      [1] = T.RT_302,
       [2] = {
         CorrectDirection = true,
         FXId = 150411,
@@ -14002,7 +14015,7 @@ return ReadOnly("SkillEffects", {
         NormalToHit = true,
         Overlap = true,
         RefinedOverlap = true,
-        ReplaceFXId = T.RT_302
+        ReplaceFXId = T.RT_303
       }
     },
     TaskId = 150457
@@ -14024,7 +14037,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         Function = "AddBullet",
         TotalBullet = 1,
-        UltraWeapon = T.RT_288,
+        UltraWeapon = T.RT_289,
         Value = -1
       }
     },
@@ -14055,17 +14068,17 @@ return ReadOnly("SkillEffects", {
   [150472] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_303,
-      [2] = T.RT_303,
-      [3] = T.RT_303,
-      [4] = T.RT_303
+      [1] = T.RT_304,
+      [2] = T.RT_304,
+      [3] = T.RT_304,
+      [4] = T.RT_304
     },
     TaskId = 150472
   },
   [150473] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_290,
+      [1] = T.RT_291,
       [2] = {
         CreatureId = 150402,
         Function = "CreateSkillCreature",
@@ -14077,7 +14090,7 @@ return ReadOnly("SkillEffects", {
   [150474] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_290,
+      [1] = T.RT_291,
       [2] = {
         CreatureId = 150403,
         Function = "CreateSkillCreature",
@@ -14126,7 +14139,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle240",
-    TaskEffects = T.RT_305,
+    TaskEffects = T.RT_306,
     TaskId = 150521
   },
   [150522] = {
@@ -14195,7 +14208,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_304,
+      [1] = T.RT_305,
       [2] = {
         CauseHit = "LightHit_120",
         Function = "CutToughness",
@@ -14216,7 +14229,7 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = 2
       },
-      [2] = T.RT_306,
+      [2] = T.RT_307,
       [3] = T.RT_41,
       [4] = T.RT_38
     },
@@ -14242,7 +14255,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_308,
+      [1] = T.RT_309,
       [2] = T.RT_143,
       [3] = T.RT_62
     },
@@ -14252,7 +14265,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_308,
+      [1] = T.RT_309,
       [2] = T.RT_143,
       [3] = {
         FXId = 1060212,
@@ -14267,7 +14280,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_308,
+      [1] = T.RT_309,
       [2] = T.RT_143,
       [3] = {
         FXId = 1060213,
@@ -14282,7 +14295,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_308,
+      [1] = T.RT_309,
       [2] = T.RT_143,
       [3] = {
         FXId = 1060214,
@@ -14297,7 +14310,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_308,
+      [1] = T.RT_309,
       [2] = T.RT_143,
       [3] = {
         FXId = 1060215,
@@ -14312,7 +14325,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_308,
+      [1] = T.RT_309,
       [2] = T.RT_143,
       [3] = {
         FXId = 1060216,
@@ -14327,7 +14340,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_308,
+      [1] = T.RT_309,
       [2] = T.RT_143,
       [3] = {
         FXId = 1060217,
@@ -14345,7 +14358,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 1060221,
         Function = "CreateSkillCreature",
-        Location = T.RT_309
+        Location = T.RT_310
       }
     },
     TaskId = 150551
@@ -14354,13 +14367,13 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle",
-    TaskEffects = T.RT_310,
+    TaskEffects = T.RT_311,
     TaskId = 150552
   },
   [150553] = {
     HatredIncrement = 40,
     TargetFilter = "Target",
-    TaskEffects = T.RT_310,
+    TaskEffects = T.RT_311,
     TaskId = 150553
   },
   [150561] = {
@@ -14386,14 +14399,14 @@ return ReadOnly("SkillEffects", {
   [150563] = {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small_Trgt",
-    TaskEffects = T.RT_305,
+    TaskEffects = T.RT_306,
     TaskId = 150563
   },
   [150564] = {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_312
+      [1] = T.RT_313
     },
     TaskId = 150564
   },
@@ -14403,7 +14416,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 160101,
         Function = "CreateSkillCreature",
-        Rotation = T.RT_317
+        Rotation = T.RT_318
       }
     },
     TaskId = 160111
@@ -14414,7 +14427,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 160102,
         Function = "CreateSkillCreature",
-        Rotation = T.RT_318
+        Rotation = T.RT_319
       }
     },
     TaskId = 160112
@@ -14472,7 +14485,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         CauseHit = "HitFly_XY500Z300",
         Function = "CutToughness",
@@ -14535,7 +14548,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "Char_Cylinder_Small_Trgt",
     TaskEffects = {
-      [1] = T.RT_248,
+      [1] = T.RT_249,
       [2] = {
         CauseHit = "LightHit_50_F",
         Function = "CutToughness",
@@ -14562,14 +14575,14 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Middle180",
     TaskEffects = {
       [1] = T.RT_190,
-      [2] = T.RT_319,
+      [2] = T.RT_320,
       [3] = {
         BossValue = 56,
         CauseHit = "HitFly_XY800Z400",
         Function = "CutToughness",
         Value = 40
       },
-      [4] = T.RT_320,
+      [4] = T.RT_321,
       [5] = {
         Delay = 0.1,
         FXId = 25,
@@ -14595,10 +14608,10 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Large_Trgt",
     TaskEffects = {
       [1] = T.RT_190,
-      [2] = T.RT_319,
-      [3] = T.RT_321,
-      [4] = T.RT_320,
-      [5] = T.RT_253,
+      [2] = T.RT_320,
+      [3] = T.RT_322,
+      [4] = T.RT_321,
+      [5] = T.RT_254,
       [6] = {Function = "PlaySE", SEId = 180107}
     },
     TaskId = 180113
@@ -14608,10 +14621,10 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Large_Trgt",
     TaskEffects = {
       [1] = T.RT_190,
-      [2] = T.RT_319,
-      [3] = T.RT_321,
-      [4] = T.RT_320,
-      [5] = T.RT_253,
+      [2] = T.RT_320,
+      [3] = T.RT_322,
+      [4] = T.RT_321,
+      [5] = T.RT_254,
       [6] = {Function = "PlaySE", SEId = 180108}
     },
     TaskId = 180114
@@ -14621,10 +14634,10 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Large_Trgt",
     TaskEffects = {
       [1] = T.RT_190,
-      [2] = T.RT_319,
-      [3] = T.RT_321,
-      [4] = T.RT_320,
-      [5] = T.RT_253,
+      [2] = T.RT_320,
+      [3] = T.RT_322,
+      [4] = T.RT_321,
+      [5] = T.RT_254,
       [6] = {Function = "PlaySE", SEId = 180109}
     },
     TaskId = 180115
@@ -14634,10 +14647,10 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Char_Cylinder_Large_Trgt",
     TaskEffects = {
       [1] = T.RT_190,
-      [2] = T.RT_319,
-      [3] = T.RT_321,
-      [4] = T.RT_320,
-      [5] = T.RT_253,
+      [2] = T.RT_320,
+      [3] = T.RT_322,
+      [4] = T.RT_321,
+      [5] = T.RT_254,
       [6] = {Function = "PlaySE", SEId = 180110}
     },
     TaskId = 180116
@@ -14682,7 +14695,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "AlmostAllFrd_Trgt",
     TaskEffects = {
-      [1] = T.RT_323,
+      [1] = T.RT_324,
       [2] = {
         BuffId = 180131,
         Function = "AddBuff",
@@ -14695,7 +14708,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "AlmostAllFrd_Trgt",
     TaskEffects = {
-      [1] = T.RT_323,
+      [1] = T.RT_324,
       [2] = {
         BuffId = 180132,
         Function = "AddBuff",
@@ -14708,7 +14721,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "AlmostAllFrd_Trgt",
     TaskEffects = {
-      [1] = T.RT_323,
+      [1] = T.RT_324,
       [2] = {
         BuffId = 180133,
         Function = "AddBuff",
@@ -14721,7 +14734,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "AlmostAllFrd_Trgt",
     TaskEffects = {
-      [1] = T.RT_323,
+      [1] = T.RT_324,
       [2] = {
         BuffId = 180134,
         Function = "AddBuff",
@@ -14734,7 +14747,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "AlmostAllFrd_Trgt",
     TaskEffects = {
-      [1] = T.RT_323,
+      [1] = T.RT_324,
       [2] = {
         BuffId = 180135,
         Function = "AddBuff",
@@ -14747,7 +14760,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "AlmostAllFrd_Trgt",
     TaskEffects = {
-      [1] = T.RT_323,
+      [1] = T.RT_324,
       [2] = {
         BuffId = 180136,
         Function = "AddBuff",
@@ -14760,7 +14773,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "AlmostAllFrd_Trgt",
     TaskEffects = {
-      [1] = T.RT_323,
+      [1] = T.RT_324,
       [2] = {
         BuffId = 180137,
         Function = "AddBuff",
@@ -14773,7 +14786,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "AlmostAllFrd_Trgt",
     TaskEffects = {
-      [1] = T.RT_323,
+      [1] = T.RT_324,
       [2] = {
         BuffId = 180138,
         Function = "AddBuff",
@@ -14874,7 +14887,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = T.RT_411,
       [3] = {
         BossValue = 233,
@@ -15714,7 +15727,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 100,
         CauseHit = "HitFly_XY200Z300",
@@ -15734,7 +15747,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK",
-        DamageTag = T.RT_247,
+        DamageTag = T.RT_248,
         Function = "Damage",
         Rate = "#1"
       },
@@ -15910,7 +15923,7 @@ return ReadOnly("SkillEffects", {
       },
       [2] = {
         BaseAttr = "ATK_Ultra",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = "$Source:GetFloat('LinenSkill02ShootRate')*Source:GetCurrentWeaponAttr('MultiShoot', 1)$"
       },
@@ -16835,7 +16848,7 @@ return ReadOnly("SkillEffects", {
     },
     TargetFilter = "Char_Sphere_Middle",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 60,
         CauseHit = "HitFly_Force_Common",
@@ -16857,7 +16870,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = T.RT_551,
       [3] = {FXId = 330102, Function = "PlayFX"},
       [4] = T.RT_550
@@ -16869,7 +16882,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_221
+      [1] = T.RT_222
     },
     TaskId = 330125
   },
@@ -16878,7 +16891,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Middle",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = T.RT_551,
       [3] = {FXId = 330103, Function = "PlayFX"},
       [4] = {
@@ -16990,7 +17003,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_190,
       [2] = T.RT_582,
       [3] = T.RT_119,
-      [4] = T.RT_287,
+      [4] = T.RT_288,
       [5] = {Function = "PlaySE", SEId = 410104}
     },
     TaskId = 410114
@@ -17002,7 +17015,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_190,
       [2] = T.RT_582,
       [3] = T.RT_119,
-      [4] = T.RT_287,
+      [4] = T.RT_288,
       [5] = T.RT_583
     },
     TaskId = 410115
@@ -17088,7 +17101,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BuffId = 410121,
         Function = "AddBuff",
@@ -17104,7 +17117,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BuffId = 410122,
         Function = "AddBuff",
@@ -17120,7 +17133,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = T.RT_582,
       [3] = T.RT_584,
       [4] = T.RT_119
@@ -17138,7 +17151,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Sphere_large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = T.RT_119,
       [3] = {FXId = 410127, Function = "PlayFX"},
       [4] = {
@@ -17283,7 +17296,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 89,
         CauseHit = "HitFly_XY800Z400",
@@ -17324,7 +17337,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Middle",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 105,
         CauseHit = "LightHit",
@@ -17387,7 +17400,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "Zhiliu_TT",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 90,
         CauseHit = "HitFly_XY0Z500",
@@ -17517,7 +17530,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 25,
         CauseHit = "LightHit",
@@ -17546,7 +17559,7 @@ return ReadOnly("SkillEffects", {
     AllowSkillRangeModify = true,
     TargetFilter = "Char_Cylinder_Large",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 100,
         CauseHit = "HitFly_XY0Z500",
@@ -17860,7 +17873,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Char_Cylinder_Large_Front",
     TaskEffects = {
-      [1] = T.RT_221,
+      [1] = T.RT_222,
       [2] = {
         BossValue = 50,
         CauseHit = "HitFly_XY800Z400",
@@ -17903,7 +17916,7 @@ return ReadOnly("SkillEffects", {
     TaskId = 420131
   },
   [420141] = {
-    NotifyName = T.RT_229,
+    NotifyName = T.RT_230,
     TargetFilter = "Self",
     TaskEffects = {
       [1] = {BuffId = 420114, Function = "RemoveBuff"},
@@ -17921,7 +17934,7 @@ return ReadOnly("SkillEffects", {
     TaskId = 420141
   },
   [420142] = {
-    NotifyName = T.RT_229,
+    NotifyName = T.RT_230,
     TargetFilter = "AlmostAllFrd",
     TaskEffects = {
       [1] = {
@@ -18275,7 +18288,7 @@ return ReadOnly("SkillEffects", {
   [430117] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_257,
+      [1] = T.RT_258,
       [2] = {Function = "PlaySE", SEId = 430102}
     },
     TaskId = 430117
@@ -18415,7 +18428,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "MaxHp",
-        DamageTag = T.RT_247,
+        DamageTag = T.RT_248,
         DamageType = "Thunder",
         Function = "Damage",
         Rate = "#1",
@@ -18428,7 +18441,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 33
       },
-      [3] = T.RT_257,
+      [3] = T.RT_258,
       [4] = {
         BaseChar = "Target",
         CreatureId = 430102,
@@ -18866,7 +18879,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Char",
-        DamageTag = T.RT_247,
+        DamageTag = T.RT_248,
         DamageType = "Wind",
         Function = "Damage",
         Rate = "#1"
@@ -18902,7 +18915,7 @@ return ReadOnly("SkillEffects", {
         LastTime = 0.3
       },
       [3] = T.RT_634,
-      [4] = T.RT_265
+      [4] = T.RT_266
     },
     TaskId = 530111
   },
@@ -18962,7 +18975,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 15
       },
-      [3] = T.RT_361,
+      [3] = T.RT_362,
       [4] = {
         BuffId = 530102,
         Function = "AddBuff",
@@ -23667,7 +23680,7 @@ return ReadOnly("SkillEffects", {
           0,
           200
         },
-        Rotation = T.RT_318
+        Rotation = T.RT_319
       }
     },
     TaskId = 850438
@@ -23795,7 +23808,7 @@ return ReadOnly("SkillEffects", {
         CreatureId = 850406,
         Function = "CreateSkillCreature",
         Location = T.RT_1035,
-        Rotation = T.RT_317
+        Rotation = T.RT_318
       }
     },
     TaskId = 850448
@@ -23852,7 +23865,7 @@ return ReadOnly("SkillEffects", {
         CreatureId = 850406,
         Function = "CreateSkillCreature",
         Location = T.RT_1036,
-        Rotation = T.RT_318
+        Rotation = T.RT_319
       }
     },
     TaskId = 850452
@@ -23890,7 +23903,7 @@ return ReadOnly("SkillEffects", {
         CreatureId = 850406,
         Function = "CreateSkillCreature",
         Location = T.RT_1036,
-        Rotation = T.RT_317
+        Rotation = T.RT_318
       }
     },
     TaskId = 850454
@@ -27138,7 +27151,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.2
       },
@@ -27150,7 +27163,7 @@ return ReadOnly("SkillEffects", {
   [851288] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_349,
+      [1] = T.RT_350,
       [2] = {
         AttachToTarget = true,
         FXId = 2020106,
@@ -27159,7 +27172,7 @@ return ReadOnly("SkillEffects", {
         NormalToHit = true,
         Overlap = true,
         RefinedOverlap = true,
-        ReplaceFXId = T.RT_302
+        ReplaceFXId = T.RT_303
       }
     },
     TaskId = 851288
@@ -27179,7 +27192,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 1.2
       },
@@ -29142,62 +29155,62 @@ return ReadOnly("SkillEffects", {
       [1] = {
         FormationId = 851801,
         Function = "BossSPSaveLocs",
-        Location = T.RT_344,
+        Location = T.RT_345,
         SetSaveLocs = "First"
       },
       [2] = {
         CreatureId = 851802,
         Function = "CreateSkillCreature",
-        Location = T.RT_344,
+        Location = T.RT_345,
         UseRelativeOffset = true,
         UseSaveLoc = "First1"
       },
       [3] = {
         CreatureId = 851802,
         Function = "CreateSkillCreature",
-        Location = T.RT_344,
+        Location = T.RT_345,
         UseRelativeOffset = true,
         UseSaveLoc = "First2"
       },
       [4] = {
         CreatureId = 851802,
         Function = "CreateSkillCreature",
-        Location = T.RT_344,
+        Location = T.RT_345,
         UseRelativeOffset = true,
         UseSaveLoc = "First3"
       },
       [5] = {
         CreatureId = 851802,
         Function = "CreateSkillCreature",
-        Location = T.RT_344,
+        Location = T.RT_345,
         UseRelativeOffset = true,
         UseSaveLoc = "First4"
       },
       [6] = {
         CreatureId = 851802,
         Function = "CreateSkillCreature",
-        Location = T.RT_344,
+        Location = T.RT_345,
         UseRelativeOffset = true,
         UseSaveLoc = "First5"
       },
       [7] = {
         CreatureId = 851802,
         Function = "CreateSkillCreature",
-        Location = T.RT_344,
+        Location = T.RT_345,
         UseRelativeOffset = true,
         UseSaveLoc = "First6"
       },
       [8] = {
         CreatureId = 851802,
         Function = "CreateSkillCreature",
-        Location = T.RT_344,
+        Location = T.RT_345,
         UseRelativeOffset = true,
         UseSaveLoc = "First7"
       },
       [9] = {
         CreatureId = 851802,
         Function = "CreateSkillCreature",
-        Location = T.RT_344,
+        Location = T.RT_345,
         UseRelativeOffset = true,
         UseSaveLoc = "First8"
       }
@@ -29771,7 +29784,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Sphere_50_360",
     TaskEffects = {
       [1] = T.RT_622,
-      [2] = T.RT_10
+      [2] = T.RT_10,
+      [3] = {Function = "PlaySE", SEId = 851910}
     },
     TaskId = 851902
   },
@@ -29844,7 +29858,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "BossLiecheHand_Skill01",
     TaskEffects = {
       [1] = T.RT_14,
-      [2] = T.RT_1263
+      [2] = T.RT_1263,
+      [3] = T.RT_1264
     },
     TaskId = 851908
   },
@@ -29863,14 +29878,14 @@ return ReadOnly("SkillEffects", {
         Function = "Heal",
         Rate = 0.25
       },
-      [2] = T.RT_1275
+      [2] = T.RT_1276
     },
     TaskId = 851912
   },
   [851913] = {
     NotifyName = T.RT_403,
     TaskEffects = {
-      [1] = T.RT_1276,
+      [1] = T.RT_1277,
       [2] = {
         CreatureId = 851903,
         Delay = 2,
@@ -29893,7 +29908,8 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_1133,
       [2] = T.RT_10,
-      [3] = T.RT_1232
+      [3] = T.RT_1232,
+      [4] = {Function = "PlaySE", SEId = 851913}
     },
     TaskId = 851914
   },
@@ -30001,7 +30017,7 @@ return ReadOnly("SkillEffects", {
   },
   [851918] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1277,
+    TaskEffects = T.RT_1279,
     TaskId = 851918
   },
   [851919] = {
@@ -30027,14 +30043,15 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_22,
       [2] = T.RT_10,
-      [3] = {FXId = 851917, Function = "PlayFX"}
+      [3] = {FXId = 851917, Function = "PlayFX"},
+      [4] = T.RT_1280
     },
     TaskId = 851920
   },
   [851921] = {
     NotifyName = T.RT_2,
     TargetFilter = "Self",
-    TaskEffects = T.RT_1278,
+    TaskEffects = T.RT_1281,
     TaskId = 851921
   },
   [851922] = {
@@ -30053,10 +30070,10 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1280,
-      [2] = T.RT_1281,
+      [1] = T.RT_1283,
+      [2] = T.RT_1284,
       [3] = {
-        AttrRates = T.RT_1279,
+        AttrRates = T.RT_1282,
         Function = "CreateUnit",
         MaxSummonCount = 1,
         SingleSummonCount = 1,
@@ -30070,7 +30087,16 @@ return ReadOnly("SkillEffects", {
   [851924] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossLiecheBomb_Burst",
-    TaskEffects = T.RT_1283,
+    TaskEffects = {
+      [1] = T.RT_622,
+      [2] = T.RT_1285,
+      [3] = {
+        BaseChar = "Self",
+        Function = "PlaySE",
+        SEId = 851920
+      },
+      [4] = {Function = "PlaySE", SEId = 851922}
+    },
     TaskId = 851924
   },
   [851925] = {
@@ -30091,13 +30117,16 @@ return ReadOnly("SkillEffects", {
   },
   [851926] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_1278,
+    TaskEffects = T.RT_1281,
     TaskId = 851926
   },
   [851927] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossLiecheBomb_Skill01Burst",
-    TaskEffects = T.RT_1283,
+    TaskEffects = {
+      [1] = T.RT_622,
+      [2] = T.RT_1285
+    },
     TaskId = 851927
   },
   [851929] = {
@@ -30118,7 +30147,8 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_22,
       [2] = T.RT_10,
-      [3] = {FXId = 851902, Function = "PlayFX"}
+      [3] = {FXId = 851902, Function = "PlayFX"},
+      [4] = T.RT_1280
     },
     TaskId = 851930
   },
@@ -30126,8 +30156,9 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "BossLiecheCannon_Skill09Step02",
     TaskEffects = {
       [1] = T.RT_22,
-      [2] = T.RT_1282,
-      [3] = {FXId = 851903, Function = "PlayFX"}
+      [2] = T.RT_1285,
+      [3] = {FXId = 851903, Function = "PlayFX"},
+      [4] = {Function = "PlaySE", SEId = 851926}
     },
     TaskId = 851931
   },
@@ -30135,7 +30166,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "BossLiecheCannon_Skill09AllLieche",
     TaskEffects = {
       [1] = T.RT_22,
-      [2] = T.RT_1282,
+      [2] = T.RT_1285,
       [3] = {FXId = 851906, Function = "PlayFX"},
       [4] = {FXId = 851908, Function = "PlayFX"}
     },
@@ -30154,7 +30185,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "BossLiecheCannon_Skill09Attach",
     TaskEffects = {
       [1] = T.RT_22,
-      [2] = T.RT_1282,
+      [2] = T.RT_1285,
       [3] = {FXId = 851905, Function = "PlayFX"}
     },
     TaskId = 851934
@@ -30162,7 +30193,7 @@ return ReadOnly("SkillEffects", {
   [851935] = {
     TaskEffects = {
       [1] = {
-        CreatureId = 851913,
+        CreatureId = 851914,
         Function = "CreateSkillCreature"
       }
     },
@@ -30172,7 +30203,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "BossLiecheCannon_Skill09Step03",
     TaskEffects = {
       [1] = T.RT_22,
-      [2] = T.RT_1282,
+      [2] = T.RT_1285,
       [3] = {FXId = 851904, Function = "PlayFX"}
     },
     TaskId = 851936
@@ -30198,10 +30229,10 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_9,
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1280,
-      [2] = T.RT_1284,
+      [1] = T.RT_1283,
+      [2] = T.RT_1286,
       [3] = {
-        AttrRates = T.RT_1279,
+        AttrRates = T.RT_1282,
         Function = "CreateUnit",
         MaxSummonCount = 1,
         SingleSummonCount = 1,
@@ -30216,10 +30247,10 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_12,
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1281,
-      [2] = T.RT_1284,
+      [1] = T.RT_1284,
+      [2] = T.RT_1286,
       [3] = {
-        AttrRates = T.RT_1279,
+        AttrRates = T.RT_1282,
         Function = "CreateUnit",
         MaxSummonCount = 1,
         SingleSummonCount = 1,
@@ -30245,7 +30276,7 @@ return ReadOnly("SkillEffects", {
   },
   [851941] = {
     TargetFilter = "Mon_Sphere_50_360",
-    TaskEffects = T.RT_1277,
+    TaskEffects = T.RT_1279,
     TaskId = 851941
   },
   [851943] = {
@@ -30265,7 +30296,8 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_22,
       [2] = T.RT_10,
-      [3] = {FXId = 851907, Function = "PlayFX"}
+      [3] = {FXId = 851907, Function = "PlayFX"},
+      [4] = {Function = "PlaySE", SEId = 851937}
     },
     TaskId = 851944
   },
@@ -30305,7 +30337,7 @@ return ReadOnly("SkillEffects", {
   [851950] = {
     NotifyName = T.RT_839,
     TaskEffects = {
-      [1] = T.RT_1285,
+      [1] = T.RT_1287,
       [2] = {
         CreatureId = 851903,
         Delay = 2,
@@ -30343,7 +30375,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_839,
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1285,
+      [1] = T.RT_1287,
       [2] = {
         CreatureId = 851903,
         Delay = 0.2,
@@ -30365,7 +30397,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_403,
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1276,
+      [1] = T.RT_1277,
       [2] = {
         CreatureId = 851903,
         Delay = 0.2,
@@ -30386,64 +30418,64 @@ return ReadOnly("SkillEffects", {
   [851963] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1265,
-      [2] = T.RT_1266,
-      [3] = T.RT_1267,
-      [4] = T.RT_1287,
-      [5] = T.RT_1288,
-      [6] = T.RT_1289,
-      [7] = T.RT_1290,
-      [8] = T.RT_1291,
-      [9] = T.RT_1292,
-      [10] = T.RT_1286
+      [1] = T.RT_1266,
+      [2] = T.RT_1267,
+      [3] = T.RT_1268,
+      [4] = T.RT_1289,
+      [5] = T.RT_1290,
+      [6] = T.RT_1291,
+      [7] = T.RT_1292,
+      [8] = T.RT_1293,
+      [9] = T.RT_1294,
+      [10] = T.RT_1288
     },
     TaskId = 851963
   },
   [851964] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1268,
-      [2] = T.RT_1269,
-      [3] = T.RT_1270,
-      [4] = T.RT_1287,
-      [5] = T.RT_1293,
-      [6] = T.RT_1294,
-      [7] = T.RT_1295,
-      [8] = T.RT_1291,
-      [9] = T.RT_1292,
-      [10] = T.RT_1286
+      [1] = T.RT_1269,
+      [2] = T.RT_1270,
+      [3] = T.RT_1271,
+      [4] = T.RT_1289,
+      [5] = T.RT_1295,
+      [6] = T.RT_1296,
+      [7] = T.RT_1297,
+      [8] = T.RT_1293,
+      [9] = T.RT_1294,
+      [10] = T.RT_1288
     },
     TaskId = 851964
   },
   [851965] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1265,
-      [2] = T.RT_1271,
-      [3] = T.RT_1272,
-      [4] = T.RT_1287,
-      [5] = T.RT_1288,
-      [6] = T.RT_1289,
-      [7] = T.RT_1290,
-      [8] = T.RT_1294,
-      [9] = T.RT_1292,
-      [10] = T.RT_1295
+      [1] = T.RT_1266,
+      [2] = T.RT_1272,
+      [3] = T.RT_1273,
+      [4] = T.RT_1289,
+      [5] = T.RT_1290,
+      [6] = T.RT_1291,
+      [7] = T.RT_1292,
+      [8] = T.RT_1296,
+      [9] = T.RT_1294,
+      [10] = T.RT_1297
     },
     TaskId = 851965
   },
   [851966] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1273,
-      [2] = T.RT_1266,
-      [3] = T.RT_1274,
-      [4] = T.RT_1293,
-      [5] = T.RT_1288,
-      [6] = T.RT_1289,
-      [7] = T.RT_1290,
-      [8] = T.RT_1291,
-      [9] = T.RT_1295,
-      [10] = T.RT_1286
+      [1] = T.RT_1274,
+      [2] = T.RT_1267,
+      [3] = T.RT_1275,
+      [4] = T.RT_1295,
+      [5] = T.RT_1290,
+      [6] = T.RT_1291,
+      [7] = T.RT_1292,
+      [8] = T.RT_1293,
+      [9] = T.RT_1297,
+      [10] = T.RT_1288
     },
     TaskId = 851966
   },
@@ -30475,7 +30507,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         BuffId = 851904,
         Function = "AddBuff",
-        LastTime = 1.5
+        LastTime = 0.5
       }
     },
     TaskId = 851971
@@ -30494,12 +30526,12 @@ return ReadOnly("SkillEffects", {
   },
   [851976] = {
     TargetFilter = "BossLiecheCore_Skill05Burst1",
-    TaskEffects = T.RT_1296,
+    TaskEffects = T.RT_1299,
     TaskId = 851976
   },
   [851977] = {
     TargetFilter = "BossLiecheCore_Skill05Burst2",
-    TaskEffects = T.RT_1296,
+    TaskEffects = T.RT_1299,
     TaskId = 851977
   },
   [851979] = {
@@ -30527,38 +30559,39 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_7,
       [2] = T.RT_10,
-      [3] = T.RT_661
+      [3] = T.RT_661,
+      [4] = T.RT_1264
     },
     TaskId = 851981
   },
   [851982] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossLiecheHand_Skill0201",
-    TaskEffects = T.RT_1297,
+    TaskEffects = T.RT_1300,
     TaskId = 851982
   },
   [851983] = {
     NotifyName = T.RT_9,
     TargetFilter = "BossLiecheHand_Skill0202",
-    TaskEffects = T.RT_1298,
+    TaskEffects = T.RT_1301,
     TaskId = 851983
   },
   [851984] = {
     NotifyName = T.RT_9,
     TargetFilter = "BossLiecheHand_Skill0301",
-    TaskEffects = T.RT_1298,
+    TaskEffects = T.RT_1301,
     TaskId = 851984
   },
   [851985] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossLiecheHand_Skill0401",
-    TaskEffects = T.RT_1297,
+    TaskEffects = T.RT_1300,
     TaskId = 851985
   },
   [851986] = {
     NotifyName = T.RT_9,
     TargetFilter = "BossLiecheHand_Skill0402",
-    TaskEffects = T.RT_1298,
+    TaskEffects = T.RT_1301,
     TaskId = 851986
   },
   [851987] = {
@@ -30576,26 +30609,27 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Sphere_400_360",
     TaskEffects = {
       [1] = T.RT_731,
-      [2] = {FXId = 851913, Function = "PlayFX"}
+      [2] = {FXId = 851913, Function = "PlayFX"},
+      [3] = {Function = "PlaySE", SEId = 851902}
     },
     TaskId = 851988
   },
   [851989] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossLiecheHand_Skill0601",
-    TaskEffects = T.RT_1299,
+    TaskEffects = T.RT_1303,
     TaskId = 851989
   },
   [851990] = {
     NotifyName = T.RT_9,
     TargetFilter = "BossLiecheHand_Skill0602",
-    TaskEffects = T.RT_1299,
+    TaskEffects = T.RT_1303,
     TaskId = 851990
   },
   [851991] = {
     NotifyName = T.RT_12,
     TargetFilter = "BossLiecheHand_Skill0603",
-    TaskEffects = T.RT_1299,
+    TaskEffects = T.RT_1303,
     TaskId = 851991
   },
   [851992] = {
@@ -30669,7 +30703,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "BossLiecheCannon_Skill0101",
     TaskEffects = {
       [1] = T.RT_622,
-      [2] = T.RT_1263
+      [2] = T.RT_1263,
+      [3] = {Function = "PlaySE", SEId = 851907}
     },
     TaskId = 851998
   },
@@ -30853,7 +30888,7 @@ return ReadOnly("SkillEffects", {
   [852005] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossAida_Skill02_BoxL",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 852005
   },
   [852006] = {
@@ -30878,27 +30913,27 @@ return ReadOnly("SkillEffects", {
   },
   [852008] = {
     TargetFilter = "BossAida_Skill04_Box1",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 852008
   },
   [852009] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1301,
-      [2] = T.RT_1303,
-      [3] = T.RT_1304,
-      [4] = T.RT_1305,
-      [5] = T.RT_1306,
+      [1] = T.RT_1305,
+      [2] = T.RT_1307,
+      [3] = T.RT_1308,
+      [4] = T.RT_1309,
+      [5] = T.RT_1310,
       [6] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200507,
         UseBattlePointRotation = 1
       },
-      [7] = T.RT_1307,
-      [8] = T.RT_1308,
-      [9] = T.RT_1309,
-      [10] = T.RT_1302
+      [7] = T.RT_1311,
+      [8] = T.RT_1312,
+      [9] = T.RT_1313,
+      [10] = T.RT_1306
     },
     TaskId = 852009
   },
@@ -30911,15 +30946,15 @@ return ReadOnly("SkillEffects", {
         UseBattlePointID = 85200502,
         UseBattlePointRotation = 1
       },
-      [2] = T.RT_1303,
-      [3] = T.RT_1304,
-      [4] = T.RT_1305,
-      [5] = T.RT_1306,
-      [6] = T.RT_1310,
-      [7] = T.RT_1307,
-      [8] = T.RT_1308,
-      [9] = T.RT_1309,
-      [10] = T.RT_1302
+      [2] = T.RT_1307,
+      [3] = T.RT_1308,
+      [4] = T.RT_1309,
+      [5] = T.RT_1310,
+      [6] = T.RT_1314,
+      [7] = T.RT_1311,
+      [8] = T.RT_1312,
+      [9] = T.RT_1313,
+      [10] = T.RT_1306
     },
     TaskId = 852010
   },
@@ -30948,7 +30983,7 @@ return ReadOnly("SkillEffects", {
   [852014] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossAida_Skill02_BoxR",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 852014
   },
   [852015] = {
@@ -30991,7 +31026,7 @@ return ReadOnly("SkillEffects", {
   },
   [852018] = {
     TargetFilter = "BossAida_Skill07_Box1",
-    TaskEffects = T.RT_1311,
+    TaskEffects = T.RT_1315,
     TaskId = 852018
   },
   [852019] = {
@@ -31009,7 +31044,7 @@ return ReadOnly("SkillEffects", {
   },
   [852020] = {
     TargetFilter = "BossAida_Skill07_Box2",
-    TaskEffects = T.RT_1311,
+    TaskEffects = T.RT_1315,
     TaskId = 852020
   },
   [852021] = {
@@ -31093,7 +31128,7 @@ return ReadOnly("SkillEffects", {
   [852029] = {
     NotifyName = T.RT_2,
     TargetFilter = "Self",
-    TaskEffects = T.RT_1313,
+    TaskEffects = T.RT_1317,
     TaskId = 852029
   },
   [852030] = {
@@ -31243,7 +31278,7 @@ return ReadOnly("SkillEffects", {
   },
   [852034] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 852034
   },
   [852035] = {
@@ -31257,8 +31292,8 @@ return ReadOnly("SkillEffects", {
         UnitType = "Monster",
         UseSaveLoc = "85200901"
       },
-      [2] = T.RT_1314,
-      [3] = T.RT_1315
+      [2] = T.RT_1318,
+      [3] = T.RT_1319
     },
     TaskId = 852035
   },
@@ -31273,8 +31308,8 @@ return ReadOnly("SkillEffects", {
         UnitType = "Monster",
         UseSaveLoc = "85200902"
       },
-      [2] = T.RT_1316,
-      [3] = T.RT_1315
+      [2] = T.RT_1320,
+      [3] = T.RT_1319
     },
     TaskId = 852036
   },
@@ -31289,8 +31324,8 @@ return ReadOnly("SkillEffects", {
         UnitType = "Monster",
         UseSaveLoc = "85200903"
       },
-      [2] = T.RT_1314,
-      [3] = T.RT_1316
+      [2] = T.RT_1318,
+      [3] = T.RT_1320
     },
     TaskId = 852037
   },
@@ -31639,84 +31674,84 @@ return ReadOnly("SkillEffects", {
   [852064] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1301,
+      [1] = T.RT_1305,
       [2] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200503,
         UseBattlePointRotation = 1
       },
-      [3] = T.RT_1304,
-      [4] = T.RT_1305,
-      [5] = T.RT_1306,
-      [6] = T.RT_1310,
-      [7] = T.RT_1307,
-      [8] = T.RT_1308,
-      [9] = T.RT_1309,
-      [10] = T.RT_1302
+      [3] = T.RT_1308,
+      [4] = T.RT_1309,
+      [5] = T.RT_1310,
+      [6] = T.RT_1314,
+      [7] = T.RT_1311,
+      [8] = T.RT_1312,
+      [9] = T.RT_1313,
+      [10] = T.RT_1306
     },
     TaskId = 852064
   },
   [852065] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1301,
-      [2] = T.RT_1303,
+      [1] = T.RT_1305,
+      [2] = T.RT_1307,
       [3] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200504,
         UseBattlePointRotation = 1
       },
-      [4] = T.RT_1305,
-      [5] = T.RT_1306,
-      [6] = T.RT_1310,
-      [7] = T.RT_1307,
-      [8] = T.RT_1308,
-      [9] = T.RT_1309,
-      [10] = T.RT_1302
+      [4] = T.RT_1309,
+      [5] = T.RT_1310,
+      [6] = T.RT_1314,
+      [7] = T.RT_1311,
+      [8] = T.RT_1312,
+      [9] = T.RT_1313,
+      [10] = T.RT_1306
     },
     TaskId = 852065
   },
   [852066] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1301,
-      [2] = T.RT_1303,
-      [3] = T.RT_1304,
+      [1] = T.RT_1305,
+      [2] = T.RT_1307,
+      [3] = T.RT_1308,
       [4] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200505,
         UseBattlePointRotation = 1
       },
-      [5] = T.RT_1306,
-      [6] = T.RT_1310,
-      [7] = T.RT_1307,
-      [8] = T.RT_1308,
-      [9] = T.RT_1309,
-      [10] = T.RT_1302
+      [5] = T.RT_1310,
+      [6] = T.RT_1314,
+      [7] = T.RT_1311,
+      [8] = T.RT_1312,
+      [9] = T.RT_1313,
+      [10] = T.RT_1306
     },
     TaskId = 852066
   },
   [852067] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1301,
-      [2] = T.RT_1303,
-      [3] = T.RT_1304,
-      [4] = T.RT_1305,
+      [1] = T.RT_1305,
+      [2] = T.RT_1307,
+      [3] = T.RT_1308,
+      [4] = T.RT_1309,
       [5] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200506,
         UseBattlePointRotation = 1
       },
-      [6] = T.RT_1310,
-      [7] = T.RT_1307,
-      [8] = T.RT_1308,
-      [9] = T.RT_1309,
-      [10] = T.RT_1302
+      [6] = T.RT_1314,
+      [7] = T.RT_1311,
+      [8] = T.RT_1312,
+      [9] = T.RT_1313,
+      [10] = T.RT_1306
     },
     TaskId = 852067
   },
@@ -31795,7 +31830,7 @@ return ReadOnly("SkillEffects", {
   [852073] = {
     NotifyName = T.RT_2,
     TargetFilter = "Self",
-    TaskEffects = T.RT_1313,
+    TaskEffects = T.RT_1317,
     TaskId = 852073
   },
   [852074] = {
@@ -31811,7 +31846,7 @@ return ReadOnly("SkillEffects", {
   },
   [852075] = {
     TargetFilter = "BossAida_Skill17_Cylinder1",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 852075
   },
   [852076] = {
@@ -32078,27 +32113,27 @@ return ReadOnly("SkillEffects", {
   [852090] = {
     NotifyName = T.RT_9,
     TargetFilter = "Self",
-    TaskEffects = T.RT_1313,
+    TaskEffects = T.RT_1317,
     TaskId = 852090
   },
   [852091] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1317,
-      [2] = T.RT_1319,
-      [3] = T.RT_1320,
-      [4] = T.RT_1321,
-      [5] = T.RT_1322,
+      [1] = T.RT_1321,
+      [2] = T.RT_1323,
+      [3] = T.RT_1324,
+      [4] = T.RT_1325,
+      [5] = T.RT_1326,
       [6] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200807,
         UseBattlePointRotation = 1
       },
-      [7] = T.RT_1323,
-      [8] = T.RT_1324,
-      [9] = T.RT_1325,
-      [10] = T.RT_1318
+      [7] = T.RT_1327,
+      [8] = T.RT_1328,
+      [9] = T.RT_1329,
+      [10] = T.RT_1322
     },
     TaskId = 852091
   },
@@ -32111,99 +32146,99 @@ return ReadOnly("SkillEffects", {
         UseBattlePointID = 85200802,
         UseBattlePointRotation = 1
       },
-      [2] = T.RT_1319,
-      [3] = T.RT_1320,
-      [4] = T.RT_1321,
-      [5] = T.RT_1322,
-      [6] = T.RT_1326,
-      [7] = T.RT_1323,
-      [8] = T.RT_1324,
-      [9] = T.RT_1325,
-      [10] = T.RT_1318
+      [2] = T.RT_1323,
+      [3] = T.RT_1324,
+      [4] = T.RT_1325,
+      [5] = T.RT_1326,
+      [6] = T.RT_1330,
+      [7] = T.RT_1327,
+      [8] = T.RT_1328,
+      [9] = T.RT_1329,
+      [10] = T.RT_1322
     },
     TaskId = 852092
   },
   [852093] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1317,
+      [1] = T.RT_1321,
       [2] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200803,
         UseBattlePointRotation = 1
       },
-      [3] = T.RT_1320,
-      [4] = T.RT_1321,
-      [5] = T.RT_1322,
-      [6] = T.RT_1326,
-      [7] = T.RT_1323,
-      [8] = T.RT_1324,
-      [9] = T.RT_1325,
-      [10] = T.RT_1318
+      [3] = T.RT_1324,
+      [4] = T.RT_1325,
+      [5] = T.RT_1326,
+      [6] = T.RT_1330,
+      [7] = T.RT_1327,
+      [8] = T.RT_1328,
+      [9] = T.RT_1329,
+      [10] = T.RT_1322
     },
     TaskId = 852093
   },
   [852094] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1317,
-      [2] = T.RT_1319,
+      [1] = T.RT_1321,
+      [2] = T.RT_1323,
       [3] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200804,
         UseBattlePointRotation = 1
       },
-      [4] = T.RT_1321,
-      [5] = T.RT_1322,
-      [6] = T.RT_1326,
-      [7] = T.RT_1323,
-      [8] = T.RT_1324,
-      [9] = T.RT_1325,
-      [10] = T.RT_1318
+      [4] = T.RT_1325,
+      [5] = T.RT_1326,
+      [6] = T.RT_1330,
+      [7] = T.RT_1327,
+      [8] = T.RT_1328,
+      [9] = T.RT_1329,
+      [10] = T.RT_1322
     },
     TaskId = 852094
   },
   [852095] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1317,
-      [2] = T.RT_1319,
-      [3] = T.RT_1320,
+      [1] = T.RT_1321,
+      [2] = T.RT_1323,
+      [3] = T.RT_1324,
       [4] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200805,
         UseBattlePointRotation = 1
       },
-      [5] = T.RT_1322,
-      [6] = T.RT_1326,
-      [7] = T.RT_1323,
-      [8] = T.RT_1324,
-      [9] = T.RT_1325,
-      [10] = T.RT_1318
+      [5] = T.RT_1326,
+      [6] = T.RT_1330,
+      [7] = T.RT_1327,
+      [8] = T.RT_1328,
+      [9] = T.RT_1329,
+      [10] = T.RT_1322
     },
     TaskId = 852095
   },
   [852096] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1317,
-      [2] = T.RT_1319,
-      [3] = T.RT_1320,
-      [4] = T.RT_1321,
+      [1] = T.RT_1321,
+      [2] = T.RT_1323,
+      [3] = T.RT_1324,
+      [4] = T.RT_1325,
       [5] = {
         CreatureId = 852009,
         Function = "CreateSkillCreature",
         UseBattlePointID = 85200806,
         UseBattlePointRotation = 1
       },
-      [6] = T.RT_1326,
-      [7] = T.RT_1323,
-      [8] = T.RT_1324,
-      [9] = T.RT_1325,
-      [10] = T.RT_1318
+      [6] = T.RT_1330,
+      [7] = T.RT_1327,
+      [8] = T.RT_1328,
+      [9] = T.RT_1329,
+      [10] = T.RT_1322
     },
     TaskId = 852096
   },
@@ -32255,7 +32290,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Self",
     TaskEffects = {
       [1] = {
-        AttrRates = T.RT_1349,
+        AttrRates = T.RT_1353,
         Function = "CreateUnit",
         LifeTime = -1,
         MaxSummonCount = 20,
@@ -32271,7 +32306,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Self",
     TaskEffects = {
       [1] = {
-        AttrRates = T.RT_1349,
+        AttrRates = T.RT_1353,
         Function = "CreateUnit",
         LifeTime = -1,
         MaxSummonCount = 20,
@@ -32287,7 +32322,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Self",
     TaskEffects = {
       [1] = {
-        AttrRates = T.RT_1349,
+        AttrRates = T.RT_1353,
         Function = "CreateUnit",
         LifeTime = -1,
         MaxSummonCount = 20,
@@ -32303,7 +32338,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Self",
     TaskEffects = {
       [1] = {
-        AttrRates = T.RT_1349,
+        AttrRates = T.RT_1353,
         Function = "CreateUnit",
         LifeTime = -1,
         MaxSummonCount = 20,
@@ -32341,12 +32376,12 @@ return ReadOnly("SkillEffects", {
   },
   [852508] = {
     TargetFilter = "Mon_Cylinder_4000_1000_360_OtFr",
-    TaskEffects = T.RT_1351,
+    TaskEffects = T.RT_1355,
     TaskId = 852508
   },
   [852509] = {
     TargetFilter = "Mon_Cylinder_4000_1000_360_OtFr",
-    TaskEffects = T.RT_1353,
+    TaskEffects = T.RT_1357,
     TaskId = 852509
   },
   [852511] = {
@@ -32372,7 +32407,7 @@ return ReadOnly("SkillEffects", {
   },
   [852512] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1354,
+    TaskEffects = T.RT_1358,
     TaskId = 852512
   },
   [852513] = {
@@ -32387,7 +32422,7 @@ return ReadOnly("SkillEffects", {
   [852516] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossYidai_Skill02_Cylinder",
-    TaskEffects = T.RT_1354,
+    TaskEffects = T.RT_1358,
     TaskId = 852516
   },
   [852521] = {
@@ -32430,7 +32465,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_9,
     TargetFilter = "BTTarget",
     TaskEffects = {
-      [1] = T.RT_1355
+      [1] = T.RT_1359
     },
     TaskId = 852527
   },
@@ -32446,7 +32481,7 @@ return ReadOnly("SkillEffects", {
   [852532] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossYidai_Skill05_OtherFriendCylinder",
-    TaskEffects = T.RT_1353,
+    TaskEffects = T.RT_1357,
     TaskId = 852532
   },
   [852536] = {
@@ -32478,7 +32513,7 @@ return ReadOnly("SkillEffects", {
   },
   [852539] = {
     TargetFilter = "BossYidai_Skill06_OtherFriendCylinder",
-    TaskEffects = T.RT_1353,
+    TaskEffects = T.RT_1357,
     TaskId = 852539
   },
   [852541] = {
@@ -32490,7 +32525,7 @@ return ReadOnly("SkillEffects", {
         UseBattlePointID = 4,
         UseBattlePointRotation = 1
       },
-      [2] = T.RT_1356,
+      [2] = T.RT_1360,
       [3] = {
         CreatureId = 852505,
         Function = "CreateSkillCreature",
@@ -32509,7 +32544,7 @@ return ReadOnly("SkillEffects", {
         UseBattlePointID = 15,
         UseBattlePointRotation = 1
       },
-      [2] = T.RT_1357,
+      [2] = T.RT_1361,
       [3] = {
         CreatureId = 852505,
         Function = "CreateSkillCreature",
@@ -32522,7 +32557,7 @@ return ReadOnly("SkillEffects", {
   [852543] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1356,
+      [1] = T.RT_1360,
       [2] = {
         CreatureId = 852505,
         Function = "CreateSkillCreature",
@@ -32541,7 +32576,7 @@ return ReadOnly("SkillEffects", {
   [852544] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1357,
+      [1] = T.RT_1361,
       [2] = {
         CreatureId = 852505,
         Function = "CreateSkillCreature",
@@ -32566,7 +32601,7 @@ return ReadOnly("SkillEffects", {
         UseBattlePointID = 4,
         UseBattlePointRotation = 1
       },
-      [2] = T.RT_1358,
+      [2] = T.RT_1362,
       [3] = {
         CreatureId = 852506,
         Function = "CreateSkillCreature",
@@ -32585,7 +32620,7 @@ return ReadOnly("SkillEffects", {
         UseBattlePointID = 15,
         UseBattlePointRotation = 1
       },
-      [2] = T.RT_1359,
+      [2] = T.RT_1363,
       [3] = {
         CreatureId = 852506,
         Function = "CreateSkillCreature",
@@ -32598,7 +32633,7 @@ return ReadOnly("SkillEffects", {
   [852547] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1358,
+      [1] = T.RT_1362,
       [2] = {
         CreatureId = 852506,
         Function = "CreateSkillCreature",
@@ -32617,7 +32652,7 @@ return ReadOnly("SkillEffects", {
   [852548] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1359,
+      [1] = T.RT_1363,
       [2] = {
         CreatureId = 852506,
         Function = "CreateSkillCreature",
@@ -32646,7 +32681,7 @@ return ReadOnly("SkillEffects", {
   [852551] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossYidai_Skill08_OtherFriend",
-    TaskEffects = T.RT_1351,
+    TaskEffects = T.RT_1355,
     TaskId = 852551
   },
   [852552] = {
@@ -32853,7 +32888,7 @@ return ReadOnly("SkillEffects", {
   [852567] = {
     TargetFilter = "BossYidai_Skill10_Cylinder3",
     TaskEffects = {
-      [1] = T.RT_1355,
+      [1] = T.RT_1359,
       [2] = T.RT_1001,
       [3] = {FXId = 852507, Function = "PlayFX"}
     },
@@ -32951,7 +32986,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mech_Bomb_MonAndSelf",
     TaskEffects = {
       [1] = T.RT_578,
-      [2] = T.RT_1360
+      [2] = T.RT_1364
     },
     TaskId = 900005
   },
@@ -32981,7 +33016,7 @@ return ReadOnly("SkillEffects", {
   [900008] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_1362,
+      [1] = T.RT_1366,
       [2] = T.RT_682
     },
     TaskId = 900008
@@ -32995,7 +33030,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_3,
-      [2] = T.RT_1360
+      [2] = T.RT_1364
     },
     TaskId = 900010
   },
@@ -33024,7 +33059,7 @@ return ReadOnly("SkillEffects", {
   [900013] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_1363,
+      [1] = T.RT_1367,
       [2] = {
         CauseHit = "HitFly_XY0Z1000",
         Function = "CutToughness",
@@ -33036,7 +33071,7 @@ return ReadOnly("SkillEffects", {
   [900014] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_1363,
+      [1] = T.RT_1367,
       [2] = T.RT_107
     },
     TaskId = 900014
@@ -33112,7 +33147,7 @@ return ReadOnly("SkillEffects", {
         FunctionName = "RandomLocation",
         Vars = T.RT_972
       },
-      [2] = T.RT_1362,
+      [2] = T.RT_1366,
       [3] = T.RT_682
     },
     TaskId = 900020
@@ -33155,7 +33190,7 @@ return ReadOnly("SkillEffects", {
   [900023] = {
     TargetFilter = "Mech_PlayerSingle",
     TaskEffects = {
-      [1] = T.RT_1364
+      [1] = T.RT_1368
     },
     TaskId = 900023
   },
@@ -33164,16 +33199,16 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_16,
       [2] = T.RT_552,
-      [3] = T.RT_1365
+      [3] = T.RT_1369
     },
     TaskId = 900024
   },
   [900025] = {
     TargetFilter = "Mech_Target_OtFr",
     TaskEffects = {
-      [1] = T.RT_1366,
+      [1] = T.RT_1370,
       [2] = T.RT_552,
-      [3] = T.RT_1365
+      [3] = T.RT_1369
     },
     TaskId = 900025
   },
@@ -33181,20 +33216,20 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = {Function = "Heal", Value = 800},
-      [2] = T.RT_1367
+      [2] = T.RT_1371
     },
     TaskId = 900026
   },
   [900027] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_237,
+    TaskEffects = T.RT_238,
     TaskId = 900027
   },
   [900028] = {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = {Function = "Heal", Value = 30},
-      [2] = T.RT_236,
+      [2] = T.RT_237,
       [3] = {Function = "AddBullet", Value = 10}
     },
     TaskId = 900028
@@ -33203,7 +33238,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = {Function = "Heal", Value = 300},
-      [2] = T.RT_1367
+      [2] = T.RT_1371
     },
     TaskId = 900029
   },
@@ -33228,7 +33263,7 @@ return ReadOnly("SkillEffects", {
         Function = "AddBuff",
         LastTime = 100000
       },
-      [2] = T.RT_1364
+      [2] = T.RT_1368
     },
     TaskId = 900032
   },
@@ -33248,7 +33283,7 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = 999
       },
-      [2] = T.RT_1368
+      [2] = T.RT_1372
     },
     TaskId = 900041
   },
@@ -33256,23 +33291,23 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mech_TouchBomb_Player",
     TaskEffects = {
       [1] = {FXId = 900039, Function = "PlayFX"},
-      [2] = T.RT_1363
+      [2] = T.RT_1367
     },
     TaskId = 900042
   },
   [900043] = {
     TargetFilter = "Mech_TouchBomb_Monster",
     TaskEffects = {
-      [1] = T.RT_1369,
-      [2] = T.RT_1370
+      [1] = T.RT_1373,
+      [2] = T.RT_1374
     },
     TaskId = 900043
   },
   [900044] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_1369,
-      [2] = T.RT_1370,
+      [1] = T.RT_1373,
+      [2] = T.RT_1374,
       [3] = {Function = "PlaySE", SEId = 9000405}
     },
     TaskId = 900044
@@ -33280,36 +33315,36 @@ return ReadOnly("SkillEffects", {
   [900045] = {
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_1369,
+      [1] = T.RT_1373,
       [2] = {
         FXId = 900042,
         Function = "PlayFX",
         IsAttached = true
       },
-      [3] = T.RT_1370
+      [3] = T.RT_1374
     },
     TaskId = 900045
   },
   [900046] = {
     TargetFilter = "Mech_RockBomb_Player",
     TaskEffects = {
-      [1] = T.RT_1363,
-      [2] = T.RT_1370
+      [1] = T.RT_1367,
+      [2] = T.RT_1374
     },
     TaskId = 900046
   },
   [900047] = {
     TargetFilter = "Mech_RockBomb_Monster",
     TaskEffects = {
-      [1] = T.RT_1369,
+      [1] = T.RT_1373,
       [2] = {FXId = 900040, Function = "PlayFX"},
-      [3] = T.RT_1370
+      [3] = T.RT_1374
     },
     TaskId = 900047
   },
   [900048] = {
     TargetFilter = "Mech_BallBomb_Player",
-    TaskEffects = T.RT_1371,
+    TaskEffects = T.RT_1375,
     TaskId = 900048
   },
   [900049] = {
@@ -33329,15 +33364,15 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "LaserTarget",
     TaskEffects = {
       [1] = T.RT_16,
-      [2] = T.RT_1372
+      [2] = T.RT_1376
     },
     TaskId = 900050
   },
   [900051] = {
     TargetFilter = "Mech_Target_OtFr",
     TaskEffects = {
-      [1] = T.RT_1366,
-      [2] = T.RT_1372
+      [1] = T.RT_1370,
+      [2] = T.RT_1376
     },
     TaskId = 900051
   },
@@ -33360,14 +33395,14 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_743,
-      [2] = T.RT_1373,
+      [2] = T.RT_1377,
       [3] = {Function = "PlaySE", SEId = 9000602}
     },
     TaskId = 900062
   },
   [900063] = {
     TaskEffects = {
-      [1] = T.RT_1373
+      [1] = T.RT_1377
     },
     TaskId = 900063
   },
@@ -33379,13 +33414,13 @@ return ReadOnly("SkillEffects", {
   },
   [900070] = {
     TargetFilter = "Mech_IceBomb_Player",
-    TaskEffects = T.RT_1371,
+    TaskEffects = T.RT_1375,
     TaskId = 900070
   },
   [900071] = {
     TargetFilter = "Mech_IceBomb_Monster",
     TaskEffects = {
-      [1] = T.RT_1363,
+      [1] = T.RT_1367,
       [2] = {FXId = 900043, Function = "PlayFX"},
       [3] = {
         CauseHit = "LightHit_IceBomb",
@@ -33474,7 +33509,7 @@ return ReadOnly("SkillEffects", {
   },
   [900078] = {
     TargetFilter = "Mech_Bomb_Player",
-    TaskEffects = T.RT_1376,
+    TaskEffects = T.RT_1380,
     TaskId = 900078
   },
   [900079] = {
@@ -33486,7 +33521,7 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = 50
       },
-      [2] = T.RT_1377
+      [2] = T.RT_1381
     },
     TaskId = 900079
   },
@@ -33506,7 +33541,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_300_200_360",
     TaskEffects = {
       [1] = T.RT_680,
-      [2] = T.RT_1377
+      [2] = T.RT_1381
     },
     TaskId = 900081
   },
@@ -33555,7 +33590,7 @@ return ReadOnly("SkillEffects", {
   },
   [900086] = {
     TargetFilter = "Mech_Bomb",
-    TaskEffects = T.RT_1376,
+    TaskEffects = T.RT_1380,
     TaskId = 900086
   },
   [900087] = {
@@ -33566,7 +33601,7 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = 50
       },
-      [2] = T.RT_1377
+      [2] = T.RT_1381
     },
     TaskId = 900087
   },
@@ -33574,17 +33609,17 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "LaserTarget",
     TaskEffects = {
       [1] = T.RT_16,
-      [2] = T.RT_1378,
-      [3] = T.RT_1365
+      [2] = T.RT_1382,
+      [3] = T.RT_1369
     },
     TaskId = 900088
   },
   [900089] = {
     TargetFilter = "Mech_Target_OtFr",
     TaskEffects = {
-      [1] = T.RT_1366,
-      [2] = T.RT_1378,
-      [3] = T.RT_1365
+      [1] = T.RT_1370,
+      [2] = T.RT_1382,
+      [3] = T.RT_1369
     },
     TaskId = 900089
   },
@@ -33592,9 +33627,9 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_230_200_180",
     TaskEffects = {
-      [1] = T.RT_1379,
+      [1] = T.RT_1383,
       [2] = T.RT_661,
-      [3] = T.RT_1380
+      [3] = T.RT_1384
     },
     TaskId = 900101
   },
@@ -33604,7 +33639,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_1060,
       [2] = T.RT_661,
-      [3] = T.RT_1380
+      [3] = T.RT_1384
     },
     TaskId = 900102
   },
@@ -33619,7 +33654,7 @@ return ReadOnly("SkillEffects", {
       },
       [2] = T.RT_661,
       [3] = T.RT_107,
-      [4] = T.RT_1380
+      [4] = T.RT_1384
     },
     TaskId = 900103
   },
@@ -33644,7 +33679,7 @@ return ReadOnly("SkillEffects", {
         Function = "PlayFX",
         Overlap = true
       },
-      [3] = T.RT_1384
+      [3] = T.RT_1388
     },
     TaskId = 900202
   },
@@ -33663,16 +33698,16 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_230_200_180",
     TaskEffects = {
-      [1] = T.RT_1379,
+      [1] = T.RT_1383,
       [2] = T.RT_661,
-      [3] = T.RT_1384
+      [3] = T.RT_1388
     },
     TaskId = 900204
   },
   [900301] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_230_200_180",
-    TaskEffects = T.RT_1388,
+    TaskEffects = T.RT_1392,
     TaskId = 900301
   },
   [900302] = {
@@ -33735,7 +33770,7 @@ return ReadOnly("SkillEffects", {
       },
       [2] = T.RT_39,
       [3] = T.RT_661,
-      [4] = T.RT_1387
+      [4] = T.RT_1391
     },
     TaskId = 900305
   },
@@ -33860,14 +33895,14 @@ return ReadOnly("SkillEffects", {
         Function = "Heal",
         Rate = 0.2
       },
-      [2] = T.RT_1275
+      [2] = T.RT_1276
     },
     TaskId = 900408
   },
   [900501] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_230_200_180",
-    TaskEffects = T.RT_1388,
+    TaskEffects = T.RT_1392,
     TaskId = 900501
   },
   [900502] = {
@@ -33896,7 +33931,7 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Sphere_800_360",
     TaskEffects = {
-      [1] = T.RT_354,
+      [1] = T.RT_355,
       [2] = T.RT_18,
       [3] = T.RT_657
     },
@@ -33915,7 +33950,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_22,
       [2] = T.RT_661,
       [3] = T.RT_39,
-      [4] = T.RT_1387
+      [4] = T.RT_1391
     },
     TaskId = 900506
   },
@@ -33932,7 +33967,7 @@ return ReadOnly("SkillEffects", {
   [900508] = {
     TargetFilter = "SQ_Baozha_Die_Sphere",
     TaskEffects = {
-      [1] = T.RT_354,
+      [1] = T.RT_355,
       [2] = T.RT_10,
       [3] = T.RT_657
     },
@@ -33945,7 +33980,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_23,
       [2] = T.RT_661,
       [3] = T.RT_39,
-      [4] = T.RT_1393
+      [4] = T.RT_1397
     },
     TaskId = 900601
   },
@@ -33956,7 +33991,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_7,
       [2] = T.RT_661,
       [3] = T.RT_39,
-      [4] = T.RT_1393
+      [4] = T.RT_1397
     },
     TaskId = 900602
   },
@@ -33967,7 +34002,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_22,
       [2] = T.RT_661,
       [3] = T.RT_39,
-      [4] = T.RT_1393
+      [4] = T.RT_1397
     },
     TaskId = 900603
   },
@@ -33998,7 +34033,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_1122,
       [2] = T.RT_10,
       [3] = T.RT_4,
-      [4] = T.RT_1393
+      [4] = T.RT_1397
     },
     TaskId = 900606
   },
@@ -34077,7 +34112,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_680,
       [2] = T.RT_10,
       [3] = T.RT_4,
-      [4] = T.RT_1393
+      [4] = T.RT_1397
     },
     TaskId = 900613
   },
@@ -34159,38 +34194,38 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_680,
       [2] = T.RT_661,
       [3] = T.RT_39,
-      [4] = T.RT_1393
+      [4] = T.RT_1397
     },
     TaskId = 900620
   },
   [900701] = {
     NotifyName = T.RT_2,
     TargetFilter = "BTTarget",
-    TaskEffects = T.RT_1395,
+    TaskEffects = T.RT_1399,
     TaskId = 900701
   },
   [900702] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1398,
+    TaskEffects = T.RT_1402,
     TaskId = 900702
   },
   [900703] = {
-    TaskEffects = T.RT_1400,
+    TaskEffects = T.RT_1404,
     TaskId = 900703
   },
   [900704] = {
     NotifyName = T.RT_9,
     TargetFilter = "BTTarget",
-    TaskEffects = T.RT_1395,
+    TaskEffects = T.RT_1399,
     TaskId = 900704
   },
   [900705] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1398,
+    TaskEffects = T.RT_1402,
     TaskId = 900705
   },
   [900706] = {
-    TaskEffects = T.RT_1400,
+    TaskEffects = T.RT_1404,
     TaskId = 900706
   },
   [900707] = {
@@ -34226,11 +34261,11 @@ return ReadOnly("SkillEffects", {
   [950001] = {
     NotifyName = T.RT_2,
     TaskEffects = {
-      [1] = T.RT_1401,
-      [2] = T.RT_1401,
-      [3] = T.RT_1401,
-      [4] = T.RT_1401,
-      [5] = T.RT_1401
+      [1] = T.RT_1405,
+      [2] = T.RT_1405,
+      [3] = T.RT_1405,
+      [4] = T.RT_1405,
+      [5] = T.RT_1405
     },
     TaskId = 950001
   },
@@ -34270,7 +34305,7 @@ return ReadOnly("SkillEffects", {
         Function = "CreateSkillCreature",
         Location = T.RT_416
       },
-      [3] = T.RT_1401
+      [3] = T.RT_1405
     },
     TaskId = 950004
   },
@@ -34289,14 +34324,14 @@ return ReadOnly("SkillEffects", {
   [950006] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1332
+      [1] = T.RT_1336
     },
     TaskId = 950006
   },
   [950007] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1333
+      [1] = T.RT_1337
     },
     TaskId = 950007
   },
@@ -34479,16 +34514,16 @@ return ReadOnly("SkillEffects", {
   [950019] = {
     NotifyName = T.RT_2,
     TaskEffects = {
-      [1] = T.RT_1402,
-      [2] = T.RT_1402,
-      [3] = T.RT_1402
+      [1] = T.RT_1406,
+      [2] = T.RT_1406,
+      [3] = T.RT_1406
     },
     TaskId = 950019
   },
   [950020] = {
     TargetFilter = "Mon_Sphere_300_360",
     TaskEffects = {
-      [1] = T.RT_1368,
+      [1] = T.RT_1372,
       [2] = {
         FXId = 950005,
         Function = "PlayFX",
@@ -34552,19 +34587,19 @@ return ReadOnly("SkillEffects", {
   [950101] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_150_200_180",
-    TaskEffects = T.RT_1404,
+    TaskEffects = T.RT_1408,
     TaskId = 950101
   },
   [950102] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_150_200_180",
-    TaskEffects = T.RT_1404,
+    TaskEffects = T.RT_1408,
     TaskId = 950102
   },
   [950103] = {
     NotifyName = T.RT_9,
     TargetFilter = "Mon_Cylinder_150_200_180",
-    TaskEffects = T.RT_1404,
+    TaskEffects = T.RT_1408,
     TaskId = 950103
   },
   [950104] = {
@@ -34578,7 +34613,7 @@ return ReadOnly("SkillEffects", {
         Value = 100
       },
       [3] = T.RT_4,
-      [4] = T.RT_1403
+      [4] = T.RT_1407
     },
     TaskId = 950104
   },
@@ -34708,19 +34743,19 @@ return ReadOnly("SkillEffects", {
   [950405] = {
     NotifyName = T.RT_2,
     TargetFilter = "NEWuyou_Skill02Burst1",
-    TaskEffects = T.RT_1406,
+    TaskEffects = T.RT_1410,
     TaskId = 950405
   },
   [950406] = {
     NotifyName = T.RT_9,
     TargetFilter = "NEWuyou_Skill02Burst2",
-    TaskEffects = T.RT_1406,
+    TaskEffects = T.RT_1410,
     TaskId = 950406
   },
   [950407] = {
     NotifyName = T.RT_12,
     TargetFilter = "NEWuyou_Skill02Burst3",
-    TaskEffects = T.RT_1406,
+    TaskEffects = T.RT_1410,
     TaskId = 950407
   },
   [950408] = {
@@ -34740,7 +34775,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_230_200_180",
     TaskEffects = {
       [1] = T.RT_22,
-      [2] = T.RT_1407,
+      [2] = T.RT_1411,
       [3] = {FXId = 950501, Function = "PlayFX"}
     },
     TaskId = 950501
@@ -34750,7 +34785,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Sphere_300_360",
     TaskEffects = {
       [1] = T.RT_792,
-      [2] = T.RT_1405
+      [2] = T.RT_1409
     },
     TaskId = 950502
   },
@@ -34759,7 +34794,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_400_200_180",
     TaskEffects = {
       [1] = T.RT_14,
-      [2] = T.RT_1407
+      [2] = T.RT_1411
     },
     TaskId = 950601
   },
@@ -34779,31 +34814,31 @@ return ReadOnly("SkillEffects", {
   [950701] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_150_200_180",
-    TaskEffects = T.RT_1409,
+    TaskEffects = T.RT_1413,
     TaskId = 950701
   },
   [950702] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_150_200_180",
-    TaskEffects = T.RT_1409,
+    TaskEffects = T.RT_1413,
     TaskId = 950702
   },
   [951001] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_150_200_180",
-    TaskEffects = T.RT_1411,
+    TaskEffects = T.RT_1415,
     TaskId = 951001
   },
   [951002] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_150_200_180",
-    TaskEffects = T.RT_1411,
+    TaskEffects = T.RT_1415,
     TaskId = 951002
   },
   [951003] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_150_200_180",
-    TaskEffects = T.RT_1411,
+    TaskEffects = T.RT_1415,
     TaskId = 951003
   },
   [980101] = {
@@ -34811,7 +34846,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_230_200_180",
     TaskEffects = {
       [1] = T.RT_660,
-      [2] = T.RT_1412
+      [2] = T.RT_1416
     },
     TaskId = 980101
   },
@@ -34820,14 +34855,14 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_230_200_180",
     TaskEffects = {
       [1] = T.RT_16,
-      [2] = T.RT_1412
+      [2] = T.RT_1416
     },
     TaskId = 980102
   },
   [980103] = {
     NotifyName = T.RT_12,
     TargetFilter = "Mon_Cylinder_230_200_180",
-    TaskEffects = T.RT_1413,
+    TaskEffects = T.RT_1417,
     TaskId = 980103
   },
   [980104] = {
@@ -34836,7 +34871,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_660,
       [2] = T.RT_10,
-      [3] = T.RT_1412
+      [3] = T.RT_1416
     },
     TaskId = 980104
   },
@@ -34846,14 +34881,14 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_16,
       [2] = T.RT_1158,
-      [3] = T.RT_1412
+      [3] = T.RT_1416
     },
     TaskId = 980105
   },
   [980106] = {
     NotifyName = T.RT_12,
     TargetFilter = "Mon_Cylinder_300_200_180",
-    TaskEffects = T.RT_1413,
+    TaskEffects = T.RT_1417,
     TaskId = 980106
   },
   [980107] = {
@@ -34882,25 +34917,25 @@ return ReadOnly("SkillEffects", {
   [980201] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_230_300_90",
-    TaskEffects = T.RT_1415,
+    TaskEffects = T.RT_1419,
     TaskId = 980201
   },
   [980202] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Cylinder_230_200_180",
-    TaskEffects = T.RT_1416,
+    TaskEffects = T.RT_1420,
     TaskId = 980202
   },
   [980203] = {
     NotifyName = T.RT_526,
     TargetFilter = "Mon_Cylinder_300_200_180",
-    TaskEffects = T.RT_1416,
+    TaskEffects = T.RT_1420,
     TaskId = 980203
   },
   [980204] = {
     NotifyName = T.RT_2,
     TargetFilter = "Mon_Rectangle_80_200_100",
-    TaskEffects = T.RT_1415,
+    TaskEffects = T.RT_1419,
     TaskId = 980204
   },
   [980301] = {
@@ -34908,7 +34943,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_150_50_90",
     TaskEffects = {
       [1] = T.RT_660,
-      [2] = T.RT_1417
+      [2] = T.RT_1421
     },
     TaskId = 980301
   },
@@ -34917,7 +34952,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_150_50_90",
     TaskEffects = {
       [1] = T.RT_16,
-      [2] = T.RT_1417
+      [2] = T.RT_1421
     },
     TaskId = 980302
   },
@@ -34927,7 +34962,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_660,
       [2] = T.RT_10,
-      [3] = T.RT_1417
+      [3] = T.RT_1421
     },
     TaskId = 980303
   },
@@ -34947,7 +34982,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_16,
       [2] = T.RT_10,
-      [3] = T.RT_1417
+      [3] = T.RT_1421
     },
     TaskId = 980305
   },
@@ -34957,20 +34992,20 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_7,
       [2] = T.RT_1158,
-      [3] = T.RT_1417
+      [3] = T.RT_1421
     },
     TaskId = 980306
   },
   [980401] = {
     NotifyName = T.RT_2,
     TargetFilter = "Self",
-    TaskEffects = T.RT_1419,
+    TaskEffects = T.RT_1423,
     TaskId = 980401
   },
   [980501] = {
     NotifyName = T.RT_2,
     TargetFilter = "Self",
-    TaskEffects = T.RT_1419,
+    TaskEffects = T.RT_1423,
     TaskId = 980501
   },
   [980701] = {
@@ -38728,38 +38763,38 @@ return ReadOnly("SkillEffects", {
   [1532001] = {
     TargetFilter = "Char_Cylinder_Small",
     TaskEffects = {
-      [1] = T.RT_314,
+      [1] = T.RT_315,
       [2] = {
         CauseHit = "LightHit_150_F",
         Delay = 0.1,
         Function = "CutToughness",
         Value = 15
       },
-      [3] = T.RT_315,
+      [3] = T.RT_316,
       [4] = {
         FXId = 15321,
         Function = "PlayFX",
         IsAttached = true
       },
       [5] = T.RT_47,
-      [6] = T.RT_316
+      [6] = T.RT_317
     },
     TaskId = 1532001
   },
   [1532002] = {
     TargetFilter = "Char_Cylinder_Small",
     TaskEffects = {
-      [1] = T.RT_314,
+      [1] = T.RT_315,
       [2] = {
         CauseHit = "LightHit_100",
         Delay = 0.1,
         Function = "CutToughness",
         Value = 15
       },
-      [3] = T.RT_315,
+      [3] = T.RT_316,
       [4] = {FXId = 15322, Function = "PlayFX"},
       [5] = T.RT_47,
-      [6] = T.RT_316
+      [6] = T.RT_317
     },
     TaskId = 1532002
   },
@@ -38792,11 +38827,11 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_337,
+      [1] = T.RT_338,
       [2] = {FXId = 2010121, Function = "PlayFX"},
-      [3] = T.RT_338,
+      [3] = T.RT_339,
       [4] = {Function = "PlaySE", SEId = 2010106},
-      [5] = T.RT_339
+      [5] = T.RT_340
     },
     TaskId = 2010112
   },
@@ -38823,7 +38858,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_340,
+      [1] = T.RT_341,
       [2] = {FXId = 2010122, Function = "PlayFX"},
       [3] = {
         CauseHit = "HitFly_Force_Common",
@@ -38831,9 +38866,9 @@ return ReadOnly("SkillEffects", {
         Value = 20
       },
       [4] = T.RT_71,
-      [5] = T.RT_341,
-      [6] = T.RT_342,
-      [7] = T.RT_343
+      [5] = T.RT_342,
+      [6] = T.RT_343,
+      [7] = T.RT_344
     },
     TaskId = 2010114,
     UseWeaponGradeLevel = true
@@ -38843,7 +38878,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_340,
+      [1] = T.RT_341,
       [2] = {
         FXId = 2010122,
         Function = "PlayFX",
@@ -38856,9 +38891,9 @@ return ReadOnly("SkillEffects", {
         Value = 10
       },
       [4] = T.RT_71,
-      [5] = T.RT_341,
-      [6] = T.RT_342,
-      [7] = T.RT_343
+      [5] = T.RT_342,
+      [6] = T.RT_343,
+      [7] = T.RT_344
     },
     TaskId = 2010115,
     UseWeaponGradeLevel = true
@@ -38883,7 +38918,7 @@ return ReadOnly("SkillEffects", {
         CreatureId = 2010121,
         Direction = "Camera",
         Function = "CreateSkillCreature",
-        Location = T.RT_344
+        Location = T.RT_345
       },
       [2] = T.RT_71,
       [3] = {
@@ -38912,7 +38947,7 @@ return ReadOnly("SkillEffects", {
       },
       [2] = T.RT_71,
       [3] = T.RT_97,
-      [4] = T.RT_347
+      [4] = T.RT_348
     },
     TaskId = 2010411
   },
@@ -38920,20 +38955,20 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_337,
-      [2] = T.RT_348,
+      [1] = T.RT_338,
+      [2] = T.RT_349,
       [3] = {
         CauseHit = "HeavyHit_120",
         Function = "CutToughness",
         Value = 100
       },
-      [4] = T.RT_339
+      [4] = T.RT_340
     },
     TaskId = 2010412
   },
   [2010413] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_352,
+    TaskEffects = T.RT_353,
     TaskId = 2010413
   },
   [2010414] = {
@@ -38950,7 +38985,7 @@ return ReadOnly("SkillEffects", {
   [2010415] = {
     TargetFilter = "Char_Pistol_20104",
     TaskEffects = {
-      [1] = T.RT_353,
+      [1] = T.RT_354,
       [2] = {
         BossValue = 100,
         CauseHit = "HitFly_XY0Z800",
@@ -38974,7 +39009,7 @@ return ReadOnly("SkillEffects", {
   [2010417] = {
     TargetFilter = "Char_Pistol_20104",
     TaskEffects = {
-      [1] = T.RT_353,
+      [1] = T.RT_354,
       [2] = {
         BossValue = 100,
         CauseHit = "HitDown02",
@@ -39003,7 +39038,7 @@ return ReadOnly("SkillEffects", {
       },
       [2] = T.RT_71,
       [3] = T.RT_97,
-      [4] = T.RT_347
+      [4] = T.RT_348
     },
     TaskId = 2019911
   },
@@ -39011,16 +39046,16 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_337,
-      [2] = T.RT_348,
-      [3] = T.RT_338,
-      [4] = T.RT_339
+      [1] = T.RT_338,
+      [2] = T.RT_349,
+      [3] = T.RT_339,
+      [4] = T.RT_340
     },
     TaskId = 2019912
   },
   [2019913] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_352,
+    TaskEffects = T.RT_353,
     TaskId = 2019913
   },
   [2019921] = {
@@ -39056,7 +39091,7 @@ return ReadOnly("SkillEffects", {
       },
       [2] = T.RT_71,
       [3] = T.RT_97,
-      [4] = T.RT_365
+      [4] = T.RT_366
     },
     TaskId = 2020112
   },
@@ -39064,16 +39099,16 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Target",
     TaskEffects = {
-      [1] = T.RT_366,
-      [2] = T.RT_348,
-      [3] = T.RT_367,
-      [4] = T.RT_339
+      [1] = T.RT_367,
+      [2] = T.RT_349,
+      [3] = T.RT_368,
+      [4] = T.RT_340
     },
     TaskId = 2020113
   },
   [2020114] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_352,
+    TaskEffects = T.RT_353,
     TaskId = 2020114
   },
   [2020121] = {
@@ -39109,19 +39144,19 @@ return ReadOnly("SkillEffects", {
       },
       [2] = T.RT_71,
       [3] = T.RT_97,
-      [4] = T.RT_365
+      [4] = T.RT_366
     },
     TaskId = 2020312
   },
   [2020313] = {
     HatredIncrement = 40,
     TargetFilter = "Target",
-    TaskEffects = T.RT_368,
+    TaskEffects = T.RT_369,
     TaskId = 2020313
   },
   [2020314] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_370,
+    TaskEffects = T.RT_371,
     TaskId = 2020314
   },
   [2020321] = {
@@ -39157,19 +39192,19 @@ return ReadOnly("SkillEffects", {
       },
       [2] = T.RT_71,
       [3] = T.RT_97,
-      [4] = T.RT_365
+      [4] = T.RT_366
     },
     TaskId = 2020712
   },
   [2020713] = {
     HatredIncrement = 40,
     TargetFilter = "Target",
-    TaskEffects = T.RT_368,
+    TaskEffects = T.RT_369,
     TaskId = 2020713
   },
   [2020714] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_370,
+    TaskEffects = T.RT_371,
     TaskId = 2020714
   },
   [2020721] = {
@@ -39199,16 +39234,16 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_372,
+      [1] = T.RT_373,
       [2] = {
         FXId = 2030102,
         Function = "PlayFX",
         Overlap = true,
         RandomRotation = T.RT_200
       },
-      [3] = T.RT_373,
+      [3] = T.RT_374,
       [4] = T.RT_182,
-      [5] = T.RT_374
+      [5] = T.RT_375
     },
     TaskId = 2030112
   },
@@ -39217,7 +39252,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_372,
+      [1] = T.RT_373,
       [2] = {
         FXId = 2030102,
         Function = "PlayFX",
@@ -39225,16 +39260,16 @@ return ReadOnly("SkillEffects", {
         Overlap = true,
         RandomRotation = T.RT_122
       },
-      [3] = T.RT_373,
+      [3] = T.RT_374,
       [4] = T.RT_182,
-      [5] = T.RT_374
+      [5] = T.RT_375
     },
     TaskId = 2030113
   },
   [2030114] = {
     ExtraBPFilter = "Common_CreatorFilter",
     TargetFilter = "Char_Sphere_Small_Frd",
-    TaskEffects = T.RT_375,
+    TaskEffects = T.RT_376,
     TaskId = 2030114
   },
   [2030121] = {
@@ -39269,17 +39304,17 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_376,
+      [1] = T.RT_377,
       [2] = {
         FXId = 2030201,
         Function = "PlayFX",
         Rotation = T.RT_75
       },
-      [3] = T.RT_377,
+      [3] = T.RT_378,
       [4] = T.RT_182,
-      [5] = T.RT_378,
-      [6] = T.RT_374,
-      [7] = T.RT_379
+      [5] = T.RT_379,
+      [6] = T.RT_375,
+      [7] = T.RT_380
     },
     TaskId = 2030212
   },
@@ -39288,35 +39323,35 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_376,
+      [1] = T.RT_377,
       [2] = {
         FXId = 2030201,
         Function = "PlayFX",
         NormalToHit = true,
         Overlap = true
       },
-      [3] = T.RT_377,
+      [3] = T.RT_378,
       [4] = T.RT_182,
-      [5] = T.RT_374,
-      [6] = T.RT_379
+      [5] = T.RT_375,
+      [6] = T.RT_380
     },
     TaskId = 2030213
   },
   [2030214] = {
     ExtraBPFilter = "Common_CreatorFilter",
     TargetFilter = "Char_Sphere_Small_Frd",
-    TaskEffects = T.RT_375,
+    TaskEffects = T.RT_376,
     TaskId = 2030214
   },
   [2030215] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_385,
-      [2] = T.RT_385,
-      [3] = T.RT_385,
-      [4] = T.RT_386,
-      [5] = T.RT_386,
-      [6] = T.RT_386
+      [1] = T.RT_386,
+      [2] = T.RT_386,
+      [3] = T.RT_386,
+      [4] = T.RT_387,
+      [5] = T.RT_387,
+      [6] = T.RT_387
     },
     TaskId = 2030215
   },
@@ -39324,12 +39359,16 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_387,
+      [1] = T.RT_388,
       [2] = {FXId = 2030202, Function = "PlayFX"},
-      [3] = T.RT_388,
+      [3] = T.RT_389,
       [4] = T.RT_182,
-      [5] = T.RT_378,
-      [6] = T.RT_389
+      [5] = T.RT_379,
+      [6] = {
+        Function = "PlaySE",
+        SEId = 2030203,
+        SceneSe = true
+      }
     },
     TaskId = 2030216
   },
@@ -39434,7 +39473,7 @@ return ReadOnly("SkillEffects", {
         Location = T.RT_94
       },
       [2] = T.RT_97,
-      [3] = T.RT_365,
+      [3] = T.RT_366,
       [4] = T.RT_97
     },
     TaskId = 2030321
@@ -39451,7 +39490,7 @@ return ReadOnly("SkillEffects", {
         Location = T.RT_94
       },
       [2] = T.RT_97,
-      [3] = T.RT_365,
+      [3] = T.RT_366,
       [4] = T.RT_97
     },
     TaskId = 2030322
@@ -39506,7 +39545,7 @@ return ReadOnly("SkillEffects", {
     HatredIncrement = 40,
     TargetFilter = "Char_Sphere_Small",
     TaskEffects = {
-      [1] = T.RT_387,
+      [1] = T.RT_388,
       [2] = {FXId = 2030403, Function = "PlayFX"},
       [3] = T.RT_400,
       [4] = T.RT_182,
@@ -39521,7 +39560,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.04
       },
@@ -39539,7 +39578,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_371,
+        DamageTag = T.RT_372,
         Function = "Damage",
         Rate = 0.08
       },
@@ -39578,7 +39617,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.072
       },
@@ -39594,7 +39633,7 @@ return ReadOnly("SkillEffects", {
   },
   [2030513] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_352,
+    TaskEffects = T.RT_353,
     TaskId = 2030513
   },
   [2030514] = {
@@ -39698,7 +39737,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.3
       },
@@ -39712,7 +39751,7 @@ return ReadOnly("SkillEffects", {
         Function = "CutToughness",
         Value = 2
       },
-      [4] = T.RT_339
+      [4] = T.RT_340
     },
     TaskId = 2040112
   },
@@ -39724,10 +39763,10 @@ return ReadOnly("SkillEffects", {
         Function = "PlayFX",
         NormalToHit = true,
         Overlap = true,
-        ReplaceFXId = T.RT_300
+        ReplaceFXId = T.RT_301
       },
-      [2] = T.RT_350,
-      [3] = T.RT_351
+      [2] = T.RT_351,
+      [3] = T.RT_352
     },
     TaskId = 2040113
   },
@@ -39763,7 +39802,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         BaseAttr = "ATK_Ranged",
         Condition = 2040201,
-        DamageTag = T.RT_371,
+        DamageTag = T.RT_372,
         Function = "Damage",
         Rate = 1
       },
@@ -39785,7 +39824,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_371,
+        DamageTag = T.RT_372,
         Function = "Damage",
         Rate = "#1"
       },
@@ -39808,7 +39847,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_371,
+        DamageTag = T.RT_372,
         Function = "Damage",
         Rate = "#2"
       },
@@ -39831,7 +39870,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_371,
+        DamageTag = T.RT_372,
         Function = "Damage",
         Rate = "#3"
       },
@@ -39945,12 +39984,12 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.33
       },
       [2] = {FXId = 2040504, Function = "PlayFX"},
-      [3] = T.RT_338,
+      [3] = T.RT_339,
       [4] = T.RT_182,
       [5] = {Function = "PlaySE", SEId = 2040505}
     },
@@ -39994,7 +40033,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.1
       },
@@ -40010,7 +40049,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_371,
+        DamageTag = T.RT_372,
         Function = "Damage",
         Rate = 2
       },
@@ -40052,11 +40091,11 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         Function = "StartHeavyCharge",
-        GradeInterval = T.RT_288,
+        GradeInterval = T.RT_289,
         HeavyChargeId = 20405,
         MaxGrade = 1
       },
-      [2] = T.RT_295
+      [2] = T.RT_296
     },
     TaskId = 2040531
   },
@@ -40261,7 +40300,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.16
       },
@@ -40273,7 +40312,7 @@ return ReadOnly("SkillEffects", {
   },
   [2050114] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_352,
+    TaskEffects = T.RT_353,
     TaskId = 2050114
   },
   [2050115] = {
@@ -40755,7 +40794,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_371,
+        DamageTag = T.RT_372,
         Function = "Damage",
         Rate = 2.915
       },
@@ -40949,7 +40988,7 @@ return ReadOnly("SkillEffects", {
   [2050714] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_301,
+      [1] = T.RT_302,
       [2] = {
         CorrectDirection = true,
         FXId = 2050701,
@@ -40959,7 +40998,7 @@ return ReadOnly("SkillEffects", {
         NormalToHit = true,
         Overlap = true,
         RefinedOverlap = true,
-        ReplaceFXId = T.RT_302
+        ReplaceFXId = T.RT_303
       },
       [3] = T.RT_451
     },
@@ -41021,7 +41060,7 @@ return ReadOnly("SkillEffects", {
         Direction = "Camera",
         Function = "CreateSkillCreature"
       },
-      [2] = T.RT_294,
+      [2] = T.RT_295,
       [3] = T.RT_71,
       [4] = T.RT_97,
       [5] = T.RT_123
@@ -41048,7 +41087,7 @@ return ReadOnly("SkillEffects", {
         Function = "PlayFX",
         NormalToHit = true,
         Overlap = true,
-        ReplaceFXId = T.RT_300
+        ReplaceFXId = T.RT_301
       },
       [2] = {
         CorrectDirection = true,
@@ -41059,7 +41098,7 @@ return ReadOnly("SkillEffects", {
         NormalToHit = true,
         Overlap = true,
         RefinedOverlap = true,
-        ReplaceFXId = T.RT_302
+        ReplaceFXId = T.RT_303
       },
       [3] = T.RT_451
     },
@@ -41143,7 +41182,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_371,
+        DamageTag = T.RT_372,
         Function = "Damage",
         Rate = 0.29
       },
@@ -41372,7 +41411,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         DamageType = "Psionic",
         Function = "Damage",
         Rate = 10
@@ -41389,7 +41428,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         DamageType = "Psionic",
         Function = "Damage",
         Rate = 16
@@ -41406,7 +41445,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         DamageType = "Psionic",
         Function = "Damage",
         Rate = 10,
@@ -41424,7 +41463,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         DamageType = "Psionic",
         Function = "Damage",
         Rate = 16,
@@ -41459,7 +41498,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.26
       },
@@ -41590,7 +41629,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 1.43
       },
@@ -41616,7 +41655,7 @@ return ReadOnly("SkillEffects", {
         HeavyChargeId = 20601,
         MaxGrade = 3
       },
-      [2] = T.RT_295
+      [2] = T.RT_296
     },
     TaskId = 2060141
   },
@@ -41748,7 +41787,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Ranged",
-        DamageTag = T.RT_336,
+        DamageTag = T.RT_337,
         Function = "Damage",
         Rate = 0.063
       },
@@ -41820,7 +41859,7 @@ return ReadOnly("SkillEffects", {
         LoopShootId = 20603,
         SkillEffect = {2060315}
       },
-      [2] = T.RT_295,
+      [2] = T.RT_296,
       [3] = {Function = "PlaySE", SEId = 2060305}
     },
     TaskId = 2060313
@@ -42012,7 +42051,7 @@ return ReadOnly("SkillEffects", {
         HeavyChargeId = 20605,
         MaxGrade = 3
       },
-      [2] = T.RT_295
+      [2] = T.RT_296
     },
     TaskId = 2060531
   },
@@ -42100,7 +42139,7 @@ return ReadOnly("SkillEffects", {
         HeavyChargeId = 20601,
         MaxGrade = 1
       },
-      [2] = T.RT_295
+      [2] = T.RT_296
     },
     TaskId = 2069931
   },
@@ -42893,37 +42932,37 @@ return ReadOnly("SkillEffects", {
       [2] = {
         CreatureId = 850102,
         Function = "CreateSkillCreature",
-        Location = T.RT_242,
+        Location = T.RT_243,
         SetSavelocAsTarget = "1"
       },
       [3] = {
         CreatureId = 850102,
         Function = "CreateSkillCreature",
-        Location = T.RT_242,
+        Location = T.RT_243,
         SetSavelocAsTarget = "2"
       },
       [4] = {
         CreatureId = 850102,
         Function = "CreateSkillCreature",
-        Location = T.RT_242,
+        Location = T.RT_243,
         SetSavelocAsTarget = "3"
       },
       [5] = {
         CreatureId = 850102,
         Function = "CreateSkillCreature",
-        Location = T.RT_242,
+        Location = T.RT_243,
         SetSavelocAsTarget = "4"
       },
       [6] = {
         CreatureId = 850102,
         Function = "CreateSkillCreature",
-        Location = T.RT_242,
+        Location = T.RT_243,
         SetSavelocAsTarget = "5"
       },
       [7] = {
         CreatureId = 850102,
         Function = "CreateSkillCreature",
-        Location = T.RT_242,
+        Location = T.RT_243,
         SetSavelocAsTarget = "6"
       }
     },
@@ -43414,7 +43453,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Sphere_600_360",
     TaskEffects = {
       [1] = T.RT_578,
-      [2] = T.RT_316
+      [2] = T.RT_317
     },
     TaskId = 8502141
   },
@@ -43432,7 +43471,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Sphere_600_360",
     TaskEffects = {
       [1] = T.RT_33,
-      [2] = T.RT_316
+      [2] = T.RT_317
     },
     TaskId = 8502143
   },
@@ -43791,7 +43830,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_33,
       [2] = T.RT_797,
-      [3] = T.RT_316
+      [3] = T.RT_317
     },
     TaskId = 8502165
   },
@@ -44089,7 +44128,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = {
           10,
           50,
@@ -44099,7 +44138,7 @@ return ReadOnly("SkillEffects", {
       [2] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = {
           10,
           -50,
@@ -44109,13 +44148,13 @@ return ReadOnly("SkillEffects", {
       [3] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = T.RT_822
       },
       [4] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = T.RT_820
       }
     },
@@ -44128,7 +44167,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = {
           23,
           -30,
@@ -44138,7 +44177,7 @@ return ReadOnly("SkillEffects", {
       [2] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = {
           23,
           30,
@@ -44148,7 +44187,7 @@ return ReadOnly("SkillEffects", {
       [3] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = {
           36,
           -30,
@@ -44158,7 +44197,7 @@ return ReadOnly("SkillEffects", {
       [4] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = {
           36,
           30,
@@ -44175,7 +44214,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = {
           40,
           -40,
@@ -44192,7 +44231,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 850316,
         Function = "CreateSkillCreature",
-        Location = T.RT_243,
+        Location = T.RT_244,
         Rotation = {
           50,
           60,
@@ -44861,7 +44900,7 @@ return ReadOnly("SkillEffects", {
           -424.2642,
           0
         },
-        Rotation = T.RT_356
+        Rotation = T.RT_357
       },
       [3] = {
         CreatureId = 850326,
@@ -44989,7 +45028,7 @@ return ReadOnly("SkillEffects", {
           -424.2642,
           0
         },
-        Rotation = T.RT_357
+        Rotation = T.RT_358
       },
       [6] = {
         CreatureId = 850326,
@@ -45123,7 +45162,7 @@ return ReadOnly("SkillEffects", {
           424.2642,
           0
         },
-        Rotation = T.RT_355
+        Rotation = T.RT_356
       },
       [3] = {
         CreatureId = 850326,
@@ -45967,36 +46006,36 @@ return ReadOnly("SkillEffects", {
   [8519103] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1265,
-      [2] = T.RT_1266,
-      [3] = T.RT_1267
+      [1] = T.RT_1266,
+      [2] = T.RT_1267,
+      [3] = T.RT_1268
     },
     TaskId = 8519103
   },
   [8519104] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1268,
-      [2] = T.RT_1269,
-      [3] = T.RT_1270
+      [1] = T.RT_1269,
+      [2] = T.RT_1270,
+      [3] = T.RT_1271
     },
     TaskId = 8519104
   },
   [8519105] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1265,
-      [2] = T.RT_1271,
-      [3] = T.RT_1272
+      [1] = T.RT_1266,
+      [2] = T.RT_1272,
+      [3] = T.RT_1273
     },
     TaskId = 8519105
   },
   [8519106] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1273,
-      [2] = T.RT_1266,
-      [3] = T.RT_1274
+      [1] = T.RT_1274,
+      [2] = T.RT_1267,
+      [3] = T.RT_1275
     },
     TaskId = 8519106
   },
@@ -46153,27 +46192,27 @@ return ReadOnly("SkillEffects", {
   },
   [8520110] = {
     TargetFilter = "BossAida_Skill23_Sphere1",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 8520110
   },
   [8520111] = {
     TargetFilter = "BossAida_Skill23_Sphere2",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 8520111
   },
   [8520112] = {
     TargetFilter = "BossAida_Skill23_Sphere3",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 8520112
   },
   [8520113] = {
     TargetFilter = "BossAida_Skill23_Sphere4",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 8520113
   },
   [8520114] = {
     TargetFilter = "BossAida_Skill23_Sphere5",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 8520114
   },
   [8520115] = {
@@ -46247,7 +46286,7 @@ return ReadOnly("SkillEffects", {
   [8521001] = {
     NotifyName = T.RT_526,
     TargetFilter = "Mon_Cylinder_300_200_180",
-    TaskEffects = T.RT_1328,
+    TaskEffects = T.RT_1332,
     TaskId = 8521001
   },
   [8521002] = {
@@ -46272,35 +46311,35 @@ return ReadOnly("SkillEffects", {
       [2] = {
         CreatureId = 852101,
         Function = "CreateSkillCreature",
-        Location = T.RT_1329,
+        Location = T.RT_1333,
         UseRelativeOffset = true,
         UseSaveLoc = "Target1"
       },
       [3] = {
         CreatureId = 852101,
         Function = "CreateSkillCreature",
-        Location = T.RT_1329,
+        Location = T.RT_1333,
         UseRelativeOffset = true,
         UseSaveLoc = "Target2"
       },
       [4] = {
         CreatureId = 852101,
         Function = "CreateSkillCreature",
-        Location = T.RT_1329,
+        Location = T.RT_1333,
         UseRelativeOffset = true,
         UseSaveLoc = "Target3"
       },
       [5] = {
         CreatureId = 852101,
         Function = "CreateSkillCreature",
-        Location = T.RT_1329,
+        Location = T.RT_1333,
         UseRelativeOffset = true,
         UseSaveLoc = "Target4"
       },
       [6] = {
         CreatureId = 852101,
         Function = "CreateSkillCreature",
-        Location = T.RT_1329,
+        Location = T.RT_1333,
         UseRelativeOffset = true,
         UseSaveLoc = "Target5"
       }
@@ -46321,7 +46360,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_1133,
       [2] = T.RT_682,
-      [3] = T.RT_1327
+      [3] = T.RT_1331
     },
     TaskId = 8521005
   },
@@ -46356,7 +46395,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_796,
       [2] = T.RT_682,
-      [3] = T.RT_1327
+      [3] = T.RT_1331
     },
     TaskId = 8521008
   },
@@ -46366,7 +46405,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_1133,
       [2] = T.RT_1263,
-      [3] = T.RT_1327
+      [3] = T.RT_1331
     },
     TaskId = 8521009
   },
@@ -46386,28 +46425,28 @@ return ReadOnly("SkillEffects", {
       [2] = {
         CreatureId = 852103,
         Function = "CreateSkillCreature",
-        Location = T.RT_1330,
+        Location = T.RT_1334,
         UseRelativeOffset = true,
         UseSaveLoc = "1"
       },
       [3] = {
         CreatureId = 852103,
         Function = "CreateSkillCreature",
-        Location = T.RT_1330,
+        Location = T.RT_1334,
         UseRelativeOffset = true,
         UseSaveLoc = "2"
       },
       [4] = {
         CreatureId = 852103,
         Function = "CreateSkillCreature",
-        Location = T.RT_1330,
+        Location = T.RT_1334,
         UseRelativeOffset = true,
         UseSaveLoc = "3"
       },
       [5] = {
         CreatureId = 852103,
         Function = "CreateSkillCreature",
-        Location = T.RT_1330,
+        Location = T.RT_1334,
         UseRelativeOffset = true,
         UseSaveLoc = "4"
       }
@@ -46438,8 +46477,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_796,
-      [2] = T.RT_1331,
-      [3] = T.RT_1327
+      [2] = T.RT_1335,
+      [3] = T.RT_1331
     },
     TaskId = 8521013
   },
@@ -46493,27 +46532,27 @@ return ReadOnly("SkillEffects", {
   [8521018] = {
     NotifyName = T.RT_1042,
     TargetFilter = "Mon_Cylinder_300_200_180",
-    TaskEffects = T.RT_1328,
+    TaskEffects = T.RT_1332,
     TaskId = 8521018
   },
   [8521019] = {
     NotifyName = T.RT_9,
     TargetFilter = "Mon_Cylinder_300_200_180",
-    TaskEffects = T.RT_1328,
+    TaskEffects = T.RT_1332,
     TaskId = 8521019
   },
   [8521020] = {
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1332,
-      [2] = T.RT_1333
+      [1] = T.RT_1336,
+      [2] = T.RT_1337
     },
     TaskId = 8521020
   },
   [8522001] = {
     NotifyName = T.RT_2,
     TargetFilter = "BossTuisheng_Skill01_Cylinder1",
-    TaskEffects = T.RT_1335,
+    TaskEffects = T.RT_1339,
     TaskId = 8522001
   },
   [8522002] = {
@@ -46527,7 +46566,7 @@ return ReadOnly("SkillEffects", {
         FunctionName = "Mon_BossTuisheng_Skill02Hit1"
       },
       [4] = T.RT_661,
-      [5] = T.RT_1334
+      [5] = T.RT_1338
     },
     TaskId = 8522002
   },
@@ -46546,7 +46585,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_1133,
       [2] = T.RT_10,
-      [3] = T.RT_1336
+      [3] = T.RT_1340
     },
     TaskId = 8522004
   },
@@ -46557,7 +46596,7 @@ return ReadOnly("SkillEffects", {
       [1] = T.RT_14,
       [2] = T.RT_10,
       [3] = T.RT_661,
-      [4] = T.RT_1337
+      [4] = T.RT_1341
     },
     TaskId = 8522005
   },
@@ -46573,7 +46612,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_684,
       [2] = T.RT_1263,
-      [3] = T.RT_1337
+      [3] = T.RT_1341
     },
     TaskId = 8522007
   },
@@ -46613,14 +46652,14 @@ return ReadOnly("SkillEffects", {
           BoolValue = true
         }
       },
-      [4] = T.RT_1338,
-      [5] = T.RT_1336
+      [4] = T.RT_1342,
+      [5] = T.RT_1340
     },
     TaskId = 8522009
   },
   [8522010] = {
     TaskEffects = {
-      [1] = T.RT_1338
+      [1] = T.RT_1342
     },
     TaskId = 8522010
   },
@@ -46715,7 +46754,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_1133,
       [2] = T.RT_10,
-      [3] = T.RT_1339
+      [3] = T.RT_1343
     },
     TaskId = 8522019
   },
@@ -46725,7 +46764,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = T.RT_16,
       [2] = T.RT_10,
-      [3] = T.RT_1339
+      [3] = T.RT_1343
     },
     TaskId = 8522020
   },
@@ -46745,8 +46784,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_500_400_360",
     TaskEffects = {
       [1] = T.RT_792,
-      [2] = T.RT_1331,
-      [3] = T.RT_1340
+      [2] = T.RT_1335,
+      [3] = T.RT_1344
     },
     TaskId = 8522022
   },
@@ -46754,7 +46793,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Cylinder_500_400_360",
     TaskEffects = {
       [1] = T.RT_1133,
-      [2] = T.RT_1340
+      [2] = T.RT_1344
     },
     TaskId = 8522023
   },
@@ -46816,13 +46855,13 @@ return ReadOnly("SkillEffects", {
   [8522029] = {
     NotifyName = T.RT_9,
     TargetFilter = "BossTuisheng_Skill01_Cylinder2",
-    TaskEffects = T.RT_1335,
+    TaskEffects = T.RT_1339,
     TaskId = 8522029
   },
   [8522030] = {
     NotifyName = T.RT_12,
     TargetFilter = "BossTuisheng_Skill01_Cylinder1",
-    TaskEffects = T.RT_1335,
+    TaskEffects = T.RT_1339,
     TaskId = 8522030
   },
   [8522031] = {
@@ -46855,9 +46894,9 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_1133,
-      [2] = T.RT_1331,
+      [2] = T.RT_1335,
       [3] = {BuffId = 852201, Function = "RemoveBuff"},
-      [4] = T.RT_1336
+      [4] = T.RT_1340
     },
     TaskId = 8522034
   },
@@ -46876,7 +46915,7 @@ return ReadOnly("SkillEffects", {
   [8523003] = {
     NotifyName = T.RT_12,
     TargetFilter = "BossJishi_Attack01",
-    TaskEffects = T.RT_1341,
+    TaskEffects = T.RT_1345,
     TaskId = 8523003
   },
   [8523004] = {
@@ -46920,7 +46959,7 @@ return ReadOnly("SkillEffects", {
   },
   [8523008] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1342,
+    TaskEffects = T.RT_1346,
     TaskId = 8523008
   },
   [8523009] = {
@@ -46939,7 +46978,7 @@ return ReadOnly("SkillEffects", {
   [8523010] = {
     NotifyName = T.RT_9,
     TargetFilter = "BossJishi_Attack02",
-    TaskEffects = T.RT_1300,
+    TaskEffects = T.RT_1304,
     TaskId = 8523010
   },
   [8523013] = {
@@ -46956,7 +46995,7 @@ return ReadOnly("SkillEffects", {
   [8523014] = {
     NotifyName = T.RT_9,
     TargetFilter = "BossJishi_Attack02",
-    TaskEffects = T.RT_1342,
+    TaskEffects = T.RT_1346,
     TaskId = 8523014
   },
   [8523015] = {
@@ -47095,7 +47134,7 @@ return ReadOnly("SkillEffects", {
   [8523029] = {
     NotifyName = T.RT_13,
     TargetFilter = "BossJishi_Attack01",
-    TaskEffects = T.RT_1341,
+    TaskEffects = T.RT_1345,
     TaskId = 8523029
   },
   [8523030] = {
@@ -47190,7 +47229,7 @@ return ReadOnly("SkillEffects", {
   },
   [8524002] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1344,
+    TaskEffects = T.RT_1348,
     TaskId = 8524002
   },
   [8524003] = {
@@ -47220,24 +47259,24 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_2,
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1345,
-      [2] = T.RT_1347,
+      [1] = T.RT_1349,
+      [2] = T.RT_1351,
       [3] = {
         CreatureId = 852404,
         Function = "CreateSkillCreature",
-        Location = T.RT_1346,
+        Location = T.RT_1350,
         UseSaveLoc = "Skill03Loc2"
       },
       [4] = {
         CreatureId = 852404,
         Function = "CreateSkillCreature",
-        Location = T.RT_1346,
+        Location = T.RT_1350,
         UseSaveLoc = "Skill03Loc3"
       },
       [5] = {
         CreatureId = 852404,
         Function = "CreateSkillCreature",
-        Location = T.RT_1346,
+        Location = T.RT_1350,
         UseSaveLoc = "Skill03Loc4"
       }
     },
@@ -47257,13 +47296,13 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Sphere_300_360",
     TaskEffects = {
       [1] = T.RT_3,
-      [2] = T.RT_1343
+      [2] = T.RT_1347
     },
     TaskId = 8524007
   },
   [8524008] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1348,
+    TaskEffects = T.RT_1352,
     TaskId = 8524008
   },
   [8524009] = {
@@ -47271,7 +47310,7 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Sphere_800_360",
     TaskEffects = {
       [1] = T.RT_3,
-      [2] = T.RT_1343,
+      [2] = T.RT_1347,
       [3] = T.RT_685
     },
     TaskId = 8524009
@@ -47374,21 +47413,21 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 852407,
         Function = "CreateSkillCreature",
-        Location = T.RT_243
+        Location = T.RT_244
       }
     },
     TaskId = 8524018
   },
   [8524019] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_1344,
+    TaskEffects = T.RT_1348,
     TaskId = 8524019
   },
   [8524020] = {
     TargetFilter = "Target",
     TaskEffects = {
       [1] = T.RT_16,
-      [2] = T.RT_1343
+      [2] = T.RT_1347
     },
     TaskId = 8524020
   },
@@ -47451,8 +47490,8 @@ return ReadOnly("SkillEffects", {
     TargetFilter = "Mon_Sphere_2500_360",
     TaskEffects = {
       [1] = T.RT_578,
-      [2] = T.RT_1343,
-      [3] = T.RT_1331
+      [2] = T.RT_1347,
+      [3] = T.RT_1335
     },
     TaskId = 8524026
   },
@@ -47460,24 +47499,24 @@ return ReadOnly("SkillEffects", {
     NotifyName = T.RT_9,
     TargetFilter = "Self",
     TaskEffects = {
-      [1] = T.RT_1345,
-      [2] = T.RT_1347,
+      [1] = T.RT_1349,
+      [2] = T.RT_1351,
       [3] = {
         CreatureId = 852409,
         Function = "CreateSkillCreature",
-        Location = T.RT_1346,
+        Location = T.RT_1350,
         UseSaveLoc = "Skill03Loc2"
       },
       [4] = {
         CreatureId = 852410,
         Function = "CreateSkillCreature",
-        Location = T.RT_1346,
+        Location = T.RT_1350,
         UseSaveLoc = "Skill03Loc3"
       },
       [5] = {
         CreatureId = 852411,
         Function = "CreateSkillCreature",
-        Location = T.RT_1346,
+        Location = T.RT_1350,
         UseSaveLoc = "Skill03Loc4"
       }
     },
@@ -47490,7 +47529,7 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 852412,
         Function = "CreateSkillCreature",
-        Location = T.RT_243
+        Location = T.RT_244
       }
     },
     TaskId = 8524028
@@ -47509,7 +47548,7 @@ return ReadOnly("SkillEffects", {
   [8524030] = {
     NotifyName = T.RT_9,
     TargetFilter = "BossHengmeng_Skill08Cylinder",
-    TaskEffects = T.RT_1348,
+    TaskEffects = T.RT_1352,
     TaskId = 8524030
   },
   [101011041] = {
@@ -48286,7 +48325,7 @@ return ReadOnly("SkillEffects", {
   },
   [201020012] = {
     TargetFilter = "Self",
-    TaskEffects = T.RT_346,
+    TaskEffects = T.RT_347,
     TaskId = 201020012
   },
   [201040011] = {
@@ -48324,30 +48363,30 @@ return ReadOnly("SkillEffects", {
       [1] = {
         CreatureId = 20130001,
         Function = "CreateSkillCreature",
-        Location = T.RT_318
+        Location = T.RT_319
       },
       [2] = {
         CreatureId = 20130001,
         Function = "CreateSkillCreature",
-        Location = T.RT_318,
+        Location = T.RT_319,
         Rotation = T.RT_181
       },
       [3] = {
         CreatureId = 20130001,
         Function = "CreateSkillCreature",
-        Location = T.RT_318,
-        Rotation = T.RT_355
+        Location = T.RT_319,
+        Rotation = T.RT_356
       },
       [4] = {
         CreatureId = 20130001,
         Function = "CreateSkillCreature",
-        Location = T.RT_318,
+        Location = T.RT_319,
         Rotation = T.RT_75
       },
       [5] = {
         CreatureId = 20130001,
         Function = "CreateSkillCreature",
-        Location = T.RT_318,
+        Location = T.RT_319,
         Rotation = {
           0,
           -90,
@@ -48357,19 +48396,19 @@ return ReadOnly("SkillEffects", {
       [6] = {
         CreatureId = 20130001,
         Function = "CreateSkillCreature",
-        Location = T.RT_318,
-        Rotation = T.RT_356
+        Location = T.RT_319,
+        Rotation = T.RT_357
       },
       [7] = {
         CreatureId = 20130001,
         Function = "CreateSkillCreature",
-        Location = T.RT_318,
-        Rotation = T.RT_357
+        Location = T.RT_319,
+        Rotation = T.RT_358
       },
       [8] = {
         CreatureId = 20130001,
         Function = "CreateSkillCreature",
-        Location = T.RT_318,
+        Location = T.RT_319,
         Rotation = {
           0,
           -180,
@@ -48456,7 +48495,7 @@ return ReadOnly("SkillEffects", {
     TaskId = 201310012
   },
   [201320011] = {
-    TaskEffects = T.RT_360,
+    TaskEffects = T.RT_361,
     TaskId = 201320011
   },
   [201320012] = {
@@ -48468,13 +48507,13 @@ return ReadOnly("SkillEffects", {
         Function = "Damage",
         Rate = 5
       },
-      [2] = T.RT_361,
+      [2] = T.RT_362,
       [3] = T.RT_188
     },
     TaskId = 201320012
   },
   [201320013] = {
-    TaskEffects = T.RT_360,
+    TaskEffects = T.RT_361,
     TaskId = 201320013
   },
   [201330011] = {
@@ -48599,7 +48638,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Char",
-        DamageTag = T.RT_362,
+        DamageTag = T.RT_363,
         DamageType = "Fire",
         Function = "Damage",
         Rate = 0.2
@@ -48609,7 +48648,7 @@ return ReadOnly("SkillEffects", {
   },
   [201810012] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_364,
+    TaskEffects = T.RT_365,
     TaskId = 201810012
   },
   [201820011] = {
@@ -48617,7 +48656,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Char",
-        DamageTag = T.RT_362,
+        DamageTag = T.RT_363,
         DamageType = "Water",
         Function = "Damage",
         Rate = 0.2
@@ -48627,7 +48666,7 @@ return ReadOnly("SkillEffects", {
   },
   [201820012] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_364,
+    TaskEffects = T.RT_365,
     TaskId = 201820012
   },
   [201830011] = {
@@ -48635,7 +48674,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Char",
-        DamageTag = T.RT_362,
+        DamageTag = T.RT_363,
         DamageType = "Wind",
         Function = "Damage",
         Rate = 0.2
@@ -48645,7 +48684,7 @@ return ReadOnly("SkillEffects", {
   },
   [201830012] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_364,
+    TaskEffects = T.RT_365,
     TaskId = 201830012
   },
   [201840011] = {
@@ -48653,7 +48692,7 @@ return ReadOnly("SkillEffects", {
     TaskEffects = {
       [1] = {
         BaseAttr = "ATK_Char",
-        DamageTag = T.RT_362,
+        DamageTag = T.RT_363,
         DamageType = "Thunder",
         Function = "Damage",
         Rate = 0.2
@@ -48663,7 +48702,7 @@ return ReadOnly("SkillEffects", {
   },
   [201840012] = {
     TargetFilter = "Target",
-    TaskEffects = T.RT_364,
+    TaskEffects = T.RT_365,
     TaskId = 201840012
   },
   [301020041] = {
@@ -49140,9 +49179,9 @@ return ReadOnly("SkillEffects", {
         CreateWithoutTarget = false,
         CreatureId = 500000305,
         Function = "CreateSkillCreature",
-        RandomVelocityX = T.RT_383,
-        RandomVelocityY = T.RT_383,
-        RandomVelocityZ = T.RT_384
+        RandomVelocityX = T.RT_384,
+        RandomVelocityY = T.RT_384,
+        RandomVelocityZ = T.RT_385
       }
     },
     TaskId = 500000305

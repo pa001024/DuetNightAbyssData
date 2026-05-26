@@ -23,6 +23,7 @@ function M:Init()
   self._CurrentFriendUid = nil
   self._CurrSubTab = ChatCommon.SubTabType.Friend
   self._GuildUids = {}
+  self._GuildUidOrder = {}
   self._GuildPrivateLocalSystemTips = {}
   self._CurrentChannelIndex = {}
   self._AllChannelList = nil
@@ -45,6 +46,7 @@ function M:Destory()
   end
   self._MessageDict = {}
   self._CurrentFriendUid = nil
+  self._GuildUidOrder = {}
   self._GuildPrivateLocalSystemTips = {}
   self._CachedMainUISize = nil
   self._CachedMainUIPos = nil
@@ -349,7 +351,7 @@ function M:ClearReddotCount(ChannelType, FriendUid, SubTabType)
   end
 end
 
-function M:AddPrivateChatReddotNode(Uid, SubTabType, bAppendParent)
+function M:AddPrivateChatReddotNode(Uid, SubTabType, bAppendParent, bSkipCurrentUnread)
   DebugPrint(LXYTag, "Chat  新的好友红点添加，Uid:", Uid)
   if nil == bAppendParent then
     bAppendParent = true
@@ -365,6 +367,9 @@ function M:AddPrivateChatReddotNode(Uid, SubTabType, bAppendParent)
   elseif SubTabType == ChatCommon.SubTabType.Guild then
     Chat = self:GetGuildChatDatas()[Uid]
     Unread = Chat and Chat.GetUnreadCount and Chat:GetUnreadCount() or 0
+    if bSkipCurrentUnread and Unread > 0 then
+      Unread = Unread - 1
+    end
   end
   if Unread > 0 then
     ReddotManager.IncreaseLeafNodeCount(Key, Unread)
@@ -431,7 +436,7 @@ function M:InitReddotCount()
   end
 end
 
-function M:RegisterGuildUid(Uid, AvatarInfo)
+function M:RegisterGuildUid(Uid, AvatarInfo, bSkipCurrentUnread)
   if not Uid then
     return false
   end
@@ -439,6 +444,7 @@ function M:RegisterGuildUid(Uid, AvatarInfo)
   local bChanged = false
   if nil == OldValue then
     self._GuildUids[Uid] = AvatarInfo or true
+    self:_AppendGuildUidOrder(Uid)
     bChanged = true
   elseif true == OldValue and AvatarInfo then
     self._GuildUids[Uid] = AvatarInfo
@@ -462,9 +468,33 @@ function M:RegisterGuildUid(Uid, AvatarInfo)
     end
   end
   if not OldValue then
-    self:AddPrivateChatReddotNode(Uid, ChatCommon.SubTabType.Guild, true)
+    self:AddPrivateChatReddotNode(Uid, ChatCommon.SubTabType.Guild, true, bSkipCurrentUnread)
   end
   return bChanged
+end
+
+function M:_AppendGuildUidOrder(Uid)
+  if not Uid then
+    return
+  end
+  self._GuildUidOrder = self._GuildUidOrder or {}
+  for _, ExistingUid in ipairs(self._GuildUidOrder) do
+    if ExistingUid == Uid then
+      return
+    end
+  end
+  self._GuildUidOrder[#self._GuildUidOrder + 1] = Uid
+end
+
+function M:_RemoveGuildUidOrder(Uid)
+  if not Uid or not self._GuildUidOrder then
+    return
+  end
+  for i = #self._GuildUidOrder, 1, -1 do
+    if self._GuildUidOrder[i] == Uid then
+      table.remove(self._GuildUidOrder, i)
+    end
+  end
 end
 
 function M:UnregisterGuildUid(Uid)
@@ -472,6 +502,7 @@ function M:UnregisterGuildUid(Uid)
     return
   end
   self._GuildUids[Uid] = nil
+  self:_RemoveGuildUidOrder(Uid)
   self:ReadChannelMessage(ChatCommon.ChannelDef.Friend, Uid, ChatCommon.SubTabType.Guild)
 end
 
@@ -483,20 +514,69 @@ function M:GetGuildUidList()
   return self._GuildUids
 end
 
-function M:RestoreGuildUidListFromChatDatas()
+function M:GetGuildUidOrder()
+  return self._GuildUidOrder or {}
+end
+
+function M:SyncGuildUidListWithChatDatas(KeepUid, KeepInfo)
   local GuildChatDatas = self:GetGuildChatDatas()
   if type(GuildChatDatas) ~= "table" then
     return false
   end
-  local bChanged = false
-  for Uid, Chat in pairs(GuildChatDatas) do
-    local NormalizedUid = tonumber(Uid) or 0
-    if NormalizedUid > 0 then
-      local PlayerInfo = type(Chat) == "table" and Chat.PlayerInfo or nil
-      if self:RegisterGuildUid(NormalizedUid, PlayerInfo or true) then
-        bChanged = true
-      end
+  local OldUids = self._GuildUids or {}
+  local OldOrder = self._GuildUidOrder or {}
+  local bHadOldUids = next(OldUids) ~= nil
+  local AddedUids = {}
+  
+  local function GetChatByUid(Uid)
+    if not Uid then
+      return nil
     end
+    return GuildChatDatas[Uid] or GuildChatDatas[tostring(Uid)]
+  end
+  
+  local function RegisterChatUid(Uid, Chat)
+    local NormalizedUid = tonumber(Uid) or 0
+    if NormalizedUid <= 0 or AddedUids[NormalizedUid] then
+      return false
+    end
+    AddedUids[NormalizedUid] = true
+    local PlayerInfo = type(Chat) == "table" and Chat.PlayerInfo or nil
+    local OldInfo = OldUids[NormalizedUid]
+    if type(PlayerInfo) == "table" and type(OldInfo) == "table" then
+      CommonUtils.MergeTables(OldInfo, PlayerInfo)
+      PlayerInfo = OldInfo
+    elseif not PlayerInfo and OldInfo then
+      PlayerInfo = OldInfo
+    end
+    return self:RegisterGuildUid(NormalizedUid, PlayerInfo or true)
+  end
+  
+  self._GuildUids = {}
+  self._GuildUidOrder = {}
+  local bChanged = bHadOldUids
+  for _, Uid in ipairs(OldOrder) do
+    local Chat = GetChatByUid(Uid)
+    if Chat and RegisterChatUid(Uid, Chat) then
+      bChanged = true
+    end
+  end
+  for Uid, Chat in pairs(GuildChatDatas) do
+    if RegisterChatUid(Uid, Chat) then
+      bChanged = true
+    end
+  end
+  if KeepUid and not self:IsGuildUid(KeepUid) and self:RegisterGuildUid(KeepUid, KeepInfo, true) then
+    bChanged = true
+  end
+  return bChanged
+end
+
+function M:RestoreGuildUidListFromChatDatas()
+  local bChanged = self:SyncGuildUidListWithChatDatas()
+  local GuildChatDatas = self:GetGuildChatDatas()
+  if type(GuildChatDatas) ~= "table" then
+    return false
   end
   return bChanged
 end
@@ -506,6 +586,7 @@ function M:ClearAllGuildUids()
     self:ReadChannelMessage(ChatCommon.ChannelDef.Friend, Uid, ChatCommon.SubTabType.Guild)
   end
   self._GuildUids = {}
+  self._GuildUidOrder = {}
 end
 
 function M:AddMessage(Message, bCalcUnread)

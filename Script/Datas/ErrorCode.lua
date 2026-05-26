@@ -1034,7 +1034,7 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 3033
   },
   [3034] = {
-    ContentEN = "This colouring scheme is already applied",
+    ContentEN = "This Colouring Preset is already applied",
     ContentFR = "Ce schéma de teinture est déjà appliqué",
     ContentJP = "武器現在のカラーリングプランと新カラーリングプランが同じです",
     ContentKR = "현재 무기 염색 플랜이 신규 플랜과 동일합니다.",
@@ -1043,98 +1043,242 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 3034
   },
   [3037] = {
+    ContentEN = "Selected weapon is not a Calamity Weapon",
+    ContentES = "El arma actual no es un arma de calamidad",
+    ContentFR = "Cette arme n’est pas une Arme de calamité",
+    ContentJP = "カラミティアームズではありません",
+    ContentKR = "재앙 무기가 아닙니다.",
+    ContentTC = "當前武器不是災厄武器",
     ErrorCodeContent = "当前武器不是灾厄武器",
     ErrorCodeId = 3037
   },
   [3038] = {
+    ContentEN = "Calamity Smelting is already at max level",
+    ContentES = "Se alcanzó el nivel máximo de fundición de calamidad",
+    ContentFR = "Niveau maximal de Fusion de calamité atteint",
+    ContentJP = "災厄製錬最大レベルまで達しています",
+    ContentKR = "재앙 용해가 최대 레벨입니다.",
+    ContentTC = "達到災厄熔煉最大等級",
     ErrorCodeContent = "达到灾厄熔炼最大等级",
     ErrorCodeId = 3038
   },
   [3039] = {
+    ContentEN = "This Calamity Smelting level has not been unlocked",
+    ContentES = "El nivel actual de fundición de calamidad aún no está desbloqueado",
+    ContentFR = "Niveau actuel de Fusion de calamité non débloqué",
+    ContentJP = "災厄製錬レベル未解放",
+    ContentKR = "재앙 용해 레벨이 해제되지 않았습니다.",
+    ContentTC = "當前災厄熔煉等級未解鎖",
     ErrorCodeContent = "当前灾厄熔炼等级未解锁",
     ErrorCodeId = 3039
   },
   [3040] = {
+    ContentEN = "Insufficient materials to activate this Smelting level",
+    ContentES = "No hay materiales suficientes para activar el nivel de fundición",
+    ContentFR = "Matériaux insuffisants pour activer le niveau de Fusion de calamité",
+    ContentJP = "製錬レベル解放に必要な素材が不足しています",
+    ContentKR = "용해 레벨 활성화에 필요한 재료가 부족합니다.",
+    ContentTC = "激活熔煉等級所需素材不足",
     ErrorCodeContent = "激活熔炼等级所需素材不足",
     ErrorCodeId = 3040
   },
   [3041] = {
+    ContentEN = "Calamity Furnace is already at max level",
+    ContentES = "Se alcanzó el nivel máximo del Horno de calamidad",
+    ContentFR = "Niveau maximal du Fourneau de calamité atteint",
+    ContentJP = "災厄の炉最大レベルまで達しています",
+    ContentKR = "재앙의 용광로가 최대 레벨입니다.",
+    ContentTC = "達到災厄熔爐最大等級",
     ErrorCodeContent = "达到灾厄熔炉最大等级",
     ErrorCodeId = 3041
   },
   [3042] = {
+    ContentEN = "The Calamity Furnace quest for this level is not complete",
+    ContentES = "Aún no se completan las misiones del nivel actual del Horno de calamidad",
+    ContentFR = "Missions du Fourneau de calamité non complétées",
+    ContentJP = "災厄の炉クエスト未完了",
+    ContentKR = "현재 레벨의 재앙의 용광로 퀘스트가 완료되지 않았습니다.",
+    ContentTC = "當前等級災厄熔爐任務未完成",
     ErrorCodeContent = "当前等级灾厄熔炉任务未完成",
     ErrorCodeId = 3042
   },
   [3043] = {
+    ContentEN = "Invalid Potential",
+    ContentES = "Potencial no válido",
+    ContentFR = "Potentiel invalide",
+    ContentJP = "無効な潜在能力です",
+    ContentKR = "유효하지 않은 잠재력입니다.",
+    ContentTC = "無效的潛能",
     ErrorCodeContent = "无效的潜能",
     ErrorCodeId = 3043
   },
   [3044] = {
+    ContentEN = "Calamity Weapon does not match",
+    ContentES = "El arma de calamidad no coincide",
+    ContentFR = "Arme de calamité incompatible",
+    ContentJP = "カラミティアームズが一致しません",
+    ContentKR = "일치하지 않는 재앙 무기입니다.",
+    ContentTC = "災厄武器不匹配",
     ErrorCodeContent = "灾厄武器不匹配",
     ErrorCodeId = 3044
   },
   [3045] = {
+    ContentEN = "This Potential has not been unlocked",
+    ContentES = "Potencial no desbloqueado",
+    ContentFR = "Potentiel non débloqué",
+    ContentJP = "潜在能力がまだ解放されていません",
+    ContentKR = "잠재력이 해제되지 않았습니다.",
+    ContentTC = "潛能未解鎖",
     ErrorCodeContent = "潜能未解锁",
     ErrorCodeId = 3045
   },
   [3046] = {
+    ContentEN = "Calamity Furnace level is too low",
+    ContentES = "Nivel insuficiente del Horno de calamidad",
+    ContentFR = "Niveau du Fourneau de calamité insuffisant",
+    ContentJP = "災厄の炉レベルがたりません",
+    ContentKR = "재앙의 용광로 레벨이 부족합니다.",
+    ContentTC = "災厄熔爐等級不足",
     ErrorCodeContent = "灾厄熔炉等级不足",
     ErrorCodeId = 3046
   },
   [3047] = {
+    ContentEN = "Insufficient materials to activate this Potential",
+    ContentES = "No hay materiales suficientes para activar el potencial",
+    ContentFR = "Matériaux insuffisants pour activer le Potentiel",
+    ContentJP = "潜在能力解放に必要な素材が不足しています",
+    ContentKR = "잠재력 활성화에 필요한 재료가 부족합니다.",
+    ContentTC = "激活潛能所需素材不足",
     ErrorCodeContent = "激活潜能所需素材不足",
     ErrorCodeId = 3047
   },
   [3048] = {
+    ContentEN = "Invalid skin upgrade level",
+    ContentES = "El nivel de mejora de aspecto es incorrecto",
+    ContentFR = "Niveau d’amélioration d’apparence invalide",
+    ContentJP = "スキンのレベルが正しくありません",
+    ContentKR = "코스튬 업그레이드 레벨에 오류가 있습니다.",
+    ContentTC = "形象升級等級有誤",
     ErrorCodeContent = "形象升级等级有误",
     ErrorCodeId = 3048
   },
   [3049] = {
+    ContentEN = "Invalid skin upgrade data",
+    ContentES = "La información de mejora de aspecto es incorrecta",
+    ContentFR = "Données d’amélioration d’apparence invalides",
+    ContentJP = "レベル情報に異常があります",
+    ContentKR = "코스튬 업그레이드 정보에 오류가 있습니다.",
+    ContentTC = "形象升級資訊有誤",
     ErrorCodeContent = "形象升级信息有误",
     ErrorCodeId = 3049
   },
   [3050] = {
+    ContentEN = "Skin upgrade requirements have not been met",
+    ContentES = "No se cumplen los requisitos para mejorar el aspecto",
+    ContentFR = "Conditions requises pour l’amélioration d’apparence non remplies",
+    ContentJP = "スキンのレベルアップ条件を満たしていません",
+    ContentKR = "코스튬 업그레이드 조건을 충족하지 않습니다.",
+    ContentTC = "不滿足形象升級條件",
     ErrorCodeContent = "不满足形象升级条件",
     ErrorCodeId = 3050
   },
   [3051] = {
+    ContentEN = "Insufficient materials for skin upgrade",
+    ContentES = "No hay materiales suficientes para la mejora de aspecto",
+    ContentFR = "Matériaux insuffisants pour l’amélioration d’apparence",
+    ContentJP = "スキンのレベルアップに必要な素材が不足しています",
+    ContentKR = "코스튬 업그레이드에 필요한 재료가 부족합니다.",
+    ContentTC = "形象升級所需素材不足",
     ErrorCodeContent = "形象升级所需素材不足",
     ErrorCodeId = 3051
   },
   [3052] = {
+    ContentEN = "Calamity Weapon limit reached",
+    ContentES = "La cantidad de armas de calamidad equipadas supera el límite",
+    ContentFR = "Nombre maximal d’Armes de calamité équipées dépassé",
+    ContentJP = "カラミティアームズの編成数が上限を超えています",
+    ContentKR = "현재 장비의 재앙 무기 수량이 상한에 도달했습니다.",
+    ContentTC = "當前裝備災厄武器數量超過上限",
     ErrorCodeContent = "当前装备灾厄武器数量超过上限",
     ErrorCodeId = 3052
   },
   [3053] = {
+    ContentEN = "Calamity Smelting level not found",
+    ContentES = "No se encontró el nivel de fundición de calamidad",
+    ContentFR = "Niveau de Fusion de calamité introuvable",
+    ContentJP = "災厄製錬レベルが見つかりません",
+    ContentKR = "재앙 용해 레벨 정보가 없습니다.",
+    ContentTC = "災厄熔煉等級為空",
     ErrorCodeContent = "灾厄熔炼等级为空",
     ErrorCodeId = 3053
   },
   [3054] = {
+    ContentEN = "This Calamity Weapon Potential has already been unlocked",
+    ContentES = "El potencial del arma de calamidad ya estaba desbloqueado",
+    ContentFR = "Potentiel de l’Arme de calamité déjà débloqué",
+    ContentJP = "すでに解放済みのカラミティアームズです",
+    ContentKR = "이미 해제된 재앙 무기 잠재력입니다.",
+    ContentTC = "災厄武器潛能重複解鎖",
     ErrorCodeContent = "灾厄武器潜能重复解锁",
     ErrorCodeId = 3054
   },
   [3055] = {
+    ContentEN = "Invalid Calamity Furnace quest",
+    ContentES = "Misión del Horno de calamidad no válida",
+    ContentFR = "Mission du Fourneau de calamité invalide",
+    ContentJP = "無効な災厄の炉クエストです",
+    ContentKR = "재앙의 용광로 퀘스트가 유효하지 않습니다.",
+    ContentTC = "無效的災厄熔爐任務",
     ErrorCodeContent = "无效的灾厄熔炉任务",
     ErrorCodeId = 3055
   },
   [3056] = {
+    ContentEN = "Calamity Furnace quest not completed",
+    ContentES = "Misión del Horno de calamidad sin completar",
+    ContentFR = "Mission du Fourneau de calamité non complétée",
+    ContentJP = "災厄の炉クエスト未完了",
+    ContentKR = "재앙의 용광로 퀘스트가 완료되지 않았습니다.",
+    ContentTC = "災厄熔爐任務未完成",
     ErrorCodeContent = "灾厄熔炉任务未完成",
     ErrorCodeId = 3056
   },
   [3057] = {
+    ContentEN = "Calamity Furnace quest reward already claimed",
+    ContentES = "La recompensa de misión del Horno de calamidad ya fue reclamada",
+    ContentFR = "Récompense de mission du Fourneau déjà réclamée",
+    ContentJP = "災厄の炉クエストの報酬は受取済みです",
+    ContentKR = "재앙의 용광로 퀘스트 보상을 이미 수령했습니다.",
+    ContentTC = "災厄熔爐任務獎勵已領取",
     ErrorCodeContent = "灾厄熔炉任务奖励已领取",
     ErrorCodeId = 3057
   },
   [3058] = {
+    ContentEN = "Invalid Calamity Furnace level reward",
+    ContentES = "Recompensas de nivel del Horno de calamidad no válidas",
+    ContentFR = "Récompense de niveau du Fourneau invalide",
+    ContentJP = "無効な災厄の炉クエスト報酬です",
+    ContentKR = "재앙의 용광로 레벨 보상이 유효하지 않습니다.",
+    ContentTC = "無效的災厄熔爐等級獎勵",
     ErrorCodeContent = "无效的灾厄熔炉等级奖励",
     ErrorCodeId = 3058
   },
   [3059] = {
+    ContentEN = "Calamity Furnace level reward not unlocked",
+    ContentES = "Recompensas de nivel del Horno de calamidad no desbloqueadas",
+    ContentFR = "Récompense de niveau du Fourneau non débloquée",
+    ContentJP = "災厄の炉のレベル報酬未解放",
+    ContentKR = "재앙의 용광로 레벨 보상이 해제되지 않았습니다.",
+    ContentTC = "災厄熔爐等級獎勵未解鎖",
     ErrorCodeContent = "灾厄熔炉等级奖励未解锁",
     ErrorCodeId = 3059
   },
   [3060] = {
+    ContentEN = "Calamity Furnace level reward already claimed",
+    ContentES = "Recompensas de nivel del Horno de calamidad ya reclamadas",
+    ContentFR = "Récompense de niveau du Fourneau déjà réclamée",
+    ContentJP = "災厄の炉のレベル報酬は受取済みです",
+    ContentKR = "재앙의 용광로 레벨 보상을 이미 수령했습니다.",
+    ContentTC = "災厄熔爐等級獎勵已領取",
     ErrorCodeContent = "灾厄熔炉等级奖励已领取",
     ErrorCodeId = 3060
   },
@@ -2000,22 +2144,52 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 6046
   },
   [6050] = {
+    ContentEN = "Invalid submission quest configuration",
+    ContentES = "Configuración incorrecta de la misión de entrega",
+    ContentFR = "Configuration de quête de livraison invalide",
+    ContentJP = "クエストに配置エラー発生",
+    ContentKR = "제출한 퀘스트 설정에 오류가 있습니다.",
+    ContentTC = "提交任務配置有誤",
     ErrorCodeContent = "提交任务配置有误",
     ErrorCodeId = 6050
   },
   [6051] = {
+    ContentEN = "Submission quest already completed",
+    ContentES = "Misión de entrega completada",
+    ContentFR = "Quête de livraison déjà complétée",
+    ContentJP = "クエストは完了しました",
+    ContentKR = "제출한 퀘스트가 이미 완료되었습니다.",
+    ContentTC = "提交任務已完成",
     ErrorCodeContent = "提交任务已完成",
     ErrorCodeId = 6051
   },
   [6052] = {
+    ContentEN = "Submission quest not in progress",
+    ContentES = "La misión de entrega no está en curso",
+    ContentFR = "La quête de livraison n’est pas en cours",
+    ContentJP = "クエストは進行中ではありません",
+    ContentKR = "제출한 퀘스트가 진행 중 상태가 아닙니다.",
+    ContentTC = "提交任務未在進行中",
     ErrorCodeContent = "提交任务未在进行中",
     ErrorCodeId = 6052
   },
   [6053] = {
+    ContentEN = "Insufficient materials for submission quest",
+    ContentES = "Materiales insuficientes para la misión de entrega",
+    ContentFR = "Matériaux insuffisants pour la quête de livraison",
+    ContentJP = "クエストに必要な素材が不足しています",
+    ContentKR = "퀘스트 제출에 필요한 재료가 부족합니다.",
+    ContentTC = "提交任務所需材料不足",
     ErrorCodeContent = "提交任务所需材料不足",
     ErrorCodeId = 6053
   },
   [6054] = {
+    ContentEN = "The corresponding quest for this submission has not been completed",
+    ContentES = "La misión de entrega correspondiente aún no se ha completado",
+    ContentFR = "La quête de livraison associée n’est pas complétée",
+    ContentJP = "クエスト未完了",
+    ContentKR = "해당 퀘스트의 제출 임무가 완료되지 않았습니다.",
+    ContentTC = "任務對應的提交任務未完成",
     ErrorCodeContent = "任务对应的提交任务未完成",
     ErrorCodeId = 6054
   },
@@ -10583,242 +10757,606 @@ return ReadOnly("ErrorCode", {
     ErrorCodeId = 96005
   },
   [97002] = {
+    ContentEN = "Already in a guild",
+    ContentES = "El jugador ya pertenece a un gremio",
+    ContentFR = "Le joueur appartient déjà à une guilde",
+    ContentJP = "すでに協会に所属しています",
+    ContentKR = "이미 길드에 가입된 플레이어입니다.",
+    ContentTC = "玩家已有協會",
     ErrorCodeContent = "玩家已有协会",
     ErrorCodeId = 97002
   },
   [97003] = {
+    ContentEN = "You cannot create a guild while banned",
+    ContentES = "No puedes crear un gremio mientras estás suspendido",
+    ContentFR = "Impossible de créer une guilde pendant une suspension",
+    ContentJP = "現在、協会を作成できません",
+    ContentKR = "이용 제한 중에는 길드를 생성할 수 없습니다.",
+    ContentTC = "封禁中無法創建協會",
     ErrorCodeContent = "封禁中无法创建协会",
     ErrorCodeId = 97003
   },
   [97004] = {
+    ContentEN = "Your level is too low to create a guild",
+    ContentES = "Tu nivel es insuficiente para crear un gremio",
+    ContentFR = "Niveau insuffisant pour créer une guilde",
+    ContentJP = "協会作成に必要なレベルに達していません",
+    ContentKR = "레벨이 부족해 길드를 생성할 수 없습니다.",
+    ContentTC = "等級不足，無法創建協會",
     ErrorCodeContent = "等级不足，无法创建协会",
     ErrorCodeId = 97004
   },
   [97005] = {
+    ContentEN = "Guild name cannot be empty",
+    ContentES = "El nombre del gremio no puede estar vacío",
+    ContentFR = "Le nom de la guilde ne peut pas être vide",
+    ContentJP = "協会名を入力してください",
+    ContentKR = "길드명은 비워둘 수 없습니다.",
+    ContentTC = "協會名稱不得為空",
     ErrorCodeContent = "协会名称不得为空",
     ErrorCodeId = 97005
   },
   [97006] = {
+    ContentEN = "Guild notice cannot be empty",
+    ContentES = "El aviso del gremio no puede estar vacío",
+    ContentFR = "L’annonce de la guilde ne peut pas être vide",
+    ContentJP = "協会告知を入力してください",
+    ContentKR = "길드 공지는 비워둘 수 없습니다.",
+    ContentTC = "協會公告不得為空",
     ErrorCodeContent = "协会公告不得为空",
     ErrorCodeId = 97006
   },
   [97007] = {
+    ContentEN = "Guild name is too long",
+    ContentES = "El nombre del gremio es demasiado largo",
+    ContentFR = "Nom de guilde trop long",
+    ContentJP = "協会が長すぎます",
+    ContentKR = "길드명이 너무 깁니다.",
+    ContentTC = "協會名稱過長",
     ErrorCodeContent = "协会名称过长",
     ErrorCodeId = 97007
   },
   [97008] = {
+    ContentEN = "Guild notice is too long",
+    ContentES = "El aviso del gremio es demasiado largo",
+    ContentFR = "Annonce de guilde trop longue",
+    ContentJP = "協会告知が長すぎます",
+    ContentKR = "길드 공지가 너무 깁니다.",
+    ContentTC = "協會公告過長",
     ErrorCodeContent = "协会公告过长",
     ErrorCodeId = 97008
   },
   [97009] = {
+    ContentEN = "Invalid guild name",
+    ContentES = "El nombre del gremio no es válido",
+    ContentFR = "Nom de guilde invalide",
+    ContentJP = "協会名に使用できない文字が含まれています",
+    ContentKR = "유효하지 않은 길드명입니다.",
+    ContentTC = "協會名稱不合法",
     ErrorCodeContent = "协会名称不合法",
     ErrorCodeId = 97009
   },
   [97010] = {
+    ContentEN = "Invalid guild notice",
+    ContentES = "El aviso del gremio no es válido",
+    ContentFR = "Annonce de guilde invalide",
+    ContentJP = "協会告知に使用できない文字が含まれています",
+    ContentKR = "유효하지 않은 길드 공지입니다.",
+    ContentTC = "協會公告不合法",
     ErrorCodeContent = "协会公告不合法",
     ErrorCodeId = 97010
   },
   [97011] = {
+    ContentEN = "A Guild License is required to create a guild",
+    ContentES = "No tienes la licencia necesaria para crear un gremio",
+    ContentFR = "Licence de guilde insuffisante pour créer une guilde",
+    ContentJP = "協会作成に必要な許可証が不足しています",
+    ContentKR = "길드 허가증이 부족해 길드를 생성할 수 없습니다.",
+    ContentTC = "缺少協會執照，無法創建協會",
     ErrorCodeContent = "缺少协会执照，无法创建协会",
     ErrorCodeId = 97011
   },
   [97012] = {
+    ContentEN = "This guild name is already taken",
+    ContentES = "El nombre del gremio ya está en uso",
+    ContentFR = "Nom de guilde déjà utilisé",
+    ContentJP = "同じ協会名がすでに使用されています",
+    ContentKR = "이미 사용 중인 길드명입니다.",
+    ContentTC = "協會名稱已被占用",
     ErrorCodeContent = "协会名称已被占用",
     ErrorCodeId = 97012
   },
   [97013] = {
+    ContentEN = "Guild emblem is too long",
+    ContentES = "El emblema del gremio es demasiado largo",
+    ContentFR = "Données de l’emblème de la guilde trop longues",
+    ContentJP = "協会エンブレムのデータが長すぎます",
+    ContentKR = "길드 엠블럼 데이터가 너무 깁니다.",
+    ContentTC = "協會徽章數據過長",
     ErrorCodeContent = "协会徽章数据过长",
     ErrorCodeId = 97013
   },
   [97014] = {
+    ContentEN = "Guild creation limit reached",
+    ContentES = "Se alcanzó el límite de creación de gremios",
+    ContentFR = "Nombre maximal de guildes atteint",
+    ContentJP = "協会作成数が上限に達しています",
+    ContentKR = "길드 생성 수량이 상한에 도달했습니다.",
+    ContentTC = "協會創建數量已達上限",
     ErrorCodeContent = "协会创建数量已达上限",
     ErrorCodeId = 97014
   },
   [97018] = {
+    ContentEN = "You are not in a guild",
+    ContentES = "No perteneces a ningún gremio",
+    ContentFR = "Le joueur n’appartient à aucune guilde",
+    ContentJP = "協会に加入していません",
+    ContentKR = "길드에 가입하지 않았습니다.",
+    ContentTC = "未加入協會",
     ErrorCodeContent = "未加入协会",
     ErrorCodeId = 97018
   },
   [97019] = {
+    ContentEN = "Guild does not exist",
+    ContentES = "El gremio no existe",
+    ContentFR = "Guilde inexistante",
+    ContentJP = "協会が存在しません",
+    ContentKR = "길드가 존재하지 않습니다.",
+    ContentTC = "協會不存在",
     ErrorCodeContent = "协会不存在",
     ErrorCodeId = 97019
   },
   [97020] = {
+    ContentEN = "Guild application on cooldown: %s remaining",
+    ContentES = "La solicitud de gremio está en enfriamiento: %s restantes",
+    ContentFR = "Demande d’adhésion à la guilde en temps de recharge, temps restant : %s",
+    ContentJP = "加入申請はクールタイム中です、残り%s",
+    ContentKR = "길드 신청 쿨타임 중입니다. 남은 시간: %s",
+    ContentTC = "協會申請冷卻中，剩餘%s",
     ErrorCodeContent = "协会申请冷却中，剩余%s",
     ErrorCodeId = 97020
   },
   [97021] = {
+    ContentEN = "Guild application on cooldown: %s remaining",
+    ContentES = "La solicitud de gremio está en enfriamiento: %s restantes",
+    ContentFR = "Demande d’adhésion à la guilde en temps de recharge, temps restant : %s",
+    ContentJP = "加入申請はクールタイム中です、残り%s",
+    ContentKR = "길드 신청 쿨타임 중입니다. 남은 시간: %s",
+    ContentTC = "協會申請冷卻中，剩餘%s",
     ErrorCodeContent = "协会申请冷却中，剩余%s",
     ErrorCodeId = 97021
   },
   [97022] = {
+    ContentEN = "Cannot join a guild yet: %s remaining",
+    ContentES = "Aún no puedes unirte a un gremio: %s restantes",
+    ContentFR = "Impossible de rejoindre une guilde pour le moment, temps restant : %s",
+    ContentJP = "現在加入不可、残り%s",
+    ContentKR = "아직 길드에 가입할 수 없습니다. 남은 시간: %s",
+    ContentTC = "暫不可加入協會，剩餘%s",
     ErrorCodeContent = "暂不可加入协会，剩余%s",
     ErrorCodeId = 97022
   },
   [97023] = {
+    ContentEN = "Daily guild application limit reached",
+    ContentES = "Se alcanzó el límite diario de solicitudes de gremio",
+    ContentFR = "Nombre maximal de demandes d’adhésion atteint pour aujourd’hui",
+    ContentJP = "本日の加入申請数が上限に達しています",
+    ContentKR = "일일 길드 가입 신청 횟수가 상한에 도달했습니다.",
+    ContentTC = "今日申請協會次數已達上限",
     ErrorCodeContent = "今日申请协会次数已达上限",
     ErrorCodeId = 97023
   },
   [97024] = {
+    ContentEN = "You cannot invite yourself",
+    ContentES = "No puedes invitarte a ti mismo",
+    ContentFR = "Impossible de s’inviter soi-même",
+    ContentJP = "自分自身を招待することはできません",
+    ContentKR = "자신을 초대할 수 없습니다.",
+    ContentTC = "不能邀請自己",
     ErrorCodeContent = "不能邀请自己",
     ErrorCodeId = 97024
   },
   [97025] = {
+    ContentEN = "Invite on cooldown: %s remaining",
+    ContentES = "La invitación está en enfriamiento: %s restantes",
+    ContentFR = "Invitation en temps de recharge, temps restant : %s",
+    ContentJP = "協会招待はクールタイム中です、残り%s",
+    ContentKR = "초대 쿨타임 중입니다. 남은 시간: %s",
+    ContentTC = "邀請冷卻中，剩餘%s",
     ErrorCodeContent = "邀请冷却中，剩余%s",
     ErrorCodeId = 97025
   },
   [97026] = {
+    ContentEN = "Target player is offline",
+    ContentES = "El jugador invitado está desconectado",
+    ContentFR = "Le joueur invité est hors ligne",
+    ContentJP = "プレイヤーはオフライン状態です",
+    ContentKR = "초대한 플레이어가 오프라인 상태입니다.",
+    ContentTC = "邀請的玩家離線中",
     ErrorCodeContent = "邀请的玩家离线中",
     ErrorCodeId = 97026
   },
   [97027] = {
+    ContentEN = "Insufficient permissions",
+    ContentES = "Permisos insuficientes",
+    ContentFR = "Permissions insuffisantes",
+    ContentJP = "権限がありません",
+    ContentKR = "조작 권한이 없습니다.",
+    ContentTC = "無操作權限",
     ErrorCodeContent = "无操作权限",
     ErrorCodeId = 97027
   },
   [97028] = {
+    ContentEN = "Transfer guild leadership before proceeding",
+    ContentES = "Transfiere el liderazgo del gremio antes de continuar",
+    ContentFR = "Veuillez transférer le rang de Chef de Guilde avant de continuer",
+    ContentJP = "先に協会会長の役職を譲渡してください",
+    ContentKR = "길드장을 위임한 후 다시 시도해 주세요.",
+    ContentTC = "請轉移會長後再操作",
     ErrorCodeContent = "请转移会长后再操作",
     ErrorCodeId = 97028
   },
   [97029] = {
+    ContentEN = "This role is full",
+    ContentES = "Este cargo ya está lleno",
+    ContentFR = "Nombre maximal de rangs atteint",
+    ContentJP = "協会役職数が上限に達しています",
+    ContentKR = "직위 수량이 상한에 도달했습니다.",
+    ContentTC = "職位數量已達上限",
     ErrorCodeContent = "职位数量已达上限",
     ErrorCodeId = 97029
   },
   [97030] = {
+    ContentEN = "Invalid target player",
+    ContentES = "Los datos del jugador objetivo son incorrectos",
+    ContentFR = "Données du joueur cible invalides",
+    ContentJP = "プレイヤーデータが正しくありません",
+    ContentKR = "대상 플레이어의 데이터에 오류가 있습니다.",
+    ContentTC = "目標玩家數據錯誤",
     ErrorCodeContent = "目标玩家数据错误",
     ErrorCodeId = 97030
   },
   [97031] = {
+    ContentEN = "Guild is full",
+    ContentES = "Este gremio está lleno",
+    ContentFR = "La guilde est pleine",
+    ContentJP = "この協会は満員です",
+    ContentKR = "길드의 인원수가 상한에 도달했습니다.",
+    ContentTC = "協會成員已滿",
     ErrorCodeContent = "协会成员已满",
     ErrorCodeId = 97031
   },
   [97032] = {
+    ContentEN = "Guild application list is full",
+    ContentES = "La lista de solicitudes de este gremio está llena",
+    ContentFR = "La liste des candidatures de la guilde est pleine",
+    ContentJP = "この協会の申請リストは満員です",
+    ContentKR = "길드의 가입 신청 대기열이 가득 찼습니다.",
+    ContentTC = "協會申請列表已滿",
     ErrorCodeContent = "协会申请列表已满",
     ErrorCodeId = 97032
   },
   [97033] = {
+    ContentEN = "Application already submitted",
+    ContentES = "Ya enviaste una solicitud",
+    ContentFR = "Demande déjà envoyée",
+    ContentJP = "すでに申請済みです",
+    ContentKR = "이미 신청을 제출했습니다.",
+    ContentTC = "已提交過申請",
     ErrorCodeContent = "已提交过申请",
     ErrorCodeId = 97033
   },
   [97034] = {
+    ContentEN = "Target player cannot receive invites right now",
+    ContentES = "El jugador objetivo no puede recibir invitaciones en este momento",
+    ContentFR = "Le joueur ciblé ne peut pas accepter l’invitation dans son état actuel",
+    ContentJP = "相手は現在招待できません",
+    ContentKR = "대상 플레이어가 현재 초대를 수락할 수 없는 상태입니다.",
+    ContentTC = "目標玩家當前狀態無法接受邀請",
     ErrorCodeContent = "目标玩家当前状态无法接受邀请",
     ErrorCodeId = 97034
   },
   [97035] = {
+    ContentEN = "Guild is under review",
+    ContentES = "El gremio está en revisión",
+    ContentFR = "Guilde en cours de vérification",
+    ContentJP = "協会は審査中です",
+    ContentKR = "길드 심사 중입니다.",
+    ContentTC = "協會審核中",
     ErrorCodeContent = "协会审核中",
     ErrorCodeId = 97035
   },
   [97036] = {
+    ContentEN = "Refresh on cooldown",
+    ContentES = "La actualización está en enfriamiento",
+    ContentFR = "Actualisation en temps de recharge",
+    ContentJP = "更新クールダウン中",
+    ContentKR = "새로고침 대기 중입니다.",
+    ContentTC = "刷新冷卻中",
     ErrorCodeContent = "刷新冷却中",
     ErrorCodeId = 97036
   },
   [97037] = {
+    ContentEN = "Guild name change is on cooldown",
+    ContentES = "El cambio de nombre del gremio está en enfriamiento",
+    ContentFR = "Modification du nom de la guilde en temps de recharge",
+    ContentJP = "協会名の変更はクールタイム中です",
+    ContentKR = "길드명 변경 쿨타임 중입니다.",
+    ContentTC = "協會名稱修改冷卻中",
     ErrorCodeContent = "协会名称修改冷却中",
     ErrorCodeId = 97037
   },
   [97038] = {
+    ContentEN = "Guild emblem change is on cooldown",
+    ContentES = "El cambio de emblema del gremio está en enfriamiento",
+    ContentFR = "Modification de l’emblème de la guilde en temps de recharge",
+    ContentJP = "協会エンブレムの変更はクールタイム中です",
+    ContentKR = "길드 엠블럼 변경 쿨타임 중입니다.",
+    ContentTC = "協會徽章修改冷卻中",
     ErrorCodeContent = "协会徽章修改冷却中",
     ErrorCodeId = 97038
   },
   [97039] = {
+    ContentEN = "Previous edit is still under review",
+    ContentES = "La edición está en revisión",
+    ContentFR = "Modification en cours de vérification",
+    ContentJP = "審査中のため変更できません",
+    ContentKR = "편집 심사 중입니다.",
+    ContentTC = "編輯審核中",
     ErrorCodeContent = "编辑审核中",
     ErrorCodeId = 97039
   },
   [97040] = {
+    ContentEN = "Edit rejected",
+    ContentES = "Edición rechazada",
+    ContentFR = "Vérification refusée",
+    ContentJP = "審査に通りませんでした",
+    ContentKR = "심사에 통과하지 못했습니다.",
+    ContentTC = "審核未通過",
     ErrorCodeContent = "审核未通过",
     ErrorCodeId = 97040
   },
   [97041] = {
+    ContentEN = "Guild not found",
+    ContentES = "No se encontró el gremio",
+    ContentFR = "Aucune guilde trouvée",
+    ContentJP = "該当する協会が見つかりません",
+    ContentKR = "길드를 검색하지 못했습니다.",
+    ContentTC = "未搜索到協會",
     ErrorCodeContent = "未搜索到协会",
     ErrorCodeId = 97041
   },
   [97042] = {
+    ContentEN = "Invalid permission settings",
+    ContentES = "La configuración de permisos no es válida",
+    ContentFR = "Configuration des permissions invalide",
+    ContentJP = "無効な協会権限です",
+    ContentKR = "권한 설정이 유효하지 않습니다.",
+    ContentTC = "權限配置無效",
     ErrorCodeContent = "权限配置无效",
     ErrorCodeId = 97042
   },
   [97043] = {
+    ContentEN = "Too many attempts",
+    ContentES = "Demasiados intentos",
+    ContentFR = "Opérations trop fréquentes",
+    ContentJP = "操作が頻繁すぎます",
+    ContentKR = "조작이 너무 빈번합니다.",
+    ContentTC = "操作過於頻繁",
     ErrorCodeContent = "操作过于频繁",
     ErrorCodeId = 97043
   },
   [97044] = {
+    ContentEN = "This player has not unlocked the Guild feature yet",
+    ContentES = "La función del gremio aún no está desbloqueada para este jugador",
+    ContentFR = "Fonction de guilde non débloquée pour ce joueur",
+    ContentJP = "このプレイヤーの「協会」機能はまだ解放されていません",
+    ContentKR = "해당 유저는 길드 기능을 활성화하지 않았습니다.",
+    ContentTC = "該玩家協會功能未開啟",
     ErrorCodeContent = "该玩家协会功能未开启",
     ErrorCodeId = 97044
   },
+  [97045] = {
+    ErrorCodeContent = "该玩家当前无法加入协会",
+    ErrorCodeId = 97045
+  },
   [99001] = {
+    ContentEN = "Ensemble Act is not yet available",
+    ContentES = "La Actuación conjunta aún no está disponible",
+    ContentFR = "Événement « Représentation conjointe » non disponible",
+    ContentJP = "「華麗なる共演」まだ解放されていません",
+    ContentKR = "이벤트 [함께하는 무대]가 오픈되지 않았습니다.",
+    ContentTC = "聯袂演繹活動未開啟",
     ErrorCodeContent = "联袂演绎活动未开启",
     ErrorCodeId = 99001
   },
   [99002] = {
+    ContentEN = "Invalid Ensemble Act ID",
+    ContentES = "Error en el evento de Actuación conjunta",
+    ContentFR = "Erreur de l’événement « Représentation conjointe »",
+    ContentJP = "「華麗なる共演」イベントエラー",
+    ContentKR = "이벤트 [함께하는 무대]에 오류가 있습니다.",
+    ContentTC = "聯袂演繹活動錯誤",
     ErrorCodeContent = "联袂演绎活动错误",
     ErrorCodeId = 99002
   },
   [99003] = {
+    ContentEN = "Invalid stage configuration",
+    ContentES = "Error en la configuración del escenario",
+    ContentFR = "Configuration de scène invalide",
+    ContentJP = "ステージに配置エラー発生",
+    ContentKR = "무대 설정에 오류가 있습니다.",
+    ContentTC = "舞台配置錯誤",
     ErrorCodeContent = "舞台配置错误",
     ErrorCodeId = 99003
   },
   [99004] = {
+    ContentEN = "Stage does not exist",
+    ContentES = "El escenario no existe",
+    ContentFR = "Scène introuvable",
+    ContentJP = "ステージが見つかりません",
+    ContentKR = "무대가 존재하지 않습니다.",
+    ContentTC = "舞台不存在",
     ErrorCodeContent = "舞台不存在",
     ErrorCodeId = 99004
   },
   [99005] = {
+    ContentEN = "Player data not found",
+    ContentES = "Los datos del jugador no existen",
+    ContentFR = "Données du joueur introuvables",
+    ContentJP = "プレイヤーデータが存在しません",
+    ContentKR = "플레이어 데이터가 존재하지 않습니다.",
+    ContentTC = "玩家數據不存在",
     ErrorCodeContent = "玩家数据不存在",
     ErrorCodeId = 99005
   },
   [99006] = {
+    ContentEN = "No attempts remaining",
+    ContentES = "No quedan intentos suficientes",
+    ContentFR = "Nombre de tentatives restantes insuffisant",
+    ContentJP = "挑戦回数が上限に達しています",
+    ContentKR = "남은 횟수가 부족합니다.",
+    ContentTC = "剩餘次數不足",
     ErrorCodeContent = "剩余次数不足",
     ErrorCodeId = 99006
   },
   [99007] = {
+    ContentEN = "Invalid stage multiplier",
+    ContentES = "Error en el multiplicador del escenario",
+    ContentFR = "Multiplicateur de scène invalide",
+    ContentJP = "ステージ倍率エラー",
+    ContentKR = "무대 배율에 오류가 있습니다.",
+    ContentTC = "舞台倍率錯誤",
     ErrorCodeContent = "舞台倍率错误",
     ErrorCodeId = 99007
   },
   [99008] = {
+    ContentEN = "Not enough Commission Manuals",
+    ContentES = "No hay suficientes Manuales de encargo",
+    ContentFR = "Carnets de mission insuffisants",
+    ContentJP = "依頼手帳が不足しています",
+    ContentKR = "의뢰 수첩이 부족합니다.",
+    ContentTC = "委託手冊不足",
     ErrorCodeContent = "委托手册不足",
     ErrorCodeId = 99008
   },
   [99009] = {
+    ContentEN = "Stage limit reached",
+    ContentES = "Se alcanzó el límite de escenarios",
+    ContentFR = "Nombre maximal de scènes atteint",
+    ContentJP = "ステージ数が上限に達しています",
+    ContentKR = "무대 수량이 상한에 도달했습니다.",
+    ContentTC = "舞台數量達到上限",
     ErrorCodeContent = "舞台数量达到上限",
     ErrorCodeId = 99009
   },
   [99010] = {
+    ContentEN = "You have already joined this stage",
+    ContentES = "Ya te uniste a este escenario",
+    ContentFR = "Déjà présent dans cette scène",
+    ContentJP = "すでに参加しています",
+    ContentKR = "이미 참여한 무대입니다.",
+    ContentTC = "已經加入了該舞台",
     ErrorCodeContent = "已经加入了该舞台",
     ErrorCodeId = 99010
   },
   [99011] = {
+    ContentEN = "You do not have access to this stage",
+    ContentES = "No tienes acceso a este escenario",
+    ContentFR = "Permissions d’accès à la scène insuffisantes",
+    ContentJP = "参加する権限がありません",
+    ContentKR = "무대 방문 권한이 없습니다.",
+    ContentTC = "缺少舞台訪問權限",
     ErrorCodeContent = "缺少舞台访问权限",
     ErrorCodeId = 99011
   },
   [99012] = {
+    ContentEN = "Stage has not been completed yet",
+    ContentES = "El escenario aún no se ha completado",
+    ContentFR = "Scène non complétée",
+    ContentJP = "ステージが未クリアです",
+    ContentKR = "무대를 아직 완료하지 않았습니다.",
+    ContentTC = "舞台暫未完成",
     ErrorCodeContent = "舞台暂未完成",
     ErrorCodeId = 99012
   },
   [99013] = {
+    ContentEN = "Rewards already claimed",
+    ContentES = "Las recompensas ya fueron reclamadas",
+    ContentFR = "Récompense déjà réclamée",
+    ContentJP = "報酬受取済み",
+    ContentKR = "이미 보상을 수령했습니다.",
+    ContentTC = "獎勵已領取",
     ErrorCodeContent = "奖励已领取",
     ErrorCodeId = 99013
   },
   [99014] = {
+    ContentEN = "Stage is temporarily unavailable",
+    ContentES = "El escenario no está disponible por ahora",
+    ContentFR = "Scène temporairement indisponible",
+    ContentJP = "ステージは現在使用不可",
+    ContentKR = "무대를 사용할 수 없습니다.",
+    ContentTC = "舞台暫不可用",
     ErrorCodeContent = "舞台暂不可用",
     ErrorCodeId = 99014
   },
   [99015] = {
+    ContentEN = "You have not joined this stage",
+    ContentES = "Todavía no te has unido a este escenario",
+    ContentFR = "Le joueur n’a pas encore rejoint cette scène",
+    ContentJP = "ステージに参加していません",
+    ContentKR = "참여할 수 있는 무대가 없습니다.",
+    ContentTC = "暫時沒有加入該舞台",
     ErrorCodeContent = "暂时没有加入该舞台",
     ErrorCodeId = 99015
   },
   [99016] = {
+    ContentEN = "Stage has ended",
+    ContentES = "El escenario ya terminó",
+    ContentFR = "La scène est terminée",
+    ContentJP = "ステージは終了しました",
+    ContentKR = "무대가 종료되었습니다.",
+    ContentTC = "舞台已結束",
     ErrorCodeContent = "舞台已结束",
     ErrorCodeId = 99016
   },
   [99017] = {
+    ContentEN = "Stage is on cooldown",
+    ContentES = "El escenario está en enfriamiento",
+    ContentFR = "Scène en temps de recharge",
+    ContentJP = "ステージはクールタイム中です",
+    ContentKR = "무대 쿨타임 중입니다.",
+    ContentTC = "舞台冷卻中",
     ErrorCodeContent = "舞台冷却中",
     ErrorCodeId = 99017
   },
   [99018] = {
+    ContentEN = "Stage does not exist",
+    ContentES = "El escenario no existe",
+    ContentFR = "Scène introuvable",
+    ContentJP = "ステージが見つかりません",
+    ContentKR = "무대가 존재하지 않습니다.",
+    ContentTC = "舞台不存在",
     ErrorCodeContent = "舞台不存在",
     ErrorCodeId = 99018
   },
   [99019] = {
+    ContentEN = "Invalid Ensemble Act damage data",
+    ContentES = "Datos de daño anormales en la Actuación conjunta",
+    ContentFR = "Dégâts anormaux dans « Représentation conjointe »",
+    ContentJP = "華麗なる共演ダメージエラー",
+    ContentKR = "[함께하는 무대] 대미지에 오류가 발생했습니다.",
+    ContentTC = "聯袂演繹傷害異常",
     ErrorCodeContent = "联袂演绎伤害异常",
     ErrorCodeId = 99019
   },
   [99020] = {
+    ContentEN = "Only the stage creator can share this stage",
+    ContentES = "Solo el creador del escenario puede compartirlo",
+    ContentFR = "Seul le créateur peut partager cette scène de Représentation conjointe",
+    ContentJP = "華麗なる共演のステージは作成者のみ共有できます",
+    ContentKR = "[함께하는 무대]의 무대는 생성자만 공유할 수 있습니다.",
+    ContentTC = "聯袂演繹舞台僅創建者可分享",
     ErrorCodeContent = "联袂演绎舞台仅创建者可分享",
     ErrorCodeId = 99020
   },

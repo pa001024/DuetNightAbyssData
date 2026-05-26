@@ -3,6 +3,9 @@ T.RT_1 = {
   "Patch_Icelake",
   "Patch_East"
 }
+T.RT_2 = {
+  "Patch_Icelake"
+}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -32,6 +35,34 @@ return ReadOnly("DungeonPatchCondition", {
   },
   [21313] = {
     DungeonID = 21313,
+    NecessaryPatch = T.RT_1
+  },
+  [21401] = {
+    DungeonID = 21401,
+    NecessaryPatch = T.RT_1
+  },
+  [21402] = {
+    DungeonID = 21402,
+    NecessaryPatch = T.RT_1
+  },
+  [21403] = {
+    DungeonID = 21403,
+    NecessaryPatch = T.RT_1
+  },
+  [21411] = {
+    DungeonID = 21411,
+    NecessaryPatch = T.RT_1
+  },
+  [21412] = {
+    DungeonID = 21412,
+    NecessaryPatch = T.RT_1
+  },
+  [21413] = {
+    DungeonID = 21413,
+    NecessaryPatch = T.RT_1
+  },
+  [21414] = {
+    DungeonID = 21414,
     NecessaryPatch = T.RT_1
   },
   [30100] = {DungeonID = 30100},
@@ -99,6 +130,10 @@ return ReadOnly("DungeonPatchCondition", {
     DungeonID = 30608,
     NecessaryPatch = T.RT_1
   },
+  [30609] = {
+    DungeonID = 30609,
+    NecessaryPatch = T.RT_2
+  },
   [30801] = {
     DungeonID = 30801,
     NecessaryPatch = T.RT_1
@@ -130,6 +165,10 @@ return ReadOnly("DungeonPatchCondition", {
   [31004] = {
     DungeonID = 31004,
     NecessaryPatch = T.RT_1
+  },
+  [31005] = {
+    DungeonID = 31005,
+    NecessaryPatch = T.RT_2
   },
   [41801] = {
     DungeonID = 41801,
@@ -369,6 +408,62 @@ return ReadOnly("DungeonPatchCondition", {
   },
   [91222] = {
     DungeonID = 91222,
+    NecessaryPatch = T.RT_1
+  },
+  [614002] = {
+    DungeonID = 614002,
+    NecessaryPatch = T.RT_2
+  },
+  [614003] = {
+    DungeonID = 614003,
+    NecessaryPatch = T.RT_2
+  },
+  [614004] = {
+    DungeonID = 614004,
+    NecessaryPatch = T.RT_2
+  },
+  [614005] = {
+    DungeonID = 614005,
+    NecessaryPatch = T.RT_2
+  },
+  [614006] = {
+    DungeonID = 614006,
+    NecessaryPatch = T.RT_2
+  },
+  [614007] = {
+    DungeonID = 614007,
+    NecessaryPatch = T.RT_1
+  },
+  [614008] = {
+    DungeonID = 614008,
+    NecessaryPatch = T.RT_1
+  },
+  [614102] = {
+    DungeonID = 614102,
+    NecessaryPatch = T.RT_2
+  },
+  [614103] = {
+    DungeonID = 614103,
+    NecessaryPatch = T.RT_2
+  },
+  [614104] = {
+    DungeonID = 614104,
+    NecessaryPatch = T.RT_2
+  },
+  [614105] = {
+    DungeonID = 614105,
+    NecessaryPatch = T.RT_2
+  },
+  [614106] = {
+    DungeonID = 614106,
+    NecessaryPatch = T.RT_2
+  },
+  [614107] = {
+    DungeonID = 614107,
+    NecessaryPatch = T.RT_1
+  },
+  [614108] = {
+    DungeonID = 614108,
     NecessaryPatch = T.RT_1
   }
 })

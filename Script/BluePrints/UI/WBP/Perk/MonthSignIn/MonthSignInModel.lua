@@ -1,5 +1,6 @@
 local TimeUtils = require("Utils.TimeUtils")
 local MonthSignInCommon = require("BluePrints.UI.WBP.Perk.MonthSignIn.MonthSignInCommon")
+local MonthCardModel = require("BluePrints.UI.WBP.Perk.MonthCard.MonthCardModel")
 local ItemUtil = require("Utils.ItemUtils")
 local M = Class("BluePrints.Common.MVC.Model")
 
@@ -18,21 +19,23 @@ function M:IsTodaySigned()
   return false
 end
 
+function M:GetTodayYear()
+  local Obj = TimeUtils.TimestampToDataObj(TimeUtils.TimestampLastClock(5))
+  return Obj.year
+end
+
 function M:GetTodayMonth()
-  local Avatar = GWorld:GetAvatar()
-  DebugPrint("Yihan@  GetTodayMonth: ", Avatar.MonthlyCheck, Avatar.MonthlyCheck.Month)
-  if Avatar then
-    return Avatar.MonthlyCheck.Month
-  end
+  local Obj = TimeUtils.TimestampToDataObj(TimeUtils.TimestampLastClock(5))
+  return Obj.month
 end
 
 function M:GetTodaySignInDay()
   local Avatar = GWorld:GetAvatar()
   if Avatar then
     if self:IsTodaySigned() then
-      return Avatar.MonthlyCheck.CheckCount
+      return Avatar.MonthlyCheck.MonthlyCheckCount
     else
-      return Avatar.MonthlyCheck.CheckCount + 1
+      return Avatar.MonthlyCheck.MonthlyCheckCount + 1
     end
   end
 end
@@ -40,11 +43,7 @@ end
 function M:GetCumulativeSignInDay()
   local Avatar = GWorld:GetAvatar()
   if Avatar then
-    if self:IsTodaySigned() then
-      return Avatar.TotalLoginDays
-    else
-      return Avatar.TotalLoginDays - 1
-    end
+    return Avatar.MonthlyCheck.CheckCount
   end
 end
 
@@ -88,24 +87,46 @@ function M:GetCanReceiveCumulativeRewardCount()
   return 0
 end
 
+function M:IsPopUpMonthSignInReward()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar then
+    return
+  end
+  local CurTimestamp = TimeUtils.NowTime()
+  local PrePopUpTime = EMCache:Get("PrePopUpTime", true)
+  DebugPrint("Yihan@ IsPopUpMonthSignInReward", CurTimestamp, PrePopUpTime)
+  if not PrePopUpTime then
+    EMCache:Set("PrePopUpTime", CurTimestamp, true)
+    return true
+  else
+    DebugPrint("Yihan@ IsPopUpMonthSignInReward", TimeUtils.GetIntervalDay(CurTimestamp, PrePopUpTime))
+    if 0 ~= TimeUtils.GetIntervalDay(CurTimestamp, PrePopUpTime) then
+      EMCache:Set("PrePopUpTime", CurTimestamp, true)
+      return true
+    else
+      return false
+    end
+  end
+end
+
+function M:MergeRewardIds(MonthSignInRewardId)
+  local MonthCard = MonthCardModel:GetNowMonthCard()
+  local MonthCardRewardId = MonthCard.DailyReward
+  DebugPrint("Yihan@ MergeRewardIds", MonthCardRewardId, MonthSignInRewardId)
+  local IsHasMonthCard = MonthCardModel:HasMonthCard()
+  local IsMonthCardSigned = MonthCardModel:HasGetMonthCardDailyReward()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar then
+    if IsHasMonthCard then
+      return RewardUtils:GetRewards({MonthCardRewardId, MonthSignInRewardId}, Avatar)
+    else
+      return RewardUtils:GetRewards({MonthSignInRewardId}, Avatar)
+    end
+  end
+end
+
 function M:Destory()
   M.Super.Destory(self)
-end
-
-function M:SetDailyRewardCache(DailyReward)
-  self.DailyRewardCache = DailyReward
-end
-
-function M:SetPurchaseRewardCache(PurchaseReward)
-  self.PurchaseRewardCache = PurchaseReward
-end
-
-function M:ClearPurchaseRewardCache()
-  self.PurchaseRewardCache = nil
-end
-
-function M:ClearDailyRewardCache()
-  self.DailyRewardCache = nil
 end
 
 return M

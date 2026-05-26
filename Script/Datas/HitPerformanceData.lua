@@ -71,9 +71,14 @@ T.RT_36 = {
   HitFlyXY = 200,
   HitFlyZ = 500
 }
-T.RT_37 = {UseTargetDirection = 1}
+T.RT_37 = {
+  HitFlyXY = 600,
+  HitFlyZ = 500,
+  UseTargetDirection = 1
+}
 T.RT_38 = {HitFlyXY = 50, HitFlyZ = 100}
 T.RT_39 = {MoveDis = 100, UseResourceDirection = "X"}
+T.RT_40 = {UseTargetDirection = 1}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -618,8 +623,9 @@ return ReadOnly("HitPerformanceData", {
   Hitfly_Laser = {
     CauseHit = "HitFly",
     CauseHitParam = T.RT_37,
-    HitFlyComboParam = T.RT_17,
-    HitId = "Hitfly_Laser"
+    HitFlyComboParam = T.RT_37,
+    HitId = "Hitfly_Laser",
+    TNZeroHeavyHitParam = T.RT_18
   },
   LightHit = {
     CauseHit = "LightHit",
@@ -729,12 +735,12 @@ return ReadOnly("HitPerformanceData", {
   },
   LightHit_IceBomb = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_37,
+    CauseHitParam = T.RT_40,
     HitId = "LightHit_IceBomb"
   },
   LightHit_Laser = {
     CauseHit = "LightHit",
-    CauseHitParam = T.RT_37,
+    CauseHitParam = T.RT_40,
     HitFlyComboParam = T.RT_38,
     HitId = "LightHit_Laser"
   },

@@ -340,15 +340,15 @@ end
 
 function BP_TalkContext_C:ConditionalSetupCharacterShadowSetting(TalkTaskData)
   DebugPrint("ConditionalSetupCharacterShadowSetting", TalkTaskData.DoNotReceiveCharacterShadow, self.SetCharacterShadowSetting, self.GetCharacterShadowSetting)
-  if TalkTaskData.DoNotReceiveCharacterShadow ~= nil and self.SetCharacterShadowSetting and self.GetCharacterShadowSetting then
+  if TalkTaskData.DoNotReceiveCharacterShadow == true and self.SetCharacterShadowSetting and self.GetCharacterShadowSetting then
     self.CachedDoNotReceiveCharacterShadow = self:GetCharacterShadowSetting()
     self:SetCharacterShadowSetting(TalkTaskData.DoNotReceiveCharacterShadow)
   end
 end
 
 function BP_TalkContext_C:ConditionalRecoverCharacterShadowSetting(TalkTaskData)
-  if TalkTaskData.DoNotReceiveCharacterShadow ~= nil and self.SetCharacterShadowSetting then
-    if nil == self.CachedDoNotReceiveCharacterShadow then
+  if TalkTaskData.DoNotReceiveCharacterShadow == true and self.SetCharacterShadowSetting then
+    if self.CachedDoNotReceiveCharacterShadow == nil then
       DebugPrint("Error: CachedDoNotReceiveCharacterShadow is nil, recover character shadow setting failed.")
       return
     end

@@ -10,7 +10,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1101,
     MainCameraName = "Heitao_Main",
-    NpcSeatKey = "1.0",
+    NpcSeatKey = "1",
     PartyTopicList = {
       110101,
       110102,
@@ -32,7 +32,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1102,
     MainCameraName = "Fuluo_Main",
-    NpcSeatKey = "2.0",
+    NpcSeatKey = "2",
     PartyTopicList = {
       110201,
       110202,
@@ -54,7 +54,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1103,
     MainCameraName = "Tuosi_Main",
-    NpcSeatKey = "3.0",
+    NpcSeatKey = "3",
     PartyTopicList = {
       110301,
       110302,
@@ -76,7 +76,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1501,
     MainCameraName = "Baonu_Main",
-    NpcSeatKey = "4.0",
+    NpcSeatKey = "4",
     PartyTopicList = {150101},
     ReverseActionId = "Sit03_End",
     SeatPointName = "EntrySeatPoint_Baonu",
@@ -92,7 +92,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1502,
     MainCameraName = "Nifu_Main",
-    NpcSeatKey = "5.0",
+    NpcSeatKey = "5",
     PartyTopicList = {
       150201,
       150202,
@@ -114,7 +114,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1503,
     MainCameraName = "Kezhou_Main",
-    NpcSeatKey = "6.0",
+    NpcSeatKey = "6",
     PartyTopicList = {
       150301,
       150302,
@@ -136,7 +136,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1504,
     MainCameraName = "Suyi_Main",
-    NpcSeatKey = "7.0",
+    NpcSeatKey = "7",
     PartyTopicList = {
       150401,
       150402,
@@ -157,7 +157,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 1801,
     MainCameraName = "Feina_Main",
-    NpcSeatKey = "8.0",
+    NpcSeatKey = "8",
     PartyTopicList = {
       180101,
       180102,
@@ -180,7 +180,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 2101,
     MainCameraName = "Shuimu_Main",
-    NpcSeatKey = "9.0",
+    NpcSeatKey = "9",
     PartyTopicList = {
       210101,
       210102,
@@ -203,7 +203,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 2301,
     MainCameraName = "Zhangyu_Main",
-    NpcSeatKey = "10.0",
+    NpcSeatKey = "10",
     PartyTopicList = {
       230101,
       230102,
@@ -226,7 +226,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 2401,
     MainCameraName = "Fushu_Main",
-    NpcSeatKey = "11.0",
+    NpcSeatKey = "11",
     PartyTopicList = {
       240101,
       240102,
@@ -248,7 +248,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3101,
     MainCameraName = "Linen_Main",
-    NpcSeatKey = "12.0",
+    NpcSeatKey = "12",
     PartyTopicList = {
       310101,
       310102,
@@ -270,7 +270,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3102,
     MainCameraName = "Xier_Main",
-    NpcSeatKey = "13.0",
+    NpcSeatKey = "13",
     PartyTopicList = {
       310201,
       310202,
@@ -292,7 +292,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3103,
     MainCameraName = "Yeer_Main",
-    NpcSeatKey = "14.0",
+    NpcSeatKey = "14",
     PartyTopicList = {
       310301,
       310302,
@@ -314,7 +314,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3201,
     MainCameraName = "Haier_Main",
-    NpcSeatKey = "15.0",
+    NpcSeatKey = "15",
     PartyTopicList = {
       320101,
       320102,
@@ -336,7 +336,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3202,
     MainCameraName = "Kami_Main",
-    NpcSeatKey = "16.0",
+    NpcSeatKey = "16",
     PartyTopicList = {
       320201,
       320202,
@@ -357,7 +357,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 3301,
     MainCameraName = "Maer_Main",
-    NpcSeatKey = "17.0",
+    NpcSeatKey = "17",
     PartyTopicList = {
       330101,
       330102,
@@ -379,7 +379,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4101,
     MainCameraName = "Lise_Main",
-    NpcSeatKey = "18.0",
+    NpcSeatKey = "18",
     PartyTopicList = {
       410101,
       410102,
@@ -400,7 +400,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4102,
     MainCameraName = "Zhiliu_Main",
-    NpcSeatKey = "19.0",
+    NpcSeatKey = "19",
     PartyTopicList = {
       410201,
       410202,
@@ -422,7 +422,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4201,
     MainCameraName = "Yuming_Main",
-    NpcSeatKey = "20.0",
+    NpcSeatKey = "20",
     PartyTopicList = {
       420101,
       420102,
@@ -444,7 +444,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4202,
     MainCameraName = "Landi_Main",
-    NpcSeatKey = "21.0",
+    NpcSeatKey = "21",
     PartyTopicList = {
       420201,
       420202,
@@ -467,7 +467,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 4301,
     MainCameraName = "Xibi_Main",
-    NpcSeatKey = "22.0",
+    NpcSeatKey = "22",
     PartyTopicList = {
       430101,
       430102,
@@ -488,7 +488,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 5101,
     MainCameraName = "Songlu_Main",
-    NpcSeatKey = "26.0",
+    NpcSeatKey = "26",
     PartyTopicList = {
       510101,
       510102,
@@ -511,7 +511,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 5102,
     MainCameraName = "Aote_Main",
-    NpcSeatKey = "23.0",
+    NpcSeatKey = "23",
     PartyTopicList = {
       510201,
       510202,
@@ -533,7 +533,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 5301,
     MainCameraName = "Saiqi_Main",
-    NpcSeatKey = "24.0",
+    NpcSeatKey = "24",
     PartyTopicList = {
       530101,
       530102,
@@ -554,7 +554,7 @@ return ReadOnly("PartyNpc", {
     CameraBlendCurve = "easeInOutQuad",
     CharId = 5401,
     MainCameraName = "Dafu_Main",
-    NpcSeatKey = "25.0",
+    NpcSeatKey = "25",
     PartyTopicList = {
       540101,
       540102,

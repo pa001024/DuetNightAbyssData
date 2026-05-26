@@ -62,7 +62,7 @@ function Component:RequestEnterOnline(online_type, ShowWeapon, CurrentState, Pla
 end
 
 function Component:OnRequestEnterOnline(online_type, ret, others, GlobalRegionItemCache, online_id)
-  self.logger.debug("[OnlineComp] CZC OnRequestEnterOnline: " .. online_type .. " ret: " .. ret .. " online_id" .. online_id)
+  self.logger.debug("[OnlineComp] CZC OnRequestEnterOnline: " .. online_type .. " ret: " .. ret .. " online_id" .. (online_id or "nil"))
   if ret ~= ErrorCode.RET_SUCCESS then
     return
   end

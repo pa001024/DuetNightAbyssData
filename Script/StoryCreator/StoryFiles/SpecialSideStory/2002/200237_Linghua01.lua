@@ -17,12 +17,6 @@ return {
     {
       startStory = "17738159178801",
       startPort = "StoryStart",
-      endStory = "1776509299584863",
-      endPort = "In"
-    },
-    {
-      startStory = "1776509299584863",
-      startPort = "Success",
       endStory = "177381632584097",
       endPort = "In"
     }

@@ -7,14 +7,18 @@ function FDisableCameraArmComponent:New(Player)
 end
 
 function FDisableCameraArmComponent:Execute()
+  if IsValid(self.Player) and IsValid(self.Player.CharSpringArmComponent) then
+    self.PreState = self.Player.CharSpringArmComponent.bArmCollision
+    self.Player.CharSpringArmComponent.bArmCollision = false
+  end
   DebugPrint("FDisableCameraArmComponent:Execute PreState", self.PreState)
-  self.PreState = self.Player.CharSpringArmComponent.bArmCollision
-  self.Player.CharSpringArmComponent.bArmCollision = false
 end
 
 function FDisableCameraArmComponent:Resume()
   DebugPrint("FDisableCameraArmComponent:Resume PreState NowState", self.PreState, self.Player.CharSpringArmComponent.bArmCollision)
-  self.Player.CharSpringArmComponent.bArmCollision = self.PreState
+  if IsValid(self.Player) and IsValid(self.Player.CharSpringArmComponent) then
+    self.Player.CharSpringArmComponent.bArmCollision = self.PreState
+  end
 end
 
 return FDisableCameraArmComponent

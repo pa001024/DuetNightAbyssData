@@ -171,6 +171,14 @@ return ReadOnly("Access", {
     AccessKey = "Text_Collecting",
     AccessText = "Access_Collecting"
   },
+  Text_Collecting_BHCZ = {
+    AccessKey = "Text_Collecting_BHCZ",
+    AccessText = "Access_Collecting_BHCZ"
+  },
+  Text_Collecting_CZDX = {
+    AccessKey = "Text_Collecting_CZDX",
+    AccessText = "Access_Collecting_CZDX"
+  },
   Text_Collecting_EX01 = {
     AccessKey = "Text_Collecting_EX01",
     AccessText = "Access_Collecting_EX01"

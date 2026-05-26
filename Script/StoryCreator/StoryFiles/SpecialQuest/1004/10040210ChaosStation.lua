@@ -222,12 +222,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177847399603094",
-            startPort = "Out",
-            endQuest = "177847399602984",
-            endPort = "In"
-          },
-          {
             startQuest = "177847399602252",
             startPort = "Out",
             endQuest = "177847399602468",
@@ -358,6 +352,42 @@ return {
             startPort = "Out",
             endQuest = "177847399602679",
             endPort = "In"
+          },
+          {
+            startQuest = "17784942928984876331",
+            startPort = "Out",
+            endQuest = "17792000274876762568",
+            endPort = "In"
+          },
+          {
+            startQuest = "177847399602354",
+            startPort = "Out",
+            endQuest = "177936857346369142033",
+            endPort = "In"
+          },
+          {
+            startQuest = "177847399603094",
+            startPort = "Out",
+            endQuest = "177942985543579296281",
+            endPort = "In"
+          },
+          {
+            startQuest = "177847399602249",
+            startPort = "QuestStart",
+            endQuest = "1779520549383969223",
+            endPort = "In"
+          },
+          {
+            startQuest = "177942985543579296281",
+            startPort = "Out",
+            endQuest = "1779520559294969478",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779520559294969478",
+            startPort = "Out",
+            endQuest = "177847399602984",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -429,7 +459,7 @@ return {
             key = "177847399602354",
             type = "TalkNode",
             name = "第二段演出",
-            pos = {x = 1231.2782767956685, y = 658.8390092431015},
+            pos = {x = 1124.9146404320322, y = 658.8390092431015},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -461,9 +491,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              bLockNpcSpawn = false,
+              bLockNpcSpawn = true,
               OptionType = "normal",
-              bLockHighestLOD = false,
+              bLockHighestLOD = true,
               FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -517,9 +547,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              bLockNpcSpawn = false,
+              bLockNpcSpawn = true,
               OptionType = "normal",
-              bLockHighestLOD = false,
+              bLockHighestLOD = true,
               FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -841,19 +871,19 @@ return {
             key = "177847399602984",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 3679.571428571428, y = 1034.2556390977438},
+            pos = {x = 4203.2077922077915, y = 988.3010936431983},
             propsData = {}
           },
           ["177847399602985"] = {
             key = "177847399602985",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = -1502.3813209494328, y = -7.722652218782333},
+            pos = {x = -1180.3813209494328, y = -5.722652218782333},
             propsData = {
               TargetTime = 17,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = true
             }
           },
           ["177847399602986"] = {
@@ -893,9 +923,9 @@ return {
               CameraLookAtTartgetPoint = "",
               RestoreStand = false,
               PauseNpcBT = true,
-              bLockNpcSpawn = false,
+              bLockNpcSpawn = true,
               OptionType = "normal",
-              bLockHighestLOD = false,
+              bLockHighestLOD = true,
               FreezeWorldComposition = true,
               bTravelFullLoadWorldComposition = false,
               SwitchToMaster = "None",
@@ -1144,6 +1174,67 @@ return {
               EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {272480363}
+            }
+          },
+          ["17792000274876762568"] = {
+            key = "17792000274876762568",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 2616.552139037434, y = 877.3133449883447},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "ChaosYTSuccess",
+              UnitId = -1
+            }
+          },
+          ["177936857346369142033"] = {
+            key = "177936857346369142033",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 1902.787878787879, y = 395.9999999999999},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "CZLightChangeStart",
+              UnitId = -1
+            }
+          },
+          ["177942985543579296281"] = {
+            key = "177942985543579296281",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 3731.7303464864203, y = 895.0025201780319},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "CZLightChangeEnd",
+              UnitId = -1
+            }
+          },
+          ["1779520549383969223"] = {
+            key = "1779520549383969223",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = -792.0494505494507, y = 504.5},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0162_story_jazz_sneak_into.0162_story_jazz_sneak_into'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106001},
+              bStoreToServer = false
+            }
+          },
+          ["1779520559294969478"] = {
+            key = "1779520559294969478",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 3961.5547061634015, y = 952.9350215002387},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

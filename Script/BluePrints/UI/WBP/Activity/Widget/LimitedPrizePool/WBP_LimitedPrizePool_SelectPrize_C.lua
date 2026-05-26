@@ -117,7 +117,7 @@ function M:Init(Prizes, OnConfirmSelection, OnClosed)
   self:ListenInputTypeChanged()
   self:SetInputType(UIUtils.UtilsGetCurrentInputType(), UIUtils.UtilsGetCurrentGamepadName())
   self:PlayAnimation(self.FadeInAnimation)
-  AudioManager(self):PlayUISound(self, "event:/ui/activity/limit_gift_pool_sub_page_in", nil, nil)
+  AudioManager(self):PlayUISound(self, "event:/ui/activity/limit_gift_pool_sub_page_in_xiunv", nil, nil)
 end
 
 function M:Close()

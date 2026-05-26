@@ -434,7 +434,7 @@
   {
     "id": 20001,
     "name": "Graffiti détonant",
-    "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Entaille rugissante",
+    "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Entaille rugissante.",
     "icon": "T_Fashion_Fx20",
     "rarity": 5,
     "unlock": "Disponible via l’échange de Prismes"
@@ -442,9 +442,9 @@
   {
     "id": 30001,
     "name": "Dragon ascendant",
-    "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Dragon ascendant",
+    "desc": "Utilisable avec la Variante d’attaque — Sceau démoniaque : Résonance transperçante.",
     "icon": "T_Fashion_Fx21",
     "rarity": 5,
-    "unlock": "Disponible via l’échange de Prismes"
+    "unlock": "Disponible dans la boutique"
   }
 ]

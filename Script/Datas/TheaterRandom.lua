@@ -334,7 +334,7 @@ return ReadOnly("TheaterRandom", {
     Refer = "Resource",
     TalkConfigId = 51105831,
     TypeMatch = {41001},
-    Weight = 0
+    Weight = 100
   },
   [41002] = {
     RandomID = 41002,
@@ -348,7 +348,7 @@ return ReadOnly("TheaterRandom", {
     Refer = "Resource",
     TalkConfigId = 51105833,
     TypeMatch = {41003},
-    Weight = 0
+    Weight = 100
   },
   [41004] = {
     RandomID = 41004,
@@ -377,14 +377,14 @@ return ReadOnly("TheaterRandom", {
     Refer = "Resource",
     TalkConfigId = 51105837,
     TypeMatch = {41011},
-    Weight = 0
+    Weight = 100
   },
   [41013] = {
     RandomID = 41013,
     Refer = "Resource",
     TalkConfigId = 51105838,
     TypeMatch = {41013},
-    Weight = 0
+    Weight = 100
   },
   [41028] = {
     RandomID = 41028,

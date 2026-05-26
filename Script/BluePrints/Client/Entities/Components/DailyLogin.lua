@@ -57,4 +57,8 @@ function Component:OnActivityComplete(ActivityID)
   EventManager:FireEvent(EventID.OnActivityComplete, ActivityID)
 end
 
+function Component:SetCurrentServerExamine(IsExamine)
+  self.IsCurrentServerExamine = IsExamine and true or false
+end
+
 return Component

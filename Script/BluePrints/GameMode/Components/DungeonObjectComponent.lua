@@ -240,6 +240,9 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_CreatDrop(DropRes, 
     if IsStandAlone(self) then
       DebugPrint("HandleRewardDrop in DungeonObject", DropId, Count)
       GameState.EventMgr:RealSpawnRewards_Normal_DungeonOServer(DropId, Count, Transform, DropRes.Reason, DropRes.ExtraInfo, bExtra, UniqueIds)
+    elseif ItemUtils:IsServerCreate(DropId) then
+      DebugPrint("DS HandleRewardDrop in DungeonObject", DropId, Count)
+      GameState.EventMgr:RealSpawnRewards_Normal_DungeonOServer(DropId, Count, Transform, DropRes.Reason, DropRes.ExtraInfo, bExtra, UniqueIds)
     else
       DebugPrint("CreateDrop For Player", DropId)
       local Avatar = OtherParams.Avatar or ""
@@ -347,8 +350,22 @@ function DungeonObjectComponent:NotifyServerGameEnd(IsWin, GameEndReason)
   if not self:CheckServerDungeonEnable() then
     return
   end
+  local AvatarEids
+  if IsStandAlone(self) then
+    local PlayerCharacter = UE4.UGameplayStatics.GetPlayerCharacter(self, 0)
+    if PlayerCharacter and PlayerCharacter:GetOwner() then
+      AvatarEids = {
+        PlayerCharacter:GetOwner().AvatarEidStr
+      }
+    end
+  elseif IsDedicatedServer(self) then
+    AvatarEids = {}
+    for AvatarEid, _ in pairs(self.AvatarInfos) do
+      table.insert(AvatarEids, AvatarEid)
+    end
+  end
   DebugPrint("BP_EMGameMode_C:NotifyServerGameEnd IsWin:", IsWin, " GameEndReason:", GameEndReason)
-  self:NotifyServerDungeonEvent("TriggerGameEnd", IsWin, GameEndReason)
+  self:NotifyServerDungeonEvent("TriggerGameEnd", IsWin, GameEndReason, AvatarEids)
 end
 
 function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_OnServerGameEnd(IsWin, GameEndReason)
@@ -385,9 +402,9 @@ function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_OnServerPlayerEnd(I
         table.insert(Eids, Eid)
       end
     end
-    self:TriggerPlayerWin(AvatarEids, Eids)
+    self:TriggerPlayerWin(AvatarEids, Eids, GameEndReason)
   else
-    self:TriggerPlayerFailed(AvatarEids)
+    self:TriggerPlayerFailed(AvatarEids, GameEndReason)
   end
   if self.ServerPlayerEndCb then
     self.ServerPlayerEndCb(IsWin, AvatarEids, GameEndReason)
@@ -405,6 +422,11 @@ function DungeonObjectComponent:TriggerTableDrivenServerEvent(EventID)
   end
   DebugPrint("BP_EMGameMode_C:TriggerTableDrivenServerEvent   EventID:", EventID)
   self:NotifyServerDungeonEvent("TableDrivenServerEvent", EventID)
+end
+
+function DungeonObjectComponent:OnNotifyGameModeDungeonEvent_SetTicketLeaderEid(AvatarEidStr)
+  self.TicketLeaderAvatarEid = AvatarEidStr
+  DebugPrint("BP_EMGameMode_C:OnNotifyGameModeDungeonEvent_SetTicketLeaderEid   AvatarEidStr", AvatarEidStr)
 end
 
 return DungeonObjectComponent

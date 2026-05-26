@@ -120,12 +120,6 @@ return {
             endPort = "Success"
           },
           {
-            startQuest = "177795502785277",
-            startPort = "QuestStart",
-            endQuest = "17779777685614679009",
-            endPort = "Input"
-          },
-          {
             startQuest = "1777955179847774",
             startPort = "false",
             endQuest = "177795502785278",
@@ -142,6 +136,18 @@ return {
             startPort = "Out",
             endQuest = "1777955179847773",
             endPort = "In"
+          },
+          {
+            startQuest = "177795502785277",
+            startPort = "QuestStart",
+            endQuest = "17796807862961287",
+            endPort = "In"
+          },
+          {
+            startQuest = "177795502785277",
+            startPort = "QuestStart",
+            endQuest = "17779777685614679009",
+            endPort = "Input"
           }
         },
         nodeData = {
@@ -149,7 +155,7 @@ return {
             key = "177795502785277",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = -183.932733932734, y = 251.33449883449885},
+            pos = {x = -343.16350316350326, y = 262.8729603729604},
             propsData = {ModeType = 0}
           },
           ["177795502785278"] = {
@@ -185,7 +191,7 @@ return {
               AllowSurroundDialogue = true,
               FirstDialogueId = 10040701,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10040801.10040801'",
-              TalkType = "FreeSimple",
+              TalkType = "Impression",
               BlendInTime = 1,
               BlendOutTime = 1,
               InType = "BlendIn",
@@ -242,7 +248,7 @@ return {
             key = "1777955179847773",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 464.3167628597537, y = 171.08132542688682},
+            pos = {x = 500.08599362898445, y = 169.92747927304066},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["1777955179847774"] = {
@@ -280,12 +286,22 @@ return {
             key = "17779777685614679009",
             type = "SetTimeOfDayNode",
             name = "设置TOD",
-            pos = {x = 121.58046301524564, y = 178.46616541353376},
+            pos = {x = 159.65738609216874, y = 186.54308849045682},
             propsData = {
               TargetTime = 15,
               NeedLerp = false,
               LerpTime = 0,
-              StopTimeElapse = false
+              StopTimeElapse = true
+            }
+          },
+          ["17796807862961287"] = {
+            key = "17796807862961287",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = -92.3715487030133, y = -27.388807988350266},
+            propsData = {
+              VarName = "FirstPartTime100401",
+              VarValue = 1
             }
           }
         },
@@ -1434,7 +1450,7 @@ return {
               bUseFlowAssetActors = false,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10049401.10049401'",
-              TalkType = "FixSimple",
+              TalkType = "QuestImpression",
               TalkStageName = "",
               BlendInTime = 0,
               BlendOutTime = 0,

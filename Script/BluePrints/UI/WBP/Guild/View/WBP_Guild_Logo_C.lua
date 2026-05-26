@@ -64,7 +64,6 @@ function M:Init(LogoInfo)
   self.T_LogoTypeIndex = tonumber(Parsed.T_LogoType) or tonumber(Parsed.LogoIcon) or 0
   self:LoadGuildLogoResources(Parsed)
   self.LogoInfo = Parsed
-  GreenPrint(string.format("GuildLogo属性打印: LogoColor=%s, BgColor=%s, LogoMat=%s, BGShadingIndex=%s, T_BGTypeIndex=%s, T_LogoTypeIndex=%s, HasBGTexture=%s, HasLogoTexture=%s", tostring(self.Color_Index_Logo), tostring(self.Color_Index_Flag), tostring(self.LogoMatIndex), tostring(self.BGShadingIndex), tostring(self.T_BGTypeIndex), tostring(self.T_LogoTypeIndex), tostring(self.T_BGType ~= nil), tostring(self.T_LogoType ~= nil)))
   self:UpdateFlagMat()
 end
 

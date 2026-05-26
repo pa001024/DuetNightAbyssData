@@ -106,7 +106,15 @@ function M:GetDesiredFocusTarget()
   local State = self.FSM:Peak()
   local StateName = State.Name
   if StateName == FocusStates.StuffItem then
-    return self.HB_Item
+    if not self.HB_Item:IsVisible() then
+      self.FSM:Pop()
+      return self.Armory_Incarnon
+    end
+    if State.Content and State.Content.SelfWidget then
+      return State.Content.SelfWidget
+    else
+      return self.HB_Item:GetChildAt(0)
+    end
   elseif StateName == FocusStates.Incarnon then
     return self.Armory_Incarnon
   else
@@ -152,8 +160,8 @@ function M:Handle_OnPCDown(InKeyName)
 end
 
 function M:Handle_OnGamePadDown(InKeyName)
+  local StateName = self.FSM:Peak().Name
   if InKeyName == UIConst.GamePadKey.FaceButtonRight then
-    local StateName = self.FSM:Peak().Name
     if StateName == FocusStates.StuffItem then
       self.FSM:Pop()
       local Widget = self:GetDesiredFocusTarget()
@@ -176,13 +184,9 @@ function M:Handle_OnGamePadDown(InKeyName)
     end
     return true
   elseif InKeyName == UIConst.GamePadKey.LeftThumb then
-    if self.HB_Item:IsVisible() then
+    if self.HB_Item:IsVisible() and StateName ~= FocusStates.StuffItem then
       local Item = self.HB_Item:GetChildAt(0)
       Item:SetFocus()
-      self.FSM:Push({
-        Name = FocusStates.StuffItem,
-        Content = self.HB_Item
-      })
       self:RefreshConsumeVisibility()
     end
     return true
@@ -220,7 +224,17 @@ end
 
 function M:OnFocusReceived(MyGeometry, InFocusEvent)
   local Widget = self:GetDesiredFocusTarget()
-  if Widget then
+  if not Widget then
+    return UIUtils.Handled
+  end
+  if self.IsAnimationPlaying then
+    self:BlockAllUIInput(true)
+    self:AddTimer(2, function()
+      Widget:SetFocus()
+      self:BlockAllUIInput(false)
+      self.IsAnimationPlaying = false
+    end)
+  else
     Widget:SetFocus()
   end
   return UIUtils.Handled
@@ -249,15 +263,30 @@ end
 function M:OnIncarnonPageRemovedFromFocusPath()
 end
 
-function M:OnStuffItemClicked(Content)
-  self:SwitchGamepadKeyState()
+function M:OnStuffItemMenuOpenChanged(bIsOpen, Content)
+  if not self.IsGamepadInput then
+    return
+  end
+  if bIsOpen then
+    self:SwitchGamepadKeyState()
+  else
+    self:SwitchGamepadKeyState(FocusStates.StuffItem)
+  end
 end
 
-function M:OnStuffItemFocusReceived()
+function M:OnStuffItemAddToFocusPath(Content)
+  local StateName = self.FSM:Peak().Name
+  if StateName == FocusStates.StuffItem then
+    self.FSM:Pop()
+  end
+  self.FSM:Push({
+    Name = FocusStates.StuffItem,
+    Content = Content
+  })
   self:SwitchGamepadKeyState(FocusStates.StuffItem)
 end
 
-function M:OnStuffItemRemovedFromFFocusPath(Content)
+function M:OnStuffItemRemovedFromFocusPath(Content)
   self:SwitchGamepadKeyState(FocusStates.Incarnon)
 end
 

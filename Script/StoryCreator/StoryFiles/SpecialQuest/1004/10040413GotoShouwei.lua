@@ -47,11 +47,11 @@ return {
       key = "177874693054920447723",
       type = "StoryNode",
       name = "前往守卫车厢",
-      pos = {x = 1234, y = 294},
+      pos = {x = 1230, y = 286},
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040408_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -102,12 +102,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177874693054920447732",
-            startPort = "Out",
-            endQuest = "177874694555220448247",
-            endPort = "In"
-          },
-          {
             startQuest = "177874693054920447728",
             startPort = "QuestStart",
             endQuest = "177874695545520448566",
@@ -130,6 +124,24 @@ return {
             startPort = "Out",
             endQuest = "177874693054920447731",
             endPort = "In"
+          },
+          {
+            startQuest = "177874693054920447731",
+            startPort = "Out",
+            endQuest = "1779696794706404",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874693054920447732",
+            startPort = "Out",
+            endQuest = "1779696797972558",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779696797972558",
+            startPort = "Out",
+            endQuest = "177874694555220448247",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -144,7 +156,7 @@ return {
             key = "177874693054920447729",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2386.208695652174, y = 431.3217391304348},
+            pos = {x = 2813.026877470356, y = 438.13992094861663},
             propsData = {ModeType = 0}
           },
           ["177874693054920447730"] = {
@@ -250,7 +262,7 @@ return {
             key = "177874694555220448247",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2151.7848970251716, y = 439.212814645309},
+            pos = {x = 2544.5121697524446, y = 454.212814645309},
             propsData = {}
           },
           ["177874695545520448566"] = {
@@ -273,6 +285,34 @@ return {
               bResetCamera = true,
               bForceAsyncLoading = true,
               IsWhite = false
+            }
+          },
+          ["1779696794706404"] = {
+            key = "1779696794706404",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1775.6771306608773, y = 614.8831286102959},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0162_story_jazz_sneak_into.0162_story_jazz_sneak_into'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["1779696797972558"] = {
+            key = "1779696797972558",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2247.4953124790586, y = 441.7013104284777},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
             }
           }
         },

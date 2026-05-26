@@ -844,28 +844,162 @@ function M:CanStartImport()
   return self.TargetChar ~= nil and nil ~= self.SelectedTargetPlanIndex and self.SelectedTargetPlanIndex > 0
 end
 
-function M:ShouldRefreshCurrentAppearance(AppearanceIndex)
-  local Char = self.TargetChar
-  AppearanceIndex = SafeNumber(AppearanceIndex, 0)
-  if not Char or AppearanceIndex <= 0 then
-    return false
+local function ResolveAccessoryCustomParamsForCompare(AccessoryCustomParams, AccessoryId)
+  local Params = AccessoryCustomParams and (AccessoryCustomParams[AccessoryId] or AccessoryCustomParams[tostring(AccessoryId)]) or nil
+  if nil == Params or "" == Params then
+    return {}
   end
-  return SafeNumber(Char.CurrentAppearanceIndex, 0) == AppearanceIndex
+  if type(Params) == "string" then
+    local Ok, Parsed = pcall(SerializeUtils.UnSerialize, SerializeUtils, Params)
+    Params = Ok and Parsed or {}
+  end
+  if type(Params) ~= "table" then
+    return {}
+  end
+  return CloneTable(Params)
 end
 
-function M:RequestCurrentAppearanceRefresh(Avatar, CharUuid, AppearanceIndex)
-  if not Avatar or not CharUuid then
+local function SerializeAccessoryCustomParams(AccessoryCustomParams, AccessoryId)
+  local Params = ResolveAccessoryCustomParamsForCompare(AccessoryCustomParams, AccessoryId)
+  local Ok, Serialized = pcall(SerializeUtils.Serialize, SerializeUtils, Params)
+  if not Ok or not Serialized then
+    return ""
+  end
+  return Serialized
+end
+
+function M:ClearImportSequenceState()
+  if self.bImportSequenceListening then
+    EventManager:RemoveEvent(EventID.OnCharAccessorySetted, self)
+    EventManager:RemoveEvent(EventID.OnCharAccessoryRemoved, self)
+    EventManager:RemoveEvent(EventID.OnCharSkinChanged, self)
+    EventManager:RemoveEvent(EventID.OnCharHairChanged, self)
+  end
+  self.bImportSequenceListening = false
+  self.ImportSequenceState = nil
+end
+
+function M:BeginImportSequence(CharUuid, AppearanceIndex, Operations, OnFinished)
+  self:ClearImportSequenceState()
+  self.ImportSequenceState = {
+    CharUuid = CharUuid,
+    AppearanceIndex = SafeNumber(AppearanceIndex, 0),
+    Operations = Operations or {},
+    CurrentIndex = 0,
+    CurrentOperation = nil,
+    OnFinished = OnFinished
+  }
+  EventManager:AddEvent(EventID.OnCharAccessorySetted, self, self.OnImportAccessorySetFinished)
+  EventManager:AddEvent(EventID.OnCharAccessoryRemoved, self, self.OnImportAccessoryRemovedFinished)
+  EventManager:AddEvent(EventID.OnCharSkinChanged, self, self.OnImportSkinChangedFinished)
+  EventManager:AddEvent(EventID.OnCharHairChanged, self, self.OnImportHairChangedFinished)
+  self.bImportSequenceListening = true
+end
+
+function M:FinishImportSequence(bSuccess)
+  local State = self.ImportSequenceState
+  local OnFinished = State and State.OnFinished or nil
+  self:ClearImportSequenceState()
+  if true == bSuccess then
+    self:TryRefreshCurrentBattlePlayer()
+  end
+  if OnFinished then
+    OnFinished(true == bSuccess)
+  end
+end
+
+function M:RunNextImportOperation()
+  local State = self.ImportSequenceState
+  if not State then
     return
   end
-  AppearanceIndex = SafeNumber(AppearanceIndex, 0)
-  if AppearanceIndex <= 0 then
+  State.CurrentIndex = State.CurrentIndex + 1
+  local Operation = State.Operations[State.CurrentIndex]
+  State.CurrentOperation = Operation
+  if not Operation then
+    self:FinishImportSequence(true)
     return
   end
-  Avatar:SwitchCurrentCharAppearance(CharUuid, AppearanceIndex)
+  Operation.Invoke()
+end
+
+function M:HandleImportOperationFinished(ExpectedKind, Ret, CharUuid, AppearanceIndex)
+  local State = self.ImportSequenceState
+  if not State then
+    return
+  end
+  if CharUuid ~= State.CharUuid or SafeNumber(AppearanceIndex, 0) ~= State.AppearanceIndex then
+    return
+  end
+  local Operation = State.CurrentOperation
+  if not Operation or Operation.Kind ~= ExpectedKind then
+    return
+  end
+  if not ErrorCode:Check(Ret) then
+    self:FinishImportSequence(false)
+    return
+  end
+  State.CurrentOperation = nil
+  self:RunNextImportOperation()
+end
+
+function M:TryRefreshCurrentBattlePlayer()
+  local Avatar = self.RealAvatar or GWorld:GetAvatar()
+  if not (Avatar and Avatar.GetNeedRefreshPlayer) or not Avatar:GetNeedRefreshPlayer() then
+    return
+  end
+  local TargetChar = self.TargetChar
+  local TargetPlanIndex = SafeNumber(self.SelectedTargetPlanIndex, 0)
+  if not TargetChar or TargetChar.Uuid ~= Avatar.CurrentChar then
+    return
+  end
+  if SafeNumber(TargetChar.CurrentAppearanceIndex, 0) ~= TargetPlanIndex then
+    return
+  end
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.Owner, 0)
+  if not IsValid(Player) then
+    ImportModelScreenPrint("刷新大世界角色失败：Player 无效")
+    return
+  end
+  local PlayerController = Player:GetController()
+  if not IsValid(PlayerController) then
+    ImportModelScreenPrint("刷新大世界角色失败：PlayerController 无效")
+    return
+  end
+  local AvatarInfo = AvatarUtils:GetDefaultBattleInfo(Avatar)
+  if not AvatarInfo then
+    ImportModelScreenPrint("刷新大世界角色失败：AvatarInfo 为空")
+    return
+  end
+  PlayerController:SetAvatarInfo(CommonUtils.ObjId2Str(Avatar.Eid), AvatarInfo)
+  Player:ChangeRole(nil, AvatarInfo)
+  Player:RecoverBanSkills()
+  UE4.UPhantomFunctionLibrary.CancelAllPhantom(Player, EDestroyReason.PhantomChangeRole)
+  EventManager:FireEvent(EventID.OnSwitchRole, Avatar.CurrentChar)
+end
+
+function M:OnImportAccessorySetFinished(Ret, CharUuid, AppearanceIndex)
+  self:HandleImportOperationFinished("AccessorySet", Ret, CharUuid, AppearanceIndex)
+end
+
+function M:OnImportAccessoryRemovedFinished(Ret, CharUuid, AppearanceIndex)
+  self:HandleImportOperationFinished("AccessoryRemove", Ret, CharUuid, AppearanceIndex)
+end
+
+function M:OnImportSkinChangedFinished(Ret, CharUuid, AppearanceIndex)
+  self:HandleImportOperationFinished("Skin", Ret, CharUuid, AppearanceIndex)
+end
+
+function M:OnImportHairChangedFinished(Ret, CharUuid, AppearanceIndex)
+  self:HandleImportOperationFinished("Hair", Ret, CharUuid, AppearanceIndex)
+end
+
+function M:CanApplyImport()
+  return self:CanStartImport() and self.CanImportPlan == true
 end
 
 function M:ApplyImport(OnFinished)
-  if not self:CanStartImport() then
+  if not self:CanApplyImport() then
     ImportModelScreenPrint("apply import aborted: current state can not start import")
     if OnFinished then
       OnFinished(false)
@@ -887,41 +1021,69 @@ function M:ApplyImport(OnFinished)
   local SkinId = SafeNumber(AppearanceInfo.SkinId, 0)
   local HairId = SafeNumber(AppearanceInfo.HairId, 0)
   local AccessorySuit = NormalizeAccessoryFields(AppearanceInfo)
-  local NeedRefreshCurrentAppearance = self:ShouldRefreshCurrentAppearance(AppearanceIndex)
-  if SkinId > 0 then
-    Avatar:ChangeCharAppearanceSkin(CharUuid, AppearanceIndex, SkinId)
-  end
-  if HairId > 0 then
-    Avatar:ChangeCharAppearanceHair(CharUuid, AppearanceIndex, HairId)
-  end
   local CurrentSuit = Char.GetAppearance and Char:GetAppearance(AppearanceIndex) or nil
+  local CurrentSkinId = SafeNumber(CurrentSuit and CurrentSuit.SkinId, 0)
+  local CurrentHairId = SafeNumber(CurrentSuit and CurrentSuit.HairId, 0)
   local CurrentAccessory = CurrentSuit and CurrentSuit.Accessory or {}
+  local CurrentAccessoryCustomParams = CurrentSuit and CurrentSuit.AccessoryCustomParams or {}
+  local Operations = {}
+  if SkinId > 0 and SkinId ~= CurrentSkinId then
+    table.insert(Operations, {
+      Kind = "Skin",
+      Invoke = function()
+        Avatar:ChangeCharAppearanceSkin(CharUuid, AppearanceIndex, SkinId)
+      end
+    })
+  end
+  if HairId > 0 and HairId ~= CurrentHairId then
+    table.insert(Operations, {
+      Kind = "Hair",
+      Invoke = function()
+        Avatar:ChangeCharAppearanceHair(CharUuid, AppearanceIndex, HairId)
+      end
+    })
+  end
   for AccessoryTypeIdx, AccessoryId in pairs(CurrentAccessory or {}) do
     local TargetAccessoryId = SafeNumber(AccessorySuit[AccessoryTypeIdx], 0)
     AccessoryId = SafeNumber(AccessoryId, 0)
     if AccessoryId > 0 and AccessoryId ~= EmptyAccessoryId and (TargetAccessoryId <= 0 or TargetAccessoryId == EmptyAccessoryId) then
-      Avatar:RemoveCharAppearanceAccessory(CharUuid, AppearanceIndex, AccessoryId)
+      table.insert(Operations, {
+        Kind = "AccessoryRemove",
+        Invoke = function()
+          Avatar:RemoveCharAppearanceAccessory(CharUuid, AppearanceIndex, AccessoryId)
+        end
+      })
     end
   end
-  for _, AccessoryId in pairs(AccessorySuit) do
+  for AccessoryTypeIdx, AccessoryId in pairs(AccessorySuit) do
     AccessoryId = SafeNumber(AccessoryId, 0)
     if AccessoryId > 0 and AccessoryId ~= EmptyAccessoryId then
-      local CustomParams = AppearanceInfo.AccessoryCustomParams and (AppearanceInfo.AccessoryCustomParams[AccessoryId] or AppearanceInfo.AccessoryCustomParams[tostring(AccessoryId)]) or {}
-      if type(CustomParams) == "string" then
-        local Ok, Parsed = pcall(SerializeUtils.UnSerialize, SerializeUtils, CustomParams)
-        CustomParams = Ok and Parsed or {}
-      elseif type(CustomParams) ~= "table" then
-        CustomParams = {}
+      local CurrentAccessoryId = SafeNumber(CurrentAccessory[AccessoryTypeIdx], 0)
+      local NeedSetAccessory = CurrentAccessoryId ~= AccessoryId
+      if not NeedSetAccessory then
+        local CurrentSerializedParams = SerializeAccessoryCustomParams(CurrentAccessoryCustomParams, AccessoryId)
+        local TargetSerializedParams = SerializeAccessoryCustomParams(AppearanceInfo.AccessoryCustomParams, AccessoryId)
+        NeedSetAccessory = CurrentSerializedParams ~= TargetSerializedParams
       end
-      Avatar:SetCharAppearanceAccessory(CharUuid, AppearanceIndex, AccessoryId, CustomParams)
+      if NeedSetAccessory then
+        local CustomParams = ResolveAccessoryCustomParamsForCompare(AppearanceInfo.AccessoryCustomParams, AccessoryId)
+        table.insert(Operations, {
+          Kind = "AccessorySet",
+          Invoke = function()
+            Avatar:SetCharAppearanceAccessory(CharUuid, AppearanceIndex, AccessoryId, CustomParams)
+          end
+        })
+      end
     end
   end
-  if NeedRefreshCurrentAppearance then
-    self:RequestCurrentAppearanceRefresh(Avatar, CharUuid, AppearanceIndex)
+  if #Operations <= 0 then
+    if OnFinished then
+      OnFinished(true)
+    end
+    return
   end
-  if OnFinished then
-    OnFinished(true)
-  end
+  self:BeginImportSequence(CharUuid, AppearanceIndex, Operations, OnFinished)
+  self:RunNextImportOperation()
 end
 
 return M

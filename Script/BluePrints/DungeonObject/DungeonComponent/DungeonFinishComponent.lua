@@ -5,12 +5,12 @@ function DungeonFinishComponent:BeginPlay()
   print("ljl@ DungeonFinishComponent BeginPlay")
 end
 
-function DungeonFinishComponent:OnNotifyServerDungeonEvent_TriggerGameEnd(IsWin, GameEndReason)
+function DungeonFinishComponent:OnNotifyServerDungeonEvent_TriggerGameEnd(IsWin, GameEndReason, AvatarEidStrs)
   print("ljl@ TriggerGameEnd IsWin", IsWin, "GameEndReason", GameEndReason)
-  self:TryDungeonFinish(IsWin, GameEndReason)
+  self:TryDungeonFinish(IsWin, GameEndReason, AvatarEidStrs)
 end
 
-function DungeonFinishComponent:TryDungeonFinish(IsWin, GameEndReason)
+function DungeonFinishComponent:TryDungeonFinish(IsWin, GameEndReason, AvatarEidStrs)
   local IsAllowedFinish = true
   if self.CheckAllowedFinish then
     IsAllowedFinish = self:CheckAllowedFinish(IsWin, GameEndReason)
@@ -19,31 +19,39 @@ function DungeonFinishComponent:TryDungeonFinish(IsWin, GameEndReason)
   if not IsAllowedFinish then
     return IsAllowedFinish
   end
-  self:DungeonFinish(IsWin)
+  if AvatarEidStrs then
+    for _, AvatarEidStr in pairs(AvatarEidStrs) do
+      local AvatarEid = CommonUtils.Str2ObjId(AvatarEidStr)
+      self:DungeonFinish(IsWin, AvatarEid)
+    end
+  else
+    self:DungeonFinish(IsWin)
+  end
   self:NotifyGameModeDungeonEvent("OnServerGameEnd", IsWin, GameEndReason)
   return IsAllowedFinish
 end
 
-function DungeonFinishComponent:OnNotifyServerDungeonEvent_TriggerPlayerEnd(IsWin, AvatarEids, GameEndReason)
-  print("ljl@ TriggerPlayerEnd IsWin", IsWin, "AvatarEids", table.concat(AvatarEids, ", "), "GameEndReason", GameEndReason)
-  self:TryPlayerFinish(IsWin, AvatarEids, GameEndReason)
+function DungeonFinishComponent:OnNotifyServerDungeonEvent_TriggerPlayerEnd(IsWin, AvatarEidStrs, GameEndReason)
+  print("ljl@ TriggerPlayerEnd IsWin", IsWin, "AvatarEidStrs", table.concat(AvatarEidStrs, ", "), "GameEndReason", GameEndReason)
+  self:TryPlayerFinish(IsWin, AvatarEidStrs, GameEndReason)
 end
 
-function DungeonFinishComponent:TryPlayerFinish(IsWin, AvatarEids, GameEndReason)
-  local AllowedFinishAvatarEids = {}
+function DungeonFinishComponent:TryPlayerFinish(IsWin, AvatarEidStrs, GameEndReason)
+  local AllowedFinishAvatarEidStrs = {}
   if self.CheckPlayerAllowedFinish then
-    for _, AvatarEid in pairs(AvatarEids) do
-      if self.CheckPlayerAllowedFinish(IsWin, AvatarEid, GameEndReason) then
-        table.insert(AllowedFinishAvatarEids, AvatarEid)
+    for _, AvatarEidStr in pairs(AvatarEidStrs) do
+      if self.CheckPlayerAllowedFinish(IsWin, AvatarEidStr, GameEndReason) then
+        table.insert(AllowedFinishAvatarEidStrs, AvatarEidStr)
       end
     end
   end
-  print("ljl@ DungeonFinishComponent TryPlayerFinish AllowedFinishAvatarEids", table.concat(AllowedFinishAvatarEids, ", "), "IsWin", IsWin, "GameEndReason", GameEndReason)
-  for _, AvatarEid in pairs(AllowedFinishAvatarEids) do
+  print("ljl@ DungeonFinishComponent TryPlayerFinish AllowedFinishAvatarEidStrs", table.concat(AllowedFinishAvatarEidStrs, ", "), "IsWin", IsWin, "GameEndReason", GameEndReason)
+  for _, AvatarEidStr in pairs(AllowedFinishAvatarEidStrs) do
+    local AvatarEid = CommonUtils.Str2ObjId(AvatarEidStr)
     self:DungeonFinish(IsWin, AvatarEid)
   end
-  self:NotifyGameModeDungeonEvent("OnServerPlayerEnd", IsWin, AllowedFinishAvatarEids, GameEndReason)
-  return AllowedFinishAvatarEids
+  self:NotifyGameModeDungeonEvent("OnServerPlayerEnd", IsWin, AllowedFinishAvatarEidStrs, GameEndReason)
+  return AllowedFinishAvatarEidStrs
 end
 
 DungeonClass.AssembleComponents(DungeonFinishComponent)

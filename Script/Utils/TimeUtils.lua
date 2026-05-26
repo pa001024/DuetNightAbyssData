@@ -323,4 +323,10 @@ function TimeUtils.GetIntervalDay(t1, t2, day_gap_hms)
   return math.floor((sd2 - sd1) / 86400)
 end
 
+function TimeUtils.IsTimestampFromPreviousWeek(timestamp)
+  local timestampWeekRefresh = TimeUtils.NextWeeklyRefreshTime(timestamp)
+  local currentTimestamp = TimeUtils.NowTime()
+  return timestampWeekRefresh <= currentTimestamp
+end
+
 return TimeUtils

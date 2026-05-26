@@ -97,12 +97,15 @@ function M:UpdateButtonState()
   if self.ButtonState == EnumButtonState.Forbid then
     self.Ws_Btn:SetActiveWidgetIndex(1)
     self.TextBtn:SetText(GText(MonthSignInCommon.BattlePassClaimlock))
+    self:PlayAnimation(self.Get_Normal)
   elseif self.ButtonState == EnumButtonState.CanReceive then
     self.Ws_Btn:SetActiveWidgetIndex(0)
     self.BtnReward.Text_Button:SetText(GText(MonthSignInCommon.AchievementGetReward))
+    self:PlayAnimation(self.Get_Normal)
   elseif self.ButtonState == EnumButtonState.Received then
     self.Ws_Btn:SetActiveWidgetIndex(1)
     self.TextBtn:SetText(GText(MonthSignInCommon.RewardReceived))
+    self:PlayAnimation(self.Get)
   end
 end
 
@@ -129,6 +132,9 @@ end
 
 function M:OnRewardBtnClicked()
   DebugPrint("Yihan@ OnRewardBtnClicked", self.ButtonState)
+  self.BtnReward:TryOverrideSoundFunc(function()
+    AudioManager(self):PlayUISound(nil, "event:/ui/common/battle_pass_btn_click_special", nil, nil)
+  end)
   if self.ButtonState == EnumButtonState.Forbid or self.ButtonState == EnumButtonState.Received then
     return
   end

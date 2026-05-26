@@ -147,7 +147,7 @@ return {
               IsPlayerTurnToNPC = true,
               IsNPCTurnToPlayer = true,
               AllowSurroundDialogue = false,
-              FirstDialogueId = 51201802,
+              FirstDialogueId = 51201902,
               FlowAssetPath = "",
               TalkType = "FreeSimple",
               BlendInTime = 0,

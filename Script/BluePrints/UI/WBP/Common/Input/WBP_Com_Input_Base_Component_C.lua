@@ -352,6 +352,7 @@ function M:HandleOnTextCommitted(Text, CommitMethod)
 end
 
 function M:OnPasteBtnClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
   local Str = ULowEntryExtendedStandardLibrary.ClipboardGet()
   Str = string.gsub(Str, "^[%s\n\r\t]*(.-)[%s\n\r\t]*$", "%1")
   self:TrySetText(Str)

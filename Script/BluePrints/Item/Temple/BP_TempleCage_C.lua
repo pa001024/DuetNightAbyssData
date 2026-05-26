@@ -11,7 +11,6 @@ function M:AuthorityInitInfo(Info)
   M.Super.AuthorityInitInfo(self, Info)
   self.HasMonsterInRange = false
   self.InRangeMonsters = {}
-  self.Center = self.DetectMonBox:K2_GetComponentLocation()
 end
 
 function M:CommonInitInfo(Info)
@@ -95,9 +94,10 @@ function M:AddMonsterBuff()
     return
   end
   local MonsterNum = 0
+  local Center = self.DetectMonBox:K2_GetComponentLocation()
   for i, v in pairs(self.InRangeMonsters) do
     if v and not v:IsDead() then
-      v:SetVector("CageCenterLoc", self.Center)
+      v:SetVector("CageCenterLoc", Center)
       Battle(self):AddBuffToTarget(self, v, self.BuffId, -1, nil, nil)
       MonsterNum = MonsterNum + 1
     end

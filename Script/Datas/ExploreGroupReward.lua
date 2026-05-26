@@ -475,26 +475,6 @@ return ReadOnly("ExploreGroupReward", {
     IfOnlyOnce = true,
     RewardId = 3011
   },
-  [7090066] = {
-    ExploreGroupId = 7090066,
-    IfOnlyOnce = true,
-    RewardId = 3011
-  },
-  [7090067] = {
-    ExploreGroupId = 7090067,
-    IfOnlyOnce = true,
-    RewardId = 3011
-  },
-  [7090068] = {
-    ExploreGroupId = 7090068,
-    IfOnlyOnce = true,
-    RewardId = 3011
-  },
-  [7090069] = {
-    ExploreGroupId = 7090069,
-    IfOnlyOnce = true,
-    RewardId = 3011
-  },
   [7090070] = {
     ExploreGroupId = 7090070,
     IfOnlyOnce = true,
@@ -502,21 +482,6 @@ return ReadOnly("ExploreGroupReward", {
   },
   [7090071] = {
     ExploreGroupId = 7090071,
-    IfOnlyOnce = true,
-    RewardId = 3011
-  },
-  [7090072] = {
-    ExploreGroupId = 7090072,
-    IfOnlyOnce = true,
-    RewardId = 3011
-  },
-  [7090073] = {
-    ExploreGroupId = 7090073,
-    IfOnlyOnce = true,
-    RewardId = 3011
-  },
-  [7090074] = {
-    ExploreGroupId = 7090074,
     IfOnlyOnce = true,
     RewardId = 3011
   },
@@ -532,6 +497,41 @@ return ReadOnly("ExploreGroupReward", {
   },
   [7090107] = {
     ExploreGroupId = 7090107,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7091038] = {
+    ExploreGroupId = 7091038,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7091039] = {
+    ExploreGroupId = 7091039,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7091040] = {
+    ExploreGroupId = 7091040,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7091041] = {
+    ExploreGroupId = 7091041,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7091042] = {
+    ExploreGroupId = 7091042,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7091043] = {
+    ExploreGroupId = 7091043,
+    IfOnlyOnce = true,
+    RewardId = 3011
+  },
+  [7091044] = {
+    ExploreGroupId = 7091044,
     IfOnlyOnce = true,
     RewardId = 3011
   }

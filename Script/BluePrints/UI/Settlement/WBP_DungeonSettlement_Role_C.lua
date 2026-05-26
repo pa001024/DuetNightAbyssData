@@ -183,7 +183,7 @@ function WBP_DungeonSettlement_Role_C:GetCharInfo(Player)
       Level = Player:GetAttr("Level")
     }
   end
-  local CharId = self.Id
+  local CharId = Player.CurrentRoleId or self.Id
   local EnhanceLevel = self.EnhanceLevel
   local CurrentExp = self.CurInfo.Exp
   local CurrentLevel = self.CurInfo.Level
@@ -235,7 +235,7 @@ function WBP_DungeonSettlement_Role_C:GetWeaponInfo(Player)
       Level = Player[self.RoleName]:GetAttr("Level")
     }
   end
-  local WeaponId = self.Id
+  local WeaponId = Player[self.RoleName] and Player[self.RoleName].WeaponId or self.Id
   local EnhanceLevel = self.EnhanceLevel
   local CurrentExp = self.CurInfo.Exp
   local CurrentLevel = self.CurInfo.Level

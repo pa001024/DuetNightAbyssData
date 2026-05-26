@@ -39,6 +39,7 @@ function M:InitUI()
   self.AllTabInfo = {}
   self.BackgroundWidgets = {}
   local ConstQuestTabData = {}
+  self.TabChangeAudioPath = DataMgr.SystemUIName[self.EventId].TabChangeAudioPath
   for _, phaseData in pairs(DataMgr.CommonQuestPhase) do
     if phaseData.Index >= 1 and phaseData.Index <= 4 and phaseData.EventId == self.EventId then
       ConstQuestTabData[phaseData.Index] = phaseData
@@ -271,7 +272,7 @@ function M:InitQuestPhaseContent(TabId)
         if index == TabId then
           widget:SetVisibility(UIConst.VisibilityOp.Visible)
           widget:PlayAnimation(widget.In)
-          AudioManager(self):PlayUISound(nil, "event:/ui/activity/huaxu_sub_page_in", nil, nil)
+          AudioManager(self):PlayUISound(nil, self.TabChangeAudioPath, nil, nil)
         else
           widget:SetVisibility(UIConst.VisibilityOp.Hidden)
         end

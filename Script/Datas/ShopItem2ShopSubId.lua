@@ -5308,6 +5308,9 @@ return ReadOnly("ShopItem2ShopSubId", {
       [3010503] = {
         [1] = {ShopItemId = 120144, SubTabId = 1208}
       },
+      [3010505] = {
+        [1] = {ShopItemId = 120162, SubTabId = 1208}
+      },
       [3010601] = {
         [1] = {ShopItemId = 120122, SubTabId = 1208}
       },
@@ -5334,9 +5337,6 @@ return ReadOnly("ShopItem2ShopSubId", {
       },
       [3010709] = {
         [1] = {ShopItemId = 120155, SubTabId = 1208}
-      },
-      [3010715] = {
-        [1] = {ShopItemId = 120162, SubTabId = 1208}
       },
       [3010801] = {
         [1] = {ShopItemId = 120121, SubTabId = 1208}

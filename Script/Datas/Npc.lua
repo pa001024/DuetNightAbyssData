@@ -1771,7 +1771,7 @@ return ReadOnly("Npc", {
     Camp = "NPC",
     CollisionLevel = 999,
     GuideHeadId = "Xier_Idle",
-    ModelId = 3102,
+    ModelId = 10094,
     MouthProfile = "LipSync_10014",
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/CharacterNpc/Xier/BP_NPC_Xier",
@@ -1867,7 +1867,7 @@ return ReadOnly("Npc", {
     ModelId = 30056,
     MouthProfile = "LipSync_10009",
     NpcType = "Normal",
-    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_QNM_PucongB.BP_QNM_PucongB",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_QNM_GuizuZhipiao",
     UnitId = 100411,
     UnitName = "UI_Npc_Name_ChezhanGuizu"
   },
@@ -2590,6 +2590,16 @@ return ReadOnly("Npc", {
     UnitBPPath = "/Game/AssetDesign/Char/Npc/TalkMonster/BP_NPC_JT_Mid_M",
     UnitId = 100478,
     UnitName = "UI_Npc_Name_Man_3"
+  },
+  [100479] = {
+    Camp = "NPC",
+    CollisionLevel = 999,
+    ModelId = 30052,
+    MouthProfile = "LipSync_10009",
+    NpcType = "Normal",
+    UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/MainStory03/BP_ZNM_GuizuC.BP_ZNM_GuizuC",
+    UnitId = 100479,
+    UnitName = "UI_Npc_Name_ChezhanGuizu"
   },
   [110001] = {
     Camp = "NPC",
@@ -15169,6 +15179,7 @@ return ReadOnly("Npc", {
   [701267] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30004,
     NpcType = "Normal",
     RelatedTalks = {510152},
@@ -15179,6 +15190,7 @@ return ReadOnly("Npc", {
   [701268] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30006,
     NpcBiographyId = {105601},
     NpcType = "Normal",
@@ -15191,6 +15203,7 @@ return ReadOnly("Npc", {
   [701269] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30004,
     NpcType = "Normal",
     RelatedBubble = {51015401},
@@ -15202,6 +15215,7 @@ return ReadOnly("Npc", {
   [701270] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30002,
     NpcBiographyId = {105701},
     NpcType = "Normal",
@@ -15214,6 +15228,7 @@ return ReadOnly("Npc", {
   [701271] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30005,
     NpcType = "Normal",
     RelatedBubble = {51015601},
@@ -15225,6 +15240,7 @@ return ReadOnly("Npc", {
   [701272] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30009,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/Impression_Dialogue/BP_CMNpc_Haojing_ATao",
@@ -15234,6 +15250,9 @@ return ReadOnly("Npc", {
   [701273] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
+    ForbidenMoveComp = true,
+    IgnoreFixLocation = true,
     ModelId = 10088,
     NpcBiographyId = {105801},
     NpcType = "Normal",
@@ -15246,6 +15265,7 @@ return ReadOnly("Npc", {
   [701274] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30006,
     NpcType = "Normal",
     RelatedBubble = {51015801},
@@ -15257,6 +15277,7 @@ return ReadOnly("Npc", {
   [701275] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30005,
     NpcBiographyId = {105901},
     NpcType = "Normal",
@@ -15269,6 +15290,7 @@ return ReadOnly("Npc", {
   [701276] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30006,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/Impression_Dialogue/BP_CMNpc_Haojing_XieQian",
@@ -15278,6 +15300,7 @@ return ReadOnly("Npc", {
   [701277] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30004,
     NpcBiographyId = {106001},
     NpcType = "Normal",
@@ -15290,6 +15313,7 @@ return ReadOnly("Npc", {
   [701278] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30004,
     NpcBiographyId = {106101},
     NpcType = "Normal",
@@ -15302,6 +15326,7 @@ return ReadOnly("Npc", {
   [701279] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 10088,
     NpcBiographyId = {106201},
     NpcType = "Normal",
@@ -15314,6 +15339,7 @@ return ReadOnly("Npc", {
   [701280] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30023,
     NpcBiographyId = {106301},
     NpcType = "Normal",
@@ -15326,6 +15352,7 @@ return ReadOnly("Npc", {
   [701281] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30002,
     NpcType = "Normal",
     RelatedBubble = {51016401},
@@ -15337,6 +15364,7 @@ return ReadOnly("Npc", {
   [701282] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30008,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/East02/Impression_Dialogue/BP_CMNpc_Haojing_Kid",
@@ -15346,6 +15374,7 @@ return ReadOnly("Npc", {
   [701283] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30044,
     NpcType = "Normal",
     RelatedBubble = {51016501},
@@ -15357,6 +15386,7 @@ return ReadOnly("Npc", {
   [701284] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30006,
     NpcBiographyId = {106401},
     NpcType = "Normal",
@@ -15369,6 +15399,7 @@ return ReadOnly("Npc", {
   [701285] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30004,
     NpcType = "Normal",
     RelatedTalks = {510167},
@@ -15379,6 +15410,7 @@ return ReadOnly("Npc", {
   [701286] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30006,
     NpcType = "Normal",
     RelatedBubble = {51016701},
@@ -15389,6 +15421,7 @@ return ReadOnly("Npc", {
   [701287] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30007,
     NpcBiographyId = {106501},
     NpcType = "Normal",
@@ -15400,6 +15433,7 @@ return ReadOnly("Npc", {
   [701288] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30004,
     NpcType = "Normal",
     RelatedTalks = {510169},
@@ -15410,6 +15444,7 @@ return ReadOnly("Npc", {
   [701289] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30006,
     NpcType = "Normal",
     RelatedTalks = {510170},
@@ -15420,6 +15455,7 @@ return ReadOnly("Npc", {
   [701290] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30005,
     NpcBiographyId = {106601},
     NpcType = "Normal",
@@ -15431,6 +15467,7 @@ return ReadOnly("Npc", {
   [701291] = {
     Camp = "NPC",
     CollisionLevel = 999,
+    DefaultExpression = T.RT_2,
     ModelId = 30005,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/Custom/Chapter03/Impression_Dialogue/BP_CMNpc_Chezhan_Bulunda.BP_CMNpc_Chezhan_Bulunda",
@@ -18381,6 +18418,7 @@ return ReadOnly("Npc", {
     DefaultAction = T.RT_57,
     HeadIconPath = "/Game/UI/Texture/Dynamic/Atlas/GuidePoint/T_Gp_TheaterOnline",
     InteractiveInfo = T.RT_56,
+    MailHead = "Texture2D'/Game/UI/Texture/Dynamic/Image/Head/Mail/T_Head_Theater01.T_Head_Theater01'",
     ModelId = 30046,
     NpcType = "Normal",
     UnitBPPath = "/Game/AssetDesign/Char/Npc/BaiNpc/BaiLC/BP_BaiLC",

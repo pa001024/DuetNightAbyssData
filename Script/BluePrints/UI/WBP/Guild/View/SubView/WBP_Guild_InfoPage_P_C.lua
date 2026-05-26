@@ -66,6 +66,19 @@ function M:InitEditIntro()
   self:InitNavigation()
 end
 
+function M:RefreshEditIntroAuthority(IsPermitted)
+  self.Btn_EditIntro.OnClicked:Remove(self, self.OpenEditGuildDeclarationDialog)
+  if IsPermitted then
+    self.EditIntroAuthority = true
+    self.Btn_EditIntro.OnClicked:Add(self, self.OpenEditGuildDeclarationDialog)
+    self.Btn_EditIntro:SetForbidden(false)
+  else
+    self.EditIntroAuthority = false
+    self.Btn_EditIntro.OnClicked:Remove(self, self.OpenEditGuildDeclarationDialog)
+    self.Btn_EditIntro:SetForbidden(true)
+  end
+end
+
 function M:OpenEditGuildDeclarationDialog()
   if not self.CurrGuildInfo then
     return
@@ -102,6 +115,7 @@ function M:OpenEditGuildDeclarationDialog()
       end
     }
   }, self)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click", nil, nil)
 end
 
 function M:OnGuildEditDeclarationSucceed(Ret)
@@ -267,6 +281,11 @@ function M:SetAutoFocus()
     end)
   end
   self.WidgetFocus = false
+end
+
+function M:PlayInAnim()
+  self:PlayAnimation(self.In)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/association_mainpage_in", nil, nil)
 end
 
 return M

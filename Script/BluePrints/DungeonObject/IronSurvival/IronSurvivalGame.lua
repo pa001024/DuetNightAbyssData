@@ -35,6 +35,9 @@ function IronSurvivalGame:InitExtra(Info)
   end
   self:Log("IronSurvival InitExtra GameModeLevel")
   self.GameModeLevel = GameModeLevel
+  self.TicketLeaderEid = Info.PlayerInfo.TicketLeaderEid
+  print("TicketLeaderEid", self.TicketLeaderEid)
+  self:NotifyGameModeDungeonEvent("SetTicketLeaderEid", self.TicketLeaderEid)
 end
 
 function IronSurvivalGame:OnNotifyServerDungeonEvent_SetGameModeLevel(GameModeLevel)

@@ -48,6 +48,10 @@ local WaitItemUniqueTag = {
   WaitFlowEnd = "WaitFlowEnd",
   AutoPlayDelay = "AutoPlayDelay"
 }
+local DisableMotionBlurTalkIdMap = {
+  ["177772041577114019460"] = true,
+  ["177919559781411108256"] = true
+}
 local CommonTalkTask = Class({
   "BluePrints.Story.Talk.Controller.TalkTaskBase"
 })
@@ -64,6 +68,13 @@ function CommonTalkTask:Start(TalkTaskData, TaskFinishedCallback)
     return
   end
   AudioManager(GWorld.GameInstance):AddAuANotifyForbidTag(self.UnitKey)
+  if DisableMotionBlurTalkIdMap[self.TalkTaskData.Key] then
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    if IsValid(PlayerController) then
+      DebugPrint("TTT:Talk:", self.TalkTaskData.Key, "disable motion blur")
+      PlayerController:ShowFlags("MotionBlur", false)
+    end
+  end
   if self.TalkTaskData.bLockHighestLOD then
     self.NativeStaticMeshLODDistanceScale = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.StaticMeshLODDistanceScale")
     self.NativeHLodMinDrawDistanceScale = UE4.UKismetSystemLibrary.GetConsoleVariableFloatValue("r.HLodMinDrawDistanceScale")
@@ -170,6 +181,13 @@ function CommonTalkTask:Finish(TalkNodeFinishType, OptionIndex)
 end
 
 function CommonTalkTask:End(TalkNodeFinishType, OptionIndex)
+  if DisableMotionBlurTalkIdMap[self.TalkTaskData.Key] then
+    local PlayerController = UE4.UGameplayStatics.GetPlayerController(GWorld.GameInstance, 0)
+    if IsValid(PlayerController) then
+      DebugPrint("TTT:Talk:", self.TalkTaskData.Key, "enable motion blur")
+      PlayerController:ShowFlags("MotionBlur", true)
+    end
+  end
   if self.TalkTaskData.bLockHighestLOD then
     UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.StaticMeshLODDistanceScale", self.NativeStaticMeshLODDistanceScale)
     UE4.URuntimeCommonFunctionLibrary.SetConsoleVariableFloatValue("r.HLodMinDrawDistanceScale", self.NativeHLodMinDrawDistanceScale)
@@ -315,12 +333,14 @@ function CommonTalkTask:SetupSurroundDialogue(bEnable, Player, SurroundedActor, 
   end
   ParticipantInfos = ParticipantInfos or {}
   local ParticipantActors = {}
+  local ActorsVisbility = {}
   for _, ParticipantInfo in ipairs(ParticipantInfos) do
     local ParticipantData = self.TalkContext:GetTalkActorData(self, ParticipantInfo.TalkActorId)
     if ParticipantData and IsValid(ParticipantData.TalkActor) and ParticipantData.TalkActor ~= SurroundedActor then
       local Actor = ParticipantData.TalkActor
       if IsValid(Actor) and Actor ~= Player and Actor ~= SurroundedActor then
         table.insert(ParticipantActors, Actor)
+        table.insert(ActorsVisbility, ParticipantInfo.TalkActorVisible)
       end
     end
   end
@@ -335,14 +355,16 @@ function CommonTalkTask:SetupSurroundDialogue(bEnable, Player, SurroundedActor, 
       LookAtRotation.Roll = 0
       ParticipantActor:K2_SetActorLocationAndRotation(ParticipantLocation, LookAtRotation, false, nil, true)
       ParticipantActor:ResetLocation()
-      if ParticipantActor.ChangeRoleEffect then
-        ParticipantActor:ChangeRoleEffect()
+      if true == ActorsVisbility[i] then
+        if ParticipantActor.ChangeRoleEffect then
+          ParticipantActor:ChangeRoleEffect()
+        end
+        local BodyType = ParticipantActor:GetBattleCharBodyType()
+        ParticipantActor.FXComponent:PlayEffectByIDParams(401, {
+          NotAttached = true,
+          scale = Const.BattleCharTagVXScaleTable[BodyType]
+        })
       end
-      local BodyType = ParticipantActor:GetBattleCharBodyType()
-      ParticipantActor.FXComponent:PlayEffectByIDParams(401, {
-        NotAttached = true,
-        scale = Const.BattleCharTagVXScaleTable[BodyType]
-      })
     end
   end
 end

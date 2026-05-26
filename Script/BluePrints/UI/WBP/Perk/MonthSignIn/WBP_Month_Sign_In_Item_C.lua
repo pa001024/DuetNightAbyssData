@@ -1,11 +1,16 @@
 require("UnLua")
+local MonthSignInModel = MonthSignInController:GetModel()
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
 
 function M:OnListItemObjectSet(Content)
   self.Content = Content
+  Content.UI = self
   self:Init(Content)
+  if Content.ParentWidget and Content.ParentWidget.TryPlayGetAnimationFromItem and Content.Index == MonthSignInModel:GetTodaySignInDay() then
+    Content.ParentWidget:TryPlayGetAnimationFromItem()
+  end
 end
 
 function M:Init(Content)
@@ -103,6 +108,7 @@ end
 
 function M:OnMouseButtonDown(MyGeometry, MouseEvent)
   DebugPrint("Yihan@ OnMouseButtonDown: ")
+  AudioManager(self):PlayUISound(self, "event:/ui/common/item_click_mihan", nil, nil)
   self:StopAnimation(self.Icon_Hover)
   self:PlayAnimation(self.Icon_Press)
   if UIUtils.IsGamepadInput() then

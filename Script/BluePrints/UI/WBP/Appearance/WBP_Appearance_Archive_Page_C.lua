@@ -325,7 +325,8 @@ function M:FillListDatas(Data, IsLock, Type)
     Id = Data.SkinId or Data.SkinID or Data.AccessoryId or Data.WeaponAccessoryId or Data.HairId or Data.MountId or Data.ResourceId,
     Rarity = Data.Rarity or Data.MountRarity,
     Name = Data.Name or Data.SkinName or Data.MountName or Data.ResourceName,
-    IsLock = IsLock
+    IsLock = IsLock,
+    SoundItemType = Type
   }
   if "Skin" == Type or "WeaponSkin" == Type then
     TempTable.Icon = Data.LongIcon
@@ -658,6 +659,7 @@ function M:PlayInAnim()
   if self:IsAnimationPlaying(self.In) then
     return
   end
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "ArchivePageOpenSound", nil)
   if self.In then
     self:PlayAnimationForward(self.In)
   end
@@ -667,6 +669,7 @@ function M:PlayOutAnim()
   if self:IsAnimationPlaying(self.Out) then
     return
   end
+  AudioManager(self):SetEventSoundParam(self, "ArchivePageOpenSound", {ToEnd = 1})
   self:BlockAllUIInput(true, "SP_DisplayOnly")
   if self.Out then
     self:PlayAnimationForward(self.Out)

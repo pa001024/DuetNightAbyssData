@@ -233,7 +233,9 @@ function M:OnAnimationFinished(Animation)
   end
   if (Animation == self.Press or Animation == self.out) and not self:IsAnimationPlaying(self.In) then
     EventManager:RemoveEvent(EventID.UpdateBossToughness, self)
-    self.ParentWidget:RecycleExecuteWidget(self.DefeatedCharacter)
+    if not self.IsForcedClosed then
+      self.ParentWidget:RecycleExecuteWidget(self.DefeatedCharacter)
+    end
   end
 end
 

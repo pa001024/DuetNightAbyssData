@@ -80,16 +80,65 @@ return ReadOnly("QuestUI", {
   [100401] = {
     AudioPath = "event:/ui/common/chapter_3_trans_clock",
     AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
-    ChapterName = "Episode_02",
-    Params = {"24", "1"},
+    ChapterName = "UI_Chapter03_Transition03",
+    Params = {"138", "1"},
     QuestId = 100401,
     UIName = "Chapter_Transition04_02"
   },
   [100402] = {
     AudioPath = "event:/ui/common/chapter_3_trans_clock",
     AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
-    ChapterName = "Episode_02",
+    ChapterName = "UI_Chapter03_Transition03",
+    Params = {"137", "1"},
     QuestId = 100402,
+    UIName = "Chapter_Transition04_02"
+  },
+  [100403] = {
+    AudioPath = "event:/ui/common/chapter_3_trans_clock",
+    AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
+    ChapterName = "UI_Chapter03_Transition03",
+    Params = {"136", "1"},
+    QuestId = 100403,
+    UIName = "Chapter_Transition04_02"
+  },
+  [100404] = {
+    AudioPath = "event:/ui/common/chapter_3_trans_clock",
+    AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
+    ChapterName = "UI_Chapter03_Transition03",
+    Params = {"135", "1"},
+    QuestId = 100404,
+    UIName = "Chapter_Transition04_02"
+  },
+  [100405] = {
+    AudioPath = "event:/ui/common/chapter_3_trans_clock",
+    AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
+    ChapterName = "UI_Chapter03_Transition03",
+    Params = {"134", "1"},
+    QuestId = 100405,
+    UIName = "Chapter_Transition04_02"
+  },
+  [100406] = {
+    AudioPath = "event:/ui/common/chapter_3_trans_clock",
+    AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
+    ChapterName = "UI_Chapter03_Transition03",
+    Params = {"13", "1"},
+    QuestId = 100406,
+    UIName = "Chapter_Transition04_02"
+  },
+  [100407] = {
+    AudioPath = "event:/ui/common/chapter_3_trans_clock_scare",
+    AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
+    ChapterName = "UI_Chapter03_Transition04",
+    Params = {"1", "1"},
+    QuestId = 100407,
+    UIName = "Chapter_Transition04_02"
+  },
+  [100408] = {
+    AudioPath = "event:/ui/common/chapter_3_trans_clock",
+    AudioPathFinal = "event:/ui/common/chapter_3_trans_clock",
+    ChapterName = "UI_Chapter03_Transition03",
+    Params = {"0", "1"},
+    QuestId = 100408,
     UIName = "Chapter_Transition04_02"
   },
   [120101] = {

@@ -352,6 +352,7 @@ end
 
 function M:OnUpdateMobileHudPlanName(PlanIndex, PlanName)
   if PlanIndex == self.CurEditPlan then
+    self.PlanName = PlanName
     self.Text_PlanName:SetText(PlanName)
   end
 end

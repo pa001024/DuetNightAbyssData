@@ -43,6 +43,10 @@ return ReadOnly("MessageGroup", {
     MessageGroupId = 14007,
     MessageList = {900425}
   },
+  [10110701] = {
+    MessageGroupId = 10110701,
+    MessageList = {900434}
+  },
   [10410201] = {
     MessageGroupId = 10410201,
     MessageList = {900107, 900224}
@@ -486,5 +490,37 @@ return ReadOnly("MessageGroup", {
   [10570101] = {
     MessageGroupId = 10570101,
     MessageList = {900112, 900211}
+  },
+  [10600101] = {
+    MessageGroupId = 10600101,
+    MessageList = {900426}
+  },
+  [10600102] = {
+    MessageGroupId = 10600102,
+    MessageList = {900427}
+  },
+  [10600103] = {
+    MessageGroupId = 10600103,
+    MessageList = {900431}
+  },
+  [10610101] = {
+    MessageGroupId = 10610101,
+    MessageList = {900430}
+  },
+  [10610102] = {
+    MessageGroupId = 10610102,
+    MessageList = {900433}
+  },
+  [10620101] = {
+    MessageGroupId = 10620101,
+    MessageList = {900432}
+  },
+  [10630101] = {
+    MessageGroupId = 10630101,
+    MessageList = {900428}
+  },
+  [10630102] = {
+    MessageGroupId = 10630102,
+    MessageList = {900429}
   }
 })

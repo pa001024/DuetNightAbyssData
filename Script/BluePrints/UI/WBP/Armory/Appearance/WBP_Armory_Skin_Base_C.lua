@@ -9,7 +9,8 @@ M._components = {
   "BluePrints.UI.WBP.Armory.ActorController.PreviewActorComponent",
   "BluePrints.UI.WBP.Armory.Appearance.Armory_AccessoryCustom_Component",
   "BluePrints.UI.WBP.Armory.Appearance.Armory_CharAppearance_Component",
-  "BluePrints.UI.WBP.Armory.Appearance.Armory_WeaponAppearance_Component"
+  "BluePrints.UI.WBP.Armory.Appearance.Armory_WeaponAppearance_Component",
+  "BluePrints.UI.WBP.Appearance.AppearanceRedDotTreeComponent"
 }
 local GoToShopState = {
   CanGoToShop = "CanGoToShop",
@@ -594,7 +595,11 @@ function M:UpdateSkinDetails(Content)
   self:UpdateSkinLevelInfo(self.SelectedSkinId)
   self:UpdateSkinVideo(self.SelectedSkinId)
   self:UpdateFunctionBtn(Content, self.CurrentSkinContent)
-  self:UpdateActorAppearance(self.SelectedSkinId, self.SelectedHairId)
+  if self.SkipFirstUpdateMontage then
+    self.SkipFirstUpdateMontage = false
+  else
+    self:UpdateActorAppearance(self.SelectedSkinId, self.SelectedHairId)
+  end
   if Content.RedDotType and not self.NoReddot then
     ArmoryUtils:SetItemReddotRead(Content, true)
   end
@@ -1153,12 +1158,24 @@ function M:OnModBtnClicked()
     }, ModCommon.MainUICase.Normal)
     local PendingSelectMod = ModController:GetModel():GetAnyModById(self.ComparedContent.ModId)
     if PendingSelectMod then
-      self:AddTimer(1, function()
-        ModController:SetSelectedStuff(PendingSelectMod.Uuid, nil, true)
+      self:BlockAllUIInput(true)
+      local ViewportSize = UWidgetLayoutLibrary.GetViewportSize(self)
+      local Time = 1 * (ViewportSize.X / ViewportSize.Y / 1.77)
+      if Time < 1 then
+        Time = 1
+      end
+      self:AddTimer(Time, function()
+        local SlotIds = ModController:GetModel():GetSlotIdsWhichEquiped(PendingSelectMod.Uuid)
+        local SlotId = SlotIds and SlotIds[1] or nil
+        ModController:SetSelectedStuff(PendingSelectMod.Uuid, SlotId, true)
         local Content = ModView:GetContentBySelectStuff()
-        if IsValid(Content.UI) then
+        if SlotId then
+          ModView["Mod_" .. SlotId]:SetFocus()
+          ModView["Mod_" .. SlotId]:PlayBtnAnimation(ModView["Mod_" .. SlotId].Click)
+        elseif Content and IsValid(Content.UI) then
           Content.UI:SetFocus()
         end
+        self:BlockAllUIInput(false)
       end)
     end
   end

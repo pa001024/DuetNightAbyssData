@@ -3244,10 +3244,10 @@
   },
   {
     "id": 1013801,
-    "名称": "藏宝图嗅觉·百花车站",
+    "名称": "Chasseur de trésors — Gare des Cent-Fleurs",
     "分类": "Liste de souhaits",
     "品质": 1,
-    "描述": "集齐百花车站所有遗落的纸张",
+    "描述": "Rassembler toutes les Feuilles perdues de la Gare des Cent-Fleurs",
     "版本": "1.4",
     "奖励": {
       "Indice de Mandat scellé": 2
@@ -5545,14 +5545,14 @@
   },
   {
     "id": 17002027,
-    "名称": "停驻光阴·芙罗拉",
+    "名称": "Instants figés : Flora",
     "分类": "Joyeux moments",
     "品质": 1,
-    "描述": "于休憩之所“点滴”处完整阅读芙罗拉的光阴集故事",
+    "描述": "Lire intégralement l’Anthologie du temps de Flora dans les Fragments de mémoire du Sanctuaire.",
     "版本": "1.4",
     "奖励": {
       "Indice de Mandat scellé": 1,
-      "Title: 芙罗拉的": 1
+      "Title: de Flora": 1
     }
   },
   {
@@ -5859,14 +5859,14 @@
   },
   {
     "id": 17003027,
-    "名称": "休憩一刻·芙罗拉",
+    "名称": "Un moment de répit : Flora",
     "分类": "Joyeux moments",
     "品质": 2,
-    "描述": "于休憩之所邀请芙罗拉入驻并对话一次",
+    "描述": "Inviter Flora au Sanctuaire et lui parler une fois",
     "版本": "1.4",
     "奖励": {
       "Indice de Mandat scellé": 1,
-      "Title: 芙罗拉": 1
+      "Title: Flora": 1
     }
   },
   {
@@ -6321,10 +6321,10 @@
   },
   {
     "id": 52000801,
-    "名称": "飞鸟集·百花车站",
+    "名称": "Oiseaux errants — Gare des Cent-Fleurs",
     "分类": "Découverte du monde",
     "品质": 2,
-    "描述": "呼唤梦中的灵鸟记录4个“百花车站”的地点",
+    "描述": "Enregistrer 4 positions de la Gare des Cent-Fleurs grâce à l’Oiseau onirique",
     "版本": "1.4",
     "奖励": {
       "Indice de Mandat scellé": 2

@@ -196,7 +196,26 @@ function M:OnEnterState(NowStateId)
   end
 end
 
+function M:IsAttachedToCharacterActor(Actor)
+  if not Actor or not IsValid(Actor) then
+    return false
+  end
+  if not Actor.GetAttachParentActor then
+    return false
+  end
+  local Parent = Actor:GetAttachParentActor()
+  if not Parent or not IsValid(Parent) then
+    return false
+  end
+  return self:IsPlayerOrMonster(Parent) or self:ActorHasTargetTag(Parent)
+end
+
 function M:ShouldMoveActor(Actor)
+  if self:IsAttachedToCharacterActor(Actor) then
+    local Parent = Actor:GetAttachParentActor()
+    DebugPrint("yly BP_Conveyor_C Actor =", Actor:GetName(), "which is Attached to", Parent:GetName(), "ShouldNot be moved by conveyor.")
+    return false
+  end
   return self:IsPlayerOrMonster(Actor) or self:ActorHasTargetTag(Actor)
 end
 
@@ -334,7 +353,7 @@ function M:TryProcessEndQueue()
 end
 
 function M:OnEndBoxComponentBeginOverlap(Comp, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult)
-  if not self.IsConveyActive or not self:IsSelectionActor(OtherActor) then
+  if not (self.IsConveyActive and self:IsSelectionActor(OtherActor)) or self:IsAttachedToCharacterActor(OtherActor) then
     return
   end
   self:EnqueueEndActor(OtherActor)

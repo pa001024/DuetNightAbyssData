@@ -121,6 +121,50 @@ return ReadOnly("RegionPatchCondition", {
     NecessaryPatch = T.RT_2,
     RegionID = 1059
   },
+  [1060] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1060
+  },
+  [1061] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1061
+  },
+  [1062] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1062
+  },
+  [1063] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1063
+  },
+  [1070] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1070
+  },
+  [1071] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1071
+  },
+  [1072] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1072
+  },
+  [1073] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1073
+  },
+  [1074] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1074
+  },
+  [1075] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1075
+  },
+  [1076] = {
+    NecessaryPatch = T.RT_1,
+    RegionID = 1076
+  },
   [2001] = {
     NecessaryPatch = T.RT_1,
     RegionID = 2001

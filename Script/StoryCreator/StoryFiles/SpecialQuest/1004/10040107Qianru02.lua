@@ -130,6 +130,12 @@ return {
             startPort = "Out",
             endQuest = "17779687235176554444",
             endPort = "Success"
+          },
+          {
+            startQuest = "17779687235176554450",
+            startPort = "Out",
+            endQuest = "1779710199960793",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -188,7 +194,7 @@ return {
             key = "17779687235176554449",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 753.0353591777433, y = 371.6600340986737},
+            pos = {x = 753.0353591777433, y = 373.6600340986737},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = false,
@@ -230,6 +236,16 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 443.7909243057986, y = 867.2148286496113},
             propsData = {}
+          },
+          ["1779710199960793"] = {
+            key = "1779710199960793",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 586, y = -12},
+            propsData = {
+              VarName = "FirstStateQianru10040102",
+              VarValue = 1
+            }
           }
         },
         commentData = {}
@@ -340,12 +356,6 @@ return {
             startQuest = "177815586490224644517",
             startPort = "Out",
             endQuest = "177815586490124644506",
-            endPort = "In"
-          },
-          {
-            startQuest = "177815586490224644520",
-            startPort = "Out",
-            endQuest = "177815586490224644519",
             endPort = "In"
           },
           {
@@ -545,6 +555,18 @@ return {
             startPort = "Out",
             endQuest = "17784940509802440401",
             endPort = "In"
+          },
+          {
+            startQuest = "17797087841102907241",
+            startPort = "Out",
+            endQuest = "177815586490224644519",
+            endPort = "In"
+          },
+          {
+            startQuest = "177815586490224644520",
+            startPort = "Out",
+            endQuest = "17797087841102907241",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -712,7 +734,7 @@ return {
               IsShow = false,
               bOpenRangeEffect = false,
               GuideType = "P",
-              GuideName = "BP_BP_QianruPrompt02_02"
+              GuideName = "BP_QianruPrompt02"
             }
           },
           ["177815586490124644508"] = {
@@ -814,7 +836,7 @@ return {
             key = "177815586490224644519",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 3831.5771923565962, y = -54.276426686489},
+            pos = {x = 3972.0317378111417, y = -80.18551759557991},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -1068,6 +1090,18 @@ return {
               MessageType = "GameMode",
               MessageContent = "TriggerHWQBoxTrap",
               UnitId = -1
+            }
+          },
+          ["17797087841102907241"] = {
+            key = "17797087841102907241",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 3585.2496813336634, y = -65.53164311608563},
+            propsData = {
+              GuideUIEnable = false,
+              StaticCreatorId = 272890116,
+              GuideType = "M",
+              GuidePointName = "Mechanism_QiaobanGuide_272890116"
             }
           }
         },

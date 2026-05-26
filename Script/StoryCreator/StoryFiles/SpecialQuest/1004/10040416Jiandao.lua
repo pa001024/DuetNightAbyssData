@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040416_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -204,12 +204,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177874823630324342817",
-            startPort = "Out",
-            endQuest = "177874823630624342827",
-            endPort = "In"
-          },
-          {
             startQuest = "177874823630324342816",
             startPort = "Out",
             endQuest = "177874823630624342828",
@@ -244,6 +238,24 @@ return {
             startPort = "Out",
             endQuest = "177874823630224342805",
             endPort = "Fail"
+          },
+          {
+            startQuest = "177874823630424342820",
+            startPort = "Out",
+            endQuest = "177935082969849326409",
+            endPort = "In"
+          },
+          {
+            startQuest = "177935082969849326409",
+            startPort = "男",
+            endQuest = "177935082309949326295",
+            endPort = "In"
+          },
+          {
+            startQuest = "177935082969849326409",
+            startPort = "女",
+            endQuest = "177935072975449326043",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -595,7 +607,7 @@ return {
               EnableFadeIn = false,
               EnableFadeOut = false,
               NewTargetPointName = "",
-              StaticCreatorIdList = {272640037, 172640022}
+              StaticCreatorIdList = {172640022}
             }
           },
           ["177874823630324342818"] = {
@@ -607,7 +619,7 @@ return {
               ActiveEnable = false,
               EnableBlackScreenSync = true,
               EnableFadeIn = false,
-              EnableFadeOut = true,
+              EnableFadeOut = false,
               NewTargetPointName = "",
               StaticCreatorIdList = {272640037}
             }
@@ -674,7 +686,6 @@ return {
               ActiveType = "Lock",
               SkillNameList = {
                 "Attack",
-                "Jump",
                 "Slide",
                 "BulletJump",
                 "Fire",
@@ -724,18 +735,6 @@ return {
               RedCountdownSeconds = 60
             }
           },
-          ["177874823630624342827"] = {
-            key = "177874823630624342827",
-            type = "ShowOrHideTaskIndicatorNode",
-            name = "显示/隐藏任务指引点节点",
-            pos = {x = 1280.9907639827834, y = -19.29735936390108},
-            propsData = {
-              IsShow = true,
-              bOpenRangeEffect = false,
-              GuideType = "P",
-              GuideName = "BP_FuluoSearch01"
-            }
-          },
           ["177874823630624342828"] = {
             key = "177874823630624342828",
             type = "ShowOrHideTaskIndicatorNode",
@@ -759,7 +758,7 @@ return {
             key = "177874826840824343846",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 725.103896103896, y = 923.6753246753249},
+            pos = {x = 57.96103896103875, y = 1200.818181818182},
             propsData = {}
           },
           ["177874828876824344449"] = {
@@ -768,6 +767,41 @@ return {
             name = "特殊任务主动失败",
             pos = {x = 1404.9220779220773, y = 791.9625374625375},
             propsData = {}
+          },
+          ["177935072975449326043"] = {
+            key = "177935072975449326043",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 206.45232566710848, y = 931.4718045112782},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {272640037}
+            }
+          },
+          ["177935082309949326295"] = {
+            key = "177935082309949326295",
+            type = "ChangeStaticCreatorNode",
+            name = "生成/销毁节点",
+            pos = {x = 243.59518280996554, y = 745.7575187969925},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {272640151}
+            }
+          },
+          ["177935082969849326409"] = {
+            key = "177935082969849326409",
+            type = "PlayerGenderBranchNode",
+            name = "玩家性别",
+            pos = {x = -177.8333886186058, y = 750.0432330827067},
+            propsData = {IsEXPlayer = false}
           }
         },
         commentData = {}

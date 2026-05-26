@@ -32,7 +32,6 @@ end
 
 function Component:OnGetMonthlyCardDailyReward(DailyReward)
   PrintTable(DailyReward, 3)
-  MonthCardController:DisplayMonthCardPop(DailyReward)
 end
 
 function Component:OnGetMonthlyCardUniqueReward(UniqueReward)

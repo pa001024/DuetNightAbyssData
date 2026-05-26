@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040408_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -135,6 +135,36 @@ return {
             startQuest = "17787551972142926351",
             startPort = "Out",
             endQuest = "177874835560325318624",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787551972142926351",
+            startPort = "Out",
+            endQuest = "177935152257350292574",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874835560325318624",
+            startPort = "Out",
+            endQuest = "177935152592150292734",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874835560325318624",
+            startPort = "Out",
+            endQuest = "1779520834249545",
+            endPort = "In"
+          },
+          {
+            startQuest = "17787551972142926351",
+            startPort = "Out",
+            endQuest = "1779696954856643",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779696954856643",
+            startPort = "Out",
+            endQuest = "1779696959308797",
             endPort = "In"
           }
         },
@@ -283,7 +313,7 @@ return {
             key = "177874835560325318628",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1184, y = 140},
+            pos = {x = 1112.2608695652175, y = -67.3913043478261},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "OpenGate05Behind",
@@ -328,6 +358,75 @@ return {
               bResetCamera = true,
               bForceAsyncLoading = true,
               IsWhite = false
+            }
+          },
+          ["177935152257350292574"] = {
+            key = "177935152257350292574",
+            type = "CreatePhantomNode",
+            name = "召唤/销毁剧情魅影",
+            pos = {x = 856.7058823529413, y = 781.2941176470588},
+            propsData = {
+              IsCreate = true,
+              IsClearOtherPhantom = false,
+              IsSync = false,
+              StaticCreatorIdList = {272640152}
+            }
+          },
+          ["177935152592150292734"] = {
+            key = "177935152592150292734",
+            type = "CreatePhantomNode",
+            name = "召唤/销毁剧情魅影",
+            pos = {x = 1568.4705882352937, y = 597.7647058823529},
+            propsData = {
+              IsCreate = false,
+              IsClearOtherPhantom = false,
+              IsSync = false,
+              StaticCreatorIdList = {272640152}
+            }
+          },
+          ["1779520834249545"] = {
+            key = "1779520834249545",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1444.4347826086955, y = 167.70750988142285},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {},
+              bStoreToServer = false
+            }
+          },
+          ["1779696954856643"] = {
+            key = "1779696954856643",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 578, y = 870},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["1779696959308797"] = {
+            key = "1779696959308797",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1224, y = 962},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "event:/bgm/mute",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
             }
           }
         },

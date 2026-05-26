@@ -61,6 +61,9 @@ function M:NewCharOrWeaponItemContent(Target, Type, Tag, bNotReddot, ReddotFrom)
   Obj.Icon = Target:Data().Icon
   Obj.Level = Target.Level
   Obj.GradeLevel = Target.GradeLevel
+  if "Weapon" == Type then
+    Obj.bIncarnon = HyperWeaponUtils.IsHyperWeapon(Target.WeaponId)
+  end
   local Element = DataMgr["Battle" .. Type][Obj.UnitId].Attribute
   if Element then
     local IconName = "Armory_" .. Element
@@ -72,10 +75,13 @@ function M:NewCharOrWeaponItemContent(Target, Type, Tag, bNotReddot, ReddotFrom)
     Obj.Upgradeable = Upgradeable
     Obj.HasReward = HasReward
   end
+  if not bNotReddot and Obj.bIncarnon then
+    Obj.HasWeaponForgeReward = GWorld:GetAvatar():IsWeaponHasForgeReward(Target.WeaponId)
+  end
   if "Archive" == ReddotFrom then
     Obj.IsNew = M.TryAddArchiveNewReddot(M, Obj, Tag)
   end
-  if Obj.Upgradeable or Obj.HasReward then
+  if Obj.Upgradeable or Obj.HasReward or Obj.HasWeaponForgeReward then
     Obj.RedDotType = UIConst.RedDotType.CommonRedDot
   elseif Obj.IsNew then
     Obj.RedDotType = UIConst.RedDotType.NewRedDot
@@ -83,9 +89,6 @@ function M:NewCharOrWeaponItemContent(Target, Type, Tag, bNotReddot, ReddotFrom)
   Obj.IsLocked = Target.IsLock and Target:IsLock()
   Obj.LockType = Obj.IsLocked and 1 or 0
   Obj.SortPriority = Target:Data().SortPriority or 0
-  if "Weapon" == Type then
-    Obj.bIncarnon = HyperWeaponUtils.IsHyperWeapon(Target.WeaponId)
-  end
   return Obj
 end
 
@@ -666,6 +669,13 @@ function M:GetDefaultCharAccessoryIds()
   return DefaultCharAccessoryIds
 end
 
+local function GetOrAddTreeNode(NodeName, ...)
+  if not ReddotManager.GetTreeNode(NodeName) then
+    ReddotManager.AddNode(NodeName, ...)
+  end
+  return ReddotManager.GetTreeNode(NodeName)
+end
+
 local ReddotCreateFunctions = {}
 
 function ReddotCreateFunctions.CreateCharReddotInfos(M)
@@ -717,6 +727,7 @@ function ReddotCreateFunctions.CreateWeaponReddotInfos(M)
   local AllWeapons = Avatar.Weapons
   for Uuid, Weapon in pairs(AllWeapons) do
     M:TryAddNewWeaponReddot(Weapon, CommonUtils.ObjId2Str(Uuid))
+    M:TryAddWeaponAppearanceReddot(Weapon.WeaponId)
   end
   
   local function RemoveUnknownWeapons(CacheDetail, WeaponTag)
@@ -739,6 +750,8 @@ function ReddotCreateFunctions.CreateWeaponReddotInfos(M)
   RemoveUnknownWeapons(MeleeCacheDetail, CommonConst.WeaponType.MeleeWeapon)
   local RangedCacheDetail = ReddotManager.GetLeafNodeCacheDetail(CommonConst.WeaponType.RangedWeapon)
   RemoveUnknownWeapons(RangedCacheDetail, CommonConst.WeaponType.RangedWeapon)
+  M:TryAddMeleeWeaponForgeRewardReddot()
+  M:TryAddRangedWeaponForgeRewardReddot()
 end
 
 function ReddotCreateFunctions.CreateResourceReddotInfos()
@@ -872,6 +885,11 @@ local function CreateOneCharAppearanceReddotInfos(CharId)
     end
   end
   M:CreateSkinLevelUpReddot()
+  local CharGroupId = DataMgr.CharacterAttributeSwitch[CharId] and DataMgr.CharacterAttributeSwitch[CharId].CharGroupId
+  local SkinNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
+  local HairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
+  GetOrAddTreeNode(SkinNodeName, nil, true)
+  GetOrAddTreeNode(HairNodeName, nil, true)
 end
 
 function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
@@ -895,9 +913,7 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
   end
   for AccessoryType, value in pairs(CommonConst.NewCharAccessoryTypes) do
     local LeafNodeName = CommonConst.DataType.CharAccessory .. AccessoryType
-    if not ReddotManager.GetTreeNode(LeafNodeName) then
-      ReddotManager.AddNode(LeafNodeName, nil, 1)
-    end
+    GetOrAddTreeNode(LeafNodeName, nil, true)
     local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(LeafNodeName)
     if CacheDetail then
       for key, _ in pairs(CacheDetail) do
@@ -914,32 +930,28 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
     end
   end
   local NewCharAppearanceChildNodes = {}
-  for _, CommonChar in pairs(Avatar.CommonChars) do
-    CreateOneCharAppearanceReddotInfos(CommonChar.CharId)
-    local CharId = CommonChar.CharId
+  for _, Char in pairs(Avatar.Chars) do
+    local CharId = Char.CharId
+    CreateOneCharAppearanceReddotInfos(CharId)
     local SkinNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. CharId
-    NewCharAppearanceChildNodes[SkinNodeName] = 1
     local HairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. CharId
-    NewCharAppearanceChildNodes[HairNodeName] = 1
-    for AccessoryType, _ in pairs(CommonConst.NewCharAccessoryTypes) do
-      local AccessoryNodeName = CommonConst.DataType.CharAccessory .. AccessoryType
-      NewCharAppearanceChildNodes[AccessoryNodeName] = 1
+    local CharGroupId = DataMgr.CharacterAttributeSwitch[CharId] and DataMgr.CharacterAttributeSwitch[CharId].CharGroupId
+    if not CharGroupId then
+      NewCharAppearanceChildNodes[SkinNodeName] = SkinNode and 1
+      NewCharAppearanceChildNodes[HairNodeName] = HairNode and 1
     end
   end
-  local CommonHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
-  NewCharAppearanceChildNodes[CommonHairNodeName] = 1
-  local LeafNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
-  if not ReddotManager.GetTreeNode(LeafNodeName) then
-    ReddotManager.AddNode(LeafNodeName, nil, 1)
-  end
-  if not IsEmptyTable(NewCharAppearanceChildNodes) then
-    ReddotManager.AddNode("NewCharAppearance", NewCharAppearanceChildNodes)
+  for AccessoryType, _ in pairs(CommonConst.NewCharAccessoryTypes) do
+    local AccessoryNodeName = CommonConst.DataType.CharAccessory .. AccessoryType
+    NewCharAppearanceChildNodes[AccessoryNodeName] = GetOrAddTreeNode(AccessoryNodeName, nil, true) and 1
   end
   local AllCommonCharHairs = Avatar.CommonCharHairs
   for HairId, Hair in pairs(AllCommonCharHairs) do
     M:TryAddNewCharHairReddot(HairId)
   end
-  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(LeafNodeName)
+  local CommonHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+  NewCharAppearanceChildNodes[CommonHairNodeName] = GetOrAddTreeNode(CommonHairNodeName, nil, true) and 1
+  local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(CommonHairNodeName)
   if CacheDetail then
     for key, _ in pairs(CacheDetail) do
       key = tonumber(key)
@@ -950,6 +962,16 @@ function ReddotCreateFunctions.CreateCharAppearanceReddotInfos(M)
         }, true, true, true)
       end
     end
+  end
+  local ProcessedGroups = {}
+  for _, value in pairs(DataMgr.CharacterAttributeSwitch or {}) do
+    if not ProcessedGroups[value.CharGroupId] then
+      ProcessedGroups[value.CharGroupId] = true
+      NewCharAppearanceChildNodes["CharGroupNewAppearance" .. value.CharGroupId] = GetOrAddTreeNode("CharGroupNewAppearance" .. value.CharGroupId) and 1
+    end
+  end
+  if not IsEmptyTable(NewCharAppearanceChildNodes) then
+    ReddotManager.AddNode("NewCharAppearance", NewCharAppearanceChildNodes, Const.ReddotCacheType.NoneCache, nil, "Appearance.NewCharAppearance")
   end
 end
 
@@ -1015,10 +1037,14 @@ function ReddotCreateFunctions.CreateWeaponAppearanceReddotInfos(M)
       end
     end
   end
+  local OwnedWeaponIds = {}
+  for _, Weapon in pairs(Avatar.Weapons) do
+    OwnedWeaponIds[Weapon.WeaponId] = true
+  end
   local NewMeleeAppearanceChildNodes = {}
   local NewRangedAppearanceChildNodes = {}
   for WeaponId, value in pairs(DataMgr.Weapon) do
-    if value.SkinApplicationType then
+    if OwnedWeaponIds[WeaponId] and value.SkinApplicationType then
       for _, ApplicationType in ipairs(value.SkinApplicationType) do
         local ContrastData = DataMgr.WeaponTypeContrast[ApplicationType]
         local LeafNodeName = CommonConst.DataType.WeaponSkin .. ApplicationType
@@ -1350,7 +1376,7 @@ end
 function M:UpdateContentRetDotType(Content)
   if Content.IsNew then
     Content.RedDotType = UIConst.RedDotType.NewRedDot
-  elseif Content.Upgradeable or Content.HasReward or Content.Unlockable then
+  elseif Content.Upgradeable or Content.HasReward or Content.Unlockable or Content.HasWeaponForgeReward then
     Content.RedDotType = UIConst.RedDotType.CommonRedDot
   else
     Content.RedDotType = nil
@@ -1497,6 +1523,36 @@ function M:TryAddNewWeaponReddot(Weapon, UuidStr)
   return IsNew, false, HasReward
 end
 
+function M:TryAddWeaponAppearanceReddot(WeaponId)
+  local WeaponData = DataMgr.Weapon[WeaponId]
+  if not WeaponData or not WeaponData.SkinApplicationType then
+    return
+  end
+  local NewMeleeAppearanceChildNodes = {}
+  local NewRangedAppearanceChildNodes = {}
+  for _, ApplicationType in ipairs(WeaponData.SkinApplicationType) do
+    local ContrastData = DataMgr.WeaponTypeContrast[ApplicationType]
+    local LeafNodeName = CommonConst.DataType.WeaponSkin .. ApplicationType
+    if ContrastData and ContrastData.WeaponTagfilter == "MeleeType" then
+      NewMeleeAppearanceChildNodes[LeafNodeName] = 1
+      if not ReddotManager.GetTreeNode(LeafNodeName) then
+        ReddotManager.AddNode(LeafNodeName)
+      end
+    elseif ContrastData and ContrastData.WeaponTagfilter == "RangedType" then
+      NewRangedAppearanceChildNodes[LeafNodeName] = 1
+      if not ReddotManager.GetTreeNode(LeafNodeName) then
+        ReddotManager.AddNode(LeafNodeName)
+      end
+    end
+  end
+  if not IsEmptyTable(NewMeleeAppearanceChildNodes) then
+    ReddotManager.AddNode("NewMeleeAppearance", NewMeleeAppearanceChildNodes)
+  end
+  if not IsEmptyTable(NewRangedAppearanceChildNodes) then
+    ReddotManager.AddNode("NewRangedAppearance", NewRangedAppearanceChildNodes)
+  end
+end
+
 function M:TryAddNewResourceReddot(Resource, Id)
   if self.IsPreviewMode then
     return
@@ -1561,6 +1617,58 @@ function M:TryAddWeaponRewardReddot(WeaponId)
     elseif WeaponType == CommonConst.WeaponType.RangedWeapon then
       return M:_TryAddNewReddotCommon(WeaponId, DataMgr.ReddotNode.RangedReward.Name)
     end
+  end
+end
+
+function M:TryAddMeleeWeaponForgeRewardReddot()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar:IsMeleeWeaponHasForgeReward() then
+    local CacheKey = "WeaponForgeReward"
+    local NodeName = DataMgr.ReddotNode.MeleeHyperWeaponForgeReward.Name
+    ReddotManager.ClearLeafNodeCount(NodeName)
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+    CacheDetail[CacheKey] = nil
+    return M:_TryAddNewReddotCommon(CacheKey, NodeName)
+  else
+    M:TryClearMeleeWeaponForgeRewardReddot()
+  end
+end
+
+function M:TryClearMeleeWeaponForgeRewardReddot()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar:IsMeleeWeaponHasForgeReward() then
+    local CacheKey = "WeaponForgeReward"
+    local NodeName = DataMgr.ReddotNode.MeleeHyperWeaponForgeReward.Name
+    M:_SetReddotReadCommon(CacheKey, NodeName, false)
+    ReddotManager.ClearLeafNodeCount(NodeName)
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+    CacheDetail[CacheKey] = nil
+  end
+end
+
+function M:TryAddRangedWeaponForgeRewardReddot()
+  local Avatar = GWorld:GetAvatar()
+  if Avatar:IsRangedWeaponHasForgeReward() then
+    local CacheKey = "WeaponForgeReward"
+    local NodeName = DataMgr.ReddotNode.RangedHyperWeaponForgeReward.Name
+    ReddotManager.ClearLeafNodeCount(NodeName)
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+    CacheDetail[CacheKey] = nil
+    return M:_TryAddNewReddotCommon(CacheKey, NodeName)
+  else
+    M:TryClearRangedWeaponForgeRewardReddot()
+  end
+end
+
+function M:TryClearRangedWeaponForgeRewardReddot()
+  local Avatar = GWorld:GetAvatar()
+  if not Avatar:IsRangedWeaponHasForgeReward() then
+    local CacheKey = "WeaponForgeReward"
+    local NodeName = DataMgr.ReddotNode.RangedHyperWeaponForgeReward.Name
+    M:_SetReddotReadCommon(CacheKey, NodeName, false)
+    ReddotManager.ClearLeafNodeCount(NodeName)
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+    CacheDetail[CacheKey] = nil
   end
 end
 
@@ -1658,7 +1766,8 @@ function M:TryAddNewCharHairReddot(HairId, CharId)
     return false
   end
   if CharHairData.IsCommon then
-    local ReddotName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+    local CommonHairNodeName = CommonConst.DataType.Char .. CommonConst.DataType.Hair
+    local ReddotName = CommonHairNodeName
     return M:_TryAddNewReddotCommon(HairId, ReddotName)
   else
     local ReddotName = CommonConst.DataType.Char .. CommonConst.DataType.Hair .. (CharId or "")
@@ -2089,6 +2198,10 @@ local function _CreateDummyAvatarPrime(DummyAvatar, _Params)
       end
       if _Params.RangedWeapon == WeaponId then
         DummyAvatar.RangedWeapon = Weapon.Uuid
+      end
+      if HyperWeaponUtils.IsHyperWeapon(WeaponId) then
+        Weapon.HyperCardLevel = 0
+        Weapon.HyperTalent = {}
       end
       _AddWeaponToDummyAvatar(DummyAvatar, Weapon, WeaponId)
     end
@@ -2748,21 +2861,29 @@ function M:CreateSkinLevelUpReddot()
   if self.IsPreviewMode then
     return
   end
+  local Avatar = GWorld:GetAvatar()
+  local OwnedCharIds = {}
+  for _, Char in pairs(Avatar.Chars) do
+    OwnedCharIds[Char.CharId] = true
+  end
   local CharSkinLevelUpChildNodes = {}
   for SkinId, _ in pairs(DataMgr.SkinUpgrade) do
     local CharId = DataMgr.Skin[SkinId] and DataMgr.Skin[SkinId].CharId
-    local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
-    CharSkinLevelUpChildNodes[NodeName] = 1
-    if ReddotManager.GetTreeNode(NodeName) then
+    if not CharId or not OwnedCharIds[CharId] then
     else
-      ReddotManager.AddNodeEx(NodeName, nil, 1)
-      local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
-      if not CacheDetail or next(CacheDetail) then
+      local NodeName = CommonConst.DataType.Char .. CommonConst.DataType.Skin .. "LevelUp" .. CharId
+      CharSkinLevelUpChildNodes[NodeName] = 1
+      if ReddotManager.GetTreeNode(NodeName) then
       else
-        for SkinId, Data in pairs(DataMgr.Skin) do
-          if Data.CharId == CharId then
-            local SkinData = self:GetOwnedSkinData(SkinId)
-            CacheDetail[SkinId] = SkinData and SkinData.Level or 1
+        ReddotManager.AddNodeEx(NodeName, nil, 1)
+        local CacheDetail = ReddotManager.GetLeafNodeCacheDetail(NodeName)
+        if not CacheDetail or next(CacheDetail) then
+        else
+          for SkinId, Data in pairs(DataMgr.Skin) do
+            if Data.CharId == CharId then
+              local SkinData = self:GetOwnedSkinData(SkinId)
+              CacheDetail[SkinId] = SkinData and SkinData.Level or 1
+            end
           end
         end
       end

@@ -57,6 +57,7 @@ T.RT_11 = {
   [3] = T.RT_9,
   [4] = T.RT_10
 }
+T.RT_12 = {8519507}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -248,8 +249,8 @@ return ReadOnly("HardBossMain", {
     AirWallStaticId = 8519021,
     BossIcon = "/Game/UI/Texture/Dynamic/Image/Permanent/T_Permanent_HardBoss_VideoImg_Lieche.T_Permanent_HardBoss_VideoImg_Lieche",
     CameraParam = T.RT_6,
-    CustomMonsterId = {8519507},
-    CustomMonsterStaticId = {8519007},
+    CustomMonsterId = T.RT_12,
+    CustomMonsterStaticId = T.RT_12,
     DifficultyId = {
       1061,
       1062,
@@ -272,9 +273,9 @@ return ReadOnly("HardBossMain", {
       8519504
     },
     MonsterStaticId = {
-      85190012,
-      85190023,
-      85190024
+      85190512,
+      85190523,
+      85190524
     },
     OpenTitleWidgetName = "HardBossOpenTitle_Lieche",
     PosDisplayName = "BP_HardBoss_PlayerStart",

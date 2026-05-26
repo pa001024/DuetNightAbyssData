@@ -11,6 +11,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     JumpURL = "https://apps.apple.com/cn/app/%E4%BA%8C%E9%87%8D%E8%9E%BA%E6%97%8B/id6470771372",
+    Mail = 19101,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "IOS-官方"
@@ -21,6 +22,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     JumpURL = "https://cdn-dna.yingxiong.com/dna/Android_dna.apk",
+    Mail = 19101,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-官方"
@@ -31,6 +33,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5002,
     IP = "106.14.60.38",
     JumpURL = "https://app.biligame.com/page/detail_share.html?id=111015&sourceFrom=23006&_1758700080446",
+    Mail = 19104,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-B站"
@@ -41,6 +44,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     JumpURL = "https://www.taptap.cn/app/388717",
+    Mail = 19103,
     MirrorChannelID = 167,
     Port = 8000,
     Remark = "安卓-Tap"
@@ -51,6 +55,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     JumpURL = "https://www.3839.com/a/158909.htm",
+    Mail = 19105,
     MirrorChannelID = 161,
     Port = 8000,
     Remark = "安卓-好游"
@@ -61,6 +66,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     JumpURL = "https://www.douyin.com/user/MS4wLjABAAAARPsdV6EkvU0tLECUo1hukfkzr697ntfSEVS3CVCh5R0",
+    Mail = 19107,
     MirrorChannelID = 296,
     Port = 8000,
     Remark = "安卓-抖音"
@@ -71,6 +77,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     JumpURL = "https://actcpc.heytapimage.com/userfiles/pager_render/game_detail/index.html?banner_type=icon&appId=36323183",
+    Mail = 19109,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-oppo"
@@ -80,6 +87,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 8,
     HostNum = 5001,
     IP = "121.199.19.146",
+    Mail = 19101,
     MirrorChannelID = 259,
     Port = 8000,
     Remark = "PC-官方"
@@ -89,6 +97,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 9,
     HostNum = 5002,
     IP = "106.14.60.38",
+    Mail = 19104,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "PC-B站"
@@ -98,6 +107,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 10,
     HostNum = 5001,
     IP = "121.199.19.146",
+    Mail = 19102,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "PC-Wegame"
@@ -107,6 +117,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 11,
     HostNum = 5001,
     IP = "121.199.19.146",
+    Mail = 19106,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "PC-联想"
@@ -116,6 +127,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 12,
     HostNum = 5001,
     IP = "121.199.19.146",
+    Mail = 19103,
     MirrorChannelID = 287,
     Port = 8000,
     Remark = "PC-Tap"
@@ -126,6 +138,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     JumpURL = "https://www.3839.com/a/183726.htm",
+    Mail = 19105,
     MirrorChannelID = 288,
     Port = 8000,
     Remark = "PC-好游"
@@ -135,6 +148,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 14,
     HostNum = 5001,
     IP = "121.199.19.146",
+    Mail = 19108,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "IOS-云游戏"
@@ -144,6 +158,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 15,
     HostNum = 5001,
     IP = "121.199.19.146",
+    Mail = 19108,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-云游戏"
@@ -154,6 +169,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5003,
     IP = "43.130.139.32",
     JumpURL = "https://apps.apple.com/us/app/id6744096826",
+    Mail = 19101,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "IOS-海外"
@@ -164,6 +180,7 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5003,
     IP = "43.130.139.32",
     JumpURL = "https://play.google.com/store/apps/details?id=com.panstudio.gplay.duetnightabyss.arpg.global",
+    Mail = 19101,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "谷歌-海外"
@@ -171,6 +188,7 @@ return ReadOnly("ExamineInfo", {
   [18] = {
     ChannelID = 240,
     ExamineKey = 18,
+    Mail = 19101,
     MirrorChannelID = 0,
     Remark = "PC-海外"
   },
@@ -179,6 +197,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 19,
     HostNum = 5003,
     IP = "43.130.139.32",
+    Mail = 19101,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "Epic-海外"
@@ -186,6 +205,7 @@ return ReadOnly("ExamineInfo", {
   [20] = {
     ChannelID = 240,
     ExamineKey = 20,
+    Mail = 19101,
     MirrorChannelID = 307,
     Remark = "PC投放包体"
   },
@@ -194,6 +214,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 21,
     HostNum = 5003,
     IP = "43.130.139.32",
+    Mail = 19101,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "Steam"
@@ -203,6 +224,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 22,
     HostNum = 5001,
     IP = "121.199.19.146",
+    Mail = 19108,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "PC-云游戏"
@@ -212,6 +234,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 23,
     HostNum = 5003,
     IP = "43.130.139.32",
+    Mail = 19101,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "谷歌海外PC"
@@ -221,6 +244,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 24,
     HostNum = 5002,
     IP = "106.14.60.38",
+    Mail = 19111,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "鸿蒙"
@@ -230,6 +254,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 25,
     HostNum = 5002,
     IP = "106.14.60.38",
+    Mail = 19110,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-荣耀"
@@ -239,6 +264,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 26,
     HostNum = 5002,
     IP = "106.14.60.38",
+    Mail = 19112,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-华为"
@@ -248,6 +274,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 27,
     HostNum = 5002,
     IP = "106.14.60.38",
+    Mail = 19113,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-vivo"
@@ -257,6 +284,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = 28,
     HostNum = 5002,
     IP = "106.14.60.38",
+    Mail = 19114,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-小米"
@@ -265,7 +293,8 @@ return ReadOnly("ExamineInfo", {
     ChannelID = 160,
     ExamineKey = 29,
     HostNum = 5003,
-    IP = "121.199.19.146",
+    IP = "43.130.139.32",
+    Mail = 19115,
     MirrorChannelID = 181,
     Port = 8000,
     Remark = "安卓-海外华为"
@@ -274,7 +303,8 @@ return ReadOnly("ExamineInfo", {
     ChannelID = 160,
     ExamineKey = 30,
     HostNum = 5003,
-    IP = "121.199.19.146",
+    IP = "43.130.139.32",
+    Mail = 19115,
     MirrorChannelID = 197,
     Port = 8000,
     Remark = "安卓-Onestore"
@@ -283,7 +313,8 @@ return ReadOnly("ExamineInfo", {
     ChannelID = 160,
     ExamineKey = 31,
     HostNum = 5003,
-    IP = "121.199.19.146",
+    IP = "43.130.139.32",
+    Mail = 19115,
     MirrorChannelID = 272,
     Port = 8000,
     Remark = "安卓-rustore"
@@ -292,7 +323,8 @@ return ReadOnly("ExamineInfo", {
     ChannelID = 272,
     ExamineKey = 32,
     HostNum = 5003,
-    IP = "121.199.19.146",
+    IP = "43.130.139.32",
+    Mail = 19115,
     MirrorChannelID = 0,
     Port = 8000,
     Remark = "安卓-海外taptap"

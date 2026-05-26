@@ -655,6 +655,22 @@ return ReadOnly("SoundEffect", {
     SoundId = 2040,
     SoundPath = "event:/sfx/common/scene/east/fushu_buff_heal"
   },
+  [2041] = {
+    SoundId = 2041,
+    SoundPath = "event:/sfx/common/scene/paotai/shoot_single"
+  },
+  [2042] = {
+    SoundId = 2042,
+    SoundPath = "event:/sfx/common/scene/paotai/exp_single"
+  },
+  [2043] = {
+    SoundId = 2043,
+    SoundPath = "event:/sfx/weapon/Cannon/Qunxing/sub_bullet_fly"
+  },
+  [2044] = {
+    SoundId = 2044,
+    SoundPath = "event:/sfx/weapon/Cannon/Qunxing/sub_bullet_explode"
+  },
   [2101] = {
     NumLimit = 5,
     SoundId = 2101,
@@ -974,6 +990,14 @@ return ReadOnly("SoundEffect", {
     SoundId = 110203,
     SoundPath = "event:/sfx/player/Fuluo/skill02_wawa_stop"
   },
+  [110204] = {
+    SoundId = 110204,
+    SoundPath = "event:/sfx/common/player/hit/weapon/spearHit_normal"
+  },
+  [110205] = {
+    SoundId = 110205,
+    SoundPath = "event:/sfx/common/player/hit/weapon/katanaHit_heavy"
+  },
   [110298] = {
     NumLimit = 5,
     SoundId = 110298,
@@ -1058,6 +1082,7 @@ return ReadOnly("SoundEffect", {
     SoundPath = "event:/sfx/player/NanzhuDark/skill02_loop",
     SoundShape = {
       InnerRadius = 950,
+      OuterRadius = 1000,
       SkillRangeModify = true,
       Type = "Circular"
     }
@@ -3571,6 +3596,142 @@ return ReadOnly("SoundEffect", {
   [851823] = {
     SoundId = 851823,
     SoundPath = "event:/sfx/common/enemy/hit/shield_hit"
+  },
+  [851901] = {
+    SoundId = 851901,
+    SoundPath = "event:/sfx/boss/Lieche/missle_explode"
+  },
+  [851902] = {
+    SoundId = 851902,
+    SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit"
+  },
+  [851903] = {
+    SoundId = 851903,
+    SoundPath = "event:/sfx/boss/Lieche/missle_explode_x4"
+  },
+  [851904] = {
+    SoundId = 851904,
+    SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit"
+  },
+  [851905] = {
+    SoundId = 851905,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_skill01_bullet_bounce"
+  },
+  [851906] = {
+    SoundId = 851906,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_skill01_bullet_burst"
+  },
+  [851907] = {
+    SoundId = 851907,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_bullet_hit_player"
+  },
+  [851908] = {
+    SoundId = 851908,
+    SoundPath = "event:/sfx/boss/Lieche/b_hit_mid"
+  },
+  [851909] = {
+    SoundId = 851909,
+    SoundPath = "event:/sfx/boss/Lieche/missle_fly_loop"
+  },
+  [851910] = {
+    SoundId = 851910,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_laser_hit_player"
+  },
+  [851911] = {
+    SoundId = 851911,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_gear_move_idle_loop"
+  },
+  [851912] = {
+    SoundId = 851912,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_gear_move_on_loop"
+  },
+  [851913] = {
+    SoundId = 851913,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_gear_hit_player"
+  },
+  [851914] = {
+    SoundId = 851914,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_gear_bounce_loop"
+  },
+  [851916] = {
+    SoundId = 851916,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_laser_small_burst"
+  },
+  [851917] = {
+    SoundId = 851917,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_small_laser_hit"
+  },
+  [851918] = {
+    SoundId = 851918,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_force_move_loop_player"
+  },
+  [851919] = {
+    SoundId = 851919,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_kajia_bomb_appear_loop"
+  },
+  [851920] = {
+    SoundId = 851920,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_kajia_bomb_burst"
+  },
+  [851921] = {
+    SoundId = 851921,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_kajia_bomb_death"
+  },
+  [851922] = {
+    SoundId = 851922,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_kajia_bomb_hit_player"
+  },
+  [851925] = {
+    SoundId = 851925,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_laser_big_burst"
+  },
+  [851926] = {
+    SoundId = 851926,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_small_laser_hit"
+  },
+  [851927] = {
+    SoundId = 851927,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_bullet_bind_loop"
+  },
+  [851928] = {
+    SoundId = 851928,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_bullet_bind_burst"
+  },
+  [851929] = {
+    SoundId = 851929,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_bullet_mid_burst"
+  },
+  [851930] = {
+    SoundId = 851930,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_main_train_explode"
+  },
+  [851931] = {
+    SoundId = 851931,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_sub_train_explode_and_escape"
+  },
+  [851933] = {
+    SoundId = 851933,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_thin_laser_cast"
+  },
+  [851934] = {
+    SoundId = 851934,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_thin_laser_cast"
+  },
+  [851935] = {
+    SoundId = 851935,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_thin_laser_hit_player"
+  },
+  [851936] = {
+    SoundId = 851936,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_laser_small_burst"
+  },
+  [851937] = {
+    SoundId = 851937,
+    SoundPath = "event:/sfx/boss/Lieche/cannon_small_laser_hit"
+  },
+  [851940] = {
+    SoundId = 851940,
+    SoundPath = "event:/sfx/common/player/hit/magic/explode_small_hit"
   },
   [852101] = {
     SoundId = 852101,

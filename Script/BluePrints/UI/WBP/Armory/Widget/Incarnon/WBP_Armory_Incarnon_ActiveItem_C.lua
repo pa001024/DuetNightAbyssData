@@ -1,22 +1,48 @@
 require("UnLua")
+local ControllerFSM = require("Blueprints.UI.ControllerFSM")
 local HyperWeaponUtils = require("Utils.HyperWeaponUtils")
 local M = Class({
   "BluePrints.UI.BP_EMUserWidget_C"
 })
+M._components = {
+  "BluePrints.UI.BP_EMUserWidgetUtils_C"
+}
+local FSMState = {
+  Normal = 1,
+  CheckItem = 2,
+  ShowTip = 3
+}
 
 function M:Construct()
+  self.ControllerFSM = ControllerFSM.New(self, {
+    [FSMState.Normal] = {
+      OnEnter = self.OnEnterState_Normal
+    },
+    [FSMState.CheckItem] = {
+      OnEnter = self.OnEnterState_CheckItem
+    },
+    [FSMState.ShowTip] = {
+      OnEnter = self.OnEnterState_ShowTip
+    }
+  })
+  self.Key_Consume:CreateGamepadKey(UIConst.GamePadImgKey.LeftThumb)
+  self.Key_Qa:CreateGamepadKey(UIConst.GamePadImgKey.SpecialRight)
+  self:AddInputMethodChangedListen()
 end
 
 function M:Destruct()
+  self:RemoveInputMethodChangedListen()
 end
 
 function M:InitContent(Content)
+  self.Parent = Content.Parent
   self.TalentId = Content.TalentId
   self.CallbackObj = Content.CallbackObj
   self.Callback = Content.Callback
   self:InitPage()
   self:SetFreeState(false)
   self:PlayNormalAnimation()
+  self:RefreshOpInfoByInputDevice(UIUtils.UtilsGetCurrentInputType())
 end
 
 function M:InitPage()
@@ -43,28 +69,37 @@ function M:InitPage()
     Content.IsSelect = false
     Content.ItemType = "Resource"
     Content.Icon = ItemUtils.GetItemIconPath(Id, Content.ItemType)
-    Content.UIName = "ArmoryIncarnonDetail"
+    Content.OnAddedToFocusPathEvent = {
+      Obj = self,
+      Callback = self.OnItemAddToFocusPath,
+      Params = Content
+    }
+    Content.OnMenuOpenChangedEvents = {
+      Obj = self,
+      Callback = self.OnMenuOpenChange
+    }
     table.insert(Contents, Content)
   end
   local Panel = self.WB_Item
   local WidgetCount = 0
-  local self = Panel:GetChildAt(0)
-  local WidgetClass = UGameplayStatics.GetObjectClass(self)
+  local Widget = Panel:GetChildAt(0)
+  local WidgetClass = UGameplayStatics.GetObjectClass(Widget)
   for _, Content in ipairs(Contents) do
-    self = Panel:GetChildAt(WidgetCount)
-    if not self then
-      self = UIManager(self):CreateWidget(WidgetClass)
-      Panel:AddChild(self)
+    Widget = Panel:GetChildAt(WidgetCount)
+    if not Widget then
+      Widget = UIManager(self):CreateWidget(WidgetClass)
+      Panel:AddChild(Widget)
     end
-    self:SetVisibility(UIConst.VisibilityOp.Visible)
-    self:Init(Content)
+    Widget:SetVisibility(UIConst.VisibilityOp.Visible)
+    Widget:Init(Content)
     WidgetCount = WidgetCount + 1
   end
   local Start, End = WidgetCount, Panel:GetChildrenCount() - 1
   for i = Start, End do
-    self = Panel:GetChildAt(i)
-    self:SetVisibility(UIConst.VisibilityOp.Collapsed)
+    Widget = Panel:GetChildAt(i)
+    Widget:SetVisibility(UIConst.VisibilityOp.Collapsed)
   end
+  self:UpdateFocusItem(Panel:GetChildAt(0))
 end
 
 function M:SetFreeState(IsFree)
@@ -133,4 +168,135 @@ function M:OnButonPressed()
   self:PlayAnimation(self.Press)
 end
 
+function M:RefreshOpInfoByInputDevice(CurInputDevice, CurGamepadName)
+  self.IsGamepadInput = CurInputDevice == ECommonInputType.Gamepad
+  if self.IsGamepadInput then
+    self:InitGamepadView()
+  else
+    self:InitKeyboardView()
+  end
+end
+
+function M:InitGamepadView()
+  if self.Parent and self.Parent.FocusWidget ~= self then
+    return
+  end
+  if self.IsShowingTip then
+    self.ControllerFSM:Enter(FSMState.ShowTip)
+  else
+    self.ControllerFSM:Enter(FSMState.Normal)
+  end
+  self.Key_Qa:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.Key_Consume:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  self.EMScrollBox_Text:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
+end
+
+function M:InitKeyboardView()
+  self.ControllerFSM:Reset()
+  self.Key_Qa:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.Key_Consume:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  self.EMScrollBox_Text:SetVisibility(UIConst.VisibilityOp.Visible)
+end
+
+function M:OnItemAddToFocusPath(Content)
+  self:UpdateFocusItem(Content.SelfWidget)
+end
+
+function M:OnMenuOpenChange(IsOpen)
+  if UIUtils.IsGamepadInput() then
+    if IsOpen then
+      self.ControllerFSM:Enter(FSMState.ShowTip)
+    else
+      self.ControllerFSM:Enter(FSMState.CheckItem)
+    end
+  end
+  self.IsShowingTip = IsOpen
+end
+
+function M:UpdateFocusItem(ItemWidget)
+  if not ItemWidget then
+    return
+  end
+  self.Item = ItemWidget
+end
+
+function M:OnEnterState_Normal()
+  if self.IsGamepadInput then
+    self.Key_Consume:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+  end
+  self:_CallParentFunction("OnEnterState_Normal")
+end
+
+function M:OnEnterState_CheckItem()
+  if self.IsGamepadInput then
+    self.Key_Consume:SetVisibility(UIConst.VisibilityOp.Collapsed)
+  end
+  self:_CallParentFunction("OnEnterState_CheckItem")
+end
+
+function M:OnEnterState_ShowTip()
+  self:_CallParentFunction("OnEnterState_ShowTip")
+end
+
+function M:_CallParentFunction(FuncName, ...)
+  if self.Parent and self.Parent[FuncName] then
+    self.Parent[FuncName](self.Parent, ...)
+  end
+end
+
+function M:OnKeyUp(MyGeometry, InKeyEvent)
+  local IsEventHandled = false
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  if InKeyName == UIConst.GamePadKey.SpecialRight and self.Panel_FreeHint:IsVisible() then
+    self.Com_BtnQa:OnViewInfoClick(false)
+    if self.ControllerFSM:Current() == FSMState.Normal then
+      self:SetFocus()
+    elseif self.ControllerFSM:Current() == FSMState.CheckItem then
+      self.Item:SetFocus()
+    end
+  end
+  return UE4.UWidgetBlueprintLibrary.Handled()
+end
+
+function M:OnContentKeyDown(MyGeometry, InKeyEvent)
+  local InKey = UE4.UKismetInputLibrary.GetKey(InKeyEvent)
+  local InKeyName = UE4.UFormulaFunctionLibrary.Key_GetFName(InKey)
+  local IsEventHandled = false
+  if InKeyName == Const.GamepadLeftThumbstick then
+    if self.ControllerFSM:Current() == FSMState.Normal then
+      self.ControllerFSM:Enter(FSMState.CheckItem)
+      self.Item:SetFocus()
+    end
+    IsEventHandled = true
+  elseif InKeyName == Const.GamepadFaceButtonRight then
+    if self.ControllerFSM:Current() == FSMState.CheckItem then
+      self.ControllerFSM:Enter(FSMState.Normal)
+      self:SetFocus()
+      self:UpdateFocusItem(self.WB_Item:GetChildAt(0))
+      IsEventHandled = true
+    elseif self.ControllerFSM:Current() == FSMState.ShowTip then
+      self.ControllerFSM:Enter(FSMState.CheckItem)
+      self.Item:SetFocus()
+      IsEventHandled = true
+    end
+  elseif InKeyName == UIConst.GamePadKey.SpecialRight and self.Panel_FreeHint:IsVisible() then
+    self.Com_BtnQa:OnViewInfoClick(true)
+    IsEventHandled = true
+  end
+  return IsEventHandled
+end
+
+function M:OnAddedToFocusPath()
+  self:_CallParentFunction("OnSubWidgetFocus", self)
+  if self.IsGamepadInput then
+    self:InitGamepadView()
+  end
+end
+
+function M:OnRemovedFromFocusPath()
+  self:InitKeyboardView()
+end
+
+AssembleComponents(M)
 return M

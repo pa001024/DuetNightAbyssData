@@ -310,15 +310,12 @@ function Common_Button_Text_PC:OnListItemObjectSet(Content)
   if Content.OnForbiddenClickFunction then
     self:BindForbidStateExecuteEvent(Content.ParentWidget, Content.OnForbiddenClickFunction)
   end
-  if Content.IsForbid then
-    self:ForbidBtn(true)
-  end
-  if Content.IsLock then
-    self:LockBtn(true)
-  end
+  self:ForbidBtn(Content.IsForbid == true)
+  self:LockBtn(true == Content.IsLock)
   if Content.UseRedText then
     self:SetTextColor(self.Text_Red)
   end
+  Content.SelfWidget = self
 end
 
 return Common_Button_Text_PC

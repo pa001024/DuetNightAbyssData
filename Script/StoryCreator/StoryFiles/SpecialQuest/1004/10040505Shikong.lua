@@ -3,19 +3,13 @@ return {
   storyDescription = "",
   lineData = {
     {
-      startStory = "177772057065416822022",
-      startPort = "Success",
-      endStory = "177772057065316822021",
-      endPort = "In"
-    },
-    {
       startStory = "177772056663716821971",
       startPort = "StoryStart",
       endStory = "177772057065416822022",
       endPort = "In"
     },
     {
-      startStory = "177772057065316822021",
+      startStory = "177772057065416822022",
       startPort = "Success",
       endStory = "177772056663716821974",
       endPort = "StoryEnd"
@@ -48,145 +42,6 @@ return {
         commentData = {}
       }
     },
-    ["177772057065316822021"] = {
-      isStoryNode = true,
-      key = "177772057065316822021",
-      type = "StoryNode",
-      name = "列车失控",
-      pos = {x = 1467.1412947754861, y = 274.1711081402257},
-      propsData = {
-        QuestId = 0,
-        QuestDescriptionComment = "",
-        QuestDescription = "",
-        QuestDeatil = "",
-        TaskRegionReName = "",
-        TaskSubRegionReName = "",
-        RecommendLevel = -1,
-        bIsStartQuest = false,
-        bIsEndQuest = false,
-        bIsNotifyGameMode = true,
-        bIsStartChapter = false,
-        bIsEndChapter = false,
-        bIsPlayBlackScreenOnComplete = false,
-        bIsPlayBlackScreenOnFail = false,
-        bIsDynamicEvent = false,
-        ResurgencePoint = "",
-        bUseQuestCoordinate = false,
-        bDeadTriggerQuestFail = false,
-        IsFairyLand = false,
-        IsBacktrack = false,
-        SubRegionId = 106101,
-        SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
-        JumpId = 0
-      },
-      questNodeData = {
-        lineData = {
-          {
-            startQuest = "177772057065516822032",
-            startPort = "QuestStart",
-            endQuest = "177772057065516822035",
-            endPort = "In"
-          },
-          {
-            startQuest = "177772057065516822035",
-            startPort = "Out",
-            endQuest = "1778765708439833",
-            endPort = "In"
-          },
-          {
-            startQuest = "177772057065516822032",
-            startPort = "QuestStart",
-            endQuest = "17787657169391050",
-            endPort = "In"
-          },
-          {
-            startQuest = "17787657169391050",
-            startPort = "Out",
-            endQuest = "177772057065516822034",
-            endPort = "Fail"
-          }
-        },
-        nodeData = {
-          ["177772057065516822032"] = {
-            key = "177772057065516822032",
-            type = "QuestStartNode",
-            name = "QuestStart",
-            pos = {x = 800, y = 300},
-            propsData = {ModeType = 0}
-          },
-          ["177772057065516822033"] = {
-            key = "177772057065516822033",
-            type = "QuestSuccessNode",
-            name = "QuestSuccess",
-            pos = {x = 2297.0588235294117, y = 302.64705882352945},
-            propsData = {ModeType = 0}
-          },
-          ["177772057065516822034"] = {
-            key = "177772057065516822034",
-            type = "QuestFailNode",
-            name = "QuestFail",
-            pos = {x = 2800, y = 700},
-            propsData = {}
-          },
-          ["177772057065516822035"] = {
-            key = "177772057065516822035",
-            type = "TalkNode",
-            name = "过场-签订契约",
-            pos = {x = 1506.059210526316, y = 327.36513157894734},
-            propsData = {
-              IsNpcNode = false,
-              TalkType = "Cinematic",
-              TalkStageName = "",
-              ShowFilePath = "/Game/Asset/Cinematics/Story/Ver01/Ver0104/Ver0104_SC025/SQ_Ver0104_SC025",
-              BlendInTime = 0,
-              BlendOutTime = 0,
-              InType = "FadeIn",
-              OutType = "FadeOut",
-              ShowFadeDetail = false,
-              ShowSkipButton = true,
-              ShowReviewButton = true,
-              ShowWikiButton = true,
-              PauseGameGlobal = true,
-              HideNpcs = false,
-              HideMonsters = true,
-              HideAllBattleEntity = true,
-              HideEffectCreature = true,
-              HideMechanismsFX = false,
-              DisableNpcOptimization = false,
-              DoNotReceiveCharacterShadow = false,
-              PauseTimeElapse = false,
-              BeginNewTargetPointName = "",
-              EndNewTargetPointName = "",
-              CameraLookAtTartgetPoint = "",
-              RestoreStand = false,
-              TalkActors = {},
-              bLockHighestLOD = false,
-              FreezeWorldComposition = true,
-              bTravelFullLoadWorldComposition = false,
-              SwitchToMaster = "None",
-              OverrideFailBlend = false
-            }
-          },
-          ["1778765708439833"] = {
-            key = "1778765708439833",
-            type = "SpecialQuestSuccessNode",
-            name = "成功完成特殊任务",
-            pos = {x = 1951.0588235294117, y = 385.99999999999994},
-            propsData = {}
-          },
-          ["17787657169391050"] = {
-            key = "17787657169391050",
-            type = "WaitingSpecialQuestFailNode",
-            name = "等待特殊任务失败",
-            pos = {x = 1476.3529411764705, y = 581.8823529411765},
-            propsData = {}
-          }
-        },
-        commentData = {}
-      }
-    },
     ["177772057065416822022"] = {
       isStoryNode = true,
       key = "177772057065416822022",
@@ -214,7 +69,7 @@ return {
         bDeadTriggerQuestFail = false,
         IsFairyLand = false,
         IsBacktrack = false,
-        SubRegionId = 106101,
+        SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Point",
         StoryGuidePointName = "",
@@ -250,12 +105,6 @@ return {
             startQuest = "177772057065716822050",
             startPort = "Out",
             endQuest = "177772057065816822059",
-            endPort = "In"
-          },
-          {
-            startQuest = "177772057065716822051",
-            startPort = "Out",
-            endQuest = "177772057065816822060",
             endPort = "In"
           },
           {
@@ -295,10 +144,46 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "177772057065616822047",
+            startPort = "QuestStart",
+            endQuest = "177892138175487880517",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772057065816822053",
+            startPort = "Out",
+            endQuest = "177892140480787880844",
+            endPort = "In"
+          },
+          {
             startQuest = "177772057065816822060",
             startPort = "Out",
-            endQuest = "177772057065616822048",
-            endPort = "Success"
+            endQuest = "17791956096111776",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772057065716822050",
+            startPort = "Out",
+            endQuest = "177936848699067209375",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772057065716822052",
+            startPort = "Out",
+            endQuest = "17796987621973872995",
+            endPort = "In"
+          },
+          {
+            startQuest = "177772057065716822051",
+            startPort = "Out",
+            endQuest = "17796987939323873385",
+            endPort = "In"
+          },
+          {
+            startQuest = "17796987939323873385",
+            startPort = "Out",
+            endQuest = "177772057065816822060",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -327,7 +212,7 @@ return {
             key = "177772057065716822050",
             type = "TalkNode",
             name = "准备控制列车",
-            pos = {x = 699.7132992327367, y = 292.0807400379507},
+            pos = {x = 604.9132992327368, y = 282.4807400379507},
             propsData = {
               IsNpcNode = false,
               bUseFlowAssetActors = true,
@@ -442,7 +327,7 @@ return {
             key = "177772057065816822053",
             type = "TalkNode",
             name = "过场-主角试图操作控制台",
-            pos = {x = 330.59817671809265, y = 297.6514726507714},
+            pos = {x = 151.961813081729, y = 288.1060181053168},
             propsData = {
               IsNpcNode = false,
               TalkType = "Cinematic",
@@ -575,8 +460,76 @@ return {
             key = "177772203423427103864",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = -699.6185522629819, y = 131.38940832362687},
+            pos = {x = -776.4185522629818, y = -24.610591676373133},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
+          },
+          ["177892138175487880517"] = {
+            key = "177892138175487880517",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = -657.6000000000001, y = 166.175},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "TrainGuozaiQian",
+              UnitId = -1
+            }
+          },
+          ["177892140480787880844"] = {
+            key = "177892140480787880844",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 357.60000000000025, y = -57.02500000000009},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "TrainGuozaiHou",
+              UnitId = -1
+            }
+          },
+          ["17791956096111776"] = {
+            key = "17791956096111776",
+            type = "SpecialQuestSuccessNode",
+            name = "成功完成特殊任务",
+            pos = {x = 2457.106693611499, y = 297.3829380764163},
+            propsData = {}
+          },
+          ["177936848699067209375"] = {
+            key = "177936848699067209375",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 785.3210526315789, y = 3.9789473684211423},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "YWTrainAlarmStart",
+              UnitId = -1
+            }
+          },
+          ["17796987621973872995"] = {
+            key = "17796987621973872995",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 90.11762025384334, y = 75.25973355849514},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["17796987939323873385"] = {
+            key = "17796987939323873385",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1816.026711162934, y = 271.6233699221314},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
           }
         },
         commentData = {}

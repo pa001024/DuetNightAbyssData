@@ -90,12 +90,6 @@ return {
             endPort = "In"
           },
           {
-            startQuest = "177763208603067916235",
-            startPort = "Out",
-            endQuest = "177763208603067916233",
-            endPort = "In"
-          },
-          {
             startQuest = "177763208603067916233",
             startPort = "Out",
             endQuest = "177763208603067916237",
@@ -164,12 +158,6 @@ return {
           {
             startQuest = "177763208602967916227",
             startPort = "QuestStart",
-            endQuest = "177771975867811220629",
-            endPort = "Input"
-          },
-          {
-            startQuest = "177763208602967916227",
-            startPort = "QuestStart",
             endQuest = "177763208603067916239",
             endPort = "In"
           },
@@ -198,10 +186,40 @@ return {
             endPort = "In"
           },
           {
+            startQuest = "177763208602967916227",
+            startPort = "QuestStart",
+            endQuest = "1779002518702109124368",
+            endPort = "In"
+          },
+          {
             startQuest = "177850473527311198720",
+            startPort = "Out",
+            endQuest = "1779159667614873",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779159667614873",
             startPort = "Out",
             endQuest = "177763208602967916229",
             endPort = "Fail"
+          },
+          {
+            startQuest = "177763208602967916227",
+            startPort = "QuestStart",
+            endQuest = "17792749893209157",
+            endPort = "In"
+          },
+          {
+            startQuest = "177763208603067916235",
+            startPort = "Out",
+            endQuest = "17792751551531940082",
+            endPort = "In"
+          },
+          {
+            startQuest = "17792751551531940082",
+            startPort = "Out",
+            endQuest = "177763208603067916233",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -260,7 +278,7 @@ return {
             key = "177763208603067916233",
             type = "GoToNode",
             name = "前往",
-            pos = {x = 850, y = 594},
+            pos = {x = 855, y = 587.3333333333334},
             propsData = {
               GuideUIEnable = true,
               StaticCreatorId = 272480166,
@@ -325,7 +343,7 @@ return {
               UnitId = 0,
               NewTargetPointName = "BP_ZZZstart",
               FadeIn = false,
-              FadeOut = true,
+              FadeOut = false,
               bResetCamera = true,
               bForceAsyncLoading = true,
               IsWhite = false
@@ -354,7 +372,7 @@ return {
             key = "177763791920797748499",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 48.11266489041071, y = -151.5757780231463},
+            pos = {x = -230.45876368101784, y = -657.2900637374321},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["177763794296297749297"] = {
@@ -377,7 +395,7 @@ return {
               TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
-              BlendOutTime = 0,
+              BlendOutTime = 2,
               InType = "FadeIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
@@ -455,28 +473,61 @@ return {
               SubTaskTargetIndex = 0
             }
           },
-          ["177771975867811220629"] = {
-            key = "177771975867811220629",
-            type = "SetTimeOfDayNode",
-            name = "设置TOD",
-            pos = {x = -115.68421052631578, y = -374},
-            propsData = {
-              TargetTime = 17,
-              NeedLerp = false,
-              LerpTime = 0,
-              StopTimeElapse = false
-            }
-          },
           ["177850473527311198720"] = {
             key = "177850473527311198720",
             type = "CountdownNode",
             name = "倒计时节点",
-            pos = {x = 493.3032036613271, y = 1099.1018306636156},
+            pos = {x = 149.99493298463534, y = 563.1619810395555},
             propsData = {
               CountdownSeconds = 300,
               OpenUI = true,
               Text = "Quest_Tips_10040402",
               RedCountdownSeconds = 300
+            }
+          },
+          ["1779002518702109124368"] = {
+            key = "1779002518702109124368",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = -111.16979949874633, y = -95.2891604010025},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "ZZZPlayStart",
+              UnitId = -1
+            }
+          },
+          ["1779159667614873"] = {
+            key = "1779159667614873",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 509.4652808491817, y = 701.2649270234408},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "Fail",
+              UnitId = -1
+            }
+          },
+          ["17792749893209157"] = {
+            key = "17792749893209157",
+            type = "LookToHookNode",
+            name = "进入范围后自动看向钩锁",
+            pos = {x = 478.65131578947376, y = 450.8223684210526},
+            propsData = {
+              StaticCreatorIdList = {172480033, 172480034},
+              bOpenNode = true,
+              DurationTime = 1
+            }
+          },
+          ["17792751551531940082"] = {
+            key = "17792751551531940082",
+            type = "GoToNode",
+            name = "前往",
+            pos = {x = 1672.774122807018, y = 392.92763157894734},
+            propsData = {
+              GuideUIEnable = true,
+              StaticCreatorId = 272890115,
+              GuideType = "M",
+              GuidePointName = "Mechanism_ZZZ09_272890115"
             }
           }
         },

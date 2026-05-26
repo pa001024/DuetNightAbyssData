@@ -1,4 +1,5 @@
 local MonthSignInCommon = {}
+MonthSignInCommon.UIName = "MonthSignInPopMain"
 MonthSignInCommon.ReddotName = "MonthCheck"
 MonthSignInCommon.MontlyCheckTitle = "UI_MontlyCheck_Title"
 MonthSignInCommon.MontlyCheckMonth = "UI_MontlyCheck_Month"
@@ -20,4 +21,8 @@ MonthSignInCommon.SkinGotoBuy = "UI_Skin_GotoBuy"
 MonthSignInCommon.UnlockCondition = "UI_Unlock_Condition"
 MonthSignInCommon.HaveMore = "UI_CustomLayout_LockToast"
 MonthSignInCommon.ShopJumpIndex = 170
+MonthSignInCommon.EventId = {
+  PlayGetAnimation = "PlayGetAnimation",
+  RefreshInNextDay = "RefreshInNextDay"
+}
 return MonthSignInCommon

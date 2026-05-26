@@ -1566,10 +1566,17 @@
         }
       },
       {
-        "id": 10040305,
+        "id": 10040304,
         "sr": 106001,
         "next": {
           "Success": 10040306
+        }
+      },
+      {
+        "id": 10040305,
+        "sr": 106001,
+        "next": {
+          "Success": 10040304
         }
       },
       {
@@ -1781,7 +1788,7 @@
       },
       {
         "id": 10040422,
-        "sr": 1061010,
+        "sr": 106101,
         "next": {
           "Success": 10040404
         }
@@ -1864,14 +1871,14 @@
         "id": 10040506,
         "sr": 106101,
         "next": {
-          "Success": 10040507
+          "Success": 10040512
         }
       },
       {
         "id": 10040507,
         "sr": 106101,
         "next": {
-          "Success": 10040513
+          "Success": 10040508
         }
       },
       {
@@ -1890,7 +1897,7 @@
       },
       {
         "id": 10040510,
-        "sr": 106101
+        "sr": 210101
       },
       {
         "id": 10040511,
@@ -1903,14 +1910,7 @@
         "id": 10040512,
         "sr": 106101,
         "next": {
-          "Success": 10040508
-        }
-      },
-      {
-        "id": 10040513,
-        "sr": 101107,
-        "next": {
-          "Success": 10040512
+          "Success": 10040507
         }
       },
       {
@@ -6452,15 +6452,7 @@
     "reward": [
       50631
     ],
-    "npc": 900001,
     "quests": [
-      {
-        "id": 20023700,
-        "sr": 210101,
-        "next": {
-          "Success": 20023701
-        }
-      },
       {
         "id": 20023701,
         "sr": 210101,
@@ -6480,7 +6472,7 @@
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "Forge d’arme de calamité I",
     "desc": "Soumettre des matériaux à Luno, la forgeronne",
-    "detail": "Soumettez 100 [Insignes de force], 100 [Insignes de foi], 100 [Insignes d’harmonie], 100 [Insignes de corruption] et 100 [Insignes d’inflexibilité].",
+    "detail": "Soumettez 30 [Insignes de force], 30 [Insignes de foi], 30 [Insignes d’harmonie], 30 [Insignes de corruption] et 30 [Insignes d’inflexibilité].",
     "type": 4,
     "reward": [
       50632
@@ -6546,7 +6538,7 @@
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "Forge d’arme de calamité III",
     "desc": "Soumettre des matériaux à Luno, la forgeronne",
-    "detail": "Soumettez 1 [Cristal prismatique].",
+    "detail": "Soumettez 1 [Cristal radieux].",
     "type": 4,
     "reward": [
       50634
@@ -7442,8 +7434,8 @@
     "name": "Pain noir et beurre",
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "Pain noir et beurre",
-    "desc": "出于一些目的，你决定买下这个盒子。",
-    "detail": "行商向你们展示了一种奇怪的盒子，看起来年代已久……你们不仅有些怀疑，这么小的盒子里面，真的会有宝贝吗？",
+    "desc": "Acheter cette boîte pour certaines raisons.",
+    "detail": "Le marchand ambulant vous présente une étrange boîte qui paraît très ancienne... Vous avez du mal à croire qu’un objet aussi petit puisse réellement contenir un trésor.",
     "type": 3,
     "reward": [
       50635
@@ -7488,8 +7480,8 @@
     "name": "Quand le sifflet pleure",
     "chapterName": "Chapitre du Vagabond de la Nuit",
     "episode": "Quand le sifflet pleure",
-    "desc": "在车站遇到了一位奇怪的行商，问问他有什么“好东西”。",
-    "detail": "和同伴们在百花车站闲逛的时候，遇见了一位行商……似乎是因为你们出手阔绰，想要向你们兜售商品。",
+    "desc": "Rencontrer un étrange marchand ambulant à la gare et découvrir quelles « merveilles » il propose.",
+    "detail": "Lors de votre promenade avec vos compagnons dans la Gare des Cent-Fleurs, vous tombez sur un étrange marchand ambulant... Voyant que vous semblez avoir les moyens, il tente de vous vendre sa marchandise.",
     "type": 3,
     "reward": [
       50636

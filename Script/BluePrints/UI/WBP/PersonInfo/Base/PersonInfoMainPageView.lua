@@ -679,6 +679,7 @@ function M:InitGuildInfo(PersonalBaseInfo)
   if not self.bGuildEntryBound then
     self.bGuildEntryBound = true
     self.GuildInfo.Btn_Guild.OnClicked:Add(self, function()
+      AudioManager(self):PlayUISound(nil, "event:/ui/common/special_content_01_click", nil, nil)
       GuildController:OpenGuildDetailPopup(self, self.GuildDetailGuildId)
     end)
   end

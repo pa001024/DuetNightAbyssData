@@ -469,6 +469,9 @@ function M:InitLineTyping(Page, Index, LinePosY)
   end
   LinePos = FVector2D(self.LinePosX, PagePos.Y + LinePosY)
   Widget.Slot:SetPosition(LinePos)
+  if CommonConst.SystemLanguage == CommonConst.SystemLanguages.FR then
+    LineSize.X = LineSize.X + 15
+  end
   Widget.Slot:SetSize(LineSize)
   Widget.RetainerBox.Slot:SetSize(LineSize)
   Widget.BackgroundBlurWithMask.Slot:SetSize(LineSize)

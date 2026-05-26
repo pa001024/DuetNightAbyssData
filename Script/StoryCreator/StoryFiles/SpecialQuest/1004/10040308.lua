@@ -21,9 +21,9 @@ return {
       key = "17782432476267637068",
       type = "StoryNode",
       name = "前往站长办公室",
-      pos = {x = 1046.2857142857147, y = 82.22857142857143},
+      pos = {x = 1044.7067669172936, y = 80.64962406015037},
       propsData = {
-        QuestId = 10040308,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040308_01",
         QuestDeatil = "Description_10040308_01",
@@ -45,18 +45,12 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Mechanism",
+        StoryGuidePointName = "Mechanism_BaozhaStart_2530031",
         JumpId = 0
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "17782432476267637073",
-            startPort = "QuestStart",
-            endQuest = "17782432476267637076",
-            endPort = "In"
-          },
           {
             startQuest = "17782432476267637076",
             startPort = "Out",
@@ -98,6 +92,24 @@ return {
             startPort = "Out",
             endQuest = "17782432476267637075",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17782432476267637073",
+            startPort = "QuestStart",
+            endQuest = "177891742903179675472",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17782432476267637073",
+            startPort = "QuestStart",
+            endQuest = "1779421315502688",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779421315502688",
+            startPort = "Out",
+            endQuest = "17782432476267637076",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -105,7 +117,7 @@ return {
             key = "17782432476267637073",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 1012, y = 358},
+            pos = {x = 530, y = 362},
             propsData = {ModeType = 0}
           },
           ["17782432476267637074"] = {
@@ -154,7 +166,7 @@ return {
               BlendEaseExp = 2,
               UseProceduralCamera = false,
               ProceduralCameraId = 1,
-              HideNpcs = false,
+              HideNpcs = true,
               HideMonsters = true,
               HideAllBattleEntity = true,
               HideMechanismsFX = true,
@@ -228,6 +240,28 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 1311.2122583299054, y = 783.2087985543867},
             propsData = {}
+          },
+          ["177891742903179675472"] = {
+            key = "177891742903179675472",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 1316.430205949657, y = 652.1922196796338},
+            propsData = {
+              TargetTime = 19,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["1779421315502688"] = {
+            key = "1779421315502688",
+            type = "SetVarNode",
+            name = "设置变量值",
+            pos = {x = 1080.25, y = 362},
+            propsData = {
+              VarName = "First10040308",
+              VarValue = 1
+            }
           }
         },
         commentData = {}

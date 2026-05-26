@@ -210,6 +210,7 @@ function M:OnLoaded(...)
   ReddotManager.AddListener("GuildWeekActivity", self, self.OnGuildWeekActivityReddotChange)
   ReddotManager.AddListener("GuildDailyTask", self, self.OnGuildTaskReddotChange)
   ReddotManager.AddListener("GuildWeekTask", self, self.OnGuildTaskReddotChange)
+  AudioManager(self):PlayUISound(self, "event:/ui/armory/open", "GuildRewardNormalIn", nil)
 end
 
 function M:RefreshAcvitityRewardPanel()
@@ -321,6 +322,7 @@ function M:Close()
   if PreviousUI and PreviousUI:GetName() == "GuildMain" then
     EventManager:FireEvent(EventID.OnReturnToActivityEntry)
   end
+  AudioManager(self):SetEventSoundParam(self, "GuildRewardNormalIn", {ToEnd = 1})
   if self.Auto_Out then
     self:PlayAnimation(self.Auto_Out, 0, 1, UE4.EUMGSequencePlayMode.Forward, 1)
   else
@@ -553,12 +555,15 @@ function M:RefreshListRewardInfo(Item, NotPlaySound)
   end
   self.SelectedContent = Item.Content
   self.SelectedContent.Entry:Selected(NotPlaySound)
-  self:RealRefreshListRewardInfo(self.SelectedContent.Type)
+  self:RealRefreshListRewardInfo(self.SelectedContent.Type, NotPlaySound)
 end
 
-function M:RealRefreshListRewardInfo(TabType)
+function M:RealRefreshListRewardInfo(TabType, NotPlaySound)
   local ConfigData = self.Datas[TabType]
   self.Type = TabType
+  if not NotPlaySound then
+    AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
+  end
   M.RefreshGuildQuestConfigData(self)
   self:Refresh(ConfigData)
   self:RefreshBtnGetAll(ConfigData)
@@ -1261,7 +1266,7 @@ function M:MakeGuildQuestConfigData()
   M.WeeklyResetEndTime = NextResetTimestamp
   local Params = {
     ConfigData = {
-      TopText = "UI_GuildActivity",
+      TopText = "UI_GuildTaskTab",
       IsExpired = false,
       TimeText = "UI_ResetRemaining",
       RemainTimeDict = RemainTimeDict,
@@ -1677,6 +1682,7 @@ function M:OnActivityRewardPreviewClosed()
 end
 
 function M:OnXButtonClicked()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_confirm_positive", nil, nil)
   local Model = GuildController:GetModel()
   local ActivityLevel = Model:GetGuildActivityLevel()
   local RewardRecord = Model:GetGuildActivityRewardRecord()

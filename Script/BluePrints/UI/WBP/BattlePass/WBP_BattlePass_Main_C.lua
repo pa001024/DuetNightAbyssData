@@ -49,11 +49,15 @@ function WBP_BattlePass_Main_C:Destruct()
   EventManager:RemoveEvent(EventID.BattlePassVersionChange, self)
   self:RemoveRefreshPetTimer()
   BattlePassController:GetModel():RemoveModelDataRefCount("ActorController", function(Target)
-    if not Target or not IsValid(Target) then
+    if not Target then
       return
     end
-    Target:OnClosed()
-    Target:OnDestruct()
+    if Target.OnClosed then
+      Target:OnClosed()
+    end
+    if Target.OnDestruct then
+      Target:OnDestruct()
+    end
   end)
   self.Super.Destruct(self)
 end

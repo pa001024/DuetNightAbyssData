@@ -5,9 +5,6 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("QuestId2QuestSubmitId", {
-  [10040404] = {
-    [1] = 10040404
-  },
   [20023801] = {
     [1] = 20023801
   },

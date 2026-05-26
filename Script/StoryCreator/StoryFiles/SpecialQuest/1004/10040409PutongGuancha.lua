@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040409_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -196,6 +196,12 @@ return {
             startPort = "Out",
             endQuest = "177874577620215579097",
             endPort = "Fail"
+          },
+          {
+            startQuest = "177874577620215579095",
+            startPort = "QuestStart",
+            endQuest = "17791774429461482",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -224,7 +230,7 @@ return {
             key = "177874577620215579098",
             type = "TalkNode",
             name = "对话节点",
-            pos = {x = 1892.4122740005091, y = 234.56327349121466},
+            pos = {x = 1889.8035783483351, y = 256.7371865346929},
             propsData = {
               IsNpcNode = true,
               NpcNodeInteractiveName = "",
@@ -239,7 +245,7 @@ return {
               TalkType = "FixSimple",
               TalkStageName = "",
               BlendInTime = 0,
-              BlendOutTime = 2,
+              BlendOutTime = 0,
               InType = "FadeIn",
               OutType = "FadeOut",
               ShowFadeDetail = false,
@@ -304,7 +310,7 @@ return {
                   TargetBranchQuestKey = ""
                 }
               },
-              IsSetCountInfo = true,
+              IsSetCountInfo = false,
               IsDifftation = false,
               AllDiffGuideOptions = {}
             }
@@ -637,7 +643,7 @@ return {
             key = "177874577620415579110",
             type = "ChangeRoleNode",
             name = "切换为主角",
-            pos = {x = 536.3221925133689, y = -77.16287878787877},
+            pos = {x = 323.713496861195, y = -39.336791831357026},
             propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["177874608513915580382"] = {
@@ -668,6 +674,24 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 368.5773524720896, y = 737.9266347687401},
             propsData = {}
+          },
+          ["17791774429461482"] = {
+            key = "17791774429461482",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 467.3913043478261, y = -189.30434782608694},
+            propsData = {
+              IsNpcNode = false,
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 10010101,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10049901_40.10049901_40'",
+              TalkType = "Guide",
+              bIsStandalone = true,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
+              OverrideFailBlend = false
+            }
           }
         },
         commentData = {}

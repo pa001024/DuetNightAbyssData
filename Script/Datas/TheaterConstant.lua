@@ -29,7 +29,7 @@ return ReadOnly("TheaterConstant", {
     ConstantName = "EndGameTalkConfigId",
     ConstantValue = 51105840
   },
-  EventId = {ConstantName = "EventId", ConstantValue = 103011},
+  EventId = {ConstantName = "EventId", ConstantValue = 10301101},
   ExpectationRandom = {
     ConstantName = "ExpectationRandom",
     ConstantValue = 5

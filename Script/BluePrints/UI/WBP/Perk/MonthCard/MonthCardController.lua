@@ -225,6 +225,7 @@ function M:DisplayMonthCardPop(DailyReward, ...)
   if GameInstance then
     local LoadingUI = GameInstance:GetLoadingUI()
     local LoginMainPage = UIManager(GameInstance):GetUIObj("LoginMainPage")
+    DebugPrint("Yihan@ DisplayMonthCardPop")
     DebugPrint("DisplayMonthCardPop", LoadingUI)
     if LoadingUI or LoginMainPage then
       MonthCardModel:SetDailyRewardCache(DailyReward)
@@ -242,27 +243,6 @@ function M:TryPopUpCacheReward()
   self:RealDisplayPurchaseRewards(PurchaseReward, function()
     self:TryDisplayMonthCardPop(DailyReward)
   end)
-end
-
-function M:TryPopUpMonthSignIn()
-  local Avatar = GWorld:GetAvatar()
-  if not Avatar then
-    return
-  end
-  local UIUnlocked = Avatar:CheckUIUnlocked("MonthSignIn")
-  if not UIUnlocked then
-    return
-  end
-  local CurTimestamp = TimeUtils.NowTime()
-  local PreLoadingTime = EMCache:Get("PreLoadingTime", true)
-  DebugPrint("Yihan@ ShowGetItemPage", CurTimestamp, PreLoadingTime)
-  if not PreLoadingTime then
-    self:GetUIMgr():LoadUINew("MonthSignInPopMain")
-    EMCache:Set("PreLoadingTime", CurTimestamp, true)
-  elseif 0 ~= TimeUtils.GetIntervalDay(CurTimestamp, PreLoadingTime) then
-    self:GetUIMgr():LoadUINew("MonthSignInPopMain")
-    EMCache:Set("PreLoadingTime", CurTimestamp, true)
-  end
 end
 
 function M:TryDisplayMonthCardPop(DailyReward)

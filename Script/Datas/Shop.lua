@@ -60,7 +60,8 @@ return ReadOnly("Shop", {
     MainTabId = {
       90001,
       90002,
-      90003
+      90003,
+      90004
     },
     PlaySystemUIBGM = "event:/bgm/1_0/0083_system_shop_normal",
     ShopBgBPPath = "WidgetBlueprint'/Game/UI/WBP/Shop/Widget/BG/WBP_Shop_BG_Normal.WBP_Shop_BG_Normal'",

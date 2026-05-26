@@ -1936,7 +1936,7 @@ return ReadOnly("SkillCreature", {
     WindInfo = T.RT_35
   },
   [150333] = {
-    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Kezhou_ShadowSword_Creature.BP_Kezhou_ShadowSword_Creature",
+    BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Kezhou_Shadowsword_Creature.BP_Kezhou_Shadowsword_Creature",
     BoundCount = 1,
     BulletFXID = 150304,
     CollisionDelayTime = -1,
@@ -2439,7 +2439,6 @@ return ReadOnly("SkillCreature", {
   [330111] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Maer_Skill02_01.BP_Maer_Skill02_01",
     BoundCount = -1,
-    ClientOwner = true,
     CreatureId = 330111,
     DestroyWithCreator = 1,
     HitOthers = T.RT_98,
@@ -2458,7 +2457,6 @@ return ReadOnly("SkillCreature", {
   [330112] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Maer_Skill02_02.BP_Maer_Skill02_02",
     BoundCount = 0,
-    ClientOwner = true,
     CreatureId = 330112,
     DelayDestroyTime = 1,
     IsNotDestroyInFall = true,
@@ -2489,7 +2487,6 @@ return ReadOnly("SkillCreature", {
   [330115] = {
     BPPath = "/Game/BluePrints/Combat/SkillCreatures/Player/BP_Maer_Skill02_02.BP_Maer_Skill02_02",
     BoundCount = 0,
-    ClientOwner = true,
     CreatureId = 330115,
     DelayDestroyTime = 1,
     IsNotDestroyInFall = true,
@@ -9319,6 +9316,7 @@ return ReadOnly("SkillCreature", {
     SpawnSocket = T.RT_34,
     Speed = 0,
     Tags = T.RT_14,
+    TickCollision = true,
     TimeLife = -1,
     WindInfo = T.RT_35
   },
@@ -9394,6 +9392,7 @@ return ReadOnly("SkillCreature", {
     SpawnSocket = T.RT_19,
     Speed = 0,
     Tags = T.RT_14,
+    TickCollision = true,
     TimeLife = -1,
     Vars = T.RT_20,
     WindInfo = T.RT_40

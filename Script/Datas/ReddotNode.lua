@@ -54,6 +54,13 @@ return ReadOnly("ReddotNode", {
     NodeModuleName = "Activity.AccessoryDrop",
     Type = 1
   },
+  Acti_AccessoryDrop02 = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "Acti_AccessoryDrop02",
+    NodeModuleName = "Activity.AccessoryDrop",
+    Type = 1
+  },
   Acti_AprilFoolDay = {
     CacheType = 1,
     IsLeaf = true,
@@ -690,9 +697,24 @@ return ReadOnly("ReddotNode", {
     Type = 0,
     bInvokeEveryTime = true
   },
-  AppearanceMain = {
+  AppearanceEntrance = {
     Childs = {
       "AppearanceArchiveReward",
+      "AppearanceFenghuaReward"
+    },
+    Name = "AppearanceEntrance",
+    bInvokeEveryTime = true
+  },
+  AppearanceFenghuaReward = {
+    CacheType = 1,
+    IsLeaf = true,
+    Name = "AppearanceFenghuaReward",
+    Type = 0,
+    bInvokeEveryTime = true
+  },
+  AppearanceMain = {
+    Childs = {
+      "AppearanceEntrance",
       "NewCharAppearance",
       "CharSkinLevelUp",
       "NewMeleeAppearance",
@@ -793,7 +815,9 @@ return ReadOnly("ReddotNode", {
       "UnlockableChar",
       "ArmoryReward",
       "NewReleasedChar",
-      "NewUltraGradeChar"
+      "NewUltraGradeChar",
+      "MeleeHyperWeaponForgeReward",
+      "RangedHyperWeaponForgeReward"
     },
     Name = "ArmoryMainMenu",
     bInvokeEveryTime = true
@@ -1253,6 +1277,12 @@ return ReadOnly("ReddotNode", {
     Childs = {"Dispatch"},
     Name = "Map"
   },
+  MeleeHyperWeaponForgeReward = {
+    CacheType = -1,
+    IsLeaf = true,
+    Name = "MeleeHyperWeaponForgeReward",
+    Type = 0
+  },
   MeleeReward = {
     CacheType = -1,
     IsLeaf = true,
@@ -1487,6 +1517,12 @@ return ReadOnly("ReddotNode", {
     Name = "RaidReward",
     Type = 0,
     bInvokeEveryTime = true
+  },
+  RangedHyperWeaponForgeReward = {
+    CacheType = -1,
+    IsLeaf = true,
+    Name = "RangedHyperWeaponForgeReward",
+    Type = 0
   },
   RangedReward = {
     CacheType = -1,

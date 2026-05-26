@@ -20,7 +20,17 @@ function M:Construct()
     MenuPlacement = EMenuPlacement.MenuPlacement_MenuRight
   }
   self.Com_BtnQa:Init(Params)
+  
+  function self.Btn_Unlock.SoundFunc(Obj)
+    AudioManager(Obj):PlayUISound(Obj, "event:/ui/common/click_btn_confirm", nil, nil)
+  end
+  
+  function self.Btn_Unlock_Free.SoundFunc(Obj)
+    AudioManager(self):PlayUISound(self, "event:/ui/common/battle_pass_btn_click_normal", nil, nil)
+  end
+  
   self:AddDispatcher(EventID.OnHyperWeaponForgeLevelUp, self, self.OnHyperWeaponForgeLevelUp)
+  self:AddDispatcher(EventID.OnResourcesChanged, self, self.OnResourcesChanged)
 end
 
 function M:OnLoaded(...)
@@ -28,7 +38,6 @@ function M:OnLoaded(...)
   self.Params = (...)
   self.Parent = self.Params.Parent
   self.Target = self.Params.Target
-  self:PlayAnimation(self.Detail_In)
   self.Params.Parent = self
   self.Params.CallbackObj = self
   self.Params.CardCallback = self.OnCardLevelClicked
@@ -37,6 +46,7 @@ function M:OnLoaded(...)
   self.Params.OnRemovedFromFocusPath = self.OnIncarnonPageRemovedFromFocusPath
   self.Params.OnLevelWidgetAddToFocusPath = self.OnLevelWidgetAddToFocusPath
   self.Params.OnTalentWidgetAddToFocusPath = self.OnTalentWidgetAddToFocusPath
+  self.Params.SkipClickSound = false
   self.Armory_Incarnon:Init(self.Params)
   self.Avatar = GWorld:GetAvatar()
   self.WeaponId = self.Target.WeaponId
@@ -45,9 +55,14 @@ function M:OnLoaded(...)
   self.MaxCardLevel = HyperWeaponUtils.GetMaxForgeLevel(self.WeaponId)
   self:InitWeaponIconAndName()
   self:SelectCardOrTalent(self.Params)
+  self:PlayInAnimation()
 end
 
 function M:OnHyperWeaponForgeLevelUp()
+  self:RefreshDetailPanelByLastSelectedItem()
+end
+
+function M:RefreshDetailPanelByLastSelectedItem()
   local function IsTalentWisget(Widget)
     return Widget and Widget.TalentId
   end
@@ -58,6 +73,38 @@ function M:OnHyperWeaponForgeLevelUp()
   else
     self:RefreshCardDetailPanel(Widget, Widget.CardLevel)
   end
+end
+
+function M:OnResourcesChanged(ResourceId)
+  if not DataMgr.Resource[ResourceId] then
+    return
+  end
+  local IsChanged = false
+  self:BlockAllUIInput(true)
+  for CardLevel = 1, self.MaxCardLevel do
+    local CardWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel)
+    if not CardWidget then
+      return
+    end
+    local OldCardState = CardWidget.CardState
+    local NewCardState = HyperWeaponUtils.GetCardState(self.Avatar, self.WeaponUuid, CardLevel)
+    if OldCardState ~= NewCardState then
+      CardWidget:InitAnimationState()
+      IsChanged = true
+    end
+    for TalentId, TalentWidget in pairs(CardWidget.TalentsMap) do
+      local OldTalentState = TalentWidget.TalentState
+      local NewTalentState = HyperWeaponUtils.GetTalentState(self.Avatar, self.WeaponUuid, TalentId)
+      if OldTalentState ~= NewTalentState then
+        TalentWidget:InitAnimationState()
+        IsChanged = true
+      end
+    end
+  end
+  if IsChanged then
+    self:RefreshDetailPanelByLastSelectedItem()
+  end
+  self:BlockAllUIInput(false)
 end
 
 function M:InitWeaponIconAndName()
@@ -134,7 +181,7 @@ function M:RefreshCardDetailPanel(Widget, CardLevel)
   local Exp = CurLevelInfo.CollectRewardExp
   if self.HasGotWeapon and CardState ~= StateEnum.Activated and Exp then
     self.Panel_ExpHint:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
-    local ExpHintText = string.format(GText("UI_Armory_WeaponBreakExp"), 1, Exp)
+    local ExpHintText = string.format(GText("UI_Armory_WeaponBreakExp"), CardLevel, Exp)
     self.Text_ExpHint:SetText(ExpHintText)
   else
     self.Panel_ExpHint:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -276,19 +323,19 @@ function M:InitItems(ResourceInfo)
 end
 
 function M:OnStuffItemContentCreated(Content)
-  rawset(Content, "OnFocusReceivedEvent", {
+  rawset(Content, "OnAddedToFocusPathEvent", {
     Obj = self,
-    Callback = self.OnStuffItemFocusReceived,
-    Params = Content
-  })
-  rawset(Content, "OnMouseButtonUpEvents", {
-    Obj = self,
-    Callback = self.OnStuffItemClicked,
+    Callback = self.OnStuffItemAddToFocusPath,
     Params = Content
   })
   rawset(Content, "OnRemovedFromFocusPathEvent", {
     Obj = self,
-    Callback = self.OnStuffItemRemovedFromFFocusPath,
+    Callback = self.OnStuffItemRemovedFromFocusPath,
+    Params = Content
+  })
+  rawset(Content, "OnMenuOpenChangedEvents", {
+    Obj = self,
+    Callback = self.OnStuffItemMenuOpenChanged,
     Params = Content
   })
 end
@@ -479,17 +526,18 @@ end
 function M:UnlockCardLevel(CardLevel)
   local function OnAnimationFinished()
     for _, Widget in pairs(self.LastSelecedItem.TalentsMap) do
-      Widget:InitAnimationState()
+      Widget:PlayActInAnimation()
     end
     local NextWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel + 1)
     if NextWidget then
-      NextWidget:InitAnimationState()
+      NextWidget:PlayActInAnimation()
     end
   end
   
   local function Callback(Ret)
     self:BlockAllUIInput(false)
     if not ErrorCode:Check(Ret) then
+      self.IsAnimationPlaying = false
       return
     end
     local Widget = self.LastSelecedItem
@@ -502,6 +550,7 @@ function M:UnlockCardLevel(CardLevel)
   
   self:BlockAllUIInput(true)
   self.Avatar:WeaponHyperLevelUp(Callback, self.WeaponUuid)
+  self.IsAnimationPlaying = true
 end
 
 function M:UnlockHyperTalent(TalentId)
@@ -512,14 +561,16 @@ function M:UnlockHyperTalent(TalentId)
     local NextWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel + 1)
     if NextWidget then
       for _, Widget in pairs(NextWidget.TalentsMap) do
-        Widget:InitAnimationState()
+        Widget:PlayActInAnimation()
       end
     end
+    self:RefreshTalentLineState(TalentId)
   end
   
   local function Callback(Ret)
     self:BlockAllUIInput(false)
     if not ErrorCode:Check(Ret) then
+      self.IsAnimationPlaying = false
       return
     end
     local CardWidget = self.LastSelecedItem.Parent
@@ -533,6 +584,50 @@ function M:UnlockHyperTalent(TalentId)
   
   self:BlockAllUIInput(true)
   self.Avatar:WeaponUnlockHyperTalent(Callback, self.WeaponUuid, TalentId)
+  self.IsAnimationPlaying = true
+end
+
+function M:RefreshTalentLineState(TalentId)
+  local TalentInfo = DataMgr.HyperWeaponSkillTree[TalentId]
+  if not TalentInfo then
+    return
+  end
+  local CardLevel = TalentInfo.WeaponCardLevel
+  local CurCardWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel)
+  local CurTalentWidget = CurCardWidget.TalentsMap[TalentId]
+  if not CurTalentWidget then
+    return
+  end
+  local PreCardWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel - 1)
+  if PreCardWidget then
+    for _, ConditionId in pairs(TalentInfo.UnlockCondition) do
+      local PreWidget = PreCardWidget.TalentsMap[ConditionId]
+      if PreWidget then
+        local LineIndex = 1
+        if #PreCardWidget.TalentsArray < 2 then
+          LineIndex = CurTalentWidget.TalentIndex
+        end
+        if PreWidget.TalentState == StateEnum.Activated then
+          PreWidget:PlayLineAnimation(LineIndex, "UnLock_In")
+        end
+      end
+    end
+  end
+  local NextCardWidget = self.Armory_Incarnon:GetCardLevelWidget(CardLevel + 1)
+  if NextCardWidget then
+    for Index, NextWidget in pairs(NextCardWidget.TalentsArray) do
+      local Info = DataMgr.HyperWeaponSkillTree[NextWidget.TalentId]
+      for _, ConditionId in pairs(Info.UnlockCondition) do
+        if ConditionId == TalentId and NextWidget.TalentState == StateEnum.Activated then
+          local LineIndex = 1
+          if #CurCardWidget.TalentsArray < 2 then
+            LineIndex = Index
+          end
+          CurTalentWidget:PlayLineAnimation(LineIndex, "UnLock_In")
+        end
+      end
+    end
+  end
 end
 
 function M:OnBackgroundClicked()
@@ -545,7 +640,6 @@ function M:OnCloseBtnClicked()
   if self.LastSelecedItem then
     self.LastSelecedItem:PlayNormalAnimation()
   end
-  self.IsInOutAnim = true
   self:BindToAnimationFinished(self.Detail_Out, {
     self,
     self.OnOutAnimFinished
@@ -565,10 +659,29 @@ function M:OnCloseBtnClicked()
     ArmoryMain.ReceiveEnterStateNoAnim = true
     ArmoryMain:UpdateMontageAndCamera()
   end
+  AudioManager(self):SetEventSoundParam(self, "IncarnonDetail", {ToEnd = 1})
+end
+
+function M:PlayInAnimation()
+  self:StopAnimation(self.Out)
+  self:PlayAnimation(self.In)
+  self:StopAnimation(self.Detail_Out)
+  self:UnbindAllFromAnimationFinished(self.Detail_In)
+  self:BindToAnimationFinished(self.Detail_In, {
+    self,
+    self.OnInAnimationFinished
+  })
+  self:BlockAllUIInput(true, "SP_DisplayOnly")
+  self:PlayAnimation(self.Detail_In)
+  self:SetVisibility(UIConst.VisibilityOp.Visible)
+  AudioManager(self):PlayUISound(self, "event:/ui/common/skill_panel_expand", "IncarnonDetail", nil)
+end
+
+function M:OnInAnimationFinished()
+  self:BlockAllUIInput(false)
 end
 
 function M:OnOutAnimFinished()
-  self.IsInOutAnim = false
   self:BlockAllUIInput(false)
   local Params = {SkipAnimationIn = true}
   self.Parent:OnDetailsPanelColsed(Params)

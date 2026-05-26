@@ -818,6 +818,10 @@ function M:DoModSearch(Mod, SearchText)
   if ModConf.AddAttrs then
     for _, ModAttr in ipairs(ModConf.AddAttrs) do
       local AttrConfig = DataMgr.AttrConfig[ModAttr.AttrName]
+      if not AttrConfig then
+        DebugPrint(ErrorTag, string.format("%s找不到对应的AttrConfig，找策划检查AttrConfig.xlsx，看一下这个东西配了没有", ModAttr.AttrName))
+        return false
+      end
       local AttrName = string.lower(GText(AttrConfig.Name))
       if AttrConfig and string.find(AttrName, SearchText) then
         return true

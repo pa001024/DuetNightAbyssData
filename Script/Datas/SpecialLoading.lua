@@ -197,5 +197,55 @@ return ReadOnly("SpecialLoading", {
     Id = 10035,
     LoadingId = 10540101,
     Region = {SubId = 105401}
+  },
+  [10036] = {
+    Id = 10036,
+    LoadingId = 10600101,
+    Region = {SpawnPoint = 1, SubId = 106001}
+  },
+  [10037] = {
+    Id = 10037,
+    LoadingId = 10600102,
+    Region = {SpawnPoint = 5, SubId = 106001}
+  },
+  [10038] = {
+    Id = 10038,
+    LoadingId = 10630101,
+    Region = {SubId = 106301}
+  },
+  [10039] = {
+    Id = 10039,
+    LoadingId = 10610101,
+    Region = {SpawnPoint = 2, SubId = 106001}
+  },
+  [10040] = {
+    Id = 10040,
+    LoadingId = 10600103,
+    Region = {SpawnPoint = 9, SubId = 106001}
+  },
+  [10041] = {
+    Id = 10041,
+    LoadingId = 10620101,
+    Region = {SubId = 106201}
+  },
+  [10042] = {
+    Id = 10042,
+    LoadingId = 10610102,
+    Region = {SubId = 106101}
+  },
+  [10043] = {
+    Id = 10043,
+    LoadingId = 10110701,
+    Region = {SubId = 101701}
+  },
+  [10044] = {
+    Id = 10044,
+    LoadingId = 10600103,
+    Region = {SpawnPoint = 10, SubId = 106001}
+  },
+  [10045] = {
+    Id = 10045,
+    LoadingId = 10610101,
+    Region = {SpawnPoint = 2, SubId = 106101}
   }
 })

@@ -53,7 +53,9 @@ function M:Construct()
       self:HandleSelectPlayerToChat(Uid)
     elseif EventId == ChatCommon.EventID.SelectGuildMemberToChat then
       local Uid = (...)
-      self:HandleSelectPlayerToChat(Uid)
+      if Uid then
+        self:HandleSelectPlayerToChat(Uid)
+      end
     elseif EventId == ChatCommon.EventID.RefreshGuildPlayerList then
       local Uid = (...)
       if self.CurrChannel == ChatCommon.ChannelDef.Friend and ChatModel:GetCurrentSubTab() == ChatCommon.SubTabType.Guild then
@@ -171,6 +173,7 @@ function M:InitUIInfo(Name, bInUIMode, EventList, ...)
       self.List_SubTab:AddItem(ItemObject)
     end
   end
+  self.List_SubTab:RequestPlayEntriesAnim()
   self.LastSelectChannelItem = self.List_SubTab:GetItemAt(math.max(0, self.NeedSelectItemIndex - 1))
   local TabOneInfo = {
     Text = GText("UI_Chat_Channel_Public"),
@@ -300,6 +303,7 @@ function M:_AddReddotListenInner(ChannelName, ChannelType)
 end
 
 function M:ResetUI()
+  self:_Stop_SetUpChatMsgListTimer()
   self.CurrSelectPlayer = nil
   self.Group_NewMessage:SetVisibility(UIConst.VisibilityOp.Collapsed)
   self.Group_BottomEmpty:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -315,7 +319,11 @@ function M:ResetUI()
   self.Btn_Sent:SetText("")
 end
 
-function M:_SetUpChatMsgListTimerCallback(MsgList)
+function M:_SetUpChatMsgListTimerCallback(MsgList, Context)
+  if not self:_IsSetUpChatMsgListContextCurrent(Context) then
+    self:_Stop_SetUpChatMsgListTimer()
+    return
+  end
   if self._SetUpChatMsgListIndex == #MsgList then
     self:_Stop_SetUpChatMsgListTimer()
     if 0 == #MsgList then
@@ -451,6 +459,9 @@ function M:OnHandleChangeChannelWithOperate(TabWidget, ItemInfo)
     else
       self.Text_ChannelTitle:SetText(GText(ItemInfo.ChannelName))
     end
+    if self.bOpenTeamList then
+      self:BtnTeamInfoOnClicked()
+    end
     self.Button_Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Text_ChannelNum:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Image_TitleArrow:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -459,6 +470,9 @@ function M:OnHandleChangeChannelWithOperate(TabWidget, ItemInfo)
     self:RefreshTeamMemberListInMobile()
   else
     self.Text_ChannelTitle:SetText(GText(ItemInfo.ChannelName))
+    if self.bOpenTeamList then
+      self:BtnTeamInfoOnClicked()
+    end
     self.Button_Tab:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Text_ChannelNum:SetVisibility(UIConst.VisibilityOp.Collapsed)
     self.Image_TitleArrow:SetVisibility(UIConst.VisibilityOp.Collapsed)
@@ -468,11 +482,10 @@ end
 function M:OnRefreshTeamChannelInfo(bIsOverallRefresh)
   if bIsOverallRefresh then
     self:OnTabSelected_InTeam()
+    return
   end
-  local TeamNumber = self:RefreshTeamMemberListInMobile()
-  if TeamNumber > 0 then
-    self.Panel_Chat_TeamInfo:InitTeamInfo(self)
-  end
+  self:RefreshTeamMemberListInMobile()
+  self:_HandleRefreshTeamMateInTeamChannel()
 end
 
 function M:RefreshTeamMemberListInMobile()
@@ -509,6 +522,7 @@ function M:HandleSelectPlayerToChat(Uid)
   self._bSelectedPlayerToChat = true
   self:UpdateTabStyleByTabChange(false)
   self._bSelectedPlayerToChat = false
+  self:_ScrollToGuildPrivatePlayerItem(Uid, true)
 end
 
 function M:TryToDefaultFocusWidget()

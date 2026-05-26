@@ -96,10 +96,14 @@ return ReadOnly("PartyTopic", {
     PartyTopicTalkId = "Invite/Heitao_110104.story"
   },
   [110201] = {
+    ConditionId = 100307,
     MemoryDescription = "PartyReward_Description_110201",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Fuluo_1.T_Entertainment_Fuluo_1'",
     MemoryName = "PartyReward_Name_110201",
-    PartyTopicConsume = T.RT_1,
+    PartyTopicConsume = {
+      [19005] = 2,
+      [19008] = 2
+    },
     PartyTopicDescription = "PartyTopic_Description_110201",
     PartyTopicId = 110201,
     PartyTopicName = "PartyTopic_Name_110201",
@@ -110,7 +114,10 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_110202",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Fuluo_2.T_Entertainment_Fuluo_2'",
     MemoryName = "PartyReward_Name_110202",
-    PartyTopicConsume = T.RT_2,
+    PartyTopicConsume = {
+      [19002] = 5,
+      [19005] = 5
+    },
     PartyTopicDescription = "PartyTopic_Description_110202",
     PartyTopicId = 110202,
     PartyTopicName = "PartyTopic_Name_110202",
@@ -121,7 +128,11 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_110203",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Fuluo_3.T_Entertainment_Fuluo_3'",
     MemoryName = "PartyReward_Name_110203",
-    PartyTopicConsume = T.RT_3,
+    PartyTopicConsume = {
+      [19002] = 8,
+      [19003] = 8,
+      [19007] = 8
+    },
     PartyTopicDescription = "PartyTopic_Description_110203",
     PartyTopicId = 110203,
     PartyTopicName = "PartyTopic_Name_110203",
@@ -132,7 +143,10 @@ return ReadOnly("PartyTopic", {
     MemoryDescription = "PartyReward_Description_110204",
     MemoryIconPath = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Entertainment/T_Entertainment_Fuluo_4.T_Entertainment_Fuluo_4'",
     MemoryName = "PartyReward_Name_110204",
-    PartyTopicConsume = T.RT_4,
+    PartyTopicConsume = {
+      [19002] = 10,
+      [19008] = 10
+    },
     PartyTopicDescription = "PartyTopic_Description_110204",
     PartyTopicId = 110204,
     PartyTopicName = "PartyTopic_Name_110204",

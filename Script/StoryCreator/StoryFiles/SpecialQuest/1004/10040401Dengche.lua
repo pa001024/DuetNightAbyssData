@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040401_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -72,17 +72,11 @@ return {
         SubRegionId = 0,
         SubRegionIdList = {},
         StoryGuideType = "Mechanism",
-        StoryGuidePointName = "Mechanism_Dengche_272480056",
+        StoryGuidePointName = "",
         JumpId = 0
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "17787287273567792857",
-            startPort = "QuestStart",
-            endQuest = "17787287273577792860",
-            endPort = "In"
-          },
           {
             startQuest = "17787287273577792862",
             startPort = "Out",
@@ -124,6 +118,24 @@ return {
             startPort = "Out",
             endQuest = "17787287273577792859",
             endPort = "Fail"
+          },
+          {
+            startQuest = "17787287273567792857",
+            startPort = "QuestStart",
+            endQuest = "177891765370385464896",
+            endPort = "Input"
+          },
+          {
+            startQuest = "17787287273567792857",
+            startPort = "QuestStart",
+            endQuest = "177892203305891260093",
+            endPort = "In"
+          },
+          {
+            startQuest = "177892203305891260093",
+            startPort = "Out",
+            endQuest = "17787287273577792860",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -131,7 +143,7 @@ return {
             key = "17787287273567792857",
             type = "QuestStartNode",
             name = "QuestStart",
-            pos = {x = 578.5, y = 253.75},
+            pos = {x = 214.5, y = 273.75},
             propsData = {ModeType = 0}
           },
           ["17787287273577792858"] = {
@@ -285,8 +297,8 @@ return {
             key = "17787287413527793300",
             type = "ChangeRoleNode",
             name = "切换角色",
-            pos = {x = 982.75, y = 101.25},
-            propsData = {QuestRoleId = 0, IsPlayFX = false}
+            pos = {x = 1055.95, y = 125.25},
+            propsData = {QuestRoleId = 16010201, IsPlayFX = false}
           },
           ["17787287485737793571"] = {
             key = "17787287485737793571",
@@ -301,6 +313,33 @@ return {
             name = "等待特殊任务失败",
             pos = {x = 1022.2352941176468, y = 524.656346749226},
             propsData = {}
+          },
+          ["177891765370385464896"] = {
+            key = "177891765370385464896",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 1002.775, y = -53.59999999999997},
+            propsData = {
+              TargetTime = 8,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["177892203305891260093"] = {
+            key = "177892203305891260093",
+            type = "AsyncSetActorLocationAndRotationNode",
+            name = "异步设置玩家位置旋转",
+            pos = {x = 722, y = 278},
+            propsData = {
+              UnitId = 0,
+              NewTargetPointName = "BP_YWBack",
+              FadeIn = false,
+              FadeOut = true,
+              bResetCamera = true,
+              bForceAsyncLoading = true,
+              IsWhite = false
+            }
           }
         },
         commentData = {}

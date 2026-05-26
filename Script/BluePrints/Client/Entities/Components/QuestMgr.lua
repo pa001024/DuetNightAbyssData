@@ -1088,6 +1088,21 @@ function Component:GetIsSubmitComplete(QuestChainId, SubmitId)
   return QuestChain.SubmitQuestId:HasValue(SubmitId)
 end
 
+function Component:GetIsSpecialQuestSubmitComplete(SpecialQuestId, SubmitId)
+  local SpecialQuest = self.SpecialQuestData[SpecialQuestId]
+  if not SpecialQuest or not SpecialQuest:IsDoing() then
+    return false
+  end
+  local SubmitData = DataMgr.QuestTurnInItem[SubmitId]
+  if not SubmitData or not SubmitData.SpecialQuestId then
+    return false
+  end
+  if SpecialQuestId ~= SubmitData.SpecialQuestId then
+    return false
+  end
+  return SpecialQuest.SubmitQuestId:HasValue(SubmitId)
+end
+
 function Component:SubmitQuestItems(SubmitId, InCallback)
   self.logger.debug("SubmitQuestItems Begin", SubmitId)
   

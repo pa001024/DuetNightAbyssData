@@ -68,8 +68,8 @@ function Component:RecvGuildGetJoinRequests(SrcParams, Ret, RequestTable, Ordere
   self:RecvCommon(Ret, GuildCommon.EventID.OnGuildGetJoinRequests, ReqLookTable)
 end
 
-function Component:SendGuildAgreeJoinRequest(Uids)
-  self:GetAvatar():GuildAgreeJoinRequest(nil, Uids)
+function Component:SendGuildAgreeJoinRequest(Uids, Callback)
+  self:GetAvatar():GuildAgreeJoinRequest(Callback, Uids)
 end
 
 function Component:RecvGuildAgreeJoinRequest(SrcParams, Ret)
@@ -190,9 +190,7 @@ end
 
 function Component:RecvGuildEditLogo(SrcParams, Ret)
   local Logo = table.unpack(SrcParams)
-  self:UpdateCurrGuildCommon(Ret, "LogoInfo", function()
-    return GuildLogoInfo.New(Logo)
-  end)
+  self:UpdateCurrGuildCommon(Ret)
   if Ret ~= ErrorCode.RET_SUCCESS then
     local CurrGuild = self:GetModel():GetCurrGuild()
     if CurrGuild then

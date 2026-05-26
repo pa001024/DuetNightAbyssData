@@ -5,6 +5,7 @@ local AppearanceNumberModel = require("BluePrints.UI.WBP.Appearance.WBP_Appearan
 function Component:EnterWorld()
   self:RefreshArchiveReddot()
   self:RefreshAppearanceArchiveReddot()
+  self:RefreshAppearanceFenghuaReddot()
 end
 
 function Component:GetArchiveReward(CallBackFunction, ArchiveId, ArchiveCount)
@@ -232,7 +233,7 @@ function Component:CheckAppearanceCollectType(TargetId, TargetType)
   end
   if EntranceInfo.FieldName and EntranceInfo.SubTypes then
     local SubType = TableData[EntranceInfo.FieldName]
-    if nil == SubType or not EntranceInfo.SubTypes[SubType] and not EntranceInfo.SubTypes[tostring(SubType)] then
+    if not SubType or not EntranceInfo.SubTypes[tostring(SubType)] then
       return nil
     end
   end
@@ -400,6 +401,40 @@ function Component:RefreshAppearanceArchiveReddot()
     self:_TryAddAppearanceRewardReddotCommon(Info.Entrance)
     self:_TryAddAppearanceRewardNewCommon(Info.Entrance, true, IsFirstTime)
   end
+end
+
+function Component:_OnPropChangeAppearanceScores(key)
+  if "Total" == key[1] then
+    self:_TryAddAppearanceFenghuaRewardReddot()
+  end
+end
+
+function Component:_TryAddAppearanceFenghuaRewardReddot()
+  local TotalScore = self.AppearanceScores.Total
+  if TotalScore then
+    if not ReddotManager.GetTreeNode("AppearanceFenghuaReward") then
+      ReddotManager.AddNode("AppearanceFenghuaReward")
+    end
+    local CacheDetail = ReddotManager.GetLeafNodeCacheDetail("AppearanceFenghuaReward")
+    local IncreaseNum = 0
+    for _, Info in pairs(DataMgr.ScoreReward) do
+      if Info.ScoreTarget and TotalScore >= Info.ScoreTarget and not self.AppearanceScoreRewards[Info.ScoreTarget] and not CacheDetail[Info.ScoreTarget] then
+        CacheDetail[Info.ScoreTarget] = 1
+        IncreaseNum = IncreaseNum + 1
+      end
+    end
+    if IncreaseNum > 0 then
+      ReddotManager.IncreaseLeafNodeCount("AppearanceFenghuaReward", IncreaseNum)
+    end
+  end
+end
+
+function Component:RefreshAppearanceFenghuaReddot()
+  if not ReddotManager.GetTreeNode("AppearanceFenghuaReward") then
+    ReddotManager.AddNode("AppearanceFenghuaReward")
+  end
+  ReddotManager.ClearLeafNodeCount("AppearanceFenghuaReward", true)
+  self:_TryAddAppearanceFenghuaRewardReddot()
 end
 
 return Component

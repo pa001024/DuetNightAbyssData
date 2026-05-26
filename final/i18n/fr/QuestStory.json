@@ -17338,8 +17338,8 @@
     "quests": [
       {
         "id": 10040101,
-        "name": "前往酒馆与卡米拉聊聊【待包装】",
-        "desc": "和奥哥们在酒馆汇合【待包装】",
+        "name": "Se rendre aux Asphodèles",
+        "desc": "Il reste encore cinq jours avant le départ de la Légion escortant la mystérieuse prisonnière mentionnée par Rhythm. Il est temps de mettre un plan au point. Rendez-vous aux Asphodèles pour en discuter avec les autres.",
         "nodes": [
           {
             "id": "1749108843746917339",
@@ -17437,19 +17437,19 @@
               {
                 "id": 10040116,
                 "content": "Dans un mois, la XIIIᵉ Légion transportera une prisonnière importante par train, de Givrelac jusqu’à la capitale, Dismania. La VIᵉ Légion a reçu l’ordre de les assister.",
-                "voice": "story/1004/100401/19226688",
+                "voice": "story/1003/100375/1920BCA0",
                 "npc": 100304
               },
               {
                 "id": 10040117,
                 "content": "L’identité de cette prisonnière est top secrète. Tout ce que je sais, c’est qu’elle est actuellement soignée dans la cité intérieure sous haute sécurité. Mais quelqu’un a aperçu sa silhouette de dos, <H>une jeune femme d’une vingtaine d’années</>, vêtue de noir.",
-                "voice": "story/1004/100401/192266B2",
+                "voice": "story/1003/100375/1920BCCA",
                 "npc": 100304
               },
               {
                 "id": 10040118,
                 "content": "Cela correspond à ce que tu m’as dit à propos de Berenica. Si c’est bien elle, alors <H>le train qui part dans un mois</> pourrait être ta seule chance.",
-                "voice": "story/1004/100401/192266DC",
+                "voice": "story/1003/100375/1920BCF4",
                 "npc": 100304
               },
               {
@@ -17638,8 +17638,8 @@
       },
       {
         "id": 10040103,
-        "name": "跟随嘟嘟皎皎前往售票窗【待包装】",
-        "desc": "",
+        "name": "Suivre Luno, au sifflet",
+        "desc": "La gare est immense, mais heureusement, Luno, au sifflet, se propose de vous présenter les lieux. Suivez-la jusqu’au guichet pour acheter des billets.",
         "nodes": [
           {
             "id": "1777954708543474617",
@@ -17663,43 +17663,43 @@
       },
       {
         "id": 10040104,
-        "name": "向工人询问打工的事情【待包装】",
-        "desc": ""
+        "name": "Participer au recrutement",
+        "desc": "À cause de l’incident, les contrôles dans la gare sont devenus beaucoup plus stricts. Impossible d’entrer par l’avant. Il va falloir trouver une autre méthode... Se faire passer pour des ouvriers afin d’infiltrer les lieux pourrait être une solution."
       },
       {
         "id": 10040106,
-        "name": "向招聘的工人回复【待包装】",
-        "desc": ""
+        "name": "Retourner voir l’ouvrier chargé du recrutement",
+        "desc": "Préparez-vous à pénétrer dans les installations de forge afin d’infiltrer la gare."
       },
       {
         "id": 10040107,
-        "name": "深入地下工厂【待包装】",
-        "desc": ""
+        "name": "Progresser dans les installations de forge",
+        "desc": "Continuez d’avancer le long des chaînes de production des installations de forge."
       },
       {
         "id": 10040109,
-        "name": "深入地下工厂【待包装】",
-        "desc": ""
+        "name": "Progresser dans les installations de forge",
+        "desc": "Continuez d’avancer le long des chaînes de production des installations de forge."
       },
       {
         "id": 10040110,
-        "name": "深入地下工厂【待包装】",
-        "desc": ""
+        "name": "Progresser dans les installations de forge",
+        "desc": "Continuez d’avancer le long des chaînes de production des installations de forge."
       },
       {
         "id": 10040111,
-        "name": "启动电梯【待包装】",
-        "desc": ""
+        "name": "Activer l’ascenseur pour rejoindre le hall de la gare",
+        "desc": "Continuez d’avancer le long des chaînes de production des installations de forge."
       },
       {
         "id": 10040112,
-        "name": "深入地下工厂【待包装】",
-        "desc": ""
+        "name": "Progresser dans les installations de forge",
+        "desc": "Continuez d’avancer le long des chaînes de production des installations de forge."
       },
       {
         "id": 10040116,
-        "name": "前往百花车站【待包装】",
-        "desc": "",
+        "name": "Se rendre à la Gare des Cent-Fleurs",
+        "desc": "Le plan est prêt. Direction la Gare des Cent-Fleurs !",
         "nodes": [
           {
             "id": "177743256136615097",
@@ -18006,38 +18006,43 @@
     "quests": [
       {
         "id": 10040201,
-        "name": "从钢架上潜入【待包装】",
-        "desc": ""
+        "name": "Suivre le chemin au sommet de la gare",
+        "desc": "Vous avez atteint le sommet de la Gare des Cent-Fleurs. Avancez sur les structures métalliques et cherchez un moyen de redescendre au sol."
       },
       {
         "id": 10040202,
-        "name": "前往医务室【待包装】",
-        "desc": ""
+        "name": "Se rendre à l’infirmerie",
+        "desc": "Les trains sont remplis de soldats revenus du front et en route vers l’infirmerie pour se faire soigner. En les suivant, vous pourrez peut-être trouver l’infirmerie et obtenir davantage d’informations."
       },
       {
         "id": 10040203,
-        "name": "靠近专列【待包装】",
-        "desc": "准备接近专列【待包装】"
+        "name": "S’approcher du train spécial de la XIIIᵉ Légion",
+        "desc": "Le train spécial de la XIIIᵉ Légion se trouve au quai numéro un, au loin. Allez jeter un œil dans les environs."
       },
       {
         "id": 10040204,
-        "name": "前往车站管理室【待包装】",
-        "desc": ""
+        "name": "Se rendre aux archives",
+        "desc": "La femme se faisant appeler Hilda vous a barré la route et lancé un avertissement. Faute d’alternative, il faut battre en retraite pour le moment. Avant de partir, autant aller enquêter dans les archives de la gare mentionnées par Stéphane."
       },
       {
         "id": 10040205,
-        "name": "跟随神秘女子的脚步【待包装】",
-        "desc": ""
+        "name": "Suivre Hilda",
+        "desc": "À peine arrivés devant l’ascenseur, Eisenbahn, le commandant du champ de bataille de la Gare des Cent-Fleurs, vous accuse d’être responsables de l’explosion.\nC’est alors qu’Hilda, rencontrée plus tôt sur le toit de la Corneille, intervient pour briser l’encerclement d’Eisenbahn. Suivez-la."
       },
       {
         "id": 10040206,
-        "name": "跟随神秘女子的脚步【待包装】",
-        "desc": "",
+        "name": "Suivre Hilda",
+        "desc": "À peine arrivés devant l’ascenseur, Eisenbahn, le commandant du champ de bataille de la Gare des Cent-Fleurs, vous accuse d’être responsables de l’explosion.\nC’est alors qu’Hilda, rencontrée plus tôt sur le toit de la Corneille, intervient pour briser l’encerclement d’Eisenbahn. Suivez-la.",
         "nodes": [
           {
             "id": "177763795417816773252",
             "type": "TalkNode",
             "name": "希尔妲救场",
+            "srId": 106001,
+            "pos": [
+              -16550,
+              100
+            ],
             "dialogues": [
               {
                 "id": 10010101,
@@ -18051,8 +18056,8 @@
       },
       {
         "id": 10040207,
-        "name": "乘坐电梯【待包装】",
-        "desc": "",
+        "name": "Suivre Hilda afin d’échapper aux soldats",
+        "desc": "À peine arrivés devant l’ascenseur, Eisenbahn, le commandant du champ de bataille de la Gare des Cent-Fleurs, vous accuse d’être responsables de l’explosion.\nC’est alors qu’Hilda, rencontrée plus tôt sur le toit de la Corneille, intervient pour briser l’encerclement d’Eisenbahn. Suivez-la.",
         "nodes": [
           {
             "id": "177763795518716773324",
@@ -18561,8 +18566,8 @@
       },
       {
         "id": 10040208,
-        "name": "从钢架上潜入【待包装】",
-        "desc": "开始从钢架潜入【待包装】",
+        "name": "Suivre le chemin au sommet de la gare",
+        "desc": "Les trains sont remplis de soldats revenus du front et en route vers l’infirmerie pour se faire soigner. En les suivant, vous pourrez peut-être trouver l’infirmerie et obtenir davantage d’informations.",
         "nodes": [
           {
             "id": "177763815767418173763",
@@ -18744,12 +18749,15 @@
                 "id": 10041427,
                 "content": "Oh, ce n’est rien... j’interviens toujours au bon moment.",
                 "voice": "story/1004/100414/19233D9E",
-                "npc": 100402
-              },
-              {
-                "id": 10041428,
-                "content": "<I>Bien joué, Luno, la médecin.</>",
-                "voice": "story/1004/100414/19233DC8"
+                "npc": 100402,
+                "options": [
+                  {
+                    "id": 10041428,
+                    "content": "<I>Bien joué, Luno, la médecin.</>",
+                    "voice": "story/1004/100414/19233DC8",
+                    "next": 10041429
+                  }
+                ]
               },
               {
                 "id": 10041429,
@@ -18769,23 +18777,28 @@
       },
       {
         "id": 10040209,
-        "name": "前往医务室【待包装】",
-        "desc": ""
+        "name": "Se rendre à l’infirmerie",
+        "desc": "Le médecin militaire de l’infirmerie est débordé. Impossible d’obtenir des réponses tant qu’il n’aura pas terminé son travail. Suivez ses instructions et aidez-le à terminer ce qu’il a à faire."
       },
       {
         "id": 10040210,
-        "name": "靠近专列【待包装】",
-        "desc": "准备接近专列【待包装】"
+        "name": "S’approcher du train spécial de la XIIIᵉ Légion",
+        "desc": "La Corneille est sous haute surveillance. Il va falloir trouver un moyen de percer les défenses afin de s’en approcher et d’enquêter.\nStéphane vous a cependant donné une information utile : au moment de la relève des gardes, la sécurité du train est au plus faible. Ce sera l’occasion idéale pour agir."
       },
       {
         "id": 10040213,
-        "name": "开始行动【待包装】",
-        "desc": "",
+        "name": "Provoquer une diversion",
+        "desc": "La femme se faisant appeler Hilda vous a barré la route et lancé un avertissement. Faute d’alternative, il faut battre en retraite pour le moment. Avant de partir, autant aller enquêter dans les archives de la gare mentionnées par Stéphane.",
         "nodes": [
           {
             "id": "177763838346920967014",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -39010,
+              -2730
+            ],
             "next": [
               "177763838346920967016"
             ],
@@ -18916,6 +18929,11 @@
             "id": "177763838346920967016",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -39010,
+              -2730
+            ],
             "dialogues": [
               {
                 "id": 10042101,
@@ -18953,12 +18971,18 @@
       },
       {
         "id": 10040214,
-        "name": "",
+        "name": "Se rendre à l’infirmerie",
+        "desc": "Le médecin militaire de l’infirmerie est débordé. Impossible d’obtenir des réponses tant qu’il n’aura pas terminé son travail. Suivez ses instructions et aidez-le à terminer ce qu’il a à faire.",
         "nodes": [
           {
             "id": "17785865970492439804",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -31170,
+              6480
+            ],
             "next": [
               "17785866089802439845"
             ],
@@ -19095,6 +19119,11 @@
             "id": "17785866089802439845",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -31170,
+              6480
+            ],
             "dialogues": [
               {
                 "id": 10041701,
@@ -19173,48 +19202,174 @@
     "quests": [
       {
         "id": 10040301,
-        "name": "前往爆炸现场【待包装】",
-        "desc": "你与希尔妲开始调查爆炸事件【待包装】"
+        "name": "Préparer l’enquête",
+        "desc": "Alors qu’Eisenbahn vous avait complètement encerclés, la commissaire militaire de la Corneille est intervenue en votre faveur. Même si l’Étranger a été retenu, vous avez obtenu une chance d’enquêter sur l’attentat afin de laver votre nom.\nRendez-vous sur les lieux de l’explosion pour retrouver le responsable."
       },
       {
         "id": 10040302,
-        "name": "调查爆炸现场【待包装】",
-        "desc": "你与希尔妲开始调查爆炸事件【待包装】"
+        "name": "Recueillir des indices",
+        "desc": "Vous êtes arrivés sur les lieux de l’explosion. L’enquête peut commencer."
       },
       {
         "id": 10040303,
-        "name": "和士兵交谈【待包装】",
-        "desc": "你有了一些调查成果【待包装】"
+        "name": "Tirer une conclusion",
+        "desc": "Allez parler avec les soldats."
+      },
+      {
+        "id": 10040304,
+        "name": "Se rendre à l’entrepôt pour enquêter sur la contrebande",
+        "desc": "Rendez-vous à l’entrepôt afin d’enquêter sur les objets de contrebande saisis.",
+        "nodes": [
+          {
+            "id": "17791782148921450765",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -19580,
+              50
+            ],
+            "dialogues": [
+              {
+                "id": 10043501,
+                "content": "Avec ces éléments, il suffit de les assembler pour obtenir une charge capable de faire céder un mur.",
+                "voice": "story/1004/100435/192491E2",
+                "npc": 100403
+              },
+              {
+                "id": 10043502,
+                "content": "Quoi ? Avec seulement ça ?",
+                "voice": "story/1004/100435/1924920C",
+                "npc": 100001
+              },
+              {
+                "id": 10043503,
+                "content": "Oui. C’est rudimentaire, mais parfaitement fonctionnel.",
+                "voice": "story/1004/100435/19249236",
+                "npc": 100403
+              },
+              {
+                "id": 10043504,
+                "content": "Le coton paraît anodin — simplement destiné à tenir chaud. Mais en réalité, c’est aussi un matériau utilisé par l’armée. Imprégné de ce type de solution acide, il devient extrêmement inflammable. On peut s’en servir comme amorce.",
+                "voice": "story/1004/100435/19249260",
+                "npc": 100403
+              },
+              {
+                "id": 10043505,
+                "content": "Il suffit ensuite de le tasser dans un récipient métallique, de percer un orifice, d’y fixer une mèche... et vous obtenez une bombe.",
+                "voice": "story/1004/100435/1924928A",
+                "npc": 100403
+              },
+              {
+                "id": 10043506,
+                "content": "La personne qui a imaginé cela est plutôt ingénieuse. Pris séparément, ces éléments ne sont que de la contrebande ordinaire — rien d’alarmant. Mais une fois confisqués, les gardes font eux-mêmes le travail : tout se retrouve rassemblé au même endroit.",
+                "voice": "story/1004/100435/192492B4",
+                "npc": 100403
+              },
+              {
+                "id": 10043507,
+                "content": "Tu es impressionnante. Grâce à toi, on commence enfin à y voir plus clair. Et au fait... tu es vraiment une simple servante ?",
+                "voice": "story/1004/100435/192492DE",
+                "npc": 100001
+              },
+              {
+                "id": 10043508,
+                "content": "Bien sûr. Disons simplement qu’en restant longtemps aux côtés de Madame, j’ai acquis quelques connaissances militaires. Quoi qu’il en soit... nous pouvons tirer une conclusion.",
+                "voice": "story/1004/100435/19249308",
+                "npc": 100403
+              },
+              {
+                "id": 10043509,
+                "content": "Seule une personne travaillant au sein de la gare pouvait imaginer un stratagème pareil pour faire entrer un explosif sans se faire repérer. Inutile de fouiller toute la gare au hasard.",
+                "voice": "story/1004/100435/19249332",
+                "npc": 100403
+              },
+              {
+                "id": 10043510,
+                "content": "Les gardes ont mentionné qu’un responsable surveillait cet entrepôt. Peut-être qu’il a remarqué quelque chose.",
+                "voice": "story/1004/100435/1924935C",
+                "npc": 100001
+              },
+              {
+                "id": 10043511,
+                "content": "Oui, je m’en souviens aussi. Pourtant, depuis que nous sommes entrés... il n’y a personne. Je m’attendais au moins à ce qu’on nous arrête à l’entrée.",
+                "voice": "story/1004/100435/19249386",
+                "npc": 100403
+              },
+              {
+                "id": 10043512,
+                "content": "Peut-être qu’il est en ronde. Je vais essayer de l’appeler.",
+                "voice": "story/1004/100435/192493B0",
+                "npc": 100001
+              },
+              {
+                "id": 10043513,
+                "content": "Excusez-moi — il y a quelqu’un ?",
+                "voice": "story/1004/100435/192493DA",
+                "npc": 100001
+              },
+              {
+                "id": 10043514,
+                "content": "Ça va, ça va... pas la peine de hurler. Je ne suis pas sourd. Je vous entends parler de bombes depuis tout à l’heure. Eisenbahn vous envoie, c’est ça ?",
+                "voice": "story/1004/100435/19249404",
+                "npc": 100419
+              },
+              {
+                "id": 10043515,
+                "content": "Bon, qu’est-ce que vous voulez ? Faites vite, et fichez-moi le camp.",
+                "voice": "story/1004/100435/1924942E",
+                "npc": 100419
+              },
+              {
+                "id": 10043516,
+                "content": "Attendez... vous, là... je ne vous ai jamais vus. Je connais tous les employés ici, et vous ne me dites rien du tout.",
+                "voice": "story/1004/100435/19249458",
+                "npc": 100419
+              },
+              {
+                "id": 10043517,
+                "content": "Parlez ! Comment vous êtes entrés ? À l’aide ! Intrus !",
+                "voice": "story/1004/100435/19249482",
+                "npc": 100419
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 10040305,
-        "name": "前往仓库【待包装】",
-        "desc": "你们决定前往仓库调查【待包装】"
+        "name": "Se rendre à l’entrepôt pour enquêter sur la contrebande",
+        "desc": "Rendez-vous à l’entrepôt afin d’enquêter sur les objets de contrebande saisis."
       },
       {
         "id": 10040306,
-        "name": "与希尔妲交谈【待包装】",
-        "desc": "你们在仓库里发现了一些线索【待包装】"
+        "name": "Fabriquer une bombe à l’aide des objets saisis",
+        "desc": "Rendez-vous à l’entrepôt afin d’enquêter sur les objets de contrebande saisis."
       },
       {
         "id": 10040307,
-        "name": "向车站的工作人员调查管理员的风评【待包装】",
-        "desc": "你们决定引蛇出洞【待包装】"
+        "name": "Enquêter sur la réputation du responsable de l’entrepôt",
+        "desc": "Afin d’identifier le suspect parmi les trente-deux personnes ayant accédé à l’entrepôt, une annonce a été diffusée dans toute la gare, accusant le responsable de l’entrepôt d’être le coupable. Le véritable criminel cherchera probablement à détourner les soupçons en l’accablant davantage.\nEn attendant que quelqu’un morde à l’hameçon, enquêtez sur la réputation du responsable."
       },
       {
         "id": 10040308,
-        "name": "前往站长办公室【待包装】",
-        "desc": "开始下一步【待包装】"
+        "name": "Demander à Eisenbahn où en est l’enquête",
+        "desc": "Afin d’identifier le suspect parmi les trente-deux personnes ayant accédé à l’entrepôt, une annonce a été diffusée dans toute la gare, accusant le responsable de l’entrepôt d’être le coupable. Le véritable criminel cherchera probablement à détourner les soupçons en l’accablant davantage.\nEn attendant que quelqu’un morde à l’hameçon, enquêtez sur la réputation du responsable."
       },
       {
         "id": 10040309,
-        "name": "前往员工区寻找史蒂芬【待包装】",
-        "desc": "Description_10040309_01",
+        "name": "Chercher Stéphane",
+        "desc": "Coup de théâtre : Carnot, rencontré dans les installations de forge, prend la défense du responsable de l’entrepôt... mais révèle sans le vouloir que la bombe a été assemblée à partir de plusieurs éléments, un détail que personne en dehors de l’enquête n’était censé connaître.\nCarnot devient alors extrêmement suspect. Retrouvez Stéphane et demandez-lui où se trouve Carnot.",
         "nodes": [
           {
             "id": "17785008164492494",
             "type": "TalkNode",
             "name": "史蒂芬对话",
+            "srId": 106001,
+            "pos": [
+              -62370,
+              -2640
+            ],
             "dialogues": [
               {
                 "id": 10044401,
@@ -19372,23 +19527,42 @@
       },
       {
         "id": 10040310,
-        "name": "前往碰头点寻找卡诺【待包装】",
-        "desc": "Description_10040310_01"
+        "name": "Continuer d’avancer à la recherche de Carnot",
+        "desc": "Carnot semble discuter avec des membres des Déchus. Allez voir ce qu’il se passe.",
+        "nodes": [
+          {
+            "id": "17793556454072901591",
+            "type": "TalkNode",
+            "name": "史蒂芬可选对话",
+            "srId": 106001,
+            "pos": [
+              -87180,
+              -10870
+            ],
+            "dialogues": [
+              {
+                "id": 100499503,
+                "content": "唉……爸爸，你为什么要这么做……",
+                "npc": 100415
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 10040311,
-        "name": "回到站长办公室【待包装】",
-        "desc": "仓库里的炸药引发了混乱【待包装】"
+        "name": "Faire un rapport à Eisenbahn",
+        "desc": "Les membres des Déchus ont été capturés avec succès. Retournez faire votre rapport à Eisenbahn : l’affaire de l’attentat de la gare est résolue !"
       },
       {
         "id": 10040312,
-        "name": "回复监军大人【待包装】",
-        "desc": "Description_10040312_01"
+        "name": "Retourner voir la commissaire à bord de la Corneille",
+        "desc": "L’Étranger a retrouvé sa liberté. Il est temps de revenir à votre objectif initial : enquêter sur le mystérieux prisonnier à bord de la Corneille.\nRetournez voir la commissaire militaire à bord du train."
       },
       {
         "id": 10040313,
-        "name": "与艾森巴恩对话【待包装】",
-        "desc": "Description_10040313_01"
+        "name": "Parler avec le responsable de l’entrepôt",
+        "desc": "Alors que vous négociez avec le pénible responsable de l’entrepôt, Eisenbahn reçoit un rapport de ses hommes et vient inspecter l’avancée de l’enquête. Allez lui parler."
       }
     ]
   },
@@ -19397,13 +19571,13 @@
     "quests": [
       {
         "id": 10040401,
-        "name": "前往登车【待包装】",
-        "desc": ""
+        "name": "Suivre la commissaire",
+        "desc": "Flora, qui n’avait jusque-là aucun lien avec l’Empire malgré son statut de princesse impériale, est désormais devenue votre commanditaire. Il faut préparer son évasion.\nPréparez-vous à monter à bord du train et mettez le plan à exécution."
       },
       {
         "id": 10040402,
-        "name": "前往登车【待包装】",
-        "desc": "",
+        "name": "Suivre la commissaire",
+        "desc": "La veille au soir, l’équipe des Chasseurs de Phoxène a élaboré un plan détaillé pour sauver Flora. Avant de passer à l’action, remémorez-vous les différentes étapes.",
         "nodes": [
           {
             "id": "17677045255279100768",
@@ -19451,33 +19625,38 @@
       },
       {
         "id": 10040403,
-        "name": "前往车尾【待包装】",
-        "desc": ""
+        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "desc": "Dirigez-vous vers l’arrière du train afin de monter sur le toit."
       },
       {
         "id": 10040404,
-        "name": "泡茶【待包装】",
-        "desc": ""
+        "name": "Préparer du thé et des pâtisseries pour Flora",
+        "desc": "Même si le plan d’évasion est sur le point d’être lancé, Mademoiselle Flora reste concentrée sur sa peinture. Préparez-lui du thé et quelques pâtisseries."
       },
       {
         "id": 10040405,
-        "name": "击晕军团士兵【待包装】",
-        "desc": ""
+        "name": "Aider Flora à s’échapper",
+        "desc": "Assommez les soldats de la Légion et préparez-vous à aider Mademoiselle Flora à s’échapper."
       },
       {
         "id": 10040406,
-        "name": "突破军团士兵的包围【待包装】",
-        "desc": ""
+        "name": "Secourir Flora",
+        "desc": "Vous avez réussi à atteindre la Corneille, mais plusieurs soldats surveillent encore le toit. Éliminez-les afin de secourir Flora."
       },
       {
         "id": 10040407,
-        "name": "突破军团士兵的包围【待包装】",
-        "desc": "",
+        "name": "Secourir Flora",
+        "desc": "Après avoir quitté la Corneille avec Flora, vous avez utilisé le grappin pour rejoindre l’Express Aurora, avant de tomber sur des passagers peu amicaux dans la « Boîte à rats ». Heureusement, Stéphane est intervenu pour vous sortir de cette situation.\nSuivez Stéphane jusqu’aux wagons ordinaires.",
         "nodes": [
           {
             "id": "176778347795010204954",
             "type": "TalkNode",
             "name": "老鼠罐头对话",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "dialogues": [
               {
                 "id": 10046101,
@@ -19691,73 +19870,73 @@
       },
       {
         "id": 10040408,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Suivre Stéphane jusqu’aux wagons ordinaires",
+        "desc": "Vous êtes arrivés dans les wagons ordinaires. Les passagers débordent d’énergie et bavardent sans arrêt. Allez discuter avec eux pour souffler un peu."
       },
       {
         "id": 10040409,
-        "name": "观察普通车厢的乘客【待包装】",
-        "desc": ""
+        "name": "Discuter avec les passagers des wagons ordinaires",
+        "desc": "Allez parler avec Stéphane avant de vous diriger vers l’avant du train."
       },
       {
         "id": 10040410,
-        "name": "与芙罗拉交谈【待包装】",
-        "desc": ""
+        "name": "Demander à Flora ce qu’elle pense",
+        "desc": "Stéphane semble toujours inquiet pour Carnot, qui se trouve à bord du train. Après l’aide qu’il vous a apportée dans la Boîte à rats, rendez-lui la pareille. Allez discuter avec Flora afin de décider quoi faire."
       },
       {
         "id": 10040411,
-        "name": "与史蒂芬交谈【待包装】",
-        "desc": ""
+        "name": "Parler avec Stéphane",
+        "desc": "Allez parler avec Stéphane avant de vous diriger vers l’avant du train."
       },
       {
         "id": 10040413,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "desc": "Afin d’aider Stéphane, vous commencez à progresser vers l’avant du train."
       },
       {
         "id": 10040414,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "desc": "Afin d’aider Stéphane, vous commencez à progresser vers l’avant du train."
       },
       {
         "id": 10040415,
-        "name": "找地方躲藏【待包装】",
-        "desc": ""
+        "name": "Dissimuler vos traces afin d’éviter d’être découvert",
+        "desc": "Les occupants du wagon des domestiques semblent comploter quelque chose ! Cachez-vous d’abord afin d’écouter leur conversation."
       },
       {
         "id": 10040416,
-        "name": "寻找拆弹工具【待包装】",
-        "desc": ""
+        "name": "Trouver des outils afin de tenter de désamorcer la bombe",
+        "desc": "Encore les Déchus... et encore des bombes. Cette fois, leur cible est le train lui-même. Vous ne pouvez pas les laisser faire.\nTrouvez des outils et tentez de désamorcer les bombes."
       },
       {
         "id": 10040417,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "desc": "Pour découvrir le véritable objectif des Déchus, continuez d’avancer jusqu’aux wagons réservés à la noblesse."
       },
       {
         "id": 10040418,
-        "name": "走向钢琴【待包装】",
-        "desc": ""
+        "name": "S’approcher du piano afin de prouver votre identité de « pianiste »",
+        "desc": "Vous êtes arrivés dans le wagon de première classe. Les regards des passagers sont un obstacle qu’il sera difficile de contourner. Il va falloir dissiper leurs soupçons.\nApprochez-vous du piano afin de prouver votre identité de « pianiste »."
       },
       {
         "id": 10040419,
-        "name": "前往下一节车厢【待包装】",
-        "desc": ""
+        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "desc": "Pour découvrir le véritable objectif des Déchus, continuez d’avancer jusqu’aux wagons réservés à la noblesse."
       },
       {
         "id": 10040420,
-        "name": "调查血腥味的来源【待包装】",
-        "desc": ""
+        "name": "Enquêter dans le wagon du conducteur",
+        "desc": "Le conducteur du train a malheureusement perdu la vie. Enquêtez afin de voir s’il a laissé des informations derrière lui."
       },
       {
         "id": 10040421,
-        "name": "调查声音的来源【待包装】",
-        "desc": ""
+        "name": "Examiner le bruit provenant du wagon",
+        "desc": "Avant de mourir, le conducteur a envoyé un signal de détresse. Au même moment, un bruit étrange retentit. Allez voir ce qu’il se passe."
       },
       {
         "id": 10040422,
-        "name": "穿越列车【待包装】",
-        "desc": "",
+        "name": "Se rendre à l’arrière du train afin de monter sur le toit",
+        "desc": "Même si le plan d’évasion est sur le point d’être lancé, Mademoiselle Flora reste concentrée sur sa peinture. Préparez-lui du thé et quelques pâtisseries.",
         "nodes": [
           {
             "id": "17733847824543892952",
@@ -19799,8 +19978,8 @@
       },
       {
         "id": 10040423,
-        "name": "将颜料交给芙罗拉【待包装】",
-        "desc": "",
+        "name": "Donner le pigment à Flora",
+        "desc": "Même si le plan d’évasion est sur le point d’être lancé, Mademoiselle Flora reste concentrée sur sa peinture. Préparez-lui du thé et quelques pâtisseries.",
         "nodes": [
           {
             "id": "17733852121786481894",
@@ -19890,18 +20069,23 @@
       },
       {
         "id": 10040424,
-        "name": "突破军团士兵的包围【待包装】",
-        "desc": ""
+        "name": "Secourir Flora",
+        "desc": "Emmenez Flora loin de la Corneille et sautez vers la liberté !"
       },
       {
         "id": 10040426,
-        "name": "按照众人推测的位置寻找炸弹【待包装】",
-        "desc": "",
+        "name": "Désamorcer les bombes à bord du train",
+        "desc": "Le train a été détourné. Une membre des Déchus se faisant appeler Katya a placé des bombes dans plusieurs wagons. Pendant que Flora tente de négocier avec elle, profitez-en pour désamorcer les bombes disséminées dans le train.",
         "nodes": [
           {
             "id": "177364904417822135541",
             "type": "TalkNode",
             "name": "飞艇出场",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "next": [
               "177364906021122135839"
             ],
@@ -19918,6 +20102,11 @@
             "id": "177364906021122135839",
             "type": "TalkNode",
             "name": "飞艇出场后",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "dialogues": [
               {
                 "id": 10048201,
@@ -20031,13 +20220,18 @@
       },
       {
         "id": 10040427,
-        "name": "按照众人推测的位置寻找炸弹【待包装】",
-        "desc": "",
+        "name": "Désamorcer les bombes à bord du train",
+        "desc": "Le train a été détourné. Une membre des Déchus se faisant appeler Katya a placé des bombes dans plusieurs wagons. Pendant que Flora tente de négocier avec elle, profitez-en pour désamorcer les bombes disséminées dans le train.",
         "nodes": [
           {
             "id": "17739985394261316133",
             "type": "TalkNode",
             "name": "芙罗拉交涉前",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "next": [
               "176854530181715415"
             ],
@@ -20192,6 +20386,11 @@
             "id": "176854530181715415",
             "type": "TalkNode",
             "name": "芙罗拉交涉",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "next": [
               "176854533174515872"
             ],
@@ -20286,12 +20485,17 @@
             "id": "176854533174515872",
             "type": "TalkNode",
             "name": "主角出场后",
+            "srId": 106101,
+            "pos": [
+              255430,
+              -10960
+            ],
             "dialogues": [
               {
                 "id": 10048101,
                 "content": "Même pâles, le tissu de leurs vêtements reste magnifique...",
                 "voice": "story/1004/100481/19278492",
-                "npc": 100433
+                "npc": 100434
               },
               {
                 "id": 10048102,
@@ -20394,8 +20598,8 @@
       },
       {
         "id": 10040428,
-        "name": "按照众人推测的位置寻找炸弹【待包装】",
-        "desc": ""
+        "name": "Désamorcer les bombes à bord du train",
+        "desc": "Le train a été détourné. Une membre des Déchus se faisant appeler Katya a placé des bombes dans plusieurs wagons. Pendant que Flora tente de négocier avec elle, profitez-en pour désamorcer les bombes disséminées dans le train."
       }
     ]
   },
@@ -20404,22 +20608,45 @@
     "quests": [
       {
         "id": 10040501,
-        "name": "启动炮台【待包装】",
-        "desc": ""
+        "name": "Utiliser les tourelles afin de repousser l’attaque du dirigeable",
+        "desc": "Bien que Katya ait été stoppée, le signal envoyé avant sa mort par le conducteur a attiré un dirigeable de la Légion impériale, prêt à détruire l’ensemble du train avec les Déchus à son bord.\nPrenez le contrôle des tourelles du train afin d’arrêter le dirigeable."
+      },
+      {
+        "id": 10040502,
+        "name": "Écouter ce que Flora a à dire",
+        "desc": "Le dirigeable s’est immobilisé."
+      },
+      {
+        "id": 10040503,
+        "name": "Arrêter Katya",
+        "desc": "Katya commence à utiliser le canon du train pour attaquer le dirigeable. Il faut l’arrêter.\nNeutralisez le Canon principal de l’Express Aurora."
+      },
+      {
+        "id": 10040504,
+        "name": "Arrêter le moteur du train devenu incontrôlable",
+        "desc": "Katya a été vaincue et a pris la fuite, mais le train ne s’est pas arrêté. Au contraire, il est entré en surcharge. Il faut atteindre la locomotive et trouver un moyen de stopper le train.\nEssayez d’entrer dans la cabine de conduite afin d’arrêter le train."
+      },
+      {
+        "id": 10040506,
+        "name": "Il faut entrer dans la locomotive et trouver un moyen d’arrêter le train",
+        "desc": "Katya a été vaincue et a pris la fuite, mais le train ne s’est pas arrêté. Au contraire, il est entré en surcharge. Il faut atteindre la locomotive et trouver un moyen de stopper le train.\nEssayez d’entrer dans la cabine de conduite afin d’arrêter le train."
       },
       {
         "id": 10040507,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "Quel est cet endroit... ?",
+        "desc": "Quel est cet endroit... ? La Mer du Silence ? Explorez les environs.",
         "nodes": [
           {
             "id": "17685517578223352629",
             "type": "TalkNode",
             "name": "对话节点",
-            "srId": 106001,
+            "srId": 106101,
             "pos": [
-              -19850,
-              650
+              256340,
+              12660
+            ],
+            "next": [
+              "1779001647323103332703"
             ],
             "dialogues": [
               {
@@ -20458,84 +20685,264 @@
                 "npc": 100402
               }
             ]
+          },
+          {
+            "id": "1779001647323103332703",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
+            "next": [
+              "1779001654274103332962"
+            ],
+            "dialogues": [
+              {
+                "id": 10049007,
+                "content": "Flash info. Plus tôt dans la journée, les Déchus ont détourné l’Express Aurora à la lisière sud de la région de Cocytus. Ils ont ensuite utilisé le canon monté sur la locomotive pour abattre le dirigeable impérial envoyé en renfort.",
+                "voice": "story/1004/100490/19281936"
+              },
+              {
+                "id": 10049008,
+                "content": "Le dirigeable a explosé près d’un immense Arbre Céleste, provoquant son embrasement. Il s’agit du deuxième incendie d’Arbre Céleste survenu cette année. La VIᵉ Légion a dépêché des renforts. Tous les passagers de l’Express Aurora sont actuellement portés disparus. Leur sort reste inconnu.",
+                "voice": "story/1004/100490/19281960"
+              },
+              {
+                "id": 10049009,
+                "content": "...",
+                "voice": "story/1004/100490/1928198A",
+                "npc": 200003
+              },
+              {
+                "id": 10049010,
+                "content": "Madame, excusez-moi... Mon « Contes de Givrelac » sera-t-il bientôt prêt ?",
+                "voice": "story/1004/100490/192819B4",
+                "npc": 100414
+              },
+              {
+                "id": 10049011,
+                "content": "Mon ami et moi quittons cet endroit aujourd’hui, alors nous voulions boire quelque chose qui ait vraiment le goût de Givrelac. Pour emporter un souvenir avec nous.",
+                "voice": "story/1004/100490/192819DE",
+                "npc": 100414
+              },
+              {
+                "id": 10049012,
+                "content": "... Madame ?",
+                "voice": "story/1004/100490/19281A08",
+                "npc": 100414
+              },
+              {
+                "id": 10049013,
+                "content": "... Pas de panique, ça arrive.",
+                "voice": "story/1004/100490/19281A32",
+                "npc": 200003
+              },
+              {
+                "id": 10049014,
+                "content": "Vous allez vous en sortir... pas vrai ? Vous l’avez dit vous-mêmes. Vous avez déjà connu pire.",
+                "voice": "story/1004/100490/19281A5C",
+                "npc": 200003
+              }
+            ]
+          },
+          {
+            "id": "1779001654274103332962",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
+            "next": [
+              "1779001654274103332963"
+            ],
+            "dialogues": [
+              {
+                "id": 10049015,
+                "content": "Son Altesse était assise là il y a encore un instant. Qu’est-ce que cela signifie, « elle a soudainement disparu » ? Vous vous croyez dans un roman policier à la mode ?",
+                "voice": "story/1004/100490/19281A86",
+                "npc": 100424
+              },
+              {
+                "id": 10049016,
+                "content": "Dans les romans policiers à la mode, on appelle ça une « disparition en chambre close », chef.",
+                "voice": "story/1004/100490/19281AB0",
+                "npc": 100403
+              },
+              {
+                "id": 10049017,
+                "content": "Est-ce que c’est ce que je t’ai demandé ? Fouillez-moi ce train ! Même s’il faut démonter la Corneille boulon par boulon, vous me retrouvez Son Altesse la Princesse Flodia !",
+                "voice": "story/1004/100490/19281ADA",
+                "npc": 100424
+              },
+              {
+                "id": 10049018,
+                "content": "À vos ordres, chef !",
+                "voice": "story/1004/100490/19281B04",
+                "npc": 100403
+              }
+            ]
+          },
+          {
+            "id": "1779001654274103332963",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
+            "next": [
+              "1779001654274103332964"
+            ],
+            "dialogues": [
+              {
+                "id": 10049019,
+                "content": "... Parfait.",
+                "voice": "story/1004/100490/19281B2E",
+                "npc": 100403
+              },
+              {
+                "id": 10049020,
+                "content": "Flora... {nickname}... J’espère que tout se passe bien de votre côté.",
+                "voice": "story/1004/100490/19281B58",
+                "npc": 100403
+              }
+            ]
+          },
+          {
+            "id": "1779001654274103332964",
+            "type": "TalkNode",
+            "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
+            "dialogues": [
+              {
+                "id": 10049021,
+                "content": "Cousine Flora... tu as dit que vous aviez conclu un pacte, et que tu pouvais sentir son état. Une magie pareille existe vraiment ?",
+                "voice": "story/1004/100490/19281B82",
+                "npc": 100415
+              },
+              {
+                "id": 10049022,
+                "content": "Oui.",
+                "voice": "story/1004/100490/19281BAC",
+                "npc": 100404
+              },
+              {
+                "id": 10049023,
+                "content": "... Ah... !",
+                "voice": "story/1004/100490/19281BD6",
+                "npc": 100404
+              },
+              {
+                "id": 10049024,
+                "content": "C’était ça ?! Tu as senti quelque chose ?",
+                "voice": "story/1004/100490/19281C00",
+                "npc": 100415
+              },
+              {
+                "id": 10049025,
+                "content": "... Oui.",
+                "voice": "story/1004/100490/19281C2A",
+                "npc": 100404
+              },
+              {
+                "id": 10049026,
+                "content": "{性别:Il est mort|Elle est morte}.",
+                "voice": "story/1004/100490/19281C54",
+                "npc": 100404
+              }
+            ]
           }
         ]
       },
       {
         "id": 10040508,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "Quel est cet endroit... ?",
+        "desc": "Quel est cet endroit... ? La Mer du Silence ? Explorez les environs.",
         "nodes": [
           {
             "id": "17739990786883938430",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106201,
+            "pos": [
+              -60,
+              30
+            ],
             "dialogues": [
               {
                 "id": 10049101,
                 "content": "<I>Je suis... dans la Mer du Silence ? Ou plutôt... elle existe donc vraiment.</>",
                 "voice": "story/1004/100491/192828A2",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049102,
                 "content": "<I>On dirait bien... que je suis réellement {性别:mort|morte}. Mourir n’est pas si désagréable, au fond. Je me sens seulement... plus {性别:léger|légère}. Et ça fait moins mal que je ne l’imaginais.</>",
                 "voice": "story/1004/100491/192828CC",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049103,
                 "content": "<I>... Seulement, il me reste trop de choses inachevées.</>",
                 "voice": "story/1004/100491/192828F6",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049104,
                 "content": "<I>Alors... que suis-je {性别:censé|censée} faire maintenant ?</>",
                 "voice": "story/1004/100491/19282920",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049105,
                 "content": "<I>Je continue d’avancer ? Cet endroit semble sans fin... Ou alors, comme dans les mythes, il faudrait marcher encore et encore jusqu’à l’autre rive d’une nouvelle vie ?</>",
                 "voice": "story/1004/100491/1928294A",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049106,
                 "content": "<I>D’après les récits des Charons, il devrait y avoir ici une déesse qui attend les morts... ainsi qu’une passeuse. Mais il n’y a personne. Elle est en congé ?</>",
                 "voice": "story/1004/100491/19282974",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049107,
                 "content": "<I>Bon... je vais devoir me débrouiller {性别:seul|seule}. Si j’appelle le nom d’une déesse, il devrait bien se passer quelque chose... Sinon cette Mer du Silence est vraiment bien vide.</>",
                 "voice": "story/1004/100491/1928299E",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049108,
                 "content": "<I>Comment s’appelait déjà la grande déesse créatrice...? Em... Em... Emb... ? Embrie ? Non...</>",
                 "voice": "story/1004/100491/192829C8",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049109,
-                "content": "<I>Ah ! C’est </> <I spec=\"H\">Embla</> <I>.</>",
+                "content": "<I>Ah ! C’est </><I spec=\"H\">Embla</><I>.</>",
                 "voice": "story/1004/100491/192829F2",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049110,
                 "content": "Emb——la—— !",
                 "voice": "story/1004/100491/19282A1C",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049111,
                 "content": "Il n’y a vraiment personne... ? Qu’est-ce que c’est que cette Mer du Silence ? Ne me dites pas qu’il faut faire la queue pour voir les dieux parce qu’il y a trop de morts ?",
                 "voice": "story/1004/100491/19282A46",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049112,
@@ -20547,7 +20954,7 @@
                 "id": 10049113,
                 "content": "Qui est là ?",
                 "voice": "story/1004/100491/19282A9A",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049114,
@@ -20559,13 +20966,13 @@
                 "id": 10049115,
                 "content": "... ?! Flora ? Toi aussi, tu es morte ?",
                 "voice": "story/1004/100491/19282AEE",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049116,
                 "content": "Comment est-ce possible... ? Et Stéphane ? Et les autres ? ... Ne me dis pas que, malgré tout, j’ai quand même échoué...",
                 "voice": "story/1004/100491/19282B18",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049117,
@@ -20577,7 +20984,7 @@
                 "id": 10049118,
                 "content": "Qu’est-ce que ça veut dire ?",
                 "voice": "story/1004/100491/19282B6C",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049119,
@@ -20589,13 +20996,13 @@
                 "id": 10049120,
                 "content": "Le pacte ? Tu veux dire celui que nous avons conclu tout à l’heure ?",
                 "voice": "story/1004/100491/19282BC0",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049121,
                 "content": "Attends... ce pacte n’était donc pas qu’une simple promesse ? C’était une sorte de repère qui te permettait de me retrouver ?",
                 "voice": "story/1004/100491/19282BEA",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049122,
@@ -20625,7 +21032,7 @@
                 "id": 10049126,
                 "content": "Pardon...",
                 "voice": "story/1004/100491/19282CBC",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049127,
@@ -20649,7 +21056,7 @@
                 "id": 10049130,
                 "content": "Pourquoi ?",
                 "voice": "story/1004/100491/19282D64",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049131,
@@ -20661,13 +21068,13 @@
                 "id": 10049132,
                 "content": "D’accord.",
                 "voice": "story/1004/100491/19282DB8",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049133,
                 "content": "Mais... j’ai l’impression que tu parles davantage ici que la Flora que je connais.",
                 "voice": "story/1004/100491/19282DE2",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049134,
@@ -20691,25 +21098,25 @@
                 "id": 10049137,
                 "content": "Un monde beau et froid... c’est une description très juste. Mais je crois que j’y ajouterais autre chose :",
                 "voice": "story/1004/100491/19282E8A",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049138,
                 "content": "Je dois retourner dans ce monde où tant de gens m’attendent encore.",
                 "voice": "story/1004/100491/19282EB4",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049139,
                 "content": "Pour moi, le monde ne se résume pas à quelques mots. Il peut être cruel... assez cruel pour m’avoir {性别:jeté|jetée} dans la Mer du Silence.",
                 "voice": "story/1004/100491/19282EDE",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049140,
                 "content": "Mais il est aussi fait de toutes les personnes qui m’entourent. Et pour elles... je dois rentrer.",
                 "voice": "story/1004/100491/19282F08",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049141,
@@ -20721,7 +21128,7 @@
                 "id": 10049142,
                 "content": "Et toi, Flora ? Que comptes-tu faire ensuite ?",
                 "voice": "story/1004/100491/19282F5C",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049143,
@@ -20745,7 +21152,7 @@
                 "id": 10049146,
                 "content": "Ta vengeance ?",
                 "voice": "story/1004/100491/19283004",
-                "npc": 100001
+                "npc": 1001
               },
               {
                 "id": 10049147,
@@ -20785,7 +21192,7 @@
               },
               {
                 "id": 10049153,
-                "content": "Alors... il est temps de partir, {nickname}.",
+                "content": "Alors... il est temps de repartir, {nickname}.",
                 "voice": "story/1004/100491/1928312A",
                 "npc": 100404
               },
@@ -20799,7 +21206,7 @@
                 "id": 10049155,
                 "content": "Tu l’as déjà oublié ? En réalité, je le suis depuis longtemps.",
                 "voice": "story/1004/100491/1928317E",
-                "npc": 100001,
+                "npc": 1001,
                 "next": 100499190
               }
             ]
@@ -20808,13 +21215,18 @@
       },
       {
         "id": 10040509,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "Quel est cet endroit... ?",
+        "desc": "Quel est cet endroit... ? La Mer du Silence ? Explorez les environs.",
         "nodes": [
           {
             "id": "17739992114523939815",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
             "dialogues": [
               {
                 "id": 10049301,
@@ -20918,13 +21330,18 @@
       },
       {
         "id": 10040510,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "Quel est cet endroit... ?",
+        "desc": "Quel est cet endroit... ? La Mer du Silence ? Explorez les environs.",
         "nodes": [
           {
             "id": "17739990553773937968",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106101,
+            "pos": [
+              256340,
+              12660
+            ],
             "dialogues": [
               {
                 "id": 10049801,
@@ -20950,13 +21367,18 @@
       },
       {
         "id": 10040511,
-        "name": "？？？【待包装】",
-        "desc": "",
+        "name": "Quel est cet endroit... ?",
+        "desc": "Quel est cet endroit... ? La Mer du Silence ? Explorez les environs.",
         "nodes": [
           {
             "id": "17739991462953938790",
             "type": "TalkNode",
             "name": "对话节点",
+            "srId": 106001,
+            "pos": [
+              -19850,
+              650
+            ],
             "dialogues": [
               {
                 "id": 10049201,
@@ -21017,174 +21439,13 @@
       },
       {
         "id": 10040512,
-        "name": "？？？【待包装】",
-        "desc": "",
-        "nodes": [
-          {
-            "id": "17740021794786559034",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "next": [
-              "17740021794796559035"
-            ],
-            "dialogues": [
-              {
-                "id": 10049015,
-                "content": "Son Altesse était assise là il y a encore un instant. Qu’est-ce que cela signifie, « elle a soudainement disparu » ? Vous vous croyez dans un roman policier à la mode ?",
-                "voice": "story/1004/100490/19281A86",
-                "npc": 100424
-              },
-              {
-                "id": 10049016,
-                "content": "Dans les romans policiers à la mode, on appelle ça une « disparition en chambre close », chef.",
-                "voice": "story/1004/100490/19281AB0",
-                "npc": 100403
-              },
-              {
-                "id": 10049017,
-                "content": "Est-ce que c’est ce que je t’ai demandé ? Fouillez-moi ce train ! Même s’il faut démonter la Corneille boulon par boulon, vous me retrouvez Son Altesse la Princesse Flodia !",
-                "voice": "story/1004/100490/19281ADA",
-                "npc": 100424
-              },
-              {
-                "id": 10049018,
-                "content": "À vos ordres, chef !",
-                "voice": "story/1004/100490/19281B04",
-                "npc": 100403
-              }
-            ]
-          },
-          {
-            "id": "17740021794796559035",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "next": [
-              "17740021794796559036"
-            ],
-            "dialogues": [
-              {
-                "id": 10049019,
-                "content": "... Parfait.",
-                "voice": "story/1004/100490/19281B2E",
-                "npc": 100403
-              },
-              {
-                "id": 10049020,
-                "content": "Flora... {nickname}... J’espère que tout se passe bien de votre côté.",
-                "voice": "story/1004/100490/19281B58",
-                "npc": 100415
-              }
-            ]
-          },
-          {
-            "id": "17740021794796559036",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "dialogues": [
-              {
-                "id": 10049021,
-                "content": "Cousine Flora... tu as dit que vous aviez conclu un pacte, et que tu pouvais sentir son état. Une magie pareille existe vraiment ?",
-                "voice": "story/1004/100490/19281B82",
-                "npc": 100404
-              },
-              {
-                "id": 10049022,
-                "content": "Oui.",
-                "voice": "story/1004/100490/19281BAC",
-                "npc": 100404
-              },
-              {
-                "id": 10049023,
-                "content": "... Ah... !",
-                "voice": "story/1004/100490/19281BD6",
-                "npc": 100415
-              },
-              {
-                "id": 10049024,
-                "content": "C’était ça ?! Tu as senti quelque chose ?",
-                "voice": "story/1004/100490/19281C00",
-                "npc": 100404
-              },
-              {
-                "id": 10049025,
-                "content": "... Oui.",
-                "voice": "story/1004/100490/19281C2A",
-                "npc": 100404
-              },
-              {
-                "id": 10049026,
-                "content": "{性别:Il est mort|Elle est morte}.",
-                "voice": "story/1004/100490/19281C54",
-                "npc": 100001
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 10040513,
-        "name": "？？？【待包装】",
-        "desc": "",
-        "nodes": [
-          {
-            "id": "17740021315026558336",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "dialogues": [
-              {
-                "id": 10049007,
-                "content": "Flash info. Plus tôt dans la journée, les Déchus ont détourné l’Express Aurora à la lisière sud de la région de Cocytus. Ils ont ensuite utilisé le canon monté sur la locomotive pour abattre le dirigeable impérial envoyé en renfort.",
-                "voice": "story/1004/100490/19281936"
-              },
-              {
-                "id": 10049008,
-                "content": "Le dirigeable a explosé près d’un immense Arbre Céleste, provoquant son embrasement. Il s’agit du deuxième incendie d’Arbre Céleste survenu cette année. La VIᵉ Légion a dépêché des renforts. Tous les passagers de l’Express Aurora sont actuellement portés disparus. Leur sort reste inconnu.",
-                "voice": "story/1004/100490/19281960"
-              },
-              {
-                "id": 10049009,
-                "content": "...",
-                "voice": "story/1004/100490/1928198A",
-                "npc": 200003
-              },
-              {
-                "id": 10049010,
-                "content": "Madame, excusez-moi... Mon « Contes de Givrelac » sera-t-il bientôt prêt ?",
-                "voice": "story/1004/100490/192819B4",
-                "npc": 100414
-              },
-              {
-                "id": 10049011,
-                "content": "Mon ami et moi quittons cet endroit aujourd’hui, alors nous voulions boire quelque chose qui ait vraiment le goût de Givrelac. Pour emporter un souvenir avec nous.",
-                "voice": "story/1004/100490/192819DE",
-                "npc": 100414
-              },
-              {
-                "id": 10049012,
-                "content": "... Madame ?",
-                "voice": "story/1004/100490/19281A08",
-                "npc": 100414
-              },
-              {
-                "id": 10049013,
-                "content": "... Pas de panique, ça arrive.",
-                "voice": "story/1004/100490/19281A32",
-                "npc": 200003
-              },
-              {
-                "id": 10049014,
-                "content": "Vous allez vous en sortir... pas vrai ? Vous l’avez dit vous-mêmes. Vous avez déjà connu pire.",
-                "voice": "story/1004/100490/19281A5C",
-                "npc": 200003
-              }
-            ]
-          }
-        ]
+        "name": "Quel est cet endroit... ?",
+        "desc": "Quel est cet endroit... ? La Mer du Silence ? Explorez les environs."
       },
       {
         "id": 10040514,
-        "name": "前往车头【待包装】",
-        "desc": ""
+        "name": "Il faut entrer dans la locomotive et trouver un moyen d’arrêter le train",
+        "desc": "Katya a été vaincue et a pris la fuite, mais le train ne s’est pas arrêté. Au contraire, il est entré en surcharge. Il faut atteindre la locomotive et trouver un moyen de stopper le train.\nEssayez d’entrer dans la cabine de conduite afin d’arrêter le train."
       }
     ]
   },
@@ -76813,22 +77074,6 @@
     "id": 200237,
     "quests": [
       {
-        "id": 20023700,
-        "name": "",
-        "nodes": [
-          {
-            "id": "17766704000502756088",
-            "type": "TalkNode",
-            "name": "对话节点",
-            "srId": 210101,
-            "pos": [
-              -383,
-              2829
-            ]
-          }
-        ]
-      },
-      {
         "id": 20023701,
         "name": "Retourner au Sanctuaire",
         "desc": "Cela fait déjà plusieurs jours que vous avez quitté Givrelac. Maintenant que vous êtes revenu, vous devriez passer au Sanctuaire... Mais où est donc Snow ?",
@@ -77059,7 +77304,7 @@
       {
         "id": 20023702,
         "name": "Terminer l’épreuve",
-        "desc": "Terminez une fois l’étage 12 de l’Expédition abyssale et augmentez n’importe quel Sceau démoniaque légendaire jusqu’au niveau 10."
+        "desc": "Terminez une fois l’étage 12 du Théâtre immersif et amplifiez n’importe quel Sceau démoniaque légendaire jusqu’au niveau 10."
       }
     ]
   },
@@ -77085,12 +77330,12 @@
       {
         "id": 20023801,
         "name": "Soumettre des matériaux à Luno, la forgeronne",
-        "desc": "Soumettez 100 [Insignes de force], 100 [Insignes de foi], 100 [Insignes d’harmonie], 100 [Insignes de corruption] et 100 [Insignes d’inflexibilité]."
+        "desc": "Soumettez 30 [Insignes de force], 30 [Insignes de foi], 30 [Insignes d’harmonie], 30 [Insignes de corruption] et 30 [Insignes d’inflexibilité]."
       },
       {
         "id": 20023802,
-        "name": "Posséder une Arme de calamité avec un niveau de fusion supérieur ou égal à +0",
-        "desc": "Possédez une Arme de calamité avec un niveau de fusion supérieur ou égal à +0 pour poursuivre la quête."
+        "name": "Posséder une Arme de calamité avec un niveau de fusion de +0 ou supérieur",
+        "desc": "Possédez une Arme de calamité avec un niveau de fusion de +0 ou supérieur pour poursuivre la quête."
       }
     ]
   },
@@ -77120,8 +77365,8 @@
       },
       {
         "id": 20023902,
-        "name": "Posséder une Arme de calamité avec un niveau de fusion supérieur ou égal à +2",
-        "desc": "Possédez une Arme de calamité avec un niveau de fusion supérieur ou égal à +2 pour poursuivre la quête."
+        "name": "Posséder une Arme de calamité avec un niveau de fusion de +2 ou supérieur",
+        "desc": "Possédez une Arme de calamité avec un niveau de fusion de +2 ou supérieur pour poursuivre la quête."
       }
     ]
   },
@@ -77147,12 +77392,12 @@
       {
         "id": 20024001,
         "name": "Soumettre des matériaux à Luno, la forgeronne",
-        "desc": "Soumettez 1 [Cristal prismatique]."
+        "desc": "Soumettez 1 [Cristal radieux]."
       },
       {
         "id": 20024002,
-        "name": "Posséder une Arme de calamité avec un niveau de fusion supérieur ou égal à +4",
-        "desc": "Possédez une Arme de calamité avec un niveau de fusion supérieur ou égal à +4 pour poursuivre la quête."
+        "name": "Posséder une Arme de calamité avec un niveau de fusion de +4 ou supérieur",
+        "desc": "Possédez une Arme de calamité avec un niveau de fusion de +4 ou supérieur pour poursuivre la quête."
       }
     ]
   },
@@ -89150,7 +89395,7 @@
               },
               {
                 "id": 51200029,
-                "content": "Le « pauvre » enfant avait déjà disparu sans que personne ne s’en aperçoive."
+                "content": "Le « pauvre » enfant avait déjà pris la fuite depuis un moment, et vous avez fini par quitter les lieux à votre tour."
               }
             ]
           },
@@ -89376,7 +89621,7 @@
                   },
                   {
                     "id": 51200069,
-                    "content": "Viens, fiston. Je vais t’acheter une glace. Mais d’abord, tout l’argent que tu as soutiré aujourd’hui, tu me le donnes.",
+                    "content": "<I>Nous ne pouvons pas devenir tes parents.</>",
                     "next": 51200072,
                     "impr": [
                       1011,
@@ -89388,7 +89633,7 @@
               },
               {
                 "id": 51200070,
-                "content": "P-Petit larbin ?! Qu’est-ce que tu racontes ?? Toi aussi, tu as reçu un coup sur la tête ?!",
+                "content": "Viens, fiston. Je vais t’acheter une glace. Mais d’abord, tout l’argent que tu as soutiré aujourd’hui, tu me le donnes.",
                 "npc": 100001,
                 "next": 51200071
               },
@@ -89400,7 +89645,7 @@
               },
               {
                 "id": 51200071,
-                "content": "<I>Nous ne pouvons pas devenir tes parents.</>",
+                "content": "P-Petit larbin ?! Qu’est-ce que tu racontes ?? Toi aussi, tu as reçu un coup sur la tête ?!",
                 "npc": 200002,
                 "next": 51200073
               },
@@ -90313,8 +90558,8 @@
       },
       {
         "id": 20040201,
-        "name": "出于一些目的，你决定买下这个盒子。",
-        "desc": "行商向你们展示了一种奇怪的盒子，看起来年代已久……你们不仅有些怀疑，这么小的盒子里面，真的会有宝贝吗？",
+        "name": "Acheter cette boîte pour certaines raisons.",
+        "desc": "Le marchand ambulant vous présente une étrange boîte qui paraît très ancienne... Vous avez du mal à croire qu’un objet aussi petit puisse réellement contenir un trésor.",
         "nodes": [
           {
             "id": "1775201272468889320",
@@ -90397,7 +90642,7 @@
               },
               {
                 "id": 51200420,
-                "content": "Vous le connaissez ? Parfait. Alors je sais déjà que certaines pièces ici ne vous laisseront pas indifférent.",
+                "content": "Vous le connaissez ? Parfait. Alors je sais déjà que certaines pièces ici ne vous laisseront pas indifférent. Cela dit... mes marchandises sont rares, et elles attirent forcément les convoitises. Suivez-moi, nous ferions mieux de parler ailleurs.",
                 "npc": 700397
               }
             ]
@@ -90417,7 +90662,7 @@
             "dialogues": [
               {
                 "id": 51200722,
-                "content": "到这里就可以了。诸位，请看，这就是我要向你们展示的宝物……",
+                "content": "Nous y voilà. Mesdames et messieurs, ouvrez bien les yeux... Voici le trésor que je voulais vous montrer...",
                 "npc": 700397,
                 "next": 51200421
               },
@@ -90698,8 +90943,8 @@
       },
       {
         "id": 20040202,
-        "name": "先拆开盒子看看里面有什么吧。",
-        "desc": "你们花了大价钱买下了行商的盒子。白左看右看，不相信大价钱只卖下了一个普通的盒子，准备用一些特殊手段探索盒子的秘密，却被一位路人制止了。",
+        "name": "Ouvrir la boîte pour voir ce qu’elle contient.",
+        "desc": "Vous avez dépensé une somme considérable pour acheter la boîte du marchand. Snow l’examine sous toutes les coutures, refusant de croire qu’une simple boîte puisse valoir un tel prix. Alors qu’elle s’apprête à employer quelques méthodes particulières pour percer son secret, un passant l’interrompt.",
         "nodes": [
           {
             "id": "1775201542836892051",
@@ -90876,8 +91121,8 @@
       },
       {
         "id": 20040203,
-        "name": "热心的路人想要买下盒子，问问他出价多少。",
-        "desc": "路人名叫托兰，自称是“懂行”的汽笛沙龙成员，提议向你们购买这枚纸盒。听见他的报价，你们意识到自己被骗了。愤怒的白连忙喊上奥特赛德去追行商。",
+        "name": "Demander au passant combien il est prêt à offrir pour la boîte.",
+        "desc": "Le passant, nommé Toran, se présente comme un membre « connaisseur » du Salon du Sifflet et propose de vous racheter la boîte. En entendant son offre, vous comprenez aussitôt que vous avez été dupés. Furieuse, Snow entraîne immédiatement l’Étranger à la poursuite du marchand ambulant.",
         "nodes": [
           {
             "id": "17752033189461774989",
@@ -91281,8 +91526,8 @@
       },
       {
         "id": 20040204,
-        "name": "和白与奥特赛德复述事情的经过。",
-        "desc": "白和奥特赛德没有追到狡猾的行商。你向他们讲起了方才从托兰口中了解到的信息，准备深入汽笛沙龙调查。恰巧一位贵族听到了你们的谈话。",
+        "name": "Raconter à Snow et à l’Étranger tout ce qui s’est passé.",
+        "desc": "Snow et l’Étranger ne parviennent pas à rattraper le marchand ambulant. Vous leur racontez alors ce que Toran vous a appris, et décidez d’enquêter plus en profondeur sur le Salon du Sifflet. Par hasard, un noble surprend votre conversation.",
         "nodes": [
           {
             "id": "17752060277942663916",
@@ -91514,8 +91759,8 @@
       },
       {
         "id": 20040205,
-        "name": "前往汽笛沙龙所在的贵族休息室。",
-        "desc": "你们按照计划前往了汽笛沙龙，准备深入调查关于“艾森巴恩过大的个人名气”的事情。托兰在此处等候已久。",
+        "name": "Se rendre au salon réservé aux nobles, où se trouve le Salon du Sifflet.",
+        "desc": "Comme prévu, vous vous rendez au Salon du Sifflet afin d’enquêter davantage sur « l’immense popularité d’Eisenbahn ». Toran vous y attend depuis un bon moment.",
         "nodes": [
           {
             "id": "17752073161012668681",
@@ -91709,8 +91954,8 @@
       },
       {
         "id": 20040206,
-        "name": "进入贵族休息室。",
-        "desc": "你们进入了汽笛沙龙。汽笛沙龙的会长西顿亲切地接待了你们，邀请你们参加汽笛沙龙近期举办的摄影比赛，并引此作为新人考核。",
+        "name": "Entrer dans le salon des nobles.",
+        "desc": "Vous entrez dans le Salon du Sifflet. Son président, Seaton, vous accueille chaleureusement et vous invite à participer au concours de photographie récemment organisé par le salon, qui servira également d’épreuve pour les nouveaux membres.",
         "nodes": [
           {
             "id": "17752184943203562417",
@@ -91858,7 +92103,7 @@
             "srId": 106001,
             "pos": [
               -31350,
-              -6240
+              -6190
             ],
             "next": [
               "17752186450093564395"
@@ -91883,8 +92128,8 @@
             "name": "与白对话",
             "srId": 106001,
             "pos": [
-              -32970,
-              -6500
+              -32980,
+              -6530
             ],
             "dialogues": [
               {
@@ -91904,8 +92149,8 @@
       },
       {
         "id": 20040207,
-        "name": "寻找负责人托兰，了解摄影比赛的流程。",
-        "desc": "你向负责人托兰，询问了关于摄影比赛的安排和流程。",
+        "name": "Demander à Toran le déroulement du concours photo.",
+        "desc": "Vous interrogez Toran, le responsable du concours, au sujet de l’organisation et du déroulement de l’événement.",
         "nodes": [
           {
             "id": "17752191977874448559",
@@ -91952,7 +92197,7 @@
               },
               {
                 "id": 51200628,
-                "content": "Dans quelques jours, ce sera déjà le dixième anniversaire de la prise de fonction du chef de gare ! La photo gagnante sera imprimée sur les affiches et les tracts de la célébration. Il y aura aussi une récompense en pièces d’argent… mais vu votre fortune, j’imagine que cela ne vous intéresse pas vraiment.",
+                "content": "Dans quelques jours, ce sera déjà le dixième anniversaire de la prise de fonction du chef de gare ! La photo gagnante sera imprimée sur les affiches et les tracts de la célébration. Il y aura aussi une récompense en pièces d’argent... mais vu votre fortune, j’imagine que cela ne vous intéresse pas vraiment.",
                 "npc": 700398,
                 "next": 51200624
               },
@@ -91995,8 +92240,8 @@
       },
       {
         "id": 20040208,
-        "name": "在车站里找到合适的地方大拍特拍！",
-        "desc": "你和托兰前往火车站拍照，托兰为你传授了一些拍照技巧。起初一切顺利，你们在指定地点拍摄到了艾森巴恩的身影，托兰显得异常激动。",
+        "name": "Prendre des photos dans la gare.",
+        "desc": "Vous accompagnez Toran dans la gare pour prendre des photos. Celui-ci vous apprend plusieurs astuces de photographie. Au début, tout se passe parfaitement : vous parvenez à capturer Eisenbahn dans les lieux indiqués, ce qui enthousiasme Toran au plus haut point.",
         "nodes": [
           {
             "id": "17752211349384450874",
@@ -92298,7 +92543,7 @@
             "dialogues": [
               {
                 "id": 51200713,
-                "content": "洗照片吗？没问题，你稍等一下。",
+                "content": "Développer les photos ? Pas de problème, attendez-moi un instant.",
                 "npc": 700398
               }
             ]
@@ -92318,7 +92563,7 @@
             "dialogues": [
               {
                 "id": 51200714,
-                "content": "托兰接过胶卷，神色恹恹地走了。不多时，他就捧着一张照片回来了。"
+                "content": "Toran prit la pellicule avant de s’éloigner d’un pas las. Peu après, il revint avec une photo entre les mains."
               }
             ]
           },
@@ -92334,12 +92579,12 @@
             "dialogues": [
               {
                 "id": 51200715,
-                "content": "洗好了，你要看看照片吗？",
+                "content": "C’est prêt. Voulez-vous voir la photo ?",
                 "npc": 700398,
                 "options": [
                   {
                     "id": 51200716,
-                    "content": "查看照片",
+                    "content": "<I>Voir la photo</>",
                     "next": 51200717
                   }
                 ]
@@ -92350,8 +92595,8 @@
       },
       {
         "id": 20040209,
-        "name": "等待比赛的结果出炉。",
-        "desc": "摄影比赛的结果还需要一段时间，不过不会太久。事情已经交给托兰，你只需要等待。",
+        "name": "Attendre les résultats du concours.",
+        "desc": "Les résultats du concours photo demanderont encore un peu de temps, mais l’attente ne devrait pas être longue. Tout est désormais entre les mains de Toran.",
         "nodes": [
           {
             "id": "17752221153064457064",
@@ -92368,7 +92613,7 @@
             "dialogues": [
               {
                 "id": 51200680,
-                "content": "Vous voilà enfin ! Je vous ai cherché partout. Votre photo a remporté la première place !",
+                "content": "Vous voilà enfin ! Je ne m’y attendais pas du tout... Votre photo a remporté la première place...",
                 "npc": 700398,
                 "next": 51200681
               },
@@ -92471,7 +92716,7 @@
             "srId": 106001,
             "pos": [
               -31350,
-              -6240
+              -6190
             ],
             "next": [
               "17752222400044458317"
@@ -92562,8 +92807,8 @@
             "name": "与白对话",
             "srId": 106001,
             "pos": [
-              -32970,
-              -6500
+              -32980,
+              -6530
             ],
             "dialogues": [
               {
@@ -92620,18 +92865,13 @@
             "id": "17753787900495297986",
             "type": "TalkNode",
             "name": "前置对话",
-            "srId": 106001,
-            "pos": [
-              -31070,
-              12095
-            ],
             "next": [
               "177555419366314603047"
             ],
             "dialogues": [
               {
                 "id": 51200801,
-                "content": "On dirait la zone de fret de la gare. Il n’y a pas grand monde par ici. Jetons un rapide coup d’œil, puis retournons du côté des voyageurs. Notre objectif reste cette mystérieuse prisonnière.",
+                "content": "On dirait la zone de fret de la gare. Il n’y a pas grand monde par ici. Jetons un rapide coup d’œil, puis allons du côté des voyageurs. Il n’y a déjà plus grand-chose à examiner ici.",
                 "npc": 700409,
                 "next": 51200802
               },
@@ -92643,7 +92883,7 @@
               },
               {
                 "id": 51200803,
-                "content": "Alors moi, je me dis qu’ils ont peut-être justement choisi la zone de fret pour faire sortir cette mystérieuse prisonnière en douce !",
+                "content": "Alors moi, je me dis que la zone de fret cache peut-être d’autres informations importantes !",
                 "npc": 200002,
                 "next": 51200804
               },
@@ -92655,7 +92895,7 @@
               },
               {
                 "id": 51200805,
-                "content": "Mais qu’est-ce que tu racontes encore ? S’ils voulaient transporter quelqu’un, il leur faudrait au moins un train. Regarde autour de toi : il n’y a rien. Même pas l’ombre d’un chat.",
+                "content": "Mais qu’est-ce que tu racontes encore ? Regarde autour de toi : c’est complètement désert. Même pas l’ombre d’un chat. Impossible de trouver le moindre indice ici.",
                 "npc": 700409,
                 "next": 51200806
               },
@@ -92711,11 +92951,6 @@
             "id": "177555419366314603047",
             "type": "TalkNode",
             "name": "老奶出现",
-            "srId": 106001,
-            "pos": [
-              -31070,
-              12095
-            ],
             "dialogues": [
               {
                 "id": 51200814,
@@ -93237,8 +93472,8 @@
             "name": "黑屏",
             "srId": 106001,
             "pos": [
-              -35901,
-              6314
+              -30780,
+              6480
             ],
             "next": [
               "177537943619910598294"
@@ -93261,8 +93496,8 @@
             "name": "医生对话",
             "srId": 106001,
             "pos": [
-              -35901,
-              6314
+              -30780,
+              6480
             ],
             "next": [
               "17753789376446623047"
@@ -93383,8 +93618,8 @@
             "name": "开启推理线索",
             "srId": 106001,
             "pos": [
-              -35901,
-              6314
+              -30780,
+              6480
             ],
             "answers": [
               {

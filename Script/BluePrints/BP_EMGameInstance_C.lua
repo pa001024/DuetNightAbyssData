@@ -974,10 +974,6 @@ function BP_EMGameInstance_C:PrePlayerDungeonSettlement(PlayWinMontage)
             Target:SetActorHideTag("DungeonSettlement", true, false, true)
           end
         end
-        if self.ScenePlayers[i].IsDead and TeamController then
-          TeamController:SendTeamLeave()
-          TeamController:GetModel():SetTeam(nil)
-        end
       elseif not PlayWinMontage or self.DungeonSettlementData and self.DungeonSettlementData.NotShowTeammate then
       else
         local CurrentCharacter = self:GetWorld():SpawnActor(LoadClass("/Game/BluePrints/Char/BP_PlayerCharacter.BP_PlayerCharacter_C"), OriginTransform, UE4.ESpawnActorCollisionHandlingMethod.AlwaysSpawn)
@@ -1578,7 +1574,7 @@ end
 function BP_EMGameInstance_C:ShowLogoAtEndOfPrologue()
   local UIManager = GWorld.GameInstance:GetGameUIManager()
   local PrologueEndLogoUI = UIManager:GetUIObj("PrologueEndLogo")
-  local LogoIn = self.LogoLanguageMap[CommonConst.SystemLanguage] or self.LogoLanguageMap[CommonConst.SystemLanguages.Default]
+  local LogoIn = self.LogoLanguageMap[CommonConst.SystemLanguage] or self.LogoLanguageMap[CommonConst.SystemLanguages.EN]
   PrologueEndLogoUI:PlayAnimation(PrologueEndLogoUI[LogoIn])
 end
 
@@ -1729,35 +1725,18 @@ function BP_EMGameInstance_C:TriggerAllNpcPauseAndHide(NewTag)
   DebugPrint("LHQ_OnGlobalGameUITagChanged_HideNpc: end")
 end
 
-function BP_EMGameInstance_C:OnGameInputMethodChanged(CurInputDeviceType, CurInputDeviceName)
-  self.CurInputDeviceType = CurInputDeviceType
-  self.CurInputDeviceName = CurInputDeviceName
-end
-
 function BP_EMGameInstance_C:BindGamepadEvent()
-  if self.CurInputDeviceType ~= nil then
-    return
-  end
   local GameInputModeSubsystem = self:GetGameUIManager():GetGameInputModeSubsystem(self)
   if GameInputModeSubsystem then
-    self.CurInputDeviceType = GameInputModeSubsystem:GetCurrentInputType()
-    self.CurInputDeviceName = GameInputModeSubsystem:GetCurrentGamepadName()
-    GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.OnGameInputMethodChanged)
     GameInputModeSubsystem.OnInputMethodChanged:Add(self, self.SendInputDiviceChangeMessage)
   end
 end
 
 function BP_EMGameInstance_C:UnBindGamepadEvent()
-  if self.CurInputDeviceType == nil then
-    return
-  end
   local GameInputModeSubsystem = self:GetGameUIManager():GetGameInputModeSubsystem(self)
   if GameInputModeSubsystem then
-    GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.OnGameInputMethodChanged)
     GameInputModeSubsystem.OnInputMethodChanged:Remove(self, self.SendInputDiviceChangeMessage)
   end
-  self.CurInputDeviceType = nil
-  self.CurInputDeviceName = nil
 end
 
 function BP_EMGameInstance_C:LoadGMHyperLink()

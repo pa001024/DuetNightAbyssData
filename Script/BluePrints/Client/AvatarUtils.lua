@@ -1313,7 +1313,7 @@ function AvatarUtils:GetCurrentCharIdByGroupId(Avatar, GroupId)
   GroupId = GroupId or Avatar.Sex
   local CharacterAttributeSwitch = Avatar.CharacterAttributeSwitch
   if GroupId and CharacterAttributeSwitch then
-    return CharacterAttributeSwitch[GroupId]
+    return CharacterAttributeSwitch[GroupId] or -1
   end
   return -1
 end

@@ -25,7 +25,8 @@ function M:InitView(AccessDropConfig, AccessoryDrop, IsRefresh)
     self.Reddot:SetVisibility(UIConst.VisibilityOp.HitTestInvisible)
   else
     self.Reddot:SetVisibility(UIConst.VisibilityOp.Collapsed)
-    ReddotManager.DecreaseLeafNodeCount("Acti_AccessoryDrop01", 1, {
+    local RedDotName = DataMgr.EventMain[self.AccessDropConfig.EventId].ReddotNode
+    ReddotManager.DecreaseLeafNodeCount(RedDotName, 1, {
       CacheKey = "Red",
       EventId = self.AccessDropConfig.EventId
     })

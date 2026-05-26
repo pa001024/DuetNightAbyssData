@@ -158,7 +158,10 @@ function M:ExpandList(bExpand)
     if self.Parent.AddTabChangeKeyEvent then
       self.Parent:AddTabChangeKeyEvent()
     end
-    self:SetFocus()
+    self:AddTimer(0.1, function()
+      self.FSM:Clear()
+      self:SetFocus()
+    end)
   end
 end
 
@@ -297,6 +300,11 @@ function M:InitKeySetting()
   if self.WidgetSwitcher_MP:IsVisible() and StateName ~= FocusStates.Plan then
     self:AddKeyDownEvent(UIConst.GamePadKey.SpecialLeft, self.OnExpandListKeydown)
   end
+  if UIUtils.IsGamepadInput() then
+    self.WidgetSwitcher_MP:SetActiveWidgetIndex(1)
+  else
+    self.WidgetSwitcher_MP:SetActiveWidgetIndex(0)
+  end
 end
 
 function M:ExpandList_InitKeySetting()
@@ -327,6 +335,11 @@ end
 
 function M:OnExpandListAddedToFocusPath()
   self.IsExpandListInFocusPath = true
+  self.FSM:Clear()
+  self.FSM:Push({
+    Name = "ExpandList",
+    Widget = self.Selective_Listing
+  })
   self:InitKeySetting()
 end
 

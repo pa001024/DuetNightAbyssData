@@ -1555,6 +1555,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head_Spring/Mesh/Player_Head_Part47_SM",
     Name = "UI_Accessory_Name_10144",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 499,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1569,6 +1571,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head_Spring/Mesh/Player_Head_Part47_SM",
     Name = "UI_Accessory_Name_10107",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 499,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1583,6 +1587,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head_Spring/Mesh/Player_Head_Part47_SM",
     Name = "UI_Accessory_Name_10108",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 499,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1597,6 +1603,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head_Spring/Mesh/Player_Head_Part47_SM",
     Name = "UI_Accessory_Name_10109",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 499,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1610,6 +1618,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part46_SM",
     Name = "UI_Accessory_Name_10110",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 511,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1624,6 +1634,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part46_SM",
     Name = "UI_Accessory_Name_10111",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 511,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1638,6 +1650,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part46_SM",
     Name = "UI_Accessory_Name_10112",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 511,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1652,6 +1666,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part46_SM",
     Name = "UI_Accessory_Name_10113",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 511,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1717,6 +1733,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part66_SM",
     Name = "UI_Accessory_Name_10118",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 513,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1731,6 +1749,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part66_SM",
     Name = "UI_Accessory_Name_10119",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 513,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1745,6 +1765,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part66_SM",
     Name = "UI_Accessory_Name_10120",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 513,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1759,6 +1781,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part66_SM",
     Name = "UI_Accessory_Name_10121",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 513,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1772,6 +1796,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part57_SM",
     Name = "UI_Accessory_Name_10122",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 498,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1786,6 +1812,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part57_SM",
     Name = "UI_Accessory_Name_10123",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 498,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1800,6 +1828,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part57_SM",
     Name = "UI_Accessory_Name_10124",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 498,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1814,6 +1844,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part57_SM",
     Name = "UI_Accessory_Name_10125",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 498,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1827,6 +1859,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part58_SM",
     Name = "UI_Accessory_Name_10126",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 1,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1841,6 +1875,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part58_SM",
     Name = "UI_Accessory_Name_10127",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 1,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1855,6 +1891,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part58_SM",
     Name = "UI_Accessory_Name_10128",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 1,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -1869,6 +1907,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Head/Mesh/Player_Head_Part58_SM",
     Name = "UI_Accessory_Name_10129",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 1,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -2271,6 +2311,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat09_SM.Player_Hat09_SM'",
     Name = "UI_Accessory_Name_12009",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 2,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -2284,6 +2326,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat14_SM.Player_Hat14_SM'",
     Name = "UI_Accessory_Name_12010",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 2,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -2297,6 +2341,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat20_SM.Player_Hat20_SM'",
     Name = "UI_Accessory_Name_12011",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 2,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -2310,6 +2356,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat22_SM.Player_Hat22_SM'",
     Name = "UI_Accessory_Name_12012",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 3,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -2324,6 +2372,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat22_SM.Player_Hat22_SM'",
     Name = "UI_Accessory_Name_12013",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 3,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -2352,6 +2402,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat22_SM.Player_Hat22_SM'",
     Name = "UI_Accessory_Name_12015",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 3,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -2365,6 +2417,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Suit/Hat/Mesh/Player_Hat01_SM.Player_Hat01_SM'",
     Name = "UI_Accessory_Name_12016",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 2,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -2937,6 +2991,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part30_SM",
     Name = "UI_Accessory_Name_13044",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 500,
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -2950,6 +3006,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part30_SM",
     Name = "UI_Accessory_Name_13033",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 500,
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -2963,6 +3021,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part30_SM",
     Name = "UI_Accessory_Name_13034",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 500,
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -2976,6 +3036,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part30_SM",
     Name = "UI_Accessory_Name_13035",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 500,
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -2983,11 +3045,13 @@ return ReadOnly("CharAccessory", {
     AccessoryId = 13033,
     AccessorySocket = "MasterBone",
     AccessoryType = "Tail",
-    Des = "UI_Accessory_Desc_10105",
+    Des = "UI_Accessory_Desc_10125",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back43_01.T_Fashion_Back43_01'",
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part34_SM",
     Name = "UI_Accessory_Name_13042",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 514,
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -2996,11 +3060,13 @@ return ReadOnly("CharAccessory", {
     AccessorySocket = "MasterBone",
     AccessoryType = "Tail",
     ChangeColor = 2,
-    Des = "UI_Accessory_Desc_10105",
+    Des = "UI_Accessory_Desc_10125",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back43_04.T_Fashion_Back43_04'",
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part34_SM",
     Name = "UI_Accessory_Name_13036",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 514,
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -3009,11 +3075,13 @@ return ReadOnly("CharAccessory", {
     AccessorySocket = "MasterBone",
     AccessoryType = "Tail",
     ChangeColor = 3,
-    Des = "UI_Accessory_Desc_10105",
+    Des = "UI_Accessory_Desc_10125",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back43_03.T_Fashion_Back43_03'",
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part34_SM",
     Name = "UI_Accessory_Name_13043",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 514,
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -3022,11 +3090,13 @@ return ReadOnly("CharAccessory", {
     AccessorySocket = "MasterBone",
     AccessoryType = "Tail",
     ChangeColor = 4,
-    Des = "UI_Accessory_Desc_10105",
+    Des = "UI_Accessory_Desc_10125",
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Back43_02.T_Fashion_Back43_02'",
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part34_SM",
     Name = "UI_Accessory_Name_13038",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 514,
     UnlockOption = "UI_Accessory_Unlock_Shop"
   },
@@ -4398,6 +4468,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Face_Spring/Mesh/Player_Face_Part28_SM",
     Name = "UI_Accessory_Name_20087",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 510,
     Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -4412,6 +4484,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Face_Spring/Mesh/Player_Face_Part28_SM",
     Name = "UI_Accessory_Name_20088",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 510,
     Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -4426,6 +4500,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Face_Spring/Mesh/Player_Face_Part28_SM",
     Name = "UI_Accessory_Name_20090",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 510,
     Sound = "SOUND_ITEM_CUTE",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5233,6 +5309,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part29_SM",
     Name = "UI_Accessory_Name_30042",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 507,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5247,6 +5325,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part29_SM",
     Name = "UI_Accessory_Name_30043",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 507,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5275,6 +5355,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part29_SM",
     Name = "UI_Accessory_Name_30045",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 507,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5288,6 +5370,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part32_SM",
     Name = "UI_Accessory_Name_30046",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 508,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5316,6 +5400,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part32_SM",
     Name = "UI_Accessory_Name_30048",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 508,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5330,6 +5416,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part32_SM",
     Name = "UI_Accessory_Name_30049",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 508,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5403,6 +5491,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part12_SM",
     Name = "UI_Accessory_Name_30054",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 405,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5417,6 +5507,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part12_SM",
     Name = "UI_Accessory_Name_30055",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 405,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5431,6 +5523,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part12_SM",
     Name = "UI_Accessory_Name_30056",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 405,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5444,6 +5538,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part12_SM",
     Name = "UI_Accessory_Name_30057",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 405,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5457,6 +5553,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part13_SM",
     Name = "UI_Accessory_Name_30058",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 405,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5471,6 +5569,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part13_SM",
     Name = "UI_Accessory_Name_30059",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 405,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5485,6 +5585,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part13_SM",
     Name = "UI_Accessory_Name_30060",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 405,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5499,6 +5601,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist_Spring/Mesh/Player_Waist_Part13_SM",
     Name = "UI_Accessory_Name_30061",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     SortPriority = 405,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5512,6 +5616,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist/Mesh/Player_Waist_Part18_SM",
     Name = "UI_Accessory_Name_30062",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 509,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5526,6 +5632,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist/Mesh/Player_Waist_Part18_SM",
     Name = "UI_Accessory_Name_30063",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 509,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5540,6 +5648,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist/Mesh/Player_Waist_Part18_SM",
     Name = "UI_Accessory_Name_30064",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 509,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -5554,6 +5664,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Waist/Mesh/Player_Waist_Part18_SM",
     Name = "UI_Accessory_Name_30065",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 509,
     Sound = "SOUND_ITEM_JEWELRY",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -6657,6 +6769,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part35_SM.Player_Back_Part35_SM'",
     Name = "UI_Accessory_Name_40069",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 516,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -6671,6 +6785,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part35_SM.Player_Back_Part35_SM'",
     Name = "UI_Accessory_Name_40070",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 516,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -6685,6 +6801,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "SkeletalMesh'/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part35_SM.Player_Back_Part35_SM'",
     Name = "UI_Accessory_Name_40071",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 516,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -6698,6 +6816,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part38_SM",
     Name = "UI_Accessory_Name_40072",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 517,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -6712,6 +6832,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part38_SM",
     Name = "UI_Accessory_Name_40073",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 517,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -6740,6 +6862,8 @@ return ReadOnly("CharAccessory", {
     ModelPath = "/Game/Asset/Char/Player/Common/Part/Back_Spring/Mesh/Player_Back_Part38_SM",
     Name = "UI_Accessory_Name_40075",
     Rarity = 5,
+    RegainItemId = 110,
+    RegainItemNum = 10,
     SortPriority = 517,
     Sound = "SOUND_ITEM_CLOTH",
     UnlockOption = "UI_Accessory_Unlock_Shop"
@@ -6812,6 +6936,8 @@ return ReadOnly("CharAccessory", {
     Icon = "Texture2D'/Game/UI/Texture/Dynamic/Atlas/Prop/Fashion/T_Fashion_Fx25.T_Fashion_Fx25'",
     Name = "UI_Accessory_Name_60001",
     Rarity = 4,
+    RegainItemId = 110,
+    RegainItemNum = 4,
     ReleaseVersion = 140,
     SortPriority = 5,
     Sound = "SOUND_ITEM_CUTE"

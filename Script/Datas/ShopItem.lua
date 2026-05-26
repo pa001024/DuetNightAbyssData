@@ -17,14 +17,15 @@ T.RT_15 = {12100}
 T.RT_16 = {12098}
 T.RT_17 = {4030003}
 T.RT_18 = {12097}
-T.RT_19 = {4030020}
-T.RT_20 = {4030021}
-T.RT_21 = {160111, 160316}
-T.RT_22 = {160118, 160317}
-T.RT_23 = {160132, 160318}
-T.RT_24 = {160133, 160319}
-T.RT_25 = {MONTH = 1}
-T.RT_26 = {10040102}
+T.RT_19 = {12096}
+T.RT_20 = {4030020}
+T.RT_21 = {4030021}
+T.RT_22 = {160111, 160316}
+T.RT_23 = {160118, 160317}
+T.RT_24 = {160132, 160318}
+T.RT_25 = {160133, 160319}
+T.RT_26 = {MONTH = 1}
+T.RT_27 = {10040102}
 local LocalTimeProxy = (DataMgr or {}).LocalTimeProxy or function(x)
   return x
 end
@@ -1033,7 +1034,7 @@ return ReadOnly("ShopItem", {
   [100043] = {
     CanBeGift = true,
     EndTime = LocalTimeProxy(1785142800),
-    GiftSubTabId = 900012,
+    GiftSubTabId = 900013,
     IsSpPopup = 1,
     ItemId = 100043,
     ItemType = "CharAccessory",
@@ -1051,7 +1052,7 @@ return ReadOnly("ShopItem", {
   [100044] = {
     CanBeGift = true,
     EndTime = LocalTimeProxy(1785142800),
-    GiftSubTabId = 900012,
+    GiftSubTabId = 900013,
     IsSpPopup = 1,
     ItemId = 100044,
     ItemType = "CharAccessory",
@@ -1069,7 +1070,7 @@ return ReadOnly("ShopItem", {
   [100045] = {
     CanBeGift = true,
     EndTime = LocalTimeProxy(1785142800),
-    GiftSubTabId = 900012,
+    GiftSubTabId = 900013,
     IsSpPopup = 1,
     ItemId = 100045,
     ItemType = "CharAccessory",
@@ -1752,7 +1753,7 @@ return ReadOnly("ShopItem", {
   },
   [100083] = {
     CanBeGift = true,
-    EndTime = LocalTimeProxy(1780304400),
+    EndTime = LocalTimeProxy(1785142800),
     GiftSubTabId = 900011,
     IsSpPopup = 1,
     ItemId = 100083,
@@ -1760,7 +1761,7 @@ return ReadOnly("ShopItem", {
     Price = 1280,
     PriceType = 99,
     Sequence = 5004,
-    StartTime = LocalTimeProxy(1775440800),
+    StartTime = LocalTimeProxy(1780279200),
     SubTabId = 99010,
     TypeId = 110042,
     TypeNum = 1
@@ -1780,7 +1781,7 @@ return ReadOnly("ShopItem", {
     SoldOutDisplay = true,
     StartTime = LocalTimeProxy(1782784800),
     SubTabId = 99010,
-    TypeId = 3010715,
+    TypeId = 3010505,
     TypeNum = 1
   },
   [100085] = {
@@ -2923,7 +2924,7 @@ return ReadOnly("ShopItem", {
     SoldOutDisplay = true,
     StartTime = LocalTimeProxy(1782784800),
     SubTabId = 1208,
-    TypeId = 3010715,
+    TypeId = 3010505,
     TypeNum = 1
   },
   [120163] = {
@@ -9604,6 +9605,7 @@ return ReadOnly("ShopItem", {
     SoldOutDisplay = true,
     StartTime = LocalTimeProxy(1780279200),
     SubTabId = 1401,
+    SuitRewardId = T.RT_19,
     TypeId = 110201,
     TypeNum = 1
   },
@@ -9636,6 +9638,7 @@ return ReadOnly("ShopItem", {
     SoldOutDisplay = true,
     StartTime = LocalTimeProxy(1780279200),
     SubTabId = 1401,
+    SuitRewardId = T.RT_19,
     TypeId = 3010207,
     TypeNum = 1
   },
@@ -9661,7 +9664,7 @@ return ReadOnly("ShopItem", {
     EndTime = LocalTimeProxy(1785704400),
     IsAccessItem = 2,
     IsSpPopup = 1,
-    ItemCondition = T.RT_19,
+    ItemCondition = T.RT_20,
     ItemConditionDisplay = true,
     ItemId = 140363,
     ItemType = "HeadSculpture",
@@ -9678,7 +9681,7 @@ return ReadOnly("ShopItem", {
     EndTime = LocalTimeProxy(1785704400),
     IsAccessItem = 2,
     IsSpPopup = 1,
-    ItemCondition = T.RT_19,
+    ItemCondition = T.RT_20,
     ItemConditionDisplay = true,
     ItemId = 140364,
     ItemType = "Mount",
@@ -9696,7 +9699,7 @@ return ReadOnly("ShopItem", {
     EndTime = LocalTimeProxy(1785704400),
     IsAccessItem = 2,
     IsSpPopup = 1,
-    ItemCondition = T.RT_20,
+    ItemCondition = T.RT_21,
     ItemConditionDisplay = true,
     ItemId = 140365,
     ItemType = "HeadSculpture",
@@ -9713,7 +9716,7 @@ return ReadOnly("ShopItem", {
     EndTime = LocalTimeProxy(1785704400),
     IsAccessItem = 2,
     IsSpPopup = 1,
-    ItemCondition = T.RT_20,
+    ItemCondition = T.RT_21,
     ItemConditionDisplay = true,
     ItemId = 140366,
     ItemType = "TitleFrame",
@@ -9884,6 +9887,7 @@ return ReadOnly("ShopItem", {
     SoldOutDisplay = true,
     StartTime = LocalTimeProxy(1780279200),
     SubTabId = 1401,
+    SuitRewardId = T.RT_19,
     TypeId = 80051,
     TypeNum = 1
   },
@@ -9964,6 +9968,7 @@ return ReadOnly("ShopItem", {
     SoldOutDisplay = true,
     StartTime = LocalTimeProxy(1780279200),
     SubTabId = 1401,
+    SuitRewardId = T.RT_19,
     TypeId = 10114,
     TypeNum = 1
   },
@@ -12422,7 +12427,7 @@ return ReadOnly("ShopItem", {
     Price = 6,
     PriceType = 99,
     PurchaseLimit = 1,
-    RexclusionGroup = T.RT_21,
+    RexclusionGroup = T.RT_22,
     Sequence = 104,
     ShowBonus = 2030,
     StartTime = LocalTimeProxy(1672545600),
@@ -12540,7 +12545,7 @@ return ReadOnly("ShopItem", {
     Price = 6,
     PriceType = 99,
     PurchaseLimit = 1,
-    RexclusionGroup = T.RT_22,
+    RexclusionGroup = T.RT_23,
     Sequence = 114,
     ShowBonus = 2030,
     StartTime = LocalTimeProxy(1766408400),
@@ -12780,7 +12785,7 @@ return ReadOnly("ShopItem", {
     Price = 6,
     PriceType = 99,
     PurchaseLimit = 1,
-    RexclusionGroup = T.RT_23,
+    RexclusionGroup = T.RT_24,
     Sequence = 244,
     ShowBonus = 1530,
     StartTime = LocalTimeProxy(1772503200),
@@ -12798,7 +12803,7 @@ return ReadOnly("ShopItem", {
     Price = 6,
     PriceType = 99,
     PurchaseLimit = 1,
-    RexclusionGroup = T.RT_24,
+    RexclusionGroup = T.RT_25,
     Sequence = 243,
     ShowBonus = 2030,
     StartTime = LocalTimeProxy(1770602400),
@@ -13338,8 +13343,8 @@ return ReadOnly("ShopItem", {
     IsSpPopup = 1,
     ItemId = 160165,
     ItemType = "Reward",
-    Price = 60,
-    PriceType = 100,
+    Price = 75,
+    PriceType = 99,
     PurchaseLimit = 50,
     Sequence = 450,
     StartTime = LocalTimeProxy(1780279200),
@@ -13353,8 +13358,8 @@ return ReadOnly("ShopItem", {
     IsSpPopup = 1,
     ItemId = 160166,
     ItemType = "Reward",
-    Price = 60,
-    PriceType = 100,
+    Price = 35,
+    PriceType = 99,
     PurchaseLimit = 30,
     Sequence = 449,
     StartTime = LocalTimeProxy(1780279200),
@@ -13368,23 +13373,23 @@ return ReadOnly("ShopItem", {
     IsSpPopup = 1,
     ItemId = 160167,
     ItemType = "Reward",
-    Price = 60,
-    PriceType = 100,
+    Price = 35,
+    PriceType = 99,
     PurchaseLimit = 30,
     Sequence = 448,
-    StartTime = LocalTimeProxy(1780279200),
+    StartTime = LocalTimeProxy(1782784800),
     SubTabId = 1601,
     TypeId = 12173,
     TypeNum = 1
   },
   [160168] = {
     Bg = 1,
-    EndTime = LocalTimeProxy(1785142800),
+    EndTime = LocalTimeProxy(1782766800),
     IsSpPopup = 1,
     ItemId = 160168,
     ItemType = "Reward",
-    Price = 60,
-    PriceType = 100,
+    Price = 35,
+    PriceType = 99,
     PurchaseLimit = 30,
     Sequence = 447,
     StartTime = LocalTimeProxy(1780279200),
@@ -13758,7 +13763,9 @@ return ReadOnly("ShopItem", {
     TypeNum = 1
   },
   [160191] = {
+    Bg = 1,
     EndTime = LocalTimeProxy(1785142800),
+    IsSpPopup = 1,
     ItemId = 160191,
     ItemType = "Reward",
     Price = 925,
@@ -13772,7 +13779,9 @@ return ReadOnly("ShopItem", {
     TypeNum = 1
   },
   [160192] = {
+    Bg = 1,
     EndTime = LocalTimeProxy(1785142800),
+    IsSpPopup = 1,
     ItemId = 160192,
     ItemType = "Reward",
     Price = 2250,
@@ -13787,15 +13796,17 @@ return ReadOnly("ShopItem", {
     TypeNum = 1
   },
   [160193] = {
+    Bg = 1,
     EndTime = LocalTimeProxy(1785142800),
+    IsSpPopup = 1,
     ItemId = 160193,
     ItemType = "Reward",
     Price = 3200,
     PriceType = 99,
-    PurchaseLimit = 1,
+    PurchaseLimit = 2,
     Require = 160192,
     Sequence = 460,
-    ShowBonus = 230,
+    ShowBonus = 220,
     StartTime = LocalTimeProxy(1782784800),
     SubTabId = 1601,
     TypeId = 12202,
@@ -13809,7 +13820,7 @@ return ReadOnly("ShopItem", {
     Price = 1280,
     PriceType = 99,
     PurchaseLimit = 1,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 100,
     ShowBonus = 110,
     StartTime = LocalTimeProxy(1672545600),
@@ -13825,7 +13836,7 @@ return ReadOnly("ShopItem", {
     Price = 980,
     PriceType = 99,
     PurchaseLimit = 1,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 99,
     ShowBonus = 100,
     StartTime = LocalTimeProxy(1672545600),
@@ -14069,7 +14080,7 @@ return ReadOnly("ShopItem", {
     Price = 2680,
     PriceType = 99,
     PurchaseLimit = 1,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 101,
     ShowBonus = 270,
     StartTime = LocalTimeProxy(1770602400),
@@ -14086,7 +14097,7 @@ return ReadOnly("ShopItem", {
     Price = 1280,
     PriceType = 99,
     PurchaseLimit = 1,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 98,
     ShowBonus = 480,
     StartTime = LocalTimeProxy(1770602400),
@@ -14103,7 +14114,7 @@ return ReadOnly("ShopItem", {
     Price = 1280,
     PriceType = 99,
     PurchaseLimit = 1,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 97,
     ShowBonus = 360,
     StartTime = LocalTimeProxy(1770602400),
@@ -14120,7 +14131,7 @@ return ReadOnly("ShopItem", {
     Price = 1280,
     PriceType = 99,
     PurchaseLimit = 1,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 96,
     ShowBonus = 360,
     StartTime = LocalTimeProxy(1770602400),
@@ -14136,7 +14147,7 @@ return ReadOnly("ShopItem", {
     Price = 2680,
     PriceType = 99,
     PurchaseLimit = 3,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 101,
     ShowBonus = 270,
     StartTime = LocalTimeProxy(1772312400),
@@ -14152,7 +14163,7 @@ return ReadOnly("ShopItem", {
     Price = 1280,
     PriceType = 99,
     PurchaseLimit = 5,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 98,
     ShowBonus = 480,
     StartTime = LocalTimeProxy(1772312400),
@@ -14168,7 +14179,7 @@ return ReadOnly("ShopItem", {
     Price = 1280,
     PriceType = 99,
     PurchaseLimit = 5,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 97,
     ShowBonus = 360,
     StartTime = LocalTimeProxy(1772312400),
@@ -14184,7 +14195,7 @@ return ReadOnly("ShopItem", {
     Price = 1280,
     PriceType = 99,
     PurchaseLimit = 5,
-    RefreshTime = T.RT_25,
+    RefreshTime = T.RT_26,
     Sequence = 96,
     ShowBonus = 360,
     StartTime = LocalTimeProxy(1772312400),
@@ -14466,7 +14477,7 @@ return ReadOnly("ShopItem", {
     Price = 128,
     PriceType = 99,
     PurchaseLimit = 1,
-    RexclusionGroup = T.RT_21,
+    RexclusionGroup = T.RT_22,
     Sequence = 10,
     StartTime = LocalTimeProxy(1764018001),
     SubTabId = 1606,
@@ -14482,7 +14493,7 @@ return ReadOnly("ShopItem", {
     Price = 128,
     PriceType = 99,
     PurchaseLimit = 1,
-    RexclusionGroup = T.RT_22,
+    RexclusionGroup = T.RT_23,
     Sequence = 11,
     StartTime = LocalTimeProxy(1770667201),
     SubTabId = 1606,
@@ -14498,7 +14509,7 @@ return ReadOnly("ShopItem", {
     Price = 98,
     PriceType = 99,
     PurchaseLimit = 1,
-    RexclusionGroup = T.RT_23,
+    RexclusionGroup = T.RT_24,
     Sequence = 12,
     StartTime = LocalTimeProxy(1775466001),
     SubTabId = 1606,
@@ -14514,7 +14525,7 @@ return ReadOnly("ShopItem", {
     Price = 128,
     PriceType = 99,
     PurchaseLimit = 1,
-    RexclusionGroup = T.RT_24,
+    RexclusionGroup = T.RT_25,
     Sequence = 13,
     StartTime = LocalTimeProxy(1775466001),
     SubTabId = 1606,
@@ -15543,7 +15554,7 @@ return ReadOnly("ShopItem", {
     UnlockLevel = 35
   },
   [702011] = {
-    ItemCondition = T.RT_26,
+    ItemCondition = T.RT_27,
     ItemId = 702011,
     ItemType = "Resource",
     Price = 4,
@@ -15556,7 +15567,7 @@ return ReadOnly("ShopItem", {
     TypeNum = 1
   },
   [702012] = {
-    ItemCondition = T.RT_26,
+    ItemCondition = T.RT_27,
     ItemId = 702012,
     ItemType = "Resource",
     Price = 4,
@@ -15569,7 +15580,7 @@ return ReadOnly("ShopItem", {
     TypeNum = 1
   },
   [702013] = {
-    ItemCondition = T.RT_26,
+    ItemCondition = T.RT_27,
     ItemId = 702013,
     ItemType = "Resource",
     Price = 10,

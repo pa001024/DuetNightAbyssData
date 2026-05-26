@@ -31,7 +31,8 @@ function M:InitUI(ActivityConfigData, PageConfigData, ParentTabId, ParentWidget,
   self.PageConfigData = PageConfigData
   local Avatar = GWorld:GetAvatar()
   if not Avatar then
-    ReddotManager.DecreaseLeafNodeCount("Acti_AccessoryDrop01", 1, {
+    local RedDotName = DataMgr.EventMain[self.EventId].ReddotNode
+    ReddotManager.DecreaseLeafNodeCount(RedDotName, 1, {
       CacheKey = "Red",
       EventId = self.EventId
     })
@@ -179,7 +180,8 @@ function M:OpenBox()
   self.ParentWidget:BlockAllUIInput(true, "SP_DisplayOnly")
   local CallbackInfo = {
     Func = function(_Self, Rewards)
-      ReddotManager.DecreaseLeafNodeCount("Acti_AccessoryDrop01", 1, {
+      local RedDotName = DataMgr.EventMain[self.AccessDropConfig.EventId].ReddotNode
+      ReddotManager.DecreaseLeafNodeCount(RedDotName, 1, {
         CacheKey = "Red",
         EventId = self.AccessDropConfig.EventId
       })

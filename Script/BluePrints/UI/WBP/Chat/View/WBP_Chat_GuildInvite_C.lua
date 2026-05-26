@@ -7,6 +7,8 @@ local M = Class({
 function M:Construct()
   self.Btn_Click.OnClicked:Add(self, self.OnClickBtnGuild)
   self.Btn_Guild.OnClicked:Add(self, self.OnClickBtnOpenGuildDetail)
+  self.Btn_Click.OnPressed:Add(self, self.OnPressBtnGuild)
+  self.Btn_Guild.OnPressed:Add(self, self.OnPressBtnOpenGuildDetail)
   self.Text_Apply:SetText(GText("UI_ApplyToJoinGuild"))
   self:PlayAnimation(self.Normal)
   self.Key_Controller:CreateCommonKey({
@@ -59,7 +61,7 @@ function M:OnClickBtnGuild()
   if GuildId <= 0 then
     return
   end
-  GuildController:SendRequestJoinGuild(GuildId)
+  GuildController:SendRequestJoinGuild(GuildId, 0)
 end
 
 function M:OnClickBtnOpenGuildDetail()
@@ -69,6 +71,14 @@ function M:OnClickBtnOpenGuildDetail()
     return
   end
   GuildController:OpenGuildDetailPopup(self, self.GuildInviteInfo.GuildId)
+end
+
+function M:OnPressBtnGuild()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/special_content_01_click", nil, nil)
+end
+
+function M:OnPressBtnOpenGuildDetail()
+  AudioManager(self):PlayUISound(self, "event:/ui/common/click_btn_small", nil, nil)
 end
 
 return M

@@ -1,5 +1,4 @@
 require("UnLua")
-local UIManager = GWorld.GameInstance:GetGameUIManager()
 local M = Class({
   "BluePrints.Common.TimerMgr",
   "BluePrints.UI.BP_EMUserWidget_C"
@@ -136,9 +135,11 @@ function M:ShowGuildList()
     if #self.CurShowGuildList ~= #self.AllGuildList and 1 == #self.CurShowGuildList then
       self.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.Collapsed)
       self.Bar_CD:SetVisibility(UIConst.VisibilityOp.Collapsed)
+      self.Btn_JoinAll:SetVisibility(UIConst.VisibilityOp.Collapsed)
     else
       self.Btn_Refresh:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
       self.Bar_CD:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
+      self.Btn_JoinAll:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
     end
   end
 end
@@ -156,19 +157,13 @@ end
 
 function M:OnGuildListItemClick(ItemWidget)
   self.SetGuildInfoFuncInfo.Func(self.SetGuildInfoFuncInfo.Obj, ItemWidget.Content)
-  local len = self.List_Guild:GetNumItems()
-  for index = 0, len - 1 do
-    local Item = self.List_Guild:GetItemAt(index)
-    if Item.GuildId == ItemWidget.Content.GuildId then
-    else
-    end
-  end
 end
 
 function M:SearchGuild()
   local Text = self.Input_Name:GetText()
   self.CurShowGuildList = {}
   if "" == Text then
+    local UIManager = GWorld.GameInstance:GetGameUIManager()
     UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("GuildListSearchHint"))
   else
     GuildController:SendGuildSearch(Text)
@@ -178,6 +173,7 @@ end
 function M:ForbiddenSearchGuild()
   local Text = self.Input_Name:GetText()
   if "" == Text then
+    local UIManager = GWorld.GameInstance:GetGameUIManager()
     UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("GuildListSearchHint"))
   end
 end
@@ -202,8 +198,10 @@ end
 
 function M:JoinAllGuild()
   local GuildIdList = {}
-  for _, GuildInfo in pairs(self.CurShowGuildList) do
-    table.insert(GuildIdList, GuildInfo.GuildId)
+  local AllDisplayedEntries = self.List_Guild:GetDisplayedEntryWidgets()
+  for _, Entry in pairs(AllDisplayedEntries) do
+    table.insert(GuildIdList, Entry.Content.GuildId)
+    DebugPrint("HZQ GuildName: ", Entry.Content.Name)
   end
   if 0 == #GuildIdList then
     return
@@ -213,6 +211,7 @@ end
 
 function M:SearcRefreshGuildList()
   if self.SearchCoolDownPercent > 0 then
+    local UIManager = GWorld.GameInstance:GetGameUIManager()
     UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_RefreshOnCooldown"))
     return
   end
@@ -221,6 +220,7 @@ function M:SearcRefreshGuildList()
 end
 
 function M:ForbiddenSearcRefreshGuildList()
+  local UIManager = GWorld.GameInstance:GetGameUIManager()
   UIManager:ShowUITip(UIConst.Tip_CommonToast, GText("UI_RefreshOnCooldown"))
 end
 

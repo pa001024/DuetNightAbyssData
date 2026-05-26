@@ -44,6 +44,7 @@ function M:RefreshList(bAnimation)
   end
   for Index, Uid in pairs(self.ListDatas) do
     local Content = NewObject(UIUtils.GetCommonItemContentClass())
+    Content.Owner = self
     self:SetupListContent(Uid, Content)
     self.Uid2Index[Uid] = Index
     self.MyListView:AddItem(Content)

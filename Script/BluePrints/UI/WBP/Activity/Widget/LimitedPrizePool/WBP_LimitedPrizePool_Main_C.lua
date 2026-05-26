@@ -158,6 +158,7 @@ end
 
 function M:PlayFadeIn()
   self:PlayAnimation(self.FadeInAnimation)
+  self.Title:FadeIn()
 end
 
 function M:PlayFadeOut()

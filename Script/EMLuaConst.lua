@@ -191,6 +191,14 @@ EMLuaConst.WindowResizeDebounceDelay = 0.3
 EMLuaConst.WindowMovedDebounceDelay = 0.3
 EMLuaConst.bUseLineTraceForSkillMove = true
 EMLuaConst.CameraCutBlendDuration = 0.3
+EMLuaConst._DamageAttrThresholdSubIdToTimeThresh = {
+  Capture = 10.0,
+  Sabotage = 5.0,
+  Rescue = 10.0,
+  Exterminate = 5.0,
+  SurvivalMiniPro = 5.0,
+  ExtermPro = 5.0
+}
 return setmetatable({}, {
   __index = function(t, k)
     local v = rawget(EMLuaConst, k)

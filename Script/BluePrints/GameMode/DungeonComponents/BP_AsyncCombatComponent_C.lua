@@ -79,9 +79,25 @@ function M:OnRepClientDungeonMessage(MessageName, ...)
     local Data = (...)
     self:OnRep_CurStep(Data.CurStep)
   elseif MessageName == AsyncMsg.AsyncCombatRoomPass then
-    self:OnRoomPass()
+    if self.GameMode.AlreadyInit then
+      self:OnRoomPass()
+    elseif not self.IsPendingRoomEnd then
+      self.IsPendingRoomEnd = true
+      DebugPrint("lgc@ AsyncCombat: AsyncCombatRoomPass, Register to OnInit")
+      self.GameMode.EMGameState:RegisterGameModeEvent("OnInit", self, function()
+        self:OnRoomPass()
+      end)
+    end
   elseif MessageName == AsyncMsg.AsyncCombatRoomClose then
-    self:OnRoomClose()
+    if self.GameMode.AlreadyInit then
+      self:OnRoomClose()
+    elseif not self.IsPendingRoomEnd then
+      self.IsPendingRoomEnd = true
+      DebugPrint("lgc@ AsyncCombat: AsyncCombatRoomClose, Register to OnInit")
+      self.GameMode.EMGameState:RegisterGameModeEvent("OnInit", self, function()
+        self:OnRoomClose()
+      end)
+    end
   end
 end
 

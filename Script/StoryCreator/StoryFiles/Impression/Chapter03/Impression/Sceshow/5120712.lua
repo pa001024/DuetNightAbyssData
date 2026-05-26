@@ -78,16 +78,22 @@ return {
       questNodeData = {
         lineData = {
           {
-            startQuest = "17783183547093440744",
-            startPort = "Out",
-            endQuest = "17783183547093440742",
-            endPort = "Success"
-          },
-          {
             startQuest = "17783183547093440741",
             startPort = "QuestStart",
             endQuest = "17783183547093440744",
             endPort = "In"
+          },
+          {
+            startQuest = "17783183547093440744",
+            startPort = "Out",
+            endQuest = "17783183547093440747",
+            endPort = "In"
+          },
+          {
+            startQuest = "17783183547093440747",
+            startPort = "Out",
+            endQuest = "17783183547093440742",
+            endPort = "Success"
           }
         },
         nodeData = {
@@ -127,14 +133,14 @@ return {
             key = "17783183547093440742",
             type = "QuestSuccessNode",
             name = "QuestSuccess",
-            pos = {x = 2324.7999999999997, y = 278.4},
+            pos = {x = 2346.3999999999996, y = 399.6},
             propsData = {ModeType = 0}
           },
           ["17783183547093440743"] = {
             key = "17783183547093440743",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 2074, y = 564},
+            pos = {x = 2362, y = 633.6},
             propsData = {}
           },
           ["17783183547093440744"] = {
@@ -253,10 +259,10 @@ return {
             key = "17783183547093440747",
             type = "SetVarNode",
             name = "设置变量值",
-            pos = {x = 1694.3333333333333, y = 252.33333333333334},
+            pos = {x = 1928.3333333333333, y = 457.53333333333336},
             propsData = {
-              VarName = "Scenpc_512057",
-              VarValue = 2
+              VarName = "Noah5120712",
+              VarValue = 1
             }
           }
         },

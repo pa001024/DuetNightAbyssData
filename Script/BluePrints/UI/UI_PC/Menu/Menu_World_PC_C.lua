@@ -447,11 +447,11 @@ function Menu_World_PC_C:SetPlayerInfo()
       if -1 == HeadFrameId then
         self.Head_Frame:SetVisibility(UIConst.VisibilityOp.Collapsed)
       elseif DataMgr.HeadFrame[HeadFrameId].DynamicPath then
-        self.Head_Frame:Setvisibility(UIConst.VisibilityOp.Collapsed)
+        self.Head_Frame:SetVisibility(UIConst.VisibilityOp.Collapsed)
         self.DynamicFrame:SetVisibility(UIConst.VisibilityOp.SelfHitTestInvisible)
         local Data = DataMgr.HeadFrame[HeadFrameId]
         if Data and Data.DynamicPath then
-          local NewWidget = UIManager(self):CreateWidget(Path, true)
+          local NewWidget = UIManager(self):CreateWidget(Data.DynamicPath, true)
           if NewWidget then
             self.DynamicFrame:SetContent(NewWidget)
           end

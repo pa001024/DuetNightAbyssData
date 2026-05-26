@@ -23,7 +23,7 @@ return {
       name = "回到站长办公室",
       pos = {x = 1042.6857142857145, y = 85.82857142857154},
       propsData = {
-        QuestId = 10040311,
+        QuestId = 0,
         QuestDescriptionComment = "",
         QuestDescription = "Content_10040311_01",
         QuestDeatil = "Description_10040311_01",
@@ -45,30 +45,12 @@ return {
         IsBacktrack = false,
         SubRegionId = 106001,
         SubRegionIdList = {},
-        StoryGuideType = "Point",
-        StoryGuidePointName = "",
+        StoryGuideType = "Npc",
+        StoryGuidePointName = "Npc_Aisenbaen_152480366",
         JumpId = 0
       },
       questNodeData = {
         lineData = {
-          {
-            startQuest = "177824359749910505335",
-            startPort = "Out",
-            endQuest = "177824359749910505336",
-            endPort = "In"
-          },
-          {
-            startQuest = "177824359749910505336",
-            startPort = "Out",
-            endQuest = "177824359749910505337",
-            endPort = "In"
-          },
-          {
-            startQuest = "177824359749910505337",
-            startPort = "Out",
-            endQuest = "177824362304710505952",
-            endPort = "In"
-          },
           {
             startQuest = "177824359749910505331",
             startPort = "QuestStart",
@@ -92,6 +74,42 @@ return {
             startPort = "Out",
             endQuest = "177824359749910505333",
             endPort = "Fail"
+          },
+          {
+            startQuest = "177824359749910505331",
+            startPort = "QuestStart",
+            endQuest = "177891749443882569836",
+            endPort = "Input"
+          },
+          {
+            startQuest = "177824359749910505335",
+            startPort = "Out",
+            endQuest = "17796058642402106",
+            endPort = "In"
+          },
+          {
+            startQuest = "17796058642402106",
+            startPort = "Out",
+            endQuest = "177824359749910505337",
+            endPort = "In"
+          },
+          {
+            startQuest = "177824359749910505337",
+            startPort = "Out",
+            endQuest = "17796058958892536",
+            endPort = "In"
+          },
+          {
+            startQuest = "17796058958892536",
+            startPort = "Out",
+            endQuest = "177824362304710505952",
+            endPort = "In"
+          },
+          {
+            startQuest = "17796058642402106",
+            startPort = "Out",
+            endQuest = "1779606045773970101",
+            endPort = "In"
           }
         },
         nodeData = {
@@ -113,7 +131,7 @@ return {
             key = "177824359749910505333",
             type = "QuestFailNode",
             name = "QuestFail",
-            pos = {x = 1759.4736842105262, y = 714.2105263157895},
+            pos = {x = 1765.187969924812, y = 661.3533834586466},
             propsData = {}
           },
           ["177824359749910505335"] = {
@@ -170,7 +188,7 @@ return {
             key = "177824359749910505336",
             type = "AsyncSetActorLocationAndRotationNode",
             name = "将玩家设置在车站入口",
-            pos = {x = 1808.3636363636363, y = 320.6363636363636},
+            pos = {x = 1766.2899036447423, y = -72.5894428152493},
             propsData = {
               UnitId = 0,
               NewTargetPointName = "Point_Teleport_10040311",
@@ -185,9 +203,15 @@ return {
             key = "177824359749910505337",
             type = "TalkNode",
             name = "奥哥获救对话 ",
-            pos = {x = 2092.989063568011, y = 311.0382775119617},
+            pos = {x = 2078.7033492822966, y = 311.0382775119617},
             propsData = {
-              IsNpcNode = false,
+              IsNpcNode = true,
+              NpcNodeInteractiveName = "UI_Npc_Name_Aote",
+              NpcId = 100401,
+              GuideUIEnable = true,
+              GuideType = "N",
+              GuidePointName = "Npc_Aote_152480421",
+              DelayShowGuideTime = 0,
               bUseFlowAssetActors = true,
               FirstDialogueId = 0,
               FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10044801.10044801'",
@@ -235,7 +259,7 @@ return {
             key = "177824362304710505952",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2444.8406862745096, y = 313.1524767801858},
+            pos = {x = 2569.126400560224, y = 324.58104820875724},
             propsData = {}
           },
           ["177830492765510497852"] = {
@@ -249,8 +273,59 @@ return {
             key = "177875051290111670032",
             type = "WaitingSpecialQuestFailNode",
             name = "等待特殊任务失败",
-            pos = {x = 1494.4133126934985, y = 712.6772445820434},
+            pos = {x = 1495.8418841220698, y = 649.8201017249005},
             propsData = {}
+          },
+          ["177891749443882569836"] = {
+            key = "177891749443882569836",
+            type = "SetTimeOfDayNode",
+            name = "设置TOD",
+            pos = {x = 1490, y = 135.42857142857144},
+            propsData = {
+              TargetTime = 19,
+              NeedLerp = false,
+              LerpTime = 0,
+              StopTimeElapse = true
+            }
+          },
+          ["17796058642402106"] = {
+            key = "17796058642402106",
+            type = "ChangeStaticCreatorNode",
+            name = "生成奥特赛德",
+            pos = {x = 1802.7572266443237, y = 312.35714285714283},
+            propsData = {
+              ActiveEnable = true,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {152480421}
+            }
+          },
+          ["17796058958892536"] = {
+            key = "17796058958892536",
+            type = "ChangeStaticCreatorNode",
+            name = "销毁奥特赛德",
+            pos = {x = 2329.9000837871813, y = 322.35714285714283},
+            propsData = {
+              ActiveEnable = false,
+              EnableBlackScreenSync = false,
+              EnableFadeIn = false,
+              EnableFadeOut = false,
+              NewTargetPointName = "",
+              StaticCreatorIdList = {152480421}
+            }
+          },
+          ["1779606045773970101"] = {
+            key = "1779606045773970101",
+            type = "UpdateTaskBarAndTaskMainNode",
+            name = "更新任务目标节点",
+            pos = {x = 2077.042940930038, y = 170.92857142857142},
+            propsData = {
+              NewDescription = "Content_10040311_02",
+              NewDetail = "Description_10040311_02",
+              SubTaskTargetIndex = 0
+            }
           }
         },
         commentData = {}

@@ -132,6 +132,7 @@ function M:OnHelperBecomeViewTarget(PC)
     self:HideWeaponActor("ActorController_ChangeViewTarget", false)
     self:HidePetActor("ActorController_ChangeViewTarget", false)
     self:RefreshEnvironment(true)
+    self:UpdateAudioListener()
     return
   end
   if self.IsPlayingSequence then
@@ -140,6 +141,7 @@ function M:OnHelperBecomeViewTarget(PC)
     end
     return
   end
+  self:UpdateAudioListener()
   for key, value in pairs(self.PlayerActorHideTags) do
     if value then
       self:HidePlayerActor(key, true, true)
@@ -974,6 +976,7 @@ function M:TryDestroyActors()
   self.bActorsDestroyed = true
   self:DestroyAllCreature()
   self:Component_DestroyActors()
+  self:RecoverAudioListener()
   self:DestroyHelper()
   self:AfterDestroyActors()
 end
@@ -1032,6 +1035,27 @@ end
 
 function M:GetAvatar()
   return self.Avatar
+end
+
+function M:UpdateAudioListener()
+  if self.ArmoryPlayer then
+    self:SetAudioListener(self.ArmoryPlayer.AudioListener)
+  else
+    self:SetAudioListener(self.ArmoryHelper.Camera)
+  end
+end
+
+function M:SetAudioListener(AudioListener)
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
+  PlayerController:SetAudioListenerOverride(AudioListener, Const.ZeroVector, Const.ZeroRotator)
+end
+
+function M:RecoverAudioListener()
+  local Player = UE4.UGameplayStatics.GetPlayerCharacter(self.ViewUI, 0)
+  local PlayerController = UE4.UGameplayStatics.GetPlayerController(self.ViewUI, 0)
+  if Player and PlayerController then
+    PlayerController:SetAudioListenerOverride(Player.AudioListener, Const.ZeroVector, Const.ZeroRotator)
+  end
 end
 
 function M:DestroyCreature(Key)

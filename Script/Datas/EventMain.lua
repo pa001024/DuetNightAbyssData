@@ -308,7 +308,7 @@ return ReadOnly("EventMain", {
   },
   [101015] = {
     EventBgBPPathPC = "/Game/UI/WBP/Activity/Widget/WarmUp/Eve/WBP_Activity_WarmUp_Eve_BG.WBP_Activity_WarmUp_Eve_BG",
-    EventBgSound = "/ui/activity/huangnv_preheat_sign_in_entrance_loop",
+    EventBgSound = "/ui/activity/shuimu_gacha_loop",
     EventDes = "Event_Des_101015",
     EventEndTime = LocalTimeProxy(1785790800),
     EventEndTimeMail = T.RT_1,
@@ -349,7 +349,7 @@ return ReadOnly("EventMain", {
   [102002] = {
     EventBgBPPathMobile = "WidgetBlueprint'/Game/UI/WBP/Activity/Mobile/WorldExplore/V14/WBP_Activity_WorldExplore_V14_Season01_BG_M.WBP_Activity_WorldExplore_V14_Season01_BG_M'",
     EventBgBPPathPC = "WidgetBlueprint'/Game/UI/WBP/Activity/PC/WorldExplore/V14/WBP_Activity_WorldExplore_V14_Season01_BG_P.WBP_Activity_WorldExplore_V14_Season01_BG_P'",
-    EventBgSound = "/ui/activity/huaxu_entrance_loop",
+    EventBgSound = "/ui/activity/suyi_skin_trial_entrance_loop",
     EventDes = "Event_Des_102002",
     EventEndTime = LocalTimeProxy(1785142800),
     EventEndTimeMail = T.RT_1,
@@ -769,6 +769,7 @@ return ReadOnly("EventMain", {
   [103024] = {
     EventBgBPPathMobile = "/Game/UI/WBP/Activity/Widget/SkinCollect/BG/WBP_Activity_SkinCollect_BG.WBP_Activity_SkinCollect_BG",
     EventBgBPPathPC = "/Game/UI/WBP/Activity/Widget/SkinCollect/BG/WBP_Activity_SkinCollect_BG.WBP_Activity_SkinCollect_BG",
+    EventBgSound = "/ui/activity/feina_seven_day_loop",
     EventCoinId = {99, 100},
     EventDes = "Event_Des_103024",
     EventEndTime = LocalTimeProxy(1785142800),
@@ -918,7 +919,7 @@ return ReadOnly("EventMain", {
   },
   [109003] = {
     EventBgBPPathPC = "/Game/UI/WBP/Activity/Widget/SpecialPage/Eve/WBP_Activity_SpecialPage_BG_Eve.WBP_Activity_SpecialPage_BG_Eve",
-    EventBgSound = "/ui/activity/huangnv_page_jump_entrance_loop",
+    EventBgSound = "/ui/activity/suyi_seven_day_entrance_loop",
     EventDes = "Event_Des_109003",
     EventEndTime = LocalTimeProxy(1788382800),
     EventEndTimeMail = T.RT_1,
@@ -1057,7 +1058,7 @@ return ReadOnly("EventMain", {
     EventBgBPPathPC = "/Game/UI/WBP/Activity/Widget/OnlineTime/WBP_Activity_OnlineTime_BG.WBP_Activity_OnlineTime_BG",
     EventBgSound = "/ui/activity/xingyaoxunyou_entrance_loop",
     EventDes = "Event_Des_112001",
-    EventEndTime = LocalTimeProxy(1785099600),
+    EventEndTime = LocalTimeProxy(1785142800),
     EventEndTimeMail = T.RT_1,
     EventId = 112003,
     EventName = "Event_Title_112001",
@@ -1409,12 +1410,12 @@ return ReadOnly("EventMain", {
     MobileBluePrint = "/Game/UI/WBP/Activity/Mobile/ActivityJump/WBP_Activity_Jump_M.WBP_Activity_Jump_M",
     PCBluePrint = "/Game/UI/WBP/Activity/PC/ActivityJump/WBP_Activity_Jump_P.WBP_Activity_Jump_P",
     PretextTasks1 = 100202,
-    ReddotNode = "Acti_AccessoryDrop01"
+    ReddotNode = "Acti_AccessoryDrop02"
   },
   [10302101] = {
     EventBgBPPathMobile = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Nun/WBP_LimitedPrizePool_BG_Nun.WBP_LimitedPrizePool_BG_Nun'",
     EventBgBPPathPC = "WidgetBlueprint'/Game/UI/WBP/Activity/Widget/LimitedPrizePool/Nun/WBP_LimitedPrizePool_BG_Nun.WBP_LimitedPrizePool_BG_Nun'",
-    EventBgSound = "/ui/activity/limit_gift_pool_entrance_loop",
+    EventBgSound = "/ui/activity/limit_gift_pool_xiunv_entrance_loop",
     EventCoinId = T.RT_3,
     EventDes = "Event_Des_10302101",
     EventEndTime = LocalTimeProxy(1785142800),
@@ -1688,7 +1689,7 @@ return ReadOnly("EventMain", {
   [105101020] = {
     EventBgBPPathMobile = "WidgetBlueprint'/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetFuluo.WBP_Get_Avatar_WidgetFuluo'",
     EventBgBPPathPC = "WidgetBlueprint'/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetFuluo.WBP_Get_Avatar_WidgetFuluo'",
-    EventBgSound = "/ui/activity/fuluo_role_trail_entrance_loop",
+    EventBgSound = "/ui/activity/fuluo_trail_entrance_loop",
     EventDes = "CharTrialEvent_Des_Fuluo",
     EventEndTime = LocalTimeProxy(1782766800),
     EventEndTimeMail = T.RT_1,
@@ -1707,7 +1708,7 @@ return ReadOnly("EventMain", {
   [105101021] = {
     EventBgBPPathMobile = "/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetXier.WBP_Get_Avatar_WidgetXier",
     EventBgBPPathPC = "/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetXier.WBP_Get_Avatar_WidgetXier",
-    EventBgSound = "/ui/activity/xier_role_trail_entrance_loop",
+    EventBgSound = "/ui/activity/xier_trail_entrance_loop",
     EventDes = "CharTrialEvent_Des_Xier",
     EventEndTime = LocalTimeProxy(1785142800),
     EventEndTimeMail = T.RT_1,
@@ -1833,7 +1834,7 @@ return ReadOnly("EventMain", {
   [105102022] = {
     EventBgBPPathMobile = "/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetFuluo01.WBP_Get_Avatar_WidgetFuluo01",
     EventBgBPPathPC = "/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetFuluo01.WBP_Get_Avatar_WidgetFuluo01",
-    EventBgSound = "/ui/activity/fuluo_skin_trial_entrance_loop",
+    EventBgSound = "/ui/activity/saiqi_seven_day_loop",
     EventDes = "SkinTrialEvent_Des_Fuluo",
     EventEndTime = LocalTimeProxy(1785142800),
     EventEndTimeMail = T.RT_1,
@@ -1852,7 +1853,7 @@ return ReadOnly("EventMain", {
   [105102023] = {
     EventBgBPPathMobile = "/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetShuimu02.WBP_Get_Avatar_WidgetShuimu02",
     EventBgBPPathPC = "/Game/UI/WBP/Get/Widget/Avatar/WBP_Get_Avatar_WidgetShuimu02.WBP_Get_Avatar_WidgetShuimu02",
-    EventBgSound = "/ui/activity/hunshashuimu_skin_trial_entrance_loop",
+    EventBgSound = "/ui/activity/feina_seven_day_loop",
     EventDes = "SkinTrialEvent_Des_210101",
     EventEndTime = LocalTimeProxy(1785142800),
     EventEndTimeMail = T.RT_1,

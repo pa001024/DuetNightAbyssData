@@ -51,7 +51,7 @@ return {
       propsData = {
         QuestId = 0,
         QuestDescriptionComment = "",
-        QuestDescription = "Content_10040408_01",
+        QuestDescription = "",
         QuestDeatil = "",
         TaskRegionReName = "",
         TaskSubRegionReName = "",
@@ -206,7 +206,43 @@ return {
           {
             startQuest = "177874857057527269580",
             startPort = "Out",
+            endQuest = "177892759714099946161",
+            endPort = "In"
+          },
+          {
+            startQuest = "177892759714099946161",
+            startPort = "Out",
             endQuest = "177874861824327270548",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874857057627269585",
+            startPort = "Out",
+            endQuest = "17791777790911932476",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874857057627269585",
+            startPort = "Out",
+            endQuest = "1779697119936968645",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874857057527269577",
+            startPort = "Out",
+            endQuest = "1779697149569968986",
+            endPort = "In"
+          },
+          {
+            startQuest = "1779697149569968986",
+            startPort = "Out",
+            endQuest = "17796972200011936342",
+            endPort = "In"
+          },
+          {
+            startQuest = "177874857057627269591",
+            startPort = "Out",
+            endQuest = "177970785631172124937",
             endPort = "In"
           }
         },
@@ -398,7 +434,7 @@ return {
             key = "177874857057627269587",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1511.6666666666667, y = 51.666666666666664},
+            pos = {x = 1510.3030303030305, y = 51.666666666666664},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "OpenGate06Behind",
@@ -409,7 +445,7 @@ return {
             key = "177874857057627269588",
             type = "SendMessageNode",
             name = "发送消息",
-            pos = {x = 1138.6666666666667, y = 38.333333333333336},
+            pos = {x = 1137.3030303030305, y = 38.333333333333336},
             propsData = {
               MessageType = "GameMode",
               MessageContent = "OpenGate05Front",
@@ -480,9 +516,9 @@ return {
             pos = {x = 2989.852074579282, y = 637.2540553323544},
             propsData = {
               WeaponTags = {"Melee"},
-              bForbid = true,
+              bForbid = false,
               ForbidTag = "ForbidDefault",
-              bHidewhenForbid = false
+              bHidewhenForbid = true
             }
           },
           ["177874857057627269595"] = {
@@ -525,8 +561,89 @@ return {
             key = "177874861824327270548",
             type = "SpecialQuestSuccessNode",
             name = "成功完成特殊任务",
-            pos = {x = 2758.872807017544, y = 418.9758771929826},
+            pos = {x = 2872.054625199362, y = 399.88496810207346},
             propsData = {}
+          },
+          ["177892759714099946161"] = {
+            key = "177892759714099946161",
+            type = "WaitOfTimeNode",
+            name = "延迟等待",
+            pos = {x = 2644.687115516063, y = 392.22248803827756},
+            propsData = {WaitTime = 3}
+          },
+          ["17791777790911932476"] = {
+            key = "17791777790911932476",
+            type = "TalkNode",
+            name = "对话节点",
+            pos = {x = 1454.8768472906406, y = 284.1379310344827},
+            propsData = {
+              IsNpcNode = false,
+              bUseFlowAssetActors = true,
+              FirstDialogueId = 10010101,
+              FlowAssetPath = "DialogueAsset'/Game/Dialogue/MainStory/1004/10049901_47.10049901_47'",
+              TalkType = "Guide",
+              bIsStandalone = true,
+              GuideMeshIndexList = {},
+              IsPlayStartSound = false,
+              GuideTalkStyle = "Normal",
+              OverrideFailBlend = false
+            }
+          },
+          ["1779697119936968645"] = {
+            key = "1779697119936968645",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1229.0053367684945, y = 660.2506440927494},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/mute.mute'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["1779697149569968986"] = {
+            key = "1779697149569968986",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 1746.9098460523144, y = 607.2135088142348},
+            propsData = {
+              SoundStateType = 3,
+              SoundPriority = 0,
+              SoundType = 0
+            }
+          },
+          ["17796972200011936342"] = {
+            key = "17796972200011936342",
+            type = "PlayOrStopBGMNode",
+            name = "BGM节点",
+            pos = {x = 2098.6334576897184, y = 655.3567448885053},
+            propsData = {
+              SoundStateType = 0,
+              SoundPriority = 0,
+              SoundType = 0,
+              SoundPath = "FMODEvent'/Game/Asset/Audio/FMOD/Events/bgm/1_4/0166_story_danger.0166_story_danger'",
+              ParamKey = "",
+              ParamValue = 0,
+              RelatedRegionId = {},
+              ClientRelatedRegionId = {106101},
+              bStoreToServer = false
+            }
+          },
+          ["177970785631172124937"] = {
+            key = "177970785631172124937",
+            type = "SendMessageNode",
+            name = "发送消息",
+            pos = {x = 2659.0358851674646, y = 101.22488038277515},
+            propsData = {
+              MessageType = "GameMode",
+              MessageContent = "CloseGate05Front",
+              UnitId = -1
+            }
           }
         },
         commentData = {}

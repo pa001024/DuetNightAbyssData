@@ -1631,21 +1631,21 @@ return ReadOnly("RecommendCameraData", {
   },
   Char_Face_Boy = {
     BackwardLocation = {
-      70,
-      420,
-      90
+      32,
+      440,
+      93
     },
     CameraFocal = 38.6,
     CameraName = "Char_Face_Boy",
     Ease = 14,
     ForwardLocation = {
-      27,
-      96,
+      6,
+      120,
       150
     },
     Location = {
-      40,
-      145,
+      15,
+      200,
       140
     },
     Rotation = T.RT_45,
@@ -1653,20 +1653,20 @@ return ReadOnly("RecommendCameraData", {
   },
   Char_Face_Girl = {
     BackwardLocation = {
-      75,
-      350,
-      85
+      25,
+      420,
+      92
     },
     CameraFocal = 38.6,
     CameraName = "Char_Face_Girl",
     Ease = 14,
     ForwardLocation = {
-      13,
-      63,
+      5,
+      85,
       145
     },
     Location = {
-      50,
+      15,
       225,
       136
     },
@@ -1676,65 +1676,65 @@ return ReadOnly("RecommendCameraData", {
   },
   Char_Face_Loli = {
     BackwardLocation = {
-      71,
-      330,
+      26,
+      350,
       78
     },
     CameraFocal = 38.6,
     CameraName = "Char_Face_Loli",
     Ease = 14,
     ForwardLocation = {
-      23,
-      110,
+      10,
+      140,
       110
     },
     Location = {
-      48,
-      210,
-      102
+      15,
+      200,
+      106
     },
     Rotation = T.RT_45,
     Time = 1.2
   },
   Char_Face_Man = {
     BackwardLocation = {
-      93,
-      425,
-      97
+      32,
+      460,
+      110
     },
     CameraFocal = 38.6,
     CameraName = "Char_Face_Man",
     Ease = 14,
     ForwardLocation = {
-      16,
-      78,
-      175
+      12,
+      140,
+      174
     },
     Location = {
-      50,
-      225,
-      166
+      17,
+      220,
+      162
     },
     Rotation = T.RT_45,
     Time = 1.2
   },
   Char_Face_Woman = {
     BackwardLocation = {
-      85,
-      390,
-      95
+      27,
+      450,
+      102
     },
     CameraFocal = 38.6,
     CameraName = "Char_Face_Woman",
     Ease = 14,
     ForwardLocation = {
-      21,
-      100,
+      5,
+      120,
       160
     },
     Location = {
-      45,
-      206,
+      15,
+      226,
       150
     },
     Rotation = T.RT_45,

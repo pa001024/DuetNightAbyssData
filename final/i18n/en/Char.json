@@ -7541,7 +7541,7 @@
         "id": 310201,
         "名称": "Pyrolytic Cleaning",
         "类型": "DMG",
-        "描述": "Commands all [Dirtexpellers] to continuously revolve around Hilda and fire [Hyperthermal Purgejets], during which the duration timer for all [Light Dirtexpellers] pauses.\n[Hyperthermal Purgejets] deal Pyro Damage to enemies, and defeating an enemy has a chance to restore Sanity for Hilda during the [Hyperthermal Purgejets] firing.",
+        "描述": "Commands all [Dirtexpellers] to continuously revolve around Hilda and fire [Hyperthermal Purgejets]. [Hyperthermal Purgejets] deal Pyro Damage to enemies.",
         "icon": "Xier01",
         "cd": 1,
         "字段": [
@@ -7877,7 +7877,7 @@
         "id": 310204,
         "名称": "Multitasking",
         "类型": "Passive",
-        "描述": "[Dirtexpeller] has a chance to fire 1 additional projectile, the probability equals to [30%+20%×Hilda's Ranged Weapon Multishot].\nIncreases the damage of [Hyperthermal Purgejet] by [30%+20%×Hilda's Ranged Weapon Multishot].",
+        "描述": "[Dirtexpeller] has a chance to fire 1 additional projectile, the probability equals to [30%+20%×Hilda's Ranged Weapon Multishot].\nIncreases the damage of [Hyperthermal Purgejet] by [30%+20%×Hilda's Ranged Weapon Multishot], up to {int}100%.",
         "icon": "ExtraPassive"
       },
       {
@@ -7895,12 +7895,12 @@
       }
     ],
     "溯源": [
-      "Increases Hilda's Dodge Attempts by 2 and the effect [Elegant Anger] grants by 30%.",
-      "Increases the length of [Hyperthermal Purgejet] by 50%.\nWhen [Hyperthermal Purgejet] deals damage, inflicts an effect to the target that increases damage taken from Hilda by 5 for 60%s.",
+      "Increases Hilda's Dodge Attempts by 4 and the effect [Elegant Anger] grants by 30%.",
+      "Increases the length of [Hyperthermal Purgejet] by 50%.\nWhen defeating an enemy, Hilda gains 18% DMG Boost for 15s, up to 5 stacks.",
       "[Pyrolytic Cleaning] Level +2; [Automatic Sanitizing] Level +1.",
-      "When using [Wholehearted Service], summons 2 additional [Light Dirtexpellers], and decreases the target's damage by 18% for 15s.",
+      "When using [Wholehearted Service], summons 2 additional [Light Dirtexpellers], and the duration of [Light Dirtexpellers] becomes unlimited.",
       "[Wholehearted Service] Level +2; [Automatic Sanitizing] Level +1.",
-      "Increases Hilda's PEN stats by #5 during [Pyrolytic Cleaning]."
+      "Increases Hilda's PEN stats by 60% during [Pyrolytic Cleaning]."
     ],
     "碎片": 1003102,
     "专武": 20302

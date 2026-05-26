@@ -177,6 +177,7 @@ return ReadOnly("SkinGacha", {
     TabId = 5
   },
   [90021] = {
+    BgBGM = "event:/bgm/1_4/0174_skin_fuluo01",
     BgMusic = "event:/ui/btc/gacha_pool_fuluo_skin01",
     BubbleShowGoods = {
       140356,
